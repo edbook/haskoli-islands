@@ -1,0 +1,38 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+\begin{document}
+\begin{tikzpicture}
+  % hnitakerfið
+  \tkzInit[xmax=5, ymax=5, xmin=0, ymin=0]
+
+  \draw [->] (0,-0.3) -- (0,4.5)node[anchor=south]{$y$};
+  \draw [->] (-0.3,0) -- (5.5,0)node[anchor=west ]{$x$};
+  %x-ás
+  \foreach \x in {0,1,2,3,4,5}{
+    \draw (\x,-0.5) node{\small\x};
+    \draw (\x,-0.1) -- (\x,0.1);
+    };
+ %y-ás
+  \foreach \x in {0,1,2,3,4}{
+    \draw (-0.5,\x) node{\small\x};
+    \draw (-0.1,\x) -- (0.1,\x);
+    };
+
+  \draw [thick, ->] (0,0) -- (4,3);
+  \node [above right] at (4,3) {$\bar{a}$};
+  \draw [very thick] (0,0) -- (4,0);
+  \node at (2.5,0.25) {$a_x$};
+  \draw [very thick] (0,0) -- (0,3);
+  \node at (0.25,1.5) {$a_y$};
+
+  % 'skuggi'
+  \draw [gray, fill=gray, opacity=0.5] (0,0) -- (4,3) -- (4,0);
+
+  % hornið
+  \draw (0.75,0.6) to [out=340, in=270] (1,0);
+  \node [right] at (1,0.5) {$\theta$};
+
+\end{tikzpicture}
+\end{document}

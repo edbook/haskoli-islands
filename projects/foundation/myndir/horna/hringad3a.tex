@@ -1,0 +1,28 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[domain=-1.25:1.25]
+    \draw[->] (-1.8,0) -- (8.2,0) node[above] {$x$};
+    \draw[->] (0,-3) -- (0,3.2) node[anchor=south west] {$\tan(x)$};
+
+    \draw plot [samples=150] (\x,{tan(\x r)});
+    \draw plot [samples=150] (\x+pi,{tan(\x r)});
+    \draw plot [samples=150] (\x+2*pi,{tan(\x r)});
+    \foreach \x/\xtext in { -0.5*pi/-\frac{\pi}{2}, 0,0.5*pi/\frac{\pi}{2}, pi/\pi, 1.5*pi/\frac{3\pi}{2}, 2*pi/2\pi, 2.5*pi/\frac{5\pi}{2} }
+      \draw (\x,0.1) -- (\x,-0.1) node[anchor=north] {$\xtext$};
+     \foreach \y/\ytext in {-3,-2,-1,1,2,3}
+       \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\ytext$};
+     %\foreach \x in {-0.5*pi, 0.5*pi, 1.5*pi, 2.5*pi }
+       %\draw [dashed] (\x,-3)--(\x,3);
+
+    \draw [dashed] (-1.6, -1.732) -- (7.839,-1.732) ;
+    \node (c) at (1,-1.732)  {$\sqrt{3}$};
+
+    \draw [red] (5.236,-1.732) -- (5.236,0) node [above] {$\frac{5\pi}{3}$};
+    \draw [red] (2.0944,-1.732) -- (2.0944,0) node [above] {$\frac{2\pi}{3}$};
+    \draw [red] (-1.0472,-1.732) -- (-1.0472,0) node [above] {$-\frac{\pi}{3}$};
+
+
+
+\end{tikzpicture}
+\end{document}

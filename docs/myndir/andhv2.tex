@@ -1,0 +1,26 @@
+\documentclass[border=7pt]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw[domain=-1.9:9, smooth, samples= 1000, variable=\x,black] plot({\x},{ln(\x+2)});
+\draw[domain=-2.4:2.4, smooth, samples = 1000, variable=\x,red] plot({\x},{e^(\x)-2});
+
+\draw [dashed] (-2,-2) -- (9,9);
+\draw[->] (-2.5,0) -- (9.5,0) node[right] {$x$};
+\draw[->] (0,-2.5) -- (0,9.5) node[above] {$y$};
+
+\foreach \x in {-2,-1,0,1,2,3,4,5,6,7,8,9}{
+   \draw (\x,-0.5) node{\small\x};
+   \draw (\x,-0.1) -- (\x,0.1);
+   };
+
+\foreach \x in {-2,-1,0,1,2,3,4,5,6,7,8,9}{
+  \draw (-0.5,\x) node{\small\x};
+  \draw (-0.1,\x) -- (0.1,\x);
+};
+
+\end{tikzpicture}
+\end{document}

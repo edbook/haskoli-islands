@@ -1,0 +1,23 @@
+\documentclass[border=7pt]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+
+\draw (-1.5,0) circle [x radius=2cm, y radius=3cm];
+\filldraw (-1.5,0) circle[radius=1.5pt] node [above]{$(\frac{3}{2},0)$};
+
+\draw [<->](-1.5,0) -- (-1.5,3)node [midway, left] {$3$};
+\draw [<->](-1.5,0) -- (-3.5,0)node [midway, below] {$2$};
+\filldraw[red] (-1.5,2.236) circle[radius=1.5pt];
+\filldraw [red](-1.5,-2.236) circle[radius=1.5pt];
+
+
+\draw [<->, dashed](-5,0) -- (2,0)node [right] {$x$};
+\draw [<->, dashed](0,-4) -- (0,4)node [above] {$y$};
+
+\draw [<->](-1.5,0) -- (-1.5,-2.236)node [midway, left] {$\sqrt{5}$};
+\draw [<->](-3.5,0) -- (-1.5,-2.236)node [midway, below] {$3$};
+
+\end{tikzpicture}
+\end{document}

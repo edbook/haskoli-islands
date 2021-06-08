@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
+\newcommand\Base[1][0]{
+\begin{scope}[xshift=#1]
+\clip
+  (-0.5,5.5) rectangle (5.5,-0.5);
+  \draw[->]
+  (-0.5,0) -- (5,0) node[right] {$x$};
+\draw[->]
+  (0,-0.5) -- (0,5) node[above] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (aux1) at (40:4);
+\coordinate (aux2) at (aux1|-0,0);
+
+\draw[thick,red!70!black] 
+  (O) circle (4);
+\pic[draw,"$\alpha$",angle radius=30pt,angle eccentricity=1.2] {angle = aux2--O--aux1};   
+\end{scope}  
+}
+
+\begin{document}
+
+\begin{tikzpicture}[>=latex]
+\Base
+\filldraw[thick,draw=blue,fill=blue!40,fill opacity=0.3,text opacity=1]
+  (O) -- node[above] {$1$} (aux1) -- node[left] {$\sin \alpha$} (aux2)  -- node[below] {$\cos \alpha$} cycle; 
+\end{tikzpicture}
+
+\end{document}

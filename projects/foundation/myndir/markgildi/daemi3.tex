@@ -1,0 +1,16 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+	\begin{tikzpicture}
+		\draw[->] (-3.5, 0) -- (3*pi, 0) node[right] {$x$};
+		\draw[->] (0, -5) -- (0,5) node[above] {$y$};
+ 			 \foreach \x/\xtext in {-pi/-\pi, -0.5*pi/-\frac{\pi}{2}, 0,0.5*pi/\frac{\pi}{2}, pi/\pi, 1.5*pi/					\frac{3\pi}{2}, 2*pi/2\pi, 2.5*pi/\frac{5\pi}{2} }
+    		  \draw (\x,0.1) -- (\x,-0.1) node[anchor=north] {$\xtext$};
+ 			\foreach \x in {-0.5*pi, 0.5*pi, 1.5*pi, 2.5*pi }
+     				  \draw [dashed] (\x,-5) -- (\x, 5);
+		\draw[domain=-pi/2+0.2:pi/2-0.2, smooth]  plot (\x,{(1/cos(\x r))});
+		\draw[domain=pi/2+0.2:3*pi/2-0.2, smooth]  plot (\x,{(1/cos(\x r))});
+		\draw[domain=3*pi/2+0.2:5*pi/2-0.2, smooth]  plot (\x,{(1/cos(\x r))});
+		\node (c) at (3.2,2) {\large $h(x) = \frac{1}{\cos(x)}$};
+	\end{tikzpicture}
+\end{document}

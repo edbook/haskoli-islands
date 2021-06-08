@@ -1,0 +1,25 @@
+\documentclass[border=7pt]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw [->] (-4.5,0) -- (4.5,0) node[right]{$x$};
+  \draw [->] (0,-2.5) -- (0,4.5) node[above]{$y$};
+
+  \draw[domain=-4.5:-0.56, smooth, samples = 100, variable=\x] plot({\x},{\x/(2*\x+1)});
+  \draw[domain=-0.42:4.5, smooth, samples = 100, variable=\x] plot({\x},{\x/(2*\x+1)});
+
+  \foreach \x in {-4,-3,-2,-1,0,1,2,3,4}{
+    \draw (\x,-0.5) node{\small\x};
+    \draw (\x,-0.1) -- (\x,0.1);
+    };
+
+  \foreach \x in {-2,-1,0,1,2,3,4}{
+    \draw (-0.5,\x) node{\small\x};
+    \draw (-0.1,\x) -- (0.1,\x);
+    };
+
+    \node (c) at (2,2) {$f(x)=\frac{x}{2x+1} $};
+    \draw [dashed] (-4.5, 0.5) -- (4.5, 0.5);
+\end{tikzpicture}
+\end{document}

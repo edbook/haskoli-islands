@@ -1,0 +1,16 @@
+ \documentclass{standalone}
+ \usepackage{tikz}
+ \usepackage{tkz-euclide}
+ \begin{document}
+
+ \begin{tikzpicture}
+
+    \draw[domain=-3.14:-0.65,smooth,variable=\x,black] plot ({\x},{1/\x*\x});
+    \draw[domain=0.65:3.14,smooth,variable=\y,black] plot ({\y},{1/(\y*\y)});
+    \draw[->] (-3.14,-0.8) -- (3.14,-0.8) node[right] {$x$};
+      \draw[->] (-3.14,-0.8) -- (-3.14,3) node[above] {$y$};
+
+      \node at (0,-1.2) {$a$};
+
+ \end{tikzpicture}
+ \end{document}

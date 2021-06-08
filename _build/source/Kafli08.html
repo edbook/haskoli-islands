@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8. Vigrar &mdash; Undirbúningur í stærðfræði  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;}
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Undirbúningur í stærðfræði  documentation" href="../index.html"/>
+        <link rel="next" title="9. Meira um föll" href="Kafli09.html"/>
+        <link rel="prev" title="7. Hornaföll" href="Kafli07.html"/>
+
+
+    <!-- ADD YOUR GOOGLE ANALYTICS TRACKING CODE HERE-->
+    <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-29852053-2', 'auto');
+  		ga('send', 'pageview');
+
+	</script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+	<script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+  <script>
+  // the buttonText string says what will be written on the
+  // sage cell evaluation button.
+  // It can be changed here.
+  var buttonText = "Keyra"
+  </script>
+
+	<script type="text/javascript">
+    sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});
+    sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });
+    sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});
+    sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+    sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+    sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+  </script>
+
+  <script>ggbAppletId = []; </script>
+    <script>top.scrolldepth_tags = []; </script>
+
+     
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Undirbúningur í stærðfræði
+        
+
+        
+          
+          <img src="../_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Um námsefnið</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Algebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#talnakerfi">1.1. Talnakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#natturulegu-tolurnar-mathbb-n">1.1.1. Náttúrulegu tölurnar  <span class="math">\(\mathbb{N}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#heiltolurnar-mathbb-z">1.1.2. Heiltölurnar <span class="math">\(\mathbb{Z}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#raeu-tolurnar-mathbb-q">1.1.3. Ræðu tölurnar <span class="math">\(\mathbb{Q}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rauntolurnar-mathbb-r">1.1.4. Rauntölurnar <span class="math">\(\mathbb{R}\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#forgangsroun-agera">1.2. Forgangsröðun aðgerða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#reiknireglur">1.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#frumtolur">1.4. Frumtölur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-deilanleiki">1.4.1. Skilgreining: Deilanleiki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-frumtolur">1.4.2. Skilgreining: Frumtölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#frumattun">1.4.3. Frumþáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#staersti-samdeilir-og-minnsta-samfeldi">1.4.4. Stærsti samdeilir og minnsta samfeldi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#brotareikningur">1.5. Brotareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-raear-tolur">1.5.1. Skilgreining: Ræðar tölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#fullstytt-brot">1.5.2. Fullstytt brot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#roun-raera-talna">1.5.3. Röðun ræðra talna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.5.4. Reiknireglur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#deiling-me-afgangi">1.6. Deiling með afgangi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#veldi-og-raetur">1.7. Veldi og rætur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#veldi">1.7.1. Veldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur-fyrir-veldi">1.7.2. Reiknireglur fyrir veldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#raetur">1.7.3. Rætur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur-fyrir-raetur">1.7.4. Reiknireglur fyrir rætur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#brotin-veldi">1.7.5. Brotin veldi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#jofnur">2.1. Jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#fyrsta-stigs-jofnur">2.1.1. Fyrsta stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#annars-stigs-jofnur">2.1.2. Annars stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#lausnarformula-fyrir-annars-stigs-jofnur">2.1.3. Lausnarformúla fyrir annars stigs jöfnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli02.html#setning">2.1.3.1. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#liun-og-attun">2.2. Liðun og þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#liun">2.2.1. Liðun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#attun">2.2.2. Þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#attun-me-agiskunarafer">2.2.3. Þáttun með ágiskunaraðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#attun-me-lausnarformulu">2.2.4. Þáttun með lausnarformúlu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#jofnuhneppi">2.3. Jöfnuhneppi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#ojofnur-og-tolugildi">2.4. Ójöfnur og tölugildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#ojofnur">2.4.1. Ójöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#tolugildi">2.4.2. Tölugildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#reiknireglur-fyrir-tolugildi">2.4.3. Reiknireglur fyrir tölugildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#summu-og-margfeldistakni">2.5. Summu- og margfeldistáknið</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Rúmfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#hnitakerfi">3.1. Hnitakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fjarlaeg-milli-punkta-i-kartesisku-hnitakerfi">3.1.1. Fjarlægð milli punkta í kartesísku hnitakerfi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#regla">3.1.2. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#jafna-linu-i-hnitakerfinu">3.2. Jafna línu í hnitakerfinu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#hallatala-og-skurpunktur-vi-asa">3.3. Hallatala og skurðpunktur við ása</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#meira-um-jofnu-linu">3.4. Meira um jöfnu línu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id1">3.4.1. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#a-finna-jofnu-linu">3.4.2. Að finna jöfnu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#samsia-og-verstaear-linur">3.4.3. Samsíða og þverstæðar línur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli03.html#samsia-linur">3.4.3.1. Samsíða línur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli03.html#verstaear-linur">3.4.3.2. Þverstæðar línur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#mipunktsregla">3.4.4. Miðpunktsregla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#keilusni">3.5. Keilusnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fleygbogar">3.5.1. Fleygbogar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sporoskjur">3.5.2. Sporöskjur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#hringir">3.5.3. Hringir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#breibogar">3.5.4. Breiðbogar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#flatarmyndir">3.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Mengi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#grunnhugtok">4.1. Grunnhugtök</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#umfangsfrumsenda">4.1.1. Umfangsfrumsenda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#hlutmengi">4.1.2. Hlutmengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#yringar-til-a-skilgreina-mengi">4.2. Yrðingar til að skilgreina mengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining">4.2.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#agerir-a-mengjum">4.3. Aðgerðir á mengjum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#faldmengi">4.3.1. Faldmengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fyllimengi">4.3.2. Fyllimengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#meira-um-agerir-a-mengjum">4.4. Meira um aðgerðir á mengjum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#rauntalnabil">4.5. Rauntalnabil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id1">4.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#gerir-af-bilum">4.5.2. Gerðir af bilum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#varpanir-og-foll">5.1. Varpanir og föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#daemi-um-vorpun-sem-er-ekki-fall">5.1.1. Dæmi um vörpun sem er ekki fall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#graf-vorpunnar">5.2. Graf vörpunnar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#jafnstae-og-oddstae-foll">5.3. Jafnstæð og oddstæð föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skilgreining">5.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#myndraen-utskyring">5.3.2. Myndræn útskýring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#einhalla-foll">5.4. Einhalla föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.4.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#gaffalforskrift">5.5. Gaffalforskrift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#lotubundin-foll">5.6. Lotubundin föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id2">5.6.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#andhverfur-falla">5.7. Andhverfur falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id3">5.7.1. Skilgreining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Margliður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#id1">6.1. Margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#nullstovar-marglia">6.2. Núllstöðvar margliða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#regla">6.2.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#fyrsta-og-annars-stigs-margliur">6.3. Fyrsta og annars stigs margliður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fyrsta-stigs-margliur">6.3.1. Fyrsta stigs margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#annars-stigs-margliur">6.3.2. Annars stigs margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id2">6.3.3. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#deiling-me-afgangi-margliur">6.4. Deiling með afgangi - margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#attun-marglia">6.5. Þáttun margliða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining">6.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#nullstovar-marglia-og-attun">6.5.2. Núllstöðvar margliða og þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id3">6.5.3. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id4">6.5.4. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#p-q-afer">6.6. p/q-aðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id5">6.6.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#pascal">6.7. Pascal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli07.html">7. Hornaföll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#bogaeiningar">7.1. Bogaeiningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining">7.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#kosinus-og-sinus">7.2. Kósínus og sínus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#eingingahringurinn">7.2.1. Eingingahringurinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id1">7.2.2. Kósínus og sínus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#amma-illa">7.2.3. Amma illa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#ekkt-gildi-a-hornafollum">7.3. Þekkt gildi á hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tangens-og-kotangens">7.4. Tangens og kótangens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#myndir-af-hornafollum">7.5. Myndir af hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hornafallareglur">7.6. Hornafallareglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tvofold-horn">7.7. Tvöföld horn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#andhverfur-hornafallanna">7.8. Andhverfur hornafallanna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id2">7.8.1. Skilgreining</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-sinusar">7.8.1.1. Andhverfa sínusar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-kosinusar">7.8.1.2. Andhverfa kósínusar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-tangens">7.8.1.3. Andhverfa tangens</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tengsl-i-rumfraei">7.9. Tengsl í rúmfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#regla-pyagorasar">7.9.1. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#sinusreglan">7.9.2. Sínusreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#kosinusreglan">7.9.3. Kósínusreglan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hornafallareglurnar">7.10. Hornafallareglurnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#grunnreglan">7.10.1. Grunnreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#hlirunarreglur">7.10.2. Hliðrunarreglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#summuformulur">7.10.3. Summuformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#tvofoldunarformulur">7.10.4. Tvöföldunarformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#helmingunarformulur">7.10.5. Helmingunarformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#summu-og-margfeldisformulur">7.10.6. Summu- og margfeldisformúlur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Vigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#skilgreining">8.1. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-lia-vigra">8.2. Að liða vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#einingarvigrar">8.3. Einingarvigrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#samlagning-vigra">8.4. Samlagning vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#margfoldun-vigra">8.5. Margföldun vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flatarmyndir">8.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli09.html">9. Meira um föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#andhverfur">9.1. Andhverfur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#eintaek-og-ataek-foll">9.2. Eintæk og átæk föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#ataek-foll">9.2.1. Átæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining">9.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#eintaek-foll">9.2.3. Eintæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id1">9.2.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#gagntaek-foll">9.2.5. Gagntæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id2">9.2.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#regla">9.2.7. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#samskeyting-falla">9.3. Samskeyting falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id3">9.3.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#nokkur-mikilvaeg-foll">9.4. Nokkur mikilvæg föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#visisfoll">9.4.1. Vísisföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#lograr">9.4.2. Lograr</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#lograreglur">9.4.2.1. Lograreglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn">9.4.3. Náttúrulega veldisvísisfallið og nátturulegi logrinn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#id4">9.4.3.1. Lograreglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#rae-foll">9.4.4. Ræð föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#myndraent">9.4.4.1. Myndrænt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#stofnbrotaliun">9.4.5. Stofnbrotaliðun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#id5">9.4.5.1. Regla</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#ummyndanir">9.5. Ummyndanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#hlirun">9.5.1. Hliðrun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#speglun">9.5.2. Speglun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#strikkun">9.5.3. Stríkkun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#lorett">9.5.3.1. Lóðrétt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#larett">9.5.3.2. Lárétt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli10.html">10. Markgildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#markgildi-falls">10.1. Markgildi falls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#skilgreining">10.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#gerir-markgilda">10.2. Gerðir markgilda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#reikniagerir-a-markgildum">10.3. Reikniaðgerðir á markgildum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#samfelld-foll">10.4. Samfelld föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#id1">10.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#reglur-um-samfelldni">10.4.2. Reglur um samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#nokkur-ekkt-samfelld-foll">10.4.3. Nokkur þekkt samfelld föll</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli11.html">11. Diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skyringardaemi">11.1. Skýringardæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skilgreining">11.2. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#reiknireglur">11.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#ekktar-afleiur">11.4. Þekktar afleiður</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli12.html">12. Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#repun">12.1. Þrepun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#rithattur">12.2. Ritháttur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#formulubla">12.3. Formúlublað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#algebra">12.3.1. Algebra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#einfaldar-reiknireglur">12.3.1.1. Einfaldar reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#brotareiknireglur">12.3.1.2. Brotareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#veldareiknireglur">12.3.1.3. Veldareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-raetur">12.3.1.4. Reiknireglur fyrir rætur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#jofnur-og-ojofnur">12.3.2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#lausnarformula-annars-stigs-jofnu">12.3.2.1. Lausnarformúla annars stigs jöfnu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-tolugildi">12.3.2.2. Reiknireglur fyrir tölugildi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#regla-pyagorasar">12.3.2.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#fjarlaeg-milli-punkta">12.3.2.4. Fjarlægð milli punkta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hallatala-linu">12.3.2.5. Hallatala línu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#mipunktsregla">12.3.2.6. Miðpunktsregla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#flatarmal">12.3.2.7. Flatarmál</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#foll">12.3.3. Föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#oddstaett-og-jafnstaett">12.3.3.1. Oddstætt og jafnstætt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#lograreglur">12.3.3.2. Lograreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#stofnbrotaliun">12.3.3.3. Stofnbrotaliðun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#margliur">12.3.4. Margliður</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#nokkrar-lianir">12.3.4.1. Nokkrar liðanir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#hornafoll">12.3.5. Hornaföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#graur-og-bogaeiningar">12.3.5.1. Gráður og bogaeiningar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hliar-rihyrnings">12.3.5.2. Hliðar þríhyrnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#grunnreglan">12.3.5.3. Grunnreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hlirunarreglur">12.3.5.4. Hliðrunarreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#summuformulur">12.3.5.5. Summuformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#tvofoldunarformulur">12.3.5.6. Tvöföldunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#helmingunarformulur">12.3.5.7. Helmingunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#summu-og-margfeldisformulur">12.3.5.8. Summu- og margfeldisformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#kosinusreglan">12.3.5.9. Kósínusreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#sinusreglan">12.3.5.10. Sínusreglan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#vigrar">12.3.6. Vigrar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur">12.3.6.1. Reiknireglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#markgildi">12.3.7. Markgildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-markgildi">12.3.7.1. Reiknireglur fyrir markgildi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#diffrun">12.3.8. Diffrun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#id1">12.3.8.1. Reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#ekktar-afleiur">12.3.8.2. Þekktar afleiður</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Undirbúningur í stærðfræði</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Yfirlit</a> &raquo;</li>
+      
+    <li><span class="section-number">8. </span>Vigrar</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/Kafli08.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vigrar">
+<h1><span class="section-number">8. </span>Vigrar<a class="headerlink" href="#vigrar" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="skilgreining">
+<span id="s-vigrar"></span><h2><span class="section-number">8.1. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Permalink to this headline">¶</a></h2>
+<p><a href="http://www.stae.is/os/leita/vector." class="tooltip" target="_blank">Vigrar<span>en: <i>vector.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> er stærðfræðilegt hugtak fyrir stærð sem hefur bæði lengd og stefnu.
+Þeir eru jafnan teiknaðir sem örvar í hnitakerfi og lýst með hnitum.
+Hnit vigurs eru venjulegar tölur, líka kallaðar <a href="http://www.stae.is/os/leita/scalar." class="tooltip" target="_blank">skalarstærðir<span>en: <i>scalar.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>, og lýsa staðsetningu endapunkts miðað við upphafspunkt.
+Hvert hnit er tengt einum ás í hnitakerfinu sem notað er og stærð hnitsins (tölunnar) lýsir lengd vigursins í þá átt.</p>
+<p>Vigrar eru oftast táknaðir með striki eða ör fyrir ofan bókstafinn, <span class="math">\(\overline{a}\)</span> , <span class="math">\(\vec{a}\)</span> , en sumir setja strikið undir, <span class="math">\(\underline{a}\)</span> .
+Í kennslubókum eru vigrar stundum feitletraðir: <span class="math">\(\boldsymbol{a}\)</span>.</p>
+<p>Lengd vigra er táknuð með lóðréttum strikum, algildismerkjum, <span class="math">\(|\overline{a}|\)</span> , eða einfaldlega bókstafnum án yfirstriksins, <span class="math">\(a\)</span> .
+Þegar vísað er í lengd vigurs eftir einhverjum ás, <a href="http://www.stae.is/os/leita/component." class="tooltip" target="_blank">þátt<span>en: <i>component.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> hans, er það sýnt með því að merkja með heiti ássins í <a href="http://www.stae.is/os/leita/subscript." class="tooltip" target="_blank">lágvísi<span>en: <i>subscript.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>; <span class="math">\(a_x\)</span> er lengd vigursins <span class="math">\(\overline{a}\)</span> í stefnu <span class="math">\(x\)</span> - áss.
+Þættir vigra eru ekki vigrar sjálfir, heldur tölur.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/vigur.svg"><img alt="../_images/vigur.svg" src="../_images/vigur.svg" width="60%" /></a>
+</div>
+<p>Yfirleitt er notað rétthyrnt hnitakerfi (einnig nefnt <a href="http://www.stae.is/os/leita/cartesian_plane." class="tooltip" target="_blank">kartesískt<span>en: <i>cartesian plane.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>).
+Vigurinn á myndinni hefur lengd 4 eftir x-ásnum og 3 eftir y-ásnum, svo hnit hans eru:</p>
+<div class="math">
+\[\overline{a} = (a_x,a_y) = (4,3) = \begin{pmatrix} 4 \\ 3 \end{pmatrix}
+
+\]</div>
+<p>Lengd vigursins sjálfs er reiknuð með jöfnu Pýþagórasar, <span class="math">\(|\overline{a}| = a = \sqrt{a_x^2 + a_y^2}\)</span> .
+Vigurinn á myndinni hefur því lengdina <span class="math">\(a = \sqrt{4^2 + 3^2} = 5\)</span> .</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stærð og stefna vigurs er óháð því hvar í hnitakerfinu hann er.</p>
+</div>
+<p>Algengt er að láta vigra liggja frá upphafspunkti hnitakerfisins (stöðu- eða staðarvigur) en það er hægt að reikna vigra á milli gefinna upphafs- og endapunkta.
+Vigurinn frá punktinum <span class="math">\(A=(x_1,y_1)\)</span> til punktsins <span class="math">\(B=(x_2,y_2)\)</span> er</p>
+<div class="math">
+\[\overline{AB} = (x_2-x_1,y_2-y_1) = \begin{pmatrix} x_2-x_1 \\ y_2-y_1 \end{pmatrix}
+
+\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Reiknum vigurinn frá punktinum <span class="math">\(A=(-1,7)\)</span> til punktsins <span class="math">\(B=(5,2)\)</span> .</p>
+<blockquote>
+<div><div class="math">
+\[\begin{aligned}
+        \overline{AB} &= \begin{pmatrix} x_2-x_1 \\ y_2-y_1 \end{pmatrix}\\
+        &= \begin{pmatrix} 5-(-1) \\ 2-7 \end{pmatrix} \\
+        &= \begin{pmatrix} 6 \\ -5 \end{pmatrix}
+\end{aligned}
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/vigurtveirpkt.svg"><img alt="../_images/vigurtveirpkt.svg" src="../_images/vigurtveirpkt.svg" width="60%" /></a>
+</div>
+</div></blockquote>
+<p>Vigurinn <span class="math">\(\begin{pmatrix} 6 \\ -5 \end{pmatrix}\)</span> er sá sami, hvort sem hann liggur á milli <span class="math">\(A\)</span> og <span class="math">\(B\)</span> eða frá upphafspunktinum til punktsins <span class="math">\((6,-5)\)</span> .</p>
+</div>
+<p>Stundum er talað um að vigur hafi <a href="http://www.stae.is/os/leita/slope." class="tooltip" target="_blank">hallatölu<span>en: <i>slope.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> : <span class="math">\(h=\frac{a_y}{a_x}\)</span> , ef <span class="math">\(a_x\neq 0\)</span> .
+Tveir vigrar eru <a href="http://www.stae.is/os/leita/parallel." class="tooltip" target="_blank">samsíða<span>en: <i>parallel.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> ef þeir hafa sömu hallatölu.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Finnum vigur sem er samsíða <span class="math">\(\overline{a}=(-1,6)\)</span> og hefur lengdina 9.</p>
+<p>Hallatala <span class="math">\(\overline{a}\)</span> er <span class="math">\(h_{\bar{a}}=\frac{a_y}{a_x}=\frac{6}{-1}=-6\)</span> .
+Þá vitum við að vigurinn sem við leitum að, <span class="math">\(b\)</span> , uppfyllir það sama:</p>
+<div class="math">
+\[h_{\bar{b}}=\frac{b_y}{b_x}=-6
+
+\]</div>
+<p>sem er jafngilt því að <span class="math">\(b_y=-6b_x\)</span> .</p>
+<p>Skilyrðið að <span class="math">\(\overline{b}\)</span> þurfi að hafa lengdina 9 gefur að:</p>
+<div class="math">
+\[|\overline{b}| = \sqrt{b_x^2+b_y^2} =9
+
+\]</div>
+<p>Setjum <span class="math">\(b_y=-6b_x\)</span> inn og fáum:</p>
+<div class="math">
+\[\begin{aligned}
+  9 &= \sqrt{b_x^2+b_y^2}\\
+  &=\sqrt{b_x^2+(-6b_x)^2} \\
+  &= \sqrt{b_x^2+36b_x^2} \\
+  &=\sqrt{37b_x^2} \\
+  &=b_x\sqrt{37} \\
+  b_x&=\frac{9}{\sqrt{37}} \approx 1.480\\
+  b_y&= -6b_x = \frac{-54}{\sqrt{37}} \approx -8.878
+\end{aligned}
+
+\]</div>
+<p>Vigur sem er samsíða <span class="math">\(\overline{a}=(-1,6)\)</span> og hefur lengdina 9 er því</p>
+<div class="math">
+\[\overline{b}= \begin{pmatrix} \frac{9}{\sqrt{37}} \\  \frac{-54}{\sqrt{37}} \end{pmatrix}
+
+\]</div>
+</div>
+</div>
+<div class="section" id="a-lia-vigra">
+<h2><span class="section-number">8.2. </span>Að liða vigra<a class="headerlink" href="#a-lia-vigra" title="Permalink to this headline">¶</a></h2>
+<p>Vigra er líka hægt að tákna með lengd og stefnuhorni.
+Hornið <span class="math">\(\theta\)</span> er skilgreint frá jákvæðum x-ás og að vigrinum.
+Með þessum upplýsingum er hægt að liða vigurinn eftir x- og y-ás með því að nota hornaföll.</p>
+<p>Þættir vigursins eru föll af stefnuhorninu sem er oft merkt <span class="math">\(\theta\)</span> eða <span class="math">\(\phi\)</span> :</p>
+<div class="math">
+\[a_x = a\cos(\theta) \\
+a_y = a\sin(\theta)
+
+\]</div>
+<p>þar sem <span class="math">\(a=|\overline{a}|\)</span>.</p>
+<p>Stefnuhorn vigurs <span class="math">\(\overline{a} = (a_x,a_y)\)</span> má því reikna:</p>
+<div class="math">
+\[\frac{a_y}{a_x} = \frac{a\sin(\theta)}{a\cos(\theta)} = \tan(\theta)\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/mynd-vigur.svg"><img alt="../_images/mynd-vigur.svg" src="../_images/mynd-vigur.svg" width="60%" /></a>
+</div>
+</div>
+<div class="section" id="einingarvigrar">
+<h2><span class="section-number">8.3. </span>Einingarvigrar<a class="headerlink" href="#einingarvigrar" title="Permalink to this headline">¶</a></h2>
+<p>Einingarvigrar eru vigrar sem hafa lengdina 1.
+Vigrarnir</p>
+<div class="math">
+\[\begin{aligned}
+\hat{\imath} &= \begin{pmatrix} 1 \\0 \\0 \end{pmatrix} \\
+\hat{\jmath} &= \begin{pmatrix} 0 \\1 \\0 \end{pmatrix} \\
+\hat{k} &= \begin{pmatrix} 0\\0 \\1 \end{pmatrix} \\
+\end{aligned}
+
+\]</div>
+<p>liggja samsíða <span class="math">\(x\)</span> - , <span class="math">\(y\)</span> - og  <span class="math">\(z\)</span> -  ásunum í rétthyrndu hnitakerfi .
+Þeir eru líka táknaðir:</p>
+<div class="math">
+\[\begin{gather}
+\hat{e}_x, \quad \hat{e}_y, \quad \hat{e}_z
+\end{gather}
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/einingarvigrar.svg"><img alt="../_images/einingarvigrar.svg" src="../_images/einingarvigrar.svg" width="60%" /></a>
+</div>
+<p>Einingarvigrarnir <span class="math">\(\hat{e}_x, \hat{e}_y\)</span> og <span class="math">\(\hat{e}_z\)</span> eru <a href="http://www.stae.is/os/leita/linearly_independent." class="tooltip" target="_blank">línulega óháðir<span>en: <i>linearly independent.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>, sem þýðir að engan þeirra er hægt að mynda úr hinum tveimur með samlagningu þeirra eða margföldun með tölu.
+Hvernig sem þú teygir á og raðar saman <span class="math">\(\hat{\imath}\)</span> og <span class="math">\(\hat{\jmath}\)</span> færðu aldrei út <span class="math">\(\hat{k}\)</span> .
+Þessi eiginleiki kemur til vegna þess að einingarvigrarnir eru allir hornréttir á hvorn annan.</p>
+<p>Alla vigra má skrifa sem skalarstærðir margfaldaðar við einingarvigrana:</p>
+<div class="math">
+\[\overline{a} = (a_x, \; a_y, \; a_z ) = a_x \hat{\imath} + a_y \hat{\jmath} + a_z \hat{k}
+
+\]</div>
+</div>
+<div class="section" id="samlagning-vigra">
+<h2><span class="section-number">8.4. </span>Samlagning vigra<a class="headerlink" href="#samlagning-vigra" title="Permalink to this headline">¶</a></h2>
+<p>Þegar vigrar eru lagðir saman eru hnit eftir hverjum ás fyrir sig lögð saman.
+Summa tveggja vigra <span class="math">\(\overline{a} = (a_x,a_y)\)</span> og <span class="math">\(\overline{b} = (b_x,b_y)\)</span> er:</p>
+<div class="math">
+\[\overline{c} = \overline{a} + \overline{b} = (a_x + b_x, a_y +b_y) = \begin{pmatrix} a_x+b_x \\ a_y+b_y \end{pmatrix}
+
+\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Leggjum saman vigrana <span class="math">\(\overline{a}=(4,3)\)</span> og <span class="math">\(\overline{b}=(1,3)\)</span> :</p>
+<div class="math">
+\[\overline{a}+\overline{b}=(4,3) + (1,3) = (4+1, 3+3) = (5,6)
+
+\]</div>
+</div>
+<p>Myndrænt má ímynda sér að upphafspunktur seinni vigursins sé settur í endapunkt fyrri vigursins,
+og summa þeirra er frá upphafspunkti fyrri vigursins til endapunkts þess seinni.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/vigrasamlagning.svg"><img alt="../_images/vigrasamlagning.svg" src="../_images/vigrasamlagning.svg" width="60%" /></a>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Þó að <span class="math">\(\overline{c} = \overline{a} + \overline{b}\)</span> þýðir það <strong>ekki</strong> að <span class="math">\(c = a + b\)</span>.</p>
+<p>Í dæminu hér á undan er til dæmis</p>
+<div class="math">
+\[c = |\overline{c}| = \sqrt{5^2+6^2} \approx 7,8 \\
+a + b = \sqrt{4^2+3^2} + \sqrt{1^2+3^2} \approx 8,2
+
+\]</div>
+</div>
+<hr class="docutils" />
+<p>Um samlagningu vigra gilda eftirfarandi reglur:</p>
+<div class="math">
+\[\begin{aligned}
+  \overline{a} +\overline{b} &= \overline{b} + \overline{a} & \text{Víxlregla}\\
+  (\overline{a}+\overline{b})+\overline{c} &= \overline{a} + (\overline{b}+\overline{c}) & \text{Tengiregla}
+\end{aligned}
+
+\]</div>
+<hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Höfum þrjá punkta:</p>
+<div class="math">
+\[\begin{aligned}
+A&=(x_1,y_1)=(1,2) \\
+B&=(x_2,y_2)=(4,5) \\
+C&=(x_3,y_3)=(3,-1)
+\end{aligned}
+
+\]</div>
+<p>Reiknum vigrana <span class="math">\(\overline{AB}, \overline{AC} \text{ og } \overline{BC}\)</span> :</p>
+<div class="math">
+\[\begin{aligned}
+  \overline{AB} &= \begin{pmatrix} x_2-x_1 \\ y_2-y_1 \end{pmatrix}\\
+  &=\begin{pmatrix} 4-1 \\5-2\end{pmatrix} =\begin{pmatrix} 3 \\3\end{pmatrix} \\
+  & \\
+  \overline{AC} &= \begin{pmatrix}x_3-x_1\\ y_3-y_1 \end{pmatrix}\\
+  &=\begin{pmatrix} 3-1 \\(-1)-2\end{pmatrix} =\begin{pmatrix} 2 \\-3\end{pmatrix} \\
+  & \\
+  \overline{BC} &= \begin{pmatrix}x_3-x_2\\ y_3-y_2 \end{pmatrix}\\
+  &=\begin{pmatrix} 3-4 \\(-1)-5\end{pmatrix} =\begin{pmatrix} -1 \\-6\end{pmatrix} \\
+\end{aligned}
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/innskots.svg"><img alt="../_images/innskots.svg" src="../_images/innskots.svg" width="50%" /></a>
+</div>
+<p>Hér eru punktarnir teiknaðir inn ásamt vigrunum <span class="math">\(\overline{AB}, \overline{AC} \text{ og } \overline{BC}\)</span> .</p>
+</div>
+<p>Af þessu dæmi má sjá <em>innskotsregluna</em> :</p>
+<div class="math">
+\[\overline{AC} = \overline{AB} + \overline{BC}
+
+\]</div>
+</div>
+<div class="section" id="margfoldun-vigra">
+<h2><span class="section-number">8.5. </span>Margföldun vigra<a class="headerlink" href="#margfoldun-vigra" title="Permalink to this headline">¶</a></h2>
+<p>Þegar vigur <span class="math">\(\overline{v}\)</span> er margfaldaður með tölu <span class="math">\(s\)</span> er hver þáttur vigursins margfaldaður með tölunni:</p>
+<div class="math">
+\[\begin{aligned}
+    s\cdot\overline{v}  &= s\cdot(v_x, v_y, v_z)  \\
+    &= (s \cdot v_x, s \cdot v_y, s \cdot v_z)
+\end{aligned}
+
+\]</div>
+<p>Margfeldi vigra er tvenns konar, <a href="http://www.stae.is/os/leita/dot_product." class="tooltip" target="_blank">innfeldi (punktfeldi)<span>en: <i>dot product.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>, og <a href="http://www.stae.is/os/leita/cross_product." class="tooltip" target="_blank">krossfeldi<span>en: <i>cross product.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.</p>
+<hr class="docutils" />
+<p><strong>Innfeldi</strong> tveggja vigra er táknað með punkti og útkoman er <em>tala</em>: <span class="math">\(\overline{a} \cdot \overline{b}\)</span> .
+Ef þættir vigranna eru þekktir er innfeldið:</p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a_x b_x + a_y b_y
+
+\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Reiknum innfeldi vigranna <span class="math">\(\overline{a}=(7,8)\)</span> og <span class="math">\(\overline{b}=(-1,3)\)</span></p>
+<p><strong>Lausn</strong></p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 7\cdot (-1)+ 8\cdot 3 = -7+24 =17
+
+\]</div>
+</div>
+<p>Ef vigrarnir eru gefnir með lengd og stefnuhorni er innfeldið:</p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a b \cos{\phi}
+
+\]</div>
+<p>þar sem <span class="math">\(\phi\)</span> er hornið milli <span class="math">\(\overline{a}\)</span> og <span class="math">\(\overline{b}\)</span> þegar þeir hafa sama upphafspunkt.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Tveir vigrar eru hornréttir ef innfeldi þeirra er núll.</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Reiknum hornið á milli vigranna <span class="math">\(\overline{a}=(2,4)\)</span> og <span class="math">\(\overline{b}=(4,2)\)</span> :</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/innfeldi.svg"><img alt="../_images/innfeldi.svg" src="../_images/innfeldi.svg" width="60%" /></a>
+</div>
+<p><strong>Lausn</strong></p>
+<p>Við vitum að <span class="math">\(\overline{a} \cdot \overline{b} = a b \cos{\phi}\)</span> , þar sem <span class="math">\(a\)</span> og <span class="math">\(b\)</span> eru lengdir vigranna.
+Lengdirnar eru:</p>
+<div class="math">
+\[\begin{aligned}
+  a = \sqrt{a_x^2 + a_y^2} = \sqrt{2^2 + 4^2} = \sqrt{20} \\
+  b = \sqrt{b_x^2 + b_y^2} = \sqrt{4^2 + 2^2} = \sqrt{20}
+\end{aligned}
+
+\]</div>
+<p>Reiknum innfeldi vigranna:</p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 2\cdot 4+ 4\cdot 2 = 16
+
+\]</div>
+<p>Því er</p>
+<div class="math">
+\[\begin{aligned}
+  \overline{a} \cdot \overline{b} &= a b \cos{\phi} \\
+  \cos{\phi} &= \frac{\overline{a} \cdot \overline{b}}{a b} = \frac{16}{\sqrt{20} \cdot \sqrt{20}} = \frac{16}{20}\\
+  \phi &= 36.8 ° = 0.644
+\end{aligned}
+
+\]</div>
+</div>
+<hr class="docutils" />
+<p><strong>Krossfeldi</strong> tveggja vigra er táknað með krossi og útkoman er nýr <em>vigur</em>: <span class="math">\(\overline{c} = \overline{a} \times \overline{b}\)</span> .
+<a href="http://www.stae.is/os/leita/cross_product." class="tooltip" target="_blank">Krossfeldi<span>en: <i>cross product.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> eru reiknuð með þáttum vigranna, það er vigrum gefnum á forminu <span class="math">\(\overline{a} = a_x \hat{\imath} + a_y \hat{\jmath} + a_z \hat{k}\)</span> .</p>
+<div class="math">
+\[\begin{aligned}
+\overline{a} \times \overline{b} &= (a_x \hat{\imath} + a_y \hat{\jmath} + a_z \hat{k}) \times (b_x \hat{\imath} + b_y \hat{\jmath} + b_z \hat{k}) \\
+&= (a_y b_z - a_z b_y)\hat{\imath} + (a_z b_x - a_x b_z)\hat{\jmath} + (a_x b_y - a_y b_x)\hat{k} \\
+\end{aligned}
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/krossfeldi.svg"><img alt="../_images/krossfeldi.svg" src="../_images/krossfeldi.svg" width="60%" /></a>
+</div>
+<p>Útkoma krossfeldisins er vigur sem er hornréttur á bæði <span class="math">\(a\)</span> og <span class="math">\(b\)</span>.
+Til að ákvarða sefnu vigursins getum við notað <strong>hægri</strong> handar regluna.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/hhr.svg"><img alt="../_images/hhr.svg" src="../_images/hhr.svg" width="90%" /></a>
+</div>
+<p>Lengd krossfeldis <span class="math">\(\overline{a} \text{ og } \overline{b}\)</span> má reikna úr frá lengdum vigranna og horninu á milli þeirra.</p>
+<div class="math">
+\[|\overline{a} \times \overline{b}| = |\overline{a}| |\overline{b}| \sin(\phi)
+
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Þegar krossfeldi er reiknað skiptir máli hvor vigurinn er á undan!</p>
+<div class="math">
+\[\overline{a} \times \overline{b} = - \overline{b} \times \overline{a}
+
+\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Reiknum krossfeldi vigranna <span class="math">\(\overline{a}=(1,2,3)\)</span> og <span class="math">\(\overline{b}=(4,5,6)\)</span>.</p>
+<p><strong>Lausn</strong></p>
+<div class="math">
+\[\begin{aligned}
+  \overline{a} \times \overline{b} &= (a_y b_z - a_z b_y)\hat{\imath} + (a_z b_x - a_x b_z)\hat{\jmath} + (a_x b_y - a_y b_x)\hat{k} \\
+  &= (2\cdot 6-3\cdot 5)\hat{\imath} + (3\cdot 4 - 1 \cdot 6) \hat{\jmath} + ( 1\cdot 5 - 2\cdot 4) \hat{k}\\
+  &= -3 \hat{\imath} +6 \hat{\jmath} - 3\hat{k}\\
+  &= (-3,6,-3)
+\end{aligned}
+
+\]</div>
+</div>
+</div>
+<div class="section" id="flatarmyndir">
+<h2><span class="section-number">8.6. </span>Flatarmyndir<a class="headerlink" href="#flatarmyndir" title="Permalink to this headline">¶</a></h2>
+<p>Ef hliðar þríhyrnings eru gefnar með vigrunum <span class="math">\(\overline{a}\)</span> og <span class="math">\(\overline{b}\)</span> er hægt að reikna hornið <span class="math">\(\theta\)</span> .
+Flatarmálið er þá <span class="math">\(F=\frac{1}{2}|\overline{a}| \cdot |\overline{b}| \cdot \sin(\theta)\)</span> .</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/fl_thri2.svg"><img alt="../_images/fl_thri2.svg" src="../_images/fl_thri2.svg" width="40%" /></a>
+</div>
+<p>Ef hliðar samsíðungs eru gefnar með vigrunum <span class="math">\(\overline{a}\)</span> og <span class="math">\(\overline{b}\)</span> er hægt að reikna hornið <span class="math">\(\theta\)</span> .
+Flatarmálið er þá <span class="math">\(F=|\overline{a}| \cdot |\overline{b}| \cdot \sin(\theta)\)</span> og ummálið er <span class="math">\(U=2|\overline{a}|+2|\overline{b}|\)</span> .</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/fl_sams2.svg"><img alt="../_images/fl_sams2.svg" src="../_images/fl_sams2.svg" width="40%" /></a>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli09.html" class="btn btn-neutral float-right" title="9. Meira um föll" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli07.html" class="btn btn-neutral" title="7. Hornaföll" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Efnið er sett upp í <a href="https://github.com/edbook">Edbook</a> en það kerfi samanstendur af <a href="http://sphinx-doc.org/">Sphinx</a> ásamt sérsniðnum viðbótum. <a href="https://github.com/snide/sphinx_rtd_theme">Þemað</a> kemur frá <a href="https://readthedocs.org">Read the Docs</a>.
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            LINK_SUFFIX: '.html'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+      <script type="text/javascript" src="../_static/katex_autorenderer.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<script src="../_static/jquery.scrolldepth.js"></script>
+<script>
+    jQuery.scrollDepth({
+        percentage: false,
+        userTiming: false,
+        pixelDepth: false,
+        nonInteraction: false,
+        elements: top.scrolldepth_tags
+});
+</script>
+
+<script>
+	window.addEventListener("load", function(){
+		for(var i in ggbAppletId){
+			ggbAppletId[i].inject(i);
+		}
+	});
+</script>
+
+
+
+</body>
+</html>

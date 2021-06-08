@@ -1,0 +1,21 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+\definecolor{mycolor}{RGB}{30,51,76}
+\definecolor{hi}{RGB}{66, 134, 244}
+
+\begin{tikzpicture}
+\draw (0,0) [fill=white, thick] rectangle (6,4);
+\draw (3,2)[fill=hi, opacity=0.3] ellipse (2cm and 1cm);
+\draw (3.1,2)[fill=mycolor, opacity=0.3] circle [radius = 0.6];
+\node (c) at (1.7 ,2) {\large A};
+\node (c) at (3.1 ,2) {\large B};
+\end{tikzpicture}
+
+
+\end{document}

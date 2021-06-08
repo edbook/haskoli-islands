@@ -1,0 +1,13 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw[domain=-2.5:2.5,smooth,variable=\x,black] plot ({\x},{\x*\x});
+% \draw[domain=0:4, smooth, variable=\x,red] plot({\x},{-\x^0.5});
+
+\draw[->, dashed] (0,-0.5) -- (0,6.5) node[above] {$x = -\frac{b}{2a}$};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[->] (0,0) -- (8,0) node[anchor=north west] {$x$};
+  \draw[->] (0,0) -- (0,8) node[anchor=south west] {$y$};
+  \draw (2,-0.2) -- (2,0.2); %x_1
+  \draw (7,-0.2) -- (7,0.2); %x_2
+  \draw (-0.2,2) -- (0.2,2); %y_2
+  \draw (-0.2,6) -- (0.2,6); %y_1
+  \draw (2,-0.7) node{$x_1$};
+  \draw (7,-0.7) node{$x_2$};
+  \draw (-0.7,2) node{$y_2$};
+  \draw (-0.7,6) node{$y_1$};
+  \fill (2,6)circle(4pt) node[anchor=south west] {$P_1$};
+  \fill (7,2)circle(4pt) node[anchor=south west] {$P_2$};
+
+  \draw [dashed] (2,0) -- (2,6);
+  \draw [dashed] (0,6) -- (2,6);
+  \draw (2,6) -- (7,2);
+  \draw [dashed] (7,0) -- (7,2);
+  \draw [dashed] (0,2) -- (7,2);
+\end{tikzpicture}
+\end{document}

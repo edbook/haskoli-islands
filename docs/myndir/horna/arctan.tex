@@ -1,0 +1,13 @@
+\documentclass[border=5pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw [->] (0,-2)-- (0,2);
+\draw [->] (-pi,0) -- (pi,0);
+\draw [thick, domain=-pi:pi] plot (\x, {atan(\x)/180*pi}) node [below left] {$\arctan$};
+\draw [dashed] (-pi,-pi/2) -- (pi,-pi/2);
+\node [below left] at (0,-pi/2) {-$\pi/2$};
+\draw [dashed] (-pi,pi/2) -- (pi,pi/2);
+\node [below left] at (0,pi/2) {$\pi/2$};
+\end{tikzpicture}
+\end{document}

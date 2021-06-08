@@ -1,0 +1,30 @@
+\documentclass[border=7pt]{standalone}
+
+%\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[scale=0.5]
+
+\draw[domain=-2.65:12,smooth, samples = 1000,variable=\x,black, thick] plot ({\x},{(\x-2)/(\x+3) });
+
+\draw[domain=-12:-3.43,smooth,variable=\x,black, thick] plot ({\x},{(\x-2)/(\x+3)});
+
+\node (c) at (7,7) {\Large $f(x) = $ \LARGE$\frac{x-2}{x+3}$};
+\draw[->] (-12.5,0) -- (12.5,0) node[right] {$x$};
+\draw[->] (0,-12.5) -- (0,12.5) node[above] {$y$};
+\draw[dashed, very thin] (-3,-12.75)--(-3,12.75);
+\draw[dashed, ultra thin] (-12.5, 1)--(12.5, 1);
+
+\foreach \x in {-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12}{
+     \draw (\x,-0.5) node{\small\x};
+     \draw (\x,-0.1) -- (\x,0.1);
+     };
+
+\foreach \x in {-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12}{
+  \draw (-0.5,\x) node{\small\x};
+  \draw (-0.1,\x) -- (0.1,\x);
+  };
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,13 @@
+ \documentclass{standalone}
+ \usepackage{tikz}
+ \usepackage{tkz-euclide}
+ \begin{document}
+
+ \begin{tikzpicture}
+    \draw[domain=-1.5:1.5,smooth,variable=\x,black] plot ({\x},{\x*\x*\x});
+    \draw[->] (-3,0) -- (3,0) node[right] {$x$};
+      \draw[->] (0,-3.3) -- (0,3.3) node[above] {$y$};
+
+
+ \end{tikzpicture}
+ \end{document}

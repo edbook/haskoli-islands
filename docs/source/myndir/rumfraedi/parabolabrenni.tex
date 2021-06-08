@@ -1,0 +1,18 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+
+\draw [smooth, domain =-2:2, very thick] plot(\x, {\x*\x});
+\draw [smooth, domain =-2:-0.45, dashed] plot(\x, {-2*\x-1});
+\draw (-1.5,4)--(-1.5,2.25) --(0,0.25);
+\draw [red](-1,4)--(-1,1) --(0,0.25) ;
+\draw (-0.5,4) -- (-0.5,0.25) -- (0,0.25);
+\draw (1,4)--(1,1) --(0,0.25) ;
+\draw (0.5,4) -- (0.5,0.25) -- (0,0.25);
+\draw (1.5,4)--(1.5,2.25) --(0,0.25);
+
+\filldraw[blue] (0,0.25)circle(2pt);
+
+\end{tikzpicture}
+\end{document}

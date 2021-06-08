@@ -1,0 +1,14 @@
+README
+setup.py
+hoverrole/__init__.py
+hoverrole/binstae.py
+hoverrole/createDicts.py
+hoverrole/dictlookup.py
+hoverrole/hoverrole.py
+hoverrole/minstae.py
+hoverroleextension.egg-info/PKG-INFO
+hoverroleextension.egg-info/SOURCES.txt
+hoverroleextension.egg-info/dependency_links.txt
+hoverroleextension.egg-info/namespace_packages.txt
+hoverroleextension.egg-info/requires.txt
+hoverroleextension.egg-info/top_level.txt

@@ -1,0 +1,1531 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Jöfnur og ójöfnur &mdash; Undirbúningur í stærðfræði  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;}
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Undirbúningur í stærðfræði  documentation" href="../index.html"/>
+        <link rel="next" title="3. Rúmfræði" href="Kafli03.html"/>
+        <link rel="prev" title="1. Algebra" href="Kafli01.html"/>
+
+
+    <!-- ADD YOUR GOOGLE ANALYTICS TRACKING CODE HERE-->
+    <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-29852053-2', 'auto');
+  		ga('send', 'pageview');
+
+	</script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+	<script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+  <script>
+  // the buttonText string says what will be written on the
+  // sage cell evaluation button.
+  // It can be changed here.
+  var buttonText = "Keyra"
+  </script>
+
+	<script type="text/javascript">
+    sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});
+    sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });
+    sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});
+    sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+    sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+    sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+  </script>
+
+  <script>ggbAppletId = []; </script>
+    <script>top.scrolldepth_tags = []; </script>
+
+     
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Undirbúningur í stærðfræði
+        
+
+        
+          
+          <img src="../_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Um námsefnið</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Algebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#talnakerfi">1.1. Talnakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#natturulegu-tolurnar-mathbb-n">1.1.1. Náttúrulegu tölurnar  <span class="math">\(\mathbb{N}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#heiltolurnar-mathbb-z">1.1.2. Heiltölurnar <span class="math">\(\mathbb{Z}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#raeu-tolurnar-mathbb-q">1.1.3. Ræðu tölurnar <span class="math">\(\mathbb{Q}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rauntolurnar-mathbb-r">1.1.4. Rauntölurnar <span class="math">\(\mathbb{R}\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#forgangsroun-agera">1.2. Forgangsröðun aðgerða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#reiknireglur">1.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#frumtolur">1.4. Frumtölur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-deilanleiki">1.4.1. Skilgreining: Deilanleiki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-frumtolur">1.4.2. Skilgreining: Frumtölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#frumattun">1.4.3. Frumþáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#staersti-samdeilir-og-minnsta-samfeldi">1.4.4. Stærsti samdeilir og minnsta samfeldi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#brotareikningur">1.5. Brotareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-raear-tolur">1.5.1. Skilgreining: Ræðar tölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#fullstytt-brot">1.5.2. Fullstytt brot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#roun-raera-talna">1.5.3. Röðun ræðra talna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.5.4. Reiknireglur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#deiling-me-afgangi">1.6. Deiling með afgangi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#veldi-og-raetur">1.7. Veldi og rætur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#veldi">1.7.1. Veldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur-fyrir-veldi">1.7.2. Reiknireglur fyrir veldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#raetur">1.7.3. Rætur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur-fyrir-raetur">1.7.4. Reiknireglur fyrir rætur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#brotin-veldi">1.7.5. Brotin veldi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#jofnur">2.1. Jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fyrsta-stigs-jofnur">2.1.1. Fyrsta stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#annars-stigs-jofnur">2.1.2. Annars stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lausnarformula-fyrir-annars-stigs-jofnur">2.1.3. Lausnarformúla fyrir annars stigs jöfnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setning">2.1.3.1. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#liun-og-attun">2.2. Liðun og þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#liun">2.2.1. Liðun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attun">2.2.2. Þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attun-me-agiskunarafer">2.2.3. Þáttun með ágiskunaraðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attun-me-lausnarformulu">2.2.4. Þáttun með lausnarformúlu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#jofnuhneppi">2.3. Jöfnuhneppi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ojofnur-og-tolugildi">2.4. Ójöfnur og tölugildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ojofnur">2.4.1. Ójöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tolugildi">2.4.2. Tölugildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-fyrir-tolugildi">2.4.3. Reiknireglur fyrir tölugildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#summu-og-margfeldistakni">2.5. Summu- og margfeldistáknið</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Rúmfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#hnitakerfi">3.1. Hnitakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fjarlaeg-milli-punkta-i-kartesisku-hnitakerfi">3.1.1. Fjarlægð milli punkta í kartesísku hnitakerfi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#regla">3.1.2. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#jafna-linu-i-hnitakerfinu">3.2. Jafna línu í hnitakerfinu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#hallatala-og-skurpunktur-vi-asa">3.3. Hallatala og skurðpunktur við ása</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#meira-um-jofnu-linu">3.4. Meira um jöfnu línu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id1">3.4.1. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#a-finna-jofnu-linu">3.4.2. Að finna jöfnu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#samsia-og-verstaear-linur">3.4.3. Samsíða og þverstæðar línur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli03.html#samsia-linur">3.4.3.1. Samsíða línur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli03.html#verstaear-linur">3.4.3.2. Þverstæðar línur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#mipunktsregla">3.4.4. Miðpunktsregla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#keilusni">3.5. Keilusnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fleygbogar">3.5.1. Fleygbogar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sporoskjur">3.5.2. Sporöskjur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#hringir">3.5.3. Hringir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#breibogar">3.5.4. Breiðbogar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#flatarmyndir">3.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Mengi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#grunnhugtok">4.1. Grunnhugtök</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#umfangsfrumsenda">4.1.1. Umfangsfrumsenda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#hlutmengi">4.1.2. Hlutmengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#yringar-til-a-skilgreina-mengi">4.2. Yrðingar til að skilgreina mengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining">4.2.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#agerir-a-mengjum">4.3. Aðgerðir á mengjum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#faldmengi">4.3.1. Faldmengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fyllimengi">4.3.2. Fyllimengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#meira-um-agerir-a-mengjum">4.4. Meira um aðgerðir á mengjum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#rauntalnabil">4.5. Rauntalnabil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id1">4.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#gerir-af-bilum">4.5.2. Gerðir af bilum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#varpanir-og-foll">5.1. Varpanir og föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#daemi-um-vorpun-sem-er-ekki-fall">5.1.1. Dæmi um vörpun sem er ekki fall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#graf-vorpunnar">5.2. Graf vörpunnar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#jafnstae-og-oddstae-foll">5.3. Jafnstæð og oddstæð föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skilgreining">5.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#myndraen-utskyring">5.3.2. Myndræn útskýring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#einhalla-foll">5.4. Einhalla föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.4.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#gaffalforskrift">5.5. Gaffalforskrift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#lotubundin-foll">5.6. Lotubundin föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id2">5.6.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#andhverfur-falla">5.7. Andhverfur falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id3">5.7.1. Skilgreining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Margliður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#id1">6.1. Margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#nullstovar-marglia">6.2. Núllstöðvar margliða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#regla">6.2.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#fyrsta-og-annars-stigs-margliur">6.3. Fyrsta og annars stigs margliður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fyrsta-stigs-margliur">6.3.1. Fyrsta stigs margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#annars-stigs-margliur">6.3.2. Annars stigs margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id2">6.3.3. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#deiling-me-afgangi-margliur">6.4. Deiling með afgangi - margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#attun-marglia">6.5. Þáttun margliða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining">6.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#nullstovar-marglia-og-attun">6.5.2. Núllstöðvar margliða og þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id3">6.5.3. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id4">6.5.4. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#p-q-afer">6.6. p/q-aðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id5">6.6.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#pascal">6.7. Pascal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli07.html">7. Hornaföll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#bogaeiningar">7.1. Bogaeiningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining">7.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#kosinus-og-sinus">7.2. Kósínus og sínus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#eingingahringurinn">7.2.1. Eingingahringurinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id1">7.2.2. Kósínus og sínus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#amma-illa">7.2.3. Amma illa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#ekkt-gildi-a-hornafollum">7.3. Þekkt gildi á hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tangens-og-kotangens">7.4. Tangens og kótangens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#myndir-af-hornafollum">7.5. Myndir af hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hornafallareglur">7.6. Hornafallareglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tvofold-horn">7.7. Tvöföld horn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#andhverfur-hornafallanna">7.8. Andhverfur hornafallanna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id2">7.8.1. Skilgreining</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-sinusar">7.8.1.1. Andhverfa sínusar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-kosinusar">7.8.1.2. Andhverfa kósínusar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-tangens">7.8.1.3. Andhverfa tangens</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tengsl-i-rumfraei">7.9. Tengsl í rúmfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#regla-pyagorasar">7.9.1. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#sinusreglan">7.9.2. Sínusreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#kosinusreglan">7.9.3. Kósínusreglan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hornafallareglurnar">7.10. Hornafallareglurnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#grunnreglan">7.10.1. Grunnreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#hlirunarreglur">7.10.2. Hliðrunarreglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#summuformulur">7.10.3. Summuformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#tvofoldunarformulur">7.10.4. Tvöföldunarformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#helmingunarformulur">7.10.5. Helmingunarformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#summu-og-margfeldisformulur">7.10.6. Summu- og margfeldisformúlur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli08.html">8. Vigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#skilgreining">8.1. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#a-lia-vigra">8.2. Að liða vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#einingarvigrar">8.3. Einingarvigrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#samlagning-vigra">8.4. Samlagning vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#margfoldun-vigra">8.5. Margföldun vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#flatarmyndir">8.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli09.html">9. Meira um föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#andhverfur">9.1. Andhverfur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#eintaek-og-ataek-foll">9.2. Eintæk og átæk föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#ataek-foll">9.2.1. Átæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining">9.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#eintaek-foll">9.2.3. Eintæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id1">9.2.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#gagntaek-foll">9.2.5. Gagntæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id2">9.2.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#regla">9.2.7. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#samskeyting-falla">9.3. Samskeyting falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id3">9.3.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#nokkur-mikilvaeg-foll">9.4. Nokkur mikilvæg föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#visisfoll">9.4.1. Vísisföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#lograr">9.4.2. Lograr</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#lograreglur">9.4.2.1. Lograreglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn">9.4.3. Náttúrulega veldisvísisfallið og nátturulegi logrinn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#id4">9.4.3.1. Lograreglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#rae-foll">9.4.4. Ræð föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#myndraent">9.4.4.1. Myndrænt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#stofnbrotaliun">9.4.5. Stofnbrotaliðun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#id5">9.4.5.1. Regla</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#ummyndanir">9.5. Ummyndanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#hlirun">9.5.1. Hliðrun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#speglun">9.5.2. Speglun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#strikkun">9.5.3. Stríkkun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#lorett">9.5.3.1. Lóðrétt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#larett">9.5.3.2. Lárétt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli10.html">10. Markgildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#markgildi-falls">10.1. Markgildi falls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#skilgreining">10.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#gerir-markgilda">10.2. Gerðir markgilda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#reikniagerir-a-markgildum">10.3. Reikniaðgerðir á markgildum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#samfelld-foll">10.4. Samfelld föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#id1">10.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#reglur-um-samfelldni">10.4.2. Reglur um samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#nokkur-ekkt-samfelld-foll">10.4.3. Nokkur þekkt samfelld föll</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli11.html">11. Diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skyringardaemi">11.1. Skýringardæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skilgreining">11.2. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#reiknireglur">11.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#ekktar-afleiur">11.4. Þekktar afleiður</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli12.html">12. Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#repun">12.1. Þrepun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#rithattur">12.2. Ritháttur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#formulubla">12.3. Formúlublað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#algebra">12.3.1. Algebra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#einfaldar-reiknireglur">12.3.1.1. Einfaldar reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#brotareiknireglur">12.3.1.2. Brotareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#veldareiknireglur">12.3.1.3. Veldareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-raetur">12.3.1.4. Reiknireglur fyrir rætur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#jofnur-og-ojofnur">12.3.2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#lausnarformula-annars-stigs-jofnu">12.3.2.1. Lausnarformúla annars stigs jöfnu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-tolugildi">12.3.2.2. Reiknireglur fyrir tölugildi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#regla-pyagorasar">12.3.2.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#fjarlaeg-milli-punkta">12.3.2.4. Fjarlægð milli punkta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hallatala-linu">12.3.2.5. Hallatala línu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#mipunktsregla">12.3.2.6. Miðpunktsregla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#flatarmal">12.3.2.7. Flatarmál</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#foll">12.3.3. Föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#oddstaett-og-jafnstaett">12.3.3.1. Oddstætt og jafnstætt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#lograreglur">12.3.3.2. Lograreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#stofnbrotaliun">12.3.3.3. Stofnbrotaliðun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#margliur">12.3.4. Margliður</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#nokkrar-lianir">12.3.4.1. Nokkrar liðanir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#hornafoll">12.3.5. Hornaföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#graur-og-bogaeiningar">12.3.5.1. Gráður og bogaeiningar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hliar-rihyrnings">12.3.5.2. Hliðar þríhyrnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#grunnreglan">12.3.5.3. Grunnreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hlirunarreglur">12.3.5.4. Hliðrunarreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#summuformulur">12.3.5.5. Summuformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#tvofoldunarformulur">12.3.5.6. Tvöföldunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#helmingunarformulur">12.3.5.7. Helmingunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#summu-og-margfeldisformulur">12.3.5.8. Summu- og margfeldisformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#kosinusreglan">12.3.5.9. Kósínusreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#sinusreglan">12.3.5.10. Sínusreglan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#vigrar">12.3.6. Vigrar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur">12.3.6.1. Reiknireglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#markgildi">12.3.7. Markgildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-markgildi">12.3.7.1. Reiknireglur fyrir markgildi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#diffrun">12.3.8. Diffrun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#id1">12.3.8.1. Reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#ekktar-afleiur">12.3.8.2. Þekktar afleiður</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Undirbúningur í stærðfræði</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Yfirlit</a> &raquo;</li>
+      
+    <li><span class="section-number">2. </span>Jöfnur og ójöfnur</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/Kafli02.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jofnur-og-ojofnur">
+<h1><span class="section-number">2. </span>Jöfnur og ójöfnur<a class="headerlink" href="#jofnur-og-ojofnur" title="Permalink to this headline">¶</a></h1>
+<figure><iframe src='https://rec.hi.is/Panopto/Pages/Embed.aspx?id=8d8a65f8-66dd-4d9b-980d-475e439fc0bd' width=100% height=405 style=padding: 0px; border: 1px solid #464646; frameborder='0'></iframe></figure><hr class="docutils" />
+<div class="section" id="jofnur">
+<h2><span class="section-number">2.1. </span>Jöfnur<a class="headerlink" href="#jofnur" title="Permalink to this headline">¶</a></h2>
+<p id="s-jofnur"><a href="http://www.stae.is/os/leita/equation." class="tooltip" target="_blank">Jafna<span>en: <i>equation.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> lýsir sambandi milli stæða.
+Jafnaðarmerkið <span class="math">\(=\)</span> merkir að stæðurnar sem standa beggja vegna jafnaðarmerkisins séu sama talan.
+Til dæmis, ef við höfum jöfnuna <span class="math">\(x+2=4\)</span> sjáum við að jafnan gengur upp ef <span class="math">\(x=2\)</span> .</p>
+<p>Við megum beita reikniaðgerðum þegar við vinnum með jöfnur, svo lengi sem við <strong>gerum það sama báðum megin jafnaðarmerkis</strong>.</p>
+<p>Byrjum á því að skoða jöfnur af einni breytistærð. <a href="http://www.stae.is/os/leita/degree." class="tooltip" target="_blank">Stig<span>en: <i>degree.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> stæðu er jafnt hæsta veldi <a href="http://www.stae.is/os/leita/variable." class="tooltip" target="_blank">breytistærðarinnar<span>en: <i>variable.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>. Þá er <span class="math">\(x+2=0\)</span> fyrsta stigs jafna, <span class="math">\(x^2+2x+1=0\)</span> er annars stigs jafna, <span class="math">\(x^3+2x^2+3x=0\)</span> er þriðja stigs jafna og svo framvegis.</p>
+<div class="section" id="fyrsta-stigs-jofnur">
+<h3><span class="section-number">2.1.1. </span>Fyrsta stigs jöfnur<a class="headerlink" href="#fyrsta-stigs-jofnur" title="Permalink to this headline">¶</a></h3>
+<p><em>Fyrsta stigs jafna</em> hefur almennt form</p>
+<div class="math">
+\[ax+b=0
+
+\]</div>
+<p>þar sem <span class="math">\(a \neq 0\)</span> og <span class="math">\(b\)</span> eru tölur. Jafnan hefur eina lausn, sem fæst með því að draga <span class="math">\(b\)</span> frá báðum megin við jafnaðarmerkið og deila svo með <span class="math">\(a\)</span>. Við köllum þetta að <em>einangra</em> <span class="math">\(x\)</span>. Lausnin er því <span class="math">\(x=\frac{-b}{a}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Fyrsta stigs jafna er ekki alltaf á forminu <span class="math">\(ax+b=0\)</span>, en við getum alltaf komið henni yfir á það form með reikniaðgerðum. Til dæmis er <span class="math">\(5x=-2\)</span> ekki á þessu formi en við getum lagt <span class="math">\(2\)</span> við báðum megin og fengið <span class="math">\(5x+2=0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Leysum <span class="math">\(2x+3=0\)</span>. Drögum <span class="math">\(3\)</span> frá báðum megin og fáum <span class="math">\(2x=-3\)</span>. Deilum með <span class="math">\(2\)</span> og fáum <span class="math">\(x=-\frac{3}{2}\)</span>.</p>
+<p><strong>2.</strong> Leysum <span class="math">\(17x=5\)</span>. Til þess að einangra <span class="math">\(x\)</span> þurfum við nú bara að deila í gegn með <span class="math">\(17\)</span>. Fáum þá <span class="math">\(x=\frac{5}{17}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="annars-stigs-jofnur">
+<h3><span class="section-number">2.1.2. </span>Annars stigs jöfnur<a class="headerlink" href="#annars-stigs-jofnur" title="Permalink to this headline">¶</a></h3>
+<p id="s-annars-stigs-jofnur"><a href="http://www.stae.is/os/leita/quadratic_equation." class="tooltip" target="_blank">Annars stigs jafna<span>en: <i>quadratic equation.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> hefur almennt form</p>
+<div class="math">
+\[ax^2+bx+c=0
+
+\]</div>
+<p>þar sem <span class="math">\(a\)</span>, <span class="math">\(b\)</span> og <span class="math">\(c\)</span> eru <a href="http://www.stae.is/os/leita/constant." class="tooltip" target="_blank">fastar<span>en: <i>constant.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Athugið b og c geta verið hvaða tölur sem er, en <span class="math">\(a \neq 0\)</span> því annars væri jafnan fyrsta stigs jafna.</p>
+</div>
+<p>Annars stigs jafna er ekki alltaf á almennu formi, en við getum komið henni á almennt form með reikniaðgerðum.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Jafnan <span class="math">\(x^2+3x=4x+1\)</span> er ekki á almennu formi, en með því að beita reikniaðgerðum og ,,færa yfir jafnaðarmerkið‘‘ fæst <span class="math">\(x^2-x+1=0\)</span>.
+Við sjáum því að þetta er annars stigs jafna með <span class="math">\(a=1\)</span>, <span class="math">\(b=-1\)</span> og <span class="math">\(c=1\)</span>.</p>
+<p><strong>2.</strong> Jafnan <span class="math">\(2x(3-x)=2x\)</span> er ekki á almennu formi. Ef við margföldum upp úr sviganum fæst <span class="math">\(6x-2x^2=2x\)</span>, sem er jafngilt <span class="math">\(4x-2x^2=0\)</span>.
+Við getum víxlað röðinni og fengið <span class="math">\(-2x^2+4x=0\)</span> og þá er auðvelt að sjá að þetta er annars stigs jafna með <span class="math">\(a=-2\)</span>, <span class="math">\(b=4\)</span> og <span class="math">\(c=0\)</span>.</p>
+<p><strong>3.</strong> Jafnan <span class="math">\(x^2+3x=x^2-4\)</span> er ekki á almennu formi. Með því að ,,færa yfir jafnaðarmerkið‘‘ fæst <span class="math">\(x^2+3x-x^2+4=0\)</span> eða <span class="math">\(3x+4=0\)</span>.
+Við sjáum því að þetta er ekki annars stigs jafna, heldur fyrsta stigs.</p>
+</div>
+</div>
+<div class="section" id="lausnarformula-fyrir-annars-stigs-jofnur">
+<h3><span class="section-number">2.1.3. </span>Lausnarformúla fyrir annars stigs jöfnur<a class="headerlink" href="#lausnarformula-fyrir-annars-stigs-jofnur" title="Permalink to this headline">¶</a></h3>
+<p>Við höfum lausnarformúlu fyrir annars stigs jöfnur á almennu formi. Þær geta haft eina, tvær eða enga lausn.</p>
+<div class="section" id="setning">
+<h4><span class="section-number">2.1.3.1. </span>Setning<a class="headerlink" href="#setning" title="Permalink to this headline">¶</a></h4>
+<p>Látum <span class="math">\(ax^2+bx+c=0\)</span> vera annars stigs jöfnu. <a href="http://www.stae.is/os/leita/discriminant." class="tooltip" target="_blank">Aðgreinirinn<span>en: <i>discriminant.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> er <span class="math">\(d = b^2-4ac\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Ef <span class="math">\(d = b^2-4ac&lt;0\)</span> þá hefur jafnan enga rauntölulausn.</p></li>
+<li><p>Ef <span class="math">\(d  = b^2-4ac=0\)</span> þá hefur jafnan eina lausn:</p></li>
+</ol>
+<div class="math">
+\[x=\frac{-b}{2a}
+
+\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Ef <span class="math">\(d = b^2-4ac&gt;0\)</span> þá hefur jafnan tvær lausnir:</p></li>
+</ol>
+<div class="math">
+\[x_1=\frac{-b+\sqrt{b^2-4ac}}{2a} \qquad \text{og} \qquad x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}
+
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Oft er almenna formúlan rituð</p>
+<div class="math">
+\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Áður en við notum þessa lausnarformúlu þurfum við að vera viss um að jafnan sé á almenna forminu <span class="math">\(ax^2+bx+c=0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Leysum jöfnuna <span class="math">\(2x^2 + 3x - 5 = 2\)</span>.</p>
+<blockquote>
+<div><p>Við byrjum á að koma jöfnunni á almennt form með því að draga 2 frá beggja vegna jafnaðarmerkis, fáum <span class="math">\(2x^2 + 3x - 7=0\)</span>.
+Sjáum því að hér er <span class="math">\(a=2\)</span>, <span class="math">\(b=3\)</span> og <span class="math">\(c=-7\)</span>.</p>
+<p>Vitum að það eru tvær rauntölulausnir því <span class="math">\(d=(3)^2-4(2)(-7)=65 &gt; 0\)</span>. Þá getum við notað lausnarformúlu annars stigs jöfnu.</p>
+<div class="math">
+\[x = \frac{-3 \pm \sqrt{3^2 - 4 \cdot 2 \cdot (-7)}}{2 \cdot 2}
+= \frac{-3 \pm \sqrt{65}}{4}.
+
+\]</div>
+<p>Lausnirnar eru <span class="math">\(x_1=\frac{-3 + \sqrt{65}}{4}\)</span> og <span class="math">\(x_2=\frac{-3 - \sqrt{65} }{4}\)</span>.</p>
+</div></blockquote>
+<p><strong>2.</strong> Leysum jöfnuna <span class="math">\(x^2-6(x-1)=-3\)</span>.</p>
+<blockquote>
+<div><p>Byrjum á að koma jöfnunni á almennt form.
+Margföldum upp úr sviganum og fáum <span class="math">\(x^2-6x+6=-3\)</span> eða <span class="math">\(x^2-6x+9=0\)</span>.
+Hér er því <span class="math">\(a=1\)</span>, <span class="math">\(b=-6\)</span> og <span class="math">\(c=9\)</span>.
+Vitum að það er bara ein lausn því <span class="math">\(d=(-6)^2-4(1)(9)=0\)</span>.
+Notum lausnarformúluna:</p>
+<div class="math">
+\[x=\frac{6 \pm \sqrt{(-6)^2-4 \cdot 1 \cdot 9}}{2}=\frac{6 \pm \sqrt{36-36}}{2}=\frac{6}{2}=3
+
+\]</div>
+<p>Jafnan hefur lausnina, <span class="math">\(x=3\)</span>.</p>
+</div></blockquote>
+<p><strong>3.</strong> Leysum jöfnuna <span class="math">\(x^2+1=0\)</span>.</p>
+<blockquote>
+<div><p>Hér er <span class="math">\(a=1\)</span>, <span class="math">\(b=0\)</span> og <span class="math">\(c=1\)</span>.</p>
+<p>Byrjum á að reikna út stærðina <span class="math">\(d=b^2-4ac\)</span> og fáum <span class="math">\(0^2-4 \cdot 1 \cdot 1=-4\)</span>, svo <span class="math">\(b^2-4ac&lt;0\)</span> og jafnan hefur enga rauntölulausn.</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="liun-og-attun">
+<h2><span class="section-number">2.2. </span>Liðun og þáttun<a class="headerlink" href="#liun-og-attun" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="liun">
+<h3><span class="section-number">2.2.1. </span>Liðun<a class="headerlink" href="#liun" title="Permalink to this headline">¶</a></h3>
+<p><a href="http://www.stae.is/os/leita/expand." class="tooltip" target="_blank">Liðun<span>en: <i>expand.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> kallast það þegar stærðtákni sem samanstendur af einum lið er breytt í fleiri liði.
+Við tölum oft um að „margfalda upp úr svigum“, til dæmis höfum við</p>
+<div class="math">
+\[(a+b)(c+d)=a(c+d)+b(c+d)=ac+ad+bc+bd
+
+\]</div>
+<p>Í þessu tilviki þurfum við að margfalda báða liði fyrri svigans við báða liði seinni svigans, og við notum dreifireglu til þess. Höfum til dæmis</p>
+<div class="math">
+\[\begin{aligned}
+(x+2)(x+9)&=x \cdot x + x \cdot 9 + 2 \cdot x + 2 \cdot 9 \\
+&= x^2 + 9x + 2x + 18\\
+&= x^2 +11x +18
+\end{aligned}
+
+\]</div>
+<p>Hér þarf að gæta þess að nota rétt formerki, höfum til dæmis</p>
+<div class="math">
+\[\begin{aligned}
+(x-2)(x+9)&=x \cdot x + x \cdot 9 + (-2) \cdot x + (-2) \cdot 9 \\
+& = x^2 + 9x - 2x - 18 \\
+& =x^2 +7x -18 \\
+\end{aligned}
+
+\]</div>
+<hr class="docutils" />
+<p>Eftirfarandi reglur eru mikilvægar í liðun:</p>
+<div class="math">
+\[\begin{aligned}
+& (a+b)^2=a^2+2ab+b^2 \qquad &\textit{(ferningsregla fyrir summu)} \\
+& (a-b)^2=a^2-2ab+b^2 \qquad &\textit{(ferningsregla fyrir mismun)} \\
+& (a+b)(a-b)=a^2-b^2 \qquad &\textit{(samokaregla)} \\
+\end{aligned}
+
+\]</div>
+<hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Liðum <span class="math">\((x+2)^2\)</span>.</p>
+<blockquote>
+<div><p>Notum ferningsreglu fyrir summu. Þá fæst</p>
+<div class="math">
+\[\begin{aligned}(x+2)^2&=x^2+2 \cdot 2 \cdot x + 2^2\\ &=x^2+4x+4 \end{aligned}
+
+\]</div>
+</div></blockquote>
+<p><strong>2.</strong> Liðum <span class="math">\((x+6)(x-6)\)</span>.</p>
+<blockquote>
+<div><p>Samokaregla gefur</p>
+<div class="math">
+\[\begin{aligned} (x+6)(x-6)&=x^2-6^2\\ &=x^2-36 \end{aligned}
+
+\]</div>
+</div></blockquote>
+<p><strong>3.</strong> Liðum <span class="math">\((x-1)(x+1)^2\)</span>.</p>
+<blockquote>
+<div><p>Athugum að</p>
+<div class="math">
+\[(x+1)^2=(x+1)(x+1)
+
+\]</div>
+<p>beitum samokareglu til að fá</p>
+<blockquote>
+<div><div class="math">
+\[\begin{aligned} (x-1)(x+1)^2&=(x-1)(x+1)(x+1)\\ &=(x^2-1)(x+1)\\ \end{aligned}
+
+\]</div>
+</div></blockquote>
+<p>Nú þurfum við bara að margfalda úr svigunum og fáum þá</p>
+<div class="math">
+\[\begin{aligned}
+(x^2-1)(x+1)&=x^2 \cdot x + x^2 \cdot 1 - 1 \cdot x - 1 \cdot 1\\
+&=x^3 + x^2 -x -1
+\end{aligned}
+
+\]</div>
+</div></blockquote>
+<p><strong>4.</strong> Liðum <span class="math">\((x+4)^2(x-4)^2\)</span>.</p>
+<blockquote>
+<div><p>Höfum</p>
+<blockquote>
+<div><div class="math">
+\[\begin{aligned} (x+4)^2(x-4)^2 &= ((x+4)(x-4))^2\\ & = (x^2 - 16)^2 \end{aligned}
+
+\]</div>
+</div></blockquote>
+<p>samkvæmt veldareglu og samokareglu. Notum nú ferningsreglu fyrir mismun og þá fæst</p>
+<blockquote>
+<div><div class="math">
+\[\begin{aligned} (x^2 - 16)^2 &=(x^2)^2 - 2 \cdot 16x^2 + 16^2\\ &=x^4-32x^2+256\end{aligned}
+
+\]</div>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="attun">
+<h3><span class="section-number">2.2.2. </span>Þáttun<a class="headerlink" href="#attun" title="Permalink to this headline">¶</a></h3>
+<p><a href="http://www.stae.is/os/leita/decomposition." class="tooltip" target="_blank">Þáttun<span>en: <i>decomposition.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> er <strong>andhverf aðgerð</strong> við liðun. Þá er stæðu með fleiri en einum lið breytt í jafngilda stæðu sem samanstendur aðeins af þáttum.
+Til eru margar leiðir til að þátta. Við getum í sumum tilfellum notað ferningsreglu eða samokareglu, sem settar eru fram hér að ofan.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Þáttum <span class="math">\(x^2+4x+4\)</span>.</p>
+<blockquote>
+<div><p>Notum ferningsreglu fyrir summu, það er,</p>
+<div class="math">
+\[a^2+2ab+b^2=(a+b)^2
+
+\]</div>
+<p>Með samanburði sést að <span class="math">\(a=x\)</span> og <span class="math">\(b=2\)</span> gengur upp. Því er</p>
+<div class="math">
+\[x^2+4x+4=(x+2)^2
+
+\]</div>
+</div></blockquote>
+<p><strong>2.</strong> Þáttum <span class="math">\(x^2-1\)</span>.</p>
+<blockquote>
+<div><p>Beitum samokareglu og fáum</p>
+<div class="math">
+\[x^2-1 =(x+1)(x-1)
+
+\]</div>
+</div></blockquote>
+<p><strong>3.</strong> Þáttum <span class="math">\(x^3-2x^2+x\)</span>.</p>
+<blockquote>
+<div><p>Byrjum á því að athuga að <span class="math">\(x\)</span> er sameiginlegur þáttur allra liðanna. Þáttum <span class="math">\(x\)</span> út fyrir og fáum</p>
+<div class="math">
+\[x(x^2-2x+1)
+
+\]</div>
+<p>Á seinni svigann getum við nú notað ferningsreglu fyrir mismun,</p>
+<div class="math">
+\[a^2-2ab+b^2=(a-b)^2
+
+\]</div>
+<p>þar sem <span class="math">\(a=x\)</span> og <span class="math">\(b=1\)</span>. Við höfum því</p>
+<div class="math">
+\[x^3 - 2x^2 + x = x(x^2 - 2x + 1) = x(x-1)^2
+
+\]</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="attun-me-agiskunarafer">
+<h3><span class="section-number">2.2.3. </span>Þáttun með ágiskunaraðferð<a class="headerlink" href="#attun-me-agiskunarafer" title="Permalink to this headline">¶</a></h3>
+<p>Ef við höfum stærð á forminu <span class="math">\(x^2+bx+c\)</span> getum við beitt svokallaðari ágiskunaraðferð. Hún gengur út á að finna tvær tölur <span class="math">\(s\)</span> og <span class="math">\(t\)</span> þannig að summa þeirra sé jöfn <span class="math">\(b\)</span> og margfeldi þeirra sé jafnt <span class="math">\(c\)</span>. Hún er kölluð ágiskunaraðferð þar sem við gætum þurft að prófa okkur áfram. Þess vegna getur verið gott að taka saman upplýsingar í töflu þannig að við byrjum á því að skrifa niður tvær tölur sem uppfylla það að margfeldi þeirra er jöfn síðustu tölunni. Þáttunin er síðan</p>
+<div class="math">
+\[x^2+bx+c=(x+s)(x+t)
+
+\]</div>
+<p>þar sem <span class="math">\(s+t=b\)</span> og <span class="math">\(s\cdot t =c\)</span>.
+Þetta skýrist best með dæmum.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tökum eftir að ef annars stigs jafnan er á forminu <span class="math">\(ax^2+bx+c\)</span>, þar sem <span class="math">\(a\neq 1\)</span> þá tökum við <span class="math">\(a\)</span> út fyrir eða deilum í gegn með <span class="math">\(a\)</span> ef við erum að vinna með jöfnu (sjá dæmi <strong>4</strong> hér á eftir).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Þáttum <span class="math">\(x^2+7x+12\)</span>.</p>
+<blockquote>
+<div><p>Byrjum á að gera lista yfir tölur þannig að margfeldi þeirra sé <span class="math">\(12\)</span>. Fáum</p>
+<div class="math">
+\[\begin{array}{c}
+1 \text{ og } 12 \\
+2 \text{ og } 6 \\
+3 \text{ og } 4 \\
+\end{array}
+
+\]</div>
+<p>Við getum séð að við erum komin með lausn með því að búa til dálk fyrir summu þessara tveggja talna</p>
+<div class="math">
+\[\begin{array}{ | c | c | c | }
+\hline
+s & t & \text{Summa} \\
+\hline
+1 & 12 & 13\\
+2 & 6 & 8\\
+3 & 4  & 7 \\
+\hline
+\end{array}
+
+\]</div>
+<p>Við leitum að tveimur tölum sem hafa summuna <span class="math">\(7\)</span>. Við sjáum nú að tölurnar <span class="math">\(s = 3\)</span> og <span class="math">\(t = 4\)</span> uppfylla þetta skilyrði. Þáttunin er því</p>
+<div class="math">
+\[x^2+7x+12=(x+3)(x+4)
+
+\]</div>
+</div></blockquote>
+<p><strong>2.</strong> Skoðum næst dæmi þar sem við þurfum að huga að formerkjunum. Þáttum <span class="math">\(x^2-26x+25\)</span>.</p>
+<blockquote>
+<div><p>Finnum tölur þannig að margfeldi þeirra sé <span class="math">\(25\)</span>. En við sjáum að summa þeirra er neikvæð og margfeldi þeirra er jákvæð. Því er ljóst að báðar tölurnar eru neikvæðar. Möguleikar eru</p>
+<div class="math">
+\[\begin{array}{c}
+-1 \text{ og } -25 \\
+-5 \text{ og } -5 \\
+\end{array}
+
+\]</div>
+<p>Leggjum tölurnar saman</p>
+<div class="math">
+\[\begin{array}{ | c | c | c | }
+\hline
+s & t & \text{Summa} \\
+\hline
+-1 & -25 & -26\\
+-5 & -5 & -10\\
+\hline
+\end{array}
+
+\]</div>
+<p>Sjáum að tölurnar <span class="math">\(s = -1\)</span> og <span class="math">\(t= -25\)</span> uppfylla skilyrðið svo þáttunin er</p>
+<div class="math">
+\[x^2-26x+25=(x+(-1))(x+(-25))=(x-1)(x-25).
+
+\]</div>
+</div></blockquote>
+<p><strong>3.</strong> Þáttum <span class="math">\(x^2-x-6\)</span>.</p>
+<blockquote>
+<div><p>Þar sem síðasta talan er neikvæð leitum við að neikvæðri tölu og jákvæðri tölu. Möguleikar eru því</p>
+<div class="math">
+\[\begin{array}{c}
+-1 \text{ og } 6 \\
+1 \text{ og } -6 \\
+-2 \text{ og } 3 \\
+2 \text{ og } -3 \\
+\end{array}
+
+\]</div>
+<p>Leggjum tölurnar saman</p>
+<div class="math">
+\[\begin{array}{ | c | c | c | }
+\hline
+s & t & \text{Summa} \\
+\hline
+-1 & 6 & 5\\
+1 & -6 & -5 \\
+-2 & 3 & 1\\
+2 & -3 & -1\\
+\hline
+\end{array}
+
+\]</div>
+<p>Sjáum því að tölurnar <span class="math">\(s = 2\)</span> og <span class="math">\(t = -3\)</span> uppfylla skilyrðið og þáttunin er</p>
+<div class="math">
+\[x^2-x-6=(x+2)(x-3).
+
+\]</div>
+</div></blockquote>
+<p><strong>4.</strong> Þáttum <span class="math">\(2x^2+8x+6\)</span>.</p>
+<blockquote>
+<div><p>Hér er <span class="math">\(a \neq 1\)</span> svo við getum umritað <span class="math">\(2x^2+8x+6\)</span> yfir í <span class="math">\(2(x^2+4x+3)\)</span> og þáttað <span class="math">\(x^2+4x+3\)</span>. Sjáum að <span class="math">\(1\)</span> og <span class="math">\(3\)</span> uppfylla skilyrðin.</p>
+<div class="math">
+\[\begin{array}{ | c | c | c | }
+\hline
+s & t & \text{Summa} \\
+\hline
+1 & 3 & 4\\
+\hline
+\end{array}
+
+\]</div>
+<p>Sjáum því að tölurnar <span class="math">\(s = 1\)</span> og <span class="math">\(t = 3\)</span> ganga en þá er þáttunin</p>
+<blockquote>
+<div><div class="math">
+\[x^2+4x+3 = (x+1)(x+3)
+
+\]</div>
+</div></blockquote>
+<p>sem gefur okkur að <span class="math">\(2x^2+8x+6 = 2(x+1)(x+3)\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Það er alls ekki nauðsynlegt að taka svona mörg skref við þáttun af þessu tagi.
+Með æfingunni verður auðveldara að nota þessa aðferð í huganum og ekki er nauðsynlegt að sýna mörg skref.
+Athugið að það getur komið í veg fyrir villur að sannreyna svarið, það er að liða stæðuna aftur.</p>
+</div>
+</div>
+<div class="section" id="attun-me-lausnarformulu">
+<h3><span class="section-number">2.2.4. </span>Þáttun með lausnarformúlu<a class="headerlink" href="#attun-me-lausnarformulu" title="Permalink to this headline">¶</a></h3>
+<p>Til þess að þátta stærð á forminu <span class="math">\(ax^2+bx+c\)</span> getum við ávallt beitt lausnarformúlu fyrir annars stigs jöfnur. Munum að jafnan <span class="math">\(ax^2+bx+c=0\)</span> hefur lausnir</p>
+<div class="math">
+\[x_{1,2}=\frac{-b \pm \sqrt{b^2-4ac}}{2a}
+
+\]</div>
+<p>Þáttunin verður þá</p>
+<div class="math">
+\[ax^2+bx+c=a(x-x_1)(x-x_2)
+
+\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Þáttum <span class="math">\(6x^2+5x-6\)</span>.</p>
+<blockquote>
+<div><p>Finnum ræturnar. Hér er <span class="math">\(a=6\)</span>, <span class="math">\(b=5\)</span> og <span class="math">\(c=-6\)</span>. Notum lausnarformúluna og fáum</p>
+<div class="math">
+\[d = 5^2-4 \cdot 6 \cdot (-6) = 169 = 13^2\]</div>
+<p>og</p>
+<div class="math">
+\[x_1 =\frac{-5+\sqrt{169}}{12}=\frac{-5+13}{12} =\frac{8}{12} =\frac{2}{3}
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[x_2=\frac{-5-13}{12}=-\frac{3}{2}
+
+\]</div>
+<p>Samkvæmt formúlu að ofan er þáttunin því <span class="math">\(6x^2+5x-6=a(x-x_1)(x-x_2)\)</span>, það er,</p>
+<div class="math">
+\[\begin{aligned}
+6x^2+5x-6&=6\left(x-\frac{2}{3}\right)\left(x-\left(-\frac{3}{2}\right)\right)\\
+&=6\left(x-\frac{2}{3}\right)\left(x+\frac{3}{2}\right)
+\end{aligned}
+
+\]</div>
+<p>Þetta svar er rétt, en við sjáum að við getum gert svarið snyrtilegra með því að athuga að <span class="math">\(6=2 \cdot 3\)</span> og margfalda fyrri svigann með <span class="math">\(3\)</span> og þann seinni með <span class="math">\(2\)</span>, það er,</p>
+<div class="math">
+\[\begin{aligned}
+6x^2+5x-6 &= 3 \left(x-\frac{2}{3}\right) \cdot 2\left(x+\frac{3}{2}\right)\\
+&=(3x-2)(2x+3)
+\end{aligned}
+
+\]</div>
+<p>svo þáttunin er</p>
+<div class="math">
+\[6x^2+5x-6=(3x-2)(2x+3)
+
+\]</div>
+</div></blockquote>
+<p><strong>2.</strong> Þáttum <span class="math">\(x^2+x-1\)</span>.</p>
+<blockquote>
+<div><p>Hér er <span class="math">\(a=1\)</span>, <span class="math">\(b=1\)</span> og <span class="math">\(c=-1\)</span>. Lausnarformúlan gefur</p>
+<div class="math">
+\[x_1=\frac{-1+\sqrt{1^2-4 \cdot 1 \cdot (-1)}}{2 \cdot 1}=\frac{-1+\sqrt{5}}{2}
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[x_2=\frac{-1-\sqrt{5}}{2}
+
+\]</div>
+</div></blockquote>
+</div>
+<p>Fáum því að</p>
+<blockquote>
+<div><div class="math">
+\[x^2+x-1=\left(x-\frac{-1+\sqrt{5}}{2}\right)\left(x-\frac{-1-\sqrt{5}}{2}\right)
+
+\]</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="jofnuhneppi">
+<h2><span class="section-number">2.3. </span>Jöfnuhneppi<a class="headerlink" href="#jofnuhneppi" title="Permalink to this headline">¶</a></h2>
+<p>Í sumum verkefnum koma fyrir fleiri en ein óþekkt stærð.
+Til þess að leysa svoleiðis verkefni þurfum við að hafa jöfnur sem lýsa því hvernig stærðirnar tengjast.
+Jöfnurnar þurfa að vera jafn margar og óþekktu stærðirnar.</p>
+<p>Til eru tvær leiðir til þess að leysa svoleiðis verkefni, <a href="http://www.stae.is/os/leita/annihilator_method." class="tooltip" target="_blank">eyðingaraðferð<span>en: <i>annihilator method.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> og <a href="http://www.stae.is/os/leita/substitution_method." class="tooltip" target="_blank">innsetningaraðferð<span>en: <i>substitution method.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> .</p>
+<p>Í <strong>eyðingaraðferðinni</strong> er reynt að eyða út einni óþekktri stærð úr jöfnuhneppi.
+Til þess er önnur jafnan margfölduð með fasta svo stuðullinn fyrir framan stærðina sem á að eyða verði sá sami og stuðullinn í hinni jöfnunni.
+Svo er önnur jafnan dregin frá hinni og útkoman er jafna án stærðarinnar sem eyða átti.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Leysum jöfnuhneppið</p>
+<div class="math">
+\[\begin{aligned}
+  x+2y&=3 \\
+  2x-y &=11
+\end{aligned}
+
+\]</div>
+<p>með eyðingaraðferð.</p>
+<p><strong>Lausn:</strong></p>
+<p>Stefnum á að eyða <span class="math">\(x\)</span> . Það gerum við með því að margfalda efri jöfnuna með 2 (beggja vegna jafnaðarmerkis):</p>
+<div class="math">
+\[\begin{aligned}
+  2x+4y&=6 \\
+  2x-y &=11
+\end{aligned}
+
+\]</div>
+<p>Drögum nú efri jöfnuna frá þeirri neðri, hægri hlið efri frá hægri hlið neðri og vinstri hlið efri frá vinstri hlið neðri:</p>
+<div class="math">
+\[\begin{aligned}
+  (2x-y)-(2x+4y) &=11-6 \\
+  -5y &= 5 \\
+  y&=-1
+\end{aligned}
+
+\]</div>
+<p>Stefnum nú á að eyða <span class="math">\(y\)</span> úr upprunalega hneppinu:</p>
+<div class="math">
+\[\begin{aligned}
+  x+2y&=3 \\
+  2x-y &=11
+\end{aligned}
+
+\]</div>
+<p>Á sama hátt og áður margföldum við neðri jöfnuna með 2 og fáum:</p>
+<div class="math">
+\[\begin{aligned}
+  x+2y&=3 \\
+  4x-2y &=22
+\end{aligned}
+
+\]</div>
+<p>Leggjum nú jöfnurnar saman og fáum:</p>
+<div class="math">
+\[\begin{aligned}
+  (4x-2y )+ (x+2y) &=22 +3 \\
+  5x &= 25 \\
+  x&=5
+\end{aligned}
+
+\]</div>
+<p>Lausn jöfnuhneppisins er því <span class="math">\(x=5\)</span> og <span class="math">\(y=-1\)</span> .
+Myndrænt þýðir þetta að línurnar <span class="math">\(x+2y=3\)</span> og <span class="math">\(2x-y =11\)</span> skerist í punktinum <span class="math">\((5,-1)\)</span> .
+Farið er nánar í þetta í kaflanum um rúmfræði.</p>
+</div>
+<p id="s-innsetning"><strong>Innsetningaraðferðin</strong> gengur út á að einangra eina breytistærðina út frá annarri jöfnunni og setja inn í hina.
+Þá hefur sú jafna bara eina óþekkta stærð.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Leysum jöfnuhneppið</p>
+<div class="math">
+\[\begin{aligned}
+  2x+y&=2 \\
+  3x+2y&=1 \\
+\end{aligned}
+
+\]</div>
+<p>með innsetningaraðferð.</p>
+<p><strong>Lausn:</strong></p>
+<p>Einangrum <span class="math">\(y\)</span> úr efri jöfnunni: <span class="math">\(y=2-2x\)</span> .
+Setjum þessa lýsingu á <span class="math">\(y\)</span> inn í neðri jöfnuna:</p>
+<div class="math">
+\[\begin{aligned}
+  3x+2y&=1 \\
+  3x + 2(2-2x) &=1 \\
+  3x+4-4x &=1\\
+  -x&=-3\\
+  x&=3
+\end{aligned}
+
+\]</div>
+<p>Nú vitum við rétt gildi á <span class="math">\(x\)</span> en þá er hægt að finna gildi á <span class="math">\(y\)</span> með því að setja gildið á <span class="math">\(x\)</span> inn í aðra hvora jöfnuna.
+Setjum því <span class="math">\(x=3\)</span> inn í efri jöfnuna og fáum:</p>
+<div class="math">
+\[\begin{aligned}
+  2x+y&=2 \\
+  2\cdot 3 + y &=2 \\
+  6+y &=2 \\
+  y&=-4
+\end{aligned}
+
+\]</div>
+<p>Lausn jöfnuhneppisins</p>
+<div class="math">
+\[\begin{aligned}
+  2x+y&=2 \\
+  3x+2y&=1 \\
+\end{aligned}
+
+\]</div>
+<p>er því <span class="math">\(x=3\)</span> og <span class="math">\(y=-4\)</span> .</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stundum getur verið þægilegt að finna fyrri breytistærðina með eyðingaraðferðinni og nota síðan innsetningu.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Leysum jöfnuhneppið</p>
+<div class="math">
+\[\begin{aligned}
+3x+2y&=14 \\
+x-y&=3
+\end{aligned}
+
+\]</div>
+<p><strong>Lausn:</strong></p>
+<p>Einangrum fyrst <span class="math">\(y\)</span> með eyðingaraðferð, það er, eyðum <span class="math">\(x\)</span> með því að margfalda neðri jöfnuna með þremur:</p>
+<div class="math">
+\[\begin{aligned}
+3x+2y&=14 \\
+3x-3y&=9
+\end{aligned}
+
+\]</div>
+<p>Drögum síðan neðri jöfnuna frá þeirri efri og fáum</p>
+<div class="math">
+\[\begin{aligned}
+2y-(-3y) &=14-9 \\
+5y &= 5 \\
+y&=1
+\end{aligned}
+
+\]</div>
+<p>Þá getum við nýtt okkur að gildi <span class="math">\(y\)</span> er þekkt og sett það inn í aðra hvora jöfnuna.
+Setjum því <span class="math">\(y=1\)</span> í neðri jöfnuna:</p>
+<div class="math">
+\[\begin{aligned}
+x-y&=3 \\
+x-1&=3 \\
+x&=4
+\end{aligned}
+
+\]</div>
+<p>Lausn jöfnuhneppisins er því <span class="math">\(x=4\)</span> og <span class="math">\(y=1\)</span> .</p>
+</div>
+</div>
+<div class="section" id="ojofnur-og-tolugildi">
+<h2><span class="section-number">2.4. </span>Ójöfnur og tölugildi<a class="headerlink" href="#ojofnur-og-tolugildi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ojofnur">
+<h3><span class="section-number">2.4.1. </span>Ójöfnur<a class="headerlink" href="#ojofnur" title="Permalink to this headline">¶</a></h3>
+<p><a href="http://www.stae.is/os/leita/inequality." class="tooltip" target="_blank">Ójöfnur<span>en: <i>inequality.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> eru leystar á sambærilegan hátt og jöfnur. Eftirfarandi tákn eru notuð:</p>
+<blockquote>
+<div><p><span class="math">\(&lt; \qquad\)</span>  <a href="http://www.stae.is/os/leita/less." class="tooltip" target="_blank">Minna<span>en: <i>less.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a></p>
+<p><span class="math">\(&gt; \qquad\)</span> <a href="http://www.stae.is/os/leita/greater." class="tooltip" target="_blank">Stærra<span>en: <i>greater.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a></p>
+<p><span class="math">\(\leq \qquad\)</span> <a href="http://www.stae.is/os/leita/less_than_or_equal_to." class="tooltip" target="_blank">Minna en eða jafnt<span>en: <i>less than or equal to.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a></p>
+<p><span class="math">\(\geq \qquad\)</span> <a href="http://www.stae.is/os/leita/greater_than_or_equal_to." class="tooltip" target="_blank">Stærra en eða jafnt<span>en: <i>greater than or equal to.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a></p>
+</div></blockquote>
+<p>Þegar við leysum ójöfnur megum við beita sömu aðgerðum og þegar við leysum jöfnur, svo lengi sem við gerum það báðum megin. Það er bara ein undantekning: <em>margföldun/deiling með neikvæðri tölu</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tökum eftir að <span class="math">\(&lt; \text{og} &gt;\)</span> gefa <a href="http://www.stae.is/os/leita/strict_inequality." class="tooltip" target="_blank">strangar ójöfnur<span>en: <i>strict inequality.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Leysum ójöfnuna <span class="math">\(-2x+9 \leq 3\)</span>. Við megum draga frá <span class="math">\(9\)</span> báðum megin, þá fæst <span class="math">\(-2x \leq -6\)</span>. Hér þurfum við þó að einangra <span class="math">\(x\)</span> með því að deila í gegn með <span class="math">\(-2\)</span>, það er, margfalda með <span class="math">\(-\frac{1}{2}\)</span>. Þegar ójafna er margfölduð með neikvæðri tölu þarf að snúa ójöfnunni við vegna þess að <span class="math">\(a \leq b \implies -a \geq -b\)</span>. Við fáum því</p>
+<div class="math">
+\[\left(-\frac12\right) \cdot (-2x) \geq \left(-\frac12\right) \cdot (-6) \quad \text{eða} \quad x \geq 3.
+
+\]</div>
+<p>Þetta þýðir því að <span class="math">\(x\)</span> má vera hvaða tala sem er, svo lengi sem hún er stærri en eða jöfn <span class="math">\(3\)</span>. Með prófun er hægt að staðfesta að þetta gengur upp.</p>
+<p><strong>2.</strong> Leysum ójöfnuna <span class="math">\(2x+2 &gt;30x\)</span>. Drögum frá <span class="math">\(2x\)</span> báðum megin og fáum <span class="math">\(2&gt;28x\)</span>. Deiling með <span class="math">\(28\)</span> gefur <span class="math">\(\frac{1}{14}&gt;x\)</span>. Hér þurftum við ekki að snúa ójafnaðarmerkinu við. Þó er skýrara að skila svarinu á forminu <span class="math">\(x&lt;\frac{1}{14}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="tolugildi">
+<h3><span class="section-number">2.4.2. </span>Tölugildi<a class="headerlink" href="#tolugildi" title="Permalink to this headline">¶</a></h3>
+<p>Látum <span class="math">\(x\)</span> vera rauntölu. Fjarlægð tölunnar <span class="math">\(x\)</span> frá núllpunktinum á talnalínunni köllum við <a href="http://www.stae.is/os/leita/absolute_value." class="tooltip" target="_blank">tölugildi<span>en: <i>absolute value.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> eða <a href="http://www.stae.is/os/leita/absolute_value." class="tooltip" target="_blank">algildi<span>en: <i>absolute value.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> tölunnar <span class="math">\(x\)</span>. Við táknum það með <span class="math">\(|x|\)</span>. Athugum að fjarlægð getur ekki verið neikvæð svo að <span class="math">\(|x| \geq 0\)</span> fyrir öll <span class="math">\(x\)</span>.</p>
+<p>Ef <span class="math">\(x\)</span> er jákvæð þá er <span class="math">\(|x|=x\)</span>. Ef <span class="math">\(x\)</span> er neikvæð þá fæst tölugildi hennar með því að ,,taka mínusinn af henni“ . Í raun er jafngilt að margfalda hana með  <span class="math">\(-1\)</span> því að þá ,,hverfur mínusinn af henni“. Með táknmáli er tölugildið skilgreint svona:</p>
+<div class="math">
+\[|x|= \begin{cases} x & \text{ ef } x \geq 0 \\ -x  & \text{ ef } x < 0 \end{cases}
+
+\]</div>
+<p>Til dæmis er <span class="math">\(5 \geq 0\)</span> svo <span class="math">\(|5|=5\)</span> og <span class="math">\(-3 &lt;0\)</span> svo að <span class="math">\(|-3|=(-1) \cdot (-3) = 3\)</span>.</p>
+</div>
+<div class="section" id="reiknireglur-fyrir-tolugildi">
+<h3><span class="section-number">2.4.3. </span>Reiknireglur fyrir tölugildi<a class="headerlink" href="#reiknireglur-fyrir-tolugildi" title="Permalink to this headline">¶</a></h3>
+<p>Látum <span class="math">\(a\)</span> og <span class="math">\(b\)</span> vera rauntölur. Þá gildir eftirfarandi</p>
+<div class="math">
+\[\begin{aligned}
+        a \leq |a|  \qquad & \text{(tölugildi getur aðeins stækkað tölu)}\\
+        |a|=|-a|  \qquad & \text{(tölugildi eru óháð formerki)}\\
+        |a|\cdot|b|=|ab| \qquad & \text{(tölugildi varðveitir margföldun)}\\
+        |a|^2=a^2 \qquad  & \text{(önnur veldi eyða tölugildi)}\\
+\end{aligned}
+
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Fyrir tölur <span class="math">\(a\)</span> og <span class="math">\(b\)</span> þá má túlka töluna <span class="math">\(|a-b|\)</span> sem fjarlægð <span class="math">\(a\)</span> frá <span class="math">\(b\)</span> á talnalínunni. Til dæmis ef <span class="math">\(a=3\)</span> og <span class="math">\(b=10\)</span> þá er fjarlægðin á milli þessara talna á talnalínunni <span class="math">\(7\)</span>. Það er í samræmi við reikninga okkar, höfum <span class="math">\(|3-10|=|-7|=7\)</span> og <span class="math">\(|10-3|=|7|=7\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Finnum öll <span class="math">\(x\)</span> sem uppfylla <span class="math">\(|x+4|=10\)</span>.
+Við komum með tvær lausnir:</p>
+<p><strong>Lausn 1:</strong> Jafnan <span class="math">\(|x+4|=|x-(-4)|=10\)</span> segir okkur að fjarlægðin milli <span class="math">\(x\)</span> og tölunnar <span class="math">\(-4\)</span> er <span class="math">\(10\)</span>. Því er ljóst að <span class="math">\(x=-14\)</span> eða <span class="math">\(x=6\)</span>.</p>
+<p><strong>Lausn 2:</strong> Jafnan <span class="math">\(|x+4|=10\)</span> segir okkur að annað hvort er <span class="math">\(x+4=10\)</span> eða <span class="math">\(x+4=-10\)</span>. Fyrri jafnan hefur lausnina <span class="math">\(x=6\)</span> og sú seinni <span class="math">\(x=-14\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/mynd-algildi2.svg"><img alt="../_images/mynd-algildi2.svg" class="align-center" src="../_images/mynd-algildi2.svg" width="110%" /></a>
+<p>Sjáum að <span class="math">\(-14\)</span> og <span class="math">\(6\)</span> eru jafn langt frá <span class="math">\(-4\)</span></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Finnum öll <span class="math">\(x\)</span> sem uppfylla <span class="math">\(|x-3|=|x+7|\)</span>.</p>
+<p>Við komum með þrjár lausnir:</p>
+<p><strong>Lausn 1:</strong> Rúmfræðilega þýðir jafnan <span class="math">\(|x-3|=|x-(-7)|\)</span> að fjarlægð tölunnar <span class="math">\(x\)</span> frá <span class="math">\(3\)</span> er jöfn fjarlægðar <span class="math">\(x\)</span> frá <span class="math">\(-7\)</span>. Þá hlýtur <span class="math">\(x\)</span> að vera talan sem er mitt á milli <span class="math">\(3\)</span> og <span class="math">\(-7\)</span> á talnalínunni. Með öðrum orðum er <span class="math">\(x\)</span> meðaltal þessara talna:</p>
+<blockquote>
+<div><div class="math">
+\[x=\frac{3+(-7)}{2}=-2
+
+\]</div>
+</div></blockquote>
+<p><strong>Lausn 2:</strong> Skiptum í þrjú tilvik:</p>
+<ol class="arabic simple">
+<li><p>Ef <span class="math">\(x&lt;-7\)</span> þá er <span class="math">\(x-3&lt;0\)</span> og <span class="math">\(x+7&lt;0\)</span>.</p></li>
+</ol>
+<blockquote>
+<div><p>Samkvæmt skilgreiningu er því</p>
+<div class="math">
+\[|x-3|=-(x-3)=-x+3
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[|x+7|=-(x+7)=-x-7.
+
+\]</div>
+<p>Eftir stendur jafnan <span class="math">\(-x+3=-x-7\)</span> sem jafngildir <span class="math">\(3=-7\)</span> sem er fráleitt.
+Jafnan hefur því enga lausn <span class="math">\(x\)</span> sem uppfyllir <span class="math">\(x&lt;-7\)</span></p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Ef <span class="math">\(-7\leq x&lt;3\)</span> þá er <span class="math">\(x-3&lt;0\)</span> og <span class="math">\(x+7\geq 0\)</span>.</p></li>
+</ol>
+<blockquote>
+<div><p>Samkvæmt skilgreiningu er því</p>
+<div class="math">
+\[|x-3|=-(x-3)=-x+3 \quad
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[|x+7|=x+7.
+
+\]</div>
+</div></blockquote>
+<p>Eftir stendur jafnan <span class="math">\(-x+3=x+7\)</span> sem hefur lausnina <span class="math">\(x=-2\)</span>.</p>
+<ol class="arabic simple" start="3">
+<li><p>Ef <span class="math">\(x\geq 3\)</span> þá er <span class="math">\(x-3\geq 0\)</span> og <span class="math">\(x+7&gt;0\)</span>. Samkvæmt skilgreiningu er því</p></li>
+</ol>
+<blockquote>
+<div><div class="math">
+\[|x-3|=x-3 \quad
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[|x+7|=x+7.
+
+\]</div>
+<p>Eftir stendur jafnan <span class="math">\(x-3=x+7\)</span> sem jafngildir <span class="math">\(-3=7\)</span> sem er fráleitt.
+Jafnan hefur því enga lausn sem uppfyllir <span class="math">\(x\geq 3\)</span></p>
+</div></blockquote>
+<p><strong>Lausn 3:</strong> Setjum báðar hliðar jöfnunnar í annað veldi. Þá eyðast tölugildin skv. reiknireglu og eftir stendur: <span class="math">\((x-3)^2=(x+7)^2\)</span> sem jafngildir</p>
+<blockquote>
+<div><div class="math">
+\[x^2-6x+9=x^2+14x+49 \quad
+
+\]</div>
+<p>eða</p>
+<div class="math">
+\[-20x=40 \quad \text{þ.e.} \quad x=-2.
+
+\]</div>
+<p>Ef þessari lausn er stungið inní upphaflegu jöfnuna þá sést að þetta er lausn sem virkar.</p>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Takið eftir að í lausn 3 í dæminu hér á undan þá endum við á því að prófa lausnina sem við fengum.
+Það er af því að þegar jöfnur eru settar í annað veldi geta skapast ,,falskar lausnir“.
+Því þarf alltaf að athuga hvort lausnirnar sem fengust séu raunverulegar lausnir.</p>
+<p>Skoðum til dæmis jöfnuna <span class="math">\(4x=8\)</span>. Þessi jafna hefur augljóslega bara eina lausn <span class="math">\(x=2\)</span>. Ef þessi jafna er sett í annað veldi fæst jafnan <span class="math">\(16x^2=64\)</span> sem jafngildir <span class="math">\(x^2=4\)</span> eða <span class="math">\(x=\pm 2\)</span>. Hér varð til falska lausnin <span class="math">\(-2\)</span> sem er ekki lausn á upprunalegu jöfnunni. Upphaflega lausnin er hins vegar ennþá til staðar.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Leysum ójöfnuna <span class="math">\(|x+2|&gt;9\)</span>. Skiptum í tvö tilvik samkvæmt skilgreiningu, ef <span class="math">\(x+2&gt;0\)</span>, eða <span class="math">\(x+2&lt;0\)</span>.</p>
+<p><strong>Tilvik 1</strong>:
+Ef <span class="math">\(x+2 \geq 0\)</span>, það er, <span class="math">\(x \geq -2\)</span>, þá fellum við tölugildið niður og þá fæst ójafnan <span class="math">\(x+2&gt;9\)</span>, það er, <span class="math">\(x&gt;7\)</span>.</p>
+<p>Við þurfum því að uppfylla bæði skilyrðin <span class="math">\(x \geq -2\)</span> og <span class="math">\(x&gt;7\)</span> en ljóst er að seinna skilyrðið er sterkara (það má sjá á talnalínu). Ef <span class="math">\(x &gt;7\)</span> þá hefur það í för með sér að <span class="math">\(x \geq -2\)</span>. Því er lausnin í þessu tilviki, <span class="math">\(x &gt;7\)</span>.</p>
+<p><strong>Tilvik 2</strong>:
+Ef <span class="math">\(x+2 \leq 0\)</span>, það er, <span class="math">\(x \leq -2\)</span>, þá fæst ójafnan <span class="math">\(-(x+2)&gt;9\)</span>, eða <span class="math">\(-x-2&gt;9\)</span>, eða <span class="math">\(x&lt;-11\)</span>.</p>
+<p>Við þurfum að uppfylla bæði skilyrðin <span class="math">\(x \leq -2\)</span> og <span class="math">\(x&lt;-11\)</span> en ljóst er að það seinna er sterkara. Lausnin er því <span class="math">\(x&lt;-11\)</span>.</p>
+<p>Við fáum því lokasvarið</p>
+<div class="math">
+\[x >7 \qquad \text{eða} \qquad x<-11
+
+\]</div>
+<p>Við getum líka skrifað þetta sem bil, jafngilt svar er</p>
+<div class="math">
+\[x \in ]- \infty , -11[ \, \cup \, ]7, \infty[
+
+\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="summu-og-margfeldistakni">
+<h2><span class="section-number">2.5. </span>Summu- og margfeldistáknið<a class="headerlink" href="#summu-og-margfeldistakni" title="Permalink to this headline">¶</a></h2>
+<figure><iframe src='https://rec.hi.is/Panopto/Pages/Embed.aspx?id=26b3143f-25f5-454e-a137-649ed1207c7a' width=100% height=405 style=padding: 0px; border: 1px solid #464646; frameborder='0'></iframe></figure><hr class="docutils" />
+<p>Stundum kemur fyrir að stærðfræðingar vilja leggja saman marga liði. Til dæmis</p>
+<div class="math">
+\[1+2+3+4+...+100
+
+\]</div>
+<p>eða</p>
+<div class="math">
+\[\frac{1}{4}+\frac{1}{5}+\frac{1}{6}+...+\frac{1}{87}
+
+\]</div>
+<p>Í báðum þessum dæmum ætti að vera augljóst hvað summan þýðir þó að svona þrípunktur sé ekki alvöru stærðfræðitákn.
+Í fyrra dæminu er verið að leggja saman allar heiltölur frá einum upp í hundrað og í seinna dæminu er verið að leggja saman einn á móti sérhverri heiltölu frá fjórum upp í áttatíu-og-sjö.</p>
+<p>Stundum vinnum við samt með flóknari gerðir af summum og þá dugar svona táknmál skammt. Þess vegna innleiðum við summutáknið <span class="math">\(\sum\)</span>.</p>
+<p>Segjum að við viljum leggja saman allar tölur af gerðinni <span class="math">\(n(n+1)\)</span> þar sem <span class="math">\(n\)</span> gengur frá einum upp í hundrað. Einhverjum gæti dottið í hug að skrifa</p>
+<div class="math">
+\[\begin{aligned}
+& 1 \cdot (1+1)+2 \cdot (2+1)+3 \cdot (3+1)+4 \cdot (4+1)+...+100 \cdot (100+1)\\ &=2+6+12+20+...+10100 \end{aligned}
+
+\]</div>
+<p>en þetta þykir ekki snyrtileg leið að tákna summu. Þess vegna skrifum við frekar</p>
+<div class="math">
+\[\sum_{n=1}^{100}n(n+1)
+
+\]</div>
+<p>Fyrir neðan summutáknið stendur <span class="math">\(n=1\)</span> sem merkir að breytistærðin sem við vinnum í er <span class="math">\(n\)</span> og að við byrjum í einum. Fyrir ofan summutáknið stendur hundrað sem þýðir að við endum summuna þegar <span class="math">\(n=100\)</span>. Hægra megin við summutáknið stendur síðan formúlan fyrir sérhvern lið í summunni. Athugum að <span class="math">\(\sum_{n=1}^{100}n(n+1) = \sum_{n=0}^{99}(n+1)(n+2)\)</span>.</p>
+<p>Summurnar sem teknar voru fram í byrjun kaflans yrðu táknaðar með</p>
+<div class="math">
+\[\sum_{n=1}^{100}n=1+2+3+...+100
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[\sum_{n=4}^{87}\frac{1}{n} = \frac{1}{4}+\frac{1}{5}+\frac{1}{6}+...+\frac{1}{87}
+
+\]</div>
+<p>Stundum lendum við í sömu vandræðum með löng margfeldi. Þess vegna innleiðum við margfeldistáknið <span class="math">\(\prod\)</span> sem er notað á sama hátt og summutáknið en bara fyrir margfeldi.</p>
+<p>Þannig er</p>
+<div class="math">
+\[\prod_{n=1}^{100}n=1\cdot 2\cdot 3\cdot 4\cdots 100\qquad \prod_{n=4}^{87}\frac{1}{n}=\frac{1}{4}\cdot\frac{1}{5}\cdot\frac{1}{6}\cdots\frac{1}{100}
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[\prod_{n=1}^{100}n(n+1)=1(1+1)\cdot 2(2+1)\cdot 3(3+1)\cdots 100(100+1)=2\cdot 6\cdot 12 \cdots 10100
+
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Þessi tákn eru mikilvæg þegar unnið er með <a href="http://www.stae.is/os/leita/sequence." class="tooltip" target="_blank">runur<span>en: <i>sequence.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> og <a href="http://www.stae.is/os/leita/series." class="tooltip" target="_blank">raðir<span>en: <i>series.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.
+<em>Runa</em> er raðaður listi af tölum og <em>röð</em> er summa liðanna.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>1.</strong> Reiknum</p>
+<div class="math">
+\[\sum_{n=-3}^{5}n^2
+
+\]</div>
+<p>Höfum</p>
+<div class="math">
+\[\begin{aligned}
+\sum_{n=-3}^{5}n^2 &=(-3)^2+(-2)^2+(-1)^2+0^2+1^2+2^2+3^2+4^2+5^2 \\ &=9+4+1+0+1+4+9+16+25=69
+\end{aligned}
+
+\]</div>
+<p><strong>2.</strong> Reiknum</p>
+<div class="math">
+\[\prod_{n=1}^{4}(1+n)
+
+\]</div>
+<p>Höfum</p>
+<div class="math">
+\[\prod_{n=1}^{4}(1+n)=(1+1)(1+2)(1+3)(1+4)=2\cdot 3\cdot 4\cdot 5=120
+
+\]</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli03.html" class="btn btn-neutral float-right" title="3. Rúmfræði" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli01.html" class="btn btn-neutral" title="1. Algebra" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Efnið er sett upp í <a href="https://github.com/edbook">Edbook</a> en það kerfi samanstendur af <a href="http://sphinx-doc.org/">Sphinx</a> ásamt sérsniðnum viðbótum. <a href="https://github.com/snide/sphinx_rtd_theme">Þemað</a> kemur frá <a href="https://readthedocs.org">Read the Docs</a>.
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            LINK_SUFFIX: '.html'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+      <script type="text/javascript" src="../_static/katex_autorenderer.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<script src="../_static/jquery.scrolldepth.js"></script>
+<script>
+    jQuery.scrollDepth({
+        percentage: false,
+        userTiming: false,
+        pixelDepth: false,
+        nonInteraction: false,
+        elements: top.scrolldepth_tags
+});
+</script>
+
+<script>
+	window.addEventListener("load", function(){
+		for(var i in ggbAppletId){
+			ggbAppletId[i].inject(i);
+		}
+	});
+</script>
+
+
+
+</body>
+</html>

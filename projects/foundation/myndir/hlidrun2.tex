@@ -1,0 +1,22 @@
+\documentclass[border=7pt]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw[domain=-2*pi:2.1*pi,smooth,variable=\x,black] plot ({\x},{sin(\x r)}) node[anchor = south west] {$\sin(x)$};
+\draw[domain=-2*pi:2*pi, smooth, variable=\x,red] plot({\x},{sin((\x+pi/2 )r)}) node[anchor = south west] {$\sin(x+ \frac{\pi}{2})$};
+% hliðra um (2,3)
+
+\draw[->] (-7.5,0) -- (7.5,0) node[right] {$x$};
+\draw[->] (0,-2.5) -- (0,2.5) node[above] {$y$};
+
+\foreach \x/\xtext in {-2*pi/2\pi, -1.5*pi/\frac{3\pi}{2}, -pi/-\pi, -0.5*pi/-\frac{\pi}{2}, 0,0.5*pi/\frac{\pi}{2}, pi/\pi, 1.5*pi/\frac{3\pi}{2}, 2*pi/2\pi }
+\draw (\x,0.1) -- (\x,-0.1) node[anchor=north] {$\xtext$};
+\foreach \y/\ytext in {-2,-1,1,2}
+ \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\ytext$};
+
+
+\end{tikzpicture}
+\end{document}

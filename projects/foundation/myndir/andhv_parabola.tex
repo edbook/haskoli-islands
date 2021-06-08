@@ -1,0 +1,27 @@
+\documentclass[border=7pt]{standalone}
+%\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+
+\draw[domain=0:2,smooth,variable=\x,black] plot ({\x},{\x*\x});
+\draw[domain=0:4, smooth, samples= 1000, variable=\x,red] plot({\x},{\x^0.5});
+% \draw[domain=0:4, smooth, variable=\x,red] plot({\x},{-\x^0.5});
+
+\draw [dashed] (0,0) -- (4,4);
+\draw[->] (-0.5,0) -- (4.5,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,4.5) node[above] {$y$};
+
+\foreach \x in {0,1,2,3,4}{
+     \draw (\x,-0.5) node{\small\x};
+     \draw (\x,-0.1) -- (\x,0.1);
+     };
+
+\foreach \x in {0,1,2,3,4}{
+  \draw (-0.5,\x) node{\small\x};
+  \draw (-0.1,\x) -- (0.1,\x);
+  };
+
+\end{tikzpicture}
+\end{document}

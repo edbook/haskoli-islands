@@ -1,0 +1,1106 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>10. Markgildi &mdash; Undirbúningur í stærðfræði  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;}
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Undirbúningur í stærðfræði  documentation" href="../index.html"/>
+        <link rel="next" title="11. Diffrun" href="Kafli11.html"/>
+        <link rel="prev" title="9. Meira um föll" href="Kafli09.html"/>
+
+
+    <!-- ADD YOUR GOOGLE ANALYTICS TRACKING CODE HERE-->
+    <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-29852053-2', 'auto');
+  		ga('send', 'pageview');
+
+	</script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+	<script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+  <script>
+  // the buttonText string says what will be written on the
+  // sage cell evaluation button.
+  // It can be changed here.
+  var buttonText = "Keyra"
+  </script>
+
+	<script type="text/javascript">
+    sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});
+    sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });
+    sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});
+    sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});
+    sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+    sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+    sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});
+  </script>
+
+  <script>ggbAppletId = []; </script>
+    <script>top.scrolldepth_tags = []; </script>
+
+     
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Undirbúningur í stærðfræði
+        
+
+        
+          
+          <img src="../_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Um námsefnið</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Algebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#talnakerfi">1.1. Talnakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#natturulegu-tolurnar-mathbb-n">1.1.1. Náttúrulegu tölurnar  <span class="math">\(\mathbb{N}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#heiltolurnar-mathbb-z">1.1.2. Heiltölurnar <span class="math">\(\mathbb{Z}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#raeu-tolurnar-mathbb-q">1.1.3. Ræðu tölurnar <span class="math">\(\mathbb{Q}\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rauntolurnar-mathbb-r">1.1.4. Rauntölurnar <span class="math">\(\mathbb{R}\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#forgangsroun-agera">1.2. Forgangsröðun aðgerða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#reiknireglur">1.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#frumtolur">1.4. Frumtölur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-deilanleiki">1.4.1. Skilgreining: Deilanleiki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-frumtolur">1.4.2. Skilgreining: Frumtölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#frumattun">1.4.3. Frumþáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#staersti-samdeilir-og-minnsta-samfeldi">1.4.4. Stærsti samdeilir og minnsta samfeldi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#brotareikningur">1.5. Brotareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-raear-tolur">1.5.1. Skilgreining: Ræðar tölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#fullstytt-brot">1.5.2. Fullstytt brot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#roun-raera-talna">1.5.3. Röðun ræðra talna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.5.4. Reiknireglur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#deiling-me-afgangi">1.6. Deiling með afgangi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#veldi-og-raetur">1.7. Veldi og rætur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#veldi">1.7.1. Veldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur-fyrir-veldi">1.7.2. Reiknireglur fyrir veldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#raetur">1.7.3. Rætur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur-fyrir-raetur">1.7.4. Reiknireglur fyrir rætur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#brotin-veldi">1.7.5. Brotin veldi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#jofnur">2.1. Jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#fyrsta-stigs-jofnur">2.1.1. Fyrsta stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#annars-stigs-jofnur">2.1.2. Annars stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#lausnarformula-fyrir-annars-stigs-jofnur">2.1.3. Lausnarformúla fyrir annars stigs jöfnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli02.html#setning">2.1.3.1. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#liun-og-attun">2.2. Liðun og þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#liun">2.2.1. Liðun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#attun">2.2.2. Þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#attun-me-agiskunarafer">2.2.3. Þáttun með ágiskunaraðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#attun-me-lausnarformulu">2.2.4. Þáttun með lausnarformúlu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#jofnuhneppi">2.3. Jöfnuhneppi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#ojofnur-og-tolugildi">2.4. Ójöfnur og tölugildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#ojofnur">2.4.1. Ójöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#tolugildi">2.4.2. Tölugildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#reiknireglur-fyrir-tolugildi">2.4.3. Reiknireglur fyrir tölugildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#summu-og-margfeldistakni">2.5. Summu- og margfeldistáknið</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Rúmfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#hnitakerfi">3.1. Hnitakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fjarlaeg-milli-punkta-i-kartesisku-hnitakerfi">3.1.1. Fjarlægð milli punkta í kartesísku hnitakerfi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#regla">3.1.2. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#jafna-linu-i-hnitakerfinu">3.2. Jafna línu í hnitakerfinu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#hallatala-og-skurpunktur-vi-asa">3.3. Hallatala og skurðpunktur við ása</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#meira-um-jofnu-linu">3.4. Meira um jöfnu línu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id1">3.4.1. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#a-finna-jofnu-linu">3.4.2. Að finna jöfnu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#samsia-og-verstaear-linur">3.4.3. Samsíða og þverstæðar línur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli03.html#samsia-linur">3.4.3.1. Samsíða línur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli03.html#verstaear-linur">3.4.3.2. Þverstæðar línur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#mipunktsregla">3.4.4. Miðpunktsregla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#keilusni">3.5. Keilusnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fleygbogar">3.5.1. Fleygbogar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sporoskjur">3.5.2. Sporöskjur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#hringir">3.5.3. Hringir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#breibogar">3.5.4. Breiðbogar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#flatarmyndir">3.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Mengi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#grunnhugtok">4.1. Grunnhugtök</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#umfangsfrumsenda">4.1.1. Umfangsfrumsenda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#hlutmengi">4.1.2. Hlutmengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#yringar-til-a-skilgreina-mengi">4.2. Yrðingar til að skilgreina mengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining">4.2.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#agerir-a-mengjum">4.3. Aðgerðir á mengjum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#faldmengi">4.3.1. Faldmengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fyllimengi">4.3.2. Fyllimengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#meira-um-agerir-a-mengjum">4.4. Meira um aðgerðir á mengjum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#rauntalnabil">4.5. Rauntalnabil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id1">4.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#gerir-af-bilum">4.5.2. Gerðir af bilum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#varpanir-og-foll">5.1. Varpanir og föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#daemi-um-vorpun-sem-er-ekki-fall">5.1.1. Dæmi um vörpun sem er ekki fall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#graf-vorpunnar">5.2. Graf vörpunnar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#jafnstae-og-oddstae-foll">5.3. Jafnstæð og oddstæð föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skilgreining">5.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#myndraen-utskyring">5.3.2. Myndræn útskýring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#einhalla-foll">5.4. Einhalla föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.4.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#gaffalforskrift">5.5. Gaffalforskrift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#lotubundin-foll">5.6. Lotubundin föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id2">5.6.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#andhverfur-falla">5.7. Andhverfur falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id3">5.7.1. Skilgreining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Margliður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#id1">6.1. Margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#nullstovar-marglia">6.2. Núllstöðvar margliða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#regla">6.2.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#fyrsta-og-annars-stigs-margliur">6.3. Fyrsta og annars stigs margliður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fyrsta-stigs-margliur">6.3.1. Fyrsta stigs margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#annars-stigs-margliur">6.3.2. Annars stigs margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id2">6.3.3. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#deiling-me-afgangi-margliur">6.4. Deiling með afgangi - margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#attun-marglia">6.5. Þáttun margliða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining">6.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#nullstovar-marglia-og-attun">6.5.2. Núllstöðvar margliða og þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id3">6.5.3. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id4">6.5.4. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#p-q-afer">6.6. p/q-aðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id5">6.6.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#pascal">6.7. Pascal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli07.html">7. Hornaföll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#bogaeiningar">7.1. Bogaeiningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining">7.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#kosinus-og-sinus">7.2. Kósínus og sínus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#eingingahringurinn">7.2.1. Eingingahringurinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id1">7.2.2. Kósínus og sínus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#amma-illa">7.2.3. Amma illa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#ekkt-gildi-a-hornafollum">7.3. Þekkt gildi á hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tangens-og-kotangens">7.4. Tangens og kótangens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#myndir-af-hornafollum">7.5. Myndir af hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hornafallareglur">7.6. Hornafallareglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tvofold-horn">7.7. Tvöföld horn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#andhverfur-hornafallanna">7.8. Andhverfur hornafallanna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id2">7.8.1. Skilgreining</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-sinusar">7.8.1.1. Andhverfa sínusar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-kosinusar">7.8.1.2. Andhverfa kósínusar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli07.html#andhverfa-tangens">7.8.1.3. Andhverfa tangens</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#tengsl-i-rumfraei">7.9. Tengsl í rúmfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#regla-pyagorasar">7.9.1. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#sinusreglan">7.9.2. Sínusreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#kosinusreglan">7.9.3. Kósínusreglan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hornafallareglurnar">7.10. Hornafallareglurnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#grunnreglan">7.10.1. Grunnreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#hlirunarreglur">7.10.2. Hliðrunarreglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#summuformulur">7.10.3. Summuformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#tvofoldunarformulur">7.10.4. Tvöföldunarformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#helmingunarformulur">7.10.5. Helmingunarformúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#summu-og-margfeldisformulur">7.10.6. Summu- og margfeldisformúlur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli08.html">8. Vigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#skilgreining">8.1. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#a-lia-vigra">8.2. Að liða vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#einingarvigrar">8.3. Einingarvigrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#samlagning-vigra">8.4. Samlagning vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#margfoldun-vigra">8.5. Margföldun vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#flatarmyndir">8.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli09.html">9. Meira um föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#andhverfur">9.1. Andhverfur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#eintaek-og-ataek-foll">9.2. Eintæk og átæk föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#ataek-foll">9.2.1. Átæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining">9.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#eintaek-foll">9.2.3. Eintæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id1">9.2.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#gagntaek-foll">9.2.5. Gagntæk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id2">9.2.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#regla">9.2.7. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#samskeyting-falla">9.3. Samskeyting falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id3">9.3.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#nokkur-mikilvaeg-foll">9.4. Nokkur mikilvæg föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#visisfoll">9.4.1. Vísisföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#lograr">9.4.2. Lograr</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#lograreglur">9.4.2.1. Lograreglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn">9.4.3. Náttúrulega veldisvísisfallið og nátturulegi logrinn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#id4">9.4.3.1. Lograreglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#rae-foll">9.4.4. Ræð föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#myndraent">9.4.4.1. Myndrænt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#stofnbrotaliun">9.4.5. Stofnbrotaliðun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#id5">9.4.5.1. Regla</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#ummyndanir">9.5. Ummyndanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#hlirun">9.5.1. Hliðrun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#speglun">9.5.2. Speglun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#strikkun">9.5.3. Stríkkun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#lorett">9.5.3.1. Lóðrétt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli09.html#larett">9.5.3.2. Lárétt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Markgildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#markgildi-falls">10.1. Markgildi falls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">10.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gerir-markgilda">10.2. Gerðir markgilda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reikniagerir-a-markgildum">10.3. Reikniaðgerðir á markgildum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#samfelld-foll">10.4. Samfelld föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">10.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reglur-um-samfelldni">10.4.2. Reglur um samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nokkur-ekkt-samfelld-foll">10.4.3. Nokkur þekkt samfelld föll</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli11.html">11. Diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skyringardaemi">11.1. Skýringardæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skilgreining">11.2. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#reiknireglur">11.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#ekktar-afleiur">11.4. Þekktar afleiður</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli12.html">12. Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#repun">12.1. Þrepun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#rithattur">12.2. Ritháttur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli12.html#formulubla">12.3. Formúlublað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#algebra">12.3.1. Algebra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#einfaldar-reiknireglur">12.3.1.1. Einfaldar reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#brotareiknireglur">12.3.1.2. Brotareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#veldareiknireglur">12.3.1.3. Veldareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-raetur">12.3.1.4. Reiknireglur fyrir rætur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#jofnur-og-ojofnur">12.3.2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#lausnarformula-annars-stigs-jofnu">12.3.2.1. Lausnarformúla annars stigs jöfnu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-tolugildi">12.3.2.2. Reiknireglur fyrir tölugildi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#regla-pyagorasar">12.3.2.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#fjarlaeg-milli-punkta">12.3.2.4. Fjarlægð milli punkta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hallatala-linu">12.3.2.5. Hallatala línu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#mipunktsregla">12.3.2.6. Miðpunktsregla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#flatarmal">12.3.2.7. Flatarmál</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#foll">12.3.3. Föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#oddstaett-og-jafnstaett">12.3.3.1. Oddstætt og jafnstætt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#lograreglur">12.3.3.2. Lograreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#stofnbrotaliun">12.3.3.3. Stofnbrotaliðun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#margliur">12.3.4. Margliður</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#nokkrar-lianir">12.3.4.1. Nokkrar liðanir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#hornafoll">12.3.5. Hornaföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#graur-og-bogaeiningar">12.3.5.1. Gráður og bogaeiningar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hliar-rihyrnings">12.3.5.2. Hliðar þríhyrnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#grunnreglan">12.3.5.3. Grunnreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#hlirunarreglur">12.3.5.4. Hliðrunarreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#summuformulur">12.3.5.5. Summuformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#tvofoldunarformulur">12.3.5.6. Tvöföldunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#helmingunarformulur">12.3.5.7. Helmingunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#summu-og-margfeldisformulur">12.3.5.8. Summu- og margfeldisformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#kosinusreglan">12.3.5.9. Kósínusreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#sinusreglan">12.3.5.10. Sínusreglan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#vigrar">12.3.6. Vigrar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur">12.3.6.1. Reiknireglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#markgildi">12.3.7. Markgildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#reiknireglur-fyrir-markgildi">12.3.7.1. Reiknireglur fyrir markgildi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli12.html#diffrun">12.3.8. Diffrun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#id1">12.3.8.1. Reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kafli12.html#ekktar-afleiur">12.3.8.2. Þekktar afleiður</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Undirbúningur í stærðfræði</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Yfirlit</a> &raquo;</li>
+      
+    <li><span class="section-number">10. </span>Markgildi</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/Kafli10.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="markgildi">
+<h1><span class="section-number">10. </span>Markgildi<a class="headerlink" href="#markgildi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="markgildi-falls">
+<h2><span class="section-number">10.1. </span>Markgildi falls<a class="headerlink" href="#markgildi-falls" title="Permalink to this headline">¶</a></h2>
+<p>Áður en að við skilgreinum <a href="http://www.stae.is/os/leita/limit." class="tooltip" target="_blank">markgildi<span>en: <i>limit.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <a href="http://www.stae.is/os/leita/function." class="tooltip" target="_blank">falls<span>en: <i>function.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> formlega skulum við taka dæmi til að útskýra hver hugmyndin er.
+Skilgreinum fall:</p>
+<div class="math">
+\[g:\;\mathbb{R}\setminus\{0\}\to \mathbb{R}, \qquad g(x)=\frac{\sin(x)}{x}.
+
+\]</div>
+<p>Tökum eftir að við látum fallið <span class="math">\(g\)</span> ekki vera skilgreint í punktinum <span class="math">\(x=0\)</span>  til að komast hjá því að deila með núlli.</p>
+<p>Það getur hins vegar verið áhugavert að skoða hvernig fallið hagar sér <strong>nálægt</strong> punktinum <span class="math">\(x=0\)</span>.
+Teiknum mynd af fallinu <span class="math">\(g\)</span>:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/sin.svg"><img alt="../_images/sin.svg" src="../_images/sin.svg" width="60%" /></a>
+</div>
+<p>Við notum vasareikni til að reikna nokkur gildi á <span class="math">\(g\)</span> og merkjum inn í <a href="http://www.stae.is/os/leita/coordinate_system." class="tooltip" target="_blank">hnitakerfið<span>en: <i>coordinate system.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> punktana <span class="math">\((x,g(x))\)</span>.
+Athugum að fallið er <a href="http://www.stae.is/os/leita/even." class="tooltip" target="_blank">jafnstætt<span>en: <i>even.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> svo <span class="math">\(g(-x)=g(x)\)</span> fyrir öll <span class="math">\(x\)</span>.</p>
+<div class="math">
+\[\begin{aligned}
+    g(-1) &=g(1) \approx 0,841470984 \\
+    g(-0,5) &=g(0,5)\approx 0,958851077\\
+    g(-0,25) &=g(0,25)\approx 0,989615837 \\
+    g(-0,1) &=g(0,1)\approx 0,998334166 \\
+    g(-0,001) &= g(0,001) \approx 0,9999833
+\end{aligned}
+
+\]</div>
+<p>Takið sérstaklega eftir því að fallið virðist ekki fara upp eða niður í óendanleikann þegar við nálgumst gildið <span class="math">\(x=0\)</span>.
+Öllu heldur þá virðist fallið stefna á gildið <span class="math">\(1\)</span>!</p>
+<p>Við höfum séð að ef <span class="math">\(x_0\)</span> er tala sem er mjög nálægt núlli þá verður fallgildið <span class="math">\(g(x_0)\)</span> mjög nálægt því að verða <span class="math">\(1\)</span>.</p>
+<p>Munum að fallið <span class="math">\(g\)</span> er <strong>ekki skilgreint í núlli</strong>, hins vegar höfum við sér orðalag fyrir svona tilvik.
+Við segjum að <a href="http://www.stae.is/os/leita/limit." class="tooltip" target="_blank">markgildi<span>en: <i>limit.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fallsins <span class="math">\(g\)</span> í núlli sé einn.
+Einnig má segja að <span class="math">\(g(x)\)</span> stefni á einn þegar <span class="math">\(x\)</span> stefnir á núll.
+Á táknmáli er skrifað</p>
+<div class="math">
+\[\lim_{x\to 0}g(x)=1.
+
+\]</div>
+<p>Þetta er hægt að gera almennt.</p>
+<p>Látum nú <span class="math">\(a\)</span> vera stak í <a href="http://www.stae.is/os/leita/interval." class="tooltip" target="_blank">bilinu<span>en: <i>interval.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math">\(I\)</span> í <span class="math">\(\mathbb{R}\)</span>.
+Látum <span class="math">\(f:\;I\setminus\{a\}\to \mathbb{R}\)</span> vera eitthvað fall og <span class="math">\(b\in \mathbb{R}\)</span> vera tölu.
+Við segjum að markgildi fallsins <span class="math">\(f\)</span> í punktinum <span class="math">\(x=a\)</span> sé <span class="math">\(b\)</span> ef fyrir allar tölur <span class="math">\(x_0\)</span> sem eru nálægt tölunni <span class="math">\(a\)</span> þá er talan <span class="math">\(f(x_0)\)</span> nálægt tölunni <span class="math">\(b\)</span>.
+Þá skrifum við</p>
+<div class="math">
+\[\lim_{x\to a}f(x)=b.
+
+\]</div>
+<p>Setjum fram skilgreininguna á markgildi.</p>
+<div class="section" id="skilgreining">
+<h3><span class="section-number">10.1.1. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Permalink to this headline">¶</a></h3>
+<p>Gerum ráð fyrir að <span class="math">\(I\subset \mathbb{R}\)</span> sé bil í <span class="math">\(\mathbb{R}\)</span> og að <span class="math">\(a\in I\)</span> sé punktur á bilinu sem er hvorugur endapunkta þess.</p>
+<p>Gerum ráð fyrir að <span class="math">\(f:\; I\setminus\{a\}\to \mathbb{R}\)</span> sé fall og að <span class="math">\(b\in \mathbb{R}\)</span> sé tala.</p>
+<p>Við segjum að markgildi fallsins <span class="math">\(f\)</span> í punktinum <span class="math">\(a\)</span> sé <span class="math">\(b\)</span> og ritum</p>
+<div class="math">
+\[\lim_{x\to a}f(x)=b
+
+\]</div>
+<p>ef að eftirfarandi gildir:</p>
+<p>Fyrir sérhvert <span class="math">\(\epsilon&gt;0\)</span> er til <span class="math">\(\delta&gt;0\)</span> þannig að
+ef</p>
+<div class="math">
+\[|x-a|<\delta,
+
+\]</div>
+<p>þá er</p>
+<div class="math">
+\[0<|f(x)-b|<\epsilon.
+
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Í þessari skilgreiningu má ímynda sér að <span class="math">\(\epsilon\)</span> og <span class="math">\(\delta\)</span> séu rosalega litlar tölur.</p>
+<p>Ójafnan <span class="math">\(|x-a|&lt;\delta\)</span> þýðir þá að <span class="math">\(x\)</span> sé rosalega nálægt því að vera <span class="math">\(a\)</span> og ójafnan <span class="math">\(0&lt;|f(x)-b|&lt;\epsilon\)</span> þýðir að <span class="math">\(f(x)\)</span> er rosalega nálægt því að vera <span class="math">\(b\)</span>.</p>
+<p>Athugum að <span class="math">\(a\)</span> og <span class="math">\(b\)</span> geta verið hvaða tölur sem er, jafnvel <span class="math">\(\pm \infty\)</span>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Við segjum að markgildi fallsins <strong>sé til</strong> ef fallið stefnir á rauntölu.</p>
+<p>Ef fall stefnir á <span class="math">\(+ \infty\)</span> eða <span class="math">\(-\infty\)</span> segjum við að markgildið <strong>sé ekki til</strong> .</p>
+</div>
+<hr class="docutils" />
+<p>Skoðum ræða fallið <span class="math">\(f(x) = \frac{x}{x-1}\)</span> .</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/hv.svg"><img alt="../_images/hv.svg" src="../_images/hv.svg" width="70%" /></a>
+</div>
+<p>Hvert er markgildi <span class="math">\(f\)</span> þegar <span class="math">\(x\)</span> stefnir á 1?</p>
+<p>Þegar við skoðum bláa grafið vinstra megin við vandræðapunktinn tekur fallið snögga dýfu niður í <span class="math">\(-\infty\)</span> þegar það nálgast 1.
+Þetta köllum við að skoða <em>vinstra markgildi</em> og táknum með litlum mínus í hávísi.
+Í þessu tilviki myndum við skrifa:</p>
+<div class="math">
+\[\lim_{x \to 1^{-}} \frac{x}{x-1} = -\infty
+
+\]</div>
+<p>Hins vegar, þegar við eltum rauða ferilinn hægra megin við vandræðapunktinn stefnir fallið hratt upp í <span class="math">\(+\infty\)</span> þegar það nálgast 1.
+Þetta köllum við <em>hægra markgildi</em> og táknum með litlum plús í hávísi.
+Í þessu tilviki myndum við skrifa:</p>
+<div class="math">
+\[\lim_{x \to 1^{+}} \frac{x}{x-1} = \infty
+
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Þegar hægra markgildi og vinstra markigildi falls í punkti er ekki það sama þá er <em>markgildið ekki til</em>.</p>
+<p>Markgildi <span class="math">\(f(x)\)</span> í punktinum <span class="math">\(x=a\)</span> er ekki til nema ef</p>
+<div class="math">
+\[\lim_{x\to a^+} f(x) = \lim_{x\to a^-} f(x)
+
+\]</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Skoðum myndræn dæmi þar sem markgildið er <strong>ekki til</strong>.</p>
+<div class="figure align-center">
+<img alt="../_images/markg.svg" src="../_images/markg.svg" /></div>
+<p>Hér er fallið ekki að stefna á eitt gildi í punktinum <span class="math">\(a\)</span>, því það er ekki að stefna á sama gildi hægra megin og vinstra megin. Markgildið er því ekki til.</p>
+<div class="figure align-center">
+<img alt="../_images/markg2.svg" src="../_images/markg2.svg" /></div>
+<p>Hér stefnir fallið á <span class="math">\(\infty\)</span> í punktinum <span class="math">\(a\)</span> og því er markgildið ekki til.</p>
+</div>
+<p>Ef við höfum markgildið <span class="math">\(\lim_{x \to c} f(x)\)</span> þar sem fallið er rætt, það er að segja á forminu <span class="math">\(f(x) = \frac{p(x)}{q(x)}\)</span>, þá þarf að passa að <span class="math">\(q(c) \neq 0\)</span>. Þá verða markgildisreikningarnir einfaldir, sjá dæmi 1 og 2.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<blockquote>
+<div><p>Finnið markgildin:</p>
+<dl>
+<dt><strong>1.</strong></dt><dd><p><span class="math">\(\lim_{x\to 2}\frac{x^3+2x^2}{x^3-x^2+1}\)</span>.</p>
+<p>Hér er <span class="math">\(q(x)=x^3-x^2+1\)</span>
+og <span class="math">\(q(2)=2^3-2^2+1=5\not=0\)</span></p>
+<p>Hér er <span class="math">\(2\)</span> í skilgreiningarmenginu svo til þess að reikna markgildið er gildinu einfaldlega stungið inn.
+Markgildið er því:</p>
+<div class="math">
+\[\lim_{x\to 2}\frac{x^3+2x^2}{x^3-x^2+1}=\frac{2^3+2\cdot 2^2}{2^3-2^2+1}=\frac{16}{5}
+
+\]</div>
+</dd>
+<dt><strong>2.</strong></dt><dd><p><span class="math">\(\lim_{x\to 4}\frac{x^3-4x^2-4x+16}{x^2-16}\)</span> .</p>
+<p>Hér er <span class="math">\(q(x)=x^2-16\)</span> og <span class="math">\(p(x)=x^3-4x^2-4x+16\)</span> .</p>
+<p>Við tökum eftir að <span class="math">\(q(4)=0\)</span> og <span class="math">\(p(4)=0\)</span>.</p>
+<p>Prófum að stytta út þætti.
+Við getum umritað <span class="math">\(p(x) = (x-2)(x+2)(x-4)\)</span> og <span class="math">\(q(x)=(x-4)(x+4)\)</span>
+og sjáum að <span class="math">\((x-4)\)</span> er sameiginlegur þáttur sem styttist út.</p>
+<p>Fáum því markgildið:</p>
+<div class="math">
+\[\begin{aligned}
+ \lim_{x\to 4}\frac{x^3-4x^2-4x+16}{x^2-16} &= \lim_{x\to 4} \frac{(x-2)(x+2)(x-4)}{(x-4)(x+4)} \\
+       &=\lim_{x\to 4}\frac{(x-2)(x+2)}{(x+4)}\\
+ &=\frac{(4-2)(4+2)}{4+4}\\
+ &=\frac{12}{8}\\
+ &=\frac{3}{2}
+\end{aligned}
+
+\]</div>
+</dd>
+<dt><strong>3.</strong></dt><dd><p>Látum <span class="math">\(f: \mathbb{R} \setminus \{1\} \to \mathbb{R} \qquad f(x)=x\)</span>.</p>
+<p>Sýnið að <span class="math">\(\lim_{x \to 1} f(x) = 1\)</span> .</p>
+<p>Þetta verður nánast augljóst ef grafið er teiknað.
+Hér setjum við lítinn hring í punktinn <span class="math">\((1, 1)\)</span> því fallið er ekki skilgreint þar.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/mkgexmp1.svg"><img alt="../_images/mkgexmp1.svg" src="../_images/mkgexmp1.svg" width="70%" /></a>
+</div>
+<p>Það er því ljóst að fallið stefnir á punktinn <span class="math">\((1, 1)\)</span> frá báðum áttum.</p>
+</dd>
+<dt><strong>4.</strong></dt><dd><p>Látum <span class="math">\(f : \mathbb{R} \setminus \{4\} \to \mathbb{R} \qquad f(x) = \sqrt{x}\)</span>.
+Sýnið að <span class="math">\(\lim_{x \to 4} = 2\)</span>.</p>
+<p>Aftur er nánast augljóst hvert markgildið er.
+Ef ferill fallsins <span class="math">\(f\)</span> er teiknaður upp sést greinilega að hann stefnir á punktinn <span class="math">\((4, 2)\)</span>.
+Það er að segja, það sést að markgildi fallsins er tveir.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/mkgexmp.svg"><img alt="../_images/mkgexmp.svg" src="../_images/mkgexmp.svg" width="70%" /></a>
+</div>
+<p>Við skulum sýna þetta formlega.
+Látum <span class="math">\(\epsilon &gt; 0\)</span> vera einhverja gefna tölu.
+Sýna þarf að til sé <span class="math">\(\delta&gt;0\)</span> þannig að <span class="math">\(|x−4|&lt;\delta\)</span> hafi í för með sér að <span class="math">\(| x−2|&lt;\epsilon\)</span>. Látum <span class="math">\(\delta = 2 \cdot \epsilon\)</span>.
+Þá fæst að ef <span class="math">\(|x − 4| &lt; \delta\)</span> þá er</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="math">
+\[\begin{aligned}
+|f(x) - 2| &= |\sqrt{x} - 2|,\\
+& = \frac{|\sqrt{x} - 2||\sqrt{x} + 2|}{|\sqrt{x} + 2|},\\
+& = \frac{|x - 4|}{|\sqrt{x} + 2|},\\
+& \leqq \frac{|x-4|}{|2|} \leqq \frac{\delta}{2} = \epsilon.
+\end{aligned}
+
+\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="gerir-markgilda">
+<h2><span class="section-number">10.2. </span>Gerðir markgilda<a class="headerlink" href="#gerir-markgilda" title="Permalink to this headline">¶</a></h2>
+<p>Hér er samantekt af helstu gerðum markgilda:</p>
+<ol class="arabic simple">
+<li><p><span class="math">\(\quad \lim_{x \to a} f(x) \qquad \qquad \quad\)</span> markgildið af <span class="math">\(f(x)\)</span> þegar <span class="math">\(x\)</span>  stefnir á  <span class="math">\(a\)</span></p></li>
+<li><p><span class="math">\(\quad \lim_{x \to a+} f(x) \qquad\qquad\;\)</span> markgildið af <span class="math">\(f(x)\)</span> þegar <span class="math">\(x\)</span>  stefnir á <span class="math">\(a\)</span> frá hægri</p></li>
+<li><p><span class="math">\(\quad \lim_{x \to a-} f(x) \qquad \qquad \;\)</span> markgildið af <span class="math">\(f(x)\)</span> þegar <span class="math">\(x\)</span> stefnir á <span class="math">\(a\)</span> frá vinstri</p></li>
+<li><p><span class="math">\(\quad \lim_{x\to +\infty} f(x) \qquad \qquad\)</span> markgildið af <span class="math">\(f(x)\)</span> þegar <span class="math">\(x\)</span>  stefnir á plús óendanlegt</p></li>
+<li><p><span class="math">\(\quad \lim_{x\to -\infty} f(x) \qquad \qquad\)</span> markgildið af <span class="math">\(f(x)\)</span> þegar <span class="math">\(x\)</span> stefnir á mínus óendanlegt</p></li>
+</ol>
+<hr class="docutils" />
+<p>Skoðum markgildið <span class="math">\(\lim_{x \to \infty}\frac{1}{x^n}\)</span> fyrir öll <span class="math">\(n \in \mathbb{N}_+\)</span></p>
+<p>Byrjum á <span class="math">\(n=1\)</span>, þá er augljóst að</p>
+<div class="math">
+\[\lim_{x \to \infty}\frac{1}{x} = 0
+
+\]</div>
+<p>því ef <span class="math">\(x\)</span> er stórt þá er <span class="math">\(\frac{1}{x}\)</span> lítið.
+Því er <span class="math">\(\frac{1}{x}\)</span> að minnka þegar <span class="math">\(x\)</span> er að stækka.</p>
+<p>Ef <span class="math">\(n=2\)</span> þá er líka augljóst að</p>
+<div class="math">
+\[\lim_{x \to \infty}\frac{1}{x^2} = \lim_{x \to \infty}\left(\frac{1}{x}\right)^2 = 0
+
+\]</div>
+<p>vegna þess að</p>
+<div class="math">
+\[\begin{aligned}
+x&\leq x^2 \quad & \forall x \geq 1\\
+\frac{1}{x^2} &\leq \frac{1}{x} \quad &\forall x \geq 1 \end{aligned}
+
+\]</div>
+<p>Þegar við hækkum veldið á <span class="math">\(x\)</span> í nefnaranum þá minnkar <span class="math">\(\frac{1}{x}\)</span> hraðar, því <span class="math">\(x\)</span> er að stækka hraðar.</p>
+<p>Við sjáum því að <span class="math">\(\frac{1}{x^n}\)</span> stefnir á núll þegar <span class="math">\(x\)</span> stefnir á <span class="math">\(\infty\)</span> fyrir allar jákvæðar heiltölur tölur <span class="math">\(n\)</span>.</p>
+<div class="math">
+\[\lim_{x \to \infty} \frac{1}{x^n} = 0 \qquad \forall n \in \mathbb{Z}_+
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/xminusn.svg"><img alt="../_images/xminusn.svg" src="../_images/xminusn.svg" width="40%" /></a>
+</div>
+<hr class="docutils" />
+<p>En hvað með markgildið <span class="math">\(\lim_{x\to 0^+} \frac{1}{x^n}\)</span> ?</p>
+<p>Þegar við nálgumst núll ofan frá erum við að deila með sífellt minni tölu. Þá fáum við sífellt stærri tölu út:</p>
+<div class="math">
+\[\begin{aligned}
+&\frac{1}{2} <\frac{1}{1}<\frac{1}{0.5} <\frac{1}{0.1} <\frac{1}{0.001}\\
+&0.5<1<2<10 < 1000
+\end{aligned}
+
+\]</div>
+<p>Því hlýtur</p>
+<div class="math">
+\[\lim_{x\to 0^+} \frac{1}{x^n} = \infty
+
+\]</div>
+<hr class="docutils" />
+<p>Skoðum nokkur dæmi:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Finnið eftirfarandi markgildi:</p>
+<p><em>Hér munum við láta rökstuðning duga í staðinn fyrir að nota formlegu skilgreiningarnar.</em></p>
+<p><strong>1.</strong> <span class="math">\(\lim_{x\to 0}\frac{1}{(2^x-1)^2}\)</span></p>
+<blockquote>
+<div><p>Þegar <span class="math">\(x\)</span> stefnir á núll þá stefnir <span class="math">\((2^x-1)^2\)</span> á núll (því <span class="math">\(2^0=1\)</span>) svo að
+<span class="math">\(\frac{1}{(2^x-1)^2}\)</span> stefnir annað hvort á plús eða mínus óendanlegt. Þar sem  <span class="math">\(\frac{1}{(2^x-1)^2}=\left(\frac{1}{2^x-1}\right)^2\)</span> er stæða í öðru veldi þá er hún alltaf jákvæð. Hún hlýtur því að stefna á plús óendanlegt, við skrifum</p>
+<div class="math">
+\[\lim_{x\to 0}\frac{1}{(2^x-1)^2}=\infty.
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/daemi2.svg"><img alt="../_images/daemi2.svg" src="../_images/daemi2.svg" width="40%" /></a>
+</div>
+<p>Sjáum út frá mynd að fallið stefnir á plús óendalegu þegar <span class="math">\(x\)</span> stefnir á <span class="math">\(0\)</span> frá báðum áttum.</p>
+</div></blockquote>
+<p><strong>2.</strong> <span class="math">\(\lim_{x\to \frac{\pi}{2}^-}\frac{1}{\cos(x)}\)</span></p>
+<blockquote>
+<div><p>Þegar <span class="math">\(x\)</span> stefnir á <span class="math">\(\pi/2\)</span> þá stefnir <span class="math">\(\cos(x)\)</span> á núll svo <span class="math">\(\frac{1}{\cos(x)}\)</span> stefnir á plús eða mínus óendanlegt.
+Þekkt er að <span class="math">\(\cos(x)\)</span> er jákvætt ef <span class="math">\(0&lt;x&lt;\pi/2\)</span>. Stæðan <span class="math">\(\frac{1}{\cos(x)}\)</span> er þess vegna jákvæð á sama bili og þess vegna stefnir hún á plús óendanlegt ef <span class="math">\(x\)</span> nálgast <span class="math">\(\pi/2\)</span> frá vinstri.
+Við skrifum</p>
+<div class="math">
+\[\lim_{x\to \frac{\pi}{2}^{-}}\frac{1}{\cos(x)}=\infty.
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/daemi3.svg"><img alt="../_images/daemi3.svg" src="../_images/daemi3.svg" width="100%" /></a>
+</div>
+<p>Hér er fallið með <a href="http://www.stae.is/os/leita/asymptote." class="tooltip" target="_blank">aðfellu<span>en: <i>asymptote.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> í <span class="math">\(\frac{\pi}{2}\)</span> sem þýðir að fallið tekur ekki gildi í <span class="math">\(\frac{\pi}{2}\)</span> en við sjáum að fallið er að stefna á plús óendanlegt frá vinstri.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="reikniagerir-a-markgildum">
+<h2><span class="section-number">10.3. </span>Reikniaðgerðir á markgildum<a class="headerlink" href="#reikniagerir-a-markgildum" title="Permalink to this headline">¶</a></h2>
+<p>Þegar  markgildi eru reiknuð gilda reiknireglur sem ættu ekki að koma á óvart.</p>
+<p>Gerum ráð fyrir að <span class="math">\(f\)</span> og <span class="math">\(g\)</span> séu föll og að <span class="math">\(c\in \mathbb{R} \cup\{-\infty,\infty\}\)</span>
+Gerum ráð fyrir að bæði markgildin</p>
+<div class="math">
+\[\lim_{x\to c}f(x)\qquad \text{og}\qquad \lim_{x\to c}g(x)
+
+\]</div>
+<p>séu skilgreind og að hvorugt þeirra sé jafnt plús eða mínus óendanlegu.
+Gerum ráð fyrir að <span class="math">\(k\in\mathbb{R}\)</span> sé fasti.
+Þá gildir:</p>
+<div class="math">
+\[\begin{aligned}
+1. & \qquad \lim_{x\to c}k=k \\
+\quad\\
+2. & \qquad \lim_{x\to c} \left(kf(x) \right)=k \cdot \left(\lim_{x\to c}f(x)\right) \\
+\quad\\
+3. & \qquad \lim_{x\to c} \left(f(x)+g(x)\right)=\lim_{x\to c}f(x)+\lim_{x\to c}g(x) \\
+\quad\\
+4. & \qquad \lim_{x\to c} \left(f(x)-g(x)\right)=\lim_{x\to c}f(x)-\lim_{x\to c}g(x) \\
+\quad\\
+5. & \qquad \lim_{x\to c} \left(f(x)\cdot g(x)\right)= \left( \lim_{x\to c}f(x) \right)\cdot \left(\lim_{x\to c}g(x) \right) \\
+\quad\\
+6. & \qquad \lim_{x\to c} \left( \frac{f(x)}{g(x)} \right)=\frac{\lim_{x\to c}f(x)}{\lim_{x\to c}g(x)} \qquad \text{ef} \qquad \lim_{x\to c}g(x)\not=0
+\end{aligned}
+
+\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Finnið eftirfarandi markgildið ef það er til.</p>
+<div class="math">
+\[\lim_{x \to \infty} \frac{x^2 + 1}{2x^2 + 5x +1}
+
+\]</div>
+<p>Við byrjum á því að deila með <span class="math">\(x^2\)</span> fyrir ofan og neðan strik. Við notum svo reiknireglurnar fyrir afganginn og þá staðreynd að <span class="math">\(\frac{1}{x^n}\)</span> stefnir á núll þegar <span class="math">\(x\)</span> stefnir á <span class="math">\(\infty\)</span> fyrir allar náttúrulegar tölur <span class="math">\(n\)</span>.</p>
+<div class="math">
+\[\begin{aligned}
+\lim_{x \to \infty} \frac{x^2 + 1}{2x^2 + 5x +1}
+&= \lim_{x \to \infty} \frac{1 + \frac{1}{x^2}}{2 + \frac{5}{x} + \frac{1}{x^2}} \\
+&= \frac{\lim_{x \to \infty}( 1 + \frac{1}{x^2})}{\lim_{x \to \infty}( 2 + \frac{5}{x} + \frac{1}{x^2})} \\
+&=\frac{\lim_{x \to \infty}1+\lim_{x \to \infty} \frac{1}{x^2}}{\lim_{x \to \infty}2+\lim_{x \to \infty} \frac{5}{x} +\lim_{x \to \infty} \frac{1}{x^2}} \\
+&=\frac{1+0}{2+0+0}\\
+&=\frac{1}{2}
+\end{aligned}
+
+\]</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Finnið markgildið:</p>
+<blockquote>
+<div><div class="math">
+\[\lim_{x\to \infty}\frac{(\sin(x))^2}{x}.
+
+\]</div>
+<p>Auðvelt er að sjá að fallið <span class="math">\(\frac{1}{x}\)</span> stefnir á núll þegar <span class="math">\(x\)</span> stefnir á óendanlegt.
+Þekkt er að <span class="math">\(|\sin(x)|\leq 1\)</span> fyrir öll <span class="math">\(x\)</span> og því fæst að <span class="math">\(0\leq (\sin(x))^2 \leq 1\)</span> fyrir öll <span class="math">\(x\)</span>.
+Þegar <span class="math">\(x\)</span> er stórt er því <span class="math">\(\frac{1}{x}\)</span> nálægt núlli og <span class="math">\((\sin(x))^2\)</span> er á milli núll og einn.
+En þá er auðvelt að sjá að</p>
+<div class="math">
+\[\frac{(\sin(x))^2}{x}=(\sin(x))^2\frac{1}{x}
+
+\]</div>
+</div></blockquote>
+<p>er nálægt núlli svo að markgildið er núll. Hér notuðum við reiknireglu 5.</p>
+<p>Við skrifum:</p>
+<div class="math">
+\[\lim_{x\to\infty}\frac{(\sin(x))^2}{x}=0.
+
+\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/daemi1.svg"><img alt="../_images/daemi1.svg" src="../_images/daemi1.svg" width="100%" /></a>
+</div>
+<p>Sjáum á grafinu að þegar við förum lengra eftir <span class="math">\(x\)</span>-ás nálgast fallið <span class="math">\(0\)</span>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Finnið markgildið:</p>
+<div class="math">
+\[\lim_{x\to \infty} \frac{x}{2x+1}
+
+\]</div>
+<p>Þegar <span class="math">\(x\)</span> stefnir á stærri og stærri tölur byrjar <span class="math">\(1\)</span> að skipta minna máli því hann er mikið minni í samanburði við það sem <span class="math">\(x\)</span> stefnir á. Þá erum við komin með einfaldara markgildi til að skoða:</p>
+<div class="math">
+\[\lim_{x\to \infty} \frac{x}{2x}
+
+\]</div>
+<p>Hér getum við stytt út <span class="math">\(x\)</span>-in og fáum að</p>
+<div class="math">
+\[\lim_{x\to \infty} \frac{1}{2} = \frac{1}{2}
+
+\]</div>
+<img alt="../_images/tutor.svg" class="align-center" src="../_images/tutor.svg" /></div>
+</div>
+<div class="section" id="samfelld-foll">
+<h2><span class="section-number">10.4. </span>Samfelld föll<a class="headerlink" href="#samfelld-foll" title="Permalink to this headline">¶</a></h2>
+<p>Óformlega má segja að fall <span class="math">\(f\)</span> sé <a href="http://www.stae.is/os/leita/continuous." class="tooltip" target="_blank">samfellt<span>en: <i>continuous.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> ef að hægt er að teikna feril þess á blað með blýanti án þess að þurfa að lyfta blýantinum. Ef að fall er ekki samfellt segjum við að það sé <a href="http://www.stae.is/os/leita/discontinuous." class="tooltip" target="_blank">ósamfellt<span>en: <i>discontinuous.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.
+Ef að fall <span class="math">\(f\)</span> er ósamfellt þá segjum við að það sé ósamfellt í þeim punktum þar sem lyfta þarf blýantinum af blaðinu.</p>
+<div class="figure align-center">
+<img alt="../_images/samfell.svg" src="../_images/samfell.svg" /></div>
+<p>Fallið að ofan er <strong>ósamfellt</strong>.</p>
+<div class="figure align-center">
+<img alt="../_images/samfell2.svg" src="../_images/samfell2.svg" /></div>
+<p>Fallið að ofan er <strong>samfellt</strong>.</p>
+<p>Skilgreinum nú samfelldni:</p>
+<div class="section" id="id1">
+<h3><span class="section-number">10.4.1. </span>Skilgreining<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Látum <span class="math">\(f\)</span> vera fall. Ef <span class="math">\(f\)</span> hefur markgildi í <span class="math">\(a\)</span> og <span class="math">\(\lim_{x \to a} f(x)=f(a)\)</span> þá segjum við að <span class="math">\(f\)</span> sé <em>samfellt</em> í punktinum <span class="math">\(a\)</span>.</p>
+<p>Ef <span class="math">\(f\)</span> er samfellt á öllu <a href="http://www.stae.is/os/leita/argument_domain." class="tooltip" target="_blank">skilgreiningarmengi<span>en: <i>argument domain.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> sínu köllum við <span class="math">\(f\)</span> <em>samfellt fall</em>.</p>
+</div>
+<div class="section" id="reglur-um-samfelldni">
+<h3><span class="section-number">10.4.2. </span>Reglur um samfelldni<a class="headerlink" href="#reglur-um-samfelldni" title="Permalink to this headline">¶</a></h3>
+<p>Látum <span class="math">\(f\)</span> og <span class="math">\(g\)</span> vera raunföll á bili <span class="math">\(I\)</span> og samfelld í punktinum <span class="math">\(a \in I\)</span>, þá gildir:</p>
+<ol class="arabic simple">
+<li><p>Fallið <span class="math">\(f+g\)</span> er samfellt í <span class="math">\(a\)</span>.</p></li>
+<li><p>Fallið <span class="math">\(f \cdot g\)</span> er samfellt í <span class="math">\(a\)</span>.</p></li>
+<li><p>Fallið <span class="math">\(\frac{f}{g}\)</span> er samfellt í <span class="math">\(a\)</span> ef <span class="math">\(g(a) \neq 0\)</span>.</p></li>
+<li><p>Gerum ráð fyrir að fallið <span class="math">\(g\)</span> sé samfellt í <span class="math">\(f(a)\)</span>. Þá er <span class="math">\((g \circ f)(x)=g(f(x))\)</span> samfellt í <span class="math">\(a\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="nokkur-ekkt-samfelld-foll">
+<h3><span class="section-number">10.4.3. </span>Nokkur þekkt samfelld föll<a class="headerlink" href="#nokkur-ekkt-samfelld-foll" title="Permalink to this headline">¶</a></h3>
+<p>Áður en við skoðum dæmi þá skulum við telja upp nokkur samfelld föll sem við þekkjum:</p>
+<ol class="arabic simple">
+<li><p>Fallið <span class="math">\(f(x)=x\)</span> er samfellt.</p></li>
+<li><p>Sérhver margliða er samfelld.</p></li>
+<li><p>Sérhvert rætt fall er samfellt á skilgreiningarmengi sínu (þ.e. þar sem nefnarinn er ekki núll).</p></li>
+<li><p>Fyrir allar náttúrlegar tölur <span class="math">\(n\)</span> þá er fallið <span class="math">\(f(x)=\root n \of {x}\)</span> samfellt.</p></li>
+<li><p>Ef <span class="math">\(r \in \mathbb{R}\)</span> er rauntala þá er fallið <span class="math">\(f(x)=x^r\)</span> samfellt.</p></li>
+<li><p>Vísisföll eru samfelld.</p></li>
+<li><p>Lograr eru samfelldir.</p></li>
+<li><p>Hornaföllin eru samfelld.</p></li>
+<li><p>Fallið <span class="math">\(f(x)=|x|\)</span> er samfellt.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Segjum til um hvort föllin eru samfelld eða ekki.</p>
+<p><strong>1.</strong></p>
+<blockquote>
+<div><div class="math">
+\[f(x)=|x|+\cos(x^3)
+
+\]</div>
+<p>Fallið <span class="math">\(f\)</span> er samsett úr föllunum <span class="math">\(|x|\)</span>, <span class="math">\(\cos(x)\)</span> og <span class="math">\(x^3\)</span> sem eru öll samfelld föll. Þess vegna er <span class="math">\(f\)</span> samfellt.</p>
+</div></blockquote>
+<p><strong>2.</strong></p>
+<blockquote>
+<div><div class="math">
+\[g(x) =
+\begin{cases}
+        \hfill -1    \hfill & \text{ ef } x\leq 0,\\
+        \hfill  1 \hfill & \text{ ef } x>0.\\
+\end{cases}
+
+\]</div>
+<p>Í punktinum <span class="math">\(x=0\)</span> tekur fallið <span class="math">\(g\)</span> stökk frá því að vera jafnt mínus einum í það að vera jafnt einum. Fallið er þess vegna ósamfellt í þeim punkti.</p>
+</div></blockquote>
+<p><strong>3.</strong></p>
+<blockquote>
+<div><div class="math">
+\[h(x) =
+\begin{cases}
+        \hfill \sin(x)    \hfill & \text{ ef } x\leq 0,\\
+        \hfill  x^2 \hfill & \text{ ef } x>0.\\
+\end{cases}
+
+\]</div>
+<p>Föllin <span class="math">\(\sin(x)\)</span> og <span class="math">\(x^2\)</span> eru bæði samfelld. Fallið <span class="math">\(h\)</span> er því samfellt í öllum punktum nema kannski núllpunktinum.
+Nú er þekkt að <span class="math">\(0^2=0\)</span> og <span class="math">\(\sin(0)=0\)</span>.
+Fallið <span class="math">\(h\)</span> stefnir þá á töluna núll í <span class="math">\(x=0\)</span> hvort sem að við nálgumst punktinn hægra eða vinstra megin frá. Fallið <span class="math">\(h\)</span> er þvi samfellt í núllpunktinum, og við höfum þá rökstutt að það er samfellt allstaðar.</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli11.html" class="btn btn-neutral float-right" title="11. Diffrun" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli09.html" class="btn btn-neutral" title="9. Meira um föll" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Efnið er sett upp í <a href="https://github.com/edbook">Edbook</a> en það kerfi samanstendur af <a href="http://sphinx-doc.org/">Sphinx</a> ásamt sérsniðnum viðbótum. <a href="https://github.com/snide/sphinx_rtd_theme">Þemað</a> kemur frá <a href="https://readthedocs.org">Read the Docs</a>.
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            LINK_SUFFIX: '.html'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+      <script type="text/javascript" src="../_static/katex_autorenderer.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<script src="../_static/jquery.scrolldepth.js"></script>
+<script>
+    jQuery.scrollDepth({
+        percentage: false,
+        userTiming: false,
+        pixelDepth: false,
+        nonInteraction: false,
+        elements: top.scrolldepth_tags
+});
+</script>
+
+<script>
+	window.addEventListener("load", function(){
+		for(var i in ggbAppletId){
+			ggbAppletId[i].inject(i);
+		}
+	});
+</script>
+
+
+
+</body>
+</html>

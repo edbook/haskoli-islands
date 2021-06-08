@@ -1,0 +1,22 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\begin{document}
+
+\begin{tikzpicture}[scale=2.5,domain=-1:1]
+   \draw
+   (0,1)
+   node (here) [coordinate] {};
+
+
+    \draw[->] (-1.1,0) -- (1.1,0) node[right] {$x$};
+    \draw[->] (0,-0.1) -- (0,1.1) node[above] {$y$};
+    \draw plot [samples=150] (\x,{sin(\x r)/\x})  node[right] {$g(x) = \frac{\sin(x)}{x}$};
+     \foreach \x/\xtext in {-1,-0.5,0.5,1}
+       \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\xtext$};
+     \foreach \y/\ytext in {0.5}
+       \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east] {$\ytext$};
+    \draw  (here) circle[radius= 0.02];
+
+\end{tikzpicture}
+\end{document}

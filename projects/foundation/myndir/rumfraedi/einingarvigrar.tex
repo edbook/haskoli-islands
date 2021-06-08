@@ -1,0 +1,21 @@
+\documentclass[tikz,border=7pt]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+% hnitakerfið
+\draw [<->] (2,4) -- (2,1) -- (5,1);
+\draw [->] (2,1) -- (0,0);
+% vigrarnir
+\draw [very thick, blue, <->] (2,2) -- (2,1) -- (3,1);
+\draw [very thick, blue, ->] (2,1) -- (1.2,0.6);
+% merkingar
+\node [above] at (2,4) {$y$};
+\node [right] at (5,1) {$x$};
+\node [left] at (0,0) {$z$};
+\node [right] at (2,2) {$\;\hat{\jmath}$};
+\node [above] at (3,1.1) {$\hat{\imath}$};
+\node [above left] at (1.2,0.6) {$\hat{k}$};
+
+\end{tikzpicture}
+\end{document}

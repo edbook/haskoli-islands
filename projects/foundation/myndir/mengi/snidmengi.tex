@@ -1,0 +1,39 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\begin{document}
+
+\definecolor{mycolor}{RGB}{30,51,76}
+\definecolor{hi}{RGB}{66, 134, 244}
+
+
+\begin{tikzpicture}
+\draw (0,0) [fill=white, thick] rectangle (7.5,5);
+\draw[fill=mycolor, opacity=0.2] (4.8,2.5) circle [radius = 1.3]; %B
+\draw[fill=hi, opacity=0.3]  (3.2,2.5) circle [radius = 1.3]; %A
+\node (c) at (2.4 ,2.6) {\large A};
+\node (c) at (5.5 ,2.6) {\large B};
+\node (c) at (4, 0.6) {\large $ A \cup B$};
+\node (c) at (4, 4) {\large $ A \cap B$};
+\node (c) at (1.7,4) {\large $A \textbackslash B $};
+\draw [->] (4, 3.8) -- (4,3);
+\draw [->] (1.6,3.8) to [out=270, in =130] (2,3.1);
+
+%\draw (4,3.5246950766) {\bullet};
+
+\draw [very thick](4,3.5246950766) arc [radius = 1.3, start angle=52.020127546983, end angle = 307.979872453];
+\draw [very thick](4,3.5246950766) arc [radius = 1.3, start angle=127.979872453, end angle = 232.020127547];
+
+\draw [decorate,decoration={brace,amplitude=10pt}] (6,1.3) -- (2,1.3) node [black,midway,xshift=-0.6cm] {} ;
+
+\end{tikzpicture}
+
+
+
+\end{document}

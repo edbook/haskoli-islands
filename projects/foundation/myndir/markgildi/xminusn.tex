@@ -1,0 +1,12 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[->](-0.5, 0) -- (5.5,0) node[right]{$x$};
+  \draw[->](0, -0.5) -- (0,4.5) node[above] {$y$};
+
+  \draw[domain=0.48:5,smooth, samples = 1000,variable=\x,black] plot ({\x},{\x^(-2)});
+
+  \node (c) at (3,4) {\Large $f(x) = $ \LARGE$\frac{1}{x^n}$};
+\end{tikzpicture}
+\end{document}

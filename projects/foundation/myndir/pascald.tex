@@ -1,0 +1,17 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+\begin{tikzpicture}
+
+\node (c) at (0,0) {$1 \qquad 8\qquad 28\qquad 56\qquad 70\qquad 56\qquad 28\qquad 8\qquad 1$};
+\node (c) at (0,-1) {$1 \qquad 9\qquad 36\qquad 84\qquad 126\quad 126\qquad 84\qquad 36\qquad 9\qquad 1$};
+
+\draw[->] (0,-0.1) -- (0.45,-0.8);
+\draw[->] (1,-0.1) -- (0.45,-0.8);
+\node (c) at (0.5,-0.5) {\small$+$};
+
+\end{tikzpicture}
+\end{document}
