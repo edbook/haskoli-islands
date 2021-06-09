@@ -1,5 +1,5 @@
-![edbook](https://github.com/busla/undirbuningur_stae/workflows/edbook/badge.svg)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/busla/undirbuningur_stae?label=version)
+![edbook](https://github.com/edbook/haskoli-islands/workflows/edbook/badge.svg)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/edbook/haskoli-islands?label=version)
 
 # Instructions
 
