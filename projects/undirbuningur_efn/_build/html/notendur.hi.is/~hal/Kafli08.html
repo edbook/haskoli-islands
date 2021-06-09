@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8. Varmaefnafræði &mdash; Undirbúningur í efnafræði 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+
+
+	<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+	<script src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    
+    <script> 
+    // the buttonText string says what will be written on the 
+    // sage cell evaluation button.
+    // It can be changed here.
+    var buttonText = "Keyra"
+    </script>
+    
+	<script>sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});</script>
+
+	<script>sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});</script>
+	
+    <script>sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Undirbúningur í efnafræði 2019" href="index.html"/>
+        <link rel="next" title="9. Hraðafræði" href="Kafli09.html"/>
+        <link rel="prev" title="7. Kjörgaslögmálið" href="Kafli07.html"/>
+
+    
+    <!-- ADD YOUR GOOGLE ANALYTICS TRACKING CODE HERE-->
+    <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-29852053-2', 'auto');
+  		ga('send', 'pageview');
+
+	</script>
+
+    <script>top.scrolldepth_tags = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Undirbúningur í efnafræði
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Um námsefnið</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#markmi-namsefnisins">1.1. Markmið námsefnisins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#hva-er-efnafraei">1.2. Hvað er efnafræði?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Einingar og reikniaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#si-einingakerfi">2.1. SI-einingakerfið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#kelvin">2.1.1. Kelvin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#forskeyti-si-kerfisins">2.1.2. Forskeyti SI-kerfisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#breyta-um-formerki">2.1.3. Breyta um formerki</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#markverir-tolustafir">2.2. Markverðir tölustafir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#samlagning-og-margfoldun">2.2.1. Samlagning og margföldun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Frumefni og sameindir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#atom">3.1. Atóm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#lotukerfi">3.2. Lotukerfið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#sameindir">3.3. Sameindir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#jonaefni">3.4. Jónaefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#efnaformulur">3.5. Efnaformúlur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#mol">3.6. Mól</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#molmassi">3.6.1. Mólmassi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#molstyrkur">3.6.2. Mólstyrkur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#molalstyrkur">3.6.3. Mólalstyrkur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#efnaformulur-framhald">3.7. Efnaformúlur framhald</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Efnahvörf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#stilla-efnajofnur">4.1. Stilla efnajöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#bruni">4.1.1. Bruni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#sameinu-efnahvorf">4.2. Sameinuð efnahvörf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#takmarkandi-hvarfefni">4.3. Takmarkandi hvarfefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#oxunartolur">4.4. Oxunartölur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#greina-oxunartolu-atoms-i-sameind">4.4.1. Greina oxunartölu atóms í sameind</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Skammtafræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#rafeindaskipan">5.1. Rafeindaskipan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#hvernig-skal-finna-rafeindaskipan-frumefnis">5.1.1. Hvernig skal finna rafeindaskipan frumefnis?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#gildisrafeindir">5.2. Gildisrafeindir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#rafeindaskipan-aframhald">5.3. Rafeindaskipan áframhald</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Efnatengi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#samgild-tengi">6.1. Samgild tengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#lewis-myndir">6.1.1. Lewis myndir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli06.html#vok-myndir">6.1.1.1. Vok myndir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#nafnakerfi-fyrir-sameindir">6.1.2. Nafnakerfi fyrir sameindir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#jonatengi">6.2. Jónatengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#nafnakerfi-fyrir-jonaefni">6.2.1. Nafnakerfi fyrir jónaefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#malmtengi">6.3. Málmtengi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#millisameindakraftar">6.4. Millisameindakraftar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fasar">6.4.1. Fasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#tvipols-tvipols-kraftar">6.4.2. Tvípóls-tvípóls kraftar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#london-kraftur">6.4.3. London kraftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#vetnistengi">6.4.4. Vetnistengi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli06.html#kristalbygging-iss">6.4.4.1. Kristalbygging íss</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#arir-kraftar">6.4.5. Aðrir kraftar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli07.html">7. Kjörgaslögmálið</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#rystingur">7.1. Þrýstingur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#einingar">7.1.1. Einingar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#kjorgas">7.2. Kjörgas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hlutrystingur">7.3. Hlutþrýstingur</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Varmaefnafræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#orka">8.1. Orka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#varmaorka">8.2. Varmaorka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#efnaorka">8.3. Efnaorka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fasabreyting">8.3.1. Fasabreyting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#innri-orka">8.4. Innri orka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#astandsfall">8.4.1. Ástandsfall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vinna">8.5. Vinna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vermi">8.6. Vermi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#finna-vermisbreytingu-fyrir-efnahvarf">8.6.1. Finna vermisbreytingu fyrir efnahvarf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logmal-hess">8.6.2. Lögmál Hess</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oreia">8.7. Óreiða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#oreiubreyting-efnahvarfa">8.7.1. Óreiðubreyting efnahvarfa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gibbs-fri-orka">8.8. Gibbs frí orka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#virkjunarorka">8.9. Virkjunarorka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#efnahvati">8.9.1. Efnahvati</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli09.html">9. Hraðafræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#ahrif-styrks-hvarfefna-a-hraa">9.1. Áhrif styrks hvarfefna á hraða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#hraafasti">9.1.1. Hraðafasti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#nullta-stigs-hvarf">9.2. Núllta stigs hvarf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#fyrsta-stigs-hvarf">9.3. Fyrsta stigs hvarf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#annars-stigs-hvarf">9.4. Annars stigs hvarf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#akvara-stig-hvarfefnis">9.5. Ákvarða stig hvarfefnis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli10.html">10. Efnajafnvægi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegisfasti">10.1. Jafnvægisfasti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegi-fyrir-gos">10.2. Jafnvægi fyrir gös</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#jafnvaegi-fyrir-vokva-og-fast-efni">10.2.1. Jafnvægi fyrir vökva og fast efni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegisfasti-fyrir-sameinu-hvorf">10.3. Jafnvægisfasti fyrir sameinuð hvörf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#hvarfkvoti">10.4. Hvarfkvóti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegisreikningar">10.5. Jafnvægisreikningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#nalgun">10.5.1. Nálgun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#regla-le-chatelier">10.6. Regla Le Châtelier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#breyting-a-styrk">10.6.1. Breyting á styrk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#breyting-a-rummali-og-rysting">10.6.2. Breyting á rúmmáli og þrýsting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#breyting-a-hitastigi">10.6.3. Breyting á hitastigi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli11.html">11. Sýrur og basar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skilgreing">11.1. Skilgreing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#syrustig">11.2. Sýrustig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#rammar-syrur-og-basar">11.3. Rammar sýrur og basar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#veikar-syrur">11.4. Veikar sýrur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#samokabasar">11.5. Samokabasar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#tvieli-vatns">11.6. Tvíeðli vatns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli11.html#poh">11.6.1. pOH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#syru-og-basafastar-fyrir-samoka-por">11.7. Sýru- og basafastar fyrir samoka pör</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#boffer">11.8. Böffer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli11.html#reikna-ph-i-boffer-lausn">11.8.1. Reikna pH í böffer-lausn</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#fjolroteindasyrur">11.9. Fjölróteindasýrur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#hlutleysing">11.10. Hlutleysing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="formulublad.html">12. Formúlublað</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Undirbúningur í efnafræði</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>8. Varmaefnafræði</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli08.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="varmaefnafraei">
+<h1>8. Varmaefnafræði<a class="headerlink" href="#varmaefnafraei" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<div class="section" id="orka">
+<h2>8.1. Orka<a class="headerlink" href="#orka" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p><em>Orka</em> (e. energy) er almennt skilgreind sem geta til að framkvæma vinnu eða mynda <em>varma</em> (e. heat). <span class="math notranslate nohighlight">\(\require{mhchem}\)</span> <span class="math notranslate nohighlight">\(\require{cancel}\)</span></p>
+<p>Orka getur tekið á sig mörg form, s.s. <em>hreyfiorku</em> (e. kinetic energy), <em>varmaorku</em> (e. thermal energy), <em>stöðuorku</em> (e. potential energy) sem og <em>efnaorku</em> (e. chemical energy). Þessi form af orku tengjast með <em>fyrsta lögmáli varmafræðinnar</em> (e. First Law of Thermodynamics) sem segir til um að ekki sé hægt að búa
+til, né eyða orku. Einungis er hægt að breyta um form á henni. SI-einingin fyrir orku er <em>Joule</em>, táknað <span class="math notranslate nohighlight">\(\text{J}\)</span></p>
+<p>Til þess að ræða eiginleika orku er gagnlegt að skilgreina <em>kerfi</em> (e. system) og <em>umhverfi</em> (e. surroundings)</p>
+<dl class="docutils">
+<dt>Kerfi</dt>
+<dd>Kerfið er viðfangsefnið sem verið er að skoða. Þetta gæti t.d. verið kaffibolli ef verið væri að fylgjast með hitanum í honum.
+Kerfi er því í raun einfaldlega það sem er skilgreint sem kerfi.</dd>
+<dt>Umhverfi</dt>
+<dd>Umhverfi umlykur kerfið. Tæknilega séð myndi það þýða allur alheimurinn að frádregnu kerfinu sem var skilgreint.</dd>
+</dl>
+<p>Kerfi kallast <em>opið</em> þegar efni og orka get flætt á milli kerfis og umhverfis. Kerfi kallast <em>lokað</em> þegar einungis orka getur flætt á milli, en ekki efni.
+Að lokum kallast kerfi <em>einangrað</em> ef hvorki efni né orka getur flætt til eða frá umhverfi.</p>
+</div>
+<div class="section" id="varmaorka">
+<h2>8.2. Varmaorka<a class="headerlink" href="#varmaorka" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Þegar hlutir eru sagðir hitna eru í raun atóm og sameindir að hreyfast meira. Varmaorka hluta má því líta á sem hreyfiorka eindanna.</p>
+<p>Hitastig er því í raun ekkert annað en mælikvarði á hve hratt eindir hreyfast.</p>
+<p>Varmi er orka sem flyst til eða frá kerfis, en þessi flutningur er knúinn af <em>hitamismun</em>. Varmi flæðir <em>alltaf</em> frá heitari aðstæðum til þeirra kaldari.</p>
+<p>Því meiri varmi sem berst í kerfi, því meira hitnar það. Þetta gerist í ákveðnu hlutfalli en þetta hlutfall er kallað <em>varmarýmd</em> (e. heat capacity) og er breytilegt fyrir hvert og eitt kerfi.</p>
+<p>Varmarýmd getur tekið mismunandi gildi og fer það eftir þáttum svo sem:</p>
+<ul class="simple">
+<li>Hvaða efni er í kerfinu</li>
+<li>Hve mikið af efni er í kerfinu</li>
+</ul>
+<p>Til að samræma þessi gildi er skilgreindur <em>eðlisvarmi</em> (e. specific heat). Hann er skilgreindur fyrir hvert og eitt efni, í stað kerfis. Eðlisvarmi er þá orkan sem þarf til að hita eitt gramm af efni um eina gráðu celsius eða kelvin.
+Eðlisvarmi hefur því eininguna</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{J \left/ \middle( g\! \cdot \!K \right)}  \quad \text{eða} \quad \mathrm{J \left/ \middle( g  \! \cdot \!  \!°C \right)}\]</div>
+<p>Þá er einnig notað <em>kaloría</em> (e. calorie) yfir eðlisvarma vatns, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[1 \, \mathrm{cal} = 4,186 \, \frac{ \mathrm{J}}{\text{g}_{\mathrm{H_2O}} \! \cdot \! \mathrm{K}}\]</div>
+<p>Til að finna varmarýmd kerfis þarf að leggja saman eðlismassa allra efna, margfaldaðan við massa af hverju efni. Jafnan sem tengir varmaorku við hitastigsbreytingu er:</p>
+<div class="math notranslate nohighlight">
+\[q= m\cdot c \cdot \Delta T\]</div>
+<p>Hér táknar <span class="math notranslate nohighlight">\(q\)</span> varmaorku, <span class="math notranslate nohighlight">\(m\)</span> massa efnis, <span class="math notranslate nohighlight">\(c\)</span> er eðlisvarmi og <span class="math notranslate nohighlight">\(\Delta T\)</span> er hitastigsbreyting. Einnig er hægt að taka eðlisvarma og massann saman og nota varmarýmd, <span class="math notranslate nohighlight">\(C\)</span>, í staðinn:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}q = C \cdot \Delta T\\.. note::\\      :math:`\Delta` er gríski bókstafurinn &quot;Delta&quot; og í efnafræði táknar hann *breytingu*. :math:`\Delta T` er því breyting á hitastigi og er reiknaður sem lokahitastig mínus upphafshitastig.\end{aligned}\end{align} \]</div>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Hvað þarf mikla varmaorku til að hita 13,4 g af vatni frá 3,0 °C til 100 °C.</strong></p>
+<p>Hér þarf að nota jöfnuna að ofan og stinga inn gildunum. Eðlisvarmi vatns er fengin úr skilgreiningu
+á kalóríu.</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+q &amp;= m\cdot c \cdot (T_f - T_i)\\
+  &amp;= 13,4 \text{g} \cdot 4,186  \, \frac{ \mathrm{J}}{\text{g} \! \cdot \! \mathrm{K}} \cdot (100°C - 3°C)\\
+  &amp;= 5400 \text{ J}\\
+  &amp;= 5,4 \text{ kJ}
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="efnaorka">
+<h2>8.3. Efnaorka<a class="headerlink" href="#efnaorka" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Efnaorka er orkan sem býr í efnatengjum sameindar en almenna reglan er:</p>
+<ul class="simple">
+<li>Orka losnar þegar efnatengi eru mynduð.</li>
+<li>Það kostar orku að rjúfa efnatengi.</li>
+</ul>
+<div class="section" id="fasabreyting">
+<h3>8.3.1. Fasabreyting<a class="headerlink" href="#fasabreyting" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Efni getur gert meira en hitnað, en við ákveðin hitastig skipta þau um fasa. Þetta er vel þekkt úr daglegu lífi þar sem við hefðbundinn þrýsting við sjávarmál, þ.e. 1 atm, bráðnar klaki við 0 °C og vatn sýður við 100 °C.</p>
+<p>Það sem gerist þegar klaki bráðnar er að vatnssameindirnar geta ekki hreyft sig hraðar í kristalbygginu. Til þess að geta tekið við meiri varma, rjúfa sameindirnar kristaltengin sín á milli og myndað vökva. Þegar vatn sýður aftur á móti, rjúfa sameindirnar alla millisameindakrafta, og hver sameind fer sína leið.</p>
+<p>Þetta kostar tiltölulega mikla orku að rjúfa öll þessi tengi en það kostar 334 J/g að bræða klaka en 2265 J/g að láta vatn gufa upp. Eins og sjá má eru þessi gildi mun stærri en 4,2 J/g sem kostar að hita vatn um eina gráðu.</p>
+</div>
+</div>
+<div class="section" id="innri-orka">
+<h2>8.4. Innri orka<a class="headerlink" href="#innri-orka" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Innri orka kerfis er öll uppsöfnuð sú orka sem býr í kerfinu, s.s. varmaorka og efnaorka. Innri orkan er almennt táknuð með <span class="math notranslate nohighlight">\(U\)</span> en ekki er hægt að mæla tölulegt <em>algildi</em>  (e. absolute value) fyrir innri orku. Hinsvegar er hægt að mæla breytingu í innri orku og því er oftar talað um <span class="math notranslate nohighlight">\(\Delta U\)</span></p>
+<p>Orka var skilgreind sem hæfileiki til að framkvæma vinnu eða mynda varma, svo því er hægt að setja upp jöfnu fyrir innri orku:</p>
+<div class="math notranslate nohighlight">
+\[\Delta U = q + w\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(q\)</span> er varmi og <span class="math notranslate nohighlight">\(w\)</span> er vinna. Orka kerfisins eykst ef <span class="math notranslate nohighlight">\(\Delta U\)</span> er jákvætt, en til þess að það gerist þarf varmi að berast í kerfi eða vinna unnin á því.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/orka.png"><img alt="_images/orka.png" src="_images/orka.png" style="width: 80%;" /></a>
+</div>
+<p>Innri orka er dæmi um <em>ástandsfall</em>, en varmi og vinna eru ekki ástandsföll.</p>
+<div class="section" id="astandsfall">
+<h3>8.4.1. Ástandsfall<a class="headerlink" href="#astandsfall" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ástandsföll (e. state function) er þegar einungis lokaástand og upphafsástand skiptir máli.</p>
+<p>Ef litið er á sunnudagsgöngu frá fjöru upp á tind Esjunnar, þá getur verið sniðugt að velja vel hvaða leið skal fara. Ef það er þó verið að tala um hæð yfir sjávarmáli, þá skiptir leiðin aftur á móti engu máli. Sama hvað hlið fjallsins er valin, er heildarhækkunin 914 metrar. Hæð yfir sjávarmáli er einmitt ástandsfall.</p>
+<p>Fyrir ástandsföll, líkt og innri orku er hægt að reikna breytinguna með jöfnunni:</p>
+<div class="math notranslate nohighlight">
+\[\Delta U = U_f - U_i\]</div>
+<p>Þetta virðist algild jafna en fyrir föll sem eru ekki ástandsföll er jafnan ekki algild. Lengd ferðar er t.d. ekki ástandsfall.</p>
+<p>Ef keyrt er frá Reykjavík til Hafnarfjarðar sýnir kílómetramælirinn mismunandi tölur, eftir því hvort það var komið við á Egilsstöðum eða ekki.</p>
+</div>
+</div>
+<div class="section" id="vinna">
+<h2>8.5. Vinna<a class="headerlink" href="#vinna" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Vinna getur verið ýmis konar, en í efnafræði er einna helst talað um <em>þrýstings-rúmmáls vinnu</em> (e. pressure-volume work). Þetta er einnig kallað P-V vinna, til styttingar.</p>
+<p>Í daglegu lífi sést þessi vinna einna helst sem bruni eldsneytis í bílvélum. Þegar eldsneyti
+brennur eykst þrýstingur. Fyrir hreyfanlegan stimpil (e. piston) þá eykur hann rúmmálið svo að þrýstingurinn
+verður jafn þrýstingnum umhverfis stimplinum.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/stimpill.png"><img alt="_images/stimpill.png" src="_images/stimpill.png" style="width: 70%;" /></a>
+</div>
+<p>Jafnan fyrir P-V vinnu er þá:</p>
+<div class="math notranslate nohighlight">
+\[w= -P\Delta V\]</div>
+<p>Þar sem <span class="math notranslate nohighlight">\(P\)</span> er ytri þrýstingur bullunar, og <span class="math notranslate nohighlight">\(\Delta V\)</span> er breyting á rúmmáli. Formerkin gæti ruglað marga, en jákvæð vinna þýðir að vinna er <em>unnin</em> á kerfinu. Þegar rúmmál eykst, er kerfið að vinna vinnu á umhverfinu og vinnan því neikvæð. Til að vinna vinnu á kerfið, þarf að þjappa rúmmálinu saman.</p>
+<p>Þetta er sambærilegt og fyrir gorma, þar sem þarf að beita afli til að þjappa honum saman. Með því er verið að beita vinnu á gorminn og auka innri orku hans. Þessi innri orka losnar svo út í umhverfið þegar gorminum er sleppt og hann nær upphaflegu stöðu.</p>
+</div>
+<div class="section" id="vermi">
+<h2>8.6. Vermi<a class="headerlink" href="#vermi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Vermi (e. enthalpy) er ástandsfall sem er hvað mest notað í varmaefnafræði.</p>
+<p>Ef litið er aftur á jöfnuna fyrir innri orku, en vinnan einskorðuð við P-V vinnu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta U&amp;=q+w\\
+ \Rightarrow \Delta U&amp;=q-P\Delta V \\
+ \Rightarrow \quad \, q&amp;= \Delta U+P \Delta V\\
+ \end{aligned}\end{split}\]</div>
+<p>Þessi varmi, <span class="math notranslate nohighlight">\(q\)</span> er kallaður vermi, og táknaður með <span class="math notranslate nohighlight">\(\Delta H\)</span> til aðgreiningar. Þetta er varminn sem losnar við efnahvarf. Vermi skiptist í tvennt:</p>
+<dl class="docutils">
+<dt><span class="math notranslate nohighlight">\(\Delta H&lt;0\)</span></dt>
+<dd>Þegar vermisbreytingin er neikvæð, gefur efnahvarfið frá sér orku og kallast <em>útvermið</em> (e. exothermic). Útvermin efnahvörf hita umhverfi sitt. Þess vegna halda margir að orka sé að aukast,
+en umhverfið hitnar á <em>kostnað</em> kerfisins. Orka kerfisins er því að lækka og vermið er neikvætt.</dd>
+<dt><span class="math notranslate nohighlight">\(\Delta H&gt;0\)</span></dt>
+<dd>Þegar vermisbreytingin er jákvæð, tekur efnahvarfið til sín orku og kallast <em>innvermið</em> (e. endothermic)</dd>
+</dl>
+<p>Sambærilegt og fyrir innri orku er ekki hægt að mæla algildi, heldur er notað <span class="math notranslate nohighlight">\(\Delta H\)</span>.
+Hægt er að finna töflugildi fyrir efni, þar sem stöðugasta form efnisins er skilgreint sem núllpunktur.
+Dæmi um það er t.d. <span class="math notranslate nohighlight">\(\ce{H2}\)</span> og <span class="math notranslate nohighlight">\(\ce{N2}\)</span>. Þessar töflur má finna í mörgum kennslubókum, sem og á netinu, s.s. <a class="reference external" href="https://www.chem.wisc.edu/deptfiles/genchem/netorial/modules/thermodynamics/table.htm">hér</a></p>
+<p>Í töflum er almennt tekið fram <span class="math notranslate nohighlight">\(\Delta H_f°\)</span> en <span class="math notranslate nohighlight">\(°\)</span> stendur fyrir staðalaðstæður, þ.e. 25°C og 1 atm þrýsting. <span class="math notranslate nohighlight">\(_f\)</span> stendur fyrir <em>formation</em>, eða <em>myndun</em>. <span class="math notranslate nohighlight">\(\Delta H_f°\)</span> er því kallað <em>staðalmyndunarvermi</em> (e. standard heat of formation)</p>
+<div class="section" id="finna-vermisbreytingu-fyrir-efnahvarf">
+<h3>8.6.1. Finna vermisbreytingu fyrir efnahvarf<a class="headerlink" href="#finna-vermisbreytingu-fyrir-efnahvarf" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Jafnan til að finna vermisbreytingu fyrir efnahvarf er:</p>
+<div class="math notranslate nohighlight">
+\[\Delta H°=\sum n_p \Delta H_f°(\text{myndefni})-\sum n_r \Delta H_f°(\text{hvarfefni})\]</div>
+<p>Þetta er ekki mjög ítarleg jafna en ef litið er á efnahvarfið:</p>
+<div class="math notranslate nohighlight">
+\[\ce{aA + bB -&gt; cC + dD}\]</div>
+<p>Fyrir þetta efnahvarf er vermisbreytingin:</p>
+<div class="math notranslate nohighlight">
+\[\Delta H°=\Big( \ce{c} \Delta H_f° ( \ce{C} ) + \ce{d} \Delta H_f°( \ce{D} )  \Big) - \Big( \ce{a} \Delta H_f°( \ce{A} ) + \ce{b} \Delta H_f°( \ce{B} ) \Big)\]</div>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Með því að nota gögnin frá</strong> <a class="reference external" href="https://www.chem.wisc.edu/deptfiles/genchem/netorial/modules/thermodynamics/table.htm">þessari</a> <strong>síðu, hver er varminn sem myndast við bruna metans við 25°C:</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{CH4(g) + 2O2(g) -&gt; CO2(g) + 2H2O(g)}\]</div>
+<p>Byrjum á að setja upp jöfnuna:</p>
+<div class="math notranslate nohighlight">
+\[\Delta H° = \Delta H_f° ( \ce{CO2(g)})  + 2 \Delta H_f°(\ce{H2O(g)}) - \Big( \Delta H_f° ( \ce{CH4(g)})   +2\Delta H_f° ( \ce{O2(g)}) \Big)\]</div>
+<p>Nú er hægt að leita upp gildum fyrir þessar tölur, en eins og sjá má fæst <span class="math notranslate nohighlight">\(\Delta H°(\ce{O2})=0\)</span> þar sem <span class="math notranslate nohighlight">\(\ce{O2}\)</span> er stöðugasta form súrefnis. Þá fæst:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta H° &amp;= -393.51 \text{ kJ/mól} -2 \cdot 241.82 \text{kJ/mól} - \Big(-74.81 \text{ kJ/mól} + 0 \text{ kJ/mól})\\
+          &amp;= -802,34 \text{ kJ/mól}
+\end{aligned}\end{split}\]</div>
+<p class="last">Fyrir hvert mól af metani sem er brennt, losnar því 802,34 kJ af varma út í umhverfið. Hafa ber þó í huga að þessar tölur eru einungis fyrir 25°C, en ólíklegt er að það hitastig
+haldi sér í bruna.</p>
+</div>
+<p>Þessir reikningar eru gerðir mögulegir af <em>Lögmáli Hess</em></p>
+</div>
+<div class="section" id="logmal-hess">
+<h3>8.6.2. Lögmál Hess<a class="headerlink" href="#logmal-hess" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lögmál Hess segir til um að ekki skipti máli fyrir vermisbreytingu, hvort að hvarfið er gert í mörgum skrefum eða ekki. Þetta er vegna þess að vermi er ástandsfall, og bara upphafs- og lokagildi skipta máli.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/hess.svg"><img alt="_images/hess.svg" src="_images/hess.svg" width="60%" /></a>
+</div>
+<p>Þar sem ekki skiptir máli hvora leið er farið að ofan, er hægt að setja fram jöfnuna:</p>
+<div class="math notranslate nohighlight">
+\[\Delta H_1 + \Delta H_2 + \Delta H_3 + \dots = \Delta H\]</div>
+<p>Í viðbót við lögmál Hess, er gagnlegt að hafa tvær eftirfarandi reglur í huga:</p>
+<dl class="docutils">
+<dt>Vermisbreyting er í línulegu sambandi við fjölda móla.</dt>
+<dd><p class="first">Þetta þýðir að ef margfaldað er fjöldann af mólum, margfaldast vermisbreytingin með sömu tölu.</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ce{2N2 + O2 &amp;-&gt; 2N2O}   &amp;    \Delta H°=66,36 \text{ kJ/mól}\\
+\ce{N2 + \frac12 O2 &amp;-&gt; N2O}   &amp;    \Delta H°=33,18 \text{ kJ/mól}
+\end{aligned}\end{split}\]</div>
+</dd>
+<dt>Vermisbreyting fær öfugt formerki ef hvarfið snýst við.</dt>
+<dd><div class="first last math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ce{2N2O &amp;-&gt; 2N2 + O2}   &amp;    \Delta H°=-66,36 \text{ kJ/mól}\\
+\end{aligned}\end{split}\]</div>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Hvert er</strong> <span class="math notranslate nohighlight">\(\Delta H\)</span> <strong>fyrir myndun metans úr kolmónoxíð?</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{CO(g) + 3H2(g) -&gt; CH4(g) + H2O(g)}\]</div>
+<p><strong>Gefið er</strong> <span class="math notranslate nohighlight">\(\Delta H\)</span> <strong>fyrir eftirfarandi hvörf:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}    \begin{aligned}
+\ce{2C(s,graphite) + O2(g) &amp;-&gt; 2CO(g)}  &amp;  \Delta H_1&amp;=-221,05 \text{ kJ/mól} \\
+\ce{C(s,graphite) + 2H2(g) &amp;-&gt; CH4(g)}  &amp;  \Delta H_2&amp;=-74.81 \text{ kJ/mól}\\
+\ce{2H2(g) + O2(g) &amp;-&gt; 2H2O(g)}  &amp;  \Delta H_3&amp;= -483,64\text{ kJ/mól}\\
+ \end{aligned}\end{split}\]</div>
+<p>Til þess að mynda efnahvarfið, þarf að raða upp þessum hvörfum svo þau myndi upphaflega hvarfið. Til þess að gera það þarf að margfalda og snúa við hvörfunum svo að kolmónoxíð, vatn og metan sé í réttum hlutföllum og réttum megin við örina:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\ce{ CO(g) &amp;-&gt;\bcancel{C(graphite)} + \bcancel{\frac 12 O2(g)} }  &amp;  -\frac 12 &amp;\Delta H_1 \\
+\ce{\bcancel{C(graphite)} + 2H2(g) &amp;-&gt; CH4(g)}  &amp;  &amp;\Delta H_2\\
+\ce{H2(g) + \bcancel{\frac 12 O2(g)} &amp;-&gt; H2O(g)}  &amp;  \frac 12&amp;\Delta H_3\\
+\hline
+\ce{CO(g) + 3H2(g) &amp;-&gt; CH4(g) + H2O(g)}&amp; \mkern-36mu -\frac 12 \Delta H_1 + \Delta H_2 + \frac 12&amp;\Delta H_3
+\end{aligned}\end{split}\]</div>
+<p>Þá er vermisbreytining fyrir hvarfið:</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta H &amp;= -\frac 12 \Delta H_1 + \Delta H_2 + \frac 12\Delta H_3\\
+         &amp;= -\frac 12(-221,05 \text{ kJ/mól}) + (-74.81 \text{ kJ/mól}) + \frac 12(-483,64\text{ kJ/mól})\\
+         &amp;= -427,16 \text {kJ/mól}
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="oreia">
+<h2>8.7. Óreiða<a class="headerlink" href="#oreia" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Óreiða (e. entropy) er mælikvarði á sjálfgengni. Sumir hlutir gerast aðeins í aðra áttina, líkt og þegar sullast úr mjólkufernu.
+Þó beðið væri til eilífðarnóns, er stjarnfræðilega ólíklegt að mjólkin safnist aftur í fernuna að sjálfu sér. Heitur kaffibolli kólnar, en hitnar aldrei að sjálfu sér.
+Þetta er afleiðing annars lögmál varmafræðinnar:</p>
+<dl class="docutils">
+<dt>Annað lögmál varmafræðinnar</dt>
+<dd>Heildaróreiða alheimsins getur einungis aukist, en ekki minnkað.</dd>
+</dl>
+<p>Óreiða er skilgreind út frá fjölda míkróástanda (e. microstate). Ef opnað er fyrir súrefniskút, lekur súrefnið út, þangað til að þrýstingurinn er jafn í kútnum og í andrúmsloftinu.
+Ef ein kúla á myndinni táknar eina sameind, má sjá að flest míkróástönd fæst þegar jafn margar sameindir eru utan og innan kútsins. Þess vegna leitast þrýstingur við að jafnast út.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/astond2.png"><img alt="_images/astond2.png" src="_images/astond2.png" style="width: 100%;" /></a>
+</div>
+<p>Óreiða er táknuð með <span class="math notranslate nohighlight">\(S\)</span> og míkróástönd með <span class="math notranslate nohighlight">\(\Omega\)</span>. Þessi hugtök tengjast svo með jöfnunni:</p>
+<div class="math notranslate nohighlight">
+\[S=k_B\text{ln}(\Omega)\]</div>
+<p>Þar sem <span class="math notranslate nohighlight">\(k_B\)</span> er Boltzmann fastinn, þ.e. <span class="math notranslate nohighlight">\(k_B = 1,38\times 10^{-23} \text{ J/K}\)</span>.</p>
+<p>Líkt og innri orka og vermi, er óreiða ástandsfall. Þá gildir:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S= S_f-S_i\]</div>
+<p>Óreiða frumefna og efnasambanda stefnir á núll við alkul, en það er einmitt <em>þriðja lögmál varmafræðinnar</em>.</p>
+<p>Óreiðan eykst með auknum hita, þrýstingi og rúmmáli, en einnig með fösum</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/fasar.png"><img alt="_images/fasar.png" src="_images/fasar.png" style="width: 70%;" /></a>
+</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/fasar2.svg"><img alt="_images/fasar2.svg" src="_images/fasar2.svg" width="40%" /></a>
+</div>
+<div class="section" id="oreiubreyting-efnahvarfa">
+<h3>8.7.1. Óreiðubreyting efnahvarfa<a class="headerlink" href="#oreiubreyting-efnahvarfa" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Aukin óreiða er drifkafturinn sem efnahvarf þarfnast til að gerast að sjálfu sér. Til þess að efnahvarf sé sjálfgengt þarf óreiða alheimsins að aukast, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[\Delta S_{\text{alheimur}} =\Delta S_{\text{kerfi}} + \Delta S_{\text{umhverfi}} &gt; 0\]</div>
+<p>Hægt er að reikna óreiðubreytingu kerfisins við efnahvarf sambærilegt og fyrir vermi:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S°=\sum n_p S°(\text{myndefni})-\sum n_r S°(\text{hvarfefni})\]</div>
+<p>Til að finna óreiðubreytinguna fyrir umhverfið, er ekki nóg að fletta upp í töflu, heldur þarf einnig hitastig umhverfisins.
+Fyrir jafnan þrýsting er jafnan fyrir það:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S_{\text{umhverfi}} = \frac {\Delta H}T\]</div>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Hver er óreiðubreyting við staðalaðstæður fyrir niðurbrot vetnisperoxíðs</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{2H2O2(l) -&gt; O2(g) + 2H2O(l)}\]</div>
+<p>Með því að nota sömu <a class="reference external" href="https://www.chem.wisc.edu/deptfiles/genchem/netorial/modules/thermodynamics/table.htm">síðu</a> og áður og fletta upp gildunum, fæst:</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta S° &amp;= S°(\ce{O2(g)})+ 2S°(\ce{H2O(l)})- 2S°(\ce{H2O2(l)})\\
+          &amp;= 205,138 \text{ J}/(\text{K}\!\cdot\! \text{mól})+ 2\cdot 69,91 \text{ J}/(\text{K}\!\cdot\! \text{mól}) -2\cdot 109,6 \text{ J}/(\text{K}\!\cdot\! \text{mól})\\
+          &amp;=125,8 \text{ J}/(\text{K}\!\cdot\! \text{mól})
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="gibbs-fri-orka">
+<h2>8.8. Gibbs frí orka<a class="headerlink" href="#gibbs-fri-orka" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Í staðinn fyrir að reikna óreiðuna fyrir bæði kerfið og umhverfið, er það tekið saman í <em>Gibbs fría orku</em> (e. Gibbs free energy). Þetta er einnig ástandsfall og er táknað með <span class="math notranslate nohighlight">\(G\)</span>, en jafnan fyrir gibbs fríu orku er:</p>
+<div class="math notranslate nohighlight">
+\[\Delta G = \Delta H-T\Delta S\]</div>
+<p>Hérna er <span class="math notranslate nohighlight">\(T\)</span> hitastigið í kelvin. Hagnaðurinn við að skilgreina þessa Gibbs fríu orku er að það er einfalt að áætla sjálfgengni:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{cc}
+\Delta G &lt; 0  &amp; \text{Sjálfgengt ferli}\\
+\Delta G = 0  &amp; \text{Ferli er við jafnvægi}\\
+\Delta G &gt; 0  &amp; \text{Ósjálfgengt ferli}\\
+\end{array}\end{split}\]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/gibbs.png"><img alt="_images/gibbs.png" src="_images/gibbs.png" style="width: 40%;" /></a>
+</div>
+<p>Þessi jafna er háð hitastigi og hvarf getur verið sjálfgengt einungis fyrir nógu há hitastig. Þetta er hægt að flokka í eftirfarandi tilfelli:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{cc|l}
+\Delta H  &amp; \Delta S &amp; \text{Sjálfgengni}\\
+\hline
++  &amp;  - &amp; \text{Nei}\\
++  &amp;  + &amp; \text{Við hátt hitastig}\\
+-  &amp;  - &amp; \text{Ekki við hátt hitastig} \\
+-  &amp;  + &amp; \text{Já}
+\end{array}\end{split}\]</div>
+<p>Einnig er hægt að finna töflugildin fyrir <span class="math notranslate nohighlight">\(\Delta G_f°\)</span> og reikna fyrir efnahvarf, samsvarandi og áður:</p>
+<div class="math notranslate nohighlight">
+\[\Delta G°=\sum n_p G_f°(\text{myndefni})-\sum n_r G_f°(\text{hvarfefni})\]</div>
+<p>Samsvarandi og fyrir vermi er <span class="math notranslate nohighlight">\(\Delta G_f°=0\)</span> fyrir stöðugasta form efnisins.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Hvert er</strong> <span class="math notranslate nohighlight">\(\Delta G_f°\)</span> <strong>fyrir bruna própansgas?</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{C3H8(g) + 5O2(g) -&gt; 3CO2(g) + 4H2O(g)}\]</div>
+<p>Með því að nota enn á ný gögn <a class="reference external" href="https://www.chem.wisc.edu/deptfiles/genchem/netorial/modules/thermodynamics/table.htm">héðan</a>, eru tvær aðferðir sem hægt er að nota. Byrjum á þeirri einfaldari.
+Það fæst með því að reikna með jöfnunni:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta G° &amp;= \sum n_p G_f°(\text{myndefni})-\sum n_r G_f°(\text{hvarfefni})\\
+          &amp;= 3(\Delta G_f°(\ce{CO2}))+4\Delta G_f°(\ce{H2O}) - \Big(\Delta G_f°(\ce{C3H8}) + 5\cancelto{0}{\Delta G_f°(\ce{O2})} \Big)\\
+          &amp;= 3(-394,36 \text{ kJ/mól})+ 4(-228,57\text{ kJ/mól}) - (-23,49\text{ kJ/mól})\\
+          &amp;= -2074 \text{ kJ/mól}
+\end{aligned}\end{split}\]</div>
+<p>Hin aðferðin hefði verið að reikna <span class="math notranslate nohighlight">\(\Delta H_f°\)</span> og  <span class="math notranslate nohighlight">\(\Delta S°\)</span> fyrst. Það hefði gefið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \Delta H_f°&amp;=-2044 \text{ kJ/mól}\\
+ \Delta S°&amp;=100,9 \text{ J}/(\text{K}\!\cdot \! \text{mól})
+   \end{aligned}\end{split}\]</div>
+<p>Hér þarf að passa að einingarnar eru ekki þær sömu (<span class="math notranslate nohighlight">\(\text{kJ}\)</span> og <span class="math notranslate nohighlight">\(\text{J}\)</span>). Fyrir staðalaðstæður, er þá hægt að reikna:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{aligned}
+\Delta G° &amp;= -2044 \text{ kJ/mól} - 298,15 \text{ K}\cdot 100,9 \text{ J}/(\text{K}\!\cdot \! \text{mól})\cdot \frac{1 \text{ kJ}}{1000 \text{ J}}\\
+          &amp;=-2074 \text{ kJ/mól}
+\end{aligned}\end{split}\]</div>
+<p class="last">Eins og sjá má, þá er vermið mun áhrifameira við lág hitastig. Þetta hvarf er <em>sjálfgengt</em>.</p>
+</div>
+</div>
+<div class="section" id="virkjunarorka">
+<h2>8.9. Virkjunarorka<a class="headerlink" href="#virkjunarorka" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Bruni própansgas er sjálfgengur, og hvarfið gengur hjálparlaust. Þrátt fyrir það, er hægt að blanda própangasi við súrefni í herbergi, án þess að kvikni í því.
+Það er vegna þess að öll hvörf hafa <em>virkjunarorku</em> (e. activation energy). Efnin þurfa utanaðkomandi orku til að geta byrjað hvarfið. Þess vegna er ekki nóg að skrúfa frá gaskútnum á grillinu,
+heldur þarf einnig að kveikja í því. Eldurinn af eldspýtu er fullfær um að veita efninu þessa orku sem þarf. Eftir að kveikt er í gasinu, brennur það svo sjálkrafa, þangað til annað efnið klárast.</p>
+<p>Þetta má sjá hér á grafi, þar sem virkjunarorkan er táknuð með <span class="math notranslate nohighlight">\(E_A\)</span>:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/virkjunarorka.png"><img alt="_images/virkjunarorka.png" src="_images/virkjunarorka.png" style="width: 60%;" /></a>
+</div>
+<p>Líkt og skíðamaður stefnir hvarfið niður brekkuna. Til þess að gera það, verður það þó að klífa þennan hól.</p>
+<div class="section" id="efnahvati">
+<h3>8.9.1. Efnahvati<a class="headerlink" href="#efnahvati" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Virkjunarorka ræður miklu þegar kemur að hraða efnahvarfs. Fyrir efnaverksmiðju, er hentugast að hvarf gerist sem hraðast.
+Til þess er notað <em>efnahvati</em> (e. catalyst). Efnahvati hraðar hvarfinu, með því að lækka magn virkjunarorku sem þarf. Þ.e. efnahvati <em>lækkar virkjunarhólinn</em>.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/virkjunar2.png"><img alt="_images/virkjunar2.png" src="_images/virkjunar2.png" style="width: 60%;" /></a>
+</div>
+<p>Efnahvatar breyta þannig virkjunarorku  og hraða hvarfs, en breyta ekki <span class="math notranslate nohighlight">\(\Delta H\)</span>, <span class="math notranslate nohighlight">\(\Delta G\)</span> eða <span class="math notranslate nohighlight">\(\Delta S\)</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli09.html" class="btn btn-neutral float-right" title="9. Hraðafræði" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli07.html" class="btn btn-neutral" title="7. Kjörgaslögmálið" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<script src="_static/jquery.scrolldepth.js"></script>
+<script>
+    jQuery.scrollDepth({
+        percentage: false,
+        userTiming: false,
+        pixelDepth: false,
+        nonInteraction: false,
+        elements: top.scrolldepth_tags
+}); 
+</script>
+
+
+
+</body>
+</html>

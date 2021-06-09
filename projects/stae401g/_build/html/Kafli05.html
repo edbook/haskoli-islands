@@ -1,0 +1,1279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Mismunaaðferðir &mdash; Stærðfræðigreining IV 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining IV 2019" href="index.html"/>
+        <link rel="next" title="6. Bútaaðferðir" href="Kafli06.html"/>
+        <link rel="prev" title="4. Fourier-ummyndun" href="Kafli04.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining IV
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="umnamskeidid.html">Gagnlegar upplýsingar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsefni">Námsefnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#fyrirlestrar">Fyrirlestrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#daematimar-og-vinnustofur">Dæmatímar og vinnustofur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#skiladaemi">Skiladæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsmat">Námsmat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#tolvunotkun">Tölvunotkun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#a-taka-namskeii-i-anna-sinn">Að taka námskeiðið í annað sinn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#vitalstimar-kennara-og-fyrirspurnir">Viðtalstímar kennara og fyrirspurnir</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Hlutafleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-fjolvisir">1.1.1. Ritháttur - Fjölvísir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-laplace-virki">1.1.2. Ritháttur - Laplace-virki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-stig-hlutafleiu-og-hlutafleiujofnu">1.1.3. Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#linulegar-hlutafleiujofnur">1.1.4. Línulegar hlutafleiðujöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#daemi-um-hlutafleiujofnur-i-elisfraei">1.2. Dæmi um hlutafleiðujöfnur í eðlisfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#varmaleinijafnan">1.2.1. Varmaleiðnijafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#bylgjujafnan">1.2.2. Bylgjujafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi-sveifla-a-einvium-streng">1.2.3. Dæmi - Sveifla á einvíðum streng</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#hliarskilyri-vel-framsett-verkefni">1.3. Hliðarskilyrði. Vel framsett verkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#upphafsskilyri">1.3.1. Upphafsskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#jaarskilyri">1.3.2. Jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#vel-framsett-verkefni">1.3.3. Vel framsett verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#fyrsta-stigs-jofnur">1.4. Fyrsta stigs jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#kennilinuaferin">1.4.1. Kennilínuaðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#setning">1.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining">1.4.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id2">1.4.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reikniafer">1.4.6. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#urlausn-me-laplace-ummyndun">1.4.7. Úrlausn með Laplace-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi">1.4.8. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Fourier-raðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#inngangur">2.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#skilgreining">2.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#id1">2.2. Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id2">2.2.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id3">2.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-reiknireglur">2.2.3. Setning - Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id4">2.2.4. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#samleitni-fourier-raa">2.3. Samleitni Fourier-raða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#reiknireglur-um-innfeldi">2.3.1. Reiknireglur um innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#cauchy-schwarz-ojafna">2.3.2. Cauchy-Schwarz ójafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#regla-pyagorasar">2.3.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#bessel-ojafnan">2.3.4. Bessel-ójafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id5">2.3.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning">2.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-andhverfuformula-fouriers">2.3.7. Setning - Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-parseval-jafnan">2.3.8. Setning - Parseval-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#urlausn-a-hlutafleiujofnum">2.4. Úrlausn á hlutafleiðujöfnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#jafnstae-framlenging-og-kosinus-ro">2.4.1. Jafnstæð framlenging og kósínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#oddstae-framlenging-og-sinus-ro">2.4.2. Oddstæð framlenging og sínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id6">2.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi">2.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-sveiflandi-strengur">2.4.5. Dæmi - Sveiflandi strengur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-varmaleini">2.4.6. Dæmi - Varmaleiðni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#id1">3.1. Eigingildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi">3.1.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-baum-endapunktum">3.1.2. Fallsjaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#afleiuskilyri-i-baum-endapunktum">3.1.3. Afleiðuskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum">3.1.4. Fallsjaðarskilyrði í öðrum endapunkti og afleiðuskilyrði í hinum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#askilnaur-breytistaera">3.2. Aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sveiflandi-strengur-aftur">3.2.1. Sveiflandi strengur - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#anna-daemi">3.2.2. Annað dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#virkjar-af-sturm-liouville-ger">3.3. Virkjar af Sturm-Liouville-gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining">3.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id2">3.3.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id3">3.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id4">3.3.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#formula-greens">3.3.5. Formúla Greens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-og-skilgreining">3.3.6. Setning og skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eigingildisverkefni-af-sturmliouvilleger">3.4. Eigingildisverkefni af Sturm–Liouville–gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id5">3.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning">3.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id6">3.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id7">3.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id8">3.4.5. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#green-foll-fyrir-jaargildisverkefni">3.5. Green-föll fyrir jaðargildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id9">3.5.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id10">3.5.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eiginfallaliun-og-greenfoll">3.6. Eiginfallaliðun og Green–föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#reikniafer">3.6.1. Reikniaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#urlausn-hlutafleiujafa-me-eiginfallaroum">3.7. Úrlausn hlutafleiðujafa með eiginfallaröðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi">3.7.1. Dirichlet-verkefnið á rétthyrningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu">3.7.2. Dirichlet-verkefnið á skífu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#varmaleinijafnan-me-timahaum-jaarskilyrum">3.7.3. Varmaleiðnijafnan með tímaháðum jaðarskilyrðum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#afram-um-eigingildisverkefni-askilnaur-breytistaera">3.8. Áfram um eigingildisverkefni - aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi-aftur">3.8.1. Dirichlet-verkefnið á rétthyrningi - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu-aftur">3.8.2. Dirichlet-verkefnið á skífu - aftur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#tvofaldar-fourier-rair">3.9. Tvöfaldar Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-retthyrnd-tromma">3.9.1. Dæmi - Rétthyrnd tromma</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#almennt-um-eiginfallarair">3.10. Almennt um eiginfallaraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-alhaeft-varmaleiniverkefni">3.10.1. Dæmi - Alhæft varmaleiðniverkefni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Fourier-ummyndun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-reiknireglur-plancerel-jafnan">4.1. Fourier-ummyndun. Reiknireglur. Plancerel-jafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-l-1-mathbb-r">4.1.1. Skilgreining á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-fourier-ummyndun">4.1.2. Skilgreining á Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#synidaemi">4.1.3. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#reiknireglur">4.1.4. Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#rulesft">4.1.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#eiginleikar-fourier-myndar">4.1.6. Eiginleikar Fourier-myndar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#plancerel-jafnan">4.1.7. Plancerel-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers-afleiujofnur">4.2. Andhverfuformúla Fouriers. Afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers">4.2.1. Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#foldun-og-fourier-ummyndun">4.2.2. Földun og Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#afleiujofnur-og-fourier-ummyndun">4.2.3. Afleiðujöfnur og Fourier-ummyndun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#urlausn-a-hlutafleiujofnum-me-fourier-ummyndun">4.3. Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#einvia-bylgjujafnan-og-d-alembert-formula">4.3.1. Einvíða bylgjujafnan og d’Alembert-formúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#bylgjujafnan-fourier-ummyndun-og-foldun">4.3.2. Bylgjujafnan, Fourier-ummyndun og földun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#varmaleinijafnan-fourier-ummyndun-og-foldun">4.3.3. Varmaleiðnijafnan, Fourier-ummyndun og földun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-og-leifareikningur">4.4. Fourier-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fourier-myndir-reiknaar-me-leifareikningi">4.4.1. Fourier-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-fourier-myndir-reiknaar-me-leifareikningi">4.4.2. Andhverfar Fourier-myndir reiknaðar með leifareikningi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#laplace-ummyndun-og-leifareikningur">4.5. Laplace-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir">4.5.1. Andhverfar Laplace-myndir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-reiknaar-me-leifareikningi">4.5.2. Andhverfar Laplace-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-og-afleiujofnur">4.5.3. Andhverfar Laplace-myndir og afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id4">4.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Mismunaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mismunaafer-fyrir-venjulegar-afleiujofnur">5.1. Mismunaaðferð fyrir venjulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synidaemi">5.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heildun-yfir-hlutbil">5.2. Heildun yfir hlutbil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">5.2.1. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linuleg-bruun-og-ufugrunnfoll">5.2.2. Línuleg brúun og þúfugrunnföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mismunaafer-fyrir-hlutaafleiujofnur">5.3. Mismunaaðferð fyrir hlutaafleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nalgunarjafna">5.3.1. Nálgunarjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synidaemi-dirichlet-verkefni-a-ferningi">5.3.2. Sýnidæmi: Dirichlet-verkefni á ferningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri">5.3.3. Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#almenn-mismunaafer-a-retthyrningi">5.4. Almenn mismunaaðferð á rétthyrningi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Bútaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#hlutheildun-innfeldi-og-tvilinulegt-form">6.1. Hlutheildun, innfeldi og tvílínulegt form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefni-i-mathbb-r">6.1.1. Jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefnin-i-mathbb-r-2">6.1.2. Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-fyrir-dirichlet-verkefni">6.2. Aðferð Galerkins fyrir Dirichlet-verkefnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni">6.2.1. Galerkin-aðferðir í einni vídd fyrir Dirichlet-verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni">6.2.2. Galerkin-aðferðir í tveimur víddum fyrir Dirichlet-verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-einni-vidd">6.3. Bútaaðferð í einni vídd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#blondu-jaarskilyri-i-baum-endapunktum">6.3.1. Blönduð jaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fallsjaarskilyri">6.3.2. Fallsjaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-me-almennum-jaarskilyrum">6.4. Aðferð Galerkins með almennum jaðarskilyrðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-einni-vidd">6.4.1. Í einni vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-tveimur-viddum">6.4.2. Í tveimur víddum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#synidaemi">6.4.3. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-tveimur-viddum">6.5. Bútaaðferð í tveimur víddum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#net-me-rihyrningum">6.5.1. Net með þríhyrningum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#ufugrunnfoll">6.5.2. Þúfugrunnföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#go-ahead">6.5.3. Go ahead!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id1">6.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining IV</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>5. Mismunaaðferðir</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli05.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mismunaaferir">
+<h1>5. Mismunaaðferðir<a class="headerlink" href="#mismunaaferir" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Við byrjum á að skoða praktískar og tölulegar aðferðir til þess að nálga lausnir á afleiðujöfnum og hlutafleiðujöfnum með upphafs- og jaðarskilyrðum.</p>
+<p>Fyrsta aðferðin sem við ætlum að fjalla um er <a href="http://www.stae.is/os/leita/difference_method" class="tooltip" target="_blank">mismunaaðferð<span>en: <i>difference method</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.
+Það eru ýmsar útgáfur fyrir mismunaaðferðir, en aðalatriði mismunaaðferða er að þær umbreyta afleiðujöfnum (eða hlutafleiðujöfnum) í algebrujöfnuhneppi.</p>
+<div class="section" id="mismunaafer-fyrir-venjulegar-afleiujofnur">
+<h2>5.1. Mismunaaðferð fyrir venjulegar afleiðujöfnur<a class="headerlink" href="#mismunaafer-fyrir-venjulegar-afleiujofnur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p id="ch-5-1">Við skoðum fyrst jaðargildisverkefni fyrir almenna annars stigs afleiðujöfnu á bili <span class="math notranslate nohighlight">\([a,b]\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-ode1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-ode1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+  Lu=a_2u''+a_1u'+a_0u=f,&amp; \text{ á } ]a,b[\\
+  B_1u=\alpha_1u(a)-\beta_1u'(a)=\gamma_1,&amp;(\alpha_1,\beta_1)\neq (0,0),\\
+  B_2u=\alpha_2u(b)+\beta_2u'(b)=\gamma_2,&amp;(\alpha_2,\beta_2)\neq (0,0).
+  \end{cases}\end{split}\]</div>
+<p>Við gerum ráð fyrir að raungildu föllin <span class="math notranslate nohighlight">\(a_0, a_1,a_2\)</span> séu samfelld í <span class="math notranslate nohighlight">\([a,b]\)</span> og fallið <span class="math notranslate nohighlight">\(f\)</span> sé raungilt.</p>
+<p>Við veljum skiptingu á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[a=x_0&lt;x_1&lt;x_2&lt;\cdots &lt;x_N=b.\]</div>
+<p>Til þess að einfalda reikninga getum við valið að skipta bilinu í jafna hluta, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[h:= {b-a\over N}, \qquad x_j=a+jh,  \quad j=0, \dots, N.\]</div>
+<p>Athugum að þá gildir <span class="math notranslate nohighlight">\(x_{j-1}=x_j-h\)</span> og <span class="math notranslate nohighlight">\(x_{j+1}=x_j+h\)</span>.</p>
+<p>Við finnum gildi afleiðujöfnunnar í punktunum <span class="math notranslate nohighlight">\(x_j\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\alpha_1u(x_0)-\beta_1u'(x_0)=\gamma_1,\\
+a_2(x_j)u''(x_j)+a_1(x_j)u'(x_j)+a_0(x_j)u(x_j)=f(x_j), \qquad
+j=1,\dots,N-1,\\
+\alpha_2u(x_N)+\beta_2u'(x_N)=\gamma_2.
+\end{cases}\end{split}\]</div>
+<p>Við þurfum að finna nálgun fyrir afleiður <span class="math notranslate nohighlight">\(u'(x_j),u''(x_j)\)</span>.
+Það er eðlilegt að nálga afleiður <span class="math notranslate nohighlight">\(u'(x_j),u''(x_j)\)</span> með samsvarandi mismunakvóta.</p>
+<p>Við ætlum að nota eftirfarandi nálgun</p>
+<ol class="arabic simple">
+<li>Í vinstri endapunkti <span class="math notranslate nohighlight">\(x_0=a\)</span>, notum við</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[u'(x)\approx \dfrac{u(x+h)-u(x)}h\]</div>
+<ol class="arabic simple" start="2">
+<li>Í innri punktum bilsins <span class="math notranslate nohighlight">\(x_1, \dots, x_{N-1}\)</span>, notum við</li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-approxder">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-approxder" title="Permalink to this equation">¶</a></span>\[u'(x)\approx \dfrac{u(x+h)-u(x-h)}{2h} \qquad \text{ og } \qquad
+u''(x)\approx \dfrac{u(x-h)-2u(x)+u(x+h)}{h^2},\]</div>
+<ol class="arabic simple" start="3">
+<li>Í hægri endapunkti <span class="math notranslate nohighlight">\(x_N=b\)</span>, notum við</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[u'(x)\approx \dfrac{u(x)-u(x-h)}h,\]</div>
+<p>Hugmyndin er að umrita hneppi <a class="reference internal" href="#equation-eq-ode1">(1)</a> með nálgununum að ofan og finna lausnir <span class="math notranslate nohighlight">\(u(x_j)\)</span>.</p>
+<p>Af hverjum veljum við nálgunarformúlur <a class="reference internal" href="#equation-eq-ode1">(1)</a>?
+Við metum skekkju í nálgunarformúlunum sem við höfum skrifað að ofan.
+Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(\varphi\in C^4(I)\)</span> á bili <span class="math notranslate nohighlight">\(I\)</span>, og <span class="math notranslate nohighlight">\(x, x+h, x-h\)</span> séu í <span class="math notranslate nohighlight">\(I\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\varphi(x+h)&amp;=\varphi(x)+\varphi'(x)h+\tfrac 12 \varphi''(x)h^2
++\tfrac 16 \varphi'''(x)h^3+\tfrac 1{24}\varphi^{(4)}(\xi)h^4,\\
+\varphi(x-h)&amp;=\varphi(x)-\varphi'(x)h+\tfrac 12 \varphi''(x)h^2
+-\tfrac 16 \varphi'''(x)h^3+\tfrac 1{24}\varphi^{(4)}(\eta) h^4,\end{aligned}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\xi \in (x,x+h)\)</span> og <span class="math notranslate nohighlight">\(\eta \in (x-h,x)\)</span>.</p>
+<p>Við berum saman mismunandi nálgunarformúlur fyrir fyrsta stigs afleiður:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\varphi'(x)&amp;-\dfrac{\varphi(x+h)-\varphi(x)}h
+=-\tfrac 12 \varphi''(x)h
+-\tfrac 16 \varphi'''(x)h^2-\tfrac 1{24}\varphi^{(4)}(\xi)h^3,\\
+\varphi'(x)&amp;-\dfrac{\varphi(x)-\varphi(x-h)}h
+=\tfrac 12 \varphi''(x)h
+-\tfrac 16 \varphi'''(x)h^2+\tfrac 1{24}\varphi^{(4)}(\eta)h^3,\\
+\varphi'(x)&amp;-\dfrac{\varphi(x+h)-\varphi(x-h)}{2h}
+=-\tfrac 1{12}\varphi'''(x)h^2-\tfrac 1{48}
+\big(\varphi^{(4)}(\xi)-\varphi^{(4)}(\eta)\big) h^3.
+\end{aligned}\end{split}\]</div>
+<p>Fyrir annars stigs afleiður höfum við:</p>
+<div class="math notranslate nohighlight">
+\[\varphi''(x)-\dfrac{\varphi(x-h)-2\varphi(x)+\varphi(x+h)}{h^2}
+=-\tfrac 1{24}
+\big(\varphi^{(4)}(\xi)+\varphi^{(4)}(\eta)\big) h^2.\]</div>
+<p>Við sjáum að ef við notum nálgunarformúluna <a class="reference internal" href="#equation-eq-approxder">(2)</a> þá er skekkjan af öðru stigi í <span class="math notranslate nohighlight">\(h\)</span>. Ef við notum fyrstu tvær formúlurnar, þá er skekkjan af fyrsta stigi í <span class="math notranslate nohighlight">\(h\)</span>. Það segir okkur að þegar <span class="math notranslate nohighlight">\(h \ll 1\)</span>, þá stefnir skekkjan í nálgunarformúlunni sem við viljum nota hraðar á núll, sem er auðvitað miklu betra.</p>
+<p>Til þess að einfalda rithátt skrifum við <span class="math notranslate nohighlight">\(u_j=u(x_j)\)</span>  og  <span class="math notranslate nohighlight">\(f_j=f(x_j)\)</span>.
+Ennfremur, til þess að leggja áherslu á að <span class="math notranslate nohighlight">\(u_j=u(x_j)\)</span> er óþekkt stærð sem við viljum reikna út, setjum við að lokum <span class="math notranslate nohighlight">\(c_j\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(u_j=u(x_j)\)</span>.</p>
+<p><strong>Mismunajafna í vinstri endapunkti</strong></p>
+<p>Í vinstri endapunkti <span class="math notranslate nohighlight">\(x_0=a\)</span> höfum við</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1u(x_0)-\beta_1u'(x_0)=\gamma_1.\]</div>
+<p>Við nálgum afleiðuna eins og að ofan, þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1 u_0-\beta_1\dfrac{u_1-u_0}h\approx \gamma_1,\]</div>
+<p>og að lokum notum við <span class="math notranslate nohighlight">\(c_j\)</span></p>
+<div class="math notranslate nohighlight">
+\[\alpha_1c_0-\beta_1\dfrac{c_1-c_0}h= \gamma_1.\]</div>
+<p><strong>Mismunajafna í innri punktum bilsins</strong></p>
+<p>Í innri punktum bilsins <span class="math notranslate nohighlight">\(x_1, \dots, x_{N-1}\)</span>, notum við nálgunarformúlur <a class="reference internal" href="#equation-eq-approxder">(2)</a>, og að lokum fáum við</p>
+<div class="math notranslate nohighlight">
+\[a_2(x_j)\dfrac{u_{j-1}-2u_j+u_{j+1}}{h^2}+a_1(x_j)
+\dfrac{u_{j+1}-u_{j-1}}{2h}+a_0(x_j)u_j\approx f_j,\]</div>
+<p>og fyrir <span class="math notranslate nohighlight">\(c_j\)</span></p>
+<div class="math notranslate nohighlight">
+\[a_2(x_j)\dfrac{c_{j-1}-2c_j+c_{j+1}}{h^2}+a_1(x_j)
+\dfrac{c_{j+1}-c_{j-1}}{2h}+a_0(x_j)c_j=f_j.\]</div>
+<p><strong>Mismunajafna í hægri endapunkti</strong></p>
+<p>Í hægri endapunkti <span class="math notranslate nohighlight">\(x_N=b\)</span>, notum við nálgarformúluna að ofan, þá fæst</p>
+<div class="math notranslate nohighlight">
+\[\alpha_2u_N+\beta_2\dfrac{u_N-u_{N-1}}h\approx \gamma_2,\]</div>
+<p>og fyrir <span class="math notranslate nohighlight">\(c_{N-1}\)</span> og <span class="math notranslate nohighlight">\(c_N\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\alpha_2c_N+\beta_2\dfrac{c_N-c_{N-1}}h = \gamma_2.\]</div>
+<p><strong>Hneppið</strong></p>
+<p>Að lokum tökum við saman nálgunarjöfnurnar í <span class="math notranslate nohighlight">\((N+1)\times(N+1)\)</span> hneppi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\alpha_1c_0-\beta_1\dfrac{c_1-c_0}h= \gamma_1,\\
+a_2(x_j)\dfrac{c_{j-1}-2c_j+c_{j+1}}{h^2}+a_1(x_j)
+\dfrac{c_{j+1}-c_{j-1}}{2h}+a_0(x_j)c_j=f_j,\\
+\alpha_2c_N+\beta_2\dfrac{c_N-c_{N-1}}h = \gamma_2,
+\end{cases}\end{split}\]</div>
+<p>sem við getum umskrifað sem</p>
+<div class="math notranslate nohighlight" id="equation-eq-firstapprox">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-firstapprox" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+\big(\alpha_1+\tfrac {\beta_1}h\big)c_0
+-\tfrac {\beta_1}h c_1= \gamma_1,\\
+\big(\tfrac{a_2(x_j)}{h^2}-\tfrac{a_1(x_j)}{2h}\big) c_{j-1}
++\big(-\tfrac{2a_2(x_j)}{h^2}+a_0(x_j)\big)c_j
++\big(\tfrac{a_2(x_j)}{h^2}+\tfrac{a_1(x_j)}{2h}\big) c_{j+1} =f_j, \qquad j=1, \dots, N-1,\\
+-\tfrac{\beta_2}h c_{N-1}+\big(\alpha_2+\tfrac{\beta_2}h \big) c_N = \gamma_2.
+\end{cases}\end{split}\]</div>
+<div class="section" id="synidaemi">
+<h3>5.1.1. Sýnidæmi<a class="headerlink" href="#synidaemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="example-5-1-1">Við lítum á eftirfarandi jaðargildisverkefni:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+&amp;\left(x^2+1\right) u''(x)-2 x u'(x)+2 u(x)=1,\qquad  x \in ]0,1[\\
+&amp;u'(0)+u(0)=0,\\
+&amp;u(1)=1.
+\end{cases}\end{split}\]</div>
+<p>Fyrst skiptum við bilinu jafnt í tvo hluta,  þ.e.</p>
+<div class="math notranslate nohighlight">
+\[x_0=0, \qquad x_1= 1/2 , \qquad x_2 = 1, \qquad N=2, \qquad h={1 \over 2},\]</div>
+<p>og við notum nálgunarjöfnurnar <a class="reference internal" href="#equation-eq-firstapprox">(3)</a>, og þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+&amp; 2 c_1-c_0=0, \\
+&amp; c_2-1=0,\\
+&amp; 6 c_0-8 c_1+4 c_2=1
+\end{cases}\end{split}\]</div>
+<p>sem gefur okkur</p>
+<div class="math notranslate nohighlight">
+\[c_0= -{3\over 2}, \qquad c_1 = -{3\over 4}, \qquad c_2 =1.\]</div>
+<p>Ef við veljum <span class="math notranslate nohighlight">\(N=4\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[x_0=0, \quad x_1= 1/4 , \quad x_2 = 1/2, \quad x_3 = 3/4,  \quad x_4 = 1, \qquad N=4, ~~h={1 \over 4},\]</div>
+<p>þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+&amp; 3 c_0 -4 c_1=0, \\
+&amp; c_4 =1,\\
+&amp; -18 c_0+32 c_1-16 c_2=-1, \\
+&amp; 22 c_1 -38 c_2+18 c_3=1, \\
+&amp; 28 c_2-48 c_3+22 c_4 =1.
+\end{cases}\end{split}\]</div>
+<p>Lausnin er</p>
+<div class="math notranslate nohighlight">
+\[c_0=-{5\over 6},~~ c_1=-{5\over 8}, ~~ c_2 = -{1 \over 4},~~ c_3 = {7\over 24}, ~~ c_4 = 1.\]</div>
+<a class="reference internal image-reference" href="_images/fig-difference-method.png"><img alt="_images/fig-difference-method.png" class="align-center" src="_images/fig-difference-method.png" style="width: 85%;" /></a>
+<p><em>Lausnir fyrir</em> <span class="math notranslate nohighlight">\(N=4, 10, 100\)</span> <em>og lausn</em> <span class="math notranslate nohighlight">\(u(x)={1 \over 2} (2 x^2+x-1).\)</span></p>
+<a class="reference internal image-reference" href="_images/error-difference-method.png"><img alt="_images/error-difference-method.png" class="align-center" src="_images/error-difference-method.png" style="width: 85%;" /></a>
+<p><em>Skekkjan</em> <span class="math notranslate nohighlight">\(|u_j-c_j|\)</span>  <em>í</em>  <span class="math notranslate nohighlight">\(x=1/2\)</span>  <em>sem fall af</em>  <span class="math notranslate nohighlight">\(N\)</span>.</p>
+</div>
+</div>
+<div class="section" id="heildun-yfir-hlutbil">
+<h2>5.2. Heildun yfir hlutbil<a class="headerlink" href="#heildun-yfir-hlutbil" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p id="ch-5-2">Við skoðum nú tilfelli þegar afleiðuvirkinn er af Sturm-Liouville gerð, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[L u= -(p u^\prime)^\prime+ q u,\]</div>
+<p>þar sem við gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(p\)</span> sé samfellt diffranlegt á bili <span class="math notranslate nohighlight">\([a,b]\)</span>, og fallið <span class="math notranslate nohighlight">\(p\)</span> sé samfellt á <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<p>Jaðargildisverkefnið er af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+Lu=-(pu')'+qu=f,&amp; \text{á } ]a,b[\\
+\alpha_1u(a)-\beta_1u'(a)=\gamma_1,\\
+\alpha_2u(b)+\beta_2u'(b)=\gamma_2.
+\end{cases}\end{split}\]</div>
+<p>Látum <span class="math notranslate nohighlight">\([c,d]\)</span> vera hlutbil af bilinu <span class="math notranslate nohighlight">\([a,b]\)</span>.
+Við heildum jöfnuna yfir <span class="math notranslate nohighlight">\(x\in [c, d]\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[p(c)u'(c)-p(d)u'(d)
++\int_c^d q(x)u(x)\, dx=\int_c^d f(x)\, dx.\]</div>
+<p>Við viljum finna nálgunarjöfnur fyrir jöfnuna að ofan.
+Við notum mismunakvóta til þess að nálga afleiður.
+Við veljum skiptingu</p>
+<div class="math notranslate nohighlight">
+\[x_0 &lt; x_1 &lt; \dots &lt; x_N.\]</div>
+<p>Við nálgum heildi með Riemann-summu með miðpunktsnálgun:</p>
+<div class="math notranslate nohighlight">
+\[\int_{x_0}^{x_N} \varphi(x)dx= \sum\limits_{j=0}^{N-1} \varphi(m_j)h,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(m_j\)</span> eru miðpunktar hlutbilanna</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; m_j= {x_j+ x_{j+1}\over 2}, \qquad j=0, \dots, N-1,\\
+&amp; h = {x_N - x_{0}\over N},\\
+&amp; x_j= x_0+ j h, \qquad j=0, \dots, N.\end{split}\]</div>
+<p>Athugum að</p>
+<div class="math notranslate nohighlight">
+\[m_j= {x_j+ x_{j+1}\over 2}= x_j+ {1\over 2} h, \qquad j=0, \dots, N-1.\]</div>
+<p>Eins og við gerðum í <a class="reference internal" href="#ch-5-1"><span class="std std-ref">5.1</span></a>, þurfum við að skoða jaðarskilyrðin hvert í sínu lagi.</p>
+<p>Til þess að einfalda rithátt, fyrir öll <span class="math notranslate nohighlight">\(j\)</span> táknum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; u_j=u(x_j), ~~~ f_j=f(x_j), ~~~ p_j=p(x_j),~~~ q_j=q(x_j), \\
+&amp; p_{j+\frac 12}=p(m_j).\end{split}\]</div>
+<p><strong>Mismunajafna í vinstri endapunkti bilsins</strong></p>
+<p>Við heildum yfir hlutbilið <span class="math notranslate nohighlight">\([x_0, m_0]\)</span>.
+Athugum að <span class="math notranslate nohighlight">\(m_0-x_0=\frac 12 h\)</span>.
+Við fáum</p>
+<div class="math notranslate nohighlight">
+\[p(x_0)u'(x_0)-p(m_0)u'(m_0)
++\int_{x_0}^{m_0} qu\, dx=\int_{x_0}^{m_0} f\, dx,\]</div>
+<p>sem gefur okkur</p>
+<div class="math notranslate nohighlight">
+\[u'(x_0)=\dfrac 1{p(x_0)}\bigg(p(m_0)u'(m_0)
+-\int_{x_0}^{m_0}q(x)u(x)\, dx
++\int_{x_0}^{m_0}f(x)\, dx\bigg).\]</div>
+<p>Við nálgum heildið með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\int_{x_0}^{m_0}q(x)u(x) dx\approx \frac 12 h q(x_0) u(x_0) = \frac 12 h q_0 u_0, \\
+&amp; \int_{x_0}^{m_0}f(x) dx\approx \frac 12 h f(x_0)= \frac 12 h f_0.\end{split}\]</div>
+<p>Við nálgum afleiðuna <span class="math notranslate nohighlight">\(u'(m_0)\)</span> með mismunakvóta:</p>
+<div class="math notranslate nohighlight">
+\[u'(m_0)\approx {u(x_1)-u(x_0)\over 2 h/2}=  {u_1-u_0\over h}.\]</div>
+<p>Þá er <span class="math notranslate nohighlight">\(u'(x_0)\)</span></p>
+<div class="math notranslate nohighlight">
+\[u'(x_0)\approx\dfrac 1{p_0}\bigg(p_{\frac 12} {u_1-u_0\over h}
+-\frac 12 h q_0 u_0
++\frac 12 h f_0\bigg).\]</div>
+<p>Nú notum við jaðarskilyrði í <span class="math notranslate nohighlight">\(x_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1u(a)-\beta_1u'(a)=\gamma_1\]</div>
+<p>sem er nú</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1u_0-\dfrac {\beta_1}{p_0}\bigg(
+p_{\frac 12}\dfrac{u_1-u_0}{h}
+-\tfrac 12 h q_0u_0+ \tfrac 12 hf_0\bigg)\approx \gamma_1.\]</div>
+<p>Eins og áður setjum við <span class="math notranslate nohighlight">\(c_0, c_1\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(u_0, u_1\)</span> til þess að tákna óþekkta stærð:</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1 c_0-\dfrac {\beta_1}{p_0}\bigg(
+p_{\frac 12}\dfrac{c_1-c_0}{h}
+-\tfrac 12 h q_0c_0+\tfrac 12 hf_0\bigg)=\gamma_1.\]</div>
+<p><strong>Mismunajafna í hægri endapunkti</strong></p>
+<p>Við gerum svipað fyrir hlutbilið <span class="math notranslate nohighlight">\([ m_{N-1}, x_N]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[u'(x_N)=\dfrac 1{p(x_N)}\bigg(p(m_{N-1})u'(m_{N-1})
++\int_{m_{N-1}}^{x_N}q(x)u(x)\, dx-
+\int_{m_{N-1}}^{x_N}f(x)\, dx\bigg).\]</div>
+<p>Við nálgum heildið með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \int_{m_{N-1}}^{x_N}q(x)u(x)\, dx \approx \tfrac 12h
+q_Nu_N, \\
+&amp; \int_{m_{N-1}}^{x_N}f(x)\, dx \approx \tfrac 12h f_N,\end{split}\]</div>
+<p>og afleiðuna <span class="math notranslate nohighlight">\(u'(x_{N-1})\)</span> með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[u'(m_{N-1}) \approx\dfrac{u_N-u_{N-1}}{h}.\]</div>
+<p>Þá getum við nálgað jaðarskilyrðið í <span class="math notranslate nohighlight">\(x_N\)</span></p>
+<div class="math notranslate nohighlight">
+\[\alpha_2u(x_N)+\beta_2u'(x_N)=\gamma_2\]</div>
+<p>með</p>
+<div class="math notranslate nohighlight">
+\[\alpha_2u_N+\dfrac {\beta_2}{p_N}\bigg(
+p_{N-\frac 12}\dfrac{u_N-u_{N-1}}{h}+\tfrac 12h
+q_Nu_N -\tfrac 12h f_N\bigg)\approx\gamma_2.\]</div>
+<p><strong>Mismunajöfnur í innri punktum skiptingarinnar</strong></p>
+<p>Nú skoðum við hlutbilin  <span class="math notranslate nohighlight">\([m_{j−1}, m_j ]\)</span> fyrir <span class="math notranslate nohighlight">\(j=1, \dots, N-1\)</span>.
+Athugum að <span class="math notranslate nohighlight">\(x_j\)</span> eru miðpunktar bilanna <span class="math notranslate nohighlight">\([m_{j−1}, m_j ]\)</span>.</p>
+<p>Við heildum jöfnuna yfir <span class="math notranslate nohighlight">\([m_{j−1}, m_j ]\)</span></p>
+<div class="math notranslate nohighlight">
+\[p(m_{j-1})u'(m_{j-1})-p(m_j)u'(m_j)+\int_{m_{j-1}}^{m_j}q(x)u(x)\, dx
+=\int_{m_{j-1}}^{m_j}f(x)\, dx.\]</div>
+<p>Við nálgum heildið með miðpunktsnálgun</p>
+<div class="math notranslate nohighlight">
+\[\int_{m_{j-1}}^{m_j}q(x)u(x)\, dx \approx h\ q_ju_j
+\qquad \text{ og } \qquad
+\int_{m_{j-1}}^{m_j}f(x)\, dx \approx h\ f_j,\]</div>
+<p>og afleiður með mismunakvótum</p>
+<div class="math notranslate nohighlight">
+\[u'(m_j)\approx \dfrac{u_{j+1}-u_j}h \qquad \text{ og } \qquad
+u'(m_{j-1})\approx \dfrac{u_j-u_{j-1}}h.\]</div>
+<p>Þá verður jafnan</p>
+<div class="math notranslate nohighlight">
+\[p_{j-\frac 12}\dfrac{u_j-u_{j-1}}h
+-p_{j+\frac 12}\dfrac{u_{j+1}-u_j}h
++h q_ju_j\approx hf_j,\]</div>
+<p>og þegar við stingum <span class="math notranslate nohighlight">\(c_j\)</span> í jöfnuna í staðinn fyrir <span class="math notranslate nohighlight">\(u_j\)</span>, fáum við</p>
+<div class="math notranslate nohighlight">
+\[p_{j-\frac 12}\dfrac{c_{j}-c_{j-1}}{h^2}
+-p_{j+\frac 12}\dfrac{c_{j+1}-c_j}{h^2}
++q_jc_j= f_j.\]</div>
+<p><strong>Nálgunarjöfnuhneppið</strong></p>
+<p>Að lokum, er línulega jöfnuhneppið fyrir nálgunargildin</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\bigg(\alpha_1+\dfrac{\beta_1}{p_0}
+\bigg(\dfrac{p_{\frac 12}}h+\tfrac 12 hq_0\bigg)\bigg)c_0
+-\dfrac{\beta_1p_{\frac 12}}{p_0h}c_1
+=\gamma_1+\tfrac 12 \dfrac{\beta_1hf_0}{p_0},
+\\
+-\dfrac{p_{j-\frac 12}}{h^2} c_{j-1}
++\bigg(\dfrac{p_{j-\frac 12}+p_{j+\frac 12}}{h^2}+q_j\bigg) c_j
+-\dfrac{p_{j+\frac 12}}{h^2} c_{j+1}  =f_j, \qquad j=1, \dots, N-1,
+\\
+-\dfrac{\beta_2p_{N-\frac 12}}{p_Nh}c_{N-1}+
+\bigg(\alpha_2+\dfrac{\beta_2}{p_N}\bigg(\dfrac{p_{N-\frac 12}}{h}+\tfrac
+12 h q_N\bigg)\bigg)c_N
+=\gamma_2+\tfrac 12\dfrac{\beta_2h}{p_N}f_N.
+\end{cases}\end{split}\]</div>
+<div class="section" id="id1">
+<h3>5.2.1. Sýnidæmi<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="example-5-2-1">Við endurtökum nú sýnidæmi <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a>.
+Við sjáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; p(x)=\frac{1}{x^2+1}, \quad q(x)=-\frac{2}{\left(x^2+1\right)^2},\quad \rho=-\frac{1}{\left(x^2+1\right)^2}, \\
+&amp; \mathcal L u = {1\over \rho} \left( -(p u^\prime)^\prime +q u\right) = \widetilde{f}, \\
+&amp; \Rightarrow \left( -(p u^\prime)^\prime +q u\right) = \rho \widetilde{f} := f,\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(f(x)= -\frac{1}{\left(x^2+1\right)^2}\)</span>.
+Þá er jaðargildisverkefnið af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+u''(x)-\frac{2 x u'(x)}{x^2+1}+\frac{2 u(x)}{x^2+1}=\frac{1}{x^2+1},\\
+u'(0)+u(0)=0,\\
+u(1)=1.
+\end{cases}\end{split}\]</div>
+<p>Við notum nálgunarformúlurnar að ofan fyrir <span class="math notranslate nohighlight">\(N=4\)</span>.
+Athugum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; x_0= 0, ~~ x_1= \frac{1}{4}, ~~ x_2=\frac{1}{2}, ~~ x_3=\frac{3}{4}, ~~ x_4=1,\\
+&amp; m_0=\frac{1}{8}, ~~ m_1=\frac{3}{8}, ~~ m_2=\frac{5}{8}, ~~ m_3=\frac{7}{8}.\end{split}\]</div>
+<p>Línulega hneppið er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+1398 c_0-2048 c_1=-65, \\
+c_4=1, \\
+84388 c_0-150038 c_1+75140 c_2=4745,\\
+142400 c_1-246206 c_2+116800 c_3=6497,
+\\
+282500 c_2-484886 c_3+222500 c_4 =10057,
+\end{cases}\end{split}\]</div>
+<p>sem gefur okkur</p>
+<div class="math notranslate nohighlight">
+\[c_0= -0.4895, c_1=-0.3024, c_2= 0.0091,
+c_3= 0.4434, c_4= 1.\]</div>
+<p>Er þetta betra en í dæmi <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a>? Skoðum myndina.</p>
+<a class="reference internal image-reference" href="_images/comparison-51vs52.png"><img alt="_images/comparison-51vs52.png" class="align-center" src="_images/comparison-51vs52.png" style="width: 85%;" /></a>
+</div>
+<div class="section" id="linuleg-bruun-og-ufugrunnfoll">
+<h3>5.2.2. Línuleg brúun og þúfugrunnföll<a class="headerlink" href="#linuleg-bruun-og-ufugrunnfoll" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="ch-5-2-2">Við höfum reiknað út lausnir <span class="math notranslate nohighlight">\(c_j\)</span> á nálgunarformúlunni.
+Hvernig getum við endurgert fallið <span class="math notranslate nohighlight">\(u\)</span> sem uppfyllir <span class="math notranslate nohighlight">\(u_j \approx c_j\)</span>?
+Við getum notað línulega samantekt til að finna <em>nálgunarfall</em> <span class="math notranslate nohighlight">\(v\in C[a,b]\)</span>, þ.a. <span class="math notranslate nohighlight">\(v(x_j)= c_j\)</span> og svo <span class="math notranslate nohighlight">\(v_j \approx u_j\)</span>.</p>
+<p>Fyrst skilgreinum við <em>þúfugrunnföllin</em> <span class="math notranslate nohighlight">\(\varphi_j(x)\)</span>, fyrir <span class="math notranslate nohighlight">\(j=0, \dots, N\)</span>, þ.a.</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(\varphi_j(x)\)</span> eru samfelld,</li>
+<li><span class="math notranslate nohighlight">\(\varphi_j(x_i)=\delta_{i,j}\)</span>.</li>
+</ol>
+<p>Við tökum t.d. jafna skiptingu á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span></p>
+<div class="math notranslate nohighlight">
+\[a=x_0&lt;x_1&lt;x_2&lt;\cdots &lt;x_N=b, \qquad x_j= a + j h, \qquad j=0, \dots, N,\]</div>
+<p>þá eru föllin <span class="math notranslate nohighlight">\(\varphi_j(x)\)</span> af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\varphi_0(x)&amp;=\begin{cases} \tfrac{x_1-x}{h}, &amp;x\in [x_0,x_1],\\
+0, &amp;\text{annars},
+\end{cases} &amp;
+\varphi'_0(x)&amp;=\begin{cases} \tfrac{-1}{h}, &amp;x\in ]x_0,x_1[,\\
+0, &amp;x\in {{\mathbb  R}}\setminus [x_0,x_1],
+\end{cases}
+\nonumber
+\\
+\varphi_j(x)&amp;=\begin{cases} \tfrac{x-x_{j-1}}{h}, &amp;x\in [x_{j-1},x_j[,\\
+\tfrac{x_{j+1}-x}{h}, &amp;x\in [x_j,x_{j+1}],\\
+0, &amp;\text{annars}.
+\end{cases}&amp;
+\varphi'_j(x)&amp;=\begin{cases} \tfrac{1}{h}, &amp;x\in ]x_{j-1},x_j[,\\
+\tfrac{-1}{h}, &amp;x\in [x_j,x_{j+1}],\\
+0, &amp;x\in {{\mathbb  R}}\setminus [x_{j-1},x_{j+1}].
+\end{cases}
+\\
+\varphi_N(x)&amp;=\begin{cases} \tfrac{x-x_{N-1}}{h}, &amp;x\in [x_{N-1},x_N],\\
+0, &amp;\text{annars}. \nonumber
+\end{cases}&amp;
+\varphi'_N(x)&amp;=\begin{cases} \tfrac{1}{h}, &amp;x\in [x_{m-1},x_m],\\
+0, &amp;\text{annars}. \nonumber
+\end{cases}\end{aligned}\end{split}\]</div>
+<p>Athugum að föllin <span class="math notranslate nohighlight">\(\varphi_j(x)\)</span> eru samfelld á <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<a class="reference internal image-reference" href="_images/tent-functions.png"><img alt="_images/tent-functions.png" class="align-center" src="_images/tent-functions.png" style="width: 85%;" /></a>
+<p><em>Þúfugrunnföllin</em> <span class="math notranslate nohighlight">\(\varphi_j(x)\)</span> <em>fyrir dæmin</em> <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a> <em>og</em> <a class="reference internal" href="#example-5-2-1"><span class="std std-ref">5.2.1</span></a>. <em>Hér</em> <span class="math notranslate nohighlight">\(N=4\)</span>.</p>
+<p>Þá skilgreinum við nálgunarfall <span class="math notranslate nohighlight">\(v\)</span>, með því að setja</p>
+<div class="math notranslate nohighlight">
+\[v(x)=c_0\varphi_0(x)+\cdots+c_N\varphi_N (x),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(c_j\)</span> eru lausnir á nálgunarformúlunni.
+Það er ljóst að <span class="math notranslate nohighlight">\(v\)</span> er samfellt á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span>, og</p>
+<div class="math notranslate nohighlight">
+\[v(x_j)= \sum_{i=0}^N c_i\varphi_i(x_j)= c_j.\]</div>
+<a class="reference internal image-reference" href="_images/v-functions.png"><img alt="_images/v-functions.png" class="align-center" src="_images/v-functions.png" style="width: 85%;" /></a>
+<p><em>Nálgunarföllin</em> <span class="math notranslate nohighlight">\(v\)</span> <em>fyrir dæmin</em> <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a> <em>og</em> <a class="reference internal" href="#example-5-2-1"><span class="std std-ref">5.2.1</span></a>. <em>Hér</em> <span class="math notranslate nohighlight">\(N=4\)</span>.</p>
+</div>
+</div>
+<div class="section" id="mismunaafer-fyrir-hlutaafleiujofnur">
+<h2>5.3. Mismunaaðferð fyrir hlutaafleiðujöfnur<a class="headerlink" href="#mismunaafer-fyrir-hlutaafleiujofnur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Nú lítum við á verkefnið að nálga lausnir á hlutafleiðujöfnum með upphafs- og jaðarskilyrðum.</p>
+<p>Látum <span class="math notranslate nohighlight">\(D\)</span> vera svæði í <span class="math notranslate nohighlight">\(R^2\)</span> og skoðum eftirfarandi jaðargildisverkefni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+Lu=-\nabla\cdot (p\nabla u)+qu=
+-p\nabla^2u-\nabla p\cdot \nabla u+qu=f, \qquad \text{ á } D\\
+\alpha u+\beta\dfrac{\partial u}{\partial n}
+=\gamma, \qquad  \text{á } \ \partial D.
+\end{cases}\end{split}\]</div>
+<p>Við gerum ráð fyrir að <span class="math notranslate nohighlight">\(p\in C^1(\mathbb R^2)\)</span> og <span class="math notranslate nohighlight">\(q, f\)</span> séu samfelld á <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>. <span class="math notranslate nohighlight">\(\alpha,\beta\)</span> og <span class="math notranslate nohighlight">\(\gamma\)</span> séu gefin föll á jaðrinum  <span class="math notranslate nohighlight">\(\partial D\)</span> þ.a. <span class="math notranslate nohighlight">\((\alpha, \beta)\neq (0,0)\)</span> á <span class="math notranslate nohighlight">\(\partial D\)</span>.</p>
+<p>Látum <span class="math notranslate nohighlight">\(\partial D_1\)</span> vera þann hluta jaðarsins þ.a. <span class="math notranslate nohighlight">\(\beta=0\)</span>, þá er <span class="math notranslate nohighlight">\(u(x,y)=\gamma(x,y)/\alpha(x,y)\)</span> fyrir öll <span class="math notranslate nohighlight">\((x,y)\in \partial D_1\)</span>. Þá skiptum við jaðrinum í tvö sundurlæg mengi <span class="math notranslate nohighlight">\(\partial D=\partial D_1\cup \partial D_2\)</span>, og við umskrifum jaðargildisverkenið sem</p>
+<div class="math notranslate nohighlight" id="equation-eq-pde1">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-pde1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+Lu=-\nabla\cdot (p\nabla u)+qu=f, \quad &amp;\text{á } D\\
+u=\gamma,\quad &amp;\text{á } \ \partial_1 D,\\
+\alpha u+\beta\dfrac{\partial u}{\partial n}
+=\gamma, \quad  &amp;\text{á } \ \partial_2 D,
+\end{cases}\end{split}\]</div>
+<p>þar sem höfum við táknað <span class="math notranslate nohighlight">\(\gamma(x,y)/\alpha(x,y)\)</span> með <span class="math notranslate nohighlight">\(\gamma\)</span> á <span class="math notranslate nohighlight">\(\partial_1 D\)</span> að ofan.</p>
+<p>Til þess að nálga lausn <span class="math notranslate nohighlight">\(u\)</span> á jaðargildisverkefninu <a class="reference internal" href="#equation-eq-pde1">(4)</a> þurfum við að undirbúa net á svipaðan hátt og við gerðum í <a class="reference internal" href="#ch-5-1"><span class="std std-ref">5.1</span></a>. Það sem er ólíkt hér er að við erum í <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>, þ.e.a.s. við þurfum að byggja skiptingu eftir <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p><strong>Net</strong></p>
+<p>Gerum ráð fyrir að svæðið <span class="math notranslate nohighlight">\(D\)</span> sé innihaldið í rétthyrningi</p>
+<div class="math notranslate nohighlight">
+\[R=\{(x,y)\,;\, a\leq x\leq b, c\leq y\leq d\}.\]</div>
+<p>Við tökum <span class="math notranslate nohighlight">\(h&gt;0\)</span> og við skiptum bilunum á eftirfarandi hátt</p>
+<div class="math notranslate nohighlight">
+\[x_m=a+mh \qquad \text{ og } \qquad y_n=c+nh, \qquad m,n\in {{\mathbb  N}\cup {0}}.\]</div>
+<a class="reference internal image-reference" href="_images/ex-grid-rectangle.png"><img alt="_images/ex-grid-rectangle.png" class="align-center" src="_images/ex-grid-rectangle.png" style="width: 45%;" /></a>
+<p><em>Dæmi af</em>  <span class="math notranslate nohighlight">\(D \subset R \subset {\mathbb R^2}\)</span>.</p>
+<p>Hnútpunktar í netinu eru <span class="math notranslate nohighlight">\((x_i, y_k)\)</span> og línurnar gegnum hnútpunktana eru stikaðar með</p>
+<div class="math notranslate nohighlight">
+\[{{\mathbb  R}}\ni t\mapsto (a+mh,t) \qquad \text{ og } \qquad
+{{\mathbb  R}}\ni s\mapsto (s,c+nh).\]</div>
+<p>Við sjáum að línurnar skera <span class="math notranslate nohighlight">\(\overline D =D\cup\partial D\)</span> í punktinum <span class="math notranslate nohighlight">\((x_i, y_k)\)</span> , <span class="math notranslate nohighlight">\(i=1,\dots, M_1\)</span> og <span class="math notranslate nohighlight">\(k=1,\dots,M_2\)</span>.</p>
+<p>Við þurfum að velja hvernig við viljum raða punktunum sem eru í <span class="math notranslate nohighlight">\(\overline D\)</span>. Til þess að einfalda nálgunarformúlur, er gott að raða punktunum á eftirfarandi hátt:</p>
+<p>Setjum <span class="math notranslate nohighlight">\(M = M_1 \times M_2\)</span>, og</p>
+<ul class="simple">
+<li>Allir hnútpunktar eru <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> þar sem <span class="math notranslate nohighlight">\(j=1, \dots, M\)</span>,</li>
+<li>Hnútpunktar <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> fyrir  <span class="math notranslate nohighlight">\(j=1,+dots, N\leq M\)</span> eru í  <span class="math notranslate nohighlight">\(D\cup \partial D_2\)</span>,</li>
+<li>Hnútpunktar <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=N+1, \dots, M\)</span> eru í  <span class="math notranslate nohighlight">\(\partial D_1\)</span>.</li>
+</ul>
+<p>Hugmyndin að baki þessu er að fallgildi  <span class="math notranslate nohighlight">\(u\)</span> eru þekkt á <span class="math notranslate nohighlight">\(\partial D_1\)</span> af því að <span class="math notranslate nohighlight">\(u\)</span> uppfyllir Dirichlet-jaðarskilyrði þar.</p>
+<p><strong>Heildun yfir hlutsvæði</strong></p>
+<p>Gerum ráð fyrir að hlutsvæði <span class="math notranslate nohighlight">\(\Omega\)</span> sé í <span class="math notranslate nohighlight">\(D\)</span>, t.d. getur <span class="math notranslate nohighlight">\(\Omega\)</span> verið hlutrétthyrningur milli <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=1, \dots 4\)</span>.</p>
+<p>Við heildum jöfnuna yfir <span class="math notranslate nohighlight">\(\Omega\)</span> og við notum Gauss-setninguna sem gefur okkur</p>
+<div class="math notranslate nohighlight">
+\[\iint_\Omega \nabla\cdot\big(p\nabla u\big) \, dxdy
+=\int_{\partial\Omega} p\dfrac{\partial u}{\partial n}\, ds,\]</div>
+<p>þá er jafnan í <a class="reference internal" href="#equation-eq-pde1">(4)</a></p>
+<div class="math notranslate nohighlight">
+\[-\int_{\partial\Omega } p\dfrac{\partial u}{\partial n}\, ds
++\iint_\Omega qu\, dxdy =\iint_\Omega f\, dxdy.\]</div>
+<p>Við ætlum að nota þessi heildi til þess að nálga lausn <span class="math notranslate nohighlight">\(u\)</span> í punktunum <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> fyrir  <span class="math notranslate nohighlight">\(j=1,\dots, N\)</span>.</p>
+<div class="section" id="nalgunarjafna">
+<h3>5.3.1. Nálgunarjafna<a class="headerlink" href="#nalgunarjafna" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú erum við tilbúin til að leiða út nálgunarjöfnur fyrir jaðargildisverkenið <a class="reference internal" href="#equation-eq-pde1">(4)</a>. Eins og áður greinum við á milli innri punkta og jaðarpunkta.</p>
+<p><strong>Nálgunarjafna í innri punkti</strong></p>
+<p>Látum <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> vera innri punkt í <span class="math notranslate nohighlight">\(D\)</span>, og <span class="math notranslate nohighlight">\(\Omega_j\)</span> vera ferninginn með miðju í <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> og kantlengdina <span class="math notranslate nohighlight">\(h\)</span>.
+Látum grannpunkta <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> vera <span class="math notranslate nohighlight">\((x_l,y_l), (x_r,y_r), (x_s,y_s)\)</span> og <span class="math notranslate nohighlight">\((x_t,y_t)\)</span>.
+Við táknum með <span class="math notranslate nohighlight">\(m_{j,k}\)</span> miðpunkt línunnar milli <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> og <span class="math notranslate nohighlight">\((x_k,y_k)\)</span>, og með <span class="math notranslate nohighlight">\(S_{j,k}\)</span> hlið af <span class="math notranslate nohighlight">\(\partial\Omega_j\)</span> sem er milli <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> og <span class="math notranslate nohighlight">\((x_k,y_k)\)</span>.
+Athugum að hér eru <span class="math notranslate nohighlight">\(j, l, r\)</span>, og <span class="math notranslate nohighlight">\(s\)</span> gefin, á meðan lagt er saman yfir <span class="math notranslate nohighlight">\(k=l,r,s, t\)</span>.</p>
+<p>Við sjáum á myndinni hér:</p>
+<a class="reference internal image-reference" href="_images/internal-points.png"><img alt="_images/internal-points.png" class="align-center" src="_images/internal-points.png" style="width: 45%;" /></a>
+<p><em>Dæmi af innri punktum</em>  <span class="math notranslate nohighlight">\((x_j,y_j)\)</span>.</p>
+<p>Þá er yfir <span class="math notranslate nohighlight">\(\Omega_j\)</span></p>
+<div class="math notranslate nohighlight">
+\[\iint_{\Omega_j} \nabla\cdot\big(p\nabla u\big) \, dxdy
+=\int_{\partial{\Omega}_j} p\dfrac{\partial u}{\partial n}\, ds =
+\sum_{k=l,r,s,t} \int_{S_{j,k}} p\dfrac{\partial u}{\partial n}\, ds.\]</div>
+<p>Við nálgun heildið yfir <span class="math notranslate nohighlight">\(S_{j,k}\)</span> með því að finna gildi fallsins <span class="math notranslate nohighlight">\(p\)</span> og afleiðunnar <span class="math notranslate nohighlight">\({\partial u\over \partial n}\)</span> í miðpunktum <span class="math notranslate nohighlight">\(m_{j,k}\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_{S_{j,k}}p\dfrac{\partial u}{\partial n} \, ds
+\approx p(m_{j,k})\dfrac{\partial u}{\partial n}(m_{j,k}) h
+\approx p(m_{j,k})\dfrac{u(x_k,y_k)-u(x_j,y_j)}{h} h.\]</div>
+<p>Liðirnir sem eftir standa eru nálgaðir með</p>
+<div class="math notranslate nohighlight">
+\[\iint_{\Omega_j}q u \, dxdy \approx q(x_j,y_j)u(x_j,y_j)\,  h^2,\]</div>
+<div class="math notranslate nohighlight">
+\[\iint_{\Omega_j}f \, dxdy \approx f(x_j,y_j)\,  h^2.\]</div>
+<p>Til þess að einfalda rithátt, setjum við <span class="math notranslate nohighlight">\(u_k=u(x_k,y_k), q_k=q(x_k,y_k), f_k=f(x_k,y_k)\)</span> og <span class="math notranslate nohighlight">\(p_{j,k}=p(m_{j,k})\)</span>, og að lokum fáum við að jafnan <a class="reference internal" href="#equation-eq-pde1">(4)</a> er nálguð með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;-\int_{\partial\Omega } p\dfrac{\partial u}{\partial n}\, ds
++\iint_\Omega qu\, dxdy =\iint_\Omega f\, dxdy\\
+&amp;&amp;
+\Rightarrow ~~
+-p_{j,l}(u_l-u_j)
+-p_{j,r}(u_r-u_j)
+-p_{j,s}(u_s-u_j)
+-p_{j,t}(u_t-u_j)
++q_ju_jh^2\approx f_jh^2.\end{split}\]</div>
+<p>Við notum <span class="math notranslate nohighlight">\(c_k\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(u_k\)</span> fyrir <span class="math notranslate nohighlight">\(k=j,l,r,s,t\)</span>, og þá er nálgunarformúlan fyrir innri punktana</p>
+<div class="math notranslate nohighlight" id="equation-eq-approx1">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-approx1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{gathered}
+\big(h^{-2}\big({p_{j,l}+p_{j,r}+p_{j,s}+p_{j,t}}\big)+q_j\big)c_j
+\\
+-h^{-2}p_{j,l}c_l
+-h^{-2}p_{j,r}c_r
+-h^{-2}p_{j,s}c_s
+-h^{-2}p_{j,t}c_t
+=f_j.
+\end{gathered}\end{split}\]</div>
+<p>Í sértilfellinu þegar <span class="math notranslate nohighlight">\(p=1\)</span>, þá fáum við</p>
+<div class="math notranslate nohighlight" id="equation-eq-approx1s">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-approx1s" title="Permalink to this equation">¶</a></span>\[\big(4{h^{-2}}+q_j\big)c_j
+-{h^{-2}}c_l
+-{h^{-2}}c_r
+-{h^{-2}}c_s
+-{h^{-2}}c_t
+=f_j.\]</div>
+<p><strong>Nálgunarjafna í jaðarpunkti</strong></p>
+<p>Látum <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> vera jaðarpunkt í  <span class="math notranslate nohighlight">\(\partial D_2\)</span>. Látum grannpunkta <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> vera <span class="math notranslate nohighlight">\((x_l,y_l), (x_s,y_s)\)</span> og <span class="math notranslate nohighlight">\((x_t,y_t)\)</span>.
+Við gerum ráð fyrir að línan <span class="math notranslate nohighlight">\(S_j\)</span> milli miðpunktanna <span class="math notranslate nohighlight">\(m_{j,s}\)</span> og <span class="math notranslate nohighlight">\(m_{j,t}\)</span> sé í <span class="math notranslate nohighlight">\(\partial D_2\)</span>.
+Athugum að hér er <span class="math notranslate nohighlight">\(k=s, l, t\)</span>, og hér er flatarmál svæðisins <span class="math notranslate nohighlight">\(\Omega_j\)</span> <span class="math notranslate nohighlight">\(h^2/2\)</span>.</p>
+<p>Við sjáum á myndinni hér:</p>
+<a class="reference internal image-reference" href="_images/boundary-points.png"><img alt="_images/boundary-points.png" class="align-center" src="_images/boundary-points.png" style="width: 45%;" /></a>
+<p><em>Dæmi af jaðarpunktum</em>  <span class="math notranslate nohighlight">\((x_j,y_j)\)</span>.</p>
+<p>Við höfum</p>
+<div class="math notranslate nohighlight">
+\[\iint_{\Omega_j} \nabla\cdot\big(p\nabla u\big) \, dxdy=
+\int_{\partial \Omega_j} p\dfrac{\partial u}{\partial n}\, ds
+=\sum_{k=l,s,t} \int_{S_{j,k}} p\dfrac{\partial u}{\partial n}\, ds
++\int_{S_{j}} p\dfrac{\partial u}{\partial n}\, ds.\]</div>
+<p>Heildið yfir <span class="math notranslate nohighlight">\(S_j\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\int_{S_{j}} p\dfrac{\partial u}{\partial n}\, ds \approx
+p_j \dfrac{\partial u}{\partial n}(x_j,y_j) \approx p_j {\gamma_j-\alpha_j u_j\over \beta_j} h,\]</div>
+<p>þar sem við höfum notað jaðarskilyrði á <span class="math notranslate nohighlight">\(\partial D_2\)</span> fyrir <span class="math notranslate nohighlight">\(\dfrac{\partial u}{\partial n}(x_j,y_j)\)</span>, og táknað <span class="math notranslate nohighlight">\(\gamma(x_j,y_j), \alpha(x_j,y_j), \beta(x_j,x_j)\)</span> með <span class="math notranslate nohighlight">\(\gamma_j,\alpha_j, \beta_j\)</span>.</p>
+<p>Heildið yfir <span class="math notranslate nohighlight">\(S_{j,l}\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\int_{S_{j,l}} p\dfrac{\partial u}{\partial n} \, ds
+\approx p_{j,l}\dfrac {u_l-u_j} h h,\]</div>
+<p>en heildin yfir <span class="math notranslate nohighlight">\(S_{j,s}\)</span> og <span class="math notranslate nohighlight">\(S_{j,t}\)</span> eru gefin með</p>
+<div class="math notranslate nohighlight">
+\[\int_{S_{j,s}} p\dfrac{\partial u}{\partial n} \, ds
+\approx p_{j,s}\dfrac{u_s-u_j}h\tfrac 12 h
+\qquad \text{ og }  \qquad
+\int_{S_{j,t}} p\dfrac{\partial u}{\partial n} \, ds
+\approx p_{j,t}\dfrac{u_t-u_j}h\tfrac 12 h.\]</div>
+<p>Að lokum þurfum við að nálga heildið með föllum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(q\)</span></p>
+<div class="math notranslate nohighlight">
+\[\iint_{\Omega_j} q u\, dxdy
+\approx q_ju_j \tfrac 12 h^2
+\quad \text{ og } \quad
+\iint_{\Omega_j} f\, dxdy
+\approx f_j \tfrac 12 h^2.\]</div>
+<p>Að lokum að lokum setjum við saman alla liði og þá er</p>
+<div class="math notranslate nohighlight" id="equation-eq-approx2">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-approx2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{gathered}
+\big(2h^{-2}p_{j,l}+h^{-2}p_{j,s}+h^{-2}p_{j,t}
++2h^{-1}p_j\tfrac{\alpha_j}{\beta_j}+q_j\big)c_j
+\\
+-2h^{-2}p_{j,l}c_l-h^{-2}p_{j,s}c_s-h^{-2}p_{j,t}c_t
+=f_j+2h^{-1}p_j\tfrac{\gamma_j}{\beta_j}.
+\end{gathered}\end{split}\]</div>
+<p>þar sem við höfum skrifað <span class="math notranslate nohighlight">\(c_j\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(u_j\)</span>.</p>
+<p>Í sértilfellinu þegar <span class="math notranslate nohighlight">\(p=1\)</span>, þá fáum við</p>
+<div class="math notranslate nohighlight" id="equation-eq-approx2s">
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-approx2s" title="Permalink to this equation">¶</a></span>\[\big(4h^{-2}
++q_j+2h^{-1}\tfrac{\alpha_j}{\beta_j}\big)c_j
+-2h^{-2}c_l-h^{-2}c_s-h^{-2}c_t
+=f_j+2h^{-1}\tfrac{\gamma_j}{\beta_j}\]</div>
+<p><strong>Samantekt</strong></p>
+<p>Til þess að nálga lausnagildi á jaðargildisverkefninu <a class="reference internal" href="#equation-eq-pde1">(4)</a> getum við leyst eftirfarandi  jöfnuhneppi:</p>
+<p>Fyrir <span class="math notranslate nohighlight">\((x_j, y_j)\in D\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+\big(h^{-2}\big({p_{j,l}+p_{j,r}+p_{j,s}+p_{j,t}}\big)+q_j\big)c_j
+\\
+-h^{-2}p_{j,l}c_l
+-h^{-2}p_{j,r}c_r
+-h^{-2}p_{j,s}c_s
+-h^{-2}p_{j,t}c_t
+=f_j.\end{gathered}\end{split}\]</div>
+<p>Fyrir <span class="math notranslate nohighlight">\((x_j, y_j)\in \partial D_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+\big(2h^{-2}p_{j,l}+h^{-2}p_{j,s}+h^{-2}p_{j,t}
++2h^{-1}p_j\tfrac{\alpha_j}{\beta_j}+q_j\big)c_j
+\\
+-2h^{-2}p_{j,l}c_l-h^{-2}p_{j,s}c_s-h^{-2}p_{j,t}c_t
+=f_j+2h^{-1}p_j\tfrac{\gamma_j}{\beta_j}.\end{gathered}\end{split}\]</div>
+<p>Fyrir <span class="math notranslate nohighlight">\((x_j, y_j)\in \partial D_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[c_j= \gamma_j \,.\]</div>
+</div>
+<div class="section" id="synidaemi-dirichlet-verkefni-a-ferningi">
+<h3>5.3.2. Sýnidæmi: Dirichlet-verkefni á ferningi<a class="headerlink" href="#synidaemi-dirichlet-verkefni-a-ferningi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(D\)</span> vera  <span class="math notranslate nohighlight">\(D=\{(x,y)\,;\, 0&lt;x&lt;1, 0&lt;y&lt;1\}\)</span>. Við viljum  leysa Dirichlet-verkefnið yfir <span class="math notranslate nohighlight">\(D\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+-\nabla^2u+qu=f,&amp;\text{í } D,\\
+u(x,y)=\gamma(x,y),&amp; (x,y)\in \partial D.
+\end{cases}\end{split}\]</div>
+<p>Hér erum við í sértilfellinu þegar <span class="math notranslate nohighlight">\(p=1\)</span>, og <span class="math notranslate nohighlight">\(\partial D_2\)</span> er ekki til.</p>
+<p>Setjum <span class="math notranslate nohighlight">\(h={1\over 3}\)</span>. Við röðum punktum þ.a. punktar <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=1, \dots, 4\)</span> eru innri punktar og <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=5,\dots, 16\)</span> eru jaðarpunktar. Við sjáum þetta á eftirfarandi mynd</p>
+<a class="reference internal image-reference" href="_images/Dirichlet-example.png"><img alt="_images/Dirichlet-example.png" class="align-center" src="_images/Dirichlet-example.png" style="width: 45%;" /></a>
+<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=1, \dots, 4\)</span>, notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx1s">(6)</a>, og þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+(36+q_1)c_1-9c_2-9c_3-9c_6-9c_9&amp;=f_1,\\
+(36+q_2)c_2-9c_1-9c_4-9c_7-9c_{10}&amp;=f_2,\\
+(36+q_3)c_3-9c_1-9c_4-9c_{11}-9c_{14}&amp;=f_3,\\
+(36+q_4)c_4-9c_2-9c_3-9c_{12}-9c_{15}&amp;=f_4.\\\end{aligned}\end{split}\]</div>
+<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með  <span class="math notranslate nohighlight">\(j=5,\dots, 16\)</span>, notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx2s">(8)</a>, og þá er</p>
+<div class="math notranslate nohighlight">
+\[c_j = \gamma_j.\]</div>
+<p>Það þýðir að við getum leyst jöfnuhneppið fyrir <span class="math notranslate nohighlight">\(c_1, \dots, c_4\)</span> og þá höfum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[  \begin{matrix}
+36+q_1&amp;-9&amp;-9&amp; 0\\
+-9&amp;36+q_2&amp;0&amp;-9\\
+-9&amp;0&amp;36+q_3&amp;-9\\
+0&amp;-9&amp;-9&amp;36+q_4\\
+\end{matrix}\right]
+\left[
+\begin{matrix}
+c_1\\c_2\\c_3\\c_4
+\end{matrix}
+\right]
+=\left[
+\begin{matrix}
+f_1+9\gamma_6+9\gamma_9,\\
+f_2+9\gamma_7+9\gamma_{10},\\
+f_3+9\gamma_{11}+9\gamma_{14},\\
+f_4+9\gamma_{12}+9\gamma_{15}.\\
+\end{matrix}
+\right].\end{split}\]</div>
+</div>
+<div class="section" id="synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri">
+<h3>5.3.3. Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði<a class="headerlink" href="#synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum nú á jaðargildisverkefni á <span class="math notranslate nohighlight">\(D=\{(x,y)\,;\, 0&lt;x&lt;1, 0&lt;y&lt;1\}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+-\nabla^2u+qu=f,&amp;\text{í } D,\\
+u(x,y)=\gamma(x,y),&amp; (x,y)\in \partial D_1,\\
+\alpha(x,y)u(x,y)+\dfrac{\partial u}{\partial n}(x,y)
+=\gamma(x,y),&amp; (x,y)\in \partial D_2,
+\end{cases}\end{split}\]</div>
+<p>þar sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\partial D_1  &amp;= \{(x,y)\,;\, 0&lt;x&lt;1, 0=y, y=1,~~ \text{og} \quad 0&lt;y&lt;1, x=0 \},\\
+\partial D_2 &amp;= \{(x,y)\,;\, 0&lt;y&lt;1, x=1\}.
+\end{aligned}\end{split}\]</div>
+<p>Athugum að hér er <span class="math notranslate nohighlight">\(p=1\)</span> og <span class="math notranslate nohighlight">\(\beta=1\)</span>.
+Setjum <span class="math notranslate nohighlight">\(h={1\over 3}\)</span>, og röðum punktum þ.a. <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=1,\dots, 6\)</span> eru í <span class="math notranslate nohighlight">\(\partial D_2\)</span> og <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=7, \dots, 16\)</span> eru í <span class="math notranslate nohighlight">\(\partial D_1\)</span>. Við sjáum þetta á eftirfarandi mynd</p>
+<a class="reference internal image-reference" href="_images/mixed-example.png"><img alt="_images/mixed-example.png" class="align-center" src="_images/mixed-example.png" style="width: 45%;" /></a>
+<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með  <span class="math notranslate nohighlight">\(j=7,\dots, 16\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[c_j = \gamma_j.\]</div>
+<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=1,2,4,5\)</span> notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx1s">(6)</a>, fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=3,6\)</span> notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx2s">(8)</a>, og þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+(36+q_1)c_1-9c_2-9c_4-9c_8-9c_{11}&amp;=f_1,\\
+(36+q_2)c_2-9c_1-9c_3-9c_5-9c_{9}&amp;=f_2,\\
+(36+q_3+6\alpha_3)c_3-18c_2-9c_6-9c_{10}&amp;=f_3+6\gamma_3,\\
+(36+q_4)c_4-9c_1-9c_5-9c_{12}-9c_{14}&amp;=f_4.\\
+(36+q_5)c_5-9c_2-9c_4-9c_{6}-9c_{15}&amp;=f_5.\\
+(36+q_6+6\alpha_6)c_6-9c_3-18c_{5}-9c_{16}&amp;=f_6+6\gamma_6.\\
+\end{aligned}\end{split}\]</div>
+<p>Við getum skrifað þetta með fylkjajöfnu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+\left[  \begin{matrix}
+36+q_1&amp;-9&amp;0&amp;-9&amp; 0&amp; 0\\
+-9&amp;36+q_2&amp;-9&amp;0&amp;-9&amp;0\\
+0&amp;-18&amp;36+q_3+6\alpha_3&amp;0&amp;0&amp;-9\\
+-9&amp;0&amp;0&amp;36+q_4&amp;-9&amp;0\\
+0&amp;-9&amp;0&amp;-9&amp;36+q_5&amp;-9\\
+0&amp;0&amp;-9&amp;0&amp;-18&amp;36+q_6+6\alpha_6\\
+\end{matrix}\right]
+\left[
+\begin{matrix}
+c_1\\c_2\\c_3\\c_4 \\ c_5 \\ c_6
+\end{matrix}
+\right]\\
+=\left[
+\begin{matrix}
+f_1+9\gamma_8+9\gamma_{11}\\
+f_2+9\gamma_{9}\\
+f_3+9\gamma_{10}+6\gamma_3\\
+f_4+9\gamma_{12}+9\gamma_{14}\\
+f_5+9\gamma_{15}\\
+f_6+9\gamma_{16}+6\gamma_6\\
+\end{matrix}
+\right].\end{gathered}\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="almenn-mismunaafer-a-retthyrningi">
+<h2>5.4. Almenn mismunaaðferð á rétthyrningi<a class="headerlink" href="#almenn-mismunaafer-a-retthyrningi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við lítum nú á almennt jaðargildisverkefni</p>
+<div class="math notranslate nohighlight" id="equation-eq-exercise">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-exercise" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+-\nabla\cdot\big(p\nabla u\big)+qu=f, &amp;\text{í } D,\\
+\alpha  u + \beta \dfrac{\partial u}{\partial n} = \gamma,&amp;
+\text{á } \partial D,
+\end{cases}\end{split}\]</div>
+<p>á rétthyrningi <span class="math notranslate nohighlight">\(D\)</span> in <span class="math notranslate nohighlight">\(R^2\)</span></p>
+<div class="math notranslate nohighlight">
+\[D = \ ]a,b[\times ]c,d[ \ = \{(x,y)\, ;\, a&lt;x&lt;b, c&lt;y&lt;d\}.\]</div>
+<p>Við gerum ráð fyrir að <span class="math notranslate nohighlight">\((\alpha,\beta ) \neq (0,0)\)</span> fyrir <span class="math notranslate nohighlight">\((x,y) \in \partial D\)</span>.</p>
+<p>Athugum að í hornunum geta föllin <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> og <span class="math notranslate nohighlight">\(\gamma\)</span> verið ósamfelld og afleiðan <span class="math notranslate nohighlight">\(\dfrac{\partial u}{\partial n}\)</span> getur einnig verið ekki vel skilgreind.</p>
+<p>Nú skiptum við rétthyrningnum <span class="math notranslate nohighlight">\(D\)</span> í reglulegt net með kantlengdina <span class="math notranslate nohighlight">\(h\)</span>.
+Setjum <span class="math notranslate nohighlight">\(N=(b-a)/h\)</span> og <span class="math notranslate nohighlight">\(M=(d-c)/h\)</span>, þ.a. <span class="math notranslate nohighlight">\(N\)</span> og <span class="math notranslate nohighlight">\(M\)</span> eru  náttúrlegar tölur.</p>
+<p>Hvernig getum við tölusett netpunkta í <span class="math notranslate nohighlight">\(D\)</span>?</p>
+<p><strong>Hnit netpunkta í</strong> <span class="math notranslate nohighlight">\((x,y)\)</span> <strong>plani</strong></p>
+<p>Það þýðir að við veljum skiptingu á bilinu í jafna hluta, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[a=x_1&lt;x_2&lt;x_3&lt;⋯&lt;x_{(N+1)}=b, \qquad c=y_1&lt;y_2&lt;y_3&lt;⋯&lt;y_{(M+1)}=d,\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[x_j=a+(j-1) h, \quad j=1, \dots, N+1\,,\qquad y_k=a+(k-1) h, \quad k=1, \dots, M+1.\]</div>
+<p>Athugum að hér notum við <span class="math notranslate nohighlight">\(j, k\)</span> sem byrja frá 1 (í staðinn fyrir 0), af því að við höfum í huga að Matlab (eða Octave, eða Mathematica, …) byrja í 1 í tölusetningu vigra.</p>
+<ol class="arabic simple">
+<li><strong>Tvívíð tölusetning netpunkta</strong></li>
+</ol>
+<p>Hér setjum við <span class="math notranslate nohighlight">\(1\le j \le N+1\)</span> og <span class="math notranslate nohighlight">\(1 \le k \le M+1\)</span>, og við tölusetjum netpunktana með <span class="math notranslate nohighlight">\((x_j, y_k)\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li><strong>Einföld tölusetning netpunkta</strong></li>
+</ol>
+<p>Hér  tölusetjum við netpunktana með <span class="math notranslate nohighlight">\((x_i, y_i)\)</span> þar sem <span class="math notranslate nohighlight">\(i= j+(k-1)(N+1)\)</span>. Til dæmis setjum við  <span class="math notranslate nohighlight">\(k=1\)</span> og skoðum punkta með <span class="math notranslate nohighlight">\(i= j+(k-1)(N+1)=j\)</span>, þar sem <span class="math notranslate nohighlight">\(j=1, \dots, N+1\)</span>. Síðan veljum við <span class="math notranslate nohighlight">\(k=2\)</span> og skoðum punkta með <span class="math notranslate nohighlight">\(i= j+(k-1)(N+1)=j+(N+1)\)</span>, þar sem <span class="math notranslate nohighlight">\(j=1, \dots, N+1\)</span>, og svo framvegis.</p>
+<p><strong>Uppbygging forrits</strong></p>
+<p>Til þess að byggja upp jöfnuhneppi <span class="math notranslate nohighlight">\(A{\mathbf c}={\mathbf b}\)</span> sem nálgar gildi lausna <span class="math notranslate nohighlight">\(u(x_j,y_k)\)</span> á <a class="reference internal" href="#equation-eq-exercise">(9)</a>, þurfum við líta á eftirfarandi tilvik:</p>
+<ol class="arabic simple">
+<li>Innri punktar</li>
+</ol>
+<blockquote>
+<div>Skoðum innri punkta <span class="math notranslate nohighlight">\((x_j,y_k)\)</span>  þar sem <span class="math notranslate nohighlight">\(1&lt;j&lt;N+1\)</span> og <span class="math notranslate nohighlight">\(1&lt;k&lt;M+1\)</span>. Við notum nálgunarjöfnuna <a class="reference internal" href="#equation-eq-approx2">(7)</a> hér, og við fáum fylkjastök <span class="math notranslate nohighlight">\(a_{i,i-\ell}, a_{i,i-1}, a_{i,i+1}, a_{i,i+\ell}\)</span> og <span class="math notranslate nohighlight">\(a_{i,i}\)</span>, þar sem <span class="math notranslate nohighlight">\(\ell=N+1\)</span>. Í hægri hlið hneppisins er <span class="math notranslate nohighlight">\(f_i=f(x_j,y_k)\)</span>.</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Punktar á jöðrum en ekki hornpunktar</li>
+</ol>
+<blockquote>
+<div>Skoðum punkta á jaðrinum <span class="math notranslate nohighlight">\(\partial D\)</span> sem eru ekki hornpunktar. Ef <span class="math notranslate nohighlight">\(\beta(x_j, y_k)=0\)</span>, þá gildir að</div></blockquote>
+<div class="math notranslate nohighlight">
+\[c_i=\gamma(x_j,y_k)/\alpha(x_j,y_k).\]</div>
+<p>Það þýðir að jöfnuhneppið hér er <span class="math notranslate nohighlight">\(a_{i,i}=1\)</span> og í hægri hliðinni <span class="math notranslate nohighlight">\(b_i=\gamma(x_j,y_k)/\alpha(x_j,y_k)\)</span>.</p>
+<blockquote>
+<div>Ef <span class="math notranslate nohighlight">\(\beta(x_j,y_k))\neq 0\)</span>, þá þurfum við nota  nálgunarjöfnuna <a class="reference internal" href="#equation-eq-approx2">(7)</a>.</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Hornpunktar</li>
+</ol>
+<blockquote>
+<div><p>Ef <span class="math notranslate nohighlight">\(\beta(x_j, y_k)=0\)</span>,  vitum við eins og áður hvaða gildi fallið <span class="math notranslate nohighlight">\(u\)</span> hefur í punktunum.</p>
+<p>Ef <span class="math notranslate nohighlight">\(\beta(x_j,y_k))\neq 0\)</span>, þurfum við að fara varlega, af því að föllin <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span> og <span class="math notranslate nohighlight">\(\gamma\)</span> geta verið ósamfelld. Gott er að sjá fyrir sér hvað er að gerast í hornpunktinum, og skrifa upp mismunajöfnur.</p>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>Gefin gildi í einstaka netpunktum</li>
+</ol>
+<blockquote>
+<div>Ef við viljum (eða vitum) að fallið <span class="math notranslate nohighlight">\(u\)</span> tekur gefið gildi <span class="math notranslate nohighlight">\(U_s\)</span> í einhverjum netpunktum, með <span class="math notranslate nohighlight">\(s=1, \dots, \mu\)</span>. Við tölusetjum slíka punkta með <span class="math notranslate nohighlight">\(i\)</span>. Þá gildir að einu stök fylkisins <span class="math notranslate nohighlight">\(A\)</span> í línu <span class="math notranslate nohighlight">\(i\)</span> sem eru ekki núll eru <span class="math notranslate nohighlight">\(a_{i,i}=1\)</span>. Á hægri hliðinni höfum við <span class="math notranslate nohighlight">\(b_i=U_s\)</span>.</div></blockquote>
+<p>Þegar við höfum reiknað út fylkið <span class="math notranslate nohighlight">\(A\)</span> og vigurinn <span class="math notranslate nohighlight">\(b\)</span>, þá getum við notað t.d. Matlab, (eða Octave eða Mathematica eða Maple…), til þess að fá nágunargildin <span class="math notranslate nohighlight">\(c_i\)</span>.
+T.d. getum við skrifað í Matlab:</p>
+<blockquote>
+<div>S=sparse(A); c=Sb;</div></blockquote>
+<p>Það er líka gott að teikna graf lausnarinnar.
+T.d. getum við skrifað í Matlab:</p>
+<blockquote>
+<div>surf(x,y,W’),</div></blockquote>
+<dl class="docutils">
+<dt>og jafnhæðarlínur hennar má teikna með</dt>
+<dd>contour(x,y,W’).</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli06.html" class="btn btn-neutral float-right" title="6. Bútaaðferðir" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli04.html" class="btn btn-neutral" title="4. Fourier-ummyndun" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script type="text/javascript" src="_static/custom_sage.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

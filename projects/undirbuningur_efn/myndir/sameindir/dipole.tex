@@ -1,0 +1,43 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usepackage[icelandic]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+\begin{tikzpicture}
+  \shade[top color=blue,bottom color=red,shading angle=-15] (0cm,0cm) ellipse[x radius=1cm,y radius=0.5cm, rotate=75];
+  
+   \shade[top color=blue,bottom color=red,shading angle=15] (0cm,2.5cm) ellipse[x radius=1cm,y radius=0.5cm, rotate=-75];
+   
+\shade[top color=red,bottom color=blue,shading angle=15] (2cm,0cm) ellipse[x radius=1cm,y radius=0.5cm, rotate=105];
+
+\shade[top color=red,bottom color=blue,shading angle=-15] (2cm,2.5cm) ellipse[x radius=1cm,y radius=0.5cm, rotate=-105] ;
+   
+\node[] at (0.22,0.7) (A) {$\delta ^+$};
+\node[] at (-0.1,-0.7) {$\delta ^-$};
+
+\node[] at (1.9,0.7)  (B) {$\delta ^-$};
+\node[] at (2.25,-0.7) {$\delta ^+$};
+
+\node[] at (0.25,1.8)  (C) {$\delta ^-$};
+\node[] at (-0.12,3.2) {$\delta ^+$};
+
+\node[] at (1.9,1.8)  (D) {$\delta ^+$};
+\node[] at (2.2,3.2) {$\delta ^-$};
+
+
+\draw[<->,dotted,shorten >= 0.1cm] (A) -- (B);
+\draw[<->,dotted,shorten >= 0.03cm,shorten <= 0.03cm] (A) -- (C);
+\draw[<->,dotted,shorten >= 0.03cm,shorten <= 0.03cm] (B) -- (D);
+\draw[<->,dotted,shorten >= 0.1cm,xshift=-0.05cm] (C) -- (D);
+
+\node[scale=0.6] at (1.05,1.25) {Aðdráttakraftar};
+
+
+  
+  
+  
+\end{tikzpicture}
+\end{document}

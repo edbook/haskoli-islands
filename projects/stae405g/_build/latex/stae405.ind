@@ -1,0 +1,233 @@
+\begin{theindex}
+  \providecommand*\lettergroupDefault[1]{}
+  \providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+
+  \lettergroup{A}
+  \item a\IeC {\dh }fer\IeC {\dh } minnstu fervika, \hyperpage{52}
+  \item a\IeC {\dh }fer\IeC {\dh } Newtons, \hyperpage{22}
+  \item aflei\IeC {\dh }ur, \hyperpage{57}
+  \item afr\IeC {\'u}ningur, \hyperpage{12}
+  \item afskur\IeC {\dh }ur, \hyperpage{12}
+  \item annars stigs jafna, \hyperpage{9}
+
+  \indexspace
+
+  \lettergroup{B}
+  \item bandfylki, \hyperpage{107}
+  \item br\IeC {\'u}un, \hyperpage{25}
+    \subitem br\IeC {\'u}unarmargli\IeC {\dh }a, \hyperpage{27}
+    \subitem br\IeC {\'u}unarverkefni, \hyperpage{27}
+    \subitem ferlar, \hyperpage{51}
+    \subitem margfaldir punktar, \hyperpage{33}
+    \subitem mismunakv\IeC {\'o}tatafla, \hyperpage{31}
+    \subitem Newton-form, \hyperpage{29}
+    \subitem skekkjumat, \hyperpage{43}
+    \subitem spl\IeC {\ae }sibr\IeC {\'u}un, \hyperpage{48}
+  \item br\IeC {\'u}unarmargli\IeC {\dh }a, \hyperpage{25}
+  \item br\IeC {\'u}unarpunktur, \hyperpage{25}
+    \subitem einfaldur, \hyperpage{33}
+    \subitem stig, \hyperpage{33}
+    \subitem tv\IeC {\"o}faldur, \hyperpage{33}
+
+  \indexspace
+
+  \lettergroup{E}
+  \item eigingildi, \hyperpage{105}, \hyperpage{119}
+    \subitem andhverf veldaa\IeC {\dh }fer\IeC {\dh }, \hyperpage{124}
+    \subitem sk\IeC {\'\i }fusetning Gerschgorins, \hyperpage{119}
+    \subitem veldaa\IeC {\dh }fer\IeC {\dh }, \hyperpage{121}
+    \subitem veldaa\IeC {\dh }fer\IeC {\dh } fyrir samhverf fylki, \hyperpage{123}
+  \item eiginvigur, \hyperpage{119}
+    \subitem grunnur, \hyperpage{120}
+
+  \indexspace
+
+  \lettergroup{F}
+  \item fastapunktsa\IeC {\dh }fer\IeC {\dh }, \hyperpage{17}
+    \subitem fastapunktssetningin, \hyperpage{18}
+    \subitem fyrir l\IeC {\'\i }nuleg j\IeC {\"o}fnuhneppi, \hyperpage{112}
+    \subitem Gauss-Seidel-a\IeC {\dh }fer\IeC {\dh }, \hyperpage{114}
+    \subitem Jacobi-a\IeC {\dh }fer\IeC {\dh }, \hyperpage{113}
+    \subitem skiptingara\IeC {\dh }fer\IeC {\dh }, \hyperpage{113}
+    \subitem SOR-a\IeC {\dh }fer\IeC {\dh }, \hyperpage{114}
+  \item fastapunktur, \hyperpage{17}
+  \item fleytit\IeC {\"o}lur, \hyperpage{12}
+    \subitem mantissa, \hyperpage{12}
+    \subitem markver\IeC {\dh }ir stafir, \hyperpage{12}
+  \item fylkjasta\IeC {\dh }all, \hyperpage{103}, \hyperpage{104}
+    \subitem \IeC {\'u}t fr\IeC {\'a} vigursta\IeC {\dh }li, \hyperpage{104}
+  \item f\IeC {\"o}ll
+    \subitem aflei\IeC {\dh }a, \hyperpage{3}
+    \subitem diffranlegt, \hyperpage{3}
+    \subitem r\IeC {\'u}m diffranlegra falla, \hyperpage{3}
+    \subitem r\IeC {\'u}m samfelldra falla, \hyperpage{3}
+
+  \indexspace
+
+  \lettergroup{H}
+  \item helmingunara\IeC {\dh }fer\IeC {\dh }, \hyperpage{16}
+  \item herping, \hyperpage{18}
+  \item hornal\IeC {\'\i }nugeranlegt, \hyperpage{120}
+
+  \indexspace
+
+  \lettergroup{J}
+  \item Jacobi-fylki, \hyperpage{115}
+  \item ja\IeC {\dh }argildisverkefni, \hyperpage{94}
+    \subitem Dirichlet-ja\IeC {\dh }arskilyr\IeC {\dh }i, \hyperpage{95}
+    \subitem felugildi, \hyperpage{98}
+    \subitem felupunktar, \hyperpage{98}
+    \subitem l\IeC {\'\i }nulegar aflei\IeC {\dh }uj\IeC {\"o}fnur, \hyperpage{96}
+    \subitem Neumann-ja\IeC {\dh }arskilyr\IeC {\dh }i, \hyperpage{95}
+    \subitem Robin-ja\IeC {\dh }arskilyr\IeC {\dh }i, \hyperpage{95}
+    \subitem samantekt, \hyperpage{100}
+    \subitem skiptipunktar, \hyperpage{96}
+  \item jafna besta fleygboga, \hyperpage{54}
+  \item jafna bestu l\IeC {\'\i }nu, \hyperpage{52}, \hyperpage{53}
+  \item j\IeC {\"o}fnuhneppi, \hyperpage{100}
+    \subitem \IeC {\'a}standstala, \hyperpage{106}
+    \subitem fj\IeC {\"o}ldi a\IeC {\dh }ger\IeC {\dh }a, \hyperpage{101}
+    \subitem gagnaskekkja, \hyperpage{107}
+    \subitem hlutvending, \hyperpage{102}
+    \subitem lausn me\IeC {\dh } LU-\IeC {\th }\IeC {\'a}ttun, \hyperpage{111}
+    \subitem Newton-a\IeC {\dh }fer\IeC {\dh }, \hyperpage{115}
+    \subitem skekkjumat, \hyperpage{106}
+    \subitem sk\IeC {\"o}lu\IeC {\dh } hlutvending, \hyperpage{102}
+    \subitem vending, \hyperpage{102}
+
+  \indexspace
+
+  \lettergroup{L}
+  \item Lipschitz-samfelldni, \hyperpage{93}
+  \item LU-\IeC {\th }\IeC {\'a}ttun, \hyperpage{110}
+  \item lu-\IeC {\th }\IeC {\'a}ttun, \hyperpage{107}
+
+  \indexspace
+
+  \lettergroup{M}
+  \item margli\IeC {\dh }ur, \hyperpage{26}
+    \subitem Chebyshev, \hyperpage{38}
+    \subitem Lagrange-form, \hyperpage{28}
+    \subitem Legendre, \hyperpage{41}
+    \subitem Newton-form, \hyperpage{26}
+    \subitem sta\IeC {\dh }alform, \hyperpage{26}
+    \subitem sta\IeC {\dh }la\IeC {\dh }ar, \hyperpage{38}
+    \subitem stig, \hyperpage{26}
+  \item markgildi, \hyperpage{2}
+  \item markver\IeC {\dh }ir stafir, \hyperpage{8}
+  \item Me\IeC {\dh }algildissetningin fyrir heildi, \hyperpage{72}
+  \item mismunakv\IeC {\'o}ti, \hyperpage{30}
+
+  \indexspace
+
+  \lettergroup{N}
+  \item n\IeC {\'u}llst\IeC {\"o}\IeC {\dh }, \hyperpage{15}
+
+  \indexspace
+
+  \lettergroup{O}
+  \item O-rith\IeC {\'a}ttur, \hyperpage{10}, \hyperpage{11}
+
+  \indexspace
+
+  \lettergroup{R}
+  \item reiknirit Horners, \hyperpage{26}
+  \item r\IeC {\'o}fgeisli, \hyperpage{105}
+  \item runa, \hyperpage{2}
+
+  \indexspace
+
+  \lettergroup{S}
+  \item samleitni, \hyperpage{2}
+    \subitem af stigi \(\alpha\), \hyperpage{2}
+    \subitem ferningssamleitni, \hyperpage{2}
+    \subitem l\IeC {\'\i }nuleg, \hyperpage{2}, \hyperpage{6}
+    \subitem ofurl\IeC {\'\i }nuleg, \hyperpage{2}, \hyperpage{6}
+  \item setning Taylors, \hyperpage{4}
+  \item setning Weierstrass, \hyperpage{25}
+  \item skekkja, \hyperpage{5}, \hyperpage{81}
+    \subitem a\IeC {\dh }fer\IeC {\dh }arskekkja, \hyperpage{5}
+    \subitem algildi, \hyperpage{5}
+    \subitem eftir\IeC {\'a}mat, \hyperpage{6}
+    \subitem fyrirframmat, \hyperpage{6}
+    \subitem gagnaskekkja, \hyperpage{9}
+    \subitem hlutfallsleg, \hyperpage{5}
+    \subitem mannlegar villur, \hyperpage{5}
+    \subitem m\IeC {\ae }liskekkja, \hyperpage{5}
+    \subitem reikningsskekkja, \hyperpage{5}
+    \subitem styttingarskekkja, \hyperpage{9}
+  \item skekkjumat, \hyperpage{105}
+  \item sk\IeC {\'\i }fusetning Gerschgorins, \hyperpage{119}
+  \item snertill, \hyperpage{22}
+  \item sni\IeC {\dh }ilsa\IeC {\dh }fer\IeC {\dh }, \hyperpage{20}
+  \item spl\IeC {\ae }sibr\IeC {\'u}un, \hyperpage{48}
+    \subitem fyrsta stigs, \hyperpage{49}
+    \subitem \IeC {\th }ri\IeC {\dh }ja stigs, \hyperpage{49}
+  \item sta\IeC {\dh }all
+    \subitem \(\ell_\infty\), \hyperpage{37}
+    \subitem \(\ell_2\), \hyperpage{37}
+
+  \indexspace
+
+  \lettergroup{T}
+  \item Taylor-margli\IeC {\dh }a, \hyperpage{3}
+  \item t\IeC {\'\i }maskref, \hyperpage{81}
+  \item t\IeC {\"o}luleg diffrun, \hyperpage{57}
+    \subitem bakmismunur, \hyperpage{58}
+    \subitem frammismunur, \hyperpage{57}
+    \subitem mi\IeC {\dh }setttur mismunakv\IeC {\'o}ti fyrir a\IeC {\dh }ra aflei\IeC {\dh }u, \hyperpage{59}
+    \subitem mi\IeC {\dh }settur mismunakv\IeC {\'o}ti, \hyperpage{58}
+    \subitem Richardson \IeC {\'u}tgiskun, \hyperpage{62}
+    \subitem skekkjumat, \hyperpage{60}
+  \item t\IeC {\"o}luleg heildun, \hyperpage{57}, \hyperpage{66}
+    \subitem mi\IeC {\dh }punktsreglan, \hyperpage{68}
+    \subitem Newton-Cotes, \hyperpage{67}
+    \subitem regla Simpsons, \hyperpage{69}
+    \subitem samsett, \hyperpage{70}
+    \subitem samsett regla Simpsons, \hyperpage{71}
+    \subitem samsetta mi\IeC {\dh }punktsreglan, \hyperpage{71}
+    \subitem samsetta trapisureglan, \hyperpage{70}
+    \subitem skekkjumat, \hyperpage{72}
+    \subitem trapisureglan, \hyperpage{68}
+
+  \indexspace
+
+  \lettergroup{U}
+  \item upphafsgildisverkefni, \hyperpage{77}
+    \subitem Adams-Bashforth, \hyperpage{90}
+    \subitem a\IeC {\dh }fer\IeC {\dh } Eulers, \hyperpage{82}
+    \subitem a\IeC {\dh }fer\IeC {\dh } Heun, \hyperpage{84}
+    \subitem annars stigs Runge-Kutta, \hyperpage{84}
+    \subitem beinar/\IeC {\'o}beinar a\IeC {\dh }fer\IeC {\dh }ir, \hyperpage{81}
+    \subitem breytileg skrefast\IeC {\ae }r\IeC {\dh }, \hyperpage{88}
+    \subitem endurb\IeC {\ae }tt a\IeC {\dh }fer\IeC {\dh } Eulers, \hyperpage{83}
+    \subitem fj\IeC {\"o}lskrefaa\IeC {\dh }fer\IeC {\dh }ir, \hyperpage{90}
+    \subitem forsagnar- og lei\IeC {\dh }r\IeC {\'e}ttingarskref, \hyperpage{84}
+    \subitem fyrsta stigs, \hyperpage{79}
+    \subitem heildarskekkja, \hyperpage{86}
+    \subitem jafngild hneppi, \hyperpage{80}
+    \subitem klass\IeC {\'\i }ska Runge-Kutta, \hyperpage{85}
+    \subitem n\IeC {\'a}lgunargildi, \hyperpage{81}
+    \subitem Runge-Kutta a\IeC {\dh }fer\IeC {\dh }ir, \hyperpage{84}
+    \subitem Runge-Kutta-Fehlberg (RKF45), \hyperpage{88}
+    \subitem samleitni, \hyperpage{92}
+    \subitem samr\IeC {\ae }mi, \hyperpage{92}
+    \subitem skref, \hyperpage{82}
+    \subitem sta\IeC {\dh }arskekkja, \hyperpage{86}
+    \subitem st\IeC {\"o}\IeC {\dh }ugleiki, \hyperpage{93}
+    \subitem tilvist og \IeC {\'o}tv\IeC {\'\i }r\IeC {\ae }\IeC {\dh }ni, \hyperpage{79}
+
+  \indexspace
+
+  \lettergroup{V}
+  \item vigursta\IeC {\dh }all, \hyperpage{103}
+
+  \indexspace
+
+  \lettergroup{\TH}
+  \item \IeC {\th }r\IeC {\'\i }hyrningsfylki, \hyperpage{107}
+
+\end{theindex}

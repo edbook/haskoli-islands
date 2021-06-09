@@ -1,0 +1,727 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Hlutafleiðujöfnur &mdash; Stærðfræðigreining IV 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining IV 2019" href="index.html"/>
+        <link rel="next" title="2. Fourier-raðir" href="Kafli02.html"/>
+        <link rel="prev" title="Gagnlegar upplýsingar" href="umnamskeidid.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining IV
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="umnamskeidid.html">Gagnlegar upplýsingar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsefni">Námsefnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#fyrirlestrar">Fyrirlestrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#daematimar-og-vinnustofur">Dæmatímar og vinnustofur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#skiladaemi">Skiladæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsmat">Námsmat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#tolvunotkun">Tölvunotkun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#a-taka-namskeii-i-anna-sinn">Að taka námskeiðið í annað sinn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#vitalstimar-kennara-og-fyrirspurnir">Viðtalstímar kennara og fyrirspurnir</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Hlutafleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rithattur-fjolvisir">1.1.1. Ritháttur - Fjölvísir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rithattur-laplace-virki">1.1.2. Ritháttur - Laplace-virki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-stig-hlutafleiu-og-hlutafleiujofnu">1.1.3. Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linulegar-hlutafleiujofnur">1.1.4. Línulegar hlutafleiðujöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#daemi-um-hlutafleiujofnur-i-elisfraei">1.2. Dæmi um hlutafleiðujöfnur í eðlisfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#varmaleinijafnan">1.2.1. Varmaleiðnijafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bylgjujafnan">1.2.2. Bylgjujafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-sveifla-a-einvium-streng">1.2.3. Dæmi - Sveifla á einvíðum streng</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hliarskilyri-vel-framsett-verkefni">1.3. Hliðarskilyrði. Vel framsett verkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#upphafsskilyri">1.3.1. Upphafsskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jaarskilyri">1.3.2. Jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vel-framsett-verkefni">1.3.3. Vel framsett verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fyrsta-stigs-jofnur">1.4. Fyrsta stigs jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kennilinuaferin">1.4.1. Kennilínuaðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">1.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">1.4.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.4.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reikniafer">1.4.6. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#urlausn-me-laplace-ummyndun">1.4.7. Úrlausn með Laplace-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi">1.4.8. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Fourier-raðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#inngangur">2.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#skilgreining">2.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#id1">2.2. Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id2">2.2.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id3">2.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-reiknireglur">2.2.3. Setning - Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id4">2.2.4. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#samleitni-fourier-raa">2.3. Samleitni Fourier-raða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#reiknireglur-um-innfeldi">2.3.1. Reiknireglur um innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#cauchy-schwarz-ojafna">2.3.2. Cauchy-Schwarz ójafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#regla-pyagorasar">2.3.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#bessel-ojafnan">2.3.4. Bessel-ójafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id5">2.3.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning">2.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-andhverfuformula-fouriers">2.3.7. Setning - Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-parseval-jafnan">2.3.8. Setning - Parseval-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#urlausn-a-hlutafleiujofnum">2.4. Úrlausn á hlutafleiðujöfnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#jafnstae-framlenging-og-kosinus-ro">2.4.1. Jafnstæð framlenging og kósínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#oddstae-framlenging-og-sinus-ro">2.4.2. Oddstæð framlenging og sínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id6">2.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi">2.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-sveiflandi-strengur">2.4.5. Dæmi - Sveiflandi strengur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-varmaleini">2.4.6. Dæmi - Varmaleiðni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#id1">3.1. Eigingildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi">3.1.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-baum-endapunktum">3.1.2. Fallsjaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#afleiuskilyri-i-baum-endapunktum">3.1.3. Afleiðuskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum">3.1.4. Fallsjaðarskilyrði í öðrum endapunkti og afleiðuskilyrði í hinum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#askilnaur-breytistaera">3.2. Aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sveiflandi-strengur-aftur">3.2.1. Sveiflandi strengur - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#anna-daemi">3.2.2. Annað dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#virkjar-af-sturm-liouville-ger">3.3. Virkjar af Sturm-Liouville-gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining">3.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id2">3.3.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id3">3.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id4">3.3.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#formula-greens">3.3.5. Formúla Greens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-og-skilgreining">3.3.6. Setning og skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eigingildisverkefni-af-sturmliouvilleger">3.4. Eigingildisverkefni af Sturm–Liouville–gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id5">3.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning">3.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id6">3.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id7">3.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id8">3.4.5. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#green-foll-fyrir-jaargildisverkefni">3.5. Green-föll fyrir jaðargildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id9">3.5.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id10">3.5.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eiginfallaliun-og-greenfoll">3.6. Eiginfallaliðun og Green–föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#reikniafer">3.6.1. Reikniaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#urlausn-hlutafleiujafa-me-eiginfallaroum">3.7. Úrlausn hlutafleiðujafa með eiginfallaröðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi">3.7.1. Dirichlet-verkefnið á rétthyrningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu">3.7.2. Dirichlet-verkefnið á skífu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#varmaleinijafnan-me-timahaum-jaarskilyrum">3.7.3. Varmaleiðnijafnan með tímaháðum jaðarskilyrðum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#afram-um-eigingildisverkefni-askilnaur-breytistaera">3.8. Áfram um eigingildisverkefni - aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi-aftur">3.8.1. Dirichlet-verkefnið á rétthyrningi - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu-aftur">3.8.2. Dirichlet-verkefnið á skífu - aftur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#tvofaldar-fourier-rair">3.9. Tvöfaldar Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-retthyrnd-tromma">3.9.1. Dæmi - Rétthyrnd tromma</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#almennt-um-eiginfallarair">3.10. Almennt um eiginfallaraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-alhaeft-varmaleiniverkefni">3.10.1. Dæmi - Alhæft varmaleiðniverkefni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Fourier-ummyndun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-reiknireglur-plancerel-jafnan">4.1. Fourier-ummyndun. Reiknireglur. Plancerel-jafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-l-1-mathbb-r">4.1.1. Skilgreining á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-fourier-ummyndun">4.1.2. Skilgreining á Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#synidaemi">4.1.3. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#reiknireglur">4.1.4. Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#rulesft">4.1.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#eiginleikar-fourier-myndar">4.1.6. Eiginleikar Fourier-myndar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#plancerel-jafnan">4.1.7. Plancerel-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers-afleiujofnur">4.2. Andhverfuformúla Fouriers. Afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers">4.2.1. Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#foldun-og-fourier-ummyndun">4.2.2. Földun og Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#afleiujofnur-og-fourier-ummyndun">4.2.3. Afleiðujöfnur og Fourier-ummyndun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#urlausn-a-hlutafleiujofnum-me-fourier-ummyndun">4.3. Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#einvia-bylgjujafnan-og-d-alembert-formula">4.3.1. Einvíða bylgjujafnan og d’Alembert-formúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#bylgjujafnan-fourier-ummyndun-og-foldun">4.3.2. Bylgjujafnan, Fourier-ummyndun og földun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#varmaleinijafnan-fourier-ummyndun-og-foldun">4.3.3. Varmaleiðnijafnan, Fourier-ummyndun og földun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-og-leifareikningur">4.4. Fourier-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fourier-myndir-reiknaar-me-leifareikningi">4.4.1. Fourier-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-fourier-myndir-reiknaar-me-leifareikningi">4.4.2. Andhverfar Fourier-myndir reiknaðar með leifareikningi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#laplace-ummyndun-og-leifareikningur">4.5. Laplace-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir">4.5.1. Andhverfar Laplace-myndir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-reiknaar-me-leifareikningi">4.5.2. Andhverfar Laplace-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-og-afleiujofnur">4.5.3. Andhverfar Laplace-myndir og afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id4">4.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Mismunaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-venjulegar-afleiujofnur">5.1. Mismunaaðferð fyrir venjulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi">5.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#heildun-yfir-hlutbil">5.2. Heildun yfir hlutbil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.2.1. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#linuleg-bruun-og-ufugrunnfoll">5.2.2. Línuleg brúun og þúfugrunnföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-hlutaafleiujofnur">5.3. Mismunaaðferð fyrir hlutaafleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#nalgunarjafna">5.3.1. Nálgunarjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-dirichlet-verkefni-a-ferningi">5.3.2. Sýnidæmi: Dirichlet-verkefni á ferningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri">5.3.3. Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#almenn-mismunaafer-a-retthyrningi">5.4. Almenn mismunaaðferð á rétthyrningi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Bútaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#hlutheildun-innfeldi-og-tvilinulegt-form">6.1. Hlutheildun, innfeldi og tvílínulegt form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefni-i-mathbb-r">6.1.1. Jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefnin-i-mathbb-r-2">6.1.2. Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-fyrir-dirichlet-verkefni">6.2. Aðferð Galerkins fyrir Dirichlet-verkefnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni">6.2.1. Galerkin-aðferðir í einni vídd fyrir Dirichlet-verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni">6.2.2. Galerkin-aðferðir í tveimur víddum fyrir Dirichlet-verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-einni-vidd">6.3. Bútaaðferð í einni vídd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#blondu-jaarskilyri-i-baum-endapunktum">6.3.1. Blönduð jaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fallsjaarskilyri">6.3.2. Fallsjaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-me-almennum-jaarskilyrum">6.4. Aðferð Galerkins með almennum jaðarskilyrðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-einni-vidd">6.4.1. Í einni vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-tveimur-viddum">6.4.2. Í tveimur víddum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#synidaemi">6.4.3. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-tveimur-viddum">6.5. Bútaaðferð í tveimur víddum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#net-me-rihyrningum">6.5.1. Net með þríhyrningum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#ufugrunnfoll">6.5.2. Þúfugrunnföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#go-ahead">6.5.3. Go ahead!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id1">6.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining IV</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>1. Hlutafleiðujöfnur</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli01.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hlutafleiujofnur">
+<h1>1. Hlutafleiðujöfnur<a class="headerlink" href="#hlutafleiujofnur" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<div class="section" id="inngangur">
+<h2>1.1. Inngangur<a class="headerlink" href="#inngangur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Mörg verkefni í t.a.m. verkfræði og eðlisfræði krefjast þess að ákvarða fall af mörgum breytistærðum sem lýsir einhverjum eiginleika kerfis. Slíkum föllum er oft lýst með afleiðujöfnum þar sem hlutafleiður með tilliti til mismunandi breytistærða koma við sögu. Slíkar afleiðujöfnur nefnast <em>hlutafleiðujöfnur</em>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(u\)</span> er fall af breytistærðunum <span class="math notranslate nohighlight">\(x_1,x_2,\ldots,x_m\)</span> skrifum við hlutafleiður þess með tilliti til <span class="math notranslate nohighlight">\(x_j\)</span> með
+einhverjum eftirfarandi tákna</p>
+<div class="math notranslate nohighlight">
+\[\partial_j u, \quad \frac{\partial u}{\partial x_j},\quad  \partial_{x_j} u, \quad u'_{x_j} \quad \text{eða}\quad  u_{x_j}.\]</div>
+<p>Í sumum tilfellum hefur skapast venja að nota ákveðið táknmál fyrir breytistærðirnar. Til dæmis er <span class="math notranslate nohighlight">\(t\)</span> gjarnan notað fyrir tíma og <span class="math notranslate nohighlight">\(x,y,z\)</span> fyrir rúmvíddirnar þrjár.</p>
+<p>Þegar breytistærðirnar eru margar getur verið þægilegt að nota eftirfarandi rithátt:</p>
+<div class="section" id="rithattur-fjolvisir">
+<h3>1.1.1. Ritháttur - Fjölvísir<a class="headerlink" href="#rithattur-fjolvisir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(\alpha = (\alpha_1,\ldots,\alpha_m)\)</span> er vigur af ekki neikvæðum heiltölum skilgreinum við hlutafleiðuvirkjann <span class="math notranslate nohighlight">\(\partial^\alpha\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\partial^\alpha u = \partial_1^{\alpha_1}\cdots \partial_m^{\alpha_m} u.\]</div>
+<p>Vigurinn <span class="math notranslate nohighlight">\(\alpha\)</span> nefnist í þessu samhengi <em>fjölvísir</em>.</p>
+</div>
+<div class="section" id="rithattur-laplace-virki">
+<h3>1.1.2. Ritháttur - Laplace-virki<a class="headerlink" href="#rithattur-laplace-virki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Virkinn</p>
+<div class="math notranslate nohighlight">
+\[\Delta = \partial_{x_1}^2+\cdots + \partial_{x_m}^2\]</div>
+<p>kallast Laplace-virkinn í <span class="math notranslate nohighlight">\(m\)</span> breytistærðum.</p>
+</div>
+<div class="section" id="skilgreining-stig-hlutafleiu-og-hlutafleiujofnu">
+<h3>1.1.3. Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu<a class="headerlink" href="#skilgreining-stig-hlutafleiu-og-hlutafleiujofnu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hlutafleiðan <span class="math notranslate nohighlight">\(\partial^\alpha u\)</span> hefur stig <span class="math notranslate nohighlight">\(|\alpha| = \alpha_1 + \cdots + \alpha_m\)</span>.  Hæsta stig á afleiðu sem kemur fyrir í hlutafleiðujöfnu nefnist <em>stig</em> hlutafleiðujöfnunnar.</p>
+<p>Við munum skoða <strong>dæmi um hlutafleiðujöfnur</strong> og læra <strong>mismunandi aðferðir við að leysa þær</strong>. Í sumum tilfellum má leysa jöfnurnar og skrifa niður beina lausn en oft þarf að nota <strong>tölulegar aðferðir</strong> til að leysa verkefnin. Töluleg verkefni verða viðfangsefni síðara hluta námskeiðsins.</p>
+</div>
+<div class="section" id="linulegar-hlutafleiujofnur">
+<h3>1.1.4. Línulegar hlutafleiðujöfnur<a class="headerlink" href="#linulegar-hlutafleiujofnur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við munum eingöngu fást við línulegar hlutafleiðujöfnur í þessu námskeiði. Hlutafleiðujafna er sögð vera <strong>línulegt</strong> ef hægt er að rita hana á forminu</p>
+<div class="math notranslate nohighlight">
+\[\sum_{|\alpha|\leq m} a_\alpha(x) \partial^\alpha u(x) = f(x), \quad x\in X \subseteq \mathbb{R}^n.\]</div>
+<p>Fallið <span class="math notranslate nohighlight">\(u\)</span> er óþekkta stærðin sem við viljum reikna, <span class="math notranslate nohighlight">\(a_\alpha(x)\)</span> eru stuðlar sem geta verið háðir <span class="math notranslate nohighlight">\(x\)</span> og fallið <span class="math notranslate nohighlight">\(f\)</span> er gefið. Ef <span class="math notranslate nohighlight">\(f\)</span> er núllfallið segjum við að hlutafleiðujafan sé <strong>óhliðruð</strong> en annars að hún sé <strong>hliðruð</strong>.</p>
+<p>Við munum einnig nota ritháttin</p>
+<div class="math notranslate nohighlight">
+\[Lu = f\]</div>
+<p>þar sem við lítum á</p>
+<div class="math notranslate nohighlight">
+\[L = \sum_{|\alpha|\leq m} a_\alpha(x) \partial^\alpha\]</div>
+<p>sem línulegan virkja <span class="math notranslate nohighlight">\(L: C^m(X) \to C(X), X\subseteq \mathbb{R}^n\)</span> sem úthlutar falli línulegri samantekt af fallinu sjálfu og hlutafleiðum þess upp að stigi <span class="math notranslate nohighlight">\(m\)</span>. Virkinn <span class="math notranslate nohighlight">\(L\)</span> er línulegur því</p>
+<div class="math notranslate nohighlight">
+\[L(au + bv) = aL(u) + bL(v)\]</div>
+<p>fyrir hvaða tölur <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> sem er. <strong>Kjarni</strong> eða <strong>núllrúm</strong> virkjans <span class="math notranslate nohighlight">\(L\)</span> er skilgreint sem mengi allra þeirra <span class="math notranslate nohighlight">\(u\in C^m(X)\)</span> sem eru lausnir á óhliðruðu jöfnunni <span class="math notranslate nohighlight">\(Lu=0\)</span>. Ef <span class="math notranslate nohighlight">\(u_p\)</span> er lausn á <span class="math notranslate nohighlight">\(Lu = f\)</span> þá er sérhver önnur lausn á forminu <span class="math notranslate nohighlight">\(u = v+u_p\)</span> þar sem <span class="math notranslate nohighlight">\(v\)</span> er í núllrúminu.</p>
+</div>
+</div>
+<div class="section" id="daemi-um-hlutafleiujofnur-i-elisfraei">
+<h2>1.2. Dæmi um hlutafleiðujöfnur í eðlisfræði<a class="headerlink" href="#daemi-um-hlutafleiujofnur-i-elisfraei" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="varmaleinijafnan">
+<h3>1.2.1. Varmaleiðnijafnan<a class="headerlink" href="#varmaleinijafnan" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(T\)</span> er fall af <span class="math notranslate nohighlight">\(m+1\)</span> breytistærðum <span class="math notranslate nohighlight">\(x_1,\ldots,x_m,t\)</span> kallast jafnan</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial t} - \kappa \Delta T = f(x_1,\ldots,x_m,t)\]</div>
+<p><em>varmaleiðnijafnan</em> í <span class="math notranslate nohighlight">\(m\)</span> rúmvíddum. Talan <span class="math notranslate nohighlight">\(\kappa\)</span> ákvarðast af eiginleikum þess kerfis sem fengist er við og fallið <span class="math notranslate nohighlight">\(f\)</span> svarar til ytri áhrifa á kerfið.</p>
+<p>Varmaleiðnijafnan lýsir því hvernig hitastig <span class="math notranslate nohighlight">\(T\)</span> í hlut breytist með tíma. Þá svarar <span class="math notranslate nohighlight">\(f\)</span> til áhrifa ytri varmagjafa. Jafnan getur einnig lýst dreifingu efnis sem leyst er upp í vökva og er þá gjarnan nefnd <em>sveimjafna</em>.</p>
+</div>
+<div class="section" id="bylgjujafnan">
+<h3>1.2.2. Bylgjujafnan<a class="headerlink" href="#bylgjujafnan" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(u\)</span> er fall af <span class="math notranslate nohighlight">\(m+1\)</span> breytistærðum <span class="math notranslate nohighlight">\(t, x_1,\ldots,x_m\)</span> kallast jafnan</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 u}{\partial t^2} - c^2 \Delta u = f(x_1,\ldots,x_m,t)\]</div>
+<p><em>bylgjujafnan</em> í <span class="math notranslate nohighlight">\(m\)</span> rúmvíddum. Talan <span class="math notranslate nohighlight">\(c\)</span> hefur einingu hraða og ákvarðast af eiginleikum þess kerfis sem fengist er við og fallið <span class="math notranslate nohighlight">\(f\)</span> svarar til svarar til ytri áhrifa á kerfið.</p>
+<p>Bylgjujafnan kemur mjög víða við sögu í eðlisfræði. Hún getur til dæmis lýst sveiflu á einvíðum streng eða tvívíðri trommu en þá táknar <span class="math notranslate nohighlight">\(u\)</span> færslu strengsins eða trommuskinnsins frá jafnvægisstöðu og <span class="math notranslate nohighlight">\(f\)</span> svarar til ytri krafts, t.d. ef strengurinn er plokkaður eða tromman slegin. Annað dæmi er lýsing á útbreiðslu rafsegulbylgna en í því tilfelli má leiða bylgjujöfnuna út frá jöfnum Maxwells.</p>
+</div>
+<div class="section" id="daemi-sveifla-a-einvium-streng">
+<h3>1.2.3. Dæmi - Sveifla á einvíðum streng<a class="headerlink" href="#daemi-sveifla-a-einvium-streng" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hér má sjá lausn á bylgjujöfnunni</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial^2 u(x,t)}{\partial t^2} - c^2  \frac{\partial^2 u(x,t)}{\partial x^2} = 0\]</div>
+<p>fyrir <span class="math notranslate nohighlight">\(x\)</span> á bilinu <span class="math notranslate nohighlight">\([0,L]\)</span> með jaðarskilyrðunum <span class="math notranslate nohighlight">\(u(0,t) = u(L,t)=0\)</span> (strengurinn er fastur í báða enda) og upphafsskilyrðunum <span class="math notranslate nohighlight">\(u(x,0) = a(x),~\partial_t u(x,0) = b(x)\)</span>. Upphaflegu stillingarnar eru <span class="math notranslate nohighlight">\(L=2\pi\)</span>, <span class="math notranslate nohighlight">\(a(x) = \sin(2x)+\sin(3x)\)</span> og <span class="math notranslate nohighlight">\(b(x) = \sin(x)\)</span>.</p>
+<div id="com-KKUtWUD" style="display: inline-block;"></div>
+<script>
+var ggbApp_com-KKUtWUD = new GGBApplet({
+"appName": "graphing", 
+"width": 700, 
+"height": 550, 
+"material_id":" cfyvqajc", 
+"preventFocus": true, 
+"showResetIcon": true, 
+"enableShiftDragZoom": true 
+}, true);
+ggbAppletId["com-KKUtWUD"] = ggbApp_com-KKUtWUD;
+</script><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="hliarskilyri-vel-framsett-verkefni">
+<h2>1.3. Hliðarskilyrði. Vel framsett verkefni<a class="headerlink" href="#hliarskilyri-vel-framsett-verkefni" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Skoðum verkefnið að ákvarða fall <span class="math notranslate nohighlight">\(u\)</span> sem uppfyllir hlutafleiðujöfnu <span class="math notranslate nohighlight">\(Lu = f\)</span> á mengi <span class="math notranslate nohighlight">\(X \times I \in \mathbb{R}^{n+1}\)</span>, þar sem <span class="math notranslate nohighlight">\(X\subseteq \mathbb{R}^n\)</span> er opið mengi og <span class="math notranslate nohighlight">\(I \subseteq \mathbb{R}\)</span> er bil. Hugsum um breytuna <span class="math notranslate nohighlight">\(x\in X\)</span> sem rúmbreytu og breytuna <span class="math notranslate nohighlight">\(t\in I\)</span> sem tíma.</p>
+<p>Til að ákvarða <span class="math notranslate nohighlight">\(u\)</span>  ótvírætt þarf oft hliðarskilyrði á fallið. Þau geta verið á eftirfarandi formi.</p>
+<div class="section" id="upphafsskilyri">
+<h3>1.3.1. Upphafsskilyrði<a class="headerlink" href="#upphafsskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Þá eru gildi á fallinu <span class="math notranslate nohighlight">\(u\)</span> og einhverjum tímaafleiðum þess <span class="math notranslate nohighlight">\(\partial_t u,\partial_t^2 u,\ldots\)</span> gefin á ákveðnum upphafstíma. Nefnast einnig <em>Cauchy-skilyrði</em>.</p>
+</div>
+<div class="section" id="jaarskilyri">
+<h3>1.3.2. Jaðarskilyrði<a class="headerlink" href="#jaarskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skilgreinum stefnuafleiðu <span class="math notranslate nohighlight">\(u\)</span> út um jaðar <span class="math notranslate nohighlight">\(X\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial u}{\partial n} = \nabla u \cdot \vec n\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\nabla\)</span> er stigull með tilliti til rúmbreytanna og <span class="math notranslate nohighlight">\(\vec n\)</span> er einingarþvervigur sem stefnir út úr <span class="math notranslate nohighlight">\(X\)</span> (þegar það hefur merkingu).</p>
+<p>Mikilvæg jaðarskilyrði sem koma upp víða í eðlisfræði eru á eftirfarandi formi</p>
+<ol class="arabic simple">
+<li>Lausnin <span class="math notranslate nohighlight">\(u\)</span> er tilgreind á jaðri svæðisins. Nefnist <em>Dirichlet-skilyðri</em> eða <em>fallsjaðarskilyrði</em>.</li>
+<li>Stefnuafleiðan <span class="math notranslate nohighlight">\(\partial u/\partial n\)</span> er tilgreind á jaðri svæðisins. Nefnist <em>Neumann-skilyrði</em> eða <em>flæðisskilyrði</em>.</li>
+<li>Línuleg samantekt af <span class="math notranslate nohighlight">\(u\)</span> og <span class="math notranslate nohighlight">\(\partial u/\partial n\)</span> er tilgreind á jaðri svæðis. Nefnist <em>Robin-skilyrði</em> eða <em>blandað jaðarskilyrði</em>.</li>
+</ol>
+<p>Athugið að jaðarskilyrði fyrir venjulegar afleiðujöfnur eru yfirleitt í 1 eða 2 punktum en jaðar mengis <span class="math notranslate nohighlight">\(X \subseteq \mathbb{R}\)</span> getur verið mjög almennur.</p>
+</div>
+<div class="section" id="vel-framsett-verkefni">
+<h3>1.3.3. Vel framsett verkefni<a class="headerlink" href="#vel-framsett-verkefni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Úrlausn á hlutafleiðujöfnu með hliðarskilyrðum nefnist <em>vel framsett verkefni</em>, ef eftirfarandi
+þrjú skilyrði eru uppfyllt:</p>
+<ol class="arabic simple">
+<li><strong>Tilvist:</strong> Til er lausn sem uppfyllir jöfnuna og öll hliðarskilyrðin.</li>
+<li><strong>Ótvíræðni:</strong> Aðeins ein lausn er til.</li>
+<li><strong>Stöðugleiki:</strong> Lausnin er stöðug í þeim skilningi að lítilsháttar frávik frá hliðarskilyrðum kemur fram í lítilsháttar fráviki frá lausninni. Í hverju verkefni um sig þarf að skigreina hvaða mælikvarði er lagður á frávik í hliðarskilyrðum og í lausn.</li>
+</ol>
+<p>Við munum leggja mesta áherslu á skilyrðið <strong>1. Tilvist</strong> í þessu námskeiði.</p>
+</div>
+</div>
+<div class="section" id="fyrsta-stigs-jofnur">
+<h2>1.4. Fyrsta stigs jöfnur<a class="headerlink" href="#fyrsta-stigs-jofnur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Línuleg fyrsta stigs hlutafleiðujafna af tveimur breytistærðum <span class="math notranslate nohighlight">\((x,y)\)</span> er af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[a(x,y)\frac{\partial u}{\partial x} + b(x,y) \frac{\partial u}{\partial y} + c(x,y)u = f(x,y).\]</div>
+<p>Skoðum aðferðir við að leysa slíkar jöfnur.</p>
+<div class="section" id="kennilinuaferin">
+<h3>1.4.1. Kennilínuaðferðin<a class="headerlink" href="#kennilinuaferin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+</div>
+<div class="section" id="setning">
+<h3>1.4.2. Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fall <span class="math notranslate nohighlight">\(u\in C^1(\mathbb{R}^2)\)</span> er lausn á jöfnunni</p>
+<div class="math notranslate nohighlight">
+\[a\frac{\partial u}{\partial x}+ b\frac{\partial u}{\partial y} = 0\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\((a,b)\in\mathbb{R}^2\)</span> og <span class="math notranslate nohighlight">\((a,b)\neq (0,0)\)</span> þá og því aðeins að <span class="math notranslate nohighlight">\(u\)</span> sé af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[u(x,y) = f(bx-ay)\]</div>
+<p>með <span class="math notranslate nohighlight">\(f\in C^1(\mathbb{R})\)</span>.</p>
+</div>
+<div class="section" id="id1">
+<h3>1.4.3. Setning<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Upphafsgildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{\begin {array}{l}
+a\frac{\partial u}{\partial x}+ b\frac{\partial u}{\partial y} = 0, \quad (x,y)\in \mathbb{R}^2, \\
+u(x,0) = \phi(x),\quad x \in \mathbb{R}
+\end{array}\right.\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\phi \in C^1(\mathbb{R})\)</span> er gefið fall og <span class="math notranslate nohighlight">\(b\neq 0\)</span> hefur ótvírætt ákvarðaða lausn</p>
+<div class="math notranslate nohighlight">
+\[u(x,y) = \phi(x-ay/b).\]</div>
+</div>
+<div class="section" id="skilgreining">
+<h3>1.4.4. Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lína sem hefur stefnuvigur samsíða <span class="math notranslate nohighlight">\((a, b)\)</span> nefnist kennilína afleiðuvirkjans <span class="math notranslate nohighlight">\(a\partial_x + b\partial_y\)</span>.</p>
+</div>
+<div class="section" id="id2">
+<h3>1.4.5. Skilgreining<a class="headerlink" href="#id2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Sérhver lausn  á afleiðujöfnuhneppinu</p>
+<div class="math notranslate nohighlight">
+\[\xi' = a(\xi,\eta), \qquad \eta' = b(\xi,\eta),\]</div>
+<p>nefnist kenniferill eða kennilína afleiðuvirkjans</p>
+<div class="math notranslate nohighlight">
+\[a(x,y)\frac{\partial}{\partial x} + b(x,y) \frac{\partial}{\partial y}\]</div>
+</div>
+<div class="section" id="reikniafer">
+<h3>1.4.6. Reikniaðferð<a class="headerlink" href="#reikniafer" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Finna skal lausn á upphafsgildisverkefninu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{\begin {array}{l}
+a(x,y)\frac{\partial u}{\partial x}+ b(x,y)\frac{\partial u}{\partial y} = 0, \quad (x,y)\in \mathbb{R}^2, \\
+u(x,0) = \phi(x), \quad x \in \mathbb{R}.
+\end{array}\right.\end{split}\]</div>
+<ol class="arabic simple">
+<li>Tökum punkt <span class="math notranslate nohighlight">\((x,y)\)</span> í <span class="math notranslate nohighlight">\((\xi,\eta)\)</span> plani. Leysum verkefnið</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\xi' = a(\xi,\eta), \qquad \eta' = b(\xi,\eta), \qquad \xi(0) = x, \quad \eta(0) = y.\]</div>
+<ol class="arabic simple" start="2">
+<li>Ef til er ótvírætt ákvörðuð lausn <span class="math notranslate nohighlight">\((\xi(t),\eta(t))\)</span> á einhverju opnu bili fyrir sérhvert <span class="math notranslate nohighlight">\((x,y)\)</span> og ferillinn sker <span class="math notranslate nohighlight">\(\xi\)</span>-ásinn í nákvæmlega einum punkti <span class="math notranslate nohighlight">\((s(x,y),0)\)</span> þá er lausnin gefin með formúlunni</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[u(x,y) = \phi(s(x,y)).\]</div>
+</div>
+<div class="section" id="urlausn-me-laplace-ummyndun">
+<h3>1.4.7. Úrlausn með Laplace-ummyndun<a class="headerlink" href="#urlausn-me-laplace-ummyndun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Laplace ummyndun er gagnleg þegar leysa skal upphafsgildisverkefni og virkar einnig þegar um hlutafleiðujöfnur er að ræða. Eftirfarandi reikniaðferð má beita á fyrsta stigs hlutafleiðujöfnu falls <span class="math notranslate nohighlight">\(u(x,t)\)</span> þegar stuðlarnir eru ekki háðir <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<ol class="arabic simple">
+<li>Tökum Laplace-mynd af báðum hliðum miðað við breytistærðina <span class="math notranslate nohighlight">\(t\)</span>. Gert er ráð fyrir að víxla megi á afleiðum og heildum þar sem þarf.</li>
+<li>Þá fæst fyrsta stigs venjuleg afleiðujafna í <span class="math notranslate nohighlight">\(x\)</span> fyrir fallið</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[U(x,s) = \mathcal{L}\{u(x,t)\}(s) = \int_{0}^\infty e^{-st}u(x,t) dt\]</div>
+<p>sem má leysa með almennri lausnarformúlu.</p>
+<ol class="arabic simple" start="3">
+<li>Lausn upphaflega verkefnisins fæst með því að taka andhverfu Laplace-myndina af <span class="math notranslate nohighlight">\(U(x,s)\)</span>.</li>
+</ol>
+</div>
+<div class="section" id="daemi">
+<h3>1.4.8. Dæmi<a class="headerlink" href="#daemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Upphafsgildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{\begin {array}{l}
+\frac{\partial u}{\partial t}+ x\frac{\partial u}{\partial x} + u = f(x,t), x&gt;0, t&gt;0, \\
+u(x,0) = u(0,t) = 0.
+\end{array}\right.\end{split}\]</div>
+<p>hefur lausnina</p>
+<div class="math notranslate nohighlight">
+\[u(x,t) = x^{-1}\int_{0}^x H(t-\ln(x/\xi)) f(\xi,t-\ln(x/\xi)) d\xi\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(H\)</span> táknar Heaviside-fallið.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli02.html" class="btn btn-neutral float-right" title="2. Fourier-raðir" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="umnamskeidid.html" class="btn btn-neutral" title="Gagnlegar upplýsingar" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script type="text/javascript" src="_static/custom_sage.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,1370 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Núllstöðvar &mdash; Töluleg greining (STÆ405G) 0.1</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+	<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+	<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    
+    <script> 
+    // the buttonText string says what will be written on the 
+    // sage cell evaluation button.
+    // It can be changed here.
+    var buttonText = "Keyra"
+    </script>
+    
+	<script>sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});</script>
+
+	<script>sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});</script>
+	
+    <script>sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+    <link rel="top" title="Töluleg greining (STÆ405G) 0.1" href="index.html"/>
+        <link rel="next" title="3. Brúun" href="kafli03.html"/>
+        <link rel="prev" title="1. Inngangur" href="kafli01.html"/>
+ 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Töluleg greining (STÆ405G)
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#hva-er-toluleg-greining">1.1. Hvað er töluleg greining?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#tilraun-a-svari">1.1.1. Tilraun að svari</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#daemi-eldflaug">1.2. Dæmi: Eldflaug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#samleitni-runa">1.3. Samleitni runa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#nokkur-atrii-um-samleitni-runa">1.3.1. Nokkur atriði um samleitni runa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-samleitni">1.3.2. Skilgreining: Samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining">1.3.3. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#setning-taylors">1.4. Setning Taylors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-fyrir-diffranleg-foll">1.4.1. Ritháttur fyrir diffranleg föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#nalgun-me-taylor-margliu">1.4.2. Nálgun með Taylor-margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#index-3">1.4.3. Setning Taylors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#vibot">1.4.4. Viðbót</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#synidaemi-nalgun-a-fallgildum">1.4.5. Sýnidæmi: Nálgun á fallgildum <span class="math">\(x-\sin x\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#skekkjur">1.5. Skekkjur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skekkja-i-nalgun-a-rauntolu">1.5.1. Skekkja í nálgun á rauntölu <span class="math">\(r\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fyrirframmat-a-skekkju">1.5.2. Fyrirframmat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#eftiramat-a-skekkju">1.5.3. Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ofurlinuleg-samleitni-eftiramat-a-skekkju">1.5.4. Ofurlínuleg samleitni &#8211; Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#linuleg-samleitni-eftiramat-a-skekkju">1.5.5. Línuleg samleitni &#8211; Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#synidaemi">1.5.6. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utreikningur-a-samleitnistigi">1.5.7. Útreikningur á samleitnistigi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#meira-um-skekkjur">1.6. Meira um skekkjur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-markverir-stafir">1.6.1. Skilgreining: Markverðir stafir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#urlausn-annars-stigs-jofnu">1.6.2. Úrlausn annars stigs jöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ahrif-gagnaskekkju">1.6.3. Áhrif gagnaskekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id2">1.6.4. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur">1.6.5. <span class="math">\(O\)</span>-ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-og-skekkja-i-taylor-nalgnum">1.6.6. <span class="math">\(O\)</span>-ritháttur og skekkja í Taylor-nálgnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id3">1.6.7. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-fyrir-runur">1.6.8. <span class="math">\(O\)</span>-ritháttur fyrir runur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#tvo-synidaemi">1.6.9. Tvö sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#fleytitalnakerfi">1.7. Fleytitalnakerfið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#framsetning-a-tolum">1.7.1. Framsetning á tölum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mantissa">1.7.2. Mantissa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#markverir-stafir">1.7.3. Markverðir <span class="math">\(\beta\)</span>-stafir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#afruningur-talna">1.7.4. Afrúningur talna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fleytitolukerfi">1.7.5. Fleytitölukerfi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ieee-stalar">1.7.6. IEEE staðlar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utreikningur-i-tugakerfi">1.7.7. Útreikningur í tugakerfi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. Núllstöðvar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nalgun-a-nullsto">2.1. Nálgun á núllstöð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">2.1.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi">2.1.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd">2.1.3. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#helmingunarafer">2.2. Helmingunaraðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#milligildissetningin">2.2.1. Milligildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#afleiing">2.2.2. Afleiðing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skekkjumat-i-helmingunarafer">2.2.3. Skekkjumat í helmingunaraðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fyrirframmat-a-skekkju">2.2.4. Fyrirframmat á skekkju</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fastapunktsafer">2.3. Fastapunktsaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tenging-vi-nullstovar">2.3.2. Tenging við núllstöðvar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknirit">2.3.3. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-herping">2.3.4. Skilgreining: Herping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">2.3.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fastapunktssetningin">2.3.6. Fastapunktssetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fastapunktsafer-er-a-minnsta-kosti-linulega-samleitin">2.3.7. Fastapunktsaðferð er að minnsta kosti línulega samleitin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sniilsafer">2.4. Sniðilsaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.4.1. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samleitin-runa-stefnir-a-nullsto">2.4.2. Samleitin runa stefnir á núllstöð <span class="math">\(f\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skekkjumat-i-nalgun-a-me">2.4.3. Skekkjumat í nálgun á <span class="math">\(f(x)\)</span> með <span class="math">\(p_n(x)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skekkjumat-i-sniilsafer">2.4.4. Skekkjumat í sniðilsaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.4.5. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afer-newtons">2.5. Aðferð Newtons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.5.1. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun">2.5.2. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.5.3. Samleitin runa stefnir á núllstöð <span class="math">\(f\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">2.5.4. Skekkjumat í nálgun á <span class="math">\(f(x)\)</span> með <span class="math">\(p_n(x)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skekkjumat-i-afer-newtons">2.5.5. Skekkjumat í aðferð Newtons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.5.6. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samanburur-a-aferum">2.6. Samanburður á aðferðum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Brúun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#inngangur">3.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#markmii">3.1.1. Markmiðið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id1">3.1.2. Brúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#afhverju-margliur">3.1.3. Afhverju margliður?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margliur">3.1.4. Margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#mismunandi-leiir-a-framsetningu">3.1.5. Mismunandi leiðir á framsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#newton-form-margliu">3.1.6. Newton-form margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#reiknirit-horners">3.1.7. Reiknirit Horners</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margliubruun-lagrange-form">3.2. Margliðubrúun: Lagrange-form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margliubruun">3.2.1. Margliðubrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-bruunarmarglian-er-otviraett-akvoru">3.2.2. Setning: Brúunarmargliðan er ótvírætt ákvörðuð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-bruunarmarglian-er-til">3.2.3. Setning: Brúunarmargliðan er til</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-form-bruunarmargliunnar">3.2.4. Lagrange-form brúunarmargliðunnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-margliur-tilfellin">3.2.5. Lagrange-margliður, tilfellin <span class="math">\(m=0,1,2\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-margliur-almenna-tilfelli">3.2.6. Lagrange-margliður almenna tilfellið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#synidaemi">3.2.7. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margliubruun-newton-form">3.3. Margliðubrúun: Newton-form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#formula-fyrir">3.3.1. Formúla fyrir <span class="math">\(c_0, \ldots, c_m\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#mismunakvotar">3.3.2. Mismunakvótar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upprifjun-a-tilvistarsonnuninni">3.3.3. Upprifjun á tilvistarsönnuninni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#mismunakvotatoflur-fyrir">3.3.4. Mismunakvótatöflur fyrir <span class="math">\(m=0,1,2,3\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id2">3.3.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#samantekt">3.3.6. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#samantekt-newton-form">3.3.7. Samantekt – Newton-form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#samantekt-lagrange-margliur">3.3.8. Samantekt – Lagrange-margliður</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#id3">3.4. Samantekt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-margliur">3.4.1. Lagrange-margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#newton-margliur">3.4.2. Newton-margliður</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margliubruun-margfaldir-punktar">3.5. Margliðubrúun: Margfaldir punktar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margfeldni-punktanna">3.5.1. Margfeldni punktanna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#sertilfelli">3.5.2. Sértilfelli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upprifjun">3.5.3. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#otviraeni-lausnarinnar">3.5.4. Ótvíræðni lausnarinnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilvist-a-lausn">3.5.5. Tilvist á lausn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id4">3.5.6. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#bruunarmarglian-fundin">3.5.7. Brúunarmargliðan fundin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#skynsamlegir-skiptipunktar-og-chebyshev-margliur">3.6. Skynsamlegir skiptipunktar og Chebyshev margliður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#um-val-a-bruunarpunktum">3.6.1. Um val á brúunarpunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-oheppilega-skiptipunkta">3.6.2. Dæmi um óheppilega skiptipunkta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#val-a-bruunarpunktum">3.6.3. Val á brúunarpunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining">3.6.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#verkefni">3.6.5. Verkefnið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-chebyshev-margliur">3.6.6. Skilgreining: Chebyshev margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning">3.6.7. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stalaar-chebyshev-margliur">3.6.8. Staðlaðar Chebyshev margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skynsamlegir-skiptipunktar-fyrir-bili">3.6.9. Skynsamlegir skiptipunktar fyrir bilið <span class="math">\([-1,1]\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-oheppilega-skiptipunkta-skoa-aftur">3.6.10. Dæmi um óheppilega skiptipunkta skoðað aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skynsamlegir-skiptipunktar-fyrir-bil">3.6.11. Skynsamlegir skiptipunktar fyrir bil <span class="math">\([a,b]\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagmorkun-a-skekkju-me-tilliti-til">3.6.12. Lágmörkun á skekkju með tilliti til <span class="math">\(\ell_2\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-legendre-margliurnar">3.6.13. Skilgreining: Legendre margliðurnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id5">3.6.14. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id6">3.6.15. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-stalaar-legendre-margliur">3.6.16. Skilgreining: Staðlaðar Legendre margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-lagmorkun-me-legendre-margliunum">3.6.17. Setning: Lágmörkun með Legendre margliðunum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#nullstovar-fyrir">3.6.18. Núllstöðvar <span class="math">\(P_n\)</span>, fyrir <span class="math">\(n=1,\ldots,10\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id7">3.6.19. Dæmi um óheppilega skiptipunkta skoðað aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#athugasemd-um-og">3.6.20. Athugasemd um <span class="math">\(\ell_\infty\)</span> og <span class="math">\(\ell_2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#skekkjumat">3.7. Skekkjumat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#nalgun-a-follum-me-marglium">3.7.1. Nálgun á föllum með margliðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#nalgun-a-fallgildum">3.7.2. Nálgun á fallgildum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id8">3.7.3. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-egar-vi-hofum-aeins-einn-punkt">3.7.4. Tilfellið þegar við höfum aðeins einn punkt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margfeldni-nullstova">3.7.5. Margfeldni núllstöðva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-skekkjumat">3.7.6. Setning: Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id9">3.7.7. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id10">3.7.8. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#splaesibruun">3.8. Splæsibrúun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#almennt-um-splaesibruun">3.8.1. Almennt um splæsibrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#fyrsta-stigs-splaesibruun">3.8.2. Fyrsta stigs splæsibrúun:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rija-stigs-splaesibruun">3.8.3. Þriðja stigs splæsibrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#jofnuhneppi">3.8.4. Jöfnuhneppið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-1-ekki-hnuts-endaskilyri">3.8.5. Tilfelli 1: Ekki-hnúts endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-2-vingu-endaskilyri">3.8.6. Tilfelli 2: Þvinguð endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-3-natturleg-endaskilyri">3.8.7. Tilfelli 3: Náttúrleg endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-4-lotubundi-endaskilyri">3.8.8. Tilfelli 4: Lotubundið endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#teikning-a-ferlum-i-planinu">3.8.9. Teikning á ferlum í planinu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#afer-minnstu-fervika">3.9. Aðferð minnstu fervika</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#jafna-bestu-linu">3.9.1. Jafna bestu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#smavegis-linuleg-algebra">3.9.2. Smávegis línuleg algebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#index-25">3.9.3. Jafna bestu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#jafna-bestu-annars-stigs-margliu">3.9.4. Jafna bestu annars stigs margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#synidaemi-besta-annars-stigs-marglia">3.9.5. Sýnidæmi: besta annars stigs margliða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Töluleg diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#inngangur">4.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#toluleg-diffrun-og-heildun">4.1.1. Töluleg diffrun og heildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#meginhugmynd-i-ollum-nalgunaraferunum">4.1.2. Meginhugmynd í öllum nálgunaraðferðunum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#aferirnar">4.2. Aðferðirnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#frammismunur">4.2.1. Frammismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#bakmismunur">4.2.2. Bakmismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#misettur-mismunakvoti">4.2.3. Miðsettur mismunakvóti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#misettur-mismunakvoti-fyrir-ara-afleiu">4.2.4. Miðsettur mismunakvóti fyrir aðra afleiðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#skekkjumat">4.3. Skekkjumat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#almennt-um-nalganir-a-afleium">4.3.1. Almennt um nálganir á afleiðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#index-5">4.3.2. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id2">4.3.3. Frammismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id3">4.3.4. Miðsettur mismunakvóti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id4">4.3.5. Miðsettur mismunakvóti fyrir aðra afleiðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#richardson-utgiskun">4.4. Richardson útgiskun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#utleisla-a-misettum-mismunakvota">4.4.1. Útleiðsla á miðsettum mismunakvóta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#helmingun-a-skrefinu">4.4.2. Helmingun á skrefinu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjora-stigs-nalgun">4.4.3. Fjórða stigs nálgun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#haegt-er-a-halda-afram-utgiskun">4.4.4. Hægt er að halda áfram útgiskun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#sjotta-stigs-skekkja">4.4.5. Sjötta stigs skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#almenn-rakningarformula">4.4.6. Almenn rakningarformúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reiknirit">4.4.7. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id5">4.4.8. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#utleisla-a-fyrirframmati">4.4.9. Útleiðsla á fyrirframmati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#synidaemi">4.4.10. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Töluleg heildun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#aferirnar">5.1. Aðferðirnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#newton-cotes-heildun">5.1.1. Newton-Cotes heildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#synidaemi">5.1.2. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#trapisureglan">5.1.3. Trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mipunktsreglan">5.1.4. Miðpunktsreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#regla-simpsons">5.1.5. Regla Simpsons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samsettar-utgafur">5.2. Samsettar útgáfur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#inngangur">5.2.1. Inngangur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#samsetta-trapisureglan">5.2.2. Samsetta trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#samsetta-mipunktsreglan">5.2.3. Samsetta miðpunktsreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#samsett-regla-simpsons">5.2.4. Samsett regla Simpsons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkjumat">5.3. Skekkjumat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id1">5.3.1. Inngangur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mealgildissetningin-fyrir-heildi">5.3.2. Meðalgildissetningin fyrir heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id2">5.3.3. Trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id5">5.3.4. Samsetta trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mipunktsregla">5.3.5. Miðpunktsregla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id6">5.3.6. Samsetta miðpunktsreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id7">5.3.7. Regla Simpsons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id9">5.3.8. Samsett regla Simpsons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#romberg-utgiskun">5.4. Romberg-útgiskun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#euler-maclauren-formulan">5.4.1. Euler-Maclauren-formúlan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#afleiing-af-euler-maclaurin-formulunni">5.4.2. Afleiðing af Euler-Maclaurin-formúlunni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#itrekun-a-samsettu-trapisureglunni-me-helmingun">5.4.3. Ítrekun á samsettu trapisureglunni með helmingun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#reikniriti-fyrir-romberg-heildun">5.4.4. Reikniritið fyrir Romberg-heildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skekkjumat-i-romberg-heildun">5.4.5. Skekkjumat í Romberg heildun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Upphafsgildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#inngangur">6.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fyrsta-stigs-afleiujafna-me-upphafsgildi">6.1.1. Fyrsta stigs afleiðujafna með upphafsgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#utskyring-og-daemi">6.1.2. Útskýring og dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tilvist-og-otviraeni-lausna">6.1.3. Tilvist og ótvíræðni lausna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#upphafsgildisverkefni-fyrir-hneppi">6.1.4. Upphafsgildisverkefni fyrir hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#jofnur-af-stigi-og-jafngild-hneppi">6.1.5. Jöfnur af stigi <span class="math">\(&gt;1\)</span> og jafngild hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tilvist-og-otviraeni-lausna-a-hneppum">6.1.6. Tilvist og ótvíræðni lausna á hneppum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#rithattur">6.1.7. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#grunnhugmyndin-i-nalgunaraferum">6.1.8. Grunnhugmyndin í nálgunaraðferðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#beinar-og-obeinar-aferir">6.1.9. Beinar og óbeinar aðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#eins-skrefs-aferir-og-fjolskrefaaferir">6.1.10. Eins skrefs aðferðir og fjölskrefaaðferðir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#aferir-me-fasta-skrefastaer">6.2. Aðferðir með fasta skrefastærð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-eulers">6.2.1. Aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-eulers-matlab-forrit">6.2.2. Aðferð Eulers: Matlab-forrit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-eulers-daemi">6.2.3. Aðferð Eulers: Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#endurbaett-afer-eulers">6.2.4. Endurbætt aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-heun">6.2.5. Aðferð Heun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#forsagnar-og-leirettingarskref">6.2.6. Forsagnar- og leiðréttingarskref</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#annars-stigs-runge-kutta-afer">6.2.7. Annars stigs Runge-Kutta-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#klassiska-fjora-stigs-runge-kutta-aferin">6.2.8. Klassíska (fjórða stigs) Runge-Kutta aðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#klassiska-runge-kutta-aferin-daemi">6.2.9. Klassíska Runge-Kutta aðferðin: Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#skekkjumat-samleitni-og-stougleiki">6.3. Skekkjumat, samleitni og stöðugleiki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skekkja">6.3.1. Skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#staarskekkja-i-afer-eulers">6.3.2. Staðarskekkja í aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#styring-a-staarskekkju-og-breytileg-skrefastaer">6.3.3. Stýring á staðarskekkju og breytileg skrefastærð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#mat-a-skrefastaer">6.3.4. Mat á skrefastærð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#aferir-me-breytilega-skrefastaer">6.4. Aðferðir með breytilega skrefastærð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#reiknirit-fyrir-runge-kutta-fehlberg-rkf45">6.4.1. Reiknirit fyrir Runge-Kutta-Fehlberg (RKF45)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#runge-kutte-fehlberg-rkf45-profu">6.4.2. Runge-Kutte-Fehlberg (RKF45) prófuð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#fjolskrefaaferir">6.5. Fjölskrefaaðferðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skrefa-adams-bashforth-afer">6.5.1. <span class="math">\(k\)</span>-skrefa Adams-Bashforth aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tveggja-skrefa-adams-bashforth-afer">6.5.2. Tveggja skrefa Adams-Bashforth-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#forrit-fyrir-tveggja-skrefa-adams-bashforth-afer">6.5.3. Forrit fyrir tveggja skrefa Adams-Bashforth-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#riggja-skrefa-adams-bashforth">6.5.4. Þriggja skrefa Adams-Bashforth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fjogurra-skrefa-adams-bashforth">6.5.5. Fjögurra skrefa Adams-Bashforth</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#greining-a-samleitni-og-stougleika">6.6. Greining á samleitni og stöðugleika</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id3">6.6.1. Skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samleitni">6.6.2. Samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi">6.6.3. Samræmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi-endurbaettu-euler-aferarinnar">6.6.4. Samræmi endurbættu Euler-aðferðarinnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi-beinna-eins-skrefs-afera">6.6.5. Samræmi beinna eins skrefs aðferða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#stougleiki">6.6.6. Stöðugleiki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#lipschitz-samfelldni">6.6.7. Lipschitz-samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-um-stougleika-og-samleitni">6.6.8. Setning um stöðugleika og samleitni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Jaðargildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#inngangur">7.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id1">7.1.1. Jaðargildisverkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rjar-tegundir-jaarskilyra">7.1.2. Þrjár tegundir jaðarskilyrða</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#dirichlet-jaarskilyri">7.2. Dirichlet-jaðarskilyrði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skiptipunktar">7.2.1. Skiptipunktar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#linulegar-afleiujofnur">7.2.2. Línulegar afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id2">7.2.3. Dirichlet-jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#jafngild-framsetning-a-hneppinu">7.2.4. Jafngild framsetning á hneppinu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#linulega-jofnuhneppi-a-fylkjaformi">7.2.5. Línulega jöfnuhneppið á fylkjaformi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#neumann-og-robin-jaarskilyri">7.3. Neumann og Robin -jaðarskilyrði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#felugildi">7.3.1. Felugildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#jafna-fyrir-felugildi">7.3.2. Jafna fyrir felugildið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#hneppi-a-fylkjaformi">7.3.3. Hneppið á fylkjaformi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#fyrsta-og-siasta-lina-hneppisins">7.3.4. Fyrsta og síðasta lína hneppisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#haegri-hli-hneppisins">7.3.5. Hægri hlið hneppisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#samantekt">7.3.6. Samantekt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Jöfnuhneppi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#linuleg-jofnuhneppi">8.1. Línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#verkefni">8.1.1. Verkefnið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#lausnir">8.1.2. Lausnir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fjoldi-agera">8.1.3. Fjöldi aðgerða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vandamal-me-stougleika">8.1.4. Vandamál með stöðugleika</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#vending-e-pivoting">8.2. Vending (e. pivoting)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#inngangur">8.2.1. Inngangur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hlutvending-e-partial-pivoting">8.2.2. Hlutvending (e. partial pivoting)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vankantar">8.2.3. Vankantar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skolu-hlutvending-e-scaled-partial-pivoting">8.2.4. Sköluð hlutvending (e. scaled partial pivoting)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#athugasemd">8.2.5. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#fylkjastaall">8.3. Fylkjastaðall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#a-maela-fjarlaeg-milli-hluta">8.3.1. Að mæla fjarlægð milli hluta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vigurstaall">8.3.2. Vigurstaðall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-stala">8.3.3. Dæmi um staðla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#index-9">8.3.4. Fylkjastaðall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fylkjastaall-skilgreindur-ut-fra-vigurstali">8.3.5. Fylkjastaðall skilgreindur út frá vigurstaðli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-fylkjastaal">8.3.6. Dæmi um fylkjastaðal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#eigingildi">8.3.7. Eigingildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#rof-og-rofgeisli">8.3.8. Róf og rófgeisli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#setning-um-rofgeisla">8.3.9. Setning um rófgeisla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#skekkjumat-og-astandstala">8.4. Skekkjumat og ástandstala</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hvernig-a-a-maela-skekkju">8.4.1. Hvernig á að mæla skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skekkjumat">8.4.2. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#astandstala-fylkis-og-mat-a-hlutfallslegri-skekkju">8.4.3. Ástandstala fylkis og mat á hlutfallslegri skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ahrif-gagnaskekkju">8.4.4. Áhrif gagnaskekkju</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#lu-attun">8.5. LU-þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#nokkrar-skilgreiningar">8.5.1. Nokkrar skilgreiningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#urlausn-a-jofnuhneppi-me-nera-rihyrningsfylki">8.5.2. Úrlausn á jöfnuhneppi með neðra þríhyrningsfylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id2">8.5.3. Fjöldi aðgerða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#urlausn-a-jofnuhneppi-me-efra-rihyrningsfylki">8.5.4. Úrlausn á jöfnuhneppi með efra þríhyrningsfylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linuagerir">8.5.5. Línuaðgerðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ny-syn-a-gauss-eyingu">8.5.6. Ný sýn á Gauss-eyðingu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#nanar-um">8.5.7. Nánar um <span class="math">\(M_i\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#index-17">8.5.8. LU-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#attun-og-skolu-hlutvending">8.5.9. <span class="math">\(LU\)</span>-þáttun og sköluð hlutvending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jofnuhneppi-leyst-me-lu-attun">8.5.10. Jöfnuhneppi leyst með LU-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fjoldi-reikniagera-fyrir-attun">8.5.11. Fjöldi reikniaðgerða fyrir <span class="math">\(LU\)</span>-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#morg-jofnuhneppi">8.5.12. Mörg jöfnuhneppi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#fastapunktsaferir-fyrir-linuleg-jofnuhneppi">8.6. Fastapunktsaðferðir fyrir línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#itrekunaraferir-til-ess-a-leysa-linuleg-jofnuhneppi">8.6.1. Ítrekunaraðferðir til þess að leysa línuleg jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fastapunktsitrekun-til-ess-a-leysa-linuleg-jofnuhneppi">8.6.2. Fastapunktsítrekun til þess að leysa línuleg jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fastapunktsitrekun-skekkjumat">8.6.3. Fastapunktsítrekun - skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilyri-fyrir-samleitni">8.6.4. Skilyrði fyrir samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skiptingarafer-e-splitting-method">8.6.5. Skiptingaraðferð (e. splitting method)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jacobi-afer">8.6.6. Jacobi-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#gauss-seidel-afer">8.6.7. Gauss-Seidel-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#sor-afer-e-successive-over-relaxation">8.6.8. SOR-aðferð (e. successive over-relaxation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#setning-um-samleitni-gauss-seidel-aferarinnar">8.6.9. Setning um samleitni Gauss-Seidel-aðferðarinnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#newton-afer-fyrir-jofnuhneppi">8.7. Newton-aðferð fyrir jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jacobi-fylki">8.7.1. Jacobi-fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#afer-newtons-fyrir-hneppi">8.7.2. Aðferð Newtons fyrir hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#matlab-forrit-fyrir-hneppi">8.7.3. Matlab-forrit fyrir hneppi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#eigingildi-og-eiginvigrar">9.1. Eigingildi og eiginvigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#nalgun-a-eigingildum-og-eiginvigrum">9.1.1. Nálgun á eigingildum og eiginvigrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#grof-stasetning-a-eigingildum-skifusetning-gerschgorins">9.1.2. Gróf staðsetning á eigingildum: Skífusetning Gerschgorins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#fylgisetning">9.1.3. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-setning-gerschgorins">9.1.4. Dæmi: Setning Gerschgorins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#eiginvigragrunnar">9.1.5. Eiginvigragrunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#veldaafer">9.2. Veldaaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id1">9.2.1. Veldaaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#reiknirit-til-ess-a-akvara-staersta-eigingildi-fylkis">9.2.2. Reiknirit til þess að ákvarða stærsta eigingildi fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#samleitnin">9.2.3. Samleitnin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#samhverf-fylki">9.2.4. Samhverf fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-um-eigingildi-og-eiginvigra">9.2.5. Setning um eigingildi og eiginvigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-veldaafer">9.2.6. Dæmi um veldaaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#andhverf-veldaafer">9.3. Andhverf veldaaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#reiknirit-til-ess-a-nalga-eigingildi-og-eiginvigra">9.3.1. Reiknirit til þess að nálga eigingildi og eiginvigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-ofuga-veldaafer">9.3.2. Dæmi um öfuga veldaaðferð</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. Monte Carlo hermanir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#inngangur">10.1. Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#flatarmal-rummal-og-heildun">10.2. Flatarmál, rúmmál og heildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nalgun-a-pi">10.2.1. Nálgun á pi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#forrit-fyrir-nalgun-a-pi">10.2.2. Forrit fyrir nálgun á pi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nalgun-a-heildi">10.2.3. Nálgun á heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nalgun-a-heildi-daemi">10.2.4. Nálgun á heildi: Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#margfold-heildi">10.2.5. Margföld heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#margfold-heildi-daemi">10.2.6. Margföld heildi: Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#hermun">10.3. Hermun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nal-buffons">10.3.1. Nál Buffons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#skipulag-namskeisins">Skipulag námskeiðsins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#kennsla">Kennsla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#kennsluefni">Kennsluefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#matlab-octave">Matlab/Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#heimadaemi-og-daematimar">Heimadæmi og dæmatímar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#verkefni">Verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#lokaprof">Lokapróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#namsmat">Námsmat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#fragangur-heimadaema">Frágangur heimadæma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#gagnlegir-tenglar">Gagnlegir tenglar</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Töluleg greining (STÆ405G)</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>2. Núllstöðvar</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/kafli02.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nullstovar">
+<h1>2. Núllstöðvar<a class="headerlink" href="#nullstovar" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p><em>Build a man a fire, and he&#8217;ll be warm for a day. Set a man on fire, and he&#8217;ll
+be warm for the rest of his life.</em></p>
+<p>- Terry Pratchett, Jingo</p>
+<div class="section" id="nalgun-a-nullsto">
+<h2>2.1. Nálgun á núllstöð<a class="headerlink" href="#nalgun-a-nullsto" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining">
+<span id="index-0"></span><h3>2.1.1. Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Munum að talan <span class="math">\(p\in I\)</span> sögð vera <em>núllstöð</em> fallsins
+<span class="math">\(f:I\to {\mathbb  R}\)</span> ef</p>
+<div class="math">
+\[f(p)=0.\]</div>
+</div>
+<div class="section" id="daemi">
+<h3>2.1.2. Dæmi<a class="headerlink" href="#daemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Það er auðvelt að finna núllstöðvar (<strong>rót</strong>) annars stigs margliðu
+<span class="math">\(ax^2+bx+c\)</span>, því</p>
+<div class="math">
+\[ax^2+bx+c = 0\]</div>
+<p>ef</p>
+<div class="math">
+\[x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.\]</div>
+<p>Svipaðar formúlur eru til fyrir núllstöðvar þriðja og fjórða stigs margliða.
+Einnig þekkjum við núllstöðvar hornafalla.</p>
+</div>
+<div class="section" id="athugasemd">
+<h3>2.1.3. Athugasemd<a class="headerlink" href="#athugasemd" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Almennt er hins vegar erfitt að finna núllstöðvar falla.
+Til dæmis er ekki til almenn formúla fyrir núllstöðvar margliða af stigi 5 og hærra
+(sjá <a class="reference external" href="https://en.wikipedia.org/wiki/Abel–Ruffini_theorem">Abel-Ruffini setningin</a>).</p>
+<p>Eins er ekki hægt treysta á það að geta fundið nákvæmlega núllstöðvar almennra falla með því
+að nota þekkingu okkar á algebru og stærðfræðigreinginu. Hverjar (og hversu margar) eru t.d. núllstöðvar</p>
+<div class="math">
+\[e^x + x^3?\]</div>
+<p>Aðferðirnar í þessum kafla ganga út á að finna nálgun á núllstöðvum falla og í sumum tilvikum
+hjálpa þær okkur einnig að sýna fram á tilvist núllstöðva (sem er ekki alltaf sjálfgefin).</p>
+</div>
+</div>
+<div class="section" id="helmingunarafer">
+<h2>2.2. Helmingunaraðferð<a class="headerlink" href="#helmingunarafer" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Fyrsta aðferðin til að finna núllstöðvar sem við skoðum kallast
+helmingunaraðferð (e. bisection method).</p>
+<div class="section" id="milligildissetningin">
+<h3>2.2.1. Milligildissetningin<a class="headerlink" href="#milligildissetningin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math">\(f\)</span> er samfellt á <span class="math">\([a,b]\)</span> og <span class="math">\(y\)</span> er einhver
+tala á milli <span class="math">\(f(a)\)</span> og <span class="math">\(f(b)\)</span>, þá er til <span class="math">\(c\)</span>
+þannig að <span class="math">\(a &lt; c &lt; b\)</span> og <span class="math">\(f(c) = y\)</span>.</p>
+</div>
+<div class="section" id="afleiing">
+<h3>2.2.2. Afleiðing<a class="headerlink" href="#afleiing" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Svo ef við höfum <span class="math">\(a\)</span> og <span class="math">\(b\)</span> þannig að <span class="math">\(a &lt; b\)</span> og
+þannig að <span class="math">\(f(a)\)</span> og <span class="math">\(f(b)\)</span> hafi ólík formerki, þá hefur
+<span class="math">\(f\)</span> núllstöð <span class="math">\(p\)</span> á bilinu <span class="math">\([a,b]\)</span>.</p>
+<p id="index-1">Notum okkur þetta til þess að finna rætur.</p>
+<ol class="arabic simple">
+<li>Látum <span class="math">\(x = \frac 12(a+b)\)</span> vera miðpunkt <span class="math">\([a,b]\)</span>.</li>
+<li>Reiknum <span class="math">\(f(x)\)</span>, þá geta þrjú tilvik komið upp:<ol class="arabic">
+<li><span class="math">\(f(x) = 0\)</span> og leitinni að rót er lokið.</li>
+<li><span class="math">\(f(a)\)</span> og <span class="math">\(f(x)\)</span> hafa sama formerki, þannig að við
+leitum að rót á bilinu <span class="math">\([x,b]\)</span>.</li>
+<li><span class="math">\(f(x)\)</span> og <span class="math">\(f(b)\)</span> hafa sama formerki, þannig að við
+leitum að rót á bilinu <span class="math">\([a,x]\)</span>.</li>
+</ol>
+</li>
+</ol>
+<p>Í tilviki (ii) segir milligildissetningin að <span class="math">\(f\)</span> hafi rót á bilinu
+<span class="math">\([x,b]\)</span>, og í tilviki (iii) er rótin á bilinu <span class="math">\([a,x]\)</span>. Þá
+getum við farið aftur í skref 1, nema með helmingi minna bil en áður.</p>
+<p>Með því að ítreka þetta ferli <span class="math">\(n\)</span> sinnum fáum við minnkandi runu
+af bilum</p>
+<div class="math">
+\[[a,b]=[a_1,b_1]\supset [a_2,b_2]\supset \cdots\supset [a_n,b_n].\]</div>
+<p>Billengdin helmingast í hverju skrefi og milligildissetningin segir okkur að það sé núllstöð á öllum bilunum.</p>
+<p>Rununa af bilunum</p>
+<div class="math">
+\[[a,b]= [a_1,b_1]\supset \cdots\supset [a_n,b_n]\supset \cdots\]</div>
+<p>skilgreinum við með ítrun og notum til þess rununa <span class="math">\(x_n=\frac 12(a_n+b_n)\)</span>.</p>
+<p>Setjum <span class="math">\(a_0=a\)</span>, <span class="math">\(b_0=b\)</span>, og <span class="math">\(x_0=\frac 12(a+b)\)</span>.</p>
+<p>Gefið er <span class="math">\(x_0,\dots,x_n\)</span>. Reiknum <span class="math">\(f(x_n)\)</span>.</p>
+<ol class="arabic simple">
+<li>Ef <span class="math">\(f(x_n) = 0\)</span>, þá er núllstöð fundin og við hættum.</li>
+<li>Ef <span class="math">\(f(x_n)\)</span> og <span class="math">\(f(a_n)\)</span> hafa sama formerki, þá setjum við <span class="math">\(a_{n+1}=x_n\)</span>, <span class="math">\(b_{n+1}=b_n\)</span>, og  <span class="math">\(x_{n+1}=\frac 12(a_{n+1}+b_{n+1})\)</span></li>
+<li>annars setjum við <span class="math">\(a_{n+1}=a_n\)</span>, <span class="math">\(b_{n+1}=x_n\)</span> og <span class="math">\(x_{n+1}=\frac 12(a_{n+1}+b_{n+1})\)</span>.</li>
+</ol>
+</div>
+<div class="section" id="skekkjumat-i-helmingunarafer">
+<h3>2.2.3. Skekkjumat í helmingunaraðferð<a class="headerlink" href="#skekkjumat-i-helmingunarafer" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við látum miðpunktinn <span class="math">\(p_n=\frac 12(a_n+b_n)\)</span> vera
+nálgunargildi okkar fyrir núllstöð fallsins <span class="math">\(f\)</span> í bilinu
+<span class="math">\([a_n,b_n]\)</span>, þá er skekkjan í nálguninni</p>
+<div class="math">
+\[e_n=p-p_n\]</div>
+<p>og við höfum skekkjumatið</p>
+<div class="math">
+\[|e_n|\leq  \dfrac{b_n - a_n}{2}\
+= \frac{b_{n-1}-a_{n-1}}{2^2} = \ldots = \dfrac{b_1-a_1}{2^{n}},\]</div>
+<p>það er</p>
+<div class="math">
+\[\begin{split}|e_n| &lt; \dfrac{b-a}{2^{n}}.\end{split}\]</div>
+</div>
+<div class="section" id="fyrirframmat-a-skekkju">
+<h3>2.2.4. Fyrirframmat á skekkju<a class="headerlink" href="#fyrirframmat-a-skekkju" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú er auðvelt að meta hversu margar ítrekanir þarf að framkvæma til þess
+að nálgunin lendi innan gefinna skekkjumarka.</p>
+<p>Ef <span class="math">\(\varepsilon&gt;0\)</span> er gefið og við viljum að
+<span class="math">\(|e_n|&lt; \varepsilon\)</span>, þá dugir að</p>
+<div class="math">
+\[\begin{split}|e_n|\leq \dfrac{b-a}{2^{n}} &lt;\varepsilon.\end{split}\]</div>
+<p>Seinni ójafnan jafngildir því að</p>
+<div class="math">
+\[\begin{split}n&gt;\dfrac{\ln\big((b-a)/\varepsilon\big)}{\ln 2}.\end{split}\]</div>
+<div class='sageAutoHidden'><script type='text/x-sage'># Benedikt Magnusson, 2015. CC-BY-SA.
+# Addapted from a version of William Stein, 
+# http://wiki.sagemath.org/interact/calculus#Root_Finding_Using_Bisection
+def bisect_method(f, a, b, eps):
+    try:
+        f = f._fast_float_(f.variables()[0])
+    except AttributeError:
+        pass
+    intervals = [(a,b)]
+    two = float(2); eps = float(eps)
+    while True:
+        c = (a+b)/two
+        fa = f(a); fb = f(b); fc = f(c)
+        if abs(fc) < eps: return c, intervals
+        if fa*fc < 0:
+             b = c
+             # a, b = a, c
+        elif fc*fb < 0:
+             a = c
+             # a, b = c, b
+        else:
+            raise ValueError, "f must have a sign change in the interval (%s,%s)"%(a,b)
+        intervals.append((a,b))
+# html("<h1>Double Precision Root Finding Using Bisection</h1>")
+@interact
+def _(f = cos(x) - x, a = float(0), b = float(1), eps=(-3,(-16..-1))):
+     eps = 10^eps
+     print "eps = %s"%float(eps)
+     try:
+         c, intervals = bisect_method(f, a, b, eps)
+     except ValueError:
+         print "f must have opposite sign at the endpoints of the interval"
+         show(plot(f, a, b, color='red'), xmin=a, xmax=b)
+     else:
+         print "root =", c
+         print "f(c) = %r"%f(x=c)
+         print "iterations =", len(intervals)
+         P = plot(f, a, b, color='red')
+         h = (P.ymax() - P.ymin())/ (1.5*len(intervals))
+         L = sum(line([(c,h*i), (d,h*i)]) for i, (c,d) in enumerate(intervals) )
+         L += sum(line([(c,h*i-h/4), (c,h*i+h/4)]) for i, (c,d) in enumerate(intervals) )
+         L += sum(line([(d,h*i-h/4), (d,h*i+h/4)]) for i, (c,d) in enumerate(intervals) )
+         show(P + L, xmin=a, xmax=b)
+show(html("<a rel='license' href='http://creativecommons.org/licenses/by-sa/3.0/'><img alt='Creative Commons License' height='15' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/3.0/80x15.png' /></a> by <a href='http://wiki.sagemath.org/interact/calculus#Root_Finding_Using_Bisection'>William Stein</a>"))
+</script></div></div>
+</div>
+<div class="section" id="fastapunktsafer">
+<span id="index-2"></span><h2>2.3. Fastapunktsaðferð<a class="headerlink" href="#fastapunktsafer" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Næsta aðferð sem við skoðum kallast fastapunktsaðferð (e. fixed point method) og
+er til að finna fastapunkta en ekki núllstöðvar. Það er hins vegar hægt að
+nota hana til þess að finna núllstöðvar, sjá athugasemd hér að <a class="reference internal" href="#fastapunktar-nullstodvar"><em>neðan</em></a>.</p>
+<div class="section" id="id1">
+<h3>2.3.1. Skilgreining<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math">\(f : [a,b] \to \mathbb R\)</span> vera samfellt fall. Punktur
+<span class="math">\(r \in [a,b]\)</span> þannig að</p>
+<div class="math">
+\[f(r) = r\]</div>
+<p>kallast <em>fastapunktur</em> fallsins <span class="math">\(f\)</span>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Athugum að í fastapunktum skerast graf fallsins <span class="math">\(y=f(x)\)</span> og línan
+<span class="math">\(y=x\)</span>. Verkefnið að ákvarða fastapunkta fallsins <span class="math">\(r\)</span> er því
+jafngilt því að athuga hvar graf <span class="math">\(f\)</span> sker línuna <span class="math">\(y=x\)</span>.</p>
+</div>
+</div>
+<div class="section" id="tenging-vi-nullstovar">
+<span id="fastapunktar-nullstodvar"></span><h3>2.3.2. Tenging við núllstöðvar<a class="headerlink" href="#tenging-vi-nullstovar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Verkefnið að finna fastapunkta fallsins <span class="math">\(g(x)\)</span> er jafngilt því að
+finna núllstöðvar fallsins <span class="math">\(f(x)=g(x)-x\)</span>.</p>
+<p>Þannig að ef við viljum t.d. finna núllstöð <span class="math">\(f(x) = e^x + x^3\)</span> þá er nóg að finna fastapunkt
+fallsins <span class="math">\(g(x) = e^x + x^3 + x\)</span>.</p>
+</div>
+<div class="section" id="reiknirit">
+<h3>2.3.3. Reiknirit<a class="headerlink" href="#reiknirit" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Byrjunarskref:</strong>      Valin er tala <span class="math">\(x_0\in [a,b]\)</span>.</p>
+<p><strong>Ítrunarskref:</strong>       Ef <span class="math">\(x_0,\dots,x_n\)</span> hafa verið valin, þá setjum við</p>
+<blockquote>
+<div><div class="math">
+\[x_{n+1}=f(x_n)\]</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p>Til þess að þetta sé vel skilgreind runa, þá verðum við að gera ráð
+fyrir að <span class="math">\(f(x)\in [a,b]\)</span> fyrir öll <span class="math">\(x\in [a,b]\)</span>. Þetta
+skilyrði er einnig skrifað</p>
+<div class="last math">
+\[f([a,b])\subset [a,b].\]</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p>Ef <span class="math">\(f\)</span> er samfellt og runan er samleitin með markgildið <span class="math">\(r\)</span>, þá er</p>
+<div class="math">
+\[r=\lim_{n\to \infty}x_{n+1}=\lim_{n\to \infty}f(x_{n})
+=f(\lim_{n\to \infty}x_{n})=f(r).\]</div>
+<p class="last">Þetta segir okkur að <em>ef</em> við getum séð til þess að runan verði
+samleitin, þá er markgildið fastapunktur.</p>
+</div>
+</div>
+<div class="section" id="skilgreining-herping">
+<span id="index-3"></span><h3>2.3.4. Skilgreining: Herping<a class="headerlink" href="#skilgreining-herping" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fall <span class="math">\(f:[a,b]\to {\mathbb  R}\)</span> er sagt vera <em>herping</em> ef til er
+fasti <span class="math">\(\lambda\in [0,1[\)</span> þannig að</p>
+<div class="math">
+\[|f(x)-f(y)|\leq \lambda|x-y| \qquad \text{ fyrir öll } x,y\in [a,b].\]</div>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Sérhver herping er samfellt fall.</p>
+</div>
+</div>
+<div class="section" id="setning">
+<h3>2.3.5. Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math">\(f\)</span> er deildanlegt fall á <span class="math">\(]a,b[\)</span>, þá gefur
+meðalgildissetningin okkur til er <span class="math">\(\xi\)</span> milli <span class="math">\(x\)</span> og
+<span class="math">\(y\)</span> þannig að</p>
+<div class="math">
+\[f(x)-f(y)=f'(\xi)(x-y).\]</div>
+<p>Ef til er <span class="math">\(\lambda\in[0,1[\)</span> þannig að <span class="math">\(|f'(x)|\leq \lambda\)</span>
+fyrir öll <span class="math">\(x\in [a,b]\)</span>, þá er greinilegt að <span class="math">\(f\)</span> er herping.</p>
+</div>
+<div class="section" id="fastapunktssetningin">
+<span id="index-4"></span><h3>2.3.6. Fastapunktssetningin<a class="headerlink" href="#fastapunktssetningin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math">\(f : [a,b] \to [a,b]\)</span> vera herpingu. Þá hefur <span class="math">\(f\)</span>
+nákvæmlega einn fastapunkt <span class="math">\(r\)</span> á bilinu <span class="math">\([a,b]\)</span> og runan
+<span class="math">\((x_n)\)</span> þar sem</p>
+<div class="math">
+\[\begin{split}\begin{aligned}
+  x_0 &amp;\in [a,b] \quad \text{ getur verið hvaða tala sem er  og } \\
+  x_{n+1} &amp;= f(x_n), \quad n \geq 0,\end{aligned}\end{split}\]</div>
+<p>stefnir á fastapunktinn.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><p class="first admonition-title"><a href="javascript:showhide(document.getElementById('toggleblock2'))">Sönnun</a></p><div id="toggleblock2" style="display: none"><br/><p>Sönnunina brjótum við upp í nokkur skref.</p>
+<p><strong>1. skref, herping hefur í mesta lagi einn fastapunkt</strong></p>
+<p>Sönnum þetta með mótsögn.</p>
+<p>Gerum ráð fyrir að <span class="math">\(r\)</span> og <span class="math">\(s\)</span> séu tveir ólíkir fastapunktar
+á <span class="math">\([a,b]\)</span>. Þá er</p>
+<div class="math">
+\[\begin{split}|r - s| = |f(r) - f(s)|
+  \leq \lambda |r - s| &lt; |r - s|\end{split}\]</div>
+<p>því <span class="math">\(\lambda &lt; 1\)</span>. Þetta fær ekki staðist, þannig að fjöldi
+fastapunkta er í mesta lagi einn</p>
+<p><strong>2.&nbsp;skref, fallið</strong> <span class="math">\(f\)</span> <strong>hefur fastapunkt:</strong></p>
+<p>Látum <span class="math">\(g(x) = f(x) - x\)</span>, þá eru núllstöðvar <span class="math">\(g\)</span> nákvæmlega
+fastapunktar <span class="math">\(f\)</span>.</p>
+<p>Þar sem <span class="math">\(a \leq f(x) \leq b\)</span> fyrir öll <span class="math">\(x \in [a,b]\)</span> er</p>
+<div class="math">
+\[\begin{split}\left\{ \begin{array}{c}
+      g(a) = f(a) - a \geq 0 \\
+      g(b) = f(b) - b \leq 0
+  \end{array} \right.\end{split}\]</div>
+<p>Ef annað hvort <span class="math">\(g(a) = 0\)</span> eða <span class="math">\(g(b) = 0\)</span> höfum við fundið
+fastapunkt fallsins <span class="math">\(f\)</span> og við getum hætt.</p>
+<p>Ef hins vegar <span class="math">\(g(a) &gt; 0\)</span> og <span class="math">\(g(b) &lt; 0\)</span> þá hefur <span class="math">\(g\)</span>
+ólík formerki í endapunktum bilsins <span class="math">\([a,b]\)</span> og hefur því núllstöð
+<span class="math">\(r\)</span> á bilinu skv.&nbsp;milligildissetninguninni. Þá er <span class="math">\(r\)</span>
+jafnframt fastapunktur <span class="math">\(f\)</span>.</p>
+<p>Skref 1 og 2 sýna því að fallið <span class="math">\(f\)</span> hefur nákvæmlega einn
+fastapunkt á bilinu.</p>
+<p><strong>3.&nbsp;skref, runan</strong> <span class="math">\((x_n)\)</span> <strong>er samleitin</strong></p>
+<p>Látum <span class="math">\(r\)</span> vera ótvírætt ákvarðaða fastapunktinn á <span class="math">\([a,b]\)</span>.</p>
+<p>Við notfærum okkur að <span class="math">\(f\)</span> er herping og að <span class="math">\(r\)</span> er
+fastapunktur <span class="math">\(f\)</span>, þá fæst að fyrir sérhvert
+<span class="math">\(k\in {\mathbb  N}\)</span> þá er</p>
+<div class="math">
+\[|r - x_k| = |f(r) - f(x_{k-1})|  \leq \lambda |r - x_{k-1}|\]</div>
+<p>það er <span class="math">\(|r - x_k| \leq \lambda |r - x_{k-1}|\)</span>.</p>
+<p>Með því að nota þetta <span class="math">\(n\)</span>-sinnum þá fæst að</p>
+<div class="math">
+\[\begin{split}\begin{aligned}
+    |r - x_n|   &amp;\leq \lambda |r - x_{n-1}| &amp; (k=n)\\
+    &amp;\leq \lambda^2 |r - x_{n-2}| &amp; (k=n-1)\\
+    &amp;\vdots &amp; \vdots\\
+    &amp;\leq \lambda^n |r - x_0| &amp; (k=1).
+\end{aligned}\end{split}\]</div>
+<p>Þar sem <span class="math">\(\lambda &lt; 1\)</span> er því</p>
+<div class="math">
+\[\lim\limits_{n \to +\infty} |r - x_n|
+\leq \lim\limits_{n \to +\infty} \lambda^n |r - x_0|
+= 0,\]</div>
+<p>það er runan <span class="math">\(x_n\)</span> stefnir á <span class="math">\(r\)</span>.</p>
+</div></div></div>
+<div class="section" id="fastapunktsafer-er-a-minnsta-kosti-linulega-samleitin">
+<h3>2.3.7. Fastapunktsaðferð er að minnsta kosti línulega samleitin<a class="headerlink" href="#fastapunktsafer-er-a-minnsta-kosti-linulega-samleitin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Af skilgreiningunni á rununni <span class="math">\(x_n\)</span> leiðir beint að</p>
+<div class="math">
+\[|e_{n+1}|=|r-x_{n+1}|=|f(r)-f(x_n)|\leq \lambda|r-x_n|=\lambda|e_n|\]</div>
+<p>sem segir okkur að fastapunktsaðferð sé að minnsta kosti línulega
+samleitin ef <span class="math">\(f\)</span> er herping.</p>
+<div class='sageAutoHidden'><script type='text/x-sage'>var('x')
+@interact
+def _(f = -x^2/3+1, a = float(0), b = float(1), x0 = 0, N=(5,(1..10))):
+	allPlots = plot( f(x), (x, a, b) )
+	allPlots += plot( x, (x, a, b), color = 'black')
+	steps = 0
+	while steps<N:
+		allPlots += line([(x0,x0),(x0,f(x=x0))], color='red', linestyle = "-.", thickness=3)
+		allPlots += list_plot( [(x0,f(x=x0))] , size = 50)
+		allPlots += line([(x0,f(x=x0)), (f(x=x0),f(x=x0))], color='red', linestyle = "-.", thickness=3)
+		allPlots += list_plot( [ (f(x=x0) , f(x=x0)) ] , size = 50)
+		steps = steps+1
+		x0=f(x=x0)
+	show(allPlots)
+</script></div></div>
+</div>
+<div class="section" id="sniilsafer">
+<span id="index-5"></span><h2>2.4. Sniðilsaðferð<a class="headerlink" href="#sniilsafer" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Næst er aðferð til að finna núllstöðvar sem kallast <em>sniðilsaðferð</em>
+(e. <a class="reference external" href="https://en.wikipedia.org/wiki/Secant_method">secant method</a>)</p>
+<p>Gefið er fallið <span class="math">\(f:[a,b]\to {\mathbb  R}\)</span>. Við ætlum að ákvarða
+núllstöð <span class="math">\(f\)</span>, þ.e.a.s. <span class="math">\(p\in [a,b]\)</span> þannig að</p>
+<div class="math">
+\[f(p)=0.\]</div>
+<p>Rifjum upp að <em>sniðill</em> við graf <span class="math">\(f\)</span> gegnum punktana
+<span class="math">\((\alpha,f(\alpha))\)</span> og <span class="math">\((\beta,f(\beta))\)</span> er gefinn með
+jöfnunni</p>
+<div class="math">
+\[y=f(\alpha)+f[\alpha,\beta](x-\alpha)\]</div>
+<p>þar sem hallatalan er</p>
+<div class="math">
+\[f[\alpha,\beta]=\dfrac{f(\beta)-f(\alpha)}{\beta-\alpha}
+=\dfrac{f(\alpha)-f(\beta)}{\alpha -\beta}.\]</div>
+<p>Sniðillinn sker <span class="math">\(x\)</span>-ásinn í punkti <span class="math">\(s\)</span> þar sem</p>
+<div class="math">
+\[0=f(\alpha)+f[\alpha,\beta](s-\alpha) \quad  \text{sem jafngildir því að } \quad
+s=\alpha-\dfrac{f(\alpha)}{f[\alpha,\beta]}.\]</div>
+<div class="section" id="id2">
+<h3>2.4.1. Reiknirit<a class="headerlink" href="#id2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Byrjunarskref:</strong> Giskað er á tvö gildi <span class="math">\(x_0\)</span> og <span class="math">\(x_1\)</span>.</p>
+<p><strong>Ítrunarskref:</strong> Fyrir <span class="math">\(n&gt;1\)</span> þá er punkturinn <span class="math">\(x_{n+1}\)</span>
+skilgreindur sem skurðpunktur sniðilsins gegnum <span class="math">\((x_{n-1},f(x_{n-1}))\)</span> og
+<span class="math">\((x_n,f(x_n))\)</span> við <span class="math">\(x\)</span>-ás, þ.e.</p>
+<div class="math">
+\[x_{n+1}=x_n-\dfrac{f(x_n)}{f[x_n,x_{n-1}]}.\]</div>
+</div>
+<div class="section" id="samleitin-runa-stefnir-a-nullsto">
+<h3>2.4.2. Samleitin runa stefnir á núllstöð <span class="math">\(f\)</span><a class="headerlink" href="#samleitin-runa-stefnir-a-nullsto" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gefum okkur að runan <span class="math">\((x_n)\)</span> sé samleitin að markgildinu
+<span class="math">\(r\)</span>. Meðalgildissetningin segir okkur þá að til sé punktur
+<span class="math">\(\eta_n\)</span> á milli <span class="math">\(x_{n-1}\)</span> og <span class="math">\(x_n\)</span> þannig að</p>
+<div class="math">
+\[f[x_n,x_{n-1}]=f'(\eta_n),\]</div>
+<p>og greinilegt er að <span class="math">\(\eta_n\to r\)</span>.</p>
+<p>Við fáum því</p>
+<div class="math">
+\[r=\lim_{n\to \infty}x_{n+1}=\lim_{n\to \infty}
+\bigg(x_n-\dfrac{f(x_n)}{f'(\eta_n)}\bigg) =r-\dfrac{f(r)}{f'(r)}\]</div>
+<p>Þessi jafna jafngildir því að <span class="math">\(f(r)=0\)</span>.</p>
+</div>
+<div class="section" id="skekkjumat-i-nalgun-a-me">
+<h3>2.4.3. Skekkjumat í nálgun á <span class="math">\(f(x)\)</span> með <span class="math">\(p_n(x)\)</span><a class="headerlink" href="#skekkjumat-i-nalgun-a-me" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Sniðilinn sem við notum er graf 1.&nbsp;stigs margliðunnar</p>
+<div class="math">
+\[p_n(x) = f(x_n) +
+        \dfrac{f(x_{n-1})-f(x_n)}{x_{n-1}-x_n}(x-x_n)
+        = f(x_n) + f[x_n,x_{n-1}](x-x_n)\]</div>
+<p>Samkvæmt skilgreiningu er <span class="math">\(p_n(x_{n+1}) = 0\)</span> svo <span class="math">\(x_{n+1}\)</span>
+uppfyllir jöfnuna</p>
+<div class="math">
+\[x_{n+1} = x_n - \frac{f(x_n)}{f[x_n,x_{n-1}]}.\]</div>
+<p>Við þurfum að vita hver skekkjan er á því að nálga <span class="math">\(f(x)\)</span> með
+<span class="math">\(p_n(x)\)</span>.</p>
+<p>Niðurstaðan er að fyrir sérhvert <span class="math">\(x \in [a,b]\)</span> er til
+<span class="math">\(\xi_n\)</span> sem liggur í minnsta bilinu sem inniheldur <span class="math">\(x\)</span>,
+<span class="math">\(x_n\)</span> og <span class="math">\(x_{n-1}\)</span> þannig að</p>
+<div class="math">
+\[f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1})\]</div>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><p class="first admonition-title"><a href="javascript:showhide(document.getElementById('toggleblock3'))">Sönnun</a></p><div id="toggleblock3" style="display: none"><br/><p>Ljóst er að matið gildir ef <span class="math">\(x=x_{n-1}\)</span> eða <span class="math">\(x=x_n\)</span>.</p>
+<p>Festum því punktinn <span class="math">\(x\)</span> og gerum ráð fyrir að <span class="math">\(x\neq x_1\)</span> og
+<span class="math">\(x\neq x_n\)</span>.</p>
+<p>Skilgreinum fallið</p>
+<div class="math">
+\[g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})\]</div>
+<p>þar sem <span class="math">\(\lambda\)</span> er valið þannig að <span class="math">\(g(x)=0\)</span>.</p>
+<p>Látum nú <span class="math">\(\alpha&lt;\beta&lt;\gamma\)</span> vera uppröðun á punktunum
+<span class="math">\(x_{n-1}\)</span>, <span class="math">\(x_n\)</span> og <span class="math">\(x\)</span>.</p>
+<p>Fallið</p>
+<div class="math">
+\[g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})\]</div>
+<p>hefur núllstöð í öllum punktunum þremur.</p>
+<p>Meðalgildissetningin gefur þá að <span class="math">\(g'(t)\)</span> hefur eina núllstöð í
+punkti á bilinu <span class="math">\(]\alpha,\beta[\)</span> og aðra í <span class="math">\(]\beta,\gamma[\)</span>.</p>
+<p>Af því leiðir aftur að <span class="math">\(g''(t)\)</span> hefur núllstöð, <span class="math">\(\xi_n\)</span>, í
+<span class="math">\([\alpha,\gamma]\)</span>, sem er minnsta bilið sem inniheldur alla
+punktana <span class="math">\(x_{n-1}\)</span>, <span class="math">\(x_n\)</span> og <span class="math">\(x\)</span>.</p>
+<p>Af þessu leiðir</p>
+<div class="math">
+\[0=g''(\xi_n)=f''(\xi_n)-2\lambda \quad \text{þþaa} \quad
+\lambda=\tfrac 12 f''(\xi_n).\]</div>
+<p>Nú var <span class="math">\(\lambda\)</span> upprunalega valið þannig að <span class="math">\(g(x)=0\)</span>. Þar
+með er</p>
+<div class="math">
+\[f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1}).\]</div>
+</div></div></div>
+<div class="section" id="skekkjumat-i-sniilsafer">
+<h3>2.4.4. Skekkjumat í sniðilsaðferð<a class="headerlink" href="#skekkjumat-i-sniilsafer" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skoðum hvað af þessu leiðir:</p>
+<p>Nú er <span class="math">\(f(r) = 0\)</span> og því</p>
+<div class="math">
+\[-p_n(r) = \frac{1}{2}f''(\xi_n)e_n\cdot e_{n-1}.\]</div>
+<p>Eins er</p>
+<div class="math">
+\[-p_n(r) = -f[x_n,x_{n-1}]e_{n+1}=-f'(\eta_n)e_{n+1},\]</div>
+<p>þar sem <span class="math">\(\eta_n\)</span> fæst úr meðalgildissetningunni og liggur á milli
+<span class="math">\(x_n\)</span> og <span class="math">\(x_{n+1}\)</span>. Niðurstaðan verður því</p>
+<div class="math">
+\[e_{n+1} = \frac{-\frac{1}{2}f''(\xi_n)}
+        {f[x_n, x_{n+1}]}
+    e_ne_{n-1} = \frac{-\frac{1}{2}f''(\xi_n)}
+        {f'(\eta_n)}e_ne_{n-1}\]</div>
+<p>það er</p>
+<div class="math">
+\[\lim_{n\to \infty}\dfrac{e_{n+1}}{e_ne_{n-1}}=
+\lim_{n \to \infty} \frac{-\frac{1}{2}f''(\xi_n)}
+        {f'(\eta_n)}
+=
+\frac{-\frac{1}{2}f''(r)}
+        {f'(r)}.\]</div>
+</div>
+<div class="section" id="id3">
+<h3>2.4.5. Setning<a class="headerlink" href="#id3" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef sniðilsaðferð er samleitin, <span class="math">\(f\in C^2([a,b])\)</span> (tvisvar
+diffranlegt) og <span class="math">\(f'(r)\neq 0\)</span>, þá er sniðilsaðferðin ofurlínuleg.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><p class="first admonition-title"><a href="javascript:showhide(document.getElementById('toggleblock4'))">Sönnun</a></p><div id="toggleblock4" style="display: none"><br/><div class="math">
+\[\lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|} =
+\lim_{n\to \infty}\dfrac{|e_{n+1}e_{n-1}|}{|e_ne_{n-1}|}=
+\lim_{n \to \infty} \frac{|e_{n-1}\frac{1}{2}f''(r)|}
+        {|f'(r)|} = 0\]</div>
+</div></div><p>Raunar þá er sniðilsaðferðin samleitin af stigi
+<span class="math">\(\alpha = (1+\sqrt 5)/2 \approx 1,618\)</span> og með
+<span class="math">\(\lambda = \left(\frac{f''(r)}{2f'(r)}\right)^{\alpha -1}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="afer-newtons">
+<span id="index-6"></span><h2>2.5. Aðferð Newtons<a class="headerlink" href="#afer-newtons" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Í sniðilsaðferðinni létum við <span class="math">\(x_{n+1}\)</span> vera skurðpunkt sniðils
+gegnum <span class="math">\((x_{n-1},f(x_{n-1}))\)</span> og <span class="math">\((x_n,f(x_n))\)</span> við
+<span class="math">\(x\)</span>-ás og fengum við rakningarformúluna</p>
+<div class="math">
+\[x_{n+1} = x_n - \frac{f(x_n)}{f[x_n,x_{n-1}]}.\]</div>
+<p>Aðferð Newtons er nánast eins, nema í stað sniðils tökum við snertil í
+punktinum <span class="math">\((x_n,f(x_n))\)</span>.</p>
+<p>Rakningarformúlan er eins, nema hallatalan verður <span class="math">\(f'(x_n)\)</span> í stað
+<span class="math">\(f[x_n,x_{n-1}]\)</span></p>
+<div class="section" id="id4">
+<h3>2.5.1. Reiknirit<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Byrjunarskref:</strong> Giskað er á eitt gildi <span class="math">\(x_0\)</span>.</p>
+<p><strong>Ítrunarskref:</strong> Gefin eru <span class="math">\(x_0,\dots,x_n\)</span>. Punkturinn <span class="math">\(x_{n+1}\)</span> er
+skurðpunktur snertils gegnum <span class="math">\((x_n,f(x_n))\)</span> við <span class="math">\(x\)</span>-ás,</p>
+<div class="math">
+\[x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}.\]</div>
+</div>
+<div class="section" id="upprifjun">
+<h3>2.5.2. Upprifjun<a class="headerlink" href="#upprifjun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Munum að snertill við graf <span class="math">\(f\)</span> í punktinum <span class="math">\(x_n\)</span> er</p>
+<div class="math">
+\[y=f(x_n) + f'(x_n)(x-x_n),\]</div>
+<p>þessi lína sker <span class="math">\(x\)</span>-ásinn (<span class="math">\(y=0\)</span>) þegar
+<span class="math">\(x=x_n - \frac{f(x_n)}{f'(x_n)}\)</span>.</p>
+</div>
+<div class="section" id="id5">
+<h3>2.5.3. Samleitin runa stefnir á núllstöð <span class="math">\(f\)</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gefum okkur að runan <span class="math">\((x_n)\)</span> sé samleitin með markgildið
+<span class="math">\(r\)</span>. Við fáum því</p>
+<div class="math">
+\[r=\lim_{n\to \infty}x_{n+1}=\lim_{n\to \infty}
+\bigg(x_n-\dfrac{f(x_n)}{f'(x_n)}\bigg) =r-\dfrac{f(r)}{f'(r)}\]</div>
+<p>Þessi jafna jafngildir því að <span class="math">\(f(r)=0\)</span>.</p>
+<p>Þannig að ef runan er samleitin þá fáum við núllstöð.</p>
+</div>
+<div class="section" id="id6">
+<h3>2.5.4. Skekkjumat í nálgun á <span class="math">\(f(x)\)</span> með <span class="math">\(p_n(x)\)</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Snertillinn við <span class="math">\(f\)</span> í punktinum <span class="math">\(x_n\)</span> er 1.&nbsp;stigs margliðan</p>
+<div class="math">
+\[p_n(x) = f(x_n) + f'(x_n)(x-x_n)\]</div>
+<p>Samkvæmt skilgreiningu er <span class="math">\(p_n(x_{n+1}) = 0\)</span> svo <span class="math">\(x_{n+1}\)</span>
+uppfyllir jöfnuna</p>
+<div class="math">
+\[x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.\]</div>
+<p>Athugum að <span class="math">\(p_n\)</span> er fyrsta Taylor nálgunin við fallið <span class="math">\(f\)</span>
+kringum <span class="math">\(x_n\)</span>. Setning Taylors gefur að til er <span class="math">\(\xi_n\)</span> sem
+liggur á milli <span class="math">\(r\)</span> og <span class="math">\(x_n\)</span> þannig að</p>
+<div class="math">
+\[f(r) - p_n(r) = \frac{1}{2}f''(\xi_n)(r-x_n)^2.\]</div>
+</div>
+<div class="section" id="skekkjumat-i-afer-newtons">
+<h3>2.5.5. Skekkjumat í aðferð Newtons<a class="headerlink" href="#skekkjumat-i-afer-newtons" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú er <span class="math">\(f(r) = 0\)</span> og því</p>
+<div class="math">
+\[-p_n(r) = \frac{1}{2}f''(\xi_n)e_n^2.\]</div>
+<p>Eins er fæst af skilgreiningunni á <span class="math">\(p_n\)</span> að</p>
+<div class="math">
+\[-p_n(r) = -f'(x_n)e_{n+1}\]</div>
+<p>Niðurstaðan verður því</p>
+<div class="math">
+\[e_{n+1} = \frac{-\frac{1}{2}f''(\xi_n)}
+        {f'(x_n)}e_n^2\]</div>
+<div class='sageAutoHidden'><script type='text/x-sage'>@interact
+def _(f = x^2-1, a = float(0), b = float(3), p = float(3), n=(3,(1..10))):
+	df=diff(f,x);             # Sage will compute the derivative of f 
+	NewtonIt(x)=x-(f/df)(x);  # Newton's Iterative Formula which we are calling "NewtonIt"
+	#m=p
+    
+	#M=p
+
+	print 'x_0 =  %.4g' % p
+	allPlots = plot(f(x),(x,a,b))
+	allPlots +=text( '\n$x_{%d}$' % (0,),(p,0),color='red',vertical_alignment='top')
+	for i in range(n):
+	    pnew = N(NewtonIt(p))
+	    #allPlots += line([(p,f(x=p)),(pnew,0)],color='red',linestyle="-",thickness=0.5)
+	    allPlots += line([(a,df(x=p)*(a-pnew)),(b,df(x=p)*(b-pnew))],color='green',linestyle="-",thickness=0.5)
+	    allPlots += point((p,f(x=p)))
+	    allPlots += point((pnew,0))
+	    allPlots +=text( '\n$x_{%d}$' % (i+1,),(pnew,0),color='red',vertical_alignment='top')
+	    p = pnew
+	    #m = min(m,p)
+	    #M = max(M,p)
+	    print 'x_%d =  %.4g' % (i+1,p)
+
+	#allPlots += plot(f(x),(x,m,M))
+	show(allPlots)
+</script></div></div>
+<div class="section" id="id7">
+<h3>2.5.6. Setning<a class="headerlink" href="#id7" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef aðferð Newtons fyrir fallið <span class="math">\(f\)</span> er samleitin,
+<span class="math">\(f\in C^2([a,b])\)</span> og <span class="math">\(f'(r)\neq 0\)</span>, þá fáum við:</p>
+<div class="math">
+\[\lim_{n\to \infty}\dfrac{e_{n+1}}{e_n^2}=\frac{-\frac{1}{2}f''(r)}
+        {f'(r)}\]</div>
+<p>Það þýðir að aðferð Newtons er ferningssamleitin.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><p class="first admonition-title"><a href="javascript:showhide(document.getElementById('toggleblock5'))">Sönnun</a></p><div id="toggleblock5" style="display: none"><br/><div class="math">
+\[\lim_{n\to \infty}\dfrac{e_{n+1}}{e_n^2}=
+\lim_{n\to \infty}\frac{-\frac{1}{2}f''(\xi_n)}{f'(x_n)} =
+\frac{-\frac{1}{2}f''(r)}{f'(r)}\]</div>
+</div></div><div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p>Athugið að það er ekki sjálfgefið að aðferð Newtons sé samleitin.</p>
+<p class="last">Auðvelt er að finna dæmi þar sem vond upphafságiskun <span class="math">\(x_0\)</span> skilar
+runu sem er ekki samleitin.</p>
+</div>
+</div>
+</div>
+<div class="section" id="samanburur-a-aferum">
+<h2>2.6. Samanburður á aðferðum<a class="headerlink" href="#samanburur-a-aferum" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="18%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Aðferð</th>
+<th class="head">Samleitni</th>
+<th class="head">Stig samleitni</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2"><p class="first"><a class="reference internal" href="#helmingunarafer">Helmingunaraðferð</a></p>
+<p class="last">(e. <a class="reference external" href="https://en.wikipedia.org/wiki/Bisection_method">bisection method</a>)</p>
+</td>
+<td rowspan="2">Já, ef <span class="math">\(f(a)f(b)&lt;0\)</span></td>
+<td rowspan="2">1, línuleg</td>
+</tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"><td rowspan="2"><p class="first"><a class="reference internal" href="#fastapunktsafer">Fastapunktsaðferð</a></p>
+<p class="last">(e. <a class="reference external" href="https://en.wikipedia.org/wiki/Fixed-point_iteration">fixed point iteration</a>)</p>
+</td>
+<td rowspan="2"><p class="first">Ekki alltaf. En saml.</p>
+<p class="last">ef <span class="math">\(f\)</span> er herping</p>
+</td>
+<td rowspan="2">amk 1</td>
+</tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"><td rowspan="2"><p class="first"><a class="reference internal" href="#sniilsafer">Sniðilsaðferð</a></p>
+<p class="last">(e. <a class="reference external" href="https://en.wikipedia.org/wiki/Secant_method">secant method</a>)</p>
+</td>
+<td rowspan="2">Ekki alltaf</td>
+<td rowspan="2"><span class="math">\(\approx 1,618\)</span>, ef <span class="math">\(f'(r)\neq 0\)</span></td>
+</tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"><td rowspan="2"><p class="first"><a class="reference internal" href="#afer-newtons">Aðferð Newtons</a></p>
+<p class="last">(e. <a class="reference external" href="https://en.wikipedia.org/wiki/Newton%27s_method">Newtons method</a>)</p>
+</td>
+<td rowspan="2">Ekki alltaf</td>
+<td rowspan="2">2, ef <span class="math">\(f'(r)\neq 0\)</span></td>
+</tr>
+<tr class="row-odd"></tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Aðvörun</p>
+<p class="last">Þó að aðferð Newtons sé samleitin af stigi 2, en sniðilsaðferðin af
+stigi u.þ.b.&nbsp;1,618, þá er í vissum tilfellum hagkvæmara að nota
+sniðilsaðferðina ef það er erfitt að reikna gildin á afleiðunni
+<span class="math">\(f'\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kafli03.html" class="btn btn-neutral float-right" title="3. Brúun" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="kafli01.html" class="btn btn-neutral" title="1. Inngangur" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

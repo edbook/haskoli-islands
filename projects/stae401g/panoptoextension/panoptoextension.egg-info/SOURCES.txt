@@ -1,0 +1,10 @@
+README.txt
+setup.py
+panoptoextension/__init__.py
+panoptoextension/panopto.py
+panoptoextension.egg-info/PKG-INFO
+panoptoextension.egg-info/SOURCES.txt
+panoptoextension.egg-info/dependency_links.txt
+panoptoextension.egg-info/namespace_packages.txt
+panoptoextension.egg-info/requires.txt
+panoptoextension.egg-info/top_level.txt

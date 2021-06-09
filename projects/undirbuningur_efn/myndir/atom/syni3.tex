@@ -1,0 +1,69 @@
+\documentclass[tikz,border=20pt]{standalone}
+
+%% Language and font encodings
+
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\setlength\parindent{0pt}
+\linespread{1.25}
+\usepackage{cool,siunitx}
+
+%% Useful packages
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{tablefootnote}
+\usepackage{hhline}
+\usepackage{icomma}
+\usepackage{ dsfont }
+\usepackage{ upgreek }
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{cancel}
+\usepackage{accents}
+\usepackage{pdfpages}
+\usepackage{svg}
+\begin{document}
+
+\begin{tikzpicture}
+\node[] at (2,1) {\Huge{[Ne]}};
+
+\draw[gray, thick] (4,0) -- (4,2);
+\draw[gray, thick] (6,0) -- (6,2);
+\draw[gray, thick] (4,0) -- (6,0);
+\draw[gray, thick] (4,2) -- (6,2);
+
+\draw[gray, thick] (7,0) -- (13,0);
+\draw[gray, thick] (7,2) -- (13,2);
+\draw[gray, thick] (7,0) -- (7,2);
+\draw[gray, thick] (9,0) -- (9,2);
+\draw[gray, thick] (11,0) -- (11,2);
+\draw[gray, thick] (13,0) -- (13,2);
+
+\draw [-{Straight Barb[left]}] (4.8,0.2)--(4.8, 1.8);
+\draw [-{Straight Barb[left]}] (5.2,1.8)--(5.2, 0.2);
+
+\draw [-{Straight Barb[left]}] (7.8,0.2)--(7.8, 1.8);
+\draw [-{Straight Barb[left]}] (9.8,0.2)--(9.8, 1.8);
+\draw [-{Straight Barb[left]}] (11.8,0.2)--(11.8, 1.8);
+
+%\draw [-{Straight Barb[left]}] (8.2,1.8)--(8.2, 0.2);
+
+\node[] at (5,-0.8) {\Large{3s}};
+\node[] at (10,-0.8) {\Large{3p}};
+
+\end{tikzpicture}
+
+\end{document}
+
+

@@ -1,0 +1,21 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+  \begin{tikzpicture}
+
+    %\draw [thick ,->] (0,0) -- (2.2981,1.9238) node[midway, above left]{$v_0$} ;
+    \draw [dashed, thin] (2.2981,1.9238) -- (2.2981, 0);
+    \draw [dashed, thin] (2.2981,1.9238) -- (0, 1.9238);
+
+    \draw [thick, ->] (0,0) -- (2.2981, 0) node[midway,below,text width=1.8cm, align=center]{$v_{0x} $ \\ \small $=v_0\cos(\alpha_0)$};
+    \draw [thick, ->] (0,0) -- (0, 1.9238) node[midway, left,text width=1.8cm, align=center]{$v_{0y} $ \\ \small $=v_0\sin(\alpha_0)$};
+
+    \draw [->, very thick, red] (0,0) -- (2.2981,1.9238) node[midway, above] {$v_0$};
+
+    \draw [thick] (0.8,0) arc (0:40:0.8) node [midway,right] {\small $\alpha_0$};
+
+    %\node [text width=4cm]at (1.2, 0) {$v_{0x}$ $ \\ =\cos(\alpha_0)$};
+
+  \end{tikzpicture}
+\end{document}

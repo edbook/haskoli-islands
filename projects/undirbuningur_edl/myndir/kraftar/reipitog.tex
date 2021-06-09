@@ -1,0 +1,16 @@
+\documentclass[tikz, border=7pt]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+
+\draw [very thick, ->] (0,0) -- (-1,0) node [midway,below] {$F_I$};
+
+\draw [very thick, ->] (2,0) -- (3.2,0) node [midway, below] {$F_G$};
+\draw [very thick, gray] (0,-0.03) -- (0,0.03) -- (2,0.03) -- (2,-0.03) --(0,-0.03);
+
+%\draw (0.8,0.4) to [out=45, in=180] (1,0.45);
+%\node at (0.85,0.7) {$\theta$};
+
+\end{tikzpicture}
+\end{document}

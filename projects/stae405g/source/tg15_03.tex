@@ -1,0 +1,1391 @@
+\lecture[3]{Kafli 3: Línuleg algebra, Gauss-eyðing, \\
+fylkjastaðll, skekkjumat, ástandstala,\\  
+LU-þáttun og fastapunktsaðferðir}{lecture-text}
+\date{25.~og 27.~mars, og 8.~apríl 2015}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+%\section*{}
+\begin{frame}{Yfirlit}
+\begin{block}{Kafli 3: Jöfnuhneppi}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}\hline
+Kafli &Heiti á viðfangsefni &Bls. & Glærur\\
+\hline
+3.1 & Línuleg algebra & 149-159 & 3-5\\
+3.2 & Vending (pivoting) & 160-170 & 6-9\\
+3.3 & Fylkjastaðall (matrix norm) & 171-180 & 10-17\\
+3.4 & Skekkjumat og ástandstala (condition numb.) & 181-190 & 18-23\\
+3.5 & $LU$-þáttun & 191-204 & 24-39\\
+3.8 & Fastapunktsaðferðir (fixed point iteration)& 223-236 & 39-48\\
+3.10 & Newton-aðferð fyrir jöfnuhneppi &  249-258 & 49-54\\
+%3.8 & Fastapunktssetning fyrir jöfnuhneppi & & 56\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{block}
+\end{frame}
+
+\section*{3.1 Línuleg algebra}
+\begin{frame}{3.1 Línuleg jöfnuhneppi}
+\begin{block}{Línuleg jöfnuhneppi}
+ Gefið $n\times n$ fylki $A$ og $n$-vigur $\bv$ þá leitum við að
+vigri $\xv$ þannig að 
+$$
+A\xv = \bv.
+$$
+\end{block}
+
+\pause 
+
+ \begin{block}{Lausnir}
+  Við höfum almennt tvær leiðir til þess að leysa línuleg jöfnuhneppi: \pause
+\begin{itemize}
+ \item Gauss-eyðing og innsetning.\pause
+\item Reikna andhverfu $A$, $A^{-1}$. Þá er 
+$$ 
+\xv = A^{-1}\bv.
+$$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{3.1 Fjöldi aðgerða}
+ \begin{block}{}
+  \begin{itemize}
+   \item Gauss-eyðing fyrir $n\times n$ fylki krefst $\frac 23n^3+\frac 12n^2 -\frac 76n$
+reikniaðgerða. Innsetningin krefst svo $n^2$ aðgerða til viðbótar. 
+\pause  Samanlagður fjöldi aðgerða er því
+$$
+\frac 23n^3+\frac 32n^2 -\frac 76n.
+$$\pause
+  \item Það að reikna $A^{-1}$ krefst hins vegar $2n^3-2n^2+n$ aðgerða og margföldunin 
+$A^{-1}b$, krefst $2n^2-n$ aðgerða til viðbótar. 
+\pause Samanlagður fjöldi aðgerða er því
+$$
+2n^3.
+$$\pause
+  \end{itemize}
+Hér er greinilega gáfulegra að nota Gauss-eyðingu. Almennt
+þá forðumst við eins og mögulegt er að reikna $A^{-1}$.
+ \end{block}
+
+\end{frame}
+
+\begin{frame}{3.1 Vandamál með stöðugleika} 
+\begin{block}{Einfalt dæmi}
+ Skoðum jöfnuhneppið
+$$
+\left[\begin{array}{ll}
+\epsilon & 1\\
+1 & 1
+\end{array}\right] \left[\begin{array}{l}
+x_1\\
+x_2
+\end{array}\right] 
+=\left[\begin{array}{l}
+1\\
+2
+\end{array}\right]
+$$
+\pause
+Nákvæm lausn er $x_1=1+\frac{\epsilon}{1-\epsilon}, 
+x_2=1-\frac{\epsilon}{1-\epsilon}$. \pause
+
+Ef hins vegar $\epsilon$ er minna en nákvæmnin í tölvunni sem erum að vinna á, þá 
+gefur Gauss-eyðing í tölvu, þar sem eytt er með 1.~línu, svarið $x_1 = 0, x_2 = 1$. \pause
+
+Ef línunum væri víxlað, þá gæfi tölvan hins vegar $x_1=1, x_2=1$ sem er miklu nær réttu svari.
+Sjá nánar skrána {\tt tg14\_03synidaemi.pdf} á Uglu. 
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+ Það er alveg ljóst að megum ekki framkvæma Gauss-eyðingu blindandi því þá 
+ geta
+magnast upp styttingarskekkjur sem skemma lausnina okkar.
+\end{block}
+\end{frame}
+
+\section*{3.2 Vending}
+
+\begin{frame}{3.2 Vending (e. pivoting)}
+ \begin{block}{Vandamálið}
+  Það sem olli vandræðum í dæminu hér á undan var það að forystustuðull
+fyrstu línunnar var hlutfallslega miklu minni en forystustuðull annarrar línu.
+ \end{block}
+
+\begin{block}{Lausnin}
+ Lausnin felst í því að víxla á línum þannig að við þurfum ekki að notast
+við litla forystustuðla.
+\end{block}
+\end{frame}
+
+\begin{frame}{3.2 Hlutvending (e.~partial pivoting)}
+\begin{block}{}
+ Í grófum dráttum: Í umferð $i$ í Gauss-eyðingunni þá athugum við hvort tölugildi 
+forystu\-stuðla línanna fyrir neðan
+línu $i$ eru stærri en forystustuðull línu $i$, ef svo er þá víxlum við á 
+þeirri línu og línu $i$.
+
+\pause
+\medskip
+
+Það er, í $i$-tu ítrun Gauss-eyðingar þá látum við $M_i = \max_{i\leq j \leq n} |a_{ji}|$.
+Ef $|a_{ii}| < M_i$ þá víxlum við á línu $i$ og fyrstu línunni fyrir neðan 
+sem hefur forystustuðul með tölugildi jafnt og $M_i$. \pause (Þetta þýðir að ef 
+$j_0 = \min\{ j ; i \leq j\leq n \text{ og } a_{ji} = M_i \}$ þá víxlum við á línu $i$ og $j_0$).
+\end{block}
+
+\pause
+\begin{block}{Vankantar}
+Hlutvending virkar oft vel en getur búið til skekkju þar sem hún tekur bara tillit til
+forystustuðlanna í hverri línu, sjá dæmi kafla 3.2 (bls.~165). 
+\end{block}
+\end{frame}
+
+\begin{frame}{3.2 Sköluð hlutvending (e.~scaled partial pivoting)}
+ \begin{block}{}
+  Skilgreinum vigurinn $\sv$ sem heldur utan um ``stærð`` línanna í $A$,
+$$
+s_i = \max_{1\leq j \leq n} |a_{ij}|.
+$$
+\pause
+Látum dálkvigurinn $\rv$ halda utan um það hvernig við umröðum línunum í $A$.
+Byrjum með
+$$
+\rv = [1\ 2\ 3\ 4\ \ldots\ n]^T.
+$$
+\end{block}
+\pause
+
+
+\begin{block}{Athugasemd} 
+Við munum uppfæra $\rv$ eftir þörfum en breytum ekki $\sv$ (of dýrt ef $n$ er stórt). 
+\end{block}
+
+\end{frame}
+
+\begin{frame}{3.2 Sköluð hlutvending, framh.}
+\begin{block}{}
+Í ítrun $i$ þá látum við 
+$$
+M_i = \max_{i \leq j \leq n} \frac{|a_{{r_j}i}|}{s_{r_j}},
+$$
+og látum $j_0$ vera minnsta $j$ þannig að hámarkinu er náð, 
+$$
+\frac{ |a_{r_{j_0}i}|}{s_{r_{j_0}}} = M_i.
+$$
+\pause
+
+Ef $i < j_0$ þá skiptum við á línum $i$ og $j_0$, \pause þ.e.
+$$
+\rv = [\ldots\ i\ \ldots\ j_0\ \ldots]^T \text{ breytist í }
+\rv = [\ldots\ j_0\ \ldots\ i\ \ldots]^T.
+$$
+ \end{block}
+\end{frame}
+
+% Sýnidæmi
+
+\section*{3.3 Fylkjastaðall}
+
+\begin{frame}{3.3 Inngangur}
+ \begin{block}{Að mæla fjarlægð milli hluta}
+    Á rauntalnalínunni þá mælum við fjarlægð með tölugildinu,
+    þannig að fjarlægðin á milli $x$ og $y$ er gefin með
+    $d(x,y)=|x-y|$. 
+
+\pause\smallskip
+
+  Í $\R^n$ þá finnst okkur evklíðski staðallinn náttúrulegur, enda svarar  
+  hann til þess að mæla fjarlægð milli punkta með reglustiku;
+  $$
+    d(\xv,\yv) = \sqrt{ (x_1-y_1)^2 + \ldots + (x_n-y_n)^2 }.
+  $$\pause
+  Þetta er hins vegar ekki eina leiðin til þess mæla fjarlægð
+í $\R^n$, eins og við sjáum fljótlega, og ekki endilega réttari 
+en aðrar aðferðir.
+
+\pause\smallskip
+  
+  Almennt viljum við geta mælt ''fjarlægð`` á milli allra þeirra hluta
+sem við erum skoða, hvort sem það eru margliður, föll eða fylki.
+Tilgangurinn er að geta metið hversu langt nálgunin okkar er frá
+réttu gildi og hversu stór skekkjan er í samanburði við stærð
+hlutarins sem við erum að vinna með.
+
+ \end{block}
+\end{frame}
+
+
+\begin{frame}{3.3 Vigurstaðall}
+ 
+\begin{block}{Skilgreining}
+ Fall $\| \cdot\|:\R^n \to \R$ kallast \emph{vigurstaðall} (e.~vector norm)
+ef fyrir öll $\xv,\yv\in \R^n$ og $\alpha \in \R$ gildir eftirfarandi:\pause
+\begin{enumerate}
+ \item $\|\xv\| \geq 0$\pause
+ \item $\|\xv\| = 0$ ef og aðeins ef $\xv = 0$\pause
+ \item $\|\alpha\xv\| = |\alpha|\|\xv\|$\pause
+ \item $\|\xv+\yv\| \leq \|\xv\| + \|\yv\|$
+\end{enumerate}
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+ Tölugildisfallið á $\R$ er greinilega staðall. 
+\end{block}
+\end{frame}
+
+\begin{frame}{3.3 Dæmi um staðla}
+\begin{block}{$\ell_2$ staðallinn}
+ Einnig kallaður evklíðska fjarlægðin, er gefinn með 
+$$
+\|\xv\|_2 = \left( \sum_{j=1}^n x_j^2 \right)^{\frac 12} = \sqrt{\xv \cdot \xv}.
+$$
+\end{block}
+\vspace{-0.5cm}
+\pause
+
+\begin{block}{$\ell_\infty$ staðallinn}
+$$
+  \|\xv\|_\infty = \max_{1\leq j \leq n} |x_j|.
+$$
+\end{block}
+\vspace{-0.5cm}
+\pause
+
+\begin{block}{$\ell_p$ staðlar}
+ Almennt, ef $1\leq p < \infty$, þá skilgreinum við 
+$$
+\|\xv\|_p = \left( \sum_{j=1}^n |x_j|^p \right)^{\frac 1p}.
+$$
+\end{block}
+
+\end{frame}
+
+\begin{frame}{3.3 Fylkjastaðall}
+ \begin{block}{Skilgreining}
+  \emph{Fylkjastaðall} (e.~matrix norm) er fall $\|\cdot\|:\R^{n\times n} \to \R$,
+þannig að fyrir öll $A,B \in \R^{n\times n}$ og $\alpha \in \R$ gildir\pause
+\begin{enumerate}
+ \item $\|A\| \geq 0$\pause
+\item $\|A\| = 0$ ef og aðeins ef $A=0$\pause
+\item $\| \alpha A\| = |\alpha|\|A\|$\pause
+\item $\|A+B\| \leq \|A\| + \|B\|$ \pause
+\item $\|AB\| \leq \|A\|\|B\|$
+\end{enumerate}
+ \end{block}
+
+\begin{block}{Athugasemd}
+ Ef þessi skilgreining er borin saman við skilgreininguna á staðli fyrir vigurrúm þá 
+sjáum við að eini raunverulegi munurinn er skilyrði 5.
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}{3.3 Fylkjastaðall skilgreindur út frá vigurstaðli}
+ \begin{block}{Skilgreining}
+  Látum $\|\cdot\|$ vera vigurstaðal. Fallið $\|\cdot\|:\R^{n\times n} \to \R$
+sem skilgreint er með 
+$$
+\|A\| = \max_{\|\xv\| \neq 0} \frac{\|A\xv\|}{\|\xv\|},
+$$
+kallast \emph{náttúrulegi fylkjastaðallinn} sem $\|\cdot\|$ gefur af sér.
+ \end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+ Það þarf að sýna, og er ekki mjög erfitt, að þessi fylkjastaðall uppfyllir
+öll skilyrðin í skilgreiningu hér á undan og er því sannarlega fylkjastaðall.
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+ Ef $\|\cdot\|$ er náttúrulegur fylkjastaðall þá gildir að fyrir öll fylki $A$ og alla vigra $\xv$ að
+$$
+\underbrace{\|A\xv\|}_{\text{vigurstaðll}} \leq \underbrace{\|A\|}_{\text{fylkjastaðall}}
+\underbrace{\|\xv\|}_{\text{vigurstaðall}}.
+$$
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}{3.3 Dæmi um fylkjastaðal}
+\begin{block}{Athugasemd}
+Fyrir sérhvern $\ell_p$ staðal fáum við fylkjastaðal $\|\cdot\|_p$. 
+\end{block}
+
+\begin{block}{$\|\cdot\|_\infty$}
+Einfaldastur er staðallinn sem tilheyrir $\ell_\infty$, en hann uppfyllir
+$$
+\|A\|_\infty = \max_{1\leq i \leq n} \sum_{j=1}^n |a_{ij}|.
+$$
+\end{block}
+\end{frame}
+
+\begin{frame}{3.3 Eigingildi}
+\begin{block}{Skilgreining}
+ Látum $A$ vera fylki. Ef tala $\lambda$ (hugsanlega tvinntala) og vigur $\xv$ uppfylla 
+$$
+A\xv = \lambda \xv,
+$$
+þá kallast $\lambda$ \emph{eigingildi} $A$, og $\xv$ \emph{eiginvigur} $A$.\pause
+
+\medskip
+
+Athugið að eigingildi $A$ eru nákvæmlega rætur kennimargliðu $A$, $t \mapsto \det(A-It)$. 
+\end{block}
+\end{frame}
+
+\begin{frame}{3.3 Róf og eiginleikar þess}
+\begin{block}{Skilgreining}
+Mengi allra eigingilda $A$ er kallað \emph{róf $A$} (e.~spectrum) og er táknað með $\sigma(A)$.
+\pause
+
+\emph{Rófgeisli} (e.~spectral radius) fylkisins $A$ er talan
+$$
+\rho(A) = \max_{\lambda \in \sigma(A)} |\lambda|.
+$$
+\end{block}
+
+
+\begin{block}{Setning}
+Látum $A$ vera fylki, þá gildir eftirfarandi \pause
+ \begin{itemize}
+  \item $\|A\|_2 = \sqrt{\rho(A^T A)}$\pause
+  \item $\rho(A) \leq \|A\|$ fyrir sérhvern náttúrulegan fylkjastaðal $\|\cdot\|$\pause
+  \item Fyrir sérhvert $\epsilon >0$ þá er til náttúrulegur fylkjastaðall $\|\cdot\|$ þannig
+að $\|A\| \leq \rho(A) + \epsilon$.
+ \end{itemize}
+
+\end{block} 
+\end{frame}
+
+\section*{3.4 Skekkjumat og ástandstala}
+\begin{frame}{3.4 Hvernig á að mæla skekkju}
+ Gerum ráð fyrir að $A$ sé andhverfanlegt fylki, $\bv$ vigur og að við séum að
+leita að lausn $\xv$ á 
+$$
+A\xv = \bv.
+$$
+\pause
+\medskip
+
+Ef við höfum nálgun $\tilde \xv$ þannig að \emph{leifin} (e.~residual) $\rv = A\tilde \xv - \bv$ er lítil, hvað 
+getum við þá sagt um \emph{skekkjuna} (e.~error) $\ev = \xv -\tilde \xv$? Er hún endilega lítil?
+
+\pause
+\medskip
+
+Sjáum að svo er ekki, skekkjan getur verið hlutfallslega miklu meiri heldur en leifin
+(Example 3.11).
+
+
+\end{frame}
+
+\begin{frame}{3.4 Skekkjumat}
+Við höfum fjórar jöfnur
+$$
+\bv=A\xv, \quad \xv=A^{-1}\bv, \quad 
+\rv=A(\mathbf{\tilde x}-\xv)=A\ev, \quad \text{ og } \quad
+\ev=A^{-1}\rv
+$$\pause
+og þær gefa okkur fjórar ójöfnur fyrir tilsvarandi staðal:
+$$
+\|\bv\|\leq \|A\|\|\xv\|, \quad  \|\xv\|\leq \|A^{-1}\|\|\bv\|, 
+\quad  
+\|\rv\|\leq \|A\|\|\ev\|, \quad  \|\ev\|\leq \|A^{-1}\|\|\rv\|
+$$
+
+\pause
+\smallskip
+Við getum tengt tvær síðustu ójöfnurnar saman í mat á skekkjunni
+$$
+\dfrac 1{\|A\|}\cdot  \|\rv\|
+\leq  \|\ev\| \leq 
+\|A^{-1}\| \|\rv\|
+$$\pause
+og með því að nota fyrstu tvær ójöfnurnar fæst mat á hlutfallslegri skekkju
+$$
+\dfrac 1{\|A\|\|A^{-1}\|}\dfrac{ \|\rv\|}{\|\bv\|} 
+\leq \dfrac{\|\ev\|}{\|\xv\|} \leq 
+\|A\|\|A^{-1}\|\dfrac{\|\rv\|}{\|\bv\|}
+$$
+
+\pause
+\smallskip
+Nú skilgreinum við {\it ástandstölu fylkisins} $A$ með
+$$
+\kappa(A)=\|A\|\|A^{-1}\|.
+$$
+\end{frame}
+
+
+\begin{frame}{3.4 Ástandstala fylkis og mat á hlutfallslegri skekkju} 
+
+\begin{block}{Matið}
+Með ástandstölunni verður mat okkar á hlutfallslegu skekkjunum að
+$$
+\dfrac 1{\kappa(A)}\cdot \dfrac{ \|\rv\|}{\|\bv\|} 
+\leq \dfrac{\|\ev\|}{\|\xv\|} \leq 
+\kappa(A)\cdot \dfrac{\|\rv\|}{\|\bv\|}
+$$
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+Athugið að skilgreiningin 
+$$
+\kappa(A)=\|A\|\|A^{-1}\|.
+$$
+er {\it mjög}  háð því hvaða staðal við veljum,
+\pause
+en við höfum þó að
+$$
+1=\|I\|=\|AA^{-1}\|\leq \|A\|\|A^{-1}\|=\kappa(A) 
+$$
+\end{block}
+\end{frame}
+
+\begin{frame}{3.4 Áhrif gagnaskekkju} 
+
+Hugsum okkur nú að við viljum leysa jöfnuhneppi $A\xv=\bv$, en vegna
+skekkju í stuðlum jöfnuhneppisins  leysum við annað hneppi
+$\tilde A\mathbf {\tilde x}=\mathbf{\tilde b}$.
+
+\pause
+\smallskip
+Við skilgreinum {\it gagnaskekkjur} $\delta A=\tilde A-A$ og
+$\delta\bv=\mathbf{\tilde b}-\bv$ og ætlum að nota þær til þess að
+meta skekkjuna $\ev=\delta\xv=\mathbf{\tilde x}-\xv$.
+
+\pause
+\smallskip
+Við verðum að gera ráð fyrir að $ \|\delta A\|\leq 1/\|A^{-1}\|$ sem
+tryggir að fylkið $\tilde A$ sé andhverfanlegt.
+
+\pause
+\smallskip
+Nú stillum við upp jöfnuhneppinu 
+$\tilde A\mathbf{\tilde x}=\mathbf{\tilde  b}$ á forminu
+$$
+(A+\delta A)(\xv+\delta \xv)=(\bv+\delta\bv)
+$$
+sem jafngildir
+$$
+\delta\xv=A^{-1}\big(\delta\bv-(\delta A)\xv-(\delta A)(\delta x)\big)
+$$
+\end{frame}
+
+\begin{frame}{3.4 Áhrif gagnaskekkju} 
+
+Við vorum komin með jöfnuna
+$$
+\delta\xv=A^{-1}\big(\delta\bv-(\delta A)\xv-(\delta A)(\delta x)\big).
+$$
+
+\pause
+\smallskip
+Af henni leiðir ójafnan
+$$
+\|\delta\xv\|\leq 
+\|A^{-1}\|\big(\|\delta\bv\|+\|\delta A\|\|\xv\|+\|\delta A\|\|\delta \xv\|\big)
+$$
+Einangrum nú $\|\delta \xv\|$,
+$$
+\|\delta\xv\|\leq 
+\dfrac{\|A^{-1}\|}{1-\|A^{-1}\|\|\delta A\|}\cdot 
+\big(\|\delta\bv\|+\|\delta A\|\|\xv\|\big)
+$$\pause
+deilum með $\|\xv\|$ báðum megin,  margföldum síðan með $\|A\|$ í teljara
+og nefnara í hægri hliðinni,
+$$
+\dfrac{\|\delta\xv\|} {\|\xv\|}\leq 
+\dfrac{\|A\|\|A^{-1}\|}{1-\|A^{-1}\|\|\delta A\|}\cdot 
+\bigg(\dfrac{\|\delta\bv\|}{\|A\|\|\xv\|}+
+\dfrac{\|\delta A\|}{\|A\|}\bigg)
+$$
+\end{frame}
+
+\begin{frame}{3.4 Áhrif gagnaskekkju} 
+
+Við vorum komin með 
+$$
+\dfrac{\|\delta\xv\|} {\|\xv\|}\leq 
+\dfrac{\|A\|\|A^{-1}\|}{1-\|A^{-1}\|\|\delta A\|}\cdot 
+\bigg(\dfrac{\|\delta\bv\|}{\|A\|\|\xv\|}+
+\dfrac{\|\delta A\|}{\|A\|}\bigg).
+$$
+
+\pause
+\smallskip
+Samkvæmt skilgreiningu er $\kappa(A)=\|A\|\|A^{-1}\|$ og
+við höfum auk þess ójöfnuna $\|\bv\|\leq \|A\|\|\xv\|$, en það gefur 
+matið á hlutfallslegu skekkjunni sem við sækjumst eftir
+$$
+\dfrac{\|\delta\xv\|} {\|\xv\|}\leq 
+\dfrac{\kappa(A)}{1-\kappa(A)\cdot(\|\delta A\|/\|A\|)}\cdot 
+\bigg(\dfrac{\|\delta\bv\|}{\|\bv\|}+
+\dfrac{\|\delta A\|}{\|A\|}\bigg).
+$$
+\end{frame}
+
+\section*{3.5 $LU$-þáttun}
+
+\begin{frame}{3.5  $LU$-þáttun -- Nokkrar skilgreiningar} 
+\begin{enumerate}
+  \item[(i)] Fylkið $A$ nefnist {\it neðra  þríhyrningsfylki} ef öll stök fyrir
+ofan hornalínuna í $A$ eru $0$, þ.e.~$a_{ij}=0$ ef $i<j$.
+\pause
+  \item[(ii)] Fylkið $A$ nefnist {\it efra þríhyrningsfylki} ef öll
+    stökin neðan við hornalínuna eru $0$, þ.e.~$a_{ij}=0$ ef $i>j$. 
+\pause
+  \item[(iii)] Fylkið $A$ nefnist {\it bandfylki} (e.~striped matrix) ef til er
+$\beta \leq n-2$ þannig að $a_{ij}=0$ ef $|i-j|>\beta$. Minnsta talan
+$\beta$ sem uppfyllir þetta skilyrði kallst á {\it bandvídd} fylkisins
+$A$.\pause
+  \item[(iv)] Ef $A$ er bandfylki með bandvíddina $1$, þá nefnist $A$ {\it
+  þríhornalínufylki}.\pause
+  \item[(v)] Fylkið $A$ er sagt vera {\it samhverft } ef 
+$a_{ij}=a_{ji}$ fyrir öll $i$ og $j$.\pause
+  \item[(vi)] Fylkið $A$ er sagt vera {\it jákvætt ákvarðað }  
+  ef $\xv^TA\xv>0$ gildir fyrir alla vigra $\xv\neq 0$ í $\R^n$.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{3.5  Úrlausn á jöfnuhneppi með neðra þríhyrningsfylki} 
+
+Ef $A$ er neðra þríhyrningsfylki, þá er úrlausn
+jöfnuhneppisins $A\xv = \bv$ auðveld, því hneppið er þá af gerðinni 
+\begin{alignat*}{2}
+	&a_{11}x_1&&=b_1,\\
+	&a_{21}x_1+a_{22}x_2&&=b_2,\\
+	&a_{31}x_1+a_{32}x_2+a_{33}x_3&&=b_3,\\
+	&\vdots \qquad \qquad   \vdots \qquad 
+	\qquad \vdots& \qquad& \vdots\\
+	&a_{n1}x_1+a_{n2}x_2+a_{n3}x_3\cdots+a_{nn}x_n&&=b_n,
+\end{alignat*}
+\end{frame}
+
+
+\begin{frame}{3.5  Úrlausn á jöfnuhneppi með neðra þríhyrningsfylki} 
+Við getum rakið okkur niður línurnar og leyst úr stærðirnar 
+$x_1,\dots,x_n$ hverja á eftir annarri
+\begin{align*}
+	x_1& = b_1/a_{11},\\
+	x_2& = (b_2-a_{21}x_1)/a_{22},\\
+	x_3& = (b_3-a_{31}x_1-a_{32}x_2)/a_{33}\\
+   	&\vdots \qquad \qquad \vdots \qquad \qquad \vdots\\
+	x_n& = (b_n-a_{n1}x_1-a_{n2}x_2-\cdots
+		-a_{n,n-1}x_{n-1})/a_{nn}.
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{3.5  Talning á aðgerðunum við úrlausnina} 
+Nú skulum við telja saman fjölda reikningsaðgerða sem þarf til þess
+að framkvæma þessa útreikninga.
+
+\pause
+\smallskip
+Við lítum á samlagningu og frádrátt sem sömu aðgerðina. 
+Við þurfum enga samlagningu til að reikna út $x_1$,
+eina til þess að reikna út $x_2$, tvær til þess að reikna $x_3$ 
+og þannig áfram upp í $n-1$ samlagningu til þess að reikna út $x_n$. 
+
+\pause
+\smallskip
+Heildarfjöldinn er því 
+\begin{equation*}
+	1 + 2 + \cdots + n-1 = \tfrac 12 n(n-1) = 
+	\tfrac 12n^2-\tfrac 12 n.
+\end{equation*}
+
+\pause
+Fjöldi margfaldana er sá sami. 
+
+
+\pause
+Við þurfum hins vegar aðeins eina deilingu til þess að reikna út
+hverja af  stærðunum $x_1,\dots,x_n$. 
+
+\pause 
+Heildarfjöldi reikniaðgerða við úrlausn á línulegu jöfnuhneppi
+$Ax=b$, þar sem $A$ er neðra  þríhyrningsfylki er því 
+$$\tfrac 12 n^2 - \tfrac 12 n
++ \tfrac 12 n^2 - \tfrac 12 n +n = n^2.$$ 
+\end{frame}
+
+
+\begin{frame}{3.5 Úrlausn á jöfnuhneppi með efra þríhyrningsfylki} 
+Hugsum okkur nú að $A$ sé efra þríhyrningsfylki.  Þá verður
+jöfnuhneppið
+\begin{align*}
+	a_{11}x_1+a_{12}x_2+a_{13}x_3+\cdots+a_{1n}x_n& = b_1,\\
+	a_{22}x_2+a_{23}x_3+\cdots+a_{2n}x_n& = b_2,\\
+	a_{33}x_3+\cdots+a_{3n}x_n& = b_3,\\
+	\vdots\quad& \quad \vdots\\
+	a_{nn}x_n& = b_n,
+\end{align*}
+
+\end{frame}
+
+
+\begin{frame}{3.5 Úrlausn á jöfnuhneppi með efra þríhyrningsfylki} 
+Við getum rakið okkur upp línurnar og fundið $x_n,x_{n-1},\dots,x_1$
+hverja af annarri 
+\begin{align*}
+	x_n& = b_n/a_{nn},\\
+	x_{n-1}& = (b_{n-1}-a_{n-1,n}x_n)/a_{n-1,n-1},\\
+	\vdots&\qquad \vdots\qquad \qquad \vdots\\
+	x_1& = (b_1-a_{12}x_2-a_{13}x_3-\cdots
+	-a_{1,n}x_{n})/a_{11}.
+\end{align*}
+
+\pause
+Aðgerðafjöldinn er sá sami og í úrlausn neðra
+þríhyrningshneppisins.
+\end{frame}
+
+\begin{frame}{3.5 Línuaðgerðir} 
+ Gerum ráð fyrir að við séum að ryðja $4\times 4$ fylki með Gauss-eyðingu og 
+að við séum búin með fyrsta dálkinn. Næsta skref er að nota línu 2 til þess 
+að losna við stökin í sætum (3,2) og (4,2).
+$$A=
+\left[\begin{array}{llll}
+1 & \cdot & \cdot & \cdot\\
+0 & a & \cdot & \cdot\\
+0 & b & \cdot & \cdot\\
+0 & c & \cdot & \cdot
+\end{array}\right]
+$$
+Lína 3, $l_3$, verður þá að $l_3 - \frac ba l_2$, \pause og \\
+líne 4, $l_4$, verður að $l_4 - \frac ca l_2$.
+
+\pause
+
+Þessar tvær aðgerðir má einnig framkvæma með því að margfalda fylkið að ofan frá vinstri með
+fylkinu
+$$
+M_2 = \left[
+\begin{array}{llll}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & -\frac ba & 1 & 0\\
+0 & -\frac ca & 0 & 1
+\end{array}
+\right]
+$$
+\end{frame}
+
+\begin{frame}{3.5 Ný sýn á Gauss-eyðingu}
+ Það að ryðja fylkið eins og hér á undan, felst því í því að margfalda $A$ frá vinstri með þremur fylkjum
+$M_1, M_2$ og $M_3$ sem eru þannig að $M_i$ er einingafylkið nema í sætum $(i+1,i),\ldots,(n,i)$ 
+eru tölur sem eru hugsanlega frábrugðnar 0.
+
+\smallskip
+\pause
+
+Athugum að Gauss-eyðing skilar fylki $U$ á efra þríhyrningsformi. \pause
+
+\smallskip
+
+Við getum því skrifað
+$$M_3 M_2 M_1 A = U$$
+
+\pause\smallskip
+
+Almennt, fyrir $n \times n$ fylki þá getum við skrifað
+$$
+M_{n-1}\cdots M_2 M_1 A = U,
+$$
+þar sem $M_i$ eru fylki eins og lýst er hér að ofan.
+\end{frame}
+
+\begin{frame}{3.5 Nánar um $M_i$}
+ Við sjáum að ef 
+$$
+M_i = \left[
+\begin{array}{ccccccc}
+1 &   &   &   &   &   &  \\
+  & . &   &   &   &   &  \\
+  &   & 1 &   &   &   &  \\
+  &   & m_{i+1,i} & 1 &   &   &  \\
+  &   & . &   & . &   &  \\
+  &   & . &   &   & . &  \\
+  &   & m_{n,i} &   &   &   & 1
+\end{array}\right],
+$$
+þá er 
+$$
+M_i^{-1} = \left[
+\begin{array}{ccccccc}
+1 &   &   &   &   &   &  \\
+  & . &   &   &   &   &  \\
+  &   & 1 &   &   &   &  \\
+  &   & -m_{i+1,i} & 1 &   &   &  \\
+  &   & . &   & . &   &  \\
+  &   & . &   &   & . &  \\
+  &   & -m_{n,i} &   &   &   & 1
+\end{array}\right].
+$$
+
+\end{frame}
+
+
+\begin{frame}{3.5 Nánar um $M_i$}
+Eins þá er auðvelt að sjá að 
+$$
+M_i^{-1} M_j^{-1} = \left[
+\begin{array}{cccccccc}
+1 &   &   &   &   &   &   &  \\
+  & . &   &   &   &   &   &  \\
+  &   & 1 &   &   &   &   &  \\
+  &   & -m_{i+1,i} & . &   &   &   &  \\
+  &   & . &   & 1 &   &   &  \\
+  &   & . &   & -m_{j+1,j} & . &   &  \\
+  &   & . &   & . &   & . &  \\
+  &   & -m_{n,i} &   & -m_{n,j} &   &   & 1
+\end{array}
+\right]
+$$\pause
+Það er
+$$
+M_1^{-1} M_2^{-1} \cdots M_{n-1}^{-1} = \left[
+\begin{array}{cccccc}
+1 &   &   &   &   &     \\
+-m_{2,1} & 1 &   &   &     &  \\
+-m_{3,1} & -m_{3,2} & 1 &    &   &  \\
+  & -m_{4,2} & -m_{4,3} & 1   &   &  \\
+  & . &   &   & . &    \\
+-m_{n,1} & -m_{n,2} & -m_{n,3} & . & -m_{n,n-1}  & 1
+   \end{array}
+\right]
+$$
+
+\end{frame}
+
+
+\begin{frame}{3.5 $LU$-þáttun}
+ Þetta hefur í för með sér að ef við skilgreinum 
+$L = M_1^{-1} M_2^{-1} \cdots M_{n-1}^{-1}$ \pause þá er
+$$
+A = LU
+$$\pause
+eða
+$$
+A = \left[\begin{array}{cccccccc}
+1 &   &   &   &   &   &   &  \\
+-m_{2,1} & 1 &   &   &   &   &   &  \\
+-m_{3,1} & -m_{3,2} & 1 &   &   &   &   &  \\
+  & -m_{4,2} & -m_{4,3} & 1 &   &   &   &  \\
+  & . &   &   & . &   &   &  \\
+  & . &   &   &   & . &   &  \\
+  & . &   &   &   &   & . &  \\
+-m_{n,1} & -m_{n,2} & -m_{n,3} & . & . & . & -m_{n,n-1} & 1
+   \end{array}\right] U
+$$ \pause
+Þannig að með því að framkvæma Gauss-eyðingu á $A$ og halda utanum aðgerðirnar ($M_i$'in)
+og niðurstöðuna $U$ þá fæst $LU$-þáttun á $A$.
+\end{frame}
+
+\begin{frame}{3.5 $LU$-þáttun og sköluð hlutvending}
+\begin{block}{Vandamálið}
+  Aðferðin hér að framan gerði ráð fyrir að stak $a_{i,i}$ yrði aldrei 0 (þá
+getum við ekki notað þá línu til þess að eyða). Eins hugsuðum við ekkert út í styttingarskekkjur
+sem við búum til. 
+\end{block}
+
+\begin{block}{Lausnin} 
+ Ef við framkvæmum Gauss-eyðinguna með skalaðri hlutvendingu þá ráðum við bót á báðum þessum
+atriðum, því þá veljum við aldrei línu með forystustuðul 0 og við minnkum skekkjuna eins og hefur
+komið fram áður.
+\end{block}
+
+\begin{block}{Athugasemd}
+ Þegar við notum skalaða hlutvendingu þá uppfylla fylkin $L$ og $U$ ekki endilega $LU=A$ 
+(sjá dæmi bls.~196). \pause Þess í stað fæst 
+  $$LU =PA$$
+þar sem fylkið $P$ umraðar línunum í $A$ í samræmi við umröðunarvigrinn $\rv$. \pause
+Það er, stökin í $P$ eru 0, nema $p_{i,r_i} = 1$.
+\end{block}
+\end{frame}
+
+
+\begin{frame}{3.5 Úrlausn $A\xv=\bv$:} 
+
+Við skiptum nú úrlausnarferlinu á $A\xv=\bv$ í þrjú skref
+
+(i) {\bf $LU$-þáttun:}  Reiknum út neðra þríhyrningsfylki $L$  og efra þríhyrningsfylki $U$ með 
+skalaðri hlutvendingu. Höldum utanum $\rv$ (og þar með $P$). Þá er 
+$$
+LU=PA.
+$$\pause
+
+(ii) {\bf Forinnsetning:}  Leysum $L\yv=P\bv$.
+
+(iii) {\bf Endurinnsetning:} Leysum $U\xv=\yv$.
+
+Lausnin sem við leitum að er þá $\xv$, því
+$$
+P\bv = L\yv = UL\xv = PA\xv,
+$$
+sem er jafngilt því að $\bv=A\xv$
+\end{frame}
+
+
+\begin{frame}{3.5 Fjöldi reikniaðgerða fyrir $LU$-þáttun}
+Heildarfjöldi reikningsaðgerða til þess að framkvæma
+$LU$-þáttunina er
+$$
+	\frac 23n^3-\frac 12n^2-\frac 76 n.
+$$
+Liðir (ii) og (iii) krefjast svo $n^2 + n^2 = 2n^2$ aðgerða til viðbótar.
+Samanlagður fjöldi aðgerða er því 
+$$
+	\frac 23n^3+\frac 32n^2-\frac 76 n.
+$$
+\pause
+\smallskip
+Ef $n$ er stór tala, segjum $n=1000$, þá er fyrsti liðurinn lang
+stærstur og við getum slegið á aðgerðafjöldann með $\tfrac 23n^3$. 
+\pause
+
+Þetta er töluvert betra heldur en að reikna $A^{-1}$ og svo $\xv=A^{-1}\bv$,
+en þá er heildafjöldi aðgerða  $2n^3$.
+\end{frame}
+
+\begin{frame}{3.5 Mörg jöfnuhneppi}
+ Ef við þurfum að leysa mörg jöfnuhneppi með sama stuðlafylkið þá koma
+kostir $LU$-þáttunar vel í ljós.
+\pause
+\smallskip
+
+Gefið $A$ og $\bv_1,\ldots,\bv_m$ þá leitum við að vigrum $\xv_1,\ldots,\xv_m$ þannig að 
+$$
+A\xv_i = \bv_i, \qquad \text{fyrir } i = 1,\ldots,m.
+$$
+
+\pause
+\smallskip
+
+Við þurfum bara að framkvæma $LU$-þáttunina einu sinni, en innsetningarnar í 
+lið (ii) og (iii) framkvæmum við $m$-sinnum.
+Heildar fjöldi aðgerða er þá 
+$$
+	\frac 23n^3+(2m-\frac 12)n^2- (m-\frac 16) n.
+$$
+\end{frame}
+
+
+\section*{3.8 Fastapunktsaðferðir fyrir línuleg jöfnuhneppi}
+
+\begin{frame}{3.8 Ítrekunaraðferðir til þess að leysa línuleg jöfnuhneppi}  
+
+Munum að samanlagður fjöldi reikniaðgerða 
+sem þarf til þess að leysa $n\times n$ línulegt jöfnuhneppi
+$A\xv=\bv$  með Gauss-eyðingu, for-  og endurinnsetningu er
+$\sim \tfrac 23 n^3$.
+
+\pause
+\smallskip
+Ef jöfnuhneppið er jafngilt hneppinu
+$$
+\xv=T\xv+\cv
+$$
+þá getum við sett upp fastapunktsferð til þess að leysa þetta hneppi
+með því að giska á eitthvert nálgunargildi $\xv^{(0)}$ fyrir lausnina 
+og ítra síðan með formúlunni 
+$$
+\xv^{(k+1)}=T\xv^{(k)}+\cv, \qquad k=0,1,2,\dots,
+$$
+í þeirri von að runan $(\xv^{(k)})$ stefni á réttu lausnina $\xv$ á
+upprunalega jöfnuhneppinu.
+
+\pause
+\smallskip
+Það þarf $n^2-n$ aðgerðir til þess að reikna út margfeldið 
+$T\vv$ fyrir vigur $\vv\in \R^n$ og því getum við komist upp með að
+taka $\approx \tfrac 23 n$ ítrekanir áður en heildaraðgerðafjöldinn
+er kominn upp fyrir aðgerðafjöldann í Gauss-eyðingu, ásamt
+for- og endurinnsetningu.
+\end{frame}
+
+\begin{frame}{3.8 Fastapunktsítrekun til þess að leysa línuleg jöfnuhneppi}  
+
+Við ætlum nú að gera ráð fyrir að jafnan $A\xv=\bv$ sé jafngild
+$$
+\xv=T\xv+\cv
+$$
+giskum á eitthvert nálgunargildi $\xv^{(0)}$ fyrir lausnina $\xv$ og
+skilgreinum síðan rununa 
+$$
+\xv^{(k+1)}=T\xv^{(k)}+\cv, \qquad k=0,1,2,\dots,
+$$
+
+\pause
+\smallskip
+Allt er nú undir því komið  að $n\times n$ fylkið $T$ sé vel valið.
+\end{frame}
+
+\begin{frame}{3.8 Fastapunktsítrekun - skekkjumat} 
+
+Við skilgreinum nú skekkjuna í $k$-ta ítrekunarskrefinu
+$\ev^{(k)}=\xv-\xv^{(k)}$.  Þá gildir formúlan
+$$
+\ev^{(k)}=T\ev^{(k-1)}=T^2\ev^{(k-2)}=\cdots=T^{k}\ev^{(0)}
+$$
+sem við höfum áður séð í athugun okkar á fastapunktsaðferðinni.
+
+\pause
+\smallskip
+Nú beitum við 
+$$
+\|\ev^{(k)}\| \leq \|T^{k}\|\|\ev^{(0)}\|\leq \|T\|^{k}\|\ev^{(0)}\|
+$$
+
+\pause
+\smallskip
+Við höfum $\xv^{(1)}-\xv^{(0)}=T\xv^{(0)}+\cv-\xv^{(0)}$ og 
+$\cv=\xv-T\xv$ og þar með
+$$
+\xv^{(1)}-\xv^{(0)}=T(\xv^{(0)}-\xv)-(\xv^{(0)}-\xv)=
+-(\ev^{(0)}-T\ev^{(0)})=-(I-T)\ev^{(0)}.
+$$
+
+\pause
+\smallskip
+Þetta gefur jöfnuna:
+$$
+\ev^{(0)}=-(I-T)^{-1} \big(\xv^{(1)}-\xv^{(0)}\big).
+$$
+
+\end{frame}
+
+\begin{frame}{3.8 Fastapunktsítrekun - skekkjumat} 
+
+Með smá útreikningi má sýna fram á að ef $\|T\|<1$, þá er
+$$
+\|(I-T)^{-1}\|\leq \dfrac 1{1-\|T\|}.
+$$
+
+\pause
+\smallskip
+Við vorum komin með ójöfnurnar
+$$
+\|\ev^{(k)}\| \leq \|T\|^{k}\|\ev^{(0)}\|
+$$
+og niðurstaðan verður því 
+$$
+\|\ev^{(k)}\| \leq \dfrac{\|T\|^{k}}{1-\|T\|} 
+\|\xv^{(1)}-\xv^{(0)}\|
+$$
+
+\pause
+\smallskip
+
+Sem þýðir að fastapunktsaðferðin er samleitin þegar $\|T\|<1$.
+
+\end{frame}
+
+\begin{frame}{3.8 Skilyrði fyrir samleitni} 
+
+Munum nú að $\rho(T)$ er rófgeisli fylkisins $T$ sem er samkvæmt
+skilgreiningu tölugildi á stærsta eigingildi fylkisins $T$.  
+
+
+\pause
+\smallskip
+Rifjum líka upp að fyrir sérhvern náttúrlegan fylkjastaðal $\|\cdot\|$
+þá er $\rho(T) \leq \|T\|$,  og að fyrir sérhvert
+$\epsilon>0$ gildir að hægt er að finna náttúrlegan fylkjastaðal þannig að
+$$
+\|T\|\leq \rho(T)+\epsilon.
+$$
+
+\pause
+\smallskip
+Sérstaklega gildir í tilfellinu $\rho(T)<1$ að til er náttúrlegur
+fylkjastaðall $\|\cdot\|$ þannig að $\|T\|<1$. 
+\pause 
+
+Þetta þýðir að fastapunktsaðferðin er samleitin ef $\rho(T) < 1$.
+\end{frame}
+
+\begin{frame}{3.8 Skiptingaraðferð (e.~splitting method)}
+
+Við viljum setja upp fastapunktsaðferð til þess að leysa línulega
+jöfnuhneppið $A\xv=\bv$ með því að umrita jöfnuna yfir í jafngilda
+línulega jöfnu
+$$
+\xv=T\xv+\cv.
+$$ 
+
+\pause
+\smallskip
+Gerum ráð fyrir að $A=M-N$ þar sem $M$ er andhverfanlegt fylki.
+Þá jafngildir $A\xv=\bv$ jöfnunni $M\xv=N\xv+\bv$ og fastapunktsjafnan
+er
+$$
+\xv=M^{-1}N\xv+M^{-1}\bv,
+$$
+þar sem $T = M^{-1}N$ og $\cv = M^{-1}\bv$.
+\pause
+
+\smallskip
+Þessi leið til þess að umrita línulega jöfnuhneppið $A\xv=\bv$ yfir í
+jafngilda hneppið $\xv=T\xv+\cv$ nefnist {\it skiptingaraðferð} fyrir
+línulega jöfnuhneppið $A\xv=\bv$.  
+\end{frame}
+
+\begin{frame}{3.8 Jacobi-aðferð}
+Við skrifum $A=D-L-U$, þar sem $D$ er hornalínufylkið með hornalínu
+$A$, $L$ er neðra þríhyrningsfylki og $U$ er efra þríhyrningsfylki
+
+\pause
+\smallskip
+Við tökum $M=D$ og $N=L+U$ og fáum þá $T=D^{-1}(L+U)$ og
+$\cv=D^{-1}\bv$. 
+
+\smallskip
+Þessi skiptingaraðferð er nefnd {\it Jacobi-aðferð}.
+
+
+\smallskip
+Rakningarformúlan er
+$$
+\xv^{(k+1)}=D^{-1}(L+U)\xv^{(k)}+D^{-1}\bv.
+$$
+Ef við skrifum hana hnit fyrir hnit, þá fáum við 
+fyrir $i=1,2,\dots,n$, 
+$$
+x_i^{(k+1)}=\dfrac 1{a_{i,i}}\bigg(
+b_i-\sum_{j=1}^{i-1}a_{i,j}x_j^{(k)}-\sum_{j=i+1}^n a_{i,j}x_j^{(k)}\bigg)
+$$
+\end{frame}
+
+\begin{frame}{3.8 Gauss-Seidel-aðferð} 
+
+Augljós endurbót á Jacobi-aðferðinni er að nota gildið $x_i^{(k+1)}$ fyrir
+$i<j$ um leið og það hefur verið reiknað.  
+
+\pause
+\smallskip
+Við það breytist rakningarformúlan í Jacobi-aðferð í
+$$
+x_i^{(k+1)}=\dfrac 1{a_{i,i}}\bigg(
+b_i-\sum_{j=1}^{i-1}a_{i,j}x_j^{(k+1)}-\sum_{j=i+1}^n a_{i,j}x_j^{(k)}\bigg)
+$$
+Þetta svarar til þess að við veljum skiptingu á $A$ með 
+$M=D-L$ og $N=U$ og þar með að
+$$
+T=(D-L)^{-1}U \qquad \text{ og } \qquad \cv=(D-L)^{-1} \bv
+$$
+\end{frame}
+
+\begin{frame}{3.8 SOR-aðferð (e.~successive over-relaxation)} 
+
+Það er hægt að hraða samleitni í Gauss-Seidel-aðferð með því að 
+taka vegið meðaltal af gildinu $x_i^{(k+1)}$ sem kemur út úr
+Gauss-Seidel reikniritinu og næsta gildi á undan með vægisstuðli sem
+við táknum með $\omega$.  
+
+\pause
+\smallskip
+Formúlan verður
+$$
+x_i^{(k+1)}=(1-\omega)x_i^{(k)}+\dfrac \omega{a_{i,i}}\bigg(
+b_i-\sum_{j=1}^{i-1}a_{i,j}x_j^{(k+1)}-\sum_{j=i+1}^n a_{i,j}x_j^{(k)}\bigg)
+$$
+
+\pause
+\smallskip
+Þetta svarar til þess að  við veljum 
+$$
+M=\dfrac 1\omega D-L \quad { og } \quad   
+N=\bigg(\dfrac 1\omega -1\bigg) D+U
+$$
+og þar með að
+$$
+T=\bigg(\dfrac 1\omega D-L\bigg)^{-1}
+\bigg(\bigg(\dfrac 1\omega-1\bigg)D+ U\bigg) 
+\quad \text{ og } \quad \cv=\bigg(\dfrac 1\omega D-L\bigg)^{-1} \bv
+$$
+\end{frame}
+
+
+%
+\frame{\frametitle{3.8 Samleitni Gauss-Seidel-aðferðar} 
+\begin{block}{Setning}
+ \begin{itemize}
+  \item 
+ Gerum ráð fyrir að  $A$ sé  samhverft
+rauntölufylki með öll hornalínustökin jákvæð.  Þá er Gauss-Seidel
+aðferðin samleitin ef og aðeins ef $A$ er jákvætt ákvarðað.\pause
+\item 
+Ef fylkið $A$ er jákvætt ákvarðað, þá er Gauss-Seidel-aðferð
+samleitin fyrir sérhvert val á upphafságiskun $\xv^{(0)}$.
+
+ \end{itemize}
+
+\end{block}
+}
+
+
+\section*{3.10 Newton-aðferð fyrir jöfnuhneppi}
+%
+\frame{\frametitle{3.10 Aðferð Newtons fyrir jöfnuhneppi} 
+
+Látum $f_k : I \to \R$, $k = 1, \ldots, n$, þar sem 
+$I$ er svæði í $\R^n$ vera samfelld föll.  \pause
+Það getur komið sér vel að geta leyst ólínuleg jöfnuhneppi af gerðinni
+\begin{equation*}
+	\left\{ \begin{array}{c}
+		f_1(x_1, \ldots, x_n) = 0 \\
+		f_2(x_1, \ldots, x_n) = 0 \\
+		\hdots \\
+		f_n(x_1, \ldots, x_n) = 0 \\
+	\end{array} \right.
+\end{equation*}
+\pause
+Svo heppilega vill til að aðferð Newtons virkar næstum óbreytt fyrir
+slík hneppi. 
+
+}
+%
+%
+\frame{\frametitle{3.10 Jacobi-fylki} 
+
+Skilgreinum $\fv : I \to R^n$ með
+\begin{equation*}
+	\fv (\xv) = \begin{pmatrix} f_1(\xv), & \ldots &, f_n(\xv)
+	\end{pmatrix}
+\end{equation*}
+og gerum ráð fyrir að allar hlutafleiðurnar $\dfrac{\partial
+  f_k}{\partial x_j}$ séu til og séu samfelldar. \pause
+
+Táknum Jacobi-fylki
+$\fv$ með $\fv'$, það er 
+\begin{equation*}
+	\fv'(\xv) = \begin{pmatrix}
+		\frac{\partial f_1}{\partial x_1}(\xv)
+		& \frac{\partial f_1}{\partial x_2}(\xv)
+		& \cdots
+		& \frac{\partial f_1}{\partial x_n}(\xv) \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\frac{\partial f_n}{\partial x_1}(\xv)
+		& \frac{\partial f_n}{\partial x_2}(x)
+		& \cdots
+		& \frac{\partial f_n}{\partial x_n}(\xv)
+	\end{pmatrix}
+\end{equation*}
+
+}
+%
+
+
+%
+\frame{\frametitle{3.10 Aðferð Newtons fyrir hneppi} 
+Lausn á hneppinu er því vigur $\rv$ þannig að $\fv(\rv) =0$.
+\pause
+
+Ef $\rv$ er lausn hneppisins og $\xv_0 \in \R^n$ er upphafságiskun á
+$\rv$ má sjá að runan $(\xv_n)$, þar sem 
+\begin{equation*}
+	\xv_{n+1} = \xv_n + \hv_n^T
+\end{equation*}
+og $\hv_n^T$ er lausn á jöfnuhneppinu
+\begin{equation*}
+	\fv'(\xv_n) \hv_n^T = -\fv(\xv_n)
+\end{equation*}
+stefnir á lausnina $\rv$. \pause
+
+Við getum metið skekkjuna með
+\begin{equation*}
+	\ev_{n+1} \approx \| \xv_{n+1} - \xv_n \|
+\end{equation*}
+\pause og forritið okkar helst næstum óbreytt, 
+við þurfum aðeins að skipta {\tt abs} út fyrir skipunina 
+{\tt norm}.
+}
+%
+
+
+
+%
+\begin{frame}[fragile]{3.10 Matlab-forrit fyrir hneppi} 
+
+%\hline
+\begin{verbatim}
+function x = newtonNullHneppi(f,df,x0,epsilon)
+%
+%   x = newtonNullHneppi(f,df,x0,epsilon)
+%
+% Nálgar núllstöð fallsins f:Rn --> Rn með aðferð Newtons.
+% Fallið df er Jacobi-fylki f, x0 er upphafságiskun 
+% á núllstöð og epsilon er tilætluð nákvæmni.
+% x0 verður að vera dálkvigur og f verður að 
+% skila dálkvigrum
+
+x = x0; mis = -df(x)\f(x); 
+% Ítrum meðan ástæða er til
+while (norm(mis) >= epsilon) 
+    x = x + mis; 
+    mis = -df(x)\f(x);
+end
+\end{verbatim}
+%\hline
+\end{frame}
+
+%
+
+%
+\frame{\frametitle{3.10  Sýnidæmi} 
+
+Grafið $y=e^x$ sker lokaða ferilinn sem gefinn er með
+jöfnunni $x^4+y^2=1$ í tveimur
+punktum.  Notið aðferð Newtons til þess að nálga hnit þeirra með 
+5 aukastafa nákvæmni. 
+
+\medskip
+{\it Lausn:}  
+Það er alveg augljóst að punkturinn ${\mathbf r}=(0,1)$ gefur lausn á
+jöfnuhneppinu.
+Við látum eins og ekkert sé og giskum á  ${\mathbf x}^{(0)}=(0.5,0.75)$
+\begin{center}
+\begin{tabular}{|l|l|l|l|}\hline 
+  $n$  & $x_1^{(n)} $  & $x_2^{(n)}$ & $\|{\mathbf x}^{(n+1)}-{\mathbf
+  x}^{(n)}\|$ \\ \hline
+   0 &  0.50000000000000 &  0.75000000000000 & \\\hline 
+   1 &  0.17270262414568 &  1.10909912528477 &  0.18447541668198 \\\hline 
+   2 &  0.01946538693088 &  1.00638822766059 &  0.02028257413953 \\\hline 
+   3 &  0.00020831857772 &  1.00002048613263 &  0.00020930163934 \\\hline 
+   4 &  0.00000002190660 &  1.00000000020984 &  0.00000002190761 \\\hline 
+   5 &  0.00000000000000 &  1.00000000000000 &  0.00000000000000 \\\hline 
+   6 & -0.00000000000000 &  1.00000000000000 &  0.00000000000000 \\\hline 
+\end{tabular}
+\end{center}
+
+}
+%
+
+
+
+\frame{\frametitle{3.10  Sýnidæmi framhald} 
+
+Við tökum fyrir hinn skurðpunktinn:
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline 
+  $n$  & $x_1^{(n)} $  & $x_2^{(n)}$ & $\|{\mathbf x}^{(n+1)}-{\mathbf
+  x}^{(n)}\|$  \\ \hline 
+   0&  -0.80000000000000 &  0.25000000000000 & \\\hline 
+   1&  -1.03486380522268 &  0.34379785380788 &  0.07380487278262 \\\hline 
+   2&  -0.96968875917544 &  0.37842981331349 &  0.00919771982977 \\\hline 
+   3&  -0.96137076039507 &  0.38235523639344 &  0.00014098927991 \\\hline 
+   4&  -0.96124395918305 &  0.38241687590740 &  0.00000003252214 \\\hline 
+   5&  -0.96124392995056 &  0.38241689016050 &  0.00000000000000 \\\hline 
+   6&  -0.96124392995055 &  0.38241689016050 &  0.00000000000000 \\\hline 
+\end{tabular}
+\end{center}
+Nálgun okkar á skurðpunkti ferlanna í vinstra hálfplaninu er
+$(-0.96124392995055, 0.38241689016050)$
+
+\medskip
+Í töfluna var ekki hægt að koma fyrir athugun á samleitnistiginu
+en hlutfallið
+$$
+\dfrac{\|e_{n+1}\|}{\|e_n\|}
+\approx\dfrac{\|{\mathbf x}^{(n+1)}-{\mathbf x}^{(n)}\|}{\|{\mathbf
+  x}^{(n)}-{\mathbf x}^{(n-1)}\|^2}
+=1.6
+$$ 
+fyrir fjögur síðustu gildin.
+}
+%
+% \section*{3.8 Fastapunktssetningi fyrir jöfnuhneppi}
+% \frame{\frametitle{3.8  Fastapunktssetning} 
+% 
+% Munum að mengi $X$ í $\R^n$ er sagt vera {\it kúpt} ef strikið sem 
+% tengir sérhverja tvo punkta í $X$ liggur alltaf í $X$.
+% 
+% \smallskip
+% {\bf Fastapunktssetning:}
+% 
+% Látum $X$ vera lokað og takmarkað kúpt hlutmengi í $\R^n$ og
+% $\fv :  X \to X$ vera herpingu, þ.e.a.s.~ til er $\lambda\in [0,1[$
+% þannig að
+% $$
+% \|\fv(\xv)-\fv(\yv)\|\leq \lambda \|\xv-\yv\|, \qquad
+% \xv,\yv\in X.
+% $$ Þá hefur $\fv$ nákvæmlega
+% einn fastapunkt $\rv$ í menginu $X$ og runan $(\xv_n)$ þar sem 
+% \begin{align*}
+%   \xv_0 &\in X, \\
+%   \xv_{n+1} &= \fv(\xv_n), \quad n \geq 0
+% \end{align*}
+% stefnir á hann.
+% }
+% 
+% %
+
+%
+\frame{\frametitle{Kafli 3: Fræðilegar spurningar:}
+
+\begin{enumerate}
+  \item  Lýsið því hvernig línulegt jöfnuhneppi er leyst með
+    $LU$-þáttun, for- og endurinnsetningu.
+  \item Hvað þýðir að $A$ sé efra þríhyrningsfylki og hvað þýðir að
+    $A$ sé neðra þríhyrningsfylki?
+  \item Hvað er bandfylki og hvað er þríhornalínufylki?
+  \item Hvað þýðir að $A$ sé samhverft og hvað þýðir að $A$ sé jákvætt
+    ákvarðað? 
+  \item Hver er heildarfjöldi reikniaðgerða sem þarf til þess
+    að leysa $n\times n$ línulegt jöfnuhneppi $A\xv=\bv$ ef $A$ er
+    efra eða neðra þríhyrningsfylki? 
+  \item Hvað er $LU$-þáttun á $n\times n$ fylki $A$? 
+  \item  Hver er stærðargráðan $\approx an^k$ á fjölda langra
+    reikningsaðgerða sem þarf til þess að  framkvæma $LU$-þáttun á
+    $n\times n$ fylki?
+\end{enumerate}
+}
+
+%
+\frame{\frametitle{Kafli 3: Fræðilegar spurningar:}
+
+\begin{enumerate}
+  \item[8.] Hvað er $PLU$-þáttun á fylki $A$ og til hvers er henni beitt?
+  \item[9.] Hvað er fylkjastaðall og hvernig er fylkjastaðall sem staðall
+$\|\cdot\|_v$ á $\R^ n$ gefur af sér? (Þetta er einnig nefnt
+náttúrlegur fylkjastaðall.)
+  \item[10.] Hvað er rófgeisli fylkis og hvernig tengist hann fylkjastöðlum?
+  \item[11.] Hvernig er ástandstala fylkis skilgreind og hvernig er
+    hún notuð til þess að meta hlutfallslega skekkju í nálgunarlausn á
+    línulegu jöfnuhneppi $A\xv=\bv$?
+  \item[12.] Hvernig er skiptingaraðferð til þess að finna nálgun á
+    línulegu jöfnuhneppi?
+  \item[13.] Jacobi-aðferð er dæmi um skiptingaraðferð.  Hvernig er
+    hún?
+  \item[14.] Gauss-Seidel-aðferð er annað dæmi um skiptingaraðferð.
+    Hvernig er hún?  
+  \item[15.] Hvernig er ítrekunarskrefið í aðferð Newtons fyrir hneppi?
+\end{enumerate}
+}
+
+
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[convert, border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{svg}
+\usepackage{tkz-euclide}
+
+\begin{document}
+\begin{tikzpicture}
+
+\node (c) at (1.5,1.5) {\Large kíló};
+\node (c) at (4.5,1.5) {\Large hektó};
+\node (c) at (7.5,1.5) {\Large deka};
+\node (c) at (10.5,1.5) {\Large --};
+\node (c) at (13.5,1.5) {\Large desi};
+\node (c) at (16.5,1.5) {\Large centi};
+\node (c) at (19.5,1.5) {\Large millí};
+
+\foreach \x in {0,1,2}{
+\draw (0,\x) -- (21,\x);
+};
+\foreach \x in {0,3,6,9,12,15,18,21}{
+\draw (\x,0) -- (\x,2);
+};
+
+\end{tikzpicture}
+\end{document}

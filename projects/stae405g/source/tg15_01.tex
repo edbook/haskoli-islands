@@ -1,0 +1,1389 @@
+\lecture[1]{Vika 1:
+Hvað er töluleg greining? \\ Skekkjur og mat á þeim
+}{lecture-text}
+\date{7.~og 9.~janúar 2015}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\section{Lagt af stað}
+
+% \frame{
+%  \begin{center}
+% \textcolor{blue}{\bf \Large Töluleg greining}\\
+% \textcolor{blue}{\bf \large Kafli  1. Lagt af stað}  \ (Ch1:1-53)
+% \end{center}
+\begin{frame}{Yfirlit}
+\begin{block}{Vika 1: Lagt af stað}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}\hline
+Nr. &Heiti á viðfangsefni &Bls.&Glærur\\
+\hline
+1.1 & Hvað er töluleg greining?&1-16&1-5\\
+1.2 & Samleitni runa, setning Taylors og $O$-ritháttur& 20-27&6-14\\
+1.3 & Skekkjur, skekkjumat og fleira &30-39 &15-36 \\
+1.4 & Fleytitalnakerfið& 42-50&37-42\\
+% 1.X & Ástandsgildi falla & &24-31\\
+
+\hline
+\end{tabular}
+\end{center}
+\end{block}
+\end{frame}
+
+\subsection{Hvað er töluleg greining?}
+
+\begin{frame}{1.1 Hvað er töluleg greining?} \pause
+\smallskip
+\begin{block}{Tilraun að svari} 
+\begin{itemize} 
+\item Fagið {\it töluleg greining} snýst um að búa til, greina og forrita
+aðferðir til þess að nálga á lausnum á stærðfræðilegum
+verkefnum.\pause
+\item  Aðferðirnar eru settar fram með reikniritum sem síðan eru
+forrituð og það  þarf góðan skilning á eiginleikum lausnanna sem verið
+er að nálga til þess að geta greint hvernig forritin munu virka.\pause
+\item Greining á reikniritum er aðallega fólgin í skekkjumati og
+mati á þeim aðgerðafjölda sem þarf til þess að ná að nálga lausn með
+fyrirfram gefinni nákvæmni, \pause þ.e.~hagkvæmni og nákvæmni reikniritsins.
+\end{itemize} 
+\end{block}
+\end{frame}
+
+\begin{frame}{1.1 Dæmi}
+ \begin{block}{}
+Gerum ráð fyrir að við höfum eftirfarandi eldflaug undir höndum: \pause
+\begin{itemize}
+ \item Eldsneytið dugir í 18 sek., $t\in [0,18]$.
+\item Loftmótstaðan er $d=0,1v^2$, þar sem $v(t)$ er hraðinn.
+\item Krafturinn sem knýr flaugina er $T=5000$ 
+\item Massi eldsneytisins er $m=180-10t$.
+\item Massi flaugarinnar er $M = 120 + m = 300 - 10t$.
+\end{itemize}
+\pause
+
+Spurningin er: Í hvaða hæð er eldflaugin þegar eldsneytið klárast?
+
+\pause
+
+Úr öðru lögmáli Newtons fæst að $F = (Mv)'$. \pause
+Kraftarnir sem verka á eldflaugina er $T$ upp á við og 
+loftmótstaðan og þyngdarkrafturinn niður á við. Þannig fæst
+$$
+  (Mv)' = F = T - Mg - d
+$$\pause
+það er
+$$
+M'v + Mv' = T - Mg -d.
+$$
+\end{block}
+\end{frame}
+
+\begin{frame}{1.1 Dæmi}
+
+\begin{block}{}
+Þetta jafngildir því að 
+\begin{equation}
+v' = \frac{T-Mg-d-M'v}{M} = \frac{5000-(300-10t)g-0,1v^2+10v}{300-10t},
+\label{eldflaug}
+\end{equation}\pause
+og upphafsskilyrðin eru $v(0) =0$.
+
+\pause\smallskip
+Þar sem $h' = v$, \pause þá er hæðin á tíma $t$ gefin með 
+$h(t) =\int_0^t v(s)\, ds$. \pause 
+Þegar eldsneytið klárast þá er hæðin $h(18) = \int_0^{18} v(s)\, ds$.
+
+\pause\smallskip
+Verkefnið er því að finna $v$, og reikna svo heildið.
+
+\pause\smallskip
+Diffurjafnan (\ref{eldflaug}) er ólínuleg þannig að við getum ekki vænst þess 
+finna lausn með þeim aðferðum sem við höfum þegar lært. 
+Eins er ekki víst að við getum auðveldlega fundið stofnfall $h$ fyrir
+$v$ til þess að reikna heildið, jafnvel þótt við hefðum $v$.
+
+\pause\smallskip
+Hins vegar getum við leyst diffurjöfnuna tölulega með Runge-Kutta aðferð (Kafli 7)
+og heildið reiknum við svo tölulega (Kafli 6).
+ \end{block}
+
+\end{frame}
+
+
+% \begin{frame}{1.1 Dæmi: Finna á nálgun á núllstöð  $f(x)=0$:} 
+% 
+% \begin{block}{Upprifjun}
+% Munum að talan  $p\in I$ sögð vera {\it núllstöð} fallsins $f:I\to \R$ ef
+% \begin{equation*}
+% 	f(p)=0.
+% \end{equation*}\pause
+% Milligildissetningin úr stærðfræðigreiningu segir: 
+% \begin{quote}
+% 	Ef $f$ er samfellt á $[a,b]$ og $y$ er einhver tala á milli $f(a)$ og $f(b)$, þá er til $c$ þannig að $a < c < b$ og $f(c) = y$.
+% \end{quote}
+% \end{block} 
+% \pause
+% 
+% \begin{block}{Afleiðing}
+% Svo ef við höfum $a$ og $b$ þannig að $a < b$ og þannig að
+% $f(a)$ og $f(b)$ hafi ólík formerki, þá hefur $f$ núllstöð $p$ á bilinu
+% $[a,b]$.
+% \end{block}
+% \end{frame}
+% 
+% %
+
+
+%
+
+\subsection{Samleitni runa, setning Taylors og $O$-ritháttur}
+\begin{frame}{1.2 Nokkur atriði um samleitni runa} 
+
+Mörg reiknirit til nálgunar á einhverri rauntölu eru hönnuð þannig að 
+reiknuð er runa $x_0,x_1,x_2,\dots$ sem á að nálgast lausnina
+okkar.\pause
+
+\begin{block}{Skilgreining}
+{\it Rauntalnaruna} $(x_n)$ er sögð vera {\it samleitin \emph{(e.~convergent)}} að {\it
+  markgildinu} $r$ ef um sérhvert $\varepsilon>0$ gildir að til er
+$N>0$ þannig að  
+\begin{equation*}
+	|x_n-r|<\varepsilon, \qquad \text{ ef } \quad n\geq N.
+\end{equation*}\pause
+Þetta er táknað annað hvort með
+\begin{equation*}
+	\lim_{n\to \infty}x_n=r \qquad \pause\text{ eða } \qquad  x_n\to r
+	\text{ ef } n\to \infty.
+\end{equation*} \pause
+Ef runan $(x_n)$ er samleitin að markgildinu $r$ þá segjum við einnig
+að hún {\it stefni á} $r$. 
+\end{block}
+
+\pause
+Hugsum okkur nú að $(x_n)$ sé gefin runa sem stefnir á $r$ og táknum
+skekkjuna með $e_n=r-x_n$.
+\end{frame}
+%
+
+%
+\begin{frame}{1.2 Nokkur atriði um samleitni runa} 
+Runan er sögð vera {\it  línulega samleitin} (e.~linear convergence) ef til er $\lambda\in ]0,1[$ þannig að
+\begin{equation*}
+	\lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|}=\lambda,
+\end{equation*}\pause
+{\it ofurlínulega samleitin} (e.~superlinear convergence), ef 
+\begin{equation*}
+	\lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|}=0,
+\end{equation*}\pause
+{\it ferningssamleitin} (e.~quadratic convergence) ef til er $\lambda>0$ þannig að
+\begin{equation*}
+	\lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|^2}=\lambda,
+\end{equation*}\pause
+og {\it samleitin af stigi $\alpha$} (e.~convergence of order $\alpha$), 
+þar sem $\alpha> 1$, 
+ef til er $\lambda>0$ þannig að
+\begin{equation*}
+	\lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|^\alpha}=\lambda.
+\end{equation*}
+\pause
+Ath: Runa er ofurlínulega saml.~ef hún er samleitin af
+stigi $\alpha>1$.
+\end{frame}
+%
+%
+\begin{frame}{1.2 Nokkur atriði um samleitni runa} 
+Oft eru notuð veikari hugtök til þess að lýsa samleitni runa
+(t.d.~ef við getum ekki fundið $\lambda$ og $\alpha$ nákvæmlega). \pause
+
+\smallskip
+
+Þannig segjum við að runan $(x_n)$ sé  
+{\it að minnsta kosti línulega samleitin} ef til er 
+$\lambda\in ]0,1[$ og $N >0$ þannig að 
+\begin{equation*}
+	|e_{n+1}|\leq \lambda |e_n|, \qquad n\geq N,
+\end{equation*}\pause
+{\it að minnsta kosti ferningssamleitin} ef til er $\lambda>0$ og $N>0$ þannig að
+\begin{equation*}
+	|e_{n+1}|\leq \lambda |e_n|^2, \qquad n\geq N,
+\end{equation*}\pause
+og  {\it að minnsta kosti samleitin af stigi $\alpha$}, þar sem $\alpha> 1$, ef til eru $\lambda>0$ og $N>0$ þannig að
+\begin{equation*}
+	|e_{n+1}|\leq \lambda |e_n|^\alpha, \qquad n\geq N.
+\end{equation*}
+\end{frame}
+
+\begin{frame}{1.2 Ritháttur fyrir deildanleg föll}
+Látum nú $f : I \to \C$ vera fall á bili $I$ sem tekur gildi í
+tvinntölunum. Ef $f$ er deildanlegt í sérhverjum punkti í $I$, þá
+táknum við afleiðuna með $f'$. Ef $f'$ er deildanlegt í sérhverjum
+punkti í $I$, þá táknum við \em aðra afleiðu \em $f$ með $f''$, og svo
+framvegis. 
+
+\pause
+\smallskip
+Við skilgreinum með þrepun $f^{(k)}$ fyrir $k = 0,1,2,
+\ldots$ þannig að $f^{(0)} = f$ og ef $f^{(k-1)}$ er deildanlegt í
+sérhverjum punkti í $I$, þá er $f^{(k)} = (f^{(k-1)})'$. 
+
+\pause
+\smallskip
+Við látum
+$C^{k}(I)$ tákna línulega rúmið sem samanstendur af öllum föllum $f :
+I \to \C$ þannig að $f', \ldots, f^{(k)}$ eru til í sérhverjum punkti
+í $I$ og $f^{(k)}$ er samfellt fall á $I$. 
+\end{frame}
+%
+\begin{frame}{1.2 Nálgun með Taylor-margliðu} 
+Ef $a \in I$, $m$ er jákvæð heiltala og $f \in C^{m}(I)$, 
+þá nefnist margliðan 
+\begin{equation*}
+  p(x) = %T_mf(x;a) = 
+f(a) + f'(a)(x-a) + \ldots   + \frac{f^{(m)}(a)}{m!}(x-a)^m
+\end{equation*}
+Taylor-margliða fallsins $f$ í punktinum $a$ af stigi $m$, og er 
+stundum táknuð með $T_m f(x;a)$.
+
+\pause
+Athugið að stig margliðunnar $p$ er minna eða jafnt og $m$. 
+
+\end{frame}
+
+%
+\begin{frame}{1.2 Skekkja í nálgun með Taylor-margliðu} 
+
+\begin{block}{Setning Taylors} Látum $I \subseteq \R$ vera bil, $f : I \to
+\C$ vera fall, $m \geq 0$ vera heiltölu og gerum ráð fyrir að $f \in
+C^m(I)$ og að $f^{(m+1)}(x)$ sé til í sérhverjum innri punkti bilsins
+$I$.  Þá er til punktur $\xi$ á milli $a$ og $x$
+þannig að 
+\begin{equation*}
+  f(x) - T_mf(x;a)= \frac{f^{(m+1)}(\xi)}{(m+1)!}(x-a)^{m+1}.
+\end{equation*}
+Hægri hliðin er oft táknuð $R_m(x)$.
+\end{block}
+
+\pause
+
+\begin{block}{Viðbót}
+Ef $f^{(m+1)}$ er samfellt á lokaða bilinu með endapunkta $a$ og $x$,
+þá er
+\begin{align*}
+  f(x) - T_mf(x;a)&= \int\limits_a^x 
+  \frac{(x-t)^m}{m!}f^{(m+1)}(t) dt \notag \\
+  &= (x-a)^{m+1} \int\limits_0^1 
+  \frac{(1-s)^m}{m!} f^{(m+1)}(a + s(x-a)) ds\\
+&= (x-a)^{m+1}g_m(x)
+\end{align*}
+\end{block}
+
+\end{frame}
+%
+\begin{frame}{1.2 Sýnidæmi: Nálgun á fallgildum $x-\sin x$} 
+Vitum að $x \approx \sin x$ ef $x$ er lítið. \pause 
+Tökum $x=0.1$ og hugsum okkur að
+við séum að reikna á vél með 8 stafa nákvæmni.     \pause Hún gefur 
+\begin{equation*}
+    \sin 0.1 = 0.099833417
+\end{equation*}\pause
+Af því leiðir
+\begin{equation*}
+    0.1 - \sin 0.1 = 1.66583\cdot 10^{-4}
+\end{equation*}
+Við höfum tapað tveimur markverðum stöfum í nákvæmni. 
+
+Ef við notum Taylor-nálgunina fyrir $\sin(x)$,
+\begin{equation*}
+    \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} 
+    - \frac{x^7}{7!} \cdots
+\end{equation*}
+og tökum fyrstu þrjá liðina, þ.e.~skoðum 6.~stigs Taylor-margliðu fallsins. \pause
+
+
+$x-\sin(x)$ er þá u.þ.b.
+$$
+x - \left(x - \frac{x^3}{3!} + \frac{x^5}{5!}\right) = \frac{x^3}{3!} - \frac{x^5}{5!}.
+$$
+\end{frame}
+
+\begin{frame}{1.2 Sýnidæmi: Nálgun á fallgildum $x-\sin x$, framh.}
+Fallgildið er þá 
+$$
+\frac {0.1^3}{3!} - \frac{0.1^5}{5!} = 1.6658334 \cdot 10^{-4}.
+$$
+\pause
+Skekkjan er gefin með
+$$
+    |R_6(0.1)| = \left|\frac{\sin^{(7)}(\xi)}{7!}0.1^7\right|
+    = \left|\frac{-\cos(\xi)}{7!}0.1^7\right| 
+    \leq \frac{1}{7!}0.1^7 < 0.2\cdot 10^{-10}.
+$$
+Sem þýðir að við höfum enn 8 markverða stafi.
+
+\begin{block}{Ritháttur}
+ $\sin^{(7)}$ hér að ofan táknar 7.~afleiðu $\sin$, sem er $-\cos$.
+\end{block}
+\end{frame}
+%
+\begin{frame}{1.2 Sýnidæmi: Nálgun á $x-\sin x$} 
+
+Ef við tökum $x = 0.01$ er þetta enn greinilegra. 
+Reiknivélin gefur
+$$
+    \sin(0.01) = 0.0099998333
+$$
+Þannig að 
+$$
+    0.01 - \sin 0.01 = 0.1667\cdot 10^{-7}
+$$
+og við erum bara með 4 markverða stafi.
+\pause
+
+Hér dugir að taka aðeins þriðja stigs liðinn í Taylor-formúlunni
+\begin{equation*}
+    0.01 - \sin (0.01) \approx \frac{0.01^3}{3!} 
+    = 0.16666667 \cdot 10^{-7},
+\end{equation*}
+því skekkjan er
+$$
+R_4(0.01) \leq \frac{0.01^5}{5!} < 10^{-12}
+$$
+\end{frame}
+
+\subsection{Skekkjur}
+\begin{frame}{1.3 Skekkjur} 
+
+Við allar úrlausnir á verkefnum í tölulegri greininingu 
+þarf  að fást við skekkjur. \pause 
+Þær eru af ýmsum toga: \pause
+
+
+\begin{itemize} 
+\item Gögn eru oft niðurstöður
+mælinga og þá fylgja þeim {\it mæliskekkjur}. Eins getum við þurft 
+að notast við nálganir á föstum sem koma fyrir (t.d. $\pi$, Avogadrosar
+talan, \ldots).\pause
+\item Við nálganir á lausnum á
+stærðfræðilegum verkefnum verða til {\it aðferðarskekkjur}.
+Þær verða til þegar reikniritin eru hönnuð og
+greining á reikniritum snýst fyrst og fremst um mat á 
+aðferðarskekkjum.\pause
+\item  {\it Reikningsskekkjur} verða til í tölvum á öllum
+stigum, jafnvel þegar tölur eru lesnar inn í tugakerfi og þeim snúið
+yfir í tvíundarkerfi. Þær verða líka til vegna þess að tölvur geta
+einungis unnið með endanlegt mengi af tölum og allar útkomur þarf að
+nálga innan þess mengis.  Þessar skekkjur nefnast oft {\it
+  afrúningsskekkjur}.  \pause
+\item {\it Mannlegar villur} eru óumflýjanlegar. Það sem við getum gert
+er temja okkur vinnubrögð sem lágmarka líkur á þeim og auðvelda okkur að
+finna villur sem við gerum.
+\end{itemize} 
+\end{frame}
+%
+%
+\begin{frame}{1.3 Skekkja í nálgun á rauntölu $r$} 
+
+Við getum stillt upp jöfnunum svona
+\begin{equation*}
+	r \text{ (rétt gildi) } = x\text{ (nálgunargildi)} + 
+	e \text{ (skekkja)}
+\end{equation*} \pause
+þar sem talan $x$ er nálgun á tölunni $r$, og þá nefnist 
+\begin{equation*}
+	e=r-x 
+\end{equation*}
+{\it skekkjan \emph{(e.~error)} í nálgun á $r$ með $x$} eða bara {\it skekkja}.
+\pause
+
+{\it Algildi skekkju  \emph{(e.~absolute error)}} er tölugildið 
+%\begin{equation*}
+	$|e|=|r-x|$
+%\end{equation*}
+\pause
+
+Ef vitað er að $r\neq 0$, þá nefnist 
+\begin{equation*}
+	\dfrac{|e|}{|r|}=\dfrac{|r-x|}{|r|}
+\end{equation*}
+{\it hlutfallsleg skekkja \emph{(e.~relative error)}} í nálgun á $r$ með $x$.
+\pause
+
+\smallskip
+%\begin{block}{Athugasemdir}
+ \textbf{Ath:} Auðvitað er talan $r$ sem við leitum að óþekkt 
+ (annars þyrftum við ekki að framkvæma alla þessa reikninga), sem þýðir 
+ að við getum hvergi notað hana í reikninum.
+%\end{block}
+\end{frame}
+
+
+\begin{frame}{1.3 Vítt og breitt um skekkjumat } 
+\begin{block}{Fyrirframmat á skekkju} 
+Metið er áður en reikningar hefjast hversu umfangsmikla reikninga þarf 
+að framkvæma til þess að nálgunin náist innan fyrirfram gefinna
+skekkjumarka.
+
+\medskip
+Ef lausnin er fundin með ítrekunaraðferð er yfirleitt metið hversu
+margar ítrekarnir þarf til þess að nálgun verði innan skekkjumarka.
+\end{block}
+
+\pause
+
+\begin{block}{Eftirámat á skekkju}   Um leið og reikningar eru
+framkvæmdir er lagt mat á skekkju og reikningum er hætt þegar matið
+segir að nálgun sé innan skekkjumarka. Það gerist yfirleitt þegar 
+gildið sem við reiknum út breytist orðið lítið í hverju skrefi.
+\end{block}
+\end{frame}
+%
+%
+\begin{frame}{1.3 Eftirámat á skekkju samleitinnar runu (ofurlínuleg samleitni)} 
+
+Hugsum okkur að við séum að nálga töluna $r$ með gildum rununnar
+$x_n$, að við höfum reiknað út $x_0,\dots,x_n$ 
+og viljum fá mat á skekkjunni $e_n=r-x_n$ í $n$-ta skrefi. 
+
+\smallskip
+Við reiknum næst út $x_{n+1}$ og skrifum $e_{n+1}=\lambda_ne_n$.  Þá er 
+\begin{equation*}
+    x_{n+1}-x_n = (r-x_n)-(r-x_{n+1})
+    = e_n-e_{n+1} = (1-\lambda_n)e_n
+\end{equation*}
+og við fáum 
+\begin{equation*}
+    e_n = \dfrac{x_{n+1}-x_n}{1-\lambda_n}.
+\end{equation*}
+
+Ef við vitum að runan er {\it ofurlínulega samleitin}, þá stefnir 
+$\lambda_n$ á $0$ og þar með er 
+\begin{equation*}
+    e_n\approx x_{n+1}-x_n. 
+\end{equation*}
+Við hættum því útreikningi þegar $|x_{n+1}-x_n|<\varepsilon$
+þar sem $\varepsilon$ er fyrirfram gefin tala, sem lýsir þeirri
+nákvæmni sem við viljum ná.  
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 Eftirámat á skekkju samleitinnar runu (amk.~línuleg samleitni)} 
+
+
+Ef við vitum ekki meira en að runan $x_n$ sé {\it að minnsta kosti
+  línulega samleitin} ; segjum $|e_{n+1}|\leq c|e_n|$, $n\geq N$, 
+þar sem $c\in(0,1)$, þá á $\lambda_n$ að stefna á fasta $\lambda$ 
+og $|\lambda|\leq c$. Við höfum
+\begin{equation*}
+    \lambda_n = \dfrac{e_{n+1}}{e_n} = 
+    \dfrac{1-\lambda_n}{1-\lambda_{n+1}}
+    \cdot\dfrac{x_{n+2}-x_{n+1}}{x_{n+1}-x_n}\approx 
+    \dfrac{x_{n+2}-x_{n+1}}{x_{n+1}-x_n}
+\end{equation*}
+
+\pause
+Nú þurfum við að átta okkur á því hvernig þetta er nýtt í
+útreikningum. 
+
+\pause
+\smallskip
+Hugsum okkur að við höfum reiknað út
+$x_0,\dots,x_n$ og viljum fá mat á $e_n$. \pause Við reiknum þá  út $x_{n+1}$
+og  $x_{n+2}$ og síðan hlutfallið $\kappa_n=(x_{n+2} - x_{n+1})/(x_{n+1} -
+x_n)$ sem við notum sem mat á $\lambda_n$.  \pause Eftirámatið á skekkjunni í
+ítrekunarskrefi númer $n$ verður síðan 
+\begin{equation*}
+    e_n\approx \dfrac{x_{n+1}-x_n}{1-\kappa_n}.
+\end{equation*}
+\pause
+\smallskip
+Ef stærðin í hægri hliðinni er komin niður fyrir fyrirfram 
+gefin skekkjumörk $\varepsilon$, þá stöðvum við útreikningana.
+\end{frame}
+%
+%
+\begin{frame}{1.3 Sýnidæmi} 
+
+Okkur er gefin runa af nálgunum á lausn jöfnunnar
+\begin{equation*}
+    f(x) = e^x\sin x-x^2 = 0
+\end{equation*}
+og eigum að staðfesta hvort nálgunaraðferðin er ferningssamleitin:
+
+\pause
+\begin{center}
+\begin{tabular}{l|l|l|l|}
+$n$  & $x_n$ &$|x_{n+1}-x_n|$ &  $\frac{|x_{n+1}-x_n|}{|x_n-x_{n-1}|^2}$\\ \hline 
+   0&   3.00000000000000 & & \\
+   1&   2.73251570951922 &  0.10052257507862 &  1.404\\
+   2&   2.63199313444060 &  0.01373904283351 &  1.359\\
+   3&  2.61825409160709  & 0.00024006192208  & 1.273\\
+   4&   2.61801402968501 &  0.00000007236005 &  1.256\\
+   5&   2.61801395732496 &  0.00000000000001 &  1.272\\
+\end{tabular}   
+\end{center}
+
+\pause
+\smallskip
+Við metum $e_n\approx |x_{n+1}-x_n|$ og þar af leiðandi 
+$|e_n|/|e_{n-1}|^2\approx |x_{n+1}-x_n|/|x_n-x_{n-1}|^2$.
+
+\pause
+Við sjáum að hlutfallið $|x_{n+1}-x_n|/|x_n-x_{n-1}|^2$ helst
+stöðugt og því ályktum við að aðferðin sé ferningssamleitin.
+\end{frame}
+
+
+\begin{frame}{1.3 Útreikningur á samleitnistigi} 
+
+Skoðum lítið dæmi um útreikninga á samleitnistigi. 
+
+\begin{block}{Dæmi}
+Eftirfarandi runa stefnir á  $\sqrt 3$. 
+\begin{center}
+	\begin{tabular}{c|c|}
+		$n$ & $x_n$ \\ \hline
+		0&  2.000000000000000 \\
+		1&  1.666666666666667 \\
+		2&  1.727272727272727 \\
+		3&  1.732142857142857 \\
+		4&  1.732050680431722 \\
+		5&  1.732050807565499 \\
+	\end{tabular}
+\end{center}
+\pause
+
+Er samleitnistigið $1.618$?
+
+Ef ekki, hvert er þá samleitnistigið?
+\end{block}
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 Útreikningur á samleitnistigi} 
+{\it Lausn:} Ef miðað er við að  runan $(x_n)$ sé  ofurlínulega
+samleitin, þá er eðlilegt að taka $e_n\approx x_{n+1}-x_n$ sem mat á
+skekkjunni $e_n=\sqrt 3-x_n$ í $n$-ta  
+ítrekunarskrefinu. 
+
+\pause
+
+\smallskip
+Við byrjum á því að kanna hvernig tilgátan
+um að samleitnistigið kemur út á þessum tölum með $e_n=x_{n+1}-x_n$:
+\begin{center}
+\begin{tabular}{c|c|c|c|}
+$n$ & $x_n$ & $|e_n|$ & $|e_n|/|e_{n-1}|^{1.618}$  \\ \hline
+0&  2.000000000000000 & 3.3333$\cdot 10^{-1}$ & \\
+1&  1.666666666666667 & 6.0606$\cdot 10^{-2}$ & 3.5851$\cdot 10^{-1}$\\
+2&  1.727272727272727 & 4.8701$\cdot 10^{-3}$ & 4.5439$\cdot 10^{-1}$\\
+3&  1.732142857142857 & 9.2177$\cdot 10^{-5}$ & 5.0837$\cdot 10^{-1}$\\
+4&  1.732050680431722 & 1.2713$\cdot 10^{-7}$ & 4.3004$\cdot 10^{-1}$\\
+5&  1.732050807565499 & & \\
+\end{tabular}
+\end{center}\pause
+Tveimur síðustu tölunum í aftasta dálki ber ekki nógu vel saman, svo
+það er vafasamt hvort talan $1.618$ er rétta
+samleitnistigið. 
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 Útreikningur á samleitnistigi} 
+Ef $(x_n)$ er samleitin af stigi $\alpha$, þá gildir
+$\lim_{n\to \infty}|e_{n+1}|/|e_n|^\alpha=\lambda$, þar sem
+$\lambda>0$. Þar með höfum við nálgunarjöfnu ef $n$ er nógu stórt,
+\begin{equation*}
+    \dfrac{|e_{n+1}|}{|e_n|^\alpha} \approx
+    \dfrac{|e_{n+2}|}{|e_{n+1}|^\alpha}
+    \qquad \text{ þá og því aðeins að } \qquad 
+    \dfrac{|e_{n+1}|}{|e_{n+2}|} \approx
+    \bigg|\dfrac{e_{n}}{e_{n+1}} \bigg|^\alpha.
+\end{equation*}\pause
+Ef við lítum á þetta sem jöfnu og leysum út $\alpha$, þá fáum við
+\begin{equation*}
+    \alpha_n = 
+    \dfrac{\ln(|e_{n+1}|/|e_{n+2}|)}{\ln(|e_{n}|/|e_{n+1}|)}.
+\end{equation*}
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 Útreikningur á samleitnistigi} 
+
+Við getum reiknað út þrjú gildi á $\alpha$  úr þeim gögnum sem við
+höfum, $\alpha_0= 1.479$, $\alpha_1 = 1.573$ og $\alpha_2=1.660$. \pause 
+
+Ef við endurtökum útreikninga okkar hér að framan með $1.660$ í stað
+$1.618$, þá fæst  
+
+\begin{center}
+\begin{tabular}{c|c|c|c|}
+$n$ & $p_n$ & $|e_n|$ & $|e_n|/|e_{n-1}|^{1.660}$ \\  \hline 
+0&  2.000000000000000 & 3.3333$\cdot 10^{-1}$ &\\
+1&  1.666666666666667 & 6.0606$\cdot 10^{-2}$ & 3.7551$\cdot 10^{-1}$\\
+2&  1.727272727272727 & 4.8701$\cdot 10^{-3}$ & 5.1143$\cdot 10^{-1}$\\
+3&  1.732142857142857 & 9.2177$\cdot 10^{-5}$ & 6.3639$\cdot 10^{-1}$\\
+4&  1.732050680431722 & 1.2713$\cdot 10^{-7}$ & 6.3639$\cdot 10^{-1}$\\
+5&  1.732050807565499 & &\\
+\end{tabular}
+\end{center}
+Tölunum neðst í aftasta dálki ber saman með fimm réttum stöfum og því
+ályktum við að $1.660$ sé nær því að vera rétta samleitnistigið.  
+\end{frame}
+
+\begin{frame}{1.3 Markverðir stafir}
+ \begin{block}{Skilgreining}
+  Gerum ráð fyrir að $r\neq 0$, þá segjum við að $x$ sé 
+  \emph{nálgun á $r$ með $t$ markverðum stöfum 
+  \emph{(e.~significant digits)}} ef 
+  $$
+    \frac{|r-x|}{|r|} \leq 10^{-t}.
+  $$
+  \pause
+  
+  Getum útfært þetta aðeins ítarlegra. Ef
+  $$
+  10^{-(t+1)} < \frac{|r-x|}{|r|} \leq 10^{-t}.
+  $$
+  þá segjum við að nálgunin á $r$ með $x$ sé rétt með að minnsta kosti
+  $t$ markverðum stöfum og að hámarki með $t+1$ markverðum stöfum.
+  
+  \pause
+  
+   Athugið að ef $e$ er minnsta heila talan þannig að $|r|<10^e$, 
+þá gefur seinni ójafnan matið 
+\begin{equation*}
+    |r-x| = 0.0\dots 0 a_t a_{t+1}\ldots \ \cdot\  10^e,
+\end{equation*}
+þar sem núllin aftan við punkt eru $t$ talsins.  
+  
+  Einnig er hægt að útfæra þetta fyrir aðrar grunntölur en 10, sjá 
+  bók bls.~36.
+ \end{block}
+
+\end{frame}
+
+
+\begin{frame}{1.3 Úrlausn annars stigs jöfnu} 
+
+Þegar núllstöðvar annars stigs jöfnunnar $ax^2+bx+c=0$  eru reiknaðar
+út úr formúlunni  
+\begin{equation*}
+    x = \dfrac{-b\pm\sqrt{b^2-4ac}}{2a},
+\end{equation*}
+verður til styttingarskekkja ef $b^2$ er miklu stærra heldur en $4ac$
+vegna $|b|\approx\sqrt{b^2-4ac}$. \pause Við komumst hjá þessum vandræðum með
+því að líta á margliðuna fullþáttaða $a(x-x_1)(x-x_2)$ og notfæra
+okkur að núllstöðvarnar  $x_1$ og $x_2$ uppfylla
+$x_1x_2=c/a$. 
+
+\pause
+\smallskip
+Ef $b>0$, þá reiknum við $x_1$ fyrst út úr formúlunni
+\begin{equation*}
+    x_1 = \dfrac{-b-\sqrt{b^2-4ac}}{2a}
+    \quad \text{ og  síðan } \quad
+    x_2 = \dfrac{c/a}{x_1}.
+\end{equation*}\pause
+Ef aftur á móti $b<0$, þá reiknum við fyrst $x_1$ út úr  formúlunni
+\begin{equation*}
+    x_1 = \dfrac{-b+\sqrt{b^2-4ac}}{2a} 
+    \qquad \text{ og síðan } \qquad 
+    x_2 = \dfrac{c/a}{x_1}.
+\end{equation*}\pause
+Ef $b^2\approx 4ac$ þá lendum við í styttingarskekkjum, en við
+neyðumst til þess að lifa með þeim. 
+\end{frame}
+
+\begin{frame}{1.3 Áhrif gagnaskekkju} 
+
+\begin{block}{}
+Hugsum okkur að við séum að finna nálgun á núllstöð falls $x\mapsto f(x,\alpha)$.
+ Við viljum finna nálgun $x$ á lausninni $r=r(\alpha)$ sem uppfyllir 
+\begin{equation*}
+    f(r,\alpha) = 0
+\end{equation*}
+og við lítum á $\alpha$ sem stika (t.d.~náttúrulegur fasti). 
+\end{block}
+
+\pause
+\begin{block}{}
+Gerum ráð fyrir að $\alpha_0$ sé
+nálgun á $\alpha$ og að við þekkjum nálgun á $r(\alpha_0)$ sem er
+lausn á jöfnunni $f(x,\alpha_0)=0$. 
+\end{block}
+
+\pause
+\begin{block}{}
+Við viljum athuga hversu mikil áhrif nálgun á $\alpha$ með 
+$\alpha_0$ hefur
+á lausnina okkar, þ.e. við þurfum að meta skekkjuna
+$r(\alpha)-r(\alpha_0)$. 
+\end{block}
+\end{frame}
+
+\begin{frame}{1.3 Áhrif gagnaskekkju} 
+Ef við gefum okkur að $f$ sé samfellt deildanlegt í grennd um punktinn
+$(x_0,\alpha_0)$, þar sem $x_0=r(\alpha_0)$ og
+${\partial}_xf(x_0,\alpha_0)\neq 0$, þá segir setningin um fólgin föll
+að til sé grennd $I$ um punktinn $\alpha_0$ í $\R$ og samfellt
+deildanlegt fall $r:I\to \R$, þannig að $r(\alpha_0)=x_0$ og
+$f(r(\alpha),\alpha)=0$ fyrir öll $\alpha\in I$.
+
+\pause
+\smallskip
+ Með öðrum orðum má
+segja að við getum alltaf leyst jöfnuna $f(x,\alpha)=0$ með tilliti
+til $x$ þannig að út komi lausn $x=r(\alpha)$ sem er samfellt
+diffranlegt fall af $\alpha$. 
+\end{frame}
+
+\begin{frame}{1.3 Áhrif gagnaskekkju} 
+
+
+Keðjureglan gefur okkur nú gildi
+afleiðunnar, því af jöfnunni $f(r(\alpha),\alpha)=0$ 
+leiðir að fallið $I \ni \alpha \mapsto f(r(\alpha),\alpha)$ er fast, 
+þannig að 
+\begin{equation*}
+    0 =\frac {\partial}{\partial \alpha}f(r(\alpha),\alpha) = f_x'(r(\alpha), \alpha)\cdot r'(\alpha) 
+    + f_{\alpha}'(r(\alpha),
+    \alpha).
+\end{equation*}\pause
+Þetta gefur
+\begin{equation*}
+    r'(\alpha) = \frac{-f_{\alpha}'(r(\alpha),\alpha)}
+        {f_x'(r(\alpha),\alpha)}.
+\end{equation*}\pause
+Nú látum við $e$ tákna skekkjuna í nálguninni á $\alpha$ með
+$\alpha_0$, $e=\alpha-\alpha_0$. Þá fáum við skekkjumatið
+\begin{equation*}
+    r(\alpha) - r(\alpha_0) \approx r'(\alpha_0)\cdot e 
+    = \frac{-f_{\alpha}'(r(\alpha_0),\alpha_0)}
+        {f_x'(r(\alpha_0),\alpha_0)}\cdot e
+\end{equation*}
+\pause
+og jafnframt mat á hlutfallslegri skekkju
+\begin{equation*}
+    \dfrac{|r(\alpha) - r(\alpha_0)|}
+    {|r(\alpha)|} \approx \frac{|f_{\alpha}'(r(\alpha_0),\alpha_0)|}
+    {|r(\alpha_0)f_x'(r(\alpha_0),\alpha_0)|}\cdot
+    |e|. 
+\end{equation*}
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 Sýnidæmi} 
+
+Við skulum nú líta á það verkefni að finna nálgun á minnstu jákvæðu 
+lausn jöfnunnar $\sin(\pi x)=1-e^{-x}$, þar sem við gerum ráð fyrir 
+því að þurfa að nálga $\pi$ með $3.14$.
+
+\pause
+
+Okkur eru gefnar niðurstöður úr nálguninni með einhverri aðferð. 
+Við setjum $f(x,\alpha)=1-e^{-x}-\sin(\alpha x)$ og fáum
+\begin{center}
+\begin{tabular}{l|l|l|l|}
+$n$  & $x_n$ &$|x_{n+1}-x_n|$ &  $\frac{|x_{n+1}-x_n|}{|x_n-x_{n-1}|^2}$\\ \hline
+   0&  & & 0.8\\
+   1&  0.81276894538752 &  0.00014017936338 &  0.8597\\
+   2&  0.81262876602414 &  0.00000001621651 &  0.8253\\
+   3&   0.81262874980763 &  0.00000000000000 &  0.8444\\
+\end{tabular}
+\end{center}
+\end{frame}
+%
+%
+\begin{frame}{1.3 Sýnidæmi} 
+
+Hér er $\alpha=\pi$ og $\alpha_0=3.14$ og þar með $|e|<0.0016$. 
+
+\pause
+
+Hlutafleiðurnar eru $f'_x(x,\alpha)=e^{-x}-\alpha\cos(\alpha x)$ og
+$f'_\alpha(x,\alpha)=-x\cos(\alpha x)$. 
+
+\pause
+
+Við stingum tölunum okkar inn í matið og notum punktinn $(x_3,\alpha_0)=(0.8126,3.14)$. Það gefur 
+\begin{align*}
+    r(\pi)-r(3.14)&\approx r'(3.14) \cdot e\\
+    &\approx
+    \dfrac{|0.8126\cdot \cos(0.8126\cdot 3.14)|}{|e^{-0.8126}-3.14
+    \cdot \cos(0.8126 \cdot 3.14)|}\ 
+    0.0016 \\
+    &\approx 0.4\cdot 10^{-3}
+\end{align*}\pause
+Þetta mat segir okkur að við eigum að gera ráð fyrir að áhrif
+gagnaskekkjunnar séu þau að við fáum lausn með þremur réttum stöfum,
+$r(\pi) \approx 0.813$. Nálgun okkar á minnstu jákvæðu lausn jöfnunnar $\sin(\pi
+x)=1-e^{-x}$ er því $0.813$. 
+%Við getum verið örlítið nákvæmari með því að
+%segja að matið okkar sé að lausnin sé á bilinu  $[0.8122,0.8130]$. 
+
+\end{frame}
+%
+
+
+%
+% \begin{frame}{1.10 Annað sýnidæmi í sama dúr} 
+% 
+% Við viljum ákvarða nálgun á lausn $r$ á jöfnunni $\tan(\frac 15\pi
+% x)=x$ sem er nálægt $x=1.6$. Við nálgum $\pi$ með $3.14$, og fáum
+% gefin nálgunargildin $x_0=1.5$ og fáum út $x_1=1.653315$,
+% $x_2=1.622950$ og $x_3=1.621155$ á jöfnunni $\tan(\frac 15\cdot 3.14
+% x)-x=0$. Metið $|r-s|$, skerið úr um hvort ástæða sé til þess að bæta
+% við fleiri ítrekunum og skrifið nálgunina með réttum fjölda aukastafa
+% ef svo er ekki. 
+% 
+% 
+% \end{frame}
+% %
+% 
+% \begin{frame}{1.10 Annað sýnidæmi í sama dúr} 
+% 
+% {\it Lausn:} Við skilgreinum fallið $f(x,\alpha)=\tan(\frac 1 5\pi
+% x)-x$ og nálgum $\alpha=\pi$ með $\alpha_0=3.14$. Skekkjan er
+% $e=\pi-3.14\leq 0.0016$. Til þess að fá mat á skekkjunni í nálgun á
+% núllstöðinni $r(\pi)$ með $r(3.14)$ notum við formúluna 
+% \begin{equation*}
+%     r(\pi)-r(3.14)\approx 
+%     \dfrac{-f'_\alpha(r(\alpha_0),\alpha_0)}
+%     {f'_x(r(\alpha_0),\alpha_0)}\cdot e
+% \end{equation*}
+% Við höfum að
+% \begin{equation*}
+%     f'_\alpha(x,\alpha) = 
+%     \sec^2(\frac 15 \alpha x)\cdot \frac 15 x
+%     \qquad \text{ og } \qquad
+%     f'_x(x,\alpha) = 
+%     \sec^2(\frac 15 \alpha x)\cdot \frac 15 \alpha-1
+% \end{equation*}
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}{1.10 Annað sýnidæmi í sama dúr} 
+% 
+% Við setjum nú inn besta gildið $x_3$ sem við höfum fyrir
+% $r(\alpha_0)\approx x_3$ úr töflunni hér að framan inn í formúluna
+% fyrir skekkjumatið og fáum $r(\pi)-r(3.14)\approx 1.5\cdot
+% 10^{-3}$. Áætluð skekkja í nálguninni $r(3.14)\approx x_3$ er miklu
+% minni en talan $1.5\cdot 10^{-3}$ og því þurfum við ekki að taka
+% fleiri ítrekanir í nálgunaraðferðinni og ályktum að það eigi að gefa
+% upp þrjá markverða stafi í $r(\pi)=1.62$.  
+% \end{frame} 
+
+
+
+%
+\begin{frame}{1.3 $O$-ritháttur}
+
+ 
+Látum $f$ og $g$ vera tvö föll sem skilgreind eru á bili $I \subset
+\mathbb{R}$  og látum $c$ vera tölu á $I$ eða annan hvorn endapunkt $I$. 
+\pause
+
+Við segjum að $f(t)$ {\it sé stórt O
+  af} $g(t)$ og skrifum 
+\begin{equation*}
+    f(t) = O(g(t)), \qquad t \rightarrow c,
+\end{equation*}
+ef til er fasti $C>0$ þannig að ójafnan
+\begin{equation*}
+    |f(t)| \leq C|g(t)|
+\end{equation*}
+gildi fyrir öll $t$ í einhverri grennd um $c$. 
+
+\pause
+\smallskip
+Athugið
+að grennd um $c=+\infty$ er bil af gerðinni $]\alpha,+\infty[$ og
+grennd um $c=-\infty$ er bil af gerðinni $]-\infty,\alpha[$. 
+
+% \pause
+% \smallskip
+% Við skrifum 
+% \begin{equation*}
+%     f(t) = o(g(t)), \quad t \rightarrow c
+% \end{equation*}
+% og segjum að $f(t)$ sé {\it óvera} af $g(t)$ þegar $t$ stefnir á $c$
+% ef  til er fall $h$ á $I$ þ.a. $h(t) \to 0$ ef $t\to c$ og ójafnan  
+% \begin{equation*}
+%     |f(t)| \leq |h(t)||g(t)|,
+% \end{equation*}
+% gildi fyrir öll $t$ í einhverri grennd um $c$.
+
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 $O$-ritháttur og skekkja í Taylor-nálgnum} 
+
+
+Oft er $O$-ritháttur notaður þegar fjallað er um skekkjur í
+Taylor-nálgunum,
+\begin{align*}
+    f(x) - T_n f(x;c) &= f(x) - f(c) - f'(x-c) - \cdots 
+    - \frac{f^{(n)}(c)}{n!}(x-c)^n \\
+    &= \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-c)^{n+1} =
+    O\big((x-c)^{n+1}\big),  \quad x \to c
+\end{align*}
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 Sýnidæmi} 
+
+Það eru til haugar af dæmum, sem við þekkjum vel. \pause
+
+% \begin{block}{Dæmi}
+% Við vitum að 
+% $t^{\alpha}e^{-t} \to 0$ ef $t\to\infty$. Þannig að 
+% $$
+% h(t):= e^{-t}t^\alpha = \frac{e^{-t}}{t^{-\alpha}},
+% $$
+% stefnir á $0$ þegar $t$ stefnir á $\infty$. \pause
+% Það er 
+% \begin{equation*}
+%     e^{-x} = o(x^{-\alpha}), 
+%     \qquad x\to \infty \quad \text{  fyrir öll }
+%     \alpha > 0.
+% \end{equation*}
+% \end{block}
+% 
+% \pause
+\begin{block}{Dæmi}
+Setning Taylors gefur okkur:
+\begin{gather*}
+    x - \sin x = O(x^3), \quad x \to 0\\
+    x - \frac{x^3}{3!} - \sin x = O(x^5), \quad x \to 0
+\end{gather*}
+\end{block}
+\end{frame}
+%
+
+%
+\begin{frame}{1.3 $O$-ritháttur fyrir runur} 
+
+
+Látum nú $(a_n)$ og $(b_n)$ vera tvær talnarunur. 
+Við segjum að $a_n$ {\it sé stórt O af} $b_n$ og skrifum 
+\begin{equation*}
+    a_n = O(b_n), 
+\end{equation*}
+ef til er fasti $C>0$ þannig að ójafnan
+\begin{equation*}
+    |a_n| \leq C|b_n|
+\end{equation*}
+gildi fyrir öll $n=0,1,2,3,\dots$. 
+% Við segjum að $a_n$ sé {\it óvera} af $b_n$ og skrifum
+% \begin{equation*}
+%     a_n = o(b_n), 
+% \end{equation*}
+% ef til er runa $\varepsilon_n\searrow 0$ þannig að ójafnan 
+% \begin{equation*}
+%     |a_n|\leq \varepsilon_n|b_n|
+% \end{equation*}
+% gildi fyrir öll $n=0,1,2,3\dots$.
+
+\end{frame}
+
+%
+\begin{frame}{1.3 Tvö sýnidæmi} 
+\begin{itemize}
+ \item Út frá Taylor-röðinni fyrir $\cos x$ fáum við að
+\begin{equation*}
+    \cos(1/n)-1+1/(2n^2) = O(1/n^4)
+\end{equation*} \pause
+\item Út frá 
+\begin{equation*}
+    \sqrt{n+1}-\sqrt n = \dfrac{1}{\sqrt{n+1}+\sqrt n} \leq \frac{1}{2\sqrt n}
+\end{equation*}\pause
+sjáum við að
+\begin{equation*}
+    \sqrt{n+1}-\sqrt n = O\big(\dfrac 1{\sqrt n}\big)
+\end{equation*}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Fleytitalnakerfið}
+\begin{frame}{1.4 Fleytitalnakerfið -- Framsetning á tölum} 
+Ef $r$ er rauntala frábrugðin $0$ og $\beta$ er náttúrleg tala, $2$ eða stærri, þá er til einhlýtt ákvörðuð framsetning á $r$ af gerðinni 
+\begin{equation*}
+    r = 
+    \pm (0.d_1d_2\dots d_kd_{k+1}\dots)_\beta\times \beta^e
+\end{equation*}
+þar sem $e$ er heiltala og $d_j$ eru heiltölur
+\begin{itemize}
+ \item  $1\leq d_1<\beta$, 
+ \item $0\leq d_j<\beta$, $j=2,3,4,\dots$.
+\end{itemize}
+\pause
+
+\smallskip
+
+ Tölvur reikna ýmist í {\it tvíundarkerfi} með $\beta=2$ 
+eða í {\it sextánundarkerfi} með $\beta=16$, en við mannfólkið með okkar 
+tíu fingur reiknum í {\it tugakerfi} með $\beta=10$.
+\end{frame}
+%
+%
+\begin{frame}{1.4 Mantissa}
+
+Formerkið og runan
+\begin{equation*}
+    \pm(0.d_1d_2\dots d_kd_{k+1}\dots)_\beta =
+    \pm\sum_{j=1}^\infty \dfrac{d_j}{\beta^j}
+\end{equation*}
+nefnist {\it mantissa} tölunnar $r$. \pause
+
+\smallskip
+
+Við skrifum
+\begin{equation*}
+    (0.d_1d_2\dots d_k)_\beta = 
+    \sum_{j=1}^k \dfrac{d_j}{\beta^j}
+\end{equation*}
+ef $d_{k+1} = d_{k+2} = \cdots = 0$ og segjum þá að talan $r$ hafi
+$k$-stafa mantissu. 
+\end{frame}
+%
+%
+\begin{frame}{1.4 Markverðir $\beta$-stafir} 
+
+Ef rauntalan $x$ er nálgun á $r$, þá segjum við að $x$ sé nálgun á 
+$r$ með {\it að minnsta kosti $t$ markverðum $\beta$-stöfum} ef
+\begin{equation*}
+    \dfrac{|r-x|}{|r|}\leq \beta^{-t}.
+\end{equation*}
+\pause
+Ef við höfum að auki að
+\begin{equation*}
+\beta^{-t-1}<\dfrac{|r-x|}{|r|}\leq \beta^{-t}.
+\end{equation*}
+þá segjum við að $x$ sé nálgun á $r$ með  {\it $t$ markverðum
+$\beta$-stöfum}.
+
+\pause
+ Athugið að ef $e$ er minnsta heila talan þannig að $|r|<\beta^e$, 
+þá gefur seinni ójafnan matið 
+\begin{equation*}
+    |r-x| = (0.0\dots 0a_ta_{t+1}\dots)_\beta \times \beta^e,
+\end{equation*}
+þar sem núllin aftan við punkt eru $t$ talsins.  
+
+\end{frame}
+%
+%
+\begin{frame}{1.4 Afrúningur talna} 
+
+Ef $r$ er sett fram á stöðluðu $\beta$-fleytitöluformi, þá nefnist talan
+\begin{equation*}
+    x = (\pm 0.d_1d_2\dots d_k)_\beta\times \beta^e
+\end{equation*}
+{\it afskurður tölunnar $r$ við $k$-ta aukastaf $r$},  \pause en talan
+\begin{equation*}
+    x = \begin{cases} 
+    \pm (0.d_1d_2\dots d_k)_\beta\times \beta^e, & 
+    d_{k+1}<\beta/2,\\
+    \pm ((0.d_1d_2\dots d_k)_\beta+\beta^{-k})\times \beta^e,
+    &d_{k+1}\geq \beta/2.
+    \end{cases}
+\end{equation*}
+nefnist {\it afrúningur tölunnar $r$ við $k$-ta aukastaf}.
+
+\pause
+Við  köllum þessar aðgerðir {\it afskurð} (e.~chopping) og {\it afrúning}
+(e.~rounding).  
+\end{frame}
+%
+%
+\begin{frame}{1.4 Fleytitölukerfi}
+ 
+{\it Fleytitölukerfi} er endanlegt hlutmengi í $\R$, sem samanstendur
+af öllum tölum  
+\begin{equation*}
+    \pm (0.d_1d_2\dots d_k)_\beta\times \beta^e
+\end{equation*}
+þar sem $d_j$ eru heiltölur eins og áður var lýst, $k$ er föst tala
+og við höfum mörk á veldisvísinum $m\leq e\leq M$. \pause
+
+
+Allar tölvur vinna með eitthvert fleytitölukerfi, oftast
+með grunntölu $\beta=2$ eða $\beta=16$ eins og áður sagði.
+
+\pause
+Eftir hverja aðgerð í tölvunni þarf að nálga útkomuna með 
+{\it afskurði} eða {\it afrúningu}. 
+
+\pause
+Ef við förum ekki varlega þá getur þetta magnað upp skekkju.
+
+\pause
+\begin{block}{IEEE staðlar}
+\begin{itemize}
+ \item Single: $\beta = 2, k=24, m=-125$ og $M = 128$,
+ \item Double: $\beta = 2, k=53, m=-1021$ og $M=1024$.
+\end{itemize}
+Sjá nánar bls.~37 í kennslubók.
+\end{block}\end{frame}
+
+\begin{frame}{1.4 Útreikningur í tugakerfi:} 
+
+Þegar reiknað er í tugakerfi er tölurnar afrúnaðar við $k$-ta aukastaf
+ef skekkjan í nálgun á þeim er minni en $\frac 12\times 10^{-k}$. Ef 
+\begin{equation*}
+    \dfrac{|r-x|}{|r|}<10^{-k-1}
+\end{equation*}
+þá treystum við öllum $k$ stöfum mantissunnar, en ef
+\begin{equation*}
+    \dfrac{|r-x|}{|r|}>10^{-k+q},
+\end{equation*}
+þá eru síðustu $q$ stafir mantissunnar marklausir auk þess
+sem vænta má nokkurs fráviks í $d_{k-q}$.
+\end{frame}
+
+
+
+
+% \subsection{Ástandsgildi}
+% \begin{frame}{1.6 Ástandsgildi falla} 
+% 
+% Hugsum okkur nú að $f: I\to \R$ sé fall sem skilgreint er á hlutmengi 
+% $I\subset \R$ og tekur gildi í $\R$ og að  $r\in I$. \pause
+% 
+% Gerum ráð fyrir að $x$ sé nálgun á $r$ 
+% og að við viljum nota $f(x)$ sem nálgun á $f(r)$. \pause
+% 
+% Skekkjan í nálguninni  á $f(r)$ með $f(x)$ er þá
+% \begin{equation*}
+%     f(r)-f(x) = f(x+e)-f(x)\approx f'(x)e.
+% \end{equation*}
+% 
+% \pause
+% Ef við vitum að $f(r)\neq 0$, þá er hlutfallsleg skekkja í nálgun á $f(r)$ með $f(x)$
+% \begin{equation*}
+%     \dfrac{|f(r)-f(x)|}{|f(r)|}\approx 
+%     \dfrac{|f'(x)e|}{|f(r)|}
+%     \approx\dfrac{|xf'(x)|}{|f(x)|}\cdot \dfrac{|e|}{|r|}.
+% \end{equation*}
+% 
+% \end{frame}
+% %
+% 
+% %
+% \begin{frame}{1.6 Ástandsgildi} 
+% 
+% 
+% Við skilgreinum {\it ástandsgildi fallsins $f$ í punktinum $x$} sem
+% \begin{equation*}
+%     \ast_x(f) = \dfrac{|xf'(x)|}{|f(x)|}.
+% \end{equation*}\pause
+% Ef $\ast_x(f)\leq 1$ og $x$ er nálgun á $r$ með $m$ markverðum stöfum,
+% þá segir nálgunarjafnan  
+% \begin{equation*}
+%     \dfrac{|f(r)-f(x)|}{|f(r)|} \approx 
+%     \ast_x(f)\cdot \dfrac{|e|}{|r|}
+% \end{equation*}
+% okkur að við getum búist við því að $f(x)$ sé nálgun á $f(r)$ með jafn
+% mörgum markverðum stöfum. 
+% 
+% \pause
+% \begin{block}{Athugasemd}
+%  Niðurstöðuna að ofan má orða svona, hlutfallsleg skekkja á fallgildinu
+% $f(x)$ er ástandsgildið sinnum hlutfallsleg skekkja $x$.
+% \end{block}
+% 
+% \end{frame}
+% %
+% 
+% %
+% \begin{frame}{1.6 Ástand er gott eða slæmt}
+% 
+%  \begin{block}{Skilgreining}
+%  Ef $\ast_x(f)\leq 10$, þá segjum við að ástand verkefnisins að reikna
+%  út $f(x)$ sé {\it gott} eða að verkefnið sé {\it reikningslega
+%    stöðugt} eða einfaldlega að {\it ástand fallsins $f$ sé gott í
+%    punktinum $x$}. 
+% \end{block}
+% \pause
+% \begin{block}{Skilgreining}
+% Ef hins vegar $\ast_x(f)>10$, þá segjum við að
+%  ástand verkefnisins að reikna út $f(x)$ sé {\it slæmt} eða að það sé
+%  {\it reikningslega óstöðugt}. 
+% \end{block}
+% \pause
+% \begin{block}{Athugasemd}
+% Ef ástandið er gott þá getum við búist
+%  við því að það tapist í mesta lagi einn markverður stafur í
+%  hlutfallslegri skekkju við útreikning á $f(x)$. Ef hins vegar
+%  $\ast_x(f)\approx 10^q$ 
+% og $x$ er nálgun á $r$ með $m$ markverðum stöfum, þá er ekki ástæða til
+% þess að ætla að $f(x)$ sé betri nálgun á $f(r)$ en að við höfum $m-q$
+% markverða stafi. 
+% \end{block}
+% \end{frame}
+% 
+% \begin{frame}{1.6 Ástandsgildi falla af mörgum breytistærðum} 
+% Ef $f: D\to \R$  er deildanlegt fall af mörgum breytistærðum sem
+% skilgreint er á hlutmengi $D\subset \R^n$ og tekur gildi í $\R$, þá
+% skilgreinum við ástandsgildi $f$ í punktinum $x$ með tilliti til allra
+% breytistærðanna $x_i$ með formúlunni 
+% \begin{equation*}
+%     \ast_{x_i}(f(\mathbf{x})) = 
+%     \dfrac{|x_i f'_{x_i}(\mathbf{x})|}{|f(\mathbf{x})|},
+%     \qquad i=1,2,\dots,n,
+% \end{equation*}
+% þar sem ritháttur okkar fyrir hlutafleiður er 
+% \begin{equation*}
+%     f'_{x_i} = 
+%     \dfrac{{\partial}f}{{\partial}x_i}={\partial}_{x_i}f.
+% \end{equation*}
+% Ef $\ast_{x_i}(f(\mathbf{x}))\leq 10$ fyrir öll $i$, þá segjum við að
+% ástand þess verkefnis að ákvarða fallgildið $f(\mathbf{x})$ sé gott,
+% en að það sé slæmt ef $\ast_{x_i}(f(\mathbf{x})) > 10$ fyrir eitthvert
+% $i$. 
+% \end{frame}
+% %
+% 
+% %
+% \begin{frame}{1.6 Ástandsgildi kvaðratrótar} 
+% 
+% Lítum á kvaðratrótarfallið á jákvæða
+% raunásnum
+% \begin{equation*}
+%     \ast_x(\sqrt x) = 
+%     \dfrac{x\cdot \frac 12 x^{-\frac 12}}{x^{\frac 12}} =
+%     \dfrac 12, \qquad x>0,
+% \end{equation*}
+% svo ástand verkefnisins að ákvarða kvaðratrót er gott á öllum ásnum.
+% 
+% \end{frame}
+% %
+% %
+% \begin{frame}{1.6 Ástandsgildi lograns} 
+% 
+% Lítum næst á náttúrlega logrann á sama mengi
+% \begin{equation*}
+%     \ast_x(\ln x) = 
+%     \dfrac{x\cdot 1/x}{|\ln x|}=\dfrac 1{|\ln x|}, 
+%     \qquad x>0.
+% \end{equation*}
+% Ástandsgildið er til fyrir öll $x\neq 1$. Ástand verkefnisins að reikna út $\ln x$ er gott ef $1/|\ln x|\leq 10$, sem jafngildir því að $0<x\leq e^{-\frac 1{10}}$ eða 
+% $x \geq e^{\frac 1{10}}$, og það er slæmt ef $e^{-\frac
+% 1{10}}<x<e^{\frac 1{10}}$ og fer versnandi þegar við nálgumst $1$.
+% %
+% \end{frame}
+% 
+% %
+% \begin{frame}{1.6 Ástandsgildi grunnaðgerðanna fjögurra} 
+% 
+% 
+% Við getum litið á grunnaðgerðirnar fjórar, samlagningu $(x,y)\mapsto x+y$, frádrátt $(x,y)\mapsto x-y$, margföldun $(x,y)\mapsto xy$ og deilingu $(x,y)\mapsto x/y$ sem föll af tveimur breytistærðum og reiknað út ástandsgildi þeirra,
+% \begin{align*}
+%     \ast_x(x\pm y) &= 
+%     \dfrac {|x\cdot 1|}{|x\pm y|} = 
+%     \dfrac{1}{|1\pm y/x|},\\
+%     \ast_y(x\pm y) &= 
+%     \dfrac {|y\cdot 1|}{|x\pm y|} = 
+%     \dfrac{1}{|1\pm x/y|},
+% \end{align*}
+% sem sýnir okkur að ástand samlagningar er gott nema þegar 
+% $x\approx -y$ og ástand frádráttar er gott nema þegar $x\approx y$.
+% 
+% \end{frame}
+% %
+% 
+% %
+% \begin{frame}{1.6 Ástandsgildi grunnaðgerðanna fjögurra} 
+% 
+% 
+%  Eins höfum við 
+% \begin{align*}
+%     \ast_x(xy) &= \dfrac{|x\cdot y|}{|xy|} = 1 \\
+%     \ast_x(xy) &= \dfrac{|y\cdot x|}{|xy|} = 1,
+% \end{align*}
+% sem sýnir okkur að ástand margföldunar er alltaf gott, \pause
+% og
+% \begin{align*}
+%     \ast_x(x/y) &= \dfrac{|x\cdot 1/y|}{|x/y|} = 1 \\
+%     \ast_y(x/y) &= \dfrac{|y\cdot (-x/y^2)|}{|x/y|} = 1,
+% \end{align*}
+% sem sýnir okkur að ástand deilingar er einnig alltaf gott.
+% 
+% \pause 
+% \smallskip
+% 
+% 
+% Hlutfallsleg skekkja sem verður til þegar frádráttur er
+% framkvæmdur á tveimur álíka stórum stærðum er oft nefnd
+% {\it styttingarskekkja}. Þegar við hönnum reiknirit og  
+% forritum þau verðum við að forðast styttingarskekkjur.
+% \end{frame}
+
+%
+
+
+\begin{frame}{Kafli 1: Fræðilegar spurningar}
+  \begin{enumerate}
+  \item  Hverjar eru helstu tegundir af skekkjum sem þarf að taka
+    tillit til í tölulegum útreikningum?
+  \item  Hvernig eru {\it skekkja} og {\it hlutfallsleg skekkja} í nálgun á
+    rauntölu skilgreindar?
+  \item  Hver er skilgreiningin á því að {\it rauntalnaruna} $(x_n)$
+    er sögð vera {\it samleitin} að {\it  markgildinu} $r$?
+  \item  Ef $(x_n)$ er gefin runa sem stefnir á $r$ og skekkjan
+er  $e_n=r-x_n$, hvað þýðir  þá að runan sé  
+{\it  að minnsta kosti línulega samleitin}, 
+{\it að minnsta kosti  ferningssamleitin} og  
+{\it að minnsta kosti samleitin af stigi $\alpha$} 
+  \item  Eftir hvaða reglum eru tölur afrúnaðar í tugakerfi?
+  \item  Hvernig er fyrirframmat á skekkju framkvæmt?
+  \item  Útskýrið hvernig er eftirámat á skekkju framkvæmt við nálgun á
+    rauntölu $r$ er aðferðin er ofurlínulega samleitin?
+  \item  Útskýrið hvernig er eftirámat á skekkju framkvæmt við nálgun á
+    rauntölu $r$ ef aðferðin er að minnsta kosti línulega samleitin.
+   \end{enumerate}
+\end{frame}
+
+\begin{frame}{Kafli 1: Fræðilegar spurningar}
+  \begin{enumerate}
+  \item[9.] Útskýrið hvernig samleitnistig runu er metið.
+%   \item[10.] Hvernig eru ástandsgildi falla af einni og mörgum
+%     breytistærðum skilgreint og hvernig eru þau notuð?
+  \item[10.] Útskýrið hvernig forðast á styttingarskekkjur þegar
+    núllstöðvar annars stigs margliðu $ax^2+bx+c$ eru reiknaðar
+  \item[11.]  Hvernig er setning Taylors og hvernig er skekkjan í
+    Taylor-nálgun?
+  \item[12.]   Útskýrið hvernig hægt er að meta hlutfallslega skekkju
+    í núllstöð $r(\alpha)$ fallsins $x\mapsto f(x,\alpha)$ ef gefið er
+    að það er skekkja í gildinu sem notað er fyrir $\alpha$. 
+  \item[13.]  Hvað þýðir að $f(t) = O(g(t))$ ef $t \rightarrow c$ þar
+    sem $f$ og $g$ eru föll sem skilgreind eru á bili sem inniheldur
+    $c$ eða á hálfás $x>a$ í tilfellinu þegar $c=+\infty$?
+%   \item[15.]   Hvað þýðir að $f(t) = o(g(t))$ ef $t \rightarrow c$ þar
+%     sem $f$ og $g$ eru föll sem skilgreind eru á bili sem inniheldur
+%     $c$ eða á hálfás $x>a$ í tilfellinu þegar $c=+\infty$?
+%    \end{enumerate}
+% \end{frame}
+% 
+% \begin{frame}{Kafli 1: Fræðilegar spurningar}
+%   \begin{enumerate}
+  \item[14.]  Hvað þýðir að $ a_n = O(b_n)$ ef $n\to \infty$ þegar
+ $(a_n)$ og $(b_n)$ eru tvær talnarunur?
+%    \item[17.]  Hvað þýðir að $ a_n = o(b_n)$ ef $n\to \infty$ þegar
+%  $(a_n)$ og $(b_n)$ eru tvær talnarunur?
+    \end{enumerate}
+\end{frame}
+%
+\end{document}

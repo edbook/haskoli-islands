@@ -1,0 +1,18 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+  \draw [->](-0.4,0) -- (5.5,0) node[right]{$x$};
+  \draw [->](0,-0.4) -- (0,2.5) node[above]{$y$};
+
+  \draw [dashed] plot [domain=0:4.92] (\x,{0.8391*\x-0.1704*\x*\x});
+
+  \draw [->, very thick, red] (0,0) -- (1.1491,0.9642) node[midway, above] {$v_0$};
+  %\draw (0.8,0) to[out=90 , in=130] (0.6128,0.5142) ;
+  %\node at (1,0.3) {$\alpha_0$};
+  \draw [thick] (0.8,0) arc (0:40:0.8) node [midway,right] {\small $\alpha_0$};
+  \draw[->, thick] (2.5,2.2) -- (2.5,1.5) node[midway, left]{$g$};
+
+  \end{tikzpicture}
+\end{document}

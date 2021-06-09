@@ -1,0 +1,15 @@
+{% extends "!layout.html" %}
+{% block linktags %}
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    {{ super() }}
+{% endblock %}

@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+% bakgrunnur
+%\draw [fill=yellow!50, yellow!50] (0,0) rectangle (5,5);
+% brúin
+\draw [fill=red, red] (0,2) rectangle (5,2.1);
+\draw [red, very thick] (1.5,0) rectangle (1.6,5);
+\draw [red] (0,3.3) to [out=25, in=250] (1.5,5);
+\draw [red] (1.6,5) to [out=290, in=170] (5,2.7);
+% vatnið
+\draw [fill=blue, blue] (0,0) rectangle (5,0.1);
+\draw [<->] (0.5,0.1) -- (0.5,2);
+\node [right] at (0.5,1) {$67m$};
+% una
+\draw [fill=black] (3,2.15) ellipse (1pt and 2pt);
+\node at (3,2.5) {Una};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,223 @@
+\documentclass[tikz,border=10pt]{standalone}
+
+%% Language and font encodings
+
+
+%% Sets page size and margins
+\usepackage[a4paper,top=2.6cm,bottom=2cm,left=2.6cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\setlength\parindent{0pt}
+\linespread{1.25}
+\usepackage{cool,siunitx}
+
+%% Useful packages
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{tablefootnote}
+\usepackage{hhline}
+\usepackage{icomma}
+\usepackage{ dsfont }
+\usepackage{ upgreek }
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{cancel}
+\usepackage{accents}
+\usepackage{pdfpages}
+\usepackage{svg}
+\usetikzlibrary{arrows}
+\begin{document}
+
+\begin{tikzpicture}
+\node[] at (1,1) {\Huge{O}};
+\node[] at (4,1) {\Huge{O}};
+\node[] at (2.5,1.5) {\Huge{N}};
+\node[] at (2.5,3.1) {\Huge{O}};
+
+
+\filldraw (2.5,2) circle (1.8pt);
+\filldraw (2.5,2.5) circle (1.8pt);
+
+\filldraw (1.5,1.17) circle (1.8pt);
+\filldraw (2,1.34) circle (1.8pt);
+
+%Eintengi
+%\filldraw (3.5,1.17) circle (1.8pt);
+%\filldraw (3,1.34) circle (1.8pt);
+
+%tvitengi
+\filldraw (3.5,1.35) circle (1.8pt);
+\filldraw (3,1.55) circle (1.8pt);
+
+\filldraw (3.4,1.1) circle (1.8pt);
+\filldraw (2.9,1.3) circle (1.8pt);
+
+%punktar hja tvitengi
+\filldraw (4.1,1.45) circle (1.8pt);
+\filldraw (4.35,1.3) circle (1.8pt);
+
+\filldraw (4.1,0.55) circle (1.8pt);
+\filldraw (4.35,0.7) circle (1.8pt);
+
+%punktar a vinstra O
+\filldraw (0.85,1.45) circle (1.8pt);
+\filldraw (1.15,1.45) circle (1.8pt);
+
+
+\filldraw (0.85,0.55) circle (1.8pt);
+\filldraw (1.15,0.55) circle (1.8pt);
+
+\filldraw (0.55,1.15) circle (1.8pt);
+\filldraw (0.55,0.85) circle (1.8pt);
+
+%punktar a efsta O
+
+\filldraw (2.05,3.25) circle (1.8pt);
+\filldraw (2.05,2.95) circle (1.8pt);
+
+
+\filldraw (2.95,3.25) circle (1.8pt);
+\filldraw (2.95,2.95) circle (1.8pt);
+
+\filldraw (2.65,3.55) circle (1.8pt);
+\filldraw (2.35,3.55) circle (1.8pt);
+
+\draw [<->,thick] (4.8,1.8) -- (6.2,1.8);
+
+%------------------------------------------------------------------
+%miðjuvok
+
+\node[] at (7,1) {\Huge{O}};
+\node[] at (10,1) {\Huge{O}};
+\node[] at (8.5,1.5) {\Huge{N}};
+\node[] at (8.5,3.1) {\Huge{O}};
+
+\filldraw (8.5,2) circle (1.8pt);
+\filldraw (8.5,2.5) circle (1.8pt);
+
+
+\filldraw (7.6,1.1) circle (1.8pt);
+\filldraw (8,1.3) circle (1.8pt);
+
+\filldraw (7.5,1.35) circle (1.8pt);
+\filldraw (7.9,1.55) circle (1.8pt);
+
+%Eintengi á hægra O
+\filldraw (9.5,1.17) circle (1.8pt);
+\filldraw (9,1.34) circle (1.8pt);
+
+%tvitengi á hægra O
+%\filldraw (3.5,1.35) circle (1.8pt);
+%\filldraw (3,1.55) circle (1.8pt);
+
+%\filldraw (3.4,1.1) circle (1.8pt);
+%\filldraw (2.9,1.3) circle (1.8pt);
+
+%punktar hja tvitengi
+\filldraw (6.9,1.45) circle (1.8pt);
+\filldraw (6.65,1.3) circle (1.8pt);
+
+\filldraw (6.9,0.55) circle (1.8pt);
+\filldraw (6.65,0.7) circle (1.8pt);
+
+%punktar a vinstra O
+\filldraw (10.15,1.45) circle (1.8pt);
+\filldraw (9.85,1.45) circle (1.8pt);
+
+
+\filldraw (9.85,0.55) circle (1.8pt);
+\filldraw (10.15,0.55) circle (1.8pt);
+
+\filldraw (10.45,1.15) circle (1.8pt);
+\filldraw (10.45,0.85) circle (1.8pt);
+
+%punktar a efsta O
+
+\filldraw (8.05,3.25) circle (1.8pt);
+\filldraw (8.05,2.95) circle (1.8pt);
+
+
+\filldraw (8.95,3.25) circle (1.8pt);
+\filldraw (8.95,2.95) circle (1.8pt);
+
+\filldraw (8.65,3.55) circle (1.8pt);
+\filldraw (8.35,3.55) circle (1.8pt);
+
+\draw [<->,thick] (10.8,1.8) -- (12.2,1.8);
+
+%------------------------------------------------------------------
+%hægrivok
+
+\node[] at (13,1) {\Huge{O}};
+\node[] at (16,1) {\Huge{O}};
+\node[] at (14.5,1.5) {\Huge{N}};
+\node[] at (14.5,3.1) {\Huge{O}};
+
+\filldraw (14.37,2) circle (1.8pt);
+\filldraw (14.37,2.5) circle (1.8pt);
+
+\filldraw (14.63,2) circle (1.8pt);
+\filldraw (14.63,2.5) circle (1.8pt);
+
+
+\filldraw (13.5,1.17) circle (1.8pt);
+\filldraw (14,1.34) circle (1.8pt);
+
+%Eintengi á hægra O
+\filldraw (15.5,1.17) circle (1.8pt);
+\filldraw (15,1.34) circle (1.8pt);
+
+
+%punktar hja tvitengi
+\filldraw (12.85,1.45) circle (1.8pt);
+\filldraw (13.15,1.45) circle (1.8pt);
+
+
+\filldraw (12.85,0.55) circle (1.8pt);
+\filldraw (13.15,0.55) circle (1.8pt);
+
+\filldraw (12.55,1.15) circle (1.8pt);
+\filldraw (12.55,0.85) circle (1.8pt);
+
+%punktar a vinstra O
+\filldraw (16.15,1.45) circle (1.8pt);
+\filldraw (15.85,1.45) circle (1.8pt);
+
+
+\filldraw (15.85,0.55) circle (1.8pt);
+\filldraw (16.15,0.55) circle (1.8pt);
+
+\filldraw (16.45,1.15) circle (1.8pt);
+\filldraw (16.45,0.85) circle (1.8pt);
+
+%punktar a efsta O
+
+\filldraw (14.05,3.3) circle (1.8pt);
+\filldraw (14.25,3.5) circle (1.8pt);
+
+\filldraw (14.95,3.3) circle (1.8pt);
+\filldraw (14.75,3.5) circle (1.8pt);
+
+
+
+
+
+
+
+
+
+
+
+\end{tikzpicture}
+
+\end{document}
+
+

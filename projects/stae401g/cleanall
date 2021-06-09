@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in {1..9}
+do
+	python2 clean.py Kafli0$i.rst Kafli0$i.rst
+done
+	
+python2 clean.py Kafli10.rst Kafli10.rst
+	

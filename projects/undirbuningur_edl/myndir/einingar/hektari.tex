@@ -1,0 +1,14 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}
+  \draw [dashed](0,0) -- (10,0) -- (10,10) -- (0,10) -- (0,0) ;
+  \filldraw [fill=gray] (0,0) -- (1,0) -- (1,1) -- (0,1) -- (0,0);
+  \node (c) at (0.5,0.2) [above] {hm$^2$};
+  \node (c) at (5,5) {km$^2$};
+  \draw [decorate,decoration={brace,amplitude=10pt}] (-0.1,0) -- (-0.1,10) node [black,midway,xshift=-1.4cm] {$1000$ m} ;
+  \draw [decorate,decoration={brace,amplitude=10pt}] (1,1) -- (1,0) node [black,midway,xshift=0.8cm] {$100$ m} ;
+\end{tikzpicture}
+\end{document}

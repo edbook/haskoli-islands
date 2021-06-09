@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc} \usepackage[icelandic]{babel}
+\usepackage{latexsym,amssymb,amsmath}
+
+\usepackage{ragnar}
+ 
+%\voffset=-0.5in
+\hoffset=-1.2in
+\textwidth=6in
+\textheight=10.0in
+
+\begin{document}
+
+\pagestyle{empty}
+
+\selectlanguage{icelandic}
+
+\newcommand{\nin}{\mbox{$\;\not\in\;$}}
+\renewcommand{\S}{\textsection}
+
+\centerline{\sc \LARGE Stærðfræðigreining III}
+\medskip
+\centerline{\sc \large 1. Tvinntölur.}
+
+\bigskip
+
+Efni þessa fyrirlesturs kemur úr grein \$1.2 í bók Ragnars.
+\medskip
+%\LARGE
+%\baselineskip24pt
+
+
+{\bf 1.1 Skilgreining.}    Skilgreinum margföldum á $\R^2$ þannig að 
+$$(a,b)(c,d)=(ac-bd, ad+bc).$$
+Þegar hugsað er um $\R^2$ með þessari margföldun og venjulegri samlagningu þá eru stökin í $\R^2$ kallaðar {\em tvinntölur} og mengi þeirra er táknað með $\C$.  Þegar við viljum leggja áherslu á að líta má á tvinntölu sem punkt í planinu $\R^2$ þá er talað um {\em tvinn\-talnaplanið}.
+
+\medskip
+
+{\bf 1.2 Ritháttur.}  Þegar fjallað er um tvinntölur þá er stakið $(a,b)$ venjulega ritað sem $a+ib$. 
+
+Hugsum okkur að $i^2=-1$.  Notum svo venjulega dreifireglu og að $i$ víxlast við rauntölur til að reikna margfeldið
+$$(a+ib)(c+id)=ac+iad+ibc+i^2bd=ac-bd+i(ad+bc).$$
+Við höfum nú fengið aftur skilgreininguna á margföldunni úr 1.1.
+
+\medskip
+
+{\bf 1.3 Setning.}  Eftirfarandi reiknireglur gilda um tvinntölur:
+
+(i)  $\big((a+ib)+(c+id)\big)+(e+if)=(a+ib)+\big((c+id)+(e+if)\big)$  (tengiregla fyrir samlagning)
+
+(ii)  $\big((a+ib)(c+id)\big)(e+if)=(a+ib)\big((c+id)(e+if)\big)$
+(tengiregla fyrir margföldun)
+
+(iii)  $(a+ib)+(c+id)=(c+id)+(a+ib)$  (víxlregla fyrir samlagningu)
+
+(iv)  $(a+ib)(c+id)=(c+id)(a+ib)$  (víxlregla fyrir margföldun)
+
+(vi) $(a+ib)\big((c+id)+(e+if)\big)=(a+ib)(c+id)+(a+ib)(e+if)$  (dreifregla)
+
+(vii)  Talan $0=0+i0$ er samlagningarhlutleysa, þ.e.a.s.\ $(a+ib)+0=a+ib$.
+
+(vii)  Talan $1=1+i0$ er margföldunarhlutleysa, þ.e.a.s.\ $1(a+ib)=a+ib$.
+
+\medskip
+
+{\bf 1.4 Ritháttur.}  Þegar unnið er með tvinntölur þá er ekki gerður greinarmunur á rauntölunni $a$ og tvinntölunni $a+i0$.  Því getum við hugsað mengi rauntalna $\R$ sem hlutmengi í mengi tvinntalna $\C$.  {\bf Sérhver rauntala er þannig líka tvinntala.}
+
+\medskip
+
+{\bf 1.5 Setning.}  Ef $z=a+ib\neq 0$ er tvinntala þá á $z$ sér margföldunarandhverfu sem er 
+$$z^{-1}=\frac{1}{z}=\frac{a}{a^2+b^2}+\frac{-b}{a^2+b^2}i.$$
+
+\medskip
+
+{\bf 1.6 Skilgreining og setning.} 
+Ef $z$ er tvinntala þá getum við skilgreint heiltöluveldi $z^n$ af $z$ þannig að $z^0=1$, og ef $n>0$ þá er $z^n=z\cdot z\cdot\ldots\cdot z$ ($n$ sinnum) og  $z^{-n}=\big(z^{-1}\big)^n$.
+Venjulegar veldareglur gilda um tvinntöluveldi, þ.e.a.s.
+$$z^n\cdot z^m=z^{n+m}\qquad z^n/z^m=z^{n-m}\qquad z^n\cdot w^n=(zw)^{n}
+\qquad (z^n)^m=z^{nm}.$$
+
+\medskip
+
+{\bf 1.7 Skilgreining.} 
+Ritum tvinntölu $z$ sem $z=x+iy$ þar sem $x$ og $y$ eru rauntölur.
+
+Talan $x$ kallast {\em raunhluti} $z$ og er táknaður með $\Re z$.
+
+Talan $y$ kallast {\em þverhluti} $z$ og er táknaður með $\Im z$.
+(Athugið að þverhlutinn er rauntala.)
+
+Sagt er að $z$ sé rauntala ef $\Im z=0$ en hrein þvertala ef $\Re z=0$.
+
+Fyrir tvinntölu $z=x+iy$ skilgreinum við {\em samok} $z$ sem tvinntöluna 
+$\overline{z}=x-iy$.
+
+\medskip
+
+{\bf 1.8 Reiknireglur.} 
+Um tvinntölu $z=x+iy$ gildir
+\begin{align*}
+\overline{(\overline{z})}&=z\\
+z\overline{z}&=(x+iy)(x-iy)=x^2+y^2\\
+z+\overline z&=2x=2\Re z\\
+z-\overline z&=2yi=(2\Im z)i\\
+\overline{z+w}&=\overline{z}+\overline{w}\\
+\overline{zw}&=\overline{z}\,\overline{w}\\
+\overline{z/w}&=\overline{z}/\overline{w}
+\end{align*}
+
+{\bf 1.9 Skilgreining.}
+{\em Lengd tvinntölu} $z=x+iy$ er skilgreind sem rauntalan $|z|=\sqrt{x^2+y^2}=\sqrt{z\overline{z}}$.  
+
+Hugsum nú tvinntöluna $z=x+iy$ sem punkt $(x,y)$ í planinu.  Setjum $r=\sqrt{x^2+y^2}=|z|$.  Ritum nú punktinn $(x,y)$ sem 
+$(x,y)=r(\cos \theta, \sin\theta)$  (pólhnit).  
+Þá er $z=|z|(\cos\theta+i\sin\theta)$ og $\theta$ kallast {\em stefnuhorn} tvinntölunnar $z$.  (Athugið að stefnuhorn er ekki ótvírætt ákvarðað því ef $\theta$ er stefnuhorn þá er $\theta+k\cdot 2\pi$ líka stefnuhorn.)
+
+\medskip
+
+{\bf 1.10 Formúla.}    Lát $z=x+iy\neq 0$ vera tvinntölu í $\C\setminus \R_-$  ($\R_-$ er mengi allra neikvæðra rauntalna sem við samsömum við mengi allra tvinntalna á forminu $a+ib$ með $b=0$ og $a<0$).  Stefnuhorn $z$  er gefið með formúlunni
+$$\theta=2\arctan\left(\tfrac{y}{|z|+x}\right).$$
+Athugið að þessi formúla gefur gildi á $\theta$ þannig að $-\pi<\theta<\pi$.
+
+\medskip
+
+
+{\bf 1.11 Skilgreining.} Ef $z$ og $w$ eru tvær tvinntölur þá er fjarlægðin á milli þeirra skilgreind sem rauntalan $|z-w|$.
+
+\medskip
+
+{\bf 1.12  Setning.}  Fyrir sérhverjar tvinntölur $z$ og $w$ gildir að 
+$$|z+w|\leq |z|+|w|.$$
+Athugið að $|z+w|=|z|+|w|$ ef og aðeins ef til er jákvæð rauntala $a$ þannig að $w=az$.
+
+\medskip
+
+{\bf 1.13 Rúmfræðileg túlkun margföldunar.}  
+Ef $z$ og $w$ eru tvær tvinntölur með lengdir 
+$|z|$ og $|w|$ og stefnuhornin $\alpha$ og $\beta$,
+þá er
+$$
+zw=|z||w|\big(\cos(\alpha+\beta)+i\sin(\alpha+\beta)\big).
+$$
+Það segir okkur að lengd margfeldisins er 
+margfeldi lengda $z$ og $w$ (þ.e.a.s.~$|zw|=|z||w|$) og 
+að stefnuhorn margfeldisins sé summa stefnuhorna $z$  og $w$.  
+
+Sérstaklega gildir {\em Regla de Moivre} sem segir að 
+$$(\cos \theta+i\sin\theta)^n=\cos(n\theta)+i\sin(n\theta).$$
+
+\medskip
+
+{\bf 1.14  Skilgreining.}
+{\em Lína í tvinntalnaplaninu} $\C$ er mengi allra tvinntalna $z=x+iy$ sem uppfylla jöfnu af taginu $ax+by+c=0$.
+
+{\em Hringur í tvinntalnaplaninu} er mengi allra punkta sem er í gefinni fastri fjarlægð (geisli, radíus) frá gefnum föstum punkti $m$ (miðjunni).  
+Hringur með miðju í $m$ og geisla $r$ er mengið 
+$\{z\mid |z-m|=r\}$.
+
+\medskip
+
+{\bf 1.15 Skilgreining.}  {\em Einingarhringurinn} $\T$ í $\C$ er mengi allra
+tvinntalna sem hafa lengd 1.  (Einnig má lýsa honum sem mengi allra tvinntalna sem eru í fjarlægð 1 frá $0$.  Einingarhringurinn er hringur með miðju í 0 og geisla 1.)
+
+\medskip
+
+{\bf 1.16 Setning.} Sérhverri línu og sérhverjum hring má lýsa með jöfnu af taginu
+$$\alpha|z|^2+\overline{\beta} z+\beta\overline{z}+\gamma=0,$$
+þar sem $\alpha$ og $\gamma$ eru rauntölur og $\beta$ er tvinntala.
+
+Öfugt, ef við fáum slíka línu þá lýsir hún:
+
+(i) {\em línu} ef $\alpha=0$ og $\beta \neq 0$;
+
+(ii) {\em hring} ef $\alpha\neq 0$ og $|\beta|^2-\alpha\gamma>0$ (og miðjan er $m=-\beta/\alpha$ og geislinn er $r=\sqrt{|\beta|^2-\alpha\gamma}/|\alpha|$);
+
+(iii)  {\em stökum punkt} ef $\alpha\neq 0$ og $|\beta|^2-\alpha\gamma=0$ (punkturinn er $m=-\beta/\alpha$);
+
+(iv)  {\em tóma menginu} ef $\alpha\neq 0$ og $|\beta|^2-\alpha\gamma<0$;
+
+(v)  {\em öllu planinu} $\C$ ef $\alpha=\beta=\gamma=0$.
+
+\medskip
+
+
+\medskip
+
+\vfill  9.\ júlí 2015
+  \hfill  Rögnvaldur G. Möller
+  \end{document}
+  

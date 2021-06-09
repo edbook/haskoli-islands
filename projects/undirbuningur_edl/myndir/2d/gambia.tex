@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+    \begin{tikzpicture}
+        \draw [<->] (0,4) node [above] {$y$} -- (0,0) -- (10.3,0) node [right] {$x$};
+        \draw [thick, dashed, blue] (0,0) to [out=45, in=135] (10,0);
+        \draw [very thick, green, ->] (0,0) -- (1,1) node [black, above] {$\bar{v}$};
+        \draw [very thick, orange, ->] (8,4) -- (8,2.5) node [black, below] {$\bar{g}$};
+        \draw (9.2,1) rectangle (10.5,1.6) node [below left] {$(x_1,y_1)$};
+        \draw [->] (10,1) -- (10,0.15);
+    \end{tikzpicture}
+\end{document}

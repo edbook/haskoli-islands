@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+    \begin{tikzpicture}
+        \draw [thick, dotted] (0,0) circle [radius=1.5];
+        % hraðavigrar
+        \draw [thick, green, ->] (0,1.5) -- (-0.5,1.5) node [black, left] {$\bar{v}$};
+        \draw [thick, green, ->] (-1.4,0.5) -- (-1.55,0) node [black, below] {$\bar{v}$};
+        \draw [thick, green, ->] (0,-1.5) -- (1,-1.5) node [black, right] {$\bar{v}$};
+        \draw [thick, green, ->] (1.4,-0.5) -- (1.7,0.3) node [black, above] {$\bar{v}$};
+        % hröðunarvigrar
+        \draw [thick, orange, ->] (0,1.5) -- (0,1.2) node [black, below] {$\bar{a}$};
+        \draw [thick, orange, ->] (-1.4,0.5) -- (-1.2,0.2) node [black, below] {$\bar{a}$};
+        \draw [thick, orange, ->] (0,-1.5) -- (0,-0.5) node [black, above] {$\bar{a}$};
+        \draw [thick, orange, ->] (1.4,-0.5) -- (0.7,-0.7) node [black, left] {$\bar{a}$};
+        % hröðunarþættir
+        \draw [very thick, orange, opacity=0.4, ->] (-1.4,0.5) -- (-1.1,0.4) node [black, right] {$\bar{a}_{\perp}$};
+        \draw [very thick, orange, opacity=0.4, ->] (-1.4,0.5) -- (-1.5,0.2) node [black, above left] {$\bar{a}_{\parallel}$};
+        \draw [very thick, orange, opacity=0.4, ->] (1.4,-0.5) -- (0.8,-0.3) node [black, above] {$\bar{a}_{\perp}$};
+        \draw [very thick, orange, opacity=0.4, ->] (1.4,-0.5) -- (1.25,-0.95) node [black, right] {$\bar{a}_{\parallel}$};
+        % punktar
+        \draw [fill=black] (0,1.5) circle [radius=0.05];
+        \draw [fill=black] (-1.4,0.5) circle [radius=0.05];
+        \draw [fill=black] (0,-1.5) circle [radius=0.05];
+        \draw [fill=black] (1.4,-0.5) circle [radius=0.05];
+    \end{tikzpicture}
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[tikz, border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\begin{document}
+
+\begin{tikzpicture}
+\draw [->] (0,0) -- (0,12) node [anchor=south] {$v$ [m/s]};
+\draw [->] (0,0) -- (11.5,0) node [anchor=west] {$t$ [s]};
+\draw (0,0) -- (10,11.2) ;
+\draw (5.5,6.5) node [rotate=48.2] {Hallatala = $18.67$ m/s$^2$};
+\draw [dashed] (4.46,5) -- (7,5) ;
+\draw (6,4.5) node  {$\Delta t$};
+\draw [dashed] (7,5) -- (7,7.8) ;
+\draw (7.5,6) node {$\Delta v$};
+
+\draw [dashed] (0,11.2) -- (10,11.2);
+\draw (5,11.5) node {Markhraði};
+\draw (0, 11.2) node[anchor = south east]{11.2};
+\draw (-0.2, 11.2) -- (0.2,11.2);
+
+\foreach \x in {0,60,120,180,240,300,360,420,480,540,600,660}{
+\draw (\x/60,-0.5) node{\x};
+\draw (\x/60,-0.2) -- (\x/60,0.2); };
+
+\foreach \x in {0,1,2,3,4,5,6,7,8,9,10,11}{
+\draw (-0.5, \x) node{\x};
+\draw (-0.2, \x) -- (0.2,\x); };
+
+\end{tikzpicture}
+\end{document}

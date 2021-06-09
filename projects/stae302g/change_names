@@ -1,0 +1,10 @@
+#!/bin/bash
+clear
+echo "Good morning, world."
+
+for i in {1..10}
+do
+  rm Kafli0$i
+done
+	
+	

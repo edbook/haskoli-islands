@@ -1,0 +1,917 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Fourier-raðir &mdash; Stærðfræðigreining IV 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining IV 2019" href="index.html"/>
+        <link rel="next" title="3. Eigingildisverkefni" href="Kafli03.html"/>
+        <link rel="prev" title="1. Hlutafleiðujöfnur" href="Kafli01.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining IV
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="umnamskeidid.html">Gagnlegar upplýsingar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsefni">Námsefnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#fyrirlestrar">Fyrirlestrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#daematimar-og-vinnustofur">Dæmatímar og vinnustofur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#skiladaemi">Skiladæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsmat">Námsmat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#tolvunotkun">Tölvunotkun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#a-taka-namskeii-i-anna-sinn">Að taka námskeiðið í annað sinn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#vitalstimar-kennara-og-fyrirspurnir">Viðtalstímar kennara og fyrirspurnir</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Hlutafleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-fjolvisir">1.1.1. Ritháttur - Fjölvísir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-laplace-virki">1.1.2. Ritháttur - Laplace-virki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-stig-hlutafleiu-og-hlutafleiujofnu">1.1.3. Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#linulegar-hlutafleiujofnur">1.1.4. Línulegar hlutafleiðujöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#daemi-um-hlutafleiujofnur-i-elisfraei">1.2. Dæmi um hlutafleiðujöfnur í eðlisfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#varmaleinijafnan">1.2.1. Varmaleiðnijafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#bylgjujafnan">1.2.2. Bylgjujafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi-sveifla-a-einvium-streng">1.2.3. Dæmi - Sveifla á einvíðum streng</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#hliarskilyri-vel-framsett-verkefni">1.3. Hliðarskilyrði. Vel framsett verkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#upphafsskilyri">1.3.1. Upphafsskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#jaarskilyri">1.3.2. Jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#vel-framsett-verkefni">1.3.3. Vel framsett verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#fyrsta-stigs-jofnur">1.4. Fyrsta stigs jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#kennilinuaferin">1.4.1. Kennilínuaðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#setning">1.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining">1.4.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id2">1.4.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reikniafer">1.4.6. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#urlausn-me-laplace-ummyndun">1.4.7. Úrlausn með Laplace-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi">1.4.8. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Fourier-raðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">2.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">2.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2.2. Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.2.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-reiknireglur">2.2.3. Setning - Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.2.4. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samleitni-fourier-raa">2.3. Samleitni Fourier-raða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-um-innfeldi">2.3.1. Reiknireglur um innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cauchy-schwarz-ojafna">2.3.2. Cauchy-Schwarz ójafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#regla-pyagorasar">2.3.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bessel-ojafnan">2.3.4. Bessel-ójafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.3.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">2.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-andhverfuformula-fouriers">2.3.7. Setning - Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-parseval-jafnan">2.3.8. Setning - Parseval-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#urlausn-a-hlutafleiujofnum">2.4. Úrlausn á hlutafleiðujöfnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jafnstae-framlenging-og-kosinus-ro">2.4.1. Jafnstæð framlenging og kósínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oddstae-framlenging-og-sinus-ro">2.4.2. Oddstæð framlenging og sínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">2.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi">2.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-sveiflandi-strengur">2.4.5. Dæmi - Sveiflandi strengur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-varmaleini">2.4.6. Dæmi - Varmaleiðni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#id1">3.1. Eigingildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi">3.1.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-baum-endapunktum">3.1.2. Fallsjaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#afleiuskilyri-i-baum-endapunktum">3.1.3. Afleiðuskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum">3.1.4. Fallsjaðarskilyrði í öðrum endapunkti og afleiðuskilyrði í hinum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#askilnaur-breytistaera">3.2. Aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sveiflandi-strengur-aftur">3.2.1. Sveiflandi strengur - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#anna-daemi">3.2.2. Annað dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#virkjar-af-sturm-liouville-ger">3.3. Virkjar af Sturm-Liouville-gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining">3.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id2">3.3.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id3">3.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id4">3.3.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#formula-greens">3.3.5. Formúla Greens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-og-skilgreining">3.3.6. Setning og skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eigingildisverkefni-af-sturmliouvilleger">3.4. Eigingildisverkefni af Sturm–Liouville–gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id5">3.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning">3.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id6">3.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id7">3.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id8">3.4.5. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#green-foll-fyrir-jaargildisverkefni">3.5. Green-föll fyrir jaðargildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id9">3.5.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id10">3.5.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eiginfallaliun-og-greenfoll">3.6. Eiginfallaliðun og Green–föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#reikniafer">3.6.1. Reikniaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#urlausn-hlutafleiujafa-me-eiginfallaroum">3.7. Úrlausn hlutafleiðujafa með eiginfallaröðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi">3.7.1. Dirichlet-verkefnið á rétthyrningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu">3.7.2. Dirichlet-verkefnið á skífu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#varmaleinijafnan-me-timahaum-jaarskilyrum">3.7.3. Varmaleiðnijafnan með tímaháðum jaðarskilyrðum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#afram-um-eigingildisverkefni-askilnaur-breytistaera">3.8. Áfram um eigingildisverkefni - aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi-aftur">3.8.1. Dirichlet-verkefnið á rétthyrningi - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu-aftur">3.8.2. Dirichlet-verkefnið á skífu - aftur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#tvofaldar-fourier-rair">3.9. Tvöfaldar Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-retthyrnd-tromma">3.9.1. Dæmi - Rétthyrnd tromma</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#almennt-um-eiginfallarair">3.10. Almennt um eiginfallaraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-alhaeft-varmaleiniverkefni">3.10.1. Dæmi - Alhæft varmaleiðniverkefni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Fourier-ummyndun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-reiknireglur-plancerel-jafnan">4.1. Fourier-ummyndun. Reiknireglur. Plancerel-jafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-l-1-mathbb-r">4.1.1. Skilgreining á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-fourier-ummyndun">4.1.2. Skilgreining á Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#synidaemi">4.1.3. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#reiknireglur">4.1.4. Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#rulesft">4.1.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#eiginleikar-fourier-myndar">4.1.6. Eiginleikar Fourier-myndar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#plancerel-jafnan">4.1.7. Plancerel-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers-afleiujofnur">4.2. Andhverfuformúla Fouriers. Afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers">4.2.1. Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#foldun-og-fourier-ummyndun">4.2.2. Földun og Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#afleiujofnur-og-fourier-ummyndun">4.2.3. Afleiðujöfnur og Fourier-ummyndun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#urlausn-a-hlutafleiujofnum-me-fourier-ummyndun">4.3. Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#einvia-bylgjujafnan-og-d-alembert-formula">4.3.1. Einvíða bylgjujafnan og d’Alembert-formúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#bylgjujafnan-fourier-ummyndun-og-foldun">4.3.2. Bylgjujafnan, Fourier-ummyndun og földun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#varmaleinijafnan-fourier-ummyndun-og-foldun">4.3.3. Varmaleiðnijafnan, Fourier-ummyndun og földun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-og-leifareikningur">4.4. Fourier-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fourier-myndir-reiknaar-me-leifareikningi">4.4.1. Fourier-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-fourier-myndir-reiknaar-me-leifareikningi">4.4.2. Andhverfar Fourier-myndir reiknaðar með leifareikningi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#laplace-ummyndun-og-leifareikningur">4.5. Laplace-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir">4.5.1. Andhverfar Laplace-myndir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-reiknaar-me-leifareikningi">4.5.2. Andhverfar Laplace-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-og-afleiujofnur">4.5.3. Andhverfar Laplace-myndir og afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id4">4.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Mismunaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-venjulegar-afleiujofnur">5.1. Mismunaaðferð fyrir venjulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi">5.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#heildun-yfir-hlutbil">5.2. Heildun yfir hlutbil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.2.1. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#linuleg-bruun-og-ufugrunnfoll">5.2.2. Línuleg brúun og þúfugrunnföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-hlutaafleiujofnur">5.3. Mismunaaðferð fyrir hlutaafleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#nalgunarjafna">5.3.1. Nálgunarjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-dirichlet-verkefni-a-ferningi">5.3.2. Sýnidæmi: Dirichlet-verkefni á ferningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri">5.3.3. Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#almenn-mismunaafer-a-retthyrningi">5.4. Almenn mismunaaðferð á rétthyrningi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Bútaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#hlutheildun-innfeldi-og-tvilinulegt-form">6.1. Hlutheildun, innfeldi og tvílínulegt form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefni-i-mathbb-r">6.1.1. Jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefnin-i-mathbb-r-2">6.1.2. Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-fyrir-dirichlet-verkefni">6.2. Aðferð Galerkins fyrir Dirichlet-verkefnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni">6.2.1. Galerkin-aðferðir í einni vídd fyrir Dirichlet-verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni">6.2.2. Galerkin-aðferðir í tveimur víddum fyrir Dirichlet-verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-einni-vidd">6.3. Bútaaðferð í einni vídd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#blondu-jaarskilyri-i-baum-endapunktum">6.3.1. Blönduð jaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fallsjaarskilyri">6.3.2. Fallsjaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-me-almennum-jaarskilyrum">6.4. Aðferð Galerkins með almennum jaðarskilyrðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-einni-vidd">6.4.1. Í einni vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-tveimur-viddum">6.4.2. Í tveimur víddum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#synidaemi">6.4.3. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-tveimur-viddum">6.5. Bútaaðferð í tveimur víddum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#net-me-rihyrningum">6.5.1. Net með þríhyrningum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#ufugrunnfoll">6.5.2. Þúfugrunnföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#go-ahead">6.5.3. Go ahead!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id1">6.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining IV</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>2. Fourier-raðir</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli02.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fourier-rair">
+<h1>2. Fourier-raðir<a class="headerlink" href="#fourier-rair" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<div class="section" id="inngangur">
+<h2>2.1. Inngangur<a class="headerlink" href="#inngangur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Rifjum upp að ef við höfum grunn af vigrum <span class="math notranslate nohighlight">\(x_1,x_2,\ldots,x_n\)</span> í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> má rita sérhvern vigur <span class="math notranslate nohighlight">\(y\)</span> sem</p>
+<div class="math notranslate nohighlight">
+\[y = a_1 x_1 + \cdots + a_n x_n\]</div>
+<p>þar sem stuðlarnir <span class="math notranslate nohighlight">\(a_1,\ldots,a_n\)</span> eru ótvírætt ákvarðaðir. Við munum nú spyrja okkur spurningarinnar, er hægt að gera eitthvað sambærilegt þegar vigurrúmið er óendanlega vítt, t.d. þegar það samanstendur af föllum. Við þekkjum dæmi um slíkt, þegar rita má óendanlega oft diffranlegt fall <span class="math notranslate nohighlight">\(f\)</span> með Taylor-röð þess</p>
+<div class="math notranslate nohighlight">
+\[f(x) = a_0\cdot 1 + a_1 x + a_2 x^2 + \cdots, \qquad \text{þar sem} \quad a_n = \frac{f^{(n)}(0)}{n!}.\]</div>
+<p>Í þessum kafla munum við skilgreina svokallaðar Fourier-raðir sem líta svipað út en í stað fallanna <span class="math notranslate nohighlight">\(1,x,x^2,\ldots\)</span> munum við liða lotubundin föll <span class="math notranslate nohighlight">\(f\)</span> í grunn sem samanstendur af hornaföllum (eða jafngilt, veldisvísisföllum), finna formúlur fyrir stuðlunum í framsetningunni og loks skoða hvernig má nota raðirnar við lausn hlutafleiðujafna.</p>
+<div class="section" id="skilgreining">
+<h3>2.1.1. Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fall <span class="math notranslate nohighlight">\(f: \mathbb{R}\to \mathbb{R}\)</span> er sagt vera <span class="math notranslate nohighlight">\(T\)</span>-lotubundið ef <span class="math notranslate nohighlight">\(f(x+T) = f(x)\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>2.2. Fourier-raðir<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við munum skoða tilfellið þegar föllin eru lotubundin með lotu <span class="math notranslate nohighlight">\(2\pi\)</span> og sjá hvaða skilyrði tryggja að hægt sé að liða slík föll í grunn sem samanstendur af hornaföllunum <span class="math notranslate nohighlight">\(\sin(nx)\)</span> og <span class="math notranslate nohighlight">\(\cos(nx)\)</span> annars vegar eða <span class="math notranslate nohighlight">\(e^{nix}\)</span> hins vegar, þar sem <span class="math notranslate nohighlight">\(n\geq 0\)</span>.</p>
+<div class="section" id="id2">
+<h3>2.2.1. Skilgreining<a class="headerlink" href="#id2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(I\subseteq \mathbb{R}\)</span> vera bil.</p>
+<ol class="arabic simple">
+<li>Rúmið <span class="math notranslate nohighlight">\(L^1(I)\)</span> er mengi þeirra falla <span class="math notranslate nohighlight">\(f: I \to \mathbb{C}\)</span> þannig að</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_I |f(x)| dx &lt; \infty.\]</div>
+<ol class="arabic simple" start="2">
+<li>Rúmið <span class="math notranslate nohighlight">\(L^2(I)\)</span> er mengi þeirra falla <span class="math notranslate nohighlight">\(f: I \to \mathbb{C}\)</span> þannig að</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_I |f(x)|^2 dx &lt; \infty.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> eru föll í <span class="math notranslate nohighlight">\(L^2(I)\)</span> kallast</p>
+<div class="math notranslate nohighlight">
+\[\langle f, g \rangle = \frac{1}{|I|} \int_I f(x) \overline{g(x)} dx\]</div>
+<p>innfeldi þeirra (misjafnt er hvort deilt er með <span class="math notranslate nohighlight">\(|I|\)</span>, lengdinni á <span class="math notranslate nohighlight">\(I\)</span>, í skilgreiningunni). Ef <span class="math notranslate nohighlight">\(\langle f, g \rangle = 0\)</span> segjum við að <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> séu hornrétt.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p><span class="math notranslate nohighlight">\(L^j(I)\)</span>, <span class="math notranslate nohighlight">\(j=1,2\)</span> eru vigurrúm, af því að</p>
+<ol class="last arabic simple">
+<li>Ef <span class="math notranslate nohighlight">\(f \in L^j(I)\)</span> og <span class="math notranslate nohighlight">\(g \in L^j(I)\)</span> þá er fallið <span class="math notranslate nohighlight">\(f+g \in L^j(I)\)</span></li>
+<li>Ef <span class="math notranslate nohighlight">\(f \in L^j(I)\)</span> þá er <span class="math notranslate nohighlight">\(\alpha f \in L^j(I)\)</span>, þar sem <span class="math notranslate nohighlight">\(\alpha \in\mathbb R\)</span></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>2.2.2. Skilgreining<a class="headerlink" href="#id3" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f \in L^1([-\pi,\pi])\)</span> er <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundið þá skilgreinum við Fourier-stuðla þess með</p>
+<div class="math notranslate nohighlight">
+\[c_n = c_n(f) = \frac{1}{2\pi} \int_{-\pi}^\pi e^{-inx} f(x) dx, \quad n = \ldots,-2,-1,0,1,2,\ldots,\]</div>
+<p>Fourier-kósínus-stuðla <span class="math notranslate nohighlight">\(f\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[a_n = a_n(f) = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \cos(nx) dx, \quad n = 0,1,2,\ldots,\]</div>
+<p>og Fourier-sínus-stuðla <span class="math notranslate nohighlight">\(f\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[b_n = b_n(f) = \frac{1}{\pi} \int_{-\pi}^\pi f(x) \sin(nx) dx, \quad n = 1,2,\ldots.\]</div>
+<p>Raðirnar</p>
+<div class="math notranslate nohighlight">
+\[\frac{a_0}{2} + \sum_{n\geq 1} \left(a_n \cos(nx) + b_n \sin(nx)\right) \quad \text{og} \quad \sum_{n=-\infty}^\infty c_n e^{inx}\]</div>
+<p>kallast Fourier-raðir <span class="math notranslate nohighlight">\(f\)</span> og til aðgreiningar er sú fyrri oft nefnd hornafallaröð <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div id="GA2MOKYdtWC" style="display: inline-block;"></div>
+<script>
+var ggbApp_GA2MOKYdtWC = new GGBApplet({
+"appName": "graphing", 
+"width": 700, 
+"height": 300, 
+"material_id":" makksbrg", 
+"preventFocus": true, 
+"showResetIcon": true, 
+"enableShiftDragZoom": true 
+}, true);
+ggbAppletId["GA2MOKYdtWC"] = ggbApp_GA2MOKYdtWC;
+</script><p><span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundna fallið er skilgreint með því að gefa formúlu fyrir því á bilinu <span class="math notranslate nohighlight">\([0,2\pi]\)</span>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p>Þegar <span class="math notranslate nohighlight">\(T\)</span>-lotubundið fall er heildað yfir eina lotu skiptir ekki máli hvar upphafspunktur heildisins er valinn, þ.e.</p>
+<div class="last math notranslate nohighlight">
+\[\int_{-T/2}^{T/2} f(x) dx = \int_0^T f(x) dx = \int_\alpha^{\alpha + T}f(x)dx, \quad \text{fyrir öll $\alpha\in\mathbb{R}$.}\]</div>
+</div>
+</div>
+<div class="section" id="setning-reiknireglur">
+<h3>2.2.3. Setning - Reiknireglur<a class="headerlink" href="#setning-reiknireglur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f,g\in L^1([-\pi,\pi])\)</span> vera <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundin föll.</p>
+<ol class="arabic simple">
+<li>Fourier-stuðlarnir eru línulegar varpanir á <span class="math notranslate nohighlight">\(L^1([-\pi,\pi])\)</span>,</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin {align*}
+    a_n(\alpha f+\beta g) &amp;= \alpha a_n(f) + \beta a_n(g) \\
+    b_n(\alpha f+\beta g) &amp;= \alpha b_n(f) + \beta b_n(g) \\
+    c_n(\alpha f+\beta g) &amp;= \alpha c_n(f) + \beta c_n(g)
+\end{align*}\end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li>Eftirfarandi samband gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin {align*}
+a_0 &amp;= 2c_0, \qquad a_n = c_n + c_{-n}, \qquad b_n = i(c_n-c_{-n}),  \\
+c_0 &amp;= \frac{a_0}{2}, \qquad c_n = \frac{1}{2}(a_n-ib_n), \qquad c_{-n} = \frac{1}{2}(a_n+ib_n), \quad n\geq 1.
+\end {align*}\end{split}\]</div>
+<ol class="arabic simple" start="3">
+<li>Ef <span class="math notranslate nohighlight">\(g(x) = f(x+\alpha)\)</span> , þar sem <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> þá er <span class="math notranslate nohighlight">\(c_n(g) = e^{i n\alpha} c_n(f)\)</span> fyrir öll <span class="math notranslate nohighlight">\(n=0,\pm 1,\pm2,\ldots\)</span>.</li>
+<li>Ef <span class="math notranslate nohighlight">\(f\)</span> er raungilt fall þá eru <span class="math notranslate nohighlight">\(a_n(f)\)</span> og <span class="math notranslate nohighlight">\(b_n(f)\)</span> rauntölur og <span class="math notranslate nohighlight">\(c_{-n}(f) = \overline{c_n(f)}\)</span>.</li>
+<li>Ef <span class="math notranslate nohighlight">\(f\)</span> er jafnstætt fall þá er <span class="math notranslate nohighlight">\(b_n(f) = 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(n=1,2,3,\ldots\)</span> og</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[a_n(f) = \frac{2}{\pi} \int_0^\pi f(x) \cos(nx) dx.\]</div>
+<p>6 Ef <span class="math notranslate nohighlight">\(f\)</span> er oddstætt fall þá er <span class="math notranslate nohighlight">\(a_n(f) = 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(n=0,1,2,\ldots\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[b_n(f) = \frac{2}{\pi} \int_0^\pi f(x) \sin(nx) dx.\]</div>
+<ol class="arabic simple" start="7">
+<li>Ef <span class="math notranslate nohighlight">\(f,f',\ldots,f^{(m)}\)</span> eru í <span class="math notranslate nohighlight">\(L_1([-\pi,\pi])\)</span> þá er</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[c_n(f^{(k)}) = (in)^k c_n(f), \quad 0\leq k \leq m, \quad n \in \mathbb{Z}.\]</div>
+</div>
+<div class="section" id="id4">
+<h3>2.2.4. Skilgreining<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f \in L^1([-T/2,T/2])\)</span> er <span class="math notranslate nohighlight">\(T\)</span>-lotubundið þá setjum við <span class="math notranslate nohighlight">\(\omega = 2\pi/T\)</span> og skilgreinum Fourier-stuðla þess með</p>
+<div class="math notranslate nohighlight">
+\[c_n = c_n(f) = \frac{1}{T} \int_{-T/2}^{T/2} e^{-in \omega x} f(x) dx, \quad n = \ldots,-2,-1,0,1,2,\ldots,\]</div>
+<p>Fourier-kósínus-stuðla <span class="math notranslate nohighlight">\(f\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[a_n = a_n(f) = \frac{2}{T} \int_{-T/2}^{T/2} f(x) \cos(n\omega x) dx, \quad n = 0,1,2,\ldots,\]</div>
+<p>og Fourier-sínus-stuðla <span class="math notranslate nohighlight">\(f\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[b_n = b_n(f) = \frac{2}{T} \int_{-T/2}^{T/2} f(x) \sin(n\omega x) dx, \quad n = 1,2,\ldots.\]</div>
+<p>Raðirnar</p>
+<div class="math notranslate nohighlight">
+\[\frac{a_0}{2} + \sum_{n\geq 1} \left(a_n \cos(n\omega x) + b_n \sin(n\omega x)\right) \quad \text{og} \quad \sum_{n=-\infty}^\infty c_n e^{in\omega x}\]</div>
+<p>kallast Fourier-raðir <span class="math notranslate nohighlight">\(f\)</span> og til aðgreiningar er sú fyrri oft nefnd hornafallaröð <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Sambærilegar reiknireglur fyrir <span class="math notranslate nohighlight">\(T\)</span>-lotubundin fást út frá reglunum fyrir <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundin föll, með því að „skipta <span class="math notranslate nohighlight">\(2\pi\)</span> út fyrir <span class="math notranslate nohighlight">\(T\)</span> “ á viðeigandi stöðum.</p>
+</div>
+</div>
+</div>
+<div class="section" id="samleitni-fourier-raa">
+<h2>2.3. Samleitni Fourier-raða<a class="headerlink" href="#samleitni-fourier-raa" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Í þessari grein fjöllum við um skilyrði sem tryggja samleitni Fourier-raða falls og hvenær og í hvaða skilningi fallið er jafnt Fourier-röð sinni. Við munum notast talsvert við innfeldið sem skilgreint er á <span class="math notranslate nohighlight">\(L^2([-\pi,\pi])\)</span> og setjum því fram nokkrar reiknireglur um innfeldi</p>
+<div class="section" id="reiknireglur-um-innfeldi">
+<h3>2.3.1. Reiknireglur um innfeldi<a class="headerlink" href="#reiknireglur-um-innfeldi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(u,v,w\in L^2([-\pi,\pi])\)</span> og <span class="math notranslate nohighlight">\(\alpha,\beta \in \mathbb{C}\)</span> þá gilda eftirfarandi reiknireglur</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+ {{\langle \alpha u + \beta v,w\rangle}}= \alpha{{\langle u,w\rangle}} + \beta {{\langle v,w\rangle}},\\
+ {{\langle u,\alpha v + \beta w\rangle}}= \overline\alpha {{\langle u,v\rangle}} + \overline
+ \beta {{\langle u,w\rangle}},\\
+ {{\langle u,v\rangle}} = \overline{{{\langle v,u\rangle}}},\\
+ {{\langle u,u\rangle}}\geq 0.\end{gathered}\end{split}\]</div>
+<p>Síðasta reglan leyfir okkur að skilgreina lengd
+eða staðal fallsins <span class="math notranslate nohighlight">\(u\)</span> sem</p>
+<div class="math notranslate nohighlight">
+\[\| u\|= \sqrt{{{\langle u,u\rangle}}}.\]</div>
+<p>Ein mikilvægasta ójafna stærðfræðinnar er Cauchy-Schwarz ójafnan</p>
+</div>
+<div class="section" id="cauchy-schwarz-ojafna">
+<h3>2.3.2. Cauchy-Schwarz ójafna<a class="headerlink" href="#cauchy-schwarz-ojafna" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir <span class="math notranslate nohighlight">\(u,v\in L^2([-\pi,\pi])\)</span> gildir</p>
+<div class="math notranslate nohighlight">
+\[|\langle u,v \rangle| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |u(x)v(x)|dx \leq \| u\|\| v\|.\]</div>
+<p>Athugum nú að föllin <span class="math notranslate nohighlight">\(e^{inx}\)</span> og <span class="math notranslate nohighlight">\(e^{imx}\)</span> eru hornrétt ef <span class="math notranslate nohighlight">\(n\neq m\)</span> því þá gildir</p>
+<div class="math notranslate nohighlight">
+\[\langle e^{inx},e^{imx}\rangle = \frac{1}{2\pi}\int_{-\pi}^\pi e^{(n-m)ix} dx =  \left[\frac{e^{(n-m)ix}}{i(n-m)}\right]_{-\pi}^\pi = 0.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(n=m\)</span> gildir hins vegar að <span class="math notranslate nohighlight">\(\langle e^{inx},e^{imx}\rangle = 1\)</span>.</p>
+<p>Ef rita má <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundið fall <span class="math notranslate nohighlight">\(f\)</span> með röð á forminu</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sum_{n=-\infty}^\infty c_n e^{inx}\]</div>
+<p>og ef víxla má á heildi og óendanlegri summu í eftirfarandi reikningum þá fæst</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2\pi}\int_{-\pi}^\pi f(x) e^{-imx} dx = \langle f,e^{imx} \rangle = \sum_{n=-\infty}^\infty c_n \langle e^{inx},e^{-imx} \rangle = c_m.\]</div>
+<p>Þar með eru stuðlarnir <span class="math notranslate nohighlight">\(c_n\)</span> ótvírætt ákvarðaðir og jafnir Fourier-stuðlum fallsins <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(f\)</span> er jafnt Fourier-röð sinni. Í framhaldinu munum við fjalla betur um þessa reikninga og undir hvaða skilyrðum þeir eru rættlætanlegir.</p>
+</div>
+<div class="section" id="regla-pyagorasar">
+<h3>2.3.3. Regla Pýþagórasar<a class="headerlink" href="#regla-pyagorasar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(u, v\in L^2[-\pi,\pi]\)</span> eru hornrétt, þá er</p>
+<div class="math notranslate nohighlight">
+\[\| u+v\|^2 = \|u\|^2 + \| v\|^2.\]</div>
+<p>Nokkuð einfalt er að sanna eftirfarandi ójöfnu.</p>
+</div>
+<div class="section" id="bessel-ojafnan">
+<h3>2.3.4. Bessel-ójafnan<a class="headerlink" href="#bessel-ojafnan" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\in L^2([-\pi,\pi])\)</span> er <span class="math notranslate nohighlight">\(2\pi\)</span>–lotubundið og hefur
+Fourier-stuðla <span class="math notranslate nohighlight">\(c_n=c_n(f)\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\sum\limits_{n=-\infty}^{+\infty}|c_n|^2 \leq \dfrac
+ 1{2\pi}\int_{-\pi}^\pi |f(x)|^2\, dx.\]</div>
+<p>Losaralegir reikningar leyfa okkur að færa rök fyrir því að sterkari niðurstaða gildir, ójafnan er í raun jafna:</p>
+<p>Ef rita má</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sum_{n=-\infty}^\infty c_n e^{inx}\]</div>
+<p>og að því gefnu að víxla megi á óendanlegum summum og heildum í eftirfarandi reikningum þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin {align*}
+ \dfrac
+1{2\pi}\int_{-\pi}^\pi |f(x)|^2\, dx &amp;= \langle f, f\rangle = \langle \sum_{n=-\infty}^\infty c_n e^{inx}, \sum_{m=-\infty}^\infty c_m e^{imx}\rangle \\
+&amp;= \sum_{n=-\infty}^\infty \sum_{m=-\infty}^\infty c_n \overline{c_m} \langle  e^{inx},  e^{imx}\rangle = \sum_{n=-\infty}^\infty \sum_{m=-\infty}^\infty c_n \overline{c_m} \delta_{nm} = \sum_{n=-\infty}^\infty |c_n|^2.
+ \end{align*}\end{split}\]</div>
+<p>Táknið <span class="math notranslate nohighlight">\(\delta_{nm}\)</span> sem kallast Kronecker-<span class="math notranslate nohighlight">\(\delta\)</span> og uppfyllir <span class="math notranslate nohighlight">\(\delta_{mn} = 1\)</span> ef <span class="math notranslate nohighlight">\(m=n\)</span> en <span class="math notranslate nohighlight">\(\delta_{mn}=0\)</span> annars. Það er talsvert flóknara að réttlæta þessa niðurstöðu með fullnægjandi hætti en það er hægt og við ræðum niðurstöðuna aftur þegar við fjöllum um Parseval-jöfnuna.</p>
+</div>
+<div class="section" id="id5">
+<h3>2.3.5. Skilgreining<a class="headerlink" href="#id5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fall <span class="math notranslate nohighlight">\(f\)</span> á <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> er sagt vera samfellt deildanlegt á köflum ef skipta má <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> í endanlega mörg bil með skiptipunktum <span class="math notranslate nohighlight">\(x_1,x_2,\ldots, x_k\)</span> þannig að fallið er samfellt diffranlegt á opnu bilunum <span class="math notranslate nohighlight">\(]x_j,x_{j+1}[\)</span> og afleiðan hefur markgildi frá hægri í vinstri endapunkti bils og markgildi frá vinstri í hægri endapunkti bils. Mengi falla sem eru samfellt deildanleg á köflum er táknað með <span class="math notranslate nohighlight">\(PC^1(\mathbb{R})\)</span>.</p>
+<p>Við munum skoða föll sem eru <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundin og tilheyra menginu <span class="math notranslate nohighlight">\(PC^1(\mathbb{R})\cap C(\mathbb{R})\)</span>, þ.e. eru samfellt diffranleg á köflum og samfelld. Dæmi um slíkt fall er <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundna fallið sem er skilgreint með formúlunni <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> á <span class="math notranslate nohighlight">\([-\pi,\pi]\)</span>.</p>
+</div>
+<div class="section" id="setning">
+<h3>2.3.6. Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\in PC^1({{\mathbb  R}})\cap C({{\mathbb  R}})\)</span> er
+<span class="math notranslate nohighlight">\(2\pi\)</span>–lotubundið, þá er <span class="math notranslate nohighlight">\(c_n(f{{^{\prime}}})=inc_n(f)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\sum\limits_{n=-\infty}^{+\infty} |c_n(f)|&lt; +\infty,\]</div>
+<p>og þar með er Fourier–röðin
+<span class="math notranslate nohighlight">\(\sum_{-\infty}^{+\infty}c_n(f)e^{inx}\)</span> samleitin í jöfnum mæli á
+<span class="math notranslate nohighlight">\({{\mathbb  R}}\)</span>.</p>
+<p>Meginniðurstaða þessarar greinar er eftirfarandi setning sem sýnir undir hvaða skilyrðum og í hvaða skilningi fall er jafnt Fourier-röð sinni. Rifjum upp ritháttinn</p>
+<div class="math notranslate nohighlight">
+\[f(x+) = \lim_{y \to x^+} f(y) \quad \text{og} \quad f(x-) = \lim_{y \to x^-} f(y)\]</div>
+</div>
+<div class="section" id="setning-andhverfuformula-fouriers">
+<h3>2.3.7. Setning - Andhverfuformúla Fouriers<a class="headerlink" href="#setning-andhverfuformula-fouriers" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\in PC^1({{\mathbb  R}})\)</span> er <span class="math notranslate nohighlight">\(2\pi\)</span>–lotubundið fall með
+Fourier–stuðla <span class="math notranslate nohighlight">\(c_n=c_n(f)\)</span>, Fourier-kósínus–stuðla
+<span class="math notranslate nohighlight">\(a_n=a_n(f)\)</span> og Fourier–sínus–stuðla <span class="math notranslate nohighlight">\(b_n=b_n(f)\)</span>, þá gildir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \tfrac 12\big(f(x+)+f(x-)\big) &amp;=
+ \sum\limits_{n=-\infty}^{+\infty} c_ne^{inx} =
+ \lim\limits_{N\to+\infty}\sum\limits_{n=-N}^{N} c_ne^{inx}\\
+ &amp;=\tfrac 12 a_0 + \sum\limits_{n=1}^\infty \big(a_n \cos nx + b_n\sin
+ nx\big).\end{aligned}\end{split}\]</div>
+<p>Í punktum <span class="math notranslate nohighlight">\(x\)</span> þar sem <span class="math notranslate nohighlight">\(f\)</span> er samfellt gildir
+<span class="math notranslate nohighlight">\(f(x)=\tfrac 12\big(f(x+)+f(x-)\big)\)</span> og þar með er</p>
+<div class="math notranslate nohighlight">
+\[f(x)=
+ \sum\limits_{n=-\infty}^{+\infty} c_ne^{inx}
+ =\tfrac 12 a_0 + \sum\limits_{n=1}^\infty \big(a_n \cos nx + b_n\sin
+ nx\big).\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f\in PC^1({{\mathbb  R}})\cap C({{\mathbb  R}})\)</span>, þá eru
+raðirnar samleitnar í jöfnum mæli á <span class="math notranslate nohighlight">\({{\mathbb  R}}\)</span>.</p>
+<p>Þegar <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundið fall <span class="math notranslate nohighlight">\(f\in L^2([-\pi,\pi])\)</span> er ósamfellt gildir almennt ekki að það sé jafnt Fourier-röð sinni í ósamfelldnipunktunum. Við getum samt spurt okkur hvort hægt sé að tala um að fallið sé jafnt Fourier-röð sinni í einhverjum öðrum skilningi. Eftirfarandi setning segir okkur að hlutsumman</p>
+<div class="math notranslate nohighlight">
+\[s_N = \sum_{n=-N}^{N}
+c_n(f) e^{in x}\]</div>
+<p>stefnir á fallið <span class="math notranslate nohighlight">\(f\)</span> í staðlinum <span class="math notranslate nohighlight">\(\|\cdot\|\)</span> á <span class="math notranslate nohighlight">\(L^2([-\pi,\pi])\)</span>.</p>
+</div>
+<div class="section" id="setning-parseval-jafnan">
+<h3>2.3.8. Setning - Parseval-jafnan<a class="headerlink" href="#setning-parseval-jafnan" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\in L^2[-\pi,\pi]\)</span> er <span class="math notranslate nohighlight">\(2\pi\)</span>–lotubundið, þá gildir</p>
+<div class="math notranslate nohighlight">
+\[\|f-s_N\|^2=\dfrac 1{2\pi}\int_{-\pi}^{\pi} |f(x)-\sum_{n=-N}^{N}
+ c_n(f) e^{in x}|^2\, dx \to 0, \qquad N\to +\infty\]</div>
+<p>og af þessu leiðir jafna Parseval</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=-\infty}^{+\infty} |c_n(f)|^2 = \dfrac 1{2\pi}\int_{-\pi}^{\pi}
+ |f(x)|^2 \, dx,\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Mismunurinn <span class="math notranslate nohighlight">\(\|f-\sum_{n=-N}^{N}   c^\ast_n e^{in x}\|^2\)</span> nefnist ferskekkja nálgunar <span class="math notranslate nohighlight">\(f\)</span> með <span class="math notranslate nohighlight">\(\sum_{n=-N}^{N} c^\ast_n e^{in x}\)</span>. Hægt er að sýna að lágmarks ferskekkja fæst með því að velja stuðlana <span class="math notranslate nohighlight">\(c^\ast_n = c_n(f)\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="urlausn-a-hlutafleiujofnum">
+<h2>2.4. Úrlausn á hlutafleiðujöfnum<a class="headerlink" href="#urlausn-a-hlutafleiujofnum" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Í þessari grein munum við líta á dæmi þar sem hagnýta má Fourier-raðir við lausn jaðargildisverkefna. Byrjum á tveimur mikilvægum skilgreiningum.</p>
+<p>Þegar fengist er við ákveðnar tegundir jaðargildisverkefna getur verið gagnlegt að skilgreina lotubundna framlengingu af falli á bili sem annað hvort er oddstæð eða jafnstæð. Með þeim hætti má skilgreina raðir sem uppfylla sjálfkrafa jaðarskilyrðin sem gefin eru.</p>
+<div class="section" id="jafnstae-framlenging-og-kosinus-ro">
+<h3>2.4.1. Jafnstæð framlenging og kósínus-röð<a class="headerlink" href="#jafnstae-framlenging-og-kosinus-ro" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(L&gt;0\)</span> og <span class="math notranslate nohighlight">\(f: [0,L]\to \mathbb{C}\)</span> er fall á endanlegu bili skilgreinum við jafnstæða <span class="math notranslate nohighlight">\(2L\)</span>-lotubundna framlengingu á <span class="math notranslate nohighlight">\(f\)</span> með því að setja</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_J(x)=\begin{cases} f(x), &amp; x\in [0,L],\\  f(-x), &amp; x\in
+  [-L,0],\end{cases}\end{split}\]</div>
+<p>og framlengja <span class="math notranslate nohighlight">\(f_J\)</span> í <span class="math notranslate nohighlight">\(2L\)</span>-lotubundið fall.</p>
+<a class="reference internal image-reference" href="_images/jafnstaett.png"><img alt="_images/jafnstaett.png" class="align-center" src="_images/jafnstaett.png" style="width: 100%;" /></a>
+<p><em>Jafnstæð framlenging falls</em> <span class="math notranslate nohighlight">\(f:[0,L]\to \mathbb{C}\)</span> <em>í</em> <span class="math notranslate nohighlight">\(2L\)</span> <em>-lotubundið fall</em> <span class="math notranslate nohighlight">\(f_J\)</span>.</p>
+<p>Fourier-stuðlar <span class="math notranslate nohighlight">\(f_J\)</span> eru gefnir með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ a_n(f_J)&amp;=\dfrac 1L \int_{-L}^L f_J(x)\cos \dfrac {n\pi}L
+ x \, dx\\
+ &amp;=\dfrac 2L \int_{0}^L f_J(x)\cos \dfrac {n\pi}L
+ x \, dx\\
+ &amp;=\dfrac 2L \int_{0}^L f(x)\cos\dfrac {n\pi}L
+ x \, dx, \qquad n=0,1,2,\dots,\\
+ b_n(f_J)&amp;=0 \qquad \qquad \qquad\qquad n=1,2,3,\dots.\end{aligned}\end{split}\]</div>
+<p>Stuðlarnir <span class="math notranslate nohighlight">\(a_n\)</span> nefnast <em>Fourier–kósínus–stuðlar</em> fallsins <span class="math notranslate nohighlight">\(f\)</span> og röðin</p>
+<div class="math notranslate nohighlight">
+\[\tfrac 12 a_0 + \sum_{n=1}^\infty a_n \cos  \dfrac {n\pi} L x\]</div>
+<p>kallast <em>Fourier–kósínus–röð</em> fallsins <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+<div class="section" id="oddstae-framlenging-og-sinus-ro">
+<h3>2.4.2. Oddstæð framlenging og sínus-röð<a class="headerlink" href="#oddstae-framlenging-og-sinus-ro" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(L&gt;0\)</span> og <span class="math notranslate nohighlight">\(f: [0,L]\to \mathbb{C}\)</span> er fall á endanlegu bili skilgreinum við oddstæða <span class="math notranslate nohighlight">\(2L\)</span>-lotubundna framlengingu á <span class="math notranslate nohighlight">\(f\)</span> með því að setja</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_O(x)=\begin{cases} f(x), &amp; x\in [0,L],\\  -f(-x), &amp; x\in
+  [-L,0],\end{cases}\end{split}\]</div>
+<p>og framlengja <span class="math notranslate nohighlight">\(f_O\)</span> í <span class="math notranslate nohighlight">\(2L\)</span>-lotubundið fall.</p>
+<a class="reference internal image-reference" href="_images/oddstaett.png"><img alt="_images/oddstaett.png" class="align-center" src="_images/oddstaett.png" style="width: 100%;" /></a>
+<p><em>Oddstæð framlenging falls</em> <span class="math notranslate nohighlight">\(f:[0,L]\to \mathbb{C}\)</span> <em>í</em> <span class="math notranslate nohighlight">\(2L\)</span> <em>-lotubundið fall</em> <span class="math notranslate nohighlight">\(f_O\)</span>.</p>
+<p>Fourier-stuðlar <span class="math notranslate nohighlight">\(f_O\)</span> eru gefnir með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ a_n(f_O)&amp;=0 \qquad\qquad\qquad \qquad n=0,1,2,\dots,\\
+ b_n(f_O)&amp;=\dfrac 1L \int_{-L}^L f_O(x)\sin \dfrac {n\pi}L
+ x  \, dx\\
+ &amp;=\dfrac 2L \int_{0}^L f_O(x)\sin \dfrac {n\pi}L
+ x  \, dx\\
+ &amp;=\dfrac 2L \int_{0}^L f(x)\sin \dfrac {n\pi}L
+ x  \, dx, \qquad n=1,2,\dots.\\\end{aligned}\end{split}\]</div>
+<p>Stuðlarnir <span class="math notranslate nohighlight">\(b_n\)</span> nefnast <em>Fourier–sínus–stuðlar</em> fallsins <span class="math notranslate nohighlight">\(f\)</span> og röðin</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty b_n \sin  \dfrac {n\pi} L x\]</div>
+<p>kallast <em>Fourier–sínus–röð</em> fallsins <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Hægt er að yfirfæra allar reiknireglur og fræðilegar niðurstöður líkt og t.d. andhverfusetninguna beint á Fourier-kósínus og Fourier-sínus raðir. Vísað er í kennslubók fyrir frekari smáatriði.</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>2.4.3. Setning<a class="headerlink" href="#id6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P\)</span> vera margliðu af stigi <span class="math notranslate nohighlight">\(m\)</span> og lítum á jöfnuna</p>
+<div class="math notranslate nohighlight">
+\[P(D)u=(a_mD^m+a_{m-1}D^{m-1}+\cdots+a_1 D +a_0)u=f(x),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(f\in PC^1({{\mathbb  R}})\cap C({{\mathbb  R}})\)</span> er
+<span class="math notranslate nohighlight">\(T\)</span>–lotubundið fall og setjum <span class="math notranslate nohighlight">\(\omega=2\pi/T\)</span>. Ef
+<span class="math notranslate nohighlight">\(c_n(f)=0\)</span> fyrir öll <span class="math notranslate nohighlight">\(n\)</span> þannig að <span class="math notranslate nohighlight">\(P(in\omega)=0\)</span>, þá
+fæst <span class="math notranslate nohighlight">\(T\)</span>–lotubundin lausn af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u(x)=\sum_{\substack{n=-\infty\\ P(in\omega)\neq 0}}^{+\infty}
+ \dfrac{c_n(f)} {P(in\omega)} e^{in\omega x}, \qquad x\in {{\mathbb  R}}.\end{split}\]</div>
+<p>Eftirfarandi dæmi má finna í kennslubók og þar eru reikningar framkvæmdir í smáatriðum.</p>
+</div>
+<div class="section" id="daemi">
+<h3>2.4.4. Dæmi<a class="headerlink" href="#daemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Notum Fourier-raðir til að leysa jaðargildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[u{{^{\prime\prime}}}+{\omega}^2 u=f(x), \qquad u(0)=u(1)=0.\]</div>
+<p>Það hefur ótvírætt ákvarðaða lausn fyrir sérhvert <span class="math notranslate nohighlight">\(f\)</span> ef og aðeins ef <span class="math notranslate nohighlight">\({\omega}\)</span> er ekki
+heiltölumargfeldi af <span class="math notranslate nohighlight">\({\pi}\)</span>. Prófum að liða <span class="math notranslate nohighlight">\(u\)</span> í Fourier-sínus-röð en þá eru jaðarskilyrðin uppfyllt.</p>
+<p>Lausnin er</p>
+<div class="math notranslate nohighlight">
+\[u(x)=\sum\limits_{n=1}^{\infty} \dfrac{f_n}{{\omega}^2-n^2{\pi}^2}
+ \sin (n{\pi}x)\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(f_n\)</span> eru Fourier-sínus-stuðlar fallsins <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+<div class="section" id="daemi-sveiflandi-strengur">
+<h3>2.4.5. Dæmi - Sveiflandi strengur<a class="headerlink" href="#daemi-sveiflandi-strengur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á einvíðan streng af lengd <span class="math notranslate nohighlight">\(L\)</span> sem festur er í báða enda. Táknum frávik hans frá jafnvægi í punkti <span class="math notranslate nohighlight">\(x\)</span> á tíma <span class="math notranslate nohighlight">\(t\)</span> með <span class="math notranslate nohighlight">\(u(x,t)\)</span>. Fallið <span class="math notranslate nohighlight">\(u(x,t)\)</span> uppfyllir þá bylgjujöfnuna í einni rúmbreytu ásamt jaðarskilyrðunum</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{{\partial}^2u}{{\partial}t^2}-
+ c^2\dfrac{{\partial}^2u}{{\partial}x^2}=0, \qquad u(0,t)=u(L,t)=0.\]</div>
+<p>Gerum einnig ráð fyrir því að upphafsstaðan og hraðinn séu þekkt</p>
+<div class="math notranslate nohighlight">
+\[u(x,0)=\varphi(x), \qquad {\partial}_tu(x,0)={\psi}(x), \qquad x\in
+ ]0,L[.\]</div>
+<p>Þetta verkefni má leysa með því að liða <span class="math notranslate nohighlight">\(u(x,t)\)</span> í Fourier-sínus–röð
+með miðað við breytuna <span class="math notranslate nohighlight">\(x\)</span>. Þannig eru jaðarskilyrðin sjálfkrafa uppfyllt.</p>
+<p>Lausnin verður</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum\limits_{n=1}^{\infty}
+ \bigg(\varphi_n\cos\big(n{\pi}ct/L\big) +
+ \dfrac{{\psi}_nL}{n{\pi}c} \sin\big(n{\pi}ct/L\big)\bigg)
+ \sin(n{\pi}x/L)\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\phi_n\)</span> og <span class="math notranslate nohighlight">\(\psi_n\)</span> eru Fourier-sínus-stuðlar fallanna <span class="math notranslate nohighlight">\(\phi\)</span> og <span class="math notranslate nohighlight">\(\psi\)</span>.</p>
+<p>Lausnina má einnig rita</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum\limits_{n=1}^{\infty}
+ C_n\cos\big(n{\pi}ct/L-{\alpha}_n\big)
+ \sin(n{\pi}x/L)\]</div>
+<p>þar sem</p>
+<div class="math notranslate nohighlight">
+\[C_n=\sqrt{\varphi_n^2+({\psi}_nL/n{\pi}c)^2}\]</div>
+<p>kallast sveifluvídd og <span class="math notranslate nohighlight">\({\alpha}_n\)</span> kallast fasahliðrun og uppfyllir</p>
+<div class="math notranslate nohighlight">
+\[\cos{\alpha}_n= \varphi_n/C_n, \qquad
+ \sin{\alpha}_n= ({\psi}_nL)/(n{\pi}cC_n).\]</div>
+</div>
+<div class="section" id="daemi-varmaleini">
+<h3>2.4.6. Dæmi - Varmaleiðni<a class="headerlink" href="#daemi-varmaleini" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Reiknum út hitastig <span class="math notranslate nohighlight">\(u(x,t)\)</span>, í punkti <span class="math notranslate nohighlight">\(x\)</span> á tíma <span class="math notranslate nohighlight">\(t\)</span>,  í einvíðri stöng af lengd <span class="math notranslate nohighlight">\(L\)</span>, sem er einangruð í báðum endapunktunum. Jaðarskilyrðin eru þá að ekkert varmaflæði er í endapunktum stangarinnar,  sem þýðir að afleiða hitastigsins er núll í jaðarpunktunum 0 og <span class="math notranslate nohighlight">\(L\)</span>. Fallið <span class="math notranslate nohighlight">\(u\)</span> uppfyllir varmaleiðnijöfnuna og við höfum því eftirfarandi jaðargildisverkefni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} \dfrac{{\partial} u}{{\partial}t}-{\kappa}
+ \dfrac{{\partial}^2 u}{{\partial}x^2}=f(x,t), &amp;0&lt;x&lt;L, \quad t&gt;0,\\
+ {\partial}_xu(0,t)={\partial}_xu(L,t)=0, &amp;t&gt;0
+ \end{cases}\end{split}\]</div>
+<p>með upphafsskilyrðinu</p>
+<div class="math notranslate nohighlight">
+\[u(x,0)=\varphi(x), \qquad x\in ]0,L[.\]</div>
+<p>Föllin <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(\phi\)</span> eru ótiltekin.</p>
+<p>Fallið <span class="math notranslate nohighlight">\(u\)</span> er liðað í Fourier-kósínus-röð til þess að jaðarskilyrði séu uppfyllt. Þá má sýna að lausnin er</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum_{n=0}^{\infty}
+ \bigg(\varphi_ne^{-{\kappa}(n{\pi}/L)^2t}+
+ \int_0^te^{-{\kappa}(n{\pi}/L)^2(t-{\tau})}f_n({\tau})\, d{\tau}\bigg)
+ \cos(n{\pi}x/L)\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\phi_n\)</span> og <span class="math notranslate nohighlight">\(f_n\)</span> eru Fourier-kósínus-stuðlar fallanna <span class="math notranslate nohighlight">\(\phi\)</span> og <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli03.html" class="btn btn-neutral float-right" title="3. Eigingildisverkefni" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli01.html" class="btn btn-neutral" title="1. Hlutafleiðujöfnur" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script type="text/javascript" src="_static/custom_sage.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

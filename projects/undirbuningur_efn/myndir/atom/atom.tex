@@ -1,0 +1,54 @@
+\documentclass[tikz,border=20pt]{standalone}
+\usepackage{tikz,graphicx}
+\usetikzlibrary{decorations.markings,calc}
+
+\definecolor{myyellow}{RGB}{254,241,24}
+\definecolor{myorange}{RGB}{234,125,1}
+
+\def\proton(#1,#2){%
+    \fill[shade=ball,ball color=myyellow] ({rnd*#1},{rnd*#2}) circle (10pt) node {\texttt{+}};
+}
+\def\neutron(#1,#2){%
+    \fill[shade=ball,ball color=myorange] ({rnd*#1},{rnd*#2}) circle (10pt);
+}
+\def\electron{%
+    \fill[shade=ball,ball color=gray!30] (0,0) circle (5pt);
+    \node at (0,0) {\texttt{-}};
+}
+\def\orbit(#1,#2,#3){%
+  \draw[
+  color=violet,
+  rotate=#1,
+  postaction=decorate,
+  decoration={markings,pre=moveto,pre length=#3,
+  mark=at position {#2} with {\electron},
+}]
+  (0,0) ellipse (1 and 4);
+}
+\begin{document}
+\foreach \pos in {0,0.08,0.16,...,0.96}{%
+\begin{tikzpicture}%
+%%Nucleons
+\neutron(0.4,0.4)
+\proton(0.4,-0.4)
+\neutron(-0.4,-0.4)
+\neutron(0.4,0.4)
+\proton(-0.4,-0.4)
+\proton(0.4,0.4)
+\proton(-0.4,-0.4)
+\proton(0.4,-0.4)
+\neutron(-0.4,0.4)
+\neutron(-0.4,0.4)
+\neutron(0.4,-0.4)
+\proton(-0.4,0.4)
+%%orbits
+\orbit(0,-\pos,0cm)
+\orbit(195,\pos,0cm)
+\orbit(120,-\pos,0cm)
+\orbit(65,\pos,0cm)
+\orbit(270,\pos,0cm)
+\orbit(330,-\pos,0cm)
+\end{tikzpicture}
+}
+
+\end{document}

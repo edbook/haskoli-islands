@@ -1,0 +1,31 @@
+\documentclass[tikz, border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+\begin{document}
+\begin{tikzpicture}
+  \draw [->] (-0.2,0) -- (8,0)node[anchor=west]{$t$};
+  \draw [->] (0,-0.2) -- (0,10.5)node[anchor=south]{$x$};
+  \foreach \x in {0,0.5,...,3}{
+    \draw (\x*2,-0.5) node{\small\x};
+    \draw (\x*2,-0.1) -- (\x*2,0.1);
+    };
+  \foreach \x in {0,10,...,100}{
+    \draw (-0.5,\x/10) node{\small\x};
+    \draw (-0.1,\x/10) -- (0.1,\x/10);
+    };
+  \draw (7.2727,-0.5) node{\small 3.6363};
+  \draw (7.2727,-0.1) -- (7.2727,0.1);
+  \draw [dashed, red] (0,10) -- (7.2727,10) node [midway, above] {Drægni blettatígurs};
+
+  \draw [red] (0,0)--(7.2727,10) ;
+  \draw [blue] (0,3.5) -- (2,3.5) -- (7.2727, 9.43);
+  \draw [<-, thick] (2,3.5) arc (230:180 :1) node [anchor= south, draw,align=center, fill=white] {\small Antílópa hleypur\\af stað}; %horn
+  \draw [<-, thick] (5,6.875) arc (230:180 :1) node [anchor= south, draw,align=center, fill=white] {\small Blettatígur nær\\antílópu}; %horn
+
+  \draw [dashed] (5,0) -- (5, 6.875);
+  \fill (5,6.875) circle (3pt);
+
+\end{tikzpicture}
+
+\end{document}

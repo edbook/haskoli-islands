@@ -1,0 +1,19 @@
+\documentclass[tikz,border=0pt]{standalone}
+
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=2cm]
+
+% nodes
+\node (A) at (0, 0) {};
+\node (B) at (2.5, 0) {};
+
+
+% arrows
+\draw [->] (A) to node [above]{$S$} (B);
+
+\end{tikzpicture}
+
+\end{document}

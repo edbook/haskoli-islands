@@ -1,0 +1,22 @@
+% Meikar ekki sens að nota (ekki tekið tillit til þyngdarhröðun jarðarinnar)
+\documentclass[tikz, border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\begin{document}
+
+\begin{tikzpicture}
+\draw [->] (0,0) -- (0,11.5) node [anchor=south] {$x$ [m]};
+\draw [->] (0,0) -- (11.5,0) node [anchor=west] {$t$ [s]};
+
+\draw plot [domain=0:10] (\x, {9.335*\x*\x/100});
+
+\foreach \x in {0,60,120,180,240,300,360,420,480,540,600,660}{
+\draw (\x/60,-0.5) node{\x};
+\draw (\x/60,-0.2) -- (\x/60,0.2); };
+
+\foreach \x in {0,1,2,3,4,5,6,7,8,9,10,11}{
+\draw (-0.5, \x) node{\x};
+\draw (-0.2, \x) -- (0.2,\x); };
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass[border=20pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\begin{document}
+
+\begin{tikzpicture}
+  \Strichmaxerl[5];
+  \draw (0.1,0) -- (0.1,0.4);
+  \draw (0, 0.1) -- (0, 0.5);
+  \draw (0.2, 0.15) -- (0.2, 0.55);
+  \filldraw [blue](0.1,0.6) circle [radius=2 pt];
+  \draw [->, thick] (0.1,0.6) -- (0.1,1.5) node [midway, right] {$v_i$};
+  \draw [magenta, thick, ->] (-1,1.8) -- (-1,0.9) node [midway, left] {$g$};
+  \draw[dashed, gray] (-1.5,0) -- (1.2,0);
+  \draw (-1.5,-0.5) rectangle (1.2,5);
+\end{tikzpicture}
+\begin{tikzpicture}
+  \Strichmaxerl[5];
+  \filldraw [blue](0.1,4.6) circle [radius=2 pt]node [right] {$v=0$};
+  \draw [magenta, thick, ->] (-1,1.8) -- (-1,0.9) node [midway, left] {$g$};
+  \draw (-1.5,-0.5) rectangle (1.2,5);
+  \draw[dashed, gray] (-1.5,0) -- (1.2,0);
+\end{tikzpicture}
+\begin{tikzpicture}
+  \Strichmaxerl[5];
+  \draw [->, thick] (0.1,0.6) -- (0.1,-0.3) node [midway, right] {$v_f$};
+  \draw [magenta, thick, ->] (-1,1.8) -- (-1,0.9) node [midway, left] {$g$};
+  \filldraw [blue](0.1,0.6) circle [radius=2 pt];
+  \draw (0.1,0.8) -- (0.1,1.2);
+  \draw (0, 0.7) -- (0, 1.1);
+  \draw (0.2, 0.75) -- (0.2, 1.15);
+  \draw (-1.5,-0.5) rectangle (1.2,5);
+  \draw[dashed,gray] (-1.5,0) -- (1.2,0);
+\end{tikzpicture}
+
+\end{document}

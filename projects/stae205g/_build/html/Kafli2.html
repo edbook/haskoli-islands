@@ -1,0 +1,1876 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Hlutafleiður &mdash; Stærðfræðigreining II (STÆ205G) 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining II (STÆ205G) 2019" href="index.html"/>
+        <link rel="next" title="3. Útgildisverkefni" href="Kafli3.html"/>
+        <link rel="prev" title="1. Ferlar" href="Kafli1.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining II (STÆ205G)
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli1.html">1. Ferlar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#inngangur">1.1. Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#stikaferlar">1.2. Stikaferlar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#skilgreining">1.2.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#rithattur">1.2.2. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#ferlar-og-stikanir-a-ferlum">1.3. Ferlar og stikanir á ferlum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-1">1.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#daemi-elisfraeileg-tulkun">1.3.2. Dæmi - Eðlisfræðileg túlkun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#daemi">1.3.3. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#diffrun-stikaferla">1.4. Diffrun stikaferla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-2">1.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#setning">1.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-3">1.4.3. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#id4">1.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#id5">1.4.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-4">1.4.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-5">1.4.7. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#lengd-stikaferils">1.5. Lengd stikaferils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#regla">1.5.1. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#skilgreining-og-umraea">1.5.2. Skilgreining og umræða</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#polhnit">1.6. Pólhnit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-9">1.6.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#id9">1.6.2. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#polhnitagraf">1.7. Pólhnitagraf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-10">1.7.1. Skilgreining og umræða</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#snertill-vi-polhnitagraf">1.8. Snertill við pólhnitagraf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#id11">1.8.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#flatarmal">1.9. Flatarmál</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#id12">1.9.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#bogalengd">1.10. Bogalengd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#id13">1.10.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#einingarsnertivigur">1.11. Einingarsnertivigur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-14">1.11.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#krappi">1.12. Krappi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-15">1.12.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#meginverill">1.13. Meginþverill</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-16">1.13.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#umraea">1.13.2. Umræða</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#hjufurplan">1.14. Hjúfurplan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-17">1.14.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#tviverill">1.15. Tvíþverill</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#index-18">1.15.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#vindingur">1.16. Vindingur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#setning-og-skilgreining">1.16.1. Setning og skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli1.html#frenet-serret-jofnurnar">1.17. Frenet-Serret jöfnurnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#jofnur">1.17.1. Jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli1.html#id19">1.17.2. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Hlutafleiður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graf-falls">2.1. Graf falls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">2.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#jafnhaearlinur">2.2. Jafnhæðarlínur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-1">2.2.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fjarlaeg-milli-punkta">2.3. Fjarlægð milli punkta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">2.3.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#opnar-kulur">2.4. Opnar kúlur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-3">2.4.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#opin-mengi">2.5. Opin mengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-4">2.5.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#jaarpunktur">2.6. Jaðarpunktur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-5">2.6.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skilgreiningarmengi">2.7. Skilgreiningarmengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-6">2.7.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#markgildi">2.8. Markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.8.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rithattur">2.8.2. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-skilgreining-2-8-1-sett-fram-fyrir-foll-af-tveimur-breytum">2.8.3. Skilgreining (Skilgreining 2.8.1 sett fram fyrir föll af tveimur breytum.)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reglur-um-markgildi">2.9. Reglur um markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning">2.9.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samfelldni">2.10. Samfelldni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2.10.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">2.11. Hlutafleiður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-9">2.11.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">2.11.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">2.11.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">2.11.4. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#snertiplan">2.12. Snertiplan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hlutafleiur-af-haerra-stigi">2.13. Hlutafleiður af hærra stigi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-10">2.13.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">2.13.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hugmynd-a-skilgreiningu">2.13.3. Hugmynd að skilgreiningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-almenn-utgafa-af-setningu-2-13-2">2.13.4. Setning (Almenn útgáfa af Setningu 2.13.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi">2.13.5. Dæmi:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kejuregla">2.14. Keðjuregla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-kejureglan-i-einni-breytistaer">2.14.1. Setning (Keðjureglan í einni breytistærð.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">2.14.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">2.14.3. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">2.14.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">2.14.5. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">2.14.6. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">2.14.7. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">2.14.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">2.14.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">2.14.10. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diffranleiki-i-einni-breytistaer">2.15. Diffranleiki í einni breytistærð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id25">2.15.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diffranleiki-i-einni-breytistaer-onnur-lysing">2.16. Diffranleiki í einni breytistærð - önnur lýsing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id26">2.16.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diffranleiki">2.17. Diffranleiki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-14">2.17.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#index-15">2.18. Snertiplan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">2.19. Diffranleiki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-mealgildissetningin">2.19.1. Setning (Meðalgildissetningin)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">2.19.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">2.19.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">2.19.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">2.19.5. Keðjuregla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diffur">2.20. Diffur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-17">2.20.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#varpanir-mbox-bf-r-n-rightarrow-mbox-bf-r-m">2.21. Varpanir <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#taknmal">2.21.1. Táknmál</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#jacobi-fylki">2.22. Jacobi-fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-18">2.22.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diffranleiki-varpana-mbox-bf-r-n-rightarrow-mbox-bf-r-m">2.23. Diffranleiki varpana <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id36">2.23.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">2.24. <cite>Keðjuregla</cite></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id38">2.24.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#stigull">2.25. Stigull</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id39">2.25.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">2.25.2. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id41">2.26. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id42">2.26.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#snertilina-vi-jafnhaearferil">2.27. Snertilína við jafnhæðarferil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id43">2.27.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#stefnuafleia">2.28. Stefnuafleiða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id44">2.28.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">2.28.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id46">2.28.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">2.28.4. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#stigull-aftur">2.29. Stigull (aftur)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id48">2.29.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#snertiplan-vi-jafnhaearflot">2.30. Snertiplan við jafnhæðarflöt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id49">2.30.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#folgin-foll-og-taylor-nalganir">2.31. Fólgin föll og Taylor-nálganir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun">2.31.1. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id50">2.31.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-25">2.31.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-upprifjun-a-reglu-cramers">2.31.4. Setning (Upprifjun á reglu Cramers.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-27">2.31.5. Setning (<a href="http://www.stae.is/os/leita/implicit_function_theorem" class="tooltip" target="_blank">Setningin um fólgin föll<span>en: <i>implicit function theorem</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-setningin-um-stabundna-andhverfu">2.31.6. Setning (Setningin um staðbundna andhverfu)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun-taylor-regla-i-einni-breytistaer">2.31.7. Upprifjun (Taylor-regla í einni breytistærð.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-30">2.31.8. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id54">2.31.9. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-og-athugasemd">2.31.10. Skilgreining og athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-31">2.31.11. Upprifjun (<a href="http://www.stae.is/os/leita/binomial_theorem" class="tooltip" target="_blank">Tvíliðuregla<span>en: <i>binomial theorem</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#regla">2.31.12. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id56">2.31.13. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">2.31.14. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli3.html">3. Útgildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#utgildi">3.1. Útgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#skilgreining">3.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#stabundi-utgildi">3.2. Staðbundið útgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#upprifjun">3.2.1. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#setning">3.2.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#daemi">3.2.3. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#tilvist-utgilda">3.3. Tilvist útgilda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id1">3.3.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#soulpunktur">3.4. Söðulpunktur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id2">3.4.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#id3">3.5. Staðbundið útgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id4">3.5.1. Upprifjun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#hesse-fylki">3.6. Hesse-fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id5">3.6.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#ferningsform-sja-kafla-10-7-i-adams">3.7. Ferningsform (sjá kafla 10.7 í Adams)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id6">3.7.1. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id7">3.7.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id8">3.7.3. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#id9">3.8. Staðbundið útgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id10">3.8.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#fylgisetning">3.8.2. Fylgisetning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#ferningsform">3.9. Ferningsform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#regla">3.9.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#utgildi-falla-ar-sem-breytur-uppfylla-skorujofnur">3.10. Útgildi falla þar sem breytur uppfylla skorðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#sertaekar-aferir">3.10.1. Sértækar aðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id11">3.10.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id12">3.10.3. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli3.html#lagrange-margfaldarar">3.11. Lagrange-margfaldarar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#reikniafer">3.11.1. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id13">3.11.2. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli3.html#id14">3.11.3. Reikniaðferð</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli4.html">4. Margföld heildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#skiptingar">4.1. Skiptingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#skilgreining">4.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#riemann-summa">4.2. Riemann-summa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id1">4.2.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#tvofalt-heildi-yfir-retthyrning">4.3. Tvöfalt heildi yfir rétthyrning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id2">4.3.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#tvofalt-heildi-yfir-takmarka-svaei">4.4. Tvöfalt heildi yfir takmarkað svæði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id3">4.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#setning">4.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id4">4.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id5">4.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#setning-fubinis">4.4.5. Setning Fubinis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#x-einfold-og-y-einfold-svaei">4.5. <span class="math notranslate nohighlight">\(x\)</span>-einföld og <span class="math notranslate nohighlight">\(y\)</span>-einföld svæði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#index-4">4.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#regla">4.5.2. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#heildi-yfir-x-einfold-og-y-einfold-svaei">4.6. Heildi yfir <span class="math notranslate nohighlight">\(x\)</span>-einföld og <span class="math notranslate nohighlight">\(y\)</span>-einföld svæði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id7">4.6.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#oeiginleg-heildi">4.7. Óeiginleg heildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#umraea">4.7.1. Umræða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id8">4.7.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#index-6">4.7.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#setning-fyrir-tvofold-heildi">4.7.4. Setning (<a href="http://www.stae.is/os/leita/mean_value_theorem" class="tooltip" target="_blank">Meðalgildissetning<span>en: <i>mean value theorem</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fyrir tvöföld heildi)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#breytuskipti">4.8. Breytuskipti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#upprifjun">4.8.1. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#index-9">4.8.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id11">4.8.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#index-10">4.8.4. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id13">4.8.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id14">4.8.6. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#setning-almenn-breytuskiptaregla-fyrir-tvofold-heildi">4.8.7. Setning (Almenn breytuskiptaregla fyrir tvöföld heildi)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#refold-heildi">4.9. Þreföld heildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id15">4.9.1. Umræða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id16">4.9.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id17">4.9.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#setning-almenn-breytuskiptaformula-fyrir-refold-heildi">4.9.4. Setning (Almenn breytuskiptaformúla fyrir þreföld heildi.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#index-12">4.9.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#setning-breytuskipti-yfir-i-sivalningshnit">4.9.6. Setning (Breytuskipti yfir í sívalningshnit.)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#kuluhnit">4.10. Kúluhnit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id19">4.10.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id20">4.10.2. Umræða</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#breytuskipti-i-kuluhnit">4.11. Breytuskipti í kúluhnit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id21">4.11.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#massamija">4.12. Massamiðja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id22">4.12.1. Regla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id23">4.12.2. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#hverfitrega">4.13. Hverfitregða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id24">4.13.1. Regla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli4.html#yfirborsflatarmal">4.14. Yfirborðsflatarmál</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli4.html#id25">4.14.1. Regla</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli5.html">5. Vigursvið</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#id1">5.1. Vigursvið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#skilgreining">5.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#straumlina">5.2. Straumlína</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id2">5.2.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#stigulsvi">5.3. Stigulsvið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id3">5.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#setning">5.3.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id4">5.3.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#reikniafer">5.3.4. Reikniaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#heildi-falls-yfir-feril">5.4. Heildi falls yfir feril</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id5">5.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id6">5.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id7">5.4.3. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#heildi-vigursvis-eftir-ferli">5.5. Heildi vigursviðs eftir ferli</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id8">5.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id9">5.5.2. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#ferilheildi-og-stigulsvi">5.6. Ferilheildi og stigulsvið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id10">5.6.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#fylgisetning">5.6.2. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id11">5.6.3. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id12">5.6.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id13">5.6.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#upprifjun">5.6.6. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id14">5.6.7. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id15">5.6.8. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#fletir">5.7. Fletir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#oformleg-skilgreining">5.7.1. Óformleg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#lysing">5.7.2. Lýsing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#stikafletir">5.8. Stikafletir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id16">5.8.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#snertiplon">5.9. Snertiplön</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id17">5.9.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#index-6">5.9.2. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#flatarheildi">5.10. Flatarheildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#verkefni">5.10.1. Verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#flatarmal-flata">5.11. Flatarmál flata</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#formula">5.11.1. Formúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id19">5.11.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#formulur">5.11.3. Formúlur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id20">5.11.4. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#einingarvervigrasvi">5.12. Einingarþvervigrasvið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id21">5.12.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#attanlegir-fletir">5.13. Áttanlegir fletir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id22">5.13.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#umraea">5.13.2. Umræða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#id23">5.13.3. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli5.html#heildi-vigursvis-yfir-flot-flaei">5.14. Heildi vigursviðs yfir flöt - Flæði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#skilgreining-og-rithattur">5.14.1. Skilgreining og ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#samantekt">5.14.2. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli5.html#tulkun">5.14.3. Túlkun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli6.html">6. Diffur- og heildareikningur vigursviða</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli6.html#grad-div-og-curl">6.1. grad, div og curl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#skilgreining">6.1.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#index-1">6.1.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id2">6.1.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#reiknireglur">6.1.4. Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#index-2">6.1.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#setning">6.1.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#index-3">6.1.7. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id5">6.1.8. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id6">6.1.9. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli6.html#sundurleitnisetningin-i">6.2. Sundurleitnisetningin I</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#setning-sundurleitnisetning-i">6.2.1. Setning (Sundurleitnisetning I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#setning-setning-stokes-i">6.2.2. Setning (Setning Stokes I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#tulkun">6.2.3. Túlkun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id7">6.2.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#setning-green">6.2.5. Setning Green</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#fylgisetning">6.2.6. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#sundurleitnisetningin-i-tveimur-viddum">6.2.7. Sundurleitnisetningin í tveimur víddum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli6.html#sundurleitnisetningin-ii">6.3. Sundurleitnisetningin II</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#index-7">6.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#setning-sundurleitnisetningin-setning-gauss">6.3.2. Setning (Sundurleitnisetningin, Setning Gauss)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id9">6.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id10">6.3.4. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli6.html#setning-stokes">6.4. Setning Stokes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id11">6.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#setning-setning-stokes">6.4.2. Setning (Setning Stokes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id12">6.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id13">6.4.4. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli6.html#hagnytingar-i-elisfraei">6.5. Hagnýtingar í eðlisfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#vokvaflaei">6.5.1. Vökvaflæði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#id14">6.5.2. Vökvaflæði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#rafsvi-logmal-coulombs">6.5.3. Rafsvið - Lögmál Coulombs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#rafsvi-logmal-gauss-fyrsta-jafna-maxwells">6.5.4. Rafsvið - Lögmál Gauss (fyrsta jafna Maxwells)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#rafsvi">6.5.5. Rafsvið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#segulsvi-logmal-biot-savart">6.5.6. Segulsvið - Lögmál Biot-Savart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#segulsvi-logmal-ampere">6.5.7. Segulsvið - Lögmál Ampére</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli6.html#samantekt">6.5.8. Samantekt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ordaskra.html">Orðaskrá</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining II (STÆ205G)</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li><span class="section-number">2. </span>Hlutafleiður</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hlutafleiur">
+<h1><span class="section-number">2. </span>Hlutafleiður<a class="headerlink" href="#hlutafleiur" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p><em>“If you need help bark like a dog.“ - Gendry. „That’s stupid. If I need help I’ll shout help.“ - Arya”</em></p>
+<p>- George R.R. Martin, A Clash of Kings</p>
+<div class="section" id="graf-falls">
+<h2><span class="section-number">2.1. </span>Graf falls<a class="headerlink" href="#graf-falls" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining">
+<span id="index-0"></span><h3><span class="section-number">2.1.1. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:{\mathbb  R}^2\rightarrow {\mathbb  R}\)</span> vera fall. <em>Graf</em>
+fallsins er skilgreint sem mengið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \{(x,y,f(x,y))\mid (x,y)\in{\mathbb  R}^2\}\subseteq {\mathbb  R}^3.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f:{\mathbb  R}^3\rightarrow {\mathbb  R}\)</span> er fall, þá er
+<em>graf</em> fallsins skilgreint sem mengið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \{(x,y,z,f(x,y,z))\mid (x,y,z)\in{\mathbb  R}^3\}\subseteq {\mathbb  R}^4.\]</div>
+<a class="reference internal image-reference" href="_images/surface.png"><img alt="_images/surface.png" class="align-center" src="_images/surface.png" style="width: 60%;" /></a>
+<p><em>Graf fallsins</em> <span class="math notranslate nohighlight">\(f(x,y) = \sqrt{1-x^2-y^2}\)</span>, <span class="math notranslate nohighlight">\(-0.5\leq x,y\leq 0.5\)</span>.</p>
+</div>
+</div>
+<div class="section" id="jafnhaearlinur">
+<h2><span class="section-number">2.2. </span>Jafnhæðarlínur<a class="headerlink" href="#jafnhaearlinur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-1">
+<span id="id1"></span><h3><span class="section-number">2.2.1. </span>Skilgreining<a class="headerlink" href="#index-1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:{\mathbb  R}^2\rightarrow {\mathbb  R}\)</span> vera fall. Ef
+<span class="math notranslate nohighlight">\(c\)</span> er fasti þá er mengið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \{(x,y)\mid f(x,y)=c\}\subseteq {\mathbb  R}^2\]</div>
+<p>kallað <a href="http://www.stae.is/os/leita/contour_line" class="tooltip" target="_blank">jafnhæðarlína<span>en: <i>contour line</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> eða <a href="http://www.stae.is/os/leita/contour_line" class="tooltip" target="_blank">jafnhæðarferill<span>en: <i>contour line</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fallsins
+<span class="math notranslate nohighlight">\(f\)</span> fyrir fastann <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>Látum <span class="math notranslate nohighlight">\(f:{\mathbb  R}^3\rightarrow {\mathbb  R}\)</span> vera fall. Ef
+<span class="math notranslate nohighlight">\(c\)</span> er fasti þá er mengið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \{(x,y,z)\mid f(x,y,z)=c\}\]</div>
+<p>kallað <a href="http://www.stae.is/os/leita/contour_surface" class="tooltip" target="_blank">jafnhæðarflötur<span>en: <i>contour surface</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fallsins <span class="math notranslate nohighlight">\(f\)</span> fyrir
+fastann <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<a class="reference internal image-reference" href="_images/contour.png"><img alt="_images/contour.png" class="align-center" src="_images/contour.png" style="width: 60%;" /></a>
+<p><em>Nokkrar jafnæðarlínur fallsins</em> <span class="math notranslate nohighlight">\(f(x,y) = \sqrt{1-x^2-y^2}\)</span>, <span class="math notranslate nohighlight">\(-0.5\leq x,y\leq 0.5\)</span>.</p>
+</div>
+</div>
+<div class="section" id="fjarlaeg-milli-punkta">
+<h2><span class="section-number">2.3. </span>Fjarlægð milli punkta<a class="headerlink" href="#fjarlaeg-milli-punkta" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-2">
+<span id="id2"></span><h3><span class="section-number">2.3.1. </span>Skilgreining<a class="headerlink" href="#index-2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><em>Fjarlægðin</em> milli tveggja punkta
+<span class="math notranslate nohighlight">\(\mbox{${\bf x}$}=(x_1,x_2, \ldots,x_n)\)</span> og
+<span class="math notranslate nohighlight">\(\mbox{${\bf y}$}=(y_1,y_2, \ldots,y_n)\)</span> í
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span> er skilgreind sem talan</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle
+|\mbox{${\bf x}$}-\mbox{${\bf y}$}|=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\cdots+(x_n-y_n)^2}.\]</div>
+</div>
+</div>
+<div class="section" id="opnar-kulur">
+<h2><span class="section-number">2.4. </span>Opnar kúlur<a class="headerlink" href="#opnar-kulur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-3">
+<span id="id3"></span><h3><span class="section-number">2.4.1. </span>Skilgreining<a class="headerlink" href="#index-3" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P=(p_1,p_2,\ldots,p_n)\)</span> vera punkt í
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span>. Skilgreinum <em>opnu kúluna</em> með miðju í
+<span class="math notranslate nohighlight">\(P\)</span> og geisla <span class="math notranslate nohighlight">\(r\)</span> sem mengið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle B_r(P)=\{Q\in\mbox{${\bf R}^n$}\mid |Q-P|&lt;r\}.\]</div>
+<p>Í <span class="math notranslate nohighlight">\({\mathbb  R}^2\)</span> er eðlilegra að tala um <em>opna skífu</em> eða <em>opinn
+disk</em> í stað opinnar kúlu og í <span class="math notranslate nohighlight">\({\mathbb  R}\)</span> þá er talað um opin
+bil.</p>
+</div>
+</div>
+<div class="section" id="opin-mengi">
+<h2><span class="section-number">2.5. </span>Opin mengi<a class="headerlink" href="#opin-mengi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-4">
+<span id="id4"></span><h3><span class="section-number">2.5.1. </span>Skilgreining<a class="headerlink" href="#index-4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(U\)</span> vera hlutmengi í <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span>.</p>
+<p>Sagt er að <span class="math notranslate nohighlight">\(U\)</span> sé <a href="http://www.stae.is/os/leita/open_set" class="tooltip" target="_blank">opið mengi<span>en: <i>open set</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> ef um sérhvern punkt <span class="math notranslate nohighlight">\(P\)</span> í
+<span class="math notranslate nohighlight">\(U\)</span> gildir að til er tala <span class="math notranslate nohighlight">\(r&gt;0\)</span> þannig að
+<span class="math notranslate nohighlight">\(B_r(P)\subseteq U\)</span>.</p>
+<p>Mengið <span class="math notranslate nohighlight">\(U\)</span> er sagt <a href="http://www.stae.is/os/leita/closed_set" class="tooltip" target="_blank">lokað<span>en: <i>closed set</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> ef <a href="http://www.stae.is/os/leita/complement" class="tooltip" target="_blank">fyllimengið<span>en: <i>complement</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> er opið. (<em>Fyllimengi</em>
+<span class="math notranslate nohighlight">\(U\)</span> er skilgreint sem mengið
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\setminus U=\{Q\in \mbox{${\bf R}^n$}\mid Q\mbox{$\;\not\in\;$}U\}\)</span>.)</p>
+</div>
+</div>
+<div class="section" id="jaarpunktur">
+<h2><span class="section-number">2.6. </span>Jaðarpunktur<a class="headerlink" href="#jaarpunktur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-5">
+<span id="id5"></span><h3><span class="section-number">2.6.1. </span>Skilgreining<a class="headerlink" href="#index-5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(U\)</span> vera mengi í <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span>. Punktur
+<span class="math notranslate nohighlight">\(P\)</span> í <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span> er sagður <a href="http://www.stae.is/os/leita/boundary_point" class="tooltip" target="_blank">jaðarpunktur<span>en: <i>boundary point</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>
+<span class="math notranslate nohighlight">\(U\)</span> ef sérhver opin kúla <span class="math notranslate nohighlight">\(B_r(P)\)</span> með <span class="math notranslate nohighlight">\(r&gt;0\)</span> inniheldur
+bæði punkt úr <span class="math notranslate nohighlight">\(U\)</span> og punkt úr
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\setminus U\)</span>. (Athugið að bæði er mögulegt að
+jaðarpunktur <span class="math notranslate nohighlight">\(U\)</span> sé í <span class="math notranslate nohighlight">\(U\)</span> og að hann sé ekki í <span class="math notranslate nohighlight">\(U\)</span>.)</p>
+</div>
+</div>
+<div class="section" id="skilgreiningarmengi">
+<h2><span class="section-number">2.7. </span>Skilgreiningarmengi<a class="headerlink" href="#skilgreiningarmengi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-6">
+<span id="id6"></span><h3><span class="section-number">2.7.1. </span>Skilgreining<a class="headerlink" href="#index-6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir fall <span class="math notranslate nohighlight">\(f(x_1,x_2,\ldots,x_n)\)</span> þá táknar <span class="math notranslate nohighlight">\({\cal D}(f)\)</span>
+<a href="http://www.stae.is/os/leita/argument_domain" class="tooltip" target="_blank">skilgreiningarmengi<span>en: <i>argument domain</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fallsins <span class="math notranslate nohighlight">\(f\)</span>. Ef fallið er gefið með formúlu
+og ekkert sagt um <span class="math notranslate nohighlight">\({\cal D}(f)\)</span> þá lítum við svo á að
+<span class="math notranslate nohighlight">\({\cal D}(f)\)</span> sé mengi allra punkta í <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span>
+þannig að formúlan gefi vel skilgreinda tölu.</p>
+</div>
+</div>
+<div class="section" id="markgildi">
+<span id="index-7"></span><h2><span class="section-number">2.8. </span>Markgildi<a class="headerlink" href="#markgildi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id7">
+<h3><span class="section-number">2.8.1. </span>Skilgreining<a class="headerlink" href="#id7" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x_1,x_2,\ldots,x_n)\)</span> vera fall af <span class="math notranslate nohighlight">\(n\)</span> breytistærðum
+með skilgreiningarmengi <span class="math notranslate nohighlight">\({\cal D}(f)\subseteq \mbox{${\bf R}^n$}\)</span>.
+Látum <span class="math notranslate nohighlight">\(P=(p_1,p_2,\ldots,p_n)\)</span> vera punkt í
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span> þannig að sérhver opin kúla um <span class="math notranslate nohighlight">\(P\)</span>
+inniheldur meira en einn punkt úr <span class="math notranslate nohighlight">\({\cal D}(f)\)</span>.</p>
+<p>Segjum að <span class="math notranslate nohighlight">\(f(x_1,x_2,\ldots,x_n)\)</span> <a href="http://www.stae.is/os/leita/converge_to" class="tooltip" target="_blank">stefni á<span>en: <i>converge to</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> tölu <span class="math notranslate nohighlight">\(L\)</span> þegar
+<span class="math notranslate nohighlight">\((x_1,x_2,\ldots,x_n)\)</span> stefnir á <span class="math notranslate nohighlight">\((p_1,p_2,\ldots,p_n)\)</span> ef
+eftirfarandi gildir:</p>
+<p>Fyrir sérhverja tölu <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> er til tala <span class="math notranslate nohighlight">\(\delta&gt;0\)</span>
+þannig að ef <span class="math notranslate nohighlight">\((x_1,x_2,\ldots,x_n)\in{\cal D}(f)\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\0&lt;|(x_1,x_2,\ldots,x_n)-(p_1,p_2,\ldots,p_n)|&lt;\delta\end{aligned}\end{align} \]</div>
+<p>þá er</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle
+|f(x_1,x_2,\ldots,x_n)-L|&lt;\epsilon.\]</div>
+</div>
+<div class="section" id="rithattur">
+<h3><span class="section-number">2.8.2. </span>Ritháttur<a class="headerlink" href="#rithattur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f(x_1,x_2,\ldots,x_n)\)</span> stefnir á tölu <span class="math notranslate nohighlight">\(L\)</span> þegar
+<span class="math notranslate nohighlight">\((x_1,x_2,\ldots,x_n)\)</span> stefnir á <span class="math notranslate nohighlight">\((p_1,p_2,\ldots,p_n)\)</span> þá
+er ritað</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\lim_{(x_1,x_2,\ldots,x_n)\rightarrow (p_1,p_2,\ldots,p_n)}
+f(x_1,x_2,\ldots,x_n)=L.\end{aligned}\end{align} \]</div>
+<p>og <span class="math notranslate nohighlight">\(L\)</span> kallast <a class="tooltip" target="_blank">markgildi<span><staelink style="line-height:4px; font-size:80%;">Ekki fannst þýðing á hugtakinu: <i>markgildi</i></staelink></span></a> fallsins <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\((x_1,x_2,\ldots,x_n)\)</span>.</p>
+<p>Ef við skrifum <span class="math notranslate nohighlight">\(\mathbf x = (x_1,x_2,\ldots,x_n)\)</span> og
+<span class="math notranslate nohighlight">\(\mathbf p = (p_1,p_2,\ldots,p_n)\)</span> þá getum við skrifað þetta svona</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\lim_{\mathbf x \to \mathbf p} f(\mathbf x) = L.\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="skilgreining-skilgreining-2-8-1-sett-fram-fyrir-foll-af-tveimur-breytum">
+<h3><span class="section-number">2.8.3. </span>Skilgreining (Skilgreining 2.8.1 sett fram fyrir föll af tveimur breytum.)<a class="headerlink" href="#skilgreining-skilgreining-2-8-1-sett-fram-fyrir-foll-af-tveimur-breytum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall skilgreint á mengi
+<span class="math notranslate nohighlight">\({\cal D}(f)\subseteq {\mathbb  R}^2\)</span>. Látum <span class="math notranslate nohighlight">\((a,b)\)</span> vera
+punkt í <span class="math notranslate nohighlight">\({\mathbb  R}^2\)</span> þannig að sérhver opin skífa um
+<span class="math notranslate nohighlight">\((a,b)\)</span> inniheldur meira en einn punkt úr <span class="math notranslate nohighlight">\({\cal D}(f)\)</span>.</p>
+<p>Segjum að <span class="math notranslate nohighlight">\(f(x,y)\)</span> stefni á tölu <span class="math notranslate nohighlight">\(L\)</span> þegar <span class="math notranslate nohighlight">\((x,y)\)</span>
+stefnir á <span class="math notranslate nohighlight">\((a,b)\)</span> ef eftirfarandi gildir:</p>
+<p>Fyrir sérhverja tölu <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> er til tala <span class="math notranslate nohighlight">\(\delta&gt;0\)</span>
+þannig að ef <span class="math notranslate nohighlight">\((x,y)\in{\cal D}(f)\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\delta &gt; |(x,y)-(a,b)| = \sqrt{(x-a)^2+(y-b)^2} &gt; 0\end{aligned}\end{align} \]</div>
+<p>þá er</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle
+|f(x,y)-L|&lt;\epsilon.\]</div>
+</div>
+</div>
+<div class="section" id="reglur-um-markgildi">
+<h2><span class="section-number">2.9. </span>Reglur um markgildi<a class="headerlink" href="#reglur-um-markgildi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="setning">
+<h3><span class="section-number">2.9.1. </span>Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> vera föll af tveimur breytum. Gerum ráð
+fyrir að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\lim_{(x,y)\rightarrow (a,b)}f(x,y)=L\quad\mbox{og}\quad
+\lim_{(x,y)\rightarrow (a,b)}g(x,y)=M,\end{aligned}\end{align} \]</div>
+<p>og að sérhver <a href="http://www.stae.is/os/leita/neighbourhood" class="tooltip" target="_blank">grennd<span>en: <i>neighbourhood</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> um <span class="math notranslate nohighlight">\((a,b)\)</span> innihaldi fleiri en einn punkt þar
+sem bæði föllin <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> eru skilgreind. Þá gildir</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(\lim_{(x,y)\rightarrow (a,b)}(f(x,y)\pm g(x,y))=L\pm M\)</span>.</p>
+<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(\lim_{(x,y)\rightarrow (a,b)}f(x,y) g(x,y)=LM\)</span>.</p>
+<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(\lim_{(x,y)\rightarrow (a,b)}\frac{f(x,y)}{g(x,y)}=
+\frac{L}{M}\)</span>, svo framarlega sem <span class="math notranslate nohighlight">\(M\neq 0\)</span>.</p>
+<p><strong>(d)</strong> <span class="math notranslate nohighlight">\(\lim_{(x,y)\rightarrow (a,b)}F(f(x,y))=F(L)\)</span> ef <span class="math notranslate nohighlight">\(F\)</span>
+er fall af einni breytistærð sem er samfellt í punktinum <span class="math notranslate nohighlight">\(L\)</span>.</p>
+</div>
+</div>
+<div class="section" id="samfelldni">
+<span id="index-8"></span><h2><span class="section-number">2.10. </span>Samfelldni<a class="headerlink" href="#samfelldni" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id8">
+<h3><span class="section-number">2.10.1. </span>Skilgreining<a class="headerlink" href="#id8" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall af <span class="math notranslate nohighlight">\(n\)</span> breytistærðum skilgreint á mengi
+<span class="math notranslate nohighlight">\({\cal D}(f)\)</span> í <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span>. Fallið <span class="math notranslate nohighlight">\(f\)</span> er
+sagt <em>samfellt í punkti</em> <span class="math notranslate nohighlight">\((p_1,p_2,\ldots,p_n)\)</span> í
+<span class="math notranslate nohighlight">\({\cal D}(f)\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\lim_{(x_1,x_2,\ldots,x_n)\rightarrow (p_1,p_2,\ldots,p_n)}
+f(x_1,x_2,\ldots,x_n)=f(p_1,p_2,\ldots,p_n).\end{aligned}\end{align} \]</div>
+<p>Sagt er að fallið sé <a href="http://www.stae.is/os/leita/continuous" class="tooltip" target="_blank">samfellt<span>en: <i>continuous</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> ef það er samfellt í öllum punktum
+skilgreiningarmengis síns.</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2><span class="section-number">2.11. </span>Hlutafleiður<a class="headerlink" href="#id9" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-9">
+<span id="id10"></span><h3><span class="section-number">2.11.1. </span>Skilgreining<a class="headerlink" href="#index-9" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall af tveimur breytum <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>
+sem er skilgreint á opinni skífu með miðju í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+<p>Skilgreinum <a class="tooltip" target="_blank">hlutafleiðu<span><staelink style="line-height:4px; font-size:80%;">Ekki fannst þýðing á hugtakinu: <i>hlutafleiða</i></staelink></span></a> m.t.t. <span class="math notranslate nohighlight">\(x\)</span> í <span class="math notranslate nohighlight">\((a,b)\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_1(a,b)=\lim_{h\rightarrow 0}\frac{f(a+h,b)-f(a,b)}{h}\]</div>
+<p>og <a class="tooltip" target="_blank">hlutafleiðu<span><staelink style="line-height:4px; font-size:80%;">Ekki fannst þýðing á hugtakinu: <i>hlutafleiða</i></staelink></span></a> m.t.t. <span class="math notranslate nohighlight">\(y\)</span> í <span class="math notranslate nohighlight">\((a,b)\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_2(a,b)=\lim_{k\rightarrow 0}\frac{f(a,b+k)-f(a,b)}{k}\]</div>
+<p>ef markgildin eru til.</p>
+<a class="reference internal image-reference" href="_images/xpart.png"><img alt="_images/xpart.png" class="align-center" src="_images/xpart.png" style="width: 60%;" /></a>
+<p><em>Hlutafleiða m.t.t.</em> <span class="math notranslate nohighlight">\(x\)</span> <em>fyrir</em> <span class="math notranslate nohighlight">\(y=1\)</span>.</p>
+<a class="reference internal image-reference" href="_images/ypart.png"><img alt="_images/ypart.png" class="align-center" src="_images/ypart.png" style="width: 60%;" /></a>
+<p><em>Hlutafleiða m.t.t.</em> <span class="math notranslate nohighlight">\(y\)</span> <em>fyrir</em> <span class="math notranslate nohighlight">\(x=1\)</span>.</p>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">2.11.2. </span>Skilgreining<a class="headerlink" href="#id11" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y,z)\)</span> vera fall af þremur breytum <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>
+og <span class="math notranslate nohighlight">\(z\)</span> sem er skilgreint á opinni kúlu með miðju í punktinum
+<span class="math notranslate nohighlight">\((a, b,c)\)</span>.</p>
+<p>Skilgreinum <em>hlutafleiðu m.t.t.</em> <span class="math notranslate nohighlight">\(x\)</span> í <span class="math notranslate nohighlight">\((a,b,c)\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_1(a,b,c)=\lim_{h\rightarrow 0}\frac{f(a+h,b,c)-f(a,b,c)}{h},\]</div>
+<p><em>hlutafleiðu m.t.t.</em> <span class="math notranslate nohighlight">\(y\)</span> í <span class="math notranslate nohighlight">\((a,b,c)\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_2(a,b,c)=\lim_{k\rightarrow 0}\frac{f(a,b+k,c)-f(a,b,c)}{k}\]</div>
+<p>og <em>hlutafleiðu m.t.t.</em> <span class="math notranslate nohighlight">\(z\)</span> í <span class="math notranslate nohighlight">\((a,b,c)\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_3(a,b,c)=\lim_{\ell\rightarrow 0}\frac{f(a,b,c+\ell)-f(a,b,c)}{\ell}\]</div>
+<p>ef markgildin eru til.</p>
+</div>
+<div class="section" id="id12">
+<h3><span class="section-number">2.11.3. </span>Skilgreining<a class="headerlink" href="#id12" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall af <span class="math notranslate nohighlight">\(n\)</span> breytum
+<span class="math notranslate nohighlight">\(x_1,x_2,\ldots,x_n\)</span> sem er skilgreint á opinni kúlu um punktinn
+<span class="math notranslate nohighlight">\(\mathbf{a}=(a_1, a_2, \ldots, a_n).\)</span></p>
+<p>Hlutafleiða <span class="math notranslate nohighlight">\(f\)</span> með tilliti til breytunnar <span class="math notranslate nohighlight">\(x_k\)</span> í punktinum
+<span class="math notranslate nohighlight">\(\mathbf{a}\)</span> er skilgreind sem markgildið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_k(\mathbf{a})=\lim_{h\rightarrow 0}\frac{f(\mathbf{a}+h\mbox{${\bf e}$}_k)-f(\mathbf{a})}{h}\]</div>
+<p>ef markgildið er til. (Hér stendur <span class="math notranslate nohighlight">\(\mbox{${\bf e}$}_k\)</span> fyrir
+vigurinn sem er með 0 í öllum hnitum nema því <span class="math notranslate nohighlight">\(k\)</span>-ta þar sem er
+1.)</p>
+</div>
+<div class="section" id="id13">
+<h3><span class="section-number">2.11.4. </span>Ritháttur<a class="headerlink" href="#id13" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x,y)\)</span>.  Ýmis konar ritháttur er fyrir hlutafleiður, m.a.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{aligned}
+f_1(x,y)&amp;=\frac{\partial z}{\partial x}=  \frac{\partial }{\partial x}f(x,y)
+=D_1f(x,y)=f_x(x,y)=D_xf(x,y)=\partial_xf(x,y) \\
+f_2(x,y)&amp;=\frac{\partial z}{\partial y}=  \frac{\partial }{\partial y}f(x,y)
+=D_2f(x,y)=f_y(x,y)=D_yf(x,y)=\partial_yf(x,y). \end{aligned}\end{split}\end{aligned}\end{align} \]</div>
+<p>Þegar við viljum tákna gildið á hlutafleiðu <span class="math notranslate nohighlight">\(f\)</span> í ákveðnum punkti
+<span class="math notranslate nohighlight">\((x,y)=(a,b)\)</span> þá eru líka ýmsir möguleikar, til dæmis</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{aligned}
+\frac{\partial z}{\partial x}\bigg|_{(a,b)}&amp;=
+\left(\frac{\partial }{\partial x}f(x,y)\right)\bigg|_{(a,b)}
+=f_1(a,b)=D_1f(a,b) \\
+\frac{\partial z}{\partial y}\bigg|_{(a,b)}&amp;=
+\left(\frac{\partial }{\partial y}f(x,y)\right)\bigg|_{(a,b)}
+=f_2(a,b)=D_2f(a,b). \end {aligned}\end{split}\end{aligned}\end{align} \]</div>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Strangt til tekið merkir rithátturinn <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x} f(a,b)\)</span> að við stingum fyrst
+inn tölunum <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> og diffrum síðan með tilliti til <span class="math notranslate nohighlight">\(x\)</span>. En þar sem <span class="math notranslate nohighlight">\(f(a,b)\)</span> er
+óháð <span class="math notranslate nohighlight">\(x\)</span> er útkoman 0.</p>
+</div>
+</div>
+</div>
+<div class="section" id="snertiplan">
+<h2><span class="section-number">2.12. </span>Snertiplan<a class="headerlink" href="#snertiplan" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall af tveimur breytistærðum þannig að
+hlutafleiðurnar <span class="math notranslate nohighlight">\(f_1(a,b)\)</span> og <span class="math notranslate nohighlight">\(f_2(a,b)\)</span> séu skilgreindar.</p>
+<a class="reference internal image-reference" href="_images/bothpart.png"><img alt="_images/bothpart.png" class="align-center" src="_images/bothpart.png" style="width: 60%;" /></a>
+<p>Í punktinum <span class="math notranslate nohighlight">\((a,b,f(a,b))\)</span> er</p>
+<p><span class="math notranslate nohighlight">\(\mbox{${\bf T}$}_1 = \mbox{${\bf i}$}+ f_1(a,b)\mbox{${\bf k}$}\qquad\)</span>
+<a href="http://www.stae.is/os/leita/tangent_vector" class="tooltip" target="_blank">snertivigur<span>en: <i>tangent vector</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> við ferilinn <span class="math notranslate nohighlight">\(f(x,b) = z\)</span> og</p>
+<p><span class="math notranslate nohighlight">\(\mbox{${\bf T}$}_2 = \mbox{${\bf j}$}+ f_2(a,b)\mbox{${\bf k}$}\qquad\)</span>
+<a href="http://www.stae.is/os/leita/tangent_vector" class="tooltip" target="_blank">snertivigur<span>en: <i>tangent vector</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> við ferilinn <span class="math notranslate nohighlight">\(f(a,y) = z\)</span>.</p>
+<p>Táknum með <span class="math notranslate nohighlight">\(S\)</span> planið sem hefur stikunina</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle (a,b,f(a,b))+s\mbox{${\bf T}$}_1+t\mbox{${\bf T}$}_2, \quad -\infty &lt; s,t &lt; \infty.\]</div>
+<p>Vigurinn</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \mbox{${\bf n}$}=\mbox{${\bf T}$}_2\times \mbox{${\bf T}$}_1=f_1(a,b)\mbox{${\bf i}$}+f_2(a,b)\mbox{${\bf j}$}-\mbox{${\bf k}$}\]</div>
+<p>er þvervigur á <span class="math notranslate nohighlight">\(S\)</span> og jafna plansins <span class="math notranslate nohighlight">\(S\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle z=f(a,b)+f_1(a,b)(x-a)+f_2(a,b)(y-b).\]</div>
+<p><a href="http://www.stae.is/os/leita/normal" class="tooltip" target="_blank">Þverlína<span>en: <i>normal</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> á <span class="math notranslate nohighlight">\(S\)</span> hefur stikun</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle (a,b,f(a,b)) + u \mbox{${\bf n}$}, \quad -\infty &lt; u &lt; \infty.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f(x,y)\)</span> er ’nógu nálægt’ (skilgreint nánar síðar) planinu
+<span class="math notranslate nohighlight">\(S\)</span> þegar <span class="math notranslate nohighlight">\((x,y)\)</span> er nálægt punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> þá
+kallast <span class="math notranslate nohighlight">\(S\)</span> <a href="http://www.stae.is/os/leita/tangent_plane" class="tooltip" target="_blank">snertiplan<span>en: <i>tangent plane</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> við grafið <span class="math notranslate nohighlight">\(z=f(x,y)\)</span> í punktinum
+<span class="math notranslate nohighlight">\((a,b,f(a,b))\)</span>.</p>
+<div id="S0tfBPUO4S4" style="display: inline-block;"></div>
+<script>
+var ggbApp_S0tfBPUO4S4 = new GGBApplet({
+"appName": "graphing", 
+"width": 700, 
+"height": 600, 
+"material_id":" Tvv6bpU3", 
+"preventFocus": true, 
+"showResetIcon": true, 
+"enableShiftDragZoom": true 
+}, true);
+ggbAppletId["S0tfBPUO4S4"] = ggbApp_S0tfBPUO4S4;
+</script></div>
+<div class="section" id="hlutafleiur-af-haerra-stigi">
+<h2><span class="section-number">2.13. </span>Hlutafleiður af hærra stigi<a class="headerlink" href="#hlutafleiur-af-haerra-stigi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-10">
+<span id="id14"></span><h3><span class="section-number">2.13.1. </span>Skilgreining<a class="headerlink" href="#index-10" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x,y)\)</span>. <em>Annars stigs hlutafleiður</em> <span class="math notranslate nohighlight">\(f\)</span> eru
+skilgreindar með formúlunum</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial^2 z}{\partial x^2}=
+\frac{\partial}{\partial x} \frac{\partial z}{\partial x}
+=f_{11}(x,y)=f_{xx}(x,y),\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial^2 z}{\partial y^2}=
+\frac{\partial}{\partial y} \frac{\partial z}{\partial y}
+=f_{22}(x,y)=f_{yy}(x,y),\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial^2 z}{\partial x\partial y}=
+\frac{\partial}{\partial x} \frac{\partial z}{\partial y}
+=f_{21}(x,y)=f_{yx}(x,y),\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial^2 z}{\partial y\partial x}=
+\frac{\partial}{\partial y} \frac{\partial z}{\partial x}
+=f_{12}(x,y)=f_{xy}(x,y).\end{aligned}\end{align} \]</div>
+<p>Hlutafleiðurnar <span class="math notranslate nohighlight">\(f_{11}(x,y)\)</span> og <span class="math notranslate nohighlight">\(f_{22}(x,y)\)</span> kallast
+hreinar hlutafleiður og <span class="math notranslate nohighlight">\(f_{12}(x,y)\)</span> og <span class="math notranslate nohighlight">\(f_{21}(x,y)\)</span>
+kallast blandaðar hlutafleiður.</p>
+</div>
+<div class="section" id="id15">
+<h3><span class="section-number">2.13.2. </span>Setning<a class="headerlink" href="#id15" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall sem er skilgreint á opinni skífu
+<span class="math notranslate nohighlight">\(D\)</span> með miðju í <span class="math notranslate nohighlight">\(P=(a,b)\)</span> . Gerum ráð fyrir að
+hlutafleiðurnar <span class="math notranslate nohighlight">\(f_1(x,y)\)</span>, <span class="math notranslate nohighlight">\(f_2(x,y)\)</span>, <span class="math notranslate nohighlight">\(f_{12}(x,y)\)</span>
+og <span class="math notranslate nohighlight">\(f_{21}(x,y)\)</span> séu allar skilgreindar á <span class="math notranslate nohighlight">\(D\)</span> og að þær séu
+allar samfelldar á <span class="math notranslate nohighlight">\(D\)</span>. Þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_{12}(a,b)=f_{21}(a,b).\]</div>
+</div>
+<div class="section" id="hugmynd-a-skilgreiningu">
+<h3><span class="section-number">2.13.3. </span>Hugmynd að skilgreiningu<a class="headerlink" href="#hugmynd-a-skilgreiningu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skilgreiningu 5.6 má útvíkka á augljósan hátt til að skilgreina 2. stigs
+hlutafleiður fyrir föll af fleiri en tveimur breytum. Einnig er augljóst
+hvernig má skilgreina hlutafleiður af hærri stigum en 2, til dæmis ef
+<span class="math notranslate nohighlight">\(w=f(x,y,z)\)</span> þá</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial^3 w}{\partial x\partial y^2} \quad\quad\mbox{(diffra
+    fyrst tvisvar m.t.t. }y\mbox{, svo einu sinni m.t.t. } x\mbox{)}\end{aligned}\end{align} \]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial^3 w}{\partial y\partial z\partial y} \quad\quad\mbox{(diffra
+    fyrst m.t.t. } y\mbox{, svo m.t.t. } z
+\mbox{ og að lokum m.t.t. }y\mbox{)}.\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="setning-almenn-utgafa-af-setningu-2-13-2">
+<h3><span class="section-number">2.13.4. </span>Setning (Almenn útgáfa af Setningu 2.13.2)<a class="headerlink" href="#setning-almenn-utgafa-af-setningu-2-13-2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall <span class="math notranslate nohighlight">\(n\)</span> breytistærðum sem er skilgreint á
+opinni kúlu með miðju í <span class="math notranslate nohighlight">\(P=(x_1, x_2,\ldots, x_n)\)</span>.</p>
+<p>Skoðum tvær hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> í punktum <span class="math notranslate nohighlight">\(P\)</span> þar sem er
+diffrað með tilliti til sömu breytistærða og jafn oft með tilliti til
+hverrar breytistærðar. Ef þessar hlutafleiður eru samfelldar í punktinum
+<span class="math notranslate nohighlight">\(P\)</span> og allar hlutafleiður af lægra stigi eru skilgreindar á
+<span class="math notranslate nohighlight">\(D\)</span> og samfelldar á <span class="math notranslate nohighlight">\(D\)</span> þá eru hlutafleiðurnar sem við erum
+að skoða jafnar í <span class="math notranslate nohighlight">\(P\)</span>.</p>
+</div>
+<div class="section" id="daemi">
+<h3><span class="section-number">2.13.5. </span>Dæmi:<a class="headerlink" href="#daemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(w = f(x,y,z)\)</span> er fall af þremur breytistærðum þá er t.d.</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \frac{\partial^4 w}{\partial x^2\partial y \partial z} = \frac{\partial^4 w}{\partial x \partial y \partial x \partial z}\]</div>
+<p>ef skilyrðin í setningunni eru uppfyllt.</p>
+</div>
+</div>
+<div class="section" id="kejuregla">
+<span id="index-11"></span><h2><span class="section-number">2.14. </span>Keðjuregla<a class="headerlink" href="#kejuregla" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="setning-kejureglan-i-einni-breytistaer">
+<span id="index-12"></span><h3><span class="section-number">2.14.1. </span>Setning (Keðjureglan í einni breytistærð.)<a class="headerlink" href="#setning-kejureglan-i-einni-breytistaer" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við munum nú skoða nokkrar útgáfur af <a href="http://www.stae.is/os/leita/chain_rule" class="tooltip" target="_blank">keðjureglu<span>en: <i>chain rule</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fyrir föll af mörgum breytistærðum. Gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(f(u)\)</span> sé diffranlegt í punktinum
+<span class="math notranslate nohighlight">\(u=g(x)\)</span> og að fallið <span class="math notranslate nohighlight">\(g(x)\)</span> sé diffranlegt í punktinum
+<span class="math notranslate nohighlight">\(x\)</span>. Þá er fallið <span class="math notranslate nohighlight">\((f\circ g)(x)=f(g(x))\)</span> diffranlegt í
+<span class="math notranslate nohighlight">\(x\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle (f\circ g)'(x)=f'(g(x))g'(x).\]</div>
+</div>
+<div class="section" id="id16">
+<h3><span class="section-number">2.14.2. </span>Setning<a class="headerlink" href="#id16" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall þar sem <span class="math notranslate nohighlight">\(x=x(t)\)</span> og <span class="math notranslate nohighlight">\(y=y(t)\)</span>
+eru föll af breytu <span class="math notranslate nohighlight">\(t\)</span>. Gerum ráð fyrir að á opinni skífu um
+punktinum <span class="math notranslate nohighlight">\((x(t),y(t))\)</span> séu báðar fyrsta stigs hlutafleiður
+<span class="math notranslate nohighlight">\(f\)</span> skilgreindar og samfelldar. Gerum enn fremur ráð fyrir að
+föllin <span class="math notranslate nohighlight">\(x(t)\)</span> og <span class="math notranslate nohighlight">\(y(t)\)</span> séu bæði diffranleg í punktinum
+<span class="math notranslate nohighlight">\(t\)</span>. Þá er fallið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle g(t)=f(x(t),y(t))\]</div>
+<p>diffranlegt í <span class="math notranslate nohighlight">\(t\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle g'(t)=f_1(x(t),y(t))x'(t)+f_2(x(t),y(t))y'(t).\]</div>
+</div>
+<div class="section" id="id17">
+<h3><span class="section-number">2.14.3. </span>Ritháttur<a class="headerlink" href="#id17" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x,y)\)</span> þar sem <span class="math notranslate nohighlight">\(x=x(t)\)</span> og <span class="math notranslate nohighlight">\(y=y(t)\)</span> eru föll
+af breytu <span class="math notranslate nohighlight">\(t\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{dz}{dt}=\frac{\partial z}{\partial x}\frac{dx}{dt}
++\frac{\partial z}{\partial y}\frac{dy}{dt}.\end{aligned}\end{align} \]</div>
+<a class="reference internal image-reference" href="_images/chain1.png"><img alt="_images/chain1.png" class="align-center" src="_images/chain1.png" style="width: 27%;" /></a>
+</div>
+<div class="section" id="id18">
+<h3><span class="section-number">2.14.4. </span>Setning<a class="headerlink" href="#id18" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall af breytistærðum <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>
+sem aftur eru föll af breytum <span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(t\)</span>, það er að segja
+<span class="math notranslate nohighlight">\(x=x(s,t)\)</span> og <span class="math notranslate nohighlight">\(y=y(s,t)\)</span>. Ritum svo</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle g(s,t)=f(x(s,t),y(s,t)).\]</div>
+<p>Þá gildir (að gefnum sambærilegum skilyrðum og í 2.14.2) að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle g_1(s,t)=f_1(x(s,t),y(s,t))x_1(s,t)+f_2(x(s,t),y(s,t))y_1(s,t),\\og\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle g_2(s,t)=f_1(x(s,t),y(s,t))x_2(s,t)+f_2(x(s,t),y(s,t))y_2(s,t).\]</div>
+</div>
+<div class="section" id="id19">
+<h3><span class="section-number">2.14.5. </span>Ritháttur<a class="headerlink" href="#id19" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x,y)\)</span> þar sem <span class="math notranslate nohighlight">\(x=x(s,t)\)</span> og <span class="math notranslate nohighlight">\(y=y(s,t)\)</span> eru
+föll af breytum <span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(t\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial z}{\partial s}=
+\frac{\partial z}{\partial x}\frac{\partial x}{\partial s}
++\frac{\partial z}{\partial y}\frac{\partial y}{\partial s}, \quad \text{og}\quad \frac{\partial z}{\partial t}=
+\frac{\partial z}{\partial x}\frac{\partial x}{\partial t}
++\frac{\partial z}{\partial y}\frac{\partial y}{\partial t}.\end{aligned}\end{align} \]</div>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/chain2.png"><img alt="_images/chain2.png" src="_images/chain2.png" style="width: 30%;" /></a>
+</div>
+</div>
+<div class="section" id="id20">
+<h3><span class="section-number">2.14.6. </span>Ritháttur<a class="headerlink" href="#id20" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x,y)\)</span> þar sem <span class="math notranslate nohighlight">\(x=x(s,t)\)</span> og <span class="math notranslate nohighlight">\(y=y(s,t)\)</span> eru
+föll af breytum <span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(t\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{bmatrix}\frac{\partial z}{\partial s}
+&amp; \frac{\partial z}{\partial t}\end{bmatrix}
+=\begin{bmatrix}\frac{\partial z}{\partial x}
+&amp; \frac{\partial z}{\partial y}\end{bmatrix}
+\begin{bmatrix}\frac{\partial x}{\partial s}
+&amp; \frac{\partial x}{\partial t}\\
+\frac{\partial y}{\partial s}
+&amp; \frac{\partial y}{\partial t}
+\end{bmatrix}\end{split}\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="id21">
+<h3><span class="section-number">2.14.7. </span>Setning<a class="headerlink" href="#id21" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(u\)</span> vera fall af <span class="math notranslate nohighlight">\(n\)</span> breytum
+<span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> þannig að hvert <span class="math notranslate nohighlight">\(x_i\)</span> má rita sem
+fall af <span class="math notranslate nohighlight">\(m\)</span> breytum <span class="math notranslate nohighlight">\(t_1, t_2, \ldots, t_m\)</span>. Gerum ráð fyrir
+að allar hlutafleiðurnar <span class="math notranslate nohighlight">\(\frac{\partial u}{\partial x_i}\)</span> og
+<span class="math notranslate nohighlight">\(\frac{\partial x_i}{\partial t_j}\)</span> séu til og samfelldar. Þegar
+<span class="math notranslate nohighlight">\(u\)</span> er skoðað sem fall af breytunum <span class="math notranslate nohighlight">\(t_1, t_2, \ldots, t_m\)</span>
+fæst að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial u}{\partial t_j}=
+\frac{\partial u}{\partial x_1}\frac{\partial x_1}{\partial t_j}
++\frac{\partial u}{\partial x_2}\frac{\partial x_2}{\partial t_j}
++\cdots+
+\frac{\partial u}{\partial x_n}\frac{\partial x_n}{\partial t_j}.\end{aligned}\end{align} \]</div>
+<a class="reference internal image-reference" href="_images/chain3.png"><img alt="_images/chain3.png" class="align-center" src="_images/chain3.png" style="width: 50%;" /></a>
+</div>
+<div class="section" id="id22">
+<h3><span class="section-number">2.14.8. </span>Dæmi<a class="headerlink" href="#id22" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(T\)</span> vera fall af fall af <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> og <span class="math notranslate nohighlight">\(t\)</span>,
+og <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> föll af <span class="math notranslate nohighlight">\(t\)</span>. Finnum
+<span class="math notranslate nohighlight">\(\frac{ dT}{dt}\)</span>.</p>
+<a class="reference internal image-reference" href="_images/chain5.png"><img alt="_images/chain5.png" class="align-center" src="_images/chain5.png" style="width: 40%;" /></a>
+<div class="math notranslate nohighlight">
+\[\displaystyle \frac{d T}{d t} = \frac{\partial T}{\partial x} \frac{d x}{d t} +\frac{\partial T}{\partial y} \frac{d y}{d t} + \frac{\partial T}{\partial t} .\]</div>
+</div>
+<div class="section" id="id23">
+<h3><span class="section-number">2.14.9. </span>Dæmi<a class="headerlink" href="#id23" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(T\)</span> vera fall af fall af <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(s\)</span> og
+<span class="math notranslate nohighlight">\(t\)</span>, og <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> föll af <span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(t\)</span>.
+Finnum <span class="math notranslate nohighlight">\(\frac{ \partial T}{\partial t}\)</span>.</p>
+<a class="reference internal image-reference" href="_images/chain6.png"><img alt="_images/chain6.png" class="align-center" src="_images/chain6.png" style="width: 50%;" /></a>
+<div class="math notranslate nohighlight">
+\[\displaystyle \frac{\partial T}{\partial t} = \frac{\partial T}{\partial x} \frac{\partial x}{\partial t} +\frac{\partial T}{\partial y} \frac{\partial y}{\partial t} + \left(\frac{\partial T}{\partial t}\right)_{x,y,s} .\]</div>
+</div>
+<div class="section" id="id24">
+<h3><span class="section-number">2.14.10. </span>Dæmi<a class="headerlink" href="#id24" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(z\)</span> vera fall af fall af <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v\)</span> og <span class="math notranslate nohighlight">\(r\)</span>,
+<span class="math notranslate nohighlight">\(u\)</span> og <span class="math notranslate nohighlight">\(v\)</span> vera föll af <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> og <span class="math notranslate nohighlight">\(r\)</span> og
+<span class="math notranslate nohighlight">\(r\)</span> vera fall af <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>. Skrifum niður
+<span class="math notranslate nohighlight">\(\frac{\partial z}{\partial x}\)</span>.</p>
+<a class="reference internal image-reference" href="_images/chain4.png"><img alt="_images/chain4.png" class="align-center" src="_images/chain4.png" style="width: 40%;" /></a>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\displaystyle\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x} +\frac{\partial z}{\partial u} \frac{\partial u}{\partial r} \frac{\partial r}{\partial x}
++ \frac{\partial z}{\partial v} \frac{\partial v}{\partial x} + \frac{\partial z}{\partial v} \frac{\partial v}{\partial r} \frac{\partial r}{\partial x} +\frac{\partial z}{\partial r} \frac{\partial r}{\partial x}.\end{aligned}\end{align} \]</div>
+</div>
+</div>
+<div class="section" id="diffranleiki-i-einni-breytistaer">
+<h2><span class="section-number">2.15. </span>Diffranleiki í einni breytistærð<a class="headerlink" href="#diffranleiki-i-einni-breytistaer" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id25">
+<h3><span class="section-number">2.15.1. </span>Skilgreining<a class="headerlink" href="#id25" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall af einni breytistærð og gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(f\)</span> sé skilgreint á opnu bili sem inniheldur punktinn <span class="math notranslate nohighlight">\(a\)</span>.
+Fallið <span class="math notranslate nohighlight">\(f\)</span> er sagt vera <a href="http://www.stae.is/os/leita/differentiable" class="tooltip" target="_blank">diffranlegt<span>en: <i>differentiable</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> í punkti <span class="math notranslate nohighlight">\(a\)</span> ef
+markgildið</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f'(a)=\lim_{h\rightarrow 0}\frac{f(a+h)-f(a)}{h}\]</div>
+<p>er til.</p>
+</div>
+</div>
+<div class="section" id="diffranleiki-i-einni-breytistaer-onnur-lysing">
+<span id="index-13"></span><h2><span class="section-number">2.16. </span>Diffranleiki í einni breytistærð - önnur lýsing<a class="headerlink" href="#diffranleiki-i-einni-breytistaer-onnur-lysing" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id26">
+<h3><span class="section-number">2.16.1. </span>Skilgreining<a class="headerlink" href="#id26" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall af einni breytistærð og gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(f\)</span> sé skilgreint á opnu bili sem inniheldur punktinn <span class="math notranslate nohighlight">\(a\)</span>.
+Fallið <span class="math notranslate nohighlight">\(f\)</span> er sagt vera <a href="http://www.stae.is/os/leita/differentiable" class="tooltip" target="_blank">diffranlegt<span>en: <i>differentiable</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> í punkti <span class="math notranslate nohighlight">\(a\)</span> ef til er
+tala <span class="math notranslate nohighlight">\(m\)</span> þannig að ef <span class="math notranslate nohighlight">\(L(x)=f(a)+m(x-a)\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \lim_{h\rightarrow 0}\frac{f(a+h)-L(a+h)}{h}=0.\]</div>
+<p>(Talan <span class="math notranslate nohighlight">\(m\)</span> verður að vera jöfn <span class="math notranslate nohighlight">\(f'(a)\)</span>.)</p>
+<p>Fallið <span class="math notranslate nohighlight">\(f\)</span> er ’nálægt’ línunni <span class="math notranslate nohighlight">\(L\)</span> nálægt punktinum
+<span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+</div>
+<div class="section" id="diffranleiki">
+<h2><span class="section-number">2.17. </span>Diffranleiki<a class="headerlink" href="#diffranleiki" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-14">
+<span id="id27"></span><h3><span class="section-number">2.17.1. </span>Skilgreining<a class="headerlink" href="#index-14" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fall <span class="math notranslate nohighlight">\(f(x,y)\)</span> sem er skilgreint á opinni skífu umhverfis
+<span class="math notranslate nohighlight">\((a,b)\)</span> er sagt vera <a href="http://www.stae.is/os/leita/differentiable" class="tooltip" target="_blank">diffranlegt<span>en: <i>differentiable</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> ef
+báðar fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> eru skilgreindar í
+<span class="math notranslate nohighlight">\((a,b)\)</span> og ef</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\lim_{(h,k)\rightarrow (0,0)}
+\frac{f(a+h, b+k)-S(a+h,b+k)}{\sqrt{h^2+k^2}}=0\end{aligned}\end{align} \]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(S(x,y) = f(a,b) + f_1(a,b)(x-a)+f_2(a,b)(y-b)\)</span>.</p>
+<p>Fallið <span class="math notranslate nohighlight">\(f\)</span> er ’nálægt’ sléttunni <span class="math notranslate nohighlight">\(S\)</span> nálægt punktinum
+<span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+</div>
+</div>
+<div class="section" id="index-15">
+<span id="id28"></span><h2><span class="section-number">2.18. </span>Snertiplan<a class="headerlink" href="#index-15" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> er diffranlegt í <span class="math notranslate nohighlight">\((a,b)\)</span> þá kallast planið <span class="math notranslate nohighlight">\(S\)</span>
+<a href="http://www.stae.is/os/leita/tangent_plane" class="tooltip" target="_blank">snertiplan<span>en: <i>tangent plane</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> við graf fallsins.</p>
+<a class="reference internal image-reference" href="_images/bothpart.png"><img alt="_images/bothpart.png" class="align-center" src="_images/bothpart.png" style="width: 60%;" /></a>
+<p><span class="math notranslate nohighlight">\(S(x,y) = f(a,b) + f_1(a,b)(x-a)+f_2(a,b)(y-b)\)</span>.</p>
+</div>
+<div class="section" id="id29">
+<h2><span class="section-number">2.19. </span>Diffranleiki<a class="headerlink" href="#id29" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="setning-mealgildissetningin">
+<span id="index-16"></span><h3><span class="section-number">2.19.1. </span>Setning (Meðalgildissetningin)<a class="headerlink" href="#setning-mealgildissetningin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(f\)</span> sé samfellt á lokaða bilinu
+<span class="math notranslate nohighlight">\([a,b]\)</span> og diffranlegt á opna bilinu <span class="math notranslate nohighlight">\((a,b)\)</span>. Þá er til
+punktur <span class="math notranslate nohighlight">\(c\)</span> á opna bilinu <span class="math notranslate nohighlight">\((a,b)\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f(b)-f(a)=f'(c)(b-a).\]</div>
+</div>
+<div class="section" id="id30">
+<h3><span class="section-number">2.19.2. </span>Setning<a class="headerlink" href="#id30" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall sem er skilgreint á opinni skífu
+<span class="math notranslate nohighlight">\(\cal D\)</span> með miðju í <span class="math notranslate nohighlight">\((a,b)\)</span> þannig að á þessari skífu eru
+báðar fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> skilgreindar og samfelldar.
+Gerum ráð fyrir að <span class="math notranslate nohighlight">\(h\)</span> og <span class="math notranslate nohighlight">\(k\)</span> séu tölur þannig að
+<span class="math notranslate nohighlight">\((x+h, y+k)\in{\cal D}\)</span>. Þá eru til tölur <span class="math notranslate nohighlight">\(\theta_1\)</span> og
+<span class="math notranslate nohighlight">\(\theta_2\)</span> á milli 0 og 1 þannig að</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f(a+h,b+k)-f(a,b)=hf_1(a+\theta_1h,b+k)+kf_2(a,b+\theta_2k).\]</div>
+</div>
+<div class="section" id="id31">
+<h3><span class="section-number">2.19.3. </span>Setning<a class="headerlink" href="#id31" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall sem er skilgreint á opinni skífu
+<span class="math notranslate nohighlight">\(\cal D\)</span> með miðju í <span class="math notranslate nohighlight">\((a,b)\)</span> þannig að á þessari skífu eru
+báðar fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> skilgreindar og samfelldar. Þá
+er fallið <span class="math notranslate nohighlight">\(f\)</span> diffranlegt í <span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+</div>
+<div class="section" id="id32">
+<h3><span class="section-number">2.19.4. </span>Setning<a class="headerlink" href="#id32" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f(x,y)\)</span> sé fall sem er diffranlegt í punktinum
+<span class="math notranslate nohighlight">\((a,b)\)</span>. Þá er <span class="math notranslate nohighlight">\(f\)</span> samfellt í <span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+</div>
+<div class="section" id="id33">
+<h3><span class="section-number">2.19.5. </span>Keðjuregla<a class="headerlink" href="#id33" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x,y)\)</span> þar sem <span class="math notranslate nohighlight">\(x=x(s,t)\)</span> og <span class="math notranslate nohighlight">\(y=y(s,t)\)</span>.
+Gerum ráð fyrir að</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(x(a,b)=p\)</span> og <span class="math notranslate nohighlight">\(y(a,b)=q\)</span>;</p></li>
+<li><p>fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(x(s,t)\)</span> og <span class="math notranslate nohighlight">\(y(s,t)\)</span> eru
+skilgreindar í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span>;</p></li>
+<li><p>fallið <span class="math notranslate nohighlight">\(f\)</span> er diffranlegt í punktinum <span class="math notranslate nohighlight">\((p,q)\)</span>.</p></li>
+</ol>
+<p>Þá eru fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(z\)</span> með tilliti til breytanna
+<span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(t\)</span> skilgreindar í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> og um þær
+gildir að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial z}{\partial s}=
+\frac{\partial z}{\partial x}\frac{\partial x}{\partial s}
++\frac{\partial z}{\partial y}\frac{\partial y}{\partial s}\end{aligned}\end{align} \]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial z}{\partial t}=
+\frac{\partial z}{\partial x}\frac{\partial x}{\partial t}
++\frac{\partial z}{\partial y}\frac{\partial y}{\partial t}.\end{aligned}\end{align} \]</div>
+</div>
+</div>
+<div class="section" id="diffur">
+<h2><span class="section-number">2.20. </span>Diffur<a class="headerlink" href="#diffur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-17">
+<span id="id34"></span><h3><span class="section-number">2.20.1. </span>Skilgreining<a class="headerlink" href="#index-17" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x_1, x_2, \ldots, x_n)\)</span>. <a href="http://www.stae.is/os/leita/differential" class="tooltip" target="_blank">Diffrið<span>en: <i>differential</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> af <span class="math notranslate nohighlight">\(z\)</span> er
+skilgreint sem</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\dz=df=\frac{\partial z}{\partial x_1}dx_1
++\frac{\partial z}{\partial x_2}dx_2
++\cdots+\frac{\partial z}{\partial x_n}dx_n.\end{aligned}\end{align} \]</div>
+<p>Diffrið er nálgun á</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\Delta f=f(x_1+dx_1, x_2+dx_2,\ldots,
+x_n+dx_n)-f(x_1,x_2,\ldots,x_n).\end{aligned}\end{align} \]</div>
+</div>
+</div>
+<div class="section" id="varpanir-mbox-bf-r-n-rightarrow-mbox-bf-r-m">
+<h2><span class="section-number">2.21. </span>Varpanir <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}\)</span><a class="headerlink" href="#varpanir-mbox-bf-r-n-rightarrow-mbox-bf-r-m" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="taknmal">
+<h3><span class="section-number">2.21.1. </span>Táknmál<a class="headerlink" href="#taknmal" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum
+<span class="math notranslate nohighlight">\(\mbox{${\bf f}$}:\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}\)</span>
+tákna vörpun. Ritum <span class="math notranslate nohighlight">\(\mbox{${\bf f}$}=(f_1,\ldots,f_m)\)</span> þar sem
+hvert <span class="math notranslate nohighlight">\(f_i\)</span> er fall
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\rightarrow{\mathbb  R}\)</span>. Fyrir punkt í
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span> ritum við
+<span class="math notranslate nohighlight">\(\mbox{${\bf x}$}=(x_1,x_2,\ldots,x_n)\)</span>. Síðan ritum við
+<span class="math notranslate nohighlight">\(\mbox{${\bf y}$}=\mbox{${\bf f}$}(\mbox{${\bf x}$})\)</span> þar sem
+<span class="math notranslate nohighlight">\(\mbox{${\bf y}$}=(y_1,y_2,\ldots,y_m)\)</span> og
+<span class="math notranslate nohighlight">\(\mathbf f(\mathbf x) = (f_1(x_1,\ldots,x_n),\ldots,f_m(x_1,\ldots,x_n))\)</span>.</p>
+</div>
+</div>
+<div class="section" id="jacobi-fylki">
+<h2><span class="section-number">2.22. </span>Jacobi-fylki<a class="headerlink" href="#jacobi-fylki" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="index-18">
+<span id="id35"></span><h3><span class="section-number">2.22.1. </span>Skilgreining<a class="headerlink" href="#index-18" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Notum táknmálið úr 2.22.1. Ef allar hlutafleiðurnar <span class="math notranslate nohighlight">\(\partial
+y_i/\partial x_j\)</span> eru skilgreindar í punktinum <span class="math notranslate nohighlight">\(\mbox{${\bf x}$}\)</span>
+þá skilgreinum við <em>Jacobi-fylki</em> <span class="math notranslate nohighlight">\(f\)</span> í punktinum
+<span class="math notranslate nohighlight">\(\mbox{${\bf x}$}\)</span> sem <span class="math notranslate nohighlight">\(m\times n\)</span> fylkið</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}D\mbox{${\bf f}$}(\mbox{${\bf x}$})=\begin{bmatrix}
+\frac{\partial y_1}{\partial x_1}&amp;\frac{\partial y_1}{\partial x_2}&amp;
+\cdots&amp;\frac{\partial y_1}{\partial x_n}\\
+\frac{\partial y_2}{\partial x_1}&amp;\frac{\partial y_2}{\partial x_2}&amp;
+\cdots&amp;\frac{\partial y_2}{\partial x_n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+\frac{\partial y_m}{\partial x_1}&amp;\frac{\partial y_m}{\partial x_2}&amp;
+\cdots&amp;\frac{\partial y_m}{\partial x_n}
+\end{bmatrix}\end{split}\end{aligned}\end{align} \]</div>
+</div>
+</div>
+<div class="section" id="diffranleiki-varpana-mbox-bf-r-n-rightarrow-mbox-bf-r-m">
+<span id="index-19"></span><h2><span class="section-number">2.23. </span>Diffranleiki varpana <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}\)</span><a class="headerlink" href="#diffranleiki-varpana-mbox-bf-r-n-rightarrow-mbox-bf-r-m" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id36">
+<h3><span class="section-number">2.23.1. </span>Skilgreining<a class="headerlink" href="#id36" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Notum táknmálið úr 2.22.1 og 2.23.1. Látum
+<span class="math notranslate nohighlight">\(\mbox{${\bf a}$}=(a_1, a_2, \ldots, a_n)\)</span> vera fastan punkt í
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span> og ritum
+<span class="math notranslate nohighlight">\(\mbox{${\bf h}$}=(h_1,h_2,\ldots,h_n)\)</span>. Vörpunin
+<span class="math notranslate nohighlight">\(\mbox{${\bf f}$}\)</span> er sögð diffranleg í punktinum
+<span class="math notranslate nohighlight">\(\mbox{${\bf a}$}\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\lim_{\mbox{${\bf h}$}\rightarrow
+  \mbox{${\bf 0}$}}\frac{|\mbox{${\bf f}$}(\mbox{${\bf a}$}+\mbox{${\bf h}$})-\mbox{${\bf f}$}(\mbox{${\bf a}$})-D\mbox{${\bf f}$}(\mbox{${\bf a}$})\mbox{${\bf h}$}|}{|\mbox{${\bf h}$}|}=0.\end{aligned}\end{align} \]</div>
+<p>Vörpunin <span class="math notranslate nohighlight">\(f\)</span> er ’nálægt’ línulegu vörpuninni
+<span class="math notranslate nohighlight">\(D\mbox{${\bf f}$}\)</span> nálægt punktinum <span class="math notranslate nohighlight">\(\mbox{${\bf a}$}\)</span>.</p>
+<p>Línulega vörpunin <span class="math notranslate nohighlight">\(D\mbox{${\bf f}$}\)</span> kallast afleiða
+<span class="math notranslate nohighlight">\(\mbox{${\bf f}$}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="id37">
+<h2><span class="section-number">2.24. </span><cite>Keðjuregla</cite><a class="headerlink" href="#id37" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id38">
+<h3><span class="section-number">2.24.1. </span>Setning<a class="headerlink" href="#id38" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum
+<span class="math notranslate nohighlight">\(\mbox{${\bf f}$}:\mbox{${\bf R}^n$}\rightarrow \mbox{${\bf R}^m$}\)</span>
+og
+<span class="math notranslate nohighlight">\(\mbox{${\bf g}$}:\mbox{${\bf R}^m$}\rightarrow \mbox{${\bf R}^k$}\)</span>
+vera varpanir. Gerum ráð fyrir að vörpunin <span class="math notranslate nohighlight">\(\mbox{${\bf f}$}\)</span> sé
+diffranleg í punkti <span class="math notranslate nohighlight">\(\mbox{${\bf x}$}\)</span> og vörpunin
+<span class="math notranslate nohighlight">\(\mbox{${\bf g}$}\)</span> sé diffranleg í punktinum
+<span class="math notranslate nohighlight">\(\mbox{${\bf y}$}=\mbox{${\bf f}$}(\mbox{${\bf x}$})\)</span>. Þá er
+samskeytta vörpunin
+<span class="math notranslate nohighlight">\(\mbox{${\bf g}$}\circ\mbox{${\bf f}$}:\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^k$}\)</span>
+diffranleg í <span class="math notranslate nohighlight">\(\mbox{${\bf x}$}\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle D(\mbox{${\bf g}$}\circ\mbox{${\bf f}$})(\mbox{${\bf x}$})=D\mbox{${\bf g}$}(\mbox{${\bf f}$}(\mbox{${\bf x}$}))D\mbox{${\bf f}$}(\mbox{${\bf x}$}).\]</div>
+</div>
+</div>
+<div class="section" id="stigull">
+<span id="index-20"></span><h2><span class="section-number">2.25. </span>Stigull<a class="headerlink" href="#stigull" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id39">
+<h3><span class="section-number">2.25.1. </span>Skilgreining<a class="headerlink" href="#id39" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall og <span class="math notranslate nohighlight">\((x,y)\)</span> punkt þar sem báðar
+fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> eru skilgreindar. Skilgreinum
+<a href="http://www.stae.is/os/leita/gradient" class="tooltip" target="_blank">stigul<span>en: <i>gradient</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\((x,y)\)</span> sem vigurinn</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \nabla f(x,y)=f_1(x,y)\mbox{${\bf i}$}+f_2(x,y)\mbox{${\bf j}$}.\]</div>
+<p><a href="http://www.stae.is/os/leita/gradient" class="tooltip" target="_blank">Stigull<span>en: <i>gradient</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math notranslate nohighlight">\(f\)</span> er stundum táknaður með <strong>grad</strong><span class="math notranslate nohighlight">\(\,f\)</span>.</p>
+</div>
+<div class="section" id="id40">
+<h3><span class="section-number">2.25.2. </span>Ritháttur<a class="headerlink" href="#id40" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Oft hentugt að rita</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \nabla=\mbox{${\bf i}$}\frac{\partial}{\partial x}+ \mbox{${\bf j}$}\frac{\partial}{\partial y}.\]</div>
+<p>Þá er litið svo á að <span class="math notranslate nohighlight">\(\nabla\)</span> sé <a href="http://www.stae.is/os/leita/differential_operator" class="tooltip" target="_blank">diffurvirki<span>en: <i>differential operator</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>,
+þ.e.a.s. <span class="math notranslate nohighlight">\(\nabla\)</span> gefur fyrirmæli um hvað á að gera við
+<span class="math notranslate nohighlight">\(f\)</span> til að fá <span class="math notranslate nohighlight">\(\nabla f(x,y)\)</span>.</p>
+</div>
+</div>
+<div class="section" id="id41">
+<h2><span class="section-number">2.26. </span>Dæmi<a class="headerlink" href="#id41" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<a class="reference internal image-reference" href="_images/gradfurf.png"><img alt="_images/gradfurf.png" class="align-center" src="_images/gradfurf.png" style="width: 60%;" /></a>
+<p><em>Graf</em> <span class="math notranslate nohighlight">\(z=1-x^2-y^2\)</span></p>
+<a class="reference internal image-reference" href="_images/gradient.png"><img alt="_images/gradient.png" class="align-center" src="_images/gradient.png" style="width: 60%;" /></a>
+<p><em>Jafnhæðarlínur</em> <span class="math notranslate nohighlight">\(z=1-x^2-y^2\)</span>. <em>Stigull og snertilína við jafnhæðarlínuna</em> <span class="math notranslate nohighlight">\(z=0.5\)</span> <em>í</em> <span class="math notranslate nohighlight">\((x,y) = (0.5,0.5)\)</span>.</p>
+<div class="section" id="id42">
+<h3><span class="section-number">2.26.1. </span>Setning<a class="headerlink" href="#id42" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(f(x,y)\)</span> sé diffranlegt í punktinum
+<span class="math notranslate nohighlight">\((a,b)\)</span> og að <span class="math notranslate nohighlight">\(\nabla f(a,b) \neq \mathbf{0}\)</span>. Þá er
+vigurinn <span class="math notranslate nohighlight">\(\nabla f(a,b)\)</span> hornréttur á þá jafnhæðarlínu <span class="math notranslate nohighlight">\(f\)</span>
+sem liggur í gegnum punktinn <span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+</div>
+</div>
+<div class="section" id="snertilina-vi-jafnhaearferil">
+<span id="index-21"></span><h2><span class="section-number">2.27. </span>Snertilína við jafnhæðarferil<a class="headerlink" href="#snertilina-vi-jafnhaearferil" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id43">
+<h3><span class="section-number">2.27.1. </span>Setning<a class="headerlink" href="#id43" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(f(x,y)\)</span> sé diffranlegt í punktinum
+<span class="math notranslate nohighlight">\((a,b)\)</span> og að <span class="math notranslate nohighlight">\(\nabla f(a,b) \neq \mathbf{0}\)</span>. Jafna
+<a href="http://www.stae.is/os/leita/tangent" class="tooltip" target="_blank">snertilínu<span>en: <i>tangent</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> við <a href="http://www.stae.is/os/leita/contour_line" class="tooltip" target="_blank">jafnhæðarferil<span>en: <i>contour line</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> er
+gefin með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \nabla f(a,b)\cdot (x,y)=\nabla f(a,b)\cdot (a,b),\]</div>
+<p>eða</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_1(a,b)(x-a)+f_2(a,b)(y-b)=0.\]</div>
+</div>
+</div>
+<div class="section" id="stefnuafleia">
+<span id="index-22"></span><h2><span class="section-number">2.28. </span>Stefnuafleiða<a class="headerlink" href="#stefnuafleia" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id44">
+<h3><span class="section-number">2.28.1. </span>Skilgreining<a class="headerlink" href="#id44" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(\mbox{${\bf u}$}=u\mbox{${\bf i}$}+v\mbox{${\bf j}$}\)</span> vera
+einingarvigur. <a class="tooltip" target="_blank">Stefnuafleiða<span><staelink style="line-height:4px; font-size:80%;">Ekki fannst þýðing á hugtakinu: <i>Stefnuafleiða</i></staelink></span></a> <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> í
+stefnu <span class="math notranslate nohighlight">\(\mbox{${\bf u}$}\)</span> er skilgreind sem</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle D_{\mbox{${\bf u}$}}f(a,b)=\lim_{h\rightarrow 0^+}\frac{f(a+hu, b+hv)-f(a,b)}{h}\]</div>
+<p>ef markgildið er skilgreint.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Í skilgreiningunni á stefnuafleiðu er tekið einhliða markgildi. Berið það saman við skilgreiningu á hlutafleiðu þar sem markgildið er tvíhliða.</p>
+</div>
+</div>
+<div class="section" id="id45">
+<h3><span class="section-number">2.28.2. </span>Setning<a class="headerlink" href="#id45" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(f\)</span> sé diffranlegt í <span class="math notranslate nohighlight">\((a,b)\)</span> og
+<span class="math notranslate nohighlight">\(\mbox{${\bf u}$}=u\mbox{${\bf i}$}+v\mbox{${\bf j}$}\)</span> sé
+einingarvigur. Þá er stefnuafleiðan í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> í stefnu
+<span class="math notranslate nohighlight">\(\mbox{${\bf u}$}\)</span> skilgreind og gefin með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle D_{\mbox{${\bf u}$}}f(a,b)=\mbox{${\bf u}$}\cdot \nabla f(a,b).\]</div>
+</div>
+<div class="section" id="id46">
+<h3><span class="section-number">2.28.3. </span>Setning<a class="headerlink" href="#id46" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera gefið fall og gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé
+diffranlegt í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+<p>(a) Hæsta gildið á stefnuafleiðunni <span class="math notranslate nohighlight">\(D_{\mbox{${\bf u}$}}f(a,b)\)</span>
+fæst þegar <span class="math notranslate nohighlight">\(\mbox{${\bf u}$}\)</span> er einingarvigur í stefnu
+<span class="math notranslate nohighlight">\(\nabla f(a,b)\)</span>, þ.e.a.s.
+<span class="math notranslate nohighlight">\(\mbox{${\bf u}$}=\frac{\nabla f(a,b)}{|\nabla f(a,b)|}\)</span>.</p>
+<p>(b) Lægsta gildið á stefnuafleiðunni <span class="math notranslate nohighlight">\(D_{\mbox{${\bf u}$}}f(a,b)\)</span>
+fæst þegar <span class="math notranslate nohighlight">\(\mbox{${\bf u}$}\)</span> er einingarvigur í stefnu
+<span class="math notranslate nohighlight">\(-\nabla f(a,b)\)</span>, þ.e.a.s.
+<span class="math notranslate nohighlight">\(\mbox{${\bf u}$}=-\frac{\nabla f(a,b)}{|\nabla f(a,b)|}\)</span>.</p>
+<p>(c) Ef <span class="math notranslate nohighlight">\(\cal C\)</span> er sú hæðarlína <span class="math notranslate nohighlight">\(f\)</span> sem liggur í gegnum
+<span class="math notranslate nohighlight">\((a,b)\)</span> og <span class="math notranslate nohighlight">\(\mbox{${\bf u}$}\)</span> er einingarsnertivigur við
+<span class="math notranslate nohighlight">\(\cal C\)</span> í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> þá er
+<span class="math notranslate nohighlight">\(D_{\mbox{${\bf u}$}}f(a,b)=0\)</span>.</p>
+<a class="reference internal image-reference" href="_images/contours.png"><img alt="_images/contours.png" class="align-center" src="_images/contours.png" style="width: 50%;" /></a>
+</div>
+<div class="section" id="id47">
+<h3><span class="section-number">2.28.4. </span>Setning<a class="headerlink" href="#id47" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera gefið fall og gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé
+diffranlegt í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+<p>(a) Í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> þá vex <span class="math notranslate nohighlight">\(f\)</span> hraðast ef haldið er í
+stefnu <span class="math notranslate nohighlight">\(\nabla f(a,b)\)</span>.</p>
+<p>(b) Í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> þá minnkar <span class="math notranslate nohighlight">\(f\)</span> hraðast ef haldið er
+í stefnu <span class="math notranslate nohighlight">\(-\nabla f(a,b)\)</span>.</p>
+<p>(c) Ef <span class="math notranslate nohighlight">\(\cal C\)</span> er sú hæðarlína <span class="math notranslate nohighlight">\(f\)</span> sem liggur í gegnum
+<span class="math notranslate nohighlight">\((a,b)\)</span> og <span class="math notranslate nohighlight">\(\mbox{${\bf u}$}\)</span> er einingarsnertivigur við
+<span class="math notranslate nohighlight">\(\cal C\)</span> í punktinum <span class="math notranslate nohighlight">\((a,b)\)</span> þá er er vaxtarhraði <span class="math notranslate nohighlight">\(f\)</span>
+í stefnu <span class="math notranslate nohighlight">\(\mbox{${\bf u}$}\)</span> jafn 0.</p>
+</div>
+</div>
+<div class="section" id="stigull-aftur">
+<h2><span class="section-number">2.29. </span>Stigull (aftur)<a class="headerlink" href="#stigull-aftur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id48">
+<h3><span class="section-number">2.29.1. </span>Skilgreining<a class="headerlink" href="#id48" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall af þremur breytistærðum, þannig að allar þrjár
+fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\((x,y,z)\)</span> séu
+skilgreindar. <a href="http://www.stae.is/os/leita/gradient" class="tooltip" target="_blank">Stigull<span>en: <i>gradient</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\((x,y,z)\)</span> er
+skilgreindur sem vigurinn</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \nabla f(x,y,z)=f_1(x,y,z)\mbox{${\bf i}$}+f_2(x,y,z)\mbox{${\bf j}$}+f_3(x,y,z)\mbox{${\bf k}$}.\]</div>
+</div>
+</div>
+<div class="section" id="snertiplan-vi-jafnhaearflot">
+<span id="index-23"></span><h2><span class="section-number">2.30. </span>Snertiplan við jafnhæðarflöt<a class="headerlink" href="#snertiplan-vi-jafnhaearflot" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="id49">
+<h3><span class="section-number">2.30.1. </span>Setning<a class="headerlink" href="#id49" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall af þremur breytistærðum þannig að fallið
+<span class="math notranslate nohighlight">\(f\)</span> er diffranlegt í punktinum <span class="math notranslate nohighlight">\((a,b,c)\)</span>. Látum
+<span class="math notranslate nohighlight">\(\cal F\)</span> tákna þann <a href="http://www.stae.is/os/leita/contour_surface" class="tooltip" target="_blank">jafnhæðarflöt<span>en: <i>contour surface</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math notranslate nohighlight">\(f\)</span> sem liggur um
+<span class="math notranslate nohighlight">\((a,b,c)\)</span>. Stigullinn <span class="math notranslate nohighlight">\(\nabla f(a,b,c)\)</span> er hornréttur á
+flötinn <span class="math notranslate nohighlight">\(\cal F\)</span> í punktinum <span class="math notranslate nohighlight">\((a,b,c)\)</span> og <a href="http://www.stae.is/os/leita/tangent_plane" class="tooltip" target="_blank">snertiplan<span>en: <i>tangent plane</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> (ef
+<span class="math notranslate nohighlight">\(\nabla f(a,b,c)\neq\mbox{${\bf 0}$}\)</span>) við jafnhæðarflötinn í
+punktinum <span class="math notranslate nohighlight">\((a,b,c)\)</span> er gefið með jöfnunni</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \nabla f(a,b,c)\cdot(x,y,z)=\nabla f(a,b,c)\cdot(a,b,c)\]</div>
+<p>eða með umritun</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle f_1(a,b,c)(x-a)+f_2(a,b,c)(y-b)+f_3(a,b,c)(z-c)=0.\]</div>
+</div>
+</div>
+<div class="section" id="folgin-foll-og-taylor-nalganir">
+<h2><span class="section-number">2.31. </span>Fólgin föll og Taylor-nálganir<a class="headerlink" href="#folgin-foll-og-taylor-nalganir" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="upprifjun">
+<span id="index-24"></span><h3><span class="section-number">2.31.1. </span>Upprifjun<a class="headerlink" href="#upprifjun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skoðum feril sem gefinn er með jöfnu <span class="math notranslate nohighlight">\(F(x,y)=0\)</span> og gerum ráð fyrir
+að báðar fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(F\)</span> séu samfelldar. Látum
+<span class="math notranslate nohighlight">\((x_0,y_0)\)</span> vera punkt á ferlinum. Ef <span class="math notranslate nohighlight">\(F_2(x_0,y_0)\neq 0\)</span>
+þá má skoða <span class="math notranslate nohighlight">\(y\)</span> sem fall af <span class="math notranslate nohighlight">\(x\)</span> í grennd við punktinn
+<span class="math notranslate nohighlight">\((x_0,y_0)\)</span> og fallið <span class="math notranslate nohighlight">\(y=y(x)\)</span> er diffranlegt í punktinum
+<span class="math notranslate nohighlight">\(x_0\)</span> og afleiðan er gefin með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle y'(x_0)=-\frac{F_1(x_0,y_0)}{F_2(x_0,y_0)}.\]</div>
+<p>Sagt að jafnan <span class="math notranslate nohighlight">\(F(x,y)=0\)</span> skilgreini <span class="math notranslate nohighlight">\(y\)</span> sem <a href="http://www.stae.is/os/leita/implicit_function" class="tooltip" target="_blank">fólgið fall<span>en: <i>implicit function</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>
+af <span class="math notranslate nohighlight">\(x\)</span> í grennd við <span class="math notranslate nohighlight">\((x_0,y_0)\)</span>.</p>
+</div>
+<div class="section" id="id50">
+<h3><span class="section-number">2.31.2. </span>Setning<a class="headerlink" href="#id50" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(F\)</span> vera fall af <span class="math notranslate nohighlight">\(n\)</span>-breytum <span class="math notranslate nohighlight">\(x_1, \ldots,
+x_n\)</span> og gerum ráð fyrir að allar fyrsta stigs hlutafleiður <span class="math notranslate nohighlight">\(F\)</span> séu
+samfelldar. Látum <span class="math notranslate nohighlight">\((a_1,\ldots,a_n)\)</span> vera punkt þannig að
+<span class="math notranslate nohighlight">\(F(a_1,\ldots,a_n)=0\)</span>. Ef <span class="math notranslate nohighlight">\(F_n(a_1,\ldots,a_n)\neq 0\)</span> þá er
+til samfellt diffranlegt fall <span class="math notranslate nohighlight">\(\varphi(x_1, \ldots, x_{n-1})\)</span>
+skilgreint á opinni kúlu <span class="math notranslate nohighlight">\(B\)</span> utan um <span class="math notranslate nohighlight">\((a_1,\ldots,a_{n-1})\)</span>
+þannig að</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle \varphi(a_1,\ldots,a_{n-1})=a_n\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle F(x_1,\ldots, x_{n-1}, \varphi(x_1, \ldots, x_{n-1}))=0\]</div>
+<p>fyrir alla punkta <span class="math notranslate nohighlight">\((x_1, \ldots, x_{n-1})\)</span> í <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Ennfremur gildir að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\varphi_i(a_1,\ldots,a_{n-1})
+=-\frac{F_i(a_1,\ldots,a_n)}{F_n(a_1,\ldots,a_n)}.\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="index-25">
+<span id="id51"></span><h3><span class="section-number">2.31.3. </span>Skilgreining<a class="headerlink" href="#index-25" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><a class="tooltip" target="_blank">Jacobi-ákveða<span><staelink style="line-height:4px; font-size:80%;">Ekki fannst þýðing á hugtakinu: <i>Jacobi-ákveða</i></staelink></span></a> tveggja falla <span class="math notranslate nohighlight">\(u=u(x,y)\)</span> og <span class="math notranslate nohighlight">\(v=v(x,y)\)</span> með
+tilliti til breytanna <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> er skilgreind sem</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\frac{\partial(u,v)}{\partial(x,y)}=
+\begin{vmatrix}
+\frac{\partial u}{\partial x}&amp;\frac{\partial u}{\partial y}\\
+\frac{\partial v}{\partial x}&amp;\frac{\partial v}{\partial y}
+\end{vmatrix}.\end{split}\end{aligned}\end{align} \]</div>
+<p>Ef <span class="math notranslate nohighlight">\(F\)</span> og <span class="math notranslate nohighlight">\(G\)</span> eru föll af breytum <span class="math notranslate nohighlight">\(x,y,z,\ldots\)</span> þá
+skilgreinum við, til dæmis,</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\frac{\partial(F,G)}{\partial(x,y)}=
+\begin{vmatrix}
+\frac{\partial F}{\partial x}&amp;\frac{\partial F}{\partial y}\\
+\frac{\partial G}{\partial x}&amp;\frac{\partial G}{\partial y}
+\end{vmatrix}\quad \mbox{og}\quad
+\frac{\partial(F,G)}{\partial(y,z)}=
+\begin{vmatrix}
+\frac{\partial F}{\partial y}&amp;\frac{\partial F}{\partial z}\\
+\frac{\partial G}{\partial y}&amp;\frac{\partial G}{\partial z}
+\end{vmatrix}.\end{split}\end{aligned}\end{align} \]</div>
+<p>Ef við höfum föll <span class="math notranslate nohighlight">\(F, G, H\)</span> af breytum <span class="math notranslate nohighlight">\(x,y,z,w,\ldots\)</span> þá
+skilgreinum við, til dæmis,</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\frac{\partial(F,G,H)}{\partial(w,z,y)}=
+\begin{vmatrix}
+\frac{\partial F}{\partial w}&amp;\frac{\partial F}{\partial z}
+&amp;\frac{\partial F}{\partial y}\\
+\frac{\partial G}{\partial w}&amp;\frac{\partial G}{\partial z}
+&amp;\frac{\partial G}{\partial y}\\
+\frac{\partial H}{\partial w}&amp;\frac{\partial H}{\partial z}
+&amp;\frac{\partial H}{\partial y}
+\end{vmatrix}.\end{split}\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="setning-upprifjun-a-reglu-cramers">
+<span id="index-26"></span><h3><span class="section-number">2.31.4. </span>Setning (Upprifjun á reglu Cramers.)<a class="headerlink" href="#setning-upprifjun-a-reglu-cramers" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera andhverfanlegt <span class="math notranslate nohighlight">\(n\times n\)</span> fylki og
+<span class="math notranslate nohighlight">\(\mbox{${\bf b}$}\)</span> vigur í <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span>. Gerum ráð
+fyrir að <span class="math notranslate nohighlight">\(\mbox{${\bf x}$}=(x_1, x_2, \ldots, x_n)\)</span> sé lausn á
+<span class="math notranslate nohighlight">\(A\mbox{${\bf x}$}=\mbox{${\bf b}$}\)</span>. Skilgreinum <span class="math notranslate nohighlight">\(B_i\)</span> sem
+<span class="math notranslate nohighlight">\(n\times n\)</span> fylkið sem fæst með því að setja vigurinn
+<span class="math notranslate nohighlight">\(\mbox{${\bf b}$}\)</span> í staðinn fyrir dálk <span class="math notranslate nohighlight">\(i\)</span> í <span class="math notranslate nohighlight">\(A\)</span>. Þá
+er</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle x_i=\frac{\det B_i}{\det A}.\]</div>
+</div>
+<div class="section" id="index-27">
+<span id="id52"></span><h3><span class="section-number">2.31.5. </span>Setning (<a href="http://www.stae.is/os/leita/implicit_function_theorem" class="tooltip" target="_blank">Setningin um fólgin föll<span>en: <i>implicit function theorem</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>)<a class="headerlink" href="#index-27" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skoðum jöfnuhneppi</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{aligned}
+F_{(1)}(x_1,\ldots,x_m, y_1, \ldots, y_n)&amp;=0\\
+F_{(2)}(x_1,\ldots,x_m, y_1, \ldots, y_n)&amp;=0\\
+\vdots\\
+F_{(n)}(x_1,\ldots,x_m, y_1, \ldots, y_n)&amp;=0.\end{aligned}\end{split}\end{aligned}\end{align} \]</div>
+<p>Látum <span class="math notranslate nohighlight">\(P_0=(a_1,\ldots, a_m, b_1,\ldots, b_n)\)</span> vera punkt sem
+uppfyllir jöfnurnar. Gerum ráð fyrir að allar fyrsta stigs hlutafleiður
+fallanna <span class="math notranslate nohighlight">\(F_{(1)},\ldots, F_{(n)}\)</span> séu samfelldar á opinni kúlu
+umhverfis <span class="math notranslate nohighlight">\(P_0\)</span> og að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial(F_{(1)}, \ldots, F_{(n)})}
+{\partial( y_1, \ldots, y_n)}\,\bigg|_{P_0}\neq 0.\end{aligned}\end{align} \]</div>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\text{Þá eru til föll} \qquad \varphi_1(x_1,\ldots,x_m),\ldots,\varphi_n(x_1,\ldots,x_m)\)</span></div>
+<div class="line">á opinni kúlu <span class="math notranslate nohighlight">\(B\)</span> umhverfis <span class="math notranslate nohighlight">\((a_1,\ldots,a_m)\)</span> þannig að</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\displaystyle \varphi_1(a_1,\ldots,a_m)=b_1,\ldots,\varphi_n(a_1,\ldots,a_m)=b_n \qquad \text{og}\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{aligned}
+F_{(1)}(x_1,\ldots,x_m, \varphi_1(x_1,\ldots,x_m),\ldots,
+\varphi_n(x_1,\ldots,x_m))&amp;=0\\
+F_{(2)}(x_1,\ldots,x_m, \varphi_1(x_1,\ldots,x_m),\ldots,
+\varphi_n(x_1,\ldots,x_m))&amp;=0\\
+\vdots\\
+F_{(n)}(x_1,\ldots,x_m, \varphi_1(x_1,\ldots,x_m),\ldots,
+\varphi_n(x_1,\ldots,x_m))&amp;=0\end{aligned}\end{split}\end{aligned}\end{align} \]</div>
+<p>fyrir alla punkta <span class="math notranslate nohighlight">\((x_1,\ldots,x_m)\)</span> í <span class="math notranslate nohighlight">\(B\)</span>. Enn fremur fæst
+að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\frac{\partial \varphi_i}{\partial x_j}
+=\frac{\partial y_i}{\partial x_j}
+=-\frac{\frac{\partial(F_{(1)}, \ldots, F_{(n)})}
+{\partial( y_1, \ldots,x_j,\ldots y_n)}}
+{\frac{\partial(F_{(1)}, \ldots, F_{(n)})}{\partial( y_1, \ldots, y_n)}}.\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="setning-setningin-um-stabundna-andhverfu">
+<span id="index-28"></span><h3><span class="section-number">2.31.6. </span>Setning (Setningin um staðbundna andhverfu)<a class="headerlink" href="#setning-setningin-um-stabundna-andhverfu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="line-block">
+<div class="line">Látum</div>
+</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\mbox{${\bf f}$}(x_1,\ldots,
+x_n)=(f_1(x_1,\ldots,x_n),\ldots,f_n(x_1,\ldots,x_n))\end{aligned}\end{align} \]</div>
+<p>vera vörpun af <span class="math notranslate nohighlight">\(n\)</span> breytistærðum sem tekur gildi í
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span> og er skilgreind á opnu mengi í
+<span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\)</span>. Gerum ráð fyrir að allar fyrsta stigs
+hlutafleiður fallanna <span class="math notranslate nohighlight">\(f_1, \ldots, f_n\)</span> séu samfelld föll. Ef
+Jacobi-fylkið <span class="math notranslate nohighlight">\(D\mbox{${\bf f}$}(\mbox{${\bf x}$}_0)\)</span> er
+andhverfanlegt í punkti <span class="math notranslate nohighlight">\(\mbox{${\bf x}$}_0\)</span> á skilgreiningarsvæði
+<span class="math notranslate nohighlight">\(\mbox{${\bf f}$}\)</span> þá er til opin kúla
+<span class="math notranslate nohighlight">\(B_{\mbox{${\bf x}$}}\)</span> utan um <span class="math notranslate nohighlight">\(\mbox{${\bf x}$}_0\)</span> og opin
+kúla <span class="math notranslate nohighlight">\(B_{\mbox{${\bf y}$}}\)</span> utan um
+<span class="math notranslate nohighlight">\(\mbox{${\bf y}$}_0=f(\mbox{${\bf x}$}_0)\)</span> og vörpun
+| <span class="math notranslate nohighlight">\(\mbox{${\bf g}$}:B_{\mbox{${\bf y}$}}\rightarrow B_{\mbox{${\bf x}$}}\)</span>
+þannig að
+<span class="math notranslate nohighlight">\(\mbox{${\bf g}$}(\mbox{${\bf f}$}(\mbox{${\bf x}$}))=\mbox{${\bf x}$}\)</span>
+fyrir alla punkta <span class="math notranslate nohighlight">\(\mbox{${\bf x}$}\in B_{\mbox{${\bf x}$}}\)</span> og
+<span class="math notranslate nohighlight">\(\mbox{${\bf f}$}(\mbox{${\bf g}$}(\mbox{${\bf y}$}))=\mbox{${\bf y}$}\)</span>
+fyrir alla punkta <span class="math notranslate nohighlight">\(\mbox{${\bf y}$}\in B_{\mbox{${\bf y}$}}\)</span>.</p>
+</div>
+<div class="section" id="upprifjun-taylor-regla-i-einni-breytistaer">
+<span id="index-29"></span><h3><span class="section-number">2.31.7. </span>Upprifjun (Taylor-regla í einni breytistærð.)<a class="headerlink" href="#upprifjun-taylor-regla-i-einni-breytistaer" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera <span class="math notranslate nohighlight">\(n+1\)</span>-diffranlegt fall af einni breytistærð.
+Margliðan</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\P_{(n)}(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2
++\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n\end{aligned}\end{align} \]</div>
+<p>kallast <span class="math notranslate nohighlight">\(n\)</span><em>-ta stigs Taylor-margliða</em> <span class="math notranslate nohighlight">\(f\)</span> <em>með miðju í</em>
+<span class="math notranslate nohighlight">\(a\)</span>. Til er punktur <span class="math notranslate nohighlight">\(s\)</span> á milli <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(x\)</span>
+þannig að</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle E_{(n)}(x)=f(x)-P_{(n)}(x)=\frac{f^{(n+1)}(s)}{(n+1)!}(x-a)^{n+1}.\]</div>
+<p>Fáum svo að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{aligned}
+&amp;f(x)=P_{(n)}(x)+E_{(n)}(x) \\
+&amp;=f(a)+f'(a)(x-a)+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n
++\frac{f^{(n+1)}(s)}{(n+1)!}(x-a)^{n+1}, \end{aligned}\end{split}\end{aligned}\end{align} \]</div>
+<p>sem er kallað <span class="math notranslate nohighlight">\(n\)</span><em>-ta stigs Taylor-formúla.</em></p>
+</div>
+<div class="section" id="index-30">
+<span id="id53"></span><h3><span class="section-number">2.31.8. </span>Skilgreining<a class="headerlink" href="#index-30" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall þannig að fyrsta stigs hlutafleiður
+<span class="math notranslate nohighlight">\(f\)</span> eru skilgreindar og samfelldar. Margliðan</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle P_{(1)}(x,y)=f(a,b)+f_1(a,b)(x-a)+f_2(a,b)(y-b)\]</div>
+<p>kallast <em>fyrsta stigs Taylor-margliða</em> <span class="math notranslate nohighlight">\(f\)</span> <em>með miðju í</em>
+<span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+</div>
+<div class="section" id="id54">
+<h3><span class="section-number">2.31.9. </span>Skilgreining<a class="headerlink" href="#id54" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall þannig að fyrsta og annars stigs
+hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> eru skilgreindar og samfelldar. Margliðan</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{aligned}
+P_{(2)}&amp;(x,y)=f(a,b)+f_1(a,b)(x-a)+f_2(a,b)(y-b)\\
+&amp;+\frac{1}{2}\big(f_{11}(a,b)(x-a)^2+
+2f_{12}(a,b)(x-a)(y-b)+f_{22}(a,b)(y-b)^2\big)\end{aligned}\end{split}\end{aligned}\end{align} \]</div>
+<p>kallast <em>annars stigs Taylor-margliða</em> <span class="math notranslate nohighlight">\(f\)</span> <em>með miðju í</em>
+<span class="math notranslate nohighlight">\((a,b)\)</span>.</p>
+</div>
+<div class="section" id="skilgreining-og-athugasemd">
+<h3><span class="section-number">2.31.10. </span>Skilgreining og athugasemd<a class="headerlink" href="#skilgreining-og-athugasemd" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skilgreinum tvo <a href="http://www.stae.is/os/leita/differential_operator" class="tooltip" target="_blank">diffurvirkja<span>en: <i>differential operator</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math notranslate nohighlight">\(D_1\)</span> og <span class="math notranslate nohighlight">\(D_2\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\D_1f(a,b)=f_1(a,b)\qquad\mbox{og}\qquad
+D_2f(a,b)=f_2(a,b).\end{aligned}\end{align} \]</div>
+<p>Athugið að ef hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> af nógu háum stigum eru allar
+skilgreindar og samfelldar þá er <span class="math notranslate nohighlight">\(D_1D_2=D_2D_1\)</span>, þ.e.a.s. ekki
+skiptir máli í hvaða röð er diffrað, bara hve oft er diffrað með tilliti
+til hvorrar breytu.</p>
+</div>
+<div class="section" id="index-31">
+<span id="id55"></span><h3><span class="section-number">2.31.11. </span>Upprifjun (<a href="http://www.stae.is/os/leita/binomial_theorem" class="tooltip" target="_blank">Tvíliðuregla<span>en: <i>binomial theorem</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>)<a class="headerlink" href="#index-31" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skilgreinum</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle {n\choose j}=\frac{n!}{j!(n-j)!}.\]</div>
+<p>Talan <span class="math notranslate nohighlight">\({n\choose j}\)</span> (lesið <span class="math notranslate nohighlight">\(n\)</span> yfir <span class="math notranslate nohighlight">\(j\)</span>) er
+<span class="math notranslate nohighlight">\(j+1\)</span> talan í <span class="math notranslate nohighlight">\(n+1\)</span> línu Pascals-þríhyrningsins. Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\displaystyle (x+y)^n=\sum_{j=0}^n \textstyle{n\choose j}x^jy^{n-j}.\]</div>
+</div>
+<div class="section" id="regla">
+<h3><span class="section-number">2.31.12. </span>Regla<a class="headerlink" href="#regla" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f(x,y)\)</span> er fall þannig að allar hlutafleiður af <span class="math notranslate nohighlight">\(n\)</span>-ta
+og lægri stigum eru samfelldar þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\(hD_1+kD_2)^nf(a,b)=\sum_{j=0}^n \textstyle{n\choose j}
+h^jk^{n-j}D_1^jD_2^{n-j}f(a,b).\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="id56">
+<h3><span class="section-number">2.31.13. </span>Skilgreining<a class="headerlink" href="#id56" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir fall <span class="math notranslate nohighlight">\(f(x,y)\)</span> þannig að allar hlutafleiður af <span class="math notranslate nohighlight">\(n\)</span>-ta
+og lægri stigum eru samfelldar þá er <span class="math notranslate nohighlight">\(n\)</span><em>-ta stigs
+Taylor-margliða</em> <span class="math notranslate nohighlight">\(f\)</span> <em>með miðju í punktinum</em> <span class="math notranslate nohighlight">\((a,b)\)</span>
+skilgreind sem margliðan</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\\begin{split}\begin{aligned}
+P_{(n)}(x,y)&amp;= \sum_{m=0}^n \frac{1}{m!}((x-a)D_1+(y-b)D_2)^m f(a,b)\\
+&amp;=\sum_{m=0}^n\sum_{j=0}^m \frac{1}{m!}\textstyle{m\choose j}
+D_1^jD_2^{m-j}f(a,b)(x-a)^j(y-b)^{m-j}\\
+&amp;=\sum_{m=0}^n\sum_{j=0}^m \frac{1}{j!(m-j)!}
+D_1^jD_2^{m-j}f(a,b)(x-a)^j(y-b)^{m-j}.\end{aligned}\end{split}\end{aligned}\end{align} \]</div>
+</div>
+<div class="section" id="id57">
+<h3><span class="section-number">2.31.14. </span>Setning<a class="headerlink" href="#id57" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir fall <span class="math notranslate nohighlight">\(f(x,y)\)</span> þannig að allar hlutafleiður af <span class="math notranslate nohighlight">\(n+1\)</span>-ta
+og lægri stigum eru samfelldar þá gildir um skekkjuna í <span class="math notranslate nohighlight">\(n\)</span>-ta
+stigs Taylor-nálgun að til er tala <span class="math notranslate nohighlight">\(\theta\)</span> á milli 0 og 1 þannig
+að ef <span class="math notranslate nohighlight">\(h=x-a\)</span> og <span class="math notranslate nohighlight">\(k=y-b\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle\\f(x,y)-P_{(n)}(x,y)=\frac{1}{(n+1)!}(hD_1+kD_2)^{n+1}
+f(a+\theta h, b+\theta k).\end{aligned}\end{align} \]</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli3.html" class="btn btn-neutral float-right" title="3. Útgildisverkefni" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli1.html" class="btn btn-neutral" title="1. Ferlar" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+        <script>
+            window.addEventListener("load", function(){
+                for(var i in ggbAppletId){
+                    ggbAppletId[i].inject(i);
+                }
+            });
+        </script>
+
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

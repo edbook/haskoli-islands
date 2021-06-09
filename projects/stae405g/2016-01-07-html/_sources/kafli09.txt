@@ -1,0 +1,345 @@
+Eigingildisverkefni
+===================
+
+**Í VINNSLU**
+
+Eigingildi og eiginvigrar
+-------------------------
+
+Nálgun á eigingildum og eiginvigrum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Skilgreining** Látum :math:`A` vera :math:`n\times n` fylki. Munum að
+:math:`\lambda\in {{\mathbb  C}}` nefnist *eigingildi* fylkisins
+:math:`A` ef til er
+:math:`{\mbox{${\bf v}$}}\in {{\mathbb  C}}^n\setminus\{{\mbox{${\bf 0}$}}\}`
+þannig að
+
+.. math:: A{\mbox{${\bf v}$}}=\lambda{\mbox{${\bf v}$}}.
+
+Vigurinn :math:`{\mbox{${\bf v}$}}` nefnist þá *eiginvigur* fylkisins
+:math:`A` og við segjum að hann svari til eigingildisins
+:math:`\lambda`.
+
+**Athugasemd** Eigingildi fylkisins :math:`A` eru nákvæmlega núllstöðvar
+kennimargliðunnar
+
+.. math:: p_A(z)=\det(zI-A), \qquad z\in {{\mathbb  C}}.
+
+**Athugasemd** Ef :math:`{\mbox{${\bf v}$}}` er eiginvigur fylkisins
+:math:`A`, þá er :math:`\alpha {\mbox{${\bf v}$}}` einnig eiginvigur
+fyrir sérhvert
+:math:`\alpha\in {{\mathbb  C}}\setminus \{{\mbox{${\bf 0}$}}\}`.
+
+Gróf staðsetning á eigingildum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Skífusetning Gerschgorins
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Skilgreinum
+
+.. math:: r_i=\sum\limits_{{\substack{j=1 \\ j\neq i}}}^n|a_{ij}|,
+
+sem er summan af tölugildum stakanna í línu :math:`i` *utan
+hornalínunnar* og látum
+
+.. math:: C_i=\{z\in {{\mathbb  C}}\,;\, |z-a_{ii}|\leq r_i\}
+
+tákna skífuna með miðju í :math:`a_{ii}` og geislann :math:`r_i`. Þá
+gildir
+
+#. Öll eigingildi :math:`A` liggja í sammengi skífanna :math:`C_i`.
+
+#. Ef :math:`k` af skífunum :math:`C_i` mynda samanhangandi svæði
+   :math:`R` í :math:`{{\mathbb  C}}` sem er sundlægt við hinar
+   :math:`n-k` skífurnar, þá inniheldur :math:`R` nákvæmlega :math:`k`
+   eigingildi.
+
+Eiginvigragrunnar
+~~~~~~~~~~~~~~~~~
+
+Nokkrar staðreyndir um eigingildi og eiginvigra:
+
+#. Eiginvigrar sem svara til ólíkra eigingilda eru línulega óháðir.
+
+#. Eiginvigrar sem svara til eins ákveðins eigingildis :math:`\lambda`
+   spanna hlutrúm í :math:`{{\mathbb  C}}^n`.
+
+#. Við segjum að fylkið :math:`A` sé *hornalínugeranlegt* ef til eru
+   eigingildi :math:`\lambda_1,\lambda_2,\dots,\lambda_n` og tilsvarandi
+   eiginvigrar
+   :math:`{\mbox{${\bf v}$}}_1,{\mbox{${\bf v}$}}_2,\dots,{\mbox{${\bf v}$}}_n`
+   sem mynda grunn í :math:`{{\mathbb  R}}^n`.Þá er hægt að skrifa
+
+   .. math:: A=T\Lambda T^{-1}
+
+   þar sem :math:`\Lambda` er hornalínufylki með eigingildin
+   :math:`\lambda_1,\dots,\lambda_n` á hornalínunni og :math:`T` er
+   :math:`n\times n` fylki þannig að dálkur nr. \ :math:`k` í því
+   samanstendur af hnitum :math:`{\mbox{${\bf v}$}}_k` miðað við
+   staðalgrunninn í :math:`{{\mathbb  R}}^n`.
+
+#. Ef fylkið :math:`A` er samhverft, þá er það hornalínugeranlegt.
+
+Veldaaðferð
+-----------
+
+Hugsum okkur nú að við :math:`A` sé hornalínugeranlegt og að við röðum
+eigingildunum á hornalínu :math:`\Lambda` í minnkandi röð eftir
+tölugildi
+
+.. math:: |\lambda_1|\geq |\lambda_2|\geq \cdots\geq |\lambda_n|
+
+Tökum einhvern vigur :math:`{\mbox{${\bf x}$}}^{(0)}` og lítum á liðun
+hans í eiginvigra
+
+.. math:: {\mbox{${\bf x}$}}^{(0)}=\alpha_1{\mbox{${\bf v}$}}_1+\cdots+\alpha_n{\mbox{${\bf v}$}}_n
+
+Skilgreinum síðan rununa :math:`\big({\mbox{${\bf x}$}}^{(m)}\big)` með
+ítruninni
+
+.. math:: {\mbox{${\bf x}$}}^{(m+1)}=A{\mbox{${\bf x}$}}^{(m)}.
+
+Við fáum þá
+
+.. math::
+
+   \begin{aligned}
+   {\mbox{${\bf x}$}}^{(1)} =A{\mbox{${\bf x}$}}^{(0)}&=\alpha_1A{\mbox{${\bf v}$}}_1+\cdots+\alpha_nA{\mbox{${\bf v}$}}_n\\
+   &=\alpha_1\lambda_1{\mbox{${\bf v}$}}_1+\cdots+\alpha_n\lambda_n{\mbox{${\bf v}$}}_n,\end{aligned}
+
+.. math::
+
+   \begin{aligned}
+   {\mbox{${\bf x}$}}^{(2)}=A{\mbox{${\bf x}$}}^{(1)}&=\alpha_1\lambda_1A{\mbox{${\bf v}$}}_1+\cdots+\alpha_n\lambda_nA{\mbox{${\bf v}$}}_n,\\
+   &=\alpha_1\lambda_1^2{\mbox{${\bf v}$}}_1+\cdots+\alpha_n\lambda_n^2{\mbox{${\bf v}$}}_n\\ 
+   & \qquad  \vdots\qquad  \vdots \qquad \vdots\\
+   {\mbox{${\bf x}$}}^{(m)}&=\alpha_1\lambda_1^m{\mbox{${\bf v}$}}_1+\cdots+\alpha_n\lambda_n^m{\mbox{${\bf v}$}}_n\end{aligned}
+
+ Síðasti vigurinn er
+
+.. math::
+
+   {\mbox{${\bf x}$}}^{(m)}=  \lambda_1^m 
+   \big(\alpha_1{\mbox{${\bf v}$}}_1+(\lambda_2/\lambda_1)^m\alpha_2{\mbox{${\bf v}$}}_+\cdots+
+   (\lambda_n/\lambda_1)^m \alpha_n{\mbox{${\bf v}$}}_n\big)
+
+Hnit númer :math:`i` í þessum vigri er:
+
+.. math::
+
+   x_i^{(m)}=  \lambda_1^m 
+   \big(\alpha_1v_{1,i}+(\lambda_2/\lambda_1)^m\alpha_2v_{2,i}+\cdots+
+   (\lambda_n/\lambda_1)^m \alpha_nv_{n,i}\big)
+
+Hugsum okkur nú að :math:`|\lambda_1|>|\lambda_2|`. Þá fæst:
+
+.. math::
+
+   \dfrac{x_i^{(m)}}{x_i^{(m-1)}}
+   =
+   \dfrac{\lambda_1^m\big(\alpha_1v_{1,i}+O((\lambda_2/\lambda_1)^m)\big)}
+   {\lambda_1^{m-1}\big(\alpha_1v_{1,i}+O((\lambda_2/\lambda_1)^{m-1})\big)}
+
+Ef við höfum :math:`\alpha_1v_{1,i}\neq 0`, þá er niðurstaðan
+
+.. math::
+
+   \dfrac{x_i^{(m)}}{x_i^{(m-1)}}
+   =\lambda_1
+   \dfrac{\big(1+O((\lambda_2/\lambda_1)^m)\big)}
+   {\big(1+O((\lambda_2/\lambda_1))^{m-1}\big)} \to \lambda_1
+   \quad \text{ þegar }  \quad m\to \infty.
+
+Skoðum aftur
+
+.. math::
+
+   {\mbox{${\bf x}$}}^{(m)}=  \lambda_1^m 
+   \big(\alpha_1{\mbox{${\bf v}$}}_1+(\lambda_2/\lambda_1)^m\alpha_2{\mbox{${\bf v}$}}_2+\cdots+
+   (\lambda_n/\lambda_1)^m \alpha_n{\mbox{${\bf v}$}}_n\big)
+
+Ef :math:`|\lambda_1|>|\lambda_2|`, þá gildir fyrir :math:`j > 1` að
+:math:`(\lambda_j/\lambda_1)^m \to 0` þegar :math:`m \to \infty` og
+
+.. math:: \lim_{m\to \infty} \frac{{\mbox{${\bf x}$}}^{(m)}}{\lambda_1^m} = \alpha_1 {\mbox{${\bf v}$}}_1.
+
+Þannig að ef :math:`{\mbox{${\bf x}$}}^{(0)}` var valinn í upphafi
+þannig að :math:`\alpha_1 \neq 0`, þá skilar þetta eiginvigrinum
+:math:`\alpha_1{\mbox{${\bf v}$}}_1` fyrir eigingildið
+:math:`\lambda_1`.
+
+Reiknirit til þess að ákvarða stærsta eigingildi fylkis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Þegar við reiknum :math:`{\mbox{${\bf x}$}}^{m}` eins og hér að framan
+þá er ekki ólíklegt að við lendum í undir- eða yfirflæðisvillum ef lengd
+:math:`{\mbox{${\bf x}$}}` (skv. einhverjum staðli) stefnir á 0 eða
+:math:`+\infty`. Til þess að ráða bót á þessu þá stöðlum við vigurinn í
+hverju skrefi á eftirfarandi hátt.
+
+Við veljum :math:`{\mbox{${\bf x}$}}^{(0)}` með einhverjum hætti og
+skilgreinum síðan
+
+.. math::
+
+   {\mbox{${\bf y}$}}^{(m)}=A{\mbox{${\bf x}$}}^{(m-1)}, \qquad \text{ og svo }
+   {\mbox{${\bf x}$}}^{(m)}=\dfrac{{\mbox{${\bf y}$}}^{(m)}}{y_{p_m}^{(m)}} \qquad
+
+þar sem :math:`p_m` er númerið á því hniti í
+:math:`{\mbox{${\bf y}$}}^{(m)}` sem hefur stærst tölugildi, sem þýðir
+að það hnit :math:`p_m` uppfyllir
+
+.. math:: |y_{p_m}^{(m)}|=\|{\mbox{${\bf y}$}}^{(m)}\|_\infty=\max_{1\leq j\leq n}|y_j^{(m)}|.
+
+Ef mörg númer uppfylla þetta skilyrði, þá tökum við bara :math:`p_m`
+sem lægsta gildið á :math:`j` þar sem jafnaðarmerki gildir (enda skiptir
+það ekki máli fyrir skilgreininguna á :math:`{\mbox{${\bf x}$}}^{(m)}`).
+
+Samleitnin
+~~~~~~~~~~
+
+Nú kemur í ljós að :math:`y_{p_{m-1}}^{(m)}` stefnir á
+:math:`\lambda_1`. Auk þess stefnir :math:`{\mbox{${\bf x}$}}^{(m)}` á
+eiginvigur sem svarar til :math:`\lambda_1` og hefur lengdina :math:`1`
+í :math:`l_\infty` staðlinum.
+
+Í útreikningum skilgreinum við því rununa
+:math:`\lambda^{(m)}=y_{p_{m-1}}^{(m)}`. Við gefum okkur síðan þolmörk á
+skekkju :math:`TOL` og reiknum úr runurnar þar til eitt af
+stoppskilyrðunum gildir:
+
+.. math::
+
+   \begin{aligned}
+   |\lambda^{(m)}-\lambda^{(m-1)}|&<TOL \qquad \text{ eða } \\
+   \|{\mbox{${\bf x}$}}^{(m)}-{\mbox{${\bf x}$}}^{(m-1)}\|&<TOL \qquad \text { eða } \\
+   \|A{\mbox{${\bf x}$}}^{(m)}-\lambda^{(m)}{\mbox{${\bf x}$}}^{(m)}\|&<TOL.\end{aligned}
+
+Samhverf fylki
+~~~~~~~~~~~~~~
+
+Munum að ef :math:`A` er samhverft, þá hefur :math:`A` eiginvigragrunn
+og eiginvigra sem svara til ólíkra eigingilda eru hornréttir.
+
+Í þessu tilfelli er einfaldara að smíða reiknirit svona:
+
+.. math::
+
+   \begin{aligned}
+     {\mbox{${\bf y}$}}^{(m)}&=A{\mbox{${\bf x}$}}^{(m-1)}\\
+   \lambda^{(m)}&={{\mbox{${\bf x}$}}^{(m-1)}}^T{\mbox{${\bf y}$}}^{(m)}\\
+   {\mbox{${\bf x}$}}^{(m)}&= \frac{{\mbox{${\bf y}$}}^{(m)}}{\sqrt{({\mbox{${\bf y}$}}^{(m)})^T{\mbox{${\bf y}$}}^{(m)}}}\end{aligned}
+
+Samleitnin verður sú sama: :math:`\lambda^{(m)}` stefnir á stærsta
+eigingildið og :math:`{\mbox{${\bf x}$}}^{(m)}` stefnir á tilsvarandi
+eiginvigur.
+
+Meira um eigingildi og eiginvigra
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Setning** Látum sem fyrr :math:`A` vera :math:`n\times n` fylki,
+:math:`\lambda_1,\dots,\lambda_n` vera eigingildi og
+:math:`{\mbox{${\bf v}$}}_1,\dots,{\mbox{${\bf v}$}}_n` vera tilsvarandi
+eiginvigra.
+
+#. Látum :math:`p(x)=a_0+a_1x+\cdots+a_mx^m` vera margliðu og
+   skilgreinum :math:`n\times n` fylkið :math:`B` með því að stinga
+   :math:`A` inn í :math:`p`,
+
+   .. math:: B=p(A)=a_0I+a_1A+\cdots+a_mA^m
+
+   Þá eru tölurnar :math:`p(\lambda_1),\dots,p(\lambda_n)` eigingildi
+   fylkisins :math:`B=p(A)` með tilsvarandi eiginvigrum
+   :math:`{\mbox{${\bf v}$}}_1,\dots,{\mbox{${\bf v}$}}_n`.
+
+#. Ef :math:`A` er andhverfanlegt þá eru
+   :math:`1/\lambda_1,\dots,1/\lambda_n` eigingildi :math:`A^{-1}` með
+   tilsvarandi eiginvigrum
+   :math:`{\mbox{${\bf v}$}}_1,\dots,{\mbox{${\bf v}$}}_n`.
+
+Andhverf veldaaðferð
+--------------------
+
+Af síðustu setningu leiðir að fylkið :math:`B=(A-qI)^{-1}` hefur
+eigingildin
+
+.. math::
+
+   \mu_1=\dfrac 1{\lambda_1-q},\ 
+   \mu_2=\dfrac 1{\lambda_2-q},\ \cdots \  
+   \mu_n=\dfrac 1{\lambda_n-q}.
+
+Hugsum okkur nú að við viljum finna nálgunargildi fyrir eigingildið
+:math:`\lambda_k` og að við vitum út frá setningu Gerschgorins skífunum
+nokkurn veginn hvar það er staðsett.
+
+Ef við erum með :math:`q` nógu nálægt :math:`\lambda_k`, þá verður
+:math:`\mu_k` stærsta eigingildi fylkisins :math:`B=(A-qI)^{-1}`
+
+Þá getum við beitt veldaaðferðinni til þess að búa til runu
+:math:`\mu^{(m)}\to \mu_k` og við fáum að
+
+.. math:: \lambda^{(m)}=\dfrac 1{\mu^{(m)}}+q\to \lambda_k.
+
+Ef veldaaðferðinni er beitt á fylkið :math:`B=(A-qI)^{-1}` þá þurfum við
+að reikna út
+:math:`{\mbox{${\bf y}$}}^{(m)}=(A-qI)^{-1}{\mbox{${\bf x}$}}^{(m-1)}` í
+hverju skrefi.
+
+Þetta er gert þannig að fyrst framkvæmum við :math:`LU`-þáttun á fylkinu
+:math:`LU=(A-qI)` og framkvæmum síðan for- og endurinnsetningu til þess
+að leysa :math:`LU{\mbox{${\bf y}$}}^{(m)}=x^{(m-1)}`.
+
+Tölulegar aðferðir fyrir LU-þáttun eru í kafla 3.
+
+Reiknirit til þess að nálga eigingildi og eiginvigra
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Takmarkið er að finna nálgun á eigingildinu :math:`\lambda_k`.
+
+#. Finnum :math:`q\in {{\mathbb  R}}` sem liggur næst eigingildinu
+   :math:`\lambda_k` af öllum eigingildum :math:`A`
+
+#. Þáttum :math:`LU=A-qI`.
+
+#. Við veljum :math:`{\mbox{${\bf x}$}}^{(0)}` með einhverjum hætti og
+   leysum síðan :math:`{\mbox{${\bf y}$}}^{(m)}` út úr jöfnunni
+
+   .. math:: LU{\mbox{${\bf y}$}}^{(m)}={\mbox{${\bf x}$}}^{(m-1)}.
+
+#. Skilgreinum :math:`{\mbox{${\bf x}$}}^{(m)}={{\mbox{${\bf y}$}}^{(m)}}/{y_{p_m}^{(m)}}` þar sem :math:`p_m` er númerið á því hniti í
+   :math:`{\mbox{${\bf y}$}}^{(m)}` sem hefur stærst tölugildi, sem
+   þýðir að það hnit uppfyllir
+
+   .. math:: |y_{p_m}^{(m)}|=\|{\mbox{${\bf y}$}}^{(m)}\|_\infty=\max_{1\leq j\leq n}|y_j^{(m)}|.
+
+   Ef mörg númer uppfylla þetta skilyrði, þá tökum við bara :math:`p_m`
+   sem lægsta gildið á :math:`j` þar sem jafnaðarmerki gildir.
+
+Niðurstaðan verður að
+
+.. math:: \lambda^{(m)}=\dfrac 1{y_{p_{m-1}}^{(m)}}+q \to \lambda_k
+
+og :math:`{\mbox{${\bf x}$}}^{(m)}` stefnir á tilsvarandi eiginvigur.
+
+Fræðilegar spurningar
+---------------------
+
+#. Hvernig er setning Gerschgorins um staðsetningu eigingilda fylkis?
+
+#. Hvernig er veldaaðferð til þess að nálga það eigingildi fylkis sem
+   hefur stærst tölugildi?
+
+#. Afhverju skilgreinum
+   :math:`{\mbox{${\bf x}$}}^{(m)} = \frac{{\mbox{${\bf y}$}}^{(m)}}{y_{p_m}^{(m)}}`
+   þar sem
+   :math:`{\mbox{${\bf y}$}}^{(m)} = A {\mbox{${\bf x}$}}^{(m-1)}`, en
+   ekki bara
+   :math:`{\mbox{${\bf x}$}}^{(m)} = A {\mbox{${\bf x}$}}^{(m-1)}`?
+
+#. Hvernig er andhverf veldaaðferð til þess að nálga eigingildi fylkis?
+
+#. Hvernig er skynsamlegast að velja :math:`q` í andhverfu
+   veldaaðferðinni ef við viljum finna eigingildið :math:`\lambda_k`?

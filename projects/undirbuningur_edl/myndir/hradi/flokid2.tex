@@ -1,0 +1,23 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}
+  \draw [->] (-0.2,0) -- (5.5,0)node[anchor=west]{$t$[s]};
+  \draw [->] (0,-0.2) -- (0,11.5)node[anchor=south]{$x$[m]};
+  \foreach \x in {0,1,...,10}{
+    \draw (\x/2,-0.5) node{\small\x};
+    \draw (\x/2,-0.1) -- (\x/2,0.1);
+    };
+  \foreach \x in {0,100,...,1100}{
+    \draw (-0.5,\x/100) node{\small\x};
+    \draw (-0.1,\x/100) -- (0.1,\x/100);
+    };
+  \draw (0,0) parabola  (10/2,1009/100);
+  \draw [red](-0.1/2,1010/100) -- (0.1/2,1010/100) node[anchor=south east]{\small $x_1$};
+  \draw [dashed] (0,1009/100)-- (10/2,1009/100) -- (10/2,0);
+  \draw [<-](10/2,1010/100) arc(230:180:1)node [anchor= south, draw,align=center, fill=white] {Vélar bila};
+  %\draw [blue,decorate,decoration={brace,amplitude=6pt}] (0,0) -- (10,0) node [black,midway, yshift=0.4 cm] {$t_1$} ;
+\end{tikzpicture}
+\end{document}

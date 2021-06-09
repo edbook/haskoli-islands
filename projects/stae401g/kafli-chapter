@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+cat Kafli1.rst Kafli2.rst Kafli3.rst > chapter1.rst
+cat Kafli4.rst Kafli5.rst  > chapter2.rst
+cat Kafli6.rst Kafli7.rst Kafli8.rst  > chapter3.rst
+cat Kafli9.rst Kafli10.rst  > chapter4.rst
+cat Kafli11.rst Kafli12.rst  > chapter5.rst
+cat Kafli13.rst Kafli14.rst Kafli15.rst  > chapter6.rst
+cat Kafli16.rst Kafli17.rst Kafli18.rst  > chapter7.rst
+cat Kafli19.rst Kafli20.rst > chapter8.rst
+cat Kafli21.rst Kafli22.rst Kafli23.rst  > chapter9.rst
+cat Kafli24.rst Kafli25.rst  > chapter10.rst

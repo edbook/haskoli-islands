@@ -1,0 +1,331 @@
+
+Fræðilegar spurningar úr kafla 1
+--------------------------------
+
+#. Hverjar eru helstu tegundir af skekkjum sem þarf að taka tillit til í
+   tölulegum útreikningum?
+
+#. Hvernig eru *skekkja* og *hlutfallsleg skekkja* í nálgun á rauntölu
+   skilgreindar?
+
+#. Hver er skilgreiningin á því að *rauntalnaruna* :math:`(x_n)` er sögð
+   vera *samleitin* að *markgildinu* :math:`r`?
+
+#. Ef :math:`(x_n)` er gefin runa sem stefnir á :math:`r` og skekkjan er
+   :math:`e_n=r-x_n`, hvað þýðir þá að runan sé *að minnsta kosti
+   línulega samleitin*, *að minnsta kosti ferningssamleitin* og *að
+   minnsta kosti samleitin af stigi* :math:`\alpha`
+
+#. Eftir hvaða reglum eru tölur afrúnaðar í tugakerfi?
+
+#. Hvernig er fyrirframmat á skekkju framkvæmt?
+
+#. Útskýrið hvernig er eftirámat á skekkju framkvæmt við nálgun á
+   rauntölu :math:`r` er aðferðin er ofurlínulega samleitin?
+
+#. Útskýrið hvernig er eftirámat á skekkju framkvæmt við nálgun á
+   rauntölu :math:`r` ef aðferðin er að minnsta kosti línulega
+   samleitin.
+
+#. Útskýrið hvernig samleitnistig runu er metið.
+
+#. Útskýrið hvernig forðast á styttingarskekkjur þegar núllstöðvar
+   annars stigs margliðu :math:`ax^2+bx+c` eru reiknaðar
+
+#. Hvernig er setning Taylors og hvernig er skekkjan í Taylor-nálgun?
+
+#. Útskýrið hvernig hægt er að meta hlutfallslega skekkju í núllstöð
+   :math:`r(\alpha)` fallsins :math:`x\mapsto f(x,\alpha)` ef gefið er
+   að það er skekkja í gildinu sem notað er fyrir :math:`\alpha`.
+
+#. Hvað þýðir að :math:`f(t) = O(g(t))` ef :math:`t \rightarrow c` þar
+   sem :math:`f` og :math:`g` eru föll sem skilgreind eru á bili sem
+   inniheldur :math:`c` eða á hálfás :math:`x>a` í tilfellinu þegar
+   :math:`c=+\infty`?
+
+#. Hvað þýðir að :math:`a_n = O(b_n)` ef :math:`n\to \infty` þegar
+   :math:`(a_n)` og :math:`(b_n)` eru tvær talnarunur?
+
+
+Fræðilegar spurningar úr kafla 2
+--------------------------------
+
+#. Hvernig er ítrekunarskrefið í helmingunaraðferð?
+
+#. Hvernig er skekkjumatið í helmingunaraðferð?
+
+#. Hvað þýðir að punkturinn :math:`p` sé fastapunktur fallsins
+   :math:`f`?
+
+#. Hvernig er ítrekunarskrefið í fastapunktsaðferð?
+
+#. Hvað þýðir að fall :math:`f:[a,b]\to {\mathbb  R}` sé *herping*?
+
+#. Setjið fram fastapunktssetninguna.
+
+#. Rökstyðjið að fastapunktsaðferð sé a.m.k. línulega samleitin.
+
+#. Hvernig er ítrekunarskrefið í sniðilsaðferð?
+
+#. Hvernig er skekkjuformúlan í sniðilsaðferð?
+
+#. Rökstyðjið að hægt sé að nota :math:`|x_{n+1}-x_n|` fyrir mat á
+   skekkju í sniðilsaðferð.
+
+#. Hvernig er ítrekunarskrefið í aðferð Newtons?
+
+#. Hvernig er skekkjumatið í aðferð Newtons?
+
+#. Rökstyðjið að aðferð Newtons sé a.m.k. ferningssamleitin.
+
+
+
+Fræðilegar spurningar úr kafla 3
+--------------------------------
+
+#. Hvernig er reiknirit Horners og hver er tilgangur þess?
+
+#. Hvernig er brúunarverkefnið fyrir punktana
+   :math:`(x_0,y_0),\dots,(x_m,y_m)`?
+
+#. Rökstyðjið að einungis sé til ein brúunarmargliða af stigi
+   :math:`\leq m` fyrir brúunarpunktana
+   :math:`(x_0,y_0),\dots,(x_m,y_m)`
+
+#. Hvernig er Lagrange form brúunarmargliðu og hvernig eru
+   Lagrange-margliður fyrir gefið punktasafn skilgreindar?
+
+#. Hvernig er Newton-form brúunarmargliðu fyrir fyrir punktana
+   :math:`(x_0,y_0),\dots,(x_m,y_m)` þar sem :math:`x_i\neq x_j`?
+
+#. Hvernig eru mismunakvótarnir :math:`y[x_i,\ldots,x_{i+j}]`
+   skilgreindir?
+
+#. Hvað er alhæft brúunarverkefni?
+
+#. Hvernig er margfeldni brúunarpunkts í alhæfðu brúunarverkefni
+   skilgreind?
+
+#. Rökstyðjið að alhæfða brúunarverkefnið með :math:`m+1` skilyrði hafi
+   ótvírætt ákvarðaða lausn af stigi :math:`\leq m`.
+
+#. Hvernig er skekkjuformúlan í nálgun á falli :math:`f(x)` með alhæfðri
+   brúunarmargliðu :math:`p(x)` sett fram með mismunakvótum?
+
+#. Hvernig er skekkjuformúlan í nálgun á falli :math:`f(x)` með alhæfðri
+   brúunarmargliðu :math:`p(x)` sett fram með :math:`m+1` afleiðu af
+   :math:`f`?
+
+#. Hvaða skilyrði þarf þriðja stigs splæsifall að uppfylla og hvað
+   vantar mörg skilyrði upp á að þau gefi ótvírætt ákvarðað fall?
+
+#. Hvernig eru ekki-hnúts endaskilyrði á splæsifalli?
+
+#. Hvernig eru þvinguð endaskilyrði á splæsifalli?
+
+#. Hvernig eru náttúrleg endaskilyrði á splæsifalli?
+
+#. Hvernig eru lotubundin endaskilyrði á splæsifalli?
+
+#. Lýsið því hvernig splæsiferlar eru notaðir til þess að teikna ferla í
+   plani.
+
+#. Lýsið aðferð minnstu fervika.
+
+#. Hvernig er jöfnuhneppið sem þarf að leysa í aðferð minnstu fervika?
+
+#. Hvernig er jafna bestu línu gegnum punktasafn fundin?
+
+#. Hvernig er jafna besta fleygboga gegnum punktasafn fundin?
+
+
+Fræðilegar spurningar úr kafla 3
+--------------------------------
+
+#. Hver er meginhugmyndin í tölulegri deildun og heildun?
+
+#. Hvað eru *frammismunur* og *bakmismunur* til þess að nálga afleiðu?
+
+#. Hvernig er *miðsettur mismunakvóti* fyrir fyrsta stigs afleiðu
+   skilgreindur og hver er skekkjan í nálgun á afleiðu falls með honum?
+
+#. Hvernig er *miðsettur mismunakvóti* fyrir annars stigs afleiðu
+   skilgreindur og hvernig er skekkjan í nálgun á annarri afleiðu með
+   honum?
+
+#. Hvernig eru brúnunarmargliður notaðar til þess að reikna út afleiðu
+   falls :math:`f` í punkti :math:`a` og hver er skekkjan í slíkri
+   nálgun?
+
+#. Lýsið fyrsta skrefinu i Richardson-útgiskun þar sem formúlan
+   :math:`f'(a)=R_0(h)+a_2h^2+a_4h^4+O(h^6)` er endurbætt þannig að út
+   komi skekkja sem er :math:`O(h^4)`.
+
+#. Lýsið Richardson-útgiskunartöflunni.
+
+#. Hvaða skekkjumat er notað í Richardson-útgiskun?
+
+#. Hvernig er almenna aðferðin sem notar brúunarmargliður til þess að
+   nálga heildi og nefnd er Newton-Cotes-heildun og hvernig er
+   skekkjuformúlan í henni?
+
+#. Hvernig er trapisuregla til þess að nálga heildi og aðferðarskekkja
+   hennar?
+
+#. Hvernig er miðpunktsregla til þess að nálga heildi og aðferðarskekkja
+   hennar?
+
+#. Hvernig er Simpson-regla til þess að nálga heildi og aðferðarskekkja
+   hennar?
+
+#. Hvernig er samsetta trapisureglan og aðferðarskekkja hennar?
+
+#. Hvernig er samsetta miðpunktsreglan og aðferðarskekkja hennar?
+
+#. Hvernig er samsetta Simpson-reglan og aðferðarskekkja hennar?
+
+#. Hvernig er rakningarformúla fyrir samsettu trapisureglunni?
+
+#. Lýsið reikniritinu fyrir Romberg-heildun.
+
+#. Hver er skekkjan í eftirámatinu í Romberg-heildun?
+51 more lines; before #1  4 seconds ago                                 
+
+
+
+Fræðilegar spurningar úr kafla 4 og 5
+--------------------------------------
+
+#. Hver er meginhugmyndin í tölulegri deildun og heildun?
+
+#. Hvernig er almenna aðferðin sem notar brúunarmargliður til þess að
+   nálga heildi og nefnd er Newton-Cotes-heildun og hvernig er
+   skekkjuformúlan í henni?
+
+#. Hvernig er trapisuregla til þess að nálga heildi og aðferðarskekkja
+   hennar?
+
+#. Hvernig er miðpunktsregla til þess að nálga heildi og aðferðarskekkja
+   hennar?
+
+#. Hvernig er Simpson-regla til þess að nálga heildi og aðferðarskekkja
+   hennar?
+
+#. Hvernig er samsetta trapisureglan og aðferðarskekkja hennar?
+
+#. Hvernig er samsetta miðpunktsreglan og aðferðarskekkja hennar?
+
+#. Hvernig er samsetta Simpson-reglan og aðferðarskekkja hennar?
+
+#. Hvernig er rakningarformúla fyrir samsettu trapisureglunni?
+
+#. Lýsið reikniritinu fyrir Romberg-heildun.
+
+#. Hver er skekkjan í eftirámatinu í Romberg-heildun?
+
+
+Fræðilegar spurningar úr kafla 6
+--------------------------------
+
+#. Hvernig er hægt að skrifa annars stigs jöfnu :math:`u''=f(t,u,u')`
+   sem jafngilt hneppi?
+
+#. Hvað er *bein aðferð* fyrir upphafsgildisverkefni?
+
+#. Hvað er *óbein aðferð* fyrir upphafsgildisverkefni?
+
+#. Hvað er *eins skrefs aðferð* fyrir upphafsgildisverkefni?
+
+#. Hvað er *fjölskrefaaðferð* fyrir upphafsgildisverkefni?
+
+#. Hvernig er *aðferð Eulers*?
+
+#. Hvernig er *aðferð Eulers endurbætt*?
+
+#. Hvað er *forsagnar- og leiðréttingaraðferð*?
+
+#. Hvernig er *2. stigs Runge-Kutta aðferð*?
+
+#. Hvernig er *4. stigs Runge-Kutta aðferð*?
+
+#. Hvernig er staðarskekkja í nálgunaraðferð fyrir upphafsgildisverkefni
+   skilgreind?
+
+#. Rökstyðjið að staðarskekkja í aðferð Eulers sé :math:`O(h)`, þar sem
+   :math:`h` er tímaskrefið.
+
+#. Hvernig er tveggja skrefa Adams-Bashforth-aðferð.
+
+#. Hvað þýðir að nálgunaraðferð fyrir upphafsgildisverkefni sé
+   samleitin?
+
+#. Hvað þýðir a nálgunaraðferð samræmist upphafsgildisverkefni?
+
+
+Fræðilegar spurningar úr kafla 8
+---------------------------------
+
+#. Lýsið því hvernig línulegt jöfnuhneppi er leyst með
+   :math:`LU`-þáttun, for- og endurinnsetningu.
+
+#. Hvað þýðir að :math:`A` sé efra þríhyrningsfylki og hvað þýðir að
+   :math:`A` sé neðra þríhyrningsfylki?
+
+#. Hvað er bandfylki og hvað er þríhornalínufylki?
+
+#. Hvað þýðir að :math:`A` sé samhverft og hvað þýðir að :math:`A` sé
+   jákvætt ákvarðað?
+
+#. Hver er heildarfjöldi reikniaðgerða sem þarf til þess að leysa
+   :math:`n\times n` línulegt jöfnuhneppi
+   :math:`A\mbox{${\bf x}$}=\mbox{${\bf b}$}` ef :math:`A` er efra eða
+   neðra þríhyrningsfylki?
+
+#. Hvað er :math:`LU`-þáttun á :math:`n\times n` fylki :math:`A`?
+
+#. Hver er stærðargráðan :math:`\approx an^k` á fjölda langra
+   reikningsaðgerða sem þarf til þess að framkvæma :math:`LU`-þáttun á
+   :math:`n\times n` fylki?
+
+#. Hvað er :math:`PLU`-þáttun á fylki :math:`A` og til hvers er henni
+   beitt?
+
+#. Hvað er fylkjastaðall og hvernig er fylkjastaðall sem staðall
+   :math:`\|\cdot\|_v` á :math:`{\mathbb  R}^ n` gefur af sér? (Þetta er
+   einnig nefnt náttúrlegur fylkjastaðall.)
+
+#. Hvað er rófgeisli fylkis og hvernig tengist hann fylkjastöðlum?
+
+#. Hvernig er ástandstala fylkis skilgreind og hvernig er hún notuð til
+   þess að meta hlutfallslega skekkju í nálgunarlausn á línulegu
+   jöfnuhneppi :math:`A\mbox{${\bf x}$}=\mbox{${\bf b}$}`?
+
+#. Hvernig er skiptingaraðferð til þess að finna nálgun á línulegu
+   jöfnuhneppi?
+
+#. Jacobi-aðferð er dæmi um skiptingaraðferð. Hvernig er hún?
+
+#. Gauss-Seidel-aðferð er annað dæmi um skiptingaraðferð. Hvernig er
+   hún?
+
+#. Hvernig er ítrekunarskrefið í aðferð Newtons fyrir hneppi?
+
+Fræðilegar spurningar úr kafal 9
+--------------------------------
+
+#. Hvernig er setning Gerschgorins um staðsetningu eigingilda fylkis?
+
+#. Hvernig er veldaaðferð til þess að nálga það eigingildi fylkis sem
+   hefur stærst tölugildi?
+
+#. Afhverju skilgreinum
+   :math:`{\mbox{${\bf x}$}}^{(m)} = \frac{{\mbox{${\bf y}$}}^{(m)}}{y_{p_m}^{(m)}}`
+   þar sem
+   :math:`{\mbox{${\bf y}$}}^{(m)} = A {\mbox{${\bf x}$}}^{(m-1)}`, en
+   ekki bara
+   :math:`{\mbox{${\bf x}$}}^{(m)} = A {\mbox{${\bf x}$}}^{(m-1)}`?
+
+#. Hvernig er andhverf veldaaðferð til þess að nálga eigingildi fylkis?
+
+#. Hvernig er skynsamlegast að velja :math:`q` í andhverfu
+   veldaaðferðinni ef við viljum finna eigingildið :math:`\lambda_k`?

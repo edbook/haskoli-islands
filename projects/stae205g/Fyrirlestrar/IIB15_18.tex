@@ -1,0 +1,94 @@
+\def \kaflanr {18}
+\lecture[\kaflanr]{\kaflanr. Ferilheildi}{lecture-text}
+\date{4.~mars 2015}
+\newcounter{mycount}
+\refstepcounter{mycount}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+
+
+
+\begin{frame}{Heildi falls yfir feril} 
+
+\begin {block}{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Látum $\cal C$ vera feril í $\R^2$ stikaðan af samfellt diffranlegum stikaferli $\rv:[a,b]\rightarrow\R^2$.  Ritum $\rv(t)=(x(t),y(t))$.  {\em Heildi falls $f(x,y)$ yfir ferilinn $\cal C$ með tilliti til bogalengdar} er skilgreint sem 
+\begin{align*}  
+\int_{\cal C}f(x,y)\,ds&=\int_a^b f(\rv(t))\,|\rv'(t)|\,dt\\
+&=\int_a^b f(x(t),y(t))\,\sqrt{x'(t)^2+y'(t)^2}\,dt.\end{align*}
+Sama aðferð notuð til að skilgreina heildi falls yfir feril í $\R^3$.
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Setning \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+ Látum $\cal C$ vera feril í $\R^2$.  Gerum ráð fyrir að $\rv_1$ og $\rv_2$ séu tveir samfellt diffranlegir stikaferlar sem báðir stika ferilinn $\cal C$.  Ef fall $f(x,y)$ er heildað yfir $\cal C$ þá fæst sama útkoma hvort sem stikunin $\rv_1$ eða stikunin $\rv_2$ er notuð við útreikningana.
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Ferill $\cal C$ í plani er sagður {\em samfellt diffranlegur á köflum} ef til er stikun $\rv:[a,b]\rightarrow \R^2$ á $\cal C$ þannig að  til eru punktar $a=t_0<t_1<t_2<\cdots<t_n<t_{n+1}=b$ þannig að á hverju bili $(t_i,t_{i+1})$ er $\rv$ samfellt diffranlegur ferill og markgildin
+$$\lim_{t\rightarrow t_i^+}\rv'(t)\qquad\mbox{og}\qquad 
+\lim_{t\rightarrow t_{i+1}^-}\rv'(t)$$
+eru bæði til.  
+
+Líka sagt að stikaferillinn $\rv$ sé {\em samfellt diffranlegur á köflum.}
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Heildi vigursviðs eftir ferli} 
+
+\begin {block}{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Látum $\Fv(x,y)$ vera vigursvið og $\rv:[a,b]\rightarrow \R^2$ stikun á ferli $\cal C$ og gerum ráð fyrir að stikaferillinn $\rv$ sé samfellt diffranlegur á köflum.  {\em Heildi vigursviðsins $\Fv(x,y)$ eftir ferlinum} $\cal C$ er skilgreint sem 
+$$\int_{\cal C} \Fv\cdot d\rv= \int_{\cal C} \Fv\cdot \Tv\,ds
+=\int_a^b \Fv(\rv(t))\cdot \rv'(t)\,dt.$$
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Ritum $\Fv(x,y)=F_1(x,y)\,\iv+F_2(x,y)\,\jv$.  Ritum líka $\rv(t)=x(t)\,\iv+y(t)\,\jv$.  Þá má rita
+$dx=x'(t)\,dt,\, dy=y'(t)\,dt$.  Með því að nota þennan rithátt fæst að 
+\begin{align*}
+\int_{\cal C}\Fv\cdot d\rv&=\int_a^b
+(F_1(x,y)\,\iv+F_2(x(t),y(t))\,\jv)\cdot(x'(t)\,\iv+y'(t)\,\jv)\,dt\\
+&=\int_a^b F_1(x(t),y(t))x'(t)\,dt+F_2(x(t),y(t))y'(t)\,dt\\
+&=\int_{\cal C} F_1(x,y)\,dx+F_2(x,y)\,dy.
+\end{align*}
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Athugasemd \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Látum $\cal C$ vera feril í $\R^2$. Gerum ráð fyrir að $\rv_1:[a,b]\rightarrow \R^2$ og  $\rv_2:[a',b']\rightarrow \R^2$ séu tveir samfellt diffranlegir á köflum stikaferlar sem stika $\cal C$.  Gerum ennfremur ráð fyrir að $\rv_1(a)=\rv_2(b')$ og $\rv_1(b)=\rv_2(a')$ (þ.e.a.s. stikaferlarnir fara í sitthvora áttina eftir $\cal C$).  Þá gildir ef $\Fv(x,y)$ er vigursvið að 
+$$\int_{\cal C} \Fv\cdot d\rv_1=-\int_{\cal C} \Fv\cdot d\rv_2.$$
+(Ef breytt er um stefnu á stikun á breytist formerki þegar vigursvið heildað eftir ferlinum.)
+\end{block}
+
+\end{frame}
+\end{document}

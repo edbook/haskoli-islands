@@ -1,0 +1,1479 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Eigingildisverkefni &mdash; Stærðfræðigreining IV 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining IV 2019" href="index.html"/>
+        <link rel="next" title="4. Fourier-ummyndun" href="Kafli04.html"/>
+        <link rel="prev" title="2. Fourier-raðir" href="Kafli02.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining IV
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="umnamskeidid.html">Gagnlegar upplýsingar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsefni">Námsefnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#fyrirlestrar">Fyrirlestrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#daematimar-og-vinnustofur">Dæmatímar og vinnustofur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#skiladaemi">Skiladæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsmat">Námsmat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#tolvunotkun">Tölvunotkun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#a-taka-namskeii-i-anna-sinn">Að taka námskeiðið í annað sinn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#vitalstimar-kennara-og-fyrirspurnir">Viðtalstímar kennara og fyrirspurnir</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Hlutafleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-fjolvisir">1.1.1. Ritháttur - Fjölvísir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-laplace-virki">1.1.2. Ritháttur - Laplace-virki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-stig-hlutafleiu-og-hlutafleiujofnu">1.1.3. Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#linulegar-hlutafleiujofnur">1.1.4. Línulegar hlutafleiðujöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#daemi-um-hlutafleiujofnur-i-elisfraei">1.2. Dæmi um hlutafleiðujöfnur í eðlisfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#varmaleinijafnan">1.2.1. Varmaleiðnijafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#bylgjujafnan">1.2.2. Bylgjujafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi-sveifla-a-einvium-streng">1.2.3. Dæmi - Sveifla á einvíðum streng</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#hliarskilyri-vel-framsett-verkefni">1.3. Hliðarskilyrði. Vel framsett verkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#upphafsskilyri">1.3.1. Upphafsskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#jaarskilyri">1.3.2. Jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#vel-framsett-verkefni">1.3.3. Vel framsett verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#fyrsta-stigs-jofnur">1.4. Fyrsta stigs jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#kennilinuaferin">1.4.1. Kennilínuaðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#setning">1.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining">1.4.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id2">1.4.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reikniafer">1.4.6. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#urlausn-me-laplace-ummyndun">1.4.7. Úrlausn með Laplace-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi">1.4.8. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Fourier-raðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#inngangur">2.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#skilgreining">2.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#id1">2.2. Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id2">2.2.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id3">2.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-reiknireglur">2.2.3. Setning - Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id4">2.2.4. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#samleitni-fourier-raa">2.3. Samleitni Fourier-raða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#reiknireglur-um-innfeldi">2.3.1. Reiknireglur um innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#cauchy-schwarz-ojafna">2.3.2. Cauchy-Schwarz ójafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#regla-pyagorasar">2.3.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#bessel-ojafnan">2.3.4. Bessel-ójafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id5">2.3.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning">2.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-andhverfuformula-fouriers">2.3.7. Setning - Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-parseval-jafnan">2.3.8. Setning - Parseval-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#urlausn-a-hlutafleiujofnum">2.4. Úrlausn á hlutafleiðujöfnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#jafnstae-framlenging-og-kosinus-ro">2.4.1. Jafnstæð framlenging og kósínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#oddstae-framlenging-og-sinus-ro">2.4.2. Oddstæð framlenging og sínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id6">2.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi">2.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-sveiflandi-strengur">2.4.5. Dæmi - Sveiflandi strengur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-varmaleini">2.4.6. Dæmi - Varmaleiðni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.1. Eigingildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi">3.1.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fallsjaarskilyri-i-baum-endapunktum">3.1.2. Fallsjaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#afleiuskilyri-i-baum-endapunktum">3.1.3. Afleiðuskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum">3.1.4. Fallsjaðarskilyrði í öðrum endapunkti og afleiðuskilyrði í hinum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#askilnaur-breytistaera">3.2. Aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sveiflandi-strengur-aftur">3.2.1. Sveiflandi strengur - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anna-daemi">3.2.2. Annað dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#virkjar-af-sturm-liouville-ger">3.3. Virkjar af Sturm-Liouville-gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">3.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.3.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.3.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#formula-greens">3.3.5. Formúla Greens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-og-skilgreining">3.3.6. Setning og skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eigingildisverkefni-af-sturmliouvilleger">3.4. Eigingildisverkefni af Sturm–Liouville–gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">3.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">3.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">3.4.5. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#green-foll-fyrir-jaargildisverkefni">3.5. Green-föll fyrir jaðargildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">3.5.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">3.5.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eiginfallaliun-og-greenfoll">3.6. Eiginfallaliðun og Green–föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reikniafer">3.6.1. Reikniaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#urlausn-hlutafleiujafa-me-eiginfallaroum">3.7. Úrlausn hlutafleiðujafa með eiginfallaröðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dirichlet-verkefni-a-retthyrningi">3.7.1. Dirichlet-verkefnið á rétthyrningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dirichlet-verkefni-a-skifu">3.7.2. Dirichlet-verkefnið á skífu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#varmaleinijafnan-me-timahaum-jaarskilyrum">3.7.3. Varmaleiðnijafnan með tímaháðum jaðarskilyrðum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afram-um-eigingildisverkefni-askilnaur-breytistaera">3.8. Áfram um eigingildisverkefni - aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dirichlet-verkefni-a-retthyrningi-aftur">3.8.1. Dirichlet-verkefnið á rétthyrningi - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dirichlet-verkefni-a-skifu-aftur">3.8.2. Dirichlet-verkefnið á skífu - aftur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tvofaldar-fourier-rair">3.9. Tvöfaldar Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-retthyrnd-tromma">3.9.1. Dæmi - Rétthyrnd tromma</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#almennt-um-eiginfallarair">3.10. Almennt um eiginfallaraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-alhaeft-varmaleiniverkefni">3.10.1. Dæmi - Alhæft varmaleiðniverkefni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Fourier-ummyndun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-reiknireglur-plancerel-jafnan">4.1. Fourier-ummyndun. Reiknireglur. Plancerel-jafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-l-1-mathbb-r">4.1.1. Skilgreining á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-fourier-ummyndun">4.1.2. Skilgreining á Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#synidaemi">4.1.3. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#reiknireglur">4.1.4. Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#rulesft">4.1.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#eiginleikar-fourier-myndar">4.1.6. Eiginleikar Fourier-myndar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#plancerel-jafnan">4.1.7. Plancerel-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers-afleiujofnur">4.2. Andhverfuformúla Fouriers. Afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers">4.2.1. Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#foldun-og-fourier-ummyndun">4.2.2. Földun og Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#afleiujofnur-og-fourier-ummyndun">4.2.3. Afleiðujöfnur og Fourier-ummyndun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#urlausn-a-hlutafleiujofnum-me-fourier-ummyndun">4.3. Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#einvia-bylgjujafnan-og-d-alembert-formula">4.3.1. Einvíða bylgjujafnan og d’Alembert-formúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#bylgjujafnan-fourier-ummyndun-og-foldun">4.3.2. Bylgjujafnan, Fourier-ummyndun og földun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#varmaleinijafnan-fourier-ummyndun-og-foldun">4.3.3. Varmaleiðnijafnan, Fourier-ummyndun og földun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-og-leifareikningur">4.4. Fourier-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fourier-myndir-reiknaar-me-leifareikningi">4.4.1. Fourier-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-fourier-myndir-reiknaar-me-leifareikningi">4.4.2. Andhverfar Fourier-myndir reiknaðar með leifareikningi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#laplace-ummyndun-og-leifareikningur">4.5. Laplace-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir">4.5.1. Andhverfar Laplace-myndir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-reiknaar-me-leifareikningi">4.5.2. Andhverfar Laplace-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-og-afleiujofnur">4.5.3. Andhverfar Laplace-myndir og afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id4">4.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Mismunaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-venjulegar-afleiujofnur">5.1. Mismunaaðferð fyrir venjulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi">5.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#heildun-yfir-hlutbil">5.2. Heildun yfir hlutbil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.2.1. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#linuleg-bruun-og-ufugrunnfoll">5.2.2. Línuleg brúun og þúfugrunnföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-hlutaafleiujofnur">5.3. Mismunaaðferð fyrir hlutaafleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#nalgunarjafna">5.3.1. Nálgunarjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-dirichlet-verkefni-a-ferningi">5.3.2. Sýnidæmi: Dirichlet-verkefni á ferningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri">5.3.3. Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#almenn-mismunaafer-a-retthyrningi">5.4. Almenn mismunaaðferð á rétthyrningi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Bútaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#hlutheildun-innfeldi-og-tvilinulegt-form">6.1. Hlutheildun, innfeldi og tvílínulegt form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefni-i-mathbb-r">6.1.1. Jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefnin-i-mathbb-r-2">6.1.2. Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-fyrir-dirichlet-verkefni">6.2. Aðferð Galerkins fyrir Dirichlet-verkefnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni">6.2.1. Galerkin-aðferðir í einni vídd fyrir Dirichlet-verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni">6.2.2. Galerkin-aðferðir í tveimur víddum fyrir Dirichlet-verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-einni-vidd">6.3. Bútaaðferð í einni vídd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#blondu-jaarskilyri-i-baum-endapunktum">6.3.1. Blönduð jaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fallsjaarskilyri">6.3.2. Fallsjaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-me-almennum-jaarskilyrum">6.4. Aðferð Galerkins með almennum jaðarskilyrðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-einni-vidd">6.4.1. Í einni vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-tveimur-viddum">6.4.2. Í tveimur víddum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#synidaemi">6.4.3. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-tveimur-viddum">6.5. Bútaaðferð í tveimur víddum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#net-me-rihyrningum">6.5.1. Net með þríhyrningum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#ufugrunnfoll">6.5.2. Þúfugrunnföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#go-ahead">6.5.3. Go ahead!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id1">6.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining IV</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>3. Eigingildisverkefni</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli03.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eigingildisverkefni">
+<h1>3. Eigingildisverkefni<a class="headerlink" href="#eigingildisverkefni" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<div class="section" id="id1">
+<h2>3.1. Eigingildisverkefni<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Verkefnið að leysa afleiðujöfnu</p>
+<div class="math notranslate nohighlight">
+\[Lu = \lambda u, \quad x\in I\]</div>
+<p>þar sem</p>
+<div class="math notranslate nohighlight">
+\[L = a_m(x) D^m + \cdots + a_1(x) D + a_0(x)\]</div>
+<p><span class="math notranslate nohighlight">\(\lambda\)</span> er tvinntala og <span class="math notranslate nohighlight">\(I\)</span> er bil, ásamt jaðalskilyrðum á <span class="math notranslate nohighlight">\(u\)</span> á <span class="math notranslate nohighlight">\(I\)</span>, kallast <em>eigingildisverkefni</em>. Verkefnið felst í að finna öll <span class="math notranslate nohighlight">\(\lambda \in \mathbb{C}\)</span> þannig að afleiðujafnan hafi lausn, segjum <span class="math notranslate nohighlight">\(u_\lambda\)</span>, sem uppfyllir gefin jaðarskilyrði og er ekki núllfallið. Slík gildi á <span class="math notranslate nohighlight">\(\lambda\)</span> kallast eigingildi verkefnisins og tilsvarandi lausnir <span class="math notranslate nohighlight">\(u_\lambda\)</span> kallast eiginföll.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Athugið að ef við lítum á föll sem vigra og línulega virkja sem línulegar varpanir þá er greinileg samsvörun milli eigingildisverkefna og að finna eigingildi og eiginvigra fylkis eins og við þekkjum úr línulegri algebru.</p>
+</div>
+<p>Eigingildisverkefni koma til að mynda upp þegar hlutafleiðujöfnur eru leystar með aðskilnaði breytistærða eins og verður fjallað um síðar.</p>
+<p>Hugmyndin að baki eigingildisverkefnum er sú að ef eiginföllinn mynda grunn í einhverju fallarúmi þá má rita sérhvert fall í því sem línulega (mögulega óendanlega) samantekt af eiginföllum. Lítum til dæmis á verkefnið</p>
+<div class="math notranslate nohighlight">
+\[Lu = f\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(L\)</span> hefur eiginföll <span class="math notranslate nohighlight">\(v_j\)</span> með tilssvarandi eigingildum <span class="math notranslate nohighlight">\(\lambda_j\)</span>. Ef liða má <span class="math notranslate nohighlight">\(f\)</span> í grunn eiginvigranna</p>
+<div class="math notranslate nohighlight">
+\[f = \sum_{j} c_j v_j\]</div>
+<p>þá fæst með losaralegum reikningum að</p>
+<div class="math notranslate nohighlight">
+\[L \sum_{j} \frac{c_j}{\lambda_j} v_j =  \sum_{j} \frac{c_j}{\lambda_j} L v_j  = \sum_{j} \frac{c_j}{\lambda_j} \lambda_j v_j = f\]</div>
+<p>og þar með er <span class="math notranslate nohighlight">\(u = \sum_{j} \frac{c_j}{\lambda_j} v_j\)</span> lausn á verkefninu.</p>
+<div class="section" id="daemi">
+<h3>3.1.1. Dæmi<a class="headerlink" href="#daemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(L = D\)</span> þá er sérhvert fall <span class="math notranslate nohighlight">\(u_\alpha(x) = e^{\alpha x}\)</span> eiginfall með eigingildi <span class="math notranslate nohighlight">\(\alpha\)</span> því</p>
+<div class="math notranslate nohighlight">
+\[L u_\alpha(x) = D e^{\alpha x} = \alpha e^{\alpha x} = \alpha u_\alpha(x).\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(L = P(D)\)</span> þar sem <span class="math notranslate nohighlight">\(P\)</span> er margliða með fasta stuðla þá er sérhvert fall <span class="math notranslate nohighlight">\(u_\alpha(x)=e^{\alpha x}\)</span> eiginfall með eigingildi <span class="math notranslate nohighlight">\(P(\alpha)\)</span> því</p>
+<div class="math notranslate nohighlight">
+\[L u_\alpha(x) = P(D) e^{\alpha x} = P(\alpha) e^{\alpha x} = P(\alpha) u_\alpha(x).\]</div>
+<p>Í síðara tilfellinu er formleg lausn á verkefninu</p>
+<div class="math notranslate nohighlight">
+\[Lu = f\]</div>
+<p>á forminu</p>
+<div class="math notranslate nohighlight">
+\[u(x) = \sum_{j} \frac{c_n(f)}{P(\alpha_j)}e^{\alpha_j x}\]</div>
+<p>ef <span class="math notranslate nohighlight">\(P(\alpha_j) \neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(j\)</span>, eins og við þekkjum úr umræðunni um Fourier-raðir.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>Eins og dæmið gefur til kynna má líta á Fourier-raðir sem sértilfelli af þeirri almennu hugmynd að liða föll í grunn eiginfalla afleiðuvirkja. Lítum nú nánar á það í næstu dæmum. Skoðum eigingildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[Tu = \lambda u, \quad x\in ]0,L]\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(T = -D^2\)</span> og <span class="math notranslate nohighlight">\(L&gt;0\)</span>, með ýmsum ólíkum jaðarskilyrðum. Tökum sérstaklega eftir því hvernig ólík jaðarskilyrði geta gefið ólík eigingildi og/eða ólík eiginföll.</p>
+</div>
+<div class="section" id="fallsjaarskilyri-i-baum-endapunktum">
+<h3>3.1.2. Fallsjaðarskilyrði í báðum endapunktum<a class="headerlink" href="#fallsjaarskilyri-i-baum-endapunktum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á jaðarskilyrðin</p>
+<div class="math notranslate nohighlight">
+\[u(0) = u(L) = 0.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(\lambda = 0\)</span> er lausnin á forminu <span class="math notranslate nohighlight">\(u(x) = A+ Bx\)</span> en jaðarskilyrðin ákvarða <span class="math notranslate nohighlight">\(A=B=0\)</span> svo núllfallið er eina lausnin. Þar með er 0 ekki eigingildi.</p>
+<p>Ef <span class="math notranslate nohighlight">\(\lambda \neq 0\)</span> þá er lausnin á forminu <span class="math notranslate nohighlight">\(u(x) = A \sin(\beta x) + B\cos(\beta x)\)</span> þar sem <span class="math notranslate nohighlight">\(\beta\)</span> er tvinntala sem uppfyllir <span class="math notranslate nohighlight">\(\beta^2 = \lambda\)</span> og má velja þannig að <span class="math notranslate nohighlight">\(\operatorname{Re}(\beta)\geq 0\)</span>. Skilyrðið <span class="math notranslate nohighlight">\(u(0) = 0\)</span> gefur <span class="math notranslate nohighlight">\(B=0\)</span> en skilyrðið <span class="math notranslate nohighlight">\(u(L) = 0\)</span> gefur</p>
+<div class="math notranslate nohighlight">
+\[0 = \sin(\beta L)\]</div>
+<p>en þessi jafna hefur lausn þegar <span class="math notranslate nohighlight">\(\beta L\)</span> er heilt margfeldi af <span class="math notranslate nohighlight">\(\pi\)</span> svo eigingildin eru</p>
+<div class="math notranslate nohighlight">
+\[\lambda_n = \left(\frac{n\pi}{L}\right)^2, \quad n = 1,2,3,\ldots\]</div>
+<p>og tilsvarandi eiginföll</p>
+<div class="math notranslate nohighlight">
+\[u(x) = \sin(n\pi x/L).\]</div>
+<p>Línulegar samantektir eiginfallanna</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty C_n \sin(n\pi x/L)\]</div>
+<p>eru Fourier-sínus-raðir á bilinu <span class="math notranslate nohighlight">\([0,L]\)</span>.</p>
+</div>
+<div class="section" id="afleiuskilyri-i-baum-endapunktum">
+<h3>3.1.3. Afleiðuskilyrði í báðum endapunktum<a class="headerlink" href="#afleiuskilyri-i-baum-endapunktum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á jaðarskilyrðin</p>
+<div class="math notranslate nohighlight">
+\[u'(0) = u'(L) = 0.\]</div>
+<p>Með svipuðum hætti og áður fæst að eigingildin eru</p>
+<div class="math notranslate nohighlight">
+\[\lambda_n = \left(\frac{n\pi}{L}\right)^2, \quad n=0,1,2,\ldots\]</div>
+<p>(athugið að <span class="math notranslate nohighlight">\(\lambda = 0\)</span> er núna með) og tilsvarandi eiginföll</p>
+<div class="math notranslate nohighlight">
+\[u(x) = \cos(n\pi x/L).\]</div>
+<p>Línulegar samantektir eiginfallanna</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^\infty C_n \cos(n\pi x/L)\]</div>
+<p>eru Fourier-kósínus-raðir á bilinu <span class="math notranslate nohighlight">\([0,L]\)</span>.</p>
+</div>
+<div class="section" id="fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum">
+<h3>3.1.4. Fallsjaðarskilyrði í öðrum endapunkti og afleiðuskilyrði í hinum<a class="headerlink" href="#fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á jaðarskilyrðin</p>
+<div class="math notranslate nohighlight">
+\[u(0) = u'(L) = 0.\]</div>
+<p>Með svipuðum hætti og áður fæst að eigingildin eru</p>
+<div class="math notranslate nohighlight">
+\[\lambda_n = \left(\frac{(n-1/2)\pi}{L}\right)^2, \quad n=1,2,\ldots\]</div>
+<p>og tilsvarandi eiginföll</p>
+<div class="math notranslate nohighlight">
+\[u(x) = \sin((n-1/2)\pi x/L).\]</div>
+<p>Í kennslubók má lesa eitt viðamikið sýnidæmi til viðbótar þar sem blönduð jaðarskilyrði eru í báðum endapunktum bilsins.</p>
+</div>
+</div>
+<div class="section" id="askilnaur-breytistaera">
+<h2>3.2. Aðskilnaður breytistærða<a class="headerlink" href="#askilnaur-breytistaera" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við lausn línulegra óhliðraðra hlutafleiðujafna þar sem breyturnar <span class="math notranslate nohighlight">\(x_1,x_2,\ldots,x_k\)</span> koma við sögu getur verið gagnlegt að leita að lausnum sem eru á forminu <span class="math notranslate nohighlight">\(X_1(x_1)X_2(x_2)\cdots X_k(x_k)\)</span>, þ.e.a.s. lausnir sem má þátta í föll sem hvert um sig er háð aðeins einni breytistærð. Línuleg samantekt lausna á slíku formi er einnig lausn en ekki endilega þáttanleg eins og gildir um sérhvern lið samantektarinnar. Í sumum tilfellum mynda lausnir á þessu formi grunn þannig að liða má föll upp í línulegar samantektir af grunnföllunum. Þannig má finna almenna lausn á hlutafleiðujöfnunni.</p>
+<p>Þessi aðferð, að skoða lausnir sem þáttast, kallast <em>aðskilnaður breytistærða</em> og þegar henni er beitt fást venjulega eigingildisverkefni fyrir hvert fall í þáttuninni. Lítum á kunnuglegt dæmi.</p>
+<div class="section" id="sveiflandi-strengur-aftur">
+<h3>3.2.1. Sveiflandi strengur - aftur<a class="headerlink" href="#sveiflandi-strengur-aftur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á einvíðan streng af lengd <span class="math notranslate nohighlight">\(L\)</span> sem festur er í báða enda. Táknum frávik hans frá jafnvægi í punkti <span class="math notranslate nohighlight">\(x\)</span> á tíma <span class="math notranslate nohighlight">\(t\)</span> með <span class="math notranslate nohighlight">\(u(x,t)\)</span>. Fallið <span class="math notranslate nohighlight">\(u(x,t)\)</span> uppfyllir þá bylgjujöfnuna í einni rúmbreytu ásamt jaðarskilyrðunum</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{{\partial}^2u}{{\partial}t^2}-
+ c^2\dfrac{{\partial}^2u}{{\partial}x^2}=0, \qquad u(0,t)=u(L,t)=0.\]</div>
+<p>Leysum verkefnið með aðskilnaði breytistærða. Leitum að lausn á forminu <span class="math notranslate nohighlight">\(u(x,t) = T(t)X(x)\)</span>. Stingum slíkri lausn inn í afleiðujöfnuna og fáum</p>
+<div class="math notranslate nohighlight">
+\[T''(t) X(x) - c^2 T(t)X''(x) = 0\]</div>
+<p>sem má umrita í</p>
+<div class="math notranslate nohighlight">
+\[\frac{T''(t)}{c^2 T(t)} = \frac{X''(x)}{X(x)}.\]</div>
+<p>Vinstri hliðin er aðeins háð <span class="math notranslate nohighlight">\(t\)</span> og sú hægri aðeins háð <span class="math notranslate nohighlight">\(x\)</span> og þar með hlýtur hvor um sig að vera jöfn fasta, köllum hann <span class="math notranslate nohighlight">\(\lambda\)</span>. Fáum því afleiðujöfnu</p>
+<div class="math notranslate nohighlight">
+\[-T''(t) = c^2 \lambda T\]</div>
+<p>og eigingildisverkefni</p>
+<div class="math notranslate nohighlight">
+\[-X''(x) = \lambda X \quad X(0) = X(L) = 0.\]</div>
+<p>Eigingildisverkefnið hefur eigingildi <span class="math notranslate nohighlight">\(\lambda_n = (n\pi/L)^2\)</span> og tilsvarandi eiginföll <span class="math notranslate nohighlight">\(\sin(n\pi x/L)\)</span>, <span class="math notranslate nohighlight">\(n=1,2,3,\ldots\)</span>. Afleiðujafnan fyrir <span class="math notranslate nohighlight">\(T\)</span> hefur því lausn, fyrir <span class="math notranslate nohighlight">\(\lambda = \lambda_n\)</span>, á forminu</p>
+<div class="math notranslate nohighlight">
+\[A_n \cos(n\pi ct/L) + B_n \sin(n\pi c t/L).\]</div>
+<p>Lausnin á hlutafleiðujöfnunni er því á forminu</p>
+<div class="math notranslate nohighlight">
+\[T(t)X(x) = (A_n \cos(n\pi ct/L) + B_n \sin(n\pi c t/L))\sin(n\pi x/L).\]</div>
+<p>Almenn lausn hlutafleiðujöfnunnar er línulega samantekt af svona liðum</p>
+<div class="math notranslate nohighlight">
+\[u(x,t) = \sum_{n\geq 1} (A_n\cos(n\pi ct/L) + B_n \sin(n\pi c t/L))\sin(n\pi x/L)\]</div>
+<p>og stuðlarnir <span class="math notranslate nohighlight">\(A_n\)</span> og <span class="math notranslate nohighlight">\(B_n\)</span> ákvarðast af upphafsskilyrðum</p>
+<div class="math notranslate nohighlight">
+\[u(x,0)=\varphi(x), \qquad {\partial}_tu(x,0)={\psi}(x), \qquad x\in
+ ]0,L[.\]</div>
+</div>
+<div class="section" id="anna-daemi">
+<h3>3.2.2. Annað dæmi<a class="headerlink" href="#anna-daemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Notum aðskilnað breytistærða til að leysa</p>
+<div class="math notranslate nohighlight">
+\[a\partial_t^2u+b\partial_tu+cu-\Delta u=0, \quad x,y,z \in [0,1], t&gt;0\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(u\)</span> er fall af tíma <span class="math notranslate nohighlight">\(t\)</span> og þremur
+rúmbreytum <span class="math notranslate nohighlight">\(x,y\)</span> og <span class="math notranslate nohighlight">\(z\)</span> og <span class="math notranslate nohighlight">\(\Delta=\partial_x^2+\partial_y^2+\partial_z^ 2\)</span> er
+Laplace–virkinn miðað við rúmbreyturnar.  Gerum ráð fyrir jaðarskilyrðunum <span class="math notranslate nohighlight">\(u(x,y,z,t) = 0\)</span> ef eitthvert hnitanna <span class="math notranslate nohighlight">\(x,y,x\)</span> er jafnt 0 eða 1.</p>
+<p>Leitum að lausn á forminu
+<span class="math notranslate nohighlight">\(u(x,y,z,t)=T(t)X(x)Y(y)Z(z)\)</span>. Stingum henni inn og umritum á formið</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{aT{{^{\prime\prime}}}(t)+bT(t){{^{\prime}}}+cT(t)}{T(t)}-
+ \dfrac{X{{^{\prime\prime}}}(x)}{X(x)}-\dfrac{Y{{^{\prime\prime}}}(y)}{Y(y)}=\dfrac{Z{{^{\prime\prime}}}(z)}{Z(z)}.\]</div>
+<p>Hægri hlið er háð <span class="math notranslate nohighlight">\(z\)</span> en sú vinstri ekki. Ályktum að hægri hlið sé fasti og með sömu rökum að sérhver liður í jöfnunni sé fasti. Vegna jaðarskilyrða fáum við því þrjú eigingildisverkefni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin {align*}
+-X''(x) &amp;= \lambda X(x),\quad X(0) = X(1) = 0 \\
+-Y''(y) &amp;= \lambda Y(z),\quad Y(0) = Y(1) = 0 \\
+-Z''(z) &amp;= \lambda Z(z),\quad Z(0) = Z(1) = 0 \\
+\end{align*}\end{split}\]</div>
+<p>og afleiðujöfnu</p>
+<div class="math notranslate nohighlight">
+\[aT{{^{\prime\prime}}}(t)+bT{{^{\prime}}}(t)+(c+\lambda+\mu+\nu)T=0,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\lambda, \mu\)</span> og <span class="math notranslate nohighlight">\(\nu\)</span> eru fastar. Við þekkjum lausnir eigingildisverkefnana og þáttanlega lausnin er á forminu</p>
+<div class="math notranslate nohighlight">
+\[u_{\ell,m,n}(x) = T_{\ell, m, n}(t) \sin (\ell \pi x) \sin (m\pi y) \sin
+(n\pi z), \qquad \ell, m, n=1,2,3,\dots,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(T_{\ell, m,n}\)</span> uppfyllir afleiðujöfnuna</p>
+<div class="math notranslate nohighlight">
+\[aT{{^{\prime\prime}}}+ bT{{^{\prime}}}+\big(c+\pi^2(\ell^2+m^2+n^2)\big)T=0.\]</div>
+</div>
+</div>
+<div class="section" id="virkjar-af-sturm-liouville-ger">
+<h2>3.3. Virkjar af Sturm-Liouville-gerð<a class="headerlink" href="#virkjar-af-sturm-liouville-ger" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Í þessari grein munum við skoða eigingildisverkefni virkja af tiltekinni gerð. Við byrjum á því að ræða virkjann og fjöllum því næst um jaðarskilyrðin sem skilgreina eigingildisverkefnið.</p>
+<p>Við lítum á annars stigs afleiðuvirkja af eftirfarandi gerð</p>
+<div class="math notranslate nohighlight">
+\[Lu=P(x,D)u= a_2(x) u{{^{\prime\prime}}}+a_1(x)u{{^{\prime}}}+ a_0(x)u,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(a_0,a_1,a_2\)</span> eru samfelld raungild föll á bili <span class="math notranslate nohighlight">\([a,b]\)</span> og <span class="math notranslate nohighlight">\(a_2(x)\neq 0\)</span> fyrir öll
+<span class="math notranslate nohighlight">\(x\in [a,b]\)</span>. Í útreikningum hentar betur að setja virkjann fram á svokölluðu <em>Sturm-Liouville formi</em></p>
+<div class="math notranslate nohighlight">
+\[Lu ={{\dfrac {1}{\varrho}
+ \bigg(-\dfrac d{dx}\bigg(p\dfrac {du}{dx}\bigg)+qu\bigg)}}.\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p>Sambandið milli framsetninganna tveggja er eftirfarandi. Veljum</p>
+<div class="math notranslate nohighlight">
+\[p(x)=\exp\bigg(C +\int_a^x\dfrac{a_1({\xi})}{a_2({\xi})}\, d{\xi}\bigg),
+\quad
+q(x)=\dfrac{-a_0(x)p(x)}{a_2(x)}, \quad
+{\varrho}(x)=\dfrac{-p(x)}{a_2(x)},\]</div>
+<p class="last">þar sem <span class="math notranslate nohighlight">\(C\)</span> er einhver ótiltekinn fasti.</p>
+</div>
+<p>Þar sem <span class="math notranslate nohighlight">\(a_2(x)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>, má gera ráð fyrir
+að <span class="math notranslate nohighlight">\(a_2(x)&lt;0\)</span>. Þar með gildir</p>
+<div class="math notranslate nohighlight">
+\[p\in C^1[a,b], \quad p(x)&gt;0, \quad q,{\varrho}\in C[a,b], \quad q(x)\in {{\mathbb  R}},
+ \quad {\varrho}(x)&gt;0, \quad x\in [a,b].\]</div>
+<div class="section" id="skilgreining">
+<h3>3.3.1. Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við segjum að virki <span class="math notranslate nohighlight">\(L\)</span> af Sturm–Liouville–gerð sé <em>reglulegur</em> ef
+föllin <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> og <span class="math notranslate nohighlight">\({\varrho}\)</span> uppfylla þessi skilyrði.</p>
+</div>
+<div class="section" id="id2">
+<h3>3.3.2. Skilgreining<a class="headerlink" href="#id2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Á rúmið <span class="math notranslate nohighlight">\(C[a,b]\)</span> skilgreinum við formið</p>
+<div class="math notranslate nohighlight">
+\[{{\langle u,v\rangle}} =\int_a^b u(x)\overline{v(x)}{\varrho}(x)\, dx, \qquad
+ u,v\in C[a,b],\]</div>
+<p>og á rúmið <span class="math notranslate nohighlight">\(C^1[a,b]\)</span> skilgreinum við formið</p>
+<div class="math notranslate nohighlight">
+\[{{\langle u,v\rangle}}_L =\int_a^b \bigg(p(x)u{{^{\prime}}}(x)\overline{v{{^{\prime}}}(x)}
+ +q(x)u(x)\overline{v(x)}\bigg) \, dx, \qquad
+ u,v\in C^1[a,b].\]</div>
+<p>Bæði eru þessi form línuleg í fyrri breytistærðinni, en andlínuleg í
+þeirri síðari. Það þýðir að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  {{\langle \alpha u+\beta v,w\rangle}} &amp;=
+ \alpha{{\langle u,v\rangle}} + \beta{{\langle u,w\rangle}},\\
+ {{\langle u,\alpha v+\beta w\rangle}}&amp;=\bar\alpha{{\langle u,v\rangle}} +\bar\beta
+ {{\langle u,w\rangle}},\end{aligned}\end{split}\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(u,v\in C[a,b]\)</span>, <span class="math notranslate nohighlight">\(\alpha,\beta\in {{\mathbb  C}}\)</span>. Fyrst <span class="math notranslate nohighlight">\({\varrho}&gt;0\)</span>, þá er
+formið <span class="math notranslate nohighlight">\({{\langle \cdot,\cdot\rangle}}\)</span> innfeldi
+og tilheyrandi staðal táknum við með,</p>
+<div class="math notranslate nohighlight">
+\[\|u\|= \sqrt{{{\langle u,u\rangle}}}.\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Við segjum að formið sé innfeldi á vigurrúmi samfelldra falla á <span class="math notranslate nohighlight">\([a,b]\)</span>, <span class="math notranslate nohighlight">\(C[a,b]\)</span>, því það uppfyllir þær reiknireglur sem hið kunnuglega innfeldi endanlegra vigra uppfyllir. Við getum því unnið með það með sama hætti og gamla góða innfeldið.  Athugið einnig að þegar <span class="math notranslate nohighlight">\(rho(x) = \frac{1}{b-a}\)</span> fæst sama innfeldi og sami staðall og við skilgreindum á <span class="math notranslate nohighlight">\(L^2\)</span>. Almennt jákvætt fall <span class="math notranslate nohighlight">\(rho\)</span> sem kemur fyrir í innfeldi af þessu tagi er oft kallað <em>vigt</em>.</p>
+</div>
+<p>Við munum nú skoða hvernig setja má fram jaðarskilyrði af tiltekinni gerð og athugum svo eigingildisverkefnin sem þau skilgreina ásamt virkjanum <span class="math notranslate nohighlight">\(L\)</span> sem unnið er með. <em>Jaðargildisvirki</em> <span class="math notranslate nohighlight">\(B\)</span> er vörpun sem úthlutar samfellt deildanlegu falli <span class="math notranslate nohighlight">\(u\in C^1[a,b]\)</span> punkti <span class="math notranslate nohighlight">\(Bu = (B_1 u , B_2)\)</span> þar sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+B_1 u&amp;=\alpha_{11}u(a)+\alpha_{12}u{{^{\prime}}}(a)
++\beta_{11}u(b)+\beta_{12}u{{^{\prime}}}(b) \\
+B_1 u&amp;=\alpha_{11}u(a)+\alpha_{12}u{{^{\prime}}}(a)
++\beta_{11}u(b)+\beta_{12}u{{^{\prime}}}(b) \\
+\end{align*}\end{split}\]</div>
+<p>þar sem stuðlarnir <span class="math notranslate nohighlight">\(\alpha_{jk}\)</span> og <span class="math notranslate nohighlight">\(\beta_{jk}\)</span> eru
+rauntölur. Við gerum ráð fyrir í hvorum virkjanna <span class="math notranslate nohighlight">\(B_1\)</span> og <span class="math notranslate nohighlight">\(B_2\)</span> sé að minnsta kosti einn stuðull frábrugðinn núlli.</p>
+</div>
+<div class="section" id="id3">
+<h3>3.3.3. Skilgreining<a class="headerlink" href="#id3" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Rúmið <span class="math notranslate nohighlight">\(C^2_B[a,b]\)</span> er skilgreint sem mengi allra
+<span class="math notranslate nohighlight">\(u\in C^2[a,b]\)</span> sem uppfylla óhliðruðu jaðarskilyrðin
+<span class="math notranslate nohighlight">\(Bu=0\)</span>.</p>
+</div>
+<div class="section" id="id4">
+<h3>3.3.4. Skilgreining<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við segjum að virkinn <span class="math notranslate nohighlight">\(L\)</span> sé <em>samhverfur</em> á <span class="math notranslate nohighlight">\(C^2_B[a,b]\)</span> eða
+<em>samhverfur með tilliti til jaðarskilyrðanna</em> <span class="math notranslate nohighlight">\(Bu=0\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[{{\langle Lu,v\rangle}} ={{\langle u,Lv\rangle}}, \qquad u,v\in C^2_B[a,b].\]</div>
+</div>
+<div class="section" id="formula-greens">
+<h3>3.3.5. Formúla Greens<a class="headerlink" href="#formula-greens" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Eftirfarandi formúla er kennd við Green</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ {{\langle Lu,v\rangle}} -{{\langle u,Lv\rangle}}    &amp;=p(b)\left|
+ \begin{matrix} u(b) &amp; u{{^{\prime}}}(b) \\ \bar v(b) &amp;\bar v{{^{\prime}}}(b)
+ \end{matrix}\right| -
+ p(a)\left|
+ \begin{matrix} u(a) &amp; u{{^{\prime}}}(a) \\ \bar v(a) &amp;\bar v{{^{\prime}}}(a)
+ \end{matrix}\right|.\nonumber\end{aligned}\end{split}\]</div>
+<p>Af formúlu Greens sést að virki er samhverfur þá og því aðeins</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p(b)\left|
+\begin{matrix} u(b) &amp; u{{^{\prime}}}(b) \\ \bar v(b) &amp;\bar v{{^{\prime}}}(b)
+\end{matrix}\right| =
+p(a)\left|
+\begin{matrix} u(a) &amp; u{{^{\prime}}}(a) \\ \bar v(a) &amp;\bar v{{^{\prime}}}(a)
+\end{matrix}\right|\end{split}\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(u,v\in C^2_B[a,b]\)</span>.</p>
+<p>Við höfum einkum áhuga á eftirfarandi tveimur tilfellum sem hægt er að sannfæra sig um að eru samhverf með því að nota skilyrðið úr formúlu Greens.</p>
+</div>
+<div class="section" id="setning-og-skilgreining">
+<h3>3.3.6. Setning og skilgreining<a class="headerlink" href="#setning-og-skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>(i) Ef jaðarskilyrðin eru <em>aðskilin</em>, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[B_1u=\alpha_1u(a)-\beta_1u{{^{\prime}}}(a), \qquad
+ B_2u=\alpha_2u(b)+\beta_2u{{^{\prime}}}(b),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\alpha_1, \beta_1, \alpha_2, \beta_2\in {{\mathbb  R}}\)</span>,
+<span class="math notranslate nohighlight">\((\alpha_1,\beta_1)\neq (0,0)\)</span> og <span class="math notranslate nohighlight">\((\alpha_2,\beta_2)\neq (0,0)\)</span>, þá er <span class="math notranslate nohighlight">\(L\)</span> samhverfur á <span class="math notranslate nohighlight">\(C^2_B[a,b]\)</span>.</p>
+<p>(ii) Ef <span class="math notranslate nohighlight">\(p(a)=p(b)\)</span> og jaðarskilyrðin eru <em>lotubundin</em>, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[B_1u=u(a)-u(b), \qquad B_2u=u{{^{\prime}}}(a)-u{{^{\prime}}}(b),\]</div>
+<p>þá er <span class="math notranslate nohighlight">\(L\)</span> samhverfur á <span class="math notranslate nohighlight">\(C^2_B[a,b]\)</span>.</p>
+<p>Nú erum við reiðubúin að fjalla um eigingildisverkefni sem svara til virkja af Sturm-Liouville gerð með jaðarskilyrðum af þessu tagi.</p>
+</div>
+</div>
+<div class="section" id="eigingildisverkefni-af-sturmliouvilleger">
+<h2>3.4. Eigingildisverkefni af Sturm–Liouville–gerð<a class="headerlink" href="#eigingildisverkefni-af-sturmliouvilleger" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Lítum á eigingildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[Lu= {\lambda} u , \qquad Bu=0,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(L\)</span> er virki af Sturm–Liouville–gerð og
+<span class="math notranslate nohighlight">\(B\)</span> er almennur jaðargildisvirki.</p>
+<p>Línulega rúmið sem spannað er af öllum eiginföllum með tilliti til eigingildisins <span class="math notranslate nohighlight">\({\lambda}\)</span>
+köllum við <a href="http://www.stae.is/os/leita/characteristic_space" class="tooltip" target="_blank">eiginrúmið<span>en: <i>characteristic space</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> með tilliti til eigingildisins
+<span class="math notranslate nohighlight">\({\lambda}\)</span> og við táknum það með <span class="math notranslate nohighlight">\(E_{\lambda}\)</span>.</p>
+<div class="section" id="id5">
+<h3>3.4.1. Skilgreining<a class="headerlink" href="#id5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(L\)</span> er reglulegur virki af Sturm–Liouville–gerð, þá segjum við
+að eigingildisverkefnið sé <em>reglulegt</em>.</p>
+</div>
+<div class="section" id="setning">
+<h3>3.4.2. Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að virkinn <span class="math notranslate nohighlight">\(L\)</span> af Sturm–Liouville–gerð sé
+samhverfur á <span class="math notranslate nohighlight">\(C^2_B[a,b]\)</span>. Þá eru öll eigingildin rauntölur og
+eiginföllin sem svara til ólíkra eigingilda eru innbyrðis hornrétt. Að auki má velja grunn í eiginrúminu <span class="math notranslate nohighlight">\(E_\lambda\)</span> sem samanstendur af raungildum föllum.</p>
+</div>
+<div class="section" id="id6">
+<h3>3.4.3. Setning<a class="headerlink" href="#id6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Öll eigingildin eru <span class="math notranslate nohighlight">\(\geq 0\)</span> í tilfellunum:</p>
+<p>(i) <span class="math notranslate nohighlight">\(q(x)\geq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>, jaðarskilyrðin eru
+aðskilin, <span class="math notranslate nohighlight">\(B_1u=\alpha_1u(a)-\beta_1u{{^{\prime}}}(a)=0\)</span>,
+<span class="math notranslate nohighlight">\(B_2u=\alpha_2u(b)+\beta_2u{{^{\prime}}}(b)=0\)</span>,
+<span class="math notranslate nohighlight">\(\alpha_1\geq 0\)</span>, <span class="math notranslate nohighlight">\(\beta_1\geq 0\)</span>, <span class="math notranslate nohighlight">\(\alpha_2\geq 0\)</span> og
+<span class="math notranslate nohighlight">\(\beta_2\geq 0\)</span>.</p>
+<p>(ii) <span class="math notranslate nohighlight">\(q(x)\geq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>, <span class="math notranslate nohighlight">\(p(a)=p(b)\)</span>
+og jaðarskilyrðin eru lotubundin, <span class="math notranslate nohighlight">\(B_1u=u(a)-u(b)=0\)</span> og
+<span class="math notranslate nohighlight">\(B_2u=u{{^{\prime}}}(a)-u{{^{\prime}}}(b)=0\)</span>.</p>
+<hr class="docutils" />
+<p>Eftirfarandi setning er meginniðurstaða þessarar umfjöllunar. Hún alhæfir það sem við höfum áður fjallað um með Fourier-röðum.</p>
+</div>
+<div class="section" id="id7">
+<h3>3.4.4. Setning<a class="headerlink" href="#id7" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að</p>
+<div class="math notranslate nohighlight">
+\[Lu={\lambda} u, \qquad Bu=0,\]</div>
+<p>sé reglulegt Sturm–Liouville–eigingildisverkefni og að <span class="math notranslate nohighlight">\(L\)</span> sé
+samhverfur með tilliti til jaðarskilyrðanna <span class="math notranslate nohighlight">\(Bu=0\)</span>. Þá er til
+óendanleg runa <span class="math notranslate nohighlight">\({\lambda}_0&lt;{\lambda}_1&lt;{\lambda}_2\cdots \to +{\infty}\)</span> af eigingildum og tilsvarandi raungildum eiginföllum
+<span class="math notranslate nohighlight">\(u_0,u_1,u_2,\dots\)</span>, sem uppfylla</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{{\langle u_j,u_k\rangle}}=\begin{cases} 1, &amp;j=k,\\0, &amp;j\neq k,\end{cases}\end{split}\]</div>
+<p>og sérhvert fall <span class="math notranslate nohighlight">\(u\in C^2_B[a,b]\)</span> er unnt að liða í eiginfallaröð</p>
+<div class="math notranslate nohighlight">
+\[u(x)=\sum\limits_{n=0}^{\infty} c_n(u)u_n(x), \qquad x\in [a,b],\]</div>
+<p>sem er samleitin í jöfnum mæli á <span class="math notranslate nohighlight">\([a,b]\)</span> og stuðlarnir eru gefnir
+með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[c_n(u)={{\langle u,u_n\rangle}}= \int_a^bu(x)u_n(x){\varrho}(x)\, dx.\]</div>
+</div>
+<div class="section" id="id8">
+<h3>3.4.5. Skilgreining<a class="headerlink" href="#id8" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir sérhvert heildanlegt fall <span class="math notranslate nohighlight">\(f\)</span> á <span class="math notranslate nohighlight">\([a,b]\)</span>, þá
+skilgreinum við <em>Fourier–stuðul fallsins</em> <span class="math notranslate nohighlight">\(f\)</span>  <em>með tilliti til
+eiginfallsins</em> <span class="math notranslate nohighlight">\(u_n\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[c_n(f)= {{\langle f,u_n\rangle}} =\int_a^b f(x) u_n(x){\varrho}(x)\, dx\]</div>
+<p>og <em>eiginfallaröðina af</em> <span class="math notranslate nohighlight">\(f\)</span>  <em>með tilliti til eiginfallanna</em>
+<span class="math notranslate nohighlight">\((u_n)_{n=0}^{\infty}\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\sum\limits_{n=0}^{\infty} c_n(f)u_n(x).\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Við höfum einnig andhverfuformúlu fyrir eiginfallaraðir af föllum sem eru samfellt deildanleg á köflum sem er samhljóða andhverfuformúlu Fouriers.</p>
+</div>
+</div>
+</div>
+<div class="section" id="green-foll-fyrir-jaargildisverkefni">
+<h2>3.5. Green-föll fyrir jaðargildisverkefni<a class="headerlink" href="#green-foll-fyrir-jaargildisverkefni" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Lítum á línulegan jaðargildisvirkja  <span class="math notranslate nohighlight">\(B\)</span>
+á <span class="math notranslate nohighlight">\([a,b]\)</span> á forminu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ B:C^{m-1}[a,b]\to {{\mathbb  C}}^m, \qquad Bu=(B_1u,\dots,B_mu),\\
+ B_ju=\sum\limits_{l=1}^m \alpha_{jl}u^{(l-1)}(a)+
+ \beta_{jl}u^{(l-1)}(b).
+ \end{cases}\end{split}\]</div>
+<p>Gerum ráð fyrir því að fyrir sérhvert <span class="math notranslate nohighlight">\(j\)</span> sé að minnsta kosti
+ein talnanna <span class="math notranslate nohighlight">\(\alpha_{jl}\)</span>, <span class="math notranslate nohighlight">\(\beta_{jl}\)</span>,
+<span class="math notranslate nohighlight">\(l=1,\dots,m\)</span> frábrugðin <span class="math notranslate nohighlight">\(0\)</span>. Skilgreinum <span class="math notranslate nohighlight">\(C^m_B[a,b]\)</span>
+sem rúm allra <span class="math notranslate nohighlight">\(u\in C^m[a,b]\)</span> sem uppfylla óhliðruðu
+jaðarskilyrðin <span class="math notranslate nohighlight">\(Bu=0\)</span>.</p>
+<div class="section" id="id9">
+<h3>3.5.1. Setning<a class="headerlink" href="#id9" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P(x,D)=a_m(x)D^m+\cdots+a_1(x)D+a_0(x)\)</span> vera afleiðuvirkja
+á <span class="math notranslate nohighlight">\([a,b]\)</span> með samfellda stuðla, gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(a_m(x)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\in [a,b]\)</span>, látum
+<span class="math notranslate nohighlight">\(B:C^{m-1}[a,b]\to {{\mathbb  C}}^m\)</span> vera jaðargildisvirkja og
+gerum ráð fyrir að <span class="math notranslate nohighlight">\({\lambda}=0\)</span> sé ekki eigingildi <span class="math notranslate nohighlight">\(P(x,D)\)</span>
+á <span class="math notranslate nohighlight">\(C^m_B[a,b]\)</span>. Þá hefur jaðargildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[P(x,D)u=f(x), \qquad Bu=0,\]</div>
+<p>ótvírætt ákvarðaða lausn sem uppfyllir</p>
+<div class="math notranslate nohighlight">
+\[u(x) = \int_a^b G_B(x,{\xi})f({\xi})\, d{\xi},\]</div>
+<p>þar sem fallið <span class="math notranslate nohighlight">\(G_B\)</span> hefur eftirtalda eiginleika:</p>
+<p>(i) <span class="math notranslate nohighlight">\({\partial}_x^{k}G_B(x,{\xi})\)</span> er samfellt á
+<span class="math notranslate nohighlight">\([a,b]\times [a,b]\)</span> fyrir <span class="math notranslate nohighlight">\(k=0,\dots,m-2\)</span>.</p>
+<p>(ii)<span class="math notranslate nohighlight">\({\partial}_x^{m-1}G_B(x,{\xi})\)</span> er samfellt í öllum punktum
+á <span class="math notranslate nohighlight">\([a,b]\times [a,b]\)</span> fyrir utan línuna <span class="math notranslate nohighlight">\(x={\xi}\)</span> og tekur
+stökkið <span class="math notranslate nohighlight">\(1/a_m({\xi})\)</span> yfir hana.</p>
+<p>(iii) <span class="math notranslate nohighlight">\(P(x,D_x)G_B(x,{\xi})=0\)</span> ef <span class="math notranslate nohighlight">\(x\neq {\xi}\)</span>.</p>
+<p>(iv) <span class="math notranslate nohighlight">\(BG_B(\cdot,{\xi})=0\)</span> ef <span class="math notranslate nohighlight">\({\xi}\in ]a,b[\)</span>,
+þ.e.&nbsp;<span class="math notranslate nohighlight">\(G_B\)</span> uppfyllir óhliðruð jaðarskilyrði, sem fall af fyrri
+breytistærðinni.</p>
+<p>Skilyrðin (i)-(iv) ákvarða fallið <span class="math notranslate nohighlight">\(G_B\)</span> ótvírætt.</p>
+</div>
+<div class="section" id="id10">
+<h3>3.5.2. Setning<a class="headerlink" href="#id10" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P(x,D)=a_2(x)D^2+a_1(x)D+a_0(x)\)</span> vera annars stigs
+afleiðuvirkja, þar sem <span class="math notranslate nohighlight">\(a_2(x)\neq 0\)</span> fyrir öll
+<span class="math notranslate nohighlight">\(x\in [a,b]\)</span>, og gerum ráð fyrir að jaðarskilyrðin séu aðskilin, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[B_1u=\alpha_1u(a)-\beta_1u{{^{\prime}}}(a), \quad
+ B_2u=\alpha_2u(b)+\beta_2u{{^{\prime}}}(b),\]</div>
+<p>og <span class="math notranslate nohighlight">\((\alpha_1,\beta_1)\neq(0,0)\)</span>, <span class="math notranslate nohighlight">\((\alpha_2,\beta_2)\neq (0,0)\)</span>. Gerum ráð fyrir að <span class="math notranslate nohighlight">\(u_1\)</span> og <span class="math notranslate nohighlight">\(u_2\)</span> myndi grunn í
+núllrúmi virkjans og</p>
+<div class="math notranslate nohighlight">
+\[B_1u_1=0, \qquad B_2u_2=0.\]</div>
+<p>Þá er Green-fallið fyrir jaðargildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[P(x,D)u=f(x), \qquad Bu=0,\]</div>
+<p>gefið með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}G_B(x,{\xi}) = \begin{cases} \dfrac{u_1({\xi})u_2(x)}
+ {a_2({\xi})W(u_1,u_2)({\xi})}, &amp;a\leq {\xi}\leq x\leq b,\\
+  \dfrac{u_1(x)u_2({\xi})}
+ {a_2({\xi})W(u_1,u_2)({\xi})}, &amp;a\leq x\leq {\xi}\leq b,
+ \end{cases}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(W(u_1,u_2)\)</span> er Wronski-ákveða fallanna <span class="math notranslate nohighlight">\(u_1\)</span> og
+<span class="math notranslate nohighlight">\(u_2\)</span>.</p>
+</div>
+</div>
+<div class="section" id="eiginfallaliun-og-greenfoll">
+<h2>3.6. Eiginfallaliðun og Green–föll<a class="headerlink" href="#eiginfallaliun-og-greenfoll" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="reikniafer">
+<h3>3.6.1. Reikniaðferð<a class="headerlink" href="#reikniafer" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Eftirfarandi losaralegu reikningar gera okkur kleift að finna Green-fall fyrir jaðargildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[Lu=f(x), \qquad x\in ]a,b[, \qquad Bu=0,\]</div>
+<p>þar sem</p>
+<ul class="simple">
+<li><span class="math notranslate nohighlight">\(L\)</span> er virki af Sturm–Liouville–gerð</li>
+<li><span class="math notranslate nohighlight">\(L\)</span> er reglulegur og samhverfur með tilliti til jaðarskilyrðanna <span class="math notranslate nohighlight">\(Bu=0\)</span>.</li>
+</ul>
+<p>Nú fæst líkt og fyrir Fourier-raðir að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u(x)=\sum\limits_{\substack{n=0 \\ \lambda_n\neq 0}}^{\infty} \dfrac {c_n(f)}{\lambda_n}u_n(x)\end{split}\]</div>
+<p>er lausn ef röðin er nógu hratt samleitin þannig að víxla megi á diffrun og óendanlegri röð.</p>
+<p>Ef <span class="math notranslate nohighlight">\({\lambda}=0\)</span> er eigingildi, þá gerum við ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé hornrétt á eiginrúmið <span class="math notranslate nohighlight">\(E_0\)</span>.</p>
+<p>Stingum inn formúlunni fyrir stuðlana <span class="math notranslate nohighlight">\(c_n(f)\)</span> og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ u(x)&amp;= \sum\limits_{n=0}^{\infty} \dfrac 1{\lambda_n}
+ \bigg(\int_a^b f({\xi})u_n({\xi}){\varrho}({\xi})\, d{\xi}\bigg)
+ u_n(x)\\
+ &amp;=\int_a^b{\varrho}({\xi})\bigg(\sum\limits_{n=0}^{\infty} \dfrac{u_n(x)u_n({\xi})}
+ {\lambda_n}\bigg) f({\xi})\, d{\xi}.\nonumber\end{aligned}\end{split}\]</div>
+<p>Green–fallið fyrir jaðargildisverkefnið er ótvírætt ákvarðað, svo</p>
+<div class="math notranslate nohighlight">
+\[G_B(x,{\xi})={\varrho}({\xi})\sum\limits_{n=0}^{\infty}
+ \dfrac{u_n(x)u_n({\xi})}{\lambda_n}.\]</div>
+</div>
+</div>
+<div class="section" id="urlausn-hlutafleiujafa-me-eiginfallaroum">
+<h2>3.7. Úrlausn hlutafleiðujafa með eiginfallaröðum<a class="headerlink" href="#urlausn-hlutafleiujafa-me-eiginfallaroum" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við höldum nú áfram að fjalla um hvernig eigingildisverkefni koma við sögu í úrlausn hlutafleiðujafna. Við munum nálgast umfjöllunina með því að taka dæmi, sum þeirra kunnugleg en önnur ný. Það koma aðallega við sögu tvennskonar lausnaraðferðir</p>
+<ul>
+<li><p class="first">Sett er fram lausnartilgáta á hlutafleiðujöfnu með hliðarskilyrðum í formi <strong>eiginfallaraðar með tilliti til einnar breytistærðarinnar</strong> þar sem stuðlarnir eru háðir hinni breytistærðinni.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Eiginfallaröðin er valin þannig að hún innihaldi <strong>eiginföll</strong> þess hluta virkjans í verkefninu sem svarar til breytunnar sem liðað er með tilliti til og þannig að <strong>eiginföllin uppfylli jaðarskilyrðin</strong>.</li>
+<li>Tilgátunni er stungið inn í hlutafleiðujöfnuna og gert ráð fyrir að víxla megi á óendanlegu röðinni og þeim afleiðum sem koma við sögu.</li>
+<li>Þá fæst (hlut)afleiðujafna fyrir stuðlana ásamt hliðarskilyrðum sem mögulega má leysa.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Aðskilnaði breytistærða er beitt</strong> og þá fást eigingildisverkefni sem þarf að leysa og lausnir þeirra gefa fjölskyldu af ólíkum aðgreinanlegum lausnum, eina fyrir hvert eigingildi.  Lausn upphaflega verkefnisins má rita sem línulega samantekt af slíkum aðgreinanlegum lausnum.</p>
+</li>
+</ul>
+<p>Byrjum á að líta á dæmi um aðferðina sem líst er í fyrri punktinum.</p>
+<p>Margar af mikilvægustu hlutafleiðujöfnum sem fengist er við til að mynda í eðlisfræði innihalda Laplace-virkjann og við byrjum á stuttri umfjöllun um Laplace-jöfnuna. Þegar Laplace-jafnan er leyst á gefnu mengi með fallsjaðarskilyrðum kallast verkefnið <strong>Dirichlet-verkefnið</strong>.</p>
+<div class="section" id="dirichlet-verkefni-a-retthyrningi">
+<h3>3.7.1. Dirichlet-verkefnið á rétthyrningi<a class="headerlink" href="#dirichlet-verkefni-a-retthyrningi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á verkefnið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} \Delta u=0, &amp;0&lt;x&lt;L, \ 0&lt;y&lt;M,\\
+ u(x,0)=\varphi_1(x), \ u(x,M)=\varphi_2(x), &amp;0&lt;x&lt;L,\\
+ u(0,y)=\psi_1(y), \ u(L,y)=\psi_2(y), &amp;0&lt;y&lt;M.
+ \end{cases}\end{split}\]</div>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/dirichlet1.png"><img alt="Dirichlet verkefnið á rétthyrningi" src="_images/dirichlet1.png" style="width: 65%;" /></a>
+<p class="caption"><span class="caption-text">Mynd: Dirichlet verkefnið á rétthyrningi.</span></p>
+</div>
+<p>Skiptum því í fjóra hluta</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} \Delta u_1=0,\\
+ u_1(x,0)=\varphi_1(x), \ u_1(x,M)=0,\\
+ u_1(0,y)=u_1(L,y)=0,
+ \end{cases}\qquad
+ \begin{cases} \Delta u_2=0,\\
+ u_2(x,0)=0, u_2(x,M)=\varphi_2(x),\\
+ u_2(0,y)=u_2(L,y)=0,
+ \end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} \Delta u_3=0,\\
+ u_3(x,0)=u_3(x,M)=0,\\
+ u_3(0,y)=\psi_1(y), \ u_3(L,y)=0,
+ \end{cases} \qquad
+ \begin{cases} \Delta u_4=0,\\
+ u_4(x,0)=u_4(x,M)=0,\\
+ u_4(0,y)=0, u_4(L,y)=\psi_2(y).
+ \end{cases}\end{split}\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(u_1\)</span>, <span class="math notranslate nohighlight">\(u_2\)</span>, <span class="math notranslate nohighlight">\(u_3\)</span> og <span class="math notranslate nohighlight">\(u_4\)</span> eru lausnir þá er
+<span class="math notranslate nohighlight">\(u(x,y)=u_1(x,y)+u_2(x,y)+u_3(x,y)+u_4(x,y)\)</span> lausn upphaflega verkefnis.</p>
+<p>Nóg er að leysa verkefnið fyrir <span class="math notranslate nohighlight">\(u_1\)</span> því lausnina á hinum má skrifa niður út frá þeirri lausn.</p>
+<ul class="simple">
+<li>Vegna jaðarskilyrða <span class="math notranslate nohighlight">\(u_1(0,y)=u_1(L,y)=0\)</span> liðum við <span class="math notranslate nohighlight">\(u_1(x,y)\)</span> í Fourier-sínusröð í breytistærðinni <span class="math notranslate nohighlight">\(x\)</span>, með stuðla sem eru háðir <span class="math notranslate nohighlight">\(y\)</span></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}u_1(x,y)=\sum\limits_{n=1}^\infty u_{1n}(y)\sin\big(n\pi x/L\big), \\\end{split}\]</div>
+<ul class="simple">
+<li>Ákvörðum stuðlana <span class="math notranslate nohighlight">\(u_{1n}(y)\)</span>, með því að víxla á óendanlegu röðinni og <span class="math notranslate nohighlight">\(\Delta\)</span> og stingum svo inn jaðarskilyrðunum.</li>
+<li>Fáum þá að <span class="math notranslate nohighlight">\(u_{1n}\)</span> er lausn á jaðargildisverkefninu</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ u_{1n}{{^{\prime\prime}}}(y)-(n\pi/L)^2 u_{1n}(y)=0, &amp;0&lt;y&lt;M,\\
+ u_{1n}(0)=b_n(\varphi_1), \quad u_{1n}(M)=0.
+ \end{cases}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(b_n(\varphi_1)\)</span> er <span class="math notranslate nohighlight">\(n\)</span>-ti Fourier-sínus-stuðull <span class="math notranslate nohighlight">\(\varphi_1\)</span>. Lausn þessa verkefnis er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ u_{1n}(y)&amp;=b_n(\varphi_1)\cosh\big(n\pi y/L\big)- b_n(\varphi_1)
+ \dfrac{\cosh\big(n\pi M/L\big)}{\sinh\big(n\pi M/L\big)}
+ \sinh\big(n\pi y/L\big)\\
+ &amp;=b_n(\varphi_1)\dfrac
+ {\sinh\big(n\pi M/L\big) \cosh\big(n\pi y/L\big)
+ -\cosh\big(n\pi M/L\big) \sinh\big(n\pi y/L\big)}
+ {\sinh\big(n\pi M/L\big)}\\
+ &amp;=b_n(\varphi_1)\dfrac
+ {\sinh\big(n\pi (M-y)/L\big)}
+ {\sinh\big(n\pi M/L\big)}.\end{aligned}\end{split}\]</div>
+<p>Fáum svo <span class="math notranslate nohighlight">\(u_2\)</span> með því að skipta á
+<span class="math notranslate nohighlight">\(y\)</span> og <span class="math notranslate nohighlight">\(M-y\)</span> og <span class="math notranslate nohighlight">\(u_3\)</span> og <span class="math notranslate nohighlight">\(u_4\)</span> með því að skipta á hlutverkum <span class="math notranslate nohighlight">\(x\)</span> og
+<span class="math notranslate nohighlight">\(y\)</span>. Lokaniðurstaðn er því</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ u(x,y)&amp;=\sum\limits_{n=1}^\infty
+ b_n(\varphi_1)
+ \dfrac{\sinh\big(n\pi(M-y)/L\big)}{\sinh\big(n\pi M/L\big)}
+ \sin\big(n\pi x/L\big)\\
+ &amp;+\sum\limits_{n=1}^\infty
+ b_n(\varphi_2)
+ \dfrac{\sinh\big(n\pi y/L\big)}{\sinh\big(n\pi M/L\big)}
+ \sin\big(n\pi x/L\big)\nonumber\\
+ &amp;+\sum\limits_{n=1}^\infty
+ b_n(\psi_1)
+ \dfrac{\sinh\big(n\pi (L-x)/M\big)}{\sinh\big(n\pi L/M\big)}
+ \sin\big(n\pi y/M\big)\nonumber\\
+ &amp;+\sum\limits_{n=1}^\infty
+ b_n(\psi_2)
+ \dfrac{\sinh\big(n\pi x/M\big)}{\sinh\big(n\pi L/M\big)}
+ \sin\big(n\pi y/M\big).\nonumber\end{aligned}\end{split}\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Það reyndist mikilvægt í þessari aðferð að föllin <span class="math notranslate nohighlight">\(\sin(n{\pi}x/L)\)</span> uppfylla gefnu jaðarskilyrðin og eru eiginföll <span class="math notranslate nohighlight">\(\partial_x^2\)</span>.</p>
+</div>
+</div>
+<div class="section" id="dirichlet-verkefni-a-skifu">
+<h3>3.7.2. Dirichlet-verkefnið á skífu<a class="headerlink" href="#dirichlet-verkefni-a-skifu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á sama verkefni á hringskífu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} \Delta u=
+ \dfrac{\partial^2u}{\partial x^2}+
+ \dfrac{\partial^2u}{\partial y^2}=0, &amp;x^2+y^2&lt;a^2,\\
+ u(x,y)=\varphi(x,y), &amp;x^2+y^2=a^2.
+ \end{cases}\end{split}\]</div>
+<p>Þar sem svæðið er skífa er eðlilegt að umrita verkefnið með því að nota <strong>pólhnit</strong>.
+Laplace-virkjann er í pólhnitum</p>
+<div class="math notranslate nohighlight">
+\[\Delta = \dfrac 1r\dfrac{\partial}{\partial r}
+ \bigg(r\dfrac{\partial }{\partial r}\bigg)
+ +\dfrac 1{r^2}\dfrac{\partial^2 }{\partial\theta^2},\]</div>
+<p>og því má rita verkefnið á forminu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \dfrac 1r\dfrac{\partial}{\partial r}
+ \bigg(r\dfrac{\partial v}{\partial r}\bigg)
+ +\dfrac 1{r^2}\dfrac{\partial^2 v}{\partial\theta^2}=0, &amp;r&lt;a,
+ \ {\theta}\in {{\mathbb  R}},\\
+ v(a,\theta)={\psi}(\theta), &amp;{\theta}\in {{\mathbb  R}}.
+ \end{cases}\end{split}\]</div>
+<p>með <span class="math notranslate nohighlight">\(v(r,\theta) = u(x(r,\theta),y(r,\theta))\)</span>.</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/dirichlet2.png"><img alt="Dirichlet verkefnið á skífu" src="_images/dirichlet2.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-text">Mynd: Dirichlet verkefnið á skífu.</span></p>
+</div>
+<ul class="simple">
+<li>Þar sem <span class="math notranslate nohighlight">\(v\)</span> og <span class="math notranslate nohighlight">\({\psi}\)</span> eru <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundin föll prófum við lausnartilgáta sem er Fourier-röðum með tilliti til <span class="math notranslate nohighlight">\({\theta}\)</span> með stuðlum sem geta verið háðir <span class="math notranslate nohighlight">\(r\)</span></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[v(r,\theta)=\sum\limits_{n=-\infty}^{+\infty}
+ v_n(r)e^{in\theta}.\]</div>
+<p>og liðum <span class="math notranslate nohighlight">\(\psi\)</span> sömuleiðis í Fourier-röð</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[{\psi}(\theta)=\sum\limits_{n=-\infty}^{+\infty}
+{\psi}_n e^{in\theta}.\]</div>
+</div></blockquote>
+<ul class="simple">
+<li>Ákvörðum stuðlana <span class="math notranslate nohighlight">\(v_{n}(r)\)</span>, með því að víxla á óendanlegu röðinni fyrir <span class="math notranslate nohighlight">\(v\)</span> og <span class="math notranslate nohighlight">\(\Delta\)</span> og stingum svo inn jaðarskilyrðunum.</li>
+<li>Fáum þá að <span class="math notranslate nohighlight">\(v_{n}\)</span> er lausn á jaðargildisverkefninu</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ r\dfrac d{dr}\bigg(r\dfrac{dv_n}{dr}\bigg)-n^2v_n=0, &amp;r&lt;a,\\
+ v_n(a)={\psi}_n, \quad v_n(r) \text{ takmarkað ef } r\to 0.
+ \end{cases}\end{split}\]</div>
+<p>Þetta er Euler-jafna og því stingum við inn lausnartilgátu <span class="math notranslate nohighlight">\(v_n(r)=r^\alpha\)</span></p>
+<div class="math notranslate nohighlight">
+\[r\dfrac d{dr}\bigg( r\dfrac d{dr}r^\alpha\bigg)=\alpha^2r^\alpha=
+ n^2r^\alpha.\]</div>
+<p>og sjáum að <span class="math notranslate nohighlight">\(\alpha=\pm n\)</span>. Almenn lausn
+afleiðujöfnunar er því</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v_n(r)=
+ \begin{cases}
+ A_nr^{|n|}+B_nr^{-|n|}, &amp;n\neq 0\\
+ A_0+B_0\ln r, &amp;n=0.
+ \end{cases}\end{split}\]</div>
+<p>Til þess að lausnin geti verið takmörkuð í <span class="math notranslate nohighlight">\(r=0\)</span>, þá útilokum við liðina með neikvæðum veldisvísi og logrann. Skilyrðið
+<span class="math notranslate nohighlight">\(v_n(a)={\psi}_n\)</span> gefur að <span class="math notranslate nohighlight">\(A_n={\psi}_n/a^{|n|}\)</span>. Þar með
+er lausnin fundin</p>
+<div class="math notranslate nohighlight">
+\[v(r,\theta)=\sum\limits_{n=-\infty}^{+\infty}
+ \psi_n \bigg(\dfrac r a\bigg)^{|n|}e^{in\theta}.\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Það reyndist mikilvægt í þessari aðferð að föllin <span class="math notranslate nohighlight">\(e^{in\theta}\)</span> eru eiginföll <span class="math notranslate nohighlight">\(\partial_\theta^2\)</span>.</p>
+</div>
+</div>
+<div class="section" id="varmaleinijafnan-me-timahaum-jaarskilyrum">
+<h3>3.7.3. Varmaleiðnijafnan með tímaháðum jaðarskilyrðum<a class="headerlink" href="#varmaleinijafnan-me-timahaum-jaarskilyrum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Reiknum hitastig í jarðvegi sem fall af tíma <span class="math notranslate nohighlight">\(t\)</span> og dýpi <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Hitastigið á yfirborði er gefið sem fall af tíma <span class="math notranslate nohighlight">\(f(t)\)</span> og gert ráð fyrir að það sé <span class="math notranslate nohighlight">\(T\)</span>-lotubundið fall (t.d.vegna árstíðasveiflna). Ritum</p>
+<div class="math notranslate nohighlight">
+\[f(t)=\sum\limits_{n=-\infty}^{+\infty}
+ c_n(f)e^{in\omega t}, \qquad  \omega=2\pi/T.\]</div>
+<p>Setjum upp jaðargildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \dfrac{\partial u}{\partial t}-\kappa
+ \dfrac{\partial^2 u}{\partial x^2}=0, &amp;x&gt;0, \ t\in {{\mathbb  R}},\\
+ u(0,t)=f(t), &amp;t\in {{\mathbb  R}},\\
+ u(x,t) \text{ takmarkað ef } &amp; x\to +\infty.
+ \end{cases}\end{split}\]</div>
+<ul class="simple">
+<li>Prófum lausn <span class="math notranslate nohighlight">\(u(x,t)\)</span> sem er <span class="math notranslate nohighlight">\(T\)</span>-lotubundið fall af <span class="math notranslate nohighlight">\(t\)</span> fyrir fast <span class="math notranslate nohighlight">\(x\)</span>. Liðum það í <span class="math notranslate nohighlight">\(u\)</span> í Fourier-röð miðað við <span class="math notranslate nohighlight">\(t\)</span> með stuðla sem geta verið háðir <span class="math notranslate nohighlight">\(x\)</span></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum\limits_{n=-\infty}^{+\infty}
+ u_n(x)e^{in\omega t}.\]</div>
+<ul class="simple">
+<li>Ákvörðum stuðlana <span class="math notranslate nohighlight">\(u_{n}(x)\)</span>, með því að víxla á óendanlegu röðinni fyrir <span class="math notranslate nohighlight">\(v\)</span> og virkjanum <span class="math notranslate nohighlight">\(\dfrac{\partial}{\partial t}-\kappa\dfrac{\partial^2}{\partial x^2}\)</span> og stingum svo inn jaðarskilyrðunum.</li>
+<li>Fáum þá að <span class="math notranslate nohighlight">\(u_{n}\)</span> er lausn á</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ u_n{{^{\prime\prime}}}(x)-\dfrac{in\omega}\kappa u_n(x)=0,\\
+ u_n(0)=c_n(f),\\
+ u_n(x) \text{ er takmarkað ef } x \to +\infty.
+ \end{cases}\end{split}\]</div>
+<p>Kennijafna afleiðujöfnunnar er</p>
+<div class="math notranslate nohighlight">
+\[\lambda^2-\dfrac{in\omega}\kappa=0\]</div>
+<p>og núllstöðvar hennar eru <span class="math notranslate nohighlight">\(\lambda=\pm k_n\)</span>, þar sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}k_n=
+ \begin{cases}
+ \bigg(\dfrac 1{\sqrt 2}+\dfrac i{\sqrt 2}\bigg)
+ \sqrt{n\omega/\kappa}, &amp;n&gt;0,\\
+ 0, &amp;n=0,\\
+ \bigg(\dfrac 1{\sqrt 2}-\dfrac i{\sqrt 2}\bigg)
+ \sqrt{|n|\omega/\kappa}, &amp;n&lt;0.
+ \end{cases}\end{split}\]</div>
+<p>Lausnin er því</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u_n(x)=\begin{cases}
+ A_ne^{-k_nx}+B_ne^{k_nx}, &amp;n\neq 0\\
+ A_0+B_0x, &amp;n=0.
+ \end{cases}\end{split}\]</div>
+<p>Til þess að lausnin haldist takmörkuð ef <span class="math notranslate nohighlight">\(x\to +\infty\)</span>, þá
+verður <span class="math notranslate nohighlight">\(B_n=0\)</span> að gilda fyrir öll <span class="math notranslate nohighlight">\(n\)</span>. Jaðarskilyrðið
+<span class="math notranslate nohighlight">\(u_n(0)=c_n(f)\)</span> gefur að <span class="math notranslate nohighlight">\(A_n=c_n(f)\)</span>. Við höfum því að</p>
+<div class="math notranslate nohighlight">
+\[u_n(x)=c_n(f)e^{-\sqrt{|n|\omega/2\kappa}\, x}
+ e^{-i{{\operatorname{sign}}}(n)\sqrt{|n|\omega/2\kappa}\, x},\]</div>
+<p>og þar með er lausnin fundin</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum\limits_{n=-\infty}^{+\infty}
+ c_n(f)e^{-\sqrt{|n|\omega/2\kappa}\, x}
+ e^{i(n\omega t-{{\operatorname{sign}}}(n)\sqrt{|n|\omega/2\kappa}\, x)}.\]</div>
+<p>Við sjáum að sveifluvíddin og fasahliðrunin í liðnum
+<span class="math notranslate nohighlight">\(u_n(x)e^{in\omega t}\)</span> í lausninni eru háð dýpi og tíðninni
+<span class="math notranslate nohighlight">\(n\omega\)</span>.</p>
+</div>
+</div>
+<div class="section" id="afram-um-eigingildisverkefni-askilnaur-breytistaera">
+<h2>3.8. Áfram um eigingildisverkefni - aðskilnaður breytistærða<a class="headerlink" href="#afram-um-eigingildisverkefni-askilnaur-breytistaera" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Í þessum síðustu greinum kaflans munum við fara í gegnum fleiri reikniaðferðir sem beita má við lausn hlutafleiðujafna. Við reynum að koma almennum hugmyndum til skila en styðjumst þó að mestu við ákveðin dæmi til að skýra hugmyndirnar.</p>
+<div class="section" id="dirichlet-verkefni-a-retthyrningi-aftur">
+<h3>3.8.1. Dirichlet-verkefnið á rétthyrningi - aftur<a class="headerlink" href="#dirichlet-verkefni-a-retthyrningi-aftur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skoðum aftur Dirchlet-verkefnið á rétthyrningi. Lítum á jöfnu 2 af jöfnunum fjórum sem komu áður fyrir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases} \Delta u={\partial}_x^2u+{\partial}_y^2u=0, &amp;0&lt;x&lt;L, \ 0&lt;y&lt;M,\\
+ u(0,y)=u(L,y)=0, &amp;0&lt;y&lt;M,\\
+ u(x,0)=0, \ u(x,M)=\varphi(x), &amp;0&lt;x&lt;L,\\
+ \end{cases}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\varphi\)</span> er gefið fall á <span class="math notranslate nohighlight">\([0,L]\)</span>.</p>
+<ul class="simple">
+<li>Leitum fyrst að öllum lausnum af gerðinni <span class="math notranslate nohighlight">\(v(x,y)=X(x)Y(y)\)</span> sem uppfylla jöfnuna og óhliðruðu jaðarskilyrðin.</li>
+<li>Stingum næst <span class="math notranslate nohighlight">\(v\)</span> inn í hlutafleiðu jöfnuna og fáum</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[X{{^{\prime\prime}}}(x)Y(y)+X(x)Y{{^{\prime\prime}}}(y)=0.\]</div>
+<ul class="simple">
+<li>Deilum í gegnum jöfnuna með <span class="math notranslate nohighlight">\(X(x)Y(y)\)</span> og fáum þá</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[-\dfrac{X{{^{\prime\prime}}}(x)}{X(x)}=\dfrac{Y{{^{\prime\prime}}}(y)}{Y(y)}.\]</div>
+<p>Fallið vinstra megin er einungis háð <span class="math notranslate nohighlight">\(x\)</span>, en fallið hægra megin er einungis háð <span class="math notranslate nohighlight">\(y\)</span>. Því hlýtur hvor hlið að vera föst. Við
+höfum því</p>
+<div class="math notranslate nohighlight">
+\[-X{{^{\prime\prime}}}(x)=\lambda X(x) \qquad \text{ og } \qquad Y{{^{\prime\prime}}}(y)=\lambda Y(y),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\lambda\)</span> er fasti.</p>
+<ul class="simple">
+<li>Lítum nú á jaðarskilyrðin</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[X(0)Y(y)=X(L)Y(y)=0, \qquad X(x)Y(0)=0,\]</div>
+<p>og sjáum að <span class="math notranslate nohighlight">\(X\)</span> er lausn á eigingildisverkefninu</p>
+<div class="math notranslate nohighlight">
+\[-X{{^{\prime\prime}}}=\lambda X, \qquad X(0)=X(L)=0.\]</div>
+<p>Þetta höfum við leyst áður og fengum eigingildin
+<span class="math notranslate nohighlight">\(\lambda=\lambda_n=\big(n\pi/L\big)^2\)</span>, <span class="math notranslate nohighlight">\(n=1,2,3,\dots\)</span>, og
+tilsvarandi eiginföll</p>
+<div class="math notranslate nohighlight">
+\[X_n(x)=C_n \sin\big(n\pi x/L\big), \qquad n=1,2,3,\dots.\]</div>
+<p>Leysum næst</p>
+<div class="math notranslate nohighlight">
+\[Y{{^{\prime\prime}}}(y)=\big(n\pi/L\big)^2 Y(y), \qquad Y(0)=0.\]</div>
+<p>Þessi jafna hefur greinilega lausnina</p>
+<div class="math notranslate nohighlight">
+\[Y_n(y)=D_n \sinh\big(n\pi y/L\big), \qquad n=1,2,3,\dots.\]</div>
+<p>Nú eru allar lausnir á Laplace-jöfnunni af gerðinni
+<span class="math notranslate nohighlight">\(v(x,y)=X(x)Y(y)\)</span> með óhliðruðu jaðarskilyrðunum gefnar með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[v(x,y)=C_nD_n \sin\big(n\pi x/L\big)\sinh\big(n\pi y/L\big), \qquad
+ n=1,2,3,\dots.\]</div>
+<p>Getum valið <span class="math notranslate nohighlight">\(D_n=1\)</span>. Tökum óendanlega línulega samatekt af þessum lausnum</p>
+<div class="math notranslate nohighlight">
+\[u(x,y)=\sum\limits_{n=1}^\infty
+ C_n\sin\big(n\pi x/L\big)\sinh\big(n\pi y/L\big).\]</div>
+<p>Síðasta jaðarskilyrðið,
+<span class="math notranslate nohighlight">\(u(x,M)=\varphi(x)\)</span> er uppfyllt ef</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ u(x,M)&amp;= \sum\limits_{n=1}^\infty
+ C_n \sin\big(n\pi x/L\big)\sinh\big(n\pi M/L\big)\\
+ &amp;= \sum\limits_{n=1}^\infty
+ b_n(\varphi) \sin\big(n\pi x/L\big)=\varphi(x),\end{aligned}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(b_n(\varphi)\)</span> er Fourier-sínusstuðull fallsins
+<span class="math notranslate nohighlight">\(\varphi\)</span>.</p>
+<p>Samanburður á stuðlum gefur</p>
+<div class="math notranslate nohighlight">
+\[u(x,y)=\sum_{n=1}^\infty
+ b_n(\varphi)\dfrac{\sinh\big(n\pi y/L\big)}{\sinh\big(n\pi
+ M/L\big)} \sin\big(n\pi x/L\big).\]</div>
+</div>
+<div class="section" id="dirichlet-verkefni-a-skifu-aftur">
+<h3>3.8.2. Dirichlet-verkefnið á skífu - aftur<a class="headerlink" href="#dirichlet-verkefni-a-skifu-aftur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Leysum aftur Dirichlet-verkefnið á hringskífu með aðskilnaði breytistærða,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \dfrac 1r\dfrac{\partial}{\partial r}
+ \bigg(r\dfrac{\partial v}{\partial r}\bigg)
+ +\dfrac 1{r^2}\dfrac{\partial^2 v}{\partial\theta^2}=0, &amp;r&lt;a,
+ \ {\theta}\in {{\mathbb  R}},\\
+ v(a,\theta)={\psi}(\theta), &amp;{\theta}\in {{\mathbb  R}},
+ \end{cases}\end{split}\]</div>
+<p>þar sem föllin <span class="math notranslate nohighlight">\(v\)</span> og <span class="math notranslate nohighlight">\(\psi\)</span> eru <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundin í
+<span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<ul class="simple">
+<li>Leitum fyrst að öllum lausnum af gerðinni <span class="math notranslate nohighlight">\(w(r,\theta)=R(r)\Theta(\theta)\)</span>.</li>
+<li>Stingum tilgátunni inn í hlutafleiðujöfnuna og fáum</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[r \big(r R{{^{\prime}}}(r)\big){{^{\prime}}}\Theta(\theta)
+ +R(r)\Theta{{^{\prime\prime}}}(\theta)=0.\]</div>
+<ul class="simple">
+<li>Deilum í gegn með <span class="math notranslate nohighlight">\(R(r)\Theta(\theta)\)</span> og fáum</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[r\big(r R{{^{\prime}}}(r)\big){{^{\prime}}}/R(r)
+ =-\Theta {{^{\prime\prime}}}(\theta)/\Theta (\theta).\]</div>
+<p>Vinstri hliðin er eingöngu háð <span class="math notranslate nohighlight">\(r\)</span> en hægri hliðin er eingöngu háð <span class="math notranslate nohighlight">\(\theta\)</span>. Þar með eru báðar hliðar jafnar fasta, segjum <span class="math notranslate nohighlight">\(\lambda\)</span>. Fáum þá jöfnurnar</p>
+<div class="math notranslate nohighlight">
+\[-\Theta{{^{\prime\prime}}}(\theta)=\lambda\Theta(\theta),
+ \qquad
+ r\dfrac d{dr}\bigg(r\dfrac {d R}{dr}(r)\bigg)=\lambda {R(r)}.\]</div>
+<ul class="simple">
+<li>Almenn lausn á fyrri jöfnunni er</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Theta(\theta)=\begin{cases}
+ Ae^{i\beta\theta}+Be^{-i\beta\theta},  &amp;\lambda=\beta^2\neq 0,\\
+ A_0+B_0\theta, &amp;\lambda=0.
+ \end{cases}\end{split}\]</div>
+<p>Þar sem fallið <span class="math notranslate nohighlight">\(\Theta\)</span> er <span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundið fæst
+að einu gildin sem <span class="math notranslate nohighlight">\(\lambda\)</span> getur tekið eru
+<span class="math notranslate nohighlight">\(\lambda=\lambda_n=n^2\)</span>, <span class="math notranslate nohighlight">\(n=0,1,2,\dots\)</span>, og <span class="math notranslate nohighlight">\(B_0=0\)</span>.
+Þar með er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Theta(\theta)=\begin{cases}
+ A_ne^{in\theta}+B_ne^{-in\theta},  &amp;n=1,2,3,\dots,\\
+ A_0, &amp;\lambda=0.
+ \end{cases}\end{split}\]</div>
+<ul class="simple">
+<li>Lítum næst á afleiðujöfnuna fyrir <span class="math notranslate nohighlight">\(R(r)\)</span> með <span class="math notranslate nohighlight">\(\lambda=n^2\)</span>. Þetta er Euler-jafna. Með því að leita að lausn af gerðinni <span class="math notranslate nohighlight">\(R(r)=r^\alpha\)</span> sjáum við að <span class="math notranslate nohighlight">\(\alpha=\pm n\)</span>. Almenn lausn á seinni afleiðujöfnunni fyrir <span class="math notranslate nohighlight">\(R(r)\)</span> með <span class="math notranslate nohighlight">\(\lambda=n^2\)</span> er því</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}R(r)=\begin{cases}
+ C_nr^n+D_nr^{-n}, &amp;n=1,2,3,\dots,\\
+ C_0+D_0\ln r, &amp;n=0.
+ \end{cases}\end{split}\]</div>
+<p>Þar sem lausnin verður að gilda í <span class="math notranslate nohighlight">\(r=0\)</span> þarf <span class="math notranslate nohighlight">\(D_n=0\)</span>, <span class="math notranslate nohighlight">\(n=0,1,2,\dots\)</span>. Þar með er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R(r)=\begin{cases}
+ C_nr^n, &amp;n=1,2,3,\dots,\\
+ C_0, &amp;n=0.
+ \end{cases}\end{split}\]</div>
+<ul class="simple">
+<li>Allar lausnir á verkefninu af gerðinni <span class="math notranslate nohighlight">\(w(r,\theta)=R(r)\Theta(\theta)\)</span>  eru þá</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[w(r,\theta)=
+ C_nr^n\big(A_ne^{in\theta}+B_ne^{-in\theta}\big), \qquad n=0,1,2,\dots,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(A_n\)</span>, <span class="math notranslate nohighlight">\(B_n\)</span> og <span class="math notranslate nohighlight">\(C_n\)</span> eru fastar. Veljum <span class="math notranslate nohighlight">\(C_n=1\)</span>.</p>
+<p>Almenn lausn hlutafleiðujöfnunnar er línuleg samantekt þessara lausna</p>
+<div class="math notranslate nohighlight">
+\[v(r,\theta)=\sum\limits_{-\infty}^{+\infty}A_nr^{|n|}e^{in\theta},\]</div>
+<p>þar sem við höfum sett <span class="math notranslate nohighlight">\(A_n=B_{-n}\)</span> ef <span class="math notranslate nohighlight">\(n&lt;0\)</span>.</p>
+<ul class="simple">
+<li>Notum nú jaðarskilyrðið í <span class="math notranslate nohighlight">\(r=a\)</span>,</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[v(a,\theta)=\sum\limits_{-\infty}^{+\infty}A_na^{|n|}e^{in\theta}
+ =\sum\limits_{-\infty}^{+\infty}c_n(\psi)a^{|n|}e^{in\theta}=\psi(\theta).\]</div>
+<p>Með samanburði á stuðlum fæst að <span class="math notranslate nohighlight">\(A_n=c_n(\psi)/a^{|n|}\)</span>
+og þar með fæst</p>
+<div class="math notranslate nohighlight">
+\[v(r,\theta)=\sum\limits_{-\infty}^{+\infty}
+ c_n(\psi)\bigg(\dfrac ra\bigg)^{|n|} e^{in\theta}.\]</div>
+</div>
+</div>
+<div class="section" id="tvofaldar-fourier-rair">
+<h2>3.9. Tvöfaldar Fourier-raðir<a class="headerlink" href="#tvofaldar-fourier-rair" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Látum <span class="math notranslate nohighlight">\({\varphi}:\overline D\to {{\mathbb  C}}\)</span> vera samfellt
+deildanlegt á <span class="math notranslate nohighlight">\(D=\{(x,y); 0&lt;x&lt;L, 0&lt;y&lt;M\}\)</span> og samfellt á lokuninni
+<span class="math notranslate nohighlight">\(\overline  D\)</span>. Ef <span class="math notranslate nohighlight">\({\varphi}\)</span> er jafnt <span class="math notranslate nohighlight">\(0\)</span> á jaðrinum
+<span class="math notranslate nohighlight">\({\partial}D\)</span>, þá getum við liðað <span class="math notranslate nohighlight">\({\varphi}\)</span> í
+Fourier-sínusröð með tilliti til <span class="math notranslate nohighlight">\(y\)</span></p>
+<div class="math notranslate nohighlight">
+\[{\varphi}(x,y)= \sum\limits_{m=1}^{\infty}
+ {\varphi}_m(x)\sin\big(m{\pi}y/M\big).\]</div>
+<p>Fallið <span class="math notranslate nohighlight">\({\varphi}_m\)</span> er samfellt deildanlegt og tekur gildið
+<span class="math notranslate nohighlight">\(0\)</span> í <span class="math notranslate nohighlight">\(x=0\)</span> og <span class="math notranslate nohighlight">\(x=L\)</span>, svo við getum einnig liðað það í
+Fourier-sínusröð</p>
+<div class="math notranslate nohighlight">
+\[\varphi_m(x) = \sum_{n=1}^\infty b_{n,m} \sin(n\pi x/L).\]</div>
+<p>Höfum því framsetningu á <span class="math notranslate nohighlight">\(\varphi\)</span> með <em>tvöfaldri Fourier-röð</em></p>
+<div class="math notranslate nohighlight">
+\[{\varphi}(x,y)=\sum\limits_{n=1}^{{\infty}}
+ \sum\limits_{m=1}^{{\infty}} b_{n,m}
+ \sin\big(n{\pi}x/L\big)\sin\big(m{\pi}y/M\big).\]</div>
+<div class="section" id="daemi-retthyrnd-tromma">
+<h3>3.9.1. Dæmi - Rétthyrnd tromma<a class="headerlink" href="#daemi-retthyrnd-tromma" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Himna er strekkt á rétthyrndan ramma með hliðarlengdir <span class="math notranslate nohighlight">\(L\)</span> og <span class="math notranslate nohighlight">\(M\)</span> og sveiflast þar. Lóðrétt færsla hennar frá jafnvægi
+í punkti <span class="math notranslate nohighlight">\((x,y)\)</span> á tíma <span class="math notranslate nohighlight">\(t\)</span> er táknuð með <span class="math notranslate nohighlight">\(u(x,y,t)\)</span> og uppfyllir tvívíðu bylgjujöfnuna. Ef staða og hraði
+trommunnar eru gefin við tímann <span class="math notranslate nohighlight">\(t=0\)</span>, þá er <span class="math notranslate nohighlight">\(u\)</span> lausn
+verkefnisins</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \dfrac{{\partial^2} u}{{\partial} t^2}
+ -c^2\bigg(\dfrac{\partial^2u}{\partial x^2}
+ +\dfrac{\partial^2u}{\partial y^2}\bigg)=0,
+ &amp;0&lt;x&lt;L, 0&lt;y&lt;M, t&gt;0,\\
+ u(0,y,t)=u(L,y,t)=0,
+ &amp;0&lt;y&lt;M, t&gt;0,\\
+ u(x,0,t)=u(x,M,t)=0,
+ &amp;0&lt;x&lt;L, t&gt;0,\\
+ u(x,y,0)=\varphi(x,y), \ {\partial}_tu(x,y,0)={\psi}(x,y),
+ &amp;0&lt;x&lt;L, 0&lt;y&lt;M.
+ \end{cases}\end{split}\]</div>
+<p>Lítum á lausnartilgátu á formi tvöfaldrar Fourier-raðar</p>
+<div class="math notranslate nohighlight">
+\[u(x,y,t)=\sum\limits_{n=1}^{{\infty}}
+ \sum\limits_{m=1}^{{\infty}} u_{n,m}(t)
+ \sin\big(n{\pi}x/L\big)\sin\big(m{\pi}y/M\big).\]</div>
+<p>Stingum henni inni í hlutafleiðujöfnuna og víxlum á hlutafleiðuvirkjanum og óendanlegu röðinni. Fáum þá jöfnuna</p>
+<div class="math notranslate nohighlight">
+\[u_{n,m}{{^{\prime\prime}}}(t)+c^2{\pi}^2(n^2/L^2+m^2/M^2)u_{n,m}=0,\]</div>
+<p>sem hefur almenna lausn</p>
+<div class="math notranslate nohighlight">
+\[u_{n,m}(t)=A_{n,m}\cos\big(\sqrt{n^2/L^2+m^2/M^2}\, {\pi}ct\big)
+ +B_{n,m}\sin\big(\sqrt{n^2/L^2+m^2/M^2}\, {\pi}ct\big).\]</div>
+<p>Út frá upphafsskilyrðunum fæst</p>
+<div class="math notranslate nohighlight">
+\[A_{n,m}=b_{n,m}({\varphi}) \qquad \text{ og } \qquad
+ B_{n,m}=\dfrac{b_{n,m}({\psi})}{\sqrt{n^2/L^2+m^2/M^2}\, {\pi}c}.\]</div>
+<p>Mögulegar tíðnir í sveiflunni eru því</p>
+<div class="math notranslate nohighlight">
+\[\{\tfrac \pi 2\sqrt{n^2/L^2+m^2/M^2}\, c; n,m=1,2,3,\dots\}.\]</div>
+<p>Lægsta tíðnin <span class="math notranslate nohighlight">\(\frac \pi 2\sqrt{1/L^2+1/M^2}\, c\)</span> nefnist
+<em>grunntíðni</em> og hinar tíðnirnar nefnast <em>yfirtíðnir</em>. Yfirtíðnirnar eru ekki heiltölumargfeldi af grunntíðninni eins og gildir fyrir sveiflandi streng.  Þetta er skýringin á því hvers vegna trommur gefa ekki frá sér hreinan tón eins og strengir.</p>
+</div>
+</div>
+<div class="section" id="almennt-um-eiginfallarair">
+<h2>3.10. Almennt um eiginfallaraðir<a class="headerlink" href="#almennt-um-eiginfallarair" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við ljúkum umfjöllun þessa kafla á að taka dæmi sem undirstrikar það að lausnaraðferðirnar sem við höfum verið að beita þar sem eiginfallaraðir koma við sögu eru almennar og ekki bundnar við notkun hefbundinna Fourier-raða. Með þessa hugmynd að leiðarljósi er í sumum tilfellum hægt að komast langt í að skrifa niður lausn verkefnis án þess að þekkja eiginföllin og eigingildin.</p>
+<div class="section" id="daemi-alhaeft-varmaleiniverkefni">
+<h3>3.10.1. Dæmi - Alhæft varmaleiðniverkefni<a class="headerlink" href="#daemi-alhaeft-varmaleiniverkefni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P(x,D_x)\)</span> vera afleiðuvirkja af Sturm-Liouville gerð. Látum <span class="math notranslate nohighlight">\(u = u(x,t)\)</span> vera fall af tveimur breytistærðum og <span class="math notranslate nohighlight">\(B_1\)</span> og <span class="math notranslate nohighlight">\(B_2\)</span> samhverfa jaðargildisvirkja. Skoðum verkefnið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \dfrac{\partial u}{\partial t}+P(x,\partial_x)u=f(x,t),
+ &amp;x\in ]a,b[, \ t&gt;0,\\
+ u(x,0)=\varphi(x), &amp; x\in ]a,b[,\\
+ B_1u(\cdot,t)=B_2u(\cdot,t)=0, &amp;t&gt;0.
+ \end{cases}\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(B_ju(\cdot,t)\)</span> táknar að <span class="math notranslate nohighlight">\(B_j\)</span> verki með tilliti til fyrri breytistærðarinnar <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Gerum eftirfarandi lausnartilgátu</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\sum\limits_{n=0}^{\infty} c_n(t)u_n(x),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(u_n(x)\)</span> eru eiginföll virkjans <span class="math notranslate nohighlight">\(P\)</span> (ásamt jaðarskilyrðum) með tilsvarandi eigingildi eru <span class="math notranslate nohighlight">\(\lambda_n\)</span> og <span class="math notranslate nohighlight">\(c_n(t)\)</span> eru Fourier-stuðlar <span class="math notranslate nohighlight">\(u(x,t)\)</span> með tilliti til eiginfallanna.</p>
+<p>Liðum föllin <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(\varphi\)</span> einnig í eiginfallaraðir</p>
+<div class="math notranslate nohighlight">
+\[f(x,t)=\sum\limits_{n=0}^{\infty} f_n(t)u_n(x), \qquad
+ \varphi(x)=\sum\limits_{n=0}^{\infty} \varphi_nu_n(x).\]</div>
+<p>Stignum lausnatilgátunni inn í hlutafleiðujöfnuna og víxlum á hlutafleiðuvirkjanum og óendanlegu röðinni. Þá fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \dfrac{{\partial}u}{{\partial} t}(x,t) +P(x,{\partial}_x)u(x,t)&amp;= \sum\limits_{n=0}^{\infty}\bigg(
+ c_n{{^{\prime}}}(t)+{\lambda}_nc_n(t)\bigg)u_n(x)\nonumber\\
+ &amp;=\sum\limits_{n=0}^{\infty} f_n(t)u_n(x)=f(x,t),\nonumber\\
+ \end{aligned}\end{split}\]</div>
+<p>ásamt upphafsskilyrðinu</p>
+<div class="math notranslate nohighlight">
+\[ \begin{aligned}
+ u(x,0)&amp;=\sum\limits_{n=0}^{\infty} c_n(0)u_n(x)
+=\sum\limits_{n=0}^{\infty} {\varphi}_nu_n(x)={\varphi}(x).\nonumber\end{aligned}\]</div>
+<p>Með því að bera saman stuðlana í jöfnunum fæst upphafsgildisverkefni fyrir <span class="math notranslate nohighlight">\(c_n(t)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ c_n{{^{\prime}}}(t)+{\lambda}_nc_n(t)=f_n(t),\\
+ c_n(0)={\varphi}_n.
+ \end{cases}\end{split}\]</div>
+<p>Þetta er fyrsta stigs jafna með fastastuðla, svo</p>
+<div class="math notranslate nohighlight">
+\[c_n(t)={\varphi}_ne^{-{\lambda}_n t}+
+ e^{-{\lambda}_n t}\int_0^te^{{\lambda}_n {\tau}}f_n({\tau})\, d{\tau}.\]</div>
+<p>Athugið að við gátum skrifað niður lausn án þess að þekkja eiginföllin <span class="math notranslate nohighlight">\(u_n\)</span> og tilsvarandi eigingildi <span class="math notranslate nohighlight">\(\lambda_n\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli04.html" class="btn btn-neutral float-right" title="4. Fourier-ummyndun" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli02.html" class="btn btn-neutral" title="2. Fourier-raðir" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script type="text/javascript" src="_static/custom_sage.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

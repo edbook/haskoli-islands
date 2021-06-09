@@ -1,0 +1,1531 @@
+\documentclass[icelandic,a4paper,12pt]{article}
+\usepackage{beamerarticle}
+\input{beamer.tex}
+\newcommand{\C}{{\mathbb  C}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\R}{{\mathbb  R}}
+\newcommand{\N}{{\mathbb  N}}
+\newcommand{\Q}{{\mathbb Q}}
+
+\begin{document}
+%\subsection{Yfirlit}
+\section{Töluleg diffrun og heildun}
+%\begin{center}
+%\begin{tabular}{|l|l|l|l|}\hline
+%  Kafli & Viðfangsefni & Bls. & Glærur\\
+%  \hline
+%  6.0-6.1 &Inngangur		& 429-437 & 3-4\\
+%  6.2 &Töluleg deildun		& 438-445 & 5-19\\
+%  6.3 &Richardson-útgiskun	& 447-452 & 20-31\\
+%  6.4-6.5 &Töluleg heildun	& 455-478 & 32-56\\
+%  6.7 &Romberg-heildun		& 496-502 & 57-64\\
+%\hline
+%\end{tabular}
+%\end{center}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Inngangur}
+
+\subsubsection{Töluleg deildun og heildun  }  
+Deildun og heildun eru meginaðgerðir stærðfræðigreiningarinnar.
+
+Þess vegna er nauðsynlegt að geta nálgað
+\begin{equation*}
+  f'(a),f''(a),f'''(a),\dots \quad 
+  \text{ og } \quad
+  \int_a^b f(x)\, dx,
+\end{equation*}
+þar sem $f$ er fall sem skilgreint er á bili $I$ sem inniheldur $a$ og $b$.  
+
+
+
+\subsubsection{Meginhugmynd í öllum nálgunaraðferðunum}
+Látum $p$ vera margliðu sem nálgar $f$, \pause
+og látum $r(x)=f(x)-p(x)$ tákna skekkjuna í nálgun á $f(x)$ með $p(x)$.  Þá er 
+$$
+  f'(x)=p'(x)+r'(x), \quad f''(x)=p''(x)+r''(x), \dots 
+$$
+og
+$$ 
+  \int_a^b f(x)\, dx=\int_a^b p(x)\, dx+\int_a^b r(x)\, dx.
+$$
+
+\pause
+\smallskip
+Nú þurfum við að gera tvennt:
+\begin{enumerate}
+\item[(i)] Finna heppilegar nálgunarmargliður og reikna út
+$$
+  p'(a), \ p''(a),\dots, \qquad \int_a^b p(x)\, dx 
+$$
+\item[(ii)]  Meta skekkjurnar
+$$
+  r'(a), \ r''(a), \dots \int_a^b r(x)\, dx
+$$
+\end{enumerate}
+Byrjum á að leiða út nokkrar  nálgunarformúlur með skekkjumati. 
+
+
+%\section*{6.2 Töluleg diffrun}
+\subsection{Töluleg deildun} 
+Látum $f : I \to \mathbb R$ vera fall á bili $I \subset \mathbb R$ og
+$a$ vera punkt í $I$. Afleiða $f$ í punktinum $a$ er skilgreind með 
+\begin{equation*}
+  f'(a) = \lim\limits_{h \to 0}
+  \frac{f(a+h)-f(a)}{h}
+\end{equation*}
+ef markgildið er til.  Við skrifum því oft
+\begin{equation*}
+  f'(a) \approx \frac{f(a+h)-f(a)}{h}
+\end{equation*}
+
+\pause
+Þessi nálgun er kölluð {\em frammismunur} því oftast hugsar maður sér
+að $h > 0$ og þá er $a+h$ lítið skref áfram frá $a$. 
+
+\pause
+\smallskip
+Við þurfum skekkjumat fyrir þessa formúlu ef við eigum að geta notað hana.
+
+
+
+\subsubsection{Frammismunur}
+Við fáum mat á skekkjuna í nálguninni með að skoða Taylor-margliðu 
+$f$ í $a$.  Samkvæmt setningu Taylors er til $\xi$ á milli $a$ og
+$a+h$ þannig að  
+\begin{equation*}
+  f(a+h) = f(a) + f'(a)h + \frac{1}{2} f''(\xi)h^2.
+\end{equation*}
+
+\pause
+Þá fæst að skekkjan í nálgun á $f'(a)$ með  
+$$
+  \frac{f(a+h)-f(a)}{h} = f[a,a+h]
+$$ 
+er 
+\begin{equation*}
+  e = f'(a) - \frac{f(a+h)-f(a)}{h} = -\frac{1}{2} f''(\xi) h
+\end{equation*}
+Með öðrum orðum
+$$
+% \min_{t\in [0,h]} \left|-\frac 12 f''(t)\right|h \leq e \leq 
+% \max_{t\in [0,h]} \left|-\frac 12 f''(t)\right|h.
+\min_{t\in [0,h]} -\frac 12 f''(t)h \leq e \leq 
+\max_{t\in [0,h]} -\frac 12 f''(t)h.
+$$
+
+%\pause
+%\smallskip
+Við sjáum því að $e=O(h)$ þegar $h \to 0$.
+
+
+
+\subsubsection{Bakmismunur} 
+Við getum sett $a-h$ í stað $a+h$ í skilgreininguna á afleiðu.
+Þá fæst svokallaður {\em bakmismunur}
+\begin{equation*}
+  f'(a) \approx \frac{f(a)-f(a-h)}{h}
+\end{equation*}
+og ljóst er að sama skekkjumat gengur fyrir þessa nálgun
+og fyrir nálgun með frammismun.
+
+
+
+\subsubsection{Miðsettur mismunakvóti} 
+Lítum nú á þriðja stigs Taylor nálgun 
+\begin{align*}
+  f(a+h)&=f(a)+f'(a)h+\tfrac 12 f''(a)h^2+\tfrac 16 f'''(\alpha)h^3,\\
+  f(a-h)&=f(a)-f'(a)h+\tfrac 12 f''(a)h^2-\tfrac 16 f'''(\beta)h^3,
+\end{align*}
+þar sem $\alpha$ er á milli $a$ og $a+h$ og $\beta$ er á milli $a$ og
+$a-h$.  
+
+\pause
+Tökum nú mismuninn og fáum
+$$
+f(a+h)-f(a-h)=f'(a)\cdot 2h+\tfrac 16\big(f'''(\alpha)+f'''(\beta)\big)h^3
+$$
+Ef  $f'''$ er samfellt fall, þá gefur
+milligildis\-setningin okkur að til er $\xi$ á milli $\alpha$ og $\beta$
+þannig að $f'''(\xi)=\tfrac 12 (f'''(\alpha)+f'''(\beta))$ 
+
+
+
+%\subsection{6.2 Miðsettur mismunakvóti} 
+Niðurstaðan verður 
+$$
+  f'(a)=\dfrac{f(a+h)-f(a-h)}{2h}-\tfrac 16f'''(\xi)h^2.
+$$
+Þannig að skekkjan er 
+$$
+  e = -\frac 16 f'''(\xi) h^2,
+$$
+og jafnframt er $e = O(h^2)$ þegar $h\to 0$.
+
+
+
+\subsubsection{Miðsettur mismunakvóti fyrir aðra afleiðu} 
+Við getum útfært þessa sömu hugmynd til þess að reikna út aðra
+afleiðu, en þá byrjum við með fjórða stigs Taylor-nálgun 
+\begin{align*}
+  f(a+h)&=f(a)+f'(a)h+\tfrac 12 f''(a)h^2+\tfrac 16 f'''(a)h^3
++\tfrac 1{24}f^{(4)}(\alpha)h^4,\\
+  f(a-h)&=f(a)-f'(a)h+\tfrac 12 f''(a)h^2-\tfrac 16 f'''(a)h^3
++\tfrac 1{24}f^{(4)}(\beta)h^4,
+\end{align*}
+þar sem $\alpha$ er á milli $a$ og $a+h$ og $\beta$ er á milli $a$ og
+$a-h$.  
+
+\pause
+\smallskip
+Nú leggjum við saman og fáum
+$$
+f(a+h)+f(a-h)=2f(a) +f''(a)h^2+\tfrac
+1{24}\big(f^{(4)}(\alpha)+f^{(4)}(\beta)\big)h^4.
+$$
+Nú þurfum við að gefa okkur að $f^{(4)}$ sé samfellt fall, þá gefur
+milligildissetningin okkur að til er $\xi$ á milli $\alpha$ og $\beta$
+þannig að $f^{(4)}(\xi)=\tfrac 12 (f^{(4)}(\alpha)+f^{(4)}(\beta))$. 
+
+
+
+%\subsection{6.2 Miðsettur mismunakvóti fyrir aðra afleiðu} 
+Niðurstaðan verður 
+$$
+f''(a)=\dfrac{f(a+h)+f(a-h)-2f(a)}{h^2}-\tfrac 1{12}f^{(4)}(\xi)h^2
+$$
+
+%\pause
+%\smallskip
+Með Taylor-margliðum  má leiða út fleiri nálgunarformúlur fyrir
+afleiður.  
+
+%\smallskip
+Við ætlum ekki að halda lengra í þessa átt heldur snúa okkur að
+almennu aðferðinni.
+
+
+
+\subsubsection{Almenn aðferð til að nálga afleiður} 
+Ef $x_0,\ldots, x_n$ eru punktar í $I$ (hugsanlega með endurtekningum)
+og $p$ er margliðan sem brúar $f$ í þeim, þá er 
+\begin{equation*}
+  f(x) = p(x) + r(x),
+\end{equation*}
+þar sem  skekkjuliðurinn $r(x)$ er gefinn með formúlunni
+$$
+r(x)=f[x_0,\ldots,x_n,x](x-x_0)\cdots(x-x_n)
+$$
+Ef við tökum $p'(a)$ sem nálgun á $f'(a)$ er skekkjan
+\begin{equation*}
+r'(a) =  f'(a) - p'(a). 
+\end{equation*}
+
+
+
+\subsubsection{Skekkjumat} 
+Munið að formúlan fyrir afleiðu af margfeldi margra þátta er
+\begin{multline*}
+  (\varphi_1\varphi_2\varphi_3\cdots\varphi_m)'(a)\\
+=\varphi_1'(a)\varphi_2(a)\varphi_3(a)\cdots\varphi_m(a)
++\varphi_1(a)\varphi_2'(a)\varphi_3(a)\cdots\varphi_m(a)
++\cdots\\
+\cdots+\varphi_1(a)\varphi_2(a)\cdots \varphi_{m-1}(a)\varphi_m'(a)\\
+\end{multline*}
+
+\pause
+\smallskip
+Horfum nú á skekkjuliðinn $r(x)$.  Hann er svona margfeldi með 
+$\varphi_1(x)=f[x_0,\dots,x_n,x]$, $\varphi_2(x)=x-x_0$,
+$\varphi_3(x)=x-x_1$ o.s.frv.
+
+\pause
+\smallskip
+Athugum nú að ef $a$ er einn af gefnu punktunum $x_k$, þá er 
+$\varphi_{k+2}(x)=(x-x_k)$ sem gefur $\varphi_{k+2}(x_k)=0$ og
+$\varphi_{k+2}'(x_k)=1$.  
+
+\smallskip
+Þetta segir okkur að ef við tökum $a=x_k$, þá 
+eru allir liðirnir í summunni í hægri hliðinni $0$ nema 
+einn, þ.e.~við sitjum eftir með þann sem inniheldur $\phi_{k+2}'$.
+
+
+
+%\subsection{6.2 Skekkjumat frh.}
+Niðurstaðan verður því að skekkjan í nálgun á $f'(a)$ með $p'(a)$ er
+\begin{align*}
+  f'(a) - p'(a) &= r'(a)
+=f[x_0,\dots,x_n,x_k]
+\prod_{\stackrel{j=0}{j \not= k}} (x_k-x_j)\\
+&=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}
+  \prod_{\stackrel{j=0}{j \not= k}} (a-x_j)
+\end{align*}
+þar sem $a=x_k$.
+
+\pause
+\smallskip
+Hér notuðum við skekkjumatið fyrir Newton aðferðina (glæra 5.56) sem segir að 
+til er $\xi$ á minnsta bilinu sem inniheldur $x_0,\ldots,x_n,x_k$ sem uppfyllir
+$$
+  f[x_0,\ldots,x_n,x_k] = \frac{f^{(n+1)}(\xi)}{(n+1)!}.
+$$
+
+
+
+\subsubsection{Frammismunur} 
+Nálgum $f$ með fyrsta stigs
+brúunarmargliðunni gegnum punktana $(a,f(a))$ og $(a+h,f(a+h))$
+(þ.e.~$x_0 = a$ og $x_1 = a+h$),
+$$
+  f(x)=f[a]+f[a,a+h](x-a)+f[a,a+h,x](x-a)(x-a-h)
+$$ 
+
+\pause
+\smallskip
+Af þessu leiðir formúlan sem við vorum áður komin með
+$$
+  f'(a)=f[a,a+h]+f[a,a+h,a](a-a-h)
+  =\dfrac{f(a+h)-f(a)}h-\tfrac 12 f''(\xi)h
+$$ 
+Þar sem $\xi$ er á milli 
+$a$ og $a+h$ og uppfyllir að $f[a,a+h,a]=f[a,a,a+h]=\tfrac 12f''(\xi)$.
+Hér erum við að notafæra okkur aftur skekkjumatið sem við sönnuðum  í kaflanum
+um brúunarmargliður.
+
+
+
+\subsubsection{Miðsettur mismunakvóti} 
+Tökum þriggja punkta brúunarformúlu með $a-h$, $a+h$ og
+$a$.  Þá er
+\begin{align*}
+  f(x)&=f[a-h]+f[a-h,a+h](x-a+h)\\
+  &+f[a-h,a+h,a](x-a+h)(x-a-h)\\
+  &+f[a-h,a+h,a,x](x-a+h)(x-a-h)(x-a)
+\end{align*}
+
+\pause
+\smallskip
+Athugum að afleiðan af annars stigs þættinum
+$$
+  x\mapsto (x-a+h)(x-a-h)=(x-a)^2-h^2
+$$
+er $0$ í punktinum $a$ og því er
+\begin{align*}
+  f'(a)&=f[a-h,a+h]+f[a-h,a+h,a,a](-h^2)\\
+  &=\dfrac{f(a+h)-f(a-h)}{2h}-\tfrac 16 f'''(\xi)h^2 
+\end{align*}
+Hér nýttum við okkur að til er $\xi$ á milli 
+$a-h$ og $a+h$ þannig að $f[a-h,a+h,a,a]=\tfrac 16 f'''(\xi)$.
+
+
+
+\subsubsection{Miðsettur mismunakvóti fyrir aðra afleiðu} 
+Áfram heldur leikurinn.  
+Nú skulum við leiða aftur út formúluna fyrir nálgun á $f''(a)$ með
+miðsettum mismunakvóta 
+
+\pause
+\smallskip
+Þá tökum við þriggja punkta brúunarformúlu með $a-h$, $a+h$ og
+$a$ með $a$ tvöfaldan.  Þá er
+\begin{align*}
+  f(x)&=f[a-h]+f[a-h,a+h](x-a+h)\\
+  &+f[a-h,a+h,a](x-a+h)(x-a-h)\\
+  &+f[a-h,a+h,a,a](x-a+h)(x-a-h)(x-a)\\
+  &+f[a-h,a+h,a,a,x](x-a+h)(x-a-h)(x-a)^2
+\end{align*}
+Gætum þess að halda liðnum $(x-a)$.  Þá fáum við
+\begin{align*}
+  f(x)&=f[a-h]+f[a-h,a+h](x-a+h)\\
+  &+f[a-h,a+h,a]\big((x-a)^2-h^2)\big)\\
+  &+f[a-h,a+h,a,a]\big((x-a)^3-h^2(x-a))\big)\\
+  &+f[a-h,a+h,a,a,x]\big((x-a)^4-h^2(x-a)^2)\big)
+\end{align*}
+
+
+
+%\subsection{6.2 Miðsettur mismunakvóti fyrir aðra afleiðu, frh.} 
+Nú þurfum við að reikna aðra afleiðu í punktinum $a$. 
+Athugum að önnur afleiða af annars stigs þættinum
+$$
+  x\mapsto (x-a+h)(x-a-h)=(x-a)^2-h^2
+$$
+er fastafallið $2$, önnur afleiða af þriðja stigs liðnum
+$$
+  x\mapsto (x-a)^3-h^2(x-a)
+$$
+er $0$ í punktinum $a$ og önnur afleiða af fjórða stigs liðnum
+$$
+  x\mapsto (x-a)^4-h^2(x-a)^2
+$$
+er fastafallið $-2h^2$.  
+
+
+
+%\subsection{6.2 Miðsettur mismunakvóti fyrir aðra afleiðu, frh.} 
+Við höfum því 
+$$
+  f''(a)=2f[a-h,a+h,a]+f[a-h,a+h,a,a,a](-2h^2)
+$$
+Nú er til punktur $\xi$ á minnsta bili sem inniheldur 
+$a-h$, $a+h$ og $a$ þannig að $f[a-h,a+h,a,a,a]=\tfrac
+1{24}f^{(4)}(\xi)$.  
+
+\pause
+\smallskip
+Við þurfum að reikna út fyrri mismunakvótann
+\begin{align*}
+  f[a-h,a+h,a]&=f[a-h,a,a+h]=\dfrac{f[a,a+h]-f[a-h,a]}{2h}\\
+  &=\dfrac 1{2h}\bigg(\dfrac{f(a+h)-f(a)}h-\dfrac{f(a)-f(a-h)}h\bigg)\\
+  &=\dfrac{f(a+h)+f(a-h)-2f(a)}{2h^2}  
+\end{align*}
+Við höfum því leitt aftur út formúluna
+$$
+  f''(a)=\dfrac{f(a+h)+f(a-h)-2f(a)}{h^2}-\tfrac
+  1{12}f^{(4)}(\xi)h^2
+$$
+
+
+
+%\section*{6.3 Richardson-útgiskun}
+\subsection{Richardson útgiskun} 
+
+Það ætti að vera ljóst að töluleg deildun er nokkuð óstöðug aðferð því
+ef skrefastærðin $h$ er lítil eru tölurnar $f(a+h), f(a), f(a-h)$
+nálægt hver annarri og við getum lent í styttingarskekkjum. 
+
+\pause
+\smallskip
+Því er ekki hægt að búast við að fá alltaf betri nálgun á $f'(a)$ við að
+minnka skrefalengdina $h$. 
+
+\pause
+\smallskip
+Leiðin  er Richardson útgiskun (e.~extrapolation), sem er aðferð til
+að bæta nálganir.
+
+\pause
+\smallskip
+Til eru mjög almennar útgáfur þessarar aðferðar en
+við munum aðeins skoða þau sértilfelli sem nýtast okkur mest.
+
+
+
+\subsubsection{Útleiðsla á miðsettum mismunakvóta} 
+Við skulum byrja á að að leiða aftur út formúluna fyrir miðsettann
+mismunakvóta til að fá betri upplýsingar um skekkjuliðinn. Fyrir fall
+$f$ sem er nógu oft deildanlegt má beita Taylor til að skrifa 
+{\small\begin{align*}
+  f(a+h) &= f(a) + f'(a)h %+ \frac{f''(a)}{2!}h^2 
+  + \ldots
+  + \frac{f^{(2n)}(a)}{(2n!)}h^{2n}
+  + \frac{f^{(2n+1)}(a)}{(2n+1)!)}h^{2n+1} + O(h^{2n+2}) \\
+  f(a-h) &= f(a) - f'(a)h 
+  %+ \frac{f''(a)}{2!}h^2 
+  + \ldots
+  + \frac{f^{(2n)}(a)}{(2n!)}h^{2n}
+  - \frac{f^{(2n+1)}(a)}{(2n+1)!)}h^{2n+1} + O(h^{2n+2})
+\end{align*}}
+
+\pause
+Ef við drögum seinni jöfnuna  frá þeirri fyrri fæst
+{\small\begin{equation*}
+  f(a+h)-f(a-h) = 2f'(a)h + 2\frac{f'''(a)}{3!}h^3
+  + \ldots + 2\frac{f^{(2n+1)}(a)}{(2n+1)!}h^{2n+1} + O(h^{2n+2})
+\end{equation*}}\pause
+svo ef við einangrum $f'(a)$ sjáum við að
+\begin{equation*}
+  f'(a) = R_1(h) 
+  + a_2 h^2 + a_4 h^4 + \ldots + a_{2n} h^{2n} + O(h^{2n+1})
+\end{equation*}
+þar sem
+\begin{equation*}
+  R_1(h) = \frac{f(a+h)-f(a-h)}{2h}
+  \quad \text{og} \quad
+  a_k = -\frac{f^{(k+1)}(a)}{(k+1)!},
+  \quad k = 2,4,\ldots,2n.
+\end{equation*}
+
+
+
+\subsubsection{Helmingun á skrefinu} 
+Hér er minnsta veldi í skekkjuliðnum $h^2$, svo nálgunin $f'(a)
+\approx R_1(h)$ er $O(h^2)$, eins og við höfum reyndar séð
+áður. Helmingum nú skrefalengdina $h$, þá fæst 
+\begin{equation*}
+  f'(a) = R_1(h/2) + a_2 \left(\frac{h}{2}\right)^2
+  + a_4 \left(\frac{h}{2}\right)^4 + \ldots
+  + a_{2n} \left(\frac{h}{2}\right)^{2n} + O(h^{2n+1}).
+\end{equation*}
+
+
+
+%\subsection{6.3 Helmingun} 
+Nú berum við saman þessi tvö skref:
+\begin{align*}
+  f'(a) &= R_1(h/2) + \tfrac 14 a_2 h^2
+  + a_4 \left(\frac{h}{2}\right)^4 + \ldots
+  + a_{2n} \left(\frac{h}{2}\right)^{2n} + O(h^{2n+1}),\\
+  f'(a) &= R_1(h) 
+  + a_2 h^2 + a_4 h^4 + \ldots + a_{2n} h^{2n} + O(h^{2n+1})\\
+\end{align*}
+
+\pause
+Margföldum efri jöfnuna með $4$ og drögum þá síðari frá.  Þá stendur
+eftir
+\begin{align*}
+  3f'(a) &= 4 R_1(h/2) - R_1(h) 
+  + a_4 \left( \frac{4}{2^4} - 1 \right)h^4 \\
+  &+ a_6 \left( \frac{4}{2^6} - 1 \right)h^6
+  + \ldots
+  + a_{2n} \left( \frac{4}{2^{2n}} - 1 \right)h^{2n}
+  + O(h^{2n+1})
+\end{align*}
+
+
+
+\subsubsection{Fjórða stigs nálgun} 
+Nú erum við komin með nýja formúlu:
+\begin{equation*}
+  f'(a) = R_2(h) + b_4 h^4 + b_6 h^6 + \ldots + b_{2n} h^{2n}
+  + O(h^{2n+1})
+\end{equation*}
+þar sem
+\begin{equation*}
+  R_2(h) = \frac{4 R_1(h/2) - R_1(h)}{3}
+  \quad \text{og} \quad
+  b_k = \frac{a_k}{3} \cdot \left(\frac{4}{2^k}-1\right),
+  \  k = 4,6,\ldots,2n.
+\end{equation*}
+
+\pause
+Ef við berum þetta saman við jöfnuna sem við byrjuðum með
+\begin{equation*}
+  f'(a) = R_1(h) 
+  + a_2 h^2 + a_4 h^4 + \ldots + a_{2n} h^{2n} + O(h^{2n+1})
+\end{equation*}
+þá sjáum við að minnsta veldi í skekkjuliðnum er $h^4$, svo nálgunin $f'(a)
+\approx R_2(h)$ uppfyllir 
+\begin{equation*}
+  f'(a) - R_2(h) = O(h^4)
+\end{equation*}
+og er því betri nálgun en áður. 
+
+\smallskip
+ Þetta ferli heitir {\it Richardson útgiskun}.
+
+
+
+\subsubsection{Hægt er að halda áfram útgiskun} 
+Næsta takmark er að eyða liðnum $b_4h^4$ úr þessari formúlu með því að
+líta á 
+\begin{equation*}
+  f'(a) = R_2(h/2) + b_4 \left(\frac{h}{2}\right)^4 
+  + b_6 \left(\frac{h}{2}\right)^6 + \ldots
+  + b_{2n} \left(\frac{h}{2}\right)^{2n} + O(h^{2n+1})
+\end{equation*}
+
+\pause
+Síðan stillum við þessari jöfnu upp með þeirri síðari
+\begin{align*}
+  f'(a) &= R_2(h/2) + \tfrac 1{16}b_4 h^4 
+  + \tfrac 1{64}b_6 h^6 + \ldots
+  + \tfrac 1{2^{2n}}b_{2n} h^{2n} + O(h^{2n+1})\\
+  f'(a) &= R_2(h) + b_4 h^4 + b_6 h^6 + \ldots + b_{2n} h^{2n}
+  + O(h^{2n+1})
+\end{align*}
+
+\pause
+Margföldum fyrri jöfnuna með $16$ og drögum þá síðari frá 
+\begin{align*}
+  15f'(a) &= 16 R_2(h/2) - R_2(h) 
+  + b_6 \left( \frac{16}{2^6} - 1 \right) h^6 \\
+  &+ b_8 \left( \frac{16}{2^8} - 1 \right) h^8
+  + \ldots
+  + b_{2n} \left( \frac{16}{2^{2n}} - 1 \right) h^{2n}
+  + O(h^{2n+1}).
+\end{align*}
+
+
+
+\subsubsection{Sjötta stigs skekkja} 
+\begin{align*}
+  15f'(a) &= 16 R_2(h/2) - R_2(h) 
+  + b_6 \left( \frac{16}{2^6} - 1 \right) h^6 \\
+  &+ b_8 \left( \frac{16}{2^8} - 1 \right) h^8
+  + \ldots
+  + b_{2n} \left( \frac{16}{2^{2n}} - 1 \right) h^{2n}
+  + O(h^{2n+1}).
+\end{align*}
+
+\pause
+Því er
+\begin{equation*}
+  f'(a) = R_3(h) + c_6 h^6 + c_8 h^8 \ldots + c_{2n} h^{2n}
+  + O(h^{2n+1})
+\end{equation*}
+þar sem
+\begin{equation*}
+  R_3(h) = \frac{16 R_2(h/2) - R_2(h)}{15},
+  \quad \text{og} \quad
+  c_k = \frac{b_k}{15} \cdot \left( \frac{16}{2^k} - 1 \right),
+  \quad k = 6,8,\ldots,2n.
+\end{equation*}
+
+\pause
+Nýja nálgunin uppfyllir
+\begin{equation*}
+  f'(a) - R_3(h) = O(h^6)
+\end{equation*}
+og er því enn betri en áður, en við þurfum líka að reikna út
+$R_1(h/4)$ til að reikna $R_2(h/2)$. 
+
+
+
+\subsubsection{Almenn rakningarformúla} 
+Richardson-útgiskunin heldur áfram og út kemur
+\begin{equation*}
+  R_{i+1}(h) = \frac{4^i R_i(h/2) - R_i(h)}{4^i-1}
+  = R_i(h/2) + \frac{R_i(h/2)-R_i(h)}{4^i-1}
+\end{equation*}
+
+fyrir $(i+1)$-tu Richardson útgiskun og $R_{i+1}(h)$ uppfyllir að
+\begin{equation*}
+  f'(a) - R_{i+1}(h) = O(h^{2i+2}),
+\end{equation*}
+en á móti kemur að til að reikna út $R_{i+1}(h)$ þurfum við að hafa
+reiknað út tölurnar 
+
+$R_1(h)$, $R_1(h/2)$, $\ldots$, $R_1(h/2^i)$ auk \\
+$R_2(h)$, $R_2(h/2)$, \ldots, $R_2(h/2^{i-1})$ og svo framvegis að\\
+$\qquad \vdots$ \\
+$R_i(h)$ og $R_i(h/2)$. 
+
+\pause 
+\smallskip
+Eins og áður sagði fara styttingarskekkjur á endanum að
+segja til sín í útreikningum á $R_1(h)$, svo einhver takmörk eru fyrir
+hversu margar Richardson útgiskanir er hægt að framkvæma. 
+
+
+
+\subsubsection{Reiknirit} 
+Útreikningarnir að ofan eru yfirleitt settir fram í töflu
+\begin{equation*}
+  \begin{array}{ccccc}
+    D(1,1) &   &   &   &   \\
+    D(2,1) & D(2,2) &  &  &  \\
+    D(3,1) & D(3,2) & D(3,3) & & \\
+    \vdots & \vdots & \vdots & \ddots & \\
+    D(n,1) & D(n,2) & D(n,3) & \ldots & D(n,n)
+  \end{array}
+\end{equation*}
+þar sem $D(i,j) = R_j(h/2^{i-j})$ og þar með
+\begin{equation*}
+  D(i,j) = \begin{cases}
+    \dfrac{f(a+h/2^{i-1})-f(a-h/2^{i-1})}{2\cdot h/2^{i-1}}, & j = 1 \\
+    D(i,j-1) + \dfrac{D(i,j-1)-D(i-1,j-1)}{4^{j-1}-1}, & j > 1
+  \end{cases}
+\end{equation*}
+sem gerir auðvelt að forrita Richardson útgiskun. 
+
+
+
+\subsubsection{Skekkjumat}
+Finnum nú eftirámat fyrir $D(i,j)$ með stærðunum 
+$D(i,j-1)$ og $D(i-1,j-1)$. Hér á eftir er $R_j(h/2)$ í hlutverki $D(i,j-1)$ og 
+$R_i(h)$ í hlutverki $D(i-1,j-1)$ \\
+($h$ er helmingað þegar við förum niður um eina línu).
+
+\pause
+\smallskip
+Munum að $R_i(h)$ uppfyllir að
+\begin{equation*}
+  f'(a) = R_j(h) + Kh^{2j} + O(h^{2j+1})
+\end{equation*}
+fyrir eitthvert $K$ í $\mathbb R$ og að
+\begin{equation*}
+  f'(a) = R_j(h/2) + K \left( \frac{h}{2} \right)^{2j}
+  + O(h^{2j+1})
+\end{equation*}
+
+\pause
+\smallskip
+Ef við tökum mismun á hægri og vinstri hliðum þessara jafna, þá fáum
+við 
+\begin{equation*}
+  0 = R_j(h) - R_j(h/2) + K \left(1 - \frac{1}{2^{2j}}\right)h^{2j}
+  + O(h^{2j+1})
+\end{equation*}
+og ef við einangrum $K$ fæst
+$$
+  K = -\frac{4^{j}}{h^{2j}} \cdot \frac{R_j(h)-R_j(h/2)}{4^{j}-1} +
+O(h^{2j+1}).
+$$
+
+
+
+\subsubsection{Útleiðsla á fyrirframmati} 
+Þá er skekkjan í nálgun á $f'(a)$ með $R_j(h/2)$ jöfn
+\begin{align*}
+  e_j(h/2) &= f'(a) - R_j(h/2) \\
+  &= K\left(\frac{h}{2}\right)^{2j} + O(h^{2j+1}) \\
+  &= -\frac{R_j(h)-R_j(h/2)}{4^{j}-1} + O(h^{2j+1}) \\
+  &\approx -\frac{R_j(h)-R_j(h/2)}{4^{j}-1}.
+\end{align*}
+
+\pause
+Þar sem $R_j(h/2)$ er nálgun á $f'(a)$ af stigi $O(h^{2j+1})$, en
+$R_{j+1}(h)$ er nálgun á $f'(a)$ af stigi $O(h^{2i+3})$ getum við
+slegið á $e_{j+1}(h)$ með $e_j(h/2)$. Ef við lækkum vísinn $j+1$ um
+einn gefur það okkur matið 
+\begin{equation*}
+  e_j(h) \approx \frac{R_{j-1}(h)-R_{j-1}(h/2)}{4^{j-1}-1} =
+  \frac{D(i,j-1)-D(i-1,j-1)}{4^{j-1}-1}
+\end{equation*}
+sem er einmitt liðurinn í rakningarformúlunni fyrir $D(i,j)$. 
+
+
+
+% \subsection{6.3 Lýsing á forriti} 
+% Við skulum smíða forrit sem nálgar afleiðu gefins falls með Richardson
+% útgiskun. 
+% 
+% \pause
+% Til að geta forritað aðferðina þurfum við einhverja
+% upphafsskrefalengd $h_0$ og stöðvunarskilyrði. 
+% 
+% \pause
+% Það er best að hafa tvö  skilyrði; 
+% annars vegar stoppum við ef skekkjan fer niður fyrir gefin
+% mörk $\varepsilon$ og hins vegar ef fjöldi ítrana fer yfir gefið
+% hámark imax. 
+% 
+% 
+
+% \subsection[fragile]{6.3 Matlab-forrit fyrir Ricardson-útgiskun:} 
+% \begin{verbatim}
+% function [R,mat] = richardson(f,a,h0,epsilon,imax) 
+% % 
+% %   [R,mat] = richardson(f,a,h0,epsilon,imax)
+% % 
+% % Forrit sem reiknar nálgun á f'(a) með Richardson útgiskun 
+% % út frá miðsettum mismunakvótum 
+% %   f'(a) ~ (f(a+h)-f(a-h))/(2h) 
+% % Hér er h0 upphafsskrefalengd, epsilon er gefið skekkjumark 
+% % og imax er hámarksfjöldi ítrana. 
+% % Upphafsstillingar 
+% h = h0; D = zeros(imax);  
+% i = 2; mat = 2*epsilon; 
+% D(1,1) = (f(a+h)-f(a-h))/(2*h); 
+%     
+% % Ítrum meðan ástæða er til 
+% while (i <= imax $\&$ abs(mat) >= epsilon) 
+%     h = h/2; 
+%     D(i,1) = (f(a+h)-f(a-h))/(2*h); 
+%     % Göngum á línu i 
+%     for j=2:i 
+%         mat = (D(i,j-1)-D(i-1,j-1))/(4**(j-1)-1); 
+%         D(i,j) = D(i,j-1) + mat; 
+%     end 
+%     i = i+1; 
+% end 
+%    
+% % Ath. að i endar einum hærra en maður býst við, 
+% % pössum að skila réttu staki 
+% R = D(i-1,i-1); 
+% \end{verbatim}
+% 
+
+
+\subsubsection{Sýnidæmi} 
+Látum $f(x)=x/(x^2+4)^{2/3}$ og $a=-1$.  
+Byrjum með $h=1$ og notum svo rakningarformúluna til þess að fylla út útgiskunartöfluna.
+
+\smallskip
+\begin{center}
+\begin{tabular}{l|llll}
+$h$&$D(i,1)$&$D(i,2)$&$D(i,3)$&$D(i,4)$\\\hline
+1   .&   0.25000000 \\
+0.5  &   0.25151838 &  0.25202451\\
+0.25 &   0.25104655 &  0.25088928 &  0.25081360\\
+0.125&   0.25086355 &  0.25080254 &  0.25079676 &  0.25079649
+\end{tabular}
+\end{center}
+\pause
+
+Niðustaðan er: $f'(-1)\approx   0.2507964$, 
+með eftirámat á skekkju  $-3\cdot 10^{-7}$.  
+\pause
+\smallskip
+
+Rétt gildi er $0.25079647217924889177$.
+
+
+%\end{document}
+
+%\section*{6.4 Töluleg heildun}
+\subsection{Töluleg heildun} 
+Gerum ráð fyrir að $x_0,x_1, \ldots, x_n$ séu punktar á bilinu $[a,b]$
+og að við þekkjum gildi $f$ í þessum punktum. Þá getum við fundið
+brúunarmargliðuna $p_n$ gegnum punktana $(x_k,f(x_k))$ og skrifað 
+\begin{equation*}
+  f(x) = p_n(x) + r_n(x),
+\end{equation*} 
+þar sem leifin $r_n$ er gefin með
+\begin{equation*}
+  r_n(x) = f[x_0,\ldots,x_n,x](x-x_0)\cdots(x-x_n).
+\end{equation*}
+\pause
+Nú er auðvelt að reikna heildi margliða, svo við nálgum heildi $f$ með
+\begin{equation*}
+  \int\limits_a^b f(x) dx \approx 
+  I_n(f) := \int\limits_a^b p_n(x) dx
+\end{equation*}
+\pause
+og skekkjan í þessari nálgun er gefin með
+\begin{equation*}
+  e_n = \int\limits_a^b r_n(x) dx.
+\end{equation*}
+Þessi aðferð er kölluð {\it Newton-Cotes-heildun}. 
+
+
+
+\subsubsection{Newton-Cotes -heildun} 
+Hugsum okkur að brúunarpunktarnir $x_0, \ldots, x_n$ séu ólíkir. Þá
+getum við skrifað $p_n$ með Lagrange-margliðum 
+\begin{equation*}
+  p_n(x) = \sum\limits_{k=0}^n f(x_k) \ell_k(x),
+  \quad
+  \ell_k(x) = \prod\limits_{\stackrel{j=0}{j \not= k}}^n
+  \frac{(x-x_j)}{(x_k-x_j)},
+\end{equation*}
+\pause
+og þá er heildi $p_n$ jafnt
+\begin{equation*}
+  \int\limits_a^b p_n(x) dx = 
+  \sum\limits_{k=0}^n f(x_k) A_k,
+  \quad \text{þar sem} \quad
+  A_k = \int\limits_a^b \ell_k(x) dx.
+\end{equation*}
+\pause
+Athugið að gildi $A_k$ veltur aðeins á brúunarpunktunum $x_0, \ldots,
+x_n$ en ekki gildum $f(x_k)$. Ef það á að heilda mörg föll yfir sama
+bil er því hægt að reikna gildi $A_k$ í eitt skipti fyrir öll og
+endurnýta þau svo. 
+
+
+
+\subsubsection{Sýnidæmi} 
+Metum heildi $f(x) = e^{-x}\cos(x)$ og $g(x) = \sin (\frac{x^2}{2})$
+yfir bilið $[0,2]$ með að nota skiptipunktana $x_0 = 0$, $x_1 = 1$ og
+$x_2 = 2$. Lagrange-margliðurnar sem við eiga eru 
+\begin{equation*}
+  \ell_0(x) = \frac{(x-1)(x-2)}{2}, \quad
+  \ell_1(x) = -x(x-2), \quad
+  \ell_2(x) = \frac{x(x-1)}{2}
+\end{equation*}
+\pause
+svo við fáum að
+\begin{gather*}
+  A_0 = \frac{1}{2} \int\limits_0^2 (x-1)(x-2) dx = \frac{1}{3},
+  \qquad
+  A_1 = -\int\limits_0^2 x(x-2) dx = \frac{4}{3}, \\
+  A_2 = \frac{1}{2} \int\limits_0^2 x(x-1) dx = \frac{1}{3}.
+\end{gather*}
+
+
+
+%\subsection{6.4 Sýnidæmi frh.} 
+Nú eru stuðlarnir fundnir og því fáum við 
+\begin{align*}
+  \int\limits_0^2 f(x) dx &\approx
+  f(0)\frac{1}{3} + f(1)\frac{4}{3} + f(2)\frac{1}{3}\\
+  &= \frac{1 + 4e^{-1}\cos(1) + e^{-2}\cos(2)}{3}
+  \approx 0.59581
+\end{align*}
+og
+\begin{align*}
+  \int\limits_0^2 g(x) dx &\approx
+  g(0)\frac{1}{3} + g(1)\frac{4}{3} + g(2)\frac{1}{3}\\
+ & = \frac{4\sin(1/2) + \sin(2)}{3} 
+  \approx 0.91972.
+\end{align*}
+\pause
+Gildi heildanna eru
+$\int\limits_0^2 f(x) dx \approx 0.58969$
+og $\int\limits_0^2 g(x) dx \approx 0.99762$ með 5 réttum auka\-stöfum
+svo nálgunargildin verða að teljast nokkuð góð miðað við hversu 
+lítið fór í þau.
+
+
+
+\subsubsection{Trapisuregla} 
+Nú ætlum við að leiða út formúlur fyrir helstu reglum fyrir nálgun á
+heildum.  Sú fyrsta er {\it trapisuregla}.
+
+\pause
+\smallskip
+Veljum $x_0 = a$ og $x_1 = b$ sem skiptipunktana okkar. Þá er
+graf $p_1$ línustrikið gegnum $(a,f(a))$ og $(b,f(b))$, 
+\begin{equation*}
+  p_1(x) = f(a) \ell_0(x) + f(b) \ell_1(x)
+  = f(a)\frac{b-x}{b-a} + f(b) \frac{x-a}{b-a}
+\end{equation*}
+og vigtirnar eru
+\begin{equation*}
+  A_0 = \int\limits_a^b \ell_0(x) = \frac{b-a}{2} = A_1,
+\end{equation*}
+svo
+\begin{equation*}
+  \int\limits_a^b f(x) dx \approx 
+  \frac{b-a}{2}\left(f(a)+f(b)\right).
+\end{equation*}
+Trapisureglan er kölluð þessu nafni því með henni nálgum við heildi
+$f$ með flatarmáli trapisunnar sem hefur hornpunktana $(a,0)$,
+$(b,0)$, $(b,f(b))$ og $(a,f(a))$. 
+
+
+
+\subsubsection{Miðpunktsregla} 
+Enn einfaldari er miðpunktsreglan, þá veljum við aðeins einn skiptipunkt, 
+$x_0 = \frac{1}{2}(a+b)$, og brúunarmargliðan verður fastamargliðan 
+$p_0(x) = f(x_0)$. Þá er
+\begin{equation*}
+  \int\limits_a^b f(x) dx \approx (b-a)f\left(\frac{a+b}{2}\right)
+\end{equation*}
+
+
+
+\subsubsection{Regla Simpsons} 
+Nú veljum við þrjá skiptipunkta, $x_0 = a$, $x_1 = b$ og $x_2 =
+\frac{1}{2}(a+b)$. Til einföldunar skulum við hliðra fallinu $f$
+um miðpunkt bilsins $m=\tfrac{1}{2}(a+b)$.
+
+\smallskip
+Við skilgreinum $\alpha=\tfrac 12(b-a)$ og 
+$g(x) = f\big(x+m\big)$
+
+\pause
+Þá hliðrast $a$, $m$ og $b$ yfir í $-\alpha$, $0$ og $\alpha$ og 
+\begin{equation*}
+  \int\limits_{-\alpha}^{\alpha} g(x) dx = 
+  \int\limits_a^b f(x) dx.
+\end{equation*}
+
+
+
+%\subsection{6.4 Regla Simpsons} 
+Lagrange margliðurnar og vigtirnar eru
+\begin{align*}
+  l_0(x) &= \frac{(x-\alpha)x}{(-\alpha-\alpha)(-\alpha - 0)} 
+  = \frac{(x-\alpha)x}{2\alpha^2} \\
+  A_0 &= \int_{-\alpha}^{\alpha} l_0(x)\,dx = \frac{\alpha}{3} \\
+  l_1(x) &= \frac{(x-(-\alpha))(x-0)}{(\alpha - ( -\alpha))(\alpha - 0)}
+  = \frac{(x+\alpha)x}{2\alpha^2}\\
+  A_1 &= \int_{-\alpha}^{\alpha} l_1(x)\,dx = \frac{\alpha}{3}\\
+  l_2(x) &= \frac{(x-(\alpha))(x-\alpha)}{0-(-\alpha)(0-\alpha)}
+  = \frac{(x+\alpha)(x-\alpha)}{-\alpha^2}\\
+  A_2 &= \int_{\alpha}^{\alpha} l_2(x)\,dx = \frac{4\alpha}{3}
+\end{align*}
+
+
+
+%\subsection{6.4 Regla Simpsons} 
+Nálgunarformúlan verður þá
+\begin{align*}
+  \int_a^b f(x) \, dx = \int\limits_{-\alpha}^{\alpha} g(x) \, dx
+  &\approx \frac{\alpha}{3}g(-\alpha) + \frac{\alpha}{3}g(\alpha) 
+  + \frac{4\alpha}{3}g(0)\\
+  &=(b-a)\left( \frac{1}{6}f(a) + \frac{4}{6}f
+    \left( \frac{a+b}{2}\right) + \frac{1}{6} f(b)  \right)
+\end{align*}
+
+
+
+%\subsection{6.4 Regla Simpsons aftur}
+Ef við tökum brúunarmargliðu gegnum $a$, $b$ og $\frac{1}{2}(a+b)$ með
+$\frac{1}{2}(a+b)$ tvöfaldan þá fáum við 3. stigs brúunarmargliðu 
+\begin{equation*}
+  p_3(x) = p_2(x) + g[-\alpha, \alpha, 0, 0](x+\alpha)(x-\alpha)x
+\end{equation*} \pause
+Heildið yfir seinni liðinn hægra megin er 0 því 
+margliðan $(x+a)(x-a)x$ er oddstæð, \pause
+en heildið yfir 
+fyrri liðinn er 
+$$
+  \frac \alpha3(g(-\alpha) + 4g(0) + g(\alpha)).
+$$
+\pause
+Út kemur því Simpson-regla.  
+
+
+
+\subsubsection{Samsettu reglurnar} 
+Þar sem Newton-Cotes heildun notar brúunarmargliður fylgja henni
+nokkur vandamál. 
+
+\pause
+\smallskip
+Ef okkur finnst nákvæmnin í nálguninni vera of lítil
+getum við ekki búist við að hún batni við að fjölga skiptipunktum; þá
+hækkar stig margliðunnar líklega sem orsakar sveiflukenndari
+hegðun. 
+
+\pause
+\smallskip
+Eins er ekki gott að halda sig við margliður af lægra stigi;
+ef bilið sem á að heilda yfir er stórt væri mikil tilviljun að 1.,
+2. eða 3. stigs brúunarmargliða nálgaði fallið vel á öllu bilinu. 
+
+
+
+%\subsection{6.4 Samsettu reglurnar} 
+Lausnin á þessu vandamáli er í sama anda og fyrir splæsibrúun. \pause
+Við veljum skiptingu 
+\begin{equation*}
+  a  =x_0 < x_1 < \ldots < x_n = b
+\end{equation*}
+á bilinu $[a,b]$. 
+
+\pause
+\smallskip
+Um heildi gildir að
+\begin{equation*}
+  \int\limits_a^bf(x)\, dx = \sum\limits_{k=1}^n \ \ \int\limits_{x_{k-1}}^{x_k} f(x) \, dx
+\end{equation*}
+svo við getum nálgað heildi $f$ á sérhverju litlu hlutbili
+$[x_{k-1},x_k]$ með að heilda brúunarmargliðu af lágu stigi og lagt
+öll gildin saman til að fá nálgun á heildi $f$ yfir allt bilið. 
+
+\pause
+\smallskip
+Þegar ákveðin regla er notuð til að nálga heildi $f$ á sérhverju
+hlutbili er þetta kölluð {\it samsetta} útgáfa reglunnar. Einfalt er að leiða
+út samsettar útgáfur reglanna að ofan. 
+
+
+
+\subsubsection{Samsetta trapisureglan} 
+Á sérhverju hlutbili er
+\begin{equation*}
+  \int\limits_{x_{k-1}}^{x_k} f(x) \, dx
+  \approx
+  \frac{x_k-x_{k-1}}{2}(f(x_{k-1}) + f(x_k))
+\end{equation*}
+svo
+\begin{equation*}
+  \int\limits_a^b f(x) \, dx
+  \approx
+  \sum\limits_{k=1}^n \frac{x_k-x_{k-1}}{2}(f(x_{k-1}) + f(x_k)).
+\end{equation*}
+
+\pause
+\smallskip
+Ef öll hlutbilin eru jafn löng og $h = x_k-x_{k-1}$, \pause
+þá fæst
+\begin{multline*}
+  \int\limits_a^b f(x) \, dx \\
+  \approx 
+  h\left( \frac{1}{2}f(a) + f(a+h) + f(a+2h) 
+    + \cdots + f(a+(n-1)h) + \frac{1}{2}f(b) \right).
+\end{multline*}
+
+
+\subsubsection{Samsetta miðpunktsreglan} 
+Fljótséð er að
+\begin{equation*}
+  \int\limits_a^b f(x) \, dx
+  \approx
+  \sum\limits_{k=1}^n (x_k-x_{k-1})f
+  \left(
+    \frac{x_{k-1}+x_k}{2}
+  \right)
+\end{equation*}
+
+\pause
+\smallskip
+Ef öll hlutbilin eru jafn löng verður formúlan
+\begin{equation*}
+  \int\limits_a^b f(x) \, dx
+  \approx
+  h \sum\limits_{k=1}^n f \left(\frac{x_{k-1}+x_k}{2}\right)
+\end{equation*}
+
+
+
+\subsubsection{Samsetta Simpson}
+Hér er venjan að velja $2n+1$ jafndreifða skiptipunkta og fá $n$ jafn
+stór hlutbil. Þá er $h = \frac{b-a}{2n}$, $x_k = a + kh$ fyrir $k =
+0,\ldots,2n$ og hlutbilin eru $[x_{2k-2},x_{2k}]$ fyrir $k = 1,
+\ldots, n$. 
+
+\pause
+\smallskip
+Á hverju hlutbili er 
+\begin{equation*}
+  \int\limits_{x_{2k-2}}^{x_{2k}} f(x) \, dx
+  \approx
+  2h \left(
+    \frac{1}{6} f(x_{2k-2}) + \frac{4}{6} f(x_{2k-1}) 
+    + \frac{1}{6} f(x_{2k})
+  \right)
+\end{equation*}
+\pause
+svo að
+{\small 
+\begin{align*}
+  \int\limits_a^b f(x) \, dx
+  \approx &
+  \sum\limits_{k=1}^n
+  \bigg(
+    \frac{h}{3}
+    \Big(
+      f(x_{2k-2}) + 4f(x_{2k-1}) + f(x_{2k})
+    \Big)
+  \bigg) \\
+  = &
+  \frac{h}{3}
+  \Big( 
+    f(a) + 4f(a+h) + 2f(a+2h)+ 4f(a+3h) + 2f(a+4h) \\
+    &+ \cdots + 2f(a+(2n-2)h) + 4f(a+(2n-1)h) + f(b).
+  \Big)
+\end{align*}}
+
+
+
+\subsubsection{Skekkjumat}
+Rifjum upp grunnhugmyndina að baki nálgunarformúlunum. Við veljum
+brúunarpunkta $x_0, \ldots, x_n$ í $[a,b]$, látum $p_n$ vera
+tilsvarandi brúunarmargliðu og skrifum 
+\begin{equation*}
+  f(x) = p_n(x) + r_n(x)
+\end{equation*}
+\pause
+þar sem $r_n(x) = f[x_0, \ldots , x_n, x](x-x_0) \cdots (x-x_n)$. Þá er nálgunin
+\begin{equation*}
+  \int_a^b f(x)\,dx \approx \int_a^b p_n(x)\,dx
+\end{equation*}
+\pause
+með skekkjuna
+\begin{equation*}
+  \int_a^b r_n(x)\,dx
+\end{equation*}
+Nú viljum við meta skekkjuheildið.
+
+
+\subsubsection{Meðalgildissetningin fyrir heildi}
+ Við skekkjumatið í þessum kafla munum við þurfa að nota eftirafarandi 
+ setningu nokkrum sinnum.
+\textbf{Setning (Meðalgildissetningin fyrir heildi):}
+ Ef $G:[a,b] \to \R$ er samfellt fall og $\phi$ er heildanlegt fall sem 
+ skiptir ekki um formerki á bilinu $[a,b]$ þá er til tala $\eta \in [a,b]$
+ þannig að 
+ $$
+  \int_a^b G(x)\phi(x)\, dx = G(\eta) \int_a^b \phi(x)\, dx.
+ $$
+
+
+
+
+
+\subsubsection{Trapisuregla} 
+\begin{equation*}
+  r_1(x) = f[-\alpha, \alpha, x](x+\alpha)(x-\alpha)
+\end{equation*}
+\pause
+Athugum að 
+\begin{equation*}
+  (x+\alpha)(x-\alpha) = (x^2 - \alpha^2)
+\end{equation*}
+skiptir ekki um formerki á bilinu $]-\alpha, \alpha[$. \pause
+Þá gefur meðalgildissetningin fyrir heildi að til 
+er $\eta \in [a,b]$ þannig að\pause
+\begin{align*}
+  \int_a^b r_1(x)\,dx 
+  &= f[-\alpha, \alpha, \eta]
+  \int_{-\alpha}^{\alpha}(x^2 - \alpha^2)\,dx\\
+  &= \frac{f''(\xi)}{2!} \left( - \frac{4}{3}\alpha^3 \right)\\
+  &= \frac{-f''(\xi)}{2!}\frac{(b-a)^3}{6}, \qquad \xi \in [a,b]
+\end{align*}
+
+\pause
+\smallskip
+Niðurstaða:
+\begin{equation*}
+  \int_a^b f(x)\,dx = (b-a)
+  \left( \frac{1}{2} f(a) + \frac{1}{2}f(b) \right) 
+  - \frac{1}{12} f''(\xi)(b-a)^3
+\end{equation*}
+
+
+
+\subsubsection{Skekkjumat í samsettu reglunni} 
+Ef við lítum á samsettu trapisuregluna með jafna skiptingu þar sem 
+hlutbilin eru $[x_i,
+x_{i+1}]$, þá fáum við skekkjuna 
+\begin{equation*}
+  - \frac{h^3}{12}f''(\xi_i), \qquad \xi_i \in [x_i, x_{i+1}]
+\end{equation*}
+\pause
+Ef við leggjum saman og beitum milligildissetningunni, þá fáum við
+\begin{equation*}
+  \int_a^b f(x)\,dx = T(h) - \frac{h^2}{12}(b-a)f''(\xi), \qquad 
+  \xi \in [a,b]
+\end{equation*}
+að því gefnu að $f\in C^2 [a,b]$.
+
+\smallskip
+Ath: Hér er $T(h)$ útkoman úr samsettu Trapisureglunni með 
+jafna skiptingu $h = \frac{b-a}n$.
+
+
+
+\subsubsection{Skekkja í miðpunktsreglu} 
+Til einföldunar skoðum við bilið $[-\alpha,\alpha]$.
+Veljum miðpunktinn tvöfaldan
+\begin{align*}
+  &p_1(x) = f(0) + f'(0)x\\
+  &r_1(x) = f[0,0,x]x^2
+\end{align*}
+Athugum að heildið af $f'(0)x$ yfir $[-\alpha,\alpha]$ er 0. \pause
+Nú skiptir $x^2$ ekki um formerki og því gefur meðalgildisreglan 
+fyrir heildi að til er $\eta \in [-\alpha,\alpha]$ þannig að
+\begin{align*}
+  \int_a^b r_1(x)\,dx 
+  &= \int_{-\alpha}^{\alpha} f[0,0,x]x^2 \,dx\\
+  &= f[0,0,\eta]\int_{-\alpha}^\alpha x^2\,dx\\
+  &= \frac{f''(\xi)}{2!}2\frac{\alpha^3}{3}\\
+  &= \frac{(b-a)^3}{24}\cdot f''(\xi)
+\end{align*}
+Þar sem $\xi$ fæst úr skekkjumatinu fyrir brúunarmargliður (kafli 5).
+
+
+
+\subsubsection{Skekkja í samsettu miðpunktsreglu}
+Fyrir hvert bil fáum við skekkjulið:
+\begin{equation*}
+  \frac{h^3}{24}\cdot f''(\xi_i)
+\end{equation*}
+\pause
+Leggjum saman skekkjuliðina og beitum milligildissetningunni, þá fæst
+að til er $\xi$ þannig að:
+\begin{equation*}
+  \int_a^b f(x)\,dx = h \sum_{i=1}^n 
+  f\left(a+ (i - \frac{1}{2})h\right) + \frac{b-a}{24}f''(\xi)h^2
+\end{equation*} 
+
+
+
+\subsubsection{Skekkja í reglu Simpsons} 
+\begin{equation*}
+  \int_a^b f(x)\,dx \approx (b-a) 
+  \left( 
+    \frac{1}{6}f(a) + \frac{4}{6}f
+    \left( \frac{1}{2}(a+b) \right) + \frac{1}{6}f(b)
+  \right)
+\end{equation*}
+\pause
+Leiddum út þessa formúlu með því að taka brúunarmargliðu $p_3(x)$ með
+punktana $-\alpha, \alpha, 0, 0$. Skekkjan er 
+\begin{equation*}
+  f(x) - p_3(x) = f[-\alpha, \alpha, 0, 0, x]
+  (x+\alpha)(x-\alpha)x^2
+\end{equation*}
+\pause
+þar með er skekkjan í formúlu Simpsons:
+\begin{equation*}
+  \int_{-\alpha}^{\alpha}f[-\alpha, \alpha, 0, 0, x]
+  (x+\alpha)(x-\alpha)x^2 \,dx
+\end{equation*}
+
+
+
+%\subsection{6.4 Skekkja í reglu Simpsons, frh.} 
+Fallið $x\mapsto (x+\alpha)(x-\alpha)x^2 = (x^2 - \alpha^2)x^2$ er
+$\leq 0$ á $[-\alpha, \alpha]$. Þar með gefur meðalgildissetningin
+fyrir heildi að til er $\eta \in [-\alpha, \alpha]$ þannig að skekkjan
+er 
+\begin{multline*}
+  f[-\alpha, \alpha, 0, 0, \eta]
+  \int_{-\alpha}^{\alpha}(x^2 - \alpha^2)x^2 \,dx \\
+  = \frac{f^{(4)}(\xi)}{4!}\cdot \frac{(-4)}{15}\cdot \alpha^5
+  = \frac{-f^{(4)}(\xi)}{90}\left(\frac{b-a}{2}\right)^5, \qquad 
+  \xi \in [a,b]
+\end{multline*}
+Þar sem $\xi$ fæst úr
+skekkjumatinu fyrir Newton aðferðina (glæra 5.55).
+
+
+
+\subsubsection{Skekkja samsettu Simpsonreglu}
+Skiptum $[a,b]$ í $n$ jafnlöng bil og látum $h$ vera helming
+hlutbillengdarinnar,
+\begin{equation*}
+  h = \frac{(b-a)}{2n}.
+\end{equation*}
+\pause
+Þá er
+{\small
+\begin{align*}
+  \int\limits_a^b f(x) \, dx
+  \approx &
+  \sum\limits_{k=1}^n
+  \bigg(
+    \frac{h}{3}
+    \Big(
+      f(x_{2k-2}) + 4f(x_{2k-1}) + f(x_{2k})
+    \Big)
+  \bigg) \\
+  = &
+  \frac{h}{3}
+  \Big( 
+    f(a) + 4f(a+h) + 2f(a+2h)+ 4f(a+3h) + 2f(a+4h) \\
+    &+ \cdots + 2f(a+(2n-2)h) + 4f(a+(2n-1)h) + f(b)
+  \Big)
+\end{align*}}
+
+
+
+%\subsection{6.4 Skekkjumat í samsettu Simpsonreglu}
+Ef við beitum skekkjumatinu á sérhvert bilanna þá fáum við 
+\begin{equation*}
+  \frac{-f^{(4)}(\xi_i)}{90}h^5
+\end{equation*}
+sem skekkju með $\xi_i \in [x_i, x_i+1]$. Heildarskekkjan verður
+\begin{equation*}
+  -\sum_{i=1}^n \frac{f^{(4)}(\xi_i)}{90}h^5 
+  = \frac{-h^5}{90}\cdot \sum_{i=1}^n f^{(4)}(\xi_i)
+\end{equation*}
+\pause
+Nú gefur meðalgildisreglan að til er $\xi \in [a,b]$ þannig að
+\begin{equation*}
+  f^{(4)}(\xi) = \frac{1}{n} \sum_{i=1}^n f^{(4)}(\xi_i)
+\end{equation*}
+\pause
+Nú er $nh = \frac{(b-a)}{2}$ þar með er skekkjan:
+\begin{equation*}
+  \frac{-h^5}{90}\cdot nf^{(4)}(\xi) 
+  = \frac{-(b-a)}{180}f^{(4)}(\xi)\cdot h^4
+\end{equation*}
+
+
+%\subsection{6.4 Skekkjumat á samsettu Simpsonreglunni: Niðurstaða}
+\pause
+Ef við táknum útkomuna úr samsettu Simpsonsreglunni fyrir 
+$h=\frac{b-a}{2n}$ með $S(h)$ þá fæst að til er
+$\xi \in [a,b]$ þannig að
+\begin{equation*}
+  \int_a^b f(x)\,dx = S(h) - \frac{(b-a)}{180}f^{(4)}(\xi)h^4
+\end{equation*}
+
+
+%\section*{6.7 Romberg-útgiskun}
+\subsection{Romberg-útgiskun} 
+Á sama hátt og við gátum bætt nálgun okkar á afleiðu falls með að nota
+Richardson útgiskun getum við bætt nálgun á heildi. 
+
+\pause
+\smallskip
+Aðferðin virkar í
+aðalatriðum eins fyrir heildi og afleiður, en til að fá sem bestar
+upplýsingar um samleitni hennar skulum við leiða út formúluna fyrir
+trapisureglunni aftur. 
+
+
+
+\subsubsection{Euler-Maclauren-formúlan} 
+Fyrir samfellt fall $f : [0,1] \to \mathbb R$ sem er $2n$-sinnum
+samfellt deildanlegt gildir Euler-Maclauren formúlan 
+\begin{align*}
+  \int\limits_0^1 f(t) \, dt 
+  =&  \frac{1}{2}\left( f(0) + f(1) \right) 
+  + \sum\limits_{k=1}^{n-1} A_{2k}
+  \left( f^{(2k-1)}(0) - f^{(2k-1)}(1)\right) \\
+  & - A_{2n}f^{(2n)}(\xi), \qquad \xi \in [0,1]
+\end{align*}
+\pause
+Hér eru stuðlarnir $A_k$ þannig að $k!A_k$ verði Bernoulli-talan númer
+$k$. Þessar tölur eru stuðlar í veldaröðinni 
+\begin{equation*}
+  \frac{x}{e^x -1} = \sum\limits_{k=0}^{\infty}A_kx^k
+\end{equation*}
+
+\pause
+(Það þarf að hafa töluvert fyrir því að sanna þessa formúlu)
+
+
+
+\subsubsection{Afleiðing af Euler-Maclaurin-formúlu}
+Látum nú $f : [a,b] \to \mathbb R$ vera $2n$-sinnum samfellt
+deildanlegt fall. \pause
+Ef við búum til skiptingu $a= x_0 < x_1 < \cdots <
+x_n = b$ með jöfn hlutbil $h = x_{i+1} - x_i$ og beitum síðan
+Euler-Maclauren formúlunni á $g(t) = f(x_i + ht)$ fæst 
+\begin{align*}
+   \int_{x_i}^{x_{i+1}} f(x)\,dx 
+  = & h\int_0^1 \underbrace{f(x_i + ht)}_{g(t)}\,dt \\
+  = & {\color{blue} h \left( \frac{1}{2}f(x_i) + \frac{1}{2}f(x_{i+1})\right) }\\
+   & +    \sum_{k=1}^{n-1}A_{2k}h^{2k}\left( f^{(2k-1)}(x_i) -
+    f^{(2k-1)}(x_{i+1}) \right) \\
+    & - A_{2n}h^{2n+1}f^{(2n)}(\xi_i), 
+\end{align*}
+þar sem $\xi_i \in [x_i, x_{i+1}]$.
+
+
+%\subsection{6.7 Afleiðing af Euler-Maclaurin-formúlu}
+
+Nú innleiðum við
+\begin{align*}
+  T(h) 
+  &:= \sum_{i=0}^{n-1}
+  {\color{blue} h \left( \frac{1}{2} f(x_i) + 
+  \frac{1}{2}f(x_{i+1}) \right)}\\
+  &= h\left( \frac{1}{2}f(a) + f(a+h) 
+    + \cdots + f(a+(n-1)h) + \frac{1}{2}f(a+nh)\right)
+\end{align*}
+\pause
+og fáum síðan:
+\begin{align*}
+  \int\limits_a^b f(x)\, dx 
+  = & T(h) + \sum_{k=1}^{n-1}A_{2k}h^{2k} 
+  \left( f^{(2k-1)}(a) - f^{(2k-1)}(b) \right) \\
+  & - A_{2n}h^{2n+1} \sum_{i=0}^{n-1} f^{(2n)}(\xi_i)
+\end{align*}
+
+
+
+%\subsection{6.7 Afleiðing af Euler-Maclaurin} 
+Nú gefur milligildissetningin að til er $\xi \in [a,b]$ þannig að
+\begin{equation*}
+  \frac{1}{n} \sum\limits_{k=0}^{n-1} f^{(2n)}(\xi_i)
+  = f^{(2n)}(\xi)
+\end{equation*}
+
+Notum okkur nú að $nh = b-a$ og fáum að
+\begin{align*}
+  \int\limits_a^b f(x) \, dx 
+  = & T(h) + \sum_{k=1}^{n-1}A_{2k}h^{2k} 
+  \left( f^{(2k-1)}(a) - f^{(2k-1)}(b) \right) \\
+  & - A_{2n} h^{2n}(b-a)f^{(2n)}(\xi).
+\end{align*}
+
+\pause
+Niðurstaðan er að samsetta trapisureglan er
+\begin{equation*}
+  \int\limits_a^b f(x) \, dx 
+  = T(h) + c_2h^2 + c_4h^4 + \cdots + c_{2m-2}h^{2m-2} 
+  + c_{2n}h^{2m}f^{(2m)}(\xi)
+\end{equation*}
+
+
+
+\subsubsection{Ítrekun á samsettu trapisureglunni með helmingun} 
+Hugsum okkur nú að við viljum reikna út $T(h_j)$ fyrir $h_j =(b-a)/
+2^j$, $j = 1,2,\ldots$ og að við viljum nýta öll fallgildi í
+$T(h_{j-1})$  til að reikna út $T(h_j)$. Rakningarformúlan er 
+\begin{equation*}
+  T(h_j) = \frac{1}{2} T(h_{j-1}) + h_j \sum_{k=1}^{2^{j-1}} f(a+(2k-1)h_j)
+\end{equation*}
+Athugið að hér er bilinu $[a,b]$ skipt í $2^j$ hlutbil.
+
+
+
+\subsubsection{Reikniritið fyrir Romberg-heildun} 
+Romberg-heildun er hugsuð nákvæmlega eins og Richardson-útgiskunin:
+Við reiknum út línu fyrir línu í töflunni: 
+\begin{equation*}
+  \begin{array}{cccccc}
+    i\\
+    1 & R(1,1)\\
+    2 & R(2,1) & R(2,2)\\
+    3 & R(3,1) & R(3,2) & R(3,3)\\
+    4 & R(4,1) & R(4,2) & R(4,3) & R(4,4)\\
+    \vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+  \end{array}
+\end{equation*}
+þar sem
+\begin{align*}
+  &R(i,1) = T(h_i) \qquad i = 1,2,\ldots\\
+  &R(i,j) = \frac{4^{j-1} R(i,j-1) - R(i-1,j-1)}{4^{j-1} - 1}.
+\end{align*}
+Með þessu fæst 
+$\int\limits_a^b f(x)\, dx = R(k,k) + O(h_k^{2k})$,
+þar sem $k$ er síðasta línan sem við reiknum í töflunni að ofan.
+
+
+\subsubsection{Skekkjumat í Romberg heildun} 
+Skekkjumatið er hægt að finna með nákvæmlega sama hætti í fyrir
+Richardson útgiskuna. Þ.e.~við getum notað 
+síðustu viðbót sem eftirámat fyrir skekkjuna, þetta mat er
+\begin{equation*}
+  e \approx \frac{1}{4^{j-1}-1}\left( R(i,j-1) - R(i-1,j-1)\right)
+\end{equation*}
+þegar þessi stærð er komin niður fyrir fyrirfram gefin skekkjumörk er
+hætt. \pause
+Kennslubókin vill fara aðeins varlegar í þetta og stingur upp á 
+\begin{equation*}
+  e \approx \frac{1}{2^{j-1}}\left( R(i,j-1) - R(i-1,j-1)\right),
+\end{equation*}
+sjá bls.~500.
+\medskip\pause
+
+Athugið að það er ekki nauðsynlegt að hafa $h_1$ sem allt bilið $[a,b]$, það er ekkert sem 
+kemur í veg fyrir það að við byrjum með $h_1 = \frac{b-a}{m}$, og helmingum svo;
+$h_2 = \frac{b-a}{2m}$, $h_3 = \frac{b-a}{4m}$, $\ldots$.\\
+Almennt er þá $h_j=\frac{b-a}{2^{j-1}m}$.
+
+
+
+%\section*{Fræðilegar spurningar}
+\subsection{Fræðilegar spurningar}
+  \begin{enumerate}
+  \item  Hver er meginhugmyndin í tölulegri deildun og heildun?
+  \item  Hvað eru {\it frammismunur} og {\it bakmismunur} til þess að
+    nálga afleiðu?
+  \item  Hvernig er {\it miðsettur mismunakvóti} fyrir fyrsta stigs
+    afleiðu skilgreindur og hver 
+    er skekkjan í nálgun á afleiðu falls með honum?
+  \item  Hvernig er {\it miðsettur mismunakvóti} fyrir annars stigs
+    afleiðu skilgreindur og hvernig er skekkjan í nálgun á annarri
+    afleiðu með honum?
+  \item  Hvernig eru  brúnunarmargliður notaðar til þess að
+    reikna út afleiðu falls $f$ í punkti $a$ og hver er skekkjan í
+    slíkri nálgun?
+  \item  Lýsið fyrsta skrefinu i Richardson-útgiskun þar sem 
+formúlan $f'(a)=R_0(h)+a_2h^2+a_4h^4+O(h^6)$ er endurbætt þannig að út
+komi skekkja sem er $O(h^4)$.
+  \item  Lýsið Richardson-útgiskunartöflunni. 
+  \item  Hvaða skekkjumat er notað í Richardson-útgiskun?
+  \end{enumerate}
+
+
+
+%\subsection{Kafli 6: Fræðilegar spurningar}
+  \begin{enumerate}
+  \item [9.] Hvernig er almenna aðferðin sem notar brúunarmargliður til þess
+    að nálga heildi og nefnd er Newton-Cotes-heildun og hvernig er
+    skekkjuformúlan í henni? 
+  \item [10.] Hvernig er trapisuregla til þess að nálga heildi og
+   aðferðarskekkja hennar?
+  \item [11.] Hvernig er miðpunktsregla til þess að nálga heildi og
+   aðferðarskekkja hennar? 
+  \item [12.] Hvernig er Simpson-regla til þess að nálga heildi og
+    aðferðarskekkja hennar?
+  \item [13.] Hvernig er samsetta trapisureglan og 
+    aðferðarskekkja hennar?
+  \item [14.] Hvernig er samsetta miðpunktsreglan og 
+ aðferðarskekkja hennar? 
+  \item [15.]  Hvernig er samsetta Simpson-reglan og 
+aðferðarskekkja hennar?
+  \item [16.] Hvernig er rakningarformúla fyrir samsettu trapisureglunni?
+  \item [17.] Lýsið reikniritinu fyrir Romberg-heildun.
+  \item [18.] Hver er skekkjan í eftirámatinu í Romberg-heildun?
+   \end{enumerate}
+
+
+\end{document}

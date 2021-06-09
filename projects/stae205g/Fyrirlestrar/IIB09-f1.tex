@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc} \usepackage[icelandic]{babel}
+\usepackage{latexsym,amssymb,amsmath}
+
+\voffset=-0.5in
+\hoffset=-0.5in
+\textwidth=6in
+\textheight=10.0in
+
+\begin{document}
+
+\pagestyle{empty}
+
+\selectlanguage{icelandic}
+
+\newcommand{\nin}{\mbox{$\;\not\in\;$}}
+\newcommand{\dive}{\mbox{${\rm div}$}}
+\newcommand{\rot}{\mbox{${\rm rot}$}}
+\newcommand{\spann}{\mbox{${\rm Span}$}}
+\newcommand{\tr}{\mbox{${\rm tr}$}}
+\newcommand{\rank}{\mbox{${\rm rank}$}}
+\newcommand{\image}{\mbox{${\rm image}$}}
+\newcommand{\nullity}{\mbox{${\rm null}$}}
+\newcommand{\proj}{\mbox{${\rm proj}$}}
+\newcommand{\id}{\mbox{${\rm id}$}}
+\newcommand{\R}{\mbox{${\bf R}$}}
+\newcommand{\Rn}{\mbox{${\bf R}^n$}}
+\newcommand{\Rm}{\mbox{${\bf R}^m$}}
+\newcommand{\Rk}{\mbox{${\bf R}^k$}}
+\newcommand{\Av}{\mbox{${\bf A}$}}
+\newcommand{\av}{\mbox{${\bf a}$}}
+\newcommand{\uv}{\mbox{${\bf u}$}}
+\newcommand{\vv}{\mbox{${\bf v}$}}
+\newcommand{\wv}{\mbox{${\bf w}$}}
+\newcommand{\xv}{\mbox{${\bf x}$}}
+\newcommand{\zv}{\mbox{${\bf z}$}}
+\newcommand{\yv}{\mbox{${\bf y}$}}
+\newcommand{\bv}{\mbox{${\bf b}$}}
+\newcommand{\cv}{\mbox{${\bf c}$}}
+\newcommand{\dv}{\mbox{${\bf d}$}}
+\newcommand{\ev}{\mbox{${\bf e}$}}
+\newcommand{\hv}{\mbox{${\bf h}$}}
+\newcommand{\iv}{\mbox{${\bf i}$}}
+\newcommand{\jv}{\mbox{${\bf j}$}}
+\newcommand{\kv}{\mbox{${\bf k}$}}
+\newcommand{\pv}{\mbox{${\bf p}$}}
+\newcommand{\qv}{\mbox{${\bf q}$}}
+\newcommand{\rv}{\mbox{${\bf r}$}}
+\newcommand{\sv}{\mbox{${\bf s}$}}
+\newcommand{\tv}{\mbox{${\bf t}$}}
+\newcommand{\ov}{\mbox{${\bf 0}$}}
+\newcommand{\Oa}{\mbox{$(0,0)$}}
+\newcommand{\Ob}{\mbox{$(0,0,0)$}}
+\newcommand{\Onv}{\mbox{$[0,0,\ldots,0]$}}
+\newcommand{\an}{\mbox{$(a_1,a_2, \ldots,a_n)$}}
+\newcommand{\xn}{\mbox{$(x_1,x_2, \ldots,x_n)$}}
+\newcommand{\xnv}{\mbox{$[x_1,x_2, \ldots,x_n]$}}
+\newcommand{\vnv}{\mbox{$[v_1,v_2, \ldots,v_n]$}}
+\newcommand{\wnv}{\mbox{$[w_1,w_2, \ldots,w_n]$}}
+
+
+\centerline{\sc \LARGE Stærðfræðigreining IIB}
+\medskip
+\centerline{\sc \large 1. Ferlar.}
+
+\bigskip
+\medskip
+%\LARGE
+%\baselineskip24pt
+
+
+{\bf 1.1 Skilgreining.}  Vörpun $\rv:  [a,b]\rightarrow \Rn$ þannig að $\rv(t)=(r_1(t),\ldots,r_n(t))$ kallst {\em vigurgild vörpun}.  Slík vörpun er sögð samfelld ef föllin $r_1, \ldots, r_n$ eru öll samfelld.  Samfelld vörpun $\rv:  [a,b]\rightarrow \Rn$ er oft kölluð {\em stikaferill}.
+
+%\newpage
+\medskip
+
+{\bf 1.2 Ritháttur.}  Þegar fjallað er um stikaferil $\rv:  [a,b]\rightarrow \R^2$ þá er oft ritað
+$$\rv=\rv(t)=(x(t),y(t))=x(t)\iv+y(t)\jv,$$
+og þegar fjallað er um stikaferil $\rv:  [a,b]\rightarrow \R^3$ þá er oft ritað
+$$\rv=\rv(t)=(x(t),y(t),z(t))=x(t)\iv+y(t)\jv+z(t)\kv.$$
+
+\medskip
+
+{\bf 1.3 Skilgreining.} Látum $\cal C$ vera {\em feril í plani} (þ.e.a.s.\
+$\cal C$ er mengi punkta í planinu sem er ferill í venjulegum
+skilningi orðsins {\em ferill}).  Stikun á $\cal C$ er stikaferill $\rv:
+[a,b]\rightarrow \R^2$ þannig að $\rv$ tekur hvern punkt í $\cal C$
+sem gildi. {\em Ferill í rúmi} er skilgreindur á sambærilegan hátt.
+ 
+\medskip
+
+{\bf 1.4 Skilgreining.}  Stikaferill $\rv:  [a,b]\rightarrow \Rn$ er
+{\em diffranlegur í punkti} $t$ ef markgildið 
+$$\rv'(t)=\lim_{\Delta t\rightarrow 0}\frac{\rv(t+\Delta t)-\rv(t)}{\Delta t}$$
+er til.  Stikaferillinn $\rv$ er sagður {\em diffranlegur} ef hann er
+diffranlegur í öllum punktum á bilinu $[a,b]$.  (Í endapunktum bilsins
+$[a,b]$ er þess krafist að einhliða afleiður séu skilgreindar.)
+\medskip
+%\newpage
+
+{\bf 1.5 Setning.}  Stikaferill $\rv:  [a,b]\rightarrow \Rn$ er
+{\em diffranlegur í punkti} $t$ ef og aðeins ef föllin $r_1,\ldots,r_n$ eru
+öll diffranleg í $t$.  Þá gildir að  
+$$\rv'(t)=(r'_1(t),\ldots,r'_n(t)).$$ 
+
+\medskip
+%\newpage
+
+{\bf 1.6 Setning.}  Látum $\uv,\vv:[a,b]\rightarrow \Rn$ vera
+diffranlega stikaferla og $\lambda$ diffranlegt fall.  Þá eru stikaferlarnir
+$\uv(t)+\vv(t), \lambda(t)\uv(t)$ og $\uv(\lambda(t))$ diffranlegir,
+og ef $n=3$ þá er stikaferillinn $\uv(t)\times \vv(t)$ líka diffranlegur.
+Fallið $\uv(t)\cdot\vv(t)$ er líka diffranlegt.  Eftirfarandi listi sýnir
+formúlur fyrir afleiðunum: 
+
+{\bf (a)} $\frac{d}{dt}(\uv(t)+\vv(t))=\uv'(t)+\vv'(t)$,
+
+{\bf (b)} $\frac{d}{dt}(\lambda(t)\uv(t))=\lambda'(t)\uv(t)+\lambda(t)\uv'(t)$,
+
+{\bf (c)}  $\frac{d}{dt}(\uv(t)\cdot\vv(t))=\uv'(t)\cdot\vv(t)+\uv(t)\cdot\vv'(t)$,
+
+{\bf (d)}  $\frac{d}{dt}(\uv(t)\times\vv(t))=\uv'(t)\times\vv(t)+\uv(t)\times\vv'(t)$,
+
+{\bf (e)}  $\frac{d}{dt}(\uv(\lambda(t)))=\uv'(\lambda(t))\lambda'(t)$.
+
+\noindent
+Ef $\uv(t)\neq\ov$ þá er 
+
+{\bf (f)}  $\frac{d}{dt}|\uv(t)|=\frac{\uv(t)\cdot\uv'(t)}{|\uv(t)|}$.
+
+\medskip
+
+{\bf 1.7 Ritháttur.}  Látum $\rv:  [a,b]\rightarrow \Rn$ vera diffranlegan stikaferil.  Venja er að rita $\vv(t)=\rv'(t)$ og tala um
+$\vv(t)$ sem {\em hraða} eða {\em hraðavigur}.   Talan $|\vv(t)|$ er
+kölluð {\em ferð}.   Einnig er ritað $\av(t)=\vv'(t)=\rv''(t)$ og talað
+um $\av(t)$ sem {\em hröðun} eða {\em hröðunarvigur}.   
+
+\medskip\newpage
+
+{\bf 1.8 Skilgreining.}  Látum $\rv:  [a,b]\rightarrow \Rn; \rv(t)=(r_1(t),\ldots,r_n(t))$ vera stikaferil.  
+
+Stikaferillinn er sagður {\em samfellt diffranlegur} ef föllin
+$r_1(t),\ldots,r_n(t)$ eru öll diffranleg og afleiður þeirra eru
+samfelldar.  Samfellt diffranlegur stikaferill er sagður {\em þjáll}
+(e.~smooth) ef $\rv'(t)\neq\ov$ fyrir öll $t$. 
+
+Stikaferillinn er sagður {\em samfellt diffranlegur á köflum} ef til eru
+tölur $b_0,\ldots,b_k$ þannig að  $a=b_0<b_1<\cdots<b_k=b$ og
+stikaferillinn er samfellt diffranlegur á hverju bili $[b_{i-1}, b_i]$.
+Það að stikaferill sé {\em þjáll á köflum}  
+(e.~piecewise smooth curve) er
+skilgreint á sambærilegan hátt. 
+
+\medskip
+
+{\bf 1.9  Regla.}  Látum $\rv:  [a,b]\rightarrow \Rn$ vera samfellt diffranlegan stikaferil.  {\em Lengd} eða 
+{\em bogalengd} stikaferilisins er skilgreind með formúlunni 
+$$s=\int_a^b |\vv(t)|\,dt.$$
+
+\medskip
+
+{\bf 1.10  Skilgreining og umræða.}       Látum $\rv:
+[a,b]\rightarrow \Rn$ vera samfellt diffranlegan stikaferil.   Sagt er að
+stikaferillinn sé {\em stikaður með  bogalengd} ef fyrir allar tölur $t_1,
+t_2$ þannig að $a\leq t_1<t_2\leq b$ þá gildir 
+$$t_2-t_1= \int_{t_1}^{t_2} |\vv(t)|\,dt.$$
+(Skilyrðið segir að lengd stikaferilsins á milli punkta $\rv(t_1)$ og
+$\rv(t_2)$ sé jöfn muninum á $t_2$ og $t_1$.)
+Stikun með bogalengd má líka þekkja á þeim eiginleika að $|\vv(t)|=1$ fyrir öll gildi á $t$.
+
+\vfill  2.\ janúar 2009
+  \hfill  Rögnvaldur G. Möller
+  \end{document}
+  

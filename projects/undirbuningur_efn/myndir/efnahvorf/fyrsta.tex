@@ -1,0 +1,55 @@
+\documentclass[tikz,border=10pt]{standalone}
+
+%% Language and font encodings
+
+
+%% Sets page size and margins
+\usepackage[a4paper,top=2.6cm,bottom=2cm,left=2.6cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\setlength\parindent{0pt}
+\linespread{1.25}
+\usepackage{cool,siunitx}
+
+%% Useful packages
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{tablefootnote}
+\usepackage{hhline}
+\usepackage{icomma}
+\usepackage{ dsfont }
+\usepackage{ upgreek }
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{cancel}
+\usepackage{accents}
+\usepackage{pdfpages}
+\usepackage{svg}
+\usepackage{cancel}
+\begin{document}
+
+
+\begin{tikzpicture}
+
+
+    \draw[->] (0,0) -- (4.2,0) node[below] {$t$};
+      \draw[->] (0,0) -- (0,4.2) node[left] {$[A]$};
+      %\draw[scale=1,domain=0:3,smooth,variable=\y,blue] plot ({0.5*\y*\y},{y});
+      \draw[scale=1,domain=0:4.2,smooth,variable=\x,blue]  plot ({\x},{exp(1.1-0.6*\x)});
+      
+      \node [scale=0.8] at (-0.3,3) {$[A]_0$};
+      \node [scale=0.8] at (4.5,0.25) {$[A]_t$};     
+      
+    \end{tikzpicture}
+
+\end{document}
+
+

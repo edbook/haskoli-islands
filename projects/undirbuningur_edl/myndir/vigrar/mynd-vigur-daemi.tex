@@ -1,0 +1,17 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+
+\begin{document}
+\begin{tikzpicture}
+  \draw [thick, ->] (0,0) -- (5,-2) node [midway, left, below] {$\bar{b}$};
+  \draw [dashed] (0,0) -- (5,0) node [midway, above] {$b_x$};
+  \draw [dashed] (5,0) -- (5,-2) node [midway, right] {$b_y$};
+
+  % hornið
+  \draw (1.2,0) arc (0:-21.8:1.2) node[midway, xshift=5] {$\phi$};
+
+  \draw (4.8,0) -- (4.8,-0.2) -- (5,-0.2);
+
+\end{tikzpicture}
+\end{document}

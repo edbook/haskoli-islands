@@ -1,0 +1,14 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}
+  \filldraw (0,0) circle [radius = 3pt]  ;
+  \node (c) at (0,0) [below]{Sól};
+  \draw [dashed] (0,0) circle [radius = 3];
+  \filldraw (0,3) circle [radius =2 pt] ;
+  \node (c) at (0,3) [above]{Jörð};
+  \draw [decorate,decoration={brace,amplitude=10pt}] (-0.1,3) -- (-0.1,0) node [black,midway,xshift=1.4cm] {$1.496\cdot 10^{11}$m} ;
+\end{tikzpicture}
+\end{document}

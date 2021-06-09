@@ -1,0 +1,228 @@
+\def \kaflanr {23}
+\lecture[\kaflanr]{\kaflanr. grad, div og curl}{lecture-text}
+\date{23.~mars 2015}
+\newcounter{mycount}
+\refstepcounter{mycount}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \rtask{}}\stepcounter{mycount}
+ Skilgreinum {\em nabla}-virkjann sem diffurvirkja
+$$\nabla=\iv\,\frac{\partial}{\partial x}+\jv\,\frac{\partial}{\partial y}+\kv\,\frac{\partial}{\partial z}.$$
+
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \rtask{}}\stepcounter{mycount}
+ Látum
+$\Fv(x,y,z)=F_1(x,y,z)\,\iv+F_2(x,y,z)\,\jv+F_3(x,y,z)\,\kv$ vera
+vigursvið og $\phi(x,y,z)$ vera fall. 
+
+Skilgreinum  {\em stigul} $\phi$ sem vigursviðið 
+$$\grad \phi=\nabla\phi=\frac{\partial \phi}{\partial x}\,\iv+
+\frac{\partial \phi}{\partial y}\,\jv+\frac{\partial \phi}{\partial z}\,\kv.$$
+
+Skilgreinum {\em sundurleitni} (e.~divergens) vigursviðsins $\Fv$ sem 
+ $$\dive\Fv=\nabla\cdot\Fv=\frac{\partial F_1}{\partial x}+\frac{\partial F_2}{\partial y}+\frac{\partial F_3}{\partial z}.$$
+
+Skilgreinum {\em rót}  vigursviðsins $\Fv$ sem 
+ \begin{align*}
+ \curl\Fv&=\nabla\times\Fv =\begin{vmatrix} \iv&\jv&\kv\\
+ \frac{\partial} {\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\F_1&F_2&F_3\end{vmatrix} \\
+ \noalign{\smallskip}
+ &=\bigg(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial
+ z}\bigg)\,\iv+\bigg(\frac{\partial F_1}{\partial z}-\frac{\partial
+ F_3}{\partial x}\bigg)\,\jv+\bigg(\frac{\partial F_2}{\partial
+ x}-\frac{\partial F_1}{\partial y}\bigg)\,\kv. 
+ \end{align*}
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Varúð \rtask{}}\stepcounter{mycount}
+  Ef $\phi(x,y,z)$ er fall þá er $\nabla \phi(x,y,z)$ 
+stigullinn af $\phi(x,y,z)$ en $\phi(x,y,z)\nabla$ er diffurvirki.
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Varúð \rtask{}}\stepcounter{mycount}
+ Sundurleitnin $\dive\Fv$ er fall $\R^3\rightarrow\R$ en rótið $\curl\Fv$ er vigursvið $\R^3\rightarrow\R^3$.
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \rtask{}}\stepcounter{mycount}
+ Látum
+$\Fv(x,y)=F_1(x,y)\,\iv+F_2(x,y)\,\jv$ vera vigursvið.  Skilgreinum
+{\em sundurleitni} $\Fv$ sem  
+$$\dive\Fv=\nabla\cdot\Fv=\frac{\partial F_1}{\partial
+  x}+\frac{\partial F_2}{\partial y}.$$ 
+og {\em rót} $\Fv$ skilgreinum við sem 
+$$\curl\Fv=\bigg(\frac{\partial F_2}{\partial x}-\frac{\partial
+  F_1}{\partial y}\bigg)\,\kv.$$ 
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Reiknireglur \rtask{}}\stepcounter{mycount}
+  Gerum ráð fyrir að $\Fv$ og $\Gv$ séu
+vigursvið og $\phi$ og $\psi$ föll.  Gerum ráð fyrir að þær
+hlutafleiður sem við þurfum að nota séu skilgreindar og samfelldar. 
+
+(a) $\nabla(\phi\psi)=\phi\nabla\psi+\psi\nabla\phi$.
+
+(b)  $\nabla\cdot(\phi\Fv)=(\nabla\phi)\cdot\Fv+\phi(\nabla\cdot\Fv)$.
+
+(c) $\nabla\times(\phi\Fv)=(\nabla\phi)\times\Fv+\phi(\nabla\times\Fv)$. 
+
+(d)  $\nabla\cdot(\Fv\times\Gv)=(\nabla\times\Fv)\cdot\Gv
+-\Fv\cdot(\nabla\times\Gv)$.
+
+(e) $\nabla\times(\Fv\times\Gv)=(\nabla\cdot\Gv)\Fv
++(\Gv\cdot\nabla)\Fv-(\nabla\cdot\Fv)\Gv-(\Fv\cdot\nabla)\Gv$.
+
+(f) $\nabla(\Fv\cdot\Gv)=\Fv\times(\nabla\times \Gv)+\Gv\times(\nabla\times \Fv)+(\Fv\cdot\nabla)\Gv+(\Gv\cdot\nabla)\Fv$.
+
+(g) $\nabla\cdot(\nabla\times \Fv)=0$\qquad\qquad$\dive\curl=0$
+
+(h) $\nabla\times(\nabla\phi)=\ov$\qquad\qquad$\curl\grad=\ov$
+
+(i)  $\nabla\times(\nabla\times \Fv)=\nabla(\nabla\cdot\Fv)-\nabla^2\Fv$.
+
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \rtask{}}\stepcounter{mycount}
+ Látum $\Fv$ vera vigursvið skilgreint á svæði $D$.  
+
+(a) Vigursviðið $\Fv$ er sagt vera {\em sundurleitnilaust}
+(e.~solenoidal) ef $\dive\Fv=0$ i öllum punktum  $D$.
+
+(b) Vigursviðið $\Fv$ er sagt vera {\em rótlaust} (e.~irrotational) ef $\curl\Fv=\ov$ á öllu $D$.
+    
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Athugasemd \rtask{}}\stepcounter{mycount}
+ Vigursvið   $\Fv(x,y,z)=F_1(x,y,z)\,\iv+F_2(x,y,z)\,\jv+F_3(x,y,z)\,\kv$ er rótlaust ef og aðeins ef 
+$$\frac{\partial F_1}{\partial y}=
+\frac{\partial F_2}{\partial x},\quad
+\frac{\partial F_1}{\partial z}=
+\frac{\partial F_3}{\partial x},\quad
+\frac{\partial F_2}{\partial z}=
+\frac{\partial F_3}{\partial y}.$$
+
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Setning \rtask{}}\stepcounter{mycount}
+ (a) Rót vigursviðs er sundurleitnilaus.
+
+(b) Stigulsvið er rótlaust.
+
+   \medskip
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \rtask{}}\stepcounter{mycount}
+  Svæði $D$ í rúmi eða plani kallast {\em
+  stjörnusvæði} ef til er punktur $P$ í $D$ þannig að fyrir sérhvern
+annan punkt $Q$ í $D$ þá liggur allt línustrikið á milli $P$ og $Q$ í
+$D$. 
+
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Setning \rtask{}}\stepcounter{mycount}
+Látum $\Fv$ vera samfellt diffranlegt vigursvið
+skilgreint á stjörnusvæði $D$.  Ef $\Fv$ er rótlaust þá er $\Fv$
+stigulsvið.  Með öðrum orðum, ef vigursviðið  $\Fv$ er samfellt
+diffranlegt og skilgreint á stjörnusvæði $D$ og uppfyllir jöfnurnar
+$$\frac{\partial F_1}{\partial y}=
+\frac{\partial F_2}{\partial x},\quad
+\frac{\partial F_1}{\partial z}=
+\frac{\partial F_3}{\partial x},\quad
+\frac{\partial F_2}{\partial z}=
+\frac{\partial F_3}{\partial y},$$
+þá er $\Fv$ stigulsvið.
+\end{block}
+
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Setning \rtask{}}\stepcounter{mycount}
+ Lát $\Fv$ vera samfellt diffranlegt vigursvið skilgreint á stjörnusvæði $D$.  Ef $\Fv$ er sundurleitnilaust þá er til vigursvið $\Gv$ þannig að $\Fv=\curl\Gv$.  Vigursviðið $\Gv$ kallast {\em vigurmætti} fyrir $\Fv$.
+\end{block}
+
+\end{frame}
+
+\end{document}

@@ -1,0 +1,706 @@
+\documentclass[icelandic,a4paper,12pt]{article}
+\usepackage{beamerarticle}
+
+\input{beamer.tex}
+
+\newcommand{\C}{{\mathbb  C}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\R}{{\mathbb  R}}
+\newcommand{\N}{{\mathbb  N}}
+\newcommand{\Q}{{\mathbb Q}}
+\begin{document}
+
+
+%\subsection{Yfirlit}
+\section{Parbólskar hlutafleiðujöfnur}
+%\begin{center}
+%\begin{tabular}{|l|l|l|l|}\hline
+%Kafli &Heiti á viðfangsefni & Bls. & Glærur\\
+%\hline
+%10.0 & Almenn atriði um parabólskar hlutafleiðuj. & 803-804 & 3-6\\
+%10.1 & Hitajafnan með Dirichlet-jaðarskilyrði & 805-817 & 7-15 \\
+%10.2 & Stöðugleiki & 818-827 & 16-18 \\
+%10.3 & Almenn parabólsk verkefni & 828-840 & 19-29\\
+%10.4 & Blönduð jaðarskilyrði & 841-852 & 30-34\\ \hline
+%\end{tabular}
+%\end{center}
+
+
+
+\subsection{Almenn atriði um parabólsk verkefni}
+
+%\subsection{10.0 Inngangur}
+Eins og í kafla 9 þá ætlum við hér að skoða annars stigs línulegar 
+hlutafleiðujöfnur á svæði $R$ í $\R^2$, \pause þetta eru jöfnur á forminu
+\begin{multline}
+A(x,y)\frac{\p^2 u}{\p x^2} + B(x,y)\frac{\p^2 u}{\p x\p y} + C(x,y)\frac{\p^2 u}{\p y^2} +\\
+D(x,y)\frac{\p u}{\p x} + E(x,y)\frac{\p u}{\p y} + F(x,y)u = G(x,y).
+\end{multline}
+\subsubsection{Skilgreining}
+ Annars stigs línuleg hlutafleiðujafna eins og að ofan kallast \emph{parabólsk}
+ ef 
+ $$
+  A(x,y)C(x,y) - B(x,y)^2 = 0,
+ $$
+ fyrir öll $(x,y) \in R$.
+
+%\subsection{10.0 Parabólskar jöfnur}
+ Við ætlum að láta aðra breytuna vera tímabreytu. 
+ Þannig fæst tímaháð verkefni, en parabólskar jöfnur lýsa oft verkefnum þar 
+ hlutur fer úr upphafsástandi í jafnvægisástand. \pause
+ 
+ \subsubsection{Hagnýtingar}
+ \begin{itemize}
+  \item Dreifing hita og styrkleiki lausna
+  \item Black-Scholes módelið í fjármálastærðfræði
+  \item Brownhreyfing
+ \end{itemize}
+ 
+ 
+ \pause
+ 
+ \subsubsection{Hitajafnan}
+ Við ætlum að einskorða okkur við mikilvægasta tilvikið, \emph{Hitajöfnuna}
+ $$
+  \frac{\p u}{\p t} =  D \Delta u,
+ $$\pause
+ í einni rúmbreytu þá þýðir þetta, 
+ $$
+  \frac{\p u}{\p t} =  D\frac{\p^2 u}{\p x^2}.
+ $$
+ 
+
+
+%\subsection{10.0 Jaðarskilyrði}
+
+\subsubsection{Svæðið}
+ Þar sem við höfum aðeins eina rúmbreytu þá er svæðið sem við skoðum 
+ einfaldlega bil $[a,b]$
+
+  
+\subsubsection{Jaðarskilyrði}
+ Eins og fyrir sporgerar hlutafleiðujöfnur (kafli 9) þá getum við haft þrjár gerðir
+ af jaðarskilyrðum: Dirichlet,
+ Neumann og  Robin.
+
+
+\subsubsection{Verkefnið}
+Við munum byrja á því að skoða Dirichlet-jaðarskilyrði: \pause 
+
+Gefin föll
+$u_a(t)$, $u_b(t)$ fyrir $t\geq 0$ og fall $f(x)$ á $[a,b]$ þá viljum
+við finna fall $u(x,t)$ þannig að \pause
+\begin{itemize}
+ \item $\frac{\p u}{\p t} =  D \frac{\p^2 u}{\p x^2}$, \pause
+ \item $u(a,t) = u_a(t)$ og $u(b,t) = u_b(t)$, \pause
+ \item $u(x,0) = f(x)$. \pause
+\end{itemize}
+Talan $D$ kallast dreifnistuðull.
+
+
+
+
+\subsubsection{Hitajafnan og þýð föll}
+\textbf{Hitajafnan}
+  $$
+  \frac{\p u}{\p t} = D\  \Delta u,
+ $$
+ 
+ 
+ \textbf{Athugasemd}
+  Þegar hluturinn sem við erum að skoða er kominn í jafnvægisástand þá
+  þýðir það að $\frac{\p u}{\p t} = 0$. \pause Þetta þýðir að 
+  $$
+     0 =  D\ \Delta u,
+  $$
+  það er,jafnvægisástandið uppfyllir meðalgildiseiginleikann (sjá glæru 9.6).
+ 
+ 
+
+
+\subsection{Hitajafnan --  Dirichlet-jaðarskilyrði }
+
+\subsubsection{Rúmbreytan gerð strjál }
+Byrjum á að skipta bilinu $[a,b]$ í $N$ hlutbil, hvert um sig með lengdina
+ $h=(b-a)/N$:
+ $$
+    a = x_0 < x_1 < \ldots < x_{N-1} < x_N = b.
+ $$ \pause
+ 
+Látum $v_j(t)$ vera nálgunargildið á $u(x_j,t)$.
+ 
+Með því að skipta annarri afleiðunni í 
+ $$
+ \frac{\p u}{\p t} =  D\ \Delta u,
+ $$
+út fyrir samhverfan mismunakvóta þá fæst
+ $$ 
+ \frac{d v_j(t)}{d t} =  D\  \frac{v_{j-1}(t) -2 v_j(t) + v_{j+1}(t)}{h^2}, \qquad
+ \text{fyrir } j=1,\ldots,N-1.
+ $$
+Athugið að þetta er fyrsta stigs afleiðujafna eins og við fengumst við í kafla 7.
+
+
+\subsubsection{Afleiðujöfnuhneppi stillt upp}
+Jöfnuhneppið 
+ $$ 
+ \frac{d v_j(t)}{d t} =  D\  \frac{v_{j-1}(t) -2 v_j(t) + v_{j+1}(t)}{h^2}, \qquad
+ \text{fyrir } j=1,\ldots,N-1.
+ $$ \pause
+með upphafsskilyrðunum $v_j(0) = f(x_j)$, \pause
+má svo skrifa
+ $$ 
+ \frac{d \vv(t)}{d t} =  -\frac{D}{h^2}\  (A\vv(t) + \bv(t)), \qquad \vv(0)=\fv
+ $$
+þar sem 
+ \begin{align*}
+  \vv(t) &= [v_1(t) \ v_2(t) \ \cdots \ v_{N-1}(t) ]^T\\
+  \fv &= [ f(x_1) \ f(x_2) \ \cdots \ f(x_{N-1}) ]^T\\
+  \bv(t) &= [ -u_a(t) \ \ 0 \ \cdots \ 0 \ \ -u_b(t) ]^T \\
+  A &=  \left[\begin{array}{cccccc}
+2 & -1 &   &   &   &  \\
+-1 & 2 & -1 &   &   &  \\
+  & \cdot & \cdot & \cdot &   &  \\
+  &   & \cdot & \cdot & \cdot &  \\
+  &   &  & -1 & 2 & -1\\
+  &   &   &   & -1 & 2
+      \end{array}\right]
+ \end{align*}
+
+
+\subsubsection{Tímabreytan gerð strjál}
+Til þess að leysa afleiðujöfnuhneppið hér á undan þá beytum við aðferðunum
+úr 7.~kafla. Hægt er að nota hvort sem er aðferðir með fasta skrefastærð
+(aðferð Eulars, Heun og Runge-Kutta) og aðferðir með breytilega skrefastærð
+(RKF45 og RKV56). \pause
+
+\medskip
+Við munum notast við fastaskrefstærð $k$. Tímaskrefin eru því
+$t_n = n k$, fyrir $n=0,1,2,\ldots,$. \pause
+
+\medskip
+Táknum nálgunargildið við 
+$v_j(t_n)$ með $w_j^{(n)}$, og látum
+$$
+  \wv^{(n)} = [w_1^{(n)}(t) \ w_2^{(n)} \ \cdots \ w_{N-1}^{(n)} ]^T. 
+$$
+
+
+
+\subsubsection{FTCS -- Fram í tíma, miðsett í rúmi}
+Skiptum afleiðunni í 
+$$ 
+ \frac{d \vv(t)}{d t} =  -\frac{D}{h^2}\  (A\vv(t) + \bv(t)), \qquad \wv^{(0)}=\fv
+$$
+út fyrir frammismun. Þá fæst
+$$ 
+ \frac{\wv^{(n+1)} - \wv^{(n)}}{ k} =  -\frac{D}{h^2}\  (A\wv^{(n)} + \bv(t_n)), 
+ \qquad \wv^{(0)}=\fv.
+$$\pause
+Þetta er jafngilt því að heilda efstu jöfnuna frá $t=t_n$ upp í $t=t_{n+1}$ og
+nálga heildið af hægri hliðinni með margfeldinu af gildinu í vinstri endapunktinum 
+$t_n$ og billengdinni $k$. \pause
+
+Þetta er aðferð Eulers úr kafla 7.2.
+
+ 
+
+%\subsection{10.1 FTCS -- Fram í tíma, miðsett í rúmi, frh.}
+ Jöfnuhneppið
+ $$ 
+ \frac{\wv^{(n+1)} - \wv^{(n)}}{ k} =  -\frac{D}{h^2}\  (A\wv^{(n)} + \bv(t_n)), 
+$$
+má svo umrita sem
+\begin{align*}
+ \wv^{(n+1)} &= \wv^{(n)} -\lambda A\wv^{(n)} - \lambda \bv(t_n) \\
+ & = (I-\lambda A) \wv^{(n)} - \lambda \bv(t_n),
+\end{align*}
+þar sem $\lambda = k\frac{D}{h^2}$. \pause
+ 
+ Upphafsgildið $\wv^{(0)}$ er þekkt og hér er komin rakningarformúlu
+ fyrir lausninni.  \pause
+ 
+ \paragraph{Skekkjan}
+  Samhverfi mismunakvótinn í rúmbreytunni hefur skekkjuna
+ $O(h^2)$ og frammismunurinn fyrir tímabreytuna hefur skekkjuna $O(k)$. 
+ Skekkjan í þessari aðferð er því $O(h^2 + k)$.
+ 
+
+ 
+\subsubsection{BTCS -- Aftur í tíma, miðsett í rúmi}
+Ef við skiptum afleiðunni í 
+$$ 
+ \frac{d \vv(t)}{d t} =  -\frac{D}{h^2}\  (A\vv(t) + \bv(t)), \qquad \wv^{(0)}=\fv
+$$
+út fyrir bakmismun. Þá fæst
+$$ 
+ \frac{\wv^{(n+1)} - \wv^{(n)}}{ k} =  -\frac{D}{h^2}\  (A\wv^{(n+1)} + \bv(t_{n+1})), 
+ \qquad \wv^{(0)}=\fv.
+$$\pause
+Þetta er jafngilt því að heilda efstu jöfnuna frá $t=t_n$ upp í $t=t_{n+1}$ og
+nálga heildið af hægri hliðinni með margfeldinu af gildinu í hægri endapunktinum 
+$t_{n+1}$ og billengdinni $k$. \pause
+
+
+ 
+%\subsection{10.1 BTCS -- Aftur í tíma, miðsett í rúmi, frh.}
+ Jöfnuhneppið
+ $$ 
+ \frac{\wv^{(n+1)} - \wv^{(n)}}{ k} =  -\frac{D}{h^2}\  (A\wv^{(n+1)} + \bv(t_{n+1})), 
+$$
+má svo umrita sem
+\begin{align*}
+ (I+\lambda A)\wv^{(n+1)} &= \wv^{(n)}  - \lambda \bv(t_{n+1}), 
+\end{align*}
+þar sem $\lambda = k\frac{D}{h^2}$. \pause
+ 
+ Upphafsgildið $\wv^{(0)}$ er þekkt og hér er komin önnur rakningarformúla
+ fyrir lausninni $\wv$.  \pause
+ 
+\paragraph{Skekkjan}
+  Samhverfi mismunakvótinn í rúmbreytunni hefur skekkjuna
+ $O(h^2)$ og bakmismunurinn fyrir tímabreytuna hefur skekkjuna $O(k)$. 
+ Skekkjan í þessari aðferð er því $O(h^2 + k)$.
+ 
+ 
+\paragraph{Fjöldi aðgerða}
+  Þar sem $I+\lambda A$ er þríhornalínufylki þá þarf aðeins tvöfalt fleiri
+  aðgerðir til þess að leysa þetta jöfnuhneppi heldur en þarf til þess að framkvæma margföldunina
+  í FTCS-aðferðinni.
+ 
+
+ 
+ 
+ 
+\subsubsection{Crank-Nicolson aðferð -- Aftur í tíma, miðsett í rúmi}
+$$ 
+ \frac{d \vv(t)}{d t} =  -\frac{D}{h^2}\  (A\vv(t) + \bv(t)),
+$$
+
+Í bæði FTCS og BTCS þá var skekkjan sem tilheyrði tímabreytunni $O(k)$.
+Ef við viljum bæta þetta þá er einfaldast að nota Trapisuregluna
+því skekkjan í henni er $O(k^2)$. \pause 
+
+Svo ef við heildum jöfnuna að ofan frá $t=t_n$ upp í $t=t_{n+1}$ og
+nálgum heildið af hægri hliðinni með meðaltalinu af gildunum í endapunktunum
+margfaldað við billengdina
+þá fæst
+$$ 
+ \wv^{(n+1)} - \wv^{(n)} =  -\frac{kD}{2h^2}\  
+ \big( (A\wv^{(n)} + \bv(t_{n})) +  
+ (A\wv^{(n+1)} + \bv(t_{n+1})) \big).
+$$
+
+ 
+%\subsection{10.1 Crank-Nicolson -- Aftur í tíma, miðsett í rúmi, frh.}
+ Jöfnuhneppið
+ $$ 
+ \wv^{(n+1)} - \wv^{(n)} =  -\frac{kD}{2h^2}\  
+ \big( (A\wv^{(n)} + \bv(t_{n})) +  
+ (A\wv^{(n+1)} + \bv(t_{n+1})) \big), 
+$$
+má svo umrita sem
+\begin{align*}
+ (I+\lambda A)\wv^{(n+1)} &= (I-\lambda A) \wv^{(n)}  - \lambda (\bv(t_{n}) 
+ + \bv(t_{n+1})), 
+\end{align*}
+þar sem $\lambda = \frac{kD}{2h^2}$. \pause
+ 
+ Upphafsgildið $\wv^{(0)}$ er þekkt og hér er því komin þriðja rakningarformúlun
+ fyrir lausninni $\wv$.  \pause
+ 
+ \paragraph{Skekkjan}
+  Samhverfi mismunakvótinn í rúmbreytunni hefur skekkjuna
+ $O(h^2)$ og bakmismunurinn fyrir tímabreytuna hefur skekkjuna $O(k^2)$. 
+ Skekkjan í þessari aðferð er því $O(h^2 + k^2)$.
+ 
+ 
+ \paragraph{Fjöldi aðgerða}
+  Fjöldi reikniaðgerða hér er u.þ.b.~summan af fjölda reikniaðgerða fyrir FTCS og BTCS.
+ 
+
+ 
+ 
+ 
+\subsection{Stöðugleiki}
+ 
+%\subsection{10.2 Stöðugleiki}
+  Lausnin sem fæst úr aðferðunum hér á undan geta verið viðkvæmar fyrir skrefstærðinni $k$  sem við 
+  veljum fyrir tímabreytuna. \pause
+  
+  
+  Rifjum upp að aðferð kallast samleitin ef að nálgunarlausnin stefnir á 
+  réttu lausnina þegar $t\to \infty$.
+  
+  \pause
+  \subsubsection{Skilgreining}
+    Við segjum að aðferð sé
+    \begin{itemize}
+     \item \emph{óskilyrt stöðug} (unconditionally stable) ef aðferðin er samleitin fyrir öll $k$, \pause
+     \item \emph{skilyrt stöðug} (conditionally stable) ef aðferðin er samleitin fyrir nógu lítil $k$,\pause
+     \item \emph{óskilyrt óstöðug} (unconditionally unstable) ef aðferðin er ósamleitin fyrir öll $k$.
+    \end{itemize}
+
+  
+
+ 
+ 
+ \subsubsection{Stöðugleiki}
+Allar þrjár aðferðirnar sem  við skoðuðum hér á undan er hægt að setja
+fram sem 
+ $$
+  \wv^{(n+1)} = E\wv^{(n)} + \cv^{(n)},
+ $$
+fyrir ákveðið fylki $E$ og vigra $\cv^{(n)}$.
+ \pause
+ \medskip
+ 
+Gefið $\wv^{(0)}$, þá þýðir þetta að
+ \begin{align*}
+  \wv^{(1)} &= E\wv^{(0)} + \cv^{(0)} \\
+  \wv^{(2)} &= E\wv^{(1)} + \cv^{(1)} = E^2 \wv^{(0)} + (\cv^{(1)} + E\cv^{(0)}) \\
+  &\vdots \\
+  \wv^{(m)} &= E\wv^{(m-1)} + \cv^{(m-1)} = E^m \wv^{(0)} + \hat{\cv}, \\
+  \end{align*}
+þar sem $\hat\cv = \cv^{(m-1)} + E\cv^{(m-2)} + \ldots E^{m-1} \cv^{(0)}$.
+  \pause
+  
+  
+Til þess að aðferðin sé stöðug þá þarf $\|E\| \leq 1$. Með því að 
+skoða eigingildi $E$ (bls.~819-820) þá fæst eftirfarandi niðurstaða:
+  
+  
+%  \subsection{10.2 Stöðugleiki}
+\begin{enumerate}
+\item FTCS
+   FTCS er skilyrt stöðug, og er stöðug ef 
+   $$
+    k \leq \frac{h^2}{2D}.
+    $$
+  
+%\pause
+\item BTCS
+   BTCS er óskilyrt stöðug.
+  
+%\pause
+  
+\item Crank-Nicolson
+   Crank-Nicolson er óskilyrt stöðug. 
+  
+\pause
+\end{enumerate}  
+\textbf{Athugasemd}
+   Þar sem Crank-Nicolson er óskilyrt stöðug, ekki mjög tímafrek
+   og með annars stigs 
+   skekkjulið bæði í rúm- og tímabreytunni þá er hún vænlegasti kosturinn
+   af aðferðunum þremur.
+  
+  
+  
+ % \section*{10.3 Almenn parabólsk verkefni}
+\subsection{Almenn parabólsk verkefni}
+   Hingað til höfum við bara skoðað jöfnur á forminu
+   $$
+    \frac{\p u}{\p t} = \frac{\p^2 u}{\p x^2}.
+   $$
+   \pause
+   
+Nú ætlum við skoða aðeins almennari verkefni, en það eru jöfnur á forminu 
+   $$
+    \frac{\p u}{\p t} = \frac{\p^2 u}{\p x^2} -\beta(x,t)u + s(x,t).
+   $$
+   \pause
+Hér er lýsir $s$ uppspretta og $-\beta(x,t)u$ lýsir hrörnun (sem er háð $u$). 
+  
+
+\subsubsection{Uppspretta}
+   Byrjum á að bæta við uppsprettu. \pause
+   Verkefnið er þá að finna fall $u(x,t)$ þannig að 
+   \begin{itemize}
+ \item $\frac{\p u}{\p t} =  D \frac{\p^2 u}{\p x^2} + s(x,t)$,
+ \item $u(a,t) = u_a(t)$ og $u(b,t) = u_b(t)$, 
+ \item $u(x,0) = f(x)$.
+\end{itemize}
+Hér er $D$ dreifnistuðull og $u_a$, $u_b$, $f$ og $s$ eru gefin
+föll.
+
+Eins og áður þá festum við jafna skiptingu á bilinu $[a,b]$ í $N$ hlutbil,
+hvert um sig með lengdina $h = (b-a)/N$.
+
+
+%\subsection{10.3 Uppspretta}
+Mismunajafnan í $x$ fyrir fast $t$ er þá 
+ $$ 
+ \frac{d v_j(t)}{d t} =  D\  \frac{v_{j-1}(t) -2 v_j(t) + v_{j+1}(t)}{h^2} + s(x_j,t), \qquad
+ \text{fyrir } j=1,\ldots,N-1
+ $$ \pause
+ með upphafsskilyrðunum $v_j(0) = f(x_j)$. \pause
+ Þetta má svo skrifa sem
+ $$ 
+ \frac{d \vv(t)}{d t} =  -\frac{D}{h^2}\  (A\vv(t) + \bv(t)) + \sv(t), \qquad \vv(0)=\fv
+ $$
+ þar sem 
+ {\small \begin{align*}
+  \vv(t) &= [v_1(t) \ v_2(t) \ \cdots \ v_{N-1}(t) ]^T\\
+  \fv &= [ f(x_1) \ f(x_2) \ \cdots \ f(x_{N-1}) ]^T\\
+  \sv(t) &= [ s(x_1,t) \ s(x_2,t) \ \cdots \ s(x_{N-1},t) ]^T\\
+  \bv(t) &= [ -u_a(t) \ \ 0 \ \cdots \ 0 \ \ -u_b(t) ]^T \\
+  A &=  \left[\begin{array}{cccccc}
+2 & -1 &   &   &   &  \\
+-1 & 2 & -1 &   &   &  \\
+  & \cdot & \cdot & \cdot &   &  \\
+  &   & \cdot & \cdot & \cdot &  \\
+  &   &  & -1 & 2 & -1\\
+  &   &   &   & -1 & 2
+      \end{array}\right] 
+ \end{align*}}
+  
+
+  \paragraph{Uppspretta -- FTCS}
+   Með því að heilda jöfnuna á undan frá $t=t_n$ upp í $t=t_{n+1}$
+   og nálga heildið af hægri hliðinni með margfeldinu af gildinu í vinstri
+   endapunktinum og tímaskrefstærðinni $k$ þá fæst
+   $$
+    \wv^{(n+1)} = (I-\lambda A)\wv^{(n)} - \lambda \bv^{(n)} + k\sv^{(n)},
+    $$
+þar sem $\lambda = \frac{Dk}{h^2}$ og $w_j^{(n)}$ er nálgunargildið á $v_j(t_n)$. \pause
+    
+    \smallskip
+    Þetta sambærilegt við útleiðsluna á FTCS í kafla 10.1.
+  
+
+  \paragraph{Uppspretta -- BTCS}
+   Með því að heilda jöfnuna á undan frá $t=t_n$ upp í $t=t_{n+1}$
+   og nálga heildið af hægri hliðinni með margfeldinu af gildinu í hægri
+   endapunktinum og tímaskrefstærðinni $k$ þá fæst
+   $$
+    (I+\lambda A)\wv^{(n+1)} = \wv^{(n)} - \lambda \bv^{(n+1)} + k\sv^{(n+1)},
+    $$ 
+þar sem $\lambda = \frac{Dk}{h^2}$. \pause
+    
+    \smallskip
+    Þetta sambærilegt við útleiðsluna á BTCS í kafla 10.1.
+  
+  
+\paragraph{Uppspretta -- Crank-Nicolson}
+   Með því að heilda jöfnuna á undan frá $t=t_n$ upp í $t=t_{n+1}$
+   og nálga heildið af hægri hliðinni með trapisureglunni þá fæst
+   $$
+     (I+\lambda A)\wv^{(n+1)} = (I-\lambda A)\wv^{(n)} 
+     - \lambda (\bv^{(n)}+\bv^{(n+1)}) + \frac k2(\sv^{(n)}+\sv^{(n+1)}),
+    $$
+þar sem $\lambda = \frac{Dk}{2h^2}$. \pause
+    
+    \smallskip
+    Þetta sambærilegt við útleiðsluna á Crank-Nicolson í kafla 10.1.
+  
+  
+  \subsubsection{Athugasemd um stöðugleika}
+   Fylkið í rakningarformúlan í aðferðunum hér á undan eru þau sömu og í
+   kafla 10.1. Þetta þýðir að $s$ hefur engin áhrif á stöðugleika aðferðanna.
+   \pause
+   \medskip
+   
+   Við höfum því eins og áður að FTCS er skilyrt stöðug, en fyrir hana þá þarf 
+   $\lambda < \frac 12$, en bæði BTCS og Crank-Nicolson eru 
+   óskilyrt stöðugar.
+  
+
+  \subsubsection{Uppspretta og hrörnun}
+   Bætum nú einnig við hrörnunarlið $\beta(x,t)u$. \pause
+   Verkefnið er þá að finna fall $u(x,t)$ þannig að 
+   \begin{itemize}
+ \item $\frac{\p u}{\p t} =  D \frac{\p^2 u}{\p x^2} + s(x,t) - \beta(x,t)u$,
+ \item $u(a,t) = u_a(t)$ og $u(b,t) = u_b(t)$, 
+ \item $u(x,0) = f(x)$.
+\end{itemize}
+Hér er $D$ dreifnistuðull og $u_a$, $u_b$, $f$, $s$ og $\beta$ eru gefin
+föll.
+
+
+
+%\subsection{10.3 Uppspretta og hrörnun}
+Mismunajafnan í $x$ fyrir fast $t$ er þá 
+ $$ 
+ \frac{d v_j(t)}{d t} =  D\  \frac{v_{j-1}(t) -2 v_j(t) + v_{j+1}(t)}{h^2} + 
+ s(x_j,t) - \beta(x_j,t)v_j(t)
+ $$ \pause
+ með upphafsskilyrðunum $v_j(0) = f(x_j)$. \pause
+ Þetta má svo skrifa sem
+ $$ 
+ \frac{d \vv(t)}{d t} =  -\frac{D}{h^2}\  (A\vv(t) + \bv(t)) 
+ -B(t)\vv(t) + \sv(t), \qquad \vv(0)=\fv
+ $$
+ þar sem $B(t)$ er hornalínufylkið með 
+ $\beta(x_1,t), \beta(x_2,t),\ldots,\beta(x_{N-1},t)$ á hornalínunni, \pause
+ og $\vv(t)$,  $\fv$, $\sv(t)$, $\bv(t)$ og $A$ eru eins og áður.
+  
+
+%\subsection{10.3 Uppspretta og hrörnun}
+Með sömu aðferðum og áður við að nálga heildið frá $t=t_n$ upp í $t=t_{n+1}$
+fást svo eftirfarandi rakningarformúlur.\pause
+\begin{enumerate}
+\item FTCS
+   $$
+     \wv^{(n+1)} = (I-\lambda A - kB^{(n)})\wv^{(n)} 
+     - \lambda \bv^{(n)} + k\sv^{(n)}.
+    $$\pause
+
+
+\item BTCS
+   $$
+     (I+\lambda A + kB^{(n+1)})\wv^{(n+1)} = \wv^{(n)} 
+     - \lambda \bv^{(n+1)} + k\sv^{(n+1)}.
+    $$\pause
+
+
+\item Crank-Nicolson
+   \begin{align*}
+     (I+\lambda A + kB^{(n)})\wv^{(n+1)}  = &
+     (I-\lambda A - kB^{(n)})\wv^{(n)}\\ 
+     & - \lambda (\bv^{(n)}+\bv^{(n+1)}) + \frac k2(\sv^{(n)}+\sv^{(n+1)}).
+    \end{align*}\pause
+\end{enumerate}
+
+
+  \subsubsection{Uppspretta og hrörnun -- Athugasemdir}
+\begin{itemize}
+  \item $\lambda$
+   Fyrir FTCS og BTCS þá er $\lambda = \frac{Dk}{h^2}$, en 
+  í Crank-Nicolson aðferðinni þá er $\lambda = \frac{Dk}{2h^2}$.
+  
+  
+  \pause
+  
+  \item Stöðugleiki
+   Hér hefur $\beta$ áhrif á fylkin í rakningarformúlunum þannig að 
+   við getum ekki fullyrt að stöðugleiki aðferðanna sé sami
+   og áður, en við förum ekki nánar út í þá sálma hér.
+\end{itemize}  
+  
+
+  
+%  \section*{10.4 Blönduð jaðarskilyrði}
+  \subsection{Blönduð jaðarskilyrði}
+   Næst skulum við skoða hvað gerist þegar við höfum Neumann eða
+   Robin jaðarskilyrði á jöðrunum $x=a$ og $x=b$.
+   \pause
+   \medskip
+   
+   Aðferðin er sú sama og við notuðum í kafla 8 og kafla 9, við bætum
+   við felupunktum til þess að geta nálga afleiðurnar á jaðrinum.
+   \pause
+   \medskip
+   
+   Við ætlum eingöngu að skoða einfalt tilvik, það er þegar við höfum
+   Dirichlet skilyrði í $x=b$ og Neumann skilyrði í $x=a$. 
+   Aðferðin við önnur tilvik er sú sama.
+  
+  
+  \subsubsection{Verkefnið}
+   Verkefnið er þá að finna fall $u(x,t)$ þannig að 
+   \begin{itemize}
+ \item $\frac{\p u}{\p t} =  D \frac{\p^2 u}{\p x^2} + s(x,t) - \beta(x,t)u$,
+ \item $\frac{\p u}{\p n}|_{(a,t)} = \alpha(t)$,
+ \item $u(b,t) = u_b(t)$, 
+ \item $u(x,0) = f(x)$.
+\end{itemize}
+Hér er $D$ dreifnistuðull og $u_a$, $u_b$, $f$, $s$, $\beta$ og
+$\alpha$ eru gefin föll.
+  
+
+  
+  \subsubsection{Neumann jaðarskilyrði}
+  Fyrir fast $t$ þá gefa skilyrðin $\frac{\p u}{\p n}|_{(a,t)} = \alpha(t)$
+  að
+  $$
+    -\frac{v_1(t) - v_{-1}(t)}{2h} = \alpha(t),
+  $$ \pause
+  það er $v_{-1} = 2h\alpha(t) + v_1(t)$.\pause
+
+  Jafnan fyrir $v_0(t)$ verður þá 
+ \begin{align*}
+ \frac{d v_0(t)}{d t} 
+ &= D\  \frac{v_{-1}(t) -2 v_0(t) + v_{1}(t)}{h^2} + s(a,t) - \beta(a,t)v_0(t) \\
+ &= D\  \frac{-2 v_0(t) + 2v_{1}(t) + 2h\alpha(t) }{h^2} + s(a,t) - \beta(a,t)v_0(t) 
+ \end{align*}
+ \pause
+ En jöfnurnar fyrir $v_1,\ldots,v_{N-1}$ eru óbreyttar.
+  
+
+  \subsubsection{Jöfnuhneppið}
+ Jöfnurnar fyrir fast $t$ er því hægt að skrifa
+ $$ 
+ \frac{d \vv(t)}{d t} =  -\frac{D}{h^2}\  (A'\vv(t) + \bv'(t)) 
+ -B'(t)\vv(t) + \sv'(t), \qquad \vv(0)=\fv'
+ $$ \pause
+ þar sem 
+ {\small \begin{align*}
+  \vv(t) &= [v_0(t) \ v_1(t) \ v_2(t) \ \cdots \ v_{N-1}(t) ]^T\\
+  \fv' &= [ f(x_0) \ f(x_1) \ f(x_2) \ \cdots \ f(x_{N-1}) ]^T\\
+  \sv'(t) &= [ s(x_0,t) \ s(x_1,t) \ s(x_2,t) \ \cdots \ s(x_{N-1},t) ]^T\\
+  \bv'(t) &= [ -2h\alpha(t) \ \ 0 \ \cdots \ 0 \ \ -u_b(t) ]^T \\
+  B'(t) &= diag(\beta(x_0,t)\ \beta(x_1,t) \ \cdots \ \beta(x_{N-1},t) )\\
+  A' &=  \left[\begin{array}{cccccc}
+2 & -2 &   &   &   &  \\
+-1 & 2 & -1 &   &   &  \\
+  & \cdot & \cdot & \cdot &   &  \\
+  &   & \cdot & \cdot & \cdot &  \\
+  &   &  & -1 & 2 & -1\\
+  &   &   &   & -1 & 2
+      \end{array}\right] 
+ \end{align*}} \pause
+   Athugið að núna eru jöfnurnar $N+1$ en ekki $N$ eins og áður, þar sem fyrsta
+   $x$-hnitið sem við þurfum að skoða er $x_0=a$.
+  
+
+\subsubsection{Rakningarformúlan}
+Með sömu aðferðum og áður við að nálga heildið frá $t=t_n$ upp í $t=t_{n+1}$
+fást svo eftirfarandi rakningarformúlur.\pause
+\begin{enumerate}
+\item FTCS
+   $$
+     \wv^{(n+1)} = (I-\lambda A' - kB'^{(n)})\wv^{(n)} 
+     - \lambda \bv'^{(n)} + k\sv'^{(n)}.
+    $$\pause
+
+
+\item BTCS
+   $$
+     (I+\lambda A' + kB'^{(n+1)})\wv^{(n+1)} = \wv^{(n)} 
+     - \lambda \bv'^{(n+1)} + k\sv'^{(n+1)}.
+    $$\pause
+
+
+\item Crank-Nicolson
+   \begin{align*}
+     (I+\lambda A' + kB'^{(n)})\wv^{(n+1)}  = &
+     (I-\lambda A' - kB'^{(n)})\wv^{(n)}\\ 
+     & - \lambda (\bv'^{(n)}+\bv'^{(n+1)}) + \frac k2(\sv'^{(n)}+\sv'^{(n+1)}).
+    \end{align*}\pause
+\end{enumerate}
+
+
+  
+%\section*{Fræðilegar spurningar}
+
+\subsection{Fræðilegar spurningar}
+\begin{enumerate}
+\item Sýnið að hitajafnan er parabólsk.
+\item Hvernig er jafnvægisástand fyrir hitajöfnuna í einni rúmbreytu, ef
+$s=0$ og $\beta=0$?
+\item Hvernig er jafnvægisástand fyrir hitajöfnuna í einni rúmbreytu, ef
+$\beta=0$?
+\item Hver er munurinn á stöðugleika FTCS, BTCS og Crank-Nicolson aðferðanna?
+\item Hver eru felupunktarnir staðsettir ef við höfum Neumann jaðarskilyrði
+ vinstra megin, þ.e.~í $x=a$?
+\item Hver eru felupunktarnir staðsettir ef við höfum Robin jaðarskilyrði
+hægra megin, þ.e.~í $x=b$?
+\item Hvernig er  nálgunarjafna fyrir lausn á $\frac{\p u}{\p t}=\frac{\p^2 u}{\p x^2}$
+fyrir fast $t$ leidd út? 
+
+\end{enumerate}
+
+
+
+\end{document}

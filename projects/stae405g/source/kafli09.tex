@@ -1,0 +1,576 @@
+\documentclass[icelandic,a4paper,12pt]{article}
+\usepackage{beamerarticle}
+
+\input{beamer.tex}\lecture[9]
+
+\newcommand{\C}{{\mathbb  C}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\R}{{\mathbb  R}}
+\newcommand{\N}{{\mathbb  N}}
+\newcommand{\Q}{{\mathbb Q}}
+\begin{document}
+
+%\subsection
+%	\maketitle
+
+
+%\subsection{Yfirlit}
+\section{Jaðargildisverkefni fyrir sporgerar (e.~elliptic) hlutafleiðujöfnur}
+%\begin{center}
+%\begin{tabular}{|l|l|l|l|}\hline
+%Kafli &Heiti á viðfangsefni & Bls. & Glærur\\
+%\hline
+%9.0 &Almenn atriði um jaðargildisverkefni & 725-730 & 3-6\\
+%9.1 &Poisson jafnan í rétthyrndu svæði & & \\
+%   &--  Dirichlet-jaðarskilyrði & 730-739 & 7-16\\
+%9.2 &Poisson jafnan í rétthyrndu svæði & & \\
+%    &-- Neumann- og Robin-jaðarskilyrði  & 742-752 & 17-24\\ \hline
+%\end{tabular}
+%\end{center}
+
+
+
+\subsection{Almenn atriði um jaðargildisverkefni}
+
+%\subsection{9.0 Inngangur}
+Við ætlum að skoða annars stigs línulegar hlutafleiðujöfnur á svæði
+$R$ í $\R^2$, \pause þetta eru jöfnur á forminu
+\begin{multline}
+A(x,y)\frac{\p^2 u}{\p x^2} + B(x,y)\frac{\p^2 u}{\p x\p y} + C(x,y)\frac{\p^2 u}{\p y^2} +\\
+D(x,y)\frac{\p u}{\p x} + E(x,y)\frac{\p u}{\p y} + F(x,y)u = G(x,y).
+\end{multline}
+\subsubsection{Skilgreining}
+ Annars stigs línuleg hlutafleiðujafna eins og að ofan kallast \emph{sporger}
+ (e.~elliptic) ef 
+ $$
+  A(x,y)C(x,y) - B(x,y)^2 > 0,
+ $$
+ fyrir öll $(x,y) \in R$.
+
+
+
+
+
+\subsubsection{Sporgerar jöfnur}
+ Sporgerar jöfnur eru tímaóháðar og lýsa oft verkefnum þar sem verið er að
+ leita að jafnvægisástandi \pause (lágmarksflötum, hitajafnvægi og þess háttar).
+ \pause
+ 
+ \subsubsection{Laplace/Poisson}
+ Við ætlum að einskorða okkur við mikilvægasta tilvikið, \emph{Laplace jöfnuna}
+ $$
+  \frac{\p^2 u}{\p x^2} + \frac{\p^2 u}{\p y^2} = 0,
+ $$\pause
+ og hliðraða útgáfu hennar, \emph{Poisson jöfnuna}
+ $$
+  \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = f(x,y).
+ $$
+ 
+
+
+\subsubsection{Jaðarskilyrði}
+\textbf{Svæðið} $R$
+  Til einföldunar þá munum við eingöngu skoða rétthyrninga á forminu
+  $$
+    R = \{ (x,y) \in \R^2 ; a < x < b, c < y < d \}.
+  $$
+ 
+%\subsubsection{Jaðarskilyrði}
+ Eins og fyrir afleiðujöfnur með jaðarskilyrði (kafli 8) þá höfum við þrjár gerðir
+ af jaðarskilyrðum,
+ \begin{center}
+ \begin{tabular}{ll}
+  Dirichlet: & $u(x,y) = r(x,y)$ á $\p R$.\\
+  Neumann:   & $\frac{\p u}{\p n}(x,y) = r(x,y)$ á $\p R$.\\
+  Robin:     & $\alpha(x,y)u(x,y) + 
+  \beta(x,y)\frac{\p u}{\p n}(x,y) = r(x,y)$ á  $\p R$.\\
+ \end{tabular}
+ \end{center}
+Hér er $\p R$ jaðar svæðisins $R$ og $n$ er útvísandi þverill fyrir $\p R$.
+
+
+
+\subsubsection{Þýð föll}
+ \textbf{Skilgreining}
+  Tvisvar sinnum samfellt diffranlegt fall $u$ á svæði í $\R^2$ sem uppfyllir
+  Laplace jöfnuna
+  $$ 
+    \frac{\p^2 u}{\p x^2} + \frac{\p^2 u}{\p y^2} = 0,
+  $$
+  kallast \emph{þýtt}.
+ 
+ 
+ \pause
+ \textbf{Athugasemd}
+  Tvisvar sinnum samfellt diffranlegt fall $u$ á svæði $R \subset \R^2$ er 
+  þýtt þá og því aðeins að 
+  $$
+  u(x) = \frac{1}{\pi r^2} \int_{B(x,r)} u(y) dy
+  $$
+  fyrir öll $x \in R$ og öll $r$ þannig að $B(x,r) \subset R$. Hér er
+  $B(x,r)$ skífan með miðju $x$ og geisla $r$.
+  
+  \pause
+  Með öðrum orðum, fallgildi þýðs falls $u$ í punkti $x$ er jafnt ,,meðalfallgildi''
+  $u$ umhverfis $x$.
+ 
+
+
+\subsection{Poisson jafnan í rétthyrndu svæði --  Dirichlet-jaðarskilyrði }
+
+\subsubsection{Netið}
+ Byrjum á að skipta rétthyrningnum $R$ í $M \times N$ net með því að skipta
+ bilinu $[a,b]$ í $N$ bil og bilinu $[c,d]$ í $M$ bil. \pause
+ Til einföldunar þá gerum við ráð fyrir að hlutfall hliðarlengdanna
+ í $R$ sé ræð tala, því þá getum við fundið $M$ og $N$ þannig að
+ $$
+  \frac{b-a}N = \frac{d-c}M = h.
+ $$ \pause
+ Þar með er hver reitur í netinu er af stærðinni $h \times h$.
+ \pause
+ \medskip
+ 
+ Ef við köllum látum $x_j$ vera skiptipunktanna fyrir $[a,b]$,
+ $$
+ a=x_0 < x_1 < x_2 < \ldots x_{N-1} < x_N =b,
+ $$
+ og $y_k$ vera skiptipunktanna fyrir $[c,d]$,
+ $$
+ c=y_0 < y_1 < y_2 < \ldots y_{N-1} < y_M = d,
+ $$
+ þá eru skiptipunktarnir í netinu $(x_j,y_k)$.
+
+
+
+\subsubsection{Ritháttur}
+Við skoðum ætlum að skoða jöfnuna
+ $$ 
+    \frac{\p^2 u}{\p x^2} + \frac{\p^2 u}{\p y^2} = f(x,y),
+  $$
+  á $R = \{ (x,y) \in \R^2 ; a < x < b, c < y < d \}$ með Dirichlet skilyrðin
+  $$
+    u(x,y) = g(x,y), \qquad \text{ á } \p R.
+  $$
+  
+  \medskip\pause
+Til að einfalda rithátt þá skrifum við
+\begin{align*}
+ u_{j,k} &= u(x_j,y_k), \qquad j=0,\ldots,N, \quad k=0,\ldots,M,\\
+ f_{j,k} &= f(x_j,y_k), \qquad j=0,\ldots,N, \quad k=0,\ldots,M,\\
+ g_{j,k} &= g(x_j,y_k), \qquad j=0, j=N, k=0 \text{ eða } k=M,
+\end{align*} \pause
+og nálgunargildin eru 
+$$
+  w_{j,k} \approx u_{j,k}.
+$$
+
+
+\subsubsection{Strjál útgáfa Poisson jöfnunar}
+ Með því að nota miðsettan mismunakvóta fyrir aðra afleiðu $u$ þá getum við 
+ skrifað
+ \begin{align*}
+  \frac{\p^2 u}{\p x^2}|_{x_j,y_k} &= \frac{u_{j-1,k} - 2u_{j,k} + u_{j+1,k}}{h^2}
+  + O(h^2), \\
+  \frac{\p^2 u}{\p y^2}|_{x_j,y_k} &= \frac{u_{j,k-1} - 2u_{j,k} + u_{j,k+1}}{h^2}
+  + O(h^2), 
+ \end{align*}
+ þar sem $j = 1,\ldots,N-1$ og $k=1,\ldots,M-1$.
+
+\medskip\pause
+Með því að setja þetta inn í 
+  $$ 
+    \frac{\p^2 u}{\p x^2} + \frac{\p^2 u}{\p y^2} = f(x,y),
+  $$
+  þá fæst, \pause 
+  $$
+  \frac{u_{j-1,k} - 2u_{j,k} + u_{j+1,k}}{h^2} +
+  \frac{u_{j,k-1} - 2u_{j,k} + u_{j,k+1}}{h^2}
+  + O(h^2) = f_{j,k}.
+  $$
+
+  
+%\subsection{9.1 Strjál útgáfa Poisson jöfnunar, frh.}
+Höfðum 
+$$
+  \frac{u_{j-1,k} - 2u_{j,k} + u_{j+1,k}}{h^2} +
+  \frac{u_{j,k-1} - 2u_{j,k} + u_{j,k+1}}{h^2}
+  + O(h^2) = f_{j,k}.
+  $$
+\pause\medskip
+  
+  Skiptum $u$ út fyrir nálgunargildin $w_{j,k}$, hendum skekkjuliðnum og
+  margföldum í gegn með $-h^2$, \pause þá fæst
+  $$
+  -w_{j-1,k} - w_{j+1,k} - w_{j,k-1} - w_{j,k+1} + 4w_{j,k} = -h^2 f_{j,k},
+  $$
+ fyrir $j = 1,\ldots,N-1$ og $k=1,\ldots,M-1$.
+
+
+\subsubsection{Fjöldi jafna}
+ Hér á undan fengum við eina jöfnu fyrir hvern innri punkt netsins, 
+ samtals $(N-1)(M-1)$ jöfnur. Þetta er fjöldi óþekktra $w_{j,k}$, því
+ $w_{j,k}$ á jaðrinum eru þekkt, þar er 
+ $$
+    w_{j,k} = g_{j,k}.
+ $$
+ 
+ \pause\medskip
+ Við þurfum að því leysa jöfnuhneppið
+ \begin{align*}
+  -w_{j-1,k} - w_{j+1,k} - w_{j,k-1} - w_{j,k+1} + 4w_{j,k} &= -h^2 f_{j,k} \\ 
+   \text{fyrir } j=1&,\ldots,N-1, \ \, k=1,\ldots,M-1\\
+  %w_{j,k} &= g_{j,k}, \\
+  %\text{fyrir } j=0&, j=N, k=0 \text{ eða } k=M.
+ \end{align*}
+
+
+\subsubsection{Uppröðun á innri punktum}
+ Röðum í vigur $\wv$ tölunum $w_{j,k}$ fyrir innri punkta netsins. 
+ Förum í gegnum netið frá vinstri til hægri, byrjum á 
+ næst neðstu línunni og förum svo upp á við,
+ $$
+  \wv = [ \underbrace{w_{1,1} \ w_{2,1} \ldots w_{N-1,1}}_{k=1} 
+  \ \underbrace{w_{1,2} \ w_{2,2} \ldots w_{N-1,2}}_{k=2} \ 
+  \underbrace{w_{1,3} \ldots  \ldots}_{k=3,\ldots,M-1} ]^T.
+ $$
+ 
+ Fyrri vísirinn ($j$) vísar til $x$-hnitsins $x_j$ og seinni vísirinn ($k$)
+ til $y$-hnitsins $y_k$.
+
+
+\subsubsection{Jöfnurnar aftur}
+Jöfnurnar sem við leiddum út eru
+ $$
+  -w_{j-1,k} - w_{j+1,k} - w_{j,k-1} - w_{j,k+1} + 4w_{j,k} = -h^2 f_{j,k}.
+ $$
+ \pause\medskip
+ 
+ Ef $j-1=0$, $k-1 =0$, $j+1=N$ eða $k+1=M$ þá erum við á jaðrinum og þar
+ þekkjum við gildin, þau eru gefin með $g$.
+ \pause\medskip
+ 
+ T.d.~ef $j=1$ og $k=1$ þá fæst 
+ \begin{align*}
+  -h^2 f_{1,1} &= -w_{0,1} - w_{2,1} - w_{1,0} - w_{1,2} + 4w_{1,1} \\
+  &= -g_{0,1} - w_{2,1} - g_{1,0} - w_{1,2} + 4w_{1,1}\\
+ \end{align*}\pause
+ Það er
+ $$
+  - w_{2,1} - w_{1,2} + 4w_{1,1} = 
+  -h^2 f_{1,1}  + g_{0,1} + g_{1,0}.
+ $$
+ \pause\medskip
+ 
+Jöfnurnar fyrir $k=1$, $j=1$, $k=M-1$ og $j=N-1$ þurfa því að taka
+mið af $g$.
+
+
+
+\subsubsection{Jöfnuhneppið}
+Jöfnuhneppið sem fæst er eftirfarandi
+$$
+A\wv = \bv,
+$$ 
+þar sem $A$ er $(N-1)(M-1)\times (N-1)(M-1)$ fylkið
+$$
+  A = \left[\begin{array}{cccccc}
+D & -I &   &   &   &  \\
+-I & D & -I &   &   &  \\
+  & \cdot & \cdot & \cdot &   &  \\
+  &   & \cdot & \cdot & \cdot &  \\
+  &   &  & -I & D & -I\\
+  &   &   &   & -I & D
+      \end{array}\right].
+$$
+Hér er $I$ er $(N-1)\times (N-1)$ einingafylkið og 
+$$
+  D = \left[\begin{array}{cccccc}
+4 & -1 &   &   &   &  \\
+-1 & 4 & -1 &   &   &  \\
+  & \cdot & \cdot & \cdot &   &  \\
+  &   & \cdot & \cdot & \cdot &  \\
+  &   &  & -1 & 4 & -1\\
+  &   &   &   & -1 & 4
+      \end{array}\right] \qquad ((N-1)\times (N-1) \text{ fylki}).
+$$
+
+
+%\subsection{9.1 Jöfnuhneppið -- hægri hliðin}
+Hægri hliðin er gefin með summunni af $-h^2 f_{j,k}$ og gildunum í þeim
+jaðarpunktum sem við rekumst þegar við förum gegnum innri punktanna
+(í sömu röð og tilgreind var fyrir $\wv$). \pause Það er
+
+
+%\subsection{9.1 Jöfnuhneppið -- hægri hliðin, frh.}
+{}\vspace{-0.2in}
+{\small \begin{align*}
+  \bv = [ 
+  &-h^2 f_{1,1} + g_{1,0} + g_{0,1} & (\text{lína } k=1)\\
+  &-h^2 f_{2,1} + g_{2,0} \\
+  &\ldots \\
+  &-h^2 f_{N-2,1} + g_{N-2,0} \\
+  &-h^2 f_{N-1,1} + g_{N-1,0} + g_{N,1} \\
+  &-h^2 f_{1,2} + g_{0,2} & (\text{lína } k=2)\\
+  &-h^2 f_{2,2} \\
+  &\ldots \\
+  &-h^2 f_{N-2,2}\\
+  &-h^2 f_{N-1,2} + g_{N,2}\\
+  & \ldots \ldots \ldots  & (\text{línur } k=3,\ldots,M-2)\\
+  &-h^2 f_{1,M-1} + g_{1,M-1} + g_{0,M} & (\text{lína } k=M-1)\\
+  &-h^2 f_{2,M-1} + g_{2,M} \\
+  &\ldots \\
+  &-h^2 f_{N-1,M-1} + g_{N,M-1} + g_{N-1,M} ]\\
+  \end{align*}}
+
+
+\subsection{Poisson jafnan í rétthyrndu svæði -- Neumann- og Robin-jaðarskilyrði}
+
+\subsubsection{Blönduð jaðarskilyrði}
+%\subsubsection{Jaðarskilyrði}
+ Rifjum upp þær þrjár gerðir jaðarskilyrða sem við höfum áhuga
+ \begin{center}
+ \begin{tabular}{ll}
+  Dirichlet: & $u(x,y) = r(x,y)$ á $\p R$.\\
+  Neumann:   & $\frac{\p u}{\p n}(x,y) = r(x,y)$ á $\p R$.\\
+  Robin:     & $\alpha(x,y)u(x,y) + 
+  \beta(x,y)\frac{\p u}{\p n}(x,y) = r(x,y)$ á  $\p R$.\\
+ \end{tabular}
+ \end{center}
+Hér er $\p R$ jaðar svæðisins $R$ og $n$ er útvísandi þverill fyrir $\p R$.
+
+
+%\subsubsection{}
+ Dirichlet-skilyrði skoðuðum við í kafla 9.1. \pause
+ 
+ Neumann og Robin skilyrði eru efni kafla 9.2. \pause
+ Aðferðin hér er sú sama og í kafla 8.2,, við bætum við felugildum
+ til þess að geta nálgað afleiðu $u$ á jaðrinum. \pause
+ Þar sem jaðarinn er ferill í $\R^2$, en ekki bil eins og í kafla 8, 
+ þá þarf að setja felupunkta alls staðar þar sem afleiðan $\p u/\p n$ er gefin. \pause
+ Þetta veldur því að útfærslan getur orðið nokkuð flókin, 
+ bókarhöfundur skoðar því eingöngu ákveðin sértilvik. 
+
+
+
+
+
+\subsubsection{Neumann skilyrði eftir botninum}
+
+ Skoðum svæðið 
+  $$
+    R = \{ (x,y) \in \R^2 ; a < x < b, c < y < d \}.
+  $$ \pause
+ og tilvikið þegar jaðargildin eru gefin með falli $g(x,y)$
+ á hliðunum ($x=a$ og $x=b$) og toppnum ($y=d$), og 
+ afleiðan eftir botninum er gefin með 
+ $$
+  \frac{\p u}{\p n} = \alpha(x)
+ $$
+ (ath. staðsetningin þar er bara háð $x$).
+ 
+ Útvísandi þverill eftir botninum er 
+ $$
+ \frac{\p }{\p n} = -\frac{\p }{\p y}.
+ $$
+ 
+
+
+
+\subsubsection{Mismunakvótar eftir botninum}
+ Gerum eins og áður ráð fyrir því að við höfum jafna skiptingu á bilinu $[a,b]$,
+ $$
+  a = x_0 < x_1 < \ldots < x_{N-1} < x_N = b,
+ $$
+ með billlengd $h$, \pause og skiptingu á bilinu $[c,d]$ með sömu billengd,
+ $$
+  c = y_0 < y_1 < \ldots < y_{M-1} < y_M = d.
+ $$
+ \pause
+ 
+ Bætum við felupunktum $(x_j,y_{-1})$ fyrir $j=1,\ldots,N-1$. \pause
+ Samhverfir mismunakvótar fyrir $\frac{\p u}{\p n}$ gefa þá
+ $$
+  - \left. \frac{\p u}{\p y} \right|_{x=x_j} = \alpha(x_j) 
+ $$
+ $$
+  -\frac{w_{j,1} - w_{j,-1} }{2h} \approx \alpha(x_j).
+  $$
+  Það er 
+  $$
+    w_{j,-1}  = w_{j,1} + 2h\alpha(x_j)
+  $$
+
+
+\subsubsection{Jaðarskilyrðin sett inn í Poisson-jöfnuna}
+ Rifjum upp að lausnin  okkar $w_{j,k}$ á $\Delta u = f$ á að uppfylla
+ \begin{align*}
+ -w_{j-1,k} - w_{j+1,k} - w_{j,k-1} - w_{j,k+1} + 4w_{j,k} &= -h^2 f_{j,k} 
+  %\\ 
+  % \text{fyrir } j=1&,\ldots,N-1, \ \, k=1,\ldots,M-1\\
+  %w_{j,k} &= g_{j,k}, \\
+  %\text{fyrir } j=0&, j=N, k=0 \text{ eða } k=M.
+ \end{align*}
+ 
+ Eftir botninum ($k=0$, $j=1,\ldots,N-1$) þýðir þetta að 
+ \begin{align*}
+  - w_{2,0} - w_{1,-1} - w_{1,1} + 4w_{1,0} &= -h^2 f_{1,0} + g(0,0),\\
+  -w_{j-1,0} - w_{j+1,0} - w_{j,-1} - w_{j,1} + 4w_{j,0} &= -h^2 f_{j,0}, 
+  \quad {\color{gray} j=2,\ldots,N-2},\\
+  -w_{N-2,0}  - w_{N-1,-1} - w_{N-1,1} + 4w_{N-1,0} &= -h^2 f_{N-1,0} + g(N,0) 
+ \end{align*} \pause
+ það er
+\begin{align*}
+- w_{2,0}  - 2w_{1,1} + 4w_{1,0} &= -h^2 f_{1,0} + g(0,0) + 2h\alpha(x_1),\\
+  -w_{j-1,0} - w_{j+1,0} - 2w_{j,1} + 4w_{j,0} &= -h^2 f_{j,0} + 2h\alpha(x_j), 
+   \ \ {\color{gray} j=2,\ldots,N-2}\\
+  -w_{N-2,0}  - 2w_{N-1,1} + 4w_{N-1,0} &= -h^2 f_{N-1,0} + g(N,0) + 2h\alpha(x_{N-1})
+ \end{align*} 
+
+
+
+\subsubsection{Fjöldi jafna}
+\begin{enumerate}
+ \item Dirichlet-jaðarskilyrði
+  Fjöldi jafna í kafla 9.1 var $(N-1)(M-1)$, það er fjöldi innri punkta því
+  við þekktum gildin $w_{j,k}$ á jaðrinum.
+ 
+  \pause
+  
+ \item Blönduð jaðarskilyrði
+  Þegar við skoðum blönduð jaðarskilyrði þá þekkjum við ekki endilega gildi 
+  $w_{j,k}$ á jaðrinum og því erum við hugsanlega með fleiri jöfnur.
+  
+  \pause
+  
+ \item Blönduð jaðarskilyrði -- Dæmið okkar
+  Í þessu tilviki sem við erum að skoða þá bætast við jöfnur fyrir
+  $w_{j,0}$, $j=1,\ldots,N-1$, eftir botninum. Það þýðir að jöfnuhneppið 
+  okkar inniheldur $(N-1)M$ jöfnur. 
+  \pause
+\end{enumerate}  
+  Fylkið $A$ er því $(N-1)M \times (N-1)M$, og samanstendur af 
+  $M \times M$ hlutfylkjum sem hvert um sig er $(N-1)\times (N-1)$.
+ 
+
+
+
+
+
+\subsubsection{Jöfnuhneppið $A\wv = \bv$}
+Jöfnurnar fyrir $k=0$ voru
+\begin{align*}
+- w_{2,0}  - {\color{red}2}w_{1,1} + 4w_{1,0} &= -h^2 f_{1,0} + g(0,0) + 
+{\color{blue}2h\alpha(x_1)},\\
+  -w_{j-1,0} - w_{j+1,0} - {\color{red}2}w_{j,1} + 4w_{j,0} &= -h^2 f_{j,0} + 
+  {\color{blue}2h\alpha(x_j)}, 
+   \ \ {\color{gray} j=2,\ldots,N-2}\\
+  -w_{N-2,0}  - {\color{red}2}w_{N-1,1} + 4w_{N-1,0} &= -h^2 f_{N-1,0} + g(N,0) + 
+  {\color{blue}2h\alpha(x_{N-1})}
+ \end{align*} \pause
+ 
+ Þetta breytir fyrstu hlutfylkjalínunni í jöfnuhneppinu $A\wv = \bv$, \pause
+ \begin{itemize}
+  \item[{\color{red} *}] $-I$ í fyrsta hlutdálki verður $-2I$.\pause
+  \item[{\color{blue} *}] Við efsta hluta $\bv$ (sem tilheyrir línunni $k=0$)
+  bætist við vigurinn 
+  $$
+    [2h\alpha(x_1),2h\alpha(x_2),\ldots,2h\alpha(x_{N-1})]^T.
+   $$
+ \end{itemize}
+
+
+
+
+%\subsubsection{9.2 Jöfnuhneppið}
+Jöfnuhneppið sem fæst er því eftirfarandi
+$$
+A\wv = \bv,
+$$ 
+þar sem $A$ er $(N-1)M\times (N-1)M$ fylkið
+$$
+  A = \left[\begin{array}{cccccc}
+D & -2I &   &   &   &  \\
+-I & D & -I &   &   &  \\
+  & \cdot & \cdot & \cdot &   &  \\
+  &   & \cdot & \cdot & \cdot &  \\
+  &   &  & -I & D & -I\\
+  &   &   &   & -I & D
+      \end{array}\right].
+$$
+Hér er $I$ er $(N-1)\times (N-1)$ einingafylkið og 
+$$
+  D = \left[\begin{array}{cccccc}
+4 & -1 &   &   &   &  \\
+-1 & 4 & -1 &   &   &  \\
+  & \cdot & \cdot & \cdot &   &  \\
+  &   & \cdot & \cdot & \cdot &  \\
+  &   &  & -1 & 4 & -1\\
+  &   &   &   & -1 & 4
+      \end{array}\right] \qquad ((N-1)\times (N-1) \text{ fylki}).
+$$
+
+
+
+%\subsection{9.2 Jöfnuhneppið -- hægri hliðin}
+{\  }
+\mode<presentation>{ \vspace{-1.2in} }
+
+{\small \begin{align*}
+  \bv = [ 
+  &-h^2 f_{1,0} + g_{0,0} + 2h\alpha(x_1) & (\text{lína } k=0)\\
+  &-h^2 f_{2,0} + 2h\alpha(x_2)  \\
+  &\ldots \\
+  &-h^2 f_{N-2,0} + 2h\alpha(x_{N-2}) \\
+  &-h^2 f_{N-1,0} + g_{N,0} + 2h\alpha(x_{N-2}) \\
+  %
+  &-h^2 f_{1,1} + g_{0,1}   & (\text{lína } k=1)\\
+  &-h^2 f_{2,1} \\
+  &\ldots \\
+  &-h^2 f_{N-2,1}  \\
+  &-h^2 f_{N-1,1} +  g_{N,1} \\
+  %
+%   &-h^2 f_{1,2} + g_{0,2} +^2 \\
+%   &-h^2 f_{2,2} \\
+%   &\ldots \\
+%   &-h^2 f_{N-2,2}\\
+%   &-h^2 f_{N-1,2} + g_{N,2}\\
+   & \ldots \ldots \ldots  & (\text{línur } k=2,\ldots,M-2)\\
+  &-h^2 f_{1,M-1} + g_{1,M-1} + g_{0,M} & (\text{lína } k=M-1)\\
+  &-h^2 f_{2,M-1} + g_{2,M} \\
+  &\ldots \\
+  %&-h^2 f_{N-2,1} + g_{N-2,0} \\
+  &-h^2 f_{N-1,M-1} + g_{N,M-1} + g_{N-1,M} ]\\
+  \end{align*}}
+
+
+
+
+%\section*{Fræðilegar spurningar}
+
+\subsection{Fræðilegar spurningar}
+\begin{enumerate}
+  \item Hvað er átt við með því að lausn hlutafleiðujöfnu á svæði  $R$
+    í plani 
+    uppfylli {\it Dirichlet-jaðarskilyrði}?  \\
+(Samheiti er {\it fallsjaðarskilyrði}.)
+\item Hvernig er {\it útvísandi þverafleiða} $\partial u/\partial n$ af 
+falli $u$ á svæði $R$ í plani skilgreind?  
+\item Hvað er átt við með því að lausn hlutafleiðujöfnu á svæði $R$ í plani
+    uppfylli {\it Neumann-jaðarskilyrði}? \\ (Samheiti eru {\it
+      afleiðujaðarskilyrði}
+og {\it flæðisjaðarskilyrði}.)
+  \item Hvað er átt við með því að lausn hlutafleiðujöfnu á svæði  $R$
+    uppfylli {\it Robin-jaðarskilyrði}?  \\ 
+(Samheiti er {\it blandað jaðarskilyrði}.)
+  \item Hvernig er  nálgunarjafna fyrir 
+Poisson-jöfnu $\Delta u=f$ í innri skiptipunkti
+í ferningslaga neti í plani leidd út? 
+  \item Hvernig eru {\it felupunktur}  og {\it felugildi} notuð til
+    þess að meðhöndla blandað jaðarskilyrði $\alpha_1 u+\alpha_2
+    \partial u/\partial n=\alpha_3$ í jaðarpunkti svæðis $R$ í plani
+    og hvernig verður nálgunarjafnan í þeim punkti? 
+  \end{enumerate}
+
+
+
+\end{document}

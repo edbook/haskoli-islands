@@ -1,0 +1,91 @@
+\documentclass[tikz,border=10pt,multi]{standalone}
+
+\usepackage[icelandic]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{mhchem}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+
+
+\pgfplotsset{
+compat=1.11,
+legend image code/.code={
+\draw[mark repeat=2,mark phase=2]
+plot coordinates {
+(0cm,0cm)
+(0.3cm,0cm)        %% default is (0.3cm,0cm)
+(0.6cm,0cm)         %% default is (0.6cm,0cm)
+};%
+}
+}
+
+\begin{document}
+      \begin{tikzpicture}
+\begin{axis}[xmin=0,xmax=50,ymin=0,ymax=100,ytick={0}, yticklabels={,,},
+xtick={0},xticklabels={,,}
+,ylabel={Gibbs frí orka},
+xlabel={Gangur hvarfsins},
+axis lines = left,
+legend entries={Án efnahvata,
+                Með efnahvata,
+                },
+legend pos= north east,
+legend style={draw=none}]
+\addlegendimage{no markers,blue,thick}
+\addlegendimage{no markers,red!80,dashed}
+]
+
+
+\addplot[no marks, rounded corners=6ex,thick,color=blue]
+coordinates {
+(0,45) 
+(10,46) 
+(20,80) 
+(30,40) 
+(40,21) 
+(50,20)};
+
+
+\addplot[no marks,rounded corners=6ex,dashed,color=red!80] coordinates {
+(0,45)
+(10,46) 
+(20,68) 
+(30,40) 
+(40,21) 
+(50,20)};
+%\legend{Án efnahvata,Með efnahvata}
+
+\end{axis}
+
+\node at(2.7,2.5) (a) {};
+\node at(2.7,4.15) (b) {};
+
+\node[scale=0.9] at (0.8,2.33) {Hvarfefni};
+\node[scale=0.9] at (6.1,0.9) {Myndefni};
+
+\node at(0,2.55) (r1) {};
+\node at (6.9,2.55) (r2) {};
+
+ \draw[dotted] (r1) -- (r2);
+ 
+\node at(0,1.13) (p1) {};
+\node at (6.9,1.13) (p2) {};
+
+ \draw[dotted] (p1) -- (p2);
+ 
+\node at(2.7,1.13) (g1) {};
+\node at(2.7,2.55) (g2) {};
+
+ \draw [<->] (g1) -- (g2) node[midway,xshift=0.65cm] {$\Delta G<0$ };
+ 
+
+%\draw[<->] (a) -- (b) node[midway,xshift=0.3cm] {$E_A$ };
+
+
+\end{tikzpicture}
+\end{document}
+
+
+

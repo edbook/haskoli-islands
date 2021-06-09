@@ -1,0 +1,1025 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Fáguð föll &mdash; Stærðfræðigreining III 2018</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining III 2018" href="index.html"/>
+        <link rel="next" title="3. Cauchy-setningin og Cauchy-formúlan" href="Kafli03.html"/>
+        <link rel="prev" title="1. Tvinntölur" href="Kafli01.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining III
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Tvinntölur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#tvinntolurnar">1.1. Tvinntölurnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining">1.1.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur">1.1.2. Ritháttur.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#setning">1.1.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.1.4. Ritháttur.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id2">1.1.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-og-setning">1.1.6. Skilgreining og setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id3">1.1.7. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur">1.1.8. Reiknireglur.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id4">1.1.9. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#formula">1.1.10. Formúla.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id5">1.1.11. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id6">1.1.12. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rumfraeileg-tulkun-margfoldunar">1.1.13. Rúmfræðileg túlkun margföldunar.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id7">1.1.14. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id8">1.1.15. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id9">1.1.16. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#margliur-rae-foll-og-veldisvisisfoll">1.2. Margliður, ræð föll og veldisvísisföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-sja-1-4">1.2.1. Skilgreining (Sjá §1.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#margliur-sja-1-4">1.2.2. Margliður. (Sjá §1.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#setning-undirstousetning-algebrunnar">1.2.3. Setning (Undirstöðusetning algebrunnar)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-og-setning-sja-1-4">1.2.4. Skilgreining og setning (Sjá §1.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-og-setning-sja-1-3">1.2.5. Skilgreining og setning (Sjá §1.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id10">1.2.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#stofnbrotaliun-sja-1-1-5">1.2.7. Stofnbrotaliðun. (Sjá §1 1.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-sja-1-6">1.2.8. Skilgreining (Sjá §1.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reiknireglur-sja-1-6">1.2.9. Reiknireglur. (Sjá §1.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#fallegasta-jafna-staerfraeinnar">1.2.10. Fallegasta jafna stærðfræðinnar.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#jofnur-eulers-sja-1-6">1.2.11. Jöfnur Eulers. (Sjá §1.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id11">1.2.12. Skilgreining  (Sjá §1.6)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#mathbb-r-og-mathbb-c-linulegar-varpanir">1.3. <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>- og <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>-línulegar varpanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-og-setning-sja-1-7">1.3.1. Skilgreining og setning (Sjá §1.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id12">1.3.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id13">1.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id14">1.3.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id15">1.3.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id16">1.3.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id17">1.3.7. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id18">1.3.8. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Fáguð föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#markgildi-og-samfelldni">2.1. Markgildi og samfelldni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-2-1">2.1.1. Skilgreining (Sjá §2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">2.1.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.1.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">2.1.4. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.2. Fáguð föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rithattur-sja-2-1">2.2.1. Ritháttur (Sjá §2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.2.2. Skilgreining (Sjá §2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreining-2-2-1">2.2.3. Skilgreining (Sjá Skilgreining 2.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-2-2-3">2.2.4. Setning (Sjá Setningu 2.2.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-2-2-6">2.2.5. Setning (Sjá Setningu 2.2.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning-sja-fylgisetningu-2-2-7">2.2.6. Fylgisetning (Sjá Fylgisetningu 2.2.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-2-2-8">2.2.7. Setning (Sjá Setningu 2.2.8)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-2-2">2.2.8. Skilgreining (Sjá §2.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-2-2-10">2.2.9. Setning (Sjá Setningu 2.2.10)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tenging-vi-linulegar-varpanir">2.2.10. Tenging við línulegar varpanir.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#veldarair-veldisvisisfalli-og-lograr">2.3. Veldaraðir, veldisvísisfallið og lograr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun-ur-staerfraeigreiningu-i">2.3.1. Upprifjun úr Stærðfræðigreiningu I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.3.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-fylgisetningu-2-3-6">2.3.3. Setning (Sjá Fylgisetningu 2.3.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-samsemdarsetning-fyrir-samleitnar-veldarair">2.3.4. Setning (Samsemdarsetning fyrir samleitnar veldaraðir)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-2-4">2.3.5. Setning (Sjá §2.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-2-5-1">2.3.6. Skilgreining (Sjá Skilgreiningu 2.5.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-2-5-2">2.3.7. Setning (Sjá Setningu 2.5.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-og-setning-sja-2-5">2.3.8. Skilgreining og setning (Sjá §2.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.3.9. Skilgreining og setning (Sjá §2.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-2-5">2.3.10. Skilgreining (Sjá §2.5)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Cauchy-setningin og Cauchy-formúlan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#vegheildi">3.1. Vegheildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#upprifjun-ur-staerfraeigreiningu-ii">3.1.1. Upprifjun úr Stærðfræðigreiningu II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining-sja-3-1">3.1.2. Skilgreining (Sjá §3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi">3.1.3. Dæmi.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-sja-3-1">3.1.4. Setning (Sjá §3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-sja-setningu-3-1-2">3.1.5. Setning (Sjá Setningu 3.1.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fylgisetning-sja-setning-3-1-2">3.1.6. Fylgisetning. (Sjá Setning 3.1.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-green-upprifjun-ur-staerfraeigreiningu-ii">3.1.7. Setning Green (Upprifjun úr Stærðfræðigreiningu II)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining-og-upprifjun-sja-2-2">3.1.8. Skilgreining og upprifjun. (Sjá §2.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#cauchy-setning-sja-setning-3-3-1">3.1.9. Cauchy-setning. (Sjá Setning 3.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining-sja-skilgreiningu-3-3-2">3.1.10. Skilgreining (Sjá Skilgreiningu 3.3.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-sja-setningu-3-3-3">3.1.11. Setning (Sjá Setningu 3.3.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#cauchy-formulan-sja-setningu-3-3-4">3.1.12. Cauchy-formúlan. (Sjá Setningu 3.3.4)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#afleiingar-cauchy-setningarinnar">3.2. Afleiðingar Cauchy-setningarinnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#mealgildissetning-sja-setningu-3-3-5">3.2.1. Meðalgildissetning (Sjá Setningu 3.3.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-sja-setningu-3-3-6">3.2.2. Setning (Sjá Setningu 3.3.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-morera-sja-setningu-3-4-5">3.2.3. Setning Morera (Sjá Setningu 3.4.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-goursat">3.2.4. Setning Goursat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#cauchy-formulur-fyrir-afleiur-sja-setningu-3-4-1">3.2.5. Cauchy-formúlur fyrir afleiður. (Sjá Setningu 3.4.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#cauchy-ojofnur-sja-fylgisetningu-3-4-2">3.2.6. Cauchy-ójöfnur. (Sjá Fylgisetningu 3.4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-liouville-sja-setningu-3-4-6">3.2.7. Setning Liouville (Sjá Setningu 3.4.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#undirstousetning-algebrunnar-sja-setningu-3-4-7">3.2.8. Undirstöðusetning algebrunnar (Sjá Setningu 3.4.7)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#fleiri-afleiingar-cauchy-setningarinnar">3.3. Fleiri afleiðingar Cauchy-setningarinnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fraeilegur-bakgrunnur-sja-3-5">3.3.1. Fræðilegur bakgrunnur. (Sjá §3.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-abels">3.3.2. Setning Abels.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining-sja-skilgreiningu-3-6-2">3.3.3. Skilgreining (Sjá Skilgreiningu 3.6.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-sja-setningu-3-6-1">3.3.4. Setning (Sjá Setningu 3.6.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining-sja-skilgreiningu-3-6-3">3.3.5. Skilgreining (Sjá Skilgreiningu 3.6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-sja-setningu-3-6-4">3.3.6. Setning (Sjá Setningu 3.6.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#samsendarsetning-i-sja-setningu-3-7-1">3.3.7. Samsendarsetning I (Sjá Setningu 3.7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fylgisetning-sja-setningu-3-7-2">3.3.8. Fylgisetning. (Sjá Setningu 3.7.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#samsemdarsetning-ii-sja-setningu-3-7-3">3.3.9. Samsemdarsetning II. (Sjá Setningu 3.7.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#hagildislogmal-i-sja-setningu-3-8-1">3.3.10. Hágildislögmál I (Sjá Setningu 3.8.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#hagildislogmal-ii-sja-setning-3-8-2">3.3.11. Hágildislögmál II (Sjá Setning 3.8.2)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Leifareikningur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#laurent-rair-og-serstoupunktar">4.1. Laurent-raðir og sérstöðupunktar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-sja-4-1">4.1.1. Skilgreining (Sjá §4.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-sja-setningu-4-1-1-laurent">4.1.2. Setning  (Sjá Setningu 4.1.1) (Laurent)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-sja-skilgreiningu-4-1-2">4.1.3. Skilgreining (Sjá Skilgreiningu 4.1.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-sja-4-2">4.1.4. Skilgreining (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id1">4.1.5. Skilgreining  (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id2">4.1.6. Skilgreining (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-sja-4-2-og-setningu-4-2-1">4.1.7. Setning (Sjá §4.2 og Setningu 4.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-riemanns">4.1.8. Setning Riemanns.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-sja-4-2">4.1.9. Setning (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning">4.1.10. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-stora-picard-setningin">4.1.11. Setning (Stóra Picard-setningin.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-sja-4-4-jofnur-4-4-3-og-4-4-4">4.1.12. Setning (Sjá §4.4, jöfnur 4.4.3 og 4.4.4)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#leifasetningin">4.2. Leifasetningin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#leifasetningin-sja-setningu-4-3-1">4.2.1. Leifasetningin (Sjá Setningu 4.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-sja-4-4-jofnur-4-4-6-og-4-4-7">4.2.2. Setning (Sjá §4.4, jöfnur 4.4.6 og 4.4.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#setning-sja-4-5">4.2.3. Setning (Sjá §4.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id3">4.2.4. Setning (Sjá §4.5)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Þýð föll og fágaðar varpanir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#y-foll">5.1. Þýð föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skilgreining-sja-5-1">5.1.1. Skilgreining (Sjá §5.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skilgreining">5.1.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#setning-sja-setning-5-1-2">5.1.3. Setning (Sjá Setning 5.1.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.1.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#setning-sja-setning-5-1-5">5.1.5. Setning (Sjá Setning 5.1.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#fylgisetning">5.1.6. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#mealgildissetningin-fyrir-y-foll">5.1.7. Meðalgildissetningin fyrir þýð föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#hagildislogmali-fyrir-y-foll">5.1.8. Hágildislögmálið fyrir þýð föll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#hagnytingar-i-straumfraei">5.2. Hagnýtingar í straumfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skilgreining-sja-staerfraeigreiningu-ii">5.2.1. Skilgreining (Sjá Stærðfræðigreiningu II)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#tulkun">5.2.2. Túlkun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#straumlinur">5.2.3. Straumlínur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#osamjappanlegur-vokvi">5.2.4. Ósamþjappanlegur vökvi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#engir-hvirflar">5.2.5. Engir hvirflar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#maetti">5.2.6. Mætti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skipt-um-umhverfi">5.2.7. Skipt um umhverfi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#setning-sja-5-2">5.2.8. Setning (Sjá §5.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#skilgreining-sja-5-2">5.2.9. Skilgreining (Sjá §5.2)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Undirstöðuatriði um afleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afleiujofnur">6.1. Afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining-sja-6-1">6.1.1. Skilgreining (Sjá §6.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#uppsetning-sja-6-1">6.1.2. Uppsetning (Sjá §6.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id1">6.1.3. Skilgreining (Sjá §6.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#grundvallarspurningar">6.1.4. Grundvallarspurningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id2">6.1.5. Skilgreining (Sjá §6.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining-sja-6-3">6.1.6. Skilgreining (Sjá §6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id3">6.1.7. Skilgreining (Sjá §6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id4">6.1.8. Skilgreining (Sjá §6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#setning-sja-6-3">6.1.9. Setning (Sjá §6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining-sja-6-4">6.1.10. Skilgreining (Sjá §6.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#upphafsgildisverkefni-fyrir-linulega-afleiujofnu-sja-6-4">6.1.11. Upphafsgildisverkefni fyrir línulega afleiðujöfnu (Sjá §6.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining-sja-6-5">6.1.12. Skilgreining (Sjá §6.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#utfaersla-jaargildisverkefna">6.1.13. Útfærsla jaðargildisverkefna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining">6.1.14. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#upprifjun-a-lausnaaferum-og-hagnytingar">6.2. Upprifjun á lausnaaðferðum og hagnýtingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#linulegar-fyrsta-stigs-jofnur">6.2.1. Línulegar fyrsta stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fyrsta-stigs-agreinanlegar-afleiujofnur">6.2.2. Fyrsta stigs aðgreinanlegar afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#annars-stigs-ohliraar-linulegar-afleiujofnur-me-fastastulum">6.2.3. Annars stigs óhliðraðar línulegar afleiðujöfnur með fastastuðlum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#tilvist-og-otviraeni-lausna">6.3. Tilvist og ótvíræðni lausna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#setning-peano-sja-setningu-6-6-1">6.3.1. Setning Peano (Sjá Setningu 6.6.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#daemi-sja-synidaemi-6-6-2">6.3.2. Dæmi (Sjá Sýnidæmi 6.6.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#skilgreining-sja-skilgreiningu-6-6-3">6.3.3. Skilgreining (Sjá Skilgreiningu 6.6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#setning-sja-setningu-6-6-5-picard-vifem-utgafa">6.3.4. Setning (Sjá Setningu 6.6.5) (Picard. Víðfeðm útgáfa.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fylgisetning-sja-fylgisetningu-6-6-6">6.3.5. Fylgisetning. (Sjá Fylgisetningu 6.6.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fylgisetning-sja-fylgisetningu-6-6-7">6.3.6. Fylgisetning. (Sjá Fylgisetningu 6.6.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#setning-sja-setningu-6-6-8-picard-stabundin-utgafa">6.3.7. Setning (Sjá Setningu 6.6.8) (Picard. Staðbundin útgáfa.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#picard-nalgun-sja-synidaemi-6-6-10-og-6-6-11">6.3.8. Picard-nálgun. (Sjá Sýnidæmi 6.6.10 og 6.6.11)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#merking-tilvistar-og-otviraenisetninga">6.3.9. Merking tilvistar- og ótvíræðnisetninga</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli07.html">7. Línulegar afleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#id1">7.1. Línulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#athugasemd">7.1.1. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining-sja-7-1">7.1.2. Skilgreining (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining-og-setning-sja-7-1">7.1.3. Skilgreining og setning (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id2">7.1.4. Skilgreining (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#setning-sja-7-1">7.1.5. Setning (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#fylgisetning-sja-setningu-7-1-3">7.1.6. Fylgisetning (Sjá Setningu 7.1.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#fylgisetning-sja-setningu-7-1-4">7.1.7. Fylgisetning (Sjá Setningu 7.1.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining-sja-7-2">7.1.8. Skilgreining  (Sjá §7.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#setning-sja-setningu-7-2-1">7.1.9. Setning (Sjá Setningu 7.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id3">7.1.10. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining-sja-7-3">7.1.11. Skilgreining (Sjá §7.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#setning-sja-setningu-7-3-1">7.1.12. Setning (Sjá Setningu 7.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id4">7.1.13. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#serlausnir-og-green-foll">7.2. Sérlausnir og Green-föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#upprifjun">7.2.1. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#agiskun-sja-7-4">7.2.2. Ágiskun (Sjá §7.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#goar-agiskanir">7.2.3. Góðar ágiskanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#daemi-deyf-sveifla-me-drifkrafti">7.2.4. Dæmi - Deyfð sveifla með drifkrafti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#serlausnir-fundnar-me-virkjareikningi-sja-7-4">7.2.5. Sérlausnir fundnar með virkjareikningi (Sjá §7.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#hjalparsetning-sja-hjalparsetningu-7-5-1">7.2.6. Hjálparsetning (Sjá Hjálparsetningu 7.5.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining-og-umraea-sja-7-5">7.2.7. Skilgreining og umræða (Sjá §7.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#setning-sja-7-5">7.2.8. Setning (Sjá §7.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#setning-sja-setningu-7-5-2">7.2.9. Setning (Sjá Setningu 7.5.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#fylgisetning-sja-fylgisetningu-7-5-4">7.2.10. Fylgisetning (Sjá Fylgisetningu 7.5.4)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#green-foll-og-wronski-akveur">7.3. Green-föll og Wronski-ákveður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#reikniafer">7.3.1. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#skilgreining-sja-7-6">7.3.2. Skilgreining (Sjá §7.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#setning-sja-setningu-7-6-3">7.3.3. Setning (Sjá Setningu 7.6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#id5">7.3.4. Setning (Sjá Setningu 7.6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#setning-sja-setningu-7-6-4">7.3.5. Setning (Sjá Setningu 7.6.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#fylgisetning-er-hluti-af-setningu-7-6-4">7.3.6. Fylgisetning (Er hluti af Setningu 7.6.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#fylgisetning-sja-fylgisetning-7-6-5">7.3.7. Fylgisetning (Sjá Fylgisetning 7.6.5)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli08.html">8. Veldaraðalausnir á afleiðujöfnum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#veldaraalausnir">8.1. Veldaraðalausnir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-skilgreiningu-8-1-1">8.1.1. Skilgreining (Sjá Skilgreiningu 8.1.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#umraea-sja-8-1">8.1.2. Umræða (Sjá §8.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-skilgreiningu-8-2-6">8.1.3. Skilgreining (Sjá Skilgreiningu 8.2.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#setning-samanber-setning-8-2-8">8.1.4. Setning (Samanber Setning 8.2.8)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#reikniafer-sja-8-2">8.1.5. Reikniaðferð (Sjá §8.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-8-3">8.1.6. Skilgreining (Sjá §8.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#nokkrar-formulur-sja-8-3">8.1.7. Nokkrar formúlur (Sjá §8.3)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#afer-frobeniusar">8.2. Aðferð Frobeniusar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#umraea">8.2.1. Umræða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-skilgreiningu-8-4-1">8.2.2. Skilgreining (Sjá Skilgreiningu 8.4.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-skilgreiningu-8-4-2">8.2.3. Skilgreining (Sjá Skilgreiningu 8.4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-skilgreiningu-8-4-4">8.2.4. Skilgreining (Sjá Skilgreiningu 8.4.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#setning-frobeniusar-sja-setningu-8-4-5">8.2.5. Setning Frobeniusar (Sjá Setningu 8.4.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-skilgreiningu-8-5-1">8.2.6. Skilgreining (Sjá Skilgreiningu 8.5.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#skilgreining-sja-skilgreiningu-8-5-2">8.2.7. Skilgreining (Sjá Skilgreiningu 8.5.2)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli09.html">9. Línuleg afleiðujöfnuhneppi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#id1">9.1. Línuleg afleiðujöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining-sja-9-1">9.1.1. Skilgreining (Sjá §9.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id2">9.1.2. Skilgreining (Sjá §9.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-9-1">9.1.3. Setning (Sjá §9.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id3">9.1.4. Setning (Sjá §9.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#fylgisetning-sja-setningu-9-1-3">9.1.5. Fylgisetning (Sjá Setningu 9.1.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-hjalparsetningu-9-3-1">9.1.6. Setning (Sjá Hjálparsetningu 9.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id4">9.1.7. Setning (Sjá §9.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-hjalparsetningu-9-2-1">9.1.8. Setning (Sjá Hjálparsetningu 9.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-setningu-9-2-2">9.1.9. Setning (Sjá Setningu 9.2.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining-sja-9-2">9.1.10. Skilgreining (Sjá §9.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-9-2-2">9.1.11. Setning (Sjá §9.2.2)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#veldisvisisfylki">9.2. Veldisvísisfylkið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining-sja-skilgreining-9-3-2">9.2.1. Skilgreining (Sjá Skilgreining 9.3.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-setningu-9-3-3">9.2.2. Setning (Sjá Setningu 9.3.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-setningu-9-3-4">9.2.3. Setning (Sjá Setningu 9.3.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining-sja-9-4">9.2.4. Skilgreining (Sjá §9.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id5">9.2.5. Skilgreining (Sjá §9.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-9-5">9.2.6. Setning (Sjá §9.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#fylgisetning">9.2.7. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-setningu-9-5-2">9.2.8. Setning (Sjá Setningu 9.5.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning">9.2.9. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli09.html#utreikningur-lausna">9.3. Útreikningur lausna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#verkefni-sja-9-6">9.3.1. Verkefni (Sjá §9.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-cayley-hamilton-sja-9-6">9.3.2. Setning Cayley-Hamilton (Sjá §9.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#afleiing-setningar-cayley-hamilton">9.3.3. Afleiðing Setningar Cayley-Hamilton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#bruunarverkefni-sja-9-7">9.3.4. Brúunarverkefni (Sjá §9.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#skilgreining-sja-9-7">9.3.5. Skilgreining (Sjá §9.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#id6">9.3.6. Skilgreining (Sjá §9.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#setning-sja-9-7">9.3.7. Setning (Sjá §9.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#reikniafer">9.3.8. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli09.html#reikniafer-sja-9-7">9.3.9. Reikniaðferð (Sjá §9.7)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli10.html">10. Laplace-ummyndunin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#id1">10.1. Laplace-ummyndunin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#skilgreining-sja-10-1">10.1.1. Skilgreining (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#skilgreining-og-setning-sja-skilgreiningu-10-1-1">10.1.2. Skilgreining og setning  (Sjá Skilgreiningu 10.1.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-10-1">10.1.3. Setning (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-setningu-10-1-6">10.1.4. Setning (Sjá Setningu 10.1.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#id2">10.1.5. Setning (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-setningu-10-1-5">10.1.6. Setning (Sjá Setningu 10.1.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#tafla-yfir-laplace-myndir-sja-10-1">10.1.7. Tafla yfir Laplace-myndir (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-setning-10-2-1">10.1.8. Setning (Sjá Setning 10.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#reikniafer-sja-10-2">10.1.9. Reikniaðferð (Sjá §10.2)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#notkun-laplace-ummyndunar">10.2. Notkun Laplace-ummyndunar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#skilgreining-sja-10-2">10.2.1. Skilgreining (Sjá §10.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-setningu-10-2-4">10.2.2. Setning (Sjá Setningu 10.2.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#upprifjun-sja-10-3-og-7-5">10.2.3. Upprifjun (Sjá §10.3 og §7.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-10-3">10.2.4. Setning (Sjá §10.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-setning-10-3-1">10.2.5. Setning (Sjá Setning 10.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#fylgisetning-sja-fylgisetningu-10-3-2">10.2.6. Fylgisetning (Sjá Fylgisetningu 10.3.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-sja-setningu-10-2-1">10.2.7. Setning (Sjá Setningu 10.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#skilgreining-og-setning">10.2.8. Skilgreining og setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning">10.2.9. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#id3">10.2.10. Skilgreining og setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#setning-andhvefuformula-fourier-mellin">10.2.11. Setning (Andhvefuformúla Fourier-Mellin)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#id4">10.2.12. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#fylgisetning">10.2.13. Fylgisetning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining III</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>2. Fáguð föll</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli02.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fagu-foll">
+<h1>2. Fáguð föll<a class="headerlink" href="#fagu-foll" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p><em>Come on, Rory! It isn’t rocket science, it’s just quantum physics!</em></p>
+<p>- The Doctor, Doctor Who</p>
+<div class="section" id="markgildi-og-samfelldni">
+<h2>2.1. Markgildi og samfelldni<a class="headerlink" href="#markgildi-og-samfelldni" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining-sja-2-1">
+<h3>2.1.1. Skilgreining (Sjá §2.1)<a class="headerlink" href="#skilgreining-sja-2-1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Opin skífa með miðju <span class="math notranslate nohighlight">\(\alpha\)</span> og
+geisla <span class="math notranslate nohighlight">\(\varrho\)</span> er skilgreind sem mengið</p>
+<div class="math notranslate nohighlight">
+\[S(\alpha,\varrho)=\{z\in {\mathbb{C}}\mid |z-\alpha|&lt;\varrho\},\]</div>
+<p>lokuð skífa með miðju <span class="math notranslate nohighlight">\(\alpha\)</span> og geisla <span class="math notranslate nohighlight">\(\varrho\)</span> er
+mengið</p>
+<div class="math notranslate nohighlight">
+\[\overline S(\alpha,\varrho)=\{z\in {\mathbb{C}}\mid |z-\alpha|\leq\varrho\}\]</div>
+<p>og götuð opin skífa með miðju <span class="math notranslate nohighlight">\(\alpha\)</span> og geisla <span class="math notranslate nohighlight">\(\varrho\)</span>
+er mengið</p>
+<div class="math notranslate nohighlight">
+\[S^*(\alpha,\varrho)=\{z\in {\mathbb{C}}\mid 0&lt;|z-\alpha|&lt;\varrho\}.\]</div>
+</div>
+<div class="section" id="skilgreining">
+<h3>2.1.2. Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hlutmengi <span class="math notranslate nohighlight">\(X\)</span> í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> er sagt vera opið ef
+um sérhvern punkt <span class="math notranslate nohighlight">\(a\in X\)</span> gildir að til er opin skífa
+<span class="math notranslate nohighlight">\(S(a,r)\)</span>, með <span class="math notranslate nohighlight">\(r&gt;0\)</span> sem er innihaldin í <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Hlutmengi <span class="math notranslate nohighlight">\(X\)</span> í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> er sagt vera lokað ef fyllimengi þess
+<span class="math notranslate nohighlight">\({\mathbb{C}}\setminus X\)</span> er opið.</p>
+<p>Jaðar hlutmengis <span class="math notranslate nohighlight">\(X\)</span> í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> samanstendur af öllum punktum
+<span class="math notranslate nohighlight">\(a\in {\mathbb{C}}\)</span> þannig að sérhver opin skífa <span class="math notranslate nohighlight">\(S(a,r)\)</span> með
+<span class="math notranslate nohighlight">\(r&gt;0\)</span> sker bæði <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\({\mathbb{C}}\setminus X\)</span>. Við táknum
+jaðar <span class="math notranslate nohighlight">\(X\)</span> með <span class="math notranslate nohighlight">\(\partial X\)</span>.</p>
+<p>Punktur <span class="math notranslate nohighlight">\(a\in {\mathbb{C}}\)</span> nefnist þéttipunktur mengisins <span class="math notranslate nohighlight">\(X\)</span> ef um
+sérhvert <span class="math notranslate nohighlight">\(r&gt;0\)</span> gildir að gataða opna skífan <span class="math notranslate nohighlight">\(S^*(a,r)\)</span>
+inniheldur punkta úr <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Opið hlutmengi í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> kallast svæði ef það er samanhangandi.</p>
+</div>
+<div class="section" id="id1">
+<h3>2.1.3. Skilgreining<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> vera hlutmengi í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> og
+<span class="math notranslate nohighlight">\(f:X\rightarrow {\mathbb{C}}\)</span> vera fall. Ef <span class="math notranslate nohighlight">\(a\)</span> er þéttipunktur
+<span class="math notranslate nohighlight">\(X\)</span> þá segjum við að <span class="math notranslate nohighlight">\(f(z)\)</span> stefni á tvinntölu <span class="math notranslate nohighlight">\(L\)</span>
+þegar <span class="math notranslate nohighlight">\(z\)</span> stefnir á <span class="math notranslate nohighlight">\(a\)</span>, og ritum</p>
+<div class="math notranslate nohighlight">
+\[\lim_{z\rightarrow a} f(z)=L\]</div>
+<p>ef um sérhvert <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span> gildir að til er <span class="math notranslate nohighlight">\(\delta &gt;0\)</span>
+þannig að ef <span class="math notranslate nohighlight">\(0&lt;|z-a|&lt;\delta\)</span> þá er <span class="math notranslate nohighlight">\(|f(z)-L|&lt;\epsilon\)</span>.</p>
+<p>Segjum að fallið <span class="math notranslate nohighlight">\(f\)</span> sé samfellt í punkti <span class="math notranslate nohighlight">\(a\in X\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[\lim_{z\rightarrow a} f(z)=f(a).\]</div>
+</div>
+<div class="section" id="setning">
+<h3>2.1.4. Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> eru tvinntölugild föll sem
+skilgreind eru á menginu <span class="math notranslate nohighlight">\(X\subseteq {\mathbb{C}}\)</span>,
+<span class="math notranslate nohighlight">\(\lim_{z\to a}f(z)=L\)</span> og <span class="math notranslate nohighlight">\(\lim_{z\to a}g(z)=M\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+\lim_{z\to a}(f(z)+g(z))=\lim_{z\to a}f(z)+\lim_{z\to a}g(z)=L+M,\\
+\lim_{z\to a}(f(z)-g(z))=\lim_{z\to a}f(z)-\lim_{z\to a}g(z)=L-M,\\
+\lim_{z\to a}(f(z)g(z))=\big(\lim_{z\to a}f(z)\big)\big(\lim_{z\to
+a}g(z)\big)=LM\\
+\lim_{z\to a}\dfrac{f(z)}{g(z)}=\dfrac{\lim_{z\to a}f(z)}{\lim_{z\to
+a}g(z)}=\dfrac LM.\end{gathered}\end{split}\]</div>
+<p>Í síðustu formúlunni þarf að gera ráð fyrir að <span class="math notranslate nohighlight">\(M\neq 0\)</span>. Ef
+<span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> eru föll á mengi <span class="math notranslate nohighlight">\(X\)</span> með gildi í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>
+sem eru samfelld í punktinum <span class="math notranslate nohighlight">\(a\in X\)</span>, þá eru föllin <span class="math notranslate nohighlight">\(f+g\)</span>,
+<span class="math notranslate nohighlight">\(f-g\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> og <span class="math notranslate nohighlight">\(f/g\)</span> samfelld í <span class="math notranslate nohighlight">\(a\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+\lim_{z\to a}(f(z)+g(z))=f(a)+g(a),\\
+\lim_{z\to a}(f(z)-g(z))=f(a)-g(a),\\
+\lim_{z\to a}(f(z)g(z))=f(a)g(a),\\
+\lim_{z\to a}\dfrac{f(z)}{g(z)}=\dfrac{f(a)}{g(a)},
+\qquad \text{ef } \ g(a)\neq 0.\end{gathered}\end{split}\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f:X\to {\mathbb{C}}\)</span> og <span class="math notranslate nohighlight">\(g:Y\to {\mathbb{C}}\)</span> eru föll,
+<span class="math notranslate nohighlight">\(f(X)\subset Y\)</span>, <span class="math notranslate nohighlight">\(a\)</span> er þéttipunkur <span class="math notranslate nohighlight">\(X\)</span>,
+<span class="math notranslate nohighlight">\(b=\lim_{z\to a}f(z)\)</span> er þéttipunktur mengisins <span class="math notranslate nohighlight">\(Y\)</span> og
+<span class="math notranslate nohighlight">\(g\)</span> er samfellt í <span class="math notranslate nohighlight">\(b\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\lim_{z\to a} g\circ f(z)=g(\lim_{z\to a}f(z)).\]</div>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Skilgreining 2.3 er sambærileg skilgreiningu á markgildi úr Stærðfræðigreiningu I og II og Setning 2.4 er sambærileg og reiknireglur fyrir markgildi raungildra falla í Stærðfræðigreiningu I og II.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>2.2. Fáguð föll<a class="headerlink" href="#id2" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="rithattur-sja-2-1">
+<h3>2.2.1. Ritháttur (Sjá §2.1)<a class="headerlink" href="#rithattur-sja-2-1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Til samræmis við nótur Ragnars notum við annan
+rithátt fyrir hlutafleiður en í Stærðfræðigreiningu II. Ef <span class="math notranslate nohighlight">\(f\)</span> er
+fall af raunbreytistærðum <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>, þá skrifum við</p>
+<div class="math notranslate nohighlight">
+\[{\partial}_xf=\dfrac{\partial f}{\partial x}, \qquad
+{\partial}_yf=\dfrac{\partial f}{\partial y}, \qquad
+{\partial}_x^2f=\dfrac{\partial^2f}{\partial x^2}, \qquad
+{\partial}_{xy}^2f=\dfrac{\partial^2f}{\partial x\partial y}, \qquad
+{\partial}_{xxy}^3f=\dfrac{\partial^3f}{\partial x^2\partial y}, \ \dots.\]</div>
+</div>
+<div class="section" id="id3">
+<h3>2.2.2. Skilgreining (Sjá §2.1)<a class="headerlink" href="#id3" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(X\)</span> er opið hlutmengi í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>
+þá látum við <span class="math notranslate nohighlight">\(C(X)\)</span> tákna mengi allra samfelldra falla
+<span class="math notranslate nohighlight">\(f:X\to {\mathbb{C}}\)</span>. Við látum <span class="math notranslate nohighlight">\(C^m(X)\)</span> tákna mengi allra
+<span class="math notranslate nohighlight">\(m\)</span> sinnum samfellt deildanlegra falla. Hér er átt við að allar
+hlutafleiður fallsins <span class="math notranslate nohighlight">\(f\)</span> af stigi <span class="math notranslate nohighlight">\(\leq m\)</span> eru til og þar
+að auki samfelldar. Við skrifum <span class="math notranslate nohighlight">\(C^0(X)=C(X)\)</span> og táknum mengi
+óendanlega oft deildanlegra falla með <span class="math notranslate nohighlight">\(C^{\infty}(X)\)</span>.</p>
+</div>
+<div class="section" id="skilgreining-sja-skilgreining-2-2-1">
+<h3>2.2.3. Skilgreining (Sjá Skilgreining 2.2.1)<a class="headerlink" href="#skilgreining-sja-skilgreining-2-2-1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:X\to {\mathbb{C}}\)</span> vera
+fall skilgreint á opnu hlutmengi <span class="math notranslate nohighlight">\(X\)</span> af <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>. Við segjum að
+<span class="math notranslate nohighlight">\(f\)</span> sé <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í punktinum <span class="math notranslate nohighlight">\(a\in X\)</span> ef
+markgildið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\lim _{\substack{ h\to 0\\ h\in{\mathbb{C}}}}
+ \dfrac{f(a+h)-f(a)}h  \label{4.2.3}\end{split}\]</div>
+<p>er til. Markgildið er táknað með <span class="math notranslate nohighlight">\(f'(a)\)</span> og kallað
+<span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–afleiða fallsins <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>Fall <span class="math notranslate nohighlight">\(f:X\to {\mathbb{C}}\)</span> er sagt vera fágað á opna menginu <span class="math notranslate nohighlight">\(X\)</span> ef
+<span class="math notranslate nohighlight">\(f\in
+C^1(X)\)</span> og <span class="math notranslate nohighlight">\(f\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í sérhverjum punkti í
+<span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Við látum <span class="math notranslate nohighlight">\({\cal O}(X)\)</span> tákna mengi allra fágaðra falla á <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Við segjum að <span class="math notranslate nohighlight">\(f\)</span> sé fágað í punktinum <span class="math notranslate nohighlight">\(a\)</span> ef til er opin
+grennd <span class="math notranslate nohighlight">\(U\)</span> um <span class="math notranslate nohighlight">\(a\)</span> þannig að <span class="math notranslate nohighlight">\(f\)</span> sé fágað í <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p>Fallið <span class="math notranslate nohighlight">\(f\)</span> er sagt vera heilt fall (e. entire function) ef það er
+fágað á öllu <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>.</p>
+</div>
+<div class="section" id="setning-sja-setningu-2-2-3">
+<h3>2.2.4. Setning (Sjá Setningu 2.2.3)<a class="headerlink" href="#setning-sja-setningu-2-2-3" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f,g:X\to {\mathbb{C}}\)</span> vera föll,
+<span class="math notranslate nohighlight">\(a\in X\)</span>, <span class="math notranslate nohighlight">\(\alpha,\beta\in {\mathbb{C}}\)</span> og gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> séu <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanleg í <span class="math notranslate nohighlight">\(a\)</span>. Þá gildir</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha f+\beta g\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[(\alpha f+\beta g)'(a)=\alpha f'(a)+\beta g'(a).\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>(Leibniz-regla). <span class="math notranslate nohighlight">\(fg\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[(fg)'(a)=f'(a)g(a)+f(a)g'(a).\]</div>
+<ol class="lowerroman simple" start="3">
+<li><p>Ef <span class="math notranslate nohighlight">\(g(a)\neq 0\)</span>, þá er <span class="math notranslate nohighlight">\(f/g\)</span> <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[(f/g)'(a)=\dfrac{f'(a)g(a)-f(a)g'(a)}{g(a)^2}.\]</div>
+</div>
+<div class="section" id="setning-sja-setningu-2-2-6">
+<h3>2.2.5. Setning (Sjá Setningu 2.2.6)<a class="headerlink" href="#setning-sja-setningu-2-2-6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> vera opin
+hlutmengi af <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>. Lát <span class="math notranslate nohighlight">\(f:X\to {\mathbb{C}}\)</span> og <span class="math notranslate nohighlight">\(g:Y\to {\mathbb{C}}\)</span> vera
+föll, þannig að <span class="math notranslate nohighlight">\(f(X)\subset Y\)</span>, <span class="math notranslate nohighlight">\(a\in X\)</span>, <span class="math notranslate nohighlight">\(b\in Y\)</span>,
+<span class="math notranslate nohighlight">\(b=f(a)\)</span> og setjum</p>
+<div class="math notranslate nohighlight">
+\[h=g\circ f.\]</div>
+<ol class="lowerroman simple">
+<li><p>Ef <span class="math notranslate nohighlight">\(f\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(g\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(b\)</span>, þá er <span class="math notranslate nohighlight">\(h\)</span> líka <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[h'(a)=g'(b)f'(a).\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Ef <span class="math notranslate nohighlight">\(g\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(g'(b)\neq 0\)</span>, <span class="math notranslate nohighlight">\(h\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(f\)</span> er samfellt í <span class="math notranslate nohighlight">\(a\)</span>, þá er <span class="math notranslate nohighlight">\(f\)</span> einnig <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[f'(a)=h'(a)/g'(b).\]</div>
+</div>
+<div class="section" id="fylgisetning-sja-fylgisetningu-2-2-7">
+<h3>2.2.6. Fylgisetning (Sjá Fylgisetningu 2.2.7)<a class="headerlink" href="#fylgisetning-sja-fylgisetningu-2-2-7" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> vera opin hlutmengi af <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>, og <span class="math notranslate nohighlight">\(f:X\to Y\)</span> vera gagntækt fall. Ef <span class="math notranslate nohighlight">\(f\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(f'(a)\neq 0\)</span>, þá er andhverfa fallið <span class="math notranslate nohighlight">\(f^{[-1]}\)</span> líka <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(b=f(a)\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\left(f^{[-1]}\right)'(b)= \dfrac 1{f'(a)}.\label{4.2.4}\]</div>
+</div>
+<div class="section" id="setning-sja-setningu-2-2-8">
+<h3>2.2.7. Setning (Sjá Setningu 2.2.8)<a class="headerlink" href="#setning-sja-setningu-2-2-8" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f=u+iv:X\to {\mathbb{C}}\)</span> vera fall af <span class="math notranslate nohighlight">\(z=x+iy\)</span> á opnu hlutmengi <span class="math notranslate nohighlight">\(X\)</span> í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>. Ef <span class="math notranslate nohighlight">\(f\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\in X\)</span>, þá eru báðar hlutafleiðurnar <span class="math notranslate nohighlight">\(\partial_xf(a)\)</span> og <span class="math notranslate nohighlight">\(\partial_yf(a)\)</span> til og</p>
+<div class="math notranslate nohighlight">
+\[f'(a)=\partial_xf(a)=-i\partial_yf(a).\]</div>
+<p>Þar með gildir Cauchy–Riemann–jafnan</p>
+<div class="math notranslate nohighlight">
+\[\tfrac 12\big(\partial_xf(a)+i\partial_yf(a)\big)=0,\]</div>
+<p>og hún jafngildir hneppinu</p>
+<div class="math notranslate nohighlight">
+\[\partial_xu(a)=\partial_yv(a), \qquad \partial_yu(a)=-\partial_xv(a).\]</div>
+</div>
+<div class="section" id="skilgreining-sja-2-2">
+<h3>2.2.8. Skilgreining (Sjá §2.2)<a class="headerlink" href="#skilgreining-sja-2-2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við skilgreinum fyrsta stigs hlutafleiðuvirkjana <span class="math notranslate nohighlight">\({\partial}_z={\partial}/{\partial}z\)</span> og <span class="math notranslate nohighlight">\({\partial}_{\bar z}={\partial}/{\partial}\bar z\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[{\partial}_zf=\dfrac{{\partial}f}{{\partial} z}
+=\tfrac 12\big({\partial}_xf-i{\partial}_yf\big) \quad \text{ og } \quad
+{\partial}_{\bar z}f=\dfrac{{\partial}f}{{\partial}\bar z}
+=\tfrac 12\big({\partial}_xf+i{\partial}_yf\big)
+\label{4.2.14}\]</div>
+<p>Tölurnar <span class="math notranslate nohighlight">\({\partial}_zf(a)\)</span> og <span class="math notranslate nohighlight">\({\partial}_{\bar z}f(a)\)</span>
+nefnast Wirtinger–afleiður fallsins <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\(a\)</span> og
+virkinn <span class="math notranslate nohighlight">\({\partial}_{\bar z}\)</span> nefnist Cauchy–Riemann–virki</p>
+</div>
+<div class="section" id="setning-sja-setningu-2-2-10">
+<h3>2.2.9. Setning (Sjá Setningu 2.2.10)<a class="headerlink" href="#setning-sja-setningu-2-2-10" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> vera opið hlutmengi í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>, <span class="math notranslate nohighlight">\(a\in X\)</span> og <span class="math notranslate nohighlight">\(f:X\to {\mathbb{C}}\)</span> vera fall. Þá gildir:</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>–deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> þá og því aðeins að <span class="math notranslate nohighlight">\(f\)</span> sé deildanlegt í <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\({\partial}_{\bar z}f(a)=0\)</span>. Þá er <span class="math notranslate nohighlight">\(f'(a)={\partial}_zf(a)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> er fágað í <span class="math notranslate nohighlight">\(X\)</span> þá og því aðeins að <span class="math notranslate nohighlight">\(f\)</span> sé samfellt deildanlegt í <span class="math notranslate nohighlight">\(X\)</span> og uppfylli Cauchy–Riemann–jöfnuna <span class="math notranslate nohighlight">\({\partial}_{\bar z}f=0\)</span> í <span class="math notranslate nohighlight">\(X\)</span>. Við höfum þá</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[f'=\dfrac{df}{dz}=\dfrac{\partial f}{\partial z}=\dfrac 12\bigg(
+\dfrac{\partial f}{\partial x}-i\dfrac{\partial f}{\partial y}\bigg).\]</div>
+</div>
+<div class="section" id="tenging-vi-linulegar-varpanir">
+<h3>2.2.10. Tenging við línulegar varpanir.<a class="headerlink" href="#tenging-vi-linulegar-varpanir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Afleiða samfellt deildanlegrar vörpunar
+<span class="math notranslate nohighlight">\(f:\mathbb{R}^2\rightarrow\mathbb{R}^2\)</span> í punkti <span class="math notranslate nohighlight">\(a\)</span> er línuleg vörpun
+<span class="math notranslate nohighlight">\(Df(a):\mathbb{R}^2\rightarrow\mathbb{R}^2\)</span>. Ef við hugsum <span class="math notranslate nohighlight">\(f\)</span> sem vörpun
+<span class="math notranslate nohighlight">\({\mathbb{C}}\rightarrow{\mathbb{C}}\)</span> þá er <span class="math notranslate nohighlight">\(Df(a)\)</span> almennt bara
+<span class="math notranslate nohighlight">\(\mathbb{R}\)</span>-línuleg vörpun en <span class="math notranslate nohighlight">\(f\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>-deildanlegt í
+<span class="math notranslate nohighlight">\(a\)</span> nákvæmlega þegar <span class="math notranslate nohighlight">\(Df(a)\)</span> er <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>-línuleg vörpun.</p>
+</div>
+</div>
+<div class="section" id="veldarair-veldisvisisfalli-og-lograr">
+<h2>2.3. Veldaraðir, veldisvísisfallið og lograr<a class="headerlink" href="#veldarair-veldisvisisfalli-og-lograr" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="upprifjun-ur-staerfraeigreiningu-i">
+<h3>2.3.1. Upprifjun úr Stærðfræðigreiningu I<a class="headerlink" href="#upprifjun-ur-staerfraeigreiningu-i" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Veldaraðir þar sem stuðlar og breyta eru tvinntölur ,,virka‘‘ eins og veldaraðir með rauntölustuðlum og rauntölubreytu. Það eina sem þarf að breyta er að í stað samleitnibils er talað um samleitniskífu.</p>
+<hr class="docutils" />
+<ol class="upperalpha simple">
+<li><p>Fáum í hendurnar röð <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> þannig að <span class="math notranslate nohighlight">\(a_1, a_2, \ldots\)</span> eru tölur. Skilgreinum</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[s_n=a_1+a_2+\cdots+a_n\]</div>
+<p>(summa fyrstu <span class="math notranslate nohighlight">\(n\)</span> liða raðarinnar). Segjum að röðin <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> sé samleitin með summu <span class="math notranslate nohighlight">\(s\)</span> ef <span class="math notranslate nohighlight">\(\lim_{n\rightarrow\infty}s_n=s\)</span>, það er að segja, röðin er samleitin með summu <span class="math notranslate nohighlight">\(s\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\rightarrow \infty}(a_1+a_2+\cdots+a_n)=s.\]</div>
+<p>Ritað <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n=s\)</span>.</p>
+<hr class="docutils" />
+<ol class="upperalpha simple" start="2">
+<li><p>Um sérhverja veldaröð <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n(z-\alpha)^n\)</span> gildir eitt af þrennu:</p></li>
+</ol>
+<ol class="lowerroman simple">
+<li><p>Röðin er aðeins samleitin fyrir <span class="math notranslate nohighlight">\(z=\alpha\)</span>.</p></li>
+<li><p>Til er jákvæð tala <span class="math notranslate nohighlight">\(\varrho\)</span> þannig að veldaröðin er alsamleitin fyrir öll <span class="math notranslate nohighlight">\(z\)</span> þannig að <span class="math notranslate nohighlight">\(|z-\alpha|&lt;\varrho\)</span> og ósamleitin fyrir öll <span class="math notranslate nohighlight">\(z\)</span> þannig að <span class="math notranslate nohighlight">\(|z-\alpha|&gt;\varrho\)</span>. Talan <span class="math notranslate nohighlight">\(\varrho\)</span> kallast samleitnigeisli veldaraðarinnar.</p></li>
+<li><p>Röðin er samleitin fyrir allar tvinntölur <span class="math notranslate nohighlight">\(z\)</span>.</p></li>
+</ol>
+<hr class="docutils" />
+<ol class="upperalpha simple" start="3">
+<li><p>Stundum má reikna út samleitnigeislann með eftirfarandi aðferðum:</p></li>
+</ol>
+<ol class="lowerroman simple">
+<li><p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(L=\lim_{n\rightarrow\infty}\left|\frac{a_{n+1}}{a_n}\right|\)</span> sé til eða <span class="math notranslate nohighlight">\(\infty\)</span>. Þá hefur veldaröðin <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n(z-\alpha)^n\)</span> samleitnigeisla</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\varrho=\left\{\begin{array}{ll}
+\infty &amp; \text{ef }L=0,\\
+\frac{1}{L} &amp; \text{ef }0&lt;L&lt;\infty,\\
+0 &amp; \text{ef }L=\infty.\\
+\end{array}
+\right.\end{split}\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(L=\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}\)</span> sé til eða <span class="math notranslate nohighlight">\(\infty\)</span>. Þá hefur veldaröðin <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n(z-\alpha)^n\)</span> samleitnigeisla</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\varrho=\left\{\begin{array}{ll}
+\infty &amp; \mbox{ef }L=0,\\
+\frac{1}{L} &amp; \mbox{ef }0&lt;L&lt;\infty,\\
+0 &amp; \mbox{ef }L=\infty.\\
+\end{array}
+\right.\end{split}\]</div>
+</div>
+<div class="section" id="id4">
+<h3>2.3.2. Setning<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\subseteq {\mathbb{C}}\)</span> vera opið mengi og látum
+<span class="math notranslate nohighlight">\(f\)</span> vera fall skilgreint á <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<ol class="lowerroman simple">
+<li><p>(Sjá Setningu 2.3.2) Ef fyrir sérhvert <span class="math notranslate nohighlight">\(\alpha\in X\)</span> er til tala <span class="math notranslate nohighlight">\(\varrho&gt;0\)</span> þannig að fyrir öll <span class="math notranslate nohighlight">\(z\in S(\alpha, \varrho)\)</span> er</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[f(z)= \sum_{n=0}^\infty a_n(z-\alpha)^n\]</div>
+<p>þá er fallið <span class="math notranslate nohighlight">\(f\)</span> fágað á <span class="math notranslate nohighlight">\(X\)</span> og fyrir <span class="math notranslate nohighlight">\(z\in S(\alpha, \varrho)\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[f'(z)= \sum_{n=1}^\infty na_n(z-\alpha)^{n-1}.\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>(Sjá Setningu 2.3.5) Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er fágað þá er til fyrir sérhvern punkt <span class="math notranslate nohighlight">\(\alpha\in X\)</span> tala <span class="math notranslate nohighlight">\(\varrho&gt;0\)</span> og veldaröð <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n(z-\alpha)^n\)</span> sem er alsamleitin á <span class="math notranslate nohighlight">\(S(\alpha, \varrho)\)</span> þannig að um alla punkta <span class="math notranslate nohighlight">\(z\in S(\alpha, \varrho)\)</span> gildir að <span class="math notranslate nohighlight">\(f(z)=\sum_{n=0}^\infty a_n(z-\alpha)^n\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="setning-sja-fylgisetningu-2-3-6">
+<h3>2.3.3. Setning (Sjá Fylgisetningu 2.3.6)<a class="headerlink" href="#setning-sja-fylgisetningu-2-3-6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\in {\cal O}(X)\)</span> þá er <span class="math notranslate nohighlight">\(f'\in {\cal O}(X)\)</span>.</p>
+</div>
+<div class="section" id="setning-samsemdarsetning-fyrir-samleitnar-veldarair">
+<h3>2.3.4. Setning (Samsemdarsetning fyrir samleitnar veldaraðir)<a class="headerlink" href="#setning-samsemdarsetning-fyrir-samleitnar-veldarair" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f,g\in {\cal O}(S(\alpha,\varrho))\)</span> séu gefin með samleitnum veldaröðum</p>
+<div class="math notranslate nohighlight">
+\[f(z)=\sum\limits_{n=0}^\infty a_n(z-\alpha)^n, \qquad
+g(z)=\sum\limits_{n=0}^\infty b_n(z-\alpha)^n, \qquad
+z\in S(\alpha,\varrho),\]</div>
+<p>og gerum ráð fyrir að til sé runa <span class="math notranslate nohighlight">\(\{\alpha_j\}\)</span> af ólíkum punktum í <span class="math notranslate nohighlight">\(S(\alpha,\varrho)\)</span> þannig að <span class="math notranslate nohighlight">\(\alpha_j\to \alpha\)</span> og <span class="math notranslate nohighlight">\(f(\alpha_j)=g(\alpha_j)\)</span> fyrir öll <span class="math notranslate nohighlight">\(j\)</span>. Þá er <span class="math notranslate nohighlight">\(a_n=b_n\)</span> fyrir öll <span class="math notranslate nohighlight">\(n\)</span> og þar með <span class="math notranslate nohighlight">\(f(z)=g(z)\)</span> fyrir öll <span class="math notranslate nohighlight">\(z\in S(\alpha,\varrho)\)</span>.</p>
+</div>
+<div class="section" id="setning-sja-2-4">
+<h3>2.3.5. Setning (Sjá §2.4)<a class="headerlink" href="#setning-sja-2-4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir sérhverja tvinntölu <span class="math notranslate nohighlight">\(z\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[e^z=\sum_{n=0}^\infty \frac{z^n}{n!}.\]</div>
+</div>
+<div class="section" id="skilgreining-sja-skilgreiningu-2-5-1">
+<h3>2.3.6. Skilgreining (Sjá Skilgreiningu 2.5.1)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-2-5-1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> vera opið hlutmengi af <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>. Samfellt fall <span class="math notranslate nohighlight">\(\lambda:X\to {\mathbb{C}}\)</span> kallast logri á <span class="math notranslate nohighlight">\(X\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[e^{\lambda(z)}=z, \qquad z\in X.\]</div>
+<p>Samfellt fall <span class="math notranslate nohighlight">\(\varrho:X\to {\mathbb{C}}\)</span> kallast <span class="math notranslate nohighlight">\(n\)</span>–ta rót á <span class="math notranslate nohighlight">\(X\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[\big(\varrho(z)\big)^n=z, \qquad z\in X.\]</div>
+<p>Samfellt fall <span class="math notranslate nohighlight">\(\theta:X\to \mathbb{R}\)</span> kallast horn á <span class="math notranslate nohighlight">\(X\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[z=|z|e^{i\theta(z)}, \qquad z\in X.\]</div>
+</div>
+<div class="section" id="setning-sja-setningu-2-5-2">
+<h3>2.3.7. Setning (Sjá Setningu 2.5.2)<a class="headerlink" href="#setning-sja-setningu-2-5-2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ol class="lowerroman simple">
+<li><p>Ef <span class="math notranslate nohighlight">\(\lambda\)</span> er logri á <span class="math notranslate nohighlight">\(X\)</span>, þá er <span class="math notranslate nohighlight">\(0\not\in X\)</span>, <span class="math notranslate nohighlight">\(\lambda\in {\cal O}(X)\)</span> og</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\lambda'(z)=\frac 1z, \qquad z\in X.\]</div>
+<p>Föllin <span class="math notranslate nohighlight">\(\lambda(z)+i2\pi k\)</span>, <span class="math notranslate nohighlight">\(k\in \mathbb{Z}\)</span> eru einnig lograr á <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<ol class="lowerroman simple" start="2">
+<li><p>Ef <span class="math notranslate nohighlight">\(\lambda\)</span> er logri á <span class="math notranslate nohighlight">\(X\)</span>, þá er</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\lambda(z)=\ln
+|z|+i\theta(z), \qquad z\in X,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\theta:X\to \mathbb{R}\)</span> er horn á <span class="math notranslate nohighlight">\(X\)</span>. Öfugt, ef <span class="math notranslate nohighlight">\(\theta:X\to \mathbb{R}\)</span> er horn á <span class="math notranslate nohighlight">\(X\)</span>, þá er <span class="math notranslate nohighlight">\(\lambda(z)=\ln|z|+i\theta(z)\)</span> logri á <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<ol class="lowerroman simple" start="3">
+<li><p>Ef <span class="math notranslate nohighlight">\(\varrho\)</span> er <span class="math notranslate nohighlight">\(n\)</span>–ta rót á <span class="math notranslate nohighlight">\(X\)</span> þá er <span class="math notranslate nohighlight">\(\varrho\in {\cal O}(X)\)</span> og</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\varrho'(z)=\frac {\varrho(z)}{nz}, \qquad z\in X.\]</div>
+<ol class="lowerroman simple" start="4">
+<li><p>Ef <span class="math notranslate nohighlight">\(\lambda\)</span> er logri á <span class="math notranslate nohighlight">\(X\)</span>, þá er <span class="math notranslate nohighlight">\(\varrho(z)=e^{\lambda(z)/n}\)</span> <span class="math notranslate nohighlight">\(n\)</span>–ta rót á <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="skilgreining-og-setning-sja-2-5">
+<h3>2.3.8. Skilgreining og setning (Sjá §2.5)<a class="headerlink" href="#skilgreining-og-setning-sja-2-5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir sérhverja tvinntölu <span class="math notranslate nohighlight">\({\alpha}\)</span> er hægt að skilgreina fágað veldisfall með veldisvísi <span class="math notranslate nohighlight">\(\alpha\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[z^\alpha=\exp(\alpha\lambda(z)), \qquad z\in X,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\lambda\)</span> er gefinn logri á <span class="math notranslate nohighlight">\(X\)</span> og við fáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\dfrac d{dz}z^\alpha=&amp;\dfrac d{dz}e^{\alpha\lambda(z)}=e^{\lambda(z)}\frac
+\alpha z =\alpha e^{\alpha\lambda(z)}e^{-\lambda(z)}\\
+=&amp;
+\alpha e^{(\alpha-1)\lambda(z)}=\alpha z^{\alpha-1}.\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="id5">
+<h3>2.3.9. Skilgreining og setning (Sjá §2.5)<a class="headerlink" href="#id5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(\lambda\)</span> er logri á opið mengi <span class="math notranslate nohighlight">\(X\subseteq {\mathbb{C}}\)</span> og <span class="math notranslate nohighlight">\(\alpha \in X\)</span>, þá skilgreinum við veldisvísisfall með grunntölu <span class="math notranslate nohighlight">\(\alpha\)</span> sem fágaða fallið á <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span>, sem gefið er með</p>
+<div class="math notranslate nohighlight">
+\[\alpha^z=e^{z\lambda(\alpha)}.\]</div>
+<p>Athugið að skilgreiningin er háð valinu á logranum. Keðjureglan gefur</p>
+<div class="math notranslate nohighlight">
+\[\dfrac d{dz}\alpha^z=
+\dfrac d{dz}e^{z\lambda(\alpha)}=e^{z\lambda(\alpha)}\cdot
+\lambda(\alpha)=\alpha^z\lambda(\alpha).\]</div>
+</div>
+<div class="section" id="skilgreining-sja-2-5">
+<h3>2.3.10. Skilgreining (Sjá §2.5)<a class="headerlink" href="#skilgreining-sja-2-5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum nú á mengið <span class="math notranslate nohighlight">\(X={\mathbb{C}}\setminus \mathbb{R}_-\)</span>, sem fæst með því að skera neikvæða raunásinn og <span class="math notranslate nohighlight">\(0\)</span> út úr tvinntalnaplaninu. Við skilgreinum síðan pólhnit í <span class="math notranslate nohighlight">\(X\)</span> og veljum hornið <span class="math notranslate nohighlight">\(\theta(z)\)</span> þannig að <span class="math notranslate nohighlight">\(-\pi&lt;\theta(z)&lt;\pi\)</span>, <span class="math notranslate nohighlight">\(z\in X\)</span>. Fallið</p>
+<div class="math notranslate nohighlight">
+\[{\operatorname{Arg}} :{\mathbb{C}}\setminus \mathbb{R}_-\to \mathbb{R}, \qquad
+{\operatorname{Arg}} z=\theta(z),\quad z\in X\]</div>
+<p>0 er kallað höfuðgrein hornsins og formúla þess er í grein 1.1.10 (og bók §1.2.6.2),</p>
+<div class="math notranslate nohighlight">
+\[{\operatorname{Arg}}\, z=2\arctan\bigg(\dfrac y{|z|+x}\bigg), \qquad z=x+iy\in X.\]</div>
+<p>Fallið</p>
+<div class="math notranslate nohighlight">
+\[{\operatorname{Log}} :{\mathbb{C}}\setminus \mathbb{R}_-\to {\mathbb{C}}, \qquad
+{\operatorname{Log}} z=\ln |z| +i{\operatorname{Arg}}(z),\quad z\in X,\]</div>
+<p>er kallað höfuðgrein lografallsins. Fallið</p>
+<div class="math notranslate nohighlight">
+\[z^\alpha = e^{\alpha{\operatorname{Log}} z}, \qquad z\in {\mathbb{C}}\setminus \mathbb{R}_-,\]</div>
+<p>kallast höfuðgrein veldisfallsins með veldisvísi <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli03.html" class="btn btn-neutral float-right" title="3. Cauchy-setningin og Cauchy-formúlan" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli01.html" class="btn btn-neutral" title="1. Tvinntölur" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2018',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

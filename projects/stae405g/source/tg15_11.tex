@@ -1,0 +1,561 @@
+\lecture[8]{Kafli 10: Jaðargildisverkefni fyrir venjulegar afleiðujöfnur}{lecture-text}
+\date{13.~og 18.~apríl, 2012}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}{Yfirlit}
+\begin{block}{Kafli 10: Upphafs- og jaðargildisverkefni fyrir \\
+  breiðgerar (e.~hyperbolic)  hlutafleiðujöfnur}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}\hline
+Kafli &Heiti á viðfangsefni &Bls. & Glærur\\
+\hline
+10.0 &Almenn atriði og nokkur dæmi& 883-886\\
+10.1 &Kennilínur & 886-887\\
+10.2 &Flutningsjafna --  Uppstreymismismunaaðf.& 888-899\\
+10.3 &Flutningsjafna --  MacCormack-aðferð& 902-911\\
+10.4 &Flutnings- og dreifnijafna & 914-921\\ \hline
+\end{tabular}
+\end{center}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{10.0  Flutningur, dreifni og bylgjur} 
+Við ætlum nú að fjalla um jöfnur úr flokki {\it breiðgerra}
+(e.~hyperbolic) hlutafleiðujafna.  
+Við fylgjum greinum 11.1-3 í kennslubókinni í umfjöllun okkar um þetta
+efni. 
+
+%\pause
+\smallskip
+Við ætlum ekki að skilgreina flokk breiðgerra hlutafleiðujafna, 
+en í honum eru jöfnur sem lýsa flutningi efna í lofti og vökva
+og bylgjujöfnur.   
+
+%\pause
+\smallskip
+Þessar jöfnur eru almennt settar fram 
+ fyrir allar rúmvíddir, en við munum einungis
+líta á jöfnur í einni rúmvídd.  
+
+%\pause
+\smallskip
+Nokkur mikilvæg dæmi um fyrirbæri sem lýst er með jöfnum með einni rúmvídd :
+\begin{enumerate}
+\item[(i)]   Efni rennur út í á og berst með straumnum.
+\item[(ii)]  Efni smitast í grunnvatn og  flyst með grunnvatnsstraumi.
+\item[(iii)] Reykjarstrók slær niður og hann berst undan vindi.
+\item[(iv)]  Úthafsalda fellur að langri strönd.
+\item[(v)]   Sveiflur í fiðlustreng
+\item[(vi)]  Hljóðbylgjur í orgelpípu
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{10.0 Fróðleikur á Wikipedia} 
+Það er til fullt af útleiðslum á Wikipedia á einstökum jöfnum og þar
+eru einnig  niðustöður úteikninga settar fram með hreyfimyndum.
+
+  \begin{enumerate}
+  \item[(i)] Bygjujafnan fyrir streng (e.~vibrating string)
+  \item[(ii)] Flutnings-og-dreifnijafna (e.~Convection–diffusion
+    equation) 
+  \item[(iii)] Bylgjujafna á grunnu vatni
+(e.~shallow water equations).
+  \item[(iv)]  Flóðbylgja við strönd (e.~tsunami).  Skoðið vel
+    hreyfimyndirnar neðst í greininni. 
+  \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{10.0 Nokkur dæmi} 
+{\it Flutningsjafna:}
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t,u)\dfrac{\partial u}{\partial x}=g(x,t,u).
+$$
+%\pause
+{\it Flutnings-og-dreifnijafna:}
+$$
+\dfrac{\partial u}{\partial t}
++v(x,t)\dfrac{\partial u}{\partial x}=D
+\dfrac{\partial^2 u}{\partial x^2}.
+$$
+%\pause
+{\it Bylgjujafna:}
+$$
+\dfrac{\partial^2 u}{\partial t^2}
+-c^2\dfrac{\partial^2 u}{\partial x^2}=0.
+$$
+
+Í öllum þessum jöfnum er $u=u(x,t)$ fall af tveimur breytistærðum 
+þar sem við hugsum okkur að $t$ standi fyrir tíma.
+\end{frame}
+
+
+\begin{frame}{10.1 Kennilínur (e.~characteristics)} 
+Lítum á einföldu flutningsjöfnuna 
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t)\dfrac{\partial u}{\partial x}=g(x,t).
+$$
+sem hefur lausnina $u=u(x,t)$.  
+
+\smallskip 
+Takið eftir að við gerum ráð fyrir að föllin $a$ og $g$ séu 
+einungis háð  $(x,t)$ en ekki $u$. 
+
+%\pause
+\smallskip
+Nú festum við einn punkt $(x,t)$ og 
+lítum nú á lausn $\xi(\tau)$ á upphafsgildisverkefninu
+$$
+  \dfrac{d\xi}{d\tau}=a(\xi,\tau), \qquad \xi(t)=x.
+$$
+Þessi jafna hefur ótvírætt ákvarðaða lausn og hún er skilgreind 
+á opnu bili sem inniheldur $t$.  Við höfum þar
+$$
+\dfrac{d\xi}{d\tau}(\tau)= a(\xi(\tau),\tau), \qquad \tau \in I,
+\quad \text{ og } \quad \xi(t)=x.
+$$
+\end{frame}
+
+
+\begin{frame}{10.1 Kennilínur} 
+Ferillinn  $\tau\mapsto (\xi(\tau), \tau)$ með $\xi(t)=x$ nefnist
+{\it kennilína} hlutafleiðujöfnunnar
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t)\dfrac{\partial u}{\partial x}=g(x,t).
+$$
+Ef við  notfærum við okkur að fallið $u(x,t)$ uppfyllir
+þessa jöfnu, þá gefur keðjuregla 
+\begin{align*}
+\dfrac {d}{d\tau} u(\xi(\tau),\tau)&= 
+\dfrac{\partial u}{\partial x}(\xi(\tau),\tau) 
+\dfrac{d\xi}{d\tau}(\tau)+
+\dfrac{\partial u}{\partial t}(\xi(\tau),\tau)\\
+&=\dfrac{\partial u}{\partial t}(\xi(\tau),\tau)
++a(\xi(\tau),\tau)
+\dfrac{\partial u}{\partial x}(\xi(\tau),\tau) \\
+&=g(\xi(\tau),\tau)  
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{10.1 Kennilínur} 
+Ef bilið $I$ inniheldur punktinn $\tau=0$, þá getum við heildað
+síðustu jöfnu yfir bilið $[0,t]$ og þá fáum við 
+$$
+u(x,t)=u(\xi(0),0)+\int_0^tg(\xi(\tau),\tau)\, d\tau.
+$$
+Þessi jafna segir okkur að gildi lausnarinnar $u$ í punktinum $(x,t)$
+ræðst af gildi hennar í skurðpunkti kennilínunnar við $x$-ásinn, sem
+er sama og línan $t=0$, og af heildi fallsins  $g$ yfir kennilínuna
+frá punktinum $(\xi(0),0)$ til punktsins $(x,t)$.
+\end{frame}
+
+
+\begin{frame}{10.1 Kennilínur - Almenna tilfellið} 
+Lítum aftur á einföldu flutningsjöfnuna 
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t,u)\dfrac{\partial u}{\partial x}=g(x,t,u).
+$$
+sem hefur lausnina $u=u(x,t)$.  Nú gerum við ráð fyrir 
+að föllin $a$ og $g$ séu háð öllum þremur breytunum 
+$(x,t,u)$. 
+
+%\pause
+\smallskip
+Nú festum við einn punkt $(x,t,u(x,t))$ á grafi fallsins 
+$u$ og lítum á lausnina á upphafsgildisverkefninu
+$$
+  \dfrac{d\xi}{d\tau}=a(\xi,\tau,u(\xi(\tau),\tau)), \qquad \xi(t)=x.
+$$
+Þessi jafna hefur ótvírætt ákvarðaða lausn og hún er skilgreind 
+á opnu bili sem inniheldur $t$.  
+\end{frame}
+
+
+\begin{frame}{10.1 Kennilínur} 
+Setjum nú $v(\tau)=u(\xi(\tau),\tau)$ og munum að
+fallið $u$ er lausn hlutafleiðujöfnunnar
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t,u)\dfrac{\partial u}{\partial x}=g(x,t,u).
+$$
+Nú fáum við með sama hætti og áður að
+\begin{align*}
+\dfrac{dv}{d\tau}&=\dfrac {d}{d\tau} u(\xi(\tau),\tau)= 
+\dfrac{\partial u}{\partial x}(\xi(\tau),\tau) 
+\dfrac{d\xi}{d\tau}(\tau)+
+\dfrac{\partial u}{\partial t}(\xi(\tau),\tau)\\
+&=\dfrac{\partial u}{\partial t}(\xi(\tau),\tau)
++a(\xi(\tau),\tau,v(\tau))
+\dfrac{\partial u}{\partial x}(\xi(\tau),\tau) \\
+&=g(\xi(\tau),\tau,v(\tau))  
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{10.1 Kennilínur} 
+Ef bilið $I$ inniheldur punktinn $\tau=0$, þá getum við heildað
+síðustu jöfnu yfir bilið $[0,t]$ og þá fáum við 
+$$
+u(x,t)=u(\xi(0),0)+\int_0^tg(\xi(\tau),\tau,v(\tau))\, d\tau.
+$$
+Ferillinn $\tau\mapsto (\xi(\tau),\tau,v(\tau))$ þar sem 
+$$
+\begin{cases}
+  \dfrac{d\xi}{d\tau}=a(\xi(\tau),\tau,v(\tau)),&\qquad \xi(t)=x,\\
+\dfrac{dv}{d\tau}=g(\xi(\tau),\tau,v(\tau)),& \qquad v(t)=u(x,t),
+\end{cases}
+$$
+nefnist kennlína afleiðujöfnunnar gegnum punktinn $(x,t,u(x,t))$ 
+
+\smallskip
+Kennilínan liggur í grafi lausnarinnar $u$ og gildi hennar í punktinum 
+$(x,t)$ ræðst af gildi hennar í skurðpunkti kennilínunnar við planið
+$t=0$ í $(x,t,u)$-hnitarúminu, en það er punkturinn
+$(\xi(0),0,u(\xi(0),0))$, og heildi $g$ yfir kennilínuna
+frá þessum skurðpunkti til $(x,t,u(x,t))$.
+\end{frame}
+
+
+\begin{frame}{10.2 Flutningsjafna -- Skipting á $xt$-planinu} 
+Við innleiðum jafna skiptingu á $xt$-planinu með því að taka
+viðmiðunarpunkt  $a\in \R$, látum $\Delta x$ tákna billengdina í
+$x$-skiptingunni og $\Delta t$ billengdina í  $t$-skiptingunni.
+Skiptinpunktarnir eru $x_j=a+j\, \Delta x$ og $t_n=n\, \Delta t$
+Tölurnar $j$ og $n$ mega vera hvaða heiltölur sem er.
+
+%\pause
+\smallskip
+Við ætlum að nálga lausnir $u(x,t)$ á flutnings-og-dreifnijöfnum 
+og bylgjujöfnum í punktunum $(x_j,t_n)$.   Við innleiðum því 
+nálgunargildin
+\begin{multline*}
+w_j^{(n)}\approx u(x_j,t_n)=u_j^{(n)}, \quad
+a_j^{(n)}=a(x_j,t_n,w_j^{(n)}), \quad \\
+g_j^{(n)}=g(x_j,t_n,w_j^{(n)}), o.s.frv. 
+\end{multline*}
+\end{frame}
+
+
+\begin{frame}{10.2 Mismunakvótar fyrir flutningsjöfnu} 
+Lítum nú aftur á flutningsjöfnuna
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t,u)\dfrac{\partial u}{\partial x}=g(x,t,u).
+$$
+
+%\pause
+\smallskip
+Hún jafngildir því að í sérhverjum punkti $(x,t)$ gildir
+\begin{multline*}
+\dfrac{u(x,t+\Delta t)-u(x,t)}{\Delta t} +O(\Delta  t)\\
++a(x,t,u)\dfrac{u(x,t)-u(x-\Delta x,t)}{\Delta x}+O(\Delta x)
+=g(x,t,u) 
+\end{multline*}
+ef við notum bakmismunakvóta til þess að reikna út $\partial
+u/\partial x$ og ...
+\end{frame}
+
+
+\begin{frame}{10.2 Mismunakvótar fyrir flutningsjöfnu} 
+\begin{multline*}
+\dfrac{u(x,t+\Delta t)-u(x,t)}{\Delta t} +O(\Delta  t)\\
++a(x,t,u)\dfrac{u(x+\Delta x,t)-u(x,t)}{\Delta x}+O(\Delta x)
+=g(x,t,u) 
+\end{multline*}
+ef við notum frammismunakvóta til þess að reikna út $\partial
+u/\partial x$.
+
+%\pause
+\smallskip
+Ef við setjum $(x,t)=(x_j,t_n)$, þá jafngildir fyrri jafnan 
+$$
+u_j^{(n+1)}-u_j^{(n)}+O((\Delta t)^2)
++a_j^{(n)}\dfrac{\Delta t}{\Delta
+  x}\big(u_j^{(n)}-u_{j-1}^{(n)}\big)+\Delta tO(\Delta x)=\Delta
+t\, g_j^{(n)}
+$$
+%\pause
+Nú skilgreinum við $\lambda=a_j^{(n)}{\Delta t}/{\Delta x}$ og
+innleiðum nálgunarjöfnu með því að setja $w_j^{(n)}$ í stað
+$u_j^{(n)}$ og fella niður leifarliðinn.
+\end{frame}
+
+
+\begin{frame}{10.2 Nálgunarjafna fyrir flutningsjöfnu} 
+$$
+w_j^{(n+1)}-w_j^{(n)}
++\lambda \big(w_j^{(n)}-w_{j-1}^{(n)}\big)=\Delta t\, g_j^{(n)}
+$$
+%\pause
+Það er eðlilegra að setja þetta mismunasamnband fram sem 
+rakningu fram í tíma, frá $t_n$ til $t_{n+1}=t_n+\Delta t$,
+$$
+w_j^{(n+1)}=(1-\lambda) w_j^{(n)}+\lambda w_{j-1}^{(n)}+\Delta
+t\, g_j^{(n)}. 
+$$
+Ef við notum frammismunakvóta til þess að reikna út 
+$\partial u/\partial x$ í stað bakmismunakvóta, þá fáum við í 
+staðinn rakningarformúluna
+$$
+w_j^{(n+1)}=(1+\lambda) w_j^{(n)}-\lambda w_{j+1}^{(n)}+\Delta
+t\, g_j^{(n)}. 
+$$
+\end{frame}
+
+
+\begin{frame}{10.2 Uppstreymismismunaaðferð (e.~upwind finite difference)} 
+Reikniritið sem út úr þessu kemur er
+$$
+w_j^{(n+1)}=
+\begin{cases} 
+(1-\lambda) w_j^{(n)}+\lambda w_{j-1}^{(n)}+\Delta
+t\, g_j^{(n)},&a_j^{(n)}>0,\\
+(1+\lambda) w_j^{(n)}-\lambda w_{j+1}^{(n)}+\Delta
+t\, g_j^{(n)},&a_j^{(n)}<0.
+\end{cases}
+$$
+%\pause
+\smallskip
+Valið milli $a_j^{(n)}>0$ og  $a_j^{(n)}<0$ er útskýrt út frá
+kennilínunum.  
+
+\smallskip
+Ef $a_j^{(n)}>0$, þá fer kennilínan gegnum $(x,t+\Delta t)$ 
+frá vinstri til hægri í $xt$-planinu.  Ef $\xi$ er stikun á henni, þá
+fáum við
+$$
+u(x,t+\Delta t)=u(\xi(t),t)+\int_t^{t+\Delta t}
+g(\xi(\tau),\tau,v(\tau))\, d\tau.
+$$
+Punkturinn $\xi(t)$ er vinstra megin við $x$ og því er eðlilegt að
+taka bakmismun í þessu tilfelli.  Ef $a_j^{(n)}<0$ þá væri $\xi(t)$
+hægra megin við $x$ og þá væri eðlilegra að taka frammismun. 
+\end{frame}
+
+
+\begin{frame}{10.2 Uppstreymismismunaaðferð; 1.~tilbrigði} 
+Lítum nú aftur á flutningsjöfnuna
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t,u)\dfrac{\partial u}{\partial x}=g(x,t,u).
+$$
+
+%\pause
+Afbrigði af þessari jöfnu er þegar $a=a(x,t)$ 
+er óháð $u$ og við höfum 
+$$
+\dfrac{\partial u}{\partial t}
++\dfrac{\partial (au)}{\partial x}=g(x,t,u).
+$$
+
+%\pause
+Reikniritið sem við fáum í þessu tilfelli er
+$$
+w_j^{(n+1)}=
+\begin{cases} 
+w_j^{(n)}+\dfrac{\Delta t}{\Delta x} 
+\big(a_{j-1}^{(n)}w_{j-1}^{(n)}-a_j^{(n)}w_j^{(n)}\big)
++\Delta t\, g_j^{(n)},&a_j^{(n)}>0,\\
+w_j^{(n)}+\dfrac{\Delta t}{\Delta x} 
+\big(a_{j}^{(n)}w_{j}^{(n)}-a_{j+1}^{(n)}w_{j+1}^{(n)}\big)
++\Delta t\, g_j^{(n)}, &a_j^{(n)}<0.
+\end{cases}
+$$
+\end{frame}
+
+
+\begin{frame}{10.2 Uppstreymismismunaaðferð; 2.~afbrigði } 
+Sum varðveislulögmál eru sett fram með jöfnu
+$$
+\dfrac{\partial u}{\partial t}
++\dfrac{\partial f(u)}{\partial x}=g(x,t,u).
+$$
+
+%\pause
+Reikniritið sem við fáum í þessu tilfelli er
+$$
+w_j^{(n+1)}=
+\begin{cases} 
+w_j^{(n)}+\dfrac{\Delta t}{\Delta x} 
+\big(f(w_{j-1}^{(n)})-f(w_j^{(n)})\big)
++\Delta t\, g_j^{(n)},& \dfrac{\partial f}{\partial u}(w_j^{n})>0,\\
+w_j^{(n)}+\dfrac{\Delta t}{\Delta x} 
+\big(f(w_{j}^{(n)})-f(w_{j+1}^{(n)})\big)
++\Delta t\, g_j^{(n)}, &\dfrac{\partial f}{\partial u}(w_j^{n})<0.
+\end{cases}
+$$
+\end{frame}
+
+
+\begin{frame}{10.3 Flutningsjafna -- MacCormack-aðferð} 
+Kostur við uppstreymiaðferðir er að þær byggja á kennilínuaðferðinni,
+en hún er notuð  til þess að sýna fræðilega fram á að afleiðujafnan
+hafi lausn.
+
+\smallskip
+Ókostur er að hún er ekki nákvæm, aðeins með fyrsta stigs
+staðarskekkju, og að erfitt er að fá hana til þess að virka fyrir
+hneppi.
+
+%\pause
+Við lítum aftur á fyrstu flutningsjöfnuna okkar
+$$
+\dfrac{\partial u}{\partial t}
++a(x,t,u)\dfrac{\partial u}{\partial x}=g(x,t,u).
+$$
+
+%\pause
+Við ætlum nú að reikna út nálgunargildið $w_j^{n+1}$ í tveimur skrefum
+{\it forsagnarskrefi} og {\it leiðréttingarskrefi}.  Við táknum gildið
+sem út kemur eftir forsagnarskrefið með $w_j^*$.
+\end{frame}
+
+
+\begin{frame}{10.3 MacCormack-aðferð. Forsagnarskref} 
+$$
+\dfrac{w_j^*-w_j^{(n)}}{\Delta t} 
++a_j^{(n)}\dfrac{w_{j+1}^{(n)}-w_j^{(n)}}{\Delta x}=g_j^{(n)}
+$$
+sem gefur okkur
+$$
+w_j^*=(1+\lambda) w_j^{(n)}-\lambda w_{j+1}^{(n)}+\Delta t\, g_j^{(n)},
+$$
+þar sem $\lambda=a_j^{(n)}\Delta t/\Delta x$.
+\end{frame}
+
+
+\begin{frame}{10.3 MacCormack-aðferð.  Leiðréttingarskref} 
+$$
+\dfrac{w_j^{(n+1)}-w_j^{(n)}}{\Delta t}
++\dfrac 12\bigg(a_j^{(n)}\dfrac{w_{j+1}^{(n)}-w_j^{(n)}}{\Delta x}
++a_j^*\dfrac{w_j^*-w_{j-1}^*}{\Delta x}\bigg)
+=\dfrac  12\big(g_j^{(n)}+g_j^*\big)
+$$
+þar sem  $a_j^*$ er gildi fallsins $a(x,t,u)$ í punktinum
+$(x_j,t_n,w_j^*)$ og $g_j^*$ er skilgreint með hliðstæðum hætti.
+
+%\pause
+\smallskip
+Fyrri mismunakvótinn innan stóru sviganna kom fyrir í
+forsagnarskrefinu.  Með því að nýta okkur það fáum við með smá
+reikningum að 
+$$
+w_j^{(n+1)}=\tfrac 12
+\big(w_j^{(n)}+w_j^*-\lambda^*(w_j^*-w_{j-1}^*)\big)
++\tfrac 12 \Delta t\, g_j^*,
+$$
+þar sem $\lambda^*=a_j^*\Delta t/\Delta x$.
+\end{frame}
+
+
+\begin{frame}{10.3 MacCormack-aðferð.  1.~tilbrigði} 
+Við getum sett upp sams konar mismunakvóta fyrir 
+$$
+\dfrac{\partial u}{\partial t}
++\dfrac{\partial (au)}{\partial x}=g(x,t,u).
+$$
+og leyfum nú fallinu $a=a(x,t,u)$
+
+%\pause
+\smallskip
+{\it Forsagnarskref:} 
+$$
+w_j^*=w_j^{(n)}-\dfrac{\Delta t}{\Delta x}\big( 
+a_{j+1}^{(n)}w_{j+1}^{(n)}-a_j^{(n)}w_j^{(n)}\big)+\Delta t\, g_j^{(n)}.
+$$
+
+%\pause
+\smallskip
+{\it Leiðréttingarskref:}
+$$
+w_j^{(n+1)}=\tfrac 12\big(w_j^{(n)} +w_j^*-\dfrac{\Delta t}{\Delta x}
+\big(a_j^*w_j^*-a_{j-1}^*w_{j-1}^*\big) \big)+\tfrac 12 \Delta t\, g_j^*
+$$
+\end{frame}
+
+
+\begin{frame}{10.3 MacCormack-aðferð.  2.~tilbrigði} 
+Við getum sett upp sams konar mismunakvóta fyrir 
+$$
+\dfrac{\partial u}{\partial t}
++\dfrac{\partial f(x,t,u)}{\partial x}=g(x,t,u).
+$$
+
+%\pause
+\smallskip
+{\it Forsagnarskref:} 
+$$
+w_j^*=w_j^{(n)}-\dfrac{\Delta t}{\Delta x}\big( 
+f_{j+1}^{(n)}-f_j^{(n)}\big)+\Delta t\, g_j^{(n)}.
+$$
+
+%\pause
+\smallskip
+{\it Leiðréttingarskref:}
+$$
+w_j^{(n+1)}=\tfrac 12\big(w_j^{(n)} +w_j^*-\dfrac{\Delta t}{\Delta x}
+\big(f_j^*-f_{j-1}^*\big) \big)+\tfrac 12 \Delta t\, g_j^*
+$$
+\end{frame}
+
+
+\begin{frame}{10.3 MacCormack-aðferð fyrir hneppi} 
+Ef hneppið er sett fram með formúlunni
+$$
+\dfrac{\partial \Uv}{\partial t}
++\dfrac{\partial \Fv(x,t,\Uv)}{\partial x}=\Gv(x,t,\Uv).
+$$
+þar sem $\Uv=[u_1,\dots,u_m]$, $\Fv=[f_1,\dots,f_m]$,
+$\Gv=[g_1,\dots,g_m]$,  með $u_k=u_k(x,t)$
+$f_k=f_k(x,t,\Uv)$ og $g_k=g_k(x,t,\Uv)$,
+og deildað er hnit fyrir hnit, þá fæst:
+
+%\pause
+\smallskip
+{\it Forsagnarskref:} 
+$$
+\wv_j^*=\wv_j^{(n)}-\dfrac{\Delta t}{\Delta x}\big( 
+\Fv_{j+1}^{(n)}-\Fv_j^{(n)}\big)+\Delta t\, \Gv_j^{(n)}.
+$$
+
+%\pause
+\smallskip
+{\it Leiðréttingarskref:}
+$$
+\wv_j^{(n+1)}=\tfrac 12\big(\wv_j^{(n)} +\wv_j^*-\dfrac{\Delta t}{\Delta x}
+\big(\Fv_j^*-\Fv_{j-1}^*\big) \big)+\tfrac 12 \Delta t\, \Gv_j^*
+$$
+\end{frame}
+
+
+\begin{frame}{Kafli 10: Fræðilegar spurningar}
+\begin{enumerate}
+  \item Hvernig eru {\it flutningsjafna}, {\it flutnings- og
+      dreifnijafna} og {\it bylgjujafna} í einni rúmvídd?
+  \item Hvernig er kennilína fyrir flutningsjöfnu gegnum punktinn
+    $(x,t)$ fundin? 
+  \item Hvernig er lausnarformúla fyrir einfalda flutningsjöfnu fundin
+    út frá gefninni kennilínu?
+  \item Hvernig er mismunajafna fyrir flutningsjöfnu leidd út  ef
+    rúmafleiðan er nálguð með bakmismunakvóta?
+  \item Hvernig er uppstreymismismunaaðferð fyrir einfalda
+    flutningsjöfnu? 
+kennilínum
+  \item Hvernig er MacCormack-aðferð fyrir einfalda flutningsjöfnu
+$\dfrac{\partial u}{\partial t}
++a(x,t,u)\dfrac{\partial u}{\partial x}=g(x,t,u)$?
+\end{enumerate}
+\end{frame}
+\end{document}

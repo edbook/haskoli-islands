@@ -1,0 +1,1091 @@
+\documentclass[icelandic,a4paper,12pt]{article}
+\usepackage{beamerarticle}
+\input{beamer.tex}
+\newcommand{\C}{{\mathbb  C}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\R}{{\mathbb  R}}
+\newcommand{\N}{{\mathbb  N}}
+\newcommand{\Q}{{\mathbb Q}}
+
+\begin{document}
+
+%\subsection{Yfirlit}
+\section{Jaðargildisverkefni fyrir 
+  venjulegar afleiðujöfnur}
+%\begin{center}
+%\begin{tabular}{|l|l|l|l|}\hline
+%Kafli &Heiti á viðfangsefni &Bls. & Glærur\\
+%\hline
+%8.0 &Almenn atriði um jaðargildisverkefni & 656-660 & 3-4\\
+%8.1 & Línulegar jöfnur -- Dirichlet-jaðarskilyrði & 660-670 & 5-11\\
+%8.2 & Línulegar jöfnur -- Blönduð jaðarskilyrði & 673-683 & 12-18 \\
+%6.3 & Ólínuleg jaðargildisverkefni & 687-696 \\ 
+%6.4 & Úrlausn á ólínulegum jöfnum & 688-694 \\ 
+%\hline
+%\end{tabular}
+%\end{center}
+
+
+
+\subsection{Almenn atriði um jaðargildisverkefni}
+%\subsection{8.0  Jaðargildisverkefni fyrir venjulegar afleiðujöfnur} 
+Við ætlum að finna nálgunarlausnir á verkefnum af gerðinni
+  \begin{gather*}
+    y''=f(x,y,y'), \qquad a\leq x\leq b,\\
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3,\\
+\beta_1 y(b)+\beta_2y'(b)=\beta_3.  
+  \end{gather*}
+
+\pause
+Afleiðujafnan er sögð vera línuleg ef hún er á forminu
+$$
+y''=p(x)y'+q(x)y+r(x), \qquad x\in [a,b].
+$$
+
+
+\subsubsection{Jaðarskilyrðin nefnast}
+\begin{tabular}{lll}
+(i)  &Dirichlet-jaðarskilyrði: &  $y(a)=\alpha$, \ \  $y(b)=\beta$\\
+&(Fallsjaðarskilyrði:) \\ \pause
+(ii)&Neumann-jaðarskilyrði: 
+& $y'(a)=\alpha$, \ \  $y'(b)=\beta$\\
+&(Afleiðujaðarskilyrði:)\\
+&(Flæðisjaðarskilyrði:)\\\pause
+(iii)&Robin-jaðarskilyrði: 
+&$\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3$ \\ 
+&(Blandað jaðarskilyrði:)&$\beta_1 y(b)+\beta_2y'(b)=\beta_3$\\
+&&$(\alpha_1,\alpha_2)\neq (0,0)$
+\end{tabular}
+\pause
+
+\bigskip
+Athugið að blönduð jaðarskilyrði með $\alpha_2=0$ (eða $\beta_2=0$)\\
+er Dirichlet skilyrði með 
+$\alpha=\alpha_3/\alpha_1$ (eða $\beta=\beta_3/\beta_1$).
+\pause
+
+\smallskip
+Athugið að blandað jaðarskilyrði með $\alpha_1=0$ (eða $\beta_1=0$)\\
+er  Neumann skilyrði með 
+$\alpha=\alpha_3/\alpha_2$ (eða $\beta=\beta_3/\beta_2$).
+
+
+
+\subsection{Línulegar jöfnur -- Dirichlet-jaðarskilyrði}
+\subsubsection{Skiptipunktar / Hnútpunktar} 
+Gefum okkur jafna skiptingu á bilinu $[a,b]$, $x_j=a+hj$, 
+$h=(b-a)/N$,
+$$
+a=x_0<x_1<x_2<\cdots<x_{N-1}<x_N=b.
+$$
+
+\pause
+Við nefnum $x_j$  {\it skiptipunkta} eða {\it hnútpunkta} skiptingarinnar.  
+
+\pause
+\smallskip
+Punktarnir $a=x_0$ og $b=x_N$ nefnast {\it endapunktar}
+skiptingarinnar og $x_j$, með $j=1,\dots,N-1$, 
+nefnast {\it innri punktar} skiptingarinnar.
+
+\pause
+\smallskip
+Í fyrstu atrennu ætlum við aðeins að nálga lausnina fyrir
+línulegar jöfnur,
+$$
+y''=p(x)y'+q(x)y+r(x), \qquad x\in [a,b].
+$$
+Við reiknum út nálgun á réttu lausninni $y(x)$ í
+hnútpunktunum. 
+
+\pause
+\smallskip
+Rétta gildið í punktinum $x_j$ táknum við með $y_j$ og nálgunargildið
+með $w_j$, 
+$$
+y_j=y(x_j)\approx w_j.
+$$\pause 
+Eins skrifum við 
+$$
+p_j=p(x_j), \qquad q_j=q(x_j), \qquad  r_j=r(x_j).
+$$
+
+
+\subsubsection{Línulegar afleiðujöfnur:} 
+Nú leiðum við út nálgunarjöfnur, eina fyrir hvern innri skiptipunkt.
+Við byrjum á því að stinga punkti $x_j$ inn í afleiðujöfnuna
+$$
+\big\{ y''(x)= p(x)y'(x)+q(x)y(x) + r(x)\big\}_{x=x_j}.
+$$
+Næst skiptum við á afleiðum og mismunakvótum i þessari jöfnu,
+$$
+\dfrac{y_{j+1}-2y_j+y_{j-1}}{h^2} +O(h^2)
+=p_j\dfrac{y_{j+1}-y_{j-1}}{2h}+q_jy_j+r_j+ O(h^2).
+$$
+
+\pause
+Síðan  stillum við upp nálgunargildunum  í stað réttu gildanna:
+
+
+\subsubsection{Skipt á afleiðum og mismunakvótum} 
+Endurtökum réttu jöfnuna
+$$
+\dfrac{y_{j+1}-2y_j+y_{j-1}}{h^2} +O(h^2)
+=p_j\dfrac{y_{j+1}-y_{j-1}}{2h}+q_jy_j+r_j+ O(h^2).
+$$
+
+\pause
+Nú fellum við niður leifaliðina og 
+setjum nálgunargildin í stað réttu gildanna:
+$$
+\dfrac{w_{j+1}-2w_j+w_{j-1}}{h^2}
+=p_j\dfrac{w_{j+1}-w_{j-1}}{2h}+q_jw_j+r_j
+$$
+Hér fáum við eina jöfnu fyrir sérhvern innri skiptipunkt
+$j=1,\dots,N-1$.
+
+
+
+\subsubsection{Dirichlet-jaðarskilyrði} 
+Við erum komin með $N-1$ 
+nálgunarjöfnu til þess að finna $N+1$
+nálgunargildi $w_0,\dots,w_N$ fyrir $y_0,\dots,y_N$. 
+
+\smallskip
+Ef við erum að leysa línulegt jaðargildisverkefni með 
+Dirichlet-jaðarskilyrðum,
+  \begin{gather*}
+    y''=p(x)y'+q(x)y+r(x), \qquad a\leq x\leq b,\\
+y(a)=\alpha \quad \text{ og } \quad y(b)=\beta,
+  \end{gather*}
+
+\pause
+þá fæst nálgunin með því að leysa línulega jöfnuhneppið
+\begin{align*}
+w_0&=\alpha,\\
+\dfrac{w_{j+1}-2w_j+w_{j-1}}{h^2}
+&=p_j\dfrac{w_{j+1}-w_{j-1}}{2h}+q_jw_j+r_j, \qquad j=1,\dots,N-1,\\
+w_N&=\beta.  
+\end{align*}
+
+
+
+\subsubsection{Jafngild framsetning á hneppinu} 
+Við lítum aftur á línulegu nálgunarjöfnurnar
+$$
+\dfrac{w_{j+1}-2w_j+w_{j-1}}{h^2}
+=p_j\dfrac{w_{j+1}-w_{j-1}}{2h}+q_jw_j+r_j.
+$$
+
+\pause
+Margföldum alla liði með $-h^2$ og röðum síðan óþekktu stærðunum
+vinstra mengin jafnaðarmerkisins. Þá fæst línulega jöfnuhneppið
+$$
+\big(-1-\tfrac 12 h p_j\big)w_{j-1}
++\big(2+h^2q_j\big) w_j
++\big(-1+\tfrac 12 h p_j\big)w_{j+1}
+=-h^2\, r_j
+$$
+fyrir $j=1,2,3,\dots,N-1$.
+
+
+
+\subsubsection{Línulega jöfnuhneppið á fylkjaformi} 
+$$
+  A\wv=\bv
+$$
+$$
+  A=\left[\begin{matrix}
+  1&0\\
+  l_1&d_1&u_1\\
+  &l_2&d_2&u_2\\
+  &&\cdot&\cdot&\cdot \\
+  &&&\cdot&\cdot&\cdot \\
+  &&&&\cdot&\cdot&\cdot \\
+  &&&&&l_{N-2}&d_{N-2}&u_{N-2} \\
+  &&&&&&l_{N-1}&d_{N-1}&u_{N-1} \\
+  &&&&&&&0&1
+  \end{matrix}\right]
+$$
+Þar sem stuðlarnir $l_j$, $d_j$ og $u_j$ eru gefnir með 
+\begin{align*}
+  l_j&=-1-\tfrac 12 hp_j\\
+d_j&=2+h^2q_j\\
+u_j&=-1+\tfrac 12 hp_j
+\end{align*}
+
+
+
+\subsubsection{Óþekktar stærðir og hægri hlið} 
+$$
+  \wv=\left[
+  \begin{matrix}
+w_0\\ w_1\\ w_2\\ \cdot\\ \cdot\\ \cdot\\ 
+w_{N-2}\\ w_{N-1}\\ w_N  
+\end{matrix}\right]
+\qquad \text{ og } \qquad 
+\bv=\left[
+\begin{matrix}
+\alpha \\ -h^2r_1\\ -h^2r_2\\ \cdot \\ \cdot\\ \cdot\\
+-h^2r_{N-2}\\ -h^2r_{N-1}\\ \beta
+\end{matrix}\right]
+$$
+Þetta jöfnuhneppi er leyst og þar með eru nálgunargildin fundin.
+
+
+
+\subsection{Línulegar jöfnur -- Blönduð jaðarskilyrði}
+%\subsection{8.2 Línulega jafna -- Blönduð jaðarskilyrði} 
+Við skulum gera ráð fyrir að rétta lausnin $y(x)$ uppfylli blandað
+jaðarskilyrði í $x=a$, 
+$$
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3.
+$$
+
+\pause
+Til þess að líkja eftir afleiðujöfnunni í punktinum $x=a$ þá hugsum
+við okkur að við bætum einum punkti $x_{-1}=a-h$ við og látum 
+$w_f$ tákna ímyndað gildi lausnarinnar í $x_{-1}$.  
+
+\pause
+\smallskip
+Svona punktur $x_{-1}$ utan við skiptinguna er kallaður 
+{\it felupunktur} við skiptinguna og ímyndað gildi $w_f$ í 
+felupunkti er kallað  {\it felugildi}.   \pause
+
+\smallskip
+Takið eftir því að lausnin er ekki til í felupunktinum, en við reiknum
+eins og $w_f$ sé gildi hennar þar. 
+
+\pause
+\smallskip
+Mismunajafnan sem líkir eftir afleiðujöfnunni í punktinum $x_0$  er 
+$$
+\big(-1-\tfrac 12 hp_0\big)w_f+\big(2+h^2 q_0\big)w_0
++\big(-1+\tfrac 12 hp_0\big)w_1=-h^2r_0
+$$
+
+\pause
+Mismunajafnan sem líkir eftir jaðarskilyrðinu er
+$$
+\alpha_1w_0+\alpha_2 \dfrac{w_1-w_f}{2h}=\alpha_3.
+$$
+
+
+
+\subsubsection{Felugildið leyst út} 
+Jafnan sem líkir eftir jaðarskilyrðinu er:
+$$
+\alpha_1w_0+\alpha_2 \dfrac{w_1-w_f}{2h}=\alpha_3.
+$$
+Út úr henni leysum við
+$$
+w_f=w_1-\dfrac{2h}{\alpha_2}\big(\alpha_3-\alpha_1w_0\big)
+$$
+
+\pause
+Við stingum síðan þessu gildi inn í jöfnuna sem líkir eftir
+afleiðujöfnunni 
+$$
+\big(-1-\tfrac 12 hp_0\big)w_f+\big(2+h^2 q_0\big)w_0
++\big(-1+\tfrac 12 hp_0\big)w_1=-h^2r_0
+$$
+
+\pause
+Útkoman verður:
+
+
+
+\subsubsection{Jöfnur fyrir gildin í endapunktum} 
+Fyrsta jafna hneppisins:
+$$
+\bigg(2+h^2q_0-\big(2+hp_0\big)h\dfrac{\alpha_1}{\alpha_2}\bigg)w_0
+-2w_1=-h^2r_0-\big(2+hp_0\big)h\dfrac{\alpha_3}{\alpha_2}.
+$$
+
+\pause
+\smallskip
+Með því að innleiða felupunkt  $x_{N+1}=b+h$ hægra megin við 
+skiptinguna, tilsvarandi
+felugildi $w_f$ og leysa saman tvær jöfnur, þá fáum við síðustu jöfnu
+hneppisins :
+$$
+-2w_{N-1}
++\bigg(2+h^2q_N+\big(2-hp_N\big)h\dfrac{\beta_1}{\beta_2}\bigg)w_N
+=-h^2r_N-\big(2-hp_N\big)h\dfrac{\beta_3}{\beta_2}
+$$
+
+\pause
+\smallskip
+Við erum því aftur komin með $(N+1)\times (N+1)$-jöfnuhneppi
+
+
+
+\subsubsection{Hneppið á fylkjaformi} 
+$$
+A\wv=\bv
+$$
+$$
+A=\left[\begin{matrix}
+a_{11}&a_{12}\\
+l_1&d_1&u_1\\
+&l_2&d_2&u_2\\
+&&\cdot&\cdot&\cdot \\
+&&&\cdot&\cdot&\cdot \\
+&&&&\cdot&\cdot&\cdot \\
+&&&&&l_{N-2}&d_{N-2}&u_{N-2} \\
+&&&&&&l_{N-1}&d_{N-1}&u_{N-1} \\
+&&&&&&&a_{N+1,N}&a_{N+1,N+1}
+\end{matrix}\right]
+$$
+Þar sem stuðlarnir $l_j$, $d_j$ og $u_j$ fyrir 
+$j=1,2,3\dots,N-1$ eru þeir sömu og áður.
+\begin{align*}
+  l_j&=-1-\tfrac 12 hp_j\\
+d_j&=2+h^2q_j\\
+u_j&=-1+\tfrac 12 hp_j
+\end{align*}
+
+
+
+\subsubsection{Fyrsta og síðasta lína hneppisins} 
+  \begin{align*}
+a_{11}&=
+\begin{cases}
+  1,&\text{Dirichlet í } x=a: \alpha_1\neq 0, \alpha_2=0,\\
+d_0&\text{Neumann í } x=a:  \alpha_1=0, \alpha_2\neq 0,\\
+d_0+2hl_0\alpha_1/\alpha_2&\text{Robin í } x=a:  \alpha_2\neq 0.
+\end{cases} \\
+a_{12}&=
+\begin{cases}
+  0,&\text{Dirichlet í } x=a: \alpha_1\neq 0, \alpha_2=0,\\
+-2,&\text{annars}.
+\end{cases}
+\\ 
+a_{N+1,N+1}&=
+\begin{cases}
+  1,&\text{Dirichlet í } x=b: \beta_1\neq 0, \beta_2=0,\\
+d_N&\text{Neumann í } x=b:  \beta_1=0, \beta_2\neq 0,\\
+d_N-2hu_N\beta_1/\beta_2&\text{Robin í } x=a:  \beta_2\neq 0.
+\end{cases} 
+\\
+a_{N+1,N}&=
+\begin{cases}
+  0,&\text{Dirichlet í } x=b: \beta_1\neq 0, \beta_2=0,\\
+-2&\text{annars}.
+\end{cases} 
+  \end{align*}
+
+
+
+\subsubsection{Hægri hlið hneppisins} 
+$$
+\bv=\left[
+\begin{matrix}
+b_1 \\ -h^2r_1\\ -h^2r_2\\ \cdot \\ \cdot\\ \cdot\\
+-h^2r_{N-2}\\ -h^2r_{N-1}\\ b_{N+1}
+\end{matrix}\right]
+$$
+
+$$
+b_{1}=
+\begin{cases}
+  \alpha=\alpha_3/\alpha_1,
+&\text{Dirichlet í } x=a: \alpha_1\neq 0, \alpha_2=0,\\
+-h^2r_0+2hl_0\alpha_3/\alpha_2
+&\text{Neumann í } x=a:  \alpha_1=0, \alpha_2\neq 0,\\
+-h^2r_0+2hl_0\alpha_3/\alpha_2&\text{Robin í } x=a:  \alpha_2\neq 0.
+\end{cases} 
+$$
+$$
+b_{N+1}=
+\begin{cases}
+  \beta=\beta_3/\beta_1,
+&\text{Dirichlet í } x=a: \beta_1\neq 0, \beta_2=0,\\
+-h^2r_N-2hu_N\beta_3/\beta_2&\text{Neumann í } x=a:  \beta_1=0, \beta_2\neq 0,\\
+-h^2r_N-2hu_N\beta_3/\beta_2&\text{Robin í } x=a:  \beta_2\neq 0.
+\end{cases} 
+$$
+
+
+
+\subsubsection{Samantekt} 
+Gildi lausnarinnar $y(x)$ á  línulega jaðargildisverkefninu
+  \begin{gather*}
+    y''=p(x)y'+q(x)y+r(x), \qquad a\leq x\leq b,\\
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3,\\
+\beta_1 y(b)+\beta_2y'(b)=\beta_3  
+  \end{gather*}
+í punktunum $x_j=a+jh$, þar sem $h=(b-a)/N$ og $j=0,\dots,N$,
+eru nálguð með
+$$
+w_j\approx y(x_j)=y_j
+$$ 
+
+\pause
+\smallskip
+Dálkvigurinn
+$$
+\wv=[w_0,w_1,\dots,w_N]^T
+$$
+er lausn á línulegu jöfnuhneppi
+$A\wv=\bv$.
+
+\smallskip
+Stuðlum $(N+1)\times(N+1)$ fylkisins $A$ og
+$(N+1)$-dálkvigursins $\bv$ hefur verið lýst hér að framan.
+
+
+
+%
+\frame{\frametitle{Kafli 8: Fræðilegar spurningar}
+  \begin{enumerate}
+  \item Hvað er átt við með því að lausn afleiðujöfnu á bili $[a,b]$
+    uppfylli {\it Dirichlet-jaðarskilyrði}? (Samheiti er {\it fallsjaðarskilyrði}.)
+  \item Hvað er átt við með því að lausn afleiðujöfnu á bili $[a,b]$
+    uppfylli {\it Neumann-jaðarskilyrði}? (Samheiti eru {\it
+      afleiðujaðarskilyrði}
+og {\it flæðisjaðarskilyrði}.)
+  \item Hvað er átt við með því að lausn afleiðujöfnu á bili $[a,b]$
+    uppfylli {\it Robin-jaðarskilyrði}? (Samheiti er {\it blandað jaðarskilyrði}.)
+  \item Hvernig er  nálgunarjafna fyrir 
+línulegu afleiðujöfnuna $y''=p(x)y'+q(x)y+r(x)$ í innri skiptipunkti
+á bilinu $[a,b]$ leidd út?
+  \item Hvernig eru {\it felupunktur}  og {\it felugildi} notuð til
+    þess að meðhöndla blandað jaðarskilyrði $\alpha_1y(a)+\alpha_2
+    y'(a)=\alpha_3$ í vinstri endapunkti bilsins $[a,b]$? 
+  \item Hvernig er {\it felupunktur}  og {\it felugildi} notuð til
+    þess að meðhöndla blandað jaðarskilyrði $\alpha_1y(a)+\alpha_2
+    y'(a)=\alpha_3$ í vinstri endapunkti bilsins $[a,b]$ og hvernig
+    verður nálgunarjafnan í punktinum $x=0$ þegar þetta er gert? 
+      \end{enumerate}
+}
+
+\end{document}
+%
+\frame{\frametitle{6.3 Ólínulegar jöfnur -- Fallsjaðargildi:}
+
+
+Nú erum við búin að leysa línulega jaðargildisverkefnið og
+snúum okkur því að almenna verkefninu:
+  \begin{gather*}
+    y''=f(x,y,y'), \qquad a\leq x\leq b,\\
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3,\\
+\beta_1 y(b)+\beta_2y'(b)=\beta_3.  
+  \end{gather*}
+
+\pause
+\smallskip
+Þar sem 
+$f:[a,b]\times R\times \R\to \R$
+er fall af þremur breytistærðum.  
+
+
+\pause
+\smallskip
+Forsendur okkar eru:
+  \begin{enumerate}
+  \item[(i)]  föllin $f$, $\partial f/\partial y$ og $\partial
+    f/\partial y'$ eru samfelld.
+  \item[(ii)]  $\partial f/\partial y>0$
+  \item[(iii)] $\big|\partial f/\partial y'\big|\leq L$
+  \end{enumerate}
+}
+
+
+%
+\frame{\frametitle{6.3 Skipt á afleiðum og mismunakvótum:} 
+
+Athugið að við notum táknin $y$ og $y'$ í tvennum tilgangi.\\  
+Annars vegar eru þetta tákn fyrir breytur og \\
+hins vegar fyrir réttu lausn verkefnisins $y=y(x)$ og \\
+afleiðu hennar $y'=y'(x)$.
+
+
+\pause
+\smallskip
+Að örðu leyti notum við nákvæmlega sama rithátt og við skilgreindum hér að
+framan. 
+
+
+\pause
+\smallskip
+Við lítum á afleiðujöfnuna í punktinum $x_j$, $j=1,\dots,N-1$.
+$$
+\big\{ y''(x)= f(x,y(x),y'(x))\big\}_{x=x_j}
+$$
+Við skiptum út afleiðum fyrir  mismunakvóta og höldum í skekkjuliðinn.  
+Þá er þessi sama jafna 
+$$
+\dfrac{y_{j+1}-2y_j+y_{j-1}}{h^2} +O(h^2)
+=f\big(x_j, y_j, \dfrac{y_{j+1}-y_{j-1}}{2h}+ O(h^2)\big).
+$$
+}
+
+
+%
+\frame{\frametitle{6.3 Nálgunarjafnan leidd út:} 
+
+Endurtökum réttu jöfnuna
+$$
+\dfrac{y_{j+1}-2y_j+y_{j-1}}{h^2} +O(h^2)
+=f\big(x_j,y_j,\dfrac{y_{j+1}-y_{j-1}}{2h}+ O(h^2)\big).
+$$
+
+
+\pause
+\medskip
+Til þess að stytta ritháttinn augnablik skulum við 
+við setja $a=(y_{j+1}-y_{j-1})/(2h)$ og tákna leifarliðinn
+í nálgun okkar á $y'(x_j)$ með $k$. 
+
+\smallskip
+Sem sagt
+$y'(x_j)=a+k$.  Þá gefur meðalgildissetningin að til er tala
+$\xi$ á milli $a$ og $a+k$, þannig að
+$$
+f(x_j,y_j,a+k)=f(x_j,y_j,a)+f'_{y'}(x_j,y_j,\xi)k
+$$
+
+
+\pause
+Nú er $k=O(h^2)$ og hlutafleiðan í hægri hliðinni er 
+takmörkuð samkvæmt forsendum okkar. Af því  leiðir að
+rétta lausnin uppfyllir
+$$
+\dfrac{y_{j+1}-2y_j+y_{j-1}}{h^2} 
+=f\big(x_j,y_j,\dfrac{y_{j+1}-y_{j-1}}{2h}\big)+ O(h^2).
+$$
+
+}
+
+%
+\frame{\frametitle{6.3 Nálgunarjafnan leidd út:} 
+
+Nú innfærum við nálgunargildin með því að skoða jöfnuna sem 
+rétta lausnin uppfyllir
+$$
+\dfrac{y_{j+1}-2y_j+y_{j-1}}{h^2} 
+=f\big(x_j,y_j,\dfrac{y_{j+1}-y_{j-1}}{2h}\big)+ O(h^2).
+$$
+fellum niður leifarliðinn og 
+setjum nálgunargildin $w_0,\dots,w_N$ í stað réttu 
+gildanna $y_0,\dots,y_N$:
+\pause
+$$
+\dfrac{w_{j+1}-2w_j+w_{j-1}}{h^2}
+=f\big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big)
+$$
+
+\pause
+Hér fáum við eina jöfnu fyrir sérhvern innri skiptipunkt
+$x_j$ með $j=1,\dots,N-1$.
+}
+
+
+%
+\frame{\frametitle{6.3 Staðalframsetning nálgunarjöfnu:} 
+
+
+Nálgunarjafnan er 
+$$
+\dfrac{w_{j+1}-2w_j+w_{j-1}}{h^2}
+=f\big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big)
+$$
+\pause
+Ef við margföldum með $-h^2$ og færum alla liði vinstra megin
+jafnaðarmerkisins, þá fáum við staðalform nálgunarjöfnunnar
+$$
+-w_{j-1}+2w_j-w_{j+1}+h^2
+f\big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big)=0
+$$
+\pause
+Táknum nú vinstri hliðina í jöfnunni með
+$g_j(\wv)$
+þar sem $\wv$ er dálkvigurinn
+$\wv=[w_0,\dots,w_N]^T$.
+
+
+
+\pause
+\smallskip
+Við erum komin með $N-1$ nálgunarjöfnu á stöðluðu formi
+$$
+g_j(\wv)=0, \qquad j=1,2,\dots,N-1.
+$$
+til þess að finna $N+1$
+nálgunargildi $w_0,\dots,w_N$ fyrir $y_0,\dots,y_N$. 
+
+
+\pause
+\smallskip
+Jaðarskilyrðin gefa þær tvær jöfnur sem upp á vantar:
+}
+
+%
+\frame{\frametitle{6.3 Jaðarskilyrði:} 
+
+
+
+Almenna jaðarskilyrðið í vinstri endapunkti $x=a$ er
+$$
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3.
+$$
+Ef $\alpha_2=0$ þá höfum við Dirichlet-jaðarskilyrði
+$$
+y_0=y(a)=\alpha_3/\alpha_1.
+$$
+Við skilgreinum í þessu tilfelli
+$$
+g_0(\wv)=w_0-\alpha_3/\alpha_1.
+$$
+Jaðarskilyrðið er uppfyllt þá og því aðeins að
+$g_0(\wv)=0$.
+
+
+\pause
+\smallskip
+Almenna jaðarskilyrðið í hægri endapunkti $x=b$ er
+$$
+\beta_1 y(b)+\beta_2y'(b)=\beta_3.  
+$$
+Ef það er Dirichlet-skilyrði, $\beta_2=0$, þá fáum við jöfnu númer 
+$N+1$, 
+$$
+g_N(\wv)=w_N-\beta_3/\beta_1=0.
+$$ 
+}
+
+
+%
+\frame{\frametitle{6.3 Ólínulegt jöfnuhneppi:} 
+
+Við höfum nú séð að nálgunargildin $\wv=[w_0,\dots,w_N]^T$ fyrir 
+jaðargildisverkefnið með Dirichlet-jaðarskilyrði í báðum endapunktum 
+jöfnuhneppi uppfylla ólínulega hneppið
+$$
+\Gv(\wv)=\ov
+$$
+þar sem $\Gv(\wv)=[g_0(\wv),\dots,g_N(\wv)]^T$.
+
+\pause
+\smallskip
+Almennu jaðarskilyrðin eru meðhöndluð með nákvæmlega sama hætti 
+og  hér að framan.  Nú förum við í gegnum það:
+
+}
+
+%
+\frame{\frametitle{6.3 Meðhöndlun á blönduðu jaðarskilyrði í $x=a$:} 
+
+
+Við skulum gera ráð fyrir að rétta lausnin $y(x)$  á almennu
+ólínulegu jöfnuni 
+$$
+y''=f(x,y,y')
+$$
+uppfylli blandað jaðarskilyrði í $x=a$, 
+$$
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3.
+$$
+með  $\alpha_2\neq 0$.
+
+\pause
+\smallskip
+Til þess að líkja eftir afleiðujöfnunni í punktinum $x=a$ þá 
+setjum við inn  {\it felupunktinn} $x_{-1}=a-h$ og látum 
+$w_f$ vera tilsvarandi {\it felugildi í honum}.  
+
+\pause
+\smallskip
+Mismunajafnan sem líkir eftir afleiðujöfnunni í punktinum $x_0$  er 
+$$
+-w_f+2w_0-w_1+h^2
+f\big(x_0,w_0,\dfrac{w_1-w_f}{2h}\big)=0
+$$
+\pause
+Mismunajafnan sem líkir eftir jaðarskilyrðinu er
+$$
+\alpha_1w_0+\alpha_2 \dfrac{w_1-w_f}{2h}=\alpha_3.
+$$
+}
+
+
+%
+\frame{\frametitle{6.3 Felugildið leyst út:} 
+
+
+Jafnan sem líkir eftir jaðarskilyrðinu er:
+$$
+\alpha_1w_0+\alpha_2 \dfrac{w_1-w_f}{2h}=\alpha_3.
+$$
+\pause
+Út úr henni leysum við
+$$
+w_f=w_1-2h\dfrac{\alpha_3}{\alpha_2}+
+2h\dfrac{\alpha_1}{\alpha_2}w_0
+\quad \text{ og } \quad
+\dfrac{w_1-w_f}{2h}=
+\dfrac{\alpha_3-\alpha_1w_0}{\alpha_2} 
+$$
+
+
+\pause
+Við stingum síðan þessu gildi inn í jöfnuna sem líkir eftir
+afleiðujöfnunni 
+$$
+-w_f+2w_0-w_1+h^2
+f\big(x_0,w_0,\dfrac{w_1-w_f}{2h}\big)=0
+$$
+og útkoman verður:
+$$
+g_0(\wv)=2\big(1-h\dfrac{\alpha_1}{\alpha_2}\big)w_0-2w_1
++h^2
+f\big(x_0,w_0,\dfrac{\alpha_3-\alpha_1w_0}{\alpha_2}\big)
++2h\dfrac{\alpha_3}{\alpha_2} =0
+$$
+}
+
+
+%
+\frame{\frametitle{6.3 Meðhöndlun á blönduðu jaðarskilyrði í $x=b$:} 
+
+
+Eins er farið að ef rétta lausnin $y(x)$  á almennu
+ólínulegu jöfnuni 
+$$
+y''=f(x,y,y')
+$$
+uppfyllir blandað jaðarskilyrði í $x=b$, 
+$$
+\beta_1y(a)+\beta_2 y'(a)=\beta_3.
+$$
+með  $\beta_2\neq 0$.
+
+\smallskip
+Við innleiðum þá felupunkt hægra megin við bilið í 
+$x_{N+1}=b+h$ og tilsvarandi felugildi.  Með nákvæmlega sams konar
+reikningi og við vorum að fara í gegnum fáum við  síðustu jöfnuna í
+hneppið 
+$$
+g_N(\wv)=-2w_{N-1}+2\big(1+h\dfrac {\beta_1}{\beta_2}\big)w_N
++h^2f\big(x_N,w_N,\dfrac{\beta_3-\beta_1w_N}{\beta_2}\big)
+-2h\dfrac{\beta_3}{\beta_2}
+$$
+}
+%
+
+%
+\frame{\frametitle{Samantekt:} 
+
+Gildi lausnarinnar $y(x)$ á  almenna  jaðargildisverkefninu
+  \begin{gather*}
+    y''=f(x,y,y'), \qquad a\leq x\leq b,\\
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3,\\
+\beta_1 y(b)+\beta_2y'(b)=\beta_3  
+  \end{gather*}
+í punktunum $x_j=a+jh$, þar sem $h=(b-a)/N$ og $j=0,\dots,N$,
+eru nálguð með
+$$
+w_j\approx y(x_j)=y_j
+$$ 
+
+
+\pause
+\smallskip
+Dálkvigurinn
+$$
+\wv=[w_0,w_1,\dots,w_N]^T
+$$
+er lausn á ólínulegu jöfnuhneppi
+$$\Gv(\wv)=[g_0(\wv),\dots,g_N(\wv)]^T=\ov$$
+þar sem 
+$$
+g_j(\wv)=-w_{j-1}+2w_j-w_{j+1}+h^2
+f\big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big)
+$$
+fyrir $j=1,\dots,N-1$.  
+}
+
+%
+\frame{\frametitle{Jaðarskilyrðin í vinstri endapunkti $x=a$ 
+ákvarða $g_0$:} 
+
+Ef við höfum Dirichlet-jaðarskilyrði, 
+$\alpha_2=0$ og setjum $\alpha=\alpha_3/\alpha_1$, þá fáum við
+$$
+g_0(\wv)=w_0-\alpha_3/\alpha_1=w_0-\alpha.
+$$
+
+\pause
+Ef við höfum Robin-jaðarskilyrði, 
+$\alpha_2\neq 0$, þá fáum við
+$$
+g_0(\wv)=2\big(1-h\dfrac{\alpha_1}{\alpha_2}\big)w_0-2w_1
++h^2
+f\big(x_0,w_0,\dfrac{\alpha_3-\alpha_1w_0}{\alpha_2}\big)
++2h\dfrac{\alpha_3}{\alpha_2} =0
+$$
+
+\pause
+Ef við höfum Neumann-jaðarskilyrði, sem er  sértilfellið 
+$\alpha_1=0$ og setjum $\alpha=\alpha_3/\alpha_2$, þá verður fallið
+$$
+g_0(\wv)=2w_0-2w_1
++h^2
+f\big(x_0,w_0,\alpha\big)+2h\alpha
+$$
+}
+%
+\frame{\frametitle{Jaðarskilyrðin í hægri endapunkti $x=b$ 
+ákvarða $g_N$:} 
+
+Ef við höfum Dirichlet-jaðarskilyrði, 
+$\beta_2=0$ og setjum $\beta=\beta_3/\beta_1$, þá fáum við
+$$
+g_N(\wv)=w_N-\beta_3/\beta_1=w_N-\beta.
+$$ 
+\pause
+Ef við höfum Robin-jaðarskilyrði, 
+$\beta_2\neq 0$, þá fáum við
+$$
+g_N(\wv)=-2w_{N-1}+2\big(1+h\dfrac {\beta_1}{\beta_2}\big)w_N
++h^2f\big(x_N,w_N,\dfrac{\beta_3-\beta_1w_N}{\beta_2}\big)
+-2h\dfrac{\beta_3}{\beta_2}.
+$$
+
+\pause
+Ef við höfum Neumann-jaðarskilyrði, sem er  sértilfellið 
+$\beta_1=0$ og setjum $\beta=\beta_3/\beta_2$, þá verður fallið
+$$
+g_N(\wv)=-2w_{N-1}+2w_N+h^2f\big(x_N,w_N,\beta\big)-2h\beta.
+$$
+}
+
+%
+\frame{\frametitle{6.4 Úrlausn á ólínulegum jöfnum:}
+
+Við höfum séð að ólínulega jaðargildisverkefnið   
+\begin{gather*}
+    y''=f(x,y,y'), \qquad a\leq x\leq b,\\
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3,\\
+\beta_1 y(b)+\beta_2y'(b)=\beta_3.  
+  \end{gather*}
+gefur af sér ólínulegt jöfnuhneppi  $\Gv(\wv)=\ov$ þar sem óþekktu 
+stærðirnar $\wv=[w_0,\dots,w_N]^T$ eru nálgunargildi lausnarinnar $y(x)$
+í punktunum $x_0,\dots,x_N$.  
+Lausn ólínulega jöfnuhneppisins er nú nálguð með aðferð Newtons.
+
+
+
+\smallskip
+Byrjað er að giska á lausn $\wv^{(0)}$ og síðan er nálgunarrunan
+$\wv^{(n)}$ reiknuð út með ítrekun á venjulegan máta
+$$
+\wv^{(n+1)}=\wv^{(n)} +\Delta \wv^{(n)} 
+$$
+þar sem fylgt er reikniritinu fyrir aðferð Newtons og 
+$\Delta \wv^{(n)}$ er leyst úr úr jöfnuheppinu
+$$
+J_{\Gv}(\wv^{(n)}) \Delta \wv^{(n)}= -\Gv(\wv^{(n)}).
+$$  
+}
+
+%
+\frame{\frametitle{6.4 Jacobi-fylki vörpunarinnar $\Gv$:}
+
+Jacobi-fylkið  $J_{\Gv}(\wv)$ er af stærðinni $(N+1)\times (N+1)$,
+$$
+J_{\Gv}(\wv)=\big[ J_{m,k}(\wv)\big]_{m,k=1}^{N+1}
+$$ 
+Línurnar $m=2,\dots,N$ eru óháðar jaðarskilyrðunum, því
+í þeim er $m=j+1$ og tilsvarandi hnitafall er 
+$$
+g_j(\wv)=-w_{j-1}+2w_j-w_{j+1}+h^2f \big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big)
+$$
+Þetta segir okkur að það eru aðeins þrjú stök í línu $m$ sem eru
+frábrugðin $0$.
+
+}
+
+%
+\frame{\frametitle{6.3 Útreikningur á Jacobi-fylki:}
+
+Við sáum að hnitafall númer $m=j+1$ í $\Gv$ er
+$$
+g_j(\wv)=-w_{j-1}+2w_j-w_{j+1}+h^2f \big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big)
+$$
+Þetta segir að öll stökin í línu $m$ í $J_{\Gv}(\wv)$ eru $0$ nema
+þrjú 
+\begin{align*}
+  J_{m,m-1}(\wv)&=\dfrac{\partial g_j}{\partial w_{j-1}}(\wv)
+=-1-\tfrac 12 h\dfrac{\partial f}{\partial
+  y'}\big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big),\\ 
+  J_{m,m}(\wv)&=\dfrac{\partial g_j}{w_{j}}(\wv)
+=2+ h^2\dfrac{\partial f}{\partial
+  y}\big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big),\\ 
+  J_{m,m+1}(\wv)&=\dfrac{\partial g_j}{\partial w_{j+1}}(\wv)
+=-1+\tfrac 12 h\dfrac{\partial f}{\partial
+  y'}\big(x_j,w_j,\dfrac{w_{j+1}-w_{j-1}}{2h}\big).
+\end{align*}
+}
+
+%
+\frame{\frametitle{Fyrsta línan í Jacobi-fylkinu  --  Dirichlet-jaðarskilyrði:}
+
+Ef við höfum Dirichlet-jaðarskilyrði í $x=a$, þá er tilsvarandi
+hnitafall 
+$$
+g_0(\wv)= w_0-\alpha.
+$$
+Þetta segir okkur að öll stökin í fyrstu línu $J_{\Gv}$ eru $0$ nema
+eitt
+$$
+J_{1,1}(\wv)=\dfrac{\partial g_0}{\partial w_0}=1.
+$$
+
+}
+
+%
+\frame{\frametitle{Fyrsta línan í Jacobi-fylkinu  --  Robin-jaðarskilyrði:}
+
+Ef við höfum Robin-jaðarskilyrði í $x=a$, 
+$$
+\alpha_1y(a)+\alpha_2 y'(a)=\alpha_3,
+$$
+með $\alpha_2\neq 0$, þá er tilsvarandi
+hnitafall 
+$$
+g_0(\wv)=2\big(1-h\dfrac{\alpha_1}{\alpha_2}\big)w_0-2w_1
++h^2
+f\big(x_0,w_0,\dfrac{\alpha_3-\alpha_1w_0}{\alpha_2}\big)
++2h\dfrac{\alpha_3}{\alpha_2}
+$$
+
+Þetta segir okkur að öll stökin í fyrstu línu $J_{\Gv}$ eru $0$ nema
+tvö
+\begin{align*}
+J_{1,1}(\wv)&=\dfrac{\partial g_0}{\partial w_0}
+=2\bigg(1-h\dfrac{\alpha_1}{\alpha_2}\bigg)
++h^2\dfrac{\partial f}{\partial y} \big(x_0,w_0,\dfrac{\alpha_3-\alpha_1
+  w_0}{\alpha_2} \big)\\
+& -h^2\dfrac {\alpha_1}{\alpha_2} \dfrac{\partial
+  f}{\partial y'} \big( x_0,w_0,\dfrac{\alpha_3-\alpha_1
+  w_0}{\alpha_2} \big)
+\\
+J_{1,2}(\wv)&=\dfrac{\partial g_0}{\partial w_1}=-2  
+\end{align*}
+
+}
+
+%
+\frame{\frametitle{6.4 Síðasta línan -- Dirichlet-jaðarskilyrði:}
+
+
+Ef við höfum Dirichlet-jaðarskilyrði í $x=b$, þá er tilsvarandi
+hnitafall 
+$$
+g_N(\wv)= w_N-\beta.
+$$
+Þetta segir okkur að öll stökin í $N+1$ línu fylkisins $J_{\Gv}$ eru $0$ nema
+eitt
+$$
+J_{N+1,N+1}(\wv)=\dfrac{\partial g_N}{\partial w_N}=1.
+$$
+}
+
+%
+\frame{\frametitle{6.4 Síðasta línan -- Robin-jaðarskilyrði:}
+
+Ef við höfum Robin-jaðarskilyrði, 
+$\beta_2\neq 0$, þá fáum við að $N+1$ hnitafallið í $\Gv$ er
+$$
+g_N(\wv)=-2w_{N-1}+2\big(1+h\dfrac {\beta_1}{\beta_2}\big)w_N
++h^2f\big(x_N,w_N,\dfrac{\beta_3-\beta_1w_N}{\beta_2}\big)
+-2h\dfrac{\beta_3}{\beta_2}.
+$$
+Af því leiðir að öll stökin í $N+1$ línu fylkisins $J_{\Gv}$ eru $0$ nema
+tvö
+\begin{align*}
+J_{N+1,N}(\wv)&=\dfrac{\partial g_{N}}{\partial w_{N-1}}=-2 \\ 
+J_{N+1,N+1}(\wv)&=\dfrac{\partial g_N}{\partial w_N}
+=2\bigg(1+h\dfrac{\beta_1}{\beta_2}\bigg)
++h^2\dfrac{\partial f}{\partial y} \big(x_N,w_N,\dfrac{\beta_3-\beta_1
+  w_N}{\beta_2} \big)\\
+& -h^2\dfrac {\beta_1}{\beta_2} \dfrac{\partial
+  f}{\partial y'} \big( x_N,w_N,\dfrac{\beta_3-\beta_1
+  w_N}{\beta_2} \big)
+\end{align*}
+}
+
+%
+\frame{\frametitle{6.4  $J_{\Gv}$ er þríhornalínufylki:}
+
+Út úr þessum reikningum sést að fylkið $J_{\Gv}$ er af sömu gerð og
+fylkið sem fæst úr úr línulega verkefninu
+$$
+J_{\Gv}(\wv)=\left[\begin{matrix}
+J_{11}&J_{12}\\
+l_1&d_1&u_1\\
+&l_2&d_2&u_2\\
+&&\cdot&\cdot&\cdot \\
+&&&\cdot&\cdot&\cdot \\
+&&&&\cdot&\cdot&\cdot \\
+&&&&&l_{N-2}&d_{N-2}&u_{N-2} \\
+&&&&&&l_{N-1}&d_{N-1}&u_{N-1} \\
+&&&&&&& J_{N+1,N}&J_{N+1,N+1}
+\end{matrix}\right]
+$$
+Við höfum  hér að framan skrifað upp  formúlur fyrir öllum stökum þess.
+Eins og áður hefur komið fram nefnast fylgi af þessari gerð 
+{\it þríhornalínufylki}.  Það er tiltölulega auðvelt að
+leysa jöfnuhneppið 
+$$
+J_{\Gv}(\wv^{(n)})\Delta\wv^{(n)}=-\Gv(\wv^{(n)})
+$$
+með  sérsniðnu reikniriti fyrir Gauss-eyðingu.
+}
+
+
+
+%
+\frame{\frametitle{Kafli 6: Fræðilegar spurningar:}
+
+  \begin{enumerate}
+  \item Hvað er átt við með því að lausn afleiðujöfnu á bili $[a,b]$
+    uppfylli {\it Dirichlet-jaðarskilyrði}? (Samheiti er {\it fallsjaðarskilyrði}.)
+  \item Hvað er átt við með því að lausn afleiðujöfnu á bili $[a,b]$
+    uppfylli {\it Neumann-jaðarskilyrði}? (Samheiti eru {\it
+      afleiðujaðarskilyrði}
+og {\it flæðisjaðarskilyrði}.)
+  \item Hvað er átt við með því að lausn afleiðujöfnu á bili $[a,b]$
+    uppfylli {\it Robin-jaðarskilyrði}? (Samheiti er {\it blandað jaðarskilyrði}.)
+  \item Hvernig er  nálgunarjafna fyrir 
+línulegu afleiðujöfnuna $y''=p(x)y'+q(x)y+r(x)$ í innri skiptipunkti
+á bilinu $[a,b]$ leidd út?
+  \item Hvernig eru {\it felupunktur}  og {\it felugildi} notuð til
+    þess að meðhöndla blandað jaðarskilyrði $\alpha_1y(a)+\alpha_2
+    y'(a)=\alpha_3$ í vinstri endapunkti bilsins $[a,b]$? 
+  \item Hvernig er  nálgunarjafna fyrir 
+ólínulegu afleiðujöfnuna $y''=f(x,y,y')$ í innri skiptipunkti
+á bilinu $[a,b]$ leidd út?
+  \end{enumerate}
+}
+
+%
+\frame{\frametitle{Kafli 6: Fræðilegar spurningar:}
+
+
+  \begin{enumerate}
+
+  \item[7.] Hvernig er {\it felupunktur}  og {\it felugildi} notuð til
+    þess að meðhöndla blandað jaðarskilyrði $\alpha_1y(a)+\alpha_2
+    y'(a)=\alpha_3$ í vinstri endapunkti bilsins $[a,b]$ og hvernig
+    verður nálgunarjafnan í punktinum $x=0$ þegar þetta er gert? 
+  \item [8.]  Ólínulega jaðargildisverkefnið á bilinu $[a,b]$ með
+    ólínulegri afleiðujöfnu  $y''=f(x,y,y')$ gefur af sér 
+ ólínulega jöfnu fyrir nálgunargildin $\Gv(\wv)=\ov$.  Lýsið því
+ hvernig lausn þessarar jöfnu er nálguð.
+    \end{enumerate}
+}
+\end{document}

@@ -1,0 +1,74 @@
+\def \kaflanr {25}
+\lecture[\kaflanr]{\kaflanr. Sundurleitnisetningin II}{lecture-text}
+\date{30.~mars 2015}
+\newcounter{mycount}
+\refstepcounter{mycount}
+
+\begin{document}
+
+\subsection{}
+	\maketitle
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Skilgreining \rtask{}}\stepcounter{mycount}
+ Flötur er sagður reglulegur ef hann hefur snertiplan í hverjum punkti.  
+
+Flötur $\cal S$ sem er búinn til með því að taka endanlega marga reglulega fleti ${\cal S}_1, \ldots, {\cal S}_n$ og líma þá saman á jöðrunum kallast {\em reglulegur á köflum}. 
+
+\medskip
+Þegar talað um einingarþvervigrasvið á slíkan flöt þá er átt við
+vigursvið sem er skilgreint á fletinum nema í þeim punktum þar sem
+fletir ${\cal S}_i$ og  ${\cal S}_j$ hafa verið límdir saman.  Í
+slíkum punktum þarf flöturinn ekki að hafa snertiplan og því ekki
+heldur þvervigur.
+
+\medskip
+Flötur er sagður {\em lokaður} ef hann er yfirborð svæðis í $\R^3$
+(t.d. er kúluhvel lokaður flötur).
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Setning \rtask{} (Sundurleitnisetningin, Setning Gauss) }
+ Látum $\cal S$ vera lokaðan flöt sem er reglulegur á köflum.  Táknum með $D$ rúmskikann sem $\cal S$ umlykur.  Látum $\Nv$ vera einingarþvervigrasvið á $\cal S$   sem vísar út úr $D$.  Ef $\Fv$ er samfellt diffranlegt vigursvið skilgreint á $D$ þá er 
+$$\thrint_D \dive \Fv\,dV=\tvint_{\cal S} \Fv\cdot\Nv\,dS.$$
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Skilgreining \rtask{}}
+ Látum $D$ vera rúmskika í $\R^3$.  Segjum að rúmskikinn $D$ sé $z$-{\em einfaldur} ef til er svæði $D_z$ í planinu og samfelld föll $f$ og $g$ skilgreind á $D_z$ þannig að 
+$$D=\{(x,y,z)\mid (x,y)\in D_z\mbox{ og }f(x,y)\leq z\leq g(x,y)\}.$$
+Það að rúmskiki sé $x$- eða $y$-einfaldur er skilgreint á sama hátt. 
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Setning \rtask{}}
+Látum $\cal S$ vera lokaðan flöt sem er reglulegur á köflum.  Táknum með $D$ rúmskikann sem $\cal S$ umlykur.  Látum $\Nv$ vera einingarþvervigrasvið á $\cal S$   sem vísar út úr $D$.  Ef $\Fv$ er samfellt diffranlegt vigursvið skilgreint á $D$ og $\phi$ diffranlegt fall skilgreint á $D$ þá er
+$$\thrint_D\curl \Fv\,dV=-\tvint_{\cal S}\Fv\times\Nv\,dS,$$
+og 
+$$\thrint_D\grad\phi\,dV=\tvint_{\cal S}\phi\Nv\,dS.$$
+Athugið að útkomurnar úr heildunum eru vigrar.
+
+
+
+
+
+\end{document}

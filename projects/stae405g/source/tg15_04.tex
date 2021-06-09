@@ -1,0 +1,376 @@
+\lecture[4]{Kafli 4: Eigingildisverkefni}{lecture-text}
+\date{10.~apríl 2015}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\section*{}
+\begin{frame}{Yfirlit}
+\begin{block}{Kafli 4: Eigingildisverkefni}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}\hline
+Nr. &Viðfangsefni & Bls. & Glærur\\
+\hline
+4.0 & Eigingildi og eiginvigrar & 261-264 & 3-5\\
+4.1 & Veldaaðferð & 265-280 & 6-12\\
+4.2 & Öfug veldaaðferð & 281-295 & 13-17\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{block}
+\end{frame}
+
+\section*{4.0 Eigingildi og eiginvigrar}
+
+\begin{frame}{4. Nálgun á eigingildum og eiginvigrum} 
+\begin{block}{Skilgreining}
+Látum $A$ vera $n\times n$ fylki.  Munum að  $\lambda\in \C$ nefnist
+{\it eigingildi} fylkisins $A$ ef til er $\vv\in \C^n\setminus\{\ov\}$ 
+þannig að 
+$$
+A\vv=\lambda\vv.
+$$
+\pause
+Vigurinn $\vv$ nefnist þá {\it eiginvigur } fylkisins $A$ og við
+segjum að hann svari til eigingildisins $\lambda$.
+\end{block}
+
+\pause
+\begin{block}{Athugasemd}
+Eigingildi fylkisins $A$ eru nákvæmlega núllstöðvar kennimargliðunnar
+$$
+p_A(z)=\det(zI-A), \qquad z\in \C.
+$$
+\end{block}
+\pause
+
+\begin{block}{Athugasemd}
+Ef $\vv$ er eiginvigur fylkisins $A$, þá er $\alpha \vv$ einnig
+eiginvigur fyrir sérhvert $\alpha\in \C\setminus \{\ov\}$. 
+\end{block}
+\end{frame}
+
+\begin{frame}{4.0 Gróf staðsetning á eigingildum} 
+\begin{block}{Skífusetning Gerschgorins}  
+Skilgreinum
+$$
+r_i=\sum\limits_{{\substack{j=1 \\ j\neq i}}}^n|a_{ij}|,
+$$
+sem er summan af tölugildum stakanna í línu $i$ {\it utan  hornalínunnar} \pause
+og látum
+$$
+C_i=\{z\in \C\,;\, |z-a_{ii}|\leq r_i\}
+$$ 
+tákna skífuna með miðju í $a_{ii}$ og geislann $r_i$. \pause 
+Þá gildir
+\begin{enumerate}
+\item[(i)] Öll eigingildi $A$ liggja í sammengi skífanna $C_i$.
+\pause
+\item[(ii)] Ef $k$ af skífunum $C_i$ mynda samanhangandi svæði $R$ 
+í $\C$ sem er sundlægt við hinar $n-k$ skífurnar, þá inniheldur $R$ 
+nákvæmlega $k$ eigingildi.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{4.0 Eiginvigragrunnar} 
+Nokkrar staðreyndir um eigingildi og eiginvigra:\pause
+\begin{enumerate}
+\item[(i)]  Eiginvigrar sem svara til ólíkra eigingilda eru línulega
+  óháðir. 
+\pause
+\item[(ii)] Eiginvigrar sem svara til eins ákveðins eigingildis 
+$\lambda$ spanna hlutrúm í $\C^n$.
+\pause
+\item[(iii)] Við segjum að fylkið $A$ sé \emph{hornalínugeranlegt} ef
+  til eru eigingildi $\lambda_1,\lambda_2,\dots,\lambda_n$ og
+  tilsvarandi eiginvigrar $\vv_1,\vv_2,\dots,\vv_n$ sem mynda grunn í
+  $\R^n$.\pause Þá er hægt að skrifa 
+$$
+A=T\Lambda T^{-1}
+$$
+þar sem $\Lambda$ er hornalínufylki með eigingildin
+$\lambda_1,\dots,\lambda_n$ á hornalínunni og $T$ er $n\times n$ fylki
+þannig að dálkur nr.~$k$ í því samanstendur af hnitum $\vv_k$ miðað
+við staðalgrunninn í $\R^n$.
+\pause
+\item[(iv)] Ef fylkið $A$ er samhverft, þá er það hornalínugeranlegt.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{4.1 Veldaaðferð} 
+Hugsum okkur nú að við $A$ sé hornalínugeranlegt og að við röðum 
+eigingildunum á hornalínu $\Lambda$ í minnkandi röð eftir tölugildi
+$$
+|\lambda_1|\geq |\lambda_2|\geq \cdots\geq |\lambda_n|
+$$
+\pause
+Tökum einhvern vigur $\xv^{(0)}$ og lítum á liðun hans í eiginvigra
+$$
+\xv^{(0)}=\alpha_1\vv_1+\cdots+\alpha_n\vv_n
+$$
+\pause
+Skilgreinum síðan rununa $\big(\xv^{(m)}\big)$ með ítruninni
+$$
+\xv^{(m+1)}=A\xv^{(m)}.
+$$
+\end{frame}
+
+\begin{frame}{4.1 Veldaaðferð} 
+Við fáum þá 
+\begin{align*}
+\xv^{(1)} =A\xv^{(0)}&=\alpha_1A\vv_1+\cdots+\alpha_nA\vv_n\\
+&=\alpha_1\lambda_1\vv_1+\cdots+\alpha_n\lambda_n\vv_n,
+\end{align*}
+\pause
+\begin{align*}
+\xv^{(2)}=A\xv^{(1)}&=\alpha_1\lambda_1A\vv_1+\cdots+\alpha_n\lambda_nA\vv_n,\\
+&=\alpha_1\lambda_1^2\vv_1+\cdots+\alpha_n\lambda_n^2\vv_n\\ 
+& \qquad  \vdots\qquad  \vdots \qquad \vdots\\
+\xv^{(m)}&=\alpha_1\lambda_1^m\vv_1+\cdots+\alpha_n\lambda_n^m\vv_n
+\end{align*}
+\pause
+Síðasti vigurinn er 
+$$
+\xv^{(m)}=  \lambda_1^m 
+\big(\alpha_1\vv_1+(\lambda_2/\lambda_1)^m\alpha_2\vv_+\cdots+
+(\lambda_n/\lambda_1)^m \alpha_n\vv_n\big)
+$$
+\end{frame}
+
+
+\begin{frame}{4.1 Veldaaðferð} 
+Við vorum komin með 
+$$
+\xv^{(m)}=  \lambda_1^m 
+\big(\alpha_1\vv_1+(\lambda_2/\lambda_1)^m\alpha_2\vv_2+\cdots+
+(\lambda_n/\lambda_1)^m \alpha_n\vv_n\big)
+$$
+\pause
+Hnit númer $i$ í þessum vigri er: 
+$$
+x_i^{(m)}=  \lambda_1^m 
+\big(\alpha_1v_{1,i}+(\lambda_2/\lambda_1)^m\alpha_2v_{2,i}+\cdots+
+(\lambda_n/\lambda_1)^m \alpha_nv_{n,i}\big)
+$$
+\pause
+Hugsum okkur nú að $|\lambda_1|>|\lambda_2|$. Þá fæst:
+$$
+\dfrac{x_i^{(m)}}{x_i^{(m-1)}}
+=
+\dfrac{\lambda_1^m\big(\alpha_1v_{1,i}+O((\lambda_2/\lambda_1)^m)\big)}
+{\lambda_1^{m-1}\big(\alpha_1v_{1,i}+O((\lambda_2/\lambda_1)^{m-1})\big)}
+$$
+\pause
+Ef við höfum $\alpha_1v_{1,i}\neq 0$, þá er niðurstaðan
+$$
+\dfrac{x_i^{(m)}}{x_i^{(m-1)}}
+=\lambda_1
+\dfrac{\big(1+O((\lambda_2/\lambda_1)^m)\big)}
+{\big(1+O((\lambda_2/\lambda_1))^{m-1}\big)} \to \lambda_1
+\quad \text{ þegar }  \quad m\to \infty.
+$$\end{frame}
+
+\begin{frame}{4.1 Veldaaðferð} 
+Skoðum aftur
+$$
+\xv^{(m)}=  \lambda_1^m 
+\big(\alpha_1\vv_1+(\lambda_2/\lambda_1)^m\alpha_2\vv_2+\cdots+
+(\lambda_n/\lambda_1)^m \alpha_n\vv_n\big)
+$$
+\pause
+Ef $|\lambda_1|>|\lambda_2|$, þá gildir fyrir $j > 1$ að  
+$(\lambda_j/\lambda_1)^m \to 0$ þegar $m \to \infty$ og \pause
+$$
+\lim_{m\to \infty} \frac{\xv^{(m)}}{\lambda_1^m} = \alpha_1 \vv_1.
+$$
+Þannig að ef $\xv^{(0)}$ var valinn í upphafi þannig að $\alpha_1 \neq 0$,
+þá skilar þetta eiginvigrinum $\alpha_1\vv_1$ fyrir eigingildið $\lambda_1$.
+
+\end{frame}
+
+
+
+\begin{frame}{4.1 Reiknirit til þess að ákvarða stærsta eigingildi fylkis} 
+Þegar við reiknum $\xv^{m}$ eins og hér að framan þá er ekki ólíklegt að 
+við lendum í undir- eða yfirflæðisvillum ef lengd $\xv$ (skv.~einhverjum staðli)
+stefnir á 0 eða $+\infty$. Til þess að ráða bót á þessu þá stöðlum við vigurinn
+í hverju skrefi á eftirfarandi hátt.
+
+\pause
+
+\smallskip
+Við veljum $\xv^{(0)}$ með einhverjum hætti og skilgreinum síðan
+$$
+\yv^{(m)}=A\xv^{(m-1)}, \qquad \pause \text{ og svo }
+\xv^{(m)}=\dfrac{\yv^{(m)}}{y_{p_m}^{(m)}} \qquad 
+$$
+\pause
+þar sem $p_m$ er númerið á því hniti í $\yv^{(m)}$ sem hefur stærst
+tölugildi, sem þýðir að það hnit $p_m$ uppfyllir
+$$
+|y_{p_m}^{(m)}|=\|\yv^{(m)}\|_\infty=\max_{1\leq j\leq n}|y_j^{(m)}|.
+$$
+\pause
+Ef mörg númer uppfylla þetta skilyrði, þá tökum við bara $p_m$ sem
+lægsta gildið á $j$ þar sem jafnaðarmerki gildir \pause
+(enda skiptir það ekki máli fyrir skilgreininguna á $\xv^{(m)}$).
+\end{frame}
+
+\begin{frame}{4.1 Samleitnin} 
+Nú kemur í ljós að 
+$y_{p_{m-1}}^{(m)}$ stefnir á $\lambda_1$. 
+Auk þess stefnir $\xv^{(m)}$ á eiginvigur sem svarar til $\lambda_1$ og hefur 
+lengdina $1$ í $l_\infty$ staðlinum.
+
+\pause
+\smallskip
+Í útreikningum skilgreinum við því rununa
+$\lambda^{(m)}=y_{p_{m-1}}^{(m)}$.
+Við gefum okkur síðan þolmörk á skekkju $TOL$ og reiknum úr runurnar
+þar til eitt af stoppskilyrðunum gildir: 
+\begin{align*}
+|\lambda^{(m)}-\lambda^{(m-1)}|&<TOL \qquad \text{ eða } \\
+\|\xv^{(m)}-\xv^{(m-1)}\|&<TOL \qquad \text { eða } \\
+\|A\xv^{(m)}-\lambda^{(m)}\xv^{(m)}\|&<TOL.
+\end{align*}
+\end{frame}
+
+\begin{frame}{4.1 Samhverf fylki} 
+Munum að ef $A$ er samhverft, þá hefur $A$ eiginvigragrunn og
+eiginvigra sem svara til ólíkra eigingilda eru hornréttir. 
+
+\pause
+\smallskip
+Í þessu tilfelli er einfaldara að smíða reiknirit svona:
+\begin{align*}
+  \yv^{(m)}&=A\xv^{(m-1)}\\
+\lambda^{(m)}&={\xv^{(m-1)}}^T\yv^{(m)}\\
+\xv^{(m)}&= \frac{\yv^{(m)}}{\sqrt{(\yv^{(m)})^T\yv^{(m)}}}
+\end{align*}
+
+\pause
+Samleitnin verður sú sama:  $\lambda^{(m)}$ stefnir á stærsta
+eigingildið og $\xv^{(m)}$ stefnir á tilsvarandi eiginvigur.
+\end{frame}
+
+\begin{frame}{4.2 Meira um eigingildi og eiginvigra} 
+\begin{block}{Setning} 
+Látum sem fyrr $A$ vera $n\times n$ fylki, $\lambda_1,\dots,\lambda_n$
+vera eigingildi og $\vv_1,\dots,\vv_n$ vera  tilsvarandi eiginvigra.
+\begin{enumerate}
+\item [(i)] Látum 
+$p(x)=a_0+a_1x+\cdots+a_mx^m$ vera margliðu og skilgreinum $n\times n$
+fylkið $B$ með því að stinga $A$ inn í $p$,
+$$
+B=p(A)=a_0I+a_1A+\cdots+a_mA^m
+$$
+Þá eru tölurnar $p(\lambda_1),\dots,p(\lambda_n)$ eigingildi fylkisins
+$B=p(A)$ með tilsvarandi eiginvigrum $\vv_1,\dots,\vv_n$.
+%\pause
+\item [(ii)] Ef $A$ er andhverfanlegt þá eru
+$1/\lambda_1,\dots,1/\lambda_n$ eigingildi $A^{-1}$ 
+með tilsvarandi eiginvigrum $\vv_1,\dots,\vv_n$.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{4.2 Andhverf veldaaðferð} 
+Af síðustu setningu leiðir að fylkið $B=(A-qI)^{-1}$ hefur eigingildin
+$$
+\mu_1=\dfrac 1{\lambda_1-q},\ 
+\mu_2=\dfrac 1{\lambda_2-q},\ \cdots \  
+\mu_n=\dfrac 1{\lambda_n-q}.\ 
+$$
+Hugsum okkur nú að við viljum finna nálgunargildi fyrir 
+eigingildið $\lambda_k$ og að við vitum út frá setningu Gerschgorins 
+skífunum nokkurn veginn hvar það er staðsett.  
+
+\pause
+\smallskip
+Ef við erum með $q$
+nógu nálægt $\lambda_k$, þá verður $\mu_k$ stærsta eigingildi
+fylkisins $B=(A-qI)^{-1}$
+
+\pause
+\smallskip
+Þá getum við beitt veldaaðferðinni til þess að búa til runu 
+$\mu^{(m)}\to \mu_k$ og við fáum að
+$$
+\lambda^{(m)}=\dfrac 1{\mu^{(m)}}+q\to \lambda_k. 
+$$
+\end{frame}
+
+\begin{frame}{4.2 Andhverf veldaaðferð} 
+Ef veldaaðferðinni er beitt á fylkið $B=(A-qI)^{-1}$ þá þurfum við að 
+reikna út $\yv^{(m)}=(A-qI)^{-1}\xv^{(m-1)}$ í hverju skrefi.
+
+\pause
+\smallskip
+Þetta er gert þannig að fyrst framkvæmum við $LU$-þáttun á 
+fylkinu $LU=(A-qI)$ og framkvæmum síðan for- og endurinnsetningu
+til þess að leysa $LU\yv^{(m)}=x^{(m-1)}$. 
+
+\pause
+\smallskip
+Tölulegar aðferðir fyrir LU-þáttun eru í kafla 3.
+\end{frame}
+
+\begin{frame}{4.2 Reiknirit til þess að nálga eigingildi og eiginvigra} 
+Takmarkið er að finna nálgun á eigingildinu $\lambda_k$.  
+  \begin{enumerate}
+  \item [(i)] Finnum  $q\in \R$ sem liggur næst eigingildinu
+    $\lambda_k$ af öllum eigingildum $A$
+\pause
+  \item [(ii)] Þáttum $LU=A-qI$.
+\pause
+  \item [(iii)]Við veljum $\xv^{(0)}$ með einhverjum hætti og 
+leysum  síðan $\yv^{(m)}$ út úr jöfnunni
+$$
+LU\yv^{(m)}=\xv^{(m-1)}.
+$$
+\pause
+  \item [(iv)] Skilgreinum
+$
+\xv^{(m)}={\yv^{(m)}}/{y_{p_m}^{(m)}}
+$
+þar sem $p_m$ er númerið á því hniti í $\yv^{(m)}$ sem hefur stærst
+tölugildi, sem þýðir að það hnit uppfyllir
+$$
+|y_{p_m}^{(m)}|=\|\yv^{(m)}\|_\infty=\max_{1\leq j\leq n}|y_j^{(m)}|.
+$$
+Ef mörg númer uppfylla þetta skilyrði, þá tökum við bara $p_m$ sem
+lægsta gildið á $j$ þar sem jafnaðarmerki gildir.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{4.2 Reiknirit til þess að ákvarða eigingildi} 
+Niðurstaðan verður að 
+$$
+\lambda^{(m)}=\dfrac 1{y_{p_{m-1}}^{(m)}}+q \to \lambda_k
+$$
+og $\xv^{(m)}$ stefnir á tilsvarandi eiginvigur.
+\end{frame}
+
+\begin{frame}{Kafli 4: Fræðilegar spurningar}
+
+\begin{enumerate}
+    \item Hvernig er setning Gerschgorins um staðsetningu
+    eigingilda fylkis?
+  \item Hvernig er veldaaðferð til þess að nálga það
+    eigingildi fylkis sem hefur stærst tölugildi?
+  \item Afhverju skilgreinum $\xv^{(m)} = \frac{\yv^{(m)}}{y_{p_m}^{(m)}}$ þar sem
+  $\yv^{(m)} = A \xv^{(m-1)}$, en ekki bara $\xv^{(m)} = A \xv^{(m-1)}$?
+  \item Hvernig er andhverf veldaaðferð til þess að nálga
+    eigingildi fylkis? 
+  \item Hvernig er skynsamlegast að velja $q$ í andhverfu veldaaðferðinni ef við viljum
+finna eigingildið $\lambda_k$?
+\end{enumerate}
+\end{frame}
+
+
+\end{document}

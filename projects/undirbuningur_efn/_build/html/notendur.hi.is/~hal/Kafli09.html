@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9. Hraðafræði &mdash; Undirbúningur í efnafræði 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+
+
+	<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+	<script src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    
+    <script> 
+    // the buttonText string says what will be written on the 
+    // sage cell evaluation button.
+    // It can be changed here.
+    var buttonText = "Keyra"
+    </script>
+    
+	<script>sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});</script>
+
+	<script>sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});</script>
+	
+    <script>sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Undirbúningur í efnafræði 2019" href="index.html"/>
+        <link rel="next" title="10. Efnajafnvægi" href="Kafli10.html"/>
+        <link rel="prev" title="8. Varmaefnafræði" href="Kafli08.html"/>
+
+    
+    <!-- ADD YOUR GOOGLE ANALYTICS TRACKING CODE HERE-->
+    <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-29852053-2', 'auto');
+  		ga('send', 'pageview');
+
+	</script>
+
+    <script>top.scrolldepth_tags = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Undirbúningur í efnafræði
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Um námsefnið</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#markmi-namsefnisins">1.1. Markmið námsefnisins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#hva-er-efnafraei">1.2. Hvað er efnafræði?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Einingar og reikniaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#si-einingakerfi">2.1. SI-einingakerfið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#kelvin">2.1.1. Kelvin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#forskeyti-si-kerfisins">2.1.2. Forskeyti SI-kerfisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#breyta-um-formerki">2.1.3. Breyta um formerki</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#markverir-tolustafir">2.2. Markverðir tölustafir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#samlagning-og-margfoldun">2.2.1. Samlagning og margföldun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Frumefni og sameindir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#atom">3.1. Atóm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#lotukerfi">3.2. Lotukerfið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#sameindir">3.3. Sameindir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#jonaefni">3.4. Jónaefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#efnaformulur">3.5. Efnaformúlur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#mol">3.6. Mól</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#molmassi">3.6.1. Mólmassi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#molstyrkur">3.6.2. Mólstyrkur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#molalstyrkur">3.6.3. Mólalstyrkur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#efnaformulur-framhald">3.7. Efnaformúlur framhald</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Efnahvörf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#stilla-efnajofnur">4.1. Stilla efnajöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#bruni">4.1.1. Bruni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#sameinu-efnahvorf">4.2. Sameinuð efnahvörf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#takmarkandi-hvarfefni">4.3. Takmarkandi hvarfefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#oxunartolur">4.4. Oxunartölur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#greina-oxunartolu-atoms-i-sameind">4.4.1. Greina oxunartölu atóms í sameind</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Skammtafræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#rafeindaskipan">5.1. Rafeindaskipan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#hvernig-skal-finna-rafeindaskipan-frumefnis">5.1.1. Hvernig skal finna rafeindaskipan frumefnis?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#gildisrafeindir">5.2. Gildisrafeindir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#rafeindaskipan-aframhald">5.3. Rafeindaskipan áframhald</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Efnatengi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#samgild-tengi">6.1. Samgild tengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#lewis-myndir">6.1.1. Lewis myndir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli06.html#vok-myndir">6.1.1.1. Vok myndir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#nafnakerfi-fyrir-sameindir">6.1.2. Nafnakerfi fyrir sameindir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#jonatengi">6.2. Jónatengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#nafnakerfi-fyrir-jonaefni">6.2.1. Nafnakerfi fyrir jónaefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#malmtengi">6.3. Málmtengi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#millisameindakraftar">6.4. Millisameindakraftar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fasar">6.4.1. Fasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#tvipols-tvipols-kraftar">6.4.2. Tvípóls-tvípóls kraftar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#london-kraftur">6.4.3. London kraftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#vetnistengi">6.4.4. Vetnistengi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Kafli06.html#kristalbygging-iss">6.4.4.1. Kristalbygging íss</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#arir-kraftar">6.4.5. Aðrir kraftar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli07.html">7. Kjörgaslögmálið</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#rystingur">7.1. Þrýstingur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli07.html#einingar">7.1.1. Einingar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#kjorgas">7.2. Kjörgas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli07.html#hlutrystingur">7.3. Hlutþrýstingur</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli08.html">8. Varmaefnafræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#orka">8.1. Orka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#varmaorka">8.2. Varmaorka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#efnaorka">8.3. Efnaorka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#fasabreyting">8.3.1. Fasabreyting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#innri-orka">8.4. Innri orka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#astandsfall">8.4.1. Ástandsfall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#vinna">8.5. Vinna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#vermi">8.6. Vermi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#finna-vermisbreytingu-fyrir-efnahvarf">8.6.1. Finna vermisbreytingu fyrir efnahvarf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#logmal-hess">8.6.2. Lögmál Hess</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#oreia">8.7. Óreiða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#oreiubreyting-efnahvarfa">8.7.1. Óreiðubreyting efnahvarfa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#gibbs-fri-orka">8.8. Gibbs frí orka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli08.html#virkjunarorka">8.9. Virkjunarorka</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli08.html#efnahvati">8.9.1. Efnahvati</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Hraðafræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ahrif-styrks-hvarfefna-a-hraa">9.1. Áhrif styrks hvarfefna á hraða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hraafasti">9.1.1. Hraðafasti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nullta-stigs-hvarf">9.2. Núllta stigs hvarf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fyrsta-stigs-hvarf">9.3. Fyrsta stigs hvarf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annars-stigs-hvarf">9.4. Annars stigs hvarf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#akvara-stig-hvarfefnis">9.5. Ákvarða stig hvarfefnis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli10.html">10. Efnajafnvægi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegisfasti">10.1. Jafnvægisfasti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegi-fyrir-gos">10.2. Jafnvægi fyrir gös</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#jafnvaegi-fyrir-vokva-og-fast-efni">10.2.1. Jafnvægi fyrir vökva og fast efni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegisfasti-fyrir-sameinu-hvorf">10.3. Jafnvægisfasti fyrir sameinuð hvörf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#hvarfkvoti">10.4. Hvarfkvóti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#jafnvaegisreikningar">10.5. Jafnvægisreikningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#nalgun">10.5.1. Nálgun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli10.html#regla-le-chatelier">10.6. Regla Le Châtelier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#breyting-a-styrk">10.6.1. Breyting á styrk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#breyting-a-rummali-og-rysting">10.6.2. Breyting á rúmmáli og þrýsting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli10.html#breyting-a-hitastigi">10.6.3. Breyting á hitastigi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli11.html">11. Sýrur og basar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#skilgreing">11.1. Skilgreing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#syrustig">11.2. Sýrustig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#rammar-syrur-og-basar">11.3. Rammar sýrur og basar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#veikar-syrur">11.4. Veikar sýrur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#samokabasar">11.5. Samokabasar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#tvieli-vatns">11.6. Tvíeðli vatns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli11.html#poh">11.6.1. pOH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#syru-og-basafastar-fyrir-samoka-por">11.7. Sýru- og basafastar fyrir samoka pör</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#boffer">11.8. Böffer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli11.html#reikna-ph-i-boffer-lausn">11.8.1. Reikna pH í böffer-lausn</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#fjolroteindasyrur">11.9. Fjölróteindasýrur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli11.html#hlutleysing">11.10. Hlutleysing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="formulublad.html">12. Formúlublað</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Undirbúningur í efnafræði</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>9. Hraðafræði</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli09.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hraafraei">
+<h1>9. Hraðafræði<a class="headerlink" href="#hraafraei" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Efnahvörf gerast mishratt, og það getur verið gagnlegt að vita hvaða þættir hraða eða hægja á efnahvarfinu, og stjórna þeim eftir því hvað hentar. <em>Hraði</em> efnahvarfs er þá breyting á styrk á tíma, sambærilegt og í eðlisfræði er hraði breyting á staðsetningu á tíma.</p>
+<p>Ef það er verið að mynda járn(II) jónir úr járn(III) jónum er hægt að skrifa hraðann sem: <span class="math notranslate nohighlight">\(\require{mhchem}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\text{hraði} =\frac{\Delta[\ce{Fe^{2+}}]}{\Delta t}=\frac{-\Delta[\ce{Fe^{3+}}]}{\Delta t}\]</div>
+<p>Styrkur járn(III) jóna minnkar eftir því sem líður á efnahvarfið, og <span class="math notranslate nohighlight">\(\Delta[\ce{Fe^{3+}}]\)</span> er því neikvæð stærð. Til þess að efnahvarf haldi áfram þarf hraðinn að vera jákvæður, og því er notað mínusmerki fyrir framan breytingu á hvarfefnum. Til að hraðinn sé sá hinn sami fyrir öll efnin þarf einnig að deila með mólhlutfallsstuðlinum í efnajöfnunni.</p>
+<div class="math notranslate nohighlight">
+\[\ce{aA + bB -&gt; cC +dD}\]</div>
+<p>Fyrir stilltu efnajöfnuna, þar sem litlu bókstafirnir eru mólhlutföllin er hraðinn:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði} =-\frac{1}a\frac{\Delta[\ce{A}]}{\Delta t}=-\frac{1}b\frac{\Delta[\ce{B}]}{\Delta t}=\frac{1}c\frac{\Delta[\ce{C}]}{\Delta t}=\frac{1}d\frac{\Delta[\ce{D}]}{\Delta t}\]</div>
+<p>Til að mæla hraða efnahvarfs er nóg að fylgjast með einu efni, og hægt er að reikna breytingu á styrk hinna efnanna.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Vetnisperoxíð er algengt sótthreinsefni fyrir sár, en það brotnar niður samkvæmt efnahvarfinu:</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{2H_2O_2(aq) -&gt; 2H_2O(l) + O_2(g)}\]</div>
+<p><strong>Í upphafi (t=0) var styrkur vetnisperoxíðs 0,120 M en eftir 89 sekúndur var styrkurinn 0,035M. Hver er hraði hvarfsins?</strong></p>
+<p>Hér var fylgst með vetnisperoxíðinu og því fæst:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði}= -\frac{1}{2}\frac{\Delta [\ce{H_2O_2}]}{\Delta t}=-\frac{1}{2}\frac{(0,035\,\text{M}-0,120\,\text{M})}{(89\,\text{s}-0\,\text{s})}=9,55 \times 10^{-4} \text{M/s}\]</div>
+<p class="last">Þetta er meðalhraði hvarfsins yfir þennan tíma.</p>
+</div>
+<p>Hraði getur verið breytilegur í gegnum hvarfið, og þetta er því einungis gilt til að finna meðalhraða yfir þann tíma sem var mælt. Til að finna hraðann á hverju augnabliki þyrfti að <em>diffra</em> en hraðinn er hægt að skrifa sem <span class="math notranslate nohighlight">\(-\frac{1}{a} \frac{d[A]}{dt}\)</span>.
+Ekki er nauðsynlegt að vera vel að sér í diffri fyrir hraðafræðina, og það mun einungis koma fram í sönnunum hér, sem eru einungis fyrir áhugasama.</p>
+<div class="section" id="ahrif-styrks-hvarfefna-a-hraa">
+<h2>9.1. Áhrif styrks hvarfefna á hraða<a class="headerlink" href="#ahrif-styrks-hvarfefna-a-hraa" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Hraði hvarfs getur byggst að miklu leyti á styrk ákveðins hvarfefnis, eða ekki neitt. Það fer allt eftir <em>hvarfgangi</em> (e. mechanism) hvarfsins, sem lýsir hvernig hvarfið gerist, skref fyrir skref. Þetta er ákvarðað með tilraunum þar sem breytilegt magn hvarfefna er notað. Þá er gagnlegt að setja upp formúlu sem lýsir hraða efnahvarfs.</p>
+<div class="math notranslate nohighlight">
+\[\ce{aA + bB -&gt; cC +dD}\]</div>
+<p>Fyrir þetta efnahvarf væri <em>hraðalíkanið</em> (e. rate expression) eftirfarandi:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði}=k[\ce{A}]^{m} [\ce{B}]^{n}\]</div>
+<p>hér er <span class="math notranslate nohighlight">\(k\)</span> <em>hraðafasti</em> (e. rate constant) hvarfsins og stuðlarnir <span class="math notranslate nohighlight">\(m,n\)</span> sýna <em>stig</em> (e. order) efnahvarfsins m.t.t. hvarfefnisins. Þessar tölur eru ákvarðar með tilraunum og passa skal að <span class="math notranslate nohighlight">\(m,n\)</span> eru <strong>ekki</strong> endilega tengdir stuðlunum <span class="math notranslate nohighlight">\(a,b\)</span> en klassísk villa er að rugla þeim saman. Þegar talað er um stig efnahvarfs og ekki tilgreint hvarfefni, er
+lagðir saman stuðlarnir <span class="math notranslate nohighlight">\(m+n\)</span>.</p>
+<p>Þegar smíða á hraðalíkan skal hafa öll hvarfefnin með, en ef veldisstuðull reynist vera 0 fyrir hvarfefni má taka það úr líkaninu.</p>
+<div class="section" id="hraafasti">
+<h3>9.1.1. Hraðafasti<a class="headerlink" href="#hraafasti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hraðafastinn er einkennandi fyrir hvert hvarf, en hann breytist þó með <em>hitastigi</em>, en almennt gerast hvörf hraðar í heitari aðstæðum. Hraðafastinn er stundum skrifaður sem <span class="math notranslate nohighlight">\(k(T)\)</span>, en táknar hraðafastann sem fall af hitastigi.</p>
+<p>Hraðafastinn hefur mismunandi einingar fyrir mismunandi stig efnahvarfa. Reglan er sú að hraðinn hefur alltaf eininguna M/s, og eining hraðafastans er ákvörðuð út frá því</p>
+</div>
+</div>
+<div class="section" id="nullta-stigs-hvarf">
+<h2>9.2. Núllta stigs hvarf<a class="headerlink" href="#nullta-stigs-hvarf" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Fyrir <em>núllta stigs hvörf</em> er hraðinn <em>ekki</em> háður neinu hvarfefni, og helst stöðugur þangað til takmarkandi hvarfefnið er uppurið. Þá er <span class="math notranslate nohighlight">\(m=n=0\)</span> og hraðalíkanið verður einfaldlega:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði}=k\]</div>
+<p>Á grafi liti þá styrkbreyting hvarfefnis svona út:</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/zero.svg"><img alt="_images/zero.svg" src="_images/zero.svg" width="45%" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Algengur ritháttur að nota undirskriftina <span class="math notranslate nohighlight">\(_0\)</span> eða <span class="math notranslate nohighlight">\(_i\)</span> fyrir upphafsgildi. Þetta stendur fyrir <span class="math notranslate nohighlight">\(t=0\)</span> eða „initial“. Að sömu leyti er einnig oft notað <span class="math notranslate nohighlight">\(_f\)</span> fyrir „final“ til að tilgreina lokagildi. Notað er undirskriftin <span class="math notranslate nohighlight">\(_t\)</span> til að tákna gildi fyrir ákveðinn tíma <span class="math notranslate nohighlight">\(t\)</span>.</p>
+</div>
+<p>Fyrir núllta stigs hvörf er auðvelt að ákvarða hraðafastann, <span class="math notranslate nohighlight">\(k\)</span>, en hann, margfaldaður við <span class="math notranslate nohighlight">\(a\)</span> er neikvæð hallatalan á grafinu. Þ.e.</p>
+<div class="math notranslate nohighlight">
+\[a \cdot k=-\frac{[\ce{A}]_f-[\ce{A}]_0}{t_f-t_0}=\frac{[\ce{A}]_0-[\ce{A}]_f}{t_f-t_0}\]</div>
+<p>Jafna línunnar á grafinu er:</p>
+<div class="math notranslate nohighlight">
+\[[\ce{A}]_t=-akt+ [\ce{A}]_0\]</div>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Gefið er að eftirfarandi efnahvarf sé núllta stigs.</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{A -&gt; B + C}\]</div>
+<p><strong>Upphafsstyrkur A er 0,180 M, og það tekur hvarfið 4 mínútur að klárast við 25°C. Hver er hraðafastinn við 25°C?</strong></p>
+<p>Hér er hægt að nota báðar jöfnur en notum þá fyrri. Hér er <span class="math notranslate nohighlight">\([\ce{A}]_0=0,180\text{ M}\)</span>, <span class="math notranslate nohighlight">\([\ce{A}]_f=0 \text{ M}\)</span> og <span class="math notranslate nohighlight">\(t_f=4 \text{ mín}\)</span>, <span class="math notranslate nohighlight">\(t_0= 0 \text{ mín}\)</span>. Þá er einnig <span class="math notranslate nohighlight">\(a=1\)</span>. Ef gildin eru upphafs- og lokagildi einfaldast jafnan í:</p>
+<div class="math notranslate nohighlight">
+\[k=\frac{[\ce{A}]_0}{t_f}=\frac{0,180 \text{ M}}{4 \text{ mín}}=0,045\text{ M/mín}\]</div>
+<p class="last">Hérna er hraðafastinn gefinn upp með einingu <span class="math notranslate nohighlight">\(\text{M/mín}\)</span>, en einnig væri hægt að breyta í <span class="math notranslate nohighlight">\(\text{M/sek}\)</span>. Engin regla er á því hvað skal nota en oft er hægt að meta bestu eininguna út frá stærðargráðu fastans.</p>
+</div>
+</div>
+<div class="section" id="fyrsta-stigs-hvarf">
+<h2>9.3. Fyrsta stigs hvarf<a class="headerlink" href="#fyrsta-stigs-hvarf" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Hvarf er <em>fyrsta stigs</em> (e. first order) þegar hraðinn byggist á styrk hvarfefnis í fyrsta veldi.</p>
+<div class="math notranslate nohighlight">
+\[\ce{aA + bB -&gt; cC}\]</div>
+<p>Hraðalíkanið fyrir þetta hvarf væri þá:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði}=k[\ce{A}]^m [\ce{B}]^n\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(m+n=1\)</span>. Oft er önnur talan 0 og hraðalíkanið þá <span class="math notranslate nohighlight">\(\text{hraði}=k[\ce{A}]\)</span> eða <span class="math notranslate nohighlight">\(\text{hraði}=k[\ce{B}]\)</span>. Í jöfnum hér á eftir var A valið sem hvarfefni sem hraðinn er háður, en sambærilegt gildir fyrir B.</p>
+<p>Styrkur sem fall af tíma er ekki lengur línulegur heldur gildir jafnan:</p>
+<div class="math notranslate nohighlight">
+\[\text{ln}([\ce{A}]_t)=-a k t +\text{ln}([\ce{A}]_0)\]</div>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><p class="first admonition-title"><a href="javascript:showhide(document.getElementById('toggleblock2'))">Sönnun</a></p><div id="toggleblock2" style="display: none"><br/><p><strong>Ekki þarf að kunna sannanir og eru fyrst um sinn einungis fyrir áhugsama</strong></p>
+<p>Fyrir fyrsta stigs hvarf gildir:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði} =-\frac{1}a\frac{d[\ce{A}]}{dt}=k[\ce{A}]\]</div>
+<p>Þetta er aðgreinanleg diffurjafna sem hægt er að heilda:</p>
+<div class="math notranslate nohighlight">
+\[\int_{[\ce{A}]_0}^{[\ce{A}]_t} \frac{d[\ce{A}]}{[\ce{A}]}=\int_{0}^{t} -ak\]</div>
+<p>Með því að heilda báðum megin fæst svo jafnan:</p>
+<div class="math notranslate nohighlight">
+\[\text{ln}([\ce{A}]_t)-\text{ln}([\ce{A}]_0) =-akt\]</div>
+</div></div><p>Efnahvarfið hægir þá á sér eftir því sem líður á.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/fyrsta.svg"><img alt="_images/fyrsta.svg" src="_images/fyrsta.svg" width="45%" /></a>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Borðsykur, eða súkrósi er tvísykra sem brotnar niður í líkamanum í glúkósa og frúktósa skv. efnajöfnunni:</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{C_{12}H_{22}O_{11} + H_2O -&gt; C_6H_{12}O_6 + C_6H_{12}O_6}\]</div>
+<p><strong>Þetta er fyrsta stigs hvarf með hraðafasta</strong> <span class="math notranslate nohighlight">\(2,3 \times 10^{-5}\text{ 1/s}\)</span> <strong>við 15 °C. Hver er styrkur súkrósalausnar 136 mínútum inn í hvarfið, ef hún hafði upphafsstyrk 0,010 M?</strong></p>
+<p>Hérna, líkt og í mörgum dæmum er <span class="math notranslate nohighlight">\(a=1\)</span> og þarf því ekki að hugsa nánar út í það. Þá þarf bara að stinga inn gildunum í jöfnuna fyrir ofan og þá fæst:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \text{ln}([\ce{C_{12}H_{22}O_{11}}] _{t=6 \text{ mín}}) &amp;=-k t +\text{ln}([\ce{A}]_0)\\
+   &amp;=- 2,3 \times 10^{-5} \text{ 1/s}\cdot 136\text{ mín}  \cdot \frac{60 \text{ s}}{1 \text{ mín}} + \text{ln}(0,010\text{ M})\\
+  &amp;=-4,7929\\
+\end{aligned}\end{split}\]</div>
+<p>Til að losna við lografallið er tekið <em>veldisvísifallið</em>:</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  {[\ce{C_{12}H_{22}O_{11}}]}_{t=6 \text{ mín}} &amp;=e^{-4,7929}\\
+  &amp;=0.0083 M
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="annars-stigs-hvarf">
+<h2>9.4. Annars stigs hvarf<a class="headerlink" href="#annars-stigs-hvarf" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Hvarf er <em>annars stigs</em> (e. second order) þegar hraðinn byggist á styrk hvarfefna í öðru veldi.</p>
+<div class="math notranslate nohighlight">
+\[\ce{aA + bB -&gt; cC}\]</div>
+<p>Hraðalíkanið fyrir þetta hvarf væri þá:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði}=k[\ce{A}]^m [\ce{B}]^n\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(m+n=2\)</span>. Algengustu annars stigs hvarfslíkönin eru <span class="math notranslate nohighlight">\(k[\ce{A}]^2\)</span>, <span class="math notranslate nohighlight">\(k[\ce{B}]^2\)</span> eða <span class="math notranslate nohighlight">\(k[\ce{A}][\ce{B}]\)</span>. Fyrir fyrstu tvö líkönin er hægt að leiða út jöfnuna fyrir styrk:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{[\ce{A}]_t}=akt + \frac{1}{[\ce{A}]_0}\]</div>
+</div>
+<div class="section" id="akvara-stig-hvarfefnis">
+<h2>9.5. Ákvarða stig hvarfefnis<a class="headerlink" href="#akvara-stig-hvarfefnis" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Til að ákvarða stig hvarfefnis í hraðalíkanið, þ.e. stuðlana <span class="math notranslate nohighlight">\(m,n\)</span>, þarf tilraunir. Þá er blandað saman mismunandi styrk af hvarfefnum og athugað hvernig það hefur áhrif á hraðann.</p>
+<div class="math notranslate nohighlight">
+\[\ce{A + B \rightarrow C}\]</div>
+<p>Fyrir þetta efnahvarf væri hraðalíkanið</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði} = k[\ce{A}]^m[\ce{B}]^n\]</div>
+<p>Segjum sem svo að hraðinn er mældur tvisvar og í seinna skiptið er notað tvöfaldan styrk af hvarfefni <span class="math notranslate nohighlight">\(\ce{A}\)</span>. Þá er hægt að finna stuðulinn <span class="math notranslate nohighlight">\(m\)</span> með jöfnunni:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\text{hraði}(2\times \ce{A})}{\text{hraði}(1\times \ce{A})}=2^m\]</div>
+<p>Þessi jafna er fyrir þegar tvöfaldað er styrkinn af hvarfefni <span class="math notranslate nohighlight">\(\ce{A}\)</span>. Ef notað er <span class="math notranslate nohighlight">\(x\)</span> sinnum meiri styrk af hvarfefninu, er jafnan:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\text{hraði}(x\times \ce{A})}{\text{hraði}(1\times \ce{A})}=x^m\]</div>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><p class="first admonition-title"><a href="javascript:showhide(document.getElementById('toggleblock3'))">Sönnun</a></p><div id="toggleblock3" style="display: none"><br/><p>Ef notað er <span class="math notranslate nohighlight">\(x\)</span> sinnum meira af hvarfefni <span class="math notranslate nohighlight">\(\ce{A}\)</span> er styrkurinn <span class="math notranslate nohighlight">\(x[A]\)</span>. Hraðalíkanið verður þá:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\require{cancel}\\\begin{split}\begin{aligned}
+\text{hraði}&amp;=k(x[\ce{A}])^m[\ce{B}]^n\\
+&amp;=kx^m[\ce{A}]^m[\ce{B}]^n
+\end{aligned}\end{split}\end{aligned}\end{align} \]</div>
+<p>Þetta er hægt að deila í hraðalíkanið sem fæst fyrir upphaflega magnið af hvarfefni A:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{\text{hraði}(x\times \ce{A})}{\text{hraði}(1\times \ce{A})}&amp;=\frac{\bcancel{k} x^m\bcancel{[\ce{A}]^m}\bcancel{[\ce{B}]^n}}{\bcancel{k}\,\,\,\,\,\,\,\bcancel{[\ce{A}]^m}\bcancel{[\ce{B}]^n}}\\
+ &amp;=x^m
+\end{aligned}\end{split}\]</div>
+</div></div><p>Þessar jöfnur geta litið flóknar út og því gæti verið auðveldara að skilja þetta sem dæmi.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Dæmi</p>
+<p><strong>Mældur var hraðinn fyrir efnahvarfið með mismunandi styrk hvarfefna.</strong></p>
+<div class="math notranslate nohighlight">
+\[\ce{A + B -&gt; C}\]</div>
+<p><strong>Niðurstöðurnar voru settar upp í töflu:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}    \begin{array}{c|c|c}
+[A]&amp;[B]&amp; \text{hraði} [\text{M/s}]\\
+  \hline
+0.100\text{ M}&amp;0.100\text{M}&amp;1,2\times 10^{-4}\\
+0.200\text{ M}&amp;0.100\text{M}&amp;2,4\times 10^{-4}\\
+0.100\text{ M}&amp;0.300\text{M}&amp;10,8\times 10^{-4}\\
+\end{array}\end{split}\]</div>
+<p><strong>Hvert er hraðalíkan hvarfsins? Finndu hraðafastann, sem og stuðlana</strong> <span class="math notranslate nohighlight">\(m,n\)</span>.</p>
+<p>Almenna hraðalíkan hvarfsins er</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði}=k[\ce{A}]^m[\ce{B}]^n\]</div>
+<p>Til að finna <span class="math notranslate nohighlight">\(m\)</span> er hægt að athuga hvað gerist þegar styrkur <span class="math notranslate nohighlight">\(\ce{A}\)</span> er <em>tvöfaldaður</em>. Það sem gerist er að hraðinn <em>tvöfaldast</em>. Þá er:</p>
+<div class="math notranslate nohighlight">
+\[2 = 2^m\]</div>
+<p>Þetta gefur að <span class="math notranslate nohighlight">\(m=1\)</span>. Athugum nú hvað gerist þegar styrkur <span class="math notranslate nohighlight">\(\ce{B}\)</span> er <em>þrefaldaður</em>. Það sem gerist er að hraðinn <em>nífaldast</em>. Þá er:</p>
+<div class="math notranslate nohighlight">
+\[9= 3^n\]</div>
+<p>Þetta gefur að <span class="math notranslate nohighlight">\(n=2\)</span>. Hraðalíkanið er þá orðið:</p>
+<div class="math notranslate nohighlight">
+\[\text{hraði}=k[\ce{A}][\ce{B}]^2\]</div>
+<p>Hvarfið er þá þriðja stigs. Til að finna hraðafastann, er hægt að nota hvert og eitt gildi. Notum það fyrsta og stingum inn gildunum í hraðalíkanið:</p>
+<div class="math notranslate nohighlight">
+\[1,2\times 10^{-4} \text{ M/s}= k \cdot 0.100 \text{ M}\cdot (0.200 \text{ M})^2\]</div>
+<p>Endurritum þetta og þá fæst:</p>
+<div class="last math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{aligned}\\\begin{split}  k&amp;=\frac{1,2\times 10^{-4} \text{ M/s}}{0.100 \text{ M}\cdot (0.200 \text{ M})^2}\\
+   &amp;=0,030 \text{ s}^{-1}\text{ M}^{-2}\end{split}\\\end{aligned}\end{aligned}\end{align} \]</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli10.html" class="btn btn-neutral float-right" title="10. Efnajafnvægi" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli08.html" class="btn btn-neutral" title="8. Varmaefnafræði" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+<script src="_static/jquery.scrolldepth.js"></script>
+<script>
+    jQuery.scrollDepth({
+        percentage: false,
+        userTiming: false,
+        pixelDepth: false,
+        nonInteraction: false,
+        elements: top.scrolldepth_tags
+}); 
+</script>
+
+
+
+</body>
+</html>

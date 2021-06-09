@@ -1,0 +1,1542 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. Bútaaðferðir &mdash; Stærðfræðigreining IV 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining IV 2019" href="index.html"/>
+        <link rel="next" title="Viðauki" href="vidauki.html"/>
+        <link rel="prev" title="5. Mismunaaðferðir" href="Kafli05.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining IV
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="umnamskeidid.html">Gagnlegar upplýsingar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsefni">Námsefnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#fyrirlestrar">Fyrirlestrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#daematimar-og-vinnustofur">Dæmatímar og vinnustofur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#skiladaemi">Skiladæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsmat">Námsmat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#tolvunotkun">Tölvunotkun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#a-taka-namskeii-i-anna-sinn">Að taka námskeiðið í annað sinn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#vitalstimar-kennara-og-fyrirspurnir">Viðtalstímar kennara og fyrirspurnir</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Hlutafleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-fjolvisir">1.1.1. Ritháttur - Fjölvísir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-laplace-virki">1.1.2. Ritháttur - Laplace-virki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-stig-hlutafleiu-og-hlutafleiujofnu">1.1.3. Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#linulegar-hlutafleiujofnur">1.1.4. Línulegar hlutafleiðujöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#daemi-um-hlutafleiujofnur-i-elisfraei">1.2. Dæmi um hlutafleiðujöfnur í eðlisfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#varmaleinijafnan">1.2.1. Varmaleiðnijafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#bylgjujafnan">1.2.2. Bylgjujafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi-sveifla-a-einvium-streng">1.2.3. Dæmi - Sveifla á einvíðum streng</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#hliarskilyri-vel-framsett-verkefni">1.3. Hliðarskilyrði. Vel framsett verkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#upphafsskilyri">1.3.1. Upphafsskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#jaarskilyri">1.3.2. Jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#vel-framsett-verkefni">1.3.3. Vel framsett verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#fyrsta-stigs-jofnur">1.4. Fyrsta stigs jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#kennilinuaferin">1.4.1. Kennilínuaðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#setning">1.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining">1.4.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id2">1.4.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reikniafer">1.4.6. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#urlausn-me-laplace-ummyndun">1.4.7. Úrlausn með Laplace-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi">1.4.8. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Fourier-raðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#inngangur">2.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#skilgreining">2.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#id1">2.2. Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id2">2.2.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id3">2.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-reiknireglur">2.2.3. Setning - Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id4">2.2.4. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#samleitni-fourier-raa">2.3. Samleitni Fourier-raða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#reiknireglur-um-innfeldi">2.3.1. Reiknireglur um innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#cauchy-schwarz-ojafna">2.3.2. Cauchy-Schwarz ójafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#regla-pyagorasar">2.3.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#bessel-ojafnan">2.3.4. Bessel-ójafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id5">2.3.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning">2.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-andhverfuformula-fouriers">2.3.7. Setning - Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-parseval-jafnan">2.3.8. Setning - Parseval-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#urlausn-a-hlutafleiujofnum">2.4. Úrlausn á hlutafleiðujöfnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#jafnstae-framlenging-og-kosinus-ro">2.4.1. Jafnstæð framlenging og kósínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#oddstae-framlenging-og-sinus-ro">2.4.2. Oddstæð framlenging og sínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id6">2.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi">2.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-sveiflandi-strengur">2.4.5. Dæmi - Sveiflandi strengur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-varmaleini">2.4.6. Dæmi - Varmaleiðni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#id1">3.1. Eigingildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi">3.1.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-baum-endapunktum">3.1.2. Fallsjaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#afleiuskilyri-i-baum-endapunktum">3.1.3. Afleiðuskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum">3.1.4. Fallsjaðarskilyrði í öðrum endapunkti og afleiðuskilyrði í hinum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#askilnaur-breytistaera">3.2. Aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sveiflandi-strengur-aftur">3.2.1. Sveiflandi strengur - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#anna-daemi">3.2.2. Annað dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#virkjar-af-sturm-liouville-ger">3.3. Virkjar af Sturm-Liouville-gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining">3.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id2">3.3.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id3">3.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id4">3.3.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#formula-greens">3.3.5. Formúla Greens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-og-skilgreining">3.3.6. Setning og skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eigingildisverkefni-af-sturmliouvilleger">3.4. Eigingildisverkefni af Sturm–Liouville–gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id5">3.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning">3.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id6">3.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id7">3.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id8">3.4.5. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#green-foll-fyrir-jaargildisverkefni">3.5. Green-föll fyrir jaðargildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id9">3.5.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id10">3.5.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eiginfallaliun-og-greenfoll">3.6. Eiginfallaliðun og Green–föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#reikniafer">3.6.1. Reikniaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#urlausn-hlutafleiujafa-me-eiginfallaroum">3.7. Úrlausn hlutafleiðujafa með eiginfallaröðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi">3.7.1. Dirichlet-verkefnið á rétthyrningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu">3.7.2. Dirichlet-verkefnið á skífu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#varmaleinijafnan-me-timahaum-jaarskilyrum">3.7.3. Varmaleiðnijafnan með tímaháðum jaðarskilyrðum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#afram-um-eigingildisverkefni-askilnaur-breytistaera">3.8. Áfram um eigingildisverkefni - aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi-aftur">3.8.1. Dirichlet-verkefnið á rétthyrningi - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu-aftur">3.8.2. Dirichlet-verkefnið á skífu - aftur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#tvofaldar-fourier-rair">3.9. Tvöfaldar Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-retthyrnd-tromma">3.9.1. Dæmi - Rétthyrnd tromma</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#almennt-um-eiginfallarair">3.10. Almennt um eiginfallaraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-alhaeft-varmaleiniverkefni">3.10.1. Dæmi - Alhæft varmaleiðniverkefni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli04.html">4. Fourier-ummyndun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-reiknireglur-plancerel-jafnan">4.1. Fourier-ummyndun. Reiknireglur. Plancerel-jafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-l-1-mathbb-r">4.1.1. Skilgreining á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#skilgreining-a-fourier-ummyndun">4.1.2. Skilgreining á Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#synidaemi">4.1.3. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#reiknireglur">4.1.4. Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#rulesft">4.1.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#eiginleikar-fourier-myndar">4.1.6. Eiginleikar Fourier-myndar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#plancerel-jafnan">4.1.7. Plancerel-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers-afleiujofnur">4.2. Andhverfuformúla Fouriers. Afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfuformula-fouriers">4.2.1. Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#foldun-og-fourier-ummyndun">4.2.2. Földun og Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#afleiujofnur-og-fourier-ummyndun">4.2.3. Afleiðujöfnur og Fourier-ummyndun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#urlausn-a-hlutafleiujofnum-me-fourier-ummyndun">4.3. Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#einvia-bylgjujafnan-og-d-alembert-formula">4.3.1. Einvíða bylgjujafnan og d’Alembert-formúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#bylgjujafnan-fourier-ummyndun-og-foldun">4.3.2. Bylgjujafnan, Fourier-ummyndun og földun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#varmaleinijafnan-fourier-ummyndun-og-foldun">4.3.3. Varmaleiðnijafnan, Fourier-ummyndun og földun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#fourier-ummyndun-og-leifareikningur">4.4. Fourier-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#fourier-myndir-reiknaar-me-leifareikningi">4.4.1. Fourier-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-fourier-myndir-reiknaar-me-leifareikningi">4.4.2. Andhverfar Fourier-myndir reiknaðar með leifareikningi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli04.html#laplace-ummyndun-og-leifareikningur">4.5. Laplace-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir">4.5.1. Andhverfar Laplace-myndir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-reiknaar-me-leifareikningi">4.5.2. Andhverfar Laplace-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#andhverfar-laplace-myndir-og-afleiujofnur">4.5.3. Andhverfar Laplace-myndir og afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli04.html#id4">4.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Mismunaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-venjulegar-afleiujofnur">5.1. Mismunaaðferð fyrir venjulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi">5.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#heildun-yfir-hlutbil">5.2. Heildun yfir hlutbil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.2.1. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#linuleg-bruun-og-ufugrunnfoll">5.2.2. Línuleg brúun og þúfugrunnföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-hlutaafleiujofnur">5.3. Mismunaaðferð fyrir hlutaafleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#nalgunarjafna">5.3.1. Nálgunarjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-dirichlet-verkefni-a-ferningi">5.3.2. Sýnidæmi: Dirichlet-verkefni á ferningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri">5.3.3. Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#almenn-mismunaafer-a-retthyrningi">5.4. Almenn mismunaaðferð á rétthyrningi</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Bútaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hlutheildun-innfeldi-og-tvilinulegt-form">6.1. Hlutheildun, innfeldi og tvílínulegt form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jaargildisverkefni-i-mathbb-r">6.1.1. Jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jaargildisverkefnin-i-mathbb-r-2">6.1.2. Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afer-galerkins-fyrir-dirichlet-verkefni">6.2. Aðferð Galerkins fyrir Dirichlet-verkefnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni">6.2.1. Galerkin-aðferðir í einni vídd fyrir Dirichlet-verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni">6.2.2. Galerkin-aðferðir í tveimur víddum fyrir Dirichlet-verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#butaafer-i-einni-vidd">6.3. Bútaaðferð í einni vídd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#blondu-jaarskilyri-i-baum-endapunktum">6.3.1. Blönduð jaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fallsjaarskilyri">6.3.2. Fallsjaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afer-galerkins-me-almennum-jaarskilyrum">6.4. Aðferð Galerkins með almennum jaðarskilyrðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i-einni-vidd">6.4.1. Í einni vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-tveimur-viddum">6.4.2. Í tveimur víddum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synidaemi">6.4.3. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#butaafer-i-tveimur-viddum">6.5. Bútaaðferð í tveimur víddum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#net-me-rihyrningum">6.5.1. Net með þríhyrningum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ufugrunnfoll">6.5.2. Þúfugrunnföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#go-ahead">6.5.3. Go ahead!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">6.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining IV</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>6. Bútaaðferðir</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli06.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="butaaferir">
+<h1>6. Bútaaðferðir<a class="headerlink" href="#butaaferir" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Í þessum kafla fjöllum við um <a href="http://www.stae.is/os/leita/finite_element_method" class="tooltip" target="_blank">bútaaðferð<span>en: <i>finite element method</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>. Eins og fyrir mismunaaðferðir eru til ólíkar útgáfur og við ætlum að skoða einföldustu tilfellin. Ennfremur,  ætlum við að læra bútaaðferðir fyrir jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span> og <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
+<div class="section" id="hlutheildun-innfeldi-og-tvilinulegt-form">
+<h2>6.1. Hlutheildun, innfeldi og tvílínulegt form<a class="headerlink" href="#hlutheildun-innfeldi-og-tvilinulegt-form" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="jaargildisverkefni-i-mathbb-r">
+<h3>6.1.1. Jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span><a class="headerlink" href="#jaargildisverkefni-i-mathbb-r" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="ch-6-1-1">Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb R\)</span> sem við viljum leysa eru</p>
+<div class="math notranslate nohighlight" id="equation-eq-system1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-system1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+Lu=-(pu')'+qu=f,&amp; \text{ á } ]a,b[,\\
+B_1u=\alpha_1u(a)-\beta_1u'(a)=\gamma_1,&amp;(\alpha_1,\beta_1)\neq (0,0),\\
+B_2u=\alpha_2u(b)+\beta_2u'(b)=\gamma_2,&amp;(\alpha_2,\beta_2)\neq (0,0).
+\end{cases}\end{split}\]</div>
+<p>Þá er  afleiðuvirkinn af Sturm-Liouville gerð, og við gerum ráð fyrir að <span class="math notranslate nohighlight">\(p\)</span> sé samfellt diffranlegt á bili <span class="math notranslate nohighlight">\([a,b]\)</span> og <span class="math notranslate nohighlight">\(q\)</span> sé samfellt á  <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<p>Við skilgreinum <span class="math notranslate nohighlight">\(V\)</span> sem mengi raungildra falla sem eru samfelld og samfellt diffranleg á köflum á bilinu  <span class="math notranslate nohighlight">\([a,b]\)</span>, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[V=\{ \varphi: [a,b]\subset{\mathbb  R}\to {{\mathbb  R}}~; \varphi \in C[a,b]\cap PC^1[a,b] \}.\]</div>
+<p>Athugum að</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(\varphi^\prime\)</span> er heildanlegt fall á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> og undirstöðusetningin gildir í <span class="math notranslate nohighlight">\(V\)</span>, þ.e.a.s.</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\varphi(x)=\varphi(c)+\int_c^x\varphi'(t)\, dt, \qquad
+x,c\in [a,b],\]</div>
+<p>af því að enda þótt <span class="math notranslate nohighlight">\(\varphi\)</span> sé ekki diffranlegt t.d. í <span class="math notranslate nohighlight">\(x_\ell\)</span>, þá er <span class="math notranslate nohighlight">\(\varphi\)</span> í <span class="math notranslate nohighlight">\(PC^1[a,b]\)</span>, þ.e.a.s. markgildi frá vinstri og hægri af afleiðunni <span class="math notranslate nohighlight">\(\varphi^\prime\)</span> eru til í <span class="math notranslate nohighlight">\(x_\ell\)</span>,þ.e. <span class="math notranslate nohighlight">\(\varphi^\prime(x_\ell+)\)</span> og  <span class="math notranslate nohighlight">\(\varphi^\prime(x_\ell-)\)</span> eru til og eru endanleg. Með öðrum orðum getum við alltaf skilgreint afleiðuna í <span class="math notranslate nohighlight">\(x_\ell\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\varphi^\prime(x_\ell)=\tfrac 12\big(\varphi^\prime(x_\ell+)+\varphi^\prime(x_\ell-)\big).\]</div>
+<ol class="arabic simple" start="2">
+<li>Ennfremur gildir hlutheildun, þ.e. ef <span class="math notranslate nohighlight">\(\varphi, \psi \in V\)</span> þá er</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[-\int_c^d\psi'(x)\varphi(x)\, dx
+=\int_c^d\psi(x)\varphi'(x) \, dx
+-\big[\psi(x)\varphi(x)\big]_c^d
+\qquad c,d\in [a,b].\]</div>
+<p>Munið að í <span class="xref std std-ref">3.2.2</span> skilgreindum við</p>
+<ol class="upperroman simple">
+<li>Innfeldi</li>
+</ol>
+<p>Fyrir  tvö raungild heildanleg föll <span class="math notranslate nohighlight">\(\varphi\)</span> og <span class="math notranslate nohighlight">\(\psi\)</span> á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span>, þá er innfeldi þeirra skilgreint með</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}=\int_a^b \varphi(x)\psi(x)\, dx
+=\int_a^b \varphi \psi \, dx.\]</div>
+<p>Ljóst er að innfeldi er vel skilgreint fyrir föllin í <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<ol class="upperroman simple" start="2">
+<li>Tvílínulegt form sem <span class="math notranslate nohighlight">\(L\)</span> gefur af sér</li>
+</ol>
+<p>Látum <span class="math notranslate nohighlight">\(L\)</span> vera afleiðuvirkja af Sturm-Liouville gerð. Við skilgreinum tvílínulega formið sem <span class="math notranslate nohighlight">\(L\)</span> gefur af sér með</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}_L=\int_a^b\big(p\varphi' \psi'
++q\varphi \psi\big)\, dx,
+\qquad \varphi, \psi \in V.\]</div>
+<p>Nú ætlum við að nota þetta til þess að undirbúa nálgunarformúlur fyrir <a class="reference internal" href="#equation-eq-system1">(1)</a>.
+Við tökum <span class="math notranslate nohighlight">\(\varphi\in V\)</span> og <span class="math notranslate nohighlight">\(v\in \mathcal C^2([a,b])\)</span> og við reiknum eftirfarandi innfeldi út</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}{{\langle Lv,\varphi\rangle}} &amp;=&amp; -\int_a^b {d\over dx}\left(p(x){dv\over dx} \right)\varphi dx+ \int_a^b q(x) v(x) \varphi(x) dx
+\\
+    &amp;=&amp;
+-\big[pv'\varphi\big]_a^b+ \int_a^b\big(pv'\varphi'+qv\varphi \big) \, dx.\end{split}\]</div>
+<p>Við sjáum að það er</p>
+<div class="math notranslate nohighlight">
+\[{{\langle Lv,\varphi\rangle}}={{\langle v,\varphi\rangle}}_L-\big[pv'\varphi\big]_a^b.\]</div>
+<ol class="arabic simple">
+<li>Ef við gerum ráð fyrir að <span class="math notranslate nohighlight">\(\varphi\)</span> uppfylli eftirfarandi jaðarskilyrði</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\varphi(a)=\varphi(b)=0\]</div>
+<p>þá verður innfeldið <span class="math notranslate nohighlight">\(\langle Lv,\varphi\rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[{{\langle Lv,\varphi\rangle}}={{\langle v,\varphi\rangle}}_L\,.\]</div>
+<ol class="arabic simple" start="2">
+<li>Ef við gerum ráð fyrir að <span class="math notranslate nohighlight">\(v=u\)</span> sé <strong>lausn á afleiðujöfnunni</strong> <a class="reference internal" href="#equation-eq-system1">(1)</a>, þá er <span class="math notranslate nohighlight">\(Lu=f\)</span> og innfeldið verður</li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-cond1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-cond1" title="Permalink to this equation">¶</a></span>\[{{\langle f,\varphi\rangle}}={{\langle u,\varphi\rangle}}_L, \qquad \varphi\in V, ~ \varphi(a)=\varphi(b)=0\,.\]</div>
+</div>
+<div class="section" id="jaargildisverkefnin-i-mathbb-r-2">
+<h3>6.1.2. Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span><a class="headerlink" href="#jaargildisverkefnin-i-mathbb-r-2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="ch-6-1-2">Við viljum halda áfram á svipaðan hátt í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. Nú er jaðargildisverkefnið í <span class="math notranslate nohighlight">\(D\subset \mathbb{R}^2\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-system2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-system2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+Lu=-\nabla\cdot (p\nabla u)+qu=f, \qquad \text{ á } D,\\
+\alpha u+\beta\dfrac{\partial u}{\partial n}
+=\gamma, \qquad  \text{á } \ \partial D,
+\end{cases}\end{split}\]</div>
+<p>og <span class="math notranslate nohighlight">\(p\in C^1(D)\)</span>, <span class="math notranslate nohighlight">\(q\)</span> of <span class="math notranslate nohighlight">\(f\)</span> eru samfelld á <span class="math notranslate nohighlight">\(D\)</span>. Athugum að <span class="math notranslate nohighlight">\(p, q, f\)</span> eru föll á <span class="math notranslate nohighlight">\(D\subset \mathbb{R}^2\)</span>, og <span class="math notranslate nohighlight">\(\gamma, \alpha, \beta\)</span> eru föll á <span class="math notranslate nohighlight">\(\partial D\subset \mathbb{R}^2\)</span>.</p>
+<p>Athugum</p>
+<ol class="arabic simple">
+<li>Leibniz reglan í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\nabla\cdot \big(\varphi p\nabla u\big)=
+\big(\nabla\cdot(p\nabla u)\big)\varphi
++p\nabla u  \cdot \nabla \varphi,\]</div>
+<p>af því að</p>
+<div class="math notranslate nohighlight">
+\[\nabla\cdot (\varphi {\mathbf V})=(\nabla\cdot {\mathbf V})\varphi  + {\mathbf V} \cdot \nabla  \varphi,\]</div>
+<p>og hér <span class="math notranslate nohighlight">\(\mathbf V= p\nabla u\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li>Gauss setning</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\iint_D \nabla \cdot (\varphi p\nabla u)\, dA
+=\int_{\partial D} p\dfrac{\partial u}{\partial n}\varphi \, ds\]</div>
+<ol class="arabic simple" start="3">
+<li>Hlutheildun í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></li>
+</ol>
+<p>Við sjáum að úr 1. og 2. fáum við</p>
+<div class="math notranslate nohighlight">
+\[-\iint\limits_D\nabla\cdot \big( p\nabla  u\big) \varphi \, dA=
+-\int\limits_{\partial D} p\dfrac{\partial u}{\partial n}\varphi\, ds
++\iint\limits_D p\nabla  u\cdot \nabla  \varphi\, dA.\]</div>
+<p>Munið að</p>
+<ol class="arabic simple">
+<li>Innfeldi</li>
+</ol>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\varphi\)</span> og <span class="math notranslate nohighlight">\(\psi\)</span> séu tvö raungild heildanleg föll á <span class="math notranslate nohighlight">\(\bar D= D \cap \partial D\)</span>, þá er innfeldi þeirra</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}=
+\iint_D \varphi(x,y)\psi(x,y)\, dxdy
+=\iint_D \varphi\psi \, dA.\]</div>
+<ol class="arabic simple" start="2">
+<li>Tvílínulegt form sem <span class="math notranslate nohighlight">\(L\)</span> gefur af sér</li>
+</ol>
+<p>Látum <span class="math notranslate nohighlight">\(L\)</span> vera hlutafleiðuvirkja eins og í verkefninu <a class="reference internal" href="#equation-eq-system1">(1)</a>, og gerum ráð fyrir að <span class="math notranslate nohighlight">\(\varphi\)</span> og <span class="math notranslate nohighlight">\(\psi\)</span> séu þ.a. fyrsta stigs hlutafleiður þeirra séu vel skilgreindar og takmarkaðar á <span class="math notranslate nohighlight">\(D\)</span>. Þá skilgreinum við tvílínulega formið með</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}_L=\iint\limits_D\big(p\, \nabla  \varphi\cdot \nabla
+\psi +q\, \varphi\psi\big)\, dA.\]</div>
+<p>Við skoðum nú innfeldi milli <span class="math notranslate nohighlight">\(Lv\)</span> og <span class="math notranslate nohighlight">\(\phi\)</span>, þar sem <span class="math notranslate nohighlight">\(L\)</span> er virkinn í <a class="reference internal" href="#equation-eq-system2">(3)</a>. Við gerum ráð fyrir að <span class="math notranslate nohighlight">\(v\in C^2(\overline D)\)</span>.
+Þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\langle L v, \varphi\rangle=\iint_D \big(Lv\big) \varphi\, dA
+ &amp;=\iint_D\big( p\,  \nabla v\cdot \nabla \varphi+q v\varphi\big)  \,
+ dA-\int_{\partial D}p\dfrac{\partial v}{\partial n} \varphi \, ds\\
+ &amp;={{\langle v,\varphi\rangle}}_L
+ -\int_{\partial D}p\dfrac{\partial v}{\partial n} \varphi \, ds.\end{aligned}\end{split}\]</div>
+<p>Við sjáum að</p>
+<ol class="arabic simple">
+<li>Ef <span class="math notranslate nohighlight">\(\varphi\)</span> er núll á jaðrinum <span class="math notranslate nohighlight">\(\partial D\)</span>, þá er</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\langle L v, \varphi\rangle={{\langle v,\varphi\rangle}}_L\]</div>
+<ol class="arabic simple" start="2">
+<li>Ef <span class="math notranslate nohighlight">\(v=u\)</span> er lausn á jaðarverkefni <a class="reference internal" href="#equation-eq-system2">(3)</a>, þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-cond2">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-cond2" title="Permalink to this equation">¶</a></span>\[{{\langle u,\varphi\rangle}}_L={{\langle f,\varphi\rangle}}, \qquad \varphi\in C^1(\overline
+D), \quad \varphi=0 \text{ á } \partial D.\]</div>
+</div>
+</div>
+<div class="section" id="afer-galerkins-fyrir-dirichlet-verkefni">
+<h2>6.2. Aðferð Galerkins fyrir Dirichlet-verkefnið<a class="headerlink" href="#afer-galerkins-fyrir-dirichlet-verkefni" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni">
+<h3>6.2.1. Galerkin-aðferðir í einni vídd fyrir Dirichlet-verkefni<a class="headerlink" href="#galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="ch-6-2-1">Við lítum á jaðargildisverkefnið <a class="reference internal" href="#equation-eq-system1">(1)</a> í sértilfellinu þegar <span class="math notranslate nohighlight">\(\beta_1 =\beta_2=0\)</span>, þ.e.a.s. við höfum Dirichlet-verkefni:</p>
+<div class="math notranslate nohighlight" id="equation-eq-diri1">
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-diri1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+Lu=-(pu')'+qu=f,&amp; \text{ á } ]a,b[,\\
+u(a)=\gamma_1/\alpha_1, \quad  u(b)=\gamma_2/\alpha_2.
+\end{cases}\end{split}\]</div>
+<p>Aðalatriðið í Galerkin-aðferð er að smíða nálgunarfall <span class="math notranslate nohighlight">\(v(x)\)</span> fyrir lausn <span class="math notranslate nohighlight">\(u\)</span> á Dirichlet-verkefninu að ofan á eftirfarandi hátt</p>
+<div class="math notranslate nohighlight">
+\[v(x)=\psi_0(x)+c_1\varphi_1(x)+\cdots+c_N\varphi_N(x),\]</div>
+<p>þar sem</p>
+<ol class="arabic simple">
+<li>fallið <span class="math notranslate nohighlight">\(\psi_0(x)\)</span> er valið þ.a. það uppfyllir jaðarskilyrðin í <a class="reference internal" href="#equation-eq-diri1">(5)</a>, þ.e.a.s.</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\psi_0(a)=\gamma_1/\alpha_1, \qquad  \psi_0(b)=\gamma_2/\alpha_2,\]</div>
+<ol class="arabic simple" start="2">
+<li>föllin <span class="math notranslate nohighlight">\(\varphi_1,\dots,\varphi_N\)</span> eru valin þ.a. þau uppfylla óhliðruðu jaðarskilyrðin, þ.e.a.s.</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\varphi_j(a)=\varphi_j(b)=0,  \qquad j=1, \dots, N,\]</div>
+<ol class="arabic simple" start="3">
+<li>stuðlanir <span class="math notranslate nohighlight">\(c_1, \dots, c_N\)</span> eru óþekktir, og markmiðið er að reikna þá út.</li>
+</ol>
+<p>Það er ljóst að nálgunarfallið <span class="math notranslate nohighlight">\(v\)</span> uppfyllir jaðarskilyrðin í <a class="reference internal" href="#equation-eq-diri1">(5)</a> <em>by construction</em>, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[v(a)=\gamma_1/\alpha_1, \qquad  v(b)=\gamma_2/\alpha_2.\]</div>
+<p>Hvernig getum við fundið nálgunargildi <span class="math notranslate nohighlight">\(c_1, \dots, c_N\)</span>?
+Við krefjumst að <span class="math notranslate nohighlight">\(v\)</span> uppfylli jöfnu <a class="reference internal" href="#equation-eq-cond1">(2)</a>, þá er</p>
+<div class="math notranslate nohighlight">
+\[{{\langle v,\varphi_j\rangle}}_L={{\langle f,\varphi_j\rangle}}, \qquad j=1,2,\dots,N.\]</div>
+<p>Við sjáum að þetta er jafngilt því að</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \psi_0,\varphi_j\rangle}}_L+\sum_{k=1}^Nc_k{{\langle \varphi_k,\varphi_j\rangle}}_L
+={{\langle f,\varphi_j\rangle}}, \qquad j=1,\dots,N.\]</div>
+<p>Nú höfum við <span class="math notranslate nohighlight">\(N\times N\)</span> jöfnuhneppi fyrir <span class="math notranslate nohighlight">\(N\)</span> nálgunargildi, af því að</p>
+<div class="math notranslate nohighlight" id="equation-eq-matrixg1d">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-matrixg1d" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{bmatrix}
+\langle \varphi_1, \varphi_1\rangle_L &amp; \langle \varphi_1, \varphi_2\rangle_L &amp; \dots &amp;\langle \varphi_1, \varphi_N\rangle_L \\
+\langle \varphi_2, \varphi_1\rangle_L &amp; \langle \varphi_2, \varphi_2\rangle_L &amp; \dots &amp;\langle \varphi_2, \varphi_N\rangle_L \\
+\vdots &amp; \vdots &amp;\ddots &amp;\vdots \\
+\langle \varphi_N, \varphi_1\rangle_L &amp; \langle \varphi_N, \varphi_2\rangle_L &amp; \dots &amp; \langle \varphi_N, \varphi_N\rangle_L
+\end{bmatrix}
+\begin{bmatrix}
+c_1 \\ c_2 \\ \vdots \\c_N
+\end{bmatrix} =
+\begin{bmatrix}
+-\langle \psi_0, \varphi_1\rangle_L +\langle f, \varphi_1\rangle \\
+-\langle \psi_0, \varphi_2\rangle_L +\langle  f, \varphi_2\rangle\\ \vdots \\ -\langle \psi_0, \varphi_N\rangle_L +\langle  f,\varphi_N\rangle
+\end{bmatrix}.\end{split}\]</div>
+<p>Almennt, ef afleiðuvirki er línulegur, þá er hneppið að ofan línulegt.</p>
+<p><strong>Þýðing og sambandið við jaðargildisverkefnin</strong></p>
+<p>Við sjáum að hugmyndin að baki aðferð Galerkins er frekar ólik m.v. mismunaaðferð.
+Í mismunaaðferðum fáum við algebrujöfnuhneppi úr afleiðujöfnum með því að nálga afleiður með mismunakvótum.
+Hér fáum við algebrujöfnuhneppi með því þess að krefjast þess að nálgunarfall uppfylli <em>veika framsetningu</em> afleiðujöfnunnar, sem er <a class="reference internal" href="#equation-eq-cond1">(2)</a>.</p>
+<p>Munið að <span class="math notranslate nohighlight">\({{\langle v,\varphi_j\rangle}}_L=\langle L v, \varphi_j\rangle\)</span>, þá segir jafnan <a class="reference internal" href="#equation-eq-cond1">(2)</a> okkur að</p>
+<div class="math notranslate nohighlight">
+\[{{\langle (L v-f),\varphi_j\rangle}}=0.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(u\)</span> er nákvæm lausn á jöfnunni <a class="reference internal" href="#equation-eq-diri1">(5)</a>, það þýðir að <span class="math notranslate nohighlight">\(Lu=f\)</span>, svo <span class="math notranslate nohighlight">\((L v-f)\)</span> er mismunur milli nálgunarfallsins <span class="math notranslate nohighlight">\(v\)</span> og lausnarinnar <span class="math notranslate nohighlight">\(u\)</span>, og við krefjumst þess að mismunur þeirra sé  <strong>þverstæður</strong> m.t.t. fallanna <span class="math notranslate nohighlight">\(\varphi_j\)</span> sem við notum til þess að smiða nálgunarfallið <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<p>Af hverju? Aðalatriðið er að mismunurinn er lágmarkaður ef hann er þverstæður m.t.t. plansins sem er spannað af <span class="math notranslate nohighlight">\(\varphi_j, ~j=1, \dots, N\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[{{\langle L(v-u),\varphi_j\rangle}}=0.\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Föllin <span class="math notranslate nohighlight">\(\varphi_j~j=1, \dots, N\)</span> þurfa að vera línulega óháð! Annars hefur fylkið í <a class="reference internal" href="#equation-eq-matrixg1d">(6)</a> ekki max stétt!</p>
+</div>
+</div>
+<div class="section" id="galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni">
+<h3>6.2.2. Galerkin-aðferðir í tveimur víddum fyrir Dirichlet-verkefni<a class="headerlink" href="#galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við lítum á jaðargildisverkefnið <a class="reference internal" href="#equation-eq-system2">(3)</a> í sértilfellinu þegar <span class="math notranslate nohighlight">\(\beta_1 =\beta_2=0\)</span> á <span class="math notranslate nohighlight">\(\partial D\)</span>, þ.e</p>
+<div class="math notranslate nohighlight" id="equation-eq-diri2">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-diri2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+Lu=-\nabla\cdot (p\nabla u)+qu=f, \qquad \text{ á } D,\\
+u=\gamma/\alpha, \qquad  \text{á } \ \partial D.
+\end{cases}\end{split}\]</div>
+<p>Við höldum áfram á svipaðan hátt, og við skilgreinum nálgunarfall <span class="math notranslate nohighlight">\(v\)</span></p>
+<div class="math notranslate nohighlight">
+\[v(x,y)=\psi_0(x,y)+c_1\varphi_1(x,y)+\cdots+c_N\varphi_N(x,y),
+(x,y) \in \bar D,\]</div>
+<p>þ.a.</p>
+<ol class="arabic simple">
+<li>fall <span class="math notranslate nohighlight">\(\psi_0(x,y)\)</span> uppfyllir eftirfarandi jaðarskilyrði</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\psi_0(x,y)=\gamma(x,y)/\alpha(x,y), \qquad (x,y) \in \partial D\]</div>
+<ol class="arabic simple" start="2">
+<li>föllin <span class="math notranslate nohighlight">\(\phi_j~j=1, \dots, N\)</span> uppfylla eftirfarandi jaðarskilyrði</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\varphi_j(x,y)=0,  \qquad (x,y) \in \partial D, \qquad j=1, \dots, N,\]</div>
+<p>Það er ljóst að nálgunarfallið  uppfyllir a.m.k. jaðarskilyrðin í <a class="reference internal" href="#equation-eq-diri2">(7)</a>.
+Eins og áður er markmiðið  að reikna  stuðlana <span class="math notranslate nohighlight">\(c_j\)</span>, og til þess að ákvarða þá notum við skilyrði <a class="reference internal" href="#equation-eq-cond2">(4)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\langle v, \varphi_j\rangle_L = \langle f , \varphi_j\rangle \,, \qquad j=1, \dots, N,\]</div>
+<p>sem gefur okkur <span class="math notranslate nohighlight">\(N\)</span> skilyrði fyrir <span class="math notranslate nohighlight">\(c_j\)</span></p>
+<div class="math notranslate nohighlight">
+\[{{\langle \psi_0,\varphi_j\rangle}}_L+\sum_{k=1}^Nc_k{{\langle \varphi_k,\varphi_j\rangle}}_L
+={{\langle f,\varphi_j\rangle}}, \qquad j=1,\dots,N.\]</div>
+<p>Eins og áður getum við skrifað <span class="math notranslate nohighlight">\(N \times N\)</span> hneppi, þ.a. <span class="math notranslate nohighlight">\([A]\vec{c} =\vec{b}\)</span>, þar sem</p>
+<div class="math notranslate nohighlight">
+\[A_{jk}={{\langle \varphi_k,\varphi_j\rangle}}_L
+={{\langle \varphi_j,\varphi_k\rangle}}_L, \qquad j,k=1,\dots,N,\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[b_j={{\langle f,\varphi_j\rangle}}-{{\langle \psi_0,\varphi_j\rangle}}_L, \qquad j=1,\dots,N.\]</div>
+<p>Formlega höfum við sömu hneppi eins og í <span class="math notranslate nohighlight">\(\mathbb R\)</span>. En nú erum við í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, þ.e.a.s. innfeldið og tvílínulega formið innihalda tvöfalt heildi (yfir <span class="math notranslate nohighlight">\(x, y\)</span>), sjáið <a class="reference internal" href="#ch-6-1-2"><span class="std std-ref">6.1.2</span></a>.</p>
+</div>
+</div>
+<div class="section" id="butaafer-i-einni-vidd">
+<h2>6.3. Bútaaðferð í einni vídd<a class="headerlink" href="#butaafer-i-einni-vidd" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Hér beinum við  athygli okkar að jaðargildisverkefni í einni vídd þar sem við veljum þúfugrunnföllin til þess að nálga lausn.</p>
+<p>Almennt er jaðargildisverkefnið gefið með <a class="reference internal" href="#equation-eq-system1">(1)</a>.
+Við veljum skiptingu á bili <span class="math notranslate nohighlight">\([a,b]\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[a=x_0&lt;x_1&lt;\cdots&lt;x_N=b, ~~~ h:= (b-a)/N, ~~ x_j= a+j h, ~~j=0, \dots, N.\]</div>
+<p>Munið líka að miðpunktar eru gefnir með</p>
+<div class="math notranslate nohighlight">
+\[m_j= x_j+ h,~~~~j=0, \dots, N-1.\]</div>
+<p>Munið að þúfugrunnföllin eru skilgreind þ.a. <span class="math notranslate nohighlight">\(\varphi_j(x_i)=\delta_{ij}\)</span>, sjáið <a class="reference internal" href="Kafli05.html#ch-5-2-2"><span class="std std-ref">5.2.2</span></a>.
+Sérstaklega, þýðir það að þúfugrunnföllin eru í <span class="math notranslate nohighlight">\(V\)</span>, og að <span class="math notranslate nohighlight">\(\varphi_0(a)=1\)</span> og <span class="math notranslate nohighlight">\(\varphi_N(b)=1\)</span>.</p>
+<div class="section" id="blondu-jaarskilyri-i-baum-endapunktum">
+<h3>6.3.1. Blönduð jaðarskilyrði í báðum endapunktum<a class="headerlink" href="#blondu-jaarskilyri-i-baum-endapunktum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við gerum ráð fyrir að <span class="math notranslate nohighlight">\(\beta_1\neq 0\)</span> og <span class="math notranslate nohighlight">\(\beta_2\neq 0\)</span>.</p>
+<p>Við skilgreinum nálgunarfallið</p>
+<div class="math notranslate nohighlight">
+\[v(x)=c_0\varphi_0(x)+\cdots+c_N\varphi_N(x).\]</div>
+<p>Munið kafla <a class="reference internal" href="#ch-6-1-2"><span class="std std-ref">6.1.2</span></a>, almennt höfum við</p>
+<div class="math notranslate nohighlight" id="equation-eq-form1dgenv1">
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-form1dgenv1" title="Permalink to this equation">¶</a></span>\[{{\langle u,\varphi\rangle}}_L + p(a)u'(a)\varphi(a)-p(b)u'(b)\varphi(b)
+= {{\langle f,\varphi\rangle}}, \qquad \varphi\in V.\]</div>
+<p>Við sjáum núna að <span class="math notranslate nohighlight">\(\varphi(a), \varphi(b)\)</span> eru ekki núll almennt, svo við þurfum að skoða jaðarliði líka.
+Fyrst notum við jaðarskilyrði í <a class="reference internal" href="#equation-eq-system1">(1)</a>, þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[{{\langle u,\varphi\rangle}}_L  +
+\dfrac {p(a)}{\beta_1}(\alpha_1u(a)-\gamma_1)\varphi(a)
++\dfrac{p(b)}{\beta_2}(\alpha_2u(b)-\gamma_2)\varphi(b)
+={{\langle f,\varphi\rangle}}.\]</div>
+<p>Nú stingum við í jöfnuna að nálgunarfallið er gefið með samantekt af þúfugrunnföllum og notum <span class="math notranslate nohighlight">\(\varphi_j\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(\varphi\)</span>. Þá er fyrir <span class="math notranslate nohighlight">\(j=0, \dots, N\)</span></p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=0}^N c_i{{\langle \varphi_i ,\varphi_j\rangle}}_L  +
+\dfrac {p(a)}{\beta_1}(\alpha_1 \sum_{i=0}^N c_i \varphi_i(a)-\gamma_1)\varphi_j(a)
++\dfrac{p(b)}{\beta_2}(\alpha_2\sum_{i=0}^N c_i \varphi_i(b)-\gamma_2)\varphi_j(b)
+={{\langle f,\varphi_j\rangle}}.\]</div>
+<p>Það er gagnlegt að skrifa nálgunarformúlur á fylkjaformi, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[A{\mathbf c}={\mathbf b}, ~~~\text{þar sem}~~~ A=\big(a_{jk}\big)_{j,k=0}^N.\]</div>
+<p>Stök fylkisins <span class="math notranslate nohighlight">\(A\)</span> eru gefin með</p>
+<div class="math notranslate nohighlight">
+\[a_{ji}= {{\langle \varphi_i ,\varphi_j\rangle}}_L+ \dfrac {p(a)\alpha_1}{\beta_1}\varphi_i(a)\varphi_j(a)+\dfrac {p(b)\alpha_2}{\beta_2}\varphi_i(b)\varphi_j(b),~~~i,j=0, \dots, N,\]</div>
+<p>og stuðlar vigursins <span class="math notranslate nohighlight">\(\mathbf b\)</span> eru gefnir með</p>
+<div class="math notranslate nohighlight">
+\[b_j
+={{\langle f,\varphi_j\rangle}}+\dfrac {p(a)\gamma_1}{\beta_1}\varphi_j(a)
++\dfrac{p(b)\gamma_2}{\beta_2}\varphi_j(b), ~~~j=0, \dots, N.\]</div>
+<p>Við viljum skoða jöfnuhneppið nánar. Munið</p>
+<p>T.d. fyrir <span class="math notranslate nohighlight">\(j=0\)</span> þurfum við bara að reikna eftirfarandi stök</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+a_{00}&amp;=\int_{x_0}^{x_1}\big(p(\varphi_0')^2+q\varphi_0^2\big)\, dx+
+\dfrac{p(a)\alpha_1}{\beta_1}
+\\
+a_{01}&amp;=
+\int_{x_0}^{x_1}\big(p\varphi_0'\varphi_1'+q\varphi_0\varphi_1\big)\,
+dx
+\end{aligned}\end{split}\]</div>
+<p>af því að <span class="math notranslate nohighlight">\(\varphi_0\)</span> hefur stoð á bili <span class="math notranslate nohighlight">\([x_0,x_1]\)</span>, <span class="math notranslate nohighlight">\(\varphi_j\)</span> með <span class="math notranslate nohighlight">\(j=1, \dots, N-1\)</span> er ekki núll bara yfir bilið <span class="math notranslate nohighlight">\([x_{j-1},x_{j+1}]\)</span> og <span class="math notranslate nohighlight">\(\varphi_N\)</span> er ekki núll á bili <span class="math notranslate nohighlight">\([x_{N-1},x_{N}]\)</span>.</p>
+<p>Lítum nú a stuðla hægri hliðarinnar, þá er</p>
+<div class="math notranslate nohighlight">
+\[b_0=\int_{x_0}^{x_1}f\varphi_0\, dx+\dfrac{p(a)\gamma_1}{\beta_1}
+\approx \dfrac{h f(m_0)}2+\dfrac{p(a)\gamma_1}{\beta_1},\]</div>
+<p>af því að <span class="math notranslate nohighlight">\(\varphi_0(a)=1\)</span> og <span class="math notranslate nohighlight">\(\varphi_0(b)=0\)</span>.</p>
+<p>Nú viljum við nálga heildið að ofan, við getum haldið áfram eins og áður, t.d.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+a_{00}&amp;=\int_{x_0}^{x_1}\big(p(\varphi_0')^2+q\varphi_0^2\big)\, dx+
+\dfrac{p(a)\alpha_1}{\beta_1}
+\approx \dfrac{p(m_0)}{h}+\dfrac{h q(m_0)}3+\dfrac{p(a)\alpha_1}{\beta_1}
+\\
+a_{01}&amp;=
+\int_{x_0}^{x_1}\big(p\varphi_0'\varphi_1'+q\varphi_0\varphi_1\big)\,
+dx
+\approx -\dfrac{p(m_0)}{h}+\dfrac{h q(m_0)}6.
+\\
+b_0&amp;=\int_{x_0}^{x_1}f\varphi_0\, dx+\dfrac{p(a)\gamma_1}{\beta_1}
+\approx \dfrac{h f(m_0)}6+\dfrac{p(a)\gamma_1}{\beta_1}.\end{aligned}\end{split}\]</div>
+<p>Fyrir <span class="math notranslate nohighlight">\(j=1, \dots, N-1\)</span> þurfum við að reikna stökin <span class="math notranslate nohighlight">\(a_{jj-1},a_{jj},a_{jj+1}\)</span> og líka <span class="math notranslate nohighlight">\(\mathbf{b}_j\)</span>. Við notum sömu nálgun fyrir heildið, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+a_{j,j-1}&amp;=\int_{x_{j-1}}^{x_j}
+\big( p\varphi_{j-1}'\varphi_j'+q\varphi_{j-1}\varphi_j\big)\, dx
+\approx -\dfrac{p(m_{j-1})}{h}+\dfrac{h q(m_{j-1})}6,\\
+a_{j,j}&amp;=\int_{x_{j-1}}^{x_{j+1}}
+\big( p(\varphi_j')^2+q \varphi_j^2\big)\, dx
+\approx \dfrac{p(m_{j-1})}{h}+\dfrac{p(m_j)}{h}
++\dfrac{(q(m_{j-1})+ q(m_j))h}3,\\
+a_{j,j+1}&amp;=\int_{x_j}^{x_{j+1}}
+\big( p\varphi_j'\varphi_{j+1}'+q \varphi_j\varphi_{j+1}\big)\, dx
+\approx -\dfrac{p(m_j)}{h}
++\dfrac{h q(m_j)}6,\\
+b_j&amp;=\int_{x_{j-1}}^{x_{j+1}}f\varphi_j\, dx
+\approx \dfrac{h (f(m_{j-1})+f(m_j))}2.\end{aligned}\end{split}\]</div>
+<p>Að lokum þurfum við að skoða <span class="math notranslate nohighlight">\(j=N\)</span>, nú höfum við að <span class="math notranslate nohighlight">\(\varphi_N(b)=1\)</span>, þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+a_{N,N-1}&amp;=\int_{x_{N-1}}^{x_N}
+\big( p\varphi_{N-1}'\varphi_N'+q\varphi_{N-1}\varphi_N\big)\, dx
+\approx -\dfrac{p(m_{N-1})}{h}+\dfrac{h q(m_{N-1})}6,\\
+a_{NN}&amp;=\int_{x_{N-1}}^{x_{N}}
+\big( p\big(\varphi_N'\big)^2+q\varphi_N^2\big)\, dx
++\dfrac{p(b)\alpha_2}{\beta_2}
+\approx \dfrac{p(m_{N-1})}{h}
++\dfrac{h q(m_{N-1})}3+\dfrac{p(b)\alpha_2}{\beta_2},\\
+b_N&amp;=\int_{x_{N-1}}^{x_{N}}f\varphi_N\, dx+\dfrac{p(b)\gamma_2}{\beta_2}
+\approx \dfrac{h f(m_{N-1})}2+\dfrac{p(b)\gamma_2}{\beta_2}.\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="fallsjaarskilyri">
+<h3>6.3.2. Fallsjaðarskilyrði<a class="headerlink" href="#fallsjaarskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á jaðargildisverkefnið <a class="reference internal" href="#equation-eq-system1">(1)</a>.</p>
+<p>Við gerum ráð fyrir að <span class="math notranslate nohighlight">\(\beta_1=0\)</span>, þ.e.a.s. að við höfum Dirchlet jaðarskilyrði í vinstri endapunktinum, þ.e. <span class="math notranslate nohighlight">\(u(a)=\gamma_1/\alpha_1\)</span>.</p>
+<p>Þá  setjum við <span class="math notranslate nohighlight">\(c_0=\gamma_1/\alpha_1\)</span>, svo að nálgunarfallið <span class="math notranslate nohighlight">\(v\)</span> tekur gildi <span class="math notranslate nohighlight">\(\gamma_1/\alpha_1\)</span> í punktinum <span class="math notranslate nohighlight">\(a\)</span>.
+Það þýðir að fyrir <span class="math notranslate nohighlight">\(j=0\)</span> setjum við</p>
+<div class="math notranslate nohighlight">
+\[a_{00}=1, \quad a_{0j}=0, \ j=1,\dots,N, \ b_0=\gamma_1/\alpha_1,\]</div>
+<p>og jöfnuhneppið er eins og áður.</p>
+<p>Ef við höfum Dirchlet jaðarskilyrði í hægri endapunktinum, þ.e.a.s. að <span class="math notranslate nohighlight">\(\beta_2=0\)</span>, þá veljum við <span class="math notranslate nohighlight">\(c_N=\gamma_2/\alpha_2\)</span>, svo að nálgunarfallið uppfyllir rétt jaðarskilyrði í <span class="math notranslate nohighlight">\(b\)</span>.
+Þess vegna setjum við</p>
+<div class="math notranslate nohighlight">
+\[a_{NN}=1, \quad a_{Nj}=0, \ j=0,\dots,N-1, \ b_N=\gamma_2/\alpha_2.\]</div>
+</div>
+</div>
+<div class="section" id="afer-galerkins-me-almennum-jaarskilyrum">
+<h2>6.4. Aðferð Galerkins með almennum jaðarskilyrðum<a class="headerlink" href="#afer-galerkins-me-almennum-jaarskilyrum" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við lítum á jaðargildisverkefnið <a class="reference internal" href="#equation-eq-system1">(1)</a> og <a class="reference internal" href="#equation-eq-system2">(3)</a>. Hér viljum við ekki tilgreina grunn fyrir nálgunarfall, en  ætlum frekar að ákvarða skilyrði og nálgunarformúlur almennt.</p>
+<p>Við skilgreinum <em>veika framsetningu á jaðargildisverkefnunum</em> með formúlu</p>
+<div class="math notranslate nohighlight" id="equation-eq-weakform1d">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-weakform1d" title="Permalink to this equation">¶</a></span>\[{{\langle u,\varphi\rangle}}_{L,B}={{\langle f,\varphi\rangle}}+T_B(\varphi), \qquad
+\varphi\in V_B,\]</div>
+<p>þar sem</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\((\psi,\varphi)\mapsto {{\langle \psi,\varphi\rangle}}_{L,B}\)</span> er tvílínulegt form sem er bæði háð virkjanum <span class="math notranslate nohighlight">\(L\)</span> og jaðarskilyrðunum <span class="math notranslate nohighlight">\(B\)</span>,</li>
+<li><span class="math notranslate nohighlight">\(\varphi\mapsto T_B(\varphi)\)</span> er línulegt form sem er háð jaðarskilyrðunum <span class="math notranslate nohighlight">\(B\)</span>,</li>
+<li><span class="math notranslate nohighlight">\(V_B\)</span> er mengi af föllum, sem skilgreint er út frá jaðarskilyrðunum.</li>
+</ol>
+<p>Við veljum <span class="math notranslate nohighlight">\(\psi_0\)</span> þ.a. fallið uppfylli viðeigandi jaðarskilyrði, og eftir það veljum við <span class="math notranslate nohighlight">\(\varphi_1,\dots,\varphi_N\in V_B\)</span> og krefjumst þess að nálgunarfallið <span class="math notranslate nohighlight">\(v=\psi_0+c_1\varphi_1+\cdots+\varphi_N\)</span> uppfylli línulega jöfnuhneppið <a class="reference internal" href="#equation-eq-weakform1d">(9)</a>.</p>
+<p>Þá er almennt</p>
+<div class="math notranslate nohighlight">
+\[{{\langle v,\varphi_j\rangle}}_{L,B}={{\langle f,\varphi_j\rangle}}+T_B(\varphi_j),
+\qquad j=1,\dots,N.\]</div>
+<p>Á fylkjaformi höfum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a_{jk} &amp;=&amp;{{\langle \varphi_k,\varphi_j\rangle}}_{L,B}
+={{\langle \varphi_j,\varphi_k\rangle}}_{L,B}, \qquad j,k=1,\dots,N,\\
+b_j &amp;=&amp; {{\langle f,\varphi_j\rangle}}+T_B(\varphi_j)-{{\langle \psi_0,\varphi_j\rangle}}_{L,B},
+\qquad j=1,\dots,N,\end{split}\]</div>
+<p>sem gefur okkur jöfnuhneppið á fylkjaformi:</p>
+<div class="math notranslate nohighlight">
+\[A{\mathbf c}={\mathbf b}, ~~~\text{þar sem}~~~ A=\big(a_{jk}\big)_{j,k=1}^N.\]</div>
+<p>Þá höfum við <span class="math notranslate nohighlight">\(N\)</span> algebrujöfnur fyrir <span class="math notranslate nohighlight">\(N\)</span> nálgunargildi <span class="math notranslate nohighlight">\(c_j, ~j=1, \dots, N\)</span>, og við getum reiknað þau út.</p>
+<div class="section" id="i-einni-vidd">
+<h3>6.4.1. Í einni vídd<a class="headerlink" href="#i-einni-vidd" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við skoðum nú <a class="reference internal" href="#equation-eq-weakform1d">(9)</a> í ólíkum tilfellum.
+Munið samkvæmt kafla <a class="reference internal" href="#ch-6-1-2"><span class="std std-ref">6.1.2</span></a>, höfum við almennt</p>
+<div class="math notranslate nohighlight" id="equation-eq-form1dgen">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-form1dgen" title="Permalink to this equation">¶</a></span>\[{{\langle u,\varphi\rangle}}_L + p(a)u'(a)\varphi(a)-p(b)u'(b)\varphi(b)
+= {{\langle f,\varphi\rangle}}, \qquad \varphi\in V.\]</div>
+<ol class="upperroman simple">
+<li><strong>Dirichlet-jaðarskilyrði</strong></li>
+</ol>
+<p>Þá er verkefnið eins og <a class="reference internal" href="#equation-eq-diri1">(5)</a> sem við  fjölluðum um í <a class="reference internal" href="#ch-6-2-1"><span class="std std-ref">6.2.1</span></a>. Þá veljum við <span class="math notranslate nohighlight">\(\psi_0\)</span> þ.a. <span class="math notranslate nohighlight">\(\psi_0(a)=\gamma_1/\alpha_1\)</span> og <span class="math notranslate nohighlight">\(\psi_0(b)=\gamma_2/\alpha_2\)</span>.</p>
+<p>Hér skilgreinum við mengi falla</p>
+<div class="math notranslate nohighlight">
+\[V_B=\{\varphi\in V\,;\, \varphi(a)=\varphi(b)=0\},\]</div>
+<p>og þá er</p>
+<div class="math notranslate nohighlight">
+\[{{\langle u,\varphi\rangle}}_L={{\langle f,\varphi\rangle}},\]</div>
+<p>sem segir okkur að</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}_{L,B}={{\langle \varphi,\psi\rangle}}_L ~~~\text{og}~~~ T_B(\varphi)=0 ~~~ \varphi,\psi\in V_B.\]</div>
+<ol class="upperroman simple" start="2">
+<li><strong>Dirichlet jaðarskilyrði í vinstri endapunkti</strong></li>
+</ol>
+<p>Lítum á</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+Lu=-(pu')'+qu=f, \\
+B_1u=\alpha_1u(a)=\gamma_1,  \\
+B_2u=\alpha_2u(b)+{\beta}_2u'(b)=\gamma_2, \quad \beta_2\neq 0.
+\end{cases}\end{split}\]</div>
+<p>Nú tökum við</p>
+<div class="math notranslate nohighlight">
+\[V_B=\{\varphi\in V\,;\, \varphi(a)=0\},\]</div>
+<p>og notum jaðarskilyrði í hægri endapunkti til þess að einfalda tvílínulega formið <a class="reference internal" href="#equation-eq-form1dgen">(10)</a>, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[{{\langle u,\varphi\rangle}}_L
++\dfrac{p(b)\alpha_2}{\beta_2}u(b)\varphi(b)
+={{\langle f,\varphi\rangle}}
++\dfrac{p(b)\gamma_2}{\beta_2}\varphi(b), ~~~ \varphi\in V_B.\]</div>
+<p>Ef við berum jöfnuna að ofan saman við jöfnu <a class="reference internal" href="#equation-eq-weakform1d">(9)</a>,  sjáum við að</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}_{L,B}={{\langle \varphi,\psi\rangle}}_L
++\dfrac{p(b)\alpha_2}{\beta_2}\varphi(b)\psi(b),
+\quad \text{ og } \quad
+T_B(\varphi)=
+\dfrac{p(b)\gamma_2}{\beta_2}\varphi(b),
+\qquad \varphi,\psi\in V_B.\]</div>
+<ol class="upperroman simple" start="3">
+<li><strong>Dirichlet jaðarskilyrði í hægri endapunkti</strong></li>
+</ol>
+<p>Lítum á</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+Lu=-(pu')'+qu=f, \\
+B_1u={\alpha}_1u(a)-\beta_1u'(a)=\gamma_1, \quad \beta_1\neq 0 \\
+B_2u=\alpha_2u(b)=\gamma_2,
+\end{cases}\end{split}\]</div>
+<p>og höldum áfram eins og áður. Við skilgreinum</p>
+<div class="math notranslate nohighlight">
+\[V_B=\{\varphi\in V \,;\, \varphi(b)=0 \},\]</div>
+<p>og með því að nota jaðarskilyrði verður formið <a class="reference internal" href="#equation-eq-form1dgen">(10)</a></p>
+<div class="math notranslate nohighlight">
+\[{{\langle u,\varphi\rangle}}_L
++\dfrac {p(a)\alpha_1}{\beta_1}u(a)\varphi(a)
+={{\langle f,\varphi\rangle}}
++\dfrac {p(a)\gamma_1}{\beta_1}\varphi(a), \qquad \varphi\in V_B.\]</div>
+<p>Á svipaðan hátt berum við jöfnuna að ofan saman við <a class="reference internal" href="#equation-eq-weakform1d">(9)</a>, og sjáum að hér gildir</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}_{L,B}={{\langle \varphi,\psi\rangle}}_L
++\dfrac {p(a)\alpha_1}{\beta_1}\varphi(a)\psi(a)
+\quad \text{ og } \quad
+T_B(\varphi)=\dfrac {p(a)\gamma_1}{\beta_1}\varphi(a),
+\qquad \varphi,\psi\in V_B.\]</div>
+<ol class="upperroman simple" start="4">
+<li><strong>Blönduð jaðarskilyrði í báðum endapunktum</strong></li>
+</ol>
+<p>Jaðargildisverkefnið er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+Lu=-(pu')'+qu=f, \\
+B_1u={\alpha}_1u(a)-\beta_1u'(a)=\gamma_1, \quad \beta_1\neq 0, \\
+B_2u=\alpha_2u(b)+{\beta}_2u'(b)=\gamma_2, \quad \beta_2\neq 0.
+\end{cases}\end{split}\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(\beta_1\neq 0\)</span> og <span class="math notranslate nohighlight">\(\beta_2\neq 0\)</span>, tökum við  <span class="math notranslate nohighlight">\(\psi_0\)</span> sem núllfallið, þá er nálgunarfallið gefið með</p>
+<div class="math notranslate nohighlight">
+\[v(x)=c_1\varphi_1(x)+\cdots+c_N\varphi_N(x),
+~~~~x \in [a,b].\]</div>
+<p>Við getum notað jaðarskilyrðin til þess að einfalda tvílínulega formið <a class="reference internal" href="#equation-eq-form1dgen">(10)</a>, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[{{\langle u,\varphi\rangle}}_L  +
+\dfrac {p(a)}{\beta_1}(\alpha_1u(a)-\gamma_1)\varphi(a)
++\dfrac{p(b)}{\beta_2}(\alpha_2u(b)-\gamma_2)\varphi(b)
+={{\langle f,\varphi\rangle}}.\]</div>
+<p>Ef við berum jöfnuna að ofan saman við jöfnu <a class="reference internal" href="#equation-eq-weakform1d">(9)</a>,  skiljum við nú hvað <span class="math notranslate nohighlight">\(T_B\)</span> er og restin, þ.e.a.s mengi fallanna er</p>
+<div class="math notranslate nohighlight">
+\[V_B=V,\]</div>
+<p>línulega formið <span class="math notranslate nohighlight">\(T_B\)</span> er gefið með</p>
+<div class="math notranslate nohighlight">
+\[T_B(\varphi)=\dfrac {p(a)\gamma_1}{\beta_1}\varphi(a)
++\dfrac{p(b)\gamma_2}{\beta_2}\varphi(b), \qquad \varphi \in V_B,\]</div>
+<p>og  tvílínulega formið <span class="math notranslate nohighlight">\({{\langle \varphi,\psi\rangle}}_{L,B}\)</span> er gefið með</p>
+<div class="math notranslate nohighlight">
+\[{{\langle \varphi,\psi\rangle}}_{L,B}={{\langle \varphi,\psi\rangle}}_L
++\dfrac {p(a)\alpha_1}{\beta_1}\varphi(a)\psi(a)
++\dfrac{p(b)\alpha_2}{\beta_2}\varphi(b)\psi(b),
+\qquad \varphi,\psi\in V_B.\]</div>
+</div>
+<div class="section" id="i-tveimur-viddum">
+<h3>6.4.2. Í tveimur víddum<a class="headerlink" href="#i-tveimur-viddum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við viljum skoða veiku framsetninguna <a class="reference internal" href="#equation-eq-weakform1d">(9)</a> fyrir jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.
+Fyrst er gagnlegt að skrifa jaðargildisverkefnið sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+Lu=-\nabla\cdot (p\nabla u)+qu=f, \quad &amp;\text{á } D\\
+u=\gamma,\quad &amp;\text{á } \ \partial D_1,\\
+\alpha u+\beta\dfrac{\partial u}{\partial n}
+=\gamma, \quad  &amp;\text{á } \ \partial D_2,
+\end{cases}\end{split}\]</div>
+<p>þar sem</p>
+<div class="math notranslate nohighlight">
+\[\partial_1D=\{(x,y)\in \partial D\,;\, \beta(x,y)=0\}
+\qquad \text{ og } \qquad
+\partial_2D=\{(x,y)\in \partial D\,;\, \beta(x,y)\neq 0\},\]</div>
+<p>og <span class="math notranslate nohighlight">\(\partial D=\partial_1D\cup \partial_2 D\)</span> (munið <span class="xref std std-ref">5.3</span>). Við gerum alltaf ráð’fyrir að <span class="math notranslate nohighlight">\(p\in C^1\)</span> og <span class="math notranslate nohighlight">\(q, f\)</span> séu samfelld á <span class="math notranslate nohighlight">\(\bar D\subset\mathbb{R}^2\)</span>.</p>
+<p>Við höldum áfram eins og áður, þ.e.a.s.</p>
+<ol class="arabic simple">
+<li>Fyrst veljum við fallið <span class="math notranslate nohighlight">\(\psi_0\)</span> þ.a. <span class="math notranslate nohighlight">\(\psi_0(x,y) = \gamma(x,y)\)</span> fyrir öll <span class="math notranslate nohighlight">\((x,y)\in\partial D_1\)</span>.</li>
+<li>Eftir það, veljum við föllin <span class="math notranslate nohighlight">\(\varphi\)</span> þ.a. <span class="math notranslate nohighlight">\(\varphi(x,y)=0\)</span> fyrir <span class="math notranslate nohighlight">\((x,y)\in\partial D_1\)</span>. Það þýðir að við veljum</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[V_B=\{ \varphi\in \mathcal{C}^2(\mathbb R)~~: ~~ \varphi(x,y)=0, ~~ (x,y)\in \partial D_1 \}.\]</div>
+<ol class="arabic simple" start="3">
+<li>Að lokum skilgreinum við nálgunarfallið með <span class="math notranslate nohighlight">\(v=\psi_0+c_1\varphi_1+\cdots+c_N\varphi_N\)</span> og við krefjumst þess að <span class="math notranslate nohighlight">\(v\)</span> uppfylli veiku framsetninguna <a class="reference internal" href="#equation-eq-weakform1d">(9)</a>.</li>
+</ol>
+<p>Við sjáum nú hvað framsetningin <a class="reference internal" href="#equation-eq-weakform1d">(9)</a> gefur okkur í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.
+Munið að í kafla <a class="reference internal" href="#ch-6-1-2"><span class="std std-ref">6.1.2</span></a> reiknuðum við að</p>
+<div class="math notranslate nohighlight">
+\[\langle L u, \varphi\rangle= \langle u, \varphi\rangle_L - \int_{\partial D} p \dfrac{\partial u}{\partial n} \varphi ds\,,\]</div>
+<p>en nú tökum við <span class="math notranslate nohighlight">\(\varphi \in V_B\)</span> og jaðarinn er <span class="math notranslate nohighlight">\(\partial D=\partial_1D\cup \partial_2 D\)</span>, þá getum við skrifað</p>
+<div class="math notranslate nohighlight">
+\[\langle L u, \varphi\rangle= \langle u, \varphi\rangle_L - \int_{\partial D_2} p \dfrac{\partial u}{\partial n} \varphi ds\ =
+\langle u, \varphi\rangle_L - \int_{\partial D_2} p \dfrac{\gamma -\alpha u}{\beta} \varphi ds\,,\]</div>
+<p>þar sem í síðasta skrefi höfum við notað jaðarskilyrði í <span class="math notranslate nohighlight">\(\partial D_2\)</span>. Nú erum við búin að skrifa niður veiku framsetninguna <a class="reference internal" href="#equation-eq-weakform1d">(9)</a> fyrir nálgunarfallið <span class="math notranslate nohighlight">\(v\)</span> í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, þá er</p>
+<div class="math notranslate nohighlight" id="equation-eq-weakformr2">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-weakformr2" title="Permalink to this equation">¶</a></span>\[\langle v, \varphi\rangle_L + \int_{\partial D_2} p \dfrac{\alpha v}{\beta} \varphi ds = \langle f, \varphi\rangle + \int_{\partial D_2} p \dfrac{\gamma}{\beta} \varphi ds, \qquad \varphi\in V_B.\]</div>
+<p>Við berum formúluna <a class="reference internal" href="#equation-eq-weakformr2">(11)</a> saman við almennu stæðuna <a class="reference internal" href="#equation-eq-weakform1d">(9)</a>, og við sjáum að hér höfum við</p>
+<div class="math notranslate nohighlight">
+\[{\langle \varphi,\psi\rangle}_{L,B}=
+{{\langle \varphi,\psi\rangle}}_L+\int_{\partial_2D}\dfrac{p\alpha}\beta \varphi\psi\, ds\qquad \varphi,\psi\in V_B,\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[T_B(\varphi)=\int_{\partial_2D}\dfrac{p\gamma}\beta \varphi\, ds,
+\qquad \varphi,\psi\in V_B.\]</div>
+</div>
+<div class="section" id="synidaemi">
+<h3>6.4.3. Sýnidæmi<a class="headerlink" href="#synidaemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á eftirfarandi jaðargildisverkefni</p>
+<div class="math notranslate nohighlight" id="equation-eq-example2d">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-example2d" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+-\nabla^2 u= -\dfrac{\partial^2 u}{\partial x^2 }-\dfrac{\partial^2 u}{\partial y^2 }=1 &amp;\text{á } \ D,\\
+u(x,0)=1-x, &amp;0&lt;x&lt;1,\\
+\dfrac{\partial u}{\partial n}(0,y)=1-y, &amp;0&lt;y&lt;1,\\
+\dfrac{\partial u}{\partial n}(x,1-x)+u(x,1-x)=0, &amp;0&lt;x&lt;1,
+\end{cases}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(D\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[D=\{(x,y)\, ;\, 0&lt;x&lt;1, 0&lt;y&lt;1-x\}.\]</div>
+<p>Hér höfum við að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\partial D_1 =\{(x,0)\, ;\, 0\leq x\leq 1\},\\
+&amp;&amp;\partial D_2 =\{(0,y)\, ;\, 0&lt;y\leq 1\}\cup \{(x,1-x)\, ;\, 0&lt; x&lt;1\}.\end{split}\]</div>
+<p>Við viljum nota aðferð Galerkins til þess að ákvarða nálgunarlausn af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[v(x,y)=a+bx+cy+dxy.\]</div>
+<p>Við byrjum á að skoða Dirichlet skilyrði í <span class="math notranslate nohighlight">\(\partial D_1\)</span>, og við veljum fallið <span class="math notranslate nohighlight">\(\psi_0\)</span> þ.a. <span class="math notranslate nohighlight">\(\psi_0(x,0)=1-x\)</span>, fyrir <span class="math notranslate nohighlight">\(x\in [0,1]\)</span>.
+Þá getum við valið</p>
+<div class="math notranslate nohighlight">
+\[\psi_0(x,y)=1-x, \qquad (x,y)\in \bar D.\]</div>
+<p>Nú veljum við <span class="math notranslate nohighlight">\(\varphi\)</span> þ.a. <span class="math notranslate nohighlight">\(\varphi(x,0)=0\)</span>, fyrir <span class="math notranslate nohighlight">\(x\in [0,1]\)</span>, þ.e.a.s.</p>
+<div class="math notranslate nohighlight">
+\[V_B=\{ \varphi\in C^2(\bar D)~~: ~~\varphi(x,y)=0 \quad (x,y)\in \partial D_1 \}.\]</div>
+<p>Við þurfum að velja <span class="math notranslate nohighlight">\(\varphi\)</span>, en með þetta val á fallinu <span class="math notranslate nohighlight">\(\psi_0\)</span>, er það jafngilt að setja <span class="math notranslate nohighlight">\(a=1\)</span> og <span class="math notranslate nohighlight">\(b=-1\)</span>. Það vantar bara að velja föll <span class="math notranslate nohighlight">\(\varphi_1, \varphi_2\)</span>, sem þurfa að vera núll á jaðrinum <span class="math notranslate nohighlight">\(\partial D_1\)</span>.
+Við sjáum að einliður <span class="math notranslate nohighlight">\(y\)</span> og <span class="math notranslate nohighlight">\(x y\)</span> eru núll á jaðrinum <span class="math notranslate nohighlight">\(\partial D_1\)</span>, þá getum við tekið</p>
+<div class="math notranslate nohighlight">
+\[\varphi_1 (x,y)=y , \qquad \varphi_2(x,y)= x y.\]</div>
+<p>Við beitum <a class="reference internal" href="#equation-eq-weakformr2">(11)</a>, en fyrst skoðum við jaðarliði í <a class="reference internal" href="#equation-eq-weakformr2">(11)</a>.
+Athugum að <span class="math notranslate nohighlight">\(p(x,y)=1\)</span>,  <span class="math notranslate nohighlight">\(\alpha(0,y)=0\)</span> fyrir <span class="math notranslate nohighlight">\(y\in ]0,1]\)</span>, og <span class="math notranslate nohighlight">\(\gamma(x,1-x)=0\)</span> fyrir <span class="math notranslate nohighlight">\(x\in ]0,1[\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp; \int_{\partial D_2} p \dfrac{\alpha v}{\beta} \varphi ds=
+\sqrt 2 \int_0^1 v(x,1-x) \varphi(x,1-x)dx, \\
+&amp;&amp; \int_{\partial D_2} p \dfrac{\gamma}{\beta} \varphi ds= \int_0^1 (1-y)\varphi(0,y)dy.\end{split}\]</div>
+<p>Athugum að</p>
+<div class="math notranslate nohighlight">
+\[\nabla \psi_0(x,y)=(-1,0)^T, \quad \nabla \varphi_1(x,y)= (0,1)^T , \quad \nabla \varphi_2(x,y)=(y,x)^T.\]</div>
+<p>Fyrir <span class="math notranslate nohighlight">\(\varphi_1\)</span> verður veika framsetningin <a class="reference internal" href="#equation-eq-weakformr2">(11)</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\int_D \nabla v \cdot \nabla \varphi_1 dA + \sqrt 2 \int_0^1 v(x,1-x) \varphi_1(x,1-x)dx= \int_D \varphi_1 dA+ \int_0^1 (1-y)\varphi_1(0,y)dy,
+\\
+&amp;&amp; c_1 \int_D dA+ c_2 \int_D x dA +\sqrt 2 \int_0^1 \left(1+c_1+c_2 x\right)(1-x)^2dx =\int_D y dA + \int_0^1 (1-y)y dy,\end{split}\]</div>
+<p>sem gefur okkur</p>
+<div class="math notranslate nohighlight">
+\[c_1(\tfrac 12 +\tfrac{\sqrt 2}{3})+c_2(\tfrac 16 +\tfrac{\sqrt 2}{12})=(\tfrac 13 +\tfrac{\sqrt 2}{3}).\]</div>
+<p>Við höldum áfram á svipaðan hátt fyrir <span class="math notranslate nohighlight">\(j=2\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\int_D \nabla v \cdot \nabla \varphi_2 dA + \sqrt 2 \int_0^1 v(x,1-x) \varphi_2(x,1-x)dx= \int_D \varphi_2 dA+ \int_0^1 (1-y)\varphi_2(0,y)dy,
+\\
+&amp;&amp; \int_D (-y)dA+c_1 \int_D x dA+ c_2 \int_D (x^2+y^2) dA +\sqrt 2 \int_0^1 \left(1+c_1+c_2 x\right)x(1-x)^2dx =\int_D x\, y dA,\end{split}\]</div>
+<p>sem gefur okkur</p>
+<div class="math notranslate nohighlight">
+\[c_1(\tfrac 16 +\tfrac{\sqrt 2}{12})+c_2(\tfrac 16 +\tfrac{\sqrt 2}{30})=(\tfrac{5}{24} -\tfrac{\sqrt 2}{12}).\]</div>
+<p>Að lokum fáum við</p>
+<div class="math notranslate nohighlight">
+\[c_1=-0.4360,  ~~~~c_2=1.0034,\]</div>
+<p>þá er nálgunarfallið gefið með</p>
+<div class="math notranslate nohighlight">
+\[v(x,y)=1-x-0.4360\, y+1.0034\, xy.\]</div>
+</div>
+</div>
+<div class="section" id="butaafer-i-tveimur-viddum">
+<h2>6.5. Bútaaðferð í tveimur víddum<a class="headerlink" href="#butaafer-i-tveimur-viddum" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við ætlum að líta á jaðargildisverkefni <a class="reference internal" href="#equation-eq-system2">(3)</a>, og hér við viljum nota aðferð Galerkins þar sem svæðinu <span class="math notranslate nohighlight">\(\bar D\)</span> er skipt í sammengi lokaðra þríhyrninga og nálgunarfallið er línuleg samantekt af þúfugrunnföllum.</p>
+<div class="section" id="net-me-rihyrningum">
+<h3>6.5.1. Net með þríhyrningum<a class="headerlink" href="#net-me-rihyrningum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="ch-6-5-1">Við skiptum svæðinu <span class="math notranslate nohighlight">\(\bar D\)</span>  í þríhyrninga, eins og í myndunum að neðan.</p>
+<a class="reference internal image-reference" href="_images/disk-with-trianglegrid.png"><img alt="_images/disk-with-trianglegrid.png" class="align-center" src="_images/disk-with-trianglegrid.png" style="width: 25%;" /></a>
+<p><em>Hálfri skífu skipt í þríhyrninga.</em></p>
+<a class="reference internal image-reference" href="_images/triangle-grid.png"><img alt="_images/triangle-grid.png" class="align-center" src="_images/triangle-grid.png" style="width: 65%;" /></a>
+<p><em>Rétthyrningi skipt í þríhyrninga. Hér er</em> <span class="math notranslate nohighlight">\(N=4\)</span> <em>og</em> <span class="math notranslate nohighlight">\(M=2\)</span>.</p>
+<p>Við skoðum dæmi með rétthyrningnum <span class="math notranslate nohighlight">\(D\)</span></p>
+<div class="math notranslate nohighlight">
+\[D=\{ (x,y)\in \mathbb{R}^2, ~~ a&lt;x&lt;b, ~~ c&lt;y&lt;d\}\,.\]</div>
+<p>Þar höfum við skiptingu á <span class="math notranslate nohighlight">\(x\)</span>-ás</p>
+<div class="math notranslate nohighlight">
+\[a=x_1 &lt; x_2 &lt; \dots &lt; x_N= b, \qquad x_j= a+ (j-1)h \,,~~ j=1, \dots, N+1\,,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(h=(b-a)/N\)</span>, og skiptingu á <span class="math notranslate nohighlight">\(y\)</span>-ás</p>
+<div class="math notranslate nohighlight">
+\[c=y_1 &lt; y_2 &lt; \dots &lt; y_M= d, \qquad y_p= c+ (p-1)k \,,~~ p=1, \dots, M+1\,,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(k=(d-c)/M\)</span>. Hornpunktar <span class="math notranslate nohighlight">\((x_j, y_p)\)</span> þríhyrninganna eru allir í <span class="math notranslate nohighlight">\(\bar D\)</span>.
+Við veljum að raða punktunum eins og í myndinni, þ.e.a.s. við notum vörpun</p>
+<div class="math notranslate nohighlight">
+\[\sigma: (j, p) \to \alpha= \sigma(j,p)= j+(p-1)(N+1)\,, ~~ j=1, \dots, N+1\,,~~p=1, \dots, M+1\,,\]</div>
+<p>svo er <span class="math notranslate nohighlight">\(\alpha=1, \dots, (M+1)(N+1)\)</span>.</p>
+<p>Sérhverjum þríhyrningi er lýst sem mengi</p>
+<div class="math notranslate nohighlight">
+\[T_{A,B,C}=\{(x,y)=(1-s-t)(x_A,y_A)+s(x_B,y_B)+t(x_{C},y_{C})
+\,;\, s,t\in [0,1], s+t\leq 1\},\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\((x_A,y_A), (x_B,y_B)\)</span> og <span class="math notranslate nohighlight">\((x_C,y_C)\)</span> eru hornpunktar þríhyrningsins. Á myndinni sjáum við  t.d. þríhyrninginn með hornpunkta 1, 2, 6, við táknum hann með <span class="math notranslate nohighlight">\(T_{1,2,6}\)</span>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Röð punktanna skiptir máli hér! Við röðum punktunum <em>rangsælis</em> eftir jaðri þríhyrningsins.</p>
+</div>
+<p>Athugum líka að</p>
+<div class="math notranslate nohighlight">
+\[T_{1,2,6}=T_{6,1,2}=T_{2,6,1}.\]</div>
+<p>Það er gagnlegt að skoða <em>einingarþríhyrning</em> með hornpunkta <span class="math notranslate nohighlight">\((0,0), (1,0)\)</span> og <span class="math notranslate nohighlight">\((0,1)\)</span>. Við táknum hann með <span class="math notranslate nohighlight">\(E\)</span> og þá er</p>
+<div class="math notranslate nohighlight">
+\[E=\{(s,t)\,;\, s,t\in [0,1], s+t\leq 1\}.\]</div>
+<p>Þá getum við notað vörpun <span class="math notranslate nohighlight">\(t_{A,B,C}\)</span> til þess að varpa einingarþríhyrningnum í þríhyrninginn <span class="math notranslate nohighlight">\(T_{A,B,C}\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t_{A,B,C}: ~&amp;E \to T_{A,B,C}\\
+&amp; (s,t) \mapsto (x,y)=(1-s-t)(x_A,y_A)+s(x_B,y_B)+t(x_{C},y_{C}).\end{split}\]</div>
+<p>Við getum umritað vörpunina á fylkjaform á eftirfarandi hátt</p>
+<div class="math notranslate nohighlight" id="equation-eq-maptriangle">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-maptriangle" title="Permalink to this equation">¶</a></span>\[\begin{split}\left[\begin{matrix} x \\ y  \end{matrix}\right]
+=
+\left[\begin{matrix} x_A \\ y_A  \end{matrix}\right]+
+\left[\begin{matrix}   x_B-x_A &amp; x_C-x_A
+\\ y_B-y_A &amp; y_C-y_A
+\end{matrix}\right]
+\left[\begin{matrix}   s\\ t \end{matrix}\right].\end{split}\]</div>
+<p>Athugum að vörpunin er gagntæk, og andhverfan <span class="math notranslate nohighlight">\(t^{-1}_{A,B,C}\)</span> er gefin með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t^{-1}_{A,B,C}: ~&amp;T_{A,B,C} \to E\\
+&amp; \left[\begin{matrix}   x\\ y \end{matrix}\right] \mapsto  \left[\begin{matrix}   s\\ t \end{matrix}\right]
+=
+\frac{1}{d}\left[\begin{matrix}   y_C-y_A &amp; -(x_C-x_A)
+\\ -(y_B-y_A) &amp; x_B-x_A
+\end{matrix}\right]
+\left[\begin{matrix}   x-x_A\\ y-y_A \end{matrix}\right],\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(d\)</span> er ákveða fylksins í <a class="reference internal" href="#equation-eq-maptriangle">(13)</a>.</p>
+<p>Seinna munum við nota flatarmál þríhyrningsins <span class="math notranslate nohighlight">\(T_{A,B,C}\)</span> og massamiðju <span class="math notranslate nohighlight">\(M_{A,B,C}\)</span>, og þau eru gefin með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp; area(T_{A,B,C})= \frac{|d|}{2}, \\
+&amp;&amp; M_{A,B,C}=\tfrac 13\big((x_A,y_A)+(x_B,y_B)+(x_C,y_C)\big).\end{split}\]</div>
+</div>
+<div class="section" id="ufugrunnfoll">
+<h3>6.5.2. Þúfugrunnföll<a class="headerlink" href="#ufugrunnfoll" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við ætlum að nota þúfugrunnföll til þess að nálga lausn á <a class="reference internal" href="#equation-eq-system2">(3)</a>. Við skilgreinum þúfugrunnföll á <span class="math notranslate nohighlight">\(\bar D\)</span> á eftirfarandi hátt:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\varphi_A: T_{A,B,C} \to [0,1] \,, \text{þ.a.}~~
+\varphi(x_A,y_A)=1\,, ~~\varphi(x_B,y_B)=\varphi(x_C,y_C)=0 \,
+\\
+&amp;&amp; \varphi_A ~~\text{er samfellt og línulegt}.\end{split}\]</div>
+<p>Við sjáum í dæmi að neðan graf fallsins <span class="math notranslate nohighlight">\(\varphi_3\)</span> fyrir einingarþríhyrninginn <span class="math notranslate nohighlight">\(E_{1,2,3}\)</span>.
+Það er ljóst að graf fallsins <span class="math notranslate nohighlight">\(\varphi_A\)</span> er plan í <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> sem tengir punktana</p>
+<div class="math notranslate nohighlight">
+\[(x_A,y_A,1), ~~~ (x_B,y_B,0), ~~~ (x_C,y_C,0).\]</div>
+<a class="reference internal image-reference" href="_images/example-phi-triangle.png"><img alt="_images/example-phi-triangle.png" class="align-center" src="_images/example-phi-triangle.png" style="width: 45%;" /></a>
+<p><em>Dæmi um graf fallsins</em> <span class="math notranslate nohighlight">\(\varphi_3\)</span> <em>skilgreint yfir einingarþríhyrninginn</em> <span class="math notranslate nohighlight">\(E_{1,2,3}\)</span>.</p>
+<p>Við skilgreinum fall <span class="math notranslate nohighlight">\(\varphi_E\)</span> eins og grunnfallið á einingarþríhyrningnum <span class="math notranslate nohighlight">\(E\)</span> sem tekur gildið 1 í punktinum <span class="math notranslate nohighlight">\((0,0)\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\varphi_E(s,t)=1-s-t, \qquad (s,t)\in E,\]</div>
+<p>og við fáum <span class="math notranslate nohighlight">\(\varphi_E(0,0)=1\)</span> og <span class="math notranslate nohighlight">\(\varphi_E(1,0)=\varphi_E(0,1)=0\)</span>.</p>
+<p>Hvernig getum við smíðað fallið <span class="math notranslate nohighlight">\(\varphi_A\)</span> alment? Við notum vörpunina <span class="math notranslate nohighlight">\(t_{A,B,C}\)</span>, þ.e.a.s. við vörpum þríhyrningnum <span class="math notranslate nohighlight">\(T_{A,B,C}\)</span> í einingarþríhyrninginn <span class="math notranslate nohighlight">\(E\)</span> og við lesum úr því <span class="math notranslate nohighlight">\(\varphi_E\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[\varphi_A(x,y)=\varphi_E(t_{A,B,C}^{-1}(x,y)).\]</div>
+<p>Ef við viljum t.d. skrifa niður <span class="math notranslate nohighlight">\(\varphi_A\)</span>, þá er</p>
+<div class="math notranslate nohighlight" id="equation-eq-defvarphia">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-defvarphia" title="Permalink to this equation">¶</a></span>\[\varphi_A(x,y)=\tfrac 1d \left((x_C-x_B)y-(y_C-y_B)x+x_B y_C-x_C y_B\right),\]</div>
+<p>og það er ljóst að <span class="math notranslate nohighlight">\(\varphi_A(x_B,y_B)=\varphi_A(x_C,y_C)=0\)</span> og <span class="math notranslate nohighlight">\(\varphi_A(x_A,y_A)=1\)</span>.</p>
+<p>Athugum að fallið <span class="math notranslate nohighlight">\(\varphi_B\)</span> á <span class="math notranslate nohighlight">\(T_{A,B,C}\)</span>, sem er skilgreint eins og <span class="math notranslate nohighlight">\(\varphi_B(x_A,y_A)=\varphi_B(x_C,y_C)=0\)</span> og <span class="math notranslate nohighlight">\(\varphi_B(x_B,y_B)=1\)</span>, er gefið með</p>
+<div class="math notranslate nohighlight" id="equation-eq-defvarphib">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-defvarphib" title="Permalink to this equation">¶</a></span>\[\varphi_B(x,y)=\tfrac 1d \left((x_A-x_C)y-(y_A-y_C)x+x_C y_A-x_A y_C\right).\]</div>
+<p>Það er hjálplegt að skoða einginleika fallanna <span class="math notranslate nohighlight">\(\varphi_A\)</span>, af því að við ætlum að nota þá til þess að reikna út veiku framsetningu jaðargildisverkefnisins.</p>
+<p><strong>Eiginleikar þúfugrunnfallanna</strong></p>
+<p>Fyrst ætlum við að skoða eiginleika þúfugrunnfallanna sem við munum nota seinna.
+Við lítum á <span class="math notranslate nohighlight">\(\varphi_A\)</span> og <span class="math notranslate nohighlight">\(\varphi_B\)</span> sem eru skilgreind á <a class="reference internal" href="#equation-eq-defvarphia">(14)</a> og <a class="reference internal" href="#equation-eq-defvarphib">(15)</a>.</p>
+<ol class="arabic simple">
+<li>Stigull fallsins <span class="math notranslate nohighlight">\(\varphi_A\)</span> er gefinn með</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\nabla\varphi_A(x,y)={1\over d}\left(-(y_C-y_B),(x_C-x_B)\right).\]</div>
+<ol class="arabic simple" start="2">
+<li>Þá er eftirfarandi heildi gefið með</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_{T_{A,B,C}}\nabla\varphi_A \cdot \nabla\varphi_A \,dx dy={1\over 2 |d|} \left((x_C-x_B)^2+(y_C-y_B)^2\right).\]</div>
+<ol class="arabic simple" start="3">
+<li>Fyrir eftirfarandi heildi, fáum við</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_{T_{A,B,C}}\nabla\varphi_A \cdot \nabla\varphi_B\, dx dy={1\over 2 |d|} \left(-(x_B-x_C)(x_A-x_C)-(y_B-y_C)(y_A-y_C)\right).\]</div>
+<ol class="arabic simple" start="4">
+<li>Athugum að</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\varphi_A(M_{C,B,C})=\varphi_A\left(\tfrac 13(x_A+x_B+x_C),\tfrac 13(y_A+y_B+y_C)\right)=\tfrac 13.\]</div>
+<p><strong>Ritháttur í kennslubókinni</strong></p>
+<p>Við getum notað sama rithátt og í kennslubókinni, þá skilgreinum við eftirfarandi <em>hliðarvigra</em></p>
+<div class="math notranslate nohighlight">
+\[{\mathbf l}_A=(x_C-x_B,y_C-y_B), \qquad
+{\mathbf l}_B=(x_A-x_C,y_A-y_C), \qquad
+{\mathbf l}_C=(x_B-x_A,y_B-y_A).\]</div>
+<p>Við sjáum að hliðarvigrarnir liggja á mótlægum hliðum <span class="math notranslate nohighlight">\(T_{A,B,C}\)</span> við hornpunkta númer <span class="math notranslate nohighlight">\(A, B\)</span> og <span class="math notranslate nohighlight">\(C\)</span> miðað við rangsælis umferðarstefnu eftir jaðrinum.</p>
+<p>Við snúum hliðarvigrunum um <span class="math notranslate nohighlight">\(\pi/2\)</span> réttsælis og þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[{\mathbf l}_A^R=(y_C-y_B,-x_C+x_B,), \qquad
+{\mathbf l}_B^R=(y_A-y_C,-x_A+x_C,), \qquad
+{\mathbf l}_C^R=(y_B-y_A,-x_B+x_A,).\]</div>
+<p>Vigrarnir <span class="math notranslate nohighlight">\({\mathbf l}_A^R, {\mathbf l}_B^R, {\mathbf l}_C^R\)</span> eru hornréttir á hliðarnar á móti hornum númer <span class="math notranslate nohighlight">\(A, B\)</span> og <span class="math notranslate nohighlight">\(C\)</span> og snúa í stefnu ytri þvervigurs.
+Sjáið mynd fyrir einingarþríhyrninginn <span class="math notranslate nohighlight">\(E\)</span>.</p>
+<a class="reference internal image-reference" href="_images/boundary-vectors.png"><img alt="_images/boundary-vectors.png" class="align-center" src="_images/boundary-vectors.png" style="width: 65%;" /></a>
+<p><em>Hliðarvigrarnir</em>  <span class="math notranslate nohighlight">\({\mathbf l}_A, {\mathbf l}_B, {\mathbf l}_C\)</span>  <em>(rautt, blátt og grænt) til vinstri og vigrarnir</em> <span class="math notranslate nohighlight">\({\mathbf l}_A^R, {\mathbf l}_B^R, {\mathbf l}_C^R\)</span>  <em>til hægri (rautt, blátt og grænt).</em></p>
+<p>Þá getum við notað hliðarvigrana til þess að skrifa niður eiginleika þúfugrunnfallanna, þ.e.</p>
+<ol class="arabic simple">
+<li>Stigull fallsins <span class="math notranslate nohighlight">\(\varphi_A\)</span> er gefinn með</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\nabla\varphi_A(x,y)=-{{\mathbf l}_A^R\over d},\]</div>
+<p>og líka fyrir föllin <span class="math notranslate nohighlight">\(\varphi_B, \varphi_C\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\nabla\varphi_B(x,y)=-{{\mathbf l}_B^R\over d},\qquad
+\nabla\varphi_C(x,y)=-{{\mathbf l}_C^R\over d}.\]</div>
+<ol class="arabic simple" start="2">
+<li>Innfeldi stiglanna er gefið með</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\nabla\varphi_\alpha(x,y)\cdot \nabla\varphi_\beta(x,y)={{\mathbf l}_\alpha^R\cdot {\mathbf l}_\beta^R\over d^2}={{\mathbf l}_\alpha\cdot {\mathbf l}_\beta\over d^2},
+\qquad \alpha, \beta=A, B, C.\]</div>
+</div>
+<div class="section" id="go-ahead">
+<h3>6.5.3. Go ahead!<a class="headerlink" href="#go-ahead" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<a class="reference internal image-reference" href="_images/triangle-grid.png"><img alt="_images/triangle-grid.png" class="align-center" src="_images/triangle-grid.png" style="width: 65%;" /></a>
+<p><em>Rétthyrningi skipt í þríhyrninga. Hér er</em> <span class="math notranslate nohighlight">\(N=4\)</span> <em>og</em> <span class="math notranslate nohighlight">\(M=2\)</span>.</p>
+<p>Munið að við viljum finna lausn á eftirfarandi jaðargildisverkefni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+Lu=-\nabla\cdot (p\nabla u)+qu=f, \quad &amp;\text{á } D\\
+u={\gamma\over \alpha},\quad &amp;\text{á } \ \partial D_1,\\
+\alpha u+\beta\dfrac{\partial u}{\partial n}
+=\gamma, \quad  &amp;\text{á } \ \partial D_2,
+\end{cases}\end{split}\]</div>
+<p>þar sem</p>
+<div class="math notranslate nohighlight">
+\[\partial_1D=\{(x,y)\in \partial D\,;\, \beta(x,y)=0\}
+\qquad \text{ og } \qquad
+\partial_2D=\{(x,y)\in \partial D\,;\, \beta(x,y)\neq 0\},\]</div>
+<p>og <span class="math notranslate nohighlight">\(\partial D=\partial_1D\cup \partial_2 D\)</span> (munið <span class="xref std std-ref">5.3</span>). Við gerum alltaf ráð fyrir að <span class="math notranslate nohighlight">\(p\in C^1\)</span> og <span class="math notranslate nohighlight">\(q, f\)</span> séu samfelld á <span class="math notranslate nohighlight">\(\bar D\subset\mathbb{R}^2\)</span>.</p>
+<p>Við táknum með</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(S\)</span> sammengi þríhyrninganna á svæðinu <span class="math notranslate nohighlight">\(\bar D\)</span>,</li>
+<li><span class="math notranslate nohighlight">\(Q\)</span> mengi talna sem svara til punktanna á <span class="math notranslate nohighlight">\(\partial D_1\)</span> sem uppfylla Dirichlet jaðarskilyrði,</li>
+<li><span class="math notranslate nohighlight">\(R\)</span> mengi talna sem svara til punktanna á <span class="math notranslate nohighlight">\(\partial D_2 \cup D\)</span>,</li>
+<li><span class="math notranslate nohighlight">\(P\)</span> fjölda allra punkta, athugum að <span class="math notranslate nohighlight">\(P=(N+1)(M+1)\)</span>,</li>
+<li><span class="math notranslate nohighlight">\(\partial S_1\)</span> sammengi línustrika sem tengja hornpunkta á <span class="math notranslate nohighlight">\(\partial D_1\)</span> (athugum að ef t.d. <span class="math notranslate nohighlight">\(\bar D\)</span> er rétthyrningur, þá er <span class="math notranslate nohighlight">\(\partial S_1=\partial D_1\)</span>)</li>
+<li><span class="math notranslate nohighlight">\(\partial S_2\)</span> sammengi línustrika sem nálga <span class="math notranslate nohighlight">\(\partial D_2\)</span>.</li>
+</ol>
+<p>Við skilgreinum nálgunarfallið sem</p>
+<div class="math notranslate nohighlight">
+\[v(x,y)=\psi_0(x,y)+\sum_{\alpha\in R} c_\alpha\varphi_\alpha(x,y), \qquad (x,y)\in S.\]</div>
+<p>Við veljum fallið <span class="math notranslate nohighlight">\(\psi_0\)</span> þ.a. það hefur gildi <span class="math notranslate nohighlight">\({\gamma\over \alpha}\)</span> á jaðrinum <span class="math notranslate nohighlight">\(\partial D_1\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\psi_0(x,y)=\sum_{\alpha\in Q} {\gamma_\alpha\over \alpha_\alpha} \varphi_\alpha(x,y),\]</div>
+<p>þar sem við höfum táknað <span class="math notranslate nohighlight">\(\gamma(x_i, y_j)\)</span> með <span class="math notranslate nohighlight">\(\gamma_\alpha\)</span> og munið að <span class="math notranslate nohighlight">\(\alpha=\sigma(i,j)=i+(N+1)(j-1)\)</span> og <span class="math notranslate nohighlight">\((x_i,y_j)\in \partial D_1\)</span>.
+Athugum að  <span class="math notranslate nohighlight">\({\gamma_\alpha\over \alpha_\alpha}\)</span> er bara rauntala.</p>
+<p>Þá gildir fyrir <span class="math notranslate nohighlight">\(\varphi_\beta\)</span> með <span class="math notranslate nohighlight">\(\beta\in R\)</span></p>
+<div class="math notranslate nohighlight">
+\[\langle \mathcal L u, \varphi_\beta\rangle=
+\langle u, \varphi_\beta \rangle_L -\int_{\partial S_2} p\dfrac{\partial u}{\partial n} \varphi_\beta ds=
+\langle u, \varphi_\beta \rangle_L +\int_{\partial S_2} p\frac{\alpha}{\beta} u\varphi_\beta ds-\int_{\partial S_2} p\frac{\gamma}{\beta} \varphi_\beta ds.\]</div>
+<p>Veika framsetningin er þá</p>
+<div class="math notranslate nohighlight">
+\[\langle u, \varphi_\beta \rangle_L +\int_{\partial S_2} p\frac{\alpha}{\beta} u\varphi_\beta ds= \langle f, \varphi_\beta\rangle+ \int_{\partial S_2} p\frac{\gamma}{\beta} \varphi_\beta ds, \qquad \beta\in R.\]</div>
+<p>Nú erum við búin og getum reiknað út veiku framsetninguna fyrir nálgunarfallið og <span class="math notranslate nohighlight">\(\varphi_\beta\)</span> með <span class="math notranslate nohighlight">\(\beta\in R\)</span>.</p>
+<p>Á vinstri hliðinni höfum við</p>
+<div class="math notranslate nohighlight">
+\[\langle v, \varphi_\beta \rangle_L =
+\sum_{\alpha\in R} c_\alpha \int_S \left(p \nabla \varphi_\alpha \cdot \nabla \varphi_\beta +q \varphi_\alpha \varphi_\beta\right) dA
++\sum_{\alpha\in Q} {\gamma_\alpha\over \alpha_\alpha} \int_S \left(p \nabla \varphi_\alpha \cdot \nabla \varphi_\beta +q \varphi_\alpha \varphi_\beta\right) dA,\]</div>
+<div class="math notranslate nohighlight">
+\[\int_{\partial S_2} p\frac{\alpha}{\beta} v\varphi_\beta ds=
+\sum_{\alpha\in R} c_\alpha\int_{\partial S_2} p\frac{\alpha}{\beta} \varphi_\alpha \varphi_\beta ds+
+\sum_{\alpha\in Q} {\gamma_\alpha\over \alpha_\alpha} \int_{\partial S_2}p\frac{\alpha}{\beta} \varphi_\alpha \varphi_\beta ds\,.\]</div>
+<p>Á hægri hliðinni höfum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp;\langle f, \varphi_\beta\rangle= \int_S f\varphi_\beta dA
+\\
+&amp;&amp; \int_{\partial S_2} p\frac{\gamma}{\beta} \varphi_\beta ds\,.\end{split}\]</div>
+<p>Á fylkjaformi <span class="math notranslate nohighlight">\(A{\mathbf c}={\mathbf b}\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp; a_{\beta, \alpha}= \int_S \left(p \nabla \varphi_\alpha \cdot \nabla \varphi_\beta +q \varphi_\alpha \varphi_\beta\right) dA+\int_{\partial S_2} p\frac{\alpha}{\beta} \varphi_\alpha \varphi_\beta ds,
+\\
+&amp;&amp; b_\beta = \int_S f\varphi_\beta dA+\int_{\partial S_2} p\frac{\gamma}{\beta} \varphi_\beta ds-
+\sum_{\alpha\in Q} {\gamma_\alpha\over \alpha_\alpha} \left(\int_S \left(p \nabla \varphi_\alpha \cdot \nabla \varphi_\beta +q \varphi_\alpha \varphi_\beta\right) dA+\int_{\partial S_2}p\frac{\alpha}{\beta} \varphi_\alpha \varphi_\beta ds\right)\,.\end{split}\]</div>
+<p>Nú þurfum við að reikna út heildin að ofan. Við nálgum þau með því að nota reglu „miðpunktanna“, það þýðir að fyrir sérhvert samfellt fall <span class="math notranslate nohighlight">\(\psi\)</span> nálgum við heildi yfir þríyrning <span class="math notranslate nohighlight">\(T_{A,B,C}\)</span> á eftirfarandi hátt</p>
+<div class="math notranslate nohighlight">
+\[\int_{T_{A,B,C}} \psi(x,y)dA\approx \psi\left(\tfrac{x_A+x_B+x_C}{3},\tfrac{y_A+y_B+y_C}{3}\right) area(T_{A,B,C}) ={|d|\over 2}\psi(M_{A,B,C})\,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(M_{A,B,C}\)</span> er massmiðja þríhyrningsins <span class="math notranslate nohighlight">\(T_{A,B,C}\)</span>.</p>
+<p>Við skoðum ýmsa liði.</p>
+<ol class="arabic simple">
+<li>Í <span class="math notranslate nohighlight">\(b_\beta\)</span> höfum við</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_S f\varphi_\beta dA\approx \sum_{T_{\beta}}f(M_{(\beta)}){|d|\over 6},\]</div>
+<p>af því að <span class="math notranslate nohighlight">\(\varphi_\beta(M_{(\beta)})=\tfrac 13\)</span>. Athugum að summan hér þýðir að við þurfum að summa bara yfir þríhyrninga sem hafa punkt <span class="math notranslate nohighlight">\(\beta\)</span> fyrir hornpunkt (munið skilgreinguna á þúfugrunnföllum).</p>
+<ol class="arabic simple" start="2">
+<li>Í <span class="math notranslate nohighlight">\(b_\beta\)</span> og í <span class="math notranslate nohighlight">\(a_{\beta \alpha}\)</span> höfum við</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_S p \nabla \varphi_\alpha \cdot \nabla \varphi_\beta dA \approx
+\sum_{T_{\beta}} p(M_{(\beta)}){{\mathbf l}_\alpha^R\cdot {\mathbf l}_\beta^R\over 2|d|}=\sum_{T_{\beta}} p(M_{(\beta)}){{\mathbf l}_\alpha\cdot {\mathbf l}_\beta\over 2|d|},\]</div>
+<p>þar sem summan er yfir þríhyrninga sem hafa punkt <span class="math notranslate nohighlight">\(\beta\)</span> fyrir hornpunkt. Munið að innfeldi <span class="math notranslate nohighlight">\(\nabla \varphi_\alpha \cdot \nabla \varphi_\beta\)</span> er ekki núll aðeins ef <span class="math notranslate nohighlight">\(\alpha\)</span> og <span class="math notranslate nohighlight">\(\beta\)</span> eru tveir hornpunktar <span class="math notranslate nohighlight">\(T_{\beta}\)</span>.</p>
+<ol class="arabic simple" start="3">
+<li>Í <span class="math notranslate nohighlight">\(b_\beta\)</span> og í <span class="math notranslate nohighlight">\(a_{\beta \alpha}\)</span> höfum við</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_S q \varphi_\alpha \varphi_\beta dA \approx \sum_{T_{\beta}} q(M_{(\beta)}){|d|\over 18},\]</div>
+<p>af því að <span class="math notranslate nohighlight">\(\varphi_\beta(M_{(\beta)})=\tfrac 13\)</span>. Aftur, við summun yfir þríhyrninga sem hafa punkt <span class="math notranslate nohighlight">\(\beta\)</span> fyrir hornpunkt.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p>Í kennslubókinni er heildið að ofan nálgað á eftirfarandi hátt</p>
+<div class="math notranslate nohighlight">
+\[\int_{T_{A,B,C}} \psi(x,y)\, dA
+\approx \tfrac{|d|}{6}\big(\psi_{A,B}+\psi_{B,C}+\psi_{C,A}\big),\]</div>
+<p class="last">þar sem <span class="math notranslate nohighlight">\(\psi\)</span> er samfellt fall, <span class="math notranslate nohighlight">\(\psi_{A,B}, \psi_{B,C}\)</span> og <span class="math notranslate nohighlight">\(\psi_{C,A}\)</span> tákna gildi fallsins <span class="math notranslate nohighlight">\(\psi\)</span> í miðpunktum hliðanna <span class="math notranslate nohighlight">\(AB, BC\)</span> og <span class="math notranslate nohighlight">\(CA\)</span>.</p>
+</div>
+<p>Af 2. og 3. leiðir að</p>
+<div class="math notranslate nohighlight">
+\[\int_S \left(p \nabla \varphi_\alpha \cdot \nabla \varphi_\beta + q \varphi_\alpha \varphi_\beta\right) dA \approx
+\sum_{T_{\beta}}\left(p(M_{(\beta)}){{\mathbf l}_\alpha\cdot {\mathbf l}_\beta\over 2|d|}+q(M_{(\beta)}){|d|\over 18}\right).\]</div>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p>Í kennslubókinni er heildið að ofan nálgað á eftirfarandi hátt</p>
+<div class="last math notranslate nohighlight">
+\[\begin{split}\int_{S}\big(p\nabla \varphi_\alpha\cdot \nabla \varphi_\beta
++q\varphi_\alpha\varphi_\beta\big)\, dA
+\approx
+\sum_{T_{\beta}}\dfrac {p(M_{(\beta)})}{2 |d|}{{\mathbf l}_\alpha\cdot {\mathbf l}_\beta}
++\sum_{T_{\beta}}\begin{cases}
+\tfrac 1{12} q(M_{(\beta)})\, |d|,&amp; \alpha=\beta,\\
+\tfrac 1{24} q(M_{(\beta)})\, |d|,&amp; \alpha\neq \beta.
+\end{cases}\end{split}\]</div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Í síðasta skrefi þurfum við að nálga jaðarheildin yfir <span class="math notranslate nohighlight">\(\partial S_2\)</span> í veiku framsetningunni. Við notum reglu Simpsons, sem segir að</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(t)\, dt\approx \tfrac 16\big(f(a)+4f(\tfrac
+12(a+b))+f(b)\big)(b-a)\]</div>
+<p>Við táknum opna línustrikið sem liggur í <span class="math notranslate nohighlight">\(\partial S_2\)</span> milli punkta <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> með <span class="math notranslate nohighlight">\(S_{A,B}\)</span>,  lengd þess með <span class="math notranslate nohighlight">\(|S_{A,B}|\)</span>, og miðpunkt þess með <span class="math notranslate nohighlight">\(m_{A,B}\)</span>.</p>
+<p>Athugum að</p>
+<div class="math notranslate nohighlight">
+\[\varphi_A(m_{A,B})=\varphi_B(m_{A,B})=\tfrac 12\qquad
+\varphi_C(m_{A,B})=0.\]</div>
+<p>Þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+\int_{S_{A,B}} \psi\,
+\varphi_\alpha^2\, ds
+\approx \tfrac 16\big(\psi(x_\alpha,y_\alpha)+ \psi(m_{A,B})\big)
+|S_{A,B}|,  \qquad \alpha=A,B,
+\\
+\int_{S_{A,B}} \psi\,
+\varphi_A\varphi_B\, ds
+\approx \tfrac 16 \psi(m_{A,B}) |S_{A,B}|, \\
+\int_{S_{A,B}} \psi \,
+\varphi_\alpha\, ds
+\approx \tfrac 16\big(\psi(x_\alpha,y_\alpha)+2\psi(m_{A,B})\big) |S_{A,B}|
+\qquad \alpha=A,B.\end{gathered}\end{split}\]</div>
+<p>Að lokum fáum við fyrir jaðarheildin</p>
+<div class="math notranslate nohighlight">
+\[\begin{gathered}
+\int_{S_{A,B}}\dfrac{p \alpha}{\beta}
+\varphi_\alpha^2\, ds
+\approx \dfrac 16\bigg(
+p(x_\alpha,y_\alpha)
+\dfrac{\alpha(x_\alpha,y_\alpha)}
+{\beta(x_\alpha,y_\alpha)}
++p(m_{A,B})
+\dfrac{\alpha(x_A,y_A)+\alpha(x_B,y_B)}
+{\beta(x_A,y_A)+\beta(x_B,y_B)}
+\bigg) |S_{A,B}|, \quad \alpha=A,B.
+\end{gathered}\]</div>
+<div class="math notranslate nohighlight">
+\[\int_{S_{A,B}}\dfrac{p \alpha}{ \beta}
+\varphi_A\varphi_B\, ds
+\approx \frac 16
+p(m_{A,B}) \dfrac{\alpha(x_A,y_A)+\alpha(x_B,y_B)}
+{\beta(x_A,y_A)+\beta(x_B,y_B)} |S_{A,B}|.\]</div>
+<div class="math notranslate nohighlight">
+\[\int_{S_{A,B}}\dfrac{p \gamma}{\beta}
+\varphi_\alpha\, ds
+\approx \dfrac 16\bigg(
+p(x_\alpha,y_\alpha)
+\dfrac{\gamma(x_\alpha,y_\alpha)}
+{\beta(x_\alpha,y_\alpha)}
++2
+p(m_{A,B})
+\dfrac{\gamma(x_A,y_A)+\gamma(x_B,y_B)}
+{\beta(x_A,y_A)+\beta(x_B,y_B)}
+\bigg) |S_{A,B}|, \quad j=A,B.\]</div>
+<p>Til þess að reikna út jaðarheildi yfir <span class="math notranslate nohighlight">\(\partial S_2\)</span> þurfum við að summa yfir öll línustrikin sem liggja í <span class="math notranslate nohighlight">\(\partial S_2\)</span>.</p>
+</div>
+<div class="section" id="id1">
+<h3>6.5.4. Sýnidæmi<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<a class="reference internal image-reference" href="_images/triangle-grid-numbers.png"><img alt="_images/triangle-grid-numbers.png" class="align-center" src="_images/triangle-grid-numbers.png" style="width: 65%;" /></a>
+<p><em>Rétthyrningi skipt í þríhyrninga. Hér er</em> <span class="math notranslate nohighlight">\(N=4\)</span> <em>og</em> <span class="math notranslate nohighlight">\(M=2\)</span>.</p>
+<p>Við lítum á Dirichlet jaðarskilyrði, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+-\nabla^2 u +q u= f \qquad D\\
+u=\gamma \qquad \partial D,
+\end{cases}\end{split}\]</div>
+<p>þar sem svæði <span class="math notranslate nohighlight">\(D\)</span> er <span class="math notranslate nohighlight">\(D=\{(x,y)\in \mathbb{R}^2~~: x\in]a, b[, ~~ y\in ]c, d[\}\)</span>. Við notum net eins og á myndinni að ofan, eins og við gerðum í <a class="reference internal" href="#ch-6-5-1"><span class="std std-ref">6.5.1</span></a>.</p>
+<p>Hornpunktar <span class="math notranslate nohighlight">\(1,2,3,4,5,6,10,11,12,13,14\)</span> og 15 eru í <span class="math notranslate nohighlight">\(\partial D_1\)</span>. Innri punktar eru 7,8 og 9.</p>
+<p>Skoðum <span class="math notranslate nohighlight">\(\beta=8\)</span>. Það eru 6 þríhyrningar sem hafa <span class="math notranslate nohighlight">\(\beta=8\)</span> fyrir hornpunkt. Það þýðir að þegar við reiknum <span class="math notranslate nohighlight">\(a_{\beta=8,\alpha}\)</span>, eru einu stök fylkisins sem eru ekki núll þau sem hafa <span class="math notranslate nohighlight">\(\alpha=7,3,4,9,13,12\)</span>.</p>
+<p>Þegar við skiptum bilinu í jafna hluta, eins og við gerðum í <a class="reference internal" href="#ch-6-5-1"><span class="std std-ref">6.5.1</span></a>, þá er</p>
+<div class="math notranslate nohighlight">
+\[area(T)={|d|\over 2} ={h k\over 2},\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\int_S \nabla \phi_\beta\cdot \nabla \phi_\beta dA=
+{1\over 2 h k}\left(2 h^2+2 k^2 +2 (k^2+h^2)\right)=
+{2\over h k}\left(k^2+h^2\right),\]</div>
+<div class="math notranslate nohighlight">
+\[\int_S q \phi_\beta  \phi_\beta dA= {h k\over 18} \left(q(M_1)+q(M_2)+q(M_3)+q(M_4)+q(M_5)+q(M_6)\right),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(M_i\)</span> eru miðjupunktar fyrir 6 þríhyrninga sem hafa <span class="math notranslate nohighlight">\(\beta\)</span> fyrir hornpunkt.</p>
+<p>Þetta gefur fyrir <span class="math notranslate nohighlight">\(\beta=8\)</span></p>
+<div class="math notranslate nohighlight">
+\[a_{\beta,\beta}=\tfrac{2}{h k}(k^2+h^2) +{h k\over 18} \left(q(M_1)+q(M_2)+q(M_3)+q(M_4)+q(M_5)+q(M_6)\right).\]</div>
+<p>Fyrir <span class="math notranslate nohighlight">\(\alpha\neq \beta=8\)</span>, fáum við</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=0  \quad \alpha=4, 12\]</div>
+<p>af því að hliðarvigrarnir <span class="math notranslate nohighlight">\(\mathbf{l}_\alpha,\mathbf{l}_\beta\)</span> eru hornréttir. Ennfremur höfum við</p>
+<div class="math notranslate nohighlight">
+\[\int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{2(5)})+q(M_{3(6)}))  \quad \alpha=4, 12,\]</div>
+<p>og það gefur</p>
+<div class="math notranslate nohighlight">
+\[a_{\beta,\alpha}={hk\over 18}(q(M_{2(5)})+q(M_{3(6)})) \qquad \text{með}\qquad \alpha=\sigma(j+1,p-1),  \alpha=\sigma(j-1,p+1).\]</div>
+<p>Athugum að við notum <span class="math notranslate nohighlight">\(\beta=\sigma(j,p)\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=-{h^2\over 2 h k} 2=-{h\over k}  \quad \alpha=3, 13,\]</div>
+<p>af því að hliðarvigurinn <span class="math notranslate nohighlight">\(\mathbf{l}_\alpha\)</span> er láréttur, og það eru tveir þríhyrningar sem hafa <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> fyrir hornpunkta.</p>
+<p>Ennfremur höfum við</p>
+<div class="math notranslate nohighlight">
+\[\int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{1(4)})+q(M_{2(5)}))  \quad \alpha=3, 13,\]</div>
+<p>og það gefur</p>
+<div class="math notranslate nohighlight">
+\[a_{\beta,\alpha}=-{h\over k}+{hk\over 18}(q(M_{1(4)})+q(M_{2(5)}))  \qquad \text{með}\qquad \alpha=\sigma(j,p-1),\alpha=\sigma(j,p+1) .\]</div>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=-{k^2\over 2 h k} 2=-{k\over h}  \quad \alpha=7, 9,\]</div>
+<p>af því að hliðarvigurinn <span class="math notranslate nohighlight">\(\mathbf{l}_\alpha\)</span> er lóðréttur, og það eru tveir þríhyrningar sem hafa <span class="math notranslate nohighlight">\(\alpha, \beta\)</span> fyrir hornpunkta.</p>
+<p>Ennfremur höfum við</p>
+<div class="math notranslate nohighlight">
+\[\int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{6(4)})+q(M_{1(3)}))  \quad \alpha=7, 9,\]</div>
+<p>og það gefur</p>
+<div class="math notranslate nohighlight">
+\[a_{\beta,\alpha}=-{k\over h} +{hk\over 18}(q(M_{6(4)})+q(M_{1(3)})) \qquad \text{með}\qquad \alpha=\sigma(j-1,p),\alpha=\sigma(j+1,p).\]</div>
+<p>Skoðum vigurinn <span class="math notranslate nohighlight">\(\mathbf b\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[b_\beta=\langle f, \varphi_\beta\rangle= \frac{h k}{6} \left(f(M_1)+f(M_2)+f(M_3)+f(M_4)+f(M_5)+f(M_6)\right).\]</div>
+<p>Við þurfum að endurtaka aðferðina fyrir <span class="math notranslate nohighlight">\(\beta=7,8,9\)</span>.</p>
+<p>Fyrir jaðarpunkta þurfum við að setja</p>
+<div class="math notranslate nohighlight">
+\[a_{\beta,\beta }=1,  \qquad b_\beta=\gamma(x_j, y_p),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\beta=\sigma(j,p)\)</span>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vidauki.html" class="btn btn-neutral float-right" title="Viðauki" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli05.html" class="btn btn-neutral" title="5. Mismunaaðferðir" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script type="text/javascript" src="_static/custom_sage.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

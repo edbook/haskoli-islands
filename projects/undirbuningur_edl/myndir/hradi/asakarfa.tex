@@ -1,0 +1,15 @@
+\documentclass[tikz, border=7pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}
+\draw[->, thick] (0,0) -- (0,2)node[midway, anchor=west] {$v_0$};
+\draw[->, red, thick] (1,4) -- (1,2) node [midway, anchor=west] {$g$};
+
+\fill (0,6) circle(2pt)node[anchor=west] {$v=0$};
+
+\draw [decorate,decoration={brace,amplitude=10pt}] (-0.1,0) -- (-0.1,6) node [black,midway,xshift=-0.6cm] {$x$} ;
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[tikz, border=7pt]{standalone}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\begin{document}
+
+\begin{tikzpicture}
+\draw [->] (0,0) -- (0,11) node [anchor=south] {$x$ [m]};
+\draw [->] (0,0) -- (11,0) node [anchor=west] {$t$ [s]};
+\draw (0,0) -- (10,10) ;
+\draw (5.75,6.25) node [rotate=45] {Hallatala = $10$ m/s};
+\draw [dashed] (5,5) -- (7,5) ;
+\draw (6,4.5) node  {$\Delta t$};
+\draw [dashed] (7,5) -- (7,7) ;
+\draw (7.5,6) node {$\Delta x$};
+
+\draw [dashed] (0,10) -- (10,10);
+\draw (5,10.5) node {Marklína};
+
+\foreach \x in {0, 1,2,3,4,5,6,7,8,9,10}{
+\draw (\x,-0.5) node{\x};
+\draw (\x,-0.2) -- (\x,0.2); };
+
+\foreach \x in {0, 10,20,30,40,50,60,70,80,90,100}{
+\draw (-0.5, \x/10) node{\x};
+\draw (-0.2, \x/10) -- (0.2,\x/10); };
+
+\end{tikzpicture}
+\end{document}

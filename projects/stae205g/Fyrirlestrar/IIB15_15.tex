@@ -1,0 +1,98 @@
+\def \kaflanr {15}
+\lecture[\kaflanr]{\kaflanr. Þreföld heildi}{lecture-text}
+\date{23.~febrúar 2015}
+\newcounter{mycount}
+\refstepcounter{mycount}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+
+
+
+\begin{frame}{} 
+
+\begin {block}{Umræða \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Heildi falls $f(x,y,z)$ yfir kassa $K=[a,b]\times[c,d]\times[u,v]$ í $\R^3$ er skilgreint á sambærilegan hátt og  tvöfalt heildi er skilgreint.  
+
+\medskip
+Á sama hátt og fyrir tvöföld heildi má svo skilgreina heildi fyrir almennari rúmskika í $\R^3$. 
+
+\medskip
+Heildi falls $f(x,y,z)$ yfir rúmskika $R$ er táknað með 
+$$\thrint_R f(x,y,z)\,dV.$$
+($dV$ stendur fyrir að heildað er með tilliti til rúmmáls.)
+\end{block}
+
+\end{frame}
+
+\begin{frame}{} 
+
+\begin {block}{Setning \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+ Látum $f(x,y,z)$ vera fall sem er heildanlegt yfir kassa $K=[a,b]\times[c,d]\times[u,v]$ í $\R^3$.  Þá er
+$$\thrint_K f(x,y,z)\,dV=
+\int_a^b\!\int_c^d\!\int_u^v f(x,y,z)\,dz\,dy\,dx.$$ 
+Breyta má röð heilda að vild, t.d.\ er 
+$$\thrint_K f(x,y,z)\,dV=
+\int_u^v\!\int_c^d\!\int_a^b f(x,y,z)\,dx\,dy\,dz.$$ 
+\end{block}
+
+\end{frame}
+
+\begin{frame}{} 
+
+\begin {block}{Setning \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+ Látum $f(x,y,z)$ vera fall sem er heildanlegt yfir rúmskika $R$ og gerum ráð fyrir að $R$ hafi lýsingu á forminu
+$$R=\{(x,y,z)\mid a\leq x\leq b,\ c(x)\leq y\leq d(x),\ u(x,y)\leq z\leq v(x,y)\}.$$
+Þá er
+$$\thrint_R f(x,y,z)\,dV=
+\int_a^b\!\int_{c(x)}^{d(x)}\!\int_{u(x,y)}^{v(x,y)} f(x,y,z)\,dz\,dy\,dx.$$ 
+Breyturnar $x, y, z$ geta svo skipt um hlutverk.
+\end{block}
+
+\end{frame}
+
+\begin{frame}{} 
+
+\begin {block}{Setning \kaflanr.\arabic{mycount} (Almenn breytuskiptaformúla fyrir þreföld heildi.) }\stepcounter{mycount}
+ Látum 
+$$(u,v,w)\mapsto (x(u,v,w), y(u,v,w), z(u,v,w))$$
+vera gagntæka vörpun milli rúmskika $R$ í $xyz$-rúmi og rúmskika $S$ í $uvw$-rúmi.  Gerum ráð fyrir að föllin $x(u,v,w), y(u,v,w), z(u,v,w)$ hafi öll samfelldar fyrsta stigs hlutafleiður.  Ef $f(x,y,z)$ er fall sem er heildanlegt yfir $R$ þá er
+\begin {align*}
+\thrint_R& f(x,y,z)\,dV \\&=\thrint_S f(x(u,v,w), y(u,v,w), z(u,v,w))
+\bigg|\frac{\partial(x,y,z)}{\partial(u,v,w)}\bigg|\,du\,dv\,dw.
+\end {align*}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{} 
+
+\begin {block}{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+ Látum $(x,y,z)$ vera punkt í $\R^3$.  {\em Sívalningshnit} $(x,y,z)$ eru þrennd talna $r, \theta, z$ þannig að 
+$$x=r\cos\theta\qquad\qquad y=r\sin\theta\qquad\qquad z=z.$$
+Athugið að $[r,\theta]$ eru pólhnit punktsins $(x,y)$. 
+\end{block}
+
+\end{frame}
+
+\begin{frame}{} 
+
+\begin {block}{Setning \kaflanr.\arabic{mycount} (Breytuskipti yfir í sívalningshnit.)}\stepcounter{mycount}
+
+Látum $R$ vera rúmskika í $\R^3$ og látum $f(x,y,z)$ vera heildanlegt fall yfir $R$.  Gerum ráð fyrir að $R$ megi lýsa með eftirfarandi skorðum á sívalningshnit punktanna sem eru í $R$
+$$\alpha\leq \theta\leq \beta,\ a(\theta)\leq r\leq  b(\theta), u(r,\theta)\leq z\leq v(r,\theta),$$ 
+þar sem $0\leq \beta-\alpha\leq 2\pi$.  Þá er
+$$\thrint_R f(x,y,z)\,dV= 
+\int_\alpha^\beta
+\!\int_{a(\theta)}^{b(\theta)}\int_{u(r,\theta)}^{v(r,\theta)}      
+f(r\cos\theta,r\sin\theta,z)r\,dz\,dr\,d\theta.$$
+ 
+\end{block}
+
+\end{frame}
+
+\end{document}

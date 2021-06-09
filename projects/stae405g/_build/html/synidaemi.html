@@ -1,0 +1,830 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nákvæm lausn &mdash; Töluleg greining (STÆ405G) 0.1</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+	<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+	<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    
+    <script> 
+    // the buttonText string says what will be written on the 
+    // sage cell evaluation button.
+    // It can be changed here.
+    var buttonText = "Keyra"
+    </script>
+    
+	<script>sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});</script>
+
+	<script>sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});</script>
+	
+    <script>sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+    <link rel="top" title="Töluleg greining (STÆ405G) 0.1" href="index.html"/>
+ 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Töluleg greining (STÆ405G)
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#hva-er-toluleg-greining">1.1. Hvað er töluleg greining?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#tilraun-a-svari">1.1.1. Tilraun að svari</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#daemi-eldflaug">1.2. Dæmi: Eldflaug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#samleitni-runa">1.3. Samleitni runa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#nokkur-atrii-um-samleitni-runa">1.3.1. Nokkur atriði um samleitni runa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-samleitni">1.3.2. Skilgreining: Samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining">1.3.3. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#setning-taylors">1.4. Setning Taylors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-fyrir-diffranleg-foll">1.4.1. Ritháttur fyrir diffranleg föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#nalgun-me-taylor-margliu">1.4.2. Nálgun með Taylor-margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#index-3">1.4.3. Setning Taylors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#vibot">1.4.4. Viðbót</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#synidaemi-nalgun-a-fallgildum">1.4.5. Sýnidæmi: Nálgun á fallgildum <span class="math">\(x-\sin x\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#skekkjur">1.5. Skekkjur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skekkja-i-nalgun-a-rauntolu">1.5.1. Skekkja í nálgun á rauntölu <span class="math">\(r\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fyrirframmat-a-skekkju">1.5.2. Fyrirframmat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#eftiramat-a-skekkju">1.5.3. Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ofurlinuleg-samleitni-eftiramat-a-skekkju">1.5.4. Ofurlínuleg samleitni &#8211; Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#linuleg-samleitni-eftiramat-a-skekkju">1.5.5. Línuleg samleitni &#8211; Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#synidaemi">1.5.6. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utreikningur-a-samleitnistigi">1.5.7. Útreikningur á samleitnistigi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#meira-um-skekkjur">1.6. Meira um skekkjur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-markverir-stafir">1.6.1. Skilgreining: Markverðir stafir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#urlausn-annars-stigs-jofnu">1.6.2. Úrlausn annars stigs jöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ahrif-gagnaskekkju">1.6.3. Áhrif gagnaskekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id2">1.6.4. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur">1.6.5. <span class="math">\(O\)</span>-ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-og-skekkja-i-taylor-nalgnum">1.6.6. <span class="math">\(O\)</span>-ritháttur og skekkja í Taylor-nálgnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id3">1.6.7. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-fyrir-runur">1.6.8. <span class="math">\(O\)</span>-ritháttur fyrir runur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#tvo-synidaemi">1.6.9. Tvö sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#fleytitalnakerfi">1.7. Fleytitalnakerfið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#framsetning-a-tolum">1.7.1. Framsetning á tölum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mantissa">1.7.2. Mantissa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#markverir-stafir">1.7.3. Markverðir <span class="math">\(\beta\)</span>-stafir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#afruningur-talna">1.7.4. Afrúningur talna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fleytitolukerfi">1.7.5. Fleytitölukerfi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ieee-stalar">1.7.6. IEEE staðlar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utreikningur-i-tugakerfi">1.7.7. Útreikningur í tugakerfi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Núllstöðvar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#nalgun-a-nullsto">2.1. Nálgun á núllstöð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining">2.1.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi">2.1.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#athugasemd">2.1.3. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#helmingunarafer">2.2. Helmingunaraðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#milligildissetningin">2.2.1. Milligildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#afleiing">2.2.2. Afleiðing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-helmingunarafer">2.2.3. Skekkjumat í helmingunaraðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fyrirframmat-a-skekkju">2.2.4. Fyrirframmat á skekkju</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#fastapunktsafer">2.3. Fastapunktsaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id1">2.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#tenging-vi-nullstovar">2.3.2. Tenging við núllstöðvar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#reiknirit">2.3.3. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-herping">2.3.4. Skilgreining: Herping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning">2.3.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fastapunktssetningin">2.3.6. Fastapunktssetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fastapunktsafer-er-a-minnsta-kosti-linulega-samleitin">2.3.7. Fastapunktsaðferð er að minnsta kosti línulega samleitin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#sniilsafer">2.4. Sniðilsaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id2">2.4.1. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#samleitin-runa-stefnir-a-nullsto">2.4.2. Samleitin runa stefnir á núllstöð <span class="math">\(f\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-nalgun-a-me">2.4.3. Skekkjumat í nálgun á <span class="math">\(f(x)\)</span> með <span class="math">\(p_n(x)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-sniilsafer">2.4.4. Skekkjumat í sniðilsaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.4.5. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#afer-newtons">2.5. Aðferð Newtons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id4">2.5.1. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#upprifjun">2.5.2. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id5">2.5.3. Samleitin runa stefnir á núllstöð <span class="math">\(f\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id6">2.5.4. Skekkjumat í nálgun á <span class="math">\(f(x)\)</span> með <span class="math">\(p_n(x)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-afer-newtons">2.5.5. Skekkjumat í aðferð Newtons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id7">2.5.6. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#samanburur-a-aferum">2.6. Samanburður á aðferðum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Brúun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#inngangur">3.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#markmii">3.1.1. Markmiðið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id1">3.1.2. Brúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#afhverju-margliur">3.1.3. Afhverju margliður?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margliur">3.1.4. Margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#mismunandi-leiir-a-framsetningu">3.1.5. Mismunandi leiðir á framsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#newton-form-margliu">3.1.6. Newton-form margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#reiknirit-horners">3.1.7. Reiknirit Horners</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margliubruun-lagrange-form">3.2. Margliðubrúun: Lagrange-form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margliubruun">3.2.1. Margliðubrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-bruunarmarglian-er-otviraett-akvoru">3.2.2. Setning: Brúunarmargliðan er ótvírætt ákvörðuð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-bruunarmarglian-er-til">3.2.3. Setning: Brúunarmargliðan er til</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-form-bruunarmargliunnar">3.2.4. Lagrange-form brúunarmargliðunnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-margliur-tilfellin">3.2.5. Lagrange-margliður, tilfellin <span class="math">\(m=0,1,2\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-margliur-almenna-tilfelli">3.2.6. Lagrange-margliður almenna tilfellið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#synidaemi">3.2.7. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margliubruun-newton-form">3.3. Margliðubrúun: Newton-form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#formula-fyrir">3.3.1. Formúla fyrir <span class="math">\(c_0, \ldots, c_m\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#mismunakvotar">3.3.2. Mismunakvótar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upprifjun-a-tilvistarsonnuninni">3.3.3. Upprifjun á tilvistarsönnuninni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#mismunakvotatoflur-fyrir">3.3.4. Mismunakvótatöflur fyrir <span class="math">\(m=0,1,2,3\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id2">3.3.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#samantekt">3.3.6. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#samantekt-newton-form">3.3.7. Samantekt – Newton-form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#samantekt-lagrange-margliur">3.3.8. Samantekt – Lagrange-margliður</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#id3">3.4. Samantekt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagrange-margliur">3.4.1. Lagrange-margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#newton-margliur">3.4.2. Newton-margliður</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margliubruun-margfaldir-punktar">3.5. Margliðubrúun: Margfaldir punktar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margfeldni-punktanna">3.5.1. Margfeldni punktanna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#sertilfelli">3.5.2. Sértilfelli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upprifjun">3.5.3. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#otviraeni-lausnarinnar">3.5.4. Ótvíræðni lausnarinnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilvist-a-lausn">3.5.5. Tilvist á lausn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id4">3.5.6. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#bruunarmarglian-fundin">3.5.7. Brúunarmargliðan fundin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#skynsamlegir-skiptipunktar-og-chebyshev-margliur">3.6. Skynsamlegir skiptipunktar og Chebyshev margliður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#um-val-a-bruunarpunktum">3.6.1. Um val á brúunarpunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-oheppilega-skiptipunkta">3.6.2. Dæmi um óheppilega skiptipunkta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#val-a-bruunarpunktum">3.6.3. Val á brúunarpunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining">3.6.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#verkefni">3.6.5. Verkefnið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-chebyshev-margliur">3.6.6. Skilgreining: Chebyshev margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning">3.6.7. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stalaar-chebyshev-margliur">3.6.8. Staðlaðar Chebyshev margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skynsamlegir-skiptipunktar-fyrir-bili">3.6.9. Skynsamlegir skiptipunktar fyrir bilið <span class="math">\([-1,1]\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-oheppilega-skiptipunkta-skoa-aftur">3.6.10. Dæmi um óheppilega skiptipunkta skoðað aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skynsamlegir-skiptipunktar-fyrir-bil">3.6.11. Skynsamlegir skiptipunktar fyrir bil <span class="math">\([a,b]\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#lagmorkun-a-skekkju-me-tilliti-til">3.6.12. Lágmörkun á skekkju með tilliti til <span class="math">\(\ell_2\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-legendre-margliurnar">3.6.13. Skilgreining: Legendre margliðurnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id5">3.6.14. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id6">3.6.15. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-stalaar-legendre-margliur">3.6.16. Skilgreining: Staðlaðar Legendre margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-lagmorkun-me-legendre-margliunum">3.6.17. Setning: Lágmörkun með Legendre margliðunum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#nullstovar-fyrir">3.6.18. Núllstöðvar <span class="math">\(P_n\)</span>, fyrir <span class="math">\(n=1,\ldots,10\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id7">3.6.19. Dæmi um óheppilega skiptipunkta skoðað aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#athugasemd-um-og">3.6.20. Athugasemd um <span class="math">\(\ell_\infty\)</span> og <span class="math">\(\ell_2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#skekkjumat">3.7. Skekkjumat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#nalgun-a-follum-me-marglium">3.7.1. Nálgun á föllum með margliðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#nalgun-a-fallgildum">3.7.2. Nálgun á fallgildum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id8">3.7.3. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-egar-vi-hofum-aeins-einn-punkt">3.7.4. Tilfellið þegar við höfum aðeins einn punkt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margfeldni-nullstova">3.7.5. Margfeldni núllstöðva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-skekkjumat">3.7.6. Setning: Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id9">3.7.7. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id10">3.7.8. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#splaesibruun">3.8. Splæsibrúun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#almennt-um-splaesibruun">3.8.1. Almennt um splæsibrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#fyrsta-stigs-splaesibruun">3.8.2. Fyrsta stigs splæsibrúun:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rija-stigs-splaesibruun">3.8.3. Þriðja stigs splæsibrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#jofnuhneppi">3.8.4. Jöfnuhneppið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-1-ekki-hnuts-endaskilyri">3.8.5. Tilfelli 1: Ekki-hnúts endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-2-vingu-endaskilyri">3.8.6. Tilfelli 2: Þvinguð endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-3-natturleg-endaskilyri">3.8.7. Tilfelli 3: Náttúrleg endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tilfelli-4-lotubundi-endaskilyri">3.8.8. Tilfelli 4: Lotubundið endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#teikning-a-ferlum-i-planinu">3.8.9. Teikning á ferlum í planinu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#afer-minnstu-fervika">3.9. Aðferð minnstu fervika</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#jafna-bestu-linu">3.9.1. Jafna bestu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#smavegis-linuleg-algebra">3.9.2. Smávegis línuleg algebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#index-25">3.9.3. Jafna bestu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#jafna-bestu-annars-stigs-margliu">3.9.4. Jafna bestu annars stigs margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#synidaemi-besta-annars-stigs-marglia">3.9.5. Sýnidæmi: besta annars stigs margliða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Töluleg diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#inngangur">4.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#toluleg-diffrun-og-heildun">4.1.1. Töluleg diffrun og heildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#meginhugmynd-i-ollum-nalgunaraferunum">4.1.2. Meginhugmynd í öllum nálgunaraðferðunum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#aferirnar">4.2. Aðferðirnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#frammismunur">4.2.1. Frammismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#bakmismunur">4.2.2. Bakmismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#misettur-mismunakvoti">4.2.3. Miðsettur mismunakvóti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#misettur-mismunakvoti-fyrir-ara-afleiu">4.2.4. Miðsettur mismunakvóti fyrir aðra afleiðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#skekkjumat">4.3. Skekkjumat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#almennt-um-nalganir-a-afleium">4.3.1. Almennt um nálganir á afleiðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#index-5">4.3.2. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id2">4.3.3. Frammismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id3">4.3.4. Miðsettur mismunakvóti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id4">4.3.5. Miðsettur mismunakvóti fyrir aðra afleiðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#richardson-utgiskun">4.4. Richardson útgiskun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#utleisla-a-misettum-mismunakvota">4.4.1. Útleiðsla á miðsettum mismunakvóta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#helmingun-a-skrefinu">4.4.2. Helmingun á skrefinu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjora-stigs-nalgun">4.4.3. Fjórða stigs nálgun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#haegt-er-a-halda-afram-utgiskun">4.4.4. Hægt er að halda áfram útgiskun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#sjotta-stigs-skekkja">4.4.5. Sjötta stigs skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#almenn-rakningarformula">4.4.6. Almenn rakningarformúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reiknirit">4.4.7. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id5">4.4.8. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#utleisla-a-fyrirframmati">4.4.9. Útleiðsla á fyrirframmati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#synidaemi">4.4.10. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Töluleg heildun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#aferirnar">5.1. Aðferðirnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#newton-cotes-heildun">5.1.1. Newton-Cotes heildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#synidaemi">5.1.2. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#trapisureglan">5.1.3. Trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mipunktsreglan">5.1.4. Miðpunktsreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#regla-simpsons">5.1.5. Regla Simpsons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samsettar-utgafur">5.2. Samsettar útgáfur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#inngangur">5.2.1. Inngangur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#samsetta-trapisureglan">5.2.2. Samsetta trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#samsetta-mipunktsreglan">5.2.3. Samsetta miðpunktsreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#samsett-regla-simpsons">5.2.4. Samsett regla Simpsons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkjumat">5.3. Skekkjumat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id1">5.3.1. Inngangur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mealgildissetningin-fyrir-heildi">5.3.2. Meðalgildissetningin fyrir heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id2">5.3.3. Trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id5">5.3.4. Samsetta trapisureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mipunktsregla">5.3.5. Miðpunktsregla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id6">5.3.6. Samsetta miðpunktsreglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id7">5.3.7. Regla Simpsons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id9">5.3.8. Samsett regla Simpsons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#romberg-utgiskun">5.4. Romberg-útgiskun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#euler-maclauren-formulan">5.4.1. Euler-Maclauren-formúlan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#afleiing-af-euler-maclaurin-formulunni">5.4.2. Afleiðing af Euler-Maclaurin-formúlunni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#itrekun-a-samsettu-trapisureglunni-me-helmingun">5.4.3. Ítrekun á samsettu trapisureglunni með helmingun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#reikniriti-fyrir-romberg-heildun">5.4.4. Reikniritið fyrir Romberg-heildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skekkjumat-i-romberg-heildun">5.4.5. Skekkjumat í Romberg heildun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Upphafsgildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#inngangur">6.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fyrsta-stigs-afleiujafna-me-upphafsgildi">6.1.1. Fyrsta stigs afleiðujafna með upphafsgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#utskyring-og-daemi">6.1.2. Útskýring og dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tilvist-og-otviraeni-lausna">6.1.3. Tilvist og ótvíræðni lausna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#upphafsgildisverkefni-fyrir-hneppi">6.1.4. Upphafsgildisverkefni fyrir hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#jofnur-af-stigi-og-jafngild-hneppi">6.1.5. Jöfnur af stigi <span class="math">\(&gt;1\)</span> og jafngild hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tilvist-og-otviraeni-lausna-a-hneppum">6.1.6. Tilvist og ótvíræðni lausna á hneppum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#rithattur">6.1.7. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#grunnhugmyndin-i-nalgunaraferum">6.1.8. Grunnhugmyndin í nálgunaraðferðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#beinar-og-obeinar-aferir">6.1.9. Beinar og óbeinar aðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#eins-skrefs-aferir-og-fjolskrefaaferir">6.1.10. Eins skrefs aðferðir og fjölskrefaaðferðir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#aferir-me-fasta-skrefastaer">6.2. Aðferðir með fasta skrefastærð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-eulers">6.2.1. Aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-eulers-matlab-forrit">6.2.2. Aðferð Eulers: Matlab-forrit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-eulers-daemi">6.2.3. Aðferð Eulers: Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#endurbaett-afer-eulers">6.2.4. Endurbætt aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-heun">6.2.5. Aðferð Heun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#forsagnar-og-leirettingarskref">6.2.6. Forsagnar- og leiðréttingarskref</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#annars-stigs-runge-kutta-afer">6.2.7. Annars stigs Runge-Kutta-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#klassiska-fjora-stigs-runge-kutta-aferin">6.2.8. Klassíska (fjórða stigs) Runge-Kutta aðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#klassiska-runge-kutta-aferin-daemi">6.2.9. Klassíska Runge-Kutta aðferðin: Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#skekkjumat-samleitni-og-stougleiki">6.3. Skekkjumat, samleitni og stöðugleiki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skekkja">6.3.1. Skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#staarskekkja-i-afer-eulers">6.3.2. Staðarskekkja í aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#styring-a-staarskekkju-og-breytileg-skrefastaer">6.3.3. Stýring á staðarskekkju og breytileg skrefastærð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#mat-a-skrefastaer">6.3.4. Mat á skrefastærð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#aferir-me-breytilega-skrefastaer">6.4. Aðferðir með breytilega skrefastærð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#reiknirit-fyrir-runge-kutta-fehlberg-rkf45">6.4.1. Reiknirit fyrir Runge-Kutta-Fehlberg (RKF45)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#runge-kutte-fehlberg-rkf45-profu">6.4.2. Runge-Kutte-Fehlberg (RKF45) prófuð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#fjolskrefaaferir">6.5. Fjölskrefaaðferðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skrefa-adams-bashforth-afer">6.5.1. <span class="math">\(k\)</span>-skrefa Adams-Bashforth aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tveggja-skrefa-adams-bashforth-afer">6.5.2. Tveggja skrefa Adams-Bashforth-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#forrit-fyrir-tveggja-skrefa-adams-bashforth-afer">6.5.3. Forrit fyrir tveggja skrefa Adams-Bashforth-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#riggja-skrefa-adams-bashforth">6.5.4. Þriggja skrefa Adams-Bashforth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fjogurra-skrefa-adams-bashforth">6.5.5. Fjögurra skrefa Adams-Bashforth</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#greining-a-samleitni-og-stougleika">6.6. Greining á samleitni og stöðugleika</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id3">6.6.1. Skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samleitni">6.6.2. Samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi">6.6.3. Samræmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi-endurbaettu-euler-aferarinnar">6.6.4. Samræmi endurbættu Euler-aðferðarinnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi-beinna-eins-skrefs-afera">6.6.5. Samræmi beinna eins skrefs aðferða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#stougleiki">6.6.6. Stöðugleiki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#lipschitz-samfelldni">6.6.7. Lipschitz-samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-um-stougleika-og-samleitni">6.6.8. Setning um stöðugleika og samleitni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Jaðargildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#inngangur">7.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id1">7.1.1. Jaðargildisverkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rjar-tegundir-jaarskilyra">7.1.2. Þrjár tegundir jaðarskilyrða</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#dirichlet-jaarskilyri">7.2. Dirichlet-jaðarskilyrði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skiptipunktar">7.2.1. Skiptipunktar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#linulegar-afleiujofnur">7.2.2. Línulegar afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id2">7.2.3. Dirichlet-jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#jafngild-framsetning-a-hneppinu">7.2.4. Jafngild framsetning á hneppinu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#linulega-jofnuhneppi-a-fylkjaformi">7.2.5. Línulega jöfnuhneppið á fylkjaformi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#neumann-og-robin-jaarskilyri">7.3. Neumann og Robin -jaðarskilyrði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#felugildi">7.3.1. Felugildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#jafna-fyrir-felugildi">7.3.2. Jafna fyrir felugildið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#hneppi-a-fylkjaformi">7.3.3. Hneppið á fylkjaformi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#fyrsta-og-siasta-lina-hneppisins">7.3.4. Fyrsta og síðasta lína hneppisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#haegri-hli-hneppisins">7.3.5. Hægri hlið hneppisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#samantekt">7.3.6. Samantekt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Jöfnuhneppi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#linuleg-jofnuhneppi">8.1. Línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#verkefni">8.1.1. Verkefnið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#lausnir">8.1.2. Lausnir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fjoldi-agera">8.1.3. Fjöldi aðgerða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vandamal-me-stougleika">8.1.4. Vandamál með stöðugleika</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#vending-e-pivoting">8.2. Vending (e. pivoting)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#inngangur">8.2.1. Inngangur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hlutvending-e-partial-pivoting">8.2.2. Hlutvending (e. partial pivoting)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vankantar">8.2.3. Vankantar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skolu-hlutvending-e-scaled-partial-pivoting">8.2.4. Sköluð hlutvending (e. scaled partial pivoting)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#athugasemd">8.2.5. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#fylkjastaall">8.3. Fylkjastaðall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#a-maela-fjarlaeg-milli-hluta">8.3.1. Að mæla fjarlægð milli hluta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vigurstaall">8.3.2. Vigurstaðall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-stala">8.3.3. Dæmi um staðla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#index-9">8.3.4. Fylkjastaðall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fylkjastaall-skilgreindur-ut-fra-vigurstali">8.3.5. Fylkjastaðall skilgreindur út frá vigurstaðli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-fylkjastaal">8.3.6. Dæmi um fylkjastaðal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#eigingildi">8.3.7. Eigingildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#rof-og-rofgeisli">8.3.8. Róf og rófgeisli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#setning-um-rofgeisla">8.3.9. Setning um rófgeisla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#skekkjumat-og-astandstala">8.4. Skekkjumat og ástandstala</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hvernig-a-a-maela-skekkju">8.4.1. Hvernig á að mæla skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skekkjumat">8.4.2. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#astandstala-fylkis-og-mat-a-hlutfallslegri-skekkju">8.4.3. Ástandstala fylkis og mat á hlutfallslegri skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ahrif-gagnaskekkju">8.4.4. Áhrif gagnaskekkju</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#lu-attun">8.5. LU-þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#nokkrar-skilgreiningar">8.5.1. Nokkrar skilgreiningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#urlausn-a-jofnuhneppi-me-nera-rihyrningsfylki">8.5.2. Úrlausn á jöfnuhneppi með neðra þríhyrningsfylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id2">8.5.3. Fjöldi aðgerða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#urlausn-a-jofnuhneppi-me-efra-rihyrningsfylki">8.5.4. Úrlausn á jöfnuhneppi með efra þríhyrningsfylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linuagerir">8.5.5. Línuaðgerðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ny-syn-a-gauss-eyingu">8.5.6. Ný sýn á Gauss-eyðingu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#nanar-um">8.5.7. Nánar um <span class="math">\(M_i\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#index-17">8.5.8. LU-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#attun-og-skolu-hlutvending">8.5.9. <span class="math">\(LU\)</span>-þáttun og sköluð hlutvending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jofnuhneppi-leyst-me-lu-attun">8.5.10. Jöfnuhneppi leyst með LU-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fjoldi-reikniagera-fyrir-attun">8.5.11. Fjöldi reikniaðgerða fyrir <span class="math">\(LU\)</span>-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#morg-jofnuhneppi">8.5.12. Mörg jöfnuhneppi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#fastapunktsaferir-fyrir-linuleg-jofnuhneppi">8.6. Fastapunktsaðferðir fyrir línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#itrekunaraferir-til-ess-a-leysa-linuleg-jofnuhneppi">8.6.1. Ítrekunaraðferðir til þess að leysa línuleg jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fastapunktsitrekun-til-ess-a-leysa-linuleg-jofnuhneppi">8.6.2. Fastapunktsítrekun til þess að leysa línuleg jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fastapunktsitrekun-skekkjumat">8.6.3. Fastapunktsítrekun - skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilyri-fyrir-samleitni">8.6.4. Skilyrði fyrir samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skiptingarafer-e-splitting-method">8.6.5. Skiptingaraðferð (e. splitting method)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jacobi-afer">8.6.6. Jacobi-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#gauss-seidel-afer">8.6.7. Gauss-Seidel-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#sor-afer-e-successive-over-relaxation">8.6.8. SOR-aðferð (e. successive over-relaxation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#setning-um-samleitni-gauss-seidel-aferarinnar">8.6.9. Setning um samleitni Gauss-Seidel-aðferðarinnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#newton-afer-fyrir-jofnuhneppi">8.7. Newton-aðferð fyrir jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jacobi-fylki">8.7.1. Jacobi-fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#afer-newtons-fyrir-hneppi">8.7.2. Aðferð Newtons fyrir hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#matlab-forrit-fyrir-hneppi">8.7.3. Matlab-forrit fyrir hneppi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#eigingildi-og-eiginvigrar">9.1. Eigingildi og eiginvigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#nalgun-a-eigingildum-og-eiginvigrum">9.1.1. Nálgun á eigingildum og eiginvigrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#grof-stasetning-a-eigingildum-skifusetning-gerschgorins">9.1.2. Gróf staðsetning á eigingildum: Skífusetning Gerschgorins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#fylgisetning">9.1.3. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-setning-gerschgorins">9.1.4. Dæmi: Setning Gerschgorins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#eiginvigragrunnar">9.1.5. Eiginvigragrunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#veldaafer">9.2. Veldaaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id1">9.2.1. Veldaaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#reiknirit-til-ess-a-akvara-staersta-eigingildi-fylkis">9.2.2. Reiknirit til þess að ákvarða stærsta eigingildi fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#samleitnin">9.2.3. Samleitnin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#samhverf-fylki">9.2.4. Samhverf fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-um-eigingildi-og-eiginvigra">9.2.5. Setning um eigingildi og eiginvigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-veldaafer">9.2.6. Dæmi um veldaaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#andhverf-veldaafer">9.3. Andhverf veldaaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#reiknirit-til-ess-a-nalga-eigingildi-og-eiginvigra">9.3.1. Reiknirit til þess að nálga eigingildi og eiginvigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-ofuga-veldaafer">9.3.2. Dæmi um öfuga veldaaðferð</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. Monte Carlo hermanir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#inngangur">10.1. Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#flatarmal-rummal-og-heildun">10.2. Flatarmál, rúmmál og heildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nalgun-a-pi">10.2.1. Nálgun á pi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#forrit-fyrir-nalgun-a-pi">10.2.2. Forrit fyrir nálgun á pi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nalgun-a-heildi">10.2.3. Nálgun á heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nalgun-a-heildi-daemi">10.2.4. Nálgun á heildi: Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#margfold-heildi">10.2.5. Margföld heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#margfold-heildi-daemi">10.2.6. Margföld heildi: Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#hermun">10.3. Hermun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nal-buffons">10.3.1. Nál Buffons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#skipulag-namskeisins">Skipulag námskeiðsins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#kennsla">Kennsla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#kennsluefni">Kennsluefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#matlab-octave">Matlab/Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#heimadaemi-og-daematimar">Heimadæmi og dæmatímar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#verkefni">Verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#lokaprof">Lokapróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#namsmat">Námsmat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#fragangur-heimadaema">Frágangur heimadæma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#gagnlegir-tenglar">Gagnlegir tenglar</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Töluleg greining (STÆ405G)</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Nákvæm lausn</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/synidaemi.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="line-block">
+<div class="line">Háskóli Íslands vor 2014</div>
+<div class="line">Töluleg greining STÆ405G kafli 3.1</div>
+</div>
+<hr class="docutils" />
+<p>Sýnidæmi</p>
+<p><em>Þetta er dæmi um jöfnuhneppi þar sem nauðsynlegt er að nota vendingu
+til þess að fá nothæfa lausn. Við sjáum að það skiptir því miklu máli
+hvernig við útfærum Gauss-eyðinguna. Jöfnuhneppið sem við ætlum að skoða
+er</em></p>
+<div class="math">
+\[\begin{split}\left[
+\begin{array}{ll}
+{\varepsilon}&amp; 1 \\
+1 &amp; 1
+\end{array}\right]
+\left[
+\begin{array}{l}
+x_1\\
+x_2
+\end{array}\right]
+= \left[\begin{array}{l}
+1\\
+2
+\end{array}\right]\end{split}\]</div>
+<div class="section" id="nakvaem-lausn">
+<h1>Nákvæm lausn<a class="headerlink" href="#nakvaem-lausn" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Byrjum á því að finna nákvæma lausn með Gauss-eyðingu. Margföldum fyrstu
+línuna með <span class="math">\(\frac 1{\varepsilon}\)</span> og drögum frá annarri línunni.</p>
+<div class="math">
+\[\begin{split}\left[
+\begin{array}{ll|l}
+{\varepsilon}&amp; 1 &amp; 1\\
+1 &amp; 1 &amp; 2
+\end{array}\right]
+\sim
+\left[
+\begin{array}{ll|l}
+{\varepsilon}&amp; 1 &amp; 1\\
+0 &amp; 1-\frac 1{\varepsilon}&amp; 2 -\frac 1{\varepsilon}\end{array}\right]\end{split}\]</div>
+<p>Af þessu sjáum við að
+<span class="math">\(x_2 = \frac{2-\frac 1{\varepsilon}}{1-\frac 1{\varepsilon}} = 1 - \frac{{\varepsilon}}{1-{\varepsilon}}\)</span>,
+og þá er
+<span class="math">\(x_1 = \frac{1-1 x_2}{{\varepsilon}} = 1+ \frac{{\varepsilon}}{1-{\varepsilon}}\)</span>.</p>
+</div>
+<div class="section" id="lausn-i-tolvu-an-vendingar">
+<h1>Lausn í tölvu, án vendingar<a class="headerlink" href="#lausn-i-tolvu-an-vendingar" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Athugum hvernig sömu reikningar eru framkvæmdir í tölvu, og gerum ráð
+fyrir að <span class="math">\({\varepsilon}\)</span> sé minna heldur en nákvæmnin í tölvunni.
+Það þýðir að tölvan getur ekki gert greinarmun á tölunum
+<span class="math">\(1-\frac 1{\varepsilon}\)</span> og <span class="math">\(-\frac 1{\varepsilon}\)</span>, og eins
+á tölunum <span class="math">\(2-\frac 1{\varepsilon}\)</span> og
+<span class="math">\(-\frac 1{\varepsilon}\)</span>, því <span class="math">\(\frac 1{\varepsilon}\)</span> er svo
+miklu stærra en <span class="math">\(1\)</span> og <span class="math">\(2\)</span>. Gauss-eyðing út frá fyrstu línu
+skilar eins og áður</p>
+<div class="math">
+\[\begin{split}\left[
+\begin{array}{ll|l}
+{\varepsilon}&amp; 1 &amp; 1\\
+1 &amp; 1 &amp; 2
+\end{array}\right]
+\sim
+\left[
+\begin{array}{ll|l}
+{\varepsilon}&amp; 1 &amp; 1\\
+0 &amp; 1-\frac 1{\varepsilon}&amp; 2 -\frac 1{\varepsilon}\end{array}\right]\end{split}\]</div>
+<p>En af ofangreindum ástæðum þá lítur tölvan á seinna hneppið sem</p>
+<div class="math">
+\[\begin{split}  \left[
+  \begin{array}{ll|l}
+  {\varepsilon}&amp; 1 &amp; 1\\
+  0 &amp; -\frac 1{\varepsilon}&amp; -\frac 1{\varepsilon}\end{array}\right]\end{split}\]\[Þannig að\]</div>
+<p><span class="math">\(x_2 = \frac{-\frac 1{\varepsilon}}{-\frac 1{\varepsilon}} = 1\)</span>.
+Þá er
+<span class="math">\(x_1 = \frac{1-1x_2}{{\varepsilon}} = \frac{1-1}{{\varepsilon}} = 0\)</span>.
+Sem er langt frá réttu lausninni.</p>
+</div>
+<div class="section" id="lausn-i-tolvu-me-vendingu">
+<h1>Lausn í tölvu, með vendingu<a class="headerlink" href="#lausn-i-tolvu-me-vendingu" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Prófum að gera það sama, nema nú skulum við eyða út frá annarri línu.
+Margföldum línu 2 með <span class="math">\({\varepsilon}\)</span> og drögum frá fyrstu
+línunni.</p>
+<div class="math">
+\[\begin{split}\left[
+\begin{array}{ll|l}
+{\varepsilon}&amp; 1 &amp; 1\\
+1 &amp; 1 &amp; 2
+\end{array}\right]
+\sim
+\left[
+\begin{array}{ll|l}
+0 &amp; 1-{\varepsilon}&amp; 1-2{\varepsilon}\\
+1 &amp; 1 &amp; 2
+\end{array}\right]\end{split}\]</div>
+<p>Tölvan sér ekki mun á <span class="math">\(1-{\varepsilon}\)</span> og 1, og eins á
+<span class="math">\(1-2{\varepsilon}\)</span> og 1 þannig að í hennar augum verður þetta að</p>
+<div class="math">
+\[\begin{split}  \left[
+  \begin{array}{ll|l}
+  0 &amp; 1 &amp; 1\\
+  1 &amp; 1 &amp; 2
+  \end{array}\right]\end{split}\]\[Þannig að :math:`x_2 = 1`, og þá fæst\]</div>
+<p><span class="math">\(x_1 = \frac{2-1x_2}{1} = 1\)</span>. Þetta er ekki hárrétt lausn, en mun
+betri en sú sem við fengum áður.</p>
+</div>
+<div class="section" id="matlab">
+<h1>Matlab<a class="headerlink" href="#matlab" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Þið getið prófað að framkvæma þessa reikninga í Matlab. Það má gera með
+eftirfarandi skipunum.</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt;[ 1/5 1 ; 1 1 ]\[1 ; 2]
+&gt;&gt;[ 1e-20 1 ; 1 1 ]\[ 1 ; 2]
+</pre></div>
+</div>
+<p>Í fyrri skipuninni þá er <span class="math">\({\varepsilon}= \frac 15\)</span>, þá sést
+greinilega nákvæma lausnin að ofan. En í seinni skipuninni þá er
+<span class="math">\({\varepsilon}= 10^{-20}\)</span> og þá lendum við í því að lausnin okkar
+er ekki alveg rétt. Matlab er hins vegar það skynsamt að það beita
+skalaðri hlutvendingu þannig að lausnin okkar verður ekki alveg út úr
+kú.</p>
+<div class="line-block">
+<div class="line">Benedikt Magnússon</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

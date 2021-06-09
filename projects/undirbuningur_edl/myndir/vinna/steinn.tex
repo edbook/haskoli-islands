@@ -1,0 +1,20 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}
+  \filldraw (0,5) circle [radius=2 pt] node [right, text width=2cm, xshift=1 cm] {$U_1=mgy$ \\ $K_1=0$};
+  \filldraw (0,0) circle [radius=2 pt] node [right, text width=2cm, xshift=1 cm, yshift =0.3 cm] {$U_2=0$ \\ $K_1=\frac{1}{2}mv_2^2$};
+  \draw [dashed] (-1.5,-0.2) -- (1.5,-0.2) node[midway, below]{Jörð};
+
+  \draw [decorate,decoration={brace,amplitude=10pt}] (-0.1,0) -- (-0.1,5) node [black,midway,xshift=-1.1cm] {$y=20$m} ;
+
+  \node(c) at (0,5) [left] {\small Steinn};
+  %\node(c) at (0,0) [left] {\small Steinn};
+
+  \draw (0,0.2) -- (0,0.6);
+  \draw (-0.1, 0.1) -- (-0.1, 0.5);
+  \draw (0.1, 0.15) -- (0.1, 0.55);
+\end{tikzpicture}
+\end{document}

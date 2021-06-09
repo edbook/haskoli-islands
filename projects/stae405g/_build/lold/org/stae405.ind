@@ -1,0 +1,135 @@
+\begin{theindex}
+  \providecommand*\lettergroupDefault[1]{}
+  \providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+
+  \lettergroup{A}
+  \item aflei\IeC {\dh }ur, \hyperpage{57}
+  \item afr\IeC {\'u}ningur, \hyperpage{12}
+  \item afskur\IeC {\dh }ur, \hyperpage{12}
+  \item annars stigs jafna, \hyperpage{9}
+  \item a\IeC {\dh }fer\IeC {\dh } minnstu fervika, \hyperpage{52}
+  \item a\IeC {\dh }fer\IeC {\dh } Newtons, \hyperpage{22}
+
+  \indexspace
+
+  \lettergroup{B}
+  \item br\IeC {\'u}un, \hyperpage{25}
+    \subitem br\IeC {\'u}unarmargli\IeC {\dh }a, \hyperpage{27}
+    \subitem br\IeC {\'u}unarverkefni, \hyperpage{27}
+    \subitem ferlar, \hyperpage{52}
+    \subitem margfaldir punktar, \hyperpage{33}
+    \subitem mismunakv\IeC {\'o}tatafla, \hyperpage{31}
+    \subitem Newton-form, \hyperpage{29}
+    \subitem skekkjumat, \hyperpage{43}
+    \subitem spl\IeC {\ae }sibr\IeC {\'u}un, \hyperpage{49}
+  \item br\IeC {\'u}unarmargli\IeC {\dh }a, \hyperpage{25}
+  \item br\IeC {\'u}unarpunktur, \hyperpage{25}
+    \subitem einfaldur, \hyperpage{34}
+    \subitem stig, \hyperpage{34}
+    \subitem tv\IeC {\"o}faldur, \hyperpage{34}
+
+  \indexspace
+
+  \lettergroup{F}
+  \item fastapunktsa\IeC {\dh }fer\IeC {\dh }, \hyperpage{17}
+    \subitem fastapunktssetningin, \hyperpage{18}
+  \item fastapunktur, \hyperpage{17}
+  \item fleytit\IeC {\"o}lur, \hyperpage{12}
+    \subitem mantissa, \hyperpage{12}
+    \subitem markver\IeC {\dh }ir stafir, \hyperpage{12}
+  \item f\IeC {\"o}ll
+    \subitem aflei\IeC {\dh }a, \hyperpage{3}
+    \subitem diffranlegt, \hyperpage{3}
+    \subitem r\IeC {\'u}m diffranlegra falla, \hyperpage{3}
+    \subitem r\IeC {\'u}m samfelldra falla, \hyperpage{3}
+
+  \indexspace
+
+  \lettergroup{H}
+  \item helmingunara\IeC {\dh }fer\IeC {\dh }, \hyperpage{16}
+  \item herping, \hyperpage{18}
+
+  \indexspace
+
+  \lettergroup{J}
+  \item jafna besta fleygboga, \hyperpage{54}
+  \item jafna bestu l\IeC {\'\i }nu, \hyperpage{53}, \hyperpage{54}
+
+  \indexspace
+
+  \lettergroup{M}
+  \item margli\IeC {\dh }ur, \hyperpage{26}
+    \subitem Chebyshev, \hyperpage{38}
+    \subitem Lagrange-form, \hyperpage{28}
+    \subitem Legendre, \hyperpage{41}
+    \subitem Newton-form, \hyperpage{26}
+    \subitem sta\IeC {\dh }alform, \hyperpage{26}
+    \subitem sta\IeC {\dh }la\IeC {\dh }ar, \hyperpage{39}
+    \subitem stig, \hyperpage{26}
+  \item markgildi, \hyperpage{2}
+  \item markver\IeC {\dh }ir stafir, \hyperpage{8}
+  \item mismunakv\IeC {\'o}ti, \hyperpage{30}
+
+  \indexspace
+
+  \lettergroup{N}
+  \item n\IeC {\'u}llst\IeC {\"o}\IeC {\dh }, \hyperpage{15}
+
+  \indexspace
+
+  \lettergroup{O}
+  \item O-rith\IeC {\'a}ttur, \hyperpage{10}, \hyperpage{11}
+
+  \indexspace
+
+  \lettergroup{R}
+  \item reiknirit Horners, \hyperpage{26}
+  \item runa, \hyperpage{2}
+
+  \indexspace
+
+  \lettergroup{S}
+  \item samleitni, \hyperpage{2}
+    \subitem af stigi \(\alpha\), \hyperpage{2}
+    \subitem ferningssamleitni, \hyperpage{2}
+    \subitem l\IeC {\'\i }nuleg, \hyperpage{2}, \hyperpage{6}
+    \subitem ofurl\IeC {\'\i }nuleg, \hyperpage{2}, \hyperpage{6}
+  \item setning Taylors, \hyperpage{4}
+  \item setning Weierstrass, \hyperpage{25}
+  \item skekkja, \hyperpage{5}
+    \subitem algildi, \hyperpage{5}
+    \subitem a\IeC {\dh }fer\IeC {\dh }arskekkja, \hyperpage{5}
+    \subitem eftir\IeC {\'a}mat, \hyperpage{6}
+    \subitem fyrirframmat, \hyperpage{6}
+    \subitem gagnaskekkja, \hyperpage{9}
+    \subitem hlutfallsleg, \hyperpage{5}
+    \subitem m\IeC {\ae }liskekkja, \hyperpage{5}
+    \subitem mannlegar villur, \hyperpage{5}
+    \subitem reikningsskekkja, \hyperpage{5}
+    \subitem styttingarskekkja, \hyperpage{9}
+  \item snertill, \hyperpage{22}
+  \item sni\IeC {\dh }ilsa\IeC {\dh }fer\IeC {\dh }, \hyperpage{20}
+  \item spl\IeC {\ae }sibr\IeC {\'u}un, \hyperpage{49}
+    \subitem fyrsta stigs, \hyperpage{49}
+    \subitem \IeC {\th }ri\IeC {\dh }ja stigs, \hyperpage{49}
+  \item sta\IeC {\dh }all
+    \subitem \GenericError  {(inputenc)                }{Package inputenc Error: Unicode char \u8:ℓ not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type  I <command> <return>  to replace it with another command,\MessageBreak or  <return>  to continue without it.}\(\infty\), \hyperpage{37}
+    \subitem \GenericError  {(inputenc)                }{Package inputenc Error: Unicode char \u8:ℓ not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type  I <command> <return>  to replace it with another command,\MessageBreak or  <return>  to continue without it.}2, \hyperpage{37}
+
+  \indexspace
+
+  \lettergroup{T}
+  \item Taylor-margli\IeC {\dh }a, \hyperpage{3}
+  \item t\IeC {\"o}luleg diffrun, \hyperpage{57}
+    \subitem bakmismunur, \hyperpage{58}
+    \subitem frammismunur, \hyperpage{57}
+    \subitem mi\IeC {\dh }setttur mismunakv\IeC {\'o}ti fyrir a\IeC {\dh }ra aflei\IeC {\dh }u, \hyperpage{59}
+    \subitem mi\IeC {\dh }settur mismunakv\IeC {\'o}ti, \hyperpage{58}
+    \subitem Richardson \IeC {\'u}tgiskun, \hyperpage{62}
+    \subitem skekkjumat, \hyperpage{60}
+  \item t\IeC {\"o}luleg heildun, \hyperpage{57}
+
+\end{theindex}

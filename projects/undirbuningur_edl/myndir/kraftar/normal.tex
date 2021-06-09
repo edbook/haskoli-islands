@@ -1,0 +1,10 @@
+\documentclass[border=7pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \draw[thick] (1,0) -- (1,0.5) -- (2,0.5) -- (2,0) -- (1,0);
+  \draw [thin] (0,0) -- (3,0) node [right] {borð};
+  \draw [->, thick, red] (1.5,0.3) -- (1.5, 1) node [above] {$f_n$};
+  \draw [->, thick, blue] (1.5, 0.2) -- (1.5, -0.5)node [below] {$f_g$};
+\end{tikzpicture}
+\end{document}

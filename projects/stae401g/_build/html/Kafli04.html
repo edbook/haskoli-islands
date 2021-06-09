@@ -1,0 +1,1267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Fourier-ummyndun &mdash; Stærðfræðigreining IV 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining IV 2019" href="index.html"/>
+        <link rel="next" title="5. Mismunaaðferðir" href="Kafli05.html"/>
+        <link rel="prev" title="3. Eigingildisverkefni" href="Kafli03.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining IV
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="umnamskeidid.html">Gagnlegar upplýsingar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsefni">Námsefnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#fyrirlestrar">Fyrirlestrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#daematimar-og-vinnustofur">Dæmatímar og vinnustofur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#skiladaemi">Skiladæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#namsmat">Námsmat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#tolvunotkun">Tölvunotkun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#a-taka-namskeii-i-anna-sinn">Að taka námskeiðið í annað sinn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umnamskeidid.html#vitalstimar-kennara-og-fyrirspurnir">Viðtalstímar kennara og fyrirspurnir</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Kafli01.html">1. Hlutafleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-fjolvisir">1.1.1. Ritháttur - Fjölvísir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#rithattur-laplace-virki">1.1.2. Ritháttur - Laplace-virki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining-stig-hlutafleiu-og-hlutafleiujofnu">1.1.3. Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#linulegar-hlutafleiujofnur">1.1.4. Línulegar hlutafleiðujöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#daemi-um-hlutafleiujofnur-i-elisfraei">1.2. Dæmi um hlutafleiðujöfnur í eðlisfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#varmaleinijafnan">1.2.1. Varmaleiðnijafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#bylgjujafnan">1.2.2. Bylgjujafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi-sveifla-a-einvium-streng">1.2.3. Dæmi - Sveifla á einvíðum streng</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#hliarskilyri-vel-framsett-verkefni">1.3. Hliðarskilyrði. Vel framsett verkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#upphafsskilyri">1.3.1. Upphafsskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#jaarskilyri">1.3.2. Jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#vel-framsett-verkefni">1.3.3. Vel framsett verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli01.html#fyrsta-stigs-jofnur">1.4. Fyrsta stigs jöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#kennilinuaferin">1.4.1. Kennilínuaðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#setning">1.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id1">1.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#skilgreining">1.4.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#id2">1.4.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#reikniafer">1.4.6. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#urlausn-me-laplace-ummyndun">1.4.7. Úrlausn með Laplace-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli01.html#daemi">1.4.8. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli02.html">2. Fourier-raðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#inngangur">2.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#skilgreining">2.1.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#id1">2.2. Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id2">2.2.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id3">2.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-reiknireglur">2.2.3. Setning - Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id4">2.2.4. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#samleitni-fourier-raa">2.3. Samleitni Fourier-raða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#reiknireglur-um-innfeldi">2.3.1. Reiknireglur um innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#cauchy-schwarz-ojafna">2.3.2. Cauchy-Schwarz ójafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#regla-pyagorasar">2.3.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#bessel-ojafnan">2.3.4. Bessel-ójafnan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id5">2.3.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning">2.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-andhverfuformula-fouriers">2.3.7. Setning - Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#setning-parseval-jafnan">2.3.8. Setning - Parseval-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli02.html#urlausn-a-hlutafleiujofnum">2.4. Úrlausn á hlutafleiðujöfnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#jafnstae-framlenging-og-kosinus-ro">2.4.1. Jafnstæð framlenging og kósínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#oddstae-framlenging-og-sinus-ro">2.4.2. Oddstæð framlenging og sínus-röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#id6">2.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi">2.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-sveiflandi-strengur">2.4.5. Dæmi - Sveiflandi strengur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli02.html#daemi-varmaleini">2.4.6. Dæmi - Varmaleiðni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli03.html">3. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#id1">3.1. Eigingildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi">3.1.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-baum-endapunktum">3.1.2. Fallsjaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#afleiuskilyri-i-baum-endapunktum">3.1.3. Afleiðuskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#fallsjaarskilyri-i-orum-endapunkti-og-afleiuskilyri-i-hinum">3.1.4. Fallsjaðarskilyrði í öðrum endapunkti og afleiðuskilyrði í hinum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#askilnaur-breytistaera">3.2. Aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#sveiflandi-strengur-aftur">3.2.1. Sveiflandi strengur - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#anna-daemi">3.2.2. Annað dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#virkjar-af-sturm-liouville-ger">3.3. Virkjar af Sturm-Liouville-gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#skilgreining">3.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id2">3.3.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id3">3.3.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id4">3.3.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#formula-greens">3.3.5. Formúla Greens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning-og-skilgreining">3.3.6. Setning og skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eigingildisverkefni-af-sturmliouvilleger">3.4. Eigingildisverkefni af Sturm–Liouville–gerð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id5">3.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#setning">3.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id6">3.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id7">3.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id8">3.4.5. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#green-foll-fyrir-jaargildisverkefni">3.5. Green-föll fyrir jaðargildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id9">3.5.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#id10">3.5.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#eiginfallaliun-og-greenfoll">3.6. Eiginfallaliðun og Green–föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#reikniafer">3.6.1. Reikniaðferð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#urlausn-hlutafleiujafa-me-eiginfallaroum">3.7. Úrlausn hlutafleiðujafa með eiginfallaröðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi">3.7.1. Dirichlet-verkefnið á rétthyrningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu">3.7.2. Dirichlet-verkefnið á skífu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#varmaleinijafnan-me-timahaum-jaarskilyrum">3.7.3. Varmaleiðnijafnan með tímaháðum jaðarskilyrðum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#afram-um-eigingildisverkefni-askilnaur-breytistaera">3.8. Áfram um eigingildisverkefni - aðskilnaður breytistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-retthyrningi-aftur">3.8.1. Dirichlet-verkefnið á rétthyrningi - aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#dirichlet-verkefni-a-skifu-aftur">3.8.2. Dirichlet-verkefnið á skífu - aftur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#tvofaldar-fourier-rair">3.9. Tvöfaldar Fourier-raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-retthyrnd-tromma">3.9.1. Dæmi - Rétthyrnd tromma</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli03.html#almennt-um-eiginfallarair">3.10. Almennt um eiginfallaraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli03.html#daemi-alhaeft-varmaleiniverkefni">3.10.1. Dæmi - Alhæft varmaleiðniverkefni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Fourier-ummyndun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fourier-ummyndun-reiknireglur-plancerel-jafnan">4.1. Fourier-ummyndun. Reiknireglur. Plancerel-jafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-a-l-1-mathbb-r">4.1.1. Skilgreining á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-a-fourier-ummyndun">4.1.2. Skilgreining á Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synidaemi">4.1.3. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur">4.1.4. Reiknireglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rulesft">4.1.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eiginleikar-fourier-myndar">4.1.6. Eiginleikar Fourier-myndar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plancerel-jafnan">4.1.7. Plancerel-jafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#andhverfuformula-fouriers-afleiujofnur">4.2. Andhverfuformúla Fouriers. Afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#andhverfuformula-fouriers">4.2.1. Andhverfuformúla Fouriers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#foldun-og-fourier-ummyndun">4.2.2. Földun og Fourier-ummyndun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#afleiujofnur-og-fourier-ummyndun">4.2.3. Afleiðujöfnur og Fourier-ummyndun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#urlausn-a-hlutafleiujofnum-me-fourier-ummyndun">4.3. Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einvia-bylgjujafnan-og-d-alembert-formula">4.3.1. Einvíða bylgjujafnan og d’Alembert-formúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bylgjujafnan-fourier-ummyndun-og-foldun">4.3.2. Bylgjujafnan, Fourier-ummyndun og földun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#varmaleinijafnan-fourier-ummyndun-og-foldun">4.3.3. Varmaleiðnijafnan, Fourier-ummyndun og földun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fourier-ummyndun-og-leifareikningur">4.4. Fourier-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fourier-myndir-reiknaar-me-leifareikningi">4.4.1. Fourier-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#andhverfar-fourier-myndir-reiknaar-me-leifareikningi">4.4.2. Andhverfar Fourier-myndir reiknaðar með leifareikningi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#laplace-ummyndun-og-leifareikningur">4.5. Laplace-ummyndun og leifareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#andhverfar-laplace-myndir">4.5.1. Andhverfar Laplace-myndir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#andhverfar-laplace-myndir-reiknaar-me-leifareikningi">4.5.2. Andhverfar Laplace-myndir reiknaðar með leifareikningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#andhverfar-laplace-myndir-og-afleiujofnur">4.5.3. Andhverfar Laplace-myndir og afleiðujöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli05.html">5. Mismunaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-venjulegar-afleiujofnur">5.1. Mismunaaðferð fyrir venjulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi">5.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#heildun-yfir-hlutbil">5.2. Heildun yfir hlutbil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#id1">5.2.1. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#linuleg-bruun-og-ufugrunnfoll">5.2.2. Línuleg brúun og þúfugrunnföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#mismunaafer-fyrir-hlutaafleiujofnur">5.3. Mismunaaðferð fyrir hlutaafleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#nalgunarjafna">5.3.1. Nálgunarjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-dirichlet-verkefni-a-ferningi">5.3.2. Sýnidæmi: Dirichlet-verkefni á ferningi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli05.html#synidaemi-jaargildisverkefni-a-ferningi-me-blanda-jaarskilyri">5.3.3. Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli05.html#almenn-mismunaafer-a-retthyrningi">5.4. Almenn mismunaaðferð á rétthyrningi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Kafli06.html">6. Bútaaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#hlutheildun-innfeldi-og-tvilinulegt-form">6.1. Hlutheildun, innfeldi og tvílínulegt form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefni-i-mathbb-r">6.1.1. Jaðargildisverkefni í <span class="math notranslate nohighlight">\(\mathbb R\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#jaargildisverkefnin-i-mathbb-r-2">6.1.2. Jaðargildisverkefnin í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-fyrir-dirichlet-verkefni">6.2. Aðferð Galerkins fyrir Dirichlet-verkefnið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-einni-vidd-fyrir-dirichlet-verkefni">6.2.1. Galerkin-aðferðir í einni vídd fyrir Dirichlet-verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#galerkin-aferir-i-tveimur-viddum-fyrir-dirichlet-verkefni">6.2.2. Galerkin-aðferðir í tveimur víddum fyrir Dirichlet-verkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-einni-vidd">6.3. Bútaaðferð í einni vídd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#blondu-jaarskilyri-i-baum-endapunktum">6.3.1. Blönduð jaðarskilyrði í báðum endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#fallsjaarskilyri">6.3.2. Fallsjaðarskilyrði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#afer-galerkins-me-almennum-jaarskilyrum">6.4. Aðferð Galerkins með almennum jaðarskilyrðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-einni-vidd">6.4.1. Í einni vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#i-tveimur-viddum">6.4.2. Í tveimur víddum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#synidaemi">6.4.3. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Kafli06.html#butaafer-i-tveimur-viddum">6.5. Bútaaðferð í tveimur víddum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#net-me-rihyrningum">6.5.1. Net með þríhyrningum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#ufugrunnfoll">6.5.2. Þúfugrunnföll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#go-ahead">6.5.3. Go ahead!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Kafli06.html#id1">6.5.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining IV</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>4. Fourier-ummyndun</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Kafli04.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fourier-ummyndun">
+<h1>4. Fourier-ummyndun<a class="headerlink" href="#fourier-ummyndun" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<div class="section" id="fourier-ummyndun-reiknireglur-plancerel-jafnan">
+<h2>4.1. Fourier-ummyndun. Reiknireglur. Plancerel-jafnan<a class="headerlink" href="#fourier-ummyndun-reiknireglur-plancerel-jafnan" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining-a-l-1-mathbb-r">
+<h3>4.1.1. Skilgreining á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span><a class="headerlink" href="#skilgreining-a-l-1-mathbb-r" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við byrjum á að skilgreina rúm heildanlegra falla <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span>. Við táknum <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span> mengi allra falla <span class="math notranslate nohighlight">\(f\)</span> þannig að <span class="math notranslate nohighlight">\(|f|\)</span> er heildanlegt á <span class="math notranslate nohighlight">\(\mathbb R\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^\infty |f(x)| dx &lt; \infty\,.\]</div>
+<p><span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span> er vigurrúm, af því að</p>
+<ol class="arabic simple">
+<li>Ef <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> og <span class="math notranslate nohighlight">\(g \in L^1(\mathbb R)\)</span> þá er fallið <span class="math notranslate nohighlight">\(f+g \in L^1(\mathbb R)\)</span></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^\infty |f(x)+g(x)| dx \le  \int_{-\infty}^\infty |f(x)| dx &lt; \infty\, +\int_{-\infty}^\infty |g(x)| dx &lt; \infty\,.\]</div>
+<ol class="arabic simple" start="2">
+<li>Ef <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> þá er <span class="math notranslate nohighlight">\(\alpha f \in L^1(\mathbb R)\)</span>, þar sem <span class="math notranslate nohighlight">\(\alpha \in\mathbb R\)</span></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^\infty |\alpha f(x)| dx = |\alpha|\int_{-\infty}^\infty  |f(x)| dx &lt;\infty\,.\]</div>
+</div>
+<div class="section" id="skilgreining-a-fourier-ummyndun">
+<h3>4.1.2. Skilgreining á Fourier-ummyndun<a class="headerlink" href="#skilgreining-a-fourier-ummyndun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir sérhvert fall <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> skilgreinum við fallið</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{F} f(k) = \int_{-\infty}^\infty e^{-i k x} f(x)dx\,, \qquad k \in\mathbb{R}\,.\]</div>
+<p>Við köllum fallið <span class="math notranslate nohighlight">\(\mathcal{F} f\)</span> Fourier-mynd fallsins <span class="math notranslate nohighlight">\(f\)</span> og við táknum hana með <span class="math notranslate nohighlight">\(\mathcal{F}\{f\}\)</span> eða <span class="math notranslate nohighlight">\(\widehat{f}\)</span>.</p>
+<p>Við köllum vörpun <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> Fourier-ummyndun.
+Hún er skilgreind á <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span> og varpar falli <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> á Fourier-mynd sína <span class="math notranslate nohighlight">\(\mathcal{F} f\)</span>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Athugið</p>
+<p class="last">Skilgreiningin á Fourier-ummyndun er ekki stöðluð.</p>
+</div>
+</div>
+<div class="section" id="synidaemi">
+<h3>4.1.3. Sýnidæmi<a class="headerlink" href="#synidaemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skilgreinum fall <span class="math notranslate nohighlight">\(f_a\)</span> á eftifarandi hátt</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_a (x) = \begin{cases} 1, \qquad &amp;|x|&lt;a\,, \\ 0, \qquad &amp; |x|\ge a \,  \end{cases} \,, \qquad f_a : \mathbb{R}\to \mathbb{R}\,,\quad a&gt;0\,.\end{split}\]</div>
+<p>Við sjáum að <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span>. Við reiknum nú Fourier-mynd fallsins <span class="math notranslate nohighlight">\(f\)</span></p>
+<div class="math notranslate nohighlight">
+\[\widehat{f}_a(k)=\int_a^a e^{-i k x} dx= {e^{-i a k}-e^{i a k}\over -i k}=2 {\sin a k\over k}.\]</div>
+</div>
+<div class="section" id="reiknireglur">
+<span id="example1"></span><h3>4.1.4. Reiknireglur<a class="headerlink" href="#reiknireglur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við byrjum á að skoða reiknireglur fyrir Fourier-ummyndanir.</p>
+<ol class="arabic simple">
+<li>Látum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> vera tvö föll í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span>. Látum <span class="math notranslate nohighlight">\(\alpha\)</span> og <span class="math notranslate nohighlight">\(\beta\)</span> vera tvær tölur í <span class="math notranslate nohighlight">\(\mathbb C\)</span>. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{F}\left\{\alpha f+ \beta g\right\}(k) &amp;=&amp; \int_{-\infty}^\infty e^{-i k x}\left(\alpha f(x)+\beta g(x)\right)dx
+= \alpha \int_{-\infty}^\infty e^{-i k x} f(x) dx+\beta \int_{-\infty}^\infty e^{-i k x} g(x) dx
+\\ &amp;=&amp; \alpha\, \mathcal{F}\{f\}(k)+\beta\, \mathcal F\{g\}(k)\,,\end{split}\]</div>
+<p>Þ.e.a.s. að Fourier-ummyndun er línuleg vörpun.</p>
+<ol class="arabic simple" start="2">
+<li>Látum <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> og <span class="math notranslate nohighlight">\(\alpha\in\mathbb R\smallsetminus\{0\}\)</span>. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{f(\alpha x)\right\}(k) = {1\over |\alpha|} \mathcal F\{f(x)\}\left({k\over \alpha }\right)\,, \qquad k\in\mathbb R\,\]</div>
+<p>sem segir okkur hvernig Fourier-ummyndun breytist þegar <span class="math notranslate nohighlight">\(x \to\alpha x\)</span>.</p>
+<ol class="arabic simple" start="3">
+<li>Látum  <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> og <span class="math notranslate nohighlight">\(\alpha\in\mathbb R\)</span>. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{f(x-\alpha)\right\}(k) = e^{-i \alpha k} \mathcal F\{f(x)\}\left({k}\right)\,, \qquad k\in\mathbb R\,\]</div>
+<p>sem segir okkur hvernig Fourier-ummyndun breytist þegar  <span class="math notranslate nohighlight">\(x \to x-\alpha\)</span>.</p>
+<ol class="arabic simple" start="4">
+<li>Látum  <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> og <span class="math notranslate nohighlight">\(\alpha\in\mathbb R\)</span>. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{e^{i \alpha x}f(x)\right\}(k) = \mathcal F\{f(x)\}\left(k-\alpha\right)\,, \qquad k\in\mathbb R\,\]</div>
+<p>sem segir okkur hvernig Fourier-ummyndun breytist þegar  <span class="math notranslate nohighlight">\(k \to k-\alpha\)</span>.</p>
+<ol class="arabic simple" start="5">
+<li>Látum <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span>. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\overline{\left\{f(x)\right\}}(k) = \overline{\mathcal F\{f(x)\}\left(-k\right)}\,, \qquad k\in\mathbb R\,.\]</div>
+<p>Athugum að ef <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> er raungilt, þ.e. <span class="math notranslate nohighlight">\(f: \mathbb R\to\mathbb R\)</span>, þá gildir</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{f(x)\right\}(k) = \overline{\mathcal F\{f(x)\}\left(-k\right)}\,, \qquad k\in\mathbb R\,.\]</div>
+<ol class="arabic simple" start="6">
+<li>Látum <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> vera jafnstætt. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{f(x)\right\}(k) = 2 \int_0^\infty \cos(k\, x) f(x) dx \,, \qquad k\in\mathbb R\,.\]</div>
+<ol class="arabic simple" start="7">
+<li>Látum <span class="math notranslate nohighlight">\(f \in L^1(\mathbb R)\)</span> vera oddstætt. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{f(x)\right\}(k) = - 2 i \int_0^\infty \sin(k\, x) f(x) dx \,, \qquad k\in\mathbb R\,.\]</div>
+<ol class="arabic simple" start="8">
+<li>Látum <span class="math notranslate nohighlight">\(f \in \mathcal{C}^1(\mathbb R)\)</span>. Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span>  og <span class="math notranslate nohighlight">\(f'\)</span> séu í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span>. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{f'(x)\right\}(k)= i k \mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,.\]</div>
+<p>Regla 8 tengir Fourier-mynd fallsins <span class="math notranslate nohighlight">\(f\)</span> og Fourier-mynd afleiðu þess <span class="math notranslate nohighlight">\(f'\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(f\in\mathcal{C}^m(\mathbb R)\)</span>  og  <span class="math notranslate nohighlight">\(f, f', \dots, f^{(m)} \in L^1(\mathbb R)\)</span>, þá gildir</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{f^{(j)}(x)\right\}(k)= (i k)^j \mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,, \quad j=0, 1, \dots\, m\,.\]</div>
+<ol class="arabic simple" start="9">
+<li>Gerum ráð fyrir að föll <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(x f\)</span> séu í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span>. Þá gildir</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{x f(x)\right\}(k)= i \frac{d}{dk}\mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,.\]</div>
+<p>Regla 9 segir okkur hver afleiða Fourier-myndar fallsins <span class="math notranslate nohighlight">\(f\)</span> er.</p>
+<p>Gerum ráð fyrir að föll <span class="math notranslate nohighlight">\(f, x f, \dots, x^j f\)</span> séu í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span>. Þá gildir</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}\left\{x^j f(x)\right\}(k)= i^j \frac{d^j}{dk^j}\mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,.\]</div>
+</div>
+<div class="section" id="rulesft">
+<span id="id1"></span><h3>4.1.5. Sýnidæmi<a class="headerlink" href="#rulesft" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við skoðum núna dæmi um hvernig nota má reiknireglurnar til þess að reikna Fourier-mynd falla.</p>
+<p>Athugum fall <span class="math notranslate nohighlight">\(f(x)=e^{-a x^2/2}\)</span> þar sem  <span class="math notranslate nohighlight">\(a&gt;0\)</span>. Fallið <span class="math notranslate nohighlight">\(f\)</span> uppfyllir afleiðujöfnu</p>
+<div class="math notranslate nohighlight">
+\[f'(x)+a x f(x)=0\,.\]</div>
+<p>Ef við reiknum Fourier-myndina af þessari jöfnu og notum reiknireglur 9, þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[0= i k \widehat{f}(k)+i a {d\over dk}\widehat{f}(k)\,.\]</div>
+<p>Þetta er bara fyrsta stigs afleiðujafna fyrir Fourier-mynd fallsins <span class="math notranslate nohighlight">\(f\)</span>, og lausnin er</p>
+<div class="math notranslate nohighlight">
+\[\widehat{f}(k)= C e^{-{k^2\over 2 a}}\,, \qquad C\in \mathbb{R}\,.\]</div>
+<p>Til þess að finna fastann <span class="math notranslate nohighlight">\(C\)</span>, getum notað</p>
+<div class="math notranslate nohighlight">
+\[C=\widehat{f}(0)=\int_{-\infty}^{\infty} f(x) dx= \int_{-\infty}^{\infty} e^{-a x^2/2} dx= \sqrt{{2\pi}\over a}\,.\]</div>
+<p>Að lokum, fáum við</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{F}(e^{-a x^2/2})(k) = \sqrt{{2\pi}\over a}e^{-{k^2\over 2 a}}\,.\]</div>
+</div>
+<div class="section" id="eiginleikar-fourier-myndar">
+<h3>4.1.6. Eiginleikar Fourier-myndar<a class="headerlink" href="#eiginleikar-fourier-myndar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú viljum við skoða eiginleika Fourier-myndar. Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(f\)</span> sé t.d. samfellt eða diffranlegt og svo framvegis, hvaða eiginleika hefur Fourier-mynd fallsins <span class="math notranslate nohighlight">\(f\)</span>?</p>
+<p><strong>Setning (Riemann-Lebesgue setning)</strong></p>
+<p>Ef <span class="math notranslate nohighlight">\(f\in L^1({{\mathbb R}})\)</span>, þá er <span class="math notranslate nohighlight">\({{\cal F}}f\in C({{\mathbb R}})\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\lim_{\xi\to \pm \infty}{{\cal F}}f(\xi)=0.\]</div>
+<p>Ef við táknum mengi falla sem eru samfelld og stefna á núll þegar breytan stefnir á óendanlegt með <span class="math notranslate nohighlight">\(C_0({{\mathbb R}})=\{F\in C({{\mathbb R}})\,;\, \lim_{|\xi|\to +\infty}F(\xi)=0\}\)</span>, þá þýðir setningin að Fourier-ummyndun <span class="math notranslate nohighlight">\(\mathcal F\)</span> varpar rúminu <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span> í <span class="math notranslate nohighlight">\(C_0(\mathbb R)\)</span>.</p>
+<p><strong>Setning</strong></p>
+<p>Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> og að <span class="math notranslate nohighlight">\(f\)</span> sé takmarkað. Gerum ráð fyrir að Fourier-mynd <span class="math notranslate nohighlight">\({{\cal F}}f\)</span> fallsins <span class="math notranslate nohighlight">\(f\)</span> sé jákvæð fyrir öll <span class="math notranslate nohighlight">\(k\)</span>, þ.e. <span class="math notranslate nohighlight">\({{\cal F}}f(k)\ge 0\)</span>. Þá er <span class="math notranslate nohighlight">\({{\cal F}}\in L^1(\mathbb R)\)</span>.</p>
+<p>Athugum að ef fall <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> er takmarkað (þ.e. <span class="math notranslate nohighlight">\(|f|\le M\)</span>), þá er <span class="math notranslate nohighlight">\(f\in L^2(\mathbb R)\)</span> (af því að <span class="math notranslate nohighlight">\(|f|^2\le M|f|\)</span>).</p>
+</div>
+<div class="section" id="plancerel-jafnan">
+<h3>4.1.7. Plancerel-jafnan<a class="headerlink" href="#plancerel-jafnan" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Til þess að einfalda rithátt, táknum við hér Fourier-mynd falls <span class="math notranslate nohighlight">\(f\)</span> með <span class="math notranslate nohighlight">\(\widehat f\)</span>.</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> og að <span class="math notranslate nohighlight">\(f\)</span> sé takmarkað.
+Þá gildir</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^\infty |f(x)|^2 dx= {1\over 2\pi} \int_{-\infty}^\infty |\widehat{f}(k)|^2 dk\,.\]</div>
+<p>Þetta er Plancherel-jafnan. Hún er alhæfing af Parseval-jöfnu fyrir Fourier-ummyndunina.</p>
+</div>
+</div>
+<div class="section" id="andhverfuformula-fouriers-afleiujofnur">
+<h2>4.2. Andhverfuformúla Fouriers. Afleiðujöfnur<a class="headerlink" href="#andhverfuformula-fouriers-afleiujofnur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="andhverfuformula-fouriers">
+<h3>4.2.1. Andhverfuformúla Fouriers<a class="headerlink" href="#andhverfuformula-fouriers" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við viljum nú finna fall <span class="math notranslate nohighlight">\(f\)</span> ef við gerum ráð fyrir að Fourier-myndin <span class="math notranslate nohighlight">\(\mathcal{F}f\)</span> sé gefin. Við munum skoða og reikna út Fourier-myndina af Fourier-mynd falls <span class="math notranslate nohighlight">\(f\)</span>, þ.e.a.s. <span class="math notranslate nohighlight">\(\mathcal{F}(\mathcal{F}f)\)</span>. Hugmyndin að baki er að Fourier-myndin af Fourier-mynd fallsins <span class="math notranslate nohighlight">\(f\)</span> gefur fallið <span class="math notranslate nohighlight">\(f\)</span>. Þetta er þó ekki svo einfalt. Fyrsta vandamál er að jafnvel þótt <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> þýðir það ekki nauðsynlega að <span class="math notranslate nohighlight">\(\mathcal{F}f\)</span> sé í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span> (svo Fourier-mynd hennar er ekki endilega vel skilgreind).</p>
+<p>Ef við gerum ráð fyrir að bæði föllin <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(\mathcal{F}f\)</span> séu í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span> og séu samfelld, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}({{\cal F}}{{\cal F}}f)(x) &amp;=
+\int_{-\infty}^{+\infty}e^{-ix\xi} \widehat{f}(\xi) d\xi =
+\int_{-\infty}^{+\infty}e^{-ix\xi}
+\bigg(\int_{-\infty}^{+\infty}e^{-iy\xi}f(y) \, dy\bigg)\, d\xi\\
+&amp;=\int_{-\infty}^{+\infty}
+\bigg(\int_{-\infty}^{+\infty}e^{-i(x+y)\xi}f(y) \, dy\bigg)\, d\xi\,.\end{split}\]</div>
+<p>Vandamálið nú er að við getum ekki skipt á röð heildanna, við getum ekki heildað fyrst yfir <span class="math notranslate nohighlight">\(\xi\)</span> og svo yfir <span class="math notranslate nohighlight">\(y\)</span> af því að heildið <span class="math notranslate nohighlight">\(\int_{-\infty}^{+\infty} e^{-i(x+y)\xi} d\xi\)</span> er ekki samleitið. Til að leysa málið, stingum við falli <span class="math notranslate nohighlight">\(e^{-\varepsilon|\xi|}\)</span> inn í heildið og tökum síðan markgildi <span class="math notranslate nohighlight">\(\varepsilon\to 0+\)</span>. Nú getum við reiknað út heildið að ofan og við fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}({{\cal F}}{{\cal F}}f)(x)&amp;=\lim_{\varepsilon\to 0}
+\int_{-\infty}^{+\infty}e^{-\varepsilon|\xi|}
+\bigg(\int_{-\infty}^{+\infty}e^{-it\xi}f(t-x) \, dt\bigg)\, d\xi\\
+&amp;=\lim_{\varepsilon\to 0} \int_{-\infty}^{+\infty}f(t-x)
+{{\cal F}}\{e^{-\varepsilon|\xi|}\}(t) \, dt\\
+&amp;=\lim_{\varepsilon\to 0} \int_{-\infty}^{+\infty}f(t-x)
+{{\cal F}}\{e^{-|\xi|}\}(t/\varepsilon) \varepsilon^{-1}\, dt\\
+&amp;=\lim_{\varepsilon\to 0} \int_{-\infty}^{+\infty}f(\varepsilon t-x)
+{{\cal F}}\{e^{-|\xi|}\}(t) \, dt\\
+&amp;=f(-x)\int_{-\infty}^{+\infty}\dfrac 2{1+t^2} \, dt= 2\pi f(-x).\end{split}\]</div>
+<p>Að lokum getum við tekið þetta saman í eftirfarandi setningu</p>
+<p><strong>Setning (Andhverfuformúla Fouriers)</strong></p>
+<p>Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\cap \mathcal{C}(\mathbb R)\)</span> og <span class="math notranslate nohighlight">\(\widehat{f}\in L^1(\mathbb R)\cap \mathcal{C}(\mathbb R)\)</span>. Þá gildir</p>
+<div class="math notranslate nohighlight">
+\[f(x) =\dfrac 1{2\pi}\int_{-\infty}^{+\infty}e^{ix\xi}\widehat f(\xi) \,
+d\xi = \dfrac 1{2\pi}({{\cal F}}{{\cal F}}f)(-x), \qquad x\in {{\mathbb  R}}.\]</div>
+<p>Setningin segir okkur að fallið <span class="math notranslate nohighlight">\(f\)</span> sé samfelld samantekt (superposition á ensku) af veldisvísisföllum <span class="math notranslate nohighlight">\(e^{ix\xi}\)</span>. Hún alhæfir framsetningu á lotubundnum föllum með Fourier-röðum til falla sem eru ekki lotubundin.</p>
+<p><strong>Fylgisetning</strong></p>
+<p>Ef <span class="math notranslate nohighlight">\(\widehat{f}=\widehat{g}\)</span>, þá er <span class="math notranslate nohighlight">\(f=g\)</span>.</p>
+<p><strong>Sýnidæmi</strong></p>
+<p>Andhverfuformúlan getur verið mjög gagnleg til þess að reikna Fourier-mynd. Við sjáum þetta með dæmi.
+Ef við viljum reikna Fourier-mynd falls <span class="math notranslate nohighlight">\(f(x)={\sin a x\over x}\)</span>, getum við notað andhverfuformúlu Fouriers og sýnidæmi <a class="reference internal" href="#example1"><span class="std std-ref">4.1.3</span></a>, það er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{F}\left({\sin a x\over x}\right) = \begin{cases} \pi\,, \qquad &amp;|\xi|&lt;a\\ 0\,, \qquad &amp; \text{annars} \end{cases}\,.\end{split}\]</div>
+<p>Ef við viljum reikna Fourier-mynd fallsins <span class="math notranslate nohighlight">\(f\)</span> beint út frá skilgreiningu þess, er það erfitt!</p>
+</div>
+<div class="section" id="foldun-og-fourier-ummyndun">
+<h3>4.2.2. Földun og Fourier-ummyndun<a class="headerlink" href="#foldun-og-fourier-ummyndun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Skilgreining</strong></p>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> vera tvö föll á <span class="math notranslate nohighlight">\(\mathbb  R\)</span>. Við skilgreinumn <strong>földun</strong> þeirra með</p>
+<div class="math notranslate nohighlight">
+\[f\ast g(x)= \int_{-\infty}^{+\infty}f(x-t)g(t) \, dt,\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(x\in {{\mathbb  R}}\)</span> þannig að heildið sé til.</p>
+<p><strong>Eiginleikar</strong></p>
+<ol class="arabic simple">
+<li>Gerum ráð fyrir að heildið að ofan sé til, þá er</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[f\ast g(x)= \int_{-\infty}^{+\infty}f(x-t)g(t) \, dt = \int_{-\infty}^{\infty} f(s)g(x-s)ds = g \ast f(x)\,,\]</div>
+<p>þar sem við höfum notað <span class="math notranslate nohighlight">\(s=x-t\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li>Ef <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> og <span class="math notranslate nohighlight">\(g\)</span> er takmarkað, þá er földun þeirra skilgreind á <span class="math notranslate nohighlight">\({{\mathbb  R}}\)</span>.</li>
+<li>Ef <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> og líka <span class="math notranslate nohighlight">\(g\in L^1(\mathbb R)\)</span>, þá er földunin vel skilgreind, og ennfremur gildir að <span class="math notranslate nohighlight">\(f\ast g\)</span> er í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span>.</li>
+<li>Földunin uppfyllir sömu reglur og venjulegt margfeldi uppfyllir:</li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; f\ast (\alpha g +\beta h)= \alpha (f\ast g)+\beta (f\ast h)\,, \quad \forall \alpha, \beta \in\mathbb{R}\,.
+\\
+&amp; f\ast g = g\ast f\,,
+\\
+&amp; f\ast (g\ast h)= (f\ast g)\ast h\,,\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(f, g, h\)</span> eru föll á <span class="math notranslate nohighlight">\(\mathbb  R\)</span>, þ.a. földun þeirra sé vel skilgreind.</p>
+<ol class="arabic simple" start="5">
+<li>Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(f\)</span> sé diffranlegt og faldanir <span class="math notranslate nohighlight">\(f\ast g\)</span> og <span class="math notranslate nohighlight">\(f'\ast g\)</span> séu vel skilgreindar. Þá er <span class="math notranslate nohighlight">\(f\ast g\)</span> diffranlegt og <span class="math notranslate nohighlight">\((f\ast g)'=f'\ast g\)</span>. Ef <span class="math notranslate nohighlight">\(g\)</span> er líka diffranlegt, þá gildir <span class="math notranslate nohighlight">\((f\ast g)'= f\ast g'\)</span>.</li>
+</ol>
+<p>Við getum alhæft niðurstöðuna að ofan ef til dæmis fallið <span class="math notranslate nohighlight">\(f\)</span> er <span class="math notranslate nohighlight">\(m\)</span>-sinnum diffranlegt og <span class="math notranslate nohighlight">\(f, f', \dots f^{(m)}\)</span> eru takmörkuð, þá er <span class="math notranslate nohighlight">\(f\ast g \in\mathcal{C}^m(\mathbb{R})\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[(f\ast g)^{(k)}(x)= (f^{(k)}\ast g)(x)\,, \qquad x\in\mathbb{R}\, \quad k=0, \dots, m.\]</div>
+<p><strong>Setning</strong></p>
+<p>Frá eiginleika 3, fáum við eftirfarandi setningu</p>
+<blockquote>
+<div>Ef <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> og líka <span class="math notranslate nohighlight">\(g\in L^1(\mathbb R)\)</span>, þá er földunin <span class="math notranslate nohighlight">\(f\ast g\)</span> í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span> og</div></blockquote>
+<div class="math notranslate nohighlight">
+\[{{\cal F}}\{f\ast g\}(\xi)={{\cal F}}f(\xi){{\cal F}}g(\xi), \qquad \xi\in {{\mathbb  R}}.\]</div>
+</div>
+<div class="section" id="afleiujofnur-og-fourier-ummyndun">
+<h3>4.2.3. Afleiðujöfnur og Fourier-ummyndun<a class="headerlink" href="#afleiujofnur-og-fourier-ummyndun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við byrjum á að skoða afleiðujöfnu með fasta stuðla</p>
+<div class="math notranslate nohighlight">
+\[P(D)u=(a_mD^ m+\cdots+a_1D+a_0)u=f(x).\]</div>
+<p>Til þess að finna lausn á jöfnunni getum við notað Fourier-ummyndun, ef t.d. <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span>. Munið eftir reiknireglu 8, ef við gerum ráð fyrir að <span class="math notranslate nohighlight">\(u\)</span> og afleiður þess séu í <span class="math notranslate nohighlight">\(L^1(\mathbb R)\)</span>. Þá fáum við eftirfarandi niðurstöðu</p>
+<p><strong>Setning</strong></p>
+<blockquote>
+<div>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\in L^1(\mathbb R)\)</span> og <span class="math notranslate nohighlight">\(\widehat{f}\in L^1(\mathbb R)\)</span>.
+Gerum ráð fyrir að <span class="math notranslate nohighlight">\(P(i\xi)\neq 0\)</span>. Þá hefur afleiðujafnan (ref) lausn <span class="math notranslate nohighlight">\(u\in L^1(\mathbb R)\cap \mathcal{C}^m (\mathbb R)\)</span> sem gefin er með formúlunni</div></blockquote>
+<div class="math notranslate nohighlight">
+\[u(x)=\dfrac 1{2\pi}\int_{-\infty}^ {+\infty}
+e^{ix\xi} \dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi, \qquad x\in {{\mathbb  R}}.\]</div>
+<p>Við sjáum að fallið <span class="math notranslate nohighlight">\(u\)</span> sem skilgreint er að ofan uppfyllir jöfuna</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P(D)u(x)&amp;=\dfrac 1{2\pi}\int_{-\infty}^{+\infty}P(D_x)e^{ix\xi}
+\dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi=
+\dfrac 1{2\pi}\int_{-\infty}^{+\infty}P(i\xi)e^{ix\xi}
+\dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi\\
+&amp;= \dfrac 1{2\pi}\int_{-\infty}^{+\infty}e^{ix\xi}
+\widehat f(\xi)\, d\xi=f(x).\end{split}\]</div>
+<p><strong>Afleiðujöfnur, Fourier-ummyndun og földun</strong></p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(P(i\xi)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(\xi\in\mathbb R\)</span>.
+Ef við táknum andhverfu Fourier-mynd falls <span class="math notranslate nohighlight">\({1\over P(i\xi)}\)</span> (athugum að <span class="math notranslate nohighlight">\({1\over P(i\xi)} \in L^1(\mathbb{R})\)</span>) með</p>
+<div class="math notranslate nohighlight">
+\[E(x)= {1\over 2\pi} \int_{-\infty}^{\infty} {e^{i x \xi}\over P(i\xi)} d\xi\,, \qquad x\in\mathbb R\,,\]</div>
+<p>þá fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}E\ast f(x) &amp;= \int_{-\infty}^{\infty} E(x-t) f(t)dt= \int_{-\infty}^{\infty}\left({1\over 2\pi} \int_{-\infty}^{\infty} {e^{i (x-t) \xi}\over P(i\xi)} d\xi\right)f(t) dt=\\
+&amp;={1\over 2\pi}\int_{-\infty}^{\infty}{e^{i x \xi}\over P(i\xi)}\left(\int_{-\infty}^\infty f(t) e^{-i \xi t} dt\right)d\xi= {1\over 2\pi}\int_{-\infty}^{\infty}{e^{ix\xi}\over P(i \xi)}\widehat f(\xi)\, d\xi =u(x).\end{split}\]</div>
+<p><strong>Setning</strong></p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(P\)</span> sé margliða af stigi <span class="math notranslate nohighlight">\(m\)</span> með ólikar núllstöðvar <span class="math notranslate nohighlight">\(\lambda_1, \dots, \lambda_{\ell}\)</span> með margfeldni <span class="math notranslate nohighlight">\(m_1, \dots, m_{\ell}\)</span>, að <span class="math notranslate nohighlight">\(P(i\xi)\)</span> hafi enga núllstöð á <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, að <span class="math notranslate nohighlight">\(Q\)</span> sé margliða af stigi <span class="math notranslate nohighlight">\(\le m-1\)</span> og að stofnbrotaliðun á ræða fallinu <span class="math notranslate nohighlight">\(Q/P\)</span> sé gefin með</p>
+<div class="math notranslate nohighlight">
+\[\dfrac {Q(\zeta)}{P({\zeta})} =\sum\limits_{k=1}^\ell
+\sum\limits_{j=1}^{m_k} \dfrac{A_{jk}}{({\zeta}-{\lambda}_k)^j}.\]</div>
+<p>Þá er andhverfa Fourier-mynd fallsins <span class="math notranslate nohighlight">\({\xi}\mapsto Q(i\xi)/P(i{\xi})\)</span> gefin með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x)&amp;=
+\sum_{\substack{{{\operatorname{Re\, }}}{\lambda}_k&lt;0}}
+\sum\limits_{j=1}^{m_k} A_{jk}
+\tfrac 1{(j-1)!}H(x)x^{j-1}e^{{\lambda}_kx}\\
+&amp;-\sum_{\substack{{{\operatorname{Re\, }}}{\lambda}_k&gt;0}}
+\sum\limits_{j=1}^{m_k} A_{jk} \tfrac 1{(j-1)!} H(-x)x^{j-1}e^{{\lambda}_kx},
+\qquad x\neq 0.\nonumber\end{split}\]</div>
+<p><strong>Sýnidæmi</strong></p>
+<p>Skoðum jöfnu</p>
+<div class="math notranslate nohighlight">
+\[-u{{^{\prime\prime}}}+\omega^ 2u=e^{-|x|}=f(x), \qquad \omega^ 2 \neq 1,
+\qquad x\in {{\mathbb  R}}.\]</div>
+<p>Við sjáum að <span class="math notranslate nohighlight">\(P(X)=-X^2+\omega^2\)</span>, og <span class="math notranslate nohighlight">\(P(i\xi)=\xi^2+\omega^2\)</span>. Fourier-mynd fallsins <span class="math notranslate nohighlight">\(e^{-|x|}=f(x)\)</span> er <span class="math notranslate nohighlight">\(\widehat f(\xi)={2 \over 1+\xi^ 2}\)</span>. Tökum Fourier-mynd jöfnunnar, þá fáum við</p>
+<div class="math notranslate nohighlight">
+\[\xi^ 2 \widehat u(\xi)+\omega^ 2 \widehat u(\xi) = \dfrac
+2{1+\xi^ 2}, \qquad \xi\in {{\mathbb  R}}.\]</div>
+<p>Þá er</p>
+<div class="math notranslate nohighlight">
+\[\widehat u(\xi)=
+\dfrac 2{(\omega^ 2+\xi^ 2)(1+\xi^ 2)} =\dfrac 1{1-\omega^ 2}\bigg(
+\dfrac 1\omega {{\cal F}}\{e^{-\omega|x|}\}({\xi})-{{\cal F}}\{e^{-|x|}\}({\xi})
+\bigg).\]</div>
+<p>Nú getum við notað andhverfuformúlu og þá fæst loks að</p>
+<div class="math notranslate nohighlight">
+\[u(x)= \dfrac 1{1-\omega^ 2}\bigg( \dfrac 1\omega e^{-\omega|x|} - e^{-|x|} \bigg).\]</div>
+</div>
+</div>
+<div class="section" id="urlausn-a-hlutafleiujofnum-me-fourier-ummyndun">
+<h2>4.3. Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun<a class="headerlink" href="#urlausn-a-hlutafleiujofnum-me-fourier-ummyndun" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="einvia-bylgjujafnan-og-d-alembert-formula">
+<h3>4.3.1. Einvíða bylgjujafnan og d’Alembert-formúla<a class="headerlink" href="#einvia-bylgjujafnan-og-d-alembert-formula" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við skoðum einvíðu bylgjujöfnuna</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{\partial^2u}{\partial t^2}
+-c^2\dfrac{\partial^2u}{\partial x^2}=0,\]</div>
+<p>þar sem fallið <span class="math notranslate nohighlight">\(u(x,t)\)</span> er skilgreint fyrir öll <span class="math notranslate nohighlight">\(x \in \mathbb{R}\)</span> og <span class="math notranslate nohighlight">\(t \in \mathbb{R}\)</span>.
+Leitum að slíkri lausn.</p>
+<p>Skiptum um hnit með <span class="math notranslate nohighlight">\(x = {\xi+\eta\over 2}\)</span> og <span class="math notranslate nohighlight">\(t = {\xi-\eta\over 2 c}\)</span> og skrifum bylgjujöfnuna sem</p>
+<div class="math notranslate nohighlight">
+\[\partial^2_{t} u(t,x)- c^2 \partial^2_x u (t,x)= -4 \,c^2 \partial^2_{\xi\eta} v(\eta,\xi)\, \qquad v(\eta,\xi) = u(x(\eta,\xi),t(\eta,\xi)).\]</div>
+<p>Athugum að við notum að <span class="math notranslate nohighlight">\(\partial^2_{t,x}=\partial^2_{x,t}\)</span>, sem gildir til dæmis ef lausnin er tvisvar sinnum samfellt deildanleg.</p>
+<p>Almenn lausn á jöfnunni að ofan er <span class="math notranslate nohighlight">\(u(\eta, \xi)=f(\xi)+g(\eta)\)</span>, þar sem föllin <span class="math notranslate nohighlight">\(f(\xi)\)</span>, <span class="math notranslate nohighlight">\(g(\eta)\)</span> eru ótiltekin. Þá er</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=f(\xi(x,t))+g(\eta(x,t))= f(x+ct)+g(x-ct)\,.\]</div>
+<p>Þá fæst niðurstaðan:</p>
+<dl class="docutils">
+<dt><strong>Setning</strong></dt>
+<dd>Sérhver lausn <span class="math notranslate nohighlight">\(u\in C^2({{\mathbb R}}^2)\)</span> á bylgjujöfnunni er af gerðinni <span class="math notranslate nohighlight">\(u(x,t)=f(x+ct)+g(x-ct)\)</span>, þar sem <span class="math notranslate nohighlight">\(f,g\in C^2({{\mathbb R}})\)</span>.
+Ef <span class="math notranslate nohighlight">\(u(x,t)=f_1(x+ct)+g_1(x-ct)\)</span> er önnur slík framsetning á lausninni, þá er til fasti <span class="math notranslate nohighlight">\(A\)</span> þannig að <span class="math notranslate nohighlight">\(f_1(x)=f(x)+A\)</span> og <span class="math notranslate nohighlight">\(g_1(x)=g(x)-A\)</span>.</dd>
+</dl>
+<p>Fyrir gefið <span class="math notranslate nohighlight">\(t_0 &gt; 0\)</span>, er graf fallsins <span class="math notranslate nohighlight">\(g(x − ct_0)\)</span> næstum því eins og graf fallsins <span class="math notranslate nohighlight">\(g(x)\)</span>, eini munurinn er að grafið <span class="math notranslate nohighlight">\(g(x − ct_0)\)</span> er hliðrað um <span class="math notranslate nohighlight">\(c t_0\)</span> til hægri. Við túlkum því fallið <span class="math notranslate nohighlight">\(g(x − ct)\)</span> sem bylgju sem hreyfist til hægri með hraða <span class="math notranslate nohighlight">\(c\)</span> og köllum það <em>framáttarbylgju</em>. Á svipaðan hátt er graf fallsins <span class="math notranslate nohighlight">\(f(x+ct_0)\)</span> hliðrað um <span class="math notranslate nohighlight">\(c t_0\)</span> til vinstri, fallið <span class="math notranslate nohighlight">\(f(x + ct)\)</span> táknar bylgju sem hreyfist til vinstri með hraða <span class="math notranslate nohighlight">\(c\)</span> og kallast það <em>bakáttarbylgja</em>.</p>
+<p>Við skoðum nú bylgjujöfnuna með upphafsskilyrðum, það er</p>
+<div class="math notranslate nohighlight" id="upphafbylgja">
+\[\begin{split}\begin{cases}
+\dfrac{\partial^2u}{\partial t^2}
+-c^2\dfrac{\partial^2u}{\partial x^2}=0, &amp;x\in {{\mathbb  R}},\ t&gt;0, \\
+u(x,0)=\varphi(x), \quad \partial_tu(x,0)=\psi(x), &amp;x\in {{\mathbb  R}}.
+\end{cases}\end{split}\]</div>
+<p>Við viljum finna lausn sem er í <span class="math notranslate nohighlight">\(C^2({{\mathbb R}}^2)\)</span>, sem gefin er í setningunni að ofan. Þá þurfum við tengja <span class="math notranslate nohighlight">\(f(x+ct), g(x-ct)\)</span> við <span class="math notranslate nohighlight">\(\varphi(x), \psi(x)\)</span>.
+Niðurstaðan er</p>
+<p><strong>Setning</strong></p>
+<blockquote>
+<div>Upphafsgildisverkefnið <a class="reference internal" href="#upphafbylgja"><span class="std std-ref">að ofan</span></a> hefur ótvírætt ákvarðaða lausn sem gefin er með formúlunni</div></blockquote>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\dfrac 12\big(\varphi(x+ct)+\varphi(x-ct)\big)
++\dfrac 1{2c}\int_{x-ct}^{x+ct}\psi({\xi})\, d{\xi}.\]</div>
+<p>Formúlan kallst d’Alembert-formúlan. Hún gefur almenna lausn í <span class="math notranslate nohighlight">\(C^2({{\mathbb R}}^2)\)</span> á upphafsgildisverkefninu.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div id="8XDUm2uuf6M" style="display: inline-block;"></div>
+<script>
+var ggbApp_8XDUm2uuf6M = new GGBApplet({
+"appName": "graphing", 
+"width": 700, 
+"height": 320, 
+"material_id":" m6xq5gqq", 
+"preventFocus": true, 
+"showResetIcon": true, 
+"enableShiftDragZoom": true 
+}, true);
+ggbAppletId["8XDUm2uuf6M"] = ggbApp_8XDUm2uuf6M;
+</script><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="bylgjujafnan-fourier-ummyndun-og-foldun">
+<h3>4.3.2. Bylgjujafnan, Fourier-ummyndun og földun<a class="headerlink" href="#bylgjujafnan-fourier-ummyndun-og-foldun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við getum skrifað d’Alembert-formúluna sem földunarheildi: Skilgreinum fall <span class="math notranslate nohighlight">\(E_t\)</span> sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}E_t(x)=E(x,t)= \begin{cases} 1/2c, &amp;|x|\leq ct,\\ 0,
+&amp;|x|&gt;ct.\end{cases}\end{split}\]</div>
+<p>þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;&amp; \dfrac 1{2c}\int_{x-ct}^{x+ct}\psi(y)\, dy
+=\int_{-\infty}^{+\infty}E_t(x-y)\psi(y)\, dy = \big(E_t\ast \psi\big)(x),
+\\
+&amp;&amp; \dfrac 12\big(\varphi(x+ct)+\varphi(x-ct)\big)
+=\dfrac{\partial}{\partial t}\bigg(
+\dfrac 1{2c}\int_{x-ct}^{x+ct}\varphi(y)\, dy
+\bigg) =\dfrac{\partial}{\partial t} E_t\ast \varphi(x),\end{split}\]</div>
+<p>og lausnin verður</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=\dfrac{\partial}{\partial t}\big( E_t\ast \varphi\big)(x)+
+E_t\ast \psi(x).\]</div>
+<hr class="docutils" />
+<p>Við viljum nú leiða þessa formúlu út með því að nota Fourier-ummyndun. Tökum Fourier-mynd af öllum liðum sem koma fyrir í upphafsgildisverkefninu. Fyrst þurfum við að finna Fourier-myndir <span class="math notranslate nohighlight">\(\partial_t u\)</span> og <span class="math notranslate nohighlight">\(\partial_x u\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[{{\cal F}}\{\partial_t^2 u\}(\xi,t)
+=\int\limits_{-\infty}^{+\infty}e^{-ix\xi}\partial_t^2 u(x,t)\, dx
+=\partial_t^2\int\limits_{-\infty}^{+\infty}e^{-ix\xi}u(x,t)\, dx
+=\partial_t^2\widehat u(\xi,t).\]</div>
+<div class="math notranslate nohighlight">
+\[{{\cal F}}\{{\partial}_x^2u\}({\xi},t)
+=\int\limits_{-\infty}^{+\infty}e^{-ix\xi}\partial_x^2u(x,t)\, dx
+=(i{\xi})^2\widehat u({\xi},t)=-{\xi}^2\widehat u({\xi},t),\]</div>
+<p>þar sem við höfum notað reikniregluna 8 í <a class="reference internal" href="#rulesft"><span class="std std-ref">4.1.4</span></a>.</p>
+<p>Að lokum verður upphafsgildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+{\partial}_t^2\widehat u({\xi},t)+c^2{\xi}^2
+\widehat u({\xi},t)=0, &amp;{\xi}\in {{\mathbb  R}},\ t&gt;0,\\
+\widehat u({\xi},0)=\widehat\varphi({\xi}), \quad {\partial}_t\widehat
+u({\xi},t)=\widehat{\psi}({\xi}), &amp;{\xi}\in {{\mathbb  R}}.
+\end{cases}\end{split}\]</div>
+<p>Athugum að <span class="math notranslate nohighlight">\({\partial}_t^2\widehat u({\xi},t)+c^2{\xi}^2\widehat u({\xi},t)=0\)</span> er annars stigs venjuleg afleiðujafna í <span class="math notranslate nohighlight">\(t\)</span>, og <span class="math notranslate nohighlight">\(\xi\)</span> er bara fasti. Þá er lausnin</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+\widehat u({\xi},t)&amp;=
+\cos(ct{\xi})\widehat\varphi({\xi})
++\dfrac{\sin(ct{\xi})}{c{\xi}}\widehat{\psi}({\xi})
+\end{aligned}\]</div>
+<p>En, ef við reiknum Fourier-myndin fallsins <span class="math notranslate nohighlight">\(E_t\)</span> sem við skilgreindum að ofan, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\widehat E_t(\xi)&amp;=\int_{-\infty}^{+\infty}e^{-ix\xi}E_t(x)\, dx
+=\dfrac 1{2c}\int_{-ct}^{ct}e^{-ix\xi}\, dx\\
+ &amp;=\dfrac 1{2c}\bigg[\dfrac{e^{-ix\xi}}{-i\xi}\bigg]_{-ct}^{ct}
+=\dfrac{\sin(ct\xi)}{c\xi}.\end{aligned}\end{split}\]</div>
+<p>Það þýðir að við getum umritað lausnina sem</p>
+<div class="math notranslate nohighlight">
+\[\widehat u({\xi},t)=\dfrac{\partial}{\partial t}\widehat E_t({\xi})\widehat\varphi({\xi})+\widehat E_t({\xi})\widehat {\psi}({\xi}).\]</div>
+<p>og niðurstaðan fyrir <span class="math notranslate nohighlight">\(u\)</span> fæst svo með því að taka andhvefa Fourier-mynd og nota földunarreglur.</p>
+<p><strong>Hliðraða bylgjujafnan</strong></p>
+<p>Við skoðum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\dfrac{\partial^2u}{\partial t^2}
+-c^2\dfrac{\partial^2u}{\partial x^2}=f(x,t), &amp;x\in {{\mathbb  R}}, \ t&gt;0,\\
+u(x,0)=\partial_tu(x,0)=0, &amp;x\in {{\mathbb  R}},
+\end{cases}\end{split}\]</div>
+<p>Leitum að sérlausn á þessu verkefni. Eins og áður notum við Fourier-ummyndun og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+{\partial}_t^2\widehat u({\xi},t)+c^2{\xi}^2
+\widehat u({\xi},t)=\widehat f({\xi},t), &amp;{\xi}\in {{\mathbb  R}},\ t&gt;0,\\
+\widehat u({\xi},0)={\partial}_t\widehat u({\xi},0)=0, &amp;{\xi}\in {{\mathbb  R}}.
+\end{cases}\end{split}\]</div>
+<p>Green-fall afleiðuvirkjans <span class="math notranslate nohighlight">\(D_t^2+c^2{\xi}^2\)</span> er <span class="math notranslate nohighlight">\(G_{\xi}(t,{\tau})=g({\xi},t-{\tau})=\sin(c(t-\tau){\xi})/c{\xi}\)</span>.
+Athugum að <span class="math notranslate nohighlight">\(g(ξ,t)=\widehat E_t({\xi})=\widehat E({\xi},t).\)</span></p>
+<p>Þá er Fourier-mynd lausnarinnar á jöfnunni</p>
+<div class="math notranslate nohighlight">
+\[\widehat u({\xi},t)
+=\int_0^t  g({\xi},t-\tau)\widehat f({\xi},\tau)\, d{\tau}
+=\int_0^t\widehat E({\xi},t-\tau)\widehat f({\xi},\tau)\, d{\tau}.\]</div>
+<p>Til þess að finna <span class="math notranslate nohighlight">\(u\)</span> þurfum við að nota andhverfuformúlu Fouriers, þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+u(x,t)&amp;
+=\dfrac 1{2{\pi}}\int_{-\infty}^{+\infty}e^{ix{\xi}}
+\bigg(\int_0^t \widehat E({\xi},t-\tau)\widehat f({\xi},\tau)\, d{\tau}\bigg)
+\, d{\xi}\label{15.4.3}\\
+&amp;=\int_0^t \bigg(\dfrac 1{2{\pi}}\int_{-\infty}^{+\infty}e^{ix{\xi}}
+\widehat E({\xi},t-\tau)\widehat f({\xi},\tau)\, d{\xi}\bigg)
+\, d{\tau}\nonumber\\
+&amp;=\int_0^t \int_{-\infty}^{+\infty}
+E(x-y,t-\tau)f(y,\tau)\, dy\, d{\tau}.\nonumber\end{aligned}\end{split}\]</div>
+<p>Ef við viljum skrifa þetta sem földunarheildi þurfum við að framlengja föllin fyrir öll <span class="math notranslate nohighlight">\(t\)</span>. Við höfum <span class="math notranslate nohighlight">\(E(x,t) = 0\)</span> ef <span class="math notranslate nohighlight">\(t &lt; 0\)</span> og ef við skilgreinum <span class="math notranslate nohighlight">\(f(x,t) = 0\)</span> fyrir <span class="math notranslate nohighlight">\(t &lt; 0\)</span>, þá fæst</p>
+<div class="math notranslate nohighlight">
+\[u(x,t) = E\ast f(x,t), \qquad x\in\mathbb{R}, t&gt;0\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\ast\)</span> stendur hér fyrir földun falla af tveimur breytistærðum sem er skilgreind með sambærilegum hætti og áður.</p>
+<p>Þetta má einnig rita sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+u(x,t)
+&amp;=\int_0^t \int_{-\infty}^{+\infty} E(x-y,t-\tau)f(y,\tau)\, dy\,
+d{\tau}\\
+&amp;=\dfrac 1{2c} \int_0^t \int_{x-c(t-\tau)}^{x+c(t-\tau)}
+f(y,{\tau})\, dyd{\tau}\nonumber\\
+&amp;=\dfrac 1{2c}\iint\limits_{T(x,t)}f(y,{\tau})\, dyd{\tau},\nonumber\end{aligned}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(T(x,t)\)</span> er þríhyrningurinn í <span class="math notranslate nohighlight">\((y,\tau)\)</span>-planinu með hornpunktana <span class="math notranslate nohighlight">\((x, t), (x − ct, 0)\)</span> og <span class="math notranslate nohighlight">\((x + ct, 0)\)</span>. Þríhyrningurinn kallast <a href="#id2"><span class="problematic" id="id3">*</span></a>ákvörðunarsvæði punktins <span class="math notranslate nohighlight">\((x,t)\)</span>.</p>
+</div>
+<div class="section" id="varmaleinijafnan-fourier-ummyndun-og-foldun">
+<h3>4.3.3. Varmaleiðnijafnan, Fourier-ummyndun og földun<a class="headerlink" href="#varmaleinijafnan-fourier-ummyndun-og-foldun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við lítum nú á varmaleiðnijöfnuna með upphafsskilyrðum</p>
+<div class="math notranslate nohighlight" id="upphafvarmi">
+\[\begin{split}\begin{cases}
+\dfrac{{\partial}u}{\partial t}
+-{\kappa}\dfrac{\partial^2u}{\partial x^2}=0, &amp;x\in {{\mathbb  R}}, \ t&gt;0,\\
+u(x,0)={\varphi}(x), &amp;x\in {{\mathbb  R}},
+\end{cases}\end{split}\]</div>
+<p>Eins og áður viljum við finna lausn með því að nota Fourier-ummmyndun. Tökum Fourier-mynd af öllum liðunum og þá fæst að Fourier-mynd fallsins <span class="math notranslate nohighlight">\(u\)</span> þarf að uppfylla</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\partial_t\widehat u({\xi},t)
++{\kappa}{\xi}^2\widehat u({\xi},t)=0, &amp;{\xi}\in {{\mathbb  R}}, \ t&gt;0,\\
+\widehat u({\xi},0)=\widehat {\varphi}({\xi}), &amp;{\xi}\in {{\mathbb  R}}.
+\end{cases}\end{split}\]</div>
+<p>Nú verður jafnan <span class="math notranslate nohighlight">\(\partial_t\widehat u({\xi},t)+{\kappa}{\xi}^2\widehat u({\xi},t)=0\)</span> einfaldlega fyrsta stigs afeiðujafna í <span class="math notranslate nohighlight">\(t\)</span>, og lausn hennar er <span class="math notranslate nohighlight">\(\widehat u({\xi},t)=e^{-{\kappa}t{\xi}^2}\widehat {\varphi}({\xi})\)</span>.</p>
+<p>Við viljum finna lausn sem földunheildi. Athugum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e^{-{\kappa}t{\xi}^2} = \mathcal{F}(E)(\xi)\,
+\qquad E(x,t)=E_t(x)=\begin{cases} \dfrac 1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
+&amp;x\in {{\mathbb  R}}, \ t&gt;0,\\
+0, &amp;x\in {{\mathbb  R}}, \ t\leq 0.\end{cases}\end{split}\]</div>
+<p>Þá er <span class="math notranslate nohighlight">\(\widehat u({\xi},t)=e^{-{\kappa}t{\xi}^2}\widehat {\varphi}({\xi})= \widehat{E_t} ({\xi})\widehat {\varphi}({\xi})\)</span>.</p>
+<p>Fallið <span class="math notranslate nohighlight">\(E\)</span> kallast <em>hitakjarni</em> eða <em>varmaleiðnikjarni</em>.</p>
+<p>Til þess að skilja lausnina er gott að skoða eiginleika hitakjarnans <span class="math notranslate nohighlight">\(E\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+1. &amp; \lim\limits_{t\to 0+} E_t(x) =
+\begin{cases} +{\infty}, &amp;x=0,\\
+0, &amp;x\neq 0,\end{cases}
+\\
+2. &amp;
+\int_{-{\infty}}^{+{\infty}} E_t(x)\, dx
+=\int_{-{\infty}}^{+{\infty}}
+\dfrac 1{\sqrt{\pi}}e^{-y^2}\, dy = 1\,,\\
+3. &amp; \,({\partial}_t-{\kappa}{\partial}_x^2)E(x,t)=0, \qquad t&gt;0\,.
+\end{aligned}\end{split}\]</div>
+<p>Þá getum við notað andhverfuformúlu Fouriers og við fáum:</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=E_t\ast {\varphi}(x)=\int_{-{\infty}}^{+{\infty}}
+\dfrac 1{\sqrt{4{\pi}{\kappa}t}}e^{-(x-y)^2/4{\kappa}t}{\varphi}(y)\,
+dy, \qquad t&gt;0.\]</div>
+<p>Það er ekki erfitt að sjá að lausn  <span class="math notranslate nohighlight">\(u(x,t)=E_t\ast {\varphi}(x)\)</span> uppfyllir <a class="reference internal" href="#upphafvarmi"><span class="std std-ref">upphafsgildisverkefnið að ofan</span></a> með því að nota eingileika hitakjarnans <span class="math notranslate nohighlight">\(E\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[({\partial}_t-{\kappa}{\partial}_x^2)u(x,t)
+=\int_{-{\infty}}^{+{\infty}}
+({\partial}_t-{\kappa}{\partial}_x^2)E(x-y,t) {\varphi}(y)\, dy=0.\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\lim\limits_{t\to 0+} u(x,t) &amp;=
+\lim\limits_{t\to 0+} E_t\ast {\varphi}(x)
+\\
+&amp;=\int_{-{\infty}}^{+{\infty}}
+\dfrac 1{\sqrt{\pi}}e^{-y^2}\lim\limits_{t\to 0+}
+{\varphi}(x-\sqrt{4{\kappa}t}y)\, dy\\
+&amp;={\varphi}(x)\int_{-{\infty}}^{+{\infty}}
+\dfrac 1{\sqrt{\pi}}e^{-y^2}\, dy ={\varphi}(x).\end{aligned}\end{split}\]</div>
+<p>Þá skiljum við eftirfarandi setningu</p>
+<p><strong>Setning</strong></p>
+<blockquote>
+<div>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\varphi\)</span> sé samfellt og takmarkað fall á <span class="math notranslate nohighlight">\({{\mathbb R}}\)</span>.  Þá hefur  <a class="reference internal" href="#upphafvarmi"><span class="std std-ref">upphafsgildisverkefnið að ofan</span></a> lausn <span class="math notranslate nohighlight">\(u\)</span> sem gefin er með formúlunni</div></blockquote>
+<div class="math notranslate nohighlight">
+\[u(x,t)=E_t\ast \varphi(x)=\int_{-\infty}^{+\infty}E_t(x-\xi)\varphi(\xi)\,
+d\xi, \qquad x\in {{\mathbb  R}}, \ t&gt;0,\]</div>
+<p>þar sem hitakjarninn er gefinn með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[E(x,t)=E_t(x)=H(t) \dfrac
+1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
+\qquad (x,t)\neq (0,0).\]</div>
+<p><strong>Hliðraða varmaleiðnijafnan með óhliðruðum upphafsskilyrðum</strong></p>
+<p>Við lítum nú á hliðruðu varmaleiðnijöfnuna með óhliðruðu upphafsskilyrði, þ.e.</p>
+<div class="math notranslate nohighlight" id="upphafvarmi2">
+\[\begin{split}\begin{cases}
+\dfrac{{\partial}u}{\partial t}
+-{\kappa}\dfrac{\partial^2u}{\partial x^2}=f(x,t), &amp;x\in {{\mathbb  R}}, \ t&gt;0,\\
+u(x,0)=0, &amp;x\in {{\mathbb  R}}.
+\end{cases}\end{split}\]</div>
+<p>Leitum að sérlausn á henni. Við tökum Fourier-myndina af öllum liðunum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\partial_t\widehat u({\xi},t)
++{\kappa}{\xi}^2\widehat u({\xi},t)=\widehat f({\xi},t), &amp;{\xi}\in {{\mathbb  R}}, \ t&gt;0,\\
+\widehat u({\xi},0)=0, &amp;{\xi}\in {{\mathbb  R}}.
+\end{cases}\end{split}\]</div>
+<p>Skoðum jöfnuna að ofan: hún er fyrsta stigs hliðruð afleiðujafna í <span class="math notranslate nohighlight">\(t\)</span>. Við getum notað Green-fall, og það er <span class="math notranslate nohighlight">\(G_\xi(t,\tau)=e^{-\kappa(t-\tau)\xi^2}=\widehat E_{t-\tau}(\xi)\)</span>.</p>
+<p>Eins og áður við skrifum við Fourier-mynd lausnar og eftir það tökum við andhverfu Fourier-myndina. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\widehat u({\xi},t)=\int_0^te^{-{\kappa}(t-{\tau})x^2}\widehat
+f({\xi},t)\, d{\tau} = \int_0^t\widehat E_{t-{\tau}}({\xi})\widehat
+f({\xi},t)\, d{\tau}.\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+u(x,t)&amp;=\dfrac 1{2{\pi}}\int_{-\infty}^{+\infty}e^{ix{\xi}}
+\bigg(\int_0^t\widehat E_{t-{\tau}}({\xi})\widehat
+f({\xi},{\tau})\, d{\tau} \bigg)\, d{\xi}\\
+&amp;=\int_0^t\bigg(
+\dfrac 1{2{\pi}}\int_{-\infty}^{+\infty}e^{ix{\xi}}
+\widehat E_{t-{\tau}}({\xi})\widehat
+f({\xi},{\tau})\, d{\xi}\bigg)\, d{\tau}\\
+&amp;=\int_0^t \int_{-\infty}^{+\infty}
+E(x-y,t-\tau)f(y,{\tau})\, dy d{\tau} \\
+&amp;= E\ast f(x,t) \end{aligned}\end{split}\]</div>
+<p>Við fáum eftirfarandi niðurstöðu</p>
+<p><strong>Setning</strong></p>
+<blockquote>
+<div>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé samfellt fall á opna efra hálfplaninu <span class="math notranslate nohighlight">\(\{(x,t); t&gt;0\}\)</span>, sé takmarkað á lokuninni <span class="math notranslate nohighlight">\(\{(x,t); t\geq 0\}\)</span> og taki gildið 0 á neðra hálfplaninu <span class="math notranslate nohighlight">\(\{(x,t); t&lt;0\}\)</span>. Gerum ráð fyrir að  <span class="math notranslate nohighlight">\({\varphi}\)</span> sé samfellt takmarkað fall á <span class="math notranslate nohighlight">\({{\mathbb R}}\)</span>. Þá hefur <a class="reference internal" href="#upphafvarmi2"><span class="std std-ref">upphafsgildisverkefnið að ofan</span></a> ótvírætt ákvarðaða lausn <span class="math notranslate nohighlight">\(u\)</span>, sem gefin er með formúlunni</div></blockquote>
+<div class="math notranslate nohighlight">
+\[u(x,t)=E_t\ast {\varphi}(x)+E\ast f(x,t), \qquad x\in {{\mathbb  R}},\ t&gt;0,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(E\)</span> táknar hitakjarnann, sem skilgreindur er með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[E(x,t)=E_t(x)=H(t) \dfrac
+1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
+\qquad (x,t)\neq (0,0).\]</div>
+<p><strong>Hliðraða varmaleiðnijafnan með hliðruðu upphafsskilyrði</strong></p>
+<p>Upphafsgildisverkefnið er núna</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\dfrac{{\partial}u}{\partial t}
+-{\kappa}\Delta u=f(x,t), &amp;x\in {{\mathbb  R}}^n, \ t&gt;0,\\
+u(x,0)=\lim\limits_{t\to 0+}u(x,t)={\varphi}(x), &amp;x\in {{\mathbb  R}}^n,
+\end{cases}\end{split}\]</div>
+<p>Við gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé samfellt fall á <span class="math notranslate nohighlight">\(\{(x,t)\in {{\mathbb R}}^n\times {{\mathbb R}}; t\geq 0\}\)</span>, <span class="math notranslate nohighlight">\({\varphi}\)</span> sé samfellt fall á <span class="math notranslate nohighlight">\({{\mathbb R}}^n\)</span> og bæði <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\({\varphi}\)</span> séu takmörkuð.</p>
+<p>Hitakjarninn er</p>
+<div class="math notranslate nohighlight">
+\[E(x,t)=E_t(x)=H(t) \dfrac
+1{\big(4{\pi}{\kappa}t\big)^{n/2}}e^{-x^2/4{\kappa}t},
+\qquad x\in {{\mathbb  R}}^n,\ (x,t)\neq (0,0),\]</div>
+<p>og lausnin verður</p>
+<div class="math notranslate nohighlight">
+\[u(x,t)=E_t\ast {\varphi}(x)+E\ast f(x,t), \qquad x\in {{\mathbb  R}}^n, t&gt;0.\]</div>
+</div>
+</div>
+<div class="section" id="fourier-ummyndun-og-leifareikningur">
+<h2>4.4. Fourier-ummyndun og leifareikningur<a class="headerlink" href="#fourier-ummyndun-og-leifareikningur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Við skoðum hér hvernig við getum reiknað Fourier-myndir og andhverfu þeirra með því að nota leifareikning.
+Við byrjum á að setja fram fyrstu niðurstöðu fyrir Fourier-myndir.</p>
+<p>Munið að við táknum með <span class="math notranslate nohighlight">\(\mathcal O(X)\)</span> mengi allra fágaðra falla á <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<div class="section" id="fourier-myndir-reiknaar-me-leifareikningi">
+<h3>4.4.1. Fourier-myndir reiknaðar með leifareikningi<a class="headerlink" href="#fourier-myndir-reiknaar-me-leifareikningi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Setning</strong></p>
+<blockquote>
+<div>Látum fall <span class="math notranslate nohighlight">\(f\in L^1({{\mathbb R}})\cap {{\cal O}}({{\mathbb C}}\setminus A)\)</span>, þar sem <span class="math notranslate nohighlight">\(A\)</span> er endanlegt mengi.
+Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\lim\limits_{r\to \infty}\max_{|z|=r}|f(z)|=0\)</span>.
+Táknum efra hálfplanið með <span class="math notranslate nohighlight">\(H_+=\{z\in {{\mathbb C}}; {{\operatorname{Im\, }}}z&gt;0\}\)</span> og neðra hálfplanið með <span class="math notranslate nohighlight">\(H_-=\{z\in {{\mathbb C}}; {{\operatorname{Im\, }}}z&lt;0\}\)</span>.
+Þá er</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\begin{split}\widehat f(\xi) =
+\begin{cases}  2\pi i\sum_{\alpha\in A\cap H_+}
+{{\operatorname{Res}}}(e^{-iz\xi}f(z),\alpha), &amp; \xi &lt; 0,\\
+-2\pi i\sum_{\alpha\in A\cap H_-}
+{{\operatorname{Res}}}(e^{-iz\xi}f(z),\alpha),  &amp; \xi &gt; 0.
+\end{cases}\end{split}\]</div>
+<p><strong>Sýnidæmi</strong></p>
+<p>Skoðum fall <span class="math notranslate nohighlight">\(f(x)=1/(1+x^2), x\in {{\mathbb R}}.\)</span> Athugum að fallið <span class="math notranslate nohighlight">\(f\)</span> er jafnstætt, svo samkvæmt reglu 6 er Fourier-mynd þess jafnstæð. Þá getum við reiknað Fourier-mynd fyrir <span class="math notranslate nohighlight">\(\xi&lt;0\)</span>, og eftir það framlengjt hana samkvæmt því. Fallið <span class="math notranslate nohighlight">\(f\)</span> hefur eitt skaut í <span class="math notranslate nohighlight">\(x=i\)</span> á <span class="math notranslate nohighlight">\(H_+\)</span> og <span class="math notranslate nohighlight">\(\max_{|z|=r}|f(z)| \le {1\over r^2-1}\)</span> sem stefnir á 0 þegar <span class="math notranslate nohighlight">\(r\)</span> stefnir á óendanlegt. Þá beitum við setningunni að ofan og fáum</p>
+<div class="math notranslate nohighlight">
+\[\widehat f(\xi) = 2\pi i
+{{\operatorname{Res}}}\bigg(\dfrac{e^{-iz\xi}}{1+z^2},i\bigg)
+=\pi e^{\xi}, \qquad \xi&lt;0.\]</div>
+<p>Að lokum fæst</p>
+<div class="math notranslate nohighlight">
+\[\widehat f(\xi) =\pi e^{-|\xi|}, \qquad \xi\in {{\mathbb  R}}.\]</div>
+</div>
+<div class="section" id="andhverfar-fourier-myndir-reiknaar-me-leifareikningi">
+<h3>4.4.2. Andhverfar Fourier-myndir reiknaðar með leifareikningi<a class="headerlink" href="#andhverfar-fourier-myndir-reiknaar-me-leifareikningi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Á svipaðan hátt höfum við niðurstöðu fyrir andhverfar  Fourier-myndir.</p>
+<p><strong>Setning</strong></p>
+<blockquote>
+<div>Gerum ráð fyrir því að <span class="math notranslate nohighlight">\(f\in L^1({{\mathbb R}})\cap PC^1({{\mathbb R}})\)</span>, að það sé hægt að framlengja skilgreiningarsvæði Fourier–myndarinnar <span class="math notranslate nohighlight">\(\widehat f\)</span>, þannig að <span class="math notranslate nohighlight">\(\widehat f\in {{\cal O}}({{\mathbb C}}\setminus A)\)</span>, þar sem mengið <span class="math notranslate nohighlight">\(A\)</span> er endanlegt og <span class="math notranslate nohighlight">\(\lim\limits_{r\to +\infty}\max_{|\zeta|=r}|\widehat f(\zeta)|=0\)</span>. Þá er</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tfrac 12 (f(x+)+f(x-))=\begin{cases}
+i\sum\limits_{\alpha\in A\cap H_+}{{\operatorname{Res}}}\big(e^{ix\zeta}\widehat
+f(\zeta),\alpha\big), &amp; x&gt;0\\
+-i\sum\limits_{\alpha\in A\cap H_-}{{\operatorname{Res}}}\big(e^{ix\zeta}\widehat
+f(\zeta),\alpha\big), &amp; x&lt;0.
+\end{cases}\end{split}\]</div>
+<p>Athugum að ef fallið <span class="math notranslate nohighlight">\(f\)</span> er samfellt þá er <span class="math notranslate nohighlight">\(\tfrac 12 (f(x+)+f(x-))= f(x)\)</span>.</p>
+<p><strong>Sýnidæmi</strong></p>
+<p>Lítum á <span class="math notranslate nohighlight">\(\widehat f(\xi)=\xi/(\xi^2+4\xi+5)\)</span>. Fallið <span class="math notranslate nohighlight">\(\widehat f\)</span> hefur tvö skaut í <span class="math notranslate nohighlight">\(zeta_1 = -2+i\in H_+\)</span> og <span class="math notranslate nohighlight">\(\zeta_2 = -2-i\in H_-\)</span>. Ennfremur er það hvorki jafnstætt né oddstætt, svo við þurfum að reikna báðar leifar:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+i{{\operatorname{Res}}}\bigg( \dfrac{e^{ix\zeta}\zeta}{\zeta^2+4\zeta+5},-2+i\bigg)
+= (-1+i/2)e^{-x-2ix},\\
+-i{{\operatorname{Res}}}\bigg( \dfrac{e^{ix\zeta}\zeta}{\zeta^2+4\zeta+5},-2-i\bigg)
+= (-1-i/2)e^{x-2ix}.\end{gathered}\end{split}\]</div>
+<p>Að lokum fáum við samkvæmt setningunni að ofan</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) =\begin{cases}
+(-1+i/2)e^{-x-2ix}\,, \qquad &amp; x&gt;0\\
+(-1-i/2)e^{x-2ix}\,, \qquad &amp; x&lt;0
+\end{cases}\end{split}\]</div>
+<p>sem við getum umskrifað líka sem <span class="math notranslate nohighlight">\(f(x)=-(1-i{{\operatorname{sign}}}(x)/2)e^{-|x|-2ix}\)</span>, fyrir öll  <span class="math notranslate nohighlight">\(x\in\mathbb{R}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="laplace-ummyndun-og-leifareikningur">
+<h2>4.5. Laplace-ummyndun og leifareikningur<a class="headerlink" href="#laplace-ummyndun-og-leifareikningur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Rifjum upp að</p>
+<ol class="arabic simple">
+<li>Ef fall <span class="math notranslate nohighlight">\(f\)</span> á <span class="math notranslate nohighlight">\(\mathbb{R_+}\)</span> er af veldisvísisgerð, þá eru til fastar <span class="math notranslate nohighlight">\(M&gt;0\)</span> og <span class="math notranslate nohighlight">\(c&gt;0\)</span> þ.a.</li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-expo">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-expo" title="Permalink to this equation">¶</a></span>\[|f(t)|\leq Me^{c t}, \qquad t\in {{\mathbb  R}}_+.\]</div>
+<ol class="arabic simple" start="2">
+<li>Skilgreining á Laplace-mynd er</li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-eq-test">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-test" title="Permalink to this equation">¶</a></span>\[\mathcal L{f}(s)= \int_{0}^\infty e^{-s t} f(t) dt \,, \qquad s\in \mathbb C\,,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(f\)</span> er skilgreint á <span class="math notranslate nohighlight">\(\mathbb{R_+}\)</span> með gildi í <span class="math notranslate nohighlight">\(\mathbb C\)</span>, og er heildanlegt á sérhverju lokuðu og takmörkuðu bili á <span class="math notranslate nohighlight">\(\mathbb{R_+}\)</span>.</p>
+<div class="section" id="andhverfar-laplace-myndir">
+<h3>4.5.1. Andhverfar Laplace-myndir<a class="headerlink" href="#andhverfar-laplace-myndir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="fouriermellin"><strong>Setning: Andhverfuformúla Fourier-Mellin</strong></p>
+<blockquote>
+<div>Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(f:{{\mathbb R}}_+\to {{\mathbb C}}\)</span> sé í <span class="math notranslate nohighlight">\(PC^1 (\mathbb R)\)</span> og sé af veldisvísisgerð <a class="reference internal" href="#equation-eq-expo">(1)</a>. Þá gildir  um sérhvert <span class="math notranslate nohighlight">\(\xi&gt; c\)</span> og sérhvert <span class="math notranslate nohighlight">\(t&gt; 0\)</span> að</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\label{7.2.2}
+\tfrac 12(f(t+)+f(t-))&amp; = \lim_{R\to +\infty} \dfrac 1{2\pi}
+\int_{-R}^{+R}e^{(\xi+i\eta)t}{{\cal L}}f(\xi+i\eta) \, d\eta \\
+&amp;= \lim_{R\to +\infty} \dfrac 1{2\pi i}
+\int_{\xi-iR}^{\xi+iR}e^{\zeta t}{{\cal L}}f(\zeta) \, d\zeta. \nonumber\end{aligned}\end{split}\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(\mathcal{L} f(\xi+i \eta)\in L^1(\mathbb R)\)</span> sem fall af <span class="math notranslate nohighlight">\(\eta\)</span>, þá er <span class="math notranslate nohighlight">\(f\)</span> samfellt í <span class="math notranslate nohighlight">\(t\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+f(t)&amp;=  \dfrac 1{2\pi}
+\int_{-\infty}^{+\infty}e^{(\xi+i\eta)t}{{\cal L}}f(\xi+i\eta) \, d\eta
+\\
+&amp;= \dfrac 1{2\pi i}
+\int_{\xi-i\infty}^{\xi+i\infty}e^{\zeta t}{{\cal L}}f(\zeta) \,
+d\zeta. \nonumber\end{aligned}\end{split}\]</div>
+<p>Athugum að <span class="math notranslate nohighlight">\(\int_{\xi-i\infty}^{\xi+i\infty}\)</span> og <span class="math notranslate nohighlight">\(\int_{\xi-iR}^{\xi+iR}\)</span> tákna heildi eftir línunni <span class="math notranslate nohighlight">\(\{\xi+i \eta; \eta \in \mathbb{R}\}\)</span>.</p>
+<p><strong>Setning</strong></p>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> vera tvö samfelld föll af veldisvísisgerð á <span class="math notranslate nohighlight">\(\mathbb{R_+}\)</span>, og gerum ráð fyrir að <span class="math notranslate nohighlight">\(\mathcal{L}f(\alpha_j)=\mathcal{L}g(\alpha_j)\)</span>, þar sem <span class="math notranslate nohighlight">\(\{\alpha_j\}\)</span> er runa af ólíkum punktum, <span class="math notranslate nohighlight">\(\alpha_j\to\alpha, \operatorname{Re}\alpha_j&gt;c, \operatorname{Re}\alpha&gt;c\)</span>. Þá er <span class="math notranslate nohighlight">\(f(t)=g(t)\)</span>.</p>
+</div>
+<div class="section" id="andhverfar-laplace-myndir-reiknaar-me-leifareikningi">
+<h3>4.5.2. Andhverfar Laplace-myndir reiknaðar með leifareikningi<a class="headerlink" href="#andhverfar-laplace-myndir-reiknaar-me-leifareikningi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p id="laplaceres">Hér viljum við hafa praktiskar aðferðir til þess að reikna heildi í <a class="reference internal" href="#fouriermellin"><span class="std std-ref">setningunni</span></a>.
+Við getum notað leifareikning og við byrjum á að skoða niðurstöðuna fyrst.</p>
+<p><span class="math notranslate nohighlight">\(M_r\)</span> táknar hálfhringinn sem stikaður er með <span class="math notranslate nohighlight">\(\gamma_r(\theta)=\xi+i r e^{i\theta}, \theta\in [0, \pi]\)</span>.</p>
+<p><strong>Setning</strong></p>
+<blockquote>
+<div>Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(f:{{\mathbb R}}_+\to {{\mathbb C}}\)</span> sé í <span class="math notranslate nohighlight">\(PC^1 (\mathbb R)\)</span> og sé af veldisvísisgerð <a class="reference internal" href="#equation-eq-expo">(1)</a>.
+Gerum ráð fyrir að hægt sé að framlengja <span class="math notranslate nohighlight">\(\mathcal{L}f\)</span> yfir í fágað fall á <span class="math notranslate nohighlight">\(\mathbb C\setminus A\)</span>, þar sem <span class="math notranslate nohighlight">\(A\)</span> er endanlegt mengi.
+Ef <span class="math notranslate nohighlight">\(\xi&gt;c\)</span> og <span class="math notranslate nohighlight">\(\lim\limits_{r\to +\infty}\max_{\zeta\in M_r}|{{\cal L}}f(\zeta)|=0\)</span>,
+þá er</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-eq-laplaceres">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-laplaceres" title="Permalink to this equation">¶</a></span>\[\frac 12(f(t+)+f(t-))=
+\sum_{\alpha\in A}{{\operatorname{Res}}}(e^{\zeta t}{{\cal L}}f(\zeta),\alpha)
+\qquad t&gt;0.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> er samfellt, þá er</p>
+<div class="math notranslate nohighlight">
+\[f(t)= \sum_{\alpha\in A}{{\operatorname{Res}}}(e^{\zeta t}{{\cal L}}f(\zeta),\alpha).\]</div>
+</div>
+<div class="section" id="andhverfar-laplace-myndir-og-afleiujofnur">
+<h3>4.5.3. Andhverfar Laplace-myndir og afleiðujöfnur<a class="headerlink" href="#andhverfar-laplace-myndir-og-afleiujofnur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við skoðum afleiðujöfnu með fastastuðla</p>
+<div class="math notranslate nohighlight">
+\[P(D)u=(D^m+a_{m-1}D^{m-1}+\cdots+a_1D+a_0)u=f(t).\]</div>
+<p>Til þess að leysa jöfnuna getum við notað Green-fallið <span class="math notranslate nohighlight">\(G(t,\tau)=g(t-\tau)\)</span>.
+Munið að Laplace-mynd fallsins <span class="math notranslate nohighlight">\(g\)</span> er gefin með</p>
+<div class="math notranslate nohighlight">
+\[{{\cal L}}g(\zeta)=\dfrac 1{P(\zeta)}.\]</div>
+<p>Nú samkvæmt <a class="reference internal" href="#laplaceres"><span class="std std-ref">setningunni</span></a>, getum við reiknað út Green-fallið <span class="math notranslate nohighlight">\(g\)</span> með formúlunni <a class="reference internal" href="#equation-eq-laplaceres">(3)</a>. Þá er</p>
+<div class="math notranslate nohighlight" id="equation-eq-greenlaplace">
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-greenlaplace" title="Permalink to this equation">¶</a></span>\[g(t)= \sum\limits_{\alpha\in{\cal N}(P)}
+{{\operatorname{Res}}}\bigg( \dfrac {e^{t\zeta}}{P(\zeta)},\alpha\bigg).\]</div>
+</div>
+<div class="section" id="id4">
+<h3>4.5.4. Sýnidæmi<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á afleiðujöfnu</p>
+<div class="math notranslate nohighlight">
+\[P(D)u=(D^4-2 D^3+2 D^2-2 D+1)u=f(t)\]</div>
+<p>með óhliðruðu upphafsskilyrðunum</p>
+<div class="math notranslate nohighlight">
+\[u(0)=\dots=u^{(3)}(0)=0.\]</div>
+<p>Við reiknum út Green-fallið með því að nota Laplace-ummyndun og leifareikning. Samkvæmt formúlunni <a class="reference internal" href="#equation-eq-greenlaplace">(4)</a>,  þurfum við að reikna kennimargliðuna <span class="math notranslate nohighlight">\(P(\zeta)\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[P(\zeta)= \zeta^ 4-2\zeta^ 3+2\zeta^ 2-2\zeta+1 = (\zeta-1)^ 2(\zeta-i)(\zeta+i).\]</div>
+<p><span class="math notranslate nohighlight">\({1\over P(\zeta)}\)</span> hefur skaut í <span class="math notranslate nohighlight">\(1, i, -i\)</span>, og við fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+g(t)&amp;= \sum\limits_{\alpha=1,i,-i} {{\operatorname{Res}}}\bigg(\dfrac{e^{\zeta t}}
+{(\zeta-1)^ 2(\zeta-i)(\zeta+i)},\alpha\bigg)\\
+&amp;= \left.\dfrac d{d\zeta} \dfrac{e^{\zeta t}}{(\zeta-i)(\zeta+i)}
+\right|_{\zeta=1} + \dfrac{e^{it}}{(i-1)^ 2(2i)} +
+\dfrac{e^{-it}}{(-i-1)^ 2(-2i)}\\
+&amp;= \left.\dfrac{te^{\zeta t}}{\zeta^ 2+1}\right|_{\zeta=1}
++\left.\dfrac{e^{\zeta t}(-2\zeta)}{(\zeta^ 2+1)^ 2}\right|_{\zeta=1}
++\dfrac{e^{it}}4+\dfrac{e^{-it}}4\\
+&amp;=\tfrac 12 te^ t -\tfrac 12 e^ t +\tfrac 12\cos t.\end{aligned}\end{split}\]</div>
+<p>Að lokum er lausnin gefin með</p>
+<div class="math notranslate nohighlight">
+\[u(t) = \int_0^t G(t,\tau) f(\tau) d\tau = \int_0^t \left(\tfrac 12 (t-\tau)e^{(t-\tau)} -\tfrac 12 e^{(t-\tau)} +\tfrac 12\cos (t-\tau)\right) f(\tau) d\tau\]</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Kafli05.html" class="btn btn-neutral float-right" title="5. Mismunaaðferðir" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Kafli03.html" class="btn btn-neutral" title="3. Eigingildisverkefni" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+      <script type="text/javascript" src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+      <script type="text/javascript" src="_static/custom_sage.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+	
+    <script>
+        window.addEventListener("load", function(){
+            for(var i in ggbAppletId){
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

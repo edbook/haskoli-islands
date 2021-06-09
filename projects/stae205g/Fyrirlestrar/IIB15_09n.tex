@@ -1,0 +1,313 @@
+\def \kaflanr {9}
+\lecture[\kaflanr]{\kaflanr. Fólgin föll og Taylor-nálganir}{lecture-text}
+\date{2.~febrúar 2015}
+\newcounter{mycount}
+\refstepcounter{mycount}
+
+\begin{document}
+
+\subsection{}
+	\maketitle
+
+
+
+
+\subsection{} 
+
+\subsubsection{Upprifjun \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+ Skoðum feril sem gefinn er með jöfnu $F(x,y)=0$
+og gerum ráð fyrir að báðar fyrsta stigs
+hlutafleiður $F$ séu samfelldar.  Látum $(x_0,y_0)$
+vera punkt á ferlinum.  Ef $F_2(x_0,y_0)\neq 0$ þá má skoða $y$ sem
+fall af $x$ í grennd við punktinn $(x_0,y_0)$ og fallið $y=y(x)$ er
+diffranlegt í punktinum $x_0$ og afleiðan er gefin með formúlunni
+$$y'(x_0)=-\frac{F_1(x_0,y_0)}{F_2(x_0,y_0)}.$$
+Sagt að jafnan $F(x,y)=0$ skilgreini $y$ sem {\em fólgið fall} af $x$
+  í grennd við $(x_0,y_0)$.  
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Setning \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Látum $F$ vera fall af $n$-breytum $x_1, \ldots,
+x_n$ og gerum ráð fyrir að allar fyrsta stigs hlutafleiður  $F$ séu
+samfelldar.   Látum $(a_1,\ldots,a_n)$ vera punkt þannig að 
+$F(a_1,\ldots,a_n)=0$.  Ef $F_n(a_1,\ldots,a_n)\neq 0$ þá er til
+samfellt diffranlegt fall $\varphi(x_1, \ldots, x_{n-1})$ skilgreint á 
+opinni kúlu $B$
+utan um $(a_1,\ldots,a_{n-1})$ þannig að 
+$$\varphi(a_1,\ldots,a_{n-1})=a_n$$ 
+og 
+$$F(x_1,\ldots, x_{n-1}, \varphi(x_1, \ldots, x_{n-1}))=0$$
+fyrir alla punkta $(x_1, \ldots, x_{n-1})$ í $B$.
+
+Ennfremur gildir að 
+$$\varphi_i(a_1,\ldots,a_{n-1})
+=-\frac{F_i(a_1,\ldots,a_n)}{F_n(a_1,\ldots,a_n)}.$$ 
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+  
+{\em Jacobi-ákveða} tveggja falla $u=u(x,y)$ og $v=v(x,y)$ með
+tilliti til breytanna $x$ og $y$ er skilgreind sem 
+$$\frac{\partial(u,v)}{\partial(x,y)}=
+\begin{vmatrix} 
+\frac{\partial u}{\partial x}&\frac{\partial u}{\partial y}\\
+\noalign{\smallskip}
+\frac{\partial v}{\partial x}&\frac{\partial v}{\partial y}
+\end{vmatrix}.$$
+
+
+
+
+\subsection{}
+
+Ef $F$ og $G$ eru föll af breytum $x,y,z,\ldots$ þá skilgreinum við,
+til dæmis,
+$$\frac{\partial(F,G)}{\partial(x,y)}=
+\begin{vmatrix} 
+\frac{\partial F}{\partial x}&\frac{\partial F}{\partial y}\\
+\noalign{\smallskip}
+\frac{\partial G}{\partial x}&\frac{\partial G}{\partial y}
+\end{vmatrix}\quad \mbox{og}\quad
+\frac{\partial(F,G)}{\partial(y,z)}=
+\begin{vmatrix} 
+\frac{\partial F}{\partial y}&\frac{\partial F}{\partial z}\\
+\noalign{\smallskip}
+\frac{\partial G}{\partial y}&\frac{\partial G}{\partial z}
+\end{vmatrix}.$$
+
+Ef við höfum föll $F, G, H$ af breytum $x,y,z,w,\ldots$ þá
+skilgreinum við, til dæmis,
+$$\frac{\partial(F,G,H)}{\partial(w,z,y)}=
+\begin{vmatrix} 
+\frac{\partial F}{\partial w}&\frac{\partial F}{\partial z}
+&\frac{\partial F}{\partial y}\\
+\noalign{\smallskip}
+\frac{\partial G}{\partial w}&\frac{\partial G}{\partial z}
+&\frac{\partial G}{\partial y}\\
+\noalign{\smallskip}
+\frac{\partial H}{\partial w}&\frac{\partial H}{\partial z}
+&\frac{\partial H}{\partial y}
+\end{vmatrix}.$$
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Setning \kaflanr.\arabic{mycount}  (Upprifjun á reglu Cramers.)}\stepcounter{mycount}
+
+ Látum $A$ vera andhverfanlegt
+$n\times n$ fylki og $\bv$ vigur í $\Rn$.  Gerum ráð fyrir að
+$\xv=(x_1, x_2, \ldots, x_n)$ sé lausn á $A\xv=\bv$.  Skilgreinum
+$B_i$ sem $n\times n$ fylkið sem fæst með því að setja vigurinn $\bv$
+í staðinn fyrir dálk $i$ í $A$.  Þá er
+$$x_i=\frac{\det B_i}{\det A}.$$
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Setning \kaflanr.\arabic{mycount} (Setningin um fólgin föll)}\stepcounter{mycount}
+Skoðum jöfnuhneppi
+\begin{align*}
+F_{(1)}(x_1,\ldots,x_m, y_1, \ldots, y_n)&=0\\
+F_{(2)}(x_1,\ldots,x_m, y_1, \ldots, y_n)&=0\\
+\vdots\\
+F_{(n)}(x_1,\ldots,x_m, y_1, \ldots, y_n)&=0.
+\end{align*}
+Látum $P_0=(a_1,\ldots, a_m, b_1,\ldots, b_n)$ vera punkt sem uppfyllir
+jöfnurnar.   
+Gerum ráð fyrir að allar fyrsta stigs
+hlutafleiður fallanna $F_{(1)},\ldots, F_{(n)}$ séu samfelldar á opinni kúlu umhverfis $P_0$ og að
+$$\frac{\partial(F_{(1)}, \ldots, F_{(n)})}
+{\partial( y_1, \ldots, y_n)}\,\bigg|_{P_0}\neq 0.$$
+
+
+\subsection{}
+\subsubsection{}
+$\text{Þá eru til föll} \qquad \varphi_1(x_1,\ldots,x_m),\ldots,\varphi_n(x_1,\ldots,x_m)$ \\
+á opinni kúlu $B$ umhverfis $(a_1,\ldots,a_m)$
+þannig að 
+$$\varphi_1(a_1,\ldots,a_m)=b_1,\ldots,\varphi_n(a_1,\ldots,a_m)=b_n \qquad \text{og}$$
+\begin{align*}
+F_{(1)}(x_1,\ldots,x_m, \varphi_1(x_1,\ldots,x_m),\ldots,
+\varphi_n(x_1,\ldots,x_m)&=0\\
+F_{(2)}(x_1,\ldots,x_m, \varphi_1(x_1,\ldots,x_m),\ldots,
+\varphi_n(x_1,\ldots,x_m)&=0\\
+\vdots\\
+F_{(n)}(x_1,\ldots,x_m, \varphi_1(x_1,\ldots,x_m),\ldots,
+\varphi_n(x_1,\ldots,x_m)&=0
+\end{align*}
+fyrir alla punkta $(x_1,\ldots,x_m)$ í $B$.
+Enn fremur fæst að %ATH x_j í sæti i
+$$\frac{\partial \varphi_i}{\partial x_j}
+=\frac{\partial y_i}{\partial x_j}
+=-\frac{\frac{\partial(F_{(1)}, \ldots, F_{(n)})}
+{\partial( y_1, \ldots,x_j,\ldots y_n)}}
+{\frac{\partial(F_{(1)}, \ldots, F_{(n)})}{\partial( y_1, \ldots, y_n)}}.$$
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Setning \kaflanr.\arabic{mycount} (Setningin um staðbundna andhverfu)}\stepcounter{mycount}
+Látum $$\fv(x_1,\ldots,
+x_n)=(f_1(x_1,\ldots,x_n),\ldots,f_n(x_1,\ldots,x_n))$$ vera vörpun af
+$n$ breytistærðum sem tekur gildi í $\Rn$ og er skilgreind á opnu
+mengi í $\Rn$.   Gerum ráð fyrir að allar
+fyrsta stigs hlutafleiður fallanna $f_1, \ldots, f_n$ séu samfelld
+föll.  Ef Jacobi-fylkið $D\fv(\xv_0)$ er andhverfanlegt í punkti
+$\xv_0$ á skilgreiningarsvæði $\fv$ þá er til opin kúla $B_{\xv}$ utan
+um $\xv_0$ og opin kúla $B_{\yv}$ utan um $\yv_0=f(\xv_0)$ og vörpun
+$\gv:B_{\yv}\rightarrow B_{\xv}$ þannig að 
+$\gv(\fv(\xv))=\xv$ fyrir alla punkta $\xv\in B_{\xv}$ og 
+$\fv(\gv(\yv))=\yv$ fyrir alla punkta $\yv\in B_{\yv}$.
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Upprifjun \kaflanr.\arabic{mycount} (Taylor-regla í einni breytistærð.)}\stepcounter{mycount}
+  Látum 
+$f$ vera $n+1$-diffranlegt fall af einni breytistærð.  Margliðan 
+$$P_{(n)}(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2
++\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n$$
+kallast {\em $n$-ta stigs Taylor-margliða $f$ með miðju í $a$}.
+Til er punktur $s$ á milli $a$ og $x$ þannig að 
+$$E_{(n)}(x)=f(x)-P_{(n)}(x)=\frac{f^{(n+1)}(s)}{(n+1)!}(x-a)^{n+1}.$$
+Fáum svo að 
+\begin {align*}
+&f(x)=P_{(n)}(x)+E_{(n)}(x) \\
+&=f(a)+f'(a)(x-a)+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n
++\frac{f^{(n+1)}(s)}{(n+1)!}(x-a)^{n+1}, 
+\end {align*}
+
+ 
+sem er kallað {\em $n$-ta stigs Taylor-formúla.}
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+ Látum $f(x,y)$ vera fall þannig að fyrsta stigs hlutafleiður $f$ eru skilgreindar og samfelldar.  Margliðan
+$$P_{(1)}(x,y)=f(a,b)+f_1(a,b)(x-a)+f_2(a,b)(y-b)$$
+kallast {\em fyrsta stigs Taylor-margliða $f$ með miðju í $(a,b)$}. 
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+
+Látum $f(x,y)$ vera fall þannig að fyrsta og annars
+stigs hlutafleiður $f$ eru skilgreindar og samfelldar.  Margliðan
+\begin{align*}P_{(2)}&(x,y)=f(a,b)+f_1(a,b)(x-a)+f_2(a,b)(y-b)\\
+&+\frac{1}{2}\big(f_{11}(a,b)(x-a)^2+
+2f_{12}(a,b)(x-a)(y-b)+f_{22}(a,b)(y-b)^2\big)
+\end{align*}
+kallast {\em annars stigs Taylor-margliða $f$ með miðju í $(a,b)$}.  
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Skilgreining og athugasemd \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Skilgreinum tvo {\em diffurvirkja} $D_1$ og $D_2$ þannig að 
+$$D_1f(a,b)=f_1(a,b)\qquad\mbox{og}\qquad
+D_2f(a,b)=f_2(a,b).$$
+Athugið að ef hlutafleiður $f$ af nógu háum stigum eru allar skilgreindar og samfelldar þá er $D_1D_2=D_2D_1$, þ.e.a.s.\ ekki skiptir máli í hvaða röð er diffrað, bara hve oft er diffrað með tilliti til hvorrar breytu.
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Upprifjun \kaflanr.\arabic{mycount}(Tvíliðuregla)}\stepcounter{mycount}
+Skilgreinum 
+$${n\choose j}=\frac{n!}{j!(n-j)!}.$$
+Talan ${n\choose j}$ (lesið $n$ yfir $j$) er $j+1$ talan í $n+1$ línu Pascals-þríhyrningsins.
+ Höfum að 
+$$(x+y)^n=\sum_{j=0}^n \textstyle{n\choose j}x^jy^{n-j}.$$
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Regla \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+
+Ef $f(x,y)$ er fall þannig að allar hlutafleiður af $n$-ta og lægri stigum eru samfelldar þá gildir að 
+$$(hD_1+kD_2)^nf(a,b)=\sum_{j=0}^n \textstyle{n\choose j}
+h^jk^{n-j}D_1^jD_2^{n-j}f(a,b).$$
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Skilgreining \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+Fyrir fall $f(x,y)$ þannig að allar
+hlutafleiður af $n$-ta og lægri stigum eru samfelldar þá er {\em $n$-ta
+stigs Taylor-margliða $f$ með miðju í punktinum} $(a,b)$ skilgreind sem
+margliðan  
+\begin{align*}
+P_{(n)}(x,y)&= \sum_{m=0}^n \frac{1}{m!}((x-a)D_1+(y-b)D_2)^m f(a,b)\\
+&=\sum_{m=0}^n\sum_{j=0}^m \frac{1}{m!}\textstyle{m\choose j}
+D_1^jD_2^{m-j}f(a,b)(x-a)^j(y-b)^{m-j}\\
+&=\sum_{m=0}^n\sum_{j=0}^m \frac{1}{j!(m-j)!}
+D_1^jD_2^{m-j}f(a,b)(x-a)^j(y-b)^{m-j}.
+\end{align*}
+
+
+
+
+
+
+\subsection{} 
+
+\subsubsection{Setning \kaflanr.\arabic{mycount}}\stepcounter{mycount}
+ Fyrir fall $f(x,y)$ þannig að allar hlutafleiður af $n+1$-ta og lægri stigum eru samfelldar þá gildir um skekkjuna í  $n$-ta stigs Taylor-nálgun að til er tala $\theta$ á milli 0 og 1 þannig að ef $h=x-a$ og $k=y-b$ þá er 
+$$f(x,y)-P_{(n)}(x,y)=\frac{1}{(n+1)!}(hD_1+kD_2)^{n+1}
+f(a+\theta h, b+\theta k).$$
+
+
+
+
+\end{document}

@@ -1,0 +1,2704 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Brúun &mdash; Töluleg greining (STÆ405G) 0.1</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<script src="http://sagecell.sagemath.org/static/jquery.min.js"></script>
+	<script src="http://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    
+    <script> 
+    // the buttonText string says what will be written on the 
+    // sage cell evaluation button.
+    // It can be changed here.
+    var buttonText = "Keyra"
+    </script>
+    
+	<script>sagecell.makeSagecell({inputLocation: ".sage", evalButtonText:buttonText});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsage", languages:["r"], evalButtonText: buttonText });</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osage", languages:["octave"], evalButtonText: buttonText});</script>
+
+	<script>sagecell.makeSagecell({inputLocation: ".sageAuto", evalButtonText:buttonText, autoeval: true});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAuto", languages:["r"], evalButtonText: buttonText, autoeval: true});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAuto", languages:["octave"], evalButtonText: buttonText, autoeval: true});</script>
+	
+    <script>sagecell.makeSagecell({inputLocation: ".sageAutoHidden", evalButtonText :buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+    
+    <script>sagecell.makeSagecell({inputLocation: ".rsageAutoHidden", languages:["r"], evalButtonText: buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+    <script>sagecell.makeSagecell({inputLocation: ".osageAutoHidden", languages:["octave"], evalButtonText:buttonText, autoeval: true, hide: ["evalButton"], template: sagecell.templates.minimal});</script>
+
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+	</style>
+
+    
+    <link rel="top" title="Töluleg greining (STÆ405G) 0.1" href="index.html"/>
+        <link rel="next" title="4. Töluleg diffrun" href="kafli04.html"/>
+        <link rel="prev" title="2. Núllstöðvar" href="kafli02.html"/>
+ 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Töluleg greining (STÆ405G)
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#hva-er-toluleg-greining">1.1. Hvað er töluleg greining?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#tilraun-a-svari">1.1.1. Tilraun að svari</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#daemi-eldflaug">1.2. Dæmi: Eldflaug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#samleitni-runa">1.3. Samleitni runa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#nokkur-atrii-um-samleitni-runa">1.3.1. Nokkur atriði um samleitni runa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-samleitni">1.3.2. Skilgreining: Samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining">1.3.3. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#setning-taylors">1.4. Setning Taylors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-fyrir-diffranleg-foll">1.4.1. Ritháttur fyrir diffranleg föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#nalgun-me-taylor-margliu">1.4.2. Nálgun með Taylor-margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#index-3">1.4.3. Setning Taylors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#vibot">1.4.4. Viðbót</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#synidaemi-nalgun-a-fallgildum">1.4.5. Sýnidæmi: Nálgun á fallgildum <span class="math">x-\sin x</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#skekkjur">1.5. Skekkjur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skekkja-i-nalgun-a-rauntolu">1.5.1. Skekkja í nálgun á rauntölu <span class="math">r</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fyrirframmat-a-skekkju">1.5.2. Fyrirframmat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#eftiramat-a-skekkju">1.5.3. Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ofurlinuleg-samleitni-eftiramat-a-skekkju">1.5.4. Ofurlínuleg samleitni &#8211; Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#linuleg-samleitni-eftiramat-a-skekkju">1.5.5. Línuleg samleitni &#8211; Eftirámat á skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#synidaemi">1.5.6. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utreikningur-a-samleitnistigi">1.5.7. Útreikningur á samleitnistigi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#meira-um-skekkjur">1.6. Meira um skekkjur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-markverir-stafir">1.6.1. Skilgreining: Markverðir stafir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#urlausn-annars-stigs-jofnu">1.6.2. Úrlausn annars stigs jöfnu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ahrif-gagnaskekkju">1.6.3. Áhrif gagnaskekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id2">1.6.4. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur">1.6.5. <span class="math">O</span>-ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-og-skekkja-i-taylor-nalgnum">1.6.6. <span class="math">O</span>-ritháttur og skekkja í Taylor-nálgnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id3">1.6.7. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#rithattur-fyrir-runur">1.6.8. <span class="math">O</span>-ritháttur fyrir runur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#tvo-synidaemi">1.6.9. Tvö sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#fleytitalnakerfi">1.7. Fleytitalnakerfið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#framsetning-a-tolum">1.7.1. Framsetning á tölum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mantissa">1.7.2. Mantissa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#markverir-stafir">1.7.3. Markverðir <span class="math">\beta</span>-stafir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#afruningur-talna">1.7.4. Afrúningur talna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fleytitolukerfi">1.7.5. Fleytitölukerfi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ieee-stalar">1.7.6. IEEE staðlar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utreikningur-i-tugakerfi">1.7.7. Útreikningur í tugakerfi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Núllstöðvar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#nalgun-a-nullsto">2.1. Nálgun á núllstöð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining">2.1.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi">2.1.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#athugasemd">2.1.3. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#helmingunarafer">2.2. Helmingunaraðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#milligildissetningin">2.2.1. Milligildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#afleiing">2.2.2. Afleiðing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-helmingunarafer">2.2.3. Skekkjumat í helmingunaraðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fyrirframmat-a-skekkju">2.2.4. Fyrirframmat á skekkju</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#fastapunktsafer">2.3. Fastapunktsaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id1">2.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#tenging-vi-nullstovar">2.3.2. Tenging við núllstöðvar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#reiknirit">2.3.3. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-herping">2.3.4. Skilgreining: Herping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning">2.3.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fastapunktssetningin">2.3.6. Fastapunktssetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fastapunktsafer-er-a-minnsta-kosti-linulega-samleitin">2.3.7. Fastapunktsaðferð er að minnsta kosti línulega samleitin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#sniilsafer">2.4. Sniðilsaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id2">2.4.1. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#samleitin-runa-stefnir-a-nullsto">2.4.2. Samleitin runa stefnir á núllstöð <span class="math">f</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-nalgun-a-me">2.4.3. Skekkjumat í nálgun á <span class="math">f(x)</span> með <span class="math">p_n(x)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-sniilsafer">2.4.4. Skekkjumat í sniðilsaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.4.5. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#afer-newtons">2.5. Aðferð Newtons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id4">2.5.1. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#upprifjun">2.5.2. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id5">2.5.3. Samleitin runa stefnir á núllstöð <span class="math">f</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id6">2.5.4. Skekkjumat í nálgun á <span class="math">f(x)</span> með <span class="math">p_n(x)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skekkjumat-i-afer-newtons">2.5.5. Skekkjumat í aðferð Newtons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id7">2.5.6. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#samanburur-a-aferum">2.6. Samanburður á aðferðum</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Brúun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">3.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#markmii">3.1.1. Markmiðið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3.1.2. Brúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#afhverju-margliur">3.1.3. Afhverju margliður?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#margliur">3.1.4. Margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mismunandi-leiir-a-framsetningu">3.1.5. Mismunandi leiðir á framsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#newton-form-margliu">3.1.6. Newton-form margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknirit-horners">3.1.7. Reiknirit Horners</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#margliubruun-lagrange-form">3.2. Margliðubrúun: Lagrange-form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#margliubruun">3.2.1. Margliðubrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-bruunarmarglian-er-otviraett-akvoru">3.2.2. Setning: Brúunarmargliðan er ótvírætt ákvörðuð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-bruunarmarglian-er-til">3.2.3. Setning: Brúunarmargliðan er til</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lagrange-form-bruunarmargliunnar">3.2.4. Lagrange-form brúunarmargliðunnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lagrange-margliur-tilfellin">3.2.5. Lagrange-margliður, tilfellin <span class="math">m=0,1,2</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lagrange-margliur-almenna-tilfelli">3.2.6. Lagrange-margliður almenna tilfellið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synidaemi">3.2.7. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#margliubruun-newton-form">3.3. Margliðubrúun: Newton-form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#formula-fyrir">3.3.1. Formúla fyrir <span class="math">c_0, \ldots, c_m</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mismunakvotar">3.3.2. Mismunakvótar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun-a-tilvistarsonnuninni">3.3.3. Upprifjun á tilvistarsönnuninni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mismunakvotatoflur-fyrir">3.3.4. Mismunakvótatöflur fyrir <span class="math">m=0,1,2,3</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.3.5. Sýnidæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samantekt">3.3.6. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samantekt-newton-form">3.3.7. Samantekt – Newton-form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samantekt-lagrange-margliur">3.3.8. Samantekt – Lagrange-margliður</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.4. Samantekt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lagrange-margliur">3.4.1. Lagrange-margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#newton-margliur">3.4.2. Newton-margliður</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#margliubruun-margfaldir-punktar">3.5. Margliðubrúun: Margfaldir punktar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#margfeldni-punktanna">3.5.1. Margfeldni punktanna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sertilfelli">3.5.2. Sértilfelli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun">3.5.3. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#otviraeni-lausnarinnar">3.5.4. Ótvíræðni lausnarinnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tilvist-a-lausn">3.5.5. Tilvist á lausn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.5.6. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bruunarmarglian-fundin">3.5.7. Brúunarmargliðan fundin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skynsamlegir-skiptipunktar-og-chebyshev-margliur">3.6. Skynsamlegir skiptipunktar og Chebyshev margliður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#um-val-a-bruunarpunktum">3.6.1. Um val á brúunarpunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-oheppilega-skiptipunkta">3.6.2. Dæmi um óheppilega skiptipunkta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#val-a-bruunarpunktum">3.6.3. Val á brúunarpunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">3.6.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verkefni">3.6.5. Verkefnið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-chebyshev-margliur">3.6.6. Skilgreining: Chebyshev margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">3.6.7. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stalaar-chebyshev-margliur">3.6.8. Staðlaðar Chebyshev margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skynsamlegir-skiptipunktar-fyrir-bili">3.6.9. Skynsamlegir skiptipunktar fyrir bilið <span class="math">[-1,1]</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-oheppilega-skiptipunkta-skoa-aftur">3.6.10. Dæmi um óheppilega skiptipunkta skoðað aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skynsamlegir-skiptipunktar-fyrir-bil">3.6.11. Skynsamlegir skiptipunktar fyrir bil <span class="math">[a,b]</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lagmorkun-a-skekkju-me-tilliti-til">3.6.12. Lágmörkun á skekkju með tilliti til <span class="math">\ell_2</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-legendre-margliurnar">3.6.13. Skilgreining: Legendre margliðurnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.6.14. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3.6.15. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-stalaar-legendre-margliur">3.6.16. Skilgreining: Staðlaðar Legendre margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-lagmorkun-me-legendre-margliunum">3.6.17. Setning: Lágmörkun með Legendre margliðunum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nullstovar-fyrir">3.6.18. Núllstöðvar <span class="math">P_n</span>, fyrir <span class="math">n=1,\ldots,10</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">3.6.19. Dæmi um óheppilega skiptipunkta skoðað aftur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd-um-og">3.6.20. Athugasemd um <span class="math">\ell_\infty</span> og <span class="math">\ell_2</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skekkjumat">3.7. Skekkjumat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nalgun-a-follum-me-marglium">3.7.1. Nálgun á föllum með margliðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nalgun-a-fallgildum">3.7.2. Nálgun á fallgildum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">3.7.3. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tilfelli-egar-vi-hofum-aeins-einn-punkt">3.7.4. Tilfellið þegar við höfum aðeins einn punkt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#margfeldni-nullstova">3.7.5. Margfeldni núllstöðva</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-skekkjumat">3.7.6. Setning: Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">3.7.7. Samantekt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">3.7.8. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#splaesibruun">3.8. Splæsibrúun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#almennt-um-splaesibruun">3.8.1. Almennt um splæsibrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fyrsta-stigs-splaesibruun">3.8.2. Fyrsta stigs splæsibrúun:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rija-stigs-splaesibruun">3.8.3. Þriðja stigs splæsibrúun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jofnuhneppi">3.8.4. Jöfnuhneppið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tilfelli-1-ekki-hnuts-endaskilyri">3.8.5. Tilfelli 1: Ekki-hnúts endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tilfelli-2-vingu-endaskilyri">3.8.6. Tilfelli 2: Þvinguð endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tilfelli-3-natturleg-endaskilyri">3.8.7. Tilfelli 3: Náttúrleg endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tilfelli-4-lotubundi-endaskilyri">3.8.8. Tilfelli 4: Lotubundið endaskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#teikning-a-ferlum-i-planinu">3.8.9. Teikning á ferlum í planinu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afer-minnstu-fervika">3.9. Aðferð minnstu fervika</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jafna-bestu-linu">3.9.1. Jafna bestu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smavegis-linuleg-algebra">3.9.2. Smávegis línuleg algebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-26">3.9.3. Jafna bestu línu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jafna-bestu-annars-stigs-margliu">3.9.4. Jafna bestu annars stigs margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synidaemi-besta-annars-stigs-marglia">3.9.5. Sýnidæmi: besta annars stigs margliða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Töluleg diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#inngangur">4.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#toluleg-deildun-og-heildun">4.1.1. Töluleg deildun og heildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#meginhugmynd-i-ollum-nalgunaraferunum">4.1.2. Meginhugmynd í öllum nálgunaraðferðunum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#toluleg-deildun">4.2. Töluleg deildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#frammismunur">4.2.1. Frammismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#bakmismunur">4.2.2. Bakmismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#misettur-mismunakvoti">4.2.3. Miðsettur mismunakvóti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#misettur-mismunakvoti-fyrir-ara-afleiu">4.2.4. Miðsettur mismunakvóti fyrir aðra afleiðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#almenn-afer-til-a-nalga-afleiur">4.2.5. Almenn aðferð til að nálga afleiður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skekkjumat">4.2.6. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id1">4.2.7. Frammismunur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id2">4.2.8. Miðsettur mismunakvóti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id3">4.2.9. Miðsettur mismunakvóti fyrir aðra afleiðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#richardson-utgiskun">4.3. Richardson útgiskun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#utleisla-a-misettum-mismunakvota">4.3.1. Útleiðsla á miðsettum mismunakvóta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#helmingun-a-skrefinu">4.3.2. Helmingun á skrefinu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjora-stigs-nalgun">4.3.3. Fjórða stigs nálgun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#haegt-er-a-halda-afram-utgiskun">4.3.4. Hægt er að halda áfram útgiskun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#sjotta-stigs-skekkja">4.3.5. Sjötta stigs skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#almenn-rakningarformula">4.3.6. Almenn rakningarformúla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reiknirit">4.3.7. Reiknirit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id4">4.3.8. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#utleisla-a-fyrirframmati">4.3.9. Útleiðsla á fyrirframmati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#synidaemi">4.3.10. Sýnidæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#fraeilegar-spurningar">4.4. Fræðilegar spurningar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Töluleg heildun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#newton-cotes-heildun">5.1. Newton-Cotes -heildun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#synidaemi">5.2. Sýnidæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#trapisuregla">5.3. Trapisuregla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#mipunktsregla">5.4. Miðpunktsregla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#regla-simpsons">5.5. Regla Simpsons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samsettu-reglurnar">5.6. Samsettu reglurnar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samsetta-trapisureglan">5.7. Samsetta trapisureglan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samsetta-mipunktsreglan">5.8. Samsetta miðpunktsreglan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samsetta-simpson">5.9. Samsetta Simpson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkjumat">5.10. Skekkjumat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#mealgildissetningin-fyrir-heildi">5.11. Meðalgildissetningin fyrir heildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#id1">5.12. Trapisuregla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkjumat-i-samsettu-reglunni">5.13. Skekkjumat í samsettu reglunni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkja-i-mipunktsreglu">5.14. Skekkja í miðpunktsreglu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkja-i-samsettu-mipunktsreglu">5.15. Skekkja í samsettu miðpunktsreglu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkja-i-reglu-simpsons">5.16. Skekkja í reglu Simpsons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkja-samsettu-simpsonreglu">5.17. Skekkja samsettu Simpsonreglu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#romberg-utgiskun">5.17.1. Romberg-útgiskun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#euler-maclauren-formulan">5.18. Euler-Maclauren-formúlan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#afleiing-af-euler-maclaurin-formulu">5.19. Afleiðing af Euler-Maclaurin-formúlu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#itrekun-a-samsettu-trapisureglunni-me-helmingun">5.20. Ítrekun á samsettu trapisureglunni með helmingun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#reikniriti-fyrir-romberg-heildun">5.21. Reikniritið fyrir Romberg-heildun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skekkjumat-i-romberg-heildun">5.22. Skekkjumat í Romberg heildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#fraeilegar-spurningar">5.22.1. Fræðilegar spurningar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Upphafsgildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#almenn-atrii">6.1. Almenn atriði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fyrsta-stigs-afleiujafna-me-upphafsgildi">6.1.1. Fyrsta stigs afleiðujafna með upphafsgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tilvist-og-otviraeni-lausna">6.1.2. Tilvist og ótvíræðni lausna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#upphafsgildisverkefni-fyrir-hneppi">6.1.3. Upphafsgildisverkefni fyrir hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#jofnur-af-stigi-og-jafngild-hneppi">6.1.4. Jöfnur af stigi <span class="math">&gt;1</span> og jafngild hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#jafngilt-hneppi">6.1.5. Jafngilt hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tilvist-og-otviraeni-lausna-a-hneppum">6.1.6. Tilvist og ótvíræðni lausna á hneppum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#rithattur">6.1.7. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#heildum-lausnina">6.1.8. Heildum lausnina</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#almennt-um-nalgunaraferir">6.1.9. Almennt um nálgunaraðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#beinar-og-obeinar-aferir">6.1.10. Beinar og óbeinar aðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#eins-skrefs-aferir-og-fjolskrefaaferir">6.1.11. Eins skrefs aðferðir og fjölskrefaaðferðir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#afer-eulers">6.2. Aðferð Eulers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#matlab-forrit-fyrir-afer-eulers">6.2.1. Matlab forrit fyrir aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#afer-eulers-profu">6.2.2. Aðferð Eulers prófuð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#runge-kutta-aferir-afer-eulers-endurbaett">6.3. Runge-Kutta aðferðir – Aðferð Eulers endurbætt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#anna-afbrigi-af-afer-eulers-afer-heun">6.3.1. Annað afbrigði af aðferð Eulers – Aðferð Heun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#forsagnar-og-leirettingarafer">6.3.2. Forsagnar- og leiðréttingaraðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#stigs-runge-kutta-afer">6.3.3. 2.&nbsp;stigs Runge-Kutta-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#matlab-forrit-fyrir-2-stigs-runge-kutta-afer">6.3.4. Matlab forrit fyrir 2.&nbsp;stigs Runge-Kutta-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#klassiska-fjora-stigs-runge-kutta-aferin">6.3.5. Klassíska fjórða stigs Runge-Kutta aðferðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#runge-kutte-4-profu">6.3.6. Runge-Kutte 4 prófuð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#skekkjumat-samleitni-og-stougleiki">6.4. Skekkjumat, samleitni og stöðugleiki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#staarskekkja-i-afer-eulers">6.4.1. Staðarskekkja í aðferð Eulers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#styring-a-staarskekkju-og-breytileg-skrefastaer">6.4.2. Stýring á staðarskekkju og breytileg skrefastærð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#mat-a-skrefastaer">6.4.3. Mat á skrefastærð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#aferir-me-breytilega-skrefastaer">6.5. Aðferðir með breytilega skrefastærð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#reiknirit-fyrir-runge-kutta-fehlberg-rkf45">6.5.1. Reiknirit fyrir Runge-Kutta-Fehlberg (RKF45)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#runge-kutte-fehlberg-rkf45-profu">6.5.2. Runge-Kutte-Fehlberg (RKF45) prófuð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#fjolskrefaaferir">6.6. Fjölskrefaaðferðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skrefa-adams-bashforth-afer">6.6.1. <span class="math">k</span>-skrefa Adams-Bashforth aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tveggja-skrefa-adams-bashforth-afer">6.6.2. Tveggja skrefa Adams-Bashforth-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#forrit-fyrir-tveggja-skrefa-adams-bashforth-afer">6.6.3. Forrit fyrir tveggja skrefa Adams-Bashforth-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#riggja-skrefa-adams-bashforth">6.6.4. Þriggja skrefa Adams-Bashforth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fjogurra-skrefa-adams-bashforth">6.6.5. Fjögurra skrefa Adams-Bashforth</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#greining-a-samleitni-og-stougleika">6.7. Greining á samleitni og stöðugleika</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skekkja">6.7.1. Skekkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samleitni">6.7.2. Samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi">6.7.3. Samræmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi-endurbaettu-euler-aferarinnar">6.7.4. Samræmi endurbættu Euler-aðferðarinnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samraemi-beinna-eins-skrefs-afera">6.7.5. Samræmi beinna eins skrefs aðferða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#stougleiki">6.7.6. Stöðugleiki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#lipschitz-samfelldni">6.7.7. Lipschitz-samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-um-stougleika-og-samleitni">6.7.8. Setning um stöðugleika og samleitni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#fraeilegar-spurningar">6.8. Fræðilegar spurningar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Jaðargildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#almenn-atrii-um-jaargildisverkefni">7.1. Almenn atriði um jaðargildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#jaarskilyrin-nefnast">7.1.1. Jaðarskilyrðin nefnast</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#linulegar-jofnur-dirichlet-jaarskilyri">7.2. Línulegar jöfnur – Dirichlet-jaðarskilyrði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skiptipunktar-hnutpunktar">7.2.1. Skiptipunktar / Hnútpunktar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#linulegar-afleiujofnur">7.2.2. Línulegar afleiðujöfnur:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skipt-a-afleium-og-mismunakvotum">7.2.3. Skipt á afleiðum og mismunakvótum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#dirichlet-jaarskilyri">7.2.4. Dirichlet-jaðarskilyrði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#jafngild-framsetning-a-hneppinu">7.2.5. Jafngild framsetning á hneppinu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#linulega-jofnuhneppi-a-fylkjaformi">7.2.6. Línulega jöfnuhneppið á fylkjaformi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#oekktar-staerir-og-haegri-hli">7.2.7. Óþekktar stærðir og hægri hlið</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#linulegar-jofnur-blondu-jaarskilyri">7.3. Línulegar jöfnur – Blönduð jaðarskilyrði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#felugildi-leyst-ut">7.3.1. Felugildið leyst út</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#jofnur-fyrir-gildin-i-endapunktum">7.3.2. Jöfnur fyrir gildin í endapunktum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#hneppi-a-fylkjaformi">7.3.3. Hneppið á fylkjaformi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#fyrsta-og-siasta-lina-hneppisins">7.3.4. Fyrsta og síðasta lína hneppisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#haegri-hli-hneppisins">7.3.5. Hægri hlið hneppisins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#samantekt">7.3.6. Samantekt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Jöfnuhneppi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#linuleg-algebra">8.1. Línuleg algebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linuleg-jofnuhneppi">8.1.1. Línuleg jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#lausnir">8.1.2. Lausnir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fjoldi-agera">8.1.3. Fjöldi aðgerða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vandamal-me-stougleika">8.1.4. Vandamál með stöðugleika</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#athugasemd">8.1.5. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#vending-e-pivoting">8.2. Vending (e. pivoting)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vandamali">8.2.1. Vandamálið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#lausnin">8.2.2. Lausnin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hlutvending-e-partial-pivoting">8.2.3. Hlutvending (e.&nbsp;partial pivoting)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vankantar">8.2.4. Vankantar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skolu-hlutvending-e-scaled-partial-pivoting">8.2.5. Sköluð hlutvending (e.&nbsp;scaled partial pivoting)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id1">8.2.6. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#fylkjastaall">8.3. Fylkjastaðall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#a-maela-fjarlaeg-milli-hluta">8.3.1. Að mæla fjarlægð milli hluta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#vigurstaall">8.3.2. Vigurstaðall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#skilgreining">8.3.2.1. Skilgreining</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id2">8.3.2.2. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-stala">8.3.3. Dæmi um staðla</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#staallinn">8.3.3.1. <span class="math">\ell_2</span> staðallinn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id3">8.3.3.2. <span class="math">\ell_\infty</span> staðallinn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#stalar">8.3.3.3. <span class="math">\ell_p</span> staðlar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id4">8.3.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id5">8.3.5. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fylkjastaall-skilgreindur-ut-fra-vigurstali">8.3.6. Fylkjastaðall skilgreindur út frá vigurstaðli</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id6">8.3.6.1. Skilgreining</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id7">8.3.6.2. Athugasemd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id8">8.3.6.3. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-fylkjastaal">8.3.7. Dæmi um fylkjastaðal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id9">8.3.7.1. Athugasemd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id10">8.3.7.2. <span class="math">\|\cdot\|_\infty</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#eigingildi">8.3.8. Eigingildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#rof-og-eiginleikar-ess">8.3.9. Róf og eiginleikar þess</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id11">8.3.9.1. Skilgreining</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#setning">8.3.9.2. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#skekkjumat-og-astandstala">8.4. Skekkjumat og ástandstala</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hvernig-a-a-maela-skekkju">8.4.1. Hvernig á að mæla skekkju</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skekkjumat">8.4.2. Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#astandstala-fylkis-og-mat-a-hlutfallslegri-skekkju">8.4.3. Ástandstala fylkis og mat á hlutfallslegri skekkju</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#mati">8.4.3.1. Matið</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id12">8.4.3.2. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ahrif-gagnaskekkju">8.4.4. Áhrif gagnaskekkju</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#lu-attun">8.5. LU-þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#nokkrar-skilgreiningar">8.5.1. Nokkrar skilgreiningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#urlausn-a-jofnuhneppi-me-nera-rihyrningsfylki">8.5.2. Úrlausn á jöfnuhneppi með neðra þríhyrningsfylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#talning-a-agerunum-vi-urlausnina">8.5.3. Talning á aðgerðunum við úrlausnina</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#urlausn-a-jofnuhneppi-me-efra-rihyrningsfylki">8.5.4. Úrlausn á jöfnuhneppi með efra þríhyrningsfylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linuagerir">8.5.5. Línuaðgerðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ny-syn-a-gauss-eyingu">8.5.6. Ný sýn á Gauss-eyðingu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#nanar-um">8.5.7. Nánar um <span class="math">M_i</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#attun">8.5.8. <span class="math">LU</span>-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#attun-og-skolu-hlutvending">8.5.9. <span class="math">LU</span>-þáttun og sköluð hlutvending</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id17">8.5.9.1. Vandamálið</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id18">8.5.9.2. Lausnin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id19">8.5.9.3. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#urlausn">8.5.10. Úrlausn <span class="math">A\mbox{${\bf x}$}=\mbox{${\bf b}$}</span>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fjoldi-reikniagera-fyrir-attun">8.5.11. Fjöldi reikniaðgerða fyrir <span class="math">LU</span>-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#morg-jofnuhneppi">8.5.12. Mörg jöfnuhneppi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#fastapunktsaferir-fyrir-linuleg-jofnuhneppi">8.6. Fastapunktsaðferðir fyrir línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#itrekunaraferir-til-ess-a-leysa-linuleg-jofnuhneppi">8.6.1. Ítrekunaraðferðir til þess að leysa línuleg jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fastapunktsitrekun-til-ess-a-leysa-linuleg-jofnuhneppi">8.6.2. Fastapunktsítrekun til þess að leysa línuleg jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#fastapunktsitrekun-skekkjumat">8.6.3. Fastapunktsítrekun - skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilyri-fyrir-samleitni">8.6.4. Skilyrði fyrir samleitni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skiptingarafer-e-splitting-method">8.6.5. Skiptingaraðferð (e.&nbsp;splitting method)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jacobi-afer">8.6.6. Jacobi-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#gauss-seidel-afer">8.6.7. Gauss-Seidel-aðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#sor-afer-e-successive-over-relaxation">8.6.8. SOR-aðferð (e.&nbsp;successive over-relaxation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#samleitni-gauss-seidel-aferar">8.6.9. Samleitni Gauss-Seidel-aðferðar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#newton-afer-fyrir-jofnuhneppi">8.7. Newton-aðferð fyrir jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#jacobi-fylki">8.7.1. Jacobi-fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#afer-newtons-fyrir-hneppi">8.7.2. Aðferð Newtons fyrir hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#matlab-forrit-fyrir-hneppi">8.7.3. Matlab-forrit fyrir hneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#synidaemi">8.7.4. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. Eigingildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#eigingildi-og-eiginvigrar">9.1. Eigingildi og eiginvigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#nalgun-a-eigingildum-og-eiginvigrum">9.1.1. Nálgun á eigingildum og eiginvigrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#grof-stasetning-a-eigingildum">9.1.2. Gróf staðsetning á eigingildum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#skifusetning-gerschgorins">9.1.2.1. Skífusetning Gerschgorins</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#eiginvigragrunnar">9.1.3. Eiginvigragrunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#veldaafer">9.2. Veldaaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#reiknirit-til-ess-a-akvara-staersta-eigingildi-fylkis">9.2.1. Reiknirit til þess að ákvarða stærsta eigingildi fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#samleitnin">9.2.2. Samleitnin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#samhverf-fylki">9.2.3. Samhverf fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#meira-um-eigingildi-og-eiginvigra">9.2.4. Meira um eigingildi og eiginvigra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#andhverf-veldaafer">9.3. Andhverf veldaaðferð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#reiknirit-til-ess-a-nalga-eigingildi-og-eiginvigra">9.3.1. Reiknirit til þess að nálga eigingildi og eiginvigra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#fraeilegar-spurningar">9.4. Fræðilegar spurningar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. Monte Carlo hermanir</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#kennsluaaetlun">Kennsluáætlun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#skipulag-namskeisins">Skipulag námskeiðsins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#kennsla">Kennsla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#kennsluefni">Kennsluefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#matlab-octave">Matlab/Octave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#heimadaemi-og-daematimar">Heimadæmi og dæmatímar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#verkefni">Verkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#lokaprof">Lokapróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#namsmat">Námsmat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#fragangur-heimadaema">Frágangur heimadæma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#gagnlegir-tenglar">Gagnlegir tenglar</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Töluleg greining (STÆ405G)</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>3. Brúun</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/kafli03.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bruun">
+<h1>3. Brúun<a class="headerlink" href="#bruun" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p><em>Over the centuries, mankind has tried many ways of combating the forces of evil...
+prayer, fasting, good works and so on. Up until Doom, no one seemed to have thought
+about the double-barrel shotgun. Eat leaden death, demon.</em>
+&#8211; Terry Pratchett</p>
+<div class="section" id="inngangur">
+<h2>3.1. Inngangur<a class="headerlink" href="#inngangur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="markmii">
+<span id="index-0"></span><h3>3.1.1. Markmiðið<a class="headerlink" href="#markmii" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Viðfangsefni þessa kafla er að finna ferla sem ganga gegnum fyrirfram
+gefna <em>brúunarpunkta</em> <span class="math">(x_0,y_0),\dots,(x_m,y_m)</span> í planinu eða liggja nálægt
+punktunum í einhverjum skilningi.</p>
+<p>Fyrst viljum við finna graf margliðu <span class="math">p</span> sem fer gegnum punktana.
+Þá þurfum við að gefa okkur að <span class="math">x_i\neq x_j</span> ef <span class="math">i\neq j</span>.</p>
+<p>Við sýnum fram á að það sé alltaf hægt að finna margliðu <span class="math">p</span> af
+stigi <span class="math">\leq m</span> sem uppfyllir <span class="math">p(x_i)=y_i</span> í öllum punktum og
+að slík margliða sé ótvírætt ákvörðuð.</p>
+<p>Hún nefnist <em>brúunarmargliða</em> fyrir punktana
+<span class="math">(x_0,y_0),\dots,(x_m,y_m)</span>.</p>
+<p>Við alhæfum þetta verkefni með því að úthluta sérhverjum punkti jákvæðri
+heiltölu <span class="math">m_i</span> og krefjast þess graf margliðunnar fari í gegnum
+alla punktana og til viðbótar að allar afleiður <span class="math">p^{(j)}</span> upp að
+stigi <span class="math">m_i-1</span> taki einnig fyrirfram gefin gildi <span class="math">y^{(j)}_i</span>.</p>
+</div>
+<div class="section" id="id1">
+<h3>3.1.2. Brúun<a class="headerlink" href="#id1" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við tilraunir þá fáum við oft aðeins strjálar mælingar, t.d.&nbsp;ef við
+mælum hljóðhraða við mismunandi hitastig. Hins vegar þá viljum við vita
+hvert sambandið er fyrir öll möguleg hitastig. Brúunin er margliða og
+hún skilgreind er fyrir allar rauntölur og ``brúar`` því gildin
+milli mælipunktanna.</p>
+</div>
+<div class="section" id="afhverju-margliur">
+<span id="index-1"></span><h3>3.1.3. Afhverju margliður?<a class="headerlink" href="#afhverju-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ul>
+<li><p class="first">Einfalt að meta fallgildin fyrir margliður (<a class="reference internal" href="#reiknirit-horners">Reiknirit Horners</a>).</p>
+</li>
+<li><p class="first">Einfalt að diffra og heilda margliður.</p>
+</li>
+<li><p class="first">Margliður eru óendanlega oft diffranlegar.</p>
+</li>
+<li><p class="first"><em>Setning Weierstrass:</em> Látum <span class="math">f</span> vera samfellt fall á bili
+<span class="math">[a,b]</span>. Fyrir sérhvert <span class="math">{\varepsilon}&gt; 0</span> þá er til
+margliða <span class="math">p</span> þannig að</p>
+<div class="math">
+<p><span class="math">\|f-p\|_\infty := \max_{x\in [a,b]} |f(x)-p(x)| &lt; {\varepsilon}.</span></p>
+</div></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Setning Weierstrass segir að margliður nægja til að nálga samfelld föll.
+Það er sama hvað samfellda fall við skoðum það er alltaf til margliða
+sem nálgar það eins vel og við viljum á lokuðu bili.</p>
+</div>
+</div>
+<div class="section" id="margliur">
+<span id="index-2"></span><h3>3.1.4. Margliður<a class="headerlink" href="#margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fall <span class="math">p</span> af gerðinni</p>
+<div class="math">
+<p><span class="math">p(x) = a_0 + a_1 x + \ldots + a_m x^m</span></p>
+</div><p>þar sem <span class="math">m</span> er heiltala og <span class="math">a_0, \ldots, a_m</span> eru tvinntölur
+nefnist margliða.</p>
+<p>Stærsta talan <span class="math">j</span> þannig að <span class="math">a_j \not= 0</span> nefnist <em>stig
+margliðunnar</em> <span class="math">p</span>.</p>
+<p>Ef allir stuðlarnir eru 0 þá nefnist <span class="math">p</span> <em>núllmargliðan</em> og við
+segjum að stig hennar sé <span class="math">-\infty</span>.</p>
+<p>Munum að stuðullinn <span class="math">a_j</span> við veldið <span class="math">x^j</span> er gefinn með
+formúlunni</p>
+<div class="math">
+<p><span class="math">a_j = \frac{p^{(j)}(0)}{j!}, \quad j = 0,1,2,\ldots,m.</span></p>
+</div></div>
+<div class="section" id="mismunandi-leiir-a-framsetningu">
+<span id="index-3"></span><h3>3.1.5. Mismunandi leiðir á framsetningu<a class="headerlink" href="#mismunandi-leiir-a-framsetningu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hægt er að setja sömu margliðuna fram á marga mismunandi vegu, en við
+nefnum framsetninguna hér að framan <em>staðalform margliðunnar</em> <span class="math">p</span>.</p>
+<p>Ef við veljum okkur einhvern punkt <span class="math">x_0 \in {{\mathbb  R}}</span>, þá
+getum við skrifað</p>
+<div class="math">
+<p><span class="math">p(x) = b_0 + b_1(x-x_0) + \ldots + b_m(x-x_0)^m</span></p>
+</div><p>og stuðlarnir <span class="math">b_j</span> eru gefnir með</p>
+<div class="math">
+<p><span class="math">b_j = \frac{p^{(j)}(x_0)}{j!}, \quad j = 0,1,2,\ldots,m.</span></p>
+</div><p>Þessi formúla er jafngild þeirri staðreynd að ef <span class="math">p</span> er margliða
+af stigi <span class="math">m</span>. Þá er Taylor-röð <span class="math">p</span> í sérhverjum punkti
+<span class="math">x_0 \in {{\mathbb  R}}</span> bara margliðan <span class="math">p</span>, og stuðlarnir í
+Taylor-röðinni eru gefnir með formúlunum fyrir <span class="math">b_j</span> að ofan.</p>
+</div>
+<div class="section" id="newton-form-margliu">
+<span id="index-4"></span><h3>3.1.6. Newton-form margliðu<a class="headerlink" href="#newton-form-margliu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við veljum okkur <span class="math">m</span> punkta <span class="math">x_0, \ldots, x_{m-1}</span> þá
+nefnist framsetning af gerðinni</p>
+<div class="math">
+<p><span class="math">p(x) = c_0 + c_1(x-x_0) + c_2(x-x_0)(x-x_1)
+    + \ldots + c_m(x-x_0)\cdots(x-x_{m-1})</span></p>
+</div><p><em>Newton-form</em> margliðunnar <span class="math">p</span> miðað við punktana
+<span class="math">x_0, \ldots,
+x_{m-1}</span>.</p>
+</div>
+<div class="section" id="reiknirit-horners">
+<span id="index-5"></span><h3>3.1.7. Reiknirit Horners<a class="headerlink" href="#reiknirit-horners" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við munum mikið fást við margliður á Newton-formi og því er nauðsynlegt
+að hafa hraðvirkt reiknirit til þess að reikna út fallgildi <span class="math">p</span> út
+frá þessari framsetningu.</p>
+<p>Eitt slíkt reiknirit er nefnt <em>reiknirit Horners</em>. Það byggir á því að
+nýta sér að þættirnir <span class="math">(x-x_j)</span> eru endurteknir í liðunum</p>
+<div class="math">
+<p><span class="math">(x-x_0), \quad (x-x_0)(x-x_1),
+    \quad (x-x_0)(x-x_1)(x-x_2), \quad \ldots</span></p>
+</div><p>Þar sem við sleppum við að hefja í veldi þá komumst við af með fáar
+reikniaðgerðir hér.</p>
+<p>Ef <span class="math">m = 2</span> má skrifa Newton-form <span class="math">p</span> sem</p>
+<div class="math">
+<p><span class="math">p(x) = c_0 + (x-x_0)(c_1 + (x-x_1) \cdot c_2).</span></p>
+</div><p>Ef <span class="math">m = 3</span> er það</p>
+<div class="math">
+<p><span class="math">p(x) = c_0 + (x-x_0)(c_1 + (x-x_1)(c_2 + (x-x_2)c_3))</span></p>
+</div><p>og ef <span class="math">m = 4</span> er það</p>
+<div class="math">
+<p><span class="math">p(x) = c_0 + (x-x_0)(c_1 + (x-x_1)(c_2 + (x-x_2)
+    (c_3 + c_4(x-x_3)))).</span></p>
+</div><p>Reikniritið vinnur á þessari stæðu með því að margfalda upp úr svigunum
+frá hægri til vinstri.</p>
+<p>Skilgreinum tölur <span class="math">b_0</span>, <span class="math">b_1</span>, <span class="math">\ldots</span> á
+eftirfarandi hátt. Fyrst setjum við</p>
+<div class="math">
+<p><span class="math">b_n = c_n.</span></p>
+</div><p>Fyrir hvert <span class="math">k</span> frá <span class="math">n-1</span> niður í 0 þá setjum við</p>
+<div class="math">
+<p><span class="math">b_k = c_k + (a - x_k) b_{k+1}.</span></p>
+</div><p>Þá er <span class="math">b_0 = p(a)</span>.</p>
+<div class="math">
+<p><span class="math">p(a) =
+    \underbrace{
+      c_0 + (a-x_0)(
+      \underbrace{
+        c_1 + (a-x_1)(
+          \underbrace{c_2 + (a-x_2)(
+        \underbrace{c_3 + (a-x_3)
+          \underbrace{c_4}_{b_4}
+          }_{b_3})
+        }_{b_2})
+      }_{b_1})
+    }_{b_0}.</span></p>
+</div></div>
+</div>
+<div class="section" id="margliubruun-lagrange-form">
+<span id="index-6"></span><h2>3.2. Margliðubrúun: Lagrange-form<a class="headerlink" href="#margliubruun-lagrange-form" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="margliubruun">
+<h3>3.2.1. Margliðubrúun<a class="headerlink" href="#margliubruun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum nú <span class="math">(x_0,y_0), \ldots, (x_m,y_m)</span> vera gefna punkta í plani.
+Við höfum áhuga á að finna margliðu <span class="math">p</span> af lægsta mögulega stigi
+þannig að</p>
+<div class="math">
+<p><span class="math">p(x_k) = y_k, \quad k = 0, \ldots, m.</span></p>
+</div><p>Slík margliða nefnist <em>brúunarmargliða</em> fyrir punktana
+<span class="math">(x_0,y_0), \ldots, (x_m,y_m)</span></p>
+<p>eða <em>brúunarmargliða gegnum punktana</em>
+<span class="math">(x_0,y_0), \ldots, (x_m,y_m)</span>.</p>
+<p>Augljóslega verðum við að gera ráð fyrir að <span class="math">x</span>-hnitin séu ólík,
+það er <span class="math">x_j \not= x_k</span> ef <span class="math">j \not= k</span>.</p>
+<p>Verkefnið að finna margliðuna <span class="math">p</span> nefnist <em>brúunarverkefni fyrir
+punktana</em> <span class="math">(x_0,y_0), \ldots, (x_m,y_m)</span>.</p>
+</div>
+<div class="section" id="setning-bruunarmarglian-er-otviraett-akvoru">
+<h3>3.2.2. Setning: Brúunarmargliðan er ótvírætt ákvörðuð<a class="headerlink" href="#setning-bruunarmarglian-er-otviraett-akvoru" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Brúunarmargliðan af stigi <span class="math">\leq m</span> fyrir <span class="math">(x_0,y_0),\ldots,(x_m,y_m)</span> er
+ótvírætt ákvörðuð.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock6'))">Sönnun</a><br /><div id="toggleblock6" style="display: none"><br/><p>Ef <span class="math">p(x)</span> og <span class="math">q(x)</span> eru tvær
+brúunarmargliður af stigi <span class="math">\leq m</span> fyrir punktana
+<span class="math">(x_0,y_0), \ldots, (x_m,y_m)</span> þá er mismunurinn
+<span class="math">r(x) = p(x) - q(x)</span> margliða af stigi <span class="math">\leq m</span> með
+núllstöðvar <span class="math">x_0, \ldots, x_m</span>. Þetta eru <span class="math">m+1</span> ólíkir
+punktar og því er <span class="math">r(x)</span> núllmargliðan samkvæmt
+<a class="reference external" href="http://www.stae.is/fletta/undirst%C3%B6%C3%B0usetning/algebrunnar">undirstöðusetningu algebrunnar</a>.
+Þar með er <span class="math">p(x) - q(x)</span> núllmargliðan, þ.e.&nbsp;<span class="math">p(x) = q(x)</span>.</p>
+</div></div></div>
+<div class="section" id="setning-bruunarmarglian-er-til">
+<h3>3.2.3. Setning: Brúunarmargliðan er til<a class="headerlink" href="#setning-bruunarmarglian-er-til" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Til er margliða <span class="math">p</span> af stigi <span class="math">\leq m</span> þannig að</p>
+<div class="math">
+<p><span class="math">p(x_0) = y_0, \quad \ldots \quad p(x_n)=y_n.</span></p>
+</div><script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock7'))">Sönnun</a><br /><div id="toggleblock7" style="display: none"><br/><p>Við notum þrepun til að sýna fram á tilvistina.</p>
+<p>Ef <span class="math">m = 0</span>, þá erum við aðeins með eitt brúunarskilyrði,
+<span class="math">p(x_0) = y_0</span>, og fastamargliðan <span class="math">p(x) = y_0</span> er lausn af
+stigi <span class="math">\leq 0</span>.</p>
+<p>G.r.f.&nbsp;að við getum leyst öll brúunarverkefni þar sem fjöldi punkta er
+<span class="math">m</span> og sýnum að við getum þá leyst verkefnið fyrir <span class="math">m+1</span>
+punkt.</p>
+<p>Látum <span class="math">q</span> vera brúunarmargliðuna af stigi <span class="math">\leq m-1</span> fyrir
+punktana <span class="math">(x_0,y_0), \ldots,
+(x_{m-1},y_{m-1})</span> og <span class="math">r</span> vera brúunarmargliðuna af stigi
+<span class="math">\leq m-1</span> fyrir punktana <span class="math">(x_1,y_1), \ldots, (x_m,y_m)</span> og
+setjum síðan</p>
+<div class="math">
+<p><span class="math">p(x) = \frac{x-x_m}{x_0-x_m}q(x) + \frac{x-x_0}{x_m-x_0}r(x),</span></p>
+</div><p><span class="math">p(x)</span> er greinilega margliða af stigi <span class="math">\leq m</span>. Skoðum nú
+gildin á <span class="math">p</span></p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+  p(x_0) &amp;= 1 \cdot q(x_0) + 0\cdot r(x_0) = y_0, \\
+  p(x_k) &amp;= \frac{x_k-x_m}{x_0-x_m}y_k
+  + \frac{x_k-x_0}{x_m-x_0}y_k = y_k,\qquad k = 1, \ldots, m-1,\\
+  p(x_m) &amp;= 0 \cdot q(x_m) + 1 \cdot r(x_m) = y_m.\end{aligned}</span></p>
+</div><p>Þar með er <span class="math">p</span> brúunarmargliðan sem uppfyllir <span class="math">p(x_j)=y_j</span>
+fyrir <span class="math">j=0,\dots,m</span> og við höfum leyst brúunarverkefnið fyrir
+<span class="math">m+1</span> punkt.</p>
+</div></div></div>
+<div class="section" id="lagrange-form-bruunarmargliunnar">
+<span id="index-7"></span><h3>3.2.4. Lagrange-form brúunarmargliðunnar<a class="headerlink" href="#lagrange-form-bruunarmargliunnar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Sönnunin á undan er í raun rakningarformúla til þess að reikna út gildi
+brúunarmargliðunnar <span class="math">p</span> fyrir punktana
+<span class="math">(x_0,y_0),\dots,(x_m,y_m)</span>.</p>
+<p>Hægt er að skrifa lausnina niður beint</p>
+<div class="math">
+<p><span class="math">p(x)=y_0\ell_0(x)+y_1\ell_2(x)+\cdots+y_m\ell_m(x),</span></p>
+</div><p>þar sem <span class="math">\ell_0,\dots,\ell_m</span> er ákveðinn grunnur fyrir rúm allra
+margliða <span class="math">{\cal P}_m</span> af stigi <span class="math">\leq m</span> og nefnast
+<em>Lagrange-margliður fyrir punktasafnið</em>
+<span class="math">(x_0,y_0),\dots,(x_m,y_m)</span>.</p>
+</div>
+<div class="section" id="lagrange-margliur-tilfellin">
+<h3>3.2.5. Lagrange-margliður, tilfellin <span class="math">m=0,1,2</span><a class="headerlink" href="#lagrange-margliur-tilfellin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ul>
+<li><p class="first"><span class="math">m=0</span> Ef <span class="math">m = 0</span> þá er <span class="math">p(x) = y_0</span> fastamargliða
+eins og við höfum séð.</p>
+</li>
+<li><p class="first"><span class="math">m=1</span> Ef <span class="math">m = 1</span>, þá blasir við að lausnin er</p>
+<div class="math">
+<p><span class="math">p(x) = y_0 \frac{(x-x_1)}{(x_0-x_1)}
+  + y_1 \frac{(x-x_0)}{(x_1-x_0)},</span></p>
+</div><p>sem er margliða af stigi <span class="math">\leq 1</span> (þ.e.&nbsp;lína) sem leysir
+brúunarverkefnið.</p>
+</li>
+<li><p class="first"><span class="math">m=2</span> Á hliðstæðan hátt fáum við fyrir <span class="math">m = 2</span> að</p>
+<div class="math">
+<p><span class="math">p(x) = y_0 \frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}
+  + y_1 \frac{(x-x_0)(x-x_2)}{(x_1-x_0)(x_1-x_2)}
+  + y_2 \frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}</span></p>
+</div><p>leysir brúunarverkefnið.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="lagrange-margliur-almenna-tilfelli">
+<h3>3.2.6. Lagrange-margliður almenna tilfellið<a class="headerlink" href="#lagrange-margliur-almenna-tilfelli" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Almennt fæst lausnin</p>
+<div class="math">
+<p><span class="math">\label{p}
+  p(x) = y_0 \, \ell_{0}(x) + y_1 \, \ell_{1}(x)
+  + \ldots + y_m \, \ell_{m}(x)</span></p>
+</div><p>þar sem</p>
+<div class="math">
+<p><span class="math">\ell_{k} = \prod\limits_{\stackrel{j=0}{j\not=k}}^m
+  \frac{(x-x_j)}{(x_k-x_j)}</span></p>
+</div><div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<div class="last math">
+<p><span class="math">\label{l}
+  \ell_{k}(x_i) = \left\{ \begin{array}{cc}
+      1 &amp; \text{ef } i = k \\
+      0 &amp; \text{ef } i \not= k
+  \end{array} \right.</span></p>
+</div></div>
+<p>Allar margliðurnar <span class="math">\ell_{k}</span> eru af stigi <span class="math">m</span> og því er
+<span class="math">p</span> af stigi <span class="math">\leq m</span>. Nú er augljóst útfrá ([p]) og ([l])
+að <span class="math">p</span> er lausn brúunarverkefnisins.</p>
+</div>
+<div class="section" id="synidaemi">
+<h3>3.2.7. Sýnidæmi<a class="headerlink" href="#synidaemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Finnið brúunarmargliðuna gegnum punktana <span class="math">(1,1)</span>, <span class="math">(2,3)</span>
+og <span class="math">(3,6)</span> með því að nota Lagrange-margliður.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock8'))">Lausn</a><br /><div id="toggleblock8" style="display: none"><br/><p>Reiknum fyrst margliðurnar <span class="math">\ell_{0}</span>, <span class="math">\ell_{1}</span> og
+<span class="math">\ell_{2}</span>:</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+  \ell_{0} &amp;= \frac{(x-2)(x-3)}{(1-2)(1-3)}
+  = \frac{(x-2)(x-3)}{2} \\
+  \ell_{1} &amp;= \frac{(x-1)(x-3)}{(2-1)(2-3)}
+  = -(x-1)(x-3) \\
+  \ell_{2} &amp;= \frac{(x-1)(x-2)}{(3-1)(3-2)}
+  = \frac{(x-1)(x-2)}{2}\end{aligned}</span></p>
+</div><p>Þá fæst að brúunarmargliðan <span class="math">p</span> er</p>
+<div class="math">
+<p><span class="math">p(x) = 1 \cdot \frac{(x-2)(x-3)}{2}
+  - 3 \cdot (x-1)(x-3)
+  + 6 \cdot \frac{(x-1)(x-2)}{2}</span></p>
+</div><p>Þetta er greinilega annars stigs margliða og auðvelt er að sannfæra sig
+um að <span class="math">p(1) = 1</span>, <span class="math">p(2) = 3</span> og <span class="math">p(3) = 6</span>.</p>
+</div></div></div>
+</div>
+<div class="section" id="margliubruun-newton-form">
+<span id="index-8"></span><h2>3.3. Margliðubrúun: Newton-form<a class="headerlink" href="#margliubruun-newton-form" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="formula-fyrir">
+<h3>3.3.1. Formúla fyrir <span class="math">c_0, \ldots, c_m</span><a class="headerlink" href="#formula-fyrir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú ætlum við að leiða út formúlu fyrir stuðlunum
+<span class="math">c_0, \ldots, c_m</span> í Newton-formi brúunarmargliðunnar <span class="math">p</span>
+miðað við röð brúunarpunktanna <span class="math">x_0, \ldots, x_{m-1}</span>.</p>
+<p>Athugum að <span class="math">c_m = a_m</span>, þar sem <span class="math">a_m</span> er stuðullinn við
+veldið <span class="math">x^m</span> í staðalframsetningunni á <span class="math">p</span>.</p>
+<p>Til þess að reikna út <span class="math">c_0, \ldots, c_m</span> þurfum við að reikna út
+með skipulegum hætti stuðulinn við veldið <span class="math">x^j</span> í
+brúunarmargliðunni gegnum punktana
+<span class="math">(x_i,y_i), \ldots, (x_{i+j},y_{i+j})</span>, fyrir öll
+<span class="math">i = 0, \ldots, m</span> og <span class="math">j = 0, \ldots, m-i</span>. Við táknum
+þennan stuðul með <span class="math">y[x_i, \ldots, x_{i+j}]</span>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Aðvörun</p>
+<p>Verkefnið er háð röð punktanna, þ.e.&nbsp;framsetningin (Newton-formið) á
+margliðunni breytist eftir röð punktanna.
+En auðvitað er margliðan og gildin á henni alltaf þau sömu</p>
+<p><em>Dæmi:</em></p>
+<div class="admonition-verkefnalisti last admonition" id="index-9">
+<p class="first admonition-title">Verkefnalisti</p>
+<p class="last">Dæmi hér</p>
+</div>
+</div>
+</div>
+<div class="section" id="mismunakvotar">
+<span id="index-10"></span><h3>3.3.2. Mismunakvótar<a class="headerlink" href="#mismunakvotar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skilgreinum mismunakvóta <span class="math">y[x_i,\ldots,x_{i+j}]</span> fyrir
+punktasafnið <span class="math">(x_i,y_i),\ldots,(x_{i+j},y_{i+j})</span> á eftirfarandi
+hátt:</p>
+<ul class="simple">
+<li><span class="math">j=0</span>: <span class="math">y[x_i] = y_i</span>.</li>
+<li><span class="math">j=1</span>: <span class="math">y[x_i,x_{i+1}] = \frac{y_{i+1}-y_i}{x_{i+1}-x_i}</span></li>
+<li><span class="math">j=2</span>:
+<span class="math">y[x_i,x_{i+1},x_{i+2}] = \frac{y[x_{i+1},x_{i+2}] - y[x_i,x_{i+1}]}{x_{i+2}-x_i}</span>.</li>
+<li><span class="math">j&gt;2</span>:
+<span class="math">y[x_i,\ldots,x_{i+j}] = \frac{y[x_{i+1},\ldots,x_{i+j}] - y[x_i,\ldots,x_{i+j-1}]}{x_{i+j}-x_i}</span>.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Stærðin <span class="math">y[x_{n-1},x_n]</span> hefur komið fyrir áður
+hjá okkur þegar við fjölluðum um <cite>Sniðilsaðferð</cite>, enda er sniðill
+ekkert annað en brúunarmargliða fyrir tvö punkta í planinu.</p>
+</div>
+</div>
+<div class="section" id="upprifjun-a-tilvistarsonnuninni">
+<h3>3.3.3. Upprifjun á tilvistarsönnuninni<a class="headerlink" href="#upprifjun-a-tilvistarsonnuninni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Þrepunarskrefið í <a class="reference external" href="Setning:Brúunarmargliðanertil">tilvistarsönnuninni</a>
+fyrir brúunarmargliður gefur okkur nú hvernig mismunakvótarnir nýtast okkur.</p>
+<p>Látum <span class="math">q</span> vera brúunarmargliðuna af stigi <span class="math">\leq m-1</span> fyrir
+punktana <span class="math">(x_0,y_0), \ldots,
+(x_{m-1},y_{m-1})</span> og <span class="math">r</span> vera brúunarmargliðuna af stigi
+<span class="math">\leq m-1</span> fyrir punktana <span class="math">(x_1,y_1), \ldots, (x_m,y_m)</span> og
+setjum síðan</p>
+<div class="math">
+<p><span class="math">p(x) = \frac{x-x_m}{x_0-x_m}q(x) + \frac{x-x_0}{x_m-x_0}r(x)</span></p>
+</div><p>Gerum nú ráð fyrir að stuðullinn við veldið <span class="math">x^{m-1}</span> í
+<span class="math">q(x)</span> sé <span class="math">y[x_0, \ldots, x_{m-1}]</span> og stuðullinn við veldið
+<span class="math">x^{m-1}</span> í <span class="math">r(x)</span> sé <span class="math">y[x_1, \ldots, x_m]</span>.</p>
+<p>Við sjáum þá að stuðullinn við veldið <span class="math">x^m</span> í <span class="math">p(x)</span> er</p>
+<div class="math">
+<p><span class="math">\frac{y[x_0, \ldots, x_{m-1}]}{x_0-x_m} +
+  \frac{y[x_1, \ldots, x_m]}{x_m - x_0}
+  = y[x_0, \ldots, x_m]</span></p>
+</div><div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Fyrir <span class="math">m=0</span> gildir að <span class="math">p(x) = y_0 = y[x_0]</span>.</p>
+</div>
+</div>
+<div class="section" id="mismunakvotatoflur-fyrir">
+<span id="index-11"></span><h3>3.3.4. Mismunakvótatöflur fyrir <span class="math">m=0,1,2,3</span><a class="headerlink" href="#mismunakvotatoflur-fyrir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Mismunakvótar eru venjulega reiknaðir út í svokölluðum
+<em>mismunakvótatöflum</em>.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock9'))">Ef m=0</a><br /><div id="toggleblock9" style="display: none"><br/><p>Ef <span class="math">m = 0</span> er mismunakvótataflan aðeins ein lína</p>
+<div class="math">
+<p><span class="math">\begin{array}{c|c|c}
+    i &amp; x_i &amp; y[x_i] \\
+    \hline
+    0 &amp; x_0 &amp; y[x_0] = y_0
+  \end{array}</span></p>
+</div></div></div><script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock10'))">Ef m=1</a><br /><div id="toggleblock10" style="display: none"><br/><p>Ef <span class="math">m = 1</span> er taflan</p>
+<div class="math">
+<p><span class="math">\begin{array}{c|c|cc}
+    i &amp; x_i &amp; y[x_i] &amp; y[x_i,x_{i+1}] \\
+    \hline
+    0 &amp; x_0 &amp; y[x_0] = y_0 &amp; y[x_0,x_1] \\
+    1 &amp; x_1 &amp; y[x_1] = y_1 &amp;
+  \end{array}</span></p>
+</div><p>og margliðan er</p>
+<div class="math">
+<p><span class="math">p(x) = y[x_0] + y[x_0,x_1](x-x_0).</span></p>
+</div></div></div><script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock11'))">Ef m=2</a><br /><div id="toggleblock11" style="display: none"><br/><p>Ef <span class="math">m = 2</span> verður taflan</p>
+<div class="math">
+<p><span class="math">\begin{array}{c|c|ccc}
+    i &amp; x_i &amp; y[x_i] &amp; y[x_i,x_{i+1}] &amp; y[x_i,x_{i+1},x_{i+2}] \\
+    \hline
+    0 &amp; x_0 &amp; y[x_0] = y_0 &amp; y[x_0,x_1] &amp; y[x_0,x_1,x_2] \\
+    1 &amp; x_1 &amp; y[x_1] = y_1 &amp; y[x_1,x_2] &amp; \\
+    2 &amp; x_2 &amp; y[x_2] = y_2 &amp;  &amp;
+  \end{array}</span></p>
+</div><p>og margliðan er</p>
+<div class="math">
+<p><span class="math">p(x) = y[x_0] + y[x_0,x_1](x-x_0)
+  + y[x_0,x_1,x_2](x-x_0)(x-x_1).</span></p>
+</div></div></div><script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock12'))">Ef m=3</a><br /><div id="toggleblock12" style="display: none"><br/><p>Skoðum loks tilfellið <span class="math">m = 3</span></p>
+<div class="math">
+<p><span class="math">\begin{array}{c|c|cccc}
+    i &amp; x_i &amp; y[x_i] &amp; y[x_i,x_{i+1}] &amp; y[x_i,x_{i+1},x_{i+2}]
+    &amp; y[x_i,x_{i+1},x_{i+2},x_{i+3}] \\
+    \hline
+    0 &amp; x_0 &amp; y[x_0] = y_0 &amp; y[x_0,x_1] &amp; y[x_0,x_1,x_2]
+    &amp; y[x_0,x_1,x_2,x_3] \\
+    1 &amp; x_1 &amp; y[x_1] = y_1 &amp; y[x_1,x_2] &amp; y[x_1,x_2,x_3] &amp; \\
+    2 &amp; x_2 &amp; y[x_2] = y_2 &amp; y[x_2,x_3] &amp; &amp; \\
+    3 &amp; x_3 &amp; y[x_3] = y_3 &amp; &amp; &amp;
+  \end{array}</span></p>
+</div><p>Brúunarmargliðan fæst svo með því að nota stuðlana úr fyrstu línu
+töflunnar:</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+  p(x) = &amp;y[x_0] + y[x_0,x_1](x-x_0)
+  + y[x_0,x_1,x_2](x-x_0)(x-x_1) \\
+  &amp;+ y[x_0,x_1,x_2,x_3](x-x_0)(x-x_1)(x-x_2)\end{aligned}</span></p>
+</div></div></div></div>
+<div class="section" id="id2">
+<h3>3.3.5. Sýnidæmi<a class="headerlink" href="#id2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við skulum reikna út aftur brúunarmargliðuna gegnum <span class="math">(1,1)</span>,
+<span class="math">(2,3)</span> og <span class="math">(3,6)</span>.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock13'))">Lausn</a><br /><div id="toggleblock13" style="display: none"><br/><p>Stillum fyrst upp mismunakvótatöflu</p>
+<div class="math">
+<p><span class="math">\begin{array}{cc||ccc}
+    i &amp; x_i &amp; y[x_i] &amp; y[x_i,x_{i+1}] &amp; y[x_i,x_{i+1},x_{i+2}] \\
+    \hline
+    0 &amp; 1   &amp;  1     &amp;    &amp;   \\
+    1 &amp; 2   &amp;  3     &amp;    &amp;   \\
+    2 &amp; 3   &amp;  6     &amp;    &amp;
+  \end{array}</span></p>
+</div><p>Fyllum svo út í hana með að ganga á hvern dálk á fætur öðrum</p>
+<div class="math">
+<p><span class="math">\begin{array}{cc||ccc}
+    i &amp; x_i &amp; y[x_i] &amp; y[x_i,x_{i+1}] &amp; y[x_i,x_{i+1},x_{i+2}] \\
+    \hline
+    0 &amp; 1 &amp; 1 &amp; \dfrac{3-1}{2-1} = 2 &amp; \dfrac{3-2}{3-1} = 1/2  \\
+    1 &amp; 2 &amp; 3 &amp; \dfrac{6-3}{3-2} = 3 &amp; \\
+    2 &amp; 3 &amp; 6 &amp; &amp;
+  \end{array}</span></p>
+</div><p>Lesum út brúunarmargliðuna <span class="math">p</span> með að ganga á efstu línuna:</p>
+<div class="math">
+<p><span class="math">p(x) = 1 + 2 \cdot (x-1) + \frac{1}{2} \cdot (x-1)(x-2).</span></p>
+</div><p>Reiknum út brúunarmargliðuna gegnum <span class="math">(3,1)</span>, <span class="math">(1,-3)</span>,
+<span class="math">(5,2)</span> og <span class="math">(6,4)</span>. Stillum upp og fyllum út í
+mismunakvótatöflu:</p>
+<div class="math">
+<p><span class="math">\begin{array}{cc||cccc}
+    i &amp; x_i &amp; y[x_i], &amp; y[x_i,x_{i+1}], &amp;
+    y[x_i,x_{i+1},x_{i+2}], &amp; y[x_i,\ldots,x_{i+3}] \\
+    \hline
+    1 &amp; 3 &amp; 1 &amp; \frac{-3-1}{1-3} = 2 &amp; \frac{5/4-2}{5-3} = -3/8 &amp;
+    \frac{3/20-(-3/8)}{6-3} = 7/40 \\
+    2 &amp; 1 &amp; -3 &amp; \frac{2-(-3)}{5-1} = 5/4 &amp;
+    \frac{2-5/4}{6-1} = 3/20 &amp; \\
+    3 &amp; 5 &amp; 2 &amp; \frac{4-2}{6-5} = 2 &amp; &amp; \\
+    4 &amp; 6 &amp; 4 &amp; &amp; &amp;
+  \end{array}</span></p>
+</div><p>Nú getum við lesið brúunarmargliðuna okkar úr töflunni með að ganga á
+efstu línuna, við fáum</p>
+<div class="math">
+<p><span class="math">p(x) = 1 + 2(x-3) - \frac 38 (x-3)(x-1)
+  + \frac 7{40} (x-3)(x-1)(x-5)</span></p>
+</div></div></div><div class="admonition-verkefnalisti admonition" id="index-12">
+<p class="first admonition-title">Verkefnalisti</p>
+<p class="last">Umraða</p>
+</div>
+</div>
+<div class="section" id="samantekt">
+<h3>3.3.6. Samantekt<a class="headerlink" href="#samantekt" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef gefnir eru punktar <span class="math">(x_0,y_0), \ldots, (x_m,y_m)</span> í
+<span class="math">{{\mathbb  R}}^2</span>, þar sem <span class="math">x_i\neq x_j</span> ef
+<span class="math">i\neq j</span>, þá er til nákvæmlega ein margliða <span class="math">p</span> af stigi
+<span class="math">\leq m</span> þannig að</p>
+<div class="math">
+<p><span class="math">p(x_k) = y_k, \quad k = 0, \ldots, m</span></p>
+</div><p>Newton-form margliðunnar <span class="math">p</span> með tilliti til punktanna
+<span class="math">x_0,\dots,x_{m-1}</span> er</p>
+<div class="math">
+<p><span class="math">p(x)=y[x_0]+y[x_0,x_1](x-x_0)+\cdots+y[x_0,\dots,x_m](x-x_0)\cdots(x-x_m)</span></p>
+</div><p>þar sem mismunakvótarnir eru reiknaðir með rakningarformúlunum
+<span class="math">y[x_i]=y_i</span> og</p>
+<div class="math">
+<p><span class="math">y[x_i,\ldots,x_{i+j}]
+  = \frac{y[x_{i+1},\ldots,x_{i+j}] - y[x_i,\ldots,x_{i+j-1}]}
+  {x_{i+j} - x_i}, \qquad i=0,\dots,m, \quad j=0,\dots,m-i.</span></p>
+</div></div>
+<div class="section" id="samantekt-newton-form">
+<h3>3.3.7. Samantekt – Newton-form<a class="headerlink" href="#samantekt-newton-form" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Venja er að setja mismunakvótana upp í töflu og stuðlarnir í
+Newton-forminu raða sér í fyrstu línu töflunnar:</p>
+<div class="math">
+<p><span class="math">\begin{array}{c|c|cccccc}
+    i &amp; x_i &amp; y[x_i] &amp; y[x_i,x_{i+1}] &amp; y[x_i,x_{i+1},x_{i+2}]
+    &amp; y[x_i,\dots,x_{i+3}] &amp;y[x_i,\dots,x_{i+4}] &amp;\dots  \\
+    \hline
+    0 &amp; x_0 &amp; y[x_0] = y_0 &amp; y[x_0,x_1] &amp; y[x_0,x_1,x_2]
+    &amp; y[x_0,x_1,x_2,x_3]&amp;y[x_0,x_1,x_2,x_3,x_4]&amp; \dots \\
+    1 &amp; x_1 &amp; y[x_1] = y_1 &amp; y[x_1,x_2] &amp; y[x_1,x_2,x_3] &amp;
+    y[x_1,x_2,x_3,x_4]&amp;\dots \\
+    2 &amp; x_2 &amp; y[x_2] = y_2 &amp; y[x_2,x_3] &amp;y[x_2,x_3,x_4]&amp;\dots &amp; \\
+    3 &amp; x_3 &amp; y[x_3] = y_3 &amp; y[x_3,x_4] &amp;\dots &amp; &amp; \\
+    4 &amp; x_4 &amp; y[x_4] = y_4 &amp; \dots &amp;  \\
+\vdots &amp; \vdots &amp;\vdots
+  \end{array}</span></p>
+</div></div>
+<div class="section" id="samantekt-lagrange-margliur">
+<h3>3.3.8. Samantekt – Lagrange-margliður<a class="headerlink" href="#samantekt-lagrange-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lagrange-form brúunarmargliðunnar er</p>
+<div class="math">
+<p><span class="math">p(x)=\sum_{k=0}^m y_k\ell_{k}(x)</span></p>
+</div><p>þar sem <span class="math">\ell_{k}</span> eru Lagrange-margliðurnar með tilliti til
+punktanna <span class="math">x_0,\dots,x_m</span>,</p>
+<div class="math">
+<p><span class="math">\ell_{k}(x) = \prod_
+      {\substack{j=0\\ j\neq k}}^m\dfrac{(x-x_j)}{(x_k-x_j)}
+      = \dfrac{(x-x_0)\cdots(x-x_{k-1})
+          (x-x_{k+1})\cdots(x-x_m)}
+      {(x_k-x_0)\cdots(x_k-x_{k-1})
+          (x_k-x_{k+1})\cdots(x_k-x_m)}.
+
+En þær uppfylla</span></p>
+</div><div class="math">
+<p><span class="math">\ell_{k}(x_i) = \left\{ \begin{array}{cc}
+      1 &amp; \text{ef } i = k \\
+      0 &amp; \text{ef } i \not= k
+  \end{array} \right.</span></p>
+</div></div>
+</div>
+<div class="section" id="id3">
+<h2>3.4. Samantekt<a class="headerlink" href="#id3" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="lagrange-margliur">
+<h3>3.4.1. Lagrange-margliður<a class="headerlink" href="#lagrange-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ul class="simple">
+<li>Auðvelt að finna margliðuna</li>
+<li>Dýrara að reikna fallgildin</li>
+</ul>
+</div>
+<div class="section" id="newton-margliur">
+<h3>3.4.2. Newton-margliður<a class="headerlink" href="#newton-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ul class="simple">
+<li>Erfiðara að finna margliðuna</li>
+<li>Auðvelt að finna fallgildin (reiknirit Horners)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="margliubruun-margfaldir-punktar">
+<span id="index-13"></span><h2>3.5. Margliðubrúun: Margfaldir punktar<a class="headerlink" href="#margliubruun-margfaldir-punktar" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Látum <span class="math">a_1, \ldots, a_k</span> vera ólíka punkta í
+<span class="math">{{\mathbb  R}}</span>, <span class="math">m_1, \ldots, m_k</span> vera jákvæðar heiltölur
+og hugsum okkur að gefnar séu rauntölur</p>
+<div class="math">
+<p><span class="math">y_i^{(j)}, \quad j = 0, \ldots, m_i-1, \quad i = 1, \ldots, k.</span></p>
+</div><p>Við viljum finna margliðu <span class="math">p</span> af lægsta mögulega stigi þannig að
+margliðan <span class="math">p=p^{(0)}</span> og afleiður hennar <span class="math">p^{(j)}</span> uppfylli</p>
+<div class="math">
+<p><span class="math">p^{(j)}(a_i) = y_i^{(j)},
+  \quad j = 0, \ldots, m_i-1, \quad i = 1, \ldots, k</span></p>
+</div><p>Við nefnum verkefnið að finna slíka margliðu <span class="math">p</span> <em>alhæft
+brúunarverkefni</em>, og margliða sem uppfyllir þessi skilyrði nefnist
+<em>brúunarmargliða fyrir brúunarverkefnið</em> sem lýst er með gefnu
+skilyrðunum.</p>
+<div class="section" id="margfeldni-punktanna">
+<span id="index-14"></span><h3>3.5.1. Margfeldni punktanna<a class="headerlink" href="#margfeldni-punktanna" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við segjum að <span class="math">a_i</span> sé <em>einfaldur brúunarpunktur</em> ef
+<span class="math">m_i=1</span>, <em>tvöfaldur brúunarpunktur</em> ef <span class="math">m_i=2</span> o.s.frv.</p>
+<p>Við skilgreinum nú töluna</p>
+<div class="math">
+<p><span class="math">m = m_1 + m_2 + \ldots + m_k - 1.</span></p>
+</div><p>Brúunarmargliðan okkar <span class="math">p</span> á að vera af stigi <span class="math">\leq m</span>, og
+fjöldi skilyrða sem við setjum á hana eru <span class="math">m+1</span>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Tilfellið <span class="math">k=m+1</span>, <span class="math">m_j=1</span> er það sem við skoðuðum hér á undan.</p>
+</div>
+</div>
+<div class="section" id="sertilfelli">
+<h3>3.5.2. Sértilfelli<a class="headerlink" href="#sertilfelli" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Tvö sértilfelli þekkjum við nú þegar.</p>
+<ol class="arabic">
+<li><p class="first"><em>Allir punktar eins:</em> Ef allir punktarnir eru einfaldir, þá er
+alhæfða brúunarverkefnið sama verkefni og brúunarverkefnið sem við
+leystum í <a class="reference internal" href="#margliubruun-lagrange-form">Margliðubrúun: Lagrange-form</a> og <a class="reference internal" href="#margliubruun-newton-form">Margliðubrúun: Newton-form</a>.</p>
+<div class="math">
+<p><span class="math">p^{(0)}(a_i) = p(a_i) = y_i^{(0)},</span></p>
+</div><p>og lausnin var leidd út með</p>
+<div class="math">
+<p><span class="math">x_0=a_1,\dots,x_m=a_k \quad \text{ og } \quad
+y_0=y_1^{(0)},\dots,y_m=y_k^{(0)}.</span></p>
+</div></li>
+<li><p class="first"><em>Einn punktur:</em> Ef aftur á móti <span class="math">k = 1</span>, þá er lausn gefin
+með Taylor-margliðunni af röð <span class="math">m</span> í punktinum <span class="math">a_1</span></p>
+<div class="math">
+<p><span class="math">p(x) = y_1^{(0)} + \frac{y'}{1!}(x - a_1) + \frac{y''}{2!}(x - a_1)^2 +
+  \ldots + \frac{y_1^{(m)}}{m!}(x - a_1)^m.</span></p>
+</div></li>
+</ol>
+</div>
+<div class="section" id="upprifjun">
+<h3>3.5.3. Upprifjun<a class="headerlink" href="#upprifjun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Munum að ef <span class="math">p</span> er margliða og <span class="math">p(a)=0</span> þá er <span class="math">p</span>
+deilanleg með <span class="math">(x-a)</span>. Það er, hægt er að skrifa</p>
+<div class="math">
+<p><span class="math">p(x) = (x-a)q(x),</span></p>
+</div><p>þar sem <span class="math">q</span> er margliða af stigi sem er einu lægra en stig
+<span class="math">p</span> (sjá <a class="reference external" href="http://m.xn--st-2ia.is/fletta/undirst%C3%B6%C3%B0usetning/algebrunnar?device=desktop">Undirstöðusetning algebrunnar</a>).</p>
+</div>
+<div class="section" id="otviraeni-lausnarinnar">
+<h3>3.5.4. Ótvíræðni lausnarinnar<a class="headerlink" href="#otviraeni-lausnarinnar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú ætlum við að sýna fram á að til sé nákvæmlega ein margliða
+<span class="math">p(x)</span> af stigi <span class="math">\leq m</span> sem uppfyllir</p>
+<div class="math">
+<p><span class="math">p^{(j)}(a_i) = y_i^{(j)},
+  \quad j = 0, \ldots, m_i-1, \quad i = 1, \ldots, k</span></p>
+</div><p>Byrjum á að sýna að það er í mesta lagi ein margliða sem uppfyllir þetta.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock14'))">Sönnun á ótvíræðni</a><br /><div id="toggleblock14" style="display: none"><br/><p>Gerum ráð fyrir að
+<span class="math">p(x)</span> og <span class="math">q(x)</span> séu tvær margliður af stigi <span class="math">\leq m</span>
+sem uppfylla öll þessi skilyrði.</p>
+<p>Þá uppfyllir margliðan <span class="math">r(x) = p(x) - q(x)</span> að</p>
+<div class="math">
+<p><span class="math">r^{(j)}(a_i) = 0, \quad j = 0, \ldots, m_i-1,
+  \quad i = 1, \ldots,k</span></p>
+</div><p>Af þessu leiðir að <span class="math">r(x)</span> er deilanlegt með <span class="math">(x-a_i)^{m_i}</span>
+en samanlagt stig þessara þátta er <span class="math">m_1 + \ldots + m_k = m + 1</span>.</p>
+<p>Nú er stig <span class="math">r(x)</span> minna eða jafnt <span class="math">m</span> svo þetta getur aðeins
+gerst ef <span class="math">r(x)</span> er núllmargliðan.</p>
+<p>Við höfum því að <span class="math">p(x) = q(x)</span> og ályktum að við höfum nákvæmlega
+eina lausn á brúunarverkefninu ef við getum sýnt fram á tilvist á lausn.</p>
+</div></div></div>
+<div class="section" id="tilvist-a-lausn">
+<h3>3.5.5. Tilvist á lausn<a class="headerlink" href="#tilvist-a-lausn" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú beitum við sams konar röksemdafærslu og í <a class="reference external" href="Setning:Brúunarmargliðanertil">byrjum kaflans</a> til þess að sýna
+fram á tilvist á lausn, þ.e. við notum þrepun.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock15'))">Sönnun á tilvist</a><br /><div id="toggleblock15" style="display: none"><br/><p><strong>Smíðum margliðuna:</strong></p>
+<p>Ef <span class="math">m = 0</span>, þá er lausnin fastamargliðan
+<span class="math">p(x) = y_1^{(0)}=y_0</span>.</p>
+<p>Gerum nú ráð fyrir að við getum fundið brúunarmargliðu af stigi
+<span class="math">\leq m-1</span> fyrir sérhvert alhæft brúunarverkefni þar sem
+samanlagður fjöldi skilyrðanna er <span class="math">m</span>.</p>
+<p>Lítum nú aftur á upprunalega brúunarverkefnið þar sem fjöldi skilyrðanna
+er <span class="math">m+1</span>. Skilgreinum tvær runur af punktum</p>
+<div class="math">
+<p><span class="math">(x_0,x_1,\ldots,x_m) =
+  (\underbrace{a_1, \ldots, a_1}_{m_1 \, \text{sinnum}},
+  \underbrace{a_2, \ldots , a_2}_{m_2 \, \text{sinnum}},
+  \ldots ,
+  \underbrace{a_k, \ldots , a_k}_{m_k \, \text{sinnum}})</span></p>
+</div><p>og</p>
+<div class="math">
+<p><span class="math">(y_0,y_1,\ldots,y_m) =
+  (y_1^{(0)}, \ldots, y_1^{(m_1-1)}, \ldots,
+  y_k^{(0)}, \ldots, y_k^{(m_k-1)})</span></p>
+</div><p>Við höfum séð að í því tilfelli að við höfum einn punkt, <span class="math">k=1</span>,
+<span class="math">x_0 = x_1 = \ldots = x_m = a_1</span> er lausnin gefin með
+Taylor-margliðu í <span class="math">a_1</span>.</p>
+<p>Við megum því gera ráð fyrir punktarnir séu a.m.k.&nbsp;tveir,
+<span class="math">k\geq 2</span>. Það gefur að <span class="math">x_0 \not= x_m</span>.</p>
+<p>Látum <span class="math">q(x)</span> vera margliðuna af stigi <span class="math">\leq m-1</span> sem
+uppfyllir sömu skilyrði og <span class="math">p</span>, nema það síðasta um að
+<span class="math">q^{(m_k-1)}(a_k)</span> þurfi að vera <span class="math">y_k^{(m_k-1)}</span> .</p>
+<p>og látum <span class="math">r(x)</span> vera margliðuna sem uppfyllir öll
+brúunarskilyrðin, nema síðasta skilyrðið í fyrsta punkti um að
+<span class="math">r^{(m_1-1)}(a_1)</span> sé jafnt <span class="math">y_1^{(m_1-1)}</span>.</p>
+<p>Setjum síðan</p>
+<div class="math">
+<p><span class="math">p(x) = \frac{x-x_m}{x_0-x_m}q(x)
+  + \frac{x-x_0}{x_m-x_0}r(x)
+  = \frac{x-a_k}{a_1-a_k}q(x)
+  + \frac{x-a_1}{a_k-a_1}r(x)</span></p>
+</div><p><strong>Sýnum að gefin fallgildi eru tekin</strong></p>
+<p>Nú þurfum við að staðfesta að öll skilyrðin séu uppfyllt.</p>
+<p>Við byrjum á því að taka <span class="math">j=0</span> sem svarar til þess að <span class="math">p</span>
+taki fyrirfram gefin fallgildi,</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+  p(a_1) &amp;= \frac{a_1-a_k}{a_1-a_k}q(a_1)
+  + \frac{a_1-a_1}{a_k-a_1}r(a_1) = q(a_1) = y_1^{(0)}\\
+  p(a_i) &amp;= \frac{a_i-a_k}{a_1-a_k}q(a_i)
+  + \frac{a_i-a_1}{a_k-a_1}r(a_i)
+  = \left( \frac{a_i-a_k}{a_1-a_k}
+    + \frac{a_i-a_1}{a_k-a_1} \right) y_i^{(0)} \\
+    &amp;= y_i^{(0)},  \qquad \text{fyrir } i=2,\ldots,k-1,\\
+  p(a_k) &amp;= \frac{a_k-a_k}{a_1-a_k}q(a_k)
+  + \frac{a_k-a_1}{a_k-a_1}r(a_k) = r(a_k) = y_k^{(0)}.\end{aligned}</span></p>
+</div><p>Sýnum svo að gildin á afleiðum <span class="math">p</span> séu rétt.</p>
+<p>Rifjum upp margliðuna <span class="math">p</span>:</p>
+<div class="math">
+<p><span class="math">p(x) = \frac{x-x_m}{x_0-x_m}q(x)
+  + \frac{x-x_0}{x_m-x_0}r(x)
+  = \frac{x-a_k}{a_1-a_k}q(x)
+  + \frac{x-a_1}{a_k-a_1}r(x)</span></p>
+</div><p>Afleiður hennar eru</p>
+<div class="math">
+<p><span class="math">p^{(j)}(x) = \frac{(x-a_k)}{(a_1-a_k)}q^{(j)}(x)
+  + \frac{(x-a_1)}{(a_k-a_1)}r^{(j)}(x)
+  + j \frac{\left( q^{(j-1)}(x)-r^{(j-1)}(x)\right)}{a_k-a_1}</span></p>
+</div><p>Ef nú <span class="math">m_i &gt; 1</span> þá er <span class="math">q^{(j-1)}(a_i) = y^{(j-1)}(a_i) =
+r^{(j-1)}(a_i)</span> fyrir <span class="math">j = 1, \ldots, m_i-1</span> og því kemur alltaf
+<span class="math">0</span> út úr síðasta liðnum ef við setjum inn <span class="math">x = a_i</span>, fyrir
+öll <span class="math">i = 1, \ldots, k</span>.</p>
+<p>Af þessu sést að afleiður <span class="math">p</span> uppfylla skilyrðin</p>
+<div class="math">
+<p><span class="math">p^{(j)}(a_i) = y^{(j)}_i, \qquad \text{fyrir } j=0,\ldots,m_i-1,
+  \quad i=1,\ldots,k.</span></p>
+</div></div></div></div>
+<div class="section" id="id4">
+<h3>3.5.6. Samantekt<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við höfum því sannað eftirfarandi:</p>
+<p>Ef gefnar eru</p>
+<ul class="simple">
+<li>rauntölur <span class="math">a_1,\dots,a_k</span>, með <span class="math">a_j\neq a_k</span> ef
+<span class="math">j\neq k</span>,</li>
+<li>jákvæðar heiltölur <span class="math">m_1,\dots,m_k</span>,</li>
+<li>rauntölur <span class="math">y_i^{(j)}</span>, fyrir <span class="math">j=0,\dots, m_i-1</span>,
+<span class="math">i=1,\dots,k</span>,</li>
+</ul>
+<p>og talan <span class="math">m</span> er skilgreind með <span class="math">m=m_1+\cdots+m_k-1</span>, þá er
+til nákvæmlega ein margliða <span class="math">p</span> af stigi <span class="math">\leq m</span> þannig að</p>
+<div class="math">
+<p><span class="math">p^{(j)}(a_i)=y_i^{(j)}, \qquad j=0,\dots, m_i-1, \quad i=1,\dots,k.</span></p>
+</div></div>
+<div class="section" id="bruunarmarglian-fundin">
+<h3>3.5.7. Brúunarmargliðan fundin<a class="headerlink" href="#bruunarmarglian-fundin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef skilgreindar eru runurnar</p>
+<div class="math">
+<p><span class="math">(x_0,\dots,x_m)=(a_1,\dots,a_1,a_2,\dots,a_2,\dots,a_k,\dots,a_k)</span></p>
+</div><p>þar sem <span class="math">a_1</span> kemur fyrir <span class="math">m_1</span> sinnum, <span class="math">a_2</span> kemur
+fyrir <span class="math">m_2</span> sinnum o.s.frv., og</p>
+<div class="math">
+<p><span class="math">(y_0,\dots,y_m)=(y_1^{(0)},\cdot\cdot,y_1^{(m_1-1)},y_2^{(0)},\cdot\cdot,y_2^{(m_2-1)},
+\cdots,y_k^{(0)},\cdot\cdot,y_k^{(m_k-1)}),</span></p>
+</div><p>þá er Newton-form margliðunnar <span class="math">p</span> með tilliti til punktanna
+<span class="math">x_0,\dots,x_{m-1}</span> gefið með</p>
+<div class="math">
+<p><span class="math">p(x)=y[x_0]+y[x_0,x_1](x-x_0)+\cdots+y[x_0,\dots,x_m](x-x_0)\cdots(x-x_{m-1})</span></p>
+</div><p>þar sem mismunakvótarnir <span class="math">y[x_i,\ldots,x_{i+j}]</span> eru reiknaðir með
+rakningarformúlu þannig að <span class="math">y[x_i]=y_i</span> og</p>
+<div class="math">
+<p><span class="math">y[x_i,\ldots,x_{i+j}]
+  = \begin{cases}\dfrac{y[x_{i+1},\ldots,x_{i+j}] - y[x_i,\ldots,x_{i+j-1}]}
+  {x_{i+j} - x_i}, &amp;\text{ ef } x_i\neq x_{i+j},\\
+\dfrac{y^{(j)}_i}{j!}, &amp;\text{ ef } x_i=x_{i+j}.
+\end{cases}</span></p>
+</div></div>
+</div>
+<div class="section" id="skynsamlegir-skiptipunktar-og-chebyshev-margliur">
+<h2>3.6. Skynsamlegir skiptipunktar og Chebyshev margliður<a class="headerlink" href="#skynsamlegir-skiptipunktar-og-chebyshev-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="um-val-a-bruunarpunktum">
+<h3>3.6.1. Um val á brúunarpunktum<a class="headerlink" href="#um-val-a-bruunarpunktum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math">(t_0,y_0),\dots,(t_n,y_n)</span> vera punkta í plani og gerum ráð
+fyrir að <span class="math">a=t_0&lt;t_1&lt;\cdots&lt;t_n=b</span>.</p>
+<p>Við höfum nú lært að ákvarða margliðu <span class="math">p</span> af stigi <span class="math">\leq n</span>
+sem tekur gildin <span class="math">y_i</span> í punktunum <span class="math">t_i</span>.</p>
+<p>Ef punktarnir liggja á grafi fallsins <span class="math">f</span> og nota á margliðuna til
+þess að nálga fallgildi <span class="math">f</span>, þá getur það verið ýmsum erfiðleikum
+bundið þegar stig hennar stækkar. Til dæmis getur komið fram
+óstöðugleiki í útreikningum þannig að örlítil frávik í <span class="math">x</span> geta
+leitt til mikilla frávika í <span class="math">p(x)</span>, og þá hugsanlega í mikilli
+skekkju á <span class="math">f(x)-p(x)</span>.</p>
+</div>
+<div class="section" id="daemi-um-oheppilega-skiptipunkta">
+<h3>3.6.2. Dæmi um óheppilega skiptipunkta<a class="headerlink" href="#daemi-um-oheppilega-skiptipunkta" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skoðum dæmi þar sem við brúum fallið <span class="math">f(x) = 1/(25x^2+1)</span> í 9
+brúnarpunktum sem eru jafndreifðir á bilinu <span class="math">[-1,1]</span>.</p>
+<img alt="_images/vond_bruun1.png" src="_images/vond_bruun1.png" />
+<p>Hér sjáum við ,,þægilegt&#8221; fall þar sem brúunarmargliðan gefur afskaplega
+vonda nálgun.</p>
+</div>
+<div class="section" id="val-a-bruunarpunktum">
+<h3>3.6.3. Val á brúunarpunktum<a class="headerlink" href="#val-a-bruunarpunktum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Það er ekki sjálfgefið að við getum valið í hvaða brúunarpunkta við
+notum, t.d.&nbsp;ef þeir ákvarðast af mælingum. Ef við hins vegar getum valið
+þá óhindrað, þá vaknar sú spurning hvernig er best að gera það?</p>
+</div>
+<div class="section" id="skilgreining">
+<span id="index-15"></span><h3>3.6.4. Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrst þurfum við að útskýra betur hvað við eigum við með ,,best”. Við
+munum bara notast við tvær leiðir hér til að mæla skekkjuna, en það er
+<span class="math">\ell_\infty</span> og <span class="math">\ell_2</span> staðlarnir, fyrir samfellt fall
+<span class="math">h</span> á bilinu <span class="math">[a,b]</span> þá eru þeir skilgreindir með</p>
+<div class="math">
+<p><span class="math">\|h\|_\infty  = \max_{x\in[a,b]} |h(x)|,</span></p>
+</div><p>og</p>
+<div class="math">
+<p><span class="math">\|h\|_2 = \left( \int_a^b h(x)^2\, dx \right)^\frac 12</span></p>
+</div><div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Það má líta þannig á þetta að <span class="math">\ell_\infty</span> staðallinn
+mæli hámarksskekkju og <span class="math">\ell_2</span> mæli einhvers konar,,meðaltalsskekkju&#8221;,
+þar sem meðaltalið er reiknað með heildi.</p>
+</div>
+</div>
+<div class="section" id="verkefni">
+<h3>3.6.5. Verkefnið<a class="headerlink" href="#verkefni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Verkefnið er því eftirfarandi: Fyrir gefið fall <span class="math">f(x)</span> á bili
+<span class="math">[a,b]</span> og fast <span class="math">n</span>, þá viljum við finna
+<span class="math">x_0,\ldots,x_n</span> sem lágmarka annað hvort</p>
+<div class="math">
+<p><span class="math">\|f-p\|_\infty \quad \text{ eða } \quad \|f-p\|_2.</span></p>
+</div><p>Þar sem <span class="math">p</span> er brúunarmargliðan fyrir brúunarpunktana
+<span class="math">(x_i,f(x_i))</span>.</p>
+<p>Byrjum á að skoða <span class="math">\ell_\infty</span> tilvikið.</p>
+</div>
+<div class="section" id="skilgreining-chebyshev-margliur">
+<span id="index-16"></span><h3>3.6.6. Skilgreining: Chebyshev margliður<a class="headerlink" href="#skilgreining-chebyshev-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir náttúrlega tölu <span class="math">n</span> þá skilgreinum við
+<em>Chebyshev margliðuna</em> <span class="math">T_n</span> á <span class="math">[-1,1]</span> með</p>
+<div class="math">
+<p><span class="math">T_n(x) = \cos(n \arccos(x)).</span></p>
+</div><p>Með því að setja inn <span class="math">n=0</span> og <span class="math">n=1</span> þá fæst að</p>
+<div class="math">
+<p><span class="math">T_0(x) = 1 \quad \text{ og } \quad T_1(x) = x,</span></p>
+</div><p>og með hornafallareglunum fæst að</p>
+<div class="math">
+<p><span class="math">T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x), n \geq 1.</span></p>
+</div><p>Af jöfnunni hér á undan þá fæst með þrepun að</p>
+<ul class="simple">
+<li><span class="math">T_n(x)</span> er margliða af stigi <span class="math">n</span>.</li>
+<li>Forystustuðull <span class="math">T_n</span> er <span class="math">2^{n-1}</span>.</li>
+<li><span class="math">T_n</span> er jafnstæð ef <span class="math">n</span> er slétt og oddstæð ef <span class="math">n</span>
+er oddatala.</li>
+</ul>
+</div>
+<div class="section" id="setning">
+<h3>3.6.7. Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Chebyshev margliðan <span class="math">T_n</span> hefur <span class="math">n</span> einfaldar
+núllstöðvar á bilinu <span class="math">[-1,1]</span> og þær eru gefnar með</p>
+<div class="math">
+<p><span class="math">x_j = \cos\left(\frac{2j+1}{2n}\pi\right),\qquad j=0,1,2,3,\ldots,n-1.</span></p>
+</div><p>Auk þess eru útgildi <span class="math">T_n</span> á <span class="math">[-1,1]</span> staðsett í</p>
+<div class="math">
+<p><span class="math">z_j = \cos\left( \frac{j\pi}{n}\right),\qquad j=0,1,2,\ldots,n,</span></p>
+</div><p>og fallgildin þar uppfylla <span class="math">T_n(z_j) = (-1)^j</span></p>
+</div>
+<div class="section" id="stalaar-chebyshev-margliur">
+<span id="index-17"></span><h3>3.6.8. Staðlaðar Chebyshev margliður<a class="headerlink" href="#stalaar-chebyshev-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Margliða er kölluð <em>stöðluð</em> ef forystustuðull hennar er 1.</p>
+<p><em>Stöðluðu Chebyshev margliðurnar</em> <span class="math">\tilde T</span> eru skilgreindar á eftirfarandi hátt</p>
+<div class="math">
+<p><span class="math">\tilde T(x) =
+    \begin{cases}
+      T_0(x) &amp; \text{ef } n = 0 \\
+      2^{1-n}T_n(x)   &amp; \text{ef } n\geq 1              \end{cases}</span></p>
+</div><p>Fyrir sérhverja staðlaða margliðu <span class="math">q</span> af stigi
+<span class="math">n</span> þá er</p>
+<div class="math">
+<p><span class="math">\frac 1{2^{n-1}} = \max_{x\in [-1,1]} T_n(x) \leq \max_{x\in[-1,1]} |q(x)|.</span></p>
+</div><p>Þ.e.&nbsp;af öllum stöðluðum margliðum þá eru stöðluðu Chebyshev margliðurnar
+,,minnstar” á bilinu <span class="math">[-1,1]</span>.</p>
+</div>
+<div class="section" id="skynsamlegir-skiptipunktar-fyrir-bili">
+<h3>3.6.9. Skynsamlegir skiptipunktar fyrir bilið <span class="math">[-1,1]</span><a class="headerlink" href="#skynsamlegir-skiptipunktar-fyrir-bili" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við vitum að skekkjan í því að nálga fallið <span class="math">f</span> með
+brúunarmargliðu <span class="math">p</span> með brúunarpunkta <span class="math">x_0,\ldots,x_n</span> er</p>
+<div class="math">
+<p><span class="math">f(x)-p(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}\, (x-x_0)(x-x_1)\cdots (x-x_n),</span></p>
+</div><p>þar sem <span class="math">\xi</span> er á minnsta bilinu sem inniheldur <span class="math">x</span> og
+<span class="math">x_0,x_1,\ldots,x_n</span>. Ef við skoðum jöfnuna að ofan þá sjáum við
+að þar sem <span class="math">n</span> og <span class="math">f</span> (og þar með <span class="math">f^{(n+1)}</span>) er fast
+þá er stæðan <span class="math">(x-x_0)\cdots(x-x_n)</span> það eina sem við höfum
+einhverja stjórn á.</p>
+<p>Með því að nota Chebyshev margliðurnar þá getum við lágmarkað þennan
+hluta skekkjunnar.</p>
+<p>Athugið að <span class="math">(x-x_0)\cdots (x-x_n)</span> er stöðluð margliða af stigi
+<span class="math">n+1</span>. Þannig að samkvæmt því sem kom fram hér að
+<a class="reference external" href="StaðlaðarChebyshevmargliður">ofan</a> þá lágmörkum við framlag hennar
+til skekkjunnar með <span class="math">(x-x_0)\cdots (x-x_n) = \tilde T_{n+1}</span>,
+þ.e.&nbsp;með því að velja</p>
+<div class="math">
+<p><span class="math">x_i = \cos\left(\frac{2i+1}{2(n+1)}\pi\right), \qquad i=0,1,\ldots,n.</span></p>
+</div><p>Hæsta gildi <span class="math">\tilde T_{n+1}</span> er <span class="math">\frac 1{2^n}</span>, sem þýðir að
+við fáum skekkjumatið</p>
+<div class="math">
+<p><span class="math">\|f(x)-p(x)\|_\infty \leq \frac{\|f^{(n+1)}\|_\infty}{2^n(n+1)!}.</span></p>
+</div></div>
+<div class="section" id="daemi-um-oheppilega-skiptipunkta-skoa-aftur">
+<h3>3.6.10. Dæmi um óheppilega skiptipunkta skoðað aftur<a class="headerlink" href="#daemi-um-oheppilega-skiptipunkta-skoa-aftur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skoðum aftur fallið <span class="math">f(x) = 1/(25x^2+1)</span>, en í stað þess að taka 9
+jafndreifaða brúunarpunkta á bilinu <span class="math">[-1,1]</span>, þá skulum við nota
+Chebyshev margliðurnar til að finna 9 punkta á bilinu.</p>
+<img alt="_images/vond_bruun2.png" src="_images/vond_bruun2.png" />
+</div>
+<div class="section" id="skynsamlegir-skiptipunktar-fyrir-bil">
+<h3>3.6.11. Skynsamlegir skiptipunktar fyrir bil <span class="math">[a,b]</span><a class="headerlink" href="#skynsamlegir-skiptipunktar-fyrir-bil" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hér á undan miðaðist allt við að finna brúunarmargliðu fyrir fallið
+<span class="math">f</span> á bilinu <span class="math">[-1,1]</span>. Ef við viljum skoða almennt bil
+<span class="math">[a,b]</span> þá byrjum við á athuga að fallið
+<span class="math">\eta:[-1,1]\to [a,b]</span>,</p>
+<div class="math">
+<p><span class="math">\eta(t) = \frac{b-a}2 t + \frac{b+a}2</span></p>
+</div><p>skilgreinir línulega vörpun (hliðrun og stríkkun) frá <span class="math">[-1,1]</span>
+yfir á <span class="math">[a,b]</span>. Athugið að vörpunin sendir <span class="math">-1</span> í <span class="math">a</span>
+og <span class="math">1</span> í <span class="math">b</span>.</p>
+<p>Með því að taka rætur stöðluðu Chebyshev margliðunnar
+<span class="math">\tilde T_{n+1}</span> og varpa þeim með <span class="math">\eta</span> yfir á bilið
+<span class="math">[a,b]</span> þá fáum við þá punkta <span class="math">x_0,\ldots,x_n \in [a,b]</span> sem
+lágmarka <span class="math">(x-x_0)\cdots (x-x_n)</span> á bilinu <span class="math">[a,b]</span>,</p>
+<div class="math">
+<p><span class="math">x_i = \eta\left(\cos\left(\frac{2i+1}{2(n+1)}\pi\right)\right)
+    = \frac{b-a}2 \cos\left(\frac{2i+1}{2(n+1)}\pi\right) + \frac{b+a}2,</span></p>
+</div><p><span class="math">i=0,1,2,\ldots,n</span>.</p>
+</div>
+<div class="section" id="lagmorkun-a-skekkju-me-tilliti-til">
+<h3>3.6.12. Lágmörkun á skekkju með tilliti til <span class="math">\ell_2</span><a class="headerlink" href="#lagmorkun-a-skekkju-me-tilliti-til" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú skulum við skipta um staðal, þannig að í stað þess að lágmarka
+<span class="math">\|f-p\|_\infty</span> þá skulum við reyna að lágmarka</p>
+<div class="math">
+<p><span class="math">\|f-p\|_2 = \left(\int_a^b (f-p)^2\, dx\right)^{1/2}</span></p>
+</div><p>Við vitum að skekkjan í því að nálga fallið <span class="math">f</span> með
+brúunarmargliðu <span class="math">p</span> með brúunarpunkta <span class="math">x_0,\ldots,x_n</span> er</p>
+<div class="math">
+<p><span class="math">f(x)-p(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}\, (x-x_0)(x-x_1)\cdots (x-x_n),</span></p>
+</div><p>þar sem <span class="math">\xi</span> er á minnsta bilinu sem inniheldur <span class="math">x</span> og
+<span class="math">x_0,x_1,\ldots,x_n</span>.</p>
+<p>Eins og áður þá sjáum við að stæðan <span class="math">(x-x_0)\cdots(x-x_n)</span> það
+eina sem við getum stjórnað með því að velja brúunarpunktana
+<span class="math">x_j</span>.</p>
+</div>
+<div class="section" id="skilgreining-legendre-margliurnar">
+<span id="index-18"></span><h3>3.6.13. Skilgreining: Legendre margliðurnar<a class="headerlink" href="#skilgreining-legendre-margliurnar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir náttúrlega tölu <span class="math">n</span> þá skilgreinum við
+<em>Legendre margliðurnar</em> svona</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+   P_0(x) &amp;= 1,\\
+   P_1(x) &amp;= x,\\
+   P_n(x) &amp;= \frac{2n-1}n x P_{n-1}(x) - \frac{n-1}n P_{n-2}(x).
+  \end{aligned}</span></p>
+</div><p>Af skilgreiningunni hér á undan þá sjáum við að</p>
+<ul class="simple">
+<li><span class="math">P_n(x)</span> er margliða af stigi <span class="math">n</span>.</li>
+<li>Forystustuðull <span class="math">P_n</span> er
+<span class="math">\frac {2n-1}n \cdot \frac {2n-3}{n-2} \cdots \frac 32 \cdot 1</span>.</li>
+<li><span class="math">P_n</span> er jafnstæð ef <span class="math">n</span> er slétt og oddstæð ef <span class="math">n</span>
+er oddatala.</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h3>3.6.14. Setning<a class="headerlink" href="#id5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="math">
+<p><span class="math">\int_{-1}^1 P_j(x) P_k(x)\, dx =
+    \begin{cases}
+     0, &amp; \text{ef } j\neq k\\
+     \frac{2}{2j+1}, &amp; \text{ef } j=k.
+    \end{cases}</span></p>
+</div><p>Einnig gildir að ef <span class="math">q</span> er margliða af stigi minna en <span class="math">n</span> þá er</p>
+<div class="math">
+<p><span class="math">\int_{-1}^1 q(x)P_n(x)\, dx = 0.</span></p>
+</div><p>Þetta segir okkur að Legendre margliðurnar eru hornréttar (með tilliti
+til innfeldisins sem heildið skilgreinir).</p>
+</div>
+<div class="section" id="id6">
+<h3>3.6.15. Setning<a class="headerlink" href="#id6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><span class="math">P_n</span> hefur <span class="math">n</span> ólíkar núllstöðvar sem liggja
+allar á <span class="math">[-1,1]</span>.</p>
+</div>
+<div class="section" id="skilgreining-stalaar-legendre-margliur">
+<h3>3.6.16. Skilgreining: Staðlaðar Legendre margliður<a class="headerlink" href="#skilgreining-stalaar-legendre-margliur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Eins og þegar við fengumst við Chebyshev margliðurnar þá skilgreinum við
+<em>stöðluðu Legendre margliðurnar</em> <span class="math">\tilde P_n</span> með því að deila upp
+í <span class="math">P_n</span> með forrystustuðlunum <span class="math">P_n</span>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Setningarnar þrjár hér undan gilda um <span class="math">\tilde P</span> alveg eins og <span class="math">P</span>.</p>
+</div>
+</div>
+<div class="section" id="setning-lagmorkun-me-legendre-margliunum">
+<h3>3.6.17. Setning: Lágmörkun með Legendre margliðunum<a class="headerlink" href="#setning-lagmorkun-me-legendre-margliunum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math">p</span> er stöðluð margliða af stigi <span class="math">n+1</span> þá er
+<span class="math">\|p\|_2\geq \|\tilde P_{n+1}\|_2</span>.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock16'))">Sönnun</a><br /><div id="toggleblock16" style="display: none"><br/><p>Skilgreinum
+<span class="math">q = p-\tilde P_{n+1}</span>, sem þýðir að <span class="math">q</span> er margliða af
+stigi minna en <span class="math">n+1</span>. Nú er</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+   \|p\|_2^2 &amp;= \|\tilde P_{n+1} + q\|_2^2 \\
+   &amp;= \int_{-1}^1 (\tilde P_{n+1}(x) + q(x))^2\, dx \\
+   &amp;= \int_{-1}^1 \tilde P_{n+1}(x)^2 + 2q(x)\tilde P_{n+1}(x) + q(x)^2\, dx\\
+   &amp;= \|\tilde P_{n+1}\|_2^2 + 2\int_{-1}^1 q(x)\tilde P_{n+1}(x)\, dx + \|q\|_2^2\\
+   &amp;= \|\tilde P_{n+1}\|_2^2 +  \|q\|_2^2 \geq \|\tilde P_{n+1}\|_2^2
+  \end{aligned}</span></p>
+</div><p>því <span class="math">\int_{-1}^1 q(x)\tilde P_{n+1}(x)\, dx=0</span> og
+<span class="math">\|q\|_2 \geq 0</span>.</p>
+<p>Af síðustu setningu sjáum við að til þess að lágmarka</p>
+<div class="math">
+<p><span class="math">\|f(x)-p(x)\|_2 = \left\|\frac{f^{(n+1)}(\xi)}{(n+1)!}\, (x-x_0)(x-x_1)\cdots (x-x_n) \right\|_2,</span></p>
+</div><p>þá veljum við <span class="math">x_1,\ldots,x_n</span> þannig að
+<span class="math">(x-x_0)(x-x_1)\cdots (x-x_n) = \tilde P_{n+1}</span>.
+Þ.e.&nbsp;<span class="math">x_j</span> þurfa að vera rætur stöðluðu Legendre margliðunnar af
+stigi <span class="math">n+1</span>.</p>
+</div></div></div>
+<div class="section" id="nullstovar-fyrir">
+<h3>3.6.18. Núllstöðvar <span class="math">P_n</span>, fyrir <span class="math">n=1,\ldots,10</span><a class="headerlink" href="#nullstovar-fyrir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ólíkt Chebyshev margliðunum þá er ekki hlaupið að því að finna rætur
+<span class="math">\tilde P_{n+1}</span>. Þannig að við þurfum að reikna þær tölulega og
+geyma í töflu.</p>
+<img alt="_images/legendre.png" src="_images/legendre.png" />
+</div>
+<div class="section" id="id7">
+<h3>3.6.19. Dæmi um óheppilega skiptipunkta skoðað aftur<a class="headerlink" href="#id7" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skoðum enn einu sinni fallið <span class="math">f(x) = 1/(25x^2+1)</span>, en í stað þess
+að taka 9 jafndreifaða brúunarpunkta á bilinu <span class="math">[-1,1]</span>, þá skulum
+við nota Legendre margliðurnar til að finna 9 punkta á bilinu.</p>
+<img alt="_images/vond_bruun3.png" src="_images/vond_bruun3.png" />
+</div>
+<div class="section" id="athugasemd-um-og">
+<h3>3.6.20. Athugasemd um <span class="math">\ell_\infty</span> og <span class="math">\ell_2</span><a class="headerlink" href="#athugasemd-um-og" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p class="last">Það má líta þannig á þetta að <span class="math">\ell_\infty</span> staðallinn
+mæli hámarksskekkju
+og <span class="math">\ell_2</span> mæli einhvers konar,,heildarskekkju&#8221;,
+þar sem skekkjan er reiknað með heildinu hér á undan og svarar því hér um
+bil til flatarmálsins á milli fallsins og brúunarmargliðunnar.</p>
+</div>
+<ul class="simple">
+<li><span class="math">\ell_\infty</span> staðallinn mælir hámarksskekkju, þannig að með
+því nota Chebyshev margliðurnar þá erum við að reyna að lágmarka mestu skekkju
+á bilinu.</li>
+<li><span class="math">\ell_2</span> mæli einhvers konar,,heildarskekkju&#8221;,
+þar sem skekkjan er reiknað með heildi.
+Þannig að með því að nota Legendre margliðurnar þá erum við
+í einhverjum skilningi að lágmarka flatarmál.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="skekkjumat">
+<span id="index-19"></span><h2>3.7. Skekkjumat<a class="headerlink" href="#skekkjumat" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="nalgun-a-follum-me-marglium">
+<h3>3.7.1. Nálgun á föllum með margliðum<a class="headerlink" href="#nalgun-a-follum-me-marglium" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum nú aftur á almenna brúunarverkefnið og gefum okkur að tölurnar
+<span class="math">y_i^{(j)}</span> séu af gerðinni <span class="math">f^{(j)}(a_i)</span> þar sem
+<span class="math">f : I \to {{\mathbb  R}}</span> er fall á bili <span class="math">I</span> sem inniheldur
+alla punktana <span class="math">a_1, \ldots, a_k</span>.</p>
+<p>Þá snýst brúunarverkefnið um að finna margliðu af stigi <span class="math">\leq m</span>
+sem uppfyllir</p>
+<div class="math">
+<p><span class="math">p^{(j)}(a_i) = f^{(j)}(a_i), \quad
+  j = 0, \ldots, m_i-1, \quad i = 1, \ldots, k.</span></p>
+</div><p>Við vitum að lausn þess er ótvírætt ákvörðuð. Ef við notum Newton form
+lausnarinnar, þá táknum við mismunakvótana með</p>
+<div class="math">
+<p><span class="math">f[x_i,\ldots,x_{i+j}]</span></p>
+</div><p>í stað</p>
+<div class="math">
+<p><span class="math">y[x_i,\ldots,x_{i+j}]</span></p>
+</div></div>
+<div class="section" id="nalgun-a-fallgildum">
+<h3>3.7.2. Nálgun á fallgildum<a class="headerlink" href="#nalgun-a-fallgildum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Runurnar <span class="math">(x_0,\ldots,x_m)</span> og <span class="math">(y_0,\ldots,y_m)</span> eru
+skilgreindar með</p>
+<div class="math">
+<p><span class="math">(x_0,x_1,\ldots,x_m) =
+  (\underbrace{a_1, \ldots, a_1}_{m_1 \, \text{sinnum}},
+  \underbrace{a_2, \ldots , a_2}_{m_2 \, \text{sinnum}},
+  \ldots ,
+  \underbrace{a_k, \ldots , a_k}_{m_k \, \text{sinnum}})</span></p>
+</div><p>og</p>
+<div class="math">
+<p><span class="math">\begin{gathered}
+  (y_0,y_1,\ldots,y_m) =
+  (f^{(0)}(a_1), \ldots, f^{(m_1-1)}(a_1),
+f^{(0)}(a_2), \ldots, f^{(m_2-1)}(a_2) \\ \ldots,
+  f^{(0)}(a_k), \ldots, f^{(m_k-1)}(a_k))
+  \label{bru.margfald.5}\end{gathered}</span></p>
+</div></div>
+<div class="section" id="id8">
+<h3>3.7.3. Skekkjumat<a class="headerlink" href="#id8" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú tökum við punkt <span class="math">x \in I</span> og spyrjum um skekkjuna
+<span class="math">f(x) - p(x)</span> í nálgun á <span class="math">f(x)</span> með <span class="math">p(x)</span>. Ef
+<span class="math">x</span> er einn punktana <span class="math">a_1, \ldots, a_k</span>, þá er
+<span class="math">p(x) = f(x)</span> og skekkjan þar með 0, svo við skulum gera ráð fyrir
+að <span class="math">x \not= a_i</span>, <span class="math">i = 1, \ldots, k</span>.</p>
+<p>Við bætum nú <span class="math">(x,f(x))</span> sem einföldum brúunarpunkti við alhæfða
+brúunar verkefnið og fáum sem lausn <span class="math">q(t)</span> á þessu aukna verkefni.
+Margliðan <span class="math">q</span> er af stigi <span class="math">\leq m+1</span>. Við notum táknið
+<span class="math">t</span> fyrir breytu, því <span class="math">x</span> er frátekið.</p>
+<p>Þá uppfyllir <span class="math">q(t)</span> að <span class="math">q(x) = f(x)</span> auk allra skilyrðanna</p>
+<div class="math">
+<p><span class="math">q^{(j)}(a_i) = p^{(j)}(a_i) = f^{(j)}(a_i)</span></p>
+</div><p>í verkefninu sem við byrjuðum með.</p>
+<p>Við getum þá skrifað (sjá <cite>Newton-margliður</cite> til hliðsjónar)</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+  q(t) &amp;= p(t) + f[x_0,\ldots,x_m,x](t-x_0)\cdots(t-x_m) \\
+  &amp;= p(t) + f[x_0,\ldots,x_m,x](t-a_1)^{m_1}\cdots(t-a_k)^{m_k}.\end{aligned}</span></p>
+</div><p>Þegar við gefum breytunni <span class="math">t</span> gildið <span class="math">x</span>, þá fáum við
+<span class="math">q(x) = f(x)</span> og því fæst formúla fyrir skekkjunni</p>
+<div class="math">
+<p><span class="math">f(x) - p(x)
+  = f[x_0,\ldots,x_m,x](x-a_1)^{m_1}\cdots(x-a_k)^{m_k}</span></p>
+</div><p>Nú ætlum við að finna leið til þess að meta skekkjuliðinn. Til þess
+þurfum við að gefa okkur að <span class="math">f</span> hafi að minnsta kosti <span class="math">m+1</span>
+afleiðu.</p>
+</div>
+<div class="section" id="tilfelli-egar-vi-hofum-aeins-einn-punkt">
+<h3>3.7.4. Tilfellið þegar við höfum aðeins einn punkt<a class="headerlink" href="#tilfelli-egar-vi-hofum-aeins-einn-punkt" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Munum nú að í tilfellinu þegar við erum bara með einn punkt <span class="math">a_1</span>,
+þá erum við með <span class="math">m+1</span> skilyrði</p>
+<div class="math">
+<p><span class="math">p^{(j)}(a_1)=f^{(j)}(a_1), \qquad j=0,\dots,m</span></p>
+</div><p>og við fáum að <span class="math">p</span> er Taylor-margliða fallsins <span class="math">f</span> í
+punktinum <span class="math">a_1</span>. Þá er <span class="math">x_0=\cdots=x_m=a_1</span> og við fáum</p>
+<div class="math">
+<p><span class="math">f(x) - p(x)
+  = f[x_0,\ldots,x_m,x](x-a_1)^{m+1}</span></p>
+</div><p>Nú segir setning Taylors okkur að til sé punktur <span class="math">\xi</span> milli
+<span class="math">a_1</span> og <span class="math">x</span> þannig að</p>
+<div class="math">
+<p><span class="math">f(x) - p(x)
+  = \dfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-a_1)^{m+1}</span></p>
+</div><p>Við getum því dregið þá ályktun að í þessu sértilfelli er</p>
+<div class="math">
+<p><span class="math">f[x_0,\ldots,x_m,x]=\dfrac{f^{(n+1)}(\xi)}{(n+1)!}</span></p>
+</div><p>Það kemur í ljós að þetta er almenn regla sem gildir fyrir <em>öll</em>
+alhæfðu brúunarverkefnin.</p>
+<p><strong>Tilfellið</strong> <span class="math">m=1</span> <strong>er meðalgildisreglan</strong></p>
+<p>Munum að tilfellið <span class="math">m=1</span> er meðalgildisreglan</p>
+<div class="math">
+<p><span class="math">f[a_1,x]=\dfrac{f(x)-f(a_1)}{x-a_1}=f'(\xi).</span></p>
+</div></div>
+<div class="section" id="margfeldni-nullstova">
+<h3>3.7.5. Margfeldni núllstöðva<a class="headerlink" href="#margfeldni-nullstova" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Samfellt fall <span class="math">\varphi</span> á bili <span class="math">I</span> er sagt hafa núllstöð <em>af
+stigi að minnsta kosti</em> <span class="math">m&gt;0</span> í punktinum <span class="math">a\in I</span>, ef til
+er samfellt fall <span class="math">\psi</span> á <span class="math">I</span> þannig að</p>
+<div class="math">
+<p><span class="math">\varphi(x)=(x-a)^m\psi(x)</span></p>
+</div><p>Við segjum að <span class="math">\varphi</span> hafi núllstöð af <em>margfeldni</em> <span class="math">m</span> ef
+<span class="math">\psi(a)\neq0</span>.</p>
+<p>Athugið að ef <span class="math">\varphi</span> er deildanlegt <span class="math">I</span> með samfellda
+afleiðu, þá er <span class="math">\psi</span> deildanlegt með samfellda afleiðu í
+<span class="math">I\setminus\{a\}</span> og við höfum</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+  \varphi'(x)&amp;=m(x-a)^{m-1}\psi(x)+(x-a)^m\psi'(x)\\
+&amp;= (x-a)^{m-1} \big(m\psi(x)+(x-a)\psi'(x)\big)\end{aligned}</span></p>
+</div><p>Ef afleiðan <span class="math">\psi'</span> er takmörkuð í grennd um <span class="math">a</span>, þá sjáum
+við á þessari formúlu að <span class="math">\varphi'</span> hefur núllstöð af stigi að
+minnsta kosti <span class="math">m-1</span> í <span class="math">a</span>.</p>
+<p>Hugsum okkur nú að við séum með <span class="math">a_1,\dots,a_k</span> ólíka punkta í
+bilinu <span class="math">I</span> og að <span class="math">m_1,\dots,m_k</span> séu jákvæðar náttúrlegar
+tölur.</p>
+<p>Ef fallið <span class="math">\varphi</span> hefur núllstöðvar í öllum punktunum
+<span class="math">a_j</span> og núllstöðin <span class="math">a_j</span> er af stigi að minnsta kosti
+<span class="math">m_j</span>. Við segjum að þá hafi <span class="math">\varphi</span> <em>að minnsta kosti</em></p>
+<div class="math">
+<p><span class="math">n=m_1+\cdots+m_k</span></p>
+</div><p><em>núllstöðvar taldar með margfeldni</em>.</p>
+<p>Eins þá segjum við að <span class="math">\varphi</span> hafi <span class="math">n</span> núllstöðvar í
+<span class="math">\{a_1,\dots,a_k\}</span> <em>taldar með margfeldni</em> ef <span class="math">\varphi</span>
+hefur núllstöðvar í öllum punktum <span class="math">a_1,\dots,a_k</span> og samanlögð
+margfeldni þeirra er <span class="math">n</span></p>
+<p>Hugsum okkur nú að fallið <span class="math">\varphi</span> hafi núllstöð af stigi
+<span class="math">m_j</span> í punktunum <span class="math">a_j</span> fyrir öll <span class="math">j=1,\dots,k</span> og að
+<span class="math">n=m_1+\cdots+m_k</span>.</p>
+<p>Til einföldunar gerum við ráð fyrir að</p>
+<div class="math">
+<p><span class="math">a_1&lt;a_2&lt;\cdots&lt;a_k.</span></p>
+</div><p>Þá gefur meðalgildissetningin að <span class="math">\varphi'</span> hefur að minnsta kosti
+eina núllstöð á sérhverju bilanna</p>
+<div class="math">
+<p><span class="math">]a_1,a_2[, \  ]a_2,a_3[, \ \dots \  ]a_{k-1},a_k[</span></p>
+</div><p>Þau eru samanlagt <span class="math">k-1</span> talsins. Að auki vitum við að
+<span class="math">\varphi'</span> hefur núllstöðvar af stigi að minnsta kosti
+<span class="math">m_j-1</span> í punktinum <span class="math">a_j</span>. Ef við leggjum þetta saman, þá
+fáum við að <span class="math">\varphi'</span> hefur núllstöðvar af margfeldni að minnsta
+kosti</p>
+<div class="math">
+<p><span class="math">k-1+(m_1-1)+\cdots+(m_k-1)=n-1</span></p>
+</div><p>í minnsta lokaða bilinu sem inniheldur alla punktana
+<span class="math">a_1,\dots,a_k</span>.</p>
+</div>
+<div class="section" id="setning-skekkjumat">
+<h3>3.7.6. Setning: Skekkjumat<a class="headerlink" href="#setning-skekkjumat" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nú ætlum við að sýna fram á að fyrir föll <span class="math">f</span> sem eru
+<span class="math">(m+1)</span> sinnum samfellt deildanleg að til sé <span class="math">\xi</span> á minnsta
+bili sem inniheldur <span class="math">a_1, \ldots, a_k</span> og <span class="math">x</span> þannig að</p>
+<div class="math">
+<p><span class="math">f[x_0,\ldots,x_m,x] = \frac{f^{(m+1)}(\xi)}{(m+1)!}</span></p>
+</div><script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock17'))">Sönnun</a><br /><div id="toggleblock17" style="display: none"><br/><p>Við skilgreinum fallið</p>
+<div class="math">
+<p><span class="math">g(t) = f(t) - p(t) - \lambda w(t),</span></p>
+</div><p>þar sem</p>
+<div class="math">
+<p><span class="math">w(t) = (t-a_1)^{m_1} \cdots (t-a_k)^{m_k}</span></p>
+</div><p>og talan <span class="math">\lambda</span> er valin þannig að <span class="math">g(x) = 0</span>.</p>
+<p>Nú er <span class="math">p^{(j)}(a_i)=f^{(j)}(a_i)</span> fyrir <span class="math">j=0,\dots,m_i-1</span>,
+þá gefur setning Taylors okkur að <span class="math">g</span> hefur núllstöð af stigi
+<span class="math">m_i</span> í sérhverjum punktanna <span class="math">a_i</span>. Auk þess hefur <span class="math">g</span>
+núllstöð í <span class="math">x</span>. Samanlagt eru þetta að minnsta kosti <span class="math">m+2</span>
+núllstöðvar taldar með margfeldni.</p>
+<p>Höfum:</p>
+<ul class="simple">
+<li><span class="math">g</span> hefur að minnsta kosti <span class="math">m+2</span> núllstöðvar taldar með margfeldni,</li>
+<li><span class="math">g'</span> hefur að minnsta kosti <span class="math">m+1</span> núllstöð talda með margfeldni,</li>
+<li><span class="math">g''</span> hefur að minnsta kosti <span class="math">m</span> núllstöðvar taldar með margfeldni</li>
+<li>og þannig áfram, þar til við ályktum að</li>
+<li><span class="math">g^{(m+1)}</span> hefur að minnsta kosti eina núllstöð.</li>
+</ul>
+<p>Tökum eina slíka og köllum hana <span class="math">\xi</span>.</p>
+<p>Munum að</p>
+<div class="math">
+<p><span class="math">g(t) = f(t) - p(t) - \lambda w(t),</span></p>
+</div><p>þar sem</p>
+<div class="math">
+<p><span class="math">w(t) = (t-a_1)^{m_1} \cdots (t-a_k)^{m_k}=t^{m+1}+b_mt^m+\cdots+b_1t+b_0</span></p>
+</div><p>Margliðan <span class="math">p</span> hefur stig <span class="math">\leq m</span> svo
+<span class="math">p^{(m+1)}(x) = 0</span> fyrir öll <span class="math">x</span></p>
+<p>og margliðan <span class="math">w</span> er af stigi <span class="math">m+1</span> með stuðul <span class="math">1</span> við
+hæsta veldið, svo <span class="math">w^{(m+1)}(t) = (m+1)!</span>. Við höfum því</p>
+<div class="math">
+<p><span class="math">0 = g^{(m+1)}(\xi) = f^{(m+1)}(\xi) - \lambda \cdot (m+1)!</span></p>
+</div><p>sem jafngildir því að</p>
+<div class="math">
+<p><span class="math">\lambda =\dfrac{f^{(m+1)}(\xi)}{(m+1)!}</span></p>
+</div><p>Við setjum nú inn <span class="math">t=x</span> sem gefur</p>
+<div class="math">
+<p><span class="math">0=g(x) = f(x) - p(x) - \lambda w(x),</span></p>
+</div><p>og við fáum þar með formúlu fyrir skekkjunni á nálgun á <span class="math">f(x)</span> með
+alhæfðu brúunarmargliðunni <span class="math">p(x)</span>,</p>
+<div class="math">
+<p><span class="math">f(x) - p(x) =\lambda w(x) = \dfrac{f^{(m+1)}(\xi)}{(m+1)!}
+(x-a_1)^{m_1} \cdots (x-a_k)^{m_k}</span></p>
+</div></div></div></div>
+<div class="section" id="id9">
+<h3>3.7.7. Samantekt<a class="headerlink" href="#id9" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef gefið er fall <span class="math">f:I\to {{\mathbb  R}}</span> á bili <span class="math">I</span>,
+<span class="math">a_1,\dots,a_k</span> í <span class="math">I</span>, með <span class="math">a_j\neq a_k</span> ef
+<span class="math">j\neq k</span>, jákvæðar heiltölur <span class="math">m_1,\dots,m_k</span>, talan
+<span class="math">m</span> er skilgreind með <span class="math">m=m_1+\cdots+m_k-1</span>, og gert er ráð
+fyrir að <span class="math">f\in C^{m+1}(I)</span>, þá er til nákvæmlega ein margliða
+<span class="math">p</span> af stigi <span class="math">\leq m</span> þannig að</p>
+<div class="math">
+<p><span class="math">p^{(j)}(a_i)=f^{(j)}(a_i), \qquad j=0,\dots, m_i-1, \quad i=1,\dots,k.</span></p>
+</div><p>Newton-form margliðunnar <span class="math">p</span> er gefið með</p>
+<div class="math">
+<p><span class="math">p(x)=f[x_0]+f[x_0,x_1](x-x_0)+\cdots+f[x_0,\dots,x_m](x-x_0)\cdots(x-x_{m-1})</span></p>
+</div><p>þar sem mismunakvótarnir <span class="math">f[x_i,\dots,x_{i+j}]</span> eru skilgreindir
+sem <span class="math">y[x_i,\dots,x_{i+j}]</span> út frá gögnunum <span class="math">y^{(j)}_i</span>.
+Fyrir sérhvert <span class="math">x</span> í <span class="math">I</span> er skekkjan <span class="math">f(x)-p(x)</span> í
+nálgun á <span class="math">f(x)</span> með <span class="math">p(x)</span> gefin með</p>
+<div class="math">
+<p><span class="math">f(x)-p(x)=f[x_0,\dots,x_m,x](x-a_1)^{m_1}\cdots(x-a_k)^{m_k}.</span></p>
+</div><p>Fyrir sérhvert <span class="math">i=1,\dots,k</span> og <span class="math">j=0,\dots,m-i</span> þá gildir að
+til er tala <span class="math">\xi</span> á minnsta bilinu sem inniheldur
+<span class="math">x_i\dots,x_{i+j}</span> þannig að</p>
+<div class="math">
+<p><span class="math">f[x_i,\dots,x_{i+j}]=\dfrac{f^{(j)}(\xi)}{j!},</span></p>
+</div><p>því gildir sérstaklega að til er tala <span class="math">\xi</span> á minnsta bilinu sem
+inniheldur <span class="math">a_1,\dots,a_k</span> og <span class="math">x</span> þannig að</p>
+<div class="math">
+<p><span class="math">f(x)-p(x)=\dfrac{f^{(m+1)}(\xi)}{(m+1)!}(x-a_1)^{m_1}\cdots(x-a_k)^{m_k}.</span></p>
+</div></div>
+<div class="section" id="id10">
+<h3>3.7.8. Sýnidæmi<a class="headerlink" href="#id10" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math">f(x)=x^2\ln x</span>.</p>
+<ol class="arabic simple">
+<li>Setjið upp mismunakvótatöflu til þess að reikna út brúunarmargliðu
+<span class="math">p</span> af stigi <span class="math">\leq 3</span> fyrir fallið <span class="math">f</span>, sem hefur tvo
+tvöfalda brúunarpunkta <span class="math">a_1=1</span> og <span class="math">a_2=2</span>. Skrifið upp
+Newton-form margliðunnar <span class="math">p</span>.</li>
+<li>Reiknið út <span class="math">p(1.3)</span>. Notið aðferðarskekkju fyrir margliðubrúun
+til þess að meta skekkjuna <span class="math">f(1.3)-p(1.3)</span> að ofan og neðan og
+fáið þannig bil þar sem rétta gildið liggur. Veljið miðpunkt bilsins sem
+nálgunargildi fyrir <span class="math">f(1.3)</span> og afrúnið gildið miðað við mörk
+bilsins.</li>
+<li>Látum nú <span class="math">q</span> vera brúnunarmargliðuna af stigi <span class="math">\leq 4</span> sem
+uppfyllir sömu skilyrði og gefin eru í fyrsta lið að viðbættu því að
+<span class="math">a_2=2</span> á að vera þrefaldur brúunarpunktur. Sýnið hvernig hægt er
+að ákvarða mismunakvótatöfluna fyrir <span class="math">q</span> með því að stækka töfluna
+í <strong>a)</strong>. Ákvarðið síðan <span class="math">q</span> og reiknið út <span class="math">q(1.3)</span>.</li>
+</ol>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock18'))">Lausn</a><br /><div id="toggleblock18" style="display: none"><br/><p><strong>1. og 2.</strong>
+Til þess að spara pláss skulum leysa fyrsta og þriðja lið báða í einu
+með því að reikna strax út mismunakvótatöfluna fyrir fjórða stigs margliðuna í
+3. lið. Punktarnir <span class="math">x_0,\dots,x_4</span> eru þá <span class="math">1,1,2,2,2</span> og
+við höfum gefin fallgildin</p>
+<div class="math">
+<p><span class="math">f(1)=f[x_0]=f[x_1]=0 \qquad  \text{ og } \qquad
+f(2)=f[x_2]=f[x_3]=f[x_4].</span></p>
+</div><p>Í 1. lið eru punktarnir tvöfaldir svo við höfum gefin gildi
+afleiðunnar <span class="math">f'(x)=2x\ln x+x</span> í punktunum <span class="math">1</span> og <span class="math">2</span>.</p>
+<div class="math">
+<p><span class="math">f'(1)=f[1,1]=f[x_0,x_1]=1 \ \text{ og } \
+f'(2)=f[2,2]=f[x_2,x_3]=4\ln 2+2.</span></p>
+</div><p>Í 3. lið er gildið á 2. afleiðu <span class="math">f''(x)=2\ln x +3</span> gefið í
+punktinum <span class="math">2</span>. Það gefur okkur</p>
+<div class="math">
+<p><span class="math">f''(2)/2!=f[2,2,2]=f[x_2,x_3,x_4]=\ln 2+\tfrac 32.</span></p>
+</div><p>Við setjum þessi gildi inn í mismunakvótatöfluna og fyllum hana út með
+því að taka mismunakvóta milli allra gilda</p>
+<div class="math">
+<p><span class="math">\begin{matrix}
+i&amp;x_i &amp; f[x_i] &amp;f[x_i,x_{i+1}] &amp; f[x_i,x_{i+1},x_{i+2}] &amp;
+f[x_i,\dots,x_{i+3}]&amp;f[x_i,\dots,x_{i+4}] \\\hline
+0&amp;1&amp;0     &amp;1       &amp;4\ln 2-1        &amp;-4\ln 2+3&amp; 5\ln 2-\tfrac 72\\
+1&amp;1&amp;0     &amp;4\ln 2  &amp;2               &amp;\ln 2-\tfrac 12\\
+2&amp;2&amp;4\ln 2&amp;4\ln 2+2&amp;\ln 2+\tfrac 32\\
+3&amp;2&amp;4\ln 2&amp;4\ln 2+2\\
+4&amp;2&amp;4\ln 2
+\end{matrix}</span></p>
+</div><p>Margliðan í 1. lið er því</p>
+<div class="math">
+<p><span class="math">p(x)=(x-1)+(4\ln 2-1)(x-1)^2+(-4\ln 2+3)(x-1)^2(x-2).</span></p>
+</div><p>en í 3. lið er hún</p>
+<div class="math">
+<p><span class="math">q(x)=p(x)+(5\ln 2-\tfrac 72)(x-1)^2(x-2)^2</span></p>
+</div><p><strong>2.</strong> Við stingum gildinu <span class="math">x=1.3</span> inn í margliðuna og fáum
+<span class="math">p(1.3)=0.445206074</span>. Skekkjan er</p>
+<div class="math">
+<p><span class="math">f(x)-p(x)=\dfrac{f^{(4)}(\xi)}{4!}(x-1)^2(x-2)^2</span></p>
+</div><p>þar sem <span class="math">\xi</span> er einhver punktur á bilinu <span class="math">[1,2]</span>.</p>
+<p>Við þurfum því að meta fjórðu afleiðuna,</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+f(x) &amp;=x^2\ln x, \quad
+f'(x)=2x\ln x+x, \quad
+f''(x)=2\ln x+3, \quad
+\\
+f'''(x)&amp; =2/x, \quad
+f^{(4)}(x)=-2/x^2.\end{aligned}</span></p>
+</div><p>Ef <span class="math">x\in [1,2]</span>, þá höfum við matið
+<span class="math">-2\leq f^{(4)}(x)\leq -\tfrac 12</span>.</p>
+<p>Af ójöfnunum <span class="math">-2\leq f^{(4)}(x)\leq -\tfrac 12</span> leiðir síðan að</p>
+<div class="math">
+<p><span class="math">\alpha=\dfrac{-2\cdot(0.3)^2\cdot(-0.7)^2}{24}\leq f(1.3)-p(1.3)
+\leq \dfrac{-0.5\cdot(0.3)^2\cdot(-0.7)^2}{24}=\beta.</span></p>
+</div><p>Við reiknum út úr báðum brotunum</p>
+<div class="math">
+<p><span class="math">\alpha=-0.003675 \qquad \text{ og } \qquad
+\beta=-0.00091875.</span></p>
+</div><p>þar með er <span class="math">f(1.3)</span> á bilinu milli <span class="math">p(1.3)+\alpha=0.441531</span>
+og <span class="math">p(1.3)+\beta=0.444287</span>.</p>
+<p>Nálgunargildi okkar á að vera miðpunktur þessa bils og algildi
+skekkjunnar verður þá hálf billengdin. Það færir okkur nálgunina
+<span class="math">f(1.3) \approx 0.442909</span> og skekkjuna <span class="math">\pm 0.0014</span>. Réttur
+afrúningur er <span class="math">f(1.3)=0.44</span>.</p>
+<p>Við eigum aðeins eftir að reikna út gildi margliðunnar <span class="math">q</span> í
+punktinum <span class="math">1.3</span>. Út úr mismunakvótatöflunni fáum við</p>
+<div class="math">
+<p><span class="math">q(x)=p(x)+(5\ln 2-\tfrac 72)(x-1)^2(x-2)^2</span></p>
+</div><p>sem gefur okkur gildið</p>
+<div class="math">
+<p><span class="math">q(1.3)=0.445206074-0.001511046=0.4436950278</span></p>
+</div><p>Til samanburðar höfum við rétt gildi</p>
+<div class="math">
+<p><span class="math">f(1.3)=0.443395606950060\ldots.</span></p>
+</div></div></div></div>
+</div>
+<div class="section" id="splaesibruun">
+<span id="index-20"></span><h2>3.8. Splæsibrúun<a class="headerlink" href="#splaesibruun" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Látum <span class="math">(t_0,y_0),\dots,(t_n,y_n)</span> vera punkta í plani og gerum ráð
+fyrir að <span class="math">a=t_0&lt;t_1&lt;\cdots&lt;t_n=b</span>.</p>
+<p>Við höfum nú lært að ákvarða margliðu <span class="math">p</span> af stigi <span class="math">\leq n</span>
+sem tekur gildin <span class="math">y_i</span> í punktunum <span class="math">t_i</span>.</p>
+<p>Ef punktarnir liggja á grafi fallsins <span class="math">f</span> og nota á margliðuna til
+þess að nálga fallgildi <span class="math">f</span>, þá getur það verið ýmsum erfiðleikum
+bundið þegar stig hennar stækkar eins og við sáum í byrjun kaflans
+<a class="reference internal" href="#skynsamlegir-skiptipunktar-og-chebyshev-margliur">Skynsamlegir skiptipunktar og Chebyshev margliður</a>.
+Lausnin þar var að reyna að velja brúunarpunktana skynsamlega. Ef við
+hins vegar getum ekki valið brúunarpunktana eftir eigin höfði þá erum
+við í vandræðum og þurfum við að leita annarra leiða.</p>
+<div class="section" id="almennt-um-splaesibruun">
+<h3>3.8.1. Almennt um splæsibrúun<a class="headerlink" href="#almennt-um-splaesibruun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Splæsibrúun er leið út úr þessum vandræðum.</p>
+<p>Með henni er fundið samfellt fall <span class="math">S</span> sem brúar gefnu punktana,
+<span class="math">S(t_i)=y_i</span>, og er þannig að einskorðun þess við hlutbilin
+<span class="math">[t_i,t_{i+1}]</span> er gefið með margliðu af stigi <span class="math">\leq m</span>, þar
+sem <span class="math">m</span> er fyrirfram gefin tala.</p>
+<p>Algengast er að nota <span class="math">m=3</span>.</p>
+</div>
+<div class="section" id="fyrsta-stigs-splaesibruun">
+<span id="index-21"></span><h3>3.8.2. Fyrsta stigs splæsibrúun:<a class="headerlink" href="#fyrsta-stigs-splaesibruun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef stigið <span class="math">m</span> er <span class="math">1</span>, þá erum við einfaldlega að draga
+línustrik milli punktanna og sjáum í hendi okkar að lausnin er</p>
+<div class="math">
+<p><span class="math">S(x) = \begin{cases}
+        S_0(x) = \dfrac {y_1-y_0}{t_1-t_0}(x-t_0)+y_0,
+            &amp; x \in [t_0,t_1],\\
+        S_1(x) = \dfrac {y_2-y_1}{t_2-t_1}(x-t_1)+y_1,
+            &amp; x \in [t_1,t_2],\\
+        \vdots &amp; \\
+        S_{n-1}(x) = \dfrac {y_n-y_{n-1}}{t_n-t_{n-1}}
+            (x-t_{n-1})+y_{n-1}, &amp;x \in [t_{n-1},t_n].
+    \end{cases}</span></p>
+</div><p>Þessi aðferð er ekki mikið notuð því hún er ósannfærandi fyrir
+deildanleg föll.</p>
+</div>
+<div class="section" id="rija-stigs-splaesibruun">
+<span id="index-22"></span><h3>3.8.3. Þriðja stigs splæsibrúun<a class="headerlink" href="#rija-stigs-splaesibruun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Algengast er að framkvæma splæsibrúun með þriðja stigs margliðum.</p>
+<p>Við skulum tákna einskorðun <span class="math">S</span> við hlutbilið
+<span class="math">[t_i,t_{i+1}]</span> með <span class="math">S_i</span> og skrifa</p>
+<div class="math">
+<p><span class="math">S_i(x) = a_i+b_i(x-t_i)+c_i(x-t_i)^2+d_i(x-t_i)^3,
+        \qquad x\in [t_i,t_{i+1}).</span></p>
+</div><p>Við ætlum að leiða út jöfnur fyrir stuðlunum <span class="math">a_i, b_i, c_i</span> og
+<span class="math">d_i</span>. Kröfurnar sem við setjum eru:</p>
+<ol class="arabic simple">
+<li><span class="math">S</span> er tvisvar sinnum samfellt deildanlegt á öllu bilinu <span class="math">[a,b]</span></li>
+<li><span class="math">S</span> taki gildin <span class="math">y_i</span> í punktunum <span class="math">t_i</span></li>
+</ol>
+<p>Setjum til einföldunar <span class="math">h_i = t_{i+1}-t_i</span> fyrir <span class="math">i = 0,
+\ldots, n-1</span>.</p>
+<p>Skilyrðin tvö má því skrifa sem eftirfarandi jöfnuhneppi:</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock19'))">Útleiðsla á jöfnuhneppi</a><br /><div id="toggleblock19" style="display: none"><br/><p>Á hverju hlutbili <span class="math">[t_i,t_{i+1}]</span> höfum við:</p>
+<div class="math">
+<p><span class="math">S_i(x) = a_i+b_i(x-t_i)+c_i(x-t_i)^2+d_i(x-t_i)^3,
+        \qquad x\in [t_i,t_{i+1}),</span></p>
+</div><p>sem þýðir að skilyrðin tvö má skrifa sem</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+    a_i &amp;=&amp; &amp;S_i(t_i)&amp; &amp;=&amp; y_i
+        &amp;, \quad (1) \\
+    a_i + b_ih_i + c_ih_i^2 + d_ih_i^3 &amp;=&amp; &amp;S_i(t_{i+1})
+        = S_{i+1}(t_{i+1})&amp; &amp;=&amp; a_{i+1}
+        &amp;, \quad (2) \\
+    b_i + 2c_ih_i + 3d_ih_i^2 &amp;=&amp; &amp;S_i'(t_{i+1})
+        = S_{i+1}'(t_{i+1})&amp; &amp;=&amp; b_{i+1}
+        &amp;, \quad (3) \\
+    2c_i + 6d_ih_i &amp;=&amp; &amp;S_i''(t_{i+1})
+        = S_{i+1}''(t_{i+1})&amp; &amp;=&amp; 2c_{i+1}
+        &amp;, \quad (4)\end{aligned}</span></p>
+</div><p>Í (1) höfum við <span class="math">i = 0,\ldots,n</span> og í (2)-(4) höfum við
+<span class="math">i=0,\ldots,n-2</span>.</p>
+<p>Samtals: <span class="math">(n+1)+3(n-1)=4n-2</span> línulegar jöfnur til þess að ákvarða
+<span class="math">4n</span> óþekktar stærðir.</p>
+<p>Það er því ljóst að okkur vantar tvö skilyrði til þess að geta fengið
+ótvírætt ákvarðaða lausn.</p>
+<p>Fyrstu jöfnurnar gefa strax gildi <span class="math">a_i</span> og (4) gefur að</p>
+<div class="math">
+<p><span class="math">d_i = \frac{c_{i+1}-c_i}{3h_i}, \quad i=0,\ldots,n-2</span></p>
+</div><p>Ef við setjum þetta inn í (2) og (3) fæst</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+    a_{i+1} = a_i + b_ih_i + \frac{c_{i+1}+c_i}{3}h_i^2
+        &amp;, \quad i=0,\ldots,n-2 \\
+    b_{i+1} = b_i + (c_{i+1} + c_i)h_i
+        &amp;, \quad i=0,\ldots,n-2\end{aligned}</span></p>
+</div><p>Þegar við leysum fyrri jöfnuna fyrir <span class="math">b_i</span> fæst</p>
+<div class="math">
+<p><span class="math">b_i = \frac{a_{i+1}-a_i}{h_i}-\frac{c_i+c_{i+1}}{3}h_i
+        , \quad i=0,\ldots,n-2</span></p>
+</div><p>og ef við setjum þetta inn í seinni jöfnuna fæst á endanum að</p>
+<div class="math">
+<p><span class="math">h_{i-1}c_{i-1} + 2(h_{i-1}+h_i)c_i + h_ic_{i+1} =
+    \frac{3}{h_i}(a_{i+1}-a_i)
+        - \frac{3}{h_{i-1}}(a_i-a_{i-1})
+    , \quad i=1,\ldots,n-1</span></p>
+</div></div></div></div>
+<div class="section" id="jofnuhneppi">
+<h3>3.8.4. Jöfnuhneppið<a class="headerlink" href="#jofnuhneppi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="math">
+<p><span class="math">\begin{aligned}
+    \left[ \begin{array}{c:cccc:c}
+    .?.  &amp; .?.       &amp;&amp;&amp;&amp; \\ \hdashline
+    h_0 &amp; 2(h_0+h_1) &amp; h_1 &amp;&amp;&amp;\\
+        &amp; h_1        &amp; 2(h_1+h_2) &amp; h_2 &amp;&amp;\\
+        &amp;&amp;&amp;&amp;&amp;\\
+        &amp;            &amp; \ddots      &amp; \ddots &amp; \ddots &amp;\\
+        &amp;&amp;&amp;&amp;&amp;\\
+        &amp;  &amp;  &amp; h_{n-2}  &amp; 2(h_{n-2} + h_{n-1}) &amp; h_{n-1}
+        \\ \hdashline
+        &amp;  &amp;  &amp;   &amp; .?.    &amp; .?.
+    \end{array} \right]
+    \left[ \begin{array}{c}
+    c_0 \\ \hdashline
+    c_1 \\
+    c_2 \\
+    \\
+    \vdots \\
+    \\
+    c_{n-1} \\ \hdashline
+    c_n
+    \end{array} \right]
+    \\
+    = 3\left[ \begin{array}{c}
+    .?. \\ \hdashline
+    \dfrac{a_2-a_1}{h_1} - \dfrac{a_1-a_0}{h_0} \\
+    \dfrac{a_3-a_2}{h_2} - \dfrac{a_2-a_1}{h_1} \\
+    \vdots \\
+    \dfrac{a_n-a_{n-1}}{h_{n-1}}
+        - \dfrac{a_{n-1}-a_{n-2}}{h_{n-2}}
+    \\ \hdashline
+    \end{array} \right]\end{aligned}</span></p>
+</div><p>En það vantar í þetta einhver skilyrði á <span class="math">c_0</span> og <span class="math">c_n</span>.</p>
+<p>Þegar þau hafa verið sett inn, þá getum við leyst þetta hneppi, reiknað svo
+gildi <span class="math">b_i</span> og <span class="math">d_i</span> og þá höfum við fundið splæsifallið
+okkar.</p>
+<p>Það eru til margar leiðir til að ákvarða <span class="math">c_0</span> og <span class="math">c_n</span>, en
+fjórar eru algengastar.</p>
+</div>
+<div class="section" id="tilfelli-1-ekki-hnuts-endaskilyri">
+<h3>3.8.5. Tilfelli 1: Ekki-hnúts endaskilyrði<a class="headerlink" href="#tilfelli-1-ekki-hnuts-endaskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við höfum engar upplýsingar um fallið <span class="math">f</span> í <span class="math">t_1</span> og
+<span class="math">t_{n-1}</span> liggur beint við að krefjast þess að <span class="math">S'''</span> sé
+samfellt þar, sem þýðir að <span class="math">d_0 = d_1</span> og
+<span class="math">d_{n-2} = d_{n-1}</span>. Með að nota jöfnurnar fyrir <span class="math">d_i</span> má
+skrifa þetta sem</p>
+<div class="math">
+<p><span class="math">\begin{aligned}
+    h_1c_0 - (h_0 + h_1)c_1 + h_0c_2 = 0 \\
+    h_{n-1}c_{n-2}-(h_{n-2}+h_{n-1})c_{n-1}+h_{n-2}c_n = 0\end{aligned}</span></p>
+</div><p>og þessar jöfnur, ásamt hinum, má leysa til að ákvarða <span class="math">c_i</span>-in.</p>
+</div>
+<div class="section" id="tilfelli-2-vingu-endaskilyri">
+<h3>3.8.6. Tilfelli 2: Þvinguð endaskilyrði<a class="headerlink" href="#tilfelli-2-vingu-endaskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef hallatala fallsins <span class="math">f</span> er þekkt í endapunktum bilsins er
+eðlilegt að nota þær upplýsingar við ákvörðun splæsifallsins. Gerum því
+ráð fyrir að <span class="math">f'(t_0) = A</span> og <span class="math">f'(t_n) = B</span>. Skilyrðið
+<span class="math">S'(t_0) = A</span> gefur þá að</p>
+<div class="math">
+<p><span class="math">A = \frac{a_1-a_0}{h_0} - \frac{2c_0+c_1}{3}h_0,</span></p>
+</div><p>eða</p>
+<div class="math">
+<p><span class="math">2h_0c_0 + h_0c_1 =
+    3 \left( \frac{a_1-a_0}{h_0} - A \right)</span></p>
+</div><p>og <span class="math">S'(t_n) = B</span> gefur</p>
+<div class="math">
+<p><span class="math">B = b_{n-1} + 2c_{n-1}h_{n-1} + 3d_{n-1}h_{n-1}^2</span></p>
+</div><p>og með að nota formúlurnar fyrir <span class="math">b_{n-1}</span> og <span class="math">d_{n-1}</span>
+fæst</p>
+<div class="math">
+<p><span class="math">c_{n-1}h_{n-1} + 2c_nh_{n-1} =
+    3 \left( B  - \frac{a_n-a_{n-1}}{h_{n-1}} \right).</span></p>
+</div></div>
+<div class="section" id="tilfelli-3-natturleg-endaskilyri">
+<h3>3.8.7. Tilfelli 3: Náttúrleg endaskilyrði<a class="headerlink" href="#tilfelli-3-natturleg-endaskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Einfaldasta lausnin er að setja <span class="math">c_0 = c_n = 0</span>, en það jafngildir
+því að <span class="math">S''(t_0) = S''(t_n) = 0</span>.</p>
+</div>
+<div class="section" id="tilfelli-4-lotubundi-endaskilyri">
+<h3>3.8.8. Tilfelli 4: Lotubundið endaskilyrði<a class="headerlink" href="#tilfelli-4-lotubundi-endaskilyri" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hugsum okkur að við viljum framlengja <span class="math">S</span> í tvisvar samfellt
+deildanlegt <span class="math">(b-a)</span>-lotubundið fall á <span class="math">{{\mathbb  R}}</span>. Það
+setur skilyrðin</p>
+<div class="math">
+<p><span class="math">y_0 = S(t_0) = S_(t_n) = y_n, \quad
+    S'(t_0) = S'(t_n), \quad
+    \text{ og } \quad
+    S''(t_0) = S''(t_n)</span></p>
+</div><p>Fljótséð er að <span class="math">S''(t_0) = S''(t_n)</span> þýðir að <span class="math">c_0 = c_n</span>,
+eða</p>
+<div class="math">
+<p><span class="math">c_0 - c_n = 0.</span></p>
+</div><p>Þetta er fyrri jafnan sem við þurfum.</p>
+<p>Nú gefur <span class="math">S'(t_0) = S'(t_n)</span> að</p>
+<div class="math">
+<p><span class="math">b_0 = b_{n-1} + 2c_{n-1}h_{n-1} + 3d_{n-1}h_{n-1}^2</span></p>
+</div><p>og með að setja inn formúlurnar fyrir <span class="math">b_0, b_{n-1}, d_{n-1}</span> og
+nota að <span class="math">c_0 = c_n</span> fæst jafnan</p>
+<div class="math">
+<p><span class="math">h_0c_1 + 2h_{n-1}c_{n-1} + (2h_0 + 2h_{n-1})c_n
+    = 3 \left( \frac{a_1-a_0}{h_0}
+        - \frac{a_n-a_{n-1}}{h_{n-1}} \right).</span></p>
+</div></div>
+<div class="section" id="teikning-a-ferlum-i-planinu">
+<span id="index-23"></span><h3>3.8.9. Teikning á ferlum í planinu<a class="headerlink" href="#teikning-a-ferlum-i-planinu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hægt er að nota brúun til þess að nálga ferla í <span class="math">\mathbb R^n</span>.
+Skoðum tilvikið <span class="math">n=2</span>.</p>
+<p>Gerum nú ráð fyrir að við höfum gefna punkta <span class="math">(x_0,y_0),\dots,(x_n,y_n) \in \mathbb R^2</span>
+og að við viljum finna samfelldan splæsiferil í gegnum þá. Þetta er gert
+í nokkrum skrefum:</p>
+<ol class="arabic">
+<li><p class="first">Ákveðið er stikabil <span class="math">[a,b]</span> og skiptingu á því</p>
+<div class="math">
+<p><span class="math">a=t_0&lt;t_1&lt;\cdots&lt;t_n=b</span></p>
+</div><p>til dæmis <span class="math">[0,n]</span> og skiptinguna</p>
+<div class="math">
+<p><span class="math">0=t_0&lt;t_1=1&lt;\cdots&lt;t_n=n.</span></p>
+</div></li>
+<li><p class="first">Ákveðið er hvaða endaskilyrði eiga við.</p>
+</li>
+<li><p class="first">Búin eru til tvö splæsiföll <span class="math">R(t)</span> fyrir punktasafnið
+<span class="math">x_0,\dots,x_n</span> og <span class="math">S(t)</span> fyrir punktasafnið
+<span class="math">y_0,\dots,y_n</span>.</p>
+</li>
+<li><p class="first">Stikaferillinn <span class="math">[a,b]\ni t\mapsto (R(t),S(t))</span> er síðan teiknaður, en hann uppfyllir
+<span class="math">(R(t_j),S(t_j))=(x_j,y_j)</span>, <span class="math">j=0,\dots,n</span>.</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Aðvörun</p>
+<p>Athugið að hér er <span class="math">t</span> breytan okkar en <span class="math">x</span> og <span class="math">y</span> eru gildin sem við
+viljum að ferillinn taki.</p>
+<p class="last">Þetta er frábrugðið því þegar við skoðum graf af einni breytu en þá er
+<span class="math">x</span> venjulega breytan og <span class="math">y</span> gildin sem viljum taka.</p>
+</div>
+</div>
+</div>
+<div class="section" id="afer-minnstu-fervika">
+<span id="index-24"></span><h2>3.9. Aðferð minnstu fervika<a class="headerlink" href="#afer-minnstu-fervika" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Látum <span class="math">(x_1,y_1),\dots,(x_m,y_m)</span> vera safn punkta í plani með
+<span class="math">x_j\in
+[a,b]</span> fyrir öll <span class="math">j</span> og látum <span class="math">f_1,\dots,f_n</span> vera raungild
+föll á <span class="math">[a,b]</span>.</p>
+<p>Við viljum finna það fall <span class="math">f</span> af gerðinni</p>
+<div class="math">
+<p><span class="math">f(x)=c_1f_1(x) + \cdots + c_nf_n(x)</span></p>
+</div><p>með stuðla <span class="math">c_1, \ldots, c_n</span> þannig að punktarnir
+<span class="math">(x_j,f(x_j))</span> nálgi gefna punktasafnið sem best og þá er átt við
+að ferningssummuna</p>
+<div class="math">
+<p><span class="math">\sum_{i=1}^m\big(y_i-f(x_i)\big)^2</span></p>
+</div><p>verði eins lítil og mögulegt er.</p>
+<div class="section" id="jafna-bestu-linu">
+<span id="index-25"></span><h3>3.9.1. Jafna bestu línu<a class="headerlink" href="#jafna-bestu-linu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Flestir hafa heyrt talað um bestu línu gegnum punktasafn, hún fæst með
+að taka hér <span class="math">f_1(x) = 1</span> og <span class="math">f_2(x) = x</span>, en lítið mál er að
+finna einnig besta fleygboga, bestu margliðu af fyrirfram ákveðnu stigi
+eða einhverja aðra samantekt falla gegnum punktasafnið.</p>
+</div>
+<div class="section" id="smavegis-linuleg-algebra">
+<h3>3.9.2. Smávegis línuleg algebra<a class="headerlink" href="#smavegis-linuleg-algebra" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Til þess að finna þessi gildi á stuðlunum <span class="math">c_i</span> er heppilegt að
+notfæra sér nokkrar niðurstöður úr línulegri algebru. Fyrir gefin gildi
+á <span class="math">c_1,\dots,c_n</span> setjum við</p>
+<div class="math">
+<p><span class="math">b_i = f(x_i) = c_1f(x_i) + \cdots + c_n f_n(x_i),
+    \qquad i=1,\dots,m,</span></p>
+</div><p>og skilgreinum síðan dálkvigrana</p>
+<div class="math">
+<p><span class="math">b = [b_1,\dots,b_m]^T,\qquad
+    y = [y_1,\dots,y_m]^T,\quad \text{ og } \quad
+    c = [c_1,\dots,c_n]^T,\qquad</span></p>
+</div><p>Þá er <span class="math">Ac=b</span>, þar sem <span class="math">A</span> er <span class="math">m\times n</span> fylkið</p>
+<div class="math">
+<p><span class="math">A = \left[\begin{matrix}
+        f_1(x_1)&amp; f_2(x_1) &amp; \dots &amp; f_n(x_1) \\
+        f_1(x_2)&amp; f_2(x_2) &amp; \dots &amp; f_n(x_2) \\
+        \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\
+        f_1(x_m)&amp; f_2(x_m) &amp; \dots &amp; f_n(x_m)
+    \end{matrix}\right].</span></p>
+</div><p>Verkefnið snýst nú um að finna þann vigur <span class="math">c\in {{\mathbb  R}}^n</span>
+sem lágmarkar</p>
+<div class="math">
+<p><span class="math">\sum_{i=1}^m \big(y_i-b_i\big)^2
+    = \| y - b \|^2 = \| y - Ac \|^2</span></p>
+</div><p>þar sem <span class="math">\|\cdot\|</span> táknar <a class="reference external" href="https://en.wikipedia.org/wiki/Euclidean_distance">evklíðska fjarlægðina</a>
+(staðalinn) á <span class="math">{{\mathbb  R}}^m</span>.</p>
+<p>Vigrar af gerðinni <span class="math">b= Ac</span> spanna dálkrúm fylkisins <span class="math">A</span> og
+þá má skrifa sem línulegar samantektir af gerðinni</p>
+<div class="math">
+<p><span class="math">b = c_1A_1 + \cdots + c_nA_n</span></p>
+</div><p>þar sem <span class="math">A_j</span> er dálkur númer <span class="math">j</span>.</p>
+<p>Verkefnið snýst um að finna þann vigur í dálkrúminu sem næstur er
+<span class="math">y</span>. Vigurinn <span class="math">b</span> er næstur <span class="math">y</span> ef og aðeins ef
+<span class="math">y-b</span> er hornréttur á alla vigra dálkrúmsins.</p>
+<p>Þessi skilyrði má fá með innfeldi</p>
+<div class="math">
+<p><span class="math">A_j \cdot (y-b) = 0, \qquad j = 1, \ldots , n</span></p>
+</div><p>Með fylkjarithætti fæst ein jafna</p>
+<div class="math">
+<p><span class="math">A^T (y-b) = 0.</span></p>
+</div><p>Setjum nú inn <span class="math">b=Ac</span>. Þá ákvarðast <span class="math">c</span> af hneppinu</p>
+<div class="math">
+<p><span class="math">A^T(y-Ac) = 0</span></p>
+</div><p>sem jafngildir</p>
+<div class="math">
+<p><span class="math">(A^TA)c = A^Ty</span></p>
+</div><p>Við þurfum því aðeins að leysa þetta jöfnuhneppi</p>
+<div class="math">
+<p><span class="math">(A^TA)c = A^Ty</span></p>
+</div><p>fyrir <span class="math">c</span> til að finna stuðlana okkar. Ef fylkið <span class="math">A^TA</span>
+hefur andhverfu, þá fæst alltaf ótvírætt ákvörðuð lausn <span class="math">c</span>.</p>
+<p>Ef fylkið <span class="math">A^TA</span> hefur ekki andhverfu eða að það hefur ákveðu sem
+er mjög nálægt <span class="math">0</span>, þá þurfum við að beita flóknari brögðum. Við
+komum að því <a class="reference external" href="LU-þáttun">síðar</a>.</p>
+</div>
+<div class="section" id="index-26">
+<span id="id11"></span><h3>3.9.3. Jafna bestu línu<a class="headerlink" href="#index-26" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Algengt er að menn vilji finna beina línu sem best fellur að
+punktasafninu <span class="math">(x_1,y_1,)\dots,(x_m,y_m)</span>. Þá er <span class="math">n=2</span> og
+við tökum lausnagrunninn <span class="math">f_1(x)=1</span> og <span class="math">f_2(x)=x</span>.</p>
+<p>Fylkið er þá</p>
+<div class="math">
+<p><span class="math">A = \left[\begin{matrix}
+        1&amp; x_1\\
+        1&amp; x_2 \\
+        \vdots &amp;\vdots \\
+        1&amp; x_m
+    \end{matrix}\right].</span></p>
+</div><p>og þar með</p>
+<div class="math">
+<p><span class="math">A^TA = \left[\begin{matrix}
+        m&amp; \sum_{j=1}^mx_j\\
+        \sum_{j=1}^mx_j&amp; \sum_{j=1}^mx_j^2
+    \end{matrix}\right].
+\qquad \text{ og } \qquad
+    A^Ty = \left[\begin{matrix}
+         \sum_{j=1}^my_j\\
+        \sum_{j=1}^mx_jy_j
+    \end{matrix}\right].</span></p>
+</div><div class="admonition note">
+<p class="first admonition-title">Athugasemd</p>
+<p>Það er auðvelt að leysa þetta tilvik því við höfum einfalda formúlu fyrir andhverfum
+<span class="math">2 \times 2</span> fylkja (svo lengi sem ákveðan er ekki 0).</p>
+<p class="last">Sjá <a class="reference external" href="https://en.wikipedia.org/wiki/Invertible_matrix#Inversion_of_2.C3.972_matrices">Wikipedia</a>.</p>
+</div>
+</div>
+<div class="section" id="jafna-bestu-annars-stigs-margliu">
+<span id="index-27"></span><h3>3.9.4. Jafna bestu annars stigs margliðu<a class="headerlink" href="#jafna-bestu-annars-stigs-margliu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við viljum finna bestu annars stigs margliðu gegnum punktasafnið, þá
+er <span class="math">n=3</span> og við tökum lausnagrunninn <span class="math">f_1(x)=1</span>,
+<span class="math">f_2(x)=x</span> og <span class="math">f_3(x)=x^2</span>.</p>
+<p>Þetta val gefur fylkið</p>
+<div class="math">
+<p><span class="math">A = \left[\begin{matrix}
+        1&amp; x_1 &amp; x_1^2\\
+        1&amp; x_2 &amp; x_2^2\\
+        \vdots &amp;\vdots &amp;\vdots\\
+        1&amp; x_m&amp; x_m^2
+    \end{matrix}\right].</span></p>
+</div><p>Fylkið <span class="math">A^TA</span> er þá <span class="math">3\times 3</span> og vigurinn <span class="math">A^Ty</span> er
+dálkvigur með <span class="math">3</span> hnit.</p>
+</div>
+<div class="section" id="synidaemi-besta-annars-stigs-marglia">
+<h3>3.9.5. Sýnidæmi: besta annars stigs margliða<a class="headerlink" href="#synidaemi-besta-annars-stigs-marglia" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gefin eru mæligildin</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="11%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><span class="math">x</span></th>
+<th class="head">0</th>
+<th class="head">1</th>
+<th class="head">2</th>
+<th class="head">3</th>
+<th class="head">4</th>
+<th class="head">5</th>
+<th class="head">6</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span class="math">y</span></td>
+<td>2.7</td>
+<td>-0.5</td>
+<td>-1.7</td>
+<td>-1.9</td>
+<td>-1.5</td>
+<td>0.2</td>
+<td>2.3</td>
+</tr>
+</tbody>
+</table>
+<p>Beitið aðferð minnstu fervika til þess að finna þá annars stigs margliðu
+sem best fellur að þessum gögnum Teiknið upp gögnin og graf marliðunnar.</p>
+<script type="text/javascript">
+    function showhide(element){
+        if (!document.getElementById)
+            return
+
+        if (element.style.display == "block")
+            element.style.display = "none"
+        else
+            element.style.display = "block"
+    };
+</script>
+<div class="admonition note"><a href="javascript:showhide(document.getElementById('toggleblock20'))">Lausn</a><br /><div id="toggleblock20" style="display: none"><br/><p>Við leitum hér að þremur tölum <span class="math">c_1</span>, <span class="math">c_2</span> og
+<span class="math">c_3</span> þannig að annars stigs margliðan
+<span class="math">f(x)=c_1f_1(x)+c_2f_2(x)+c_3f_3(x)</span> falli sem best að gögnunum.
+Grunnföllin þrjú eru <span class="math">f_1(x)=1</span>, <span class="math">f_2(x)=x</span> og
+<span class="math">f_3(x)=x^2</span>.</p>
+<p>Í þessu dæmi er fylkið <span class="math">A</span> gefið með</p>
+<div class="math">
+<p><span class="math">A=\left[\begin{matrix}
+1 &amp; 0&amp;0\\
+1 &amp; 1&amp;1\\
+1&amp;2&amp;4\\
+1&amp;3&amp;9\\
+1&amp;4&amp;16\\
+1&amp;5&amp;25\\
+1&amp;6&amp;36
+\end{matrix}\right],</span></p>
+</div><p>því stak númer <span class="math">(i,j)</span> í A er gefið með <span class="math">A_{ij} = f_j(x_i)</span>.</p>
+<p>Nú látum við matlab um afganginn</p>
+<div class="highlight-python"><div class="highlight"><pre>%  Matlab forrit sem teiknar upp bestu margliðunálgun á gefnum gögnum
+x=[0; 1; 2; 3; 4; 5; 6]
+y=[2.7; -0.5; -1.7; -1.9; -1.5; 0.2; 2.3 ]
+m=length(x);
+
+% Við leitum að bestu margliðu af stigi 2 eða lægri
+% og því eru  grunnföllin eru 3 talsins.
+n=3;
+
+% Stuðlafylkið er A=(a_{ij}), a_{ij}=x_i^{j-1}
+A(1:m,1)=ones(m,1);
+A(1:m,2)=x;
+for j=3:n
+    A(1:m,j)=A(1:m,j-1).*x;
+end
+% Reiknum úr úr normaljöfnuhneppinu A^TAc=A^Ty:
+c=(A&#39;*A)\(A&#39;*y);
+
+% Teikning undirbúin
+N=100;
+X=linspace(min(x),max(x),N);
+
+% Hliðrun í reikniriti horners er 0
+%
+hlidrun=zeros(n,1);
+for j=1:N
+    Y(j)=horner(c, hlidrun, X(j));
+end
+figure
+plot(x,y,&#39;*&#39;,X,Y)
+xlabel(&#39;x&#39;), ylabel(&#39;y&#39;)
+title(&#39;Adferd minnstu fervika fyrir marglidu af stigi 2&#39;)
+print
+</pre></div>
+</div>
+<p>Hér kemur myndin sem beðið var um:</p>
+<img alt="_images/synidaemi_minnstu_fervik.png" src="_images/synidaemi_minnstu_fervik.png" />
+</div></div></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kafli04.html" class="btn btn-neutral float-right" title="4. Töluleg diffrun" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="kafli02.html" class="btn btn-neutral" title="2. Núllstöðvar" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

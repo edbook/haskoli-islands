@@ -1,0 +1,1011 @@
+\lecture[2]{Vika 2: Núllstöðvar; helmingunaraðferð,
+fastapunktsaðferð, sniðilsaðferð og aðferð Newtons}{lecture-text}
+\date{14.~og 16.~janúar 2015}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\section*{}
+\begin{frame}{Yfirlit}
+\begin{block}{Vika 2: Núllstöðvar}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}\hline
+Nr. &Heiti á viðfangsefni & Bls. & Glærur\\
+\hline
+2.1 & Helmingunaraðferð& 58-68 & 3-7\\
+2.3 & Fastapunktsaðferð& 81-93 & 8-15\\
+2.5 & Sniðilsaðferð& 107-111 & 16-23\\
+2.4 & Newton-aðferð& 95-104 & 24-29\\
+2.4 & Samanburður á aðferðunum & & 30\\
+2.4 & Matlab-forrit fyrir aðferð Newtons & & 31-35 \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{2.1 Nálgun á núllstöð  $f(x)=0$:} 
+
+\begin{block}{Upprifjun}
+Munum að talan  $p\in I$ sögð vera {\it núllstöð} fallsins $f:I\to \R$ ef
+\begin{equation*}
+	f(p)=0.
+\end{equation*}\pause
+Milligildissetningin úr stærðfræðigreiningu segir: 
+\begin{quote}
+	Ef $f$ er samfellt á $[a,b]$ og $y$ er einhver tala á milli $f(a)$ og $f(b)$, þá er til $c$ þannig að $a < c < b$ og $f(c) = y$.
+\end{quote}
+\end{block} 
+\pause
+
+\begin{block}{Afleiðing}
+Svo ef við höfum $a$ og $b$ þannig að $a < b$ og þannig að
+$f(a)$ og $f(b)$ hafi ólík formerki, þá hefur $f$ núllstöð $p$ á bilinu
+$[a,b]$.
+\end{block}
+\end{frame}
+
+\begin{frame}{2.1 Helmingunaraðferð (e. bisection method):} 
+Notum okkur þetta til þess að finna rætur.\pause
+
+\begin{enumerate}
+	\item[(1)] Látum $x = \frac12 (a+b)$ vera miðpunkt $[a,b]$.\pause
+	\item [(2)]Reiknum $f(x)$, þá geta þrjú tilvik komið upp:
+	\vspace{0.55\baselineskip}
+	\begin{enumerate}
+		\item[(i)] $f(x) = 0$ og leitinni að rót er lokið.\pause
+		\item[(ii)] $f(a)$ og $f(x)$ hafa sama formerki, þannig að við
+leitum að rót á bilinu $[x,b]$.\pause
+		\item[(iii)] $f(x)$ og $f(b)$ hafa sama formerki, þannig að 
+við leitum að rót á bilinu $[a,x]$.
+	\end{enumerate}
+	\vspace{0.85\baselineskip}
+\end{enumerate}  \pause
+
+Í tilviki (ii) segir milligildissetningin að $f$ hafi rót á bilinu
+$[x,b]$, og í tilviki (iii) er rótin á bilinu $[a,x]$. Þá getum við
+farið aftur í skref 1, nema með helmingi minna bil en áður. 
+\pause
+
+\smallskip
+Með því að ítreka þetta ferli $n$ sinnum fáum við minnkandi runu af
+bilum 
+$$
+[a,b]=[a_1,b_1]\supset [a_2,b_2]\supset \cdots\supset [a_n,b_n].
+$$
+Billengdin helmingast í hverju skrefi og milligildissetningin segir
+okkur að það sé núllstöð á öllum bilunum.
+\end{frame}
+%
+\frame{\frametitle{2.1 Helmingunaraðferð, nánar:} 
+
+
+%\pause
+\medskip
+Rununa af bilunum 
+$$
+[a,b]= [a_1,b_1]\supset \cdots\supset [a_n,b_n]\supset \cdots
+$$
+skilgreinum við með ítrun og notum til þess rununa $x_n=\tfrac 12(a_n+b_n)$.
+
+\pause
+  
+\medskip
+{\bf Upphafsskref:} Setjum $a_0=a$, $b_0=b$, og $x_0=\tfrac 12(a+b)$.  
+
+\pause
+\smallskip
+{\bf Ítrekunarskref:}  Gefið er $x_0,\dots,x_n$.  Reiknum $f(x_n)$.
+\begin{enumerate}
+  \item[(i)] Ef $f(x_n) = 0$, þá er núllstöð fundin og við hættum.
+  \item[(ii)] Ef $f(x_n)$ og $f(a_n)$ hafa sama formerki,
+þá setjum við \\$a_{n+1}=x_n$,\\ $b_{n+1}=b_n$, og\\
+$x_{n+1}=\tfrac12(a_{n+1}+b_{n+1})$ 
+\item[(iii)] annars setjum við \\
+$a_{n+1}=a_n$,\\ $b_{n+1}=x_n$, og \\
+$x_{n+1}=\tfrac12(a_{n+1}+b_{n+1})$. 
+	\end{enumerate}
+}
+%
+%
+\begin{frame}{2.1 Skekkjumat í helmingunaraðferð:} 
+
+Ef við látum miðpunktinn $p_n=\tfrac 12(a_n+b_n)$ vera nálgunargildi
+okkar fyrir núllstöð fallsins $f$ í bilinu $[a_n,b_n]$, þá er 
+skekkjan í nálguninni
+$$
+e_n=p-p_n
+$$ 
+\pause
+og við höfum skekkjumatið
+$$
+|e_n|\leq  \dfrac{b_n - a_n}{2}\ \pause
+= \frac{b_{n-1}-a_{n-1}}{2^2} = \pause \ldots = \dfrac{b_1-a_1}{2^{n}},
+$$
+\pause
+það er
+$$
+|e_n| < \dfrac{b-a}{2^{n}}.
+$$
+\end{frame}
+%
+\begin{frame}{2.1. Fyrirframmat á skekkju} 
+
+Nú er auðvelt að meta hversu margar ítrekanir þarf að framkvæma til
+þess að nálgunin lendi innan gefinna skekkjumarka.  
+
+\pause
+Ef $\varepsilon>0$
+er gefið og við viljum að $|e_n|<\varepsilon$, þá dugir að  
+\begin{equation*}
+	|e_n|\leq \dfrac{b-a}{2^{n}} <\varepsilon.
+\end{equation*}\pause
+Seinni ójafnan jafngildir því að 
+\begin{equation*}
+	n>\dfrac{\ln\big((b-a)/\varepsilon\big)}{\ln 2}.
+\end{equation*}
+\end{frame}
+
+
+\frame{\frametitle{2.3  Fastapunktsaðferð (e.~fixed point method)} 
+
+\begin{block}{Skilgreining}
+Látum $f : [a,b] \to \mathbb R$ vera samfellt fall. Punktur $r \in
+[a,b]$ þannig að 
+\begin{equation*}
+  f(r) = r
+\end{equation*}
+kallast \em fastapunktur \em fallsins $f$. \pause
+\end{block}
+
+\begin{block}{Athugasemd}
+Athugum að í fastapunktum skerast graf fallsins 
+$y=f(x)$ og línan $y=x$.  \pause 
+Verkefnið að ákvarða fastapunkta fallsins
+$r$ er því jafngilt því að athuga hvar graf $f$ sker línuna $y=x$.
+\end{block}
+
+\pause
+\begin{block}{Tengin við núllstöðvar}
+Verkefnið að finna fastapunkta fallsins $f(x)$ er jafngilt því að finna
+núllstöðvar fallsins $g(x)=f(x)-x$.
+\end{block}
+
+}
+%
+%
+\frame{\frametitle{2.3   Fastapunktsaðferð} 
+
+
+{\bf Upphafsskref:} Valin er tala $x_0\in [a,b]$.
+
+\pause
+
+\medskip
+{\bf Ítrekunarskref:}  Ef $x_0,\dots,x_n$ hafa verið valin, þá setjum við
+$$
+x_{n+1}=f(x_n)
+$$
+
+
+\pause
+
+\begin{block}{Athugasemd}
+Til þess að þetta sé vel skilgreind runa, þá verðum við að 
+gera ráð fyrir að $f(x)\in [a,b]$ fyrir öll $x\in [a,b]$.
+Þetta skilyrði er einnig skrifað
+$$
+f([a,b])\subset [a,b].
+$$
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+Ef $f$ er samfellt og runan er samleitin með markgildið $r$, þá er
+$$
+r=\lim_{n\to \infty}x_{n+1}=\lim_{n\to \infty}f(x_{n})
+=f(\lim_{n\to \infty}x_{n})=f(r).
+$$ 
+Þetta segir okkur að \textbf{ef} við getum séð til þess að runan verði
+samleitin, þá er markgildið fastapunktur.
+\end{block}
+}
+%
+
+% TEKIÐ Á TÖFLU
+% \frame{\frametitle{2.2   Dæmi um ósamleitna runu:} 
+% 
+% Skilgreinum $f:[0,1]\to \R$ með  
+% $$
+% f(x)=3.4 \, x(1-x), \qquad x\in [0,1].
+% $$
+% Fallið $f$ tekur gildi á bilinu $[0,1]$, graf þess er partur af
+% fleygboga
+% (parabólu) með topppunkt $(\tfrac 12,\tfrac 14\cdot 3.4)$, 
+% $f(0)=f(1)=0$ og því hefur $f$ tvo fastapunkta $r_0=0$ og $r_1\approx
+% 0.?$.  
+% 
+% Ef við veljum $x_0=0.3$ og reiknum út $x_{n+1}=f(x_n)$ þá sést að
+% runan hoppar að eilífu milli tveggja gilda sem eru nálægt $0.45$ og 
+% $0.84$.
+% 
+% \smallskip
+% Þetta segir okkur að skilyrðið $f([a,b])\subset [a,b]$ dugir ekki eitt
+% til þess að runan $x_n$ verði samleitin.
+% }
+%
+
+%
+\frame{\frametitle{2.3 Herping} 
+
+\begin{block}{Skilgreining}
+Fall $f:[a,b]\to \R$ er sagt vera {\it herping} ef til er fasti
+$\lambda\in [0,1[$ þannig að
+$$
+|f(x)-f(y)|\leq \lambda|x-y| \qquad \text{ fyrir öll } x,y\in [a,b].
+$$
+\end{block}
+
+\pause
+
+
+\begin{block}{Athugasemd}
+
+ Sérhver herping er samfellt fall.
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+ Ef $f$ er deildanlegt fall á $]a,b[$, þá gefur
+  meðal\-gildis\-setningin okkur til er $\xi$ milli $x$ og $y$ þannig
+  að
+$$
+f(x)-f(y)=f'(\xi)(x-y).
+$$
+\pause
+Ef til er $\lambda\in[0,1[$ þannig að $|f'(x)|\leq \lambda$ fyrir öll
+$x\in [a,b]$, þá er greinilegt að $f$ er herping.
+\end{block}
+}
+%
+
+%
+\frame{\frametitle{2.3   Fastapunktssetning} 
+
+\begin{block}{Setning}
+Látum $f : [a,b] \to [a,b]$ vera herpingu. Þá hefur $f$ nákvæmlega
+einn fastapunkt $r$ á bilinu $[a,b]$ og runan $(x_n)$ þar sem 
+\begin{align*}
+  x_0 &\in [a,b] \quad \text{ getur verið hvaða tala sem er  og } \\
+  x_{n+1} &= f(x_n), \quad n \geq 0,
+\end{align*}
+stefnir á fastapunktinn.
+\end{block}
+
+\pause
+
+\begin{block}{}
+Sönnunina brjótum við upp í nokkur skref.
+\end{block}
+}
+
+%
+\frame{\frametitle{2.3   Sönnun: 1.~skref, 
+herping hefur í mesta lagi einn fastapunkt} 
+
+Sönnum þetta með mótsögn.
+
+\pause
+\smallskip
+
+Gerum ráð fyrir að  $r$ og $s$ séu tveir ólíkir fastapunktar á $[a,b]$. \pause
+ Þá er
+\begin{equation*}
+|r - s| = |f(r) - f(s)|
+  \leq \lambda |r - s| < |r - s|
+\end{equation*}
+því $\lambda < 1$.   Þetta fær ekki staðist, þannig að fjöldi fastapunkta
+er í mesta lagi einn
+}
+%
+
+%
+\frame{\frametitle{2.3 Sönnun: 2.~skref,
+fallið $f$ hefur fastapunkt:} 
+
+Látum $g(x) = f(x) - x$, þá eru núllstöðvar $g$ nákvæmlega fastapunktar $f$. 
+
+\pause 
+
+Þar sem $a \leq f(x) \leq b$ fyrir öll $x \in [a,b]$ er 
+\begin{equation*}
+  \left\{ \begin{array}{c}
+      g(a) = f(a) - a \geq 0 \\
+      g(b) = f(b) - b \leq 0
+  \end{array} \right.
+\end{equation*}
+Ef annað hvort $g(a) = 0$ eða $g(b) = 0$ höfum við fundið fastapunkt
+fallsins $f$ og við getum hætt. 
+
+\pause
+
+Ef hins vegar $g(a) > 0$ og $g(b) < 0$ þá hefur $g$ ólík formerki
+í endapunktum bilsins $[a,b]$ og hefur því núllstöð $r$ á bilinu 
+skv.~milligildissetninguninni. \pause
+Þá er $r$ jafnframt fastapunktur $f$. 
+
+\pause
+\smallskip
+
+Skref 1 og 2 sýna því að fallið $f$ hefur nákvæmlega einn 
+fastapunkt á bilinu.
+}
+%
+
+
+%
+\frame{\frametitle{2.3 Sönnun:  3.~skref, runan $(x_n)$ er samleitin} 
+
+
+Látum $r$ vera ótvírætt ákvarðaða fastapunktinn á $[a,b]$.
+
+\pause
+\smallskip
+
+Við notfærum okkur að $f$ er herping og að $r$ er fastapunktur $f$, þá fæst 
+að fyrir sérhvert $k\in \N$ þá er 
+$$
+|r - x_k| = |f(r) - f(x_{k-1})|  \leq \lambda |r - x_{k-1}| 
+$$
+\pause 
+það er $|r - x_k| \leq \lambda |r - x_{k-1}|$.
+\pause
+
+Með því að nota þetta $n$-sinnum þá fæst að
+\begin{align*}
+  |r - x_n|   &\leq \lambda |r - x_{n-1}| & (k=n)\\
+  &\leq \lambda^2 |r - x_{n-2}| & (k=n-1)\\
+  &\vdots & \vdots\\
+  &\leq \lambda^n |r - x_0| & (k=1).
+\end{align*}
+\pause
+Þar sem $\lambda < 1$ er því
+\begin{equation*}
+  \lim\limits_{n \to +\infty} |r - x_n|
+  \leq \lim\limits_{n \to +\infty} \lambda^n |r - x_0|
+  = 0,
+\end{equation*}
+það er runan $x_n$ stefnir á $r$.
+}
+%
+
+%
+\frame{\frametitle{2.3 Fastapunktsaðferð er að minnsta kosti línulega 
+samleitin}
+
+Af skilgreiningunni á rununni $x_n$ leiðir beint að
+$$
+|e_{n+1}|=|r-x_{n+1}|=|f(r)-f(x_n)|\leq \lambda|r-x_n|=\lambda|e_n|
+$$ 
+sem segir okkur að fastapunktsaðferð sé að minnsta kosti línulega
+samleitin ef $f$ er herping.   
+}
+%
+
+% \frame{\frametitle{2.2 Samleitni af stigi $k>1$ er möguleg}
+% 
+% Ef til er $k>1$ þannig að $f\in C^k([a,b])$,
+% $$ 
+% f'(r)=\cdots=f^{(k-1)}(r)=0 \quad \text{ og } \quad 
+% f^{(k)}(r)\neq 0, 
+% $$
+% þá gefur setning Taylors okkur að til er tala
+% $\xi_n$ á milli $r$ og $x_n$ þannig að 
+% $$
+% f(x_n)=f(r)+\dfrac{f^{(k)}(\xi_n)}{k!}(x_n-r)^k
+% $$
+% $$
+% e_{n+1}=r-x_{n+1}=-(f(x_n)-f(r))=(-1)^k\dfrac{f^{(k)}(\xi_n)}{k!}e_n^k
+% $$ 
+% Við fáum því að 
+% $$
+% \lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|^k}= \dfrac{|f^{(k)}(r)|}{k!}
+% $$
+% }
+%
+
+%
+
+
+\frame{\frametitle{2.5 Sniðilsaðferð} 
+
+Gefið er fallið $f:[a,b]\to \R$.  
+Við ætlum að ákvarða núllstöð $f$, þ.e.a.s.
+$p\in [a,b]$ þannig að 
+$$
+f(p)=0.
+$$\pause
+Rifjum upp að {\it sniðill} við graf $f$ gegnum punktana
+$(\alpha,f(\alpha))$ og $(\beta,f(\beta))$ er gefinn með jöfnunni
+$$
+y=f(\alpha)+f[\alpha,\beta](x-\alpha)
+$$
+þar sem hallatalan er 
+$$
+f[\alpha,\beta]=\dfrac{f(\beta)-f(\alpha)}{\beta-\alpha}
+=\dfrac{f(\alpha)-f(\beta)}{\alpha -\beta}.
+$$
+
+
+\pause
+Sniðillinn sker $x$-ásinn í punkti $s$ þar sem 
+$$
+0=f(\alpha)+f[\alpha,\beta](s-\alpha) \quad  \text{sem jafngildir því að } \quad
+s=\alpha-\dfrac{f(\alpha)}{f[\alpha,\beta]}.
+$$
+}
+
+%
+\frame{\frametitle{2.5  Sniðilsaðferð} 
+
+{\bf Byrjunarskref:}  Giskað er á tvö gildi $x_0$ og $x_1$.   
+
+\pause
+
+\medskip
+{\bf Ítrekunarskref:}  Gefin eru  $x_0,\dots,x_n$.  Punkturinn 
+$x_{n+1}$ er skurðpunktur sniðilsins gegnum $(x_{n-1},f(x_{n-1}))$ og
+$(x_n,f(x_n))$ við $x$-ás,
+$$
+x_{n+1}=x_n-\dfrac{f(x_n)}{f[x_n,x_{n-1}]}.
+$$
+}
+%
+
+%
+\frame{\frametitle{2.5  Samleitin runa stefnir á núllstöð $f$} 
+
+
+Gefum okkur að runan $(x_n)$ sé samleitin að markgildinu $r$. \pause
+Meðalgildissetningin segir okkur þá að til sé punktur $\eta_n$ á milli 
+$x_{n-1}$ og $x_n$ þannig að 
+$$
+f[x_n,x_{n-1}]=f'(\eta_n),
+$$ 
+\pause
+og greinilegt er að $\eta_n\to r$. 
+
+\pause
+Við fáum því 
+$$
+r=\lim_{n\to \infty}x_{n+1}=\lim_{n\to \infty}
+\bigg(x_n-\dfrac{f(x_n)}{f'(\eta_n)}\bigg) =r-\dfrac{f(r)}{f'(r)}
+$$
+
+\pause
+Þessi jafna jafngildir því að $f(r)=0$.
+}
+
+%
+\frame{\frametitle{2.5  Skekkjumat í  nálgun á $f(x)$ með $p_n(x)$} 
+
+Sniðilinn sem við notum er graf 1.~stigs margliðunnar
+\begin{equation*}
+	p_n(x) = f(x_n) + 
+		\dfrac{f(x_{n-1})-f(x_n)}{x_{n-1}-x_n}(x-x_n)
+		= f(x_n) + f[x_n,x_{n-1}](x-x_n)
+\end{equation*}\pause
+Samkvæmt skilgreiningu er $p_n(x_{n+1}) = 0$ svo $x_{n+1}$ uppfyllir jöfnuna
+\begin{equation*}
+	x_{n+1} = x_n - \frac{f(x_n)}{f[x_n,x_{n-1}]}.
+\end{equation*}\pause
+Við þurfum að vita hver skekkjan er á því að nálga $f(x)$ með $p_n(x)$.
+
+\smallskip
+
+\pause
+Við munum sýna fram á:  Fyrir sérhvert $x \in [a,b]$ er til $\xi_n$ sem liggur í minnsta bilinu
+sem inniheldur  $x$, $x_n$ og $x_{n-1}$ þannig að 
+\begin{equation*}
+	f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1})
+\end{equation*}
+}
+
+
+
+%
+\frame{\frametitle{2.5  Skekkjumat í sniðilsaðferð}
+ 
+Gefum okkur að þessi staðhæfing sé rétt og skoðum hvað af henni
+leiðir:
+
+\pause
+\smallskip
+Nú er $f(r) = 0$ og því
+\begin{equation*}
+	-p_n(r) = \frac{1}{2}f''(\xi_n)e_n\cdot e_{n-1}.
+\end{equation*}\pause
+Eins er 
+\begin{equation*}
+	-p_n(r) = -f[x_n,x_{n-1}]e_{n+1}=-f'(\eta_n)e_{n+1},
+\end{equation*}
+þar sem $\eta_n$ fæst úr meðalgildissetningunni og liggur á milli $x_n$ og $x_{n+1}$.
+\pause
+Niðurstaðan verður því
+\begin{equation*}
+	e_{n+1} = \frac{-\frac{1}{2}f''(\xi_n)}
+		{f[x_n, x_{n+1}]}	
+	e_ne_{n-1} = \frac{-\frac{1}{2}f''(\xi_n)}
+		{f'(\eta_n)}e_ne_{n-1}
+\end{equation*}
+}
+%
+
+
+%
+\frame{\frametitle{2.5   Sniðilsaðferð er ofurlínuleg} 
+
+það er 
+$$
+\lim_{n\to \infty}\dfrac{e_{n+1}}{e_ne_{n-1}}=
+\lim_{n \to \infty} \frac{-\frac{1}{2}f''(\xi_n)}
+		{f'(\eta_n)}
+=
+\frac{-\frac{1}{2}f''(r)}
+		{f'(r)}.
+$$
+\pause
+
+\begin{block}{Setning}
+Ef sniðilsaðferð er samleitin, $f\in C^2([a,b])$ (tvisvar diffranlegt) 
+og $f'(r)\neq 0$, þá er sniðilsaðferðin ofurlínuleg.
+\end{block}
+\pause
+\begin{block}{Sönnun}
+$$
+\lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|} \pause=
+\lim_{n\to \infty}\dfrac{|e_{n+1}e_{n-1}|}{|e_ne_{n-1}|}=
+\lim_{n \to \infty} \frac{|e_{n-1}\frac{1}{2}f''(r)|}
+		{|f'(r)|} = 0
+$$ 
+\end{block}
+\pause
+\begin{block}{Athugasemd}
+ Nánar tiltekið þá er sniðilsaðferðin samleitin af stigi
+  $\alpha = (1+\sqrt 5)/2 \approx 1,618$ og með
+  $\lambda = \left(\frac{f''(r)}{2f'(r)}\right)^{\alpha -1}$, sjá 
+kennslubók bls.~110.
+\end{block}
+}
+
+%
+\frame{\frametitle{2.5  Skekkjumat í  nálgun á $f(x)$ með $p_n(x)$} 
+
+Við megum ekki gleyma að sanna skekkjumatið.
+
+\pause
+
+\begin{block}{Hjálparsetning}\pause
+Til er  $\xi_n$ sem liggur í minnsta bilinu
+sem inniheldur  $x$, $x_n$ og $x_{n-1}$ þannig að 
+\begin{equation*}
+	f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1})
+\end{equation*}
+\end{block}
+
+\pause
+\begin{block}{Sönnun}
+ Ljóst er að matið gildir ef $x=x_{n-1}$ eða $x=x_n$.  
+
+\pause
+Festum því punktinn $x$  og gerum ráð fyrir að $x\neq x_1$ og $x\neq x_n$. 
+
+\pause
+Skilgreinum fallið
+$$
+g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})
+$$
+þar sem $\lambda$ er valið þannig að $g(x)=0$.  
+\end{block}
+
+}
+
+\frame{\frametitle{ }
+%2.3  Skekkjumat í  nálgun á $f(x)$ með $p_n(x)$} 
+
+Látum nú
+$\alpha<\beta<\gamma$ vera uppröðun á punktunum $x_{n-1}$, $x_n$ og
+$x$. 
+
+\pause   
+Fallið 
+$$
+g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})
+$$
+hefur núllstöð í öllum punktunum þremur.
+
+\pause
+Meðalgildissetningin gefur þá að $g'(t)$ hefur eina núllstöð í punkti
+á bilinu $]\alpha,\beta[$ og aðra í $]\beta,\gamma[$. 
+
+\pause
+Af því leiðir
+aftur að $g''(t)$ hefur núllstöð, $\xi_n$, í $[\alpha,\gamma]$, sem er
+minnsta bilið sem inniheldur alla punktana $x_{n-1}$, $x_n$ og
+$x$.  
+
+\pause
+Af þessu leiðir 
+$$
+0=g''(\xi_n)=f''(\xi_n)-2\lambda \quad \text{þþaa} \quad
+\lambda=\tfrac 12 f''(\xi_n).
+$$
+
+\pause
+Nú var $\lambda$ upprunalega valið þannig að $g(x)=0$. Þar með er
+\begin{equation*}
+	f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1}).
+\end{equation*}
+}
+
+
+
+\frame{\frametitle{2.4 Aðferð Newtons} 
+
+
+Í sniðilsaðferðinni létum við $x_{n+1}$ vera skurðpunkt 
+sniðils gegnum $(x_{n-1},f(x_{n-1}))$ og $(x_n,f(x_n))$ við
+$x$-ás og fengum við rakningarformúluna
+\begin{equation*}
+  x_{n+1} = x_n - \frac{f(x_n)}{f[x_n,x_{n-1}]}.
+\end{equation*}
+
+\pause
+Aðferð Newtons er nánast eins, nema í stað sniðils tökum við 
+snertil í punktinum $(x_n,f(x_n))$.
+
+\pause
+
+\smallskip
+Rakningarformúlan er eins, nema hallatalan verður
+$f'(x_n)$ í stað $f[x_n,x_{n-1}]$
+}
+%
+
+%
+\frame{\frametitle{2.4  Aðferð Newtons} 
+
+
+{\bf Byrjunarskref:}  Giskað er á eitt gildi $x_0$.   \pause
+
+\medskip
+{\bf Ítrekunarskref:}  Gefin eru  $x_0,\dots,x_n$.  Punkturinn 
+$x_{n+1}$ er skurðpunktur snertils gegnum 
+$(x_n,f(x_n))$ við $x$-ás,
+$$
+x_{n+1}=x_n-\dfrac{f(x_n)}{f'(x_n)}.
+$$
+
+%
+\pause
+
+\begin{block}{Upprifjun}
+ Munum að snertill við graf $f$ í punktinum $x_n$ er
+$$
+y=f(x_n) + f'(x_n)(x-x_n),
+$$
+\pause
+þessi lína sker $x$-ásinn ($y=0$) þegar 
+$x=x_n - \frac{f(x_n)}{f'(x_n)}$.
+\end{block}
+}
+
+%
+\frame{\frametitle{2.4  Samleitin runa stefnir á núllstöð $f$} 
+
+Gefum okkur að runan $(x_n)$ sé samleitin með markgildið $r$. \pause
+Við fáum því 
+$$
+r=\lim_{n\to \infty}x_{n+1}=\lim_{n\to \infty}
+\bigg(x_n-\dfrac{f(x_n)}{f'(x_n)}\bigg) =r-\dfrac{f(r)}{f'(r)}
+$$
+
+\pause
+\smallskip
+
+Þessi jafna jafngildir því að $f(r)=0$.
+
+\pause
+\smallskip
+
+Þannig að ef runan er samleitin þá fáum við núllstöð.
+}
+
+%
+\frame{\frametitle{2.4  Skekkjumat í  nálgun á $f(x)$ með $p_n(x)$} 
+
+Snertillinn við $f$ í punktinum $x_n$ er 1.~stigs margliðan
+\begin{equation*}
+	p_n(x) = f(x_n) + f'(x_n)(x-x_n)
+\end{equation*}
+\pause
+Samkvæmt skilgreiningu er $p_n(x_{n+1}) = 0$ svo $x_{n+1}$ uppfyllir jöfnuna
+\begin{equation*}
+	x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.
+\end{equation*}
+\pause
+Athugum að $p_n$ er fyrsta Taylor nálgunin við fallið 
+$f$ kringum $x_n$. \pause Setning Taylors gefur að til er  
+$\xi_n$ sem liggur á milli
+$r$ og $x_n$  þannig að 
+\begin{equation*}
+	f(r) - p_n(r) = \frac{1}{2}f''(\xi_n)(r-x_n)^2.
+\end{equation*}
+}
+ 
+\frame{\frametitle{2.4  Skekkjumat í aðferð Newtons}
+ 
+Nú er $f(r) = 0$ og því
+\begin{equation*}
+	-p_n(r) = \frac{1}{2}f''(\xi_n)e_n^2.
+\end{equation*}
+\pause
+Eins er fæst af skilgreiningunni á $p_n$ að
+\begin{equation*}
+	-p_n(r) = -f'(x_n)e_{n+1}
+\end{equation*}
+\pause
+Niðurstaðan verður því
+\begin{equation*}
+	e_{n+1} = \frac{-\frac{1}{2}f''(\xi_n)}
+		{f'(x_n)}e_n^2
+\end{equation*}
+}
+
+\frame{\frametitle{2.4   Aðferð  Newtons er að minnsta kosti 
+ferningssamleitin} 
+
+\begin{block}{Setning}
+Ef aðferð Newtons fyrir fallið $f$  er samleitin, 
+$f\in C^2([a,b])$ og $f'(r)\neq 0$, þá fáum við:
+$$
+\lim_{n\to \infty}\dfrac{e_{n+1}}{e_n^2}=\frac{-\frac{1}{2}f''(r)}
+		{f'(r)}
+$$\pause
+Það er, aðferð Newtons er ferningssamleitin.
+\end{block}
+
+\pause
+
+\begin{block}{Sönnun}
+ $$
+\lim_{n\to \infty}\dfrac{e_{n+1}}{e_n^2}=
+\lim_{n\to \infty}\frac{-\frac{1}{2}f''(\xi_n)}{f'(x_n)} =
+\frac{-\frac{1}{2}f''(r)}{f'(r)}
+$$
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+Athugið að það er ekki sjálfgefið að aðferð Newtons sé samleitin.
+
+\pause
+Auðvelt er að finna dæmi þar sem vond upphafságiskun $x_0$ skilar runu sem er
+ekki samleitin. 
+\end{block}
+}
+
+
+\begin{frame}{2.4 Samanburður á aðferðum}
+
+{\small
+\begin{block}{}
+ \begin{table}[h]
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        Bók            & Aðferð         & Samleitin           & Stig samleitni                    \\ \hline
+        2.1 & Helmingunaraðferð      & Já, ef $f(a)f(b)<0$ & 1, línuleg                        \\ 
+	& (bisection method) & & \\\hline 
+        2.2 & Rangstöðuaðferð   & Já, ef $f(a)f(b)<0$ & 1, línuleg                        \\ 
+        & (false position m.) && \\\hline 
+	2.3 & Fastapunktsaðferð  & Ekki alltaf. En saml.         & amk 1              \\ 
+        & (fixed point iteration) & ef $f$ er herping& \\\hline 
+	2.4 & Aðferð Newtons  & Ekki alltaf         & 2, ef $f'(r)\neq 0$               \\ 
+        & (Newtons method) & & \\\hline 
+	2.5 & Sniðilsaðferð      & Ekki alltaf         & $\approx 1,618$, ef $f'(r)\neq 0$ \\
+	& (secant method) & & \\
+        \hline
+    \end{tabular}
+\end{table}
+\end{block}
+}
+
+ \pause
+
+\begin{block}{Athugasemd}
+ Þó að aðferð Newtons sé samleitin af stigi 2, en sniðilsaðferðin
+af stigi u.þ.b.~1,618, þá er í vissum tilfellum hagkvæmara að nota
+sniðilsaðferðina ef það er erfitt að reikna gildin á afleiðunni
+$f'$. 
+\end{block}
+
+\end{frame}
+ 
+
+
+%
+% \frame{\frametitle{2.4  Aðferð Newtons:  Úrlausn á ólínulegum
+%     hneppum}  
+% 
+% Aðferð Newton er fastapunktsaðferð með ítrunarfallinu
+% \begin{equation*}
+%   F(x) = x - \frac{f(x)}{f'(x)}.
+% \end{equation*}
+% Nú er ekki sjálfgefið að aðferð Newtons uppfylli skilyrðin 
+% í fastapunktssetningu og því er ekki víst að hún sé samleitin að $r$.
+% 
+% \smallskip
+% Auðvelt er að finna dæmi þar sem vond upphafságiskun $x_0$ skilar runu sem er
+% ekki samleitin. Ef aðferðin er samleitin, og $f'(r) \not= 0$, þá sjáum
+% við að 
+% \begin{equation*}
+%   F'(r) = 1 - 
+%   \frac{f'(r)\cdot f'(r) - f(r) \cdot f''(r)}{(f'(r))^2}
+%   = \frac{f(r) \cdot f''(r)}{(f'(r))^2} = 0
+% \end{equation*}
+% því $f(r) = 0$, 
+% 
+% \smallskip
+% Samkvæmt skekkjumatinu sem við gerður fyrir fastapunktsaðferð gefur
+% þetta að Newton-aðferð er að minnsta kosti ferningssamleitin. 
+% }
+%
+%
+\frame{\frametitle{2.4  Matlab-forrit fyrir Aðferð Newtons} 
+Þegar við forritum Newton aðferðina gerum við ráð fyrir að 
+$f'(r) \not= 0$.  Þá er aðferðin a.m.k.\ ferningssamleitin, og við
+notum  matið
+\begin{equation*}
+  |r-x_n| = |e_n| \approx |x_{n+1} - x_n|
+\end{equation*} 
+sem stöðvunarskilyrði. Við athugum þó að
+\begin{equation*}
+  |x_{n+1}-x_n| = 
+  \left| \left( 
+      x_n - \frac{f(x_n)}{f'(x_n) }
+  \right) - x_n \right|
+  = \left| \frac{f(x_n)}{f'(x_n)} \right|
+\end{equation*}
+og notum hægri hliðina sem villumat til að forðast reikniskekkjur.
+
+}
+
+\begin{frame}[fragile]{2.4  Matlab-forrit fyrir Aðferð Newtons} 
+
+\hrule
+
+\begin{verbatim}
+function x = newtonNull(f,df,x0,epsilon)
+%   newtonNull(f,df,x0,epsilon)
+%
+% Nálgar núllstöð fallsins f : R --> R með aðferð Newtons.
+% Fallið df er afleiða f, x0 er upphafságiskun á núllstöð
+% og epsilon er tilætluð nákvæmni.
+
+x = x0; 
+mis = f(x)/df(x);
+
+% Ítrum meðan tilefni er til
+while (abs(mis) >= epsilon)
+   x = x - mis;
+   mis = f(x)/df(x);
+end
+\end{verbatim}
+\hrule
+\end{frame}
+%
+
+\frame{\frametitle{2.4  Matlab-forrit fyrir aðferð Newtons} 
+
+\begin{block}{Athugasemd}
+Athugið að við þurfum ekki að skoða sérstaklega hvort {\tt x} sé
+núllstöð {\tt f}, því ef svo er er {\tt abs(mis) = 0} sem er vissulega
+minna en öll skynsamlega valin {\tt epsilon} og því hættir forritið
+sjálfkrafa. 
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+ Athugið að forritið geymir ekki $x_n$, heldur uppfærir bara ágiskunina $x$
+í hvert skipti sem ítrunin er keyrð.
+\end{block}
+
+\pause
+
+\begin{block}{Athugasemd}
+ Forritið athugar ekki hversu oft það er búið að ítra, þannig að 
+ef aðferðin er ekki samleitin þá hættir forritið aldrei. 
+Þetta er ekki skynsamlegt.
+\end{block}
+
+}
+
+%
+\frame{\frametitle{2.4  Sýnidæmi} 
+
+Við skulum nálga 9. rót tölunnar 1381 með nákvæmni upp á $\varepsilon = 10^{-8}$ með aðferð Newtons. Köllum rótina $r$, þá uppfyllir $r$ jöfnuna
+\begin{equation*}
+  r^9 - 1381 = 0
+\end{equation*}
+Verkefnið snýst því um að nálga núllstöð fallsins $f(x) = x^9 -
+1381$. Athugið að $f$ er margliða af oddatölustigi og hefur því
+virkilega núllstöð. Nú er $2^9 = 512$, svo $x_0 = 2$ er ágætis
+upphafságiskun á $r$. 
+}
+
+%
+\frame{\frametitle{2.4  Sýnidæmi:} 
+
+Þegar við ítrum með forritinu okkar fæst
+
+\begin{equation*}
+  \begin{array}{c|c|c}
+    n & x_n & |e_{n-1}| \approx |x_n - x_{n-1}| \\
+    \hline
+    0 & 2 & \\
+    1 & 2.377170138888889 & 0.377170138888889 \\
+    2 & 2.263516747674327 & 0.113653391214562 \\
+    3 & 2.234695019689070 & 0.028821727985257 \\
+    4 & 2.233115984281294 & 0.001579035407775 \\
+    5 & 2.233111503379273 & 0.000004480902021 \\
+    6 & 2.233111503343308 & 0.000000000035965
+  \end{array}
+\end{equation*}
+Eftir sex ítranir er skekkjan orðin minni en $\varepsilon$, og við
+nálgum því $r$ með $2.233111503$. 
+
+\pause
+\smallskip
+
+Áhrif upphafságiskana sjást ágætlega með að prófa til dæmis $x_0 =
+0.5$, þá skilar aðferðin alveg jafn góðri nálgun en þarf um 90 ítranir
+til þess. 
+
+}
+%
+
+
+
+%
+\frame{\frametitle{Kafli 2: Fræðilegar spurningar:}
+
+  \begin{enumerate}
+  \item  Hvernig er ítrekunarskrefið í helmingunaraðferð?
+  \item  Hvernig er  skekkjumatið í helmingunaraðferð?
+  \item  Hvað þýðir að punkturinn $p$ sé fastapunktur fallsins $f$?
+  \item  Hvernig er ítrekunarskrefið í fastapunktsaðferð?
+  \item  Hvað þýðir að fall  $f:[a,b]\to \R$ sé {\it herping}?
+  \item  Setjið fram fastapunktssetninguna.
+  \item  Rökstyðjið að fastapunktsaðferð sé a.m.k.~línulega
+    samleitin. 
+  \item  Hvernig er ítrekunarskrefið í sniðilsaðferð?
+  \item  Hvernig er skekkjuformúlan í sniðilsaðferð?
+  \item  Rökstyðjið að hægt sé að nota $|x_{n+1}-x_n|$ fyrir mat á
+    skekkju í sniðilsaðferð.
+\item Hvernig er ítrekunarskrefið í aðferð Newtons?
+\item Hvernig er skekkjumatið í aðferð Newtons?
+\item Rökstyðjið að aðferð Newtons sé a.m.k.~ferningssamleitin. 
+   \end{enumerate}
+}
+
+
+
+\end{document}
