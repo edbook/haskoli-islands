@@ -1,8 +1,13 @@
 Rúmmál, massi og massamiðja
 ===========================
 
-*The fact that we live at the bottom of a deep gravity well, on the surface of a 
-gas covered planet going around a nuclear fireball 90 million miles away and think 
+.. note::
+	**Nauðsynleg undirstaða**
+
+  - `Undirstöðuatriði í rúmfræði <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli03.html>`_.
+
+*The fact that we live at the bottom of a deep gravity well, on the surface of a
+gas covered planet going around a nuclear fireball 90 million miles away and think
 this to be normal is obviously some indication of how skewed our perspective tends to be.*
 
 \- Douglas Adams, The Salmon of Doubt: Hitchhiking the Galaxy One Last Time
@@ -12,7 +17,7 @@ this to be normal is obviously some indication of how skewed our perspective ten
 
 .. index::
     rúmmál
-    
+
 Rúmmál, lengd og flatarmál
 --------------------------
 
@@ -62,7 +67,7 @@ myndast þegar svæðinu sem afmarkast af :math:`x`-ás, grafinu
 .. math:: V=\pi\int_a^b f(x)^2\,dx.
 
 Sjá  `3D volume by rotation of a function <https://www.geogebra.org/m/40798>`_
-eftir `George Katehos <https://www.geogebra.org/material/show/id/40798>`_ (CC-BY-SA).
+eftir `George Katehos <https://www.geogebra.org/u/george.katehos>`_ (CC-BY-SA).
 
 .. index::
     rúmmál; snúðs með gati
@@ -95,8 +100,8 @@ og :math:`x=b` um :math:`360^\circ` um :math:`y`-ás er
 .. index::
     fall; lengd grafs
 
-Sjá `Solids and volumes of revolution (rotation about y_axis) <https://www.geogebra.org/b/75281#material/18475>`_
-eftir `George Katehos <https://www.geogebra.org/b/75281#material/18475>`_ (CC-BY-SA).
+Sjá `Solids and volumes of revolution (rotation about y_axis) <https://www.geogebra.org/m/nvRvzKys>`_
+eftir `Daniel Mentrard <https://www.geogebra.org/m/nvRvzKys>`_.
 
 
 Lengd grafs
@@ -153,8 +158,8 @@ Efnisþéttleiki (eðlisþyngdin) í punkti :math:`(x, f(x))` er gefinn sem
 
 .. math::
 
-   dm 
-   = \delta(x)\, ds 
+   dm
+   = \delta(x)\, ds
    =\delta(x)\sqrt{1+(f'(x))^2}\, dx,
 
 og massi alls vírsins er
@@ -242,8 +247,8 @@ Ef massi er dreifður samkvæmt þéttleika falli :math:`\delta(x)` um bil
 
 .. math::
 
-   m=\int_a^b \delta(x)\,dx 
-   \qquad\text{ og }\qquad 
+   m=\int_a^b \delta(x)\,dx
+   \qquad\text{ og }\qquad
    M_{x=0}= \int_a^b x\delta(x)\,dx.
 
 Massamiðjan er gefin með formúlunni
@@ -253,10 +258,10 @@ Massamiðjan er gefin með formúlunni
    \overline{x}=\frac{M_{x=0}}{m}   =
    \frac{\int_a^b x\delta(x)\,dx}{\int_a^b \delta(x)\,dx}.
 
-   
+
 .. index::
     massi; massamiðja plötu
-   
+
 Skilgreining: Massamiðja plötu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -266,7 +271,7 @@ Vægi plötunnar um :math:`y`- og :math:`x`-ása eru gefin með formúlunum
 
 .. math::
 
-   M_{x=0}=\int_a^b x\delta(x)f(x)\,dx 
+   M_{x=0}=\int_a^b x\delta(x)f(x)\,dx
    \qquad\text{og}\qquad
    M_{y=0}=\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx,
 
@@ -288,7 +293,7 @@ og
 
 .. index::
     setning Pappusar
-   
+
 Setning Pappusar, I
 ~~~~~~~~~~~~~~~~~~~
 

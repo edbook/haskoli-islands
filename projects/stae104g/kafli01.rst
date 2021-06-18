@@ -1,11 +1,23 @@
 Tölur og föll
 =============
 
+.. note::
+    **Nauðsynleg undirstaða**
+
+    -  `Undirstöðuatriði tölur og talnakerfi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#talnakerfi>`_.
+
+    -  `Forgangsröðun aðgerða <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#forgangsroun-agera>`_.
+
+    -  `Reiknireglur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#reiknireglur>`_.
+
+    -  `Brotareikningur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#brotareikningur>`_.
+
+    -  `Veldi og rætur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#veldi-og-raetur>`_.
+
+    -  `Sjá undirstöðuatriði um föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html>`_.
 
 Inngangur
 ---------
-
-
 *There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.
 There is another theory which states that this has already happened.*
 
@@ -51,6 +63,12 @@ auk kennslubókarinnar,
 
 -  http://en.wikipedia.org (ath. enska útgáfan)
 
+Einnig getur verið gagnlegt að kannast við grísku bókstafina:
+
+.. image:: ./myndir/kafli01/greek_letters.png
+    :width: 75 %
+    :align: center
+
 Forrit
 ~~~~~~
 
@@ -84,6 +102,7 @@ Tölur
 
 Skilgreining: Tölur
 ~~~~~~~~~~~~~~~~~~~
+
 (i)   :hover:`Náttúrlegu tölurnar,náttúrleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og
       mengi þeirra er táknað með :math:`\mathbb{N}`.
 

@@ -1,33 +1,33 @@
 Markgildi og samfelldni
 =======================
 
-.. note:: 
+.. note::
     **Nauðsynleg undirstaða**
 
-    -  Jafna línu, P.2
+    -  `Jafna línu, P.2 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli03.html#jafna-linu-i-hnitakerfinu>`_
 
-    -  Jafna hrings, P.3
+    -  `Jafna hrings, P.3 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli03.html#hringir>`_
 
-    -  Hliðrun og skölun grafs, P.3
+    -  `Hliðrun og skölun grafs, P.3 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#ummyndanir>`_
 
-    -  (Stranglega) minnkandi og (stranglega) vaxandi föll, 2.8
+    -  `(Stranglega) minnkandi og (stranglega) vaxandi föll, 2.8 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#einhalla-foll>`_
 
-    -  Jafnstæð og oddstæð föll, P.4
+    -  `Jafnstæð og oddstæð föll, P.4 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#jafnstae-og-oddstae-foll>`_
 
-    -  Margliður; deiling, þáttun og rætur, P.6
+    -  `Margliður; deiling, þáttun og rætur, P.6 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli06.html>`_
 
-    -  Tölugildisfallið, P.1
+    -  `Tölugildisfallið, P.1 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli02.html#tolugildi>`_
 
-    -  Þríhyrningsójafnan, P.1
+    -  `Þríhyrningsójafnan, P.1 <https://is.wikipedia.org/wiki/%C3%9Er%C3%ADhyrnings%C3%B3jafna>`_
 
-    -  Formerkjafallið, :math:`sgn(x)`, P.5
+    -  `Formerkjafallið P.5 <https://is.wikipedia.org/wiki/Formerkisfall>`_,  :math:`sgn(x)`
 
 .. warning::
 	Þessi kafli fjallar um tvö afskaplega mikilvæg og nátengd hugtök,
-	markgildi og samfelldni. Það er nauðsynlegt fyrir nemendur að ná 
+	markgildi og samfelldni. Það er nauðsynlegt fyrir nemendur að ná
 	góðum tökum á þeim því mörg hugtök í stærðfræði og hagnýtingum á stærðfræði
 	sem verða á vegi ykkar í framtíðinni byggja á þessum hugtökum.
- 
+
 *I'd take the awe of understanding over the awe of ignorance any day.*
 
 \- Douglas Adams, The Salmon of Doubt
@@ -61,7 +61,7 @@ skilgreint. Við segjum að :math:`f(x)` *stefni á tölu* :math:`L` *þegar*
 uppfyllt:
 
 Fyrir sérhverja tölu :math:`\epsilon>0` er til tala :math:`\delta>0`
-sem fullnægir eftirfarandi skilyrði: 
+sem fullnægir eftirfarandi skilyrði:
 
 .. math:: \text{fyrir öll $x$ sem uppfylla} \qquad 0 < |x-a| < \delta \qquad \text{gildir} \qquad |f(x)-L| <\epsilon.
 
@@ -75,7 +75,7 @@ Við segjum að talan :math:`L` sé :hover:`markgildi,markgildi` :math:`f(x)` þ
     :imgwidth: 12cm
 
 
-.. note:: 
+.. note::
     Þegar athugað er hvort markgildið :math:`\lim_{x\rightarrow a} f(x)` er
     til, og þá hvert gildi þess er, þá skiptir ekki máli hvort :math:`f(a)` er
     skilgreint eða ekki.
@@ -98,18 +98,18 @@ Dæmi
 .. begin-toggle::
     :label: Sýna sönnun á lið 2
 
-Hér er fallið sem um ræðir :math:`f(x) = x` og :math:`L=a`. 
-Látum :math:`\epsilon>0` vera gefið. Við viljum finna 
+Hér er fallið sem um ræðir :math:`f(x) = x` og :math:`L=a`.
+Látum :math:`\epsilon>0` vera gefið. Við viljum finna
 :math:`\delta >0` þannig að :math:`|x-a|<\delta` hafi í för
 með sér :math:`|f(x)-a| < \epsilon`. Þar sem :math:`f(x)=x` þá er seinni
-ójafnan jafngild :math:`|x-a|<\epsilon`. Þetta er sama ójafnan og 
-:math:`\delta` þarf að uppfylla þannig að okkur nægir að velja 
-:math:`\delta = \epsilon`. Þá hefur 
+ójafnan jafngild :math:`|x-a|<\epsilon`. Þetta er sama ójafnan og
+:math:`\delta` þarf að uppfylla þannig að okkur nægir að velja
+:math:`\delta = \epsilon`. Þá hefur
 
-.. math:: 
-        |x-a| < \delta 
+.. math::
+        |x-a| < \delta
 
-í för með sér að 
+í för með sér að
 
 .. math::
         |f(x) -a| < \epsilon.
@@ -224,15 +224,15 @@ Dæmi: Tölugildisfallið
 :hover:`Tölugildisfallið,tölugildi` :math:`|x|` er skilgreint sem :math:`x`
 ef :math:`x\geq 0` en :math:`-x` ef :math:`x<0`. Um tölugildisfallið gildir
 
-(i)   
+(i)
 
       .. math:: \lim_{x\to 0^+} \frac x{|x|} = 1
 
-(ii)  
+(ii)
 
       .. math:: \lim_{x\to 0^-} \frac x{|x|} = -1
 
-(iii) 
+(iii)
 
       .. math:: \lim_{x\to 0} \frac x{|x|} \quad \text{er ekki til}
 
@@ -242,19 +242,19 @@ ef :math:`x\geq 0` en :math:`-x` ef :math:`x<0`. Um tölugildisfallið gildir
         :label: Sýna sönnun
 
 (i)
-        Hér skoðum við eingöngu :math:`x>0` og þá gildir að 
+        Hér skoðum við eingöngu :math:`x>0` og þá gildir að
         :math:`\frac x{|x|} = \frac xx = 1`. Þar sem
         :math:`\lim_{x \to 0} 1 = 1` samkvæmt :ref:`Dæmi 2.1.3 <daemi2.1>`
-        þá gildir einni að :math:`\lim_{x \to 0^+} 1 = 1` samkvæmt 
-        :ref:`setningunni <setning-hv_markgildi>` 
-        hér á undan. Þannig að 
+        þá gildir einni að :math:`\lim_{x \to 0^+} 1 = 1` samkvæmt
+        :ref:`setningunni <setning-hv_markgildi>`
+        hér á undan. Þannig að
 
         .. math::
-                \lim_{x \to 0^+} \frac x{|x|} = 
+                \lim_{x \to 0^+} \frac x{|x|} =
                 \lim_{x \to 0^+} 1 = 1
 
 (ii)
-        Eins og liður 1 nema ef :math:`x<0` þá er 
+        Eins og liður 1 nema ef :math:`x<0` þá er
         :math:`\frac x{|x|} = \frac x{-x} = -1`
 
 (iii)
@@ -312,28 +312,28 @@ Gerum ráð fyrir að :math:`\lim_{x\rightarrow a}f(x)=L` og að
 .. begin-toggle::
     :label: Sýna sönnun á lið 1.
 
-**Sönnun á lið 1** 
+**Sönnun á lið 1**
 
 Við viljum sýna að fyrir :math:`\epsilon>0` þá sé til :math:`\delta>0`
 þannig að ef :math:`|x-a|<\delta` þá sé :math:`|f(x)+g(x) - (L+M)|<\epsilon`.
-Látum nú :math:`\epsilon>0` vera gefið, þá fæst af 
-:math:`\lim_{x\to a} f(x) = L` að til er :math:`\delta_1>0` þannig að 
+Látum nú :math:`\epsilon>0` vera gefið, þá fæst af
+:math:`\lim_{x\to a} f(x) = L` að til er :math:`\delta_1>0` þannig að
 
-.. math::  |f(x)-L| < \frac \epsilon 2 
+.. math::  |f(x)-L| < \frac \epsilon 2
 
 ef :math:`|x-a|<\delta_1`. Eins fæst af :math:`\lim_{x \to a} g(x)=M`
-að til er :math:`\delta_2` þannig að 
+að til er :math:`\delta_2` þannig að
 
-.. math::  |g(x)-M| < \frac \epsilon 2 
+.. math::  |g(x)-M| < \frac \epsilon 2
 
-ef :math:`|x-a|<\delta_2`. 
+ef :math:`|x-a|<\delta_2`.
 
-Ef við setjum :math:`\delta = \min\{\delta_1,\delta_2\}` þá þýðir það að 
-öll :math:`x` sem uppfylla :math:`|x-a|<\delta` uppfylla einnig 
-:math:`|x-a|<\delta_1` og :math:`|x-a|<\delta_2`. Þá gefur þríhyrningsójafnan 
+Ef við setjum :math:`\delta = \min\{\delta_1,\delta_2\}` þá þýðir það að
+öll :math:`x` sem uppfylla :math:`|x-a|<\delta` uppfylla einnig
+:math:`|x-a|<\delta_1` og :math:`|x-a|<\delta_2`. Þá gefur þríhyrningsójafnan
 okkur að fyrir slíkt :math:`x` þá er
 
-.. math:: 
+.. math::
 	|f(x)+g(x) - (L+M)| = |f(x)-L + g(x)-M| \\
 	< |f(x)-L| + |g(x)-M| < \frac \epsilon 2 + \frac \epsilon 2 = \epsilon,
 
@@ -343,7 +343,7 @@ sem er það sem við vildum sýna.
 
 .. index::
     klemmureglan
-    
+
 Setning: Klemmureglan
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -359,32 +359,32 @@ g(x)\leq h(x)` fyrir öll :math:`x` á bili :math:`(b, c)` sem inniheldur
 	:align: center
 	:width: 80%
 
-.. begin-toggle:: 
+.. begin-toggle::
     :label: Sýna sönnun
 
 **Sönnun**
-   
+
 Látum :math:`\epsilon>0` vera gefið. Við viljum sýna að þá sé til :math:`\delta>0` þannig
 að :math:`|g(x)-L|<\epsilon` fyrir öll :math:`x` sem uppfylla :math:`|x-a|<\delta`.
 
-Þetta má líka skrifa svona: 
+Þetta má líka skrifa svona:
 Við viljum sýna að þá sé til :math:`\delta>0` þannig
 að :math:`L-\epsilon<g(x)<L+\epsilon` fyrir öll :math:`x` sem uppfylla :math:`a-\delta < x<a+\delta`.
 
-Við vitum nú að þar sem :math:`\lim_{x\to a} f(x) = L` þá er til :math:`\delta_1` 
+Við vitum nú að þar sem :math:`\lim_{x\to a} f(x) = L` þá er til :math:`\delta_1`
 þannig að :math:`L-\epsilon<f(x)<L+\epsilon` fyrir öll :math:`x` sem uppfylla :math:`a-\delta_1 < x<a+\delta_1`.
 
-Eins þá fæst af :math:`\lim_{x\to a} h(x) = L` að til er :math:`\delta_2` 
+Eins þá fæst af :math:`\lim_{x\to a} h(x) = L` að til er :math:`\delta_2`
 þannig að :math:`L-\epsilon<g(x)<L+\epsilon` fyrir öll :math:`x` sem uppfylla :math:`a-\delta_2 < x<a+\delta_2`.
 
 Setjum nú :math:`\delta = \min\{\delta_1,\delta_2\}` og athugum að það þýðir að fyrir sérhvert :math:`x` sem
-uppfyllir :math:`a-\delta < x < a+\delta` uppfyllir einnig :math:`a-\delta_1 < x<a+\delta_1` 
-og :math:`a-\delta_2 < x<a+\delta_2`. Þá gefur :math:`f(x)\leq g(x)\leq h(x)` að 
+uppfyllir :math:`a-\delta < x < a+\delta` uppfyllir einnig :math:`a-\delta_1 < x<a+\delta_1`
+og :math:`a-\delta_2 < x<a+\delta_2`. Þá gefur :math:`f(x)\leq g(x)\leq h(x)` að
 
 .. math:: L-\epsilon<f(x) \leq g(x) \leq h(x) < L+\epsilon.
 
-Þar með er :math:`L-\epsilon < g(x) < L+\epsilon` og þá höfum við sýnt að 
-:math:`\lim_{x\to a} g(x) = L`. 
+Þar með er :math:`L-\epsilon < g(x) < L+\epsilon` og þá höfum við sýnt að
+:math:`\lim_{x\to a} g(x) = L`.
 
 .. end-toggle::
 
@@ -392,15 +392,15 @@ og :math:`a-\delta_2 < x<a+\delta_2`. Þá gefur :math:`f(x)\leq g(x)\leq h(x)` 
 Dæmi: Markgildi með sínus
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(i)   
+(i)
 
       .. math:: \lim_{x\to 0} \sin\left(\frac 1x\right) \quad \text{er ekki til}
 
-(ii)  
+(ii)
 
       .. math:: \lim_{x\to 0} x\sin\left(\frac 1x\right) = 0
 
-(iii) 
+(iii)
 
       .. math:: \lim_{x \to 0} \frac{\sin(x)}{x} = 1
 
@@ -412,34 +412,34 @@ Dæmi: Markgildi með sínus
         :label: Sýna sönnun á 1.
 
 Sönnum þetta með mótsögn. Gerum ráð fyrir að til sé markgildi :math:`L` þannig að fyrir
-sérhvert :math:`\epsilon >0` er til :math:`\delta>0` þannig að 
+sérhvert :math:`\epsilon >0` er til :math:`\delta>0` þannig að
 :math:`|x-0|<\delta` hefur í för með sér að :math:`|\sin(1/x) - L|<\epsilon`. Til þess
-að þetta leiði til mótsagnar þurfum við að finna :math:`\epsilon>0` sem er þannig að 
-sama hversu lítið :math:`\delta>0` er valið þá er alltaf til :math:`x` þannig að 
-:math:`|x-0|<\delta` og 
+að þetta leiði til mótsagnar þurfum við að finna :math:`\epsilon>0` sem er þannig að
+sama hversu lítið :math:`\delta>0` er valið þá er alltaf til :math:`x` þannig að
+:math:`|x-0|<\delta` og
 
 .. math::
         \left|\sin\left(\frac 1x \right)-L\right| \geq \epsilon.
 
-Veljum :math:`\epsilon = 0,5`. Ástæðan fyrir þessu vali er sú að þar sem 
-:math:`\sin(1/x)` sveiflast á milli :math:`-1` og :math:`1` þá er nóg að 
+Veljum :math:`\epsilon = 0,5`. Ástæðan fyrir þessu vali er sú að þar sem
+:math:`\sin(1/x)` sveiflast á milli :math:`-1` og :math:`1` þá er nóg að
 velja tölu sem er þannig að fallið sveiflist út
-fyrir bilið :math:`[L-\epsilon,L+\epsilon]`. Í þessu tilviki þýðir það að 
-:math:`\epsilon` þarf að vera minna en 1. 
+fyrir bilið :math:`[L-\epsilon,L+\epsilon]`. Í þessu tilviki þýðir það að
+:math:`\epsilon` þarf að vera minna en 1.
 
-Ef markgildið er til þá er ætti að vera til :math:`\delta>0` þannig að 
+Ef markgildið er til þá er ætti að vera til :math:`\delta>0` þannig að
 :math:`|\sin(1/x)-L|< 0.5` fyrir :math:`x` sem uppfylla :math:`|x-0|<\delta`.
-Byrjum á að skoða tilvikið :math:`L\leq 0`. 
+Byrjum á að skoða tilvikið :math:`L\leq 0`.
 Finnum nógu stóra náttúrlega tölu :math:`k`
-þannig að :math:`\frac 1{2\pi k + \pi/2} < \delta`. 
-Ef við setjum :math:`x=\frac 1{2\pi k + \pi/2}`  
-þá fæst að :math:`|x-0|<\delta` en 
-        
+þannig að :math:`\frac 1{2\pi k + \pi/2} < \delta`.
+Ef við setjum :math:`x=\frac 1{2\pi k + \pi/2}`
+þá fæst að :math:`|x-0|<\delta` en
+
 .. math::
-        \left|\sin\left(\frac 1x \right) - L\right| = 
+        \left|\sin\left(\frac 1x \right) - L\right| =
         |\sin(2\pi k +\pi/2) - L|  = |1-L| > 0,5
 
-Tilvikið þegar :math:`L>0` er eins nema þá veljum við :math:`x=\frac 1{2\pi k - \pi/2}` 
+Tilvikið þegar :math:`L>0` er eins nema þá veljum við :math:`x=\frac 1{2\pi k - \pi/2}`
 sem þýðir að :math:`\sin(x) = -1`.
 
 
@@ -485,7 +485,7 @@ Gerum ráð fyrir að fall :math:`f` sé skilgreint á bili
 uppfyllt:
 
 Fyrir sérhverja tölu :math:`\epsilon>0` er til tala :math:`R`
-þannig að um öll :math:`x>R` gildir að 
+þannig að um öll :math:`x>R` gildir að
 
 .. math:: |f(x)-L|<\epsilon.
 
@@ -513,7 +513,7 @@ Gerum ráð fyrir að fall :math:`f` sé skilgreint á bili
 uppfyllt:
 
 Fyrir sérhverja tölu :math:`\epsilon>0` er til tala :math:`R`
-þannig að um öll :math:`x<R` gildir að 
+þannig að um öll :math:`x<R` gildir að
 
 .. math:: |f(x)-L|<\epsilon.
 
@@ -547,12 +547,12 @@ skilgreint. Við segjum að :math:`f(x)` *stefni á* :math:`\infty` *þegar*
 uppfyllt.
 
 Fyrir sérhverja tölu :math:`B` er til tala :math:`\delta>0` þannig
-að um öll :math:`x` sem eru þannig að 
+að um öll :math:`x` sem eru þannig að
 
-.. math:: 
+.. math::
         0 < |x-a| <\delta \quad  \text{ gildir að } \quad f(x) > B.
 
-.. warning:: 
+.. warning::
     Athugið að :math:`\infty` er **ekki** tala. Þó að
     :math:`\lim_{x\rightarrow a} f(x)=\infty` þá er samt sagt að markgildið
     :math:`\lim_{x\rightarrow a} f(x)` sé ekki til.
@@ -583,12 +583,12 @@ að um öll :math:`x` sem eru þannig að
 
 .. math:: 0 < |x-a| < \delta \quad \text{ gildir að } \quad f(x)<B.
 
-.. warning:: 
+.. warning::
     Athugið að :math:`-\infty` er **ekki** tala. Þó að
     :math:`\lim_{x\rightarrow a} f(x)=-\infty` þá er samt sagt að markgildið
     :math:`\lim_{x\rightarrow a} f(x)` sé ekki til.
 
-.. index:: 
+.. index::
     samfelldni
     samfelldni; í punkti
 
@@ -618,7 +618,7 @@ Ef :math:`x` er ekki innri punktur :math:`A` og :math:`x\in A` þá segjum
 við að :math:`x` sé :hover:`jaðarpunktur` :math:`A`.
 
 
-.. index:: 
+.. index::
     samfelldni; í punkti
 
 Skilgreining: Samfelldni í punkti
@@ -662,17 +662,17 @@ skilgreint á opnu bili umhverfis :math:`g(c)` og samfellt í
 umhverfis :math:`c` og er samfellt í :math:`c`.
 
 
-.. note:: 
+.. note::
     Ef fall er skilgreint með formúlu og skilgreingamengið er ekki tilgreint
     sérstaklega, þá er venjan að líta alla þá punkta þar sem formúlan gildir
     sem skilgreingarmengi fallsins
 
-    
-.. index:: 
+
+.. index::
     samfelldni, samfellt fall
 
 .. _`skilgrsamfellt`:
-    
+
 Skilgreining: Samfellt fall
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -710,7 +710,7 @@ og Setningu 2.6.3.
 Dæmi
 ~~~~
 
-Fallið :math:`\cos(3x+5)` er samfellt. Margliðan :math:`g(x) =3x+5` og 
+Fallið :math:`\cos(3x+5)` er samfellt. Margliðan :math:`g(x) =3x+5` og
 :math:`f(x) = \cos(x)` eru samfelld föll og þá er samskeytingin
 :math:`f\circ g(x) = \cos(3x+5)` einnig samfellt fall.
 
@@ -755,7 +755,7 @@ Skilgreining: Hægri/vinstri samfelldni
 
 Uppfærum nú skilgreininguna á :ref:`samfelldu falli <skilgrsamfellt>`.
 
-.. index:: 
+.. index::
     fall; samfellt
 
 Uppfærð skilgreining: Samfellt fall
@@ -822,23 +822,23 @@ milli :math:`a` og :math:`b` þannig að :math:`f(c)=s`.
 **Sönnun**
 
 Í setningunni þá gerum við ráð fyrir að :math:`s` liggi á milli :math:`f(a)` og
-:math:`f(b)`. Til að svona :math:`s` sé til þá þarf :math:`f(a) \neq f(b)`. 
+:math:`f(b)`. Til að svona :math:`s` sé til þá þarf :math:`f(a) \neq f(b)`.
 
-Skoðum tilvikið þegar :math:`f(a) < f(b)`, en þá er :math:`f(a) < s < f(b)`. 
+Skoðum tilvikið þegar :math:`f(a) < f(b)`, en þá er :math:`f(a) < s < f(b)`.
 Tilvikið :math:`f(a)>f(b)` er nánast eins.
 
 Skilgreinum mengið :math:`S = \{ x \in [a,b] ; f(x) < s\}`. Þetta mengi er ekki tómt
-því :math:`a` er í því og það er takmarkað að ofan af :math:`b`. Samkvæmt 
+því :math:`a` er í því og það er takmarkað að ofan af :math:`b`. Samkvæmt
 :ref:`Frumsendunni um efra mark <FrumsendanUmEfraMark>` þá er til efra mark :math:`c \in[a,b]`
-fyrir :math:`S`. Við viljum sýna að :math:`f(c)=s`. 
+fyrir :math:`S`. Við viljum sýna að :math:`f(c)=s`.
 
 Ef :math:`f(c)>s` þá segir samfelldni :math:`f`
 okkur að til sé lítið bil kringum :math:`c` þar sem fallið er stærra en :math:`s`. Sér í lagi er
-til tala minni en :math:`c` sem er ekki í menginu :math:`S`. Þetta þýðir að :math:`c` er 
+til tala minni en :math:`c` sem er ekki í menginu :math:`S`. Þetta þýðir að :math:`c` er
 ekki efra mark :math:`S`. Orðum þetta aðeins nákvæmar.
 
 Veljum :math:`0<\epsilon < f(c)-s` þá er til :math:`\delta>0` þannig að ef :math:`x\in ]c-\delta,c+\delta[`
-þá er :math:`|f(c)-f(x)|<\epsilon < f(c) -s`. Þetta hefur í för með sér að :math:`f(c) - f(x) < f(c) -s`, 
+þá er :math:`|f(c)-f(x)|<\epsilon < f(c) -s`. Þetta hefur í för með sér að :math:`f(c) - f(x) < f(c) -s`,
 það er :math:`f(x)>s`. Þetta þýðir að öll :math:`x\in]c-\delta,c[` eru "minni" efri mörk fyrir :math:`S`
 en :math:`c` sem gengur ekki og er því mótsögn.
 
@@ -853,7 +853,7 @@ og öll stök í :math:`S`. Þetta er einnig mótsögn.
 
 .. note::
     Það er möguleiki að það séu fleiri en einn punktur á bilinu þar sem fallið tekur
-    gildið :math:`s`. Sönnunin hér á undan finnur þann stærsta. 
+    gildið :math:`s`. Sönnunin hér á undan finnur þann stærsta.
 
 Fylgisetning
 ~~~~~~~~~~~~
@@ -878,4 +878,3 @@ Ef :math:`a_n < 0` þá víxlast formerkin á markgildunum hér að ofan en rök
 að öðru leyti eins.
 
 .. end-toggle::
-

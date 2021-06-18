@@ -3,14 +3,12 @@ Heildun
 
 .. note::
 	**Nauðsynleg undirstaða**
-	
-	- markgildi 
 
-	- afleiður
+	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
 
-	- keðjureglan 
+	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
 
-	- reiknireglur fyrir afleiður
+	- :ref:`Reiknireglur fyrir afleiður <reiknireglura>`, sér í lagi :ref:`keðjureglan <kedjuregla>`.
 
 *It can be very dangerous to see things from somebody else's point of view without the proper training.*
 
@@ -23,7 +21,10 @@ Heildun
     fall; heildanlegt
     flatarmál
 
+.. _heildun:
+
 -----
+
 
 Heildun
 -------
@@ -159,13 +160,13 @@ fallið :math:`f` heildanlegt á :math:`[a,b]` og
     Við sögðum ekkert um það hvernig við skiptum bilinu :math:`[a,b]` í
     :math:`n` hlutbil. Það má gera hvernig sem er, það er ekki nauðsynlegt að
     þau séu öll jafn stór. Eina krafan er að stærð allra hlutbila stefni á
-    0 þegar :math:`n\to \infty`. 
+    0 þegar :math:`n\to \infty`.
 
 .. note::
     Við erum ekki bundin af því að skoða rétthyrninga sem með hæð sem er
     há/lággildi fallsins á hverju hlutbili, t.d. má taka miðgildið á hveru
     hlutbili, gildið í hægri endapunkti þess eða gildið í vinstri endapunkti þess.
-    
+
     Niðurstaðan þegar :math:`n\to \infty` verður hins vegar alltaf sú sama,
     þ.e. við nálgumst heildið.
 
@@ -259,9 +260,9 @@ Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[-a, a]`.
 
      .. math:: \int_{-a}^a f(x)\,dx=2\int_0^a f(x)\,dx.
 
-.. index:: 
+.. index::
         fall; meðalgildi
-     
+
 Skilgreining
 ~~~~~~~~~~~~
 
@@ -290,7 +291,7 @@ að :math:`f(c)=\bar{f}`.
 Undirstöðusetning stærðfræðigreiningarinnar
 -------------------------------------------
 
-.. index:: 
+.. index::
     fall; skilgreint með heildi
 
 Skilgreining og setning: Fall skilgreint með heildi
@@ -307,7 +308,7 @@ Fallið :math:`F` er samfellt á :math:`[a, b]`.
 
 .. index::
     undirstöðusetning stærðfræðigreiningar, fyrri hluti
-   
+
 .. _undirstodusetning-fyrri:
 
 Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti
@@ -339,7 +340,7 @@ Fylgisetning
 ~~~~~~~~~~~~
 
 Látum :math:`f` vera samfellt fall skilgreint á bili :math:`I`. Þá er
-til stofnfall fyrir :math:`f` 
+til stofnfall fyrir :math:`f`
 samkvæmt :ref:`fyrri hluta undirstöðustöðusetningarinnar <undirstodusetning-fyrri>`.
 
 Hjálparsetning
@@ -390,7 +391,7 @@ Aðferðir við að reikna stofnföll
 Skilgreiningin á heildi með undir- og yfirsummum er gagnleg til að útskýra
 og sanna eiginleika heilda en hún er ekki mjög góð til þess að reikna
 heildi. Því er nauðsynlegt að koma sér upp tólum sem henta betur til þess.
-Ef þau duga ekki þá þurfum við að grípa til tölulegra reikninga. 
+Ef þau duga ekki þá þurfum við að grípa til tölulegra reikninga.
 
 Verkfærin
 ~~~~~~~~~
@@ -443,8 +444,8 @@ Svo
 
 .. math::
 
-   \underbrace{\int f(g(x))g'(x)\,dx}_{\text{Viljum finna}}  = 
-   \int f(u)\,du  
+   \underbrace{\int f(g(x))g'(x)\,dx}_{\text{Viljum finna}}  =
+   \int f(u)\,du
    =
    \underbrace{F(u)+C}_{\text{Getum reiknað}}  =
    \underbrace{F(g(x))+C}_{\text{Svarið}}.
@@ -463,8 +464,8 @@ Með mörkum þá verður innsetningin svona
 
    \begin{aligned}
      \int_a^b f(g(x))g'(x)\, dx  &=&
-     \int_{x=a}^{x=b} f(u)\, du  = 
-     [F(u)]_{x=a}^{x=b}    \\ &=& 
+     \int_{x=a}^{x=b} f(u)\, du  =
+     [F(u)]_{x=a}^{x=b}    \\ &=&
      [F(g(x))]_{x=a}^{x=b}     =
      F(g(b)) - F(g(a)).\end{aligned}
 
@@ -475,24 +476,24 @@ svona
 
    \begin{aligned}
    \int_a^b f(g(x))g'(x)\, dx  &=&
-   \int_{x=a}^{x=b} f(u)\, du  = 
-   \int_{A}^{B} f(u)\, du    \\ &=& 
-   [F(u)]_A^B      = 
+   \int_{x=a}^{x=b} f(u)\, du  =
+   \int_{A}^{B} f(u)\, du    \\ &=&
+   [F(u)]_A^B      =
    F(B) - F(A).\end{aligned}
 
 .. index::
     heildun; öfug innsetning
-   
+
 Öfug innsetning
 ~~~~~~~~~~~~~~~
 
 Reiknum :math:`\int f(x)\, dx`, með því að finna hugsanlega flóknara
 heildi sem við getum reiknað
 
-.. math:: 
+.. math::
     \int f(g(u))g'(u)\, du.
 
-.. warning:: 
+.. warning::
     Athugið að hér þurfum við að finna heppilegt :math:`g`. Það
     er ekki alltaf augljóst hvaða :math:`g` er hægt að nota.
 
@@ -508,7 +509,7 @@ Sem gefur að
 .. math::
 
    \underbrace{\int f(x)\,dx}_{\text{Viljum finna}}  =
-   \int f(g(u))g'(u)\,du 
+   \int f(g(u))g'(u)\,du
    =
    \underbrace{F(u) + C}_{\text{Getum reiknað}}
    = \underbrace{F(g^{-1}(x)) + C}_{\text{Svarið}}.
@@ -521,7 +522,7 @@ Við öfuga innsetningu þarf að passa að breyta mörkunum. Það er
 .. math::
 
    \begin{aligned}
-   \int_a^b f(x)\,dx    &= \int_{x=a}^{x=b} f(g(u))g'(u)\,du  \\ 
+   \int_a^b f(x)\,dx    &= \int_{x=a}^{x=b} f(g(u))g'(u)\,du  \\
    &= [F(u)]_{x=a}^{x=b} = [F(g^{-1}(x))]_a^b = F(g^{-1}(b)) - F(g^{-1}(a)).\end{aligned}
 
 Eða ef :math:`a=g(A)` og :math:`b=g(B)` (það er :math:`g^{-1}(a) = A` og
@@ -563,22 +564,260 @@ Eða með mörkum
 Stofnbrotaliðun
 ~~~~~~~~~~~~~~~
 
-Viljum heilda rætt fall :math:`\frac{P(x)}{Q(x)}` þar sem :math:`P(x)`
-og :math:`Q(x)` eru margliður. Stofnbrotaliðun gengur út á það að skrifa ræða fallið
-:math:`\frac{P(x)}{Q(x)}` sem summu af liðum á forminu
+
+Ef við viljum heilda rætt fall :math:`\frac{P(x)}{Q(x)}` þar sem :math:`P(x)`
+og :math:`Q(x)` eru margliður, getur það reynst þrautinni þyngra, séu margliðurnar
+nægilega flóknar. Stofnbrotaliðun gengur út á það að skrifa ræða fallið
+:math:`\frac{P(x)}{Q(x)}` sem línulega samantekt liða á forminu
 
 .. math:: \frac{1}{ax+b}, \quad \frac{x}{x^2+bx+c} \quad\text{ og }\quad \frac{1}{x^2+bx+c},
 
-því svona liði getum við heildað hvern fyrir sig.
+(það er við liðum fallið í stofnbrot sín) því svona liði getum við heildað hvern fyrir sig.
+
+Erfitt er að setja aðferðina **stofnbrotaliðun** fram með einföldum hætti
+og er það líkast til best gert með dæmum. Lítum á  nokkrar mismunandi útfærslur
+af því hvernig hægt er að liða rætt fall í stofnbrot.
+
+Athugum að margliða :math:`p(x)` er sögð af stigi :math:`n in \mathbb{N}` ef hana má rita á forminu
+
+.. math:: a_n x^n + a_{n-1} x^{n-1}+ \dots + a_1 x + a_0.
+
+Ef hana má þátta í
+
+.. math:: p(x) = (x-a_1)(x-a_2) \cdot \dots \cdot (x-a_q)
+
+er hún sögð hafa einfaldar núllstöðvar ef um sérhverja núllstöð hennar :math:`a_i` og :math:`a_j` gildir
+að :math:`a_i \neq a_j` fyrir öll :math:`i \neq j`. Ef, á hinn bóginn, til eru tvær eða fleiri núllstöðvar sem uppfylla að
+:math:`a_i = a_j` þar sem :math:`i \neq j` þá eru þær kallaðar margfaldar núllstöðvar.
+
+Sem dæmi má taka að margliðuna :math:`p(x)=x^2-2x+1` má þátta með samokareglunni í :math:`p(x)=(x-1)(x-1)`
+og hefur hún því eina, tvöfalda núllstöð í :math:`x=1`. Hins vegar má þátta margliðuna :math:`q(x)=x^2+5x+6`
+í :math:`q(x)=(x+2)(x+3)` og hefur hún því tvær einfaldar núllstöðvar, :math:`x=-2` og :math:`x=-3`.
+
+Dæmi 1
+^^^^^^
+**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **með** :math:`n` **einfaldar núllstöðvar.**
+
+Lítum á fallið :math:`\frac{x+4}{x^2-5x+6}`. Sjá má að teljarinn er margliða af fyrsta stigi
+en nefnarinn margliða af öðru stigi. Jafnframt má þátta nefnarann í :math:`(x-2)(x-3)`
+sem segir okkur að nefnarinn hefur tvær einfaldar núllstöðvar í :math:`x=2` og :math:`x=3`.
+Þá gildir að
+
+.. math:: \frac{x+4}{x^2-5x+6} = \frac{x+4}{(x-2)(x-3)} = \frac{A}{x-2}+\frac{B}{x-3},
+
+þar sem sem :math:`A` og :math:`B` eru einhverjar rauntölur. Tökum sérstaklega eftir því
+að fjöldi liða í stofnbrotaliðuninni er jafn stigi nefnarans. Ef :math:`P(x)` er margliða
+af stigi :math:`m` og :math:`Q(x)` er margliða af stigi stigi :math:`n>m` sem hefur
+:math:`n` mismunandi (raungildar) núllstöðvar, sem og að stuðullinn fyrir framan
+:math:`x^n` er :math:`1`, þá gildir almennt fyrir ræða fallið :math:`\frac{P(x)}{Q(x)}` að
+stofnbrotaliðun þess verður
+
+.. math:: \frac{P(x)}{Q(x)} = \frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\dots +\frac{A_n}{x-a_n}.
+
+Ákvörðum nú gildi fastanna :math:`A` og :math:`B`. Samnefnum brotin í hægri
+hlið jöfnunnar
+
+.. math:: \frac{x+4}{x^2-5x+6} = \frac{A}{x-2}+\frac{B}{x-3} = \frac{Ax-3A+Bx-2B}{(x-2)(x-3)}.
+
+Með því að bera saman teljara brotanna, sem staðsett eru sitt hvoru megin jafnaðarmerkisins,
+sjáum við að
+
+.. math:: x+4 = Ax-3A+Bx-2B.
+
+Athugum að til þess að þetta sé jafngilt verður að gilda að :math:`Ax+Bx = x` og :math:`-3A-2B=4`.
+Með því að deila í gegnum fyrri jöfnuna með :math:`x` fæst jöfnuhneppið
+
+.. math::
+	\begin{align*}
+		A+B&=1\\
+		-3A-2B&=4\\
+	\end{align*}
+
+sem hefur lausnina :math:`A=-6` og :math:`B=7`. Af þessu sést að
+
+.. math::  \frac{x+4}{x^2-5x+6} = -\frac{6}{x-2}+\frac{7}{x-3}.
+
+Dæmi 2
+^^^^^^
+**Teljari og nefnari af stigi** :math:`n` **og nefnarinn með** :math:`n` **einfaldar núllstöðvar.**
+
+Lítum á fallið :math:`\frac{x^3+2}{x^3-x}`. Sjá má að bæði teljari og nefnari eru margliður
+af þriðja stigi. Athugum að með því að bæta núlllið á forminu :math:`+x-x` við teljarann fæst
+
+
+.. math:: \frac{x^3-x+x+2}{x^3-x} = \frac{x^3-x}{x^3-x} + \frac{x+2}{x^3-x} = 1 + \frac{x+2}{x^3-x}.
+
+Fastann 1 þarf ekki að liða frekar. Þar sem að brotið :math:`\frac{x+2}{x^3-x}` hefur teljara af
+lægra stigi en nefnarinn (tveimur lægra nánar til tekið) sem og að nefnarinn hefur þrjár, einfaldar núllstöðvar,
+getum við stofbrotaliðað það með eftirfarandi hætti.
+
+.. math:: \frac{x+2}{x^3-x} = \frac{x+2}{x(x-1)(x+1)} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{x-1} = \frac{A(x^2-1)+B(x^2+x)+X(x^2-x)}{x(x-1)(x+1)}
+
+þar sem síðasti liður jöfnunnar fæst með því að samnefna brot þess næstseinasta.
+Með því að bera saman teljara fyrsta og síðasta liðs jöfnunnar sést að
+
+.. math:: x+2 = A(x^2-1) + B(x^2+x)+C(x^2-x).
+
+Ef við margföldum upp úr svigum og drögum saman líka liði fæst að
+
+.. math:: x+2 = (A+B+C)x^2 +(B-C)x - A.
+
+Þetta gefur okkurjöfnuhneppið
+
+.. math::
+	\begin{align*}
+		A+B+C &= 0\\
+		B-C &=1\\
+		-A &= 2\\
+	\end{align*}
+
+sem hefur lausnina :math:`A=-2`, :math:`B=\frac{3}{2}` og :math:`C=\frac{1}{2}`.
+Af þessu sést að
+
+.. math:: \frac{x^3+2}{x^3-x} = 1 - \frac{2}{x}+\frac{3}{2(x-1)}+\frac{1}{2(x-1)}.
+
+Dæmi 3
+^^^^^^
+**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **einfaldar núllstöðvar.**
+
+Lítum á fallið :math:`\frac{x^2+3x+2}{x(x^2+1)}`. Athugum að teljarinn er
+annars stigs margliða en nefnarinn margliða af þriðja stigi. Hér þarf að gæta
+sérstaklega að því að nefnarinn hefur þó einungis eina, einfalda núllstöð
+í :math:`x=0` þar sem að þátturinn :math:`x^2+1` hefur engar (raungildar)
+núllstöðvar. Af þessu leiðir að :math:`\frac{x^2+3x+2}{x(x^2+1)}` má liða í
+stofnbrot á eftirfarandi vegu.
+
+.. math:: \frac{x^2+3x+2}{x(x^2+1)} = \frac{A}{x}+\frac{Bx+C}{x^2+1} = \frac{A(x^2+1)+Bx^2+Cx}{x(x^2+1)}
+
+Með svipuðum hætti og áður berum við saman teljara fyrsta brots og síðasta
+brots jöfnunnar. Sjáum að
+
+.. math:: x^2+3x+2 = A(x^2+1)+Bx^2+Cx.
+
+Með því að leysa upp úr svigum og draga saman líka liði fæst að
+
+
+.. math:: x^2+3x+2 = (A+B)x^2+Cx+A.
+
+Þetta gefur okkur jöfnuhneppið
+
+.. math::
+	\begin{align*}
+		A+B &= 1\\
+		C &=3\\
+		A &= 2\\
+	\end{align*}
+
+sem hefur lausnina :math:`A=2`, :math:`B=-1` og :math:`C=3`. Af þessu sést að
+
+.. math:: \frac{x^2+3x+2}{x(x^2+1)} = \frac{2}{x} + \frac{-x+3}{x^2+1}.
+
+Dæmi 4
+^^^^^^
+**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`n` **núllstöðvar, þar af einhverjar fjölfaldar**
+
+Lítum á fallið :math:`\frac{1}{x(x-1)^2}`. Ljóst er að teljari er af hærra stigi
+en nefnarinn og nefnarinn hefur einfalda núllstöð í :math:`x=0` og tvöfalda
+núllstöð í :math:`x=1`. Þá má liða fallið í stofnbrot með eftirfarandi hætti.
+
+.. math:: \frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2}.
+
+Tökum sérstaklega eftir því að núllstöðin :math:`x=1` er tvöföld og því inniheldur
+stofnbrotaliðunin tvo liði með þáttinn :math:`(x-1)` í nefnara,
+annars vegar í fyrsta veldi og hins vegar í öðru veldi. Almennt gildir, fyrir
+sérhverja :math:`r`-falda núllstöð :math:`a` nefnara ræða fallsins
+:math:`\frac{P(x)}{Q(x)}`, að stofnbrotaliðun fallsins mun innihalda
+
+.. math:: \frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}+\dots + \frac{A_r}{(x-a)^r}
+
+Með því að samnefna fáum við að
+
+.. math:: \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2} = \frac{A(x^2-2x+1)+B(x^2-x)+Cx}{x(x-1)^2}.
+
+Með sambærilegum hætti og áður fæst að
+
+.. math:: 1 = A(x^2-2x+1)+B(x^2-x)+Cx
+
+og með því að leysa upp úr svigum og draga saman líka liði fæst
+
+.. math:: 1 = (A+B) x^2 + (-2A-B+C)x + A.
+
+Því fæst loks jöfnuhneppið
+
+.. math::
+	\begin{align*}
+		A+B &= 0\\
+		-2A-B+C &=0\\
+		A &= 1\\
+	\end{align*}
+
+sem hefur lausnina :math:`A=1`, :math:`B=-1` og :math:`C=1`. Af þessu sést að
+
+.. math:: \frac{1}{x(x-1)^2} = \frac{1}{x}-\frac{1}{x-1} + \frac{1}{(x-1)^2}
+
+Dæmi 5
+^^^^^^
+**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **núllstöðvar og núllstöðvalausan þátt í veldinu** :math:`q>1`
+
+Lítum á fallið :math:`\frac{x^2+2}{4x^5+4x^3+x}`. Hér er stig nefnara hærra en stig teljara
+og má þátta hann í :math:`x(2x^2+1)^2`. Nú er margliðan :math:`2x^2+1` núllstöðvalaus.
+Því má stofnbrotaliða fallið á eftirfarandi vegu.
+
+.. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{A}{x}+\frac{Bx+C}{2x^2+1}+\frac{Dx+E}{(2x^2+1)^2}
+
+Líkt og áður skulum við veita því sérstakan gaum að þátturinn :math:`(2x^2+1)^2`
+er í öðru veldi og því hefur stofnbrotaliðunin tvo liði þar sem nefnarinn inniheldur
+margliðuna :math:`2x^2+1`, annars vegar í fyrsta veldi og svo hins vegar í öðru
+veldi. Sama almenna regla og áður gildir, ef nefnari fallsins inniheldur núllstöðvalausa
+margliðu :math:`p(x)^n` í nefnara, þar sem :math:`n` er einhver náttúruleg tala,
+þá mun stofnbrotaliðun fallsins innihalda liðina
+
+.. math:: \frac{A_k}{p(x)^k}, \qquad k=1,2,\dots,n.
+
+Ef við samnefnum brotin í hægri hlið jöfnunnar fæst
+
+.. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{A(4x^4+4x^2+1)+B(2x^4+x^2)+C(2x^3+x)+Dx^2+Ex}{x(2x^2+1)^2}.
+
+Við getum nú borið saman teljarana og með því að leysa upp úr svigum og draga saman
+líka liði fæst
+
+.. math:: x^2+2 = (4A+2B)x^4 + 2Cx^3 + (4A+2B+D)x^2 + (C+E)x+A.
+
+Því fæst loks jöfnuhneppið
+
+.. math::
+	\begin{align*}
+		4A+2B &= 0\\
+		2C &=0\\
+		4A+B+D &= 1\\
+		C+E &= 0\\
+		A &= 2\\
+	\end{align*}
+
+sem hefur lausnina :math:`A=2`, :math:`B=-4`, :math:`C=0`, :math:`D=-3` og :math:`E=0`.
+Af þessu sést að
+
+.. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{2}{x}-\frac{4x}{2x^2+1}-\frac{3x}{(2x^2+1)^2}.
+
+Samantekt
+^^^^^^
+
+Líkt og áður segir þá er stofnbrotaliðun notuð fyrir ræð föll sem erfitt getur
+reynst að heilda í sínu upprunalega formi. Við stofnbrotaliðun er fallið liðað
+í summu minni þátta og má þá heilda hvern þátt fyrir sig og leysa dæmið þannig
+í fleiri en einfaldari skrefum.
 
 Nánar er fjallað um stofnbrotaliðun í kafla 6.2 í kennslubókinni.
 
+Sjá einnig `wikipedia síðuna um stofnbrotaliðun <https://en.wikipedia.org/wiki/Partial_fraction_decomposition#Example_3>`__.
+Þar má t.a.m. sjá allar aðferðirnar, úr dæmunum hér að ofan, notaðar í einu og sama dæminu.
+
 .. todo::
     bæta við stofnbrotaliðun
-    
+
 .. index::
     heildi; óeiginleg
-    
+
 Óeiginleg heildi
 ----------------
 
@@ -602,10 +841,10 @@ markgildið er til, en ósamleitið ef markgildið er ekki til.
 
 .. warning::
       Ef :math:`f` stefnir ekki á 0 þegar :math:`x\to \infty` þá
-      er heildið ekki samleitið. En jafnvel þó fallið stefni á 
+      er heildið ekki samleitið. En jafnvel þó fallið stefni á
       0 þá er ekki víst að heildið sé samleitið, samanber
       eftirfarandi dæmi.
-      
+
 Dæmi
 ~~~~
 
@@ -683,7 +922,7 @@ samleitin og þá er
     :height: 300
     :img: 07_samleitidheildi.png
     :imgwidth: 12cm
-    
+
 Setning
 ~~~~~~~
 

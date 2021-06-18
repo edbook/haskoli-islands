@@ -1,10 +1,26 @@
 Veldaraðir
 ==========
 
-*What to do if you find yourself stuck in a crack in the ground underneath 
-a giant boulder you can't move, with no hope of rescue. Consider how lucky 
-you are that life has been good to you so far. Alternatively, if life hasn't 
-been good to you so far, which given your current circumstances seems more 
+.. note::
+	**Nauðsynleg undirstaða**
+
+  - `Summuvirkinn <https://en.wikipedia.org/wiki/Summation>`_.
+
+  - `Ýmislegt um tvíliðustuðulinn, hrópmerkingu og fleira <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli06.html#pascal>`_.
+
+  - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
+
+  - `Taylor margliður <file:///Users/huldahvonn/Desktop/Mathematical_Analysis_I/_build/html/kafli03.html#taylor-margliur>`_.
+
+  - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
+
+  - :ref:`Heildun <heildun>`.
+
+
+*What to do if you find yourself stuck in a crack in the ground underneath
+a giant boulder you can't move, with no hope of rescue. Consider how lucky
+you are that life has been good to you so far. Alternatively, if life hasn't
+been good to you so far, which given your current circumstances seems more
 likely, consider how lucky you are that it won't be troubling you much longer.*
 
 -- Douglas Adams, The Original Hitchhiker Radio Scripts
@@ -17,7 +33,7 @@ likely, consider how lucky you are that it won't be troubling you much longer.*
 .. index::
     veldaröð
     röð; veldaröð
-    
+
 Veldaraðir
 ----------
 
@@ -42,7 +58,7 @@ af þrennu:
 
 (ii)  Til er jákvæð tala :math:`R` þannig að veldaröðin er alsamleitin
       fyrir öll :math:`x` þannig að :math:`|x-c|<R` og ósamleitin fyrir
-      öll :math:`x` þannig að :math:`|x-c|>R`. 
+      öll :math:`x` þannig að :math:`|x-c|>R`.
 
 (iii) Röðin er samleitin fyrir allar rauntölur :math:`x`.
 
@@ -61,9 +77,9 @@ Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
       veldaraðarinnar.
 
 (ii)  Í tilviki 2. í setningunni hér á undan er röðin alsamleitin á opna bilinu
-      :math:`(c-R, c+R)` og ósamleitin fyrir utan lokaða bilið 
+      :math:`(c-R, c+R)` og ósamleitin fyrir utan lokaða bilið
       :math:`[c-R, c+R]`.
-      
+
       Talan :math:`R` er kölluð :hover:`samleitnigeisli` raðarinnar.
 
       Mögulegt er að röðin sé samleitin (alsamleitin eða skilyrt
@@ -80,10 +96,10 @@ Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
       :math:`x` þannig að röðin er samleitin. Setning hér á undan sýnir að
       :þetta mengi er alltaf bil.
 
-    
+
       - Þegar samleitnigeilsinn er 0 er samleitnibilið :math:`\{c\}`.
-      
-      - Þegar samleitnigeislinn er :math:`R>0` þá koma fjórir möguleikar 
+
+      - Þegar samleitnigeislinn er :math:`R>0` þá koma fjórir möguleikar
         til greina eftir því hvort röðin er
         samleitin í hvorugum, öðrum eða báðum punktunum :math:`x=c-R` og
         :math:`x=c+R`. Samleitnibilið getur verið
@@ -114,7 +130,7 @@ Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
         R= \left\{\begin{array}{ll}
         \infty & \text{ef }L=0,\\
         \frac{1}{L} & \text{ef }0<L<\infty,\\
-        0 & \text{ef }L=\infty.\\ 
+        0 & \text{ef }L=\infty.\\
         \end{array} \right.
 
 (ii) :hover:`Rótarpróf`: Gerum ráð fyrir að
@@ -133,7 +149,7 @@ Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
 
 .. index::
     setning Abels
-        
+
 Setning Abels
 ~~~~~~~~~~~~~
 
@@ -266,7 +282,7 @@ Veldaröðin
 
    \begin{aligned}
    \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n = & f(c)+f'(c)(x-c)+
-   \frac{f''(c)}{2}(x-c)^2 \\ & + \frac{f'''(c)}{3!}(x-c)^3 
+   \frac{f''(c)}{2}(x-c)^2 \\ & + \frac{f'''(c)}{3!}(x-c)^3
    + \frac{f^{(4)}(c)}{4!}(x-c)^4 + \cdots \end{aligned}
 
 kallast *Taylorröð* með miðju í :math:`x=c` fyrir :math:`f(x)`.
@@ -279,7 +295,7 @@ Ef svo vill til að :math:`c=0` þá er oft talað um *Maclaurinröð*.
     :img: 03_Taylorrod.png
     :imgwidth: 12cm
     :zoom_drag: true
-      
+
 Setning
 ~~~~~~~
 
@@ -325,7 +341,7 @@ Fyrir :math:`x` þannig að :math:`|x|<1` og rauntölu :math:`r` gildir að
 .. math::
 
    \begin{aligned}
-   (1+x)^r =& 1+rx+\frac{r(r-1)}{2!}x^2+ \frac{r(r-1)(r-2)}{3!}x^3 \\ 
+   (1+x)^r =& 1+rx+\frac{r(r-1)}{2!}x^2+ \frac{r(r-1)(r-2)}{3!}x^3 \\
    &+\frac{r(r-1)(r-2)(r-3)}{4!}x^4+\cdots\\
    =& 1+ \sum_{n=1}^\infty \frac{r(r-1)(r-2)\cdots(r-n+1)}{n!}x^n.\end{aligned}
 
@@ -350,7 +366,7 @@ Taylorraðir nokkra falla
      &\text{fyrir öll }x\\
    \sin x&=  \sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}
        =x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
-       &\text{fyrir öll }x\\ 
+       &\text{fyrir öll }x\\
    \cos x&=  \sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}
        =1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots
        &\text{fyrir öll }x\\
@@ -378,4 +394,3 @@ Taylorraðir nokkra falla
 *I may not have gone where I intended to go, but I think I have ended up where I needed to be.*
 
 -- Douglas Adams, The Long Dark Tea-Time of the Soul
-

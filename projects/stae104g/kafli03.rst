@@ -3,16 +3,16 @@ Afleiður
 ========
 .. note::
     **Nauðsynleg undirstaða**
-    
-    - :ref:`markgildi`
 
-    - :ref:`samfelldni`
+    - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
 
-    - :ref:`samskeyting falla <samskeyting>`
+    - :ref:`Samfelldni`. Sjá einnig `undirstöðuatriði um samfelld föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html#id1>`_.
 
-    - :ref:`andhverfur falla <andhverfa>`
+    - :ref:`Samskeyting falla <samskeyting>`. Sjá einnig `undirstöðuatriði um um samskeytingu <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#samskeyting-falla>`_.
 
-    - hornaföll, P7
+    - :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#andhverfur-falla>`_.
+
+    - `Hornaföll, P7 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli07.html>`_.
 
 *He felt that his whole life was some kind of dream and he sometimes wondered whose it was and whether they were enjoying it.*
 
@@ -20,10 +20,10 @@ Afleiður
 
 
 ------
-    
+
 .. index::
     afleiða
-    
+
 .. _afleidur:
 
 Skilgreining á afleiðu
@@ -37,7 +37,7 @@ Látum :math:`a` vera innri punkt skilgreiningarsvæðis falls :math:`f`.
 
 .. math:: f'(a)=\lim_{h\rightarrow 0}\frac{f(a+h)-f(a)}{h}.
 
-Ef markgildið er til þá er sagt að fallið :math:`f` sé 
+Ef markgildið er til þá er sagt að fallið :math:`f` sé
 :hover:`diffranlegt,diffranlegur` *í
 punktinum* :math:`a`, en annars er sagt að fallið sé *ekki diffranlegt í
 punktinum* :math:`a`.
@@ -50,8 +50,8 @@ Fallið :math:`f(x) = x^2` er diffranlegt í sérhverjum punkti :math:`a`.
 
 .. math::
     \begin{aligned}
-    \lim_{h\to 0} \frac{f(a+h)-f(a)}{h} 
-    &= \lim_{h\to 0} \frac{(a+h)^2-a^2}{h}\\ 
+    \lim_{h\to 0} \frac{f(a+h)-f(a)}{h}
+    &= \lim_{h\to 0} \frac{(a+h)^2-a^2}{h}\\
     &= \lim_{h\to 0} \frac{a^2+2ah+h^2-a^2}{h}\\
     &= \lim_{h\to 0} \frac{2ah+h^2}{h}\\
     &= \lim_{h\to 0} 2a+h = 2a.\end{aligned}
@@ -101,7 +101,7 @@ en
 .. math::
     \lim_{h\to 0^-} \frac{f(0+h)-f(0)}{h} = \lim_{h\to 0^-} \frac{|h|}{h} = -1.
 
-Þannig að markgildið :math:`\lim_{h\to 0} \frac{f(0+h)-f(0)}{h}` er ekki til og því er 
+Þannig að markgildið :math:`\lim_{h\to 0} \frac{f(0+h)-f(0)}{h}` er ekki til og því er
 fallið ekki diffranlegt í :math:`x=0`.
 
 .. index::
@@ -129,20 +129,20 @@ Jafna snertils við graf fallsins í punktingum :math:`a` er línan
     :height: 400
     :img: ./01_05_snertill.png
     :imgwidth: 12cm
-    :zoom_drag: true 
+    :zoom_drag: true
 
 
 Athugasemd: Hallatalan :math:`\infty` er ekki leyfð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við leyfum ekki :math:`f'(a) = \infty` eða 
+Við leyfum ekki :math:`f'(a) = \infty` eða
 :math:`f'(a) = -\infty`. Samanber
 :math:`f(x) = x^{\frac 13}` í :math:`a=0`,
 
 .. math::
 
-   \lim_{h \to 0} \frac{f(0+h)-f(0)}h = 
-	\lim_{h \to 0} \frac{h^{\frac 13}}h = 
+   \lim_{h \to 0} \frac{f(0+h)-f(0)}h =
+	\lim_{h \to 0} \frac{h^{\frac 13}}h =
        \lim_{h \to 0} h^{-\frac 23} = \infty.
 
 Hér ætti því jafna snertilsins að vera :math:`x=0`.
@@ -152,7 +152,7 @@ Hér ætti því jafna snertilsins að vera :math:`x=0`.
 	:width: 12cm
 
 Við viljum að snertillinn sé nálgun við graf fallsins fyrir :math:`x` nálægt
-:math:`a`, lóðrétt lína er gagnslaus nálgun því hún er ekki skilgreind sem 
+:math:`a`, lóðrétt lína er gagnslaus nálgun því hún er ekki skilgreind sem
 fall af :math:`x`.
 
 -------
@@ -193,9 +193,9 @@ Ef :math:`x` er innri punktur í skilgreiningarsvæði fallsins :math:`f`
 
 og þá er :math:`f'(x)` jafnt og markgildin hér fyrir ofan.
 
-Þetta leiðir beint af skilgreiningunum hér á undan og 
+Þetta leiðir beint af skilgreiningunum hér á undan og
 :ref:`Setningu 2.2.5 <setning-hv_markgildi>`.
- 
+
 .. index::
     afleiða; diffranlegt fall
 
@@ -233,8 +233,8 @@ Ef :math:`x>0` þá fæst
 .. math::
 
    \begin{aligned}
-     \lim_{h\to 0} \frac{\sqrt{x+h}-\sqrt{x}}h &= 
-     \lim_{h\to 0} \frac{(\sqrt{x+h}-\sqrt{x})(\sqrt{x+h}+\sqrt{x})}{h(\sqrt{x+h}+\sqrt{x})}\\ 
+     \lim_{h\to 0} \frac{\sqrt{x+h}-\sqrt{x}}h &=
+     \lim_{h\to 0} \frac{(\sqrt{x+h}-\sqrt{x})(\sqrt{x+h}+\sqrt{x})}{h(\sqrt{x+h}+\sqrt{x})}\\
      &= \lim_{h\to 0} \frac{\sqrt{x+h}^2-\sqrt{x}^2}{h(\sqrt{x+h}+\sqrt{x})}\\
      &= \lim_{h\to 0} \frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}\\
      &= \lim_{h\to 0} \frac{1}{\sqrt{x+h}+\sqrt{x}} = \frac{1}{2\sqrt{x}},\end{aligned}
@@ -247,13 +247,18 @@ vegar
 .. math::
 
    \begin{aligned}
-     \lim_{h\to 0^+} \frac{\sqrt{h}-\sqrt{0}}h &= 
+     \lim_{h\to 0^+} \frac{\sqrt{h}-\sqrt{0}}h &=
      \lim_{h\to 0^+} \frac{\sqrt{h}}h\\
      &= \lim_{h\to 0^+} \frac{1}{\sqrt{h}} = \infty,\end{aligned}
 
 sem sýnir að fallið er ekki diffranlegt frá hægri í :math:`x=0`.
 
 --------
+
+.. index::
+    reiknireglur
+
+.. _reiknireglura:
 
 Reiknireglur
 ------------
@@ -287,7 +292,7 @@ að framan:
       \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}`, ef :math:`g(x)\neq 0`
 
 .. _`Setning 3.3.2`:
-      
+
 Nokkrar afleiður
 ~~~~~~~~~~~~~~~~
 
@@ -317,10 +322,10 @@ gildi hún einnig fyrir :math:`n+1`,
 
 .. math::
 
-   \frac{d}{dx} x^{n+1} = \frac{d}{dx} (x\cdot x^n) = 
+   \frac{d}{dx} x^{n+1} = \frac{d}{dx} (x\cdot x^n) =
        \left(\frac{d}{dx} x\right) x^n + x\frac{d}{dx} x^n
-       = x^n + x\, 
-       \underbrace{n\, x^{n-1}}_\text{þ.f.} 
+       = x^n + x\,
+       \underbrace{n\, x^{n-1}}_\text{þ.f.}
        = (n+1) x^n.
 
 .. end-toggle::
@@ -342,16 +347,16 @@ Finnum afleiðu margliðunnar :math:`p(x) = 4x^3-2x + 5`. Nú er
 .. math::
 
    \begin{aligned}
-   \frac{d}{dx} p(x) 
+   \frac{d}{dx} p(x)
    &= \frac{d}{dx}4x^3 - \frac{d}{dx}2x + \frac{d}{dx}5 \\
    &= 4\frac{d}{dx}x^3 -2\frac{d}{dx}x + \frac{d}{dx}5 =
    4\cdot 3x^2 -2\cdot 1 + 0 = 12x^2-2\end{aligned}
 
 .. index::
     keðjureglan
-    
+
 .. _kedjuregla:
-   
+
 Setning: Keðjureglan
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -365,8 +370,8 @@ Dæmi
 ~~~~
 
 Skoðum föllin :math:`f(x) = \sqrt x` og :math:`g(x) = 3x^5`. Bæði þessi föll eru
-diffranleg og afleiðurnar eru :math:`f'(x) = \frac 12 x^{-1/2}` og 
-:math:`g'(x) = 15x^4`. Afleiða samskeytingarinnar :math:`f\circ g` er þá 
+diffranleg og afleiðurnar eru :math:`f'(x) = \frac 12 x^{-1/2}` og
+:math:`g'(x) = 15x^4`. Afleiða samskeytingarinnar :math:`f\circ g` er þá
 samkvæmt keðjureglunni
 
 .. math::
@@ -374,7 +379,7 @@ samkvæmt keðjureglunni
 
 --------
 
-   
+
 Hærri afleiður
 --------------
 
@@ -400,7 +405,7 @@ Dæmi
 
 Ef :math:`f(x)  = 3x^2`, þá er
 
-.. math:: f'(x) = 3\frac{d}{dx}x^2 = 3\cdot 2x = 6x 
+.. math:: f'(x) = 3\frac{d}{dx}x^2 = 3\cdot 2x = 6x
 
 og
 
@@ -424,7 +429,7 @@ aðra afleiðuna með
    f''(x)=\frac{d}{dx}f'(x)=\frac{d}{dx}\frac{d}{dx}f(x)
    = D^2_xf(x)= D^2_x y=\frac{d^2}{dx^2}f(x)=\frac{d^2 y}{dx^2}\end{aligned}
 
-og almennt :math:`n`-tu afleiðuna 
+og almennt :math:`n`-tu afleiðuna
 
 .. math::
 
@@ -487,7 +492,7 @@ er diffranlegt þá er :math:`f'(x_0)=0`.
 **Sönnun**
 
 Gerum ráð fyrir að :math:`f` hafi staðbundið hágildi í punktinum :math:`x_0`.
-Þá er :math:`f(x_0)-f(x)\geq 0` og ef :math:`x<x_0`, 
+Þá er :math:`f(x_0)-f(x)\geq 0` og ef :math:`x<x_0`,
 þá fæst að  :math:`\frac{f(x_0)-f(x)}{x_0-x}\geq 0`. Þetta þýðir að
 
 .. math::
@@ -505,7 +510,7 @@ Eins þá er :math:`f(x_0)-f(x)\geq 0` og ef :math:`x_0<x`,
 Við vitum að markgildið
 :math:`\lim_{x\to x_0} \frac{f(x_0)-f(x)}{x_0-x}` er til þar sem fallið
 er diffranlegt, það þýðir að markgildin frá hægri og vinstri eru þau
-sömu. Eina leiðin til þess að það samræmist hægri og vinstri markgildunum 
+sömu. Eina leiðin til þess að það samræmist hægri og vinstri markgildunum
 hér að ofan er ef
 
 .. math:: f'(x_0) = \lim_{x\to x_0} \frac{f(x_0)-f(x)}{x_0-x} = 0.
@@ -548,8 +553,8 @@ Meðalgildissetningin
 .. index::
     setning Rolle
 
-.. _`rolle`: 
-    
+.. _`rolle`:
+
 Setning Rolle
 ~~~~~~~~~~~~~
 
@@ -565,9 +570,9 @@ ráð fyrir að :math:`g` sé diffranlegt í öllum punktum í bilinu
 
 Ef :math:`g(x)=c` er fasti, þá er :math:`g'(x)=0`. Ef hins vegar
 :math:`g` er ekki fasti þá er til :math:`x \in (a,b)` þannig að
-:math:`g(x)\neq g(a)`, gerum ráð fyrir að :math:`g(x)>g(a)` 
+:math:`g(x)\neq g(a)`, gerum ráð fyrir að :math:`g(x)>g(a)`
 (tilfellið ef :math:`g(x)<g(a)` gengur nánast eins fyrir sig).
-Samkvæmt `Há- og lággildislögmálinu <Há- og lággildislögmálið>`_ 
+Samkvæmt `Há- og lággildislögmálinu <Há- og lággildislögmálið>`_
 þá tekur fallið :math:`g` sitt hæsta
 gildi í punkti :math:`c` á bilinu :math:`[a,b]`.Þar sem
 :math:`g(c)\geq g(x) >  g(a) = g(b)` þá getur :math:`c` hvorki verið
@@ -595,18 +600,18 @@ að
 
 **Sönnun**
 
-Skilgreinum nýtt fall 
+Skilgreinum nýtt fall
 
 .. math:: h(x)=f(x)-\left(f(a)+ \frac{f(b)-f(a)}{b-a}(x-a)\right).
 
 Athugið að :math:`h` er bara :math:`f` mínus :hover:`línufallið,línufall` gegnum punktana
 :math:`(a,f(a))` og :math:`(b,f(b))`. Þetta þýðir að :math:`h` er diffranlegt
 og að :math:`h(a)=h(b)=0`. Þá gefur `Setning Rolle <rolle>`_ að til er :math:`c` þannig að
-:math:`h'(c)=0`. 
+:math:`h'(c)=0`.
 
-Nú er 
+Nú er
 
-.. math:: 
+.. math::
 	h'(x) = f'(x) - \left(0+\frac{f(b)-f(a)}{b-a}(1-0)\right)
 	= f'(x) - \frac{f(b)-f(a)}{b-a}
 
@@ -621,7 +626,7 @@ eða
 .. end-toggle::
 
 .. note::
-    Niðurstöðuna úr :hover:`meðalgildissetningunni,meðalgildissetning` má orða svona: 
+    Niðurstöðuna úr :hover:`meðalgildissetningunni,meðalgildissetning` má orða svona:
 
     Í einhverjum punkti á bilinu er stundarbreytingin jöfn meðalbreytingunni
     yfir allt bilið.
@@ -696,8 +701,8 @@ aðeins að :math:`f' \geq 0`.
 
 **Sönnun**
 
-Byrjum á að gera ráð fyrir að fallið sé vaxandi. Festum punkt :math:`x` og 
-sýnum að :math:`f'(x)\geq 0`. Þar sem :math:`f` er vaxandi þá gildir fyrir 
+Byrjum á að gera ráð fyrir að fallið sé vaxandi. Festum punkt :math:`x` og
+sýnum að :math:`f'(x)\geq 0`. Þar sem :math:`f` er vaxandi þá gildir fyrir
 sérhvert :math:`h>0` að
 
 .. math::
@@ -705,8 +710,8 @@ sérhvert :math:`h>0` að
 
 Þá gildir einnig um markgildið :math:`\lim_{h\to 0^+} \frac{f(x+h)-f(x)}h \geq 0`.
 
-Ef hins vegar :math:`h<0` þá er :math:`x+h < x` og því 
-:math:`f(x+h)<f(x)`. Þetta gefur að 
+Ef hins vegar :math:`h<0` þá er :math:`x+h < x` og því
+:math:`f(x+h)<f(x)`. Þetta gefur að
 
 .. math::
     \frac{f(x+h)-f(x)}h \geq 0
@@ -716,15 +721,15 @@ er :math:`f'(x) = \lim_{h\to 0} \frac{f(x+h)-f(x)}h \geq 0`.
 
 --------------
 
-Gerum nú ráð fyrir :math:`f'\geq 0` og sýnum að þá sé fallið vaxandi. 
+Gerum nú ráð fyrir :math:`f'\geq 0` og sýnum að þá sé fallið vaxandi.
 Festum tvo punkta :math:`x_1 < x_2`. Ef :math:`f(x_1) > f(x_2)`, það er
-:math:`f(x_2)-f(x_1)<0` 
-þá er 
+:math:`f(x_2)-f(x_1)<0`
+þá er
 
-.. math:: 
+.. math::
     \frac{f(x_2)-f(x_1)}{x_2-x_1} < 0.
 
-Samkvæmt meðalgildissetningunni þá er til punktur :math:`¢` á bilinu :math:`[x_1,x_2]` 
+Samkvæmt meðalgildissetningunni þá er til punktur :math:`¢` á bilinu :math:`[x_1,x_2]`
 þar sem afleiðan tekur þetta gildi, en það er í mótsögn við að  :math:`f'(c)\geq 0`.
 
 .. end-toggle::
@@ -798,7 +803,7 @@ Setning: Andhverfusetningin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Látum feril vera gefinn með :math:`F(x,y) =0`, þar sem :math:`F` er
-diffranlegt í bæði :math:`x` og :math:`y`. Í punktum þar sem *snertill* 
+diffranlegt í bæði :math:`x` og :math:`y`. Í punktum þar sem *snertill*
 ferilsins er ekki lóðréttur (þ.e. :math:`\frac{d}{dy}F \neq 0`) þá er hægt að
 skrifa :math:`y` sem fall af :math:`x` og þá fæst af keðjureglunni að
 
@@ -835,26 +840,26 @@ Ef :math:`n` og :math:`m` eru heilar tölur þá er
 
 .. math:: \frac{d}{dx} x^{\frac nm} = \frac nm x^{\frac nm -1}.
 
-.. begin-toggle:: 
+.. begin-toggle::
     :label: Sýna sönnun
 
 **Sönnun**
 
 Punktar á grafi fallsins :math:`x^{n/m}` ákvarðast af jöfnunni :math:`y=x^{n/m}`, það er
-:math:`y^m = x^n`. Skilgreinum því 
+:math:`y^m = x^n`. Skilgreinum því
 
 .. math:: F(x,y) = x^n-y^m
 
-Þar sem :math:`\frac d{dx} F(x,y) = nx^{n-1}` og 
-:math:`\frac d{dy} F(x,y) = -my^{m-1}` þá fæst að 
+Þar sem :math:`\frac d{dx} F(x,y) = nx^{n-1}` og
+:math:`\frac d{dy} F(x,y) = -my^{m-1}` þá fæst að
 
-.. math:: 
+.. math::
 
    \begin{aligned}
-   y' &= \frac {d}{dx} y = 
-   - \frac{n x^{n-1}}{-m y^{m-1}} = 
+   y' &= \frac {d}{dx} y =
+   - \frac{n x^{n-1}}{-m y^{m-1}} =
    \frac{n x^{n-1}}{m (x^{\frac nm})^{m-1}} \\
-   &= \frac nm x^{(n-1) - \frac nm(m-1)} 
+   &= \frac nm x^{(n-1) - \frac nm(m-1)}
    = \frac nm x^{n-1-n+\frac nm} = \frac nm x^{\frac nm -1}. \end{aligned}
 
 .. end-toggle::
@@ -871,7 +876,7 @@ Andhverf föll
     Flytja/vísa í kafla 1?
 
 
-Rifjum upp að gagntæk vörpun :math:`f:X\to Y` hefur andhverfu 
+Rifjum upp að gagntæk vörpun :math:`f:X\to Y` hefur andhverfu
 :math:`f^{-1}:Y\to X` sem uppfyllir að
 
 .. math:: y=f(x)\qquad\text{þá og því aðeins að}\qquad x=f^{-1}(y).
@@ -883,8 +888,8 @@ Athugasemd
 ~~~~~~~~~~
 
 Látum :math:`f:X \to Y` vera fall sem skilgreint er á mengi :math:`X`. Gerum ráð
-fyrir að :math:`f` sé eintækt. Með því að einskorða bakmengi :math:`f` við 
-myndmengið :math:`\tilde Y = f(X)` þá verður :math:`f:X\to \tilde Y` gagntækt fall. 
+fyrir að :math:`f` sé eintækt. Með því að einskorða bakmengi :math:`f` við
+myndmengið :math:`\tilde Y = f(X)` þá verður :math:`f:X\to \tilde Y` gagntækt fall.
 Þá er til andhverfa :math:`f^{-1}:\tilde Y \to X` sem uppfyllir
 
 .. math:: y=f(x)\qquad\text{þá og því aðeins að}\qquad x=f^{-1}(y).
@@ -919,7 +924,7 @@ Eiginleikar
 
 .. index::
     afleiða; andhverfa
-       
+
 Setning: Afleiða andhverfunnar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -947,8 +952,8 @@ Skoðum diffranlegt fall :math:`f` í grennd um fastan punkt
 :math:`a`. Látum :math:`x` vera punkt í grennd um :math:`a`.
 Ef graf fallsins er ekki ,,mjög
 sveigt” þá er snertillinn við :math:`(a,f(a))` næstum samsíða
-sniðlinum gegnum :math:`(a,f(a))` og :math:`(x,f(x))`. 
-Það þýðir að 
+sniðlinum gegnum :math:`(a,f(a))` og :math:`(x,f(x))`.
+Það þýðir að
 
 .. math::
    \begin{aligned}
@@ -957,24 +962,24 @@ sniðlinum gegnum :math:`(a,f(a))` og :math:`(x,f(x))`.
         f(x) &\approx f'(a)(x-a) + f(a).
    \end{aligned}
 
-.. warning:: 
+.. warning::
     Athugið að hér er :math:`a` fast en :math:`x` breytist.
 
 
-.. note:: 
+.. note::
     Einnig er hægt að skrifa þetta á eftirfarandi hátt.
-    Setjum :math:`\Delta x = x-a` og 
-    :math:`\Delta y = f(x) - f(a)` þá þýðir þetta að 
+    Setjum :math:`\Delta x = x-a` og
+    :math:`\Delta y = f(x) - f(a)` þá þýðir þetta að
     :math:`\Delta y \approx \Delta x f'(a)`.
 
-    Það er, breytingin á fallgildinum er um það bil breytingin í 
+    Það er, breytingin á fallgildinum er um það bil breytingin í
     breytunni margfaldað við afleiðuna í punktinum.
 
 
 Skilgreining: Línuleg nálgun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Línuleg nálgun á falli :math:`f` nálægt :math:`a`, eða 1. stigs 
+Línuleg nálgun á falli :math:`f` nálægt :math:`a`, eða 1. stigs
 Taylor-margliða :math:`f` í :math:`a`, er gefin með
 :math:`P_1(x)=f(a)+f'(a)(x-a)`.
 
@@ -1003,7 +1008,7 @@ sem gefur að
 
 .. math::
 
-   f(a)+f'(a)(x-a)+\frac{m}{2}(x-a)^2\leq f(x) 
+   f(a)+f'(a)(x-a)+\frac{m}{2}(x-a)^2\leq f(x)
    \leq f(a)+f'(a)(x-a)+\frac{M}{2}(x-a)^2.
 
 ------
@@ -1068,7 +1073,7 @@ og :math:`x`. Þá er til tala :math:`X` á milli :math:`a` og :math:`x`
      +\frac{f^{(n+1)}(X)}{(n+1)!}(x-a)^{n+1}.\end{aligned}
 
 .. warning::
-    Yfirleitt er engin leið til þess að finna :math:`X`. 
+    Yfirleitt er engin leið til þess að finna :math:`X`.
     Hins vegar getum við haft gagn af skekkjumatinu ef
     við höfum mat á :math:`f^{(n+1)}`.
 
@@ -1077,7 +1082,7 @@ Fylgisetning
 
 Gerum ráð fyrir að :math:`f` sé :math:`n+1` diffranlegt á bili sem
 inniheldur bæði :math:`a` og :math:`x`. Gerum enn fremur ráð fyrir að
-:math:`m` og :math:`M` séu tölur þannig að fyrir öll :math:`t` 
+:math:`m` og :math:`M` séu tölur þannig að fyrir öll :math:`t`
 á milli `a` og `x`
 gildi að :math:`m\leq f^{(n+1)}(t)\leq M`. Þá er
 
@@ -1088,7 +1093,7 @@ gildi að :math:`m\leq f^{(n+1)}(t)\leq M`. Þá er
 
 .. index::
     O-ritháttur
-   
+
 Ritháttur
 ~~~~~~~~~
 
@@ -1110,7 +1115,7 @@ Einnig er ritað
 
 ef :math:`f(x)-g(x)=O(u(x))` þegar :math:`x\rightarrow a`.
 
-Tilgangur þessa ritháttar er að skilgreina tól sem getur sagt okkur 
+Tilgangur þessa ritháttar er að skilgreina tól sem getur sagt okkur
 hversu hratt :math:`f` stefnir á markgildið þegar :math:`x\to a`.
 
 Athugasemd
@@ -1132,7 +1137,7 @@ Gerum ráð fyrir að :math:`Q_n(x)` sé margliða af stigi ekki hærra en
 :math:`P_n(x)` er :math:`n`-ta stigs Taylor-margliða :math:`f` með miðju
 í :math:`a`.
 
-Með öðrum orðum, :math:`P_n` er sú margliða af stigi :math:`\leq n` sem 
+Með öðrum orðum, :math:`P_n` er sú margliða af stigi :math:`\leq n` sem
 nálgar :math:`f` best.
 
 .. index::
@@ -1173,14 +1178,14 @@ Eins má skoða markgildi frá vinstri :math:`x\to a^-`.
 bilinu :math:`[a,b)` og taki gildið 0 í :math:`a`.
 
 Þá fæst af alhæfðu meðalgildissetningunni fyrir sérhvert :math:`x\in (a,b)`
-að til er :math:`c \in (a,x)` þannig að 
+að til er :math:`c \in (a,x)` þannig að
 
 .. math::
     \frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(0)} = \frac{f'(c)}{g'(c)}
 
-Þegar :math:`x \to a^+` þá gildir einnig að :math:`c \to a^+` því 
-:math:`c` er klemmt á milli :math:`a` og :math:`x`. 
-Þar sem markgildið 
+Þegar :math:`x \to a^+` þá gildir einnig að :math:`c \to a^+` því
+:math:`c` er klemmt á milli :math:`a` og :math:`x`.
+Þar sem markgildið
 
 .. math::
     \lim_{c\to a^+} \frac{f'(c)}{g'(x)} = L
@@ -1212,11 +1217,11 @@ Gerum enn fremur ráð fyrir að
 Dæmi
 ~~~~
 
-Við höfum áður séð að :math:`\lim_{x\to 0} \sin(x)/x = 1`. 
+Við höfum áður séð að :math:`\lim_{x\to 0} \sin(x)/x = 1`.
 Skoðum hvernig hægt er að sýna þetta með lítilli fyrirhöfn og reglu de l’Hôpital.
 
 Sjáum að :math:`f(x) = \sin(x)` og :math:`g(x)` eru diffranleg í grennd um 0
-og að :math:`g'(x) = 1 \neq 0`. Þá fæst að 
+og að :math:`g'(x) = 1 \neq 0`. Þá fæst að
 
 .. math::
     \lim_{x \to 0} \frac{\sin(x)}{x} = \lim_{x \to 0} \frac{\cos(x)}{1} = 1.

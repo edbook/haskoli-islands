@@ -1,12 +1,22 @@
 Diffurjöfnur
 ============
 
-*Now, the invention of the scientific method and science is, I'm sure 
-we'll all agree, the most powerful intellectual idea, the most powerful 
-framework for thinking and investigating and understanding and challenging 
-the world around us that there is, and that it rests on the premise that 
-any idea is there to be attacked and if it withstands the attack then it 
-lives to fight another day and if it doesn't withstand the attack then 
+Rúmmál, massi og massamiðja
+===========================
+
+.. note::
+	**Nauðsynleg undirstaða**
+
+  - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
+
+  - `Nokkur mikilvæg föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#nokkur-mikilvaeg-foll>`_.
+
+*Now, the invention of the scientific method and science is, I'm sure
+we'll all agree, the most powerful intellectual idea, the most powerful
+framework for thinking and investigating and understanding and challenging
+the world around us that there is, and that it rests on the premise that
+any idea is there to be attacked and if it withstands the attack then it
+lives to fight another day and if it doesn't withstand the attack then
 down it goes.*
 
 -- Douglas Adams
@@ -36,12 +46,12 @@ Ritum :math:`y=y(x)` sem fall af :math:`x`.
 Diffurjafnan er sögð vera af :math:`n`-ta *stigi* ef hæsta afleiða :math:`y`
 sem kemur fyrir í henni er :math:`n`.
 
-Að leysa diffurjöfnu felur í sér að skrifa :math:`y` sem fall 
+Að leysa diffurjöfnu felur í sér að skrifa :math:`y` sem fall
 af :math:`x`, þ.e. finna formúlu fyrir :math:`y`.
 
-.. note:: 
+.. note::
     Deildajafna, afleiðujafna og diffurjafna eru samheiti yfir
-    sama hlutinn. 
+    sama hlutinn.
 
 Dæmi
 ~~~~
@@ -58,7 +68,7 @@ að ofan,
 
 .. index::
     diffurjafna; aðgreinanleg
-    
+
 Skilgreining: Aðgreinanleg diffurjafna
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -78,7 +88,7 @@ Umritum jöfnuna yfir á formið
     Það má ekkert :math:`x` koma fyrir í vinstri hliðinni og
     ekkert :math:`y` má koma fyrir í hægri hliðinni.
 
-Síðan heildum við báðar hliðar og reiknum stofnföllin hægra og vinstra 
+Síðan heildum við báðar hliðar og reiknum stofnföllin hægra og vinstra
 megin í jöfnunni
 
 .. math:: \int\frac{dy}{g(y)}=\int f(x)\,dx.
@@ -92,18 +102,18 @@ og fá þannig formúlu fyrir lausn diffurjöfnunar.
 Dæmi um aðgreinanlega diffurjöfnu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef við skoðum diffurjöfnuna 
+Ef við skoðum diffurjöfnuna
 
 .. math::
 	y' = x\exp(x-y)
 
-þá sjáum við að hún er aðgreinanleg því með því að skrifa :math:`\exp(x-y) = \exp (x) \exp(-y)` og 
+þá sjáum við að hún er aðgreinanleg því með því að skrifa :math:`\exp(x-y) = \exp (x) \exp(-y)` og
 margfalda í gegn með :math:`\exp (y)` þá fæst
 
 .. math::
 	\exp(y)\, y' = x\exp x.
 
-Hér eru öll :math:`y` vinstra megin og öll :math:`x` hægra megin. 
+Hér eru öll :math:`y` vinstra megin og öll :math:`x` hægra megin.
 Heildum nú beggja vegna og munum að það er nóg að setja einn heildunarfasta
 
 .. math::
@@ -113,7 +123,7 @@ Reynum nú að einangra :math:`y` til þess að geta skrifað út formúlu fyrir
 Byrjum á að færa heildunarfastann yfir og tökum svo logrann af báðum hliðum
 
 .. math::
-	y = \ln(x\exp x - \exp x - C). 
+	y = \ln(x\exp x - \exp x - C).
 
 .. index::
     diffurjafna; línuleg
@@ -121,7 +131,7 @@ Byrjum á að færa heildunarfastann yfir og tökum svo logrann af báðum hlið
 Línulegar fyrsta stigs diffurjöfnur
 -----------------------------------
 
-.. index:: 
+.. index::
     diffurjafna; hliðruð
     diffurjafna; óhliðruð
 
@@ -159,7 +169,7 @@ Skilgreinum :math:`\mu(x)=\int p(x)\,dx` (eitthvert stofnfall). Þá er
 
 lausn á diffurjöfnunni.
 
-.. warning:: 
+.. warning::
     Þegar þið reiknið :math:`\mu(x)=\int p(x)\,dx` þá megið þið sleppa
     heildunarfastanum, en **ekki** þegar þið reiknið heildið
     :math:`\int e^{\mu(x)}q(x)\,dx`.
@@ -173,18 +183,18 @@ lausn á diffurjöfnunni.
 
 **Sönnun**
 
-Setjum 
+Setjum
 
-.. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx 
+.. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx
 
 inn í vinstri hlið diffurjöfnunnar, ef út kemur hægri hliðin :math:`q(x)` þá
-höfum við sýnt að þetta er lausn. 
+höfum við sýnt að þetta er lausn.
 
-Athugum fyrst að 
+Athugum fyrst að
 
 .. math::
 	\begin{aligned}
-	y'(x) &=e^{-\mu(x)}(-\mu'(x)) \int e^{\mu(x)}q(x)\, dx + e^{-\mu(x)} \frac{d}{dx} \int e^{\mu(x)}q(x)\,dx \\ 
+	y'(x) &=e^{-\mu(x)}(-\mu'(x)) \int e^{\mu(x)}q(x)\, dx + e^{-\mu(x)} \frac{d}{dx} \int e^{\mu(x)}q(x)\,dx \\
 	&= -e^{-\mu(x)}p(x)\int e^{\mu(x)}q(x)\, dx +  e^{-\mu(x)} e^{\mu(x)}q(x) = -p(x)y(x) + q(x).
 	\end{aligned}
 
@@ -193,7 +203,7 @@ Ef við setjum þetta inn í diffurjöfnuna fæst
 .. math::
 	y'(x) + p(x)y(x) = -p(x)y(x) + q(x) + p(x)y(x) = q(x),
 
-þannig að :math:`y` skilgreint eins og hér að ofan er greinilega lausn á diffurjöfnunni. 
+þannig að :math:`y` skilgreint eins og hér að ofan er greinilega lausn á diffurjöfnunni.
 
 .. end-toggle::
 
@@ -311,16 +321,16 @@ lausn má skrifa á þessu formi.
 Ágiskanir
 ---------
 
-Við höfum skoðað aðferðir til að leysa aðgreinanlegar diffurjöfnur, 
-línulegar fyrsta stigs diffurjöfnur og óhliðraðar línulegar 
-annars stigs diffurjöfnur með fastastuðla. Þessar jöfnur eru 
+Við höfum skoðað aðferðir til að leysa aðgreinanlegar diffurjöfnur,
+línulegar fyrsta stigs diffurjöfnur og óhliðraðar línulegar
+annars stigs diffurjöfnur með fastastuðla. Þessar jöfnur eru
 samt bara pínulítið brot af öllum mögulegum diffurjöfnum og ef við
-veljum diffurjöfnu af "handahófi" þá getum við yfirleitt ekki 
-leyst hana auðveldlega. 
+veljum diffurjöfnu af "handahófi" þá getum við yfirleitt ekki
+leyst hana auðveldlega.
 
 Þrátt fyrir þetta er ástæðulaust að gefast upp og fyrir ákveðinn flokk
-af diffurjöfnum þá getum við stundum giskað á lausn, en þetta eru 
-**hliðraðar** línulegar annars stigs diffurjöfnur með fastastuðla. 
+af diffurjöfnum þá getum við stundum giskað á lausn, en þetta eru
+**hliðraðar** línulegar annars stigs diffurjöfnur með fastastuðla.
 
 
 .. index::
@@ -355,14 +365,14 @@ enginn liður í ágiskuninni sé lausn á óhliðruðu jöfnunni
 :math:`ay''+by'+cy=0`.
 
 
-Ef við erum búin að finna sérlausn :math:`y_p` og almenna lausn 
-:math:`y` á óhliðruðu jöfnunni :math:`ay''+by'+cy=0`, þá er 
-:math:`y+y_p` áfram lausn á hliðruðu jöfnunni. Reyndar er **sérhver** 
+Ef við erum búin að finna sérlausn :math:`y_p` og almenna lausn
+:math:`y` á óhliðruðu jöfnunni :math:`ay''+by'+cy=0`, þá er
+:math:`y+y_p` áfram lausn á hliðruðu jöfnunni. Reyndar er **sérhver**
 lausn á óhliðruðu jöfnunni á forminu :math:`y+y_p`, bara
 með mismundandi :math:`A` og :math:`B` í :math:`y`.
 
 .. todo::
-    Dæmi: sérlausn, almenn lausn og svo upphafsskilyrðum bætt við. 
+    Dæmi: sérlausn, almenn lausn og svo upphafsskilyrðum bætt við.
 
 Samantekt
 ---------
@@ -394,28 +404,26 @@ er gefin með
 Línulegar annars stigs jöfnur með fastastuðla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lausn á :math:`ay''+by'+cy=0` er gefin með 
+Lausn á :math:`ay''+by'+cy=0` er gefin með
 
-Tilvik I 
-    :math:`y(x)=Ae^{r_1x}+Be^{r_2x}`   
+Tilvik I
+    :math:`y(x)=Ae^{r_1x}+Be^{r_2x}`
     ef kennijafnan hefur tvær ólíkar rauntölulausnir :math:`r_1` og
     :math:`r_2`.
 
 Tilvik II
-    :math:`y(x)=Ae^{kx}+Bxe^{kx}`     
+    :math:`y(x)=Ae^{kx}+Bxe^{kx}`
     ef kennijafnan :math:`ar^2+br+c=0` hefur bara eina tvöfalda rauntölulausn
     :math:`k=-\frac{b}{2a}`.
 
 Tilvik III
     :math:`y(x)=Ae^{kx}\cos(\omega x)+Be^{kx}\sin(\omega x)`
-    ef kennijafnan :math:`ar^2+br+c=0` hefur engar rauntölulausnir, 
+    ef kennijafnan :math:`ar^2+br+c=0` hefur engar rauntölulausnir,
     bara tvinntölulausnir :math:`r_1=k+i\omega` og
-    :math:`r_2=k-i\omega`, þar sem 
+    :math:`r_2=k-i\omega`, þar sem
     :math:`k=-\frac{b}{2a}` og :math:`\omega=\frac{\sqrt{4ac-b^2}}{2a}`.
 
 Lausn á liðruðu jöfnunni  á :math:`ay''+by'+cy=f(x)` er mögulega hægt að finna
-með :ref:`ásgiskun <Ágiskun>`. Sérhver lausn á óhliðruðu jöfnunni :math:`ay''+by'+cy=f(x)` 
+með :ref:`ásgiskun <Ágiskun>`. Sérhver lausn á óhliðruðu jöfnunni :math:`ay''+by'+cy=f(x)`
 er svo á forminu :math:`y+y_p` þar sem :math:`y` er
 lausn á óhliðruðu jöfnunni.
-
-

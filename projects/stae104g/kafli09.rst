@@ -1,6 +1,13 @@
 Runur og raðir
 ==============
 
+.. note::
+	**Nauðsynleg undirstaða**
+
+  - `Summuvirkinn <https://en.wikipedia.org/wiki/Summation>`_.
+
+  - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
+
 *Would it save you a lot of time if I just gave up and went mad now?*
 
 \- Douglas Adams, The Hitchhiker's Guide to the Galaxy
@@ -106,7 +113,7 @@ Látum :math:`f` vera fall skilgreint á :math:`{{\mathbb  R}}` og látum
 :math:`n`. Ef :math:`\lim_{x\rightarrow
 \infty}f(x)=L` þá er :math:`\lim_{n\rightarrow\infty}a_n=L`.
 
-.. warning:: 
+.. warning::
     Þetta gildir ekki í hina áttina, runan getur verið
     samleitin án þess að fallið sé það.
 
@@ -246,7 +253,7 @@ kallast *kvótaröð*. Hún er samleitin ef :math:`-1<a<1` og þá er
 
 .. index::
     röð; kíkisröð
-    
+
 Dæmi: Kíkisröð
 ~~~~~~~~~~~~~~
 
@@ -381,7 +388,7 @@ Fylgisetning
 ~~~~~~~~~~~~
 
 Gerum ráð fyrir að runa :math:`\{a_n\}` uppfylli skilyrðin sem gefin eru
-í setningunni á undan :ref:`(9.3.9) <vixlmerkjaprof>`. 
+í setningunni á undan :ref:`(9.3.9) <vixlmerkjaprof>`.
 
 Látum :math:`s_n` tákna summu :math:`n` fyrstu liða raðarinnar
 :math:`\sum_{n=1}^\infty (-1)^{n-1}a_n` og táknum summu raðarinnar með
@@ -418,7 +425,7 @@ alsamleitnar.
 Skilgreining
 ~~~~~~~~~~~~
 
-Samleitin röð sem er ekki alsamleitin er sögð vera 
+Samleitin röð sem er ekki alsamleitin er sögð vera
 *skilyrt samleitin*, það er :math:`\sum_{n=1}^\infty a_n` er samleitin
 en röðin :math:`\sum_{n=1}^\infty |a_n|` er ósamleitin.
 
@@ -441,7 +448,7 @@ Dæmi um umröðun á liðum raðar :math:`\sum_{n=1}^\infty a_n` er
      umraða liðum raðarinnar þannig að summan eftir umröðun verði
      :math:`L`.
 
-.. note:: 
-	Með öðrum orðum: 
+.. note::
+	Með öðrum orðum:
 	Liðum skilyrt samleitinnar raðar má umraða þannig að summan getur orðið
 	hvað sem er, það skiptir því máli í hvaða röð við leggjum saman.

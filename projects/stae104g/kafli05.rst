@@ -3,17 +3,19 @@ Könnun falla
 
 .. note::
 	**Nauðsynleg undirstaða**
-	
-	- :ref:`vaxandi/minnkandi föll <vaxandiminnkandi>`
 
-	- :ref:`afleiður <afleidur>`
+	- :ref:`Vaxandi/minnkandi föll <vaxandiminnkandi>`. Sjá einnig `undirstöðuatriði um einhalla föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#einhalla-foll>`_.
 
-	- :ref:`útgildi <utgildi>`
+	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
 
-	- ójöfnur
+	- :ref:`Útgildi <utgildi>`.
+
+	- `Ójöfnur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli02.html#ojofnur>`_.
+
+	- `Graf vörpunnar <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#graf-vorpunnar>`_.
 
 
-*"The Guide says there is an art to flying", said Ford, "or rather a knack. 
+*"The Guide says there is an art to flying", said Ford, "or rather a knack.
 The knack lies in learning how to throw yourself at the ground and miss."*
 
 \- Douglas Adams, Life, the Universe and Everything
@@ -32,14 +34,14 @@ Inngangur
 Hver er munurinn?
 ~~~~~~~~~~~~~~~~~
 
-+----------------------------------------+---------------------------------------+ 
-| .. _figa:                              | .. _figb:                             | 
-|                                        |                                       | 
-| .. image:: ./myndir/kafli05/01_f1.png  | .. image:: ./myndir/kafli05/01_g1.png | 
-|    :width: 95%                         |    :width: 95%                        | 
-|    :align: center                      |    :align: center                     | 
-|                                        |                                       | 
-+----------------------------------------+---------------------------------------+ 
++----------------------------------------+---------------------------------------+
+| .. _figa:                              | .. _figb:                             |
+|                                        |                                       |
+| .. image:: ./myndir/kafli05/01_f1.png  | .. image:: ./myndir/kafli05/01_g1.png |
+|    :width: 95%                         |    :width: 95%                        |
+|    :align: center                      |    :align: center                     |
+|                                        |                                       |
++----------------------------------------+---------------------------------------+
 
 Skoðum föllin tvö að ofan, þau eru augljóslega ekki eins, þannig að
 spurningin er hvernig getum við lýst muninum á þeim?
@@ -60,14 +62,14 @@ spurningin er hvernig getum við lýst muninum á þeim?
 Drögum sniðil
 ~~~~~~~~~~~~~
 
-+----------------------------------------+---------------------------------------+ 
-| .. _figa2:                             | .. _figb2:                            | 
-|                                        |                                       | 
-| .. image:: ./myndir/kafli05/01_f2.png  | .. image:: ./myndir/kafli05/01_g2.png | 
-|    :width: 95 %                        |    :width: 95 %                       | 
-|    :align: center                      |    :align: center                     | 
-|                                        |                                       | 
-+----------------------------------------+---------------------------------------+ 
++----------------------------------------+---------------------------------------+
+| .. _figa2:                             | .. _figb2:                            |
+|                                        |                                       |
+| .. image:: ./myndir/kafli05/01_f2.png  | .. image:: ./myndir/kafli05/01_g2.png |
+|    :width: 95 %                        |    :width: 95 %                       |
+|    :align: center                      |    :align: center                     |
+|                                        |                                       |
++----------------------------------------+---------------------------------------+
 
 
 Ef við veljum nú tvo punkta á :math:`[A,B]` af handahófi, köllum þá
@@ -75,10 +77,10 @@ Ef við veljum nú tvo punkta á :math:`[A,B]` af handahófi, köllum þá
 gröfum :math:`f` og :math:`g` þá sjáum við að sniðillinn lendir fyrir
 neðan :math:`g` en ofan :math:`f`.
 
-Athugum nú að sérhvern punkt á milli :math:`x_1` og :math:`x_2` getum við skrifað á 
-forminu 
+Athugum nú að sérhvern punkt á milli :math:`x_1` og :math:`x_2` getum við skrifað á
+forminu
 :math:`\alpha x_1 + (1-\alpha)x_2`, þar sem :math:`\alpha \in [0,1]`. En :math:`\alpha=0`
-gefur :math:`x_2` og :math:`\alpha=1` gefur :math:`x_1`. 
+gefur :math:`x_2` og :math:`\alpha=1` gefur :math:`x_1`.
 
 Þá er
 :math:`y`-hnit punktsins á sniðlinum með þetta :math:`x`-hnit gefið með
@@ -102,19 +104,19 @@ Eins, ef graf :math:`g` liggur fyrir ofan sniðilinn þá gildir að
 .. math:: g(\alpha x_1+(1-\alpha)x_2)\geq \alpha g(x_1)+(1-\alpha)g(x_2).
 
 
-+----------------------------------------+---------------------------------------+ 
-| .. _figa3:                             | .. _figb3:                            | 
-|                                        |                                       | 
-| .. image:: ./myndir/kafli05/01_f3.png  | .. image:: ./myndir/kafli05/01_g3.png | 
-|    :width: 95 %                        |    :width: 95 %                       | 
-|    :align: center                      |    :align: center                     | 
-|                                        |                                       | 
-+----------------------------------------+---------------------------------------+ 
++----------------------------------------+---------------------------------------+
+| .. _figa3:                             | .. _figb3:                            |
+|                                        |                                       |
+| .. image:: ./myndir/kafli05/01_f3.png  | .. image:: ./myndir/kafli05/01_g3.png |
+|    :width: 95 %                        |    :width: 95 %                       |
+|    :align: center                      |    :align: center                     |
+|                                        |                                       |
++----------------------------------------+---------------------------------------+
 
 .. ggb:: JEABXuMZ
     :width: 700
     :height: 350
-    :zoom_drag: false 
+    :zoom_drag: false
     :img: 01_kupni.png
     :imgwidth: 12cm
 
@@ -157,14 +159,14 @@ Látum :math:`f:[a, b]\rightarrow {\mathbb  R}` vera fall.
 Auðkenning á kúpni með afleiðum
 -------------------------------
 
-+----------------------------------------+---------------------------------------+ 
-| .. _figa:                              | .. _figb:                             | 
-|                                        |                                       | 
-| .. image:: ./myndir/kafli05/01_f1.png  | .. image:: ./myndir/kafli05/01_g1.png | 
-|    :width: 95 %                        |    :width: 95 %                       | 
-|    :align: center                      |    :align: center                     | 
-|                                        |                                       | 
-+----------------------------------------+---------------------------------------+ 
++----------------------------------------+---------------------------------------+
+| .. _figa:                              | .. _figb:                             |
+|                                        |                                       |
+| .. image:: ./myndir/kafli05/01_f1.png  | .. image:: ./myndir/kafli05/01_g1.png |
+|    :width: 95 %                        |    :width: 95 %                       |
+|    :align: center                      |    :align: center                     |
+|                                        |                                       |
++----------------------------------------+---------------------------------------+
 
 Athugasemd
 ~~~~~~~~~~
@@ -252,7 +254,7 @@ beygjuskilapunktur fallsins :math:`f` ef og aðeins ef
 	:width: 12cm
 
 
-.. index:: 
+.. index::
     útgildi; út frá annarri afleiðu
 
 Útgildi
@@ -303,14 +305,14 @@ bili utan um :math:`x_0` og að :math:`f'(x_0)=0`.
     Athugið að ef :math:`f''(x_0)=0` þá getur :math:`x_0` verið hvort sem er
     staðbundið hágildi, staðbundið lággildi eða beygjuskilapunktur.
 
-    
+
 .. index::
     aðfellur
-    aðfellur; lóðrétt 
+    aðfellur; lóðrétt
     aðfellur; lárétt
     aðfellur; skáfella
     see: skáfella; aðfellur
-    
+
 Aðfellur
 --------
 
@@ -327,7 +329,7 @@ Fallið :math:`f` hefur *lóðrétta aðfellu* í punktinum :math:`a` ef
 	:align: center
 	:width: 12cm
 
-*Fallið* :math:`\frac{1}{\sin(x)}` *hefur lóðréttar aðfellur í öllum punktum þar sem* :math:`\sin(x)=0`. 
+*Fallið* :math:`\frac{1}{\sin(x)}` *hefur lóðréttar aðfellur í öllum punktum þar sem* :math:`\sin(x)=0`.
 
 Skilgreining: Lárétt aðfella
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -373,7 +375,7 @@ Að teikna graf falls
 
 Þegar teikna á graf fallsins :math:`f` er gagnlegt að fara í gegnum atriðin á eftirfarandi lista:
 
-1. Ákvarðið :math:`f'` og :math:`f''` og þáttið útkomurnar ef hægt er. 
+1. Ákvarðið :math:`f'` og :math:`f''` og þáttið útkomurnar ef hægt er.
 2. Kannið :math:`f` til að ákvarða skilgreiningarmengi þess auk eftirfarandi eiginleika:
     (a) Lóðréttar aðfellur. (Leitið að rótum nefnara)
     (b) Láréttar aðfellur og skáfellur. (Finnið :math:`\lim_{x \to \pm\infty}f(x)`.)
@@ -397,7 +399,7 @@ Að teikna graf falls
 
     \newpage
 
-.. index:: 
+.. index::
     útgildisverkefni
 
 Útgildisverkefni
@@ -406,7 +408,7 @@ Að teikna graf falls
 Markmiðið
 ~~~~~~~~~
 
-Útgildisverkefni snúast um það að hámarka eða lágmarka tiltekna stærð, t.d. 
+Útgildisverkefni snúast um það að hámarka eða lágmarka tiltekna stærð, t.d.
 verð, rúmmál, lengd, ... . Þá þarf að finna (helst diffranlegt) fall fyrir stærðina
 sem við höfum áhuga á hámarka/lágmarka en þó með þeim skorðum sem vandamálið setur okkur.
 

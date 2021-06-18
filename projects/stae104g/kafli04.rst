@@ -3,10 +3,14 @@ Torræð föll
 
 .. note::
 	**Nauðsynleg undirstaða**
-	
-	- hornaföll
 
-        - :ref:`andhverfur falla <andhverfa>`
+	- `Hornaföll, P7 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli07.html>`_.
+
+	- :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#andhverfur-falla>`_.
+
+	- Sjá einnig `undirstöðuatriði um logra <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#lograr>`_.
+
+	- Sjá einnig `undirstöðuatriði um náttúrulega veldisvísisfallið og náttúrulega logrann <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn>`_.
 
 *We are stuck with technology when what we really want is just stuff that works.*
 
@@ -45,14 +49,14 @@ Látum :math:`A_{x_0}` tákna flatarmál svæðisins sem afmarkast af
 .. warning::
     Fallið :math:`\ln` er bara skilgreint fyrir jákvæðar rauntölur
 
-    
+
 Setning
 ~~~~~~~
 Náttúrlegi logrinn er diffranlegur og afleiðan uppfyllir
 
 .. math:: \frac{d}{dx}\ln x=\frac{1}{x}.
 
-Af þessu fylgir að logrinn er samfellt fall. 
+Af þessu fylgir að logrinn er samfellt fall.
 
 Setning
 ~~~~~~~
@@ -92,7 +96,7 @@ jafnt skilgreiningarsvæði :math:`\ln x` sem er bilið :math:`(0,\infty)`.
 	:align: center
 	:width: 12cm
 
-.. index:: 
+.. index::
     e
     veldisvísisfallið; e
 
@@ -117,7 +121,7 @@ af því að flatarmál svæðisins milli :math:`x`-ás og grafs
     :math:`\exp(x)` er skilgreint fyrir allar rauntölur því logrinn,
     :math:`\ln:(0,\infty)\to {{\mathbb  R}}`, er átækur.
 
-    Það er hins vegar hægt að sýna að 
+    Það er hins vegar hægt að sýna að
 
     .. math::
 
@@ -131,9 +135,9 @@ af því að flatarmál svæðisins milli :math:`x`-ás og grafs
 
 .. note::
     Athugið að
-    
+
     .. math::
-    
+
         e^{\ln x}=x \text{ fyrir allar tölur }x>0\qquad \text{og}
         \qquad \ln(e^x)=x  \text{ fyrir allar tölur }x.
 
@@ -159,7 +163,7 @@ Eiginleikar veldisvísisfallsins
 
     Einnig væri mögulegt að byrja á því að sýna að :math:`e^x` sé vel
     skilgreint, ekki bara fyrir ræð :math:`x` heldur einnig óræð. Það myndum
-    við gera með því að nota markgildið 
+    við gera með því að nota markgildið
     :math:`\exp(x)=\lim_{r\to x, r\text{ ræð tala}} e^r`
     hér að ofan, og taka þá :math:`e^x` sem
     skilgreiningu á :math:`\exp x` og finna svo andhverfuna, :math:`\ln`.
@@ -170,7 +174,7 @@ Eiginleikar veldisvísisfallsins
 Önnur veldisvísisföll og lograr
 -------------------------------
 
-.. index:: 
+.. index::
     veldisvísisfallið; grunntala
 
 Skilgreining
@@ -265,9 +269,9 @@ Ef :math:`a>0` þá er
     (liðir 1 og 3) eða hversu lítið :math:`a` er (liðir 2 og 4).
 
     Með öðrum orðum:
-    
-    - Veldisvísisföll vaxa hraðar en allar margliður. 
-    
+
+    - Veldisvísisföll vaxa hraðar en allar margliður.
+
     - Lograr vaxa hægar en allar margliður.
 
 Andhverfur hornafalla
@@ -290,7 +294,7 @@ Skilgreining: arcsin
 
 *Andhverfa sínussins*, táknuð :math:`\arcsin(x)` (eða
 :math:`\sin^{-1}(x)`), er andhverfa :math:`{{\text{Sin}}}` og hefur því
-myndmengið :math:`[-\frac \pi 2, 
+myndmengið :math:`[-\frac \pi 2,
 \frac \pi 2]` og skilgreiningarmengið :math:`[-1,1]`.
 
 .. image:: ./myndir/kafli04/05_arcsin.png
@@ -384,7 +388,7 @@ Setning
 (ii) :math:`\frac d{dx} \cosh(x) = \sinh(x)`
 
 
-.. warning:: 
+.. warning::
     Það er enginn mínus í afleiðu :math:`\cosh` eins og í afleiðu :math:`\cos`.
 
 Setning
@@ -437,7 +441,7 @@ með eintæk og eiga sér andhverfur.
 Skilgreining
 ~~~~~~~~~~~~
 
-:hover:`Andhverfa breiðbogasínussins,andhverfur breiðbogasínus`, 
+:hover:`Andhverfa breiðbogasínussins,andhverfur breiðbogasínus`,
 táknuð :math:`{{\text{arsinh}}}(x)` (eða
 :math:`\sinh^{-1}(x)`), er andhverfa :math:`\sinh` og hefur myndmengið
 :math:`(-\infty,\infty)` og skilgreiningarmengið
@@ -445,10 +449,10 @@ táknuð :math:`{{\text{arsinh}}}(x)` (eða
 
 .. math:: {{\text{arsinh}}}(x) = \ln\left(x+\sqrt{x^2+1}\right)
 
-.. todo:: 
+.. todo::
     mynd
 
-:hover:`Andhverfa breiðbogatangensins,andhverfur breiðbogatangens`, 
+:hover:`Andhverfa breiðbogatangensins,andhverfur breiðbogatangens`,
 táknuð :math:`{{\text{artanh}}}(x)`
 (eða :math:`\tanh^{-1}(x)`), er andhverfa :math:`\tanh` og hefur
 myndmengið :math:`(-\infty,\infty)` og skilgreiningarmengið
@@ -464,7 +468,7 @@ Andhverfa breiðbogakósínussins
 
 Þar sem :math:`\cosh` er ekki eintækt fall þá verðum við að beita
 svipuðum aðferðum eins og þegar við fundum :math:`\arcsin` til þess að
-finna andhverfu þess. 
+finna andhverfu þess.
 Það er, við þurfum að takmarka skilgreiningarmengi
 þess.
 
@@ -482,7 +486,7 @@ hefur því myndmengið :math:`[0,\infty)` og skilgreiningarmengið
 
 .. math:: {{\text{arcosh}}}(x) = \ln\left(x+\sqrt{x^2-1}\right)
 
-.. image:: ./myndir/kafli04/07_arcosh.png 
+.. image:: ./myndir/kafli04/07_arcosh.png
 	:align: center
 	:width: 12cm
 
@@ -498,5 +502,3 @@ eru bara mismunandi hliðar á veldisvísisfallinu.
 .. image:: ./myndir/kafli04/07_exp.png
 	:align: center
 	:width: 10cm
-
-
