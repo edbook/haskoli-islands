@@ -1,0 +1,1184 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Könnun falla &mdash; Stærðfræðigreining I (STÆ104G) 2018</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining I (STÆ104G) 2018" href="index.html"/>
+        <link rel="next" title="6. Heildun" href="kafli06.html"/>
+        <link rel="prev" title="4. Torræð föll" href="kafli04.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+	
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining I (STÆ104G)
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Tölur og föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#grunnhugmyndin">1.1.1. Grunnhugmyndin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#itarefni">1.1.2. Ítarefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#forrit">1.1.3. Forrit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#tolur">1.2. Tölur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-tolur">1.2.1. Skilgreining: Tölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#smii-rauntalna">1.2.2. Smíði rauntalna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#frumsendan-um-efra-mark">1.2.3. Frumsendan um efra mark</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#bil">1.3. Bil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-bil">1.3.1. Skilgreining: Bil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id1">1.3.2. Skilgreining: Bil</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#foll">1.4. Föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-vorpun">1.4.1. Skilgreining: Vörpun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining">1.4.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-samskeyting">1.4.3. Skilgreining: Samskeyting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#daemi">1.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-ataekni-og-eintaekni">1.4.5. Skilgreining: Átækni og eintækni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-gagntaekni">1.4.6. Skilgreining: Gagntækni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-andhverfa">1.4.7. Skilgreining: Andhverfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#index-9">1.4.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-graf">1.4.9. Skilgreining: Graf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-jafnstaett-og-oddstaett">1.4.10. Skilgreining: Jafnstætt og oddstætt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Markgildi og samfelldni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#markgildi">2.1. Markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#oformleg-skilgreining-a-markgildi">2.1.1. Óformleg skilgreining á markgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi">2.1.2. Skilgreining: Markgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi">2.1.3. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#markgildi-fra-haegri-og-vinstri">2.2. Markgildi frá hægri og vinstri</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#oformleg-skilgreining">2.2.1. Óformleg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-fra-haegri">2.2.2. Skilgreining: Markgildi frá hægri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#index-2">2.2.3. Óformleg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-fra-vinstri">2.2.4. Skilgreining: Markgildi frá vinstri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning">2.2.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-tolugildisfalli">2.2.6. Dæmi: Tölugildisfallið</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#reiknireglur-fyrir-markgildi">2.3. Reiknireglur fyrir markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-markgildi">2.3.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-klemmureglan">2.3.2. Setning: Klemmureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-markgildi-me-sinus">2.3.3. Dæmi: Markgildi með sínus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#markgildi-egar-x-stefnir-a-oendanlegt">2.4. Markgildi þegar x stefnir á óendanlegt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#index-4">2.4.1. Óformleg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-egar-x-to-infty">2.4.2. Skilgreining: Markgildi þegar <span class="math notranslate nohighlight">\(x \to \infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id5">2.4.3. Óformleg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id6">2.4.4. Skilgreining: Markgildi þegar <span class="math notranslate nohighlight">\(x \to -\infty\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#oendanlegt-sem-markgildi">2.5. Óendanlegt sem markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#index-5">2.5.1. Óformleg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-infty">2.5.2. Skilgreining: Markgildið <span class="math notranslate nohighlight">\(\infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id8">2.5.3. Óformleg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id9">2.5.4. Skilgreining: Markgildið <span class="math notranslate nohighlight">\(-\infty\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#samfelldni">2.6. Samfelldni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-innri-punktur">2.6.1. Skilgreining: Innri punktur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-samfelldni-i-punkti">2.6.2. Skilgreining: Samfelldni í punkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id11">2.6.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-samskeyting-samfelldra-falla">2.6.4. Setning: Samskeyting samfelldra falla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-samfellt-fall">2.6.5. Skilgreining: Samfellt fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id12">2.6.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#a-bua-til-samfelld-foll">2.6.7. Að búa til samfelld föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#index-10">2.6.8. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#haegri-vinstri-samfelldni">2.7. Hægri/vinstri samfelldni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining">2.7.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#athugasemd">2.7.2. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-haegri-vinstri-samfelldni">2.7.3. Skilgreining: Hægri/vinstri samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#uppfaer-skilgreining-samfellt-fall">2.7.4. Uppfærð skilgreining: Samfellt fall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#eiginleikar-samfelldra-falla">2.8. Eiginleikar samfelldra falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-ha-og-laggildislogmali">2.8.1. Setning – Há- og lággildislögmálið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-milligildissetningin">2.8.2. Setning: Milligildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fylgisetning">2.8.3. Fylgisetning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Afleiður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#skilgreining-a-afleiu">3.1. Skilgreining á afleiðu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-afleia">3.1.1. Skilgreining: Afleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi">3.1.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning">3.1.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id1">3.1.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#snertill">3.1.5. Snertill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#athugasemd-hallatalan-infty-er-ekki-leyf">3.1.6. Athugasemd: Hallatalan <span class="math notranslate nohighlight">\(\infty\)</span> er ekki leyfð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#utvikkun-fyrir-loku-bil">3.2. Útvíkkun fyrir lokuð bil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-haegri-vinstri-afleia">3.2.1. Skilgreining: Hægri/vinstri afleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id2">3.2.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-diffranlegt-fall">3.2.3. Skilgreining: Diffranlegt fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rithattur">3.2.4. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id3">3.2.5. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#reiknireglur">3.3. Reiknireglur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-3-3-1">3.3.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#nokkrar-afleiur">3.3.2. Nokkrar afleiður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-3-3-3">3.3.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#afleiur-marglia">3.3.4. Afleiður margliða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-afleia-margliu">3.3.5. Dæmi: Afleiða margliðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-kejureglan">3.3.6. Setning: Keðjureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id7">3.3.7. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#haerri-afleiur">3.4. Hærri afleiður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining">3.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id8">3.4.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id9">3.4.3. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#utgildi">3.5. Útgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-utgildi">3.5.1. Skilgreining: Útgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-3-5-2">3.5.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#hornafoll-og-afleiur-eirra">3.6. Hornaföll og afleiður þeirra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id12">3.6.1. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#mealgildissetningin">3.7. Meðalgildissetningin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-rolle">3.7.1. Setning Rolle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#index-8">3.7.2. Meðalgildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#alhaefa-mealgildissetningin">3.7.3. Alhæfða meðalgildissetningin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#vaxandi-og-minnkandi-foll">3.8. Vaxandi og minnkandi föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-vaxandi-minnkandi">3.8.1. Skilgreining: Vaxandi/minnkandi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#vaxandieoae">3.8.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#minnkandieoae">3.8.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id17">3.8.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id18">3.8.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#afleiur-fastafalla">3.8.6. Afleiður fastafalla</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#folgin-diffrun">3.9. Fólgin diffrun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id19">3.9.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-andhverfusetningin">3.9.2. Setning: Andhverfusetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#me-orum-orum">3.9.3. Með öðrum orðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#vinnulag">3.9.4. Vinnulag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-hagnyting-a-folginni-diffrun">3.9.5. Setning: Hagnýting á fólginni diffrun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#andhverf-foll">3.10. Andhverf föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#athugasemd">3.10.1. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id21">3.10.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#eiginleikar">3.10.3. Eiginleikar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-afleia-andhverfunnar">3.10.4. Setning: Afleiða andhverfunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#linulegar-nalganir">3.11. Línulegar nálganir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stabundnar-nalganir">3.11.1. Staðbundnar nálganir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-linuleg-nalgun">3.11.2. Skilgreining: Línuleg nálgun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-skekkjumat">3.11.3. Setning: Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skekkjumat-fyrir-linulegar-nalganir">3.11.4. Skekkjumat fyrir línulegar nálganir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#taylor-margliur">3.12. Taylor-margliður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-taylor-marglia">3.12.1. Skilgreining: Taylor-margliða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skekkjumat-fyrir-taylor-margliur">3.12.2. Skekkjumat fyrir Taylor-margliður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#fylgisetning">3.12.3. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#index-14">3.12.4. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id23">3.12.5. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id24">3.12.6. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#regla-de-lhopital">3.13. Regla de l’Hôpital</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#regla-de-lhopital-einhlia-utgafa">3.13.1. Regla de l’Hôpital, einhliða útgáfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id25">3.13.2. Regla de l’Hôpital</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id26">3.13.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#regla-de-lhopital-infty-utgafa">3.13.4. Regla de l’Hôpital, <span class="math notranslate nohighlight">\(\infty\)</span>-útgáfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#regla-de-lhopital-tvihlia-utgafa">3.13.5. Regla de l’Hôpital, tvíhliða útgáfa</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Torræð föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#natturlegi-logrinn">4.1. Náttúrlegi logrinn</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-natturlegi-logrinn">4.1.1. Skilgreining: Náttúrlegi logrinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning">4.1.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id1">4.1.3. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#veldisvisisfalli">4.2. Veldisvísisfallið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id2">4.2.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-veldisvisisfalli">4.2.2. Skilgreining: Veldisvísisfallið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-talan-e">4.2.3. Skilgreining: Talan <span class="math notranslate nohighlight">\(e\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#eiginleikar-veldisvisisfallsins">4.2.4. Eiginleikar veldisvísisfallsins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#onnur-veldisvisisfoll-og-lograr">4.3. Önnur veldisvísisföll og lograr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining">4.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#index-4">4.3.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#athugasemd">4.3.3. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id4">4.3.4. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#eiginleikar-veldisvisisfalla-og-logra">4.4. Eiginleikar veldisvísisfalla og logra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id5">4.4.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id6">4.4.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#andhverfur-hornafalla">4.5. Andhverfur hornafalla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverfa-sinus">4.5.1. Andhverfa sínus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-arcsin">4.5.2. Skilgreining: arcsin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverfa-kosinus">4.5.3. Andhverfa kósínus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-arccos">4.5.4. Skilgreining: arccos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverfa-tangens">4.5.5. Andhverfa tangens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-arctan">4.5.6. Skilgreining: arctan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id7">4.5.7. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#breibogafoll">4.6. Breiðbogaföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-cosh-og-sinh">4.6.1. Skilgreining: cosh og sinh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id8">4.6.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id9">4.6.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-tanh">4.6.4. Skilgreining: tanh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id10">4.6.5. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#andhverfur-breibogafalla">4.7. Andhverfur breiðbogafalla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverfa-breibogasinussins-og-breibogatangensins">4.7.1. Andhverfa breiðbogasínussins og breiðbogatangensins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id11">4.7.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverfa-breibogakosinussins">4.7.3. Andhverfa breiðbogakósínussins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id14">4.7.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#i-framtiinni">4.7.5. Í framtíðinni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Könnun falla</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">5.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hver-er-munurinn">5.1.1. Hver er munurinn?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drogum-sniil">5.1.2. Drögum sniðil</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kupni">5.2. Kúpni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-kupt-hvelft">5.2.1. Skilgreining: Kúpt/hvelft</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#aukenning-a-kupni-me-afleium">5.3. Auðkenning á kúpni með afleiðum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd">5.3.1. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">5.3.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.3.3. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#beygjuskilapunktar">5.4. Beygjuskilapunktar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">5.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">5.4.2. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#utgildi">5.5. Útgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hvar-a-a-leita-utgilda">5.5.1. Hvar á að leita útgilda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hagildi-lagildi-ut-fra-formerki-afleiu">5.5.2. Hágildi/lágildi út frá formerki afleiðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utgildi-og-onnur-afleian">5.5.3. Útgildi og önnur afleiðan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afellur">5.6. Aðfellur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-lorett-afella">5.6.1. Skilgreining: Lóðrétt aðfella</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-larett-afella">5.6.2. Skilgreining: Lárétt aðfella</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skafella">5.6.3. Skáfella</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#a-teikna-graf-falls">5.7. Að teikna graf falls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utgildisverkefni">5.8. Útgildisverkefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#markmii">5.8.1. Markmiðið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-leysa-utgildisvandamal">5.8.2. Að leysa útgildisvandamál</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-gosdos">5.8.3. Dæmi: Gosdós</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-kassi">5.8.4. Dæmi: Kassi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Heildun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#id2">6.1. Heildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#oformleg-skilgreining-a-heildi-jakvaes-falls">6.1.1. Óformleg skilgreining á heildi jákvæðs falls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining">6.1.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#oformleg-skilgreining-a-heildi-falls">6.1.3. Óformleg skilgreining á heildi falls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#undir-og-yfirsummur">6.2. Undir- og yfirsummur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#daemi-a-finna-heildi">6.2.1. Dæmi: Að finna heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-undirsumma">6.2.2. Skilgreining: Undirsumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-yfirsumma">6.2.3. Skilgreining: Yfirsumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-heildi">6.2.4. Skilgreining: Heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#eiginleikar-heildisins">6.3. Eiginleikar heildisins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning">6.3.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id3">6.3.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-heildismorkunum-snui-vi">6.3.3. Skilgreining: Heildismörkunum snúið við</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id4">6.3.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id5">6.3.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id6">6.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fylgisetning">6.3.7. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id7">6.3.8. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#index-3">6.3.9. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-mealgildissetning-fyrir-heildi">6.3.10. Setning: Meðalgildissetning fyrir heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#undirstousetning-staerfraeigreiningarinnar">6.4. Undirstöðusetning stærðfræðigreiningarinnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-og-setning-fall-skilgreint-me-heildi">6.4.1. Skilgreining og setning: Fall skilgreint með heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-undirstousetning-staerfraeigreiningar-fyrri-hluti">6.4.2. Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#stofnfoll">6.5. Stofnföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-stofnfall">6.5.1. Skilgreining: Stofnfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id9">6.5.2. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hjalparsetning">6.5.3. Hjálparsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-undirstousetning-staerfraeigreiningar-seinni-hluti">6.5.4. Setning: Undirstöðusetning stærðfræðigreiningar, seinni hluti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#rithattur">6.5.5. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#aferir-vi-a-reikna-stofnfoll">6.6. Aðferðir við að reikna stofnföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#verkfaerin">6.6.1. Verkfærin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#athugasemd">6.6.2. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#innsetning">6.6.3. Innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#notkun-a-innsetningu">6.6.4. Notkun á innsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#notkun-a-innsetningu-me-morkum">6.6.5. Notkun á innsetningu með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#ofug-innsetning">6.6.6. Öfug innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#notkun-a-ofugri-innsetningu">6.6.7. Notkun á öfugri innsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#ofug-innsetning-me-morkum">6.6.8. Öfug innsetning með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hlutheildun">6.6.9. Hlutheildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hlutheildun-me-morkum">6.6.10. Hlutheildun með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#stofnbrotaliun">6.6.11. Stofnbrotaliðun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#daemi-1">6.6.11.1. Dæmi 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#daemi-2">6.6.11.2. Dæmi 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#daemi-3">6.6.11.3. Dæmi 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#daemi-4">6.6.11.4. Dæmi 4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#daemi-5">6.6.11.5. Dæmi 5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#samantekt">6.6.11.6. Samantekt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#oeiginleg-heildi">6.7. Óeiginleg heildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-oeiginleg-heildi-i">6.7.1. Skilgreining: Óeiginleg heildi I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#daemi">6.7.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-oeiginleg-heildi-i-framhald">6.7.3. Skilgreining: Óeiginleg heildi I, framhald</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-oeiginleg-heildi-ii">6.7.4. Skilgreining: Óeiginleg heildi II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id11">6.7.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id12">6.7.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id13">6.7.7. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Rúmmál, massi og massamiðja</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#rummal-lengd-og-flatarmal">7.1. Rúmmál, lengd og flatarmál</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-rumskika">7.1.1. Rúmmál rúmskika</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-keilu">7.1.2. Rúmmál keilu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-snus-snui-um-x-as">7.1.3. Rúmmál snúðs, snúið um <span class="math notranslate nohighlight">\(x\)</span>-ás</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-snus-me-gati">7.1.4. Rúmmál snúðs með gati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-snus-snui-um-y-as">7.1.5. Rúmmál snúðs, snúið um <span class="math notranslate nohighlight">\(y\)</span>-ás</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#lengd-grafs">7.1.6. Lengd grafs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#flatarmal-snuflatar-snui-um-x-as">7.1.7. Flatarmál snúðflatar, snúið um <span class="math notranslate nohighlight">\(x\)</span>-ás</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#flatarmal-snuflatar-snui-um-y-as">7.1.8. Flatarmál snúðflatar, snúið um <span class="math notranslate nohighlight">\(y\)</span>-ás</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#massi">7.2. Massi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#massi-virs">7.2.1. Massi vírs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#massi-plotu">7.2.2. Massi plötu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#massi-rumskika">7.2.3. Massi rúmskika</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#massamija">7.3. Massamiðja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skilgreining-massamija-punktmassa">7.3.1. Skilgreining: Massamiðja punktmassa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skilgreining-massamija">7.3.2. Skilgreining: Massamiðja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skilgreining-massamija-plotu">7.3.3. Skilgreining: Massamiðja plötu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#setning-pappusar-i">7.3.4. Setning Pappusar, I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#setning-pappusar-ii">7.3.5. Setning Pappusar, II</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Diffurjöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html#rummal-massi-og-massamija">9. Rúmmál, massi og massamiðja</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#index-0">9.1. Diffurjöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-diffurjafna">9.1.1. Skilgreining: Diffurjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi">9.1.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-agreinanleg-diffurjafna">9.1.3. Skilgreining: Aðgreinanleg diffurjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-agreinanlega-diffurjofnu">9.1.4. Dæmi um aðgreinanlega diffurjöfnu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#linulegar-fyrsta-stigs-diffurjofnur">9.2. Línulegar fyrsta stigs diffurjöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-linuleg-diffurjafna">9.2.1. Skilgreining: Línuleg diffurjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#index-4">9.2.2. Línulegar fyrsta stigs diffurjöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#linulegar-annars-stigs-diffurjofnur-me-fastastula">9.3. Línulegar annars stigs diffurjöfnur með fastastuðla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining">9.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-kennijafna">9.3.2. Skilgreining: Kennijafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#setning">9.3.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#stigs-ohlidrud">9.3.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id4">9.3.5. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#agiskanir">9.4. Ágiskanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#agiskun">9.4.1. Ágiskun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#samantekt">9.5. Samantekt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#askiljanlegar-jofnur">9.5.1. Aðskiljanlegar jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linulegar-fyrsta-stigs-jofnur">9.5.2. Línulegar fyrsta stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linulegar-annars-stigs-jofnur-me-fastastula">9.5.3. Línulegar annars stigs jöfnur með fastastuðla</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">10. Runur og raðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#runur">10.1. Runur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#skilgreining-runa">10.1.1. Skilgreining: Runa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#skilgreining">10.1.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#index-2">10.1.3. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#skilgreining-vixlmerkjaruna">10.1.4. Skilgreining: Víxlmerkjaruna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#index-4">10.1.5. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning">10.1.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id3">10.1.7. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#fylgisetning">10.1.8. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id4">10.1.9. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id5">10.1.10. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#rair">10.2. Raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#skilgreining-ro">10.2.1. Skilgreining: Röð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#index-6">10.2.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id7">10.2.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id8">10.2.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#athugasemd">10.2.5. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-kvotaro">10.2.6. Dæmi: Kvótaröð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-kikisro">10.2.7. Dæmi: Kíkisröð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#samleitniprof-fyrir-rair">10.3. Samleitnipróf fyrir raðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id9">10.3.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-samleitniprof-i">10.3.2. Setning: Samleitnipróf I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-samleitniprof-ii-samanburarprof">10.3.3. Setning: Samleitnipróf II – Samanburðarpróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-samleitniprof-iii-heildisprof">10.3.4. Setning: Samleitnipróf III – Heildispróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id10">10.3.5. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-samleitniprof-iv-markgildissamanburarprof">10.3.6. Setning: Samleitnipróf IV – Markgildissamanburðarpróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-samleitniprof-v-kvotaprof">10.3.7. Setning: Samleitnipróf V – Kvótapróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-samleitniprof-vi-rotarprof">10.3.8. Setning: Samleitnipróf VI – Rótarpróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-samleitniprof-vii-vixlmerkjaraaprof">10.3.9. Setning: Samleitnipróf VII – Víxlmerkjaraðapróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id11">10.3.10. Fylgisetning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#alsamleitni">10.4. Alsamleitni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id12">10.4.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id13">10.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id14">10.4.3. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#index-11">10.4.4. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#setning-umroun">10.4.5. Setning: Umröðun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">11. Veldaraðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#index-0">11.1. Veldaraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#skilgreining">11.1.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#setning">11.1.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#skilgreining-mija-og-samleitnigeisli">11.1.3. Skilgreining: Miðja og samleitnigeisli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#samleitniprof">11.2. Samleitnipróf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id3">11.2.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#setning-abels">11.2.2. Setning Abels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#setning-diffra-li-fyrir-li">11.2.3. Setning: Diffrað lið fyrir lið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#fylgisetning">11.2.4. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#setning-heilda-li-fyrir-li">11.2.5. Setning: Heildað lið fyrir lið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id4">11.2.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#skilgreining-faga-fall">11.2.7. Skilgreining: Fágað fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#athugasemd">11.2.8. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#taylorrair">11.3. Taylorraðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#skilgreining-taylorro">11.3.1. Skilgreining: Taylorröð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id5">11.3.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id6">11.3.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#daemi-tviliuroin">11.3.4. Dæmi: Tvíliðuröðin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id7">11.3.5. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#taylorrair-nokkra-falla">11.3.6. Taylorraðir nokkra falla</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#vifangsefni">Viðfangsefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#samanburur-a-koflum-i-notunum-og-adams-calculus">Samanburður á köflum í nótunum og Adams Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#fragangur-skiladaema">Frágangur skiladæma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#itarefni">Ítarefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#forrit">Forrit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#a-laera-staerfraei">Að læra stærðfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#a-lesa">Að lesa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#a-reikna">Að reikna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#einbeiting">Einbeiting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#id2">Frágangur skiladæma</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ordaskra.html">Orðaskrá</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining I (STÆ104G)</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li><span class="section-number">5. </span>Könnun falla</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="konnun-falla">
+<h1><span class="section-number">5. </span>Könnun falla<a class="headerlink" href="#konnun-falla" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>Nauðsynleg undirstaða</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="kafli03.html#vaxandiminnkandi"><span class="std std-ref">Vaxandi/minnkandi föll</span></a>. Sjá einnig <a class="reference external" href="https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#einhalla-foll">undirstöðuatriði um einhalla föll</a>.</p></li>
+<li><p><a class="reference internal" href="kafli03.html#afleidur"><span class="std std-ref">Afleiður</span></a>.  Sjá einnig <a class="reference external" href="https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html">undirstöðuatriði um afleiður</a>.</p></li>
+<li><p><a class="reference internal" href="kafli03.html#utgildi"><span class="std std-ref">Útgildi</span></a>.</p></li>
+<li><p><a class="reference external" href="https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli02.html#ojofnur">Ójöfnur</a>.</p></li>
+<li><p><a class="reference external" href="https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#graf-vorpunnar">Graf vörpunnar</a>.</p></li>
+</ul>
+</div>
+<p><em>„The Guide says there is an art to flying“, said Ford, „or rather a knack.
+The knack lies in learning how to throw yourself at the ground and miss.“</em></p>
+<p>- Douglas Adams, Life, the Universe and Everything</p>
+<hr class="docutils" />
+<div class="section" id="inngangur">
+<h2><span class="section-number">5.1. </span>Inngangur<a class="headerlink" href="#inngangur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p><strong>Frávik frá bókinni</strong></p>
+<p>Það sem á eftir kemur er eitt af fáum atriðum þar sem mín nálgun og
+skilgreiningar eru frábrugðnar þeim í kennslubókinni eftir Adams.</p>
+</div>
+<div class="section" id="hver-er-munurinn">
+<h3><span class="section-number">5.1.1. </span>Hver er munurinn?<a class="headerlink" href="#hver-er-munurinn" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/01_f1.png" id="figa"><img alt="_images/01_f1.png" class="align-center" id="figa" src="_images/01_f1.png" style="width: 95%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="_images/01_g1.png" id="figb"><img alt="_images/01_g1.png" class="align-center" id="figb" src="_images/01_g1.png" style="width: 95%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Skoðum föllin tvö að ofan, þau eru augljóslega ekki eins, þannig að
+spurningin er hvernig getum við lýst muninum á þeim?</p>
+<p>Þau hugtök sem við höfum skoðað hingað til geta ekki greint á milli
+þessara falla:</p>
+<ol class="lowerroman simple">
+<li><p>Þau hafa sama skilgreiningarmengið <span class="math notranslate nohighlight">\([A,B]\)</span></p></li>
+<li><p>Þau taka sömu gildin í endapunktunum</p></li>
+<li><p>Þau hafa bæði hágildi í <span class="math notranslate nohighlight">\(A\)</span> og lággildi í <span class="math notranslate nohighlight">\(B\)</span></p></li>
+<li><p>Þau eru bæði samfelld og diffranleg</p></li>
+<li><p>Þau eru bæði minnkandi (neikvæð afleiða)</p></li>
+</ol>
+</div>
+<div class="section" id="drogum-sniil">
+<h3><span class="section-number">5.1.2. </span>Drögum sniðil<a class="headerlink" href="#drogum-sniil" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/01_f2.png" id="figa2"><img alt="_images/01_f2.png" class="align-center" id="figa2" src="_images/01_f2.png" style="width: 95%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="_images/01_g2.png" id="figb2"><img alt="_images/01_g2.png" class="align-center" id="figb2" src="_images/01_g2.png" style="width: 95%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Ef við veljum nú tvo punkta á <span class="math notranslate nohighlight">\([A,B]\)</span> af handahófi, köllum þá
+<span class="math notranslate nohighlight">\(x_1\)</span> og <span class="math notranslate nohighlight">\(x_2\)</span>, og drögum línu (sniðil) í gegnum punktana á
+gröfum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> þá sjáum við að sniðillinn lendir fyrir
+neðan <span class="math notranslate nohighlight">\(g\)</span> en ofan <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>Athugum nú að sérhvern punkt á milli <span class="math notranslate nohighlight">\(x_1\)</span> og <span class="math notranslate nohighlight">\(x_2\)</span> getum við skrifað á
+forminu
+<span class="math notranslate nohighlight">\(\alpha x_1 + (1-\alpha)x_2\)</span>, þar sem <span class="math notranslate nohighlight">\(\alpha \in [0,1]\)</span>. En <span class="math notranslate nohighlight">\(\alpha=0\)</span>
+gefur <span class="math notranslate nohighlight">\(x_2\)</span> og <span class="math notranslate nohighlight">\(\alpha=1\)</span> gefur <span class="math notranslate nohighlight">\(x_1\)</span>.</p>
+<p>Þá er
+<span class="math notranslate nohighlight">\(y\)</span>-hnit punktsins á sniðlinum með þetta <span class="math notranslate nohighlight">\(x\)</span>-hnit gefið með</p>
+<div class="math notranslate nohighlight">
+\[\alpha f(x_1) + (1-\alpha) f(x_2), \qquad \alpha \in [0,1],\]</div>
+<p>á fyrri myndinni og</p>
+<div class="math notranslate nohighlight">
+\[\alpha g(x_1) + (1-\alpha) g(x_2), \qquad \alpha \in [0,1],\]</div>
+<p>á myndinni fyrir <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p>Ef graf <span class="math notranslate nohighlight">\(f\)</span> liggur fyrir neðan sniðilinn þá þýðir það að fallgildi
+<span class="math notranslate nohighlight">\(f\)</span> í punktunum <span class="math notranslate nohighlight">\(\alpha x_1 + (1-\alpha)x_2\)</span> liggur fyrir
+neðan punktinum á sniðlinum, það er</p>
+<div class="math notranslate nohighlight">
+\[f(\alpha x_1+(1-\alpha)x_2)\leq \alpha f(x_1)+(1-\alpha)f(x_2).\]</div>
+<p>Eins, ef graf <span class="math notranslate nohighlight">\(g\)</span> liggur fyrir ofan sniðilinn þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[g(\alpha x_1+(1-\alpha)x_2)\geq \alpha g(x_1)+(1-\alpha)g(x_2).\]</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/01_f3.png" id="figa3"><img alt="_images/01_f3.png" class="align-center" id="figa3" src="_images/01_f3.png" style="width: 95%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="_images/01_g3.png" id="figb3"><img alt="_images/01_g3.png" class="align-center" id="figb3" src="_images/01_g3.png" style="width: 95%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="ZP6Y6PN2OWrQFDDuwPLguBpD4G6lE8"></div>
+<script>
+var ggbApp_ZP6Y6PN2OWrQFDDuwPLguBpD4G6lE8 = new GGBApplet({
+"appName": "graphing", 
+"width": 700, 
+"height": 350, 
+"material_id":" JEABXuMZ", 
+"preventFocus": true, 
+"enableShiftDragZoom": false 
+}, true);
+ggbAppletId["ZP6Y6PN2OWrQFDDuwPLguBpD4G6lE8"] = ggbApp_ZP6Y6PN2OWrQFDDuwPLguBpD4G6lE8;
+</script></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="kupni">
+<h2><span class="section-number">5.2. </span>Kúpni<a class="headerlink" href="#kupni" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining-kupt-hvelft">
+<span id="index-0"></span><h3><span class="section-number">5.2.1. </span>Skilgreining: Kúpt/hvelft<a class="headerlink" href="#skilgreining-kupt-hvelft" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:[a, b]\rightarrow {\mathbb  R}\)</span> vera fall.</p>
+<ol class="lowerroman">
+<li><p>Segjum að fallið <span class="math notranslate nohighlight">\(f\)</span> sé <a href="http://www.stae.is/os/leita/convex_function." class="tooltip" target="_blank">kúpt*<span>en: <i>convex function.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> ef um
+alla punkta <span class="math notranslate nohighlight">\(x_1, x_2\in [a, b]\)</span> og sérhverja tölu
+<span class="math notranslate nohighlight">\(0\leq
+\alpha\leq 1\)</span> gildir að</p>
+<div class="math notranslate nohighlight">
+\[f(\alpha x_1+(1-\alpha)x_2)\leq \alpha f(x_1)+(1-\alpha)f(x_2).\]</div>
+</li>
+<li><p>Segjum að fallið <span class="math notranslate nohighlight">\(f\)</span> sé <a href="http://www.stae.is/os/leita/concave_function." class="tooltip" target="_blank">hvelft<span>en: <i>concave function.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>
+ef um alla punkta <span class="math notranslate nohighlight">\(x_1, x_2\in [a, b]\)</span> og sérhverja tölu
+<span class="math notranslate nohighlight">\(0\leq
+\alpha\leq 1\)</span> gildir að</p>
+<div class="math notranslate nohighlight">
+\[f(\alpha x_1+(1-\alpha)x_2)\geq \alpha f(x_1)+(1-\alpha)f(x_2).\]</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Hér erum við komin með hugtak sem getur útskýrt muninn á myndunum í byrjun
+kaflans, <span class="math notranslate nohighlight">\(f\)</span> er kúpt og <span class="math notranslate nohighlight">\(g\)</span> er hvelft.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="aukenning-a-kupni-me-afleium">
+<h2><span class="section-number">5.3. </span>Auðkenning á kúpni með afleiðum<a class="headerlink" href="#aukenning-a-kupni-me-afleium" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/01_f1.png" id="id1"><img alt="_images/01_f1.png" class="align-center" id="id1" src="_images/01_f1.png" style="width: 95%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="_images/01_g1.png" id="id2"><img alt="_images/01_g1.png" class="align-center" id="id2" src="_images/01_g1.png" style="width: 95%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="athugasemd">
+<h3><span class="section-number">5.3.1. </span>Athugasemd<a class="headerlink" href="#athugasemd" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við skoðum afleiður fallanna <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> betur þá sjáum
+við að:</p>
+<ol class="lowerroman simple">
+<li><p>Afleiða <span class="math notranslate nohighlight">\(f\)</span> er mjög neikvæð nálægt <span class="math notranslate nohighlight">\(A\)</span> og nálgast svo 0
+í <span class="math notranslate nohighlight">\(B\)</span>, það er afleiðan er vaxandi.</p></li>
+<li><p>Afleiða <span class="math notranslate nohighlight">\(g\)</span> er u.þ.b. 0 í <span class="math notranslate nohighlight">\(A\)</span> og minnkar svo þegar við
+nálgumst <span class="math notranslate nohighlight">\(B\)</span>, það er afleiðan er minnkandi.</p></li>
+</ol>
+<p>Með öðrum orðum</p>
+<div class="math notranslate nohighlight">
+\[(f')' = f'' \geq 0 \qquad   \text{og} \qquad
+    (g')' = g'' \leq 0.\]</div>
+</div>
+<div class="section" id="setning">
+<h3><span class="section-number">5.3.2. </span>Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir tvídiffranlegt fall <span class="math notranslate nohighlight">\(f\)</span> þá er eftirfarandi jafngilt</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> er kúpt</p></li>
+<li><p><span class="math notranslate nohighlight">\(f'\)</span> er vaxandi</p></li>
+<li><p><span class="math notranslate nohighlight">\(f'' \geq 0\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">5.3.3. </span>Setning<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir tvídiffranlegt fall <span class="math notranslate nohighlight">\(g\)</span> þá er eftirfarandi jafngilt</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(g\)</span> er hvelft</p></li>
+<li><p><span class="math notranslate nohighlight">\(g'\)</span> er minnkandi</p></li>
+<li><p><span class="math notranslate nohighlight">\(g'' \leq 0\)</span></p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Hvort fall er kúpt eða hvelft er <strong>algjörlega óháð</strong> því hvort það er
+vaxandi eða minnkandi. Til dæmis er <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> kúpt en það er
+vaxandi þegar <span class="math notranslate nohighlight">\(x&gt;0\)</span> og minnkandi þegar <span class="math notranslate nohighlight">\(x&lt;0\)</span>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Föll eru ekki alltaf annað hvort kúpt eða hvelft alls staðar. Alveg
+eins og það eru til föll sem eru sums staðar vaxandi og sums staðar
+minnkandi, þá eru mörg föll sums staðar kúpt og sums staðar hveld.
+Þetta á til dæmis við um hornaföllin.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="beygjuskilapunktar">
+<h2><span class="section-number">5.4. </span>Beygjuskilapunktar<a class="headerlink" href="#beygjuskilapunktar" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining">
+<span id="index-1"></span><h3><span class="section-number">5.4.1. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Punktur <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> er sagður vera <a href="http://www.stae.is/os/leita/flex_point." class="tooltip" target="_blank">beygjuskilapunktur<span>en: <i>flex point.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>
+grafsins <span class="math notranslate nohighlight">\(y=f(x)\)</span> ef</p>
+<ol class="lowerroman simple">
+<li><p>grafið hefur snertilínu í <span class="math notranslate nohighlight">\(x_0\)</span>, og</p></li>
+<li><p>grafið er kúpt öðru megin við <span class="math notranslate nohighlight">\(x_0\)</span> og hvelft hinum megin við
+<span class="math notranslate nohighlight">\(x_0\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">5.4.2. </span>Setning<a class="headerlink" href="#id5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er tvídiffranlegt þá er punkturinn <span class="math notranslate nohighlight">\(x_0\)</span>
+beygjuskilapunktur fallsins <span class="math notranslate nohighlight">\(f\)</span> ef og aðeins ef
+<span class="math notranslate nohighlight">\(f''(x_0) =0\)</span> og <span class="math notranslate nohighlight">\(f''\)</span> skiptir um formerki í <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
+<a class="reference internal image-reference" href="_images/04_beygjuskilapunktur.png"><img alt="_images/04_beygjuskilapunktur.png" class="align-center" src="_images/04_beygjuskilapunktur.png" style="width: 12cm;" /></a>
+</div>
+</div>
+<div class="section" id="utgildi">
+<span id="index-2"></span><h2><span class="section-number">5.5. </span>Útgildi<a class="headerlink" href="#utgildi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="hvar-a-a-leita-utgilda">
+<h3><span class="section-number">5.5.1. </span>Hvar á að leita útgilda<a class="headerlink" href="#hvar-a-a-leita-utgilda" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><a class="reference internal" href="kafli03.html#utgildi"><span class="std std-ref">Útgildi</span></a>  skoðuðum við í kafla 3.5, en nú ætlum við að skoða
+hvernig önnur afleiðan nýtist til að finna og flokka útgildi.</p>
+<p>Punktar sem koma til greina fyrir staðbundin útgildi falls <span class="math notranslate nohighlight">\(f\)</span> eru</p>
+<ol class="lowerroman simple">
+<li><p>punktar <span class="math notranslate nohighlight">\(x_0\)</span> þar sem <span class="math notranslate nohighlight">\(f'(x_0)=0\)</span>,</p></li>
+<li><p>punktar <span class="math notranslate nohighlight">\(x_0\)</span> þar sem <span class="math notranslate nohighlight">\(f'(x_0)\)</span> er ekki skilgreint,</p></li>
+<li><p>þeir endapunktar skilgreiningarmengisins þar sem fallið er
+skilgreint.</p></li>
+</ol>
+</div>
+<div class="section" id="hagildi-lagildi-ut-fra-formerki-afleiu">
+<h3><span class="section-number">5.5.2. </span>Hágildi/lágildi út frá formerki afleiðu<a class="headerlink" href="#hagildi-lagildi-ut-fra-formerki-afleiu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(x_0\)</span> vera innri punkt á skilgreiningarsvæði <span class="math notranslate nohighlight">\(f\)</span>.
+Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé diffranlegt í öllum punktum í einhverju
+bili utan um <span class="math notranslate nohighlight">\(x_0\)</span> og að <span class="math notranslate nohighlight">\(f'(x_0)=0\)</span>.</p>
+<ol class="lowerroman simple">
+<li><p>Ef formerki <span class="math notranslate nohighlight">\(f'\)</span> breytist úr plús í mínus í <span class="math notranslate nohighlight">\(x_0\)</span>
+(farið frá vinstri til hægri eftir rauntalnaásnum) þá er
+staðbundið hágildi í <span class="math notranslate nohighlight">\(x_0\)</span>.</p></li>
+<li><p>Ef formerki <span class="math notranslate nohighlight">\(f'\)</span> breytist úr mínus í plús í <span class="math notranslate nohighlight">\(x_0\)</span> þá
+er staðbundið lággildi í <span class="math notranslate nohighlight">\(x_0\)</span>.</p></li>
+<li><p>Ef formerki <span class="math notranslate nohighlight">\(f'\)</span> breytist ekki í <span class="math notranslate nohighlight">\(x_0\)</span> þá er hvorki
+há- né lággildi í <span class="math notranslate nohighlight">\(x_0\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="utgildi-og-onnur-afleian">
+<h3><span class="section-number">5.5.3. </span>Útgildi og önnur afleiðan<a class="headerlink" href="#utgildi-og-onnur-afleian" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ol class="lowerroman simple">
+<li><p>Ef <span class="math notranslate nohighlight">\(f'(x_0)=0\)</span> og <span class="math notranslate nohighlight">\(f''(x_0)&lt;0\)</span> þá er <span class="math notranslate nohighlight">\(x_0\)</span>
+staðbundið hágildi.</p></li>
+<li><p>Ef <span class="math notranslate nohighlight">\(f'(x_0)=0\)</span> og <span class="math notranslate nohighlight">\(f''(x_0)&gt;0\)</span> þá er <span class="math notranslate nohighlight">\(x_0\)</span>
+staðbundið lággildi.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Athugið að ef <span class="math notranslate nohighlight">\(f''(x_0)=0\)</span> þá getur <span class="math notranslate nohighlight">\(x_0\)</span> verið hvort sem er
+staðbundið hágildi, staðbundið lággildi eða beygjuskilapunktur.</p>
+</div>
+</div>
+</div>
+<div class="section" id="afellur">
+<span id="index-3"></span><h2><span class="section-number">5.6. </span>Aðfellur<a class="headerlink" href="#afellur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining-lorett-afella">
+<h3><span class="section-number">5.6.1. </span>Skilgreining: Lóðrétt aðfella<a class="headerlink" href="#skilgreining-lorett-afella" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fallið <span class="math notranslate nohighlight">\(f\)</span> hefur <em>lóðrétta aðfellu</em> í punktinum <span class="math notranslate nohighlight">\(a\)</span> ef
+<span class="math notranslate nohighlight">\(\lim_{x\to a^-} f(x) = \pm \infty\)</span> og/eða
+<span class="math notranslate nohighlight">\(\lim_{x\to a^+} f(x) = \pm \infty\)</span>.</p>
+<blockquote>
+<div><p>Aðfellan er þá línan <span class="math notranslate nohighlight">\(x=a\)</span>.</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="_images/06_lodfellur.png"><img alt="_images/06_lodfellur.png" class="align-center" src="_images/06_lodfellur.png" style="width: 12cm;" /></a>
+<p><em>Fallið</em> <span class="math notranslate nohighlight">\(\frac{1}{\sin(x)}\)</span> <em>hefur lóðréttar aðfellur í öllum punktum þar sem</em> <span class="math notranslate nohighlight">\(\sin(x)=0\)</span>.</p>
+</div>
+<div class="section" id="skilgreining-larett-afella">
+<h3><span class="section-number">5.6.2. </span>Skilgreining: Lárétt aðfella<a class="headerlink" href="#skilgreining-larett-afella" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fallið <span class="math notranslate nohighlight">\(f\)</span> hefur <em>lárétta aðfellu</em> ef
+<span class="math notranslate nohighlight">\(\lim_{x\to \infty} f(x) = L\)</span> og/eða
+<span class="math notranslate nohighlight">\(\lim_{x\to -\infty} f(x) = L\)</span>.</p>
+<p>Aðfellan er þá línan <span class="math notranslate nohighlight">\(y=L\)</span>.</p>
+<a class="reference internal image-reference" href="_images/06_arctanadfellur.png"><img alt="_images/06_arctanadfellur.png" class="align-center" src="_images/06_arctanadfellur.png" style="width: 12cm;" /></a>
+<p><em>Fallið</em> <span class="math notranslate nohighlight">\(\arctan(x)\)</span> <em>hefur tvær láréttar aðfellur,</em> <span class="math notranslate nohighlight">\(y=\frac{\pi}{2}\)</span> <em>og</em> <span class="math notranslate nohighlight">\(y=\frac{-\pi}{2}\)</span>.</p>
+</div>
+<div class="section" id="skafella">
+<h3><span class="section-number">5.6.3. </span>Skáfella<a class="headerlink" href="#skafella" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fallið <span class="math notranslate nohighlight">\(f\)</span> hefur <em>skáfellu</em> ef til eru <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span>
+þannig að <span class="math notranslate nohighlight">\(\lim_{x\to \infty} f(x) -ax-b = 0\)</span> og/eða
+<span class="math notranslate nohighlight">\(\lim_{x\to -\infty} f(x) -ax-b= 0\)</span>.</p>
+<p>Skáfellan er þá línan <span class="math notranslate nohighlight">\(y=ax+b\)</span>.</p>
+<a class="reference internal image-reference" href="_images/06_lodogskafellur.png"><img alt="_images/06_lodogskafellur.png" class="align-center" src="_images/06_lodogskafellur.png" style="width: 12cm;" /></a>
+<p><em>Fallið</em> <span class="math notranslate nohighlight">\(\frac{x^2}{2x-4}\)</span> <em>hefur skáfelluna</em> <span class="math notranslate nohighlight">\(y=\frac{1}{2}x+1\)</span> <em>auk lóðréttu aðfellunnar</em> <span class="math notranslate nohighlight">\(x=2\)</span>.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="a-teikna-graf-falls">
+<h2><span class="section-number">5.7. </span>Að teikna graf falls<a class="headerlink" href="#a-teikna-graf-falls" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Þegar teikna á graf fallsins <span class="math notranslate nohighlight">\(f\)</span> er gagnlegt að fara í gegnum atriðin á eftirfarandi lista:</p>
+<ol class="arabic simple">
+<li><p>Ákvarðið <span class="math notranslate nohighlight">\(f'\)</span> og <span class="math notranslate nohighlight">\(f''\)</span> og þáttið útkomurnar ef hægt er.</p></li>
+<li><dl class="simple">
+<dt>Kannið <span class="math notranslate nohighlight">\(f\)</span> til að ákvarða skilgreiningarmengi þess auk eftirfarandi eiginleika:</dt><dd><ol class="loweralpha simple">
+<li><p>Lóðréttar aðfellur. (Leitið að rótum nefnara)</p></li>
+<li><p>Láréttar aðfellur og skáfellur. (Finnið <span class="math notranslate nohighlight">\(\lim_{x \to \pm\infty}f(x)\)</span>.)</p></li>
+<li><p>Samhverfa (er <span class="math notranslate nohighlight">\(f\)</span> jafnstætt eða oddstætt?)</p></li>
+<li><p>Skurðpunktar við ása (punktar með hnit <span class="math notranslate nohighlight">\((x,0)\)</span> eða <span class="math notranslate nohighlight">\((0,y)\)</span>), endapunktar skilgreiningamengisins eða aðrir punktar á grafinu þar sem einfalt er að reikna út bæði hnitin.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Kannið <span class="math notranslate nohighlight">\(f'\)</span> til að ákvarða eftirfarandi:</dt><dd><ol class="loweralpha simple">
+<li><p>Útgildispunkta.</p></li>
+<li><p>Punktar þar sem <span class="math notranslate nohighlight">\(f'\)</span> er ekki skilgreint (sérstöðupunktar, endapunktar skilgreiningarmengis <span class="math notranslate nohighlight">\(f\)</span> og lóðréttar aðfellur)</p></li>
+<li><p>Bilin þar sem <span class="math notranslate nohighlight">\(f'\)</span> er jákvætt
+og neikvætt. Það er góð hugmynd að setja þessar upplýsingar fram í töflu. Á töfluna má svo líka merkja inn niðurstöður um hvar <span class="math notranslate nohighlight">\(f\)</span> er vaxandi og minnkandi og hvort útgildispunktar séu staðbundin hágildi eða lággildi.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Kannið <span class="math notranslate nohighlight">\(f''\)</span> til að ákvarða eftirfarandi:</dt><dd><ol class="loweralpha simple">
+<li><p>Punktar þar sem <span class="math notranslate nohighlight">\(f''(x)=0\)</span>.</p></li>
+<li><p>Punktar þar sem <span class="math notranslate nohighlight">\(f''\)</span> er ekki skilgreint (sérstöðupunktar, endapunktar skilgreiningarmengis <span class="math notranslate nohighlight">\(f\)</span> og lóðréttar aðfellur, e.t.v. auk fleiri punkta þar sem <span class="math notranslate nohighlight">\(f'\)</span> er skilgreint en ekki <span class="math notranslate nohighlight">\(f''\)</span>.)</p></li>
+<li><p>Bilin þar sem <span class="math notranslate nohighlight">\(f''\)</span> er jákvætt og neikvætt og <span class="math notranslate nohighlight">\(f\)</span> þar af leiðandi kúpt og hvelft. Hér er gagnlegt að útbúa töflu.</p></li>
+<li><p>Beygjuskilapunktar.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<hr class="docutils" />
+</div>
+<div class="section" id="utgildisverkefni">
+<span id="index-4"></span><h2><span class="section-number">5.8. </span>Útgildisverkefni<a class="headerlink" href="#utgildisverkefni" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="markmii">
+<h3><span class="section-number">5.8.1. </span>Markmiðið<a class="headerlink" href="#markmii" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Útgildisverkefni snúast um það að hámarka eða lágmarka tiltekna stærð, t.d.
+verð, rúmmál, lengd, … . Þá þarf að finna (helst diffranlegt) fall fyrir stærðina
+sem við höfum áhuga á hámarka/lágmarka en þó með þeim skorðum sem vandamálið setur okkur.</p>
+<p>Til þess að þetta sé mögulegt má fallið bara vera háð einni breytu og
+það þarf helst að vera diffranlegt.</p>
+<p>Þá getum við fundið útgildi með þeim aðferðum sem við erum búin að koma
+okkur upp.</p>
+</div>
+<div class="section" id="a-leysa-utgildisvandamal">
+<h3><span class="section-number">5.8.2. </span>Að leysa útgildisvandamál<a class="headerlink" href="#a-leysa-utgildisvandamal" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Sjá einnig bls. 260 (8. útg.), 259 (7. útg.) eða 238 (6. útg.) í kennslubókinni.</p>
+<ol class="lowerroman simple">
+<li><p>Lesið vandamálið vandlega og áttið ykkur á því hvert það er og
+hvað á að finna.</p></li>
+<li><p>Teiknið mynd ef mögulegt er, hún gefur oft upplýsingar um skorður
+sem hjálpa okkur að útbúa fallið.</p></li>
+<li><p>Skilgreinið aukabreytur.</p></li>
+<li><p>Skilgreinið fallið, sem fall af einni eða fleiri breytum.</p></li>
+<li><p>Finnið skorður (jöfnur) sem hægt er að stinga inn í fallið</p></li>
+<li><p>Skrifið fallið sem fall af einni breytu.</p></li>
+<li><p>Finnið útgildi</p></li>
+<li><p>Dragið ályktanir af niðurstöðunni, og athugið hvort hún sé
+raunhæf miðað við verkefnið (rúmmál á ekki að vera neikvætt og
+þess háttar).</p></li>
+</ol>
+</div>
+<div class="section" id="daemi-gosdos">
+<h3><span class="section-number">5.8.3. </span>Dæmi: Gosdós<a class="headerlink" href="#daemi-gosdos" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hvert er hagkvæmasta formið á sívalningslaga gosdós?</p>
+<a class="reference internal image-reference" href="_images/09_cylinder.png"><img alt="_images/09_cylinder.png" class="align-center" src="_images/09_cylinder.png" style="height: 7cm;" /></a>
+</div>
+<div class="section" id="daemi-kassi">
+<h3><span class="section-number">5.8.4. </span>Dæmi: Kassi<a class="headerlink" href="#daemi-kassi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hvernig er stærsti (mesta rúmmálið) loklausi kassinn sem hægt er búa til úr
+örk sem er <span class="math notranslate nohighlight">\(12 \times 12\)</span>?</p>
+<a class="reference internal image-reference" href="_images/09_kassi.png"><img alt="_images/09_kassi.png" class="align-center" src="_images/09_kassi.png" style="width: 12cm;" /></a>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kafli06.html" class="btn btn-neutral float-right" title="6. Heildun" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="kafli04.html" class="btn btn-neutral" title="4. Torræð föll" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2018',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+        <script>
+            window.addEventListener("load", function(){
+                for(var i in ggbAppletId){
+                    ggbAppletId[i].inject(i);
+                }
+            });
+        </script>
+
+	
+
+
+
+</body>
+</html>

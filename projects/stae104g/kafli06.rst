@@ -800,7 +800,7 @@ Af þessu sést að
 .. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{2}{x}-\frac{4x}{2x^2+1}-\frac{3x}{(2x^2+1)^2}.
 
 Samantekt
-^^^^^^
+^^^^^^^^^
 
 Líkt og áður segir þá er stofnbrotaliðun notuð fyrir ræð föll sem erfitt getur
 reynst að heilda í sínu upprunalega formi. Við stofnbrotaliðun er fallið liðað
