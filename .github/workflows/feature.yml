@@ -63,7 +63,6 @@ jobs:
     runs-on: ubuntu-20.04
     outputs:
       artifact: ${{ steps.zip_build.outputs.artifact }}
-      foundation-is-modified: ${{ steps.check_for_changes.outputs.foundation-is-modified }}
       file_changes: ${{ steps.file_changes.outputs.files }}
       # analysis_1-is-modified: ${{ steps.check_for_changes.outputs.analysis_1-is-modified }}
     steps:
@@ -118,10 +117,9 @@ jobs:
     needs: [setup, pre-build]
     name: Build undirbuningur-stae
     runs-on: ubuntu-20.04
-    if: contains(needs.modified-projects.outputs.file_changes , 'undirbuningur_stae')
+    if: contains(needs.pre-build.outputs.file_changes , 'undirbuningur_stae')
     outputs:
       artifact: ${{ steps.zip_build.outputs.artifact }}
-      is-modified: ${{ steps.is_modified.outputs.is-modified }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
@@ -222,7 +220,7 @@ jobs:
   #         path: ${{steps.zip_build.outputs.artifact}}
   deploy-feature-branch:
     needs: [setup, pre-build, build-undirbuningur-stae]
-    if: contains(needs.modified-projects.outputs.file_changes , 'undirbuningur_stae')
+    if: contains(needs.pre-build.outputs.file_changes , 'undirbuningur_stae')
     name: Deploy feature branch
     runs-on: ubuntu-20.04
     steps:
