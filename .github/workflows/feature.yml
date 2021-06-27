@@ -64,6 +64,7 @@ jobs:
     outputs:
       artifact: ${{ steps.zip_build.outputs.artifact }}
       foundation-is-modified: ${{ steps.check_for_changes.outputs.foundation-is-modified }}
+      file_changes: ${{ steps.file_changes.outputs.files }}
       # analysis_1-is-modified: ${{ steps.check_for_changes.outputs.analysis_1-is-modified }}
     steps:
       - name: Check out repository
@@ -86,25 +87,38 @@ jobs:
       #----------------------------------------------
       # Build
       #----------------------------------------------
-      - name: Check for changes
-        id: check_for_changes
+      - uses: actions/checkout@v2
+      - id: file_changes
+        name: File Changes
+        uses: trilom/file-changes-action@v1.2.3
+      - name: test
         run: |
-          source .venv/bin/activate
-          for dir in projects/*; do
-            project_name=$(echo $dir | awk -F'/' '{print $2}')
-            if git diff HEAD^ HEAD --exit-code $dir >/dev/null 2>&1
-            then
-              echo "No changes found in $project_name"
-            else
-              echo "Changes found in $project_name"
-              echo "::set-output name=$project_name-is-modified::$(echo true)"
-            fi
-          done
+          cat $HOME/files_modified.json
+          cat $HOME/files_added.json
+          cat $HOME/files_removed.json
+          echo '${{ steps.file_changes.outputs.files}}'
+          echo '${{ steps.file_changes.outputs.files_modified}}'
+          echo '${{ steps.file_changes.outputs.files_added}}'
+          echo '${{ steps.file_changes.outputs.files_removed}}'
+      # - name: Check for changes
+      #   id: check_for_changes
+      #   run: |
+      #     source .venv/bin/activate
+      #     for dir in projects/*; do
+      #       project_name=$(echo $dir | awk -F'/' '{print $2}')
+      #       if git diff HEAD^ HEAD --exit-code $dir >/dev/null 2>&1
+      #       then
+      #         echo "No changes found in $project_name"
+      #       else
+      #         echo "Changes found in $project_name"
+      #         echo "::set-output name=$project_name-is-modified::$(echo true)"
+      #       fi
+      #     done
   build-undirbuningur-stae:
     needs: [setup, pre-build]
     name: Build undirbuningur-stae
     runs-on: ubuntu-20.04
-    if: needs.pre-build.outputs.foundation-is-modified == 'true'
+    if: contains(needs.modified-projects.outputs.file_changes , 'undirbuningur_stae')
     outputs:
       artifact: ${{ steps.zip_build.outputs.artifact }}
       is-modified: ${{ steps.is_modified.outputs.is-modified }}
@@ -208,7 +222,7 @@ jobs:
   #         path: ${{steps.zip_build.outputs.artifact}}
   deploy-feature-branch:
     needs: [setup, pre-build, build-undirbuningur-stae]
-    if: needs.pre-build.outputs.foundation-is-modified == 'true'
+    if: contains(needs.modified-projects.outputs.file_changes , 'undirbuningur_stae')
     name: Deploy feature branch
     runs-on: ubuntu-20.04
     steps:
