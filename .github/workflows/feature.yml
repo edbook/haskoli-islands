@@ -208,7 +208,7 @@ jobs:
   #         path: ${{steps.zip_build.outputs.artifact}}
   deploy-feature-branch:
     needs: [setup, pre-build, build-undirbuningur-stae]
-    if: always()
+    if: needs.pre-build.outputs.foundation-is-modified == 'true'
     name: Deploy feature branch
     runs-on: ubuntu-20.04
     steps:
@@ -235,7 +235,6 @@ jobs:
       - name: Deploy foundation docs
         id: deploy_foundation_docs
         uses: appleboy/scp-action@master
-        if: needs.pre-build.outputs.foundation-is-modified == 'true'
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.HI_USERNAME }}
