@@ -24,7 +24,7 @@ def html_visit_ggb_node(self, node):
     self.body.append("\"appName\": \"graphing\", \n")
     self.body.append("\"width\": "+node['width']+", \n")
     self.body.append("\"height\": "+node['height']+", \n")
-    self.body.append('"material_id": "'+node['id']+"', \n")
+    self.body.append('"material_id": "'+node['id']+'", \n')
     self.body.append("\"preventFocus\": true, \n")
     self.body.append("\"enableShiftDragZoom\": "+node['zoom_drag']+" \n")
     self.body.append("}, true);\n")
