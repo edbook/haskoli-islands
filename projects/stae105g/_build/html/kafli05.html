@@ -1,0 +1,2024 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Heildun &mdash; Stærðfræðigreining I (STÆ104G) 2018</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		.sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		}
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræðigreining I (STÆ104G) 2018" href="index.html"/>
+        <link rel="next" title="6. Heildun" href="kafli06.html"/>
+        <link rel="prev" title="4. Hagnýting á diffrun" href="kafli04.html"/>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+	
+
+     
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræðigreining I (STÆ104G)
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Tölur og föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#inngangur">1.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#grunnhugmyndin">1.1.1. Grunnhugmyndin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#itarefni">1.1.2. Ítarefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#forrit">1.1.3. Forrit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#tolur">1.2. Tölur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-tolur">1.2.1. Skilgreining: Tölur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#smii-rauntalna">1.2.2. Smíði rauntalna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#bil">1.3. Bil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-bil-i">1.3.1. Skilgreining: Bil (i)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-bil-ii">1.3.2. Skilgreining: Bil (ii)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#foll">1.4. Föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-vorpun">1.4.1. Skilgreining: Vörpun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-skilgreiningarmengi-og-bakmengi">1.4.2. Skilgreining: skilgreiningarmengi og bakmengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-fall">1.4.3. Skilgreining: fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-samskeyting">1.4.4. Skilgreining: Samskeyting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#daemi-samskeyting">1.4.5. Dæmi: Samskeyting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-ataekni-og-eintaekni">1.4.6. Skilgreining: Átækni og eintækni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-gagntaekni">1.4.7. Skilgreining: Gagntækni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-andhverfa">1.4.8. Skilgreining: Andhverfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#daemi-andhverfa">1.4.9. Dæmi: Andhverfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-graf">1.4.10. Skilgreining: Graf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-jafnstaett-og-oddstaett">1.4.11. Skilgreining: Jafnstætt og oddstætt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#nokkrar-gerir-falla">1.5. Nokkrar gerðir falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#linuleg-foll">1.5.1. Línuleg föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#margliur">1.5.2. Margliður</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#veldisfoll">1.5.2.1. Veldisföll</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#nullstovar-marglia">1.5.2.2. Núllstöðvar margliða</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#algebrisk-foll">1.5.3. Algebrísk föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#torrae-foll">1.5.4. Torræð föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gaffalforskriftarfoll">1.5.5. Gaffalforskriftarföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#ummyndanir-falla">1.6. Ummyndanir falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#hlirun">1.6.1. Hliðrun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skolun-me-jakvaeum-fasta">1.6.2. Skölun með jákvæðum fasta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#speglun">1.6.3. Speglun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#hornafollin">1.7. Hornaföllin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#radianar">1.7.1. Radíanar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#kosinus-sinus-og-einingahringurinn">1.7.2. Kósínus, sínus og einingahringurinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#hornafallareglur">1.7.3. Hornafallareglur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#grof-og-lotur-hornafallanna">1.7.4. Gröf og lotur hornafallanna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#andhverfur">1.8. Andhverfur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#a-finna-andhverfu">1.8.1. Að finna andhverfu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#daemi-finna-andhverfu">1.8.1.1. Dæmi: Finna andhverfu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#graf-andhverfu">1.8.2. Graf andhverfu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#daemi-graf-andhverfu">1.8.2.1. Dæmi: Graf andhverfu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#takmorkun-skilgreiningarmengis">1.8.3. Takmörkun skilgreiningarmengis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#daemi-takmorkun-skilgreiningarmengis">1.8.3.1. Dæmi: Takmörkun skilgreiningarmengis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#andhverfur-hornafallanna">1.8.4. Andhverfur hornafallanna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#daemi-andhverfa-hornafalls">1.8.4.1. Dæmi: Andhverfa hornafalls</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#visifoll-og-logar">1.9. Vísiföll og logar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#visisfoll">1.9.1. Vísisföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#graf-visisfalla">1.9.1.1. Graf vísisfalla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#fastinn-e-og-veldisvisisfalli">1.9.1.2. Fastinn <span class="math notranslate nohighlight">\(e\)</span> og veldisvísisfallið</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#lograr">1.9.2. Lograr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#breibogafollin">1.9.3. Breiðbogaföllin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#andhverfur-breibogafallanna">1.9.3.1. Andhverfur breiðbogafallanna</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Markgildi og samfelldni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#skilgreiningar-a-markgildi">2.1. Skilgreiningar á markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#oformleg-skilgreining-a-markgildi">2.1.1. Óformleg skilgreining á markgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi">2.1.2. Skilgreining: Markgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-markgildi">2.1.3. Dæmi: Markgildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#id1">2.2. Markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#oformleg-skilgreining-a-markgildi-fra-haegri">2.2.1. Óformleg skilgreining á markgildi frá hægri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-fra-haegri">2.2.2. Skilgreining: Markgildi frá hægri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#oformleg-skilgreining-a-markgildi-fra-vinstri">2.2.3. Óformleg skilgreining á markgildi frá vinstri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-fra-vinstri">2.2.4. Skilgreining: Markgildi frá vinstri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-onnur-skilgreining-a-markgildi">2.2.5. Skilgreining: Önnur skilgreining á markgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-tolugildisfalli">2.2.6. Dæmi: Tölugildisfallið</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#reiknireglur-fyrir-markgildi">2.3. Reiknireglur fyrir markgildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#aferir-til-a-meta-markgildi">2.4. Aðferðir til að meta markgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#afmaanlegir-serstoupunktar">2.4.1. Afmáanlegir sérstöðupunktar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#skilgreining-serstoupunktur-og-afmaanlegur-serstoupunktur">2.4.1.1. Skilgreining: Sérstöðupunktur og afmáanlegur sérstöðupunktur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#daemi-afmaanlegur-serstoupunktur">2.4.1.2. Dæmi: Afmáanlegur sérstöðupunktur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#klemmureglan">2.4.2. Klemmureglan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#setning-klemmureglan">2.4.2.1. Setning: klemmureglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#daemi-klemmureglan">2.4.2.2. Dæmi: Klemmureglan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#margfoldun-me-samoka">2.4.3. Margföldun með samoka</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#skilgreining-samoki">2.4.3.1. Skilgreining: Samoki</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#daemi-samoki">2.4.3.2. Dæmi: Samoki</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#einfalda-floki-brot">2.4.4. Einfalda flókið brot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#daemi-einfalda-floki-brot">2.4.4.1. Dæmi: Einfalda flókið brot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#markgildi-i-oendanleikanum">2.5. Markgildi í óendanleikanum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#oformleg-skilgreining-a-markgildnu-infty">2.5.1. Óformleg skilgreining á markgildnu <span class="math notranslate nohighlight">\(\infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-infty">2.5.2. Skilgreining: Markgildið <span class="math notranslate nohighlight">\(\infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-markgildi-infty">2.5.3. Dæmi: Markgildið <span class="math notranslate nohighlight">\(\infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id2">2.5.4. Dæmi: Markgildið <span class="math notranslate nohighlight">\(\infty\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#markgildi-egar-x-stefnir-a-oendanlegt">2.6. Markgildi þegar <span class="math notranslate nohighlight">\(x\)</span> stefnir á óendanlegt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#oformleg-skilgreining-a-markgildnu-egar-x-to-infty">2.6.1. Óformleg skilgreining á markgildnu þegar <span class="math notranslate nohighlight">\(x \to \infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-markgildi-egar-x-to-infty">2.6.2. Skilgreining: Markgildi þegar <span class="math notranslate nohighlight">\(x \to \infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.6.3. Óformleg skilgreining á markgildnu þegar <span class="math notranslate nohighlight">\(x \to -\infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id4">2.6.4. Skilgreining: Markgildi þegar <span class="math notranslate nohighlight">\(x \to -\infty\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-markgildi-egar-x-to-infty">2.6.5. Dæmi: Markgildi þegar <span class="math notranslate nohighlight">\(x \to -\infty\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#samfelldni">2.7. Samfelldni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-innri-punktur">2.7.1. Skilgreining: Innri punktur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-innri-punktur">2.7.2. Dæmi: Innri punktur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-samfelldni-i-punkti">2.7.3. Skilgreining: Samfelldni í punkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning">2.7.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-samskeyting-samfelldra-falla">2.7.5. Setning: Samskeyting samfelldra falla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-samfellt-fall">2.7.6. Skilgreining: Samfellt fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#daemi-samfellt-fall">2.7.7. Dæmi: Samfellt fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#a-bua-til-samfelld-foll">2.7.8. Að búa til samfelld föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-haegri-vinstri-samfelldni">2.7.9. Skilgreining: Hægri/vinstri samfelldni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-uppfaer-skilgreining-a-samfelldu-falli">2.7.10. Skilgreining: Uppfærð skilgreining á samfelldu falli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#eiginleikar-samfelldra-falla">2.8. Eiginleikar samfelldra falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setninging-ha-og-laggildislogmali">2.8.1. Setninging: Há- og lággildislögmálið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-milligildissetningin">2.8.2. Setning: Milligildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fylgisetning">2.8.3. Fylgisetning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Afleiður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#skilgreining-a-afleiu">3.1. Skilgreining á afleiðu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-afleia">3.1.1. Dæmi: afleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-diffranleiki-i-punkti">3.1.2. Setning: Diffranleiki í punkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-diffranleiki-i-punkti">3.1.3. Dæmi: Diffranleiki í punkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#snertill">3.1.4. Snertill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#athugasemd-hallatalan-infty-er-ekki-leyf">3.1.5. Athugasemd: Hallatalan <span class="math notranslate nohighlight">\(\infty\)</span> er ekki leyfð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#afleia-sem-fall">3.2. Afleiða sem fall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#utvikkun-fyrir-loku-bil">3.2.1. Útvíkkun fyrir lokuð bil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-haegri-vinstri-afleia">3.2.2. Skilgreining: Hægri/vinstri afleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning">3.2.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-diffranlegt-fall">3.2.4. Skilgreining: Diffranlegt fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rithattur">3.2.5. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi">3.2.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haerri-afleiur">3.2.7. Hærri afleiður</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#skilgreining-haerri-afleiur">3.2.7.1. Skilgreining: Hærri afleiður</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#daemi-haerri-afleiur">3.2.7.2. Dæmi: Hærri afleiður</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#id1">3.2.7.3. Ritháttur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#reiknireglur">3.3. Reiknireglur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-reiknireglur-fyrir-diffranleg-foll">3.3.1. Setning: Reiknireglur fyrir diffranleg föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-nokkrar-afleiur">3.3.2. Dæmi: Nokkrar afleiður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#afleiur-marglia">3.3.3. Afleiður margliða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-afleia-margliu">3.3.4. Dæmi: Afleiða margliðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#afleiur-hornafallanna">3.4. Afleiður hornafallanna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#kosinus-og-sinus">3.4.1. Kósínus og sínus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#setning-afleia-kosinus-og-sinus">3.4.1.1. Setning: Afleiða kósínus og sínus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#daemi-afleia-sinus">3.4.1.2. Dæmi: Afleiða sínus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#afleia-tangens">3.4.2. Afleiða tangens</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#setning-afleia-tangens">3.4.2.1. Setning: Afleiða tangens</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#daemi-afleia-tangens">3.4.2.2. Dæmi: Afleiða tangens</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#kejureglan">3.5. Keðjureglan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-kejureglan">3.5.1. Setning: Keðjureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id2">3.5.2. Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#andhverf-foll">3.6. Andhverf föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#athugasemd">3.6.1. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id3">3.6.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#eiginleikar">3.6.3. Eiginleikar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-afleia-andhverfunnar">3.6.4. Setning: Afleiða andhverfunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#folgin-diffrun">3.7. Fólgin diffrun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id4">3.7.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-andhverfusetningin">3.7.2. Setning: Andhverfusetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#me-orum-orum">3.7.3. Með öðrum orðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#vinnulag">3.7.4. Vinnulag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-hagnyting-a-folginni-diffrun">3.7.5. Setning: Hagnýting á fólginni diffrun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#afleiur-logra-og-visisfalla">3.8. Afleiður logra og vísisfalla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-afleiur-logra-og-visisfalla">3.8.1. Setning: Afleiður logra og vísisfalla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-afleia-visisfalls">3.8.2. Dæmi: Afleiða vísisfalls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-afleia-lografalls">3.8.3. Dæmi: Afleiða lografalls</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Hagnýting á diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#linulegar-nalganir">4.1. Línulegar nálganir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stabundnar-nalganir">4.1.1. Staðbundnar nálganir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-linuleg-nalgun">4.1.2. Skilgreining: Línuleg nálgun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-linuleg-nalgun">4.1.3. Dæmi: Línuleg nálgun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#diffur">4.1.4. Diffur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-diffur">4.1.5. Dæmi: Diffur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-skekkjumat">4.1.6. Setning: Skekkjumat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-skekkjumat">4.1.7. Dæmi: Skekkjumat</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#utgildi">4.2. Útgildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-utgildi">4.2.1. Skilgreining: Útgildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-stoupunktur">4.2.2. Skilgreining: Stöðupunktur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-fermats">4.2.3. Setning Fermats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#utgildi-og-onnur-afleian">4.2.4. Útgildi og önnur afleiðan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-utgildi">4.2.5. Dæmi: Útgildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#mealgildissetningin">4.3. Meðalgildissetningin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-rolle">4.3.1. Setning Rolle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#index-2">4.3.2. Meðalgildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#alhaefa-mealgildissetningin">4.3.3. Alhæfða meðalgildissetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#hjalparsetning-afleiur-fastafalla">4.3.4. Hjálparsetning: Afleiður fastafalla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#hjalparsetning">4.3.5. Hjálparsetning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#afleiur-og-logun-grafs">4.4. Afleiður og lögun grafs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-vaxandi-minnkandi">4.4.1. Skilgreining: Vaxandi/minnkandi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning">4.4.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#minnkandieoae">4.4.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id5">4.4.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id6">4.4.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fyrstu-afleiu-prof">4.4.6. Fyrstu afleiðu próf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#kupni">4.4.7. Kúpni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-kupt-og-hvelft">4.4.8. Skilgreining: Kúpt og hvelft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-kupt-og-hvelft">4.4.9. Dæmi: Kúpt og hvelft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#annarrar-afleiu-prof">4.4.10. Annarrar afleiðu próf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-beygjuskilapunktur">4.4.11. Skilgreining: Beygjuskilapunktur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-beygjuskilapunktur">4.4.12. Dæmi: Beygjuskilapunktur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#abending-jafngildi">4.4.13. Ábending: Jafngildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samantekt">4.4.14. Samantekt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#afellur">4.5. Aðfellur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-lofella">4.5.1. Skilgreining: Lóðfella</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-lafella">4.5.2. Skilgreining: Láfella</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-skafella">4.5.3. Skilgreining: Skáfella</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-lofella-og-lafella">4.5.4. Dæmi: Lóðfella og láfella</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-lofella-og-skafella">4.5.5. Dæmi: Lóðfella og skáfella</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#abending-foll-sem-sveiflast-og-foll-sem-nalgast-stougt">4.5.6. Ábending: Föll sem sveiflast og föll sem nálgast stöðugt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#a-teikna-graf-falls">4.6. Að teikna graf falls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#hagnytingar-i-bestun">4.7. Hagnýtingar í bestun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-afleiur-til-a-leysa-bestunarverkefni">4.7.1. Dæmi: Afleiður til að leysa bestunarverkefni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#regla-de-lhopital">4.8. Regla de l’Hôpital</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#regla-de-lhopital-einhlia-utgafa">4.8.1. Regla de l’Hôpital, einhliða útgáfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id7">4.8.2. Regla de l’Hôpital</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi">4.8.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#regla-de-lhopital-infty-utgafa">4.8.4. Regla de l’Hôpital, <span class="math notranslate nohighlight">\(\infty\)</span>-útgáfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#regla-de-lhopital-tvihlia-utgafa">4.8.5. Regla de l’Hôpital, tvíhliða útgáfa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#afer-newtons">4.9. Aðferð Newtons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#tolulegar-vs-analytiskar-aferir">4.9.1. Tölulegar vs. analytískar aðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#hvernig-virkar-afer-newtons">4.9.2. Hvernig virkar aðferð Newtons?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-afer-newtons">4.9.3. Setning: Aðferð Newtons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#daemi-afer-newtons">4.9.4. Dæmi: Aðferð Newtons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#hva-gaeti-klikka">4.9.5. Hvað gæti klikkað?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#stofnfoll">4.10. Stofnföll</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Heildun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#stofnfoll">5.1. Stofnföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#andstaean-vi-diffrun">5.1.1. Andstæðan við diffrun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-stofnfall">5.1.2. Skilgreining: Stofnfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-form-stofnalla">5.1.3. Setning: Form stofnalla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-stofnfall">5.1.4. Dæmi: Stofnfall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oakvein-heildi">5.2. Óákveðin heildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-oakvei-heildi">5.2.1. Skilgreining: Óákveðið heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-veldisregla-fyrir-heildi">5.2.2. Setning: Veldisregla fyrir heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#abending-gagnleg-oeiginleg-heildi-og-afleiur">5.2.3. Ábending: Gagnleg óeiginleg heildi og afleiður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-oeiginleg-heildi">5.2.4. Reiknireglur: Óeiginleg heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-summuregla">5.2.5. Dæmi: Summuregla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-margfoldun-me-fasta">5.2.6. Dæmi: Margföldun með fasta</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diffurjofnur">5.3. Diffurjöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#agreinanlegar-diffurjofnur">5.3.1. Aðgreinanlegar diffurjöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-agreinanleg-diffurjafna">5.3.2. Dæmi: Aðgreinanleg diffurjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-oagreinanleg-diffurjafa">5.3.3. Dæmi: Óaðgreinanleg diffurjafa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upphafsgildisverkefni">5.3.4. Upphafsgildisverkefni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-upphafsgildisverkefni-me-agreinanlegri-diffurjofnu">5.3.5. Dæmi: Upphafsgildisverkefni með aðgreinanlegri diffurjöfnu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nalgun-svaea">5.4. Nálgun svæða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summuvirkinn-sigma">5.4.1. Summuvirkinn <span class="math notranslate nohighlight">\(\Sigma\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-summuvirkinn">5.4.2. Reiknireglur: Summuvirkinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">5.4.3. Nálgun svæða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-skipting">5.4.4. Skilgreining: Skipting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-nalgun-me-vinstri-endapunkti">5.4.5. Setning: Nálgun með vinstri endapunkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-nalgun-me-vinstri-endapunkti">5.4.6. Dæmi: Nálgun með vinstri endapunkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-nalgun-me-haegri-endapunkti">5.4.7. Setning: Nálgun með hægri endapunkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-nalgun-me-haegri-endapunkti">5.4.8. Dæmi: Nálgun með hægri endapunkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd-fjoldi-retthyrninga">5.4.9. Athugasemd: Fjöldi rétthyrninga</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-riemann-summa">5.4.10. Skilgreining: Riemann summa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-flatarmal-svaeis">5.4.11. Setning: Flatarmál svæðis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-undir-og-yfirsumma">5.4.12. Skilgreining: Undir- og yfirsumma</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#akvein-heildi">5.5. Ákveðin heildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">5.6. Heildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#oformleg-skilgreining-a-heildi-jakvaes-falls">5.6.1. Óformleg skilgreining á heildi jákvæðs falls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">5.6.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oformleg-skilgreining-a-heildi-falls">5.6.3. Óformleg skilgreining á heildi falls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#undir-og-yfirsummur">5.7. Undir- og yfirsummur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-a-finna-heildi">5.7.1. Dæmi: Að finna heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-undirsumma">5.7.2. Skilgreining: Undirsumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-yfirsumma">5.7.3. Skilgreining: Yfirsumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-heildi">5.7.4. Skilgreining: Heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eiginleikar-heildisins">5.8. Eiginleikar heildisins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning">5.8.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.8.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-heildismorkunum-snui-vi">5.8.3. Skilgreining: Heildismörkunum snúið við</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">5.8.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">5.8.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">5.8.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning">5.8.7. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">5.8.8. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-4">5.8.9. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-mealgildissetning-fyrir-heildi">5.8.10. Setning: Meðalgildissetning fyrir heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#undirstousetning-staerfraeigreiningarinnar">5.9. Undirstöðusetning stærðfræðigreiningarinnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-og-setning-fall-skilgreint-me-heildi">5.9.1. Skilgreining og setning: Fall skilgreint með heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-undirstousetning-staerfraeigreiningar-fyrri-hluti">5.9.2. Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">5.9.3. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hjalparsetning">5.9.4. Hjálparsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-undirstousetning-staerfraeigreiningar-seinni-hluti">5.9.5. Setning: Undirstöðusetning stærðfræðigreiningar, seinni hluti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rithattur">5.9.6. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#aferir-vi-a-reikna-stofnfoll">5.10. Aðferðir við að reikna stofnföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#verkfaerin">5.10.1. Verkfærin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd">5.10.2. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innsetning">5.10.3. Innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notkun-a-innsetningu">5.10.4. Notkun á innsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notkun-a-innsetningu-me-morkum">5.10.5. Notkun á innsetningu með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ofug-innsetning">5.10.6. Öfug innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notkun-a-ofugri-innsetningu">5.10.7. Notkun á öfugri innsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ofug-innsetning-me-morkum">5.10.8. Öfug innsetning með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlutheildun">5.10.9. Hlutheildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlutheildun-me-morkum">5.10.10. Hlutheildun með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stofnbrotaliun">5.10.11. Stofnbrotaliðun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#daemi-1">5.10.11.1. Dæmi 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#daemi-2">5.10.11.2. Dæmi 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#daemi-3">5.10.11.3. Dæmi 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#daemi-4">5.10.11.4. Dæmi 4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#daemi-5">5.10.11.5. Dæmi 5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samantekt">5.10.11.6. Samantekt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oeiginleg-heildi">5.11. Óeiginleg heildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-oeiginleg-heildi-i">5.11.1. Skilgreining: Óeiginleg heildi I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi">5.11.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-oeiginleg-heildi-i-framhald">5.11.3. Skilgreining: Óeiginleg heildi I, framhald</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-oeiginleg-heildi-ii">5.11.4. Skilgreining: Óeiginleg heildi II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">5.11.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">5.11.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">5.11.7. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Heildun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#id1">6.1. Heildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#oformleg-skilgreining-a-heildi-jakvaes-falls">6.1.1. Óformleg skilgreining á heildi jákvæðs falls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining">6.1.2. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#oformleg-skilgreining-a-heildi-falls">6.1.3. Óformleg skilgreining á heildi falls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#undir-og-yfirsummur">6.2. Undir- og yfirsummur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#daemi-a-finna-heildi">6.2.1. Dæmi: Að finna heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-undirsumma">6.2.2. Skilgreining: Undirsumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-yfirsumma">6.2.3. Skilgreining: Yfirsumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-heildi">6.2.4. Skilgreining: Heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#eiginleikar-heildisins">6.3. Eiginleikar heildisins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning">6.3.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id2">6.3.2. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-heildismorkunum-snui-vi">6.3.3. Skilgreining: Heildismörkunum snúið við</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id3">6.3.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id4">6.3.5. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id5">6.3.6. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#fylgisetning">6.3.7. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id6">6.3.8. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#index-3">6.3.9. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-mealgildissetning-fyrir-heildi">6.3.10. Setning: Meðalgildissetning fyrir heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#undirstousetning-staerfraeigreiningarinnar">6.4. Undirstöðusetning stærðfræðigreiningarinnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-og-setning-fall-skilgreint-me-heildi">6.4.1. Skilgreining og setning: Fall skilgreint með heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-undirstousetning-staerfraeigreiningar-fyrri-hluti">6.4.2. Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#stofnfoll">6.5. Stofnföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-stofnfall">6.5.1. Skilgreining: Stofnfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id8">6.5.2. Fylgisetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hjalparsetning">6.5.3. Hjálparsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-undirstousetning-staerfraeigreiningar-seinni-hluti">6.5.4. Setning: Undirstöðusetning stærðfræðigreiningar, seinni hluti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#rithattur">6.5.5. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#aferir-vi-a-reikna-stofnfoll">6.6. Aðferðir við að reikna stofnföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#verkfaerin">6.6.1. Verkfærin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#athugasemd">6.6.2. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#innsetning">6.6.3. Innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#notkun-a-innsetningu">6.6.4. Notkun á innsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#notkun-a-innsetningu-me-morkum">6.6.5. Notkun á innsetningu með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#ofug-innsetning">6.6.6. Öfug innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#notkun-a-ofugri-innsetningu">6.6.7. Notkun á öfugri innsetningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#ofug-innsetning-me-morkum">6.6.8. Öfug innsetning með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hlutheildun">6.6.9. Hlutheildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hlutheildun-me-morkum">6.6.10. Hlutheildun með mörkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#stofnbrotaliun">6.6.11. Stofnbrotaliðun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#oeiginleg-heildi">6.7. Óeiginleg heildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-oeiginleg-heildi-i">6.7.1. Skilgreining: Óeiginleg heildi I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#daemi">6.7.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-oeiginleg-heildi-i-framhald">6.7.3. Skilgreining: Óeiginleg heildi I, framhald</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-oeiginleg-heildi-ii">6.7.4. Skilgreining: Óeiginleg heildi II</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id10">6.7.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id11">6.7.6. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id12">6.7.7. Setning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Rúmmál, massi og massamiðja</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#rummal-lengd-og-flatarmal">7.1. Rúmmál, lengd og flatarmál</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-rumskika">7.1.1. Rúmmál rúmskika</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-keilu">7.1.2. Rúmmál keilu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-snus-snui-um-x-as">7.1.3. Rúmmál snúðs, snúið um <span class="math notranslate nohighlight">\(x\)</span>-ás</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-snus-me-gati">7.1.4. Rúmmál snúðs með gati</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#rummal-snus-snui-um-y-as">7.1.5. Rúmmál snúðs, snúið um <span class="math notranslate nohighlight">\(y\)</span>-ás</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#lengd-grafs">7.1.6. Lengd grafs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#flatarmal-snuflatar-snui-um-x-as">7.1.7. Flatarmál snúðflatar, snúið um <span class="math notranslate nohighlight">\(x\)</span>-ás</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#flatarmal-snuflatar-snui-um-y-as">7.1.8. Flatarmál snúðflatar, snúið um <span class="math notranslate nohighlight">\(y\)</span>-ás</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#massi">7.2. Massi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#massi-virs">7.2.1. Massi vírs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#massi-plotu">7.2.2. Massi plötu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#massi-rumskika">7.2.3. Massi rúmskika</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#massamija">7.3. Massamiðja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skilgreining-massamija-punktmassa">7.3.1. Skilgreining: Massamiðja punktmassa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skilgreining-massamija">7.3.2. Skilgreining: Massamiðja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#skilgreining-massamija-plotu">7.3.3. Skilgreining: Massamiðja plötu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#setning-pappusar-i">7.3.4. Setning Pappusar, I</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#setning-pappusar-ii">7.3.5. Setning Pappusar, II</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Diffurjöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html#rummal-massi-og-massamija">9. Rúmmál, massi og massamiðja</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#index-0">9.1. Diffurjöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-diffurjafna">9.1.1. Skilgreining: Diffurjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi">9.1.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-agreinanleg-diffurjafna">9.1.3. Skilgreining: Aðgreinanleg diffurjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-agreinanlega-diffurjofnu">9.1.4. Dæmi um aðgreinanlega diffurjöfnu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#linulegar-fyrsta-stigs-diffurjofnur">9.2. Línulegar fyrsta stigs diffurjöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-linuleg-diffurjafna">9.2.1. Skilgreining: Línuleg diffurjafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#index-4">9.2.2. Línulegar fyrsta stigs diffurjöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#linulegar-annars-stigs-diffurjofnur-me-fastastula">9.3. Línulegar annars stigs diffurjöfnur með fastastuðla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining">9.3.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skilgreining-kennijafna">9.3.2. Skilgreining: Kennijafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#setning">9.3.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#stigs-ohlidrud">9.3.4. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id4">9.3.5. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#agiskanir">9.4. Ágiskanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#agiskun">9.4.1. Ágiskun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#samantekt">9.5. Samantekt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#askiljanlegar-jofnur">9.5.1. Aðskiljanlegar jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linulegar-fyrsta-stigs-jofnur">9.5.2. Línulegar fyrsta stigs jöfnur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linulegar-annars-stigs-jofnur-me-fastastula">9.5.3. Línulegar annars stigs jöfnur með fastastuðla</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">10. Vigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#index-0">10.1. Vigrar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">11. Fylkjareikningur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#fylki">11.1. Fylki</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki.html">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#vifangsefni">Viðfangsefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#samanburur-a-koflum-i-notunum-og-adams-calculus">Samanburður á köflum í nótunum og Adams Calculus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#fragangur-skiladaema">Frágangur skiladæma</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#itarefni">Ítarefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#forrit">Forrit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vidauki.html#a-laera-staerfraei">Að læra stærðfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#a-lesa">Að lesa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#a-reikna">Að reikna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#einbeiting">Einbeiting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vidauki.html#id2">Frágangur skiladæma</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ordaskra.html">Orðaskrá</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræðigreining I (STÆ104G)</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li><span class="section-number">5. </span>Heildun</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="heildun">
+<h1><span class="section-number">5. </span>Heildun<a class="headerlink" href="#heildun" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>Nauðsynleg undirstaða</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="kafli02.html#markgildi"><span class="std std-ref">Skilgreiningar á markgildi</span></a>. Sjá einnig <a class="reference external" href="https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html">undirstöðuatriði um markgildi</a>.</p></li>
+<li><p><a class="reference internal" href="kafli03.html#afleidur"><span class="std std-ref">Afleiður</span></a>.  Sjá einnig <a class="reference external" href="https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html">undirstöðuatriði um afleiður</a>.</p></li>
+<li><p><a class="reference internal" href="kafli03.html#setning-3-3-1"><span class="std std-ref">Reiknireglur fyrir afleiður</span></a>, sér í lagi <a class="reference internal" href="kafli03.html#kedjuregla"><span class="std std-ref">keðjureglan</span></a>.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<blockquote class="epigraph">
+<div><p><em>„You cannot pass,” he said. The orcs stood still, and a dead silence fell. “I am a servant of the Secret Fire, wielder of the flame of Anor. You cannot pass. The dark fire will not avail you, flame of Udûn. Go back to the Shadow! You cannot pass.“</em></p>
+<p>– Gandalf, The Fellowship of the Ring</p>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote class="epigraph">
+<div><p><em>But you can pass this course.</em></p>
+<p>– Hulda</p>
+</div></blockquote>
+<hr class="docutils" />
+<span class="target" id="id1"></span><div class="section" id="stofnfoll">
+<span id="index-1"></span><h2><span class="section-number">5.1. </span>Stofnföll<a class="headerlink" href="#stofnfoll" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="andstaean-vi-diffrun">
+<h3><span class="section-number">5.1.1. </span>Andstæðan við diffrun<a class="headerlink" href="#andstaean-vi-diffrun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við höfum nú skoðað hvernig hægt er að finna afleiður ýmissa falla. En ef okkur
+er gefin afleiða, hvernig getum við vitað hvert upprunalega fallið var? Ef við
+vitum einungis afleiðu falls þá er talað um að finna <em>stofnfallið</em>.</p>
+</div>
+<div class="section" id="skilgreining-stofnfall">
+<h3><span class="section-number">5.1.2. </span>Skilgreining: Stofnfall<a class="headerlink" href="#skilgreining-stofnfall" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er skilgreint á bili <span class="math notranslate nohighlight">\(I\)</span>. Fall
+<span class="math notranslate nohighlight">\(F\)</span> kallast <a href="http://www.stae.is/os/leita/antiderivative." class="tooltip" target="_blank">stofnfall<span>en: <i>antiderivative.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fyrir <span class="math notranslate nohighlight">\(f\)</span> á
+bilinu <span class="math notranslate nohighlight">\(I\)</span> ef <span class="math notranslate nohighlight">\(F'(x)=f(x)\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\)</span> í <span class="math notranslate nohighlight">\(I\)</span>.</p>
+</div>
+<div class="section" id="setning-form-stofnalla">
+<h3><span class="section-number">5.1.3. </span>Setning: Form stofnalla<a class="headerlink" href="#setning-form-stofnalla" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(F\)</span> vera stofnfall <span class="math notranslate nohighlight">\(f\)</span> yfir bilið <span class="math notranslate nohighlight">\(I\)</span>. Þá gildi:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Fyrir sérhvern fasta <span class="math notranslate nohighlight">\(C\)</span> er fallið <span class="math notranslate nohighlight">\(F(x)+C\)</span> einnig stofnfall fyrir <span class="math notranslate nohighlight">\(f\)</span> yfir <span class="math notranslate nohighlight">\(I\)</span>.</p></li>
+<li><p>Ef <span class="math notranslate nohighlight">\(G\)</span> er stofnfall <span class="math notranslate nohighlight">\(f\)</span> yfir <span class="math notranslate nohighlight">\(I\)</span> þá er til fasti <span class="math notranslate nohighlight">\(C\)</span> þannig að <span class="math notranslate nohighlight">\(G(x)=F(x)+C\)</span> yfir <span class="math notranslate nohighlight">\(I\)</span>.</p></li>
+</ol>
+</div></blockquote>
+<p>Með öðrum orðum þá er <span class="math notranslate nohighlight">\(F(x)+C\)</span> almennt form stofnfalla fyrir <span class="math notranslate nohighlight">\(f\)</span> yfir <span class="math notranslate nohighlight">\(I\)</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Þar sem sérhvert fall <span class="math notranslate nohighlight">\(f(x)\)</span> sem á sér stofnfall á sér fleiri en eitt stofnfall
+þá segjum við að stofnföll séu <em>ekki ótvírætt ákvörðuð</em>. Yfirleitt leyfum við okkur þó
+að velja fastann <span class="math notranslate nohighlight">\(C=0\)</span> og tölum því um að <span class="math notranslate nohighlight">\(F(x)=x^2\)</span> sé stofnfallið fyrir <span class="math notranslate nohighlight">\(f(x)=2x\)</span>.
+Þó er ekkert því til fyrirstöðu að velja <span class="math notranslate nohighlight">\(C=1\)</span> og segja að <span class="math notranslate nohighlight">\(F(x)=x^2+1\)</span> sé
+stofnfall fyrir <span class="math notranslate nohighlight">\(f(x)=2x\)</span>.</p>
+</div>
+</div>
+<div class="section" id="daemi-stofnfall">
+<h3><span class="section-number">5.1.4. </span>Dæmi: Stofnfall<a class="headerlink" href="#daemi-stofnfall" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(f(x)=3x^2\)</span> á sér stofnfallði <span class="math notranslate nohighlight">\(F(x)=x^3\)</span> af því <span class="math notranslate nohighlight">\(F'(x)=3x^2\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)=\frac{1}{x}\)</span> á sér stofnfallði <span class="math notranslate nohighlight">\(F(x)=\ln(x)\)</span> af því <span class="math notranslate nohighlight">\(F'(x)=\frac{1}{x}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)=\cos(x)\)</span> á sér stofnfallði <span class="math notranslate nohighlight">\(F(x)=\sin(x)\)</span> af því <span class="math notranslate nohighlight">\(F'(x)=\cos(x)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)=e^x\)</span> á sér stofnfallði <span class="math notranslate nohighlight">\(F(x)=e^x\)</span> af því <span class="math notranslate nohighlight">\(F'(x)=e^x\)</span>.</p></li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="oakvein-heildi">
+<h2><span class="section-number">5.2. </span>Óákveðin heildi<a class="headerlink" href="#oakvein-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Lítum nú á formlega rithátt stofnfalla og skoðum eiginleika þeirra.
+Þessir eiginleikar gera okkur kleyft að finna stofnföll flóknari falla.
+Ef við höfum fall <span class="math notranslate nohighlight">\(f\)</span> þá má nota ritháttinn <span class="math notranslate nohighlight">\(f'(x)\)</span> eða
+<span class="math notranslate nohighlight">\(\frac{df}{dx}\)</span> til að tákna afleiðu fallsins. Ef <span class="math notranslate nohighlight">\(F\)</span> er
+stofnfall <span class="math notranslate nohighlight">\(f\)</span>, þá getum við sagt að <span class="math notranslate nohighlight">\(F(x)+C\)</span> sé algengasta leiðin
+til að tákna stofnfall <span class="math notranslate nohighlight">\(f\)</span> og ritað</p>
+<div class="math notranslate nohighlight">
+\[\int f(x) dx = F(x) + C.\]</div>
+<p>Táknið <span class="math notranslate nohighlight">\(\int\)</span> er kallað <em>heildistákn</em> og <span class="math notranslate nohighlight">\(\int f(x) dx\)</span> er kallað
+<em>óákveðið heildi</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Mismunandi er eftir skólum hvaða orð eru notuð til að tala um <em>derivatives</em> og
+<em>antiderivatives/integrals</em>. Sem dæmi má nefna:</p>
+<ol class="arabic simple">
+<li><p>Í MR og víðar er talað um að diffra og tegra. Nanforðin eru þá diffur og tegur.</p></li>
+<li><p>Víða er talað um að heilda og deilda og nafnorðin heildun og deildun, sem formlegri tilraun til að íslenska orðin, en orðið diffur kemur af orðinu <strong>differ</strong>ernation og tegur er dregið af orðinu in<strong>tegra</strong>l.</p></li>
+<li><p>Víðast hvar eru orðin afleiða og stofnfall notuð að einhverju leyti.</p></li>
+</ol>
+</div>
+<div class="section" id="skilgreining-oakvei-heildi">
+<h3><span class="section-number">5.2.1. </span>Skilgreining: Óákveðið heildi<a class="headerlink" href="#skilgreining-oakvei-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Fyrir fallið <span class="math notranslate nohighlight">\(f\)</span> er <em>óákveðna heildi</em> fallsins táknað</p>
+<div class="math notranslate nohighlight">
+\[\int f(x) dx.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(F\)</span> er stofnfall <span class="math notranslate nohighlight">\(f\)</span> þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[\int f(x) dx = F(x)+C.\]</div>
+<p>Hér er <span class="math notranslate nohighlight">\(f(x)\)</span> kallað heildisstofn og <span class="math notranslate nohighlight">\(x\)</span> breytan sem heildar er
+með tilliti til.</p>
+</div>
+<div class="section" id="setning-veldisregla-fyrir-heildi">
+<h3><span class="section-number">5.2.2. </span>Setning: Veldisregla fyrir heildi<a class="headerlink" href="#setning-veldisregla-fyrir-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(n \neq -1\)</span> gildir að</p>
+<div class="math notranslate nohighlight">
+\[\int x^n dx = \frac{x^{n+1}}{n+1}+C.\]</div>
+</div>
+<div class="section" id="abending-gagnleg-oeiginleg-heildi-og-afleiur">
+<h3><span class="section-number">5.2.3. </span>Ábending: Gagnleg óeiginleg heildi og afleiður<a class="headerlink" href="#abending-gagnleg-oeiginleg-heildi-og-afleiur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<table class="colwidths-given docutils align-default" id="id15">
+<caption><span class="caption-text">Óeiginleg heildi og afleiður sem gott er að kannast við</span><a class="headerlink" href="#id15" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Afleiða</strong></p></td>
+<td><p><strong>Óeiginlegt heildi</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} k = 0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int k dx = kx+C\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} x^n = nx^{n-1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int x^n dx = \frac{x^{n+1}}{n+1}+C \text{ fyrir } n \neq -1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \ln(|x|)=\frac{1}{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int \frac{1}{x} dx = \ln(|x|)+C\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} e^x = e^x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int e^x dx = e^x+C\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \sin(x) = \cos(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int \cos(x) dx = \sin(x)+C\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \cos(x) = -\sin(x)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int \sin(x) dx = -\cos(x)+C\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \tan(x) = \frac{1}{\cos^2(x)}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int e^x dx = e^x+C\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \sin^{-1}(x) = \frac{1}{\sqrt{1-x^2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int \frac{1}{\sqrt{1-x^2}} dx = \sin^{-1}(x)+C\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \cos^{-1}(x) = -\frac{1}{\sqrt{1-x^2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int -\frac{1}{\sqrt{1-x^2}} dx = \cos^{-1}(x)+C\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \tan^{-1}(x) = \frac{1}{1+x^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int \frac{1}{1+x^2} dx = \tan^{-1}(x)+C\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="reiknireglur-oeiginleg-heildi">
+<h3><span class="section-number">5.2.4. </span>Reiknireglur: Óeiginleg heildi<a class="headerlink" href="#reiknireglur-oeiginleg-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Látum <span class="math notranslate nohighlight">\(F\)</span> og <span class="math notranslate nohighlight">\(G\)</span> vera stofnföll <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> og <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span>.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><strong>Summuregla:</strong> <span class="math notranslate nohighlight">\(\int (f(x) \pm g(x)) dx=  F(x) \pm G(x) + C\)</span></p></li>
+<li><p><strong>Margföldun með fasta:</strong> <span class="math notranslate nohighlight">\(\int kf(x) dx = k F(x) + C\)</span></p></li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="daemi-summuregla">
+<h3><span class="section-number">5.2.5. </span>Dæmi: Summuregla<a class="headerlink" href="#daemi-summuregla" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\int \frac{x+1}{x} dx = \int \left(\frac{x}{x}+\frac{1}{x}\right) dx = \int \left(1 + \frac{1}{x}\right) dx = x + \ln(|x|)+C\]</div>
+</div>
+<div class="section" id="daemi-margfoldun-me-fasta">
+<h3><span class="section-number">5.2.6. </span>Dæmi: Margföldun með fasta<a class="headerlink" href="#daemi-margfoldun-me-fasta" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\int \frac{4}{x^2} dx = \int 4x^{-2} dx = -4x^{-1} + C\]</div>
+</div>
+</div>
+<div class="section" id="diffurjofnur">
+<h2><span class="section-number">5.3. </span>Diffurjöfnur<a class="headerlink" href="#diffurjofnur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Diffurjafna er jafna sem sýnir tengsl eins eða fleiri falla við afleiður sínar. Til dæmis</p>
+<div class="math notranslate nohighlight">
+\[f'(x)=2xe^x.\]</div>
+<p>Það að leysa diffurjöfnu snýst um að ákvarða fallið eða föllin. Lausnin við diffurjöfnunni
+hér að ofan er t.a.m.</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x2e^x-2e^x+C\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(C\)</span> er fasti. Diffurjöfnur hafa almennt ekki ótvírætt ákvarðaðar lausnir nema
+gefnar séu fleiri upplýsingar. Ef við hefðum t.a.m. fengið þær upplýsingar að
+<span class="math notranslate nohighlight">\(f(0)=3\)</span> þá gætum við séð að</p>
+<div class="math notranslate nohighlight">
+\[f(0)=0\cdot 2e^0 - 2e^0 + C = -2 + C = 3.\]</div>
+<p>Með því að einangra <span class="math notranslate nohighlight">\(C\)</span> fæst að <span class="math notranslate nohighlight">\(C=3+2 = 5\)</span> og lausnin væri því</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x2e^x-2e^x+5.\]</div>
+<p>þessar upplýsingar, þ.e. <span class="math notranslate nohighlight">\(f(0)=5\)</span> eru kallaðar <em>upphafgildi</em> og eru svona
+diffurjöfnur því gjarnan kallaðar upphafsgildisverkefni.</p>
+<p>Diffurjöfnur eru eitt mikilvægasta málefni stærðfræðigreiningar og eitt helsta viðfangsefni þeirra sem hagnýta
+stærðfræði eins og verkfræðingar og eðlisfræðingar. Almennt er <em>mjög erfitt</em>
+að leysa diffurjöfnur og eru margar þeirra jafnvel óleysanlegar með analytískum
+aðferðum. Þó er auðveldara að leysa sumar gerðir af diffurjöfnum en aðrar.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Við munum hér kafa mjög grunnt í óravíddir diffurjafna og aðeins skoða þær
+allra auðveldustu. Mikilvægt er að hafa í huga að diffurjöfnur eru gríðarlega mikilvægar í stærðfræði
+og margt sem verður látið ósagt um þær. Þetta á einungis að gefa nemendum
+hugmynd um hvernig hægt er að nota heildi á hagnýtan hátt til að leysa raunveruleg
+verkefni.</p>
+</div>
+<div class="section" id="agreinanlegar-diffurjofnur">
+<h3><span class="section-number">5.3.1. </span>Aðgreinanlegar diffurjöfnur<a class="headerlink" href="#agreinanlegar-diffurjofnur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gefum okkur að eitthvað fall <span class="math notranslate nohighlight">\(y=F(x)\)</span> uppfylli að <span class="math notranslate nohighlight">\(F'(x)=f(x)\)</span>, þ.e.
+orðum þá er <span class="math notranslate nohighlight">\(F(x)\)</span> stofnfall <span class="math notranslate nohighlight">\(f(x)\)</span>. Við vitume ekki hvað <span class="math notranslate nohighlight">\(F(x)\)</span> er
+en við þekkjum <span class="math notranslate nohighlight">\(f(x)\)</span>. Við gætum einnig ritað þetta svona</p>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{dx}=f(x).\]</div>
+<p>Svona diffurjafna kallst <em>aðgreinanleg diffurjafna</em> af því hana má skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[dy = f(x)dx\]</div>
+<p>þar sem við erum einungis með <span class="math notranslate nohighlight">\(y\)</span> vinstra megin og einungis með <span class="math notranslate nohighlight">\(x\)</span> hægra megin.
+Við höfum m.ö.o. aðskilið breytistærðir diffurjöfnunnar. Þetta er einstaklega þægileg
+gerð diffurjafna því þetta má leysa með því að heilda báðar hliðar jöfnunnar.</p>
+<div class="math notranslate nohighlight">
+\[\int dy = \int f(x) dx \Leftrightarrow y = \int f(x) dx\]</div>
+<p>og þar sem að <span class="math notranslate nohighlight">\(y=F(x)\)</span> þá þekkjum við nú gildi <span class="math notranslate nohighlight">\(F(x)\)</span>, af því gefnu
+að við kunnum að heilda <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+</div>
+<div class="section" id="daemi-agreinanleg-diffurjafna">
+<h3><span class="section-number">5.3.2. </span>Dæmi: Aðgreinanleg diffurjafna<a class="headerlink" href="#daemi-agreinanleg-diffurjafna" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á diffurjöfnuna <span class="math notranslate nohighlight">\(\frac{dy}{dx} = 6x^2\)</span>. Hún er aðgreinanleg þar sem
+að hana má rita sem</p>
+<div class="math notranslate nohighlight">
+\[dy = 6x^2 dx.\]</div>
+<p>Við getum nú heildað báðar hliðar og fengið að</p>
+<div class="math notranslate nohighlight">
+\[y = \int 6x^2 dx = 2x^3 + C.\]</div>
+</div>
+<div class="section" id="daemi-oagreinanleg-diffurjafa">
+<h3><span class="section-number">5.3.3. </span>Dæmi: Óaðgreinanleg diffurjafa<a class="headerlink" href="#daemi-oagreinanleg-diffurjafa" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við höfum diffurjöfnuna <span class="math notranslate nohighlight">\(\frac{dy}{dx}=e^{xy}\)</span> þá er engin leið fyrir okkur að
+aðgreina diffurjöfnuna þannig að við séum einungis með <span class="math notranslate nohighlight">\(y\)</span> vinstra megin
+og <span class="math notranslate nohighlight">\(x\)</span> hægra megin jafnaðarmerkisins. Hún er því ekki aðgreinanleg.</p>
+</div>
+<div class="section" id="upphafsgildisverkefni">
+<h3><span class="section-number">5.3.4. </span>Upphafsgildisverkefni<a class="headerlink" href="#upphafsgildisverkefni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við erum heppin og fáum upphafsgildisverkefni þar sem diffurjafnan er aðgreinanleg
+þá getum við leyst hana nokkuð auðveldlega. Það fyrsta sem þarf að gera að að aðgreina
+diffurjöfnuna og nota svo upphafsgildið til að finna ótvírætt ákvarðaða lausn.</p>
+</div>
+<div class="section" id="daemi-upphafsgildisverkefni-me-agreinanlegri-diffurjofnu">
+<h3><span class="section-number">5.3.5. </span>Dæmi: Upphafsgildisverkefni með aðgreinanlegri diffurjöfnu<a class="headerlink" href="#daemi-upphafsgildisverkefni-me-agreinanlegri-diffurjofnu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Leysum verkefnið</p>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{dx} = \sin(x), \quad y(0)=5.\]</div>
+<p>Þessi diffurjafna er aðgreinanleg og því fáum við að</p>
+<div class="math notranslate nohighlight">
+\[y = \int \sin(x)dx = -\cos(x) + C.\]</div>
+<p>Við getum nú notfært okkur að <span class="math notranslate nohighlight">\(y(0)=5\)</span> og fengið að</p>
+<div class="math notranslate nohighlight">
+\[y(0) = -\cos(0)+C = -1+C=5.\]</div>
+<p>Ef við einangrum <span class="math notranslate nohighlight">\(C\)</span> fæst að <span class="math notranslate nohighlight">\(C=6\)</span>. Lausnin er því</p>
+<div class="math notranslate nohighlight">
+\[y=-\cos(x)+6.\]</div>
+</div>
+</div>
+<div class="section" id="nalgun-svaea">
+<h2><span class="section-number">5.4. </span>Nálgun svæða<a class="headerlink" href="#nalgun-svaea" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="summuvirkinn-sigma">
+<h3><span class="section-number">5.4.1. </span>Summuvirkinn <span class="math notranslate nohighlight">\(\Sigma\)</span><a class="headerlink" href="#summuvirkinn-sigma" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Það getur verið óhentugt að skrifa út langar sumur, t.a.m.</p>
+<div class="math notranslate nohighlight">
+\[1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20.\]</div>
+<p>Til þess að komast hjá því að skrifa út alla liðima í langri summu, sér í lagi
+þar sem allir liðirnir fylgja einhverri einhverri reglu (t.d. hækka allir um einn),
+getur verið heppilegt að grípa til summuvirkjans <span class="math notranslate nohighlight">\(\Sigma\)</span>. Stafurinn <span class="math notranslate nohighlight">\(\Sigma\)</span>
+er grískur og kallast sigma. Þetta er nánar til tekið stóra sigma en litla sigma
+er <span class="math notranslate nohighlight">\(\sigma\)</span>. Summumerkinu fylgir oftast summuvísir sem tiltekur hversu
+oft þú vilt leggja saman, þ.e. hvað eru margir liðir í summunni þinni. Þá er
+t.a.m. summan <span class="math notranslate nohighlight">\(\sum_{i=1}^{20}\)</span> með 20 liðum en <span class="math notranslate nohighlight">\(\sum_{i=21}^{30}\)</span> með
+10 liðum.</p>
+<p>Summuna hér að ofan mætti skrifa með</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^{10} i.\]</div>
+<p>Hún byrjar þá á því að láta <span class="math notranslate nohighlight">\(i=1\)</span>, í næsta skrefi leggur hún við
+<span class="math notranslate nohighlight">\(i=2\)</span> og svo koll af kolli upp í <span class="math notranslate nohighlight">\(i=20\)</span>. Almennt form summu er</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n a_i\]</div>
+<p>þar sem sérhver liður <span class="math notranslate nohighlight">\(a_i\)</span> tekur eitthvað gildi háð summuvísinum <span class="math notranslate nohighlight">\(i\)</span>
+og hættir ekki að leggja saman fyrr en komið er upp í <span class="math notranslate nohighlight">\(n\)</span>. Þannig að</p>
+<div class="math notranslate nohighlight">
+\[a_1 + a_2 + \ldots + a_n = \sum_{i=1}^n a_i.\]</div>
+</div>
+<div class="section" id="reiknireglur-summuvirkinn">
+<h3><span class="section-number">5.4.2. </span>Reiknireglur: Summuvirkinn<a class="headerlink" href="#reiknireglur-summuvirkinn" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=1}^n c = nc\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=1}^n ca_i = c \sum_{i=1}^n a_i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=1}^n (a_i \pm b_i) = \sum_{i=1}^n a_i \pm \sum_{i=1}^n b_i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{i=1}^n a_i = \sum_{i=1}^m a_i + \sum_{i=m+1}^n a_i\)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">5.4.3. </span>Nálgun svæða<a class="headerlink" href="#id2" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Lítum á jákvætt fall <span class="math notranslate nohighlight">\(f(x)\)</span> sem skilgreint er á lokaða bilinu <span class="math notranslate nohighlight">\([a,b]\)</span>.
+Við viljum nálga svæðið <span class="math notranslate nohighlight">\(A\)</span> sem markast af <span class="math notranslate nohighlight">\(x\)</span>-ásnum, línunum <span class="math notranslate nohighlight">\(x=a\)</span>
+og <span class="math notranslate nohighlight">\(x=b\)</span> og ferli fallsins <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<a class="reference internal image-reference" href="_images/PMA_svaedi_undir_ferli.png"><img alt="_images/PMA_svaedi_undir_ferli.png" class="align-center" src="_images/PMA_svaedi_undir_ferli.png" style="width: 75%;" /></a>
+<p>Spurningin er <em>hvernig má nálga flatarmál svæðisins undir þessum ferli?</em></p>
+<p>Við byrjum á því að skipta bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> upp í <span class="math notranslate nohighlight">\(n\)</span> hlutbil af jafnri
+lengd, <span class="math notranslate nohighlight">\(\frac{b-a}{n}\)</span>. Við gerum þetta með því að velja punkta með jöfnu
+bili <span class="math notranslate nohighlight">\(x_, x_1, x_2, \dots, x_n\)</span> þar sem <span class="math notranslate nohighlight">\(x_0=a\)</span>, <span class="math notranslate nohighlight">\(x_n=b\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[x_i - x_{i-1} = \frac{b-a}{n}.\]</div>
+<p>Þá má tákna lengd hvers undirbils með</p>
+<div class="math notranslate nohighlight">
+\[\Delta x = \frac{b-a}{n}.\]</div>
+</div>
+<div class="section" id="skilgreining-skipting">
+<h3><span class="section-number">5.4.4. </span>Skilgreining: Skipting<a class="headerlink" href="#skilgreining-skipting" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Mengi punkta <span class="math notranslate nohighlight">\(P=\{x_0,x_1,\dots,x_n\}\)</span> þar sem <span class="math notranslate nohighlight">\(a&lt;x_0&lt;x_1&lt;\dots &lt; x_n=b\)</span>
+sem skiptir bilinu [a,b] í hlutbil á forminu <span class="math notranslate nohighlight">\([x_0,x_1], [x_1,x_2], \dots, [x_{n-1},x_n]\)</span>
+kallast <em>skipting</em> bilsins <span class="math notranslate nohighlight">\([a,b]\)</span>. Ef hlutbilin hafa öll sömu lengd, er
+myndar mengi punktanna <em>reglulega skiptingu</em> bilsins <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<p>Reglulega skiptingu bils má svo nota sem grunninn að því að meta svæði undir ferli.</p>
+</div>
+<div class="section" id="setning-nalgun-me-vinstri-endapunkti">
+<h3><span class="section-number">5.4.5. </span>Setning: Nálgun með vinstri endapunkti<a class="headerlink" href="#setning-nalgun-me-vinstri-endapunkti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Á sérhverju hlutbili <span class="math notranslate nohighlight">\([x_{i-1},x_{i}]\)</span> fyrir <span class="math notranslate nohighlight">\(i=1,2,\dots n\)</span> búum við til
+rétthyrning með breiddina <span class="math notranslate nohighlight">\(\Delta x\)</span> og hæðina <span class="math notranslate nohighlight">\(f(x_{i-1})\)</span>, þ.e. fallgildið
+í vinstri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings <span class="math notranslate nohighlight">\(f(x_{i-1})\cdot x_i\)</span>.
+Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
+flatarmál svæðisins <span class="math notranslate nohighlight">\(A\)</span>. Við notum ritháttinn <span class="math notranslate nohighlight">\(L_n\)</span> til að tákna að
+þetta sé nálgun með vinstri endapunkti (<span class="math notranslate nohighlight">\(L\)</span> fyrir e. <em>left</em>) með <span class="math notranslate nohighlight">\(n\)</span>
+hlutbilum. Formúlan er því</p>
+<div class="math notranslate nohighlight">
+\[A \approx L_n = \sum_{i=1}^n f(x_{i-1})\cdot \Delta x.\]</div>
+<a class="reference internal image-reference" href="_images/PMA_L6.png"><img alt="_images/PMA_L6.png" class="align-center" src="_images/PMA_L6.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="daemi-nalgun-me-vinstri-endapunkti">
+<h3><span class="section-number">5.4.6. </span>Dæmi: Nálgun með vinstri endapunkti<a class="headerlink" href="#daemi-nalgun-me-vinstri-endapunkti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Myndin hér að ofan notar <span class="math notranslate nohighlight">\(n=5\)</span> hlutbil til að nálga flatarmál svæðisins
+sem myndast á milli línanna <span class="math notranslate nohighlight">\(x=1\)</span> og <span class="math notranslate nohighlight">\(x=6\)</span>, er fyrir ofan <span class="math notranslate nohighlight">\(x\)</span>-ásinn
+og undir ferli fallsins <span class="math notranslate nohighlight">\(f(x)=\cos(x)+3\)</span>. Sérhvert hlutbil hefur lengdina
+<span class="math notranslate nohighlight">\(\Delta x = 1\)</span>. Hæð rétthyrninganna má reikna með <span class="math notranslate nohighlight">\(\cos(x)+3\)</span>
+fyrir <span class="math notranslate nohighlight">\(x=1,\dots,5\)</span> og er (frá vinstri til hægri)
+<span class="math notranslate nohighlight">\(3,54\)</span>, <span class="math notranslate nohighlight">\(2,58\)</span>, <span class="math notranslate nohighlight">\(2,01\)</span>, <span class="math notranslate nohighlight">\(2,35\)</span>, og <span class="math notranslate nohighlight">\(3,28\)</span>. Þar sem
+lengd bilanna er <span class="math notranslate nohighlight">\(1\)</span> þá er þetta jafnframt flatarmál rétthyrninganna þar sem
+<span class="math notranslate nohighlight">\((\cos(x_i)+3) \cdot \Delta x = (\cos(x_i)+3) \cdot 1 = \cos(x_i)\)</span>. Því fæst að
+nálgun á flatarmáli <span class="math notranslate nohighlight">\(A\)</span> sé</p>
+<div class="math notranslate nohighlight">
+\[L_5 = 3,54 + 2,58 + 2,01 + 2,35 + 3,28 =13,76.\]</div>
+<p>Raunverulegt flatarmál svæðisins er <span class="math notranslate nohighlight">\(A = 15-\sin(1)+\sin(6)\approx 13,88\)</span>.
+Skekkjan er því <span class="math notranslate nohighlight">\(13,88-13,76=0,12\)</span> eða u.þ.b. <span class="math notranslate nohighlight">\(0,9\%\)</span> munur, sem
+hlýtur að teljast nokkuð gott miðað við nálgun sem notar ansi fá hlutbil.</p>
+<a class="reference internal image-reference" href="_images/PMA_nalgun_svaedis_L.png"><img alt="_images/PMA_nalgun_svaedis_L.png" class="align-center" src="_images/PMA_nalgun_svaedis_L.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="setning-nalgun-me-haegri-endapunkti">
+<h3><span class="section-number">5.4.7. </span>Setning: Nálgun með hægri endapunkti<a class="headerlink" href="#setning-nalgun-me-haegri-endapunkti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Á sérhverju hlutbili <span class="math notranslate nohighlight">\([x_{i-1},x_{i}]\)</span> fyrir <span class="math notranslate nohighlight">\(i=1,2,\dots n\)</span> búum við til
+rétthyrning með breiddina <span class="math notranslate nohighlight">\(\Delta x\)</span> og hæðina <span class="math notranslate nohighlight">\(f(x_{1})\)</span>, þ.e. fallgildið
+í hægri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings <span class="math notranslate nohighlight">\(f(x_{i-1})\cdot x_i\)</span>.
+Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
+flatarmál svæðisins <span class="math notranslate nohighlight">\(A\)</span>. Við notum ritháttinn <span class="math notranslate nohighlight">\(R_n\)</span> til að tákna að
+þetta sé nálgun með vinstri endapunkti (<span class="math notranslate nohighlight">\(R\)</span> fyrir e. <em>right</em>) með <span class="math notranslate nohighlight">\(n\)</span>
+hlutbilum. Formúlan er því</p>
+<div class="math notranslate nohighlight">
+\[A \approx R_n = \sum_{i=1}^n f(x_{i})\cdot \Delta x.\]</div>
+<a class="reference internal image-reference" href="_images/PMA_H6.png"><img alt="_images/PMA_H6.png" class="align-center" src="_images/PMA_H6.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="daemi-nalgun-me-haegri-endapunkti">
+<h3><span class="section-number">5.4.8. </span>Dæmi: Nálgun með hægri endapunkti<a class="headerlink" href="#daemi-nalgun-me-haegri-endapunkti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við nálgum nú sama svæði og hér að ofan nema nú hafa rétthyrningarnir
+hæð sem svarar til fallgildis <span class="math notranslate nohighlight">\(f(x)=\cos(x)+3\)</span> í hægri endapunkti,
+þ.e. <span class="math notranslate nohighlight">\(\cos(x)+3\)</span> þar sem <span class="math notranslate nohighlight">\(x=2,\dots,6\)</span>. Húner því (frá vinstri til hægri)
+<span class="math notranslate nohighlight">\(2,58\)</span>, <span class="math notranslate nohighlight">\(2,01\)</span>, <span class="math notranslate nohighlight">\(2,35\)</span>, <span class="math notranslate nohighlight">\(3,28\)</span>, og <span class="math notranslate nohighlight">\(3,96\)</span>.
+Með sömu rökum og áður fæst því að</p>
+<div class="math notranslate nohighlight">
+\[H_5 = 2,58 + 2,01 + 2,35 + 3,28 + 3,96 = 14,18.\]</div>
+<p>Skekkjan er nú <span class="math notranslate nohighlight">\(14,18-13,88,76=0,3\)</span> eða u.þ.b. <span class="math notranslate nohighlight">\(1\%\)</span> munur.</p>
+<a class="reference internal image-reference" href="_images/PMA_nalgun_svaedis_H.png"><img alt="_images/PMA_nalgun_svaedis_H.png" class="align-center" src="_images/PMA_nalgun_svaedis_H.png" style="width: 75%;" /></a>
+</div>
+<div class="section" id="athugasemd-fjoldi-retthyrninga">
+<h3><span class="section-number">5.4.9. </span>Athugasemd: Fjöldi rétthyrninga<a class="headerlink" href="#athugasemd-fjoldi-retthyrninga" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Því fleiri rétthyrningar sem eru notaðir eru til þess að nálga flatarmál svæðis,
+þeim mun nákvæmari verður nálgunin.</p>
+</div>
+</div>
+<div class="section" id="skilgreining-riemann-summa">
+<h3><span class="section-number">5.4.10. </span>Skilgreining: Riemann summa<a class="headerlink" href="#skilgreining-riemann-summa" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> vera skilgreint á lokaða bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> og <span class="math notranslate nohighlight">\(P\)</span>
+vera reglulega skiptingu á bilinu. Látum <span class="math notranslate nohighlight">\(\Delta x\)</span> vera lengd sérhvers
+hlutbils <span class="math notranslate nohighlight">\([x_{i-1},x_i]\)</span> og fyrir hvert <span class="math notranslate nohighlight">\(i\)</span> látum við <span class="math notranslate nohighlight">\(x_i^*\)</span>
+vera hvaða tölu sem er á bilinu <span class="math notranslate nohighlight">\([x_{i-1},x_i]\)</span>. Þá er Riemann summa
+skilgriend sem</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n f(x_i^*)\Delta x.\]</div>
+</div>
+<div class="section" id="setning-flatarmal-svaeis">
+<h3><span class="section-number">5.4.11. </span>Setning: Flatarmál svæðis<a class="headerlink" href="#setning-flatarmal-svaeis" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> vera samfellt, jákvætt fall á lokaða bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> og
+látum <span class="math notranslate nohighlight">\(\sum_{i=1}^n f(x_i^*) \Delta x\)</span> vera Riemann summu fyrir <span class="math notranslate nohighlight">\(f(x)\)</span>.
+Þá má reikna flatarmál svæðisins sem myndast undir ferli fallsins <span class="math notranslate nohighlight">\(y=f(x)\)</span> á
+bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[A = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i^*) \Delta x.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Unnt er að sanna að ef <span class="math notranslate nohighlight">\(f(x)\)</span> er samfellt fall á lokuðu bili þá skiptir
+ekki máli hvaða mengi <span class="math notranslate nohighlight">\(\{x_i^*\}\)</span> er valið, markgildið er alltaf það sama.
+Við munum þó ekki setja fram sönnun á því hér.</p>
+</div>
+</div>
+<div class="section" id="skilgreining-undir-og-yfirsumma">
+<h3><span class="section-number">5.4.12. </span>Skilgreining: Undir- og yfirsumma<a class="headerlink" href="#skilgreining-undir-og-yfirsumma" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Ef mengið <span class="math notranslate nohighlight">\(\{x_i^*\}\)</span> í Riemann-summu er valið þannig að <span class="math notranslate nohighlight">\(f(x_i^*) \leq f(x)\)</span> fyrir öll <span class="math notranslate nohighlight">\(x \in [x_{i-1},x_i], i = 1,\dots,n\)</span> þá er ljóst að nálgaða flatarmálið er minna en hið raunverulega flatarmál. Þá er Riemann summan kölluð <em>undirsumma</em>.</p></li>
+<li><p>Ef mengið <span class="math notranslate nohighlight">\(\{x_i^*\}\)</span> í Riemann-summu er valið þannig að <span class="math notranslate nohighlight">\(f(x_i^*) \geq f(x)\)</span> fyrir öll <span class="math notranslate nohighlight">\(x \in [x_{i-1},x_i], i = 1,\dots,n\)</span> þá er ljóst að nálgaða flatarmálið er stærra en hið raunverulega flatarmál. Þá er Riemann summan kölluð <em>yfirsumma</em>.</p></li>
+</ol>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="_images/PMA_undirsumma.png" id="figaa"><img alt="_images/PMA_undirsumma.png" class="align-center" id="figaa" src="_images/PMA_undirsumma.png" style="width: 120%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="_images/PMA_yfirsumma.png" id="figbb"><img alt="_images/PMA_yfirsumma.png" class="align-center" id="figbb" src="_images/PMA_yfirsumma.png" style="width: 120%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>HÆTTIR HÉR</p>
+</div>
+</div>
+<div class="section" id="akvein-heildi">
+<h2><span class="section-number">5.5. </span>Ákveðin heildi<a class="headerlink" href="#akvein-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Eitthvað</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h2><span class="section-number">5.6. </span>Heildun<a class="headerlink" href="#id3" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="oformleg-skilgreining-a-heildi-jakvaes-falls">
+<h3><span class="section-number">5.6.1. </span>Óformleg skilgreining á heildi jákvæðs falls<a class="headerlink" href="#oformleg-skilgreining-a-heildi-jakvaes-falls" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:[a,b]\rightarrow {{\mathbb  R}}\)</span> vera fall þannig að
+<span class="math notranslate nohighlight">\(f(x)\geq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\in[a,b]\)</span>.</p>
+<p>Þegar <a href="http://www.stae.is/os/leita/integrate." class="tooltip" target="_blank">heildið<span>en: <i>integrate.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> <span class="math notranslate nohighlight">\(\int_a^b f(x)\,dx\)</span> er skilgreint er útkoman úr því
+flatarmál svæðisins sem liggur á milli <span class="math notranslate nohighlight">\(x\)</span>-ás og grafs fallsins
+(og afmarkast til vinstri af línunni <span class="math notranslate nohighlight">\(x=a\)</span> og til hægri af línunni
+<span class="math notranslate nohighlight">\(x=b\)</span>).</p>
+<p>Ef heildið <span class="math notranslate nohighlight">\(\int_a^b f(x)\,dx\)</span> er skilgreint þá segjum við að
+fallið <span class="math notranslate nohighlight">\(f\)</span> sé <a href="http://www.stae.is/os/leita/integrable." class="tooltip" target="_blank">heildanlegt<span>en: <i>integrable.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> yfir bilið <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<p>Tölurnar <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> kallast <a href="http://www.stae.is/os/leita/limit_of_integration." class="tooltip" target="_blank">heildismörk<span>en: <i>limit of integration.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> heildisins.</p>
+</div>
+<div class="section" id="skilgreining">
+<h3><span class="section-number">5.6.2. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall. Skilgreinum föllin <span class="math notranslate nohighlight">\(f_+\)</span> og
+<span class="math notranslate nohighlight">\(f_-\)</span>, sem bæði hafa sama skilgreiningarsvæði og <span class="math notranslate nohighlight">\(f\)</span>, með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_+(x)=\left\{\begin{array}{ll} f(x) &amp; \text{ef }f(x)\geq 0,\\
+  0 &amp; \text{ef }f(x)&lt;0, \end{array} \right. \qquad
+  f_-(x)=\left\{\begin{array}{ll} 0 &amp; \text{ef }f(x)\geq 0,\\
+  -f(x) &amp; \text{ef }f(x)&lt;0. \end{array}\right.\end{split}\]</div>
+<p>Athugið að <span class="math notranslate nohighlight">\(f(x)=f_+(x)-f_-(x)\)</span>.</p>
+<a class="reference internal image-reference" href="_images/01_fplusminus.png"><img alt="_images/01_fplusminus.png" class="align-center" src="_images/01_fplusminus.png" style="width: 12cm;" /></a>
+</div>
+<div class="section" id="oformleg-skilgreining-a-heildi-falls">
+<h3><span class="section-number">5.6.3. </span>Óformleg skilgreining á heildi falls<a class="headerlink" href="#oformleg-skilgreining-a-heildi-falls" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Takmarkað fall <span class="math notranslate nohighlight">\(f\)</span> er <em>heildanlegt</em> yfir bilið <span class="math notranslate nohighlight">\([a, b]\)</span> ef
+bæði föllin <span class="math notranslate nohighlight">\(f_+\)</span> og <span class="math notranslate nohighlight">\(f_-\)</span> eru heildanleg yfir bilið
+<span class="math notranslate nohighlight">\([a,
+b]\)</span>. Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er heildanlegt þá skilgreinum við heildi þess
+með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx=\int_a^b f_+(x)\,dx-\int_a^b f_-(x)\,dx.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Flatarmálið sem er undir <span class="math notranslate nohighlight">\(x\)</span>-ás reiknast neikvætt.</p>
+</div>
+</div>
+</div>
+<div class="section" id="undir-og-yfirsummur">
+<h2><span class="section-number">5.7. </span>Undir- og yfirsummur<a class="headerlink" href="#undir-og-yfirsummur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="daemi-a-finna-heildi">
+<h3><span class="section-number">5.7.1. </span>Dæmi: Að finna heildi<a class="headerlink" href="#daemi-a-finna-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hvernig getum við fundið flatarmálið <span class="math notranslate nohighlight">\(\int_a^b f(x)\, dx\)</span>?</p>
+<p><strong>Svar:</strong> Við þurfum að nálga flatarmálið með formum sem hafa þekkt
+flatarmál, til dæmis rétthyrningum.</p>
+</div>
+<div class="section" id="skilgreining-undirsumma">
+<span id="index-2"></span><h3><span class="section-number">5.7.2. </span>Skilgreining: Undirsumma<a class="headerlink" href="#skilgreining-undirsumma" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skiptum bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> í <span class="math notranslate nohighlight">\(n\)</span> hlutbil. Á hverju hlutbili komum
+við fyrir rétthyrningi sem liggur undir grafi fallsins, þ.e. hæðin á
+honum er lággildi fallsins á þessum tiltekna hlutbili.</p>
+<a class="reference internal image-reference" href="_images/03_undirsumma.png"><img alt="_images/03_undirsumma.png" class="align-center" src="_images/03_undirsumma.png" style="width: 12cm;" /></a>
+<p>Látum <span class="math notranslate nohighlight">\(u_k\)</span> vera flatarmál rétthyrninganna, þar sem
+<span class="math notranslate nohighlight">\(k=1,\ldots,n\)</span>.</p>
+<p>Við köllum flatarmál allra rétthyrninganna <a href="http://www.stae.is/os/leita/lower_sum." class="tooltip" target="_blank">undirsummu<span>en: <i>lower sum.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fyrir heildið og
+táknum hana með <span class="math notranslate nohighlight">\(U(n)\)</span>, það er <span class="math notranslate nohighlight">\(U(n) = \sum_{k=1}^n u_k\)</span>.</p>
+<p>Þá er augljóslega <span class="math notranslate nohighlight">\(U(n) \leq \int_a^b f(x)\, dx\)</span>.</p>
+<p>Þegar <span class="math notranslate nohighlight">\(n\)</span> stækkar þá fáum við betri og betri nálgun á heildinu.</p>
+</div>
+<div class="section" id="skilgreining-yfirsumma">
+<span id="index-3"></span><h3><span class="section-number">5.7.3. </span>Skilgreining: Yfirsumma<a class="headerlink" href="#skilgreining-yfirsumma" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skiptum bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> í <span class="math notranslate nohighlight">\(n\)</span> hlutbil. Á hverju hlutbili komum
+við fyrir rétthyrning sem er þannig að hæðin á honum er hágildi fallsins
+á þessum tiltekna hlutbili.</p>
+<a class="reference internal image-reference" href="_images/03_yfirsumma.png"><img alt="_images/03_yfirsumma.png" class="align-center" src="_images/03_yfirsumma.png" style="width: 12cm;" /></a>
+<p>Táknum flatarmál hans með <span class="math notranslate nohighlight">\(y_k\)</span>, þar sem <span class="math notranslate nohighlight">\(k=1,\ldots,n\)</span>. Við
+köllum summu flatarmáls allra rétthyrninganna <a href="http://www.stae.is/os/leita/upper_sum." class="tooltip" target="_blank">yfirsummu<span>en: <i>upper sum.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fyrir heildið
+og táknum hana með <span class="math notranslate nohighlight">\(Y(n)\)</span>, það er <span class="math notranslate nohighlight">\(Y(n) = \sum_{k=1}^n y_k\)</span>.</p>
+<p>Þá fæst að <span class="math notranslate nohighlight">\(\int_a^b f(x)\, dx \leq Y(n)\)</span>.</p>
+<p>Þegar <span class="math notranslate nohighlight">\(n\)</span> stækkar þá fáum við betri og betri nálgun á heildinu.</p>
+</div>
+<div class="section" id="skilgreining-heildi">
+<h3><span class="section-number">5.7.4. </span>Skilgreining: Heildi<a class="headerlink" href="#skilgreining-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef til er <strong>nákvæmlega ein</strong> tala <span class="math notranslate nohighlight">\(I\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[U(n) \leq I \leq Y(n),\]</div>
+<p>fyrir allar undirsummur <span class="math notranslate nohighlight">\(U(n)\)</span> og yfirsummur <span class="math notranslate nohighlight">\(Y(n)\)</span> þá er
+fallið <span class="math notranslate nohighlight">\(f\)</span> heildanlegt á <span class="math notranslate nohighlight">\([a,b]\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[I = \int_a^b f(x)\, dx.\]</div>
+<div id="9mBBtzmijFC9sRLFJ9its7Y5xghAaS"></div>
+<script>
+var ggbApp_9mBBtzmijFC9sRLFJ9its7Y5xghAaS = new GGBApplet({
+"appName": "graphing", 
+"width": 700, 
+"height": 400, 
+"material_id":" pCuJwqEE", 
+"preventFocus": true, 
+"enableShiftDragZoom": false 
+}, true);
+ggbAppletId["9mBBtzmijFC9sRLFJ9its7Y5xghAaS"] = ggbApp_9mBBtzmijFC9sRLFJ9its7Y5xghAaS;
+</script><div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Við sögðum ekkert um það hvernig við skiptum bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> í
+<span class="math notranslate nohighlight">\(n\)</span> hlutbil. Það má gera hvernig sem er, það er ekki nauðsynlegt að
+þau séu öll jafn stór. Eina krafan er að stærð allra hlutbila stefni á
+0 þegar <span class="math notranslate nohighlight">\(n\to \infty\)</span>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Við erum ekki bundin af því að skoða rétthyrninga sem með hæð sem er
+há/lággildi fallsins á hverju hlutbili, t.d. má taka miðgildið á hveru
+hlutbili, gildið í hægri endapunkti þess eða gildið í vinstri endapunkti þess.</p>
+<p>Niðurstaðan þegar <span class="math notranslate nohighlight">\(n\to \infty\)</span> verður hins vegar alltaf sú sama,
+þ.e. við nálgumst heildið.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Einnig er mögulegt að nálga heildið með öðrum formum en rétthyrningum,
+t.d.trapisum, og hentar það hugsanlega betur í
+tölulegum útreikningum.</p>
+</div>
+</div>
+</div>
+<div class="section" id="eiginleikar-heildisins">
+<h2><span class="section-number">5.8. </span>Eiginleikar heildisins<a class="headerlink" href="#eiginleikar-heildisins" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="setning">
+<h3><span class="section-number">5.8.1. </span>Setning<a class="headerlink" href="#setning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ol class="lowerroman simple">
+<li><p>Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er samfellt á bilinu <span class="math notranslate nohighlight">\([a, b]\)</span> þá er
+<span class="math notranslate nohighlight">\(f\)</span> heildanlegt yfir bilið <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>Einhalla fall skilgreint á bili <span class="math notranslate nohighlight">\([a,b]\)</span> er heildanlegt.</p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">5.8.2. </span>Setning<a class="headerlink" href="#id4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er heildanlegt yfir bilið <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Þá er</p>
+<div class="math notranslate nohighlight">
+\[\Big|\int_a^b f(x)\,dx\Big|\leq \int_a^b |f(x)|\,dx.\]</div>
+</div>
+<div class="section" id="skilgreining-heildismorkunum-snui-vi">
+<h3><span class="section-number">5.8.3. </span>Skilgreining: Heildismörkunum snúið við<a class="headerlink" href="#skilgreining-heildismorkunum-snui-vi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er heildanlegt yfir bilið <span class="math notranslate nohighlight">\([a,b]\)</span> (hér er
+<span class="math notranslate nohighlight">\(a&lt;b\)</span>) þá skilgreinum við</p>
+<div class="math notranslate nohighlight">
+\[\int_b^a f(x)\,dx=-\int_a^b f(x)\,dx.\]</div>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">5.8.4. </span>Setning<a class="headerlink" href="#id5" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ol class="lowerroman">
+<li><p><span class="math notranslate nohighlight">\(\int_a^a f(x)\,dx=0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_a^b f(x)\,dx=\int_a^c f(x)\,dx+\int_c^b f(x)\,dx\)</span></p>
+<p>(Hér er náttúrlega forsenda að öll heildin séu skilgreind.)</p>
+</li>
+</ol>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">5.8.5. </span>Setning<a class="headerlink" href="#id6" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> vera föll sem eru heildanleg yfir bilið
+<span class="math notranslate nohighlight">\([a,b]\)</span> og látum <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> vera fasta. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b Af(x)+Bg(x)\,dx=A\int_a^b f(x)\,dx+B\int_a^b g(x)\,dx.\]</div>
+<p>Með öðrum orðum, heildun er línuleg aðgerð.</p>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">5.8.6. </span>Setning<a class="headerlink" href="#id7" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er heildanlegt yfir bilið <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Gerum ráð fyrir að um öll <span class="math notranslate nohighlight">\(x\in [a, b]\)</span> gildi að
+<span class="math notranslate nohighlight">\(f(x)\geq 0\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx\geq 0.\]</div>
+</div>
+<div class="section" id="fylgisetning">
+<h3><span class="section-number">5.8.7. </span>Fylgisetning<a class="headerlink" href="#fylgisetning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<ol class="lowerroman">
+<li><p>Látum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> vera föll sem eru heildanleg yfir
+bilið <span class="math notranslate nohighlight">\([a, b]\)</span>. Gerum ráð fyrir að um öll <span class="math notranslate nohighlight">\(x\in [a, b]\)</span>
+gildi að <span class="math notranslate nohighlight">\(f(x)\leq g(x)\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx\leq \int_a^b g(x)\,dx.\]</div>
+</li>
+<li><p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er heildanlegt yfir bilið
+<span class="math notranslate nohighlight">\([a, b]\)</span>. Ef <span class="math notranslate nohighlight">\(m\)</span> og <span class="math notranslate nohighlight">\(M\)</span> eru fastar þannig að um
+öll <span class="math notranslate nohighlight">\(x\in [a, b]\)</span> gildir að <span class="math notranslate nohighlight">\(m\leq f(x)\leq M\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[m(b-a)= \int_a^b m\,dx \leq  \int_a^b f(x)\,dx \leq \int_a^b M\,dx =M(b-a).\]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id8">
+<h3><span class="section-number">5.8.8. </span>Setning<a class="headerlink" href="#id8" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er heildanlegt yfir bil <span class="math notranslate nohighlight">\([-a, a]\)</span>.</p>
+<ol class="lowerroman">
+<li><p>Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er oddstætt þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_{-a}^a f(x)\,dx=0.\]</div>
+</li>
+<li><p>Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er jafnstætt þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_{-a}^a f(x)\,dx=2\int_0^a f(x)\,dx.\]</div>
+</li>
+</ol>
+</div>
+<div class="section" id="index-4">
+<span id="id9"></span><h3><span class="section-number">5.8.9. </span>Skilgreining<a class="headerlink" href="#index-4" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er heildanlegt yfir bilið <span class="math notranslate nohighlight">\([a, b]\)</span>.
+<a href="http://www.stae.is/os/leita/average_value." class="tooltip" target="_blank">Meðalgildi<span>en: <i>average value.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> fallsins <span class="math notranslate nohighlight">\(f\)</span> á bilinu <span class="math notranslate nohighlight">\([a, b]\)</span> er skilgreint
+sem</p>
+<div class="math notranslate nohighlight">
+\[\bar{f}=\frac{1}{b-a}\int_{a}^b f(x)\,dx.\]</div>
+</div>
+<div class="section" id="setning-mealgildissetning-fyrir-heildi">
+<span id="index-5"></span><h3><span class="section-number">5.8.10. </span>Setning: Meðalgildissetning fyrir heildi<a class="headerlink" href="#setning-mealgildissetning-fyrir-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(f\)</span> sé <strong>samfellt</strong> á bilinu
+<span class="math notranslate nohighlight">\([a, b]\)</span>. Þá er til punktur <span class="math notranslate nohighlight">\(c\)</span> í bilinu <span class="math notranslate nohighlight">\([a, b]\)</span>
+þannig að</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx=(b-a)f(c).\]</div>
+<p>Það er að segja, til er punktur <span class="math notranslate nohighlight">\(c\)</span> í bilinu <span class="math notranslate nohighlight">\([a, b]\)</span> þannig
+að <span class="math notranslate nohighlight">\(f(c)=\bar{f}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="undirstousetning-staerfraeigreiningarinnar">
+<h2><span class="section-number">5.9. </span>Undirstöðusetning stærðfræðigreiningarinnar<a class="headerlink" href="#undirstousetning-staerfraeigreiningarinnar" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining-og-setning-fall-skilgreint-me-heildi">
+<span id="index-6"></span><h3><span class="section-number">5.9.1. </span>Skilgreining og setning: Fall skilgreint með heildi<a class="headerlink" href="#skilgreining-og-setning-fall-skilgreint-me-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er heildanlegt yfir bil <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Fyrir <span class="math notranslate nohighlight">\(x\in[a, b]\)</span> skilgreinum við <span class="math notranslate nohighlight">\(F(x)=\int_a^x f(t)\,dt\)</span>.
+Fallið <span class="math notranslate nohighlight">\(F\)</span> er samfellt á <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Athugið að <span class="math notranslate nohighlight">\(t\)</span> er breytan sem er heildað með tilliti til, en
+<span class="math notranslate nohighlight">\(x\)</span> er haldið föstu á meðan. <span class="math notranslate nohighlight">\(t\)</span> hverfur svo þegar búið er
+að reikna heildið.</p>
+</div>
+</div>
+<div class="section" id="setning-undirstousetning-staerfraeigreiningar-fyrri-hluti">
+<span id="undirstodusetning-fyrri1"></span><span id="index-7"></span><h3><span class="section-number">5.9.2. </span>Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti<a class="headerlink" href="#setning-undirstousetning-staerfraeigreiningar-fyrri-hluti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að fallið <span class="math notranslate nohighlight">\(f\)</span> sé samfellt á bili <span class="math notranslate nohighlight">\(I\)</span> og
+<span class="math notranslate nohighlight">\(a\)</span> sé punktur í <span class="math notranslate nohighlight">\(I\)</span>. Fyrir <span class="math notranslate nohighlight">\(x\)</span> í <span class="math notranslate nohighlight">\(I\)</span>
+skilgreinum við <span class="math notranslate nohighlight">\(F(x)=\int_a^x f(t)\,dt\)</span>. Þá er fallið <span class="math notranslate nohighlight">\(F\)</span>
+diffranlegt og</p>
+<div class="math notranslate nohighlight">
+\[F'(x)=f(x)\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(x\in I\)</span>.</p>
+</div>
+<div class="section" id="id10">
+<h3><span class="section-number">5.9.3. </span>Fylgisetning<a class="headerlink" href="#id10" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera samfellt fall skilgreint á bili <span class="math notranslate nohighlight">\(I\)</span>. Þá er
+til stofnfall fyrir <span class="math notranslate nohighlight">\(f\)</span>
+samkvæmt <a class="reference internal" href="#undirstodusetning-fyrri1"><span class="std std-ref">fyrri hluta undirstöðustöðusetningarinnar</span></a>.</p>
+</div>
+<div class="section" id="hjalparsetning">
+<h3><span class="section-number">5.9.4. </span>Hjálparsetning<a class="headerlink" href="#hjalparsetning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(F\)</span> og <span class="math notranslate nohighlight">\(G\)</span> eru hvor tveggja stofnföll fyrir <span class="math notranslate nohighlight">\(f\)</span> á
+bilinu <span class="math notranslate nohighlight">\(I\)</span>, þá er til fasti <span class="math notranslate nohighlight">\(C\)</span> þannig að
+<span class="math notranslate nohighlight">\(F(x)=G(x)+C\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\)</span> í <span class="math notranslate nohighlight">\(I\)</span>.</p>
+<p><strong>Sönnun</strong>: Þar sem</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}(G(x) - F(x)) = G'(x) - F'(x) = f(x) - f(x) = 0\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(x\in I\)</span> þá er <span class="math notranslate nohighlight">\(G(x)-F(x) = C\)</span> fasti.</p>
+</div>
+<div class="section" id="setning-undirstousetning-staerfraeigreiningar-seinni-hluti">
+<span id="index-8"></span><h3><span class="section-number">5.9.5. </span>Setning: Undirstöðusetning stærðfræðigreiningar, seinni hluti<a class="headerlink" href="#setning-undirstousetning-staerfraeigreiningar-seinni-hluti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> er samfellt fall á bilinu <span class="math notranslate nohighlight">\(I\)</span> og <span class="math notranslate nohighlight">\(G\)</span> er
+eitthvert stofnfall fyrir <span class="math notranslate nohighlight">\(f\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(t)\,dt=G(b)-G(a).\]</div>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Það skiptir ekki máli hvaða stofnfall er valið í setningunni að ofan,
+heildið er alltaf það sama.</p>
+</div>
+</div>
+<div class="section" id="rithattur">
+<h3><span class="section-number">5.9.6. </span>Ritháttur<a class="headerlink" href="#rithattur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Þegar <span class="math notranslate nohighlight">\(F\)</span> er stofnfall fyrir <span class="math notranslate nohighlight">\(f\)</span> þá ritum við</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx=F(x)\,\bigg|_a^b= F(b)-F(a),\]</div>
+<p>eða</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx=\left[F(x)\right]_a^b= F(b)-F(a).\]</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="aferir-vi-a-reikna-stofnfoll">
+<h2><span class="section-number">5.10. </span>Aðferðir við að reikna stofnföll<a class="headerlink" href="#aferir-vi-a-reikna-stofnfoll" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Skilgreiningin á heildi með undir- og yfirsummum er gagnleg til að útskýra
+og sanna eiginleika heilda en hún er ekki mjög góð til þess að reikna
+heildi. Því er nauðsynlegt að koma sér upp tólum sem henta betur til þess.
+Ef þau duga ekki þá þurfum við að grípa til tölulegra reikninga.</p>
+<div class="section" id="verkfaerin">
+<h3><span class="section-number">5.10.1. </span>Verkfærin<a class="headerlink" href="#verkfaerin" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Helstu tæknilegu aðferðirnar við að finna stofnföll eru:</p>
+<ol class="lowerroman simple">
+<li><p><a href="http://www.stae.is/os/leita/change_of_variables." class="tooltip" target="_blank">Innsetning<span>en: <i>change of variables.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a> / breytuskipti.</p></li>
+<li><p><a href="http://www.stae.is/os/leita/integration_by_parts." class="tooltip" target="_blank">Hlutheildun<span>en: <i>integration by parts.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.</p></li>
+<li><p><a href="http://www.stae.is/os/leita/expansion_in_partial_fractions." class="tooltip" target="_blank">Stofnbrotaliðun<span>en: <i>expansion in partial fractions.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.</p></li>
+</ol>
+</div>
+<div class="section" id="athugasemd">
+<h3><span class="section-number">5.10.2. </span>Athugasemd<a class="headerlink" href="#athugasemd" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(F\)</span> sé stofnfall <span class="math notranslate nohighlight">\(f\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[F(x)=\int f(t)\,dt.\]</div>
+<p>Svo að</p>
+<div class="math notranslate nohighlight">
+\[F'(x)=f(x).\]</div>
+<p>Látum nú <span class="math notranslate nohighlight">\(g\)</span> vera fall og skoðum fallið <span class="math notranslate nohighlight">\(F\circ g\)</span>. Þá fæst
+samkvæmt <a class="reference internal" href="kafli03.html#kedjuregla"><span class="std std-ref">keðjureglunni</span></a> að</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}F(g(x))=F'(g(x))g'(x) = f(g(x))g'(x),\]</div>
+<p>eða, með því að heilda beggja vegna jafnaðarmerkisins,</p>
+<div class="math notranslate nohighlight">
+\[F(g(x))+C = \int f(g(x))g'(x)\,dx.\]</div>
+</div>
+<div class="section" id="innsetning">
+<span id="index-9"></span><h3><span class="section-number">5.10.3. </span>Innsetning<a class="headerlink" href="#innsetning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við viljum reikna <span class="math notranslate nohighlight">\(\int f(g(x))g'(x)\, dx\)</span> þá dugar okkur að
+geta fundið <span class="math notranslate nohighlight">\(\int f(x)\, dx\)</span>.</p>
+</div>
+<div class="section" id="notkun-a-innsetningu">
+<h3><span class="section-number">5.10.4. </span>Notkun á innsetningu<a class="headerlink" href="#notkun-a-innsetningu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Setjum <span class="math notranslate nohighlight">\(u=g(x)\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\frac{du}{dx}=g'(x)\qquad \text{eða} \qquad du=g'(x)\,dx.\]</div>
+<p>Svo</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{\int f(g(x))g'(x)\,dx}_{\text{Viljum finna}}  =
+\int f(u)\,du
+=
+\underbrace{F(u)+C}_{\text{Getum reiknað}}  =
+\underbrace{F(g(x))+C}_{\text{Svarið}}.\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Ef við breytum heildi með tilliti til <span class="math notranslate nohighlight">\(x\)</span> í heildi með tilliti til
+annarar breytistærðar <span class="math notranslate nohighlight">\(u\)</span> þá verða <strong>öll</strong> <span class="math notranslate nohighlight">\(x\)</span> að hverfa úr
+heildinu við breytinguna.</p>
+</div>
+</div>
+<div class="section" id="notkun-a-innsetningu-me-morkum">
+<h3><span class="section-number">5.10.5. </span>Notkun á innsetningu með mörkum<a class="headerlink" href="#notkun-a-innsetningu-me-morkum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Með mörkum þá verður innsetningin svona</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \int_a^b f(g(x))g'(x)\, dx  &amp;=&amp;
+  \int_{x=a}^{x=b} f(u)\, du  =
+  [F(u)]_{x=a}^{x=b}    \\ &amp;=&amp;
+  [F(g(x))]_{x=a}^{x=b}     =
+  F(g(b)) - F(g(a)).\end{aligned}\end{split}\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(A=g(a)\)</span> og <span class="math notranslate nohighlight">\(B=g(b)\)</span> þá getum við eins skrifað þetta
+svona</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\int_a^b f(g(x))g'(x)\, dx  &amp;=&amp;
+\int_{x=a}^{x=b} f(u)\, du  =
+\int_{A}^{B} f(u)\, du    \\ &amp;=&amp;
+[F(u)]_A^B      =
+F(B) - F(A).\end{aligned}\end{split}\]</div>
+</div>
+<div class="section" id="ofug-innsetning">
+<span id="index-10"></span><h3><span class="section-number">5.10.6. </span>Öfug innsetning<a class="headerlink" href="#ofug-innsetning" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Reiknum <span class="math notranslate nohighlight">\(\int f(x)\, dx\)</span>, með því að finna hugsanlega flóknara
+heildi sem við getum reiknað</p>
+<div class="math notranslate nohighlight">
+\[\int f(g(u))g'(u)\, du.\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Athugið að hér þurfum við að finna heppilegt <span class="math notranslate nohighlight">\(g\)</span>. Það
+er ekki alltaf augljóst hvaða <span class="math notranslate nohighlight">\(g\)</span> er hægt að nota.</p>
+</div>
+</div>
+<div class="section" id="notkun-a-ofugri-innsetningu">
+<h3><span class="section-number">5.10.7. </span>Notkun á öfugri innsetningu<a class="headerlink" href="#notkun-a-ofugri-innsetningu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Setjum <span class="math notranslate nohighlight">\(x=g(u)\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\frac{dx}{du}=g'(u)\qquad\quad dx=g'(u)\,du.\]</div>
+<p>Sem gefur að</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{\int f(x)\,dx}_{\text{Viljum finna}}  =
+\int f(g(u))g'(u)\,du
+=
+\underbrace{F(u) + C}_{\text{Getum reiknað}}
+= \underbrace{F(g^{-1}(x)) + C}_{\text{Svarið}}.\]</div>
+</div>
+<div class="section" id="ofug-innsetning-me-morkum">
+<h3><span class="section-number">5.10.8. </span>Öfug innsetning með mörkum<a class="headerlink" href="#ofug-innsetning-me-morkum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við öfuga innsetningu þarf að passa að breyta mörkunum. Það er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\int_a^b f(x)\,dx    &amp;= \int_{x=a}^{x=b} f(g(u))g'(u)\,du  \\
+&amp;= [F(u)]_{x=a}^{x=b} = [F(g^{-1}(x))]_a^b = F(g^{-1}(b)) - F(g^{-1}(a)).\end{aligned}\end{split}\]</div>
+<p>Eða ef <span class="math notranslate nohighlight">\(a=g(A)\)</span> og <span class="math notranslate nohighlight">\(b=g(B)\)</span> (það er <span class="math notranslate nohighlight">\(g^{-1}(a) = A\)</span> og
+<span class="math notranslate nohighlight">\(g^{-1}(b) = B\)</span>),</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx  = \int_A^B f(g(u))g'(u)\,du= [F(u)]_A^B = F(B) - F(A).\]</div>
+</div>
+<div class="section" id="hlutheildun">
+<span id="index-11"></span><h3><span class="section-number">5.10.9. </span>Hlutheildun<a class="headerlink" href="#hlutheildun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Munum að ef <span class="math notranslate nohighlight">\(u\)</span> og <span class="math notranslate nohighlight">\(v\)</span> eru föll þá er
+<span class="math notranslate nohighlight">\((u\cdot v)' = u'\cdot v + u \cdot v'\)</span>.</p>
+<p>Notum Undirstöðusetningu stærðfræðigreiningarinnar og heildum beggja
+vegna jafnaðarmerkisins, þá fæst</p>
+<div class="math notranslate nohighlight">
+\[u(x)v(x) = \int (u(x)v(x))'\, dx = \int u'(x)v(x)\, dx + \int u(x)v'(x)\, dx.\]</div>
+<p>Það er</p>
+<div class="math notranslate nohighlight">
+\[\int u'(x)v(x)\, dx = u(x)v(x) -  \int u(x)v'(x)\, dx.\]</div>
+</div>
+<div class="section" id="hlutheildun-me-morkum">
+<h3><span class="section-number">5.10.10. </span>Hlutheildun með mörkum<a class="headerlink" href="#hlutheildun-me-morkum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Eða með mörkum</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b u'(x)v(x)\, dx = [u(x)v(x)]_a^b -  \int_a^b u(x)v'(x)\, dx.\]</div>
+<p>(Athugið að þá verða engin <span class="math notranslate nohighlight">\(x\)</span> í svarinu.)</p>
+</div>
+<div class="section" id="stofnbrotaliun">
+<span id="index-12"></span><h3><span class="section-number">5.10.11. </span>Stofnbrotaliðun<a class="headerlink" href="#stofnbrotaliun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef við viljum heilda rætt fall <span class="math notranslate nohighlight">\(\frac{P(x)}{Q(x)}\)</span> þar sem <span class="math notranslate nohighlight">\(P(x)\)</span>
+og <span class="math notranslate nohighlight">\(Q(x)\)</span> eru margliður, getur það reynst þrautinni þyngra, séu margliðurnar
+nægilega flóknar. Stofnbrotaliðun gengur út á það að skrifa ræða fallið
+<span class="math notranslate nohighlight">\(\frac{P(x)}{Q(x)}\)</span> sem línulega samantekt liða á forminu</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{ax+b}, \quad \frac{x}{x^2+bx+c} \quad\text{ og }\quad \frac{1}{x^2+bx+c},\]</div>
+<p>(það er við liðum fallið í stofnbrot sín) því svona liði getum við heildað hvern fyrir sig.</p>
+<p>Erfitt er að setja aðferðina <strong>stofnbrotaliðun</strong> fram með einföldum hætti
+og er það líkast til best gert með dæmum. Lítum á  nokkrar mismunandi útfærslur
+af því hvernig hægt er að liða rætt fall í stofnbrot.</p>
+<p>Athugum að margliða <span class="math notranslate nohighlight">\(p(x)\)</span> er sögð af stigi <span class="math notranslate nohighlight">\(n in \mathbb{N}\)</span> ef hana má rita á forminu</p>
+<div class="math notranslate nohighlight">
+\[a_n x^n + a_{n-1} x^{n-1}+ \dots + a_1 x + a_0.\]</div>
+<p>Ef hana má þátta í</p>
+<div class="math notranslate nohighlight">
+\[p(x) = (x-a_1)(x-a_2) \cdot \dots \cdot (x-a_q)\]</div>
+<p>er hún sögð hafa einfaldar núllstöðvar ef um sérhverja núllstöð hennar <span class="math notranslate nohighlight">\(a_i\)</span> og <span class="math notranslate nohighlight">\(a_j\)</span> gildir
+að <span class="math notranslate nohighlight">\(a_i \neq a_j\)</span> fyrir öll <span class="math notranslate nohighlight">\(i \neq j\)</span>. Ef, á hinn bóginn, til eru tvær eða fleiri núllstöðvar sem uppfylla að
+<span class="math notranslate nohighlight">\(a_i = a_j\)</span> þar sem <span class="math notranslate nohighlight">\(i \neq j\)</span> þá eru þær kallaðar margfaldar núllstöðvar.</p>
+<p>Sem dæmi má taka að margliðuna <span class="math notranslate nohighlight">\(p(x)=x^2-2x+1\)</span> má þátta með samokareglunni í <span class="math notranslate nohighlight">\(p(x)=(x-1)(x-1)\)</span>
+og hefur hún því eina, tvöfalda núllstöð í <span class="math notranslate nohighlight">\(x=1\)</span>. Hins vegar má þátta margliðuna <span class="math notranslate nohighlight">\(q(x)=x^2+5x+6\)</span>
+í <span class="math notranslate nohighlight">\(q(x)=(x+2)(x+3)\)</span> og hefur hún því tvær einfaldar núllstöðvar, <span class="math notranslate nohighlight">\(x=-2\)</span> og <span class="math notranslate nohighlight">\(x=-3\)</span>.</p>
+<div class="section" id="daemi-1">
+<h4><span class="section-number">5.10.11.1. </span>Dæmi 1<a class="headerlink" href="#daemi-1" title="Varanlegur hlekkur á titilinn">¶</a></h4>
+<p><strong>Teljari af stigi</strong> <span class="math notranslate nohighlight">\(m\)</span> <strong>og nefnari af stigi</strong> <span class="math notranslate nohighlight">\(n&gt;m\)</span> <strong>með</strong> <span class="math notranslate nohighlight">\(n\)</span> <strong>einfaldar núllstöðvar.</strong></p>
+<p>Lítum á fallið <span class="math notranslate nohighlight">\(\frac{x+4}{x^2-5x+6}\)</span>. Sjá má að teljarinn er margliða af fyrsta stigi
+en nefnarinn margliða af öðru stigi. Jafnframt má þátta nefnarann í <span class="math notranslate nohighlight">\((x-2)(x-3)\)</span>
+sem segir okkur að nefnarinn hefur tvær einfaldar núllstöðvar í <span class="math notranslate nohighlight">\(x=2\)</span> og <span class="math notranslate nohighlight">\(x=3\)</span>.
+Þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[\frac{x+4}{x^2-5x+6} = \frac{x+4}{(x-2)(x-3)} = \frac{A}{x-2}+\frac{B}{x-3},\]</div>
+<p>þar sem sem <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru einhverjar rauntölur. Tökum sérstaklega eftir því
+að fjöldi liða í stofnbrotaliðuninni er jafn stigi nefnarans. Ef <span class="math notranslate nohighlight">\(P(x)\)</span> er margliða
+af stigi <span class="math notranslate nohighlight">\(m\)</span> og <span class="math notranslate nohighlight">\(Q(x)\)</span> er margliða af stigi stigi <span class="math notranslate nohighlight">\(n&gt;m\)</span> sem hefur
+<span class="math notranslate nohighlight">\(n\)</span> mismunandi (raungildar) núllstöðvar, sem og að stuðullinn fyrir framan
+<span class="math notranslate nohighlight">\(x^n\)</span> er <span class="math notranslate nohighlight">\(1\)</span>, þá gildir almennt fyrir ræða fallið <span class="math notranslate nohighlight">\(\frac{P(x)}{Q(x)}\)</span> að
+stofnbrotaliðun þess verður</p>
+<div class="math notranslate nohighlight">
+\[\frac{P(x)}{Q(x)} = \frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\dots +\frac{A_n}{x-a_n}.\]</div>
+<p>Ákvörðum nú gildi fastanna <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span>. Samnefnum brotin í hægri
+hlið jöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[\frac{x+4}{x^2-5x+6} = \frac{A}{x-2}+\frac{B}{x-3} = \frac{Ax-3A+Bx-2B}{(x-2)(x-3)}.\]</div>
+<p>Með því að bera saman teljara brotanna, sem staðsett eru sitt hvoru megin jafnaðarmerkisins,
+sjáum við að</p>
+<div class="math notranslate nohighlight">
+\[x+4 = Ax-3A+Bx-2B.\]</div>
+<p>Athugum að til þess að þetta sé jafngilt verður að gilda að <span class="math notranslate nohighlight">\(Ax+Bx = x\)</span> og <span class="math notranslate nohighlight">\(-3A-2B=4\)</span>.
+Með því að deila í gegnum fyrri jöfnuna með <span class="math notranslate nohighlight">\(x\)</span> fæst jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+        A+B&amp;=1\\
+        -3A-2B&amp;=4\\
+\end{align*}\end{split}\]</div>
+<p>sem hefur lausnina <span class="math notranslate nohighlight">\(A=-6\)</span> og <span class="math notranslate nohighlight">\(B=7\)</span>. Af þessu sést að</p>
+<div class="math notranslate nohighlight">
+\[\frac{x+4}{x^2-5x+6} = -\frac{6}{x-2}+\frac{7}{x-3}.\]</div>
+</div>
+<div class="section" id="daemi-2">
+<h4><span class="section-number">5.10.11.2. </span>Dæmi 2<a class="headerlink" href="#daemi-2" title="Varanlegur hlekkur á titilinn">¶</a></h4>
+<p><strong>Teljari og nefnari af stigi</strong> <span class="math notranslate nohighlight">\(n\)</span> <strong>og nefnarinn með</strong> <span class="math notranslate nohighlight">\(n\)</span> <strong>einfaldar núllstöðvar.</strong></p>
+<p>Lítum á fallið <span class="math notranslate nohighlight">\(\frac{x^3+2}{x^3-x}\)</span>. Sjá má að bæði teljari og nefnari eru margliður
+af þriðja stigi. Athugum að með því að bæta núlllið á forminu <span class="math notranslate nohighlight">\(+x-x\)</span> við teljarann fæst</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^3-x+x+2}{x^3-x} = \frac{x^3-x}{x^3-x} + \frac{x+2}{x^3-x} = 1 + \frac{x+2}{x^3-x}.\]</div>
+<p>Fastann 1 þarf ekki að liða frekar. Þar sem að brotið <span class="math notranslate nohighlight">\(\frac{x+2}{x^3-x}\)</span> hefur teljara af
+lægra stigi en nefnarinn (tveimur lægra nánar til tekið) sem og að nefnarinn hefur þrjár, einfaldar núllstöðvar,
+getum við stofbrotaliðað það með eftirfarandi hætti.</p>
+<div class="math notranslate nohighlight">
+\[\frac{x+2}{x^3-x} = \frac{x+2}{x(x-1)(x+1)} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{x-1} = \frac{A(x^2-1)+B(x^2+x)+X(x^2-x)}{x(x-1)(x+1)}\]</div>
+<p>þar sem síðasti liður jöfnunnar fæst með því að samnefna brot þess næstseinasta.
+Með því að bera saman teljara fyrsta og síðasta liðs jöfnunnar sést að</p>
+<div class="math notranslate nohighlight">
+\[x+2 = A(x^2-1) + B(x^2+x)+C(x^2-x).\]</div>
+<p>Ef við margföldum upp úr svigum og drögum saman líka liði fæst að</p>
+<div class="math notranslate nohighlight">
+\[x+2 = (A+B+C)x^2 +(B-C)x - A.\]</div>
+<p>Þetta gefur okkurjöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+        A+B+C &amp;= 0\\
+        B-C &amp;=1\\
+        -A &amp;= 2\\
+\end{align*}\end{split}\]</div>
+<p>sem hefur lausnina <span class="math notranslate nohighlight">\(A=-2\)</span>, <span class="math notranslate nohighlight">\(B=\frac{3}{2}\)</span> og <span class="math notranslate nohighlight">\(C=\frac{1}{2}\)</span>.
+Af þessu sést að</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^3+2}{x^3-x} = 1 - \frac{2}{x}+\frac{3}{2(x-1)}+\frac{1}{2(x-1)}.\]</div>
+</div>
+<div class="section" id="daemi-3">
+<h4><span class="section-number">5.10.11.3. </span>Dæmi 3<a class="headerlink" href="#daemi-3" title="Varanlegur hlekkur á titilinn">¶</a></h4>
+<p><strong>Teljari af stigi</strong> <span class="math notranslate nohighlight">\(m\)</span> <strong>og nefnari af stigi</strong> <span class="math notranslate nohighlight">\(n&gt;m\)</span> <strong>stigi með</strong> <span class="math notranslate nohighlight">\(r&lt;n\)</span> <strong>einfaldar núllstöðvar.</strong></p>
+<p>Lítum á fallið <span class="math notranslate nohighlight">\(\frac{x^2+3x+2}{x(x^2+1)}\)</span>. Athugum að teljarinn er
+annars stigs margliða en nefnarinn margliða af þriðja stigi. Hér þarf að gæta
+sérstaklega að því að nefnarinn hefur þó einungis eina, einfalda núllstöð
+í <span class="math notranslate nohighlight">\(x=0\)</span> þar sem að þátturinn <span class="math notranslate nohighlight">\(x^2+1\)</span> hefur engar (raungildar)
+núllstöðvar. Af þessu leiðir að <span class="math notranslate nohighlight">\(\frac{x^2+3x+2}{x(x^2+1)}\)</span> má liða í
+stofnbrot á eftirfarandi vegu.</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2+3x+2}{x(x^2+1)} = \frac{A}{x}+\frac{Bx+C}{x^2+1} = \frac{A(x^2+1)+Bx^2+Cx}{x(x^2+1)}\]</div>
+<p>Með svipuðum hætti og áður berum við saman teljara fyrsta brots og síðasta
+brots jöfnunnar. Sjáum að</p>
+<div class="math notranslate nohighlight">
+\[x^2+3x+2 = A(x^2+1)+Bx^2+Cx.\]</div>
+<p>Með því að leysa upp úr svigum og draga saman líka liði fæst að</p>
+<div class="math notranslate nohighlight">
+\[x^2+3x+2 = (A+B)x^2+Cx+A.\]</div>
+<p>Þetta gefur okkur jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+        A+B &amp;= 1\\
+        C &amp;=3\\
+        A &amp;= 2\\
+\end{align*}\end{split}\]</div>
+<p>sem hefur lausnina <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(B=-1\)</span> og <span class="math notranslate nohighlight">\(C=3\)</span>. Af þessu sést að</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2+3x+2}{x(x^2+1)} = \frac{2}{x} + \frac{-x+3}{x^2+1}.\]</div>
+</div>
+<div class="section" id="daemi-4">
+<h4><span class="section-number">5.10.11.4. </span>Dæmi 4<a class="headerlink" href="#daemi-4" title="Varanlegur hlekkur á titilinn">¶</a></h4>
+<p><strong>Teljari af stigi</strong> <span class="math notranslate nohighlight">\(m\)</span> <strong>og nefnari af stigi</strong> <span class="math notranslate nohighlight">\(n&gt;m\)</span> <strong>stigi með</strong> <span class="math notranslate nohighlight">\(n\)</span> <strong>núllstöðvar, þar af einhverjar fjölfaldar</strong></p>
+<p>Lítum á fallið <span class="math notranslate nohighlight">\(\frac{1}{x(x-1)^2}\)</span>. Ljóst er að teljari er af hærra stigi
+en nefnarinn og nefnarinn hefur einfalda núllstöð í <span class="math notranslate nohighlight">\(x=0\)</span> og tvöfalda
+núllstöð í <span class="math notranslate nohighlight">\(x=1\)</span>. Þá má liða fallið í stofnbrot með eftirfarandi hætti.</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2}.\]</div>
+<p>Tökum sérstaklega eftir því að núllstöðin <span class="math notranslate nohighlight">\(x=1\)</span> er tvöföld og því inniheldur
+stofnbrotaliðunin tvo liði með þáttinn <span class="math notranslate nohighlight">\((x-1)\)</span> í nefnara,
+annars vegar í fyrsta veldi og hins vegar í öðru veldi. Almennt gildir, fyrir
+sérhverja <span class="math notranslate nohighlight">\(r\)</span>-falda núllstöð <span class="math notranslate nohighlight">\(a\)</span> nefnara ræða fallsins
+<span class="math notranslate nohighlight">\(\frac{P(x)}{Q(x)}\)</span>, að stofnbrotaliðun fallsins mun innihalda</p>
+<div class="math notranslate nohighlight">
+\[\frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}+\dots + \frac{A_r}{(x-a)^r}\]</div>
+<p>Með því að samnefna fáum við að</p>
+<div class="math notranslate nohighlight">
+\[\frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2} = \frac{A(x^2-2x+1)+B(x^2-x)+Cx}{x(x-1)^2}.\]</div>
+<p>Með sambærilegum hætti og áður fæst að</p>
+<div class="math notranslate nohighlight">
+\[1 = A(x^2-2x+1)+B(x^2-x)+Cx\]</div>
+<p>og með því að leysa upp úr svigum og draga saman líka liði fæst</p>
+<div class="math notranslate nohighlight">
+\[1 = (A+B) x^2 + (-2A-B+C)x + A.\]</div>
+<p>Því fæst loks jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+        A+B &amp;= 0\\
+        -2A-B+C &amp;=0\\
+        A &amp;= 1\\
+\end{align*}\end{split}\]</div>
+<p>sem hefur lausnina <span class="math notranslate nohighlight">\(A=1\)</span>, <span class="math notranslate nohighlight">\(B=-1\)</span> og <span class="math notranslate nohighlight">\(C=1\)</span>. Af þessu sést að</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{x(x-1)^2} = \frac{1}{x}-\frac{1}{x-1} + \frac{1}{(x-1)^2}\]</div>
+</div>
+<div class="section" id="daemi-5">
+<h4><span class="section-number">5.10.11.5. </span>Dæmi 5<a class="headerlink" href="#daemi-5" title="Varanlegur hlekkur á titilinn">¶</a></h4>
+<p><strong>Teljari af stigi</strong> <span class="math notranslate nohighlight">\(m\)</span> <strong>og nefnari af stigi</strong> <span class="math notranslate nohighlight">\(n&gt;m\)</span> <strong>stigi með</strong> <span class="math notranslate nohighlight">\(r&lt;n\)</span> <strong>núllstöðvar og núllstöðvalausan þátt í veldinu</strong> <span class="math notranslate nohighlight">\(q&gt;1\)</span></p>
+<p>Lítum á fallið <span class="math notranslate nohighlight">\(\frac{x^2+2}{4x^5+4x^3+x}\)</span>. Hér er stig nefnara hærra en stig teljara
+og má þátta hann í <span class="math notranslate nohighlight">\(x(2x^2+1)^2\)</span>. Nú er margliðan <span class="math notranslate nohighlight">\(2x^2+1\)</span> núllstöðvalaus.
+Því má stofnbrotaliða fallið á eftirfarandi vegu.</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2+2}{4x^5+4x^3+x} = \frac{A}{x}+\frac{Bx+C}{2x^2+1}+\frac{Dx+E}{(2x^2+1)^2}\]</div>
+<p>Líkt og áður skulum við veita því sérstakan gaum að þátturinn <span class="math notranslate nohighlight">\((2x^2+1)^2\)</span>
+er í öðru veldi og því hefur stofnbrotaliðunin tvo liði þar sem nefnarinn inniheldur
+margliðuna <span class="math notranslate nohighlight">\(2x^2+1\)</span>, annars vegar í fyrsta veldi og svo hins vegar í öðru
+veldi. Sama almenna regla og áður gildir, ef nefnari fallsins inniheldur núllstöðvalausa
+margliðu <span class="math notranslate nohighlight">\(p(x)^n\)</span> í nefnara, þar sem <span class="math notranslate nohighlight">\(n\)</span> er einhver náttúruleg tala,
+þá mun stofnbrotaliðun fallsins innihalda liðina</p>
+<div class="math notranslate nohighlight">
+\[\frac{A_k}{p(x)^k}, \qquad k=1,2,\dots,n.\]</div>
+<p>Ef við samnefnum brotin í hægri hlið jöfnunnar fæst</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2+2}{4x^5+4x^3+x} = \frac{A(4x^4+4x^2+1)+B(2x^4+x^2)+C(2x^3+x)+Dx^2+Ex}{x(2x^2+1)^2}.\]</div>
+<p>Við getum nú borið saman teljarana og með því að leysa upp úr svigum og draga saman
+líka liði fæst</p>
+<div class="math notranslate nohighlight">
+\[x^2+2 = (4A+2B)x^4 + 2Cx^3 + (4A+2B+D)x^2 + (C+E)x+A.\]</div>
+<p>Því fæst loks jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+        4A+2B &amp;= 0\\
+        2C &amp;=0\\
+        4A+B+D &amp;= 1\\
+        C+E &amp;= 0\\
+        A &amp;= 2\\
+\end{align*}\end{split}\]</div>
+<p>sem hefur lausnina <span class="math notranslate nohighlight">\(A=2\)</span>, <span class="math notranslate nohighlight">\(B=-4\)</span>, <span class="math notranslate nohighlight">\(C=0\)</span>, <span class="math notranslate nohighlight">\(D=-3\)</span> og <span class="math notranslate nohighlight">\(E=0\)</span>.
+Af þessu sést að</p>
+<div class="math notranslate nohighlight">
+\[\frac{x^2+2}{4x^5+4x^3+x} = \frac{2}{x}-\frac{4x}{2x^2+1}-\frac{3x}{(2x^2+1)^2}.\]</div>
+</div>
+<div class="section" id="samantekt">
+<h4><span class="section-number">5.10.11.6. </span>Samantekt<a class="headerlink" href="#samantekt" title="Varanlegur hlekkur á titilinn">¶</a></h4>
+<p>Líkt og áður segir þá er stofnbrotaliðun notuð fyrir ræð föll sem erfitt getur
+reynst að heilda í sínu upprunalega formi. Við stofnbrotaliðun er fallið liðað
+í summu minni þátta og má þá heilda hvern þátt fyrir sig og leysa dæmið þannig
+í fleiri en einfaldari skrefum.</p>
+<p>Nánar er fjallað um stofnbrotaliðun í kafla 6.2 í kennslubókinni.</p>
+<p>Sjá einnig <a class="reference external" href="https://en.wikipedia.org/wiki/Partial_fraction_decomposition#Example_3">wikipedia síðuna um stofnbrotaliðun</a>.
+Þar má t.a.m. sjá allar aðferðirnar, úr dæmunum hér að ofan, notaðar í einu og sama dæminu.</p>
+</div>
+</div>
+</div>
+<div class="section" id="oeiginleg-heildi">
+<span id="index-13"></span><h2><span class="section-number">5.11. </span>Óeiginleg heildi<a class="headerlink" href="#oeiginleg-heildi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<div class="section" id="skilgreining-oeiginleg-heildi-i">
+<h3><span class="section-number">5.11.1. </span>Skilgreining: Óeiginleg heildi I<a class="headerlink" href="#skilgreining-oeiginleg-heildi-i" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera samfellt fall á bilinu <span class="math notranslate nohighlight">\([a, \infty)\)</span>.
+Skilgreinum</p>
+<div class="math notranslate nohighlight">
+\[\int_a^\infty f(x)\,dx=\lim_{R\rightarrow\infty} \int_a^R f(x)\,dx.\]</div>
+<p>Fyrir fall <span class="math notranslate nohighlight">\(f\)</span> sem er samfellt á bili <span class="math notranslate nohighlight">\((-\infty, b]\)</span>
+skilgreinum við</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^b f(x)\,dx=\lim_{R\rightarrow-\infty} \int_R^b f(x)\,dx.\]</div>
+<p>Heildi eins og þau hér að ofan kallast <a href="http://www.stae.is/os/leita/improper_integral." class="tooltip" target="_blank">óeiginlegt heildi<span>en: <i>improper integral.</i><staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink></span></a>.</p>
+<p>Í báðum tilvikum segjum við að óeiginlega heildið sé samleitið ef
+markgildið er til, en ósamleitið ef markgildið er ekki til.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> stefnir ekki á 0 þegar <span class="math notranslate nohighlight">\(x\to \infty\)</span> þá
+er heildið ekki samleitið. En jafnvel þó fallið stefni á
+0 þá er ekki víst að heildið sé samleitið, samanber
+eftirfarandi dæmi.</p>
+</div>
+</div>
+<div class="section" id="daemi">
+<h3><span class="section-number">5.11.2. </span>Dæmi<a class="headerlink" href="#daemi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Heildið <span class="math notranslate nohighlight">\(\int_1^\infty \frac{1}{x^p}\,dx\)</span> er samleitið ef
+<span class="math notranslate nohighlight">\(p&gt;1\)</span> en ósamleitið ef <span class="math notranslate nohighlight">\(p\leq 1\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(p&gt;1\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_1^\infty \frac{1}{x^p}\,dx=\frac{1}{p-1}.\]</div>
+</div>
+<div class="section" id="skilgreining-oeiginleg-heildi-i-framhald">
+<h3><span class="section-number">5.11.3. </span>Skilgreining: Óeiginleg heildi I, framhald<a class="headerlink" href="#skilgreining-oeiginleg-heildi-i-framhald" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er samfellt á öllum rauntalnaásnum.</p>
+<p>Heildi af gerðinni <span class="math notranslate nohighlight">\(\int_{-\infty}^\infty f(x)\,dx\)</span> er sagt
+samleitið ef bæði heildin <span class="math notranslate nohighlight">\(\int_{-\infty}^0 f(x)\,dx\)</span> og
+<span class="math notranslate nohighlight">\(\int_0^\infty f(x)\,dx\)</span> eru samleitin og þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^\infty f(x)\,dx=\int_{-\infty}^0 f(x)\,dx +
+  \int_0^\infty f(x)\,dx.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Það skiptir ekki máli í hvaða punkti heildinu er skipt í tvennt, það má
+velja aðra tölu heldur en 0, útkoman verður alltaf sú sama.</p>
+</div>
+</div>
+<div class="section" id="skilgreining-oeiginleg-heildi-ii">
+<h3><span class="section-number">5.11.4. </span>Skilgreining: Óeiginleg heildi II<a class="headerlink" href="#skilgreining-oeiginleg-heildi-ii" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera samfellt fall á bilinu <span class="math notranslate nohighlight">\((a, b]\)</span> og hugsanlega
+ótakmarkað í grennd við <span class="math notranslate nohighlight">\(a\)</span>. Skilgreinum</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx=\lim_{c\rightarrow a^+} \int_c^b f(x)\,dx.\]</div>
+<p>Fyrir fall <span class="math notranslate nohighlight">\(f\)</span> sem er samfellt á bili <span class="math notranslate nohighlight">\([a, b)\)</span> og hugsanlega
+ótakmarkað í grennd við <span class="math notranslate nohighlight">\(b\)</span> þá skilgreinum við</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx=\lim_{c\rightarrow b^-} \int_a^c f(x)\,dx.\]</div>
+<p>Í báðum tilvikum segjum við að óeiginlega heildið sé samleitið ef
+markgildið er til en ósamleitið ef markgildið er ekki til.</p>
+</div>
+<div class="section" id="id12">
+<h3><span class="section-number">5.11.5. </span>Dæmi<a class="headerlink" href="#id12" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Heildið <span class="math notranslate nohighlight">\(\int_0^1 \frac{1}{x^p}\,dx\)</span> er samleitið ef <span class="math notranslate nohighlight">\(p&lt;1\)</span>
+en ósamleitið ef <span class="math notranslate nohighlight">\(p\geq 1\)</span>. Ef <span class="math notranslate nohighlight">\(p&lt;1\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_0^1
+\frac{1}{x^p}\,dx=\frac{1}{1-p}.\]</div>
+</div>
+<div class="section" id="id13">
+<h3><span class="section-number">5.11.6. </span>Skilgreining<a class="headerlink" href="#id13" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera samfellt fall á bili <span class="math notranslate nohighlight">\((a,\infty)\)</span> og
+ótakmarkað í grennd við <span class="math notranslate nohighlight">\(a\)</span>. Látum <span class="math notranslate nohighlight">\(c\)</span> vera einhverja tölu
+þannig að <span class="math notranslate nohighlight">\(a&lt;c&lt;\infty\)</span>.</p>
+<p>Heildið <span class="math notranslate nohighlight">\(\int_a^\infty f(x)\,dx\)</span> er sagt vera samleitið ef bæði
+heildin <span class="math notranslate nohighlight">\(\int_a^c f(x)\,dx\)</span> og <span class="math notranslate nohighlight">\(\int_c^\infty f(x)\,dx\)</span> eru
+samleitin og þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_{a}^\infty f(x)\,dx=\int_{a}^c f(x)\,dx + \int_c^\infty f(x)\,dx.\]</div>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Það er sama hvað tala <span class="math notranslate nohighlight">\(c\)</span> er valin hér að ofan, útkoman verður
+alltaf sú sama.</p>
+</div>
+<div id="UuDXFANeSFH7Pt6zkfk4YCmiUzrBDP"></div>
+<script>
+var ggbApp_UuDXFANeSFH7Pt6zkfk4YCmiUzrBDP = new GGBApplet({
+"appName": "graphing", 
+"width": 700, 
+"height": 300, 
+"material_id":" 1430547", 
+"preventFocus": true, 
+"enableShiftDragZoom": false 
+}, true);
+ggbAppletId["UuDXFANeSFH7Pt6zkfk4YCmiUzrBDP"] = ggbApp_UuDXFANeSFH7Pt6zkfk4YCmiUzrBDP;
+</script></div>
+<div class="section" id="id14">
+<h3><span class="section-number">5.11.7. </span>Setning<a class="headerlink" href="#id14" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(-\infty\leq a&lt;b\leq \infty\)</span>. Gerum ráð fyrir að föllin
+<span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> séu samfelld á <span class="math notranslate nohighlight">\((a, b)\)</span> og að um öll
+<span class="math notranslate nohighlight">\(x\in (a, b)\)</span> gildi að <span class="math notranslate nohighlight">\(0\leq f(x)\leq g(x)\)</span>.</p>
+<ol class="lowerroman">
+<li><p>Ef heildið <span class="math notranslate nohighlight">\(\int_a^b g(x)\,dx\)</span> er samleitið þá er heildið
+<span class="math notranslate nohighlight">\(\int_a^b f(x)\,dx\)</span> líka samleitið og</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x)\,dx \leq \int_a^b g(x)\,dx.\]</div>
+</li>
+<li><p>Ef heildið <span class="math notranslate nohighlight">\(\int_a^b f(x)\,dx\)</span> er ósamleitið þá er heildið
+<span class="math notranslate nohighlight">\(\int_a^b g(x)\,dx\)</span> líka ósamleitið.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kafli06.html" class="btn btn-neutral float-right" title="6. Heildun" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="kafli04.html" class="btn btn-neutral" title="4. Hagnýting á diffrun" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2018',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+        <script>
+            window.addEventListener("load", function(){
+                for(var i in ggbAppletId){
+                    ggbAppletId[i].inject(i);
+                }
+            });
+        </script>
+
+	
+
+
+
+</body>
+</html>
