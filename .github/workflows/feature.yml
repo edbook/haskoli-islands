@@ -1,0 +1,271 @@
+#----------------------------------------------
+# TODO:
+#   Fix "if" conditions in each job, feels redundant.
+#   There is alot of replication of steps here since Github actions seems limited.
+name: edbook
+on:
+  push:
+    paths-ignore:
+      - "**/README.md"
+    branches-ignore:
+      - main
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-20.04
+    outputs:
+      branch_name: ${{ steps.extract_branch.outputs.branch_name }}
+    steps:
+      #----------------------------------------------
+      # Store current branch name as output for reuse as dir name on remote host
+      #----------------------------------------------
+      - name: Extract branch name
+        id: extract_branch
+        shell: bash
+        run: |
+          echo "::set-output name=branch_name::$(echo ${GITHUB_REF#refs/heads/})"
+      #----------------------------------------------
+      # check-out repo and set-up python
+      #----------------------------------------------
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      #----------------------------------------------
+      # install & configure poetry
+      #----------------------------------------------
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.1.1
+        with:
+          version: "1.1.4"
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      #----------------------------------------------
+      # load cached venv if cache exists
+      #----------------------------------------------
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      #----------------------------------------------
+      # install dependencies if cache does not exist
+      #----------------------------------------------
+      - name: Install dependencies
+        run: poetry install
+        if: steps.cached_poetry_dependencies.outputs.cache-hit != 'true'
+  pre-build:
+    needs: setup
+    name: Pre-build
+    runs-on: ubuntu-20.04
+    outputs:
+      artifact: ${{ steps.zip_build.outputs.artifact }}
+      file_changes: ${{ steps.file_changes.outputs.files }}
+      # analysis_1-is-modified: ${{ steps.check_for_changes.outputs.analysis_1-is-modified }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      #----------------------------------------------
+      # load cached venv if cache exists
+      #----------------------------------------------
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      #----------------------------------------------
+      # Build
+      #----------------------------------------------
+      - uses: actions/checkout@v2
+      - id: file_changes
+        name: File Changes
+        uses: trilom/file-changes-action@v1.2.3
+      - name: test
+        run: |
+          cat $HOME/files_modified.json
+          cat $HOME/files_added.json
+          cat $HOME/files_removed.json
+          echo '${{ steps.file_changes.outputs.files}}'
+          echo '${{ steps.file_changes.outputs.files_modified}}'
+          echo '${{ steps.file_changes.outputs.files_added}}'
+          echo '${{ steps.file_changes.outputs.files_removed}}'
+      # - name: Check for changes
+      #   id: check_for_changes
+      #   run: |
+      #     source .venv/bin/activate
+      #     for dir in projects/*; do
+      #       project_name=$(echo $dir | awk -F'/' '{print $2}')
+      #       if git diff HEAD^ HEAD --exit-code $dir >/dev/null 2>&1
+      #       then
+      #         echo "No changes found in $project_name"
+      #       else
+      #         echo "Changes found in $project_name"
+      #         echo "::set-output name=$project_name-is-modified::$(echo true)"
+      #       fi
+      #     done
+  build-undirbuningur-stae:
+    needs: [setup, pre-build]
+    name: Build undirbuningur-stae
+    runs-on: ubuntu-20.04
+    if: contains(needs.pre-build.outputs.file_changes , 'undirbuningur_stae')
+    outputs:
+      artifact: ${{ steps.zip_build.outputs.artifact }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      #----------------------------------------------
+      # load cached venv if cache exists
+      #----------------------------------------------
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      #----------------------------------------------
+      # Build
+      #----------------------------------------------
+      - name: Build undirbuningur-stae
+        id: build_undirbuningur_stae
+        run: |
+          source .venv/bin/activate
+          sphinx-build -c projects/undirbuningur_stae/ projects/undirbuningur_stae/ artifacts/undirbuningur_stae_build
+          ls -al artifacts
+      - name: zip-build
+        id: zip_build
+        # Use zip instead of tar to support non-tech users that want to download the artifact
+        run: |
+          echo ${{ github.workspace }}
+          ls ${{ github.workspace }}/artifacts
+          export BUILD_PREFIX=build-${{ runner.os }}
+          export BUILD_HASH=${{ hashFiles('artifacts') }}
+          echo ${BUILD_HASH}
+          zip -r "undirbuningur-stae-${BUILD_PREFIX}-${BUILD_HASH}" artifacts/*
+          ls -al ${{ github.workspace }}
+          echo "::set-output name=artifact::$(echo undirbuningur-stae-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
+      #----------------------------------------------
+      # Upload build artifact
+      #----------------------------------------------
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: ${{steps.zip_build.outputs.artifact}}
+  # build-greining-1:
+  #   needs: [setup, pre-build]
+  #   if: needs.pre-build.outputs.analysis_1-is-modified == 'true'
+  #   name: Build Greining-1
+  #   runs-on: ubuntu-20.04
+  #   outputs:
+  #     artifact: ${{ steps.zip_build.outputs.artifact }}
+  #     is-modified: ${{ steps.is_modified.outputs.is-modified }}
+  #   steps:
+  #     - name: Check out repository
+  #       uses: actions/checkout@v2
+  #     - name: Set up python
+  #       uses: actions/setup-python@v2
+  #       with:
+  #         python-version: 3.9
+  #     #----------------------------------------------
+  #     # load cached venv if cache exists
+  #     #----------------------------------------------
+  #     - name: Load cached venv
+  #       id: cached-poetry-dependencies
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: .venv
+  #         key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+  #     #----------------------------------------------
+  #     # Build
+  #     #----------------------------------------------
+  #     - name: Build greining-1
+  #       id: build_greining_1
+  #       run: |
+  #         source .venv/bin/activate
+  #         sphinx-build -c ${{ github.workspace }}/projects/analysis_1/ ${{ github.workspace }}/projects/analysis_1/ ${{ github.workspace }}/artifacts/analysis_1_build
+  #         ls -al ${{ github.workspace }}/artifacts
+  #     - name: zip-build
+  #       id: zip_build
+  #       # Use zip instead of tar to support non-tech users that want to download the artifact
+  #       run: |
+  #         echo ${{ github.workspace }}
+  #         ls ${{ github.workspace }}/artifacts
+  #         export BUILD_PREFIX=build-${{ runner.os }}
+  #         export BUILD_HASH=${{ hashFiles('artifacts') }}
+  #         echo ${BUILD_HASH}
+  #         zip -r "greining-1-${BUILD_PREFIX}-${BUILD_HASH}" artifacts/*
+  #         ls -al ${{ github.workspace }}
+  #         echo "::set-output name=artifact::$(echo greining-1-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
+  #     #----------------------------------------------
+  #     # Upload build artifact
+  #     #----------------------------------------------
+  #     - name: Upload build artifact
+  #       uses: actions/upload-artifact@v2
+  #       with:
+  #         name: artifacts
+  #         path: ${{steps.zip_build.outputs.artifact}}
+  deploy-feature-branch:
+    needs: [setup, pre-build, build-undirbuningur-stae]
+    if: contains(needs.pre-build.outputs.file_changes , 'undirbuningur_stae')
+    name: Deploy feature branch
+    runs-on: ubuntu-20.04
+    steps:
+      #----------------------------------------------
+      # Get build artifact from setup job
+      #----------------------------------------------
+      - name: Get build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: artifacts
+      #----------------------------------------------
+      # Unzip to comply with scp-action
+      #----------------------------------------------
+      - name: Unzip build
+        # greining-1/monorepo-demo/artifacts/analysis_1_build/
+        run: |
+          unzip *.zip && mv ${{ github.workspace }}/artifacts/* ${{ github.workspace }}/
+          ls -al .
+          rm *.zip
+          ls -al .
+      #----------------------------------------------
+      # Delete dir on remote server, upload build tar and extract on remote server.
+      #----------------------------------------------
+      - name: Deploy foundation docs
+        id: deploy_foundation_docs
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.HI_USERNAME }}
+          password: ${{ secrets.HI_PASSWORD }}
+          port: 22
+          rm: true
+          strip_components: 1
+          source: undirbuningur_stae_build/*
+          target: ".public_html/staging/undirbuningur_stae/${{ needs.setup.outputs.branch_name }}"
+      # - name: Deploy analysis-1 docs
+      #   id: deploy_analysis_1_docs
+      #   uses: appleboy/scp-action@master
+      #   if: needs.pre-build.outputs.analysis_1-is-modified == 'true'
+      #   with:
+      #     host: ${{ secrets.SSH_HOST }}
+      #     username: ${{ secrets.HI_USERNAME }}
+      #     password: ${{ secrets.HI_PASSWORD }}
+      #     port: 22
+      #     rm: true
+      #     strip_components: 1
+      #     source: analysis_1_build/*
+      #     target: ".public_html/staging/greining-1/${{ needs.setup.outputs.branch_name }}"
