@@ -17,6 +17,8 @@ import sys
 import os
 import shlex
 
+sys.path.insert(0, os.path.abspath("."))
+sys.path.append(os.path.abspath("../../extensions"))
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -38,7 +40,7 @@ extensions = [
 
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
-#    'katex.katex',
+    #    'katex.katex',
 
     # hieroglyph is used to generate html slides, needs to be installed for use,
     # see https://github.com/nyergler/hieroglyph
@@ -54,28 +56,30 @@ extensions = [
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # Note: sagecell must not be listed before katex.katex
-#    'sagecell.sagecell',
+    #    'sagecell.sagecell',
 
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
     'hoverrole.hoverrole',
 
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
-#    'analytics.analytics',
-#    'scrolldepth.scrolldepth',
+    #    'analytics.analytics',
+    #    'scrolldepth.scrolldepth',
 
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
     # in R and python, with much greater package support than sagecell in R
-#    'datacamp.datacamp',
+    #    'datacamp.datacamp',
 
     # Extension that allows embedding panopto videos from rec.hi.is
-#    'panoptoextension.panopto'
+    #    'panoptoextension.panopto'
 ]
 
 # -- Custom extension options and paths --------------------------------------
 
 katex_path = 'https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js'
-katex_render = 'https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js'
+katex_render = (
+    "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
+)
 render_math = 'rendermath.js'
 katex_css = 'https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css'
 
@@ -92,6 +96,9 @@ ga_id = 'UA-78633732-6'
 enable_custom_scrolldepth = True
 
 # -- Build options ----------------------------------------------------
+
+# If true, `todo` and `todoList` produce output, else they produce nothing.
+todo_include_todos = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -166,9 +173,6 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
-
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -221,7 +225,7 @@ html_static_path = ['_static']
 # typographically correct entities.
 #html_use_smartypants = True
 
-html_add_permalinks = True
+html_permalinks = True
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
 
