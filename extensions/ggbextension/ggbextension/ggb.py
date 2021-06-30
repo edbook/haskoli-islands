@@ -24,7 +24,7 @@ def html_visit_ggb_node(self, node):
     self.body.append("\"appName\": \"graphing\", \n")
     self.body.append("\"width\": "+node['width']+", \n")
     self.body.append("\"height\": "+node['height']+", \n")
-    self.body.append("\"material_id\":\" "+node['id']+"\", \n")
+    self.body.append('"material_id": "'+node['id']+'", \n')
     self.body.append("\"preventFocus\": true, \n")
     self.body.append("\"enableShiftDragZoom\": "+node['zoom_drag']+" \n")
     self.body.append("}, true);\n")
@@ -57,16 +57,16 @@ class GGB(Directive):
         "imgwidth": directives.unchanged,
         "zoom_drag": directives.unchanged,
     }
-    
+
     def run(self):
         node = ggb()
-        node["id"] = self.arguments[0] 
+        node["id"] = self.arguments[0]
         node["width"] = self.options.get("width", "700")
         node["height"] = self.options.get("height", "400")
         node["img"] = self.options.get("img", None)
-        node["imgwidth"] = self.options.get("imgwidth", "8cm") 
+        node["imgwidth"] = self.options.get("imgwidth", "8cm")
         node["zoom_drag"] = self.options.get("zoom_drag", "false")
-        
+
         return [node]
 
 def setup(app):
