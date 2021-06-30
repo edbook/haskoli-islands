@@ -720,3 +720,23 @@ Samkvæmt undirstöðusetningu stærðfræðigreiningar (I) og keðjureglunni f�
 		&= \sin(u(x)) \cdot (\frac{1}{2} x^{-1/2})\\
 		&= \frac{\sin(\sqrt{x})}{2\sqrt{x}}.
 	\end{align}
+
+	Setning: Undirstöðusetning stærðfræðigreiningar (II)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Ef :math:`f(x)`er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
+	eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
+
+	.. math:: \int_a^b f(x) dx = F(b)-F(a).
+
+	.. tip::
+		Nemendur gera sér oft ekki grein fyrir því hversu gríðarlega mikilvæg
+		undirstöðusetning stærðfræðigreiningarinnar er. Það tók stærðfræðinga
+		meira en 500 ár að fínpússa þá tækni sem vísinda- og fræðimenn notast við í
+		dag til að útskýra hegðun ýmissa fyrirbæra.
+		Stærðfræðigreining gerði okkur loksins kleyft að reikna út fjarlægðir í
+		geiminum og kortleggja sporbauga reykistjarna. Vegna hennar varð mögulegt að reikna jaðarkostnað og
+		spá fyrir um heildargróða með einföldum hætti og nákvæmni. Stærðfræðigreiningin gaf verkfræðingum
+		þá fræðilegu þekkingu sem nauðsynleg var svo þeir gætu
+		reiknað svigþol efna og hreyfingu hluta í þrívíðu rúmi. Heimsýn okkar breyttist
+		með tilkomu stærðfræðigreiningar. 
