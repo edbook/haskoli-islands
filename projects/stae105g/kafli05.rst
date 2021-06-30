@@ -739,4 +739,4 @@ Samkvæmt undirstöðusetningu stærðfræðigreiningar (I) og keðjureglunni f�
 		spá fyrir um heildargróða með einföldum hætti og nákvæmni. Stærðfræðigreiningin gaf verkfræðingum
 		þá fræðilegu þekkingu sem nauðsynleg var svo þeir gætu
 		reiknað svigþol efna og hreyfingu hluta í þrívíðu rúmi. Heimsýn okkar breyttist
-		með tilkomu stærðfræðigreiningar. 
+		með tilkomu stærðfræðigreiningar.
