@@ -4,15 +4,15 @@ Afleiður
 .. note::
     **Nauðsynleg undirstaða**
 
-    - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
+    - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/Kafli10.html>`_.
 
-    - :ref:`Samfelldni`. Sjá einnig `undirstöðuatriði um samfelld föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html#id1>`_.
+    - :ref:`Samfelldni`. Sjá einnig `undirstöðuatriði um samfelld föll <https://edbook.hi.is/undirbuningur_stae/Kafli10.html#id1>`_.
 
-    - :ref:`Samskeyting falla <samskeyting>`. Sjá einnig `undirstöðuatriði um um samskeytingu <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#samskeyting-falla>`_.
+    - :ref:`Samskeyting falla <samskeyting>`. Sjá einnig `undirstöðuatriði um um samskeytingu <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#samskeyting-falla>`_.
 
-    - :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#andhverfur-falla>`_.
+    - :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://edbook.hi.is/undirbuningur_stae/Kafli05.html#andhverfur-falla>`_.
 
-    - `Hornaföll, P7 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli07.html>`_.
+    - `Hornaföll, P7 <https://edbook.hi.is/undirbuningur_stae/Kafli07.html>`_.
 
 *He felt that his whole life was some kind of dream and he sometimes wondered whose it was and whether they were enjoying it.*
 

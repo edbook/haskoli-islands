@@ -6,7 +6,7 @@ Runur og raðir
 
   - `Summuvirkinn <https://en.wikipedia.org/wiki/Summation>`_.
 
-  - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
+  - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/Kafli10.html>`_.
 
 *Would it save you a lot of time if I just gave up and went mad now?*
 

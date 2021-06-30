@@ -7,9 +7,9 @@ Rúmmál, massi og massamiðja
 .. note::
 	**Nauðsynleg undirstaða**
 
-  - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
+  - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
 
-  - `Nokkur mikilvæg föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#nokkur-mikilvaeg-foll>`_.
+  - `Nokkur mikilvæg föll <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#nokkur-mikilvaeg-foll>`_.
 
 *Now, the invention of the scientific method and science is, I'm sure
 we'll all agree, the most powerful intellectual idea, the most powerful

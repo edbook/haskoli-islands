@@ -4,9 +4,9 @@ Heildun
 .. note::
 	**Nauðsynleg undirstaða**
 
-	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
+	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/Kafli10.html>`_.
 
-	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
+	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
 
 	- :ref:`Reiknireglur fyrir afleiður <reiknireglura>`, sér í lagi :ref:`keðjureglan <kedjuregla>`.
 

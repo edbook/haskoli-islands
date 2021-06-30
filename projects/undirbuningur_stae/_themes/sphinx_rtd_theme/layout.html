@@ -154,8 +154,7 @@
             VERSION:'{{ release|e }}',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
-            HAS_SOURCE:  {{ has_source|lower }},
-            LINK_SUFFIX: '{{file_suffix}}'
+            HAS_SOURCE:  {{ has_source|lower }}
         };
     </script>
     {%- for scriptfile in script_files %}
@@ -179,6 +178,14 @@
   {% endif %}
 
   {%- block footer %} {% endblock %}
+
+  <script type="text/javascript">
+  <!-- Adds target=_blank to external links -->
+
+  $(document).ready(function () {
+    $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').attr('target', '_blank');
+  });
+  </script>
 
 </body>
 </html>

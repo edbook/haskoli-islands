@@ -4,13 +4,13 @@ Torræð föll
 .. note::
 	**Nauðsynleg undirstaða**
 
-	- `Hornaföll, P7 <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli07.html>`_.
+	- `Hornaföll, P7 <https://edbook.hi.is/undirbuningur_stae/Kafli07.html>`_.
 
-	- :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html#andhverfur-falla>`_.
+	- :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://edbook.hi.is/undirbuningur_stae/Kafli05.html#andhverfur-falla>`_.
 
-	- Sjá einnig `undirstöðuatriði um logra <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#lograr>`_.
+	- Sjá einnig `undirstöðuatriði um logra <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#lograr>`_.
 
-	- Sjá einnig `undirstöðuatriði um náttúrulega veldisvísisfallið og náttúrulega logrann <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn>`_.
+	- Sjá einnig `undirstöðuatriði um náttúrulega veldisvísisfallið og náttúrulega logrann <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn>`_.
 
 *We are stuck with technology when what we really want is just stuff that works.*
 

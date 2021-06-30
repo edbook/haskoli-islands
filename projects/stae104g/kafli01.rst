@@ -4,17 +4,17 @@ Tölur og föll
 .. note::
     **Nauðsynleg undirstaða**
 
-    -  `Undirstöðuatriði tölur og talnakerfi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#talnakerfi>`_.
+    -  `Undirstöðuatriði tölur og talnakerfi <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#talnakerfi>`_.
 
-    -  `Forgangsröðun aðgerða <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#forgangsroun-agera>`_.
+    -  `Forgangsröðun aðgerða <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#forgangsroun-agera>`_.
 
     -  `Reiknireglur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#reiknireglur>`_.
 
-    -  `Brotareikningur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#brotareikningur>`_.
+    -  `Brotareikningur <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#brotareikningur>`_.
 
-    -  `Veldi og rætur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#veldi-og-raetur>`_.
+    -  `Veldi og rætur <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#veldi-og-raetur>`_.
 
-    -  `Sjá undirstöðuatriði um föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli05.html>`_.
+    -  `Sjá undirstöðuatriði um föll <https://edbook.hi.is/undirbuningur_stae/Kafli05.html>`_.
 
 Inngangur
 ---------

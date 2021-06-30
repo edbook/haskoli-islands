@@ -23,35 +23,28 @@
     <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
   {% endif %}
 
+  {# CSS #}
+
   {# OPENSEARCH #}
   {% if not embedded %}
     {% if use_opensearch %}
-      <link rel="search" type="application/opensearchdescription+xml"
-      title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
-      href="{{ pathto('_static/opensearch.xml', 1) }}"/>
+      <link rel="search" type="application/opensearchdescription+xml" title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}" href="{{ pathto('_static/opensearch.xml', 1) }}"/>
     {% endif %}
 
   {% endif %}
 
   {# RTD hosts this file, so just load on non RTD builds #}
-  <!--{% if not READTHEDOCS %}-->
+  {% if not READTHEDOCS %}
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-  <!--{% endif %}-->
+  {% endif %}
 
   {% for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {% endfor %}
 
-  {# CSS #}
-  <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-  <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-  {%- for css in css_files %}
-    {%- if css|attr("rel") %}
-  <link rel="{{ css.rel }}" href="{{ pathto(css.filename, 1) }}" type="text/css"{% if css.title is not none %} title="{{ css.title }}"{% endif %} />
-    {%- else %}
-  <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
-    {%- endif %}
-  {%- endfor %}
+  {% for cssfile in extra_css_files %}
+    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+  {% endfor %}
 
   {%- block linktags %}
     {%- if hasdoc('about') %}
@@ -63,7 +56,7 @@
               href="{{ pathto('genindex') }}"/>
     {%- endif %}
     {%- if hasdoc('search') %}
-        <link rel="search" title="{{ _('Leit') }}" href="{{ pathto('search') }}"/>
+        <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}"/>
     {%- endif %}
     {%- if hasdoc('copyright') %}
         <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}"/>
@@ -84,40 +77,11 @@
   {# Keep modernizr in head - http://modernizr.com/docs/#installing #}
   <script src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
 
-  <!-- eftirfarandi var ekki hja okkur fyrir -->
-  {% if not embedded %}
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'{{ url_root }}',
-            VERSION:'{{ release|e }}',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
-            HAS_SOURCE:  '{{ has_source|lower }}',
-            CONTEXT:     '{{ data_capture_context }}',
-            DATA_CAPTURE_URL: '{{ data_capture_url }}',
-            DATA_CAPTURE_METHOD: '{{ data_capture_method }}',
-            DATA_CAPTURE_SUBJECT_NAME: '{{ data_capture_subject_name }}',
-            DATA_CAPTURE_VERB_NAME: '{{ data_capture_verb_name }}',
-            DATA_CAPTURE_OBJECT_NAME: '{{ data_capture_object_name }}',
-            DATA_CAPTURE_CONTEXT_NAME: '{{ data_capture_context_name }}'
-        };
-    </script>
-    {% block scripts %}
-      <script type="text/javascript" src="_static/embedded_video.js"></script>
-    {% endblock %}
-
-    {%- for scriptfile in script_files %}
-      <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor %}
-
-  {% endif %}
-
 </head>
 
-<body class="wy-body-for-nav">
-  <div class="wy-grid-for-nav">
+<body class="wy-body-for-nav" role="document">
 
+  <div class="wy-grid-for-nav">
 
     {# SIDE NAV, TOGGLES ON MOBILE #}
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -147,6 +111,7 @@
           {% if toctree %}
               {{ toctree }}
           {% else %}
+              <!-- Local TOC -->
               <div class="local-toc">{{ toc }}</div>
           {% endif %}
         {% endblock %}
@@ -158,8 +123,8 @@
 
       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <a href="{{ pathto(master_doc) }}">{{ project }}</a>
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="{{ pathto(master_doc) }}">{{ project }}</a>
       </nav>
 
 
@@ -202,8 +167,7 @@
   {% if not READTHEDOCS %}
     <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
   {% endif %}
-  -->
-  <!--
+
   {# STICKY NAVIGATION #}
   {% if theme_sticky_navigation %}
   <script type="text/javascript">
@@ -213,13 +177,15 @@
   </script>
   {% endif %}
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable({{ 'true' if theme_sticky_navigation|tobool else 'false' }});
-      });
-  </script>
   {%- block footer %} {% endblock %}
 
-</body>
+  <script type="text/javascript">
+  <!-- Adds target=_blank to external links -->
 
+  $(document).ready(function () {
+    $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').attr('target', '_blank');
+  });
+  </script>
+
+</body>
 </html>
