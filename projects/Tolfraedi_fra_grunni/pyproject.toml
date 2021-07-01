@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "TolfraediFraGrunni"
+version = "0.1.0"
+description = ""
+authors = ["Benedikt Magnússon og fleiri"]
+packages = [
+    { include = "docs" },
+#    { include = "hicli" }
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = "^0.3.2"
+seedir = "^0.1.2"
+pypandoc = "^1.5"
+Sphinx= "^3.2.1"
+sphinx-rtd-theme = "^0.5.0"
+sphinxcontrib-katex = "^0.6.1"
+paramiko= "^2.7.2"
+#panoptoextension = {path = "./docs/_extensions/panoptoextension", develop = true}
+#sagecell = {path = "docs/_extensions/sagecell-extension", develop = true}
+#ggbextension = {path = "docs/_extensions/ggbextension", develop = true}
+#scrolldepthextension = {path = "docs/_extensions/SphinxScrolldepth", develop = true}
+hoverroleextension = {path = "docs/_extensions/hoverrole", develop = true}
+#katex-extension = {path = "docs/_extensions/katex-extension", develop = true}
+toggleblock = {path = "docs/_extensions/toggleblock-extension", develop = true}
+#custom-button = {path = "docs/_extensions/custom-button", develop = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+mypy = "^0.790"
+pylint = "^2.6.0"
+black = "^20.8b1"
+rstcheck = "^3.3.1"
+sphinx-autobuild = "^2020.9.1"
+
+[tool.poetry.scripts]
+#hicli = "hicli.main:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

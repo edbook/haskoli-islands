@@ -1,0 +1,193 @@
+Hér skráist misræmi milli bókinar 'Tölfræði frá grunni' og edbook útgáfu hennar. Yfirleitt hvað þarf að laga og svo hvernig það var breytt til að laga það.
+
+Formattið fyrir hvert atriði á að vera:
+
+Fyrir: asdfasdf
+Eftir: asdfsadf
+
+
+netfang: gthg28@hi.is
+
+Kafli 01:
+
+,,Athugið einnig að fjöldi aukastafa á að vera í samræmi við nákvæmni gagna. Ágætt er að miða við að gefa upp stærðir einum til tveimur aukastöfum nákvæmar en upprunalegu mælingarnar eru.''
+
+er þetta ekki þversagnakennt?
+Eggert: Hmm, jú, kannski. Við þyrftum bara að spurja Önnu Helgu við tækifæri.
+
+Kafli 02:
+
+Í þriðju efnisgrein kemur orðið ,,ennfremur“ en rétt er að rita ,,enn fremur“ samkvæmt málfarsbanka Árnastofnunar. Raunar kemur  ,,ennfremur“ fjórum sinnum fyrir í bókinni en ,,enn fremur“ einu sinni svo það þarf í það minnsta að samræma.
+Heimild: http://malfar.arnastofnun.is/?p=5323
+Eggert: Búinn að breyti öllu ennfremur í enn fremur í allri bókinni.
+
+
+,,Þeim meiri breytileika sem mælingar hafa, þeim erfiðara er að átta sig á þeim lögmálum sem þær lúta.'' Ætti það ekki að vera ,,þeim mun erfiðara'' eða ,,því erfiðara''...?
+Eggert: Breytt í 'þeim mun erfiðara'.
+
+file:///home/una/Seafile/Sumar%202017/Eggert/Tolfraedi_fra_grunni/_build/html/kafli01_final.html#hva-ef-slembiurtak-er-ogerlegt - hér er smá klunnaleg skipting, betra væri að bæta við bili á milli 1. og 2., hugsa ég.
+Eggert: Fixed.
+
+file:///home/una/Seafile/Sumar%202017/Eggert/Tolfraedi_fra_grunni/_build/html/kafli01_final.html#hvaa-skilyri-aetti-styr-tilraun-a-uppfylla - sama vandamĺa og í athugasemdinni hér fyrir ofan.
+Eggert: Fixed
+
+Kafli 03:
+
+Kafla 3.1.1.2. má snyrta, ef ekki nema laga ,,Önnur lönd=302913−53637−45106−28456−14955−24280−29488−32664=74327'' sem fer aðeins út fyrir.
+Eggert: Eiginlega sammála en þetta er svona í upprunulega textanum (með align fyrir jafnaðarmerkinu) og ég kæmi þessu hvort eð er ekki fyrir á einni línu.
+
+,,Það er mun auðveldara að fá tilfinningu fyrir gögnunum með að horfa á stuðlarit en ef gögnin sjálf eru skoðuð. Við sjáum að algengasti meðalhitinn er 3-4 gráður.'' ætti að vera ,,Það er mun auðveldara að fá tilfinningu fyrir gögnunum með ÞVÍ að horfa á stuðlarit en ef gögnin sjálf eru skoðuð. Við sjáum að algengasti meðalhitinn er 3-4 gráður.'' file:///home/una/Seafile/Sumar%202017/Eggert/Tolfraedi_fra_grunni/_build/html/kafli02_final.html#synidaemi-stularit
+Eggert: Fixed
+
+Þarf að laga lágvísinn á Q1 og Q2 í eftirfarandi: ,,Ef að kassaritið er samhvert um Q2 er dreifing breytunnar samhverf. Ef að það er minni munur á minnsta gildinu, Q1 og Q2 en á milli Q2, Q3 og stærsta gildisins er dreifingin hægri skekkt, en vinstri skekkt ef því er öfugt farið.''
+Eggert: Fixed
+
+
+Kafli 04:
+
+Laga umfjöllun um miðju spannar file:///home/una/Seafile/Sumar%202017/Eggert/Tolfraedi_fra_grunni/_build/html/kafli03_final.html#mija-spannar-mid-range - óæskilegur vísir!
+Sama á við um umfjöllun um miðgildi
+Og um umfjöllun um meðaltal!
+Og um vegið meðaltal
+Og um spönn
+Eggert: Verður lagað eftir að Arnór kemur til baka
+
+Í sýnidæminu um vegið meðaltal fara tölurnar út fyrir kassann...
+Eggert: Þekkt vandamál með heimasíður. :(
+
+Í kafla 4.3.3. Fjórðungamörk kemur taflan klunnalega út
+Eggert: Fixed?
+
+Tafla 4.3 gengur ekki upp
+Eggert: Fixed
+
+Kafli 05:
+
+5.1.2.2 : ,,Það getur tekið hvaða gildi sem er á bilinu frá -30:math:^circC upp í 30∘C.''
+Eggert: Fixed
+
+Gylfi: ,,5.3.3.14. Sýnidæmi: Væntigildi og dreifni tvíkostadreifingarinnar'' hér kemur miðjunin ósnyrtilega út - allt í góðu ef ekkert er í því að gera.
+Eggert: Fixed? Er nú nær því sem er í bókinni.
+
+Gylfi: Í athugasemd við 5.3.2.1. kemur e^x í textanum þínum á meðan ^ er ósýnilegt í bókinni hennar Önnu Helgu.
+Eggert: Fixed
+
+Gylfi: Athuga 
+,,5.3.4.8. Væntigildi og dreifni Poisson dreifingar
+5.3.4.9. Væntigildi og dreifni Poisson dreifingar'' - kemur undarlega út.
+Eggert: Fixed
+
+Gylfi: ath 5.4.2.6. Í fyrsta lagi kemur ,,Dreififallið Φ(z) er gefur líkurnar'' á meðan ég HELD að ,,Dreififallið Φ(z) gefur líkurnar'' eigi betur við. Í öðru lagi er komma á eftir jöfnunni ,,Φ(z)=P(Z<z)'' en stór stafur í næstu línu, punktur væri líklega betra.
+Eggert: Sammála bæði, búin að breyta.
+
+Gylfi: 5.4.2.8. Sýnidæmi: Normaldreifingin - ,,Gera má ráð fyrir því að einkunnir nemenda á prófinu séu u.þ.b normaldreifðar..'' hér vantar punkt á eftir b. Sama gildir um þ.e.a.s í 2. og 3. Skoða líka punkta og kommur í miðjuðum formúlum!
+Eggert: Lagað, a.m.k. hér.
+
+Gylfi: skoða punkt í formúlu, kafla 5.4.2.11.
+Eggert: Fixed
+
+--------------------
+
+Eggert: Ok, ég lagaði ýmsa punkta (eða skortur þar á) í ýmsum jöfnum en eitt sem var samræmi í sem ég breytti ekki var að það var virtist aldrei (fyrir utan eitt skipti) vera punkt ef jafnan var tilgáta eða gagntilgáta (og engin önnur orð með). Óþarfi þá að setja punkt á þeim stöðum, eða...?
+
+Gylfi: Já, hugsa að það sé óþarfi
+
+Eggert: Vertu líka vakandi fyrir því að talningu í listum ("a)", "b)", "c)", ... til dæmis) hafi e-ð raskast. Var að spotta sýnidæmi sem átti að hafa spurningu 'a)', spurningu 'b)', svar 'a)' og svar 'b)' hafði breyst í '1., 2., 3., 4.', sem er augljóslega ekki í lagi. Það er þó óþarfi að benda á breytingar eins og 'a)'->'a.', það er þekkt mál.
+
+
+Gylfi: ok, hef augun opin. 
+
+Kafli 06:
+
+Gylfi: í 6.2.1.6. Sýnidæmi: Væntigildi og dreifni meðaltals þá koma fyrir rangar gæsalappir í ,,meðalvínsins’’.
+Eggert: Lagað (og á fleiri stöðum).
+
+Gylfi: Í textanum fyrir neðan 6.4.1.1 kemur fyrir ,,metilinn'' þó þar ætti að standa ,,metillinn''.
+Eggert: Fixed.
+
+Gylfi: Í lok 6.6.7.1. Styrkur (power) vantar punkt.
+Eggert: Fixed.
+
+Gylfi: Í 6.6.7.2. og 6.6.7.3. er ósamræmi.
+Eggert: Hmm, skil ekki hvernig?
+Gylfi: (Type I Error), (type II error)
+Eggert: Fixed.
+
+Kafli 07:
+
+Gylfi: Í kafla 7.3.1.3. kemur ,,mælda tíðni (observed frequency)'' en betra væri ,,mælda tíðni (e. observed frequency)''. Það er oftast e. en ég er ekki viss um að svo sé alltaf... verð með augun opin hér eftir!
+Eggert: Fixed. Hljómar vel!
+Eggert: Búinn að laga út um allt í kaflana. Setti þó ekki 'e.' ef sviginn var hluti af section/subsection/subsubsection.
+
+
+Kafli 08:
+
+Gylfi: í 8.2. kemur (e.nonparametric tests) en ætti að vera (e. nonparametric tests) ((bil!))
+Eggert: Fixed.
+
+Gylfi: í 8.2.2. kemur t.d en ætti að vera t.d.
+Eggert: Búinn að laga í allri bókinni
+Gylfi: Í sama kafli kemur ,,í júlí og ágúst .'' en ætti að vera ,,í júlí og ágúst.'' Þetta er líka í lok næstu málsgreinar!
+Eggert: Fixed.
+
+Gylfi: í 8.2.2.4. kemur sögnin ,,viktaði'' þó réttast væri að skrifa ,,vigtaði''.
+Eggert: Fixed.
+
+Gylfi: í 8.2.2.5. kemur vegna dreifni (pooled variance) en ætti að vera vegna dreifni (e. pooled variance)
+Eggert: Fixed.
+
+Gylfi: Í 8.2.4. þarf að bæta við e. inn í sviga!
+Eggert: Fixed.
+
+Kafli 09:
+
+Gylfi: Vantar e. inn í sviga í upphafskaflanum!
+Eggert: Fixed.
+Gylfi: sama gildir um 9.1.1 ... og eiginlega bara allan kaflann!
+Eggert: Fixed. (Ætti að vera það a.m.k.)
+
+Gylfi: í 9.1.2.1. kemur a.m.k en ætti að vera a.m.k., sama gildir um 9.1.2.2.
+Eggert: Fixed í allri bókinni.
+
+Kafli 10:
+
+Gylfi: Í upphafi kaflans vantar e. inn í sviga!
+Eggert: Fixed.
+
+Gylfi: Í skýringunni við mynd 10.4 koma punktar í stað A, B, C, D.
+Eggert: Fixed.
+
+Gylfi: í 10.3.1. þarf að laga punkt í miðjaðri formúlu (kannski væri betra að breyta ,,Út frá...''  í ,, og út frá ... '' ?)
+Eggert: Fixed. (setti bara punkt aftast)
+
+Gylfi: Væri ekki betra að hafa kommur í miðjuðu formúlunum tveimur efst í 10.3.1.1. ?
+Eggert: Fixed.
+
+Gylfi: Í dæmi 10.4.1. ætti að vera hvert í staðinn fyrir hver... pæling hvort það sé ekki betra að hafa kommu í formúlunni og lágstaf í ,,hvort''?
+Eggert: Fixed. (setti punkt eftir formúluna og breytti í hvert)
+(Eggert: Bíddu... þar sem þetta eru tvö gildi er 'Hver eru gildin' ekki betra...?)
+Gylfi: Jú, ætli það sé ekki rétt hjá þér!
+
+Kafli 11:
+
+Gylfi: ,,Við byrjum á að kynnast fræðilegri undirstöðu tvíkosta aðhvarfsgreiningarlíkansins og þá sérstaklega tengifalli (e. link function) sem á ensku kallast the logit function í kafla 11.1. '' ... er þetta ekki eitthvað spes? Tengifall (e. link function) sem kallast eitthvað annað á ensku...?
+Veit ekki hvernig maður orðar þetta betur, en logit fallið er tegund af tengifalli. Þ.e. hún er að reyna að segja að í kafla 11.1 ætlum við að skoða sérstakelega tengifallinu 'the logit function'.
+
+Gylfi: spurning um að skerpa aðeins á því? Annars eru þetta smámunir. 
+Eggert: Hvað með 'og þá sérstaklega ákveðið tengifall (e. link function) sem á ensku...'
+Gylfi: Flott!
+Eggert: Fixed.
+
+Gylfi: í lok 11.1.1.2. vantar punkt.
+Eggert: Fixed.
+
+Gylfi: Spurning um að skoða punkta í miðjuðum formúlum í 11. kafla.
+Eggert: Ætti að vera komið núna?
+Gylfi: Glæsilegt
+
+
+Gylfi: Orðalag í 11.3.1.1. mjög undarlegt. Má ég koma með svona athugasemd?
+Eggert: Það er ýmislegt fleira að í þessum kafla, þarf að funda með Önnu Helgu og Sigrúnu um þetta.
+
+Gylfi: henda inn punktum í lok 11.5. ... þá er þetta komið.
+Eggert: Fixed.

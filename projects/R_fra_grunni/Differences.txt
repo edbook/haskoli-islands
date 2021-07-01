@@ -1,0 +1,219 @@
+Hér skráist misræmi milli bókinar 'R frá grunni' og edbook útgáfu hennar. Yfirleitt hvað þarf að laga og svo hvernig það var breytt til að laga það.
+
+
+
+Kafli 01:
+
+Gylfi: í stað ,,Í dag R er bæði ... '' ætti kannski að standa ,,Í dag er R bæði ... ''
+Eggert: Fixed
+
+Gylfi: kemur tvisvar ,,og'' í röð í 1.1.1.
+Eggert: Fixed
+
+Gylfi: í 1.6.1.1. kemur t.d í stað t.d.
+Eggert: Fixed í allri bókinni
+
+Gylfi: í 1.8. kemur ,,aðalega'' en ekki ,,aðallega''.
+Eggert: Fixed í allri bókinni
+
+
+Kafli 02:
+
+Gylfi: í 2.2.1. kemur upptalning á stillingum sem eru oft notaðar og þá er ýmist punktur eða ekki. tel nauðsynlegt að samræma.
+Eggert: Fixed
+
+Gyfli: í 2.2.1.2. kemur ,,gögninn'' ...
+Eggert: Fixed
+
+Gylfi: í 2.5.1. eru virkjar sagðir ,,skýra sig að mestu leiti sjálfir'' en rétt væri að segja að þeir skýri sig ,,að mestu leyti sjálfir''.
+Eggert: Fixed
+
+Gylfi: ,, .. þá er virkinn & er mataður .. '' kemur fyrir neðar í 2.5.1.
+Eggert: Fixed
+
+Gylfi: ,, hægt með að nota hornklofa '' ætti líklega að vera ,,  hægt að nota hornklofa ''
+Eggert: Fixed
+
+Gylfi: í 2.6., atriði 1, vantar punkt í lokinn, til að gæta samræmis.
+Eggert: Fixed
+
+Gylfi: á eftir ,,Hér notum við gildið 100 (fallegra væri
+að nota max(puls$likamsraekt)+1))'' mætti koma tvípunktur. Þar næsta setning á eftir mætti síðan byrja með stórum staf (,,við getum...'')
+Eggert: Fixed bæði
+
+Gylfi: í 2.8.1.2. er sagt að ,,%s'' sé skiptináknið en það á örugglega að vera ,,%''
+Eggert: Nei, þetta er rétt svona. Þ.e.a.s. '%s' er skipt út "sem eitt tákn".
+
+
+Kafli 03: 
+
+Gylfi: í 3.1. stendur ,,Helstu sillingar'' en ætti að standa ,,Helstu stillingar''. þetta kemur raunar fyrir oft í textanum!
+Eggert: Úpps! Algjörlega mín mistök, búið að laga í allri bókinni!
+
+Gylfi: Í lok 3.1. má koma punktur. Sama gildir um 3.1.1.2.
+Eggert: Fixed
+
+Gylfi: í 3.1.5. mætti bæta við tvípunkt í lokin, til að gæta samræmis
+Eggert: Fixed
+
+Gylfi: í 3.2. má bæta við tvípunktum í lok málsgreina, til að gæta samræmis
+Eggert: Fixed
+
+
+Kafli 04:
+
+Gylfi: Í 4.3.1.2. kemur fyrir ,,mismunani'' en ætti líklega að vera ,,mismunandi''
+Eggert: Fixed
+
+Gylfi: í 4. kemur ,,Á flokkbreytur notum við skipanirnar table() og prop.table þær eru teknar fyrir í hluta 4.2. '' en mætti frekar vera ,,Á flokkbreytur notum við skipanirnar table() og prop.table en þær eru teknar fyrir í hluta 4.2. '' ... 
+Eggert: Fixed
+
+Gylfi: í lok 4.1.1.1. tel ég við hæfi að gera punkt, það er eftir orðinu ,,breytunnar''. sama athugasemd gildir um næstu tvær málsgreinar.
+Eggert: Fixed
+
+Gylfi: í 4.1.4.1. kemur ,,Inntak: nafn tveimur vigrum/breytum'' en ætti kannski að vera ,,Inntak: nafn á tveimur vigrum/breytum''.
+Eggert: Fixed
+
+Gylfi: í 4.2.1.2. kemur ,, Í töflunni á t.d. ...'' en ætti líklega að vera ,, Í töflunni má t.d. ...''
+Eggert: Fixed
+
+Gylfi: í 4.3.1.2. hefst inntakið á stórum staf en oftast er það lítill stafur. veit ekki hvort það sé þannig í öllum tilvikum. í næstu setningu kemur orðið ,,mismunani'' fyrir.
+Eggert: Fixed (en finn ekki þetta ,,mismunani''?)
+
+Gylfi: í 4.3.1.3. kemur orðið ,,líkamræktarhópunum'' fyrir.
+Eggert: Fixed
+
+
+Kafli 05:
+
+Gylfi: í kafla 5.3.1. kemur orðið ,,byja'' fyrir.
+Eggert: Fixed
+
+
+Kafli 06:
+
+Gylfi: í 6.1.1.1. kemur fram orðið ,,jafnlíklegar'' sem ég held að eigi að skrifa sem ,,jafn líklegar''. þetta gæti hins vegar verið rangt hjá mér, sér í lagi í líkindafræðilegu samhengi.
+Eggert: Innsæið mitt er sammála þér en snöggt google-leit sýnir að þetta virðist vera gild notkun.
+
+Gylfi: í 6.2.1.1. kemur ,,(e. Central limit theorem)'' á meðan í 5. kafla er alltaf lítill stafur á eftir ,,e.''. finnst það eðlilegra þar eð punkturinn er ekki eiginlegt greinarmerki í þessu samhengi.
+Eggert: Fixed
+
+Gylfi: í sama kafla kemur fyrir orðið ,,stöðlaritinu'' sem ætti líklega að vera ,,stuðlaritinu''.
+Eggert: Fixed
+
+
+Kafli 07:
+
+Gylfi: í fyrstu setningunni í 7.3.1. kemur orðið aðferð of oft fyrir.
+Eggert: Fixed
+
+
+Kafli 08:
+
+Gylfi: í upphafi kaflans kemur orðið ,,nægjanlegat'' fyrir. seinna kemur ,, ... ef við notum framkvæmum ... '' en ég held að annað orðið dugi.
+Eggert: Fixed
+
+Gylfi: í 8.1.1.1. kemur ,,breyta1 og breyta2'' út eins og ein breyta á meðan þetta ætti líklega koma út sem tvær breytur?
+Eggert: Fixed
+
+Gylfi: óþarfa komma í Helstu stillingar, 8.2.1.1.
+Eggert: Fixed
+
+Gylfi: í 8.2.3. kemur orðið ,,tilhvernir'' fyrir
+Eggert: Fixed
+
+Gylfi: í 8.2.5. kemur ,,Annars er skipunin er hún mötuð''
+Eggert: Fixed
+
+Gylfi: ,,Þegar t-próf er framkvæmt til að bera saman mismun paraðra mælinga er enn fremur hægt að gefa eftirfarandi stillingar'' í fyrsta lagi ætti að koma ,,:'' í lok setningarinnar til að gæta samræmis og í öðru lagi held ég að það sé ekki venjan að tala um að ,,gefa'' stillingar
+Eggert: Fixed
+
+Gylfi: ,,.. og seinni Byrjum ..'' .. hér vantar punkt!
+Eggert: Fixed
+
+Gylfi: ,,fullyrt með 95% vissu að púlsinn hafi ekki minnkað um meira en −0.7597 slög á mínútu og ekki hækkað um meira en −0.7597 slög á mínútu.'' hér kemur sama gildið fyrir tvisvar.
+Eggert: Fixed
+
+
+Kafli 09:
+
+Gylfi: í upphafi 9. kafla er talað um ,,aðhverfsgreiningu'' en ég held það eigi að vera ,,aðhvarfsgreining''. stuttu síðar kemur fyrir ,,sé sú svipuð'' sem er líklega ekki rétt. stuttu síðar kemur ,,ávalt'' þar sem ætti að standa ,,ávallt''.
+Eggert: Fixed
+
+Gylfi: það kemur ýmist fyrir fervikagreiningar- eða fervikargreiningar í kaflanum. átta mig ekki á hvort sé rétt eða hvor það ráðist af samhengi.
+Eggert: spurjum á fundinn! Update: Fixed.
+
+Gylfi: í 9.1.1.2. kemur orðið ,,þvínæst''
+Eggert: Fixed
+
+Gylfi: í 9.3.1. er talað um að það sé algengur ,,misskilningu'' að eitthvað
+Eggert: Fixed
+
+Gylfi: í lok 9. kafla kemur ,,(stepwise)'' en til að gæta samræmis ætti að vera ,,(e. stepwise)''
+Eggert: Fixed
+
+
+Kafli 10:
+
+Gylfi: í 10.1.1.1. kemur ,,svar breytan'' sem ætti líklega að vera í einu orði.
+Eggert: Fixed
+
+Gylfi: í lok 10.1. kemur samantekt þar sem sumir liðir enda með punkt en aðrir ekki.
+Eggert: Fixed
+
+Gylfi: í lok 10.2. eru tveir liðir þar sem annar endar á punkti en hinn ekki.
+Eggert: Fixed
+
+Gylfi: í 10.6. er talað um ,,aðhvarsgreiningu''
+Eggert: Fixed
+
+Gylfi: í stað ,,Einþátta fervikagreining má skrifa .. '' ætti kannski að vera ,,Einþátta fervikagreiningu má skrifa ..'' ? athuga punkta í upptalningunni sem kemur stuttu síðar
+Eggert: Fixed
+
+Gylfi: í 10.6 kemur undarleg setning: ,,Við gerum fengiðfervikasummutöfluna á ...''
+Eggert: Fixed
+
+Gylfi: í stað ,,samanburðastuðla (e. contrasts)'' ætti kannski að standa ,,samanburðarstuðla (e. contrasts)''
+Eggert: Fixed
+
+Kafli 11:
+
+Gylfi: í upphafi 11. kafla kemur ,,Í R er tvíkosta aðhvarfsgreining er framkvæmd á ... '' en hér tel ég einu er-i ofaukið
+Eggert: Fixed
+
+Gylfi: í 11.1. kemur ,,summary() og coef() og confint()'' á meaðan ,,summary(), coef() og confint()'' væri eðlilegra
+Eggert: Fixed
+
+Gylfi: í 11.1.1. kemur eftirfarandi: ,,.. má sjá metnu stuðla ..'' en ég tel að heppilegra væri að tala um ,,metna stuðla'' eða ,,metnu stuðlana''. þetta kemur oftar fyrir.
+Eggert: Fixed
+
+Gylfi: ,,Gagnlíkindahlutfallið sem svarar til (Intercept) er sjaldnast af áhuga.'' hef grun um að hér sé um beinþýðingu úr ensku, betra væri líklega að segja að gagnlíkindahlutfallið sé áhugavert
+Eggert: Fixed
+
+Kafli 12:
+
+Gylfi: í upphafi kaflans er talað um að eitthvað ,,gefi okkur kleift að...'' en rétt held ég að sé að gera einhverjum kleift...
+Eggert: Fixed
+
+Gylfi: ,,(í efra vinstra glugganum)'' ætti kannski að vera ,,(í efri vinstri glugganum)''?
+Eggert: Fixed
+
+Gylfi: finnst eins og ,,“‘'' komi undarlega út í textanum... klumpakommurnar þá
+Eggert: Fixed
+
+Gylfi: í sýnidæminu með myllumerki stækka fyrirsagnirnar hvorki né minnka eins og þær ættu að gera
+Eggert: Á að vera svona
+
+Gylfi: sama gildir um feitletrun
+Eggert: Á að vera svona
+
+Gylfi: í 12.1.2. kemur fram ,,Líkt of'' í stað ,,Líkt og''
+Eggert: Fixed
+
+Gylfi: í 12.3. koma ekki fram íslenskar gæsalappir
+Eggert: Fixed í venjulegri (ekki íslenskar þó) gæsalappir
+
+Gylfi: í lok 12.3. kemur fram ,,myndinn'' í staði ,,myndinni''
+Eggert: Fixed
+
+Búinn!
