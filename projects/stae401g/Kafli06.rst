@@ -50,7 +50,7 @@ af því að enda þótt :math:`\varphi` sé ekki diffranlegt t.d. í :math:`x_\
     \qquad c,d\in [a,b].
 
 
-Munið að í :ref:`3.2.2 <ch-3.2.2>` skilgreindum við
+Munið að í :ref:`3.3.2 <ch-3.3.2>` skilgreindum við
 
 I. Innfeldi
 
@@ -745,7 +745,7 @@ Fyrst er gagnlegt að skrifa jaðargildisverkefnið sem
     \qquad \text{ og } \qquad
     \partial_2D=\{(x,y)\in \partial D\,;\, \beta(x,y)\neq 0\},
 
-og :math:`\partial D=\partial_1D\cup \partial_2 D` (munið :ref:`5.3<ch-5.3>`). Við gerum alltaf ráð'fyrir að :math:`p\in C^1` og :math:`q, f` séu samfelld á :math:`\bar D\subset\mathbb{R}^2`.
+og :math:`\partial D=\partial_1D\cup \partial_2 D` (munið :ref:`5.3<ch-5.3>`). Við gerum alltaf ráð fyrir að :math:`p\in C^1` og :math:`q, f` séu samfelld á :math:`\bar D\subset\mathbb{R}^2`.
 
 Við höldum áfram eins og áður, þ.e.a.s.
 
@@ -900,16 +900,18 @@ Net með þríhyrningum
 
 Við skiptum svæðinu :math:`\bar D`  í þríhyrninga, eins og í myndunum að neðan.
 
-.. image:: ./Drawings/disk-with-trianglegrid.png
+.. figure:: ./Drawings/disk-with-trianglegrid.png
     :width: 25 %
     :align: center
-*Hálfri skífu skipt í þríhyrninga.*
+    
+    *Hálfri skífu skipt í þríhyrninga.*
 
 
-.. image:: ./Drawings/triangle-grid.png
+.. figure:: ./Drawings/triangle-grid.png
     :width: 65 %
     :align: center
-*Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
+
+    *Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
 
 Við skoðum dæmi með rétthyrningnum :math:`D`
 
@@ -1013,10 +1015,11 @@ Við sjáum í dæmi að neðan graf fallsins :math:`\varphi_3` fyrir einingarþ
 .. math::
     (x_A,y_A,1), ~~~ (x_B,y_B,0), ~~~ (x_C,y_C,0).
 
-.. image:: ./Drawings/example-phi-triangle.png
+.. figure:: ./Drawings/example-phi-triangle.png
     :width: 45 %
     :align: center
-*Dæmi um graf fallsins* :math:`\varphi_3` *skilgreint yfir einingarþríhyrninginn* :math:`E_{1,2,3}`.
+
+    *Dæmi um graf fallsins* :math:`\varphi_3` *skilgreint yfir einingarþríhyrninginn* :math:`E_{1,2,3}`.
 
 Við skilgreinum fall :math:`\varphi_E` eins og grunnfallið á einingarþríhyrningnum :math:`E` sem tekur gildið 1 í punktinum :math:`(0,0)`. Þá er
 
@@ -1094,10 +1097,11 @@ Við snúum hliðarvigrunum um :math:`\pi/2` réttsælis og þá fáum við
 Vigrarnir :math:`{\mathbf l}_A^R, {\mathbf l}_B^R, {\mathbf l}_C^R` eru hornréttir á hliðarnar á móti hornum númer :math:`A, B` og :math:`C` og snúa í stefnu ytri þvervigurs.
 Sjáið mynd fyrir einingarþríhyrninginn :math:`E`.
 
-.. image:: ./Drawings/boundary-vectors.png
+.. figure:: ./Drawings/boundary-vectors.png
     :width: 65 %
     :align: center
-*Hliðarvigrarnir*  :math:`{\mathbf l}_A, {\mathbf l}_B, {\mathbf l}_C`  *(rautt, blátt og grænt) til vinstri og vigrarnir* :math:`{\mathbf l}_A^R, {\mathbf l}_B^R, {\mathbf l}_C^R`  *til hægri (rautt, blátt og grænt).*
+
+    *Hliðarvigrarnir*  :math:`{\mathbf l}_A, {\mathbf l}_B, {\mathbf l}_C`  *(rautt, blátt og grænt) til vinstri og vigrarnir* :math:`{\mathbf l}_A^R, {\mathbf l}_B^R, {\mathbf l}_C^R`  *til hægri (rautt, blátt og grænt).*
 
 Þá getum við notað hliðarvigrana til þess að skrifa niður eiginleika þúfugrunnfallanna, þ.e.
 
@@ -1122,10 +1126,11 @@ og líka fyrir föllin :math:`\varphi_B, \varphi_C`,
 Go ahead!
 ~~~~~~~~~
 
-.. image:: ./Drawings/triangle-grid.png
+.. figure:: ./Drawings/triangle-grid.png
     :width: 65 %
     :align: center
-*Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
+
+    *Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
 
 Munið að við viljum finna lausn á eftirfarandi jaðargildisverkefni
 
@@ -1357,10 +1362,11 @@ Til þess að reikna út jaðarheildi yfir :math:`\partial S_2` þurfum við að
 Sýnidæmi
 ~~~~~~~~
 
-.. image:: ./Drawings/triangle-grid-numbers.png
+.. figure:: ./Drawings/triangle-grid-numbers.png
     :width: 65 %
     :align: center
-*Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
+
+    *Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
 
 
 Við lítum á Dirichlet jaðarskilyrði, þ.e.

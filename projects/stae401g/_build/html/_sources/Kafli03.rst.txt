@@ -65,6 +65,7 @@ ef :math:`P(\alpha_j) \neq 0` fyrir öll :math:`j`, eins og við þekkjum úr um
 
 |
 |
+
 Eins og dæmið gefur til kynna má líta á Fourier-raðir sem sértilfelli af þeirri almennu hugmynd að liða föll í grunn eiginfalla afleiðuvirkja. Lítum nú nánar á það í næstu dæmum. Skoðum eigingildisverkefnið
 
 .. math::
@@ -303,6 +304,7 @@ föllin :math:`p`, :math:`q` og :math:`{\varrho}` uppfylla þessi skilyrði.
 
 Skilgreining
 ~~~~~~~~~~~~
+.. _ch-3.3.2:
 
 Á rúmið :math:`C[a,b]` skilgreinum við formið
 

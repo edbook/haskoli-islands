@@ -641,7 +641,7 @@ Ef við viljum skrifa þetta sem földunarheildi þurfum við að framlengja fö
     f(y,{\tau})\, dyd{\tau}\nonumber\\
     &=\dfrac 1{2c}\iint\limits_{T(x,t)}f(y,{\tau})\, dyd{\tau},\nonumber\end{aligned}
 
-þar sem :math:`T(x,t)` er þríhyrningurinn í :math:`(y,\tau)`-planinu með hornpunktana :math:`(x, t), (x − ct, 0)` og :math:`(x + ct, 0)`. Þríhyrningurinn kallast *ákvörðunarsvæði punktins :math:`(x,t)`.
+þar sem :math:`T(x,t)` er þríhyrningurinn í :math:`(y,\tau)`-planinu með hornpunktana :math:`(x, t), (x − ct, 0)` og :math:`(x + ct, 0)`. Þríhyrningurinn kallast *ákvörðunarsvæði* punktins :math:`(x,t)`.
 
 
 Varmaleiðnijafnan, Fourier-ummyndun og földun

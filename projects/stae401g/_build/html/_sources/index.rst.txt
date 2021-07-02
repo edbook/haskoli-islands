@@ -15,7 +15,7 @@ Stærðfræðigreining IV (STÆ401G), Háskóli Íslands, vor 2019
    :numbered:
    :glob:
    
-   Kafli*
+   kafli*
 
 .. toctree::
 	vidauki

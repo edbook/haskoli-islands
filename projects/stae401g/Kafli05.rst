@@ -240,15 +240,17 @@ Lausnin er
 .. math::
     c_0=-{5\over 6},~~ c_1=-{5\over 8}, ~~ c_2 = -{1 \over 4},~~ c_3 = {7\over 24}, ~~ c_4 = 1.
 
-.. image:: ./Drawings/fig-difference-method.png
+.. figure:: ./Drawings/fig-difference-method.png
     :width: 85 %
     :align: center
-*Lausnir fyrir* :math:`N=4, 10, 100` *og lausn* :math:`u(x)={1 \over 2} (2 x^2+x-1).`
 
-.. image:: ./Drawings/error-difference-method.png
+    *Lausnir fyrir* :math:`N=4, 10, 100` *og lausn* :math:`u(x)={1 \over 2} (2 x^2+x-1).`
+
+.. figure:: ./Drawings/error-difference-method.png
     :width: 85 %
     :align: center
-*Skekkjan* :math:`|u_j-c_j|`  *í*  :math:`x=1/2`  *sem fall af*  :math:`N`.
+
+    *Skekkjan* :math:`|u_j-c_j|`  *í*  :math:`x=1/2`  *sem fall af*  :math:`N`.
 
 
 
@@ -571,10 +573,11 @@ Við tökum t.d. jafna skiptingu á bilinu :math:`[a,b]`
 
 Athugum að föllin :math:`\varphi_j(x)` eru samfelld á :math:`[a,b]`.
 
-.. image:: ./Drawings/tent-functions.png
+.. figure:: ./Drawings/tent-functions.png
     :width: 85 %
     :align: center
-*Þúfugrunnföllin* :math:`\varphi_j(x)` *fyrir dæmin* :ref:`5.1.1<example-5.1.1>` *og* :ref:`5.2.1<example-5.2.1>`. *Hér* :math:`N=4`.
+
+    *Þúfugrunnföllin* :math:`\varphi_j(x)` *fyrir dæmin* :ref:`5.1.1<example-5.1.1>` *og* :ref:`5.2.1<example-5.2.1>`. *Hér* :math:`N=4`.
 
 
 Þá skilgreinum við nálgunarfall :math:`v`, með því að setja
@@ -588,14 +591,16 @@ Athugum að föllin :math:`\varphi_j(x)` eru samfelld á :math:`[a,b]`.
 .. math::
     v(x_j)= \sum_{i=0}^N c_i\varphi_i(x_j)= c_j.
 
-.. image:: ./Drawings/v-functions.png
+.. figure:: ./Drawings/v-functions.png
     :width: 85 %
     :align: center
-*Nálgunarföllin* :math:`v` *fyrir dæmin* :ref:`5.1.1<example-5.1.1>` *og* :ref:`5.2.1<example-5.2.1>`. *Hér* :math:`N=4`. 
+
+    *Nálgunarföllin* :math:`v` *fyrir dæmin* :ref:`5.1.1<example-5.1.1>` *og* :ref:`5.2.1<example-5.2.1>`. *Hér* :math:`N=4`. 
 
 
 Mismunaaðferð fyrir hlutaafleiðujöfnur
 --------------------------------------
+.. _ch-5.3:
 
 Nú lítum við á verkefnið að nálga lausnir á hlutafleiðujöfnum með upphafs- og jaðarskilyrðum.
 
@@ -642,10 +647,11 @@ Við tökum :math:`h>0` og við skiptum bilunum á eftirfarandi hátt
 
 
 
-.. image:: ./Drawings/ex-grid-rectangle.png
+.. figure:: ./Drawings/ex-grid-rectangle.png
     :width: 45 %
     :align: center
-*Dæmi af*  :math:`D \subset R \subset {\mathbb R^2}`.
+
+    *Dæmi af*  :math:`D \subset R \subset {\mathbb R^2}`.
 
 Hnútpunktar í netinu eru :math:`(x_i, y_k)` og línurnar gegnum hnútpunktana eru stikaðar með
 
@@ -702,10 +708,11 @@ Athugum að hér eru :math:`j, l, r`, og :math:`s` gefin, á meðan lagt er sama
 
 Við sjáum á myndinni hér:
 
-.. image:: ./Drawings/internal-points.png
+.. figure:: ./Drawings/internal-points.png
     :width: 45 %
     :align: center
-*Dæmi af innri punktum*  :math:`(x_j,y_j)`.
+
+    *Dæmi af innri punktum*  :math:`(x_j,y_j)`.
 
 
 Þá er yfir :math:`\Omega_j`
@@ -778,14 +785,14 @@ Athugum að hér er :math:`k=s, l, t`, og hér er flatarmál svæðisins :math:`
 
 Við sjáum á myndinni hér:
 
-.. image:: ./Drawings/boundary-points.png
+.. figure:: ./Drawings/boundary-points.png
     :width: 45 %
     :align: center
-*Dæmi af jaðarpunktum*  :math:`(x_j,y_j)`.
+
+    *Dæmi af jaðarpunktum*  :math:`(x_j,y_j)`.
 
 
 Við höfum
-
 
 .. math::
     \iint_{\Omega_j} \nabla\cdot\big(p\nabla u\big) \, dxdy=
@@ -1115,11 +1122,17 @@ Til þess að byggja upp jöfnuhneppi :math:`A{\mathbf c}={\mathbf b}` sem nálg
 
 Þegar við höfum reiknað út fylkið :math:`A` og vigurinn :math:`b`, þá getum við notað t.d. Matlab, (eða Octave eða Mathematica eða Maple...), til þess að fá nágunargildin :math:`c_i`.
 T.d. getum við skrifað í Matlab:
-    S=sparse(A); c=S\ b;
 
+| S=sparse(A); c=S\ b;
+|
 
 Það er líka gott að teikna graf lausnarinnar.
 T.d. getum við skrifað í Matlab:
-    surf(x,y,W’),
-og jafnhæðarlínur hennar má teikna með
-    contour(x,y,W’).
+
+| surf(x,y,W’)
+|
+
+og jafnhæðarlínur hennar má teikna með:
+
+| contour(x,y,W’)
+|

@@ -524,6 +524,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#undirstousetning-staerfraeigreiningar">5.6. Undirstöðusetning stærðfræðigreiningar</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mealgildissetningin-fyrir-heildi">5.6.1. Meðalgildissetningin fyrir heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-undirstousetning-staerfraeigreiningar-i">5.6.2. Setning: Undirstöðusetning stærðfræðigreiningar (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-undirstousetning-staerfraeigreiningar-i">5.6.3. Dæmi: Undirstöðusetning stærðfræðigreiningar (I)</a></li>
 </ul>
 </li>
 </ul>
@@ -1231,17 +1233,17 @@ fyrir sérhvert <span class="math notranslate nohighlight">\(i\)</span>. Hægri 
 \[\int_0^2 x^2 dx = \frac{8}{3}.\]</div>
 <p>Hér fyrir neðan má draga stikuna <span class="math notranslate nohighlight">\(k\)</span> til og frá til að sjá
 nálgunina þegar notaðir eru <span class="math notranslate nohighlight">\(k\)</span> rétthyrningar í Riemann summunni.</p>
-<div id="oNzGZ9ciM1bbP00Qkn0varPZTbWXB6"></div>
+<div id="yyavBfRFfSFjqvLAFSME0r90X9LYK6"></div>
 <script>
-var ggbApp_oNzGZ9ciM1bbP00Qkn0varPZTbWXB6 = new GGBApplet({
+var ggbApp_yyavBfRFfSFjqvLAFSME0r90X9LYK6 = new GGBApplet({
 "appName": "graphing", 
 "width": 700, 
 "height": 400, 
-"material_id":" frtbvg44", 
+"material_id": "frtbvg44", 
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["oNzGZ9ciM1bbP00Qkn0varPZTbWXB6"] = ggbApp_oNzGZ9ciM1bbP00Qkn0varPZTbWXB6;
+ggbAppletId["yyavBfRFfSFjqvLAFSME0r90X9LYK6"] = ggbApp_yyavBfRFfSFjqvLAFSME0r90X9LYK6;
 </script></div>
 <div class="section" id="flatarmal-falla-sem-ekki-eru-jakvae">
 <h3><span class="section-number">5.5.4. </span>Flatarmál falla sem ekki eru jákvæð<a class="headerlink" href="#flatarmal-falla-sem-ekki-eru-jakvae" title="Varanlegur hlekkur á titilinn">¶</a></h3>
@@ -1327,7 +1329,7 @@ meðaltal talnasafns með</p>
 \[\overline{f} = \frac{1}{b-a} \int_a^b f(x) dx.\]</div>
 <div class="admonition warning">
 <p class="admonition-title">Aðvörun</p>
-<p>Bókin notar <span class="math notranslate nohighlight">\(f_{\text{ave}}\)</span> (ave fyrir enska orðið <em>average</em> eða meðalgildi)
+<p>Bókin notar <span class="math notranslate nohighlight">\(f_{\text{ave}}\)</span> (ave fyrir enska orðið <em>average</em>)
 til þess að tákna meðagildi falls.
 Hér munum við nota <span class="math notranslate nohighlight">\(\overline{f}\)</span> til að halda samræmi við að tákna meðatal
 talnasafns <span class="math notranslate nohighlight">\(x_1, x_2, \dots, x_m\)</span> með <span class="math notranslate nohighlight">\(\overline{x}\)</span>, ritháttur sem
@@ -1343,6 +1345,39 @@ er notaður í flestum áföngum Háskóla Íslands.</p>
 punktur <span class="math notranslate nohighlight">\(c\in [a,b]\)</span> sem uppfyllir að</p>
 <div class="math notranslate nohighlight">
 \[f(c) = \frac{1}{b-a} \int_a^b f(x) dx.\]</div>
+</div>
+<div class="section" id="setning-undirstousetning-staerfraeigreiningar-i">
+<h3><span class="section-number">5.6.2. </span>Setning: Undirstöðusetning stærðfræðigreiningar (I)<a class="headerlink" href="#setning-undirstousetning-staerfraeigreiningar-i" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f(x)\)</span> er samfellt á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> og fallið <span class="math notranslate nohighlight">\(F(x)\)</span> er
+skilgreint þannig að</p>
+<div class="math notranslate nohighlight">
+\[F(x) = \int_a^x f(t) dt\]</div>
+<p>þá gildir að <span class="math notranslate nohighlight">\(F'(x) =f(x)\)</span> á <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+</div>
+<div class="section" id="daemi-undirstousetning-staerfraeigreiningar-i">
+<h3><span class="section-number">5.6.3. </span>Dæmi: Undirstöðusetning stærðfræðigreiningar (I)<a class="headerlink" href="#daemi-undirstousetning-staerfraeigreiningar-i" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(u=\sqrt{x}\)</span> og gerum ráð fyrir að</p>
+<div class="math notranslate nohighlight">
+\[F(x) = \int_1^{u(x)} \sin(t) dt.\]</div>
+<p>Samkvæmt undirstöðusetningu stærðfræðigreiningar (I) og keðjureglunni fæst</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}\begin{align}
+        F'(x) &amp;= \sin(u(x))\frac{du}{dx}\\
+        &amp;= \sin(u(x)) \cdot (\frac{1}{2} x^{-1/2})\\
+        &amp;= \frac{\sin(\sqrt{x})}{2\sqrt{x}}.
+\end{align}\end{split}\\Setning: Undirstöðusetning stærðfræðigreiningar (II)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\Ef :math:`f(x)`er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
+eitthvað stofnfall fyrir :math:`f(x)` þá gildir að\\.. math:: \int_a^b f(x) dx = F(b)-F(a).\\.. tip::
+        Nemendur gera sér oft ekki grein fyrir því hversu gríðarlega mikilvæg
+        undirstöðusetning stærðfræðigreiningarinnar er. Það tók stærðfræðinga
+        meira en 500 ár að fínpússa þá tækni sem vísinda- og fræðimenn notast við í
+        dag til að útskýra hegðun ýmissa fyrirbæra.
+        Stærðfræðigreining gerði okkur loksins kleyft að reikna út fjarlægðir í
+        geiminum og kortleggja sporbauga reykistjarna. Vegna hennar varð mögulegt að reikna jaðarkostnað og
+        spá fyrir um heildargróða með einföldum hætti og nákvæmni. Stærðfræðigreiningin gaf verkfræðingum
+        þá fræðilegu þekkingu sem nauðsynleg var svo þeir gætu
+        reiknað svigþol efna og hreyfingu hluta í þrívíðu rúmi. Heimsýn okkar breyttist
+        með tilkomu stærðfræðigreiningar.\end{aligned}\end{align} \]</div>
 </div>
 </div>
 </div>

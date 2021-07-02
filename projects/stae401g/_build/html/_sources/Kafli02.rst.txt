@@ -93,9 +93,10 @@ kallast Fourier-raðir :math:`f` og til aðgreiningar er sú fyrri oft nefnd hor
   :height: 300
   :img: polarggb.png
   :imgwidth: 4cm
-  :zoom_drag: true 
+  :zoom_drag: true
+
 :math:`2\pi`-lotubundna fallið er skilgreint með því að gefa formúlu fyrir því á bilinu :math:`[0,2\pi]`.
-  
+
 |
 |
 
@@ -375,10 +376,11 @@ Ef :math:`L>0` og :math:`f: [0,L]\to \mathbb{C}` er fall á endanlegu bili skilg
 
 og framlengja :math:`f_J` í :math:`2L`-lotubundið fall.
 
-.. image:: ./Drawings/jafnstaett.png
+.. figure:: ./Drawings/jafnstaett.png
      :width: 100 %
      :align: center
-*Jafnstæð framlenging falls* :math:`f:[0,L]\to \mathbb{C}` *í* :math:`2L` *-lotubundið fall* :math:`f_J`.
+
+     *Jafnstæð framlenging falls* :math:`f:[0,L]\to \mathbb{C}` *í* :math:`2L` *-lotubundið fall* :math:`f_J`.
 
 Fourier-stuðlar :math:`f_J` eru gefnir með
 
@@ -413,10 +415,11 @@ Ef :math:`L>0` og :math:`f: [0,L]\to \mathbb{C}` er fall á endanlegu bili skilg
 
 og framlengja :math:`f_O` í :math:`2L`-lotubundið fall.
 
-.. image:: ./Drawings/oddstaett.png
+.. figure:: ./Drawings/oddstaett.png
      :width: 100 %
      :align: center
-*Oddstæð framlenging falls* :math:`f:[0,L]\to \mathbb{C}` *í* :math:`2L` *-lotubundið fall* :math:`f_O`.
+
+     *Oddstæð framlenging falls* :math:`f:[0,L]\to \mathbb{C}` *í* :math:`2L` *-lotubundið fall* :math:`f_O`.
 
 Fourier-stuðlar :math:`f_O` eru gefnir með
 

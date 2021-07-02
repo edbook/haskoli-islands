@@ -164,8 +164,6 @@ Leysnimargfeldi
 
 Jafnvægisfastar fyrir leysni salta eru kallaðir *leysnimargfeldi* (e. solubility product) og er táknað með :math:`K_{sp}`. Þar sem eina hvarfefnið er á föstu formi þá kemur það ekki fyrir í leysnimargfeldi. Tökum nokkur dæmi.
 
-.. tip::
-
 **Matarsalt leysist upp í vatni samkvæmt formúlunni**
 
  .. math::

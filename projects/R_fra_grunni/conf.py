@@ -17,10 +17,12 @@ import sys
 import os
 import shlex
 
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath("."))
+sys.path.append(os.path.abspath("../../extensions"))
 
 # -- General configuration ------------------------------------------------
 
@@ -39,7 +41,7 @@ extensions = [
 
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
-    'katex.katex',
+    #'katex.katex',
 
     # hieroglyph is used to generate html slides, needs to be installed for use,
     # see https://github.com/nyergler/hieroglyph
@@ -62,7 +64,7 @@ extensions = [
     'hoverrole.hoverrole',
 
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
-    'analytics.analytics',
+    #'analytics.analytics',
 
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
     # in R and python, with much greater package support than sagecell in R
@@ -89,10 +91,12 @@ highlight_language = 'r'
 
 #mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
-katex_path = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js'
-katex_render = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js'
-render_math = 'rendermath.js'
-katex_css = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css'
+katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js"
+katex_render = (
+    "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
+)
+render_math = "rendermath.js"
+katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 
 # Path for latest datacamp javascript file
 datacamp_path = 'https://cdn.datacamp.com/datacamp-light-latest.min.js'
