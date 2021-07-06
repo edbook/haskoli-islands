@@ -161,8 +161,8 @@ eða tvo) þegar krónu er kastað upp fjórum sinnum skrifum við:
    pbinom(2,4,0.5)
    ## [1] 0.6875
 
-Munurinn á ``dbinom()`` og ``pbinom()`` er útskýrður á mynd
-:numref:`%s <f.dpbinom>`. Sambærilega mynd mætti teikna fyrir ``dpois()`` og
+Munurinn á ``dbinom()`` og ``pbinom()`` er útskýrður á myndinni hér að neðan. 
+Sambærilega mynd mætti teikna fyrir ``dpois()`` og
 ``ppois()`` sem fjallað er um hér að neðan.
 
 .. _f.dpbinom:
@@ -346,8 +346,8 @@ okkur á vinstri hönd í normaldreifingu með meðaltal 165 og staðalfrávik
    qnorm(0.90,165,3)
    ## [1] 168.8447
 
-Munurinn á ``pnorm()`` og ``qnorm()`` er útskýrður á mynd
-:numref:`%s <f.pqnorm>`. Sambærilegar myndir mætti teikna fyrir aðrar dreifingar
+Munurinn á ``pnorm()`` og ``qnorm()`` er útskýrður á myndinni hér að neðan. 
+Sambærilegar myndir mætti teikna fyrir aðrar dreifingar
 sem fjallað er um hér að neðan.
 
 .. _f.pqnorm:

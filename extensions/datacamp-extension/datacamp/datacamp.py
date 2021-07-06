@@ -1,6 +1,6 @@
 from docutils import nodes
 from docutils.parsers.rst import directives
-from sphinx.application import ExtensionError
+from sphinx.errors import ExtensionError
 try:
     from sphinx.util.compat import Directive
 except ImportError:
@@ -135,7 +135,7 @@ def builder_inited(app):
 		raise ExtensionError('datacamp_path config value must be set for the '
 			'datacamp extension to work')
 	if datapath:
-		app.add_javascript(datapath)
+		app.add_js_file(datapath)
 
 def setup(app):
 	app.add_node(datacamp, 
@@ -144,7 +144,7 @@ def setup(app):
 		html=(html_visit_hidden_datacamp_node, html_depart_hidden_datacamp_node))
 	app.add_config_value('datacamp_path', None, False)
 	app.add_directive('datacamp', DatacampDirective)
-	app.add_stylesheet('css/datacamp-custom.css')
+	app.add_css_file('css/datacamp-custom.css')
 
 	app.connect('builder-inited', builder_inited)
 	app.connect('doctree-resolved', append_datacamp_hidden)
