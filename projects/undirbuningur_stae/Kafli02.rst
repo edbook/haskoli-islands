@@ -457,7 +457,7 @@ Til þess að þátta stærð á forminu :math:`ax^2+bx+c` getum við ávallt be
 	 .. math::
 		x_2=\frac{-1-\sqrt{5}}{2}
 
-Fáum því að
+	Fáum því að
 
 	 .. math::
 		x^2+x-1=\left(x-\frac{-1+\sqrt{5}}{2}\right)\left(x-\frac{-1-\sqrt{5}}{2}\right)
@@ -467,7 +467,7 @@ Jöfnuhneppi
 
 Í sumum verkefnum koma fyrir fleiri en ein óþekkt stærð.
 Til þess að leysa svoleiðis verkefni þurfum við að hafa jöfnur sem lýsa því hvernig stærðirnar tengjast.
-Jöfnurnar þurfa að vera jafn margar og óþekktu stærðirnar.
+Jöfnurnar þurfa að vera jafnmargar og óþekktu stærðirnar.
 
 Til eru tvær leiðir til þess að leysa svoleiðis verkefni, :hover:`eyðingaraðferð` og :hover:`innsetningaraðferð` .
 
@@ -647,14 +647,14 @@ Svo er önnur jafnan dregin frá hinni og útkoman er jafna án stærðarinnar s
 	Tökum eftir að :math:`< \text{og} >` gefa :hover:`strangar ójöfnur, ströng ójafna`.
 
 .. tip::
-	**1.** Leysum ójöfnuna :math:`-2x+9 \leq 3`. Við megum draga frá :math:`9` báðum megin, þá fæst :math:`-2x \leq -6`. Hér þurfum við þó að einangra :math:`x` með því að deila í gegn með :math:`-2`, það er, margfalda með :math:`-\frac{1}{2}`. Þegar ójafna er margfölduð með neikvæðri tölu þarf að snúa ójöfnunni við vegna þess að :math:`a \leq b \implies -a \geq -b`. Við fáum því
+	**1.** Leysum ójöfnuna :math:`2x+2 >30x`. Drögum frá :math:`2x` báðum megin og fáum :math:`2>28x`. Deiling með :math:`28` gefur :math:`\frac{1}{14}>x`. Hér þurftum við ekki að snúa ójafnaðarmerkinu við. Þó er skýrara að skila svarinu á forminu :math:`x<\frac{1}{14}`.
+
+	**2.** Leysum ójöfnuna :math:`-2x+9 \leq 3`. Við megum draga frá :math:`9` báðum megin, þá fæst :math:`-2x \leq -6`. Hér þurfum við þó að einangra :math:`x` með því að deila í gegn með :math:`-2`, það er, margfalda með :math:`-\frac{1}{2}`. Þegar ójafna er margfölduð með neikvæðri tölu þarf að snúa ójöfnunni við vegna þess að :math:`a \leq b \implies -a \geq -b`. Við fáum því
 
 	.. math::
 		\left(-\frac12\right) \cdot (-2x) \geq \left(-\frac12\right) \cdot (-6) \quad \text{eða} \quad x \geq 3.
 
 	Þetta þýðir því að :math:`x` má vera hvaða tala sem er, svo lengi sem hún er stærri en eða jöfn :math:`3`. Með prófun er hægt að staðfesta að þetta gengur upp.
-
-	**2.** Leysum ójöfnuna :math:`2x+2 >30x`. Drögum frá :math:`2x` báðum megin og fáum :math:`2>28x`. Deiling með :math:`28` gefur :math:`\frac{1}{14}>x`. Hér þurftum við ekki að snúa ójafnaðarmerkinu við. Þó er skýrara að skila svarinu á forminu :math:`x<\frac{1}{14}`.
 
 
 Tölugildi
@@ -773,7 +773,7 @@ Látum :math:`a` og :math:`b` vera rauntölur. Þá gildir eftirfarandi
 	Skoðum til dæmis jöfnuna :math:`4x=8`. Þessi jafna hefur augljóslega bara eina lausn :math:`x=2`. Ef þessi jafna er sett í annað veldi fæst jafnan :math:`16x^2=64` sem jafngildir :math:`x^2=4` eða :math:`x=\pm 2`. Hér varð til falska lausnin :math:`-2` sem er ekki lausn á upprunalegu jöfnunni. Upphaflega lausnin er hins vegar ennþá til staðar.
 
 .. tip::
-  Leysum ójöfnuna :math:`|x+2|>9`. Skiptum í tvö tilvik samkvæmt skilgreiningu, ef :math:`x+2>0`, eða :math:`x+2<0`.
+  Leysum ójöfnuna :math:`|x+2|>9`. Skiptum í tvö tilvik samkvæmt skilgreiningu, ef :math:`x+2 \geq 0`, eða :math:`x+2 < 0`.
 
   **Tilvik 1**:
   Ef :math:`x+2 \geq 0`, það er, :math:`x \geq -2`, þá fellum við tölugildið niður og þá fæst ójafnan :math:`x+2>9`, það er, :math:`x>7`.
@@ -781,9 +781,9 @@ Látum :math:`a` og :math:`b` vera rauntölur. Þá gildir eftirfarandi
   Við þurfum því að uppfylla bæði skilyrðin :math:`x \geq -2` og :math:`x>7` en ljóst er að seinna skilyrðið er sterkara (það má sjá á talnalínu). Ef :math:`x >7` þá hefur það í för með sér að :math:`x \geq -2`. Því er lausnin í þessu tilviki, :math:`x >7`.
 
   **Tilvik 2**:
-  Ef :math:`x+2 \leq 0`, það er, :math:`x \leq -2`, þá fæst ójafnan :math:`-(x+2)>9`, eða :math:`-x-2>9`, eða :math:`x<-11`.
+  Ef :math:`x+2 < 0`, það er, :math:`x < -2`, þá fæst ójafnan :math:`-(x+2)>9`, eða :math:`-x-2>9`, eða :math:`x<-11`.
 
-  Við þurfum að uppfylla bæði skilyrðin :math:`x \leq -2` og :math:`x<-11` en ljóst er að það seinna er sterkara. Lausnin er því :math:`x<-11`.
+  Við þurfum að uppfylla bæði skilyrðin :math:`x < -2` og :math:`x < -11` en ljóst er að það seinna er sterkara. Lausnin er því :math:`x<-11`.
 
   Við fáum því lokasvarið
 
@@ -848,7 +848,7 @@ Stundum lendum við í sömu vandræðum með löng margfeldi. Þess vegna innle
 Þannig er
 
 .. math::
-	\prod_{n=1}^{100}n=1\cdot 2\cdot 3\cdot 4\cdots 100\qquad \prod_{n=4}^{87}\frac{1}{n}=\frac{1}{4}\cdot\frac{1}{5}\cdot\frac{1}{6}\cdots\frac{1}{100}
+	\prod_{n=1}^{100}n=1\cdot 2\cdot 3\cdot 4\cdots 100\qquad \prod_{n=4}^{87}\frac{1}{n}=\frac{1}{4}\cdot\frac{1}{5}\cdot\frac{1}{6}\cdots\frac{1}{87}
 
 og
 
