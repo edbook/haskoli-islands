@@ -285,9 +285,9 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 'preamble': '''
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{hyperref}
+\\usepackage{amsmath}
+\\usepackage{amssymb}
+\\usepackage{hyperref}
 ''',
 
 # Latex figure (float) alignment

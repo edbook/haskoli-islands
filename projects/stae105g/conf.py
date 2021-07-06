@@ -286,9 +286,9 @@ latex_elements = {
     "papersize": "a4paper",
     "preamble": r"""
 
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{hyperref}
+\\usepackage{amsmath}
+\\usepackage{amssymb}
+\\usepackage{hyperref}
 """,
 }
 

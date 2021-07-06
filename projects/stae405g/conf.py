@@ -232,9 +232,9 @@ htmlhelp_basename = 'Tluleggreiningdoc'
 #    'papersize': 'a4paper',
 #    'preamble': '''
 #
-#\usepackage{amsmath}
-#\usepackage{amssymb}
-#\usepackage{hyperref}
+#\\usepackage{amsmath}
+#\\usepackage{amssymb}
+#\\usepackage{hyperref}
 #''',
 #}
 
