@@ -647,7 +647,7 @@ Svo er önnur jafnan dregin frá hinni og útkoman er jafna án stærðarinnar s
 	Tökum eftir að :math:`< \text{og} >` gefa :hover:`strangar ójöfnur, ströng ójafna`.
 
 .. tip::
-	**1.** Leysum ójöfnuna :math:`-2x+9 \leq 3`. Við megum draga frá :math:`9` báðum megin, þá fæst :math:`-2x \leq -6`. Hér þurfum við þó að einangra :math:`x` með því að deila í gegn með :math:`-2`, það er, margfalda með :math:`-\frac{1}{2}`. Þegar ójafna er margfölduð með neikvæðri tölu þarf að snúa ójöfnunni við vegna þess að :math:`a \leq b \implies -a \geq -b`. Við fáum því
+	**1.** Leysum ójöfnuna :math:`-2x+9 \leq 3`. Við megum draga frá :math:`9` báðum megin, þá fæst :math:`-2x \leq -6`. Hér þurfum við þó að einangra :math:`x` með því að deila í gegn með :math:`-2`, það er, margfalda með :math:`-\frac{1}{2}`. Þegar ójafna er margfölduð með neikvæðri tölu þarf að snúa ójöfnunni við vegna þess að :math:`a \leq b` hefur í för með sér að :math:`-a \geq -b`. Við fáum því
 
 	.. math::
 		\left(-\frac12\right) \cdot (-2x) \geq \left(-\frac12\right) \cdot (-6) \quad \text{eða} \quad x \geq 3.
