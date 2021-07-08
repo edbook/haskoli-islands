@@ -578,7 +578,7 @@ Erfitt er að setja aðferðina **stofnbrotaliðun** fram með einföldum hætti
 og er það líkast til best gert með dæmum. Lítum á  nokkrar mismunandi útfærslur
 af því hvernig hægt er að liða rætt fall í stofnbrot.
 
-Athugum að margliða :math:`p(x)` er sögð af stigi :math:`n in \mathbb{N}` ef hana má rita á forminu
+Athugum að margliða :math:`p(x)` er sögð af stigi :math:`n \in \mathbb{N}` ef hana má rita á forminu
 
 .. math:: a_n x^n + a_{n-1} x^{n-1}+ \dots + a_1 x + a_0.
 
