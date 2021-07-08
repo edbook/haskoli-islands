@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Automatically fixes the latex output from sphinx
+# (the one found in '_build/latex') and compiles it into a pdf file.
+# Note that for this script to work, inkscape must be installed (as is converts the svg images)!
+# and the files 'fix_latex_R_fra_grunni' and 'create_R_fra_grunni' must be in the same directory
+# as the .tex files.
+# To run the script, type 'bash create_R_fra_grunni' without the quotes.
+
+# First we run a script that cleans up the latex code,
+# such as enabling .svg pictures and removing extra code.
+python3 fix_latex_R_fra_grunni.py RfG.tex RfG_fixed.tex
+
+# Now we compile the fixed .tex document with pdflatex. Note that we use two options:
+# '--shell-escape' allows the compile to use inkscape when needed, then continue.
+# '-interaction=nonstopmode' tells the compiler to ignore errors where input would be requested.
+# This second setting is due to the fact that there is one such error as part of sphinx's
+# redefined '\maketitle' command. I was unable to fix the error, but it seems to be harmless!
+#
+# Note that the following is run twice as sometimes references are not used after the first
+# time the file is compiled. To see if there are any missing references, one can search
+# '??' within the finished pdf, if so, something is wrong.
+pdflatex --shell-escape -interaction=nonstopmode RfG_fixed.tex
+pdflatex --shell-escape -interaction=nonstopmode RfG_fixed.tex

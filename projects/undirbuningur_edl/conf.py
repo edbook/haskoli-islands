@@ -17,14 +17,14 @@ import sys
 import os
 import shlex
 import sphinx_rtd_theme
-sys.path.insert(0, os.path.abspath('.'))
-# sys.path.append('/gudnyh/sumar/undirbuningur_edl/Sphinx_ext')
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-# sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.append(os.path.abspath("../../extensions"))
+# sys.path.append('/gudnyh/sumar/undirbuningur_edl/Sphinx_ext')
 
 # -- General configuration ------------------------------------------------
 
@@ -45,7 +45,7 @@ extensions = [
     # 'hieroglyph',
     #  hieroglyph is used to generate html slides, needs to be installed for use,
     #  see https://github.com/nyergler/hieroglyph
-    'katex.katex',
+    #'katex.katex',
     'ggbextension.ggb',
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
     'toggleblock.toggleBlock',

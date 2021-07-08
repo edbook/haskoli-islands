@@ -28,7 +28,7 @@ Efnisyfirlit
    :numbered:
    :glob:
 
-   Kafli*
+   kafli*
 
 .. Indices and tables
 .. ==================

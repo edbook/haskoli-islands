@@ -176,7 +176,7 @@ Jafnan fyrir mólstyrk er:
  Byrjum á að skoða klofnun :math:`\ce{MgCl2}` 
 
  .. math::
-   \ce{MgCl2 -> Mg^{2+} + Cl^{-}}
+   \ce{MgCl2 -> Mg^{2+} + 2Cl^{-}}
 
 
  Hér eru tvær gerðir af eindum og því betra að tákna styrkinn með hornklofum til aðgreiningar. Í hverri sameind af :math:`\ce{MgCl2}` er ein magnesíum jón og tvær klóríð jónir.
@@ -189,6 +189,7 @@ Jafnan fyrir mólstyrk er:
     [\ce{Cl^-}] &=\frac{2,00\text{ mól }\ce{MgCl2}}{1,00 \text{ L}} \cdot \frac{2\text{ mól }\ce{Cl}}{1\text{ mól }\ce{MgCl2}} = 4,00\,\text{M}
 
    \end{aligned}
+
 
 Mólalstyrkur
 ~~~~~~~~~~~~

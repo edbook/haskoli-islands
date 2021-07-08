@@ -14,7 +14,7 @@ Stærðfræðigreining III (STÆ302G), Háskóli Íslands, haust 2019
    :numbered:
    :glob:
    
-   Kafli*
+   kafli*
 
 .. toctree::
 	vidauki

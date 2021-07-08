@@ -28,7 +28,7 @@ Efnisyfirlit
    :numbered:
    :glob:
 
-   Kafli*
+   kafli*
 
 .
    _comment debug 089f03fffffvgff
