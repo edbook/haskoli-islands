@@ -1,700 +1,505 @@
-Heildun
-=======
+Hagnýting á heildun
+===================
 
 .. note::
 	**Nauðsynleg undirstaða**
 
-	- markgildi
+	- Eitthvað
 
-	- afleiður
+	- Eitthvað
 
-	- keðjureglan
+------
 
-	- reiknireglur fyrir afleiður
 
-*It can be very dangerous to see things from somebody else's point of view without the proper training.*
+.. epigraph::
 
-\- Douglas Adams, The Ultimate Hitchhiker's Guide : Five Complete Novels and One Story
+  *It is a comfort not to be mistaken at all points. Do I not know it only too well!*
 
-.. index::
-    heildi; jákvæðs falls
-    heildi
-    heildismörk
-    fall; heildanlegt
-    flatarmál
+  \– Gandalf, The Two Towers
 
------
+------
 
-Heildun
--------
+Flatarmál svæða
+----------------
 
-Óformleg skilgreining á heildi jákvæðs falls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f:[a,b]\rightarrow {{\mathbb  R}}` vera fall þannig að
-:math:`f(x)\geq 0` fyrir öll :math:`x\in[a,b]`.
-
-Þegar :hover:`heildið,heildi` :math:`\int_a^b f(x)\,dx` er skilgreint er útkoman úr því
-flatarmál svæðisins sem liggur á milli :math:`x`-ás og grafs fallsins
-(og afmarkast til vinstri af línunni :math:`x=a` og til hægri af línunni
-:math:`x=b`).
-
-Ef heildið :math:`\int_a^b f(x)\,dx` er skilgreint þá segjum við að
-fallið :math:`f` sé :hover:`heildanlegt,heildanlegur` yfir bilið :math:`[a,b]`.
-
-Tölurnar :math:`a` og :math:`b` kallast :hover:`heildismörk,heildismark` heildisins.
-
-Skilgreining
-~~~~~~~~~~~~
-
-Látum :math:`f` vera fall. Skilgreinum föllin :math:`f_+` og
-:math:`f_-`, sem bæði hafa sama skilgreiningarsvæði og :math:`f`, með
-
-.. math::
-
-   f_+(x)=\left\{\begin{array}{ll} f(x) & \text{ef }f(x)\geq 0,\\
-     0 & \text{ef }f(x)<0, \end{array} \right. \qquad
-     f_-(x)=\left\{\begin{array}{ll} 0 & \text{ef }f(x)\geq 0,\\
-     -f(x) & \text{ef }f(x)<0. \end{array}\right.
-
-Athugið að :math:`f(x)=f_+(x)-f_-(x)`.
-
-.. image:: ./myndir/kafli06/01_fplusminus.png
-	:align: center
-	:width: 12cm
-
-
-Óformleg skilgreining á heildi falls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Takmarkað fall :math:`f` er *heildanlegt* yfir bilið :math:`[a, b]` ef
-bæði föllin :math:`f_+` og :math:`f_-` eru heildanleg yfir bilið
-:math:`[a,
-b]`. Ef fallið :math:`f` er heildanlegt þá skilgreinum við heildi þess
-með formúlunni
-
-.. math:: \int_a^b f(x)\,dx=\int_a^b f_+(x)\,dx-\int_a^b f_-(x)\,dx.
-
-.. note:: Flatarmálið sem er undir :math:`x`-ás reiknast neikvætt.
-
-Undir- og yfirsummur
---------------------
-
-Dæmi: Að finna heildi
-~~~~~~~~~~~~~~~~~~~~~
-
-Hvernig getum við fundið flatarmálið :math:`\int_a^b f(x)\, dx`?
-
-**Svar:** Við þurfum að nálga flatarmálið með formum sem hafa þekkt
-flatarmál, til dæmis rétthyrningum.
-
-.. index::
-    undirsumma
-    heildun; undirsumma
-
-Skilgreining: Undirsumma
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Skiptum bilinu :math:`[a,b]` í :math:`n` hlutbil. Á hverju hlutbili komum
-við fyrir rétthyrningi sem liggur undir grafi fallsins, þ.e. hæðin á
-honum er lággildi fallsins á þessum tiltekna hlutbili.
-
-.. image:: ./myndir/kafli06/03_undirsumma.png
-	:align: center
-	:width: 12cm
-
-Látum :math:`u_k` vera flatarmál rétthyrninganna, þar sem
-:math:`k=1,\ldots,n`.
-
-Við köllum flatarmál allra rétthyrninganna :hover:`undirsummu,undirsumma` fyrir heildið og
-táknum hana með :math:`U(n)`, það er :math:`U(n) = \sum_{k=1}^n u_k`.
-
-Þá er augljóslega :math:`U(n) \leq \int_a^b f(x)\, dx`.
-
-Þegar :math:`n` stækkar þá fáum við betri og betri nálgun á heildinu.
-
-.. index::
-    yfirsumma
-    heildun; yfirsumma
-
-Skilgreining: Yfirsumma
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Skiptum bilinu :math:`[a,b]` í :math:`n` hlutbil. Á hverju hlutbili komum
-við fyrir rétthyrning sem er þannig að hæðin á honum er hágildi fallsins
-á þessum tiltekna hlutbili.
-
-.. image:: ./myndir/kafli06/03_yfirsumma.png
-	:align: center
-	:width: 12cm
-
-Táknum flatarmál hans með :math:`y_k`, þar sem :math:`k=1,\ldots,n`. Við
-köllum summu flatarmáls allra rétthyrninganna :hover:`yfirsummu,yfirsumma` fyrir heildið
-og táknum hana með :math:`Y(n)`, það er :math:`Y(n) = \sum_{k=1}^n y_k`.
-
-Þá fæst að :math:`\int_a^b f(x)\, dx \leq Y(n)`.
-
-Þegar :math:`n` stækkar þá fáum við betri og betri nálgun á heildinu.
-
-Skilgreining: Heildi
-~~~~~~~~~~~~~~~~~~~~
-
-Ef til er **nákvæmlega ein** tala :math:`I` þannig að
-
-.. math:: U(n) \leq I \leq Y(n),
-
-fyrir allar undirsummur :math:`U(n)` og yfirsummur :math:`Y(n)` þá er
-fallið :math:`f` heildanlegt á :math:`[a,b]` og
-
-.. math:: I = \int_a^b f(x)\, dx.
-
-.. ggb:: pCuJwqEE
-    :width: 700
-    :height: 400
-    :img: ./03_undirogyfirsumma.png
-    :imgwidth: 12cm
-
-
-.. note::
-    Við sögðum ekkert um það hvernig við skiptum bilinu :math:`[a,b]` í
-    :math:`n` hlutbil. Það má gera hvernig sem er, það er ekki nauðsynlegt að
-    þau séu öll jafn stór. Eina krafan er að stærð allra hlutbila stefni á
-    0 þegar :math:`n\to \infty`.
-
-.. note::
-    Við erum ekki bundin af því að skoða rétthyrninga sem með hæð sem er
-    há/lággildi fallsins á hverju hlutbili, t.d. má taka miðgildið á hveru
-    hlutbili, gildið í hægri endapunkti þess eða gildið í vinstri endapunkti þess.
-
-    Niðurstaðan þegar :math:`n\to \infty` verður hins vegar alltaf sú sama,
-    þ.e. við nálgumst heildið.
-
-.. note::
-    Einnig er mögulegt að nálga heildið með öðrum formum en rétthyrningum,
-    t.d.trapisum, og hentar það hugsanlega betur í
-    tölulegum útreikningum.
-
-
-
-Eiginleikar heildisins
-----------------------
-
-Setning
-~~~~~~~
-
-(i)  Ef fallið :math:`f` er samfellt á bilinu :math:`[a, b]` þá er
-     :math:`f` heildanlegt yfir bilið :math:`[a, b]`.
-
-(ii) Einhalla fall skilgreint á bili :math:`[a,b]` er heildanlegt.
-
-Setning
-~~~~~~~
-
-Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
-Þá er
-
-.. math:: \Big|\int_a^b f(x)\,dx\Big|\leq \int_a^b |f(x)|\,dx.
-
-Skilgreining: Heildismörkunum snúið við
+Setning: Flatarmál milli tveggja ferla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef fallið :math:`f` er heildanlegt yfir bilið :math:`[a,b]` (hér er
-:math:`a<b`) þá skilgreinum við
+Gerum ráð fyrir að :math:`f(x)` og :math:`g(x)` séu samfelld föll þannig að
+:math:`f(x)\geq g(x)` á bilinu :math:`[a,b]`. Látum :math:`R` tákna svæðið sem afmarkast
+af ferlum fallanna tveggja og línanna :math:`x=a` og :math:`x=b`. Þá má reikna
+flatarmál svæðiðsins :math:`R` með
 
-.. math:: \int_b^a f(x)\,dx=-\int_a^b f(x)\,dx.
+.. math:: A = \int_a^b (f(x)-g(x)) dx.
 
-Setning
-~~~~~~~
+.. image:: ./myndir/kafli06/PMA_flatarmal_milli_tveggja_ferla.png
+	:align: center
+	:width: 75%
 
-(i)  :math:`\int_a^a f(x)\,dx=0`.
+Dæmi: Flatarmál milli tveggja ferla
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(ii) :math:`\int_a^b f(x)\,dx=\int_a^c f(x)\,dx+\int_c^b f(x)\,dx`
+Látum :math:`R` vera svæði sem er takmarkað að ofan af fallinu :math:`f(x)=x+4` og
+að neðan af :math:`g(x)=3-\frac{x}{2}` á bilinu :math:`[1,4]`. Finnum flatarmál
+:math:`R`.
 
-     (Hér er náttúrlega forsenda að öll heildin séu skilgreind.)
+Samkvæmt setningunni hér að ofan fæst að
 
-Setning
-~~~~~~~
+.. math:: A = \int_1^4 (x+4 - (3 - \frac{x}{2})) dx = \int_1^4 \frac{3}{2}x +1 dx = \left[ \frac{3}{4}x^4 + x \right]_1^4 = 16 - \frac{7}{4} = \frac{57}{4}
 
-Látum :math:`f` og :math:`g` vera föll sem eru heildanleg yfir bilið
-:math:`[a,b]` og látum :math:`A` og :math:`B` vera fasta. Þá er
+Svo flatarmál svæðiðsins er :math:`\frac{57}{4}` fereiningar.
 
-.. math:: \int_a^b Af(x)+Bg(x)\,dx=A\int_a^b f(x)\,dx+B\int_a^b g(x)\,dx.
+Setning: Flatarmál samsettra svæða
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Með öðrum orðum, heildun er línuleg aðgerð.
+Gerum ráð fyrir því að :math:`f(x)` og :math:`g(x)` séu samfelld á bilinu
+:math:`[a,b]`. Látumm :math:`R` tákna svæðið sem myndast milli grafa fallanna og
+er afmarkað af línunum :math:`x=a` og :math:`x=b`. Þá má reikna flatarmál svæðiðisins
+:math:`R` með
 
-Setning
-~~~~~~~
+.. math:: A = \int_a^b |f(x)-g(x)| dx.
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
-Gerum ráð fyrir að um öll :math:`x\in [a, b]` gildi að
-:math:`f(x)\geq 0`. Þá er
+.. image:: ./myndir/kafli06/PMA_flatarmal_samsettra_svaeda.png
+	:align: center
+	:width: 75%
 
-.. math:: \int_a^b f(x)\,dx\geq 0.
+Dæmi: Flatarmál samsettra svæða
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fylgisetning
-~~~~~~~~~~~~
+Látum :math:`R` vera svæðið sem myndast milli grafa fallanna :math:`f(x)=\sin(x)`
+og :math:`f(x)=\cos(x)` á bilinu :math:`[0,\pi]`. Finnum flatarmál svæðisins :math:`R`.
 
-(i)  Látum :math:`f` og :math:`g` vera föll sem eru heildanleg yfir
-     bilið :math:`[a, b]`. Gerum ráð fyrir að um öll :math:`x\in [a, b]`
-     gildi að :math:`f(x)\leq g(x)`. Þá er
+Samkvæmt setningunni hér að ofan er flatarmál :math:`R`
 
-     .. math:: \int_a^b f(x)\,dx\leq \int_a^b g(x)\,dx.
+.. math:: A = \int_0^\pi |\cos(x)-\sin(x)|.
 
-(ii) Látum :math:`f` vera fall sem er heildanlegt yfir bilið
-     :math:`[a, b]`. Ef :math:`m` og :math:`M` eru fastar þannig að um
-     öll :math:`x\in [a, b]` gildir að :math:`m\leq f(x)\leq M` þá er
+Athugum að á bilinu :math:`[0,\frac{\pi}{4}]` gildir að :math:`g(x)\geq f(x)`
+en á bilinu :math:`[\frac{\pi}{4},\pi]` gildir að :math:`f(x)\geq g(x)`. Við
+getum því skipt heildinu í tvennt þannig að
 
-     .. math:: m(b-a)= \int_a^b m\,dx \leq  \int_a^b f(x)\,dx \leq \int_a^b M\,dx =M(b-a).
 
-Setning
-~~~~~~~
+.. math:: A = \int_0^{\pi/4} (\cos(x)-\sin(x) )dx +  \int_{\pi/4}^{\pi} (\sin(x)-\cos(x)) dx.
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[-a, a]`.
+Metum nú heildið og fáum
 
-(i)  Ef fallið :math:`f` er oddstætt þá er
+.. math:: = \left[\cos(x)-\sin(x) \right]_0^{\pi/4} + \left[\sin(x)-\cos(x) \right]_{\pi/4}^\pi = 2\sqrt{2}.
 
-     .. math:: \int_{-a}^a f(x)\,dx=0.
+Svæðið :math:`R` er því :math:`2\sqrt{2}` fereiningar.
 
-(ii) Ef fallið :math:`f` er jafnstætt þá er
-
-     .. math:: \int_{-a}^a f(x)\,dx=2\int_0^a f(x)\,dx.
-
-.. index::
-        fall; meðalgildi
-
-Skilgreining
-~~~~~~~~~~~~
-
-Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
-:hover:`Meðalgildi,meðalgildi` fallsins :math:`f` á bilinu :math:`[a, b]` er skilgreint
-sem
-
-.. math:: \bar{f}=\frac{1}{b-a}\int_{a}^b f(x)\,dx.
-
-.. index::
-    milligildissetning; fyrir heildi
-
-Setning: Meðalgildissetning fyrir heildi
+Svæði sem skilgreind eru m.t.t :math:`y`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gerum ráð fyrir að fallið :math:`f` sé **samfellt** á bilinu
-:math:`[a, b]`. Þá er til punktur :math:`c` í bilinu :math:`[a, b]`
-þannig að
+Setning: Heildað m.t.t. :math:`y`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: \int_a^b f(x)\,dx=(b-a)f(c).
+Látum :math:`u(y)` og :math:`v(y)` vera samfelld föll þannig að :math:`u(y\geq v(y)`.
+Látum :math:`R` tákna svæðið sem afmarkast af gröfum fallanna og línunum :math:`y=d`
+og :math:`y=c`. Þá má reikna flatarmál svæðisins :math:`R` með
 
-Það er að segja, til er punktur :math:`c` í bilinu :math:`[a, b]` þannig
-að :math:`f(c)=\bar{f}`.
+.. math:: A = \int_C^d (u(y)-v(y)) dy.
 
+Dæmi: Heildað m.t.t. :math:`y`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Undirstöðusetning stærðfræðigreiningarinnar
--------------------------------------------
+Látum :math:`v(y)=\sqrt{y}` og :math:`u(y)=2-y`. Finnum flatarmálið sem myndast
+á milli ferla fallanna á bilinu :math:`[0,1]`.
 
-.. index::
-    fall; skilgreint með heildi
+Þar sem línan :math:`2-y` liggur hægra megin við feril fallsins :math:`\sqrt{y}`
+á bilinu þá fæst samkvæmt setningunni hér að ofan fæst að
 
-Skilgreining og setning: Fall skilgreint með heildi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math:: A = \int_0^1 \left((2-y)-\sqrt{y}\right)dy = \left[2y - \frac{1}{2}y^2 - \frac{2}{3}y^{3/2}\right]_0^1 = \frac{5}{6}.
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[a, b]`.
-Fyrir :math:`x\in[a, b]` skilgreinum við :math:`F(x)=\int_a^x f(t)\,dt`.
-Fallið :math:`F` er samfellt á :math:`[a, b]`.
+Svo svæðið hefur flatarmálið :math:`\frac{5}{6}` fereiningar.
 
-.. warning::
-    Athugið að :math:`t` er breytan sem er heildað með tilliti til, en
-    :math:`x` er haldið föstu á meðan. :math:`t` hverfur svo þegar búið er
-    að reikna heildið.
+Heildi, vísisföll og lograr
+----------------------------
 
-.. index::
-    undirstöðusetning stærðfræðigreiningar, fyrri hluti
+Náttúrulegi logrin sem heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _undirstodusetning-fyrri:
+Rifjum upp veldisregluna fyrir heildi sem segir að
 
-Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math:: \int x^n dx = \frac{x^{n+1}}{n+1} + C, n \neq -1.
 
-Gerum ráð fyrir að fallið :math:`f` sé samfellt á bili :math:`I` og
-:math:`a` sé punktur í :math:`I`. Fyrir :math:`x` í :math:`I`
-skilgreinum við :math:`F(x)=\int_a^x f(t)\,dt`. Þá er fallið :math:`F`
-diffranlegt og
+Augljóst er að þetta virkar ekki þegar :math:`n=-1` því þá væri deilt með 0. Þá
+þarf að leiða hugann að því hvað skal gera þegar reynt er að meta heildið
 
-.. math:: F'(x)=f(x)
+.. math:: \int \frac{1}{x} dx.
 
-fyrir öll :math:`x\in I`.
+Rifjum upp að undirstöðusetning stærðfræðigreiningarinnar segir að
 
-.. index::
-    stofnfall
+.. \int_1^x \frac{1}{t}dt
 
-Stofnföll
----------
+er stofnfall fyrir :math:`1/x`. Það gefur okkur eftirfarandi skilgreiningu.
 
-Skilgreining: Stofnfall
-~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Náttúrulegi logrinn sem heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera fall sem er skilgreint á bili :math:`I`. Fall
-:math:`G` kallast :hover:`stofnfall` fyrir :math:`f` á
-bilinu :math:`I` ef :math:`G'(x)=f(x)` fyrir öll :math:`x` í :math:`I`.
+Fyrir :math:`x>0` má skilgreina náttúrulega logrann sem
 
-Fylgisetning
-~~~~~~~~~~~~
+.. math:: \ln(x) = \int_1^x \frac{1}{t}dt.
 
-Látum :math:`f` vera samfellt fall skilgreint á bili :math:`I`. Þá er
-til stofnfall fyrir :math:`f`
-samkvæmt :ref:`fyrri hluta undirstöðustöðusetningarinnar <undirstodusetning-fyrri>`.
+Setning: Afleiða náttúrulega lograns
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Fyrir :math:`x>0` gildir að afleiða náttúrulega lograns er gefin með
+
+.. math::  \frac{d}{dx} \ln(x) = \frac{1}{x}.
 
 Hjálparsetning
 ~~~~~~~~~~~~~~
 
-Ef :math:`F` og :math:`G` eru hvor tveggja stofnföll fyrir :math:`f` á
-bilinu :math:`I`, þá er til fasti :math:`C` þannig að
-:math:`F(x)=G(x)+C` fyrir öll :math:`x` í :math:`I`.
+Fallið :math:`\ln(x)` er diffranlegt og þar með samfellt.
 
-**Sönnun**: Þar sem
+Af grafi fallsins :math:`f(x)=\ln(x)` má ljóslega sjá að það er
+samfellt á skilgreiningarmengi þess, þ.e. :math:`]0,\infty[`.
 
-.. math:: \frac{d}{dx}(G(x) - F(x)) = G'(x) - F'(x) = f(x) - f(x) = 0
+.. image:: ./myndir/kafli06/PMA_lnx.png
+	:align: center
+	:width: 50%
 
-fyrir öll :math:`x\in I` þá er :math:`G(x)-F(x) = C` fasti.
-
-.. index::
-    undirstöðusetning stærðfræðigreiningar, seinni hluti
-
-
-Setning: Undirstöðusetning stærðfræðigreiningar, seinni hluti
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Ef :math:`f` er samfellt fall á bilinu :math:`I` og :math:`G` er
-eitthvert stofnfall fyrir :math:`f` þá er
-
-.. math:: \int_a^b f(t)\,dt=G(b)-G(a).
-
-.. note::
-    Það skiptir ekki máli hvaða stofnfall er valið í setningunni að ofan,
-    heildið er alltaf það sama.
-
-Ritháttur
-~~~~~~~~~
-
-Þegar :math:`F` er stofnfall fyrir :math:`f` þá ritum við
-
-.. math:: \int_a^b f(x)\,dx=F(x)\,\bigg|_a^b= F(b)-F(a),
-
-eða
-
-.. math:: \int_a^b f(x)\,dx=\left[F(x)\right]_a^b= F(b)-F(a).
-
--------
-
-Aðferðir við að reikna stofnföll
---------------------------------
-
-Skilgreiningin á heildi með undir- og yfirsummum er gagnleg til að útskýra
-og sanna eiginleika heilda en hún er ekki mjög góð til þess að reikna
-heildi. Því er nauðsynlegt að koma sér upp tólum sem henta betur til þess.
-Ef þau duga ekki þá þurfum við að grípa til tölulegra reikninga.
-
-Verkfærin
-~~~~~~~~~
-
-Helstu tæknilegu aðferðirnar við að finna stofnföll eru:
-
-(i)   :hover:`Innsetning` / breytuskipti.
-
-(ii)  :hover:`Hlutheildun`.
-
-(iii) :hover:`Stofnbrotaliðun`.
-
-Athugasemd
-~~~~~~~~~~
-
-Gerum ráð fyrir að :math:`F` sé stofnfall :math:`f`, þ.e.
-
-.. math:: F(x)=\int f(t)\,dt.
-
-Svo að
-
-.. math:: F'(x)=f(x).
-
-Látum nú :math:`g` vera fall og skoðum fallið :math:`F\circ g`. Þá fæst
-samkvæmt :ref:`keðjureglunni <kedjuregla>` að
-
-.. math:: \frac{d}{dx}F(g(x))=F'(g(x))g'(x) = f(g(x))g'(x),
-
-eða, með því að heilda beggja vegna jafnaðarmerkisins,
-
-.. math:: F(g(x))+C = \int f(g(x))g'(x)\,dx.
-
-.. index::
-    heildun; innsetning
-
-Innsetning
-~~~~~~~~~~
-
-Ef við viljum reikna :math:`\int f(g(x))g'(x)\, dx` þá dugar okkur að
-geta fundið :math:`\int f(x)\, dx`.
-
-Notkun á innsetningu
-~~~~~~~~~~~~~~~~~~~~
-
-Setjum :math:`u=g(x)`. Þá er
-
-.. math:: \frac{du}{dx}=g'(x)\qquad \text{eða} \qquad du=g'(x)\,dx.
-
-Svo
-
-.. math::
-
-   \underbrace{\int f(g(x))g'(x)\,dx}_{\text{Viljum finna}}  =
-   \int f(u)\,du
-   =
-   \underbrace{F(u)+C}_{\text{Getum reiknað}}  =
-   \underbrace{F(g(x))+C}_{\text{Svarið}}.
-
-.. warning::
-    Ef við breytum heildi með tilliti til :math:`x` í heildi með tilliti til
-    annarar breytistærðar :math:`u` þá verða **öll** :math:`x` að hverfa úr
-    heildinu við breytinguna.
-
-Notkun á innsetningu með mörkum
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Með mörkum þá verður innsetningin svona
-
-.. math::
-
-   \begin{aligned}
-     \int_a^b f(g(x))g'(x)\, dx  &=&
-     \int_{x=a}^{x=b} f(u)\, du  =
-     [F(u)]_{x=a}^{x=b}    \\ &=&
-     [F(g(x))]_{x=a}^{x=b}     =
-     F(g(b)) - F(g(a)).\end{aligned}
-
-Ef :math:`A=g(a)` og :math:`B=g(b)` þá getum við eins skrifað þetta
-svona
-
-.. math::
-
-   \begin{aligned}
-   \int_a^b f(g(x))g'(x)\, dx  &=&
-   \int_{x=a}^{x=b} f(u)\, du  =
-   \int_{A}^{B} f(u)\, du    \\ &=&
-   [F(u)]_A^B      =
-   F(B) - F(A).\end{aligned}
-
-.. index::
-    heildun; öfug innsetning
-
-Öfug innsetning
-~~~~~~~~~~~~~~~
-
-Reiknum :math:`\int f(x)\, dx`, með því að finna hugsanlega flóknara
-heildi sem við getum reiknað
-
-.. math::
-    \int f(g(u))g'(u)\, du.
-
-.. warning::
-    Athugið að hér þurfum við að finna heppilegt :math:`g`. Það
-    er ekki alltaf augljóst hvaða :math:`g` er hægt að nota.
-
-Notkun á öfugri innsetningu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Setjum :math:`x=g(u)`. Þá er
-
-.. math:: \frac{dx}{du}=g'(u)\qquad\quad dx=g'(u)\,du.
-
-Sem gefur að
-
-.. math::
-
-   \underbrace{\int f(x)\,dx}_{\text{Viljum finna}}  =
-   \int f(g(u))g'(u)\,du
-   =
-   \underbrace{F(u) + C}_{\text{Getum reiknað}}
-   = \underbrace{F(g^{-1}(x)) + C}_{\text{Svarið}}.
-
-Öfug innsetning með mörkum
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Við öfuga innsetningu þarf að passa að breyta mörkunum. Það er
-
-.. math::
-
-   \begin{aligned}
-   \int_a^b f(x)\,dx    &= \int_{x=a}^{x=b} f(g(u))g'(u)\,du  \\
-   &= [F(u)]_{x=a}^{x=b} = [F(g^{-1}(x))]_a^b = F(g^{-1}(b)) - F(g^{-1}(a)).\end{aligned}
-
-Eða ef :math:`a=g(A)` og :math:`b=g(B)` (það er :math:`g^{-1}(a) = A` og
-:math:`g^{-1}(b) = B`),
-
-.. math:: \int_a^b f(x)\,dx  = \int_A^B f(g(u))g'(u)\,du= [F(u)]_A^B = F(B) - F(A).
-
-.. index::
-    heildun; hlutheildun
-
-Hlutheildun
-~~~~~~~~~~~
-
-Munum að ef :math:`u` og :math:`v` eru föll þá er
-:math:`(u\cdot v)' = u'\cdot v + u \cdot v'`.
-
-Notum Undirstöðusetningu stærðfræðigreiningarinnar og heildum beggja
-vegna jafnaðarmerkisins, þá fæst
-
-.. math:: u(x)v(x) = \int (u(x)v(x))'\, dx = \int u'(x)v(x)\, dx + \int u(x)v'(x)\, dx.
-
-Það er
-
-.. math:: \int u'(x)v(x)\, dx = u(x)v(x) -  \int u(x)v'(x)\, dx.
-
-Hlutheildun með mörkum
-~~~~~~~~~~~~~~~~~~~~~~
-
-Eða með mörkum
-
-.. math:: \int_a^b u'(x)v(x)\, dx = [u(x)v(x)]_a^b -  \int_a^b u(x)v'(x)\, dx.
-
-(Athugið að þá verða engin :math:`x` í svarinu.)
-
-.. index::
-    heildun; stofnbrotaliðun
-    stofnbrotaliðun
-
-Stofnbrotaliðun
-~~~~~~~~~~~~~~~
-
-Viljum heilda rætt fall :math:`\frac{P(x)}{Q(x)}` þar sem :math:`P(x)`
-og :math:`Q(x)` eru margliður. Stofnbrotaliðun gengur út á það að skrifa ræða fallið
-:math:`\frac{P(x)}{Q(x)}` sem summu af liðum á forminu
-
-.. math:: \frac{1}{ax+b}, \quad \frac{x}{x^2+bx+c} \quad\text{ og }\quad \frac{1}{x^2+bx+c},
-
-því svona liði getum við heildað hvern fyrir sig.
-
-Nánar er fjallað um stofnbrotaliðun í kafla 6.2 í kennslubókinni.
-
-.. todo::
-    bæta við stofnbrotaliðun
-
-.. index::
-    heildi; óeiginleg
-
-Óeiginleg heildi
-----------------
-
-Skilgreining: Óeiginleg heildi I
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` vera samfellt fall á bilinu :math:`[a, \infty)`.
-Skilgreinum
-
-.. math:: \int_a^\infty f(x)\,dx=\lim_{R\rightarrow\infty} \int_a^R f(x)\,dx.
-
-Fyrir fall :math:`f` sem er samfellt á bili :math:`(-\infty, b]`
-skilgreinum við
-
-.. math:: \int_{-\infty}^b f(x)\,dx=\lim_{R\rightarrow-\infty} \int_R^b f(x)\,dx.
-
-Heildi eins og þau hér að ofan kallast :hover:`óeiginlegt heildi`.
-
-Í báðum tilvikum segjum við að óeiginlega heildið sé samleitið ef
-markgildið er til, en ósamleitið ef markgildið er ekki til.
-
-.. warning::
-      Ef :math:`f` stefnir ekki á 0 þegar :math:`x\to \infty` þá
-      er heildið ekki samleitið. En jafnvel þó fallið stefni á
-      0 þá er ekki víst að heildið sé samleitið, samanber
-      eftirfarandi dæmi.
-
-Dæmi
-~~~~
-
-Heildið :math:`\int_1^\infty \frac{1}{x^p}\,dx` er samleitið ef
-:math:`p>1` en ósamleitið ef :math:`p\leq 1`.
-
-Ef :math:`p>1` þá er
-
-.. math:: \int_1^\infty \frac{1}{x^p}\,dx=\frac{1}{p-1}.
-
-Skilgreining: Óeiginleg heildi I, framhald
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` vera fall sem er samfellt á öllum rauntalnaásnum.
-
-Heildi af gerðinni :math:`\int_{-\infty}^\infty f(x)\,dx` er sagt
-samleitið ef bæði heildin :math:`\int_{-\infty}^0 f(x)\,dx` og
-:math:`\int_0^\infty f(x)\,dx` eru samleitin og þá er
-
-.. math::
-
-   \int_{-\infty}^\infty f(x)\,dx=\int_{-\infty}^0 f(x)\,dx +
-     \int_0^\infty f(x)\,dx.
-
-.. note::
-    Það skiptir ekki máli í hvaða punkti heildinu er skipt í tvennt, það má
-    velja aðra tölu heldur en 0, útkoman verður alltaf sú sama.
-
-Skilgreining: Óeiginleg heildi II
+Dæmi: Afleiða náttúrulega lograns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera samfellt fall á bilinu :math:`(a, b]` og hugsanlega
-ótakmarkað í grennd við :math:`a`. Skilgreinum
+Reiknum afleiðuna
 
-.. math:: \int_a^b f(x)\,dx=\lim_{c\rightarrow a^+} \int_c^b f(x)\,dx.
+.. math:: \frac{d}{dx} \ln(5x^3-2).
 
-Fyrir fall :math:`f` sem er samfellt á bili :math:`[a, b)` og hugsanlega
-ótakmarkað í grennd við :math:`b` þá skilgreinum við
+Notum keðjuregluna og áum
 
-.. math:: \int_a^b f(x)\,dx=\lim_{c\rightarrow b^-} \int_a^c f(x)\,dx.
+.. math:: = \frac{1}{5x^3-2} \cdot 15x^2 = \frac{15x^3}{5x^3-2}.
 
-Í báðum tilvikum segjum við að óeiginlega heildið sé samleitið ef
-markgildið er til en ósamleitið ef markgildið er ekki til.
+Setning: Heildi sem skilar náttúrulega logranum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Dæmi
-~~~~
+Náttúrulegi logrinn er stofnfall fallsins :math:`f(u)=1/u`, þ.e.
 
-Heildið :math:`\int_0^1 \frac{1}{x^p}\,dx` er samleitið ef :math:`p<1`
-en ósamleitið ef :math:`p\geq 1`. Ef :math:`p<1` þá er
+.. math:: \int \frac{1}{u} du = \ln|u|+C.
 
-.. math::
+Dæmi: Heildi sem skilar náttúrulega logranum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   \int_0^1
-   \frac{1}{x^p}\,dx=\frac{1}{1-p}.
+Reiknum heildið
+
+.. math:: \int \frac{x}{x^2+4}dx.
+
+Notum innsetningu með :math:`u=g(x)=x^2+4`. Þá er
+
+.. math:: \int \frac{x}{x^2+4} dx = \frac{1}{2}\int \frac{1}{u}du = \frac{1}{2}|u|+C = \frac{1}{2}|x^2+4|+C=\frac{1}{2}\ln(x^2+4)+C.
+
+Setning: Lograreglur
+~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+
+	Ef :math:`a,b>0` og :math:`r` er ræð tala þá gildir
+
+		#. :math:`\ln(1)=0`
+
+		#. :math:`\ln(ab)=\ln(a)+\ln(b)`
+
+		#. :math:`ln(a/b) = \ln(a)-\ln(b)`
+
+		#. :math:`\ln(a^r)=r\ln(a)`
+
+Dæmi: Lograreglur
+~~~~~~~~~~~~~~~~~
+
+Einföldum stæðuna
+
+.. math:: \ln(9)-2\ln(3) + \ln(1/3).
+
+Notum lograreglu 4 til að fá að :math:`2\ln(3)=\ln(3^2)=\ln(9)`. Þá fæst
+
+.. math:: \ln(9)-\ln(9) + \ln(1/3) = \ln(1/3).
+
+Þar sem :math:`1/3 = 3^{-1}` getum við notað sömu reglu aftur og fengið að
+
+.. math:: \ln(1/3)=\ln(3^{-1})=-\ln(3).
+
+Skilgreining á tölur Eulers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Hægt er að nota náttúrulega logrann til þess að skilgreina tölu Eulers, þ.e.
+óræðu tölunni :math:`e`.
+
+Skilgreining: Tala Eulers
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Talan :math:`e` er skilgreind sem sú rauntala sem uppfyllir að
+
+:math:`\ln(e)=1`.
+
+Með öðrum orðum þá skal flatarmál svæðisins sem myndast undir ferli fallsins :math:`y=1/t` og yfir :math:`x`-ás á milli
+línanna :math:`t=1` og :math:`t=e` vera 1. Í stærðfræðitáknum væri það táknað
+
+.. math:: \int_1^e \frac{1}{t} dt = 1.
+
+.. image:: ./myndir/kafli06/PMA_e.png
+	:align: center
+	:width: 50%
+
+Veldisvísifallið
+~~~~~~~~~~~~~~~~
+
+Athugum að náttúrulegi logrinn er eintækt og á sér því andhverfu. Köllum hana
+:math:`\exp(x)`. Samkvæmt skilgreiningu á andhverfu gildir þá að
+
+.. math:: \exp(\ln(x)) = x \text{ fyrir öll } x>0 \text{ og } \ln(\exp(x))=x \text{ fyrir öll } x.
+
+Munum einnig að andhverfa er speglun fallsins um línuna :math:`y=x`
+
+.. image:: ./myndir/kafli06/PMA_lnx_ex.png
+	:align: center
+	:width: 60%
+
+Ef við skoðum grafið gaumgæfilega má sjá að fallið :math:`\exp(x)` er í raun veldisvísisfallið
+:math:`e^x`, þ.e. :math:`\exp(x)=e^x`. Af þessu leiðir að veldisvísisfallið er andhverfa
+náttúrulega lograns.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Látum :math:`f` vera samfellt fall á bili :math:`(a,\infty)` og
-ótakmarkað í grennd við :math:`a`. Látum :math:`c` vera einhverja tölu
-þannig að :math:`a<c<\infty`.
+Fyrir hvaða rauntölu :math:`x` sem er skilgreinum við :math:`y=e^x` sem þá tölu
+sem uppfyllir að
 
-Heildið :math:`\int_a^\infty f(x)\,dx` er sagt vera samleitið ef bæði
-heildin :math:`\int_a^c f(x)\,dx` og :math:`\int_c^\infty f(x)\,dx` eru
-samleitin og þá er
+:math:`\ln(y) = \ln(e^x)=x`.
 
-.. math:: \int_{a}^\infty f(x)\,dx=\int_{a}^c f(x)\,dx + \int_c^\infty f(x)\,dx.
+Af þessu leiðir að
+
+.. math:: e^{\ln(x)} = x \text{ fyrir öll } x>0 \text{ og } \ln(e^x)=x \text{ fyrir öll } x.
+
+Setning: Veldisvísisreglur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
-    Það er sama hvað tala :math:`c` er valin hér að ofan, útkoman verður
-    alltaf sú sama.
 
-.. ggb:: 1430547
-    :width: 700
-    :height: 300
-    :img: 07_samleitidheildi.png
-    :imgwidth: 12cm
+	Ef :math:`p` og :math:`q` eru rauntölur og :math:`r` er ræð tala þá gildir
 
-Setning
-~~~~~~~
+	#. :math:`e^pe^q=e^{p+q}`
 
-Látum :math:`-\infty\leq a<b\leq \infty`. Gerum ráð fyrir að föllin
-:math:`f` og :math:`g` séu samfelld á :math:`(a, b)` og að um öll
-:math:`x\in (a, b)` gildi að :math:`0\leq f(x)\leq g(x)`.
+	#. :math:`\frac{e^p}{e^q}= e^{p-q}`
 
-(i)  Ef heildið :math:`\int_a^b g(x)\,dx` er samleitið þá er heildið
-     :math:`\int_a^b f(x)\,dx` líka samleitið og
+	#. :math:`(e^p)^r = e^{pr}`
 
-     .. math:: \int_a^b f(x)\,dx \leq \int_a^b g(x)\,dx.
 
-(ii) Ef heildið :math:`\int_a^b f(x)\,dx` er ósamleitið þá er heildið
-     :math:`\int_a^b g(x)\,dx` líka ósamleitið.
+Dæmi: Veldisvísisreglur
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Reiknum afleiðuna
+
+.. math:: \frac{d}{dt} e^{3t}e^{t^2}.
+
+Notum veldisvísisreglu 1 og fáum
+
+.. math:: = \frac{d}{dt} e^{3t+t^2}.
+
+Keðjureglan gefur nú
+
+.. math:: = (3t+t^2)e^{3t+t^2}.
+
+
+Almennt um logra og vísisföll
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Munum að vísisföll eru föll á forminu :math:`f(x)=a^x` og lograr eru föll sem
+hafa formið :math:`\log_b(x)` þar sem :math:`a,b\in \mathbb{R}`.
+
+Skilgreining
+~~~~~~~~~~~~~
+
+Látum :math:`a>0` og :math:`x \in \mathbb{R}`. Skilgreinum :math:`y=a^x` þannig að
+
+.. math:: y = a^x = e^{x\ln(a)}.
+
+Þessi skilgreining hjálpar okkur að átta okkur betur á vísisföllum þar sem að :math:`a`
+er óræð tala.
+
+Setning: Afleiður og heildi vísisfalla
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`a>0`. Þá gildir að
+
+.. math:: \frac{d}{dx}a^x = a^x \ln(a)
+
+og
+
+.. math:: \int a^x dx = \frac{1}{\ln(a)}a^x+C.
+
+Setning: Afleiða logra
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`b>0`. Þá gildir að
+
+.. math:: \frac{d}{dx}\log_b(x)=\frac{1}{x\ln(b)}.
+
+Dæmi: Afleiða logra
+~~~~~~~~~~~~~~~~~~~~
+
+Reiknum afleiðuna
+
+.. math:: \frac{d}{dx}\log_8(7x^2+4).
+
+Notum skilgreininguna á afleiðu logra og keðjuregluna til að fá að
+
+.. math:: \frac{d}{dx}\log_8(7x^2+4) = \frac{1}{(7x^2+4)\ln(8)}(14x).
+
+
+Veldisvísisvöxtur og -hnignun
+------------------------------
+
+Veldisvísisvöxtur er til staðar í mörgum líffræðilegum kerfum. Vexti þessa líkana
+má lýsa með formúlunni
+
+.. math:: y=y_0e^{kt}
+
+þar sem :math:`y_0`er upphafsástand kerfisins og :math:`k` er jákvæður fasti. Athugið
+að um þessi líkön gildir að
+
+.. math:: y' = ky_0e^{kt} = ky.
+
+Þ.e. vaxtaharið er í hlutfalli við fallgildið. Þetta er eitt af lykileiginleikum
+veldisvísisvaxtar.
+
+Setning: Veldisvísisvöxtur
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Veldisvísisvexti má lýsa með formúlunni
+
+.. math:: y = y_0e^{kt}
+
+þar sem :math:`y_0`er upphafsástand kerfisins og :math:`k` er jákvæður fasti
+sem kallaður er *vaxtarfasti*.
+
+Dæmi: Veldisvísisvöxtur
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Gefið er að fjöldi baktería í tilraunadiski sé 200 í upphafi og hafi *vaxtarfastann*
+0,02. Fjölgun bakteríanna má lýsa með fallinu
+
+.. math:: f(t)=200e^{0,02t}
+
+þar sem :math:`t` er tíminn í mínútum. Hve margar bakteríur
+verða í disknum eftir 5 klst (300 mín)? Hvenær verður fjöldi baktería orðinn 100.000?
+
+Þar sem að fallið :math:`f(t)` lýsir fjölda baktería í disknum eftir :math:`t`
+mínútur þá fæst að fjöldi baktería eftir 300 mínútur verður
+
+.. math:: f(300)=200e^{0,02\cdot 300}\approx 80.686.
+
+Til að finna hvenær fjöldi baktería verður 100.000 verðum við að láta :math:`f(t)=100.000`
+og einangra svo :math:`t` til að ákvarða tímapunktinn. Fáum
+
+.. math::
+	\begin{align}
+		100.000 &= 200e^{0,02t}\\
+		500 &= e^{0,02t}\\
+		\ln(500) &= 0,02t\\
+		t &= \ln(500)/0,02\\
+		t & \approx 310,73.
+	\end{align}
+
+Svo eftir tæplega 311 mínútur verður fjöldi baktería orðinn 100.000.
+
+Skilgreining: Tvöföldunartími
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ef fjöldi eykst með veldisvísisvexti þá er *tvöföldunartíminn* sá tími sem það
+tekur fjöldann að tvöfaldast. Tvöföldunartíma má reikna með
+
+.. math:: D = \frac{\ln(2)}{k}
+
+Dæmi: Tvöföldunartími
+~~~~~~~~~~~~~~~~~~~~~~
+
+Gerum ráð fyrir að fjöldi fiska í ákveðinni tjörn aukist með veldisvísisvexti.
+Upphaflega voru settir 500 fiskar í tjörnina. Eftir 6 mánuði voru fiskarnir orðnir 1000.
+Eigandi tjarnarinnar mun leyfa vinum og vandamönnum að veiða í tjörninni þegar
+fiskarnir eru orðnir 10.000 talsins. Hvenær mun það gerast?
+
+Þar sem að við vitum tvöföldunartíminn eru 6 mánuðir þá vitum við að
+
+.. math:: 6 = \ln(2)/k \Leftrightarrow k = \frac{\ln(2)}{6}.
+
+Þar sem við þekkjum vaxtarfastann :math:`k=\frac{\ln(2)}{6}` og upphafsfjöldann :math:`y_0=500`
+þá getum við sett fram jöfnuna
+
+.. math:: f(t) = 500e^{\frac{\ln(2)}{6}t}
+
+sem lýsir fjölda fiska í tjörninni á tímapunkti :math:`t`,
+þar sem að :math:`t` er tíminn í mánuðum. Setjum nú :math:`f(t)=10.000` og einangrum
+:math:`t`.
+
+.. math::
+	\begin{align}
+		10.000 &= 500e^{\frac{\ln(2)}{6} t}\\
+		200 &= e^{\frac{\ln(2)}{6} t}\\
+		\ln(20) &= \frac{\ln(2)}{6}t\\
+		t &= \frac{6\ln(20)}{\ln(2)}\\
+		t &\approx 25,93.
+	\end{align}
+
+Svo eftir tæplega 26 mánuði, örlítið meira en 2 ár, þá geta vinir og vandamenn eigandans
+byrjað að veiða í tjörninni.
+
+Veldisvísishnignun
+~~~~~~~~~~~~~~~~~~~
+
+Veldisvísisfallið má einnig nota til að lýsa fjölda sem dregst saman og öðru sambærilegu
+eins og niðurbrotstíma geislavirkra efna.
+
+Setning: Veldisvísishnignun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Kerfi, þar sem á sér stað veldisvísishnignum, má lýsa með líkaninu
+
+.. math:: y = y_0 e^{-kt},
+
+þar sem :math:`y_0` er upphafsástand kerfisins og :math:`k>0` er fasti
+sem kallaður er *hnignunarfasti*.
+
+Setning: Helmingunartími
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Helmingunartími* er sá tími sem það tekur fjölda sem fylgir veldisvísishnignun
+að fækka um helming. Helmingunartíma má reikna með
+
+.. math:: H = \frac{\ln(2)}{k}.
+
+Dæmi: Helmingunartími
+~~~~~~~~~~~~~~~~~~~~~~
+
+Kolefnisaldursgreining (e. *carbon dating*) er sú aðferð sem hvað flestir tengja
+við veldisvísishnignun. Kolefni-14 (sem gefur frá sér geislavirkar eindir)
+hnignar með reglulegum veldisvísishraða. Svo ef við vitum hve mikið kolefni var
+upphaflega til staðar í hlut og hve mikið kolefni er eftir, getum við ákvarðað aldur
+viðkomandi hlutar. Helmingunartími kolefni-14 er u.þ.b. 5730 ár. Ef við höfum 100g
+af kolefni-14 í dag, hve mikið er þá til staðar eftir 50 ár? Ef hlutur sem
+upphaflega innihélt 100 g af kolefni inniheldur nú 10g, hve gamall er hann?
+
+Við skulum leysa þetta. Við höfum
+að helmingunartíminn sé 5730 og því gildir að
+
+.. math:: k = \frac{\ln(2)}{5730}
+
+samkvæmt skilgreiningu. Þar sem upphafsástand kerfisins er 100g af kolefni fæst
+að líkanið sé
+
+.. math:: y=100e^{-\frac{\ln(2)}{5730}t}.
+
+Eftir 50 ár höfum við
+
+.. math:: y = 100e^{-\frac{\ln(2)}{5730}\cdot 50} \approx 99,40.
+
+Svo eftir 50 ár eru u.þ.b. 99,40g af carbon-14 eftir. Ef við reynum að greina
+aldur hlutsins verðum við að gera ráð fyrir að :math:`y=10` og einangra :math:`t`.
+Fáum
+
+.. math::
+	\begin{align}
+	 	10 &= 100 e^{-\frac{\ln(2)}{5739}t}\\
+		0,1 &= e^{-\frac{\ln(2)}{5739}t}\\
+		t &\approx 19035.
+	\end{align}
+
+Svo hluturinn er rétt rúmlega 19.000 ára gamall.

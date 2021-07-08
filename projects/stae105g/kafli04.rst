@@ -143,11 +143,11 @@ Við segjum að fall :math:`f` hafi :hover:`staðbundið hágildi` í punktinum
 :math:`x_0` ef til er bil :math:`(a,b)` umhverfis :math:`x_0`, sem er
 þannig að
 
-.. math:: f(x) \leq f(x_0), \quad \text{ fyrir öll } x \in (a,b).
+.. math:: f(x) \leq f(x_0), \quad \text{ fyrir öll } x \in ]a,b[.
 
 Við segjum að fall 𝑓 hafi staðbundið lággildi í punktinum 𝑥0 ef til er bil (𝑎,𝑏) umhverfis 𝑥0, sem er þannig að
 
-.. math:: f(x) \geq f(x_0), \quad \text{ fyrir öll } x \in (a,b).
+.. math:: f(x) \geq f(x_0), \quad \text{ fyrir öll } x \in ]a,b[.
 
 Hér fyrir neðan má t.a.m. sjá að fallið :math:`y=-x^2+1` hefur hágildið
 :math:`y=1` þegar :math:`x=0`.
@@ -738,8 +738,8 @@ Regla de l’Hôpital, :math:`\infty`-útgáfa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að föllin :math:`f` og :math:`g` séu diffranleg á bilum
-:math:`(x_1, \infty)` og að :math:`g'(x)\neq 0` fyrir öll
-:math:`x\in (x_1, \infty)`. Gerum enn fremur ráð fyrir að
+:math:`]x_1, \infty[` og að :math:`g'(x)\neq 0` fyrir öll
+:math:`x\in ]x_1, \infty[`. Gerum enn fremur ráð fyrir að
 
 .. math::
 
@@ -903,8 +903,3 @@ Hvað gæti klikkað?
   #. Nálganirnar fikrast í átt að annarri rót en þeirri sem leitað var að. Ef fallið hefur fleiri en eina rót og leitað var af ákveðinni rót þarf að takmarka sig við leit á ákveðnu bili. Ef önnur rót slysast inn á bilið getur það gerst að aðferðin finni hana í staðinn.
 
   #. Aðferðin bregst algerlega og skilar gildi sem er ekki nálægt neinni rót. Þetta getur t.a.m. gerst þegar upphafságiskunin er ekki nægilega góð og ágiskanirnar sem koma í framhaldinu sveiflast á milli tveggja gilda.
-
-Stofnföll
-----------
-
-Eitthvað hér

@@ -380,7 +380,7 @@ mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
 .. ggb:: 1468111
     :width: 700
     :height: 400
-    :img: 04_Graf_falls.png
+    :img: ./myndir/kafli01/04_Graf_falls.png
     :imgwidth: 12cm
     :zoom_drag: false
 
@@ -474,7 +474,7 @@ hallatölunni, :math:`a` og skurðpunktinum við :math:`y`-ás, :math:`b`.
 .. ggb:: dty79z8p
     :width: 700
     :height: 400
-    :img: PMA_lina.png
+    :img: ./myndir/kafli01/PMA_lina.png
     :imgwidth: 12cm
 
 Margliður
@@ -513,7 +513,7 @@ Hér er fallið :math:`g(x)` oddstætt en :math:`f(x)` jafnstætt.
 .. ggb:: sztnpmbr
     :width: 700
     :height: 400
-    :img: PMA_slett_odda_veldisfoll.png
+    :img: ./myndir/kafli01/PMA_slett_odda_veldisfoll.png
     :imgwidth: 12cm
 
 
@@ -577,7 +577,7 @@ sem einkennist af því hvort :math:`n` sé oddatala eða slétt. Hér að neða
 .. ggb:: ny5kssay
     :width: 700
     :height: 400
-    :img: PMA_rotarfoll.png
+    :img: ./myndir/kafli01/PMA_rotarfoll.png
     :imgwidth: 12cm
 
 Torræð föll
@@ -796,10 +796,10 @@ og sínus með því að nota einingahringin á þessa vegu: Fyrir punktinn :mat
 einingahringnum og hornið :math:`\theta` sem myndast á milli :math:`x`-ássins og
 :math:`A` þá er :math:`\cos(\theta)=x` og :math:`\sin(\theta)=y`.
 
-.. ggb:: rgb7vnmd
-    :width: 700
-    :height: 400
-    :img: PMA_einingahringurinn.png
+.. ggb:: nqxfxhgp
+    :width: 1000
+    :height: 500
+    :img: ./myndir/kafli01/PMA_einingahringurinn.png
     :imgwidth: 12cm
 
 Gott getur verið að kannast við helstu hornafallastærðirnar.
@@ -901,7 +901,7 @@ gildi almennt, óháð gildinu á :math:`\theta`, eins og sést hér að neðan.
 .. ggb:: zbhcxhmn
     :width: 700
     :height: 400
-    :img: PMA_cos2sin2.png
+    :img: ./myndir/kafli01/PMA_cos2sin2.png
     :imgwidth: 12cm
 
 Hægt er að útvíkka regluna þannig að hún virki fyrir aðra hringi en einingahringinn.
@@ -920,7 +920,7 @@ samkvæmt því sem við leiddum út hér að ofan. Þetta gildir fyrir öll :ma
 .. ggb:: pce9f4as
     :width: 700
     :height: 400
-    :img: PMA_cos2sin2.png
+    :img: ./myndir/kafli01/PMA_cos2sin2.png
     :imgwidth: 12cm
 
 .. tip::
