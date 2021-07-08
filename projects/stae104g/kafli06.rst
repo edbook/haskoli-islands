@@ -578,7 +578,7 @@ Erfitt er að setja aðferðina **stofnbrotaliðun** fram með einföldum hætti
 og er það líkast til best gert með dæmum. Lítum á  nokkrar mismunandi útfærslur
 af því hvernig hægt er að liða rætt fall í stofnbrot.
 
-Athugum að margliða :math:`p(x)` er sögð af stigi :math:`n in \mathbb{N}` ef hana má rita á forminu
+Athugum að margliða :math:`p(x)` er sögð af stigi :math:`n \in \mathbb{N}` ef hana má rita á forminu
 
 .. math:: a_n x^n + a_{n-1} x^{n-1}+ \dots + a_1 x + a_0.
 
@@ -595,7 +595,7 @@ og hefur hún því eina, tvöfalda núllstöð í :math:`x=1`. Hins vegar má �
 í :math:`q(x)=(x+2)(x+3)` og hefur hún því tvær einfaldar núllstöðvar, :math:`x=-2` og :math:`x=-3`.
 
 Dæmi 1
-^^^^^^
+~~~~~~
 **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **með** :math:`n` **einfaldar núllstöðvar.**
 
 Lítum á fallið :math:`\frac{x+4}{x^2-5x+6}`. Sjá má að teljarinn er margliða af fyrsta stigi
@@ -638,7 +638,7 @@ sem hefur lausnina :math:`A=-6` og :math:`B=7`. Af þessu sést að
 .. math::  \frac{x+4}{x^2-5x+6} = -\frac{6}{x-2}+\frac{7}{x-3}.
 
 Dæmi 2
-^^^^^^
+~~~~~~
 **Teljari og nefnari af stigi** :math:`n` **og nefnarinn með** :math:`n` **einfaldar núllstöðvar.**
 
 Lítum á fallið :math:`\frac{x^3+2}{x^3-x}`. Sjá má að bæði teljari og nefnari eru margliður
@@ -677,7 +677,7 @@ Af þessu sést að
 .. math:: \frac{x^3+2}{x^3-x} = 1 - \frac{2}{x}+\frac{3}{2(x-1)}+\frac{1}{2(x-1)}.
 
 Dæmi 3
-^^^^^^
+~~~~~~
 **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **einfaldar núllstöðvar.**
 
 Lítum á fallið :math:`\frac{x^2+3x+2}{x(x^2+1)}`. Athugum að teljarinn er
@@ -713,7 +713,7 @@ sem hefur lausnina :math:`A=2`, :math:`B=-1` og :math:`C=3`. Af þessu sést að
 .. math:: \frac{x^2+3x+2}{x(x^2+1)} = \frac{2}{x} + \frac{-x+3}{x^2+1}.
 
 Dæmi 4
-^^^^^^
+~~~~~~
 **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`n` **núllstöðvar, þar af einhverjar fjölfaldar**
 
 Lítum á fallið :math:`\frac{1}{x(x-1)^2}`. Ljóst er að teljari er af hærra stigi
@@ -756,7 +756,7 @@ sem hefur lausnina :math:`A=1`, :math:`B=-1` og :math:`C=1`. Af þessu sést að
 .. math:: \frac{1}{x(x-1)^2} = \frac{1}{x}-\frac{1}{x-1} + \frac{1}{(x-1)^2}
 
 Dæmi 5
-^^^^^^
+~~~~~~
 **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **núllstöðvar og núllstöðvalausan þátt í veldinu** :math:`q>1`
 
 Lítum á fallið :math:`\frac{x^2+2}{4x^5+4x^3+x}`. Hér er stig nefnara hærra en stig teljara
@@ -800,7 +800,7 @@ Af þessu sést að
 .. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{2}{x}-\frac{4x}{2x^2+1}-\frac{3x}{(2x^2+1)^2}.
 
 Samantekt
-^^^^^^^^^
+~~~~~~~~~
 
 Líkt og áður segir þá er stofnbrotaliðun notuð fyrir ræð föll sem erfitt getur
 reynst að heilda í sínu upprunalega formi. Við stofnbrotaliðun er fallið liðað
