@@ -8,7 +8,7 @@ Tölur og föll
 
     -  `Forgangsröðun aðgerða <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#forgangsroun-agera>`_.
 
-    -  `Reiknireglur <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli01.html#reiknireglur>`_.
+    -  `Reiknireglur <https://notendur.hi.is/undirbuningur_stae/Kafli01.html#reiknireglur>`_.
 
     -  `Brotareikningur <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#brotareikningur>`_.
 
@@ -51,7 +51,7 @@ Sett fram samtímis, en óháð, af
 Fyrir nánari útlistun á hugtökunum sem við fjöllum um þá er hægt að skoða,
 auk kennslubókarinnar,
 
--  http://edbook.hi.is/undirbuningur
+-  http://edbook.hi.is/undirbuningur_stae
 
 -  http://stae.is/hugtakasafn
 
@@ -122,7 +122,7 @@ Skilgreining: Tölur
     fjölda. Ef maður lítur hins vegar þannig á að þær séu notaðar til að
     númera hluti þá er 0 ekki með.
 
-Sjá einnig http://edbook.hi.is/undirbuningur/Kafli1.html#talnakerfi.
+Sjá einnig http://edbook.hi.is/undirbuningur_stae/Kafli1.html#talnakerfi.
 
 Smíði rauntalna
 ~~~~~~~~~~~~~~~
