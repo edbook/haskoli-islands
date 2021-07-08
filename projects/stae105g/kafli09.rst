@@ -277,3 +277,42 @@ leiðir að
     r^n &\rightarrow 1 \text{ ef } r=1\\
     r^n &\rightarrow \infty \text{ ef } r > 1\\
   \end{align}
+
+Setning: Markgildisreglur
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`\{a_n\}` og :math:`\{b_n\}` vera gefnar runur og :math:`c` einhverja
+rauntölu. Ef til eru fastar :math:`A` og :math:`B` þannig að :math:`\lim_{n \rightarrow \rightarrow} a_n = A`
+:math:`\lim_{n \rightarrow \rightarrow} b_n = B`. Þá gildir
+
+  #. :math:`\lim_{n \rightarrow \infty} c = c`
+
+  #. :math:`\lim_{n\rightarrow \infty} ca_n = c\lim_{n\rightarrow \infty}a_n = cA`
+
+  #. :math:`\lim_{n\rightarrow \infty} (a_n \pm b_n) = \lim_{n\rightarrow \infty} a_n \pm \lim_{n\rightarrow \infty} b_n = A \pm B`
+
+  #. :math:`\lim_{n\rightarrow \infty} (a_n \cdot b_n) = \left(\lim_{n\rightarrow \infty} a_n \right) \cdot \left(\lim_{n\rightarrow \infty} b_n \right) = A \cdot B`
+
+  #. :math:`\lim_{n\rightarrow \infty} \lim_{n\rightarrow \infty} \left( \frac{a_n}{b_n} \right) = \frac{\lim_{n\rightarrow \infty} a_n}{\lim_{n\rightarrow \infty} b_n} = \frac{A}{B}` af því gefnu að :math:`B \neq 0` og hvert :math:`b_n \neq 0`.
+
+Dæmi: Ákvaðra samleitni og reikna markgildið
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ákvörðum hvort runan
+
+.. math:: \left\{5 - \frac{3}{n^2} \right\}
+
+sé samleitin og ef svo er reiknum þá markgildi hennar.
+
+Við vitum að :math:`1/n \rightarrow 0` og því gildir að
+
+.. math:: \lim_{n \rightarrow \infty} \frac{1}{n^2} = \lim_{n \rightarrow \infty} \left(\frac{1}{n}\right) \cdot \lim_{n \rightarrow \infty} \left(\frac{1}{n}\right)  = 0 \cdot 0 = 0.
+
+Svo markgildi rununnar er
+
+.. math:: \lim_{n \rightarrow \infty} 5 - \frac{3}{n^2} = \lim_{n \rightarrow \infty} 5 - 3  \lim_{n \rightarrow \infty} \frac{1}{n^2} = 5 - 3\cdot 0 = 5.
+
+
+
+
+d
