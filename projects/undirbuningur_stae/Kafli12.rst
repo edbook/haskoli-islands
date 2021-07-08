@@ -683,18 +683,15 @@ Gerum ráð fyrir að :math:`k\in\mathbb{R}` sé fasti.
 Þá gildir:
 
 .. math::
+    \begin{aligned}
+    1. & \qquad \lim_{x\to c}k=k \\
+    2. & \qquad \lim_{x\to c} \left(kf(x) \right)=k \cdot \left(\lim_{x\to c}f(x)\right) \\
+    3. & \qquad \lim_{x\to c} \left(f(x)+g(x)\right)=\lim_{x\to c}f(x)+\lim_{x\to c}g(x) \\
+    4. & \qquad \lim_{x\to c} \left(f(x)-g(x)\right)=\lim_{x\to c}f(x)-\lim_{x\to c}g(x) \\
+    5. & \qquad \lim_{x\to c} \left(f(x)\cdot g(x)\right)= \left( \lim_{x\to c}f(x) \right)\cdot \left(\lim_{x\to c}g(x) \right) \\
+    6. & \qquad \lim_{x\to c} \left( \frac{f(x)}{g(x)} \right)=\frac{\lim_{x\to c}f(x)}{\lim_{x\to c}g(x)} \qquad \text{ef} \qquad \lim_{x\to c}g(x)\not=0 \\
+    \end{aligned}
 
-    1. & \qquad \lim_{x\to c}k=k
-
-    2. & \qquad \lim_{x\to c} \left(kf(x) \right)=k \cdot \left(\lim_{x\to c}f(x)\right)
-
-    3. & \qquad \lim_{x\to c} \left(f(x)+g(x)\right)=\lim_{x\to c}f(x)+\lim_{x\to c}g(x)
-
-    4. & \qquad \lim_{x\to c} \left(f(x)-g(x)\right)=\lim_{x\to c}f(x)-\lim_{x\to c}g(x)
-
-    5. & \qquad \lim_{x\to c} \left(f(x)\cdot g(x)\right)= \left( \lim_{x\to c}f(x) \right)\cdot \left(\lim_{x\to c}g(x) \right)
-
-    6. & \qquad \lim_{x\to c} \left( \frac{f(x)}{g(x)} \right)=\frac{\lim_{x\to c}f(x)}{\lim_{x\to c}g(x)} \qquad \text{ef} \qquad \lim_{x\to c}g(x)\not=0
 
 Diffrun
 ~~~~~~~

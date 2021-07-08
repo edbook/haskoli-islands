@@ -59,7 +59,7 @@ Forgangsröðun aðgerða
 Þegar reiknað er með tölum þarf að framkvæma :hover:`aðgerðir, reikniaðgerð` í eftirfarandi röð:
 
 1. Reikningsaðgerðir innan sviga
-2. Margföldunar- og deilingaraðgerðir
+2. Margföldunar- og deilingaraðgerðir (þar með talið veldareikning)
 3. Samlagningar- og frádráttaraðgerðir
 
 .. tip::
@@ -92,6 +92,15 @@ Forgangsröðun aðgerða
 			&=8
 		\end{aligned}
 
+	**4.** Reiknum :math:`2 + (1+3)^2 \cdot 2`
+
+	.. math::
+		\begin{aligned}
+			2 + (1+3)^2 \cdot 2 &= 2 + 4^2 \cdot 2 \\
+			&=2 + 4 \cdot 4 \cdot 2 \\
+			&=2 + 32 \\
+			&=34
+		\end{aligned}
 
 
 
