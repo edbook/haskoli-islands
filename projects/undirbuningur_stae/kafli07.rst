@@ -244,8 +244,8 @@ Sínusinn og kósínusinn eru takmörkuð föll, takmörkuð af einum að ofan o
 	:class: athugasemd
 	
 	Einn af mikilvægum eiginleikum :math:`\cos` og :math:`\sin` er að
-	 * :math:`\cos` er **jafnstætt** fall: :math:`\cos(-\alpha) = \cos(\alpha)`
 
+	 * :math:`\cos` er **jafnstætt** fall: :math:`\cos(-\alpha) = \cos(\alpha)`
 	 * :math:`\sin` er **oddstætt** fall: :math:`\sin(-\alpha) = -\sin(\alpha)`
 
 -----------------
@@ -325,20 +325,23 @@ Hægt er að rökstyðja fleiri reglur á svipaðan hátt, en það getur verið
 Setjum fram nokkrar slíkar reglur.
 
 
-.. math::
-	\begin{aligned}
-	\cos(-\theta)&=\cos \theta\\
-	\sin(-\theta)&=-\sin\theta\\
-	& \\
-	\cos(\pi-\theta)&=-\cos \theta\\
-	\sin(\pi-\theta)&=\sin \theta\\
-	& \\
-	\cos(\theta+\pi)&=-\cos \theta\\
-	\sin(\theta+\pi)&=-\sin \theta\\
-	& \\
-	\cos\left(\frac{\pi}{2}-\theta\right)&=\sin\theta\\
-	\sin\left(\frac{\pi}{2}-\theta\right)&=\cos\theta
-	\end{aligned}
+.. admonition:: Setning
+	:class: setning
+	
+	.. math::
+		\begin{aligned}
+		\cos(-\theta)&=\cos \theta\\
+		\sin(-\theta)&=-\sin\theta\\
+		& \\
+		\cos(\pi-\theta)&=-\cos \theta\\
+		\sin(\pi-\theta)&=\sin \theta\\
+		& \\
+		\cos(\theta+\pi)&=-\cos \theta\\
+		\sin(\theta+\pi)&=-\sin \theta\\
+		& \\
+		\cos\left(\frac{\pi}{2}-\theta\right)&=\sin\theta\\
+		\sin\left(\frac{\pi}{2}-\theta\right)&=\cos\theta
+		\end{aligned}
 
 Almennt eru gildi :math:`\cos(\alpha), \sin(\alpha)` og :math:`\tan(\alpha)` jákvæð í fyrsta fjórðungi, svo eru gildi :math:`\sin(\alpha)` jákvæð í öðrum fjórðungi, :math:`\tan(\alpha)` í þriðja, og :math:`\cos(\alpha)` í fjórða. Sjáum á mynd hvaða hornaföll eru jákvæð hvar.
 
@@ -350,14 +353,17 @@ Tvöföld horn
 ------------
 Lítum á horn af gerðinni :math:`2x` þar sem :math:`x` er einhver tala. Við höfum eftirfarandi reglur um tvöföld horn:
 
-.. math::
-	\begin{aligned}
-	\sin(2x)&=2 \cos(x) \sin(x) \\
-	\quad\\
-	\cos(2x)&= \cos^2(x)-\sin^2(x) \\
-	&= 2\cos^2(x)-1 \\
-	&= 1-2 \sin^2(x)
-	\end{aligned}
+.. admonition:: Setning
+	:class: setning
+
+	.. math::
+		\begin{aligned}
+		\sin(2x)&=2 \cos(x) \sin(x) \\
+		\quad\\
+		\cos(2x)&= \cos^2(x)-\sin^2(x) \\
+		&= 2\cos^2(x)-1 \\
+		&= 1-2 \sin^2(x)
+		\end{aligned}
 
 Þessar reglur eru nytsamlegar í útreikningum.
 
@@ -612,12 +618,15 @@ Með því að horfa á einingarhringinn fáum við samband á milli kósínusar
 
 Sínusreglan
 ~~~~~~~~~~~
-Í :math:`\triangle ABC` gildir
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-	\frac{a}{\sin(A)} = \frac{b}{\sin(B)} = \frac{c}{\sin(C)}
+	Í :math:`\triangle ABC` gildir
 
-Þar sem :math:`A`, :math:`B` og :math:`C` eru horn þríhyrningsins og :math:`a`, :math:`b` og :math:`c` eru lengdir hliðanna
+	.. math::
+		\frac{a}{\sin(A)} = \frac{b}{\sin(B)} = \frac{c}{\sin(C)}
+
+	Þar sem :math:`A`, :math:`B` og :math:`C` eru horn þríhyrningsins og :math:`a`, :math:`b` og :math:`c` eru lengdir hliðanna
 
 ---------------
 
@@ -627,14 +636,17 @@ Sínusreglan
 
 Kósínusreglan
 ~~~~~~~~~~~~~
-Í :math:`\triangle ABC` gildir
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-	\begin{aligned}
-	a^2 &= b^2+c^2-2\cdot b \cdot c \cdot \cos(A) \\
-	b^2 &= a^2+c^2-2\cdot a \cdot c \cdot \cos(B) \\
-	c^2 &= b^2+a^2-2\cdot b \cdot a \cdot \cos(C) \\
-	\end{aligned}
+	Í :math:`\triangle ABC` gildir
+
+	.. math::
+		\begin{aligned}
+		a^2 &= b^2+c^2-2\cdot b \cdot c \cdot \cos(A) \\
+		b^2 &= a^2+c^2-2\cdot a \cdot c \cdot \cos(B) \\
+		c^2 &= b^2+a^2-2\cdot b \cdot a \cdot \cos(C) \\
+		\end{aligned}
 
 
 Hornafallareglurnar
@@ -647,101 +659,111 @@ Hér á eftir koma reglur sem eru mikið notaðar.
 
 Grunnreglan
 ~~~~~~~~~~~
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-	\sin^2(\theta) + \cos^2(\theta) = 1
+	.. math::
+		\sin^2(\theta) + \cos^2(\theta) = 1
 
 
 Hliðrunarreglur
 ~~~~~~~~~~~~~~~
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-	\begin{aligned}
-	1.& \qquad \cos(-\theta)=\cos \theta\\
-	2.& \qquad \sin(-\theta)=-\sin\theta\\
-	3.& \qquad \cos(\pi-\theta)=-\cos \theta\\
-	4.& \qquad \sin(\pi-\theta)=\sin \theta\\
-	5.& \qquad \cos(\theta+\pi)=-\cos \theta\\
-	6.& \qquad \sin(\theta+\pi)=-\sin \theta\\
-	7.& \qquad \cos\left(\frac{\pi}{2}-\theta\right)=\sin\theta\\
-	8.& \qquad \sin\left(\frac{\pi}{2}-\theta\right)=\cos\theta
-	\end{aligned}
+	.. math::
+		\begin{aligned}
+		1.& \qquad \cos(-\theta)=\cos \theta\\
+		2.& \qquad \sin(-\theta)=-\sin\theta\\
+		3.& \qquad \cos(\pi-\theta)=-\cos \theta\\
+		4.& \qquad \sin(\pi-\theta)=\sin \theta\\
+		5.& \qquad \cos(\theta+\pi)=-\cos \theta\\
+		6.& \qquad \sin(\theta+\pi)=-\sin \theta\\
+		7.& \qquad \cos\left(\frac{\pi}{2}-\theta\right)=\sin\theta\\
+		8.& \qquad \sin\left(\frac{\pi}{2}-\theta\right)=\cos\theta
+		\end{aligned}
 
 
 Summuformúlur
 ~~~~~~~~~~~~~
+.. admonition:: Setning
+	:class: setning
 
-**1.**
+	**1.**
 
-.. math::
-	\sin( u + v ) = \sin(u)  \cos(v) + \cos(u) \sin(v)
+	.. math::
+		\sin( u + v ) = \sin(u)  \cos(v) + \cos(u) \sin(v)
 
-**2.**
+	**2.**
 
-.. math::
-	\sin( u - v ) = \sin(u) \cos(v) - \cos(u) \sin(v)
+	.. math::
+		\sin( u - v ) = \sin(u) \cos(v) - \cos(u) \sin(v)
 
-**3.**
+	**3.**
 
-.. math::
-	\cos( u + v ) = \cos(u)  \cos(v) - \sin(u)  \sin(v)
+	.. math::
+		\cos( u + v ) = \cos(u)  \cos(v) - \sin(u)  \sin(v)
 
-**4.**
+	**4.**
 
-.. math::
-	\cos( u - v ) = \cos(u)  \cos(v) + \sin(u)  \sin(v)
+	.. math::
+		\cos( u - v ) = \cos(u)  \cos(v) + \sin(u)  \sin(v)
 
-**5.**
+	**5.**
 
-.. math::
-	\tan(u-v) = \frac{\tan(u) - \tan(v)}{1 + \tan(u)  \tan(v)}
+	.. math::
+		\tan(u-v) = \frac{\tan(u) - \tan(v)}{1 + \tan(u)  \tan(v)}
 
-**6.**
+	**6.**
 
-.. math::
-	\tan(u+v) = \frac{\tan(u) + \tan(v)}{1 - \tan(u)  \tan(v)}
+	.. math::
+		\tan(u+v) = \frac{\tan(u) + \tan(v)}{1 - \tan(u)  \tan(v)}
 
 
 Tvöföldunarformúlur
 ~~~~~~~~~~~~~~~~~~~
+.. admonition:: Setning
+	:class: setning
 
-**1.**
+	**1.**
 
-.. math::
-	\sin(2u) = 2\sin(u)\cos(u)
+	.. math::
+		\sin(2u) = 2\sin(u)\cos(u)
 
-**2.**
+	**2.**
 
-.. math::
-	\begin{aligned}
-	\cos(2u)&= \cos^2(u)-\sin^2(u) \\
-	&= 2\cos^2(u)-1 \\
-	&= 1-2 \sin^2(u)
-	\end{aligned}
+	.. math::
+		\begin{aligned}
+		\cos(2u)&= \cos^2(u)-\sin^2(u) \\
+		&= 2\cos^2(u)-1 \\
+		&= 1-2 \sin^2(u)
+		\end{aligned}
 
-**3.**
+	**3.**
 
-.. math::
-	\tan(2u) = \frac{2\tan(u)}{1-\tan^2(u)}
+	.. math::
+		\tan(2u) = \frac{2\tan(u)}{1-\tan^2(u)}
 
 
 Helmingunarformúlur
 ~~~~~~~~~~~~~~~~~~~
+.. admonition:: Setning
+	:class: setning
 
-**1.**
+	**1.**
 
-.. math::
-	\sin^2(u) = \frac{1- \cos(2u)}{2} \qquad \text{eða} \qquad \sin\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1- \cos(u)}{2} }
+	.. math::
+		\sin^2(u) = \frac{1- \cos(2u)}{2} \qquad \text{eða} \qquad \sin\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1- \cos(u)}{2} }
 
-**2.**
+	**2.**
 
-.. math::
-	\cos^2(u) = \frac{1+ \cos(2u)}{2} \qquad \text{eða} \qquad \cos\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1+ \cos(u)}{2} }
+	.. math::
+		\cos^2(u) = \frac{1+ \cos(2u)}{2} \qquad \text{eða} \qquad \cos\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1+ \cos(u)}{2} }
 
-**3.**
+	**3.**
 
-.. math::
-	\tan^2(u) = \frac{1- \cos(2u)}{1+\cos(2u)} \qquad \text{eða} \qquad \tan\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1- \cos(u)}{1+\cos(u)} }
+	.. math::
+		\tan^2(u) = \frac{1- \cos(2u)}{1+\cos(2u)} \qquad \text{eða} \qquad \tan\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1- \cos(u)}{1+\cos(u)} }
 
 
 
@@ -750,45 +772,51 @@ Summu- og margfeldisformúlur
 
 **Margfeldisritháttur í summurithátt**
 
- **1.**
+.. admonition:: Setning
+	:class: setning
 
- .. math::
-	\sin(u)\sin(v) = \frac{1}{2}\left(\cos(u-v) - \cos(u+v)\right)
+	 **1.**
 
- **2.**
+	 .. math::
+		\sin(u)\sin(v) = \frac{1}{2}\left(\cos(u-v) - \cos(u+v)\right)
 
- .. math::
-	\cos(u)\cos(v) = \frac{1}{2}\left(\cos(u-v) + \cos(u+v)\right)
+	 **2.**
 
- **3.**
+	 .. math::
+		\cos(u)\cos(v) = \frac{1}{2}\left(\cos(u-v) + \cos(u+v)\right)
 
- .. math::
-	\sin(u)\cos(v) = \frac{1}{2}\left(\sin(u+v) + \sin(u-v)\right)
+	 **3.**
 
- **4.**
+	 .. math::
+		\sin(u)\cos(v) = \frac{1}{2}\left(\sin(u+v) + \sin(u-v)\right)
 
- .. math::
-	\cos(u)\sin(v) = \frac{1}{2}\left(\sin(u+v) - \sin(u-v)\right)
+	 **4.**
+
+	 .. math::
+		\cos(u)\sin(v) = \frac{1}{2}\left(\sin(u+v) - \sin(u-v)\right)
 
 
 **Summuritháttur í margfeldisrithátt**
 
- **1.**
+.. admonition:: Setning
+	:class: setning
 
- .. math::
-	\sin(u) + \sin(v) = 2\sin\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)
+	 **1.**
 
- **2.**
+	 .. math::
+		\sin(u) + \sin(v) = 2\sin\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)
 
- .. math::
-	\sin(u) - \sin(v) = 2\cos\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)
+	 **2.**
 
- **3.**
+	 .. math::
+		\sin(u) - \sin(v) = 2\cos\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)
 
- .. math::
-	\cos(u) + \cos(v) = 2\cos\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)
+	 **3.**
 
- **4.**
+	 .. math::
+		\cos(u) + \cos(v) = 2\cos\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)
 
- .. math::
-	\cos(u) - \cos(v) = -2\sin\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)
+	 **4.**
+
+	 .. math::
+		\cos(u) - \cos(v) = -2\sin\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)

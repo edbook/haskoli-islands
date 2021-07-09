@@ -504,64 +504,64 @@ Svo er önnur jafnan dregin frá hinni og útkoman er jafna án stærðarinnar s
 
 .. admonition:: Dæmi
 	:class: daemi
-	
-  Leysum jöfnuhneppið
 
-  .. math::
-    \begin{aligned}
-      x+2y&=3 \\
-      2x-y &=11
-    \end{aligned}
+	Leysum jöfnuhneppið
 
-  með eyðingaraðferð.
+	.. math::
+	  \begin{aligned}
+	    x+2y&=3 \\
+	    2x-y &=11
+	  \end{aligned}
 
-  **Lausn:**
+	með eyðingaraðferð.
 
-  Stefnum á að eyða :math:`x` . Það gerum við með því að margfalda efri jöfnuna með 2 (beggja vegna jafnaðarmerkis):
+	**Lausn:**
 
-  .. math::
-    \begin{aligned}
-      2x+4y&=6 \\
-      2x-y &=11
-    \end{aligned}
+	Stefnum á að eyða :math:`x` . Það gerum við með því að margfalda efri jöfnuna með 2 (beggja vegna jafnaðarmerkis):
 
-  Drögum nú efri jöfnuna frá þeirri neðri, hægri hlið efri frá hægri hlið neðri og vinstri hlið efri frá vinstri hlið neðri:
+	.. math::
+	  \begin{aligned}
+	    2x+4y&=6 \\
+	    2x-y &=11
+	  \end{aligned}
 
-  .. math::
-    \begin{aligned}
-      (2x-y)-(2x+4y) &=11-6 \\
-      -5y &= 5 \\
-      y&=-1
-    \end{aligned}
+	Drögum nú efri jöfnuna frá þeirri neðri, hægri hlið efri frá hægri hlið neðri og vinstri hlið efri frá vinstri hlið neðri:
 
-  Stefnum nú á að eyða :math:`y` úr upprunalega hneppinu:
+	.. math::
+	  \begin{aligned}
+	    (2x-y)-(2x+4y) &=11-6 \\
+	    -5y &= 5 \\
+	    y&=-1
+	  \end{aligned}
 
-  .. math::
-    \begin{aligned}
-      x+2y&=3 \\
-      2x-y &=11
-    \end{aligned}
+	Stefnum nú á að eyða :math:`y` úr upprunalega hneppinu:
 
-  Á sama hátt og áður margföldum við neðri jöfnuna með 2 og fáum:
+	.. math::
+	  \begin{aligned}
+	    x+2y&=3 \\
+	    2x-y &=11
+	  \end{aligned}
 
-  .. math::
-    \begin{aligned}
-      x+2y&=3 \\
-      4x-2y &=22
-    \end{aligned}
+	Á sama hátt og áður margföldum við neðri jöfnuna með 2 og fáum:
 
-  Leggjum nú jöfnurnar saman og fáum:
+	.. math::
+	  \begin{aligned}
+	    x+2y&=3 \\
+	    4x-2y &=22
+	  \end{aligned}
 
-  .. math::
-    \begin{aligned}
-      (4x-2y )+ (x+2y) &=22 +3 \\
-      5x &= 25 \\
-      x&=5
-    \end{aligned}
+	Leggjum nú jöfnurnar saman og fáum:
 
-  Lausn jöfnuhneppisins er því :math:`x=5` og :math:`y=-1` .
-  Myndrænt þýðir þetta að línurnar :math:`x+2y=3` og :math:`2x-y =11` skerist í punktinum :math:`(5,-1)` .
-  Farið er nánar í þetta í kaflanum um rúmfræði.
+	.. math::
+	  \begin{aligned}
+	    (4x-2y )+ (x+2y) &=22 +3 \\
+	    5x &= 25 \\
+	    x&=5
+	  \end{aligned}
+
+	Lausn jöfnuhneppisins er því :math:`x=5` og :math:`y=-1` .
+	Myndrænt þýðir þetta að línurnar :math:`x+2y=3` og :math:`2x-y =11` skerist í punktinum :math:`(5,-1)` .
+	Farið er nánar í þetta í kaflanum um rúmfræði.
 .. _s.innsetning:
 
 **Innsetningaraðferðin** gengur út á að einangra eina breytistærðina út frá annarri jöfnunni og setja inn í hina.
@@ -710,15 +710,18 @@ Til dæmis er :math:`5 \geq 0` svo :math:`|5|=5` og :math:`-3 <0` svo að :math:
 
 Reiknireglur fyrir tölugildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Látum :math:`a` og :math:`b` vera rauntölur. Þá gildir eftirfarandi
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-	\begin{aligned}
-		a \leq |a|  \qquad & \text{(tölugildi getur aðeins stækkað tölu)}\\
-		|a|=|-a|  \qquad & \text{(tölugildi eru óháð formerki)}\\
-		|a|\cdot|b|=|ab| \qquad & \text{(tölugildi varðveitir margföldun)}\\
-		|a|^2=a^2 \qquad  & \text{(önnur veldi eyða tölugildi)}\\
-	\end{aligned}
+	Látum :math:`a` og :math:`b` vera rauntölur. Þá gildir eftirfarandi
+
+	.. math::
+		\begin{aligned}
+			a \leq |a|  \qquad & \text{(tölugildi getur aðeins stækkað tölu)}\\
+			|a|=|-a|  \qquad & \text{(tölugildi eru óháð formerki)}\\
+			|a|\cdot|b|=|ab| \qquad & \text{(tölugildi varðveitir margföldun)}\\
+			|a|^2=a^2 \qquad  & \text{(önnur veldi eyða tölugildi)}\\
+		\end{aligned}
 
 .. admonition:: Athugasemd
 	:class: athugasemd

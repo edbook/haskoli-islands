@@ -225,11 +225,13 @@ Stundum fáum við gefna tvo punkta :math:`(x_1,y_1)` og :math:`(x_2,y_2)` og þ
 
 Regla
 ~~~~~
+.. admonition:: Setning
+	:class: setning
 
-Hallatala línunnar, :math:`h`, sem gengur í gegnum punkta :math:`(x_1,y_1)` og :math:`(x_2,y_2)` fæst með formúlunni
+	Hallatala línunnar, :math:`h`, sem gengur í gegnum punkta :math:`(x_1,y_1)` og :math:`(x_2,y_2)` fæst með formúlunni
 
-.. math::
-	h=\frac{y_2-y_1}{x_2-x_1}
+	.. math::
+		h=\frac{y_2-y_1}{x_2-x_1}
 
 .. image:: ./myndir/rumfraedi/almenn-lina.svg
 	:width: 50 %
