@@ -152,29 +152,33 @@ Hraði bílsins í tímapunktinum :math:`t=t_0` verður þá fundinn með því 
 
 Skilgreining
 ------------
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Gerum ráð fyrir að :math:`f:\;I\to \mathbb{R}` sé fall sem er skilgreint á bili :math:`I`.
-Látum :math:`a\in I`.
-Fallið :math:`f` er sagt vera :hover:`diffranlegt, diffranleiki` (deildanlegt) í punktinum :math:`a` ef að markgildið
+    Gerum ráð fyrir að :math:`f:\;I\to \mathbb{R}` sé fall sem er skilgreint á bili :math:`I`.
+    Látum :math:`a\in I`.
+    Fallið :math:`f` er sagt vera :hover:`diffranlegt, diffranleiki` (deildanlegt) í punktinum :math:`a` ef að markgildið
 
-.. math::
-   \lim_{x\to a}\frac{f(x)-f(a)}{x-a}
+    .. math::
+       \lim_{x\to a}\frac{f(x)-f(a)}{x-a}
 
-er skilgreint og jafnt einhverri rauntölu (*ekki plús eða mínus óendanlegt*).
-Þessi rauntala er táknuð með :math:`f'(a)` og kallast afleiða fallsins :math:`f` í punktinum :math:`a`.
+    er skilgreint og jafnt einhverri rauntölu (*ekki plús eða mínus óendanlegt*).
+    Þessi rauntala er táknuð með :math:`f'(a)` og kallast afleiða fallsins :math:`f` í punktinum :math:`a`.
 
-Þegar afleiða fallsins :math:`f` er reiknuð í ótilteknum punkti getur verið þægilegra að notast við umritaða skilgreiningu:
+    Þegar afleiða fallsins :math:`f` er reiknuð í ótilteknum punkti getur verið þægilegra að notast við umritaða skilgreiningu:
 
-.. math::
-    f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
-
-
-
-Ef fallið :math:`f` er deildanlegt í sérhverjum punkti bilsins :math:`I` þá segjum við að :math:`f` sé diffranlegt (deildanlegt) fall á :math:`I` og þá er afleiðan :math:`f'` fall á :math:`I`.
-Aðgerðin að finna afleiðu falls kallast :hover:`diffrun` (deildun) falls og yfirleitt er talað um sögnina að :hover:`diffra` (deilda).
+    .. math::
+        f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
 
 
-.. tip::
+
+    Ef fallið :math:`f` er deildanlegt í sérhverjum punkti bilsins :math:`I` þá segjum við að :math:`f` sé diffranlegt (deildanlegt) fall á :math:`I` og þá er afleiðan :math:`f'` fall á :math:`I`.
+    Aðgerðin að finna afleiðu falls kallast :hover:`diffrun` (deildun) falls og yfirleitt er talað um sögnina að :hover:`diffra` (deilda).
+
+
+.. admonition:: Dæmi
+  :class: daemi
+
     Notið skilgreininguna á afleiðu til að reikna afleiðu fallanna.
 
     **1.** :math:`f(x) = 2x^2-16x+5`
@@ -227,7 +231,9 @@ Aðgerðin að finna afleiðu falls kallast :hover:`diffrun` (deildun) falls og 
 
      Þá er afleiðan :math:`g'(x)= \frac{1}{(x+1)^2}`.
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+
     **Ritháttur**:
     Takið eftir að
 
@@ -238,134 +244,135 @@ Aðgerðin að finna afleiðu falls kallast :hover:`diffrun` (deildun) falls og 
 
 Reiknireglur
 ------------
+.. admonition:: Setning
+  :class: setning
 
-Gerum ráð fyrir að :math:`f,g` séu deildanleg föll á :math:`\mathbb{R}`.
+    Gerum ráð fyrir að :math:`f,g` séu deildanleg föll á :math:`\mathbb{R}`. Látum :math:`a\in \mathbb{R}` vera fasta.
 
-Látum :math:`a\in \mathbb{R}` vera fasta.
+    Þá gildir:
 
-Þá gildir:
-
-
-.. math::
-    \begin{aligned}
-    1.& \quad (a\cdot f)'=af' \\
-    &\\
-    2.& \quad (f+g)'=f'+g' \\
-    &\\
-    3.& \quad (f-g)'=f'-g' \\
-    &\\
-    4.& \quad (f\cdot g)'=f'g+fg' \\
-    &\\
-    4.& \quad (f\circ g)'=(f'\circ g)\cdot g' \\
-    \end{aligned}
-
-
-Ef :math:`g(x)` er ekki jafnt núlli fyrir öll :math:`x\in I`, þá gildir einnig:
-
-.. math::
-    \begin{aligned}
-    6.& \quad \left(\frac{1}{g}\right)'=\frac{-g'}{g^2} \\
-    &\\
-    7.& \quad \left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^2} \\
-    \end{aligned}
-
-Ef :math:`f` er andhverfanlegt og :math:`f(x_0)=y_0` þá er
-
-.. math::
-    8. (f^{-1})'\circ f=\frac{1}{f'}
+    .. math::
+        \begin{aligned}
+        1.& \quad (a\cdot f)'=af' \\
+        &\\
+        2.& \quad (f+g)'=f'+g' \\
+        &\\
+        3.& \quad (f-g)'=f'-g' \\
+        &\\
+        4.& \quad (f\cdot g)'=f'g+fg' \\
+        &\\
+        4.& \quad (f\circ g)'=(f'\circ g)\cdot g' \\
+        \end{aligned}
 
 
+    Ef :math:`g(x)` er ekki jafnt núlli fyrir öll :math:`x\in I`, þá gildir einnig:
+
+    .. math::
+        \begin{aligned}
+        6.& \quad \left(\frac{1}{g}\right)'=\frac{-g'}{g^2} \\
+        &\\
+        7.& \quad \left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^2} \\
+        \end{aligned}
+
+    Ef :math:`f` er andhverfanlegt og :math:`f(x_0)=y_0` þá er
+
+    .. math::
+        8. (f^{-1})'\circ f=\frac{1}{f'}
 
 
 Þekktar afleiður
 ----------------
+.. admonition:: Setning
+  :class: setning
 
-1. Ef :math:`a` er fasti og :math:`f(x)=a` þá er
+    1. Ef :math:`a` er fasti og :math:`f(x)=a` þá er
 
-.. math::
-    f'(x)=0
+    .. math::
+        f'(x)=0
 
-2. Ef :math:`n\in \mathbb{N}` og :math:`f(x)=x^n` þá er
+    2. Ef :math:`n\in \mathbb{N}` og :math:`f(x)=x^n` þá er
 
-.. math::
-    f'(x)=nx^{n-1}
+    .. math::
+        f'(x)=nx^{n-1}
 
-3. Ef :math:`n\in \mathbb{Z}\setminus\{0\}` og :math:`f(x)=x^{n}` þá er
+    3. Ef :math:`n\in \mathbb{Z}\setminus\{0\}` og :math:`f(x)=x^{n}` þá er
 
-.. math::
-    f'(x)=nx^{n-1}
+    .. math::
+        f'(x)=nx^{n-1}
 
-4. Ef :math:`n\in \mathbb{Q}\setminus\{0\}` og :math:`f(x)=x^n` þá er
+    4. Ef :math:`n\in \mathbb{Q}\setminus\{0\}` og :math:`f(x)=x^n` þá er
 
-.. math::
-    f'(x)=nx^{n-1}
+    .. math::
+        f'(x)=nx^{n-1}
 
-5. Ef :math:`n\in \mathbb{R}\setminus\{0\}` og :math:`f(x)=x^n` þá er
+    5. Ef :math:`n\in \mathbb{R}\setminus\{0\}` og :math:`f(x)=x^n` þá er
 
-.. math::
-    f'(x)=nx^{n-1}
+    .. math::
+        f'(x)=nx^{n-1}
 
-6. Ef :math:`a\in \mathbb{R}_+` og :math:`f(x)=a^x` þá er
+    6. Ef :math:`a\in \mathbb{R}_+` og :math:`f(x)=a^x` þá er
 
-.. math::
-    f'(x)=\ln(a)a^x
+    .. math::
+        f'(x)=\ln(a)a^x
 
-7. Ef :math:`a\in \mathbb{R}_+` og :math:`f(x)=\log_a(x)` þá er
+    7. Ef :math:`a\in \mathbb{R}_+` og :math:`f(x)=\log_a(x)` þá er
 
-.. math::
-    f'(x)=\frac{1}{\ln(a)x}
+    .. math::
+        f'(x)=\frac{1}{\ln(a)x}
 
-8. Ef :math:`f(x) = \ln(x)` þá er
+    8. Ef :math:`f(x) = \ln(x)` þá er
 
-.. math::
-    f'(x) = \frac{1}{x}
+    .. math::
+        f'(x) = \frac{1}{x}
 
-9. Ef :math:`f(x) = e^x` þá er
+    9. Ef :math:`f(x) = e^x` þá er
 
-.. math::
-    f'(x) = e^x
+    .. math::
+        f'(x) = e^x
 
-10. Ef :math:`f(x)=\cos(x)` þá er
+    10. Ef :math:`f(x)=\cos(x)` þá er
 
-.. math::
-    f'(x)=-\sin(x)
+    .. math::
+        f'(x)=-\sin(x)
 
-11. Ef :math:`f(x)=\sin(x)` þá er
+    11. Ef :math:`f(x)=\sin(x)` þá er
 
-.. math::
-    f'(x)=\cos(x)
+    .. math::
+        f'(x)=\cos(x)
 
-12. Ef :math:`f(x)=\tan(x)` þá er
+    12. Ef :math:`f(x)=\tan(x)` þá er
 
-.. math::
-    f'(x)=\frac{1}{\cos^2(x)}
+    .. math::
+        f'(x)=\frac{1}{\cos^2(x)}
 
-13. Ef :math:`f(x)=\cot(x)` þá er
+    13. Ef :math:`f(x)=\cot(x)` þá er
 
-.. math::
-    f'(x)=\frac{-1}{\sin^2(x)}
+    .. math::
+        f'(x)=\frac{-1}{\sin^2(x)}
 
-14. Ef :math:`f(x)=\text{arcsin(x)}` þá er
+    14. Ef :math:`f(x)=\text{arcsin(x)}` þá er
 
-.. math::
-    f'(x)=\frac{1}{\sqrt{1-x^2}}
+    .. math::
+        f'(x)=\frac{1}{\sqrt{1-x^2}}
 
-15. Ef :math:`f(x)=\text{arccos(x)}` þá er
+    15. Ef :math:`f(x)=\text{arccos(x)}` þá er
 
-.. math::
-    f'(x)=\frac{-1}{\sqrt{1-x^2}}
+    .. math::
+        f'(x)=\frac{-1}{\sqrt{1-x^2}}
 
-16. Ef :math:`f(x)=\text{arctan(x)}` þá er
+    16. Ef :math:`f(x)=\text{arctan(x)}` þá er
 
-.. math::
-    f'(x)=\frac{1}{1+x^2}
+    .. math::
+        f'(x)=\frac{1}{1+x^2}
 
-17. Ef :math:`(x)=\text{arccot(x)}` þá er
+    17. Ef :math:`f(x)=\text{arccot(x)}` þá er
 
-.. math::
-    f'(x)=\frac{-1}{1+x^2}
+    .. math::
+        f'(x)=\frac{-1}{1+x^2}
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
     Notum okkur nú reiknireglurnar og þekktar afleiður til að reikna eftirfarandi afleiður.
 
     **1.** :math:`f(x) = 2x^2-16x+5`

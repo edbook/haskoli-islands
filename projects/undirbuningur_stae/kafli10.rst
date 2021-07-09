@@ -81,14 +81,18 @@ ef
 .. math::
 	0<|f(x)-b|<\epsilon.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   Í þessari skilgreiningu má ímynda sér að :math:`\epsilon` og :math:`\delta` séu rosalega litlar tölur.
 
   Ójafnan :math:`|x-a|<\delta` þýðir þá að :math:`x` sé rosalega nálægt því að vera :math:`a` og ójafnan :math:`0<|f(x)-b|<\epsilon` þýðir að :math:`f(x)` er rosalega nálægt því að vera :math:`b`.
 
   Athugum að :math:`a` og :math:`b` geta verið hvaða tölur sem er, jafnvel :math:`\pm \infty`.
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+
 	 Við segjum að markgildi fallsins **sé til** ef fallið stefnir á rauntölu.
 
 	 Ef fall stefnir á :math:`+ \infty` eða :math:`-\infty` segjum við að markgildið **sé ekki til** .
@@ -117,7 +121,9 @@ Hins vegar, þegar við eltum rauða ferilinn hægra megin við vandræðapunkti
 .. math::
 	\lim_{x \to 1^{+}} \frac{x}{x-1} = \infty
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Þegar hægra markgildi og vinstra markigildi falls í punkti er ekki það sama þá er *markgildið ekki til*.
 
 	Markgildi :math:`f(x)` í punktinum :math:`x=a` er ekki til nema ef
@@ -126,7 +132,9 @@ Hins vegar, þegar við eltum rauða ferilinn hægra megin við vandræðapunkti
 		\lim_{x\to a^+} f(x) = \lim_{x\to a^-} f(x)
 
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+
   Skoðum myndræn dæmi þar sem markgildið er **ekki til**.
 
   .. figure:: ./myndir/markgildi/markg.svg
@@ -141,7 +149,9 @@ Hins vegar, þegar við eltum rauða ferilinn hægra megin við vandræðapunkti
 
 Ef við höfum markgildið :math:`\lim_{x \to c} f(x)` þar sem fallið er rætt, það er að segja á forminu :math:`f(x) = \frac{p(x)}{q(x)}`, þá þarf að passa að :math:`q(c) \neq 0`. Þá verða markgildisreikningarnir einfaldir, sjá dæmi 1 og 2.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	Finnið markgildin:
 
 	**1.**
@@ -294,7 +304,8 @@ En hvað með markgildið :math:`\lim_{x\to 0^+} \frac{1}{x^n}` ?
 
 Skoðum nokkur dæmi:
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
 
     Finnið eftirfarandi markgildi:
 
@@ -363,7 +374,9 @@ Gerum ráð fyrir að :math:`k\in\mathbb{R}` sé fasti.
     6. & \qquad \lim_{x\to c} \left( \frac{f(x)}{g(x)} \right)=\frac{\lim_{x\to c}f(x)}{\lim_{x\to c}g(x)} \qquad \text{ef} \qquad \lim_{x\to c}g(x)\not=0
     \end{aligned}
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	Finnið eftirfarandi markgildið ef það er til.
 
  	.. math::
@@ -381,7 +394,9 @@ Gerum ráð fyrir að :math:`k\in\mathbb{R}` sé fasti.
 		&=\frac{1}{2}
 		\end{aligned}
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
   Finnið markgildið:
 
 	.. math::
@@ -408,7 +423,9 @@ Gerum ráð fyrir að :math:`k\in\mathbb{R}` sé fasti.
 
   Sjáum á grafinu að þegar við förum lengra eftir :math:`x`-ás nálgast fallið :math:`0`.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	Finnið markgildið:
 
 	.. math::
@@ -450,19 +467,24 @@ Skilgreinum nú samfelldni:
 
 Skilgreining
 ~~~~~~~~~~~~
-Látum :math:`f` vera fall. Ef :math:`f` hefur markgildi í :math:`a` og :math:`\lim_{x \to a} f(x)=f(a)` þá segjum við að :math:`f` sé *samfellt* í punktinum :math:`a`.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Ef :math:`f` er samfellt á öllu :hover:`skilgreiningarmengi` sínu köllum við :math:`f` *samfellt fall*.
+	Látum :math:`f` vera fall. Ef :math:`f` hefur markgildi í :math:`a` og :math:`\lim_{x \to a} f(x)=f(a)` þá segjum við að :math:`f` sé *samfellt* í punktinum :math:`a`.
+
+	Ef :math:`f` er samfellt á öllu :hover:`skilgreiningarmengi` sínu köllum við :math:`f` *samfellt fall*.
 
 Reglur um samfelldni
 ~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Setning
+  :class: setning
 
-Látum :math:`f` og :math:`g` vera raunföll á bili :math:`I` og samfelld í punktinum :math:`a \in I`, þá gildir:
+	Látum :math:`f` og :math:`g` vera raunföll á bili :math:`I` og samfelld í punktinum :math:`a \in I`, þá gildir:
 
-1. Fallið :math:`f+g` er samfellt í :math:`a`.
-2. Fallið :math:`f \cdot g` er samfellt í :math:`a`.
-3. Fallið :math:`\frac{f}{g}` er samfellt í :math:`a` ef :math:`g(a) \neq 0`.
-4. Gerum ráð fyrir að fallið :math:`g` sé samfellt í :math:`f(a)`. Þá er :math:`(g \circ f)(x)=g(f(x))` samfellt í :math:`a`.
+	1. Fallið :math:`f+g` er samfellt í :math:`a`.
+	2. Fallið :math:`f \cdot g` er samfellt í :math:`a`.
+	3. Fallið :math:`\frac{f}{g}` er samfellt í :math:`a` ef :math:`g(a) \neq 0`.
+	4. Gerum ráð fyrir að fallið :math:`g` sé samfellt í :math:`f(a)`. Þá er :math:`(g \circ f)(x)=g(f(x))` samfellt í :math:`a`.
 
 Nokkur þekkt samfelld föll
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -479,7 +501,9 @@ Nokkur þekkt samfelld föll
 8. Hornaföllin eru samfelld.
 9. Fallið :math:`f(x)=|x|` er samfellt.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	Segjum til um hvort föllin eru samfelld eða ekki.
 
 	**1.**
