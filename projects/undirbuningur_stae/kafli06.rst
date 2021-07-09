@@ -42,6 +42,7 @@ Látum :math:`p` vera margliðu af stigi :math:`n`. Fjöldi mismunandi núllstö
 	:class: Athugasemd
 	
 	Þessi regla þýðir því að:
+
 	 * fyrsta stigs margliða hefur enga eða eina núllstöð,
 	 * annars stigs margliða hefur enga, eina, eða tvær núllstöðvar,
 	 * þriðja stigs margliða hefur enga, eina, tvær, eða þrjár núllstöðvar,
@@ -96,19 +97,21 @@ Graf hennar er :hover:`fleygbogi`. Til að finna núllstöðvar hennar þá leys
 
 Regla
 ~~~~~
+.. admonition:: Setning
+	:class: setning
 
-Látum :math:`ax^2+bx+c=0` vera annars stigs jöfnu.
+	Látum :math:`ax^2+bx+c=0` vera annars stigs jöfnu.
 
-1. Ef :math:`b^2-4ac<0` þá hefur jafnan enga rauntölulausn.
-2. Ef :math:`b^2-4ac=0` þá hefur jafnan eina lausn:
+	1. Ef :math:`b^2-4ac<0` þá hefur jafnan enga rauntölulausn.
+	2. Ef :math:`b^2-4ac=0` þá hefur jafnan eina lausn:
 
-.. math::
-	x=\frac{-b}{2a}.
+	.. math::
+		x=\frac{-b}{2a}.
 
-3. Ef :math:`b^2-4ac>0` þá hefur jafnan tvær lausnir:
+	3. Ef :math:`b^2-4ac>0` þá hefur jafnan tvær lausnir:
 
-.. math::
-	x_1=\frac{-b+\sqrt{b^2-4ac}}{2a} \qquad \text{og} \qquad x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}.
+	.. math::
+		x_1=\frac{-b+\sqrt{b^2-4ac}}{2a} \qquad \text{og} \qquad x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}.
 
 .. admonition:: Dæmi
 	:class: daemi
@@ -240,42 +243,46 @@ Margliða kallast :hover:`stöðluð, stöðluð margliða` ef :math:`a_n=1`, þ
 
 Regla
 ~~~~~
-Ef :math:`p` er stöðluð margliða af stigi :math:`n` og hún hefur :math:`n` ólíkar rætur, :math:`x_1, x_2, \dots, x_n`, þá má skrifa
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-	p(x)=(x-x_1)(x-x_2) \dots (x-x_n)
+	Ef :math:`p` er stöðluð margliða af stigi :math:`n` og hún hefur :math:`n` ólíkar rætur, :math:`x_1, x_2, \dots, x_n`, þá má skrifa
+
+	.. math::
+		p(x)=(x-x_1)(x-x_2) \dots (x-x_n)
 
 Raunar fæst eftirfarandi niðurstaða:
 
 Regla
 ~~~~~
-Látum :math:`p` vera margliðu. Þá gengur margliðan :math:`x-x_0` upp í margliðunni :math:`p` þá og því aðeins að :math:`x_0` sé núllstöð margliðunnar :math:`p`.
+.. admonition:: Setning
+	:class: setning
+
+	Látum :math:`p` vera margliðu. Þá gengur margliðan :math:`x-x_0` upp í margliðunni :math:`p` þá og því aðeins að :math:`x_0` sé núllstöð margliðunnar :math:`p`.
 
 
-.. begin-toggle::
-	:label: Sýnidæmi
-	:starthidden: True
+.. admonition:: Athugasemd
+	:class: athugasemd
 
+	Sannreynum að hægt sé að þátta annars stigs margliðu í rætur sínar, þ.e. sýnum að:
 
-Sannreynum að hægt sé að þátta annars stigs margliðu í rætur sínar, þ.e. sýnum að:
+	.. math::
+		  ax^2+bx+c=a\left(x-\frac{-b+\sqrt{b^2-4ac}}{2a}\right)\left(x-\frac{-b-\sqrt{b^2-4ac}}{2a}\right)
 
-.. math::
-	  ax^2+bx+c=a\left(x-\frac{-b+\sqrt{b^2-4ac}}{2a}\right)\left(x-\frac{-b-\sqrt{b^2-4ac}}{2a}\right)
+	Margföldum saman svigana:
 
-Margföldum saman svigana:
+	.. math::
+		\begin{aligned}
+			&a\left(x-\frac{-b+\sqrt{b^2-4ac}}{2a}\right)\left(x-\frac{-b-\sqrt{b^2-4ac}}{2a}  \right)\\
+			&= a\left(x+\frac{b-\sqrt{b^2-4ac}}{2a}\right)\left(x+\frac{b+\sqrt{b^2-4ac}}{2a} \right)\\
+			&=ax^2+a\cdot\frac{b-\sqrt{b^2-4ac}}{2a}x+a\cdot\frac{b+\sqrt{b^2-4ac}}{2a}x\\
+			&+a\cdot\left(\frac{b-\sqrt{b^2-4ac}}{2a}\right)\left(\frac{b+\sqrt{b^2-4ac}}{2a}\right)\\
+			&=ax^2 + \frac{a\cdot x}{2a}\left(b-\sqrt{b^2-4ac}+b+\sqrt{b^2-4ac}\right)\\
+			&+\frac{a}{4a^2}\left(b-\sqrt{b^2-4ac}\right)\left(b-\sqrt{b^2-4ac}\right)\\
+			&=ax^2+\frac{x}{2}(2b)+\frac{1}{4a}(b^2-(b^2-4ac)) \\
+			&=ax^2+bx+c
+		\end{aligned}
 
-.. math::
-	\begin{aligned}
-		&a\left(x-\frac{-b+\sqrt{b^2-4ac}}{2a}\right)\left(x-\frac{-b-\sqrt{b^2-4ac}}{2a}  \right)\\
-		&= a\left(x+\frac{b-\sqrt{b^2-4ac}}{2a}\right)\left(x+\frac{b+\sqrt{b^2-4ac}}{2a} \right)\\
-		&=ax^2+a\cdot\frac{b-\sqrt{b^2-4ac}}{2a}x+a\cdot\frac{b+\sqrt{b^2-4ac}}{2a}x\\
-		&+a\cdot\left(\frac{b-\sqrt{b^2-4ac}}{2a}\right)\left(\frac{b+\sqrt{b^2-4ac}}{2a}\right)\\
-		&=ax^2 + \frac{a\cdot x}{2a}\left(b-\sqrt{b^2-4ac}+b+\sqrt{b^2-4ac}\right)\\
-		&+\frac{a}{4a^2}\left(b-\sqrt{b^2-4ac}\right)\left(b-\sqrt{b^2-4ac}\right)\\
-		&=ax^2+\frac{x}{2}(2b)+\frac{1}{4a}(b^2-(b^2-4ac)) \\
-		&=ax^2+bx+c
-	\end{aligned}
-.. end-toggle::
 
 
 .. admonition:: Dæmi

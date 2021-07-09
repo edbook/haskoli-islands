@@ -182,6 +182,7 @@ Skilgreining
     Notið skilgreininguna á afleiðu til að reikna afleiðu fallanna.
 
     **1.** :math:`f(x) = 2x^2-16x+5`
+
      Notum skilgreininguna á afleiðu :math:`f'(x) = \lim_{h\to 0}\frac{f(x+h)-f(a)}{h}` sem gefur
 
      .. math::
@@ -211,6 +212,7 @@ Skilgreining
 
 
     **2.** :math:`g(x) = \frac{x}{x+1}`
+    
      Notum skilgreininguna á afleiðu :math:`g'(x) = \lim_{h\to 0}\frac{g(x+h)-g(a)}{h}` sem gefur
 
      .. math::

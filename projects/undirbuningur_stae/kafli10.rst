@@ -155,6 +155,7 @@ Ef við höfum markgildið :math:`\lim_{x \to c} f(x)` þar sem fallið er rætt
 	Finnið markgildin:
 
 	**1.**
+
 	 :math:`\lim_{x\to 2}\frac{x^3+2x^2}{x^3-x^2+1}`.
 
 	 Hér er :math:`q(x)=x^3-x^2+1`
@@ -167,6 +168,7 @@ Ef við höfum markgildið :math:`\lim_{x \to c} f(x)` þar sem fallið er rætt
 	 	\lim_{x\to 2}\frac{x^3+2x^2}{x^3-x^2+1}=\frac{2^3+2\cdot 2^2}{2^3-2^2+1}=\frac{16}{5}
 
 	**2.**
+
 	 :math:`\lim_{x\to 4}\frac{x^3-4x^2-4x+16}{x^2-16}` .
 
 	 Hér er :math:`q(x)=x^2-16` og :math:`p(x)=x^3-4x^2-4x+16` .
@@ -189,6 +191,7 @@ Ef við höfum markgildið :math:`\lim_{x \to c} f(x)` þar sem fallið er rætt
 		 \end{aligned}
 
 	**3.**
+
 	 Látum :math:`f: \mathbb{R} \setminus \{1\} \to \mathbb{R} \qquad f(x)=x`.
 
 	 Sýnið að :math:`\lim_{x \to 1} f(x) = 1` .
@@ -203,6 +206,7 @@ Ef við höfum markgildið :math:`\lim_{x \to c} f(x)` þar sem fallið er rætt
 	 Það er því ljóst að fallið stefnir á punktinn :math:`(1, 1)` frá báðum áttum.
 
 	**4.**
+	
 	 Látum :math:`f : \mathbb{R} \setminus \{4\} \to \mathbb{R} \qquad f(x) = \sqrt{x}`.
 	 Sýnið að :math:`\lim_{x \to 4} = 2`.
 
