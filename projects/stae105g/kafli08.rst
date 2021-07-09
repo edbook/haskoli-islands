@@ -1,429 +1,493 @@
-Diffurjöfnur
-============
-
-Rúmmál, massi og massamiðja
-===========================
+Inngagur að diffurjöfnur
+========================
 
 .. note::
 	**Nauðsynleg undirstaða**
 
-  - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
+	- Eitthvað
 
-  - `Nokkur mikilvæg föll <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli09.html#nokkur-mikilvaeg-foll>`_.
+	- Eitthvað
 
-*Now, the invention of the scientific method and science is, I'm sure
-we'll all agree, the most powerful intellectual idea, the most powerful
-framework for thinking and investigating and understanding and challenging
-the world around us that there is, and that it rests on the premise that
-any idea is there to be attacked and if it withstands the attack then it
-lives to fight another day and if it doesn't withstand the attack then
-down it goes.*
+------
 
--- Douglas Adams
+.. epigraph::
 
-.. index::
-    diffurjafna
-    see: afleiðujafna; diffurjafna
-    see: deildajafna; diffurjafna
-    diffurjafna; stig
+  *It’s the job that’s never started as takes longest to finish.*
 
-Diffurjöfnur
+  \– Samwise Gamgee, The Fellowship of the Ring
+
+------
+
+Grunnatriði
 ------------
 
-.. _diffurjafna:
+Í kaflanum um hagnýtingar á heildun var snert á diffurjöfnum. Hér munum við skoða
+þær aðeins nánar.
 
 Skilgreining: Diffurjafna
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ritum :math:`y=y(x)` sem fall af :math:`x`.
+*Diffurjafna* er jafna sem sem inniheldur eitthvað óþekkt fall og eina eða fleiri
+af afleiðum þess. Lausn diffurjöfnu er fallið :math:`f` sem uppfyllir jöfnuna þegar
+fallinu og viðeigandi afleiðum er stungið inn fyrir óþekkta fallið og afleiður þess.
 
-:hover:`Diffurjafna` er jafna á forminu
+Dæmi: Diffurjafna
+~~~~~~~~~~~~~~~~~~
 
-.. math:: F(x, y, y', y'', \ldots, y^{(n)})=0
+Göngum úr skugga um að fallið :math:`y=e^{-3x}+2x+3` sé lausn diffurjöfnunnar
 
-þar sem :math:`F` er fall (formúla) í :math:`n+2` breytistærðum.
+.. math:: y' + 3y = 6x + 11.
 
-Diffurjafnan er sögð vera af :math:`n`-ta *stigi* ef hæsta afleiða :math:`y`
-sem kemur fyrir í henni er :math:`n`.
+Við gerum þetta með því að stinga fallinu inn í jöfnuna. Byrjum á því að finna :math:`y'`.
 
-Að leysa diffurjöfnu felur í sér að skrifa :math:`y` sem fall
-af :math:`x`, þ.e. finna formúlu fyrir :math:`y`.
+.. math:: y' = -3e^{-3x}+2.
 
-.. note::
-    Deildajafna, afleiðujafna og diffurjafna eru samheiti yfir
-    sama hlutinn.
+Stingum þessu nú inn í vinstri hlið jöfnunnar og fáum
 
-Dæmi
-~~~~
+ .. math:: -3e^{-3x}+2 + 3(e^{-3x}+2x+3) = -3e^{-3x} + 2 -3e^{-3x} + 6x + 9 = 6x+11.
 
-Það að finna stofnfall fyrir gefið fall :math:`f` er jafngilt því að leysa
-fyrsta stigs diffurjöfnuna
+Við sjáum að hægri hliðin stemmir við hægri hlið diffurjöfnunnar. Því er fallið
+:math:`y=e^{-3x}+2x+3` lausn á diffurjöfnunni.
 
-.. math:: y'(x) = f(x),
+Skilgreining: Stig diffurjöfnu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+å
+*Stig diffurjöfnu* er hæsta stig afleiðu óþekkta fallsins sem kemfr fyrir í jöfnunni.
 
-eða með framsetningunni úr :ref:`skilgreiningunni <diffurjafna>` hér
-að ofan,
+åDæmi: Stig diffurjöfnu
+~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: F(x,y') = f(x) - y'(x) = 0.
+ 	#. Diffurjafnan :math:`2y''+3y+4=e^x` er af 2. stigi.
 
-.. index::
-    diffurjafna; aðgreinanleg
+	#. Diffurjafnan :math:`y'''+4y=0` er af 3. stigi.
+
+	#. Diffurjafnan :math:`y'=6x^2` er af 1. stigi.
+
+Almennar lausnir og sérlausnir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vegna þess eiginleika diffrunar að fastar diffrast í burtu þýðir það að ef
+:math:`y=f(x)` er lausn á diffurjöfnunni :math:`y'=g(x)` þá er :math:`y=f(x)+C`
+það einnig, þar sem báðar jöfnur hafa afleiðuna :math:`y'=f'(x)`.
+Fallið :math:`y=f(x)+C` köllum við *almenna lausn diffurjöfnunnar*. Ef gerðar
+eru einhverjar kröfur um eiginleika fallsins, t.d. að það taki ákveðið gildi í
+ákveðnum punkti, sem gerir það að verkum að aðeins einhver tiltekinn fasti :math:`C \in \mathbb{R}`
+uppfyllir jöfnuna þá er sú lausn kölluð *sérlausn diffurjöfnunnar*.
+
+Dæmi: Almenn lausn og sérlausn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Lítum á einfalda diffurjöfnu, t.a.m.
+
+.. math:: y' = 2x.
+
+Þessi diffurjafna er aðgreinanleg (sjá nánar hér að neðan) og
+því getum við heildað báðar hliðar hennar til að sjá að
+
+.. math:: y = x^2 + C.
+
+Hér er :math:`y=x^2+C` almenn lausn diffurjöfnunnar. Gerum nú ráð fyrir að gefið
+sé að fallið þurfi að uppfylla diffurjöfnuna
+
+.. math:: y' = 2x
+
+auk þess að fara í gegnum punktinn :math:`(2,7)`. Við vitum að almenn lausn diffurjöfnunnar er
+:math:`y=x^2+C` en sker aðeins punktinn :math:`(2,7)` ef :math:`C=3`. Auðvelt er
+að sýna fram á það með því að stinga :math:`y=3` og :math:`x=0` inn í jöfnuna
+og einangra :math:`C`:
+
+.. math::  7 = 2^2 + C \Leftrightarrow C = 3.
+
+Fyrir þetta skilyrði segjum við að :math:`y=x^2+3` sé sérlausn.
+
+Upphafsgildisverkefni
+~~~~~~~~~~~~~~~~~~~~~~
+
+Skilyrði eins og að fall þurfi að fara í gegnum ákveðinn punkt er formlega nefnt
+upphafsskilyrði og diffurjöfnur með upphafsskilyrði nefnast *upphafsgildisverkefni*.
+Þau eru yfirleitt gefin á forminu
+
+.. math::
+	\begin{cases}
+  	y' = g(x,y)\\
+		y(a_1)=b_1, y'(a_2)=b_2
+	\end{cases}
+
+Þar sem :math:`a_1,a_2,b_1,b_2 \in \mathbb{R}` og :math:`g(x,y)` er eitthvað fall.
+
+Dæmi: Upphafsgildisverkefni
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Leysum upphafsgildisverkefni
+
+.. math::
+	\begin{cases}
+  	y' = 3e^x+2x+3\\
+		y(0)=5
+	\end{cases}
+
+Þessi diffurjafna er aðgreinanleg og við getum því heildað báðar hliðar hennar
+til að fá að
+
+.. math:: y = 3e^x + \frac{1}{3}x^3 - 4x + C
+
+sé almenn lausn hennar. Stingum nú upphafsgildinu :math:`y(0)=5` inn til
+að finna sérlausnina, þ.e.
+
+.. math::
+	\begin{align}
+		5 &= 3e^0 + \frac{1}{3}\cdot 0^3 - 4\cdot 0 + C\\
+		5 &= 3 + C\\
+		C &= 2.
+	\end{align}
+
+Sérlausn diffurjöfnunnar, þ.e. lausn upphafsgildisverkefnisins er því :math:`y=3e^x + \frac{1}{3}x^3-4x+2`.
+
+Aðskilnaður breytistærða
+-------------------------
+
+Aðskilnaður breytistærða er það þegar hægt er að umrita diffurjöfnu þannig að
+önnur hlið jöfnunnar innihaldi eina breytistærðina og hin hliðin innihaldi hina breytistærðina.
+Yfirleitt eru breytistærðirnar breyturnar :math:`x` og :math:`y` en ekkert er því
+til fyrirstöðu að nota aðrar breytistærðir. Ef hægt er að skilja breytistærðirnar að
+með þessum hætti er diffurjafnan kölluð aðgreinanleg. Aðgreinanlegar diffurjöfnur
+eru sérlega þægilegar þar sem þær hafa þann eiginleika að þegar búið er að skilja
+breytistærðirnar að þá má heilda báðar hliðar jöfnunnar til að ákvarða lausn diffurjöfnunnar.
 
 Skilgreining: Aðgreinanleg diffurjafna
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fyrsta stigs diffurjafna sem má rita á forminu
+Diffurjafna nefnist aðgreinanleg ef hægt er að skrifa hana á forminu
 
-.. math:: \frac{dy}{dx}=f(x)g(y)
+.. math:: y'=f(x)g(x)
 
-kallast *aðgreinanleg*. Það er, þátta má hægri hliðina
-þannig að annar þátturinn er bara fall af :math:`x` og hinn þátturinn er
-bara fall af :math:`y`.
+Dæmi: Aðskilnaður breytistærða
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Umritum jöfnuna yfir á formið
-
-.. math:: \frac{dy}{g(y)}=f(x)\,dx.
-
-.. warning::
-    Það má ekkert :math:`x` koma fyrir í vinstri hliðinni og
-    ekkert :math:`y` má koma fyrir í hægri hliðinni.
-
-Síðan heildum við báðar hliðar og reiknum stofnföllin hægra og vinstra
-megin í jöfnunni
-
-.. math:: \int\frac{dy}{g(y)}=\int f(x)\,dx.
-
-og munum eftir að setja inn heildunarfasta (einn er nóg). Þá höfum við
-jöfnu sem lýsir sambandi :math:`x` og :math:`y`, og inniheldur engar
-afleiður af :math:`y`. Út frá þeirri jöfnu má fá upplýsingar um
-eiginleika lausnarinnar :math:`y`. Stundum er hægt að einangra :math:`y`
-og fá þannig formúlu fyrir lausn diffurjöfnunar.
-
-Dæmi um aðgreinanlega diffurjöfnu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Ef við skoðum diffurjöfnuna
+Finnum lausn upphafsgildisverkefnisins
 
 .. math::
-	y' = x\exp(x-y)
+	\begin{cases}
+  	y' = (2x+3)(y^2-3)\\
+		y(0)=1
+	\end{cases}
 
-þá sjáum við að hún er aðgreinanleg því með því að skrifa :math:`\exp(x-y) = \exp (x) \exp(-y)` og
-margfalda í gegn með :math:`\exp (y)` þá fæst
+með því að nota aðskilnað breytistærða. Lítum á diffurjöfnuna
 
-.. math::
-	\exp(y)\, y' = x\exp x.
+.. math:: y' = (2x+3)(y^2-4).
 
-Hér eru öll :math:`y` vinstra megin og öll :math:`x` hægra megin.
-Heildum nú beggja vegna og munum að það er nóg að setja einn heildunarfasta
+Ef við deilum beggja vegna jafnaðarmerkisins með :math:`(y^2-4)` fæst
 
-.. math::
-	\exp{y} + C = \int \exp y \, dy = \int x\exp x\, dx = x\exp x - \exp x.
 
-Reynum nú að einangra :math:`y` til þess að geta skrifað út formúlu fyrir lausninni.
-Byrjum á að færa heildunarfastann yfir og tökum svo logrann af báðum hliðum
+.. math:: \frac{y'}{y^2-4}=2x+3.
 
-.. math::
-	y = \ln(x\exp x - \exp x - C).
+Ljóst er að við höfum nú greint breytistærðirnar að þar sem öll :math:`x`-in
+eru hægra megin jafnaðarmerkisins en öll :math:`y`-in vinstra megin. Skiptum :math:`y'`
+út fyrir :math:`\frac{dy}{dx}` og margföldum báðum megin með :math:`dx` til að fá
 
-.. index::
-    diffurjafna; línuleg
 
-Línulegar fyrsta stigs diffurjöfnur
------------------------------------
+.. math:: \frac{dy}{y^2-4}=2x+3 dx.
 
-.. index::
-    diffurjafna; hliðruð
-    diffurjafna; óhliðruð
+Nú fæst að
 
-Skilgreining: Línuleg diffurjafna
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math:: \int \frac{dy}{y^2-4}= \int (2x+3) dx
 
-Diffurjafna á forminu
+sem með stofnbrotaliðun má umrita sem
 
-.. math:: a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+\cdots+a_1(x)y'+a_0(x)y=f(x)
+.. math:: \frac{1}{4} \int \left( \frac{1}{y-2} - \frac{1}{y+2}\right) dy = \int (2x+3) dx
 
-kallast :hover:`línuleg diffurjafna`. Hún er :math:`n`-ta stigs ef
-:math:`a_n(x)` er ekki fastafallið :math:`0`.
+Ef við heildum nú báðar hliðar fæst
 
-Ef :math:`f` er fastafallið :math:`0` þá er jafnan sögð :hover:`óhliðruð`
-en ef :math:`f` er ekki fastafallið :math:`0` þá er hún
-sögð :hover:`hliðruð,hliðruð línuleg diffurjafna`.
+.. math:: \frac{1}{4} \left( \ln|y-2| - \ln|y+2| \right) = x^3+3x+C.
 
-.. index::
-    diffurjafna; fyrsta stigs
+Ef við lengjum báðar hliðar með 4 og notum lograreglur má fá
 
-Línulegar fyrsta stigs diffurjöfnur
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math:: \ln\left|\frac{y-2}{y+2}\right|= 4x^2+12x+C.
 
-Almenna línulega fyrsta stigs jöfnu má rita á forminu
+Athugum að þar sem :math:`C` er bara einhver fasti þá skiptir engu máli hvort ritað
+sé :math:`4C` eða :math:`C`. Þegar öllu er á botninn hvolft þá er :math:`4C` líka
+bara einhver fasti. Við getum nú beitt veldisvísifallinu á báðar hliðar til að fá
 
-.. math:: y'+p(x)y=q(x).
+.. math:: \left|\frac{y-2}{y+2}\right| = Ce^{4x^2+12x}
 
-Samsvarandi óhliðruð jafna er
+þar sem við notfærum okkur að :math:`e^{C}` er einnig bara einhver (jákvæður)
+fasti sem við getum haldið áfram að nota :math:`C` til að tákna. Með því að
+leyfa :math:`C` að vera bæði neikvæður og jákvæður fasti getum við fell niður
+algildistáknið og með því að lengja báðar hliðar jöfnunnar með :math:`(y+2)` fæst
 
-.. math:: y'+p(x)y=0.
+.. math:: y-2 = C(y+2)e^{4x^2+12}.
 
-Skilgreinum :math:`\mu(x)=\int p(x)\,dx` (eitthvert stofnfall). Þá er
+Ef við einangrum loks :math:`y` fæst
 
-.. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx
+.. math:: y= \frac{2+2Ce^{4x^2+12x}}{1-Ce^{4x^2+12x}}.
 
-lausn á diffurjöfnunni.
+Til að finna gildið á
+:math:`C` notum við upphafsgildið :math:`y(0)=1`. Stingum inn :math:`y=1` og :math:`x=0`
+í jöfnuna og einangrum :math:`C`. Útreikningar gefa að :math:`C=-3`. Lausn upphafsgildisverkefnisins
+er því
 
-.. warning::
-    Þegar þið reiknið :math:`\mu(x)=\int p(x)\,dx` þá megið þið sleppa
-    heildunarfastanum, en **ekki** þegar þið reiknið heildið
-    :math:`\int e^{\mu(x)}q(x)\,dx`.
+.. math:: y= \frac{2-6e^{4x^2+12x}}{1+3xe^{4x^2+12x}}.
 
-.. index::
-    diffurjafna; annars stigs
+.. tip::
+	Það er gamalt trikk í stærðfræði, þegar unnið er með óskilgreinda fasta
+	í útreikningum að halda bara áfram að nota fastann :math:`C` í gegnum alla
+	útreikningana, í stað þess að finna sífellt upp á nýjum bókstöfum
+	til að tákna nýja, óskilgreinda fasta. Stafurinn :math:`C` er þá látinn halda sér, því
+	þar sem hann var óskilgreindur til að byrja með þá breytir það ekki öllu
+	hann megi t.a.m. skrifa sem margfeldi af 4 eða sem :math:`e` í einhverju veldi.
 
-.. begin-toggle::
-	:label: Sýna sönnun
-	:starthidden: True
+Lógistíska jafnan
+------------------
 
-**Sönnun**
+Til þess að búa til líkan sem lýsir vexti þýðis í gegnum diffurjöfnur þarf að
+byrja á því að kynna til leiks nokkur hugtök. Breytan :math:`t` táknar tíma. Tímaeiningin
+má vera hver sem er; sekúndur, mínútur, klukkustundir, dagar, ár og fer það einungis
+eftir eðli verkefnisins. Breytan :math:`P` mun tákna þýðið. Þar sem fjöldi í
+þýði breytist með tíma má tákna það sem fall af tíma, þ.e. :math:`P(t)`. Ef :math:`P(t)`
+er diffranlegt fall þá hefur það fyrstu afleiðuna :math:`\frac{dP}{dt}`, sem
+er táknræn fyrir breytingu á fjölda þýðisins sem fall af tíma.
 
-Setjum
+Skilgreining: Burðargeta
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx
+Burðargeta lífvera í gefnu umhverfi er skilgreint sem hámarksfjöldinn þeirra
+lífvera sem umhverfið getur viðhaldið um ókomna tíð.
 
-inn í vinstri hlið diffurjöfnunnar, ef út kemur hægri hliðin :math:`q(x)` þá
-höfum við sýnt að þetta er lausn.
+Við notum stafinn :math:`K` til að tákna burðargetu umhverfisins og vaxtarhraða
+þýðisins táknum við með :math:`r`.
 
-Athugum fyrst að
+Skilgreining: Lógistísk diffurjafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math::
-	\begin{aligned}
-	y'(x) &=e^{-\mu(x)}(-\mu'(x)) \int e^{\mu(x)}q(x)\, dx + e^{-\mu(x)} \frac{d}{dx} \int e^{\mu(x)}q(x)\,dx \\
-	&= -e^{-\mu(x)}p(x)\int e^{\mu(x)}q(x)\, dx +  e^{-\mu(x)} e^{\mu(x)}q(x) = -p(x)y(x) + q(x).
-	\end{aligned}
+Látum :math:`K` vera burðargetu lífvera í gefnu umhverfi og látum :math:`r` vera
+rauntölu sem táknar vaxtarhraðann. Fallið :math:`P(t)` lýsir fjölda þessara lífvera
+sem falli af tíma og fastinn :math:`P_0` ta´knar upphafsástandi þýðisins (fjölda
+lífvera í þýðinu á tímapunktinum :math:`t=0`). Þá er má setja *lógistísku diffurjöfnuna*
+fram með
 
-Ef við setjum þetta inn í diffurjöfnuna fæst
+.. math:: \frac{dP}{dt} = rP\left(1-\frac{P}{K}\right).
 
-.. math::
-	y'(x) + p(x)y(x) = -p(x)y(x) + q(x) + p(x)y(x) = q(x),
+Ef lógistíska diffurjafnan er pöruð með upphafsgildinu :math:`P(0)=0` myndar
+hún upphafsgildsiverkefni fyrir :math:`P(t)`.
 
-þannig að :math:`y` skilgreint eins og hér að ofan er greinilega lausn á diffurjöfnunni.
+Setning: Lausn lógistískra diffurjafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. end-toggle::
-
-Línulegar annars stigs diffurjöfnur með fastastuðla
----------------------------------------------------
-
-Skilgreining
-~~~~~~~~~~~~
-
-*Línuleg annars stigs diffurjafna með fastastuðla* er diffurjafna á
-forminu
-
-.. math:: ay''+by'+cy=f(x)
-
-þar sem :math:`a, b` og :math:`c` eru fastar, :math:`a\neq 0`.
-
-Jafnan er sögð *óhliðruð* ef fallið :math:`f(x)` er
-fastafallið 0.
-
-.. index::
-    diffurjafna; kennijafna
-
-Skilgreining: Kennijafna
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Jafnan :math:`ar^2+br+c=0` kallast :hover:`kennijafna`
-diffurjöfnunnar :math:`ay''+by'+cy=0`.
-
-Setning
-~~~~~~~
-
-Ef föllin :math:`y_1(x)` og :math:`y_2(x)` eru lausnir á diffurjöfnunni
-:math:`ay''+by'+cy=0` þá er fallið
-
-.. math:: y(x)=Ay_1(x)+By_2(x),
-
-þar sem :math:`A` og :math:`B` eru fastar, líka lausn.
-
-Ef :math:`y_2(x)` er ekki fastamargfeldi af :math:`y_1(x)` þá má skrifa
-**sérhverja** lausn :math:`y(x)` á diffurjöfnunni :math:`ay''+by'+cy=0`
-á forminu
-
-.. math:: y(x)=Ay_1(x)+By_2(x),
-
-þar sem :math:`A` og :math:`B` eru fastar.
-
-.. _2stigs-ohlidrud:
-
-Setning
-~~~~~~~
-
-Ef leysa á annars stigs óhliðraða diffurjöfnu með fastastuðla
-
-.. math:: ay''+by'+cy=0
-
-þá geta komið upp þrjú tilvik.
-
-Tilvik I
-    *Kennijafnan* :math:`ar^2+br+c=0` *hefur tvær ólíkar rauntölulausnir*
-    :math:`r_1` og :math:`r_2`.
-
-    Þá er fallið
-
-    .. math:: y(x)=Ae^{r_1x}+Be^{r_2x}
-
-    alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
-    valdir og sérhverja lausn má rita á þessu formi.
-
-Tilvik II
-    *Kennijafnan* :math:`ar^2+br+c=0` *hefur bara eina rauntölulausn*
-    :math:`k=-\frac{b}{2a}`.
-
-    Þá er fallið
-
-    .. math:: y(x)=Ae^{kx}+Bxe^{kx}
-
-    alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
-    valdir og sérhverja lausn má rita á þessu formi.
-
-Tilvik III
-    *Kennijafnan* :math:`ar^2+br+c=0` *hefur engar rauntölulausnir.*
-
-    Setjum :math:`k=-\frac{b}{2a}` og
-    :math:`\omega=\frac{\sqrt{4ac-b^2}}{2a}`.
-
-    Rætur kennijöfnunnar eru :math:`r_1=k+i\omega` og
-    :math:`r_2=k-i\omega`.
-
-    Þá er fallið
-
-    .. math:: y(x)=Ae^{kx}\cos(\omega x)+Be^{kx}\sin(\omega x)
-
-    alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
-    valdir og sérhverja lausn má rita á þessu formi.
-
-Setning
-~~~~~~~
-
-Látum :math:`y_{\rm p}(x)` vera einhverja lausn á hliðruðu jöfnunni
-
-.. math:: ay''+by'+cy=f(x).
-
-Látum :math:`y_1(x)` og :math:`y_2(x)` vera lausnir sem fást úr :ref:`8.3.4 <2stigs-ohlidrud>` á
-óhliðruðu jöfnunni
-
-.. math:: ay''+by'+cy=0.
-
-Sama hvernig fastarnir :math:`A` og :math:`B` eru valdir þá er fallið
-
-.. math:: y(x)=Ay_1(x)+By_2(x)+y_{\rm p}(x)
-
-alltaf lausn á diffurjöfnunni :math:`ay''+by'+cy=f(x)` og sérhverja
-lausn má skrifa á þessu formi.
-
-Ágiskanir
----------
-
-Við höfum skoðað aðferðir til að leysa aðgreinanlegar diffurjöfnur,
-línulegar fyrsta stigs diffurjöfnur og óhliðraðar línulegar
-annars stigs diffurjöfnur með fastastuðla. Þessar jöfnur eru
-samt bara pínulítið brot af öllum mögulegum diffurjöfnum og ef við
-veljum diffurjöfnu af "handahófi" þá getum við yfirleitt ekki
-leyst hana auðveldlega.
-
-Þrátt fyrir þetta er ástæðulaust að gefast upp og fyrir ákveðinn flokk
-af diffurjöfnum þá getum við stundum giskað á lausn, en þetta eru
-**hliðraðar** línulegar annars stigs diffurjöfnur með fastastuðla.
-
-
-.. index::
-    diffurjafna; ágiskun
-    diffurjafna; sérlausn
-
-.. _ágiskun:
-
-Ágiskun
-~~~~~~~
-
-Lausn á hliðruðu jöfnu :math:`ay''+by'+cy=f(x)` kallast *sérlausn*.
-Stundum, ef :math:`f` er ekki of flókið, þá er mögulegt að giska á sérlausn.
-
-Látum :math:`P_n(x)` standa fyrir einhverja :math:`n`-ta stigs margliðu
-og látum :math:`A_n(x)` og :math:`B_n(x)` tákna :math:`n`-ta stigs
-margliður með óákveðnum stuðlum.
-
--  Ef :math:`f(x)=P_n(x)` þá er giskað á :math:`y_{\rm p}(x)=x^mA_n(x)`.
-
--  Ef :math:`f(x)=P_n(x)e^{rx}` þá er giskað á
-   :math:`y_{\rm p}(x)=x^mA_n(x)e^{rx}`.
-
--  Ef :math:`f(x)=P_n(x)e^{rx}\sin(kx)` þá er giskað á
-   :math:`y_{\rm p}(x)=x^me^{rx}[A_n(x)\cos(kx)+B_n(x)\sin(kx)]`.
-
--  Ef :math:`f(x)=P_n(x)e^{rx}\cos(kx)` þá er giskað á
-   :math:`y_{\rm p}(x)=x^me^{rx}[A_n(x)\cos(kx)+B_n(x)\sin(kx)]`.
-
-Hér táknar :math:`m` minnstu töluna af tölunum 0, 1, 2 sem tryggir að
-enginn liður í ágiskuninni sé lausn á óhliðruðu jöfnunni
-:math:`ay''+by'+cy=0`.
-
-
-Ef við erum búin að finna sérlausn :math:`y_p` og almenna lausn
-:math:`y` á óhliðruðu jöfnunni :math:`ay''+by'+cy=0`, þá er
-:math:`y+y_p` áfram lausn á hliðruðu jöfnunni. Reyndar er **sérhver**
-lausn á óhliðruðu jöfnunni á forminu :math:`y+y_p`, bara
-með mismundandi :math:`A` og :math:`B` í :math:`y`.
-
-.. todo::
-    Dæmi: sérlausn, almenn lausn og svo upphafsskilyrðum bætt við.
-
-Samantekt
----------
-
-Aðskiljanlegar jöfnur
-~~~~~~~~~~~~~~~~~~~~~
-
-Jöfnur sem hægt er að rita á forminu
-
-.. math:: \frac{dy}{dx} = f(x)g(y),
-
-má leysa með því að heilda og einangra :math:`y` út úr
-
-.. math:: \int \frac 1{g(y)}\, dy = \int f(x)\, dx.
-
-Línulegar fyrsta stigs jöfnur
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Lausn við jöfnu á forminu
-
-.. math:: y'(x) + p(x)y = q(x)
-
+Lítum á lógistíska diffurjöfnu með upphafsfjöldann :math:`P_0` með burðargetu
+:math:`K` og vaxtarhraða :math:`r`. Lausnin á samsvarandi upphafsgildisverkefni
 er gefin með
 
-.. math:: y(x) = e^{-\mu(x)} \int e^{\mu(x)} q(x)\, dx,
+.. math:: P(t) = \frac{P_0Ke^{rt}}{(K-P_0)+P_0e^{rt}}.
 
-þar sem :math:`\mu(x) = \int p(x)\, dx`.
 
-Línulegar annars stigs jöfnur með fastastuðla
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dæmi: Lógistísk diffurjafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lausn á :math:`ay''+by'+cy=0` er gefin með
+Gerum ráð fyrir að í þýði hreindýra séu 900.000 hreindýr. Líffræðingur spáði fyrir að
+fjölgun í stofninu fylgi veldisvísisvexti og stofninn tvöfaldist á þriggja ára fresti við
+kjöraðstæður, sem er sambærilegt því að segja að vaxtarhraðinn sé
 
-Tilvik I
-    :math:`y(x)=Ae^{r_1x}+Be^{r_2x}`
-    ef kennijafnan hefur tvær ólíkar rauntölulausnir :math:`r_1` og
-    :math:`r_2`.
+.. math:: r = \frac{\ln(2)}{3}\approx 0,2311.
 
-Tilvik II
-    :math:`y(x)=Ae^{kx}+Bxe^{kx}`
-    ef kennijafnan :math:`ar^2+br+c=0` hefur bara eina tvöfalda rauntölulausn
-    :math:`k=-\frac{b}{2a}`.
+Ef svæðið sem hreindýrin lifa á er 39.732 ferkílómetrar og hver ferkílómetri getur
+hýst í mestalagi 27 hreindýr þá er burðargeta svæðsisins
 
-Tilvik III
-    :math:`y(x)=Ae^{kx}\cos(\omega x)+Be^{kx}\sin(\omega x)`
-    ef kennijafnan :math:`ar^2+br+c=0` hefur engar rauntölulausnir,
-    bara tvinntölulausnir :math:`r_1=k+i\omega` og
-    :math:`r_2=k-i\omega`, þar sem
-    :math:`k=-\frac{b}{2a}` og :math:`\omega=\frac{\sqrt{4ac-b^2}}{2a}`.
+.. math:: K = 39.732 \cdot 27.1.072.764.
 
-Lausn á liðruðu jöfnunni  á :math:`ay''+by'+cy=f(x)` er mögulega hægt að finna
-með :ref:`ásgiskun <Ágiskun>`. Sérhver lausn á óhliðruðu jöfnunni :math:`ay''+by'+cy=f(x)`
-er svo á forminu :math:`y+y_p` þar sem :math:`y` er
-lausn á óhliðruðu jöfnunni.
+Við skulum:
+
+	a. Nota lógistískt líkan til að ákvarða upphafsgildisverkefnið.
+
+	b. Leysa upphafsgildisverkefnið.
+
+	c. Ákvarða hver fjöldi hreindýra verður eftir 3 ár.
+
+	d. Finna hvenær stofninn mun ná stærðinni 1.200.000.
+
+Lausn:
+
+	a. Upphafsgildisverkefnið er
+
+	.. math::
+		\begin{cases}
+			\frac{dP}{dt} = 0,2311P\left(1-\frac{P}{1.072.764}\right)\\
+			P(0)=900.000
+		\end{cases}
+
+	b. Við getum notað aðskilnað breytistærða til að leysa jöfnuna. Með umritun
+	á diffurjönfunni getum við fengið að
+
+	.. math:: \frac{dP}{P(1.072.765-P)} = \frac{0,2311}{1.072.764}dt.
+
+	Leysum þetta.
+
+	.. math::
+		\begin{align}
+			\frac{dP}{P(1.072.765-P)} &= \frac{0,2311}{1.072.764}dt\\
+			\frac{1}{1.072.764}\left(\ln|P| - \ln|1.072.764-P|\right) &= \frac{0,2311t}{1.072.764}+C.
+		\end{align}
+
+	Einangrum nú :math:`P` og fáum
+
+	.. math:: P(t) = \frac{1.072.764Ce^{0,2311t}}{1+Ce^{0,2311t}}.
+
+	Notum nú upphafsgildið :math:`P(0)=900.000` til að ákvarða gildi fastans :math:`C`.
+
+	.. math::
+		\begin{align}
+			P(0) &= \frac{1.072.764Ce^{0,2311 \cdot 0}}{1+Ce^{0,2311 \cdot 0}}\\
+			900.000 &= \frac{1.072.764C}{1+C}\\
+			C &= \frac{25.000}{4799}\\
+			C & \approx 5,209.
+		\end{align}
+
+	Fáum því, með örlítilli umritun, að
+
+	.. math:: P(t) = \frac{1.072.764 e^{0,2311t}}{0,19196+e^{0,2311t}}.
+
+	c. Til að finna hver fjöldinn verður eftir 3 ár stingum við einfaldlega :math:`t=3`
+	inn í jöfnuna og fáum
+
+	.. math:: P(3) = \frac{1.072.764 e^{0,2311 \cdot 3}}{0,19196+e^{0,2311 \cdot 3}} \approx 978.830.
+
+	Svo fjöldi hreindýra eftir 3 ár verður u.þ.b. 978.830 hreindýr. Við sjáum að
+	samkvæmt lógistíska líkaninu er það langt því frá að vera tvöföldun á stofninum.
+
+	d. Ef stofninn nær 1.200.000 hreindýrum þá væri nýja upphafsgildisverkefnið
+
+	.. math::
+		\begin{cases}
+			\frac{dP}{dt}=0,2311P\left(1-\frac{P}{1.072.764}\right)\\
+			P(0)=1.200.000\\
+		\end{cases}
+
+	sem hefur sömu almennu lausn og við fundum í b. lið.
+
+	.. math:: P(t) = \frac{1.072.764Ce^{0,2311t}}{1+Ce^{0,2311t}}.
+
+	Notum nýja upphafsgildið til að ákvarða :math:`C`. Fáum
+
+	.. math::
+		\begin{align}
+			P(0) &= \frac{1.072.764Ce^{0,2311 \cdot 0}}{1+Ce^{0,2311 \cdot 0}}\\
+			1.200.000 &= \frac{1.072.764C}{1+C}\\
+			C & \approx -9.431.
+		\end{align}
+
+	Því fæst að
+
+	.. math:: P(t) \approx \frac{10.117.551 e^{0,2311t}}{9,43129 e^{0,2311t}-1}.
+
+	Sjáum á grafi fallsins hér að neðan að það fækkar í stofninum.
+
+	.. image:: ./myndir/kafli08/PMA_hreindyr.png
+		:align: center
+		:width: 50%
+
+Fyrsta stigs línulegar diffurjöfnur
+------------------------------------
+
+Skilgreining: Línuleg diffurjafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Fyrsta stigs diffurjafna er *línuleg* ef hana má rita  á forminu
+
+.. math:: a(x)y'+b(x)y=c(x)
+
+þar sem :math:`a(x),b(x),c(x)` eru einhver föll.
+
+Skilgreining: Staðalform
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Við segjum að fyrsta stigs línuleg diffurjafan sé á *staðalformi* ef
+hún er sett fram sem
+
+.. math:: y' + \frac{b(x)}{a(x)}y = \frac{c(x)}{a(x)}.
+
+Þetta má einnig setja fram með því að láta :math:`p(x)=\frac{b(x)}{a(x)}` og
+:math:`q(x)=\frac{c(x)}{a(x)}` og rita
+
+.. math:: y' + p(x)y = q(x).
+
+Dæmi: Staðalform diffurjöfnu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Lítum á diffurjöfnuna
+
+.. math:: \frac{3xy'}{4y-3}=2
+
+þar sem :math:`x\neq 0` og :math:`y \neq \frac{3}{4}`. Setjum hana á staðalform.
+Fáum
+
+.. math::
+	\begin{align}
+		\frac{3xy'}{4y-3}&=2\\
+		3xy' = 2(4y-3)\\
+		3xy' = 8y-6\\
+		y' = \frac{8y}{3x}-\frac{6}{3x}\\
+		y'-\frac{8y}{3x}=-\frac{2}{x}.
+	\end{align}
+
+Þar sem við gerðum upphaflega ráð fyrir að :math:`x \neq 0` var okkur óhætt að
+deila í gegnum jöfnuna með :math:`x` og fá hana þannig yfir á staðalform. Ef
+:math:`x=0` í upprunalegu jöfnunni fæst :math:`0=2` sem er augljóslega ekki rétt.
+Í þessari jöfnu er því :math:`p(x)=-\frac{8y}{3x}` og :math:`q(x)=-\frac{2}{x}`.
+
+Setning: Lausna línulegra fyrsta stigs diffurjafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Línulega fyrsta stigs diffurjafnan
+
+.. math:: y' + p(x)y = q(x)
+
+hefur lausnina
+
+.. math:: y(x) = e^{-\mu(x)}\int e^{\mu(x)}q(x)dx
+
+þar sem :math:`\mu(x)=\int p(x) dx`, þ.e. :math:`\mu(x)` er eitthvað stofnfall
+fyrir :math:`p(x)`.
+
+.. warning::
+	Þessi setning er sett örlítið öðruvísi fram í bókinni. Við notum þessa framsetningu
+	hér til að halda samræmi við aðra stærðfræðigreiningaráfanga Háskóla Íslands.
+	Þetta er í grunninn sama jafnan svo ekki skiptir máli hvor þeirra er notuð, báðar
+	gefa lausn við diffurjöfnunni.
+
+Dæmi: Lausn línulegrar fyrsta stigs diffurjöfnu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Lítum á línulegu fyrsta stigs diffurjöfnuna
+
+.. math:: xy' + 3y = 4x^2-3x.
+
+og gerum ráði fyrir að :math:`x>0`.
+Notum lausnarformúlu fyrsta stigs línulegra diffurjafna. Til þess þurfum við að
+byrja á því að koma diffurjöfnunni á staðalfrom sitt. Fáum að
+
+
+.. math::
+	\begin{align}
+		xy' + 3y &= 4x^2-3x\\
+		y' + \frac{3}{x}y = 4x - 3\\
+	\end{align}
+
+Sjáum að hér er :math:`p(x)=\frac{3}{x}y` og :math:`q(x)=4x - 3`. Finnum nú
+eitthvað stofnfall fyrir :math:`p(x)`.
+
+.. math:: \mu(x)=\int p(x) dx = \int \frac{3}{x} dx = 3\ln|x| = 3\ln(x).
+
+Athugum að hér má sleppa algildistákninu af því að við gerðum ráð fyrir því
+í byrjun dæmisins að :math:`x>0` og algildistáknið hefur aðeins áhrif á
+neikvæðar tölur. Lausn diffurjöfnunnar er því
+
+.. math::
+	\begin{align}
+		y(x) &= e^{-3\ln(x)}\int e^{3\ln(x)}(4x - 3)dx\\
+		&= e^{\ln(x^{-3})}\int e^{\ln(x^3)}(4x - 3)dx\\
+		&= x^{-3}\int x^3(4x - 3)dx\\
+		&= x^{-3}\int (4x^4 - 3x^3 )dx\\
+		&= x^{-3} \left(\frac{4}{5}x^5 - \frac{3}{4}x^4+C\right)\\
+		&= \frac{4}{5}x^2 - \frac{3}{4}x+\frac{C}{x^3}
+	\end{align}
+
+Svo lausnin á diffurjöfnunni er :math:`y(x)=\frac{4}{5}x^2 - \frac{3}{4}x+\frac{C}{x^3}`.

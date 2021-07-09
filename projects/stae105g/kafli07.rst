@@ -1,318 +1,335 @@
-Rúmmál, massi og massamiðja
-===========================
+Aðferðir í heildun
+===================
 
 .. note::
 	**Nauðsynleg undirstaða**
 
-  - `Undirstöðuatriði í rúmfræði <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli03.html>`_.
+	- Eitthvað
 
-*The fact that we live at the bottom of a deep gravity well, on the surface of a
-gas covered planet going around a nuclear fireball 90 million miles away and think
-this to be normal is obviously some indication of how skewed our perspective tends to be.*
+	- Eitthvað
 
-\- Douglas Adams, The Salmon of Doubt: Hitchhiking the Galaxy One Last Time
+------
 
-.. todo::
-    myndir/geogebra
+.. epigraph::
 
-.. index::
-    rúmmál
+  *May it be a light to you in dark places, when all other lights go out.*
 
-Rúmmál, lengd og flatarmál
---------------------------
+  \– Galadriel, The Two Towers
 
-Rúmmál rúmskika
-~~~~~~~~~~~~~~~~~~~~~~
+------
 
-Rúmskiki :math:`D` liggur á milli plananna :math:`x=a` og :math:`x=b`.
-Táknum með :math:`A(x)` flatarmál þversniðs :math:`D` við plan sem sker
-:math:`x`-ásinn í :math:`x` og er hornrétt á :math:`x`-ás. Ef fallið
-:math:`A(x)` er heildanlegt yfir bilið :math:`[a, b]` þá er rúmmál
-:math:`D` jafnt og
+Hlutheildun
+------------
 
-.. math:: V=\int_a^b A(x)\,dx.
+Í fyrri köflum höfum við lært að heilda með því að nota innsetningu. En innsetning
+ræður aðeins við lítinn hluta mögulegra heilda. Innsetning með :math:`u=x^2` gerir okkur kleyft
+að reikna
 
-.. index::
-    rúmmál; keilu
+.. math:: \int x \sin(x^2) dx
 
-Rúmmál keilu
-~~~~~~~~~~~~~~~~~~~
+en getur okkur engar bjargir veitt þegar kemur að heildinu
 
-Látum :math:`F` vera takmarkaðan samanhangandi bút af plani og látum
-:math:`T` vera punkt sem liggur ekki í planinu. Látum :math:`A` tákna
-flatarmál :math:`F` og :math:`h` tákna fjarlægð topppunktsins frá
-planinu sem grunnflöturinn liggur í. :hover:`Keila` með grunnflöt :math:`F` og
-topppunkt :math:`T` er rúmskiki sem afmarkast af grunnfletinum :math:`F`
-og öllum strikum sem liggja frá punktum á jaðri :math:`F` til :math:`T`.
-Rúmmál keilunnar er
+.. math:: \int x \sin(x) dx.
 
-.. math::
+Til þess þarf að grípa til annarra aðferða. Þar sem innsetningu þrýtur má oft
+líta til hlutheildunar.
 
-   V=\frac{1}{3}hA=\frac{1}{3}(\text{hæð})(\text{flatarmál
-   grunnflatar}).
-
-Formúlan gildir óháð lögun grunnflatarins :math:`F`.
-
-.. index::
-    rúmmál; snúðs, snúið um x-ás
-
-Rúmmál snúðs, snúið um :math:`x`-ás
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` vera samfellt fall á bili :math:`[a, b]`. Rúmskikinn sem
-myndast þegar svæðinu sem afmarkast af :math:`x`-ás, grafinu
-:math:`y=f(x)` og línunum :math:`x=a` og :math:`x=b` er snúið
-:math:`360^\circ` um :math:`x`-ás hefur rúmmálið
-
-.. math:: V=\pi\int_a^b f(x)^2\,dx.
-
-Sjá  `3D volume by rotation of a function <https://www.geogebra.org/m/40798>`_
-eftir `George Katehos <https://www.geogebra.org/u/george.katehos>`_ (CC-BY-SA).
-
-.. index::
-    rúmmál; snúðs með gati
-
-Rúmmál snúðs með gati
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` og :math:`g` vera tvö samfelld föll skilgreind á bilinu
-:math:`[a, b]`. Gerum ráð fyrir að um öll :math:`x\in [a, b]` gildi að
-:math:`0\leq f(x)\leq
-g(x)`. Þegar svæðinu milli grafa :math:`f` og :math:`g` er snúið
-:math:`360^\circ` um :math:`x`-ás fæst rúmskiki sem hefur rúmmálið
-
-.. math:: V=\pi\int_a^b g(x)^2-f(x)^2\,dx.
-
-.. index::
-    rúmmál; snúðs, snúið um y-ás
-
-Rúmmál snúðs, snúið um :math:`y`-ás
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` vera samfellt fall skilgreint á bili :math:`[a, b]`, með
-:math:`0\leq a<b`. Gerum ráð fyrir að :math:`f(x)\geq 0` fyrir öll
-:math:`x\in [a, b]`. Rúmmál rúmskikans sem fæst með að snúa svæðinu sem
-afmarkast af :math:`x`-ás, grafinu :math:`y=f(x)` og línunum :math:`x=a`
-og :math:`x=b` um :math:`360^\circ` um :math:`y`-ás er
-
-.. math:: V=2\pi\int_a^b xf(x)\,dx.
-
-.. index::
-    fall; lengd grafs
-
-Sjá `Solids and volumes of revolution (rotation about y_axis) <https://www.geogebra.org/m/nvRvzKys>`_
-eftir `Daniel Mentrard <https://www.geogebra.org/m/nvRvzKys>`_.
-
-
-Lengd grafs
-~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` vera fall skilgreint á bili :math:`[a, b]` sem
-hefur samfellda afleiðu.
-Lengd grafsins :math:`y=f(x)` milli :math:`x=a` og :math:`x=b` er
-skilgreind sem
-
-.. math:: s=\int_a^b\sqrt{1+(f'(x))^2}\,dx.
-
-.. index::
-    flatarmál; yfirborðsflatarmál snúðs, snúið um x-ás
-
-Flatarmál snúðflatar, snúið um :math:`x`-ás
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` vera samfellt fall skilgreint á bili :math:`[a, b]`.
-Grafinu :math:`y=f(x)` er snúið :math:`360^\circ` um :math:`x`-ás og
-myndast við það flötur. Flatarmál flatarins er gefið með formúlunni
-
-.. math:: S=2\pi\int_a^b|f(x)|\sqrt{1+(f'(x))^2}\,dx.
-
-.. index::
-    flatarmál; yfirborðsflatarmál snúðs, snúið um y-ás
-
-Flatarmál snúðflatar, snúið um :math:`y`-ás
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`f` vera samfellt fall skilgreint á bili :math:`[a, b]`.
-Grafinu :math:`y=f(x)` er snúið :math:`360^\circ` um :math:`y`-ás og
-myndast við það flötur. Flatarmál flatarins er gefið með formúlunni
-
-.. math:: S=2\pi\int_a^b|x|\sqrt{1+(f'(x))^2}\,dx.
-
-.. index::
-    massi
-
-Massi
------
-
-.. index::
-    massi; vírs
-    massi; massafrymi
-
-Massi vírs
-~~~~~~~~~~~~~~~~~
-
-Vír liggur eftir ferli :math:`y=f(x)` þar sem :math:`a\leq x\leq b`.
-Efnisþéttleiki (eðlisþyngdin) í punkti :math:`(x, f(x))` er gefinn sem
-:math:`\delta(x)`. *Massafrymi* vírsins (massi örbúts af lengd
-:math:`ds`) er
-
-.. math::
-
-   dm
-   = \delta(x)\, ds
-   =\delta(x)\sqrt{1+(f'(x))^2}\, dx,
-
-og massi alls vírsins er
-
-.. math:: m=\int_a^b \delta(x)\,ds=\int_a^b \delta(x)\sqrt{1+(f'(x))^2}\, dx.
-
-.. index::
-    massi; plötu
-
-.. _massi-plotu:
-
-Massi plötu
-~~~~~~~~~~~~~~~~~~
-
-Plata afmarkast af :math:`x`-ás, grafinu :math:`y=f(x)` og línunum
-:math:`x=a` og :math:`x=b`. Á línu sem er hornrétt á :math:`x`-ás og
-sker :math:`x`-ásinn í :math:`x` er efnisþéttleikinn fastur og gefinn
-með :math:`\delta(x)`.
-
-Flatarmál örsneiðar milli lína hornréttra á :math:`x`-ás sem skera ásinn
-í :math:`x` og :math:`x+dx` er :math:`dA=f(x)\,dx`.
-
-Massafrymi fyrir plötuna (massi örsneiðarinnar) er
-
-.. math:: dm =\delta(x)dA = \delta(x) f(x)\,dx,
-
-og massi allrar plötunnar er
-
-.. math:: m=\int_a^b \delta(x)f(x)\,dx.
-
-.. index::
-    massi; rúmskika
-
-Massi rúmskika
+Setning: Hlutheildun
 ~~~~~~~~~~~~~~~~~~~~~
 
-Rúmskiki :math:`D` liggur á milli plananna :math:`x=a` og :math:`x=b`.
-Táknum með :math:`A(x)` flatarmál þversniðs :math:`D` við plan sem sker
-:math:`x`-ásinn í :math:`x` og er hornrétt á :math:`x`-ás. Gerum ráð
-fyrir að efnisþéttleikinn sé fastur á hverju þversniði, og að á
-þversniði :math:`D` við plan sem sker :math:`x`-ásinn í :math:`x` og er
-hornrétt á :math:`x`-ás sé efnisþéttleikinn gefinn með
-:math:`\delta(x)`.
+Látum :math:`f(x)` og :math:`g(x)` vera föll sem samfelldar afleiður. Þá
+gildir að
 
-Rúmmálsfrymi (rúmmál örsneiðar úr :math:`D` sem liggur á milli tveggja
-plana sem eru hornrétt á :math:`x`-ásinn og skera :math:`x`-ásinn í
-:math:`x` og :math:`x+dx`) er :math:`dV=A(x)\, dx`.
+.. math:: \int f'(x)g(x) dx = f(x)g(x) - \int f(x)g'(x) dx.
 
-Massafrymi (massi örsneiðarinnar) er
+Þessi formúla er stundum stytt í
 
-.. math:: dm=\delta(x)\, dV = \delta(x) A(x)\, dx,
+.. math:: \int f'g = fg - \int fg'.
 
-og massi rúmskikans :math:`D` er þá
+Dæmi: Hlutheildun
+~~~~~~~~~~~~~~~~~~
 
-.. math:: m=\int_a^b \delta(x)A(x)\, dx.
+Notum hlutheildun til að meta heildið
 
-.. index::
-    massi; massamiðja
-    massi; vægi
+.. math:: \int x \sin(x) dx.
 
-Massamiðja
-----------
+Látum
 
-Skilgreining: Massamiðja punktmassa
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math::
+	\begin{aligned}
+		f'(x)&=\sin(x) & g(x) &= x\\
+		f(x)&=-\cos(x) & g'(x) &= 1.
+	\end{aligned}
 
-Punktmassar :math:`m_1, m_2, \ldots, m_n` eru staðsettir í punktunum
-:math:`x_1,
-x_2, \ldots, x_n` á :math:`x`-ásnum.
+Þá fæst
 
-:hover:`Vægi` kerfisins um punktinn :math:`x=0` er skilgreint sem
+.. math::
+	\begin{align}
+		\int x \sin(x) dx &= -\cos(x)x - \int -\cos(x) \cdot 1 dx\\
+		&= -x\cos(x)+\int \cos(x)dx\\
+		&= -x\cos(x) + \sin(x) + C.
+	\end{align}
 
-.. math:: M_{x=0}=\sum_{i=1}^n x_im_i,
+Stundum getur verið nauðsynelgt að beita hlutheildun oftar en einu sinni
+til að leysa dæmi.
 
-og :hover:`massamiðja,þyngdarmiðja` kerfisins er
+Dæmi: Hlutheildun beitt tvisvar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: \overline{x}=\frac{M_{x=0}}{m} = \frac{\sum_{i=1}^n x_im_i}{\sum_{i=1}^n m_i}.
+Metum heildið
 
-Skilgreining: Massamiðja
+.. math:: \int x^2 e^{3x} dx.
+
+Látum
+
+.. math::
+	\begin{aligned}
+		f'(x)&=e^{3x} & g(x) &= x^2\\
+		f(x)&=\frac{1}{3}e^{3x} & g'(x) &= 2x.
+	\end{aligned}
+
+Fáum að
+
+.. math:: \int x^2 e^{3x} dx = \frac{1}{3}e^{3x}x^2 - \int \frac{1}{3}e^{3x} 2x dx.
+
+Beitum nú hlutheildun aftur. Látum
+
+.. math::
+	\begin{aligned}
+		f'(x)&=\frac{1}{3}e^{3x} & g(x) &= 2x \\
+	 f(x)&=\frac{1}{9}e^{3x} & g'(x) &= 2.
+	\end{aligned}
+
+.. math::
+	\begin{aligned}
+		\int \frac{1}{3}e^{3x} 2x dx &= \frac{1}{9}e^{3x} 2x - \int \frac{1}{9}e^{3x} 2 dx\\
+		&= \frac{1}{9}e^{3x} 2x - \frac{2}{27}e^{3x} + C.
+	\end{aligned}
+
+Ef við tökum þetta saman fæst
+
+.. math::
+	\begin{align}
+		\int x^2 e^{3x} dx &= \frac{1}{3}e^{3x}x^2 - \left(\frac{1}{9}e^{3x} 2x - \frac{2}{27}e^{3x} + C\right)\\
+		&= e^{3x}\left(\frac{1}{3} x^2 - \frac{2}{9} x + \frac{2}{27}\right) - C
+	\end{align}
+
+Hlutheildun fyrir ákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Við höfum nú séð hvernig á að nota hlutheildun fyrir óákveðin heildi. Aðferðin er
+að flestu leyti sú sama fyrir ákveðin heildi.
+
+Setning: Hlutheildun fyrir ákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`f(x)` og :math:`g(x)` vera föll með samfelldar afleiður á bilinu
+:math:`[a,b]`. Þá gildir að
+
+.. math:: \int_a^b f'(x) g(x) dx = \left[ f(x)g(x) \right]_a^b  - \int_a^b f(x) g'(x)dx.
+
+Þessi formúla er stundum stytt í
+
+.. math:: \int_a^b f' g = \left[ fg \right]_a^b  - \int_a^b f g'.
+
+Dæmi: Hlutheildun fyrir ákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ef við höldum áfram með dæmið hér að ofan, þar sem við mátum heildið
+
+.. math:: \int x \sin(x) dx
+
+nema nú skulum við bæta við heilda það yfir bilið :math:`[0,\pi]`, þ.e.
+
+.. math:: \int_0^\pi x \sin(x) dx.
+
+Látum
+
+.. math::
+	\begin{aligned}
+		f'(x)&=\sin(x) & g(x) &= x\\
+		f(x)&=-\cos(x) & g'(x) &= 1.
+	\end{aligned}
+
+Með hlutheildun fæst
+
+.. math::
+	\begin{align}
+		\int_0^\pi x \sin(x) dx &= [-\cos(x)x]_0^\pi - \int_0^\pi -\cos(x) \cdot 1 dx\\
+		&= -\cos(\pi)\cdot \pi - (-\cos(0)\cdot 0 )  + \int_0^\pi \cos(x)dx\\
+		&= \pi + [\sin(x)]_0^\pi\\
+		&= \pi + (\sin(\pi)-\sin(0))\\
+		&= \pi
+	\end{align}
+
+Óeiginleg heildi
+----------------
+
+Skilgreining: Óeiginlegt heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	(i) Látum :math:`f(x)` vera samfellt á bilinu :math:`[a,\infty[`. Þá gildir að
+
+		.. math:: \int_a^\infty f(x) dx = \lim_{t\rightarrow \infty } \int_a^t f(x) dx
+
+	af því gefnu að markgildið sé til.
+
+	(ii) Látum :math:`f(x)` vera samfellt á bilinu :math:`]-\infty,b]`. Þá gildir að
+
+		.. math:: \int_{-\infty}^b f(x) dx = \lim_{t\rightarrow \infty } \int_t^b f(x) dx
+
+	af því gefnu að markgildið sé til.
+	Í báðum tilfellum er sagt að *óeiginlega heildið* sé samleitið. Ef markgildið
+	er ekki til er það sagt vera ósamleitið.
+
+	(iii) Látum :math:`f(x)` vera samfellt á :math:`]-\infty;\infty[`. Þá gildir að
+
+		.. math:: \int_{-\infty}^\infty f(x)dx = \int_{-\infty}^0 f(x) dx + \int_0^\infty f(x) dx,
+
+	af því gefnu að bæði :math:`\int_{-\infty}^0 f(x) dx` og :math:`\int_0^\infty f(x) dx`
+	séu samleitin . Ef annað hvort þeirra er ósamleitið þá er heildið :math:`\int_{-\infty}^\infty f(x)dx`
+	ósamleitið.
+
+Dæmi: Óeiginlegt heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef massi er dreifður samkvæmt þéttleika falli :math:`\delta(x)` um bil
-:math:`[a, b]` á :math:`x`-ásnum þá er massi og vægi um punktinn
-:math:`x=0` gefið með formúlunum
+Ákvörðum flatarmál svæðiðisins sem myndast undir ferli fallsin :math:`f(x)=\frac{1}{x}`
+yfir :math:`x`-ásinum og hægra megin við línuna :math:`x=1`.
+
+.. image:: ./myndir/kafli07/PMA_oeiginleg_heildi.png
+	:align: center
+	:width: 60%
+
+Við viljum með öðrum orðum reikna óeiginlega heildið
+
+.. math:: A = \int_1^\infty \frac{1}{x}dx.
+
+Höfum
 
 .. math::
+	\begin{align}
+		A &= \int_1^\infty\\
+		&= \lim_{t \rightarrow \infty} \int_1^t \frac{1}{x} dx\\
+		&= \lim_{t \rightarrow \infty} \left[|x|\right]_1^t\\
+		&= \lim_{t \rightarrow \infty} (\ln|t|-\ln(1))\\
+		&= \infty
+	\end{align}
 
-   m=\int_a^b \delta(x)\,dx
-   \qquad\text{ og }\qquad
-   M_{x=0}= \int_a^b x\delta(x)\,dx.
+Sjáum að heildið er ósamleitið sem þýðir að flatarmál svæðisins er óendanlega stórt.
 
-Massamiðjan er gefin með formúlunni
+Dæmi: Óeiginlegt heildi
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math::
+Metum heildið
 
-   \overline{x}=\frac{M_{x=0}}{m}   =
-   \frac{\int_a^b x\delta(x)\,dx}{\int_a^b \delta(x)\,dx}.
+.. math:: \int_{-\infty}^0 \frac{1}{x^2+4} dx.
 
-
-.. index::
-    massi; massamiðja plötu
-
-Skilgreining: Massamiðja plötu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Skoðum plötu af sömu gerð og í :ref:`7.2.2 <massi-plotu>`.
-
-Vægi plötunnar um :math:`y`- og :math:`x`-ása eru gefin með formúlunum
+Fáum
 
 .. math::
+	\begin{align}
+		\int_{-\infty}^0 \frac{1}{x^2+4}dx &= \lim_{x \rightarrow -\infty} \int_t^0 \frac{1}{x^2+4}dx\\
+		&= \lim_{t \rightarrow -\infty } \left[\frac{1}{2}\tan^{-1}(\frac{1}{2})\right]_t^0\\
+		&= \frac{1}{2}\lim_{t \rightarrow -\infty}(\tan^{-1}(0)-\tan^{-1}(t/2))\\
+		&= \frac{\pi}{4}
+	\end{align}
 
-   M_{x=0}=\int_a^b x\delta(x)f(x)\,dx
-   \qquad\text{og}\qquad
-   M_{y=0}=\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx,
+Svo heildið er samleitið að :math:`\frac{\pi}{4}`.
 
-og hnit massamiðju plötunnar, :math:`(\overline{x}, \overline{y})`, eru
-gefin með jöfnunum
+Ósamfelldur heilidsstofn
+-------------------------
+
+Skilgreining: Ósamfelldur heildisstofn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	(i) Látum f(x) vera samfellt á bilinu :math:`[a,b[`. Þá gildir
+
+	.. math:: \int_a^b f(x) dx = \lim_{t \rightarrow b^-} \int_a^t f(x) dx.
+
+	(ii) Látum f(x) vera samfellt á bilinu :math:`]a,b]`. Þá gildir
+
+	.. math:: \int_a^b f(x) dx = \lim_{t \rightarrow a^+} \int_t^b f(x) dx.
+
+	Í báðum tilfellum segjum við að óeiginlega heildið sé samleitið ef markgildið er til.
+	Annars segjum við að það sé ósamleitið.
+
+	(iii) Ef :math:`f(x)` er samfellt á :math:`[a,b]` nema í einum innripunkti :math:`c` þá gildir
+
+	.. math:: \int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx,
+
+	af því gefnu að bæði :math:`\int_a^b f(x) dx` og :math:`\int_c^b f(x) dx`
+	séu samleitin. Annars er sagt að heildið :math:`\int_a^b f(x) dx` sé ósamleitið.
+
+Dæmi: Ósamfelldur heildisstofn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Metum heildið
+
+.. math:: \int_0^4 \frac{1}{\sqrt{4-x}} dx.
+
+Tökum eftir því að heildisstofnin er samfelldur allsstaðar á :math:`[0,4]` nema
+í hægri endapunktinum. Við fáum því að
 
 .. math::
+	\begin{align}
+		\int_0^4 \frac{1}{\sqrt{4-x}} dx &= \lim_{t \rightarrow 4^-} \int_0^t \frac{1}{\sqrt{4-x}}\\
+		&= \lim_{t \rightarrow 4^-} [(-2–\sqrt{4-x})]_0^t\\
+		&= \lim_{t \rightarrow 4^-} (-2\sqrt{4-t}+4)\\
+		&=4
+	\end{align}
 
-   \overline{x}=\frac{M_{x=0}}{m}=
-   \frac{\int_a^b x\delta(x)f(x)\,dx}{\int_a^b \delta(x)f(x)\,dx}
+Svo heildið er samleitið að 4.
 
-og
+Samanburðarpróf
+----------------
+
+Setning: Samanburðarpróf
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`f(x)` og :math:`g(x)` vera samfelld á :math:`[a,\infty[`.
+Gerum ráð fyrir að :math:`0 \leq f(x)\leq g(x)` fyrir :math:`x \geq a`.
+
+	(i) Ef
+
+	.. math:: \int_a^{\infty} f(x) dx = \lim_{t \rightarrow \infty} \int_a^t f(x) dx = \infty
+
+	þá gildir að
+
+	.. math:: \int_a^{\infty} g(x) dx = \lim_{t \rightarrow \infty} \int_a^t g(x) dx = \infty
+
+	(ii) Ef
+
+	.. math:: \int_a^{\infty} g(x) dx = \lim_{t \rightarrow \infty} \int_a^t g(x) dx = L
+
+	þar sem :math:`L` er rauntala, þá gildir að
+
+	.. math:: \int_a^{\infty} f(x) dx = \lim_{t \rightarrow \infty} \int_a^t f(x) dx = M
+
+	fyrir einhverja rauntölu :math:`M \leq L`.
+
+Dæmi: Samanburðarpróf
+~~~~~~~~~~~~~~~~~~~~~
+
+Notið samanburðarpróf til að sýna að heildið
+
+.. math:: \int_1^\infty \frac{1}{xe^x} dx
+
+sé samleitið.
+
+Höfum að
+
+.. math:: 0 \leq \frac{1}{xe^x} \leq \frac{1}{e^x} = e^{-x}.
+
+Svo ef :math:`\int_1^\infty e^{-x} dx` er samleitið þá er :math:`\int_1^\infty \frac{1}{xe^x} dx` það einnig.
+Fáum að
 
 .. math::
+ 	\begin{align}
+		\int_1^\infty e^{-x}dx &= \lim_{t \rightarrow \infty} \int_1^t e^{-x} dx\\
+		&= \lim_{t \rightarrow \infty} \left[e^{-x}\right]_1^t\\
+		&= \lim_{t \rightarrow \infty} (-e^{-t}+e^{-1})\\
+		&= e^{-1}.
+	\end{align}
 
-   \overline{y}=\frac{M_{y=0}}{m}=
-   \frac{\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx}{\int_a^b
-   \delta(x)f(x)\,dx}.
-
-.. index::
-    setning Pappusar
-
-Setning Pappusar, I
-~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`R` vera svæði sem liggur í plani öðrum megin við línu
-:math:`L`. Látum :math:`A` tákna flatarmál :math:`R` og
-:math:`\overline{r}` tákna fjarlægð massamiðju :math:`R` frá :math:`L`.
-
-Þegar svæðinu :math:`R` er snúið :math:`360^\circ` um :math:`L` myndast
-snúðskiki með rúmmál
-
-.. math:: V=2\pi\overline{r}A.
-
-Setning Pappusar, II
-~~~~~~~~~~~~~~~~~~~~
-
-Látum :math:`C` vera feril sem liggur í plani og er allur öðrum
-megin við línu :math:`L`. Látum :math:`s` tákna lengd :math:`C` og
-:math:`\overline{r}` tákna fjarlægð massamiðju :math:`C` frá :math:`L`.
-Þegar ferlinum :math:`C` er snúið :math:`360^\circ` um :math:`L` myndast
-snúðflötur með flatarmál
-
-.. math:: S=2\pi\overline{r}s.
+Fyrst :math:`\int_1^\infty e^{-x}dx` er samleitið þá er :math:`\int_1^{\infty} \frac{1}{xe^x}`
+það einnig.
