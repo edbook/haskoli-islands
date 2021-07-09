@@ -46,10 +46,14 @@ Fjarlægðin milli punktanna :math:`P_1=(x_1,y_1)` og :math:`P_2=(x_2,y_2)` í h
 .. math::
 	\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Hér er :math:`a = |x_2-x_1|` og :math:`b = |y_2-y_1|` miðað við reglu Pýþagórasar.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Finnum fjarlægðina milli punktanna :math:`(1,2)` og :math:`(5,7)` í hnitakerfinu.
 
 	Hér er :math:`x_1=1`, :math:`x_2=5`, :math:`y_1=2` og :math:`y_2=7`. Setjum þetta inn í jöfnuna að ofan og fáum að fjarlægðin milli punktanna er
@@ -68,7 +72,9 @@ Almennt form jöfnu línu er
 
 þar sem :math:`a,b` og :math:`c` eru rauntölur. Það er, fyrsta stigs jafna er jafna línu.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Oft er jafna línu rituð á eftirfarandi hátt:
 
 	.. math::
@@ -83,7 +89,9 @@ Almennt form jöfnu línu er
 
 	þar sem :math:`(x_1,y_1)` er punktur á línunni og :math:`h` er hallatalan.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Skoðum jöfnuna
 
 	.. math::
@@ -140,10 +148,14 @@ Skurðpunktur línu við :math:`y`-ásinn er tala :math:`s` sem segir okkur hvar
 
 Skurðpunktur línu við :math:`x`-ásinn er skylt hugtak, en sú tala segir okkur hvar línan sker :math:`x`-ásinn. Hann finnum við með því að setja :math:`y=0` inn í jöfnu línunnar og leysa fyrir :math:`x`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	:math:`x`-ásinn er línan þar sem :math:`y=0` og :math:`y`-ásinn er línan þar sem :math:`x=0`. Þess vegna getum við fundið skurðpunkt línu við :math:`x`-ás með því að setja :math:`y=0` inn í jöfnu línunnar, og sömuleiðis finnum við skurðpunkt við :math:`y`-ás með því að setja :math:`x=0` inn í jöfnu línunnar.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Finnum hallatölu og skurðpunkta línunnar
 
 	.. math::
@@ -174,10 +186,14 @@ Skurðpunktur línu við :math:`x`-ásinn er skylt hugtak, en sú tala segir okk
 		:align: center
 
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Athugum að til að teikna línu er nóg að finna tvo punkta sem liggja á henni og finna beina línu í gegnum þá, en í dæminu hér að ofan fundum við fjóra.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Finnum hallatölu og skurðpunkta línunnar
 
 	.. math::
@@ -229,7 +245,9 @@ Að finna jöfnu línu
 
 þar sem við þekkjum fastana :math:`h` og :math:`s`.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Finnum jöfnu línunnar sem gengur í gegnum punktana :math:`(1,2)` og :math:`(13,17)`.
 
 	Byrjum á að finna hallatölu hennar. Samkvæmt reglu að ofan fæst
@@ -297,7 +315,9 @@ Hér er dæmi um tvær hornréttar línur, með hallatölurnar :math:`h_1=3` og 
     :width: 70%
 
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Látum :math:`l` vera línuna sem gengur í gegnum punktana :math:`(-3,6)` og :math:`(1,-2)`.
 	Finnum jöfnu línu sem gengur í gegnum punktinn :math:`(1,1)` og er :hover:`samsíða` línunni :math:`l`.
 
@@ -395,24 +415,26 @@ Fleygbogar hafa mismunandi lögun eftir formerkjum:
 		:width: 40%
 		:align: center
 
-.. tip::
-  Skoðum fleygbogann :math:`x^2-x-1=0` .
-  Tökum fyrst eftir að fleygboginn er kúptur því :math:`a=1>0` .
-  Reiknum topppunktinn:
+.. admonition:: Dæmi
+	:class: daemi
 
-  .. math::
-    \begin{aligned}
-      T&=\left(\frac{-b}{2a},\frac{4ac-b^2}{4a} \right) \\
-      &= \left(\frac{-1}{2\cdot 1},\frac{4\cdot 1\cdot (-1)-(-1)^2}{4\cdot 1} \right) \\
-      &= \left(\frac{1}{2},-\frac{5}{4} \right)
-    \end{aligned}
+	Skoðum fleygbogann :math:`x^2-x-1=0` .
+	Tökum fyrst eftir að fleygboginn er kúptur því :math:`a=1>0` .
+	Reiknum topppunktinn:
 
-  Samhverfuásinn liggur lóðrétt í gegnum topppunktinn.
+	.. math::
+	  \begin{aligned}
+	    T&=\left(\frac{-b}{2a},\frac{4ac-b^2}{4a} \right) \\
+	    &= \left(\frac{-1}{2\cdot 1},\frac{4\cdot 1\cdot (-1)-(-1)^2}{4\cdot 1} \right) \\
+	    &= \left(\frac{1}{2},-\frac{5}{4} \right)
+	  \end{aligned}
 
-  Reiknum næst skurðpunkta fleygbogans við :math:`x` -ás.
-  Sjáum að :math:`b^2-4ac=(-1)^2-4\cdot1\cdot(-1) = 5 >0` og því eru skurðpunktarnir tveir:
+	Samhverfuásinn liggur lóðrétt í gegnum topppunktinn.
 
-  .. math::
+	Reiknum næst skurðpunkta fleygbogans við :math:`x` -ás.
+	Sjáum að :math:`b^2-4ac=(-1)^2-4\cdot1\cdot(-1) = 5 >0` og því eru skurðpunktarnir tveir:
+
+	.. math::
 		\begin{aligned}
 		x_0 &= \frac{-b+ \sqrt{b^2-4ac}}{2a} \\
 		&= \frac{-(-1)+ \sqrt{(-1)^2-4\cdot 1\cdot(-1)}}{2\cdot 1} \\
@@ -421,15 +443,17 @@ Fleygbogar hafa mismunandi lögun eftir formerkjum:
 		x_1 &= \frac{-b- \sqrt{b^2-4ac}}{2a} \\
 		&= \frac{-(-1)- \sqrt{(-1)^2-4\cdot 1\cdot(-1)}}{2\cdot 1} \\
 		&= \frac{1-\sqrt{5}}{2} \\
-    \end{aligned}
+	  \end{aligned}
 
-  .. figure:: ./myndir/rumfraedi/fleygb.svg
-    :align: center
-    :width: 60%
+	.. figure:: ./myndir/rumfraedi/fleygb.svg
+	  :align: center
+	  :width: 60%
 
-.. note::
-  Til eru fleygbogar sem snúa á hlið.
-  Þeir hafa formið :math:`ay^2+by+c=x` .
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Til eru fleygbogar sem snúa á hlið.
+	Þeir hafa formið :math:`ay^2+by+c=x` .
 
 .. begin-toggle::
 	:label: Tengsl við eðlisfræði
@@ -488,7 +512,9 @@ Ef :math:`a<b` þá er brennipunktarnir á :math:`y` -ás sporöskjunnar, í fja
 
 -----------------------
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Skoðum sporöskju með  :math:`a=3` og :math:`b=2`  og miðju í punktinum :math:`(2,2)` og finnum graf hennar.
 	Þar sem :math:`a>b` þá eru brennipunktarnir hægra og vinsta megin við miðjuna, í fjarlægðinni :math:`c=\sqrt{a^2-b^2}=\sqrt{3^2-2^2}=\sqrt{5}` .
 

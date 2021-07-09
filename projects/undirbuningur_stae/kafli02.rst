@@ -29,10 +29,14 @@ Fyrsta stigs jöfnur
 
 þar sem :math:`a \neq 0` og :math:`b` eru tölur. Jafnan hefur eina lausn, sem fæst með því að draga :math:`b` frá báðum megin við jafnaðarmerkið og deila svo með :math:`a`. Við köllum þetta að *einangra* :math:`x`. Lausnin er því :math:`x=\frac{-b}{a}`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Fyrsta stigs jafna er ekki alltaf á forminu :math:`ax+b=0`, en við getum alltaf komið henni yfir á það form með reikniaðgerðum. Til dæmis er :math:`5x=-2` ekki á þessu formi en við getum lagt :math:`2` við báðum megin og fengið :math:`5x+2=0`.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Leysum :math:`2x+3=0`. Drögum :math:`3` frá báðum megin og fáum :math:`2x=-3`. Deilum með :math:`2` og fáum :math:`x=-\frac{3}{2}`.
 
 	**2.** Leysum :math:`17x=5`. Til þess að einangra :math:`x` þurfum við nú bara að deila í gegn með :math:`17`. Fáum þá :math:`x=\frac{5}{17}`.
@@ -48,12 +52,16 @@ Annars stigs jöfnur
 
 þar sem :math:`a`, :math:`b` og :math:`c` eru :hover:`fastar, fasti`.
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
+	
 	Athugið b og c geta verið hvaða tölur sem er, en :math:`a \neq 0` því annars væri jafnan fyrsta stigs jafna.
 
 Annars stigs jafna er ekki alltaf á almennu formi, en við getum komið henni á almennt form með reikniaðgerðum.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Jafnan :math:`x^2+3x=4x+1` er ekki á almennu formi, en með því að beita reikniaðgerðum og ,,færa yfir jafnaðarmerkið'' fæst :math:`x^2-x+1=0`.
 	Við sjáum því að þetta er annars stigs jafna með :math:`a=1`, :math:`b=-1` og :math:`c=1`.
 
@@ -68,62 +76,69 @@ Lausnarformúla fyrir annars stigs jöfnur
 
 Við höfum lausnarformúlu fyrir annars stigs jöfnur á almennu formi. Þær geta haft eina, tvær eða enga lausn.
 
-Setning
-```````
-Látum :math:`ax^2+bx+c=0` vera annars stigs jöfnu. :hover:`Aðgreinirinn, aðgreinir` er :math:`d = b^2-4ac`.
+.. admonition:: Setning
+	:class: setning
 
-1. Ef :math:`d = b^2-4ac<0` þá hefur jafnan enga rauntölulausn.
-2. Ef :math:`d  = b^2-4ac=0` þá hefur jafnan eina lausn:
+	Látum :math:`ax^2+bx+c=0` vera annars stigs jöfnu. :hover:`Aðgreinirinn, aðgreinir` er :math:`d = b^2-4ac`.
 
-.. math::
-	x=\frac{-b}{2a}
+	1. Ef :math:`d = b^2-4ac<0` þá hefur jafnan enga rauntölulausn.
+	2. Ef :math:`d  = b^2-4ac=0` þá hefur jafnan eina lausn:
 
-3. Ef :math:`d = b^2-4ac>0` þá hefur jafnan tvær lausnir:
+	.. math::
+		x=\frac{-b}{2a}
 
-.. math::
-	x_1=\frac{-b+\sqrt{b^2-4ac}}{2a} \qquad \text{og} \qquad x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}
+	3. Ef :math:`d = b^2-4ac>0` þá hefur jafnan tvær lausnir:
 
-.. note::
+	.. math::
+		x_1=\frac{-b+\sqrt{b^2-4ac}}{2a} \qquad \text{og} \qquad x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}
+
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Oft er almenna formúlan rituð
 
 	.. math::
 		x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
+	
 	Áður en við notum þessa lausnarformúlu þurfum við að vera viss um að jafnan sé á almenna forminu :math:`ax^2+bx+c=0`.
 
-.. tip::
- **1.** Leysum jöfnuna :math:`2x^2 + 3x - 5 = 2`.
+.. admonition:: Dæmi
+	:class: daemi
 
-  Við byrjum á að koma jöfnunni á almennt form með því að draga 2 frá beggja vegna jafnaðarmerkis, fáum :math:`2x^2 + 3x - 7=0`.
-  Sjáum því að hér er :math:`a=2`, :math:`b=3` og :math:`c=-7`.
+	**1.** Leysum jöfnuna :math:`2x^2 + 3x - 5 = 2`.
 
-  Vitum að það eru tvær rauntölulausnir því :math:`d=(3)^2-4(2)(-7)=65 > 0`. Þá getum við notað lausnarformúlu annars stigs jöfnu.
+	Við byrjum á að koma jöfnunni á almennt form með því að draga 2 frá beggja vegna jafnaðarmerkis, fáum :math:`2x^2 + 3x - 7=0`.
+	Sjáum því að hér er :math:`a=2`, :math:`b=3` og :math:`c=-7`.
 
-  .. math::
-     x = \frac{-3 \pm \sqrt{3^2 - 4 \cdot 2 \cdot (-7)}}{2 \cdot 2}
-     = \frac{-3 \pm \sqrt{65}}{4}.
+	Vitum að það eru tvær rauntölulausnir því :math:`d=(3)^2-4(2)(-7)=65 > 0`. Þá getum við notað lausnarformúlu annars stigs jöfnu.
 
-  Lausnirnar eru :math:`x_1=\frac{-3 + \sqrt{65}}{4}` og :math:`x_2=\frac{-3 - \sqrt{65} }{4}`.
+	.. math::
+	   x = \frac{-3 \pm \sqrt{3^2 - 4 \cdot 2 \cdot (-7)}}{2 \cdot 2}
+	   = \frac{-3 \pm \sqrt{65}}{4}.
 
- **2.** Leysum jöfnuna :math:`x^2-6(x-1)=-3`.
+	Lausnirnar eru :math:`x_1=\frac{-3 + \sqrt{65}}{4}` og :math:`x_2=\frac{-3 - \sqrt{65} }{4}`.
 
-  Byrjum á að koma jöfnunni á almennt form.
-  Margföldum upp úr sviganum og fáum :math:`x^2-6x+6=-3` eða :math:`x^2-6x+9=0`.
-  Hér er því :math:`a=1`, :math:`b=-6` og :math:`c=9`.
-  Vitum að það er bara ein lausn því :math:`d=(-6)^2-4(1)(9)=0`.
-  Notum lausnarformúluna:
+	**2.** Leysum jöfnuna :math:`x^2-6(x-1)=-3`.
 
-  .. math::
-     x=\frac{6 \pm \sqrt{(-6)^2-4 \cdot 1 \cdot 9}}{2}=\frac{6 \pm \sqrt{36-36}}{2}=\frac{6}{2}=3
+	Byrjum á að koma jöfnunni á almennt form.
+	Margföldum upp úr sviganum og fáum :math:`x^2-6x+6=-3` eða :math:`x^2-6x+9=0`.
+	Hér er því :math:`a=1`, :math:`b=-6` og :math:`c=9`.
+	Vitum að það er bara ein lausn því :math:`d=(-6)^2-4(1)(9)=0`.
+	Notum lausnarformúluna:
 
-  Jafnan hefur lausnina, :math:`x=3`.
+	.. math::
+	   x=\frac{6 \pm \sqrt{(-6)^2-4 \cdot 1 \cdot 9}}{2}=\frac{6 \pm \sqrt{36-36}}{2}=\frac{6}{2}=3
 
- **3.** Leysum jöfnuna :math:`x^2+1=0`.
+	Jafnan hefur lausnina, :math:`x=3`.
 
-  Hér er :math:`a=1`, :math:`b=0` og :math:`c=1`.
+	**3.** Leysum jöfnuna :math:`x^2+1=0`.
 
-  Byrjum á að reikna út stærðina :math:`d=b^2-4ac` og fáum :math:`0^2-4 \cdot 1 \cdot 1=-4`, svo :math:`b^2-4ac<0` og jafnan hefur enga rauntölulausn.
+	Hér er :math:`a=1`, :math:`b=0` og :math:`c=1`.
+
+	Byrjum á að reikna út stærðina :math:`d=b^2-4ac` og fáum :math:`0^2-4 \cdot 1 \cdot 1=-4`, svo :math:`b^2-4ac<0` og jafnan hefur enga rauntölulausn.
 
 
 Liðun og þáttun
@@ -169,52 +184,54 @@ Eftirfarandi reglur eru mikilvægar í liðun:
 
 -------------------
 
-.. tip::
- **1.** Liðum :math:`(x+2)^2`.
+.. admonition:: Dæmi
+	:class: daemi
 
-  Notum ferningsreglu fyrir summu. Þá fæst
+	**1.** Liðum :math:`(x+2)^2`.
 
-  .. math::
-    \begin{aligned}(x+2)^2&=x^2+2 \cdot 2 \cdot x + 2^2\\ &=x^2+4x+4 \end{aligned}
+	Notum ferningsreglu fyrir summu. Þá fæst
 
-
- **2.** Liðum :math:`(x+6)(x-6)`.
-
-  Samokaregla gefur
-
-  .. math::
-    \begin{aligned} (x+6)(x-6)&=x^2-6^2\\ &=x^2-36 \end{aligned}
+	.. math::
+	  \begin{aligned}(x+2)^2&=x^2+2 \cdot 2 \cdot x + 2^2\\ &=x^2+4x+4 \end{aligned}
 
 
- **3.** Liðum :math:`(x-1)(x+1)^2`.
+	**2.** Liðum :math:`(x+6)(x-6)`.
 
-  Athugum að
+	Samokaregla gefur
 
-  .. math::
-    (x+1)^2=(x+1)(x+1)
+	.. math::
+	  \begin{aligned} (x+6)(x-6)&=x^2-6^2\\ &=x^2-36 \end{aligned}
 
-  beitum samokareglu til að fá
+
+	**3.** Liðum :math:`(x-1)(x+1)^2`.
+
+	Athugum að
+
+	.. math::
+	  (x+1)^2=(x+1)(x+1)
+
+	beitum samokareglu til að fá
 
 	.. math::
 	 	 \begin{aligned} (x-1)(x+1)^2&=(x-1)(x+1)(x+1)\\ &=(x^2-1)(x+1)\\ \end{aligned}
 
-  Nú þurfum við bara að margfalda úr svigunum og fáum þá
+	Nú þurfum við bara að margfalda úr svigunum og fáum þá
 
-  .. math::
-    \begin{aligned}
-    (x^2-1)(x+1)&=x^2 \cdot x + x^2 \cdot 1 - 1 \cdot x - 1 \cdot 1\\
-    &=x^3 + x^2 -x -1
-    \end{aligned}
+	.. math::
+	  \begin{aligned}
+	  (x^2-1)(x+1)&=x^2 \cdot x + x^2 \cdot 1 - 1 \cdot x - 1 \cdot 1\\
+	  &=x^3 + x^2 -x -1
+	  \end{aligned}
 
 
- **4.** Liðum :math:`(x+4)^2(x-4)^2`.
+	**4.** Liðum :math:`(x+4)^2(x-4)^2`.
 
-  Höfum
+	Höfum
 
 	.. math::
 	 	\begin{aligned} (x+4)^2(x-4)^2 &= ((x+4)(x-4))^2\\ & = (x^2 - 16)^2 \end{aligned}
 
-  samkvæmt veldareglu og samokareglu. Notum nú ferningsreglu fyrir mismun og þá fæst
+	samkvæmt veldareglu og samokareglu. Notum nú ferningsreglu fyrir mismun og þá fæst
 
 	.. math::
 	 	\begin{aligned} (x^2 - 16)^2 &=(x^2)^2 - 2 \cdot 16x^2 + 16^2\\ &=x^4-32x^2+256\end{aligned}
@@ -226,7 +243,9 @@ Eftirfarandi reglur eru mikilvægar í liðun:
 Til eru margar leiðir til að þátta. Við getum í sumum tilfellum notað ferningsreglu eða samokareglu, sem settar eru fram hér að ofan.
 
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Þáttum :math:`x^2+4x+4`.
 
 	 Notum ferningsreglu fyrir summu, það er,
@@ -274,10 +293,14 @@ Ef við höfum stærð á forminu :math:`x^2+bx+c` getum við beitt svokallaðar
 þar sem :math:`s+t=b` og :math:`s\cdot t =c`.
 Þetta skýrist best með dæmum.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Tökum eftir að ef annars stigs jafnan er á forminu :math:`ax^2+bx+c`, þar sem :math:`a\neq 1` þá tökum við :math:`a` út fyrir eða deilum í gegn með :math:`a` ef við erum að vinna með jöfnu (sjá dæmi **4** hér á eftir).
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Þáttum :math:`x^2+7x+12`.
 
 	 Byrjum á að gera lista yfir tölur þannig að margfeldi þeirra sé :math:`12`. Fáum
@@ -386,7 +409,9 @@ Ef við höfum stærð á forminu :math:`x^2+bx+c` getum við beitt svokallaðar
 	 sem gefur okkur að :math:`2x^2+8x+6 = 2(x+1)(x+3)`.
 
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Það er alls ekki nauðsynlegt að taka svona mörg skref við þáttun af þessu tagi.
   	Með æfingunni verður auðveldara að nota þessa aðferð í huganum og ekki er nauðsynlegt að sýna mörg skref.
   	Athugið að það getur komið í veg fyrir villur að sannreyna svarið, það er að liða stæðuna aftur.
@@ -404,7 +429,9 @@ Til þess að þátta stærð á forminu :math:`ax^2+bx+c` getum við ávallt be
 .. math::
 	ax^2+bx+c=a(x-x_1)(x-x_2)
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Þáttum :math:`6x^2+5x-6`.
 
 	 Finnum ræturnar. Hér er :math:`a=6`, :math:`b=5` og :math:`c=-6`. Notum lausnarformúluna og fáum
@@ -475,7 +502,9 @@ Til eru tvær leiðir til þess að leysa svoleiðis verkefni, :hover:`eyðingar
 Til þess er önnur jafnan margfölduð með fasta svo stuðullinn fyrir framan stærðina sem á að eyða verði sá sami og stuðullinn í hinni jöfnunni.
 Svo er önnur jafnan dregin frá hinni og útkoman er jafna án stærðarinnar sem eyða átti.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
   Leysum jöfnuhneppið
 
   .. math::
@@ -538,94 +567,100 @@ Svo er önnur jafnan dregin frá hinni og útkoman er jafna án stærðarinnar s
 **Innsetningaraðferðin** gengur út á að einangra eina breytistærðina út frá annarri jöfnunni og setja inn í hina.
 Þá hefur sú jafna bara eina óþekkta stærð.
 
-.. tip::
-  Leysum jöfnuhneppið
+.. admonition:: Dæmi
+	:class: daemi
 
-  .. math::
-    \begin{aligned}
-      2x+y&=2 \\
-      3x+2y&=1 \\
-    \end{aligned}
+	Leysum jöfnuhneppið
 
-  með innsetningaraðferð.
+	.. math::
+	  \begin{aligned}
+	    2x+y&=2 \\
+	    3x+2y&=1 \\
+	  \end{aligned}
 
-  **Lausn:**
+	með innsetningaraðferð.
 
-  Einangrum :math:`y` úr efri jöfnunni: :math:`y=2-2x` .
-  Setjum þessa lýsingu á :math:`y` inn í neðri jöfnuna:
+	**Lausn:**
 
-  .. math::
-    \begin{aligned}
-      3x+2y&=1 \\
-      3x + 2(2-2x) &=1 \\
-      3x+4-4x &=1\\
-      -x&=-3\\
-      x&=3
-    \end{aligned}
+	Einangrum :math:`y` úr efri jöfnunni: :math:`y=2-2x` .
+	Setjum þessa lýsingu á :math:`y` inn í neðri jöfnuna:
 
-  Nú vitum við rétt gildi á :math:`x` en þá er hægt að finna gildi á :math:`y` með því að setja gildið á :math:`x` inn í aðra hvora jöfnuna.
-  Setjum því :math:`x=3` inn í efri jöfnuna og fáum:
+	.. math::
+	  \begin{aligned}
+	    3x+2y&=1 \\
+	    3x + 2(2-2x) &=1 \\
+	    3x+4-4x &=1\\
+	    -x&=-3\\
+	    x&=3
+	  \end{aligned}
 
-  .. math::
-    \begin{aligned}
-      2x+y&=2 \\
-      2\cdot 3 + y &=2 \\
-      6+y &=2 \\
-      y&=-4
-    \end{aligned}
+	Nú vitum við rétt gildi á :math:`x` en þá er hægt að finna gildi á :math:`y` með því að setja gildið á :math:`x` inn í aðra hvora jöfnuna.
+	Setjum því :math:`x=3` inn í efri jöfnuna og fáum:
 
-  Lausn jöfnuhneppisins
+	.. math::
+	  \begin{aligned}
+	    2x+y&=2 \\
+	    2\cdot 3 + y &=2 \\
+	    6+y &=2 \\
+	    y&=-4
+	  \end{aligned}
 
-  .. math::
-    \begin{aligned}
-      2x+y&=2 \\
-      3x+2y&=1 \\
-    \end{aligned}
+	Lausn jöfnuhneppisins
 
-  er því :math:`x=3` og :math:`y=-4` .
+	.. math::
+	  \begin{aligned}
+	    2x+y&=2 \\
+	    3x+2y&=1 \\
+	  \end{aligned}
 
-.. note::
-  Stundum getur verið þægilegt að finna fyrri breytistærðina með eyðingaraðferðinni og nota síðan innsetningu.
+	er því :math:`x=3` og :math:`y=-4` .
 
-.. tip::
-  Leysum jöfnuhneppið
+.. admonition:: Athugasemd
+	:class: athugasemd
 
-  .. math::
-    \begin{aligned}
-    3x+2y&=14 \\
-    x-y&=3
-    \end{aligned}
+	Stundum getur verið þægilegt að finna fyrri breytistærðina með eyðingaraðferðinni og nota síðan innsetningu.
 
-  **Lausn:**
+.. admonition:: Dæmi
+	:class: daemi
 
-  Einangrum fyrst :math:`y` með eyðingaraðferð, það er, eyðum :math:`x` með því að margfalda neðri jöfnuna með þremur:
+	Leysum jöfnuhneppið
 
-  .. math::
-    \begin{aligned}
-    3x+2y&=14 \\
-    3x-3y&=9
-    \end{aligned}
+	.. math::
+	  \begin{aligned}
+	  3x+2y&=14 \\
+	  x-y&=3
+	  \end{aligned}
 
-  Drögum síðan neðri jöfnuna frá þeirri efri og fáum
+	**Lausn:**
 
-  .. math::
-    \begin{aligned}
-    2y-(-3y) &=14-9 \\
-    5y &= 5 \\
-    y&=1
-    \end{aligned}
+	Einangrum fyrst :math:`y` með eyðingaraðferð, það er, eyðum :math:`x` með því að margfalda neðri jöfnuna með þremur:
 
-  Þá getum við nýtt okkur að gildi :math:`y` er þekkt og sett það inn í aðra hvora jöfnuna.
-  Setjum því :math:`y=1` í neðri jöfnuna:
+	.. math::
+	  \begin{aligned}
+	  3x+2y&=14 \\
+	  3x-3y&=9
+	  \end{aligned}
 
-  .. math::
-    \begin{aligned}
-    x-y&=3 \\
-    x-1&=3 \\
-    x&=4
-    \end{aligned}
+	Drögum síðan neðri jöfnuna frá þeirri efri og fáum
 
-  Lausn jöfnuhneppisins er því :math:`x=4` og :math:`y=1` .
+	.. math::
+	  \begin{aligned}
+	  2y-(-3y) &=14-9 \\
+	  5y &= 5 \\
+	  y&=1
+	  \end{aligned}
+
+	Þá getum við nýtt okkur að gildi :math:`y` er þekkt og sett það inn í aðra hvora jöfnuna.
+	Setjum því :math:`y=1` í neðri jöfnuna:
+
+	.. math::
+	  \begin{aligned}
+	  x-y&=3 \\
+	  x-1&=3 \\
+	  x&=4
+	  \end{aligned}
+
+	Lausn jöfnuhneppisins er því :math:`x=4` og :math:`y=1` .
 
 Ójöfnur og tölugildi
 --------------------
@@ -643,11 +678,14 @@ Svo er önnur jafnan dregin frá hinni og útkoman er jafna án stærðarinnar s
 
 Þegar við leysum ójöfnur megum við beita sömu aðgerðum og þegar við leysum jöfnur, svo lengi sem við gerum það báðum megin. Það er bara ein undantekning: *margföldun/deiling með neikvæðri tölu*.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Tökum eftir að :math:`< \text{og} >` gefa :hover:`strangar ójöfnur, ströng ójafna`.
 
-.. tip::
-
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Leysum ójöfnuna :math:`2x+2 >30x`. Drögum frá :math:`2x` báðum megin og fáum :math:`2>28x`. Deiling með :math:`28` gefur :math:`\frac{1}{14}>x`. Hér þurftum við ekki að snúa ójafnaðarmerkinu við. Þó er skýrara að skila svarinu á forminu :math:`x<\frac{1}{14}`.
 
 	**2.** Leysum ójöfnuna :math:`-2x+9 \leq 3`. Við megum draga frá :math:`9` báðum megin, þá fæst :math:`-2x \leq -6`. Hér þurfum við þó að einangra :math:`x` með því að deila í gegn með :math:`-2`, það er, margfalda með :math:`-\frac{1}{2}`. Þegar ójafna er margfölduð með neikvæðri tölu þarf að snúa ójöfnunni við vegna þess að :math:`a \leq b` hefur í för með sér að :math:`-a \geq -b`. Við fáum því
@@ -682,10 +720,14 @@ Látum :math:`a` og :math:`b` vera rauntölur. Þá gildir eftirfarandi
 		|a|^2=a^2 \qquad  & \text{(önnur veldi eyða tölugildi)}\\
 	\end{aligned}
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Fyrir tölur :math:`a` og :math:`b` þá má túlka töluna :math:`|a-b|` sem fjarlægð :math:`a` frá :math:`b` á talnalínunni. Til dæmis ef :math:`a=3` og :math:`b=10` þá er fjarlægðin á milli þessara talna á talnalínunni :math:`7`. Það er í samræmi við reikninga okkar, höfum :math:`|3-10|=|-7|=7` og :math:`|10-3|=|7|=7`.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Finnum öll :math:`x` sem uppfylla :math:`|x+4|=10`.
 	Við komum með tvær lausnir:
 
@@ -699,7 +741,9 @@ Látum :math:`a` og :math:`b` vera rauntölur. Þá gildir eftirfarandi
 
 	Sjáum að :math:`-14` og :math:`6` eru jafn langt frá :math:`-4`
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Finnum öll :math:`x` sem uppfylla :math:`|x-3|=|x+7|`.
 
 	Við komum með þrjár lausnir:
@@ -766,35 +810,39 @@ Látum :math:`a` og :math:`b` vera rauntölur. Þá gildir eftirfarandi
 	 Ef þessari lausn er stungið inní upphaflegu jöfnuna þá sést að þetta er lausn sem virkar.
 
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Takið eftir að í lausn 3 í dæminu hér á undan þá endum við á því að prófa lausnina sem við fengum.
 	Það er af því að þegar jöfnur eru settar í annað veldi geta skapast ,,falskar lausnir".
   	Því þarf alltaf að athuga hvort lausnirnar sem fengust séu raunverulegar lausnir.
 
 	Skoðum til dæmis jöfnuna :math:`4x=8`. Þessi jafna hefur augljóslega bara eina lausn :math:`x=2`. Ef þessi jafna er sett í annað veldi fæst jafnan :math:`16x^2=64` sem jafngildir :math:`x^2=4` eða :math:`x=\pm 2`. Hér varð til falska lausnin :math:`-2` sem er ekki lausn á upprunalegu jöfnunni. Upphaflega lausnin er hins vegar ennþá til staðar.
 
-.. tip::
-  Leysum ójöfnuna :math:`|x+2|>9`. Skiptum í tvö tilvik samkvæmt skilgreiningu, ef :math:`x+2 \geq 0`, eða :math:`x+2 < 0`.
+.. admonition:: Dæmi
+	:class: daemi
 
-  **Tilvik 1**:
-  Ef :math:`x+2 \geq 0`, það er, :math:`x \geq -2`, þá fellum við tölugildið niður og þá fæst ójafnan :math:`x+2>9`, það er, :math:`x>7`.
+	Leysum ójöfnuna :math:`|x+2|>9`. Skiptum í tvö tilvik samkvæmt skilgreiningu, ef :math:`x+2 \geq 0`, eða :math:`x+2 < 0`.
 
-  Við þurfum því að uppfylla bæði skilyrðin :math:`x \geq -2` og :math:`x>7` en ljóst er að seinna skilyrðið er sterkara (það má sjá á talnalínu). Ef :math:`x >7` þá hefur það í för með sér að :math:`x \geq -2`. Því er lausnin í þessu tilviki, :math:`x >7`.
+	**Tilvik 1**:
+	Ef :math:`x+2 \geq 0`, það er, :math:`x \geq -2`, þá fellum við tölugildið niður og þá fæst ójafnan :math:`x+2>9`, það er, :math:`x>7`.
 
-  **Tilvik 2**:
-  Ef :math:`x+2 < 0`, það er, :math:`x < -2`, þá fæst ójafnan :math:`-(x+2)>9`, eða :math:`-x-2>9`, eða :math:`x<-11`.
+	Við þurfum því að uppfylla bæði skilyrðin :math:`x \geq -2` og :math:`x>7` en ljóst er að seinna skilyrðið er sterkara (það má sjá á talnalínu). Ef :math:`x >7` þá hefur það í för með sér að :math:`x \geq -2`. Því er lausnin í þessu tilviki, :math:`x >7`.
 
-  Við þurfum að uppfylla bæði skilyrðin :math:`x < -2` og :math:`x < -11` en ljóst er að það seinna er sterkara. Lausnin er því :math:`x<-11`.
+	**Tilvik 2**:
+	Ef :math:`x+2 < 0`, það er, :math:`x < -2`, þá fæst ójafnan :math:`-(x+2)>9`, eða :math:`-x-2>9`, eða :math:`x<-11`.
 
-  Við fáum því lokasvarið
+	Við þurfum að uppfylla bæði skilyrðin :math:`x < -2` og :math:`x < -11` en ljóst er að það seinna er sterkara. Lausnin er því :math:`x<-11`.
 
-  .. math::
-    x >7 \qquad \text{eða} \qquad x<-11
+	Við fáum því lokasvarið
 
-  Við getum líka skrifað þetta sem bil, jafngilt svar er
+	.. math::
+	  x >7 \qquad \text{eða} \qquad x<-11
 
-  .. math::
-    x \in ]- \infty , -11[ \, \cup \, ]7, \infty[
+	Við getum líka skrifað þetta sem bil, jafngilt svar er
+
+	.. math::
+	  x \in ]- \infty , -11[ \, \cup \, ]7, \infty[
 
 
 Summu- og margfeldistáknið
@@ -857,11 +905,15 @@ og
 	\prod_{n=1}^{100}n(n+1)=1(1+1)\cdot 2(2+1)\cdot 3(3+1)\cdots 100(100+1)=2\cdot 6\cdot 12 \cdots 10100
 
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Þessi tákn eru mikilvæg þegar unnið er með :hover:`runur, runa` og :hover:`raðir, röð`.
 	*Runa* er raðaður listi af tölum og *röð* er summa liðanna.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Reiknum
 
 	.. math::
