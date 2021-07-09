@@ -62,7 +62,9 @@ Forgangsröðun aðgerða
 2. Margföldunar- og deilingaraðgerðir (þar með talið veldareikning)
 3. Samlagningar- og frádráttaraðgerðir
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	Notum forgangsröðun aðgerða:
 
 	**1.** Reiknum :math:`1+2 \cdot 3`
@@ -120,10 +122,14 @@ Nokkrar einfaldar reiknireglur gilda um tölur í talnakerfunum:
 	0 \cdot a=0  & \qquad \textit{ (margföldun með núlli gefur núll)}\\
 	\end{aligned}
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
+
 	Athugum að tvær neikvæðar tölur margfaldaðar saman verða að jákvæðri tölu, til dæmis :math:`(-3)\cdot (-4) = 3\cdot 4 =12` .
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	Prófum dreifiregluna [:math:`a(b+c)=ab+ac`] fyrir tölurnar :math:`a=3`, :math:`b=-9` og :math:`c=5`.
 
 	Vinstra megin jafnaðarmerkisins stendur :math:`3(-9+5)=3\cdot(-4)=-12`.
@@ -139,10 +145,14 @@ Skilgreining: Deilanleiki
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Heiltala :math:`a` er sögð vera deilanleg með heiltölunni :math:`b` ef til er heiltala :math:`x` þannig að :math:`a=bx`.
 
-.. tip::
-  Talan 14 er deilanleg með 2 því hana má skrifa sem :math:`14=2\cdot 7` .
+.. admonition:: Dæmi
+  :class: dæmi
 
-.. note::
+	Talan 14 er deilanleg með 2 því hana má skrifa sem :math:`14=2\cdot 7` .
+
+.. admonition:: Athugasemd
+	:class: athugasemd
+
 	Allar tölur :math:`a` eru deilanlegar með einum og sjálfri sér því :math:`a= 1 \cdot a` . Tölur geta haft fleiri deila, til dæmis er :math:`12` deilanleg með :math:`3` og :math:`4` og talan :math:`15` er deilanleg með :math:`3` og :math:`5`.
 
 Sumar náttúrulegar tölur eru aðeins deilanlegar með einum og sjálfri sér.
@@ -153,12 +163,16 @@ Skilgreining: Frumtölur
 ~~~~~~~~~~~~~~~~~~~~~~~
 Ef náttúruleg tala :math:`p \geq 2` er aðeins deilanleg með einum og sjálfri sér þá segjum við að :math:`p` sé *frumtala*.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+ 
 	:math:`7` er frumtala, því eina jákvæða heiltölulausninn á :math:`7=bx` er :math:`b=7` og :math:`x=1`, þ.e. :math:`7 = 7 \cdot 1`,
 
 	en :math:`6` er ekki frumtala því :math:`6=2 \cdot 3`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+
 	Nokkrar fyrstu frumtölurnar eru: :math:`2,3,5,7,11,13,17,19,23,29, \dots`
 
 .. image:: ./myndir/algebra/frumtölur.png
@@ -181,8 +195,9 @@ Sérhverja náttúrulega tölu :math:`a \geq 2` má skrifa sem margfeldi frumtal
 
 þar sem sumar frumtölur geta verið endurteknar.
 
-.. tip::
-
+.. admonition:: Dæmi
+  :class: dæmi
+ 
 	.. math::
 		7=7, \qquad 24=2 \cdot 2 \cdot 2 \cdot 3=2^3 \cdot 3, \qquad 250= 2 \cdot 5 \cdot 5 \cdot 5=2 \cdot 5^3.
 
@@ -193,10 +208,13 @@ Engin skilvirk aðferð hefur verið fundin til að :hover:`frumþátta, frumþ�
 3. Athugum hvort við finnum frumtölu sem gengur upp í nýju töluna og endurtökum þá skref 1 og 2.
 4. Höldum þessu áfram þar til við finnum enga frumtölu sem gengur upp í töluna, þá er talan sjálf frumtala. Frumþáttunin er svo rituð sem margfeldi allra frumtalnanna sem við fundum.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+
 	Ef við leitum að frumtölu sem gengur upp í tölu þá nægir að skoða frumtölur **minni en eða jafnar kvaðratrót tölunnar**. Þetta getur flýtt fyrir við að frumþátta stórar tölur.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
 
 	**1.** Frumþáttum töluna :math:`273`. Athugum að :math:`2` gengur ekki upp í :math:`273`, en :math:`3` gerir það, samkvæmt prófun. Skoðum þá næst :math:`273/3=91`. Með prófun sést að :math:`2,3` og :math:`5` ganga ekki upp í :math:`91`, en :math:`7` gerir það.  Skoðum þá næst :math:`91/7=13`. En :math:`13` er frumtala. Því höfum við fundið frumþáttunina. Hún er :math:`273=3 \cdot 7 \cdot 13`. Oft er þægilegt að setja upp frumþáttunina í tré:
 
@@ -204,36 +222,38 @@ Engin skilvirk aðferð hefur verið fundin til að :hover:`frumþátta, frumþ�
 		:width: 75 %
 		:align: center
 
-
 	**2.** Frumþáttum töluna :math:`101`. Notfærum okkur athugasemd hér að ofan. Við þurfum bara að prófa frumtölur minni en eða jafnar :math:`\sqrt{101} \approx 10.05`. Með prófun sést að :math:`2, 3,5` og :math:`7` ganga ekki upp í :math:`101`. Því er :math:`101` frumtala.
 
-  .. note::
-    Allar tölur sem hafa þversummu sem er margfeldi af þremur eru deilanlegar með þremur.
-    Til dæmis má sjá í lið **1.** hér að ofan að þversumma 273 er :math:`2+7+3 = 12 =3 \cdot 4` og því er 273 deilanleg með 3 (:math:`273=3\cdot 91` ).
+.. admonition:: Athugasemd
+  :class: athugasemd
 
-
+  Allar tölur sem hafa þversummu sem er margfeldi af þremur eru deilanlegar með þremur. Til dæmis má sjá í lið **1.** hér að ofan að þversumma 273 er :math:`2+7+3 = 12 =3 \cdot 4` og því er 273 deilanleg með 3 (:math:`273=3\cdot 91` ).
 
 Þessi aðferð frumþáttunar byggir á því að finna frumtölu sem gengur upp í töluna, en oft getur verið þægilegra að finna samsetta tölu og frumþátta hana síðan.
 
-.. tip::
-	Frumþáttum töluna 270:
+.. admonition:: Dæmi
+	  :class: dæmi
+		
+		Frumþáttum töluna 270:
 
-	.. figure:: ./myndir/frth270.svg
-		:align: center
-		:width: 60%
+		.. figure:: ./myndir/frth270.svg
+			:align: center
+			:width: 60%
 
-	Frumþáttun 270 er því:
+		Frumþáttun 270 er því:
 
-	.. math::
-		270 = 2\cdot 5\cdot 3\cdot 3\cdot 3
+		.. math::
+			270 = 2\cdot 5\cdot 3\cdot 3\cdot 3
 
 
-.. tip::
-	Ef við skoðum :math:`36` þá getum við fundið alla deila hennar með því að skoða allar tölur sem ganga upp í :math:`36`.
-	Hér eru allar tölurnar sem ganga upp í :math:`36`
+.. admonition:: Dæmi
+  	:class: dæmi
 
-	.. math::
-		{1, 2, 3, 4, 6, 9, 12, 18, 36}
+		Ef við skoðum :math:`36` þá getum við fundið alla deila hennar með því að skoða allar tölur sem ganga upp í :math:`36`.
+		Hér eru allar tölurnar sem ganga upp í :math:`36`
+
+		.. math::
+				{1, 2, 3, 4, 6, 9, 12, 18, 36}
 
 
 Stærsti samdeilir og minnsta samfeldi
@@ -241,7 +261,9 @@ Stærsti samdeilir og minnsta samfeldi
 :hover:`Stærsti samdeilir` tveggja talna er stærsta talan sem gengur upp í báðar tölurnar.
 Hann er hægt að finna með því að frumþátta báðar tölurnar og finna hvaða frumþættir eru sameiginlegir.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
   Finnum stærsta samdeili 792 og 756.
 
   *Lausn*
@@ -273,7 +295,9 @@ Hann er hægt að finna með því að frumþátta báðar tölurnar og finna hv
 :hover:`Minnsta samfeldi` tveggja talna er minnsta talan sem báðar tölurnar ganga upp í.
 Það er hægt að finna með því að margfalda saman frumþættina í hæsta veldinu sem þeir koma fram í.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
   Finnum minnsta samfeldi 792 og 756.
 
   *Lausn*
@@ -295,11 +319,13 @@ Hann er hægt að finna með því að frumþátta báðar tölurnar og finna hv
   .. math::
     \text{msf}(792,756) = 2^3\cdot 3^3 \cdot 7\cdot 11 = 16632
 
-.. note::
-  Fyrir sérhvert par talna :math:`a` og :math:`b` gildir að
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
+  	Fyrir sérhvert par talna :math:`a` og :math:`b` gildir að
 
-  .. math::
-    a \cdot b = \text{ssd}(a,b)\cdot \text{msf}(a,b)
+  	.. math::
+    		a \cdot b = \text{ssd}(a,b)\cdot \text{msf}(a,b)
 
 
 
@@ -312,7 +338,9 @@ Skilgreining: Ræðar tölur
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 *Ræðar tölur* samanstanda af öllum brotum :math:`\frac{p}{q}` þar sem :math:`p` og :math:`q` eru heilar tölur og :math:`q \neq 0`. Talan :math:`p` nefnist *teljari* brotsins en talan :math:`q` *nefnari* þess.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Allar heilar tölur eru ræðar tölur með nefnarann :math:`1`, til dæmis er :math:`3= \frac31`.
 
 Fullstytt brot
@@ -325,7 +353,9 @@ Ef :math:`a`, :math:`b` og :math:`t` eru heilar tölur gildir
 
 Þegar við styttum töluna :math:`t` út tölum við um að :hover:`stytta` brotið og þegar við margföldum með :math:`t` fyrir ofan og neðan strik tölum við um að :hover:`lengja, framlengja` brotið.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	Skoðum brotið :math:`\frac{9}{21}`. Við getum lengt brotið með :math:`2` með því að margfalda með :math:`2` fyrir ofan og neðan strik
 
 	.. math::
@@ -336,10 +366,14 @@ Ef :math:`a`, :math:`b` og :math:`t` eru heilar tölur gildir
 	.. math::
 		\frac{9}{21}=\frac{3 \cdot 3}{3 \cdot 7}=\frac{3}{7}
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Við sjáum að sama brotið er hægt að skrifa á margan hátt. Þess vegna er góð venja að *fullstytta* brotið. Við segjum að brot sé *fullstytt* ef við getum ekki stytt það frekar. Til þess að fullstytta brot er hægt að frumþátta bæði nefnara og teljara og stytta út sameiginlega frumþætti.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	Fullstyttum brotið :math:`\frac{525}{980}`.
 
 	Frumþáttum tölurnar eins og lýst er í kaflanum á undan. Við fáum :math:`525=3 \cdot 5 \cdot 5 \cdot 7` og :math:`980=2 \cdot 2 \cdot 5 \cdot 7 \cdot 7`.
@@ -361,7 +395,9 @@ Ef :math:`a`, :math:`b` og :math:`t` eru heilar tölur gildir
 		\frac{525}{980}=\frac{15}{28}
 
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+
 	Stærð almenns brots breytist ekki við lengingu eða styttingu.
 
 Röðun ræðra talna
@@ -395,7 +431,9 @@ Til þess að geta lagt tvö brot saman, eða fundið mismun þeirra, þurfum vi
 
 Fyrir tvö brot :math:`\dfrac{a}{b}` og :math:`\dfrac{c}{d}` getum við til dæmis gert þau samnefnd með því að lengja það fyrra með :math:`d` og það seinna með :math:`b`. Þá hafa þau bæði sama nefnarann, sem er :math:`b \cdot d`.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	Hvort brotið er stærra :math:`\frac{3}{4}` eða :math:`\frac{5}{12}`?
 
 	Lengjum fyrra brotið með :math:`12` og það seinna með :math:`4`
@@ -436,15 +474,19 @@ Reiknireglur
 .. math::
 	\frac{p/q}{r/s} =\frac{ps}{qr}
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+
 	Athugið að það má alls ekki stytta út lið! Dæmi:
 
 	.. math::
 		\frac{x+3}{3} \neq x
 
 
-.. tip::
- **1.** Leggjum saman brotin :math:`\frac{7}{11}` og :math:`\frac{10}{13}`.
+.. admonition:: Dæmi
+  :class: dæmi
+
+ 	**1.** Leggjum saman brotin :math:`\frac{7}{11}` og :math:`\frac{10}{13}`.
 
   Gerum brotin fyrst samnefnd með því að lengja fyrra brotið með nefnara seinna brotsins og seinna brotið með nefnara fyrra brotsins.
   Að því loknu er lítið mál að leggja brotin saman með því að leggja saman teljarana
@@ -457,7 +499,7 @@ Reiknireglur
 		   &=\frac{201}{143}
 		\end{aligned}
 
- **2.** Leggjum saman brotin :math:`\frac{2}{7}` og :math:`\frac{3}{2}`.
+ 	**2.** Leggjum saman brotin :math:`\frac{2}{7}` og :math:`\frac{3}{2}`.
 
   Eins og í dæmi **1** gerum við brotin fyrst samnefnd með því að lengja fyrra brotið með nefnara seinna brotsins og seinna brotið með nefnara fyrra brotsins.
   Teljarar brotanna eru síðan lagðir saman
@@ -470,22 +512,26 @@ Reiknireglur
 		&=\frac{25}{14}
 		\end{aligned}
 
- **3.** Margföldum saman brotin :math:`\frac{11}{9}` og :math:`\frac{7}{5}`.
+ 	**3.** Margföldum saman brotin :math:`\frac{11}{9}` og :math:`\frac{7}{5}`.
 
   Þegar brot eru margfölduð saman eru teljararnir margfaldaðir saman og nefnararnir margfaldaðir saman.
 
 	.. math::
 		\frac{11}{9} \cdot \frac{7}{5}=\frac{11 \cdot 7}{9 \cdot 5}=\frac{77}{45}
 
- **4.** Deilum brotinu :math:`\frac{11}{45}` með brotinu :math:`\frac{1}{2}`.
+ 	**4.** Deilum brotinu :math:`\frac{11}{45}` með brotinu :math:`\frac{1}{2}`.
 
 	.. math::
 		\frac{11/45}{1/2}=\frac{11 \cdot 2}{45 \cdot 1}=\frac{22}{45}
 
-	.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+
 		Nefnari í nefnara verður teljari!
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	Reiknum úr þessu broti og fullstyttum það síðan:
 
 	.. math::
@@ -543,7 +589,9 @@ Við segjum að :math:`b` gangi :math:`x` sinnum upp í :math:`a` með afgang :m
 
 Ef afgangurinn er :math:`0` þá segjum við að :math:`b` gangi upp í :math:`a`.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
   **1.** Deilum tölunni :math:`a=81` með tölunni :math:`b=8` með afgangi.
 
    Athugum að :math:`8 \cdot 10=80` en :math:`8 \cdot 11=88`. Við leitum að stærstu tölu sem er margfeldi af :math:`8` og er minni en eða jöfn 81, þess vegna notum við :math:`10` en ekki :math:`11`. Afgangurinn er síðan :math:`1`, þ.e.a.s. við getum ritað
@@ -563,7 +611,9 @@ Ef afgangurinn er :math:`0` þá segjum við að :math:`b` gangi upp í :math:`a
 
    en hér er :math:`x=9` og :math:`y=7`. Við getum nú sagt að :math:`8` gangi :math:`9` sinnum upp í :math:`79` með afgang :math:`7`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Afgangurinn er alltaf minni en :math:`b`. Ef afgangurinn er stærri en (eða jafn) :math:`b` þá getum við notað stærra :math:`x`.
 
 Stundum, til dæmis í forritun, þurfum við að reikna með afgangi.
@@ -574,7 +624,9 @@ Stundum, til dæmis í forritun, þurfum við að reikna með afgangi.
 
 Þegar talan :math:`b` gengur upp í :math:`a` þá er módulus þeirra núll.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
   .. math::
     \begin{aligned}
       6 \mod \; 3 &=0 \quad & \text{ því } \quad 6 = 3\cdot 2 + 0\\
@@ -607,10 +659,14 @@ Látum :math:`a` vera tölu og :math:`n>0` vera heiltölu. Við skilgreinum
 
 Talan :math:`a` í rithættinum :math:`a^n` nefnist :hover:`veldisstofn` og talan :math:`n` nefnist :hover:`veldisvísir`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Við segjum að :math:`a` sé í :math:`n`-ta veldi þegar :math:`a^n`.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	**1.**
 
 	.. math::
@@ -643,7 +699,9 @@ Höfum eftirfarandi reiknireglur fyrir veldi:
 	\end{aligned}
 
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	**1.**
 
 	.. math::
@@ -695,7 +753,9 @@ Látum :math:`q` vera jákvæða heiltölu og :math:`a` vera jákvæða tölu. �
 
 Við skrifum þó yfirleitt ekki :math:`\sqrt[2]{a}` heldur :math:`\sqrt{a}` og nefnum þessa stærð :hover:`kvaðratrót, önnur rót`, oft kölluð ferningsrót.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	**1.** :math:`\sqrt{4}=2 \quad` því :math:`\quad 2^2=4`
 
 	**2.** :math:`\sqrt{64}=8 \quad` því :math:`\quad 8^2=64`
@@ -723,10 +783,14 @@ Höfum eftirfarandi reiknireglur fyrir rætur:
     \sqrt[sq]{ a} &=\sqrt[s]{\sqrt[q]{a}}\\
   \end{aligned}
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Rætur virða ekki samlagningu, þ.e.a.s. almennt er :math:`\sqrt[q]{a+b} \neq \sqrt[q]{a}+ \sqrt[q]{b}`.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	**1.** :math:`\sqrt[4]{2} \cdot \sqrt[4]{8}= \sqrt[4]{2 \cdot 8}= \sqrt[4]{16}=2`
 
 	**2.** :math:`\frac{\sqrt[3]{135}}{\sqrt[3]{5}}=\sqrt[3]{\frac{135}{5}}=\sqrt[3]{27}=3`
@@ -757,7 +821,9 @@ Einnig er
 
 fyrir allar heiltölur :math:`q`.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: dæmi
+
 	**1.** :math:`\sqrt{a}=a^{\frac12}`
 
 	**2.** :math:`9^{\frac12}=\sqrt{9}=3`

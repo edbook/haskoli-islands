@@ -30,7 +30,9 @@ Vigurinn á myndinni hefur lengd 4 eftir x-ásnum og 3 eftir y-ásnum, svo hnit 
 Lengd vigursins sjálfs er reiknuð með jöfnu Pýþagórasar, :math:`|\overline{a}| = a = \sqrt{a_x^2 + a_y^2}` .
 Vigurinn á myndinni hefur því lengdina :math:`a = \sqrt{4^2 + 3^2} = 5` .
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+  
   Stærð og stefna vigurs er óháð því hvar í hnitakerfinu hann er.
 
 Algengt er að láta vigra liggja frá upphafspunkti hnitakerfisins (stöðu- eða staðarvigur) en það er hægt að reikna vigra á milli gefinna upphafs- og endapunkta.
@@ -39,7 +41,9 @@ Vigurinn frá punktinum :math:`A=(x_1,y_1)` til punktsins :math:`B=(x_2,y_2)` er
 .. math::
   \overline{AB} = (x_2-x_1,y_2-y_1) = \begin{pmatrix} x_2-x_1 \\ y_2-y_1 \end{pmatrix}
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+  
   Reiknum vigurinn frá punktinum :math:`A=(-1,7)` til punktsins :math:`B=(5,2)` .
 
 	.. math::
@@ -59,7 +63,9 @@ Vigurinn frá punktinum :math:`A=(x_1,y_1)` til punktsins :math:`B=(x_2,y_2)` er
 Stundum er talað um að vigur hafi :hover:`hallatölu, hallatala` : :math:`h=\frac{a_y}{a_x}` , ef :math:`a_x\neq 0` .
 Tveir vigrar eru :hover:`samsíða` ef þeir hafa sömu hallatölu.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+  
   Finnum vigur sem er samsíða :math:`\overline{a}=(-1,6)` og hefur lengdina 9.
 
   Hallatala :math:`\overline{a}` er :math:`h_{\bar{a}}=\frac{a_y}{a_x}=\frac{6}{-1}=-6` .
@@ -159,7 +165,9 @@ Summa tveggja vigra :math:`\overline{a} = (a_x,a_y)` og :math:`\overline{b} = (b
 .. math::
   \overline{c} = \overline{a} + \overline{b} = (a_x + b_x, a_y +b_y) = \begin{pmatrix} a_x+b_x \\ a_y+b_y \end{pmatrix}
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+  
   Leggjum saman vigrana :math:`\overline{a}=(4,3)` og :math:`\overline{b}=(1,3)` :
 
   .. math::
@@ -172,7 +180,9 @@ og summa þeirra er frá upphafspunkti fyrri vigursins til endapunkts þess sein
    :width: 60%
    :align: center
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+  
   Þó að :math:`\overline{c} = \overline{a} + \overline{b}` þýðir það **ekki** að :math:`c = a + b`.
 
   Í dæminu hér á undan er til dæmis
@@ -193,7 +203,9 @@ Um samlagningu vigra gilda eftirfarandi reglur:
 
 --------------------------------
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+  
   Höfum þrjá punkta:
 
   .. math::
@@ -249,13 +261,15 @@ Ef þættir vigranna eru þekktir er innfeldið:
 .. math::
   \overline{a} \cdot \overline{b} = a_x b_x + a_y b_y
 
-.. tip::
-    Reiknum innfeldi vigranna :math:`\overline{a}=(7,8)` og :math:`\overline{b}=(-1,3)`
+.. admonition:: Dæmi
+  :class: daemi
 
-    **Lausn**
+  Reiknum innfeldi vigranna :math:`\overline{a}=(7,8)` og :math:`\overline{b}=(-1,3)`
 
-    .. math::
-      \overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 7\cdot (-1)+ 8\cdot 3 = -7+24 =17
+  **Lausn**
+
+  .. math::
+    \overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 7\cdot (-1)+ 8\cdot 3 = -7+24 =17
 
 Ef vigrarnir eru gefnir með lengd og stefnuhorni er innfeldið:
 
@@ -264,40 +278,44 @@ Ef vigrarnir eru gefnir með lengd og stefnuhorni er innfeldið:
 
 þar sem :math:`\phi` er hornið milli :math:`\overline{a}` og :math:`\overline{b}` þegar þeir hafa sama upphafspunkt.
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+  
   **Tveir vigrar eru hornréttir ef innfeldi þeirra er núll.**
 
-.. tip::
-    Reiknum hornið á milli vigranna :math:`\overline{a}=(2,4)` og :math:`\overline{b}=(4,2)` :
+.. admonition:: Dæmi
+  :class: daemi
 
-    .. figure:: ./myndir/rumfraedi/innfeldi.svg
-      :align: center
-      :width: 60%
+  Reiknum hornið á milli vigranna :math:`\overline{a}=(2,4)` og :math:`\overline{b}=(4,2)` :
 
-    **Lausn**
+  .. figure:: ./myndir/rumfraedi/innfeldi.svg
+    :align: center
+    :width: 60%
 
-    Við vitum að :math:`\overline{a} \cdot \overline{b} = a b \cos{\phi}` , þar sem :math:`a` og :math:`b` eru lengdir vigranna.
-    Lengdirnar eru:
+  **Lausn**
 
-    .. math::
-      \begin{aligned}
-        a = \sqrt{a_x^2 + a_y^2} = \sqrt{2^2 + 4^2} = \sqrt{20} \\
-        b = \sqrt{b_x^2 + b_y^2} = \sqrt{4^2 + 2^2} = \sqrt{20}
-      \end{aligned}
+  Við vitum að :math:`\overline{a} \cdot \overline{b} = a b \cos{\phi}` , þar sem :math:`a` og :math:`b` eru lengdir vigranna.
+  Lengdirnar eru:
 
-    Reiknum innfeldi vigranna:
+  .. math::
+    \begin{aligned}
+      a = \sqrt{a_x^2 + a_y^2} = \sqrt{2^2 + 4^2} = \sqrt{20} \\
+      b = \sqrt{b_x^2 + b_y^2} = \sqrt{4^2 + 2^2} = \sqrt{20}
+    \end{aligned}
 
-    .. math::
-      \overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 2\cdot 4+ 4\cdot 2 = 16
+  Reiknum innfeldi vigranna:
 
-    Því er
+  .. math::
+    \overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 2\cdot 4+ 4\cdot 2 = 16
 
-    .. math::
-      \begin{aligned}
-        \overline{a} \cdot \overline{b} &= a b \cos{\phi} \\
-        \cos{\phi} &= \frac{\overline{a} \cdot \overline{b}}{a b} = \frac{16}{\sqrt{20} \cdot \sqrt{20}} = \frac{16}{20}\\
-        \phi &= 36.8 ° = 0.644
-      \end{aligned}
+  Því er
+
+  .. math::
+    \begin{aligned}
+      \overline{a} \cdot \overline{b} &= a b \cos{\phi} \\
+      \cos{\phi} &= \frac{\overline{a} \cdot \overline{b}}{a b} = \frac{16}{\sqrt{20} \cdot \sqrt{20}} = \frac{16}{20}\\
+      \phi &= 36.8 ° = 0.644
+    \end{aligned}
 
 ------------------------------------------------------------
 
@@ -326,25 +344,29 @@ Lengd krossfeldis :math:`\overline{a} \text{ og } \overline{b}` má reikna úr f
 .. math::
   |\overline{a} \times \overline{b}| = |\overline{a}| |\overline{b}| \sin(\phi)
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+  
   Þegar krossfeldi er reiknað skiptir máli hvor vigurinn er á undan!
 
   .. math::
     \overline{a} \times \overline{b} = - \overline{b} \times \overline{a}
 
 
-.. tip::
-    Reiknum krossfeldi vigranna :math:`\overline{a}=(1,2,3)` og :math:`\overline{b}=(4,5,6)`.
+.. admonition:: Dæmi
+  :class: daemi
 
-    **Lausn**
+  Reiknum krossfeldi vigranna :math:`\overline{a}=(1,2,3)` og :math:`\overline{b}=(4,5,6)`.
 
-    .. math::
-      \begin{aligned}
-        \overline{a} \times \overline{b} &= (a_y b_z - a_z b_y)\hat{\imath} + (a_z b_x - a_x b_z)\hat{\jmath} + (a_x b_y - a_y b_x)\hat{k} \\
-        &= (2\cdot 6-3\cdot 5)\hat{\imath} + (3\cdot 4 - 1 \cdot 6) \hat{\jmath} + ( 1\cdot 5 - 2\cdot 4) \hat{k}\\
-        &= -3 \hat{\imath} +6 \hat{\jmath} - 3\hat{k}\\
-        &= (-3,6,-3)
-      \end{aligned}
+  **Lausn**
+
+  .. math::
+    \begin{aligned}
+      \overline{a} \times \overline{b} &= (a_y b_z - a_z b_y)\hat{\imath} + (a_z b_x - a_x b_z)\hat{\jmath} + (a_x b_y - a_y b_x)\hat{k} \\
+      &= (2\cdot 6-3\cdot 5)\hat{\imath} + (3\cdot 4 - 1 \cdot 6) \hat{\jmath} + ( 1\cdot 5 - 2\cdot 4) \hat{k}\\
+      &= -3 \hat{\imath} +6 \hat{\jmath} - 3\hat{k}\\
+      &= (-3,6,-3)
+    \end{aligned}
 
 
 Flatarmyndir

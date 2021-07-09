@@ -19,7 +19,9 @@ Stærð hornsins :math:`\alpha` er þá jafnt lengd :hover:`bogans, bogi` á mil
 .. image:: ./myndir/horna/mynd1.png
 	:align: center
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Samkvæmt þessari skilgreiningu þá er heill hringur :math:`2 \pi` bogaeiningar því það er :hover:`ummál` hrings með geisla :math:`1`.
 
 	.. math::
@@ -34,8 +36,9 @@ Bogaeiningar eru oft kallaðar radíanar og þær má tákna með :math:`\text{R
 .. math::
 	x \quad \text{Rad} = \left(x \cdot \frac{360}{2 \pi}\right)° \qquad og \qquad  x°=\left( x \cdot \frac{2 \pi}{360}\right) \text{Rad}
 
-.. tip::
-
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Skrifum :math:`\frac{\pi}{6}` í gráðum.
 
 	**Lausn**
@@ -49,8 +52,9 @@ Bogaeiningar eru oft kallaðar radíanar og þær má tákna með :math:`\text{R
 	.. math::
 	 	\frac{\pi}{6} \text{Rad} = \left(\frac{\pi}{6} \cdot \frac{360}{2 \pi}\right)° = 30°
 
-.. tip::
-
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Skrifum :math:`70^{\circ}` í bogaeiningum.
 
 	**Lausn**
@@ -94,7 +98,9 @@ Kósínus af horninu :math:`\alpha` er nú skilgreindur sem :math:`x`-hnit punkt
 	:width: 70%
 
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Bæði kósínus og sínus eru :math:`2 \pi`-:hover:`lotubundin` föll. Ef við förum heilan hring, sem er :math:`2 \pi`, þá endum við í sama punkti og fáum því sama gildið.
 
 Hornafallið tangens, :math:`\tan`, er skilgreint sem hlutfallið á milli :math:`\sin` og :math:`\cos`.
@@ -156,7 +162,9 @@ Við lesum gildin á kósínus á :math:`x` - ásnum og  gildin á sínus á :ma
 .. image:: ./myndir/horna/einingarhringur.svg
 	:align: center
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
+	
 	Það getur borgað sig að hafa þessi gildi á hreinu!
 
 	.. math::
@@ -232,13 +240,13 @@ Takið eftir að kósínusinn lítur næstum alveg eins út og sínusinn, eini m
 Sínusinn og kósínusinn eru takmörkuð föll, takmörkuð af einum að ofan og mínus einum að neðan.
 Það þýðir að þau taki *aldrei* gildi sem eru stærri en 1 eða minni en -1.
 
-.. note::
-	Ein af mikilvægum eiginleikum :math:`\cos` og :math:`\sin` er að
-	 * :math:`\cos` er **jafnstætt** fall
-	 	* :math:`\cos(-\alpha) = \cos(\alpha)`
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
+	Einn af mikilvægum eiginleikum :math:`\cos` og :math:`\sin` er að
+	 * :math:`\cos` er **jafnstætt** fall: :math:`\cos(-\alpha) = \cos(\alpha)`
 
-	 * :math:`\sin` er **oddstætt** fall
-	 	* :math:`\sin(-\alpha) = -\sin(\alpha)`
+	 * :math:`\sin` er **oddstætt** fall: :math:`\sin(-\alpha) = -\sin(\alpha)`
 
 -----------------
 
@@ -415,7 +423,9 @@ Andhverfa sínusar
 .. math::
 	\sin(\arcsin(x)) = x \qquad \text{fyrir öll  } x \in [−1, 1]
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
+	
 	Athugum að :math:`\arcsin(x)` er oft ritað :math:`\sin^{-1}(x)`
 
 .. image:: ./myndir/horna/arcsin.svg
@@ -424,7 +434,9 @@ Andhverfa sínusar
 
 Hér er graf :math:`\arcsin(x)`.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Hverjar eru lausnir :math:`\sin(v)=\frac12`, þ.e. hvað er :math:`\sin^{-1} \left(\frac12 \right)` ?
 
 	Hér er gildið :math:`\frac12 >0` og því leitum við að lausnum á fyrsta og öðrum fjórðungi einingahringsins, því þar er :math:`\sin(v)\geq 0`.
@@ -455,14 +467,16 @@ Hér er graf :math:`\arcsin(x)`.
 
 
 Andhverfa kósínusar
-```````````````````
+````````````````````
 
 :math:`\arccos: \; [-1,1] \rightarrow [0, \pi]` er fallið sem uppfyllir
 
 .. math::
 	\cos(\arccos(x)) = x \qquad \text{fyrir öll  } x \in [−1, 1].
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
+	
  	Athugum að :math:`\arccos(x)` er oft ritað :math:`\cos^{-1}(x)`.
 
 .. image:: ./myndir/horna/arccos.svg
@@ -471,7 +485,9 @@ Andhverfa kósínusar
 
 Hér er graf :math:`\arccos(v)`.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Hverjar eru lausnir :math:`\cos(x)=\frac{\sqrt{3}}{2}`, þ.e. hvað er :math:`\cos^{-1}\left( \frac{\sqrt{3}}{2} \right)`?
 
 	Hér er :math:`\frac{\sqrt{3}}{2} >0` svo við skoðum lausnir á fyrsta og fjórða fjórðungi einingahringsins, því þar er :math:`\cos(u)>0`.
@@ -519,7 +535,9 @@ Andhverfa tangens
 .. math::
 	\tan(\arctan(x)) = x \qquad \text{fyrir öll  } x \in [−\infty, \infty]
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
+	
  	Athugum að :math:`\arctan(x)` er oft ritað :math:`\tan^{-1}(x)`.
 
 .. image::  ./myndir/horna/arctan.svg
@@ -528,7 +546,9 @@ Andhverfa tangens
 
 Hér er graf :math:`\arctan(v)`.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Hverjar eru lausnir :math:`\tan(v)=-\sqrt{3}`, þ.e. hvað er :math:`\tan^{-1} (-\sqrt{3})` ?
 
 	Hér er :math:`-\sqrt{3} <0` svo við skoðum lausnir á öðrum og fjórða fjórðungi einingahringsins því þar er :math:`\tan(u)<0`.

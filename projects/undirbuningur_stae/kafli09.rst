@@ -26,7 +26,9 @@ Ef við teiknum gröf fallanna fáum við:
 
 Hér sjáum við að rauða grafið, :math:`\sqrt{x}`, er spegilmynd svarta grafsins, :math:`x^2`, um punktalínuna.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   Graf andhverfu falls er spegilmynd grafs fallsins um línuna :math:`y=x`.
 
 Skoðum næst :math:`y=2x+1` eða :math:`f(x)=2x+1`.
@@ -136,7 +138,9 @@ Hér er dæmi um vörpun sem er **ekki** átæk:
 
 Hún er ekki átæk því hér eru tvö stök í myndmenginu sem eru ekki með í vörpuninni.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	**1.** Skoðum fallið :math:`f: \mathbb{R} \to \mathbb{R}`, :math:`f(x)=x^2`.
 
 	 Tökum eftir að bakmengið er allt :math:`\mathbb{R}`, en :math:`x^2` verður aldrei neikvæð tala. Til dæmis er :math:`-1` stak í bakmenginu, en jafnan :math:`f(x)=-1`, eða :math:`x^2=-1` hefur enga lausn í rauntölunum. Fallið er því **ekki átækt**.
@@ -162,9 +166,12 @@ Fall er ekki eintækt ef fleiri en eitt stak í formenginu vísar á sama staki�
 
 Skilgreining
 ~~~~~~~~~~~~
-Fall :math:`f: X \to Y` er sagt vera *eintækt* ef fyrir sérhvert :math:`y \in Y` er til í mesta lagi eitt :math:`x \in X` þannig að :math:`f(x)=y`.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-Það er, ef :math:`f(x_1)=f(x_2)` þá er :math:`x_1=x_2`.
+	Fall :math:`f: X \to Y` er sagt vera *eintækt* ef fyrir sérhvert :math:`y \in Y` er til í mesta lagi eitt :math:`x \in X` þannig að :math:`f(x)=y`.
+
+	Það er, ef :math:`f(x_1)=f(x_2)` þá er :math:`x_1=x_2`.
 
 --------------------------------------------------------------------------
 
@@ -186,7 +193,9 @@ Hér er dæmi um vörpun sem er **ekki** eintæk:
 Hér varpast tvö stök í skilgreiningarmenginu á sama stak í myndmenginu.
 *Takið eftir að þessi vörpun er hvorki eintæk né átæk.*
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	**1.** Skoðum fallið :math:`f: \mathbb{R} \to \mathbb{R}`, :math:`f(x)=x^2`.
 
 	 Þetta fall er **ekki eintækt**. Til dæmis gildir :math:`f(-2)=f(2)=4`, það er jafnan :math:`f(x)=4` hefur tvær lausnir.
@@ -204,11 +213,17 @@ Gagntæk föll
 
 Skilgreining
 ~~~~~~~~~~~~
-Fall :math:`f: X \to Y` er sagt vera :hover:`gagntækt, gagntækur` ef það er bæði eintækt og átækt.
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Fall :math:`f: X \to Y` er sagt vera :hover:`gagntækt, gagntækur` ef það er bæði eintækt og átækt.
 
 Regla
 ~~~~~
-Fall á sér andhverfu þá og því aðeins að það sé gagntækt.
+.. admonition:: Setning
+	:class: setning
+
+	Fall á sér andhverfu þá og því aðeins að það sé gagntækt.
 
 ----------------------------------------------
 
@@ -222,7 +237,9 @@ Við sjáum að öll stökin í myndmenginu eru með í vörpuninni þannig að 
 Hvert stak í skilgreiningarmenginu varpast á nákvæmlega eitt stak í myndmenginu þannig að vörpunin er eintæk.
 Fallið er því gagntækt þar sem það er bæði átækt og eintækt.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+
 	Við höfum séð að fallið :math:`f: \mathbb{R} \to \mathbb{R}`, :math:`f(x)=x^2` er hvorki eintækt né átækt.
 	Það á sér því ekki andhverfu.
 
@@ -236,21 +253,28 @@ Samskeyting falla
 
 Skilgreining
 ~~~~~~~~~~~~
-Látum :math:`f: X \to Y` og :math:`g: Y \to Z` vera föll. Við skilgreinum þá vörpun :math:`g \circ f: X \to Z` með:
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. math::
-	g \circ f(x)=g(f(x))
+	Látum :math:`f: X \to Y` og :math:`g: Y \to Z` vera föll. Við skilgreinum þá vörpun :math:`g \circ f: X \to Z` með:
 
-fyrir öll :math:`x \in X`. Þetta kallast :hover:`samskeytt fall`.
+	.. math::
+		g \circ f(x)=g(f(x))
+
+	fyrir öll :math:`x \in X`. Þetta kallast :hover:`samskeytt fall`.
 
 .. image:: ./myndir/foll/compvorpun.svg
 	:width: 100%
 	:align: center
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Bakmengi :math:`f` og formengi :math:`g` þarf að vera það sama. Annars gengur skilgreiningin ekki upp.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	Látum :math:`f:\mathbb{R} \to \mathbb{R}` vera gefið með :math:`f(x)=x^2+x`
 	og :math:`g:\mathbb{R} \to \mathbb{R}` vera gefið með :math:`g(x)=x+3`
 
@@ -320,10 +344,14 @@ og
 .. math::
 	a^{\log_a(x)}=x \qquad \text{fyrir öll } x \in \mathbb{R}_+.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Óformlega getum við hugsað um töluna :math:`\log_a(x)` þannig: "Í hvaða veldi þarf að setja :math:`a` svo að útkoman verði :math:`x`?"
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	**1.** Reiknum :math:`\log_2(8)`. Í töluðu máli er spurningin þessi:
 
 	 "Í hvaða veldi þarf að setja tvo svo að útkoman verði átta?"
@@ -339,24 +367,30 @@ og
 
 	 Athugum að um sérhverja tölu :math:`a` gildir :math:`a^0=1`, sér í lagi er :math:`9^0=1` svo :math:`\log_9(1)=0`.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   10 - logrinn er oft skrifaður :math:`\log(x)` frekar en :math:`\log_{10}(x)` .
   Þessi logri er mikið notaður og yfirleitt er sérstakur takki á reiknivélum til þess að reikna hann.
 
 Lograreglur
-```````````
+````````````
+.. admonition:: Setning
+  :class: setning
 
-Fyrir :math:`a,b,x,y\in \mathbb{R}_+` og :math:`r \in \mathbb{R}` gildir:
+	Fyrir :math:`a,b,x,y\in \mathbb{R}_+` og :math:`r \in \mathbb{R}` gildir:
 
-1. :math:`\qquad \log_a(1)=0`
-2. :math:`\qquad \log_a(1/x)=-\log_a(x)`
-3. :math:`\qquad \log_a(xy)=\log_a(x)+\log_a(y)`
-4. :math:`\qquad \log_a(x/y)=\log_a(x)-\log_a(y)`
-5. :math:`\qquad \log_a(x^r)=r\log_a(x)`
-6. :math:`\qquad \log_a(x)=\dfrac{\log_b(x)}{\log_b(a)}`.
+	1. :math:`\qquad \log_a(1)=0`
+	2. :math:`\qquad \log_a(1/x)=-\log_a(x)`
+	3. :math:`\qquad \log_a(xy)=\log_a(x)+\log_a(y)`
+	4. :math:`\qquad \log_a(x/y)=\log_a(x)-\log_a(y)`
+	5. :math:`\qquad \log_a(x^r)=r\log_a(x)`
+	6. :math:`\qquad \log_a(x)=\dfrac{\log_b(x)}{\log_b(a)}`.
 
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	**1.** Reiknum :math:`\log_5(50)+\log_5(\frac{1}{2})`.
 
 	 Við notum reiknireglur tvö, þrjú, og fjögur:
@@ -427,14 +461,16 @@ Sjáum hér að :math:`\ln(x)` er :math:`e^x` speglað um :math:`y=x`.
 Sömu reglur gilda um náttúrulega logrann og um aðra logra.
 
 Lograreglur
-```````````
+````````````
+.. admonition:: Setning
+  :class: setning
 
-Fyrir :math:`x,y\in \mathbb{R}_+` og :math:`r \in \mathbb{R}` gildir:
+	Fyrir :math:`x,y\in \mathbb{R}_+` og :math:`r \in \mathbb{R}` gildir:
 
-1. :math:`\qquad \ln(1)=0`
-2. :math:`\qquad \ln(xy)=\ln(x)+\ln(y)`
-3. :math:`\qquad \ln(x/y)=\ln(x)-\ln(y)`
-4. :math:`\qquad \ln(x^r)=r\ln(x)`
+	1. :math:`\qquad \ln(1)=0`
+	2. :math:`\qquad \ln(xy)=\ln(x)+\ln(y)`
+	3. :math:`\qquad \ln(x/y)=\ln(x)-\ln(y)`
+	4. :math:`\qquad \ln(x^r)=r\ln(x)`
 
 
 Ræð föll
@@ -472,7 +508,9 @@ Láfella ræðs falls á þessu formi er því línan
 	y=\frac{a}{c}
 
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	Skoðum ræða fallið
 
 	.. math::
@@ -509,7 +547,9 @@ Stofnbrotaliðun
 	\alpha \neq \beta, \quad A= \frac{a\alpha + b}{\alpha - \beta} & \quad \text{og} \quad B= \frac{a\beta + b}{\beta - \alpha} \\
 	\end{aligned}
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
   Liðum
 
   .. math::
@@ -552,18 +592,20 @@ Látum :math:`p` og :math:`q` vera margliður og látum :math:`r=\frac{p}{q}` ve
 
 Regla
 `````
+.. admonition:: Setning
+  :class: setning
 
-Látum :math:`p` og :math:`q` vera margliður af stigi :math:`n` og :math:`m`.
+	Látum :math:`p` og :math:`q` vera margliður af stigi :math:`n` og :math:`m`.
 
-Gerum ráð fyrir að margliðan :math:`q` hafi :math:`m` ólíkar rætur :math:`a_1,a_2,...,a_m`.
+	Gerum ráð fyrir að margliðan :math:`q` hafi :math:`m` ólíkar rætur :math:`a_1,a_2,...,a_m`.
 
-Þá er til margliða :math:`s` og fastar :math:`b_1,b_2,...,b_m` þannig að
+	Þá er til margliða :math:`s` og fastar :math:`b_1,b_2,...,b_m` þannig að
 
-.. math::
-	\frac{p(x)}{q(x)}=s(x)+\frac{b_1}{x-a_1}+\frac{b_2}{x-a_2}+...+\frac{b_m}{x-a_m}.
+	.. math::
+		\frac{p(x)}{q(x)}=s(x)+\frac{b_1}{x-a_1}+\frac{b_2}{x-a_2}+...+\frac{b_m}{x-a_m}.
 
 
-Þegar þessari reglu er beitt þá segjumst við vera að *stofnbrotaliða* ræða fallið :math:`\frac{p}{q}`.
+	Þegar þessari reglu er beitt þá segjumst við vera að *stofnbrotaliða* ræða fallið :math:`\frac{p}{q}`.
 
 --------------
 
@@ -596,11 +638,15 @@ er af stigi :math:`m`.
 .. math::
 	\frac{p(x)}{q(x)}=s(x)+\frac{b_1}{x-a_1}+\frac{b_2}{x-a_2}+...+\frac{b_m}{x-a_m}
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Þeir sem eru komnir aðeins lengra í stærðfræði og þekkja diffrun munu taka eftir að í aðferðinni að ofan þá er nýja margliðan :math:`q'` afleiðan af margliðunni :math:`q`.
 
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
 	Stofnbrotaliðið ræða fallið
 
 	.. math::
@@ -666,7 +712,9 @@ Hliðrunarvigurinn :math:`\begin{pmatrix} a \\ b \end{pmatrix}` færir feril fal
 .. math::
     g(x) =f(x-a)+b.
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
   Hliðrum :math:`f(x) = x^2` um :math:`\begin{pmatrix} 2 \\ 1 \end{pmatrix}`
 
   Þessi hliðrun þýðir að hver punktur ferilsins færist um :math:`2` til hægri á :math:`x`-ásnum og :math:`1` upp á :math:`y`-ásnum. Þá er nýja hliðraða fallið:
@@ -686,7 +734,9 @@ Hliðrunarvigurinn :math:`\begin{pmatrix} a \\ b \end{pmatrix}` færir feril fal
   Punkturinn :math:`(-2,4)` færist í :math:`(-2+2,4+1)=(0,5)`.
 
 
-.. tip::
+.. admonition:: Dæmi
+  :class: daemi
+
   Hliðrum :math:`f(x) = \sin(x)` um :math:`\begin{pmatrix} -\frac{\pi}{2} \\ 0 \end{pmatrix}`. Fáum
 
   .. math::
@@ -750,5 +800,7 @@ Við getum líka ummyndað fall :math:`f(x)` lárétt með því að margfalda �
 * Ef :math:`0<a<1` þá erum við að tala um herpingu.
 * Ef :math:`1<a` þá er það stríkkun.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Takið eftir að ummyndanir eru varpanir af vörpunum, þ.e.a.s. **samskeyting falla**. Til dæmis ef við viljum hliðra fallinu :math:`f(x) = x^2` upp um :math:`2` og stríkkum um helming þá er
