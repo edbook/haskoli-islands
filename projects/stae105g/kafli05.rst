@@ -4,9 +4,9 @@ Heildun
 .. note::
 	**Nauðsynleg undirstaða**
 
-	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli10.html>`_.
+	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/kafli10.html>`_.
 
-	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/Kafli11.html>`_.
+	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/kafli11.html>`_.
 
 	- :ref:`Reiknireglur fyrir afleiður <Setning 3.3.1>`, sér í lagi :ref:`keðjureglan <kedjuregla>`.
 
@@ -217,6 +217,9 @@ aðferðum. Þó er auðveldara að leysa sumar gerðir af diffurjöfnum en aðr
 	hugmynd um hvernig hægt er að nota heildi á hagnýtan hátt til að leysa raunveruleg
 	verkefni.
 
+	Nánar verður farið í diffurjöfnur í kafla 8, þar sem mörg þessara hugtaka
+	verða rifjuð upp og skilgreind með nákvæmari hætti.
+
 
 Aðgreinanlegar diffurjöfnur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -354,7 +357,7 @@ Lítum á jákvætt fall :math:`f(x)` sem skilgreint er á lokaða bilinu :math:
 Við viljum nálga svæðið :math:`A` sem markast af :math:`x`-ásnum, línunum :math:`x=a`
 og :math:`x=b` og ferli fallsins :math:`f`.
 
-.. image:: ./myndir/Kafli05/PMA_svaedi_undir_ferli.png
+.. image:: ./myndir/kafli05/PMA_svaedi_undir_ferli.png
 	:align: center
 	:width: 75%
 
@@ -393,7 +396,7 @@ hlutbilum. Formúlan er því
 
 .. math:: A \approx L_n = \sum_{i=1}^n f(x_{i-1})\cdot \Delta x.
 
-.. image:: ./myndir/Kafli05/PMA_L6.png
+.. image:: ./myndir/kafli05/PMA_L6.png
 	:align: center
 	:width: 75%
 
@@ -417,7 +420,7 @@ Raunverulegt flatarmál svæðisins er :math:`A = 15-\sin(1)+\sin(6)\approx 13,8
 Skekkjan er því :math:`13,88-13,76=0,12` eða u.þ.b. :math:`0,9\%` munur, sem
 hlýtur að teljast nokkuð gott miðað við nálgun sem notar ansi fá hlutbil.
 
-.. image:: ./myndir/Kafli05/PMA_nalgun_svaedis_L.png
+.. image:: ./myndir/kafli05/PMA_nalgun_svaedis_L.png
  :align: center
  :width: 75%
 
@@ -434,7 +437,7 @@ hlutbilum. Formúlan er því
 
 .. math:: A \approx R_n = \sum_{i=1}^n f(x_{i})\cdot \Delta x.
 
-.. image:: ./myndir/Kafli05/PMA_H6.png
+.. image:: ./myndir/kafli05/PMA_H6.png
 	:align: center
 	:width: 75%
 
@@ -451,7 +454,7 @@ Með sömu rökum og áður fæst því að
 
 Skekkjan er nú :math:`14,18-13,88,76=0,3` eða u.þ.b. :math:`1\%` munur.
 
-.. image:: ./myndir/Kafli05/PMA_nalgun_svaedis_H.png
+.. image:: ./myndir/kafli05/PMA_nalgun_svaedis_H.png
  :align: center
  :width: 75%
 
@@ -577,8 +580,8 @@ Hér fyrir neðan má draga stikuna :math:`k` til og frá til að sjá
 nálgunina þegar notaðir eru :math:`k` rétthyrningar í Riemann summunni.
 
 .. ggb:: frtbvg44
-    :width: 700
-    :height: 400
+    :width: 900
+    :height: 450
     :img: ./myndir/PMA_hen.png
     :imgwidth: 12cm
 
@@ -645,6 +648,7 @@ Setning: Samanburður heilda
 
 		#. Ef :math:`m` og :math:`M` eru fastar þannig að :math:`m \leq f(x) \leq M` fyrir :math:`a \leq x \leq b` þá gildir að :math:`m(b-a) \leq \int_a^b f(x) dx \leq M(b-a)`.
 
+
 Meðalgildi falls
 ~~~~~~~~~~~~~~~~
 
@@ -695,6 +699,40 @@ punktur :math:`c\in [a,b]` sem uppfyllir að
 
 .. math:: f(c) = \frac{1}{b-a} \int_a^b f(x) dx.
 
+Note: Ritháttur
+~~~~~~~~~~~~~~~~
+
+.. note::
+
+	Oft er ritað að
+
+	.. math:: \int_a^b f(x) dx = \left[F(x)\right]_a^b = F(b)-F(a).
+
+	Þessi ritháttur gefur manni tækifæri til að finna fyrst stofnfallið :math:`F(x)` og
+	stinga svo heildismörkunum :math:`a` og :math:`b` inn í af því loknu.
+
+
+Dæmi: Meðalgildissetningin fyrir heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Finnum meðalgildi fallsins :math:`f(x)=8-2x` á bilinu :math:`[0,4]` og þá tölu :math:`c` þ.a.
+
+.. math:: f(c)=\frac{1}{4-0} \int_0^4 8-2x dx.
+
+Byrjum á því að meta heildið og fáum að
+
+.. math:: \frac{1}{4-0} \int_0^4 8-2x dx = \frac{1}{4}\left[8x-x^2\right]_0^4 = \frac{1}{4}((8 \cdot 4 - 4^2 ) - (0 \cdot 4 - 0^2)) = \frac{1}{4}(16) = 4.
+
+Við viljum því finna :math:`c \in [0,4]` þannig að
+
+.. math:: f(c) = 8-2c = 4.
+
+Einangrum nú c og höfum að
+
+.. math:: 2c = 8-4 \Leftrightarrow 2c = 4 \Leftrightarrow c = 2.
+
+Meðalgildi fallsins er því :math:`f(c)=f(2)=4` og :math:`c=2`.
+
 Setning: Undirstöðusetning stærðfræðigreiningar (I)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -705,8 +743,9 @@ skilgreint þannig að
 
 þá gildir að :math:`F'(x) =f(x)` á :math:`[a,b]`.
 
-Dæmi: Undirstöðusetning stærðfræðigreiningar (I)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dæmi: Undirstöðusetning stærðfræðigreiningarinnar (I)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Látum :math:`u=\sqrt{x}` og gerum ráð fyrir að
 
@@ -721,22 +760,246 @@ Samkvæmt undirstöðusetningu stærðfræðigreiningar (I) og keðjureglunni f�
 		&= \frac{\sin(\sqrt{x})}{2\sqrt{x}}.
 	\end{align}
 
-	Setning: Undirstöðusetning stærðfræðigreiningar (II)
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Ef :math:`f(x)`er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
-	eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
+Ef :math:`f(x)`er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
+eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
 
-	.. math:: \int_a^b f(x) dx = F(b)-F(a).
+.. math:: \int_a^b f(x) dx = F(b)-F(a).
 
-	.. tip::
-		Nemendur gera sér oft ekki grein fyrir því hversu gríðarlega mikilvæg
-		undirstöðusetning stærðfræðigreiningarinnar er. Það tók stærðfræðinga
-		meira en 500 ár að fínpússa þá tækni sem vísinda- og fræðimenn notast við í
-		dag til að útskýra hegðun ýmissa fyrirbæra.
-		Stærðfræðigreining gerði okkur loksins kleyft að reikna út fjarlægðir í
-		geiminum og kortleggja sporbauga reykistjarna. Vegna hennar varð mögulegt að reikna jaðarkostnað og
-		spá fyrir um heildargróða með einföldum hætti og nákvæmni. Stærðfræðigreiningin gaf verkfræðingum
-		þá fræðilegu þekkingu sem nauðsynleg var svo þeir gætu
-		reiknað svigþol efna og hreyfingu hluta í þrívíðu rúmi. Heimsýn okkar breyttist
-		með tilkomu stærðfræðigreiningar.
+.. tip::
+	Nemendur gera sér oft ekki grein fyrir því hversu gríðarlega mikilvæg
+	undirstöðusetning stærðfræðigreiningarinnar er. Það tók stærðfræðinga
+	meira en 500 ár að fínpússa þá tækni sem vísinda- og fræðimenn notast við í
+	dag til að útskýra hegðun ýmissa fyrirbæra.
+	Stærðfræðigreining gerði okkur loksins kleyft að reikna út fjarlægðir í
+	geiminum og kortleggja sporbauga reykistjarna. Vegna hennar varð mögulegt að reikna jaðarkostnað og
+	spá fyrir um heildargróða með einföldum og nákvæmum hætti. Stærðfræðigreiningin gaf verkfræðingum
+	þá fræðilegu þekkingu sem nauðsynleg var svo þeir gætu
+	reiknað svigþol efna og hreyfingu hluta í þrívíðu rúmi. Heimsýn okkar breyttist
+	með tilkomu stærðfræðigreiningar.
+
+
+Dæmi: Undirstöðusetning stærðfræðigreiningarinnar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Metum heildið
+
+.. math:: \int_{-2}^2 (t^2-4)dt
+
+með því að nota undirstöðusetningu stærðfræðigreiningarinnar. Fyrst þurfum við að
+finna eitthvað stofnfall fyrir :math:`f(t)=t^2-4`. Höfum að
+
+.. F(t) = \int (t^2-4) dt = \frac{1}{3}t^3-4t+C
+
+Veljum :math:`C=0` og fáum þá að stofnfallið sem við ætlum að nota sé :math:`F(t)=\frac{1}{3}t^3-4t`
+Þá segir undirstöðusetning stærðfræðigreiningarinnar (II) að
+
+
+.. math:: \int_{-2}^2 (t^2-4)dt = F(2)-F(-2) = \left(\frac{1}{3}2^3-4\cdot 2\right) - \left(\frac{1}{3}(-2)^3-4\cdot (-2) \right)= \frac{16}{3}-16 = -\frac{32}{3}.
+
+
+Heildun oddstæðra og jafnstæðra falla
+-------------------------------------
+
+Setning: Heildun oddstæðra og jafnstæðra falla
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	#. Ef :math:`f` er samfellt jafnstætt fall, þ.e. :math:`f(-x)=f(x)` þá gildir
+
+	.. math:: \int_{-a}^a f(x) dx = 2\int_0^a f(x) dx.
+
+	#. Ef :math:`f` er samfellt oddstætt fall, þ.e. :math:`f(-x)=-f(x)` þá gildir
+
+	.. math:: \int_{-a}^a f(x) dx = 0.
+
+Þetta er stundum orðað sem svo að *heildi samfellds jafnstæðs falls yfir samhverft bil
+er jafngilt tvöföldu heildi þess yfir helming bilsins* og *heildi samfellds oddstæðs
+falls yfir samhverft bil er jafngilt núlli*.
+
+Dæmi: Heildun oddstæðra og jafnstæðra falla
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Metum heildið
+
+.. math:: \int_{-2}^2 (3x^8-2) dx.
+
+Athugum að ef :math:`f(x)=3x^8-2` þá er :math:`f(-x) = 3(-x)^8-2 = 3(-1)^8x^8-2 = 3x^8-2`
+svo fallið :math:`f` er jafnstætt samkvæmt skilgreiningu. Við fáum því að
+
+.. math:: \int_{-2}^2 (3x^8-2) dx = 2\int_{0}^2 (3x^8-2) = 2\left[\frac{1}{3}x^9-2x\right]_0^2 = 2\left(\frac{512}{3}  - 4\right) = \frac{1000}{3}
+
+Innsetning
+----------
+
+Stundum getur reynst erfitt að finna stofnfall heildisstofnsins, sér í lagi ef
+hann er samsettur úr fleiri en einu falli, t.d. með margföldun eða samskeytingu.
+Þá er t.a.m. hægt að grípa til innsetningar.
+
+Setning: Innsetning í óákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gerum ráð fyrir að :math:`u=g(x)` sé fall þannig að :math:`g(x)` hafi samfellda afleiðu á bili og að
+:math:`f(x)` vera samfellt á samsvarandi bakmengi :math:`g`. Látum nú :math:`F(x)`
+vera stofnfall fyrir :math:`f(x)`. Þá gildir að
+
+.. math:: \int f(g(x))g'(x) dx = \int f(u) du = F(u) + C = F(g(x))+C.
+
+Dæmi: Innsetning í óákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Notum innsetningu til að reikna óákveðna heildið
+
+.. math:: \int 6x(3x^2+4)^4 dx.
+
+
+Hér er :math:`f(x)=x^4`, :math:`g(x)=3x^2+4` og þ.a.l. :math:`g'(x)=6x`. Þá
+segir setningin um innsetningu í óákveðin heildi að
+
+.. math:: \int 6x(3x^2+4)^4 dx = F(3x^2+4) + C.
+
+Finnum nú eitthvað stofnfall fyrir :math:`f`. T.d. :math:`F(x) = \frac{1}{5}x^5.`
+
+Þá er
+
+.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5 + C.
+
+Þar sem valið á fastanum :math:`C` er frjálst megum við t.d. velja :math:`C=1`
+og fáum þá að
+
+.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5+1.
+
+
+Setning: Innsetning í ákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gerum ráð fyrir að :math:`u=g(x)` sé fall þannig að :math:`g(x)` hafi samfellda afleiðu á bilinu :math:`[a,b]` og að
+:math:`f(x)` vera samfellt á bakmengi :math:`u=g(x)`. Þá gildir að
+
+.. math:: \int_a^b f(g(x))g'(x) dx = \int_{g(a)}^{g(b)} f(u) du
+
+Dæmi: Innsetning í ákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Metum heildið
+
+.. math:: \int_0^1 (1+2x^3)^5 x^2 dx
+
+með innsetningu. Hér sjáum við að :math:`f(x)=x^5`, :math:`g(x)=1+2x^3`
+og þ.a.l. :math:`g'(x)=6x^2`. Þar sem :math:`u=g(x)` (skv. setningunni um
+innsetningu í ákveðin heildi) þá er þetta jafngilt því að rita
+
+.. math:: \frac{du}{dx} = 6x^2.
+
+Ef við notum þá aðferð sem við kynntum í
+kaflanum um diffur þá má líta á :math:`du` og :math:`dx` sem breytur og rita
+
+.. math:: du = 6x^2 dx \Leftrightarrow \frac{1}{6} du = x^2 dx`.
+
+Með því að nota innsetninguna þá skiptum við :math:`x^2 dx` í heildinu út fyrir :math:`\frac{1}{6} du`
+og :math:`(1+2x^3)^5` út fyrir :math:`u^5`. Það eina sem eftir stendur er að
+reikna :math:`g(a) = g(0)` og :math:`g(b)=g(1)`. Fáum að
+
+.. math:: g(0)= 1 + 2\cdot 0^3 = 1
+
+og
+
+.. math:: g(1) =  1 + 2\cdot 1^3  = 3.
+
+Því fæst að
+
+.. math:: \int_0^1 (1+2x^3)^5 x^2 dx = \frac{1}{5} \int_1^3 u^5 du
+
+þar sem við höfum tekið :math:`\frac{1}{5}` út fyrir heildið. Metum nú heildið
+og fáum
+
+.. math:: = \left[ \frac{1}{6}u^6 \right]_1^3 = \frac{1}{36}(3^6-1^6)=\frac{182}{9}.
+
+.. tip::
+
+	Finna má mun fleiri dæmi í kennslubókinni. Það reynist oft erfitt fyrir
+	nemendur að ná tökum á innsetningu svo gott getur verið að skoða fleiri dæmi.
+
+Heildi með vísisföllum og logrum
+---------------------------------
+
+Setning: Heildi vísisfalla
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vísisföll má heilda með því að nota eftirfarandi formúlur.
+
+ 	#. :math:`\int e^x dx = e^x + C:`
+
+	#. :math:`\int a^x dx = \frac{a^x}{\ln(a)} + C`
+
+Dæmi: Heildun vísisfalls
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Notum innsetningu með :math:`u=-x` til að finna stofnfall fyrir :math:`e^{-x}`.
+Höfum að ef :math:`u=-x` þá er :math:`-du = dx`. Því gefur innsetning að
+
+.. math:: F(x)=\int e^{-x} dx = - \int e^u du = -e^u + C = -e^{-x}+C
+
+skv. setningunni um heildi vísisfalla.
+
+
+Setning: Heildun logra
+~~~~~~~~~~~~~~~~~~~~~~
+
+Logra má heilda með því að nota eftirfarandi formúlu.
+
+	#. :math:`\int x^{-1} = \ln|x| + C`
+
+	#. :math:`\int \ln(x) dx = x\ln(x) - x + C = x(\ln(x)-1)+C`
+
+	#. :math:`\int \log_a(x) dx = \frac{x}{\ln(a)}(\ln(x)-1) + C`
+
+Dæmi: Heildun logra
+~~~~~~~~~~~~~~~~~~~
+
+Metum heildið
+
+.. math:: \int \frac{3}{x-10}.
+
+Tökum fyrst 3 út fyrir heildið
+
+.. math:: 3 \int \frac{1}{x-10}
+
+Og notum svo innsetningu með :math:`f(x)=\frac{1}{x}` og :math:`g(x)=x-10`.
+Þá er :math:`du = 1 dx` þar sem :math:`g'(x)=1`. Þetta gefur því
+
+.. math:: 3 \int \frac{1}{u} du = 3\ln|u|+C.
+
+Við getum nú skipt :math:`u` aftur út fyrir :math:`g(x)=x-10` og valið :math:`C=0`.
+Þá fæst
+
+.. math:: = 3 \ln|x-10|.
+
+Munum að lograr eru ekki skilgreindir í núlli og því gildi að :math:`x \in \mathbb{R}\setminus \{10\}`.
+
+Heildi sem skila andhverfum hornaföllum
+----------------------------------------
+
+Setning: Heildi sem skila andhverfum hornaföllum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Eftirfarandi heildi skila af sér andhverfum hornaföllum. Gerum ráð fyrir að :math:`a>0`:
+
+	#. :math:`\int \frac{du}{\sqrt{a^2-u^2}} = \sin^{-1}\frac{u}{|a|}+C`
+
+	#. :math:`\int \frac{du}{a^2+u^2} = \frac{1}{a}\tan^{-1}\frac{u}{a} + C`
+
+	#. :math:`\int \frac{du}{u\sqrt{u^2-a^2}} = \frac{1}{|a|}\sec^{-1}\frac{|u|}{a}+C`
+
+
+Setning: Heildi sem skila andhverfum hornaföllum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Metum heildið
+
+.. math:: \int_0^{\frac{1}{2}} \frac{dx}{\sqrt{1-x^2}}.
+
+Samkvæmt setningunni hér að ofan fæst
+
+.. math:: \int_0^{\frac{1}{2}} \frac{dx}{\sqrt{1-x^2}} = \left[\sin^{-1}x\right]_0^{\frac{1}{2}} = \sin^{-1}(1/2)-\sin^{-1}(0)=\frac{\pi}{6}.
