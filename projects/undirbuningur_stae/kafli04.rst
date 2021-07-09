@@ -53,8 +53,10 @@ Mengið :math:`B` er sagt vera :hover:`hlutmengi` í menginu :math:`A` ef sérhv
 
 Hér er dæmi um mengi :math:`A` sem inniheldur mengið :math:`B`, m.ö.o. :math:`B \subset A`
 
-.. tip::
-  Mengið :math:`B=\{ 2,4,6 \}` er hlutmengi í menginu :math:`A=\{1,2,3,4,5,6\}` því öll stökin í :math:`B` má líka finna í :math:`A` .
+.. admonition:: Dæmi
+	:class: daemi
+
+	Mengið :math:`B=\{ 2,4,6 \}` er hlutmengi í menginu :math:`A=\{1,2,3,4,5,6\}` því öll stökin í :math:`B` má líka finna í :math:`A` .
 
 
 Yrðingar til að skilgreina mengi
@@ -83,20 +85,21 @@ Sjáum að mengið :math:`A` er hlutmengi í :math:`C` .
 
 Þetta verður best skýrt með dæmum.
 
-.. tip::
- **1.** Látum :math:`A = \{x \text{ er frumtala }| x \text{ hefur } 3 \text{ í einingasætinu }\}`.
+.. admonition:: Dæmi
+	:class: daemi
 
-   Nú getum við sagt að t.d. :math:`3 \in A, 13 \in A, 103 \in A` þar sem allar þessar tölur eru frumtölur með :math:`3` í einingarsætinu.
+	**1.** Látum :math:`A = \{x \text{ er frumtala }| x \text{ hefur } 3 \text{ í einingasætinu }\}`.
 
-   :math:`33` er ekki stak í :math:`A` (ritað :math:`33 \notin A)` því :math:`33` er ekki frumtala.
+	 Nú getum við sagt að t.d. :math:`3 \in A, 13 \in A, 103 \in A` þar sem allar þessar tölur eru frumtölur með :math:`3` í einingarsætinu.
 
-   :math:`51` er heldur ekki stak í :math:`A` því að hún hefur :math:`1` í einingasætinu en ekki :math:`3`.
+	 :math:`33` er ekki stak í :math:`A` (ritað :math:`33 \notin A)` því :math:`33` er ekki frumtala.
+
+	 :math:`51` er heldur ekki stak í :math:`A` því að hún hefur :math:`1` í einingasætinu en ekki :math:`3`.
 
 
- **2.** Látum :math:`C = \{x \text{ er heiltala }| x \text{ er slétt tala }, x \text{ er oddatala}\}`.
+	**2.** Látum :math:`C = \{x \text{ er heiltala }| x \text{ er slétt tala }, x \text{ er oddatala}\}`.
 
 	 Hér er :math:`C = \emptyset` þar sem að engin tala getur verið bæði slétt tala og oddatala í einu.
-
 
 
 Aðgerðir á mengjum
@@ -109,8 +112,10 @@ Formlega skilgreiningin er:
 .. math::
 	A\cup B = \{x| x \in A \text{ eða } x \in B\}.
 
-.. note::
-    Í stærðfræðilegu samhengi hefur samtengingin „eða“ merkinguna „og/eða“.
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Í stærðfræðilegu samhengi hefur samtengingin „eða“ merkinguna „og/eða“.
 
 
 Mengi allra staka sem eru bæði í :math:`A` og :math:`B` er táknað með :math:`A \cap B`. Þetta mengi er kallað
@@ -120,8 +125,10 @@ Formlega skilgreiningin er:
 .. math::
 	A\cap B = \{x| x \in A \text{ og } x \in B\}.
 
-.. warning::
-  Við segjum að :math:`A` og :math:`B` séu :hover:`sundurlæg, sundurlægir tveir og tveir` ef sniðmengið er tómamengið, þ.e. ef mengin hafa ekkert sameiginlegt stak.
+.. admonition:: Aðvörun
+	:class: advorun
+
+	Við segjum að :math:`A` og :math:`B` séu :hover:`sundurlæg, sundurlægir tveir og tveir` ef sniðmengið er tómamengið, þ.e. ef mengin hafa ekkert sameiginlegt stak.
 
 Mengi allra staka sem eru í :math:`A` en ekki í :math:`B` er kallað mismunur (eða :hover:`mengjamismunur, mengjamunur`) :math:`A` og
 :math:`B`. Hann er táknaður með :math:`A\backslash B`.
@@ -136,7 +143,9 @@ Formlega skilgreiningin er:
 
 Hér er dæmi um tvö mengi :math:`A` og :math:`B` sem hafa sniðmengi, m.ö.o eru ekki :hover:`sundurlæg, sundurlægir tveir og tveir`. :math:`A \cap B` er merkt þar sem hringirnir skarast og :math:`A\backslash B` er merkt með þykkum ramma.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Látum :math:`A=\{x\in\mathbb{N}|x\text{ er slétt tala}\},B=\{x\in\mathbb{N}|x\text{ er oddatala}\}` og :math:`C=\{2,3,5,6,8\}`
 
 	Hér er :math:`A\cup B=\mathbb{N}` því að allar náttúrulegar tölur eru annað hvort sléttar tölur eða oddatölur.
@@ -158,7 +167,9 @@ para :math:`(a,b)` af stökum þ.a. :math:`a \in A` og :math:`b \in B`. Með yr�
 .. math::
 	A\times B = \{(a,b)| a \in A \text{ og } b \in B\}.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Látum :math:`A=\{2,3,6\}`
 
 	:math:`\left(2,\dfrac{5}{4}\right)` er stak í :math:`\mathbb{N}\times\mathbb{Q}`. Það er  ritað :math:`\left(2,\dfrac{5}{4}\right)\in \mathbb{N}\times\mathbb{Q}`
@@ -199,32 +210,35 @@ Auðvelt er að sannfæra sig um eftirfarandi reiknireglur á mengjum:
 Þessi regla segir að það skipti ekki máli í hvaða röð maður tekur sammengi og sniðmengi.
 Því má skrifa :math:`A\cup B\cup C` eða :math:`A\cap B\cap C` og sleppa öllum svigum.
 
-.. warning::
+.. admonition:: Aðvörun
+	:class: advorun
 
-    Það þarf alls ekki að gilda að :math:`\left(A\cup B\right)\cap C=A\cup\left(B\cap C\right)`, til dæmis. Lesandi er hvattur til að ganga úr skugga um þetta sjálfur.
+	Það þarf alls ekki að gilda að :math:`\left(A\cup B\right)\cap C=A\cup\left(B\cap C\right)`, til dæmis. Lesandi er hvattur til að ganga úr skugga um þetta sjálfur.
 
-    Það skiptir höfuðmáli hvaða aðgerð er gerð fyrst þegar sam- og sniðmengjum er blandað saman. Að nota sviga er nauðsynlegt;  skrifa :math:`A\cup B\cap C` eða :math:`A\cap B\cup C` er merkingarlaust.
+	Það skiptir höfuðmáli hvaða aðgerð er gerð fyrst þegar sam- og sniðmengjum er blandað saman. Að nota sviga er nauðsynlegt;  skrifa :math:`A\cup B\cap C` eða :math:`A\cap B\cup C` er merkingarlaust.
 
-.. tip::
- Gefin eru mengin  :math:`A:= \{ 1,2,3,4,5 \}, B := \{ 2,4,6,8,10\}` og :math:`C := \{ 6,7,8,9,10\}`
+.. admonition:: Dæmi
+	:class: daemi
 
- **1.** Finnið :math:`(A \cup B) \cap C`.
+	Gefin eru mengin  :math:`A:= \{ 1,2,3,4,5 \}, B := \{ 2,4,6,8,10\}` og :math:`C := \{ 6,7,8,9,10\}`
 
-  Byrjum á að finna :math:`A \cup B`. Það er mengi allra staka sem eru stök í öðru hvoru mengjanna :math:`A` eða :math:`B`, það er, :math:`A \cup B = \{1,2,3,4,5,6,8,10 \}`.
+	**1.** Finnið :math:`(A \cup B) \cap C`.
 
-  :math:`(A \cup B) \cap C` inniheldur síðan nákvæmlega þau stök sem eru bæði í :math:`A \cup B` og :math:`C`.
+	Byrjum á að finna :math:`A \cup B`. Það er mengi allra staka sem eru stök í öðru hvoru mengjanna :math:`A` eða :math:`B`, það er, :math:`A \cup B = \{1,2,3,4,5,6,8,10 \}`.
 
-  :math:`(A \cup B) \cap C = \{6,8,10 \}`.
+	:math:`(A \cup B) \cap C` inniheldur síðan nákvæmlega þau stök sem eru bæði í :math:`A \cup B` og :math:`C`.
 
- **2.**  Finnið :math:`A \cup (B \cap C)`.
+	:math:`(A \cup B) \cap C = \{6,8,10 \}`.
 
-  Nú er :math:`B \cap C = \{6,8,10 \}` og þá er :math:`A \cup (B \cap C) = \{1,2,3,4,5,6,8,10 \}`.
+	**2.**  Finnið :math:`A \cup (B \cap C)`.
 
-  Tökum eftir að hér er dæmi þar sem að :math:`(A \cup B) \cap C \neq A \cup (B  \cap C)` gildir.
+	Nú er :math:`B \cap C = \{6,8,10 \}` og þá er :math:`A \cup (B \cap C) = \{1,2,3,4,5,6,8,10 \}`.
 
- **3.** Finnið :math:`(A \cap B) \cap C`.
+	Tökum eftir að hér er dæmi þar sem að :math:`(A \cup B) \cap C \neq A \cup (B  \cap C)` gildir.
 
-  Nú er :math:`A \cap B = \{ 2,4 \}` svo :math:`(A \cap B) \cap C = \{2,4 \} \cap \{6,7,8,9,10 \} = \emptyset` því :math:`2` og :math:`4` eru ekki í :math:`C` .
+	**3.** Finnið :math:`(A \cap B) \cap C`.
+
+	Nú er :math:`A \cap B = \{ 2,4 \}` svo :math:`(A \cap B) \cap C = \{2,4 \} \cap \{6,7,8,9,10 \} = \emptyset` því :math:`2` og :math:`4` eru ekki í :math:`C` .
 
 ---------------------------------------------------------------------------------------
 
@@ -249,8 +263,10 @@ og :math:`\bigcap_{i=1}^n A_i` er bara önnur leið til að skrifa
 .. math::
 	A_1\cap A_2\cap A_3\cap...\cap A_n
 
-.. note::
-  Hér nýtum við okkur reikniregluna að :math:`\left(A\cup B\right)\cup C=A\cup\left(B\cup C\right)`, og hliðstæðu hennar fyrir sniðmengi, aftur og aftur.
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Hér nýtum við okkur reikniregluna að :math:`\left(A\cup B\right)\cup C=A\cup\left(B\cup C\right)`, og hliðstæðu hennar fyrir sniðmengi, aftur og aftur.
 
 
 Inn á milli kemur fyrir að stærðfræðingur vilji taka sammengi óendanlegra margra mengja. Segjum að við höfum eitthvað safn af mengjum (eða mengi af mengjum) þannig að búið sé að merkja öll mengin með einhverjum :hover:`vísi, vísitala` úr einhverju :hover:`vísamengi` :math:`I`. Það er, öll mengin í safninu má tákna með :math:`A_i` með :math:`i\in I`, þar sem :math:`I \neq \emptyset`. Þá er sammengi allra þessara mengja táknað með :math:`\bigcup_{i\in I}A_i`.
@@ -268,7 +284,9 @@ Eins eru sniðmengin skilgreind:
 Tökum nokkur dæmi um þetta.
 
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Látum :math:`\mathbb{P}` tákna mengi allra frumtalna.
 
 	 Fyrir sérhvert :math:`p\in\mathbb{P}` skulum við láta :math:`A_p` vera mengi allra náttúrulegra talna sem :math:`p` gengur upp í. Með yrðingum skrifum við:
@@ -339,7 +357,9 @@ Bilið :math:`(a,\infty)` er mengi allra rauntalna sem eru stærri en :math:`a` 
 
 Bilið :math:`[a,b)` er mengi allra rauntalna sem eru á milli :math:`a` og :math:`b` að stakinu :math:`a` meðtöldu en án staksins :math:`b`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Hér eru notaðir svigar fyrir opin bil, en í sumum bókum er opið bil táknað með því að snúa hornklofunum öfugt.
 	Því :math:`]a,b[` táknar það sama og :math:`(a,b)` .
 

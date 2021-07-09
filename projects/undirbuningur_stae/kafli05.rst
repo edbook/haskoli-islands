@@ -28,12 +28,16 @@ en sú fyrsta er mest notuð innan Háskóla Íslands og víðar.
 	:width: 50%
 	:align: center
 
-.. note::
-    Þegar bakmengið :math:`Y` er hlutmengi í rauntölunum :math:`\mathbb{R}` þá tölum við yfirleitt um :hover:`fall` í stað vörpunar.
-		Í raun er fall bara ákveðin gerð af vörpun, þar sem rauntölum er varpað á rauntölur.
-		Í þessum kafla munum við aðallega fjalla um föll.
+.. admonition:: Athugasemd
+	:class: athugasemd
 
-.. tip::
+	Þegar bakmengið :math:`Y` er hlutmengi í rauntölunum :math:`\mathbb{R}` þá tölum við yfirleitt um :hover:`fall` í stað vörpunar.
+	Í raun er fall bara ákveðin gerð af vörpun, þar sem rauntölum er varpað á rauntölur.
+	Í þessum kafla munum við aðallega fjalla um föll.
+
+.. admonition:: Dæmi
+	:class: daemi
+
 	**1.** Látum :math:`X=\mathbb{R}` og :math:`Y=\mathbb{R}`. Skilgreinum nú fall sem segir að sérhverju staki :math:`x\in X` verði úthlutað stakinu :math:`x^2\in Y`.
 
 	 Köllum þetta fall :math:`f`.
@@ -92,7 +96,9 @@ Graf vörpunnar
 
 Það getur verið gagnlegt að teikna upp mynd af grafinu í hnitakerfi. Skoðum dæmi um það að teikna myndir af gröfum falla.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+
 	**1.** Skoðum aftur fallið
 
 	 .. math::
@@ -165,10 +171,14 @@ Myndin að ofan sýnir jafnstætt fall.
 
 Myndin að ofan sýnir oddstætt fall.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+
 	Ekki eru öll föll oddstæð eða jafnstæð. Föll geta verið hvorugt.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+
 	**Skerum úr um hvort föllin séu jafnstæð, oddstæð, eða hvorugt.**
 
 	**1.** Fallið :math:`f:\;\mathbb{R} \to\mathbb{R}` gefið með  :math:`f(x)=x^2`.
@@ -221,10 +231,14 @@ Fall sem er annaðhvort vaxandi eða minnkandi er sagt vera :hover:`einhalla`.
 
 Fall sem er annaðhvort stranglega vaxandi eða stranglega minnkandi er sagt vera stranglega einhalla.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Stranglega vaxandi fall er sér í lagi vaxandi, en vaxandi fall er ekki endilega stranglega vaxandi. Eins eru stranglega minnkandi föll sér í lagi minnkandi, en ekki endilega öfugt.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Byrjum á því að skoða línur í plani.
 
 	 Fallið :math:`f: \mathbb{R} \to \mathbb{R}` þannig að :math:`f(x)=x+2` er stranglega vaxandi. Ljóst er að fyrir öll :math:`x_1,x_2` þannig að :math:`x_1>x_2` þá er :math:`f(x_1)>f(x_2)`. Við vitum að hallatalan er jákvæð og því er ljóst að ef við færum okkur til hægri eftir :math:`x`-ásnum á mynd grafsins þá hækkar fallgildið.
@@ -250,7 +264,9 @@ Fall sem er annaðhvort stranglega vaxandi eða stranglega minnkandi er sagt ver
 	 .. image:: ./myndir/foll/einhalla2.svg
 		:align: center
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Ávallt ber að varast að ákvarða hvort fall sé einhalla út frá mynd. Hægt er að nota diffrun til að ákvarða nákvæmlega hvar fall er minnkandi eða vaxandi, en við förum ekki yfir það hér.
 
 Gaffalforskrift
@@ -280,10 +296,14 @@ Skilgreining
 ~~~~~~~~~~~~
 Fall :math:`f: \mathbb{R} \to \mathbb{R}` er sagt vera lotubundið með lotu :math:`a` ef :math:`a \in \mathbb{R}` og :math:`f(x+a)=f(x)` fyrir öll :math:`x \in \mathbb{R}`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Óformlega þýðir þessi skilgreining að ef við færum okkur um fjarlægðina :math:`a` á :math:`x`-ásnum þá hefur fallið sama gildi þar, það er, það hefur sama gildi í punktinum :math:`x` og punktinum :math:`x+a`, og hér má :math:`x` vera hvaða tala sem er.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	Látum :math:`f: \mathbb{R} \to \mathbb{R}` vera fallið sem er með lotu :math:`2` og er skilgreint með:
 
 	.. math::
@@ -334,10 +354,14 @@ og
 
 Hér sjáum við einfalt dæmi um andhverfa vörpun, þar sem :math:`f` hefur :hover:`skilgreiningarmengi` :math:`A` og :hover:`bakmengi` :math:`B`.
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Vörpunin :math:`f^{-1}` er sú regla sem úthlutar sérhverju staki :math:`f(a)` í :math:`B` stakinu :math:`a` í :math:`A`. Það má orða það óformlega að andhverfa :math:`f` sé vörpun sem gerir ,,akkúrat öfugt'' við það sem vörpunin :math:`f` gerir.
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Skilgreinum fall :math:`f:\; \mathbb{R}_+\to \mathbb{R}_+` með formúlunni :math:`f(x)=x^2`. Finnum andhverfu fallsins :math:`f`.
 
 	 Skilgreiningarmengið er hér jákvæðu rauntölurnar. Andhverfan er :math:`f^{-1}(x)=\sqrt{x}`. Staðfestum það:
@@ -365,13 +389,17 @@ Hér sjáum við einfalt dæmi um andhverfa vörpun, þar sem :math:`f` hefur :h
 
 ------------------------------------------------------------------
 
-.. note::
+.. admonition:: Athugasemd
+	:class: athugasemd
+	
 	Ef við ætlum að finna andhverfu :math:`f : X \to Y` þurfum við að umrita það með því að skipta á :math:`y` í staðinn fyrir :math:`f(x)` í formúlu fallsins og svo einangra :math:`x`-ið.
 	Þá eru við komin með nýtt fall af :math:`y` sem passar vegna þess að andhverfan á að vera :math:`f^{-1} : Y \to X`.
 
 ------------------------------------
 
-.. tip::
+.. admonition:: Dæmi
+	:class: daemi
+	
 	**1.** Látum :math:`f:\;\mathbb{R}\to\mathbb{R}` vera fall gefið með formúlunni
 
 	 .. math::
@@ -432,8 +460,10 @@ Hér sjáum við einfalt dæmi um andhverfa vörpun, þar sem :math:`f` hefur :h
 	 .. math::
 		f^{-1}(x)=\frac{5+2x}{x-1}
 
-	 .. note::
-	 	Athugum að þegar skilgreiningarmengi falls er ekki tilgreint má gera ráð fyrir að það sé stærsta mögulega skilgreiningarmengið. Skilgreiningarmengi :math:`f` yrði þess vegna hér :math:`\mathbb{R}\setminus\{2\}`. Tveir eru dregnir frá menginu því annars yrði deilt með núlli. Skilgreiningarmengi andhverfufallsins :math:`f^{-1}` yrði :math:`\mathbb{R}\setminus\{1\}` út af sömu ástæðu.
+	.. admonition:: Athugasemd
+		:class: athugasemd
+
+ 		Athugum að þegar skilgreiningarmengi falls er ekki tilgreint má gera ráð fyrir að það sé stærsta mögulega skilgreiningarmengið. Skilgreiningarmengi :math:`f` yrði þess vegna hér :math:`\mathbb{R}\setminus\{2\}`. Tveir eru dregnir frá menginu því annars yrði deilt með núlli. Skilgreiningarmengi andhverfufallsins :math:`f^{-1}` yrði :math:`\mathbb{R}\setminus\{1\}` út af sömu ástæðu.
 
 ---------------------
 
