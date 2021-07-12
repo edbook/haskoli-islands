@@ -28,6 +28,7 @@ toggleblock = {path = "extensions/toggleblock-extension", develop = true}
 custom-button = {path = "extensions/custom-button", develop = true}
 datacamp = {path = "extensions/datacamp-extension", develop = true}
 google-analytics = {path = "extensions/google-analytics", develop = true}
+sphinx-togglebutton = "^0.2.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
