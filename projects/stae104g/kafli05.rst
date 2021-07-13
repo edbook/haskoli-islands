@@ -1,7 +1,9 @@
 Könnun falla
 ============
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
 	**Nauðsynleg undirstaða**
 
 	- :ref:`Vaxandi/minnkandi föll <vaxandiminnkandi>`. Sjá einnig `undirstöðuatriði um einhalla föll <https://edbook.hi.is/undirbuningur_stae/Kafli05.html#einhalla-foll>`_.
@@ -25,7 +27,9 @@ The knack lies in learning how to throw yourself at the ground and miss."*
 Inngangur
 ---------
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun
+
     **Frávik frá bókinni**
 
     Það sem á eftir kemur er eitt af fáum atriðum þar sem mín nálgun og
@@ -133,23 +137,27 @@ Kúpni
 Skilgreining: Kúpt/hvelft
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f:[a, b]\rightarrow {\mathbb  R}` vera fall.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-(i)  Segjum að fallið :math:`f` sé :hover:`kúpt*,kúpt fall` ef um
-     alla punkta :math:`x_1, x_2\in [a, b]` og sérhverja tölu
-     :math:`0\leq
-     \alpha\leq 1` gildir að
+    Látum :math:`f:[a, b]\rightarrow {\mathbb  R}` vera fall.
 
-     .. math:: f(\alpha x_1+(1-\alpha)x_2)\leq \alpha f(x_1)+(1-\alpha)f(x_2).
+    (i)  Segjum að fallið :math:`f` sé :hover:`kúpt,kúpt fall` ef um
+         alla punkta :math:`x_1, x_2\in [a, b]` og sérhverja tölu
+         :math:`0\leq
+         \alpha\leq 1` gildir að
 
-(ii) Segjum að fallið :math:`f` sé :hover:`hvelft,hvelft fall`
-     ef um alla punkta :math:`x_1, x_2\in [a, b]` og sérhverja tölu
-     :math:`0\leq
-     \alpha\leq 1` gildir að
+         .. math:: f(\alpha x_1+(1-\alpha)x_2)\leq \alpha f(x_1)+(1-\alpha)f(x_2).
 
-     .. math:: f(\alpha x_1+(1-\alpha)x_2)\geq \alpha f(x_1)+(1-\alpha)f(x_2).
+    (ii) Segjum að fallið :math:`f` sé :hover:`hvelft,hvelft fall`
+         ef um alla punkta :math:`x_1, x_2\in [a, b]` og sérhverja tölu
+         :math:`0\leq
+         \alpha\leq 1` gildir að
 
-.. note::
+         .. math:: f(\alpha x_1+(1-\alpha)x_2)\geq \alpha f(x_1)+(1-\alpha)f(x_2).
+
+.. admonition:: Athugasemd
+    :class: athugasemd
 
     Hér erum við komin með hugtak sem getur útskýrt muninn á myndunum í byrjun
     kaflans, :math:`f` er kúpt og :math:`g` er hvelft.
@@ -171,54 +179,62 @@ Auðkenning á kúpni með afleiðum
 Athugasemd
 ~~~~~~~~~~
 
-Ef við skoðum afleiður fallanna :math:`f` og :math:`g` betur þá sjáum
-við að:
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-(i)  Afleiða :math:`f` er mjög neikvæð nálægt :math:`A` og nálgast svo 0
-     í :math:`B`, það er afleiðan er vaxandi.
+    Ef við skoðum afleiður fallanna :math:`f` og :math:`g` betur þá sjáum
+    við að:
 
-(ii) Afleiða :math:`g` er u.þ.b. 0 í :math:`A` og minnkar svo þegar við
-     nálgumst :math:`B`, það er afleiðan er minnkandi.
+    (i)  Afleiða :math:`f` er mjög neikvæð nálægt :math:`A` og nálgast svo 0
+         í :math:`B`, það er afleiðan er vaxandi.
 
-Með öðrum orðum
+    (ii) Afleiða :math:`g` er u.þ.b. 0 í :math:`A` og minnkar svo þegar við
+         nálgumst :math:`B`, það er afleiðan er minnkandi.
 
-.. math::
+    Með öðrum orðum
 
-   (f')' = f'' \geq 0 \qquad   \text{og} \qquad
-       (g')' = g'' \leq 0.
+    .. math::
+
+       (f')' = f'' \geq 0 \qquad   \text{og} \qquad
+           (g')' = g'' \leq 0.
 
 
 Setning
 ~~~~~~~
 
-Fyrir tvídiffranlegt fall :math:`f` þá er eftirfarandi jafngilt
+.. admonition:: Setning
+    :class: setning
 
-(i)   :math:`f` er kúpt
+    Fyrir tvídiffranlegt fall :math:`f` þá er eftirfarandi jafngilt
 
-(ii)  :math:`f'` er vaxandi
-
-(iii) :math:`f'' \geq 0`
+    (i)   :math:`f` er kúpt
+    (ii)  :math:`f'` er vaxandi
+    (iii) :math:`f'' \geq 0`
 
 .. todo::  Sönnun
 
 Setning
 ~~~~~~~
 
-Fyrir tvídiffranlegt fall :math:`g` þá er eftirfarandi jafngilt
+.. admonition:: Setning
+    :class: setning
 
-(i)   :math:`g` er hvelft
+    Fyrir tvídiffranlegt fall :math:`g` þá er eftirfarandi jafngilt
 
-(ii)  :math:`g'` er minnkandi
+    (i)   :math:`g` er hvelft
+    (ii)  :math:`g'` er minnkandi
+    (iii) :math:`g'' \leq 0`
 
-(iii) :math:`g'' \leq 0`
+.. admonition:: Aðvörun
+    :class: advorun
 
-.. warning::
     Hvort fall er kúpt eða hvelft er **algjörlega óháð** því hvort það er
     vaxandi eða minnkandi. Til dæmis er :math:`f(x) = x^2` kúpt en það er
     vaxandi þegar :math:`x>0` og minnkandi þegar :math:`x<0`.
 
+.. admonition:: Aðvörun
+    :class: advorun
 
-.. warning::
     Föll eru ekki alltaf annað hvort kúpt eða hvelft alls staðar. Alveg
     eins og það eru til föll sem eru sums staðar vaxandi og sums staðar
     minnkandi, þá eru mörg föll sums staðar kúpt og sums staðar hveld.
@@ -234,20 +250,25 @@ Beygjuskilapunktar
 Skilgreining
 ~~~~~~~~~~~~
 
-Punktur :math:`(x_0, f(x_0))` er sagður vera :hover:`beygjuskilapunktur,hverfipunktur`
-grafsins :math:`y=f(x)` ef
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-(i)  grafið hefur snertilínu í :math:`x_0`, og
+    Punktur :math:`(x_0, f(x_0))` er sagður vera :hover:`beygjuskilapunktur,hverfipunktur`
+    grafsins :math:`y=f(x)` ef
 
-(ii) grafið er kúpt öðru megin við :math:`x_0` og hvelft hinum megin við
-     :math:`x_0`.
+    (i)  grafið hefur snertilínu í :math:`x_0`, og
+    (ii) grafið er kúpt öðru megin við :math:`x_0` og hvelft hinum megin við
+         :math:`x_0`.
 
 Setning
 ~~~~~~~
 
-Ef fallið :math:`f` er tvídiffranlegt þá er punkturinn :math:`x_0`
-beygjuskilapunktur fallsins :math:`f` ef og aðeins ef
-:math:`f''(x_0) =0` og :math:`f''` skiptir um formerki í :math:`x_0`.
+.. admonition:: Setning
+    :class: setning
+
+    Ef fallið :math:`f` er tvídiffranlegt þá er punkturinn :math:`x_0`
+    beygjuskilapunktur fallsins :math:`f` ef og aðeins ef
+    :math:`f''(x_0) =0` og :math:`f''` skiptir um formerki í :math:`x_0`.
 
 .. image:: ./myndir/kafli05/04_beygjuskilapunktur.png
 	:align: center
@@ -301,7 +322,9 @@ bili utan um :math:`x_0` og að :math:`f'(x_0)=0`.
 (ii) Ef :math:`f'(x_0)=0` og :math:`f''(x_0)>0` þá er :math:`x_0`
      staðbundið lággildi.
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun
+
     Athugið að ef :math:`f''(x_0)=0` þá getur :math:`x_0` verið hvort sem er
     staðbundið hágildi, staðbundið lággildi eða beygjuskilapunktur.
 
@@ -319,11 +342,12 @@ Aðfellur
 Skilgreining: Lóðrétt aðfella
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fallið :math:`f` hefur *lóðrétta aðfellu* í punktinum :math:`a` ef
-:math:`\lim_{x\to a^-} f(x) = \pm \infty` og/eða
-:math:`\lim_{x\to a^+} f(x) = \pm \infty`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-  Aðfellan er þá línan :math:`x=a`.
+    Fallið :math:`f` hefur *lóðrétta aðfellu* í punktinum :math:`a` ef
+    :math:`\lim_{x\to a^-} f(x) = \pm \infty` og/eða
+    :math:`\lim_{x\to a^+} f(x) = \pm \infty`. Aðfellan er þá línan :math:`x=a`.
 
 .. image:: ./myndir/kafli05/06_lodfellur.png
 	:align: center
@@ -334,11 +358,12 @@ Fallið :math:`f` hefur *lóðrétta aðfellu* í punktinum :math:`a` ef
 Skilgreining: Lárétt aðfella
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fallið :math:`f` hefur *lárétta aðfellu* ef
-:math:`\lim_{x\to \infty} f(x) = L` og/eða
-:math:`\lim_{x\to -\infty} f(x) = L`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Aðfellan er þá línan :math:`y=L`.
+    Fallið :math:`f` hefur *lárétta aðfellu* ef
+    :math:`\lim_{x\to \infty} f(x) = L` og/eða
+    :math:`\lim_{x\to -\infty} f(x) = L`. Aðfellan er þá línan :math:`y=L`.
 
 .. image:: ./myndir/kafli05/06_arctanadfellur.png
 	:align: center
@@ -350,11 +375,14 @@ Aðfellan er þá línan :math:`y=L`.
 Skáfella
 ~~~~~~~~
 
-Fallið :math:`f` hefur *skáfellu* ef til eru :math:`a` og :math:`b`
-þannig að :math:`\lim_{x\to \infty} f(x) -ax-b = 0` og/eða
-:math:`\lim_{x\to -\infty} f(x) -ax-b= 0`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Skáfellan er þá línan :math:`y=ax+b`.
+    Fallið :math:`f` hefur *skáfellu* ef til eru :math:`a` og :math:`b`
+    þannig að :math:`\lim_{x\to \infty} f(x) -ax-b = 0` og/eða
+    :math:`\lim_{x\to -\infty} f(x) -ax-b= 0`.
+
+    Skáfellan er þá línan :math:`y=ax+b`.
 
 .. image:: ./myndir/kafli05/06_lodogskafellur.png
 	:align: center
