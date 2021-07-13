@@ -21,7 +21,7 @@ def html_visit_ggb_node(self, node):
     self.body.append("<div id=\""+ID+"\"></div>\n")
     self.body.append("<script>\n")
     self.body.append("var ggbApp_"+ID+" = new GGBApplet({\n")
-    self.body.append("\"appName\": \"graphing\", \n")
+    self.body.append("\"appName\": \"calculator\", \n")
     self.body.append("\"width\": "+node['width']+", \n")
     self.body.append("\"height\": "+node['height']+", \n")
     self.body.append('"material_id": "'+node['id']+'", \n')
@@ -29,7 +29,8 @@ def html_visit_ggb_node(self, node):
     self.body.append("\"enableShiftDragZoom\": "+node['zoom_drag']+" \n")
     self.body.append("}, true);\n")
     self.body.append("ggbAppletId[\""+ID+"\"] = ggbApp_"+ID+";\n")
-    self.body.append("</script>")
+    self.body.append("</script>\n")
+    self.body.append("<p></p>\n") 
 
 def html_depart_ggb_node(self, node):
     pass
