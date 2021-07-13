@@ -413,17 +413,16 @@ Skilgreining: Graf
     :math:`(x,f(x))` þar sem :math:`x\in X`. Hér notum við oft :math:`y` í stað
     :math:`f(x)`.
 
-.. ggb:: pCuJwqEE
+.. ggb:: 1468111
     :width: 700
     :height: 400
-    :img: ./03_undirogyfirsumma.png
+    :img: 04_Graf_falls.png
     :imgwidth: 12cm
+    :zoom_drag: false
 
 .. index::
 	fall; jafnstætt
 	fall; oddstætt
-
-| 
 
 Skilgreining: Jafnstætt og oddstætt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

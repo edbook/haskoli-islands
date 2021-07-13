@@ -81,8 +81,6 @@ Skilgreining: Markgildi
     :img: 01_markgildi.png
     :imgwidth: 12cm
 
-| 
-
 .. admonition:: Athugasemd
     :class: athugasemd
 
@@ -177,8 +175,6 @@ Skilgreining: Markgildi frá hægri
     :img: 02_markfrahaegri.png
     :imgwidth: 12cm
 
-| 
-
 .. index::
     markgildi; frá vinstri
 
@@ -214,8 +210,6 @@ Skilgreining: Markgildi frá vinstri
     :height: 400
     :img: 03_markfravinstri.png
     :imgwidth: 12cm
-
-| 
 
 .. _setning-hv_markgildi:
 
@@ -462,8 +456,6 @@ Mynd af :math:`\sin\left(\frac 1x\right)`:
     :zoom_drag: false
     :img: 03_daemi-sin.png
     :imgwidth: 12cm
-
-| 
 
 Markgildi þegar x stefnir á óendanlegt
 --------------------------------------
