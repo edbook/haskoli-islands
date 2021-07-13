@@ -64,8 +64,6 @@ Fallið :math:`f(x) = x^2` er diffranlegt í sérhverjum punkti :math:`a`.
     :img: ./01_afleida.png
     :imgwidth: 12cm
 
-| 
-
 Setning
 ~~~~~~~
 
@@ -136,8 +134,6 @@ Jafna snertils við graf fallsins í punktingum :math:`a` er línan
     :imgwidth: 12cm
     :zoom_drag: true
 
-| 
-
 Athugasemd: Hallatalan :math:`\infty` er ekki leyfð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -159,6 +155,8 @@ Athugasemd: Hallatalan :math:`\infty` er ekki leyfð
     .. image:: ./myndir/kafli03/01_x13.png
     	:align: center
     	:width: 12cm
+
+    | 
 
     Við viljum að snertillinn sé nálgun við graf fallsins fyrir :math:`x` nálægt
     :math:`a`, lóðrétt lína er gagnslaus nálgun því hún er ekki skilgreind sem
