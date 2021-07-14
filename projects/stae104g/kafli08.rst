@@ -6,8 +6,8 @@ Diffurjöfnur
 
 	**Nauðsynleg undirstaða**
 
-    - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
-    - `Nokkur mikilvæg föll <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#nokkur-mikilvaeg-foll>`_.
+    - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/kafli11.html>`_.
+    - `Nokkur mikilvæg föll <https://edbook.hi.is/undirbuningur_stae/kafli09.html#nokkur-mikilvaeg-foll>`_.
 
 *Now, the invention of the scientific method and science is, I'm sure
 we'll all agree, the most powerful intellectual idea, the most powerful

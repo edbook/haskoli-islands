@@ -6,12 +6,12 @@ Tölur og föll
 
     **Nauðsynleg undirstaða**
 
-    -  `Undirstöðuatriði tölur og talnakerfi <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#talnakerfi>`_.
-    -  `Forgangsröðun aðgerða <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#forgangsroun-agera>`_.
-    -  `Reiknireglur <https://notendur.hi.is/undirbuningur_stae/Kafli01.html#reiknireglur>`_.
-    -  `Brotareikningur <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#brotareikningur>`_.
-    -  `Veldi og rætur <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#veldi-og-raetur>`_.
-    -  `Sjá undirstöðuatriði um föll <https://edbook.hi.is/undirbuningur_stae/Kafli05.html>`_.
+    -  `Undirstöðuatriði tölur og talnakerfi <https://edbook.hi.is/undirbuningur_stae/kafli01.html#talnakerfi>`_.
+    -  `Forgangsröðun aðgerða <https://edbook.hi.is/undirbuningur_stae/kafli01.html#forgangsroun-agera>`_.
+    -  `Reiknireglur <https://notendur.hi.is/undirbuningur_stae/kafli01.html#reiknireglur>`_.
+    -  `Brotareikningur <https://edbook.hi.is/undirbuningur_stae/kafli01.html#brotareikningur>`_.
+    -  `Veldi og rætur <https://edbook.hi.is/undirbuningur_stae/kafli01.html#veldi-og-raetur>`_.
+    -  `Sjá undirstöðuatriði um föll <https://edbook.hi.is/undirbuningur_stae/kafli05.html>`_.
 
 
 Inngangur
@@ -121,7 +121,7 @@ Skilgreining: Tölur
     fjölda. Ef maður lítur hins vegar þannig á að þær séu notaðar til að
     númera hluti þá er 0 ekki með.
 
-Sjá einnig http://edbook.hi.is/undirbuningur_stae/Kafli1.html#talnakerfi.
+Sjá einnig http://edbook.hi.is/undirbuningur_stae/kafli01.html#talnakerfi.
 
 Smíði rauntalna
 ~~~~~~~~~~~~~~~

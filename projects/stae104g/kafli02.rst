@@ -6,19 +6,19 @@ Markgildi og samfelldni
 
     **Nauðsynleg undirstaða**
 
-    -  `Jafna línu, P.2 <https://edbook.hi.is/undirbuningur_stae/Kafli03.html#jafna-linu-i-hnitakerfinu>`_
+    -  `Jafna línu, P.2 <https://edbook.hi.is/undirbuningur_stae/kafli03.html#jafna-linu-i-hnitakerfinu>`_
 
-    -  `Jafna hrings, P.3 <https://edbook.hi.is/undirbuningur_stae/Kafli03.html#hringir>`_
+    -  `Jafna hrings, P.3 <https://edbook.hi.is/undirbuningur_stae/kafli03.html#hringir>`_
 
-    -  `Hliðrun og skölun grafs, P.3 <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#ummyndanir>`_
+    -  `Hliðrun og skölun grafs, P.3 <https://edbook.hi.is/undirbuningur_stae/kafli09.html#ummyndanir>`_
 
-    -  `(Stranglega) minnkandi og (stranglega) vaxandi föll, 2.8 <https://edbook.hi.is/undirbuningur_stae/Kafli05.html#einhalla-foll>`_
+    -  `(Stranglega) minnkandi og (stranglega) vaxandi föll, 2.8 <https://edbook.hi.is/undirbuningur_stae/kafli05.html#einhalla-foll>`_
 
-    -  `Jafnstæð og oddstæð föll, P.4 <https://edbook.hi.is/undirbuningur_stae/Kafli05.html#jafnstae-og-oddstae-foll>`_
+    -  `Jafnstæð og oddstæð föll, P.4 <https://edbook.hi.is/undirbuningur_stae/kafli05.html#jafnstae-og-oddstae-foll>`_
 
-    -  `Margliður; deiling, þáttun og rætur, P.6 <https://edbook.hi.is/undirbuningur_stae/Kafli06.html>`_
+    -  `Margliður; deiling, þáttun og rætur, P.6 <https://edbook.hi.is/undirbuningur_stae/kafli06.html>`_
 
-    -  `Tölugildisfallið, P.1 <https://edbook.hi.is/undirbuningur_stae/Kafli02.html#tolugildi>`_
+    -  `Tölugildisfallið, P.1 <https://edbook.hi.is/undirbuningur_stae/kafli02.html#tolugildi>`_
 
     -  `Þríhyrningsójafnan, P.1 <https://is.wikipedia.org/wiki/%C3%9Er%C3%ADhyrnings%C3%B3jafna>`_
 

@@ -6,7 +6,7 @@ Rúmmál, massi og massamiðja
 
 	**Nauðsynleg undirstaða**
 
-    - `Undirstöðuatriði í rúmfræði <https://edbook.hi.is/undirbuningur_stae/Kafli03.html>`_.
+    - `Undirstöðuatriði í rúmfræði <https://edbook.hi.is/undirbuningur_stae/kafli03.html>`_.
 
 *The fact that we live at the bottom of a deep gravity well, on the surface of a
 gas covered planet going around a nuclear fireball 90 million miles away and think
