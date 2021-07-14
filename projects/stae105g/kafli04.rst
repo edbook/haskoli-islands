@@ -679,11 +679,11 @@ Af þessu fæst að hámarksrúmmál kassans er
 
 ------
 
-Regla de l’Hôpital
-------------------
+Regla l’Hôpital
+----------------
 
-Regla de l’Hôpital, einhliða útgáfa
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Regla l’Hôpital, einhliða útgáfa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að föllin :math:`f` og :math:`g` séu diffranleg á opnu
 bili :math:`]a,b[` og að :math:`g'(x)\neq 0` fyrir öll :math:`x\in ]a, b[`. Gerum enn
@@ -703,8 +703,8 @@ fremur ráð fyrir að
 
 Eins má skoða markgildi frá vinstri :math:`x\to a^-`.
 
-Regla de l’Hôpital
-~~~~~~~~~~~~~~~~~~
+Regla l’Hôpital
+~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að föllin :math:`f` og :math:`g` séu diffranleg á bilum
 :math:`]x_1, a[` og :math:`]a, x_2[` og að :math:`g'(x)\neq 0` fyrir öll
@@ -726,7 +726,7 @@ Dæmi
 ~~~~
 
 Við höfum áður séð að :math:`\lim_{x\to 0} \sin(x)/x = 1`.
-Skoðum hvernig hægt er að sýna þetta með lítilli fyrirhöfn og reglu de l’Hôpital.
+Skoðum hvernig hægt er að sýna þetta með lítilli fyrirhöfn og reglu l’Hôpital.
 
 Sjáum að :math:`f(x) = \sin(x)` og :math:`g(x)` eru diffranleg í grennd um 0
 og að :math:`g'(x) = 1 \neq 0`. Þá fæst að
@@ -734,8 +734,8 @@ og að :math:`g'(x) = 1 \neq 0`. Þá fæst að
 .. math::
     \lim_{x \to 0} \frac{\sin(x)}{x} = \lim_{x \to 0} \frac{\cos(x)}{1} = 1.
 
-Regla de l’Hôpital, :math:`\infty`-útgáfa
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Regla l’Hôpital, :math:`\infty`-útgáfa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að föllin :math:`f` og :math:`g` séu diffranleg á bilum
 :math:`]x_1, \infty[` og að :math:`g'(x)\neq 0` fyrir öll
@@ -752,8 +752,8 @@ Gerum ráð fyrir að föllin :math:`f` og :math:`g` séu diffranleg á bilum
 
 .. math:: \lim_{x\rightarrow \infty}\frac{f(x)}{g(x)}=L.
 
-Regla de l’Hôpital, tvíhliða útgáfa
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Regla l’Hôpital, tvíhliða útgáfa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að föllin :math:`f` og :math:`g` séu diffranleg á bilum
 :math:`(x_1, a)` og :math:`(a, x_2)` og að :math:`g'(x)\neq 0` fyrir öll

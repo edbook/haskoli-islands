@@ -346,9 +346,9 @@ kallað lokað form summunnar.
 
 	#. :math:`\sum_{i=1}^n i = 1+2+\dots+n = \frac{n(n+1)}{2}`
 
-	#. :math:`\sum_{i=1}^n i^2 = 1^2+2^2+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}
+	#. :math:`\sum_{i=1}^n i^2 = 1^2+2^2+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}`
 
-	#. :math:`\sum_{i=1}^n i^3 = 1^3+2^3+\dots+n^3 = \frac{n^2(n+1)^2}{4}``
+	#. :math:`\sum_{i=1}^n i^3 = 1^3+2^3+\dots+n^3 = \frac{n^2(n+1)^2}{4}`
 
 Nálgun svæða
 ~~~~~~~~~~~~

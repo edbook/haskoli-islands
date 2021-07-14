@@ -457,3 +457,7 @@ epub_exclude_files = ["search.html"]
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
+
+#custom frá Tryggva 
+def setup(app):
+    app.add_css_file('custom_admonitions.css')
