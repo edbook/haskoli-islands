@@ -1,20 +1,18 @@
 Tölur og föll
 =============
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     **Nauðsynleg undirstaða**
 
     -  `Undirstöðuatriði tölur og talnakerfi <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#talnakerfi>`_.
-
     -  `Forgangsröðun aðgerða <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#forgangsroun-agera>`_.
-
     -  `Reiknireglur <https://notendur.hi.is/undirbuningur_stae/Kafli01.html#reiknireglur>`_.
-
     -  `Brotareikningur <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#brotareikningur>`_.
-
     -  `Veldi og rætur <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#veldi-og-raetur>`_.
-
     -  `Sjá undirstöðuatriði um föll <https://edbook.hi.is/undirbuningur_stae/Kafli05.html>`_.
+
 
 Inngangur
 ---------
@@ -103,20 +101,21 @@ Tölur
 Skilgreining: Tölur
 ~~~~~~~~~~~~~~~~~~~
 
-(i)   :hover:`Náttúrlegu tölurnar,náttúrleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og
-      mengi þeirra er táknað með :math:`\mathbb{N}`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-(ii)  Mengi :hover:`heiltalna,heiltala` er táknað með :math:`\mathbb{Z}`.
-      :math:`\mathbb{Z}= \ldots,-2,-1,0,1,2,3,\ldots`
+    (i)   :hover:`Náttúrlegu tölurnar,náttúrleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og
+          mengi þeirra er táknað með :math:`\mathbb{N}`.
+    (ii)  Mengi :hover:`heiltalna,heiltala` er táknað með :math:`\mathbb{Z}`.
+          :math:`\mathbb{Z}= \ldots,-2,-1,0,1,2,3,\ldots`
+    (iii) Mengi :hover:`ræðra talna,ræð tala` er táknað með :math:`\mathbb{Q}`.
+          :math:`\mathbb{Q}= \{ \frac pq ; p,q \in \mathbb{Z}, q\neq 0\}`.
+    (iv)  Mengi :hover:`rauntalna,rauntala` er táknað með :math:`\mathbb{R}`.
+    (v)   Mengi :hover:`tvinntalna,tvinntala` er táknað með :math:`\mathbb{C}`.
 
-(iii) Mengi :hover:`ræðra talna,ræð tala` er táknað með :math:`\mathbb{Q}`.
-      :math:`\mathbb{Q}= \{ \frac pq ; p,q \in \mathbb{Z}, q\neq 0\}`.
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-(iv)  Mengi :hover:`rauntalna,rauntala` er táknað með :math:`\mathbb{R}`.
-
-(v)   Mengi :hover:`tvinntalna,tvinntala` er táknað með :math:`\mathbb{C}`.
-
-.. note::
     Margir vilja telja :math:`0` með sem náttúrlega tölu. Það
     er eðlilegt ef maður lítur á náttúrlegu tölurnar þannig að þær tákni
     fjölda. Ef maður lítur hins vegar þannig á að þær séu notaðar til að
@@ -176,43 +175,46 @@ Bil
 Skilgreining: Bil
 ~~~~~~~~~~~~~~~~~
 
-Látum :math:`a` og :math:`b` vera rauntölur þannig að
-:math:`a<b`. Skilgreinum
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-1. *opið bil* :math:`(a,b)=\{x\in \mathbb{R}; a<x<b\}`
+    Látum :math:`a` og :math:`b` vera rauntölur þannig að
+    :math:`a<b`. Skilgreinum
 
-2. *lokað bil* :math:`[a,b]=\{x\in \mathbb{R}; a\leq x\leq b\}`
+    1. *opið bil* :math:`(a,b)=\{x\in \mathbb{R}; a<x<b\}`
+    2. *lokað bil* :math:`[a,b]=\{x\in \mathbb{R}; a\leq x\leq b\}`
+    3. *hálfopið bil* :math:`[a,b)=\{x\in \mathbb{R}; a\leq x<b\}`
+    4. *hálfopið bil* :math:`(a,b]=\{x\in \mathbb{R}; a< x\leq b\}`
 
-3. *hálfopið bil* :math:`[a,b)=\{x\in \mathbb{R}; a\leq x<b\}`
+    Þessi bil sem er skilgreind hér fyrir ofan eru kölluð endanleg. Til eru
+    fleiri gerðir af bilum:
 
-4. *hálfopið bil* :math:`(a,b]=\{x\in \mathbb{R}; a< x\leq b\}`
-
-Þessi bil sem er skilgreind hér fyrir ofan eru kölluð endanleg. Til eru
-fleiri gerðir af bilum:
-
-5. *opið óendanlegt bil* :math:`(a,\infty)=\{x\in \mathbb{R}; a<x\}`
-
-6. *opið óendanlegt bil* :math:`(-\infty, a)=\{x\in \mathbb{R}; x<a\}`
-
-7. *lokað óendanlegt bil* :math:`[a,\infty)=\{x\in \mathbb{R}; a\leq x\}`
-
-8. *lokað óendanlegt bil* :math:`(-\infty, a]=\{x\in \mathbb{R}; x\leq a\}`
-
-9. *allur rauntalnaásinn* :math:`(-\infty, \infty)= \mathbb{R}`.
+    5. *opið óendanlegt bil* :math:`(a,\infty)=\{x\in \mathbb{R}; a<x\}`
+    6. *opið óendanlegt bil* :math:`(-\infty, a)=\{x\in \mathbb{R}; x<a\}`
+    7. *lokað óendanlegt bil* :math:`[a,\infty)=\{x\in \mathbb{R}; a\leq x\}`
+    8. *lokað óendanlegt bil* :math:`(-\infty, a]=\{x\in \mathbb{R}; x\leq a\}`
+    9. *allur rauntalnaásinn* :math:`(-\infty, \infty)= \mathbb{R}`.
 
 Skilgreining: Bil
 ~~~~~~~~~~~~~~~~~
 
-Mengi :math:`A` af rauntölum kallast :hover:`bil` ef um allar
-tölur :math:`a<b` sem eru í menginu :math:`A` gildir að ef :math:`a<x<b`
-þá er :math:`x` líka í menginu :math:`A`. Þ.e. bil innihalda engin göt.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. note::
+    Mengi :math:`A` af rauntölum kallast :hover:`bil` ef um allar
+    tölur :math:`a<b` sem eru í menginu :math:`A` gildir að ef :math:`a<x<b`
+    þá er :math:`x` líka í menginu :math:`A`. Þ.e. bil innihalda engin göt.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Sérhvert bil á rauntalnaásnum er af einni þeirra gerða sem talin er
     upp í `Skilgreining 1.3.1`_. Þessi staðhæfing er jafngild frumsendunni um
     efra mark.
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Það er jafngilt að segja
 
     .. math:: x \in (a-\eta,a+\eta)
@@ -234,12 +236,15 @@ Föll
 Skilgreining: Vörpun
 ~~~~~~~~~~~~~~~~~~~~
 
-:hover:`Vörpun` frá mengi :math:`X` yfir í mengi :math:`Y` er
-regla sem úthlutar sérhverju staki :math:`x` í :math:`X` nákvæmlega einu
-staki :math:`f(x)` í :math:`Y`. Táknum þetta með :math:`f:X \to Y`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Stakið :math:`f(x)` kallast :hover:`gildi` vörpunarinnar (í punktinum
-:math:`x`).
+    :hover:`Vörpun` frá mengi :math:`X` yfir í mengi :math:`Y` er
+    regla sem úthlutar sérhverju staki :math:`x` í :math:`X` nákvæmlega einu
+    staki :math:`f(x)` í :math:`Y`. Táknum þetta með :math:`f:X \to Y`.
+
+    Stakið :math:`f(x)` kallast :hover:`gildi` vörpunarinnar (í punktinum
+    :math:`x`).
 
 
 .. index::
@@ -250,16 +255,21 @@ Stakið :math:`f(x)` kallast :hover:`gildi` vörpunarinnar (í punktinum
 Skilgreining
 ~~~~~~~~~~~~
 
-Mengið :math:`X` kallast :hover:`skilgreiningarmengi`
-:math:`f`, mengið :math:`Y` kallast :hover:`bakmengi`
-:math:`f` og mengið
-:math:`f(X) = \{ f(x); x \in X \}` kallast :hover:`myndmengi` :math:`f`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Mengið :math:`X` kallast :hover:`skilgreiningarmengi`
+    :math:`f`, mengið :math:`Y` kallast :hover:`bakmengi`
+    :math:`f` og mengið
+    :math:`f(X) = \{ f(x); x \in X \}` kallast :hover:`myndmengi` :math:`f`.
 
 .. image:: ./myndir/kafli01/02_Mynd_vorpunar.png
     :align: center
     :width: 50%
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun
+
     Það er ekki víst að öll gildin í :math:`Y` séu tekin
     (það er :math:`f(X)` getur verið minna en :math:`Y`). Eins þá er mögulegt
     að :math:`f` taki sama gildið oftar en einu sinni.
@@ -273,12 +283,15 @@ Mengið :math:`X` kallast :hover:`skilgreiningarmengi`
 Skilgreining: Samskeyting
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f:X \to Y` og :math:`g:Y \to Z` vera
-varpanir. Vörpunin :math:`g\circ f:X \to Z` sem skilgreind er með
-:math:`(g\circ f)(x)=g(f(x))` kallast :hover:`samskeyting` :math:`f` og
-:math:`g`. Stakið :math:`g(f(x)) \in Z` fæst með því að beita fyrst
-vörpuninni :math:`f` á stakið :math:`x` og síðan vörpuninni :math:`g` á
-stakið :math:`f(x)`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`f:X \to Y` og :math:`g:Y \to Z` vera
+    varpanir. Vörpunin :math:`g\circ f:X \to Z` sem skilgreind er með
+    :math:`(g\circ f)(x)=g(f(x))` kallast :hover:`samskeyting` :math:`f` og
+    :math:`g`. Stakið :math:`g(f(x)) \in Z` fæst með því að beita fyrst
+    vörpuninni :math:`f` á stakið :math:`x` og síðan vörpuninni :math:`g` á
+    stakið :math:`f(x)`.
 
 .. image:: ./myndir/kafli01/02_Samskeyting.png
     :align: center
@@ -287,17 +300,20 @@ stakið :math:`f(x)`.
 Dæmi
 ~~~~
 
-Skoðum föllin :math:`f:\mathbb R \to \mathbb R, f(x) = 2x-1`
-og :math:`g:\mathbb R \to \mathbb R, g(x) = x^2`.
-Þá er samskeytingin :math:`g\circ f`
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math::
-    g(f(x) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
+    Skoðum föllin :math:`f:\mathbb R \to \mathbb R, f(x) = 2x-1`
+    og :math:`g:\mathbb R \to \mathbb R, g(x) = x^2`.
+    Þá er samskeytingin :math:`g\circ f`
 
-Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið
+    .. math::
+        g(f(x) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
 
-.. math::
-    f(g(x)) = f(x^2) = 2x^2-1
+    Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið
+
+    .. math::
+        f(g(x)) = f(x^2) = 2x^2-1
 
 .. index::
     fall; átækt
@@ -306,14 +322,17 @@ Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið
 Skilgreining: Átækni og eintækni
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við segjum að vörpunin :math:`f` sé :hover:`átæk,átækur` ef
-:math:`f(X)=Y`, það þýðir að fyrir sérhvert stak :math:`y` í :math:`Y`
-þá er til (amk. eitt) stak :math:`x` í :math:`X` þannig að
-:math:`f(x)=y`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Segjum að vörpunin :math:`f` sé :hover:`eintæk` ef :math:`f(x_1) = f(x_2)`
-hefur í för með sér að :math:`x_1=x_2`, það er sérhvert gildi sem vörpunin
-tekur er bara tekið einu sinni.
+    Við segjum að vörpunin :math:`f` sé :hover:`átæk,átækur` ef
+    :math:`f(X)=Y`, það þýðir að fyrir sérhvert stak :math:`y` í :math:`Y`
+    þá er til (amk. eitt) stak :math:`x` í :math:`X` þannig að
+    :math:`f(x)=y`.
+
+    Segjum að vörpunin :math:`f` sé :hover:`eintæk` ef :math:`f(x_1) = f(x_2)`
+    hefur í för með sér að :math:`x_1=x_2`, það er sérhvert gildi sem vörpunin
+    tekur er bara tekið einu sinni.
 
 .. index::
     fall; gagntækt
@@ -321,7 +340,10 @@ tekur er bara tekið einu sinni.
 Skilgreining: Gagntækni
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Vörpun sem er bæði eintæk og átæk kallast :hover:`gagntæk`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Vörpun sem er bæði eintæk og átæk kallast :hover:`gagntæk`.
 
 
 .. index::
@@ -332,17 +354,22 @@ Vörpun sem er bæði eintæk og átæk kallast :hover:`gagntæk`.
 Skilgreining: Andhverfa
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f:X \to Y` vera vörpun. Sagt er að :math:`f`
-sé :hover:`andhverfanleg,andhverfanlegur` ef til er vörpun :math:`f^{-1}:Y \to X` þannig að
-samskeyting varpananna :math:`f` og :math:`f^{-1}` annars vegar og
-:math:`f^{-1}` og :math:`f` hins vegar sé viðeigandi :hover:`samsemdarvörpun`,
-þ.e. :math:`f^{-1}\circ f=id_X` og :math:`f\circ f^{-1} = id_Y`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`f:X \to Y` vera vörpun. Sagt er að :math:`f`
+    sé :hover:`andhverfanleg,andhverfanlegur` ef til er vörpun :math:`f^{-1}:Y \to X` þannig að
+    samskeyting varpananna :math:`f` og :math:`f^{-1}` annars vegar og
+    :math:`f^{-1}` og :math:`f` hins vegar sé viðeigandi :hover:`samsemdarvörpun`,
+    þ.e. :math:`f^{-1}\circ f=id_X` og :math:`f\circ f^{-1} = id_Y`.
 
 .. image:: ./myndir/kafli01/02_Andhverfa.png
     :align: center
     :width: 50%
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Venjulega hjá okkur þá eru mengin :math:`X` og :math:`Y`
     mengi af rauntölum. Þegar :math:`Y` er mengi af tölum þá er notast við
     orðið :hover:`fall` í stað orðsins *vörpun*.
@@ -352,15 +379,21 @@ samskeyting varpananna :math:`f` og :math:`f^{-1}` annars vegar og
 
 Dæmi
 ~~~~
-Látum :math:`X=[0,2]`, :math:`Y=[0,4]` og :math:`f:X \to Y, f(x) = x^2`.
-Þá er :math:`f` gagntæk vörpun og andhverfan er gefin með
-:math:`f^{-1}(x) = \sqrt x`.
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Látum :math:`X=[0,2]`, :math:`Y=[0,4]` og :math:`f:X \to Y, f(x) = x^2`.
+    Þá er :math:`f` gagntæk vörpun og andhverfan er gefin með
+    :math:`f^{-1}(x) = \sqrt x`.
 
 .. image::  ./myndir/kafli01/04_andhverfa.png
     :align: center
     :width: 50%
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Hér má velja :math:`X` sem önnur mengi en :math:`[0,2]` svo lengi sem
     :math:`X` inniheldur ekki bæði :math:`a` og :math:`-a`, :math:`a\neq 0`,
     því þá er :math:`f` ekki lengur eintæk.
@@ -371,11 +404,14 @@ Látum :math:`X=[0,2]`, :math:`Y=[0,4]` og :math:`f:X \to Y, f(x) = x^2`.
 Skilgreining: Graf
 ~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f:X \to Y` vera fall þannig að :math:`X`
-og :math:`Y` eru mengi af rauntölum. :hover:`Graf` fallsins :math:`f` er þá
-mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
-:math:`(x,f(x))` þar sem :math:`x\in X`. Hér notum við oft :math:`y` í stað
-:math:`f(x)`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`f:X \to Y` vera fall þannig að :math:`X`
+    og :math:`Y` eru mengi af rauntölum. :hover:`Graf` fallsins :math:`f` er þá
+    mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
+    :math:`(x,f(x))` þar sem :math:`x\in X`. Hér notum við oft :math:`y` í stað
+    :math:`f(x)`.
 
 .. ggb:: 1468111
     :width: 700
@@ -391,17 +427,19 @@ mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
 Skilgreining: Jafnstætt og oddstætt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við segjum að fall :math:`f` sé :hover:`jafnstætt,jafnstæður` ef
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: f(x) = f(-x)
+    Við segjum að fall :math:`f` sé :hover:`jafnstætt,jafnstæður` ef
 
-fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
+    .. math:: f(x) = f(-x)
 
-Við segjum að fall :math:`f` sé :hover:`oddstætt` ef
+    fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
+    Við segjum að fall :math:`f` sé :hover:`oddstætt` ef
 
-.. math:: f(x) = -f(-x)
+    .. math:: f(x) = -f(-x)
 
-fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
+    fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
 
 .. image::  ./myndir/kafli01/04_JafnstaettOddstaett.png
     :align: center

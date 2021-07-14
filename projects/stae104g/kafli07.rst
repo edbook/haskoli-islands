@@ -1,10 +1,12 @@
 Rúmmál, massi og massamiðja
 ===========================
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
 	**Nauðsynleg undirstaða**
 
-  - `Undirstöðuatriði í rúmfræði <https://edbook.hi.is/undirbuningur_stae/Kafli03.html>`_.
+    - `Undirstöðuatriði í rúmfræði <https://edbook.hi.is/undirbuningur_stae/Kafli03.html>`_.
 
 *The fact that we live at the bottom of a deep gravity well, on the surface of a
 gas covered planet going around a nuclear fireball 90 million miles away and think
@@ -22,7 +24,7 @@ Rúmmál, lengd og flatarmál
 --------------------------
 
 Rúmmál rúmskika
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Rúmskiki :math:`D` liggur á milli plananna :math:`x=a` og :math:`x=b`.
 Táknum með :math:`A(x)` flatarmál þversniðs :math:`D` við plan sem sker
@@ -226,37 +228,43 @@ Massamiðja
 Skilgreining: Massamiðja punktmassa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Punktmassar :math:`m_1, m_2, \ldots, m_n` eru staðsettir í punktunum
-:math:`x_1,
-x_2, \ldots, x_n` á :math:`x`-ásnum.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-:hover:`Vægi` kerfisins um punktinn :math:`x=0` er skilgreint sem
+    Punktmassar :math:`m_1, m_2, \ldots, m_n` eru staðsettir í punktunum
+    :math:`x_1,
+    x_2, \ldots, x_n` á :math:`x`-ásnum.
 
-.. math:: M_{x=0}=\sum_{i=1}^n x_im_i,
+    :hover:`Vægi` kerfisins um punktinn :math:`x=0` er skilgreint sem
 
-og :hover:`massamiðja,þyngdarmiðja` kerfisins er
+    .. math:: M_{x=0}=\sum_{i=1}^n x_im_i,
 
-.. math:: \overline{x}=\frac{M_{x=0}}{m} = \frac{\sum_{i=1}^n x_im_i}{\sum_{i=1}^n m_i}.
+    og :hover:`massamiðja,þyngdarmiðja` kerfisins er
+
+    .. math:: \overline{x}=\frac{M_{x=0}}{m} = \frac{\sum_{i=1}^n x_im_i}{\sum_{i=1}^n m_i}.
 
 Skilgreining: Massamiðja
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef massi er dreifður samkvæmt þéttleika falli :math:`\delta(x)` um bil
-:math:`[a, b]` á :math:`x`-ásnum þá er massi og vægi um punktinn
-:math:`x=0` gefið með formúlunum
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math::
+        Ef massi er dreifður samkvæmt þéttleika falli :math:`\delta(x)` um bil
+        :math:`[a, b]` á :math:`x`-ásnum þá er massi og vægi um punktinn
+        :math:`x=0` gefið með formúlunum
 
-   m=\int_a^b \delta(x)\,dx
-   \qquad\text{ og }\qquad
-   M_{x=0}= \int_a^b x\delta(x)\,dx.
+    .. math::
 
-Massamiðjan er gefin með formúlunni
+       m=\int_a^b \delta(x)\,dx
+       \qquad\text{ og }\qquad
+       M_{x=0}= \int_a^b x\delta(x)\,dx.
 
-.. math::
+    Massamiðjan er gefin með formúlunni
 
-   \overline{x}=\frac{M_{x=0}}{m}   =
-   \frac{\int_a^b x\delta(x)\,dx}{\int_a^b \delta(x)\,dx}.
+    .. math::
+
+       \overline{x}=\frac{M_{x=0}}{m}   =
+       \frac{\int_a^b x\delta(x)\,dx}{\int_a^b \delta(x)\,dx}.
 
 
 .. index::
@@ -265,31 +273,34 @@ Massamiðjan er gefin með formúlunni
 Skilgreining: Massamiðja plötu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Skoðum plötu af sömu gerð og í :ref:`7.2.2 <massi-plotu>`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Vægi plötunnar um :math:`y`- og :math:`x`-ása eru gefin með formúlunum
+    Skoðum plötu af sömu gerð og í :ref:`7.2.2 <massi-plotu>`.
 
-.. math::
+    Vægi plötunnar um :math:`y`- og :math:`x`-ása eru gefin með formúlunum
 
-   M_{x=0}=\int_a^b x\delta(x)f(x)\,dx
-   \qquad\text{og}\qquad
-   M_{y=0}=\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx,
+    .. math::
 
-og hnit massamiðju plötunnar, :math:`(\overline{x}, \overline{y})`, eru
-gefin með jöfnunum
+       M_{x=0}=\int_a^b x\delta(x)f(x)\,dx
+       \qquad\text{og}\qquad
+       M_{y=0}=\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx,
 
-.. math::
+    og hnit massamiðju plötunnar, :math:`(\overline{x}, \overline{y})`, eru
+    gefin með jöfnunum
 
-   \overline{x}=\frac{M_{x=0}}{m}=
-   \frac{\int_a^b x\delta(x)f(x)\,dx}{\int_a^b \delta(x)f(x)\,dx}
+    .. math::
 
-og
+       \overline{x}=\frac{M_{x=0}}{m}=
+       \frac{\int_a^b x\delta(x)f(x)\,dx}{\int_a^b \delta(x)f(x)\,dx}
 
-.. math::
+    og
 
-   \overline{y}=\frac{M_{y=0}}{m}=
-   \frac{\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx}{\int_a^b
-   \delta(x)f(x)\,dx}.
+    .. math::
+
+       \overline{y}=\frac{M_{y=0}}{m}=
+       \frac{\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx}{\int_a^b
+       \delta(x)f(x)\,dx}.
 
 .. index::
     setning Pappusar
@@ -297,22 +308,28 @@ og
 Setning Pappusar, I
 ~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`R` vera svæði sem liggur í plani öðrum megin við línu
-:math:`L`. Látum :math:`A` tákna flatarmál :math:`R` og
-:math:`\overline{r}` tákna fjarlægð massamiðju :math:`R` frá :math:`L`.
+.. admonition:: Setning
+    :class: setning
 
-Þegar svæðinu :math:`R` er snúið :math:`360^\circ` um :math:`L` myndast
-snúðskiki með rúmmál
+    Látum :math:`R` vera svæði sem liggur í plani öðrum megin við línu
+    :math:`L`. Látum :math:`A` tákna flatarmál :math:`R` og
+    :math:`\overline{r}` tákna fjarlægð massamiðju :math:`R` frá :math:`L`.
 
-.. math:: V=2\pi\overline{r}A.
+    Þegar svæðinu :math:`R` er snúið :math:`360^\circ` um :math:`L` myndast
+    snúðskiki með rúmmál
+
+    .. math:: V=2\pi\overline{r}A.
 
 Setning Pappusar, II
 ~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`C` vera feril sem liggur í plani og er allur öðrum
-megin við línu :math:`L`. Látum :math:`s` tákna lengd :math:`C` og
-:math:`\overline{r}` tákna fjarlægð massamiðju :math:`C` frá :math:`L`.
-Þegar ferlinum :math:`C` er snúið :math:`360^\circ` um :math:`L` myndast
-snúðflötur með flatarmál
+.. admonition:: Setning
+    :class: setning
 
-.. math:: S=2\pi\overline{r}s.
+    Látum :math:`C` vera feril sem liggur í plani og er allur öðrum
+    megin við línu :math:`L`. Látum :math:`s` tákna lengd :math:`C` og
+    :math:`\overline{r}` tákna fjarlægð massamiðju :math:`C` frá :math:`L`.
+    Þegar ferlinum :math:`C` er snúið :math:`360^\circ` um :math:`L` myndast
+    snúðflötur með flatarmál
+
+    .. math:: S=2\pi\overline{r}s.

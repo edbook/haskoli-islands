@@ -1,7 +1,9 @@
 Torræð föll
 ===========
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
 	**Nauðsynleg undirstaða**
 
 	- `Hornaföll, P7 <https://edbook.hi.is/undirbuningur_stae/Kafli07.html>`_.
@@ -27,17 +29,20 @@ Náttúrlegi logrinn
 Skilgreining: Náttúrlegi logrinn
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`A_{x_0}` tákna flatarmál svæðisins sem afmarkast af
-:math:`x`-ás, grafinu :math:`y=\frac{1}{x}` og línunum :math:`x=1` og
-:math:`x=x_0`. Þá skilgreinum við :hover:`náttúrlega logrann,náttúrlegur logri` með formúlunni
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math::
+    Látum :math:`A_{x_0}` tákna flatarmál svæðisins sem afmarkast af
+    :math:`x`-ás, grafinu :math:`y=\frac{1}{x}` og línunum :math:`x=1` og
+    :math:`x=x_0`. Þá skilgreinum við :hover:`náttúrlega logrann,náttúrlegur logri` með formúlunni
 
-   \ln x_0 =\left\{\begin{array}{ll}
-   A_{x_0} & \text{ef }x_0 \geq 1,\\
-   -A_{x_0} & \text{ef }0<x_0<1.
-   \end{array}
-   \right.
+    .. math::
+
+       \ln x_0 =\left\{\begin{array}{ll}
+       A_{x_0} & \text{ef }x_0 \geq 1,\\
+       -A_{x_0} & \text{ef }0<x_0<1.
+       \end{array}
+       \right.
 
 .. ggb:: j2UHkvOM
     :width: 700
@@ -46,32 +51,37 @@ Látum :math:`A_{x_0}` tákna flatarmál svæðisins sem afmarkast af
     :imgwidth: 12cm
     :zoom_drag: false
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun 
+
     Fallið :math:`\ln` er bara skilgreint fyrir jákvæðar rauntölur
 
 
 Setning
 ~~~~~~~
-Náttúrlegi logrinn er diffranlegur og afleiðan uppfyllir
 
-.. math:: \frac{d}{dx}\ln x=\frac{1}{x}.
+.. admonition:: Setning
+    :class: setning
+
+    Náttúrlegi logrinn er diffranlegur og afleiðan uppfyllir
+
+    .. math:: \frac{d}{dx}\ln x=\frac{1}{x}.
 
 Af þessu fylgir að logrinn er samfellt fall.
 
 Setning
 ~~~~~~~
 
-Fyrir allar tölur :math:`x,y>0` gildir að:
+.. admonition:: Setning
+    :class: setning
 
-(i)   :math:`\ln(1) = 0`
+    Fyrir allar tölur :math:`x,y>0` gildir að:
 
-(ii)  :math:`\ln(xy)=\ln x+\ln y`
-
-(iii) :math:`\ln(1/x)=-\ln x`
-
-(iv)  :math:`\ln(x/y)=\ln x-\ln y`
-
-(v)   :math:`\ln (x^r)=r\ln x`, fyrir :math:`r \in mathbb Q`.
+    (i)   :math:`\ln(1) = 0`
+    (ii)  :math:`\ln(xy)=\ln x+\ln y`
+    (iii) :math:`\ln(1/x)=-\ln x`
+    (iv)  :math:`\ln(x/y)=\ln x-\ln y`
+    (v)   :math:`\ln (x^r)=r\ln x`, fyrir :math:`r \in mathbb Q`.
 
 .. index::
     veldisvísisfallið
@@ -82,15 +92,21 @@ Veldisvísisfallið
 Setning
 ~~~~~~~
 
-Fallið :math:`\ln x` er strangt vaxandi og þar með eintækt.
+.. admonition:: Setning
+    :class: setning
+
+    Fallið :math:`\ln x` er strangt vaxandi og þar með eintækt.
 
 Skilgreining: Veldisvísisfallið
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:hover:`Veldisvísisfallið,veldisvísisfall`, :math:`\exp x`, er skilgreint sem andhverfa fallsins
-:math:`\ln x`. Skilgreiningarsvæði :math:`\exp x` er jafnt myndmengi
-:math:`\ln x` sem er :math:`{{\mathbb  R}}`. Myndmengi :math:`\exp x` er
-jafnt skilgreiningarsvæði :math:`\ln x` sem er bilið :math:`(0,\infty)`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    :hover:`Veldisvísisfallið,veldisvísisfall`, :math:`\exp x`, er skilgreint sem andhverfa fallsins
+    :math:`\ln x`. Skilgreiningarsvæði :math:`\exp x` er jafnt myndmengi
+    :math:`\ln x` sem er :math:`{{\mathbb  R}}`. Myndmengi :math:`\exp x` er
+    jafnt skilgreiningarsvæði :math:`\ln x` sem er bilið :math:`(0,\infty)`.
 
 .. image:: ./myndir/kafli04/02_ln-exp.png
 	:align: center
@@ -103,18 +119,23 @@ jafnt skilgreiningarsvæði :math:`\ln x` sem er bilið :math:`(0,\infty)`.
 Skilgreining: Talan :math:`e`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Skilgreinum töluna með :math:`e=\exp 1`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Það þýðir að :math:`\ln(e)=1`, og talan :math:`e` ákvarðast þess vegna
-af því að flatarmál svæðisins milli :math:`x`-ás og grafs
-:math:`\frac 1x` á bilinu :math:`[1,e]` sé 1.
+    Skilgreinum töluna með :math:`e=\exp 1`.
+
+    Það þýðir að :math:`\ln(e)=1`, og talan :math:`e` ákvarðast þess vegna
+    af því að flatarmál svæðisins milli :math:`x`-ás og grafs
+    :math:`\frac 1x` á bilinu :math:`[1,e]` sé 1.
 
 .. image:: ./myndir/kafli04/02_ln-e.png
 	:align: center
 	:width: 12cm
 
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     **Hver er munurinn á** :math:`e^x` **og** :math:`\exp(x)` **?**
 
     :math:`e^x` er aðeins skilgreint þegar :math:`x` er ræð tala, en
@@ -133,7 +154,9 @@ af því að flatarmál svæðisins milli :math:`x`-ás og grafs
     greinarmun á :math:`e^x` og :math:`\exp x`, við notum bara það sem lítur
     betur út fagurfræðilega.
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Athugið að
 
     .. math::
@@ -147,16 +170,14 @@ Eiginleikar veldisvísisfallsins
 Út frá eiginleikum lograns fáum við svo eftirfarandi
 
 (i)   :math:`e^0=1`,
-
 (ii)  :math:`e^{x+y}=e^x e^y`,
-
 (iii) :math:`e^{-x}=\frac{1}{e^x}`,
-
 (iv)  :math:`e^{x-y}=\frac{e^x}{e^y}`,
-
 (v)   :math:`\left(e^x\right)^y=e^{xy}`, fyrir :math:`y \in \mathbb Q`.
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     **Hænan eða eggið?** Hér höfum við nálgast :math:`\ln` og :math:`\exp`
     þannig að við byrjum á að skilgreina :math:`\ln` með heildi (flatarmáli)
     og finnum svo andhverfu lograns, :math:`\exp`.
@@ -180,9 +201,12 @@ Eiginleikar veldisvísisfallsins
 Skilgreining
 ~~~~~~~~~~~~
 
-Fyrir tölu :math:`a>0` og rauntölu :math:`x` skilgreinum við
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: a^x=e^{x\ln a}.
+    Fyrir tölu :math:`a>0` og rauntölu :math:`x` skilgreinum við
+
+    .. math:: a^x=e^{x\ln a}.
 
 .. index::
     logri; grunntala
@@ -190,52 +214,52 @@ Fyrir tölu :math:`a>0` og rauntölu :math:`x` skilgreinum við
 Skilgreining
 ~~~~~~~~~~~~
 
-Andhverfa fallsins :math:`a^x` er kölluð *logri með grunntölu* :math:`a`
-og táknuð með :math:`\log_a x`. Fallið :math:`\log_a x` er skilgreint
-fyrir öll :math:`x>0`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Andhverfa fallsins :math:`a^x` er kölluð *logri með grunntölu* :math:`a`
+    og táknuð með :math:`\log_a x`. Fallið :math:`\log_a x` er skilgreint
+    fyrir öll :math:`x>0`.
 
 Athugasemd
 ~~~~~~~~~~
 
-.. math::
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-   y =\log_a(x)\qquad \text{ þá og því aðeins að } \qquad x = a^y.
+    .. math::
 
-Setning
-~~~~~~~
+       y =\log_a(x)\qquad \text{ þá og því aðeins að } \qquad x = a^y.
 
-Fyrir rauntölu :math:`a>0` og allar rauntölur :math:`x,y` gildir að:
+Reiknireglur
+~~~~~~~~~~~~
 
-(i)   :math:`a^0=1`
+.. admonition:: Setning
+    :class: setning
 
-(ii)  :math:`a^1=a`
+    Fyrir rauntölu :math:`a>0` og allar rauntölur :math:`x,y` gildir að:
 
-(iii) :math:`a^{x+y}=a^xa^y`
+    (i)   :math:`a^0=1`
+    (ii)  :math:`a^1=a`
+    (iii) :math:`a^{x+y}=a^xa^y`
+    (iv)  :math:`a^{-x}=\frac{1}{a^x}`
+    (v)   :math:`a^{x-y}=\frac{a^x}{a^y}`
+    (vi)  :math:`\big(a^x\big)^y=a^{xy}`
+    (vii) :math:`(ab)^x=a^xb^x` (hér er forsenda að :math:`b>0`).
 
-(iv)  :math:`a^{-x}=\frac{1}{a^x}`
+.. admonition:: Setning
+    :class: setning
 
-(v)   :math:`a^{x-y}=\frac{a^x}{a^y}`
+    Fyrir rauntölu :math:`a>0` og allar rauntölur :math:`x,y` gildir að:
 
-(vi)  :math:`\big(a^x\big)^y=a^{xy}`
-
-(vii) :math:`(ab)^x=a^xb^x` (hér er forsenda að :math:`b>0`).
-
-Fyrir rauntölu :math:`a>0` og allar rauntölur :math:`x,y` gildir að:
-
-(i)   :math:`\log_a 1=0`
-
-(ii)  :math:`\log_a a = 1`
-
-(iii) :math:`\log_a(xy)=\log_a x+\log_a y`
-
-(iv)  :math:`\log_a (1/x)=-\log_a x`
-
-(v)   :math:`\log_a (x/y)=\log_a x-\log_a y`
-
-(vi)  :math:`\log_a (x^y)=y\log_a x`
-
-(vii) :math:`\log_a x=\frac{\log_b x}{\log_b a}` (hér er forsenda að
-      :math:`b>0`).
+    (i)   :math:`\log_a 1=0`
+    (ii)  :math:`\log_a a = 1`
+    (iii) :math:`\log_a(xy)=\log_a x+\log_a y`
+    (iv)  :math:`\log_a (1/x)=-\log_a x`
+    (v)   :math:`\log_a (x/y)=\log_a x-\log_a y`
+    (vi)  :math:`\log_a (x^y)=y\log_a x`
+    (vii) :math:`\log_a x=\frac{\log_b x}{\log_b a}` (hér er forsenda að
+          :math:`b>0`).
 
 Eiginleikar veldisvísisfalla og logra
 -------------------------------------
@@ -243,28 +267,30 @@ Eiginleikar veldisvísisfalla og logra
 Setning
 ~~~~~~~
 
-(i)   :math:`\frac{d}{dx}\ln x=\frac 1x`
+.. admonition:: Setning
+    :class: setning
 
-(ii)  :math:`\frac{d}{dx}e^x=e^x`
-
-(iii) :math:`\frac{d}{dx}a^x=(\ln a)a^x`
-
-(iv)  :math:`\frac{d}{dx}\log_a x=\frac{1}{(\ln a)x}`
+    (i)   :math:`\frac{d}{dx}\ln x=\frac 1x`
+    (ii)  :math:`\frac{d}{dx}e^x=e^x`
+    (iii) :math:`\frac{d}{dx}a^x=(\ln a)a^x`
+    (iv)  :math:`\frac{d}{dx}\log_a x=\frac{1}{(\ln a)x}`
 
 Setning
 ~~~~~~~
 
-Ef :math:`a>0` þá er
+.. admonition:: Setning
+    :class: setning
 
-(i)   :math:`\lim_{x\to \infty} \frac{x^a}{e^x} = 0`
+    Ef :math:`a>0` þá er
 
-(ii)  :math:`\lim_{x\to \infty} \frac{\ln(x)}{x^a} = 0`
+    (i)   :math:`\lim_{x\to \infty} \frac{x^a}{e^x} = 0`
+    (ii)  :math:`\lim_{x\to \infty} \frac{\ln(x)}{x^a} = 0`
+    (iii) :math:`\lim_{x\to -\infty} |x|^a e^x = 0`
+    (iv)  :math:`\lim_{x\to 0^+} x^a\, \ln(x) = 0`
 
-(iii) :math:`\lim_{x\to -\infty} |x|^a e^x = 0`
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-(iv)  :math:`\lim_{x\to 0^+} x^a\, \ln(x) = 0`
-
-.. note::
     Athugið að setningin að ofan gildir óháð því hversu stórt :math:`a` er
     (liðir 1 og 3) eða hversu lítið :math:`a` er (liðir 2 og 4).
 
@@ -292,10 +318,13 @@ og hefur þar af leiðandi andhverfu.
 Skilgreining: arcsin
 ~~~~~~~~~~~~~~~~~~~~
 
-*Andhverfa sínussins*, táknuð :math:`\arcsin(x)` (eða
-:math:`\sin^{-1}(x)`), er andhverfa :math:`{{\text{Sin}}}` og hefur því
-myndmengið :math:`[-\frac \pi 2,
-\frac \pi 2]` og skilgreiningarmengið :math:`[-1,1]`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    *Andhverfa sínussins*, táknuð :math:`\arcsin(x)` (eða
+    :math:`\sin^{-1}(x)`), er andhverfa :math:`{{\text{Sin}}}` og hefur því
+    myndmengið :math:`[-\frac \pi 2,
+    \frac \pi 2]` og skilgreiningarmengið :math:`[-1,1]`.
 
 .. image:: ./myndir/kafli04/05_arcsin.png
 	:align: center
@@ -316,9 +345,12 @@ andhverfu.
 Skilgreining: arccos
 ~~~~~~~~~~~~~~~~~~~~
 
-*Andhverfa kósínussins*, táknuð :math:`\arccos(x)` (eða
-:math:`\cos^{-1}(x)`), er andhverfa :math:`{{\text{Cos}}}` og hefur því
-myndmengið :math:`[0,\pi]` og skilgreiningarmengið :math:`[-1,1]`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    *Andhverfa kósínussins*, táknuð :math:`\arccos(x)` (eða
+    :math:`\cos^{-1}(x)`), er andhverfa :math:`{{\text{Cos}}}` og hefur því
+    myndmengið :math:`[0,\pi]` og skilgreiningarmengið :math:`[-1,1]`.
 
 .. image:: ./myndir/kafli04/05_arccos.png
 	:align: center
@@ -340,13 +372,16 @@ bilsins ekki með. :math:`\tan(x)` takmarkað við þetta bil táknum við með
 Skilgreining: arctan
 ~~~~~~~~~~~~~~~~~~~~
 
-*Andhverfa tangensins*, táknuð :math:`\arctan(x)` (eða
-:math:`\tan^{-1}(x)`), er andhverfa :math:`{{\text{Tan}}}` og hefur því
-myndmengið :math:`(-\frac \pi 2,
-\frac \pi 2)` og skilgreiningarmengið :math:`(-\infty,\infty)`. Þar að
-auki þá er
-:math:`\lim_{x\to \infty} \arctan(x) = \frac \pi 2` og
-:math:`\lim_{x\to -\infty} \arctan(x) = -\frac \pi 2`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    *Andhverfa tangensins*, táknuð :math:`\arctan(x)` (eða
+    :math:`\tan^{-1}(x)`), er andhverfa :math:`{{\text{Tan}}}` og hefur því
+    myndmengið :math:`(-\frac \pi 2,
+    \frac \pi 2)` og skilgreiningarmengið :math:`(-\infty,\infty)`. Þar að
+    auki þá er
+    :math:`\lim_{x\to \infty} \arctan(x) = \frac \pi 2` og
+    :math:`\lim_{x\to -\infty} \arctan(x) = -\frac \pi 2`.
 
 .. image:: ./myndir/kafli04/05_arctan.png
 	:align: center
@@ -355,11 +390,12 @@ auki þá er
 Setning
 ~~~~~~~
 
-(i)   :math:`\frac d{dx} \arcsin(x) = \frac 1{\sqrt{1-x^2}}`
+.. admonition:: Setning
+    :class: setning
 
-(ii)  :math:`\frac d{dx} \arccos(x) = \frac {-1}{\sqrt{1-x^2}}`
-
-(iii) :math:`\frac d{dx} \arctan(x) = \frac 1{1+x^2}`
+    (i)   :math:`\frac d{dx} \arcsin(x) = \frac 1{\sqrt{1-x^2}}`
+    (ii)  :math:`\frac d{dx} \arccos(x) = \frac {-1}{\sqrt{1-x^2}}`
+    (iii) :math:`\frac d{dx} \arctan(x) = \frac 1{1+x^2}`
 
 Breiðbogaföll
 -------------
@@ -367,14 +403,17 @@ Breiðbogaföll
 Skilgreining: cosh og sinh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við skilgreinum :hover:`breiðbogasínus`, :math:`\sinh`, og :hover:`breiðbogakósínus`,
-:math:`\cosh`, með eftirfarandi formúlum
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math::
+    Við skilgreinum :hover:`breiðbogasínus`, :math:`\sinh`, og :hover:`breiðbogakósínus`,
+    :math:`\cosh`, með eftirfarandi formúlum
 
-   \begin{aligned}
-   \sinh(x) &= \frac{e^x - e^{-x}}2,\\
-   \cosh(x) &= \frac{e^x + e^{-x}}2.\end{aligned}
+    .. math::
+
+       \begin{aligned}
+       \sinh(x) &= \frac{e^x - e^{-x}}2,\\
+       \cosh(x) &= \frac{e^x + e^{-x}}2.\end{aligned}
 
 .. image:: ./myndir/kafli04/06_sinh-cosh.png
 	:align: center
@@ -383,50 +422,52 @@ Við skilgreinum :hover:`breiðbogasínus`, :math:`\sinh`, og :hover:`breiðboga
 Setning
 ~~~~~~~
 
-(i)  :math:`\frac d{dx} \sinh(x) = \cosh(x)`
+.. admonition:: Setning
+    :class: setning
 
-(ii) :math:`\frac d{dx} \cosh(x) = \sinh(x)`
+    (i)  :math:`\frac d{dx} \sinh(x) = \cosh(x)`
+    (ii) :math:`\frac d{dx} \cosh(x) = \sinh(x)`
 
+.. admonition:: Aðvörun
+    :class: advorun
 
-.. warning::
     Það er enginn mínus í afleiðu :math:`\cosh` eins og í afleiðu :math:`\cos`.
 
 Setning
 ~~~~~~~
 
-(i)    :math:`\sinh(0) = 0` og :math:`\cosh(0) = 1`
+.. admonition:: Setning
+    :class: setning
 
-(ii)   :math:`\cosh^2(x) - \sinh^2(x) = 1`
-
-(iii)  :math:`\sinh(-x) = -\sinh(x)`
-
-(iv)   :math:`\cosh(-x) = \cosh(x)`
-
-(v)    :math:`\sinh(x+y) = \sinh(x)\cosh(y) + \cosh(x)\sinh(y)`
-
-(vi)   :math:`\cosh(x+y) = \cosh(x)\cosh(y) + \sinh(x)\sinh(y)`
-
-(vii)  :math:`\cosh(2x) = \cosh^2(x) + \sinh^2(x) = 1+2\sinh^2(x) = 2\cosh^2(x)-1`
-
-(viii) :math:`\sinh(2x) = 2\sinh(x)\cosh(x)`
+    (i)    :math:`\sinh(0) = 0` og :math:`\cosh(0) = 1`
+    (ii)   :math:`\cosh^2(x) - \sinh^2(x) = 1`
+    (iii)  :math:`\sinh(-x) = -\sinh(x)`
+    (iv)   :math:`\cosh(-x) = \cosh(x)`
+    (v)    :math:`\sinh(x+y) = \sinh(x)\cosh(y) + \cosh(x)\sinh(y)`
+    (vi)   :math:`\cosh(x+y) = \cosh(x)\cosh(y) + \sinh(x)\sinh(y)`
+    (vii)  :math:`\cosh(2x) = \cosh^2(x) + \sinh^2(x) = 1+2\sinh^2(x) = 2\cosh^2(x)-1`
+    (viii) :math:`\sinh(2x) = 2\sinh(x)\cosh(x)`
 
 Skilgreining: tanh
 ~~~~~~~~~~~~~~~~~~
 
-Við skilgreinum :hover:`breiðbogatangens` með
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \tanh(x) = \frac{\sinh(x)}{\cosh(x)}
+    Við skilgreinum :hover:`breiðbogatangens` með
+
+    .. math:: \tanh(x) = \frac{\sinh(x)}{\cosh(x)}
 
 Setning
 ~~~~~~~
 
-(i)   :math:`\tanh(x) = \frac{e^x-e^{-x}}{e^x+e^{-x}}`
+.. admonition:: Setning
+    :class: setning
 
-(ii)  :math:`\frac d{dx} \tanh(x) = \frac{1}{\cosh^2(x)}`
-
-(iii) :math:`\lim_{x\to \infty} \tanh(x) = 1`
-
-(iv)  :math:`\lim_{x\to -\infty} \tanh(x) = -1`
+    (i)   :math:`\tanh(x) = \frac{e^x-e^{-x}}{e^x+e^{-x}}`
+    (ii)  :math:`\frac d{dx} \tanh(x) = \frac{1}{\cosh^2(x)}`
+    (iii) :math:`\lim_{x\to \infty} \tanh(x) = 1`
+    (iv)  :math:`\lim_{x\to -\infty} \tanh(x) = -1`
 
 Andhverfur breiðbogafalla
 -------------------------
@@ -441,27 +482,27 @@ með eintæk og eiga sér andhverfur.
 Skilgreining
 ~~~~~~~~~~~~
 
-:hover:`Andhverfa breiðbogasínussins,andhverfur breiðbogasínus`,
-táknuð :math:`{{\text{arsinh}}}(x)` (eða
-:math:`\sinh^{-1}(x)`), er andhverfa :math:`\sinh` og hefur myndmengið
-:math:`(-\infty,\infty)` og skilgreiningarmengið
-:math:`(-\infty,\infty)`. Þar að auki þá er
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: {{\text{arsinh}}}(x) = \ln\left(x+\sqrt{x^2+1}\right)
+    :hover:`Andhverfa breiðbogasínussins,andhverfur breiðbogasínus`,
+    táknuð :math:`{{\text{arsinh}}}(x)` (eða
+    :math:`\sinh^{-1}(x)`), er andhverfa :math:`\sinh` og hefur myndmengið
+    :math:`(-\infty,\infty)` og skilgreiningarmengið
+    :math:`(-\infty,\infty)`. Þar að auki þá er
+
+    .. math:: {{\text{arsinh}}}(x) = \ln\left(x+\sqrt{x^2+1}\right)
+
+    :hover:`Andhverfa breiðbogatangensins,andhverfur breiðbogatangens`,
+    táknuð :math:`{{\text{artanh}}}(x)`
+    (eða :math:`\tanh^{-1}(x)`), er andhverfa :math:`\tanh` og hefur
+    myndmengið :math:`(-\infty,\infty)` og skilgreiningarmengið
+    :math:`(-1,1)`. Þar að auki þá er
+
+    .. math:: {{\text{artanh}}}(x) = \frac 12 \ln\left(\frac{1+x}{1-x}\right)
 
 .. todo::
-    mynd
-
-:hover:`Andhverfa breiðbogatangensins,andhverfur breiðbogatangens`,
-táknuð :math:`{{\text{artanh}}}(x)`
-(eða :math:`\tanh^{-1}(x)`), er andhverfa :math:`\tanh` og hefur
-myndmengið :math:`(-\infty,\infty)` og skilgreiningarmengið
-:math:`(-1,1)`. Þar að auki þá er
-
-.. math:: {{\text{artanh}}}(x) = \frac 12 \ln\left(\frac{1+x}{1-x}\right)
-
-.. todo::
-    mynd
+    myndir
 
 Andhverfa breiðbogakósínussins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -479,12 +520,15 @@ vaxandi og því eintækt á þessu bili, og á sér þar með andhverfu.
 Skilgreining
 ~~~~~~~~~~~~
 
-:hover:`Andhverfa breiðbogakósínussins,andhverfur breiðbogakósínus`, táknuð :math:`{{\text{arcosh}}}(x)`
-(eða :math:`\cosh^{-1}(x)`), er andhverfa :math:`{{\text{Cosh}}}` og
-hefur því myndmengið :math:`[0,\infty)` og skilgreiningarmengið
-:math:`[1,\infty)`. Þar að auki þá er
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: {{\text{arcosh}}}(x) = \ln\left(x+\sqrt{x^2-1}\right)
+    :hover:`Andhverfa breiðbogakósínussins,andhverfur breiðbogakósínus`, táknuð :math:`{{\text{arcosh}}}(x)`
+    (eða :math:`\cosh^{-1}(x)`), er andhverfa :math:`{{\text{Cosh}}}` og
+    hefur því myndmengið :math:`[0,\infty)` og skilgreiningarmengið
+    :math:`[1,\infty)`. Þar að auki þá er
+
+    .. math:: {{\text{arcosh}}}(x) = \ln\left(x+\sqrt{x^2-1}\right)
 
 .. image:: ./myndir/kafli04/07_arcosh.png
 	:align: center

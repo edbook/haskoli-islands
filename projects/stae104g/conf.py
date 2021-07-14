@@ -49,6 +49,7 @@ extensions = [
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
     "toggleblock.toggleBlock",
+    "sphinx_togglebutton",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # Note: sagecell must not be listed before katex.katex
@@ -472,8 +473,13 @@ epub_exclude_files = ["search.html"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
 
-# Hulda bætti mér við. Opna linka í öðrum gluggan.
 
+# css fyrir Dæmi, Athugasemd, Setning, o.sv.fr...
+def setup(app):
+    app.add_css_file('custom_admonitions.css')
+
+
+# Hulda bætti mér við. Opna linka í öðrum gluggan.
 from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 from docutils.nodes import Element

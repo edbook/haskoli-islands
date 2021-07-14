@@ -1,7 +1,9 @@
 Heildun
 =======
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
 	**Nauðsynleg undirstaða**
 
 	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/Kafli10.html>`_.
@@ -48,15 +50,18 @@ Tölurnar :math:`a` og :math:`b` kallast :hover:`heildismörk,heildismark` heild
 Skilgreining
 ~~~~~~~~~~~~
 
-Látum :math:`f` vera fall. Skilgreinum föllin :math:`f_+` og
-:math:`f_-`, sem bæði hafa sama skilgreiningarsvæði og :math:`f`, með
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math::
+    Látum :math:`f` vera fall. Skilgreinum föllin :math:`f_+` og
+    :math:`f_-`, sem bæði hafa sama skilgreiningarsvæði og :math:`f`, með
 
-   f_+(x)=\left\{\begin{array}{ll} f(x) & \text{ef }f(x)\geq 0,\\
-     0 & \text{ef }f(x)<0, \end{array} \right. \qquad
-     f_-(x)=\left\{\begin{array}{ll} 0 & \text{ef }f(x)\geq 0,\\
-     -f(x) & \text{ef }f(x)<0. \end{array}\right.
+    .. math::
+
+       f_+(x)=\left\{\begin{array}{ll} f(x) & \text{ef }f(x)\geq 0,\\
+         0 & \text{ef }f(x)<0, \end{array} \right. \qquad
+         f_-(x)=\left\{\begin{array}{ll} 0 & \text{ef }f(x)\geq 0,\\
+         -f(x) & \text{ef }f(x)<0. \end{array}\right.
 
 Athugið að :math:`f(x)=f_+(x)-f_-(x)`.
 
@@ -76,12 +81,15 @@ með formúlunni
 
 .. math:: \int_a^b f(x)\,dx=\int_a^b f_+(x)\,dx-\int_a^b f_-(x)\,dx.
 
-.. note:: Flatarmálið sem er undir :math:`x`-ás reiknast neikvætt.
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Flatarmálið sem er undir :math:`x`-ás reiknast neikvætt.
 
 Undir- og yfirsummur
 --------------------
 
-Dæmi: Að finna heildi
+Að finna heildi
 ~~~~~~~~~~~~~~~~~~~~~
 
 Hvernig getum við fundið flatarmálið :math:`\int_a^b f(x)\, dx`?
@@ -96,9 +104,12 @@ flatarmál, til dæmis rétthyrningum.
 Skilgreining: Undirsumma
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Skiptum bilinu :math:`[a,b]` í :math:`n` hlutbil. Á hverju hlutbili komum
-við fyrir rétthyrningi sem liggur undir grafi fallsins, þ.e. hæðin á
-honum er lággildi fallsins á þessum tiltekna hlutbili.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Skiptum bilinu :math:`[a,b]` í :math:`n` hlutbil. Á hverju hlutbili komum
+    við fyrir rétthyrningi sem liggur undir grafi fallsins, þ.e. hæðin á
+    honum er lággildi fallsins á þessum tiltekna hlutbili.
 
 .. image:: ./myndir/kafli06/03_undirsumma.png
 	:align: center
@@ -121,9 +132,12 @@ táknum hana með :math:`U(n)`, það er :math:`U(n) = \sum_{k=1}^n u_k`.
 Skilgreining: Yfirsumma
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Skiptum bilinu :math:`[a,b]` í :math:`n` hlutbil. Á hverju hlutbili komum
-við fyrir rétthyrning sem er þannig að hæðin á honum er hágildi fallsins
-á þessum tiltekna hlutbili.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Skiptum bilinu :math:`[a,b]` í :math:`n` hlutbil. Á hverju hlutbili komum
+    við fyrir rétthyrning sem er þannig að hæðin á honum er hágildi fallsins
+    á þessum tiltekna hlutbili.
 
 .. image:: ./myndir/kafli06/03_yfirsumma.png
 	:align: center
@@ -140,14 +154,17 @@ og táknum hana með :math:`Y(n)`, það er :math:`Y(n) = \sum_{k=1}^n y_k`.
 Skilgreining: Heildi
 ~~~~~~~~~~~~~~~~~~~~
 
-Ef til er **nákvæmlega ein** tala :math:`I` þannig að
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: U(n) \leq I \leq Y(n),
+    Ef til er **nákvæmlega ein** tala :math:`I` þannig að
 
-fyrir allar undirsummur :math:`U(n)` og yfirsummur :math:`Y(n)` þá er
-fallið :math:`f` heildanlegt á :math:`[a,b]` og
+    .. math:: U(n) \leq I \leq Y(n),
 
-.. math:: I = \int_a^b f(x)\, dx.
+    fyrir allar undirsummur :math:`U(n)` og yfirsummur :math:`Y(n)` þá er
+    fallið :math:`f` heildanlegt á :math:`[a,b]` og
+
+    .. math:: I = \int_a^b f(x)\, dx.
 
 .. ggb:: pCuJwqEE
     :width: 700
@@ -155,14 +172,17 @@ fallið :math:`f` heildanlegt á :math:`[a,b]` og
     :img: ./03_undirogyfirsumma.png
     :imgwidth: 12cm
 
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-.. note::
     Við sögðum ekkert um það hvernig við skiptum bilinu :math:`[a,b]` í
     :math:`n` hlutbil. Það má gera hvernig sem er, það er ekki nauðsynlegt að
     þau séu öll jafn stór. Eina krafan er að stærð allra hlutbila stefni á
     0 þegar :math:`n\to \infty`.
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Við erum ekki bundin af því að skoða rétthyrninga sem með hæð sem er
     há/lággildi fallsins á hverju hlutbili, t.d. má taka miðgildið á hveru
     hlutbili, gildið í hægri endapunkti þess eða gildið í vinstri endapunkti þess.
@@ -170,11 +190,12 @@ fallið :math:`f` heildanlegt á :math:`[a,b]` og
     Niðurstaðan þegar :math:`n\to \infty` verður hins vegar alltaf sú sama,
     þ.e. við nálgumst heildið.
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Einnig er mögulegt að nálga heildið með öðrum formum en rétthyrningum,
     t.d.trapisum, og hentar það hugsanlega betur í
     tölulegum útreikningum.
-
 
 
 Eiginleikar heildisins
@@ -183,82 +204,105 @@ Eiginleikar heildisins
 Setning
 ~~~~~~~
 
-(i)  Ef fallið :math:`f` er samfellt á bilinu :math:`[a, b]` þá er
-     :math:`f` heildanlegt yfir bilið :math:`[a, b]`.
+.. admonition:: Setning
+    :class: setning
 
-(ii) Einhalla fall skilgreint á bili :math:`[a,b]` er heildanlegt.
+    (i)  Ef fallið :math:`f` er samfellt á bilinu :math:`[a, b]` þá er
+         :math:`f` heildanlegt yfir bilið :math:`[a, b]`.
+
+    (ii) Einhalla fall skilgreint á bili :math:`[a,b]` er heildanlegt.
 
 Setning
 ~~~~~~~
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
-Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \Big|\int_a^b f(x)\,dx\Big|\leq \int_a^b |f(x)|\,dx.
+    Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
+    Þá er
+
+    .. math:: \Big|\int_a^b f(x)\,dx\Big|\leq \int_a^b |f(x)|\,dx.
 
 Skilgreining: Heildismörkunum snúið við
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef fallið :math:`f` er heildanlegt yfir bilið :math:`[a,b]` (hér er
-:math:`a<b`) þá skilgreinum við
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \int_b^a f(x)\,dx=-\int_a^b f(x)\,dx.
+    Ef fallið :math:`f` er heildanlegt yfir bilið :math:`[a,b]` (hér er
+    :math:`a<b`) þá skilgreinum við
 
-Setning
-~~~~~~~
-
-(i)  :math:`\int_a^a f(x)\,dx=0`.
-
-(ii) :math:`\int_a^b f(x)\,dx=\int_a^c f(x)\,dx+\int_c^b f(x)\,dx`
-
-     (Hér er náttúrlega forsenda að öll heildin séu skilgreind.)
+    .. math:: \int_b^a f(x)\,dx=-\int_a^b f(x)\,dx.
 
 Setning
 ~~~~~~~
 
-Látum :math:`f` og :math:`g` vera föll sem eru heildanleg yfir bilið
-:math:`[a,b]` og látum :math:`A` og :math:`B` vera fasta. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \int_a^b Af(x)+Bg(x)\,dx=A\int_a^b f(x)\,dx+B\int_a^b g(x)\,dx.
+    Látum :math:`f` vera fall sem er heildanlegt yfir bilin :math:`[a, b]`, :math:`[a, c]` og :math:`[c, b]`. Þá er
+
+    (i)  :math:`\int_a^a f(x)\,dx=0`.
+    (ii) :math:`\int_a^b f(x)\,dx=\int_a^c f(x)\,dx+\int_c^b f(x)\,dx`
+
+Setning
+~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`f` og :math:`g` vera föll sem eru heildanleg yfir bilið
+    :math:`[a,b]` og látum :math:`A` og :math:`B` vera fasta. Þá er
+
+    .. math:: \int_a^b Af(x)+Bg(x)\,dx=A\int_a^b f(x)\,dx+B\int_a^b g(x)\,dx.
 
 Með öðrum orðum, heildun er línuleg aðgerð.
 
 Setning
 ~~~~~~~
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
-Gerum ráð fyrir að um öll :math:`x\in [a, b]` gildi að
-:math:`f(x)\geq 0`. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \int_a^b f(x)\,dx\geq 0.
+    Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
+    Gerum ráð fyrir að um öll :math:`x\in [a, b]` gildi að
+    :math:`f(x)\geq 0`. Þá er
+
+    .. math:: \int_a^b f(x)\,dx\geq 0.
 
 Fylgisetning
 ~~~~~~~~~~~~
 
-(i)  Látum :math:`f` og :math:`g` vera föll sem eru heildanleg yfir
-     bilið :math:`[a, b]`. Gerum ráð fyrir að um öll :math:`x\in [a, b]`
-     gildi að :math:`f(x)\leq g(x)`. Þá er
+.. admonition:: Setning
+    :class: setning
 
-     .. math:: \int_a^b f(x)\,dx\leq \int_a^b g(x)\,dx.
+    (i)  Látum :math:`f` og :math:`g` vera föll sem eru heildanleg yfir
+         bilið :math:`[a, b]`. Gerum ráð fyrir að um öll :math:`x\in [a, b]`
+         gildi að :math:`f(x)\leq g(x)`. Þá er
 
-(ii) Látum :math:`f` vera fall sem er heildanlegt yfir bilið
-     :math:`[a, b]`. Ef :math:`m` og :math:`M` eru fastar þannig að um
-     öll :math:`x\in [a, b]` gildir að :math:`m\leq f(x)\leq M` þá er
+         .. math:: \int_a^b f(x)\,dx\leq \int_a^b g(x)\,dx.
 
-     .. math:: m(b-a)= \int_a^b m\,dx \leq  \int_a^b f(x)\,dx \leq \int_a^b M\,dx =M(b-a).
+    (ii) Látum :math:`f` vera fall sem er heildanlegt yfir bilið
+         :math:`[a, b]`. Ef :math:`m` og :math:`M` eru fastar þannig að um
+         öll :math:`x\in [a, b]` gildir að :math:`m\leq f(x)\leq M` þá er
+
+         .. math:: m(b-a)= \int_a^b m\,dx \leq  \int_a^b f(x)\,dx \leq \int_a^b M\,dx =M(b-a).
 
 Setning
 ~~~~~~~
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[-a, a]`.
+.. admonition:: Setning
+    :class: setning
 
-(i)  Ef fallið :math:`f` er oddstætt þá er
+    Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[-a, a]`.
 
-     .. math:: \int_{-a}^a f(x)\,dx=0.
+    (i)  Ef fallið :math:`f` er oddstætt þá er
 
-(ii) Ef fallið :math:`f` er jafnstætt þá er
+         .. math:: \int_{-a}^a f(x)\,dx=0.
 
-     .. math:: \int_{-a}^a f(x)\,dx=2\int_0^a f(x)\,dx.
+    (ii) Ef fallið :math:`f` er jafnstætt þá er
+
+         .. math:: \int_{-a}^a f(x)\,dx=2\int_0^a f(x)\,dx.
 
 .. index::
         fall; meðalgildi
@@ -266,11 +310,14 @@ Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[-a, a]`.
 Skilgreining
 ~~~~~~~~~~~~
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
-:hover:`Meðalgildi,meðalgildi` fallsins :math:`f` á bilinu :math:`[a, b]` er skilgreint
-sem
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \bar{f}=\frac{1}{b-a}\int_{a}^b f(x)\,dx.
+    Látum :math:`f` vera fall sem er heildanlegt yfir bilið :math:`[a, b]`.
+    :hover:`Meðalgildi,meðalgildi` fallsins :math:`f` á bilinu :math:`[a, b]` er skilgreint
+    sem
+
+    .. math:: \bar{f}=\frac{1}{b-a}\int_{a}^b f(x)\,dx.
 
 .. index::
     milligildissetning; fyrir heildi
@@ -278,14 +325,17 @@ sem
 Setning: Meðalgildissetning fyrir heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gerum ráð fyrir að fallið :math:`f` sé **samfellt** á bilinu
-:math:`[a, b]`. Þá er til punktur :math:`c` í bilinu :math:`[a, b]`
-þannig að
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \int_a^b f(x)\,dx=(b-a)f(c).
+    Gerum ráð fyrir að fallið :math:`f` sé **samfellt** á bilinu
+    :math:`[a, b]`. Þá er til punktur :math:`c` í bilinu :math:`[a, b]`
+    þannig að
 
-Það er að segja, til er punktur :math:`c` í bilinu :math:`[a, b]` þannig
-að :math:`f(c)=\bar{f}`.
+    .. math:: \int_a^b f(x)\,dx=(b-a)f(c).
+
+    Það er að segja, til er punktur :math:`c` í bilinu :math:`[a, b]` þannig
+    að :math:`f(c)=\bar{f}`.
 
 
 Undirstöðusetning stærðfræðigreiningarinnar
@@ -297,11 +347,20 @@ Undirstöðusetning stærðfræðigreiningarinnar
 Skilgreining og setning: Fall skilgreint með heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[a, b]`.
-Fyrir :math:`x\in[a, b]` skilgreinum við :math:`F(x)=\int_a^x f(t)\,dt`.
-Fallið :math:`F` er samfellt á :math:`[a, b]`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. warning::
+    Látum :math:`f` vera fall sem er heildanlegt yfir bil :math:`[a, b]`.
+    Fyrir :math:`x\in[a, b]` skilgreinum við :math:`F(x)=\int_a^x f(t)\,dt`.
+
+.. admonition:: Setning
+    :class: setning
+
+    Fallið :math:`F` er samfellt á :math:`[a, b]`.
+
+.. admonition:: Aðvörun
+    :class: advorun
+
     Athugið að :math:`t` er breytan sem er heildað með tilliti til, en
     :math:`x` er haldið föstu á meðan. :math:`t` hverfur svo þegar búið er
     að reikna heildið.
@@ -314,14 +373,17 @@ Fallið :math:`F` er samfellt á :math:`[a, b]`.
 Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gerum ráð fyrir að fallið :math:`f` sé samfellt á bili :math:`I` og
-:math:`a` sé punktur í :math:`I`. Fyrir :math:`x` í :math:`I`
-skilgreinum við :math:`F(x)=\int_a^x f(t)\,dt`. Þá er fallið :math:`F`
-diffranlegt og
+.. admonition:: Setning
+    :class: setning
 
-.. math:: F'(x)=f(x)
+    Gerum ráð fyrir að fallið :math:`f` sé samfellt á bili :math:`I` og
+    :math:`a` sé punktur í :math:`I`. Fyrir :math:`x` í :math:`I`
+    skilgreinum við :math:`F(x)=\int_a^x f(t)\,dt`. Þá er fallið :math:`F`
+    diffranlegt og
 
-fyrir öll :math:`x\in I`.
+    .. math:: F'(x)=f(x)
+
+    fyrir öll :math:`x\in I`.
 
 .. index::
     stofnfall
@@ -332,29 +394,41 @@ Stofnföll
 Skilgreining: Stofnfall
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera fall sem er skilgreint á bili :math:`I`. Fall
-:math:`G` kallast :hover:`stofnfall` fyrir :math:`f` á
-bilinu :math:`I` ef :math:`G'(x)=f(x)` fyrir öll :math:`x` í :math:`I`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`f` vera fall sem er skilgreint á bili :math:`I`. Fall
+    :math:`G` kallast :hover:`stofnfall` fyrir :math:`f` á
+    bilinu :math:`I` ef :math:`G'(x)=f(x)` fyrir öll :math:`x` í :math:`I`.
 
 Fylgisetning
 ~~~~~~~~~~~~
 
-Látum :math:`f` vera samfellt fall skilgreint á bili :math:`I`. Þá er
-til stofnfall fyrir :math:`f`
-samkvæmt :ref:`fyrri hluta undirstöðustöðusetningarinnar <undirstodusetning-fyrri>`.
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`f` vera samfellt fall skilgreint á bili :math:`I`. Þá er
+    til stofnfall fyrir :math:`f`
+    samkvæmt :ref:`fyrri hluta undirstöðustöðusetningarinnar <undirstodusetning-fyrri>`.
 
 Hjálparsetning
 ~~~~~~~~~~~~~~
 
-Ef :math:`F` og :math:`G` eru hvor tveggja stofnföll fyrir :math:`f` á
-bilinu :math:`I`, þá er til fasti :math:`C` þannig að
-:math:`F(x)=G(x)+C` fyrir öll :math:`x` í :math:`I`.
+.. admonition:: Setning
+    :class: setning
 
-**Sönnun**: Þar sem
+    Ef :math:`F` og :math:`G` eru hvor tveggja stofnföll fyrir :math:`f` á
+    bilinu :math:`I`, þá er til fasti :math:`C` þannig að
+    :math:`F(x)=G(x)+C` fyrir öll :math:`x` í :math:`I`.
 
-.. math:: \frac{d}{dx}(G(x) - F(x)) = G'(x) - F'(x) = f(x) - f(x) = 0
+.. admonition:: Sönnun
+    :class: setning, dropdown
 
-fyrir öll :math:`x\in I` þá er :math:`G(x)-F(x) = C` fasti.
+    Þar sem
+
+    .. math:: \frac{d}{dx}(G(x) - F(x)) = G'(x) - F'(x) = f(x) - f(x) = 0
+
+    fyrir öll :math:`x\in I` þá er :math:`G(x)-F(x) = C` fasti.
 
 .. index::
     undirstöðusetning stærðfræðigreiningar, seinni hluti
@@ -363,12 +437,17 @@ fyrir öll :math:`x\in I` þá er :math:`G(x)-F(x) = C` fasti.
 Setning: Undirstöðusetning stærðfræðigreiningar, seinni hluti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`f` er samfellt fall á bilinu :math:`I` og :math:`G` er
-eitthvert stofnfall fyrir :math:`f` þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \int_a^b f(t)\,dt=G(b)-G(a).
+    Ef :math:`f` er samfellt fall á bilinu :math:`I` og :math:`G` er
+    eitthvert stofnfall fyrir :math:`f` þá er
 
-.. note::
+    .. math:: \int_a^b f(t)\,dt=G(b)-G(a).
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Það skiptir ekki máli hvaða stofnfall er valið í setningunni að ofan,
     heildið er alltaf það sama.
 
@@ -407,22 +486,25 @@ Helstu tæknilegu aðferðirnar við að finna stofnföll eru:
 Athugasemd
 ~~~~~~~~~~
 
-Gerum ráð fyrir að :math:`F` sé stofnfall :math:`f`, þ.e.
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-.. math:: F(x)=\int f(t)\,dt.
+    Gerum ráð fyrir að :math:`F` sé stofnfall :math:`f`, þ.e.
 
-Svo að
+    .. math:: F(x)=\int f(t)\,dt.
 
-.. math:: F'(x)=f(x).
+    Svo að
 
-Látum nú :math:`g` vera fall og skoðum fallið :math:`F\circ g`. Þá fæst
-samkvæmt :ref:`keðjureglunni <kedjuregla>` að
+    .. math:: F'(x)=f(x).
 
-.. math:: \frac{d}{dx}F(g(x))=F'(g(x))g'(x) = f(g(x))g'(x),
+    Látum nú :math:`g` vera fall og skoðum fallið :math:`F\circ g`. Þá fæst
+    samkvæmt :ref:`keðjureglunni <kedjuregla>` að
 
-eða, með því að heilda beggja vegna jafnaðarmerkisins,
+    .. math:: \frac{d}{dx}F(g(x))=F'(g(x))g'(x) = f(g(x))g'(x),
 
-.. math:: F(g(x))+C = \int f(g(x))g'(x)\,dx.
+    eða, með því að heilda beggja vegna jafnaðarmerkisins,
+
+    .. math:: F(g(x))+C = \int f(g(x))g'(x)\,dx.
 
 .. index::
     heildun; innsetning
@@ -450,7 +532,9 @@ Svo
    \underbrace{F(u)+C}_{\text{Getum reiknað}}  =
    \underbrace{F(g(x))+C}_{\text{Svarið}}.
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun
+
     Ef við breytum heildi með tilliti til :math:`x` í heildi með tilliti til
     annarar breytistærðar :math:`u` þá verða **öll** :math:`x` að hverfa úr
     heildinu við breytinguna.
@@ -493,7 +577,9 @@ heildi sem við getum reiknað
 .. math::
     \int f(g(u))g'(u)\, du.
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun
+
     Athugið að hér þurfum við að finna heppilegt :math:`g`. Það
     er ekki alltaf augljóst hvaða :math:`g` er hægt að nota.
 
@@ -594,210 +680,255 @@ Sem dæmi má taka að margliðuna :math:`p(x)=x^2-2x+1` má þátta með samoka
 og hefur hún því eina, tvöfalda núllstöð í :math:`x=1`. Hins vegar má þátta margliðuna :math:`q(x)=x^2+5x+6`
 í :math:`q(x)=(x+2)(x+3)` og hefur hún því tvær einfaldar núllstöðvar, :math:`x=-2` og :math:`x=-3`.
 
-Dæmi 1
-~~~~~~
-**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **með** :math:`n` **einfaldar núllstöðvar.**
+Dæmi 1 um stofnbrotaliðun
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lítum á fallið :math:`\frac{x+4}{x^2-5x+6}`. Sjá má að teljarinn er margliða af fyrsta stigi
-en nefnarinn margliða af öðru stigi. Jafnframt má þátta nefnarann í :math:`(x-2)(x-3)`
-sem segir okkur að nefnarinn hefur tvær einfaldar núllstöðvar í :math:`x=2` og :math:`x=3`.
-Þá gildir að
+Í þessu dæmi er teljarinn er af stigi :math:`m` og nefnarinn af stigi :math:`n>m` með :math:`n` einfaldar núllstöðvar.
 
-.. math:: \frac{x+4}{x^2-5x+6} = \frac{x+4}{(x-2)(x-3)} = \frac{A}{x-2}+\frac{B}{x-3},
+.. admonition:: Dæmi
+    :class: daemi
 
-þar sem sem :math:`A` og :math:`B` eru einhverjar rauntölur. Tökum sérstaklega eftir því
-að fjöldi liða í stofnbrotaliðuninni er jafn stigi nefnarans. Ef :math:`P(x)` er margliða
-af stigi :math:`m` og :math:`Q(x)` er margliða af stigi stigi :math:`n>m` sem hefur
-:math:`n` mismunandi (raungildar) núllstöðvar, sem og að stuðullinn fyrir framan
-:math:`x^n` er :math:`1`, þá gildir almennt fyrir ræða fallið :math:`\frac{P(x)}{Q(x)}` að
-stofnbrotaliðun þess verður
+    Liðið :math:`\frac{x+4}{x^2-5x+6}` í stofnbrot. 
 
-.. math:: \frac{P(x)}{Q(x)} = \frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\dots +\frac{A_n}{x-a_n}.
+.. admonition:: Lausn
+    :class: daemi, dropdown
 
-Ákvörðum nú gildi fastanna :math:`A` og :math:`B`. Samnefnum brotin í hægri
-hlið jöfnunnar
+    Sjá má að teljarinn er margliða af fyrsta stigi
+    en nefnarinn margliða af öðru stigi. Jafnframt má þátta nefnarann í :math:`(x-2)(x-3)`
+    sem segir okkur að nefnarinn hefur tvær einfaldar núllstöðvar í :math:`x=2` og :math:`x=3`.
+    Þá gildir að
 
-.. math:: \frac{x+4}{x^2-5x+6} = \frac{A}{x-2}+\frac{B}{x-3} = \frac{Ax-3A+Bx-2B}{(x-2)(x-3)}.
+    .. math:: \frac{x+4}{x^2-5x+6} = \frac{x+4}{(x-2)(x-3)} = \frac{A}{x-2}+\frac{B}{x-3},
 
-Með því að bera saman teljara brotanna, sem staðsett eru sitt hvoru megin jafnaðarmerkisins,
-sjáum við að
+    þar sem sem :math:`A` og :math:`B` eru einhverjar rauntölur. Tökum sérstaklega eftir því
+    að fjöldi liða í stofnbrotaliðuninni er jafn stigi nefnarans. Ef :math:`P(x)` er margliða
+    af stigi :math:`m` og :math:`Q(x)` er margliða af stigi stigi :math:`n>m` sem hefur
+    :math:`n` mismunandi (raungildar) núllstöðvar, sem og að stuðullinn fyrir framan
+    :math:`x^n` er :math:`1`, þá gildir almennt fyrir ræða fallið :math:`\frac{P(x)}{Q(x)}` að
+    stofnbrotaliðun þess verður
 
-.. math:: x+4 = Ax-3A+Bx-2B.
+    .. math:: \frac{P(x)}{Q(x)} = \frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\dots +\frac{A_n}{x-a_n}.
 
-Athugum að til þess að þetta sé jafngilt verður að gilda að :math:`Ax+Bx = x` og :math:`-3A-2B=4`.
-Með því að deila í gegnum fyrri jöfnuna með :math:`x` fæst jöfnuhneppið
+    Ákvörðum nú gildi fastanna :math:`A` og :math:`B`. Samnefnum brotin í hægri
+    hlið jöfnunnar
 
-.. math::
-	\begin{align*}
-		A+B&=1\\
-		-3A-2B&=4\\
-	\end{align*}
+    .. math:: \frac{x+4}{x^2-5x+6} = \frac{A}{x-2}+\frac{B}{x-3} = \frac{Ax-3A+Bx-2B}{(x-2)(x-3)}.
 
-sem hefur lausnina :math:`A=-6` og :math:`B=7`. Af þessu sést að
+    Með því að bera saman teljara brotanna, sem staðsett eru sitt hvoru megin jafnaðarmerkisins,
+    sjáum við að
 
-.. math::  \frac{x+4}{x^2-5x+6} = -\frac{6}{x-2}+\frac{7}{x-3}.
+    .. math:: x+4 = Ax-3A+Bx-2B.
 
-Dæmi 2
-~~~~~~
-**Teljari og nefnari af stigi** :math:`n` **og nefnarinn með** :math:`n` **einfaldar núllstöðvar.**
+    Athugum að til þess að þetta sé jafngilt verður að gilda að :math:`Ax+Bx = x` og :math:`-3A-2B=4`.
+    Með því að deila í gegnum fyrri jöfnuna með :math:`x` fæst jöfnuhneppið
 
-Lítum á fallið :math:`\frac{x^3+2}{x^3-x}`. Sjá má að bæði teljari og nefnari eru margliður
-af þriðja stigi. Athugum að með því að bæta núlllið á forminu :math:`+x-x` við teljarann fæst
+    .. math::
+    	\begin{align*}
+    		A+B&=1\\
+    		-3A-2B&=4\\
+    	\end{align*}
 
+    sem hefur lausnina :math:`A=-6` og :math:`B=7`. Af þessu sést að
 
-.. math:: \frac{x^3-x+x+2}{x^3-x} = \frac{x^3-x}{x^3-x} + \frac{x+2}{x^3-x} = 1 + \frac{x+2}{x^3-x}.
+    .. math::  \frac{x+4}{x^2-5x+6} = -\frac{6}{x-2}+\frac{7}{x-3}.
 
-Fastann 1 þarf ekki að liða frekar. Þar sem að brotið :math:`\frac{x+2}{x^3-x}` hefur teljara af
-lægra stigi en nefnarinn (tveimur lægra nánar til tekið) sem og að nefnarinn hefur þrjár, einfaldar núllstöðvar,
-getum við stofbrotaliðað það með eftirfarandi hætti.
+Dæmi 2 um stofnbrotaliðun
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: \frac{x+2}{x^3-x} = \frac{x+2}{x(x-1)(x+1)} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{x-1} = \frac{A(x^2-1)+B(x^2+x)+X(x^2-x)}{x(x-1)(x+1)}
+Í þessu dæmi eru teljarinn og nefnarinn af stigi :math:`n` og nefnarinn með :math:`n` einfaldar núllstöðvar.
 
-þar sem síðasti liður jöfnunnar fæst með því að samnefna brot þess næstseinasta.
-Með því að bera saman teljara fyrsta og síðasta liðs jöfnunnar sést að
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math:: x+2 = A(x^2-1) + B(x^2+x)+C(x^2-x).
+    Liðið :math:`\frac{x^3+2}{x^3-x}` í stofnbrot.
 
-Ef við margföldum upp úr svigum og drögum saman líka liði fæst að
+.. admonition:: Lausn
+    :class: daemi, dropdown
 
-.. math:: x+2 = (A+B+C)x^2 +(B-C)x - A.
+    Sjá má að bæði teljari og nefnari eru margliður
+    af þriðja stigi. Athugum að með því að bæta núlllið á forminu :math:`+x-x` við teljarann fæst
 
-Þetta gefur okkurjöfnuhneppið
 
-.. math::
-	\begin{align*}
-		A+B+C &= 0\\
-		B-C &=1\\
-		-A &= 2\\
-	\end{align*}
+    .. math:: \frac{x^3-x+x+2}{x^3-x} = \frac{x^3-x}{x^3-x} + \frac{x+2}{x^3-x} = 1 + \frac{x+2}{x^3-x}.
 
-sem hefur lausnina :math:`A=-2`, :math:`B=\frac{3}{2}` og :math:`C=\frac{1}{2}`.
-Af þessu sést að
+    Fastann 1 þarf ekki að liða frekar. Þar sem að brotið :math:`\frac{x+2}{x^3-x}` hefur teljara af
+    lægra stigi en nefnarinn (tveimur lægra nánar til tekið) sem og að nefnarinn hefur þrjár, einfaldar núllstöðvar,
+    getum við stofbrotaliðað það með eftirfarandi hætti.
 
-.. math:: \frac{x^3+2}{x^3-x} = 1 - \frac{2}{x}+\frac{3}{2(x-1)}+\frac{1}{2(x-1)}.
+    .. math:: \frac{x+2}{x^3-x} = \frac{x+2}{x(x-1)(x+1)} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{x-1} = \frac{A(x^2-1)+B(x^2+x)+X(x^2-x)}{x(x-1)(x+1)}
 
-Dæmi 3
-~~~~~~
-**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **einfaldar núllstöðvar.**
+    þar sem síðasti liður jöfnunnar fæst með því að samnefna brot þess næstseinasta.
+    Með því að bera saman teljara fyrsta og síðasta liðs jöfnunnar sést að
 
-Lítum á fallið :math:`\frac{x^2+3x+2}{x(x^2+1)}`. Athugum að teljarinn er
-annars stigs margliða en nefnarinn margliða af þriðja stigi. Hér þarf að gæta
-sérstaklega að því að nefnarinn hefur þó einungis eina, einfalda núllstöð
-í :math:`x=0` þar sem að þátturinn :math:`x^2+1` hefur engar (raungildar)
-núllstöðvar. Af þessu leiðir að :math:`\frac{x^2+3x+2}{x(x^2+1)}` má liða í
-stofnbrot á eftirfarandi vegu.
+    .. math:: x+2 = A(x^2-1) + B(x^2+x)+C(x^2-x).
 
-.. math:: \frac{x^2+3x+2}{x(x^2+1)} = \frac{A}{x}+\frac{Bx+C}{x^2+1} = \frac{A(x^2+1)+Bx^2+Cx}{x(x^2+1)}
+    Ef við margföldum upp úr svigum og drögum saman líka liði fæst að
 
-Með svipuðum hætti og áður berum við saman teljara fyrsta brots og síðasta
-brots jöfnunnar. Sjáum að
+    .. math:: x+2 = (A+B+C)x^2 +(B-C)x - A.
 
-.. math:: x^2+3x+2 = A(x^2+1)+Bx^2+Cx.
+    Þetta gefur okkurjöfnuhneppið
 
-Með því að leysa upp úr svigum og draga saman líka liði fæst að
+    .. math::
+    	\begin{align*}
+    		A+B+C &= 0\\
+    		B-C &=1\\
+    		-A &= 2\\
+    	\end{align*}
 
+    sem hefur lausnina :math:`A=-2`, :math:`B=\frac{3}{2}` og :math:`C=\frac{1}{2}`.
+    Af þessu sést að
 
-.. math:: x^2+3x+2 = (A+B)x^2+Cx+A.
+    .. math:: \frac{x^3+2}{x^3-x} = 1 - \frac{2}{x}+\frac{3}{2(x-1)}+\frac{1}{2(x-1)}.
 
-Þetta gefur okkur jöfnuhneppið
+Dæmi 3 um stofnbrotaliðun
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math::
-	\begin{align*}
-		A+B &= 1\\
-		C &=3\\
-		A &= 2\\
-	\end{align*}
+Í þessu dæmi er teljarinn af stigi :math:`m` og nefnarinn af stigi :math:`n>m` stigi með :math:`r<n` einfaldar núllstöðvar.
 
-sem hefur lausnina :math:`A=2`, :math:`B=-1` og :math:`C=3`. Af þessu sést að
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math:: \frac{x^2+3x+2}{x(x^2+1)} = \frac{2}{x} + \frac{-x+3}{x^2+1}.
+    Liðið :math:`\frac{x^2+3x+2}{x(x^2+1)}` í stofnbrot.
 
-Dæmi 4
-~~~~~~
-**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`n` **núllstöðvar, þar af einhverjar fjölfaldar**
+.. admonition:: Lausn
+    :class: daemi, dropdown
 
-Lítum á fallið :math:`\frac{1}{x(x-1)^2}`. Ljóst er að teljari er af hærra stigi
-en nefnarinn og nefnarinn hefur einfalda núllstöð í :math:`x=0` og tvöfalda
-núllstöð í :math:`x=1`. Þá má liða fallið í stofnbrot með eftirfarandi hætti.
+    Athugum að teljarinn er
+    annars stigs margliða en nefnarinn margliða af þriðja stigi. Hér þarf að gæta
+    sérstaklega að því að nefnarinn hefur þó einungis eina, einfalda núllstöð
+    í :math:`x=0` þar sem að þátturinn :math:`x^2+1` hefur engar (raungildar)
+    núllstöðvar. Af þessu leiðir að :math:`\frac{x^2+3x+2}{x(x^2+1)}` má liða í
+    stofnbrot á eftirfarandi vegu.
 
-.. math:: \frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2}.
+    .. math:: \frac{x^2+3x+2}{x(x^2+1)} = \frac{A}{x}+\frac{Bx+C}{x^2+1} = \frac{A(x^2+1)+Bx^2+Cx}{x(x^2+1)}
 
-Tökum sérstaklega eftir því að núllstöðin :math:`x=1` er tvöföld og því inniheldur
-stofnbrotaliðunin tvo liði með þáttinn :math:`(x-1)` í nefnara,
-annars vegar í fyrsta veldi og hins vegar í öðru veldi. Almennt gildir, fyrir
-sérhverja :math:`r`-falda núllstöð :math:`a` nefnara ræða fallsins
-:math:`\frac{P(x)}{Q(x)}`, að stofnbrotaliðun fallsins mun innihalda
+    Með svipuðum hætti og áður berum við saman teljara fyrsta brots og síðasta
+    brots jöfnunnar. Sjáum að
 
-.. math:: \frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}+\dots + \frac{A_r}{(x-a)^r}
+    .. math:: x^2+3x+2 = A(x^2+1)+Bx^2+Cx.
 
-Með því að samnefna fáum við að
+    Með því að leysa upp úr svigum og draga saman líka liði fæst að
 
-.. math:: \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2} = \frac{A(x^2-2x+1)+B(x^2-x)+Cx}{x(x-1)^2}.
 
-Með sambærilegum hætti og áður fæst að
+    .. math:: x^2+3x+2 = (A+B)x^2+Cx+A.
 
-.. math:: 1 = A(x^2-2x+1)+B(x^2-x)+Cx
+    Þetta gefur okkur jöfnuhneppið
 
-og með því að leysa upp úr svigum og draga saman líka liði fæst
+    .. math::
+    	\begin{align*}
+    		A+B &= 1\\
+    		C &=3\\
+    		A &= 2\\
+    	\end{align*}
 
-.. math:: 1 = (A+B) x^2 + (-2A-B+C)x + A.
+    sem hefur lausnina :math:`A=2`, :math:`B=-1` og :math:`C=3`. Af þessu sést að
 
-Því fæst loks jöfnuhneppið
+    .. math:: \frac{x^2+3x+2}{x(x^2+1)} = \frac{2}{x} + \frac{-x+3}{x^2+1}.
 
-.. math::
-	\begin{align*}
-		A+B &= 0\\
-		-2A-B+C &=0\\
-		A &= 1\\
-	\end{align*}
+Dæmi 4 um stofnbrotaliðun
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-sem hefur lausnina :math:`A=1`, :math:`B=-1` og :math:`C=1`. Af þessu sést að
+Í þessu dæmi er teljarinn af stigi :math:`m` og nefnari af stigi :math:`n>m` stigi með :math:`n` núllstöðvar, þar af einhverjar fjölfaldar.
 
-.. math:: \frac{1}{x(x-1)^2} = \frac{1}{x}-\frac{1}{x-1} + \frac{1}{(x-1)^2}
+.. admonition:: Dæmi
+    :class: daemi
 
-Dæmi 5
-~~~~~~
-**Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **núllstöðvar og núllstöðvalausan þátt í veldinu** :math:`q>1`
+    Liðið :math:`\frac{1}{x(x-1)^2}` í stofnbrot.
 
-Lítum á fallið :math:`\frac{x^2+2}{4x^5+4x^3+x}`. Hér er stig nefnara hærra en stig teljara
-og má þátta hann í :math:`x(2x^2+1)^2`. Nú er margliðan :math:`2x^2+1` núllstöðvalaus.
-Því má stofnbrotaliða fallið á eftirfarandi vegu.
+.. admonition:: Lausn
+    :class: daemi, dropdown
 
-.. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{A}{x}+\frac{Bx+C}{2x^2+1}+\frac{Dx+E}{(2x^2+1)^2}
+    Ljóst er að teljari er af hærra stigi
+    en nefnarinn og nefnarinn hefur einfalda núllstöð í :math:`x=0` og tvöfalda
+    núllstöð í :math:`x=1`. Þá má liða fallið í stofnbrot með eftirfarandi hætti.
 
-Líkt og áður skulum við veita því sérstakan gaum að þátturinn :math:`(2x^2+1)^2`
-er í öðru veldi og því hefur stofnbrotaliðunin tvo liði þar sem nefnarinn inniheldur
-margliðuna :math:`2x^2+1`, annars vegar í fyrsta veldi og svo hins vegar í öðru
-veldi. Sama almenna regla og áður gildir, ef nefnari fallsins inniheldur núllstöðvalausa
-margliðu :math:`p(x)^n` í nefnara, þar sem :math:`n` er einhver náttúruleg tala,
-þá mun stofnbrotaliðun fallsins innihalda liðina
+    .. math:: \frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2}.
 
-.. math:: \frac{A_k}{p(x)^k}, \qquad k=1,2,\dots,n.
+    Tökum sérstaklega eftir því að núllstöðin :math:`x=1` er tvöföld og því inniheldur
+    stofnbrotaliðunin tvo liði með þáttinn :math:`(x-1)` í nefnara,
+    annars vegar í fyrsta veldi og hins vegar í öðru veldi. Almennt gildir, fyrir
+    sérhverja :math:`r`-falda núllstöð :math:`a` nefnara ræða fallsins
+    :math:`\frac{P(x)}{Q(x)}`, að stofnbrotaliðun fallsins mun innihalda
 
-Ef við samnefnum brotin í hægri hlið jöfnunnar fæst
+    .. math:: \frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}+\dots + \frac{A_r}{(x-a)^r}
 
-.. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{A(4x^4+4x^2+1)+B(2x^4+x^2)+C(2x^3+x)+Dx^2+Ex}{x(2x^2+1)^2}.
+    Með því að samnefna fáum við að
 
-Við getum nú borið saman teljarana og með því að leysa upp úr svigum og draga saman
-líka liði fæst
+    .. math:: \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2} = \frac{A(x^2-2x+1)+B(x^2-x)+Cx}{x(x-1)^2}.
 
-.. math:: x^2+2 = (4A+2B)x^4 + 2Cx^3 + (4A+2B+D)x^2 + (C+E)x+A.
+    Með sambærilegum hætti og áður fæst að
 
-Því fæst loks jöfnuhneppið
+    .. math:: 1 = A(x^2-2x+1)+B(x^2-x)+Cx
 
-.. math::
-	\begin{align*}
-		4A+2B &= 0\\
-		2C &=0\\
-		4A+B+D &= 1\\
-		C+E &= 0\\
-		A &= 2\\
-	\end{align*}
+    og með því að leysa upp úr svigum og draga saman líka liði fæst
 
-sem hefur lausnina :math:`A=2`, :math:`B=-4`, :math:`C=0`, :math:`D=-3` og :math:`E=0`.
-Af þessu sést að
+    .. math:: 1 = (A+B) x^2 + (-2A-B+C)x + A.
 
-.. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{2}{x}-\frac{4x}{2x^2+1}-\frac{3x}{(2x^2+1)^2}.
+    Því fæst loks jöfnuhneppið
+
+    .. math::
+    	\begin{align*}
+    		A+B &= 0\\
+    		-2A-B+C &=0\\
+    		A &= 1\\
+    	\end{align*}
+
+    sem hefur lausnina :math:`A=1`, :math:`B=-1` og :math:`C=1`. Af þessu sést að
+
+    .. math:: \frac{1}{x(x-1)^2} = \frac{1}{x}-\frac{1}{x-1} + \frac{1}{(x-1)^2}
+
+Dæmi 5 um stofnbrotaliðun
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Í þessu dæmi er teljarinn af stigi :math:`m` og nefnarinn af stigi :math:`n>m` stigi með :math:`r<n` núllstöðvar og núllstöðvalausan þátt í veldinu :math:`q>1`.
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Liðið í :math:`\frac{x^2+2}{4x^5+4x^3+x}` stofnbrot.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Hér er stig nefnara hærra en stig teljara
+    og má þátta hann í :math:`x(2x^2+1)^2`. Nú er margliðan :math:`2x^2+1` núllstöðvalaus.
+    Því má stofnbrotaliða fallið á eftirfarandi vegu.
+
+    .. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{A}{x}+\frac{Bx+C}{2x^2+1}+\frac{Dx+E}{(2x^2+1)^2}
+
+    Líkt og áður skulum við veita því sérstakan gaum að þátturinn :math:`(2x^2+1)^2`
+    er í öðru veldi og því hefur stofnbrotaliðunin tvo liði þar sem nefnarinn inniheldur
+    margliðuna :math:`2x^2+1`, annars vegar í fyrsta veldi og svo hins vegar í öðru
+    veldi. Sama almenna regla og áður gildir, ef nefnari fallsins inniheldur núllstöðvalausa
+    margliðu :math:`p(x)^n` í nefnara, þar sem :math:`n` er einhver náttúruleg tala,
+    þá mun stofnbrotaliðun fallsins innihalda liðina
+
+    .. math:: \frac{A_k}{p(x)^k}, \qquad k=1,2,\dots,n.
+
+    Ef við samnefnum brotin í hægri hlið jöfnunnar fæst
+
+    .. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{A(4x^4+4x^2+1)+B(2x^4+x^2)+C(2x^3+x)+Dx^2+Ex}{x(2x^2+1)^2}.
+
+    Við getum nú borið saman teljarana og með því að leysa upp úr svigum og draga saman
+    líka liði fæst
+
+    .. math:: x^2+2 = (4A+2B)x^4 + 2Cx^3 + (4A+2B+D)x^2 + (C+E)x+A.
+
+    Því fæst loks jöfnuhneppið
+
+    .. math::
+    	\begin{align*}
+    		4A+2B &= 0\\
+    		2C &=0\\
+    		4A+B+D &= 1\\
+    		C+E &= 0\\
+    		A &= 2\\
+    	\end{align*}
+
+    sem hefur lausnina :math:`A=2`, :math:`B=-4`, :math:`C=0`, :math:`D=-3` og :math:`E=0`.
+    Af þessu sést að
+
+    .. math:: \frac{x^2+2}{4x^5+4x^3+x} = \frac{2}{x}-\frac{4x}{2x^2+1}-\frac{3x}{(2x^2+1)^2}.
 
 Samantekt
 ~~~~~~~~~
@@ -824,22 +955,27 @@ Sjá einnig `wikipedia síðuna um stofnbrotaliðun <https://en.wikipedia.org/wi
 Skilgreining: Óeiginleg heildi I
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera samfellt fall á bilinu :math:`[a, \infty)`.
-Skilgreinum
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \int_a^\infty f(x)\,dx=\lim_{R\rightarrow\infty} \int_a^R f(x)\,dx.
+    Látum :math:`f` vera samfellt fall á bilinu :math:`[a, \infty)`.
+    Skilgreinum
 
-Fyrir fall :math:`f` sem er samfellt á bili :math:`(-\infty, b]`
-skilgreinum við
+    .. math:: \int_a^\infty f(x)\,dx=\lim_{R\rightarrow\infty} \int_a^R f(x)\,dx.
 
-.. math:: \int_{-\infty}^b f(x)\,dx=\lim_{R\rightarrow-\infty} \int_R^b f(x)\,dx.
+    Fyrir fall :math:`f` sem er samfellt á bili :math:`(-\infty, b]`
+    skilgreinum við
 
-Heildi eins og þau hér að ofan kallast :hover:`óeiginlegt heildi`.
+    .. math:: \int_{-\infty}^b f(x)\,dx=\lim_{R\rightarrow-\infty} \int_R^b f(x)\,dx.
+
+    Heildi eins og þau hér að ofan kallast :hover:`óeiginlegt heildi`.
 
 Í báðum tilvikum segjum við að óeiginlega heildið sé samleitið ef
 markgildið er til, en ósamleitið ef markgildið er ekki til.
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun
+
       Ef :math:`f` stefnir ekki á 0 þegar :math:`x\to \infty` þá
       er heildið ekki samleitið. En jafnvel þó fallið stefni á
       0 þá er ekki víst að heildið sé samleitið, samanber
@@ -848,72 +984,91 @@ markgildið er til, en ósamleitið ef markgildið er ekki til.
 Dæmi
 ~~~~
 
-Heildið :math:`\int_1^\infty \frac{1}{x^p}\,dx` er samleitið ef
-:math:`p>1` en ósamleitið ef :math:`p\leq 1`.
+.. admonition:: Dæmi 
+    :class: daemi
 
-Ef :math:`p>1` þá er
+    Heildið :math:`\int_1^\infty \frac{1}{x^p}\,dx` er samleitið ef
+    :math:`p>1` en ósamleitið ef :math:`p\leq 1`.
 
-.. math:: \int_1^\infty \frac{1}{x^p}\,dx=\frac{1}{p-1}.
+    Ef :math:`p>1` þá er
+
+    .. math:: \int_1^\infty \frac{1}{x^p}\,dx=\frac{1}{p-1}.
 
 Skilgreining: Óeiginleg heildi I, framhald
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera fall sem er samfellt á öllum rauntalnaásnum.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Heildi af gerðinni :math:`\int_{-\infty}^\infty f(x)\,dx` er sagt
-samleitið ef bæði heildin :math:`\int_{-\infty}^0 f(x)\,dx` og
-:math:`\int_0^\infty f(x)\,dx` eru samleitin og þá er
+    Látum :math:`f` vera fall sem er samfellt á öllum rauntalnaásnum.
 
-.. math::
+    Heildi af gerðinni :math:`\int_{-\infty}^\infty f(x)\,dx` er sagt
+    samleitið ef bæði heildin :math:`\int_{-\infty}^0 f(x)\,dx` og
+    :math:`\int_0^\infty f(x)\,dx` eru samleitin og þá er
 
-   \int_{-\infty}^\infty f(x)\,dx=\int_{-\infty}^0 f(x)\,dx +
-     \int_0^\infty f(x)\,dx.
+    .. math::
 
-.. note::
+       \int_{-\infty}^\infty f(x)\,dx=\int_{-\infty}^0 f(x)\,dx +
+         \int_0^\infty f(x)\,dx.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Það skiptir ekki máli í hvaða punkti heildinu er skipt í tvennt, það má
     velja aðra tölu heldur en 0, útkoman verður alltaf sú sama.
 
 Skilgreining: Óeiginleg heildi II
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera samfellt fall á bilinu :math:`(a, b]` og hugsanlega
-ótakmarkað í grennd við :math:`a`. Skilgreinum
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \int_a^b f(x)\,dx=\lim_{c\rightarrow a^+} \int_c^b f(x)\,dx.
+    Látum :math:`f` vera samfellt fall á bilinu :math:`(a, b]` og hugsanlega
+    ótakmarkað í grennd við :math:`a`. Skilgreinum
 
-Fyrir fall :math:`f` sem er samfellt á bili :math:`[a, b)` og hugsanlega
-ótakmarkað í grennd við :math:`b` þá skilgreinum við
+    .. math:: \int_a^b f(x)\,dx=\lim_{c\rightarrow a^+} \int_c^b f(x)\,dx.
 
-.. math:: \int_a^b f(x)\,dx=\lim_{c\rightarrow b^-} \int_a^c f(x)\,dx.
+    Fyrir fall :math:`f` sem er samfellt á bili :math:`[a, b)` og hugsanlega
+    ótakmarkað í grennd við :math:`b` þá skilgreinum við
 
-Í báðum tilvikum segjum við að óeiginlega heildið sé samleitið ef
-markgildið er til en ósamleitið ef markgildið er ekki til.
+    .. math:: \int_a^b f(x)\,dx=\lim_{c\rightarrow b^-} \int_a^c f(x)\,dx.
+
+    Í báðum tilvikum segjum við að óeiginlega heildið sé samleitið ef
+    markgildið er til en ósamleitið ef markgildið er ekki til.
 
 Dæmi
 ~~~~
 
-Heildið :math:`\int_0^1 \frac{1}{x^p}\,dx` er samleitið ef :math:`p<1`
-en ósamleitið ef :math:`p\geq 1`. Ef :math:`p<1` þá er
+.. admonition:: Dæmi 
+    :class: daemi
 
-.. math::
+    Heildið :math:`\int_0^1 \frac{1}{x^p}\,dx` er samleitið ef :math:`p<1`
+    en ósamleitið ef :math:`p\geq 1`. Ef :math:`p<1` þá er
 
-   \int_0^1
-   \frac{1}{x^p}\,dx=\frac{1}{1-p}.
+    .. math::
+
+       \int_0^1
+       \frac{1}{x^p}\,dx=\frac{1}{1-p}.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Látum :math:`f` vera samfellt fall á bili :math:`(a,\infty)` og
-ótakmarkað í grennd við :math:`a`. Látum :math:`c` vera einhverja tölu
-þannig að :math:`a<c<\infty`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Heildið :math:`\int_a^\infty f(x)\,dx` er sagt vera samleitið ef bæði
-heildin :math:`\int_a^c f(x)\,dx` og :math:`\int_c^\infty f(x)\,dx` eru
-samleitin og þá er
+    Látum :math:`f` vera samfellt fall á bili :math:`(a,\infty)` og
+    ótakmarkað í grennd við :math:`a`. Látum :math:`c` vera einhverja tölu
+    þannig að :math:`a<c<\infty`.
 
-.. math:: \int_{a}^\infty f(x)\,dx=\int_{a}^c f(x)\,dx + \int_c^\infty f(x)\,dx.
+    Heildið :math:`\int_a^\infty f(x)\,dx` er sagt vera samleitið ef bæði
+    heildin :math:`\int_a^c f(x)\,dx` og :math:`\int_c^\infty f(x)\,dx` eru
+    samleitin og þá er
 
-.. note::
+    .. math:: \int_{a}^\infty f(x)\,dx=\int_{a}^c f(x)\,dx + \int_c^\infty f(x)\,dx.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Það er sama hvað tala :math:`c` er valin hér að ofan, útkoman verður
     alltaf sú sama.
 
@@ -926,14 +1081,17 @@ samleitin og þá er
 Setning
 ~~~~~~~
 
-Látum :math:`-\infty\leq a<b\leq \infty`. Gerum ráð fyrir að föllin
-:math:`f` og :math:`g` séu samfelld á :math:`(a, b)` og að um öll
-:math:`x\in (a, b)` gildi að :math:`0\leq f(x)\leq g(x)`.
+.. admonition:: Setning
+    :class: setning
 
-(i)  Ef heildið :math:`\int_a^b g(x)\,dx` er samleitið þá er heildið
-     :math:`\int_a^b f(x)\,dx` líka samleitið og
+    Látum :math:`-\infty\leq a<b\leq \infty`. Gerum ráð fyrir að föllin
+    :math:`f` og :math:`g` séu samfelld á :math:`(a, b)` og að um öll
+    :math:`x\in (a, b)` gildi að :math:`0\leq f(x)\leq g(x)`.
 
-     .. math:: \int_a^b f(x)\,dx \leq \int_a^b g(x)\,dx.
+    (i)  Ef heildið :math:`\int_a^b g(x)\,dx` er samleitið þá er heildið
+         :math:`\int_a^b f(x)\,dx` líka samleitið og
 
-(ii) Ef heildið :math:`\int_a^b f(x)\,dx` er ósamleitið þá er heildið
-     :math:`\int_a^b g(x)\,dx` líka ósamleitið.
+         .. math:: \int_a^b f(x)\,dx \leq \int_a^b g(x)\,dx.
+
+    (ii) Ef heildið :math:`\int_a^b f(x)\,dx` er ósamleitið þá er heildið
+         :math:`\int_a^b g(x)\,dx` líka ósamleitið.
