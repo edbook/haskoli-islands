@@ -8,13 +8,13 @@ Veldaraðir
 
       - `Summuvirkinn <https://en.wikipedia.org/wiki/Summation>`_.
 
-      - `Ýmislegt um tvíliðustuðulinn, hrópmerkingu og fleira <https://edbook.hi.is/undirbuningur_stae/Kafli06.html#pascal>`_.
+      - `Ýmislegt um tvíliðustuðulinn, hrópmerkingu og fleira <https://edbook.hi.is/undirbuningur_stae/kafli06.html#pascal>`_.
 
-      - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/Kafli10.html>`_.
+      - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/kafli10.html>`_.
 
       - `Taylor margliður <https://edbook.hi.is/stae104g/kafli03.html#taylor-margliur>`_.
 
-      - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
+      - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/kafli11.html>`_.
 
       - :ref:`Heildun <heildun>`.
 

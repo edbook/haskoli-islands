@@ -6,15 +6,15 @@ Könnun falla
 
 	**Nauðsynleg undirstaða**
 
-	- :ref:`Vaxandi/minnkandi föll <vaxandiminnkandi>`. Sjá einnig `undirstöðuatriði um einhalla föll <https://edbook.hi.is/undirbuningur_stae/Kafli05.html#einhalla-foll>`_.
+	- :ref:`Vaxandi/minnkandi föll <vaxandiminnkandi>`. Sjá einnig `undirstöðuatriði um einhalla föll <https://edbook.hi.is/undirbuningur_stae/kafli05.html#einhalla-foll>`_.
 
-	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
+	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/kafli11.html>`_.
 
 	- :ref:`Útgildi <utgildi>`.
 
-	- `Ójöfnur <https://edbook.hi.is/undirbuningur_stae/Kafli02.html#ojofnur>`_.
+	- `Ójöfnur <https://edbook.hi.is/undirbuningur_stae/kafli02.html#ojofnur>`_.
 
-	- `Graf vörpunnar <https://edbook.hi.is/undirbuningur_stae/Kafli05.html#graf-vorpunnar>`_.
+	- `Graf vörpunnar <https://edbook.hi.is/undirbuningur_stae/kafli05.html#graf-vorpunnar>`_.
 
 
 *"The Guide says there is an art to flying", said Ford, "or rather a knack.
