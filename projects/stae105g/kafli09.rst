@@ -1,4 +1,4 @@
-skekkjanRunur og raðir
+Runur og raðir
 ===============
 
 .. note::
@@ -1010,7 +1010,7 @@ Skilgreining: Víxlmerkjaröð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sérhver röð sem hefur liði sem skiptast á að vera jákvæðir og neikvæðir á mis
-er kölluð *víxlmerkjaröð. Víxlmerkjaröð má skrifa á forminu
+er kölluð *víxlmerkjaröð*. Víxlmerkjaröð má skrifa á forminu
 
 .. math:: \sum_{(-1)^{n+1} b_n} = b_1 - b_2 + b_3 - b_4 + \dots
 

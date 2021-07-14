@@ -1,8 +1,8 @@
 Tölur og föll
 =============
 
-.. note::
-    **Nauðsynleg undirstaða**
+.. admonition:: Nauðsynleg undirstaða
+  :class: athugasemd
 
     -  `Undirstöðuatriði tölur og talnakerfi <https://edbook.hi.is/undirbuningur_stae/Kafli01.html#talnakerfi>`_.
 
@@ -84,7 +84,7 @@ Forrit
 -  WolframAlpha http://www.wolframalpha.com
 
 -  Matlab http://www.mathworks.com
-   (sjá https://notendur.hi.is/~jonasson/matlab/)
+   (sjá https://admonitionndur.hi.is/~jonasson/matlab/)
 
 -  Octave http://www.gnu.org/software/octave/ (opið og ókeypis, svipað og Matlab)
 
@@ -110,18 +110,22 @@ Tölur
 Skilgreining: Tölur
 ~~~~~~~~~~~~~~~~~~~
 
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-(i)   :hover:`Náttúrlegu tölurnar,náttúrleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og mengi þeirra er táknað með :math:`\mathbb{N}`.
+  (i)   :hover:`Náttúrlegu tölurnar,náttúrleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og mengi þeirra er táknað með :math:`\mathbb{N}`.
 
-(ii)  Mengi :hover:`heiltalna,heiltala` er táknað með :math:`\mathbb{Z}` og er skilgreint sem :math:`\mathbb{Z}= \ldots,-2,-1,0,1,2,3,\ldots`
+  (ii)  Mengi :hover:`heiltalna,heiltala` er táknað með :math:`\mathbb{Z}` og er skilgreint sem :math:`\mathbb{Z}= \ldots,-2,-1,0,1,2,3,\ldots`
 
-(iii) Mengi :hover:`ræðra talna,ræð tala` er táknað með :math:`\mathbb{Q}`. :math:`\mathbb{Q}= \{ \frac pq ; p,q \in \mathbb{Z}, q\neq 0\}`.
+  (iii) Mengi :hover:`ræðra talna,ræð tala` er táknað með :math:`\mathbb{Q}`. :math:`\mathbb{Q}= \{ \frac pq ; p,q \in \mathbb{Z}, q\neq 0\}`.
 
-(iv)  Mengi :hover:`rauntalna,rauntala` er táknað með :math:`\mathbb{R}`.
+  (iv)  Mengi :hover:`rauntalna,rauntala` er táknað með :math:`\mathbb{R}`.
 
-(v)   Mengi :hover:`tvinntalna,tvinntala` er táknað með :math:`\mathbb{C}`.
+  (v)   Mengi :hover:`tvinntalna,tvinntala` er táknað með :math:`\mathbb{C}`.
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
     Margir vilja telja :math:`0` með sem náttúrlega tölu. Það
     er eðlilegt ef maður lítur á náttúrlegu tölurnar þannig að þær tákni
     fjölda. Ef maður lítur hins vegar þannig á að þær séu notaðar til að
@@ -166,44 +170,53 @@ Bil
 Skilgreining: Bil (i)
 ~~~~~~~~~~~~~~~~~~~~~
 
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Látum :math:`a` og :math:`b` vera rauntölur þannig að
-:math:`a<b`. Skilgreinum
+  Látum :math:`a` og :math:`b` vera rauntölur þannig að
+  :math:`a<b`. Skilgreinum
 
-1. *opið bil* :math:`]a,b[=\{x\in \mathbb{R}; a<x<b\}`
+  1. *opið bil* :math:`]a,b[=\{x\in \mathbb{R}; a<x<b\}`
 
-2. *lokað bil* :math:`[a,b]=\{x\in \mathbb{R}; a\leq x\leq b\}`
+  2. *lokað bil* :math:`[a,b]=\{x\in \mathbb{R}; a\leq x\leq b\}`
 
-3. *hálfopið bil* :math:`[a,b[=\{x\in \mathbb{R}; a\leq x<b\}`
+  3. *hálfopið bil* :math:`[a,b[=\{x\in \mathbb{R}; a\leq x<b\}`
 
-4. *hálfopið bil* :math:`]a,b]=\{x\in \mathbb{R}; a< x\leq b\}`
+  4. *hálfopið bil* :math:`]a,b]=\{x\in \mathbb{R}; a< x\leq b\}`
 
-Þessi bil sem er skilgreind hér fyrir ofan eru kölluð endanleg. Til eru
-fleiri gerðir af bilum:
+  Þessi bil sem er skilgreind hér fyrir ofan eru kölluð endanleg. Til eru
+  fleiri gerðir af bilum:
 
-5. *opið óendanlegt bil* :math:`]a,\infty[=\{x\in \mathbb{R}; a<x\}`
+  5. *opið óendanlegt bil* :math:`]a,\infty[=\{x\in \mathbb{R}; a<x\}`
 
-6. *opið óendanlegt bil* :math:`]-\infty, a[=\{x\in \mathbb{R}; x<a\}`
+  6. *opið óendanlegt bil* :math:`]-\infty, a[=\{x\in \mathbb{R}; x<a\}`
 
-7. *lokað óendanlegt bil* :math:`[a,\infty[=\{x\in \mathbb{R}; a\leq x\}`
+  7. *lokað óendanlegt bil* :math:`[a,\infty[=\{x\in \mathbb{R}; a\leq x\}`
 
-8. *lokað óendanlegt bil* :math:`]-\infty, a]=\{x\in \mathbb{R}; x\leq a\}`
+  8. *lokað óendanlegt bil* :math:`]-\infty, a]=\{x\in \mathbb{R}; x\leq a\}`
 
-9. *allur rauntalnaásinn* :math:`]-\infty, \infty[= \mathbb{R}`.
+  9. *allur rauntalnaásinn* :math:`]-\infty, \infty[= \mathbb{R}`.
 
 Skilgreining: Bil (ii)
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Mengi :math:`A` af rauntölum kallast :hover:`bil` ef um allar
-tölur :math:`a<b` sem eru í menginu :math:`A` gildir að ef :math:`a<x<b`
-þá er :math:`x` líka í menginu :math:`A`. Þ.e. bil innihalda engin göt.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. tip::
+  Mengi :math:`A` af rauntölum kallast :hover:`bil` ef um allar
+  tölur :math:`a<b` sem eru í menginu :math:`A` gildir að ef :math:`a<x<b`
+  þá er :math:`x` líka í menginu :math:`A`. Þ.e. bil innihalda engin göt.
+
+.. admonition:: Athugasemd
+  :class: athugasemd
+
     Sérhvert bil á rauntalnaásnum er af einni þeirra gerða sem talin er
     upp í `Skilgreining 1.3.1`_. Þessi staðhæfing er jafngild frumsendunni um
     efra mark.
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
     Það er jafngilt að segja
 
     .. math:: x \in ]a-\eta,a+\eta[
@@ -225,13 +238,15 @@ Föll
 Skilgreining: Vörpun
 ~~~~~~~~~~~~~~~~~~~~
 
-:hover:`Vörpun` frá mengi :math:`X` yfir í mengi :math:`Y` er
-regla sem úthlutar sérhverju staki :math:`x` í :math:`X` nákvæmlega einu
-staki :math:`f(x)` í :math:`Y`. Táknum þetta með :math:`f:X \to Y`.
+.. admonition:: Skilgreing
+  :class: skilgreining
 
-Stakið :math:`f(x)` kallast :hover:`gildi` vörpunarinnar (í punktinum
-:math:`x`).
+  :hover:`Vörpun` frá mengi :math:`X` yfir í mengi :math:`Y` er
+  regla sem úthlutar sérhverju staki :math:`x` í :math:`X` nákvæmlega einu
+  staki :math:`f(x)` í :math:`Y`. Táknum þetta með :math:`f:X \to Y`.
 
+  Stakið :math:`f(x)` kallast :hover:`gildi` vörpunarinnar (í punktinum
+  :math:`x`).
 
 .. index::
     fall; skilgreiningarmengi
@@ -241,17 +256,21 @@ Stakið :math:`f(x)` kallast :hover:`gildi` vörpunarinnar (í punktinum
 Skilgreining: skilgreiningarmengi og bakmengi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Mengið :math:`X` kallast :hover:`skilgreiningarmengi`
-:math:`f`, mengið :math:`Y` kallast :hover:`bakmengi`
-:math:`f` og mengið
-:math:`f(X) = \{ f(x); x \in X \}` kallast :hover:`myndmengi` :math:`f`.
+  Mengið :math:`X` kallast :hover:`skilgreiningarmengi`
+  :math:`f`, mengið :math:`Y` kallast :hover:`bakmengi`
+  :math:`f` og mengið
+  :math:`f(X) = \{ f(x); x \in X \}` kallast :hover:`myndmengi` :math:`f`.
 
-.. image:: ./myndir/kafli01/02_Mynd_vorpunar.png
-    :align: center
-    :width: 50%
+  .. image:: ./myndir/kafli01/02_Mynd_vorpunar.png
+      :align: center
+      :width: 50%
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
+
     Það er ekki víst að öll gildin í :math:`Y` séu tekin
     (það er :math:`f(X)` getur verið minna en :math:`Y`). Eins þá er mögulegt
     að :math:`f` taki sama gildið oftar en einu sinni.
@@ -259,8 +278,11 @@ Mengið :math:`X` kallast :hover:`skilgreiningarmengi`
 Skilgreining: fall
 ~~~~~~~~~~~~~~~~~~
 
-Fall er þrennd :math:`(f,X,Y)` þar sem :math:`f` er vörpun sem uppfyllir að sérhvert stak :math:`x` í skilgreiningarmenginu :math:`X`
-varpast eitt og aðeins eitt stak :math:`y` í bakmenginu :math:`Y`.
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Fall er þrennd :math:`(f,X,Y)` þar sem :math:`f` er vörpun sem uppfyllir að sérhvert stak :math:`x` í skilgreiningarmenginu :math:`X`
+  varpast eitt og aðeins eitt stak :math:`y` í bakmenginu :math:`Y`.
 
 .. index::
     fall; samskeyting
@@ -270,48 +292,56 @@ varpast eitt og aðeins eitt stak :math:`y` í bakmenginu :math:`Y`.
 Skilgreining: Samskeyting
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f:X \to Y` og :math:`g:Y \to Z` vera
-varpanir. Vörpunin :math:`g\circ f:X \to Z` sem skilgreind er með
-:math:`(g\circ f)(x)=g(f(x))` kallast :hover:`samskeyting` :math:`f` og
-:math:`g`. Stakið :math:`g(f(x)) \in Z` fæst með því að beita fyrst
-vörpuninni :math:`f` á stakið :math:`x` og síðan vörpuninni :math:`g` á
-stakið :math:`f(x)`.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. image:: ./myndir/kafli01/02_Samskeyting.png
-    :align: center
-    :width: 50%
+  Látum :math:`f:X \to Y` og :math:`g:Y \to Z` vera
+  varpanir. Vörpunin :math:`g\circ f:X \to Z` sem skilgreind er með
+  :math:`(g\circ f)(x)=g(f(x))` kallast :hover:`samskeyting` :math:`f` og
+  :math:`g`. Stakið :math:`g(f(x)) \in Z` fæst með því að beita fyrst
+  vörpuninni :math:`f` á stakið :math:`x` og síðan vörpuninni :math:`g` á
+  stakið :math:`f(x)`.
+
+  .. image:: ./myndir/kafli01/02_Samskeyting.png
+      :align: center
+      :width: 50%
 
 Dæmi: Samskeyting
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
-Skoðum föllin :math:`f:\mathbb R \to \mathbb R, f(x) = 2x-1`
-og :math:`g:\mathbb R \to \mathbb R, g(x) = x^2`.
-Þá er samskeytingin :math:`g\circ f`
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math::
-    g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
+  Skoðum föllin :math:`f:\mathbb R \to \mathbb R, f(x) = 2x-1`
+  og :math:`g:\mathbb R \to \mathbb R, g(x) = x^2`.
+  Þá er samskeytingin :math:`g\circ f`
 
-Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið:
+  .. math::
+      g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
 
-.. math::
-  f(g(x)) = f(x^2) = 2x^2-1
+  Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið:
 
-.. index::
-    fall; átækt
-    fall; eintækt
+  .. math::
+    f(g(x)) = f(x^2) = 2x^2-1
+
+  .. index::
+      fall; átækt
+      fall; eintækt
 
 Skilgreining: Átækni og eintækni
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Við segjum að vörpunin :math:`f` sé :hover:`átæk,átækur` ef
-:math:`f(X)=Y`, það þýðir að fyrir sérhvert stak :math:`y` í :math:`Y`
-þá er til (amk. eitt) stak :math:`x` í :math:`X` þannig að
-:math:`f(x)=y`.
+  Við segjum að vörpunin :math:`f` sé :hover:`átæk,átækur` ef
+  :math:`f(X)=Y`, það þýðir að fyrir sérhvert stak :math:`y` í :math:`Y`
+  þá er til (amk. eitt) stak :math:`x` í :math:`X` þannig að
+  :math:`f(x)=y`.
 
-Segjum að vörpunin :math:`f` sé :hover:`eintæk` ef :math:`f(x_1) = f(x_2)`
-hefur í för með sér að :math:`x_1=x_2`, það er sérhvert gildi sem vörpunin
-tekur er bara tekið einu sinni.
+  Segjum að vörpunin :math:`f` sé :hover:`eintæk` ef :math:`f(x_1) = f(x_2)`
+  hefur í för með sér að :math:`x_1=x_2`, það er sérhvert gildi sem vörpunin
+  tekur er bara tekið einu sinni.
 
 .. index::
     fall; gagntækt
@@ -319,8 +349,10 @@ tekur er bara tekið einu sinni.
 Skilgreining: Gagntækni
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Vörpun sem er bæði eintæk og átæk kallast :hover:`gagntæk`.
+  Vörpun sem er bæði eintæk og átæk kallast :hover:`gagntæk`.
 
 .. index::
     fall; andhverfa
@@ -330,17 +362,22 @@ Vörpun sem er bæði eintæk og átæk kallast :hover:`gagntæk`.
 Skilgreining: Andhverfa
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f:X \to Y` vera vörpun. Sagt er að :math:`f`
-sé :hover:`andhverfanleg,andhverfanlegur` ef til er vörpun :math:`f^{-1}:Y \to X` þannig að
-samskeyting varpananna :math:`f` og :math:`f^{-1}` annars vegar og
-:math:`f^{-1}` og :math:`f` hins vegar sé viðeigandi :hover:`samsemdarvörpun`,
-þ.e. :math:`f^{-1}\circ f=id_X` og :math:`f\circ f^{-1} = id_Y`.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. image:: ./myndir/kafli01/02_Andhverfa.png
-    :align: center
-    :width: 50%
+  Látum :math:`f:X \to Y` vera vörpun. Sagt er að :math:`f`
+  sé :hover:`andhverfanleg,andhverfanlegur` ef til er vörpun :math:`f^{-1}:Y \to X` þannig að
+  samskeyting varpananna :math:`f` og :math:`f^{-1}` annars vegar og
+  :math:`f^{-1}` og :math:`f` hins vegar sé viðeigandi :hover:`samsemdarvörpun`,
+  þ.e. :math:`f^{-1}\circ f=id_X` og :math:`f\circ f^{-1} = id_Y`.
 
-.. tip::
+  .. image:: ./myndir/kafli01/02_Andhverfa.png
+      :align: center
+      :width: 50%
+
+.. admonition:: Athugasemd
+  :class: athugasemd
+
     Venjulega hjá okkur þá eru mengin :math:`X` og :math:`Y`
     mengi af rauntölum. Þegar :math:`Y` er mengi af tölum þá er notast við
     orðið :hover:`fall` í stað orðsins *vörpun*.
@@ -351,13 +388,16 @@ samskeyting varpananna :math:`f` og :math:`f^{-1}` annars vegar og
 Dæmi: Andhverfa
 ~~~~~~~~~~~~~~~
 
-Látum :math:`X=[0,2]`, :math:`Y=[0,4]` og :math:`f:X \to Y, f(x) = x^2`.
-Þá er :math:`f` gagntæk vörpun og andhverfan er gefin með
-:math:`f^{-1}(x) = \sqrt x`.
+.. admonition:: Dæmi
+  :class: daemi
 
-.. image::  ./myndir/kafli01/04_andhverfa.png
-    :align: center
-    :width: 50%
+  Látum :math:`X=[0,2]`, :math:`Y=[0,4]` og :math:`f:X \to Y, f(x) = x^2`.
+  Þá er :math:`f` gagntæk vörpun og andhverfan er gefin með
+  :math:`f^{-1}(x) = \sqrt x`.
+
+  .. image::  ./myndir/kafli01/04_andhverfa.png
+      :align: center
+      :width: 50%
 
 Athugum að hér má velja :math:`X` sem önnur mengi en :math:`[0,2]` svo lengi sem
 :math:`X` inniheldur ekki bæði :math:`a` og :math:`-a`, :math:`a\neq 0`,
@@ -367,20 +407,23 @@ Mengið :math:`Y` er svo valið sem myndmengið :math:`f(X)`.
 
 
 Skilgreining: Graf
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f:X \to Y` vera fall þannig að :math:`X`
-og :math:`Y` eru mengi af rauntölum. :hover:`Graf` fallsins :math:`f` er þá
-mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
-:math:`(x,f(x))` þar sem :math:`x\in X`. Hér notum við oft :math:`y` í stað
-:math:`f(x)`.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. ggb:: 1468111
-    :width: 700
-    :height: 400
-    :img: ./myndir/kafli01/04_Graf_falls.png
-    :imgwidth: 12cm
-    :zoom_drag: false
+  Látum :math:`f:X \to Y` vera fall þannig að :math:`X`
+  og :math:`Y` eru mengi af rauntölum. :hover:`Graf` fallsins :math:`f` er þá
+  mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
+  :math:`(x,f(x))` þar sem :math:`x\in X`. Hér notum við oft :math:`y` í stað
+  :math:`f(x)`.
+
+  .. ggb:: 1468111
+      :width: 700
+      :height: 400
+      :img: ./myndir/kafli01/04_Graf_falls.png
+      :imgwidth: 12cm
+      :zoom_drag: false
 
 .. index::
 	fall; jafnstætt
@@ -389,21 +432,24 @@ mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
 Skilgreining: Jafnstætt og oddstætt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við segjum að fall :math:`f` sé :hover:`jafnstætt,jafnstæður` ef
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. math:: f(x) = f(-x)
+  Við segjum að fall :math:`f` sé :hover:`jafnstætt,jafnstæður` ef
 
-fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
+  .. math:: f(x) = f(-x)
 
-Við segjum að fall :math:`f` sé :hover:`oddstætt` ef
+  fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
 
-.. math:: f(x) = -f(-x)
+  Við segjum að fall :math:`f` sé :hover:`oddstætt` ef
 
-fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
+  .. math:: f(x) = -f(-x)
 
-.. image::  ./myndir/kafli01/04_JafnstaettOddstaett.png
-    :align: center
-    :width: 60%
+  fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
+
+  .. image::  ./myndir/kafli01/04_JafnstaettOddstaett.png
+      :align: center
+      :width: 60%
 
 ------
 
@@ -445,7 +491,7 @@ Stundum er framsetningin
 
 .. math:: f(x) - y_1 = h(x-x_1)
 
-notast og kallast hún punkthallaform línunnar. Hún er bein afleiðing af hallatölujöfnunni
+notast og kallast hún *punkthallaform* línunnar. Hún er bein afleiðing af hallatölujöfnunni
 þar sem hún er sett fram sem
 
 .. math:: h = \frac{f(x)-y_1}{x-x_1}
@@ -456,10 +502,12 @@ staðalform hennar og er línan þá sett fram með
 
 .. math:: ax + by = c
 
-þar sem :math:`a,b \in \mathbb{R}\setminus\{0\}`. Þetta form er almennara þar sem
+þar sem :math:`a,b \in \mathbb{R}` og eru ekki bæði 0. Þetta form er almennara þar sem
 það gerir einnig ráð fyrir lóðréttum línum.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   - Skurðhallaform línu: :math:`y=hx+k`
 
   - Punkthallaform línu: :math:`f(x) - y_1 = h(x-x_1)`
@@ -486,16 +534,16 @@ Margliður hafa almenna formið
 þar sem talan :math:`n\in \mathbb{N}_0` nefnist stig margliðunnar,
 :math:`a_i`, :math:`i = 1, \ldots , n` eru fastar og forystustuðullinn
 :math:`a_n \neq 0`. Þegar  :math:`a_n = 0` þá leyfum við tilfellið :math:`a_0=0`
-og köllum þá fallið :math:`f(x)=0` núllfallið.
+og köllum þá fallið :math:`f(x)=0` *núllfallið*.
 
-Margliða af núlta stigi er einnig stundum kölluð fastafall.
-Línur eru nánar til tekið fyrsta stigs margliður þar sem :math:`n=1` og forystustuðullinn
+Margliða af núlta stigi er einnig stundum kölluð *fastafall*.
+Línur fyrsta stigs margliður þar sem :math:`n=1` og forystustuðullinn
 :math:`a_n` er hallatala línunnar. Margliða af öðru stigi kallast ferningsfall
 og er graf hennar fleygbogi. Fyrir fleygboga gildir að sé :math:`a_n>0` þá er
-fleygboginn kúptur (uppsveigður) en ef :math:`a_n<0` þá er hann hvelfdur (niðursveigður).
+fleygboginn *kúptur* (uppsveigður) en ef :math:`a_n<0` þá er hann *hvelfdur* (niðursveigður).
 
 Veldisföll
-^^^^^^^^^^
+~~~~~~~~~~~
 
 Veldisfall er skilgreint sem fall sem hefur formið
 
@@ -516,13 +564,15 @@ Hér er fallið :math:`g(x)` oddstætt en :math:`f(x)` jafnstætt.
 
 
 Núllstöðvar margliða
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
 
 Einn eiginleiki margliða sem oft er skoðaður er hvort og þá hvar margliðan
 sker :math:`x`-ásinn. Þetta jafngildir því að leysa jöfnuna :math:`f(x)=0` fyrir
-:math:`x`. Skurðpunktarnir eru kallaðir núllstöðvar eða rætur margliðunnar.
+:math:`x`. Skurðpunktarnir eru kallaðir *núllstöðvar* eða *rætur* margliðunnar.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   - Línan :math:`y=hx+k` sker x-ásinn í punktinum :math:`\left(\frac{-k}{h},0\right)`.
 
   - Fleygboginn :math:`y=ax^2 + bx + c` hefur í mesta lagi tvo skurðpunkta við
@@ -530,7 +580,7 @@ sker :math:`x`-ásinn. Þetta jafngildir því að leysa jöfnuna :math:`f(x)=0`
 
     .. math:: x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.
 
-    Talan :math:`D=b^2-4ac` nefnist aðgreinir fleygbogans. Ef :math:`D>0` þá hefur
+    Talan :math:`D=b^2-4ac` nefnist *aðgreinir* fleygbogans. Ef :math:`D>0` þá hefur
     fleygboginn tvo skurðpunkta við :math:`x`-ás, ef :math:`D=0` þá hefur fleygboginn
     einn skurðpunkt við :math:`x`-ás en ef :math:`D<0` þá sker fleygboginn ekki
     :math:`x`-ásinn. Þessi jafna er oft nefnd lausnarformúla 2. stigs margliða en
@@ -538,18 +588,15 @@ sker :math:`x`-ásinn. Þetta jafngildir því að leysa jöfnuna :math:`f(x)=0`
 
   - Erfitt getur reynst að finna núllstöðvar margliða af hærra stigi. Í sumum
     tilfellum er það hægt en í öðrum getur reynst ómögulegt að finna núllstöðvarnar
-    með analytískum hætti. Þarf þá að grípa til tölulegra aðferða, sem er efni
-    annarra kúrsa.
-
-Í þessu námskeiði verður einblínt á  margliður með núllstöðvar
-sem hægt er að ákvarða beint með analytískum aðferðum.
+    með analytískum hætti. Þarf þá að grípa til tölulegra aðferða eins og t.a.m.
+    aðferð Newtons, sem við skoðum síðar meir.
 
 Algebrísk föll
 ~~~~~~~~~~~~~~
 
 Í grunninn eru algebrísk föll eru öll þau föll sem búa má til með samlagningu,
 frádrætti, margföldum, deilingu, ræðum veldum og rótum. Tvær gerðir af algebrískum
-föllum eru ræð föll og rótarföll.
+föllum eru *ræð föll* og *rótarföll*.
 
 Rætt fall er fall á forminu
 
@@ -562,7 +609,9 @@ Rætt fall er fall á forminu
 
 þar sem :math:`n \in \mathbb{N}` og :math:`R(x)` er margliða.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   Athugum að það er algjörlega sambærileg að skrifa :math:`\sqrt[n]{R(x)}` og
   :math:`R(x)^{1/n}` fyrir öll :math:`n \in \mathbb{N}` þar sem að sérhverja ræða rót má
   umrita sem brotið veldi.
@@ -585,7 +634,9 @@ Torræð föll
 um eiginleika torræðra falla, þó mörg föll í þeim flokki séu vissulega mikilvæg
 í heimi stærðfræðinnar.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   **Mikilvæg torræð föll**
 
   - Vísisföll, eins og veldisvísisfallið :math:`e^x` og :math:`2^x`.
@@ -662,7 +713,9 @@ Hægt er að skala fall, bæði lárétt og lóðrétt, með margföldun eða de
 Fallið heldur þá einhverjum af rúmfræðilegum eiginleikum sínum en útlit þess breytist að því leyti að annað
 hvort skreppur það saman eða glennist í sundur, í einhverjum skilningi.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   Ef skalað er með fastanum :math:`a \in \mathbb{R}_+` gildir almennt að...
 
   - ...ef :math:`0<a<1` þá nefnist skölunin herping.
@@ -684,7 +737,7 @@ ef :math:`a>1` lóðrétt herping ef :math:`0<a<1`.
 
 **Lárétt skölun**
 
-Hér fyrir neðan má sjá látrétta skölun á fallinu :math:`f(x)=\sqrt{x}`, annars vegar
+Hér fyrir neðan má sjá lárétta skölun á fallinu :math:`f(x)=\sqrt{x}`, annars vegar
 stríkkun, þ.e. :math:`h(x)=\sqrt{2x}` og hins vegar herpingu, þ.e. :math:`g(x)=\sqrt{\frac{1}{2}x}`
 
 
@@ -700,7 +753,9 @@ Speglun
 
 Hægt er að spegla fall bæði um :math:`x`-ásinn og :math:`y`-ásinn.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   Almennt gildir fyrir fallið :math:`y=f(x)` að...
 
   - ... :math:`y=-f(x)` speglar fallið um :math:`x`-ásinn.
@@ -708,6 +763,7 @@ Hægt er að spegla fall bæði um :math:`x`-ásinn og :math:`y`-ásinn.
   - ... :math:`y=f(-x)` speglar fallið um :math:`y`-ásinn.
 
 .. admonition:: Dæmi
+  :class: daemi
 
   Lítum á fallið :math:`f(x)=x^3+1`. Á myndinni má sjá speglun þess um :math:`x`-ásinn,
   :math:`g(x)=-(x^3+1)` í fjólubláu og speglun þess um :math:`y`-ásinn, :math:`h(x)=(-x)^3+1`
@@ -732,7 +788,8 @@ Radíanar eru mælieining á stærð horns. Algengt er að nemendur læri fyrst 
 gráður til að mæla stærð horna en í mörgum kringumstæðum er eðlilegra og þægilegra
 að nota radíana, vegna tengingar þeirra við einingahringinn, og verður það gert hér.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Einn radíani er skilgreindur á þá vegu að fyrir gefið horn :math:`\theta` þá
   er bogalengd þess í einingahringnum :math:`s` radíanar. Styttingin rad er oft
@@ -780,7 +837,9 @@ undirstaðan í öllum hornafallareikningi og öll önnur hornaföll, eins og
 :math:`\tan(x)`, :math:`\cot(x)`, :math:`\sec(x)` og :math:`\csc(x)` má búa til
 út frá þeim, eins og sjá má hér að neðan.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   - :math:`\tan(x) = \frac{\sin(x)}{\cos(x)}`
 
   - :math:`\cot(x) = \frac{\cos(x)}{\sin(x)}`
@@ -802,7 +861,8 @@ einingahringnum og hornið :math:`\theta` sem myndast á milli :math:`x`-ássins
 
 Gott getur verið að kannast við helstu hornafallastærðirnar.
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   .. list-table:: Nokkrar algengar hornafallastærðir
     :widths: 35 35 35
@@ -830,7 +890,8 @@ Gott getur verið að kannast við helstu hornafallastærðirnar.
 Hornaföllin má einnig skilgreina sem hlutfall milli hliða í rétthyrndum þríhyrningi
 (eins og betur kemur í ljós þegar við skoðum reglu Pýþagórasar fyrir hornaföllin).
 
-.. Note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Látum :math:`T` vera þríhyrning með langhlið að lengd :math:`L`,
   mótlæga skammhlið að lengd :math:`M` og aðlæga skammhlði að lengd :math:`A` og
@@ -866,8 +927,8 @@ Hornafallareglur (e. *trigonometric identities*) koma oft að góðum notum við
 Reglu Pýþagórasar kannast flestir nemendur eflaust við, en hún lýsir tengslum
 milli hliðarlengda rétthyrnds þríhyrnings.
 
-.. note::
-  **Regla Pýþagórasar**
+.. admonition:: Regla Pýþagórasar
+  :class: setning
 
   Í rétthyrndum þríhyrning :math:`\Delta ABC`, með langhliðina :math:`C`,
   gildir að
@@ -897,7 +958,7 @@ til að sýna að
 gildi almennt, óháð gildinu á :math:`\theta`, eins og sést hér að neðan.
 
 .. ggb:: zbhcxhmn
-    :width: 700
+    :width: 800
     :height: 400
     :img: ./myndir/kafli01/PMA_cos2sin2.png
     :imgwidth: 12cm
@@ -916,12 +977,14 @@ samkvæmt því sem við leiddum út hér að ofan. Þetta gildir fyrir öll :ma
 óháð horninu :math:`\theta`.
 
 .. ggb:: pce9f4as
-    :width: 700
-    :height: 400
+    :width: 850
+    :height: 500
     :img: ./myndir/kafli01/PMA_cos2sin2.png
     :imgwidth: 12cm
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   Aðrar útgáfur af reglu Pýþagórasar þar sem hornaföllin eru notuð eru t.a.m.
 
   .. math:: 1+\tan^2(\theta)=\sec^2(\theta)
@@ -932,7 +995,8 @@ samkvæmt því sem við leiddum út hér að ofan. Þetta gildir fyrir öll :ma
 
 **Samlagningar- og frádráttarreglur**
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Almennt gildir að
 
@@ -944,7 +1008,8 @@ samkvæmt því sem við leiddum út hér að ofan. Þetta gildir fyrir öll :ma
 
 **Reglur um tvöföld horn**
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Almennt gildir að
 
@@ -954,7 +1019,8 @@ samkvæmt því sem við leiddum út hér að ofan. Þetta gildir fyrir öll :ma
 
   .. math:: \cos(2\theta) = 2\cos^2(\theta)-1 = 1-2\sin^2(\theta) = \cos^2(\theta)-\sin^2(\theta)
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
 
   Athugið sérstaklega að þó svo að almennt gildi :math:`\cos^2(\theta)+\sin^2(\theta)=1` þá gildir
   ekki almennt að :math:`\cos^2(\theta)-\sin^2(\theta)=-1`!
@@ -964,9 +1030,10 @@ Gröf og lotur hornafallanna
 
 Byrjum á því að skilgreina lotubundið fall.
 
-.. note::
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-  Fall :math:`f(x)` er sagt lotubundið með lotuna :math:`L` ef
+  Fall :math:`f(x)` er sagt *lotubundið* með *lotuna* :math:`L` ef
 
   .. math:: f(x)=f(x+L\cdot k)
 
@@ -1010,7 +1077,7 @@ hafa lotubundnar lóðfellur, sekant annars vegar í :math:`x=\frac{\pi}{2} + k 
     :width: 75 %
     :align: center
 
-og kósekant  hins vegar í :math:`x=0+ k \cdot \pi`, :math:`k \in \mathbb{Z}`.
+og kósekant hins vegar í :math:`x=0+ k \cdot \pi`, :math:`k \in \mathbb{Z}`.
 
 .. image:: ./myndir/kafli01/PMA_csc.png
     :width: 75 %
@@ -1028,14 +1095,16 @@ má taka fallið :math:`f(x)=x^3`. Fallið tekur töluna :math:`x` og hefur hana
 inntak þess er tala í þriðja veldi þá skilar það tölunni sjálfri, veldislausri, út.
 Formlega má skilgreina andhverfu falls á eftirfarandi vegu.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Fall :math:`f` með skilgreiningarmengi :math:`D` og bakmengi :math:`R` á sér
   andhverfuna :math:`f^{-1}`, með skilgreiningarmengið :math:`R` og bakmengið :math:`D`,
   ef :math:`f^{-1}` uppfyllir að :math:`f^{-1}(f(x))=x` fyrir öll :math:`x \in D`
   og :math:`f(f^{-1}(y))=y` fyrir öll :math:`y \in R`.
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
 
   Athugið að sérstaka aðgát þarf að sýna vegna ritháttsins sem notaður er fyrir andhverfur falla.
   Andhverfa fallið :math:`f^{-1}(x)` er ekki *f í mínus fyrsta veldi*, þ,e, :math:`f^{-1}(x)\neq \frac{1}{f}`.
@@ -1049,7 +1118,8 @@ Til að mynda, þá er fallið :math:`g(x)=\sqrt{x}` ekki andhverfa fallsins :ma
 sem brýtur í bága við skilgreininguna á andhverfu þar sem :math:`-2` er í skilgreiningarmengi
 :math:`f`. Þetta er bein afleiðing þess að fallið :math:`x^2` er ekki eintækt.
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Ýmsar aðferðir má nota til að ákvarða hvort fall sé andhverfanlegt eða ekki. Oft
   er auðvelt að sjá það af grafi fallsins. Ef við lítum t.a.m. á gröf fallanna
@@ -1082,20 +1152,23 @@ andhverfa fallsins sem fall af :math:`x`.
 
 
 Dæmi: Finna andhverfu
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
-Lítum á fallið :math:`f(x)=x^3+4`. Fallið er gagntækt svo það er andhverfanlegt.
-Skiptum :math:`f(x)` út fyrir :math:`y` og einangrum svo :math:`x`.
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math::
-  \begin{align}
-    & y=x^3+4\\
-    \iff & x^3 = y-4\\
-    \iff & x=\sqrt[3]{y-4}\\
-  \end{align}
+  Lítum á fallið :math:`f(x)=x^3+4`. Fallið er gagntækt svo það er andhverfanlegt.
+  Skiptum :math:`f(x)` út fyrir :math:`y` og einangrum svo :math:`x`.
 
-Með því að víxla breytunum fæst að fallið :math:`f^{-1}(x)=\sqrt[3]{x-4}` er
-andhverfa fallsins :math:`f(x)`.
+  .. math::
+    \begin{align}
+      & y=x^3+4\\
+      \iff & x^3 = y-4\\
+      \iff & x=\sqrt[3]{y-4}\\
+    \end{align}
+
+  Með því að víxla breytunum fæst að fallið :math:`f^{-1}(x)=\sqrt[3]{x-4}` er
+  andhverfa fallsins :math:`f(x)`.
 
 Graf andhverfu
 ~~~~~~~~~~~~~~
@@ -1104,15 +1177,18 @@ Andhverfur hafa þann rúmfræðilega eiginleika að þær eru speglun fallsins 
 :math:`y=x`, sem gerir það að verkum að þægilegt er að teikna graf þeirra.
 
 Dæmi: Graf andhverfu
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
-Höldum áfram með dæmið hér að ofan og plottum graf fallsins :math:`f(x)=x^3+4`
-og andhverfu þess, :math:`f^{-1}(x)=\sqrt[3]{x-4}`, auk línunnar :math:`y=x`,
-sem er sýnd hér að neðan sem gul punktalína.
+.. admonition:: Dæmi
+  :class: daemi
 
-.. image:: ./myndir/kafli01/PMA_andhverfa.png
-    :width: 75 %
-    :align: center
+  Höldum áfram með dæmið hér að ofan og plottum graf fallsins :math:`f(x)=x^3+4`
+  og andhverfu þess, :math:`f^{-1}(x)=\sqrt[3]{x-4}`, auk línunnar :math:`y=x`,
+  sem er sýnd hér að neðan sem gul punktalína.
+
+  .. image:: ./myndir/kafli01/PMA_andhverfa.png
+      :width: 75 %
+      :align: center
 
 Takmörkun skilgreiningarmengis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1121,15 +1197,18 @@ Unnt er að gera óandhverfanleg föll andhverfanleg með því að takmarka ski
 fallsins þannig að það verði eintækt.
 
 Dæmi: Takmörkun skilgreiningarmengis
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef við takmörkum skilgreiningarmengi fallsins :math:`f(x)=x^2` við
-:math:`\mathbb{R} \cup \{0\}`, þ.e. jákvæðar rauntölur eða 0,
-verður fallið eintækt og á sér þá andhverfuna :math:`\sqrt{x}`.
+.. admonition:: Dæmi
+  :class: daemi
 
-.. image:: ./myndir/kafli01/PMA_takmarka_skilgrmengi.png
-    :width: 75 %
-    :align: center
+  Ef við takmörkum skilgreiningarmengi fallsins :math:`f(x)=x^2` við
+  :math:`\mathbb{R} \cup \{0\}`, þ.e. jákvæðar rauntölur eða 0,
+  verður fallið eintækt og á sér þá andhverfuna :math:`\sqrt{x}`.
+
+  .. image:: ./myndir/kafli01/PMA_takmarka_skilgrmengi.png
+      :width: 75 %
+      :align: center
 
 Andhverfur hornafallanna
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1138,7 +1217,8 @@ Andhverfur hornafallanna
 eintæk og þar af leiðandi ekki andhverfanleg nema skilgreiningarmengi sé takmarkað
 með þeim afleiðingum að þau verði eintæk.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   .. csv-table:: Andhverfu hornaföllin og takmörkun skilgreineingarmengja
     :widths: 35, 30, 30, 30
@@ -1159,22 +1239,25 @@ verður að geta þess að stefnuhornið sé innan takmarkaða
 skilgreiningarmengisins.
 
 Dæmi: Andhverfa hornafalls
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Til eru óendanlega mörk stefnuhorn :math:`\theta` sem uppfylla jöfnuna
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \cos(\theta)=\frac{1}{2}.
+  Til eru óendanlega mörk stefnuhorn :math:`\theta` sem uppfylla jöfnuna
 
-En ef við beitum andhverfum kósínus beggja vegna jafnaðarmerkisins fæst
+  .. math:: \cos(\theta)=\frac{1}{2}.
 
-.. math:: \cos^{-1}\left(\cos(\theta)\right) = \cos^{-1}\left(\frac{1}{2}\right)
+  En ef við beitum andhverfum kósínus beggja vegna jafnaðarmerkisins fæst
 
-sem gefur
+  .. math:: \cos^{-1}\left(\cos(\theta)\right) = \cos^{-1}\left(\frac{1}{2}\right)
 
-.. math:: \theta = \frac{\pi}{3}
+  sem gefur
 
-þar sem það er eina gildið á :math:`\theta` sem uppfyllir jöfnuna og er innan
-takmarkaða skilgreiningarmengis kósínus :math:`[0,\pi]`.
+  .. math:: \theta = \frac{\pi}{3}
+
+  þar sem það er eina gildið á :math:`\theta` sem uppfyllir jöfnuna og er innan
+  takmarkaða skilgreiningarmengis kósínus :math:`[0,\pi]`.
 
 ------
 
@@ -1187,7 +1270,8 @@ Vísisföll
 Tilkoma vísisfalla var gríðarlega mikilvæg fyrir getu fólks til að reikna og spá
 fyrir um vöxt ýmissa stærða, eins og t.d. fólksfjölda, bankainnistæðu o.s.frv.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Fall á forminu
 
@@ -1195,7 +1279,8 @@ fyrir um vöxt ýmissa stærða, eins og t.d. fólksfjölda, bankainnistæðu o.
 
   þar sem :math:`b` er einhver fasti, nefnist vísisfall.
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
 
   Munum að :math:`0^0` er ekki skilgreint þar sem bæði eru rök fyrir því að
   það ætti að taka gildið 0 og 1.
@@ -1209,12 +1294,14 @@ sérhverja óræða :math:`b` tölu má nálga eins vel og vera má með ræðri
 og því betri nálgun sem valin er því nær kemst :math:`x^{\bar{b}}` því að vera
 :math:`x^b`.
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Frægasta vísisfallið er tvímælalaust veldisvísisfallið :math:`e^x` þar sem :math:`e`
   er tala Eulers.
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
 
   Athugið að veldisföll og vísisföll eru frábrugðin að því leyti hvort það er fasti
   í stofninum og breyta í veldinu eða breta í stofninum og fasti í veldinu.
@@ -1228,13 +1315,14 @@ og því betri nálgun sem valin er því nær kemst :math:`x^{\bar{b}}` því a
   er vísisfall af því að þar er fastinn í stofninum og breytan :math:`x` í veldinu.
 
 Graf vísisfalla
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 Fyrir hvaða jákvæða grunnfasta :math:`b` sem er, þar sem :math:`b\neq 1` hefur
 fallið :math:`f(x)=b^x` skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
 :math:`\mathbb{R}_+`.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   - Ef :math:`b>1` þá er fallið vaxandi og nálgast :math:`0` ef :math:`x \rightarrow -\infty` en ef :math:`x \rightarrow \infty` þá nálgast fallið :math:`\infty`.
 
@@ -1245,14 +1333,15 @@ fallið :math:`f(x)=b^x` skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
       :align: center
 
 Fastinn :math:`e` og veldisvísisfallið
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Fastinn :math:`e \approx 2,718282`, einnig kallaður tala Eulers, er ein frægasta óræða tala
 stærðfræðinnar. Hann birtist t.a.m. í veldisvísifallinu :math:`e^x`, sem er reglulega
 notað af vísindamönnum og sérfræðingum til að reikna út vöxt ýmissa stærða í
 náttúrunni og samfélaginu.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Hægt er að túlka fastann :math:`e` sem gildið sem talan
   :math:`\left(1+\frac{1}{m}\right)^m` tekur þegar :math:`m \rightarrow \infty.`
@@ -1266,7 +1355,8 @@ Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
     :width: 75 %
     :align: center
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Það var svissneski stærðfræðingurinn Leonhard Euler sem gaf fastanum fræga
   stafinn :math:`e` til auðkenningar árið 1720. Algengur misskilningur er að hann
@@ -1277,7 +1367,8 @@ Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
       :width: 50 %
       :align: center
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   **Veldareglur**
 
@@ -1299,11 +1390,13 @@ skilgreinir stofn lograns :math:`\log_b(x)`. Almennt gildir fyrir
 :math:`a,b,c \in \mathbb{R}` að ef :math:`a^b = c` þá er :math:`\log_b(c)=a`.
 
 .. admonition:: Dæmi
+  :class: daemi
 
   Lítum á vísisfallið :math:`2^x` og samsvarandi logra :math:`\log_2(x)`. Þar sem
   :math:`2^3=8` þá er :math:`\log_2(8)=3`.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   Mest notaði logrinn er tvímælalaust náttúrulegi logrinn :math:`\log_e{x}`, sem
   yfirleitt er skrifaður sem :math:`\ln(x)` til styttingar. Hann er andhverfa
@@ -1327,8 +1420,8 @@ náttúrulega logrann og veldisvísisfallið.
     :width: 75 %
     :align: center
 
-.. note::
-  **Lograreglur**
+.. admonition:: Lograreglur
+  :class: setning
 
   *Margföldunar-, kvóta- og veldareglur*
 
@@ -1353,7 +1446,8 @@ Breiðbogaföllin hafa sama rithátt og hornaföllin nema þau fá viðskeytið 
 sem stendur fyrir *hyperbolic* á ensku. Hægt er að nota veldisvísisfallið til þess
 að skilgreina þau.
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   - :math:`\cosh(x)=\frac{e^x+e^{-x}}{2}`
 
@@ -1376,9 +1470,8 @@ talsvert oftar fyrir en hinum og er því ágætt að kannst við graf þeirra.
     :width: 75 %
     :align: center
 
-.. note::
-
-  **Breiðbogareglur**
+.. admonition:: Breiðbogareglur
+  :class: setning
 
   #. :math:`\cosh(-x)=\cosh(x)`
 
@@ -1399,9 +1492,10 @@ talsvert oftar fyrir en hinum og er því ágætt að kannst við graf þeirra.
   #. :math:`\cosh(x \pm y)=\cosh(x)\cosh(y)\pm \sinh(x)\sinh(y)`
 
 Andhverfur breiðbogafallanna
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+.. admonition:: Athugasemd
+  :class: athugasemd
 
   .. csv-table:: Andhverfu breiðbogaföllin og skilgreining þeirra
     :widths: 50, 50, 50, 50
@@ -1416,6 +1510,8 @@ Andhverfur breiðbogafallanna
     "**Tákn andhverfu**", ":math:`\coth^{-1}(x)`", ":math:`\text{csch}^{-1}(x)`", ":math:`\text{sec}^{-1}(x)`"
     "**Formúla**", ":math:`\frac{1}{2}\ln\left({\frac{x+1}{x-1}}\right)`", ":math:`\ln\left(\frac{1}{x}+\frac{\sqrt{1+x^2}}{|x|} \right)`", ":math:`\ln \left( \frac{1+\sqrt{1-x^2}}{x} \right)`"
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
   Stundum er forsketið *arc* notað, í stað þess að hafa -1 í brjóstvísi, til að tákna andhverfur breiðboga-
   og hornafallanna. Þá er skrifað :math:`\text{arcsinh}(x)` í stað :math:`\sinh^{-1}(x)`.
