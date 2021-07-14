@@ -4,12 +4,13 @@ Diffurjöfnur
 Rúmmál, massi og massamiðja
 ===========================
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
 	**Nauðsynleg undirstaða**
 
-  - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
-
-  - `Nokkur mikilvæg föll <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#nokkur-mikilvaeg-foll>`_.
+    - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
+    - `Nokkur mikilvæg föll <https://edbook.hi.is/undirbuningur_stae/Kafli09.html#nokkur-mikilvaeg-foll>`_.
 
 *Now, the invention of the scientific method and science is, I'm sure
 we'll all agree, the most powerful intellectual idea, the most powerful
@@ -35,21 +36,26 @@ Diffurjöfnur
 Skilgreining: Diffurjafna
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ritum :math:`y=y(x)` sem fall af :math:`x`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-:hover:`Diffurjafna` er jafna á forminu
+    Ritum :math:`y=y(x)` sem fall af :math:`x`.
 
-.. math:: F(x, y, y', y'', \ldots, y^{(n)})=0
+    :hover:`Diffurjafna` er jafna á forminu
 
-þar sem :math:`F` er fall (formúla) í :math:`n+2` breytistærðum.
+    .. math:: F(x, y, y', y'', \ldots, y^{(n)})=0
 
-Diffurjafnan er sögð vera af :math:`n`-ta *stigi* ef hæsta afleiða :math:`y`
-sem kemur fyrir í henni er :math:`n`.
+    þar sem :math:`F` er fall (formúla) í :math:`n+2` breytistærðum.
 
-Að leysa diffurjöfnu felur í sér að skrifa :math:`y` sem fall
-af :math:`x`, þ.e. finna formúlu fyrir :math:`y`.
+    Diffurjafnan er sögð vera af :math:`n`-ta *stigi* ef hæsta afleiða :math:`y`
+    sem kemur fyrir í henni er :math:`n`.
 
-.. note::
+    Að leysa diffurjöfnu felur í sér að skrifa :math:`y` sem fall
+    af :math:`x`, þ.e. finna formúlu fyrir :math:`y`.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
     Deildajafna, afleiðujafna og diffurjafna eru samheiti yfir
     sama hlutinn.
 
@@ -72,19 +78,24 @@ að ofan,
 Skilgreining: Aðgreinanleg diffurjafna
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fyrsta stigs diffurjafna sem má rita á forminu
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \frac{dy}{dx}=f(x)g(y)
+    Fyrsta stigs diffurjafna sem má rita á forminu
 
-kallast *aðgreinanleg*. Það er, þátta má hægri hliðina
-þannig að annar þátturinn er bara fall af :math:`x` og hinn þátturinn er
-bara fall af :math:`y`.
+    .. math:: \frac{dy}{dx}=f(x)g(y)
+
+    kallast *aðgreinanleg*. Það er, þátta má hægri hliðina
+    þannig að annar þátturinn er bara fall af :math:`x` og hinn þátturinn er
+    bara fall af :math:`y`.
 
 Umritum jöfnuna yfir á formið
 
 .. math:: \frac{dy}{g(y)}=f(x)\,dx.
 
-.. warning::
+.. admonition:: Aðvörun
+    :class: advorun
+
     Það má ekkert :math:`x` koma fyrir í vinstri hliðinni og
     ekkert :math:`y` má koma fyrir í hægri hliðinni.
 
@@ -138,16 +149,19 @@ Línulegar fyrsta stigs diffurjöfnur
 Skilgreining: Línuleg diffurjafna
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Diffurjafna á forminu
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+\cdots+a_1(x)y'+a_0(x)y=f(x)
+    Diffurjafna á forminu
 
-kallast :hover:`línuleg diffurjafna`. Hún er :math:`n`-ta stigs ef
-:math:`a_n(x)` er ekki fastafallið :math:`0`.
+    .. math:: a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+\cdots+a_1(x)y'+a_0(x)y=f(x)
 
-Ef :math:`f` er fastafallið :math:`0` þá er jafnan sögð :hover:`óhliðruð`
-en ef :math:`f` er ekki fastafallið :math:`0` þá er hún
-sögð :hover:`hliðruð,hliðruð línuleg diffurjafna`.
+    kallast :hover:`línuleg diffurjafna`. Hún er :math:`n`-ta stigs ef
+    :math:`a_n(x)` er ekki fastafallið :math:`0`.
+
+    Ef :math:`f` er fastafallið :math:`0` þá er jafnan sögð :hover:`óhliðruð`
+    en ef :math:`f` er ekki fastafallið :math:`0` þá er hún
+    sögð :hover:`hliðruð,hliðruð línuleg diffurjafna`.
 
 .. index::
     diffurjafna; fyrsta stigs
@@ -163,13 +177,43 @@ Samsvarandi óhliðruð jafna er
 
 .. math:: y'+p(x)y=0.
 
-Skilgreinum :math:`\mu(x)=\int p(x)\,dx` (eitthvert stofnfall). Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx
+    Látum :math:`y'+p(x)y=q(x)` vera almenna línulega fyrsta stigs diffurjöfnu. Skilgreinum :math:`\mu(x)=\int p(x)\,dx`. Þá er
 
-lausn á diffurjöfnunni.
+    .. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx
 
-.. warning::
+    lausn á diffurjöfnunni.
+
+.. admonition:: Sönnun
+    :class: setning, dropdown
+
+    Setjum
+
+    .. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx
+
+    inn í vinstri hlið diffurjöfnunnar, ef út kemur hægri hliðin :math:`q(x)` þá
+    höfum við sýnt að þetta er lausn.
+
+    Athugum fyrst að
+
+    .. math::
+    	\begin{aligned}
+    	y'(x) &=e^{-\mu(x)}(-\mu'(x)) \int e^{\mu(x)}q(x)\, dx + e^{-\mu(x)} \frac{d}{dx} \int e^{\mu(x)}q(x)\,dx \\
+    	&= -e^{-\mu(x)}p(x)\int e^{\mu(x)}q(x)\, dx +  e^{-\mu(x)} e^{\mu(x)}q(x) = -p(x)y(x) + q(x).
+    	\end{aligned}
+
+    Ef við setjum þetta inn í diffurjöfnuna fæst
+
+    .. math::
+    	y'(x) + p(x)y(x) = -p(x)y(x) + q(x) + p(x)y(x) = q(x),
+
+    þannig að :math:`y` skilgreint eins og hér að ofan er greinilega lausn á diffurjöfnunni.
+
+.. admonition:: Aðvörun
+    :class: advorun
+
     Þegar þið reiknið :math:`\mu(x)=\int p(x)\,dx` þá megið þið sleppa
     heildunarfastanum, en **ekki** þegar þið reiknið heildið
     :math:`\int e^{\mu(x)}q(x)\,dx`.
@@ -177,51 +221,24 @@ lausn á diffurjöfnunni.
 .. index::
     diffurjafna; annars stigs
 
-.. begin-toggle::
-	:label: Sýna sönnun
-	:starthidden: True
-
-**Sönnun**
-
-Setjum
-
-.. math:: y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx
-
-inn í vinstri hlið diffurjöfnunnar, ef út kemur hægri hliðin :math:`q(x)` þá
-höfum við sýnt að þetta er lausn.
-
-Athugum fyrst að
-
-.. math::
-	\begin{aligned}
-	y'(x) &=e^{-\mu(x)}(-\mu'(x)) \int e^{\mu(x)}q(x)\, dx + e^{-\mu(x)} \frac{d}{dx} \int e^{\mu(x)}q(x)\,dx \\
-	&= -e^{-\mu(x)}p(x)\int e^{\mu(x)}q(x)\, dx +  e^{-\mu(x)} e^{\mu(x)}q(x) = -p(x)y(x) + q(x).
-	\end{aligned}
-
-Ef við setjum þetta inn í diffurjöfnuna fæst
-
-.. math::
-	y'(x) + p(x)y(x) = -p(x)y(x) + q(x) + p(x)y(x) = q(x),
-
-þannig að :math:`y` skilgreint eins og hér að ofan er greinilega lausn á diffurjöfnunni.
-
-.. end-toggle::
-
 Línulegar annars stigs diffurjöfnur með fastastuðla
 ---------------------------------------------------
 
 Skilgreining
 ~~~~~~~~~~~~
 
-*Línuleg annars stigs diffurjafna með fastastuðla* er diffurjafna á
-forminu
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: ay''+by'+cy=f(x)
+    *Línuleg annars stigs diffurjafna með fastastuðla* er diffurjafna á
+    forminu
 
-þar sem :math:`a, b` og :math:`c` eru fastar, :math:`a\neq 0`.
+    .. math:: ay''+by'+cy=f(x)
 
-Jafnan er sögð *óhliðruð* ef fallið :math:`f(x)` er
-fastafallið 0.
+    þar sem :math:`a, b` og :math:`c` eru fastar, :math:`a\neq 0`.
+
+    Jafnan er sögð *óhliðruð* ef fallið :math:`f(x)` er
+    fastafallið 0.
 
 .. index::
     diffurjafna; kennijafna
@@ -229,94 +246,106 @@ fastafallið 0.
 Skilgreining: Kennijafna
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Jafnan :math:`ar^2+br+c=0` kallast :hover:`kennijafna`
-diffurjöfnunnar :math:`ay''+by'+cy=0`.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Jafnan :math:`ar^2+br+c=0` kallast :hover:`kennijafna`
+    diffurjöfnunnar :math:`ay''+by'+cy=0`.
 
 Setning
 ~~~~~~~
 
-Ef föllin :math:`y_1(x)` og :math:`y_2(x)` eru lausnir á diffurjöfnunni
-:math:`ay''+by'+cy=0` þá er fallið
+.. admonition:: Setning
+    :class: setning
 
-.. math:: y(x)=Ay_1(x)+By_2(x),
+    Ef föllin :math:`y_1(x)` og :math:`y_2(x)` eru lausnir á diffurjöfnunni
+    :math:`ay''+by'+cy=0` þá er fallið
 
-þar sem :math:`A` og :math:`B` eru fastar, líka lausn.
+    .. math:: y(x)=Ay_1(x)+By_2(x),
 
-Ef :math:`y_2(x)` er ekki fastamargfeldi af :math:`y_1(x)` þá má skrifa
-**sérhverja** lausn :math:`y(x)` á diffurjöfnunni :math:`ay''+by'+cy=0`
-á forminu
+    þar sem :math:`A` og :math:`B` eru fastar, líka lausn.
 
-.. math:: y(x)=Ay_1(x)+By_2(x),
+    Ef :math:`y_2(x)` er ekki fastamargfeldi af :math:`y_1(x)` þá má skrifa
+    **sérhverja** lausn :math:`y(x)` á diffurjöfnunni :math:`ay''+by'+cy=0`
+    á forminu
 
-þar sem :math:`A` og :math:`B` eru fastar.
+    .. math:: y(x)=Ay_1(x)+By_2(x),
+
+    þar sem :math:`A` og :math:`B` eru fastar.
 
 .. _2stigs-ohlidrud:
 
 Setning
 ~~~~~~~
 
-Ef leysa á annars stigs óhliðraða diffurjöfnu með fastastuðla
+.. admonition:: Setning
+    :class: setning
 
-.. math:: ay''+by'+cy=0
+    Ef leysa á annars stigs óhliðraða diffurjöfnu með fastastuðla
 
-þá geta komið upp þrjú tilvik.
+    .. math:: ay''+by'+cy=0
 
-Tilvik I
-    *Kennijafnan* :math:`ar^2+br+c=0` *hefur tvær ólíkar rauntölulausnir*
-    :math:`r_1` og :math:`r_2`.
+    þá geta komið upp þrjú tilvik.
 
-    Þá er fallið
+    Tilvik I
+        *Kennijafnan* :math:`ar^2+br+c=0` *hefur tvær ólíkar rauntölulausnir*
+        :math:`r_1` og :math:`r_2`.
 
-    .. math:: y(x)=Ae^{r_1x}+Be^{r_2x}
+        Þá er fallið
 
-    alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
-    valdir og sérhverja lausn má rita á þessu formi.
+        .. math:: y(x)=Ae^{r_1x}+Be^{r_2x}
 
-Tilvik II
-    *Kennijafnan* :math:`ar^2+br+c=0` *hefur bara eina rauntölulausn*
-    :math:`k=-\frac{b}{2a}`.
+        alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
+        valdir og sérhverja lausn má rita á þessu formi.
 
-    Þá er fallið
+    Tilvik II
+        *Kennijafnan* :math:`ar^2+br+c=0` *hefur bara eina rauntölulausn*
+        :math:`k=-\frac{b}{2a}`.
 
-    .. math:: y(x)=Ae^{kx}+Bxe^{kx}
+        Þá er fallið
 
-    alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
-    valdir og sérhverja lausn má rita á þessu formi.
+        .. math:: y(x)=Ae^{kx}+Bxe^{kx}
 
-Tilvik III
-    *Kennijafnan* :math:`ar^2+br+c=0` *hefur engar rauntölulausnir.*
+        alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
+        valdir og sérhverja lausn má rita á þessu formi.
 
-    Setjum :math:`k=-\frac{b}{2a}` og
-    :math:`\omega=\frac{\sqrt{4ac-b^2}}{2a}`.
+    Tilvik III
+        *Kennijafnan* :math:`ar^2+br+c=0` *hefur engar rauntölulausnir.*
 
-    Rætur kennijöfnunnar eru :math:`r_1=k+i\omega` og
-    :math:`r_2=k-i\omega`.
+        Setjum :math:`k=-\frac{b}{2a}` og
+        :math:`\omega=\frac{\sqrt{4ac-b^2}}{2a}`.
 
-    Þá er fallið
+        Rætur kennijöfnunnar eru :math:`r_1=k+i\omega` og
+        :math:`r_2=k-i\omega`.
 
-    .. math:: y(x)=Ae^{kx}\cos(\omega x)+Be^{kx}\sin(\omega x)
+        Þá er fallið
 
-    alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
-    valdir og sérhverja lausn má rita á þessu formi.
+        .. math:: y(x)=Ae^{kx}\cos(\omega x)+Be^{kx}\sin(\omega x)
+
+        alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
+        valdir og sérhverja lausn má rita á þessu formi.
 
 Setning
 ~~~~~~~
 
-Látum :math:`y_{\rm p}(x)` vera einhverja lausn á hliðruðu jöfnunni
+.. admonition:: Setning
+    :class: setning
 
-.. math:: ay''+by'+cy=f(x).
+    Látum :math:`y_{\rm p}(x)` vera einhverja lausn á hliðruðu jöfnunni
 
-Látum :math:`y_1(x)` og :math:`y_2(x)` vera lausnir sem fást úr :ref:`8.3.4 <2stigs-ohlidrud>` á
-óhliðruðu jöfnunni
+    .. math:: ay''+by'+cy=f(x).
 
-.. math:: ay''+by'+cy=0.
+    Látum :math:`y_1(x)` og :math:`y_2(x)` vera lausnir sem fást úr :ref:`8.3.4 <2stigs-ohlidrud>` á
+    óhliðruðu jöfnunni
 
-Sama hvernig fastarnir :math:`A` og :math:`B` eru valdir þá er fallið
+    .. math:: ay''+by'+cy=0.
 
-.. math:: y(x)=Ay_1(x)+By_2(x)+y_{\rm p}(x)
+    Sama hvernig fastarnir :math:`A` og :math:`B` eru valdir þá er fallið
 
-alltaf lausn á diffurjöfnunni :math:`ay''+by'+cy=f(x)` og sérhverja
-lausn má skrifa á þessu formi.
+    .. math:: y(x)=Ay_1(x)+By_2(x)+y_{\rm p}(x)
+
+    alltaf lausn á diffurjöfnunni :math:`ay''+by'+cy=f(x)` og sérhverja
+    lausn má skrifa á þessu formi.
 
 Ágiskanir
 ---------
