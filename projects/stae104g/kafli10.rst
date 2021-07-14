@@ -1,20 +1,22 @@
 Veldaraðir
 ==========
 
-.. note::
+.. admonition:: Athugasemd
+    :class: athugasemd
+
 	**Nauðsynleg undirstaða**
 
-  - `Summuvirkinn <https://en.wikipedia.org/wiki/Summation>`_.
+      - `Summuvirkinn <https://en.wikipedia.org/wiki/Summation>`_.
 
-  - `Ýmislegt um tvíliðustuðulinn, hrópmerkingu og fleira <https://edbook.hi.is/undirbuningur_stae/Kafli06.html#pascal>`_.
+      - `Ýmislegt um tvíliðustuðulinn, hrópmerkingu og fleira <https://edbook.hi.is/undirbuningur_stae/Kafli06.html#pascal>`_.
 
-  - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/Kafli10.html>`_.
+      - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/Kafli10.html>`_.
 
-  - `Taylor margliður <https://edbook.hi.is/stae104g/kafli03.html#taylor-margliur>`_.
+      - `Taylor margliður <https://edbook.hi.is/stae104g/kafli03.html#taylor-margliur>`_.
 
-  - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
+      - :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/Kafli11.html>`_.
 
-  - :ref:`Heildun <heildun>`.
+      - :ref:`Heildun <heildun>`.
 
 
 *What to do if you find yourself stuck in a crack in the ground underneath
@@ -40,27 +42,33 @@ Veldaraðir
 Skilgreining
 ~~~~~~~~~~~~
 
-Röð á forminu
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+\cdots
+    Röð á forminu
 
-kallast :hover:`veldaröð` með :hover:`miðju` í punktinum :math:`c`.
+    .. math:: \sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+\cdots
+
+    kallast :hover:`veldaröð` með :hover:`miðju` í punktinum :math:`c`.
 
 .. _setning-samleitnigeisli:
 
 Setning
 ~~~~~~~
 
-Um sérhverja veldaröð :math:`\sum_{n=0}^\infty a_n(x-c)^n` gildir eitt
-af þrennu:
+.. admonition:: Setning
+    :class: setning
 
-(i)   Röðin er aðeins samleitin fyrir :math:`x=c`.
+    Um sérhverja veldaröð :math:`\sum_{n=0}^\infty a_n(x-c)^n` gildir eitt
+    af þrennu:
 
-(ii)  Til er jákvæð tala :math:`R` þannig að veldaröðin er alsamleitin
-      fyrir öll :math:`x` þannig að :math:`|x-c|<R` og ósamleitin fyrir
-      öll :math:`x` þannig að :math:`|x-c|>R`.
+    (i)   Röðin er aðeins samleitin fyrir :math:`x=c`.
 
-(iii) Röðin er samleitin fyrir allar rauntölur :math:`x`.
+    (ii)  Til er jákvæð tala :math:`R` þannig að veldaröðin er alsamleitin
+          fyrir öll :math:`x` þannig að :math:`|x-c|<R` og ósamleitin fyrir
+          öll :math:`x` þannig að :math:`|x-c|>R`.
+
+    (iii) Röðin er samleitin fyrir allar rauntölur :math:`x`.
 
 .. index::
     veldaröð; samleitnigeisli
@@ -71,41 +79,44 @@ af þrennu:
 Skilgreining: Miðja og samleitnigeisli
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-(i)   Talan :math:`c` kallast *miðja* eða *samleitnimiðja*
-      veldaraðarinnar.
+    Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
 
-(ii)  Í tilviki 2. í setningunni hér á undan er röðin alsamleitin á opna bilinu
-      :math:`(c-R, c+R)` og ósamleitin fyrir utan lokaða bilið
-      :math:`[c-R, c+R]`.
+    (i)   Talan :math:`c` kallast *miðja* eða *samleitnimiðja*
+          veldaraðarinnar.
 
-      Talan :math:`R` er kölluð :hover:`samleitnigeisli` raðarinnar.
+    (ii)  Í tilviki 2. í setningunni hér á undan er röðin alsamleitin á opna bilinu
+          :math:`(c-R, c+R)` og ósamleitin fyrir utan lokaða bilið
+          :math:`[c-R, c+R]`.
 
-      Mögulegt er að röðin sé samleitin (alsamleitin eða skilyrt
-      samleitin) í öðrum eða báðum punktunum :math:`x=c-R` og
-      :math:`x=c+R` (þetta þarf að athuga sérstaklega).
+          Talan :math:`R` er kölluð :hover:`samleitnigeisli` raðarinnar.
 
-      Í tilfelli 1. í setningunni þegar röðin er bara samleitin fyrir :math:`x=c`
-      setjum við :math:`R=0` og í tilfelli 3. þegar röðin er
-      samleitin fyrir allar rauntölur :math:`x` þá setjum við
-      :math:`R=\infty`.
+          Mögulegt er að röðin sé samleitin (alsamleitin eða skilyrt
+          samleitin) í öðrum eða báðum punktunum :math:`x=c-R` og
+          :math:`x=c+R` (þetta þarf að athuga sérstaklega).
 
-(iii) :hover:`Samleitnibil` veldaraðarinnar
-      :math:`\sum_{n=0}^\infty a_n(x-c)^n` er mengi allra gilda
-      :math:`x` þannig að röðin er samleitin. Setning hér á undan sýnir að
-      :þetta mengi er alltaf bil.
+          Í tilfelli 1. í setningunni þegar röðin er bara samleitin fyrir :math:`x=c`
+          setjum við :math:`R=0` og í tilfelli 3. þegar röðin er
+          samleitin fyrir allar rauntölur :math:`x` þá setjum við
+          :math:`R=\infty`.
+
+    (iii) :hover:`Samleitnibil` veldaraðarinnar
+          :math:`\sum_{n=0}^\infty a_n(x-c)^n` er mengi allra gilda
+          :math:`x` þannig að röðin er samleitin. Setning hér á undan sýnir að
+          :þetta mengi er alltaf bil.
 
 
-      - Þegar samleitnigeilsinn er 0 er samleitnibilið :math:`\{c\}`.
+          - Þegar samleitnigeilsinn er 0 er samleitnibilið :math:`\{c\}`.
 
-      - Þegar samleitnigeislinn er :math:`R>0` þá koma fjórir möguleikar
-        til greina eftir því hvort röðin er
-        samleitin í hvorugum, öðrum eða báðum punktunum :math:`x=c-R` og
-        :math:`x=c+R`. Samleitnibilið getur verið
-        :math:`(c-R, c+R)`, :math:`[c-R, c+R)`, :math:`(c-R, c+R]` eða :math:`[c-R, c+R]`.
+          - Þegar samleitnigeislinn er :math:`R>0` þá koma fjórir möguleikar
+            til greina eftir því hvort röðin er
+            samleitin í hvorugum, öðrum eða báðum punktunum :math:`x=c-R` og
+            :math:`x=c+R`. Samleitnibilið getur verið
+            :math:`(c-R, c+R)`, :math:`[c-R, c+R)`, :math:`(c-R, c+R]` eða :math:`[c-R, c+R]`.
 
-      - Þegar samleitnigeislinn er :math:`\infty` þá er samleitnibilið :math:`(-\infty, \infty)`.
+          - Þegar samleitnigeislinn er :math:`\infty` þá er samleitnibilið :math:`(-\infty, \infty)`.
 
 .. index::
     veldaröð; samleitnipróf
@@ -116,36 +127,39 @@ Samleitnipróf
 Setning
 ~~~~~~~
 
-Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
+.. admonition:: Setning
+    :class: setning
 
-(i)  :hover:`Kvótapróf`: Gerum ráð fyrir að
-     :math:`L=\lim_{n\rightarrow\infty}\left|\frac{a_{n+1}}{a_n}\right|`
-     sé til eða :math:`\infty`.
+    Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
 
-     Þá hefur veldaröðin :math:`\sum_{n=0}^\infty a_n(x-c)^n`
-     samleitnigeisla
+    (i)  :hover:`Kvótapróf`: Gerum ráð fyrir að
+         :math:`L=\lim_{n\rightarrow\infty}\left|\frac{a_{n+1}}{a_n}\right|`
+         sé til eða :math:`\infty`.
 
-     .. math::
+         Þá hefur veldaröðin :math:`\sum_{n=0}^\infty a_n(x-c)^n`
+         samleitnigeisla
 
-        R= \left\{\begin{array}{ll}
-        \infty & \text{ef }L=0,\\
-        \frac{1}{L} & \text{ef }0<L<\infty,\\
-        0 & \text{ef }L=\infty.\\
-        \end{array} \right.
+         .. math::
 
-(ii) :hover:`Rótarpróf`: Gerum ráð fyrir að
-     :math:`L=\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}` sé til eða
-     :math:`\infty`. Þá hefur veldaröðin
-     :math:`\sum_{n=0}^\infty a_n(x-c)^n` samleitnigeisla
+            R= \left\{\begin{array}{ll}
+            \infty & \text{ef }L=0,\\
+            \frac{1}{L} & \text{ef }0<L<\infty,\\
+            0 & \text{ef }L=\infty.\\
+            \end{array} \right.
 
-     .. math::
+    (ii) :hover:`Rótarpróf`: Gerum ráð fyrir að
+         :math:`L=\lim_{n\rightarrow\infty}\sqrt[n]{|a_n|}` sé til eða
+         :math:`\infty`. Þá hefur veldaröðin
+         :math:`\sum_{n=0}^\infty a_n(x-c)^n` samleitnigeisla
 
-        R= \left\{\begin{array}{ll}
-        \infty & \text{ef }L=0,\\
-        \frac{1}{L} & \text{ef }0<L<\infty,\\
-        0 & \text{ef }L=\infty.\\
-        \end{array}
-        \right.
+         .. math::
+
+            R= \left\{\begin{array}{ll}
+            \infty & \text{ef }L=0,\\
+            \frac{1}{L} & \text{ef }0<L<\infty,\\
+            0 & \text{ef }L=\infty.\\
+            \end{array}
+            \right.
 
 .. index::
     setning Abels
@@ -153,91 +167,106 @@ Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
 Setning Abels
 ~~~~~~~~~~~~~
 
-Fallið :math:`f` skilgreint á samleitnibili með
+.. admonition:: Setning
+    :class: setning
 
-.. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n
+    Fallið :math:`f` skilgreint á samleitnibili með
 
-er samfellt á öllu samleitnibili veldaraðarinnar.
+    .. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n
 
-Ef samleitnigeislinn er :math:`0<R<\infty` og röðin er samleitin í
-punktinum :math:`x=c+R` þá er
+    er samfellt á öllu samleitnibili veldaraðarinnar.
 
-.. math::
+    Ef samleitnigeislinn er :math:`0<R<\infty` og röðin er samleitin í
+    punktinum :math:`x=c+R` þá er
 
-   \lim_{x\rightarrow (c+R)^-}f(x)=f(c+R)=\sum_{n=0}^\infty
-   a_n((c+R)-c)^n=\sum_{n=0}^\infty a_nR^n.
+    .. math::
 
-Eins ef röðin er samleitin í punktinum :math:`x=c-R` þá er
+       \lim_{x\rightarrow (c+R)^-}f(x)=f(c+R)=\sum_{n=0}^\infty
+       a_n((c+R)-c)^n=\sum_{n=0}^\infty a_nR^n.
 
-.. math::
+    Eins ef röðin er samleitin í punktinum :math:`x=c-R` þá er
 
-   \lim_{x\rightarrow (c-R)^+}f(x)=f(c-R)=\sum_{n=0}^\infty
-   a_n((c-R)-c)^n=\sum_{n=0}^\infty a_n(-R)^n.
+    .. math::
+
+       \lim_{x\rightarrow (c-R)^+}f(x)=f(c-R)=\sum_{n=0}^\infty
+       a_n((c-R)-c)^n=\sum_{n=0}^\infty a_n(-R)^n.
 
 
 Setning: Diffrað lið fyrir lið
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+a_3(x-c)^3+\cdots`
-vera veldaröð með miðju í :math:`c` og samleitnigeisla :math:`R`.
+.. admonition:: Setning
+    :class: setning
 
-Fyrir :math:`x\in(c-R, c+R)` skilgreinum við
+    Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+a_3(x-c)^3+\cdots`
+    vera veldaröð með miðju í :math:`c` og samleitnigeisla :math:`R`.
 
-.. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n.
+    Fyrir :math:`x\in(c-R, c+R)` skilgreinum við
 
-Fallið :math:`f` er diffranlegt og
+    .. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n.
 
-.. math:: f'(x)=\sum_{n=1}^\infty na_n(x-c)^{n-1}=a_1+2a_2(x-c)+3a_3(x-c)^2+\cdots
+    Fallið :math:`f` er diffranlegt og
 
-og röðin fyrir :math:`f'(x)` er samleitin fyrir öll
-:math:`x\in(c-R, c+R)`.
+    .. math:: f'(x)=\sum_{n=1}^\infty na_n(x-c)^{n-1}=a_1+2a_2(x-c)+3a_3(x-c)^2+\cdots
 
-Þetta þýðir að við getum diffrað veldaraðir lið fyrir lið.
+    og röðin fyrir :math:`f'(x)` er samleitin fyrir öll
+    :math:`x\in(c-R, c+R)`.
 
-Þar sem diffranleg föll eru samfelld þá fæst eftirfarandi.
+    Þetta þýðir að við getum diffrað veldaraðir lið fyrir lið.
+
+    Þar sem diffranleg föll eru samfelld þá fæst eftirfarandi.
 
 Fylgisetning
 ~~~~~~~~~~~~
 
-Fallið :math:`f` er samfellt á :math:`(c-R, c+R)`.
+.. admonition:: Setning
+    :class: setning
+
+    Fallið :math:`f` er samfellt á :math:`(c-R, c+R)`.
 
 Setning: Heildað lið fyrir lið
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum
-:math:`\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+a_3(x-c)^3+\cdots`
-vera veldaröð með miðju í :math:`c` og samleitnigeisla :math:`R`.
+.. admonition:: Setning
+    :class: setning
 
-Fyrir :math:`x\in(c-R, c+R)` skilgreinum við
-:math:`f(x)=\sum_{n=0}^\infty a_n(x-c)^n`.
+    Látum
+    :math:`\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+a_3(x-c)^3+\cdots`
+    vera veldaröð með miðju í :math:`c` og samleitnigeisla :math:`R`.
 
-Fallið :math:`f` hefur stofnfall
+    Fyrir :math:`x\in(c-R, c+R)` skilgreinum við
+    :math:`f(x)=\sum_{n=0}^\infty a_n(x-c)^n`.
 
-.. math::
+    Fallið :math:`f` hefur stofnfall
 
-   \begin{gathered}
-   F(x)=\sum_{n=0}^\infty \frac{a_n}{n+1}(x-c)^{n+1} \\
-   =a_0(x-c)+\frac{a_1}{2}(x-c)^2+\frac{a_2}{3}(x-c)^3+
-   \frac{a_3}{4}(x-c)^4+\cdots\end{gathered}
+    .. math::
 
-og röðin fyrir :math:`F(x)` er samleitin fyrir öll
-:math:`x\in(c-R, c+R)`.
+       \begin{gathered}
+       F(x)=\sum_{n=0}^\infty \frac{a_n}{n+1}(x-c)^{n+1} \\
+       =a_0(x-c)+\frac{a_1}{2}(x-c)^2+\frac{a_2}{3}(x-c)^3+
+       \frac{a_3}{4}(x-c)^4+\cdots\end{gathered}
+
+    og röðin fyrir :math:`F(x)` er samleitin fyrir öll
+    :math:`x\in(c-R, c+R)`.
 
 Þetta þýðir að við getum heildað veldaraðir lið fyrir lið.
 
 Setning
 ~~~~~~~
 
-Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+a_3(x-c)^3+\cdots`
-vera veldaröð með miðju í :math:`c` og samleitnigeisla :math:`R`.
+.. admonition:: Setning
+    :class: setning
 
-Fyrir :math:`x\in(c-R, c+R)` skilgreinum við
+    Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n=a_0+a_1(x-c)+a_2(x-c)^2+a_3(x-c)^3+\cdots`
+    vera veldaröð með miðju í :math:`c` og samleitnigeisla :math:`R`.
 
-.. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n.
+    Fyrir :math:`x\in(c-R, c+R)` skilgreinum við
 
-Fallið :math:`f` er :math:`k`-sinnum diffranlegt fyrir :math:`k=1, 2, 3, \ldots` og
+    .. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n.
 
-.. math:: a_k=\frac{f^{(k)}(c)}{k!}.
+    Fallið :math:`f` er :math:`k`-sinnum diffranlegt fyrir :math:`k=1, 2, 3, \ldots` og
+
+    .. math:: a_k=\frac{f^{(k)}(c)}{k!}.
 
 .. index::
     veldaröð; fágað fall
@@ -246,20 +275,26 @@ Fallið :math:`f` er :math:`k`-sinnum diffranlegt fyrir :math:`k=1, 2, 3, \ldots
 Skilgreining: Fágað fall
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fall :math:`f` þannig að til er veldaröð
-:math:`\sum_{n=0}^\infty a_n(x-c)^n` með samleitnigeisla :math:`R>0`
-þannig að
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n
+    Fall :math:`f` þannig að til er veldaröð
+    :math:`\sum_{n=0}^\infty a_n(x-c)^n` með samleitnigeisla :math:`R>0`
+    þannig að
 
-fyrir öll :math:`x\in(c-R, c+R)` kallast *fágað* (raunfágað) í punktinum
-:math:`c`.
+    .. math:: f(x)=\sum_{n=0}^\infty a_n(x-c)^n
+
+    fyrir öll :math:`x\in(c-R, c+R)` kallast *fágað* (raunfágað) í punktinum
+    :math:`c`.
 
 Athugasemd
 ~~~~~~~~~~
 
-Dæmi um fáguð föll eru margliður, ræð föll, hornaföll, veldisföll og
-lograr.
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Dæmi um fáguð föll eru margliður, ræð föll, hornaföll, veldisföll og
+    lograr.
 
 .. index::
     Taylorröð
@@ -272,22 +307,25 @@ Taylorraðir
 Skilgreining: Taylorröð
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Gerum ráð fyrir að fall :math:`f(x)` sé óendanlega oft diffranlegt í
-punktinum :math:`x=c`, (það er :math:`f^{(k)}(c)` er til fyrir
-:math:`k=0, 1, 2, \ldots`).
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Veldaröðin
+    Gerum ráð fyrir að fall :math:`f(x)` sé óendanlega oft diffranlegt í
+    punktinum :math:`x=c`, (það er :math:`f^{(k)}(c)` er til fyrir
+    :math:`k=0, 1, 2, \ldots`).
 
-.. math::
+    Veldaröðin
 
-   \begin{aligned}
-   \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n = & f(c)+f'(c)(x-c)+
-   \frac{f''(c)}{2}(x-c)^2 \\ & + \frac{f'''(c)}{3!}(x-c)^3
-   + \frac{f^{(4)}(c)}{4!}(x-c)^4 + \cdots \end{aligned}
+    .. math::
 
-kallast *Taylorröð* með miðju í :math:`x=c` fyrir :math:`f(x)`.
+       \begin{aligned}
+       \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n = & f(c)+f'(c)(x-c)+
+       \frac{f''(c)}{2}(x-c)^2 \\ & + \frac{f'''(c)}{3!}(x-c)^3
+       + \frac{f^{(4)}(c)}{4!}(x-c)^4 + \cdots \end{aligned}
 
-Ef svo vill til að :math:`c=0` þá er oft talað um *Maclaurinröð*.
+    kallast *Taylorröð* með miðju í :math:`x=c` fyrir :math:`f(x)`.
+
+    Ef svo vill til að :math:`c=0` þá er oft talað um *Maclaurinröð*.
 
 .. ggb:: nVtCB2v9
     :width: 700
@@ -299,36 +337,42 @@ Ef svo vill til að :math:`c=0` þá er oft talað um *Maclaurinröð*.
 Setning
 ~~~~~~~
 
-Taylormargliða með miðju í :math:`c` fyrir :math:`f` er skilgreind sem
-margliðan
+.. admonition:: Setning
+    :class: setning
 
-.. math::
+    Taylormargliða með miðju í :math:`c` fyrir :math:`f` er skilgreind sem
+    margliðan
 
-   \begin{aligned}
-     P_n(x)& =\sum_{n=0}^n \frac{f^{(k)}(c)}{n!}(x-c)^n \\
-     &=f(c)+f'(c)(x-c)+ \frac{f''(c)}{2}(x-c)^2+\cdots+\frac{f^{(n)}(c)}{n!}(x-c)^n.\end{aligned}
+    .. math::
 
-Skekkjan í :math:`n`-ta stigs Taylornálgun er
-:math:`R_n(x)=f(x)-P_n(x)`.
+       \begin{aligned}
+         P_n(x)& =\sum_{n=0}^n \frac{f^{(k)}(c)}{n!}(x-c)^n \\
+         &=f(c)+f'(c)(x-c)+ \frac{f''(c)}{2}(x-c)^2+\cdots+\frac{f^{(n)}(c)}{n!}(x-c)^n.\end{aligned}
 
-Til er tala :math:`X` sem liggur á milli :math:`c` og :math:`x` þannig
-að
+    Skekkjan í :math:`n`-ta stigs Taylornálgun er
+    :math:`R_n(x)=f(x)-P_n(x)`.
 
-.. math:: R_n(x)=\frac{f^{(n+1)}(X)}{(n+1)!}(x-c)^{n+1}.
+    Til er tala :math:`X` sem liggur á milli :math:`c` og :math:`x` þannig
+    að
+
+    .. math:: R_n(x)=\frac{f^{(n+1)}(X)}{(n+1)!}(x-c)^{n+1}.
 
 Setning
 ~~~~~~~
 
-Gerum ráð fyrir að :math:`f` sé fall sem er óendanlega oft diffranlegt í
-punktinum :math:`c`.
+.. admonition:: Setning
+    :class: setning
 
-Fyrir fast gildi á :math:`x` þá er Taylorröðin
+    Gerum ráð fyrir að :math:`f` sé fall sem er óendanlega oft diffranlegt í
+    punktinum :math:`c`.
 
-.. math:: \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n
+    Fyrir fast gildi á :math:`x` þá er Taylorröðin
 
-samleitin með summu :math:`f(x)` ef og aðeins ef
+    .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n
 
-.. math:: \lim_{n\rightarrow\infty}R_n(x)=0.
+    samleitin með summu :math:`f(x)` ef og aðeins ef
+
+    .. math:: \lim_{n\rightarrow\infty}R_n(x)=0.
 
 .. index::
     Taylorröð; tvíliðuröð
@@ -348,11 +392,14 @@ Fyrir :math:`x` þannig að :math:`|x|<1` og rauntölu :math:`r` gildir að
 Athugasemd
 ~~~~~~~~~~
 
-Ef :math:`r \in {{\mathbb  N}}` þá gefur summan að ofan einfaldlega
-stuðlanna þegar búið er að margfalda upp úr svigum, og summan er því
-endanleg, því þegar :math:`n \geq r+1` þá verða stuðlarnir 0.
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-Ef hins vegar :math:`r\notin {{\mathbb  N}}` þá er enginn stuðlanna 0.
+    Ef :math:`r \in {{\mathbb  N}}` þá gefur summan að ofan einfaldlega
+    stuðlanna þegar búið er að margfalda upp úr svigum, og summan er því
+    endanleg, því þegar :math:`n \geq r+1` þá verða stuðlarnir 0.
+
+    Ef hins vegar :math:`r\notin {{\mathbb  N}}` þá er enginn stuðlanna 0.
 
 Taylorraðir nokkra falla
 ~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,9 +1,6 @@
 Diffurjöfnur
 ============
 
-Rúmmál, massi og massamiðja
-===========================
-
 .. admonition:: Athugasemd
     :class: athugasemd
 
