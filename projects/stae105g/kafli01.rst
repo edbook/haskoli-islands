@@ -113,7 +113,7 @@ Skilgreining: Tölur
 
 (i)   :hover:`Náttúrlegu tölurnar,náttúrleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og mengi þeirra er táknað með :math:`\mathbb{N}`.
 
-(ii)  Mengi :hover:`heiltalna,heiltala` er táknað með :math:`\mathbb{Z}`. :math:`\mathbb{Z}= \ldots,-2,-1,0,1,2,3,\ldots`
+(ii)  Mengi :hover:`heiltalna,heiltala` er táknað með :math:`\mathbb{Z}` og er skilgreint sem :math:`\mathbb{Z}= \ldots,-2,-1,0,1,2,3,\ldots`
 
 (iii) Mengi :hover:`ræðra talna,ræð tala` er táknað með :math:`\mathbb{Q}`. :math:`\mathbb{Q}= \{ \frac pq ; p,q \in \mathbb{Z}, q\neq 0\}`.
 
@@ -129,7 +129,7 @@ Skilgreining: Tölur
     tölunum en notast verður við :math:`\mathbb{N}_0 = 0,1,2,3,\ldots` fyrir
     mengi náttúrulegra talna að 0 viðbættu.
 
-Sjá einnig http://edbook.hi.is/undirbuningur/Kafli1.html#talnakerfi.
+Sjá einnig http://edbook.hi.is/undirbuningur_stae/Kafli1.html#talnakerfi.
 
 Smíði rauntalna
 ~~~~~~~~~~~~~~~
@@ -170,13 +170,13 @@ Skilgreining: Bil (i)
 Látum :math:`a` og :math:`b` vera rauntölur þannig að
 :math:`a<b`. Skilgreinum
 
-1. *opið bil* :math:`(a,b)=\{x\in \mathbb{R}; a<x<b\}`
+1. *opið bil* :math:`]a,b[=\{x\in \mathbb{R}; a<x<b\}`
 
 2. *lokað bil* :math:`[a,b]=\{x\in \mathbb{R}; a\leq x\leq b\}`
 
-3. *hálfopið bil* :math:`[a,b)=\{x\in \mathbb{R}; a\leq x<b\}`
+3. *hálfopið bil* :math:`[a,b[=\{x\in \mathbb{R}; a\leq x<b\}`
 
-4. *hálfopið bil* :math:`(a,b]=\{x\in \mathbb{R}; a< x\leq b\}`
+4. *hálfopið bil* :math:`]a,b]=\{x\in \mathbb{R}; a< x\leq b\}`
 
 Þessi bil sem er skilgreind hér fyrir ofan eru kölluð endanleg. Til eru
 fleiri gerðir af bilum:
@@ -259,10 +259,8 @@ Mengið :math:`X` kallast :hover:`skilgreiningarmengi`
 Skilgreining: fall
 ~~~~~~~~~~~~~~~~~~
 
-
-
-Fall er vörpun sem uppfyllir að sérhvert stak :math:`x` í skilgreiningarmenginu
-varpast eitt og aðeins eitt stak :math:`y` í bakmenginu.
+Fall er þrennd :math:`(f,X,Y)` þar sem :math:`f` er vörpun sem uppfyllir að sérhvert stak :math:`x` í skilgreiningarmenginu :math:`X`
+varpast eitt og aðeins eitt stak :math:`y` í bakmenginu :math:`Y`.
 
 .. index::
     fall; samskeyting
@@ -419,13 +417,13 @@ Lítum á þá helstu.
 Línuleg föll
 ~~~~~~~~~~~~
 
-Línulegt fall hefur formið :math:`f(x)=hx+k`og graf þess er lína. Þetta form er
-stundum kallað skurðhallaform línunnar.
+Línulegt fall hefur formið :math:`f(x)=hx+k` og graf þess er lína. Þetta form er
+stundum kallað *skurðhallaform* línunnar.
 Við köllum fastann :math:`h` hallatölu línunnar og fastann :math:`k` skurðpunkt
 hennar við :math:`y`-ás. Ef :math:`h>0` þá er línan vaxandi en ef :math:`h<0` þá
 er hún minnkandi. Í þeim tilfellum sem :math:`h=0` er línan sögð hafa engan halla,
 þ.e. hún er hvorki vaxandi né minnkandi og liggur þá lárétt í hnitakerfinu.
-Lóðréttarlínur eru ávallt á forminu :math:`x=b`og hafa óskilgreinda hallatölu.
+Lóðréttarlínur eru ávallt á forminu :math:`x=b` og hafa óskilgreinda hallatölu.
 Þær skera :math:`x`-ásinn í :math:`b`.
 
 Hallatölu línu má ávallt finna ef þekktir eru tveir, mismunandi punktar :math:`(x_1,y_1)`
