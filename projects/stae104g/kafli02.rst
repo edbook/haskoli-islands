@@ -90,21 +90,24 @@ Skilgreining: Markgildi
 
 .. _daemi2.1:
 
-Nokkur dæmi um markgildi
-~~~~~~~~~~~~~~~~~~~~~~~~
+Dæmi um markgildi
+~~~~~~~~~~~~~~~~~
 
-Látum :math:`a, c` vera rauntölur. Þá höfum við eftirfarandi markgildi:
+.. admonition:: Dæmi
+    :class: daemi
 
-(i)   :math:`\lim_{x \to a} c = c`,
-(ii)  :math:`\lim_{x \to a} x = a`
-(iii) :math:`\lim_{x \to a} |x| = |a|`
+    Látum :math:`a, c` vera rauntölur. Sýnið fram á eftirfarandi:
+
+    (i)   :math:`\lim_{x \to a}\,c = c`,
+    (ii)  :math:`\lim_{x \to a}\,x = a`
+    (iii) :math:`\lim_{x \to a} |x| = |a|`
 
 .. only:: latex
 
     Sönnun á lið 2.
 
-.. admonition:: Sönnun á lið 2
-    :class: setning, dropdown
+.. admonition:: Lausn á lið 2
+    :class: daemi, dropdown
 
     Hér er fallið sem um ræðir :math:`f(x) = x` og :math:`L=a`.
     Látum :math:`\epsilon>0` vera gefið. Við viljum finna
@@ -124,7 +127,7 @@ Látum :math:`a, c` vera rauntölur. Þá höfum við eftirfarandi markgildi:
 
 
 .. admonition:: Ábendingar fyrir liði 1 og 3
-    :class: setning, dropdown
+    :class: daemi, dropdown
 
     Til að sanna þetta þá er best að teikna mynd til að átta sig á því hvernig
     föllin haga sér. Svo má velja
@@ -142,8 +145,8 @@ Markgildi frá hægri og vinstri
 .. index::
     markgildi; frá hægri
 
-Óformleg skilgreining: Markgildi frá hægri
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Óformleg skilgreining á markgildi frá hægri
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að fall :math:`f` sé skilgreint á opnu bili
 :math:`(a,b)`. Segjum að :math:`f(x)` *stefni á tölu* :math:`L` *þegar*
@@ -178,8 +181,8 @@ Skilgreining: Markgildi frá hægri
 .. index::
     markgildi; frá vinstri
 
-Óformleg skilgreining: Markgildi frá vinstri
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Óformleg skilgreining á markgildi frá vinstri
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að fall :math:`f` sé skilgreint á opnu bili
 :math:`(b,a)`. Segjum að :math:`f(x)` *stefni á tölu* :math:`L` þegar
@@ -232,25 +235,26 @@ Setning
 Dæmi: Tölugildisfallið
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-:hover:`Tölugildisfallið,tölugildi` :math:`|x|` er skilgreint sem :math:`x`
-ef :math:`x\geq 0` en :math:`-x` ef :math:`x<0`. Um tölugildisfallið gildir
+.. admonition:: Dæmi 
+    :class: daemi
 
-(i)
+    :hover:`Tölugildisfallið,tölugildi` :math:`|x|` er skilgreint sem :math:`x`
+    ef :math:`x\geq 0` en :math:`-x` ef :math:`x<0`. Sýnið að um tölugildisfallið gildi
 
-      .. math:: \lim_{x\to 0^+} \frac x{|x|} = 1
+    (i)
 
-(ii)
+          .. math:: \lim_{x\to 0^+} \frac x{|x|} = 1
 
-      .. math:: \lim_{x\to 0^-} \frac x{|x|} = -1
+    (ii)
 
-(iii)
+          .. math:: \lim_{x\to 0^-} \frac x{|x|} = -1
 
-      .. math:: \lim_{x\to 0} \frac x{|x|} \quad \text{er ekki til}
+    (iii)
 
-.. image:: ./myndir/kafli02/02_daemi.png
+          .. math:: \lim_{x\to 0} \frac x{|x|} \quad \text{er ekki til}
 
-.. admonition:: Sönnun
-    :class: setning, dropdown
+.. admonition:: Lausn
+    :class: daemi, dropdown
 
     (i)
             Hér skoðum við eingöngu :math:`x>0` og þá gildir að
@@ -272,6 +276,9 @@ ef :math:`x\geq 0` en :math:`-x` ef :math:`x<0`. Um tölugildisfallið gildir
             Af liðum 1 og 2 sést að hægri og vinstri markgildin eru ekki þau sömu þannig
             að samkvæmt :ref:`setningunni <setning-hv_markgildi>` hér á undan þá er
             markgildið ekki til.
+
+.. image:: ./myndir/kafli02/02_daemi.png
+
 
 ------
 
@@ -398,24 +405,29 @@ Setning: Klemmureglan
 Dæmi: Markgildi með sínus
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(i)
+.. admonition:: Dæmi
+    :class: daemi
 
-      .. math:: \lim_{x\to 0} \sin\left(\frac 1x\right) \quad \text{er ekki til}
+    Sýnið fram á eftirfarandi:
 
-(ii)
+    (i)
 
-      .. math:: \lim_{x\to 0} x\sin\left(\frac 1x\right) = 0
+          .. math:: \lim_{x\to 0} \sin\left(\frac 1x\right) \quad \text{er ekki til}
 
-(iii)
+    (ii)
 
-      .. math:: \lim_{x \to 0} \frac{\sin(x)}{x} = 1
+          .. math:: \lim_{x\to 0} x\sin\left(\frac 1x\right) = 0
+
+    (iii)
+
+          .. math:: \lim_{x \to 0} \frac{\sin(x)}{x} = 1
 
 .. only:: latex
 
         Sönnun á lið 1.
 
-.. admonition:: Sönnun á lið 1
-    :class: setning, dropdown
+.. admonition:: Lausn á lið 1
+    :class: daemi, dropdown
 
     Sönnum þetta með mótsögn. Gerum ráð fyrir að til sé markgildi :math:`L` þannig að fyrir
     sérhvert :math:`\epsilon >0` er til :math:`\delta>0` þannig að
@@ -469,8 +481,8 @@ Markgildi þegar x stefnir á óendanlegt
     markgildi; þegar x stefnir á óendalegt
 
 
-Óformleg skilgreining: Markgildi þegar :math:`x \to \infty`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Óformleg skilgreining á markgildi þegar :math:`x \to \infty`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að fall :math:`f` sé skilgreint á bili
 :math:`(a, \infty)`. Segjum að :math:`f(x)` *stefni á tölu* :math:`L`
@@ -496,8 +508,8 @@ Skilgreining: Markgildi þegar :math:`x \to \infty`
 
     .. math:: |f(x)-L|<\epsilon.
 
-Óformleg skilgreining: Markgildi þegar :math:`x \to -\infty`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Óformleg skilgreining á markgildi þegar :math:`x \to -\infty`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Fyrir :math:`-\infty` er þetta gert með sama sniði.
@@ -535,8 +547,8 @@ Skilgreining: Markgildi þegar :math:`x \to -\infty`
 .. index::
     markgildi; óendanlegt sem markgildi
 
-Óformleg skilgreining: Markgildið :math:`\infty`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Óformleg skilgreining á markgildinu :math:`\infty`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að fall :math:`f` sé skilgreint á opnu bili umhverfis
 punktinn :math:`a`, nema hvað hugsanlega er :math:`f(a)` ekki
@@ -572,8 +584,8 @@ Skilgreining: Markgildið :math:`\infty`
     :math:`\lim_{x\rightarrow a} f(x)=\infty` þá er samt sagt að markgildið
     :math:`\lim_{x\rightarrow a} f(x)` sé ekki til.
 
-Óformleg skilgreining: Markgildið :math:`-\infty`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Óformleg skilgreining á markgildinu :math:`-\infty`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gerum ráð fyrir að fall :math:`f` sé skilgreint á opnu bili umhverfis
 punktinn :math:`a`, nema hvað hugsanlega er :math:`f(a)` ekki
@@ -908,7 +920,6 @@ Fylgisetning
 
     Ef :math:`P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0` er margliða af
     oddatölu stigi :math:`n`, þá er til rauntala :math:`c` þannig að :math:`P(c)=0`.
-
 
 .. admonition:: Sönnun
     :class: setning, dropdown

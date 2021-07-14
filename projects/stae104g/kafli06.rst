@@ -89,7 +89,7 @@ með formúlunni
 Undir- og yfirsummur
 --------------------
 
-Dæmi: Að finna heildi
+Að finna heildi
 ~~~~~~~~~~~~~~~~~~~~~
 
 Hvernig getum við fundið flatarmálið :math:`\int_a^b f(x)\, dx`?
@@ -683,12 +683,17 @@ og hefur hún því eina, tvöfalda núllstöð í :math:`x=1`. Hins vegar má �
 Dæmi 1 um stofnbrotaliðun
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Í þessu dæmi er teljarinn er af stigi :math:`m` og nefnarinn af stigi :math:`n>m` með :math:`n` einfaldar núllstöðvar.
+
 .. admonition:: Dæmi
+    :class: daemi
+
+    Liðið :math:`\frac{x+4}{x^2-5x+6}` í stofnbrot. 
+
+.. admonition:: Lausn
     :class: daemi, dropdown
 
-    **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **með** :math:`n` **einfaldar núllstöðvar.**
-
-    Lítum á fallið :math:`\frac{x+4}{x^2-5x+6}`. Sjá má að teljarinn er margliða af fyrsta stigi
+    Sjá má að teljarinn er margliða af fyrsta stigi
     en nefnarinn margliða af öðru stigi. Jafnframt má þátta nefnarann í :math:`(x-2)(x-3)`
     sem segir okkur að nefnarinn hefur tvær einfaldar núllstöðvar í :math:`x=2` og :math:`x=3`.
     Þá gildir að
@@ -730,12 +735,17 @@ Dæmi 1 um stofnbrotaliðun
 Dæmi 2 um stofnbrotaliðun
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Í þessu dæmi eru teljarinn og nefnarinn af stigi :math:`n` og nefnarinn með :math:`n` einfaldar núllstöðvar.
+
 .. admonition:: Dæmi
+    :class: daemi
+
+    Liðið :math:`\frac{x^3+2}{x^3-x}` í stofnbrot.
+
+.. admonition:: Lausn
     :class: daemi, dropdown
 
-    **Teljari og nefnari af stigi** :math:`n` **og nefnarinn með** :math:`n` **einfaldar núllstöðvar.**
-
-    Lítum á fallið :math:`\frac{x^3+2}{x^3-x}`. Sjá má að bæði teljari og nefnari eru margliður
+    Sjá má að bæði teljari og nefnari eru margliður
     af þriðja stigi. Athugum að með því að bæta núlllið á forminu :math:`+x-x` við teljarann fæst
 
 
@@ -773,12 +783,17 @@ Dæmi 2 um stofnbrotaliðun
 Dæmi 3 um stofnbrotaliðun
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Í þessu dæmi er teljarinn af stigi :math:`m` og nefnarinn af stigi :math:`n>m` stigi með :math:`r<n` einfaldar núllstöðvar.
+
 .. admonition:: Dæmi
+    :class: daemi
+
+    Liðið :math:`\frac{x^2+3x+2}{x(x^2+1)}` í stofnbrot.
+
+.. admonition:: Lausn
     :class: daemi, dropdown
 
-    **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **einfaldar núllstöðvar.**
-
-    Lítum á fallið :math:`\frac{x^2+3x+2}{x(x^2+1)}`. Athugum að teljarinn er
+    Athugum að teljarinn er
     annars stigs margliða en nefnarinn margliða af þriðja stigi. Hér þarf að gæta
     sérstaklega að því að nefnarinn hefur þó einungis eina, einfalda núllstöð
     í :math:`x=0` þar sem að þátturinn :math:`x^2+1` hefur engar (raungildar)
@@ -813,12 +828,17 @@ Dæmi 3 um stofnbrotaliðun
 Dæmi 4 um stofnbrotaliðun
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Í þessu dæmi er teljarinn af stigi :math:`m` og nefnari af stigi :math:`n>m` stigi með :math:`n` núllstöðvar, þar af einhverjar fjölfaldar.
+
 .. admonition:: Dæmi
+    :class: daemi
+
+    Liðið :math:`\frac{1}{x(x-1)^2}` í stofnbrot.
+
+.. admonition:: Lausn
     :class: daemi, dropdown
 
-    **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`n` **núllstöðvar, þar af einhverjar fjölfaldar**
-
-    Lítum á fallið :math:`\frac{1}{x(x-1)^2}`. Ljóst er að teljari er af hærra stigi
+    Ljóst er að teljari er af hærra stigi
     en nefnarinn og nefnarinn hefur einfalda núllstöð í :math:`x=0` og tvöfalda
     núllstöð í :math:`x=1`. Þá má liða fallið í stofnbrot með eftirfarandi hætti.
 
@@ -860,12 +880,17 @@ Dæmi 4 um stofnbrotaliðun
 Dæmi 5 um stofnbrotaliðun
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Í þessu dæmi er teljarinn af stigi :math:`m` og nefnarinn af stigi :math:`n>m` stigi með :math:`r<n` núllstöðvar og núllstöðvalausan þátt í veldinu :math:`q>1`.
+
 .. admonition:: Dæmi
+    :class: daemi
+
+    Liðið í :math:`\frac{x^2+2}{4x^5+4x^3+x}` stofnbrot.
+
+.. admonition:: Lausn
     :class: daemi, dropdown
 
-    **Teljari af stigi** :math:`m` **og nefnari af stigi** :math:`n>m` **stigi með** :math:`r<n` **núllstöðvar og núllstöðvalausan þátt í veldinu** :math:`q>1`
-
-    Lítum á fallið :math:`\frac{x^2+2}{4x^5+4x^3+x}`. Hér er stig nefnara hærra en stig teljara
+    Hér er stig nefnara hærra en stig teljara
     og má þátta hann í :math:`x(2x^2+1)^2`. Nú er margliðan :math:`2x^2+1` núllstöðvalaus.
     Því má stofnbrotaliða fallið á eftirfarandi vegu.
 
@@ -959,12 +984,15 @@ markgildið er til, en ósamleitið ef markgildið er ekki til.
 Dæmi
 ~~~~
 
-Heildið :math:`\int_1^\infty \frac{1}{x^p}\,dx` er samleitið ef
-:math:`p>1` en ósamleitið ef :math:`p\leq 1`.
+.. admonition:: Dæmi 
+    :class: daemi
 
-Ef :math:`p>1` þá er
+    Heildið :math:`\int_1^\infty \frac{1}{x^p}\,dx` er samleitið ef
+    :math:`p>1` en ósamleitið ef :math:`p\leq 1`.
 
-.. math:: \int_1^\infty \frac{1}{x^p}\,dx=\frac{1}{p-1}.
+    Ef :math:`p>1` þá er
+
+    .. math:: \int_1^\infty \frac{1}{x^p}\,dx=\frac{1}{p-1}.
 
 Skilgreining: Óeiginleg heildi I, framhald
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1011,13 +1039,16 @@ Skilgreining: Óeiginleg heildi II
 Dæmi
 ~~~~
 
-Heildið :math:`\int_0^1 \frac{1}{x^p}\,dx` er samleitið ef :math:`p<1`
-en ósamleitið ef :math:`p\geq 1`. Ef :math:`p<1` þá er
+.. admonition:: Dæmi 
+    :class: daemi
 
-.. math::
+    Heildið :math:`\int_0^1 \frac{1}{x^p}\,dx` er samleitið ef :math:`p<1`
+    en ósamleitið ef :math:`p\geq 1`. Ef :math:`p<1` þá er
 
-   \int_0^1
-   \frac{1}{x^p}\,dx=\frac{1}{1-p}.
+    .. math::
+
+       \int_0^1
+       \frac{1}{x^p}\,dx=\frac{1}{1-p}.
 
 Skilgreining
 ~~~~~~~~~~~~

@@ -276,8 +276,8 @@ Athugasemd
 .. index::
     röð; kvótaröð
 
-Dæmi: Kvótaröð
-~~~~~~~~~~~~~~
+Kvótaraðir
+~~~~~~~~~~
 
 Röðin
 
@@ -290,8 +290,8 @@ kallast *kvótaröð*. Hún er samleitin ef :math:`-1<a<1` og þá er
 .. index::
     röð; kíkisröð
 
-Dæmi: Kíkisröð
-~~~~~~~~~~~~~~
+Kíkisraðir
+~~~~~~~~~~
 
 Röðin
 

@@ -46,16 +46,19 @@ Skilgreining: Afleiða
 Dæmi
 ~~~~
 
-Fallið :math:`f(x) = x^2` er diffranlegt í sérhverjum punkti :math:`a`.
-Það sést af því að
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math::
-    \begin{aligned}
-    \lim_{h\to 0} \frac{f(a+h)-f(a)}{h}
-    &= \lim_{h\to 0} \frac{(a+h)^2-a^2}{h}\\
-    &= \lim_{h\to 0} \frac{a^2+2ah+h^2-a^2}{h}\\
-    &= \lim_{h\to 0} \frac{2ah+h^2}{h}\\
-    &= \lim_{h\to 0} 2a+h = 2a.\end{aligned}
+    Fallið :math:`f(x) = x^2` er diffranlegt í sérhverjum punkti :math:`a`.
+    Það sést af því að
+
+    .. math::
+        \begin{aligned}
+        \lim_{h\to 0} \frac{f(a+h)-f(a)}{h}
+        &= \lim_{h\to 0} \frac{(a+h)^2-a^2}{h}\\
+        &= \lim_{h\to 0} \frac{a^2+2ah+h^2-a^2}{h}\\
+        &= \lim_{h\to 0} \frac{2ah+h^2}{h}\\
+        &= \lim_{h\to 0} 2a+h = 2a.\end{aligned}
 
 
 .. ggb:: SUnNEmTG
@@ -93,19 +96,22 @@ Setning
 Dæmi
 ~~~~
 
-Fallið :math:`f(x) = |x|` er samfellt. En það er ekki diffranlegt í
-punktinum :math:`x=0`. Það sést af því að
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math::
-    \lim_{h\to 0^+} \frac{f(0+h)-f(0)}{h} = \lim_{h\to 0^+} \frac{|h|}{h} = 1
+    Fallið :math:`f(x) = |x|` er samfellt. En það er ekki diffranlegt í
+    punktinum :math:`x=0`. Það sést af því að
 
-en
+    .. math::
+        \lim_{h\to 0^+} \frac{f(0+h)-f(0)}{h} = \lim_{h\to 0^+} \frac{|h|}{h} = 1
 
-.. math::
-    \lim_{h\to 0^-} \frac{f(0+h)-f(0)}{h} = \lim_{h\to 0^-} \frac{|h|}{h} = -1.
+    en
 
-Þannig að markgildið :math:`\lim_{h\to 0} \frac{f(0+h)-f(0)}{h}` er ekki til og því er
-fallið ekki diffranlegt í :math:`x=0`.
+    .. math::
+        \lim_{h\to 0^-} \frac{f(0+h)-f(0)}{h} = \lim_{h\to 0^-} \frac{|h|}{h} = -1.
+
+    Þannig að markgildið :math:`\lim_{h\to 0} \frac{f(0+h)-f(0)}{h}` er ekki til og því er
+    fallið ekki diffranlegt í :math:`x=0`.
 
 .. index::
     snertill
@@ -238,36 +244,39 @@ Ef við skrifum :math:`y=f(x)` þá má einnig tákna hana með
 Dæmi
 ~~~~
 
-Fallið :math:`f(x) = \sqrt{x}`, :math:`f:[0,\infty[\to {{\mathbb  R}}`
-er diffranlegt á menginu :math:`]0,\infty[` og afleiðan er gefin með
-:math:`f'(x) = \frac 1{2\sqrt{x}} = \frac 12 x^{-1/2}` þar. Hins vegar
-er :math:`f` ekki diffranlegt í :math:`x=0` þrátt fyrir að fallgildið sé
-vel skilgreint (og fallið samfellt frá hægri) þar.
+.. admonition:: Dæmi
+    :class: daemi
 
-Ef :math:`x>0` þá fæst
+    Fallið :math:`f(x) = \sqrt{x}`, :math:`f:[0,\infty[\to {{\mathbb  R}}`
+    er diffranlegt á menginu :math:`]0,\infty[` og afleiðan er gefin með
+    :math:`f'(x) = \frac 1{2\sqrt{x}} = \frac 12 x^{-1/2}` þar. Hins vegar
+    er :math:`f` ekki diffranlegt í :math:`x=0` þrátt fyrir að fallgildið sé
+    vel skilgreint (og fallið samfellt frá hægri) þar.
 
-.. math::
+    Ef :math:`x>0` þá fæst
 
-   \begin{aligned}
-     \lim_{h\to 0} \frac{\sqrt{x+h}-\sqrt{x}}h &=
-     \lim_{h\to 0} \frac{(\sqrt{x+h}-\sqrt{x})(\sqrt{x+h}+\sqrt{x})}{h(\sqrt{x+h}+\sqrt{x})}\\
-     &= \lim_{h\to 0} \frac{\sqrt{x+h}^2-\sqrt{x}^2}{h(\sqrt{x+h}+\sqrt{x})}\\
-     &= \lim_{h\to 0} \frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}\\
-     &= \lim_{h\to 0} \frac{1}{\sqrt{x+h}+\sqrt{x}} = \frac{1}{2\sqrt{x}},\end{aligned}
+    .. math::
 
-sem segir okkur að :math:`f'(x) = \frac 12 x^{-1/2}`.
+       \begin{aligned}
+         \lim_{h\to 0} \frac{\sqrt{x+h}-\sqrt{x}}h &=
+         \lim_{h\to 0} \frac{(\sqrt{x+h}-\sqrt{x})(\sqrt{x+h}+\sqrt{x})}{h(\sqrt{x+h}+\sqrt{x})}\\
+         &= \lim_{h\to 0} \frac{\sqrt{x+h}^2-\sqrt{x}^2}{h(\sqrt{x+h}+\sqrt{x})}\\
+         &= \lim_{h\to 0} \frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}\\
+         &= \lim_{h\to 0} \frac{1}{\sqrt{x+h}+\sqrt{x}} = \frac{1}{2\sqrt{x}},\end{aligned}
 
-Í vinstri endapunkti skilgreingarsvæðisins, :math:`x=0`, þá fæst hins
-vegar
+    sem segir okkur að :math:`f'(x) = \frac 12 x^{-1/2}`.
 
-.. math::
+    Í vinstri endapunkti skilgreingarsvæðisins, :math:`x=0`, þá fæst hins
+    vegar
 
-   \begin{aligned}
-     \lim_{h\to 0^+} \frac{\sqrt{h}-\sqrt{0}}h &=
-     \lim_{h\to 0^+} \frac{\sqrt{h}}h\\
-     &= \lim_{h\to 0^+} \frac{1}{\sqrt{h}} = \infty,\end{aligned}
+    .. math::
 
-sem sýnir að fallið er ekki diffranlegt frá hægri í :math:`x=0`.
+       \begin{aligned}
+         \lim_{h\to 0^+} \frac{\sqrt{h}-\sqrt{0}}h &=
+         \lim_{h\to 0^+} \frac{\sqrt{h}}h\\
+         &= \lim_{h\to 0^+} \frac{1}{\sqrt{h}} = \infty,\end{aligned}
+
+    sem sýnir að fallið er ekki diffranlegt frá hægri í :math:`x=0`.
 
 --------
 
@@ -355,15 +364,18 @@ segir að við getum tekið fastana fram fyrir afleiðuna og loks segir
 Dæmi: Afleiða margliðu
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Finnum afleiðu margliðunnar :math:`p(x) = 4x^3-2x + 5`. Nú er
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math::
+    Finnum afleiðu margliðunnar :math:`p(x) = 4x^3-2x + 5`. Nú er
 
-   \begin{aligned}
-   \frac{d}{dx} p(x)
-   &= \frac{d}{dx}4x^3 - \frac{d}{dx}2x + \frac{d}{dx}5 \\
-   &= 4\frac{d}{dx}x^3 -2\frac{d}{dx}x + \frac{d}{dx}5 =
-   4\cdot 3x^2 -2\cdot 1 + 0 = 12x^2-2\end{aligned}
+    .. math::
+
+       \begin{aligned}
+       \frac{d}{dx} p(x)
+       &= \frac{d}{dx}4x^3 - \frac{d}{dx}2x + \frac{d}{dx}5 \\
+       &= 4\frac{d}{dx}x^3 -2\frac{d}{dx}x + \frac{d}{dx}5 =
+       4\cdot 3x^2 -2\cdot 1 + 0 = 12x^2-2\end{aligned}
 
 .. index::
     keðjureglan
@@ -385,13 +397,16 @@ Setning: Keðjureglan
 Dæmi
 ~~~~
 
-Skoðum föllin :math:`f(x) = \sqrt x` og :math:`g(x) = 3x^5`. Bæði þessi föll eru
-diffranleg og afleiðurnar eru :math:`f'(x) = \frac 12 x^{-1/2}` og
-:math:`g'(x) = 15x^4`. Afleiða samskeytingarinnar :math:`f\circ g` er þá
-samkvæmt keðjureglunni
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math::
-        (f\circ g)'(x) = \frac 12 (3x^5)^{-1/2} \cdot 15x^4.
+    Skoðum föllin :math:`f(x) = \sqrt x` og :math:`g(x) = 3x^5`. Bæði þessi föll eru
+    diffranleg og afleiðurnar eru :math:`f'(x) = \frac 12 x^{-1/2}` og
+    :math:`g'(x) = 15x^4`. Afleiða samskeytingarinnar :math:`f\circ g` er þá
+    samkvæmt keðjureglunni
+
+    .. math::
+            (f\circ g)'(x) = \frac 12 (3x^5)^{-1/2} \cdot 15x^4.
 
 --------
 
@@ -422,13 +437,16 @@ Skilgreining
 Dæmi
 ~~~~
 
-Ef :math:`f(x)  = 3x^2`, þá er
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math:: f'(x) = 3\frac{d}{dx}x^2 = 3\cdot 2x = 6x
+    Ef :math:`f(x)  = 3x^2`, þá er
 
-og
+    .. math:: f'(x) = 3\frac{d}{dx}x^2 = 3\cdot 2x = 6x
 
-.. math:: f''(x) = \frac{d}{dx} 6x = 6.
+    og
+
+    .. math:: f''(x) = \frac{d}{dx} 6x = 6.
 
 Ritháttur
 ~~~~~~~~~
@@ -816,20 +834,23 @@ Fólgin diffrun
 Dæmi
 ~~~~
 
-Jafna hrings með geisla 1 er :math:`x^2+y^2=1`. Við vitum að hægt er að
-skrifa efri og neðri helminga hans sem föll af :math:`y`, annars vegar
-:math:`y=\sqrt{1-x^2}` og hins vegar :math:`y=-\sqrt{1-x^2}`. Ef við
-viljum finna snertil við hringinn getum við notað þessi föll. En þar sem
-við vitum að hægt er að skrifa :math:`y` sem fall af :math:`x` þá getum
-við einnig diffrað jöfnu hringsins beint með aðstoð keðjureglunnar,
+.. admonition:: Dæmi
+    :class: daemi
 
-.. math::
+    Jafna hrings með geisla 1 er :math:`x^2+y^2=1`. Við vitum að hægt er að
+    skrifa efri og neðri helminga hans sem föll af :math:`y`, annars vegar
+    :math:`y=\sqrt{1-x^2}` og hins vegar :math:`y=-\sqrt{1-x^2}`. Ef við
+    viljum finna snertil við hringinn getum við notað þessi föll. En þar sem
+    við vitum að hægt er að skrifa :math:`y` sem fall af :math:`x` þá getum
+    við einnig diffrað jöfnu hringsins beint með aðstoð keðjureglunnar,
 
-   \begin{aligned}
-   \frac{d}{dx}(x^2+y^2) &=& \frac{d}{dx} 1\\
-       2x + 2y\frac{dy}{dx} &=& 0\\
-       y\frac{dy}{dx} &=& -x\\
-       \frac{dy}{dx} &=& -\frac xy.\end{aligned}
+    .. math::
+
+       \begin{aligned}
+       \frac{d}{dx}(x^2+y^2) &=& \frac{d}{dx} 1\\
+           2x + 2y\frac{dy}{dx} &=& 0\\
+           y\frac{dy}{dx} &=& -x\\
+           \frac{dy}{dx} &=& -\frac xy.\end{aligned}
 
 .. image:: ./myndir/kafli03/11_hringur.png
 	:align: center
@@ -1214,10 +1235,10 @@ nálgar :math:`f` best.
 
 ------
 
-Regla de l’Hôpital
+Regla l’Hôpital
 ------------------
 
-Regla de l’Hôpital, einhliða útgáfa
+Regla l’Hôpital, einhliða útgáfa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
@@ -1265,7 +1286,7 @@ Regla de l’Hôpital, einhliða útgáfa
     er til, þá er markgildið :math:`\lim_{x\rightarrow a^+}\frac{f(x)}{g(x)}`
     einnig til og er jafnt og :math:`L`.
 
-Regla de l’Hôpital
+Regla l’Hôpital
 ~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
@@ -1290,16 +1311,19 @@ Regla de l’Hôpital
 Dæmi
 ~~~~
 
-Við höfum áður séð að :math:`\lim_{x\to 0} \sin(x)/x = 1`.
-Skoðum hvernig hægt er að sýna þetta með lítilli fyrirhöfn og reglu de l’Hôpital.
+.. admonition:: Dæmi
+    :class: daemi
+    
+    Við höfum áður séð að :math:`\lim_{x\to 0} \sin(x)/x = 1`.
+    Skoðum hvernig hægt er að sýna þetta með lítilli fyrirhöfn og reglu l’Hôpital.
 
-Sjáum að :math:`f(x) = \sin(x)` og :math:`g(x)` eru diffranleg í grennd um 0
-og að :math:`g'(x) = 1 \neq 0`. Þá fæst að
+    Sjáum að :math:`f(x) = \sin(x)` og :math:`g(x)` eru diffranleg í grennd um 0
+    og að :math:`g'(x) = 1 \neq 0`. Þá fæst að
 
-.. math::
-    \lim_{x \to 0} \frac{\sin(x)}{x} = \lim_{x \to 0} \frac{\cos(x)}{1} = 1.
+    .. math::
+        \lim_{x \to 0} \frac{\sin(x)}{x} = \lim_{x \to 0} \frac{\cos(x)}{1} = 1.
 
-Regla de l’Hôpital, :math:`\infty`-útgáfa
+Regla l’Hôpital, :math:`\infty`-útgáfa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
@@ -1320,7 +1344,7 @@ Regla de l’Hôpital, :math:`\infty`-útgáfa
 
     .. math:: \lim_{x\rightarrow \infty}\frac{f(x)}{g(x)}=L.
 
-Regla de l’Hôpital, tvíhliða útgáfa
+Regla l’Hôpital, tvíhliða útgáfa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning

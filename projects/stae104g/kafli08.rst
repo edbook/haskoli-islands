@@ -56,9 +56,8 @@ Skilgreining: Diffurjafna
     Deildajafna, afleiðujafna og diffurjafna eru samheiti yfir
     sama hlutinn.
 
-Dæmi
-~~~~
-
+Dæmi um diffurjöfnu
+~~~~~~~~~~~~~~~~~~~
 Það að finna stofnfall fyrir gefið fall :math:`f` er jafngilt því að leysa
 fyrsta stigs diffurjöfnuna
 
