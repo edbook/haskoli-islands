@@ -24,3 +24,4 @@ build/
 .mypy_cache
 *.zip
 .DS_Store
+.mo
