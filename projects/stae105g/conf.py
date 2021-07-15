@@ -37,6 +37,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
+    "sphinx_togglebutton",
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #    'katex.katex',
@@ -173,7 +174,7 @@ pygments_style = "sphinx"
 # }
 
 html_theme = "sphinx_rtd_theme"
-html_theme_path = ["_themes"]
+#html_theme_path = ["_themes"]
 
 
 html_permalinks = True
@@ -458,6 +459,6 @@ epub_exclude_files = ["search.html"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
 
-#custom frá Tryggva 
+#custom frá Tryggva
 def setup(app):
     app.add_css_file('custom_admonitions.css')
