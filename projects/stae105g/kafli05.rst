@@ -1,8 +1,8 @@
 Heildun
 =======
 
-.. note::
-	**Nauðsynleg undirstaða**
+.. admonition:: Nauðsynleg undirstaða
+	:class: athugasemd
 
 	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://notendur.hi.is/~guh96/edbook-undirb/undirbuningur_stae/kafli10.html>`_.
 
@@ -56,24 +56,31 @@ vitum einungis afleiðu falls þá er talað um að finna *stofnfallið*.
 Skilgreining: Stofnfall
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f` vera fall sem er skilgreint á bili :math:`I`. Fall
-:math:`F` kallast :hover:`stofnfall` fyrir :math:`f` á
-bilinu :math:`I` ef :math:`F'(x)=f(x)` fyrir öll :math:`x` í :math:`I`.
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+	Látum :math:`f` vera fall sem er skilgreint á bili :math:`I`. Fall
+	:math:`F` kallast :hover:`stofnfall` fyrir :math:`f` á
+	bilinu :math:`I` ef :math:`F'(x)=f(x)` fyrir öll :math:`x` í :math:`I`.
 
 Setning: Form stofnalla
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`F` vera stofnfall :math:`f` yfir bilið :math:`I`. Þá gildi:
+.. admonition:: Setning
+  :class: setning
 
-	#. Fyrir sérhvern fasta :math:`C` er fallið :math:`F(x)+C` einnig stofnfall fyrir :math:`f` yfir :math:`I`.
+	Látum :math:`F` vera stofnfall :math:`f` yfir bilið :math:`I`. Þá gildi:
 
-	#. Ef :math:`G` er stofnfall :math:`f` yfir :math:`I` þá er til fasti :math:`C` þannig að :math:`G(x)=F(x)+C` yfir :math:`I`.
+		#. Fyrir sérhvern fasta :math:`C` er fallið :math:`F(x)+C` einnig stofnfall fyrir :math:`f` yfir :math:`I`.
+
+		#. Ef :math:`G` er stofnfall :math:`f` yfir :math:`I` þá er til fasti :math:`C` þannig að :math:`G(x)=F(x)+C` yfir :math:`I`.
 
 
 Með öðrum orðum þá er :math:`F(x)+C` almennt form stofnfalla fyrir :math:`f` yfir :math:`I`.
 
+.. admonition:: Athugasemd
+  :class: athugasemd
 
-.. tip::
 	Þar sem sérhvert fall :math:`f(x)` sem á sér stofnfall á sér fleiri en eitt stofnfall
 	þá segjum við að stofnföll séu *ekki ótvírætt ákvörðuð*. Yfirleitt leyfum við okkur þó
 	að velja fastann :math:`C=0` og tölum því um að :math:`F(x)=x^2` sé stofnfallið fyrir :math:`f(x)=2x`.
@@ -83,13 +90,18 @@ Með öðrum orðum þá er :math:`F(x)+C` almennt form stofnfalla fyrir :math:`
 Dæmi: Stofnfall
 ~~~~~~~~~~~~~~~
 
-	#. :math:`f(x)=3x^2` á sér stofnfallði :math:`F(x)=x^3` af því :math:`F'(x)=3x^2`.
+.. admonition:: Dæmi
+  :class: daemi
 
-	#. :math:`f(x)=\frac{1}{x}` á sér stofnfallði :math:`F(x)=\ln(x)` af því :math:`F'(x)=\frac{1}{x}`.
+		#. :math:`f(x)=3x^2` á sér stofnfallði :math:`F(x)=x^3` af því :math:`F'(x)=3x^2`.
 
-	#. :math:`f(x)=\cos(x)` á sér stofnfallði :math:`F(x)=\sin(x)` af því :math:`F'(x)=\cos(x)`.
+		#. :math:`f(x)=\frac{1}{x}` á sér stofnfallði :math:`F(x)=\ln(x)` af því :math:`F'(x)=\frac{1}{x}`.
 
-	#. :math:`f(x)=e^x` á sér stofnfallði :math:`F(x)=e^x` af því :math:`F'(x)=e^x`.
+		#. :math:`f(x)=\cos(x)` á sér stofnfallði :math:`F(x)=\sin(x)` af því :math:`F'(x)=\cos(x)`.
+
+		#. :math:`f(x)=e^x` á sér stofnfallði :math:`F(x)=e^x` af því :math:`F'(x)=e^x`.
+
+---------
 
 Óákveðin heildi
 ----------------
@@ -107,7 +119,9 @@ til að tákna stofnfall :math:`f` og ritað
 Táknið :math:`\int` er kallað *heildistákn* og :math:`\int f(x) dx` er kallað
 *óákveðið heildi*.
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Mismunandi er eftir skólum hvaða orð eru notuð til að tala um *derivatives* og
 	*antiderivatives/integrals*. Sem dæmi má nefna:
 
@@ -120,28 +134,36 @@ Táknið :math:`\int` er kallað *heildistákn* og :math:`\int f(x) dx` er kalla
 Skilgreining: Óákveðið heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fyrir fallið :math:`f` er *óákveðna heildi* fallsins táknað
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. math:: \int f(x) dx.
+	Fyrir fallið :math:`f` er *óákveðna heildi* fallsins táknað
 
-Ef :math:`F` er stofnfall :math:`f` þá gildir að
+	.. math:: \int f(x) dx.
 
-.. math:: \int f(x) dx = F(x)+C.
+	Ef :math:`F` er stofnfall :math:`f` þá gildir að
 
-Hér er :math:`f(x)` kallað heildisstofn og :math:`x` breytan sem heildar er
-með tilliti til.
+	.. math:: \int f(x) dx = F(x)+C.
+
+	Hér er :math:`f(x)` kallað heildisstofn og :math:`x` breytan sem heildar er
+	með tilliti til.
 
 Setning: Veldisregla fyrir heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`n \neq -1` gildir að
+.. admonition:: Veldisregla fyrir heildi
+  :class: setning
 
-.. math:: \int x^n dx = \frac{x^{n+1}}{n+1}+C.
+	Ef :math:`n \neq -1` gildir að
+
+	.. math:: \int x^n dx = \frac{x^{n+1}}{n+1}+C.
 
 Ábending: Gagnleg óeiginleg heildi og afleiður
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: Athugasemd
+
 	.. csv-table:: Óeiginleg heildi og afleiður sem gott er að kannast við
 		:widths: 50, 50
 
@@ -160,7 +182,8 @@ Ef :math:`n \neq -1` gildir að
 Reiknireglur: Óeiginleg heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+.. admonition:: Reiknireglur: Óeiginleg heildi
+  :class: setning
 
 	Látum :math:`F` og :math:`G` vera stofnföll :math:`f` og :math:`g` og :math:`k \in \mathbb{R}`.
 
@@ -171,12 +194,18 @@ Reiknireglur: Óeiginleg heildi
 Dæmi: Summuregla
 ~~~~~~~~~~~~~~~~
 
-.. math::	\int \frac{x+1}{x} dx = \int \left(\frac{x}{x}+\frac{1}{x}\right) dx = \int \left(1 + \frac{1}{x}\right) dx = x + \ln(|x|)+C
+.. admonition:: Dæmi
+  :class: daemi
+
+	.. math::	\int \frac{x+1}{x} dx = \int \left(\frac{x}{x}+\frac{1}{x}\right) dx = \int \left(1 + \frac{1}{x}\right) dx = x + \ln(|x|)+C
 
 Dæmi: Margföldun með fasta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: \int \frac{4}{x^2} dx = \int 4x^{-2} dx = -4x^{-1} + C
+.. admonition:: Dæmi
+  :class: daemi
+
+	.. math:: \int \frac{4}{x^2} dx = \int 4x^{-2} dx = -4x^{-1} + C
 
 Diffurjöfnur
 -------------
@@ -209,7 +238,8 @@ stærðfræði eins og verkfræðingar og eðlisfræðingar. Almennt er *mjög e
 að leysa diffurjöfnur og eru margar þeirra jafnvel óleysanlegar með analytískum
 aðferðum. Þó er auðveldara að leysa sumar gerðir af diffurjöfnum en aðrar.
 
-.. warning::
+.. admonition:: Aðvörun
+  :class: advorun
 
  	Við munum hér kafa mjög grunnt í óravíddir diffurjafna og aðeins skoða þær
 	allra auðveldustu. Mikilvægt er að hafa í huga að diffurjöfnur eru gríðarlega mikilvægar í stærðfræði
@@ -246,21 +276,27 @@ að við kunnum að heilda :math:`f(x)`.
 Dæmi: Aðgreinanleg diffurjafna
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lítum á diffurjöfnuna :math:`\frac{dy}{dx} = 6x^2`. Hún er aðgreinanleg þar sem
-að hana má rita sem
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: dy = 6x^2 dx.
+	Lítum á diffurjöfnuna :math:`\frac{dy}{dx} = 6x^2`. Hún er aðgreinanleg þar sem
+	að hana má rita sem
 
-Við getum nú heildað báðar hliðar og fengið að
+	.. math:: dy = 6x^2 dx.
 
-.. math:: y = \int 6x^2 dx = 2x^3 + C.
+	Við getum nú heildað báðar hliðar og fengið að
+
+	.. math:: y = \int 6x^2 dx = 2x^3 + C.
 
 Dæmi: Óaðgreinanleg diffurjafa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef við höfum diffurjöfnuna :math:`\frac{dy}{dx}=e^{xy}` þá er engin leið fyrir okkur að
-aðgreina diffurjöfnuna þannig að við séum einungis með :math:`y` vinstra megin
-og :math:`x` hægra megin jafnaðarmerkisins. Hún er því ekki aðgreinanleg.
+.. admonition:: Dæmi
+  :class: daemi
+
+	Ef við höfum diffurjöfnuna :math:`\frac{dy}{dx}=e^{xy}` þá er engin leið fyrir okkur að
+	aðgreina diffurjöfnuna þannig að við séum einungis með :math:`y` vinstra megin
+	og :math:`x` hægra megin jafnaðarmerkisins. Hún er því ekki aðgreinanleg.
 
 Upphafsgildisverkefni
 ~~~~~~~~~~~~~~~~~~~~~
@@ -272,21 +308,29 @@ diffurjöfnuna og nota svo upphafsgildið til að finna ótvírætt ákvarðaða
 Dæmi: Upphafsgildisverkefni með aðgreinanlegri diffurjöfnu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Leysum verkefnið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \frac{dy}{dx} = \sin(x), \quad y(0)=5.
+	Leysum verkefnið
 
-Þessi diffurjafna er aðgreinanleg og því fáum við að
+	.. math:: \frac{dy}{dx} = \sin(x), \quad y(0)=5.
 
-.. math:: y = \int \sin(x)dx = -\cos(x) + C.
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
-Við getum nú notfært okkur að :math:`y(0)=5` og fengið að
+	Þessi diffurjafna er aðgreinanleg og því fáum við að
 
-.. math:: y(0) = -\cos(0)+C = -1+C=5.
+	.. math:: y = \int \sin(x)dx = -\cos(x) + C.
 
-Ef við einangrum :math:`C` fæst að :math:`C=6`. Lausnin er því
+	Við getum nú notfært okkur að :math:`y(0)=5` og fengið að
 
-.. math:: y=-\cos(x)+6.
+	.. math:: y(0) = -\cos(0)+C = -1+C=5.
+
+	Ef við einangrum :math:`C` fæst að :math:`C=6`. Lausnin er því
+
+	.. math:: y=-\cos(x)+6.
+
+---------
 
 Nálgun svæða
 -------------
@@ -324,7 +368,8 @@ og hættir ekki að leggja saman fyrr en komið er upp í :math:`n`. Þannig að
 Reiknireglur: Summuvirkinn
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+.. admonition:: Reiknireglur: Summuvirkinn
+  :class: setning
 
 	#. :math:`\sum_{i=1}^n c = nc`
 
@@ -334,21 +379,22 @@ Reiknireglur: Summuvirkinn
 
 	#. :math:`\sum_{i=1}^n a_i = \sum_{i=1}^m a_i + \sum_{i=m+1}^n a_i`
 
-Setning: Nokkrar summur til að þekkja
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ábending: Nokkrar summur til að þekkja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef hægt er að skrifa summu :math:`\sum_{i=1}^n` sem fall af :math:`n` er það
-kallað lokað form summunnar.
+.. admonition:: Athugasemd
+  :class: athugasemd
 
-.. note::
+	Ef hægt er að skrifa summu :math:`\sum_{i=1}^n` sem fall af :math:`n` er það
+	kallað lokað form summunnar.
 
-	Gott getur verið að kanast við lokað form eftirfarandi summa.
+		Gott getur verið að kanast við lokað form eftirfarandi summa.
 
-	#. :math:`\sum_{i=1}^n i = 1+2+\dots+n = \frac{n(n+1)}{2}`
+		#. :math:`\sum_{i=1}^n i = 1+2+\dots+n = \frac{n(n+1)}{2}`
 
-	#. :math:`\sum_{i=1}^n i^2 = 1^2+2^2+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}`
+		#. :math:`\sum_{i=1}^n i^2 = 1^2+2^2+\dots+n^2 = \frac{n(n+1)(2n+1)}{6}`
 
-	#. :math:`\sum_{i=1}^n i^3 = 1^3+2^3+\dots+n^3 = \frac{n^2(n+1)^2}{4}`
+		#. :math:`\sum_{i=1}^n i^3 = 1^3+2^3+\dots+n^3 = \frac{n^2(n+1)^2}{4}`
 
 Nálgun svæða
 ~~~~~~~~~~~~
@@ -376,92 +422,108 @@ bili :math:`x_, x_1, x_2, \dots, x_n` þar sem :math:`x_0=a`, :math:`x_n=b` og
 Skilgreining: Skipting
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Mengi punkta :math:`P=\{x_0,x_1,\dots,x_n\}` þar sem :math:`a<x_0<x_1<\dots < x_n=b`
-sem skiptir bilinu [a,b] í hlutbil á forminu :math:`[x_0,x_1], [x_1,x_2], \dots, [x_{n-1},x_n]`
-kallast *skipting* bilsins :math:`[a,b]`. Ef hlutbilin hafa öll sömu lengd, er
-myndar mengi punktanna *reglulega skiptingu* bilsins :math:`[a,b]`.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Reglulega skiptingu bils má svo nota sem grunninn að því að meta svæði undir ferli.
+	Mengi punkta :math:`P=\{x_0,x_1,\dots,x_n\}` þar sem :math:`a<x_0<x_1<\dots < x_n=b`
+	sem skiptir bilinu [a,b] í hlutbil á forminu :math:`[x_0,x_1], [x_1,x_2], \dots, [x_{n-1},x_n]`
+	kallast *skipting* bilsins :math:`[a,b]`. Ef hlutbilin hafa öll sömu lengd, er
+	myndar mengi punktanna *reglulega skiptingu* bilsins :math:`[a,b]`.
+
+	Reglulega skiptingu bils má svo nota sem grunninn að því að meta svæði undir ferli.
 
 Setning: Nálgun með vinstri endapunkti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Á sérhverju hlutbili :math:`[x_{i-1},x_{i}]` fyrir :math:`i=1,2,\dots n` búum við til
-rétthyrning með breiddina :math:`\Delta x` og hæðina :math:`f(x_{i-1})`, þ.e. fallgildið
-í vinstri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot x_i`.
-Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
-flatarmál svæðisins :math:`A`. Við notum ritháttinn :math:`L_n` til að tákna að
-þetta sé nálgun með vinstri endapunkti (:math:`L` fyrir e. *left*) með :math:`n`
-hlutbilum. Formúlan er því
+.. admonition:: Setning
+  :class: setning
 
-.. math:: A \approx L_n = \sum_{i=1}^n f(x_{i-1})\cdot \Delta x.
+	Á sérhverju hlutbili :math:`[x_{i-1},x_{i}]` fyrir :math:`i=1,2,\dots n` búum við til
+	rétthyrning með breiddina :math:`\Delta x` og hæðina :math:`f(x_{i-1})`, þ.e. fallgildið
+	í vinstri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot x_i`.
+	Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
+	flatarmál svæðisins :math:`A`. Við notum ritháttinn :math:`L_n` til að tákna að
+	þetta sé nálgun með vinstri endapunkti (:math:`L` fyrir e. *left*) með :math:`n`
+	hlutbilum. Formúlan er því
 
-.. image:: ./myndir/kafli05/PMA_L6.png
-	:align: center
-	:width: 75%
+	.. math:: A \approx L_n = \sum_{i=1}^n f(x_{i-1})\cdot \Delta x.
 
+	.. image:: ./myndir/kafli05/PMA_L6.png
+		:align: center
+		:width: 75%
 
 Dæmi: Nálgun með vinstri endapunkti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Myndin hér að ofan notar :math:`n=5` hlutbil til að nálga flatarmál svæðisins
-sem myndast á milli línanna :math:`x=1` og :math:`x=6`, er fyrir ofan :math:`x`-ásinn
-og undir ferli fallsins :math:`f(x)=\cos(x)+3`. Sérhvert hlutbil hefur lengdina
-:math:`\Delta x = 1`. Hæð rétthyrninganna má reikna með :math:`\cos(x)+3`
-fyrir :math:`x=1,\dots,5` og er (frá vinstri til hægri)
-:math:`3,54`, :math:`2,58`, :math:`2,01`, :math:`2,35`, og :math:`3,28`. Þar sem
-lengd bilanna er :math:`1` þá er þetta jafnframt flatarmál rétthyrninganna þar sem
-:math:`(\cos(x_i)+3) \cdot \Delta x = (\cos(x_i)+3) \cdot 1 = \cos(x_i)`. Því fæst að
-nálgun á flatarmáli :math:`A` sé
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: L_5 = 3,54 + 2,58 + 2,01 + 2,35 + 3,28 =13,76.
+	Myndin hér að ofan notar :math:`n=5` hlutbil til að nálga flatarmál svæðisins
+	sem myndast á milli línanna :math:`x=1` og :math:`x=6`, er fyrir ofan :math:`x`-ásinn
+	og undir ferli fallsins :math:`f(x)=\cos(x)+3`. Sérhvert hlutbil hefur lengdina
+	:math:`\Delta x = 1`. Hæð rétthyrninganna má reikna með :math:`\cos(x)+3`
+	fyrir :math:`x=1,\dots,5` og er (frá vinstri til hægri)
+	:math:`3,54`, :math:`2,58`, :math:`2,01`, :math:`2,35`, og :math:`3,28`. Þar sem
+	lengd bilanna er :math:`1` þá er þetta jafnframt flatarmál rétthyrninganna þar sem
+	:math:`(\cos(x_i)+3) \cdot \Delta x = (\cos(x_i)+3) \cdot 1 = \cos(x_i)`. Því fæst að
+	nálgun á flatarmáli :math:`A` sé
 
-Raunverulegt flatarmál svæðisins er :math:`A = 15-\sin(1)+\sin(6)\approx 13,88`.
-Skekkjan er því :math:`13,88-13,76=0,12` eða u.þ.b. :math:`0,9\%` munur, sem
-hlýtur að teljast nokkuð gott miðað við nálgun sem notar ansi fá hlutbil.
+	.. math:: L_5 = 3,54 + 2,58 + 2,01 + 2,35 + 3,28 =13,76.
 
-.. image:: ./myndir/kafli05/PMA_nalgun_svaedis_L.png
- :align: center
- :width: 75%
+	Raunverulegt flatarmál svæðisins er :math:`A = 15-\sin(1)+\sin(6)\approx 13,88`.
+	Skekkjan er því :math:`13,88-13,76=0,12` eða u.þ.b. :math:`0,9\%` munur, sem
+	hlýtur að teljast nokkuð gott miðað við nálgun sem notar ansi fá hlutbil.
+
+	.. image:: ./myndir/kafli05/PMA_nalgun_svaedis_L.png
+	 :align: center
+	 :width: 75%
 
 Setning: Nálgun með hægri endapunkti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Á sérhverju hlutbili :math:`[x_{i-1},x_{i}]` fyrir :math:`i=1,2,\dots n` búum við til
-rétthyrning með breiddina :math:`\Delta x` og hæðina :math:`f(x_{1})`, þ.e. fallgildið
-í hægri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot x_i`.
-Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
-flatarmál svæðisins :math:`A`. Við notum ritháttinn :math:`R_n` til að tákna að
-þetta sé nálgun með vinstri endapunkti (:math:`R` fyrir e. *right*) með :math:`n`
-hlutbilum. Formúlan er því
+.. admonition:: Setning
+  :class: setning
 
-.. math:: A \approx R_n = \sum_{i=1}^n f(x_{i})\cdot \Delta x.
+	Á sérhverju hlutbili :math:`[x_{i-1},x_{i}]` fyrir :math:`i=1,2,\dots n` búum við til
+	rétthyrning með breiddina :math:`\Delta x` og hæðina :math:`f(x_{1})`, þ.e. fallgildið
+	í hægri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot x_i`.
+	Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
+	flatarmál svæðisins :math:`A`. Við notum ritháttinn :math:`R_n` til að tákna að
+	þetta sé nálgun með vinstri endapunkti (:math:`R` fyrir e. *right*) með :math:`n`
+	hlutbilum. Formúlan er því
 
-.. image:: ./myndir/kafli05/PMA_H6.png
-	:align: center
-	:width: 75%
+	.. math:: A \approx R_n = \sum_{i=1}^n f(x_{i})\cdot \Delta x.
+
+	.. image:: ./myndir/kafli05/PMA_H6.png
+		:align: center
+		:width: 75%
 
 Dæmi: Nálgun með hægri endapunkti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við nálgum nú sama svæði og hér að ofan nema nú hafa rétthyrningarnir
-hæð sem svarar til fallgildis :math:`f(x)=\cos(x)+3` í hægri endapunkti,
-þ.e. :math:`\cos(x)+3` þar sem :math:`x=2,\dots,6`. Húner því (frá vinstri til hægri)
-:math:`2,58`, :math:`2,01`, :math:`2,35`, :math:`3,28`, og :math:`3,96`.
-Með sömu rökum og áður fæst því að
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: H_5 = 2,58 + 2,01 + 2,35 + 3,28 + 3,96 = 14,18.
+	Við nálgum nú sama svæði og hér að ofan nema nú hafa rétthyrningarnir
+	hæð sem svarar til fallgildis :math:`f(x)=\cos(x)+3` í hægri endapunkti,
+	þ.e. :math:`\cos(x)+3` þar sem :math:`x=2,\dots,6`. Húner því (frá vinstri til hægri)
+	:math:`2,58`, :math:`2,01`, :math:`2,35`, :math:`3,28`, og :math:`3,96`.
+	Með sömu rökum og áður fæst því að
 
-Skekkjan er nú :math:`14,18-13,88,76=0,3` eða u.þ.b. :math:`1\%` munur.
+	.. math:: H_5 = 2,58 + 2,01 + 2,35 + 3,28 + 3,96 = 14,18.
 
-.. image:: ./myndir/kafli05/PMA_nalgun_svaedis_H.png
- :align: center
- :width: 75%
+	Skekkjan er nú :math:`14,18-13,88,76=0,3` eða u.þ.b. :math:`1\%` munur.
+
+	.. image:: ./myndir/kafli05/PMA_nalgun_svaedis_H.png
+	 :align: center
+	 :width: 75%
 
 Athugasemd: Fjöldi rétthyrninga
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. tip::
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Því fleiri rétthyrningar sem eru notaðir eru til þess að nálga flatarmál svæðis,
 	þeim mun nákvæmari verður nálgunin.
 
@@ -469,25 +531,33 @@ Athugasemd: Fjöldi rétthyrninga
 Skilgreining: Riemann summa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f(x)` vera skilgreint á lokaða bilinu :math:`[a,b]` og :math:`P`
-vera reglulega skiptingu á bilinu. Látum :math:`\Delta x` vera lengd sérhvers
-hlutbils :math:`[x_{i-1},x_i]` og fyrir hvert :math:`i` látum við :math:`x_i^*`
-vera hvaða tölu sem er á bilinu :math:`[x_{i-1},x_i]`. Þá er Riemann summa
-skilgriend sem
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. math:: \sum_{i=1}^n f(x_i^*)\Delta x.
+	Látum :math:`f(x)` vera skilgreint á lokaða bilinu :math:`[a,b]` og :math:`P`
+	vera reglulega skiptingu á bilinu. Látum :math:`\Delta x` vera lengd sérhvers
+	hlutbils :math:`[x_{i-1},x_i]` og fyrir hvert :math:`i` látum við :math:`x_i^*`
+	vera hvaða tölu sem er á bilinu :math:`[x_{i-1},x_i]`. Þá er Riemann summa
+	skilgriend sem
+
+	.. math:: \sum_{i=1}^n f(x_i^*)\Delta x.
 
 Setning: Flatarmál svæðis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`f(x)` vera samfellt, jákvætt fall á lokaða bilinu :math:`[a,b]` og
-látum :math:`\sum_{i=1}^n f(x_i^*) \Delta x` vera Riemann summu fyrir :math:`f(x)`.
-Þá má reikna flatarmál svæðisins sem myndast undir ferli fallsins :math:`y=f(x)` á
-bilinu :math:`[a,b]` með
+.. admonition:: Setning
+  :class: setning
 
-.. math:: A = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i^*) \Delta x.
+	Látum :math:`f(x)` vera samfellt, jákvætt fall á lokaða bilinu :math:`[a,b]` og
+	látum :math:`\sum_{i=1}^n f(x_i^*) \Delta x` vera Riemann summu fyrir :math:`f(x)`.
+	Þá má reikna flatarmál svæðisins sem myndast undir ferli fallsins :math:`y=f(x)` á
+	bilinu :math:`[a,b]` með
 
-.. note::
+	.. math:: A = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i^*) \Delta x.
+
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Unnt er að sanna að ef :math:`f(x)` er samfellt fall á lokuðu bili þá skiptir
 	ekki máli hvaða mengi :math:`\{x_i^*\}` er valið, markgildið er alltaf það sama.
 	Við munum þó ekki setja fram sönnun á því hér.
@@ -495,18 +565,23 @@ bilinu :math:`[a,b]` með
 Skilgreining: Undir- og yfirsumma
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	#. Ef mengið :math:`\{x_i^*\}` í Riemann-summu er valið þannig að :math:`f(x_i^*) \leq f(x)` fyrir öll :math:`x \in [x_{i-1},x_i], i = 1,\dots,n` þá er ljóst að nálgaða flatarmálið er minna en hið raunverulega flatarmál. Þá er Riemann summan kölluð *undirsumma*.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-	#. Ef mengið :math:`\{x_i^*\}` í Riemann-summu er valið þannig að :math:`f(x_i^*) \geq f(x)` fyrir öll :math:`x \in [x_{i-1},x_i], i = 1,\dots,n` þá er ljóst að nálgaða flatarmálið er stærra en hið raunverulega flatarmál. Þá er Riemann summan kölluð *yfirsumma*.
+		#. Ef mengið :math:`\{x_i^*\}` í Riemann-summu er valið þannig að :math:`f(x_i^*) \leq f(x)` fyrir öll :math:`x \in [x_{i-1},x_i], i = 1,\dots,n` þá er ljóst að nálgaða flatarmálið er minna en hið raunverulega flatarmál. Þá er Riemann summan kölluð *undirsumma*.
 
-+---------------------------------------------------------+----------------------------------------------------+
-| .. _figaa:                                              | .. _figbb:                                         |
-|                                                         |                                                    |
-| .. image:: ./myndir/kafli05/PMA_undirsumma.png          | .. image:: ./myndir/kafli05/PMA_yfirsumma.png      |
-|    :width: 120%                                         |    :width: 120%                                    |
-|    :align: center                                       |    :align: center                                  |
-|                                                         |                                                    |
-+---------------------------------------------------------+----------------------------------------------------+
+		#. Ef mengið :math:`\{x_i^*\}` í Riemann-summu er valið þannig að :math:`f(x_i^*) \geq f(x)` fyrir öll :math:`x \in [x_{i-1},x_i], i = 1,\dots,n` þá er ljóst að nálgaða flatarmálið er stærra en hið raunverulega flatarmál. Þá er Riemann summan kölluð *yfirsumma*.
+
+	+---------------------------------------------------------+----------------------------------------------------+
+	| .. _figaa:                                              | .. _figbb:                                         |
+	|                                                         |                                                    |
+	| .. image:: ./myndir/kafli05/PMA_undirsumma.png          | .. image:: ./myndir/kafli05/PMA_yfirsumma.png      |
+	|    :width: 120%                                         |    :width: 120%                                    |
+	|    :align: center                                       |    :align: center                                  |
+	|                                                         |                                                    |
+	+---------------------------------------------------------+----------------------------------------------------+
+
+---------
 
 Ákveðin heildi
 ---------------
@@ -514,24 +589,32 @@ Skilgreining: Undir- og yfirsumma
 Skilgreining: Ákveðið heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`f(x)` er fall skilgreint á bilinu :math:`[a,b]` þá er *ákveðna heildið*
-yfir :math:`f` frá :math:`a` til :math:`b` gefið með
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. math:: \int_a^b f(x) dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i^*) \Delta x,
+	Ef :math:`f(x)` er fall skilgreint á bilinu :math:`[a,b]` þá er *ákveðna heildið*
+	yfir :math:`f` frá :math:`a` til :math:`b` gefið með
 
-af því gefnu að markgildið sé til. Ef markgildið er til, þá er fallið :math:`f(x)`
-sagt vera heildanlegt á bilinu :math:`[a,b]` eða einfaldlega bara heildanlegt.
+	.. math:: \int_a^b f(x) dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i^*) \Delta x,
 
-.. warning::
+	af því gefnu að markgildið sé til. Ef markgildið er til, þá er fallið :math:`f(x)`
+	sagt vera heildanlegt á bilinu :math:`[a,b]` eða einfaldlega bara heildanlegt.
+
+.. admonition:: Aðvörun
+  :class: advorun
 
 	Óákveðið heildi er fjölskylda falla á meðan ákveðið heildi er tala.
 
 Setning: Samfelld föll eru heildanleg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`f(x)` er samfellt fall á :math:`[a,b]` þá er :math:`f` heildalegt á :math:`[a,b]`.
+.. admonition:: Setning
+  :class: setning
 
-.. warning::
+	Ef :math:`f(x)` er samfellt fall á :math:`[a,b]` þá er :math:`f` heildalegt á :math:`[a,b]`.
+
+.. admonition:: Aðvörun
+  :class: advorun
 
 	Föll sem ekki eru samfelld á :math:`[a,b]` gætu verið heildanleg á bilinu. Það er
 	þó ekki hægt að tryggja það líkt og með samfelld föll.
@@ -539,51 +622,57 @@ Ef :math:`f(x)` er samfellt fall á :math:`[a,b]` þá er :math:`f` heildalegt �
 Dæmi: Ákveðið heildi
 ~~~~~~~~~~~~~~~~~~~~~
 
-Metum ákveðna heildið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \int_0^2 x^2 dx.
+	Metum ákveðna heildið
 
-Notum hægri endapunkts nálgun til þess að búa til Riemann summuna. Höfum að
-:math:`[a,b]=[0,2]` og ef notuð er regluleg skipting :math:`P=\{x_i\}`
-fyrir bilið fæst að
+	.. math:: \int_0^2 x^2 dx.
 
-.. math:: \Delta x = \frac{b-a}{n}=\frac{2}{n}`.
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
-Þar sem við notumst við hægri endapunkts nálgun til að búa til Riemann summuna
-þurfum við að reikna fallgildið í endapunkti bilsins :math:`[x_{i-1},x_i]`
-fyrir sérhvert :math:`i`. Hægri endapunktur bilsins er :math:`x_i` og þar sem
-:math:`P` er regluleg skipting fæst
+	Notum hægri endapunkts nálgun til þess að búa til Riemann summuna. Höfum að
+	:math:`[a,b]=[0,2]` og ef notuð er regluleg skipting :math:`P=\{x_i\}`
+	fyrir bilið fæst að
 
-.. math:: x_i = x_0 + i \Delta x = \frac{2i}{n}
+	.. math:: \Delta x = \frac{b-a}{n}=\frac{2}{n}`.
 
-og fallgildið í hægri endapunkti er því
+	Þar sem við notumst við hægri endapunkts nálgun til að búa til Riemann summuna
+	þurfum við að reikna fallgildið í endapunkti bilsins :math:`[x_{i-1},x_i]`
+	fyrir sérhvert :math:`i`. Hægri endapunktur bilsins er :math:`x_i` og þar sem
+	:math:`P` er regluleg skipting fæst
 
-.. math:: f(x_i) = \left(\frac{2i}{n}\right)^2 = \frac{4i^2}{n^2}.
+	.. math:: x_i = x_0 + i \Delta x = \frac{2i}{n}
 
-Þá hefur Riemann summan formið
+	og fallgildið í hægri endapunkti er því
 
-.. math:: \sum_{i=1}^n f(x_i) \Delta x = \sum_{i=1}^n \left(\frac{4i^2}{n^2}\right)\frac{2}{n} = \sum_{i=1}^n \frac{8i^2}{n^3} = \frac{8}{n^3}\sum_{i=1}^n i^2.
+	.. math:: f(x_i) = \left(\frac{2i}{n}\right)^2 = \frac{4i^2}{n^2}.
 
-Við getum notfært okkur að við þekkjum lokað form þessarar summu. Því fæst
+	Þá hefur Riemann summan formið
 
-.. math:: \frac{8}{n^3}\sum_{i=1}^n i^2 = \frac{8}{n^3} \frac{n(n+1)(2n+1)}{6} = \frac{8}{3} + \frac{4}{n}+\frac{8}{6n^2}.
+	.. math:: \sum_{i=1}^n f(x_i) \Delta x = \sum_{i=1}^n \left(\frac{4i^2}{n^2}\right)\frac{2}{n} = \sum_{i=1}^n \frac{8i^2}{n^3} = \frac{8}{n^3}\sum_{i=1}^n i^2.
 
-Til þess að meta heildið þurfum við að reikna markgildið þegar :math:`n` stefnir á óendanlegt.
+	Við getum notfært okkur að við þekkjum lokað form þessarar summu. Því fæst
 
-.. math:: \lim_{n \rightarrow \infty} \left(\frac{8}{3} + \frac{4}{n}+\frac{8}{6n^2} \right) = \frac{8}{3}.
+	.. math:: \frac{8}{n^3}\sum_{i=1}^n i^2 = \frac{8}{n^3} \frac{n(n+1)(2n+1)}{6} = \frac{8}{3} + \frac{4}{n}+\frac{8}{6n^2}.
 
-Því er
+	Til þess að meta heildið þurfum við að reikna markgildið þegar :math:`n` stefnir á óendanlegt.
 
-.. math:: \int_0^2 x^2 dx = \frac{8}{3}.
+	.. math:: \lim_{n \rightarrow \infty} \left(\frac{8}{3} + \frac{4}{n}+\frac{8}{6n^2} \right) = \frac{8}{3}.
 
-Hér fyrir neðan má draga stikuna :math:`k` til og frá til að sjá
-nálgunina þegar notaðir eru :math:`k` rétthyrningar í Riemann summunni.
+	Því er
 
-.. ggb:: frtbvg44
-    :width: 900
-    :height: 450
-    :img: ./myndir/PMA_hen.png
-    :imgwidth: 12cm
+	.. math:: \int_0^2 x^2 dx = \frac{8}{3}.
+
+	Hér fyrir neðan má draga stikuna :math:`k` til og frá til að sjá
+	nálgunina þegar notaðir eru :math:`k` rétthyrningar í Riemann summunni.
+
+	.. ggb:: frtbvg44
+	    :width: 900
+	    :height: 450
+	    :img: ./myndir/PMA_hen.png
+	    :imgwidth: 12cm
 
 Flatarmál falla sem ekki eru jákvæð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -619,10 +708,12 @@ Athugum að þessi skilgreining virkar jafnvel þó fallið sé alfarið fyrir o
 eða neðan :math:`x`-ásinn. Það eina sem gerist er að annað hvort mun :math:`A_1`
 eða :math:`A_2` taka gildið 0.
 
-Setning: Reglur um ákveðin heildi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Reiknireglur: ákveðin heildi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+.. admonition:: Reiknireglur: Ákveðin heildi
+  :class: setning
+
 	Eftirfarandi gildir um ákveðin heildi.
 
 		#. :math:`\int_a^a f(x) dx = 0`
@@ -638,16 +729,16 @@ Setning: Reglur um ákveðin heildi
 Setning: Samanburður heilda
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+.. admonition:: Setning
+  :class: setning
 
 	Eftirfarandi gildir um ákveðin heildi.
 
-		#. Ef :math:`f(x) \geq 0` fyrir :math:`a \leq x \leq b` þá gildir að :math:`\int_a^b f(x) dx \geq 0`.
+		#. Ef :math:`f(x) \geq 0` fyrir :math:`a \leq x \leq b` þá gildir að :math:`\int_a^b f(x) dx \geq 0`.
 
-		#. Ef :math:`f(x) \geq g(x)` fyrir :math:`a \leq x \leq b` þá gildir að :math:`\int_a^b f(x) dx \geq \int_a^b g(x) dx`.
+		#. Ef :math:`f(x) \geq g(x)` fyrir :math:`a \leq x \leq b` þá gildir að :math:`\int_a^b f(x) dx \geq \int_a^b g(x) dx`.
 
-		#. Ef :math:`m` og :math:`M` eru fastar þannig að :math:`m \leq f(x) \leq M` fyrir :math:`a \leq x \leq b` þá gildir að :math:`m(b-a) \leq \int_a^b f(x) dx \leq M(b-a)`.
-
+		#. Ef :math:`m` og :math:`M` eru fastar þannig að :math:`m \leq f(x) \leq M` fyrir :math:`a \leq x \leq b` þá gildir að :math:`m(b-a) \leq \int_a^b f(x) dx \leq M(b-a)`.
 
 Meðalgildi falls
 ~~~~~~~~~~~~~~~~
@@ -676,17 +767,24 @@ Með einfaldri algebru má sýna að þetta sé jafngilt því að rita
 Skilgreining: Meðalgildi falls á bili
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`f(x)` er samfellt fall á bilinu :math:`[a,b]` þá er meðalgildi fallsins
-á bilinu gefið með
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-.. math:: \overline{f} = \frac{1}{b-a} \int_a^b f(x) dx.
+	Ef :math:`f(x)` er samfellt fall á bilinu :math:`[a,b]` þá er meðalgildi fallsins
+	á bilinu gefið með
 
-.. warning::
+	.. math:: \overline{f} = \frac{1}{b-a} \int_a^b f(x) dx.
+
+.. admonition:: Aðvörun
+  :class: advorun
+
 	Bókin notar :math:`f_{\text{ave}}` (ave fyrir enska orðið *average*)
 	til þess að tákna meðagildi falls.
 	Hér munum við nota :math:`\overline{f}` til að halda samræmi við að tákna meðatal
 	talnasafns :math:`x_1, x_2, \dots, x_m` með :math:`\overline{x}`, ritháttur sem
 	er notaður í flestum áföngum Háskóla Íslands.
+
+-------
 
 Undirstöðusetning stærðfræðigreiningar
 --------------------------------------
@@ -694,15 +792,19 @@ Undirstöðusetning stærðfræðigreiningar
 Meðalgildissetningin fyrir heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`f(x)` er samfellt á bilinu :math:`[a,b]` þá er að minnsta kosti einn
-punktur :math:`c\in [a,b]` sem uppfyllir að
+.. admonition:: Meðalgildissetningin fyrir heildi
+  :class: setning
 
-.. math:: f(c) = \frac{1}{b-a} \int_a^b f(x) dx.
+	Ef :math:`f(x)` er samfellt á bilinu :math:`[a,b]` þá er að minnsta kosti einn
+	punktur :math:`c\in [a,b]` sem uppfyllir að
 
-Note: Ritháttur
-~~~~~~~~~~~~~~~~
+	.. math:: f(c) = \frac{1}{b-a} \int_a^b f(x) dx.
 
-.. note::
+Athugasemd: Ritháttur
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Athugasemd
+  :class: athugasemd
 
 	Oft er ritað að
 
@@ -715,60 +817,77 @@ Note: Ritháttur
 Dæmi: Meðalgildissetningin fyrir heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Finnum meðalgildi fallsins :math:`f(x)=8-2x` á bilinu :math:`[0,4]` og þá tölu :math:`c` þ.a.
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: f(c)=\frac{1}{4-0} \int_0^4 8-2x dx.
+	Finnum meðalgildi fallsins :math:`f(x)=8-2x` á bilinu :math:`[0,4]` og þá tölu :math:`c` þ.a.
 
-Byrjum á því að meta heildið og fáum að
+	.. math:: f(c)=\frac{1}{4-0} \int_0^4 8-2x dx.
 
-.. math:: \frac{1}{4-0} \int_0^4 8-2x dx = \frac{1}{4}\left[8x-x^2\right]_0^4 = \frac{1}{4}((8 \cdot 4 - 4^2 ) - (0 \cdot 4 - 0^2)) = \frac{1}{4}(16) = 4.
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
-Við viljum því finna :math:`c \in [0,4]` þannig að
+	Byrjum á því að meta heildið og fáum að
 
-.. math:: f(c) = 8-2c = 4.
+	.. math:: \frac{1}{4-0} \int_0^4 8-2x dx = \frac{1}{4}\left[8x-x^2\right]_0^4 = \frac{1}{4}((8 \cdot 4 - 4^2 ) - (0 \cdot 4 - 0^2)) = \frac{1}{4}(16) = 4.
 
-Einangrum nú c og höfum að
+	Við viljum því finna :math:`c \in [0,4]` þannig að
 
-.. math:: 2c = 8-4 \Leftrightarrow 2c = 4 \Leftrightarrow c = 2.
+	.. math:: f(c) = 8-2c = 4.
 
-Meðalgildi fallsins er því :math:`f(c)=f(2)=4` og :math:`c=2`.
+	Einangrum nú c og höfum að
+
+	.. math:: 2c = 8-4 \Leftrightarrow 2c = 4 \Leftrightarrow c = 2.
+
+	Meðalgildi fallsins er því :math:`f(c)=f(2)=4` og :math:`c=2`.
 
 Setning: Undirstöðusetning stærðfræðigreiningar (I)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`f(x)` er samfellt á bilinu :math:`[a,b]` og fallið :math:`F(x)` er
-skilgreint þannig að
+.. admonition:: Undirstöðusetning stærðfræðigreining (I)
+  :class: setning
 
-.. math:: F(x) = \int_a^x f(t) dt
+	Ef :math:`f(x)` er samfellt á bilinu :math:`[a,b]` og fallið :math:`F(x)` er
+	skilgreint þannig að
 
-þá gildir að :math:`F'(x) =f(x)` á :math:`[a,b]`.
+	.. math:: F(x) = \int_a^x f(t) dt
+
+	þá gildir að :math:`F'(x) =f(x)` á :math:`[a,b]`.
 
 
 Dæmi: Undirstöðusetning stærðfræðigreiningarinnar (I)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`u=\sqrt{x}` og gerum ráð fyrir að
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: F(x) = \int_1^{u(x)} \sin(t) dt.
+	Látum :math:`u=\sqrt{x}` og gerum ráð fyrir að
 
-Samkvæmt undirstöðusetningu stærðfræðigreiningar (I) og keðjureglunni fæst
+	.. math:: F(x) = \int_1^{u(x)} \sin(t) dt.
 
-.. math::
-	\begin{align}
-		F'(x) &= \sin(u(x))\frac{du}{dx}\\
-		&= \sin(u(x)) \cdot (\frac{1}{2} x^{-1/2})\\
-		&= \frac{\sin(\sqrt{x})}{2\sqrt{x}}.
-	\end{align}
+	Samkvæmt undirstöðusetningu stærðfræðigreiningar (I) og keðjureglunni fæst
+
+	.. math::
+		\begin{align}
+			F'(x) &= \sin(u(x))\frac{du}{dx}\\
+			&= \sin(u(x)) \cdot (\frac{1}{2} x^{-1/2})\\
+			&= \frac{\sin(\sqrt{x})}{2\sqrt{x}}.
+		\end{align}
 
 Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`f(x)`er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
-eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
+.. admonition:: Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)
+  :class: setning
 
-.. math:: \int_a^b f(x) dx = F(b)-F(a).
+	Ef :math:`f(x)`er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
+	eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
 
-.. tip::
+	.. math:: \int_a^b f(x) dx = F(b)-F(a).
+
+.. admonition:: Athugasemd
+  :class: athugasemd
+
 	Nemendur gera sér oft ekki grein fyrir því hversu gríðarlega mikilvæg
 	undirstöðusetning stærðfræðigreiningarinnar er. Það tók stærðfræðinga
 	meira en 500 ár að fínpússa þá tækni sem vísinda- og fræðimenn notast við í
@@ -784,21 +903,28 @@ eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
 Dæmi: Undirstöðusetning stærðfræðigreiningarinnar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Metum heildið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \int_{-2}^2 (t^2-4)dt
+	Metum heildið
 
-með því að nota undirstöðusetningu stærðfræðigreiningarinnar. Fyrst þurfum við að
-finna eitthvað stofnfall fyrir :math:`f(t)=t^2-4`. Höfum að
+	.. math:: \int_{-2}^2 (t^2-4)dt
 
-.. F(t) = \int (t^2-4) dt = \frac{1}{3}t^3-4t+C
+	með því að nota undirstöðusetningu stærðfræðigreiningarinnar.
 
-Veljum :math:`C=0` og fáum þá að stofnfallið sem við ætlum að nota sé :math:`F(t)=\frac{1}{3}t^3-4t`
-Þá segir undirstöðusetning stærðfræðigreiningarinnar (II) að
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
+	Fyrst þurfum við að finna eitthvað stofnfall fyrir :math:`f(t)=t^2-4`. Höfum að
 
-.. math:: \int_{-2}^2 (t^2-4)dt = F(2)-F(-2) = \left(\frac{1}{3}2^3-4\cdot 2\right) - \left(\frac{1}{3}(-2)^3-4\cdot (-2) \right)= \frac{16}{3}-16 = -\frac{32}{3}.
+	.. F(t) = \int (t^2-4) dt = \frac{1}{3}t^3-4t+C
 
+	Veljum :math:`C=0` og fáum þá að stofnfallið sem við ætlum að nota sé :math:`F(t)=\frac{1}{3}t^3-4t`
+	Þá segir undirstöðusetning stærðfræðigreiningarinnar (II) að
+
+	.. math:: \int_{-2}^2 (t^2-4)dt = F(2)-F(-2) = \left(\frac{1}{3}2^3-4\cdot 2\right) - \left(\frac{1}{3}(-2)^3-4\cdot (-2) \right)= \frac{16}{3}-16 = -\frac{32}{3}.
+
+---------
 
 Heildun oddstæðra og jafnstæðra falla
 -------------------------------------
@@ -821,14 +947,22 @@ falls yfir samhverft bil er jafngilt núlli*.
 Dæmi: Heildun oddstæðra og jafnstæðra falla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Metum heildið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \int_{-2}^2 (3x^8-2) dx.
+	Metum heildið
 
-Athugum að ef :math:`f(x)=3x^8-2` þá er :math:`f(-x) = 3(-x)^8-2 = 3(-1)^8x^8-2 = 3x^8-2`
-svo fallið :math:`f` er jafnstætt samkvæmt skilgreiningu. Við fáum því að
+	.. math:: \int_{-2}^2 (3x^8-2) dx.
 
-.. math:: \int_{-2}^2 (3x^8-2) dx = 2\int_{0}^2 (3x^8-2) = 2\left[\frac{1}{3}x^9-2x\right]_0^2 = 2\left(\frac{512}{3}  - 4\right) = \frac{1000}{3}
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+	Athugum að ef :math:`f(x)=3x^8-2` þá er :math:`f(-x) = 3(-x)^8-2 = 3(-1)^8x^8-2 = 3x^8-2`
+	svo fallið :math:`f` er jafnstætt samkvæmt skilgreiningu. Við fáum því að
+
+	.. math:: \int_{-2}^2 (3x^8-2) dx = 2\int_{0}^2 (3x^8-2) = 2\left[\frac{1}{3}x^9-2x\right]_0^2 = 2\left(\frac{512}{3}  - 4\right) = \frac{1000}{3}
+
+-------
 
 Innsetning
 ----------
@@ -840,86 +974,107 @@ hann er samsettur úr fleiri en einu falli, t.d. með margföldun eða samskeyti
 Setning: Innsetning í óákveðin heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gerum ráð fyrir að :math:`u=g(x)` sé fall þannig að :math:`g(x)` hafi samfellda afleiðu á bili og að
-:math:`f(x)` vera samfellt á samsvarandi bakmengi :math:`g`. Látum nú :math:`F(x)`
-vera stofnfall fyrir :math:`f(x)`. Þá gildir að
+.. admonition:: Setning
+  :class: setning
 
-.. math:: \int f(g(x))g'(x) dx = \int f(u) du = F(u) + C = F(g(x))+C.
+	Gerum ráð fyrir að :math:`u=g(x)` sé fall þannig að :math:`g(x)` hafi samfellda afleiðu á bili og að
+	:math:`f(x)` vera samfellt á samsvarandi bakmengi :math:`g`. Látum nú :math:`F(x)`
+	vera stofnfall fyrir :math:`f(x)`. Þá gildir að
+
+	.. math:: \int f(g(x))g'(x) dx = \int f(u) du = F(u) + C = F(g(x))+C.
 
 Dæmi: Innsetning í óákveðin heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Notum innsetningu til að reikna óákveðna heildið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \int 6x(3x^2+4)^4 dx.
+	Notum innsetningu til að reikna óákveðna heildið
 
+	.. math:: \int 6x(3x^2+4)^4 dx.
 
-Hér er :math:`f(x)=x^4`, :math:`g(x)=3x^2+4` og þ.a.l. :math:`g'(x)=6x`. Þá
-segir setningin um innsetningu í óákveðin heildi að
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
-.. math:: \int 6x(3x^2+4)^4 dx = F(3x^2+4) + C.
+	Hér er :math:`f(x)=x^4`, :math:`g(x)=3x^2+4` og þ.a.l. :math:`g'(x)=6x`. Þá
+	segir setningin um innsetningu í óákveðin heildi að
 
-Finnum nú eitthvað stofnfall fyrir :math:`f`. T.d. :math:`F(x) = \frac{1}{5}x^5.`
+	.. math:: \int 6x(3x^2+4)^4 dx = F(3x^2+4) + C.
 
-Þá er
+	Finnum nú eitthvað stofnfall fyrir :math:`f`. T.d. :math:`F(x) = \frac{1}{5}x^5.`
 
-.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5 + C.
+	Þá er
 
-Þar sem valið á fastanum :math:`C` er frjálst megum við t.d. velja :math:`C=1`
-og fáum þá að
+	.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5 + C.
 
-.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5+1.
+	Þar sem valið á fastanum :math:`C` er frjálst megum við t.d. velja :math:`C=1`
+	og fáum þá að
 
+	.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5+1.
 
 Setning: Innsetning í ákveðin heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gerum ráð fyrir að :math:`u=g(x)` sé fall þannig að :math:`g(x)` hafi samfellda afleiðu á bilinu :math:`[a,b]` og að
-:math:`f(x)` vera samfellt á bakmengi :math:`u=g(x)`. Þá gildir að
+.. admonition:: Setning
+  :class: setning
 
-.. math:: \int_a^b f(g(x))g'(x) dx = \int_{g(a)}^{g(b)} f(u) du
+	Gerum ráð fyrir að :math:`u=g(x)` sé fall þannig að :math:`g(x)` hafi samfellda afleiðu á bilinu :math:`[a,b]` og að
+	:math:`f(x)` vera samfellt á bakmengi :math:`u=g(x)`. Þá gildir að
+
+	.. math:: \int_a^b f(g(x))g'(x) dx = \int_{g(a)}^{g(b)} f(u) du
 
 Dæmi: Innsetning í ákveðin heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Metum heildið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \int_0^1 (1+2x^3)^5 x^2 dx
+	Metum heildið
 
-með innsetningu. Hér sjáum við að :math:`f(x)=x^5`, :math:`g(x)=1+2x^3`
-og þ.a.l. :math:`g'(x)=6x^2`. Þar sem :math:`u=g(x)` (skv. setningunni um
-innsetningu í ákveðin heildi) þá er þetta jafngilt því að rita
+	.. math:: \int_0^1 (1+2x^3)^5 x^2 dx
 
-.. math:: \frac{du}{dx} = 6x^2.
+	með innsetningu.
 
-Ef við notum þá aðferð sem við kynntum í
-kaflanum um diffur þá má líta á :math:`du` og :math:`dx` sem breytur og rita
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
-.. math:: du = 6x^2 dx \Leftrightarrow \frac{1}{6} du = x^2 dx`.
+	Hér sjáum við að :math:`f(x)=x^5`, :math:`g(x)=1+2x^3`
+	og þ.a.l. :math:`g'(x)=6x^2`. Þar sem :math:`u=g(x)` (skv. setningunni um
+	innsetningu í ákveðin heildi) þá er þetta jafngilt því að rita
 
-Með því að nota innsetninguna þá skiptum við :math:`x^2 dx` í heildinu út fyrir :math:`\frac{1}{6} du`
-og :math:`(1+2x^3)^5` út fyrir :math:`u^5`. Það eina sem eftir stendur er að
-reikna :math:`g(a) = g(0)` og :math:`g(b)=g(1)`. Fáum að
+	.. math:: \frac{du}{dx} = 6x^2.
 
-.. math:: g(0)= 1 + 2\cdot 0^3 = 1
+	Ef við notum þá aðferð sem við kynntum í
+	kaflanum um diffur þá má líta á :math:`du` og :math:`dx` sem breytur og rita
 
-og
+	.. math:: du = 6x^2 dx \Leftrightarrow \frac{1}{6} du = x^2 dx`.
 
-.. math:: g(1) =  1 + 2\cdot 1^3  = 3.
+	Með því að nota innsetninguna þá skiptum við :math:`x^2 dx` í heildinu út fyrir :math:`\frac{1}{6} du`
+	og :math:`(1+2x^3)^5` út fyrir :math:`u^5`. Það eina sem eftir stendur er að
+	reikna :math:`g(a) = g(0)` og :math:`g(b)=g(1)`. Fáum að
 
-Því fæst að
+	.. math:: g(0)= 1 + 2\cdot 0^3 = 1
 
-.. math:: \int_0^1 (1+2x^3)^5 x^2 dx = \frac{1}{5} \int_1^3 u^5 du
+	og
 
-þar sem við höfum tekið :math:`\frac{1}{5}` út fyrir heildið. Metum nú heildið
-og fáum
+	.. math:: g(1) =  1 + 2\cdot 1^3  = 3.
 
-.. math:: = \left[ \frac{1}{6}u^6 \right]_1^3 = \frac{1}{36}(3^6-1^6)=\frac{182}{9}.
+	Því fæst að
 
-.. tip::
+	.. math:: \int_0^1 (1+2x^3)^5 x^2 dx = \frac{1}{5} \int_1^3 u^5 du
+
+	þar sem við höfum tekið :math:`\frac{1}{5}` út fyrir heildið. Metum nú heildið
+	og fáum
+
+	.. math:: = \left[ \frac{1}{6}u^6 \right]_1^3 = \frac{1}{36}(3^6-1^6)=\frac{182}{9}.
+
+.. admonition:: Athugasemd
+  :class: athugasemd
 
 	Finna má mun fleiri dæmi í kennslubókinni. Það reynist oft erfitt fyrir
 	nemendur að ná tökum á innsetningu svo gott getur verið að skoða fleiri dæmi.
+
+--------
 
 Heildi með vísisföllum og logrum
 ---------------------------------
@@ -927,56 +1082,76 @@ Heildi með vísisföllum og logrum
 Setning: Heildi vísisfalla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Vísisföll má heilda með því að nota eftirfarandi formúlur.
+.. admonition:: Setning
+  :class: setning
 
- 	#. :math:`\int e^x dx = e^x + C:`
+	Vísisföll má heilda með því að nota eftirfarandi formúlur.
 
-	#. :math:`\int a^x dx = \frac{a^x}{\ln(a)} + C`
+	 	#. :math:`\int e^x dx = e^x + C:`
+
+		#. :math:`\int a^x dx = \frac{a^x}{\ln(a)} + C`
 
 Dæmi: Heildun vísisfalls
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Notum innsetningu með :math:`u=-x` til að finna stofnfall fyrir :math:`e^{-x}`.
-Höfum að ef :math:`u=-x` þá er :math:`-du = dx`. Því gefur innsetning að
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: F(x)=\int e^{-x} dx = - \int e^u du = -e^u + C = -e^{-x}+C
+	Notum innsetningu með :math:`u=-x` til að finna stofnfall fyrir :math:`e^{-x}`.
 
-skv. setningunni um heildi vísisfalla.
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
+	Höfum að ef :math:`u=-x` þá er :math:`-du = dx`. Því gefur innsetning að
+
+	.. math:: F(x)=\int e^{-x} dx = - \int e^u du = -e^u + C = -e^{-x}+C
+
+	skv. setningunni um heildi vísisfalla.
 
 Setning: Heildun logra
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Logra má heilda með því að nota eftirfarandi formúlu.
+.. admonition:: Setning
+  :class: setning
 
-	#. :math:`\int x^{-1} = \ln|x| + C`
+	Logra má heilda með því að nota eftirfarandi formúlu.
 
-	#. :math:`\int \ln(x) dx = x\ln(x) - x + C = x(\ln(x)-1)+C`
+		#. :math:`\int x^{-1} = \ln|x| + C`
 
-	#. :math:`\int \log_a(x) dx = \frac{x}{\ln(a)}(\ln(x)-1) + C`
+		#. :math:`\int \ln(x) dx = x\ln(x) - x + C = x(\ln(x)-1)+C`
+
+		#. :math:`\int \log_a(x) dx = \frac{x}{\ln(a)}(\ln(x)-1) + C`
 
 Dæmi: Heildun logra
 ~~~~~~~~~~~~~~~~~~~
 
-Metum heildið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \int \frac{3}{x-10}.
+	Metum heildið
 
-Tökum fyrst 3 út fyrir heildið
+	.. math:: \int \frac{3}{x-10}.
 
-.. math:: 3 \int \frac{1}{x-10}
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
-Og notum svo innsetningu með :math:`f(x)=\frac{1}{x}` og :math:`g(x)=x-10`.
-Þá er :math:`du = 1 dx` þar sem :math:`g'(x)=1`. Þetta gefur því
+	Tökum fyrst 3 út fyrir heildið
 
-.. math:: 3 \int \frac{1}{u} du = 3\ln|u|+C.
+	.. math:: 3 \int \frac{1}{x-10}
 
-Við getum nú skipt :math:`u` aftur út fyrir :math:`g(x)=x-10` og valið :math:`C=0`.
-Þá fæst
+	Og notum svo innsetningu með :math:`f(x)=\frac{1}{x}` og :math:`g(x)=x-10`.
+	Þá er :math:`du = 1 dx` þar sem :math:`g'(x)=1`. Þetta gefur því
 
-.. math:: = 3 \ln|x-10|.
+	.. math:: 3 \int \frac{1}{u} du = 3\ln|u|+C.
 
-Munum að lograr eru ekki skilgreindir í núlli og því gildi að :math:`x \in \mathbb{R}\setminus \{10\}`.
+	Við getum nú skipt :math:`u` aftur út fyrir :math:`g(x)=x-10` og valið :math:`C=0`.
+	Þá fæst
+
+	.. math:: = 3 \ln|x-10|.
+
+	Munum að lograr eru ekki skilgreindir í núlli og því gildi að :math:`x \in \mathbb{R}\setminus \{10\}`.
+
+--------
 
 Heildi sem skila andhverfum hornaföllum
 ----------------------------------------
@@ -984,22 +1159,31 @@ Heildi sem skila andhverfum hornaföllum
 Setning: Heildi sem skila andhverfum hornaföllum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Eftirfarandi heildi skila af sér andhverfum hornaföllum. Gerum ráð fyrir að :math:`a>0`:
+.. admonition:: Setning
+  :class: setning
 
-	#. :math:`\int \frac{du}{\sqrt{a^2-u^2}} = \sin^{-1}\frac{u}{|a|}+C`
+	Eftirfarandi heildi skila af sér andhverfum hornaföllum. Gerum ráð fyrir að :math:`a>0`:
 
-	#. :math:`\int \frac{du}{a^2+u^2} = \frac{1}{a}\tan^{-1}\frac{u}{a} + C`
+		#. :math:`\int \frac{du}{\sqrt{a^2-u^2}} = \sin^{-1}\frac{u}{|a|}+C`
 
-	#. :math:`\int \frac{du}{u\sqrt{u^2-a^2}} = \frac{1}{|a|}\sec^{-1}\frac{|u|}{a}+C`
+		#. :math:`\int \frac{du}{a^2+u^2} = \frac{1}{a}\tan^{-1}\frac{u}{a} + C`
+
+		#. :math:`\int \frac{du}{u\sqrt{u^2-a^2}} = \frac{1}{|a|}\sec^{-1}\frac{|u|}{a}+C`
 
 
-Setning: Heildi sem skila andhverfum hornaföllum
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dæmi: Heildi sem skila andhverfum hornaföllum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Metum heildið
+.. admonition:: Dæmi
+  :class: daemi
 
-.. math:: \int_0^{\frac{1}{2}} \frac{dx}{\sqrt{1-x^2}}.
+	Metum heildið
 
-Samkvæmt setningunni hér að ofan fæst
+	.. math:: \int_0^{\frac{1}{2}} \frac{dx}{\sqrt{1-x^2}}.
 
-.. math:: \int_0^{\frac{1}{2}} \frac{dx}{\sqrt{1-x^2}} = \left[\sin^{-1}x\right]_0^{\frac{1}{2}} = \sin^{-1}(1/2)-\sin^{-1}(0)=\frac{\pi}{6}.
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+	Samkvæmt setningunni hér að ofan fæst
+
+	.. math:: \int_0^{\frac{1}{2}} \frac{dx}{\sqrt{1-x^2}} = \left[\sin^{-1}x\right]_0^{\frac{1}{2}} = \sin^{-1}(1/2)-\sin^{-1}(0)=\frac{\pi}{6}.

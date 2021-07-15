@@ -314,15 +314,20 @@ Dæmi: Samskeyting
 
   Skoðum föllin :math:`f:\mathbb R \to \mathbb R, f(x) = 2x-1`
   og :math:`g:\mathbb R \to \mathbb R, g(x) = x^2`.
-  Þá er samskeytingin :math:`g\circ f`
+  Finnum :math:`g\circ f`.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Höfum að
 
   .. math::
-      g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
+      g \circ f = g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
 
   Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið:
 
   .. math::
-    f(g(x)) = f(x^2) = 2x^2-1
+    f \circ g = f(g(x)) = f(x^2) = 2x^2-1
 
   .. index::
       fall; átækt
@@ -392,7 +397,12 @@ Dæmi: Andhverfa
   :class: daemi
 
   Látum :math:`X=[0,2]`, :math:`Y=[0,4]` og :math:`f:X \to Y, f(x) = x^2`.
-  Þá er :math:`f` gagntæk vörpun og andhverfan er gefin með
+  Finnum andhverfu fallsins.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Þar sem :math:`f` gagntæk vörpun er andhverfan er gefin með
   :math:`f^{-1}(x) = \sqrt x`.
 
   .. image::  ./myndir/kafli01/04_andhverfa.png
@@ -765,7 +775,12 @@ Hægt er að spegla fall bæði um :math:`x`-ásinn og :math:`y`-ásinn.
 .. admonition:: Dæmi
   :class: daemi
 
-  Lítum á fallið :math:`f(x)=x^3+1`. Á myndinni má sjá speglun þess um :math:`x`-ásinn,
+  Lítum á fallið :math:`f(x)=x^3+1`. Finnum speglun þess um :math:`x`-ásinn og :math:`y`-ásinn.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Á myndinni má sjá speglun fallsins um :math:`x`-ásinn,
   :math:`g(x)=-(x^3+1)` í fjólubláu og speglun þess um :math:`y`-ásinn, :math:`h(x)=(-x)^3+1`
   í gulu.
 
@@ -1158,6 +1173,11 @@ Dæmi: Finna andhverfu
   :class: daemi
 
   Lítum á fallið :math:`f(x)=x^3+4`. Fallið er gagntækt svo það er andhverfanlegt.
+  Finnum andhverfu þess.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
   Skiptum :math:`f(x)` út fyrir :math:`y` og einangrum svo :math:`x`.
 
   .. math::
@@ -1182,9 +1202,11 @@ Dæmi: Graf andhverfu
 .. admonition:: Dæmi
   :class: daemi
 
-  Höldum áfram með dæmið hér að ofan og plottum graf fallsins :math:`f(x)=x^3+4`
-  og andhverfu þess, :math:`f^{-1}(x)=\sqrt[3]{x-4}`, auk línunnar :math:`y=x`,
-  sem er sýnd hér að neðan sem gul punktalína.
+  Höldum áfram með dæmið hér að ofan teiknum graf fallsins :math:`f(x)=x^3+4`
+  og andhverfu þess, :math:`f^{-1}(x)=\sqrt[3]{x-4}`, auk línunnar :math:`y=x`.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
   .. image:: ./myndir/kafli01/PMA_andhverfa.png
       :width: 75 %
@@ -1202,9 +1224,13 @@ Dæmi: Takmörkun skilgreiningarmengis
 .. admonition:: Dæmi
   :class: daemi
 
-  Ef við takmörkum skilgreiningarmengi fallsins :math:`f(x)=x^2` við
-  :math:`\mathbb{R} \cup \{0\}`, þ.e. jákvæðar rauntölur eða 0,
-  verður fallið eintækt og á sér þá andhverfuna :math:`\sqrt{x}`.
+  Takmörkum skilgreiningarmengi fallsins :math:`f(x)=x^2` við
+  :math:`\mathbb{R} \cup \{0\}`, þ.e. jákvæðar rauntölur eða 0. Finnum andhverfu þess.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Þar sem við þessa takmörkum verður fallið eintækt og á sér þá andhverfuna :math:`\sqrt{x}`.
 
   .. image:: ./myndir/kafli01/PMA_takmarka_skilgrmengi.png
       :width: 75 %
@@ -1243,6 +1269,16 @@ Dæmi: Andhverfa hornafalls
 
 .. admonition:: Dæmi
   :class: daemi
+
+  Leysum jöfnuna
+
+  .. math:: \cos(\theta)=\frac{1}{2}
+
+  með því að nota andhverfan kósínus.
+
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
   Til eru óendanlega mörk stefnuhorn :math:`\theta` sem uppfylla jöfnuna
 
@@ -1391,6 +1427,11 @@ skilgreinir stofn lograns :math:`\log_b(x)`. Almennt gildir fyrir
 
 .. admonition:: Dæmi
   :class: daemi
+
+  Reiknum :math:`\log_2(8)`.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
   Lítum á vísisfallið :math:`2^x` og samsvarandi logra :math:`\log_2(x)`. Þar sem
   :math:`2^3=8` þá er :math:`\log_2(8)=3`.
