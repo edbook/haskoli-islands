@@ -457,32 +457,30 @@ Fleygbogar hafa mismunandi lögun eftir formerkjum:
 	Til eru fleygbogar sem snúa á hlið.
 	Þeir hafa formið :math:`ay^2+by+c=x` .
 
-.. begin-toggle::
-	:label: Tengsl við eðlisfræði
+.. admonition:: Athugasemd: Tengsl við eðlisfræði
+	:class: athugasemd, dropdown
 
-Ljósgeisli sem lendir á speglandi yfirborði speglast af yfirborðinu til baka með sama horni og hann lenti með.
-Með öðrum orðum er *innfallshornið* jafnt *útfallshorninu*, :math:`\theta_1=\theta_2`.
+	Ljósgeisli sem lendir á speglandi yfirborði speglast af yfirborðinu til baka með sama horni og hann lenti með.
+	Með öðrum orðum er *innfallshornið* jafnt *útfallshorninu*, :math:`\theta_1=\theta_2`.
 
-.. figure:: ./myndir/rumfraedi/speglun.svg
-	:align: center
-	:width: 50%
+	.. figure:: ./myndir/rumfraedi/speglun.svg
+		:align: center
+		:width: 50%
 
-Ljósgeislar sem lenda á innra yfirborð fleygboga speglast líka, en þar sem yfirborðið er sveigt speglast þeir ekki allir á sama hátt.
-Það sem er merkilegast við fleygboga er að ljósið sem endurkastast fer allt einmitt í gegnum sama punkt! Sá punktur er kallaður :hover:`brennipunktur` .
+	Ljósgeislar sem lenda á innra yfirborð fleygboga speglast líka, en þar sem yfirborðið er sveigt speglast þeir ekki allir á sama hátt.
+	Það sem er merkilegast við fleygboga er að ljósið sem endurkastast fer allt einmitt í gegnum sama punkt! Sá punktur er kallaður :hover:`brennipunktur` .
 
-.. figure:: ./myndir/rumfraedi/parabolabrenni.svg
-	:align: center
-	:width: 50%
+	.. figure:: ./myndir/rumfraedi/parabolabrenni.svg
+		:align: center
+		:width: 50%
 
-.. figure:: ./myndir/rumfraedi/Satellite_dish.jpg
-	:align: center
-	:width: 50%
+	.. figure:: ./myndir/rumfraedi/Satellite_dish.jpg
+		:align: center
+		:width: 50%
 
-Þversnið þessa gervihnattardisks hefur lögun fleygboga.
-Móttakarinn er settur á stöng svo hann liggi í brennipunkti fleygbogans og merki (t.d. útvarpsbylgjur) sem falla á yfirborð disksins endurkastast í móttakarann.
-Merkið verður því skýrt og stöðugt.
-
-.. end-toggle::
+	Þversnið þessa gervihnattardisks hefur lögun fleygboga.
+	Móttakarinn er settur á stöng svo hann liggi í brennipunkti fleygbogans og merki (t.d. útvarpsbylgjur) sem falla á yfirborð disksins endurkastast í móttakarann.
+	Merkið verður því skýrt og stöðugt.
 
 Sporöskjur
 ~~~~~~~~~~
@@ -550,28 +548,26 @@ Ef :math:`a<b` þá er brennipunktarnir á :math:`y` -ás sporöskjunnar, í fja
 
 
 
-.. begin-toggle::
-	:label: Tengsl við eðlisfræði
+.. admonition:: Athugasemd: Tengsl við eðlisfræði
+	:class: athugasemd, dropdown
 
-Plánetur eru hnettir sem eru á fastri braut í kringum stjörnu (sól).
-Brautir pláneta eru sporöskjur (sporbaugar) þar sem stjarnan er í öðrum brennipunkti.
-Pláneturnar eru því ekki alltaf í fastri fjarlægð frá sólinni og fara hraðar ef þær eru nálægt henni.
+	Plánetur eru hnettir sem eru á fastri braut í kringum stjörnu (sól).
+	Brautir pláneta eru sporöskjur (sporbaugar) þar sem stjarnan er í öðrum brennipunkti.
+	Pláneturnar eru því ekki alltaf í fastri fjarlægð frá sólinni og fara hraðar ef þær eru nálægt henni.
 
-.. figure:: ./myndir/rumfraedi/Kepler-second-law.gif
-	:width: 50%
-	:align: center
+	.. figure:: ./myndir/rumfraedi/Kepler-second-law.gif
+		:width: 50%
+		:align: center
 
-Þýski stærðfræðingurinn og stjörnufræðingurinn `Johannes Kepler <https://en.wikipedia.org/wiki/Johannes_Kepler>`_ fylgdist með hreyfingum hnattanna og setti þessa uppgötvun fram í því sem við köllum nú *fyrsta lögmál Keplers*, eitt af þremur um hreyfingu himinhnatta.
+	Þýski stærðfræðingurinn og stjörnufræðingurinn `Johannes Kepler <https://en.wikipedia.org/wiki/Johannes_Kepler>`_ fylgdist með hreyfingum hnattanna og setti þessa uppgötvun fram í því sem við köllum nú *fyrsta lögmál Keplers*, eitt af þremur um hreyfingu himinhnatta.
 
-Brennipunktar sporaskja tengjast með þeim skemmtilega hætti að ljós sem kemur frá öðrum brennipunktinum og endurkastast af brún sporöskjunnar lendir alltaf í hinum brennipunktinum.
+	Brennipunktar sporaskja tengjast með þeim skemmtilega hætti að ljós sem kemur frá öðrum brennipunktinum og endurkastast af brún sporöskjunnar lendir alltaf í hinum brennipunktinum.
 
-Auk þess er, fyrir sérhvern punkt á sporbaugnum, summa fjarlægðanna í hvorn brennipunktinn fasti.
+	Auk þess er, fyrir sérhvern punkt á sporbaugnum, summa fjarlægðanna í hvorn brennipunktinn fasti.
 
-.. figure:: ./myndir/rumfraedi/sporbaugurbrenni.svg
-	:align: center
-	:width: 50%
-
-.. end-toggle::
+	.. figure:: ./myndir/rumfraedi/sporbaugurbrenni.svg
+		:align: center
+		:width: 50%
 
 Hringir
 ~~~~~~~
@@ -602,14 +598,11 @@ Aðfellurnar skerast í *miðjunni* :math:`(x_0,y_0)` og tölurnar :math:`a` og 
 
 Ef það er plús í lokin á jöfnunni lýsir :math:`a` skurðpunkti ferlanna við :math:`x` - ás en ef það er mínus lýsir :math:`b` skurðpunkti ferlanna við :math:`y` - ás.
 
-.. begin-toggle::
-	:label: Tengsl við eðlisfræði
+.. admonition:: Athugasemd: Tengsl við eðlisfræði
+	:class: athugasemd, dropdown
 
-Breiðbogar hafa ekki brennipunkt eins og fleygbogar og sporöskjur.
-Þeir koma engu að síður fram í kringum okkur, t.d. í `sólarúrum <https://en.wikipedia.org/wiki/Hyperbola#Sundials>`_ .
-
-.. end-toggle::
-
+	Breiðbogar hafa ekki brennipunkt eins og fleygbogar og sporöskjur.
+	Þeir koma engu að síður fram í kringum okkur, t.d. í `sólarúrum <https://en.wikipedia.org/wiki/Hyperbola#Sundials>`_ .
 
 Flatarmyndir
 ------------

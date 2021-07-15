@@ -44,7 +44,10 @@ Vigurinn frá punktinum :math:`A=(x_1,y_1)` til punktsins :math:`B=(x_2,y_2)` er
 .. admonition:: Dæmi
   :class: daemi
   
-  Reiknum vigurinn frá punktinum :math:`A=(-1,7)` til punktsins :math:`B=(5,2)` .
+  Reiknið vigurinn frá punktinum :math:`A=(-1,7)` til punktsins :math:`B=(5,2)` .
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
 	.. math::
 		\begin{aligned}
@@ -66,7 +69,10 @@ Tveir vigrar eru :hover:`samsíða` ef þeir hafa sömu hallatölu.
 .. admonition:: Dæmi
   :class: daemi
   
-  Finnum vigur sem er samsíða :math:`\overline{a}=(-1,6)` og hefur lengdina 9.
+  Finnið vigur sem er samsíða :math:`\overline{a}=(-1,6)` og hefur lengdina 9.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
   Hallatala :math:`\overline{a}` er :math:`h_{\bar{a}}=\frac{a_y}{a_x}=\frac{6}{-1}=-6` .
   Þá vitum við að vigurinn sem við leitum að, :math:`b` , uppfyllir það sama:
@@ -168,7 +174,10 @@ Summa tveggja vigra :math:`\overline{a} = (a_x,a_y)` og :math:`\overline{b} = (b
 .. admonition:: Dæmi
   :class: daemi
   
-  Leggjum saman vigrana :math:`\overline{a}=(4,3)` og :math:`\overline{b}=(1,3)` :
+  Leggjið saman vigrana :math:`\overline{a}=(4,3)` og :math:`\overline{b}=(1,3)` .
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
   .. math::
     \overline{a}+\overline{b}=(4,3) + (1,3) = (4+1, 3+3) = (5,6)
@@ -206,7 +215,7 @@ Um samlagningu vigra gilda eftirfarandi reglur:
 .. admonition:: Dæmi
   :class: daemi
   
-  Höfum þrjá punkta:
+  Gefnir eru þrír punktar:
 
   .. math::
     \begin{aligned}
@@ -215,7 +224,12 @@ Um samlagningu vigra gilda eftirfarandi reglur:
     C&=(x_3,y_3)=(3,-1)
     \end{aligned}
 
-  Reiknum vigrana :math:`\overline{AB}, \overline{AC} \text{ og } \overline{BC}` :
+  Reiknið vigrana :math:`\overline{AB}, \overline{AC} \text{ og } \overline{BC}` .
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Fáum:
 
   .. math::
     \begin{aligned}
@@ -261,12 +275,17 @@ Ef þættir vigranna eru þekktir er innfeldið:
 .. math::
   \overline{a} \cdot \overline{b} = a_x b_x + a_y b_y
 
+| 
+
 .. admonition:: Dæmi
   :class: daemi
 
-  Reiknum innfeldi vigranna :math:`\overline{a}=(7,8)` og :math:`\overline{b}=(-1,3)`
+  Reikið innfeldi vigranna :math:`\overline{a}=(7,8)` og :math:`\overline{b}=(-1,3)` .
 
-  **Lausn**
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Fáum: 
 
   .. math::
     \overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 7\cdot (-1)+ 8\cdot 3 = -7+24 =17
@@ -286,13 +305,14 @@ Ef vigrarnir eru gefnir með lengd og stefnuhorni er innfeldið:
 .. admonition:: Dæmi
   :class: daemi
 
-  Reiknum hornið á milli vigranna :math:`\overline{a}=(2,4)` og :math:`\overline{b}=(4,2)` :
+  Reiknið hornið :math:`\phi` á milli vigranna :math:`\overline{a}=(2,4)` og :math:`\overline{b}=(4,2)` :
 
   .. figure:: ./myndir/rumfraedi/innfeldi.svg
     :align: center
     :width: 60%
 
-  **Lausn**
+.. admonition:: Lausn
+  :class: daemi, dropdown
 
   Við vitum að :math:`\overline{a} \cdot \overline{b} = a b \cos{\phi}` , þar sem :math:`a` og :math:`b` eru lengdir vigranna.
   Lengdirnar eru:
@@ -358,7 +378,10 @@ Lengd krossfeldis :math:`\overline{a} \text{ og } \overline{b}` má reikna úr f
 
   Reiknum krossfeldi vigranna :math:`\overline{a}=(1,2,3)` og :math:`\overline{b}=(4,5,6)`.
 
-  **Lausn**
+.. admonition:: Lausn
+  :class: daemi, dropdown
+  
+  Fáum: 
 
   .. math::
     \begin{aligned}

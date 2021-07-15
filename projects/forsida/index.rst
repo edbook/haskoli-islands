@@ -37,6 +37,10 @@ Námskeið við HÍ
 Þessar bækur eru námsefni nokkurra námskeiða við Háskóla Íslands.
 
 .. button::
+  :text: STÆ105G: Hagnýt stærðfræðigreining
+  :link: https://edbook.hi.is/stae105g/
+
+.. button::
   :text: STÆ104G: Stærðfræðigreining I
   :link: https://edbook.hi.is/stae104g/
 

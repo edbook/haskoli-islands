@@ -148,11 +148,14 @@ Jafnstæð og oddstæð föll
 Skilgreining
 ~~~~~~~~~~~~
 
-Látum :math:`f: \mathbb{R} \to \mathbb{R}` vera fall.
+.. admonition:: Skilgreining
+	:class: skilgreining
+	
+	Látum :math:`f: \mathbb{R} \to \mathbb{R}` vera fall.
 
-Við segjum að :math:`f` sé :hover:`jafnstætt, jafnstæður` ef :math:`f(-x)=f(x)` fyrir öll :math:`x \in \mathbb{R}`.
+	Við segjum að :math:`f` sé :hover:`jafnstætt, jafnstæður` ef :math:`f(-x)=f(x)` fyrir öll :math:`x \in \mathbb{R}`.
 
-Við segjum að :math:`f` sé :hover:`oddstætt, oddstæður` ef :math:`f(-x)=-f(x)` fyrir öll :math:`x \in \mathbb{R}`.
+	Við segjum að :math:`f` sé :hover:`oddstætt, oddstæður` ef :math:`f(-x)=-f(x)` fyrir öll :math:`x \in \mathbb{R}`.
 
 
 Myndræn útskýring
@@ -202,34 +205,38 @@ Einhalla föll
 
 Skilgreining
 ~~~~~~~~~~~~
-Látum :math:`X` vera hlutmengi í rauntölunum og  :math:`\ f: X \to \mathbb{R}` vera fall.
 
-Ef um sérhver :math:`x_1,x_2 \in X` sem eru þannig að :math:`x_1<x_2` gildir
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
-	f(x_1) \leq f(x_2)
+	Látum :math:`X` vera hlutmengi í rauntölunum og  :math:`\ f: X \to \mathbb{R}` vera fall.
 
-þá er :math:`f` sagt vera :hover:`vaxandi` fall.
+	Ef um sérhver :math:`x_1,x_2 \in X` sem eru þannig að :math:`x_1<x_2` gildir
 
-Ef um sérhver :math:`x_1,x_2 \in X` sem eru þannig að :math:`x_1<x_2` gildir
+	.. math::
+		f(x_1) \leq f(x_2)
 
-.. math::
-	g(x_1) \geq g(x_2)
+	þá er :math:`f` sagt vera :hover:`vaxandi` fall.
 
-þá er :math:`g` sagt vera :hover:`minnkandi` fall.
+	Ef um sérhver :math:`x_1,x_2 \in X` sem eru þannig að :math:`x_1<x_2` gildir
+
+	.. math::
+		g(x_1) \geq g(x_2)
+
+	þá er :math:`g` sagt vera :hover:`minnkandi` fall.
+
+	Ef ójöfnurnar fyrir fallgildin í skilgreiningunum væru strangar væri :math:`f` sagt vera :hover:`stranglega vaxandi` og :math:`g` sagt vera :hover:`stranglega minnkandi` fall.
+
+
+	Fall sem er annaðhvort vaxandi eða minnkandi er sagt vera :hover:`einhalla`.
+
+	Fall sem er annaðhvort stranglega vaxandi eða stranglega minnkandi er sagt vera :hover:`stranglega einhalla`.
+
+Hér sjáum við dæmi um fall :math:`f` sem er vaxandi og fall :math:`g` sem er minnkandi.
 
 .. image:: ./myndir/foll/vaxmin.svg
 	:width: 45%
 	:align: center
-
-Hér sjáum við dæmi um fall :math:`f` sem er vaxandi og fall :math:`g` sem er minnkandi.
-
-Ef ójöfnurnar fyrir fallgildin í skilgreiningunum væru strangar væri :math:`f` sagt vera :hover:`stranglega vaxandi` og :math:`g` sagt vera :hover:`stranglega minnkandi` fall.
-
-
-Fall sem er annaðhvort vaxandi eða minnkandi er sagt vera :hover:`einhalla`.
-
-Fall sem er annaðhvort stranglega vaxandi eða stranglega minnkandi er sagt vera stranglega einhalla.
 
 .. admonition:: Athugasemd
 	:class: athugasemd
@@ -294,7 +301,11 @@ Við segjum að fall sé :hover:`lotubundið, lotubundinn` ef það í vissum sk
 
 Skilgreining
 ~~~~~~~~~~~~
-Fall :math:`f: \mathbb{R} \to \mathbb{R}` er sagt vera lotubundið með lotu :math:`a` ef :math:`a \in \mathbb{R}` og :math:`f(x+a)=f(x)` fyrir öll :math:`x \in \mathbb{R}`.
+
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Fall :math:`f: \mathbb{R} \to \mathbb{R}` er sagt vera lotubundið með lotu :math:`a` ef :math:`a \in \mathbb{R}` og :math:`f(x+a)=f(x)` fyrir öll :math:`x \in \mathbb{R}`.
 
 .. admonition:: Athugasemd
 	:class: athugasemd
@@ -326,17 +337,21 @@ Andhverfur falla
 
 Skilgreining
 ~~~~~~~~~~~~
-Látum :math:`A` og :math:`B` vera mengi og :math:`f: A \to B` vera :hover:`vörpun`. Ef til er vörpun :math:`g: B \to A` þannig að
 
-.. math::
-	f(g(b))=b \qquad \text{fyrir öll } b \in B
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-og
+	Látum :math:`A` og :math:`B` vera mengi og :math:`f: A \to B` vera :hover:`vörpun`. Ef til er vörpun :math:`g: B \to A` þannig að
 
-.. math::
-	g(f(a))=a \qquad \text{fyrir öll } a \in A
+	.. math::
+		f(g(b))=b \qquad \text{fyrir öll } b \in B
 
-þá kallast fallið :math:`g` :hover:`andhverfa vörpunarinnar, andhverf vörpun` :math:`f`. Andhverfa vörpunarinnar :math:`f` er oft táknuð með :math:`f^{-1}`.
+	og
+
+	.. math::
+		g(f(a))=a \qquad \text{fyrir öll } a \in A
+
+	þá kallast fallið :math:`g` :hover:`andhverfa vörpunarinnar, andhverf vörpun` :math:`f`. Andhverfa vörpunarinnar :math:`f` er oft táknuð með :math:`f^{-1}`.
 
 Þá er :math:`f: A \to B` og :math:`f^{-1}: B \to A`
 
@@ -460,10 +475,10 @@ Hér sjáum við einfalt dæmi um andhverfa vörpun, þar sem :math:`f` hefur :h
 	 .. math::
 		f^{-1}(x)=\frac{5+2x}{x-1}
 
-	.. admonition:: Athugasemd
-		:class: athugasemd
+.. admonition:: Athugasemd
+	:class: athugasemd
 
- 		Athugum að þegar skilgreiningarmengi falls er ekki tilgreint má gera ráð fyrir að það sé stærsta mögulega skilgreiningarmengið. Skilgreiningarmengi :math:`f` yrði þess vegna hér :math:`\mathbb{R}\setminus\{2\}`. Tveir eru dregnir frá menginu því annars yrði deilt með núlli. Skilgreiningarmengi andhverfufallsins :math:`f^{-1}` yrði :math:`\mathbb{R}\setminus\{1\}` út af sömu ástæðu.
+	Athugum að þegar skilgreiningarmengi falls er ekki tilgreint má gera ráð fyrir að það sé stærsta mögulega skilgreiningarmengið. Skilgreiningarmengi :math:`f` yrði þess vegna hér :math:`\mathbb{R}\setminus\{2\}`. Tveir eru dregnir frá menginu því annars yrði deilt með núlli. Skilgreiningarmengi andhverfufallsins :math:`f^{-1}` yrði :math:`\mathbb{R}\setminus\{1\}` út af sömu ástæðu.
 
 ---------------------
 

@@ -36,7 +36,11 @@ Margliður geta haft margar núllstöðvar, en fjöldi þeirra er takmarkaður e
 
 Regla
 ~~~~~
-Látum :math:`p` vera margliðu af stigi :math:`n`. Fjöldi mismunandi núllstöðva margliðunnar :math:`p` er þá í mesta lagi :math:`n`.
+
+.. admonition:: Setning
+	:class: setning
+
+	Látum :math:`p` vera margliðu af stigi :math:`n`. Fjöldi mismunandi núllstöðva margliðunnar :math:`p` er þá í mesta lagi :math:`n`.
 
 .. admonition:: Athugasemd
 	:class: Athugasemd
@@ -58,10 +62,10 @@ Látum :math:`p` vera margliðu af stigi :math:`n`. Fjöldi mismunandi núllstö
 
 	**2.** Margliðan :math:`(x-1)^2` hefur bara eina núllstöð, það er, jafnan :math:`(x-1)^2=0` hefur bara lausnina :math:`x=1`.
 
-	.. admonition:: Aðvörun
-		:class: advorun
-	
-		Í seinna tilvikinu tölum við oft um að margliðan hafi eina :hover:`tvöfalda núllstöð, tvöföld rót`.
+.. admonition:: Aðvörun
+	:class: advorun
+
+	Í seinna tilvikinu tölum við oft um að margliðan hafi eina :hover:`tvöfalda núllstöð, tvöföld rót`.
 
 
 Fyrsta og annars stigs margliður
@@ -113,29 +117,38 @@ Regla
 	.. math::
 		x_1=\frac{-b+\sqrt{b^2-4ac}}{2a} \qquad \text{og} \qquad x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}.
 
-.. admonition:: Dæmi
+.. admonition:: Dæmi 1
 	:class: daemi
 	
-	**1.** Finnum núllstöð margliðunnar :math:`p(x)=81x+121`.
+	Finnið núllstöð margliðunnar :math:`p(x)=81x+121`.
 
-	 Hún hefur eina núllstöð þar sem þetta er fyrsta stigs margliða. Leysum þá jöfnuna :math:`81x+121=0`. Fáum
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
-	 .. math::
+	Hún hefur eina núllstöð þar sem þetta er fyrsta stigs margliða. Leysum þá jöfnuna :math:`81x+121=0`. Fáum
+
+	.. math::
 	 	\begin{aligned}
 	 	81x &=-121 \\
 		x &=-121/81
 		\end{aligned}
 
-	 Því er núllstöðin :math:`x=-121/81` .
+	Því er núllstöðin :math:`x=-121/81` .
 
-	**2.** Finnum núllstöðvar margliðunnar :math:`p(x)=2x^2-21x+1`.
+.. admonition:: Dæmi 2
+	:class: daemi
+
+	Finnum núllstöðvar margliðunnar :math:`p(x)=2x^2-21x+1`.
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	 Leysum jöfnuna :math:`2x^2-21x+1=0`. Höfum
 
 	 .. math::
 	 	b^2-4ac=(-21)^2-4 \cdot 2 \cdot 1=441-8=433 >0
 
-	 Núllstöðvar eru því tvær: :math:`x_1=\frac{21+\sqrt{443}}{4}` og :math:`x_2=\frac{21-\sqrt{443}}{4}`.
+	Núllstöðvar eru því tvær: :math:`x_1=\frac{21+\sqrt{443}}{4}` og :math:`x_2=\frac{21-\sqrt{443}}{4}`.
 
 Deiling með afgangi - margliður
 -------------------------------
@@ -152,11 +165,13 @@ Látum :math:`p` og :math:`q` vera margliður.
 
 Hægt er að nota aðferð sem er mjög lík löngudeilingu með heiltölur til að deila margliðum með afgangi. Best er að sjá þessa aðferð með dæmum:
 
-.. admonition:: Dæmi
+.. admonition:: Dæmi 1
 	:class: daemi
 	
+	Deilið með margliðunni :math:`q(x)=x+4` í margliðuna :math:`p(x) =x^4 + 2x - 4` með afgangi.
 
-	**1.** Deilið með margliðunni :math:`q(x)=x+4` í margliðuna :math:`p(x) =x^4 + 2x - 4` með afgangi.
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	 Notum löngudeilingu: byrjum á því að margfalda :math:`q(x)=x+4` með :math:`s_1=x^3` til þess að fremsti liður :math:`q(x)` verði jafn fremsta lið :math:`p(x)` .
 	 Drögum :math:`x^3 \cdot q(x)=x^3\cdot(x+4) = x^4+4x^3 \quad` frá :math:`\quad p(x) =x^4 + 2x - 4` og fáum afganginn :math:`p_1(x)=-4x^3+2x-4` .
@@ -193,7 +208,13 @@ Hægt er að nota aðferð sem er mjög lík löngudeilingu með heiltölur til 
 	 .. math::
 		x^4 +2x -4 = (x+4)(x^3 - 4x^2 + 16x - 62) + 244
 
-	**2.** Deilið með margliðunni :math:`q(x)=x-3` í margliðuna :math:`p(x) =x^3 + 6x^2 -2x - 8` með afgangi.
+.. admonition:: Dæmi 2
+	:class: daemi
+
+	Deilið með margliðunni :math:`q(x)=x-3` í margliðuna :math:`p(x) =x^3 + 6x^2 -2x - 8` með afgangi.
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	 Með löngudeilingu fæst eftirfarandi
 
@@ -213,13 +234,17 @@ Ef afgangurinn er :math:`r=0` þá getum við notað löngudeilingu (margliðude
 
 Skilgreining
 ~~~~~~~~~~~~
-Látum :math:`p` og :math:`q` vera margliður. Ef að til er margliða :math:`h` þannig að :math:`p=h \cdot q` þá segjum við að margliðan :math:`q` gangi upp í margliðunni :math:`p`. Þá skrifum við líka :math:`\dfrac{p}{q}=h`.
 
-Að skrifa margliðu :math:`q` sem margfeldi margliða af lægra stigi kallast :hover:`þáttun` margliðu.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-Margliða :math:`q` er sögð :hover:`óþáttanleg, óþættanleiki` ef engin margliða af lægra stigi en :math:`q` gengur upp í :math:`q`.
+	Látum :math:`p` og :math:`q` vera margliður. Ef að til er margliða :math:`h` þannig að :math:`p=h \cdot q` þá segjum við að margliðan :math:`q` gangi upp í margliðunni :math:`p`. Þá skrifum við líka :math:`\dfrac{p}{q}=h`.
 
-Margliða er sögð vera fullþáttuð ef að búið er að skrifa hana sem margfeldi af óþáttanlegum margliðum.
+	Að skrifa margliðu :math:`q` sem margfeldi margliða af lægra stigi kallast :hover:`þáttun` margliðu.
+
+	Margliða :math:`q` er sögð :hover:`óþáttanleg, óþættanleiki` ef engin margliða af lægra stigi en :math:`q` gengur upp í :math:`q`.
+
+	Margliða er sögð vera fullþáttuð ef að búið er að skrifa hana sem margfeldi af óþáttanlegum margliðum.
 
 .. admonition:: Dæmi
 	:class: daemi
@@ -283,14 +308,15 @@ Regla
 			&=ax^2+bx+c
 		\end{aligned}
 
-
-
 .. admonition:: Dæmi
 	:class: daemi
 
-	Til þess að þátta margliður byrjum við á að finna allar núllstöðvar hennar og skrifum margliðuna síðan sem margfeldi óþáttanlegra margliða.
+	Fullþáttið :math:`p(x)=x^2+2x-5` með því að finna fyrst núllstöðvar margliðunnar og skrifa hana síðan sem margfeldi óþáttanlegra margliða.
 
-	Fullþáttum :math:`p(x)=x^2+2x-5`. Notum lausnarformúlu annars stigs jöfnu til að finna núllstöðvarnar. Hér er :math:`a=1`, :math:`b=2` og :math:`c=-5`. Fáum því
+.. admonition:: Lausn
+	:class: daemi, dropdown
+
+	Notum lausnarformúlu annars stigs jöfnu til að finna núllstöðvarnar. Hér er :math:`a=1`, :math:`b=2` og :math:`c=-5`. Fáum því
 
 	.. math::
 		\begin{aligned}
@@ -313,16 +339,19 @@ Regla
 	.. math::
 		p(x)=(x+1-\sqrt{6})(x+1+\sqrt{6})
 
-	.. admonition:: Athugasemd
-		:class: athugasemd
-	
-		Þetta segir okkur að margliðurnar :math:`x+(1-\sqrt{6})` og :math:`x+(1+\sqrt{6})` ganga báðar upp í margliðuna :math:`p(x)`.
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Þetta segir okkur að margliðurnar :math:`x+(1-\sqrt{6})` og :math:`x+(1+\sqrt{6})` ganga báðar upp í margliðuna :math:`p(x)`.
 
 .. _s.dæmi:
 .. admonition:: Dæmi
 	:class: daemi
 
-	Þáttum þriðja stigs margliðuna :math:`x^3+4x^2-x-4` .
+	Þáttið þriðja stigs margliðuna :math:`x^3+4x^2-x-4` .
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	Við þurfum að byrja á því að finna núllstöðvar margliðunnar, það er, þau :math:`x` þannig að :math:`x^3+4x^2-x-4=0`.
 	Þægilegt er að sjá að :math:`x=1` er núllstöð:
@@ -364,17 +393,24 @@ Engin almenn leið er til sem að finnur núllstöðvar margliða af háum stigu
 
 Regla
 ~~~~~
-Látum :math:`r(x)=a_nx^n+a_{n-1}x^{n-1}+ \dots + a_1x+a_0` vera margliðu af stigi :math:`n` þar sem stuðlarnir eru heilar tölur. Ef til er ræð tala :math:`p/q` sem er núllstöð margliðunnar :math:`r` þá gengur :math:`p` upp í :math:`a_0` og :math:`q` gengur upp í :math:`a_n`.
+
+.. admonition:: Setning
+	:class: setning
+
+	Látum :math:`r(x)=a_nx^n+a_{n-1}x^{n-1}+ \dots + a_1x+a_0` vera margliðu af stigi :math:`n` þar sem stuðlarnir eru heilar tölur. Ef til er ræð tala :math:`p/q` sem er núllstöð margliðunnar :math:`r` þá gengur :math:`p` upp í :math:`a_0` og :math:`q` gengur upp í :math:`a_n`.
 
 .. admonition:: Athugasemd
 	:class: athugasemd
 	
 	Þessi regla segir okkur að ef við viljum finna einhverja núllstöð margliðu, þá er ráðlagt að ,,giska'' fyrst á núllstöðvarnar af gerðinni :math:`\frac{p}{q}` þar sem :math:`p` gengur upp í :math:`a_0` og :math:`q` gengur upp í :math:`a_n`. Það getur verið sniðugt að byrja á því að athuga hvort :math:`1` eða :math:`-1` eru núllstöðvar því það er fljótgert.
 
-.. admonition:: Dæmi
+.. admonition:: Dæmi 1
 	:class: daemi
 	
-	**1.** Finnum einhverja núllstöð :math:`h(x)=15x^4-3x^3-10x^2+x-3`.
+	Finnið einhverja núllstöð margliðunnar :math:`h(x)=15x^4-3x^3-10x^2+x-3`.
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	 Góð regla er að byrja á því að athuga hvort :math:`1` eða :math:`-1` eru núllstöðvar. Fáum
 
@@ -387,50 +423,62 @@ Látum :math:`r(x)=a_nx^n+a_{n-1}x^{n-1}+ \dots + a_1x+a_0` vera margliðu af st
 
 	 svo :math:`x=1` er núllstöð.
 
-	**2.** Finnum einhverja núllstöð :math:`g(x)=10x^4+8x^3+8x^2+5x-5`.
+.. admonition:: Dæmi 2
+	:class: daemi
 
-	 Við sjáum auðveldlega að :math:`1` er ekki núllstöð.
+	Finnið einhverja núllstöð margliðunnar :math:`g(x)=10x^4+8x^3+8x^2+5x-5`.
 
-	 Munum að :math:`(-1)^n=-1` ef :math:`n` er oddatala og :math:`(-1)^n=1` ef :math:`n` er slétt tala.
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
-	 Fáum nú
+	Við sjáum að :math:`1` er ekki núllstöð.
 
-	 .. math::
-	 	\begin{aligned}
-	 		g(-1) &= 10 \cdot (-1)^4 + 8 \cdot (-1)^3 + 8 \cdot (-1)^2+5 \cdot (-1)-5\\
-			& =10-8+8-5-5\\
-			&=0
+	Munum að :math:`(-1)^n=-1` ef :math:`n` er oddatala og :math:`(-1)^n=1` ef :math:`n` er slétt tala.
+
+	Fáum nú
+
+	.. math::
+		\begin{aligned}
+			g(-1) &= 10 \cdot (-1)^4 + 8 \cdot (-1)^3 + 8 \cdot (-1)^2+5 \cdot (-1)-5\\
+		& =10-8+8-5-5\\
+		&=0
 		\end{aligned}
 
-	 svo að :math:`x=-1` er núllstöð.
+	svo að :math:`x=-1` er núllstöð.
 
-	**3.** Finnum einhverja núllstöð á margliðunni :math:`r(x)=2x^4-5x^3-2x^2-9`.
+.. admonition:: Dæmi 3
+	:class: daemi
 
-	 Sjáum með prófun að hvorki :math:`1` né :math:`-1` eru núllstöðvar. Beitum þá :math:`p/q`-aðferð.
+	Finnið einhverja núllstöð margliðunnar :math:`r(x)=2x^4-5x^3-2x^2-9`.
 
-	 Mengi allra talna sem gengur upp í tölunni :math:`2` er :math:`A=\{1,-1,2,-2\}`.
-	 Mengi allra talna sem gengur upp í tölunni :math:`9` er :math:`B=\{1,-1,3,-3,9,-9 \}`.
-	 :math:`\frac{p}{q}`-aðferð segir okkur að við eigum að giska á núllstöð af gerðinni :math:`\frac{p}{q}` þar sem :math:`p\in B` og :math:`q\in A`.
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
-	 Öll möguleg brot af slíkri gerð eru mjög mörg talsins, hins vegar má í raun sleppa öllum mínustölum í öðru hvoru menginu því annars tvíteljum við margar tölur. Sleppum mínustölunum í :math:`A` og þá eru möguleikarnir:
+	Sjáum með prófun að hvorki :math:`1` né :math:`-1` eru núllstöðvar. Beitum þá :math:`p/q`-aðferð.
 
-	 .. math::
-			\dfrac{1}{1}, \;
-			\dfrac{1}{2}, \;
-			\dfrac{-1}{1}, \;
-			\dfrac{-1}{2}, \;
-			\dfrac{3}{1},\;
-			\dfrac{3}{2}, \;
-			\dfrac{-3}{1}, \;
-			\dfrac{-3}{2}, \;
-			\dfrac{9}{1}, \;
-			\dfrac{9}{2}, \;
-			\dfrac{-9}{1},\;
-			\dfrac{-9}{2}\;
+	Mengi allra talna sem gengur upp í tölunni :math:`2` er :math:`A=\{1,-1,2,-2\}`.
+	Mengi allra talna sem gengur upp í tölunni :math:`9` er :math:`B=\{1,-1,3,-3,9,-9 \}`.
+	:math:`\frac{p}{q}`-aðferð segir okkur að við eigum að giska á núllstöð af gerðinni :math:`\frac{p}{q}` þar sem :math:`p\in B` og :math:`q\in A`.
 
-	 Stingum öllum þessum tölum inn í margliðuna :math:`r` (við erum búin að prófa :math:`1` og :math:`-1`):
+	Öll möguleg brot af slíkri gerð eru mjög mörg talsins, hins vegar má í raun sleppa öllum mínustölum í öðru hvoru menginu því annars tvíteljum við margar tölur. Sleppum mínustölunum í :math:`A` og þá eru möguleikarnir:
 
-	 .. math::
+	.. math::
+		\dfrac{1}{1}, \;
+		\dfrac{1}{2}, \;
+		\dfrac{-1}{1}, \;
+		\dfrac{-1}{2}, \;
+		\dfrac{3}{1},\;
+		\dfrac{3}{2}, \;
+		\dfrac{-3}{1}, \;
+		\dfrac{-3}{2}, \;
+		\dfrac{9}{1}, \;
+		\dfrac{9}{2}, \;
+		\dfrac{-9}{1},\;
+		\dfrac{-9}{2}\;
+
+	Stingum öllum þessum tölum inn í margliðuna :math:`r` (við erum búin að prófa :math:`1` og :math:`-1`):
+
+	.. math::
 		\begin{aligned}
 			r\left(\frac{1}{2}\right)& =-10 \\
 			r\left(\frac{-1}{2}\right)&=-\frac{35}{4}\\
@@ -444,7 +492,7 @@ Látum :math:`r(x)=a_nx^n+a_{n-1}x^{n-1}+ \dots + a_1x+a_0` vera margliðu af st
 			r\left(\frac{-9}{2}\right)&=\frac{4905}{4}
 		\end{aligned}
 
-	 Með þessari aðferð fundum við eina núllstöð, :math:`x=3`, því að :math:`r(3)=0`.
+	Með þessari aðferð fundum við eina núllstöð, :math:`x=3`, því að :math:`r(3)=0`.
 
 Pascal
 ------
