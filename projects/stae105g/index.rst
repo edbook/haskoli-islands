@@ -6,26 +6,9 @@
 Stærðfræðigreining I (STÆ104G), Háskóli Íslands
 ===============================================
 
-Höfundur efnis: Benedikt Steinar Magnússon, bsm@hi.is.
+Höfundar efnis: Valentina Giangreco M Puletti, vgmp@hi.is og Hulda Hvönn Kristinsdóttir, hhk6@hi.is.
 
-Síðast uppfært: 2020-08-21
-
-.. todo::
-    **Global**:
-    
-    - setja inn nauðsynlegar undirstöður fyrir hvern kafla
-   
-    - Láta nauðsynlega undirstöður vísa í námsefnið, stæ.is eða kennslubók
- 
-    - ensk heiti í sviga á eftir skilgreiningum?
-    
-    - liti á allar (sub(sub))sections?
-    
-    - Listi yfir setningar: *index:: setning; .....*
-    
-    - Formúlublað
-    
-    - táknalisti
+Síðast uppfært: 2021-07-15
 
 
 .. toctree::
@@ -41,7 +24,9 @@ Síðast uppfært: 2020-08-21
 
 * :ref:`genindex`
 
+.. epigraph::
 
-*Don't Panic.*
+  *One Ring to rule them all, One Ring to find them,*
+  *One Ring to bring them all, and in the darkness bind them.*
 
--- Douglas Adams, The Hitchhiker's Guide to the Galaxy
+  \- J.R.R. Tolkien, The Ring-inscription
