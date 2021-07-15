@@ -26,7 +26,7 @@ Síðast uppfært: 2021-07-15
 
 .. epigraph::
 
-  *One Ring to rule them all, One Ring to find them,**
-  **One Ring to bring them all, and in the darkness bind them.*
+  *One Ring to rule them all, One Ring to find them,*
+  *One Ring to bring them all, and in the darkness bind them.*
 
   \- J.R.R. Tolkien, The Ring-inscription
