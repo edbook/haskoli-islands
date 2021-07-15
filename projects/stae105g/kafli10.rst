@@ -394,7 +394,7 @@ Setning: Veldaraðir eru ótvírætt ákvarðaðar
 
 ------
 
-Taylor- og Maclaurin raðir
+Taylor- og Maclaurin-raðir
 ---------------------------
 
 Skilgreining: Taylor- og Maclaurin-röð

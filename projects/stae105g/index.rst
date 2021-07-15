@@ -1,10 +1,10 @@
-.. Stærðfræðigreining I documentation master file, created by
+.. Hagnýt stærðfræðigreining documentation master file, created by
    sphinx-quickstart on Thu May 21 20:43:00 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Stærðfræðigreining I (STÆ104G), Háskóli Íslands
-===============================================
+Hagnýt stærðfræðigreining (STÆ105G), Háskóli Íslands
+=====================================================
 
 Höfundar efnis: Valentina Giangreco M Puletti, vgmp@hi.is og Hulda Hvönn Kristinsdóttir, hhk6@hi.is.
 
