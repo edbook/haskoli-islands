@@ -460,10 +460,10 @@ Hér sjáum við einfalt dæmi um andhverfa vörpun, þar sem :math:`f` hefur :h
 	 .. math::
 		f^{-1}(x)=\frac{5+2x}{x-1}
 
-	.. admonition:: Athugasemd
-		:class: athugasemd
+.. admonition:: Athugasemd
+	:class: athugasemd
 
- 		Athugum að þegar skilgreiningarmengi falls er ekki tilgreint má gera ráð fyrir að það sé stærsta mögulega skilgreiningarmengið. Skilgreiningarmengi :math:`f` yrði þess vegna hér :math:`\mathbb{R}\setminus\{2\}`. Tveir eru dregnir frá menginu því annars yrði deilt með núlli. Skilgreiningarmengi andhverfufallsins :math:`f^{-1}` yrði :math:`\mathbb{R}\setminus\{1\}` út af sömu ástæðu.
+	Athugum að þegar skilgreiningarmengi falls er ekki tilgreint má gera ráð fyrir að það sé stærsta mögulega skilgreiningarmengið. Skilgreiningarmengi :math:`f` yrði þess vegna hér :math:`\mathbb{R}\setminus\{2\}`. Tveir eru dregnir frá menginu því annars yrði deilt með núlli. Skilgreiningarmengi andhverfufallsins :math:`f^{-1}` yrði :math:`\mathbb{R}\setminus\{1\}` út af sömu ástæðu.
 
 ---------------------
 
