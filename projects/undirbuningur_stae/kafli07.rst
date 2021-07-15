@@ -11,10 +11,14 @@ Hana köllum við :hover:`bogaeiningu, bogaeining` en hún er skilgreind á efti
 
 Skilgreining
 ~~~~~~~~~~~~
-Látum :math:`\alpha` vera horn. Köllum oddpunkt hornsins :math:`O`.
-Teiknum hring með :hover:`geisla, geisli` :math:`1` og miðju í punktinum :math:`(0,0)`.
-Armar hornsins skera hringinn í tveimur punktum :math:`A` og :math:`B`.
-Stærð hornsins :math:`\alpha` er þá jafnt lengd :hover:`bogans, bogi` á milli punktanna :math:`A` og :math:`B`.
+
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Látum :math:`\alpha` vera horn. Köllum oddpunkt hornsins :math:`O`.
+	Teiknum hring með :hover:`geisla, geisli` :math:`1` og miðju í punktinum :math:`(0,0)`.
+	Armar hornsins skera hringinn í tveimur punktum :math:`A` og :math:`B`.
+	Stærð hornsins :math:`\alpha` er þá jafnt lengd :hover:`bogans, bogi` á milli punktanna :math:`A` og :math:`B`.
 
 .. image:: ./myndir/horna/mynd1.png
 	:align: center
@@ -36,12 +40,13 @@ Bogaeiningar eru oft kallaðar radíanar og þær má tákna með :math:`\text{R
 .. math::
 	x \quad \text{Rad} = \left(x \cdot \frac{360}{2 \pi}\right)° \qquad og \qquad  x°=\left( x \cdot \frac{2 \pi}{360}\right) \text{Rad}
 
-.. admonition:: Dæmi
+.. admonition:: Dæmi 1
 	:class: daemi
 	
 	Skrifum :math:`\frac{\pi}{6}` í gráðum.
 
-	**Lausn**
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	Til þess finnum við hversu stór hluti hornið :math:`\frac{\pi}{6}` er úr hringnum, en heill hringur er :math:`2 \pi`.
 	Höfum :math:`\frac{\pi/6}{2 \pi}=\frac{1}{12}` , svo :math:`\frac{\pi}{6}` er :math:`\frac{1}{12}` úr hring.
@@ -52,12 +57,13 @@ Bogaeiningar eru oft kallaðar radíanar og þær má tákna með :math:`\text{R
 	.. math::
 	 	\frac{\pi}{6} \text{Rad} = \left(\frac{\pi}{6} \cdot \frac{360}{2 \pi}\right)° = 30°
 
-.. admonition:: Dæmi
+.. admonition:: Dæmi 2
 	:class: daemi
 	
 	Skrifum :math:`70^{\circ}` í bogaeiningum.
 
-	**Lausn**
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	Finnum hversu stórt hlutfall :math:`70^{\circ}` er úr heilum hring, :math:`70/360`, og margföldum með :math:`2 \pi`. Fáum:
 
@@ -445,6 +451,9 @@ Hér er graf :math:`\arcsin(x)`.
 	
 	Hverjar eru lausnir :math:`\sin(v)=\frac12`, þ.e. hvað er :math:`\sin^{-1} \left(\frac12 \right)` ?
 
+.. admonition:: Lausn
+	:class: daemi, dropdown
+
 	Hér er gildið :math:`\frac12 >0` og því leitum við að lausnum á fyrsta og öðrum fjórðungi einingahringsins, því þar er :math:`\sin(v)\geq 0`.
 
 	Skoðum einingarhringinn:
@@ -495,6 +504,9 @@ Hér er graf :math:`\arccos(v)`.
 	:class: daemi
 	
 	Hverjar eru lausnir :math:`\cos(x)=\frac{\sqrt{3}}{2}`, þ.e. hvað er :math:`\cos^{-1}\left( \frac{\sqrt{3}}{2} \right)`?
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	Hér er :math:`\frac{\sqrt{3}}{2} >0` svo við skoðum lausnir á fyrsta og fjórða fjórðungi einingahringsins, því þar er :math:`\cos(u)>0`.
 
@@ -556,6 +568,9 @@ Hér er graf :math:`\arctan(v)`.
 	:class: daemi
 	
 	Hverjar eru lausnir :math:`\tan(v)=-\sqrt{3}`, þ.e. hvað er :math:`\tan^{-1} (-\sqrt{3})` ?
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	Hér er :math:`-\sqrt{3} <0` svo við skoðum lausnir á öðrum og fjórða fjórðungi einingahringsins því þar er :math:`\tan(u)<0`.
 

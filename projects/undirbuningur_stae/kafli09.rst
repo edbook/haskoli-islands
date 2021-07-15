@@ -95,9 +95,10 @@ Reiknum andhverfuna:
 Eintæk og átæk föll
 -------------------
 
-Skoðum föll :math:`f: X \to Y`.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Mengið :math:`X` kallast :hover:`formengi` (eða skilgreiningarmengi) fallsins og mengið :math:`Y` :hover:`bakmengi` (eða myndmengi eða varpmengi) þess.
+	Látum :math:`f: X \to Y` vera gefið fall. Mengið :math:`X` kallast :hover:`formengi` (eða skilgreiningarmengi) fallsins og mengið :math:`Y` :hover:`bakmengi` (eða myndmengi eða varpmengi) þess.
 
 Í formengi falls :math:`y=f(x)` eru þær tölur sem við getum sett inn í fallið (:math:`x` -in) en í bakmenginu eru þær tölur sem geta komið út (:math:`y` -in).
 
@@ -117,7 +118,11 @@ Ef þessi jafna hefur lausn fyrir öll stökin í bakmenginu þá segjum við a�
 
 Skilgreining
 ~~~~~~~~~~~~
-Fall :math:`f: X \to Y` er sagt vera átækt ef fyrir sérhvert :math:`y \in Y` er til :math:`x \in X` þannig að :math:`f(x)=y`.
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+	Fall :math:`f: X \to Y` er sagt vera átækt ef fyrir sérhvert :math:`y \in Y` er til :math:`x \in X` þannig að :math:`f(x)=y`.
 
 --------------------------------------------------------
 
@@ -278,7 +283,12 @@ Skilgreining
 	Látum :math:`f:\mathbb{R} \to \mathbb{R}` vera gefið með :math:`f(x)=x^2+x`
 	og :math:`g:\mathbb{R} \to \mathbb{R}` vera gefið með :math:`g(x)=x+3`
 
-	Finnum :math:`f\circ g` og :math:`g\circ f`. Höfum
+	Finnið :math:`f\circ g` og :math:`g\circ f`. 
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+	Höfum
 
 	.. math::
 		\begin{aligned}
@@ -306,12 +316,16 @@ Nokkur mikilvæg föll
 
 Vísisföll
 ~~~~~~~~~
-:hover:`Vísisfall, veldisfall` er fall :math:`f : \mathbb{R} \to \mathbb{R}` sem skrifa má með formúlu af gerðinni
 
-.. math::
-	f(x)=a^x
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-þar sem :math:`a \geq 0` er rauntala.
+	:hover:`Vísisfall, veldisfall` er fall :math:`f : \mathbb{R} \to \mathbb{R}` sem skrifa má með formúlu af gerðinni
+
+	.. math::
+		f(x)=a^x
+
+	þar sem :math:`a \geq 0` er rauntala.
 
 Dæmi um vísisfall er :math:`f(x)=2^x`. Þá er :math:`f(1)=2`, :math:`f(2)=4` og :math:`f(3)=8` og :math:`f(4)=16` o.s.fr.v.
 
@@ -324,15 +338,19 @@ Graf þess má sjá hér að neðan.
 
 Lograr
 ~~~~~~
-Látum :math:`a` vera jákvæða rauntölu og :math:`f: \mathbb{R} \to \mathbb{R}_+` vera vísisfall gefið með
 
-.. math::
-	f(x)=a^x.
+.. admonition:: Skilgreining
+  :class: skilgreining
 
-Þetta fall á sér andhverfu sem við köllum :math:`a`- :hover:`logrann, logri` og er táknaður
+	Látum :math:`a` vera jákvæða rauntölu og :math:`f: \mathbb{R} \to \mathbb{R}_+` vera vísisfall gefið með
 
-.. math::
-	\log_a.
+	.. math::
+		f(x)=a^x.
+
+	Þetta fall á sér andhverfu sem við köllum :math:`a`- :hover:`logrann, logri` og er táknaður
+
+	.. math::
+		\log_a.
 
 Samkvæmt skilgreiningu á andhverfu er því :math:`a`- :hover:`logrinn, logri`  fallið sem uppfyllir:
 
@@ -344,26 +362,45 @@ og
 .. math::
 	a^{\log_a(x)}=x \qquad \text{fyrir öll } x \in \mathbb{R}_+.
 
+| 
+
 .. admonition:: Athugasemd
   :class: athugasemd
 
 	Óformlega getum við hugsað um töluna :math:`\log_a(x)` þannig: "Í hvaða veldi þarf að setja :math:`a` svo að útkoman verði :math:`x`?"
 
-.. admonition:: Dæmi
-  :class: daemi
+.. admonition:: Dæmi 1
+   :class: daemi
 
-	**1.** Reiknum :math:`\log_2(8)`. Í töluðu máli er spurningin þessi:
+	 Reiknið :math:`\log_2(8)`. 
+
+.. admonition:: Lausn
+   :class: daemi, dropdown
+
+	 Í töluðu máli er spurningin þessi:
 
 	 "Í hvaða veldi þarf að setja tvo svo að útkoman verði átta?"
 
 	 Auðvelt er að reikna að :math:`2^3=8`, svarið er því :math:`3` og við skrifum
 	 :math:`\log_2(8)=3`
 
-	**2.** Reiknum :math:`\log_3(81)`.
+.. admonition:: Dæmi 2
+   :class: daemi
+
+	 Reiknið :math:`\log_3(81)`.
+
+.. admonition:: Lausn
+   :class: daemi, dropdown
 
 	 Auðvelt er að staðfesta að :math:`3^4=81`, svo :math:`\log_3(81)=4`
 
-	**3.** Reiknum :math:`\log_9(1)`.
+.. admonition:: Dæmi 3
+   :class: daemi
+
+		Reiknið :math:`\log_9(1)`.
+
+.. admonition:: Lausn
+   :class: daemi, dropdown
 
 	 Athugum að um sérhverja tölu :math:`a` gildir :math:`a^0=1`, sér í lagi er :math:`9^0=1` svo :math:`\log_9(1)=0`.
 
