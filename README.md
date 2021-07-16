@@ -8,9 +8,6 @@ This is a template for a web-based textbook/lecture notes for the University of 
 ## Install with Poetry
 See [Poetry docs](https://python-poetry.org/docs/#installation) for recommended install method.
 
-
-Run the following after Poetry has been installed, which will create a virtualenv and install all dependencies and custom Sphinx extensions. It also comes with a custom cli tool `hicli` to do all kinds of boring chores. See `hicli --help` for docs or [the hicli README](cli/README.md)
-
 ```sh
 poetry shell
 poetry install
