@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_namespace_packages
+from setuptools import setup, find_packages
 
 long_desc = """
 TODO: write description
@@ -16,9 +16,8 @@ setup(
     description="Unknow",
     author="Unknow",
     author_email="Unknow",
-    # packages=find_packages(),
+    packages=find_packages(),
     include_package_data=True,
     install_requires=requires,
-    packages=find_namespace_packages(include=["custom_button.*"]),
     namespace_packages=["custom_button"],
 )

@@ -9,32 +9,16 @@ This is a template for a web-based textbook/lecture notes for the University of 
 See [Poetry docs](https://python-poetry.org/docs/#installation) for recommended install method.
 
 
-Run the following after Poetry has been installed, which will create a virtualenv and install all dependencies and custom Sphinx extensions. It also comes with a custom cli tool `hicli` to do all kinds of boring chores. See `hicli --help` for docs or [the hicli README](cli/README.md)
-
 ```sh
 poetry shell
 poetry install
 ```
 
 ## Run development server
-Run a dev server for local development. This will open a tab in your browser at http://localhost:8000 which will update each time you you save a document in the [source](docs/source) directory.
+Run a dev server for local development. This will open a tab in your browser at http://localhost:8000 which will update each time you you save a document in the project being worked on in the [source](src/projects) directory. The build ends up in the `_build_ directory under the project.
 
-You can pass `sphinx` arguments as-is like so:
-```sh
--b=builder, -a, -E, -d=path, -j=N, -c=path, -C, -D=setting=value, -t=tag, -A=name=value, -n, -v, -q, -Q, -w=file, -W, -T, -N, -P
-```
-
-> 🛈 By using the `dirhtml` builder instead of `html` will build a single directory per document. Makes for prettier URLs (no .html) if served from a webserver. See [builder options](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#options)
-
-```sh
-hicli autobuild --open-browser -b=dirhtml
-```
-
-## Build the project
-> 🛈 Building the project is not needed if you are using the `autobuild` command. Sphinx arguments will also be respected.
-
-```sh
-hicli build -b=dirhtml
+```bash
+make autobuild project=undirbuningur_stae
 ```
 
 ## Contribute

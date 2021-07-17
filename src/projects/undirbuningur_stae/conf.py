@@ -61,7 +61,7 @@ extensions = [
     # on mouse-over. See README in hoverrole folder.
     "scrolldepth.scrolldepth",
     "panoptoextension.panopto",
-    "custom_button.custom_button.button",
+    "custom_button.custom_button",
 ]
 
 numfig = True
@@ -170,7 +170,7 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = "sphinx_rtd_theme"
-#html_theme_path = ["_themes"]
+# html_theme_path = ["_themes"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -361,4 +361,4 @@ texinfo_documents = [
 
 # css fyrir Dæmi, Athugasemd, Setning, o.sv.fr...
 def setup(app):
-    app.add_css_file('custom_admonitions.css')
+    app.add_css_file("custom_admonitions.css")
