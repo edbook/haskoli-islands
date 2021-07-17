@@ -3,11 +3,6 @@ name = "undirbuningur_stae"
 version = "0.1.0"
 description = ""
 authors = ["Benedikt Magnússon og fleiri"]
-packages = [
-    { include = "extensions" },
-    { include = "projects" },
-    { include = "hicli" }
-]
 
 
 [tool.poetry.dependencies]
@@ -19,15 +14,16 @@ Sphinx= "^3.2.1"
 sphinx-rtd-theme = "^0.5.0"
 sphinxcontrib-katex = "^0.6.1"
 paramiko= "^2.7.2"
-panoptoextension = {path = "extensions/panoptoextension", develop = true}
-sagecell = {path = "extensions/sagecell-extension", develop = true}
-ggbextension = {path = "extensions/ggbextension", develop = true}
-scrolldepthextension = {path = "extensions/SphinxScrolldepth", develop = true}
-hoverroleextension = {path = "extensions/hoverrole", develop = true}
-toggleblock = {path = "extensions/toggleblock-extension", develop = true}
-custom-button = {path = "extensions/custom-button", develop = true}
-datacamp = {path = "extensions/datacamp-extension", develop = true}
-google-analytics = {path = "extensions/google-analytics", develop = true}
+
+panoptoextension = {path = "src/extensions/panoptoextension", develop = true}
+sagecell = {path = "src/extensions/sagecell-extension", develop = true}
+ggbextension = {path = "src/extensions/ggbextension", develop = true}
+scrolldepthextension = {path = "src/extensions/SphinxScrolldepth", develop = true}
+hoverroleextension = {path = "src/extensions/hoverrole", develop = true}
+toggleblock = {path = "src/extensions/toggleblock-extension", develop = true}
+custom-button = {path = "src/extensions/custom-button", develop = true}
+datacamp = {path = "src/extensions/datacamp-extension", develop = true}
+google-analytics = {path = "src/extensions/google-analytics", develop = true}
 sphinx-togglebutton = "^0.2.3"
 
 [tool.poetry.dev-dependencies]
