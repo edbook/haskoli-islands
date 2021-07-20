@@ -53,6 +53,7 @@ extensions = [
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
     'toggleblock.toggleBlock',
+    'sphinx_togglebutton',
 
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
@@ -370,3 +371,7 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# css fyrir Dæmi, Athugasemd, Setning, o.sv.fr...
+def setup(app):
+    app.add_css_file('custom_admonitions.css')
