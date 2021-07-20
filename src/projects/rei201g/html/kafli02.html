@@ -1,0 +1,1696 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. NumPy, Pandas og Matplotlib &mdash; Stærðfræði og reiknifræði 2019</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+  a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+  a.tooltip strong {line-height:30px;}
+  a.tooltip:hover {text-decoration:none;} 
+  a.tooltip span {
+      z-index:10;display:none; padding:14px 20px;
+      margin-top:-30px; margin-left:12px;
+      width:310px; line-height:16px;
+  }
+  a.tooltip:hover span{
+      display:inline; position:absolute; color:#111;
+      border:1px solid #DCA; background:#fffAF0;}
+  .callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+  
+  /*CSS3*/
+  a.tooltip span
+  {
+      border-radius:4px;
+      box-shadow: 5px 5px 8px #CCC;
+  }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+  .sagecell .CodeMirror-scroll {
+      overflow-y: hidden;
+      overflow-x: auto;
+  }
+  .sagecell .CodeMirror {
+      height: auto;
+  }
+
+  /* - Begin equation reference style - */
+  h6.eqno{
+      display: inline-block;
+      padding-left: 10px;
+  }
+
+  h6 .headerlink{
+      display: inline-block !important;
+  }
+  h6 .headerlink:after{
+      visibility: hidden !important;
+  }
+  h6 .headerlink:hover:after{
+      visibility: visible !important;
+  }
+  .eqno:hover > .headerlink:after{
+      visibility: visible !important;
+  }
+
+  table > caption > .headerlink{
+      visibility: hidden !important;
+  }
+
+  table > caption > .headerlink{
+      visibility: hidden !important;
+  }
+  /* - End - */
+
+</style>
+<style type="text/css">
+  /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+  /*     font-size: 15px !important; */
+  /* } */
+  /* div[class^='highlight'] pre {font-size:15px} */
+  div.code-block-caption{margin-bottom: 4px}
+</style>
+
+        <link rel="index" title="Atriðaskrá"
+              href="genindex.html"/>
+        <link rel="search" title="Leit" href="search.html"/>
+    <link rel="top" title="Stærðfræði og reiknifræði 2019" href="index.html"/>
+        <link rel="next" title="3. Föll af mörgum breytistærðum" href="kafli03.html"/>
+        <link rel="prev" title="1. Forritun í Python" href="kafli01.html"/>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Stærðfræði og reiknifræði
+        
+
+        
+          
+          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Leit" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Forritun í Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#inngangur-um-python">1.1. Inngangur: Um Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#einfalt-og-aulaert-mal">1.1.1. Einfalt og auðlært mál</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fallasafn-og-pakkar">1.1.2. Fallasafn og pakkar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utbreisla">1.1.3. Útbreiðsla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#framkvaemd-forrita">1.1.4. Framkvæmd forrita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gildi-eru-togu-en-breytur-ekki">1.1.5. Gildi eru töguð en breytur ekki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#python-leibeiningar-a-netinu">1.1.6. Python-leiðbeiningar á netinu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#daemi-um-python-forrit">1.2. Dæmi um Python forrit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#collatz-runur">1.2.1. Collatz-runur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#forrit-fyrir-collatz-runur">1.2.2. Forrit fyrir Collatz-runur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#python-atrii-sem-koma-fyrir-i-forritinu-collatz">1.2.3. Python atriði sem koma fyrir í forritinu Collatz</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#umhverfi-fyrir-python-jupyterlab">1.3. Umhverfi fyrir Python: <em>JupyterLab</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#uppsetning-python-og-jupyterlab">1.3.1. Uppsetning Python og JupyterLab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#keyrsla-jupyterlab">1.3.2. Keyrsla JupyterLab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-vinnubaekur">1.3.3. Jupyter vinnubækur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-skipanir">1.3.4. Jupyter skipanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#vistun-vinnuboka-a-pdf-snii">1.3.5. Vistun vinnubóka á PDF-sniði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#markdown-og-latex">1.3.6. Markdown og Latex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-leibeiningar-a-netinu">1.3.7. Jupyter-leiðbeiningar á netinu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#grunnatrii-python">1.4. Grunnatriði Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#breytur-og-tog">1.4.1. Breytur og tög</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-og-virkjar">1.4.2. Aðgerðir og virkjar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gildisgjof">1.4.3. Gildisgjöf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utprentun-og-innlestur">1.4.4. Útprentun og innlestur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#f-strengir">1.4.5. F-strengir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-notanda-ny-foll">1.4.6. Föll notanda (ný föll)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mikilvaegustu-innbygg-foll">1.4.7. Mikilvægustu innbyggð föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fallbreytur">1.4.8. Fallbreytur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#styriskipanir">1.4.9. Stýriskipanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilyrt-gildi">1.4.10. Skilyrt gildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#sofn-containers-eitt-nafn-en-morg-gildi">1.5. Söfn (<em>containers</em>): Eitt nafn en mörg gildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#strengir">1.5.1. Strengir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#listar">1.5.2. Listar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#samstaeur">1.5.3. Samstæður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mengi">1.5.4. Mengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#itrarar">1.5.5. Ítrarar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#helstu-agerir-fyrir-sofn">1.6. Helstu aðgerðir fyrir söfn</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-til-a-bua-til-sofn-ea-breyta-tegund-safns">1.6.1. Föll til að búa til söfn eða breyta tegund safns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-sem-duga-a-oll-sofn">1.6.2. Aðgerðir sem duga á öll söfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-sem-duga-a-sofn-af-tolum-ea-rokgildum">1.6.3. Föll sem duga á söfn af tölum eða rökgildum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-sem-duga-a-allar-runur">1.6.4. Aðgerðir sem duga á allar runur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-sem-duga-bara-a-lista">1.6.5. Föll sem duga bara á lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#for-lykkjur-og-sofn">1.6.6. For-lykkjur og söfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#yfirgrip-comprehension">1.6.7. Yfirgrip (<em>comprehension</em>)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#meira-um-skilgreiningu-falla">1.7. Meira um skilgreiningu falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#valkvaeir-stikar">1.7.1. Valkvæðir stikar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#lykilorsvifong">1.7.2. Lykilorðsviðföng</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-me-breytilegan-stikafjolda">1.7.3. Föll með breytilegan stikafjölda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-me-margar-utkomur">1.7.4. Föll með margar útkomur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#aalforrit-og-einingar">1.8. Aðalforrit og einingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skra-me-aalforriti">1.8.1. Skrá með aðalforriti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#einingar-skrifaar-af-notanda">1.8.2. Einingar skrifaðar af notanda</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. NumPy, Pandas og Matplotlib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">2.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hva-er-reiknifraei">2.1.1. Hvað er reiknifræði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-pakkar-fyrir-visindalega-reikninga">2.1.2. Python-pakkar fyrir vísindalega reikninga</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vigrar-og-fylki-i-staerfraei">2.1.3. Vigrar og fylki í stærðfræði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#um-ori-fylki">2.1.4. Um orðið Fylki</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#numpy-pakkinn">2.2. NumPy pakkinn</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kynning-a-numpy">2.2.1. Kynning á NumPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#leibeiningar-um-numpy-a-netinu">2.2.2. Leiðbeiningar um NumPy á netinu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hvernig-ma-bua-til-numpy-fylki-og-visa-stok-eirra">2.2.3. Hvernig má búa til NumPy fylki og vísa stök þeirra?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eiginleikar-vigra-og-fylkja">2.2.4. Eiginleikar vigra og fylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#foll-og-aferir-i-numpy">2.2.5. Föll og aðferðir í NumPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innlestur-og-utskrift">2.2.6. Innlestur og útskrift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fleiri-foll">2.2.7. Fleiri föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bylting-og-afpokkun">2.2.8. Bylting og afpökkun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rokvisun">2.2.9. Rökvísun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innfeldi">2.2.10. Innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlutvigrar-og-fylki-linur-og-dalkar">2.2.11. Hlutvigrar og -fylki, línur og dálkar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pandas-fyrir-gagnavinnslu">2.3. Pandas fyrir gagnavinnslu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pandas-gogn">2.3.1. Pandas gögn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#helstu-pandas-skipanir">2.3.2. Helstu Pandas-skipanir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#teikning-me-matplotlib">2.4. Teikning með Matplotlib</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.4.1. Inngangur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einfaldar-myndir">2.4.2. Einfaldar myndir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pandas-og-teikningar">2.4.3. Pandas og teikningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toflur-yfir-matplotlib-skipanir">2.4.4. Töflur yfir Matplotlib-skipanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rju-daemi-um-teikningar">2.4.5. Þrjú dæmi um teikningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#teikning-af-grofum-falla">2.4.6. Teikning af gröfum falla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#teikning-punktasafns-og-jafna-bestu-linu">2.4.7. Teikning punktasafns og jafna bestu línu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Föll af mörgum breytistærðum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#inngangur">3.1. Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#foll-af-tveimur-breytistaerum-ea-tvivi-foll">3.2. Föll af tveimur breytistærðum eða tvívíð föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#staerfraeileg-skilgreining">3.2.1. Stærðfræðileg skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#grof-og-myndir-af-tvivium-follum">3.2.2. Gröf og myndir af tvívíðum föllum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#teikning-tvivira-falla-me-python">3.3. Teikning tvívíðra falla með Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearlinur-me-skipuninni-contour">3.3.1. Hæðarlínur með skipuninni <em>contour</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-haearlinuteikningu">3.3.2. Dæmi um hæðarlínuteikningu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearsvaei-me-skipuninni-contourf">3.3.3. Hæðarsvæði með skipuninni <em>contourf</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#netmyndir-me-plot-surface">3.3.4. Netmyndir með <em>plot_surface</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upplystar-myndir-me-plot-surface">3.3.5. Upplýstar myndir með <em>plot_surface</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#hlutafleiur">3.4. Hlutafleiður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-hlutafleiu">3.4.1. Skilgreining hlutafleiðu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#arir-rithaettir-fyrir-hlutafleiu">3.4.2. Aðrir rithættir fyrir hlutafleiðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#stigull">3.5. Stigull</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rithattur-og-oranotkun">3.5.1. Ritháttur og orðanotkun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tvivi-kejuregla-og-tengsl-stiguls-og-hlutafleia">3.5.2. Tvívíð keðjuregla og tengsl stiguls og hlutafleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stefnuafleia">3.5.3. Stefnuafleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#teikning-stigla-i-python">3.5.4. Teikning stigla í Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#utgildi-tvivira-falla">3.6. Útgildi tvívíðra falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#hagildi-og-laggildi">3.6.1. Hágildi og lággildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#utgildi-fundin-me-vi-a-leysa-jofnur">3.6.2. Útgildi fundin með því að leysa jöfnur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margvi-foll">3.7. Margvíð föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-og-daemi">3.7.1. Skilgreining og dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#vifang-skrifa-sem-vigur">3.7.2. Viðfang skrifað sem vigur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margviir-stiglar">3.7.3. Margvíðir stiglar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Línuleg algebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#vigrar-og-fylki">4.1. Vigrar og fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-vigurs">4.1.1. Skilgreining vigurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-fylkis">4.1.2. Skilgreining fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#einfaldar-vigur-og-fylkjaagerir">4.1.3. Einfaldar vigur- og fylkjaaðgerðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-vigur-og-fylkjaagerir">4.1.4. Reglur um vigur- og fylkjaaðgerðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#innfeldi">4.1.5. Innfeldi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#hornalina-fylkis-og-bylting">4.1.6. Hornalína fylkis og bylting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#serstok-fylki">4.1.7. Sérstök fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#margfoldun-fylkis-og-vigurs">4.1.8. Margföldun fylkis og vigurs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#linuleg-foll-og-innfeldi">4.2. Línuleg föll og innfeldi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-a-linulegu-falli">4.2.1. Skilgreining á línulegu falli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-linuleg-foll">4.2.2. Reglur um línuleg föll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#taylor-nalgun">4.3. Taylor-nálgun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stigull-af-margviu-falli">4.3.1. Stigull af margvíðu falli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-taylors-i-einni-og-fleiri-viddum">4.3.2. Setning Taylors í einni og fleiri víddum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#norm-fjarlaegir-og-horn">4.4. Norm, fjarlægðir og horn</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-norms">4.4.1. Skilgreining norms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-norm">4.4.2. Reglur um norm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjarlaegir">4.4.3. Fjarlægðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#ortini-og-fjarlaeg-milli-vigra">4.4.4. Orðtíðni og fjarlægð milli vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#horn-milli-vigra">4.4.5. Horn milli vigra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#tolfraeileg-foll-af-vigrum">4.5. Tölfræðileg föll af vigrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#mealtal-dreifni-og-staalfravik">4.5.1. Meðaltal, dreifni og staðalfrávik</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stolun">4.5.2. Stöðlun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fylgni">4.5.3. Fylgni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#grunnar-og-linulega-hair-og-ohair-vigrar">4.6. Grunnar og línulega háðir og óháðir vigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-hair-vigrar">4.6.1. Línulega háðir vigrar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-ohair-vigrar">4.6.2. Línulega óháðir vigrar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#grunnar">4.6.3. Grunnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#venjulegir-einingavigrar-og-grunnar-eirra">4.6.4. Venjulegir einingavigrar og grunnar þeirra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#verstalair-grunnar">4.6.5. Þverstaðlaðir grunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lausn-jofnuhneppa">4.7. Lausn jöfnuhneppa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fylkjaframsetning-linulegra-jofnuhneppa">4.7.1. Fylkjaframsetning línulegra jöfnuhneppa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulegar-samantektir-jofnuhneppi-og-tilvist-lausna">4.7.2. Línulegar samantektir, jöfnuhneppi og tilvist lausna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-hair-vigrar-og-python">4.7.3. Línulega háðir vigrar og Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#fylkjaalgebra">4.8. Fylkjaalgebra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#margfoldun-fylkja">4.8.1. Margföldun fylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#nullfylki-og-einingafylki">4.8.2. Núllfylki og einingafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-fylkjamargfoldun">4.8.3. Reglur um fylkjamargföldun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverf-fylki">4.8.4. Andhverf fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-byltingu-og-andhverfu">4.8.5. Reglur um byltingu og andhverfu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#linulegar-varpanir-og-fylkjamargfoldun">4.9. Línulegar varpanir og fylkjamargföldun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-a-linulegri-vorpun">4.9.1. Skilgreining á línulegri vörpun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulegar-varpanir-og-margfoldun-fylkja-og-vigra">4.9.2. Línulegar varpanir og margföldun fylkja og vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samsettar-linulegar-varpanir-og-margfoldun-fylkja">4.9.3. Samsettar línulegar varpanir og margföldun fylkja</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Dæmi um hagnýtingu línulegrar algebru</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skipting-i-hopa-ea-flokkun">5.1. Skipting í hópa eða flokkun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-flokkun-tvivira-vigra">5.1.1. Dæmi um flokkun tvívíðra vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-hagnytingu-flokkunar">5.1.2. Dæmi um hagnýtingu flokkunar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#rithattur-fyrir-flokkun">5.1.3. Ritháttur fyrir flokkun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mipunktar-hopa">5.1.4. Miðpunktar hópa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#besta-hopaskipting">5.1.5. Besta hópaskipting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#k-means-reikniriti">5.1.6. <em>k-means</em> reikniritið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-nokkrar-k-means-itrekanir">5.1.7. Dæmi um nokkrar k-means-ítrekanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#forvinnsla-vigra-me-whiten">5.1.8. Forvinnsla vigra með <code class="code docutils literal notranslate"><span class="pre">whiten</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#fylkjamargfoldun-og-tolvugrafik">5.2. Fylkjamargföldun og tölvugrafík</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#fylki-og-net">5.3. Fylki og net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#net-hnutar-og-leggir">5.3.1. Net, hnútar og leggir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#grannafylki">5.3.2. Grannafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#vegir-i-netum">5.3.3. Vegir í netum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#legufylki">5.3.4. Legufylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#flaeinet">5.3.5. Flæðinet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#lindir-og-osar">5.3.6. Lindir og ósar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#linuleg-hreyfikerfi">5.4. Línuleg hreyfikerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-linulegra-hreyfikerfa">5.4.1. Skilgreining línulegra hreyfikerfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#roun-mannfjolda-ea-stofnstaerar">5.4.2. Þróun mannfjölda eða stofnstærðar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#diffurjafna-fyrir-hreyfingu-hlutar">5.4.3. Diffurjafna fyrir hreyfingu hlutar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#diffurjofnu-breytt-i-linulegt-hreyfikerfi">5.4.4. Diffurjöfnu breytt í línulegt hreyfikerfi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Stærðfræði og reiknifræði</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li><span class="section-number">2. </span>NumPy, Pandas og Matplotlib</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/kafli02.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="numpy-pandas-og-matplotlib">
+<h1><span class="section-number">2. </span>NumPy, Pandas og Matplotlib<a class="headerlink" href="#numpy-pandas-og-matplotlib" title="Varanlegur hlekkur á titilinn">¶</a></h1>
+<p>Í þessum kafla er fyrst gefið yfirlit yfir helstu svið <strong>reiknifræði</strong> þ.m.t. <strong>gagnavísinda</strong> og þá Pythonpakka sem smíðaðir hafa verið til að fást víð þau. Síðan er fjallað um grunnpakkann <strong>NumPy</strong> sem allir hinir byggja á, <strong>Pandas</strong> fyrir almenna gagnameðhöndlun og loks er talað dálítið um tölvuteikningu með pakkanum <strong>Matplotlib</strong>. Um aðra pakka er fjallað samhliða seinni köflum um línulega algebru, föll af mörgum breytistærðum, og reiknifræði, og þar verður líka talað meira um þessa þrjá pakka.</p>
+<section id="inngangur">
+<h2><span class="section-number">2.1. </span>Inngangur<a class="headerlink" href="#inngangur" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<section id="hva-er-reiknifraei">
+<h3><span class="section-number">2.1.1. </span>Hvað er reiknifræði<a class="headerlink" href="#hva-er-reiknifraei" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Reiknifræði</strong> er orð sem búið var til upp úr 1970, með merkingu „beiting stærðfræði, tölvunarfræði og tölfræði til að leysa vísindaleg verkefni með tölvu“ um það bil. Þegar orðið var búið til var hugtakaflóran ekki alveg jafnmargbrotin og nú, og reiknfræði var í grófum dráttum talin ná yfir aðgerðagreiningu (<em>operations research</em>), tölulega greiningu (<em>numerical analysis</em>), tölfræði (<em>statistics</em>) og tölvunarfræði (<em>computer science</em>). Fljótlega fengu samt síðasttöldu fræðin sjálfstæðan tilverurétt. Nefna má að Háskóli Íslands hefur boðið upp á kjörsviðið Stærðfræði–reiknifræði síðan 1972 (og í byrjun var tölvunarfræði innan þess) og svo Tölvunarfræði–reiknifræði síðan um aldamót. Við Raunvísindastofnun Háskólans var starfrækt „Reiknifræðistofa“ frá 1972. Hún er enn til en kallast „Reiknifræðideild“ síðan 2008, og undir hana heyrir m.a. tölfræði.</p>
+<p>Í dag hefur fræðasviðum sem tengjast hagnýtingu á stærðfræði fjölgað mjög, þau skarast á ótal vegu, og sum eru kölluð þverfagleg. Hér verður gerð tilraun til að telja upp helstu fræðasvið reiknifræði og tilheyrandi undirsvið, með þeim fyrirvara að margir myndu flokka öðruvísi. Listinn takmarkast við svið sem snúast um að leysa verkefni í raunvísindum og verkfræði með tölvum. Þannig er t.d. fræðilegri tölvunarfræði sleppt (og reyndar mörgum öðrum undirsviðum hennar), og sömuleiðis fræðilegri tölfræði. Ekki er reynt að skilgreina sviðin nema lítillega, heldur verða áhugasamir að leita á netinu, t.d. í Wikipedíu.</p>
+<p>Það er ekki auðvelt að finna eitt orð í ensku sem er jafn vítt og reiknifræðihugtakið eins og það er notað hér. Það sem kemst kannski næst því er <em>computational science</em>, en það orð er samt oftar notað í þrengri merkingu, einkum yfir fræðigreinarnar sem taldar eru upp sem „grunngreinar reiknifræði“ í listanum.</p>
+<p><strong>Grunngreinar reiknifræði</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Töluleg greining</strong> (<em>numerical analysis</em>, <em>computational science</em> stundum
+notað sem samheiti)</p></li>
+<li><p><strong>Töluleg línuleg algebra</strong> (<em>numerical linear algebra</em>), ein undirgreina
+tölulegrar greiningar</p></li>
+<li><p><strong>Aðgerðagreining</strong> (<em>operations research</em>), ýmsir mundu samt ekki telja hana
+til reiknifræði</p></li>
+<li><p><strong>Töluleg bestun</strong> (<em>numerical optimization</em>), undirgrein tölulegrar greiningar og
+aðgerðagreiningar, oft er líka talað um <em>bestunarfræði</em> (sem fjallar einnig um
+fræðilega bestun)</p></li>
+<li><p><strong>Stærðfræðileg líkansmíð</strong> (<em>mathematical modelling</em>), þverfaglegt svið milli flestra
+fræðasviðanna í þessum lista auk annarra, t.d. verkfræði, eðlisfræði og efnafræði</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Gagnavísindi</strong> (<em>data science</em>), stundum flokkað sem undirgrein tölvunarfræði</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Vélanám</strong> (<em>machine learning</em>), stundum talið það sama og reiknigreind
+(<em>computational intelligence</em>),</p></li>
+<li><p><strong>Gagnanám</strong> (<em>data mining</em>), e.t.v. stundum talið undirgrein vélanáms. Ath. að hér
+er „nám“ þýðing á „mining“ en ekki „learning“. Kannski mætti tala um gagnagrennslan?</p></li>
+<li><p><strong>Stórgögn</strong> (<em>big data</em>), eða <em>gagnagnótt</em>, líka mætti tala um
+<em>stórgagnagreiningu</em> (<em>big data analytics</em>)</p></li>
+<li><p><strong>Djúpnám</strong> (<em>deep learning</em>), undir þetta falla djúp tauganet, sem eru
+grundvöllur í ýmissi nýjustu framþróun, t.d. í myndgreiningu (lesa handskrift,
+þekkja andlit), talgreiningu (skilja talað mál) og vélrænni þýðingu (<em>google
+translate</em>)</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Tölvunarfræði</strong> (<em>computer science</em>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Gagnagrindur og reiknirit</strong> (<em>data structures and algorithms</em>), hér teljast m.a.
+ýmis leitar-, röðunar- og netafræðireiknirit</p></li>
+<li><p><strong>Gervigreind</strong> (<em>artificial intelligence</em>), tengist náið ýmsum undirsviðum gagnavísinda</p></li>
+<li><p><strong>Ofurtölvuvinnsla</strong> (<em>high performance computing (HPC)</em>, <em>parallel computing</em>)</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Tölfræði</strong> (<em>statistics</em>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Hagnýtt tölfræði</strong> (<em>applied statistics</em>)</p></li>
+<li><p><strong>Reiknifræðileg tölfræði</strong> (<em>computational statistics</em>)</p></li>
+<li><p><strong>Bayesísk tölfræði</strong> (<em>Bayesian statistics</em>)</p></li>
+</ul>
+</div></blockquote>
+<p>Tengt fræðasviðsheiti sem oft er notað er „hagnýtt stærðfræði“ (<em>applied mathematics</em>). Það er samt þrengra að því leyti að það einskorðast gjarna við undirsvið í stærðfræði, og víðara að því leyti að oft eru talin með ýmis fræðileg undirsvið sem ekki nýtast beint til lausnar verkefna með tölvum.</p>
+</section>
+<section id="python-pakkar-fyrir-visindalega-reikninga">
+<h3><span class="section-number">2.1.2. </span>Python-pakkar fyrir vísindalega reikninga<a class="headerlink" href="#python-pakkar-fyrir-visindalega-reikninga" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Aðalreiknifræðipakkarnir í Python eru <strong>NumPy</strong> fyrir vigur- og fylkjareikninga og <strong>SciPy</strong> fyrir önnur svið reiknifræði, þ.á.m. tölulega greiningu, tölulega línulega algebru (<em>scipy.linalg</em>) og tölulega bestun (<em>scipy.optimize</em>). Meðal verkefna sem leysa má með SciPy eru brúun (<em>interpolation</em>), töluleg heildun, töluleg lausn diffurjafna, útreikningur sérhæfðra falla (<em>special functions</em>), og merkjavinnsla (<em>signal processing</em>).</p>
+<p>Fyrir gagnavísindi má nefna  <strong>Pandas</strong> sem er mikið notaður pakki fyrir almenna gagnavinnslu, <strong>sklearn</strong> (= <em>Scikit-learn</em>) fyrir reiknigreind og gagnanám, og loks pakkana <strong>TensorFlow</strong> og <strong>PyTorch</strong> fyrir vélanám þ.á.m. djúpnám. Fyrir klassísk tölvunarfræðileg reiknirit er ekki til einn samstæður pakki, en hægt er að finna sjálfstæða pakka fyrir mörg þeirra. Fyrir ofurtölvuvinnslu er til pakki <strong>MPI</strong>, en auk þess má nefna að bæði NumPy og SciPy nota OpenMP sjálfkrafa. Föll fyrir alla algengustu tölfræðireikninga eru í <strong>scipy.stat</strong>, og jafnframt er stundum nóg að nota <strong>Pandas</strong>, en fyrir flóknari tölfræðireikninga og líkansmíð er pakkinn <strong>statsmodels</strong>. Margir af þessum pökkum eru hver öðrum háðir. Þannig nota flestir ef ekki allir pakkarnir vigra og fylki sem eru útfærð í NumPy.</p>
+<p>Teiknipakkanum <strong>Matplotlib</strong> er ekki hægt að sleppa í þessari upptalningu. Með honum er hægt að teikna gröf falla, súlurit, <em>scatter</em>-myndir, hæðarlínumyndir, þrívíðar <em>mesh</em>-myndir og upplýstar myndir af (margvíðum) föllum, o.s.frv. Að lokum má nefna <strong>SymPy</strong> pakkann fyrir <em>symbólska</em> reikninga, t.d. einföldun á stærðfræðiformúlum og sjálfvirka diffrun.</p>
+</section>
+<section id="vigrar-og-fylki-i-staerfraei">
+<h3><span class="section-number">2.1.3. </span>Vigrar og fylki í stærðfræði<a class="headerlink" href="#vigrar-og-fylki-i-staerfraei" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Nákvæmar skilgreingar á stærðfræðilegum vigrum og fylkjum og skyldum hugtökum eru í byrjun <a class="reference internal" href="kafli04.html#linuleg-algebra"><span class="std std-numref">4</span></a>. kafla sem er um (svolítið fræðilega) línulega algebru. Hér látum við duga styttri útgáfur sem nægja fyrir NumPy umfjöllunina í kafla <a class="reference internal" href="#fylkjareikn"><span class="std std-numref">2.2</span></a>.</p>
+<p><strong>Vigur</strong> (<em>vector</em>) er runa af endanlega mörgum tölum sem gefið er nafn og notuð sem ein heild. Einstakar tölur nefnast <strong>stök</strong> (<em>elements</em>), þau eru oftast tölusett 1,2,3… en stundum 0,1,2…, og i-ta stak vigurs <span class="math notranslate nohighlight">\(a\)</span> er táknað <span class="math notranslate nohighlight">\(a_i\)</span>. Vigur með tölunum 1,2 og 4 má rita <span class="math notranslate nohighlight">\((1,2,4)\)</span>.</p>
+<p><strong>Fylki</strong> (<em>matrix</em>) er tafla með tölum sem gefið er nafn og notuð sem heild. Tölur í fylki heita líka stök. Stakið í línu <span class="math notranslate nohighlight">\(i\)</span> og dálki <span class="math notranslate nohighlight">\(j\)</span> í fylki <span class="math notranslate nohighlight">\(A\)</span> er táknað <span class="math notranslate nohighlight">\(a_{ij}\)</span>. Í stærðfræðilegri umfjöllun er oftast byrjað að telja í 1 svo stakið efst til vinstri er <span class="math notranslate nohighlight">\(a_{11}\)</span>, en þegar verið er reikna í tölvum er oft byrjað að telja í 0. Fylki með <span class="math notranslate nohighlight">\(m\)</span> línum og <span class="math notranslate nohighlight">\(n\)</span> dálkum er kallað <span class="math notranslate nohighlight">\(m\)</span> sinnum <span class="math notranslate nohighlight">\(n\)</span> fylki, táknað <span class="math notranslate nohighlight">\(m \times n\)</span>. Hér er dæmi um <span class="math notranslate nohighlight">\(2 \times 3\)</span> fylki:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1 &amp; 2 &amp; 3\\6 &amp; 7 &amp; 8\end{pmatrix}\end{split}\]</div>
+</section>
+<section id="um-ori-fylki">
+<span id="id1"></span><h3><span class="section-number">2.1.4. </span>Um orðið Fylki<a class="headerlink" href="#um-ori-fylki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Skv. <a class="reference external" href="http://tos.sky.is">Tölvuorðasafninu</a> hefur orðið fylki tvær merkingar á
+íslensku:</p>
+<ol class="arabic simple">
+<li><p>[einkum í stærðfræði] <em>rétthyrnd tafla af tölum (eða öðrum gildum)</em> = e.
+<em>matrix</em>.</p></li>
+<li><p>[einkum í tölvufræði] <em>samsteypa (aggregate) hluta af sama tagi þar sem
+hægt er að vísa í einstök stök með vísi eða vísum (index, indices)</em> = e.
+<em>array</em>.</p></li>
+</ol>
+<p>Í seinni merkingunni er fylki notað sem samheiti yfir vigra, tvívíð fylki, og
+margvíð fylki (þar sem vísarnir eru 3 eða fleiri). Stundum er talað um vigra sem
+einvíð fylki.</p>
+<div class="admonition danger">
+<p class="admonition-title">Aðvörun</p>
+<p>Þar sem NumPy er beggja megin veggjar, í stærðfræði og í tölvufræði, verður
+orðið fylki notað í báðum merkingunum hér – lesandi þarf stundum af
+ráða af samhenginu við hvað er átt.</p>
+</div>
+</section>
+</section>
+<section id="numpy-pakkinn">
+<span id="fylkjareikn"></span><h2><span class="section-number">2.2. </span>NumPy pakkinn<a class="headerlink" href="#numpy-pakkinn" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Með NumPy er hægt að vinna með vigra og fylki. Öfugt við lista hafa öll stökin sama gagnatag, kommutölur eða heiltölur. Þetta gefur mun hraðvirkari vinnslu þegar unnið er með mörg stök. Flestar listaaðgerðir má nota á NumPy fylki og auk þess bætast við ýmsar reikniaðgerðir línulegrar algebru. Næsta grein gefur stutta kynningu á möguleikunum, en nánari útskýringar eru svo í greinunum sem fylgja á eftir.</p>
+<section id="kynning-a-numpy">
+<span id="numpykynning"></span><h3><span class="section-number">2.2.1. </span>Kynning á NumPy<a class="headerlink" href="#kynning-a-numpy" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Efni þessarar greinar er tekið beint úr Jupyter-vinnubókinni
+<span class="h"><a href="numpykynning.ipynb" download="numpykynning.ipynb"><b>numpykynning.ipynb</b></a></span></p>
+</div>
+<p><strong>Listum breytt í fylki með np.array, útprentun fylkja og eiginleika þeirra:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># R1</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># Forrit sem notar numpy skammstafar það np skv. hefð</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">])</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v =&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A =&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;ndim=</span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">, shape=</span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">)</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Því miður henta f-strengir ekki vel til að prenta út fylki, t.d. er
+ekki hægt að tilgreina fjölda aukastafa: <code class="docutils literal notranslate"><span class="pre">print(f'A</span> <span class="pre">=</span> <span class="pre">{A:.3f}')</span></code>
+gefur villu.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Opnið vinnubókina <span class="h"><a href="numpykynning.ipynb" download="numpykynning.ipynb"><b>numpykynning.ipynb</b></a></span> og breytið/bætið við reit R1.</p>
+<ol class="arabic simple">
+<li><p>Prófið <code class="docutils literal notranslate"><span class="pre">print('A</span> <span class="pre">=',</span> <span class="pre">A)</span></code> og líka <code class="docutils literal notranslate"><span class="pre">print(f'A</span> <span class="pre">=\n{A}')</span></code></p></li>
+<li><p>Prentið líka út <code class="docutils literal notranslate"><span class="pre">A.size</span></code> og <code class="docutils literal notranslate"><span class="pre">A.dtype</span></code></p></li>
+<li><p>Búið til vigur <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[3,4,5]</span></code> og prentið hann út bæði með print og
+með display. Skoðið x.dtype.</p></li>
+<li><p>Endurtakið lið 3 með <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[3.,4,5]</span></code> (niðurstaðan skýrist af því að
+öll stök NumPy vigurs eru alltaf með sama gagnatag).</p></li>
+</ol>
+</div>
+</div></blockquote>
+<p><strong>Föll til að búa til fylki:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># R2</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>   <span class="c1"># Hefð að nota stóra stafi fyrir fylki</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="mf">3.14159</span><span class="p">)</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>       <span class="c1"># og litla stafi fyrir vigra</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Z</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;z = </span><span class="si">{</span><span class="n">z</span><span class="si">}</span><span class="s1">, e = </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;k = </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">, dtype=</span><span class="si">{</span><span class="n">k</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;h = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1">, dtype=</span><span class="si">{</span><span class="n">h</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Farið í reit R2 í bókinni.</p>
+<ol class="arabic simple">
+<li><p>Stikinn í zeros verður að vera par: Prófið að kalla á <code class="docutils literal notranslate"><span class="pre">np.zeros(2,2)</span></code></p></li>
+<li><p>Búið til <span class="math notranslate nohighlight">\(2 \times 3\)</span> núllfylki og <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylki með 7.5 í öllum sætum.</p></li>
+<li><p>Notið <code class="docutils literal notranslate"><span class="pre">np.linspace</span></code> til að búa til vigurinn <span class="math notranslate nohighlight">\((1, 1.5, 2, 2.5,\ldots, 8)\)</span></p></li>
+</ol>
+</div>
+</div></blockquote>
+<p><strong>Hægt er að stilla fjölda aukastafa o.fl. í útskrift:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># R3</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">floatmode</span><span class="o">=</span><span class="s1">&#39;fixed&#39;</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="mf">3.14159</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A = &#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Stillt aftur á sjálfgefna útskrift:</span>
+<span class="c1"># np.set_printoptions(precision=8, floatmode=&#39;unique&#39;,</span>
+<span class="c1">#                     suppress=False)</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Keyrið reit R3 og svo reit R2 aftur</p>
+</div>
+</div></blockquote>
+<p><strong>Slembifylki:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># R4  Slembifylki</span>
+<span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">npr</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>  <span class="c1"># tekur inn par, gefur 2 x 2 slembifylki</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Keyrið reit R4 aftur og aftur</p>
+</div>
+</div></blockquote>
+<p><strong>Fylkja og vigurreikningar:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># R5</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">]])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>       <span class="c1"># tilsvarandi stök lögð saman</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">A</span>         <span class="c1"># -- og margfölduð</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  <span class="c1"># tekur kvaðratrót af hverju staki</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1"># og exp (líka til np.sin, np.log o.s.frv.)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">S</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Prófið fleiri aðgerðir (mínus, deilingu, margföldun fylkis og tölu)</p>
+</div>
+</div></blockquote>
+</section>
+<section id="leibeiningar-um-numpy-a-netinu">
+<h3><span class="section-number">2.2.2. </span>Leiðbeiningar um NumPy á netinu<a class="headerlink" href="#leibeiningar-um-numpy-a-netinu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Eins búast má við er hægt að finna allskyns hjálp um NumPy á netinu t.d. <a class="reference external" href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/NumPy_Python_Cheat_Sheet.pdf">NumPy Basics Cheat Sheet</a>.
+Einnig má finna nýlega bók sem fjallar um NumPy, Matplotlib og
+Pandas, sem er að ýmsu leyti ágæt,
+<a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>.</p>
+</section>
+<section id="hvernig-ma-bua-til-numpy-fylki-og-visa-stok-eirra">
+<h3><span class="section-number">2.2.3. </span>Hvernig má búa til NumPy fylki og vísa stök þeirra?<a class="headerlink" href="#hvernig-ma-bua-til-numpy-fylki-og-visa-stok-eirra" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Í kynningunni að framan sáum við að einvíð fylki (vigra) má búa til með fallinu <code class="docutils literal notranslate"><span class="pre">np.array</span></code>, sem breytir Python-runu af tölum (oftast lista, en það má líka vera samstæða eða ítrari) í breytu af taginu <code class="code docutils literal notranslate"><span class="pre">np.ndarray</span></code> (<em>n-dimensional array</em>), sem er grunntagið í NumPy. Oftast er tagið óformlega kallað <em>NumPy-array</em> og á íslensku <em>NumPy-fylki</em>. Hlutur af taginu <code class="code docutils literal notranslate"><span class="pre">np.ndarray</span></code> getur verið einvítt, tvívítt eða margvítt fylki en í þessum fyrirlestrarnótum höldum við okkur til einföldunar að mestu við einvíð og tvívíð fylki.</p>
+<p>Til að búa til tvívítt fylki er kallað á <code class="docutils literal notranslate"><span class="pre">np.array</span></code> með viðfang sem er runa af runumum (oftast listi af listum) sem allar þurfa að vera jafnlangar, og tilgreina línur fylkisins (sbr. kynninguna), t.d.:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">np.array([[1,2,3],</span> <span class="pre">[5,7,9]])</span></code></p>
+</div></blockquote>
+<p>sem gefur fylkið <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1 &amp; 2 &amp; 3\\5 &amp; 7 &amp; 9\end{pmatrix}\)</span>.</p>
+<p>Í kynningunni voru líka sýnd ýmis föll til að búa til sérstök fylki, núllfylki, einingafylki (sjá grein <a class="reference internal" href="kafli04.html#einingafylki"><span class="std std-numref">4.8.2</span></a>), fylki með öllum stökum eins og vigra með hlaupandi stökum.</p>
+<p>Ef <code class="docutils literal notranslate"><span class="pre">x</span></code> er einvítt NumPy fylki (vigur) þá er vísað í einstök stök hans eins og í stök í Python lista, sem sé með <code class="docutils literal notranslate"><span class="pre">x[i]</span></code> t.d. <code class="docutils literal notranslate"><span class="pre">x[0],</span> <span class="pre">x[1]</span></code>, og talningin byrjar í 0. Til að vísa í stak í línu <code class="docutils literal notranslate"><span class="pre">i</span></code> og dálki <code class="docutils literal notranslate"><span class="pre">j</span></code> í NumPy fylki <code class="docutils literal notranslate"><span class="pre">A</span></code> notast <code class="docutils literal notranslate"><span class="pre">A[i,j]</span></code>. Sjá nánar í grein <a class="reference internal" href="#hlutvigrar"><span class="std std-numref">2.2.11</span></a>.</p>
+</section>
+<section id="eiginleikar-vigra-og-fylkja">
+<h3><span class="section-number">2.2.4. </span>Eiginleikar vigra og fylkja<a class="headerlink" href="#eiginleikar-vigra-og-fylkja" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Sérhver hlutur af taginu <em>np.ndarray</em> hefur margvíslega <em>eiginleika</em>
+(<em>attributes</em>). Ef <code class="docutils literal notranslate"><span class="pre">x</span></code> er <em>np.ndarray</em> þá fæst eiginleiki <code class="docutils literal notranslate"><span class="pre">e</span></code> með <code class="docutils literal notranslate"><span class="pre">x.e</span></code>.
+Helstu eiginleikarnir eru:</p>
+<blockquote>
+<div><p><strong>ndim:</strong> Fjöldi vídda: 1 fyrir vigra og 2 fyrir fylki.</p>
+<p><strong>shape:</strong> samstæða (<em>tuple</em>, stak, par, þrennd) með <em>ndim</em> stökum, fjöldi staka í vigri,
+fjöldi lína og dálka í fylki: Fylki með 3 línum og 2 dálkum hefur <em>shape</em> =
+(3,2).</p>
+<p><strong>size:</strong> Heildarfjöldi staka í vigrinum/fylkinu, margfeldi stakanna í shape</p>
+<p><strong>dtype:</strong> Tag staka í vigrinum eða fylkinu. Er venjulega <em>float64</em> eða
+<em>int64</em> en getur líka verið t.d. int32, bool, object o.fl. Venjulegasta
+tagið er float64 og slík stök eru að flestu leyti eins og kommutölur af
+venjulega float-taginu í Python.</p>
+<p><strong>itemsize:</strong> Fjöldi bæta í hverju staki í fylkinu, 8 fyrir float64 og int64.</p>
+<p><strong>data:</strong> Bendill á minnisblokk þar sem sjálf stök fylkisins eru
+geymd, einkum nytsamlegt þegar Python er tvinnað við C.</p>
+</div></blockquote>
+<p>(Sjá fyrsta sýnidæmið í grein <a class="reference internal" href="#numpykynning"><span class="std std-numref">2.2.1</span></a>)</p>
+</section>
+<section id="foll-og-aferir-i-numpy">
+<h3><span class="section-number">2.2.5. </span>Föll og aðferðir í NumPy<a class="headerlink" href="#foll-og-aferir-i-numpy" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hugtakið <em>aðferð</em> (<em>method</em>) var útskýrt stuttlega í 1. kafla (<a class="reference internal" href="kafli01.html#listar"><span class="std std-numref">1.5.2</span></a>). Til að rifja það upp, þá er <em>aðferð</em> hugtak í hlutbundinni forritun (<em>object oriented programming</em>), í raun ein tegund af falli (<em>function</em>) sem kallað er á með</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">x.aðferð(stikar)</span></code></p>
+</div></blockquote>
+<p>þar sem x er hlutur (<em>object</em>). Í NumPy er x oftast af taginu <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>, og aðferðin getur bæði notað <code class="docutils literal notranslate"><span class="pre">x</span></code> og breytt því. Það þarf sem sé ekki að nefna <cite>np</cite> þegar NumPy-aðferðir eru notaðar, en það þarf hinsvegar þegar notuð eru önnur NumPy föll:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">np.fall(stikar)</span></code>.</p>
+</div></blockquote>
+<p>Ef <code class="docutils literal notranslate"><span class="pre">x</span></code> er einn af stikunum getur fallið líka bæði notað og breytt <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Oft er til bæði NumPy fall og aðferð með sama nafni fyrir sömu aðgerð (sjá t.d. næstu grein), í mótsögn við markmiðið sem nefnt var í innganginum (grein <a class="reference internal" href="kafli01.html#inngangur"><span class="std std-numref">1.1.1</span></a>), að í Python sé helst aðeins ein leið til að útfæra tiltekna aðgerð. Skýringin er a.m.k. stundum söguleg, því NumPy varð til sem sambræðingur tveggja eldri kerfa, Numeric og Numarray,</p>
+</section>
+<section id="innlestur-og-utskrift">
+<span id="inn-og-ut"></span><h3><span class="section-number">2.2.6. </span>Innlestur og útskrift<a class="headerlink" href="#innlestur-og-utskrift" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hægt er að lesa fylki úr textaskrá með fallinu <code class="code docutils literal notranslate"><span class="pre">loadtxt</span></code>. Það er bara hægt að lesa tölur og skráin verður að hafa jafnmargar tölur á hverri línu. Fyrir utan textaskrár sem geymdar eru í núverandi möppu getur <code class="docutils literal notranslate"><span class="pre">loadtxt</span></code> lesið skrár sem eru á netinu. Hér eru nokkur dæmi sem skýra notkunina:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">skrá</span> <span class="o">=</span> <span class="s">&#39;datafile.txt&#39;</span>                <span class="c1">#</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nf">np.loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">)</span>                 <span class="c1"># les alla skrána inn í eitt fylki A</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="nf">np.loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">)</span>             <span class="c1"># les þriggja línu skrá inn í þrjá vigra</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="nf">np.loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">)</span><span class="n">.T</span>           <span class="c1"># les þriggja dálka skrá inn í þrjá vigra</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nf">np.loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>     <span class="c1"># sleppir fyrstu línunni</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nf">np.loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>  <span class="c1"># les bara fyrstu tvo dálkana</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nf">np.loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&#39;,&#39;</span><span class="p">)</span>  <span class="c1"># les csv-skrá</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://cs.hi.is/strei/a.txt&#39;</span>  <span class="c1">#</span>
+<span class="n">A</span> <span class="o">=</span> <span class="nf">np.loadtxt</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>                  <span class="c1"># les skrá af netinu</span>
+</pre></div>
+</div>
+<p>Virkinn <cite>.T</cite> í fjórðu línu í dæminu nefnist bylting, og er útskýrður í grein <a class="reference internal" href="#bylting-python"><span class="std std-numref">2.2.8</span></a>.</p>
+<p>Til að skrifa fylki í skrá má nota <code class="docutils literal notranslate"><span class="pre">savetxt</span></code> fallið:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">np.savetxt('skrá.txt',</span> <span class="pre">x,</span> <span class="pre">fmt='«snið»')</span></code> (t.d. með f.«snið» = <code class="docutils literal notranslate"><span class="pre">%5.2f</span></code>)</p>
+</div></blockquote>
+</section>
+<section id="fleiri-foll">
+<h3><span class="section-number">2.2.7. </span>Fleiri föll<a class="headerlink" href="#fleiri-foll" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Minnsta og stærsta stak og staðsetning þeirra:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np.min(x),</span> <span class="pre">np.max(x),</span> <span class="pre">np.argmin(x),</span> <span class="pre">np.argmax(x)</span></code></p></li>
+<li><p>(eða <code class="docutils literal notranslate"><span class="pre">x.min(),</span> <span class="pre">x.max(),</span> <span class="pre">x.argmin(),</span> <span class="pre">x.argmax()</span></code>)</p></li>
+</ul>
+<p>(<code class="code docutils literal notranslate"><span class="pre">min</span></code>, <code class="code docutils literal notranslate"><span class="pre">max</span></code>, … í seinni línunni eru <strong>aðferðir</strong>)</p>
+</div></blockquote>
+<p><strong>Meðaltal, staðalfrávik og miðtala:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">np.mean(x),</span> <span class="pre">np.std(x),</span> <span class="pre">np.median(x)</span></code></p></li>
+<li><p>(eða <code class="docutils literal notranslate"><span class="pre">x.mean(),</span> <span class="pre">x.std()</span></code>, en engin <code class="docutils literal notranslate"><span class="pre">x.median()</span></code> aðferð er til)</p></li>
+</ul>
+</div></blockquote>
+<p>Reyndar eru tvær aðferðir til að reikna staðalfrávik <span class="math notranslate nohighlight">\(n\)</span> talna, í annarri er deilt með <span class="math notranslate nohighlight">\(n-1\)</span> áður en tekin er kvaðratrót, en í hinni er deilt með <span class="math notranslate nohighlight">\(n\)</span>. Mörg forritunarmál deila með <span class="math notranslate nohighlight">\(n-1\)</span> m.a. Matlab, Excel og R, en NumPy deilir með <span class="math notranslate nohighlight">\(n\)</span>. Á <a class="reference external" href="https://en.wikipedia.org/wiki/Standard_deviation#Corrected_sample_standard_deviation">Wikipediu</a> heitir gildið sem NumPy reiknar <span class="math notranslate nohighlight">\(s_N\)</span> en hitt heitir <span class="math notranslate nohighlight">\(s\)</span>. Til að fá <span class="math notranslate nohighlight">\(s\)</span> með NumPy má nota <code class="code docutils literal notranslate"><span class="pre">np.std(x,</span> <span class="pre">ddof=1)</span></code>.</p>
+<p>Föllin fyrir lista og samstæður sem talin voru í grein <a class="reference internal" href="kafli01.html#oll-sofn"><span class="std std-numref">1.6.2</span></a> er öll hægt að nota líka fyrir NumPy fylki, en það gildir ekki um allar aðferðirnar, t.d. ekki <code class="docutils literal notranslate"><span class="pre">count</span></code>, <code class="docutils literal notranslate"><span class="pre">index</span></code>, <code class="docutils literal notranslate"><span class="pre">extend</span></code> og <code class="docutils literal notranslate"><span class="pre">pop</span></code>.</p>
+</section>
+<section id="bylting-og-afpokkun">
+<span id="bylting-python"></span><h3><span class="section-number">2.2.8. </span>Bylting og afpökkun<a class="headerlink" href="#bylting-og-afpokkun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Í kafla <a class="reference internal" href="kafli04.html#bylting"><span class="std std-numref">4.1.6</span></a> er fjallað um byltingu fylkja í línulegri algebru, sem fæst með því að skipta á línum og dálkum. Stærðfræðilegi rithátturinn fyrir byltingu fylkis <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(A^T\)</span>, lesið „A bylt“. Í NumPy má rita <code class="docutils literal notranslate"><span class="pre">A.T</span></code> til að bylta fylki <code class="docutils literal notranslate"><span class="pre">A</span></code>, til dæmis:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># Skrifar:</span>
+<span class="p">[[</span><span class="mi">3</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Í ýmsu samhengi virkar fylki eins og samstæða af línum sínum, bæði þegar því er gefið gildi (eins og við höfum séð) en líka þegar það er notað til að gefa gildi. Ef A er 3 x 3 fylki má þannig skrifa</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(u,v,w)</span> <span class="pre">=</span> <span class="pre">A</span></code></p>
+</div></blockquote>
+<p>til að setja línur <code class="docutils literal notranslate"><span class="pre">A</span></code> inn í <code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code> og <code class="docutils literal notranslate"><span class="pre">w</span></code>. Það má líka sleppa svigunum: <code class="docutils literal notranslate"><span class="pre">u,v,w</span> <span class="pre">=</span> <span class="pre">A</span></code>. Hér virkar <code class="docutils literal notranslate"><span class="pre">A</span></code> eins og þrennd af línum sínum, og þegar þrennd er gefið gildi með <code class="docutils literal notranslate"><span class="pre">A</span></code> fer hver lína inn í sitt stak – eftir <code class="docutils literal notranslate"><span class="pre">par</span> <span class="pre">=</span> <span class="pre">(3,4);</span> <span class="pre">(u,v)</span> <span class="pre">=</span> <span class="pre">par</span></code> verður <code class="docutils literal notranslate"><span class="pre">u=3</span></code> og <code class="docutils literal notranslate"><span class="pre">v=4</span></code>. Þetta er kallað <cite>afpökkun</cite> (<em>unpacking</em>).</p>
+<p>Þar með er komin skýring á því hvernig við gátum lesið línur eða dálka skrár inn í vigra
+í grein <a class="reference internal" href="#inn-og-ut"><span class="std std-numref">2.2.6</span></a>.</p>
+</section>
+<section id="rokvisun">
+<h3><span class="section-number">2.2.9. </span>Rökvísun<a class="headerlink" href="#rokvisun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hægt er að velja stök úr NumPy vigri með því að vísa með rökvigri (<em>logical
+vector</em>), sbr. eftirfarandi dæmi, þar sem við höfum úthlutað árunum 2015–2018
+prímtölum. Á ensku er talað um <em>logical indexing</em>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">ár</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span><span class="mi">2019</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="n">I</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="n">J</span> <span class="o">=</span> <span class="n">ár</span> <span class="o">&lt;</span> <span class="mi">2017</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">I</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">ár</span> <span class="o">&lt;</span> <span class="mi">2017</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="n">ár</span><span class="p">[</span><span class="n">J</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="n">J</span><span class="p">])</span>
+
+<span class="c1">#skrifar:</span>
+<span class="p">[</span><span class="mi">3</span> <span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span> <span class="kc">True</span>  <span class="kc">True</span> <span class="kc">False</span> <span class="kc">False</span><span class="p">]</span> <span class="p">[</span><span class="mi">2015</span> <span class="mi">2016</span><span class="p">]</span> <span class="p">[</span><span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="innfeldi">
+<span id="innfeldi-python"></span><h3><span class="section-number">2.2.10. </span>Innfeldi<a class="headerlink" href="#innfeldi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Í kafla <a class="reference internal" href="kafli04.html#innfeldi"><span class="std std-numref">4.1.5</span></a> er viguraðgerðin <em>innfeldi</em> skilgreind, en innfeldi
+tveggja vigra er tala sem fæst með því að margfalda saman tilsvarandi stök og
+leggja útkomurnar saman. Innfeldi vigra <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> er táknað með
+<span class="math notranslate nohighlight">\(x\cdot y\)</span>.  Ef t.d.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \begin{pmatrix}1\\2\\3\end{pmatrix} \text{ og }
+y = \begin{pmatrix}4\\5\\6\end{pmatrix}\end{split}\]</div>
+<p>þá er innfeldið <span class="math notranslate nohighlight">\(x\cdot y = 1\cdot 4 + 2\cdot 5 + 3\cdot 6 =
+4 + 10 + 18 = 32\)</span>. Í NumPy eru þrjár leiðir til að reikna innfeldi vigra <code class="docutils literal notranslate"><span class="pre">x</span></code>
+og <code class="docutils literal notranslate"><span class="pre">y</span></code>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>með <code class="docutils literal notranslate"><span class="pre">np.dot(x,y)</span></code> (sem sé með NumPy <em>fallinu</em> <code class="docutils literal notranslate"><span class="pre">np.dot</span></code>)</p></li>
+<li><p>með <code class="docutils literal notranslate"><span class="pre">x.dot(y)</span></code> (sem sé með <em>array</em>-<em>aðferðinni</em> <code class="docutils literal notranslate"><span class="pre">dot</span></code>)</p></li>
+<li><p>með <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&#64;</span> <span class="pre">y</span></code> (sem sé með <em>virkjanum</em> <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>)</p></li>
+</ul>
+</div></blockquote>
+<p>(á ensku eru fall, aðferð og virki kölluð <em>function</em>, <em>method</em> og
+<em>operator</em>). Þessar leiðir eru allar jafngildar.</p>
+</section>
+<section id="hlutvigrar-og-fylki-linur-og-dalkar">
+<span id="hlutvigrar"></span><h3><span class="section-number">2.2.11. </span>Hlutvigrar og -fylki, línur og dálkar<a class="headerlink" href="#hlutvigrar-og-fylki-linur-og-dalkar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hægt er að ná í eða vísa í hlutvigur á sama hátt og náð er í hlutlista með því að nota
+<cite>:</cite> í vísum. Einnig er hægt að ná í / vísa í hlutfylki eða heilar línur eða
+dálka í fylkjum. Hér er dæmi:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>   <span class="c1"># a = [3,5,7]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>    <span class="c1"># b = [2,3]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>    <span class="c1"># c = [7,11]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">a00</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>   <span class="c1"># a00 = 3</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">A</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>     <span class="c1"># u = [3,0,2]</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span>    <span class="c1"># v = [2,2,2]; -1 vísar í neðstu línu</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># B = [[2,1], [1,0]]</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">:]</span>   <span class="c1"># sama B og í línunni á undan</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pandas-fyrir-gagnavinnslu">
+<h2><span class="section-number">2.3. </span>Pandas fyrir gagnavinnslu<a class="headerlink" href="#pandas-fyrir-gagnavinnslu" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<p>Pandas er pakki fyrir gagnameðhöndlun og gagnagreiningu í Python. Með Pandas er auðvelt að lesa stórar gagnaskrár, bæði textaskrár og töflureikniskrár (t.d. úr Excel eða Google sheets) og flokka gögnin á ýmsa vegu, velja hlutgögn (línur eða dálka), gera ýmsa útreikninga, og skrifa niðurstöðuna, annaðhvort í venjulegt úttak (í JupyterLab/á skjá) eða í nýja skrá. Það er líka hægt að búa til NumPy-fylki úr Pandas-töflum og nota Matplotlib til að birta niðurstöður grafískt. Dæmigerðar Pandas-aðgerðir eru oft framkvæmdar í töflureikni, en það hefur ýmsa kosti að gera þær í forriti, t.d. ef maður vill framkvæma samsskonar reikninga aftur og til þess er Pandas pakkinn tilvalinn.</p>
+<p>Á netinu má finna <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">10 mín. leiðbeiningar</a>, <a class="reference external" href="https://assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf">svindlblað</a> og annað <a class="reference external" href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf">slíkt</a>.</p>
+<section id="pandas-gogn">
+<span id="id2"></span><h3><span class="section-number">2.3.1. </span>Pandas gögn<a class="headerlink" href="#pandas-gogn" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Pandas-pakkinn er skv. hefð fluttur inn með</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code></p>
+</div></blockquote>
+<p>Aðalgagnatögin í Pandas eru pd.Series sem er einvíð runa gagna, og pd.DataFrame sem er tvívíð tafla. Tvennt greinir Pandas frá NumPy: Í fyrsta lagi hafa stökin í rununum og línur og dálkar taflanna auðkenni eða nöfn, og í öðru lagi geta dálkar taflanna verið af mismunandi tagi, einn dálkur gæti t.d. geymt strengi, annar heiltölur og sá þriðji kommutölur.</p>
+<div class="admonition important">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Á vef hagstofunnar er hægt að hlaða niður allskonar talnaefni, m.a. kosningaúrslitum.
+<span class="h"><a href="https://cs.hi.is/strei/kosningar.xlsx"
+download="kosningar.xlsx"><b>cs.hi.is/strei/kosningar.xlsx</b></a></span>
+er að finna úrslit alþingiskosninga 2017. Skráin hefur þrjá dálka: <strong>flokkur</strong>,
+<strong>atkvæði</strong> og <strong>þingsæti</strong>. Þið eruð hvött til að smella á þessa skrá og skoða hana
+í Excel. Hér er svo forritsbútur sem les skrána, og birtir hana, reiknar
+heildarfjölda atkvæða, bætir við dálki með hlutfalli atkvæðanna sem hver
+listi fékk, og birtir loks þessa auknu töflu:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span>
+<span class="n">kosn</span> <span class="o">=</span> <span class="nf">pd.read_excel</span><span class="p">(</span><span class="s">&quot;http://cs.hi.is/strei/kosningar.xlsx&quot;</span><span class="p">)</span>
+<span class="nf">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">kosn</span><span class="p">[</span><span class="s">&quot;Atkvæði&quot;</span><span class="p">])</span>
+<span class="n">kosn</span><span class="p">[</span><span class="s">&quot;Hlutf&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kosn</span><span class="p">[</span><span class="s">&quot;Atkvæði&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">n</span>
+<span class="nf">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hér fylgir byrjunin á töflunni sem birtist:</p>
+<figure class="align-center" style="width: 9cm">
+<img alt="_images/atkvæði1.png" src="_images/atkvæði1.png" />
+</figure>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Afritið Sýnidæmið yfir í JupyterLab og keyrið það. Prófið að nota print í
+stað display. Bætið svo við samtals-línu með:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">kosn.loc[&quot;Samtals&quot;]</span> <span class="pre">=</span> <span class="pre">kosn.sum()</span></code> <br>
+<code class="code docutils literal notranslate"><span class="pre">kosn.loc[&quot;Samtals&quot;,</span> <span class="pre">&quot;Listi&quot;]</span> <span class="pre">=</span> <span class="pre">&quot;&quot;</span></code></p>
+</div></blockquote>
+<p>(seinni línan er tilkomin vegna þess að það á ekki að leggja saman listana).
+Bætið líka við dálki „Atkv-sætis“ með atkvæði á bak við hvert þingsæti með
+því að deila í atkvæðin með þingsætunum. Loks er hægt að birta hlutfallið
+sem prósentu og aftasta dálkinn án aukastafa með því að prenta:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">kosn.style.format({&quot;Hlutf&quot;:</span> <span class="pre">&quot;{:.1%}&quot;,</span> <span class="pre">&quot;Atkv-sætis&quot;:</span> <span class="pre">&quot;{:.0f}&quot;})</span></code></p>
+</div></blockquote>
+<p>(í innri slaufusvigunum eru snið líkt og í f-strengjum).</p>
+</div>
+<p>Í sýnidæminu og æfingunni sést að sjálfgefin auðkenni línanna eru einfaldlega tölurnar 0–10, en dálkarnir fá nöfn úr hauslínu Excel-skrárinnar. Við sjáum líka að vísað er í dálk töflu eins og í stak runu, með vísi sem er nafn dálksins, en með því að nota <cite>.loc</cite> er í staðinn vísað í línu, og þá er líka hægt að vísa í einstakt stak eins og í NumPy fylki. Tökum líka eftir að reikniaðgerð (hér deiling) verkar á öll stök dálks í einu, eins og í NumPy.</p>
+</section>
+<section id="helstu-pandas-skipanir">
+<h3><span class="section-number">2.3.2. </span>Helstu Pandas-skipanir<a class="headerlink" href="#helstu-pandas-skipanir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<table class="colwidths-auto docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df=pd.read_excel(excelskrá)</span></code></p></td>
+<td><p>Lesa fremsta vinnublað (<em>sheet</em>) inn í df</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df=pd.read_excel(excelskrá,s)</span></code></p></td>
+<td><p>Lesa vinnublað s inn í df (s má vera nafn eða nr.)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df.to_excel(ecelskrá)</span></code></p></td>
+<td><p>Skrifa í Excelskrá</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df[&quot;nfn&quot;]</span></code></p></td>
+<td><p>Vísað í dálk nfn</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df.loc[2:4]</span></code></p></td>
+<td><p>Vísað í línur 2 til (og með) 4</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df[df[&quot;A&quot;]</span> <span class="pre">&gt;</span> <span class="pre">0]</span></code></p></td>
+<td><p>Velja línur þar sem dálkur <code class="docutils literal notranslate"><span class="pre">A</span></code> er jákvæður</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df[&quot;nýrdálkur&quot;] =</span> <span class="pre">df[&quot;A&quot;]*2</span></code></p></td>
+<td><p>Bætt við nýjum dálki sem er tvöfaldur dálkur <code class="docutils literal notranslate"><span class="pre">A</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">display(df)</span></code></p></td>
+<td><p>Skrifa töflu á skjá, með HTML-sniði</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">display(df.style.format(fmt))</span></code></p></td>
+<td><p>Skrifa HTML-töflu með sniði <code class="docutils literal notranslate"><span class="pre">fmt</span></code> sem getur t.d. verið <code class="docutils literal notranslate"><span class="pre">&quot;{:.2%}&quot;</span></code> eða <code class="docutils literal notranslate"><span class="pre">{&quot;A&quot;:</span> <span class="pre">&quot;{:.2f}&quot;}</span></code> (til að sníða bara dálk <code class="docutils literal notranslate"><span class="pre">A</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">pd.read_csv(skrá)</span></code></p></td>
+<td><p>Lesa töflu <code class="docutils literal notranslate"><span class="pre">df</span></code> úr skrá með kommum milli dálka, efsta lína fyrirsögn með dálkanöfnum</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df=pd.read_csv(skrá,</span></code> <br> &emsp; <code class="docutils literal notranslate"><span class="pre">names=[&quot;d1&quot;,&quot;d2&quot;...])</span></code></p></td>
+<td><p>Lesa kommuaðskilda skrá (þmt 1. línu), dálkanöfn úr <code class="docutils literal notranslate"><span class="pre">names</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df=pd.read_csv(skrá,</span></code> <br> &emsp; <code class="docutils literal notranslate"><span class="pre">delim_whitespace=True)</span></code></p></td>
+<td><p>Lesa skrá með bilum á milli dálka</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df.sort_values(by=&quot;dálkur&quot;)</span></code></p></td>
+<td><p>Raða töflu eftir gildunum í <em>dálki</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df.sort_values(by=&quot;dálkur&quot;,</span></code> <br> &emsp; <code class="docutils literal notranslate"><span class="pre">ascending=False)</span></code></p></td>
+<td><p>Raða töflu í minnkandi röð</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df.describe()</span></code></p></td>
+<td><p>skilar töflu yfir meðaltöl, staðalfrávik o.fl.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df=pd.read_excel(…,dtype=str)</span></code></p></td>
+<td><p>Lesa alla dálka sem strengi</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">df.loc[3,&quot;nfn&quot;]</span></code></p></td>
+<td><p>Vísað í tiltekinn reit</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">list(df[&quot;nfn&quot;])</span></code></p></td>
+<td><p>Dálki „nfn“ breytt í venjulegan Python lista</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">np.array(df.loc[</span></code> <br> &emsp; <code class="docutils literal notranslate"><span class="pre">3:6,</span> <span class="pre">&quot;A&quot;:&quot;C&quot;]</span></code></p></td>
+<td><p>Hluttöflu breytt í NumPy fylki</p></td>
+</tr>
+</tbody>
+</table>
+<p>[Framhald í vinnslu]</p>
+</section>
+</section>
+<section id="teikning-me-matplotlib">
+<h2><span class="section-number">2.4. </span>Teikning með Matplotlib<a class="headerlink" href="#teikning-me-matplotlib" title="Varanlegur hlekkur á titilinn">¶</a></h2>
+<section id="id3">
+<h3><span class="section-number">2.4.1. </span>Inngangur<a class="headerlink" href="#id3" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Matplotlib er teiknipakki fyrir Python sem er byggður á tölvugrafík í
+Matlab-kerfinu. Með Matplot er hægt að teikna (eða birta, sýna) myndir
+(<em>images</em>), hæðarlínur (<em>countours</em>), <em>skatterplott</em>, línurit og gröf (<em>line
+plots</em>) og þrívíðar <em>upplýstar</em> myndir. Pakkinn er þannig að framendinn
+(<em>frontend</em>) eða skilgreining teikningarinnar er aðskilinn frá bakendanum
+(<em>backend</em>) sem birtir hana. Þannig er hægt að skrifa forrit sem býr til
+teikningu, og svo er hægt að sýna teikninguna inni í Jupyter-bók, sem sjálfstæðan
+glugga á skjá, á vef, í pdf-skjali, í Latex-skjali, á prentara o.s.frv. án þess
+að breyta teikniforritinu sjálfu. Auk þess er hægt að fá alls kyns viðbætur við
+Matlplotlib, t.d. fyrir kortagerð, þrívíða teikningu, og samskipti við Excel,
+svo fáeinar séu nefndar. Eftirfarandi mynd sýnir dæmi um myndir teiknaðar
+með Matplotlib.</p>
+<figure class="align-center" id="id6" style="width: 13cm">
+<img alt="_images/matplotlib-dæmi.jpg" src="_images/matplotlib-dæmi.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 2.1 </span><span class="caption-text">Matplotlib myndir</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Hér verður talað um teikniskipanir þegar strangt tiltekið ætti kannski frekar
+að tala um teikniföll: scatter-fallið, plot-fallið o.s.frv. Einn kostur við
+að segja frekar <em>skipun</em> er að það veldur síður ruglingi þegar verið er að
+teikna föll.</p>
+</div>
+</section>
+<section id="einfaldar-myndir">
+<span id="id4"></span><h3><span class="section-number">2.4.2. </span>Einfaldar myndir<a class="headerlink" href="#einfaldar-myndir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p><strong>Undirbúningur teikningar</strong></p>
+<blockquote>
+<div><p>Venjulegasta notkun Matplotlib er að nota undirpakkann <em>pyplot</em> og í
+Matplotlib notendahandbókinni er mælt með að flytja hann inn sem <em>plt</em>, svo
+það er fyrir vikið alsiða. Teiknaðar myndir birtast sjálfkrafa inni í
+bókinni, neðan við forritsreitinn. Hér er kafli sem hægt er að setja fremst í
+vinnubók sem teiknar, þar sem bætt hefur verið við skipunum sem láta rúðunet
+teiknast undir öðrum teiknuðum hlutum, breyta sjálfgefinni stærð myndar, og
+laga galla á <em>savefig</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Frumstilling teikningar</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">axisbelow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># (6,4) er sjálfgefið</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;savefig&#39;</span><span class="p">,</span><span class="n">bbox</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>  <span class="c1"># laga galla á savefig</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Skatter-plott og línurit</strong></p>
+<blockquote>
+<div><p>Hér er forrit sem teiknar punktana <span class="math notranslate nohighlight">\((x,y)\)</span> þar sem <span class="math notranslate nohighlight">\(y = \sqrt
+x\)</span> fyrir <span class="math notranslate nohighlight">\(x = 0, 1, 2, 3, 4, 5\)</span> og tengir þá með beinum línustrikum.
+Skipunin <code class="docutils literal notranslate"><span class="pre">plt.figure</span></code> býr til nýja mynd og tilgreinir breidd hennar og
+hæð, scatter-skipunin teiknar punktana sjálfa með flatarmál u.þ.b. 40
+ferpunkta (punktur ≈ 1/3 mm) og plot-skipunin teiknar strikin á
+milli þeirra. Að lokum teiknar grid rúðunet.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+<figure class="align-center" style="width: 11cm">
+<img alt="_images/matplotlib-kynning.png" src="_images/matplotlib-kynning.png" />
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Stærð myndarinnar er gefin í tommum og (6,4) er sjálfgefið. Myndin er sköluð
+niður í ca. 2/3 þegar hún birtist á venjulegum fartölvuskjá, en er (a.m.k.
+nokkurnvegin) ósköluð ef bókin er prentuð sem pdf.</p>
+</div>
+</div></blockquote>
+<p><strong>Súlurit</strong></p>
+<blockquote>
+<div><p>Hér er búið til súlurit (<em>histogram</em>) af normaldreifðum slembigögnum. Stikinn
+<code class="docutils literal notranslate"><span class="pre">bins</span></code> gefur fjölda súlna og <code class="docutils literal notranslate"><span class="pre">range</span></code> gefur svæðið á x-ás sem súluritið nær yfir.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">npr</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;fjöldi gilda á hverju bili (af 500)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 11cm">
+<img alt="_images/sulurit.png" src="_images/sulurit.png" />
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ýmsar teikniskipanir skila upplýsingum sem skrifast í vinnubókina
+en eru oftast óþarfar. Semíkomman aftast í <code class="docutils literal notranslate"><span class="pre">plt.ylabel</span></code> er til að losna
+við þessa útskrift.</p>
+</div>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">hist</span></code> reiknar sjálf hæð hverrar súlu en það er líka hægt að láta
+hæð súlnanna koma úr lista eða vigri með því að nota skipunina <code class="docutils literal notranslate"><span class="pre">bar</span></code>. Um það
+er sýnt dæmi í næsta kafla.</p>
+</div></blockquote>
+</section>
+<section id="pandas-og-teikningar">
+<span id="id5"></span><h3><span class="section-number">2.4.3. </span>Pandas og teikningar<a class="headerlink" href="#pandas-og-teikningar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Matplotlib teikniskipanir geta notað dálka í Pandas-töflum sem viðföng. Til dæmis, ef <code class="docutils literal notranslate"><span class="pre">xy.xlsx</span></code> hefði tvo dálka, „x“ og „y“, þá mætti teikna línurit af þeim með skipununum:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="nf">pd.readexcel</span><span class="p">(</span><span class="s">&quot;xy.xlsx&quot;</span><span class="p">)</span>
+<span class="nf">plt.plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">&quot;x&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">&quot;y&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Í eftirfarandi dæmi eru Pandas-dálkar notaðir sem viðföng í skipanirnar <code class="code docutils literal notranslate"><span class="pre">bar</span></code> og <code class="code docutils literal notranslate"><span class="pre">xticks</span></code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Hér er dæmi sem teiknar súlurit af kosningaúrslitunum 2017 sem voru
+á dagskrá í sýnidæmi í grein <a class="reference internal" href="#pandas-gogn"><span class="std std-numref">2.3.1</span></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;http://cs.hi.is/strei/kosningar.xlsx&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kosn</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Atkvæði&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tomato&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Listi&quot;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Atkvæði&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Úrslit alþingiskosninga 2017&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Hér er verður x listinn [0,1,2…9] (það voru 10 framboðslistar). Hér er
+<a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors#Extended_colors">listi</a> yfir liti.
+Forritið teiknar svo þessa mynd:</p>
+<figure class="align-center" style="width: 11cm">
+<img alt="_images/kosningar1.png" src="_images/kosningar1.png" />
+</figure>
+</div>
+</section>
+<section id="toflur-yfir-matplotlib-skipanir">
+<h3><span class="section-number">2.4.4. </span>Töflur yfir Matplotlib-skipanir<a class="headerlink" href="#toflur-yfir-matplotlib-skipanir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Hér er fyrst listi yfir nokkrar aðal teikniskipanirnar ásamt tilvísunum í
+kaflana þar sem um þær er fjallað.</p>
+<table class="colwidths-auto docutils align-default" id="id7">
+<caption><span class="caption-number">Tafla 2.1 </span><span class="caption-text">Helstu teikniskipanir</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">figure</span></code></p></td>
+<td><p>Býr til mynd (grein <a class="reference internal" href="#einfaldar-myndir"><span class="std std-numref">2.4.2</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scatter</span></code></p></td>
+<td><p>Teiknar punkta í tilgreindum x- og y-hnitum (greinar <a class="reference internal" href="#einfaldar-myndir"><span class="std std-numref">2.4.2</span></a>
+og <a class="reference internal" href="#teikning-punktasafns"><span class="std std-numref">2.4.7</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plot</span></code></p></td>
+<td><p>Teiknar línustrik sem tengja saman punkta (greinar <a class="reference internal" href="#einfaldar-myndir"><span class="std std-numref">2.4.2</span></a> og
+<a class="reference internal" href="#rju-daemi"><span class="std std-numref">2.4.5</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hist</span></code></p></td>
+<td><p>Teiknar súlurit yfir tíðni – hæð súlna fæst með talningu (greinar
+<a class="reference internal" href="#einfaldar-myndir"><span class="std std-numref">2.4.2</span></a> og <a class="reference internal" href="#rju-daemi"><span class="std std-numref">2.4.5</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bar</span></code></p></td>
+<td><p>Teiknar súlurit með gefinni súluhæð (grein <a class="reference internal" href="#pandas-og-teikningar"><span class="std std-numref">2.4.3</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">legend</span></code></p></td>
+<td><p>Bætir skýringum á línum/skatter-punktum við teikningu (grein <a class="reference internal" href="#rju-daemi"><span class="std std-numref">2.4.5</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">savefig</span></code></p></td>
+<td><p>Vistar teikningu í png-skrá (<code class="docutils literal notranslate"><span class="pre">savefig(&quot;skrá.png&quot;)</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text</span></code></p></td>
+<td><p>Skrifar texta inn á mynd (sjá næstu töflu)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">show</span></code></p></td>
+<td><p>Birtir mynd (þarf ekki í Jupyter)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id8">
+<caption><span class="caption-number">Tafla 2.2 </span><span class="caption-text">Texti settur inn á mynd</span><a class="headerlink" href="#id8" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text(x,y,&quot;texti&quot;)</span></code></p></td>
+<td><p>skrifar texta aftan við punkt (x,y)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,</span> <span class="pre">fontsize=n)</span></code></p></td>
+<td><p>– með n punkta letri</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,va=&quot;bottom&quot;)</span></code></p></td>
+<td><p>– ofan við punkt (<em>vertical alignment</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,ha=&quot;left&quot;)</span></code></p></td>
+<td><p>– aftan við punkt (<em>horizontal algn</em>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,ha=&quot;center&quot;)</span></code></p></td>
+<td><p>– með punkt í miðjum texta</p></td>
+</tr>
+</tbody>
+</table>
+<p>Teikniskipanirnar bjóða svo upp á fjölda stýristika (<em>control parameters</em>) til að
+stjórna lit teikninga, breidd súlna, leturstærð, merkingum ása o.s.frv. Auk
+stýristikanna eru svo notaðar ýmsar hjálpar- eða stýriskipanir til breyta mörkum
+ása, bæta við skýringartextum, rúðuneti o.fl. Næstu töflur gefar yfirlit
+yfir helstu stýristika og stýriskipanir.</p>
+<table class="colwidths-given docutils align-default" id="plothiststyring">
+<caption><span class="caption-number">Tafla 2.3 </span><span class="caption-text">Helstu stikar í <strong>plot</strong>, <strong>hist</strong> og <strong>bar</strong></span><a class="headerlink" href="#plothiststyring" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">color</span></code></p></td>
+<td><p>Litur línurits (grafs) eða súlurits. Má skammstafa r, g, b, y, w, k (black),
+c (cyan), m (magenta) eða nota streng með <a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors#Extended_colors">litanafni</a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code></p></td>
+<td><p>gagnsæi, 0 alveg gagnsætt, 1 alveg ógagnsætt (sjálfgefið)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">linewidth</span></code> eða <code class="docutils literal notranslate"><span class="pre">lw</span></code></p></td>
+<td><p>Breidd línu í línuriti eða súluramma í súluriti. Eining punktar (~1/3 mm),
+sjálfgefið lw=1.5.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">linestyle</span></code> eða <code class="docutils literal notranslate"><span class="pre">ls</span></code></p></td>
+<td><p>Línutegund, getur t.d. verið <code class="docutils literal notranslate"><span class="pre">''</span></code> (engin lína) <code class="docutils literal notranslate"><span class="pre">':'</span></code>
+(punktalína), <code class="docutils literal notranslate"><span class="pre">'-'</span></code> (heil lína, sjálfgefið)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">marker</span></code></p></td>
+<td><p>Merki fyrir punkta í plot. Algengur marker er <code class="docutils literal notranslate"><span class="pre">'o'</span></code> (en líka má nota <code class="docutils literal notranslate"><span class="pre">'.'</span>
+<span class="pre">'+'</span> <span class="pre">'x'</span></code> og fleiri); plot-skipun með <code class="docutils literal notranslate"><span class="pre">marker</span> <span class="pre">=</span> <span class="pre">'o',</span> <span class="pre">ls=''</span></code> gefur svipaða
+niðurstöðu og <code class="docutils literal notranslate"><span class="pre">scatter</span></code> með sjálfgefnum stikum.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">markersize</span></code> eða <code class="docutils literal notranslate"><span class="pre">ms</span></code></p></td>
+<td><p>Stærð <em>markers</em> í <code class="docutils literal notranslate"><span class="pre">plot</span></code>, sjálfgefið 6 punktar (~2 mm)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">edgecolor</span></code> eða <code class="docutils literal notranslate"><span class="pre">ec</span></code></p></td>
+<td><p>Litur á rönd súlna eða merkja. Ein tegund súlurita notar <code class="docutils literal notranslate"><span class="pre">color='w',</span> <span class="pre">ec='k'</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">label</span></code></p></td>
+<td><p>gefur súlutegund eða línuriti <em>skýringu</em>, notað með <code class="docutils literal notranslate"><span class="pre">legend</span></code>-skipun,
+sjá töfluna að neðan (<a class="reference internal" href="#plothjalparskip"><span class="std std-numref">Tafla 2.5</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bins</span></code></p></td>
+<td><p>fjöldi súlna, sjá dæmið að ofan</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">range</span></code></p></td>
+<td><p>ytri mörk súlurits, sjá dæmið að ofan (gott að velja bins í samræmi við range).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rwidth</span></code></p></td>
+<td><p>„relative width“ (sjálfgefið 1.0)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given docutils align-default" id="scatterstyring">
+<caption><span class="caption-number">Tafla 2.4 </span><span class="caption-text">Helstu stikar í <strong>scatter</strong></span><a class="headerlink" href="#scatterstyring" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">marker</span></code></p></td>
+<td><p>Merki fyrir punkta, sjá <em>marker</em> í töflunni að ofan.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p>stærð punkta, flatarmál í <em>ferpunktum</em> (punktur ≈ 1/3 mm). Má vera vigur og þá
+fær hver punktur sína stærð.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">color</span></code></p></td>
+<td><p>litur (allir punktar í sama lit), sjá <em>color</em> í töflunni að ofan</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td><p>vigur af litum (hver punktur í sínum lit). Má vera vigur af tölum og þá
+litast punktarnir með litaskala (<em>color map</em>).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code></p></td>
+<td><p>gagnsæi, sjá töfluna að ofan</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">edgecolor</span></code></p></td>
+<td><p>litur á rönd punkta</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Sjálfgefin punktastærð er 36 = 6^2, sem gefur sömu stærð og <code class="docutils literal notranslate"><span class="pre">o</span></code>-merki í
+plot-skipun með <em>markersize</em> 6 (sem er sjálfgefna stærðin í plot). Ath. að það
+er ekki stutt að skrifa <code class="code docutils literal notranslate"><span class="pre">size</span></code> í stað <code class="code docutils literal notranslate"><span class="pre">s</span></code></p>
+<p>Þessar fyrirlestrarnótur skauta (ennþá) framhjá umfjöllun um <strong>litaskala</strong>, og
+við látum duga að vísa í 4. kaflann í <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook">Python Data Science Handbook</a>.</p>
+</div>
+<table class="colwidths-given docutils align-default" id="plothjalparskip">
+<caption><span class="caption-number">Tafla 2.5 </span><span class="caption-text">Helstu hjálparskipanir fyrir teikningar</span><a class="headerlink" href="#plothjalparskip" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xlim(min,max)</span></code></p></td>
+<td><p>stillir neðri og efri mörk x-áss</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.ylim(min,max)</span></code></p></td>
+<td><p>Stillir neðri og efri mörk y-áss</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.title(strengur)</span></code></p></td>
+<td><p>setur fyrirsögn á teikningu</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xlabel(strengur)</span></code></p></td>
+<td><p>setur textaskýringu við x-ás</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.ylabel(strengur)</span></code></p></td>
+<td><p>setur textaskýringu við y-ás</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xticks(listi)</span></code></p></td>
+<td><p>setur merkingar á tilgreindar staðsetningar á x-ás (<code class="docutils literal notranslate"><span class="pre">listi</span></code> gæti t.d. verið
+<code class="docutils literal notranslate"><span class="pre">range(0,6)</span></code> eða <code class="docutils literal notranslate"><span class="pre">np.linspace(0,5,11)</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.yticks(listi)</span></code></p></td>
+<td><p>setur merkingar á tilgreindar staðsetningar á y-ás</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.tickparams(length=l,</span></code>
+<code class="docutils literal notranslate"><span class="pre">width=w,</span> <span class="pre">direction=&quot;in&quot;)</span></code></p></td>
+<td><p>stillir strikin við ásamerkingarnar (l og w mælt í punktum (1/3 mm);
+í stað <code class="docutils literal notranslate"><span class="pre">&quot;in&quot;</span></code> má nota <code class="docutils literal notranslate"><span class="pre">&quot;out&quot;</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code></p></td>
+<td><p>teiknar rúðunet (nota má <code class="docutils literal notranslate"><span class="pre">grid(axis='y')</span></code> fyrir bara láréttar línur)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.box(False)</span></code></p></td>
+<td><p>fjarlægir ramma utanum teikningu</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.axvline(x)</span></code></p></td>
+<td><p>bætir við lóðréttri línu (sjálfgefið er x = 0)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.axhline(y)</span></code></p></td>
+<td><p>bætir við láréttri línu (sjálfgefið er y = 0)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code></p></td>
+<td><p>bætir við kassa með skýringum á línuritum/súlum sem búnar voru til með <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Loks er hér <a class="reference external" href="https://matplotlib.org/api/pyplot_summary.html">hlekkur</a>  á yfirlit yfir allar Matplotlib-skipanir.</p>
+</section>
+<section id="rju-daemi-um-teikningar">
+<span id="rju-daemi"></span><h3><span class="section-number">2.4.5. </span>Þrjú dæmi um teikningar<a class="headerlink" href="#rju-daemi-um-teikningar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Til frekari glöggvunar eru hér þrjú viðbótardæmi.</p>
+<p><strong>Dæmi um plot:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span> <span class="c1"># dpi=72 sjálfgefið</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y = √x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 7cm">
+<img alt="_images/rauttgraf.png" src="_images/rauttgraf.png" />
+</figure>
+</div></blockquote>
+<p><strong>Dæmi um legend:</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;slembitölur&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 9cm">
+<img alt="_images/legend-daemi.png" src="_images/legend-daemi.png" />
+</figure>
+</div></blockquote>
+<p><strong>Dæmi um hist</strong></p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-gildi&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;fjöldi&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 11cm">
+<img alt="_images/sulur2.png" src="_images/sulur2.png" />
+</figure>
+</div></blockquote>
+</section>
+<section id="teikning-af-grofum-falla">
+<span id="groffalla"></span><h3><span class="section-number">2.4.6. </span>Teikning af gröfum falla<a class="headerlink" href="#teikning-af-grofum-falla" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Við byrjum þennan kafla á æfingu, sem snýst bæði um efni undanfarandi kafla og
+þessa. Lesendur eru hvattir til að spreyta sig á henni áður en þeir lesa áfram
+því hér á eftir koma svör við ýmsum atriðum í henni.</p>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Opnið vinnubókina <span class="h"><a href="fallateikning.ipynb"
+download="fallateikning.ipynb"><b>Fallateikning</b></a></span> í JupyterLab og fylgið
+leiðbeiningum í henni.</p>
+</div>
+<p>Til að teikna graf er byrjað á að núllstilla með því að keyra:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">npr</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">axisbelow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">floatmode</span><span class="o">=</span><span class="s1">&#39;fixed&#39;</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p><strong>Einfalt graf.</strong> Með því að nota linspace með hæfilegu skrefi má nálga graf falls með
+bútum af línustrikum. Við getum t.d. teiknað graf sínus-fallsins á
+bilinu <span class="math notranslate nohighlight">\([0, 4\pi]\)</span> með:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">));</span>
+</pre></div>
+</div>
+<dl>
+<dt>Úttak:</dt><dd><figure class="align-center" style="width: 9cm">
+<img alt="_images/output_3_0.png" src="_images/output_3_0.png" />
+</figure>
+</dd>
+</dl>
+</li>
+<li><p><strong>Fínna graf.</strong> Hér er hægt að bæta ýmislegt. Afritum forritsbútinn úr lið 1
+og bætum við:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>teygjum á grafinu (breikkum myndina) með skipuninni
+<code class="docutils literal notranslate"><span class="pre">plt.figure(figsize=(12,4))</span></code> (á undan plot).</p></li>
+<li><p>Ef grannt er skoðað sjást línustrikin. Mýkra graf fæst t.d. með
+<code class="docutils literal notranslate"><span class="pre">linspace(0,</span> <span class="pre">4*pi,</span> <span class="pre">200)</span></code></p></li>
+<li><p>Svo má bæta við rúðuneti með <code class="docutils literal notranslate"><span class="pre">plt.grid</span></code></p></li>
+<li><p>Það er hægt að teikna x- og y-ása með <code class="docutils literal notranslate"><span class="pre">plt.axhline</span></code> og
+<code class="docutils literal notranslate"><span class="pre">plt.axvline</span></code>. Notið með stika <code class="docutils literal notranslate"><span class="pre">c='k'</span></code> til að fá svarta ása.</p></li>
+<li><p>Við getum látið x-ásinn ná t.d. frá -0.2 til <span class="math notranslate nohighlight">\(4\pi\)</span> með
+<code class="docutils literal notranslate"><span class="pre">plt.xlim([-0.2,</span> <span class="pre">4*pi])</span></code>.</p></li>
+<li><p>Það má fjarlægja rammann með <code class="docutils literal notranslate"><span class="pre">plt.box(False)</span></code></p></li>
+<li><p>Síðasta tötsið fæst með <code class="docutils literal notranslate"><span class="pre">plt.tick_params(length=0)</span></code></p></li>
+</ul>
+</div></blockquote>
+<dl>
+<dt>Lausn (sjá úttak í svari við lið 3):</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p><strong>Kósínus bætt við.</strong> Teiknum í framhaldi <span class="math notranslate nohighlight">\(y = \cos x\)</span> inn á sömu mynd.</p>
+<dl>
+<dt>Lausn:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak (úr 2 og 3):</dt><dd><figure class="align-center" style="width: 16cm">
+<img alt="_images/output_6_0.png" src="_images/output_6_0.png" />
+</figure>
+</dd>
+</dl>
+</li>
+<li><p><strong>Graf vísisfallsins exp(x).</strong> Teiknum nú nýja mynd með <span class="math notranslate nohighlight">\(y = e^x\)</span> á
+bilinu <span class="math notranslate nohighlight">\([-5, 2]\)</span>.</p>
+<dl>
+<dt>Lausn:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">));</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><figure class="align-center" style="width: 12cm">
+<img alt="_images/output_7_0.png" src="_images/output_7_0.png" />
+</figure>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="teikning-punktasafns-og-jafna-bestu-linu">
+<span id="teikning-punktasafns"></span><h3><span class="section-number">2.4.7. </span>Teikning punktasafns og jafna bestu línu<a class="headerlink" href="#teikning-punktasafns-og-jafna-bestu-linu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
+<p>Æfingarnar sem hér fylgja eru líka í vinnubókinni <span class="h"><a
+href="fallateikning.ipynb"
+download="fallateikning.ipynb"><b>Fallateikning</b></a></span>, sbr. innganginn í
+grein <a class="reference internal" href="#groffalla"><span class="std std-numref">2.4.6</span></a>. Mælt er með að spreyta sig á æfingunum þar. Ef
+eftirfarandi forritsbútar eru afritaðir héðan inn í JupyterLab þarf að keyra fyrst
+núllstillingarkaflann sem er eftst í grein <a class="reference internal" href="#groffalla"><span class="std std-numref">2.4.6</span></a>.</p>
+<ol class="arabic">
+<li><p><strong>Slembigögn:</strong> Í eftirfarandi reit (#PLÖNTUR) eru búin til slembigögn (sem gætu t.d.
+sýnt hæð 50 trjáa <span class="math notranslate nohighlight">\(y\)</span> sem fall af aldri þeirra, <span class="math notranslate nohighlight">\(x\)</span>). Hér
+fylgir <span class="math notranslate nohighlight">\(y\)</span> líkaninu:</p>
+<div class="math notranslate nohighlight">
+\[y = 1.5 x + 0.3 + \varepsilon\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(x\)</span> er normaldreifð skekkja með meðaltal 0 og
+staðalfrávik 0.7. Bætið við útprentun x og y aftast í reitinn og
+keyrið hann.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#PLÖNTUR</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">npr</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>     <span class="c1"># Jafnt dreifð gögn á bilinu [1,6]</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mf">0.7</span><span class="o">*</span><span class="n">npr</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>  <span class="c1"># Normaldreifðar skekkjur með staðalfrávik 0.7</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.3</span> <span class="o">+</span> <span class="n">e</span>
+</pre></div>
+</div>
+<dl>
+<dt>Lausn:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[5.74 2.00 5.68 3.61 3.54 2.66 4.74 1.47 2.39 1.87 4.51 2.01 2.31 3.03
+1.75 1.68 2.35 5.71 1.01 4.30 4.96 4.79 5.30 5.81 3.75 3.30 5.31 3.99
+1.33 3.44 2.67 1.04 5.22 2.91 1.59 2.39 1.85 3.30 2.17 4.25 1.32 1.06
+2.15 4.31 4.90 1.57 2.75 1.52 1.36 3.04] [8.21 3.22 8.91 6.15 4.88 4.48 6.57 2.03 3.42 3.53 6.81 2.43 3.12 4.40
+2.55 4.20 3.40 8.71 2.87 5.96 8.27 8.67 7.64 8.78 5.71 5.31 8.56 7.12
+2.29 4.83 3.44 2.00 8.81 5.33 3.49 2.52 3.23 6.17 3.27 6.02 1.44 1.50
+3.91 6.36 7.63 1.35 4.40 3.59 3.32 5.63]
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p><strong>Vigrar hlið við hlið:</strong> Í úttakinu að ofan
+parast samstæð gildi ekki. Ein leið til að bæta úr því er að búa til
+fylki með tvo dálka, <code class="docutils literal notranslate"><span class="pre">x</span></code> og <code class="docutils literal notranslate"><span class="pre">y</span></code>. Það má gera með virkjanum
+<code class="docutils literal notranslate"><span class="pre">np.c\_[⋅,⋅]</span></code> (c fyrir <em>column</em>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>(það er líka til np.r_ virki, og ágæt útskýring er í þessu <a class="reference external" href="https://www.quora.com/Can-anybody-elaborate-the-use-of-c_-in-numpy">Quora
+svari</a></p>
+<dl>
+<dt>Lausn:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,:])</span> <span class="c1"># Prentum bara efstu 10 gildin</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[[5.74 8.21]
+ [2.00 3.22]
+ [5.68 8.91]
+ [3.61 6.15]
+ [3.54 4.88]
+ [2.66 4.48]
+ [4.74 6.57]
+ [1.47 2.03]
+ [2.39 3.42]
+ [1.87 3.53]]
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p><strong>Skatter:</strong> En ekkert kemur samt í staðinn fyrir góða mynd:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 10cm">
+<img alt="_images/output_13_0.png" src="_images/output_13_0.png" />
+</figure>
+<p>Teiknum nú slembigögnin úr reitnum #PLÖNTUR með scatter.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Litir geta verið r, g, b, y, w, k (black), c (cyan), m (magenta) eða
+<a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors#Extended_colors">nafn</a></p></li>
+<li><p>Bætið við rúðuneti með <code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code></p></li>
+<li><p>Hægt er að merkja x-ás með <code class="docutils literal notranslate"><span class="pre">plt.xlabel</span></code>, t.d.
+<code class="docutils literal notranslate"><span class="pre">plt.xlabel('Aldur</span> <span class="pre">(ár)')</span></code> og sömuleiðis y-ás</p></li>
+</ul>
+</div></blockquote>
+<dl>
+<dt>Lausn:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tomato&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Aldur (ár)&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Hæð (m)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><figure class="align-center" style="width: 10cm">
+<img alt="_images/output_15_0.png" src="_images/output_15_0.png" />
+</figure>
+</dd>
+</dl>
+</li>
+<li><p><strong>Jafna bestu línu:</strong> Við viljum finna „jöfnu bestu línu“, sem sé beina línu
+sem lýsir gagnasafninu vel. Ef jafna línunnar er <span class="math notranslate nohighlight">\(y = l(x) = ax + b\)</span> þá
+viljum við velja <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> þannig að summan af (lóðréttum)
+fjarlægðum punktanna frá línunni í öðru veldi verði sem minnst. Með öðrum
+orðum viljum við lágmarka fallið:</p>
+<div class="math notranslate nohighlight">
+\[S(a,b) = \sum_{i=1}^{50}(ax_i + b - y_i)^2\]</div>
+<p>Skoðum <a class="reference external" href="https://en.wikipedia.org/wiki/Linear_least_squares#Example">þennan kafla</a> í
+Wikipediu-greininni um línuleg minnstu kvaðröt (<em>Linear least squares</em>) til að
+glöggva okkur á þessu. Við getum beðið með að skoða stærðfræðina sem nota má til
+að finna <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> því það er til NumPy fall sem gerir
+það fyrir okkur:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(a,b)</span> <span class="pre">=</span> <span class="pre">np.polyfit(x,y,1)</span></code></p>
+</div></blockquote>
+<p>Síðasti stikinn (sem er 1 hér) er stigið á margliðunni sem við ákvörðum,
+en bein lína er 1. stigs margliða.</p>
+<dl>
+<dt>Byrjun á lausn:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Línan er y = </span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">x + </span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Línan</span> <span class="n">er</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.49</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.37</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>Næsta skref er að teikna beinu línuna inn á grafið í lið 3. Það getum
+við gert með því að finna endapunkta hennar:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(X_0, Y_0) = (1, l(1)) = (1, 1a + b) \text{ og }\\
+(X_1, Y_1) = (6, l(6)) = (6, 6a + b)\end{split}\]</div>
+<p>Það er auðvelt í Python, því <code class="docutils literal notranslate"><span class="pre">*</span></code> og <code class="docutils literal notranslate"><span class="pre">+</span></code> verka stakvís á vigra: Látum <code class="docutils literal notranslate"><span class="pre">X</span>
+<span class="pre">=</span> <span class="pre">np.array([1,6])</span></code> og <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">=</span> <span class="pre">a*X</span> <span class="pre">+</span> <span class="pre">b</span></code></p>
+<dl>
+<dt>Framhald á lausn:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">X</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;X=</span><span class="si">{</span><span class="n">X</span><span class="si">}</span><span class="s1">, Y=</span><span class="si">{</span><span class="n">Y</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span> <span class="mi">6</span><span class="p">],</span> <span class="n">Y</span><span class="o">=</span><span class="p">[</span><span class="mf">1.86</span> <span class="mf">9.32</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>Að lokum er teiknað strik frá <span class="math notranslate nohighlight">\((X_0, Y_0)\)</span> til <span class="math notranslate nohighlight">\((X_1,
+Y_1)\)</span> áður en lausnin á 3. lið er keyrð aftur:</p>
+<dl>
+<dt>Lokin á lausninni:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+
+<span class="c1"># Og svo úr lausn á 3. lið:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tomato&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Aldur (ár)&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Hæð (m)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><figure class="align-center" style="width: 10cm">
+<img alt="_images/output_19_1.png" src="_images/output_19_1.png" />
+</figure>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kafli03.html" class="btn btn-neutral float-right" title="3. Föll af mörgum breytistærðum" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="kafli01.html" class="btn btn-neutral" title="1. Forritun í Python" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2019',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/documentation_options.js"></script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -v -r -u html/* /Volumes/cs/htdocs/strei
