@@ -1,16 +1,20 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="is" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. Forritun í Python &mdash; Stærðfræðigreining I (STÆ104G) 2021</title>
+  
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Forritun í Python &mdash; Stærðfræði og reiknifræði 2019</title>
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom_admonitions.css" type="text/css" />
 
   
   
@@ -18,27 +22,27 @@
   
 
   
+  
 
   
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
+    
 
 <!-- hoverrole.py css code -->
 <style type="text/css">
@@ -110,12 +114,10 @@
   div.code-block-caption{margin-bottom: 4px}
 </style>
 
-        <link rel="index" title="Atriðaskrá"
-              href="genindex.html"/>
-        <link rel="search" title="Leit" href="search.html"/>
-    <link rel="top" title="Stærðfræði og reiknifræði 2019" href="index.html"/>
-        <link rel="next" title="2. NumPy, Pandas og Matplotlib" href="kafli02.html"/>
-        <link rel="prev" title="Stærðfræði og reiknifræði" href="index.html"/>
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="2. NumPy, Pandas og Matplotlib" href="kafli02.html" />
+    <link rel="prev" title="Stærðfræði og reiknifræði" href="index.html" />
 
 
 
@@ -125,47 +127,57 @@
 
  
 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-
-        
-          <a href="index.html" class="icon icon-home"> Stærðfræði og reiknifræði
-        
-
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
-          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
-        
-        </a>
 
-        
+          
+            <a href="index.html" class="icon icon-home"> Stærðfræðigreining I (STÆ104G)
+          
+
+          
+            
+            <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Leit" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Forritun í Python</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#inngangur-um-python">1.1. Inngangur: Um Python</a><ul>
@@ -238,265 +250,114 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. NumPy, Pandas og Matplotlib</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#inngangur">2.1. Inngangur</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hva-er-reiknifraei">2.1.1. Hvað er reiknifræði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#python-pakkar-fyrir-visindalega-reikninga">2.1.2. Python-pakkar fyrir vísindalega reikninga</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#vigrar-og-fylki-i-staerfraei">2.1.3. Vigrar og fylki í stærðfræði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#um-ori-fylki">2.1.4. Um orðið Fylki</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#numpy-pakkinn">2.2. NumPy pakkinn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#kynning-a-numpy">2.2.1. Kynning á NumPy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#leibeiningar-um-numpy-a-netinu">2.2.2. Leiðbeiningar um NumPy á netinu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hvernig-ma-bua-til-numpy-fylki-og-visa-stok-eirra">2.2.3. Hvernig má búa til NumPy fylki og vísa stök þeirra?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#eiginleikar-vigra-og-fylkja">2.2.4. Eiginleikar vigra og fylkja</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#foll-og-aferir-i-numpy">2.2.5. Föll og aðferðir í NumPy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#innlestur-og-utskrift">2.2.6. Innlestur og útskrift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fleiri-foll">2.2.7. Fleiri föll</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#bylting-og-afpokkun">2.2.8. Bylting og afpökkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#rokvisun">2.2.9. Rökvísun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#innfeldi">2.2.10. Innfeldi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hlutvigrar-og-fylki-linur-og-dalkar">2.2.11. Hlutvigrar og -fylki, línur og dálkar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#pandas-fyrir-gagnavinnslu">2.3. Pandas fyrir gagnavinnslu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#pandas-gogn">2.3.1. Pandas gögn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#helstu-pandas-skipanir">2.3.2. Helstu Pandas-skipanir</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#teikning-me-matplotlib">2.4. Teikning með Matplotlib</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.4.1. Inngangur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#einfaldar-myndir">2.4.2. Einfaldar myndir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#pandas-og-teikningar">2.4.3. Pandas og teikningar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#toflur-yfir-matplotlib-skipanir">2.4.4. Töflur yfir Matplotlib-skipanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#rju-daemi-um-teikningar">2.4.5. Þrjú dæmi um teikningar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#teikning-af-grofum-falla">2.4.6. Teikning af gröfum falla</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#teikning-punktasafns-og-jafna-bestu-linu">2.4.7. Teikning punktasafns og jafna bestu línu</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Föll af mörgum breytistærðum</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#inngangur">3.1. Inngangur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#foll-af-tveimur-breytistaerum-ea-tvivi-foll">3.2. Föll af tveimur breytistærðum eða tvívíð föll</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#staerfraeileg-skilgreining">3.2.1. Stærðfræðileg skilgreining</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#grof-og-myndir-af-tvivium-follum">3.2.2. Gröf og myndir af tvívíðum föllum</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#teikning-tvivira-falla-me-python">3.3. Teikning tvívíðra falla með Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearlinur-me-skipuninni-contour">3.3.1. Hæðarlínur með skipuninni <em>contour</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-haearlinuteikningu">3.3.2. Dæmi um hæðarlínuteikningu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearsvaei-me-skipuninni-contourf">3.3.3. Hæðarsvæði með skipuninni <em>contourf</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#netmyndir-me-plot-surface">3.3.4. Netmyndir með <em>plot_surface</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upplystar-myndir-me-plot-surface">3.3.5. Upplýstar myndir með <em>plot_surface</em></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#hlutafleiur">3.4. Hlutafleiður</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-hlutafleiu">3.4.1. Skilgreining hlutafleiðu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#arir-rithaettir-fyrir-hlutafleiu">3.4.2. Aðrir rithættir fyrir hlutafleiðu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#stigull">3.5. Stigull</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rithattur-og-oranotkun">3.5.1. Ritháttur og orðanotkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tvivi-kejuregla-og-tengsl-stiguls-og-hlutafleia">3.5.2. Tvívíð keðjuregla og tengsl stiguls og hlutafleiða</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stefnuafleia">3.5.3. Stefnuafleiða</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#teikning-stigla-i-python">3.5.4. Teikning stigla í Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#utgildi-tvivira-falla">3.6. Útgildi tvívíðra falla</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#hagildi-og-laggildi">3.6.1. Hágildi og lággildi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#utgildi-fundin-me-vi-a-leysa-jofnur">3.6.2. Útgildi fundin með því að leysa jöfnur</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margvi-foll">3.7. Margvíð föll</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-og-daemi">3.7.1. Skilgreining og dæmi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#vifang-skrifa-sem-vigur">3.7.2. Viðfang skrifað sem vigur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margviir-stiglar">3.7.3. Margvíðir stiglar</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Línuleg algebra</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#vigrar-og-fylki">4.1. Vigrar og fylki</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-vigurs">4.1.1. Skilgreining vigurs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-fylkis">4.1.2. Skilgreining fylkis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#einfaldar-vigur-og-fylkjaagerir">4.1.3. Einfaldar vigur- og fylkjaaðgerðir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-vigur-og-fylkjaagerir">4.1.4. Reglur um vigur- og fylkjaaðgerðir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#innfeldi">4.1.5. Innfeldi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#hornalina-fylkis-og-bylting">4.1.6. Hornalína fylkis og bylting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#serstok-fylki">4.1.7. Sérstök fylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#margfoldun-fylkis-og-vigurs">4.1.8. Margföldun fylkis og vigurs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#linuleg-foll-og-innfeldi">4.2. Línuleg föll og innfeldi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-a-linulegu-falli">4.2.1. Skilgreining á línulegu falli</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-linuleg-foll">4.2.2. Reglur um línuleg föll</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#taylor-nalgun">4.3. Taylor-nálgun</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stigull-af-margviu-falli">4.3.1. Stigull af margvíðu falli</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-taylors-i-einni-og-fleiri-viddum">4.3.2. Setning Taylors í einni og fleiri víddum</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#norm-fjarlaegir-og-horn">4.4. Norm, fjarlægðir og horn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-norms">4.4.1. Skilgreining norms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-norm">4.4.2. Reglur um norm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjarlaegir">4.4.3. Fjarlægðir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#ortini-og-fjarlaeg-milli-vigra">4.4.4. Orðtíðni og fjarlægð milli vigra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#horn-milli-vigra">4.4.5. Horn milli vigra</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#tolfraeileg-foll-af-vigrum">4.5. Tölfræðileg föll af vigrum</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#mealtal-dreifni-og-staalfravik">4.5.1. Meðaltal, dreifni og staðalfrávik</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stolun">4.5.2. Stöðlun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fylgni">4.5.3. Fylgni</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#grunnar-og-linulega-hair-og-ohair-vigrar">4.6. Grunnar og línulega háðir og óháðir vigrar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-hair-vigrar">4.6.1. Línulega háðir vigrar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-ohair-vigrar">4.6.2. Línulega óháðir vigrar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#grunnar">4.6.3. Grunnar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#venjulegir-einingavigrar-og-grunnar-eirra">4.6.4. Venjulegir einingavigrar og grunnar þeirra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#verstalair-grunnar">4.6.5. Þverstaðlaðir grunnar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lausn-jofnuhneppa">4.7. Lausn jöfnuhneppa</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fylkjaframsetning-linulegra-jofnuhneppa">4.7.1. Fylkjaframsetning línulegra jöfnuhneppa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulegar-samantektir-jofnuhneppi-og-tilvist-lausna">4.7.2. Línulegar samantektir, jöfnuhneppi og tilvist lausna</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-hair-vigrar-og-python">4.7.3. Línulega háðir vigrar og Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#fylkjaalgebra">4.8. Fylkjaalgebra</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#margfoldun-fylkja">4.8.1. Margföldun fylkja</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#nullfylki-og-einingafylki">4.8.2. Núllfylki og einingafylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-fylkjamargfoldun">4.8.3. Reglur um fylkjamargföldun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverf-fylki">4.8.4. Andhverf fylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-byltingu-og-andhverfu">4.8.5. Reglur um byltingu og andhverfu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#linulegar-varpanir-og-fylkjamargfoldun">4.9. Línulegar varpanir og fylkjamargföldun</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-a-linulegri-vorpun">4.9.1. Skilgreining á línulegri vörpun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulegar-varpanir-og-margfoldun-fylkja-og-vigra">4.9.2. Línulegar varpanir og margföldun fylkja og vigra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samsettar-linulegar-varpanir-og-margfoldun-fylkja">4.9.3. Samsettar línulegar varpanir og margföldun fylkja</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Dæmi um hagnýtingu línulegrar algebru</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skipting-i-hopa-ea-flokkun">5.1. Skipting í hópa eða flokkun</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-flokkun-tvivira-vigra">5.1.1. Dæmi um flokkun tvívíðra vigra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-hagnytingu-flokkunar">5.1.2. Dæmi um hagnýtingu flokkunar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#rithattur-fyrir-flokkun">5.1.3. Ritháttur fyrir flokkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mipunktar-hopa">5.1.4. Miðpunktar hópa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#besta-hopaskipting">5.1.5. Besta hópaskipting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#k-means-reikniriti">5.1.6. <em>k-means</em> reikniritið</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-nokkrar-k-means-itrekanir">5.1.7. Dæmi um nokkrar k-means-ítrekanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#forvinnsla-vigra-me-whiten">5.1.8. Forvinnsla vigra með <code class="code docutils literal notranslate"><span class="pre">whiten</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#fylkjamargfoldun-og-tolvugrafik">5.2. Fylkjamargföldun og tölvugrafík</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#fylki-og-net">5.3. Fylki og net</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#net-hnutar-og-leggir">5.3.1. Net, hnútar og leggir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#grannafylki">5.3.2. Grannafylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#vegir-i-netum">5.3.3. Vegir í netum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#legufylki">5.3.4. Legufylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#flaeinet">5.3.5. Flæðinet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#lindir-og-osar">5.3.6. Lindir og ósar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#linuleg-hreyfikerfi">5.4. Línuleg hreyfikerfi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-linulegra-hreyfikerfa">5.4.1. Skilgreining línulegra hreyfikerfa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#roun-mannfjolda-ea-stofnstaerar">5.4.2. Þróun mannfjölda eða stofnstærðar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#diffurjafna-fyrir-hreyfingu-hlutar">5.4.3. Diffurjafna fyrir hreyfingu hlutar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#diffurjofnu-breytt-i-linulegt-hreyfikerfi">5.4.4. Diffurjöfnu breytt í línulegt hreyfikerfi</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. NumPy, Pandas og Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Föll af mörgum breytistærðum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Línuleg algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Dæmi um hagnýtingu línulegrar algebru</a></li>
 </ul>
 
+            
           
+        </div>
         
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Stærðfræði og reiknifræði</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Stærðfræðigreining I (STÆ104G)</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li><span class="section-number">1. </span>Forritun í Python</li>
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Forritun í Python</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/kafli01.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="forritun-i-python">
+  <div class="section" id="forritun-i-python">
 <span id="c-inngangur"></span><h1><span class="section-number">1. </span>Forritun í Python<a class="headerlink" href="#forritun-i-python" title="Varanlegur hlekkur á titilinn">¶</a></h1>
-<section id="inngangur-um-python">
+<div class="section" id="inngangur-um-python">
 <h2><span class="section-number">1.1. </span>Inngangur: Um Python<a class="headerlink" href="#inngangur-um-python" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="einfalt-og-aulaert-mal">
+<div class="section" id="einfalt-og-aulaert-mal">
 <span id="inngangur"></span><h3><span class="section-number">1.1.1. </span>Einfalt og auðlært mál<a class="headerlink" href="#einfalt-og-aulaert-mal" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Python er forritunarmál sem kom fram árið 1991 og hefur náð mikilli útbreiðslu. Það var hollenski tölvufræðingurinn Guido van Rossum sem bjó Python til og spilaði stórt hlutverk í þróun þess, en margir fleiri hafa lagt hönd á plóg. Málið heitir eftir grínistahópnum <em>Monty Python</em> (sem aftur dregur nafn af kyrkislöngum, <em>pythons</em>).</p>
-<figure class="align-center" id="id6" style="width: 9cm">
+<div class="figure align-center" id="id6" style="width: 9cm">
 <img alt="_images/monty-python.jpg" src="_images/monty-python.jpg" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.1 </span><span class="caption-text">Monty Python grínistarnir</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 1.1: </span><span class="caption-text">Monty Python grínistarnir</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p>Vinsælasta útgáfan af Python nefnist formlega CPython og er opin og ókeypis. Hana er að finna á <a class="reference external" href="http://python.org">python.org</a> og þar má líka lesa um <em>Python Software Foundation</em> sem hefur síðan 2001 séð um þróun málsins, leyfi, dreifingu, Python-ráðstefnur o.s.frv.</p>
 <p>Frá upphafi var markmiðið að búa til einfalt og auðlært forritunarmál, sem væri þannig að oftast væri bara ein augljós og einföld leið til að útfæra tiltekna aðgerð eða reikninga. Forrit áttu að samanstanda af enskum orðum að mestu leyti en ekki samansuðu tákna eins og algengt er t.d. í Perl-forritum, sem minna á blótsyrði í Andrés-blaði.</p>
-<figure class="align-center" id="id7" style="width: 10cm">
+<div class="figure align-center" id="id7" style="width: 10cm">
 <img alt="_images/perl.png" src="_images/perl.png" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.2 </span><span class="caption-text">Perl-forrit og Andrés Önd</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="fallasafn-og-pakkar">
+<p class="caption"><span class="caption-number">Mynd 1.2: </span><span class="caption-text">Perl-forrit og Andrés Önd</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+</div>
+<div class="section" id="fallasafn-og-pakkar">
 <span id="pakkar"></span><h3><span class="section-number">1.1.2. </span>Fallasafn og pakkar<a class="headerlink" href="#fallasafn-og-pakkar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Með Python fylgir viðamikið fallasafn (<em>standard library</em>) og auk þess eru til ótal viðbætur sem kallast <strong>pakkar</strong> (<em>packages</em>) og eru ekki hluti af hinu eiginlega forritunarmáli. Opinber <a class="reference external" href="https://pypi.org">pakkavefur</a> fyrir Python hefur 282.000 pakka í janúar 2021, og hann fer ört vaxandi (voru 164.000 í janúar 2019). Fallasafnið samanstendur af mörgum <strong>einingum</strong> (<em>modules</em>), og það sama gildir um flesta pakka. Það er sama hvort ætlunin sé að tengjast Oracle gagnagrunni, búa til vefsíðu, skrifa tölvuleik eða leysa stærðfræðileg verkefni: maður getur alltaf fundið vandaðan og almennan Python-pakka í verkið. Síðar í þessum nótum verður fjallað um nokkra slíka m.a. NumPy (fyrir vigur- (<em>vector-</em>) og fylkjareikninga), SciPy (fyrir reiknifræði), Pandas (fyrir gagnavinnslu) og Matplotlib (til að teikna).</p>
-</section>
-<section id="utbreisla">
+</div>
+<div class="section" id="utbreisla">
 <h3><span class="section-number">1.1.3. </span>Útbreiðsla<a class="headerlink" href="#utbreisla" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ýmsir vefir mæla vöxt og vinsældir forritunarmála og mælist Python í efstu sætunum á þeim flestum, ásamt Javascript, Java, C, C# og C++. Á einum þeirra má t.d. finna eftirfarandi mynd:</p>
-<figure class="align-center" id="id8" style="width: 14cm">
+<div class="figure align-center" id="id8" style="width: 14cm">
 <img alt="_images/python-vöxtur.png" src="_images/python-vöxtur.png" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.3 </span><span class="caption-text">Vöxtur í vinsældum Python</span><a class="headerlink" href="#id8" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="framkvaemd-forrita">
+<p class="caption"><span class="caption-number">Mynd 1.3: </span><span class="caption-text">Vöxtur í vinsældum Python</span><a class="headerlink" href="#id8" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+</div>
+<div class="section" id="framkvaemd-forrita">
 <h3><span class="section-number">1.1.4. </span>Framkvæmd forrita<a class="headerlink" href="#framkvaemd-forrita" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Python er túlkað forritunarmál sem þýðir að forrit eru ekki þýdd fyrirfram á vélamál, heldur eru skipanir þess lesnar af Python túlkinum hver á fætur annarri og framkvæmdar jafnóðum. Hægt er að hugsa sér að túlkurinn hermi eftir ímynduðum gjörva sem hefur Python sem móðurmál. Þetta er reyndar nokkur einföldun, því Python er venjulega þýtt yfir á millimál sem er fljótlegra að túlka. Túlkuð forrit keyra hægar en þýdd, en á móti kemur að ekki þarf að bíða eftir þýðingu, og auk þess fylgja ýmsir kostir fyrir villuleit og þróun forrita skref fyrir skref.</p>
-</section>
-<section id="gildi-eru-togu-en-breytur-ekki">
+</div>
+<div class="section" id="gildi-eru-togu-en-breytur-ekki">
 <h3><span class="section-number">1.1.5. </span>Gildi eru töguð en breytur ekki<a class="headerlink" href="#gildi-eru-togu-en-breytur-ekki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Eitt sem skilur Python frá ýmsum öðrum forritunarmálum, t.d. Java og C, er að það er engin þörf á að skilgreina breytur fyrirfram og segja Python-kerfinu af hvaða tagi (<em>type</em>) þær séu. Vissulega hefur Python allskyns tög (<em>types</em>), heiltölur, kommutölur, strengi, vigra, mengi o.s.frv., en það eru gildin sem breyturnar fá sem hafa tög, en ekki breyturnar sjálfar. Forrit getur haft skipun <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">3.5</span></code>, og þá verður x kommutala, og neðar getur svo staðið <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{2,</span> <span class="pre">5,</span> <span class="pre">8}</span></code> og eftir það er x mengi.</p>
-</section>
-<section id="python-leibeiningar-a-netinu">
+</div>
+<div class="section" id="python-leibeiningar-a-netinu">
 <span id="python-leibein-a-netinu"></span><h3><span class="section-number">1.1.6. </span>Python-leiðbeiningar á netinu<a class="headerlink" href="#python-leibeiningar-a-netinu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Fjölmargar leiðbeiningar um Python má finna á netinu, stuttar og langar, ókeypis og til sölu. Hér eru nokkrar gjaldfrjálsar:</p>
 <ul class="simple">
@@ -505,11 +366,11 @@
 <li><p><a class="reference external" href="https://www.learnpython.org/">Learn Python</a> (með reitum til að keyra forrit og skoða úttak)</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/tutorial/index.html">The Python Tutorial</a> (opinberar Python leiðbeiningar á python.org, fyrir svolítið lengra komna)</p></li>
 </ul>
-</section>
-</section>
-<section id="daemi-um-python-forrit">
+</div>
+</div>
+<div class="section" id="daemi-um-python-forrit">
 <span id="kafli1-1"></span><h2><span class="section-number">1.2. </span>Dæmi um Python forrit<a class="headerlink" href="#daemi-um-python-forrit" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="collatz-runur">
+<div class="section" id="collatz-runur">
 <h3><span class="section-number">1.2.1. </span>Collatz-runur<a class="headerlink" href="#collatz-runur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Collatz-runur eru reiknaðar þannig að byrjað er með einhverja tölu <span class="math notranslate nohighlight">\(n_0\)</span>
 og svo er næsta tala reiknuð aftur og aftur skv.</p>
@@ -520,12 +381,12 @@ og svo er næsta tala reiknuð aftur og aftur skv.</p>
    \end{cases}\end{split}\]</div>
 <p>Ef nýja talan <span class="math notranslate nohighlight">\(n_{k+1} = 1\)</span> þá er hætt.</p>
 <p>Ef við byrjum t.d. með <span class="math notranslate nohighlight">\(n_0=5\)</span> þá fæst runan 5, 16, 8, 4, 2, 1. Runurnar heita eftir þýska stærðfræðingnum Lothar Collatz (1910–1990) sem setti fram þá tilgátu árið 1937 að það sé sama hvaða <span class="math notranslate nohighlight">\(n_0\)</span> er byrjað með, runan muni alltaf að lokum lenda í 1 og hætta. Enn hefur engum tekist að sanna tilgátuna, og reyndar virðast jafnvel færustu stærðfræðingar ekki hafa hugmynd um hvernig ætti að byrja.</p>
-</section>
-<section id="forrit-fyrir-collatz-runur">
+</div>
+<div class="section" id="forrit-fyrir-collatz-runur">
 <h3><span class="section-number">1.2.2. </span>Forrit fyrir Collatz-runur<a class="headerlink" href="#forrit-fyrir-collatz-runur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Eftirfarandi Python forrit finnur og prentar út Collatz-runur sem byrja á 2, 3,…, 7:</p>
 <div class="literal-block-wrapper docutils container" id="collatz">
-<div class="code-block-caption"><span class="caption-number">Forrit 1.1 </span><span class="caption-text">Collatz</span><a class="headerlink" href="#collatz" title="Varanlegur hlekkur á þennan kóða">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">1.1 </span><span class="caption-text">Collatz</span><a class="headerlink" href="#collatz" title="Varanlegur hlekkur á þennan kóða">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">næsta</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;skilar næstu tölu á eftir x í Collatz-runu&#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -549,8 +410,8 @@ og svo er næsta tala reiknuð aftur og aftur skv.</p>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="python-atrii-sem-koma-fyrir-i-forritinu-collatz">
+</div>
+<div class="section" id="python-atrii-sem-koma-fyrir-i-forritinu-collatz">
 <span id="icollatz"></span><h3><span class="section-number">1.2.3. </span>Python atriði sem koma fyrir í forritinu Collatz<a class="headerlink" href="#python-atrii-sem-koma-fyrir-i-forritinu-collatz" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <ul>
 <li><p>Ný föll má skilgreina með því að byrja á <strong>def</strong> og nöfn þeirra mega hafa
@@ -613,46 +474,42 @@ nota tvöfaldar, t.d. <code class="code docutils literal notranslate"><span clas
 <p class="admonition-title">Æfing</p>
 <p>Á vefnum <a class="reference external" href="https://www.programiz.com/python-programming/online-compiler">programiz</a>
 er hægt að prófa Python forrit. Farið þangað og afritið (eða sláið inn) forritið
-<a class="reference internal" href="#collatz"><span class="std std-numref">Forrit 1.1</span></a> (þ.e. Collatz). Prófið nokkrar fleiri byrjunartölur, m.a.
+<a class="reference internal" href="#collatz"><span class="std std-numref">1.1</span></a> (þ.e. Collatz). Prófið nokkrar fleiri byrjunartölur, m.a.
 27.</p>
 </div>
 </li>
 </ul>
-</section>
-</section>
-<section id="umhverfi-fyrir-python-jupyterlab">
+</div>
+</div>
+<div class="section" id="umhverfi-fyrir-python-jupyterlab">
 <h2><span class="section-number">1.3. </span>Umhverfi fyrir Python: <em>JupyterLab</em><a class="headerlink" href="#umhverfi-fyrir-python-jupyterlab" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Í þessum fyrirlestrarnótum er miðað við að notað sé umhverfi sem nefnist <em>JupyterLab</em>. Segja má að JupyterLab sé arftaki kerfis sem nefnist <em>Jupyter Notebook</em>. Skipanirnar eru að mestu þær sömu en JupyterLab er að ýmsu leyti nútímalegra og höfundar þess búast við að það muni um síðir leysa Jupyter Notebook af hólmi.</p>
-<section id="uppsetning-python-og-jupyterlab">
+<div class="section" id="uppsetning-python-og-jupyterlab">
 <h3><span class="section-number">1.3.1. </span>Uppsetning Python og JupyterLab<a class="headerlink" href="#uppsetning-python-og-jupyterlab" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Auðveldasta leiðin til að setja upp bæði Python og Jupyter í einu lagi er að setja upp hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python er líka svoleiðis slanga). Með Anaconda fylgir nýjasti Python túlkurinn, Jupyter, meira en 1000 vinsælir Python-pakkar (þar á meðal þeir þrír sem taldir eru að ofan, NumPy, SciPy og Matplotlib) og ýmislegt fleira. Til að setja það upp þarf að heimsækja <a class="reference external" href="https://anaconda.com/">anaconda.com</a>, velja <em>Products–Individual Edition</em>, hlaða niður 64 bita <em>Graphical Installer</em> fyrir ykkar stýrikerfi og fylgja leiðbeiningum.</p>
-<figure class="align-center" id="id9" style="width: 10cm">
+<div class="figure align-center" id="id9" style="width: 10cm">
 <img alt="_images/anaconda.jpg" src="_images/anaconda.jpg" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.4 </span><span class="caption-text">Græn anaconda slanga</span><a class="headerlink" href="#id9" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="keyrsla-jupyterlab">
+<p class="caption"><span class="caption-number">Mynd 1.4: </span><span class="caption-text">Græn anaconda slanga</span><a class="headerlink" href="#id9" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+</div>
+<div class="section" id="keyrsla-jupyterlab">
 <h3><span class="section-number">1.3.2. </span>Keyrsla JupyterLab<a class="headerlink" href="#keyrsla-jupyterlab" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Eftir uppsetningu Anaconda má smella á „Anaconda-Navigator“ appið og velja þar <em>JupyterLab</em>. Þá opnast JupyterLab í glugga í aðalvafra tölvunnar. Heimamappa er sjálfgefin í fyrsta sinn, en næst opnast JupyterLab á sama stað og síðast var hætt. JupyterLab-glugginn lítur svona út:</p>
-<figure class="align-center" id="id10" style="width: 15cm">
+<div class="figure align-center" id="id10" style="width: 15cm">
 <img alt="_images/jupyterlab.png" src="_images/jupyterlab.png" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.5 </span><span class="caption-text">JupyterLab-glugginn</span><a class="headerlink" href="#id10" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 1.5: </span><span class="caption-text">JupyterLab-glugginn</span><a class="headerlink" href="#id10" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p>Hér hefur verið byrjað í möppunni <code class="code docutils literal notranslate"><span class="pre">dropbox/strei</span></code> undir heimamöppu. Þarna eru tvær undirmöppur og fjórar skrár: tvær vinnubækur eða Jupyter-bækur (auðkenndar með .ipynb, en Jupyter hét áður IPython), eitt Python-forrit (auðkennt með .py) og ein pdf-skrá. Til að búa til nýja vinnubók er smellt á efri <em>Python 3</em>-hnappinn, og þá opnast bókin í nýjum flipa í vafranum. Hún heitir sjálfkrafa <em>Untitled2</em> en með því að hægri-smella á nafnið (eða smella á <em>File</em>) og velja <em>Rename notebook</em> má skíra hana einhverju skynsemlegra nafni. Eldri bók er opnuð með því að smella á hana í skráalistanum vinstra megin.</p>
-</section>
-<section id="jupyter-vinnubaekur">
+</div>
+<div class="section" id="jupyter-vinnubaekur">
 <h3><span class="section-number">1.3.3. </span>Jupyter vinnubækur<a class="headerlink" href="#jupyter-vinnubaekur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Vinnubækur innihalda <strong>reiti</strong> (<em>cells</em>) af tvennu tagi, <strong>forritsreiti</strong> (<em>code</em>), og <strong>textareiti</strong> (<em>markdown</em>). Í þeim fyrrnefndu eru Python-forrit eða forritsbútar, en í hinum eru fyrirsagnir og skýringartextar sniðnir með umbrotsmálinu (<em>markup language</em>) <em>Markdown</em>. Í textareitina er líka hægt að setja stærðfræðiformúlur sniðnar með formúlumálinu <em>LaTeX</em> og jafnvel myndir ef vill. Forritsbútana er hægt að keyra og fer úttak keyrslu inn í bókina, neðst í viðkomandi forritsreit. Segðin sem er neðst í hverjum reit skrifast sjálfkrafa út, en nota þarf print-fallið til að skrifa út niðurstöður framar í reitnum.</p>
 <p>Það er sæmilega auðvelt að læra á notkun Jupyters með því að prófa sig áfram, en líka getur verið gagnlegt að fara í gegn um leiðbeiningar sem valdar eru með <em>Help—User Interface Tour</em> (úr opinni bók), eða skoða leiðbeiningar á netinu, sbr grein <a class="reference internal" href="#jupyter-leibein-a-netinu"><span class="std std-numref">1.3.7</span></a>. Með <em>Help</em>-hnappnum má líka fá hjálp um Python sjálft, Markdown-málið og ýmislegt fleira.</p>
-</section>
-<section id="jupyter-skipanir">
+</div>
+<div class="section" id="jupyter-skipanir">
 <h3><span class="section-number">1.3.4. </span>Jupyter skipanir<a class="headerlink" href="#jupyter-skipanir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <table class="colwidths-auto docutils align-default" id="jupyterskraaskipanir">
-<caption><span class="caption-number">Tafla 1.1 </span><span class="caption-text">Skráaskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterskraaskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<caption><span class="caption-number">Tafla 1.1: </span><span class="caption-text">Skráaskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterskraaskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>Hægri-smellt á <em>Untitled</em> efst t.v. og <em>Rename-Notebook</em> <br>
 File→Rename-Notebook</p></td>
@@ -673,7 +530,7 @@ smellt á diskling</p></td>
 </tbody>
 </table>
 <table class="colwidths-auto docutils align-default" id="jupyterkeyrsluskipanir">
-<caption><span class="caption-number">Tafla 1.2 </span><span class="caption-text">Keyrsluskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterkeyrsluskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<caption><span class="caption-number">Tafla 1.2: </span><span class="caption-text">Keyrsluskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterkeyrsluskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>ctrl/enter</p></td>
 <td><p>Keyra forritsreit / sníða textareit</p></td>
@@ -688,7 +545,7 @@ Kernel→Restart-kernel</p></td>
 </tbody>
 </table>
 <table class="colwidths-auto docutils align-default" id="jupyterreitaskipanir">
-<caption><span class="caption-number">Tafla 1.3 </span><span class="caption-text">Reitaskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterreitaskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<caption><span class="caption-number">Tafla 1.3: </span><span class="caption-text">Reitaskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterreitaskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>Tvísmellt í textareit sem búið er að sníða</p></td>
 <td><p>Sýna reit sem <em>markdown</em> (til að breyta innihaldinu)</p></td>
@@ -726,7 +583,7 @@ Edit→Split-cell</p></td>
 </tbody>
 </table>
 <table class="colwidths-auto docutils align-default" id="jupyterritilskipanir">
-<caption><span class="caption-number">Tafla 1.4 </span><span class="caption-text">Ritilskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterritilskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<caption><span class="caption-number">Tafla 1.4: </span><span class="caption-text">Ritilskipanir fyrir Jupyter-vinnubækur</span><a class="headerlink" href="#jupyterritilskipanir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>örvar <br>
 Home, End (Fn/←, Fn/→ á Mac) <br>
@@ -755,8 +612,8 @@ control/xcv (command/xcv)</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="vistun-vinnuboka-a-pdf-snii">
+</div>
+<div class="section" id="vistun-vinnuboka-a-pdf-snii">
 <h3><span class="section-number">1.3.5. </span>Vistun vinnubóka á PDF-sniði<a class="headerlink" href="#vistun-vinnuboka-a-pdf-snii" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Til að vista vinnubók í PDF-skjal veljið þá File→Print, eða sláið á command-p
 (Mac) eða ctrl-p (Windows), og svo Destination <em>Save-as-PDF</em>. Þá birtist gluggi
@@ -765,8 +622,8 @@ JupyterLab en ekki í vafranum]. Því miður er lús í kerfinu þannig að ef
 Latex-stærðfræðiformúlur eru settar inn í textareiti í Jupyter-bókinni þá
 prentast þær ekki rétt. Til að prenta þær þarf að velja File–Export notebook
 as–HTML, og svo þarf að vista HTML-skjalið sem verður til í PDF.</p>
-</section>
-<section id="markdown-og-latex">
+</div>
+<div class="section" id="markdown-og-latex">
 <h3><span class="section-number">1.3.6. </span>Markdown og Latex<a class="headerlink" href="#markdown-og-latex" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Finna má ýmsar leiðbeiningar um <em>Markdown</em>-málið á netinu, t.d. eftir Inge
 Halilovic (neðsti hlekkurinn í grein <a class="reference internal" href="#jupyter-leibein-a-netinu"><span class="std std-numref">1.3.7</span></a>). Þar er
@@ -774,12 +631,12 @@ Halilovic (neðsti hlekkurinn í grein <a class="reference internal" href="#jupy
 (með *texti* og **texti**), búa til lista, setja inn myndir (þær er hægt
 að líma inn eða draga inn með músinni), setja láréttar línur og ýmislegt fleira.</p>
 <p>Texti sem er inndreginn um a.m.k. fjögur bil birtist óbreyttur með jafnbilaletri (<em>monospaced font</em>).</p>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Dæmi um töflu</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/töfludæmi.png"><img alt="_images/töfludæmi.png" src="_images/töfludæmi.png" style="width: 5cm;" /></a>
-</figure>
-</aside>
+</div>
+</div>
 <p>Til að búa til töflu má nota lóðrétt strik til að afmarka dálka og : til að tilgreina
 vinstri/hægri jöfnun eða miðjun. Hér er einfalt dæmi:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>nr |nafn    |aldur
@@ -806,8 +663,8 @@ Fallegasti stærðfræðitextinn fæst með því að setja dollaramerki utan um
 stærðfræði, hvort sem það eru flóknar formúlur eða bara „<span class="math notranslate nohighlight">\(x=3\)</span>“ og
 „<span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> eru vigrar“ (sem sé <code class="code docutils literal notranslate"><span class="pre">$x=3$</span></code> og <code class="code docutils literal notranslate"><span class="pre">$a$</span> <span class="pre">og</span> <span class="pre">$b$</span>
 <span class="pre">eru</span> <span class="pre">vigrar</span></code>) en ekki „x=3“ og „a og b eru vigrar“.</p>
-</section>
-<section id="jupyter-leibeiningar-a-netinu">
+</div>
+<div class="section" id="jupyter-leibeiningar-a-netinu">
 <span id="jupyter-leibein-a-netinu"></span><h3><span class="section-number">1.3.7. </span>Jupyter-leiðbeiningar á netinu<a class="headerlink" href="#jupyter-leibeiningar-a-netinu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Hægt er að finna ýmsar vefsíður með leiðbeiningum um Jupyter Notebook og JupyterLab á netinu, t.d.</p>
 <blockquote>
@@ -826,11 +683,11 @@ notkun JupyterLab. Hlaðið niður þessari vinnubók, færið hana yfir í
 vinnumöppuna ykkar, opnið hana í Jupyter og fylgið leiðbeiningum í fyrstu
 þremur æfingunum.</p>
 </div>
-</section>
-</section>
-<section id="grunnatrii-python">
+</div>
+</div>
+<div class="section" id="grunnatrii-python">
 <span id="grunn-python"></span><h2><span class="section-number">1.4. </span>Grunnatriði Python<a class="headerlink" href="#grunnatrii-python" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="breytur-og-tog">
+<div class="section" id="breytur-og-tog">
 <h3><span class="section-number">1.4.1. </span>Breytur og tög<a class="headerlink" href="#breytur-og-tog" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Breyta</strong> (<em>variable</em>) er nafn á minnishólfi í tölvu, þar sem geyma má <strong>gildi</strong> (<em>value</em>). Gildin geta svo verið af ýmsu tagi, eða haft ýmis <strong>tög</strong> (<em>types</em>), og eins og fyrr segir eru þessi tög tengd gildunum en ekki breytunum sjálfum. Fyrir utan gildi sem geymd eru í breytum er líka talað um gildi sem útkomu úr <strong>útreikningi</strong> (<em>computation</em>) eða <strong>segð</strong> (<em>expression</em>), t.d. hefur segðin <span class="math notranslate nohighlight">\(2 + 2\)</span> gildið <span class="math notranslate nohighlight">\(4\)</span>. Ósamsett gildi, t.d. 2, heitir <strong>fasti</strong> (<em>constant</em>).</p>
 <p>Grunntögin í Python og dæmi um fasta af hverju tagi eru:</p>
@@ -857,8 +714,8 @@ föllum sem engu skila.</p></li>
 </ul>
 </div></blockquote>
 <p>Loks gildir sú regla að nafn breytu skal vera runa af bókstöfum, tölustöfum, og _, hún má ekki byrja á tölu og hún má ekki vera lykilorð í málinu eins og „for“ eða „return“. Dæmi: x_1, hæð, ∆.</p>
-</section>
-<section id="agerir-og-virkjar">
+</div>
+<div class="section" id="agerir-og-virkjar">
 <h3><span class="section-number">1.4.2. </span>Aðgerðir og virkjar<a class="headerlink" href="#agerir-og-virkjar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Það að ákvarða útkomu segðar er oft kallað <strong>aðgerð</strong> (<em>operation</em>). Grunnbyggingareiningar segða eru oftast <strong>einstæðar</strong> (<em>unary</em>) eða <strong>tvístæðar</strong> (<em>binary</em>) aðgerðir. Einstæð aðgerð er ýmist af taginu <span class="math notranslate nohighlight">\(\circ x\)</span> eða <span class="math notranslate nohighlight">\(f(x)\)</span> þar sem <span class="math notranslate nohighlight">\(\circ\)</span> er einstæður <strong>virki</strong> (<em>operator</em>), <span class="math notranslate nohighlight">\(f\)</span> er <strong>fall</strong> (<em>function</em>) og <span class="math notranslate nohighlight">\(x\)</span> er gildi. Tvístæð aðgerð er oft af taginu <span class="math notranslate nohighlight">\(x \circ y\)</span> þar sem <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru gildi og <span class="math notranslate nohighlight">\(\circ\)</span> er tvístæður virki. Gildin sem virkjar verka á eru stundum kallaðir <strong>þolendur</strong> (<em>operands</em>). Hér eru nokkur dæmi:</p>
 <blockquote>
@@ -900,8 +757,8 @@ and
 or
 </pre></div>
 </div>
-</section>
-<section id="gildisgjof">
+</div>
+<div class="section" id="gildisgjof">
 <span id="id1"></span><h3><span class="section-number">1.4.3. </span>Gildisgjöf<a class="headerlink" href="#gildisgjof" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Í stærðfræði er <strong>gildisgjöf</strong> (<em>assignment</em>) stundum táknuð með virkjanum <span class="math notranslate nohighlight">\(:=\)</span> (t.d. <span class="math notranslate nohighlight">\(x := 1\)</span>), og í reikniritum er stundum notuð ör (<span class="math notranslate nohighlight">\(x \gets 1\)</span>), og þá er einfalt jafnaðarmerki notað til að segja að tvær stærðir séu jafnar eða kanna hvort þær séu jafnar: „<span class="math notranslate nohighlight">\(x = 1\)</span>“ þýðir að breytan <span class="math notranslate nohighlight">\(x\)</span> (sem þegar hefur verið skilgreind) hafi gildið 1, og „ef <span class="math notranslate nohighlight">\(x = 1\)</span>, þá…“ spyr hvort <span class="math notranslate nohighlight">\(x\)</span> sé 1. Í forritunarmálum er hinsvegar orðið mjög algengt að nota einfalt jafnaðarmerki fyrir gildisgjöf og tvö í röð fyrir samanburðarvirkjann <cite>==</cite> og Python er engin undantekning á þeirri venju.</p>
 <p>Gildisgjöf í Python er tvennskonar, hægt er að gefa breytu gildi og svo er líka hægt að uppfæra gildið sem breyta geymir, sem sé:</p>
@@ -920,8 +777,8 @@ or
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="utprentun-og-innlestur">
+</div>
+<div class="section" id="utprentun-og-innlestur">
 <span id="utprentun"></span><h3><span class="section-number">1.4.4. </span>Útprentun og innlestur<a class="headerlink" href="#utprentun-og-innlestur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Aðalaðferðin til að prenta út gildi í Python er að nota <code class="code docutils literal notranslate"><span class="pre">print</span></code>-fallið en í Jupyter-vinnubókum er líka hægt að nota fallið <code class="code docutils literal notranslate"><span class="pre">display</span></code>, sem gefur stundum öðruvísi úttak, t.d. ef prentaðir eru strengir eða nöfn taga og falla (sjá æfingu í grein <a class="reference internal" href="#utprentun"><span class="std std-numref">1.4.4</span></a>). Sumir pakkar sem þið gætuð átt eftir að kynnast, t.d. pandas og statmodels, skila stundum HTML-sniðnum töflum, og til að birta þær þarf að nota <code class="code docutils literal notranslate"><span class="pre">display</span></code>.</p>
 <blockquote>
@@ -945,7 +802,7 @@ mikið notuð. Hún er samt prófuð í næstu æfingu.</p></li>
 <code class="code docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">float(s)</span></code> eða <code class="code docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">int(x)</span></code>. Afritið eftirfarandi
 skipanir yfir í Jupyter. Notið tækifærið og prófið Jupyter-skipanirnar
 til að velja allt í reit og flytja það til vinstri (shift/tab,
-<em>unindent</em>), sbr. <a class="reference internal" href="#jupyterritilskipanir"><span class="std std-numref">Tafla 1.4</span></a>. Keyrið, sláið inn
+<em>unindent</em>), sbr. <a class="reference internal" href="#jupyterritilskipanir"><span class="std std-numref">Tafla 1.4:</span></a>. Keyrið, sláið inn
 tölu, og prófið líka að slá inn eitthvað annað en tölu.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Sláðu inn tölu: &#39;</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -966,8 +823,8 @@ print í display.</p>
 </ol>
 </div>
 </div></blockquote>
-</section>
-<section id="f-strengir">
+</div>
+<div class="section" id="f-strengir">
 <span id="fstrengir"></span><h3><span class="section-number">1.4.5. </span>F-strengir<a class="headerlink" href="#f-strengir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>F-strengir (<em>f-strings</em>) eru ætlaðir til útprentunar, og með þeim má tvinna
 saman strengi (textabúta), breytur og gildi (segðir). Breytur og gildi eru sett
@@ -981,7 +838,7 @@ innan slaufusviga og þeim getur líka fylgt snið á eftir tvípunkti, sem sé:
 má sem sé sleppa) gefur oftast heildarfjölda stafa og/eða fjölda aukastafa.
 Hér er tafla yfir nokkur möguleg snið:</p>
 <table class="colwidths-auto docutils align-default" id="fstrengjasni">
-<caption><span class="caption-number">Tafla 1.5 </span><span class="caption-text">Nokkur möguleg snið í f-strengjum</span><a class="headerlink" href="#fstrengjasni" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<caption><span class="caption-number">Tafla 1.5: </span><span class="caption-text">Nokkur möguleg snið í f-strengjum</span><a class="headerlink" href="#fstrengjasni" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">{heiltala}</span></code> <br>
 <code class="code docutils literal notranslate"><span class="pre">{strengur}</span></code> <br>
@@ -1037,8 +894,8 @@ kommutölubreytur og nafn sé strengjabreyta.</p>
 &emsp; &emsp; <code class="code docutils literal notranslate"><span class="pre">print('%d</span>&#160;&#160; <span class="pre">%.4f</span>&#160;&#160; <span class="pre">%2d'</span> <span class="pre">%</span> <span class="pre">(x,</span> <span class="pre">math.sqrt(x),</span> <span class="pre">x**2))</span></code> <br>
 í öftustu línunni.</p>
 </div>
-</section>
-<section id="foll-notanda-ny-foll">
+</div>
+<div class="section" id="foll-notanda-ny-foll">
 <h3><span class="section-number">1.4.6. </span>Föll notanda (ný föll)<a class="headerlink" href="#foll-notanda-ny-foll" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Skilgreining falls</strong></p>
 <blockquote>
@@ -1065,8 +922,8 @@ Líka má sleppa svigunum: <code class="code docutils literal notranslate"><span
 <blockquote>
 <div><p>Breyturnar innan sviga á eftir fallsnafninu þar sem það er skilgreint kallast <strong>stikar</strong> (<em>parameters</em>), en þegar kallað er á fallið þá heita gildin sem sett eru í sviga á eftir fallsnafninu <strong>viðföng</strong> (<em>arguments</em>). Þau þurfa ekki að vera breytur en mega vera hvaða segðir sem er. <strong>Viðfang</strong> er sem sé gildi sem sent er inn í fall, en <strong>stiki</strong> er breyta í skilgreiningu fallsins sem tekur við gildinu.</p>
 </div></blockquote>
-</section>
-<section id="mikilvaegustu-innbygg-foll">
+</div>
+<div class="section" id="mikilvaegustu-innbygg-foll">
 <span id="mikilvaegustu-innbygg"></span><h3><span class="section-number">1.4.7. </span>Mikilvægustu innbyggð föll<a class="headerlink" href="#mikilvaegustu-innbygg-foll" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Almenn föll</strong></p>
 <blockquote>
@@ -1121,9 +978,9 @@ Sjá nánar í <a class="reference external" href="https://docs.python.org/3/lib
 <a class="reference internal" href="#styriskipanir"><span class="std std-numref">1.4.9</span></a> og <a class="reference internal" href="#polhnit"><span class="std std-numref">1.8.2</span></a>.</p>
 <div class="admonition hint">
 <p class="admonition-title">Æfing</p>
-<figure class="align-center" style="width: 10cm">
+<div class="figure align-center" style="width: 10cm">
 <img alt="_images/gormakerfi.png" src="_images/gormakerfi.png" />
-</figure>
+</div>
 <p><strong>Sveiflutími gorms</strong>: Á myndinni er gormakerfi: Hlutur með massa
 <span class="math notranslate nohighlight">\(m\)</span> hvílir á fleti án núningsmótstöðu og er festur við veggina með
 gormum með stífnifasta <span class="math notranslate nohighlight">\(k_1\)</span> og <span class="math notranslate nohighlight">\(k_2\)</span>. Eiginsveiflutími
@@ -1137,8 +994,8 @@ kerfisins verður</p>
 </ol>
 </div>
 </div></blockquote>
-</section>
-<section id="fallbreytur">
+</div>
+<div class="section" id="fallbreytur">
 <h3><span class="section-number">1.4.8. </span>Fallbreytur<a class="headerlink" href="#fallbreytur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Breytur geta tekið gildi sem eru föll: <code class="code docutils literal notranslate"><span class="pre">def</span> <span class="pre">fall:</span> <span class="pre">...</span></code> og neðar: <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">fall</span></code> eins og eftirfarandi dæmi sýnir.</p>
 <blockquote>
@@ -1159,8 +1016,8 @@ kerfisins verður</p>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="styriskipanir">
+</div>
+<div class="section" id="styriskipanir">
 <span id="id2"></span><h3><span class="section-number">1.4.9. </span>Stýriskipanir<a class="headerlink" href="#styriskipanir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">if-elif-else</span></code>: sjá grein <a class="reference internal" href="#icollatz"><span class="std std-numref">1.2.3</span></a></p></li>
@@ -1205,8 +1062,8 @@ afritið það). Prófið svo að breyta forritinu með því að:</p>
 <p>(Ath. að nota má V, &thinsp; ^2 og - í stað <em>unicode</em> táknanna √, &thinsp; ² og
 ― ef maður vill)</p>
 </div>
-</section>
-<section id="skilyrt-gildi">
+</div>
+<div class="section" id="skilyrt-gildi">
 <h3><span class="section-number">1.4.10. </span>Skilyrt gildi<a class="headerlink" href="#skilyrt-gildi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Skipunin:</p>
 <blockquote>
@@ -1232,9 +1089,9 @@ aftan við kafla <a class="reference internal" href="#jupyter-leibein-a-netinu">
 þeim Python-atriðum sem lýst hefur verið í þessum kafla og æfa sig í þeim.
 Opnið þessa bók í Jupyter og fylgið leiðbeiningum í henni.</p>
 </div>
-</section>
-</section>
-<section id="sofn-containers-eitt-nafn-en-morg-gildi">
+</div>
+</div>
+<div class="section" id="sofn-containers-eitt-nafn-en-morg-gildi">
 <span id="sofn"></span><h2><span class="section-number">1.5. </span>Söfn (<em>containers</em>): Eitt nafn en mörg gildi<a class="headerlink" href="#sofn-containers-eitt-nafn-en-morg-gildi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Fyrir utan grunngagnatögin sem fjallað hefur verið um að framan er Python með ýmis innbyggð tög fyrir söfn, en breytur af slíku tagi geta geymt mörg stök eða gildi. Reyndar hefur þegar verið talað svolítið um eitt slíkt tag, nefnilega strengi sem geta geymt marga stafi. Mörg safntögin í Python teljast <strong>runur</strong> (<em>sequences</em>), nánar tiltekið eru það <strong>strengir</strong>, <strong>listar</strong> (<em>lists</em>), <strong>samstæður</strong> (<em>tuples</em>) og <strong>ítrarar</strong> (<em>iterators</em>; t.d. útkoma úr range), en önnur teljast ekki runur, m.a. <strong>mengi</strong> (<em>sets</em>) og <strong>uppflettitöflur</strong> (<em>dictionaries</em>). Eftirfarandi tafla sýnir hvernig hægt er að safna tölunum 1, 2, 3 og 4 í lista, samstæðu, ítrara og mengi:</p>
 <blockquote>
@@ -1256,7 +1113,7 @@ Opnið þessa bók í Jupyter og fylgið leiðbeiningum í henni.</p>
 </table>
 </div></blockquote>
 <p>Það sem er sameiginlegt öllum runum er að hægt er að vísa í tiltekin stök eða gildi í rununni með hornklofum: ef R er runa og k er heiltala þá er <code class="code docutils literal notranslate"><span class="pre">R[k]</span></code> stakið í sæti k í rununni, og fremsta stakið telst vera númer 0. Fyrir runur og mengi er hægt er að nota <code class="code docutils literal notranslate"><span class="pre">if</span> <span class="pre">g</span> <span class="pre">in</span> <span class="pre">R:...</span></code> til að kanna hvort gildi g sé í R, <code class="code docutils literal notranslate"><span class="pre">for</span> <span class="pre">g</span> <span class="pre">in</span> <span class="pre">R</span></code> til að láta g hlaupa í gegn um öll stökin í R, og svo má telja stökin með <code class="code docutils literal notranslate"><span class="pre">len(R)</span></code>. Ennfremur er hægt að nota samskeytingar- og fjölföldunarvirkjana (<code class="docutils literal notranslate"><span class="pre">+</span></code> og <code class="docutils literal notranslate"><span class="pre">*</span></code>) á allar runur. Öll þessi atriði verða útlistuð nánar að neðan.</p>
-<section id="strengir">
+<div class="section" id="strengir">
 <span id="id3"></span><h3><span class="section-number">1.5.1. </span>Strengir<a class="headerlink" href="#strengir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Strengjatagið heitir <code class="code docutils literal notranslate"><span class="pre">str</span></code> og í strengjum má geyma runur af hvaða <em>Unicode</em> stöfum sem vera skal (Unicode er alþjóðlegur staðall til að skrá í tölvu bókstafi allra heimsins tungumála auk fjölmargra annarra rittákna: tölur, greinarmerki, stærðfræðitákn, broskallar, o.s.frv.). Strengir eru búnir til með því að setja texta innan einfaldra eða tvöfaldra gæsalappa:</p>
 <blockquote>
@@ -1269,7 +1126,7 @@ Opnið þessa bók í Jupyter og fylgið leiðbeiningum í henni.</p>
 <p>Í grein <a class="reference internal" href="#gildisgjof"><span class="std std-numref">1.4.3</span></a> var sýnt hvernig hægt er að skeyta saman og fjölfalda strengi, og ýmsar strengjaaðgerðir eru sýndar í kynningarvinnubókinni í æfingunni aftan við kafla <a class="reference internal" href="#jupyter-leibein-a-netinu"><span class="std std-numref">1.3.7</span></a>.</p>
 <blockquote>
 <div><table class="colwidths-given docutils align-default" id="tab-strengjaagerir">
-<caption><span class="caption-number">Tafla 1.6 </span><span class="caption-text">Nokkrar strengjaaðgerðir</span><a class="headerlink" href="#tab-strengjaagerir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
+<caption><span class="caption-number">Tafla 1.6: </span><span class="caption-text">Nokkrar strengjaaðgerðir</span><a class="headerlink" href="#tab-strengjaagerir" title="Varanlegur hlekkur á þessa töflu">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -1308,20 +1165,18 @@ Opnið þessa bók í Jupyter og fylgið leiðbeiningum í henni.</p>
 </tbody>
 </table>
 </div></blockquote>
-</section>
-<section id="listar">
+</div>
+<div class="section" id="listar">
 <span id="id4"></span><h3><span class="section-number">1.5.2. </span>Listar<a class="headerlink" href="#listar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Listi</strong> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_(abstract_data_type)">list</a>) er grunnhugtak í tölvufræði. Listi geymir endanlegan fjölda staka í röð og hvert stak getur komið fyrir oftar en einu sinni. Python hefur safntag <em>list</em> sem útfærir lista. Það eru engin takmörk á því hvernig stök má geyma, þau mega sjálf vera söfn og þurfa ekki öll að vera af sama tagi. <strong>Tómur listi</strong> fæst með <code class="code docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[]</span></code> og almennan lista má búa til með því að skrifa:</p>
 <blockquote>
 <div><p><code class="code docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[gildi,</span> <span class="pre">gildi...]</span></code></p>
 </div></blockquote>
 <p><strong>Aðgerðir fyrir tölvufræðilega lista</strong> eru m.a. að ná í fremsta stakið (<strong>haus</strong>, <em>head</em>), að ná í öll hin stökin (<strong>hali</strong>, <em>tail</em>) að bæta staki framan á eða aftan á lista, og að ná í stak í tilteknu sæti. Python listar bjóða upp á þessar aðgerðir og ýmsar fleiri (sjá æfinguna aftast í þessari grein).</p>
-<figure class="align-center" id="id11" style="width: 7cm">
+<div class="figure align-center" id="id11" style="width: 7cm">
 <img alt="_images/head-tail.png" src="_images/head-tail.png" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.6 </span><span class="caption-text">Haus og hali</span><a class="headerlink" href="#id11" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 1.6: </span><span class="caption-text">Haus og hali</span><a class="headerlink" href="#id11" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p><strong>Vísað í stök.</strong> Eins og fyrr segir má vísa í einstök stök í lista með <code class="code docutils literal notranslate"><span class="pre">L[i]</span></code> þar sem i er heiltala með númeri staks, og <strong>hlutlistar</strong> (<em>slices</em>) fást eins og fyrir strengi, sbr. eftirfarandi dæmi:</p>
 <blockquote>
 <div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mf">4.33</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
@@ -1375,8 +1230,8 @@ sem hleypur í gegn um tölurnar <span class="math notranslate nohighlight">\(1,
 þeirra aftan á listann. Prófið.</p></li>
 </ol>
 </div>
-</section>
-<section id="samstaeur">
+</div>
+<div class="section" id="samstaeur">
 <h3><span class="section-number">1.5.3. </span>Samstæður<a class="headerlink" href="#samstaeur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Annað safntag í Python sem líka útfærir tölvunarfræðilega lista er <strong>samstæða</strong> (<em>tuple</em>). Enska orðið <em>tuple</em> er fengið að láni úr stærðfræði, en stærðfræðilegt <a class="reference external" href="https://en.wikipedia.org/wiki/Tuple">tuple</a> (þýtt í <a class="reference external" href="http://stæ.is/os">stærðfræðiorðasafninu</a> með n-und) er skilgreint sem „endanleg röðuð runa af stökum“, venjulega táknuð með því að telja stökin upp innan sviga t.d. <span class="math notranslate nohighlight">\((2, 3, 4)\)</span>. N-undir eiga margt skylt með punktum í plani eða rúmi, enda rithátturinn sá sami. Hér er hugtakið þýtt með samstæða, en undirrituðum finnst n-und stirt og hálfljótt. Svigarithátturinn er einmitt notaður til að búa til samstæður í Python:</p>
 <blockquote>
@@ -1394,15 +1249,15 @@ sem hleypur í gegn um tölurnar <span class="math notranslate nohighlight">\(1,
 </div></blockquote>
 <p>Sagt er að samstæður séu <strong>óbreytanlegar</strong> (<em>immutable</em>) en listar séu <strong>breytanlegir</strong> (<em>mutable</em>). Stundum er gott að geta treyst því að einstök gildi breytist ekki, og auk þess notar Python málið samstæður í ýmsum skipunum, t.d. þegar kallað er á föll sem skila fleiru en einu gildi, sbr. grein <a class="reference internal" href="#polhnit"><span class="std std-numref">1.8.2</span></a>, og til að búa til föll með breytilegum stikafjölda (sjá xxxxx). Eitt í viðbót sem er frábrugðið: Hægt er að búa til mengi af samstæðum, og þær geta verið lyklar í uppflettitöflum, en hvorugt má með listum.</p>
 <p>Flest föllin sem talin eru upp í kafla <a class="reference internal" href="#helstu-agerir"><span class="std std-numref">1.6</span></a> duga á samstæður, nema föllin í grein <a class="reference internal" href="#bara-listar"><span class="std std-numref">1.6.5</span></a>. Eins og fyrr segir má líka nota samskeytingarvirkjana + og * á þær.</p>
-</section>
-<section id="mengi">
+</div>
+<div class="section" id="mengi">
 <h3><span class="section-number">1.5.4. </span>Mengi<a class="headerlink" href="#mengi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Stærðfræðihugtakið <strong>mengi</strong> (<a class="reference external" href="https://en.wikipedia.org/wiki/Set_(mathematics)">set</a>) er skilgreint sem „safn ólíkra staka“ og endanleg mengi má tákna með því að telja stökin upp innan slaufusviga: <span class="math notranslate nohighlight">\(\{2, 3, 4\}\)</span>. Mengi eru óröðuð og þótt stök séu talin tvisvar breytir það ekki menginu. Þannig gildir:</p>
 <div class="math notranslate nohighlight">
 \[\{4, 3, 2\} = \{2, 3, 4\} = \{2, 3, 3, 4\}\]</div>
 <p>Mengi í Python eru táknuð með sama hætti:</p>
 <blockquote>
-<div><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="p">{</span><span class="n">gildi</span><span class="p">,</span> <span class="n">gildi</span><span class="p">,</span> <span class="kc">...</span><span class="p">}</span>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="p">{</span><span class="n">gildi</span><span class="p">,</span> <span class="n">gildi</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1445,18 +1300,14 @@ sem hleypur í gegn um tölurnar <span class="math notranslate nohighlight">\(1,
 </tr>
 </tbody>
 </table>
-<figure class="align-center" id="id12" style="width: 8cm">
+<div class="figure align-center" id="id12" style="width: 8cm">
 <img alt="_images/mengjamunur.png" src="_images/mengjamunur.png" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.7 </span><span class="caption-text">Mengjamismunurinn <em>A</em> – <em>B</em></span><a class="headerlink" href="#id12" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id13" style="width: 9cm">
+<p class="caption"><span class="caption-number">Mynd 1.7: </span><span class="caption-text">Mengjamismunurinn <em>A</em> – <em>B</em></span><a class="headerlink" href="#id12" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+<div class="figure align-center" id="id13" style="width: 9cm">
 <img alt="_images/samhverfur-munur.png" src="_images/samhverfur-munur.png" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.8 </span><span class="caption-text">Samhverfi mismunurinn <em>A</em> ∆ <em>B</em></span><a class="headerlink" href="#id13" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 1.8: </span><span class="caption-text">Samhverfi mismunurinn <em>A</em> ∆ <em>B</em></span><a class="headerlink" href="#id13" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <div class="admonition hint">
 <p class="admonition-title">Æfing</p>
 <ol class="loweralpha simple">
@@ -1473,8 +1324,8 @@ eru í nákvæmlega einu fagi. Látið <code class="code docutils literal notran
 Python-mengjaaðgerðum. Teiknið gjarna mynd á blað.</p></li>
 </ol>
 </div>
-</section>
-<section id="itrarar">
+</div>
+<div class="section" id="itrarar">
 <span id="id5"></span><h3><span class="section-number">1.5.5. </span>Ítrarar<a class="headerlink" href="#itrarar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Áður hefur verið fjallað stuttlega um fallið <strong>range</strong> sem einkum er notað í <code class="code docutils literal notranslate"><span class="pre">for-lykkjum</span></code> í greinum <a class="reference internal" href="#icollatz"><span class="std std-numref">1.2.3</span></a> og <a class="reference internal" href="#styriskipanir"><span class="std std-numref">1.4.9</span></a>. Fallið skilar hlut af samnefndu tagi og það sparar minnispláss miðað við að nota lista, því aðeins byrjunargildið, lokagildið og skrefið eru geymd. Hér eru nokkur dæmi:</p>
 <blockquote>
@@ -1531,12 +1382,12 @@ minni. Finnið út hve mikið minni <code class="code docutils literal notransla
 <li><p>Smíðið sömu pör með <em>zip</em>.</p></li>
 </ol>
 </div>
-</section>
-</section>
-<section id="helstu-agerir-fyrir-sofn">
+</div>
+</div>
+<div class="section" id="helstu-agerir-fyrir-sofn">
 <span id="helstu-agerir"></span><h2><span class="section-number">1.6. </span>Helstu aðgerðir fyrir söfn<a class="headerlink" href="#helstu-agerir-fyrir-sofn" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<p>Til viðbótar eftirfarandi töflum eru töflurnar yfir strengjaaðgerðir og mengjavirkja hér á undan (<a class="reference internal" href="#tab-strengjaagerir"><span class="std std-numref">Tafla 1.6</span></a> og <code class="xref std std-numref docutils literal notranslate"><span class="pre">tab:mengjavirkjar</span></code>), og líka samskeytingar- og fjölföldunarvirkjarnir</p>
-<section id="foll-til-a-bua-til-sofn-ea-breyta-tegund-safns">
+<p>Til viðbótar eftirfarandi töflum eru töflurnar yfir strengjaaðgerðir og mengjavirkja hér á undan (<a class="reference internal" href="#tab-strengjaagerir"><span class="std std-numref">Tafla 1.6:</span></a> og <code class="xref std std-numref docutils literal notranslate"><span class="pre">tab:mengjavirkjar</span></code>), og líka samskeytingar- og fjölföldunarvirkjarnir</p>
+<div class="section" id="foll-til-a-bua-til-sofn-ea-breyta-tegund-safns">
 <h3><span class="section-number">1.6.1. </span>Föll til að búa til söfn eða breyta tegund safns<a class="headerlink" href="#foll-til-a-bua-til-sofn-ea-breyta-tegund-safns" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><table class="colwidths-auto docutils align-default">
@@ -1586,8 +1437,8 @@ Prentið Z og list(Z).</p></li>
 </ol>
 </div>
 </div></blockquote>
-</section>
-<section id="agerir-sem-duga-a-oll-sofn">
+</div>
+<div class="section" id="agerir-sem-duga-a-oll-sofn">
 <span id="oll-sofn"></span><h3><span class="section-number">1.6.2. </span>Aðgerðir sem duga á öll söfn<a class="headerlink" href="#agerir-sem-duga-a-oll-sofn" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><table class="colwidths-auto docutils align-default">
@@ -1622,8 +1473,8 @@ gildisgjöf (L1 = L) og með copy (L2 = L.copy). Prófið svo að bera
 listana saman bæði með „==“ og með „is“.</p>
 </div>
 </div></blockquote>
-</section>
-<section id="foll-sem-duga-a-sofn-af-tolum-ea-rokgildum">
+</div>
+<div class="section" id="foll-sem-duga-a-sofn-af-tolum-ea-rokgildum">
 <span id="sofn-af-tolum"></span><h3><span class="section-number">1.6.3. </span>Föll sem duga á söfn af tölum eða rökgildum<a class="headerlink" href="#foll-sem-duga-a-sofn-af-tolum-ea-rokgildum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><table class="colwidths-auto docutils align-default">
@@ -1646,8 +1497,8 @@ listana saman bæði með „==“ og með „is“.</p>
 </tbody>
 </table>
 </div></blockquote>
-</section>
-<section id="agerir-sem-duga-a-allar-runur">
+</div>
+<div class="section" id="agerir-sem-duga-a-allar-runur">
 <h3><span class="section-number">1.6.4. </span>Aðgerðir sem duga á allar runur<a class="headerlink" href="#agerir-sem-duga-a-allar-runur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><table class="colwidths-auto docutils align-default">
@@ -1689,8 +1540,8 @@ ekki. Prófið.</p></li>
 </ol>
 </div>
 </div></blockquote>
-</section>
-<section id="foll-sem-duga-bara-a-lista">
+</div>
+<div class="section" id="foll-sem-duga-bara-a-lista">
 <span id="bara-listar"></span><h3><span class="section-number">1.6.5. </span>Föll sem duga bara á lista<a class="headerlink" href="#foll-sem-duga-bara-a-lista" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><table class="colwidths-auto docutils align-default">
@@ -1735,8 +1586,8 @@ ekki. Prófið.</p></li>
 <code class="docutils literal notranslate"><span class="pre">pop</span></code>, <code class="docutils literal notranslate"><span class="pre">remove</span></code> og <code class="docutils literal notranslate"><span class="pre">insert</span></code>.</p>
 </div>
 </div></blockquote>
-</section>
-<section id="for-lykkjur-og-sofn">
+</div>
+<div class="section" id="for-lykkjur-og-sofn">
 <h3><span class="section-number">1.6.6. </span>For-lykkjur og söfn<a class="headerlink" href="#for-lykkjur-og-sofn" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Það er ekki bara „range“ sem hægt er að nota með for, heldur má rita</p>
 <blockquote>
@@ -1761,8 +1612,8 @@ eitt á hverja línu.</p></li>
 nöfnin í töflu með númeri hvers nemanda fremst (byrjið sem sé á <code class="docutils literal notranslate"><span class="pre">1.</span> <span class="pre">Ari</span></code>).</p></li>
 </ol>
 </div>
-</section>
-<section id="yfirgrip-comprehension">
+</div>
+<div class="section" id="yfirgrip-comprehension">
 <h3><span class="section-number">1.6.7. </span>Yfirgrip (<em>comprehension</em>)<a class="headerlink" href="#yfirgrip-comprehension" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <ul>
 <li><p>Við höfum séð hvernig hægt að gefa listum gildi með því að telja upp stökin í
@@ -1809,12 +1660,12 @@ dæmi jafngilt skilgreiningu á L3 í dæminu að ofan:</p>
 jákvæðum stökum x</p></li>
 </ol>
 </div>
-</section>
-</section>
-<section id="meira-um-skilgreiningu-falla">
+</div>
+</div>
+<div class="section" id="meira-um-skilgreiningu-falla">
 <span id="adal-ein"></span><h2><span class="section-number">1.7. </span>Meira um skilgreiningu falla<a class="headerlink" href="#meira-um-skilgreiningu-falla" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Við höfum séð að hægt er að kalla á print-fallið með einum eða fleiri viðföngum, og svo er líka hægt að bæta við viðföngunum <code class="code docutils literal notranslate"><span class="pre">end=xxx</span></code> og <code class="code docutils literal notranslate"><span class="pre">sep=xxx</span></code>. Slík nefnd viðföng eru kölluð <strong>lykilorðsviðföng</strong> (<em>keyword argument</em>). Við eigum eftir að sjá mörg fleiri dæmi um svona sveiganleika í köllum á föll, þegar við kynnumst fleiri innbyggðum pökkum, t.d. Matplotlib. Hér verður litið á nokkrar leiðir til að skilgreina og kalla á föll, en umfjöllun um alla möguleikana væri of viðamikil til að hafa hér, til þess verður að vísa á opinberu <a class="reference external" href="https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions">Python-leiðbeiningarnar</a>.</p>
-<section id="valkvaeir-stikar">
+<div class="section" id="valkvaeir-stikar">
 <h3><span class="section-number">1.7.1. </span>Valkvæðir stikar<a class="headerlink" href="#valkvaeir-stikar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Stiki er skilgreindur sem <strong>valkvæður</strong> (<em>optional</em>) með því að gefa honum <strong>sjálfgefið</strong> (<em>default</em>) gildi í def-skipun. Valkvæðu stikarnir verða að koma á eftir hinum í stikalistanum. Hér er dæmi um fall sem reiknar n-tu rót, með kvaðratrót sjálfgefna:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -1836,8 +1687,8 @@ náttúrulegur logri, <span class="math notranslate nohighlight">\(\ln x\)</span
 sem ætti að gefa 3.0. Gerið svo <code class="docutils literal notranslate"><span class="pre">b</span></code> valkvæðan með sjálfgefið gildi 2 og
 prófið <code class="docutils literal notranslate"><span class="pre">logb(8)</span></code> og <code class="docutils literal notranslate"><span class="pre">logb(100,10)</span></code> (ætti að gefa 3.0 og 2.0)</p>
 </div>
-</section>
-<section id="lykilorsvifong">
+</div>
+<div class="section" id="lykilorsvifong">
 <h3><span class="section-number">1.7.2. </span>Lykilorðsviðföng<a class="headerlink" href="#lykilorsvifong" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Þegar kallað er á fall er hægt að tilgreina viðföngin með nöfnum tilsvarandi stika svo:</p>
 <blockquote>
@@ -1862,8 +1713,8 @@ prófið <code class="docutils literal notranslate"><span class="pre">logb(8)</s
 </pre></div>
 </div>
 <p>Byrjað er á að para viðföng sem ekki eru nefnd (þ.e. ekki hafa <code class="docutils literal notranslate"><span class="pre">stiki=</span></code> framan við sig) saman við tilsvarandi stika í röð, þvínæst eru nefnd viðföng pöruð við sína stika, og loks fá stikar sem enn eru óparaðir sjálfgefin gildi. Ef einhverjir stikar standa útaf kemur villa.</p>
-</section>
-<section id="foll-me-breytilegan-stikafjolda">
+</div>
+<div class="section" id="foll-me-breytilegan-stikafjolda">
 <h3><span class="section-number">1.7.3. </span>Föll með breytilegan stikafjölda<a class="headerlink" href="#foll-me-breytilegan-stikafjolda" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Hægt er að skrifa fall sem tekur ótiltekinn stikafjölda (líkt og innbyggða fallið <em>print</em>) með því að nota def-skipun:</p>
 <blockquote>
@@ -1894,8 +1745,8 @@ fleiri strengjum og skeytir þeim saman með bilum á milli, t.d. með kallinu
 staðin fyrir bil. Notið þetta fall til að skeyta saman strengjunum <strong>&quot;kaffi&quot;</strong>,
 <strong>&quot;mjólk&quot;</strong> og <strong>&quot;sykur&quot;</strong> í strenginn <code class="code docutils literal notranslate"><span class="pre">&quot;kaffi,</span> <span class="pre">mjólk,</span> <span class="pre">sykur&quot;`</span></code>.</p>
 </div>
-</section>
-<section id="foll-me-margar-utkomur">
+</div>
+<div class="section" id="foll-me-margar-utkomur">
 <h3><span class="section-number">1.7.4. </span>Föll með margar útkomur<a class="headerlink" href="#foll-me-margar-utkomur" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Til að láta fall skila mörgum útkomum er return-skipun  einfaldlega látin skila samstæðu með útkomunum, t.d. <code class="code docutils literal notranslate"><span class="pre">return</span> <span class="pre">(a,b,c)</span></code>, og svo er kallað á fallið með <code class="code docutils literal notranslate"><span class="pre">(a,b,c)</span> <span class="pre">=</span> <span class="pre">f(...)</span></code> eða án sviga, með <code class="code docutils literal notranslate"><span class="pre">a,b,c</span> <span class="pre">=</span> <span class="pre">f(...)</span></code>.</p>
 <div class="admonition important">
@@ -1910,26 +1761,24 @@ staðin fyrir bil. Notið þetta fall til að skeyta saman strengjunum <strong>&
 <p>Ef kallað er <code class="code docutils literal notranslate"><span class="pre">x,y</span> <span class="pre">=</span> <span class="pre">minmax([2,5,8])</span></code> skilar það x=2 og y=8.</p>
 </div>
 <p>Í kafla <a class="reference internal" href="#polhnit"><span class="std std-numref">1.8.2</span></a> hér rétt á eftir eru tvö dæmi í viðbót um föll sem skila tveimur útkomum.</p>
-</section>
-</section>
-<section id="aalforrit-og-einingar">
+</div>
+</div>
+<div class="section" id="aalforrit-og-einingar">
 <h2><span class="section-number">1.8. </span>Aðalforrit og einingar<a class="headerlink" href="#aalforrit-og-einingar" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="skra-me-aalforriti">
+<div class="section" id="skra-me-aalforriti">
 <h3><span class="section-number">1.8.1. </span>Skrá með aðalforriti<a class="headerlink" href="#skra-me-aalforriti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Hugtakið <strong>aðalforrit</strong> (<em>main program</em>) er notað um sjálfstætt Pythonforrit (sem
 er ekki hluti af Jupíter-bók). Dæmigert innihald skrár með slíku forriti er eins
 og hér er sýnt:</p>
-<figure class="align-center" id="id14" style="width: 14cm">
+<div class="figure align-center" id="id14" style="width: 14cm">
 <span id="forritssni"></span><img alt="_images/forritssnið.png" src="_images/forritssnið.png" />
-<figcaption>
-<p><span class="caption-number">Mynd 1.9 </span><span class="caption-text">Algengt snið skrár með aðalforriti í Python</span><a class="headerlink" href="#id14" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 1.9: </span><span class="caption-text">Algengt snið skrár með aðalforriti í Python</span><a class="headerlink" href="#id14" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p>Það er reyndar engin skylda að kaflarnir komi í þessari röð heldur má blanda
 saman skipunum úr öllum fjórum köflunum að vild, en með þeirri skorðu að það
 verður að vera búið að skilgreina hluti áður en þeir eru notaðir. Þannig verður
 að flytja inn einingu áður en vísað er í hana, föll þarf að skilgreina fyrir
-notkun þeirra o.s.frv. Skráin sem sýnd er á <a class="reference internal" href="#forritssni"><span class="std std-numref">Mynd 1.9</span></a> væri skírð
+notkun þeirra o.s.frv. Skráin sem sýnd er á <a class="reference internal" href="#forritssni"><span class="std std-numref">Mynd 1.9:</span></a> væri skírð
 nafni með endingu <code class="code docutils literal notranslate"><span class="pre">.py</span></code>, til dæmis <code class="code docutils literal notranslate"><span class="pre">forrit.py</span></code>.</p>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
@@ -1942,13 +1791,13 @@ er forritið og undanfarandi skilgreiningar geymt í reitum í Python-bók.</p>
 koma á eftir þeim, en breytur sem fyrst eru skilgreindar inni í skilgreiningu
 falls eru <strong>staðværar</strong> (<em>local</em>), og aðeins þekktar í viðkomandi falli.</p>
 </div>
-</section>
-<section id="einingar-skrifaar-af-notanda">
+</div>
+<div class="section" id="einingar-skrifaar-af-notanda">
 <span id="polhnit"></span><h3><span class="section-number">1.8.2. </span>Einingar skrifaðar af notanda<a class="headerlink" href="#einingar-skrifaar-af-notanda" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Að framan hefur verið fjallað um einingar (<em>modules</em>) og pakka (<em>packages</em>) sem
 ýmist fylgja með Python eða aðrir hafa skrifað, en notandi getur líka búið til
 sínar eigin einingar. Slík eining er sett í sér skrá, <code class="code docutils literal notranslate"><span class="pre">eining.py</span></code> sem
-hefur sama snið og skráin á <a class="reference internal" href="#forritssni"><span class="std std-numref">Mynd 1.9</span></a> nema hvað aðalforritið vantar.
+hefur sama snið og skráin á <a class="reference internal" href="#forritssni"><span class="std std-numref">Mynd 1.9:</span></a> nema hvað aðalforritið vantar.
 Einfaldast er að hafa eininguna í sömu möppu og aðalforritið (hún getur líka
 verið annarsstaðar eins og rætt verður síðar).</p>
 <p>Til að nota fall <code class="code docutils literal notranslate"><span class="pre">f</span></code> sem skilgreint er í einingunni þarf aðalforritið að
@@ -1987,9 +1836,9 @@ með Enter.</p>
     <span class="k">return</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span>
 </pre></div>
 </div>
-<figure class="align-center" style="width: 9cm">
+<div class="figure align-center" style="width: 9cm">
 <img alt="_images/polhnit.png" src="_images/polhnit.png" />
-</figure>
+</div>
 <p>Afritið nú eftirfarandi forrit sem <em>importerar</em> og prófar eininguna
 <strong>polhnit</strong> inn í JupyterLab. Keyrið það og staðfestið að allt vinni rétt
 (ef þið fáið villu má prófa <em>Kernel–Restart kernel</em>).</p>
@@ -2020,34 +1869,29 @@ við sleppum við að setja <code class="code docutils literal notranslate"><spa
 skammstafað með p. Það er t.d. alsiða að skammstafa <em>numpy</em> með np og
 <em>matplotlib</em> með mpl.</p></li>
 </ul>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
+           
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="kafli02.html" class="btn btn-neutral float-right" title="2. NumPy, Pandas og Matplotlib" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral" title="Stærðfræði og reiknifræði" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="kafli02.html" class="btn btn-neutral float-right" title="2. NumPy, Pandas og Matplotlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Stærðfræði og reiknifræði" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
+
     </p>
-  </div>
+  </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -2056,38 +1900,15 @@ skammstafað með p. Það er t.d. alsiða að skammstafa <em>numpy</em> með np
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2019',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/documentation_options.js"></script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
 
 

@@ -1,16 +1,20 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="is" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>4. Línuleg algebra &mdash; Stærðfræðigreining I (STÆ104G) 2021</title>
+  
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Línuleg algebra &mdash; Stærðfræði og reiknifræði 2019</title>
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom_admonitions.css" type="text/css" />
 
   
   
@@ -18,27 +22,27 @@
   
 
   
+  
 
   
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
+    
 
 <!-- hoverrole.py css code -->
 <style type="text/css">
@@ -110,12 +114,10 @@
   div.code-block-caption{margin-bottom: 4px}
 </style>
 
-        <link rel="index" title="Atriðaskrá"
-              href="genindex.html"/>
-        <link rel="search" title="Leit" href="search.html"/>
-    <link rel="top" title="Stærðfræði og reiknifræði 2019" href="index.html"/>
-        <link rel="next" title="5. Dæmi um hagnýtingu línulegrar algebru" href="kafli05.html"/>
-        <link rel="prev" title="3. Föll af mörgum breytistærðum" href="kafli03.html"/>
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="5. Dæmi um hagnýtingu línulegrar algebru" href="kafli05.html" />
+    <link rel="prev" title="3. Föll af mörgum breytistærðum" href="kafli03.html" />
 
 
 
@@ -125,198 +127,61 @@
 
  
 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-
-        
-          <a href="index.html" class="icon icon-home"> Stærðfræði og reiknifræði
-        
-
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
-          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
-        
-        </a>
 
-        
+          
+            <a href="index.html" class="icon icon-home"> Stærðfræðigreining I (STÆ104G)
+          
+
+          
+            
+            <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Leit" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-          
+            
+            
+              
+            
+            
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Forritun í Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#inngangur-um-python">1.1. Inngangur: Um Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#einfalt-og-aulaert-mal">1.1.1. Einfalt og auðlært mál</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fallasafn-og-pakkar">1.1.2. Fallasafn og pakkar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utbreisla">1.1.3. Útbreiðsla</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#framkvaemd-forrita">1.1.4. Framkvæmd forrita</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gildi-eru-togu-en-breytur-ekki">1.1.5. Gildi eru töguð en breytur ekki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#python-leibeiningar-a-netinu">1.1.6. Python-leiðbeiningar á netinu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#daemi-um-python-forrit">1.2. Dæmi um Python forrit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#collatz-runur">1.2.1. Collatz-runur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#forrit-fyrir-collatz-runur">1.2.2. Forrit fyrir Collatz-runur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#python-atrii-sem-koma-fyrir-i-forritinu-collatz">1.2.3. Python atriði sem koma fyrir í forritinu Collatz</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#umhverfi-fyrir-python-jupyterlab">1.3. Umhverfi fyrir Python: <em>JupyterLab</em></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#uppsetning-python-og-jupyterlab">1.3.1. Uppsetning Python og JupyterLab</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#keyrsla-jupyterlab">1.3.2. Keyrsla JupyterLab</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-vinnubaekur">1.3.3. Jupyter vinnubækur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-skipanir">1.3.4. Jupyter skipanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#vistun-vinnuboka-a-pdf-snii">1.3.5. Vistun vinnubóka á PDF-sniði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#markdown-og-latex">1.3.6. Markdown og Latex</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-leibeiningar-a-netinu">1.3.7. Jupyter-leiðbeiningar á netinu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#grunnatrii-python">1.4. Grunnatriði Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#breytur-og-tog">1.4.1. Breytur og tög</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-og-virkjar">1.4.2. Aðgerðir og virkjar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gildisgjof">1.4.3. Gildisgjöf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utprentun-og-innlestur">1.4.4. Útprentun og innlestur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#f-strengir">1.4.5. F-strengir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-notanda-ny-foll">1.4.6. Föll notanda (ný föll)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mikilvaegustu-innbygg-foll">1.4.7. Mikilvægustu innbyggð föll</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fallbreytur">1.4.8. Fallbreytur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#styriskipanir">1.4.9. Stýriskipanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilyrt-gildi">1.4.10. Skilyrt gildi</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#sofn-containers-eitt-nafn-en-morg-gildi">1.5. Söfn (<em>containers</em>): Eitt nafn en mörg gildi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#strengir">1.5.1. Strengir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#listar">1.5.2. Listar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#samstaeur">1.5.3. Samstæður</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mengi">1.5.4. Mengi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#itrarar">1.5.5. Ítrarar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#helstu-agerir-fyrir-sofn">1.6. Helstu aðgerðir fyrir söfn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-til-a-bua-til-sofn-ea-breyta-tegund-safns">1.6.1. Föll til að búa til söfn eða breyta tegund safns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-sem-duga-a-oll-sofn">1.6.2. Aðgerðir sem duga á öll söfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-sem-duga-a-sofn-af-tolum-ea-rokgildum">1.6.3. Föll sem duga á söfn af tölum eða rökgildum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-sem-duga-a-allar-runur">1.6.4. Aðgerðir sem duga á allar runur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-sem-duga-bara-a-lista">1.6.5. Föll sem duga bara á lista</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#for-lykkjur-og-sofn">1.6.6. For-lykkjur og söfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#yfirgrip-comprehension">1.6.7. Yfirgrip (<em>comprehension</em>)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#meira-um-skilgreiningu-falla">1.7. Meira um skilgreiningu falla</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#valkvaeir-stikar">1.7.1. Valkvæðir stikar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#lykilorsvifong">1.7.2. Lykilorðsviðföng</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-me-breytilegan-stikafjolda">1.7.3. Föll með breytilegan stikafjölda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-me-margar-utkomur">1.7.4. Föll með margar útkomur</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#aalforrit-og-einingar">1.8. Aðalforrit og einingar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skra-me-aalforriti">1.8.1. Skrá með aðalforriti</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#einingar-skrifaar-af-notanda">1.8.2. Einingar skrifaðar af notanda</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. NumPy, Pandas og Matplotlib</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#inngangur">2.1. Inngangur</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hva-er-reiknifraei">2.1.1. Hvað er reiknifræði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#python-pakkar-fyrir-visindalega-reikninga">2.1.2. Python-pakkar fyrir vísindalega reikninga</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#vigrar-og-fylki-i-staerfraei">2.1.3. Vigrar og fylki í stærðfræði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#um-ori-fylki">2.1.4. Um orðið Fylki</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#numpy-pakkinn">2.2. NumPy pakkinn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#kynning-a-numpy">2.2.1. Kynning á NumPy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#leibeiningar-um-numpy-a-netinu">2.2.2. Leiðbeiningar um NumPy á netinu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hvernig-ma-bua-til-numpy-fylki-og-visa-stok-eirra">2.2.3. Hvernig má búa til NumPy fylki og vísa stök þeirra?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#eiginleikar-vigra-og-fylkja">2.2.4. Eiginleikar vigra og fylkja</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#foll-og-aferir-i-numpy">2.2.5. Föll og aðferðir í NumPy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#innlestur-og-utskrift">2.2.6. Innlestur og útskrift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fleiri-foll">2.2.7. Fleiri föll</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#bylting-og-afpokkun">2.2.8. Bylting og afpökkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#rokvisun">2.2.9. Rökvísun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#innfeldi">2.2.10. Innfeldi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hlutvigrar-og-fylki-linur-og-dalkar">2.2.11. Hlutvigrar og -fylki, línur og dálkar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#pandas-fyrir-gagnavinnslu">2.3. Pandas fyrir gagnavinnslu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#pandas-gogn">2.3.1. Pandas gögn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#helstu-pandas-skipanir">2.3.2. Helstu Pandas-skipanir</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#teikning-me-matplotlib">2.4. Teikning með Matplotlib</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.4.1. Inngangur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#einfaldar-myndir">2.4.2. Einfaldar myndir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#pandas-og-teikningar">2.4.3. Pandas og teikningar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#toflur-yfir-matplotlib-skipanir">2.4.4. Töflur yfir Matplotlib-skipanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#rju-daemi-um-teikningar">2.4.5. Þrjú dæmi um teikningar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#teikning-af-grofum-falla">2.4.6. Teikning af gröfum falla</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#teikning-punktasafns-og-jafna-bestu-linu">2.4.7. Teikning punktasafns og jafna bestu línu</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Föll af mörgum breytistærðum</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#inngangur">3.1. Inngangur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#foll-af-tveimur-breytistaerum-ea-tvivi-foll">3.2. Föll af tveimur breytistærðum eða tvívíð föll</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#staerfraeileg-skilgreining">3.2.1. Stærðfræðileg skilgreining</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#grof-og-myndir-af-tvivium-follum">3.2.2. Gröf og myndir af tvívíðum föllum</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#teikning-tvivira-falla-me-python">3.3. Teikning tvívíðra falla með Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearlinur-me-skipuninni-contour">3.3.1. Hæðarlínur með skipuninni <em>contour</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-haearlinuteikningu">3.3.2. Dæmi um hæðarlínuteikningu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearsvaei-me-skipuninni-contourf">3.3.3. Hæðarsvæði með skipuninni <em>contourf</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#netmyndir-me-plot-surface">3.3.4. Netmyndir með <em>plot_surface</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upplystar-myndir-me-plot-surface">3.3.5. Upplýstar myndir með <em>plot_surface</em></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#hlutafleiur">3.4. Hlutafleiður</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-hlutafleiu">3.4.1. Skilgreining hlutafleiðu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#arir-rithaettir-fyrir-hlutafleiu">3.4.2. Aðrir rithættir fyrir hlutafleiðu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#stigull">3.5. Stigull</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rithattur-og-oranotkun">3.5.1. Ritháttur og orðanotkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tvivi-kejuregla-og-tengsl-stiguls-og-hlutafleia">3.5.2. Tvívíð keðjuregla og tengsl stiguls og hlutafleiða</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stefnuafleia">3.5.3. Stefnuafleiða</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#teikning-stigla-i-python">3.5.4. Teikning stigla í Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#utgildi-tvivira-falla">3.6. Útgildi tvívíðra falla</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#hagildi-og-laggildi">3.6.1. Hágildi og lággildi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#utgildi-fundin-me-vi-a-leysa-jofnur">3.6.2. Útgildi fundin með því að leysa jöfnur</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margvi-foll">3.7. Margvíð föll</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-og-daemi">3.7.1. Skilgreining og dæmi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#vifang-skrifa-sem-vigur">3.7.2. Viðfang skrifað sem vigur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margviir-stiglar">3.7.3. Margvíðir stiglar</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Forritun í Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. NumPy, Pandas og Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Föll af mörgum breytistærðum</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Línuleg algebra</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#vigrar-og-fylki">4.1. Vigrar og fylki</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#skilgreining-vigurs">4.1.1. Skilgreining vigurs</a></li>
@@ -383,76 +248,73 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Dæmi um hagnýtingu línulegrar algebru</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#skipting-i-hopa-ea-flokkun">5.1. Skipting í hópa eða flokkun</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-flokkun-tvivira-vigra">5.1.1. Dæmi um flokkun tvívíðra vigra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-hagnytingu-flokkunar">5.1.2. Dæmi um hagnýtingu flokkunar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#rithattur-fyrir-flokkun">5.1.3. Ritháttur fyrir flokkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#mipunktar-hopa">5.1.4. Miðpunktar hópa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#besta-hopaskipting">5.1.5. Besta hópaskipting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#k-means-reikniriti">5.1.6. <em>k-means</em> reikniritið</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#daemi-um-nokkrar-k-means-itrekanir">5.1.7. Dæmi um nokkrar k-means-ítrekanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#forvinnsla-vigra-me-whiten">5.1.8. Forvinnsla vigra með <code class="code docutils literal notranslate"><span class="pre">whiten</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#fylkjamargfoldun-og-tolvugrafik">5.2. Fylkjamargföldun og tölvugrafík</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#fylki-og-net">5.3. Fylki og net</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#net-hnutar-og-leggir">5.3.1. Net, hnútar og leggir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#grannafylki">5.3.2. Grannafylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#vegir-i-netum">5.3.3. Vegir í netum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#legufylki">5.3.4. Legufylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#flaeinet">5.3.5. Flæðinet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#lindir-og-osar">5.3.6. Lindir og ósar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli05.html#linuleg-hreyfikerfi">5.4. Línuleg hreyfikerfi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-linulegra-hreyfikerfa">5.4.1. Skilgreining línulegra hreyfikerfa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#roun-mannfjolda-ea-stofnstaerar">5.4.2. Þróun mannfjölda eða stofnstærðar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#diffurjafna-fyrir-hreyfingu-hlutar">5.4.3. Diffurjafna fyrir hreyfingu hlutar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli05.html#diffurjofnu-breytt-i-linulegt-hreyfikerfi">5.4.4. Diffurjöfnu breytt í línulegt hreyfikerfi</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Dæmi um hagnýtingu línulegrar algebru</a></li>
 </ul>
 
+            
           
+        </div>
         
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Stærðfræði og reiknifræði</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Stærðfræðigreining I (STÆ104G)</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li><span class="section-number">4. </span>Línuleg algebra</li>
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">4. </span>Línuleg algebra</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/kafli04.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="linuleg-algebra">
+  <div class="section" id="linuleg-algebra">
 <span id="id1"></span><h1><span class="section-number">4. </span>Línuleg algebra<a class="headerlink" href="#linuleg-algebra" title="Varanlegur hlekkur á titilinn">¶</a></h1>
 <p>Línuleg algebra er undirgrein stærðfræði sem fjallar um vigra og fylki, vigurrúm,
 línulegar jöfnur og jöfnuhneppi, t.d. <span class="math notranslate nohighlight">\(5x + 3y = 13, x - y = 1\)</span>, og línuleg
@@ -467,9 +329,9 @@ dulmálsfræði, erfðafræði, stofnstærðarspár, líkön af heyrn, netleit o
 <p>Þessi kafli byrjar á að rifja upp efni sem fjallað var um með <a class="reference external" href="http://cs.hi.is/strei/linalg-1.pdf">töflufyrirlestri</a> (sjá líka <em>Námsefni–Töflumyndir</em> í Canvas),
 með stærðfræðilegri skilgreiningu á vigrum og fylkjum ásamt helstu aðgerðum sem
 beita má á þessa hluti.</p>
-<section id="vigrar-og-fylki">
+<div class="section" id="vigrar-og-fylki">
 <span id="id2"></span><h2><span class="section-number">4.1. </span>Vigrar og fylki<a class="headerlink" href="#vigrar-og-fylki" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="skilgreining-vigurs">
+<div class="section" id="skilgreining-vigurs">
 <span id="id3"></span><h3><span class="section-number">4.1.1. </span>Skilgreining vigurs<a class="headerlink" href="#skilgreining-vigurs" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Vigur</strong> (<em>vector</em>) er runa af endanlega mörgum tölum sem notuð er sem ein heild
 og oft gefið nafn sem er lítill bókstafur (t.d. <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>…). Vigur
@@ -502,8 +364,8 @@ stök gildir <br> &thinsp; <code class="docutils literal notranslate"><span clas
 </div>
 <p>Í fyrrnefndum <a class="reference external" href="http://cs.hi.is/strei/linalg-1.pdf">töflufyrirlestri</a> má finna
 nokkur dæmi um notkun vigra, meðal annars til að tákna ýmis gögn.</p>
-</section>
-<section id="skilgreining-fylkis">
+</div>
+<div class="section" id="skilgreining-fylkis">
 <h3><span class="section-number">4.1.2. </span>Skilgreining fylkis<a class="headerlink" href="#skilgreining-fylkis" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Fylki</strong> (<em>matrix</em>) er tafla með tölum sem notuð er sem ein heild og oft
 gefið nafn sem er stór bókstafur (t.d. <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>…). Taflan er
@@ -551,8 +413,8 @@ fylki <span class="math notranslate nohighlight">\(P\)</span>, þar sem fyrri d�
 <li><p>Í hvaða sæti er 80?</p></li>
 </ol>
 </div>
-</section>
-<section id="einfaldar-vigur-og-fylkjaagerir">
+</div>
+<div class="section" id="einfaldar-vigur-og-fylkjaagerir">
 <h3><span class="section-number">4.1.3. </span>Einfaldar vigur- og fylkjaaðgerðir<a class="headerlink" href="#einfaldar-vigur-og-fylkjaagerir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Vigra er hægt að leggja saman og draga hvern frá öðrum og einnig má margfalda
 vigur með tölu. Þetta er gert með því að beita tilsvarandi aðgerðum á einstök
@@ -569,8 +431,8 @@ V &amp;= A - B\text{ er fylki með }v_{ij} = a_{ij} - b_{ij}\\
 W &amp;= cA\text{ er fylki með }w_{ij} = ca_{ij}\end{split}\]</div>
 <p>Þetta er nánar útskýrt í fyrrnefndum <a class="reference external" href="http://cs.hi.is/strei/linalg-1.pdf">töflufyrirlestri</a> þar sem líka eru gefin þrjú dæmi um
 samlagningu vigra, sér í lagi vigra sem tákna færslur í rúmi.</p>
-</section>
-<section id="reglur-um-vigur-og-fylkjaagerir">
+</div>
+<div class="section" id="reglur-um-vigur-og-fylkjaagerir">
 <span id="vigur-og-fylkjaagerir"></span><h3><span class="section-number">4.1.4. </span>Reglur um vigur- og fylkjaaðgerðir<a class="headerlink" href="#reglur-um-vigur-og-fylkjaagerir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Um samlagningu og frádrátt vigra og fylkja gilda víxlregla og tengiregla
 einnig gildir dreifiregla um margföldun með tölu. Ef
@@ -587,8 +449,8 @@ A + (B + C) &amp;= (A + B) + C\\\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\alpha(x - y) &amp;= \alpha x - \alpha y\\
 \alpha(A - B) &amp;= \alpha A - \alpha B\\\end{split}\]</div>
-</section>
-<section id="innfeldi">
+</div>
+<div class="section" id="innfeldi">
 <span id="id6"></span><h3><span class="section-number">4.1.5. </span>Innfeldi<a class="headerlink" href="#innfeldi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Innfeldi</strong> eða <strong>skalarmargfeldi</strong> (<em>inner product</em>, <em>dot product</em>)
 tveggja <span class="math notranslate nohighlight">\(n\)</span>-vigra <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> er skilgreint sem</p>
@@ -603,12 +465,10 @@ tveggja <span class="math notranslate nohighlight">\(n\)</span>-vigra <span clas
 &amp;x \cdot y &gt; 0 \text{ þá og því aðeins að hornið á milli } x \text{ og } y
 \text{ sé hvasst }\end{split}\]</div>
 </div></blockquote>
-<figure class="align-center" id="id14">
+<div class="figure align-center" id="id14">
 <a class="reference internal image-reference" href="_images/innfeldi.png"><img alt="_images/innfeldi.png" src="_images/innfeldi.png" style="width: 9cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 4.1 </span><span class="caption-text">Innfeldi vigra og horn milli þeirra</span><a class="headerlink" href="#id14" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 4.1: </span><span class="caption-text">Innfeldi vigra og horn milli þeirra</span><a class="headerlink" href="#id14" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Sýnidæmi</p>
 <ol class="arabic">
@@ -672,8 +532,8 @@ x\cdot(y \pm z) &amp;= x\cdot y \pm x\cdot z\end{split}\]</div>
 og útskýrt að það er hægt að reikna með virkjanum <code class="code docutils literal notranslate"><span class="pre">&#64;</span></code>, fallinu <code class="code docutils literal notranslate"><span class="pre">np.dot</span></code> eða
 aðferðinni <code class="code docutils literal notranslate"><span class="pre">dot</span></code>.</p>
 </div>
-</section>
-<section id="hornalina-fylkis-og-bylting">
+</div>
+<div class="section" id="hornalina-fylkis-og-bylting">
 <span id="bylting"></span><h3><span class="section-number">4.1.6. </span>Hornalína fylkis og bylting<a class="headerlink" href="#hornalina-fylkis-og-bylting" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Hornalína</strong> (<em>diagonal</em>) fylkis liggur frá horninu efst t.v. og niður á ská til
 hægri. Þannig inniheldur hornalína fylkisins</p>
@@ -689,8 +549,8 @@ bylt“:</p>
 <p class="admonition-title">Python</p>
 <p>Í NumPy fæst hornalína fylkis A með <code class="code docutils literal notranslate"><span class="pre">np.diag(A)</span></code> og bylta fylkið með <code class="code docutils literal notranslate"><span class="pre">A.T</span></code>.</p>
 </div>
-</section>
-<section id="serstok-fylki">
+</div>
+<div class="section" id="serstok-fylki">
 <h3><span class="section-number">4.1.7. </span>Sérstök fylki<a class="headerlink" href="#serstok-fylki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ýmsis fylki með stök sem uppfylla sérstök skilyrði hafa fengið sérstök nöfn.</p>
 <blockquote>
@@ -721,8 +581,8 @@ bylt“:</p>
 \end{pmatrix} \\[0.1cm]
 \text{Núllfylki og samhverft fylki}
 \end{gathered}\end{split}\]</div>
-</section>
-<section id="margfoldun-fylkis-og-vigurs">
+</div>
+<div class="section" id="margfoldun-fylkis-og-vigurs">
 <span id="fylki-sinnum-vigur"></span><h3><span class="section-number">4.1.8. </span>Margföldun fylkis og vigurs<a class="headerlink" href="#margfoldun-fylkis-og-vigurs" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(x\)</span> er <span class="math notranslate nohighlight">\(n\)</span>-vigur
 þá er margfeldi <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(x\)</span>, táknað <span class="math notranslate nohighlight">\(Ax\)</span> eða <span class="math notranslate nohighlight">\(A \cdot
@@ -784,9 +644,9 @@ f) <span class="math notranslate nohighlight">\(2A + B^\text{T}\)</span></p>
 </div>
 <p>(þessi æfing var reiknuð í fyrirlestri 29. janúar 2020 og lausn á henni
 má finna <a class="reference external" href="http://cs.hi.is/strei/æfing-vigrar-lausn.pdf">hér</a></p>
-</section>
-</section>
-<section id="linuleg-foll-og-innfeldi">
+</div>
+</div>
+<div class="section" id="linuleg-foll-og-innfeldi">
 <span id="id7"></span><h2><span class="section-number">4.2. </span>Línuleg föll og innfeldi<a class="headerlink" href="#linuleg-foll-og-innfeldi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Í síðasta kafla var talað um tvívíð föll, sem eru föll frá planinu
 <span class="math notranslate nohighlight">\(\Bbb{R}^2\)</span> yfir í rauntölurnar <span class="math notranslate nohighlight">\(\Bbb{R}\)</span>. Margvíð föll eru svo föll
@@ -805,7 +665,7 @@ og við munum komast að því að slíkar varpanir eru nátengdar fylkjum og ma
 <p>Til að einfalda málið einskorðum við okkur til að byrja með við línuleg föll,
 sem varpa vigrum í tölur. Þessari skorðu verður svo aflétt í grein
 <a class="reference internal" href="#linulegar-varpanir"><span class="std std-numref">4.9</span></a>.</p>
-<section id="skilgreining-a-linulegu-falli">
+<div class="section" id="skilgreining-a-linulegu-falli">
 <span id="skilgreining-linulegs-falls"></span><h3><span class="section-number">4.2.1. </span>Skilgreining á línulegu falli<a class="headerlink" href="#skilgreining-a-linulegu-falli" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><p><strong>SKILGREINING.</strong> &thinsp; Fall <span class="math notranslate nohighlight">\(f: \Bbb{R}^n \to \Bbb{R}\)</span> nefnist
@@ -861,8 +721,8 @@ fyrsta stak <span class="math notranslate nohighlight">\((x + y)\)</span> =
 fyrsta stak <span class="math notranslate nohighlight">\(ax\)</span> =
 <span class="math notranslate nohighlight">\(ax_1 = af(x)\)</span></p>
 </div>
-</section>
-<section id="reglur-um-linuleg-foll">
+</div>
+<div class="section" id="reglur-um-linuleg-foll">
 <span id="id8"></span><h3><span class="section-number">4.2.2. </span>Reglur um línuleg föll<a class="headerlink" href="#reglur-um-linuleg-foll" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Um línuleg föll gilda ýmsar reglur, sem við látum duga að setja fram, en
 sönnum ekki.</p>
@@ -908,12 +768,10 @@ nákvæmum upplýsingum um hönnun brúarinnar, en það er líka hægt
 að setja bíl af gefinni þyngd á staðina þrjá og mæla <span class="math notranslate nohighlight">\(s\)</span>
 fyrir hvern stað og ákvarða þannig <span class="math notranslate nohighlight">\(c_i\)</span>.</p>
 </div>
-<figure class="align-center" id="id15">
+<div class="figure align-center" id="id15">
 <a class="reference internal image-reference" href="_images/bru.png"><img alt="_images/bru.png" src="_images/bru.png" style="width: 11cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 4.2 </span><span class="caption-text">Brú sígur þegar bílar keyra yfir hana</span><a class="headerlink" href="#id15" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 4.2: </span><span class="caption-text">Brú sígur þegar bílar keyra yfir hana</span><a class="headerlink" href="#id15" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <div class="admonition hint">
 <p class="admonition-title">Æfing</p>
 <ol class="loweralpha simple">
@@ -924,11 +782,11 @@ fyrir hvern stað og ákvarða þannig <span class="math notranslate nohighlight
 tonn. Hve mikið sígur brúin í miðjunni?</p></li>
 </ol>
 </div>
-</section>
-</section>
-<section id="taylor-nalgun">
+</div>
+</div>
+<div class="section" id="taylor-nalgun">
 <span id="id9"></span><h2><span class="section-number">4.3. </span>Taylor-nálgun<a class="headerlink" href="#taylor-nalgun" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="stigull-af-margviu-falli">
+<div class="section" id="stigull-af-margviu-falli">
 <h3><span class="section-number">4.3.1. </span>Stigull af margvíðu falli<a class="headerlink" href="#stigull-af-margviu-falli" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Rifjum upp úr grein <a class="reference internal" href="kafli03.html#margvidir-stiglar"><span class="std std-numref">3.7.3</span></a> að stigull af <span class="math notranslate nohighlight">\(n\)</span>-víðu falli <span class="math notranslate nohighlight">\(f\)</span> er skilgreindur með:</p>
 <div class="math notranslate nohighlight">
@@ -983,8 +841,8 @@ h(x) &amp;= \frac{(2x-1)^3}{3}\end{split}\]</div>
 \dfrac{u'v-v'u}{v^2}\)</span>)</p></li>
 </ol>
 </div>
-</section>
-<section id="setning-taylors-i-einni-og-fleiri-viddum">
+</div>
+<div class="section" id="setning-taylors-i-einni-og-fleiri-viddum">
 <span id="taylor"></span><h3><span class="section-number">4.3.2. </span>Setning Taylors í einni og fleiri víddum<a class="headerlink" href="#setning-taylors-i-einni-og-fleiri-viddum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ef <span class="math notranslate nohighlight">\(f\)</span> er eitthvert gefið fall þá er ein leið til að nálga það með
 línulegu falli sú að nota setningu Taylors. Einvíðu útgáfuna af
@@ -1000,23 +858,19 @@ kemur stigull í stað afleiðu, og innfeldi í stað margföldunar:</p>
 \[f(x) \approx f(a) + \nabla f(a) \cdot (x-a) \;\;\; \text{(margvíð Taylor-setning)}\]</div>
 <p>Fallið <span class="math notranslate nohighlight">\(\hat{f}(x) = f(a) + \nabla f(a) \cdot (x-a)\)</span> er nefnt
 <strong>Taylor-nálgun</strong> við <span class="math notranslate nohighlight">\(f\)</span> í <span class="math notranslate nohighlight">\(a\)</span>.</p>
-<figure class="align-center" id="taylor-lina">
+<div class="figure align-center" id="taylor-lina">
 <a class="reference internal image-reference" href="_images/taylor1.png"><img alt="_images/taylor1.png" src="_images/taylor1.png" style="width: 6cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 4.3 </span><span class="caption-text">Einvítt fall og línuleg Taylor-nálgun þess í <span class="math notranslate nohighlight">\(a\)</span></span><a class="headerlink" href="#taylor-lina" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 4.3: </span><span class="caption-text">Einvítt fall og línuleg Taylor-nálgun þess í <span class="math notranslate nohighlight">\(a\)</span></span><a class="headerlink" href="#taylor-lina" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p>Athugið að þegar <span class="math notranslate nohighlight">\(f\)</span> er einvítt
 fall þá er Taylor-nálgunin jafna beinnar línu sem snertir ferilinn sem táknar
-graf fallsins í <span class="math notranslate nohighlight">\((a,f(a))\)</span> (sbr. <a class="reference internal" href="#taylor-lina"><span class="std std-numref">Mynd 4.3</span></a>), og að
+graf fallsins í <span class="math notranslate nohighlight">\((a,f(a))\)</span> (sbr. <a class="reference internal" href="#taylor-lina"><span class="std std-numref">Mynd 4.3:</span></a>), og að
 þegar <span class="math notranslate nohighlight">\(f\)</span> er tvívítt þá er hún jafna plans sem snertir yfirborðið sem
-táknar graf fallsins í <span class="math notranslate nohighlight">\((a,f(a))\)</span> (<a class="reference internal" href="#snertiplan"><span class="std std-numref">Mynd 4.4</span></a>).</p>
-<figure class="align-center" id="snertiplan">
+táknar graf fallsins í <span class="math notranslate nohighlight">\((a,f(a))\)</span> (<a class="reference internal" href="#snertiplan"><span class="std std-numref">Mynd 4.4:</span></a>).</p>
+<div class="figure align-center" id="snertiplan">
 <a class="reference internal image-reference" href="_images/snertiplan.png"><img alt="_images/snertiplan.png" src="_images/snertiplan.png" style="width: 8cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 4.4 </span><span class="caption-text">Flötur (graf tvíðvíðs falls) og snertiplan við hann.</span><a class="headerlink" href="#snertiplan" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 4.4: </span><span class="caption-text">Flötur (graf tvíðvíðs falls) og snertiplan við hann.</span><a class="headerlink" href="#snertiplan" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Sýnidæmi</p>
 <p>Látum <span class="math notranslate nohighlight">\(f(x) = x_1 + \exp(x_2 - x_1)\)</span> og skoðum línulega Taylor-nálgun
@@ -1085,22 +939,20 @@ gildi á <span class="math notranslate nohighlight">\(x\)</span> í grennd við 
 sé ritað sem vigur <span class="math notranslate nohighlight">\((x,y,z)\)</span>].</p></li>
 </ol>
 </div>
-</section>
-</section>
-<section id="norm-fjarlaegir-og-horn">
+</div>
+</div>
+<div class="section" id="norm-fjarlaegir-og-horn">
 <h2><span class="section-number">4.4. </span>Norm, fjarlægðir og horn<a class="headerlink" href="#norm-fjarlaegir-og-horn" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Í þessum kafla verður fjallað um norm, sem er mælikvarði á
 stærð vigurs, og skyld hugtök, fjarlægðir og horn milli vigra.</p>
-<section id="skilgreining-norms">
+<div class="section" id="skilgreining-norms">
 <h3><span class="section-number">4.4.1. </span>Skilgreining norms<a class="headerlink" href="#skilgreining-norms" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Eins og áður hefur verið bent á er hægt að túlka tvívíða og þrívíða vigra sem
 færslu í plani eða rúmi, eða ör sem hefur stefnu og lengd.</p>
-<figure class="align-center" id="id16">
+<div class="figure align-center" id="id16">
 <a class="reference internal image-reference" href="_images/vigrar.png"><img alt="_images/vigrar.png" src="_images/vigrar.png" style="width: 8cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 4.5 </span><span class="caption-text">Tvívíðir vigrar sýndir sem örvar (eða færslur)</span><a class="headerlink" href="#id16" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 4.5: </span><span class="caption-text">Tvívíðir vigrar sýndir sem örvar (eða færslur)</span><a class="headerlink" href="#id16" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p>Það liggur beint við að leggja mælikvarða á stærð slíkra vigra með því að mæla
 lengd þeirra í rúminu. Þessa lengd má líka reikna með Pýþagórasarreglu útfrá
 hnitum vigranna og þá fæst:</p>
@@ -1143,8 +995,8 @@ sannaði margar setningar um rúmfræði.</p>
 \cos\theta)\| = 1\)</span></p></li>
 </ol>
 </div>
-</section>
-<section id="reglur-um-norm">
+</div>
+<div class="section" id="reglur-um-norm">
 <h3><span class="section-number">4.4.2. </span>Reglur um norm<a class="headerlink" href="#reglur-um-norm" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Hægt er að leiða út fjölmargar reglur um norm, en hér verða örfáar látnar
 duga. Í eftirfarandi reglum eru <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> einhverjir
@@ -1164,14 +1016,14 @@ viðeigandi þríhyrning, og notfæra ykkur að stysta leið
 milli tveggja punkta er bein lína.</p></li>
 </ol>
 </div>
-</section>
-<section id="fjarlaegir">
+</div>
+<div class="section" id="fjarlaegir">
 <h3><span class="section-number">4.4.3. </span>Fjarlægðir<a class="headerlink" href="#fjarlaegir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ef <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> eru tveir punktar í plani eða þrívíðu rúmi þá er vigur
 frá <span class="math notranslate nohighlight">\(a\)</span> til <span class="math notranslate nohighlight">\(b\)</span> gefinn með <span class="math notranslate nohighlight">\(b - a\)</span>:</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/fjarlægð.png"><img alt="_images/fjarlægð.png" src="_images/fjarlægð.png" style="width: 5cm;" /></a>
-</figure>
+</div>
 <p>og þessvegna er fjarlægðin milli <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> gefin með
 <span class="math notranslate nohighlight">\(\|b-a\|\)</span>, eða <span class="math notranslate nohighlight">\(\|a-b\|\)</span> sem er jafngilt. Því liggur beint við
 að skilgreina fjarlægð milli almennra vigra á sama hátt.</p>
@@ -1196,8 +1048,8 @@ að skilgreina fjarlægð milli almennra vigra á sama hátt.</p>
 reikniritum, t.d. hinu velþekkta <em>k-means</em> reikniriti sem fjallað verður um
 síðar í þessum fyrirlestrarnótum, og sömuleiðis í verkefnum í máltækni t.d. í
 samanburði tveggja texta, eins og sýnt verður í næstu grein.</p>
-</section>
-<section id="ortini-og-fjarlaeg-milli-vigra">
+</div>
+<div class="section" id="ortini-og-fjarlaeg-milli-vigra">
 <span id="ortini"></span><h3><span class="section-number">4.4.4. </span>Orðtíðni og fjarlægð milli vigra<a class="headerlink" href="#ortini-og-fjarlaeg-milli-vigra" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Orðtíðnivigur fyrir skjal (eða vefsíðu) er gerður þannig að hvert orð
 í skjalinu er fært yfir á staðalsnið (t.d. nefnifall eintölu fyrir
@@ -1284,8 +1136,8 @@ skjöl um ólík efni.</p>
 <p>Hér sést að fjarlægðin milli greinanna um verðlaunin er minni en fjarlægðin frá
 þeim yfir í ofurskálargreinina.</p>
 </div>
-</section>
-<section id="horn-milli-vigra">
+</div>
+<div class="section" id="horn-milli-vigra">
 <span id="id10"></span><h3><span class="section-number">4.4.5. </span>Horn milli vigra<a class="headerlink" href="#horn-milli-vigra" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Í tvívíðu og þrívíðu rúmi er hægt að reikna horn milli tveggja vigra
 rúmfræðilega útfrá innfeldi og normum vigranna. Formúlan sem
@@ -1364,11 +1216,11 @@ x_2 &amp;= r \sin a \qquad y_2 &amp;= R \sin b\end{split}\]</div>
 </li>
 </ol>
 </div>
-</section>
-</section>
-<section id="tolfraeileg-foll-af-vigrum">
+</div>
+</div>
+<div class="section" id="tolfraeileg-foll-af-vigrum">
 <h2><span class="section-number">4.5. </span>Tölfræðileg föll af vigrum<a class="headerlink" href="#tolfraeileg-foll-af-vigrum" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="mealtal-dreifni-og-staalfravik">
+<div class="section" id="mealtal-dreifni-og-staalfravik">
 <h3><span class="section-number">4.5.1. </span>Meðaltal, dreifni og staðalfrávik<a class="headerlink" href="#mealtal-dreifni-og-staalfravik" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Meðaltal (<em>mean</em> eða <em>average</em>), dreifni (<em>variance</em>) og staðalfrávik (<em>standard deviation</em>). eru hugtök í tölfræði sem eru samt nátengd vigrum og línulegri algebru.</p>
 <blockquote>
@@ -1413,8 +1265,8 @@ tölugildinu af tölunni.</p>
 <code class="code docutils literal notranslate"><span class="pre">np.mean(x)</span></code>, <code class="code docutils literal notranslate"><span class="pre">np.var(x)</span></code> og <code class="code docutils literal notranslate"><span class="pre">np.std(x)</span></code>, eða með
 <code class="code docutils literal notranslate"><span class="pre">x.mean()</span></code>, <code class="code docutils literal notranslate"><span class="pre">x.var()</span></code> og <code class="code docutils literal notranslate"><span class="pre">x.std()</span></code>.</p>
 </div>
-</section>
-<section id="stolun">
+</div>
+<div class="section" id="stolun">
 <h3><span class="section-number">4.5.2. </span>Stöðlun<a class="headerlink" href="#stolun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Stundum hentar að staðla (<em>standardize</em>) gögn, en þá er meðaltal þeirra dregið
 frá og deilt með staðalfrávikinu, og þannig fæst útgáfa af gögnunum sem hefur
@@ -1443,8 +1295,8 @@ greindarvísitala sem skv. skilgreiningu hefur meðaltal 100 og staðalfrávik 1
 <span class="math notranslate nohighlight">\(y = (2,4,5,6,8)\)</span> og <span class="math notranslate nohighlight">\(z = -3x\)</span></p></li>
 </ol>
 </div>
-</section>
-<section id="fylgni">
+</div>
+<div class="section" id="fylgni">
 <h3><span class="section-number">4.5.3. </span>Fylgni<a class="headerlink" href="#fylgni" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Fylgnistuðull eða fylgni (<em>correlation (coefficient)</em>) er líka tölfræðilegt
 hugtak tengt línulegri algebru og vigrum. Reyndar eru til nokkrar leiðir til að
@@ -1500,15 +1352,15 @@ hlið við hlið (notið <code class="code docutils literal notranslate"><span c
 <code class="code docutils literal notranslate"><span class="pre">y[i]</span></code> oftast stórt líka og öfugt.</p></li>
 <li><p>Búið líka til reit til að búa til 500-staka vigra með fylgni u.þ.b. 0.9 og
 teiknið þá með <code class="code docutils literal notranslate"><span class="pre">plt.scatter</span></code> (sbr. grein <a class="reference internal" href="kafli02.html#einfaldar-myndir"><span class="std std-numref">2.4.2</span></a> og
-töflu <a class="reference internal" href="kafli02.html#scatterstyring"><span class="std std-numref">Tafla 2.4</span></a>; hæfilegt er að nota punktastærð 3).
+töflu <a class="reference internal" href="kafli02.html#scatterstyring"><span class="std std-numref">Tafla 2.4:</span></a>; hæfilegt er að nota punktastærð 3).
 Endurtakið fyrir nokkur mismunandi gildi á r (t.d. -0.99, 0, 0.4, 0.99).</p></li>
 </ol>
 </div>
-</section>
-</section>
-<section id="grunnar-og-linulega-hair-og-ohair-vigrar">
+</div>
+</div>
+<div class="section" id="grunnar-og-linulega-hair-og-ohair-vigrar">
 <h2><span class="section-number">4.6. </span>Grunnar og línulega háðir og óháðir vigrar<a class="headerlink" href="#grunnar-og-linulega-hair-og-ohair-vigrar" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="linulega-hair-vigrar">
+<div class="section" id="linulega-hair-vigrar">
 <span id="linulega-hair"></span><h3><span class="section-number">4.6.1. </span>Línulega háðir vigrar<a class="headerlink" href="#linulega-hair-vigrar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><p><strong>SKILGREINING.</strong> &thinsp; Ef <span class="math notranslate nohighlight">\(x_1\)</span>,…, <span class="math notranslate nohighlight">\(x_k\)</span> eru vigrar og
@@ -1529,9 +1381,9 @@ línuleg samantekt af <span class="math notranslate nohighlight">\(u\)</span> og
 <div class="math notranslate nohighlight">
 \[\{w \in \Bbb{R}^3 |\; w = au + bv \text{ fyrir einhver } a,b \in \Bbb{R}\}\]</div>
 <p>Hér er mynd sem sýnir þessa vigra og tilheyrandi spannplan:</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/plotspan.png"><img alt="_images/plotspan.png" src="_images/plotspan.png" style="width: 11cm;" /></a>
-</figure>
+</div>
 </div>
 <p>Skilgreinum nú línulega háða (<em>linearly dependent</em>) vigra.</p>
 <blockquote>
@@ -1562,8 +1414,8 @@ mengi af línulega háðum vigrum og <span class="math notranslate nohighlight">
 \{y\}\)</span> líka línulega háð. Skv. síðustu setningu höfum við <span class="math notranslate nohighlight">\(c_1 x_1 +
 \ldots + c_k x_k = 0\)</span> og við summuna má svo bæta <span class="math notranslate nohighlight">\(0y\)</span>, og hún er ennþá
 jöfn <span class="math notranslate nohighlight">\(0\)</span>.</p>
-</section>
-<section id="linulega-ohair-vigrar">
+</div>
+<div class="section" id="linulega-ohair-vigrar">
 <span id="linulega-ohair"></span><h3><span class="section-number">4.6.2. </span>Línulega óháðir vigrar<a class="headerlink" href="#linulega-ohair-vigrar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><p><strong>SKILGREINING.</strong> &thinsp; Vigrar <span class="math notranslate nohighlight">\(x_1\)</span>,…, <span class="math notranslate nohighlight">\(x_k\)</span> eru sagðir <strong>línulega
@@ -1633,8 +1485,8 @@ x_k = 0\)</span> þ.e.a.s. <span class="math notranslate nohighlight">\((c_1 - d
 hljóta að vera 0, sem sé <span class="math notranslate nohighlight">\(c_1 - d_1 = c_2 - d_2 = \ldots = c_k - d_k =
 0\)</span> sem gefur <span class="math notranslate nohighlight">\(c_i = d_i\)</span> fyrir öll <span class="math notranslate nohighlight">\(i\)</span>.</p>
 </div></blockquote>
-</section>
-<section id="grunnar">
+</div>
+<div class="section" id="grunnar">
 <h3><span class="section-number">4.6.3. </span>Grunnar<a class="headerlink" href="#grunnar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Grunnur (<em>basis</em>, fleirtala <em>bases</em>) er grunnhugtak í línulegri algebru.</p>
 <blockquote>
@@ -1659,9 +1511,9 @@ hægt að sanna hana beint með þrepun á <span class="math notranslate nohighl
 <p>Setningin segir til dæmis að þrír vigrar í plani hljóti að vera línulega háðir,
 og sömuleiðis fjórir vigrar þrívíðu rúmi. Eftirfarandi mynd sýnir þrjá vigra í
 <span class="math notranslate nohighlight">\(\Bbb{R}^2\)</span>, <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> og <span class="math notranslate nohighlight">\(z\)</span>, engir tveir samsíða.</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/mynd-og-núllvídd.png"><img alt="_images/mynd-og-núllvídd.png" src="_images/mynd-og-núllvídd.png" style="width: 5cm;" /></a>
-</figure>
+</div>
 <p>Á myndinni sést hvernig hægt er að skrifa einn þeirra (nefnilega <span class="math notranslate nohighlight">\(y\)</span>) sem línulega samantekt af
 hinum tveimur, svo vigrarnir þrír eru línulega háðir. Byrjað er á að teikna
 <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(z\)</span> út frá endunum á <span class="math notranslate nohighlight">\(y\)</span> og svo eru þeir framlengdir
@@ -1725,15 +1577,15 @@ gefur <span class="math notranslate nohighlight">\(3 = c_1 + c_2\)</span> og <sp
 <li><p>En <span class="math notranslate nohighlight">\((1,0,0)\)</span>, <span class="math notranslate nohighlight">\((1,1,0)\)</span> og <span class="math notranslate nohighlight">\((1,1,1)\)</span>?</p></li>
 </ol>
 </div>
-</section>
-<section id="venjulegir-einingavigrar-og-grunnar-eirra">
+</div>
+<div class="section" id="venjulegir-einingavigrar-og-grunnar-eirra">
 <h3><span class="section-number">4.6.4. </span>Venjulegir einingavigrar og grunnar þeirra<a class="headerlink" href="#venjulegir-einingavigrar-og-grunnar-eirra" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Vigur með lengdina 1 er kallaður <strong>einingavigur</strong> (<em>unit vector</em>). Í planinu
 <span class="math notranslate nohighlight">\(\Bbb{R}^2\)</span> eru vigrarnir <span class="math notranslate nohighlight">\((1,0)\)</span> og <span class="math notranslate nohighlight">\((0,1)\)</span>, sem stefna út
 eftir <span class="math notranslate nohighlight">\(x\)</span>-ás og <span class="math notranslate nohighlight">\(y\)</span>-ás kallaðir <strong>venjulegu einingavigrarnir</strong>
 (<em>standard unit vectors</em>) eða bara einingavigrarnir ef ekki er hætta á
 misskilningi. Algengt er að tákna þessa vigra með <span class="math notranslate nohighlight">\(e_1\)</span> og <span class="math notranslate nohighlight">\(e_2\)</span> og
-það verður gert hér (sjá <a class="reference internal" href="#ein-vigrar"><span class="std std-numref">Mynd 4.6</span></a> hér rétt fyrir neðan). Eftirfarandi skilgreining
+það verður gert hér (sjá <a class="reference internal" href="#ein-vigrar"><span class="std std-numref">Mynd 4.6:</span></a> hér rétt fyrir neðan). Eftirfarandi skilgreining
 útvíkkar þetta svo yfir í <span class="math notranslate nohighlight">\(n\)</span>-vítt rúm.</p>
 <blockquote>
 <div><p><strong>SKILGREINING.</strong> &thinsp; Vigur í <span class="math notranslate nohighlight">\(\Bbb{R}^n\)</span> með <span class="math notranslate nohighlight">\(i\)</span>-ta stak jafnt
@@ -1754,12 +1606,10 @@ liða vigur með einingagrunnvigrunum. Ef <span class="math notranslate nohighli
      \ldots +
      x_n \begin{pmatrix} 0 \\ \vdots \\ 0 \\ 1 \end{pmatrix} \\
   &amp;= x_1 e_1 + x_2 e_2 + \ldots + x_n e_n\end{split}\]</div>
-<figure class="align-center" id="ein-vigrar">
+<div class="figure align-center" id="ein-vigrar">
 <a class="reference internal image-reference" href="_images/ein-vigrar.png"><img alt="_images/ein-vigrar.png" src="_images/ein-vigrar.png" style="width: 7cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 4.6 </span><span class="caption-text">Venjulegu einingavigrarnir í <span class="math notranslate nohighlight">\(\Bbb{R}^2\)</span> og liðun <span class="math notranslate nohighlight">\(u = (2,3)\)</span> með þeim</span><a class="headerlink" href="#ein-vigrar" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 4.6: </span><span class="caption-text">Venjulegu einingavigrarnir í <span class="math notranslate nohighlight">\(\Bbb{R}^2\)</span> og liðun <span class="math notranslate nohighlight">\(u = (2,3)\)</span> með þeim</span><a class="headerlink" href="#ein-vigrar" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <div class="admonition hint">
 <p class="admonition-title">Æfing</p>
 <ol class="loweralpha simple">
@@ -1767,8 +1617,8 @@ liða vigur með einingagrunnvigrunum. Ef <span class="math notranslate nohighli
 <li><p>Liðið <span class="math notranslate nohighlight">\((3,5,-1,2)\)</span> með honum.</p></li>
 </ol>
 </div>
-</section>
-<section id="verstalair-grunnar">
+</div>
+<div class="section" id="verstalair-grunnar">
 <h3><span class="section-number">4.6.5. </span>Þverstaðlaðir grunnar<a class="headerlink" href="#verstalair-grunnar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ef allir vigrar grunns eru hornréttir hver á annan er grunnurinn kallaður
 <strong>hornréttur</strong> (<em>orthogonal</em>). Venjulegi einingagrunnurinn er hornréttur, og auk
@@ -1781,13 +1631,11 @@ vera hornréttir og með vigra af einingalengd.</p>
 fyrir öll <span class="math notranslate nohighlight">\(i\)</span> er kallaður <strong>þverstaðlaður</strong> (<em>orthonormal</em>) (stundum
 er notað orðið <strong>einingaréttur</strong>).</p>
 </div></blockquote>
-<figure class="align-center" id="ein-rettir-vigrar">
+<div class="figure align-center" id="ein-rettir-vigrar">
 <a class="reference internal image-reference" href="_images/ein.réttir-vigrar.png"><img alt="_images/ein.réttir-vigrar.png" src="_images/ein.réttir-vigrar.png" style="width: 10cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 4.7 </span><span class="caption-text">Þverstaðlaður grunnur fyrir <span class="math notranslate nohighlight">\(\Bbb{R}^2\)</span> og vigur sem hægt er
+<p class="caption"><span class="caption-number">Mynd 4.7: </span><span class="caption-text">Þverstaðlaður grunnur fyrir <span class="math notranslate nohighlight">\(\Bbb{R}^2\)</span> og vigur sem hægt er
 að liða með honum.</span><a class="headerlink" href="#ein-rettir-vigrar" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+</div>
 <p>Almennt er ekki auðvelt að finna liðun vigurs með tilteknum grunni, en í
 síðustu grein sáum við að fyrir venjulega einingagrunninn er það
 fyrirhafnarlaust. Með þverstöðluðum grunnum er það líka fremur einfalt
@@ -1802,7 +1650,7 @@ eins og eftirfarandi regla sýnir:</p>
 liðunarstuðlum sem gefnir eru með innfeldi þeirra og <span class="math notranslate nohighlight">\(u\)</span>.</p>
 <div class="admonition important">
 <p class="admonition-title">Sýnidæmi</p>
-<p>Liðum vigurinn <span class="math notranslate nohighlight">\(u = (2,3)\)</span> á <a class="reference internal" href="#ein-rettir-vigrar"><span class="std std-numref">Mynd 4.7</span></a> með
+<p>Liðum vigurinn <span class="math notranslate nohighlight">\(u = (2,3)\)</span> á <a class="reference internal" href="#ein-rettir-vigrar"><span class="std std-numref">Mynd 4.7:</span></a> með
 <span class="math notranslate nohighlight">\(a_1 = (\frac{\sqrt{3}}{2}, \frac{1}{2})\)</span> og
 <span class="math notranslate nohighlight">\(a_2 = (-\frac{1}{2}, \frac{\sqrt{3}}{2})\)</span>.
 Við reiknum</p>
@@ -1817,7 +1665,7 @@ c_2 &amp;= a_2 \cdot u = -\frac{1}{2}\cdot 2 + \frac{\sqrt{3}}{2} \cdot 3
 <p class="admonition-title">Æfing</p>
 <ol class="loweralpha simple">
 <li><p>Sýnið að vigrarnir <span class="math notranslate nohighlight">\(a_1\)</span> og <span class="math notranslate nohighlight">\(a_2\)</span> á
-<a class="reference internal" href="#ein-rettir-vigrar"><span class="std std-numref">Mynd 4.7</span></a> séu þverstaðlaður grunnur. Það þarf að sanna
+<a class="reference internal" href="#ein-rettir-vigrar"><span class="std std-numref">Mynd 4.7:</span></a> séu þverstaðlaður grunnur. Það þarf að sanna
 þrennt: (i) Að þeir séu grunnur, (ii) að þeir hafi einingalengd, og (iii)
 að þeir séu innbyrðis hornréttir.</p></li>
 <li><p>Sýnið að vigrarnir <span class="math notranslate nohighlight">\(a_1 = (0.6, 0.8, 0)\)</span>, <span class="math notranslate nohighlight">\(a_2 = (-0.8, 0.6,
@@ -1867,11 +1715,11 @@ squares problems</em>), eigingildisverkefnum (<em>eigenvalue problems</em>), kva
 bestun (<em>quadratic programming</em>), en lausn slíkra reiknifræðilegu verkefna
 nýtist aftur í fjölbreyttum verkefnum í gagnavísindum, verkfræði og
 raunvísindum.</p>
-</section>
-</section>
-<section id="lausn-jofnuhneppa">
+</div>
+</div>
+<div class="section" id="lausn-jofnuhneppa">
 <h2><span class="section-number">4.7. </span>Lausn jöfnuhneppa<a class="headerlink" href="#lausn-jofnuhneppa" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="fylkjaframsetning-linulegra-jofnuhneppa">
+<div class="section" id="fylkjaframsetning-linulegra-jofnuhneppa">
 <span id="fylkjaframsetning"></span><h3><span class="section-number">4.7.1. </span>Fylkjaframsetning línulegra jöfnuhneppa<a class="headerlink" href="#fylkjaframsetning-linulegra-jofnuhneppa" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ein mikilvæg hagnýting fylkja er að leysa saman margar jöfnur í mörgum línulegum
 jöfnum. Ef jöfnurnar eru jafn margar og óþekktu stærðirnar er yfirleitt til
@@ -1952,9 +1800,9 @@ fæðutegundir innihalda næringarefni í 100 g sem hér segir:</p>
 <p>Notið NumPy til að ákvarða hvað hún á að borða mikið af hverju á dag ef hún
 vill fá 100 g af kolvetnum, 150 g af próteini og 150 g af fitu úr matnum?</p>
 </div>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/matur.png"><img alt="_images/matur.png" src="_images/matur.png" style="width: 16cm;" /></a>
-</figure>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">Aðvörun</p>
 <p>Sigga ætti að borða eitthvað grænmeti líka.</p>
@@ -1973,8 +1821,8 @@ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
 \end{pmatrix}
 \begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix} =
 \begin{pmatrix} b_1 \\ \vdots \\ b_n \end{pmatrix}\end{split}\]</div>
-</section>
-<section id="linulegar-samantektir-jofnuhneppi-og-tilvist-lausna">
+</div>
+<div class="section" id="linulegar-samantektir-jofnuhneppi-og-tilvist-lausna">
 <h3><span class="section-number">4.7.2. </span>Línulegar samantektir, jöfnuhneppi og tilvist lausna<a class="headerlink" href="#linulegar-samantektir-jofnuhneppi-og-tilvist-lausna" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Smá umhugsun leiðir í ljós að margföldun fylkis og vigurs jafngildir því að taka
 línulega samantekt af dálkum fylkisins með samantektarstuðlum sem eru
@@ -2043,8 +1891,8 @@ séu línulega háðir (með því að skrifa einn þeirra sem línulega
 samantekt af hinum tveimur).</p></li>
 </ol>
 </div>
-</section>
-<section id="linulega-hair-vigrar-og-python">
+</div>
+<div class="section" id="linulega-hair-vigrar-og-python">
 <h3><span class="section-number">4.7.3. </span>Línulega háðir vigrar og Python<a class="headerlink" href="#linulega-hair-vigrar-og-python" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Þó að jöfnuhneppi hafi enga stærðfræðilega lausn getur það gerst að NumPy finni
 lausn sem er með mjög stórum tölum, en stundum gefur það villumeldingu og segir
@@ -2072,9 +1920,9 @@ Ef dálkar <span class="math notranslate nohighlight">\(n\)</span>-dálka fylkis
 NumPy. Prófið líka að reikna myndvíddina ef stakinu <code class="code docutils literal notranslate"><span class="pre">5</span></code> er breytt í
 <code class="code docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">1e-15</span></code>, <code class="code docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">1e-14</span></code> og <code class="code docutils literal notranslate"><span class="pre">5</span> <span class="pre">+</span> <span class="pre">1e-13</span></code>.</p>
 </div>
-</section>
-</section>
-<section id="fylkjaalgebra">
+</div>
+</div>
+<div class="section" id="fylkjaalgebra">
 <h2><span class="section-number">4.8. </span>Fylkjaalgebra<a class="headerlink" href="#fylkjaalgebra" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Við höfum þegar séð ýmsar aðgerðir og reglur tengdar vigrum og fylkjum sem minna
 á sambærilegar aðgerðir og reglur fyrir tölur: samlagningu vigra, innfeldi,
@@ -2085,7 +1933,7 @@ er algebra. Stundum koma við sögu hugtök eins og samlagningarandhverfa
 (<em>null element</em>) og einingarstak (<em>identity element</em>). Hér verður alls ekki
 reynt að skrifa nákvæma stærðfræðilega umfjöllun um fylkjaalgebru, en smávegis
 skoðun á henni getur hjálpað til við að skilja fylki betur.</p>
-<section id="margfoldun-fylkja">
+<div class="section" id="margfoldun-fylkja">
 <span id="id11"></span><h3><span class="section-number">4.8.1. </span>Margföldun fylkja<a class="headerlink" href="#margfoldun-fylkja" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <blockquote>
 <div><p><strong>SKILGREINING.</strong> &thinsp; <strong>Margfeldi</strong> <span class="math notranslate nohighlight">\(m \times p\)</span> fylkis <span class="math notranslate nohighlight">\(A\)</span> og
@@ -2141,8 +1989,8 @@ er <span class="math notranslate nohighlight">\(A \cdot A = AA\)</span>, <span c
 </pre></div>
 </div>
 </div>
-</section>
-<section id="nullfylki-og-einingafylki">
+</div>
+<div class="section" id="nullfylki-og-einingafylki">
 <span id="einingafylki"></span><h3><span class="section-number">4.8.2. </span>Núllfylki og einingafylki<a class="headerlink" href="#nullfylki-og-einingafylki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Núllfylki</strong> (<em>zero matrix</em>) hefur öll stök = 0 og <strong>einingafylki</strong> (<em>identity matrix</em>) hefur hornalínustökin = 1 og öll önnur stök = 0. Einingafylki er oftast táknað með <span class="math notranslate nohighlight">\(I\)</span> og stærð þess ræðst yfirleitt af samhenginu. Núllfylki eru stundum táknuð með <span class="math notranslate nohighlight">\(0\)</span> eða <span class="math notranslate nohighlight">\(O\)</span> (núll eða bókstafurinn O), og stærðin ræðst líka af samhenginu.</p>
 <blockquote>
@@ -2159,8 +2007,8 @@ er <span class="math notranslate nohighlight">\(A \cdot A = AA\)</span>, <span c
 og <span class="math notranslate nohighlight">\(n \times n\)</span> einingafylki með <code class="code docutils literal notranslate"><span class="pre">np.identity(n)</span></code> eða
 <code class="code docutils literal notranslate"><span class="pre">np.eye(n)</span></code> (<em>eye</em> er borið fram eins og <em>I</em> ).</p>
 </div>
-</section>
-<section id="reglur-um-fylkjamargfoldun">
+</div>
+<div class="section" id="reglur-um-fylkjamargfoldun">
 <span id="id12"></span><h3><span class="section-number">4.8.3. </span>Reglur um fylkjamargföldun<a class="headerlink" href="#reglur-um-fylkjamargfoldun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Í grein <a class="reference internal" href="#vigur-og-fylkjaagerir"><span class="std std-numref">4.1.4</span></a> voru víxl- og tengiregla fyrir
 fylkjasamlagningu gefnar. Ef <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> og <span class="math notranslate nohighlight">\(C\)</span> eru <span class="math notranslate nohighlight">\(n
@@ -2196,8 +2044,8 @@ með eftirfarandi skipunum:</p>
 <p>Bætið svo við skipunum til að búa til núll- og einingafylki, og
 sannreynið allar reglurnar fimm hér að ofan.</p>
 </div>
-</section>
-<section id="andhverf-fylki">
+</div>
+<div class="section" id="andhverf-fylki">
 <h3><span class="section-number">4.8.4. </span>Andhverf fylki<a class="headerlink" href="#andhverf-fylki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ef fylki <span class="math notranslate nohighlight">\(A\)</span> er andhverfanlegt (sem sé ekki sérstætt) þá er eins og
 ráða má af orðinu hægt að reikna <strong>andhverfu</strong> (<em>inverse</em>) þess, nánar tiltekið
@@ -2238,8 +2086,8 @@ einfaldara með NumPy:</p>
 fyrir raunveruleg verkefni ætti alltaf að reyna að umrita reiknirit
 með fylkjaandhverfum yfir í reiknirit sem leysa jöfnuhneppi.</p>
 </div>
-</section>
-<section id="reglur-um-byltingu-og-andhverfu">
+</div>
+<div class="section" id="reglur-um-byltingu-og-andhverfu">
 <h3><span class="section-number">4.8.5. </span>Reglur um byltingu og andhverfu<a class="headerlink" href="#reglur-um-byltingu-og-andhverfu" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Þrjár gagnlegar og skemmtilegar reglur gilda um byltingu og andhverfu margfeldis
 tveggja fylkja, nefnilega:</p>
@@ -2260,11 +2108,11 @@ um línulega algebru og tengd fræði munu rekast á notkun þeirra aftur og aft
 grein <a class="reference internal" href="#reglur-um-fylkjamargfoldun"><span class="std std-numref">4.8.3</span></a> og rifjum upp að bylt fylki <code class="code docutils literal notranslate"><span class="pre">A</span></code> fæst
 með <code class="code docutils literal notranslate"><span class="pre">A.T</span></code>).</p>
 </div>
-</section>
-</section>
-<section id="linulegar-varpanir-og-fylkjamargfoldun">
+</div>
+</div>
+<div class="section" id="linulegar-varpanir-og-fylkjamargfoldun">
 <span id="linulegar-varpanir"></span><h2><span class="section-number">4.9. </span>Línulegar varpanir og fylkjamargföldun<a class="headerlink" href="#linulegar-varpanir-og-fylkjamargfoldun" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="skilgreining-a-linulegri-vorpun">
+<div class="section" id="skilgreining-a-linulegri-vorpun">
 <span id="id13"></span><h3><span class="section-number">4.9.1. </span>Skilgreining á línulegri vörpun<a class="headerlink" href="#skilgreining-a-linulegri-vorpun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Rifjum upp úr grein <a class="reference internal" href="#skilgreining-linulegs-falls"><span class="std std-numref">4.2.1</span></a> að línulegt fall er
 fall frá <span class="math notranslate nohighlight">\(\Bbb{R}^n \to \Bbb{R}\)</span> sem varðveitir samlagningu og margföldun
@@ -2290,9 +2138,9 @@ punktum verður fallið að vörpun.</p>
 <span class="math notranslate nohighlight">\(w_3\)</span> (þyngdir bíla í tonnum) á þremur gefnum stöðum. Þeir valda því að
 brúinn sígur um <span class="math notranslate nohighlight">\(s_1, s_2, s_3\)</span> og <span class="math notranslate nohighlight">\(s_4\)</span> millimetra á öðrum
 fjórum gefnum stöðum.</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/bru3.png"><img alt="_images/bru3.png" src="_images/bru3.png" style="width: 12cm;" /></a>
-</figure>
+</div>
 <p>Samband <span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(w\)</span> er gefið með línulegri vörpun
 <span class="math notranslate nohighlight">\(s = \operatorname{sig}(w)\)</span> sem rita mætti:</p>
 <div class="math notranslate nohighlight">
@@ -2307,8 +2155,8 @@ s_4 &amp;= c_{41} w_1 + c_{42} w_2 + c_{43} w_3\end{split}\]</div>
 stuðlana <span class="math notranslate nohighlight">\(c_{ij}\)</span> annaðhvort með burðarþolsfræðireikningum eða með
 mælingum.</p>
 </div>
-</section>
-<section id="linulegar-varpanir-og-margfoldun-fylkja-og-vigra">
+</div>
+<div class="section" id="linulegar-varpanir-og-margfoldun-fylkja-og-vigra">
 <span id="linulegar-varpanir-og-fxv"></span><h3><span class="section-number">4.9.2. </span>Línulegar varpanir og margföldun fylkja og vigra<a class="headerlink" href="#linulegar-varpanir-og-margfoldun-fylkja-og-vigra" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Í sýnidæminu hér á undan var hægt að rita línulegu vörpunina sem margföldun með
 fylki og það gildir raunar um allar línulegar varpanir. Sömuleiðis gildir að
@@ -2333,8 +2181,8 @@ skilgreind er með <span class="math notranslate nohighlight">\(f(x) = Cx\)</spa
 sýnidæminu um brúna.</p></li>
 </ol>
 </div>
-</section>
-<section id="samsettar-linulegar-varpanir-og-margfoldun-fylkja">
+</div>
+<div class="section" id="samsettar-linulegar-varpanir-og-margfoldun-fylkja">
 <span id="linulegar-varpanir-og-fxf"></span><h3><span class="section-number">4.9.3. </span>Samsettar línulegar varpanir og margföldun fylkja<a class="headerlink" href="#samsettar-linulegar-varpanir-og-margfoldun-fylkja" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Hægt er að setja saman línulegar varpanir á sama hátt og önnur föll. Ef
 <span class="math notranslate nohighlight">\(g\)</span> er línuleg vörpun frá <span class="math notranslate nohighlight">\(\Bbb{R}^n\)</span> yfir í <span class="math notranslate nohighlight">\(\Bbb{R}^p\)</span> og
@@ -2373,34 +2221,29 @@ Sw = TCw = TC \begin{pmatrix} w_1 \\ w_2 \\ w_3 \end{pmatrix}\end{split}\]</div>
 <p>Hve stór eru fylkin <span class="math notranslate nohighlight">\(C\)</span>, <span class="math notranslate nohighlight">\(T\)</span> og <span class="math notranslate nohighlight">\(S\)</span> í sýnidæminu hér á
 undan?</p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
+           
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="kafli05.html" class="btn btn-neutral float-right" title="5. Dæmi um hagnýtingu línulegrar algebru" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="kafli03.html" class="btn btn-neutral" title="3. Föll af mörgum breytistærðum" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="kafli05.html" class="btn btn-neutral float-right" title="5. Dæmi um hagnýtingu línulegrar algebru" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="kafli03.html" class="btn btn-neutral float-left" title="3. Föll af mörgum breytistærðum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
+
     </p>
-  </div>
+  </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -2409,38 +2252,15 @@ undan?</p>
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2019',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/documentation_options.js"></script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
 
 

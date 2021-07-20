@@ -1,16 +1,20 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="is" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>5. Dæmi um hagnýtingu línulegrar algebru &mdash; Stærðfræðigreining I (STÆ104G) 2021</title>
+  
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Dæmi um hagnýtingu línulegrar algebru &mdash; Stærðfræði og reiknifræði 2019</title>
-  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom_admonitions.css" type="text/css" />
 
   
   
@@ -18,27 +22,27 @@
   
 
   
+  
 
   
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
+    
 
 <!-- hoverrole.py css code -->
 <style type="text/css">
@@ -110,11 +114,9 @@
   div.code-block-caption{margin-bottom: 4px}
 </style>
 
-        <link rel="index" title="Atriðaskrá"
-              href="genindex.html"/>
-        <link rel="search" title="Leit" href="search.html"/>
-    <link rel="top" title="Stærðfræði og reiknifræði 2019" href="index.html"/>
-        <link rel="prev" title="4. Línuleg algebra" href="kafli04.html"/>
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="prev" title="4. Línuleg algebra" href="kafli04.html" />
 
 
 
@@ -124,264 +126,62 @@
 
  
 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-
-        
-          <a href="index.html" class="icon icon-home"> Stærðfræði og reiknifræði
-        
-
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
           
-          <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" />
-        
-        </a>
 
-        
+          
+            <a href="index.html" class="icon icon-home"> Stærðfræðigreining I (STÆ104G)
+          
+
+          
+            
+            <img src="_static/hi_horiz_raunvisindadeild.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Leit" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-          
+            
+            
+              
+            
+            
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Forritun í Python</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#inngangur-um-python">1.1. Inngangur: Um Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#einfalt-og-aulaert-mal">1.1.1. Einfalt og auðlært mál</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fallasafn-og-pakkar">1.1.2. Fallasafn og pakkar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utbreisla">1.1.3. Útbreiðsla</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#framkvaemd-forrita">1.1.4. Framkvæmd forrita</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gildi-eru-togu-en-breytur-ekki">1.1.5. Gildi eru töguð en breytur ekki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#python-leibeiningar-a-netinu">1.1.6. Python-leiðbeiningar á netinu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#daemi-um-python-forrit">1.2. Dæmi um Python forrit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#collatz-runur">1.2.1. Collatz-runur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#forrit-fyrir-collatz-runur">1.2.2. Forrit fyrir Collatz-runur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#python-atrii-sem-koma-fyrir-i-forritinu-collatz">1.2.3. Python atriði sem koma fyrir í forritinu Collatz</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#umhverfi-fyrir-python-jupyterlab">1.3. Umhverfi fyrir Python: <em>JupyterLab</em></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#uppsetning-python-og-jupyterlab">1.3.1. Uppsetning Python og JupyterLab</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#keyrsla-jupyterlab">1.3.2. Keyrsla JupyterLab</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-vinnubaekur">1.3.3. Jupyter vinnubækur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-skipanir">1.3.4. Jupyter skipanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#vistun-vinnuboka-a-pdf-snii">1.3.5. Vistun vinnubóka á PDF-sniði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#markdown-og-latex">1.3.6. Markdown og Latex</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#jupyter-leibeiningar-a-netinu">1.3.7. Jupyter-leiðbeiningar á netinu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#grunnatrii-python">1.4. Grunnatriði Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#breytur-og-tog">1.4.1. Breytur og tög</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-og-virkjar">1.4.2. Aðgerðir og virkjar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gildisgjof">1.4.3. Gildisgjöf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#utprentun-og-innlestur">1.4.4. Útprentun og innlestur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#f-strengir">1.4.5. F-strengir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-notanda-ny-foll">1.4.6. Föll notanda (ný föll)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mikilvaegustu-innbygg-foll">1.4.7. Mikilvægustu innbyggð föll</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#fallbreytur">1.4.8. Fallbreytur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#styriskipanir">1.4.9. Stýriskipanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilyrt-gildi">1.4.10. Skilyrt gildi</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#sofn-containers-eitt-nafn-en-morg-gildi">1.5. Söfn (<em>containers</em>): Eitt nafn en mörg gildi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#strengir">1.5.1. Strengir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#listar">1.5.2. Listar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#samstaeur">1.5.3. Samstæður</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#mengi">1.5.4. Mengi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#itrarar">1.5.5. Ítrarar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#helstu-agerir-fyrir-sofn">1.6. Helstu aðgerðir fyrir söfn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-til-a-bua-til-sofn-ea-breyta-tegund-safns">1.6.1. Föll til að búa til söfn eða breyta tegund safns</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-sem-duga-a-oll-sofn">1.6.2. Aðgerðir sem duga á öll söfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-sem-duga-a-sofn-af-tolum-ea-rokgildum">1.6.3. Föll sem duga á söfn af tölum eða rökgildum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#agerir-sem-duga-a-allar-runur">1.6.4. Aðgerðir sem duga á allar runur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-sem-duga-bara-a-lista">1.6.5. Föll sem duga bara á lista</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#for-lykkjur-og-sofn">1.6.6. For-lykkjur og söfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#yfirgrip-comprehension">1.6.7. Yfirgrip (<em>comprehension</em>)</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#meira-um-skilgreiningu-falla">1.7. Meira um skilgreiningu falla</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#valkvaeir-stikar">1.7.1. Valkvæðir stikar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#lykilorsvifong">1.7.2. Lykilorðsviðföng</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-me-breytilegan-stikafjolda">1.7.3. Föll með breytilegan stikafjölda</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#foll-me-margar-utkomur">1.7.4. Föll með margar útkomur</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli01.html#aalforrit-og-einingar">1.8. Aðalforrit og einingar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skra-me-aalforriti">1.8.1. Skrá með aðalforriti</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli01.html#einingar-skrifaar-af-notanda">1.8.2. Einingar skrifaðar af notanda</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. NumPy, Pandas og Matplotlib</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#inngangur">2.1. Inngangur</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hva-er-reiknifraei">2.1.1. Hvað er reiknifræði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#python-pakkar-fyrir-visindalega-reikninga">2.1.2. Python-pakkar fyrir vísindalega reikninga</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#vigrar-og-fylki-i-staerfraei">2.1.3. Vigrar og fylki í stærðfræði</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#um-ori-fylki">2.1.4. Um orðið Fylki</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#numpy-pakkinn">2.2. NumPy pakkinn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#kynning-a-numpy">2.2.1. Kynning á NumPy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#leibeiningar-um-numpy-a-netinu">2.2.2. Leiðbeiningar um NumPy á netinu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hvernig-ma-bua-til-numpy-fylki-og-visa-stok-eirra">2.2.3. Hvernig má búa til NumPy fylki og vísa stök þeirra?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#eiginleikar-vigra-og-fylkja">2.2.4. Eiginleikar vigra og fylkja</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#foll-og-aferir-i-numpy">2.2.5. Föll og aðferðir í NumPy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#innlestur-og-utskrift">2.2.6. Innlestur og útskrift</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#fleiri-foll">2.2.7. Fleiri föll</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#bylting-og-afpokkun">2.2.8. Bylting og afpökkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#rokvisun">2.2.9. Rökvísun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#innfeldi">2.2.10. Innfeldi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hlutvigrar-og-fylki-linur-og-dalkar">2.2.11. Hlutvigrar og -fylki, línur og dálkar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#pandas-fyrir-gagnavinnslu">2.3. Pandas fyrir gagnavinnslu</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#pandas-gogn">2.3.1. Pandas gögn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#helstu-pandas-skipanir">2.3.2. Helstu Pandas-skipanir</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli02.html#teikning-me-matplotlib">2.4. Teikning með Matplotlib</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.4.1. Inngangur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#einfaldar-myndir">2.4.2. Einfaldar myndir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#pandas-og-teikningar">2.4.3. Pandas og teikningar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#toflur-yfir-matplotlib-skipanir">2.4.4. Töflur yfir Matplotlib-skipanir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#rju-daemi-um-teikningar">2.4.5. Þrjú dæmi um teikningar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#teikning-af-grofum-falla">2.4.6. Teikning af gröfum falla</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli02.html#teikning-punktasafns-og-jafna-bestu-linu">2.4.7. Teikning punktasafns og jafna bestu línu</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Föll af mörgum breytistærðum</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#inngangur">3.1. Inngangur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#foll-af-tveimur-breytistaerum-ea-tvivi-foll">3.2. Föll af tveimur breytistærðum eða tvívíð föll</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#staerfraeileg-skilgreining">3.2.1. Stærðfræðileg skilgreining</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#grof-og-myndir-af-tvivium-follum">3.2.2. Gröf og myndir af tvívíðum föllum</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#teikning-tvivira-falla-me-python">3.3. Teikning tvívíðra falla með Python</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearlinur-me-skipuninni-contour">3.3.1. Hæðarlínur með skipuninni <em>contour</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#daemi-um-haearlinuteikningu">3.3.2. Dæmi um hæðarlínuteikningu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#haearsvaei-me-skipuninni-contourf">3.3.3. Hæðarsvæði með skipuninni <em>contourf</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#netmyndir-me-plot-surface">3.3.4. Netmyndir með <em>plot_surface</em></a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#upplystar-myndir-me-plot-surface">3.3.5. Upplýstar myndir með <em>plot_surface</em></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#hlutafleiur">3.4. Hlutafleiður</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-hlutafleiu">3.4.1. Skilgreining hlutafleiðu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#arir-rithaettir-fyrir-hlutafleiu">3.4.2. Aðrir rithættir fyrir hlutafleiðu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#stigull">3.5. Stigull</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rithattur-og-oranotkun">3.5.1. Ritháttur og orðanotkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#tvivi-kejuregla-og-tengsl-stiguls-og-hlutafleia">3.5.2. Tvívíð keðjuregla og tengsl stiguls og hlutafleiða</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stefnuafleia">3.5.3. Stefnuafleiða</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#teikning-stigla-i-python">3.5.4. Teikning stigla í Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#utgildi-tvivira-falla">3.6. Útgildi tvívíðra falla</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#hagildi-og-laggildi">3.6.1. Hágildi og lággildi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#utgildi-fundin-me-vi-a-leysa-jofnur">3.6.2. Útgildi fundin með því að leysa jöfnur</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli03.html#margvi-foll">3.7. Margvíð föll</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-og-daemi">3.7.1. Skilgreining og dæmi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#vifang-skrifa-sem-vigur">3.7.2. Viðfang skrifað sem vigur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli03.html#margviir-stiglar">3.7.3. Margvíðir stiglar</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Línuleg algebra</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#vigrar-og-fylki">4.1. Vigrar og fylki</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-vigurs">4.1.1. Skilgreining vigurs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-fylkis">4.1.2. Skilgreining fylkis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#einfaldar-vigur-og-fylkjaagerir">4.1.3. Einfaldar vigur- og fylkjaaðgerðir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-vigur-og-fylkjaagerir">4.1.4. Reglur um vigur- og fylkjaaðgerðir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#innfeldi">4.1.5. Innfeldi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#hornalina-fylkis-og-bylting">4.1.6. Hornalína fylkis og bylting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#serstok-fylki">4.1.7. Sérstök fylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#margfoldun-fylkis-og-vigurs">4.1.8. Margföldun fylkis og vigurs</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#linuleg-foll-og-innfeldi">4.2. Línuleg föll og innfeldi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-a-linulegu-falli">4.2.1. Skilgreining á línulegu falli</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-linuleg-foll">4.2.2. Reglur um línuleg föll</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#taylor-nalgun">4.3. Taylor-nálgun</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stigull-af-margviu-falli">4.3.1. Stigull af margvíðu falli</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-taylors-i-einni-og-fleiri-viddum">4.3.2. Setning Taylors í einni og fleiri víddum</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#norm-fjarlaegir-og-horn">4.4. Norm, fjarlægðir og horn</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-norms">4.4.1. Skilgreining norms</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-norm">4.4.2. Reglur um norm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjarlaegir">4.4.3. Fjarlægðir</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#ortini-og-fjarlaeg-milli-vigra">4.4.4. Orðtíðni og fjarlægð milli vigra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#horn-milli-vigra">4.4.5. Horn milli vigra</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#tolfraeileg-foll-af-vigrum">4.5. Tölfræðileg föll af vigrum</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#mealtal-dreifni-og-staalfravik">4.5.1. Meðaltal, dreifni og staðalfrávik</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stolun">4.5.2. Stöðlun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fylgni">4.5.3. Fylgni</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#grunnar-og-linulega-hair-og-ohair-vigrar">4.6. Grunnar og línulega háðir og óháðir vigrar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-hair-vigrar">4.6.1. Línulega háðir vigrar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-ohair-vigrar">4.6.2. Línulega óháðir vigrar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#grunnar">4.6.3. Grunnar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#venjulegir-einingavigrar-og-grunnar-eirra">4.6.4. Venjulegir einingavigrar og grunnar þeirra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#verstalair-grunnar">4.6.5. Þverstaðlaðir grunnar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lausn-jofnuhneppa">4.7. Lausn jöfnuhneppa</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fylkjaframsetning-linulegra-jofnuhneppa">4.7.1. Fylkjaframsetning línulegra jöfnuhneppa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulegar-samantektir-jofnuhneppi-og-tilvist-lausna">4.7.2. Línulegar samantektir, jöfnuhneppi og tilvist lausna</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulega-hair-vigrar-og-python">4.7.3. Línulega háðir vigrar og Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#fylkjaalgebra">4.8. Fylkjaalgebra</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#margfoldun-fylkja">4.8.1. Margföldun fylkja</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#nullfylki-og-einingafylki">4.8.2. Núllfylki og einingafylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-fylkjamargfoldun">4.8.3. Reglur um fylkjamargföldun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#andhverf-fylki">4.8.4. Andhverf fylki</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reglur-um-byltingu-og-andhverfu">4.8.5. Reglur um byltingu og andhverfu</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="kafli04.html#linulegar-varpanir-og-fylkjamargfoldun">4.9. Línulegar varpanir og fylkjamargföldun</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-a-linulegri-vorpun">4.9.1. Skilgreining á línulegri vörpun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#linulegar-varpanir-og-margfoldun-fylkja-og-vigra">4.9.2. Línulegar varpanir og margföldun fylkja og vigra</a></li>
-<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samsettar-linulegar-varpanir-og-margfoldun-fylkja">4.9.3. Samsettar línulegar varpanir og margföldun fylkja</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Forritun í Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. NumPy, Pandas og Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Föll af mörgum breytistærðum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Línuleg algebra</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. Dæmi um hagnýtingu línulegrar algebru</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#skipting-i-hopa-ea-flokkun">5.1. Skipting í hópa eða flokkun</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#daemi-um-flokkun-tvivira-vigra">5.1.1. Dæmi um flokkun tvívíðra vigra</a></li>
@@ -415,45 +215,72 @@
 </li>
 </ul>
 
+            
           
+        </div>
         
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Stærðfræði og reiknifræði</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Stærðfræðigreining I (STÆ104G)</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li><span class="section-number">5. </span>Dæmi um hagnýtingu línulegrar algebru</li>
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">5. </span>Dæmi um hagnýtingu línulegrar algebru</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/kafli05.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="daemi-um-hagnytingu-linulegrar-algebru">
+  <div class="section" id="daemi-um-hagnytingu-linulegrar-algebru">
 <h1><span class="section-number">5. </span>Dæmi um hagnýtingu línulegrar algebru<a class="headerlink" href="#daemi-um-hagnytingu-linulegrar-algebru" title="Varanlegur hlekkur á titilinn">¶</a></h1>
-<section id="skipting-i-hopa-ea-flokkun">
+<div class="section" id="skipting-i-hopa-ea-flokkun">
 <h2><span class="section-number">5.1. </span>Skipting í hópa eða flokkun<a class="headerlink" href="#skipting-i-hopa-ea-flokkun" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Í þessari grein verður fjallað um aðferðir til að <strong>flokka</strong> (<em>cluster</em>,
 <em>partition</em>) vigra í <strong>hópa</strong> (<em>groups</em>) þannig að vigrarnir í hverjum hóp séu
@@ -464,22 +291,20 @@ að þýða). Stundum er talað um að flokka <em>mælingar</em> (<em>observatio
 <em>einstaklinga</em> eða <em>hluti</em>, og þegar búið er að flokka má tala um <em>meðlimi</em> í
 hópum. Orðið <strong>einkenni</strong> (<em>feature</em>) er oft notað um einstök stök í vigrunum
 sem eru flokkaðir.</p>
-<section id="daemi-um-flokkun-tvivira-vigra">
+<div class="section" id="daemi-um-flokkun-tvivira-vigra">
 <h3><span class="section-number">5.1.1. </span>Dæmi um flokkun tvívíðra vigra<a class="headerlink" href="#daemi-um-flokkun-tvivira-vigra" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Á eftirfarandi mynd er dæmi um flokkun tvívíðra vigra, sem sé punkta í planinu.</p>
-<figure class="align-center" id="flokkun300">
+<div class="figure align-center" id="flokkun300">
 <a class="reference internal image-reference" href="_images/flokkunardæmi300.png"><img alt="_images/flokkunardæmi300.png" src="_images/flokkunardæmi300.png" style="width: 12cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.1 </span><span class="caption-text">Skipting 300 punkta í þrjá hópa</span><a class="headerlink" href="#flokkun300" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 5.1: </span><span class="caption-text">Skipting 300 punkta í þrjá hópa</span><a class="headerlink" href="#flokkun300" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p>Einn vandi við slíka flokkun er að ákvarða hópafjöldann, sem hefðbundið er að
 nefna <span class="math notranslate nohighlight">\(k\)</span>. Það sem er óvenjulegt við dæmið á myndinni er að vídd punktanna
 er <span class="math notranslate nohighlight">\(n = 2\)</span> og því er auðvelt að teikna punktasafnið. Í þessu dæmi er líka
 auðvelt að sjá af myndinni að <span class="math notranslate nohighlight">\(k = 3\)</span> er góð tala, en þetta er ekki svona
 auðvelt fyrir hærri víddir og jafnvel heldur ekki fyrir önnur tvívíð dæmi.</p>
-</section>
-<section id="daemi-um-hagnytingu-flokkunar">
+</div>
+<div class="section" id="daemi-um-hagnytingu-flokkunar">
 <h3><span class="section-number">5.1.2. </span>Dæmi um hagnýtingu flokkunar<a class="headerlink" href="#daemi-um-hagnytingu-flokkunar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Flokkun texta eftir umfjöllunarefni.</strong> Hér er nærtækt að taka dæmið um
 Wikipedia-greinarnar sem voru á dagskrá í Skilaverkefni 7, þar sem unnið var með
@@ -502,8 +327,8 @@ hverjum flokki til að fá fjölbreytni í hópana), flokkun svæða eftir veðu
 flokkun fyrirtækja eftir ýmsum eiginleikum, o.s.frv.</p>
 <p>Í sumum tilvikum er ekkert unnið frekar með flokkana, heldur er tilgangur
 flokkunarinnar einfaldlega sá að átta sig betur á gagnasafni.</p>
-</section>
-<section id="rithattur-fyrir-flokkun">
+</div>
+<div class="section" id="rithattur-fyrir-flokkun">
 <h3><span class="section-number">5.1.3. </span>Ritháttur fyrir flokkun<a class="headerlink" href="#rithattur-fyrir-flokkun" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Við látum <span class="math notranslate nohighlight">\(N\)</span> tákna fjölda punkta eða <span class="math notranslate nohighlight">\(n\)</span>-vigra sem á að skipta í
 <span class="math notranslate nohighlight">\(k\)</span> hópa og látum svo <span class="math notranslate nohighlight">\(G_j\)</span> vera mengi með númerum þeirra punkta
@@ -518,8 +343,8 @@ hópa, með <span class="math notranslate nohighlight">\(x_1\)</span>, <span cla
 <div class="math notranslate nohighlight">
 \[c = (1, 2, 1, 2, 1, 3, 3)\]</div>
 <p>Vigurinn <span class="math notranslate nohighlight">\(c\)</span> svarar til Python-breytunnar <code class="code docutils literal notranslate"><span class="pre">code</span></code> í grein <a class="reference internal" href="#kmeans"><span class="std std-numref">5.1.6</span></a>.</p>
-</section>
-<section id="mipunktar-hopa">
+</div>
+<div class="section" id="mipunktar-hopa">
 <span id="id1"></span><h3><span class="section-number">5.1.4. </span>Miðpunktar hópa<a class="headerlink" href="#mipunktar-hopa" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Miðpunktur</strong> (<em>centroid</em>) fyrir hóp er punktur sem líkist punktunum í hópnum,
 en hann þarf samt ekki að vera sjálfur í hópnum. Í k-means reikniritinu sem við
@@ -537,9 +362,9 @@ ballansera á þungamiðjunni. Athugið að fyrir þrívíða punkta t.d. er hæ
 <span class="math notranslate nohighlight">\(\overline x\)</span>, <span class="math notranslate nohighlight">\(\overline y\)</span> og <span class="math notranslate nohighlight">\(\overline z\)</span> vera meðaltöl
 <span class="math notranslate nohighlight">\(x\)</span>-, <span class="math notranslate nohighlight">\(y\)</span>- og <span class="math notranslate nohighlight">\(z\)</span>-hnita punktanna og þá verður
 <span class="math notranslate nohighlight">\((\overline x, \overline y, \overline z)\)</span> miðpunkturinn.</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/þungamiðja.png"><img alt="_images/þungamiðja.png" src="_images/þungamiðja.png" style="width: 7cm;" /></a>
-</figure>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Sýnidæmi</p>
 <p>Miðpunktur eða meðaltal <span class="math notranslate nohighlight">\(\{(1,3,4), (2,6,8), (3,6,9)\}\)</span> er
@@ -551,8 +376,8 @@ ballansera á þungamiðjunni. Athugið að fyrir þrívíða punkta t.d. er hæ
 <p>Finnið miðpunkt fyrir punktana <span class="math notranslate nohighlight">\((1,1), (1,2), (2,4)\)</span> og <span class="math notranslate nohighlight">\((4,5)\)</span>.
 Merkið punktana og meðaltalið inn í hnitakerfi.</p>
 </div>
-</section>
-<section id="besta-hopaskipting">
+</div>
+<div class="section" id="besta-hopaskipting">
 <span id="id2"></span><h3><span class="section-number">5.1.5. </span>Besta hópaskipting<a class="headerlink" href="#besta-hopaskipting" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Fyrir <span class="math notranslate nohighlight">\(N\)</span> punkta, <span class="math notranslate nohighlight">\(x_1, \ldots, x_N\)</span> og <span class="math notranslate nohighlight">\(k\)</span> gefna
 miðpunkta, <span class="math notranslate nohighlight">\(m_1, \ldots, m_k\)</span> er hægt að reikna svokallaða bestu
@@ -575,8 +400,8 @@ með því bera svör manns saman við svör frambjóðenda við sömu spurningu
 <p>Merkið 10 punkta af handahófi á blað ásamt 3 miðpunktum og búið til bestu
 hópaskiptingu.</p>
 </div>
-</section>
-<section id="k-means-reikniriti">
+</div>
+<div class="section" id="k-means-reikniriti">
 <span id="kmeans"></span><h3><span class="section-number">5.1.6. </span><em>k-means</em> reikniritið<a class="headerlink" href="#k-means-reikniriti" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Eftir undirbúning í síðustu tveimur greinum er framsetning <em>k-means</em>
 reikniritsins afar einföld. Það felst einfaldlega í að reikna aftur og aftur
@@ -669,9 +494,9 @@ fækkum litum í litmynd úr milljónum í 256 eða 16, eða þegar við látum
 <span class="n">flokkun</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/kmeansdæmi.png"><img alt="_images/kmeansdæmi.png" src="_images/kmeansdæmi.png" style="width: 9cm;" /></a>
-</figure>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Python</p>
@@ -700,45 +525,37 @@ Skoðið úttakið.</p></li>
 aftur með því að hafa <code class="code docutils literal notranslate"><span class="pre">cmap=</span></code> með í scatter-skipuninni.</p></li>
 </ol>
 </div>
-</section>
-<section id="daemi-um-nokkrar-k-means-itrekanir">
+</div>
+<div class="section" id="daemi-um-nokkrar-k-means-itrekanir">
 <h3><span class="section-number">5.1.7. </span>Dæmi um nokkrar k-means-ítrekanir<a class="headerlink" href="#daemi-um-nokkrar-k-means-itrekanir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Til glöggvunar fylgja hér nokkrar myndir af niðurstöðum reikniritanna
 <em>Besta-skipting</em> (t.v. í hverri mynd; sjá grein <a class="reference internal" href="#besta-hopaskipting"><span class="std std-numref">5.1.5</span></a>) og
 <em>Reikna-miðpunkta</em> (t.h. í hverri mynd; sjá grein <a class="reference internal" href="#mipunktar-hopa"><span class="std std-numref">5.1.4</span></a>) þegar
-k-means reikniritinu er beitt á dæmið sem sýnt er á <a class="reference internal" href="#flokkun300"><span class="std std-numref">Mynd 5.1</span></a>.
+k-means reikniritinu er beitt á dæmið sem sýnt er á <a class="reference internal" href="#flokkun300"><span class="std std-numref">Mynd 5.1:</span></a>.
 Miðpunktar eru sýndir með ferningum</p>
-<figure class="align-center" id="id4">
+<div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/ítrekun1.png"><img alt="_images/ítrekun1.png" src="_images/ítrekun1.png" style="width: 13cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.2 </span><span class="caption-text">Dæmi um k-means, ítrekun 1</span><a class="headerlink" href="#id4" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id5">
+<p class="caption"><span class="caption-number">Mynd 5.2: </span><span class="caption-text">Dæmi um k-means, ítrekun 1</span><a class="headerlink" href="#id4" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+<div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="_images/ítrekun2.png"><img alt="_images/ítrekun2.png" src="_images/ítrekun2.png" style="width: 13cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.3 </span><span class="caption-text">Dæmi um k-means, ítrekun 2</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id6">
+<p class="caption"><span class="caption-number">Mynd 5.3: </span><span class="caption-text">Dæmi um k-means, ítrekun 2</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+<div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="_images/ítrekun10.png"><img alt="_images/ítrekun10.png" src="_images/ítrekun10.png" style="width: 13cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.4 </span><span class="caption-text">Dæmi um k-means, ítrekun 10</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id7">
+<p class="caption"><span class="caption-number">Mynd 5.4: </span><span class="caption-text">Dæmi um k-means, ítrekun 10</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+<div class="figure align-center" id="id7">
 <a class="reference internal image-reference" href="_images/eftir-ítrekun-15.png"><img alt="_images/eftir-ítrekun-15.png" src="_images/eftir-ítrekun-15.png" style="width: 6cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.5 </span><span class="caption-text">Dæmi um k-means, eftir 15 ítrekanir</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-<p>Lokamyndin er sú sama og er í byrjun kaflans (<a class="reference internal" href="#flokkun300"><span class="std std-numref">Mynd 5.1</span></a>). Hér er mynd sem sýnir hvernig markfallið (á <span class="math notranslate nohighlight">\(y\)</span>-ás) þróast með númeri
+<p class="caption"><span class="caption-number">Mynd 5.5: </span><span class="caption-text">Dæmi um k-means, eftir 15 ítrekanir</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+<p>Lokamyndin er sú sama og er í byrjun kaflans (<a class="reference internal" href="#flokkun300"><span class="std std-numref">Mynd 5.1:</span></a>). Hér er mynd sem sýnir hvernig markfallið (á <span class="math notranslate nohighlight">\(y\)</span>-ás) þróast með númeri
 ítrekunar (á <span class="math notranslate nohighlight">\(x\)</span>-ás).</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/kmeansmarkfall.png"><img alt="_images/kmeansmarkfall.png" src="_images/kmeansmarkfall.png" style="width: 7cm;" /></a>
-</figure>
-</section>
-<section id="forvinnsla-vigra-me-whiten">
+</div>
+</div>
+<div class="section" id="forvinnsla-vigra-me-whiten">
 <h3><span class="section-number">5.1.8. </span>Forvinnsla vigra með <code class="code docutils literal notranslate"><span class="pre">whiten</span></code><a class="headerlink" href="#forvinnsla-vigra-me-whiten" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ef stökin í vigrunum sem á að flokka hafa mjög mismunandi stærðargráðu getur
 borgað sig að skala þau. Tökum sem dæmi að við ætlum að flokka menn eftir hæð og
@@ -766,9 +583,9 @@ vinsælan flokkara sem heitir <em>DBSCAN</em>. Hér er áhgugaverð <a class="re
 flokkunarmyndum</a>
 sem búnar eru til með ýmsum flokkurum úr Scikit-learn.</p>
 </div>
-</section>
-</section>
-<section id="fylkjamargfoldun-og-tolvugrafik">
+</div>
+</div>
+<div class="section" id="fylkjamargfoldun-og-tolvugrafik">
 <h2><span class="section-number">5.2. </span>Fylkjamargföldun og tölvugrafík<a class="headerlink" href="#fylkjamargfoldun-og-tolvugrafik" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Hægt er að líta á flatarmyndir, t.d. hringi, þríhyrninga, eða myndir af húsum
 sem mengi af punktum, og síðan er hægt að skoða hvað línulegar varpanir
@@ -778,9 +595,9 @@ flatarmyndarinnar er varpað. Það eru fjórar grunngerðir af tvívíðum lín
 vörpunum: <strong>snúningur</strong> (<em>rotation</em>), <strong>skölun</strong> (<em>scaling</em>), <strong>skekking</strong> (<em>shear
 deformation</em>) og <strong>speglun</strong> (<em>reflection</em>). Myndin hér að neðan sýnir dæmi um
 allar þessar gerðir af vörpunum.</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/tvividarvarpanir.png"><img alt="_images/tvividarvarpanir.png" src="_images/tvividarvarpanir.png" style="width: 100%;" /></a>
-</figure>
+</div>
 <p>Eins og við sáum í greinum <a class="reference internal" href="kafli04.html#linulegar-varpanir-og-fxv"><span class="std std-numref">4.9.2</span></a> og
 <a class="reference internal" href="kafli04.html#linulegar-varpanir-og-fxf"><span class="std std-numref">4.9.3</span></a> er svo hægt að setja allar
 þessar varpanir fram með fylkjum og margföldun með þeim.</p>
@@ -820,20 +637,18 @@ svonefnd <em>jafnþætt</em> eða <em>hómógen</em> hnit (<em>homogeneous</em>)
 þrívíða snúninga, speglanir og skalanir, og auk þess bæði hliðranir og
 fjarvídd (<em>perspective</em>). Allt þetta er hægt að útfæra með fjórvíðum
 vigrum og <span class="math notranslate nohighlight">\(4 \times 4\)</span> fylkjum, þar sem eitt hnitið er gervihnit.</p>
-</section>
-<section id="fylki-og-net">
+</div>
+<div class="section" id="fylki-og-net">
 <h2><span class="section-number">5.3. </span>Fylki og net<a class="headerlink" href="#fylki-og-net" title="Varanlegur hlekkur á titilinn">¶</a></h2>
-<section id="net-hnutar-og-leggir">
+<div class="section" id="net-hnutar-og-leggir">
 <h3><span class="section-number">5.3.1. </span>Net, hnútar og leggir<a class="headerlink" href="#net-hnutar-og-leggir" title="Varanlegur hlekkur á titilinn">¶</a></h3>
-<p><strong>Net</strong> (<em>graph</em> eða <em>network</em>) er safn af <strong>hnútum</strong> (eða <em>punktum</em>) (<em>vertices</em>, nodes*) og <strong>leggjum</strong> (<em>edges</em>) milli hnútanna. Net eru meðal annars umfjöllunarefni í Stærðfræðimynstrum. Þau geta verið <strong>stefnd</strong> (<em>directed</em>) eða <strong>óstefnd</strong>, og þegar þau eru stefnd eru leggirnir stundum kallaðir örvar. Net geta líka haft leggi sem tengja punkta við sjálfa sig, kallaðir <strong>snörur</strong> (<em>loops</em>). <a class="reference internal" href="#daemi-um-net"><span class="std std-numref">Mynd 5.6</span></a> sýnir dæmi um net. Netið í miðjunni er það sama og netið til hægri.</p>
-<figure class="align-center" id="daemi-um-net">
+<p><strong>Net</strong> (<em>graph</em> eða <em>network</em>) er safn af <strong>hnútum</strong> (eða <em>punktum</em>) (<em>vertices</em>, nodes*) og <strong>leggjum</strong> (<em>edges</em>) milli hnútanna. Net eru meðal annars umfjöllunarefni í Stærðfræðimynstrum. Þau geta verið <strong>stefnd</strong> (<em>directed</em>) eða <strong>óstefnd</strong>, og þegar þau eru stefnd eru leggirnir stundum kallaðir örvar. Net geta líka haft leggi sem tengja punkta við sjálfa sig, kallaðir <strong>snörur</strong> (<em>loops</em>). <a class="reference internal" href="#daemi-um-net"><span class="std std-numref">Mynd 5.6:</span></a> sýnir dæmi um net. Netið í miðjunni er það sama og netið til hægri.</p>
+<div class="figure align-center" id="daemi-um-net">
 <a class="reference internal image-reference" href="_images/dæmi-um-net.png"><img alt="_images/dæmi-um-net.png" src="_images/dæmi-um-net.png" style="width: 13cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.6 </span><span class="caption-text">Óstefnt net (t.v.) og stefnt net (í miðju og t.h.)</span><a class="headerlink" href="#daemi-um-net" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="grannafylki">
+<p class="caption"><span class="caption-number">Mynd 5.6: </span><span class="caption-text">Óstefnt net (t.v.) og stefnt net (í miðju og t.h.)</span><a class="headerlink" href="#daemi-um-net" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
+</div>
+<div class="section" id="grannafylki">
 <h3><span class="section-number">5.3.2. </span>Grannafylki<a class="headerlink" href="#grannafylki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Grannafylki</strong> (<em>adjacency matrix</em>) stefnds nets er fylki <span class="math notranslate nohighlight">\(A\)</span> með</p>
 <div class="math notranslate nohighlight">
@@ -851,7 +666,7 @@ vigrum og <span class="math notranslate nohighlight">\(4 \times 4\)</span> fylkj
 \right.\end{split}\]</div>
 <div class="admonition important">
 <p class="admonition-title">Sýnidæmi</p>
-<p>Grannafylki netanna á <a class="reference internal" href="#daemi-um-net"><span class="std std-numref">Mynd 5.6</span></a> eru</p>
+<p>Grannafylki netanna á <a class="reference internal" href="#daemi-um-net"><span class="std std-numref">Mynd 5.6:</span></a> eru</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}
 0 &amp; 1 &amp; 1 \\
@@ -866,8 +681,8 @@ vigrum og <span class="math notranslate nohighlight">\(4 \times 4\)</span> fylkj
 \end{pmatrix}
 \;\text{ (hin tvö)}\;\end{split}\]</div>
 </div>
-</section>
-<section id="vegir-i-netum">
+</div>
+<div class="section" id="vegir-i-netum">
 <span id="id3"></span><h3><span class="section-number">5.3.3. </span>Vegir í netum<a class="headerlink" href="#vegir-i-netum" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p><strong>Vegur</strong> (<em>path</em>) með lengd <span class="math notranslate nohighlight">\(L\)</span> í neti er runa af <span class="math notranslate nohighlight">\(L + 1\)</span> hnút þannig
 að leggur tengi hnút 1 við hnút 2, hnút 2 við hnút 3, o.s.frv. Sagt er að
@@ -887,9 +702,9 @@ er <span class="math notranslate nohighlight">\(A^n\)</span> fylkjaveldi, sbr. g
 <div class="admonition important">
 <p class="admonition-title">Sýnidæmi</p>
 <p>Skoðum stefnda netið á eftirfarandi mynd:</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/stefnt-net.png"><img alt="_images/stefnt-net.png" src="_images/stefnt-net.png" style="width: 6cm;" /></a>
-</figure>
+</div>
 <p>Grannafylkið og annað veldi þess eru gefin með</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A =
@@ -919,8 +734,8 @@ taka annað dæmi þá eru tveir vegir frá hnút 4 til hnúts 3, nefnilega
 Finnið vegina fjóra frá hnút 1 til hnúts 4.</p></li>
 </ol>
 </div>
-</section>
-<section id="legufylki">
+</div>
+<div class="section" id="legufylki">
 <h3><span class="section-number">5.3.4. </span>Legufylki<a class="headerlink" href="#legufylki" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Ef bæði hnútar og leggir nets eru tölusettir þá er hægt að skilgreina
 <strong>legufylki</strong> (<em>incidence matrix</em>) þess. Fyrir óstefnt net með <span class="math notranslate nohighlight">\(n\)</span> hnútum og
@@ -944,9 +759,9 @@ stefnu örvanna, oftast mínus í línu hnútsins þar sem örin byrjar:</p>
 <p>Stundum er þetta samt haft öfugt. Fyrir snörur látum við formerkið vera <span class="math notranslate nohighlight">\({}+{}\)</span>.</p>
 <div class="admonition important">
 <p class="admonition-title">Sýnidæmi</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/legufylki.png"><img alt="_images/legufylki.png" src="_images/legufylki.png" style="width: 6cm;" /></a>
-</figure>
+</div>
 <p>Netið á myndinni hefur legufylki:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}-1&amp;-1&amp;0&amp;1&amp;0\\1&amp;0&amp;-1&amp;0&amp;0\\0&amp;0&amp;1&amp;-1&amp;-1\\0&amp;1&amp;0&amp;0&amp;1\end{pmatrix}\end{split}\]</div>
@@ -963,8 +778,8 @@ v_2\)</span>—<span class="math notranslate nohighlight">\(v_2\)</span> og <spa
 v_2\)</span>, <span class="math notranslate nohighlight">\(v_2 \to v_2\)</span> og <span class="math notranslate nohighlight">\(v_2 \to v_3\)</span></p></li>
 </ol>
 </div>
-</section>
-<section id="flaeinet">
+</div>
+<div class="section" id="flaeinet">
 <h3><span class="section-number">5.3.5. </span>Flæðinet<a class="headerlink" href="#flaeinet" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Net sem lýsir kerfi þar sem eitthvað flæðir eftir hverjum legg, rafmagn, vatn,
 umferð, vörur o.s.frv. er kallað <strong>flæðinet</strong> (<em>network</em>). Hnútpunktarnir eru þá
@@ -982,8 +797,8 @@ viðnám í þeim. Þessar upplýsingar mætti setja fram með fylki sem hefur e
 eru oft stefnd, en þá táknar stefna örvanna/leggjanna ekki stefnu
 flæðisins, heldur einungis í hvaða stefnu flæðið telst jákvætt. Ef flæði er á
 móti ör verður <span class="math notranslate nohighlight">\(x_j &lt; 0\)</span>.</p>
-</section>
-<section id="lindir-og-osar">
+</div>
+<div class="section" id="lindir-og-osar">
 <h3><span class="section-number">5.3.6. </span>Lindir og ósar<a class="headerlink" href="#lindir-og-osar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Legufylki eru oft gagnleg fyrir verkefni sem tengjast flæðinetum. Það
 er ekki erfitt að sjá að ef <span class="math notranslate nohighlight">\(x\)</span> er flæðivigur með <span class="math notranslate nohighlight">\(x_j\)</span> =
@@ -1011,24 +826,24 @@ leggjum, en annars þarf meiri upplýsingar t.d. um þrýsing/spennu.</p>
 <span class="math notranslate nohighlight">\(s_i\)</span>-in eru látin stefna inn í netið. Þar sem <span class="math notranslate nohighlight">\(s_i\)</span> er jákvætt
 passar sú stefna, þar eru lindir sem skila flæði inn í netið, en þar sem
 <span class="math notranslate nohighlight">\(s_i\)</span> er neikvætt er raunverulega að flæða út úr netinu.</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/flæðinet.png"><img alt="_images/flæðinet.png" src="_images/flæðinet.png" style="width: 9cm;" /></a>
-</figure>
+</div>
 <div class="admonition hint">
 <p class="admonition-title">Æfing</p>
 <p>Gerið ráð fyrir að flæðivigur á myndinni hér á undan sé <span class="math notranslate nohighlight">\(x = (1, 3, 2, 4, -1)\)</span>.
 Ákvarðið legufylkið <span class="math notranslate nohighlight">\(A\)</span> og í framhaldi nettóinnflæðið <span class="math notranslate nohighlight">\(s\)</span>.
 Flokkið svo hnútana í lindir, ósa og aðra hnúta.</p>
 </div>
-</section>
-</section>
-<section id="linuleg-hreyfikerfi">
+</div>
+</div>
+<div class="section" id="linuleg-hreyfikerfi">
 <h2><span class="section-number">5.4. </span>Línuleg hreyfikerfi<a class="headerlink" href="#linuleg-hreyfikerfi" title="Varanlegur hlekkur á titilinn">¶</a></h2>
 <p>Í þessari grein kynnumst við notkun fylkjamargföldunar til að lýsa
 kerfum sem breytast með tíma. Tekin verða dæmi um stofnstærð/mannfjölda
 þar sem svonefnd Leslie fylki koma við sögu, og um hreyfingu massa
 sem kraftar verka á.</p>
-<section id="skilgreining-linulegra-hreyfikerfa">
+<div class="section" id="skilgreining-linulegra-hreyfikerfa">
 <h3><span class="section-number">5.4.1. </span>Skilgreining línulegra hreyfikerfa<a class="headerlink" href="#skilgreining-linulegra-hreyfikerfa" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Lát <span class="math notranslate nohighlight">\(x_t\)</span> vera <span class="math notranslate nohighlight">\(n\)</span>-vigur sem lýsir einhverju <strong>ástandi</strong> (<em>state</em>)
 kerfis á tíma <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(t = 0, 1, 2, \ldots\)</span> (stundum er <em>state</em> líka
@@ -1049,9 +864,9 @@ líkani:</p>
 <div class="math notranslate nohighlight">
 \[x_{t+1} = A_t x_t + B_t u_t \quad (t = 0, 1, 2, \ldots)\]</div>
 <p><span class="math notranslate nohighlight">\(B_t\)</span> er <strong>inntaksfylki</strong> (<em>input matrix</em>) og <span class="math notranslate nohighlight">\(u_t\)</span> eru <strong>ytri</strong>
-(<em>exogenous</em>) breytur (“<span class="math notranslate nohighlight">\(B\)</span> tekur ytri breyturnar <strong>inn</strong> í kerfið“).</p>
-</section>
-<section id="roun-mannfjolda-ea-stofnstaerar">
+(<em>exogenous</em>) breytur („<span class="math notranslate nohighlight">\(B\)</span> tekur ytri breyturnar <strong>inn</strong> í kerfið“).</p>
+</div>
+<div class="section" id="roun-mannfjolda-ea-stofnstaerar">
 <h3><span class="section-number">5.4.2. </span>Þróun mannfjölda eða stofnstærðar<a class="headerlink" href="#roun-mannfjolda-ea-stofnstaerar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Við byrjum á að tala um mannfjölda, en augljóslega má nota sömu stærðfræði til
 að lýsa stofnstærð dýrategunda. Gerum ráð fyrir að <span class="math notranslate nohighlight">\(x_t\)</span> sé
@@ -1060,21 +875,17 @@ eru á <span class="math notranslate nohighlight">\(i\)</span>-ta aldursári (se
 eftir tiltekinn byrjunartíma. Við gætum látið <span class="math notranslate nohighlight">\(n = 120\)</span>. Oft er svona
 vigur kallaður <em>aldursdreifing</em> í landinu og hér er mynd sem sýnir
 aldursdreifingu fólks yngra en 100 ára í Bandaríkjunum árið 2010.</p>
-<figure class="align-center" id="id8">
+<div class="figure align-center" id="id8">
 <a class="reference internal image-reference" href="_images/aldursdreifing.png"><img alt="_images/aldursdreifing.png" src="_images/aldursdreifing.png" style="width: 9cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.7 </span><span class="caption-text">Aldursdreifing Bandaríkjamanna árið 2010. <br>
+<p class="caption"><span class="caption-number">Mynd 5.7: </span><span class="caption-text">Aldursdreifing Bandaríkjamanna árið 2010. <br>
 Milljónir á <span class="math notranslate nohighlight">\(y\)</span>-ás og aldur á <span class="math notranslate nohighlight">\(x\)</span>-ás.</span><a class="headerlink" href="#id8" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+</div>
 <p>Látum fæðingartíðni og dánartíðni vera gefna með vigrum <span class="math notranslate nohighlight">\(b\)</span> og <span class="math notranslate nohighlight">\(d\)</span>: <span class="math notranslate nohighlight">\(b_i\)</span> = árlegur meðalfjöldi lifandi fæddra barna foreldra sem eru að meðaltali á <span class="math notranslate nohighlight">\(i\)</span>-ta aldursári og <span class="math notranslate nohighlight">\(d_i\)</span> = hlutfall fólks á <span class="math notranslate nohighlight">\(i\)</span>-ta aldursári sem deyr. Til að vera nákvæmur mætti síðan skoða karla og konur aðskilið. Hér er mynd af <span class="math notranslate nohighlight">\(b\)</span> og <span class="math notranslate nohighlight">\(d\)</span> fyrir Bandaríkin í kring um árið 2010. Á þessum myndum er aftur miðað við fólk yngra en 100 ára.</p>
-<figure class="align-center" id="id9">
+<div class="figure align-center" id="id9">
 <a class="reference internal image-reference" href="_images/fæðingarogdánartíðni.png"><img alt="_images/fæðingarogdánartíðni.png" src="_images/fæðingarogdánartíðni.png" style="width: 100%;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.8 </span><span class="caption-text">Fæðingartíðni (t.v.) og dánartíðni (t.h.) í prósentum eftir aldri í
+<p class="caption"><span class="caption-number">Mynd 5.8: </span><span class="caption-text">Fæðingartíðni (t.v.) og dánartíðni (t.h.) í prósentum eftir aldri í
 Bandaríkjunum í lok árs 2010.</span><a class="headerlink" href="#id9" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+</div>
 <p>Smá skoðun leiðir nú í ljós að ef horft er framhjá aðfluttum og
 brottfluttum má lýsa þróun mannfjöldans með línulega hreyfikerfinu:</p>
 <div class="math notranslate nohighlight">
@@ -1112,20 +923,18 @@ seinna, og dánartíðni eins-árs er 50%.</p>
 <li><p>Ákvarðið stofnstærð eftir 2 ár</p></li>
 </ol>
 </div>
-</section>
-<section id="diffurjafna-fyrir-hreyfingu-hlutar">
+</div>
+<div class="section" id="diffurjafna-fyrir-hreyfingu-hlutar">
 <h3><span class="section-number">5.4.3. </span>Diffurjafna fyrir hreyfingu hlutar<a class="headerlink" href="#diffurjafna-fyrir-hreyfingu-hlutar" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Línuleg hreyfikerfi má nota til að líkja eftir hreyfingu margvíslegra
 aflfræðilegra kerfa, t.d. flugféla, skipa, bíla eða bygginga í jarðskjálfta. Hér
 lýsum við mjög einföldu kerfi, massa sem færist í beina línu fyrir áhrif
 drifkrafts og verður jafnframt fyrir núningsmótstöðu. Við getum hugsað okkur
 að um sé að ræða bát með utanborðsmótor.</p>
-<figure class="align-center" id="id10">
+<div class="figure align-center" id="id10">
 <a class="reference internal image-reference" href="_images/hraðbátur.png"><img alt="_images/hraðbátur.png" src="_images/hraðbátur.png" style="width: 12cm;" /></a>
-<figcaption>
-<p><span class="caption-number">Mynd 5.9 </span><span class="caption-text">Hraðbátur á Khövsgöl vatni í Mongólíu</span><a class="headerlink" href="#id10" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Mynd 5.9: </span><span class="caption-text">Hraðbátur á Khövsgöl vatni í Mongólíu</span><a class="headerlink" href="#id10" title="Varanlegur hlekkur á þessa mynd">¶</a></p>
+</div>
 <p>Um slíka hreyfingu gildir 2. lögmál Newtons:</p>
 <div class="math notranslate nohighlight">
 \[\text{kraftur} = \text{massi} \cdot \text{hröðun}\]</div>
@@ -1153,8 +962,8 @@ diffurjöfnukerfi í tvívíða fallinu <span class="math notranslate nohighligh
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}p'(t)\\mv'(t)\end{pmatrix} =
 \begin{pmatrix}v(t)\\-nv(t) + f(t)\end{pmatrix}\end{split}\]</div>
-</section>
-<section id="diffurjofnu-breytt-i-linulegt-hreyfikerfi">
+</div>
+<div class="section" id="diffurjofnu-breytt-i-linulegt-hreyfikerfi">
 <h3><span class="section-number">5.4.4. </span>Diffurjöfnu breytt í línulegt hreyfikerfi<a class="headerlink" href="#diffurjofnu-breytt-i-linulegt-hreyfikerfi" title="Varanlegur hlekkur á titilinn">¶</a></h3>
 <p>Nálgun við diffurjöfnukerfið að framan fæst með því að umrita staðsetningu og
 hraða á tíma <span class="math notranslate nohighlight">\(t^+ = t+1\)</span> útfrá sömu stærðum á tíma <span class="math notranslate nohighlight">\(t\)</span> með fyrsta stigs
@@ -1192,9 +1001,9 @@ sekúndur. Mótorinn er settur í gang eftir 5 sekúndur með 3000 newtona kraft
 sekúndur og svo er drepið á mótornum. Núningsstuðull er <span class="math notranslate nohighlight">\(n = 100\)</span>.</p>
 <p>Byrjað er með <span class="math notranslate nohighlight">\(x_0 = (0,0)\)</span> og svo er <span class="math notranslate nohighlight">\(x_{t+1}\)</span> reiknað 50 sinnum
 með <span class="math notranslate nohighlight">\((**)\)</span>. Hér eru myndir með niðurstöðum reikninganna (kN eru kílónewton):</p>
-<figure class="align-center">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="_images/krafturhraði.png"><img alt="_images/krafturhraði.png" src="_images/krafturhraði.png" style="width: 100%;" /></a>
-</figure>
+</div>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Æfing</p>
@@ -1209,32 +1018,28 @@ sekúndur og endurskapa þannig línuritin í sýnidæminu.</p></li>
 <li><p>Notið Python til að finna hámarkshraða bátsins.</p></li>
 </ol>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>
+           
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="kafli04.html" class="btn btn-neutral" title="4. Línuleg algebra" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="kafli04.html" class="btn btn-neutral float-left" title="4. Línuleg algebra" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
+
     </p>
-  </div>
+  </div> 
 
 </footer>
-
         </div>
       </div>
 
@@ -1243,38 +1048,15 @@ sekúndur og endurskapa þannig línuritin í sýnidæminu.</p></li>
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2019',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/documentation_options.js"></script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
   
 
 
