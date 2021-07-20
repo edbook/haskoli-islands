@@ -1,0 +1,100 @@
+/* Dæmi */
+.rst-content .daemi .admonition-title {
+   background: #F8961E
+}
+.rst-content .daemi {
+    background: #faddb9;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+
+/* Skilgreining */
+.rst-content .skilgreining .admonition-title {
+   background: #90BE6D
+}
+.rst-content .skilgreining {
+    background: #efffe3;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+/*    border-bottom: 6px;
+    border-style: solid ;
+    border-color: #555555 ; */
+}
+
+
+/* Setning */
+.rst-content .setning .admonition-title {
+   background: #e6b43c
+}
+.rst-content .setning {
+    background: #ffefc7;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+/* Fylgisetning */
+.rst-content .fylgisetning .admonition-title {
+   background: #e6ba53
+}
+.rst-content .fylgisetning {
+    background: #faecc8;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+/* Athugasemd */
+.rst-content .athugasemd .admonition-title {
+   background: #577590
+}
+.rst-content .athugasemd {
+    background: #d4eaff;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+
+/* Aðvörun */
+.rst-content .advorun .admonition-title {
+   background: #d11d1d
+}
+.rst-content .advorun {
+    background: #f7b9b5;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+/*    border-bottom: 6px;
+    border-style: solid ;
+    border-color: #555555 ; */
+}
+
+
+/* Sjá einnig */
+.rst-content .sjaeinnig .admonition-title {
+   background: #F3722C
+}
+.rst-content .sjaeinnig {
+    background: #ffe1d1;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
