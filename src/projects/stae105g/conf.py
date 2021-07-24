@@ -56,6 +56,7 @@ extensions = [
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
     "hoverrole.hoverrole",
+    "custom_button.custom_button",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     #    'analytics.analytics',
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
@@ -174,7 +175,7 @@ pygments_style = "sphinx"
 # }
 
 html_theme = "sphinx_rtd_theme"
-#html_theme_path = ["_themes"]
+# html_theme_path = ["_themes"]
 
 
 html_permalinks = True
@@ -459,6 +460,6 @@ epub_exclude_files = ["search.html"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
 
-#custom frá Tryggva
+# custom frá Tryggva
 def setup(app):
-    app.add_css_file('custom_admonitions.css')
+    app.add_css_file("custom_admonitions.css")

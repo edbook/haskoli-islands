@@ -23,6 +23,10 @@ def cmd_build(
         Path(__file__).parent.resolve().parent / "src" / "projects",
         help="Absolute path to edbook projects directory",
     ),
+    build_path: str = typer.Option(
+        Path(__file__).parent.resolve().parent / "_build",
+        help="Build output path",
+    ),
 ):
     """
     Build all projects
@@ -33,7 +37,7 @@ def cmd_build(
             f"""################ Preparing build of project {project_dir.name} ##############""",
             fg=typer.colors.MAGENTA,
         )
-        call(["sphinx-build", path, path / "_build", *ctx.args])
+        call(["sphinx-build", path, build_path / project_dir.name, *ctx.args])
 
 
 def run():
