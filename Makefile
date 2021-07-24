@@ -2,8 +2,8 @@
 SPHINXOPTS    = -b dirhtml
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = "_build"
-PROJECTSDIR   = "src/projects"
+BUILDDIR      = _build
+PROJECTSDIR   = src/projects
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -31,12 +31,14 @@ install:
 update:
 	poetry update
 
+build-all:
+	poetry run cli build
 clean:
 	./scripts/cleanup.sh $(PROJECTSDIR)/$(project)/$(BUILDDIR)
 autobuild: clean
 	sphinx-autobuild $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
 build: clean
-	$(SPHINXBUILD) -b html $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
+	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 changes:
