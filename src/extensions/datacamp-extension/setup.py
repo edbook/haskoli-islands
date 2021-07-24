@@ -9,7 +9,7 @@ requires = ["Sphinx>=0.6", "setuptools"]
 
 setup(
     name="datacamp",
-    version="1.0",
+    version="1.0.1",
     description="Sphinx datacamp extension",
     author="Arnór Pétur Marteinsson",
     packages=find_packages(),
@@ -17,6 +17,3 @@ setup(
     install_requires=requires,
     namespace_packages=["datacamp"],
 )
-
-
-# breyta

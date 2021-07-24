@@ -210,7 +210,7 @@ url = "src/extensions/custom-button"
 
 [[package]]
 name = "datacamp"
-version = "1.0"
+version = "1.0.1"
 description = "Sphinx datacamp extension"
 category = "main"
 optional = false
