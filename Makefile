@@ -31,7 +31,7 @@ update:
 	poetry update
 
 build-all:
-	poetry run cli build
+	poetry run cli build $(SPHINXOPTS) $(O)
 autobuild:
 	sphinx-autobuild $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
 build:
