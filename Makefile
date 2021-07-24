@@ -30,10 +30,14 @@ install:
 	poetry install
 update:
 	poetry update
-clean:
-	rm -rf $(BUILDDIR)/*
-autobuild: clean
+autobuild:
+	./scripts/cleanup.sh $(PROJECTSDIR)/$(project)/$(BUILDDIR)
 	sphinx-autobuild $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
+build:
+	./scripts/cleanup.sh $(PROJECTSDIR)/$(project)/$(BUILDDIR)
+	$(SPHINXBUILD) -b html $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
 	@echo
