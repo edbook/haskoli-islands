@@ -2,8 +2,8 @@
 SPHINXOPTS    = -b dirhtml
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = "_build"
-PROJECTSDIR   = "src/projects"
+BUILDDIR      = _build
+PROJECTSDIR   = src/projects
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -21,7 +21,6 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  clean      purge $(BUILDDIR)" directory
 	@echo "  autobuild  run development server with hot reload on changes, e.g. make autobuild project=undirbuningur_stae"
 	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck  to check all external links for integrity"
@@ -30,10 +29,15 @@ install:
 	poetry install
 update:
 	poetry update
-clean:
-	rm -rf $(BUILDDIR)/*
-autobuild: clean
+
+build-all:
+	poetry run cli build $(SPHINXOPTS) $(O)
+autobuild:
 	sphinx-autobuild $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
+build:
+	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
 	@echo
