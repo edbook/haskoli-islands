@@ -14,6 +14,7 @@ poetry shell
 poetry install
 ```
 
+Remember to run `poetry install` each time the main branch is pulled to install new packages or packages that might have been updated.
 ## Manual build
 You can manually build a particular project by passing the folder name as an argument, like so:
 ```

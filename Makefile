@@ -33,9 +33,9 @@ update:
 build-all:
 	poetry run cli build $(SPHINXOPTS) $(O)
 autobuild:
-	sphinx-autobuild $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
+	sphinx-autobuild $(PROJECTSDIR)/$(project) $(BUILDDIR)/$(project) $(SPHINXOPTS) $(O)
 build:
-	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
+	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(BUILDDIR)/$(project) $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 changes:
