@@ -21,7 +21,6 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  clean      purge $(BUILDDIR)" directory
 	@echo "  autobuild  run development server with hot reload on changes, e.g. make autobuild project=undirbuningur_stae"
 	@echo "  changes    to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck  to check all external links for integrity"
@@ -33,11 +32,9 @@ update:
 
 build-all:
 	poetry run cli build
-clean:
-	./scripts/cleanup.sh $(PROJECTSDIR)/$(project)/$(BUILDDIR)
-autobuild: clean
+autobuild:
 	sphinx-autobuild $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
-build: clean
+build:
 	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(PROJECTSDIR)/$(project)/$(BUILDDIR) $(SPHINXOPTS) $(O)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
