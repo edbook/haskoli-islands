@@ -57,67 +57,67 @@ jobs:
       - name: Install dependencies
         run: poetry install
         if: steps.cached_poetry_dependencies.outputs.cache-hit != 'true'
-  # build-all:
-  #   needs: [setup]
-  #   name: Build projects
-  #   runs-on: ubuntu-20.04
-  #   outputs:
-  #     artifact: ${{ steps.zip_build.outputs.artifact }}
-  #   steps:
-  #     - name: Check out repository
-  #       uses: actions/checkout@v2
-  #     - name: Set up python
-  #       uses: actions/setup-python@v2
-  #       with:
-  #         python-version: 3.9
-  #     #----------------------------------------------
-  #     # load cached venv if cache exists
-  #     #----------------------------------------------
-  #     - name: Load cached venv
-  #       id: cached-poetry-dependencies
-  #       uses: actions/cache@v2
-  #       with:
-  #         path: .venv
-  #         key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-  #     #----------------------------------------------
-  #     # install & configure poetry
-  #     #----------------------------------------------
-  #     - name: Install Poetry
-  #       uses: snok/install-poetry@v1
-  #       with:
-  #         version: "1.1.6"
-  #         virtualenvs-create: true
-  #         virtualenvs-in-project: true
-  #     #----------------------------------------------
-  #     # Build
-  #     #----------------------------------------------
-  #     - name: Build
-  #       id: build
-  #       run: |
-  #         source .venv/bin/activate
-  #         poetry --version
-  #         make build-all
-  #         ls -al _build
-  #     - name: zip-build
-  #       id: zip_build
-  #       # Use zip instead of tar to support non-tech users that want to download the artifact
-  #       run: |
-  #         echo ${{ github.workspace }}
-  #         ls ${{ github.workspace }}/_build
-  #         export BUILD_PREFIX=build-${{ runner.os }}
-  #         export BUILD_HASH=${{ hashFiles('_build') }}
-  #         echo ${BUILD_HASH}
-  #         zip -r "edbook-${BUILD_PREFIX}-${BUILD_HASH}" _build/*
-  #         ls -al ${{ github.workspace }}
-  #         echo "::set-output name=artifact::$(echo edbook-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
-  #     #----------------------------------------------
-  #     # Upload build artifact
-  #     #----------------------------------------------
-  #     - name: Upload build artifact
-  #       uses: actions/upload-artifact@v2
-  #       with:
-  #         name: artifacts
-  #         path: ${{steps.zip_build.outputs.artifact}}
+  build-all:
+    needs: [setup]
+    name: Build projects
+    runs-on: ubuntu-20.04
+    outputs:
+      artifact: ${{ steps.zip_build.outputs.artifact }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      #----------------------------------------------
+      # load cached venv if cache exists
+      #----------------------------------------------
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      #----------------------------------------------
+      # install & configure poetry
+      #----------------------------------------------
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: "1.1.6"
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      #----------------------------------------------
+      # Build
+      #----------------------------------------------
+      - name: Build
+        id: build
+        run: |
+          source .venv/bin/activate
+          poetry --version
+          make build-all
+          ls -al _build
+      - name: zip-build
+        id: zip_build
+        # Use zip instead of tar to support non-tech users that want to download the artifact
+        run: |
+          echo ${{ github.workspace }}
+          ls ${{ github.workspace }}/_build
+          export BUILD_PREFIX=build-${{ runner.os }}
+          export BUILD_HASH=${{ hashFiles('_build') }}
+          echo ${BUILD_HASH}
+          zip -r "edbook-${BUILD_PREFIX}-${BUILD_HASH}" _build/*
+          ls -al ${{ github.workspace }}
+          echo "::set-output name=artifact::$(echo edbook-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
+      #----------------------------------------------
+      # Upload build artifact
+      #----------------------------------------------
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: ${{steps.zip_build.outputs.artifact}}
   deploy-feature-branch:
     # needs: [setup, build-all]
     needs: [setup]
@@ -140,28 +140,27 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-      - name: Test SSH connection
-        run: |
-          ssh staging 'mkdir -p ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
-          echo "test" > ${{ github.workspace }}/test.txt
-          ls ${{ github.workspace }}
-          cat ${{ github.workspace }}/test.txt
-          scp ${{ github.workspace }}/test.txt staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/
-          ssh staging 'ls ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
+      # - name: Test SSH connection
+      #   run: |
+      #     ssh staging 'mkdir -p ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
+      #     echo "test" > ${{ github.workspace }}/test.txt
+      #     ls ${{ github.workspace }}
+      #     cat ${{ github.workspace }}/test.txt
+      #     scp ${{ github.workspace }}/test.txt staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/
+      #     ssh staging 'ls ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
       #----------------------------------------------
       # Get build artifact from setup job
       #----------------------------------------------
-      # - name: Get build artifact
-      #   uses: actions/download-artifact@v2
-      #   with:
-      #     name: artifacts
-      # - name: Unzip build
-      #   run: |
-      #     unzip *.zip
-      #     ls -al .
-      #     rm *.zip
-      #     ls -al _build
-
+      - name: Get build artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: artifacts
+      - name: Deploy artifacts
+        run: |
+          ls -al .
+          scp ${{ github.workspace }}/*.zip staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/
+          ssh staging 'unzip ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/*.zip'
+          ssh staging 'ls -al ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/'
       #----------------------------------------------
       # Delete dir on remote server, upload build tar and extract on remote server.
       #----------------------------------------------
