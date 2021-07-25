@@ -160,10 +160,12 @@ jobs:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
           ls -al .
-          ssh staging 'rm -r $BUILD_DIR/*'
-          scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
-          ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
-          ssh staging 'ls -al $BUILD_DIR/'
+          ssh staging BUILD_DIR=$BUILD_DIR 'echo $BUILD_DIR'
+          echo $BUILD_DIR'
+        # ssh staging 'rm -r $BUILD_DIR/*'
+        # scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
+        # ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
+        # ssh staging 'ls -al $BUILD_DIR/'
       #----------------------------------------------
       # Delete dir on remote server, upload build tar and extract on remote server.
       #----------------------------------------------
