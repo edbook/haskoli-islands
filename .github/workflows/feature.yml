@@ -158,7 +158,8 @@ jobs:
       - name: Deploy artifacts
         run: |
           ls -al .
-          scp ${{ github.workspace }}/*.zip staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/
+          ssh staging 'rm -r ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/*'
+          scp ${{ github.workspace }}/*.zip staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/build.zip
           ssh staging 'unzip ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/*.zip'
           ssh staging 'ls -al ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/'
       #----------------------------------------------
