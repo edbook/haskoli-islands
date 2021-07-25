@@ -141,7 +141,8 @@ jobs:
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
       - name: Test SSH connection
         run: |
-          ssh staging 'mkdir -p ".public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}"'
+          # ssh staging 'mkdir -p ".public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}"'
+          ssh staging "date"
       #----------------------------------------------
       # Get build artifact from setup job
       #----------------------------------------------
