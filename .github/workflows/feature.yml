@@ -156,12 +156,12 @@ jobs:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
           ls -al .
-          mv ${BUILD_DIR} ${BUILD_DIR}.delete || true
-          mkdir -p ${BUILD_DIR}
           scp ${{ github.workspace }}/*.zip staging:${BUILD_DIR}/build.zip
           cat >>${{ github.workspace }}/deploy.sh <<END
           #!/bin/bash
           ls ${BUILD_DIR}
+          mv ${BUILD_DIR} ${BUILD_DIR}.delete || true
+          mkdir -p ${BUILD_DIR}
           unzip -o ${BUILD_DIR}/build.zip -d $BUILD_DIR/
           mv $BUILD_DIR/_build/* $BUILD_DIR/
           rm -r $BUILD_DIR/_build ${BUILD_DIR}.delete ${BUILD_DIR}/build.zip
