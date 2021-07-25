@@ -153,5 +153,5 @@ jobs:
           port: 22
           rm: true
           strip_components: 1
-          source: undirbuningur_stae_build/*
+          source: _build/*
           target: ".public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}"
