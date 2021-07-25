@@ -141,8 +141,7 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: Test SSH connection
         run: |
-          ssh-keygen -y -e -f ~/.ssh/staging.key
-          openssl dsa -in ~/.ssh/staging.key -modulus -noout
+          ssh staging "date"
       #----------------------------------------------
       # Get build artifact from setup job
       #----------------------------------------------
