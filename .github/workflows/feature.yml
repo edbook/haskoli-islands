@@ -140,6 +140,9 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
+      - name: Test SSH connection
+        run: |
+          $(ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1)
       # - name: Test SSH connection
       #   run: |
       #     ssh staging 'mkdir -p ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
@@ -164,7 +167,7 @@ jobs:
           cat >>${{ github.workspace }}/deploy.sh <<END
           #!/bin/bash
           ls $BUILD_DIR
-          # rm -r ${BUILD_DIR}/*
+          mv ${BUILD_DIR} ${BUILD_DIR}.delete || true
           unzip -o $BUILD_DIR/build.zip -d $BUILD_DIR/
           END
           chmod +x ${{ github.workspace }}/deploy.sh
