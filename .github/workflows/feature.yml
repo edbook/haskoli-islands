@@ -161,11 +161,12 @@ jobs:
         run: |
           ls -al .
           cat >>${{ github.workspace }}/deploy.sh <<END
+          #!/bin/bash
           ls $BUILD_DIR
           END
           chmod +x ${{ github.workspace }}/deploy.sh
           scp ${{ github.workspace }}/deploy.sh staging:~/
-          ssh staging 'sh ~/deploy.sh'
+          ssh staging 'bash ~/deploy.sh'
         # scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
         # ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
         # ssh staging 'ls -al $BUILD_DIR/'
