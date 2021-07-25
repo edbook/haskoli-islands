@@ -156,12 +156,14 @@ jobs:
         with:
           name: artifacts
       - name: Deploy artifacts
+        env:
+          BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
           ls -al .
-          ssh staging 'rm -r ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/*'
-          scp ${{ github.workspace }}/*.zip staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/build.zip
-          ssh staging 'unzip ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/*.zip'
-          ssh staging 'ls -al ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/'
+          ssh staging 'rm -r $BUILD_DIR/*'
+          scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
+          ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
+          ssh staging 'ls -al $BUILD_DIR/'
       #----------------------------------------------
       # Delete dir on remote server, upload build tar and extract on remote server.
       #----------------------------------------------
