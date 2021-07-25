@@ -160,13 +160,17 @@ jobs:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
           ls -al .
+          scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
           cat >>${{ github.workspace }}/deploy.sh <<END
           #!/bin/bash
           ls $BUILD_DIR
+          # rm -r ${BUILD_DIR}/*
+          unzip -o $BUILD_DIR/build.zip -d $BUILD_DIR/
           END
           chmod +x ${{ github.workspace }}/deploy.sh
           scp ${{ github.workspace }}/deploy.sh staging:~/
           ssh staging 'bash ~/deploy.sh'
+          ssh staging 'rm ~/deploy.sh'
         # scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
         # ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
         # ssh staging 'ls -al $BUILD_DIR/'
