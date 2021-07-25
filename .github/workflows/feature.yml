@@ -146,7 +146,7 @@ jobs:
           echo "test" > ${{ github.workspace }}/test.txt
           ls ${{ github.workspace }}
           cat ${{ github.workspace }}/test.txt
-          scp ${{ github.workspace }}/test.txt staging@~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/test.txt
+          scp ${{ github.workspace }}/test.txt staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/
       #----------------------------------------------
       # Get build artifact from setup job
       #----------------------------------------------
