@@ -140,17 +140,10 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-      - name: Test SSH connection
-        run: |
-          $(ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1)
       # - name: Test SSH connection
       #   run: |
-      #     ssh staging 'mkdir -p ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
-      #     echo "test" > ${{ github.workspace }}/test.txt
-      #     ls ${{ github.workspace }}
-      #     cat ${{ github.workspace }}/test.txt
-      #     scp ${{ github.workspace }}/test.txt staging:~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/
-      #     ssh staging 'ls ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
+      #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
+
       #----------------------------------------------
       # Get build artifact from setup job
       #----------------------------------------------
