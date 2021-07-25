@@ -160,7 +160,7 @@ jobs:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
           ls -al .
-          ssh staging BUILD_DIR=$BUILD_DIR 'echo $BUILD_DIR'
+          ssh staging 'export BUILD_DIR='"'$BUILD_DIR'"'; echo $BUILD_DIR'
           echo $BUILD_DIR
         # ssh staging 'rm -r $BUILD_DIR/*'
         # scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
