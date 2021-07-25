@@ -163,6 +163,8 @@ jobs:
           #!/bin/bash
           ls ${BUILD_DIR}
           unzip -o ${BUILD_DIR}/build.zip -d $BUILD_DIR/
+          mv $BUILD_DIR/_build/* $BUILD_DIR/
+          rm -r $BUILD_DIR/_build ${BUILD_DIR}.delete ${BUILD_DIR}/build.zip
           END
           chmod +x ${{ github.workspace }}/deploy.sh
           scp ${{ github.workspace }}/deploy.sh staging:~/
