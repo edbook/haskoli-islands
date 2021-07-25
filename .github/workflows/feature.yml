@@ -120,7 +120,7 @@ jobs:
           path: ${{steps.zip_build.outputs.artifact}}
   deploy-feature-branch:
     # needs: [setup, build-all]
-    needs: [setup]
+    needs: [setup, build-all]
     name: Deploy feature branch
     runs-on: ubuntu-20.04
     steps:
