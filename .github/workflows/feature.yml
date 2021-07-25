@@ -16,44 +16,29 @@ jobs:
     outputs:
       branch_name: ${{ steps.extract_branch.outputs.branch_name }}
     steps:
-      #----------------------------------------------
-      # Store current branch name as output for reuse as dir name on remote host
-      #----------------------------------------------
       - name: Extract branch name
         id: extract_branch
         shell: bash
         run: |
           echo "::set-output name=branch_name::$(echo ${GITHUB_REF#refs/heads/})"
-      #----------------------------------------------
-      # check-out repo and set-up python
-      #----------------------------------------------
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Set up python
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      #----------------------------------------------
-      # install & configure poetry
-      #----------------------------------------------
       - name: Install Poetry
         uses: snok/install-poetry@v1
         with:
           version: "1.1.6"
           virtualenvs-create: true
           virtualenvs-in-project: true
-      #----------------------------------------------
-      # load cached venv if cache exists
-      #----------------------------------------------
       - name: Load cached venv
         id: cached-poetry-dependencies
         uses: actions/cache@v2
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      #----------------------------------------------
-      # install dependencies if cache does not exist
-      #----------------------------------------------
       - name: Install dependencies
         run: poetry install
         if: steps.cached_poetry_dependencies.outputs.cache-hit != 'true'
@@ -70,27 +55,18 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      #----------------------------------------------
-      # load cached venv if cache exists
-      #----------------------------------------------
       - name: Load cached venv
         id: cached-poetry-dependencies
         uses: actions/cache@v2
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      #----------------------------------------------
-      # install & configure poetry
-      #----------------------------------------------
       - name: Install Poetry
         uses: snok/install-poetry@v1
         with:
           version: "1.1.6"
           virtualenvs-create: true
           virtualenvs-in-project: true
-      #----------------------------------------------
-      # Build
-      #----------------------------------------------
       - name: Build
         id: build
         run: |
@@ -100,7 +76,6 @@ jobs:
           ls -al _build
       - name: zip-build
         id: zip_build
-        # Use zip instead of tar to support non-tech users that want to download the artifact
         run: |
           echo ${{ github.workspace }}
           ls ${{ github.workspace }}/_build
@@ -110,16 +85,12 @@ jobs:
           zip -r "edbook-${BUILD_PREFIX}-${BUILD_HASH}" _build/*
           ls -al ${{ github.workspace }}
           echo "::set-output name=artifact::$(echo edbook-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
-      #----------------------------------------------
-      # Upload build artifact
-      #----------------------------------------------
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
           name: artifacts
           path: ${{steps.zip_build.outputs.artifact}}
   deploy-feature-branch:
-    # needs: [setup, build-all]
     needs: [setup, build-all]
     name: Deploy feature branch
     runs-on: ubuntu-20.04
@@ -140,13 +111,9 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-      # - name: Test SSH connection
-      #   run: |
-      #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-
-      #----------------------------------------------
-      # Get build artifact from setup job
-      #----------------------------------------------
+      - name: Test SSH connection
+        run: |
+          ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
       - name: Get build artifact
         uses: actions/download-artifact@v2
         with:
@@ -172,22 +139,3 @@ jobs:
           scp ${{ github.workspace }}/deploy.sh staging:~/
           ssh staging 'bash ~/deploy.sh'
           ssh staging 'rm ~/deploy.sh'
-        # scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
-        # ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
-        # ssh staging 'ls -al $BUILD_DIR/'
-        # ssh staging 'unset BUILD_DIR'
-      #----------------------------------------------
-      # Delete dir on remote server, upload build tar and extract on remote server.
-      #----------------------------------------------
-      # - name: Deploy foundation docs
-      #   id: deploy_foundation_docs
-      #   uses: appleboy/scp-action@master
-      #   with:
-      #     host: ${{ secrets.SSH_HOST }}
-      #     username: ${{ secrets.HI_USERNAME }}
-      #     password: ${{ secrets.HI_PASSWORD }}
-      #     port: 22
-      #     rm: true
-      #     strip_components: 1
-      #     source: _build/*
-      #     target: ".public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}"
