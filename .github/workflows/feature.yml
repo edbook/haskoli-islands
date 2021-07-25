@@ -136,10 +136,10 @@ jobs:
       - name: Unzip build
         # greining-1/monorepo-demo/artifacts/analysis_1_build/
         run: |
-          unzip *.zip && mv ${{ github.workspace }}/_build/* ${{ github.workspace }}/
+          unzip *.zip
           ls -al .
           rm *.zip
-          ls -al .
+          ls -al _build
       #----------------------------------------------
       # Delete dir on remote server, upload build tar and extract on remote server.
       #----------------------------------------------
