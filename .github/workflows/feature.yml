@@ -161,11 +161,11 @@ jobs:
         run: |
           ls -al .
           ssh staging 'export BUILD_DIR='"'$BUILD_DIR'"'; echo $BUILD_DIR'
-          echo $BUILD_DIR
-        # ssh staging 'rm -r $BUILD_DIR/*'
-        # scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
-        # ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
-        # ssh staging 'ls -al $BUILD_DIR/'
+          ssh staging 'rm -r $BUILD_DIR/*'
+          scp ${{ github.workspace }}/*.zip staging:$BUILD_DIR/build.zip
+          ssh staging 'unzip $BUILD_DIR/build.zip -d $BUILD_DIR/'
+          ssh staging 'ls -al $BUILD_DIR/'
+          ssh staging 'unset BUILD_DIR'
       #----------------------------------------------
       # Delete dir on remote server, upload build tar and extract on remote server.
       #----------------------------------------------
