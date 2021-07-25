@@ -143,8 +143,10 @@ jobs:
       - name: Test SSH connection
         run: |
           ssh staging 'mkdir -p ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}'
-          echo "test" > test.txt
-          scp test.txt staging@~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/test.txt
+          echo "test" > ${{ github.workspace }}/test.txt
+          ls ${{ github.workspace }}
+          cat ${{ github.workspace }}/test.txt
+          scp ${{ github.workspace }}/test.txt staging@~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}/test.txt
       #----------------------------------------------
       # Get build artifact from setup job
       #----------------------------------------------
