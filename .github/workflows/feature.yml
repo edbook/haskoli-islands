@@ -123,35 +123,51 @@ jobs:
     name: Deploy feature branch
     runs-on: ubuntu-20.04
     steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/staging.key
+          chmod 600 ~/.ssh/staging.key
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/staging.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+          SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
+          SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
+      - name: Test SSH connection
+        run: |
+          ssh staging 'mkdir -p ".public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}"'
       #----------------------------------------------
       # Get build artifact from setup job
       #----------------------------------------------
-      - name: Get build artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: artifacts
-      #----------------------------------------------
-      # Unzip to comply with scp-action
-      #----------------------------------------------
-      - name: Unzip build
-        # greining-1/monorepo-demo/artifacts/analysis_1_build/
-        run: |
-          unzip *.zip
-          ls -al .
-          rm *.zip
-          ls -al _build
+      # - name: Get build artifact
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     name: artifacts
+      # - name: Unzip build
+      #   run: |
+      #     unzip *.zip
+      #     ls -al .
+      #     rm *.zip
+      #     ls -al _build
+
       #----------------------------------------------
       # Delete dir on remote server, upload build tar and extract on remote server.
       #----------------------------------------------
-      - name: Deploy foundation docs
-        id: deploy_foundation_docs
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.HI_USERNAME }}
-          password: ${{ secrets.HI_PASSWORD }}
-          port: 22
-          rm: true
-          strip_components: 1
-          source: _build/*
-          target: ".public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}"
+      # - name: Deploy foundation docs
+      #   id: deploy_foundation_docs
+      #   uses: appleboy/scp-action@master
+      #   with:
+      #     host: ${{ secrets.SSH_HOST }}
+      #     username: ${{ secrets.HI_USERNAME }}
+      #     password: ${{ secrets.HI_PASSWORD }}
+      #     port: 22
+      #     rm: true
+      #     strip_components: 1
+      #     source: _build/*
+      #     target: ".public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}"
