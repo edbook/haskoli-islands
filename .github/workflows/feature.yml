@@ -97,7 +97,7 @@ jobs:
         env:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
-          rsync -navhiP --stats ${{ github.workspace }}/_build/* staging:${BUILD_DIR}
+          rsync -avhizP --stats --progress ${{ github.workspace }}/_build/* staging:${BUILD_DIR}
       # - name: Prepare remote host
       #   env:
       #     BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
