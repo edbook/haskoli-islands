@@ -93,7 +93,7 @@ jobs:
           ls -al _build
       - name: Sync files to remote host
         env:
-          REMOTE_BASE_DIR: ~/.public_html
+          REMOTE_BASE_DIR: ~/public_html
           REMOTE_SUB_DIR: staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
           mkdir -p ${{ github.workspace }}/${REMOTE_SUB_DIR}; mv _build/* $_
