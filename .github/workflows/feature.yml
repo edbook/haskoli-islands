@@ -132,3 +132,15 @@ jobs:
           scp ${{ github.workspace }}/prepare.sh staging:~/
           ssh staging 'bash ~/prepare.sh'
           scp ${{ github.workspace }}/*.zip staging:${BUILD_DIR}/build.zip
+      - name: Deploy
+        env:
+          BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
+        run: |
+          cat >>${{ github.workspace }}/deploy.sh <<END
+          #!/bin/bash
+          unzip -o ${BUILD_DIR}/build.zip -d ${BUILD_DIR}/
+          ls ${BUILD_DIR}
+          END
+          chmod +x ${{ github.workspace }}/deploy.sh
+          scp ${{ github.workspace }}/deploy.sh staging:~/
+          ssh staging 'bash ~/deploy.sh'
