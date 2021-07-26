@@ -101,7 +101,7 @@ jobs:
           REMOTE_BASE_DIR: ~/public_html
           REMOTE_SUB_DIR: staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
-          mkdir -p ${{ github.workspace }}/${REMOTE_SUB_DIR}; mv _build/* $_
+          mkdir -p ${{ github.workspace }}/${REMOTE_SUB_DIR}; cp -r _build/* $_
           ls ${{ github.workspace }}/${REMOTE_SUB_DIR}
           rsync -avhizP --stats --progress --relative ${{ github.workspace }}/./${REMOTE_SUB_DIR} staging:${REMOTE_BASE_DIR}/
       # NOTE: Testing production stage, will be merged with the above "Sync files to remote" step.
