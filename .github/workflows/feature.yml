@@ -95,9 +95,12 @@ jobs:
           ls -al _build
       - name: Sync files to remote host
         env:
-          BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
+          REMOTE_BASE_DIR: ~/.public_html
+          REMOTE_SUB_DIR: staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
-          rsync -avhizP --stats --progress ${{ github.workspace }}/_build/* staging:${BUILD_DIR}
+          mkdir -p ${{ github.workspace }}/${REMOTE_SUB_DIR}; mv _build/* $_
+          ls ${{ github.workspace }}/${REMOTE_SUB_DIR}
+          rsync -navhizP --stats --progress --relative ${{ github.workspace }}/./${REMOTE_SUB_DIR} staging:${REMOTE_BASE_DIR}/
       # - name: Prepare remote host
       #   env:
       #     BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
