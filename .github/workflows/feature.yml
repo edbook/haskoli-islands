@@ -118,16 +118,17 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: artifacts
-      - name: Deploy artifacts
+      - name: Prepare remote host
         env:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
-          ssh staging 'mkdir -p '"'$BUILD_DIR'"''
-          scp ${{ github.workspace }}/*.zip staging:${BUILD_DIR}/build.zip
-          cat >>${{ github.workspace }}/deploy.sh <<END
+          cat >>${{ github.workspace }}/prepare.sh <<END
           #!/bin/bash
+          mkdir -p ${BUILD_DIR}
+          touch ${BUILD_DIR}/test.txt
           ls ${BUILD_DIR}
           END
-          chmod +x ${{ github.workspace }}/deploy.sh
-          scp ${{ github.workspace }}/deploy.sh staging:~/
-          ssh staging 'bash ~/deploy.sh'
+          chmod +x ${{ github.workspace }}/prepare.sh
+          scp ${{ github.workspace }}/prepare.sh staging:~/
+          ssh staging 'bash ~/prepare.sh'
+          scp ${{ github.workspace }}/*.zip staging:${BUILD_DIR}/build.zip
