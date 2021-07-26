@@ -108,7 +108,7 @@ jobs:
         run: |
           if [ "${{github.event.pull_request.merged}}" = true ];
             then
-              REMOTE_BASE_DIR="~/public_html"";
+              REMOTE_BASE_DIR="~/public_html";
               REMOTE_SUB_DIR=;
               mv ${{ github.workspace }}/_build/* ${{ github.workspace }}/.
               rm -r ${{ github.workspace }}/_build
