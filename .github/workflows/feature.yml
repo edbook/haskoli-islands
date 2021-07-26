@@ -3,6 +3,10 @@
 #   Fix "if" conditions in each job, feels redundant.
 #   There is alot of replication of steps here since Github actions seems limited.
 name: edbook
+env:
+  SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
+  SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
+  SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
 on:
   push:
     paths-ignore:
@@ -44,10 +48,8 @@ jobs:
         if: steps.cached_poetry_dependencies.outputs.cache-hit != 'true'
   build-all:
     needs: [setup]
-    name: Build projects
+    name: Build and deploy
     runs-on: ubuntu-20.04
-    outputs:
-      artifact: ${{ steps.zip_build.outputs.artifact }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
@@ -67,34 +69,6 @@ jobs:
           version: "1.1.6"
           virtualenvs-create: true
           virtualenvs-in-project: true
-      - name: Build
-        id: build
-        run: |
-          source .venv/bin/activate
-          poetry --version
-          make build-all
-          ls -al _build
-      - name: zip-build
-        id: zip_build
-        run: |
-          echo ${{ github.workspace }}
-          ls ${{ github.workspace }}/_build
-          export BUILD_PREFIX=build-${{ runner.os }}
-          export BUILD_HASH=${{ hashFiles('_build') }}
-          echo ${BUILD_HASH}
-          zip -r "edbook-${BUILD_PREFIX}-${BUILD_HASH}" _build/*
-          ls -al ${{ github.workspace }}
-          echo "::set-output name=artifact::$(echo edbook-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifacts
-          path: ${{steps.zip_build.outputs.artifact}}
-  deploy-feature-branch:
-    needs: [setup, build-all]
-    name: Deploy feature branch
-    runs-on: ubuntu-20.04
-    steps:
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
@@ -107,35 +81,21 @@ jobs:
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
           END
-        env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
       - name: Test SSH connection
         run: |
           ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-      - name: Get build artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: artifacts
-      - name: Deploy artifacts
-        env:
-          BASE_DIR: ~/.public_html/staging/edbook
-          BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
+      - name: Build
+        id: build
         run: |
-          ls -al .
-          ssh staging 'mkdir -p '"'$BASE_DIR'"''
-          scp ${{ github.workspace }}/*.zip staging:${BASE_DIR}/build.zip
-          cat >>${{ github.workspace }}/deploy.sh <<END
-          #!/bin/bash
-          ls ${BUILD_DIR}
-          mv ${BUILD_DIR} ${BUILD_DIR}.delete || true
-          mkdir -p ${BUILD_DIR}
-          unzip -o ${BASE_DIR}/build.zip -d $BUILD_DIR/
-          mv $BUILD_DIR/_build/* $BUILD_DIR/
-          rm -r $BUILD_DIR/_build ${BUILD_DIR}.delete ${BASE_DIR}/build.zip
-          END
-          chmod +x ${{ github.workspace }}/deploy.sh
-          scp ${{ github.workspace }}/deploy.sh staging:~/
-          ssh staging 'bash ~/deploy.sh'
-          ssh staging 'rm ~/deploy.sh'
+          source .venv/bin/activate
+          poetry --version
+          make build-all
+          ls -al _build
+      - name: Sync files to remote host
+        env:
+          REMOTE_BASE_DIR: ~/public_html
+          REMOTE_SUB_DIR: staging/edbook/${{ needs.setup.outputs.branch_name }}
+        run: |
+          mkdir -p ${{ github.workspace }}/${REMOTE_SUB_DIR}; mv _build/* $_
+          ls ${{ github.workspace }}/${REMOTE_SUB_DIR}
+          rsync -avhizP --stats --progress --relative ${{ github.workspace }}/./${REMOTE_SUB_DIR} staging:${REMOTE_BASE_DIR}/
