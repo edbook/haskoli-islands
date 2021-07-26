@@ -27,6 +27,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Configure SSH
+        env:
+          SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_KEY" > ~/.ssh/staging.key
@@ -38,10 +42,6 @@ jobs:
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
           END
-        env:
-          SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
       - name: Test SSH connection
         run: |
           ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
