@@ -6,79 +6,88 @@ Diffur- og heildareikningur vigursviða
 \- George R.R. Martin, A Dance with Dragons 
 
 
-
-
 grad, div og curl
 -----------------
 
 .. index::
-  nabla-virkinn
+    nabla-virkinn
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Skilgreinum *nabla*-virkjann sem diffurvirkja
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle \nabla=\mbox{${\bf i}$}\,\frac{\partial}{\partial x}+\mbox{${\bf j}$}\,\frac{\partial}{\partial y}+\mbox{${\bf k}$}\,\frac{\partial}{\partial z}.
+    Skilgreinum *nabla*-virkjann sem diffurvirkja
+
+    .. math:: \displaystyle \nabla=\mbox{${\bf i}$}\,\frac{\partial}{\partial x}+\mbox{${\bf j}$}\,\frac{\partial}{\partial y}+\mbox{${\bf k}$}\,\frac{\partial}{\partial z}.
 
 .. index::
-  sundurleitni
-  rót
+    sundurleitni
+    rót
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum
-:math:`\mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}`
-vera vigursvið og :math:`\varphi(x,y,z)` vera fall.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Skilgreinum :hover:`stigul,stigull` :math:`\varphi` sem vigursviðið
+    Látum
+    :math:`\mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}`
+    vera vigursvið og :math:`\varphi(x,y,z)` vera fall.
 
-.. math:: \displaystyle
+    Skilgreinum :hover:`stigul,stigull` :math:`\varphi` sem vigursviðið
 
-   \mbox{${\rm\bf grad\,}$}\varphi=\nabla\varphi=\frac{\partial \varphi}{\partial x}\,\mbox{${\bf i}$}+
-   \frac{\partial \varphi}{\partial y}\,\mbox{${\bf j}$}+\frac{\partial \varphi}{\partial z}\,\mbox{${\bf k}$}.
+    .. math:: \displaystyle
 
-Skilgreinum :hover:`sundurleitni` vigursviðsins
-:math:`\mbox{${\bf F}$}` sem
+        \mbox{${\rm\bf grad\,}$}\varphi=\nabla\varphi=\frac{\partial \varphi}{\partial x}\,\mbox{${\bf i}$}+
+        \frac{\partial \varphi}{\partial y}\,\mbox{${\bf j}$}+\frac{\partial \varphi}{\partial z}\,\mbox{${\bf k}$}.
 
-.. math:: \displaystyle \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}=\nabla\cdot\mbox{${\bf F}$}=\frac{\partial F_1}{\partial x}+\frac{\partial F_2}{\partial y}+\frac{\partial F_3}{\partial z}.
+    Skilgreinum :hover:`sundurleitni` vigursviðsins
+    :math:`\mbox{${\bf F}$}` sem
 
-Skilgreinum :hover:`rót` vigursviðsins :math:`\mbox{${\bf F}$}` sem
+    .. math:: \displaystyle \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}=\nabla\cdot\mbox{${\bf F}$}=\frac{\partial F_1}{\partial x}+\frac{\partial F_2}{\partial y}+\frac{\partial F_3}{\partial z}.
 
-.. math:: \displaystyle
+    Skilgreinum :hover:`rót` vigursviðsins :math:`\mbox{${\bf F}$}` sem
 
-   \begin{aligned}
-    \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}&=\nabla\times\mbox{${\bf F}$}=\begin{vmatrix} \mbox{${\bf i}$}&\mbox{${\bf j}$}&\mbox{${\bf k}$}\\
-    \frac{\partial} {\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\F_1&F_2&F_3\end{vmatrix} \\ &=\bigg(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}\bigg)\,\mbox{${\bf i}$}+\bigg(\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}\bigg)\,\mbox{${\bf j}$}+\bigg(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\bigg)\,\mbox{${\bf k}$}. 
-    \end{aligned}
+    .. math:: \displaystyle
 
-.. warning::
+        \begin{aligned}
+            \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}&=\nabla\times\mbox{${\bf F}$}=\begin{vmatrix} \mbox{${\bf i}$}&\mbox{${\bf j}$}&\mbox{${\bf k}$}\\
+            \frac{\partial} {\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\F_1&F_2&F_3\end{vmatrix} \\ &=\bigg(\frac{\partial F_3}{\partial y}-\frac{\partial F_2}{\partial z}\bigg)\,\mbox{${\bf i}$}+\bigg(\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}\bigg)\,\mbox{${\bf j}$}+\bigg(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\bigg)\,\mbox{${\bf k}$}. 
+            \end{aligned}
 
-   Ef :math:`\varphi(x,y,z)` er fall þá er :math:`\nabla \varphi(x,y,z)` stigullinn af :math:`\varphi(x,y,z)` en :math:`\varphi(x,y,z)\nabla` er :hover:`diffurvirki`.
+.. admonition:: Aðvörun
+    :class: advorun
 
-.. warning::
+    Ef :math:`\varphi(x,y,z)` er fall þá er :math:`\nabla \varphi(x,y,z)` stigullinn af :math:`\varphi(x,y,z)` en :math:`\varphi(x,y,z)\nabla` er :hover:`diffurvirki`.
 
-   Sundurleitnin :math:`\mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}` er fall :math:`{\mathbb  R}^3\rightarrow{\mathbb  R}` en rótið :math:`\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}` er vigursvið :math:`{\mathbb  R}^3\rightarrow{\mathbb  R}^3`.
+.. admonition:: Aðvörun
+    :class: advorun
+
+    Sundurleitnin :math:`\mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}` er fall :math:`{\mathbb  R}^3\rightarrow{\mathbb  R}` en rótið :math:`\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}` er vigursvið :math:`{\mathbb  R}^3\rightarrow{\mathbb  R}^3`.
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum
-:math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
-vera vigursvið. Skilgreinum :hover:`sundurleitni` :math:`\mbox{${\bf F}$}` sem
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Látum
+    :math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
+    vera vigursvið. Skilgreinum :hover:`sundurleitni` :math:`\mbox{${\bf F}$}` sem
 
-   \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}=\nabla\cdot\mbox{${\bf F}$}=\frac{\partial F_1}{\partial
-     x}+\frac{\partial F_2}{\partial y}.
+    .. math:: \displaystyle
 
-og :hover:`rót` :math:`\mbox{${\bf F}$}` skilgreinum við sem
+        \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}=\nabla\cdot\mbox{${\bf F}$}=\frac{\partial F_1}{\partial
+            x}+\frac{\partial F_2}{\partial y}.
 
-.. math:: \displaystyle
+    og :hover:`rót` :math:`\mbox{${\bf F}$}` skilgreinum við sem
 
-   \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}=\bigg(\frac{\partial F_2}{\partial x}-\frac{\partial
-     F_1}{\partial y}\bigg)\,\mbox{${\bf k}$}.
+    .. math:: \displaystyle
+
+        \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}=\bigg(\frac{\partial F_2}{\partial x}-\frac{\partial
+            F_1}{\partial y}\bigg)\,\mbox{${\bf k}$}.
 
 Reiknireglur 
 ~~~~~~~~~~~~~
@@ -115,88 +124,103 @@ samfelldar.
 :math:`\nabla\times(\nabla\times \mbox{${\bf F}$})=\nabla(\nabla\cdot\mbox{${\bf F}$})-\nabla^2\mbox{${\bf F}$}`.
 
 .. index::
-  sundurleitnilaus
-  uppsprettulaus
-  rótlaus
-  
-Skilgreining 
-~~~~~~~~~~~~~
-
-Látum :math:`\mbox{${\bf F}$}` vera vigursvið skilgreint á svæði
-:math:`D`.
-
-(a) Vigursviðið :math:`\mbox{${\bf F}$}` er sagt vera
-:hover:`sundurleitnilaust,uppsprettulaus` eða *uppsprettulaust* ef
-:math:`\mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}=0` i öllum punktum
-:math:`D`.
-
-(b) Vigursviðið :math:`\mbox{${\bf F}$}` er sagt vera :hover:`rótlaust,rótlaus`
-ef :math:`\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}=\mbox{${\bf 0}$}` á öllu
-:math:`D`.
-
-.. note::
-   Vigursvið :math:`\mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}` er rótlaust ef og aðeins ef
-
-   .. math:: \displaystyle
-      \frac{\partial F_1}{\partial y}=
-      \frac{\partial F_2}{\partial x},\quad
-      \frac{\partial F_1}{\partial z}=
-      \frac{\partial F_3}{\partial x},\quad
-      \frac{\partial F_2}{\partial z}=
-      \frac{\partial F_3}{\partial y}.
-
-Setning 
-~~~~~~~~
-
-(a) Rót vigursviðs er :hover:`sundurleitnilaus,uppsprettulaus`.
-
-(b) Stigulsvið er :hover:`rótlaust,rótlaus`.
-
-
-.. index::
-  stjörnusvæði
+    sundurleitnilaus
+    uppsprettulaus
+    rótlaus
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Svæði :math:`D` í rúmi eða plani kallast :hover:`stjörnusvæði` ef til er
-punktur :math:`P` í :math:`D` þannig að fyrir sérhvern annan punkt
-:math:`Q` í :math:`D` þá liggur allt línustrikið á milli :math:`P` og
-:math:`Q` í :math:`D`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
+    Látum :math:`\mbox{${\bf F}$}` vera vigursvið skilgreint á svæði
+    :math:`D`.
+
+    (a) Vigursviðið :math:`\mbox{${\bf F}$}` er sagt vera
+    :hover:`sundurleitnilaust,uppsprettulaus` eða *uppsprettulaust* ef
+    :math:`\mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}=0` i öllum punktum
+    :math:`D`.
+
+    (b) Vigursviðið :math:`\mbox{${\bf F}$}` er sagt vera :hover:`rótlaust,rótlaus`
+    ef :math:`\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}=\mbox{${\bf 0}$}` á öllu
+    :math:`D`.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Vigursvið :math:`\mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}` er rótlaust ef og aðeins ef
+
+    .. math:: \displaystyle
+        \frac{\partial F_1}{\partial y}=
+        \frac{\partial F_2}{\partial x},\quad
+        \frac{\partial F_1}{\partial z}=
+        \frac{\partial F_3}{\partial x},\quad
+        \frac{\partial F_2}{\partial z}=
+        \frac{\partial F_3}{\partial y}.
 
 Setning 
 ~~~~~~~~
 
-Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
-skilgreint á :hover:`stjörnusvæði` :math:`D`. Ef :math:`\mbox{${\bf F}$}` er
-rótlaust þá er :math:`\mbox{${\bf F}$}` stigulsvið. Með öðrum orðum, ef
-vigursviðið :math:`\mbox{${\bf F}$}` er samfellt diffranlegt og
-skilgreint á :hover:`stjörnusvæði` :math:`D` og uppfyllir jöfnurnar
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle
+    (a) Rót vigursviðs er :hover:`sundurleitnilaus,uppsprettulaus`.
 
-   \frac{\partial F_1}{\partial y}=
-   \frac{\partial F_2}{\partial x},\quad
-   \frac{\partial F_1}{\partial z}=
-   \frac{\partial F_3}{\partial x},\quad
-   \frac{\partial F_2}{\partial z}=
-   \frac{\partial F_3}{\partial y},
-
-þá er :math:`\mbox{${\bf F}$}` stigulsvið.
-
-Setning 
-~~~~~~~~
-
-Lát :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
-skilgreint á :hover:`stjörnusvæði` :math:`D`. Ef :math:`\mbox{${\bf F}$}` er
-sundurleitnilaust þá er til vigursvið :math:`\mbox{${\bf G}$}` þannig að
-:math:`\mbox{${\bf F}$}=\mbox{${\rm\bf curl\,}$}\mbox{${\bf G}$}`.
-Vigursviðið :math:`\mbox{${\bf G}$}` kallast *vigurmætti* fyrir
-:math:`\mbox{${\bf F}$}`.
+    (b) Stigulsvið er :hover:`rótlaust,rótlaus`.
 
 .. index::
-  sundurleitnisetning	
+    stjörnusvæði
+
+Skilgreining 
+~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Svæði :math:`D` í rúmi eða plani kallast :hover:`stjörnusvæði` ef til er
+    punktur :math:`P` í :math:`D` þannig að fyrir sérhvern annan punkt
+    :math:`Q` í :math:`D` þá liggur allt línustrikið á milli :math:`P` og
+    :math:`Q` í :math:`D`.
+
+Setning 
+~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
+    skilgreint á :hover:`stjörnusvæði` :math:`D`. Ef :math:`\mbox{${\bf F}$}` er
+    rótlaust þá er :math:`\mbox{${\bf F}$}` stigulsvið. Með öðrum orðum, ef
+    vigursviðið :math:`\mbox{${\bf F}$}` er samfellt diffranlegt og
+    skilgreint á :hover:`stjörnusvæði` :math:`D` og uppfyllir jöfnurnar
+
+    .. math:: \displaystyle
+
+        \frac{\partial F_1}{\partial y}=
+        \frac{\partial F_2}{\partial x},\quad
+        \frac{\partial F_1}{\partial z}=
+        \frac{\partial F_3}{\partial x},\quad
+        \frac{\partial F_2}{\partial z}=
+        \frac{\partial F_3}{\partial y},
+
+    þá er :math:`\mbox{${\bf F}$}` stigulsvið.
+
+Setning 
+~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Lát :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
+    skilgreint á :hover:`stjörnusvæði` :math:`D`. Ef :math:`\mbox{${\bf F}$}` er
+    sundurleitnilaust þá er til vigursvið :math:`\mbox{${\bf G}$}` þannig að
+    :math:`\mbox{${\bf F}$}=\mbox{${\rm\bf curl\,}$}\mbox{${\bf G}$}`.
+    Vigursviðið :math:`\mbox{${\bf G}$}` kallast *vigurmætti* fyrir
+    :math:`\mbox{${\bf F}$}`.
+
+.. index::
+    sundurleitnisetning	
 
 Sundurleitnisetningin I
 -----------------------
@@ -204,44 +228,49 @@ Sundurleitnisetningin I
 Setning (Sundurleitnisetning I)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
-skilgreint á opnu mengi :math:`D` í :math:`{\mathbb  R}^3`. Látum
-:math:`P` vera punkt á skilgreiningarsvæði :math:`\mbox{${\bf F}$}` og
-:math:`{\cal S}_\varepsilon` kúluskel með miðju í :math:`P` og geisla
-:math:`\varepsilon`. Látum svo :math:`\mbox{${\bf N}$}` vera
-einingarþvervigrasvið á :math:`{\cal S}_\varepsilon` þannig að
-:math:`\mbox{${\bf N}$}` vísar út á við. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle
+    Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
+    skilgreint á opnu mengi :math:`D` í :math:`{\mathbb  R}^3`. Látum
+    :math:`P` vera punkt á skilgreiningarsvæði :math:`\mbox{${\bf F}$}` og
+    :math:`{\cal S}_\varepsilon` kúluskel með miðju í :math:`P` og geisla
+    :math:`\varepsilon`. Látum svo :math:`\mbox{${\bf N}$}` vera
+    einingarþvervigrasvið á :math:`{\cal S}_\varepsilon` þannig að
+    :math:`\mbox{${\bf N}$}` vísar út á við. Þá er
 
-   \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
-   \frac{1}{V_\varepsilon}\int\!\!\!\int_{{\cal S}_\varepsilon}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS.
+    .. math:: \displaystyle
 
-þar sem :math:`V_\varepsilon= 4\pi\varepsilon^3/3` er rúmmálið innan í
-:math:`{\cal S}_\varepsilon`.
+        \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
+        \frac{1}{V_\varepsilon}\int\!\!\!\int_{{\cal S}_\varepsilon}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS.
+
+    þar sem :math:`V_\varepsilon= 4\pi\varepsilon^3/3` er rúmmálið innan í
+    :math:`{\cal S}_\varepsilon`.
 
 .. index::
-  Stoke;setning
-
+    Stoke;setning
 
 Setning (Setning Stokes I)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
-skilgreint á opnu mengi :math:`D` í :math:`{\mathbb  R}^3`. Látum
-:math:`P` vera punkt á skilgreiningarsvæði :math:`\mbox{${\bf F}$}` og
-:math:`C_\varepsilon` vera hring með miðju í :math:`P` og geisla
-:math:`\varepsilon`. Látum :math:`\mbox{${\bf N}$}` vera
-einingarþvervigur á planið sem hringurinn liggur í. Áttum hringinn
-jákvætt. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle
+    Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
+    skilgreint á opnu mengi :math:`D` í :math:`{\mathbb  R}^3`. Látum
+    :math:`P` vera punkt á skilgreiningarsvæði :math:`\mbox{${\bf F}$}` og
+    :math:`C_\varepsilon` vera hring með miðju í :math:`P` og geisla
+    :math:`\varepsilon`. Látum :math:`\mbox{${\bf N}$}` vera
+    einingarþvervigur á planið sem hringurinn liggur í. Áttum hringinn
+    jákvætt. Þá er
 
-   \mbox{${\bf N}$}\cdot\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
-   \frac{1}{A_\varepsilon}\oint_{C_\varepsilon}\mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}.
+    .. math:: \displaystyle
 
-þar sem :math:`A_\varepsilon= \pi\varepsilon^2` er flatarmálið sem
-afmarkast af :math:`{\cal C}_\varepsilon`.
+        \mbox{${\bf N}$}\cdot\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
+        \frac{1}{A_\varepsilon}\oint_{C_\varepsilon}\mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}.
+
+    þar sem :math:`A_\varepsilon= \pi\varepsilon^2` er flatarmálið sem
+    afmarkast af :math:`{\cal C}_\varepsilon`.
 
 Túlkun 
 ~~~~~~~
@@ -268,116 +297,140 @@ eða
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`R` vera svæði í :math:`{\mathbb  R}^2` og :math:`\cal C`
-:hover:`jaðar` :math:`R`. Gerum ráð fyrir að :math:`\cal C` samanstandi af endanlega mörgum ferlum :math:`{\cal C}_1, \ldots, {\cal C}_n`. Jákvæð
-:hover:`áttun` á ferlunum felst í því að velja fyrir hvert :math:`i` stikun :math:`\mbox{${\bf r}$}_i` á :math:`{\cal C}_i` þannig að ef labbað eftir :math:`{\cal C}_i` í stefnu stikunar þá er :math:`R` á vinstri hönd.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`R` vera svæði í :math:`{\mathbb  R}^2` og :math:`\cal C`
+    :hover:`jaðar` :math:`R`. Gerum ráð fyrir að :math:`\cal C` samanstandi af endanlega mörgum ferlum :math:`{\cal C}_1, \ldots, {\cal C}_n`. Jákvæð
+    :hover:`áttun` á ferlunum felst í því að velja fyrir hvert :math:`i` stikun :math:`\mbox{${\bf r}$}_i` á :math:`{\cal C}_i` þannig að ef labbað eftir :math:`{\cal C}_i` í stefnu stikunar þá er :math:`R` á vinstri hönd.
 
 .. index::
-  Green;setning
+    Green;setning
 
 Setning Green 
 ~~~~~~~~~~~~~~
 
-Látum :math:`R` vera svæði í planinu þannig að jaðar :math:`R`, táknaður
-með :math:`\cal C`, samanstendur af endanlega mörgum samfellt
-diffranlegum ferlum. Áttum :math:`\cal C` jákvætt. Látum
-:math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
-vera samfellt diffranlegt vigursvið skilgreint á :math:`R`. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle
+    Látum :math:`R` vera svæði í planinu þannig að jaðar :math:`R`, táknaður
+    með :math:`\cal C`, samanstendur af endanlega mörgum samfellt
+    diffranlegum ferlum. Áttum :math:`\cal C` jákvætt. Látum
+    :math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
+    vera samfellt diffranlegt vigursvið skilgreint á :math:`R`. Þá er
 
-   \oint_{\cal C}F_1(x,y)\,dx+F_2(x,y)\,dy=\int\!\!\!\int_R
-   \frac{\partial  F_2}{\partial x}- 
-   \frac{\partial  F_1}{\partial y}\,dA.
+    .. math:: \displaystyle
+
+        \oint_{\cal C}F_1(x,y)\,dx+F_2(x,y)\,dy=\int\!\!\!\int_R
+        \frac{\partial  F_2}{\partial x}- 
+        \frac{\partial  F_1}{\partial y}\,dA.
 
 Fylgisetning 
 ~~~~~~~~~~~~~
 
-Látum :math:`R` vera svæði í planinu þannig að jaðar :math:`R` táknaður
-með :math:`\cal C`, samanstendur af endanlega mörgum samfellt
-diffranlegum ferlum. Áttum :math:`\cal C` jákvætt. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle
+    Látum :math:`R` vera svæði í planinu þannig að jaðar :math:`R` táknaður
+    með :math:`\cal C`, samanstendur af endanlega mörgum samfellt
+    diffranlegum ferlum. Áttum :math:`\cal C` jákvætt. Þá er
 
-   \mbox{Flatarmál } R=\oint_{\cal C}x\,dy= 
-   -\oint_{\cal C}y\,dx=\frac{1}{2}\oint_{\cal C}x\,dy-y\,dx.
+    .. math:: \displaystyle
+
+        \mbox{Flatarmál } R=\oint_{\cal C}x\,dy= 
+        -\oint_{\cal C}y\,dx=\frac{1}{2}\oint_{\cal C}x\,dy-y\,dx.
 
 Sundurleitnisetningin í tveimur víddum 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`R` vera svæði í planinu þannig að jaðar :math:`R`, táknaður
-með :math:`\cal C`, samanstendur af endanlega mörgum samfellt
-diffranlegum ferlum. Látum :math:`\mbox{${\bf N}$}` tákna
-einingarþvervigrasvið á :math:`\cal C` þannig að
-:math:`\mbox{${\bf N}$}` vísar út úr :math:`R`. Látum
-:math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
-vera samfellt diffranlegt vigursvið skilgreint á :math:`R`. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle \int\!\!\!\int_R\mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}\,dA=\oint_{\cal C} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,ds.
+    Látum :math:`R` vera svæði í planinu þannig að jaðar :math:`R`, táknaður
+    með :math:`\cal C`, samanstendur af endanlega mörgum samfellt
+    diffranlegum ferlum. Látum :math:`\mbox{${\bf N}$}` tákna
+    einingarþvervigrasvið á :math:`\cal C` þannig að
+    :math:`\mbox{${\bf N}$}` vísar út úr :math:`R`. Látum
+    :math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
+    vera samfellt diffranlegt vigursvið skilgreint á :math:`R`. Þá er
+
+    .. math:: \displaystyle \int\!\!\!\int_R\mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}\,dA=\oint_{\cal C} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,ds.
 
 Sundurleitnisetningin II
 ------------------------
 
 .. index::
-  flötur;reglulegur
+    flötur;reglulegur
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Flötur er sagður reglulegur ef hann hefur :hover:`snertiplan,snertislétta` í hverjum punkti.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Flötur :math:`\cal S` sem er búinn til með því að taka endanlega marga
-reglulega fleti :math:`{\cal S}_1, \ldots, {\cal S}_n` og líma þá saman
-á jöðrunum kallast *reglulegur á köflum*.
+    Flötur er sagður reglulegur ef hann hefur :hover:`snertiplan,snertislétta` í hverjum punkti.
 
-Þegar talað um einingarþvervigrasvið á slíkan flöt þá er átt við
-vigursvið sem er skilgreint á fletinum nema í þeim punktum þar sem
-fletir :math:`{\cal S}_i` og :math:`{\cal S}_j` hafa verið límdir saman.
-Í slíkum punktum þarf flöturinn ekki að hafa snertiplan og því ekki
-heldur þvervigur.
+    Flötur :math:`\cal S` sem er búinn til með því að taka endanlega marga
+    reglulega fleti :math:`{\cal S}_1, \ldots, {\cal S}_n` og líma þá saman
+    á jöðrunum kallast *reglulegur á köflum*.
 
-Flötur er sagður *lokaður* ef hann er yfirborð svæðis í
-:math:`{\mathbb  R}^3` (t.d. er kúluhvel lokaður flötur).
+    Þegar talað um einingarþvervigrasvið á slíkan flöt þá er átt við
+    vigursvið sem er skilgreint á fletinum nema í þeim punktum þar sem
+    fletir :math:`{\cal S}_i` og :math:`{\cal S}_j` hafa verið límdir saman.
+    Í slíkum punktum þarf flöturinn ekki að hafa snertiplan og því ekki
+    heldur þvervigur.
+
+    Flötur er sagður *lokaður* ef hann er yfirborð svæðis í
+    :math:`{\mathbb  R}^3` (t.d. er kúluhvel lokaður flötur).
 
 Setning (Sundurleitnisetningin, Setning Gauss) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`\cal S` vera lokaðan flöt sem er reglulegur á köflum.
-Táknum með :math:`D` rúmskikann sem :math:`\cal S` umlykur. Látum
-:math:`\mbox{${\bf N}$}` vera einingarþvervigrasvið á :math:`\cal S` sem
-vísar út úr :math:`D`. Ef :math:`\mbox{${\bf F}$}` er samfellt
-diffranlegt vigursvið skilgreint á :math:`D` þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle \int\!\!\!\int\!\!\!\int_D \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}\,dV=\int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS.
+    Látum :math:`\cal S` vera lokaðan flöt sem er reglulegur á köflum.
+    Táknum með :math:`D` rúmskikann sem :math:`\cal S` umlykur. Látum
+    :math:`\mbox{${\bf N}$}` vera einingarþvervigrasvið á :math:`\cal S` sem
+    vísar út úr :math:`D`. Ef :math:`\mbox{${\bf F}$}` er samfellt
+    diffranlegt vigursvið skilgreint á :math:`D` þá er
+
+    .. math:: \displaystyle \int\!\!\!\int\!\!\!\int_D \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}\,dV=\int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS.
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`D` vera rúmskika í :math:`{\mathbb  R}^3`. Segjum að
-rúmskikinn :math:`D` sé :math:`z`-*einfaldur* ef til er svæði
-:math:`D_z` í planinu og samfelld föll :math:`f` og :math:`g` skilgreind
-á :math:`D_z` þannig að
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle D=\{(x,y,z)\mid (x,y)\in D_z\mbox{ og }f(x,y)\leq z\leq g(x,y)\}.
+    Látum :math:`D` vera rúmskika í :math:`{\mathbb  R}^3`. Segjum að
+    rúmskikinn :math:`D` sé :math:`z`-*einfaldur* ef til er svæði
+    :math:`D_z` í planinu og samfelld föll :math:`f` og :math:`g` skilgreind
+    á :math:`D_z` þannig að
 
-Það að rúmskiki sé :math:`x`- eða :math:`y`-einfaldur er skilgreint á
-sama hátt.
+    .. math:: \displaystyle D=\{(x,y,z)\mid (x,y)\in D_z\mbox{ og }f(x,y)\leq z\leq g(x,y)\}.
+
+    Það að rúmskiki sé :math:`x`- eða :math:`y`-einfaldur er skilgreint á
+    sama hátt.
 
 Setning 
 ~~~~~~~~
 
-Látum :math:`\cal S` vera lokaðan flöt sem er reglulegur á köflum.
-Táknum með :math:`D` rúmskikann sem :math:`\cal S` umlykur. Látum
-:math:`\mbox{${\bf N}$}` vera einingarþvervigrasvið á :math:`\cal S` sem
-vísar út úr :math:`D`. Ef :math:`\mbox{${\bf F}$}` er samfellt
-diffranlegt vigursvið skilgreint á :math:`D` og :math:`\varphi`
-diffranlegt fall skilgreint á :math:`D` þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle \int\!\!\!\int\!\!\!\int_D\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\,dV=-\int\!\!\!\int_{\cal S}\mbox{${\bf F}$}\times\mbox{${\bf N}$}\,dS,
+    Látum :math:`\cal S` vera lokaðan flöt sem er reglulegur á köflum.
+    Táknum með :math:`D` rúmskikann sem :math:`\cal S` umlykur. Látum
+    :math:`\mbox{${\bf N}$}` vera einingarþvervigrasvið á :math:`\cal S` sem
+    vísar út úr :math:`D`. Ef :math:`\mbox{${\bf F}$}` er samfellt
+    diffranlegt vigursvið skilgreint á :math:`D` og :math:`\varphi`
+    diffranlegt fall skilgreint á :math:`D` þá er
 
-og
+    .. math:: \displaystyle \int\!\!\!\int\!\!\!\int_D\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\,dV=-\int\!\!\!\int_{\cal S}\mbox{${\bf F}$}\times\mbox{${\bf N}$}\,dS,
 
-.. math:: \displaystyle \int\!\!\!\int\!\!\!\int_D\mbox{${\rm\bf grad\,}$}\varphi\,dV=\int\!\!\!\int_{\cal S}\varphi\mbox{${\bf N}$}\,dS.
+    og
+
+    .. math:: \displaystyle \int\!\!\!\int\!\!\!\int_D\mbox{${\rm\bf grad\,}$}\varphi\,dV=\int\!\!\!\int_{\cal S}\varphi\mbox{${\bf N}$}\,dS.
 
 Athugið að útkomurnar úr heildunum eru vigrar.
 
@@ -387,52 +440,64 @@ Setning Stokes
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`\cal S` vera áttanlegan flöt sem er reglulegur á köflum með
-jaðar :math:`\cal C` og einingarþvervigrasvið :math:`\mbox{${\bf N}$}`.
-Áttun :math:`\cal C` út frá :math:`\mbox{${\bf N}$}` finnst með að hugsa
-sér að gengið sé eftir :math:`\cal C` þannig að skrokkurinn vísi í
-stefnu :math:`\mbox{${\bf N}$}` og göngustefnan sé valin þannig að
-flöturinn sé á vinstri hönd.
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`\cal S` vera áttanlegan flöt sem er reglulegur á köflum með
+    jaðar :math:`\cal C` og einingarþvervigrasvið :math:`\mbox{${\bf N}$}`.
+    Áttun :math:`\cal C` út frá :math:`\mbox{${\bf N}$}` finnst með að hugsa
+    sér að gengið sé eftir :math:`\cal C` þannig að skrokkurinn vísi í
+    stefnu :math:`\mbox{${\bf N}$}` og göngustefnan sé valin þannig að
+    flöturinn sé á vinstri hönd.
 
 Setning (Setning Stokes)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`\cal S` vera áttanlegan flöt sem er reglulegur á köflum og
-látum :math:`\mbox{${\bf N}$}` tákna einingarþvervigrasvið á
-:math:`\cal S`. Táknum með :math:`\cal C` jaðar :math:`\cal S` og áttum
-:math:`\cal C` með tilliti til :math:`\mbox{${\bf N}$}`. Ef
-:math:`\mbox{${\bf F}$}` er samfellt diffranlegt vigursvið skilgreint á
-:hover:`opnu mengi,opið mengi` sem inniheldur :math:`\cal S` þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle \int\!\!\!\int_{\cal S} \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS=\oint_{\cal C}\mbox{${\bf F}$}\cdot \mbox{${\bf T}$}\,ds.
+    Látum :math:`\cal S` vera áttanlegan flöt sem er reglulegur á köflum og
+    látum :math:`\mbox{${\bf N}$}` tákna einingarþvervigrasvið á
+    :math:`\cal S`. Táknum með :math:`\cal C` jaðar :math:`\cal S` og áttum
+    :math:`\cal C` með tilliti til :math:`\mbox{${\bf N}$}`. Ef
+    :math:`\mbox{${\bf F}$}` er samfellt diffranlegt vigursvið skilgreint á
+    :hover:`opnu mengi,opið mengi` sem inniheldur :math:`\cal S` þá er
 
-Setning 
-~~~~~~~~
-
-Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
-skilgreint á opnu mengi :math:`D` í :math:`{\mathbb  R}^3`. Látum
-:math:`P` vera punkt á skilgreiningarsvæði :math:`\mbox{${\bf F}$}` og
-:math:`C_\varepsilon` vera hring með miðju í :math:`P` og geisla
-:math:`\varepsilon`. Látum :math:`\mbox{${\bf N}$}` vera
-einingarþvervigur á planið sem hringurinn liggur í. Áttum hringinn
-jákvætt. Þá er
-
-.. math:: \displaystyle
-
-   \mbox{${\bf N}$}\cdot\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
-   \frac{1}{\pi\varepsilon^2}\oint_{C_\varepsilon}\mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}.
+    .. math:: \displaystyle \int\!\!\!\int_{\cal S} \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS=\oint_{\cal C}\mbox{${\bf F}$}\cdot \mbox{${\bf T}$}\,ds.
 
 Setning 
 ~~~~~~~~
 
-Látum :math:`\cal S` vera lokaðan flöt sem er reglulegur á köflum.
-Táknum með :math:`D` rúmskikann sem :math:`\cal S` umlykur. Látum
-:math:`\mbox{${\bf N}$}` vera einingarþvervigrasvið á :math:`\cal S` sem
-vísar út úr :math:`D`. Ef :math:`\mbox{${\bf F}$}` er samfellt
-diffranlegt vigursvið skilgreint á opnu mengi sem inniheldur :math:`D`,
-þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle \oint_{\cal S}\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS=0.
+    Látum :math:`\mbox{${\bf F}$}` vera samfellt diffranlegt vigursvið
+    skilgreint á opnu mengi :math:`D` í :math:`{\mathbb  R}^3`. Látum
+    :math:`P` vera punkt á skilgreiningarsvæði :math:`\mbox{${\bf F}$}` og
+    :math:`C_\varepsilon` vera hring með miðju í :math:`P` og geisla
+    :math:`\varepsilon`. Látum :math:`\mbox{${\bf N}$}` vera
+    einingarþvervigur á planið sem hringurinn liggur í. Áttum hringinn
+    jákvætt. Þá er
+
+    .. math:: \displaystyle
+
+        \mbox{${\bf N}$}\cdot\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
+        \frac{1}{\pi\varepsilon^2}\oint_{C_\varepsilon}\mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}.
+
+Setning 
+~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`\cal S` vera lokaðan flöt sem er reglulegur á köflum.
+    Táknum með :math:`D` rúmskikann sem :math:`\cal S` umlykur. Látum
+    :math:`\mbox{${\bf N}$}` vera einingarþvervigrasvið á :math:`\cal S` sem
+    vísar út úr :math:`D`. Ef :math:`\mbox{${\bf F}$}` er samfellt
+    diffranlegt vigursvið skilgreint á opnu mengi sem inniheldur :math:`D`,
+    þá er
+
+    .. math:: \displaystyle \oint_{\cal S}\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS=0.
 
 Hagnýtingar í eðlisfræði
 ------------------------
@@ -512,8 +577,8 @@ sést að
 
 .. math:: \displaystyle
 
-   \mbox{${\bf H}$}=\frac{\mu_0 I}{4\pi}\oint_{\cal F}
-   \frac{d\mbox{${\bf s}$}\times(\mbox{${\bf r}$}-\mbox{${\bf s}$})}{|\mbox{${\bf r}$}-\mbox{${\bf s}$}|^3}
+    \mbox{${\bf H}$}=\frac{\mu_0 I}{4\pi}\oint_{\cal F}
+    \frac{d\mbox{${\bf s}$}\times(\mbox{${\bf r}$}-\mbox{${\bf s}$})}{|\mbox{${\bf r}$}-\mbox{${\bf s}$}|^3}
 
 og sýna má að ef :math:`\mbox{${\bf r}$}\notin \mathcal{F}` þá er
 
@@ -542,8 +607,8 @@ Einnig gildir að ef við setjum
 
 .. math:: \displaystyle
 
-   \mbox{${\bf A}$}(\mbox{${\bf r}$})=\frac{\mu_0}{4\pi}\iiint_{R}
-   \frac{\mathbf{J}(\mathbf{s})}{|\mbox{${\bf r}$}-\mbox{${\bf s}$}|}dV,
+    \mbox{${\bf A}$}(\mbox{${\bf r}$})=\frac{\mu_0}{4\pi}\iiint_{R}
+    \frac{\mathbf{J}(\mathbf{s})}{|\mbox{${\bf r}$}-\mbox{${\bf s}$}|}dV,
 
 þá er :math:`\mbox{${\bf H}$}=\mbox{${\rm\bf curl\,}$}\mbox{${\bf A}$}`
 og því er
@@ -555,19 +620,21 @@ Samantekt
 
 .. math:: \displaystyle
 
-   \begin{aligned}
-     \mbox{${\rm\bf div\,}$}\mbox{${\bf E}$}&= \frac{\rho}{\varepsilon_0} \quad~ \mbox{${\rm\bf div\,}$}\mbox{${\bf H}$}= 0 \\
-     \mbox{${\rm\bf curl\,}$}\mbox{${\bf E}$}&= \mathbf{0} \qquad \mbox{${\rm\bf curl\,}$}\mbox{${\bf H}$}= \mu_0 \mathbf{J}
+    \begin{aligned}
+        \mbox{${\rm\bf div\,}$}\mbox{${\bf E}$}&= \frac{\rho}{\varepsilon_0} \quad~ \mbox{${\rm\bf div\,}$}\mbox{${\bf H}$}= 0 \\
+        \mbox{${\rm\bf curl\,}$}\mbox{${\bf E}$}&= \mathbf{0} \qquad \mbox{${\rm\bf curl\,}$}\mbox{${\bf H}$}= \mu_0 \mathbf{J}
     \end{aligned}
 
 Jöfnur Maxwells
 
 .. math:: \displaystyle
 
-   \begin{aligned}
-     \mbox{${\rm\bf div\,}$}\mbox{${\bf E}$}&= \frac{\rho}{\varepsilon_0} \qquad ~ \mbox{${\rm\bf div\,}$}\mbox{${\bf H}$}= 0 \\
-     \mbox{${\rm\bf curl\,}$}\mbox{${\bf E}$}&= -\frac{\partial \mbox{${\bf H}$}}{\partial t} \quad \mbox{${\rm\bf curl\,}$}\mbox{${\bf H}$}= \mu_0 \mathbf{J} + \mu_0 \varepsilon_0  \frac{\partial\mbox{${\bf E}$}}{\partial t}
+    \begin{aligned}
+        \mbox{${\rm\bf div\,}$}\mbox{${\bf E}$}&= \frac{\rho}{\varepsilon_0} \qquad ~ \mbox{${\rm\bf div\,}$}\mbox{${\bf H}$}= 0 \\
+        \mbox{${\rm\bf curl\,}$}\mbox{${\bf E}$}&= -\frac{\partial \mbox{${\bf H}$}}{\partial t} \quad \mbox{${\rm\bf curl\,}$}\mbox{${\bf H}$}= \mu_0 \mathbf{J} + \mu_0 \varepsilon_0  \frac{\partial\mbox{${\bf E}$}}{\partial t}
     \end{aligned}
+
+| 
 
 *My old grandmother always used to say, Summer friends will melt away like summer snows, but winter friends are friends forever.*
 
