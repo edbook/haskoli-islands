@@ -45,10 +45,6 @@ jobs:
       - name: Test SSH connection
         run: |
           ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-      - name: Get build artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: artifacts
       - name: Deploy artifacts
         env:
           BASE_DIR: ~/.public_html/staging/edbook
