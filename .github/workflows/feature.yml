@@ -21,77 +21,8 @@ jobs:
         shell: bash
         run: |
           echo "::set-output name=branch_name::$(echo ${GITHUB_REF#refs/heads/})"
-      - name: Check out repository
-        uses: actions/checkout@v2
-      - name: Set up python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: "1.1.6"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v2
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install dependencies
-        run: poetry install
-        if: steps.cached_poetry_dependencies.outputs.cache-hit != 'true'
-  build-all:
-    needs: [setup]
-    name: Build projects
-    runs-on: ubuntu-20.04
-    outputs:
-      artifact: ${{ steps.zip_build.outputs.artifact }}
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
-      - name: Set up python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v2
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: "1.1.6"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Build
-        id: build
-        run: |
-          source .venv/bin/activate
-          poetry --version
-          make build-all
-          ls -al _build
-      - name: zip-build
-        id: zip_build
-        run: |
-          echo ${{ github.workspace }}
-          ls ${{ github.workspace }}/_build
-          export BUILD_PREFIX=build-${{ runner.os }}
-          export BUILD_HASH=${{ hashFiles('_build') }}
-          echo ${BUILD_HASH}
-          zip -r "edbook-${BUILD_PREFIX}-${BUILD_HASH}" _build/*
-          ls -al ${{ github.workspace }}
-          echo "::set-output name=artifact::$(echo edbook-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifacts
-          path: ${{steps.zip_build.outputs.artifact}}
   deploy-feature-branch:
-    needs: [setup, build-all]
+    needs: [setup]
     name: Deploy feature branch
     runs-on: ubuntu-20.04
     steps:
@@ -124,18 +55,4 @@ jobs:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
           ls -al .
-          ssh staging 'mkdir -p '"'$BASE_DIR'"''
-          scp ${{ github.workspace }}/*.zip staging:${BASE_DIR}/build.zip
-          cat >>${{ github.workspace }}/deploy.sh <<END
-          #!/bin/bash
-          ls ${BUILD_DIR}
-          mv ${BUILD_DIR} ${BUILD_DIR}.delete || true
-          mkdir -p ${BUILD_DIR}
-          unzip -o ${BASE_DIR}/build.zip -d $BUILD_DIR/
-          mv $BUILD_DIR/_build/* $BUILD_DIR/
-          rm -r $BUILD_DIR/_build ${BUILD_DIR}.delete ${BASE_DIR}/build.zip
-          END
-          chmod +x ${{ github.workspace }}/deploy.sh
-          scp ${{ github.workspace }}/deploy.sh staging:~/
-          ssh staging 'bash ~/deploy.sh'
-          ssh staging 'rm ~/deploy.sh'
+          ssh staging 'ls '"'$BASE_DIR'"''
