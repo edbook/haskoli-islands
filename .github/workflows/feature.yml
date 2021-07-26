@@ -3,6 +3,10 @@
 #   Fix "if" conditions in each job, feels redundant.
 #   There is alot of replication of steps here since Github actions seems limited.
 name: edbook
+env:
+  SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
+  SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
+  SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
 on:
   push:
     paths-ignore:
@@ -44,10 +48,10 @@ jobs:
         if: steps.cached_poetry_dependencies.outputs.cache-hit != 'true'
   build-all:
     needs: [setup]
-    name: Build projects
+    name: Build and deploy
     runs-on: ubuntu-20.04
-    outputs:
-      artifact: ${{ steps.zip_build.outputs.artifact }}
+    # outputs:
+    #   artifact: ${{ steps.zip_build.outputs.artifact }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
@@ -67,39 +71,7 @@ jobs:
           version: "1.1.6"
           virtualenvs-create: true
           virtualenvs-in-project: true
-      - name: Build
-        id: build
-        run: |
-          source .venv/bin/activate
-          poetry --version
-          make build-all
-          ls -al _build
-      - name: zip-build
-        id: zip_build
-        run: |
-          echo ${{ github.workspace }}
-          ls ${{ github.workspace }}/_build
-          export BUILD_PREFIX=build-${{ runner.os }}
-          export BUILD_HASH=${{ hashFiles('_build') }}
-          echo ${BUILD_HASH}
-          zip -r "edbook-${BUILD_PREFIX}-${BUILD_HASH}" _build/*
-          ls -al ${{ github.workspace }}
-          echo "::set-output name=artifact::$(echo edbook-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifacts
-          path: ${{steps.zip_build.outputs.artifact}}
-  deploy-feature-branch:
-    needs: [setup, build-all]
-    name: Deploy feature branch
-    runs-on: ubuntu-20.04
-    steps:
       - name: Configure SSH
-        env:
-          SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
-          SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
-          SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
         run: |
           mkdir -p ~/.ssh/
           echo "$SSH_KEY" > ~/.ssh/staging.key
@@ -114,33 +86,112 @@ jobs:
       - name: Test SSH connection
         run: |
           ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-      - name: Get build artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: artifacts
-      - name: Prepare remote host
+      - name: Build
+        id: build
+        run: |
+          source .venv/bin/activate
+          poetry --version
+          make build-all
+          ls -al _build
+      - name: Sync files to remote host
         env:
           BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
         run: |
-          cat >>${{ github.workspace }}/prepare.sh <<END
-          #!/bin/bash
-          mkdir -p ${BUILD_DIR}
-          touch ${BUILD_DIR}/test.txt
-          ls ${BUILD_DIR}
-          END
-          chmod +x ${{ github.workspace }}/prepare.sh
-          scp ${{ github.workspace }}/prepare.sh staging:~/
-          ssh staging 'bash ~/prepare.sh'
-          scp ${{ github.workspace }}/*.zip staging:${BUILD_DIR}/build.zip
-      - name: Deploy
-        env:
-          BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
-        run: |
-          cat >>${{ github.workspace }}/deploy.sh <<END
-          #!/bin/bash
-          unzip -o ${BUILD_DIR}/build.zip -d ${BUILD_DIR}/
-          ls ${BUILD_DIR}
-          END
-          chmod +x ${{ github.workspace }}/deploy.sh
-          scp ${{ github.workspace }}/deploy.sh staging:~/
-          ssh staging 'bash ~/deploy.sh'
+          rsync -navhiP --stats ${{ github.workspace }}/_build/* staging:${BUILD_DIR}
+      # - name: Prepare remote host
+      #   env:
+      #     BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
+      #   run: |
+      #     cat >>${{ github.workspace }}/prepare.sh <<END
+      #     #!/bin/bash
+      #     mkdir -p ${BUILD_DIR}
+      #     touch ${BUILD_DIR}/test.txt
+      #     ls ${BUILD_DIR}
+      #     END
+      #     chmod +x ${{ github.workspace }}/prepare.sh
+      #     scp ${{ github.workspace }}/prepare.sh staging:~/
+      #     ssh staging 'bash ~/prepare.sh'
+      #     scp ${{ github.workspace }}/*.zip staging:${BUILD_DIR}/build.zip
+      # - name: Deploy
+      #   env:
+      #     BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
+      #   run: |
+      #     cat >>${{ github.workspace }}/deploy.sh <<END
+      #     #!/bin/bash
+      #     unzip -o ${BUILD_DIR}/build.zip -d ${BUILD_DIR}/
+      #     ls ${BUILD_DIR}
+      #     END
+      #     chmod +x ${{ github.workspace }}/deploy.sh
+      #     scp ${{ github.workspace }}/deploy.sh staging:~/
+      #     ssh staging 'bash ~/deploy.sh'
+
+      # - name: zip-build
+      #   id: zip_build
+      #   run: |
+      #     echo ${{ github.workspace }}
+      #     ls ${{ github.workspace }}/_build
+      #     export BUILD_PREFIX=build-${{ runner.os }}
+      #     export BUILD_HASH=${{ hashFiles('_build') }}
+      #     echo ${BUILD_HASH}
+      #     zip -r "edbook-${BUILD_PREFIX}-${BUILD_HASH}" _build/*
+      #     ls -al ${{ github.workspace }}
+      #     echo "::set-output name=artifact::$(echo edbook-${BUILD_PREFIX}-${BUILD_HASH}.zip)"
+      # - name: Upload build artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: artifacts
+      #     path: ${{steps.zip_build.outputs.artifact}}
+  # deploy-feature-branch:
+  #   needs: [setup, build-all]
+  #   name: Deploy feature branch
+  #   runs-on: ubuntu-20.04
+  #   steps:
+      # - name: Configure SSH
+      #   env:
+      #     SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
+      #     SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
+      #     SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
+      #   run: |
+      #     mkdir -p ~/.ssh/
+      #     echo "$SSH_KEY" > ~/.ssh/staging.key
+      #     chmod 600 ~/.ssh/staging.key
+      #     cat >>~/.ssh/config <<END
+      #     Host staging
+      #       HostName $SSH_HOST
+      #       User $SSH_USER
+      #       IdentityFile ~/.ssh/staging.key
+      #       StrictHostKeyChecking no
+      #     END
+      # - name: Test SSH connection
+      #   run: |
+      #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
+      # - name: Get build artifact
+      #   uses: actions/download-artifact@v2
+      #   with:
+      #     name: artifacts
+      # - name: Prepare remote host
+      #   env:
+      #     BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
+      #   run: |
+      #     cat >>${{ github.workspace }}/prepare.sh <<END
+      #     #!/bin/bash
+      #     mkdir -p ${BUILD_DIR}
+      #     touch ${BUILD_DIR}/test.txt
+      #     ls ${BUILD_DIR}
+      #     END
+      #     chmod +x ${{ github.workspace }}/prepare.sh
+      #     scp ${{ github.workspace }}/prepare.sh staging:~/
+      #     ssh staging 'bash ~/prepare.sh'
+      #     scp ${{ github.workspace }}/*.zip staging:${BUILD_DIR}/build.zip
+      # - name: Deploy
+      #   env:
+      #     BUILD_DIR: ~/.public_html/staging/edbook/${{ needs.setup.outputs.branch_name }}
+      #   run: |
+      #     cat >>${{ github.workspace }}/deploy.sh <<END
+      #     #!/bin/bash
+      #     unzip -o ${BUILD_DIR}/build.zip -d ${BUILD_DIR}/
+      #     ls ${BUILD_DIR}
+      #     END
+      #     chmod +x ${{ github.workspace }}/deploy.sh
+      #     scp ${{ github.workspace }}/deploy.sh staging:~/
+      #     ssh staging 'bash ~/deploy.sh'
