@@ -97,6 +97,7 @@ jobs:
           poetry --version
           make build-all
           echo "#### Build destination ####"
+          set -x -e
           ls -d ${{ github.workspace }}/_build/*
       # - name: Sync build to host
       #   env:
@@ -112,8 +113,8 @@ jobs:
       - name: Deploy feature
         if: github.event.pull_request.merged != true
         run: |
-          ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/.public_html "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/.public_html "staging/edbook/${{ needs.setup.outputs.branch_name }}"
       - name: Deploy production
         if: github.event.pull_request.merged == true
         run: |
-          ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/public_html ""
+          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/public_html ""
