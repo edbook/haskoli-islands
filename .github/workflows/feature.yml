@@ -11,8 +11,6 @@ on:
   push:
     paths-ignore:
       - "**/README.md"
-    branches-ignore:
-      - main
 jobs:
   setup:
     name: Setup
@@ -71,6 +69,7 @@ jobs:
           virtualenvs-in-project: true
       - name: Configure SSH
         run: |
+          echo "#### Creating ~/.ssh/config from secrets ####"
           mkdir -p ~/.ssh/
           echo "$SSH_KEY" > ~/.ssh/staging.key
           chmod 600 ~/.ssh/staging.key
@@ -90,12 +89,14 @@ jobs:
           source .venv/bin/activate
           poetry --version
           make build-all
-          ls -al _build
-      - name: Sync files to remote host
-        env:
-          REMOTE_BASE_DIR: ~/public_html
-          REMOTE_SUB_DIR: staging/edbook/${{ needs.setup.outputs.branch_name }}
+          echo "#### Build destination ####"
+          set -x -e
+          ls -d ${{ github.workspace }}/_build/*
+      - name: Deploy feature
+        if: github.event.pull_request.merged != true
         run: |
-          mkdir -p ${{ github.workspace }}/${REMOTE_SUB_DIR}; mv _build/* $_
-          ls ${{ github.workspace }}/${REMOTE_SUB_DIR}
-          rsync -avhizP --stats --progress --relative ${{ github.workspace }}/./${REMOTE_SUB_DIR} staging:${REMOTE_BASE_DIR}/
+          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/.public_html "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+      - name: Deploy production
+        if: github.event.pull_request.merged == true
+        run: |
+          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/public_html ""

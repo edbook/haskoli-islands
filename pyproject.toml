@@ -8,6 +8,26 @@ packages = [
     { include = "cli" }
 ]
 
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+version_files = [
+    "src/__version__.py",
+    "pyproject.toml:version"
+]
+style = [
+    ["qmark", "fg:#ff9d00 bold"],
+    ["question", "bold"],
+    ["answer", "fg:#ff9d00 bold"],
+    ["pointer", "fg:#ff9d00 bold"],
+    ["highlighted", "fg:#ff9d00 bold"],
+    ["selected", "fg:#cc5454"],
+    ["separator", "fg:#cc5454"],
+    ["instruction", ""],
+    ["text", ""],
+    ["disabled", "fg:#858585 italic"]
+]
+
 [tool.poetry.dependencies]
 python = "^3.9"
 typer = {extras = ["all"], version = "^0.3.2"}
@@ -38,6 +58,7 @@ rstcheck = "^3.3.1"
 sphinx-autobuild = "^2020.9.1"
 commitizen = "^2.13"
 typer = "^0.3"
+pre-commit = "^2.13.0"
 
 [tool.poetry.scripts]
 cli = "cli.main:run"
