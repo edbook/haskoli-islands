@@ -4,8 +4,8 @@ GITHUB_WORKSPACE="$1"
 REMOTE_BASE_DIR="$2"
 REMOTE_SUB_DIR="$3"
 
-mv "${GITHUB_WORKSPACE}/_build/*" "${GITHUB_WORKSPACE}/."
-rm -r "${GITHUB_WORKSPACE}/_build"
+mv "${GITHUB_WORKSPACE}"/_build/* "${GITHUB_WORKSPACE}"/.
+rm -r "${GITHUB_WORKSPACE}"/_build
 
 mkdir -p "${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}"; mv _build/* "$_"
 
