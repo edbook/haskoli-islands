@@ -6,7 +6,7 @@ REMOTE_SUB_DIR="$3"
 
 echo "#### Moving ${GITHUB_WORKSPACE}/_build/* to ${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR} ####"
 set -x -e
-mkdir -p "${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}"; mv "${GITHUB_WORKSPACE}/_build/*" "$_"
+mkdir -p "${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}"; mv ${GITHUB_WORKSPACE}/_build/* "$_"
 
 echo "#### Project list: ${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR} ####"
 set -x -e
