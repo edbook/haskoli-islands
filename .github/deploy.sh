@@ -17,7 +17,7 @@ echo "REMOTE_SUB_DIR: $REMOTE_SUB_DIR"
 
 set -x -e
 rsync \
-  -navhizP \
+  -avhizP \
   --stats \
   --progress \
   --relative "${GITHUB_WORKSPACE}/./${REMOTE_SUB_DIR}" \

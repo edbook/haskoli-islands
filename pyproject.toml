@@ -58,6 +58,7 @@ rstcheck = "^3.3.1"
 sphinx-autobuild = "^2020.9.1"
 commitizen = "^2.13"
 typer = "^0.3"
+pre-commit = "^2.13.0"
 
 [tool.poetry.scripts]
 cli = "cli.main:run"
