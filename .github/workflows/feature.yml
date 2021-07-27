@@ -99,11 +99,12 @@ jobs:
           echo ${{ github.event_name }}
           echo ${{ github.base_ref }}
           echo ${{ github.ref }}
+          echo ${{ github.event.push.ref }}
       - name: Deploy feature
-        if: github.event.push.ref != 'refs/heads/main'
+        if: github.ref != 'refs/heads/main'
         run: |
           bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/.public_html "staging/edbook/${{ needs.setup.outputs.branch_name }}"
       - name: Deploy production
-        if: github.event.push.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         run: |
           bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/public_html ""
