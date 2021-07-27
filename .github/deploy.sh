@@ -10,7 +10,7 @@ mkdir -p "${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}"; mv ${GITHUB_WORKSPACE}/_build/
 
 echo "#### Project list: ${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR} ####"
 set -x -e
-ls -d "${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}/*"
+ls -d ${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}/*
 
 echo "REMOTE_BASE_DIR: $REMOTE_BASE_DIR"
 echo "REMOTE_SUB_DIR: $REMOTE_SUB_DIR"
