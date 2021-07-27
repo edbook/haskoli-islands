@@ -92,6 +92,9 @@ jobs:
           echo "#### Build destination ####"
           set -x -e
           ls -d ${{ github.workspace }}/_build/*
+      - name: Debug
+        run: |
+          echo ${{github.event.pull_request.merged}}
       - name: Deploy feature
         if: github.event.pull_request.merged != true
         run: |
