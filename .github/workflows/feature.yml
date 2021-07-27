@@ -107,4 +107,4 @@ jobs:
       - name: Deploy production
         if: github.ref == 'refs/heads/main'
         run: |
-          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/public_html ""
+          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/public_html "prod"
