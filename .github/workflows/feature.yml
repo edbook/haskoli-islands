@@ -96,7 +96,7 @@ jobs:
           poetry --version
           make build-all
           ls -al _build
-      - name: Sync files to remote host
+      - name: Sync build to host
         env:
           REMOTE_BASE_DIR: ~/public_html
           REMOTE_SUB_DIR: staging/edbook/${{ needs.setup.outputs.branch_name }}
@@ -106,21 +106,11 @@ jobs:
           rsync -avhizP --stats --progress --relative ${{ github.workspace }}/./${REMOTE_SUB_DIR} staging:${REMOTE_BASE_DIR}/
       # NOTE: Testing production stage, will be merged with the above "Sync files to remote" step.
       #       This will not rsync files to prod due to -n flag but simulate the results.
-      - name: Sync files to remote host (production)
+      - name: Deploy feature
+        if: github.event.pull_request.merged != true
         run: |
-          if [ ${{github.event.pull_request.merged}} = true ];
-            then
-              REMOTE_BASE_DIR="~/public_html";
-              REMOTE_SUB_DIR=;
-              mv ${{ github.workspace }}/_build/* ${{ github.workspace }}/.
-              rm -r ${{ github.workspace }}/_build
-            else
-              REMOTE_BASE_DIR="~/.public_html";
-              REMOTE_SUB_DIR=staging/edbook/${{ needs.setup.outputs.branch_name }};
-              mkdir -p ${{ github.workspace }}/${REMOTE_SUB_DIR}; mv _build/* $_
-          fi
-          echo "Merged to main: ${{github.event.pull_request.merged}}"
-          echo "REMOTE_BASE_DIR: $REMOTE_BASE_DIR"
-          echo "REMOTE_SUB_DIR: $REMOTE_SUB_DIR"
-          ls ${{ github.workspace }}/${REMOTE_SUB_DIR}
-          rsync -navhizP --stats --progress --relative ${{ github.workspace }}/./${REMOTE_SUB_DIR} staging:${REMOTE_BASE_DIR}/
+          ${{ github.workspace }}/.github/deploy.sh "${{ github.workspace }}" "~/.public_html" ""
+      - name: Deploy production
+        if: github.event.pull_request.merged == true
+        run: |
+          ${{ github.workspace }}/.github/deploy.sh "${{ github.workspace }}" "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
