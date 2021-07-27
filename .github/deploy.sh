@@ -20,7 +20,7 @@ REL_PATH=$([ "$REMOTE_SUB_DIR" = "prod" ] && echo "${GITHUB_WORKSPACE}/${REMOTE_
 
 set -x -e
 rsync \
-  -navhizP \
+  -avhizP \
   --stats \
   --progress \
   --relative "${REL_PATH}" \
