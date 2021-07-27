@@ -16,12 +16,12 @@ ls -d ${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}/*
 echo "REMOTE_BASE_DIR: $REMOTE_BASE_DIR"
 echo "REMOTE_SUB_DIR: $REMOTE_SUB_DIR"
 
-REMOTE_DIR=$([ "$REMOTE_SUB_DIR" = "prod" ] && echo "" || echo "$REMOTE_SUB_DIR")
+REL_PATH=$([ "$REMOTE_SUB_DIR" = "prod" ] && echo "${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}/./" || echo "${GITHUB_WORKSPACE}/./${REMOTE_SUB_DIR}")
 
 set -x -e
 rsync \
   -navhizP \
   --stats \
   --progress \
-  --relative "${GITHUB_WORKSPACE}/./${REMOTE_DIR}" \
+  --relative "${REL_PATH}" \
   staging:"${REMOTE_BASE_DIR}/"
