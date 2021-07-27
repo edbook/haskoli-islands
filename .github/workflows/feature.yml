@@ -76,6 +76,7 @@ jobs:
           virtualenvs-in-project: true
       - name: Configure SSH
         run: |
+          echo "#### Creating ~/.ssh/config from secrets ####"
           mkdir -p ~/.ssh/
           echo "$SSH_KEY" > ~/.ssh/staging.key
           chmod 600 ~/.ssh/staging.key
@@ -95,7 +96,8 @@ jobs:
           source .venv/bin/activate
           poetry --version
           make build-all
-          ls -al _build
+          echo "#### Build destination ####"
+          ls -d ${{ github.workspace }}/_build/*
       # - name: Sync build to host
       #   env:
       #     REMOTE_BASE_DIR: ~/public_html
@@ -110,8 +112,8 @@ jobs:
       - name: Deploy feature
         if: github.event.pull_request.merged != true
         run: |
-          ${{ github.workspace }}/.github/deploy.sh "${{ github.workspace }}" "~/.public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+          ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/.public_html "staging/edbook/${{ needs.setup.outputs.branch_name }}"
       - name: Deploy production
         if: github.event.pull_request.merged == true
         run: |
-          ${{ github.workspace }}/.github/deploy.sh "${{ github.workspace }}" "~/public_html" ""
+          ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} ~/public_html ""
