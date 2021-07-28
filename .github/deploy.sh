@@ -21,18 +21,17 @@ REL_PATH=$([ "$REMOTE_SUB_DIR" = "prod" ] && echo "${GITHUB_WORKSPACE}/${REMOTE_
 set -x -e
 echo "#### Sync all projects except forsida ####"
 rsync \
-  -navhizP \
-  --exclude "${REL_PATH}"/forsida \
+  -avhizP \
   --stats \
   --progress \
   --relative "${REL_PATH}" \
   staging:"${REMOTE_BASE_DIR}/"
 
 
-echo "#### Sync forsida ####"
-rsync \
-  -navhizP \
-  --stats \
-  --progress \
-  --relative "${REL_PATH}"/forsida/./ \
-  staging:"${REMOTE_BASE_DIR}/"
+# echo "#### Sync forsida ####"
+# rsync \
+#   -navhizP \
+#   --stats \
+#   --progress \
+#   --relative "${REL_PATH}"/forsida/./ \
+#   staging:"${REMOTE_BASE_DIR}/"
