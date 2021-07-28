@@ -4,9 +4,13 @@ Aðferðir í heildun
 .. admonition:: Nauðsynleg undirstaða
 	:class: athugasemd
 
-	- Eitthvað
+	- Föll
 
-	- Eitthvað
+	- Markgildi
+
+	- Afleiður
+
+	- Heildi 
 
 ------
 
@@ -22,7 +26,7 @@ Hlutheildun
 ------------
 
 Í fyrri köflum höfum við lært að heilda með því að nota innsetningu. En innsetning
-ræður aðeins við lítinn hluta mögulegra heilda. Innsetning með :math:`u=x^2` gerir okkur kleyft
+ræður aðeins við lítinn hluta mögulegra heilda. Innsetning með :math:`u=x^2` gerir okkur kleift
 að reikna
 
 .. math:: \int x \sin(x^2) dx
@@ -79,8 +83,8 @@ Dæmi: Hlutheildun
 			&= -x\cos(x) + \sin(x) + C.
 		\end{align}
 
-	Stundum getur verið nauðsynelgt að beita hlutheildun oftar en einu sinni
-	til að leysa dæmi.
+Stundum getur verið nauðsynelgt að beita hlutheildun oftar en einu sinni
+til að leysa dæmi.
 
 Dæmi: Hlutheildun beitt tvisvar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -156,11 +160,11 @@ Dæmi: Hlutheildun fyrir ákveðin heildi
 .. admonition:: Dæmi
   :class: daemi
 
-	Ef við höldum áfram með dæmið hér að ofan, þar sem við mátum heildið
+	H áfram með dæmið hér að ofan, þar sem við mátum heildið
 
-	.. math:: \int x \sin(x) dx
+	.. math:: \int x \sin(x) dx.
 
-	nema nú skulum við bæta við heilda það yfir bilið :math:`[0,\pi]`, þ.e.
+	Nú skulum við bæta við heilda það yfir bilið :math:`[0,\pi]`, þ.e.
 
 	.. math:: \int_0^\pi x \sin(x) dx.
 
@@ -288,11 +292,11 @@ Skilgreining: Ósamfelldur heildisstofn
 .. admonition:: Skilgreining
   :class: skilgreining
 
-		(i) Látum f(x) vera samfellt á bilinu :math:`[a,b[`. Þá gildir
+		(i) Látum :math:`f(x)` vera samfellt á bilinu :math:`[a,b[`. Þá gildir
 
 		.. math:: \int_a^b f(x) dx = \lim_{t \rightarrow b^-} \int_a^t f(x) dx.
 
-		(ii) Látum f(x) vera samfellt á bilinu :math:`]a,b]`. Þá gildir
+		(ii) Látum :math:`f(x) vera samfellt á bilinu :math:`]a,b]`. Þá gildir
 
 		.. math:: \int_a^b f(x) dx = \lim_{t \rightarrow a^+} \int_t^b f(x) dx.
 
@@ -319,7 +323,7 @@ Dæmi: Ósamfelldur heildisstofn
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Tökum eftir því að heildisstofnin er samfelldur allsstaðar á :math:`[0,4]` nema
+	Tökum eftir því að heildisstofninn er samfelldur alls staðar á :math:`[0,4]` nema
 	í hægri endapunktinum. Við fáum því að
 
 	.. math::

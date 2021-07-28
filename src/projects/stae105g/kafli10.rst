@@ -4,9 +4,11 @@ Veldaraðir
 .. admonition:: Nauðsynleg undirstaða
   :class: athugasemd
 
-	- Eitthvað
+	- Föll
 
-	- Eitthvað
+	- Markgildi
+
+	- Runur
 
 ------
 
@@ -48,7 +50,7 @@ Setning: Samleitni veldaraða
 
     #. Röðin er samleitin fyrir allar rauntölur :math:`x`.
 
-    #. Til er rauntala :math:`R>0` þannig að röðin er samleitin ef :math:`|x-a|<R` og ósamleitin ef :math:`|x-a|>R`. Þegar :math:`|x-a|=R` getur röðin verið annaðhvort samleitin eða ósamleitin.
+    #. Til er rauntala :math:`R>0` þannig að röðin er samleitin ef :math:`|x-a|<R` og ósamleitin ef :math:`|x-a|>R`. Þegar :math:`|x-a|=R` getur röðin verið annað hvort samleitin eða ósamleitin.
 
 Skilgreining: Samleitnibil og samleitnigeisli
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,7 +108,7 @@ er samleitin ef og aðeins ef :math:`|r|<1`. Í því tilfelli er það samleiti
 :math:`\frac{a}{1-r}`. Þar af leiðandi, ef :math:`|x|<1`, er röðin samleitin að
 :math:`\frac{1}{1-x}` og við ritum að
 
-.. math:: 1 + x + x^2 + x^3 + \dots \frac{1}{1-x} \text{ fyrir } |x|<1.
+.. math:: 1 + x + x^2 + x^3 + \dots = \frac{1}{1-x} \text{ fyrir } |x|<1.
 
 Þar af leiðandi má segja að hægt sé að lýsa fallinu :math:`f(x)=\frac{1}{1-x}`
 með veldaröðinni
@@ -187,7 +189,8 @@ Dæmi: Finna fall veldaraðar
   Finnum fallið :math:`f` sem lýsir veldaröðinni :math:`\sum_{n=0}^\infty 2^n x^n`
   auk þess að ákvarða samleitnibil raðarinnar.
 
-  **Lausn:**
+.. admonition:: Dæmi
+  :class: daemi, dropdown
 
   Skrifum röðina sem
 
@@ -264,7 +267,7 @@ Setning: Afleiður og stofnföll veldaraða
     \end{aligned}
 
   fyrir :math:`|x-a|<R`. Þá er :math:`f` diffranlegt á bilinu :math:`]a-R,a+R[`
-  og við getum fundið afleiðu :math:`f` með því að diffra röðina lið fyrir lið:
+  og við getum fundið afleiðu :math:`f` með því að diffra röðina lið fyrir lið. Þá fæst
 
   .. math::
     \begin{aligned}
@@ -369,7 +372,7 @@ Dæmi: Stofnfall veldaraðar
 
   .. math::
     \begin{aligned}
-      \ln(x) /= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots\\
+      \ln(x) &= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots\\
       &= \sum_{n=1}^\infty (-1)^{n+1} \frac{x^n}{n}
     \end{aligned}
 
@@ -406,7 +409,7 @@ Skilgreining: Taylor- og Maclaurin-röð
   Ef :math:`f` er óendanlega oft diffranlegt í :math:`x=a` þá er *Taylor-röð* fallsins
   :math:`f` í :math:`a` röðin
 
-  .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)`2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n + \dots .
+  .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n + \dots .
 
   Taylor-röð fallsins :math:`f` í :math:`x=0` er kölluð *Maclaurin-röð* fallsins :math:`f`.
 
@@ -417,7 +420,7 @@ Setning: Taylor-raðir eru ótvírætt ákvarðaðar
   :class: setning
 
   Ef fallið :math:`f` á sér veldaröð með miðju í :math:`a` sem er samleitin að :math:`f` á
-  opnu bili sem inniheldur :math:`a` þá er sú röð Taylor-röð fallsins :math:`f` með miðju í :math:`a`
+  opnu bili sem inniheldur :math:`a` þá er sú röð Taylor-röð fallsins :math:`f` með miðju í :math:`a`.
 
 Skilgreining: Taylor-margliða
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -428,9 +431,9 @@ Skilgreining: Taylor-margliða
   Ef :math:`f` er :math:`n`-diffranlegt í :math:`x=a` þá er :math:`n`-ta *Taylor-margliða*
   fallsins :math:`f` í :math:`a`
 
-  .. math:: p_n(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)`2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n.
+  .. math:: p_n(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n.
 
-  Þá er :math:`n`-ta Taylo-margliða fallsins :math:`f` í :math:`x=0` kölluð :math:`n`-ta
+  Þá er :math:`n`-ta Taylor-margliða fallsins :math:`f` í :math:`x=0` kölluð :math:`n`-ta
   *Maclaurin-margliða* fallsins :math:`f`.
 
 Dæmi: Að ákvarða Taylor-margliðu
@@ -445,15 +448,15 @@ Dæmi: Að ákvarða Taylor-margliðu
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-  Til að finna þessar Taylor-raðir þurfum við að finna fyrstu þrjár afleiður :math:`f` og
+  Til að finna þessar Taylor-margliður þurfum við að finna fyrstu þrjár afleiður :math:`f` og
   meta þær í :math:`x=1`. Fáum
 
   .. math::
     \begin{aligned}
       f(x) &= \ln(x) & f(1) &= 0\\
       f'(x) &= \frac{1}{x} & f'(1) &= 1\\
-      f''(x) &= -\frac{1}{x^2} & f'(1) &= -1\\
-      f'''(x) &= \frac{2}{x^3} & f'(1) &= 2.
+      f''(x) &= -\frac{1}{x^2} & f''(1) &= -1\\
+      f'''(x) &= \frac{2}{x^3} & f'''(1) &= 2.
     \end{aligned}
 
   Fáum því að
@@ -467,7 +470,7 @@ Dæmi: Að ákvarða Taylor-margliðu
       &= (x-1) - \tfrac{1}{2}(x-1)^2 + \tfrac{1}{3}(x-1)^3\\
     \end{aligned}
 
-  .. image:: ./myndir/kafli10/PMA_taylor_lnx.png
+  .. figure:: ./myndir/kafli10/PMA_taylor_lnx.png
     :align: center
     :width: 75%
 
@@ -480,7 +483,7 @@ Setning: Setning Taylors um skekkju
   :class: Setning
 
   Látum :math:`f` vera fall sem er :math:`n+1` sinnum diffranlegt á bilinu :math:`I`
-  sem inniheldur rauntöluna :math:`a`. Látum :math:`p_n` vera :math:`n`-tu Taylor-röð
+  sem inniheldur rauntöluna :math:`a`. Látum :math:`p_n` vera :math:`n`-tu Taylor-margliðu
   fallsins :math:`f` í :math:`a` og látum
 
   .. math:: R_n(x) = f(x) - p_n(x)
@@ -505,63 +508,66 @@ Dæmi: Línulegar- og ferningsnálganir til að meta fallgildi
 
   Gefið er fallið :math:`f(x) = \sqrt[3]{x}`.
 
-    a. Finnið fyrstu og aðra Taylor-margliður fallsins í :math:`x=8`.
+    a) Finnið fyrstu og aðra Taylor-margliðu fallsins í :math:`x=8`.
 
-    b. Notið margliðurnar til þess að nálga :math:`\sqrt[3]{11}`.
+    b) Notið margliðurnar til þess að nálga :math:`\sqrt[3]{11}`.
 
-    c. Notið setningu Taylors um skekkju til að finna efra marg á skekkjunni.
+    c) Notið setningu Taylors um skekkju til að finna efra marg á skekkjunni.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-    a. Við þurfum að byrja á því að finna fyrstu og aðra afleiður fallsins
-    :math:`f(x) = \sqrt[3]{x}` og meta þær í :math:`x=8`. Fáum:
+    a) Lausn:
+			Við þurfum að byrja á því að finna fyrstu og aðra afleiðu fallsins
+			:math:`f(x) = \sqrt[3]{x}` og meta þær í :math:`x=8`. Fáum:
 
-    .. math::
-      \begin{aligned}
-        f(x) &= \sqrt[3]{x} & f(8) &= 2\\
-        f'(x) &= \frac{1}{3x^{2/3}} & f'(8) &= \frac{1}{12}\\
-        f''(x) &= \frac{-2}{9x^{5/3}} & f''(8) &= -\frac{1}{144}\\
-      \end{aligned}
+			.. math::
+				\begin{aligned}
+						f(x) &= \sqrt[3]{x} & f(8) &= 2\\
+						f'(x) &= \frac{1}{3x^{2/3}} & f'(8) &= \frac{1}{12}\\
+						f''(x) &= \frac{-2}{9x^{5/3}} & f''(8) &= -\frac{1}{144}\\
+				\end{aligned}
 
-    Þarmeð fæst að fyrsta og önnur Taylor-margliða fallsins séu
+			Þar með fæst að fyrsta og önnur Taylor-margliða fallsins séu
 
-    .. math::
-      \begin{aligned}
-        p_1(x) &= f(8)+f'(8)(x-8)\\
-        &= 2 + \tfrac{1}{12}(x-8)\\
-        p_2 &= f(8)+f'(8)(x-8) + \frac{f''(8)}{2!}(x-8)^2\\
-        &= 2 + \tfrac{1}{12}(x-8) - \tfrac{1}{288}(x-8)^2
-      \end{aligned}
+			.. math::
+				\begin{aligned}
+						p_1(x) &= f(8)+f'(8)(x-8)\\
+						&= 2 + \tfrac{1}{12}(x-8)\\
+						p_2 &= f(8)+f'(8)(x-8) + \frac{f''(8)}{2!}(x-8)^2\\
+						&= 2 + \tfrac{1}{12}(x-8) - \tfrac{1}{288}(x-8)^2.
+				\end{aligned}
 
-    b. Ef við notum fyrsta stigs Taylor-margliðuna fæst
+    b) Lausn:
+			Ef við notum fyrsta stigs Taylor-margliðuna fæst
 
-    .. math:: \sqrt[3]{11} \approx p_1(11) = 2 + \tfrac{1}{12}(11-8)=2,25.
+			.. math:: \sqrt[3]{11} \approx p_1(11) = 2 + \tfrac{1}{12}(11-8)=2,25.
 
-    Ef við notum annars stigs Taylor-margliðuna fæst
+			Ef við notum annars stigs Taylor-margliðuna fæst
 
-    .. math:: \sqrt[3]{11} \approx p_2(11) = 2 + \tfrac{1}{12}(11-8) - \tfrac{1}{288}(11-8)^2 = 2,21875.
+			.. math:: \sqrt[3]{11} \approx p_2(11) = 2 + \tfrac{1}{12}(11-8) - \tfrac{1}{288}(11-8)^2 = 2,21875.
 
-    c. Þar sem Taylor-raðir eru ótvírætt ákvarðaðar er til tala :math:`c` á bilinu
-    :math:`]8,11[` þannig að skekkjan við að námunda :math:`\sqrt[3]{11}` með
-    fyrsta stigs Taylor-margliðu uppfylli að
+    c) Lausn:
+			Þar sem Taylor-raðir eru ótvírætt ákvarðaðar er til tala :math:`c` á bilinu
+			:math:`]8,11[` þannig að skekkjan við að námunda :math:`\sqrt[3]{11}` með
+			fyrsta stigs Taylor-margliðu uppfylli að
 
-    .. math:: R_1(11) = \frac{f''(c)}{2!}(11-8)^2.
+			.. math:: R_1(11) = \frac{f''(c)}{2!}(11-8)^2.
 
-    Við vitum ekki hvert nákvæmt gildi :math:`c` er en við getum fundið efra mark á
-    skekkjuna :math:`R_1(11)` með því að ákvarða hámarksgildi :math:`f''` á bilinu
-    :math:`]8,11[`. Þar sem :math:`ff'(x) = - \frac{2}{9x^{5/2}}` fæst að stærsta
-    gildið sem :math:`|f''(x)|` tekur á bilinu sé í punktinum :math:`x=8`. Þar sem
-    :math:`f''(8)=-\frac{1}{144}` fæst að
+			Við vitum ekki hvert nákvæmt gildi :math:`c` er en við getum fundið efra mark á
+			skekkjuna :math:`R_1(11)` með því að ákvarða hámarksgildi :math:`f''` á bilinu
+			:math:`]8,11[`. Þar sem :math:`f''(x) = - \frac{2}{9x^{5/2}}` fæst að stærsta
+			gildið sem :math:`|f''(x)|` tekur á bilinu sé í punktinum :math:`x=8`. Þar sem
+			:math:`f''(8)=-\frac{1}{144}` fæst að
 
-    .. math:: |R_1(11)| \leq \frac{1}{144 \cdot 2!} (11-8)^2 = 0,03125.
+			.. math:: |R_1(11)| \leq \frac{1}{144 \cdot 2!} (11-8)^2 = 0,03125.
 
-    Á svipaðan hátt getum við metið skekkjuna :math:`R_2(11) = \frac{f'''(c)}{3!}(11-8)^3`.
+			Á svipaðan hátt getum við metið skekkjuna :math:`R_2(11) = \frac{f'''(c)}{3!}(11-8)^3`.
 
-    Þar sem :math:`f'''(x) = \frac{10}{27x^{8/3}}` fæst að hámarksgildi :math:`f'''` á
-    bilinu :math:`]8,11[` sé :math:`f'''(8)\approx 0,0014468` og þar með fæst
+			Þar sem :math:`f'''(x) = \frac{10}{27x^{8/3}}` fæst að hámarksgildi :math:`f'''` á
+			bilinu :math:`]8,11[` sé :math:`f'''(8)\approx 0,0014468` og þar með fæst
 
-    .. math:: |R_2(11)| \leq \frac{0,0011468}{3!}(11-8)^3 \approx 0,0065104.
+			.. math:: |R_2(11)| \leq \frac{0,0011468}{3!}(11-8)^3 \approx 0,0065104.
 
 Dæmi: Að finna Taylor-röð falls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -580,14 +586,14 @@ Dæmi: Að finna Taylor-röð falls
   .. math::
     \begin{aligned}
       f(x) &= \frac{1}{x} & f(1) &= 1\\
-      f'(x) &= -\frac{1}{x^2} & f(1) &= -1\\
-      f''(x) &= \frac{2}{x^3} & f(1) &= 2!\\
-      f'''(x) &= -\frac{3\cdot 2}{x^4} & f(1) &= 3!\\
-      f^{(4)}(x) &= \frac{4\ cdot 3 \cdot 2}{x^5} & f(1) &= 4!.
+      f'(x) &= -\frac{1}{x^2} & f'(1) &= -1\\
+      f''(x) &= \frac{2}{x^3} & f''(1) &= 2!\\
+      f'''(x) &= -\frac{3\cdot 2}{x^4} & f'''(1) &= 3!\\
+      f^{(4)}(x) &= \frac{4\cdot 3 \cdot 2}{x^5} & f^{(4)}(1) &= 4!.
     \end{aligned}
 
-  Ef við skoðum hvernig þetta þróast sést að :math:`f^{(n)}(1)=(-1)^n!` fyrir öll
-  :math:`n \geq 0`. Þarmeð er Taylor-röðin fyrir :math:`f` í :math:`x=1` gefin með
+  Ef við skoðum hvernig þetta þróast sést að :math:`f^{(n)}(1)=(-1)^n n!` fyrir öll
+  :math:`n \geq 0`. Þar  með er Taylor-röðin fyrir :math:`f` í :math:`x=1` gefin með
 
   .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(1)}{n!}(x-1)^n = \sum_{n=0}^\infty (-1)^n(x-1)^n.
 
@@ -638,7 +644,7 @@ Skilgreining: Tvíliðustuðullinn og tvíliðuröðin
 
   .. math:: \binom{r}{n} = \frac{r!}{n!(r-n)!}
 
-  *tvíliðustuðullinn*. Ef :math:`k > n` er tvíliðustuðullinn skilgreinur sem 0.
+  *tvíliðustuðullinn*. Ef :math:`k > n` er tvíliðustuðullinn skilgreindur sem 0.
 
   Hægt er að víkka tvíliðustuðulinn út þannig að hann gildi fyrir allar rauntölur :math:`r`
   og er hann þá skilgreindur sem
@@ -766,7 +772,7 @@ Dæmi: Að leysa diffurjöfnur með veldaröðum
 
   Ef :math:`y` uppfyllir diffurjöfnuna gildir að
 
-  .. math:: c_0 + c_1x + c_2 x^2 +c_3 x^3 + c_4 x^4 + \dots + c_1 + 2c_2x + 3c_3 x^2 + 4c_4x^3 + \dots.
+  .. math:: c_0 + c_1x + c_2 x^2 +c_3 x^3 + c_4 x^4 + \dots = c_1 + 2c_2x + 3c_3 x^2 + 4c_4x^3 + \dots.
 
   Við getum notfært okkur að veldaraðir eru ótvírætt ákvarðaðar og fengið að
 
@@ -857,7 +863,7 @@ Dæmi: Maclaurin raðir til að nálga líkur
   :class: daemi, dropdown
 
   Notfærum okkur að ef :math:`X` er slembibreyta sem fylgir normaldreifingu má
-  reikna líkurnar að :math:`a<X<b` skv. jöfnunni
+  reikna líkurnar að :math:`a<X<b` með
 
   .. math:: \frac{1}{\sqrt{2\pi}}\int_{(a-\mu)/\sigma}^{(b-\mu)/\sigma} e^{-z^2/2} dz
 

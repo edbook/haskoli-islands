@@ -4,9 +4,11 @@ Hagnýting á diffrun
 .. admonition:: Nauðsynleg undirstaða
   :class: athugasemd
 
-	- Eitthvað
+	- Föll
 
-	- Eitthvað
+	- Markgildi
+
+	- Afleiður
 
 ------
 
@@ -1073,7 +1075,7 @@ Dæmi: Aðferð Newtons
 
   Af myndinni má sjá að þetta er ágætis nálgun á núllstöðinni.
 
-  .. image:: ./myndir/kafli04/PMA_newton_nalgun.png
+  .. image:: ./myndir/kaflai04/PMA_newton_nalgun.png
     :align: center
     :width: 75%
 

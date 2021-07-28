@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="118"
+   height="233"
+   id="svg1321"
+   sodipodi:version="0.32"
+   inkscape:version="0.43"
+   version="1.0"
+   sodipodi:docbase="E:\Wiki svg temp"
+   sodipodi:docname="Cylinder_geometry.svg">
+  <defs
+     id="defs1323" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.9055794"
+     inkscape:cx="59"
+     inkscape:cy="111.13649"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1440"
+     inkscape:window-height="844"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata1326">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <line
+       stroke-miterlimit="10"
+       x1="2.5564768"
+       y1="201.53999"
+       x2="2.5564768"
+       y2="31.461002"
+       id="line3"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <line
+       stroke-miterlimit="10"
+       x1="59.000477"
+       y1="201.53999"
+       x2="59.000477"
+       y2="31.461002"
+       id="line5"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:4.9156, 2.9493" />
+    <line
+       stroke-miterlimit="10"
+       x1="59.000477"
+       y1="201.53999"
+       x2="115.44347"
+       y2="201.53999"
+       id="line7"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:5.3484, 3.209" />
+    <ellipse
+       transform="translate(2.0565,2.366)"
+       stroke-miterlimit="10"
+       cx="56.943001"
+       cy="199.174"
+       rx="56.443001"
+       ry="28.594999"
+       id="ellipse9"
+       sodipodi:cx="56.943001"
+       sodipodi:cy="199.174"
+       sodipodi:rx="56.443001"
+       sodipodi:ry="28.594999"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <ellipse
+       transform="translate(2.0565,2.366)"
+       stroke-miterlimit="10"
+       cx="56.943001"
+       cy="29.094999"
+       rx="56.443001"
+       ry="28.596001"
+       id="ellipse11"
+       sodipodi:cx="56.943001"
+       sodipodi:cy="29.094999"
+       sodipodi:rx="56.443001"
+       sodipodi:ry="28.596001"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+    <text
+       font-size="11.9551"
+       id="text13"
+       x="43.761097"
+       y="120.65701"
+       style="font-size:13.96000004;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Times New Roman"
+       sodipodi:linespacing="125%">h</text>
+    <text
+       font-size="11.9551"
+       id="text15"
+       x="84.551567"
+       y="193.03589"
+       style="font-size:13.96000004;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Times New Roman"
+       sodipodi:linespacing="125%">r</text>
+    <line
+       stroke-miterlimit="10"
+       x1="115.44347"
+       y1="201.53999"
+       x2="115.44347"
+       y2="31.461002"
+       id="line17"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" />
+  </g>
+</svg>

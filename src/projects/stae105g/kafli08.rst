@@ -4,9 +4,9 @@ Inngagur að diffurjöfnur
 .. admonition:: Nauðsynleg undirstaða
   :class: athugasemd
 
-	- Eitthvað
+	- Föll
 
-	- Eitthvað
+	- Afleiður
 
 ------
 
@@ -55,7 +55,7 @@ Dæmi: Diffurjafna
 
 	 .. math:: -3e^{-3x}+2 + 3(e^{-3x}+2x+3) = -3e^{-3x} + 2 -3e^{-3x} + 6x + 9 = 6x+11.
 
-	Við sjáum að hægri hliðin stemmir við hægri hlið diffurjöfnunnar. Því er fallið
+	Sjáum að þetta stemmir við khægri hlið diffurjöfnunnar. Því er fallið
 	:math:`y=e^{-3x}+2x+3` lausn á diffurjöfnunni.
 
 Skilgreining: Stig diffurjöfnu
@@ -64,7 +64,7 @@ Skilgreining: Stig diffurjöfnu
 .. admonition:: Skilgreining
   :class: skilgreining
 
-	*Stig diffurjöfnu* er hæsta stig afleiðu óþekkta fallsins sem kemfr fyrir í jöfnunni.
+	*Stig diffurjöfnu* er hæsta stig afleiðu óþekkta fallsins sem kemur fyrir í jöfnunni.
 
 Dæmi: Stig diffurjöfnu
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,7 +81,7 @@ Dæmi: Stig diffurjöfnu
 Almennar lausnir og sérlausnir
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Vegna þess eiginleika diffrunar að fastar diffrast í burtu þýðir það að ef
+Vegna þess eiginleika diffrunar að fastar diffrast í burtu fæst að ef
 :math:`y=f(x)` er lausn á diffurjöfnunni :math:`y'=g(x)` þá er :math:`y=f(x)+C`
 það einnig, þar sem báðar jöfnur hafa afleiðuna :math:`y'=f'(x)`.
 Fallið :math:`y=f(x)+C` köllum við *almenna lausn diffurjöfnunnar*. Ef gerðar
@@ -99,7 +99,7 @@ Dæmi: Almenn lausn og sérlausn
 
 	.. math:: y' = 2x.
 
-	Þessi diffurjafna er aðgreinanleg (sjá nánar hér að neðan) og
+	Þessi diffurjafna er aðgreinanleg og
 	því getum við heildað báðar hliðar hennar til að sjá að
 
 	.. math:: y = x^2 + C.
@@ -139,7 +139,7 @@ Dæmi: Upphafsgildisverkefni
 .. admonition:: Dæmi
   :class: daemi
 
-	Leysum upphafsgildisverkefni
+	Leysum upphafsgildisverkefnið
 
 	.. math::
 		\begin{cases}
@@ -173,7 +173,7 @@ Aðskilnaður breytistærða
 -------------------------
 
 Aðskilnaður breytistærða er það þegar hægt er að umrita diffurjöfnu þannig að
-önnur hlið jöfnunnar innihaldi eina breytistærðina og hin hliðin innihaldi hina breytistærðina.
+önnur hlið jöfnunnar innihaldi aðra breytistærðina og hin hliðin innihaldi hina breytistærðina.
 Yfirleitt eru breytistærðirnar breyturnar :math:`x` og :math:`y` en ekkert er því
 til fyrirstöðu að nota aðrar breytistærðir. Ef hægt er að skilja breytistærðirnar að
 með þessum hætti er diffurjafnan kölluð aðgreinanleg. Aðgreinanlegar diffurjöfnur
@@ -186,9 +186,9 @@ Skilgreining: Aðgreinanleg diffurjafna
 .. admonition:: Skilgreining
   :class: skilgreining
 
-	Diffurjafna nefnist aðgreinanleg ef hægt er að skrifa hana á forminu
+	Diffurjafna nefnist *aðgreinanleg* ef hægt er að skrifa hana á forminu
 
-	.. math:: y'=f(x)g(x)
+	.. math:: y'=f(x)g(y).
 
 Dæmi: Aðskilnaður breytistærða
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -229,7 +229,7 @@ Dæmi: Aðskilnaður breytistærða
 
 	sem með stofnbrotaliðun má umrita sem
 
-	.. math:: \frac{1}{4} \int \left( \frac{1}{y-2} - \frac{1}{y+2}\right) dy = \int (2x+3) dx
+	.. math:: \frac{1}{4} \int \left( \frac{1}{y-2} - \frac{1}{y+2}\right) dy = \int (2x+3) dx.
 
 	Ef við heildum nú báðar hliðar fæst
 
@@ -292,7 +292,7 @@ Skilgreining: Burðargeta
 .. admonition:: Skilgreining
   :class: skilgreining
 
-	Burðargeta lífvera í gefnu umhverfi er skilgreint sem hámarksfjöldinn þeirra
+	*Burðargeta* lífvera í gefnu umhverfi er skilgreint sem hámarksfjöldinn þeirra
 	lífvera sem umhverfið getur viðhaldið um ókomna tíð.
 
 	Við notum stafinn :math:`K` til að tákna burðargetu umhverfisins og vaxtarhraða
@@ -306,8 +306,8 @@ Skilgreining: Lógistísk diffurjafna
 
 	Látum :math:`K` vera burðargetu lífvera í gefnu umhverfi og látum :math:`r` vera
 	rauntölu sem táknar vaxtarhraðann. Fallið :math:`P(t)` lýsir fjölda þessara lífvera
-	sem falli af tíma og fastinn :math:`P_0` ta´knar upphafsástandi þýðisins (fjölda
-	lífvera í þýðinu á tímapunktinum :math:`t=0`). Þá er má setja *lógistísku diffurjöfnuna*
+	sem falli af tíma og fastinn :math:`P_0` táknar upphafsástandi þýðisins (fjölda
+	lífvera í þýðinu á tímapunktinum :math:`t=0`). Þá má setja *lógistísku diffurjöfnuna*
 	fram með
 
 	.. math:: \frac{dP}{dt} = rP\left(1-\frac{P}{K}\right).
@@ -346,37 +346,41 @@ Dæmi: Lógistísk diffurjafna
 
 	Við skulum:
 
-		a. Nota lógistískt líkan til að ákvarða upphafsgildisverkefnið.
+		a) Nota lógistískt líkan til að ákvarða upphafsgildisverkefnið.
 
-		b. Leysa upphafsgildisverkefnið.
+		b) Leysa upphafsgildisverkefnið.
 
-		c. Ákvarða hver fjöldi hreindýra verður eftir 3 ár.
+		c) Ákvarða hver fjöldi hreindýra verður eftir 3 ár.
 
-		d. Finna hvenær stofninn mun ná stærðinni 1.200.000.
+		d) Finna hvenær stofninn mun ná stærðinni 1.200.000.
+
+ALVÖRU:
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-		a. Upphafsgildisverkefnið er
+	a) Lausn:
+		Upphafsgildisverkefnið er
 
 		.. math::
 			\begin{cases}
 				\frac{dP}{dt} = 0,2311P\left(1-\frac{P}{1.072.764}\right)\\
-				P(0)=900.000
-			\end{cases}
+  				P(0)=900.000
+  			\end{cases}
 
-		b. Við getum notað aðskilnað breytistærða til að leysa jöfnuna. Með umritun
-		á diffurjönfunni getum við fengið að
+	b) Lausn:
+		Við getum notað aðskilnað breytistærða til að leysa jöfnuna. Með umritun á diffurjönfunni getum við fengið að
 
 		.. math:: \frac{dP}{P(1.072.765-P)} = \frac{0,2311}{1.072.764}dt.
 
-		Leysum þetta.
+		Leysum þetta. Þetta er aðgreinanleg diffurjafna. Við getum því heildað báðar hliðar og fengið
 
 		.. math::
-			\begin{align}
-				\frac{dP}{P(1.072.765-P)} &= \frac{0,2311}{1.072.764}dt\\
-				\frac{1}{1.072.764}\left(\ln|P| - \ln|1.072.764-P|\right) &= \frac{0,2311t}{1.072.764}+C.
-			\end{align}
+			\begin{aligned}
+				 && \frac{dP}{P(1.072.765-P)} &= \frac{0,2311}{1.072.764}dt\\
+				\iff && \int \frac{dP}{P(1.072.765-P)} &= \int \frac{0,2311}{1.072.764}dt\\
+				\iff && \frac{1}{1.072.764}\left(\ln|P| - \ln|1.072.764-P|\right) &= \frac{0,2311t}{1.072.764}+C.
+			\end{aligned}
 
 		Einangrum nú :math:`P` og fáum
 
@@ -396,7 +400,8 @@ Dæmi: Lógistísk diffurjafna
 
 		.. math:: P(t) = \frac{1.072.764 e^{0,2311t}}{0,19196+e^{0,2311t}}.
 
-		c. Til að finna hver fjöldinn verður eftir 3 ár stingum við einfaldlega :math:`t=3`
+	c. Lausn:
+		Til að finna hver fjöldinn verður eftir 3 ár stingum við einfaldlega :math:`t=3`
 		inn í jöfnuna og fáum
 
 		.. math:: P(3) = \frac{1.072.764 e^{0,2311 \cdot 3}}{0,19196+e^{0,2311 \cdot 3}} \approx 978.830.
@@ -499,8 +504,8 @@ Dæmi: Staðalform diffurjöfnu
 	:math:`x=0` í upprunalegu jöfnunni fæst :math:`0=2` sem er augljóslega ekki rétt.
 	Í þessari jöfnu er því :math:`p(x)=-\frac{8y}{3x}` og :math:`q(x)=-\frac{2}{x}`.
 
-Setning: Lausna línulegra fyrsta stigs diffurjafna
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Lausa fyrsta stigs línulegra diffurjafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
   :class: setning
@@ -535,22 +540,21 @@ Dæmi: Lausn línulegrar fyrsta stigs diffurjöfnu
 	.. math:: xy' + 3y = 4x^2-3x.
 
 	og gerum ráði fyrir að :math:`x>0`.
-	Notum lausnarformúlu fyrsta stigs línulegra diffurjafna.
+	Notum lausnarformúlu fyrsta stigs línulegra diffurjafna til að leysa hana.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Til þess þurfum við að byrja á því að koma diffurjöfnunni á staðalfrom sitt.
+	Við þurfum að byrja á því að koma diffurjöfnunni á staðalfrom sitt.
 	Fáum að
-
 
 	.. math::
 		\begin{align}
 			xy' + 3y &= 4x^2-3x\\
-			y' + \frac{3}{x}y = 4x - 3\\
+			y' + \frac{3}{x}y &= 4x - 3\\
 		\end{align}
 
-	Sjáum að hér er :math:`p(x)=\frac{3}{x}y` og :math:`q(x)=4x - 3`. Finnum nú
+	Sjáum að hér er :math:`p(x)=\frac{3}{x}` og :math:`q(x)=4x - 3`. Finnum nú
 	eitthvað stofnfall fyrir :math:`p(x)`.
 
 	.. math:: \mu(x)=\int p(x) dx = \int \frac{3}{x} dx = 3\ln|x| = 3\ln(x).
