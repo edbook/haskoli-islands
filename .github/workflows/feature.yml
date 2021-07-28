@@ -103,7 +103,7 @@ jobs:
       - name: Deploy feature
         if: github.ref != 'refs/heads/main'
         run: |
-          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/.public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
       - name: Deploy production
         if: github.ref == 'refs/heads/main'
         run: |
