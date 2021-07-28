@@ -22,7 +22,7 @@ set -x -e
 echo "#### Sync all projects except forsida ####"
 rsync \
   -avhizP \
-  --exclude "${REL_PATH}"/forsida \
+  --exclude "${REMOTE_SUB_DIR}"/forsida \
   --stats \
   --progress \
   --relative "${REL_PATH}" \
@@ -34,5 +34,5 @@ rsync \
   -avhizP \
   --stats \
   --progress \
-  --relative "${REL_PATH}"/forsida/./ \
+  --relative "${REMOTE_SUB_DIR}"/forsida/./ \
   staging:"${REMOTE_BASE_DIR}/"
