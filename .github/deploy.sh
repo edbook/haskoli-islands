@@ -28,10 +28,10 @@ rsync \
   staging:"${REMOTE_BASE_DIR}/"
 
 
-# echo "#### Sync forsida ####"
-# rsync \
-#   -navhizP \
-#   --stats \
-#   --progress \
-#   --relative "${REL_PATH}"/forsida/./ \
-#   staging:"${REMOTE_BASE_DIR}/"
+echo "#### Sync forsida ####"
+rsync \
+  -navhizP \
+  --stats \
+  --progress \
+  --relative "${REL_PATH}"/forsida/./ \
+  staging:"${REMOTE_BASE_DIR}/"
