@@ -34,5 +34,5 @@ rsync \
   -navhizP \
   --stats \
   --progress \
-  --relative "${REL_PATH}/forsida" \
+  --relative "${REL_PATH}/forsida/*" \
   staging:"${REMOTE_BASE_DIR}/"
