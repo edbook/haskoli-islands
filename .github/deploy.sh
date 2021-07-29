@@ -3,7 +3,6 @@
 GITHUB_WORKSPACE="$1"
 REMOTE_BASE_DIR="$2"
 REMOTE_SUB_DIR="$3"
-# REMOTE_PROD_DIR=$([ "$REMOTE_SUB_DIR" = "~" ] && echo "" || echo "$GITHUB_WORKSPACE")
 
 echo "#### Moving ${GITHUB_WORKSPACE}/_build/forsida to ${GITHUB_WORKSPACE}/${REMOTE_SUB_DIR}/ ####"
 set -x -e
@@ -31,11 +30,3 @@ rsync \
   --relative "${REL_PATH}" \
   staging:"${REMOTE_BASE_DIR}/"
 
-
-# echo "#### Sync forsida ####"
-# rsync \
-#   -avhizP \
-#   --stats \
-#   --progress \
-#   --relative "${REMOTE_SUB_DIR}"/forsida/./ \
-#   staging:"${REMOTE_BASE_DIR}/"
