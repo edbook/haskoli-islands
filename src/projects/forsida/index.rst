@@ -17,15 +17,15 @@ Undirbúningsefni
 
 .. button::
   :text: Undirbúningur í stærðfræði
-  :link: ../undirbuningur_stae/index.html
+  :link: undirbuningur_stae/index.html
 
 .. button::
   :text: Undirbúningur í eðlisfræði
-  :link: ../undirbuningur_edl/index.html
+  :link: undirbuningur_edl/index.html
 
 .. button::
   :text: Undirbúningur í efnafræði
-  :link: ../undirbuningur_efn/index.html
+  :link: undirbuningur_efn/index.html
 
 
 ----------------------
