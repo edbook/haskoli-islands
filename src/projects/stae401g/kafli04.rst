@@ -5,45 +5,53 @@ Fourier-ummyndun
 Fourier-ummyndun. Reiknireglur. Plancerel-jafnan
 ------------------------------------------------
 
-Skilgreining á :math:`L^1(\mathbb R)`
+Skilgreining: :math:`L^1(\mathbb R)`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við byrjum á að skilgreina rúm heildanlegra falla :math:`L^1(\mathbb R)`. Við táknum :math:`L^1(\mathbb R)` mengi allra falla :math:`f` þannig að :math:`|f|` er heildanlegt á :math:`\mathbb R`.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
-    \int_{-\infty}^\infty |f(x)| dx < \infty\,.
+	Við byrjum á að skilgreina rúm heildanlegra falla :math:`L^1(\mathbb R)`. Við táknum :math:`L^1(\mathbb R)` mengi allra falla :math:`f` þannig að :math:`|f|` er heildanlegt á :math:`\mathbb R`.
 
-:math:`L^1(\mathbb R)` er vigurrúm, af því að
+	.. math::
+	    \int_{-\infty}^\infty |f(x)| dx < \infty\,.
 
-1. Ef :math:`f \in L^1(\mathbb R)` og :math:`g \in L^1(\mathbb R)` þá er fallið :math:`f+g \in L^1(\mathbb R)`
+	:math:`L^1(\mathbb R)` er vigurrúm, af því að
 
-.. math::
-    \int_{-\infty}^\infty |f(x)+g(x)| dx \le  \int_{-\infty}^\infty |f(x)| dx < \infty\, +\int_{-\infty}^\infty |g(x)| dx < \infty\,.
+	1. Ef :math:`f \in L^1(\mathbb R)` og :math:`g \in L^1(\mathbb R)` þá er fallið :math:`f+g \in L^1(\mathbb R)`
 
-
-2. Ef :math:`f \in L^1(\mathbb R)` þá er :math:`\alpha f \in L^1(\mathbb R)`, þar sem :math:`\alpha \in\mathbb R`
-
-.. math::
-    \int_{-\infty}^\infty |\alpha f(x)| dx = |\alpha|\int_{-\infty}^\infty  |f(x)| dx <\infty\,.
+	.. math::
+	    \int_{-\infty}^\infty |f(x)+g(x)| dx \le  \int_{-\infty}^\infty |f(x)| dx < \infty\, +\int_{-\infty}^\infty |g(x)| dx < \infty\,.
 
 
+	2. Ef :math:`f \in L^1(\mathbb R)` þá er :math:`\alpha f \in L^1(\mathbb R)`, þar sem :math:`\alpha \in\mathbb R`
+
+	.. math::
+	    \int_{-\infty}^\infty |\alpha f(x)| dx = |\alpha|\int_{-\infty}^\infty  |f(x)| dx <\infty\,.
 
 
-Skilgreining á Fourier-ummyndun
+
+
+Skilgreining: Fourier-ummyndun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Fyrir sérhvert fall :math:`f \in L^1(\mathbb R)` skilgreinum við fallið
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
-    \mathcal{F} f(k) = \int_{-\infty}^\infty e^{-i k x} f(x)dx\,, \qquad k \in\mathbb{R}\,.
+	Fyrir sérhvert fall :math:`f \in L^1(\mathbb R)` skilgreinum við fallið
 
-Við köllum fallið :math:`\mathcal{F} f` Fourier-mynd fallsins :math:`f` og við táknum hana með :math:`\mathcal{F}\{f\}` eða :math:`\widehat{f}`.
+	.. math::
+	    \mathcal{F} f(k) = \int_{-\infty}^\infty e^{-i k x} f(x)dx\,, \qquad k \in\mathbb{R}\,.
 
-Við köllum vörpun :math:`\mathcal{F}` Fourier-ummyndun.
-Hún er skilgreind á :math:`L^1(\mathbb R)` og varpar falli :math:`f\in L^1(\mathbb R)` á Fourier-mynd sína :math:`\mathcal{F} f`.
+	Við köllum fallið :math:`\mathcal{F} f` Fourier-mynd fallsins :math:`f` og við táknum hana með :math:`\mathcal{F}\{f\}` eða :math:`\widehat{f}`.
 
-.. attention::
-    Skilgreiningin á Fourier-ummyndun er ekki stöðluð.
+	Við köllum vörpun :math:`\mathcal{F}` Fourier-ummyndun.
+	Hún er skilgreind á :math:`L^1(\mathbb R)` og varpar falli :math:`f\in L^1(\mathbb R)` á Fourier-mynd sína :math:`\mathcal{F} f`.
+
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Skilgreiningin á Fourier-ummyndun er ekki stöðluð.
 
 Sýnidæmi
 ~~~~~~~~
@@ -64,74 +72,77 @@ Við sjáum að :math:`f \in L^1(\mathbb R)`. Við reiknum nú Fourier-mynd fall
 Reiknireglur
 ~~~~~~~~~~~~
 
-Við byrjum á að skoða reiknireglur fyrir Fourier-ummyndanir.
+.. admonition:: Reiknireglur
+	:class: setning
 
-1. Látum :math:`f` og :math:`g` vera tvö föll í :math:`L^1(\mathbb R)`. Látum :math:`\alpha` og :math:`\beta` vera tvær tölur í :math:`\mathbb C`. Þá gildir
+	Við byrjum á að skoða reiknireglur fyrir Fourier-ummyndanir.
 
-.. math::
-    \mathcal{F}\left\{\alpha f+ \beta g\right\}(k) &=& \int_{-\infty}^\infty e^{-i k x}\left(\alpha f(x)+\beta g(x)\right)dx
-    = \alpha \int_{-\infty}^\infty e^{-i k x} f(x) dx+\beta \int_{-\infty}^\infty e^{-i k x} g(x) dx
-    \\ &=& \alpha\, \mathcal{F}\{f\}(k)+\beta\, \mathcal F\{g\}(k)\,,
+	1. Látum :math:`f` og :math:`g` vera tvö föll í :math:`L^1(\mathbb R)`. Látum :math:`\alpha` og :math:`\beta` vera tvær tölur í :math:`\mathbb C`. Þá gildir
 
-Þ.e.a.s. að Fourier-ummyndun er línuleg vörpun.
+	.. math::
+	    \mathcal{F}\left\{\alpha f+ \beta g\right\}(k) &=& \int_{-\infty}^\infty e^{-i k x}\left(\alpha f(x)+\beta g(x)\right)dx
+	    = \alpha \int_{-\infty}^\infty e^{-i k x} f(x) dx+\beta \int_{-\infty}^\infty e^{-i k x} g(x) dx
+	    \\ &=& \alpha\, \mathcal{F}\{f\}(k)+\beta\, \mathcal F\{g\}(k)\,,
 
-2. Látum :math:`f \in L^1(\mathbb R)` og :math:`\alpha\in\mathbb R\smallsetminus\{0\}`. Þá gildir
+	Þ.e.a.s. að Fourier-ummyndun er línuleg vörpun.
 
-.. math::
-    \mathcal{F}\left\{f(\alpha x)\right\}(k) = {1\over |\alpha|} \mathcal F\{f(x)\}\left({k\over \alpha }\right)\,, \qquad k\in\mathbb R\,
+	2. Látum :math:`f \in L^1(\mathbb R)` og :math:`\alpha\in\mathbb R\smallsetminus\{0\}`. Þá gildir
 
-sem segir okkur hvernig Fourier-ummyndun breytist þegar :math:`x \to\alpha x`.
+	.. math::
+	    \mathcal{F}\left\{f(\alpha x)\right\}(k) = {1\over |\alpha|} \mathcal F\{f(x)\}\left({k\over \alpha }\right)\,, \qquad k\in\mathbb R\,
 
-3. Látum  :math:`f \in L^1(\mathbb R)` og :math:`\alpha\in\mathbb R`. Þá gildir
+	sem segir okkur hvernig Fourier-ummyndun breytist þegar :math:`x \to\alpha x`.
 
-.. math::
-    \mathcal{F}\left\{f(x-\alpha)\right\}(k) = e^{-i \alpha k} \mathcal F\{f(x)\}\left({k}\right)\,, \qquad k\in\mathbb R\,
+	3. Látum  :math:`f \in L^1(\mathbb R)` og :math:`\alpha\in\mathbb R`. Þá gildir
 
-sem segir okkur hvernig Fourier-ummyndun breytist þegar  :math:`x \to x-\alpha`.
+	.. math::
+	    \mathcal{F}\left\{f(x-\alpha)\right\}(k) = e^{-i \alpha k} \mathcal F\{f(x)\}\left({k}\right)\,, \qquad k\in\mathbb R\,
 
-4. Látum  :math:`f \in L^1(\mathbb R)` og :math:`\alpha\in\mathbb R`. Þá gildir
+	sem segir okkur hvernig Fourier-ummyndun breytist þegar  :math:`x \to x-\alpha`.
 
-.. math::
-    \mathcal{F}\left\{e^{i \alpha x}f(x)\right\}(k) = \mathcal F\{f(x)\}\left(k-\alpha\right)\,, \qquad k\in\mathbb R\,
+	4. Látum  :math:`f \in L^1(\mathbb R)` og :math:`\alpha\in\mathbb R`. Þá gildir
 
-sem segir okkur hvernig Fourier-ummyndun breytist þegar  :math:`k \to k-\alpha`.
+	.. math::
+	    \mathcal{F}\left\{e^{i \alpha x}f(x)\right\}(k) = \mathcal F\{f(x)\}\left(k-\alpha\right)\,, \qquad k\in\mathbb R\,
 
-5. Látum :math:`f \in L^1(\mathbb R)`. Þá gildir
+	sem segir okkur hvernig Fourier-ummyndun breytist þegar  :math:`k \to k-\alpha`.
 
-.. math::
-    \mathcal{F}\overline{\left\{f(x)\right\}}(k) = \overline{\mathcal F\{f(x)\}\left(-k\right)}\,, \qquad k\in\mathbb R\,.
+	5. Látum :math:`f \in L^1(\mathbb R)`. Þá gildir
 
-Athugum að ef :math:`f \in L^1(\mathbb R)` er raungilt, þ.e. :math:`f: \mathbb R\to\mathbb R`, þá gildir
+	.. math::
+	    \mathcal{F}\overline{\left\{f(x)\right\}}(k) = \overline{\mathcal F\{f(x)\}\left(-k\right)}\,, \qquad k\in\mathbb R\,.
 
-.. math::
-    \mathcal{F}\left\{f(x)\right\}(k) = \overline{\mathcal F\{f(x)\}\left(-k\right)}\,, \qquad k\in\mathbb R\,.
+	Athugum að ef :math:`f \in L^1(\mathbb R)` er raungilt, þ.e. :math:`f: \mathbb R\to\mathbb R`, þá gildir
 
-6. Látum :math:`f \in L^1(\mathbb R)` vera jafnstætt. Þá gildir
+	.. math::
+	    \mathcal{F}\left\{f(x)\right\}(k) = \overline{\mathcal F\{f(x)\}\left(-k\right)}\,, \qquad k\in\mathbb R\,.
 
-.. math::
-    \mathcal{F}\left\{f(x)\right\}(k) = 2 \int_0^\infty \cos(k\, x) f(x) dx \,, \qquad k\in\mathbb R\,.
+	6. Látum :math:`f \in L^1(\mathbb R)` vera jafnstætt. Þá gildir
 
-7. Látum :math:`f \in L^1(\mathbb R)` vera oddstætt. Þá gildir
+	.. math::
+	    \mathcal{F}\left\{f(x)\right\}(k) = 2 \int_0^\infty \cos(k\, x) f(x) dx \,, \qquad k\in\mathbb R\,.
 
-.. math::
-    \mathcal{F}\left\{f(x)\right\}(k) = - 2 i \int_0^\infty \sin(k\, x) f(x) dx \,, \qquad k\in\mathbb R\,.
+	7. Látum :math:`f \in L^1(\mathbb R)` vera oddstætt. Þá gildir
 
-8. Látum :math:`f \in \mathcal{C}^1(\mathbb R)`. Gerum ráð fyrir að :math:`f`  og :math:`f'` séu í :math:`L^1(\mathbb R)`. Þá gildir
+	.. math::
+	    \mathcal{F}\left\{f(x)\right\}(k) = - 2 i \int_0^\infty \sin(k\, x) f(x) dx \,, \qquad k\in\mathbb R\,.
 
-.. math::
-    \mathcal{F}\left\{f'(x)\right\}(k)= i k \mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,.
+	8. Látum :math:`f \in \mathcal{C}^1(\mathbb R)`. Gerum ráð fyrir að :math:`f`  og :math:`f'` séu í :math:`L^1(\mathbb R)`. Þá gildir
 
-Regla 8 tengir Fourier-mynd fallsins :math:`f` og Fourier-mynd afleiðu þess :math:`f'`.
+	.. math::
+	    \mathcal{F}\left\{f'(x)\right\}(k)= i k \mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,.
 
-Ef :math:`f\in\mathcal{C}^m(\mathbb R)`  og  :math:`f, f', \dots, f^{(m)} \in L^1(\mathbb R)`, þá gildir
+	Regla 8 tengir Fourier-mynd fallsins :math:`f` og Fourier-mynd afleiðu þess :math:`f'`.
 
-.. math::
-    \mathcal{F}\left\{f^{(j)}(x)\right\}(k)= (i k)^j \mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,, \quad j=0, 1, \dots\, m\,.
+	Ef :math:`f\in\mathcal{C}^m(\mathbb R)`  og  :math:`f, f', \dots, f^{(m)} \in L^1(\mathbb R)`, þá gildir
 
-9. Gerum ráð fyrir að föll :math:`f` og :math:`x f` séu í :math:`L^1(\mathbb R)`. Þá gildir
+	.. math::
+	    \mathcal{F}\left\{f^{(j)}(x)\right\}(k)= (i k)^j \mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,, \quad j=0, 1, \dots\, m\,.
 
-.. math::
-    \mathcal{F}\left\{x f(x)\right\}(k)= i \frac{d}{dk}\mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,.
+	9. Gerum ráð fyrir að föll :math:`f` og :math:`x f` séu í :math:`L^1(\mathbb R)`. Þá gildir
+
+	.. math::
+	    \mathcal{F}\left\{x f(x)\right\}(k)= i \frac{d}{dk}\mathcal{F}\left\{f(x)\right\}(k)\,, \qquad k \in\mathbb R\,.
 
 Regla 9 segir okkur hver afleiða Fourier-myndar fallsins :math:`f` er.
 
@@ -142,56 +153,67 @@ Gerum ráð fyrir að föll :math:`f, x f, \dots, x^j f` séu í :math:`L^1(\mat
 
 .. _rulesFT:
 
-Sýnidæmi
-~~~~~~~~
+Dæmi
+~~~~
 
-Við skoðum núna dæmi um hvernig nota má reiknireglurnar til þess að reikna Fourier-mynd falla.
+.. admonition:: Dæmi
+	:class: daemi
 
-Athugum fall :math:`f(x)=e^{-a x^2/2}` þar sem  :math:`a>0`. Fallið :math:`f` uppfyllir afleiðujöfnu
+	Við skoðum núna dæmi um hvernig nota má reiknireglurnar til þess að reikna Fourier-mynd falla.
 
-.. math::
-    f'(x)+a x f(x)=0\,.
+	Athugum fall :math:`f(x)=e^{-a x^2/2}` þar sem  :math:`a>0`. Fallið :math:`f` uppfyllir afleiðujöfnu
 
-Ef við reiknum Fourier-myndina af þessari jöfnu og notum reiknireglur 9, þá fáum við
+	.. math::
+	    f'(x)+a x f(x)=0\,.
 
-.. math::
-        0= i k \widehat{f}(k)+i a {d\over dk}\widehat{f}(k)\,.
+	Ef við reiknum Fourier-myndina af þessari jöfnu og notum reiknireglur 9, þá fáum við
 
-Þetta er bara fyrsta stigs afleiðujafna fyrir Fourier-mynd fallsins :math:`f`, og lausnin er
+	.. math::
+	        0= i k \widehat{f}(k)+i a {d\over dk}\widehat{f}(k)\,.
 
-.. math::
-    \widehat{f}(k)= C e^{-{k^2\over 2 a}}\,, \qquad C\in \mathbb{R}\,.
+	Þetta er bara fyrsta stigs afleiðujafna fyrir Fourier-mynd fallsins :math:`f`, og lausnin er
 
-Til þess að finna fastann :math:`C`, getum notað
+	.. math::
+	    \widehat{f}(k)= C e^{-{k^2\over 2 a}}\,, \qquad C\in \mathbb{R}\,.
 
-.. math::
-    C=\widehat{f}(0)=\int_{-\infty}^{\infty} f(x) dx= \int_{-\infty}^{\infty} e^{-a x^2/2} dx= \sqrt{{2\pi}\over a}\,.
+	Til þess að finna fastann :math:`C`, getum notað
 
-Að lokum, fáum við
+	.. math::
+	    C=\widehat{f}(0)=\int_{-\infty}^{\infty} f(x) dx= \int_{-\infty}^{\infty} e^{-a x^2/2} dx= \sqrt{{2\pi}\over a}\,.
 
-.. math::
-    \mathcal{F}(e^{-a x^2/2})(k) = \sqrt{{2\pi}\over a}e^{-{k^2\over 2 a}}\,.
+	Að lokum, fáum við
+
+	.. math::
+	    \mathcal{F}(e^{-a x^2/2})(k) = \sqrt{{2\pi}\over a}e^{-{k^2\over 2 a}}\,.
 
 Eiginleikar Fourier-myndar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nú viljum við skoða eiginleika Fourier-myndar. Gerum ráð fyrir að fall :math:`f` sé t.d. samfellt eða diffranlegt og svo framvegis, hvaða eiginleika hefur Fourier-mynd fallsins :math:`f`?
 
-**Setning (Riemann-Lebesgue setning)**
+Setning
+~~~~~~~
+
+.. admonition:: Setning: Riemann-Lebesgue setning
+	:class: setning
 
 
-Ef :math:`f\in L^1({{\mathbb R}})`, þá er :math:`{{\cal F}}f\in C({{\mathbb R}})` og
+	Ef :math:`f\in L^1({{\mathbb R}})`, þá er :math:`{{\cal F}}f\in C({{\mathbb R}})` og
 
-.. math::
-    \lim_{\xi\to \pm \infty}{{\cal F}}f(\xi)=0.
+	.. math::
+	    \lim_{\xi\to \pm \infty}{{\cal F}}f(\xi)=0.
 
-Ef við táknum mengi falla sem eru samfelld og stefna á núll þegar breytan stefnir á óendanlegt með :math:`C_0({{\mathbb R}})=\{F\in C({{\mathbb R}})\,;\, \lim_{|\xi|\to +\infty}F(\xi)=0\}`, þá þýðir setningin að Fourier-ummyndun :math:`\mathcal F` varpar rúminu :math:`L^1(\mathbb R)` í :math:`C_0(\mathbb R)`.
+	Ef við táknum mengi falla sem eru samfelld og stefna á núll þegar breytan stefnir á óendanlegt með :math:`C_0({{\mathbb R}})=\{F\in C({{\mathbb R}})\,;\, \lim_{|\xi|\to +\infty}F(\xi)=0\}`, þá þýðir setningin að Fourier-ummyndun :math:`\mathcal F` varpar rúminu :math:`L^1(\mathbb R)` í :math:`C_0(\mathbb R)`.
 
-**Setning**
+Setning
+~~~~~~~
 
-Gerum ráð fyrir að fall :math:`f\in L^1(\mathbb R)` og að :math:`f` sé takmarkað. Gerum ráð fyrir að Fourier-mynd :math:`{{\cal F}}f` fallsins :math:`f` sé jákvæð fyrir öll :math:`k`, þ.e. :math:`{{\cal F}}f(k)\ge 0`. Þá er :math:`{{\cal F}}\in L^1(\mathbb R)`.
+.. admonition:: Setning
+	:class: setning
 
-Athugum að ef fall :math:`f\in L^1(\mathbb R)` er takmarkað (þ.e. :math:`|f|\le M`), þá er :math:`f\in L^2(\mathbb R)` (af því að :math:`|f|^2\le M|f|`).
+	Gerum ráð fyrir að fall :math:`f\in L^1(\mathbb R)` og að :math:`f` sé takmarkað. Gerum ráð fyrir að Fourier-mynd :math:`{{\cal F}}f` fallsins :math:`f` sé jákvæð fyrir öll :math:`k`, þ.e. :math:`{{\cal F}}f(k)\ge 0`. Þá er :math:`{{\cal F}}\in L^1(\mathbb R)`.
+
+	Athugum að ef fall :math:`f\in L^1(\mathbb R)` er takmarkað (þ.e. :math:`|f|\le M`), þá er :math:`f\in L^2(\mathbb R)` (af því að :math:`|f|^2\le M|f|`).
 
 Plancerel-jafnan
 ~~~~~~~~~~~~~~~~
@@ -240,93 +262,103 @@ Vandamálið nú er að við getum ekki skipt á röð heildanna, við getum ekk
 
 Að lokum getum við tekið þetta saman í eftirfarandi setningu
 
-**Setning (Andhverfuformúla Fouriers)**
+Setning
+~~~~~~~
 
-Gerum ráð fyrir að fall :math:`f\in L^1(\mathbb R)\cap \mathcal{C}(\mathbb R)` og :math:`\widehat{f}\in L^1(\mathbb R)\cap \mathcal{C}(\mathbb R)`. Þá gildir
+.. admonition:: Setning (Andhverfuformúla Fouriers)
+	:class: setning
 
-.. math::
-    f(x) =\dfrac 1{2\pi}\int_{-\infty}^{+\infty}e^{ix\xi}\widehat f(\xi) \,
-    d\xi = \dfrac 1{2\pi}({{\cal F}}{{\cal F}}f)(-x), \qquad x\in {{\mathbb  R}}.
+	Gerum ráð fyrir að fall :math:`f\in L^1(\mathbb R)\cap \mathcal{C}(\mathbb R)` og :math:`\widehat{f}\in L^1(\mathbb R)\cap \mathcal{C}(\mathbb R)`. Þá gildir
+
+	.. math::
+	    f(x) =\dfrac 1{2\pi}\int_{-\infty}^{+\infty}e^{ix\xi}\widehat f(\xi) \,
+	    d\xi = \dfrac 1{2\pi}({{\cal F}}{{\cal F}}f)(-x), \qquad x\in {{\mathbb  R}}.
 
 
 Setningin segir okkur að fallið :math:`f` sé samfelld samantekt (superposition á ensku) af veldisvísisföllum :math:`e^{ix\xi}`. Hún alhæfir framsetningu á lotubundnum föllum með Fourier-röðum til falla sem eru ekki lotubundin.
 
+Fylgisetning
+~~~~~~~~~~~~
 
-**Fylgisetning**
+.. admonition:: Fylgisetning
+	:class: setning
 
-Ef :math:`\widehat{f}=\widehat{g}`, þá er :math:`f=g`.
+	Ef :math:`\widehat{f}=\widehat{g}`, þá er :math:`f=g`.
 
+Dæmi
+~~~~
 
+.. admonition:: Dæmi
+	:class: daemi
 
-**Sýnidæmi**
+	Andhverfuformúlan getur verið mjög gagnleg til þess að reikna Fourier-mynd. Við sjáum þetta með dæmi.
+	Ef við viljum reikna Fourier-mynd falls :math:`f(x)={\sin a x\over x}`, getum við notað andhverfuformúlu Fouriers og sýnidæmi :ref:`4.1.3<example1>`, það er
 
-Andhverfuformúlan getur verið mjög gagnleg til þess að reikna Fourier-mynd. Við sjáum þetta með dæmi.
-Ef við viljum reikna Fourier-mynd falls :math:`f(x)={\sin a x\over x}`, getum við notað andhverfuformúlu Fouriers og sýnidæmi :ref:`4.1.3<example1>`, það er 
-
-.. math::
-    \mathcal{F}\left({\sin a x\over x}\right) = \begin{cases} \pi\,, \qquad &|\xi|<a\\ 0\,, \qquad & \text{annars} \end{cases}\,.
+	.. math::
+	    \mathcal{F}\left({\sin a x\over x}\right) = \begin{cases} \pi\,, \qquad &|\xi|<a\\ 0\,, \qquad & \text{annars} \end{cases}\,.
 
 Ef við viljum reikna Fourier-mynd fallsins :math:`f` beint út frá skilgreiningu þess, er það erfitt!
 
 
+Skilgreining: Földun og Fourier-ummyndun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Látum :math:`f` og :math:`g` vera tvö föll á :math:`\mathbb  R`. Við skilgreinumn *földun* þeirra með
+
+	.. math::
+	    f\ast g(x)= \int_{-\infty}^{+\infty}f(x-t)g(t) \, dt,
+
+	fyrir öll :math:`x\in {{\mathbb  R}}` þannig að heildið sé til.
 
 
+.. admonition:: Eiginleikar
+	:class: setning
+
+	1. Gerum ráð fyrir að heildið að ofan sé til, þá er
+
+	.. math::
+	    f\ast g(x)= \int_{-\infty}^{+\infty}f(x-t)g(t) \, dt = \int_{-\infty}^{\infty} f(s)g(x-s)ds = g \ast f(x)\,,
+
+	þar sem við höfum notað :math:`s=x-t`.
+
+	2. Ef :math:`f\in L^1(\mathbb R)` og :math:`g` er takmarkað, þá er földun þeirra skilgreind á :math:`{{\mathbb  R}}`.
+
+	3. Ef :math:`f\in L^1(\mathbb R)` og líka :math:`g\in L^1(\mathbb R)`, þá er földunin vel skilgreind, og ennfremur gildir að :math:`f\ast g` er í :math:`L^1(\mathbb R)`.
 
 
-Földun og Fourier-ummyndun
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+	4. Földunin uppfyllir sömu reglur og venjulegt margfeldi uppfyllir:
 
-**Skilgreining**
+	.. math::
+	    & f\ast (\alpha g +\beta h)= \alpha (f\ast g)+\beta (f\ast h)\,, \quad \forall \alpha, \beta \in\mathbb{R}\,.
+	    \\
+	    & f\ast g = g\ast f\,,
+	    \\
+	    & f\ast (g\ast h)= (f\ast g)\ast h\,,
 
-Látum :math:`f` og :math:`g` vera tvö föll á :math:`\mathbb  R`. Við skilgreinumn **földun** þeirra með
+	þar sem :math:`f, g, h` eru föll á :math:`\mathbb  R`, þ.a. földun þeirra sé vel skilgreind.
 
-.. math::
-    f\ast g(x)= \int_{-\infty}^{+\infty}f(x-t)g(t) \, dt,
+	5. Gerum ráð fyrir að fall :math:`f` sé diffranlegt og faldanir :math:`f\ast g` og :math:`f'\ast g` séu vel skilgreindar. Þá er :math:`f\ast g` diffranlegt og :math:`(f\ast g)'=f'\ast g`. Ef :math:`g` er líka diffranlegt, þá gildir :math:`(f\ast g)'= f\ast g'`.
 
-fyrir öll :math:`x\in {{\mathbb  R}}` þannig að heildið sé til.
+	Við getum alhæft niðurstöðuna að ofan ef til dæmis fallið :math:`f` er :math:`m`-sinnum diffranlegt og :math:`f, f', \dots f^{(m)}` eru takmörkuð, þá er :math:`f\ast g \in\mathcal{C}^m(\mathbb{R})` og
 
+	.. math::
+	    (f\ast g)^{(k)}(x)= (f^{(k)}\ast g)(x)\,, \qquad x\in\mathbb{R}\, \quad k=0, \dots, m.
 
-**Eiginleikar**
+Setning
+~~~~~~~
 
-1. Gerum ráð fyrir að heildið að ofan sé til, þá er
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-    f\ast g(x)= \int_{-\infty}^{+\infty}f(x-t)g(t) \, dt = \int_{-\infty}^{\infty} f(s)g(x-s)ds = g \ast f(x)\,,
+	Frá eiginleika 3, fáum við eftirfarandi setningu
 
-þar sem við höfum notað :math:`s=x-t`.
+	 Ef :math:`f\in L^1(\mathbb R)` og líka :math:`g\in L^1(\mathbb R)`, þá er földunin :math:`f\ast g` í :math:`L^1(\mathbb R)` og
 
-2. Ef :math:`f\in L^1(\mathbb R)` og :math:`g` er takmarkað, þá er földun þeirra skilgreind á :math:`{{\mathbb  R}}`.
-
-3. Ef :math:`f\in L^1(\mathbb R)` og líka :math:`g\in L^1(\mathbb R)`, þá er földunin vel skilgreind, og ennfremur gildir að :math:`f\ast g` er í :math:`L^1(\mathbb R)`.
-
-
-4. Földunin uppfyllir sömu reglur og venjulegt margfeldi uppfyllir:
-
-.. math::
-    & f\ast (\alpha g +\beta h)= \alpha (f\ast g)+\beta (f\ast h)\,, \quad \forall \alpha, \beta \in\mathbb{R}\,.
-    \\
-    & f\ast g = g\ast f\,,
-    \\
-    & f\ast (g\ast h)= (f\ast g)\ast h\,,
-
-þar sem :math:`f, g, h` eru föll á :math:`\mathbb  R`, þ.a. földun þeirra sé vel skilgreind.
-
-5. Gerum ráð fyrir að fall :math:`f` sé diffranlegt og faldanir :math:`f\ast g` og :math:`f'\ast g` séu vel skilgreindar. Þá er :math:`f\ast g` diffranlegt og :math:`(f\ast g)'=f'\ast g`. Ef :math:`g` er líka diffranlegt, þá gildir :math:`(f\ast g)'= f\ast g'`.
-
-Við getum alhæft niðurstöðuna að ofan ef til dæmis fallið :math:`f` er :math:`m`-sinnum diffranlegt og :math:`f, f', \dots f^{(m)}` eru takmörkuð, þá er :math:`f\ast g \in\mathcal{C}^m(\mathbb{R})` og
-
-.. math::
-    (f\ast g)^{(k)}(x)= (f^{(k)}\ast g)(x)\,, \qquad x\in\mathbb{R}\, \quad k=0, \dots, m.
-
-
-**Setning**
-
-Frá eiginleika 3, fáum við eftirfarandi setningu
-
- Ef :math:`f\in L^1(\mathbb R)` og líka :math:`g\in L^1(\mathbb R)`, þá er földunin :math:`f\ast g` í :math:`L^1(\mathbb R)` og
-
-.. math::
-    {{\cal F}}\{f\ast g\}(\xi)={{\cal F}}f(\xi){{\cal F}}g(\xi), \qquad \xi\in {{\mathbb  R}}.
+	.. math::
+	    {{\cal F}}\{f\ast g\}(\xi)={{\cal F}}f(\xi){{\cal F}}g(\xi), \qquad \xi\in {{\mathbb  R}}.
 
 
 
@@ -342,88 +374,99 @@ Við byrjum á að skoða afleiðujöfnu með fasta stuðla
 
 Til þess að finna lausn á jöfnunni getum við notað Fourier-ummyndun, ef t.d. :math:`f\in L^1(\mathbb R)`. Munið eftir reiknireglu 8, ef við gerum ráð fyrir að :math:`u` og afleiður þess séu í :math:`L^1(\mathbb R)`. Þá fáum við eftirfarandi niðurstöðu
 
+Setning
+~~~~~~~
 
-**Setning**
+.. admonition:: Setning
+	:class: setning
 
-    Gerum ráð fyrir að :math:`f\in L^1(\mathbb R)` og :math:`\widehat{f}\in L^1(\mathbb R)`.
-    Gerum ráð fyrir að :math:`P(i\xi)\neq 0`. Þá hefur afleiðujafnan (ref) lausn :math:`u\in L^1(\mathbb R)\cap \mathcal{C}^m (\mathbb R)` sem gefin er með formúlunni
+	Gerum ráð fyrir að :math:`f\in L^1(\mathbb R)` og :math:`\widehat{f}\in L^1(\mathbb R)`.
+	Gerum ráð fyrir að :math:`P(i\xi)\neq 0`. Þá hefur afleiðujafnan (ref) lausn :math:`u\in L^1(\mathbb R)\cap \mathcal{C}^m (\mathbb R)` sem gefin er með formúlunni
 
-.. math::
-    u(x)=\dfrac 1{2\pi}\int_{-\infty}^ {+\infty}
-    e^{ix\xi} \dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi, \qquad x\in {{\mathbb  R}}.
+	.. math::
+	    u(x)=\dfrac 1{2\pi}\int_{-\infty}^ {+\infty}
+	    e^{ix\xi} \dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi, \qquad x\in {{\mathbb  R}}.
 
-Við sjáum að fallið :math:`u` sem skilgreint er að ofan uppfyllir jöfuna
+	Við sjáum að fallið :math:`u` sem skilgreint er að ofan uppfyllir jöfuna
 
-.. math::
-    P(D)u(x)&=\dfrac 1{2\pi}\int_{-\infty}^{+\infty}P(D_x)e^{ix\xi}
-    \dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi=
-    \dfrac 1{2\pi}\int_{-\infty}^{+\infty}P(i\xi)e^{ix\xi}
-    \dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi\\
-    &= \dfrac 1{2\pi}\int_{-\infty}^{+\infty}e^{ix\xi}
-    \widehat f(\xi)\, d\xi=f(x).
-
-
-**Afleiðujöfnur, Fourier-ummyndun og földun**
-
-Gerum ráð fyrir að :math:`P(i\xi)\neq 0` fyrir öll :math:`\xi\in\mathbb R`.
-Ef við táknum andhverfu Fourier-mynd falls :math:`{1\over P(i\xi)}` (athugum að :math:`{1\over P(i\xi)} \in L^1(\mathbb{R})`) með
+	.. math::
+	    P(D)u(x)&=\dfrac 1{2\pi}\int_{-\infty}^{+\infty}P(D_x)e^{ix\xi}
+	    \dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi=
+	    \dfrac 1{2\pi}\int_{-\infty}^{+\infty}P(i\xi)e^{ix\xi}
+	    \dfrac{\widehat f(\xi)}{P(i\xi)}\, d\xi\\
+	    &= \dfrac 1{2\pi}\int_{-\infty}^{+\infty}e^{ix\xi}
+	    \widehat f(\xi)\, d\xi=f(x).
 
 
-.. math::
-    E(x)= {1\over 2\pi} \int_{-\infty}^{\infty} {e^{i x \xi}\over P(i\xi)} d\xi\,, \qquad x\in\mathbb R\,,
+.. admonition:: Afleiðujöfnur, Fourier-ummyndun og földun
+	:class: setning
 
-þá fæst
-
-.. math::
-    E\ast f(x) &= \int_{-\infty}^{\infty} E(x-t) f(t)dt= \int_{-\infty}^{\infty}\left({1\over 2\pi} \int_{-\infty}^{\infty} {e^{i (x-t) \xi}\over P(i\xi)} d\xi\right)f(t) dt=\\
-    &={1\over 2\pi}\int_{-\infty}^{\infty}{e^{i x \xi}\over P(i\xi)}\left(\int_{-\infty}^\infty f(t) e^{-i \xi t} dt\right)d\xi= {1\over 2\pi}\int_{-\infty}^{\infty}{e^{ix\xi}\over P(i \xi)}\widehat f(\xi)\, d\xi =u(x).
-
-**Setning**
-
-Gerum ráð fyrir að :math:`P` sé margliða af stigi :math:`m` með ólikar núllstöðvar :math:`\lambda_1, \dots, \lambda_{\ell}` með margfeldni :math:`m_1, \dots, m_{\ell}`, að :math:`P(i\xi)` hafi enga núllstöð á :math:`\mathbb{R}`, að :math:`Q` sé margliða af stigi :math:`\le m-1` og að stofnbrotaliðun á ræða fallinu :math:`Q/P` sé gefin með
-
-.. math::
-    \dfrac {Q(\zeta)}{P({\zeta})} =\sum\limits_{k=1}^\ell
-    \sum\limits_{j=1}^{m_k} \dfrac{A_{jk}}{({\zeta}-{\lambda}_k)^j}.
-
-Þá er andhverfa Fourier-mynd fallsins :math:`{\xi}\mapsto Q(i\xi)/P(i{\xi})` gefin með formúlunni
-
-.. math::
-    f(x)&=
-    \sum_{\substack{{{\operatorname{Re\, }}}{\lambda}_k<0}}
-    \sum\limits_{j=1}^{m_k} A_{jk}
-    \tfrac 1{(j-1)!}H(x)x^{j-1}e^{{\lambda}_kx}\\
-    &-\sum_{\substack{{{\operatorname{Re\, }}}{\lambda}_k>0}}
-    \sum\limits_{j=1}^{m_k} A_{jk} \tfrac 1{(j-1)!} H(-x)x^{j-1}e^{{\lambda}_kx},
-    \qquad x\neq 0.\nonumber
+	Gerum ráð fyrir að :math:`P(i\xi)\neq 0` fyrir öll :math:`\xi\in\mathbb R`.
+	Ef við táknum andhverfu Fourier-mynd falls :math:`{1\over P(i\xi)}` (athugum að :math:`{1\over P(i\xi)} \in L^1(\mathbb{R})`) með
 
 
-**Sýnidæmi**
+	.. math::
+	    E(x)= {1\over 2\pi} \int_{-\infty}^{\infty} {e^{i x \xi}\over P(i\xi)} d\xi\,, \qquad x\in\mathbb R\,,
 
-Skoðum jöfnu
+	þá fæst
 
-.. math::
-    -u{{^{\prime\prime}}}+\omega^ 2u=e^{-|x|}=f(x), \qquad \omega^ 2 \neq 1,
-    \qquad x\in {{\mathbb  R}}.
+	.. math::
+	    E\ast f(x) &= \int_{-\infty}^{\infty} E(x-t) f(t)dt= \int_{-\infty}^{\infty}\left({1\over 2\pi} \int_{-\infty}^{\infty} {e^{i (x-t) \xi}\over P(i\xi)} d\xi\right)f(t) dt=\\
+	    &={1\over 2\pi}\int_{-\infty}^{\infty}{e^{i x \xi}\over P(i\xi)}\left(\int_{-\infty}^\infty f(t) e^{-i \xi t} dt\right)d\xi= {1\over 2\pi}\int_{-\infty}^{\infty}{e^{ix\xi}\over P(i \xi)}\widehat f(\xi)\, d\xi =u(x).
 
-Við sjáum að :math:`P(X)=-X^2+\omega^2`, og :math:`P(i\xi)=\xi^2+\omega^2`. Fourier-mynd fallsins :math:`e^{-|x|}=f(x)` er :math:`\widehat f(\xi)={2 \over 1+\xi^ 2}`. Tökum Fourier-mynd jöfnunnar, þá fáum við
+Setning
+~~~~~~~
 
-.. math::
-    \xi^ 2 \widehat u(\xi)+\omega^ 2 \widehat u(\xi) = \dfrac
-    2{1+\xi^ 2}, \qquad \xi\in {{\mathbb  R}}.
+.. admonition:: Setning
+	:class: setning
 
-Þá er
+	Gerum ráð fyrir að :math:`P` sé margliða af stigi :math:`m` með ólikar núllstöðvar :math:`\lambda_1, \dots, \lambda_{\ell}` með margfeldni :math:`m_1, \dots, m_{\ell}`, að :math:`P(i\xi)` hafi enga núllstöð á :math:`\mathbb{R}`, að :math:`Q` sé margliða af stigi :math:`\le m-1` og að stofnbrotaliðun á ræða fallinu :math:`Q/P` sé gefin með
 
-.. math::
-    \widehat u(\xi)=
-    \dfrac 2{(\omega^ 2+\xi^ 2)(1+\xi^ 2)} =\dfrac 1{1-\omega^ 2}\bigg(
-    \dfrac 1\omega {{\cal F}}\{e^{-\omega|x|}\}({\xi})-{{\cal F}}\{e^{-|x|}\}({\xi})
-    \bigg).
+	.. math::
+	    \dfrac {Q(\zeta)}{P({\zeta})} =\sum\limits_{k=1}^\ell
+	    \sum\limits_{j=1}^{m_k} \dfrac{A_{jk}}{({\zeta}-{\lambda}_k)^j}.
 
-Nú getum við notað andhverfuformúlu og þá fæst loks að
+	Þá er andhverfa Fourier-mynd fallsins :math:`{\xi}\mapsto Q(i\xi)/P(i{\xi})` gefin með formúlunni
 
-.. math::
-    u(x)= \dfrac 1{1-\omega^ 2}\bigg( \dfrac 1\omega e^{-\omega|x|} - e^{-|x|} \bigg).
+	.. math::
+	    f(x)&=
+	    \sum_{\substack{{{\operatorname{Re\, }}}{\lambda}_k<0}}
+	    \sum\limits_{j=1}^{m_k} A_{jk}
+	    \tfrac 1{(j-1)!}H(x)x^{j-1}e^{{\lambda}_kx}\\
+	    &-\sum_{\substack{{{\operatorname{Re\, }}}{\lambda}_k>0}}
+	    \sum\limits_{j=1}^{m_k} A_{jk} \tfrac 1{(j-1)!} H(-x)x^{j-1}e^{{\lambda}_kx},
+	    \qquad x\neq 0.\nonumber
+
+Dæmi
+~~~~
+
+.. admonition:: Dæmi
+	:class: daemi
+
+	Skoðum jöfnu
+
+	.. math::
+	    -u{{^{\prime\prime}}}+\omega^ 2u=e^{-|x|}=f(x), \qquad \omega^ 2 \neq 1,
+	    \qquad x\in {{\mathbb  R}}.
+
+	Við sjáum að :math:`P(X)=-X^2+\omega^2`, og :math:`P(i\xi)=\xi^2+\omega^2`. Fourier-mynd fallsins :math:`e^{-|x|}=f(x)` er :math:`\widehat f(\xi)={2 \over 1+\xi^ 2}`. Tökum Fourier-mynd jöfnunnar, þá fáum við
+
+	.. math::
+	    \xi^ 2 \widehat u(\xi)+\omega^ 2 \widehat u(\xi) = \dfrac
+	    2{1+\xi^ 2}, \qquad \xi\in {{\mathbb  R}}.
+
+	Þá er
+
+	.. math::
+	    \widehat u(\xi)=
+	    \dfrac 2{(\omega^ 2+\xi^ 2)(1+\xi^ 2)} =\dfrac 1{1-\omega^ 2}\bigg(
+	    \dfrac 1\omega {{\cal F}}\{e^{-\omega|x|}\}({\xi})-{{\cal F}}\{e^{-|x|}\}({\xi})
+	    \bigg).
+
+	Nú getum við notað andhverfuformúlu og þá fæst loks að
+
+	.. math::
+	    u(x)= \dfrac 1{1-\omega^ 2}\bigg( \dfrac 1\omega e^{-\omega|x|} - e^{-|x|} \bigg).
 
 
 Úrlausn á hlutafleiðujöfnum með Fourier-ummyndun
@@ -455,11 +498,16 @@ Almenn lausn á jöfnunni að ofan er :math:`u(\eta, \xi)=f(\xi)+g(\eta)`, þar 
 .. math::
     u(x,t)=f(\xi(x,t))+g(\eta(x,t))= f(x+ct)+g(x-ct)\,.
 
-Þá fæst niðurstaðan:
+Þá fæst eftirfarandi setning sem niðurstaða.
 
-**Setning**
-    Sérhver lausn :math:`u\in C^2({{\mathbb R}}^2)` á bylgjujöfnunni er af gerðinni :math:`u(x,t)=f(x+ct)+g(x-ct)`, þar sem :math:`f,g\in C^2({{\mathbb R}})`.
-    Ef :math:`u(x,t)=f_1(x+ct)+g_1(x-ct)` er önnur slík framsetning á lausninni, þá er til fasti :math:`A` þannig að :math:`f_1(x)=f(x)+A` og :math:`g_1(x)=g(x)-A`.
+Setning
+~~~~~~~
+
+.. admonition:: Setning
+	:class: setning
+
+	Sérhver lausn :math:`u\in C^2({{\mathbb R}}^2)` á bylgjujöfnunni er af gerðinni :math:`u(x,t)=f(x+ct)+g(x-ct)`, þar sem :math:`f,g\in C^2({{\mathbb R}})`.
+	Ef :math:`u(x,t)=f_1(x+ct)+g_1(x-ct)` er önnur slík framsetning á lausninni, þá er til fasti :math:`A` þannig að :math:`f_1(x)=f(x)+A` og :math:`g_1(x)=g(x)-A`.
 
 Fyrir gefið :math:`t_0 > 0`, er graf fallsins :math:`g(x − ct_0)` næstum því eins og graf fallsins :math:`g(x)`, eini munurinn er að grafið :math:`g(x − ct_0)` er hliðrað um :math:`c t_0` til hægri. Við túlkum því fallið :math:`g(x − ct)` sem bylgju sem hreyfist til hægri með hraða :math:`c` og köllum það *framáttarbylgju*. Á svipaðan hátt er graf fallsins :math:`f(x+ct_0)` hliðrað um :math:`c t_0` til vinstri, fallið :math:`f(x + ct)` táknar bylgju sem hreyfist til vinstri með hraða :math:`c` og kallast það *bakáttarbylgja*.
 
@@ -477,26 +525,28 @@ Við skoðum nú bylgjujöfnuna með upphafsskilyrðum, það er
 Við viljum finna lausn sem er í :math:`C^2({{\mathbb R}}^2)`, sem gefin er í setningunni að ofan. Þá þurfum við tengja :math:`f(x+ct), g(x-ct)` við :math:`\varphi(x), \psi(x)`.
 Niðurstaðan er
 
-**Setning**
+Setning
+~~~~~~~
 
-    Upphafsgildisverkefnið :ref:`að ofan<UpphafBylgja>` hefur ótvírætt ákvarðaða lausn sem gefin er með formúlunni
+.. admonition:: Setning: d'Albembert-formúlan
+	:class: setning
 
-.. math::
-    u(x,t)=\dfrac 12\big(\varphi(x+ct)+\varphi(x-ct)\big)
-    +\dfrac 1{2c}\int_{x-ct}^{x+ct}\psi({\xi})\, d{\xi}.
+	Upphafsgildisverkefnið :ref:`að ofan<UpphafBylgja>` hefur ótvírætt ákvarðaða lausn sem gefin er með formúlunni
+
+	.. math::
+	    u(x,t)=\dfrac 12\big(\varphi(x+ct)+\varphi(x-ct)\big)
+	    +\dfrac 1{2c}\int_{x-ct}^{x+ct}\psi({\xi})\, d{\xi}.
 
 
 Formúlan kallst d'Alembert-formúlan. Hún gefur almenna lausn í :math:`C^2({{\mathbb R}}^2)` á upphafsgildisverkefninu.
 
-|
-|
 
 .. ggb:: m6xq5gqq
   :width: 700
   :height: 320
   :img: polarggb.png
   :imgwidth: 4cm
-  :zoom_drag: true 
+  :zoom_drag: true
 
 |
 |
@@ -544,7 +594,7 @@ Við viljum nú leiða þessa formúlu út með því að nota Fourier-ummyndun.
 
 þar sem við höfum notað reikniregluna 8 í :ref:`4.1.4<rulesFT>`.
 
-Að lokum verður upphafsgildisverkefnið 
+Að lokum verður upphafsgildisverkefnið
 
 .. math::
     \begin{cases}
@@ -579,7 +629,8 @@ En, ef við reiknum Fourier-myndin fallsins :math:`E_t` sem við skilgreindum a�
 
 og niðurstaðan fyrir :math:`u` fæst svo með því að taka andhvefa Fourier-mynd og nota földunarreglur.
 
-**Hliðraða bylgjujafnan**
+Hliðraða bylgjujafnan
+~~~~~~~~~~~~~~~~~~~~~~
 
 Við skoðum
 
@@ -727,24 +778,29 @@ Til þess að skilja lausnina er gott að skoða eiginleika hitakjarnans :math:`
 
 Þá skiljum við eftirfarandi setningu
 
-**Setning**
+Setning
+~~~~~~~
+
+.. admonition:: Setning
+	:class: setning
 
 
-    Gerum ráð fyrir að :math:`\varphi` sé samfellt og takmarkað fall á :math:`{{\mathbb R}}`.  Þá hefur  :ref:`upphafsgildisverkefnið að ofan<UpphafVarmi>` lausn :math:`u` sem gefin er með formúlunni
+	Gerum ráð fyrir að :math:`\varphi` sé samfellt og takmarkað fall á :math:`{{\mathbb R}}`.  Þá hefur  :ref:`upphafsgildisverkefnið að ofan<UpphafVarmi>` lausn :math:`u` sem gefin er með formúlunni
 
-.. math::
-    u(x,t)=E_t\ast \varphi(x)=\int_{-\infty}^{+\infty}E_t(x-\xi)\varphi(\xi)\,
-    d\xi, \qquad x\in {{\mathbb  R}}, \ t>0,
+	.. math::
+		u(x,t)=E_t\ast \varphi(x)=\int_{-\infty}^{+\infty}E_t(x-\xi)\varphi(\xi)\,
+		d\xi, \qquad x\in {{\mathbb  R}}, \ t>0,
 
-þar sem hitakjarninn er gefinn með formúlunni
+	þar sem hitakjarninn er gefinn með formúlunni
 
-.. math::
-    E(x,t)=E_t(x)=H(t) \dfrac
-    1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
-    \qquad (x,t)\neq (0,0).
+	.. math::
+		E(x,t)=E_t(x)=H(t) \dfrac
+		1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
+		\qquad (x,t)\neq (0,0).
 
 
-**Hliðraða varmaleiðnijafnan með óhliðruðum upphafsskilyrðum**
+Hliðraða varmaleiðnijafnan með óhliðruðum upphafsskilyrðum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Við lítum nú á hliðruðu varmaleiðnijöfnuna með óhliðruðu upphafsskilyrði, þ.e.
 
@@ -792,24 +848,29 @@ Eins og áður við skrifum við Fourier-mynd lausnar og eftir það tökum við
     &= E\ast f(x,t) \end{aligned}
 
 
-Við fáum eftirfarandi niðurstöðu
+Við fáum eftirfarandi niðurstöðu.
 
-**Setning**
+Setning
+~~~~~~~
 
-    Gerum ráð fyrir að :math:`f` sé samfellt fall á opna efra hálfplaninu :math:`\{(x,t); t>0\}`, sé takmarkað á lokuninni :math:`\{(x,t); t\geq 0\}` og taki gildið 0 á neðra hálfplaninu :math:`\{(x,t); t<0\}`. Gerum ráð fyrir að  :math:`{\varphi}` sé samfellt takmarkað fall á :math:`{{\mathbb R}}`. Þá hefur :ref:`upphafsgildisverkefnið að ofan<UpphafVarmi2>` ótvírætt ákvarðaða lausn :math:`u`, sem gefin er með formúlunni
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-    u(x,t)=E_t\ast {\varphi}(x)+E\ast f(x,t), \qquad x\in {{\mathbb  R}},\ t>0,
+	Gerum ráð fyrir að :math:`f` sé samfellt fall á opna efra hálfplaninu :math:`\{(x,t); t>0\}`, sé takmarkað á lokuninni :math:`\{(x,t); t\geq 0\}` og taki gildið 0 á neðra hálfplaninu :math:`\{(x,t); t<0\}`. Gerum ráð fyrir að  :math:`{\varphi}` sé samfellt takmarkað fall á :math:`{{\mathbb R}}`. Þá hefur :ref:`upphafsgildisverkefnið að ofan<UpphafVarmi2>` ótvírætt ákvarðaða lausn :math:`u`, sem gefin er með formúlunni
 
-þar sem :math:`E` táknar hitakjarnann, sem skilgreindur er með formúlunni
+	.. math::
+		u(x,t)=E_t\ast {\varphi}(x)+E\ast f(x,t), \qquad x\in {{\mathbb  R}},\ t>0,
 
-.. math::
-    E(x,t)=E_t(x)=H(t) \dfrac
-    1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
-    \qquad (x,t)\neq (0,0).
+	þar sem :math:`E` táknar hitakjarnann, sem skilgreindur er með formúlunni
+
+	.. math::
+		E(x,t)=E_t(x)=H(t) \dfrac
+		1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
+		\qquad (x,t)\neq (0,0).
 
 
-**Hliðraða varmaleiðnijafnan með hliðruðu upphafsskilyrði**
+Hliðraða varmaleiðnijafnan með hliðruðu upphafsskilyrði
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Upphafsgildisverkefnið er núna
 
@@ -843,37 +904,42 @@ Við byrjum á að setja fram fyrstu niðurstöðu fyrir Fourier-myndir.
 
 Munið að við táknum með :math:`\mathcal O(X)` mengi allra fágaðra falla á :math:`X`.
 
-Fourier-myndir reiknaðar með leifareikningi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Fourier-myndir reiknaðar með leifareikningi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Setning**
+.. admonition:: Setning
+	:class: setning
 
-    Látum fall :math:`f\in L^1({{\mathbb R}})\cap {{\cal O}}({{\mathbb C}}\setminus A)`, þar sem :math:`A` er endanlegt mengi.
-    Gerum ráð fyrir að :math:`\lim\limits_{r\to \infty}\max_{|z|=r}|f(z)|=0`.
-    Táknum efra hálfplanið með :math:`H_+=\{z\in {{\mathbb C}}; {{\operatorname{Im\, }}}z>0\}` og neðra hálfplanið með :math:`H_-=\{z\in {{\mathbb C}}; {{\operatorname{Im\, }}}z<0\}`.
-    Þá er
+	Látum fall :math:`f\in L^1({{\mathbb R}})\cap {{\cal O}}({{\mathbb C}}\setminus A)`, þar sem :math:`A` er endanlegt mengi.
+	Gerum ráð fyrir að :math:`\lim\limits_{r\to \infty}\max_{|z|=r}|f(z)|=0`.
+	Táknum efra hálfplanið með :math:`H_+=\{z\in {{\mathbb C}}; {{\operatorname{Im\, }}}z>0\}` og neðra hálfplanið með :math:`H_-=\{z\in {{\mathbb C}}; {{\operatorname{Im\, }}}z<0\}`.
+	Þá er
 
-.. math::
-    \widehat f(\xi) =
-    \begin{cases}  2\pi i\sum_{\alpha\in A\cap H_+}
-    {{\operatorname{Res}}}(e^{-iz\xi}f(z),\alpha), & \xi < 0,\\
-    -2\pi i\sum_{\alpha\in A\cap H_-}
-    {{\operatorname{Res}}}(e^{-iz\xi}f(z),\alpha),  & \xi > 0.
-    \end{cases}
+	.. math::
+	    \widehat f(\xi) =
+	    \begin{cases}  2\pi i\sum_{\alpha\in A\cap H_+}
+	    {{\operatorname{Res}}}(e^{-iz\xi}f(z),\alpha), & \xi < 0,\\
+	    -2\pi i\sum_{\alpha\in A\cap H_-}
+	    {{\operatorname{Res}}}(e^{-iz\xi}f(z),\alpha),  & \xi > 0.
+	    \end{cases}
 
-**Sýnidæmi**
+Dæmi
+~~~~
 
-Skoðum fall :math:`f(x)=1/(1+x^2), x\in {{\mathbb R}}.` Athugum að fallið :math:`f` er jafnstætt, svo samkvæmt reglu 6 er Fourier-mynd þess jafnstæð. Þá getum við reiknað Fourier-mynd fyrir :math:`\xi<0`, og eftir það framlengjt hana samkvæmt því. Fallið :math:`f` hefur eitt skaut í :math:`x=i` á :math:`H_+` og :math:`\max_{|z|=r}|f(z)| \le {1\over r^2-1}` sem stefnir á 0 þegar :math:`r` stefnir á óendanlegt. Þá beitum við setningunni að ofan og fáum
+.. admonition:: Dæmi
+	:class: daemi
 
-.. math::
-    \widehat f(\xi) = 2\pi i
-    {{\operatorname{Res}}}\bigg(\dfrac{e^{-iz\xi}}{1+z^2},i\bigg)
-    =\pi e^{\xi}, \qquad \xi<0.
+	Skoðum fall :math:`f(x)=1/(1+x^2), x\in {{\mathbb R}}.` Athugum að fallið :math:`f` er jafnstætt, svo samkvæmt reglu 6 er Fourier-mynd þess jafnstæð. Þá getum við reiknað Fourier-mynd fyrir :math:`\xi<0`, og eftir það framlengjt hana samkvæmt því. Fallið :math:`f` hefur eitt skaut í :math:`x=i` á :math:`H_+` og :math:`\max_{|z|=r}|f(z)| \le {1\over r^2-1}` sem stefnir á 0 þegar :math:`r` stefnir á óendanlegt. Þá beitum við setningunni að ofan og fáum
 
-Að lokum fæst
+	.. math::
+	    \widehat f(\xi) = 2\pi i
+	    {{\operatorname{Res}}}\bigg(\dfrac{e^{-iz\xi}}{1+z^2},i\bigg)
+	    =\pi e^{\xi}, \qquad \xi<0.
 
-.. math::
-     \widehat f(\xi) =\pi e^{-|\xi|}, \qquad \xi\in {{\mathbb  R}}.
+	Að lokum fæst
+
+	.. math::
+	     \widehat f(\xi) =\pi e^{-|\xi|}, \qquad \xi\in {{\mathbb  R}}.
 
 
 Andhverfar Fourier-myndir reiknaðar með leifareikningi
@@ -881,40 +947,48 @@ Andhverfar Fourier-myndir reiknaðar með leifareikningi
 
 Á svipaðan hátt höfum við niðurstöðu fyrir andhverfar  Fourier-myndir.
 
-**Setning**
+Setning
+~~~~~~~
 
-    Gerum ráð fyrir því að :math:`f\in L^1({{\mathbb R}})\cap PC^1({{\mathbb R}})`, að það sé hægt að framlengja skilgreiningarsvæði Fourier–myndarinnar :math:`\widehat f`, þannig að :math:`\widehat f\in {{\cal O}}({{\mathbb C}}\setminus A)`, þar sem mengið :math:`A` er endanlegt og :math:`\lim\limits_{r\to +\infty}\max_{|\zeta|=r}|\widehat f(\zeta)|=0`. Þá er
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-    \tfrac 12 (f(x+)+f(x-))=\begin{cases}
-    i\sum\limits_{\alpha\in A\cap H_+}{{\operatorname{Res}}}\big(e^{ix\zeta}\widehat
-    f(\zeta),\alpha\big), & x>0\\
-    -i\sum\limits_{\alpha\in A\cap H_-}{{\operatorname{Res}}}\big(e^{ix\zeta}\widehat
-    f(\zeta),\alpha\big), & x<0.
-    \end{cases}
+	Gerum ráð fyrir því að :math:`f\in L^1({{\mathbb R}})\cap PC^1({{\mathbb R}})`, að það sé hægt að framlengja skilgreiningarsvæði Fourier–myndarinnar :math:`\widehat f`, þannig að :math:`\widehat f\in {{\cal O}}({{\mathbb C}}\setminus A)`, þar sem mengið :math:`A` er endanlegt og :math:`\lim\limits_{r\to +\infty}\max_{|\zeta|=r}|\widehat f(\zeta)|=0`. Þá er
+
+	.. math::
+	    \tfrac 12 (f(x+)+f(x-))=\begin{cases}
+	    i\sum\limits_{\alpha\in A\cap H_+}{{\operatorname{Res}}}\big(e^{ix\zeta}\widehat
+	    f(\zeta),\alpha\big), & x>0\\
+	    -i\sum\limits_{\alpha\in A\cap H_-}{{\operatorname{Res}}}\big(e^{ix\zeta}\widehat
+	    f(\zeta),\alpha\big), & x<0.
+	    \end{cases}
 
 Athugum að ef fallið :math:`f` er samfellt þá er :math:`\tfrac 12 (f(x+)+f(x-))= f(x)`.
 
-**Sýnidæmi**
+Dæmi
+~~~~
 
-Lítum á :math:`\widehat f(\xi)=\xi/(\xi^2+4\xi+5)`. Fallið :math:`\widehat f` hefur tvö skaut í :math:`zeta_1 = -2+i\in H_+` og :math:`\zeta_2 = -2-i\in H_-`. Ennfremur er það hvorki jafnstætt né oddstætt, svo við þurfum að reikna báðar leifar:
+.. admonition:: Dæmi
+	:class: daemi
 
-.. math::
-    \begin{gathered}
-    i{{\operatorname{Res}}}\bigg( \dfrac{e^{ix\zeta}\zeta}{\zeta^2+4\zeta+5},-2+i\bigg)
-    = (-1+i/2)e^{-x-2ix},\\
-    -i{{\operatorname{Res}}}\bigg( \dfrac{e^{ix\zeta}\zeta}{\zeta^2+4\zeta+5},-2-i\bigg)
-    = (-1-i/2)e^{x-2ix}.\end{gathered}
+	Lítum á :math:`\widehat f(\xi)=\xi/(\xi^2+4\xi+5)`. Fallið :math:`\widehat f` hefur tvö skaut í :math:`zeta_1 = -2+i\in H_+` og :math:`\zeta_2 = -2-i\in H_-`. Ennfremur er það hvorki jafnstætt né oddstætt, svo við þurfum að reikna báðar leifar:
 
-Að lokum fáum við samkvæmt setningunni að ofan
+	.. math::
+	    \begin{gathered}
+	    i{{\operatorname{Res}}}\bigg( \dfrac{e^{ix\zeta}\zeta}{\zeta^2+4\zeta+5},-2+i\bigg)
+	    = (-1+i/2)e^{-x-2ix},\\
+	    -i{{\operatorname{Res}}}\bigg( \dfrac{e^{ix\zeta}\zeta}{\zeta^2+4\zeta+5},-2-i\bigg)
+	    = (-1-i/2)e^{x-2ix}.\end{gathered}
 
-.. math::
-    f(x) =\begin{cases}
-    (-1+i/2)e^{-x-2ix}\,, \qquad & x>0\\
-    (-1-i/2)e^{x-2ix}\,, \qquad & x<0
-    \end{cases}
+	Að lokum fáum við samkvæmt setningunni að ofan
 
-sem við getum umskrifað líka sem :math:`f(x)=-(1-i{{\operatorname{sign}}}(x)/2)e^{-|x|-2ix}`, fyrir öll  :math:`x\in\mathbb{R}`.
+	.. math::
+	    f(x) =\begin{cases}
+	    (-1+i/2)e^{-x-2ix}\,, \qquad & x>0\\
+	    (-1-i/2)e^{x-2ix}\,, \qquad & x<0
+	    \end{cases}
+
+	sem við getum umskrifað líka sem :math:`f(x)=-(1-i{{\operatorname{sign}}}(x)/2)e^{-|x|-2ix}`, fyrir öll  :math:`x\in\mathbb{R}`.
 
 
 
@@ -942,42 +1016,45 @@ Rifjum upp að
 
 
 
-Andhverfar Laplace-myndir
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Andhverfar Laplace-myndir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _FourierMellin:
 
-**Setning: Andhverfuformúla Fourier-Mellin**
+.. admonition:: Setning: Andhverfuformúla Fourier-Mellin
+	:class: setning
 
-    Gerum ráð fyrir að fall :math:`f:{{\mathbb R}}_+\to {{\mathbb C}}` sé í :math:`PC^1 (\mathbb R)` og sé af veldisvísisgerð :eq:`eq.expo`. Þá gildir  um sérhvert :math:`\xi> c` og sérhvert :math:`t> 0` að
+	Gerum ráð fyrir að fall :math:`f:{{\mathbb R}}_+\to {{\mathbb C}}` sé í :math:`PC^1 (\mathbb R)` og sé af veldisvísisgerð :eq:`eq.expo`. Þá gildir  um sérhvert :math:`\xi> c` og sérhvert :math:`t> 0` að
 
-.. math::
-    \begin{aligned}
-    \label{7.2.2}
-    \tfrac 12(f(t+)+f(t-))& = \lim_{R\to +\infty} \dfrac 1{2\pi}
-    \int_{-R}^{+R}e^{(\xi+i\eta)t}{{\cal L}}f(\xi+i\eta) \, d\eta \\
-    &= \lim_{R\to +\infty} \dfrac 1{2\pi i}
-    \int_{\xi-iR}^{\xi+iR}e^{\zeta t}{{\cal L}}f(\zeta) \, d\zeta. \nonumber\end{aligned}
-
-
-Ef :math:`\mathcal{L} f(\xi+i \eta)\in L^1(\mathbb R)` sem fall af :math:`\eta`, þá er :math:`f` samfellt í :math:`t` og
-
-.. math::
-    \begin{aligned}
-    f(t)&=  \dfrac 1{2\pi}
-    \int_{-\infty}^{+\infty}e^{(\xi+i\eta)t}{{\cal L}}f(\xi+i\eta) \, d\eta
-    \\
-    &= \dfrac 1{2\pi i}
-    \int_{\xi-i\infty}^{\xi+i\infty}e^{\zeta t}{{\cal L}}f(\zeta) \,
-    d\zeta. \nonumber\end{aligned}
-
-Athugum að :math:`\int_{\xi-i\infty}^{\xi+i\infty}` og :math:`\int_{\xi-iR}^{\xi+iR}` tákna heildi eftir línunni :math:`\{\xi+i \eta; \eta \in \mathbb{R}\}`.
+	.. math::
+	    \begin{aligned}
+	    \label{7.2.2}
+	    \tfrac 12(f(t+)+f(t-))& = \lim_{R\to +\infty} \dfrac 1{2\pi}
+	    \int_{-R}^{+R}e^{(\xi+i\eta)t}{{\cal L}}f(\xi+i\eta) \, d\eta \\
+	    &= \lim_{R\to +\infty} \dfrac 1{2\pi i}
+	    \int_{\xi-iR}^{\xi+iR}e^{\zeta t}{{\cal L}}f(\zeta) \, d\zeta. \nonumber\end{aligned}
 
 
+	Ef :math:`\mathcal{L} f(\xi+i \eta)\in L^1(\mathbb R)` sem fall af :math:`\eta`, þá er :math:`f` samfellt í :math:`t` og
 
-**Setning**
+	.. math::
+	    \begin{aligned}
+	    f(t)&=  \dfrac 1{2\pi}
+	    \int_{-\infty}^{+\infty}e^{(\xi+i\eta)t}{{\cal L}}f(\xi+i\eta) \, d\eta
+	    \\
+	    &= \dfrac 1{2\pi i}
+	    \int_{\xi-i\infty}^{\xi+i\infty}e^{\zeta t}{{\cal L}}f(\zeta) \,
+	    d\zeta. \nonumber\end{aligned}
 
-Látum :math:`f` og :math:`g` vera tvö samfelld föll af veldisvísisgerð á :math:`\mathbb{R_+}`, og gerum ráð fyrir að :math:`\mathcal{L}f(\alpha_j)=\mathcal{L}g(\alpha_j)`, þar sem :math:`\{\alpha_j\}` er runa af ólíkum punktum, :math:`\alpha_j\to\alpha, \operatorname{Re}\alpha_j>c, \operatorname{Re}\alpha>c`. Þá er :math:`f(t)=g(t)`fyrir öll :math:`t\in\mathbb{R}_+`.
+	Athugum að :math:`\int_{\xi-i\infty}^{\xi+i\infty}` og :math:`\int_{\xi-iR}^{\xi+iR}` tákna heildi eftir línunni :math:`\{\xi+i \eta; \eta \in \mathbb{R}\}`.
+
+Setning
+~~~~~~~
+
+.. admonition:: Setning
+	:class: setning
+
+	Látum :math:`f` og :math:`g` vera tvö samfelld föll af veldisvísisgerð á :math:`\mathbb{R_+}`, og gerum ráð fyrir að :math:`\mathcal{L}f(\alpha_j)=\mathcal{L}g(\alpha_j)`, þar sem :math:`\{\alpha_j\}` er runa af ólíkum punktum, :math:`\alpha_j\to\alpha, \operatorname{Re}\alpha_j>c, \operatorname{Re}\alpha>c`. Þá er :math:`f(t)=g(t)`fyrir öll :math:`t\in\mathbb{R}_+`.
 
 
 
@@ -992,24 +1069,27 @@ Við getum notað leifareikning og við byrjum á að skoða niðurstöðuna fyr
 
 :math:`M_r` táknar hálfhringinn sem stikaður er með :math:`\gamma_r(\theta)=\xi+i r e^{i\theta}, \theta\in [0, \pi]`.
 
+Setning
+~~~~~~~
 
-**Setning**
+.. admonition:: Setning
+	:class: setning
 
-    Gerum ráð fyrir að fall :math:`f:{{\mathbb R}}_+\to {{\mathbb C}}` sé í :math:`PC^1 (\mathbb R)` og sé af veldisvísisgerð :eq:`eq.expo`.
-    Gerum ráð fyrir að hægt sé að framlengja :math:`\mathcal{L}f` yfir í fágað fall á :math:`\mathbb C\setminus A`, þar sem :math:`A` er endanlegt mengi.
-    Ef :math:`\xi>c` og :math:`\lim\limits_{r\to +\infty}\max_{\zeta\in M_r}|{{\cal L}}f(\zeta)|=0`,
-    þá er
+	Gerum ráð fyrir að fall :math:`f:{{\mathbb R}}_+\to {{\mathbb C}}` sé í :math:`PC^1 (\mathbb R)` og sé af veldisvísisgerð :eq:`eq.expo`.
+	Gerum ráð fyrir að hægt sé að framlengja :math:`\mathcal{L}f` yfir í fágað fall á :math:`\mathbb C\setminus A`, þar sem :math:`A` er endanlegt mengi.
+	Ef :math:`\xi>c` og :math:`\lim\limits_{r\to +\infty}\max_{\zeta\in M_r}|{{\cal L}}f(\zeta)|=0`,
+	þá er
 
-.. math::
-    \frac 12(f(t+)+f(t-))=
-    \sum_{\alpha\in A}{{\operatorname{Res}}}(e^{\zeta t}{{\cal L}}f(\zeta),\alpha)
-    \qquad t>0.
-    :label: eq.LaplaceRes
+	.. math::
+	    \frac 12(f(t+)+f(t-))=
+	    \sum_{\alpha\in A}{{\operatorname{Res}}}(e^{\zeta t}{{\cal L}}f(\zeta),\alpha)
+	    \qquad t>0.
+	    :label: eq.LaplaceRes
 
-Ef :math:`f` er samfellt, þá er
+	Ef :math:`f` er samfellt, þá er
 
-.. math::
-    f(t)= \sum_{\alpha\in A}{{\operatorname{Res}}}(e^{\zeta t}{{\cal L}}f(\zeta),\alpha).
+	.. math::
+	    f(t)= \sum_{\alpha\in A}{{\operatorname{Res}}}(e^{\zeta t}{{\cal L}}f(\zeta),\alpha).
 
 
 Andhverfar Laplace-myndir og afleiðujöfnur
@@ -1036,66 +1116,44 @@ Nú samkvæmt :ref:`setningunni<LaplaceRes>`, getum við reiknað út Green-fall
     :label: eq.GreenLaplace
 
 
-Sýnidæmi
-~~~~~~~~
+Dæmi
+~~~~
 
-Lítum á afleiðujöfnu
+.. admonition:: Dæmi
+	:class: daemi
 
-.. math::
-    P(D)u=(D^4-2 D^3+2 D^2-2 D+1)u=f(t)
+	Lítum á afleiðujöfnu
 
-með óhliðruðu upphafsskilyrðunum
+	.. math::
+	    P(D)u=(D^4-2 D^3+2 D^2-2 D+1)u=f(t)
 
-.. math::
-    u(0)=\dots=u^{(3)}(0)=0.
+	með óhliðruðu upphafsskilyrðunum
 
-
-Við reiknum út Green-fallið með því að nota Laplace-ummyndun og leifareikning. Samkvæmt formúlunni :eq:`eq.GreenLaplace`,  þurfum við að reikna kennimargliðuna :math:`P(\zeta)`. Þá er
-
-.. math::
-    P(\zeta)= \zeta^ 4-2\zeta^ 3+2\zeta^ 2-2\zeta+1 = (\zeta-1)^ 2(\zeta-i)(\zeta+i).
-
-:math:`{1\over P(\zeta)}` hefur skaut í :math:`1, i, -i`, og við fáum
-
-.. math::
-    \begin{aligned}
-    g(t)&= \sum\limits_{\alpha=1,i,-i} {{\operatorname{Res}}}\bigg(\dfrac{e^{\zeta t}}
-    {(\zeta-1)^ 2(\zeta-i)(\zeta+i)},\alpha\bigg)\\
-    &= \left.\dfrac d{d\zeta} \dfrac{e^{\zeta t}}{(\zeta-i)(\zeta+i)}
-    \right|_{\zeta=1} + \dfrac{e^{it}}{(i-1)^ 2(2i)} +
-    \dfrac{e^{-it}}{(-i-1)^ 2(-2i)}\\
-    &= \left.\dfrac{te^{\zeta t}}{\zeta^ 2+1}\right|_{\zeta=1}
-    +\left.\dfrac{e^{\zeta t}(-2\zeta)}{(\zeta^ 2+1)^ 2}\right|_{\zeta=1}
-    +\dfrac{e^{it}}4+\dfrac{e^{-it}}4\\
-    &=\tfrac 12 te^ t -\tfrac 12 e^ t +\tfrac 12\cos t.\end{aligned}
+	.. math::
+	    u(0)=\dots=u^{(3)}(0)=0.
 
 
-Að lokum er lausnin gefin með
+	Við reiknum út Green-fallið með því að nota Laplace-ummyndun og leifareikning. Samkvæmt formúlunni :eq:`eq.GreenLaplace`,  þurfum við að reikna kennimargliðuna :math:`P(\zeta)`. Þá er
 
-.. math::
-    u(t) = \int_0^t G(t,\tau) f(\tau) d\tau = \int_0^t \left(\tfrac 12 (t-\tau)e^{(t-\tau)} -\tfrac 12 e^{(t-\tau)} +\tfrac 12\cos (t-\tau)\right) f(\tau) d\tau
+	.. math::
+	    P(\zeta)= \zeta^ 4-2\zeta^ 3+2\zeta^ 2-2\zeta+1 = (\zeta-1)^ 2(\zeta-i)(\zeta+i).
 
+	:math:`{1\over P(\zeta)}` hefur skaut í :math:`1, i, -i`, og við fáum
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.. math::
+	    \begin{aligned}
+	    g(t)&= \sum\limits_{\alpha=1,i,-i} {{\operatorname{Res}}}\bigg(\dfrac{e^{\zeta t}}
+	    {(\zeta-1)^ 2(\zeta-i)(\zeta+i)},\alpha\bigg)\\
+	    &= \left.\dfrac d{d\zeta} \dfrac{e^{\zeta t}}{(\zeta-i)(\zeta+i)}
+	    \right|_{\zeta=1} + \dfrac{e^{it}}{(i-1)^ 2(2i)} +
+	    \dfrac{e^{-it}}{(-i-1)^ 2(-2i)}\\
+	    &= \left.\dfrac{te^{\zeta t}}{\zeta^ 2+1}\right|_{\zeta=1}
+	    +\left.\dfrac{e^{\zeta t}(-2\zeta)}{(\zeta^ 2+1)^ 2}\right|_{\zeta=1}
+	    +\dfrac{e^{it}}4+\dfrac{e^{-it}}4\\
+	    &=\tfrac 12 te^ t -\tfrac 12 e^ t +\tfrac 12\cos t.\end{aligned}
 
 
+	Að lokum er lausnin gefin með
 
-
-
-
-
-
-
+	.. math::
+	    u(t) = \int_0^t G(t,\tau) f(\tau) d\tau = \int_0^t \left(\tfrac 12 (t-\tau)e^{(t-\tau)} -\tfrac 12 e^{(t-\tau)} +\tfrac 12\cos (t-\tau)\right) f(\tau) d\tau

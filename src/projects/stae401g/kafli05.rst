@@ -188,69 +188,72 @@ Sýnidæmi
 ~~~~~~~~
 .. _example-5.1.1:
 
-Við lítum á eftirfarandi jaðargildisverkefni:
+.. admonition:: Dæmi
+	:class: daemi
 
-.. math::
-    \begin{cases}
-    &\left(x^2+1\right) u''(x)-2 x u'(x)+2 u(x)=1,\qquad  x \in ]0,1[\\
-    &u'(0)+u(0)=0,\\
-    &u(1)=1.
-    \end{cases}
+	Við lítum á eftirfarandi jaðargildisverkefni:
 
-
-Fyrst skiptum við bilinu jafnt í tvo hluta,  þ.e.
-
-.. math::
-    x_0=0, \qquad x_1= 1/2 , \qquad x_2 = 1, \qquad N=2, \qquad h={1 \over 2},
-
-og við notum nálgunarjöfnurnar :eq:`eq.firstapprox`, og þá fáum við
-
-.. math::
-    \begin{cases}
-    & 2 c_1-c_0=0, \\
-    & c_2-1=0,\\
-    & 6 c_0-8 c_1+4 c_2=1
-    \end{cases}
-
-sem gefur okkur
-
-.. math::
-    c_0= -{3\over 2}, \qquad c_1 = -{3\over 4}, \qquad c_2 =1.
+	.. math::
+	    \begin{cases}
+	    &\left(x^2+1\right) u''(x)-2 x u'(x)+2 u(x)=1,\qquad  x \in ]0,1[\\
+	    &u'(0)+u(0)=0,\\
+	    &u(1)=1.
+	    \end{cases}
 
 
-Ef við veljum :math:`N=4`, þ.e.
+	Fyrst skiptum við bilinu jafnt í tvo hluta,  þ.e.
 
-.. math::
-    x_0=0, \quad x_1= 1/4 , \quad x_2 = 1/2, \quad x_3 = 3/4,  \quad x_4 = 1, \qquad N=4, ~~h={1 \over 4},
+	.. math::
+	    x_0=0, \qquad x_1= 1/2 , \qquad x_2 = 1, \qquad N=2, \qquad h={1 \over 2},
+
+	og við notum nálgunarjöfnurnar :eq:`eq.firstapprox`, og þá fáum við
+
+	.. math::
+	    \begin{cases}
+	    & 2 c_1-c_0=0, \\
+	    & c_2-1=0,\\
+	    & 6 c_0-8 c_1+4 c_2=1
+	    \end{cases}
+
+	sem gefur okkur
+
+	.. math::
+	    c_0= -{3\over 2}, \qquad c_1 = -{3\over 4}, \qquad c_2 =1.
 
 
-þá fáum við
+	Ef við veljum :math:`N=4`, þ.e.
 
-.. math::
-    \begin{cases}
-    & 3 c_0 -4 c_1=0, \\
-    & c_4 =1,\\
-    & -18 c_0+32 c_1-16 c_2=-1, \\
-    & 22 c_1 -38 c_2+18 c_3=1, \\
-    & 28 c_2-48 c_3+22 c_4 =1.
-    \end{cases}
+	.. math::
+	    x_0=0, \quad x_1= 1/4 , \quad x_2 = 1/2, \quad x_3 = 3/4,  \quad x_4 = 1, \qquad N=4, ~~h={1 \over 4},
 
-Lausnin er
 
-.. math::
-    c_0=-{5\over 6},~~ c_1=-{5\over 8}, ~~ c_2 = -{1 \over 4},~~ c_3 = {7\over 24}, ~~ c_4 = 1.
+	þá fáum við
 
-.. figure:: ./Drawings/fig-difference-method.png
-    :width: 85 %
-    :align: center
+	.. math::
+	    \begin{cases}
+	    & 3 c_0 -4 c_1=0, \\
+	    & c_4 =1,\\
+	    & -18 c_0+32 c_1-16 c_2=-1, \\
+	    & 22 c_1 -38 c_2+18 c_3=1, \\
+	    & 28 c_2-48 c_3+22 c_4 =1.
+	    \end{cases}
 
-    *Lausnir fyrir* :math:`N=4, 10, 100` *og lausn* :math:`u(x)={1 \over 2} (2 x^2+x-1).`
+	Lausnin er
 
-.. figure:: ./Drawings/error-difference-method.png
-    :width: 85 %
-    :align: center
+	.. math::
+	    c_0=-{5\over 6},~~ c_1=-{5\over 8}, ~~ c_2 = -{1 \over 4},~~ c_3 = {7\over 24}, ~~ c_4 = 1.
 
-    *Skekkjan* :math:`|u_j-c_j|`  *í*  :math:`x=1/2`  *sem fall af*  :math:`N`.
+	.. figure:: ./Drawings/fig-difference-method.png
+	    :width: 85 %
+	    :align: center
+
+	*Lausnir fyrir* :math:`N=4, 10, 100` *og lausn* :math:`u(x)={1 \over 2} (2 x^2+x-1).`
+
+	.. figure:: ./Drawings/error-difference-method.png
+	    :width: 85 %
+	    :align: center
+
+	    *Skekkjan* :math:`|u_j-c_j|`  *í*  :math:`x=1/2`  *sem fall af*  :math:`N`.
 
 
 
@@ -471,57 +474,58 @@ Sýnidæmi
 ~~~~~~~~
 .. _example-5.2.1:
 
+.. admonition:: Dæmi
+	:class: daemi
 
-Við endurtökum nú sýnidæmi :ref:`5.1.1 <example-5.1.1>`.
-Við sjáum að
+	Við endurtökum nú sýnidæmi :ref:`5.1.1 <example-5.1.1>`.
+	Við sjáum að
 
-.. math::
-    & p(x)=\frac{1}{x^2+1}, \quad q(x)=-\frac{2}{\left(x^2+1\right)^2},\quad \rho=-\frac{1}{\left(x^2+1\right)^2}, \\
-    & \mathcal L u = {1\over \rho} \left( -(p u^\prime)^\prime +q u\right) = \widetilde{f}, \\
-    & \Rightarrow \left( -(p u^\prime)^\prime +q u\right) = \rho \widetilde{f} := f,
+	.. math::
+	    & p(x)=\frac{1}{x^2+1}, \quad q(x)=-\frac{2}{\left(x^2+1\right)^2},\quad \rho=-\frac{1}{\left(x^2+1\right)^2}, \\
+	    & \mathcal L u = {1\over \rho} \left( -(p u^\prime)^\prime +q u\right) = \widetilde{f}, \\
+	    & \Rightarrow \left( -(p u^\prime)^\prime +q u\right) = \rho \widetilde{f} := f,
 
-þar sem :math:`f(x)= -\frac{1}{\left(x^2+1\right)^2}`.
-Þá er jaðargildisverkefnið af gerðinni
+	þar sem :math:`f(x)= -\frac{1}{\left(x^2+1\right)^2}`.
+	Þá er jaðargildisverkefnið af gerðinni
 
-.. math::
-    \begin{cases}
-    u''(x)-\frac{2 x u'(x)}{x^2+1}+\frac{2 u(x)}{x^2+1}=\frac{1}{x^2+1},\\
-    u'(0)+u(0)=0,\\
-    u(1)=1.
-    \end{cases}
+	.. math::
+	    \begin{cases}
+	    u''(x)-\frac{2 x u'(x)}{x^2+1}+\frac{2 u(x)}{x^2+1}=\frac{1}{x^2+1},\\
+	    u'(0)+u(0)=0,\\
+	    u(1)=1.
+	    \end{cases}
 
-Við notum nálgunarformúlurnar að ofan fyrir :math:`N=4`.
-Athugum að
+	Við notum nálgunarformúlurnar að ofan fyrir :math:`N=4`.
+	Athugum að
 
-.. math::
-    & x_0= 0, ~~ x_1= \frac{1}{4}, ~~ x_2=\frac{1}{2}, ~~ x_3=\frac{3}{4}, ~~ x_4=1,\\
-    & m_0=\frac{1}{8}, ~~ m_1=\frac{3}{8}, ~~ m_2=\frac{5}{8}, ~~ m_3=\frac{7}{8}.
+	.. math::
+	    & x_0= 0, ~~ x_1= \frac{1}{4}, ~~ x_2=\frac{1}{2}, ~~ x_3=\frac{3}{4}, ~~ x_4=1,\\
+	    & m_0=\frac{1}{8}, ~~ m_1=\frac{3}{8}, ~~ m_2=\frac{5}{8}, ~~ m_3=\frac{7}{8}.
 
-Línulega hneppið er
+	Línulega hneppið er
 
-.. math::
-    \begin{cases}
-    1398 c_0-2048 c_1=-65, \\
-    c_4=1, \\
-    84388 c_0-150038 c_1+75140 c_2=4745,\\
-    142400 c_1-246206 c_2+116800 c_3=6497,
-    \\
-    282500 c_2-484886 c_3+222500 c_4 =10057,
-    \end{cases}
+	.. math::
+	    \begin{cases}
+	    1398 c_0-2048 c_1=-65, \\
+	    c_4=1, \\
+	    84388 c_0-150038 c_1+75140 c_2=4745,\\
+	    142400 c_1-246206 c_2+116800 c_3=6497,
+	    \\
+	    282500 c_2-484886 c_3+222500 c_4 =10057,
+	    \end{cases}
 
-sem gefur okkur
+	sem gefur okkur
 
-.. math::
-    c_0= -0.4895, c_1=-0.3024, c_2= 0.0091,
-    c_3= 0.4434, c_4= 1.
+	.. math::
+	    c_0= -0.4895, c_1=-0.3024, c_2= 0.0091,
+	    c_3= 0.4434, c_4= 1.
 
-Er þetta betra en í dæmi :ref:`5.1.1 <example-5.1.1>`? Skoðum myndina.
+	Er þetta betra en í dæmi :ref:`5.1.1 <example-5.1.1>`? Skoðum myndina.
 
 
-.. image:: ./Drawings/comparison-51vs52.png
-    :width: 85 %
-    :align: center
-
+	.. image:: ./Drawings/comparison-51vs52.png
+	    :width: 85 %
+	    :align: center
 
 
 Línuleg brúun og þúfugrunnföll
@@ -595,7 +599,7 @@ Athugum að föllin :math:`\varphi_j(x)` eru samfelld á :math:`[a,b]`.
     :width: 85 %
     :align: center
 
-    *Nálgunarföllin* :math:`v` *fyrir dæmin* :ref:`5.1.1<example-5.1.1>` *og* :ref:`5.2.1<example-5.2.1>`. *Hér* :math:`N=4`. 
+    *Nálgunarföllin* :math:`v` *fyrir dæmin* :ref:`5.1.1<example-5.1.1>` *og* :ref:`5.2.1<example-5.2.1>`. *Hér* :math:`N=4`.
 
 
 Mismunaaðferð fyrir hlutaafleiðujöfnur
@@ -858,7 +862,7 @@ Að lokum að lokum setjum við saman alla liði og þá er
     =f_j+2h^{-1}\tfrac{\gamma_j}{\beta_j}
     :label: eq.approx2s
 
-**Samantekt** 
+**Samantekt**
 
 Til þess að nálga lausnagildi á jaðargildisverkefninu :eq:`eq.pde1` getum við leyst eftirfarandi  jöfnuhneppi:
 
@@ -899,138 +903,143 @@ Fyrir :math:`(x_j, y_j)\in \partial D_1`:
 Sýnidæmi: Dirichlet-verkefni á ferningi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`D` vera  :math:`D=\{(x,y)\,;\, 0<x<1, 0<y<1\}`. Við viljum  leysa Dirichlet-verkefnið yfir :math:`D`:
+.. admonition:: Dæmi
+	:class: daemi
 
-.. math::
-    \begin{cases}
-    -\nabla^2u+qu=f,&\text{í } D,\\
-    u(x,y)=\gamma(x,y),& (x,y)\in \partial D.
-    \end{cases}
+	Látum :math:`D` vera  :math:`D=\{(x,y)\,;\, 0<x<1, 0<y<1\}`. Við viljum  leysa Dirichlet-verkefnið yfir :math:`D`:
 
-Hér erum við í sértilfellinu þegar :math:`p=1`, og :math:`\partial D_2` er ekki til.
+	.. math::
+	    \begin{cases}
+	    -\nabla^2u+qu=f,&\text{í } D,\\
+	    u(x,y)=\gamma(x,y),& (x,y)\in \partial D.
+	    \end{cases}
 
-Setjum :math:`h={1\over 3}`. Við röðum punktum þ.a. punktar :math:`(x_j,y_j)` fyrir :math:`j=1, \dots, 4` eru innri punktar og :math:`(x_j,y_j)` fyrir :math:`j=5,\dots, 16` eru jaðarpunktar. Við sjáum þetta á eftirfarandi mynd
+	Hér erum við í sértilfellinu þegar :math:`p=1`, og :math:`\partial D_2` er ekki til.
 
-.. image:: ./Drawings/Dirichlet-example.png
-    :width: 45 %
-    :align: center
+	Setjum :math:`h={1\over 3}`. Við röðum punktum þ.a. punktar :math:`(x_j,y_j)` fyrir :math:`j=1, \dots, 4` eru innri punktar og :math:`(x_j,y_j)` fyrir :math:`j=5,\dots, 16` eru jaðarpunktar. Við sjáum þetta á eftirfarandi mynd
 
-
-Fyrir punkta :math:`(x_j,y_j)` með :math:`j=1, \dots, 4`, notum við nálgunarjöfnur :eq:`eq.approx1s`, og þá er
-
-.. math::
-    \begin{aligned}
-    (36+q_1)c_1-9c_2-9c_3-9c_6-9c_9&=f_1,\\
-    (36+q_2)c_2-9c_1-9c_4-9c_7-9c_{10}&=f_2,\\
-    (36+q_3)c_3-9c_1-9c_4-9c_{11}-9c_{14}&=f_3,\\
-    (36+q_4)c_4-9c_2-9c_3-9c_{12}-9c_{15}&=f_4.\\\end{aligned}
+	.. image:: ./Drawings/Dirichlet-example.png
+	    :width: 45 %
+	    :align: center
 
 
-Fyrir punkta :math:`(x_j,y_j)` með  :math:`j=5,\dots, 16`, notum við nálgunarjöfnur :eq:`eq.approx2s`, og þá er
+	Fyrir punkta :math:`(x_j,y_j)` með :math:`j=1, \dots, 4`, notum við nálgunarjöfnur :eq:`eq.approx1s`, og þá er
 
-.. math::
-    c_j = \gamma_j.
+	.. math::
+	    \begin{aligned}
+	    (36+q_1)c_1-9c_2-9c_3-9c_6-9c_9&=f_1,\\
+	    (36+q_2)c_2-9c_1-9c_4-9c_7-9c_{10}&=f_2,\\
+	    (36+q_3)c_3-9c_1-9c_4-9c_{11}-9c_{14}&=f_3,\\
+	    (36+q_4)c_4-9c_2-9c_3-9c_{12}-9c_{15}&=f_4.\\\end{aligned}
 
-Það þýðir að við getum leyst jöfnuhneppið fyrir :math:`c_1, \dots, c_4` og þá höfum við
 
-.. math::
-    \left[  \begin{matrix}
-    36+q_1&-9&-9& 0\\
-    -9&36+q_2&0&-9\\
-    -9&0&36+q_3&-9\\
-    0&-9&-9&36+q_4\\
-    \end{matrix}\right]
-    \left[
-    \begin{matrix}
-    c_1\\c_2\\c_3\\c_4
-    \end{matrix}
-    \right]
-    =\left[
-    \begin{matrix}
-    f_1+9\gamma_6+9\gamma_9,\\
-    f_2+9\gamma_7+9\gamma_{10},\\
-    f_3+9\gamma_{11}+9\gamma_{14},\\
-    f_4+9\gamma_{12}+9\gamma_{15}.\\
-    \end{matrix}
-    \right].
+	Fyrir punkta :math:`(x_j,y_j)` með  :math:`j=5,\dots, 16`, notum við nálgunarjöfnur :eq:`eq.approx2s`, og þá er
+
+	.. math::
+	    c_j = \gamma_j.
+
+	Það þýðir að við getum leyst jöfnuhneppið fyrir :math:`c_1, \dots, c_4` og þá höfum við
+
+	.. math::
+	    \left[  \begin{matrix}
+	    36+q_1&-9&-9& 0\\
+	    -9&36+q_2&0&-9\\
+	    -9&0&36+q_3&-9\\
+	    0&-9&-9&36+q_4\\
+	    \end{matrix}\right]
+	    \left[
+	    \begin{matrix}
+	    c_1\\c_2\\c_3\\c_4
+	    \end{matrix}
+	    \right]
+	    =\left[
+	    \begin{matrix}
+	    f_1+9\gamma_6+9\gamma_9,\\
+	    f_2+9\gamma_7+9\gamma_{10},\\
+	    f_3+9\gamma_{11}+9\gamma_{14},\\
+	    f_4+9\gamma_{12}+9\gamma_{15}.\\
+	    \end{matrix}
+	    \right].
 
 
 Sýnidæmi: Jaðargildisverkefni á ferningi með blandað jaðarskilyrði
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. admonition:: Dæmi
+	:class: daemi
 
-Lítum nú á jaðargildisverkefni á :math:`D=\{(x,y)\,;\, 0<x<1, 0<y<1\}`
+	Lítum nú á jaðargildisverkefni á :math:`D=\{(x,y)\,;\, 0<x<1, 0<y<1\}`
 
-.. math::
-    \begin{cases}
-    -\nabla^2u+qu=f,&\text{í } D,\\
-    u(x,y)=\gamma(x,y),& (x,y)\in \partial D_1,\\
-    \alpha(x,y)u(x,y)+\dfrac{\partial u}{\partial n}(x,y)
-    =\gamma(x,y),& (x,y)\in \partial D_2,
-    \end{cases}
+	.. math::
+	    \begin{cases}
+	    -\nabla^2u+qu=f,&\text{í } D,\\
+	    u(x,y)=\gamma(x,y),& (x,y)\in \partial D_1,\\
+	    \alpha(x,y)u(x,y)+\dfrac{\partial u}{\partial n}(x,y)
+	    =\gamma(x,y),& (x,y)\in \partial D_2,
+	    \end{cases}
 
-þar sem
+	þar sem
 
-.. math::
-    \begin{aligned}
-    \partial D_1  &= \{(x,y)\,;\, 0<x<1, 0=y, y=1,~~ \text{og} \quad 0<y<1, x=0 \},\\
-    \partial D_2 &= \{(x,y)\,;\, 0<y<1, x=1\}.
-    \end{aligned}
+	.. math::
+	    \begin{aligned}
+	    \partial D_1  &= \{(x,y)\,;\, 0<x<1, 0=y, y=1,~~ \text{og} \quad 0<y<1, x=0 \},\\
+	    \partial D_2 &= \{(x,y)\,;\, 0<y<1, x=1\}.
+	    \end{aligned}
 
-Athugum að hér er :math:`p=1` og :math:`\beta=1`.
-Setjum :math:`h={1\over 3}`, og röðum punktum þ.a. :math:`(x_j,y_j)` fyrir :math:`j=1,\dots, 6` eru í :math:`\partial D_2` og :math:`(x_j,y_j)` fyrir :math:`j=7, \dots, 16` eru í :math:`\partial D_1`. Við sjáum þetta á eftirfarandi mynd
+	Athugum að hér er :math:`p=1` og :math:`\beta=1`.
+	Setjum :math:`h={1\over 3}`, og röðum punktum þ.a. :math:`(x_j,y_j)` fyrir :math:`j=1,\dots, 6` eru í :math:`\partial D_2` og :math:`(x_j,y_j)` fyrir :math:`j=7, \dots, 16` eru í :math:`\partial D_1`. Við sjáum þetta á eftirfarandi mynd
 
-.. image:: ./Drawings/mixed-example.png
-    :width: 45 %
-    :align: center
-
-
-
-Fyrir punkta :math:`(x_j,y_j)` með  :math:`j=7,\dots, 16`, þá er
-
-.. math::
-    c_j = \gamma_j.
+	.. image:: ./Drawings/mixed-example.png
+	    :width: 45 %
+	    :align: center
 
 
-Fyrir punkta :math:`(x_j,y_j)` með :math:`j=1,2,4,5` notum við nálgunarjöfnur :eq:`eq.approx1s`, fyrir punkta :math:`(x_j,y_j)` með :math:`j=3,6` notum við nálgunarjöfnur :eq:`eq.approx2s`, og þá er
 
-.. math::
-    \begin{aligned}
-    (36+q_1)c_1-9c_2-9c_4-9c_8-9c_{11}&=f_1,\\
-    (36+q_2)c_2-9c_1-9c_3-9c_5-9c_{9}&=f_2,\\
-    (36+q_3+6\alpha_3)c_3-18c_2-9c_6-9c_{10}&=f_3+6\gamma_3,\\
-    (36+q_4)c_4-9c_1-9c_5-9c_{12}-9c_{14}&=f_4.\\
-    (36+q_5)c_5-9c_2-9c_4-9c_{6}-9c_{15}&=f_5.\\
-    (36+q_6+6\alpha_6)c_6-9c_3-18c_{5}-9c_{16}&=f_6+6\gamma_6.\\
-    \end{aligned}
+	Fyrir punkta :math:`(x_j,y_j)` með  :math:`j=7,\dots, 16`, þá er
 
-Við getum skrifað þetta með fylkjajöfnu
+	.. math::
+	    c_j = \gamma_j.
 
-.. math::
-    \begin{gathered}
-    \left[  \begin{matrix}
-    36+q_1&-9&0&-9& 0& 0\\
-    -9&36+q_2&-9&0&-9&0\\
-    0&-18&36+q_3+6\alpha_3&0&0&-9\\
-    -9&0&0&36+q_4&-9&0\\
-    0&-9&0&-9&36+q_5&-9\\
-    0&0&-9&0&-18&36+q_6+6\alpha_6\\
-    \end{matrix}\right]
-    \left[
-    \begin{matrix}
-    c_1\\c_2\\c_3\\c_4 \\ c_5 \\ c_6
-    \end{matrix}
-    \right]\\
-    =\left[
-    \begin{matrix}
-    f_1+9\gamma_8+9\gamma_{11}\\
-    f_2+9\gamma_{9}\\
-    f_3+9\gamma_{10}+6\gamma_3\\
-    f_4+9\gamma_{12}+9\gamma_{14}\\
-    f_5+9\gamma_{15}\\
-    f_6+9\gamma_{16}+6\gamma_6\\
-    \end{matrix}
-    \right].\end{gathered}
+
+	Fyrir punkta :math:`(x_j,y_j)` með :math:`j=1,2,4,5` notum við nálgunarjöfnur :eq:`eq.approx1s`, fyrir punkta :math:`(x_j,y_j)` með :math:`j=3,6` notum við nálgunarjöfnur :eq:`eq.approx2s`, og þá er
+
+	.. math::
+	    \begin{aligned}
+	    (36+q_1)c_1-9c_2-9c_4-9c_8-9c_{11}&=f_1,\\
+	    (36+q_2)c_2-9c_1-9c_3-9c_5-9c_{9}&=f_2,\\
+	    (36+q_3+6\alpha_3)c_3-18c_2-9c_6-9c_{10}&=f_3+6\gamma_3,\\
+	    (36+q_4)c_4-9c_1-9c_5-9c_{12}-9c_{14}&=f_4.\\
+	    (36+q_5)c_5-9c_2-9c_4-9c_{6}-9c_{15}&=f_5.\\
+	    (36+q_6+6\alpha_6)c_6-9c_3-18c_{5}-9c_{16}&=f_6+6\gamma_6.\\
+	    \end{aligned}
+
+	Við getum skrifað þetta með fylkjajöfnu
+
+	.. math::
+	    \begin{gathered}
+	    \left[  \begin{matrix}
+	    36+q_1&-9&0&-9& 0& 0\\
+	    -9&36+q_2&-9&0&-9&0\\
+	    0&-18&36+q_3+6\alpha_3&0&0&-9\\
+	    -9&0&0&36+q_4&-9&0\\
+	    0&-9&0&-9&36+q_5&-9\\
+	    0&0&-9&0&-18&36+q_6+6\alpha_6\\
+	    \end{matrix}\right]
+	    \left[
+	    \begin{matrix}
+	    c_1\\c_2\\c_3\\c_4 \\ c_5 \\ c_6
+	    \end{matrix}
+	    \right]\\
+	    =\left[
+	    \begin{matrix}
+	    f_1+9\gamma_8+9\gamma_{11}\\
+	    f_2+9\gamma_{9}\\
+	    f_3+9\gamma_{10}+6\gamma_3\\
+	    f_4+9\gamma_{12}+9\gamma_{14}\\
+	    f_5+9\gamma_{15}\\
+	    f_6+9\gamma_{16}+6\gamma_6\\
+	    \end{matrix}
+	    \right].\end{gathered}
 
 Almenn mismunaaðferð á rétthyrningi
 -----------------------------------
@@ -1123,16 +1132,22 @@ Til þess að byggja upp jöfnuhneppi :math:`A{\mathbf c}={\mathbf b}` sem nálg
 Þegar við höfum reiknað út fylkið :math:`A` og vigurinn :math:`b`, þá getum við notað t.d. Matlab, (eða Octave eða Mathematica eða Maple...), til þess að fá nágunargildin :math:`c_i`.
 T.d. getum við skrifað í Matlab:
 
-| S=sparse(A); c=S\ b;
-|
+.. code-block::
+
+	S=sparse(A);
+	c=S\ b;
+
 
 Það er líka gott að teikna graf lausnarinnar.
 T.d. getum við skrifað í Matlab:
 
-| surf(x,y,W’)
-|
+.. code-block::
+
+	surf(x,y,W’)
+
 
 og jafnhæðarlínur hennar má teikna með:
 
-| contour(x,y,W’)
-|
+.. code-block::
+
+	contour(x,y,W’)

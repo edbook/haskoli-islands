@@ -292,8 +292,10 @@ Af hverju? Aðalatriðið er að mismunurinn er lágmarkaður ef hann er þverst
     {{\langle L(v-u),\varphi_j\rangle}}=0.
 
 
-.. attention::
-    Föllin :math:`\varphi_j~j=1, \dots, N` þurfa að vera línulega óháð! Annars hefur fylkið í :eq:`eq.matrixG1d` ekki max stétt!
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Föllin :math:`\varphi_j~j=1, \dots, N` þurfa að vera línulega óháð! Annars hefur fylkið í :eq:`eq.matrixG1d` ekki max stétt!
 
 
 
@@ -579,7 +581,7 @@ sem gefur okkur jöfnuhneppið á fylkjaformi:
 ~~~~~~~~~~~~
 
 Við skoðum nú :eq:`eq.weakform1d` í ólíkum tilfellum.
-Munið samkvæmt kafla :ref:`6.1.2<ch-6.1.2>`, höfum við almennt 
+Munið samkvæmt kafla :ref:`6.1.2<ch-6.1.2>`, höfum við almennt
 
 .. math::
     {{\langle u,\varphi\rangle}}_L + p(a)u'(a)\varphi(a)-p(b)u'(b)\varphi(b)
@@ -592,7 +594,7 @@ I. **Dirichlet-jaðarskilyrði**
 
 Þá er verkefnið eins og :eq:`eq.diri1` sem við  fjölluðum um í :ref:`6.2.1<ch-6.2.1>`. Þá veljum við :math:`\psi_0` þ.a. :math:`\psi_0(a)=\gamma_1/\alpha_1` og :math:`\psi_0(b)=\gamma_2/\alpha_2`.
 
-Hér skilgreinum við mengi falla 
+Hér skilgreinum við mengi falla
 
 .. math::
     V_B=\{\varphi\in V\,;\, \varphi(a)=\varphi(b)=0\},
@@ -634,7 +636,7 @@ og notum jaðarskilyrði í hægri endapunkti til þess að einfalda tvílínule
     ={{\langle f,\varphi\rangle}}
     +\dfrac{p(b)\gamma_2}{\beta_2}\varphi(b), ~~~ \varphi\in V_B.
 
-Ef við berum jöfnuna að ofan saman við jöfnu :eq:`eq.weakform1d`,  sjáum við að 
+Ef við berum jöfnuna að ofan saman við jöfnu :eq:`eq.weakform1d`,  sjáum við að
 
 .. math::
     {{\langle \varphi,\psi\rangle}}_{L,B}={{\langle \varphi,\psi\rangle}}_L
@@ -795,97 +797,100 @@ og
 Sýnidæmi
 ~~~~~~~~
 
-Lítum á eftirfarandi jaðargildisverkefni
+.. admonition:: Dæmi
+	:class: daemi
 
-.. math::
-    \begin{cases}
-    -\nabla^2 u= -\dfrac{\partial^2 u}{\partial x^2 }-\dfrac{\partial^2 u}{\partial y^2 }=1 &\text{á } \ D,\\
-    u(x,0)=1-x, &0<x<1,\\
-    \dfrac{\partial u}{\partial n}(0,y)=1-y, &0<y<1,\\
-    \dfrac{\partial u}{\partial n}(x,1-x)+u(x,1-x)=0, &0<x<1,
-    \end{cases}
-    :label: eq.example2d
+	Lítum á eftirfarandi jaðargildisverkefni
 
-þar sem :math:`D` er
+	.. math::
+	    \begin{cases}
+	    -\nabla^2 u= -\dfrac{\partial^2 u}{\partial x^2 }-\dfrac{\partial^2 u}{\partial y^2 }=1 &\text{á } \ D,\\
+	    u(x,0)=1-x, &0<x<1,\\
+	    \dfrac{\partial u}{\partial n}(0,y)=1-y, &0<y<1,\\
+	    \dfrac{\partial u}{\partial n}(x,1-x)+u(x,1-x)=0, &0<x<1,
+	    \end{cases}
+	    :label: eq.example2d
 
-.. math::
-    D=\{(x,y)\, ;\, 0<x<1, 0<y<1-x\}.
+	þar sem :math:`D` er
 
-Hér höfum við að
+	.. math::
+	    D=\{(x,y)\, ;\, 0<x<1, 0<y<1-x\}.
 
-.. math::
-    &&\partial D_1 =\{(x,0)\, ;\, 0\leq x\leq 1\},\\
-    &&\partial D_2 =\{(0,y)\, ;\, 0<y\leq 1\}\cup \{(x,1-x)\, ;\, 0< x<1\}.
+	Hér höfum við að
 
-Við viljum nota aðferð Galerkins til þess að ákvarða nálgunarlausn af gerðinni
+	.. math::
+	    &&\partial D_1 =\{(x,0)\, ;\, 0\leq x\leq 1\},\\
+	    &&\partial D_2 =\{(0,y)\, ;\, 0<y\leq 1\}\cup \{(x,1-x)\, ;\, 0< x<1\}.
 
-.. math::
-    v(x,y)=a+bx+cy+dxy.
+	Við viljum nota aðferð Galerkins til þess að ákvarða nálgunarlausn af gerðinni
 
-Við byrjum á að skoða Dirichlet skilyrði í :math:`\partial D_1`, og við veljum fallið :math:`\psi_0` þ.a. :math:`\psi_0(x,0)=1-x`, fyrir :math:`x\in [0,1]`.
-Þá getum við valið
+	.. math::
+	    v(x,y)=a+bx+cy+dxy.
 
-.. math::
-    \psi_0(x,y)=1-x, \qquad (x,y)\in \bar D.
+	Við byrjum á að skoða Dirichlet skilyrði í :math:`\partial D_1`, og við veljum fallið :math:`\psi_0` þ.a. :math:`\psi_0(x,0)=1-x`, fyrir :math:`x\in [0,1]`.
+	Þá getum við valið
 
-Nú veljum við :math:`\varphi` þ.a. :math:`\varphi(x,0)=0`, fyrir :math:`x\in [0,1]`, þ.e.a.s.
+	.. math::
+	    \psi_0(x,y)=1-x, \qquad (x,y)\in \bar D.
 
-.. math::
-    V_B=\{ \varphi\in C^2(\bar D)~~: ~~\varphi(x,y)=0 \quad (x,y)\in \partial D_1 \}.
+	Nú veljum við :math:`\varphi` þ.a. :math:`\varphi(x,0)=0`, fyrir :math:`x\in [0,1]`, þ.e.a.s.
 
-Við þurfum að velja :math:`\varphi`, en með þetta val á fallinu :math:`\psi_0`, er það jafngilt að setja :math:`a=1` og :math:`b=-1`. Það vantar bara að velja föll :math:`\varphi_1, \varphi_2`, sem þurfa að vera núll á jaðrinum :math:`\partial D_1`.
-Við sjáum að einliður :math:`y` og :math:`x y` eru núll á jaðrinum :math:`\partial D_1`, þá getum við tekið
+	.. math::
+	    V_B=\{ \varphi\in C^2(\bar D)~~: ~~\varphi(x,y)=0 \quad (x,y)\in \partial D_1 \}.
 
-.. math::
-    \varphi_1 (x,y)=y , \qquad \varphi_2(x,y)= x y.
+	Við þurfum að velja :math:`\varphi`, en með þetta val á fallinu :math:`\psi_0`, er það jafngilt að setja :math:`a=1` og :math:`b=-1`. Það vantar bara að velja föll :math:`\varphi_1, \varphi_2`, sem þurfa að vera núll á jaðrinum :math:`\partial D_1`.
+	Við sjáum að einliður :math:`y` og :math:`x y` eru núll á jaðrinum :math:`\partial D_1`, þá getum við tekið
 
-Við beitum :eq:`eq.weakformR2`, en fyrst skoðum við jaðarliði í :eq:`eq.weakformR2`.
-Athugum að :math:`p(x,y)=1`,  :math:`\alpha(0,y)=0` fyrir :math:`y\in ]0,1]`, og :math:`\gamma(x,1-x)=0` fyrir :math:`x\in ]0,1[`, þá er
+	.. math::
+	    \varphi_1 (x,y)=y , \qquad \varphi_2(x,y)= x y.
 
-.. math::
-    && \int_{\partial D_2} p \dfrac{\alpha v}{\beta} \varphi ds=
-    \sqrt 2 \int_0^1 v(x,1-x) \varphi(x,1-x)dx, \\
-    && \int_{\partial D_2} p \dfrac{\gamma}{\beta} \varphi ds= \int_0^1 (1-y)\varphi(0,y)dy.
+	Við beitum :eq:`eq.weakformR2`, en fyrst skoðum við jaðarliði í :eq:`eq.weakformR2`.
+	Athugum að :math:`p(x,y)=1`,  :math:`\alpha(0,y)=0` fyrir :math:`y\in ]0,1]`, og :math:`\gamma(x,1-x)=0` fyrir :math:`x\in ]0,1[`, þá er
 
-Athugum að
+	.. math::
+	    && \int_{\partial D_2} p \dfrac{\alpha v}{\beta} \varphi ds=
+	    \sqrt 2 \int_0^1 v(x,1-x) \varphi(x,1-x)dx, \\
+	    && \int_{\partial D_2} p \dfrac{\gamma}{\beta} \varphi ds= \int_0^1 (1-y)\varphi(0,y)dy.
 
-.. math::
-    \nabla \psi_0(x,y)=(-1,0)^T, \quad \nabla \varphi_1(x,y)= (0,1)^T , \quad \nabla \varphi_2(x,y)=(y,x)^T.
+	Athugum að
 
-Fyrir :math:`\varphi_1` verður veika framsetningin :eq:`eq.weakformR2` 
+	.. math::
+	    \nabla \psi_0(x,y)=(-1,0)^T, \quad \nabla \varphi_1(x,y)= (0,1)^T , \quad \nabla \varphi_2(x,y)=(y,x)^T.
 
-.. math::
-    &&\int_D \nabla v \cdot \nabla \varphi_1 dA + \sqrt 2 \int_0^1 v(x,1-x) \varphi_1(x,1-x)dx= \int_D \varphi_1 dA+ \int_0^1 (1-y)\varphi_1(0,y)dy,
-    \\
-    && c_1 \int_D dA+ c_2 \int_D x dA +\sqrt 2 \int_0^1 \left(1+c_1+c_2 x\right)(1-x)^2dx =\int_D y dA + \int_0^1 (1-y)y dy,
+	Fyrir :math:`\varphi_1` verður veika framsetningin :eq:`eq.weakformR2`
 
-sem gefur okkur
+	.. math::
+	    &&\int_D \nabla v \cdot \nabla \varphi_1 dA + \sqrt 2 \int_0^1 v(x,1-x) \varphi_1(x,1-x)dx= \int_D \varphi_1 dA+ \int_0^1 (1-y)\varphi_1(0,y)dy,
+	    \\
+	    && c_1 \int_D dA+ c_2 \int_D x dA +\sqrt 2 \int_0^1 \left(1+c_1+c_2 x\right)(1-x)^2dx =\int_D y dA + \int_0^1 (1-y)y dy,
 
-.. math::
-    c_1(\tfrac 12 +\tfrac{\sqrt 2}{3})+c_2(\tfrac 16 +\tfrac{\sqrt 2}{12})=(\tfrac 13 +\tfrac{\sqrt 2}{3}).
+	sem gefur okkur
 
-Við höldum áfram á svipaðan hátt fyrir :math:`j=2`, þá er
+	.. math::
+	    c_1(\tfrac 12 +\tfrac{\sqrt 2}{3})+c_2(\tfrac 16 +\tfrac{\sqrt 2}{12})=(\tfrac 13 +\tfrac{\sqrt 2}{3}).
 
-.. math::
-    &&\int_D \nabla v \cdot \nabla \varphi_2 dA + \sqrt 2 \int_0^1 v(x,1-x) \varphi_2(x,1-x)dx= \int_D \varphi_2 dA+ \int_0^1 (1-y)\varphi_2(0,y)dy,
-    \\
-    && \int_D (-y)dA+c_1 \int_D x dA+ c_2 \int_D (x^2+y^2) dA +\sqrt 2 \int_0^1 \left(1+c_1+c_2 x\right)x(1-x)^2dx =\int_D x\, y dA,
+	Við höldum áfram á svipaðan hátt fyrir :math:`j=2`, þá er
 
-sem gefur okkur
+	.. math::
+	    &&\int_D \nabla v \cdot \nabla \varphi_2 dA + \sqrt 2 \int_0^1 v(x,1-x) \varphi_2(x,1-x)dx= \int_D \varphi_2 dA+ \int_0^1 (1-y)\varphi_2(0,y)dy,
+	    \\
+	    && \int_D (-y)dA+c_1 \int_D x dA+ c_2 \int_D (x^2+y^2) dA +\sqrt 2 \int_0^1 \left(1+c_1+c_2 x\right)x(1-x)^2dx =\int_D x\, y dA,
 
-.. math::
-    c_1(\tfrac 16 +\tfrac{\sqrt 2}{12})+c_2(\tfrac 16 +\tfrac{\sqrt 2}{30})=(\tfrac{5}{24} -\tfrac{\sqrt 2}{12}).
+	sem gefur okkur
+
+	.. math::
+	    c_1(\tfrac 16 +\tfrac{\sqrt 2}{12})+c_2(\tfrac 16 +\tfrac{\sqrt 2}{30})=(\tfrac{5}{24} -\tfrac{\sqrt 2}{12}).
 
 
-Að lokum fáum við
+	Að lokum fáum við
 
-.. math::
-    c_1=-0.4360,  ~~~~c_2=1.0034,
+	.. math::
+	    c_1=-0.4360,  ~~~~c_2=1.0034,
 
-þá er nálgunarfallið gefið með
+	þá er nálgunarfallið gefið með
 
-.. math::
-    v(x,y)=1-x-0.4360\, y+1.0034\, xy.
+	.. math::
+	    v(x,y)=1-x-0.4360\, y+1.0034\, xy.
 
 
 
@@ -903,7 +908,7 @@ Við skiptum svæðinu :math:`\bar D`  í þríhyrninga, eins og í myndunum að
 .. figure:: ./Drawings/disk-with-trianglegrid.png
     :width: 25 %
     :align: center
-    
+
     *Hálfri skífu skipt í þríhyrninga.*
 
 
@@ -945,8 +950,10 @@ Sérhverjum þríhyrningi er lýst sem mengi
 
 þar sem :math:`(x_A,y_A), (x_B,y_B)` og :math:`(x_C,y_C)` eru hornpunktar þríhyrningsins. Á myndinni sjáum við  t.d. þríhyrninginn með hornpunkta 1, 2, 6, við táknum hann með :math:`T_{1,2,6}`.
 
-.. attention::
-    Röð punktanna skiptir máli hér! Við röðum punktunum *rangsælis* eftir jaðri þríhyrningsins.
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Röð punktanna skiptir máli hér! Við röðum punktunum *rangsælis* eftir jaðri þríhyrningsins.
 
 Athugum líka að
 
@@ -1073,7 +1080,7 @@ Við lítum á :math:`\varphi_A` og :math:`\varphi_B` sem eru skilgreind á :eq:
 4. Athugum að
 
 .. math::
-    \varphi_A(M_{C,B,C})=\varphi_A\left(\tfrac 13(x_A+x_B+x_C),\tfrac 13(y_A+y_B+y_C)\right)=\tfrac 13. 
+    \varphi_A(M_{C,B,C})=\varphi_A\left(\tfrac 13(x_A+x_B+x_C),\tfrac 13(y_A+y_B+y_C)\right)=\tfrac 13.
 
 
 **Ritháttur í kennslubókinni**
@@ -1258,8 +1265,10 @@ af því að :math:`\varphi_\beta(M_{(\beta)})=\tfrac 13`. Athugum að summan h�
 
 af því að :math:`\varphi_\beta(M_{(\beta)})=\tfrac 13`. Aftur, við summun yfir þríhyrninga sem hafa punkt :math:`\beta` fyrir hornpunkt.
 
-.. attention::
-    Í kennslubókinni er heildið að ofan nálgað á eftirfarandi hátt
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Í kennslubókinni er heildið að ofan nálgað á eftirfarandi hátt
 
     .. math::
         \int_{T_{A,B,C}} \psi(x,y)\, dA
@@ -1273,8 +1282,10 @@ Af 2. og 3. leiðir að
     \int_S \left(p \nabla \varphi_\alpha \cdot \nabla \varphi_\beta + q \varphi_\alpha \varphi_\beta\right) dA \approx
     \sum_{T_{\beta}}\left(p(M_{(\beta)}){{\mathbf l}_\alpha\cdot {\mathbf l}_\beta\over 2|d|}+q(M_{(\beta)}){|d|\over 18}\right).
 
-.. attention::
-    Í kennslubókinni er heildið að ofan nálgað á eftirfarandi hátt
+.. admonition:: Athugasemd
+	:class: athugasemd
+
+	Í kennslubókinni er heildið að ofan nálgað á eftirfarandi hátt
 
     .. math::
         \int_{S}\big(p\nabla \varphi_\alpha\cdot \nabla \varphi_\beta
@@ -1362,119 +1373,119 @@ Til þess að reikna út jaðarheildi yfir :math:`\partial S_2` þurfum við að
 Sýnidæmi
 ~~~~~~~~
 
-.. figure:: ./Drawings/triangle-grid-numbers.png
-    :width: 65 %
-    :align: center
+.. admonition:: Dæmi
+	:class: daemi
 
-    *Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
+	.. figure:: ./Drawings/triangle-grid-numbers.png
+	    :align: center
 
-
-Við lítum á Dirichlet jaðarskilyrði, þ.e.
-
-.. math::
-    \begin{cases}
-    -\nabla^2 u +q u= f \qquad D\\
-    u=\gamma \qquad \partial D,
-    \end{cases}
-
-þar sem svæði :math:`D` er :math:`D=\{(x,y)\in \mathbb{R}^2~~: x\in]a, b[, ~~ y\in ]c, d[\}`. Við notum net eins og á myndinni að ofan, eins og við gerðum í :ref:`6.5.1<ch-6.5.1>`.
-
-Hornpunktar :math:`1,2,3,4,5,6,10,11,12,13,14` og 15 eru í :math:`\partial D_1`. Innri punktar eru 7,8 og 9.
-
-Skoðum :math:`\beta=8`. Það eru 6 þríhyrningar sem hafa :math:`\beta=8` fyrir hornpunkt. Það þýðir að þegar við reiknum :math:`a_{\beta=8,\alpha}`, eru einu stök fylkisins sem eru ekki núll þau sem hafa :math:`\alpha=7,3,4,9,13,12`.
-
-Þegar við skiptum bilinu í jafna hluta, eins og við gerðum í :ref:`6.5.1<ch-6.5.1>`, þá er
-
-.. math::
-    area(T)={|d|\over 2} ={h k\over 2},
-
-og
-
-.. math::
-    \int_S \nabla \phi_\beta\cdot \nabla \phi_\beta dA=
-    {1\over 2 h k}\left(2 h^2+2 k^2 +2 (k^2+h^2)\right)=
-    {2\over h k}\left(k^2+h^2\right),
-
-.. math::
-    \int_S q \phi_\beta  \phi_\beta dA= {h k\over 18} \left(q(M_1)+q(M_2)+q(M_3)+q(M_4)+q(M_5)+q(M_6)\right),
-
-þar sem :math:`M_i` eru miðjupunktar fyrir 6 þríhyrninga sem hafa :math:`\beta` fyrir hornpunkt.
+	    *Rétthyrningi skipt í þríhyrninga. Hér er* :math:`N=4` *og* :math:`M=2`.
 
 
-Þetta gefur fyrir :math:`\beta=8`
+	Við lítum á Dirichlet jaðarskilyrði, þ.e.
 
-.. math::
-    a_{\beta,\beta}=\tfrac{2}{h k}(k^2+h^2) +{h k\over 18} \left(q(M_1)+q(M_2)+q(M_3)+q(M_4)+q(M_5)+q(M_6)\right).
+	.. math::
+	    \begin{cases}
+	    -\nabla^2 u +q u= f \qquad D\\
+	    u=\gamma \qquad \partial D,
+	    \end{cases}
 
-Fyrir :math:`\alpha\neq \beta=8`, fáum við
+	þar sem svæði :math:`D` er :math:`D=\{(x,y)\in \mathbb{R}^2~~: x\in]a, b[, ~~ y\in ]c, d[\}`. Við notum net eins og á myndinni að ofan, eins og við gerðum í :ref:`6.5.1<ch-6.5.1>`.
 
-1.
+	Hornpunktar :math:`1,2,3,4,5,6,10,11,12,13,14` og 15 eru í :math:`\partial D_1`. Innri punktar eru 7,8 og 9.
 
-.. math::
-    \int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=0  \quad \alpha=4, 12
+	Skoðum :math:`\beta=8`. Það eru 6 þríhyrningar sem hafa :math:`\beta=8` fyrir hornpunkt. Það þýðir að þegar við reiknum :math:`a_{\beta=8,\alpha}`, eru einu stök fylkisins sem eru ekki núll þau sem hafa :math:`\alpha=7,3,4,9,13,12`.
 
-af því að hliðarvigrarnir :math:`\mathbf{l}_\alpha,\mathbf{l}_\beta` eru hornréttir. Ennfremur höfum við
+	Þegar við skiptum bilinu í jafna hluta, eins og við gerðum í :ref:`6.5.1<ch-6.5.1>`, þá er
 
-.. math::
-    \int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{2(5)})+q(M_{3(6)}))  \quad \alpha=4, 12,
+	.. math::
+	    area(T)={|d|\over 2} ={h k\over 2},
 
+	og
 
+	.. math::
+	    \int_S \nabla \phi_\beta\cdot \nabla \phi_\beta dA=
+	    {1\over 2 h k}\left(2 h^2+2 k^2 +2 (k^2+h^2)\right)=
+	    {2\over h k}\left(k^2+h^2\right),
 
-og það gefur
+	.. math::
+	    \int_S q \phi_\beta  \phi_\beta dA= {h k\over 18} \left(q(M_1)+q(M_2)+q(M_3)+q(M_4)+q(M_5)+q(M_6)\right),
 
-.. math::
-    a_{\beta,\alpha}={hk\over 18}(q(M_{2(5)})+q(M_{3(6)})) \qquad \text{með}\qquad \alpha=\sigma(j+1,p-1),  \alpha=\sigma(j-1,p+1).
-
-Athugum að við notum :math:`\beta=\sigma(j,p)`.
-
-2.
-
-.. math::
-    \int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=-{h^2\over 2 h k} 2=-{h\over k}  \quad \alpha=3, 13,
-
-af því að hliðarvigurinn :math:`\mathbf{l}_\alpha` er láréttur, og það eru tveir þríhyrningar sem hafa :math:`\alpha, \beta` fyrir hornpunkta.
-
-Ennfremur höfum við
-
-.. math::
-    \int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{1(4)})+q(M_{2(5)}))  \quad \alpha=3, 13,
-
-og það gefur
-
-.. math::
-    a_{\beta,\alpha}=-{h\over k}+{hk\over 18}(q(M_{1(4)})+q(M_{2(5)}))  \qquad \text{með}\qquad \alpha=\sigma(j,p-1),\alpha=\sigma(j,p+1) .
+	þar sem :math:`M_i` eru miðjupunktar fyrir 6 þríhyrninga sem hafa :math:`\beta` fyrir hornpunkt.
 
 
-3.
+	Þetta gefur fyrir :math:`\beta=8`
 
-.. math::
-    \int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=-{k^2\over 2 h k} 2=-{k\over h}  \quad \alpha=7, 9,
+	.. math::
+	    a_{\beta,\beta}=\tfrac{2}{h k}(k^2+h^2) +{h k\over 18} \left(q(M_1)+q(M_2)+q(M_3)+q(M_4)+q(M_5)+q(M_6)\right).
 
-af því að hliðarvigurinn :math:`\mathbf{l}_\alpha` er lóðréttur, og það eru tveir þríhyrningar sem hafa :math:`\alpha, \beta` fyrir hornpunkta.
+	Fyrir :math:`\alpha\neq \beta=8`, fáum við
 
-Ennfremur höfum við
+	1.
 
-.. math::
-    \int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{6(4)})+q(M_{1(3)}))  \quad \alpha=7, 9,
+	.. math::
+	    \int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=0  \quad \alpha=4, 12
 
+	af því að hliðarvigrarnir :math:`\mathbf{l}_\alpha,\mathbf{l}_\beta` eru hornréttir. Ennfremur höfum við
 
-og það gefur
-
-.. math::
-    a_{\beta,\alpha}=-{k\over h} +{hk\over 18}(q(M_{6(4)})+q(M_{1(3)})) \qquad \text{með}\qquad \alpha=\sigma(j-1,p),\alpha=\sigma(j+1,p).
-
-Skoðum vigurinn :math:`\mathbf b`, þá er
-
-.. math::
-    b_\beta=\langle f, \varphi_\beta\rangle= \frac{h k}{6} \left(f(M_1)+f(M_2)+f(M_3)+f(M_4)+f(M_5)+f(M_6)\right).
-
-Við þurfum að endurtaka aðferðina fyrir :math:`\beta=7,8,9`.
-
-Fyrir jaðarpunkta þurfum við að setja
-
-.. math::
-    a_{\beta,\beta }=1,  \qquad b_\beta=\gamma(x_j, y_p),
-
-þar sem :math:`\beta=\sigma(j,p)`.
+	.. math::
+	    \int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{2(5)})+q(M_{3(6)}))  \quad \alpha=4, 12,
 
 
+
+	og það gefur
+
+	.. math::
+	    a_{\beta,\alpha}={hk\over 18}(q(M_{2(5)})+q(M_{3(6)})) \qquad \text{með}\qquad \alpha=\sigma(j+1,p-1),  \alpha=\sigma(j-1,p+1).
+
+	Athugum að við notum :math:`\beta=\sigma(j,p)`.
+
+	2.
+
+	.. math::
+	    \int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=-{h^2\over 2 h k} 2=-{h\over k}  \quad \alpha=3, 13,
+
+	af því að hliðarvigurinn :math:`\mathbf{l}_\alpha` er láréttur, og það eru tveir þríhyrningar sem hafa :math:`\alpha, \beta` fyrir hornpunkta.
+
+	Ennfremur höfum við
+
+	.. math::
+	    \int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{1(4)})+q(M_{2(5)}))  \quad \alpha=3, 13,
+
+	og það gefur
+
+	.. math::
+	    a_{\beta,\alpha}=-{h\over k}+{hk\over 18}(q(M_{1(4)})+q(M_{2(5)}))  \qquad \text{með}\qquad \alpha=\sigma(j,p-1),\alpha=\sigma(j,p+1) .
+
+
+	3.
+
+	.. math::
+	    \int_S \nabla \phi_\alpha\cdot \nabla \phi_\beta dA=-{k^2\over 2 h k} 2=-{k\over h}  \quad \alpha=7, 9,
+
+	af því að hliðarvigurinn :math:`\mathbf{l}_\alpha` er lóðréttur, og það eru tveir þríhyrningar sem hafa :math:`\alpha, \beta` fyrir hornpunkta.
+
+	Ennfremur höfum við
+
+	.. math::
+	    \int_S q \phi_\alpha \phi_\beta dA={hk\over 18}(q(M_{6(4)})+q(M_{1(3)}))  \quad \alpha=7, 9,
+
+
+	og það gefur
+
+	.. math::
+	    a_{\beta,\alpha}=-{k\over h} +{hk\over 18}(q(M_{6(4)})+q(M_{1(3)})) \qquad \text{með}\qquad \alpha=\sigma(j-1,p),\alpha=\sigma(j+1,p).
+
+	Skoðum vigurinn :math:`\mathbf b`, þá er
+
+	.. math::
+	    b_\beta=\langle f, \varphi_\beta\rangle= \frac{h k}{6} \left(f(M_1)+f(M_2)+f(M_3)+f(M_4)+f(M_5)+f(M_6)\right).
+
+	Við þurfum að endurtaka aðferðina fyrir :math:`\beta=7,8,9`.
+
+	Fyrir jaðarpunkta þurfum við að setja
+
+	.. math::
+	    a_{\beta,\beta }=1,  \qquad b_\beta=\gamma(x_j, y_p),
+
+	þar sem :math:`\beta=\sigma(j,p)`.

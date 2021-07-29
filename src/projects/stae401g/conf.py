@@ -52,7 +52,7 @@ extensions = [
     'toggleblock.toggleBlock',
 
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
-    # See README.txt in sagecell-extension folder. 
+    # See README.txt in sagecell-extension folder.
     # Note: sagecell must not be listed before katex.katex
     'sagecell.sagecell',
 
@@ -128,10 +128,10 @@ release = year
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-# LANGUAGE SET TO ICELANDIC, CAN BE CHANGED: 
+# LANGUAGE SET TO ICELANDIC, CAN BE CHANGED:
 # (http://sphinx-doc.org/config.html#confval-language)
 language = 'is'
-locale_dirs = ['locale/'] 
+locale_dirs = ['locale/']
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -367,3 +367,6 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+def setup(app):
+    app.add_css_file('custom_admonitions.css')
