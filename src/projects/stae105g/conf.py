@@ -463,3 +463,7 @@ intersphinx_mapping = {"http://docs.python.org/": None}
 # custom frá Tryggva
 def setup(app):
     app.add_css_file("custom_admonitions.css")
+
+# Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
+hint_indent = r"\00a0"*12 # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0"*2
