@@ -7,7 +7,7 @@ Markgildi og samfelldni
     -  Jafna línu
 
     -  Jafna hrings
-		
+
     -  Hliðrun og skölun grafs
 
     -  (Stranglega) minnkandi og (stranglega) vaxandi föll
@@ -624,8 +624,8 @@ Dæmi: Markgildið :math:`\infty`
 
 ------
 
-Markgildi þegar :math:`x` stefnir á óendanlegt
------------------------------------------------
+Markgildi þegar x stefnir á óendanlegt
+---------------------------------------
 
 .. image:: ./myndir/kafli02/06_liminf.png
 	:align: center
