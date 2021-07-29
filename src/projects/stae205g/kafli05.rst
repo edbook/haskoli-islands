@@ -9,42 +9,43 @@ Vigursvið
 ---------
 
 .. index::
-  vigursvið
+    vigursvið
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-:hover:`Vigursvið` á :math:`{\mathbb  R}^2` er vörpun
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle \mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}.
+    :hover:`Vigursvið` á :math:`{\mathbb  R}^2` er vörpun
 
-Þegar talað er um vigursvið þá hugsum við vigurinn
-:math:`\mbox{${\bf F}$}(x,y)` sem vigur í :math:`{\mathbb  R}^2` sem
-hefur fótpunkt í punktinum :math:`(x,y)`.
+    .. math:: \displaystyle \mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}.
 
-Vigursvið
-:math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\mbox{${\bf i}$}+F_2(x,y)\mbox{${\bf j}$}`
-er sagt :hover:`samfellt,samfelldur` ef föllin :math:`F_1(x,y)` og :math:`F_2(x,y)` eru
-samfelld.
+    Þegar talað er um vigursvið þá hugsum við vigurinn
+    :math:`\mbox{${\bf F}$}(x,y)` sem vigur í :math:`{\mathbb  R}^2` sem
+    hefur fótpunkt í punktinum :math:`(x,y)`.
 
-Vigursvið á :math:`{\mathbb  R}^3` er vörpun
+    Vigursvið
+    :math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\mbox{${\bf i}$}+F_2(x,y)\mbox{${\bf j}$}`
+    er sagt :hover:`samfellt,samfelldur` ef föllin :math:`F_1(x,y)` og :math:`F_2(x,y)` eru
+    samfelld.
 
-.. math:: \displaystyle \mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}.
+    Vigursvið á :math:`{\mathbb  R}^3` er vörpun
 
-Við hugsum :math:`\mbox{${\bf F}$}(x,y,z)` sem vigur með :math:`(x,y,z)`
-sem fótpunkt. Skilgreiningin á því að vigursvið í :math:`{\mathbb  R}^3`
-sé samfellt er eins og á samfeldni vigursvið í :math:`{\mathbb  R}^2` .
+    .. math:: \displaystyle \mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}.
 
-.. image:: ./myndir/vfield.png
-   :width: 70%
-   :align: center
+    Við hugsum :math:`\mbox{${\bf F}$}(x,y,z)` sem vigur með :math:`(x,y,z)`
+    sem fótpunkt. Skilgreiningin á því að vigursvið í :math:`{\mathbb  R}^3`
+    sé samfellt er eins og á samfeldni vigursvið í :math:`{\mathbb  R}^2` .
 
-..
+.. figure:: ./myndir/vfield.png
+    :width: 70%
+    :align: center
 
-*Vigursviðið* :math:`\mathbf{F}(x,y) = -y\mbox{${\bf i}$}+ x \mbox{${\bf j}$}`.
+    *Vigursviðið* :math:`\mathbf{F}(x,y) = -y\mbox{${\bf i}$}+ x \mbox{${\bf j}$}`.
 
 .. index::
-  straumlína
+    straumlína
 
 Straumlína
 ----------
@@ -52,86 +53,98 @@ Straumlína
 Skilgreining 
 ~~~~~~~~~~~~~
 
-:hover:`Ferill` :math:`C` í planinu kallast :hover:`straumlína` fyrir :hover:`vigursvið` :math:`\mbox{${\bf F}$}(x,y)` ef í hverjum punkti
-:math:`(x,y)` á ferlinum er vigurinn :math:`\mbox{${\bf F}$}(x,y)`
-:hover:`snertivigur` við ferilinn.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. image:: ./myndir/flowlines.png
-   :width: 70%
-   :align: center
+    :hover:`Ferill` :math:`C` í planinu kallast :hover:`straumlína` fyrir :hover:`vigursvið` :math:`\mbox{${\bf F}$}(x,y)` ef í hverjum punkti
+    :math:`(x,y)` á ferlinum er vigurinn :math:`\mbox{${\bf F}$}(x,y)`
+    :hover:`snertivigur` við ferilinn.
 
-..
+.. figure:: ./myndir/flowlines.png
+    :width: 70%
+    :align: center
 
-*Vigursviðið* :math:`\mathbf{F}(x,y) = -y\mbox{${\bf i}$}+ x \mbox{${\bf j}$}`
-*ásamt nokkrum straumlínum*.
+    *Vigursviðið* :math:`\mathbf{F}(x,y) = -y\mbox{${\bf i}$}+ x \mbox{${\bf j}$}`
+    *ásamt nokkrum straumlínum*.
 
 .. index::
-  vigursvið:geymið
-  stigulsvið
-  mætti
-  
+    vigursvið:geymið
+    stigulsvið
+    mætti
+
 Stigulsvið
 ----------
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Vigursvið :math:`\mbox{${\bf F}$}(x,y)` kallast *stigulsvið* eða *geymið
-svið* (e. gradient field, conservative field) á mengi :math:`D` ef til
-er fall :math:`\varphi(x,y)` þannig að
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle \mbox{${\bf F}$}(x,y)=\nabla\varphi(x,y)
+    Vigursvið :math:`\mbox{${\bf F}$}(x,y)` kallast *stigulsvið* eða *geymið
+    svið* (e. gradient field, conservative field) á mengi :math:`D` ef til
+    er fall :math:`\varphi(x,y)` þannig að
 
-fyrir alla punkta :math:`(x,y)\in D`, það er að segja ef
+    .. math:: \displaystyle \mbox{${\bf F}$}(x,y)=\nabla\varphi(x,y)
 
-.. math:: \displaystyle \mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}
+    fyrir alla punkta :math:`(x,y)\in D`, það er að segja ef
 
-þá er
+    .. math:: \displaystyle \mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}
 
-.. math:: \displaystyle F_1(x,y)=\frac{\partial}{\partial x}\varphi(x,y) \quad \text{og}\quad  F_2(x,y)=\frac{\partial}{\partial y}\varphi(x,y).
+    þá er
 
-Vigursvið :math:`\mbox{${\bf F}$}(x,y,z)` kallast *stigulsvið* eða
-*geymið svið* ef til er fall :math:`\varphi(x,y,z)` þannig að
-:math:`\mbox{${\bf F}$}(x,y,z)=\nabla\varphi(x,y,z)`.
+    .. math:: \displaystyle F_1(x,y)=\frac{\partial}{\partial x}\varphi(x,y) \quad \text{og}\quad  F_2(x,y)=\frac{\partial}{\partial y}\varphi(x,y).
 
-Fallið :math:`\varphi` kallast :hover:`mætti`  fyrir vigursviðið
-:math:`\mbox{${\bf F}$}`.
+    Vigursvið :math:`\mbox{${\bf F}$}(x,y,z)` kallast *stigulsvið* eða
+    *geymið svið* ef til er fall :math:`\varphi(x,y,z)` þannig að
+    :math:`\mbox{${\bf F}$}(x,y,z)=\nabla\varphi(x,y,z)`.
 
-Setning 
-~~~~~~~~
-
-Látum
-:math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
-vera vigursvið þannig að föllin :math:`F_1(x,y)` og :math:`F_2(x,y)`
-hafi samfelldar hlutafleiður. Ef :math:`\mbox{${\bf F}$}(x,y)` er
-stigulsvið þá er
-
-.. math:: \displaystyle
-
-   \frac{\partial}{\partial y}F_1(x,y)=
-   \frac{\partial}{\partial x}F_2(x,y).
-
-.. note::
-   Þó að hlutafleiðurnar séu jafnar þá er **ekki** hægt að álykta að :math:`\mbox{${\bf F}$}` sé stigulsvið. Þetta atriði verður rætt síðar.
+    Fallið :math:`\varphi` kallast :hover:`mætti`  fyrir vigursviðið
+    :math:`\mbox{${\bf F}$}`.
 
 Setning 
 ~~~~~~~~
 
-Látum
-:math:`\mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}`
-vera vigursvið þannig að föllin :math:`F_1(x,y,z), F_2(x,y,z)` og
-:math:`F_3(x,y,3)` hafi samfelldar hlutafleiður. Ef
-:math:`\mbox{${\bf F}$}(x,y,z)` er stigulsvið þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle
+    Látum
+    :math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`
+    vera vigursvið þannig að föllin :math:`F_1(x,y)` og :math:`F_2(x,y)`
+    hafi samfelldar hlutafleiður. Ef :math:`\mbox{${\bf F}$}(x,y)` er
+    stigulsvið þá er
 
-   \begin{aligned}
-   \frac{\partial}{\partial y}F_1(x,y,z) &=
-   \frac{\partial}{\partial x}F_2(x,y,z), \\
-   \frac{\partial}{\partial z}F_1(x,y,z) &=
-   \frac{\partial}{\partial x}F_3(x,y,z) \quad \text{og} \\
-   \frac{\partial}{\partial z}F_2(x,y,z)&=
-   \frac{\partial}{\partial y}F_3(x,y,z).\end{aligned}
+    .. math:: \displaystyle
+
+        \frac{\partial}{\partial y}F_1(x,y)=
+        \frac{\partial}{\partial x}F_2(x,y).
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Þó að hlutafleiðurnar séu jafnar þá er **ekki** hægt að álykta að :math:`\mbox{${\bf F}$}` sé stigulsvið. Þetta atriði verður rætt síðar.
+
+Setning 
+~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum
+    :math:`\mbox{${\bf F}$}(x,y,z)=F_1(x,y,z)\,\mbox{${\bf i}$}+F_2(x,y,z)\,\mbox{${\bf j}$}+F_3(x,y,z)\,\mbox{${\bf k}$}`
+    vera vigursvið þannig að föllin :math:`F_1(x,y,z), F_2(x,y,z)` og
+    :math:`F_3(x,y,3)` hafi samfelldar hlutafleiður. Ef
+    :math:`\mbox{${\bf F}$}(x,y,z)` er stigulsvið þá er
+
+    .. math:: \displaystyle
+
+        \begin{aligned}
+        \frac{\partial}{\partial y}F_1(x,y,z) &=
+        \frac{\partial}{\partial x}F_2(x,y,z), \\
+        \frac{\partial}{\partial z}F_1(x,y,z) &=
+        \frac{\partial}{\partial x}F_3(x,y,z) \quad \text{og} \\
+        \frac{\partial}{\partial z}F_2(x,y,z)&=
+        \frac{\partial}{\partial y}F_3(x,y,z).\end{aligned}
 
 Reikniaðferð 
 ~~~~~~~~~~~~~
@@ -142,14 +155,14 @@ Viljum finna fall :math:`\varphi(x,y)` þannig að
 
 .. math:: \displaystyle
 
-   \frac{\partial}{\partial x}\varphi(x,y)=F_1(x,y)\qquad
-   \mbox{og}\qquad \frac{\partial}{\partial y}\varphi(x,y)=F_2(x,y).
+    \frac{\partial}{\partial x}\varphi(x,y)=F_1(x,y)\qquad
+    \mbox{og}\qquad \frac{\partial}{\partial y}\varphi(x,y)=F_2(x,y).
 
 Með því að heilda þessar jöfnur fæst að
 
 .. math:: \displaystyle \varphi(x,y)=\int F_1(x,y)\,dx+C_1(y)
 
- og
+og
 
 .. math:: \displaystyle \varphi(x,y)=\int F_2(x,y)\,dy+C_2(x).
 
@@ -160,7 +173,7 @@ að finna gildi fyrir heildunarfastanna :math:`C_1(x)` og :math:`C_2(y)`
 þannig að sama formúlan fyrir :math:`\varphi(x,y)` fáist.
 
 .. index::
-  ferilheildi
+    ferilheildi
 
 Heildi falls yfir feril
 -----------------------
@@ -168,52 +181,61 @@ Heildi falls yfir feril
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`\cal C` vera feril í :math:`{\mathbb  R}^2` stikaðan af
-samfellt diffranlegum stikaferli
-:math:`\mbox{${\bf r}$}:[a,b]\rightarrow{\mathbb  R}^2`. Ritum
-:math:`\mbox{${\bf r}$}(t)=(x(t),y(t))`. *Heildi falls* :math:`f(x,y)`
-*yfir ferilinn* :math:`\cal C` *með tilliti til bogalengdar* er
-skilgreint sem
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Látum :math:`\cal C` vera feril í :math:`{\mathbb  R}^2` stikaðan af
+    samfellt diffranlegum stikaferli
+    :math:`\mbox{${\bf r}$}:[a,b]\rightarrow{\mathbb  R}^2`. Ritum
+    :math:`\mbox{${\bf r}$}(t)=(x(t),y(t))`. *Heildi falls* :math:`f(x,y)`
+    *yfir ferilinn* :math:`\cal C` *með tilliti til bogalengdar* er
+    skilgreint sem
 
-   \begin{aligned}
-   \int_{\cal C}f(x,y)\,ds&=\int_a^b f(\mbox{${\bf r}$}(t))\,|\mbox{${\bf r}$}'(t)|\,dt\\
-   &=\int_a^b f(x(t),y(t))\,\sqrt{x'(t)^2+y'(t)^2}\,dt.\end{aligned}
+    .. math:: \displaystyle
 
-Sama aðferð notuð til að skilgreina heildi falls yfir feril í
-:math:`{\mathbb  R}^3`.
+        \begin{aligned}
+        \int_{\cal C}f(x,y)\,ds&=\int_a^b f(\mbox{${\bf r}$}(t))\,|\mbox{${\bf r}$}'(t)|\,dt\\
+        &=\int_a^b f(x(t),y(t))\,\sqrt{x'(t)^2+y'(t)^2}\,dt.\end{aligned}
+
+    Sama aðferð notuð til að skilgreina heildi falls yfir feril í
+    :math:`{\mathbb  R}^3`.
 
 Setning 
 ~~~~~~~~
 
-Látum :math:`\cal C` vera feril í :math:`{\mathbb  R}^2`. Gerum ráð
-fyrir að :math:`\mbox{${\bf r}$}_1` og :math:`\mbox{${\bf r}$}_2` séu
-tveir samfellt diffranlegir stikaferlar sem báðir stika ferilinn
-:math:`\cal C`. Ef fall :math:`f(x,y)` er heildað yfir :math:`\cal C` þá
-fæst sama útkoma hvort sem stikunin :math:`\mbox{${\bf r}$}_1` eða
-stikunin :math:`\mbox{${\bf r}$}_2` er notuð við útreikningana.
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`\cal C` vera feril í :math:`{\mathbb  R}^2`. Gerum ráð
+    fyrir að :math:`\mbox{${\bf r}$}_1` og :math:`\mbox{${\bf r}$}_2` séu
+    tveir samfellt diffranlegir stikaferlar sem báðir stika ferilinn
+    :math:`\cal C`. Ef fall :math:`f(x,y)` er heildað yfir :math:`\cal C` þá
+    fæst sama útkoma hvort sem stikunin :math:`\mbox{${\bf r}$}_1` eða
+    stikunin :math:`\mbox{${\bf r}$}_2` er notuð við útreikningana.
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Ferill :math:`\cal C` í plani er sagður *samfellt diffranlegur á köflum*
-ef til er stikun
-:math:`\mbox{${\bf r}$}:[a,b]\rightarrow {\mathbb  R}^2` á
-:math:`\cal C` þannig að til eru punktar
-:math:`a=t_0<t_1<t_2<\cdots<t_n<t_{n+1}=b` þannig að á hverju bili
-:math:`(t_i,t_{i+1})` er :math:`\mbox{${\bf r}$}` :hover:`samfellt diffranlegur`
-ferill og :hover:`markgildin,markgildi`
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Ferill :math:`\cal C` í plani er sagður *samfellt diffranlegur á köflum*
+    ef til er stikun
+    :math:`\mbox{${\bf r}$}:[a,b]\rightarrow {\mathbb  R}^2` á
+    :math:`\cal C` þannig að til eru punktar
+    :math:`a=t_0<t_1<t_2<\cdots<t_n<t_{n+1}=b` þannig að á hverju bili
+    :math:`(t_i,t_{i+1})` er :math:`\mbox{${\bf r}$}` :hover:`samfellt diffranlegur`
+    ferill og :hover:`markgildin,markgildi`
 
-   \lim_{t\rightarrow t_i^+}\mbox{${\bf r}$}'(t)\qquad\mbox{og}\qquad 
-   \lim_{t\rightarrow t_{i+1}^-}\mbox{${\bf r}$}'(t)
+    .. math:: \displaystyle
 
-eru bæði til.
+        \lim_{t\rightarrow t_i^+}\mbox{${\bf r}$}'(t)\qquad\mbox{og}\qquad 
+        \lim_{t\rightarrow t_{i+1}^-}\mbox{${\bf r}$}'(t)
 
-Líka sagt að stikaferillinn :math:`\mbox{${\bf r}$}` sé *samfellt
-diffranlegur á köflum.*
+    eru bæði til.
+
+    Líka sagt að stikaferillinn :math:`\mbox{${\bf r}$}` sé *samfellt
+    diffranlegur á köflum.*
 
 Heildi vigursviðs eftir ferli
 -----------------------------
@@ -221,42 +243,50 @@ Heildi vigursviðs eftir ferli
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`\mbox{${\bf F}$}(x,y)` vera vigursvið og
-:math:`\mbox{${\bf r}$}:[a,b]\rightarrow {\mathbb  R}^2` stikun á ferli
-:math:`\cal C` og gerum ráð fyrir að stikaferillinn
-:math:`\mbox{${\bf r}$}` sé samfellt diffranlegur á köflum. *Heildi
-vigursviðsins* :math:`\mbox{${\bf F}$}(x,y)` *eftir ferlinum*
-:math:`\cal C` er skilgreint sem
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Látum :math:`\mbox{${\bf F}$}(x,y)` vera vigursvið og
+    :math:`\mbox{${\bf r}$}:[a,b]\rightarrow {\mathbb  R}^2` stikun á ferli
+    :math:`\cal C` og gerum ráð fyrir að stikaferillinn
+    :math:`\mbox{${\bf r}$}` sé samfellt diffranlegur á köflum. *Heildi
+    vigursviðsins* :math:`\mbox{${\bf F}$}(x,y)` *eftir ferlinum*
+    :math:`\cal C` er skilgreint sem
 
-   \int_{\cal C} \mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}= \int_{\cal C} \mbox{${\bf F}$}\cdot \mbox{${\bf T}$}\,ds
-   =\int_a^b \mbox{${\bf F}$}(\mbox{${\bf r}$}(t))\cdot \mbox{${\bf r}$}'(t)\,dt.
+    .. math:: \displaystyle
+
+        \int_{\cal C} \mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}= \int_{\cal C} \mbox{${\bf F}$}\cdot \mbox{${\bf T}$}\,ds
+        =\int_a^b \mbox{${\bf F}$}(\mbox{${\bf r}$}(t))\cdot \mbox{${\bf r}$}'(t)\,dt.
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Ritum
-:math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`.
-Ritum líka
-:math:`\mbox{${\bf r}$}(t)=x(t)\,\mbox{${\bf i}$}+y(t)\,\mbox{${\bf j}$}`.
-Þá má rita :math:`dx=x'(t)\,dt,\, dy=y'(t)\,dt`. Með því að nota þennan
-rithátt fæst að
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Ritum
+    :math:`\mbox{${\bf F}$}(x,y)=F_1(x,y)\,\mbox{${\bf i}$}+F_2(x,y)\,\mbox{${\bf j}$}`.
+    Ritum líka
+    :math:`\mbox{${\bf r}$}(t)=x(t)\,\mbox{${\bf i}$}+y(t)\,\mbox{${\bf j}$}`.
+    Þá má rita :math:`dx=x'(t)\,dt,\, dy=y'(t)\,dt`. Með því að nota þennan
+    rithátt fæst að
 
-   \begin{aligned}
-   \int_{\cal C}\mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}&=\int_a^b
-   (F_1(x,y)\,\mbox{${\bf i}$}+F_2(x(t),y(t))\,\mbox{${\bf j}$})\cdot(x'(t)\,\mbox{${\bf i}$}+y'(t)\,\mbox{${\bf j}$})\,dt\\
-   &=\int_a^b F_1(x(t),y(t))x'(t)\,dt+F_2(x(t),y(t))y'(t)\,dt\\
-   &=\int_{\cal C} F_1(x,y)\,dx+F_2(x,y)\,dy.\end{aligned}
+    .. math:: \displaystyle
 
-.. note::
-   Látum :math:`\cal C` vera feril í :math:`{\mathbb  R}^2`. Gerum ráð fyrir að :math:`\mbox{${\bf r}$}_1:[a,b]\rightarrow {\mathbb  R}^2` og :math:`\mbox{${\bf r}$}_2:[a',b']\rightarrow {\mathbb  R}^2` séu tveir samfellt diffranlegir á köflum stikaferlar sem stika :math:`\cal C`. Gerum ennfremur ráð fyrir að :math:`\mbox{${\bf r}$}_1(a)=\mbox{${\bf r}$}_2(b')` og :math:`\mbox{${\bf r}$}_1(b)=\mbox{${\bf r}$}_2(a')` (þ.e.a.s. stikaferlarnir fara í sitthvora áttina eftir :math:`\cal C`). Þá gildir ef :math:`\mbox{${\bf F}$}(x,y)` er vigursvið að
+        \begin{aligned}
+        \int_{\cal C}\mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}&=\int_a^b
+        (F_1(x,y)\,\mbox{${\bf i}$}+F_2(x(t),y(t))\,\mbox{${\bf j}$})\cdot(x'(t)\,\mbox{${\bf i}$}+y'(t)\,\mbox{${\bf j}$})\,dt\\
+        &=\int_a^b F_1(x(t),y(t))x'(t)\,dt+F_2(x(t),y(t))y'(t)\,dt\\
+        &=\int_{\cal C} F_1(x,y)\,dx+F_2(x,y)\,dy.\end{aligned}
 
-   .. math:: \displaystyle \int_{\cal C} \mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}_1=-\int_{\cal C} \mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}_2.
+.. admonition:: Athugasemd
+    :class: athugasemd
 
-   (Ef breytt er um stefnu á stikun á breytist formerki þegar vigursvið heildað eftir ferlinum.)
+    Látum :math:`\cal C` vera feril í :math:`{\mathbb  R}^2`. Gerum ráð fyrir að :math:`\mbox{${\bf r}$}_1:[a,b]\rightarrow {\mathbb  R}^2` og :math:`\mbox{${\bf r}$}_2:[a',b']\rightarrow {\mathbb  R}^2` séu tveir samfellt diffranlegir á köflum stikaferlar sem stika :math:`\cal C`. Gerum ennfremur ráð fyrir að :math:`\mbox{${\bf r}$}_1(a)=\mbox{${\bf r}$}_2(b')` og :math:`\mbox{${\bf r}$}_1(b)=\mbox{${\bf r}$}_2(a')` (þ.e.a.s. stikaferlarnir fara í sitthvora áttina eftir :math:`\cal C`). Þá gildir ef :math:`\mbox{${\bf F}$}(x,y)` er vigursvið að
+
+    .. math:: \displaystyle \int_{\cal C} \mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}_1=-\int_{\cal C} \mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}_2.
+
+    (Ef breytt er um stefnu á stikun á breytist formerki þegar vigursvið heildað eftir ferlinum.)
 
 Ferilheildi og stigulsvið
 -------------------------
@@ -264,75 +294,90 @@ Ferilheildi og stigulsvið
 Setning 
 ~~~~~~~~
 
-Látum :math:`\mbox{${\bf F}$}(x,y)` vera samfellt stigulsvið skilgreint
-á svæði :math:`D` í :math:`{\mathbb  R}^2` og látum :math:`\varphi` vera
-fall skilgreint á :math:`D` þannig að
-:math:`\mbox{${\bf F}$}(x,y)=\nabla \varphi(x,y)` fyrir alla punkta
-:math:`(x,y)\in D`. Látum :math:`\mbox{${\bf r}$}:[a,b]\rightarrow D`
-vera stikaferill sem er samfellt diffranlegur á köflum og stikar feril
-:math:`\cal C` í :math:`D`. Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle \int_{\cal C} \mbox{${\bf F}$}\cdot \,d\mbox{${\bf r}$}=\varphi(\mbox{${\bf r}$}(b))-\varphi(\mbox{${\bf r}$}(a)).
+    Látum :math:`\mbox{${\bf F}$}(x,y)` vera samfellt stigulsvið skilgreint
+    á svæði :math:`D` í :math:`{\mathbb  R}^2` og látum :math:`\varphi` vera
+    fall skilgreint á :math:`D` þannig að
+    :math:`\mbox{${\bf F}$}(x,y)=\nabla \varphi(x,y)` fyrir alla punkta
+    :math:`(x,y)\in D`. Látum :math:`\mbox{${\bf r}$}:[a,b]\rightarrow D`
+    vera stikaferill sem er samfellt diffranlegur á köflum og stikar feril
+    :math:`\cal C` í :math:`D`. Þá er
 
-(Samsvarandi gildir fyrir vigursvið skilgreint á svæði
-:math:`D\subseteq {\mathbb  R}^3`.)
+    .. math:: \displaystyle \int_{\cal C} \mbox{${\bf F}$}\cdot \,d\mbox{${\bf r}$}=\varphi(\mbox{${\bf r}$}(b))-\varphi(\mbox{${\bf r}$}(a)).
 
-Fylgisetning 
-~~~~~~~~~~~~~
-
-Látum :math:`\mbox{${\bf F}$}` vera samfellt stigulsvið skilgreint á
-mengi :math:`D\subseteq {\mathbb  R}^2`. Látum
-:math:`\mbox{${\bf r}$}:[a,b]\rightarrow D` vera stikaferil sem er
-samfellt diffranlegur á köflum og lokaður (þ.e.a.s.
-:math:`\mbox{${\bf r}$}(a)=\mbox{${\bf r}$}(b)`) og stikar feril
-:math:`\mathcal{C}`. Þá er
-
-.. math:: \displaystyle \oint_{\cal C}  \mbox{${\bf F}$}\cdot \,d\mbox{${\bf r}$}=0.
-
-(Ath. að rithátturinn
-
-.. math:: \displaystyle \oint_{\cal C}
-
-er gjarnan notaður þegar heildað er yfir lokaðan feril :math:`\cal C`.)
+Samsvarandi gildir fyrir vigursvið skilgreint á svæði
+:math:`D\subseteq {\mathbb  R}^3`.
 
 Fylgisetning 
 ~~~~~~~~~~~~~
 
-Látum :math:`\mbox{${\bf F}$}` vera samfellt stigulsvið skilgreint á
-mengi :math:`D\subseteq {\mathbb  R}^2`. Látum
-:math:`\mbox{${\bf r}$}_1:[a_1,b_1]\rightarrow D` og
-:math:`\mbox{${\bf r}$}_2:[a_2,b_2]\rightarrow D` vera stikaferla sem
-eru samfellt diffranlegir á köflum og stika ferlana
-:math:`\mathcal{C}_1` og :math:`\mathcal{C}_2`. Gerum ráð fyrir að
-:math:`\mbox{${\bf r}$}_1(a_1)=\mbox{${\bf r}$}_2(a_2)` og
-:math:`\mbox{${\bf r}$}_1(b_1)=\mbox{${\bf r}$}_2(b_2)`,
-þ.e.a.s. stikaferlarnir :math:`\mbox{${\bf r}$}_1` og
-:math:`\mbox{${\bf r}$}_2` hafa sameiginlega upphafs- og endapunkta. Þá
-er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle \int_{{\cal C}_1} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_1=\int_{{\cal C}_2} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_2.
+    Látum :math:`\mbox{${\bf F}$}` vera samfellt stigulsvið skilgreint á
+    mengi :math:`D\subseteq {\mathbb  R}^2`. Látum
+    :math:`\mbox{${\bf r}$}:[a,b]\rightarrow D` vera stikaferil sem er
+    samfellt diffranlegur á köflum og lokaður (þ.e.a.s.
+    :math:`\mbox{${\bf r}$}(a)=\mbox{${\bf r}$}(b)`) og stikar feril
+    :math:`\mathcal{C}`. Þá er
+
+    .. math:: \displaystyle \oint_{\cal C}  \mbox{${\bf F}$}\cdot \,d\mbox{${\bf r}$}=0.
+
+    (Ath. að rithátturinn
+
+    .. math:: \displaystyle \oint_{\cal C}
+
+    er gjarnan notaður þegar heildað er yfir lokaðan feril :math:`\cal C`.)
+
+Fylgisetning 
+~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`\mbox{${\bf F}$}` vera samfellt stigulsvið skilgreint á
+    mengi :math:`D\subseteq {\mathbb  R}^2`. Látum
+    :math:`\mbox{${\bf r}$}_1:[a_1,b_1]\rightarrow D` og
+    :math:`\mbox{${\bf r}$}_2:[a_2,b_2]\rightarrow D` vera stikaferla sem
+    eru samfellt diffranlegir á köflum og stika ferlana
+    :math:`\mathcal{C}_1` og :math:`\mathcal{C}_2`. Gerum ráð fyrir að
+    :math:`\mbox{${\bf r}$}_1(a_1)=\mbox{${\bf r}$}_2(a_2)` og
+    :math:`\mbox{${\bf r}$}_1(b_1)=\mbox{${\bf r}$}_2(b_2)`,
+    þ.e.a.s. stikaferlarnir :math:`\mbox{${\bf r}$}_1` og
+    :math:`\mbox{${\bf r}$}_2` hafa sameiginlega upphafs- og endapunkta. Þá
+    er
+
+    .. math:: \displaystyle \int_{{\cal C}_1} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_1=\int_{{\cal C}_2} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_2.
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Segjum að heildi vigursviðs :math:`\mbox{${\bf F}$}` sé *óháð
-stikaferli* ef fyrir sérhverja tvo samfellt diffranlega á köflum
-stikaferla :math:`\mbox{${\bf r}$}_1` og :math:`\mbox{${\bf r}$}_2` með
-sameiginlega upphafs- og endapunkta sem stika ferlana
-:math:`\mathcal{C}_1` og :math:`\mathcal{C}_2` gildir að
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Segjum að heildi vigursviðs :math:`\mbox{${\bf F}$}` sé *óháð
+    stikaferli* ef fyrir sérhverja tvo samfellt diffranlega á köflum
+    stikaferla :math:`\mbox{${\bf r}$}_1` og :math:`\mbox{${\bf r}$}_2` með
+    sameiginlega upphafs- og endapunkta sem stika ferlana
+    :math:`\mathcal{C}_1` og :math:`\mathcal{C}_2` gildir að
 
-   \int_{{\cal C}_1} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_1=
-   \int_{{\cal C}_2} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_2.
+    .. math:: \displaystyle
+
+        \int_{{\cal C}_1} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_1=
+        \int_{{\cal C}_2} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}_2.
 
 Setning 
 ~~~~~~~~
 
-Ferilheildi samfellds vigursviðs :math:`\mbox{${\bf F}$}` er óháð
-stikaferli ef og aðeins ef
-:math:`\oint_{\cal C} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}=0` fyrir
-alla lokaða ferla :math:`\cal C` sem eru samfellt diffranlegir á köflum.
+.. admonition:: Setning
+    :class: setning
+
+    Ferilheildi samfellds vigursviðs :math:`\mbox{${\bf F}$}` er óháð
+    stikaferli ef og aðeins ef
+    :math:`\oint_{\cal C} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}=0` fyrir
+    alla lokaða ferla :math:`\cal C` sem eru samfellt diffranlegir á köflum.
 
 Upprifjun 
 ~~~~~~~~~~~~~
@@ -347,36 +392,39 @@ tvo punkta :math:`P, Q\in D` gildir að til er stikaferill
 Setning 
 ~~~~~~~~
 
-Látum :math:`D` vera :hover:`opið mengi` í :math:`{\mathbb  R}^2` sem er
-ferilsamanhangandi. Ef :math:`\mbox{${\bf F}$}` er samfellt vigursvið
-skilgreint á :math:`D` og ferilheildi :math:`\mbox{${\bf F}$}` eru óháð
-vegi þá er :math:`\mbox{${\bf F}$}` stigulsvið.
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`D` vera :hover:`opið mengi` í :math:`{\mathbb  R}^2` sem er
+    ferilsamanhangandi. Ef :math:`\mbox{${\bf F}$}` er samfellt vigursvið
+    skilgreint á :math:`D` og ferilheildi :math:`\mbox{${\bf F}$}` eru óháð
+    vegi þá er :math:`\mbox{${\bf F}$}` stigulsvið.
 
 Setning 
 ~~~~~~~~
 
-Fyrir samfellt vigursvið :math:`\mbox{${\bf F}$}` skilgreint á opnu
-ferilsamanhangandi mengi :math:`D\subseteq {\mathbb  R}^2` er
-eftirfarandi jafngilt:
+.. admonition:: Setning
+    :class: setning
 
-(a)  :math:`\mbox{${\bf F}$}` er stigulsvið,
+    Fyrir samfellt vigursvið :math:`\mbox{${\bf F}$}` skilgreint á opnu
+    ferilsamanhangandi mengi :math:`D\subseteq {\mathbb  R}^2` er
+    eftirfarandi jafngilt:
 
-(b)  :math:`\oint_{\cal C} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}=0` fyrir alla samfellt diffranlega á köflum lokaða stikaferla :math:`\mbox{${\bf r}$}` í :math:`D`,
+    (a)  :math:`\mbox{${\bf F}$}` er stigulsvið,
 
-(c)  Ferilheildi :math:`\mbox{${\bf F}$}` er óháð vegi.
+    (b)  :math:`\oint_{\cal C} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf r}$}=0` fyrir alla samfellt diffranlega á köflum lokaða stikaferla :math:`\mbox{${\bf r}$}` í :math:`D`,
 
-.. begin-toggle::
-  :label: Sýna sönnun
+    (c)  Ferilheildi :math:`\mbox{${\bf F}$}` er óháð vegi.
 
-(a) :math:`\Rightarrow` (b). Fylgisetning 5.6.2.
-(b) :math:`\Leftrightarrow` (c). Setning 5.6.5.
-(c) :math:`\Rightarrow` (a). Setning 5.6.7.
+.. admonition:: Sönnun
+    :class: setning, dropdown
 
-.. end-toggle::
-
+    (a) :math:`\Rightarrow` (b). Fylgisetning 5.6.2.
+    (b) :math:`\Leftrightarrow` (c). Setning 5.6.5.
+    (c) :math:`\Rightarrow` (a). Setning 5.6.7.
 
 .. index::
-  flötur
+    flötur
 
 Fletir
 ------
@@ -392,22 +440,22 @@ Lýsing
 
 Flötum er aðallega lýst með formúlum á þrjá vegu:
 
-#. Gefið er fall :math:`f(x,y,z)`. Fletinum :math:`\cal S` er lýst með
-   jöfnu :math:`f(x,y,z)=C` (þ.e.a.s. :math:`\cal S` er :hover:`jafnhæðarflötur,hæðarflötur`
-   fallsins :math:`f`). Þá er
+#.  Gefið er fall :math:`f(x,y,z)`. Fletinum :math:`\cal S` er lýst með
+    jöfnu :math:`f(x,y,z)=C` (þ.e.a.s. :math:`\cal S` er :hover:`jafnhæðarflötur,hæðarflötur`
+    fallsins :math:`f`). Þá er
 
-   .. math:: \displaystyle {\cal S}=\{(x,y,z)\mid f(x,y,z)=C\}.
+    .. math:: \displaystyle {\cal S}=\{(x,y,z)\mid f(x,y,z)=C\}.
 
-#. Gefið er fall skilgreint á ferilsamanhangandi svæði :math:`D` í
-   :math:`{\mathbb  R}^2`. Fletinum :math:`\cal S` er lýst sem grafi
-   fallsins :math:`f`. Þá er
+#.  Gefið er fall skilgreint á ferilsamanhangandi svæði :math:`D` í
+    :math:`{\mathbb  R}^2`. Fletinum :math:`\cal S` er lýst sem grafi
+    fallsins :math:`f`. Þá er
 
-   .. math:: \displaystyle {\cal S}=\{(x,y,z)\mid (x,y)\in D\mbox{ og } z=f(x,y)\}.
+    .. math:: \displaystyle {\cal S}=\{(x,y,z)\mid (x,y)\in D\mbox{ og } z=f(x,y)\}.
 
-#. Með stikafleti (sjá næstu grein).
+#.  Með stikafleti (sjá næstu grein).
 
 .. index::
-  stikaflötur
+    stikaflötur
 
 Stikafletir
 -----------
@@ -415,25 +463,28 @@ Stikafletir
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`D` vera ferilsamanhangandi hlutmengi í
-:math:`{\mathbb  R}^2`. Samfelld vörpun
-:math:`\mbox{${\bf r}$}:D\rightarrow {\mathbb  R}^3; \mbox{${\bf r}$}(u,v)=\big(x(u,v), y(u,v), z(u,v)\big)`
-þannig að
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle {\cal S}=\{\mbox{${\bf r}$}(u,v)\mid (u,v)\in D\}
+    Látum :math:`D` vera ferilsamanhangandi hlutmengi í
+    :math:`{\mathbb  R}^2`. Samfelld vörpun
+    :math:`\mbox{${\bf r}$}:D\rightarrow {\mathbb  R}^3; \mbox{${\bf r}$}(u,v)=\big(x(u,v), y(u,v), z(u,v)\big)`
+    þannig að
 
-er flötur kallast *stikaflötur*. Segjum að :math:`\mbox{${\bf r}$}` sé
-*stikun á fletinum* :math:`\cal S`. Viljum að :math:`\mbox{${\bf r}$}`
-sé eintæk vörpun, nema hugsanlega á jaðri :math:`D`. Ritum einnig
+    .. math:: \displaystyle {\cal S}=\{\mbox{${\bf r}$}(u,v)\mid (u,v)\in D\}
 
-.. math:: \displaystyle
+    er flötur kallast *stikaflötur*. Segjum að :math:`\mbox{${\bf r}$}` sé
+    *stikun á fletinum* :math:`\cal S`. Viljum að :math:`\mbox{${\bf r}$}`
+    sé eintæk vörpun, nema hugsanlega á jaðri :math:`D`. Ritum einnig
 
-   \frac{\partial \mbox{${\bf r}$}}{\partial u}=
-   \bigg(\frac{\partial x}{\partial u}, \frac{\partial y}{\partial u},
-   \frac{\partial z}{\partial u}\bigg)\quad\mbox{ og }\quad
-   \frac{\partial \mbox{${\bf r}$}}{\partial v}=
-   \bigg(\frac{\partial x}{\partial v}, \frac{\partial y}{\partial v},
-   \frac{\partial z}{\partial v}\bigg).
+    .. math:: \displaystyle
+
+        \frac{\partial \mbox{${\bf r}$}}{\partial u}=
+        \bigg(\frac{\partial x}{\partial u}, \frac{\partial y}{\partial u},
+        \frac{\partial z}{\partial u}\bigg)\quad\mbox{ og }\quad
+        \frac{\partial \mbox{${\bf r}$}}{\partial v}=
+        \bigg(\frac{\partial x}{\partial v}, \frac{\partial y}{\partial v},
+        \frac{\partial z}{\partial v}\bigg).
 
 Snertiplön
 ----------
@@ -441,101 +492,102 @@ Snertiplön
 Setning 
 ~~~~~~~~
 
-#. Látum :math:`\cal S` vera flöt sem er gefinn sem :hover:`jafnhæðarflötur,hæðarflötur`
-   :math:`f(x,y,z)=C`. Ef :math:`(a, b, c)` er punktur á fletinum og
-   fallið :math:`f` er diffranlegt í punktinum :math:`(a, b,c)` þá er
-   vigurinn :math:`\mbox{${\bf n}$}=\nabla f(a, b, c)` hornréttur á
-   flötinn í punktinum :math:`(a,b, c)` og ef
-   :math:`\nabla f(a, b, c)\neq \mbox{${\bf 0}$}` þá hefur flöturinn
-   :hover:`snertiplan,snertislétta` í punktinum. Jafna snertiplansins er
+#.  Látum :math:`\cal S` vera flöt sem er gefinn sem :hover:`jafnhæðarflötur,hæðarflötur`
+    :math:`f(x,y,z)=C`. Ef :math:`(a, b, c)` er punktur á fletinum og
+    fallið :math:`f` er diffranlegt í punktinum :math:`(a, b,c)` þá er
+    vigurinn :math:`\mbox{${\bf n}$}=\nabla f(a, b, c)` hornréttur á
+    flötinn í punktinum :math:`(a,b, c)` og ef
+    :math:`\nabla f(a, b, c)\neq \mbox{${\bf 0}$}` þá hefur flöturinn
+    :hover:`snertiplan,snertislétta` í punktinum. Jafna snertiplansins er
 
-   .. math:: \displaystyle f_1(a, b, c)x+f_2(a, b, c)y+f_3(a, b, c)z=D
+    .. math:: \displaystyle f_1(a, b, c)x+f_2(a, b, c)y+f_3(a, b, c)z=D
 
-   þar sem
+    þar sem
 
-   .. math:: \displaystyle
+    .. math:: \displaystyle
 
-      D= f_1(a, b, c)a+f_2(a, b, c)b
-      +f_3(a, b, c)c.
+        D= f_1(a, b, c)a+f_2(a, b, c)b
+        +f_3(a, b, c)c.
 
-#. Látum :math:`\cal S` vera flöt sem er gefinn sem graf falls
-   :math:`z=f(x,y)`. Ef :math:`(a, b, f(a,b))` er punktur á fletinum og
-   fallið :math:`f` er diffranlegt í punktinum :math:`(a, b)` þá er
-   vigurinn
+#.  Látum :math:`\cal S` vera flöt sem er gefinn sem graf falls
+    :math:`z=f(x,y)`. Ef :math:`(a, b, f(a,b))` er punktur á fletinum og
+    fallið :math:`f` er diffranlegt í punktinum :math:`(a, b)` þá er
+    vigurinn
 
-   .. math:: \displaystyle \mbox{${\bf n}$}=\big(0 ,1 ,f_2(a, b)\big)\times\big(1 ,0 ,f_1(a, b)\big)=\big(f_1(a, b), f_2(a, b), -1\big)
+    .. math:: \displaystyle \mbox{${\bf n}$}=\big(0 ,1 ,f_2(a, b)\big)\times\big(1 ,0 ,f_1(a, b)\big)=\big(f_1(a, b), f_2(a, b), -1\big)
 
-   hornréttur á flötinn í punktinum :math:`(a,b, f(a,b))` og flöturinn
-   hefur snertiplan í punktinum. Jafna snertiplansins er
+    hornréttur á flötinn í punktinum :math:`(a,b, f(a,b))` og flöturinn
+    hefur snertiplan í punktinum. Jafna snertiplansins er
 
-   .. math:: \displaystyle z=f(a, b)+f_1(a, b)(x-a)+f_2(a, b)(y-b).
+    .. math:: \displaystyle z=f(a, b)+f_1(a, b)(x-a)+f_2(a, b)(y-b).
 
-.. image:: ./myndir/xpart.png
-   :width: 70%
-   :align: center
+.. figure:: ./myndir/xpart.png
+    :width: 70%
+    :align: center
 
-..
+    *Snertivigur við skurðferil sléttunnar* :math:`y=b` *og yfirborðsins* :math:`z = f(x,y)` *í punktinum* :math:`(a,b,f(a,b))` *er* :math:`\mathbf{T}_1 = (1,0,f_1(a,b))`.
 
-*Snertivigur við skurðferil sléttunnar* :math:`y=b` *og yfirborðsins* :math:`z = f(x,y)` *í punktinum* :math:`(a,b,f(a,b))` *er* :math:`\mathbf{T}_1 = (1,0,f_1(a,b))`.
+.. figure:: ./myndir/ypart.png
+    :width: 70%
+    :align: center
 
-.. image:: ./myndir/ypart.png
-   :width: 70%
-   :align: center
+    *Snertivigur við skurðferil sléttunnar* :math:`x=a` *og yfirborðsins* :math:`z = f(x,y)` *í punktinum* :math:`(a,b,f(a,b))` *er* :math:`\mathbf{T}_2 = (0,1,f_2(a,b))`.
 
-..
+3.  Látum
+    :math:`\mbox{${\bf r}$}: D\subseteq {\mathbb  R}^2\rightarrow {\mathbb  R}^3`
+    vera stikaflöt. Ef :math:`(x_0, y_0, z_0)=\mbox{${\bf r}$}(u_0, v_0)`
+    er punktur á fletinum sem
+    :math:`\mbox{${\bf r}$}(u,v)=\big(x(u,v), y(u,v), z(u,v)\big)` stikar
+    og föllin :math:`x(u,v), y(u,v), z(u,v)` eru diffranleg í punktinum
+    :math:`(x_0,
+    y_0)` þá er vigurinn
 
-*Snertivigur við skurðferil sléttunnar* :math:`x=a` *og yfirborðsins* :math:`z = f(x,y)` *í punktinum* :math:`(a,b,f(a,b))` *er* :math:`\mathbf{T}_2 = (0,1,f_2(a,b))`.
+    .. math:: \displaystyle
 
-3. Látum
-   :math:`\mbox{${\bf r}$}: D\subseteq {\mathbb  R}^2\rightarrow {\mathbb  R}^3`
-   vera stikaflöt. Ef :math:`(x_0, y_0, z_0)=\mbox{${\bf r}$}(u_0, v_0)`
-   er punktur á fletinum sem
-   :math:`\mbox{${\bf r}$}(u,v)=\big(x(u,v), y(u,v), z(u,v)\big)` stikar
-   og föllin :math:`x(u,v), y(u,v), z(u,v)` eru diffranleg í punktinum
-   :math:`(x_0,
-   y_0)` þá er vigurinn
+        \mbox{${\bf n}$}=\frac{\partial \mbox{${\bf r}$}}{\partial u}\times 
+        \frac{\partial \mbox{${\bf r}$}}{\partial v}
 
-   .. math:: \displaystyle
-
-      \mbox{${\bf n}$}=\frac{\partial \mbox{${\bf r}$}}{\partial u}\times 
-      \frac{\partial \mbox{${\bf r}$}}{\partial v}
-
-   reiknaður með :math:`u=u_0` og :math:`v=v_0` þvervigur á flötinn í
-   punktinum :math:`(x_0, y_0, z_0)`.
+    reiknaður með :math:`u=u_0` og :math:`v=v_0` þvervigur á flötinn í
+    punktinum :math:`(x_0, y_0, z_0)`.
 
 .. index::
-  stikun;regluleg
-   
+    stikun;regluleg
+
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Ef vigrarnir :math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}(u,v)`
-og :math:`\frac{\partial \mbox{${\bf r}$}}{\partial v}(u,v)` eru óháðir
-fyrir alla punkta :math:`(u,v)\in D` þá er sagt að stikunin sé
-*regluleg*.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. note::
-   Ef vigrarnir :math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}(u_0,v_0)` og :math:`\frac{\partial\mbox{${\bf r}$}}{\partial v}(u_0,v_0)` eru óháðir þá spanna þeir snertiplan við flötinn í punktinum :math:`\mbox{${\bf r}$}(u_0,v_0)`. Snertiplanið hefur stikun
+    Ef vigrarnir :math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}(u,v)`
+    og :math:`\frac{\partial \mbox{${\bf r}$}}{\partial v}(u,v)` eru óháðir
+    fyrir alla punkta :math:`(u,v)\in D` þá er sagt að stikunin sé
+    *regluleg*.
 
-   .. math:: \displaystyle
-      \Pi(u,v) = \mbox{${\bf r}$}(u_0,v_0)+u\frac{\partial \mbox{${\bf r}$}}{\partial u}(u_0,v_0)+v\frac{\partial \mbox{${\bf r}$}}{\partial v}(u_0,v_0).
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Ef vigrarnir :math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}(u_0,v_0)` og :math:`\frac{\partial\mbox{${\bf r}$}}{\partial v}(u_0,v_0)` eru óháðir þá spanna þeir snertiplan við flötinn í punktinum :math:`\mbox{${\bf r}$}(u_0,v_0)`. Snertiplanið hefur stikun
+
+    .. math:: \displaystyle
+        \Pi(u,v) = \mbox{${\bf r}$}(u_0,v_0)+u\frac{\partial \mbox{${\bf r}$}}{\partial u}(u_0,v_0)+v\frac{\partial \mbox{${\bf r}$}}{\partial v}(u_0,v_0).
 
 .. index::
-  flatarheildi
-      
+    flatarheildi
+
 Flatarheildi
 ------------
 
 Verkefni 
 ~~~~~~~~~
 
-#. Flatarmál flata – sambærilegt við bogalengd ferla.
+#.  Flatarmál flata – sambærilegt við bogalengd ferla.
 
-#. Heildi falls yfir flöt með tilliti til flatarmáls – sambærilegt við
-   heildi falls eftir ferli með tilliti til bogalengdar.
+#.  Heildi falls yfir flöt með tilliti til flatarmáls – sambærilegt við
+    heildi falls eftir ferli með tilliti til bogalengdar.   
 
-#. Heildi vigursviðs yfir flöt – svipar til heildis vigursviðs eftir
-   ferli.
+#.  Heildi vigursviðs yfir flöt – svipar til heildis vigursviðs eftir
+    ferli.
 
 Flatarmál flata
 ---------------
@@ -549,120 +601,130 @@ með formúlunni
 
 .. math:: \displaystyle
 
-   A=\int\!\!\!\int_D dS=\int\!\!\!\int_D {\textstyle\sqrt{1+
-   \big(\frac{\partial f}{\partial x}\big)^2+
-   \big(\frac{\partial f}{\partial y}\big)^2}}\,\,dx\,dy.
+    A=\int\!\!\!\int_D dS=\int\!\!\!\int_D {\textstyle\sqrt{1+
+    \big(\frac{\partial f}{\partial x}\big)^2+
+    \big(\frac{\partial f}{\partial y}\big)^2}}\,\,dx\,dy.
 
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`\mbox{${\bf r}$}:D\rightarrow {\mathbb  R}^3` vera
-reglulegan stikaflöt sem stikar flöt :math:`\cal S`. Flatarmál
-:math:`\cal S` er
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Látum :math:`\mbox{${\bf r}$}:D\rightarrow {\mathbb  R}^3` vera
+    reglulegan stikaflöt sem stikar flöt :math:`\cal S`. Flatarmál
+    :math:`\cal S` er
 
-   A=\int\!\!\!\int_D\,dS=\int\!\!\!\int_D \big|{\textstyle\frac{\partial \mbox{${\bf r}$}}{\partial u}
-   \times\frac{\partial \mbox{${\bf r}$}}{\partial v}}\big|\,dudv.
+    .. math:: \displaystyle
+
+        A=\int\!\!\!\int_D\,dS=\int\!\!\!\int_D \big|{\textstyle\frac{\partial \mbox{${\bf r}$}}{\partial u}
+        \times\frac{\partial \mbox{${\bf r}$}}{\partial v}}\big|\,dudv.
 
 Formúlur 
 ~~~~~~~~~
 
 Ritum :math:`dS` fyrir flatarmálselement á fleti :math:`\cal S`.
 
--  Ef
-   :math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
-   er stikun á :math:`\cal S` þá er
+-   Ef
+    :math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
+    er stikun á :math:`\cal S` þá er
 
-   .. math:: \displaystyle
+    .. math:: \displaystyle
 
-      dS=\bigg|\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
-        \mbox{${\bf r}$}}{\partial v}\bigg|\,du\,dv.
+        dS=\bigg|\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
+            \mbox{${\bf r}$}}{\partial v}\bigg|\,du\,dv.
 
--  Ef :math:`\cal S` er graf :math:`z=g(x,y)` þá er
+-   Ef :math:`\cal S` er graf :math:`z=g(x,y)` þá er
 
-   .. math:: \displaystyle dS=\sqrt{1+g_1(x,y)^2+g_2(x,y)^2}\,dx\,dy.
+    .. math:: \displaystyle dS=\sqrt{1+g_1(x,y)^2+g_2(x,y)^2}\,dx\,dy.
 
 
 
--  Gerum ráð fyrir að flöturinn :math:`\cal S` í :math:`{\mathbb  R}^3`
-   hafi þann eiginleika að ofanvarp hans á :math:`xy`-planið sé eintækt
-   eða með öðrum orðum hægt er að lýsa fletinum sem grafi
-   :math:`z=f(x,y)`. Ef :math:`\mbox{${\bf n}$}` er þvervigur á flötinn
-   og :math:`\gamma` er hornið sem :hover:`þvervigurinn,þvervigur` :math:`\mbox{${\bf n}$}`
-   myndar við jákvæða hluta :math:`z`-ássins þá er
+-   Gerum ráð fyrir að flöturinn :math:`\cal S` í :math:`{\mathbb  R}^3`
+    hafi þann eiginleika að ofanvarp hans á :math:`xy`-planið sé eintækt
+    eða með öðrum orðum hægt er að lýsa fletinum sem grafi
+    :math:`z=f(x,y)`. Ef :math:`\mbox{${\bf n}$}` er þvervigur á flötinn
+    og :math:`\gamma` er hornið sem :hover:`þvervigurinn,þvervigur` :math:`\mbox{${\bf n}$}`
+    myndar við jákvæða hluta :math:`z`-ássins þá er
 
-   .. math:: \displaystyle
+    .. math:: \displaystyle
 
-      dS=\bigg|\frac{1}{\cos\gamma}\bigg|\,dx\,dy
-      =\frac{|\mbox{${\bf n}$}|}{|\mbox{${\bf n}$}\cdot\mbox{${\bf k}$}|}\,dx\,dy.
+        dS=\bigg|\frac{1}{\cos\gamma}\bigg|\,dx\,dy
+        =\frac{|\mbox{${\bf n}$}|}{|\mbox{${\bf n}$}\cdot\mbox{${\bf k}$}|}\,dx\,dy.
 
-   Í þessu tilviki gildir einnig að ef :math:`\cal S` er lýst sem
-   hæðarfleti :math:`G(x,y,z)=C` þá er
+    Í þessu tilviki gildir einnig að ef :math:`\cal S` er lýst sem
+    hæðarfleti :math:`G(x,y,z)=C` þá er
 
-   .. math:: \displaystyle dS=\bigg|\frac{\nabla G(x,y,z)}{G_3(x,y,z)}\bigg|\,dx\,dy.
+    .. math:: \displaystyle dS=\bigg|\frac{\nabla G(x,y,z)}{G_3(x,y,z)}\bigg|\,dx\,dy.
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`\mbox{${\bf r}$}: D\rightarrow {\mathbb  R}^3` vera
-reglulega stikun á fleti :math:`\cal S`. Heildi falls :math:`f(x,y,z)`
-yfir flötinn :math:`\cal S` með tilliti til flatarmáls er
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-.. math:: \displaystyle
+    Látum :math:`\mbox{${\bf r}$}: D\rightarrow {\mathbb  R}^3` vera
+    reglulega stikun á fleti :math:`\cal S`. Heildi falls :math:`f(x,y,z)`
+    yfir flötinn :math:`\cal S` með tilliti til flatarmáls er
 
-   \int\!\!\!\int_{\cal S} f\,dS=\int\!\!\!\int_D f(\mbox{${\bf r}$}(u,v)) \big|{\textstyle\frac{\partial
-       \mbox{${\bf r}$}}{\partial u} 
-   \times\frac{\partial \mbox{${\bf r}$}}{\partial v}}\big|\,dudv.
+    .. math:: \displaystyle
+
+        \int\!\!\!\int_{\cal S} f\,dS=\int\!\!\!\int_D f(\mbox{${\bf r}$}(u,v)) \big|{\textstyle\frac{\partial
+            \mbox{${\bf r}$}}{\partial u} 
+        \times\frac{\partial \mbox{${\bf r}$}}{\partial v}}\big|\,dudv.
 
 .. index::
-  einingarþvervigrasvið
-   
+    einingarþvervigrasvið
+
 Einingarþvervigrasvið
 ---------------------
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Látum :math:`\cal S` vera flöt í :math:`{\mathbb  R}^3` sem hefur :hover:`snertiplan,snertislétta` í punkti :math:`P`.
-*Einingarþvervigur* :math:`\mbox{${\bf n}$}` á flötinn :math:`\cal S` í
-punktinum :math:`P` er :hover:`einingarvigur` hornréttur á snertiplan við flötinn
-í punktinum :math:`P`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-*Einingarþvervigrasvið* á :math:`\cal S` er samfellt :hover:`vigursvið`
-:math:`\mbox{${\bf N}$}` sem er skilgreint í öllum punktum
-:math:`\cal S` þannig að fyrir :math:`(x,y,z)\in{\cal S}` er vigurinn
-:math:`\mbox{${\bf n}$}(x,y,z)` einingarvigur sem er hornréttur á
-snertiplan við flötinn í punktinum :math:`(x,y,z)`.
+    Látum :math:`\cal S` vera flöt í :math:`{\mathbb  R}^3` sem hefur :hover:`snertiplan,snertislétta` í punkti :math:`P`.
+    *Einingarþvervigur* :math:`\mbox{${\bf n}$}` á flötinn :math:`\cal S` í
+    punktinum :math:`P` er :hover:`einingarvigur` hornréttur á snertiplan við flötinn
+    í punktinum :math:`P`.
+
+    *Einingarþvervigrasvið* á :math:`\cal S` er samfellt :hover:`vigursvið`
+    :math:`\mbox{${\bf N}$}` sem er skilgreint í öllum punktum
+    :math:`\cal S` þannig að fyrir :math:`(x,y,z)\in{\cal S}` er vigurinn
+    :math:`\mbox{${\bf n}$}(x,y,z)` einingarvigur sem er hornréttur á
+    snertiplan við flötinn í punktinum :math:`(x,y,z)`.
 
 .. image:: ./myndir/normalfield.png
-   :width: 50%
-   :align: center
+    :width: 50%
+    :align: center
 
 .. index::
-  flötur;áttanlegur
-  áttun
-   
+    flötur;áttanlegur
+    áttun
+
 Áttanlegir fletir
 -----------------
 
 Skilgreining 
 ~~~~~~~~~~~~~
 
-Flöturinn :math:`\cal S` er sagður :hover:`áttanlegur` ef til er
-einingarþvervigrasvið :math:`\mbox{${\bf N}$}` á :math:`\cal S`.
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-:hover:`Áttun` á áttanlegum fleti felst í því að velja annað af tveimur mögulegum
-einingaþvervigrasviðum.
+    Flöturinn :math:`\cal S` er sagður :hover:`áttanlegur` ef til er
+    einingarþvervigrasvið :math:`\mbox{${\bf N}$}` á :math:`\cal S`.
 
-.. image:: ./myndir/mobius.png
-   :width: 40%
-   :align: center
+    :hover:`Áttun` á áttanlegum fleti felst í því að velja annað af tveimur mögulegum
+    einingaþvervigrasviðum.
 
-..
+.. figure:: ./myndir/mobius.png
+    :width: 40%
+    :align: center
 
-*Möbiusarborði er ekki áttanlegur.*
+    *Möbiusarborði er ekki áttanlegur.*
 
 Umræða 
 ~~~~~~~
@@ -677,34 +739,37 @@ flöt með því að líma þá saman á (hluta af) jöðrunum og gæta þess a�
 jaðrarnir hafi andstæða stefnu á samskeytunum.
 
 .. image:: ./myndir/joinsurf.png
-   :width: 70%
-   :align: center
+    :width: 70%
+    :align: center
 
 Setning 
 ~~~~~~~~
 
-Gerum ráð fyrir að :math:`\cal S` sé :hover:`áttanlegur` flötur og
-:math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
-sé regluleg stikun á :math:`\cal S` (það er,
-:math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}` og
-:math:`\frac{\partial \mbox{${\bf r}$}}{\partial v}` eru samfelld föll
-af :math:`u` og :math:`v` og vigrarnir
-:math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}` og
-:math:`\frac{\partial \mbox{${\bf r}$}}{\partial v}` eru línulega
-óháðir). Þá er
+.. admonition:: Setning
+    :class: setning
 
-.. math:: \displaystyle
+    Gerum ráð fyrir að :math:`\cal S` sé :hover:`áttanlegur` flötur og
+    :math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
+    sé regluleg stikun á :math:`\cal S` (það er,
+    :math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}` og
+    :math:`\frac{\partial \mbox{${\bf r}$}}{\partial v}` eru samfelld föll
+    af :math:`u` og :math:`v` og vigrarnir
+    :math:`\frac{\partial \mbox{${\bf r}$}}{\partial u}` og
+    :math:`\frac{\partial \mbox{${\bf r}$}}{\partial v}` eru línulega
+    óháðir). Þá er
 
-   \mbox{${\bf N}$}=
-   \frac{\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
-       \mbox{${\bf r}$}}{\partial v}}
-   {|\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
-       \mbox{${\bf r}$}}{\partial v}|}
+    .. math:: \displaystyle
 
-einingarþvervigrasvið á :math:`\cal S`.
+        \mbox{${\bf N}$}=
+        \frac{\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
+            \mbox{${\bf r}$}}{\partial v}}
+        {|\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
+            \mbox{${\bf r}$}}{\partial v}|}
+
+    einingarþvervigrasvið á :math:`\cal S`.
 
 .. index::
-  flæði
+    flæði
 
 Heildi vigursviðs yfir flöt - Flæði
 -----------------------------------
@@ -712,60 +777,63 @@ Heildi vigursviðs yfir flöt - Flæði
 Skilgreining og ritháttur 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`\cal S` vera :hover:`áttanlegan,áttanlegur` flöt stikaðan af reglulegum
-stikaferli
-:math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
-með samfelldar hlutafleiður. Látum :math:`\mbox{${\bf N}$}` tákna
-einingarþvervigrasviðið sem gefið er í Setningu 5.13.3. Heildi vigursviðs
-:math:`\mbox{${\bf F}$}` yfir flötinn :math:`\cal S` er skilgreint sem
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-..
-  XXX ref
+    Látum :math:`\cal S` vera :hover:`áttanlegan,áttanlegur` flöt stikaðan af reglulegum
+    stikaferli
+    :math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
+    með samfelldar hlutafleiður. Látum :math:`\mbox{${\bf N}$}` tákna
+    einingarþvervigrasviðið sem gefið er í Setningu 5.13.3. Heildi vigursviðs
+    :math:`\mbox{${\bf F}$}` yfir flötinn :math:`\cal S` er skilgreint sem
 
-.. math:: \displaystyle
+    ..
+        XXX ref
 
-   \int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS
-   =\int\!\!\!\int_D \mbox{${\bf F}$}(\mbox{${\bf r}$}(u,v))\cdot \bigg(
-   \frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial \mbox{${\bf r}$}}{\partial
-     v}\bigg)\,
-   du\,dv.
+    .. math:: \displaystyle
 
-Slík heildi eru oft nefnd :hover:`flæði` vigursviðsins :math:`\mbox{${\bf F}$}`
-gegnum flötinn :math:`\cal S`.
+        \int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS
+        =\int\!\!\!\int_D \mbox{${\bf F}$}(\mbox{${\bf r}$}(u,v))\cdot \bigg(
+        \frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial \mbox{${\bf r}$}}{\partial
+            v}\bigg)\,
+        du\,dv.
 
-Ritum :math:`d\mbox{${\bf S}$}=\mbox{${\bf N}$}\,dS`. Þá er
+    Slík heildi eru oft nefnd :hover:`flæði` vigursviðsins :math:`\mbox{${\bf F}$}`
+    gegnum flötinn :math:`\cal S`.
 
-.. math:: \displaystyle \int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS=\int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf S}$}.
+    Ritum :math:`d\mbox{${\bf S}$}=\mbox{${\bf N}$}\,dS`. Þá er
+
+    .. math:: \displaystyle \int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS=\int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\,d\mbox{${\bf S}$}.
 
 Samantekt 
 ~~~~~~~~~~
 
-#. Ef
-   :math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
-   er stikun á :math:`\cal S` þá er
+#.  Ef
+    :math:`\mbox{${\bf r}$}:D\subseteq{\mathbb  R}^2\rightarrow {\mathbb  R}^3`
+    er stikun á :math:`\cal S` þá er
 
-   .. math:: \displaystyle
+    .. math:: \displaystyle
 
-      d\mbox{${\bf S}$}=\pm \bigg(\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
-        \mbox{${\bf r}$}}{\partial v}\bigg)\,du\,dv.
+        d\mbox{${\bf S}$}=\pm \bigg(\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial
+            \mbox{${\bf r}$}}{\partial v}\bigg)\,du\,dv.
 
-#. Ef :math:`\cal S` er graf :math:`z=f(x,y)` þá er
+#.  Ef :math:`\cal S` er graf :math:`z=f(x,y)` þá er
 
-   .. math:: \displaystyle
+    .. math:: \displaystyle
 
-      d\mbox{${\bf S}$}=\pm\bigg(-\frac{\partial f}{\partial x},-\frac{\partial
-        f}{\partial y},1\bigg)\,dx\,dy.
+        d\mbox{${\bf S}$}=\pm\bigg(-\frac{\partial f}{\partial x},-\frac{\partial
+            f}{\partial y},1\bigg)\,dx\,dy.
 
-#. Gerum ráð fyrir að flöturinn :math:`\cal S` í :math:`{\mathbb  R}^3`
-   hafi þann eiginleika að ofanvarp hans á :math:`xy`-planið sé eintækt
-   eða með öðrum orðum hægt er að lýsa fletinum sem grafi
-   :math:`z=f(x,y)`. Ef fletinum :math:`\cal S` er lýst sem hæðarfleti
-   :math:`G(x,y,z)=C` þá er
+#.  Gerum ráð fyrir að flöturinn :math:`\cal S` í :math:`{\mathbb  R}^3`
+    hafi þann eiginleika að ofanvarp hans á :math:`xy`-planið sé eintækt
+    eða með öðrum orðum hægt er að lýsa fletinum sem grafi
+    :math:`z=f(x,y)`. Ef fletinum :math:`\cal S` er lýst sem hæðarfleti
+    :math:`G(x,y,z)=C` þá er
 
-   .. math:: \displaystyle
+    .. math:: \displaystyle
 
-      d\mbox{${\bf S}$}=\pm\frac{\nabla G(x,y,z)}{|\nabla G(x,y,z)|}\,dS=
-      \pm\frac{\nabla G(x,y,z)}{G_3(x,y,z)}\,dx\,dy.
+        d\mbox{${\bf S}$}=\pm\frac{\nabla G(x,y,z)}{|\nabla G(x,y,z)|}\,dS=
+        \pm\frac{\nabla G(x,y,z)}{G_3(x,y,z)}\,dx\,dy.
 
 Val á :hover:`áttun` felst í því að velja :math:`+` eða :math:`-` í formúlunum
 hér að ofan.
