@@ -233,7 +233,9 @@ Ef við skrifum :math:`\mathbf x = (x_1,x_2,\ldots,x_n)` og
 .. math:: \displaystyle 
 
     \lim_{\mathbf x \to \mathbf p} f(\mathbf x) = L.
-|
+    
+| 
+
 ..
     XXX reference
 
