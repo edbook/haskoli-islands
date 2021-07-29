@@ -514,3 +514,7 @@ class PatchedHTMLTranslator(HTMLTranslator):
         if 'target' in node:
             atts['target'] = node['target']
         self.body.append(self.starttag(node, 'a', '', **atts))
+
+# Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
+hint_indent = r"\00a0"*12 # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0"*2
