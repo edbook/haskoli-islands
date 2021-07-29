@@ -1,13 +1,36 @@
 [tool.poetry]
-name = "undirbuningur_stae"
+name = "edbook"
 version = "0.1.0"
 description = ""
 authors = ["Benedikt Magnússon og fleiri"]
 
+packages = [
+    { include = "cli" }
+]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+version_files = [
+    "src/__version__.py",
+    "pyproject.toml:version"
+]
+style = [
+    ["qmark", "fg:#ff9d00 bold"],
+    ["question", "bold"],
+    ["answer", "fg:#ff9d00 bold"],
+    ["pointer", "fg:#ff9d00 bold"],
+    ["highlighted", "fg:#ff9d00 bold"],
+    ["selected", "fg:#cc5454"],
+    ["separator", "fg:#cc5454"],
+    ["instruction", ""],
+    ["text", ""],
+    ["disabled", "fg:#858585 italic"]
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-typer = "^0.3.2"
+typer = {extras = ["all"], version = "^0.3.2"}
 seedir = "^0.1.2"
 pypandoc = "^1.5"
 Sphinx= "^3.2.1"
@@ -29,14 +52,16 @@ sphinx-togglebutton = "^0.2.3"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 mypy = "^0.790"
-pylint = "^2.6.0"
+pylint = "^2.9"
 black = "^20.8b1"
 rstcheck = "^3.3.1"
 sphinx-autobuild = "^2020.9.1"
-commitizen = "^2.13.0"
+commitizen = "^2.13"
+typer = "^0.3"
+pre-commit = "^2.13.0"
 
 [tool.poetry.scripts]
-hicli = "hicli.main:app"
+cli = "cli.main:run"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

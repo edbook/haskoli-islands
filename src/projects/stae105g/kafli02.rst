@@ -4,23 +4,23 @@ Markgildi og samfelldni
 .. admonition:: Nauðsynleg undirstaða
   :class: athugasemd
 
-    -  Jafna línu, P.2
+    -  Jafna línu
 
-    -  Jafna hrings, P.3
+    -  Jafna hrings
+		
+    -  Hliðrun og skölun grafs
 
-    -  Hliðrun og skölun grafs, P.3
+    -  (Stranglega) minnkandi og (stranglega) vaxandi föll
 
-    -  (Stranglega) minnkandi og (stranglega) vaxandi föll, 2.8
+    -  Jafnstæð og oddstæð föll
 
-    -  Jafnstæð og oddstæð föll, P.4
+    -  Margliður; deiling, þáttun og rætur
 
-    -  Margliður; deiling, þáttun og rætur, P.6
+    -  Tölugildisfallið
 
-    -  Tölugildisfallið, P.1
+    -  Þríhyrningsójafnan
 
-    -  Þríhyrningsójafnan, P.1
-
-    -  Formerkjafallið, :math:`sgn(x)`, P.5
+    -  Formerkjafallið, :math:`sgn(x)`
 
 
 ---------

@@ -35,10 +35,10 @@ sys.path.append(os.path.abspath("../../extensions"))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-#    "sphinx.ext.ifconfig",
-#    "sphinx.ext.intersphinx",
+    #    "sphinx.ext.ifconfig",
+    #    "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
-#    "sphinx.ext.mathjax",
+    #    "sphinx.ext.mathjax",
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #    'katex.katex',
@@ -46,17 +46,17 @@ extensions = [
     # see https://github.com/nyergler/hieroglyph
     #'hieroglyph',
     # Extension for embedding geogebra applets, see README.txt in ggbextension folder
- #   "ggbextension.ggb",
+    #   "ggbextension.ggb",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-  #  "toggleblock.toggleBlock",
+    #  "toggleblock.toggleBlock",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # Note: sagecell must not be listed before katex.katex
     #    'sagecell.sagecell',
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-#    "hoverrole.hoverrole",
+    #    "hoverrole.hoverrole",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     #    'analytics.analytics',
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
@@ -64,10 +64,8 @@ extensions = [
     #'datacamp.datacamp',
     # Extension that allows embedding panopto videos from rec.hi.is
     #    'panoptoextension.panopto'
-    "custom_button.custom_button.button",
-
+    "custom_button.custom_button",
     # fyrir Reauthoring
-
     # 'Sphinx_ext.activityduration',
     # 'Sphinx_ext.htmlform',
     # 'Sphinx_ext.instructorfeedback',
@@ -480,33 +478,36 @@ from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 from docutils.nodes import Element
 
-class PatchedHTMLTranslator(HTMLTranslator):
 
+class PatchedHTMLTranslator(HTMLTranslator):
     def visit_reference(self, node: Element) -> None:
-        atts = {'class': 'reference'}
-        if node.get('internal') or 'refuri' not in node:
-            atts['class'] += ' internal'
+        atts = {"class": "reference"}
+        if node.get("internal") or "refuri" not in node:
+            atts["class"] += " internal"
         else:
-            atts['class'] += ' external'
+            atts["class"] += " external"
             # ---------------------------------------------------------
             # Customize behavior (open in new tab, secure linking site)
-            atts['target'] = '_blank'
-            atts['rel'] = 'noopener noreferrer'
+            atts["target"] = "_blank"
+            atts["rel"] = "noopener noreferrer"
             # ---------------------------------------------------------
-        if 'refuri' in node:
-            atts['href'] = node['refuri'] or '#'
-            if self.settings.cloak_email_addresses and atts['href'].startswith('mailto:'):
-                atts['href'] = self.cloak_mailto(atts['href'])
+        if "refuri" in node:
+            atts["href"] = node["refuri"] or "#"
+            if self.settings.cloak_email_addresses and atts["href"].startswith(
+                "mailto:"
+            ):
+                atts["href"] = self.cloak_mailto(atts["href"])
                 self.in_mailto = True
         else:
-            assert 'refid' in node, \
-                   'References must have "refuri" or "refid" attribute.'
-            atts['href'] = '#' + node['refid']
+            assert (
+                "refid" in node
+            ), 'References must have "refuri" or "refid" attribute.'
+            atts["href"] = "#" + node["refid"]
         if not isinstance(node.parent, nodes.TextElement):
             assert len(node) == 1 and isinstance(node[0], nodes.image)
-            atts['class'] += ' image-reference'
-        if 'reftitle' in node:
-            atts['title'] = node['reftitle']
-        if 'target' in node:
-            atts['target'] = node['target']
-        self.body.append(self.starttag(node, 'a', '', **atts))
+            atts["class"] += " image-reference"
+        if "reftitle" in node:
+            atts["title"] = node["reftitle"]
+        if "target" in node:
+            atts["target"] = node["target"]
+        self.body.append(self.starttag(node, "a", "", **atts))
