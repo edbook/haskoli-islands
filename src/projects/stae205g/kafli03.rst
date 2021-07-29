@@ -148,7 +148,7 @@ Dæmi um föll með söðulpunkta.
 
     :math:`z = f(x,y) = x^3`.
 
-.. image:: ./myndir/sodull2.png
+.. figure:: ./myndir/sodull2.png
     :width: 80%
     :align: center
     
@@ -356,7 +356,7 @@ Dæmi
 .. admonition:: Dæmi
     :class: daemi 
 
-    Hver eru hæstu og lægstu gildi fallsins* :math:`f(x,y) = x^2-y^2+4` *á
+    Hver eru hæstu og lægstu gildi fallsins :math:`f(x,y) = x^2-y^2+4` á
     menginu :math:`\{(x,y)~|~x^2+y^2=1\}`?
 
     .. image:: ./myndir/constraint.png
