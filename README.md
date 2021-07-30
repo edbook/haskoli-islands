@@ -33,7 +33,7 @@ make autobuild project=undirbuningur_stae
 ```
 
 ## Sagecell
-All `*.sage` files should be added to `src/extensions/sagecell/examples` directory so they can be reused across projects. You can continue to reference them by filename only.
+All `*.sage` files should be added to `src/extensions/sagecell-extension/examples` directory so they can be reused across projects. You can continue to reference them by filename only.
 ## Contribute
 The following rules should be followed when contributing:
 - Create a branch (or fork the project if you are not already a contributor) from master
