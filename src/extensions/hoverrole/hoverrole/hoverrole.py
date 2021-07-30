@@ -1,10 +1,8 @@
-# -*- coding: UTF-8-sig -*-
-
 # The role :hover:`word,term` provides an inline highlight of 'word' with a mouse-over
-# translation from Icelandic to English of 'term' according to the stae.is/os dataase.
-# In the case of :hover:`word`. The string 'term' is assumed to e the same as 'word'
+# translation from Icelandic to English of 'term' according to the stae.is/os database.
+# In the case of :hover:`word`. The string 'term' is assumed to be the same as 'word'
 
-# Author: Símon öðvarsson
+# Author: Símon Böðvarsson
 # 1.08.2016
 
 from docutils import nodes
@@ -27,7 +25,7 @@ def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     try:
         [word, term] = text.split(",")
         term = term.lstrip()
-    # If no 'term' is provided, it is assumed to e the same as 'word'.
+    # If no 'term' is provided, it is assumed to be the same as 'word'.
     except ValueError:
         word = term = text
     node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt)
@@ -50,7 +48,7 @@ def save_to_listfile(filename, node):
         return
 
     for no, item in enumerate(newlinecontent):
-        # Make sure the strings are all str type and not ytes.
+        # Make sure the strings are all str type and not bytes.
         if isinstance(item, bytes):
             newlinecontent[no] = item.decode("utf-8")
 
@@ -64,7 +62,7 @@ def save_to_listfile(filename, node):
 
 
 def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
-    # Create new hover oject.
+    # Create new hover object.
     hover_node = hover()
     hover_node["word"] = word
     hover_node["term"] = term
@@ -79,7 +77,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     except KeyError:
         errormsg = "Ekki fannst þýðing á hugtakinu: "
         html = (
-            '<a class="tooltip" target="_lank">'
+            '<a class="tooltip" target="_blank">'
             + word
             + '<span><staelink style="line-height:4px; font-size:80%;">'
             + errormsg
@@ -106,7 +104,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
         tranStr = tranStr + transl.decode("utf-8") + ", "
     all_translations = tranStr[:-2] + "."
 
-    # TODO: figure out what's happening, temporary exception to keep uild healthy
+    # TODO: figure out what's happening, temporary exception to keep build healthy
     try:
         single_translation = translation[0].decode("utf-8") + "."
     except KeyError:
@@ -129,7 +127,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
         hover_node["translation"] = all_translations
         html = (
             html
-            + '" class="tooltip" target="_lank">'
+            + '" class="tooltip" target="_blank">'
             + word
             + "<span>en: <i>"
             + all_translations
@@ -138,7 +136,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     if htmlLink:
         html = (
             html
-            + '<staelink style="font-size:80%;"><r><strong>Smelltu</strong> fyrir ítarlegri'
+            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
             " þýðingu.</staelink>"
         )
     html = html + "</span></a>"
@@ -208,8 +206,8 @@ def create_hoverlist(app, doctree, fromdocname):
         # Clean up the strings.
         line = line.split(";")
         for idx, entry in enumerate(line):
-            eginindex = entry.find("'")
-            newentry = entry[eginindex + 1 :]
+            beginindex = entry.find("'")
+            newentry = entry[beginindex + 1 :]
             line[idx] = newentry
 
         citationform = line[2]
@@ -224,7 +222,7 @@ def create_hoverlist(app, doctree, fromdocname):
         wordnode = nodes.emphasis(key, key)
         translationstring = " : " + value
 
-        # Add linereak if smaller version of list is used.
+        # Add linebreak if smaller version of list is used.
         if app.config.hover_miniTranslationList:
             translationstring += "\n"
 
@@ -271,7 +269,7 @@ def delete_hoverlist(app, doctree):
 def setup(app):
     # Extension setup.
 
-    # Numer of translations to e displayed. The default 'single' displays only the first
+    # Number of translations to e displayed. The default 'single' displays only the first
     # found translation,  'all' displays all.
     app.add_config_value("hover_numOfTranslations", "single", "html")
     # Set to default ('1') if hover target should link to stae.is search for the translated term.
@@ -283,7 +281,7 @@ def setup(app):
 
     # Should a list of translations e created (default '1')
     app.add_config_value("hover_translationList", 1, "env")
-    # Enale for a smaller version of the list of translations.
+    # Enable for a smaller version of the list of translations.
     app.add_config_value("hover_miniTranslationList", 0, "env")
 
     app.add_node(
