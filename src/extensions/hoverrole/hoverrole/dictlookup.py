@@ -1,18 +1,19 @@
-# -*- coding: UTF-8-sig -*-
-
-# Function combine() in 'createDicts.py' module can be used to generate
-# the dictionary 'binstae' from stae.is and BIN databases.
-
-# Author: Simon Bodvarsson
-# 18.07.2016
-
+import json
 import sys
-
-from . import binstae, minstae
-
+from pathlib import Path
 
 # Look up icelandic searchterm 'word' in the dictionaries 'minstae' and 'binstae'
 # and return a dict containing the english and icelandic citation forms of the word.
+base_dir = Path(__file__).parent.resolve().parent.parent.parent
+print(base_dir)
+data_file = base_dir / "data" / "minstae.json"
+print(data_file)
+minstae_data = json.loads(data_file.read_text())
+
+data_file = base_dir / "data" / "binstae.json"
+binstae_data = json.loads(data_file.read_text())
+
+
 def lookup(word):
     word = word.lower()
 
@@ -22,14 +23,14 @@ def lookup(word):
 
     # If 'word' is in citation form, look up in 'minstae' returns the translation.
     try:
-        entry = minstae.minstae[word]
-        entry[b"isTerm"] = word
+        entry = minstae_data[word]
+        entry["isTerm"] = word
         return entry
     # If 'word' is not found in 'minstae', it may not be in citation form and a
     # look up in 'binstae' is performed instead.
     except KeyError:
         try:
-            entry = binstae.binstae[word]
+            entry = binstae_data[word]
             return entry
         # If 'word' is not found in 'binstae', the look-up has failed and an empty
         # dict is returned.

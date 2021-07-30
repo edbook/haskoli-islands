@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+from pathlib import Path
 
 from docutils import nodes
 from docutils.parsers.rst import directives
@@ -97,11 +96,10 @@ class SageCell(Directive):
     }
 
     def run(self):
-
+        script_dir = Path(__file__).parent.resolve().parent / "examples"
         if "codefile" in self.options:
-            codefile = self.options.get("codefile")
-            f = open(codefile, "r")
-            code = f.read()
+            codefile: str = self.options.get("codefile")
+            code = Path(script_dir / codefile).read_text()
         else:
             code = "\n".join(self.content)
 

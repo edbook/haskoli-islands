@@ -716,7 +716,7 @@ python-versions = "*"
 name = "pyyaml"
 version = "5.4.1"
 description = "YAML parser and emitter for Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
@@ -1139,7 +1139,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "59ecb727d51e57a6a2f402696ae8049211266d324b45afd454c478669cf00a7e"
+content-hash = "f799d27ede924eec8f054be13ef4f27310e927f2eb848f2c07053a4724c0e24f"
 
 [metadata.files]
 alabaster = [

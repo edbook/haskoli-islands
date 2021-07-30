@@ -32,6 +32,8 @@ Run a dev server for local development. This will open a tab in your browser at 
 make autobuild project=undirbuningur_stae
 ```
 
+## Sagecell
+All `*.sage` files should be added to `src/extensions/sagecell-extension/examples` directory so they can be reused across projects. You can continue to reference them by filename only.
 ## Contribute
 The following rules should be followed when contributing:
 - Create a branch (or fork the project if you are not already a contributor) from master
@@ -116,4 +118,3 @@ Many extensions have been written to add features and modifications to sphinx pr
 Several extensions come bundled with sphinx: http://sphinx-doc.org/extensions.html
 
 Three custom extensions come with this framework (ggbextension to embed geogebra applets, toggleblock-extension for toggleable text sections and sagecell-extension to embed sage cells. See README files in the extension folders.)
-
