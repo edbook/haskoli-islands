@@ -153,7 +153,8 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     if htmlLink:
         html = (
             html
-            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>'
+            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
+            " þýðingu.</staelink>"
         )
     html = html + "</span></a>"
 

@@ -83,17 +83,13 @@ def builder_inited(app):
     mathpath = app.config.render_math
 
     if not katexpath:
-        raise ExtensionError(
-            "katex_path config value must be set for the " "katex extension to work"
-        )
+        raise ExtensionError("katex_path config value must be set for the katex extension to work")
     elif not renderpath:
         raise ExtensionError(
-            "katex_render config value must be set for the " "katex extension to work"
+            "katex_render config value must be set for the katex extension to work"
         )
     elif not mathpath:
-        raise ExtensionError(
-            "render_math config value must be set for the " "katex extension to work"
-        )
+        raise ExtensionError("render_math config value must be set for the katex extension to work")
 
     if katexpath and renderpath and mathpath:
         app.add_javascript(katexpath)

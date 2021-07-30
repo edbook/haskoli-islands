@@ -9,14 +9,14 @@ long_desc = """
     """
 
 setup(
-    name='katex-extension',
-    license='MIT',
-    author='Arnór Pétur Marteinsson',
+    name="katex-extension",
+    license="MIT",
+    author="Arnór Pétur Marteinsson",
     long_description=long_desc,
     zip_safe=False,
-    platforms='any',
+    platforms="any",
     packages=find_packages(),
     include_package_data=True,
     install_requires="sphinx>=1.7",
-    namespace_packages=['katex'],
+    namespace_packages=["katex"],
 )

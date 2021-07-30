@@ -32,9 +32,9 @@ reps = {
     "\{align\}": "{aligned}",
     #'\}\\ ': '}\\ ',
     re.compile(r"\{?\\cal ([a-zA-Z])\}?"): "\\mathcal{\\1}",
-    re.compile(r"\\substack\{(.*?)\\\\(.*?)\}", re.DOTALL): (
-        "\\scriptstyle \\1 \\\\atop\\scriptstyle \\2"
-    ),
+    re.compile(
+        r"\\substack\{(.*?)\\\\(.*?)\}", re.DOTALL
+    ): "\\scriptstyle \\1 \\\\atop\\scriptstyle \\2",
     re.compile(r"\\label\{(.*?)\}"): "",
 }
 
