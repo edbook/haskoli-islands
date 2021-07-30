@@ -76,9 +76,7 @@ numfig_format["section"] = "%s"
 
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
 

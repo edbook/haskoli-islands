@@ -7,12 +7,14 @@
 # Author: Símon Böðvarsson
 # 1.08.2016
 
-from docutils import nodes, utils
-from docutils.parsers.rst.roles import set_classes
-from docutils.parsers.rst import Directive
 import codecs
 import os
 import sys
+
+from docutils import nodes, utils
+from docutils.parsers.rst import Directive
+from docutils.parsers.rst.roles import set_classes
+
 from . import dictlookup
 
 
@@ -131,11 +133,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     # HTML snippet
     html = "<a "
     if htmlLink:
-        html = (
-            html
-            + 'href="http://www.stae.is/os/leita/'
-            + single_translation.replace(" ", "_")
-        )
+        html = html + 'href="http://www.stae.is/os/leita/' + single_translation.replace(" ", "_")
     if transNum == "single":
         html = (
             html
@@ -158,7 +156,8 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     if htmlLink:
         html = (
             html
-            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>'
+            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
+            " þýðingu.</staelink>"
         )
     html = html + "</span></a>"
 

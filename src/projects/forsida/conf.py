@@ -14,10 +14,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
-import shlex
 import re
+import shlex
+import sys
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -83,9 +83,7 @@ extensions = [
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 
@@ -296,10 +294,9 @@ slide_theme_options = {"custom_css": "custom.css"}
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-    "fncychap": r"\\usepackage[Sonny]{fncychap}",
+    "fncychap": "\\usepackage[Sonny]{fncychap}",
     "papersize": "a4paper",
-    "preamble": r"""
-
+    "preamble": """\
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{hyperref}
@@ -474,9 +471,9 @@ intersphinx_mapping = {"http://docs.python.org/": None}
 
 # Hulda bætti mér við. Opna linka í öðrum gluggan.
 
-from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 from docutils.nodes import Element
+from sphinx.writers.html import HTMLTranslator
 
 
 class PatchedHTMLTranslator(HTMLTranslator):
@@ -493,15 +490,11 @@ class PatchedHTMLTranslator(HTMLTranslator):
             # ---------------------------------------------------------
         if "refuri" in node:
             atts["href"] = node["refuri"] or "#"
-            if self.settings.cloak_email_addresses and atts["href"].startswith(
-                "mailto:"
-            ):
+            if self.settings.cloak_email_addresses and atts["href"].startswith("mailto:"):
                 atts["href"] = self.cloak_mailto(atts["href"])
                 self.in_mailto = True
         else:
-            assert (
-                "refid" in node
-            ), 'References must have "refuri" or "refid" attribute.'
+            assert "refid" in node, 'References must have "refuri" or "refid" attribute.'
             atts["href"] = "#" + node["refid"]
         if not isinstance(node.parent, nodes.TextElement):
             assert len(node) == 1 and isinstance(node[0], nodes.image)

@@ -1,0 +1,66 @@
+<div class="xy_click" id="{{ element_id }}">
+  {% if title %}
+  <div class="xy_click_title">{{ title }}</div>
+  {% endif %}
+  <div class="xy_click_inner" style="display: table">
+    <div class="xy_click_center" style="display: table-row">
+      <div class="xy_top_label" style="display: table-cell; text-align: right">
+        {{ topleft_label }}
+      </div>
+      <div class="xy_top_label" style="display: table-cell; text-align: center">
+        {{ top_label }}
+      </div>
+      <div class="xy_top_label" style="display: table-cell; text-align: left">
+        {{ topright_label }}
+      </div>
+    </div>
+    <div class="xy_click_center" style="display: table-row">
+      <div
+        class="xy_left_label"
+        style="vertical-align: middle; text-align: right; display: table-cell"
+      >
+        {{ left_label }}
+      </div>
+      <div class="xy_grid" style="position: relative">
+        <img
+          class="xy_grid_img"
+          src="{{ img_path }}"
+          style="vertical-align: middle"
+          height="{{ xy_size }}"
+          width="{{ xy_size }}"
+        />
+        <img
+          class="xy_ok_icon"
+          src="{{ ok_path }}"
+          style="display: none; position: absolute"
+        />
+      </div>
+      <div
+        class="xy_right_label"
+        style="vertical-align: middle; text-align: left; display: table-cell"
+      >
+        {{ right_label }}
+      </div>
+    </div>
+    <div class="xy_click_center" style="display: table-row">
+      <div
+        class="xy_bottom_label"
+        style="display: table-cell; text-align: right"
+      >
+        {{ bottomleft_label }}
+      </div>
+      <div
+        class="xy_bottom_label"
+        style="display: table-cell; text-align: center"
+      >
+        {{ bottom_label }}
+      </div>
+      <div
+        class="xy_bottom_label"
+        style="display: table-cell; text-align: left"
+      >
+        {{ bottomright_label }}
+      </div>
+    </div>
+  </div>
+</div>

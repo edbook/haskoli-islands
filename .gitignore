@@ -15,7 +15,6 @@ dist/
 var/
 *.egg-info/
 .installed.cfg
-__pycache__
 .vscode
 .python-version
 _build/

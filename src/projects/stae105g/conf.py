@@ -14,8 +14,8 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
+import sys
 
 sys.path.insert(0, os.path.abspath("."))
 sys.path.append(os.path.abspath("../../extensions"))
@@ -71,9 +71,7 @@ extensions = [
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 
@@ -106,7 +104,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = u"Hagnýt stærðfræðigreining (STÆ105G)"
+project = "Hagnýt stærðfræðigreining (STÆ105G)"
 copyright = "2021,Valentina Giangreco M Puletti"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -284,10 +282,9 @@ slide_theme_options = {"custom_css": "custom.css"}
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-    "fncychap": r"\\usepackage[Sonny]{fncychap}",
+    "fncychap": "\\usepackage[Sonny]{fncychap}",
     "papersize": "a4paper",
-    "preamble": r"""
-
+    "preamble": """\
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
@@ -464,6 +461,9 @@ intersphinx_mapping = {"http://docs.python.org/": None}
 def setup(app):
     app.add_css_file("custom_admonitions.css")
 
+
 # Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
-hint_indent = r"\00a0"*12 # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
-togglebutton_hint = hint_indent + "Sýna" + r"\00a0"*2
+hint_indent = (
+    r"\00a0" * 12
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2
