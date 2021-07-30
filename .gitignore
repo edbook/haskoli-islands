@@ -22,5 +22,6 @@ build/
 .env
 .mypy_cache
 *.zip
+*.ZIP
 .DS_Store
 *.mo

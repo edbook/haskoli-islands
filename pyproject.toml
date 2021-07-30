@@ -35,6 +35,7 @@ exclude = '''
   | Tolfraedi_fra_grunni\/for_latext_version
   | src\/extensions
   | minstae.py
+  | binstae.py
 
 )
 '''
@@ -68,7 +69,7 @@ python = "^3.9"
 typer = {extras = ["all"], version = "^0.3.2"}
 seedir = "^0.1.2"
 pypandoc = "^1.5"
-Sphinx= "^3.2.1"
+Sphinx= "^3.5.4"
 sphinx-rtd-theme = "^0.5.0"
 sphinxcontrib-katex = "^0.6.1"
 paramiko= "^2.7.2"
@@ -83,6 +84,7 @@ custom-button = {path = "src/extensions/custom-button", develop = true}
 datacamp = {path = "src/extensions/datacamp-extension", develop = true}
 google-analytics = {path = "src/extensions/google-analytics", develop = true}
 sphinx-togglebutton = "^0.2.3"
+PyYAML = "^5.4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
