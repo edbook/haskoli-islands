@@ -91,9 +91,9 @@ katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 datacamp_path = "https://cdn.datacamp.com/datacamp-light-latest.min.js"
 
 # Paths for sagecell javascript files
-sage_jquery_path = "http://sagecell.sagemath.org/static/jquery.min.js"
-sage_path = "http://sagecell.sagemath.org/static/embedded_sagecell.js"
-custom_sage_path = "custom_sage.js"
+#sage_jquery_path = "http://sagecell.sagemath.org/static/jquery.min.js"
+#sage_path = "http://sagecell.sagemath.org/static/embedded_sagecell.js"
+#custom_sage_path = "custom_sage.js"
 
 # Google Analytics ID, enable_custom_scrolldepth default value is False if not set
 ga_id = "UA-78633732-9"
