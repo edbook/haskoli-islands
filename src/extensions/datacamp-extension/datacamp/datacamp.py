@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from docutils import nodes
 from docutils.parsers.rst import directives
 from sphinx.errors import ExtensionError
@@ -141,8 +142,7 @@ def builder_inited(app):
     datapath = app.config.datacamp_path
     if not datapath:
         raise ExtensionError(
-            "datacamp_path config value must be set for the "
-            "datacamp extension to work"
+            "datacamp_path config value must be set for the datacamp extension to work"
         )
     if datapath:
         app.add_js_file(datapath)

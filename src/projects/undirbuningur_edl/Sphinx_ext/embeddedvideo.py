@@ -26,8 +26,7 @@
 from __future__ import division
 
 from docutils import nodes
-from docutils.parsers.rst import directives, Directive
-
+from docutils.parsers.rst import Directive, directives
 from Sphinx_ext import common
 
 
@@ -42,7 +41,7 @@ class EmbeddedVideo(nodes.General, nodes.Element):
 #
 def visit_embedded_video_node(self, node):
     youtube_template = """<script type="text/javascript">
-        array_video_embed['{0}'] = {{height: '{1}', width: '{2}', 
+        array_video_embed['{0}'] = {{height: '{1}', width: '{2}',
         videoId: '{3}', playerVars: {{rel: 0{4}{5}}},
         events: {{'onStateChange': onPlayerStateChange}}}};</script>"""
 
@@ -64,37 +63,33 @@ def visit_embedded_video_node(self, node):
         end_str = ", end: '{0}'".format(node["args"][2])
 
     # Get the params
-    elem_id = node['element_id']
-    height = node['height']
-    width = node['width']
-    vformat = node['format'].lower()  # Take the value in all lowercase
+    elem_id = node["element_id"]
+    height = node["height"]
+    width = node["width"]
+    vformat = node["format"].lower()  # Take the value in all lowercase
 
     # If it is the instructor guide, print the id
-    if hasattr(self.builder.config, 'iguide') and self.builder.config.iguide:
+    if hasattr(self.builder.config, "iguide") and self.builder.config.iguide:
         self.body.append('<div class="embedded-video-id">')
-        self.body.append('<strong>Video ID: %s</strong>' % video_id)
-        self.body.append('</div>')
+        self.body.append("<strong>Video ID: %s</strong>" % video_id)
+        self.body.append("</div>")
 
     # Deploy the div with the script inside
     self.body.append('<div id="%s" class="embedded-video">' % elem_id)
 
     # Emit code for the different video formats
-    if vformat == 'youtube':
+    if vformat == "youtube":
         #
         # YOUTUBE
         #
-        self.body.append(youtube_template.format(elem_id,
-                                                 height,
-                                                 width,
-                                                 video_id,
-                                                 start_str,
-                                                 end_str))
-    elif vformat == 'vimeo':
+        self.body.append(
+            youtube_template.format(elem_id, height, width, video_id, start_str, end_str)
+        )
+    elif vformat == "vimeo":
         #
         # VIMEO
         #
-        self.body.append(vimeo_template.format(video_id, width, height,
-                                               elem_id))
+        self.body.append(vimeo_template.format(video_id, width, height, elem_id))
     else:
         # Unknown video format, raise exception.
         raise Exception('Incorrect "format" value in embedded-video directive')
@@ -126,39 +121,41 @@ class EmbeddedVideoDirective(Directive):
     option_spec = {
         "height": directives.nonnegative_int,
         "width": directives.nonnegative_int,
-        "format": directives.unchanged
-        }
+        "format": directives.unchanged,
+    }
 
     def run(self):
         config = self.state.document.settings.env.config
 
-        height = common.get_parameter_value(config, self.options, 'height',
-                                            'embedded_video_height')
-        width = common.get_parameter_value(config, self.options, 'width',
-                                           'embedded_video_width')
+        height = common.get_parameter_value(config, self.options, "height", "embedded_video_height")
+        width = common.get_parameter_value(config, self.options, "width", "embedded_video_width")
 
-        vformat = common.get_parameter_value(config, self.options,
-                                             'format',
-                                             'embedded_video_format')
+        vformat = common.get_parameter_value(
+            config, self.options, "format", "embedded_video_format"
+        )
 
-        element_id = 'embedded-video-%s' % \
-            self.state.document.settings.env.new_serialno('embedded-video')
+        element_id = "embedded-video-%s" % self.state.document.settings.env.new_serialno(
+            "embedded-video"
+        )
 
-        return [EmbeddedVideo(args=self.arguments,
-                              element_id=element_id,
-                              height=height,
-                              width=width,
-                              format=vformat)]
+        return [
+            EmbeddedVideo(
+                args=self.arguments,
+                element_id=element_id,
+                height=height,
+                width=width,
+                format=vformat,
+            )
+        ]
 
 
 def setup(app):
-    app.add_node(EmbeddedVideo,
-                 html=(visit_embedded_video_node, depart_embedded_video_node))
+    app.add_node(EmbeddedVideo, html=(visit_embedded_video_node, depart_embedded_video_node))
 
     app.add_directive("embedded-video", EmbeddedVideoDirective)
 
     # Declare the three parameters for the directive. Any changes in any value
     # should fire the rebuild (thus the True as third parameter.
-    app.add_config_value('embedded_video_height', 390, True)
-    app.add_config_value('embedded_video_width', "100%", True)
-    app.add_config_value('embedded_video_format', "youtube", True)
+    app.add_config_value("embedded_video_height", 390, True)
+    app.add_config_value("embedded_video_width", "100%", True)
+    app.add_config_value("embedded_video_format", "youtube", True)

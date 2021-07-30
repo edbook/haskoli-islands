@@ -14,9 +14,8 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
-
+import sys
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -64,9 +63,7 @@ extensions = [
     #'datacamp.datacamp',
     # Extension that allows embedding panopto videos from rec.hi.is
     #    'panoptoextension.panopto'
-
     # fyrir Reauthoring
-
     # 'Sphinx_ext.activityduration',
     # 'Sphinx_ext.htmlform',
     # 'Sphinx_ext.instructorfeedback',
@@ -84,9 +81,7 @@ extensions = [
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 
@@ -119,7 +114,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = u"Stærðfræðigreining I (STÆ104G)"
+project = "Stærðfræðigreining I (STÆ104G)"
 copyright = "2021,Benedikt Steinar Magnusson"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -188,7 +183,7 @@ pygments_style = "sphinx"
 # }
 
 html_theme = "sphinx_rtd_theme"
-#html_theme_path = ["_themes"]
+# html_theme_path = ["_themes"]
 
 
 html_permalinks = True
@@ -297,10 +292,9 @@ slide_theme_options = {"custom_css": "custom.css"}
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-    "fncychap": r"\\usepackage[Sonny]{fncychap}",
+    "fncychap": "\\usepackage[Sonny]{fncychap}",
     "papersize": "a4paper",
-    "preamble": r"""
-
+    "preamble": """\
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{hyperref}
@@ -476,45 +470,48 @@ intersphinx_mapping = {"http://docs.python.org/": None}
 
 # css fyrir Dæmi, Athugasemd, Setning, o.sv.fr...
 def setup(app):
-    app.add_css_file('custom_admonitions.css')
+    app.add_css_file("custom_admonitions.css")
 
 
-# Hulda bætti mér við. Opna linka í öðrum gluggan.
-from sphinx.writers.html import HTMLTranslator
 from docutils import nodes
 from docutils.nodes import Element
 
-class PatchedHTMLTranslator(HTMLTranslator):
+# Hulda bætti mér við. Opna linka í öðrum gluggan.
+from sphinx.writers.html import HTMLTranslator
 
+
+class PatchedHTMLTranslator(HTMLTranslator):
     def visit_reference(self, node: Element) -> None:
-        atts = {'class': 'reference'}
-        if node.get('internal') or 'refuri' not in node:
-            atts['class'] += ' internal'
+        atts = {"class": "reference"}
+        if node.get("internal") or "refuri" not in node:
+            atts["class"] += " internal"
         else:
-            atts['class'] += ' external'
+            atts["class"] += " external"
             # ---------------------------------------------------------
             # Customize behavior (open in new tab, secure linking site)
-            atts['target'] = '_blank'
-            atts['rel'] = 'noopener noreferrer'
+            atts["target"] = "_blank"
+            atts["rel"] = "noopener noreferrer"
             # ---------------------------------------------------------
-        if 'refuri' in node:
-            atts['href'] = node['refuri'] or '#'
-            if self.settings.cloak_email_addresses and atts['href'].startswith('mailto:'):
-                atts['href'] = self.cloak_mailto(atts['href'])
+        if "refuri" in node:
+            atts["href"] = node["refuri"] or "#"
+            if self.settings.cloak_email_addresses and atts["href"].startswith("mailto:"):
+                atts["href"] = self.cloak_mailto(atts["href"])
                 self.in_mailto = True
         else:
-            assert 'refid' in node, \
-                   'References must have "refuri" or "refid" attribute.'
-            atts['href'] = '#' + node['refid']
+            assert "refid" in node, 'References must have "refuri" or "refid" attribute.'
+            atts["href"] = "#" + node["refid"]
         if not isinstance(node.parent, nodes.TextElement):
             assert len(node) == 1 and isinstance(node[0], nodes.image)
-            atts['class'] += ' image-reference'
-        if 'reftitle' in node:
-            atts['title'] = node['reftitle']
-        if 'target' in node:
-            atts['target'] = node['target']
-        self.body.append(self.starttag(node, 'a', '', **atts))
+            atts["class"] += " image-reference"
+        if "reftitle" in node:
+            atts["title"] = node["reftitle"]
+        if "target" in node:
+            atts["target"] = node["target"]
+        self.body.append(self.starttag(node, "a", "", **atts))
+
 
 # Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
-hint_indent = r"\00a0"*12 # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
-togglebutton_hint = hint_indent + "Sýna" + r"\00a0"*2
+hint_indent = (
+    r"\00a0" * 12
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2

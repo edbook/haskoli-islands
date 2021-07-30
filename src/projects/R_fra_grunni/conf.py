@@ -13,11 +13,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
+import datetime
 import os
 import shlex
-import datetime
-
+import sys
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -84,9 +83,7 @@ highlight_language = "r"
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 
@@ -297,7 +294,17 @@ def new_visit_literal(self, node):
                 node,
                 "kbd",
                 "",
-                STYLE="border: 1px solid #aaa; -moz-border-radius: 0.2em; -webkit-border-radius: 0.2em; border-radius: 0.2em; -moz-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); -webkit-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding: 0.1em 0.3em; font-family: inherit; font-size: 0.85em;",
+                STYLE=(
+                    "border: 1px solid #aaa; -moz-border-radius: 0.2em; -webkit-border-radius:"
+                    " 0.2em; border-radius: 0.2em; -moz-box-shadow: 0.1em 0.1em 0.2em"
+                    " rgba(0,0,0,0.1); -webkit-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);"
+                    " box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); background-color: #f9f9f9;"
+                    " background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee);"
+                    " background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee);"
+                    " background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee);"
+                    " background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); padding:"
+                    " 0.1em 0.3em; font-family: inherit; font-size: 0.85em;"
+                ),
             )
         )
     else:
@@ -323,8 +330,7 @@ latex_elements = {
     # The font size ('10pt', '11pt' or '12pt').
     #'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
-    "preamble": """
-
+    "preamble": """\
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{hyperref}

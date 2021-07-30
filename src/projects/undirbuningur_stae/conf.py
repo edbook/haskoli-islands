@@ -79,9 +79,7 @@ numfig_format["section"] = "%s"
 
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
 
@@ -277,8 +275,7 @@ latex_elements = {
     # The font size ('10pt', '11pt' or '12pt').
     # 'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
-    "preamble": """
-
+    "preamble": """\
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{hyperref}
@@ -363,6 +360,9 @@ texinfo_documents = [
 def setup(app):
     app.add_css_file("custom_admonitions.css")
 
+
 # Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
-hint_indent = r"\00a0"*12 # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
-togglebutton_hint = hint_indent + "Sýna" + r"\00a0"*2
+hint_indent = (
+    r"\00a0" * 12
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2

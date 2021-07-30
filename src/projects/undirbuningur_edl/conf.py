@@ -13,18 +13,17 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
+import datetime
 import os
 import shlex
+import sys
+
 import sphinx_rtd_theme
-import datetime 
-
-
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath("."))
 sys.path.append(os.path.abspath("../../extensions"))
 # sys.path.append('/gudnyh/sumar/undirbuningur_edl/Sphinx_ext')
 
@@ -37,7 +36,7 @@ sys.path.append(os.path.abspath("../../extensions"))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.todo',
+    "sphinx.ext.todo",
     # For some reason there seems to be a conflict between mathjax and
     # other extensions causing non-proper rendering of LaTeX math code.
     # To avoid these errors we use the extension pngmath.
@@ -48,74 +47,71 @@ extensions = [
     #  hieroglyph is used to generate html slides, needs to be installed for use,
     #  see https://github.com/nyergler/hieroglyph
     #'katex.katex',
-    'ggbextension.ggb',
+    "ggbextension.ggb",
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    'toggleblock.toggleBlock',
+    "toggleblock.toggleBlock",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
     # 'sagecell.sagecell',
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # tok sage ut, er ekki ad nota
-    'hoverrole.hoverrole',
+    "hoverrole.hoverrole",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    'scrolldepth.scrolldepth',
-
-    'sphinx.ext.ifconfig',
-
+    "scrolldepth.scrolldepth",
+    "sphinx.ext.ifconfig",
     # fyrir Reauthoring
-    'Sphinx_ext.activityduration',
-    'Sphinx_ext.htmlform',
-    'Sphinx_ext.instructorfeedback',
-    'Sphinx_ext.eqt',
-    'Sphinx_ext.instructorguide',
-    'Sphinx_ext.embeddedvideo',
-    'Sphinx_ext.xy_click',
-    'Sphinx_ext.questions',
-    'Sphinx_ext.iframe',
-    'Sphinx_ext.button'
-
+    "Sphinx_ext.activityduration",
+    "Sphinx_ext.htmlform",
+    "Sphinx_ext.instructorfeedback",
+    "Sphinx_ext.eqt",
+    "Sphinx_ext.instructorguide",
+    "Sphinx_ext.embeddedvideo",
+    "Sphinx_ext.xy_click",
+    "Sphinx_ext.questions",
+    "Sphinx_ext.iframe",
+    "Sphinx_ext.button",
 ]
 
 
 # For self-numbering
 numfig = True
 numfig_format = {}
-numfig_format['figure'] = 'Mynd %s:'
-numfig_format['table'] = 'Tafla %s:'
-numfig_format['code-block'] = '%s'
-numfig_format['section'] = '%s'
+numfig_format["figure"] = "Mynd %s:"
+numfig_format["table"] = "Tafla %s:"
+numfig_format["code-block"] = "%s"
+numfig_format["section"] = "%s"
 
 # The mathjax path needs to be set to https in order to work on notendur.hi.is, it can be changed here to suit other needs
 # (http://sphinx-doc.org/latest/ext/math.html#confval-mathjax_path)
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 # mathjax_path = "MathJax.js"
 
-katex_path = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js'
-katex_render = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js'
-render_math = 'rendermath.js'
-katex_css = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css'
+katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js"
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
+render_math = "rendermath.js"
+katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ".rst"
 
 # The encoding of source files.
-#source_encoding = 'utf-8-sig'
+# source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = "index"
 
 # General information about the project.
 # SET PROJECT INFO HERE
-project = 'Undirbúningur í eðlisfræði'
+project = "Undirbúningur í eðlisfræði"
 # copyright = ''
-author = 'Raunvísindadeild'
+author = "Raunvísindadeild"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -126,7 +122,7 @@ version = year
 # The full version, including alpha/beta/rc tags.
 release = year
 
-current_version = 'Febrúar 2020'
+current_version = "Febrúar 2020"
 # The language for content autogenerated by Sphinx. Refer to documentation
 # for a list of supported languages.
 #
@@ -134,8 +130,8 @@ current_version = 'Febrúar 2020'
 # Usually you set "language" from the command line for these cases.
 # LANGUAGE SET TO ICELANDIC, CAN BE CHANGED:
 # (http://sphinx-doc.org/config.html#confval-language)
-language = 'is'
-locale_dirs = ['locale/']
+language = "is"
+locale_dirs = ["locale/"]
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -145,7 +141,7 @@ locale_dirs = ['locale/']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ["_build"]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -163,7 +159,7 @@ exclude_patterns = ['_build']
 # show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = "sphinx"
 
 # A list of ignored prefixes for module index sorting.
 # modindex_common_prefix = []
@@ -179,8 +175,8 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_rtd_theme'
-#html_theme_path = ['_themes']
+html_theme = "sphinx_rtd_theme"
+# html_theme_path = ['_themes']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -200,19 +196,19 @@ html_theme = 'sphinx_rtd_theme'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 # SET TO UNIVERSITY OF ICELAND RAUNVÍSINDADEILD LOGO
-html_logo = '_static/hi_horiz_raunvisindadeild.png'
+html_logo = "_static/hi_horiz_raunvisindadeild.png"
 
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 # SET TO UNIVERSITY OF ICELAND ICON
-html_favicon = '_static/favicon_2.ico'
+html_favicon = "_static/favicon_2.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -239,13 +235,13 @@ html_static_path = ['_static']
 html_domain_indices = True
 
 # If false, no index is generated.
-#html_use_index = True
+# html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
-#html_split_index = False
+# html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-#html_show_sourcelink = True
+# html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = True
@@ -256,51 +252,45 @@ html_show_copyright = True
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
 # base URL from which the finished HTML is served.
-#html_use_opensearch = ''
+# html_use_opensearch = ''
 
 # This is the file name suffix for HTML files (e.g. ".xhtml").
-#html_file_suffix = None
+# html_file_suffix = None
 
 # Language to be used for generating the HTML full-text search index.
 # Sphinx supports the following languages:
 #   'da', 'de', 'en', 'es', 'fi', 'fr', 'h', 'it', 'ja'
 #   'nl', 'no', 'pt', 'ro', 'r', 'sv', 'tr'
-#html_search_language = 'en'
+# html_search_language = 'en'
 
 # A dictionary with options for the search language support, empty by default.
 # Now only 'ja' uses this config value
-#html_search_options = {'type': 'default'}
+# html_search_options = {'type': 'default'}
 
 # The name of a javascript file (relative to the configuration directory) that
 # implements a search results scorer. If empty, the default will be used.
-#html_search_scorer = 'scorer.js'
+# html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'NAMEdoc'
+htmlhelp_basename = "NAMEdoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 # SET PREFERENCES FOR LATEX OUTPUT HERE
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
-    'papersize': 'a4paper',
-
+    "papersize": "a4paper",
     # The font size ('10pt', '11pt' or '12pt').
     # 'pointsize': '10pt',
-
     # Additional stuff for the LaTeX preamble.
-    'preamble': '''
-
+    "preamble": """\
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{hyperref}
-''',
-
+""",
     # Latex figure (float) alignment
     # 'figure_align': 'htbp',
-
-    'fncychap': '\\usepackage[Sonny]{fncychap}',
-
+    "fncychap": "\\usepackage[Sonny]{fncychap}",
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -310,43 +300,39 @@ latex_elements = {
 # SET DOCUMENT TITLE AND AUTHOR FOR LATEX OUTPUT HERE
 
 latex_documents = [
-    (master_doc, 'NAME.tex', 'NAME Documentation',
-     'AUTHOR', 'manual'),
+    (master_doc, "NAME.tex", "NAME Documentation", "AUTHOR", "manual"),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 # LOGO FOR LATEX TITLE PAGE IS SET TO UNIVERSITY OF ICELAND RAUNVÍSINDADEILD LOGO
-latex_logo = '_static/hi_horiz_raunvisindadeild.png'
+latex_logo = "_static/hi_horiz_raunvisindadeild.png"
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-#latex_use_parts = False
+# latex_use_parts = False
 
 # If true, show page references after internal links.
-#latex_show_pagerefs = False
+# latex_show_pagerefs = False
 
 # If true, show URL addresses after external links.
-#latex_show_urls = False
+# latex_show_urls = False
 
 # Documents to append as an appendix to all manuals.
-#latex_appendices = []
+# latex_appendices = []
 
 # If false, no module index is generated.
-#latex_domain_indices = True
+# latex_domain_indices = True
 
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'name', 'NAME Documentation',
-     [author], 1)
-]
+man_pages = [(master_doc, "name", "NAME Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
-#man_show_urls = False
+# man_show_urls = False
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -355,19 +341,25 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'NAME', 'NAME Documentation',
-     author, 'NAME', 'One line description of project.',
-     'Miscellaneous'),
+    (
+        master_doc,
+        "NAME",
+        "NAME Documentation",
+        author,
+        "NAME",
+        "One line description of project.",
+        "Miscellaneous",
+    ),
 ]
 
 # Documents to append as an appendix to all manuals.
-#texinfo_appendices = []
+# texinfo_appendices = []
 
 # If false, no module index is generated.
-#texinfo_domain_indices = True
+# texinfo_domain_indices = True
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
-#texinfo_show_urls = 'footnote'
+# texinfo_show_urls = 'footnote'
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
-#texinfo_no_detailmenu = False
+# texinfo_no_detailmenu = False
