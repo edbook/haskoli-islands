@@ -1,0 +1,23 @@
+{
+  "python.formatting.provider": "black",
+  "python.analysis.extraPaths": ["src/projects", "src/extensions", "scripts"],
+  "git.ignoreLimitWarning": true,
+  "python.formatting.blackArgs": ["--line-length=100"],
+  "python.sortImports.args": ["--profile", "black"],
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/_build/**": true
+  },
+  "search.exclude": {
+    "**/_build/**": true
+  },
+  "files.watcherExclude": {
+    "**/_build/**": true
+  }
+}
