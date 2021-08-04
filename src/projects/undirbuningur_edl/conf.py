@@ -14,7 +14,6 @@ import datetime
 import os
 import shlex
 import sys
-
 import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -22,6 +21,8 @@ import sphinx_rtd_theme
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath("."))
 sys.path.append(os.path.abspath("../../extensions"))
+from eqt_ext import get_eqt_ext_static_dir # Verður að koma eftir að bæta extensions í path
+
 # sys.path.append('/gudnyh/sumar/undirbuningur_edl/Sphinx_ext')
 
 # -- General configuration ------------------------------------------------
@@ -62,13 +63,14 @@ extensions = [
     "Sphinx_ext.activityduration",
     "Sphinx_ext.htmlform",
     "Sphinx_ext.instructorfeedback",
-    "Sphinx_ext.eqt",
+    #"Sphinx_ext.eqt",
     "Sphinx_ext.instructorguide",
     "Sphinx_ext.embeddedvideo",
     "Sphinx_ext.xy_click",
     "Sphinx_ext.questions",
     "Sphinx_ext.iframe",
     "Sphinx_ext.button",
+    "eqt_ext.eqt"
 ]
 
 
@@ -205,7 +207,7 @@ html_favicon = "_static/favicon_2.ico"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+html_static_path = ["_static", get_eqt_ext_static_dir()]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
