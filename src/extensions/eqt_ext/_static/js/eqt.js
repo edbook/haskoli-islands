@@ -74,14 +74,14 @@ function grade() {
      */
     if (answer === true) {
         eqtBlock.addClass('success');
-        eqtBlock.find(".eqt-block-actions .result-icon").text("Correct !");
+        eqtBlock.find(".eqt-block-actions .result-icon").text("Rétt!");
         evaluate_labels(eqtBlock, false);
     } else {
         eqtBlock.addClass('errored');
-        eqtBlock.find('.eqt-block-actions .result-icon').text("Incorrect !");
+        eqtBlock.find('.eqt-block-actions .result-icon').text("Rangt!");
         evaluate_labels(eqtBlock, true);
     }
-    eqtBlock.find('form > ol.eqt-answer-list > li input:checked').parent().find('.tip.expl').show();
+    eqtBlock.find('form > ol.eqt-answer-list > li input:checked').parent().find('.daemi.expl').show();
 
     // Disable inputs
     eqtBlock.find('form input').prop('disabled', true);
@@ -102,19 +102,19 @@ function again() {
 
     // Update element visibility
     eqtBlock.removeClass('success errored solution');
-    eqtBlock.find(".tip.expl").hide();
+    eqtBlock.find(".daemi.expl").hide();
 }
 
 
 function solution_fill_in_blank(eqtBlock) {
     var inputField = eqtBlock.find('.eqt-fib-answer input[name=answer]');
     inputField.val(inputField.data('answer'));
-    eqtBlock.find(".tip.expl").show();
+    eqtBlock.find(".daemi.expl").show();
 }
 
 
 function solution_regular(eqtBlock) {
-    eqtBlock.find(".tip.expl").show();
+    eqtBlock.find(".daemi.expl").show();
     evaluate_labels(eqtBlock, false);
 }
 

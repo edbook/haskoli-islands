@@ -74,3 +74,15 @@
 .eqt-block .expl {
     display: none;
 }
+
+.rst-content .daemi .admonition-title {
+    background: #F8961E
+}
+.rst-content .daemi {
+    background: #faddb9;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}

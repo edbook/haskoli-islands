@@ -96,13 +96,13 @@ def depart_eqt_node(self, node):
     self.body.append('<div class="eqt-block-actions">')
     self.body.append(
         '<input class="eqt-actions eqt-grade btn btn-neutral" type="button" '
-        'value="Évaluer"/>')
+        'value="Svara"/>')
     self.body.append(
         '<input class="eqt-actions eqt-again btn btn-neutral" type="button" '
-        'value="Réessayer"/>')
+        'value="Reyna aftur"/>')
     self.body.append(
         '<input class="eqt-actions eqt-solution btn btn-neutral" '
-        'type="button" value="Solution"/>')
+        'type="button" value="Sjá lausn"/>')
     self.body.append('<span class="result-icon"></span>')
     self.body.append('</div>')
     self.body.append('</div>')
@@ -246,12 +246,12 @@ class ESolutionDirective(BaseAdmonition):
         text = '\n'.join(self.content)
         admonition_node = self.node_class(text, **self.options)
         self.add_name(admonition_node)
-        title_text = "Solution"
+        title_text = "Lausn"
         textnodes, messages = self.state.inline_text(title_text, self.lineno)
         title = nodes.title(title_text, '', *textnodes)
         admonition_node += title
         admonition_node += messages
-        admonition_node['classes'] += ['tip', 'expl']
+        admonition_node['classes'] += ['daemi', 'expl']
         self.state.nested_parse(
             self.content, self.content_offset, admonition_node)
         return [admonition_node]
@@ -262,7 +262,7 @@ def visit_explanation_node(self, node):
     Function executed when the node representing the :expl:`XXX` is visited
     """
     self.body.append(
-        '<div class="admonition tip expl" style="display: none;">'
+        '<div class="admonition daemi expl" style="display: none;">'
         '{}</div>'.format(node["content"]))
     raise nodes.SkipNode
 
