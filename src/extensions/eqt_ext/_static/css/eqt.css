@@ -1,15 +1,15 @@
 .eqt-block {
-    background-color: #f8f8f8;
+    background-color: #faddb9;
     padding: 14px;
     margin-bottom: 28px;
 }
 
 .eqt-block.errored {
-    background-color: #fff2f2;
+    background-color: #faddb9;
 }
 
 .eqt-block.success {
-    background-color: #f0fcf5;
+    background-color: #faddb9;
 }
 
 .eqt-block .eqt-block-questions > p:first-child {
@@ -17,11 +17,11 @@
 }
 
 .eqt-block .eqt-answer-list label.correct {
-    color: #1abc9c;
+    color: #1fa11d;
 }
 
 .eqt-block .eqt-answer-list label.incorrect {
-    color: #f29f97;
+    color: #d93d2e;
 }
 
 .eqt-block .eqt-answer-list label .admonition {
@@ -38,12 +38,12 @@
 
 .eqt-block.errored .eqt-block-actions .result-icon {
     display: initial;
-    color: #f29f97;
+    color: #d93d2e;
 }
 
 .eqt-block.success .eqt-block-actions .result-icon {
     display: initial;
-    color: #1abc9c;
+    color: #1fa11d;
 }
 
 .eqt-block.solution .eqt-block-actions .result-icon {
@@ -84,5 +84,5 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px ;
+    padding: 0px 0px 0px ;
 }

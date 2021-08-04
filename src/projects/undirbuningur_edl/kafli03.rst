@@ -558,7 +558,7 @@ Stærð :math:`g` er dálítið mismunandi eftir staðsetningu, bæði hæð yfi
 
   #) :eqt:`I` Jón mun aldrei grípa boltann
 
-  .. eqt-solution:: Rétt svar er A
+  .. eqt-solution:: 
     
     Þegar boltanum er kastað þá hefur hann upphafshraðann :math:`v` en þyngdarhröðunin :math:`g` hægir á honum þar til hann stoppar í tiltekinni hæð. Þá snýr boltinn við og byrjar að falla til jarðar. Á tímanum sem það tekur boltann að falla niður sömu vegalengd þá eykur þyngdarhröðunin :math:`g` hraða boltans jafn mikið og hún hægði á boltanum á leiðinni upp. Þess vegna er hraði boltans sá sami í upphafi og í lokin, þó :math:`v_i` og :math:`v_f` bendi í gagnstæðar stefnur.
 

@@ -40,24 +40,28 @@ def visit_eqt_answer_type_node(self, node):
     Function executed when the node representing the :eqt:`XXX` is visited.
     """
     # Need to check for the MODE!
-    if node['type'] == 'eqt' or node['type'] == 'eqt-mc':
-        if node['type'] == 'eqt':
-            input_type = 'radio'
+    if node["type"] == "eqt" or node["type"] == "eqt-mc":
+        if node["type"] == "eqt":
+            input_type = "radio"
         else:
-            input_type = 'checkbox'
+            input_type = "checkbox"
 
-        self.body.append('<label>')
+        self.body.append("<label>")
         self.body.append(
-            '<input type="{}" name="question" value="{}" />'.format(
-                input_type, node['content']))
+            '<input type="{}" name="question" value="{}" />'.format(input_type, node["content"])
+        )
 
-    if node['type'] == 'eqt-fib':
-        self.body.append("""
+    if node["type"] == "eqt-fib":
+        self.body.append(
+            """
             <div class="eqt-fib-answer">
                 Réponse :
                 <input type="text" name="answer" value="" data-answer="{}"/>
             </div>
-        """.format(node['content']))
+        """.format(
+                node["content"]
+            )
+        )
     raise nodes.SkipNode
 
 
@@ -73,16 +77,14 @@ def visit_eqt_node(self, node):
     """
     Function executed when the node representing .. eqt:: fff is visited.
     """
-    if node['name'] == 'eqt-fib':
-        mode = 'fill-in-blank'
-    elif node['name'] == 'eqt-mc':
-        mode = 'multiple'
+    if node["name"] == "eqt-fib":
+        mode = "fill-in-blank"
+    elif node["name"] == "eqt-mc":
+        mode = "multiple"
     else:
-        mode = 'regular'
+        mode = "regular"
 
-    self.body.append(
-        '<div class="eqt-block" id="{}" data-mode="{}">'.format(
-            node["args"][0], mode))
+    self.body.append('<div class="eqt-block" id="{}" data-mode="{}">'.format(node["args"][0], mode))
     self.body.append('<form class="eqt-block-questions">')
 
 
@@ -92,20 +94,22 @@ def depart_eqt_node(self, node):
     """
     # Need to check for the MODE!
 
-    self.body.append('</form>')
+    self.body.append("</form>")
     self.body.append('<div class="eqt-block-actions">')
     self.body.append(
-        '<input class="eqt-actions eqt-grade btn btn-neutral" type="button" '
-        'value="Svara"/>')
+        '<input class="eqt-actions eqt-grade btn btn-neutral" type="button" ' 'value="Svara"/>'
+    )
     self.body.append(
         '<input class="eqt-actions eqt-again btn btn-neutral" type="button" '
-        'value="Reyna aftur"/>')
+        'value="Reyna aftur"/>'
+    )
     self.body.append(
         '<input class="eqt-actions eqt-solution btn btn-neutral" '
-        'type="button" value="Sjá lausn"/>')
+        'type="button" value="Sjá lausn"/>'
+    )
     self.body.append('<span class="result-icon"></span>')
-    self.body.append('</div>')
-    self.body.append('</div>')
+    self.body.append("</div>")
+    self.body.append("</div>")
 
 
 class EQuestionDirective(Directive):
@@ -135,23 +139,21 @@ class EQuestionDirective(Directive):
 
         config = self.state.document.settings.env.config
 
-        if config.config_values.get('eqt_question_type') is not None:
+        if config.config_values.get("eqt_question_type") is not None:
             raise ValueError("Embedded questions cannot be nested.")
 
         # Store the type of question in an additional attribute in the
         # environment.
-        config.config_values['eqt-question-type'] = self.name
+        config.config_values["eqt-question-type"] = self.name
 
-        p_to_static = ''
-        result = Eqt(args=self.arguments,
-                     name=self.name,
-                     p_to_static=p_to_static)
+        p_to_static = ""
+        result = Eqt(args=self.arguments, name=self.name, p_to_static=p_to_static)
 
         # Parse the nested content
         self.state.nested_parse(self.content, self.content_offset, result)
 
         # Remove the question type from the environment
-        del config.config_values['eqt-question-type']
+        del config.config_values["eqt-question-type"]
 
         # If the question is a single MCQ, check that there is an enumerated
         # list and perform some additional tasks.
@@ -160,28 +162,25 @@ class EQuestionDirective(Directive):
             # to the list of answers and add some additional attributes
             answer_list_node = None
             for question_child in result.children:
-                if question_child.__class__.__name__ != 'enumerated_list':
+                if question_child.__class__.__name__ != "enumerated_list":
                     continue
 
                 # Try ot obtain the eqt_answer_type. If it fails, we are
                 # processing a regular node so we keep processing children
-                name = question_child.children[0].children[0].children[
-                    0].__class__.__name__
-                if name == 'EqtAnswerType':
+                name = question_child.children[0].children[0].children[0].__class__.__name__
+                if name == "EqtAnswerType":
                     answer_list_node = question_child
                     break
 
             if answer_list_node is not None:
-                answer_list_node['enumtype'] = \
-                    answer_list_node['enumtype'] + ' eqt-answer-list'
+                answer_list_node["enumtype"] = answer_list_node["enumtype"] + " eqt-answer-list"
             else:
-                raise ValueError('No answer list found in e-question.')
+                raise ValueError("No answer list found in e-question.")
 
         return [result]
 
 
-def eqt_answer(name, rawtext, text, lineno, inliner, options=None,
-               content=None):
+def eqt_answer(name, rawtext, text, lineno, inliner, options=None, content=None):
     """
     Function executed with the role :eqt:`???` is parsed
     """
@@ -191,27 +190,26 @@ def eqt_answer(name, rawtext, text, lineno, inliner, options=None,
 
     # Get the question type (if none, raise an exception).
     config = inliner.document.settings.env.config
-    question_type = config.config_values.get('eqt-question-type')
+    question_type = config.config_values.get("eqt-question-type")
     if question_type is None:
-        raise ValueError('Role :eqt: must appear inside an embedded question.')
+        raise ValueError("Role :eqt: must appear inside an embedded question.")
 
     # Single answer MCQ
-    if question_type == 'eqt':
+    if question_type == "eqt":
         # The value of the role can only be C or I (correct or incorrect)
-        if text != 'C' and text != 'I':
+        if text != "C" and text != "I":
             raise ValueError('Role text must be "C" or "I"')
 
     # Get the relative path to the static directory
-    p_to_static = ''
+    p_to_static = ""
 
-    return [
-        EqtAnswerType(args=options, type=question_type, content=text,
-                      p_to_static=p_to_static)
-    ], []
+    return (
+        [EqtAnswerType(args=options, type=question_type, content=text, p_to_static=p_to_static)],
+        [],
+    )
 
 
-def explanation_role(name, rawtext, text, lineno, inliner, options={},
-                     content=[]):
+def explanation_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """
     Function executed with the role :expl: is parsed
     """
@@ -220,17 +218,14 @@ def explanation_role(name, rawtext, text, lineno, inliner, options={},
 
     # Get the question type (if none, raise an exception).
     config = inliner.document.settings.env.config
-    question_type = config.config_values.get('eqt-question-type')
+    question_type = config.config_values.get("eqt-question-type")
     if question_type is None:
-        raise ValueError(
-            'Role :expl: must appear inside an embedded question.')
+        raise ValueError("Role :expl: must appear inside an embedded question.")
 
     # Get the relative path to the static directory
-    p_to_static = ''
+    p_to_static = ""
 
-    return [
-        Explanation(args=options, content=text, p_to_static=p_to_static)
-    ], []
+    return [Explanation(args=options, content=text, p_to_static=p_to_static)], []
 
 
 class Explanation(nodes.General, nodes.Element):
@@ -243,17 +238,16 @@ class ESolutionDirective(BaseAdmonition):
     def run(self):
         set_classes(self.options)
         self.assert_has_content()
-        text = '\n'.join(self.content)
+        text = "\n".join(self.content)
         admonition_node = self.node_class(text, **self.options)
         self.add_name(admonition_node)
         title_text = "Lausn"
         textnodes, messages = self.state.inline_text(title_text, self.lineno)
-        title = nodes.title(title_text, '', *textnodes)
+        title = nodes.title(title_text, "", *textnodes)
         admonition_node += title
         admonition_node += messages
-        admonition_node['classes'] += ['daemi', 'expl']
-        self.state.nested_parse(
-            self.content, self.content_offset, admonition_node)
+        admonition_node["classes"] += ["daemi", "expl"]
+        self.state.nested_parse(self.content, self.content_offset, admonition_node)
         return [admonition_node]
 
 
@@ -263,7 +257,8 @@ def visit_explanation_node(self, node):
     """
     self.body.append(
         '<div class="admonition daemi expl" style="display: none;">'
-        '{}</div>'.format(node["content"]))
+        "{}</div>".format(node["content"])
+    )
     raise nodes.SkipNode
 
 
@@ -274,7 +269,7 @@ def setup(app):
         latex=(non_html_visit_node, None),
         text=(non_html_visit_node, None),
         man=(non_html_visit_node, None),
-        texinfo=(non_html_visit_node, None)
+        texinfo=(non_html_visit_node, None),
     )
 
     app.add_directive("eqt", EQuestionDirective)
@@ -282,8 +277,8 @@ def setup(app):
     app.add_directive("eqt-mc", EQuestionDirective)
     app.add_directive("eqt-solution", ESolutionDirective)
 
-    roles.register_local_role('eqt', eqt_answer)
-    roles.register_local_role('expl', explanation_role)
+    roles.register_local_role("eqt", eqt_answer)
+    roles.register_local_role("expl", explanation_role)
 
     app.add_node(
         EqtAnswerType,
@@ -291,7 +286,7 @@ def setup(app):
         latex=(non_html_visit_node, None),
         text=(non_html_visit_node, None),
         man=(non_html_visit_node, None),
-        texinfo=(non_html_visit_node, None)
+        texinfo=(non_html_visit_node, None),
     )
     app.add_node(
         Explanation,
@@ -299,8 +294,9 @@ def setup(app):
         latex=(non_html_visit_node, None),
         text=(non_html_visit_node, None),
         man=(non_html_visit_node, None),
-        texinfo=(non_html_visit_node, None)
+        texinfo=(non_html_visit_node, None),
     )
 
-    app.add_stylesheet('css/eqt.css')
-    app.add_javascript('js/eqt.js')
+    app.add_stylesheet("css/eqt.css")
+    app.add_javascript("js/eqt.js")
+
