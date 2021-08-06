@@ -1,0 +1,2002 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>Forritun í Python</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<style type="text/css">
+
+/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+/* Formulas */
+.formula {
+	text-align: center;
+	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+	margin: 1.2em 0;
+}
+span.formula {
+	white-space: nowrap;
+}
+div.formula {
+	padding: 0.5ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Basic features */
+a.eqnumber {
+	display: inline-block;
+	float: right;
+	clear: right;
+	font-weight: bold;
+}
+span.unknown {
+	color: #800000;
+}
+span.ignored, span.arraydef {
+	display: none;
+}
+.formula i {
+	letter-spacing: 0.1ex;
+}
+
+/* Alignment */
+.align-left, .align-l {
+	text-align: left;
+}
+.align-right, .align-r {
+	text-align: right;
+}
+.align-center, .align-c {
+	text-align: center;
+}
+
+/* Structures */
+span.overline, span.bar {
+	text-decoration: overline;
+}
+.fraction, .fullfraction {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.fraction .fraction {
+	font-size: 80%;
+	line-height: 100%;
+}
+span.numerator {
+	display: block;
+}
+span.denominator {
+	display: block;
+	padding: 0ex;
+	border-top: thin solid;
+}
+sup.numerator, sup.unit {
+	font-size: 70%;
+	vertical-align: 80%;
+}
+sub.denominator, sub.unit {
+	font-size: 70%;
+	vertical-align: -20%;
+}
+span.sqrt {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.1ex;
+}
+sup.root {
+	font-size: 70%;
+	position: relative;
+	left: 1.4ex;
+}
+span.radical {
+	display: inline-block;
+	padding: 0ex;
+	font-size: 150%;
+	vertical-align: top;
+}
+span.root {
+	display: inline-block;
+	border-top: thin solid;
+	padding: 0ex;
+	vertical-align: middle;
+}
+span.symbol {
+	line-height: 125%;
+	font-size: 125%;
+}
+span.bigsymbol {
+	line-height: 150%;
+	font-size: 150%;
+}
+span.largesymbol {
+	font-size: 175%;
+}
+span.hugesymbol {
+	font-size: 200%;
+}
+span.scripts {
+	display: inline-table;
+	vertical-align: middle;
+}
+.script {
+	display: table-row;
+	text-align: left;
+	line-height: 150%;
+}
+span.limits {
+	display: inline-table;
+	vertical-align: middle;
+}
+.limit {
+	display: table-row;
+	line-height: 99%;
+}
+sup.limit, sub.limit {
+	line-height: 100%;
+}
+span.symbolover {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 100%;
+	bottom: 0.5em;
+	width: 0px;
+}
+span.withsymbol {
+	display: inline-block;
+}
+span.symbolunder {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 80%;
+	top: 0.3em;
+	width: 0px;
+}
+
+/* Environments */
+span.array, span.bracketcases, span.binomial, span.environment {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0em;
+	vertical-align: middle;
+}
+span.arrayrow, span.binomrow {
+	display: table-row;
+	padding: 0ex;
+	border: 0ex;
+}
+span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
+	display: table-cell;
+	padding: 0ex 0.2ex;
+	line-height: 99%;
+	border: 0ex;
+}
+/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+/* Inline binomials */
+span.binom {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 80%;
+}
+span.binomstack {
+	display: block;
+	padding: 0em;
+}
+
+/* Over- and underbraces */
+span.overbrace {
+	border-top: 2pt solid;
+}
+span.underbrace {
+	border-bottom: 2pt solid;
+}
+
+/* Stackrel */
+span.stackrel {
+	display: inline-block;
+	text-align: center;
+}
+span.upstackrel {
+	display: block;
+	padding: 0em;
+	font-size: 80%;
+	line-height: 64%;
+	position: relative;
+	top: 0.15em;
+
+}
+span.downstackrel {
+	display: block;
+	vertical-align: bottom;
+	padding: 0em;
+}
+
+/* Fonts */
+span.mathsf, span.textsf {
+	font-style: normal;
+	font-family: sans-serif;
+}
+span.mathrm, span.textrm {
+	font-style: normal;
+	font-family: serif;
+}
+span.text, span.textnormal {
+	font-style: normal;
+}
+span.textipa {
+	color: #008080;
+}
+span.fraktur {
+	font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+	font-family: Blackboard, msbm10, serif;
+}
+span.scriptfont {
+	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+	font-style: italic;
+}
+
+/* Colors */
+span.colorbox {
+	display: inline-block;
+	padding: 5px;
+}
+span.fbox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 2px;
+}
+span.boxed, span.framebox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 5px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document" id="forritun-i-python">
+<span id="c-inngangur"></span>
+<h1 class="title">Forritun í Python</h1>
+
+<div class="section" id="inngangur-um-python">
+<h1>Inngangur: Um Python</h1>
+<div class="section" id="einfalt-og-aulaert-mal">
+<span id="inngangur"></span><h2>Einfalt og auðlært mál</h2>
+<p>Python er forritunarmál sem kom fram árið 1991 og hefur náð mikilli útbreiðslu. Það var hollenski tölvunarfræðingurinn Guido van Rossum sem bjó Python til og spilaði stórt hlutverk í þróun þess, en margir fleiri hafa lagt hönd á plóg. Málið heitir eftir grínistahópnum <em>Monty Python</em> (sem aftur dregur nafn af kyrkislöngum, <em>pythons</em>).</p>
+<p>Vinsælasta útgáfan af Python nefnist formlega CPython og er opin og ókeypis. Hana er að finna á <a class="reference external" href="http://python.org">python.org</a> og þar má líka lesa um <em>Python Software Foundation</em> sem hefur síðan 2001 séð um þróun málsins, leyfi, dreifingu, Python-ráðstefnur o.s.frv.</p>
+<p>Frá upphafi var markmiðið að búa til einfalt og auðlært forritunarmál, sem væri þannig að oftast væri bara ein augljós og einföld leið til að útfæra tiltekna aðgerð eða reikninga. Forrit áttu að samanstanda af enskum orðum að mestu leyti en ekki samansuðu tákna eins og algengt er t.d. í Perl-forritum, sem minna á blótsyrði í Andrés-blaði.</p>
+<div class="figure align-center" style="width: 9cm">
+<img alt="myndir/perl.png" src="myndir/perl.png" />
+<p class="caption">Perl-forrit og Andrés Önd</p>
+</div>
+</div>
+<div class="section" id="fallasafn-og-pakkar">
+<span id="pakkar"></span><h2>Fallasafn og pakkar</h2>
+<p>Með Python fylgir viðamikið fallasafn (<em>standard library</em>) og auk þess eru til ótal viðbætur sem kallast pakkar (<em>packages</em>) og eru ekki hluti af hinu eiginlega forritunarmáli. Opinber <a class="reference external" href="https://pypi.org">pakkavefur</a> fyrir Python hefur 282.000 pakka í janúar 2021, og hann fer ört vaxandi (voru 164.000 í janúar 2019). Fallasafnið samanstendur af mörgum einingum (<em>modules</em>), og það sama gildir um flesta pakka. Það er sama hvort ætlunin sé að tengjast Oracle gagnagrunni, búa til vefsíðu, skrifa tölvuleik eða leysa stærðfræðileg verkefni: maður getur alltaf fundið vandaðan og almennan Python-pakka í verkið. Síðar í þessum nótum verður fjallað um nokkra slíka m.a. NumPy (fyrir vigur- (<em>vector-</em>) og fylkjareikninga), SciPy (fyrir reiknifræði) og Matplotlib (til að teikna).</p>
+</div>
+<div class="section" id="utbreisla">
+<h2>Útbreiðsla</h2>
+<p>Ýmsir vefir mæla vöxt og vinsældir forritunarmála og mælist Python í efstu sætunum á þeim flestum, ásamt Javascript, Java, C, C# og C++. Á einum þeirra má t.d. finna eftirfarandi mynd:</p>
+<div class="figure align-center" style="width: 14cm">
+<img alt="myndir/python-vöxtur.png" src="myndir/python-vöxtur.png" />
+<p class="caption">Vöxtur í vinsældum Python</p>
+</div>
+</div>
+<div class="section" id="framkvaemd-forrita">
+<h2>Framkvæmd forrita</h2>
+<p>Python er túlkað forritunarmál sem þýðir að forrit eru ekki þýdd fyrirfram á vélamál, heldur eru skipanir þess lesnar af Python túlkinum hver á fætur annarri og framkvæmdar jafnóðum. Hægt er að hugsa sér að túlkurinn hermi eftir ímynduðum gjörva sem hefur Python sem móðurmál. Þetta er reyndar nokkur einföldun, því Python er venjulega þýtt yfir á millimál sem er fljótlegra að túlka. Túlkuð forrit keyra hægar en þýdd, en á móti kemur að ekki þarf að bíða eftir þýðingu, og auk þess fylgja ýmsir kostir fyrir villuleit og þróun forrita skref fyrir skref.</p>
+</div>
+<div class="section" id="gildi-eru-togu-en-breytur-ekki">
+<h2>Gildi eru töguð en breytur ekki</h2>
+<p>Eitt sem skilur Python frá ýmsum öðrum forritunarmálum, t.d. Java og C, er að það er engin þörf á að skilgreina breytur fyrirfram og segja Python-kerfinu af hvaða tagi (<em>type</em>) þær séu. Vissulega hefur Python allskyns tög (<em>types</em>), heiltölur, kommutölur, strengi, vigra, mengi o.s.frv., en það eru gildin sem breyturnar fá, en ekki breyturnar sjálfar sem hafa tög. Forrit getur haft skipun <code>x = 3.5</code>, og þá verður x kommutala, og neðar getur svo staðið <code>x = {2, 5, 8}</code> og eftir það er x mengi.</p>
+</div>
+<div class="section" id="python-leibeiningar-a-netinu">
+<span id="python-leibein-a-netinu"></span><h2>Python-leiðbeiningar á netinu</h2>
+<p>Fjölmargar leiðbeiningar um Python má finna á netinu, stuttar og langar, ókeypis og til sölu. Hér eru nokkrar gjaldfrjálsar:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://greenteapress.com/wp/think-python-2e/">Think Python</a> (ókeypis byrjendakennslubók, var kennd í Tölvunarfræði 1a)</li>
+<li><a class="reference external" href="https://developers.google.com/edu/python/">Google's Python Class</a> (líka fyrir byrjendur)</li>
+<li><a class="reference external" href="https://www.learnpython.org/">Learn Python</a> (með reitum til að keyra forrit og skoða úttak)</li>
+<li><a class="reference external" href="https://docs.python.org/3/tutorial/index.html">The Python Tutorial</a> (opinberar Python leiðbeiningar á python.org, fyrir svolítið lengra komna)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="daemi-um-python-forrit">
+<span id="kafli1-1"></span><h1>Dæmi um Python forrit</h1>
+<div class="section" id="collatz-runur">
+<h2>Collatz-runur</h2>
+<p>Collatz-runur eru reiknaðar þannig að byrjað er með einhverja tölu <span class="formula"><i>n</i><sub>0</sub></span>
+og svo er næsta tala reiknuð aftur og aftur skv.</p>
+<div class="formula">
+<i>n</i><sub><i>k</i> + 1</sub> = <span class="array"><span class="arrayrow"><span class="bracket align-l">⎧</span></span><span class="arrayrow"><span class="bracket align-l">⎨</span></span><span class="arrayrow"><span class="bracket align-l">⎩</span></span></span><span class="bracketcases">
+<span class="arrayrow">
+<span class="case align-l">
+<span class="displaystyle"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>n</i><sub><i>k</i></sub></span><span class="ignored">)/(</span><span class="denominator">2</span><span class="ignored">)</span></span></span><span class="text">  ef $n<sub>k</sub>$ er slétt tala</span> 
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+  
+</span>
+
+</span>
+<span class="arrayrow">
+<span class="case align-l">
+3<i>n</i><sub><i>k</i></sub> + 1<span class="text">  ef $n<sub>k</sub>$ er oddatala</span> 
+</span>
+
+</span>
+
+</span>
+
+</div>
+<p>Ef nýja talan <span class="formula"><i>n</i><sub><i>k</i> + 1</sub> = 1</span> þá er hætt.</p>
+<p>Runurnar heita eftir þýska stærðfræðingnum Lothar Cllatz (1910–1990) sem</p>
+<p>Ef við byrjum t.d. með <span class="formula"><i>n</i><sub>0</sub> = 5</span> þá fæst runan 5, 16, 8, 4, 2, 1.
+Runurnar heita eftir þýska stærðfræðingnum Lothar Collatz (1910–1990) sem setti fram þá tilgátu árið 1937 að það sé sama hvaða <span class="formula"><i>n</i><sub>0</sub></span> er byrjað með, runan muni alltaf að lokum lenda í 1 og hætta. Enn hefur engum tekist að sanna tilgátuna, og reyndar virðast jafnvel færustu stærðfræðingar ekki hafa hugmynd um hvernig ætti að byrja.</p>
+</div>
+<div class="section" id="forrit-fyrir-collatz-runur">
+<h2>Forrit fyrir Collatz-runur</h2>
+<p>Eftirfarandi Python forrit finnur og prentar út Collatz-rununa sem byrjar í 5:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 94)</p>
+<p>Error in &quot;code-block&quot; directive:
+unknown option: &quot;caption&quot;.</p>
+<pre class="literal-block">
+.. code-block:: python
+   :caption: Collatz
+   :name: Collatz
+
+   def næsta(x):
+       '''skilar næstu tölu á eftir x í Collatz-runu'''
+       if x % 2 == 0:
+           f = x//2
+       else:
+           f = 3*x + 1
+       return f
+
+   def collatz_runa(n):
+       '''finnur og skrifar út Collatz-runu sem byrjar á n'''
+       print('runa: ', end='')
+       while n &gt; 1:
+           print(n, end=', ')
+           n = næsta(n)
+       print(n)
+
+   # Forrit sem prentar út Collatz-runur sem byrja á 2, 3,...,7:
+   print('Nokkrar Collatz runur')
+   for n in range(2,8):
+       collatz_runa(n)
+
+</pre>
+</div>
+</div>
+<div class="section" id="python-atrii-sem-koma-fyrir-i-forritinu-collatz">
+<span id="icollatz"></span><h2>Python atriði sem koma fyrir í forritinu Collatz</h2>
+<ul>
+<li><p class="first">Ný föll má skilgreina með því að byrja á <strong>def</strong> og nöfn þeirra mega hafa
+íslenska stafi (og líka gríska). Á eftir <em>def</em>-línunni er hefð fyrir að setja
+<em>skjölunarstreng</em> innan þrefaldra gæsalapa. Nánar tiltekið er ritað:</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="keyword">def</span> <span class="name function">nafn</span><span class="punctuation">(</span><span class="name">stiki1</span><span class="punctuation">,</span> <span class="name">stiki2</span><span class="operator">...</span> <span class="punctuation">):</span>
+   <span class="literal string doc">'''útskýring-á-hvað-fallið-gerir'''</span>
+   <span class="name">skilgreining</span><span class="operator">-</span><span class="name">falls</span>
+</pre>
+</blockquote>
+</li>
+<li><p class="first"><strong>Ef</strong>-setning hefur ekki sviga utan um skilyrðið, öfugt við Java. Sniðið er svona:</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="keyword">if</span> <span class="name">skilyrði</span><span class="punctuation">:</span>
+    <span class="name">skipanir</span>
+<span class="keyword">elif</span> <span class="name">skilyrði</span><span class="punctuation">:</span>
+    <span class="name">skipanir</span>
+<span class="keyword">else</span><span class="punctuation">:</span>
+    <span class="name">skipanir</span>
+</pre>
+</blockquote>
+<p>Það má líka sleppa eða hafa fleiri <strong>elif</strong> kafla og/eða sleppa <strong>else</strong> kafla.</p>
+</li>
+<li><p class="first"><strong>While</strong>-lykkjur hafa snið</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="keyword">while</span> <span class="name">skilyrði</span><span class="punctuation">:</span>
+    <span class="name">skipanir</span>
+</pre>
+</blockquote>
+</li>
+<li><p class="first"><strong>For</strong>-lykkjur hafa snið</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="keyword">for</span> <span class="name">k</span> <span class="operator word">in</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="name">b</span><span class="punctuation">,</span><span class="name">e</span><span class="punctuation">):</span>
+    <span class="name">skipanir</span>
+</pre>
+</blockquote>
+<p>k tekur þá gildi b, b+1,..., e–1. <code>range(e)</code> jafngildir
+<code>range(0,e)</code>, og svo má taka stærri skref: <code>range(b,e,d)</code> hleypur
+í gegn um k = b, b + d, b + 2d,... og hættir ef k ≥ e.</p>
+</li>
+<li><p class="first"><strong>Athugasemdir</strong> (<em>comments</em>) byrja á #</p>
+</li>
+<li><p class="first">Aðgerðin <cite>%</cite> gefur <strong>afgang</strong> úr deilingu (<em>mod</em>)</p>
+</li>
+<li><p class="first">// gefur <strong>heiltöludeilingu</strong> (og ef útkoman er brot er hún lækkuð niður í átt að 0)</p>
+</li>
+<li><p class="first">Eins og í flestum forritunarmálum er &quot;=&quot; <strong>gildisgjöf</strong> (<em>assignment</em>) og &quot;==&quot;
+samanburður</p>
+</li>
+<li><p class="first">Föll sem <strong>skila gildi</strong> enda oftast á <code>return gildi</code></p>
+</li>
+<li><p class="first"><strong>Inndráttur</strong> er notaður til að sýna hvar blokkir enda (þ.e.a.s. blokkir sem <em>def</em>, <em>if</em>, <em>else</em>, <em>while</em> o.fl. skilgreina). Skipanir sem byrja slíkar blokkir enda alltaf á :</p>
+</li>
+<li><p class="first"><strong>Strengi</strong> má búa til með því að setja einfaldar gæsalappir utan um þá, en líka má
+nota tvöfaldar, t.d. &quot;strengur&quot;.</p>
+</li>
+<li><p class="first">Til að <strong>kalla á fall</strong> er notað <code>nafn(viðföng)</code> (t.d. <em>næsta</em>, <em>collatz_runa</em> og innbyggða fallið
+<em>print</em>)</p>
+</li>
+<li><p class="first">Fallið <em>print</em> fer sjálfkrafa í næstu línu eftir prentun, nema ef viðbótin
+<em>end=...</em> er með.</p>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Á vefnum <a class="reference external" href="https://www.programiz.com/python-programming/online-compiler">programiz</a>
+er hægt að prófa Python forrit. Farið þangað og afritið (eða sláið inn) forritið
+<a href="#id1"><span class="problematic" id="id2">:numref:`Collatz`</span></a> (þ.e. Collatz). Prófið nokkrar fleiri byrjunartölur, m.a.
+27.</p>
+<div class="last system-message" id="id1">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 188); <em><a href="#id2">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;numref&quot;.</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="umhverfi-fyrir-python-jupyterlab">
+<h1>Umhverfi fyrir Python: <em>JupyterLab</em></h1>
+<p>Í þessum fyrirlestrarnótum er miðað við að notað sé umhverfi sem nefnist <em>JupyterLab</em>. Það verður stundum kallað &quot;Júpíter&quot; hér á eftir. Segja má að JupyterLab sé arftaki kerfis sem nefnist <em>Jupyter Notebook</em>. Skipanirnar eru að mestu þær sömu en JupyterLab er að ýmsu leyti nútímalegra og höfundar þess búast við að það muni um síðir leysa Jupyter Notebook af hólmi.</p>
+<div class="section" id="uppsetning-python-og-jupyterlab">
+<h2>Uppsetning Python og JupyterLab</h2>
+<p>Auðveldasta leiðin til að setja upp bæði Python og Júpíter í einu lagi er að setja upp hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python er líka svoleiðis slanga). Með Anaconda fylgir nýjasti Python túlkurinn, Júpíter, meira en 1000 vinsælir Python-pakkar (þar á meðal þeir þrír sem taldir eru að ofan, NumPy, SciPy og Matplotlib) og ýmislegt fleira. Til að setja það upp þarf að heimsækja <a class="reference external" href="https://anaconda.com/">anaconda.com</a>, velja <em>Products–Individual Edition</em>, hlaða niður 64 bita <em>Graphical Installer</em> fyrir ykkar stýrikerfi og fylgja leiðbeiningum.</p>
+</div>
+<div class="section" id="keyrsla-jupyterlab">
+<h2>Keyrsla JupyterLab</h2>
+<p>Eftir uppsetningu Anaconda má smella á &quot;Anaconda-Navigator&quot; appið og velja þar <em>JupyterLab</em>. Þá opnast JupyterLab í glugga í aðalvafra tölvunnar. Heimamappa er sjálfgefin í fyrsta sinn, en næst opnast JupyterLab á sama stað og síðast var hætt. JupyterLab-glugginn lítur svona út:</p>
+<div class="figure align-center" style="width: 15cm">
+<img alt="myndir/jupyterlab.png" src="myndir/jupyterlab.png" />
+<p class="caption">JupyterLab-glugginn</p>
+</div>
+<p>Hér hefur verið byrjað í möppunni <code>dropbox/strei</code> undir heimamöppu. Þarna eru tvær undirmöppur og fjórar skrár: tvær vinnubækur eða Júpíter-bækur (auðkenndar með .ipynb, en Jupyter hét áður IPython), eitt Python-forrit (auðkennt með .py) og ein pdf-skrá. Til að búa til nýja vinnubók er smellt á efri <em>Python 3</em>-hnappinn, og þá opnast bókin í nýjum flipa í vafranum. Hún heitir sjálfkrafa <em>Untitled2</em> en með því að hægri-smella á nafnið (eða smella á <em>File</em>) og velja <em>Rename notebook</em> má skíra hana einhverju skynsemlegra nafni. Eldri bók er opnuð með því að smella á hana í skráalistanum vinstra megin.</p>
+</div>
+<div class="section" id="jupiter-vinnubaekur">
+<h2>Júpíter vinnubækur</h2>
+<p>Vinnubækur innihalda reiti (<em>cells</em>) af tvennu tagi, forritsreiti (<em>code</em>), og textareiti (<em>markdown</em>). Í þeim fyrrnefndu eru Python-forrit eða forritsbútar, en í hinum eru fyrirsagnir og skýringartextar sniðnir með umbrotsmálinu (<em>markup language</em>) <em>Markdown</em>. Í textareitina er líka hægt að setja stærðfræðiformúlur sniðnar með formúlumálinu <em>LaTeX</em> og jafnvel myndir ef vill. Forritsbútana er hægt að keyra og fer úttak keyrslu inn í bókina, neðst í viðkomandi forritsreit.</p>
+<p>Það er sæmilega auðvelt að læra á notkun Júpíters með því að prófa sig áfram, en líka getur verið gagnlegt að fara í gegn um leiðbeiningar sem valdar eru með <em>Help---User Interface Tour</em> (úr opinni bók), eða skoða leiðbeiningar á netinu, sbr grein <a href="#id3"><span class="problematic" id="id4">:numref:`jupyter-leiðbein-á-netinu`</span></a>. Með <em>Help</em>-hnappnum má líka fá hjálp um Python sjálft, Markdown-málið og ýmislegt fleira.</p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 220); <em><a href="#id4">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<table border="1" class="colwidths-auto docutils" id="jupiterskraaskipanir">
+<caption>Skráaskipanir fyrir Júpíter-vinnubækur</caption>
+<tbody valign="top">
+<tr><td>Hægri-smellt á <em>Untitled</em> efst t.v. og <em>Rename-Notebook</em> <br>
+File→Rename-Notebook</td>
+<td>Skipta um nafn á bók</td>
+</tr>
+<tr><td>File→Save-Notebook-As <br>
+ctrl/shift/s (command/shift/s á Mac)</td>
+<td>Vista undir nýju nafni</td>
+</tr>
+<tr><td>File→Save-Notebeook <br>
+ctrl/s (command/s á Mac) <br>
+smellt á diskling</td>
+<td>Vista</td>
+</tr>
+<tr><td>&quot;Drag-and-drop&quot; beitt á glugga</td>
+<td>Endurraða gluggum</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils" id="jupiterkeyrsluskipanir">
+<caption>Keyrsluskipanir fyrir Júpíter-vinnubækur</caption>
+<tbody valign="top">
+<tr><td>ctrl/enter</td>
+<td>Keyra forritsreit / sníða textareit</td>
+</tr>
+<tr><td>esc-0-0 <br>
+Kernel→Restart-kernel</td>
+<td>Núllstilla Python, m.a. eyða öllum breytum</td>
+</tr>
+<tr><td>▶▶</td>
+<td>Núllstilla og keyra alla reiti</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="colwidths-auto docutils" id="jupiterreitaskipanir">
+<caption>Reitaskipanir fyrir Júpíter-vinnubækur</caption>
+<tbody valign="top">
+<tr><td>Tvísmellt í textareit sem búið er að sníða</td>
+<td>Sýna reit sem <em>markdown</em> (til að breyta innihaldinu)</td>
+</tr>
+<tr><td>esc-m <br>
+Code→Markdown</td>
+<td>Breyta forritsreit í textareit</td>
+</tr>
+<tr><td>esc-y <br>
+Markdown→Code</td>
+<td>Breyta textareit í forritsreit</td>
+</tr>
+<tr><td>esc-d-d</td>
+<td>Eyða reit</td>
+</tr>
+<tr><td>esc-a, esc-b</td>
+<td>Bæta við reit fyrir ofan (&quot;above&quot;) eða neðan (&quot;below&quot;) virkan reit</td>
+</tr>
+<tr><td>ctrl/shift/– <br>
+Edit→Split-cell</td>
+<td>Kljúfa reit</td>
+</tr>
+<tr><td>Mála reiti og Edit→Merge-Selected-Cells</td>
+<td>Sameina reiti</td>
+</tr>
+<tr><td>&quot;Drag-and-drop&quot; beitt á reit</td>
+<td>Færa reit</td>
+</tr>
+<tr><td>esc-z</td>
+<td>afturkalla (&quot;undo&quot;) reitaskipun</td>
+</tr>
+<tr><td>esc-shift/z</td>
+<td>endurtaka (&quot;redo&quot;) reitaskipun</td>
+</tr>
+<tr><td>ctrl/z (command/z á Mac)</td>
+<td>afturkalla (&quot;undo&quot;) skipun inni í reit</td>
+</tr>
+<tr><td>ctrl/shift/z (command/shift/z á Mac)</td>
+<td>endurtaka (&quot;redo&quot;) skipun inni í reit</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="vistun-vinnuboka-a-pdf-snii">
+<h2>Vistun vinnubóka á PDF-sniði</h2>
+<p>Til að vista vinnubók í PDF-skjal veljið þá File→Print, eða sláið á command-p
+(Mac) eða ctrl-p (Windows), og svo Destination <em>Save-as-PDF</em>. Þá birtist gluggi
+þar sem velja má möppu og nafn fyrir PDF-skjalið [ath. að smella á File í
+JupyterLab en ekki í vafranum]. Því miður er lús í kerfinu þannig að ef
+Latex-stærðfræðiformúlur eru settar inn í textareiti í Jupyter-bókinni þá
+prentast þær ekki rétt. Til að prenta þær þarf að velja File–Export notebook
+as–HTML, og svo þarf að vista HTML-skjalið sem verður til í PDF.</p>
+</div>
+<div class="section" id="markdown-og-latex">
+<h2>Markdown og Latex</h2>
+<p>Finna má ýmsar leiðbeiningar um <em>Markdown</em>-málið á netinu, t.d. eftir Inge
+Halilovic (neðsti hlekkurinn í grein <a href="#id5"><span class="problematic" id="id6">:numref:`jupyter-leiðbein-á-netinu`</span></a>). Þar er
+útskýrt hvernig búa má til fyrirsagnir (með #, ##, ###), skáletra og feitletra
+(með *texti* og **texti**), búa til lista, setja inn myndir (þær er hægt
+að líma inn eða draga inn með músinni), setja láréttar línur og ýmislegt fleira.
+Stærðfræðiformúlur eru með LaTeX-sniði og settar inn með $ <em>formúla</em> $ eða</p>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 313); <em><a href="#id6">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<blockquote>
+<div class="line-block">
+<div class="line">$$</div>
+<div class="line"><em>formúla</em></div>
+<div class="line">$$</div>
+</div>
+</blockquote>
+<p>LaTeX getur búið til gríska stafi og allskyns stærðfræðitákn, það setur
+sjálfkrafa skáletur á breytur og hæfileg bil á milli einstakra hluta í formúlum.
+<a class="reference external" href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">Wikibókin um LaTeX-stærðfræði</a> er sæmilega ítarleg, og svo
+má finna fjölmarga styttri hjálpartexta, t.d. <a class="reference external" href="https://davidhamann.de/2017/06/12/latex-cheat-sheet">þennan</a> eftir David Chapman.
+Fallegasti stærðfræðitextinn fæst með því að setja dollaramerki utan um alla
+stærðfræði, hvort sem það eru flóknar formúlur eða bara &quot;<span class="formula"><i>x</i> = 3</span>&quot; og
+&quot;<span class="formula"><i>a</i></span> og <span class="formula"><i>b</i></span> eru vigrar&quot; (sem sé <code>$x=3$</code> og <code>$a$ og $b$
+eru vigrar</code>) en ekki &quot;x=3&quot; og &quot;a og b eru vigrar&quot;.</p>
+</div>
+<div class="section" id="jupyter-leibeiningar-a-netinu">
+<span id="jupyter-leibein-a-netinu"></span><h2>Jupyter-leiðbeiningar á netinu</h2>
+<p>Hægt er að finna ýmsar vefsíður með leiðbeiningum um Jupyter Notebook og JupyterLab á netinu, t.d.</p>
+<blockquote>
+<ul class="simple">
+<li><a class="reference external" href="https://www.dataquest.io/blog/jupyter-notebook-tutorial/">Jupyter Notebook for Beginners</a></li>
+<li><a class="reference external" href="http://www.rpgroup.caltech.edu/ncbs_pboc/code/t0b_jupyter_notebooks.html">Using Jupyter notebooks and JupyterLab</a></li>
+<li><a class="reference external" href="https://florianwilhelm.info/2018/11/working_efficiently_with_jupyter_lab">Working efficiently with JupyterLab Notebooks</a></li>
+<li><a class="reference external" href="https://medium.com/ibm-data-science-experience/markdown-for-jupyter-notebooks-cheatsheet-386c05aeebed">Markdown for Jupyter notebooks cheatsheet</a></li>
+</ul>
+</blockquote>
+<span class="target" id="jupyter-aefing"></span><!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Vinnubókin <span class="h"><a href="kynning.ipynb"
+download="kynning.ipynb"><b>kynning.ipynb</b></a></span> byrjar á nokkrum æfingum í
+notkun JupyterLab. Hlaðið niður þessari vinnubók, færið hana yfir í
+vinnumöppuna ykkar, opnið hana í Jupyter og fylgið leiðbeiningum í fyrstu
+þremur æfingunum.</p>
+</div>
+</div>
+</div>
+<div class="section" id="grunnatrii-python">
+<span id="grunn-python"></span><h1>Grunnatriði Python</h1>
+<div class="section" id="gildi-breytur-og-tog">
+<h2>Gildi, breytur og tög</h2>
+<p>Breyta (<em>variable</em>) er nafn á minnishólfi í tölvu, þar sem geyma má gildi (<em>value</em>). Gildin geta svo verið af ýmsu tagi, eða haft ýmis tög (<em>types</em>), og eins og fyrr segir eru þessi tög tengd gildunum en ekki breytunum sjálfum.</p>
+<dl class="docutils">
+<dt>Grunntögin eru (nöfn taga í Python í svigum):</dt>
+<dd><ul class="first last simple">
+<li><em>kommutala (float)</em> t.d. <code>2.0</code>, <code>-543.62</code>, <code>16e-22</code></li>
+<li><em>heiltala (int)</em>   t.d. <code>2</code>, <code>123456789012345678901234567890</code>,
+<code>round(1e100)</code>; engin takmörk á stærð</li>
+<li><em>strengur (str)</em>   t.d. <code>'abc'</code>, <code>&quot;strengur með bili&quot;</code>;
+nota má hvort sem maður vill <code>&quot;</code> eða <code>'</code></li>
+<li><em>rökgildi (bool)</em> , <code>True</code> og <code>False</code></li>
+<li><em>&quot;EkkertTag&quot; (NoneType)</em>, <code>None</code> sérstakt tag sem fæst m.a. úr
+föllum sem engu skila.</li>
+</ul>
+</dd>
+<dt>Önnur innbyggð tög (sjá kafla <a href="#id7"><span class="problematic" id="id8">:numref:`runur`</span></a>):</dt>
+<dd><div class="first system-message" id="id7">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 382); <em><a href="#id8">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<ul class="last simple">
+<li><em>Listar (list)</em></li>
+<li><em>Samantektir (tuple)</em></li>
+<li><em>Mengi (set)</em></li>
+<li><em>Varpanir (dictionary)</em></li>
+</ul>
+</dd>
+<dt>Breyturnöfn:</dt>
+<dd>Nafn breytu er runa af bókstöfum, tölustöfum, _, byrja ekki á tölu, t.d. x_1, hæð, ∆</dd>
+</dl>
+</div>
+<div class="section" id="gildisgjof-og-utreikningar">
+<span id="gildisgjof"></span><h2>Gildisgjöf og útreikningar</h2>
+<dl class="docutils">
+<dt>Gildisgjöf (<em>assignment</em>)</dt>
+<dd><em>breyta</em> = <em>segð</em>, t.d. <code>a = x + 3</code> <br>
+<em>breyta</em> += <em>segð</em> (leggur segð við breytu; líka má –=, *=...)</dd>
+<dt>Virkjar (<em>operators</em>)</dt>
+<dd><ul class="first simple">
+<li><code>+ – * / %</code>: eins og í Java eða C (<code>x % y</code> er afgangur úr deilingunni x/y)</li>
+<li><code>** //</code>: veldi, heiltöludeiling (aukastafir skornir af)</li>
+<li><code>&lt; &gt; &lt;= &gt;= == !=</code>: rökvirkar, eins og í Java</li>
+<li><code>and or not</code>: rökvirkjar</li>
+<li><code>&lt;&lt; &gt;&gt; &amp; ~ ^</code>: bitavirkjar, eins og í C, ~ er fyllitala og ^ er xor</li>
+</ul>
+<p class="last">svo má nota sviga <code>( )</code> til að stýra röð útreiknings</p>
+</dd>
+<dt>Útkoma úr útreikningi</dt>
+<dd>Lát H vera heiltölu og K kommutölu. Þá fæst <br>
+&emsp; H ￮ H → H, nema H / H → K <br>
+&emsp; H ￮ K → K, K ￮ H → K, K ￮ K → K <br>
+þar sem ￮ er ein af aðgerðunum: <code>+ – * / ** //</code></dd>
+<dt>Strengjavirkjar</dt>
+<dd><ul class="first last simple">
+<li><code>+</code>: samskeyting, <code>'abc' + '12'</code> → <code>'abc12'</code></li>
+<li><code>*</code>: fjölföldun, <code>'abc'*3</code> → <code>'abcabcabc'</code></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="utprentun-og-innlestur">
+<h2>Útprentun og innlestur</h2>
+<blockquote>
+<ul>
+<li><p class="first"><code>print(segð,segð...)</code>: Prentar segðirnar með bilum á milli</p>
+</li>
+<li><p class="first"><code>print(..., sep=&quot;,&quot;)</code>: Prentar með kommum á milli</p>
+</li>
+<li><p class="first"><code>print(..., end=&quot; &quot;)</code>: Endar með bili í stað nýrrar línu <br>
+Sjá mörg dæmi um print að framan og í sýnidæminu í grein <a href="#id9"><span class="problematic" id="id10">:numref:`stýriskipanir`</span></a>.</p>
+<div class="system-message" id="id9">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 421); <em><a href="#id10">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;numref&quot;.</p>
+</div>
+</li>
+<li><p class="first"><code>s = input('texti')</code>: Prentar textann og bíður eftir að notandi
+slái inn streng og &lt;Enter&gt;; innslegið gildi → s. Ath. að notkun
+<code>input</code> í Jupíter er svolítið gölluð og skipunin verður því ekki
+mikið notuð. Hún samt prófuð í næstu æfingu.</p>
+</li>
+</ul>
+<p>Næsta grein (<a href="#id11"><span class="problematic" id="id12">:numref:`fstrengir`</span></a>) útskýrir svo hvernig sníða (<em>formatera</em>) má útprentuð gildi með svonefndum f-strengjum.</p>
+<div class="system-message" id="id11">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 428); <em><a href="#id12">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Fallið input les streng af lyklaborði inn í forrit: <code>x =
+input('Sláðu inn tölu:')</code> skrifar út &quot;Sláðu inn tölu: &quot; og bíður eftir
+inntaki sem endar á <em>Enter</em>. Í framhaldi verður x <em>strengur</em> með því sem
+slegið var inn, sem síðan má breyta í kommutölu með <cite>t = float(x)</cite> (það
+mætti líka sameina þetta í <cite>x = float(input('Sláðu inn tölu'))</cite>. Prófið
+að keyra eftirfarandi bút og slá inn tölu. Prófið líka að slá inn
+eitthvað annað en tölu.</p>
+<pre class="code python3 last literal-block">
+<span class="name">x</span> <span class="operator">=</span> <span class="name builtin">input</span><span class="punctuation">(</span><span class="literal string single">'Sláðu inn tölu:'</span><span class="punctuation">)</span>
+<span class="name">t</span> <span class="operator">=</span> <span class="name builtin">float</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="name builtin">print</span><span class="punctuation">(</span><span class="name">t</span><span class="punctuation">)</span>
+</pre>
+</div>
+</blockquote>
+</div>
+<div class="section" id="f-strengir">
+<span id="fstrengir"></span><h2>F-strengir</h2>
+<p>F-strengir (<em>f-strings</em>) eru ætlaðir til útprentunar, og með þeim má tvinna
+saman strengi (textabúta), breytur og gildi (segðir). Breytur og gildi eru sett
+innan slaufusviga og þeim getur líka fylgt snið á eftir tvípunkti, sem sé:</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="literal string affix">f</span><span class="literal string single">'texti </span><span class="literal string interpol">{</span><span class="name">segð</span><span class="literal string interpol">}</span><span class="literal string single"> texti </span><span class="literal string interpol">{</span><span class="name">segð</span><span class="literal string interpol">:</span><span class="literal string single">snið</span><span class="literal string interpol">}</span><span class="literal string single"> texti </span><span class="literal string interpol">{</span><span class="name">segð</span><span class="literal string interpol">:</span><span class="literal string single">snið</span><span class="literal string interpol">}</span><span class="literal string single"> ...'</span>
+</pre>
+</blockquote>
+<p>Hér getur hver segð (<em>expression</em>) verið breyta eða útreiknuð stærð, og snið (sem
+má sem sé sleppa) gefur oftast heildarfjölda stafa og/eða fjölda aukastafa.
+Hér er tafla yfir nokkur möguleg snið:</p>
+<table border="1" class="colwidths-auto docutils" id="fstrengjasni">
+<caption>Nokkur möguleg snið í f-strengjum</caption>
+<tbody valign="top">
+<tr><td><code>{heiltala}</code> <br>
+<code>{strengur}</code> <br>
+<code>{kommutala}</code></td>
+<td>Heiltala og strengur skrifast óbreytt og kommutala með jafnmörgum
+aukastöfum og þarf til að sýna nákvæmt gildi hennar.</td>
+</tr>
+<tr><td><code>{heiltala:n}</code> <br>
+<code>{strengur:n}</code></td>
+<td>Skrifað í n stafa breitt svið, tölur hægri-jafnaðar og strengir
+vinstri-jafnaðir</td>
+</tr>
+<tr><td><code>{heiltala:&lt;n}</code></td>
+<td>Vinstri-jafna heiltölu í n stafa svið</td>
+</tr>
+<tr><td><code>{strengur:&gt;n}</code></td>
+<td>Hægri-jafna streng í n stafa svið</td>
+</tr>
+<tr><td><code>{heiltala:^n}</code> <br>
+<code>{strengur:^n}</code></td>
+<td>Skrifa miðjað í n stafa svið</td>
+</tr>
+<tr><td><code>{kommutala:n}</code></td>
+<td>Skrifa kommutölu með n &quot;marktækum stöfum&quot; (<em>significant digits</em>)</td>
+</tr>
+<tr><td><code>{kommutala:.mf}</code></td>
+<td>Skrifa kommutölu með m stöfum fyrir aftan kommu</td>
+</tr>
+<tr><td><code>{kommutala:n.mf}</code></td>
+<td>Skrifa kommutölu með m stöfum fyrir aftan kommu í n stafa breitt
+svið</td>
+</tr>
+</tbody>
+</table>
+<p>Tilgangurinn með að gefa heildarfjölda stafa (breidd sviðs) getur t.d. verið að
+láta dálka í töflu standast á: forritið í sýnidæminu í grein <a href="#id13"><span class="problematic" id="id14">:numref:`stýriskipanir`</span></a>
+notar f-strengi til að sníða (<em>&quot;formatera&quot;</em>) litla töflu. Hér eru þrjú dæmi í
+viðbót:</p>
+<div class="system-message" id="id13">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 498); <em><a href="#id14">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="literal string affix">f</span><span class="literal string single">'hæð = </span><span class="literal string interpol">{</span><span class="name">h</span><span class="literal string interpol">}</span><span class="literal string single">, breidd = </span><span class="literal string interpol">{</span><span class="name">x</span><span class="operator">*</span><span class="name">y</span><span class="literal string interpol">}</span><span class="literal string single">'</span>
+<span class="literal string affix">f</span><span class="literal string double">&quot;A = </span><span class="literal string interpol">{</span><span class="name">A</span><span class="literal string interpol">:</span><span class="literal string double">.3f</span><span class="literal string interpol">}</span><span class="literal string double">, B = </span><span class="literal string interpol">{</span><span class="name">B</span><span class="literal string interpol">:</span><span class="literal string double">.2f</span><span class="literal string interpol">}</span><span class="literal string double">&quot;</span>
+<span class="literal string affix">f</span><span class="literal string single">'Halló </span><span class="literal string interpol">{</span><span class="name">nafn</span><span class="literal string interpol">}</span><span class="literal string single"> og vertu velkomin(n)'</span>
+</pre>
+</blockquote>
+<p>þar sem gert er ráð fyrir að h, x og y séu heiltölubreytur, A og B séu
+kommutölubreytur og nafn sé strengjabreyta.</p>
+<div class="admonition danger">
+<p class="first admonition-title">!DANGER!</p>
+<p>F-strengir eru nýleg viðbót við Python, þeir komu í Python 3.6 í desember
+2016. Í eldri Python-útgáfum er hægt að nota %-virkja. Forritið í sýnidæminu
+í grein <a href="#id15"><span class="problematic" id="id16">:numref:`stýriskipanir`</span></a> gæti t.d. haft: <br>
+&emsp; &emsp; <code>print('%d   %.4f   %2d' % (x, math.sqrt(x), x**2))</code> <br>
+í öftustu línunni.</p>
+<div class="last system-message" id="id15">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 513); <em><a href="#id16">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+</div>
+</div>
+<div class="section" id="foll-notanda-ny-foll">
+<h2>Föll notanda (ný föll)</h2>
+<p>Skilgreining falls</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="keyword">def</span> <span class="name function">fall</span><span class="punctuation">(</span><span class="name">stiki</span><span class="punctuation">,</span> <span class="name">stiki</span><span class="operator">...</span><span class="punctuation">):</span>
+    <span class="literal string doc">'''skjölunarstrengur'''</span>
+    <span class="name">skipanir</span>
+    <span class="keyword">return</span> <span class="name">g</span>
+
+<span class="comment single"># Skjölunarstrengurinn er valkvæður en góð regla að hafa hann með</span>
+<span class="comment single"># Ef fallið skilar mörgum gildum endar það á: return g1,g2...</span>
+<span class="comment single"># Ef það skilar engu er return-skipun sleppt</span>
+</pre>
+</blockquote>
+<dl class="docutils">
+<dt>Kallað á fall</dt>
+<dd><code>g = fall(stikar)</code> <br>
+Má líka nota í segð: <code>h = 2*fall(stikar) + 1</code>
+Ef fallið skilar engu: <code>fall(stikar)</code>
+Ef fallið skilar mörgum gildum: <code>(g1,g2...) = fall(stikar)</code> <br>
+Líka má sleppa svigunum: <code>g1,g2... = fall(stikar)</code> <br></dd>
+</dl>
+</div>
+<div class="section" id="mikilvaegustu-innbygg-foll">
+<h2>Mikilvægustu innbyggð föll</h2>
+<dl class="docutils">
+<dt>Almenn föll</dt>
+<dd><table border="1" class="colwidths-given first docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>abs</td>
+<td>tölugildi, abs(-3) → 3</td>
+</tr>
+<tr><td>max</td>
+<td>hámark: max(1,2) → 2</td>
+</tr>
+<tr><td>min</td>
+<td>lágmark: min(1,2) → 1</td>
+</tr>
+<tr><td>range</td>
+<td><p class="first">sjá grein <a href="#id17"><span class="problematic" id="id18">:numref:`icollatz`</span></a></p>
+<div class="last system-message" id="id17">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 557); <em><a href="#id18">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+</td>
+</tr>
+<tr><td>int</td>
+<td>kommutala → heiltala</td>
+</tr>
+<tr><td>float</td>
+<td>heiltala → kommutala</td>
+</tr>
+<tr><td>len</td>
+<td>lengd strengs</td>
+</tr>
+<tr><td>type</td>
+<td>tag breytu</td>
+</tr>
+</tbody>
+</table>
+<!-- Æfing -->
+<div class="admonition hint last">
+<p class="first admonition-title">Hint</p>
+<p class="last">Opnið Jupyter-bók og prófið öll þessi föll.</p>
+</div>
+</dd>
+<dt>Helstu stærðfræðiföll og fastar</dt>
+<dd><p class="first"><code>sin, cos, tan, asin, acos, atan, atan2</code>: Hornaföll í radíönum <br>
+<code>exp, log, log2, log10, sqrt</code>: Vísisfall, lograr og kvaðratrót <br>
+<code>pi, e, inf, nan</code>: (stærðfræði)fastar <br>
+<code>radians, degrees</code>: breytt úr gráðum í radíana og öfugt <br>
+Ef nota á sin, cos og pi (til dæmis) má rita fremst: <br>
+&emsp; <code>from math import sin, cos, pi</code>, eða: <br>
+&emsp; <code>import math</code> og svo <code>math.sin</code>, <code>math.cos</code>... <br>
+Sjá nánar í <a class="reference external" href="https://docs.python.org/3/library/math.html">Python hjálpinni</a>, &ensp; og greinar
+<a href="#id19"><span class="problematic" id="id20">:numref:`stýriskipanir`</span></a> og <a href="#id21"><span class="problematic" id="id22">:numref:`polhnit`</span></a>.</p>
+<div class="system-message" id="id19">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 572); <em><a href="#id20">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<div class="system-message" id="id21">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 572); <em><a href="#id22">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<!-- Æfing -->
+<div class="admonition hint last">
+<p class="first admonition-title">Hint</p>
+<div class="figure align-center" style="width: 10cm">
+<img alt="myndir/gormakerfi.png" src="myndir/gormakerfi.png" />
+</div>
+<p><strong>Sveiflutími gorms</strong>: Á myndinni er gormakerfi: Hlutur með massa
+<span class="formula"><i>m</i></span> hvílir á fleti án núningsmótstöðu og er festur við veggina með
+gormum með stífnifasta <span class="formula"><i>k</i><sub>1</sub></span> og <span class="formula"><i>k</i><sub>2</sub></span>. Eiginsveiflutími
+kerfisins verður</p>
+<div class="formula">
+<i>T</i> = 2<i>π</i><span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root"><span class="fraction"><span class="ignored">(</span><span class="numerator"><i>m</i></span><span class="ignored">)/(</span><span class="denominator"><i>k</i><sub>1</sub> + <i>k</i><sub>2</sub></span><span class="ignored">)</span></span></span><span class="ignored">)</span></span>
+</div>
+<p class="last">Skrifið forrit sem spyr um <span class="formula"><i>m</i></span>, <span class="formula"><i>k</i><sub>1</sub></span>, <span class="formula"><i>k</i><sub>2</sub></span>, les þau
+inn og reiknar og skrifar út sveiflutímann á sniðinu <cite>T = x.xxx</cite> (með
+f-streng).</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="fallbreytur">
+<h2>Fallbreytur</h2>
+<p>Breytur geta tekið gildi sem eru föll: <code>def fall: ...</code> og neðar: <code>x = fall</code>.</p>
+<dl class="docutils">
+<dt>Dæmi:</dt>
+<dd><pre class="code python3 first last literal-block">
+<span class="keyword">def</span> <span class="name function">gera_tvisvar</span><span class="punctuation">(</span><span class="name">f</span><span class="punctuation">):</span>
+    <span class="literal string doc">'''framkvæmir f tvisvar'''</span>
+    <span class="name">f</span><span class="punctuation">()</span>
+    <span class="name">f</span><span class="punctuation">()</span>
+
+<span class="keyword">def</span> <span class="name function">bulla</span><span class="punctuation">():</span>
+    <span class="literal string doc">'''skrifar &quot;bull&quot;'''</span>
+    <span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string double">&quot;bull&quot;</span><span class="punctuation">)</span>
+
+<span class="name">b</span> <span class="operator">=</span> <span class="name">bulla</span>         <span class="comment single"># b er fallbreyta</span>
+<span class="name">gera_tvisvar</span><span class="punctuation">(</span><span class="name">b</span><span class="punctuation">)</span>   <span class="comment single"># prentar bull tvisvar</span>
+</pre>
+</dd>
+</dl>
+</div>
+<div class="section" id="id23">
+<span id="styriskipanir"></span><h2>Stýriskipanir</h2>
+<blockquote>
+<blockquote>
+<ul>
+<li><p class="first"><code>if-elif-else</code>: sjá grein <a href="#id24"><span class="problematic" id="id25">:numref:`icollatz`</span></a></p>
+<div class="system-message" id="id24">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 626); <em><a href="#id25">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;numref&quot;.</p>
+</div>
+</li>
+<li><p class="first"><code>while</code>: sjá grein <a href="#id26"><span class="problematic" id="id27">:numref:`icollatz`</span></a></p>
+<div class="system-message" id="id26">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 627); <em><a href="#id27">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;numref&quot;.</p>
+</div>
+</li>
+<li><p class="first"><code>for-in</code>: sjá grein <a href="#id28"><span class="problematic" id="id29">:numref:`icollatz`</span></a></p>
+<div class="system-message" id="id28">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 628); <em><a href="#id29">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;numref&quot;.</p>
+</div>
+</li>
+<li><p class="first"><code>continue</code>: fara í næstu umferð lykkju (for- eða while-)</p>
+</li>
+<li><p class="first"><code>break</code>: brjótast út úr lykkju</p>
+</li>
+</ul>
+</blockquote>
+<!-- Sýnidæmi -->
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p><strong>Rætur og veldi.</strong> Eftirfarandi forrit reiknar kvaðratrætur og önnur veldi
+talnanna 2, 3, 4 og 5. Það sýnir notkun á nokkrum atriðum sem fjallað hefur
+verið um hér á undan.</p>
+<pre class="code python3 literal-block">
+<span class="keyword namespace">import</span> <span class="name namespace">math</span>
+<span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string single">'x     √x     x²'</span><span class="punctuation">)</span>
+<span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string single">'―――――――――――――――'</span><span class="punctuation">)</span>
+<span class="keyword">for</span> <span class="name">x</span> <span class="operator word">in</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="literal number integer">2</span><span class="punctuation">,</span><span class="literal number integer">6</span><span class="punctuation">):</span>
+    <span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string affix">f</span><span class="literal string single">'</span><span class="literal string interpol">{</span><span class="name">x</span><span class="literal string interpol">}</span><span class="literal string single">   </span><span class="literal string interpol">{</span><span class="name">math</span><span class="operator">.</span><span class="name">sqrt</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span><span class="literal string interpol">:</span><span class="literal string single">.4f</span><span class="literal string interpol">}</span><span class="literal string single">   </span><span class="literal string interpol">{</span><span class="name">x</span><span class="operator">**</span><span class="literal number integer">2</span><span class="literal string interpol">:</span><span class="literal string single">2</span><span class="literal string interpol">}</span><span class="literal string single">'</span><span class="punctuation">)</span>
+</pre>
+<p>Fallið prentar út eftirfarandi töflu</p>
+<div class="last system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">kafli01.rst</tt>, line 649)</p>
+<p>Cannot analyze code. No Pygments lexer found for &quot;none&quot;.</p>
+<pre class="literal-block">
+.. code-block:: none
+
+    x     √x     x²
+    ―――――――――――――――
+    2   1.4142    4
+    3   1.7321    9
+    4   2.0000   16
+    5   2.2361   25
+</pre>
+</div>
+</div>
+<!-- æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Sláið forritið í sýnidæminu hér á undan inn í Jupyter-vinnubók (eða
+afritið það). Prófið svo að breyta forritinu með því að:</p>
+<blockquote>
+<ol class="loweralpha simple">
+<li>Sleppa 2, í range kallinu</li>
+<li>Nota <code>for x in range(0,8,2)</code></li>
+<li>Láta n = 3 (á undan for-lykkjunni) og breyta .4f í .{n}f</li>
+</ol>
+</blockquote>
+<p class="last">(Ath. að nota má V, &thinsp; ^2 og - í stað <em>unicode</em> táknanna √, &thinsp; ² og
+― ef maður vill)</p>
+</div>
+</blockquote>
+</div>
+<div class="section" id="skilyrt-gildi">
+<h2>Skilyrt gildi</h2>
+<blockquote>
+<p>Skipunin:</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="name">x</span> <span class="operator">=</span> <span class="name">segð1</span> <span class="keyword">if</span> <span class="name">skilyrði</span> <span class="keyword">else</span> <span class="name">segð2</span>
+</pre>
+</blockquote>
+<p>jafngildir:</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="keyword">if</span> <span class="name">skilyrði</span><span class="punctuation">:</span>
+   <span class="name">x</span> <span class="operator">=</span> <span class="name">segð1</span>
+<span class="keyword">else</span>
+   <span class="name">x</span> <span class="operator">=</span> <span class="name">segð2</span>
+</pre>
+</blockquote>
+<p>Þetta jafngildir skipuninni <tt class="docutils literal">x = skilyrði ? segð1 : segð2</tt> í Java eða C.
+Til dæmis mætti reikna tölugildi með <tt class="docutils literal">a = <span class="pre">-x</span> if x &lt; 0 else x</tt>.</p>
+</blockquote>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Í vinnubókinni <a href="#id30"><span class="problematic" id="id31">:ref:`kynning.ipynb&lt;jupyter-æfing&gt;`</span></a> sem náð var í í Æfingu
+aftan við kafla <a href="#id32"><span class="problematic" id="id33">:numref:`jupyter-leiðbein-á-netinu`</span></a> er hægt að prófa mörg af
+þeim Python-atriðum sem hér hefur verið lýst og æfa sig í þeim. Opnið þessa
+bók í Jupyter og fylgið leiðbeiningum í henni.</p>
+<div class="system-message" id="id30">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 694); <em><a href="#id31">backlink</a></em></p>
+Unknown interpreted text role &quot;ref&quot;.</div>
+<div class="last system-message" id="id32">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 694); <em><a href="#id33">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+</div>
+</div>
+</div>
+<div class="section" id="safntog-eitt-nafn-en-morg-gildi">
+<span id="runur"></span><h1>Safntög: Eitt nafn en mörg gildi</h1>
+<p>Fyrir utan grunngagnatögin sem fjallað hefur verið um að framan er Python með ýmis innbyggð safntög (<em>containers</em>), en breytur af slíku tagi geta geymt mörg stök eða gildi. Reyndar hefur þegar verið talað svolítið um eitt slíkt tag, nefnilega strengi sem geta geymt marga stafi. Mörg safntögin í Python teljast <strong>runur</strong> (<em>sequences</em>), nánar tiltekið eru það <strong>strengir</strong>, <strong>listar</strong> (<em>lists</em>), <strong>samstæður</strong> (<em>tuples</em>) og <strong>ítrarar</strong> (<em>iterators</em>; t.d. útkoma úr range), en önnur teljast ekki runur, m.a. <strong>mengi</strong> (<em>sets</em>) og <strong>varpanir</strong> (<em>dictionaries</em>).
+Eftirfarandi tafla sýnir hvernig hægt er að safna tölunum 1, 2, 3 og 4 í lista, samstæðu, mengi og ítrara:</p>
+<blockquote>
+<table border="1" class="colwidths-auto docutils">
+<tbody valign="top">
+<tr><td>listi</td>
+<td><code>L = [1, 2, 3, 4]</code></td>
+</tr>
+<tr><td>samstæða</td>
+<td><code>S = (1, 2, 3, 4)</code></td>
+</tr>
+<tr><td>mengi</td>
+<td><code>M = {1, 2, 3, 4}</code></td>
+</tr>
+<tr><td>ítrari</td>
+<td><code>Í = range(1,5)</code></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Það sem er sameiginlegt öllum runum er að hægt er að vísa í tiltekin stök eða gildi í rununni með hornklofum: ef R er runa og k er heiltala þá er <code>R[k]</code> stakið í sæti k í rununni, og fremsta stakið telst vera númer 0. Sameiginlegt með öllum safntögum er að hægt er að nota <code>if g in S:...</code> til að kanna hvort gildi g sé í safni S og <code>for g in S</code> til að láta g hlaupa í gegn um öll stökin í S, og ennfremur má telja stökin í S með <code>len(S)</code>.</p>
+<div class="section" id="id34">
+<span id="strengir"></span><h2>Strengir</h2>
+<p>Strengjatagið heitir <code>str</code> og í strengjum má geyma runur af hvaða <em>Unicode</em> stöfum sem vera skal (Unicode er alþjóðlegur staðall til að skrá í tölvu bókstafi allra heimsins tungumála auk fjölmargra annarra rittákna: tölur, greinarmerki, stærðfræðitákn, broskallar, o.s.frv.). Strengir eru búnir til með því að setja texta innan einfaldra eða tvöfaldra gæsalappa:</p>
+<blockquote>
+<code>s1 = &quot;Ísland&quot;</code>, <code>s2 = 'Ísland'</code>, <code>s3 =</code> <span class="formula"><span class="textrm">"</span><span class="mathrm">β ∈ A∩B</span><span class="textrm">"</span></span></blockquote>
+<p>Ef s er strengur þá er hægt að ná í einstaka stafi með <code>s[i]</code> þar sem i er númer sætis (fremst er sæti 0), og svo er hægt að ná í hlutstrengi með <code>s[i:j]</code> (stök i,...,j-1), <code>s[:j]</code> og <code>s[i:]</code>. Ef i er mínustala er talið aftanfrá. Ef s er <code>&quot;abcdef&quot;</code> og gefin er skipun <code>print(a[0], a[1:3], a[-3:-1], a[-1]</code> þá prentast út:</p>
+<blockquote>
+<code>a bc de f</code></blockquote>
+<p>Í grein <a href="#id35"><span class="problematic" id="id36">:numref:`gildisgjöf`</span></a> var sýnt hvernig hægt er að skeyta saman og fjölfalda strengi, og ýmsar strengjaaðgerðir eru sýndar í kynningarvinnubókinni í æfingunni aftan við kafla <a href="#id37"><span class="problematic" id="id38">:numref:`jupyter-leiðbein-á-netinu`</span></a>.</p>
+<div class="system-message" id="id35">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 735); <em><a href="#id36">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<div class="system-message" id="id37">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 735); <em><a href="#id38">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<blockquote>
+<p><strong>Nokkrar strengjaaðgerðir:</strong></p>
+<table border="1" class="colwidths-given docutils" id="abc">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>s = s1 + s2</td>
+<td>samskeyting strengja</td>
+</tr>
+<tr><td>s = s1*3</td>
+<td>sama og s1 + s1 + s1</td>
+</tr>
+<tr><td>s[3]</td>
+<td>stafur í sæti 3</td>
+</tr>
+<tr><td>s[2:5]</td>
+<td>hlutstrengur í sætum 2,3,4</td>
+</tr>
+<tr><td>lower(s)</td>
+<td>breyta í lágstafi</td>
+</tr>
+<tr><td>upper(s)</td>
+<td>breyta í hástafi</td>
+</tr>
+<tr><td>capitalize(s)</td>
+<td>breyta fremsta staf í hástaf</td>
+</tr>
+<tr><td>s.find(s1)</td>
+<td>staðsetning s1 í s</td>
+</tr>
+<tr><td>len(s)</td>
+<td>lengd strengsins</td>
+</tr>
+<tr><td>c in s</td>
+<td>er stafurinn c í strengnum s?</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="section" id="id39">
+<span id="listar"></span><h2>Listar</h2>
+<p><em>Listar</em> í Python gefa aðferð til að safna saman mörgum gildum undir einu nafni. Það eru engin takmörk á því hvernig gildi má geyma, þau mega sjálf vera safntög og þurfa ekki öll að vera af sama tagi. Gildi af taginu <em>list</em> má búa til með því að skrifa</p>
+<blockquote>
+<code>L = [gildi, gildi...]</code></blockquote>
+<p>Eins og fyrr segir má vísa í einstök stök í lista með <code>L[i]</code> þar sem i er heiltala með númeri staks, og hlutlistar (<em>slices</em>) fást eins og fyrir strengi, sbr. eftirfarandi dæmi:</p>
+<pre class="literal-block">
+.. code:: python3
+
+   a = [2, 'abc', 4.33, [1,2]]
+   print(a[1], a[2], a[-1])
+   print(a[1:3])
+
+   # Forritið að ofan prentar út:
+   abc 4.33 [1, 2]
+   ['abc', 4.33]
+</pre>
+<p>Ef lista er gefið gildi venjulegri gildisgjöf <code>b = a</code> þá verður ekki til nýr lista heldur bara ný tilvísun eða nýtt nafn (<em>new reference</em>) á listann <code>a</code>. Til að afrita listann mætti rita <code>b
+= a.copy()</code>. Skoðum þetta:</p>
+<blockquote>
+<pre class="code python3 literal-block">
+<span class="name">a</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">2</span><span class="punctuation">,</span> <span class="literal number integer">3</span><span class="punctuation">,</span> <span class="literal number integer">5</span><span class="punctuation">,</span> <span class="literal number integer">7</span><span class="punctuation">,</span> <span class="literal number integer">9</span><span class="punctuation">]</span>
+<span class="name">b</span> <span class="operator">=</span> <span class="name">a</span>
+<span class="name">b</span><span class="punctuation">[</span><span class="literal number integer">4</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="literal number integer">11</span>
+<span class="name builtin">print</span><span class="punctuation">(</span><span class="name">a</span><span class="punctuation">)</span>   <span class="comment single"># prentar [2, 3, 5, 7, 11]</span>
+</pre>
+</blockquote>
+<p>Í grein xxxx hér aftar er tafla yfir ýmsar listaaðgerðir sem nota má til að bæta stökum í lista og eyða úr þeim, leita í þeim, skeyta þeim saman o.fl.</p>
+</div>
+<div class="section" id="samstaeur-tuples">
+<h2>Samstæður (<em>tuples</em>)</h2>
+<p><em>Samstæður</em> (<em>tuples</em>; pör, þrenndir,...) gefa aðra aðferð til að safna saman
+mörgum gildum undir sama hatt. Til að búa til samstæður eru notaðir svigar í stað
+hornklofa:</p>
+<blockquote>
+<code>a = (gildi, gildi...)</code>.</blockquote>
+<p>Reyndar má sleppa svigunum: <code>x = gildi, gildi...</code> er jafngilt. En hornklofa má áfram nota til að vísa í einstök stök og hlutsamstæður: <code>print(a[0])</code> prentar fyrsta gildið í <code>a</code> og <code>print(a[0:2])</code> prentar fyrstu tvö. Annars er einn helsti munurinn á listum og samstæðum sá að það er ekki hægt að breyta stökum gildum í samstæðum:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="name">x</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">1</span><span class="punctuation">,</span><span class="literal number integer">2</span><span class="punctuation">,</span><span class="literal number integer">3</span><span class="punctuation">]</span>  <span class="comment single"># þriggja staka listi</span>
+<span class="name">x</span><span class="punctuation">[</span><span class="literal number integer">1</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="literal number integer">4</span>     <span class="comment single"># þetta má</span>
+<span class="name">a</span> <span class="operator">=</span> <span class="punctuation">(</span><span class="literal number integer">1</span><span class="punctuation">,</span><span class="literal number integer">2</span><span class="punctuation">,</span><span class="literal number integer">3</span><span class="punctuation">)</span>  <span class="comment single"># þrennd</span>
+<span class="name">a</span><span class="punctuation">[</span><span class="literal number integer">1</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="literal number integer">4</span>     <span class="comment single"># þetta gefur villu</span>
+</pre>
+</blockquote>
+<p>Sagt er að samstæður séu <em>immutable</em> (óbreytilegir) en listar séu <em>mutable</em> (breytanlegir). Eins og sést hér í næstu tveimur greinum þá bjóða listar upp á fleiri aðgerðir en samstæður. En stundum er gott að geta treyst því að einstök gildi breytist ekki, og auk þess notar Python málið samstæður í ýmsum skipunum, t.d. þegar kallað er á föll sem skila fleiru en einu gildi, sbr. <a href="#id40"><span class="problematic" id="id41">:numref:`polhnit`</span></a>. Eitt í viðbót sem er frábrugðið: Hægt er að búa til mengi af samstæðum en ekki af listum.</p>
+<div class="system-message" id="id40">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 816); <em><a href="#id41">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+</div>
+<div class="section" id="helstu-foll-og-virkjar-sem-eru-sameiginleg-me-listum-og-samstaeum">
+<span id="seqfun"></span><h2>Helstu föll og virkjar sem eru sameiginleg með listum og samstæðum</h2>
+<blockquote>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>x.count(g)</td>
+<td>hve oft kemur g fyrir í x</td>
+</tr>
+<tr><td>x.index(g)</td>
+<td>númer fyrstu staðsetningar g í x</td>
+</tr>
+<tr><td>any(x)</td>
+<td>er eitthvert gildi í x satt?</td>
+</tr>
+<tr><td>all(x)</td>
+<td>eru öll gildin sönn?</td>
+</tr>
+<tr><td>len(x)</td>
+<td>lengd x</td>
+</tr>
+<tr><td>max(x)</td>
+<td>stærsta stakið</td>
+</tr>
+<tr><td>min(x)</td>
+<td>minnsta stakið</td>
+</tr>
+<tr><td>sum(x)</td>
+<td>summa stakanna</td>
+</tr>
+<tr><td>x + y</td>
+<td>samskeyting lista</td>
+</tr>
+<tr><td>x*tala</td>
+<td>fjölföldun lista (t.d x*3)</td>
+</tr>
+<tr><td>s in x</td>
+<td>er s í x?</td>
+</tr>
+<tr><td>s not in x</td>
+<td>er s ekki í x?</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<div class="section" id="helstu-foll-sem-aeins-duga-a-lista">
+<span id="listfun"></span><h2>Helstu föll sem aðeins duga á lista</h2>
+<blockquote>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">x.append(g)</tt></td>
+<td>bætir gildi g aftan á lista x</td>
+</tr>
+<tr><td><tt class="docutils literal">x.extend(y)</tt></td>
+<td>bætir lista y aftan á lista x</td>
+</tr>
+<tr><td><tt class="docutils literal">x.sort()</tt></td>
+<td>raðar x</td>
+</tr>
+<tr><td><tt class="docutils literal">g = x.pop()</tt></td>
+<td>tekur aftasta stakið úr x og
+setur í g</td>
+</tr>
+<tr><td><tt class="docutils literal">g = x.pop(i)</tt></td>
+<td>tekur i-ta stakið úr x og setur
+í g</td>
+</tr>
+<tr><td><tt class="docutils literal">x.remove(g)</tt></td>
+<td>fjarlægir fyrsta stakið sem
+hefur gildið g úr x</td>
+</tr>
+<tr><td><tt class="docutils literal">x.insert(i,g)</tt></td>
+<td>stingur gildi g inn í x á stað i</td>
+</tr>
+<tr><td><tt class="docutils literal">y = x.copy()</tt></td>
+<td><p class="first">afritar x í y (sjá
+grein <a href="#id42"><span class="problematic" id="id43">:numref:`listar`</span></a>)</p>
+<div class="last system-message" id="id42">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 879); <em><a href="#id43">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+</td>
+</tr>
+<tr><td><tt class="docutils literal">x = list()</tt></td>
+<td>býr til tóman lista</td>
+</tr>
+<tr><td><tt class="docutils literal">x = list(runa)</tt></td>
+<td>býr til lista úr runu</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<!-- .. Æfing
+.. hint::
+   Farið aftarlega í :ref:`kynning.ipynb<jupyter-æfing>`, í reit *Listar*. Prófið sem
+   flest af föllunum í töflunum í greinum :numref:`seqfun` og :numref:`listfun`.
+   Farið svo í næsta reit og búið til lista [1,2,1,2,1,2] bæði
+   með + og með \*.
+
+.. Æfing
+.. hint::
+   Farið aftast í *kynning.ipynb*, í efsta reitinn í *Gagnleg föll*. Prófið að
+   breyta x, t.d. í :code:`['a','b']`. Prófið líka að breyta n í næstsíðasta reit
+   bókarinnar. -->
+<dl class="docutils">
+<dt>Dæmi:</dt>
+<dd><pre class="code python first last literal-block">
+<span class="name">L</span> <span class="operator">=</span> <span class="name builtin">list</span><span class="punctuation">()</span>
+<span class="name">M</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number integer">7</span><span class="punctuation">,</span><span class="literal number integer">8</span><span class="punctuation">]</span>
+<span class="name">L</span><span class="operator">.</span><span class="name">append</span><span class="punctuation">(</span><span class="literal number integer">1</span><span class="punctuation">)</span>
+<span class="name">L</span><span class="operator">.</span><span class="name">append</span><span class="punctuation">(</span><span class="literal number integer">2</span><span class="punctuation">)</span>    <span class="comment single"># Nú er L = [1,2]</span>
+<span class="name">L</span><span class="operator">.</span><span class="name">extend</span><span class="punctuation">(</span><span class="name">M</span><span class="punctuation">)</span>    <span class="comment single"># jafngilt og L = L + M</span>
+<span class="name">L</span><span class="operator">.</span><span class="name">remove</span><span class="punctuation">(</span><span class="literal number integer">2</span><span class="punctuation">)</span>    <span class="comment single"># Nú er L = [1,2,8]</span>
+</pre>
+</dd>
+</dl>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Sláið inn skipanirnar í dæminu að framan og prófið í framhaldi föllin
+<tt class="docutils literal">pop</tt>, <tt class="docutils literal">remove</tt> og <tt class="docutils literal">insert</tt>.</p>
+</div>
+</div>
+<div class="section" id="itrarar">
+<h2>Ítrarar</h2>
+<p>[Þessi kafli er í smíðum] Áður hefur verið fjallað stuttlega um fallið <code>range</code> sem einkum er notað í <code>for-lykkjum</code> í greinum <a href="#id44"><span class="problematic" id="id45">:numref:`icollatz`</span></a> og <a href="#id46"><span class="problematic" id="id47">:numref:`stýriskipanir`</span></a>. Fallið skilar hlut af samnefndu tagi og það sparar minnispláss miðað við að nota lista, því aðeins byrjunargildið, lokagildið og skrefið eru geymd. Hér eru nokkur dæmi:</p>
+<div class="system-message" id="id44">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 918); <em><a href="#id45">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<div class="system-message" id="id46">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 918); <em><a href="#id47">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<blockquote>
+<pre class="code python literal-block">
+<span class="keyword">for</span> <span class="name">i</span> <span class="operator word">in</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="literal number integer">100</span><span class="punctuation">):</span> <span class="operator">...</span>  <span class="comment single"># þ.e. fyrir i = 0,1,2...99</span>
+<span class="name">r</span> <span class="operator">=</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="literal number integer">2</span><span class="punctuation">,</span><span class="literal number integer">8</span><span class="punctuation">)</span>            <span class="comment single"># r geymir bara 2, 8 og skrefið 1</span>
+<span class="name">s</span> <span class="operator">=</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="literal number integer">2</span><span class="punctuation">,</span><span class="literal number integer">11</span><span class="punctuation">,</span><span class="literal number integer">3</span><span class="punctuation">)</span>         <span class="comment single"># s geymir 2, 11 og skrefið 3</span>
+<span class="keyword">for</span> <span class="name">i</span> <span class="operator word">in</span> <span class="name">s</span><span class="punctuation">:</span> <span class="operator">...</span>           <span class="comment single"># fyrir i = 2, 5, 8</span>
+<span class="name">L1</span> <span class="operator">=</span> <span class="name builtin">list</span><span class="punctuation">(</span><span class="name">s</span><span class="punctuation">)</span>              <span class="comment single"># gefur L1 = [2, 5, 8]</span>
+<span class="name">L2</span> <span class="operator">=</span> <span class="name builtin">list</span><span class="punctuation">(</span><span class="name builtin">range</span><span class="punctuation">(</span><span class="literal number integer">1000</span><span class="punctuation">))</span>    <span class="comment single"># gefur L2 = [0,1,...,999]</span>
+</pre>
+</blockquote>
+<p>Síðustu tvö dæmin sýna hvernig hægt er að gefa lista gildi með &quot;range&quot;. &quot;Range&quot;
+styður öll föllin í töflunni í grein <a href="#id48"><span class="problematic" id="id49">:numref:`seqfun`</span></a>.</p>
+<div class="system-message" id="id48">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 929); <em><a href="#id49">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Fallið <code>sys.getsizeof(x)</code> skilar fjölda bæta sem breytan <code>x</code> tekur í
+minni. Finnið út hve mikið minni <code>range(1000)</code> og
+<code>list(range(1000))</code> taka.</p>
+</div>
+</div>
+<div class="section" id="for-lykkjur-og-runur">
+<h2>For-lykkjur og runur</h2>
+<p>Það er ekki bara &quot;range&quot; sem hægt er að nota með for, heldur má rita</p>
+<blockquote>
+<code>for i in x</code></blockquote>
+<p>þar sem x má vera af hvaða runutagi sem er og líka mengi eða uppflettitafla,
+t.d. mætti lykkja yfir tölur sem eru ekki með jöfnu millibili með:</p>
+<blockquote>
+<code>for p in [2,3,5,7,11,13]: print('{p} er prímtala)</code></blockquote>
+<p>og til að gera eitthvað við öll stök í mengi M mætti skrifa:</p>
+<blockquote>
+<code>for s in M: ...</code></blockquote>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Prófum aðeins mengi þótt þau hafi ekki mikið verið rædd. <tt class="docutils literal">A = {1, 2, 3}</tt>
+býr til mengi, og það gerir <tt class="docutils literal">A = set(runa)</tt> líka. <tt class="docutils literal">C = A.union(B)</tt>
+jafngildir <span class="formula"><i>C</i> :  = <i>A</i>∪<i>B</i></span> og <tt class="docutils literal">C = A.intersection(B)</tt> jafngildir
+<span class="formula"><i>C</i> :  = <i>A</i>∩<i>B</i></span>.</p>
+<blockquote class="last">
+<ol class="loweralpha simple">
+<li>Búið til mengi A með sléttum tölum frá 2–20, B með tölunum 3, 6,..., 18 og
+C með prímtölum &lt; 20.</li>
+<li>Lát D = A <span class="formula">∩</span> B og M = C <span class="formula">∪</span> D.</li>
+<li>Notið svo <tt class="docutils literal">for s in <span class="pre">M:...</span></tt> til að reikna önnur veldi af stökum M.</li>
+</ol>
+</blockquote>
+</div>
+</div>
+<div class="section" id="smii-para">
+<h2>Smíði para</h2>
+<ul>
+<li><p class="first">[Þessi kafli er enn í smíðum]. Fallið <strong>enumerate</strong> er hægt að nota til að smíða pör, (teljari, gildi), í for-lykkjum. Teljarinn byrjar í 0 nema annað sé tekið fram. Tökum dæmi:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="keyword">for</span> <span class="name">i</span><span class="punctuation">,</span><span class="name">s</span> <span class="operator word">in</span> <span class="name builtin">enumerate</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">):</span>
+    <span class="name builtin">print</span><span class="punctuation">(</span><span class="name">i</span><span class="punctuation">,</span><span class="name">s</span><span class="punctuation">)</span>
+</pre>
+</blockquote>
+<p>er jafngilt og:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="keyword">for</span> <span class="name">i</span> <span class="operator word">in</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="name builtin">len</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)):</span>
+    <span class="name">s</span> <span class="operator">=</span> <span class="name">x</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]</span>
+    <span class="name builtin">print</span><span class="punctuation">(</span><span class="name">i</span><span class="punctuation">,</span><span class="name">s</span><span class="punctuation">)</span>
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Og hér er byrjað að telja í 1:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="keyword">for</span> <span class="name">p</span> <span class="operator word">in</span> <span class="name builtin">enumerate</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span><span class="literal number integer">1</span><span class="punctuation">):</span> <span class="name builtin">print</span><span class="punctuation">(</span><span class="name">p</span><span class="punctuation">)</span>
+</pre>
+</blockquote>
+<p>og þetta jafngildir:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="keyword">for</span> <span class="name">i</span> <span class="operator word">in</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="name builtin">len</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)):</span> <span class="name">p</span> <span class="operator">=</span> <span class="punctuation">(</span><span class="name">i</span><span class="operator">+</span><span class="literal number integer">1</span><span class="punctuation">,</span> <span class="name">x</span><span class="punctuation">[</span><span class="name">i</span><span class="punctuation">]);</span> <span class="name builtin">print</span><span class="punctuation">(</span><span class="name">p</span><span class="punctuation">)</span>
+</pre>
+</blockquote>
+</li>
+<li><p class="first"><strong>zip</strong> er annað fall sem smíðar pör; það tekur inn tvo jafnlanga lista og
+parar þá saman: <code>zip([0,1,2], [5,6,7])</code> skilar pörunum <code>(0,5)</code>,
+<code>(1,6)</code> og <code>(2,7)</code>.</p>
+</li>
+</ul>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<ol class="last loweralpha simple">
+<li>Smíðið pörin (0,2), (1,4), (2,6), (3,8), (4,10) með <em>enumerate</em> og prentið
+út.</li>
+<li>Smíðið sömu pör með <em>zip</em>.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="yfirgrip-comprehension">
+<h2>Yfirgrip (<em>comprehension</em>)</h2>
+<ul>
+<li><p class="first">Við höfum séð hvernig hægt að gefa listum gildi með því að telja upp stökin í
+þeim innan hornklofa, með því að byrja með tóman lista og bæta smám saman
+við hann, og með því breyta samstæðu eða &quot;range&quot; í lista með <tt class="docutils literal">list</tt>-fallinu.</p>
+</li>
+<li><p class="first">Einn möguleiki enn er að nota svokallað &quot;comprehension&quot; sem mætti
+þýða sem <em>yfirgrip</em>.</p>
+</li>
+<li><p class="first">Hér eru dæmi:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="name">L1</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">k</span><span class="operator">**</span><span class="literal number integer">2</span> <span class="keyword">for</span> <span class="name">k</span> <span class="operator word">in</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="literal number integer">6</span><span class="punctuation">)]</span>    <span class="comment single"># L1 verður [0, 1, 4, 9, 16, 25]</span>
+<span class="name">L2</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">L1</span><span class="punctuation">[</span><span class="name">j</span><span class="punctuation">]</span> <span class="keyword">for</span> <span class="name">j</span> <span class="operator word">in</span> <span class="punctuation">(</span><span class="literal number integer">1</span><span class="punctuation">,</span><span class="literal number integer">3</span><span class="punctuation">,</span><span class="literal number integer">5</span><span class="punctuation">)]</span>    <span class="comment single"># L2 verður [1, 9, 25]</span>
+<span class="name">L3</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">k</span> <span class="keyword">for</span> <span class="name">k</span> <span class="operator word">in</span> <span class="name">L1</span> <span class="keyword">if</span> <span class="name">k</span> <span class="operator">&gt;</span> <span class="literal number integer">5</span><span class="punctuation">]</span>    <span class="comment single"># L3 verður [9, 16, 25]</span>
+<span class="name">x</span> <span class="operator">=</span> <span class="punctuation">[(</span><span class="name">i</span><span class="punctuation">,</span><span class="name">i</span><span class="punctuation">)</span> <span class="keyword">for</span> <span class="name">i</span> <span class="operator word">in</span> <span class="name builtin">range</span><span class="punctuation">(</span><span class="literal number integer">1</span><span class="punctuation">,</span><span class="literal number integer">4</span><span class="punctuation">)]</span>  <span class="comment single"># x = [(1,1), (2,2), (3,3)]</span>
+<span class="name">a</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="literal number float">1.4</span><span class="punctuation">,</span> <span class="literal number integer">999</span><span class="punctuation">,</span> <span class="literal number float">2.5</span><span class="punctuation">,</span> <span class="literal number float">4.0</span><span class="punctuation">,</span> <span class="literal number integer">999</span><span class="punctuation">]</span>    <span class="comment single"># 999 táknar að gildi vanti</span>
+<span class="name">b</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">x</span> <span class="keyword">for</span> <span class="name">x</span> <span class="operator word">in</span> <span class="name">a</span> <span class="keyword">if</span> <span class="name">x</span> <span class="operator">&lt;</span> <span class="literal number integer">999</span><span class="punctuation">]</span>    <span class="comment single"># b = [1.4, 2.5, 4.0]</span>
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Það eru sem sé tveir möguleikar:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="literal number integer">1</span><span class="punctuation">)</span> <span class="name">L</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">segð</span> <span class="keyword">for</span> <span class="name">breyta</span> <span class="operator word">in</span> <span class="name">runa</span><span class="punctuation">]</span>
+<span class="literal number integer">2</span><span class="punctuation">)</span> <span class="name">L</span> <span class="operator">=</span> <span class="punctuation">[</span><span class="name">segð</span> <span class="keyword">for</span> <span class="name">breyta</span> <span class="operator word">in</span> <span class="name">runa</span> <span class="keyword">if</span> <span class="name">skilyrði</span><span class="punctuation">]</span>
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Yfirgrip gefur oft mun styttri kóða en jafngild for-lykkja. Hér er
+dæmi jafngilt skilgreiningu á L3 í dæminu að ofan:</p>
+<blockquote>
+<pre class="code python literal-block">
+<span class="name">L3</span> <span class="operator">=</span> <span class="name builtin">list</span><span class="punctuation">()</span>
+<span class="keyword">for</span> <span class="name">k</span> <span class="operator word">in</span> <span class="name">L1</span><span class="punctuation">:</span>
+    <span class="keyword">if</span> <span class="name">k</span> <span class="operator">&gt;</span> <span class="literal number integer">5</span><span class="punctuation">:</span> <span class="name">L3</span><span class="operator">.</span><span class="name">append</span><span class="punctuation">(</span><span class="name">k</span><span class="punctuation">)</span>
+</pre>
+</blockquote>
+</li>
+</ul>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<ol class="last loweralpha simple">
+<li>Notið yfirgrip til að búa til lista með veldum af 2 frá 1 til 10, <tt class="docutils literal">[2, <span class="pre">4,...,</span> 1024]</tt> <br></li>
+<li>Látið <tt class="docutils literal">x = [3, 4, 0, 2, 0, 8, 5]</tt> og notið yfirgrip til að búa til y með
+jákvæðum stökum x</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="aalforrit-og-einingar">
+<span id="adal-ein"></span><h1>Aðalforrit og einingar</h1>
+<div class="section" id="skra-me-aalforriti">
+<h2>Skrá með aðalforriti</h2>
+<p>Hugtakið <em>aðalforrit</em> (<em>main program</em>) er notað um sjálfstætt Pythonforrit (sem
+er ekki hluti af Jupíter-bók). Dæmigert innihald skrár með slíku forriti er eins
+og hér er sýnt:</p>
+<div class="figure align-center" id="forritssni" style="width: 13cm">
+<img alt="myndir/forritssnið.png" src="myndir/forritssnið.png" />
+<p class="caption">Algengt snið skrár með aðalforriti í Python</p>
+</div>
+<p>Það er reyndar engin skylda að kaflarnir komi í þessari röð heldur má blanda
+saman skipunum úr öllum fjórum köflunum að vild, en með þeirri skorðu að það
+verður að vera búið að skilgreina hluti áður en þeir eru notaðir. Þannig verður
+að flytja inn einingu áður en vísað er í hana, föll þarf að skilgreina fyrir
+notkun þeirra o.s.frv. Skráin sem sýnd er á <a href="#id50"><span class="problematic" id="id51">:numref:`forritssnið`</span></a> væri skírð
+nafni með endingu <code>.py</code>, til dæmis <code>forrit.py</code>.</p>
+<div class="system-message" id="id50">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 1069); <em><a href="#id51">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<div class="admonition attention">
+<p class="first admonition-title">Attention!</p>
+<p class="last">Þegar <strong>Júpíter-kerfið</strong> er notað er ekki höfð sérstök forritsskrá. Í staðinn
+er forritið og undanfarandi skilgreiningar geymt í reitum í Python-bók.</p>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Attention!</p>
+<p class="last"><strong>Víðværu breyturnar</strong> (<em>global variables</em>) eru þekktar inni í öllum föllum sem
+koma á eftir þeim, en breytur sem fyrst eru skilgreindar inni í skilgreiningu
+falls eru <strong>staðværar</strong> (<em>local</em>), og aðeins þekktar í viðkomandi falli.</p>
+</div>
+</div>
+<div class="section" id="einingar-skrifaar-af-notanda">
+<span id="polhnit"></span><h2>Einingar skrifaðar af notanda</h2>
+<p>Að framan hefur verið fjallað um einingar (<em>modules</em>) og pakka (<em>packages</em>) sem
+ýmist fylgja með Python eða aðrir hafa skrifað, en notandi getur líka búið til
+sínar eigin einingar. Slík eining er sett í sér skrá, <code>eining.py</code> sem
+hefur sama snið og skráin á <a href="#id52"><span class="problematic" id="id53">:numref:`forritssnið`</span></a> nema hvað aðalforritið vantar.
+Einfaldast er að hafa eininguna í sömu möppu og aðalforritið (hún getur líka
+verið annarsstaðar eins og rætt verður síðar).</p>
+<div class="system-message" id="id52">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 1089); <em><a href="#id53">backlink</a></em></p>
+Unknown interpreted text role &quot;numref&quot;.</div>
+<p>Til að nota fall <code>f</code> sem skilgreint er í einingunni þarf aðalforritið að
+hafa skipun <code>import eining</code> fremst, og kalla síðan á fallið með
+<code>eining.f(...)</code>. Það er líka hægt að rita <code>from eining import f</code> og
+þá er hægt að kalla á fallið beint án þess að setja <code>eining.</code> á undan, sem
+sé með <code>f(...)</code>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention!</p>
+<p class="last">Öfugt við aðalforrit sem hægt er að geyma í reitum í Python-bók þá
+þarf að geyma <strong>einingar</strong> í sérstakri .py-forritsskrá svo hægt sé að vísa í
+þær með <code>import</code></p>
+</div>
+<p>Hér á eftir er æfing sem sýnir þetta í praxís, með því að búa til einingu
+með tveimur föllum sem breyta milli pólhnita og rétthyrndra hnita:</p>
+<!-- Æfing -->
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p><strong>Eining polhnit.</strong> Búið til nýja textaskrá með því að velja <em>File–New–Text
+file</em>. Endurnefnið skrána <cite>polhnit.py</cite> (með <em>File–Rename</em>). Afritið svo
+innihald eftirfarandi reits yfir í skrána og vistið. Þið getið líka gert
+þetta með einhverjum ritli að eigin vali.</p>
+<pre class="code python literal-block">
+<span class="comment single"># Breytt milli pólhnita og rétthyrndra hnita</span>
+<span class="keyword namespace">from</span> <span class="name namespace">math</span> <span class="keyword namespace">import</span> <span class="name">sin</span><span class="punctuation">,</span> <span class="name">cos</span><span class="punctuation">,</span> <span class="name">sqrt</span><span class="punctuation">,</span> <span class="name">atan2</span>
+
+<span class="keyword">def</span> <span class="name function">pol2rec</span><span class="punctuation">(</span><span class="name">r</span><span class="punctuation">,</span><span class="name">theta</span><span class="punctuation">):</span>
+    <span class="literal string doc">'''skilar rétthyrndum hnitum (x,y) fyrir pólhnitin (r,theta); r í radíönum'''</span>
+    <span class="name">x</span> <span class="operator">=</span> <span class="name">r</span><span class="operator">*</span><span class="name">sin</span><span class="punctuation">(</span><span class="name">theta</span><span class="punctuation">)</span>
+    <span class="name">y</span> <span class="operator">=</span> <span class="name">r</span><span class="operator">*</span><span class="name">cos</span><span class="punctuation">(</span><span class="name">theta</span><span class="punctuation">)</span>
+    <span class="keyword">return</span> <span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span><span class="name">y</span><span class="punctuation">)</span>
+
+<span class="keyword">def</span> <span class="name function">rec2pol</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span><span class="name">y</span><span class="punctuation">):</span>
+    <span class="literal string doc">'''skilar pólhnitum (r,theta) fyrir rétthyrndu hnitin (x,y); r í radíönum'''</span>
+    <span class="name">r</span> <span class="operator">=</span> <span class="name">sqrt</span><span class="punctuation">(</span><span class="name">x</span><span class="operator">**</span><span class="literal number integer">2</span> <span class="operator">+</span> <span class="name">y</span><span class="operator">**</span><span class="literal number integer">2</span><span class="punctuation">)</span>
+    <span class="name">theta</span> <span class="operator">=</span> <span class="name">atan2</span><span class="punctuation">(</span><span class="name">y</span><span class="punctuation">,</span><span class="name">x</span><span class="punctuation">)</span>
+    <span class="keyword">return</span> <span class="punctuation">(</span><span class="name">r</span><span class="punctuation">,</span><span class="name">theta</span><span class="punctuation">)</span>
+</pre>
+<p class="last">Náið nú í <span class="h"><a href="profpol.ipynb"
+download="profpol.ipynb">profpol.ipynb</a></span> sem inniheldur forrit sem
+<em>importerar</em> og prófar eininguna <code>polhnit</code>. Keyrið það (ath. að ef þið
+fáið villu er reynandi að smella á <em>Kernel–Restart kernel</em>).</p>
+</div>
+<p>Hér er innihaldið í <em>profpol.ipynb:</em></p>
+<pre class="code python literal-block">
+<span class="keyword namespace">import</span> <span class="name namespace">math</span><span class="operator">,</span> <span class="name namespace">polhnit</span> <span class="keyword">as</span> <span class="name namespace">p</span>
+
+<span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span><span class="name">y</span><span class="punctuation">)</span> <span class="operator">=</span> <span class="name">p</span><span class="operator">.</span><span class="name">pol2rec</span><span class="punctuation">(</span><span class="literal number integer">1</span><span class="punctuation">,</span> <span class="name">math</span><span class="operator">.</span><span class="name">pi</span><span class="operator">/</span><span class="literal number integer">6</span><span class="punctuation">)</span>
+<span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string affix">f</span><span class="literal string single">'xy-hnit: (</span><span class="literal string interpol">{</span><span class="name">x</span><span class="literal string interpol">:</span><span class="literal string single">.4</span><span class="literal string interpol">}</span><span class="literal string single">, </span><span class="literal string interpol">{</span><span class="name">y</span><span class="literal string interpol">:</span><span class="literal string single">.4</span><span class="literal string interpol">}</span><span class="literal string single">)'</span><span class="punctuation">)</span>
+
+<span class="punctuation">(</span><span class="name">r</span><span class="punctuation">,</span><span class="name">theta</span><span class="punctuation">)</span> <span class="operator">=</span> <span class="name">p</span><span class="operator">.</span><span class="name">rec2pol</span><span class="punctuation">(</span><span class="literal number integer">1</span><span class="punctuation">,</span><span class="literal number integer">1</span><span class="punctuation">)</span>
+<span class="name">g</span> <span class="operator">=</span> <span class="name">m</span><span class="operator">.</span><span class="name">degrees</span><span class="punctuation">(</span><span class="name">theta</span><span class="punctuation">)</span>
+<span class="name builtin">print</span><span class="punctuation">(</span><span class="literal string affix">f</span><span class="literal string single">'Pólhnit: (</span><span class="literal string interpol">{</span><span class="name">r</span><span class="literal string interpol">:</span><span class="literal string single">.4f</span><span class="literal string interpol">}</span><span class="literal string single">, </span><span class="literal string interpol">{</span><span class="name">g</span><span class="literal string interpol">:</span><span class="literal string single">.2f</span><span class="literal string interpol">}</span><span class="literal string single">°)'</span><span class="punctuation">)</span>
+</pre>
+<p>og keyrsla þess ætti að skrifa út:</p>
+<blockquote>
+<div class="line-block">
+<div class="line"><code>xy-hnit: (0.5, 0.866)</code></div>
+<div class="line"><code>Pólhnit: (1.4142, 45.00°)</code></div>
+</div>
+</blockquote>
+<p>Tækifærið hefur (aftur) verið notað til að kynna/skerpa á nokkrum Python atriðum:</p>
+<ul>
+<li><p class="first">Hér er dæmi um hvernig <code>from *eining* import...</code> notast. Takið eftir hvernig
+við sleppum við að setja <code>math.</code> framan við <code>cos</code>, <code>pi</code> o.s.frv.</p>
+</li>
+<li><p class="first">Föll geta skilað fleiri en einu gildi</p>
+</li>
+<li><p class="first">Hægt er að skammstafa nöfn eininga með <code>import</code>-skipun. Hér er polhnit
+skammstafað með p. Það er t.d. alsiða að skammstafa <em>numpy</em> með <code>np</code> og
+<em>matplotlib</em> með <code>mpl</code></p>
+</li>
+<li><p class="first">Að lokum er munur á sniðunum <code>:.4</code> og <code>:.4f</code> í f-strengjum: Það
+fyrra notar 4 <em>marktæka stafi</em> (og sleppir núllum aftast) en það seinna setur
+4 stafi aftan við kommu. Sjá nánar um f-strengi í grein <a href="#id54"><span class="problematic" id="id55">:numref:`fstrengir`</span></a></p>
+<div class="system-message" id="id54">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">kafli01.rst</tt>, line 1167); <em><a href="#id55">backlink</a></em></p>
+<p>Unknown interpreted text role &quot;numref&quot;.</p>
+</div>
+</li>
+</ul>
+<!-- .. attention::
+   "attention" Athugið (gulbrún)
+
+.. tip::
+   "tip" Ábending (græn)
+
+.. note::
+   "Note" Athugasemd (blá)
+
+.. warning::
+   "Warning" Aðvörun (gulbrún)
+
+.. hint::
+   "Hint" Æfing (græn, notað í Strei)
+
+.. danger::
+   "danger" Aðvörun (rauð, notað í Strei)
+
+.. important::
+   "important" Sýnidæmi (endurforrituð gul, í Strei)
+
+Ónotaðar:
+
+.. caution::
+   "caution" Aðgát (gulbrún)
+
+.. error::
+   "error" Villa, (rauð) -->
+</div>
+</div>
+</div>
+</body>
+</html>

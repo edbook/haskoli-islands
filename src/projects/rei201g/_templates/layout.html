@@ -2,9 +2,8 @@
 {% block extrahead %}
 
 
-<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
-<script>ggbAppletId = [];</script>
 {{ scripttags }}
 
 {{ super() }}
@@ -103,23 +102,20 @@
 
     /* - End - */
 </style>
-
-
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
 {{ super() }}
 {% endblock %}
 
 {% block footer %}
-<script>
-    window.addEventListener("load", function () {
-        for (var i in ggbAppletId) {
-            ggbAppletId[i].inject(i);
-        }
-    });
-</script>
-
 {{ footerscripttags }}
-{{ super() }}
-
 <style>
     /* Sidebar header (and topbar for mobile) */
     .wy-side-nav-search,
@@ -132,4 +128,6 @@
         background: #343131;
     }
 </style>
+
+
 {% endblock %}
