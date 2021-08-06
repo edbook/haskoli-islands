@@ -1,0 +1,30 @@
+repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v2.17.13
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+        verbose: true
+  - repo: https://github.com/psf/black
+    rev: 21.7b0
+    hooks:
+      - id: black
+        verbose: true
+        args: [--config, pyproject.toml, src/extensions]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+
+      - id: trailing-whitespace
+        verbose: true
+      - id: end-of-file-fixer
+        verbose: true
+      - id: check-toml
+        verbose: true
+      - id: check-merge-conflict
+        verbose: true
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.9.3
+    hooks:
+      - id: isort
+        verbose: true

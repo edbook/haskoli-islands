@@ -25,9 +25,9 @@ from __future__ import division
 
 import os
 import sys
-from docutils import nodes
-from docutils.parsers.rst import directives, Directive
 
+from docutils import nodes
+from docutils.parsers.rst import Directive, directives
 from Sphinx_ext import common
 
 
@@ -49,66 +49,60 @@ def visit_activity_duration_node(self, node):
     else:
         duration_id = common.get_enclosing_activity_id(node)
         if duration_id is None:
-            print('Error in file', node.source, 'line', node.line)
-            print('activity-duration must have an id as second argument')
-            print('or be part of a section labeled with the directive')
-            print('.. rst-class:: activity')
+            print("Error in file", node.source, "line", node.line)
+            print("activity-duration must have an id as second argument")
+            print("or be part of a section labeled with the directive")
+            print(".. rst-class:: activity")
             sys.exit(1)
 
     try:
         duration_value = int(node["args"][0])
     except ValueError:
-        print('Error in file', node.source, 'line', node.line)
-        print('The duration directive must have a number as first parameter.')
+        print("Error in file", node.source, "line", node.line)
+        print("The duration directive must have a number as first parameter.")
         sys.exit(1)
 
     # Get the parameters
     phrase = node["phrase"]
 
     self.body.append('<div class="reauthoring_duration_select">')
-    self.body.append('<form>')
+    self.body.append("<form>")
 
     self.body.append(phrase)
 
     # Subject and Verb values and activity id
-    self.body.append('<input type="hidden" name="duration-id" value="%s"/>' %
-                     duration_id)
+    self.body.append('<input type="hidden" name="duration-id" value="%s"/>' % duration_id)
 
     # Value of the duration
     self.body.append('<select name="duration-value">')
     value = int(duration_value / 2)
-    self.body.append('<option selected disabled>Select a value</option>')
-    self.body.append('<option value="LT-%s/%s">Less than %s</option>'
-                     % (value, duration_value, value))
-    self.body.append('<option value="%s/%s">%s</option>' % (value,
-                                                            duration_value,
-                                                            value))
+    self.body.append("<option selected disabled>Select a value</option>")
+    self.body.append(
+        '<option value="LT-%s/%s">Less than %s</option>' % (value, duration_value, value)
+    )
+    self.body.append('<option value="%s/%s">%s</option>' % (value, duration_value, value))
     value = int(duration_value * 3 / 4)
-    self.body.append('<option value="%s/%s">%s</option>' % (value,
-                                                            duration_value,
-                                                            value))
+    self.body.append('<option value="%s/%s">%s</option>' % (value, duration_value, value))
 
-    self.body.append('<option value="%s/%s">%s</option>' %
-                     (duration_value, duration_value, duration_value))
+    self.body.append(
+        '<option value="%s/%s">%s</option>' % (duration_value, duration_value, duration_value)
+    )
     value = int(duration_value * 5 / 4)
-    self.body.append('<option value="%s/%s">%s</option>' % (value,
-                                                            duration_value,
-                                                            value))
+    self.body.append('<option value="%s/%s">%s</option>' % (value, duration_value, value))
     value = int(duration_value * 3 / 2)
-    self.body.append('<option value="%s/%s">%s</option>' % (value,
-                                                            duration_value,
-                                                            value))
-    self.body.append('<option value="GT-%s/%s">More than %s</option>'
-                     % (value, duration_value, value))
-    self.body.append('<select> mins.')
+    self.body.append('<option value="%s/%s">%s</option>' % (value, duration_value, value))
+    self.body.append(
+        '<option value="GT-%s/%s">More than %s</option>' % (value, duration_value, value)
+    )
+    self.body.append("<select> mins.")
 
     # Submit button
     self.body.append('<button class="reauthoring_duration_submit">Ok</button>')
     self.body.append("</form>")
     self.body.append(
         '<img class="duration_ok_icon" style="display: none;" src="%s"></img>'
-        % os.path.join(node["p_to_static"],
-                       'Correct_20x20.png'))
+        % os.path.join(node["p_to_static"], "Correct_20x20.png")
+    )
     self.body.append("</div>")
 
 
@@ -129,37 +123,36 @@ class ActivityDurationDirective(Directive):
     - activity_duration_phrase: phrase to include before the duration
                                 default is How long did this activity take you?
     """
+
     has_content = True
     required_arguments = 1
     optional_arguments = 1
     final_argument_whitespace = False
-    option_spec = {
-        "phrase": directives.unchanged
-    }
+    option_spec = {"phrase": directives.unchanged}
 
     def run(self):
         config = self.state.document.settings.env.config
 
         # Phrase to prefix the value
-        phrase = common.get_parameter_value(config, self.options, 'phrase',
-                                            "activity_duration_phrase", False)
+        phrase = common.get_parameter_value(
+            config, self.options, "phrase", "activity_duration_phrase", False
+        )
 
         # Get the path to the static directory containing the images
         p_to_static = common.get_relative_path_to_static(self.state.document)
 
-        return [ActivityDuration(args=self.arguments,
-                                 phrase=phrase,
-                                 p_to_static=p_to_static)]
+        return [ActivityDuration(args=self.arguments, phrase=phrase, p_to_static=p_to_static)]
 
 
 def setup(app):
-    app.add_node(ActivityDuration,
-                 html=(visit_activity_duration_node,
-                       depart_activity_duration_node),
-                 latex=(skip_visit, skip_visit),
-                 text=(skip_visit, skip_visit),
-                 man=(skip_visit, skip_visit),
-                 texinfo=(skip_visit, skip_visit))
+    app.add_node(
+        ActivityDuration,
+        html=(visit_activity_duration_node, depart_activity_duration_node),
+        latex=(skip_visit, skip_visit),
+        text=(skip_visit, skip_visit),
+        man=(skip_visit, skip_visit),
+        texinfo=(skip_visit, skip_visit),
+    )
 
     # Declaring the directive
     app.add_directive("activity-duration", ActivityDurationDirective)
@@ -169,6 +162,4 @@ def setup(app):
     #
 
     # Phrase to precede the value
-    app.add_config_value('activity_duration_phrase',
-                         'How long did this activity take you?',
-                         True)
+    app.add_config_value("activity_duration_phrase", "How long did this activity take you?", True)

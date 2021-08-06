@@ -1,16 +1,75 @@
 [tool.poetry]
-name = "undirbuningur_stae"
+name = "edbook"
 version = "0.1.0"
 description = ""
 authors = ["Benedikt Magnússon og fleiri"]
 
+packages = [
+    { include = "cli" }
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py36', 'py37', 'py38']
+experimental_string_processing = true
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | _build
+    | dist
+  )/
+  | undirbuningur_edl\/Sphinx_ext
+  | undirbuningur_edl\/button.py
+  | Tolfraedi_fra_grunni\/docs\/_extensions
+  | Tolfraedi_fra_grunni\/for_latext_version
+  | src\/extensions
+  | minstae.py
+  | binstae.py
+
+)
+'''
+
+[tool.isort]
+profile = 'black'
+# multi_line_output = 3
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+version_files = [
+    "src/__version__.py",
+    "pyproject.toml:version"
+]
+style = [
+    ["qmark", "fg:#ff9d00 bold"],
+    ["question", "bold"],
+    ["answer", "fg:#ff9d00 bold"],
+    ["pointer", "fg:#ff9d00 bold"],
+    ["highlighted", "fg:#ff9d00 bold"],
+    ["selected", "fg:#cc5454"],
+    ["separator", "fg:#cc5454"],
+    ["instruction", ""],
+    ["text", ""],
+    ["disabled", "fg:#858585 italic"]
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-typer = "^0.3.2"
+typer = {extras = ["all"], version = "^0.3.2"}
 seedir = "^0.1.2"
 pypandoc = "^1.5"
-Sphinx= "^3.2.1"
+Sphinx= "^3.5.4"
 sphinx-rtd-theme = "^0.5.0"
 sphinxcontrib-katex = "^0.6.1"
 paramiko= "^2.7.2"
@@ -25,18 +84,23 @@ custom-button = {path = "src/extensions/custom-button", develop = true}
 datacamp = {path = "src/extensions/datacamp-extension", develop = true}
 google-analytics = {path = "src/extensions/google-analytics", develop = true}
 sphinx-togglebutton = "^0.2.3"
+PyYAML = "^5.4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 mypy = "^0.790"
-pylint = "^2.6.0"
-black = "^20.8b1"
+pylint = "^2.9"
+black = "^21.b70"
 rstcheck = "^3.3.1"
 sphinx-autobuild = "^2020.9.1"
-commitizen = "^2.13.0"
+commitizen = "^2.13"
+typer = "^0.3"
+pre-commit = "^2.13.0"
+flake8 = "^3.9.2"
+isort = "^5.9.3"
 
 [tool.poetry.scripts]
-hicli = "hicli.main:app"
+cli = "cli.main:run"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

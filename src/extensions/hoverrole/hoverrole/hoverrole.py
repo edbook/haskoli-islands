@@ -1,5 +1,3 @@
-# -*- coding: UTF-8-sig -*-
-
 # The role :hover:`word,term` provides an inline highlight of 'word' with a mouse-over
 # translation from Icelandic to English of 'term' according to the stae.is/os database.
 # In the case of :hover:`word`. The string 'term' is assumed to be the same as 'word'
@@ -7,12 +5,9 @@
 # Author: Símon Böðvarsson
 # 1.08.2016
 
-from docutils import nodes, utils
-from docutils.parsers.rst.roles import set_classes
+from docutils import nodes
 from docutils.parsers.rst import Directive
-import codecs
-import os
-import sys
+
 from . import dictlookup
 
 
@@ -59,23 +54,10 @@ def save_to_listfile(filename, node):
 
     newline = ";".join(newlinecontent) + "\n"
 
-    try:
-        listfile = open(filename, "r")
-    except IOError:
-        # Create the file if it doesn't exist.
-        createfile = open(filename, "w+")
-        createfile.close()
-        listfile = open(filename, "r")
-
-    listcontents = listfile.readlines()
-    listfile.close
-
-    listcontents.insert(0, newline)
-
-    listfile = open(filename, "w+")
-    listcontents = "".join(listcontents)
-    listfile.write(listcontents)
-    listfile.close()
+    with open(filename, "a+") as f:
+        listcontents = f.readlines()
+        listcontents.insert(0, newline)
+        f.write(listcontents)
     return
 
 
@@ -88,9 +70,9 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     # Get translation and citation form of term.
     dictentry = dictlookup.lookup(term)
     try:
-        translation = dictentry[b"enTerm"]
+        translation = dictentry["enTerm"]
         hover_node["translation"] = translation
-        hover_node["citationform"] = dictentry[b"isTerm"]
+        hover_node["citationform"] = dictentry["isTerm"]
     # If translation was not found create error message and code snippets.
     except KeyError:
         errormsg = "Ekki fannst þýðing á hugtakinu: "
@@ -131,15 +113,11 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     # HTML snippet
     html = "<a "
     if htmlLink:
-        html = (
-            html
-            + 'href="http://www.stae.is/os/leita/'
-            + single_translation.replace(" ", "_")
-        )
+        html = html + 'href="http://www.stae.is/os/leita/' + single_translation.replace(" ", "_")
     if transNum == "single":
         html = (
             html
-            + '" class="tooltip" target="_blank">'
+            + '" class="tooltip" target="_lank">'
             + word
             + "<span>en: <i>"
             + single_translation
@@ -158,7 +136,8 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     if htmlLink:
         html = (
             html
-            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>'
+            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
+            " þýðingu.</staelink>"
         )
     html = html + "</span></a>"
 
@@ -218,11 +197,10 @@ def create_hoverlist(app, doctree, fromdocname):
     # Words is a dictionary with translated terms as keys and translations as values.
     words = {}
     content = []
-
+    filename = "LIST_OF_HOVER_TERMS"
     # with codecs.open("LIST_OF_HOVER_TERMS", encoding = "utf-8") as listfile:
-    listfile = open("LIST_OF_HOVER_TERMS", "r")
-    listcontents = listfile.readlines()
-    listfile.close()
+    with open(filename, "r") as f:
+        listcontents = f.readlines()
 
     for line in listcontents:
         # Clean up the strings.
@@ -273,11 +251,11 @@ def create_hoverlist(app, doctree, fromdocname):
 
 def delete_hoverlist(app, doctree):
     if app.config.hover_translationList:
+        filename = "LIST_OF_HOVER_TERMS"
         try:
-            listfile = open("LIST_OF_HOVER_TERMS", "w+")
-            emptystring = ""
-            listfile.write(emptystring)
-            listfile.close()
+            # with codecs.open("LIST_OF_HOVER_TERMS", encoding = "utf-8") as listfile:
+            with open(filename, "a+") as f:
+                f.truncate()
         except:
             print(
                 "Could not write over contents in: 'LIST_OF_HOVER_TERMS'",
@@ -291,17 +269,17 @@ def delete_hoverlist(app, doctree):
 def setup(app):
     # Extension setup.
 
-    # Number of translations to be displayed. The default 'single' displays only the first
+    # Number of translations to e displayed. The default 'single' displays only the first
     # found translation,  'all' displays all.
     app.add_config_value("hover_numOfTranslations", "single", "html")
     # Set to default ('1') if hover target should link to stae.is search for the translated term.
-    # Set to '0' if no link should be attached.
+    # Set to '0' if no link should e attached.
     app.add_config_value("hover_htmlLinkToStae", 1, "html")
     app.add_config_value("hover_latexLinkToStae", 0, "env")
-    # Should the text be italicized in latex output. '1' for on, '0' for off.
+    # Should the text e italicized in latex output. '1' for on, '0' for off.
     app.add_config_value("hover_latexItText", 1, "env")
 
-    # Should a list of translations be created (default '1')
+    # Should a list of translations e created (default '1')
     app.add_config_value("hover_translationList", 1, "env")
     # Enable for a smaller version of the list of translations.
     app.add_config_value("hover_miniTranslationList", 0, "env")

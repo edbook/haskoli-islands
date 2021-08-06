@@ -107,7 +107,7 @@ Dæmi: Stofnfall
 ----------------
 
 Lítum nú á formlega rithátt stofnfalla og skoðum eiginleika þeirra.
-Þessir eiginleikar gera okkur kleyft að finna stofnföll flóknari falla.
+Þessir eiginleikar gera okkur kleift að finna stofnföll flóknari falla.
 Ef við höfum fall :math:`f` þá má nota ritháttinn :math:`f'(x)` eða
 :math:`\frac{df}{dx}` til að tákna afleiðu fallsins. Ef :math:`F` er
 stofnfall :math:`f`, þá getum við sagt að :math:`F(x)+C` sé algengasta leiðin
@@ -125,7 +125,7 @@ Táknið :math:`\int` er kallað *heildistákn* og :math:`\int f(x) dx` er kalla
 	Mismunandi er eftir skólum hvaða orð eru notuð til að tala um *derivatives* og
 	*antiderivatives/integrals*. Sem dæmi má nefna:
 
-	#. Í MR og víðar er talað um að diffra og tegra. Nanforðin eru þá diffur og tegur.
+	#. Í MR og víðar er talað um að diffra og tegra. Nafnorðin eru þá diffur og tegur.
 
 	#. Víða er talað um að heilda og deilda og nafnorðin heildun og deildun, sem formlegri tilraun til að íslenska orðin, en orðið diffur kemur af orðinu **differ**\ ernation og tegur er dregið af orðinu in\ **tegra**\ l.
 
@@ -145,7 +145,7 @@ Skilgreining: Óákveðið heildi
 
 	.. math:: \int f(x) dx = F(x)+C.
 
-	Hér er :math:`f(x)` kallað heildisstofn og :math:`x` breytan sem heildar er
+	Hér er :math:`f(x)` kallað heildisstofn og :math:`x` breytan sem heildað er
 	með tilliti til.
 
 Setning: Veldisregla fyrir heildi
@@ -231,9 +231,9 @@ Með því að einangra :math:`C` fæst að :math:`C=3+2 = 5` og lausnin væri �
 .. math:: f(x)=x2e^x-2e^x+5.
 
 þessar upplýsingar, þ.e. :math:`f(0)=5` eru kallaðar *upphafgildi* og eru svona
-diffurjöfnur því gjarnan kallaðar upphafsgildisverkefni.
+diffurjöfnur því gjarnan kallaðar *upphafsgildisverkefni*.
 
-Diffurjöfnur eru eitt mikilvægasta málefni stærðfræðigreiningar og eitt helsta viðfangsefni þeirra sem hagnýta
+Diffurjöfnur eru eitt mikilvægasta málefni stærðfræðigreiningarinnar og eitt helsta viðfangsefni þeirra sem hagnýta
 stærðfræði eins og verkfræðingar og eðlisfræðingar. Almennt er *mjög erfitt*
 að leysa diffurjöfnur og eru margar þeirra jafnvel óleysanlegar með analytískum
 aðferðum. Þó er auðveldara að leysa sumar gerðir af diffurjöfnum en aðrar.
@@ -244,7 +244,7 @@ aðferðum. Þó er auðveldara að leysa sumar gerðir af diffurjöfnum en aðr
  	Við munum hér kafa mjög grunnt í óravíddir diffurjafna og aðeins skoða þær
 	allra auðveldustu. Mikilvægt er að hafa í huga að diffurjöfnur eru gríðarlega mikilvægar í stærðfræði
 	og margt sem verður látið ósagt um þær. Þetta á einungis að gefa nemendum
-	hugmynd um hvernig hægt er að nota heildi á hagnýtan hátt til að leysa raunveruleg
+	hugmynd um hvernig hægt er að nota heildi á hagnýtan hátt til að leysa raunhæf
 	verkefni.
 
 	Nánar verður farið í diffurjöfnur í kafla 8, þar sem mörg þessara hugtaka
@@ -254,8 +254,8 @@ aðferðum. Þó er auðveldara að leysa sumar gerðir af diffurjöfnum en aðr
 Aðgreinanlegar diffurjöfnur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gefum okkur að eitthvað fall :math:`y=F(x)` uppfylli að :math:`F'(x)=f(x)`, þ.e.
-orðum þá er :math:`F(x)` stofnfall :math:`f(x)`. Við vitume ekki hvað :math:`F(x)` er
+Gefum okkur að eitthvað fall :math:`y=F(x)` uppfylli að :math:`F'(x)=f(x)`, m.ö.o.
+þá er :math:`F(x)` stofnfall :math:`f(x)`. Við vitum ekki hvað :math:`F(x)` er
 en við þekkjum :math:`f(x)`. Við gætum einnig ritað þetta svona
 
 .. math:: \frac{dy}{dx}=f(x).
@@ -265,7 +265,7 @@ Svona diffurjafna kallst *aðgreinanleg diffurjafna* af því hana má skrifa se
 .. math:: dy = f(x)dx
 
 þar sem við erum einungis með :math:`y` vinstra megin og einungis með :math:`x` hægra megin.
-Við höfum m.ö.o. aðskilið breytistærðir diffurjöfnunnar. Þetta er einstaklega þægileg
+Við höfum m.ö.o. greint breytistærðir diffurjöfnunnar að. Þetta er einstaklega þægileg
 gerð diffurjafna því þetta má leysa með því að heilda báðar hliðar jöfnunnar.
 
 .. math:: \int dy = \int f(x) dx \Leftrightarrow y = \int f(x) dx
@@ -296,7 +296,7 @@ Dæmi: Óaðgreinanleg diffurjafa
 
 	Ef við höfum diffurjöfnuna :math:`\frac{dy}{dx}=e^{xy}` þá er engin leið fyrir okkur að
 	aðgreina diffurjöfnuna þannig að við séum einungis með :math:`y` vinstra megin
-	og :math:`x` hægra megin jafnaðarmerkisins. Hún er því ekki aðgreinanleg.
+	og :math:`x` hægra megin jafnaðarmerkisins. Hún er því ekki aðgreinanleg eða *óaðgreinanleg*.
 
 Upphafsgildisverkefni
 ~~~~~~~~~~~~~~~~~~~~~
@@ -313,7 +313,11 @@ Dæmi: Upphafsgildisverkefni með aðgreinanlegri diffurjöfnu
 
 	Leysum verkefnið
 
-	.. math:: \frac{dy}{dx} = \sin(x), \quad y(0)=5.
+	.. math::
+		\begin{cases}
+			\frac{dy}{dx} = \sin(x)\\
+			y(0)=5.
+		\end{cases}
 
 .. admonition:: Lausn
   :class: daemi, dropdown
@@ -343,15 +347,15 @@ Summuvirkinn :math:`\Sigma`
 .. math:: 1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20.
 
 Til þess að komast hjá því að skrifa út alla liðima í langri summu, sér í lagi
-þar sem allir liðirnir fylgja einhverri einhverri reglu (t.d. hækka allir um einn),
+þar sem allir liðirnir fylgja einhverri einhverri reglu (t.d. að allir liðirnir hækki um einn),
 getur verið heppilegt að grípa til summuvirkjans :math:`\Sigma`. Stafurinn :math:`\Sigma`
-er grískur og kallast sigma. Þetta er nánar til tekið stóra sigma en litla sigma
+er grískur og kallast *sigma*. Þetta er nánar til tekið stóra sigma en litla sigma
 er :math:`\sigma`. Summumerkinu fylgir oftast summuvísir sem tiltekur hversu
 oft þú vilt leggja saman, þ.e. hvað eru margir liðir í summunni þinni. Þá er
 t.a.m. summan :math:`\sum_{i=1}^{20}` með 20 liðum en :math:`\sum_{i=21}^{30}` með
 10 liðum.
 
-Summuna hér að ofan mætti skrifa með
+Summuna hér að ofan mætti rita
 
 .. math:: \sum_{i=1}^{10} i.
 
@@ -386,9 +390,7 @@ Reiknireglur: Summuvirkinn
   :class: athugasemd
 
 	Ef hægt er að skrifa summu :math:`\sum_{i=1}^n` sem fall af :math:`n` er það
-	kallað lokað form summunnar.
-
-		Gott getur verið að kanast við lokað form eftirfarandi summa.
+	kallað lokað form summunnar. Gott getur verið að kanast við lokað form eftirfarandi summa:
 
 		#. :math:`\sum_{i=1}^n i = 1+2+\dots+n = \frac{n(n+1)}{2}`
 
@@ -430,7 +432,7 @@ Skilgreining: Skipting
 	kallast *skipting* bilsins :math:`[a,b]`. Ef hlutbilin hafa öll sömu lengd, er
 	myndar mengi punktanna *reglulega skiptingu* bilsins :math:`[a,b]`.
 
-	Reglulega skiptingu bils má svo nota sem grunninn að því að meta svæði undir ferli.
+Reglulega skiptingu bils má svo nota sem grunninn að því að meta svæði undir ferli.
 
 Setning: Nálgun með vinstri endapunkti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -440,7 +442,7 @@ Setning: Nálgun með vinstri endapunkti
 
 	Á sérhverju hlutbili :math:`[x_{i-1},x_{i}]` fyrir :math:`i=1,2,\dots n` búum við til
 	rétthyrning með breiddina :math:`\Delta x` og hæðina :math:`f(x_{i-1})`, þ.e. fallgildið
-	í vinstri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot x_i`.
+	í vinstri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot \Delta x_i`.
 	Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
 	flatarmál svæðisins :math:`A`. Við notum ritháttinn :math:`L_n` til að tákna að
 	þetta sé nálgun með vinstri endapunkti (:math:`L` fyrir e. *left*) með :math:`n`
@@ -464,7 +466,7 @@ Dæmi: Nálgun með vinstri endapunkti
 	:math:`\Delta x = 1`. Hæð rétthyrninganna má reikna með :math:`\cos(x)+3`
 	fyrir :math:`x=1,\dots,5` og er (frá vinstri til hægri)
 	:math:`3,54`, :math:`2,58`, :math:`2,01`, :math:`2,35`, og :math:`3,28`. Þar sem
-	lengd bilanna er :math:`1` þá er þetta jafnframt flatarmál rétthyrninganna þar sem
+	lengd bilanna er :math:`1` hæð rétthyrninganna jafnframt flatarmál þeirra, þ.e.
 	:math:`(\cos(x_i)+3) \cdot \Delta x = (\cos(x_i)+3) \cdot 1 = \cos(x_i)`. Því fæst að
 	nálgun á flatarmáli :math:`A` sé
 
@@ -472,7 +474,7 @@ Dæmi: Nálgun með vinstri endapunkti
 
 	Raunverulegt flatarmál svæðisins er :math:`A = 15-\sin(1)+\sin(6)\approx 13,88`.
 	Skekkjan er því :math:`13,88-13,76=0,12` eða u.þ.b. :math:`0,9\%` munur, sem
-	hlýtur að teljast nokkuð gott miðað við nálgun sem notar ansi fá hlutbil.
+	hlýtur að teljast nokkuð gott miðað við nálgun sem notast við ansi fá hlutbil.
 
 	.. image:: ./myndir/kafli05/PMA_nalgun_svaedis_L.png
 	 :align: center
@@ -485,10 +487,10 @@ Setning: Nálgun með hægri endapunkti
   :class: setning
 
 	Á sérhverju hlutbili :math:`[x_{i-1},x_{i}]` fyrir :math:`i=1,2,\dots n` búum við til
-	rétthyrning með breiddina :math:`\Delta x` og hæðina :math:`f(x_{1})`, þ.e. fallgildið
-	í hægri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot x_i`.
+	rétthyrning með breiddina :math:`\Delta x` og hæðina :math:`f(x_{i})`, þ.e. fallgildið
+	í hægri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i})\cdot \Delta x_i`.
 	Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
-	flatarmál svæðisins :math:`A`. Við notum ritháttinn :math:`R_n` til að tákna að
+	flatarmáli svæðisins :math:`A`. Við notum ritháttinn :math:`R_n` til að tákna að
 	þetta sé nálgun með vinstri endapunkti (:math:`R` fyrir e. *right*) með :math:`n`
 	hlutbilum. Formúlan er því
 
@@ -506,7 +508,7 @@ Dæmi: Nálgun með hægri endapunkti
 
 	Við nálgum nú sama svæði og hér að ofan nema nú hafa rétthyrningarnir
 	hæð sem svarar til fallgildis :math:`f(x)=\cos(x)+3` í hægri endapunkti,
-	þ.e. :math:`\cos(x)+3` þar sem :math:`x=2,\dots,6`. Húner því (frá vinstri til hægri)
+	þ.e. :math:`\cos(x)+3` þar sem :math:`x=2,\dots,6`. Hún er því (frá vinstri til hægri)
 	:math:`2,58`, :math:`2,01`, :math:`2,35`, :math:`3,28`, og :math:`3,96`.
 	Með sömu rökum og áður fæst því að
 
@@ -537,7 +539,7 @@ Skilgreining: Riemann summa
 	Látum :math:`f(x)` vera skilgreint á lokaða bilinu :math:`[a,b]` og :math:`P`
 	vera reglulega skiptingu á bilinu. Látum :math:`\Delta x` vera lengd sérhvers
 	hlutbils :math:`[x_{i-1},x_i]` og fyrir hvert :math:`i` látum við :math:`x_i^*`
-	vera hvaða tölu sem er á bilinu :math:`[x_{i-1},x_i]`. Þá er Riemann summa
+	vera hvaða tölu sem er á bilinu :math:`[x_{i-1},x_i]`. Þá er *Riemann summa*
 	skilgriend sem
 
 	.. math:: \sum_{i=1}^n f(x_i^*)\Delta x.
@@ -636,7 +638,7 @@ Dæmi: Ákveðið heildi
 	:math:`[a,b]=[0,2]` og ef notuð er regluleg skipting :math:`P=\{x_i\}`
 	fyrir bilið fæst að
 
-	.. math:: \Delta x = \frac{b-a}{n}=\frac{2}{n}`.
+	.. math:: \Delta x = \frac{b-a}{n}=\frac{2}{n}.
 
 	Þar sem við notumst við hægri endapunkts nálgun til að búa til Riemann summuna
 	þurfum við að reikna fallgildið í endapunkti bilsins :math:`[x_{i-1},x_i]`
@@ -679,11 +681,11 @@ Flatarmál falla sem ekki eru jákvæð
 
 Hingað til höfum við takmarkað okkur við að reikna flatarmál sem myndast á ákveðnu
 bili milli ferils jákvæðs falls og :math:`x`-ássins. Við skulum athuga hvað gerist
-þegar við fellum kröfuna um að :math:`f \geq 0`.
+þegar við fellum niður kröfuna um að :math:`f \geq 0`.
 
 Gerum ráð fyrir að :math:`f(x)` sé fall skilgreint á bilinu :math:`[a,b]` og
 sé að hluta til fyrir ofan :math:`x`-ásinn og að hluta til fyrir neðan hann. Notum
-:math:`n` punkta á bilinu og veljum :math:`\{x_i^*\}` sem vinstri punkt hvers hlutbilsbils :math:`[x_{i-1},x_i]`. Búum til
+:math:`n` punkta á bilinu og veljum :math:`\{x_i^*\}` sem vinstri punkt hvers hlutbils :math:`[x_{i-1},x_i]`. Búum til
 rétthyrning á hverju hlutbili með hæðina :math:`|f(x_i^*)|` og breiddina :math:`\Delta x`.
 Þegar :math:`f(x_i^*)>0` þá er :math:`f(x_i^*) \Delta x` flatarmál rétthyrningins
 líkt og áður. Þegar :math:`f(x_i^*)<0` er :math:`f(x_i^*) \Delta x` *neikvætt flatarmál*
@@ -696,7 +698,7 @@ fyrir ofan fallið þar sem það er neikvætt á bilinu, er þá
 
 og ákveðna heildi fallsins yfir bilið, sem gefur nákvæmt flatarmál svæðisins, má reikna
 
-.. math:: \int_0^2 f(x) dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(c_i) \Delta x = A_1 - A_2
+.. math:: \int_a^b f(x) dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(c_i) \Delta x = A_1 - A_2
 
 þar sem :math:`c_i` er einhver punktur á hlutbilinu :math:`[x_{i-1},x_i]`.
 
@@ -880,7 +882,7 @@ Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)
 .. admonition:: Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)
   :class: setning
 
-	Ef :math:`f(x)`er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
+	Ef :math:`f(x)` er samfellt á bilinu :math:`[a,b]` og :math:`F(x)` er
 	eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
 
 	.. math:: \int_a^b f(x) dx = F(b)-F(a).
@@ -892,12 +894,12 @@ Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)
 	undirstöðusetning stærðfræðigreiningarinnar er. Það tók stærðfræðinga
 	meira en 500 ár að fínpússa þá tækni sem vísinda- og fræðimenn notast við í
 	dag til að útskýra hegðun ýmissa fyrirbæra.
-	Stærðfræðigreining gerði okkur loksins kleyft að reikna út fjarlægðir í
+	Stærðfræðigreining gerði okkur loksins kleift að reikna út fjarlægðir í
 	geiminum og kortleggja sporbauga reykistjarna. Vegna hennar varð mögulegt að reikna jaðarkostnað og
 	spá fyrir um heildargróða með einföldum og nákvæmum hætti. Stærðfræðigreiningin gaf verkfræðingum
 	þá fræðilegu þekkingu sem nauðsynleg var svo þeir gætu
-	reiknað svigþol efna og hreyfingu hluta í þrívíðu rúmi. Heimsýn okkar breyttist
-	með tilkomu stærðfræðigreiningar.
+	reiknað svigþol efna og hreyfingu hluta í þrívíðu rúmi. **Heimsýn okkar breyttist
+	með tilkomu stærðfræðigreiningar.**
 
 
 Dæmi: Undirstöðusetning stærðfræðigreiningarinnar
@@ -917,9 +919,9 @@ Dæmi: Undirstöðusetning stærðfræðigreiningarinnar
 
 	Fyrst þurfum við að finna eitthvað stofnfall fyrir :math:`f(t)=t^2-4`. Höfum að
 
-	.. F(t) = \int (t^2-4) dt = \frac{1}{3}t^3-4t+C
+	.. math:: F(t) = \int (t^2-4) dt = \frac{1}{3}t^3-4t+C
 
-	Veljum :math:`C=0` og fáum þá að stofnfallið sem við ætlum að nota sé :math:`F(t)=\frac{1}{3}t^3-4t`
+	Veljum :math:`C=0` og fáum þá að stofnfallið sem við ætlum að nota sé :math:`F(t)=\frac{1}{3}t^3-4t`.
 	Þá segir undirstöðusetning stærðfræðigreiningarinnar (II) að
 
 	.. math:: \int_{-2}^2 (t^2-4)dt = F(2)-F(-2) = \left(\frac{1}{3}2^3-4\cdot 2\right) - \left(\frac{1}{3}(-2)^3-4\cdot (-2) \right)= \frac{16}{3}-16 = -\frac{32}{3}.
@@ -1137,7 +1139,7 @@ Dæmi: Heildun logra
 
 	Tökum fyrst 3 út fyrir heildið
 
-	.. math:: 3 \int \frac{1}{x-10}
+	.. math:: 3 \int \frac{1}{x-10}.
 
 	Og notum svo innsetningu með :math:`f(x)=\frac{1}{x}` og :math:`g(x)=x-10`.
 	Þá er :math:`du = 1 dx` þar sem :math:`g'(x)=1`. Þetta gefur því

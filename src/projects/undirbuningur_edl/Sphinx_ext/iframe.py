@@ -24,6 +24,7 @@
 from __future__ import division
 
 import sys
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
 
@@ -43,8 +44,8 @@ def visit_iframe_node(self, node):
 
     # Get the frame ID as first argument and the URL as second argument
     if len(node["args"]) != 2:
-        print('Error in file', node.source, 'line', node.line)
-        print('iframe must have an id and a URL as arguments')
+        print("Error in file", node.source, "line", node.line)
+        print("iframe must have an id and a URL as arguments")
         sys.exit(1)
 
     self.body.append(element % (node["args"][0], node["args"][1]))
@@ -63,6 +64,7 @@ class IFrameDirective(Directive):
     .. iframe:: id URL
 
     """
+
     has_content = False
     required_arguments = 2
     optional_arguments = 0
@@ -73,12 +75,14 @@ class IFrameDirective(Directive):
 
 
 def setup(app):
-    app.add_node(IFrame,
-                 html=(visit_iframe_node, depart_iframe_node),
-                 latex=(skip_visit, skip_visit),
-                 text=(skip_visit, skip_visit),
-                 man=(skip_visit, skip_visit),
-                 texinfo=(skip_visit, skip_visit))
+    app.add_node(
+        IFrame,
+        html=(visit_iframe_node, depart_iframe_node),
+        latex=(skip_visit, skip_visit),
+        text=(skip_visit, skip_visit),
+        man=(skip_visit, skip_visit),
+        texinfo=(skip_visit, skip_visit),
+    )
 
     # Declaring the directive
     app.add_directive("iframe", IFrameDirective)

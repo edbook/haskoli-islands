@@ -14,13 +14,26 @@ poetry shell
 poetry install
 ```
 
+Remember to run `poetry install` each time the main branch is pulled to install new packages or packages that might have been updated.
+## Manual build
+You can manually build a particular project by passing the folder name as an argument, like so:
+```
+make build project=undirbuningur_stae
+```
+## Build all projects
+For convenience or testing if all projects build correctly, run the following command:
+```bash
+make build-all
+```
 ## Run development server
-Run a dev server for local development. This will open a tab in your browser at http://localhost:8000 which will update each time you you save a document in the project being worked on in the [source](src/projects) directory. The build ends up in the `_build_ directory under the project.
+Run a dev server for local development. This will open a tab in your browser at http://localhost:8000 which will update each time you you save a document in the project being worked on in the [source](src/projects) directory. The build ends up in the `_build/your-project` where `your-project` is the project you are building.
 
 ```bash
 make autobuild project=undirbuningur_stae
 ```
 
+## Sagecell
+All `*.sage` files should be added to `src/extensions/sagecell-extension/examples` directory so they can be reused across projects. You can continue to reference them by filename only.
 ## Contribute
 The following rules should be followed when contributing:
 - Create a branch (or fork the project if you are not already a contributor) from master
@@ -105,4 +118,3 @@ Many extensions have been written to add features and modifications to sphinx pr
 Several extensions come bundled with sphinx: http://sphinx-doc.org/extensions.html
 
 Three custom extensions come with this framework (ggbextension to embed geogebra applets, toggleblock-extension for toggleable text sections and sagecell-extension to embed sage cells. See README files in the extension folders.)
-

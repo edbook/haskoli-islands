@@ -4,9 +4,11 @@ Hagnýting á heildun
 .. admonition:: Nauðsynleg undirstaða
 	:class: athugasemd
 
-	- Eitthvað
+	- Föll
 
-	- Eitthvað
+	- Afleiður
+
+	- Heildun
 
 ------
 
@@ -54,9 +56,9 @@ Dæmi: Flatarmál milli tveggja ferla
 
 	Samkvæmt setningunni hér að ofan fæst að
 
-	.. math:: A = \int_1^4 (x+4 - (3 - \frac{x}{2})) dx = \int_1^4 \frac{3}{2}x +1 dx = \left[ \frac{3}{4}x^4 + x \right]_1^4 = 16 - \frac{7}{4} = \frac{57}{4}
+	.. math:: A = \int_1^4 \left(x+4 - \left(3 - \frac{x}{2}\right)\right) dx = \int_1^4 \frac{3}{2}x +1 dx = \left[ \frac{3}{4}x^4 + x \right]_1^4 = 16 - \frac{7}{4} = \frac{57}{4}
 
-	Svo flatarmál svæðiðsins er :math:`\frac{57}{4}` fereiningar.
+	Svo flatarmál svæðisins er :math:`\frac{57}{4}` fereiningar.
 
 Setning: Flatarmál samsettra svæða
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +67,7 @@ Setning: Flatarmál samsettra svæða
   :class: setning
 
 	Gerum ráð fyrir því að :math:`f(x)` og :math:`g(x)` séu samfelld á bilinu
-	:math:`[a,b]`. Látumm :math:`R` tákna svæðið sem myndast milli grafa fallanna og
+	:math:`[a,b]`. Látum :math:`R` tákna svæðið sem myndast milli grafa fallanna og
 	er afmarkað af línunum :math:`x=a` og :math:`x=b`. Þá má reikna flatarmál svæðiðisins
 	:math:`R` með
 
@@ -110,7 +112,7 @@ Setning: Heildað m.t.t. :math:`y`
 .. admonition:: Setning
   :class: setning
 
-	Látum :math:`u(y)` og :math:`v(y)` vera samfelld föll þannig að :math:`u(y\geq v(y)`.
+	Látum :math:`u(y)` og :math:`v(y)` vera samfelld föll þannig að :math:`u(y) \geq v(y)`.
 	Látum :math:`R` tákna svæðið sem afmarkast af gröfum fallanna og línunum :math:`y=d`
 	og :math:`y=c`. Þá má reikna flatarmál svæðisins :math:`R` með
 
@@ -154,9 +156,9 @@ Augljóst er að þetta virkar ekki þegar :math:`n=-1` því þá væri deilt m
 
 Rifjum upp að undirstöðusetning stærðfræðigreiningarinnar segir að
 
-.. \int_1^x \frac{1}{t}dt
+.. math:: \int_1^x \frac{1}{t}dt
 
-er stofnfall fyrir :math:`1/x`. Það gefur okkur eftirfarandi skilgreiningu.
+sé stofnfall fyrir :math:`1/x`. Það gefur okkur eftirfarandi skilgreiningu.
 
 Skilgreining: Náttúrulegi logrinn sem heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -206,7 +208,7 @@ Dæmi: Afleiða náttúrulega lograns
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Notum keðjuregluna og áum
+	Notum keðjuregluna og fáum
 
 	.. math:: = \frac{1}{5x^3-2} \cdot 15x^2 = \frac{15x^3}{5x^3-2}.
 
@@ -278,7 +280,7 @@ Skilgreining á tölur Eulers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hægt er að nota náttúrulega logrann til þess að skilgreina tölu Eulers, þ.e.
-óræðu tölunni :math:`e`.
+óræðu töluna :math:`e`.
 
 Skilgreining: Tala Eulers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -286,12 +288,9 @@ Skilgreining: Tala Eulers
 .. admonition:: Skilgreining
   :class: skilgreining
 
-	Talan :math:`e` er skilgreind sem sú rauntala sem uppfyllir að
-
-	:math:`\ln(e)=1`.
-
+	Talan :math:`e` er skilgreind sem sú rauntala sem uppfyllir að :math:`\ln(e)=1`.
 	Með öðrum orðum þá skal flatarmál svæðisins sem myndast undir ferli fallsins :math:`y=1/t` og yfir :math:`x`-ás á milli
-	línanna :math:`t=1` og :math:`t=e` vera 1. Í stærðfræðitáknum væri það táknað
+	línanna :math:`t=1` og :math:`t=e` vera 1. Þetta er sambærilegt því að rita með stærðfræðitáknum að
 
 	.. math:: \int_1^e \frac{1}{t} dt = 1.
 
@@ -302,7 +301,7 @@ Skilgreining: Tala Eulers
 Veldisvísifallið
 ~~~~~~~~~~~~~~~~
 
-Athugum að náttúrulegi logrinn er eintækt og á sér því andhverfu. Köllum hana
+Athugum að náttúrulegi logrinn er eintækt fall og á sér því andhverfu. Köllum hana
 :math:`\exp(x)`. Samkvæmt skilgreiningu á andhverfu gildir þá að
 
 .. math:: \exp(\ln(x)) = x \text{ fyrir öll } x>0 \text{ og } \ln(\exp(x))=x \text{ fyrir öll } x.
@@ -317,16 +316,14 @@ Ef við skoðum grafið gaumgæfilega má sjá að fallið :math:`\exp(x)` er í
 :math:`e^x`, þ.e. :math:`\exp(x)=e^x`. Af þessu leiðir að veldisvísisfallið er andhverfa
 náttúrulega lograns.
 
-Skilgreining
-~~~~~~~~~~~~
+Skilgreining: Andhverfa veldisvísisfallsins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
   :class: skilgreining
 
 	Fyrir hvaða rauntölu :math:`x` sem er skilgreinum við :math:`y=e^x` sem þá tölu
-	sem uppfyllir að
-
-	:math:`\ln(y) = \ln(e^x)=x`.
+	sem uppfyllir að :math:`\ln(y) = \ln(e^x)=x`.
 
 	Af þessu leiðir að
 
@@ -374,8 +371,8 @@ Almennt um logra og vísisföll
 Munum að vísisföll eru föll á forminu :math:`f(x)=a^x` og lograr eru föll sem
 hafa formið :math:`\log_b(x)` þar sem :math:`a,b\in \mathbb{R}`.
 
-Skilgreining
-~~~~~~~~~~~~~
+Skilgreining: Vísisföll skilgreind með veldisvísifallinu og náttúrulega logranum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
   :class: skilgreining
@@ -384,8 +381,8 @@ Skilgreining
 
 	.. math:: y = a^x = e^{x\ln(a)}.
 
-	Þessi skilgreining hjálpar okkur að átta okkur betur á vísisföllum þar sem að :math:`a`
-	er óræð tala.
+Þessi skilgreining hjálpar okkur að átta okkur betur á vísisföllum þar sem að :math:`a`
+er óræð tala.
 
 Setning: Afleiður og heildi vísisfalla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -433,7 +430,7 @@ Dæmi: Afleiða logra
 Veldisvísisvöxtur og -hnignun
 ------------------------------
 
-Veldisvísisvöxtur er til staðar í mörgum líffræðilegum kerfum. Vexti þessa líkana
+Veldisvísisvöxtur er til staðar í mörgum líffræðilegum kerfum. Vexti þessara líkana
 má lýsa með formúlunni
 
 .. math:: y=y_0e^{kt}
@@ -443,7 +440,7 @@ að um þessi líkön gildir að
 
 .. math:: y' = ky_0e^{kt} = ky.
 
-Þ.e. vaxtaharið er í hlutfalli við fallgildið. Þetta er eitt af lykileiginleikum
+Þ.e. vaxtarhraði er í hlutfalli við fallgildið. Þetta er eitt af lykileiginleikum
 veldisvísisvaxtar.
 
 Setning: Veldisvísisvöxtur
@@ -585,36 +582,40 @@ Dæmi: Helmingunartími
 	við veldisvísishnignun. Kolefni-14 (sem gefur frá sér geislavirkar eindir)
 	hnignar með reglulegum veldisvísishraða. Svo ef við vitum hve mikið kolefni var
 	upphaflega til staðar í hlut og hve mikið kolefni er eftir, getum við ákvarðað aldur
-	viðkomandi hlutar. Helmingunartími kolefni-14 er u.þ.b. 5730 ár. Ef við höfum 100g
-	af kolefni-14 í dag, hve mikið er þá til staðar eftir 50 ár? Ef hlutur sem
-	upphaflega innihélt 100 g af kolefni inniheldur nú 10g, hve gamall er hann?
+	viðkomandi hlutar. Helmingunartími kolefni-14 er u.þ.b. 5730 ár. Leysum eftirfarandi
+	verkefni.
+
+	a) Ef við höfum 100g af kolefni-14 í dag, hve mikið er þá til staðar eftir 50 ár?
+
+	b) Ef hlutur sem upphaflega innihélt 100 g af kolefni inniheldur nú 10g, hve gamall er hann?
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Við skulum leysa þetta. Við höfum
-	að helmingunartíminn sé 5730 og því gildir að
+	a) Lausn:
+		Við höfum að helmingunartíminn sé 5730 og því gildir að
 
-	.. math:: k = \frac{\ln(2)}{5730}
+		.. math:: k = \frac{\ln(2)}{5730}
 
-	samkvæmt skilgreiningu. Þar sem upphafsástand kerfisins er 100g af kolefni fæst
-	að líkanið sé
+		samkvæmt skilgreiningu. Þar sem upphafsástand kerfisins er 100g af kolefni fæst
+		að líkanið sé
 
-	.. math:: y=100e^{-\frac{\ln(2)}{5730}t}.
+		.. math:: y=100e^{-\frac{\ln(2)}{5730}t}.
 
-	Eftir 50 ár höfum við
+		Eftir 50 ár höfum við
 
-	.. math:: y = 100e^{-\frac{\ln(2)}{5730}\cdot 50} \approx 99,40.
+		.. math:: y = 100e^{-\frac{\ln(2)}{5730}\cdot 50} \approx 99,40.
 
-	Svo eftir 50 ár eru u.þ.b. 99,40g af carbon-14 eftir. Ef við reynum að greina
-	aldur hlutsins verðum við að gera ráð fyrir að :math:`y=10` og einangra :math:`t`.
-	Fáum
+		Svo eftir 50 ár eru u.þ.b. 99,40g af carbon-14 eftir.
 
-	.. math::
-		\begin{align}
-		 	10 &= 100 e^{-\frac{\ln(2)}{5739}t}\\
-			0,1 &= e^{-\frac{\ln(2)}{5739}t}\\
-			t &\approx 19035.
-		\end{align}
+	b) Lausn:
+		Ef við reynum að greina aldur hlutsins verðum við að gera ráð fyrir að :math:`y=10` og einangra :math:`t`. Fáum
 
-	Svo hluturinn er rétt rúmlega 19.000 ára gamall.
+		.. math::
+			\begin{align}
+			 	10 &= 100 e^{-\frac{\ln(2)}{5739}t}\\
+				0,1 &= e^{-\frac{\ln(2)}{5739}t}\\
+				t &\approx 19035.
+			\end{align}
+
+		Svo hluturinn er rétt rúmlega 19.000 ára gamall.

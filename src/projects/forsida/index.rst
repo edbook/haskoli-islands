@@ -38,27 +38,30 @@ Námskeið við HÍ
 
 .. button::
   :text: STÆ105G: Hagnýt stærðfræðigreining
-  :link: https://edbook.hi.is/stae105g/
+  :link: stae105g/index.html
 
 .. button::
   :text: STÆ104G: Stærðfræðigreining I
-  :link: https://edbook.hi.is/stae104g/
+  :link: stae104g/index.html
+
 
 .. button::
   :text: STÆ205G: Stærðfræðigreining II
-  :link: https://edbook.hi.is/stae205g/
+  :link: stae205g/index.html
+
 
 .. button::
   :text: STÆ302G: Stærðfræðigreining III
-  :link: https://edbook.hi.is/stae302g
+  :link: stae302g/index.html
+
 
 .. button::
   :text: STÆ401G: Stærðfræðigreining IV
-  :link: https://edbook.hi.is/stae401g
+  :link: stae401g/index.html
 
 .. button::
   :text: STÆ405G: Töluleg greining
-  :link: https://edbook.hi.is/stae405g/
+  :link: stae405g/index.html
 
 .. button::
   :text: REI201G: Stærðfræði og reiknifræði
@@ -66,11 +69,11 @@ Námskeið við HÍ
 
 .. button::
   :text: Tölfræði frá grunni
-  :link: https://edbook.hi.is/tolfraedi_fra_grunni/
+  :link: tolfraedi_fra_grunni/index.html
 
 .. button::
   :text: R frá grunni
-  :link: https://edbook.hi.is/R_fra_grunni/
+  :link: R_fra_grunni/index.html
 
 ----------------------
 

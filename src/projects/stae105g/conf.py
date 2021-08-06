@@ -14,8 +14,8 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
+import sys
 
 sys.path.insert(0, os.path.abspath("."))
 sys.path.append(os.path.abspath("../../extensions"))
@@ -56,6 +56,7 @@ extensions = [
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
     "hoverrole.hoverrole",
+    "custom_button.custom_button",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     #    'analytics.analytics',
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
@@ -70,9 +71,7 @@ extensions = [
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 
@@ -105,7 +104,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = u"Hagnýt stærðfræðigreining (STÆ105G)"
+project = "Hagnýt stærðfræðigreining (STÆ105G)"
 copyright = "2021,Valentina Giangreco M Puletti"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -174,7 +173,7 @@ pygments_style = "sphinx"
 # }
 
 html_theme = "sphinx_rtd_theme"
-#html_theme_path = ["_themes"]
+# html_theme_path = ["_themes"]
 
 
 html_permalinks = True
@@ -255,7 +254,7 @@ html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = False
-html_copy_source = False
+#html_copy_source = False
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
 # base URL from which the finished HTML is served.
@@ -283,10 +282,9 @@ slide_theme_options = {"custom_css": "custom.css"}
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-    "fncychap": r"\\usepackage[Sonny]{fncychap}",
+    "fncychap": "\\usepackage[Sonny]{fncychap}",
     "papersize": "a4paper",
-    "preamble": r"""
-
+    "preamble": """\
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
@@ -459,6 +457,13 @@ epub_exclude_files = ["search.html"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
 
-#custom frá Tryggva
+# custom frá Tryggva
 def setup(app):
-    app.add_css_file('custom_admonitions.css')
+    app.add_css_file("custom_admonitions.css")
+
+
+# Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
+hint_indent = (
+    r"\00a0" * 12
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2

@@ -11,19 +11,22 @@ Tvinntölurnar
 Skilgreining
 ~~~~~~~~~~~~
 
-Skilgreinum margföldun á :math:`\mathbb{R}^2` þannig að
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
+	Skilgreinum margföldun á :math:`\mathbb{R}^2` þannig að
 
- (a,b)(c,d)=(ac-bd, ad+bc).
+	.. math::
 
-Þegar hugsað er um :math:`\mathbb{R}^2` með þessari margföldun og venjulegri
-samlagningu þá eru stökin í :math:`\mathbb{R}^2` kallaðar tvinntölur og mengi
-þeirra er táknað með :math:`{\mathbb{C}}`. Þegar við viljum leggja áherslu á að
-líta má á tvinntölu sem punkt í planinu :math:`\mathbb{R}^2` þá er talað um
-tvinntalnaplanið.
+	 (a,b)(c,d)=(ac-bd, ad+bc).
 
-Ritháttur. 
+	Þegar hugsað er um :math:`\mathbb{R}^2` með þessari margföldun og venjulegri
+	samlagningu þá eru stökin í :math:`\mathbb{R}^2` kallaðar tvinntölur og mengi
+	þeirra er táknað með :math:`{\mathbb{C}}`. Þegar við viljum leggja áherslu á að
+	líta má á tvinntölu sem punkt í planinu :math:`\mathbb{R}^2` þá er talað um
+	tvinntalnaplanið.
+
+Ritháttur.
 ~~~~~~~~~~
 
 Þegar fjallað er um tvinntölur þá er stakið :math:`(a,b)`
@@ -41,24 +44,27 @@ Við höfum nú fengið aftur skilgreininguna á margfölduninni hér að ofan.
 Setning
 ~~~~~~~
 
-Eftirfarandi reiknireglur gilda um tvinntölur:
+.. admonition:: Reiknireglur
+	:class: setning
 
-(i) :math:`\big((a+ib)+(c+id)\big)+(e+if)=(a+ib)+\big((c+id)+(e+if)\big)` (tengiregla fyrir samlagningu)
+	Eftirfarandi reiknireglur gilda um tvinntölur:
 
-(ii) :math:`\big((a+ib)(c+id)\big)(e+if)=(a+ib)\big((c+id)(e+if)\big)` (tengiregla fyrir margföldun)
+	(i) :math:`\big((a+ib)+(c+id)\big)+(e+if)=(a+ib)+\big((c+id)+(e+if)\big)` (tengiregla fyrir samlagningu)
 
-(iii) :math:`(a+ib)+(c+id)=(c+id)+(a+ib)` (víxlregla fyrir samlagningu)
+	(ii) :math:`\big((a+ib)(c+id)\big)(e+if)=(a+ib)\big((c+id)(e+if)\big)` (tengiregla fyrir margföldun)
 
-(iv) :math:`(a+ib)(c+id)=(c+id)(a+ib)` (víxlregla fyrir margföldun)
+	(iii) :math:`(a+ib)+(c+id)=(c+id)+(a+ib)` (víxlregla fyrir samlagningu)
 
-(v) :math:`(a+ib)\big((c+id)+(e+if)\big)=(a+ib)(c+id)+(a+ib)(e+if)` (dreifiregla)
+	(iv) :math:`(a+ib)(c+id)=(c+id)(a+ib)` (víxlregla fyrir margföldun)
 
-(vi) Talan :math:`0=0+i0` er samlagningarhlutleysa, þ.e.a.s. \ :math:`(a+ib)+0=a+ib`.
+	(v) :math:`(a+ib)\big((c+id)+(e+if)\big)=(a+ib)(c+id)+(a+ib)(e+if)` (dreifiregla)
 
-(vii) Talan :math:`1=1+i0` er margföldunarhlutleysa, þ.e.a.s. \ :math:`1(a+ib)=a+ib`.
+	(vi) Talan :math:`0=0+i0` er samlagningarhlutleysa, þ.e.a.s. \ :math:`(a+ib)+0=a+ib`.
+
+	(vii) Talan :math:`1=1+i0` er margföldunarhlutleysa, þ.e.a.s. \ :math:`1(a+ib)=a+ib`.
 
 Ritháttur.
-~~~~~~~~~~ 
+~~~~~~~~~~
 
 Þegar unnið er með tvinntölur þá er ekki gerður
 greinarmunur á rauntölunni :math:`a` og tvinntölunni :math:`a+i0.` Því
@@ -68,83 +74,94 @@ tvinntalna :math:`{\mathbb{C}}`. Sérhver rauntala er þannig líka tvinntala.
 Setning
 ~~~~~~~
 
-Ef :math:`z=a+ib\neq 0` er tvinntala þá á :math:`z` sér
-margföldunarandhverfu sem er
+.. admonition:: Setning
+	:class: setning
 
-.. math::
+	Ef :math:`z=a+ib\neq 0` er tvinntala þá á :math:`z` sér
+	margföldunarandhverfu sem er
 
- z^{-1}=\frac{1}{z}=\frac{a}{a^2+b^2}+\frac{-b}{a^2+b^2}i.
+	.. math::
 
-   
+	 z^{-1}=\frac{1}{z}=\frac{a}{a^2+b^2}+\frac{-b}{a^2+b^2}i.
 
 Skilgreining og setning
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Ef :math:`z` er tvinntala þá getum við
-skilgreint heiltöluveldi :math:`z^n` af :math:`z` þannig að
-:math:`z^0=1`, og ef :math:`n>0` þá er
-:math:`z^n=z\cdot z\cdot\ldots\cdot z` (:math:`n` sinnum) og
-:math:`z^{-n}=\big(z^{-1}\big)^n`. Venjulegar veldareglur gilda um
-tvinntöluveldi, þ.e.a.s.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
+	Ef :math:`z` er tvinntala þá getum við
+	skilgreint heiltöluveldi :math:`z^n` af :math:`z` þannig að
+	:math:`z^0=1`, og ef :math:`n>0` þá er
+	:math:`z^n=z\cdot z\cdot\ldots\cdot z` (:math:`n` sinnum) og
+	:math:`z^{-n}=\big(z^{-1}\big)^n`. Venjulegar veldareglur gilda um
+	tvinntöluveldi, þ.e.a.s.
 
-   z^n\cdot z^m=z^{n+m}\qquad z^n/z^m=z^{n-m}\qquad z^n\cdot w^n=(zw)^{n}
-   \qquad (z^n)^m=z^{nm}.
+	.. math::
 
-   
+	   z^n\cdot z^m=z^{n+m}\qquad z^n/z^m=z^{n-m}\qquad z^n\cdot w^n=(zw)^{n}
+	   \qquad (z^n)^m=z^{nm}.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Ritum tvinntölu :math:`z` sem :math:`z=x+iy` þar sem
-:math:`x` og :math:`y` eru rauntölur.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-Talan :math:`x` kallast raunhluti :math:`z` og er táknaður með
-:math:`\operatorname{Re\, } z`.
+	Ritum tvinntölu :math:`z` sem :math:`z=x+iy` þar sem
+	:math:`x` og :math:`y` eru rauntölur.
 
-Talan :math:`y` kallast þverhluti :math:`z` og er táknaður með
-:math:`\operatorname{Im\, } z`. (Athugið að þverhlutinn er rauntala.)
+	Talan :math:`x` kallast raunhluti :math:`z` og er táknaður með
+	:math:`\operatorname{Re\, } z`.
 
-Sagt er að :math:`z` sé rauntala ef :math:`\operatorname{Im\, } z=0` en hrein þvertala ef
-:math:`\operatorname{Re\, } z=0`.
+	Talan :math:`y` kallast þverhluti :math:`z` og er táknaður með
+	:math:`\operatorname{Im\, } z`. (Athugið að þverhlutinn er rauntala.)
 
-Fyrir tvinntölu :math:`z=x+iy` skilgreinum við samok :math:`z` sem
-tvinntöluna :math:`\overline{z}=x-iy`.
+	Sagt er að :math:`z` sé rauntala ef :math:`\operatorname{Im\, } z=0` en hrein þvertala ef
+	:math:`\operatorname{Re\, } z=0`.
 
-   
+	Fyrir tvinntölu :math:`z=x+iy` skilgreinum við samok :math:`z` sem
+	tvinntöluna :math:`\overline{z}=x-iy`.
 
-Reiknireglur. 
+
+
+Reiknireglur.
 ~~~~~~~~~~~~~
 
-Um tvinntölu :math:`z=x+iy` gildir
+.. admonition:: Reiknireglur
+	:class: setning
 
-.. math::
+	Um tvinntölu :math:`z=x+iy` gildir
 
-   \begin{aligned}
-   \overline{(\overline{z})}&=z\\
-   z\overline{z}&=(x+iy)(x-iy)=x^2+y^2\\
-   z+\overline z&=2x=2\operatorname{Re\, } z\\
-   z-\overline z&=2yi=(2\operatorname{Im\, } z)i\\
-   \overline{z+w}&=\overline{z}+\overline{w}\\
-   \overline{zw}&=\overline{z}\,\overline{w}\\
-   \overline{z/w}&=\overline{z}/\overline{w}\end{aligned}
+	.. math::
+
+	   \begin{aligned}
+	   \overline{(\overline{z})}&=z\\
+	   z\overline{z}&=(x+iy)(x-iy)=x^2+y^2\\
+	   z+\overline z&=2x=2\operatorname{Re\, } z\\
+	   z-\overline z&=2yi=(2\operatorname{Im\, } z)i\\
+	   \overline{z+w}&=\overline{z}+\overline{w}\\
+	   \overline{zw}&=\overline{z}\,\overline{w}\\
+	   \overline{z/w}&=\overline{z}/\overline{w}\end{aligned}
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Lengd tvinntölu :math:`z=x+iy` er skilgreind sem
-rauntalan :math:`|z|=\sqrt{x^2+y^2}=\sqrt{z\overline{z}}`.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-Hugsum nú tvinntöluna :math:`z=x+iy` sem punkt :math:`(x,y)` í planinu.
-Setjum :math:`r=\sqrt{x^2+y^2}=|z|`. Ritum nú punktinn :math:`(x,y)` sem
-:math:`(x,y)=r(\cos \theta, \sin\theta)` (pólhnit). Þá er
-:math:`z=|z|(\cos\theta+i\sin\theta)` og :math:`\theta` kallast
-stefnuhorn tvinntölunnar :math:`z`. (Athugið að stefnuhorn er ekki
-ótvírætt ákvarðað því ef :math:`\theta` er stefnuhorn þá er
-:math:`\theta+k\cdot 2\pi` líka stefnuhorn.)
+	Lengd tvinntölu :math:`z=x+iy` er skilgreind sem
+	rauntalan :math:`|z|=\sqrt{x^2+y^2}=\sqrt{z\overline{z}}`.
 
-Formúla. 
+	Hugsum nú tvinntöluna :math:`z=x+iy` sem punkt :math:`(x,y)` í planinu.
+	Setjum :math:`r=\sqrt{x^2+y^2}=|z|`. Ritum nú punktinn :math:`(x,y)` sem
+	:math:`(x,y)=r(\cos \theta, \sin\theta)` (pólhnit). Þá er
+	:math:`z=|z|(\cos\theta+i\sin\theta)` og :math:`\theta` kallast
+	stefnuhorn tvinntölunnar :math:`z`. (Athugið að stefnuhorn er ekki
+	ótvírætt ákvarðað því ef :math:`\theta` er stefnuhorn þá er
+	:math:`\theta+k\cdot 2\pi` líka stefnuhorn.)
+
+Formúla.
 ~~~~~~~~
 
 Lát :math:`z=x+iy\neq 0` vera tvinntölu í
@@ -163,23 +180,29 @@ Athugið að þessi formúla gefur gildi á :math:`\theta` þannig að
 Skilgreining
 ~~~~~~~~~~~~
 
-Ef :math:`z` og :math:`w` eru tvær tvinntölur þá er
-fjarlægðin á milli þeirra skilgreind sem rauntalan :math:`|z-w|`.
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Ef :math:`z` og :math:`w` eru tvær tvinntölur þá er
+	fjarlægðin á milli þeirra skilgreind sem rauntalan :math:`|z-w|`.
 
 Setning
 ~~~~~~~
 
-Fyrir sérhverjar tvinntölur :math:`z` og :math:`w` gildir
-að
+.. admonition:: Setning
+	:class: setning
 
-.. math::
+	Fyrir sérhverjar tvinntölur :math:`z` og :math:`w` gildir
+	að
 
- |z+w|\leq |z|+|w|.
+	.. math::
+
+	 |z+w|\leq |z|+|w|.
 
 Athugið að :math:`|z+w|=|z|+|w|` ef og aðeins ef til er jákvæð rauntala
 :math:`a` þannig að :math:`w=az`.
 
-Rúmfræðileg túlkun margföldunar. 
+Rúmfræðileg túlkun margföldunar.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ef :math:`z` og :math:`w` eru tvær
@@ -203,68 +226,81 @@ Sérstaklega gildir Regla de Moivre sem segir að
 Skilgreining
 ~~~~~~~~~~~~
 
-Lína í tvinntalnaplaninu :math:`{\mathbb{C}}` er mengi allra
-tvinntalna :math:`z=x+iy` sem uppfylla jöfnu af taginu
-:math:`ax+by+c=0`, þar sem :math:`a,b,c` eru rauntölur.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-Hringur í tvinntalnaplaninu er mengi allra punkta sem er í gefinni
-fastri fjarlægð (geisli, radíus) frá gefnum föstum punkti :math:`m`
-(miðjunni). Hringur með miðju í :math:`m` og geisla :math:`r` er mengið
-:math:`\{z\mid |z-m|=r\}`.
+	Lína í tvinntalnaplaninu :math:`{\mathbb{C}}` er mengi allra
+	tvinntalna :math:`z=x+iy` sem uppfylla jöfnu af taginu
+	:math:`ax+by+c=0`, þar sem :math:`a,b,c` eru rauntölur.
+
+	Hringur í tvinntalnaplaninu er mengi allra punkta sem er í gefinni
+	fastri fjarlægð (geisli, radíus) frá gefnum föstum punkti :math:`m`
+	(miðjunni). Hringur með miðju í :math:`m` og geisla :math:`r` er mengið
+	:math:`\{z\mid |z-m|=r\}`.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Einingarhringurinn :math:`\mathbb{T}` í :math:`{\mathbb{C}}` er mengi
-allra tvinntalna sem hafa lengd 1. (Einnig má lýsa honum sem mengi allra
-tvinntalna sem eru í fjarlægð 1 frá :math:`0`. Einingarhringurinn er
-hringur með miðju í 0 og geisla 1.)
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Einingarhringurinn :math:`\mathbb{T}` í :math:`{\mathbb{C}}` er mengi
+	allra tvinntalna sem hafa lengd 1. (Einnig má lýsa honum sem mengi allra
+	tvinntalna sem eru í fjarlægð 1 frá :math:`0`. Einingarhringurinn er
+	hringur með miðju í 0 og geisla 1.)
 
 Setning
 ~~~~~~~
 
-Sérhverri línu og sérhverjum hring má lýsa með jöfnu af
-taginu
+.. admonition:: Setning
+	:class: setning
 
-.. math::
+	Sérhverri línu og sérhverjum hring má lýsa með jöfnu af
+	taginu
 
- \alpha|z|^2+\overline{\beta} z+\beta\overline{z}+\gamma=0,
+	.. math::
 
-þar sem :math:`\alpha` og :math:`\gamma` eru rauntölur og :math:`\beta`
-er tvinntala.
+	 \alpha|z|^2+\overline{\beta} z+\beta\overline{z}+\gamma=0,
 
-Öfugt, ef við fáum slíka jöfnu þá lýsir hún:
+	þar sem :math:`\alpha` og :math:`\gamma` eru rauntölur og :math:`\beta`
+	er tvinntala.
 
-(i) línu ef :math:`\alpha=0` og :math:`\beta \neq 0`
+	Öfugt, ef við fáum slíka jöfnu þá lýsir hún:
 
-(ii) hring ef :math:`\alpha\neq 0` og :math:`|\beta|^2-\alpha\gamma>0` (og miðjan er :math:`m=-\beta/\alpha` og geislinn er :math:`r=\sqrt{|\beta|^2-\alpha\gamma}/|\alpha|`);
+	(i) línu ef :math:`\alpha=0` og :math:`\beta \neq 0`
 
-(iii) stökum punkti ef :math:`\alpha\neq 0` og :math:`|\beta|^2-\alpha\gamma=0` (punkturinn er :math:`m=-\beta/\alpha`)
+	(ii) hring ef :math:`\alpha\neq 0` og :math:`|\beta|^2-\alpha\gamma>0` (og miðjan er :math:`m=-\beta/\alpha` og geislinn er :math:`r=\sqrt{|\beta|^2-\alpha\gamma}/|\alpha|`);
 
-(iv) tóma menginu ef :math:`\alpha\neq 0` og :math:`|\beta|^2-\alpha\gamma<0`;
+	(iii) stökum punkti ef :math:`\alpha\neq 0` og :math:`|\beta|^2-\alpha\gamma=0` (punkturinn er :math:`m=-\beta/\alpha`)
 
-(v) öllu planinu :math:`{\mathbb{C}}` ef :math:`\alpha=\beta=\gamma=0`.
+	(iv) tóma menginu ef :math:`\alpha\neq 0` og :math:`|\beta|^2-\alpha\gamma<0`;
+
+	(v) öllu planinu :math:`{\mathbb{C}}` ef :math:`\alpha=\beta=\gamma=0`.
 
 Margliður, ræð föll og veldisvísisföll
 --------------------------------------
 
-   
-Skilgreining (Sjá §1.4) 
+
+Skilgreining (Sjá §1.4)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Getum skilgreint margliður með tvinntölustuðlum á sama hátt og margliður með rauntölustuðlum. Margliða
-með tvinntölustuðlum er stærðtákn á forminu
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
 
- P(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots+a_1z+a_0,
+	Við getum skilgreint margliður með tvinntölustuðlum á sama hátt og margliður með rauntölustuðlum. Margliða
+	með tvinntölustuðlum er stærðtákn á forminu
 
-þar sem stuðlarnir :math:`a_0, a_1, \ldots, a_{n-1}, a_n` eru
-tvinntölur.
+	.. math::
 
-Þegar sett er inn ákveðin tvinntala í stað :math:`z` í þessari stæðu og
-reiknað þá fæst út tvinntala. Margliðan gefur því fall
-:math:`P:{\mathbb{C}}\rightarrow {\mathbb{C}}`.
+	 P(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots+a_1z+a_0,
+
+	þar sem stuðlarnir :math:`a_0, a_1, \ldots, a_{n-1}, a_n` eru
+	tvinntölur.
+
+	Þegar sett er inn ákveðin tvinntala í stað :math:`z` í þessari stæðu og
+	reiknað þá fæst út tvinntala. Margliðan gefur því fall
+	:math:`P:{\mathbb{C}}\rightarrow {\mathbb{C}}`.
 
 Margliður. (Sjá §1.4)
 ~~~~~~~~~~~~~~~~~~~~~
@@ -289,94 +325,111 @@ Sérstaklega gildir að :math:`\alpha` er núllstöð eða rót margliðunnar
 :math:`P` (þ.e.a.s. :math:`P(\alpha)=0`) ef og aðeins ef
 :math:`z-\alpha` gengur upp í :math:`P`.
 
-Setning (Undirstöðusetning algebrunnar) 
+Setning (Undirstöðusetning algebrunnar)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sérhver margliða af stigi :math:`\geq 1` með tvinntölustuðla hefur núllstöð í
-:math:`{\mathbb{C}}`.
+.. admonition:: Setning
+	:class: setning
+
+	Sérhver margliða af stigi :math:`\geq 1` með tvinntölustuðla hefur núllstöð í
+	:math:`{\mathbb{C}}`.
 
 Skilgreining og setning (Sjá §1.4)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hugsum okkur að :math:`\alpha` sé núllstöð margliðu :math:`P` og :math:`j` sé hæsta talan þannig að
-:math:`(z-\alpha)^j` gengur upp í :math:`P`,
-þ.e.a.s. \ :math:`P(z)=(z-\alpha)^jQ(z)` þar sem
-:math:`Q(\alpha)\neq 0`. Þá segjum við að :math:`\alpha` sé
-:math:`j`-föld núllstöð og köllum :math:`j` margfeldni núllstöðvarinnar
-:math:`\alpha`.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-Það er afleiðing af Undirstöðusetningu algebrunnar að ef :math:`P` er
-margliða af stigi :math:`m\geq 1` með núllstöðvar
-:math:`\beta_1, \ldots, \beta_k` sem hafa margfeldni
-:math:`m_1,\ldots, m_k` þá er :math:`m=m_1+\cdots+m_k` og
+	Hugsum okkur að :math:`\alpha` sé núllstöð margliðu :math:`P` og :math:`j` sé hæsta talan þannig að
+	:math:`(z-\alpha)^j` gengur upp í :math:`P`,
+	þ.e.a.s. \ :math:`P(z)=(z-\alpha)^jQ(z)` þar sem
+	:math:`Q(\alpha)\neq 0`. Þá segjum við að :math:`\alpha` sé
+	:math:`j`-föld núllstöð og köllum :math:`j` margfeldni núllstöðvarinnar
+	:math:`\alpha`.
 
-.. math::
+.. admonition:: Setning
+	:class: setning
 
- P(z)=A(z-\beta_1)^{m_1}\cdots(z-\beta_k)^{m_k},
+	Það er afleiðing af Undirstöðusetningu algebrunnar að ef :math:`P` er
+	margliða af stigi :math:`m\geq 1` með núllstöðvar
+	:math:`\beta_1, \ldots, \beta_k` sem hafa margfeldni
+	:math:`m_1,\ldots, m_k` þá er :math:`m=m_1+\cdots+m_k` og
 
-þar sem :math:`A` er fasti.
+	.. math::
 
-Skilgreining og setning (Sjá §1.3) 
+	 P(z)=A(z-\beta_1)^{m_1}\cdots(z-\beta_k)^{m_k},
+
+	þar sem :math:`A` er fasti.
+
+Skilgreining og setning (Sjá §1.3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(i) Jafnan :math:`z^n=1` hefur :math:`n` ólíkar lausnir sem kallast :math:`n`-tu einingarrætur og þær eru
+.. admonition:: Setning
+	:class: setning
 
-.. math::
 
- z_k=\cos (k\cdot 2\pi/n)+i\sin (k\cdot 2\pi/n),\qquad k=0, 1, \ldots, n-1.
+	(i) Jafnan :math:`z^n=1` hefur :math:`n` ólíkar lausnir sem kallast :math:`n`-tu einingarrætur og þær eru
 
-(ii) Jafna af taginu :math:`z^n=\alpha=|\alpha|(\cos\phi+i\sin\phi)` hefur :math:`n` ólíkar lausnir og þær eru
+	.. math::
 
-.. math::
+	 z_k=\cos (k\cdot 2\pi/n)+i\sin (k\cdot 2\pi/n),\qquad k=0, 1, \ldots, n-1.
 
-   z_k=|\alpha|^{1/n}\big(\cos (\phi/n+k\cdot 2\pi/n)+
-   i\sin (\phi/n+k\cdot 2\pi/n)\big),\qquad k=0, 1, \ldots, n-1.
+	(ii) Jafna af taginu :math:`z^n=\alpha=|\alpha|(\cos\phi+i\sin\phi)` hefur :math:`n` ólíkar lausnir og þær eru
 
-(iii) Jafna af taginu :math:`z^2=w=u+iv` hefur tvær lausnir sem við köllum kvaðratrætur :math:`w`. Ef :math:`v\neq 0` má rita þær:
+	.. math::
 
-.. math::
+	   z_k=|\alpha|^{1/n}\big(\cos (\phi/n+k\cdot 2\pi/n)+
+	   i\sin (\phi/n+k\cdot 2\pi/n)\big),\qquad k=0, 1, \ldots, n-1.
 
-  z= \pm\left(\sqrt{\tfrac{1}{2}(|w|+u)}+i\;\mathrm{sign}(v)\sqrt{\tfrac{1}{2}(|w|-u)}\right).
+	(iii) Jafna af taginu :math:`z^2=w=u+iv` hefur tvær lausnir sem við köllum kvaðratrætur :math:`w`. Ef :math:`v\neq 0` má rita þær:
 
-þar sem
+	.. math::
 
-.. math::
+	  z= \pm\left(\sqrt{\tfrac{1}{2}(|w|+u)}+i\;\mathrm{sign}(v)\sqrt{\tfrac{1}{2}(|w|-u)}\right).
 
-  {{\operatorname{sign}}}(t)=
-   \begin{cases}
-   1, &t\geq 0,\\
-   -1,&t<0.
-   \end{cases}
+	þar sem
 
-Ef :math:`v=0` fæst tilfellið í liðnum á undan.
+	.. math::
 
-(iv)  (Sjá §1.4)  Jafnan :math:`az^2+bz+c=0` með :math:`a\neq 0` (og :math:`a, b, c` tvinntölur) hefur lausnir
+	  {{\operatorname{sign}}}(t)=
+	   \begin{cases}
+	   1, &t\geq 0,\\
+	   -1,&t<0.
+	   \end{cases}
 
-.. math::
+	Ef :math:`v=0` fæst tilfellið í liðnum á undan.
 
-    z_1=\frac{-b+\sqrt{D}}{2a}\qquad\mbox{ og }\qquad z_2=\frac{-b-\sqrt{D}}{2a}
+	(iv)  (Sjá §1.4)  Jafnan :math:`az^2+bz+c=0` með :math:`a\neq 0` (og :math:`a, b, c` tvinntölur) hefur lausnir
 
-þar sem :math:`D=b^2-4ac` og :math:`\sqrt{D}` táknar aðra lausn jöfnunnar :math:`z^2=D` (sjá aðvörun fyrir neðan). Ef :math:`D` er rauntala og :math:`D\geq 0` tökum við kvaðratrót eins og við erum vön en ef :math:`D<0` má rita lausnirnar
+	.. math::
 
-.. math::
+	    z_1=\frac{-b+\sqrt{D}}{2a}\qquad\mbox{ og }\qquad z_2=\frac{-b-\sqrt{D}}{2a}
 
-    z_1=\frac{-b+i\sqrt{|D|}}{2a}\qquad\mbox{ og }\qquad z_2=\frac{-b-i\sqrt{|D|}}{2a}
+	þar sem :math:`D=b^2-4ac` og :math:`\sqrt{D}` táknar aðra lausn jöfnunnar :math:`z^2=D` (sjá aðvörun fyrir neðan). Ef :math:`D` er rauntala og :math:`D\geq 0` tökum við kvaðratrót eins og við erum vön en ef :math:`D<0` má rita lausnirnar
 
-.. warning::
+	.. math::
+
+	    z_1=\frac{-b+i\sqrt{|D|}}{2a}\qquad\mbox{ og }\qquad z_2=\frac{-b-i\sqrt{|D|}}{2a}
+
+.. admonition:: Aðvörun
+	:class: advorun
 
   Ef :math:`z` er tvinntala hefur táknmálið :math:`\sqrt{z}` almennt ekki merkingu. Ef það er notað þarf ávallt að tilgreina fyrir hvað það stendur.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Rætt fall er kvóti tveggja margliða, :math:`R(z)=P(z)/Q(z)`.  
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Rætt fall er kvóti tveggja margliða, :math:`R(z)=P(z)/Q(z)`.
 
 Stofnbrotaliðun. (Sjá §1 1.5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`R(z)=P(z)/Q(z)` vera rætt fall þar sem stig :math:`P(z)` er lægra en stig :math:`Q(z)`.  
+Látum :math:`R(z)=P(z)/Q(z)` vera rætt fall þar sem stig :math:`P(z)` er lægra en stig :math:`Q(z)`.
 
-Ef :math:`Q(z)=a(z-\alpha_1)\cdots(z-\alpha_m)` þar sem :math:`\alpha_1, \ldots, \alpha_k` eru ólíkar tvinntölur þá eru til fastar :math:`A_1, \ldots, A_k` þannig að 
+Ef :math:`Q(z)=a(z-\alpha_1)\cdots(z-\alpha_m)` þar sem :math:`\alpha_1, \ldots, \alpha_k` eru ólíkar tvinntölur þá eru til fastar :math:`A_1, \ldots, A_k` þannig að
 
 .. math::
 
@@ -387,10 +440,11 @@ Stuðlarnir eru gefnir með
 .. math::
 
   A_j = \frac{P(\alpha_j)}{Q'(\alpha_j)},
-  
-:math:`j=1,..k`. 
 
-.. important::
+:math:`j=1,..k`.
+
+.. admonition:: Athugasemd
+	:class: athugasemd
 
   Við getum diffrað tvinngildar margliður líkt og raungildar margliður með því að nota
 
@@ -398,10 +452,10 @@ Stuðlarnir eru gefnir með
 
     \frac{dz^n}{dz} = n z^{n-1}
 
-  ásamt því að diffrun er línuleg. Réttlæting kemur síðar. 
-  
+  ásamt því að diffrun er línuleg. Réttlæting kemur síðar.
+
 Ef :math:`Q(z)=a(z-\alpha_1)^{m_1}\cdots(z-\alpha_k)^{m_k}`  og :math:`\alpha_1, \ldots, \alpha_k` eru ólíkar tvinntölur þá eru til fastar
-:math:`A_{11},\ldots, ,A_{m_11}, A_{12},\ldots, ,A_{m_12}, \ldots, A_{1k},\ldots, ,A_{m_1k}` þannig að 
+:math:`A_{11},\ldots, ,A_{m_11}, A_{12},\ldots, ,A_{m_12}, \ldots, A_{1k},\ldots, ,A_{m_1k}` þannig að
 
 .. math::
 
@@ -413,7 +467,7 @@ Ef :math:`Q(z)=a(z-\alpha_1)^{m_1}\cdots(z-\alpha_k)^{m_k}`  og :math:`\alpha_1,
    &\qquad \vdots\qquad\qquad\vdots\qquad \qquad \vdots\\
    &+\dfrac{A_{k,0}}{(z-\alpha_k)^{m_k}}+\cdots+\dfrac{A_{k,m_k-1}}{(z-\alpha_k)}\end{aligned}
 
-Stuðlarnir eru gefnir með 
+Stuðlarnir eru gefnir með
 
 .. math::
 
@@ -426,36 +480,43 @@ Stuðlarnir eru gefnir með
 Skilgreining (Sjá §1.6)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Ritum tvinntölu :math:`z` sem
-:math:`z=x+iy` þar sem :math:`x` og :math:`y` eru rauntölur. Skilgreinum
-veldisvísisfallið
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
+	Ritum tvinntölu :math:`z` sem
+	:math:`z=x+iy` þar sem :math:`x` og :math:`y` eru rauntölur. Skilgreinum
+	veldisvísisfallið
 
- e^z=e^{x+iy}=e^x(\cos y+i\sin y).
+	.. math::
 
-Reiknireglur. (Sjá §1.6) 
+	 e^z=e^{x+iy}=e^x(\cos y+i\sin y).
+
+Reiknireglur. (Sjá §1.6)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`z` og :math:`w` vera
-tvinntölur. Þá gildir að
+.. admonition:: Reiknireglur
+	:class: setning
 
-.. math::
+	Látum :math:`z` og :math:`w` vera
+	tvinntölur. Þá gildir að
 
- e^ze^w=e^{z+w}.
+	.. math::
 
-Ef :math:`k` er heiltala þá er :math:`e^{z+k\cdot(2\pi i)}=e^z`, þanng
-að :math:`e^z` er lotubundið fall með lotu :math:`2\pi i`. Ennfremur
-gildir að
+	 e^ze^w=e^{z+w}.
 
-.. math::
+	Ef :math:`k` er heiltala þá er :math:`e^{z+k\cdot(2\pi i)}=e^z`, þanng
+	að :math:`e^z` er lotubundið fall með lotu :math:`2\pi i`. Ennfremur
+	gildir að
 
- \overline{e^z}=e^{\overline{z}}\qquad |e^z|=e^{\operatorname{Re\, } z}\qquad |e^{iy}|=1.
+	.. math::
+
+	 \overline{e^z}=e^{\overline{z}}\qquad |e^z|=e^{\operatorname{Re\, } z}\qquad |e^{iy}|=1.
 
 Fallegasta jafna stærðfræðinnar.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. important::
+.. admonition:: Athugasemd
+	:class: athugasemd
 
     .. math::
         e^{i\pi}+1=0
@@ -473,72 +534,84 @@ Jöfnur Eulers. (Sjá §1.6)
 Skilgreining  (Sjá §1.6)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hægt er að útvíkka hornaföllin og
-breiðbogaföllin yfir á allt tvinntalnaplanið með formúlunum
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
+	Hægt er að útvíkka hornaföllin og
+	breiðbogaföllin yfir á allt tvinntalnaplanið með formúlunum
 
-   \cos z=\frac{e^{iz}+e^{-iz}}{2}\qquad\mbox{ og }\qquad
-   \sin z=\frac{e^{iz}-e^{-iz}}{2i},
+	.. math::
 
- og
+	   \cos z=\frac{e^{iz}+e^{-iz}}{2}\qquad\mbox{ og }\qquad
+	   \sin z=\frac{e^{iz}-e^{-iz}}{2i},
 
-.. math::
+	 og
 
-   \cosh z=\frac{e^{z}+e^{-z}}{2}\qquad\mbox{ og }\qquad
-   \sinh z=\frac{e^{z}-e^{-z}}{2},
+	.. math::
 
-og síðan eru :math:`\tan z, \cot z, \tanh z` og :math:`\coth z`
-skilgreind á augljósan hátt. (Ef :math:`z` er rauntala þá fást sömu
-gildi og við þekkjum.)
+	   \cosh z=\frac{e^{z}+e^{-z}}{2}\qquad\mbox{ og }\qquad
+	   \sinh z=\frac{e^{z}-e^{-z}}{2},
+
+	og síðan eru :math:`\tan z, \cot z, \tanh z` og :math:`\coth z`
+	skilgreind á augljósan hátt. (Ef :math:`z` er rauntala þá fást sömu
+	gildi og við þekkjum.)
 
 :math:`\mathbb{R}`- og :math:`{\mathbb{C}}`-línulegar varpanir
---------------------------------------------------------------  
+--------------------------------------------------------------
 
-Skilgreining og setning (Sjá §1.7) 
+Skilgreining og setning (Sjá §1.7)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Vörpun :math:`L:{\mathbb{C}}\rightarrow {\mathbb{C}}` er sögð línuleg (nákvæmar,
-:math:`\mathbb{R}`-línuleg) ef um sérhverjar tvinntölur :math:`z` og :math:`w`
-og sérhverja rauntölu :math:`c` gildir að
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
+	Vörpun :math:`L:{\mathbb{C}}\rightarrow {\mathbb{C}}` er sögð línuleg (nákvæmar,
+	:math:`\mathbb{R}`-línuleg) ef um sérhverjar tvinntölur :math:`z` og :math:`w`
+	og sérhverja rauntölu :math:`c` gildir að
 
- L(z+w)=L(z)+L(w)\qquad \mbox{ og }\qquad L(cz)=cL(z).
+	.. math::
+
+	 L(z+w)=L(z)+L(w)\qquad \mbox{ og }\qquad L(cz)=cL(z).
 
 Setning
 ~~~~~~~
 
-Látum :math:`L:{\mathbb{C}}\rightarrow {\mathbb{C}}` vera
-línulega vörpun. Samsömum tvinntölu :math:`x+iy` við vigur
-:math:`(x,y)\in \mathbb{R}^2`. Nú má hugsa :math:`L` sem vörpun
-:math:`\mathbb{R}^2\rightarrow \mathbb{R}^2`. Þá er :math:`L` línuleg vörpun og til eru
-rauntölur :math:`a, b, c, d` þannig að fyrir allar rauntölur :math:`x`
-og :math:`y` er (ef ekki er gerður munur á dálkvigrum og línuvigrum)
+.. admonition:: Setning
+	:class: setning
 
-.. math::
+	Látum :math:`L:{\mathbb{C}}\rightarrow {\mathbb{C}}` vera
+	línulega vörpun. Samsömum tvinntölu :math:`x+iy` við vigur
+	:math:`(x,y)\in \mathbb{R}^2`. Nú má hugsa :math:`L` sem vörpun
+	:math:`\mathbb{R}^2\rightarrow \mathbb{R}^2`. Þá er :math:`L` línuleg vörpun og til eru
+	rauntölur :math:`a, b, c, d` þannig að fyrir allar rauntölur :math:`x`
+	og :math:`y` er (ef ekki er gerður munur á dálkvigrum og línuvigrum)
 
-   L(x,y)=(ax+by, cx+dy)=\begin{bmatrix}a&b\\c&d\end{bmatrix}
-   \begin{bmatrix}x\\y\end{bmatrix}.
+	.. math::
 
-Ef við ritum :math:`A=\frac{1}{2}\big((a+d)+i(c-b)\big)` og
-:math:`B=\frac{1}{2}\big((a-d)+i(c+b)\big)` þá gildir fyrir sérhverja
-tvinntölu :math:`z=x+iy` að
+	   L(x,y)=(ax+by, cx+dy)=\begin{bmatrix}a&b\\c&d\end{bmatrix}
+	   \begin{bmatrix}x\\y\end{bmatrix}.
 
-.. math::
+	Ef við ritum :math:`A=\frac{1}{2}\big((a+d)+i(c-b)\big)` og
+	:math:`B=\frac{1}{2}\big((a-d)+i(c+b)\big)` þá gildir fyrir sérhverja
+	tvinntölu :math:`z=x+iy` að
 
- L(z)=Az+B\overline{z}.
+	.. math::
+
+	 L(z)=Az+B\overline{z}.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Vörpun :math:`L:{\mathbb{C}}\rightarrow {\mathbb{C}}` er sögð
-:math:`{\mathbb{C}}`-línuleg ef um sérhverjar tvinntölur :math:`z` og :math:`w` og
-sérhverja tvinntölu :math:`c` gildir að
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
+	Vörpun :math:`L:{\mathbb{C}}\rightarrow {\mathbb{C}}` er sögð
+	:math:`{\mathbb{C}}`-línuleg ef um sérhverjar tvinntölur :math:`z` og :math:`w` og
+	sérhverja tvinntölu :math:`c` gildir að
 
- L(z+w)=L(z)+L(w)\qquad \mbox{ og }\qquad L(cz)=cL(z).
+	.. math::
+
+	 L(z+w)=L(z)+L(w)\qquad \mbox{ og }\qquad L(cz)=cL(z).
 
 (Athugið að sérhver :math:`{\mathbb{C}}`-línuleg vörpun er líka
 :math:`\mathbb{R}`-línuleg, en ekki öfugt.)
@@ -546,62 +619,76 @@ sérhverja tvinntölu :math:`c` gildir að
 Setning
 ~~~~~~~
 
-Sérhverja :math:`{\mathbb{C}}`-línulega vörpun má
-rita sem :math:`L(z)=Az` þar sem :math:`A` er tvinntala.
+.. admonition:: Setning
+	:class: setning
+
+	Sérhverja :math:`{\mathbb{C}}`-línulega vörpun má
+	rita sem :math:`L(z)=Az` þar sem :math:`A` er tvinntala.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Vörpun :math:`{\mathbb{C}}\to {\mathbb{C}}` af gerðinni
-:math:`z\mapsto z+a`, þar sem :math:`a\in {\mathbb{C}}` nefnist hliðrun.
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-Vörpun af gerðinni :math:`z\mapsto az`, nefnist snúningur, ef
-:math:`a\in {\mathbb{C}}` og :math:`|a|=1`, hún nefnist stríkkun ef :math:`a\in
-\mathbb{R}` og :math:`|a|>1` og herping, ef :math:`a\in \mathbb{R}` og :math:`|a|<1`, en
-almennt nefnist hún snústríkkun ef :math:`a\in {\mathbb{C}}\setminus \{0\}`.
+	Vörpun :math:`{\mathbb{C}}\to {\mathbb{C}}` af gerðinni
+	:math:`z\mapsto z+a`, þar sem :math:`a\in {\mathbb{C}}` nefnist hliðrun.
 
-Vörpunin :math:`{\mathbb{C}}\setminus \{0\} \to {\mathbb{C}}\setminus \{0\}`,
-:math:`z\mapsto 1/z` nefnist umhverfing.
+	Vörpun af gerðinni :math:`z\mapsto az`, nefnist snúningur, ef
+	:math:`a\in {\mathbb{C}}` og :math:`|a|=1`, hún nefnist stríkkun ef :math:`a\in
+	\mathbb{R}` og :math:`|a|>1` og herping, ef :math:`a\in \mathbb{R}` og :math:`|a|<1`, en
+	almennt nefnist hún snústríkkun ef :math:`a\in {\mathbb{C}}\setminus \{0\}`.
+
+	Vörpunin :math:`{\mathbb{C}}\setminus \{0\} \to {\mathbb{C}}\setminus \{0\}`,
+	:math:`z\mapsto 1/z` nefnist umhverfing.
 
 Skilgreining
 ~~~~~~~~~~~~
 
-Vörpun :math:`f:{\mathbb{C}}\rightarrow{\mathbb{C}}` af gerðinni
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math::
+	Vörpun :math:`f:{\mathbb{C}}\rightarrow{\mathbb{C}}` af gerðinni
 
- f(z)=\dfrac{az+b}{cz+d}, \qquad ad-bc\neq 0, \quad a,b,c,d\in {\mathbb{C}},
+	.. math::
 
-kallast brotin línuleg vörpun (eða brotin línuleg færsla eða
-Möbiusarvörpun). Við sjáum að :math:`f(z)` er skilgreint fyrir öll
-:math:`z\in {\mathbb{C}}`, ef :math:`c=0`, en fyrir öll :math:`z\neq -d/c`, ef
-:math:`c\neq 0`.
+	 f(z)=\dfrac{az+b}{cz+d}, \qquad ad-bc\neq 0, \quad a,b,c,d\in {\mathbb{C}},
 
-Setning
-~~~~~~~
-
-Sérhver brotin línuleg vörpun er samskeyting af hliðrunum,
-snústríkunum og umhverfingum.
+	kallast brotin línuleg vörpun (eða brotin línuleg færsla eða
+	Möbiusarvörpun). Við sjáum að :math:`f(z)` er skilgreint fyrir öll
+	:math:`z\in {\mathbb{C}}`, ef :math:`c=0`, en fyrir öll :math:`z\neq -d/c`, ef
+	:math:`c\neq 0`.
 
 Setning
 ~~~~~~~
 
-Sérhver brotin línuleg vörpun varpar hring í :math:`{\mathbb{C}}` á
-hring eða línu og hún varpar línu á hring eða línu.
+.. admonition:: Setning
+	:class: setning
 
-.. ggb:: 2384599
-  :width: 700
-  :height: 364
-  :img: stikaferill.png
-  :imgwidth: 4cm
-  :zoom_drag: true 
+	Sérhver brotin línuleg vörpun er samskeyting af hliðrunum,
+	snústríkunum og umhverfingum.
 
+Setning
+~~~~~~~
 
-.. ggb:: bbhtpsvx
-  :width: 700
-  :height: 400
-  :img: polarggb.png
-  :imgwidth: 4cm
-  :zoom_drag: true 
+.. admonition:: Setning
+	:class: setning
+
+	Sérhver brotin línuleg vörpun varpar hring í :math:`{\mathbb{C}}` á
+	hring eða línu og hún varpar línu á hring eða línu.
+
+	.. ggb:: 2384599
+	  :width: 700
+	  :height: 364
+	  :img: stikaferill.png
+	  :imgwidth: 4cm
+	  :zoom_drag: true
+
+	.. ggb:: bbhtpsvx
+	  :width: 700
+	  :height: 400
+	  :img: polarggb.png
+	  :imgwidth: 4cm
+	  :zoom_drag: true
 
 Hér má sjá hvert brotin línuleg vörpun :math:`f` með stika :math:`a,b,c,d` líkt og að ofan, varpar línunni Form1 og hringnum Form2 í tvinntalaplaninu. Hægt er að breyta gildum stikanna með því að draga þá til með músinni.

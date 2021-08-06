@@ -4,23 +4,23 @@ Markgildi og samfelldni
 .. admonition:: Nauðsynleg undirstaða
   :class: athugasemd
 
-    -  Jafna línu, P.2
+    -  Jafna línu
 
-    -  Jafna hrings, P.3
+    -  Jafna hrings
 
-    -  Hliðrun og skölun grafs, P.3
+    -  Hliðrun og skölun grafs
 
-    -  (Stranglega) minnkandi og (stranglega) vaxandi föll, 2.8
+    -  (Stranglega) minnkandi og (stranglega) vaxandi föll
 
-    -  Jafnstæð og oddstæð föll, P.4
+    -  Jafnstæð og oddstæð föll
 
-    -  Margliður; deiling, þáttun og rætur, P.6
+    -  Margliður; deiling, þáttun og rætur
 
-    -  Tölugildisfallið, P.1
+    -  Tölugildisfallið
 
-    -  Þríhyrningsójafnan, P.1
+    -  Þríhyrningsójafnan
 
-    -  Formerkjafallið, :math:`sgn(x)`, P.5
+    -  Formerkjafallið, :math:`sgn(x)`
 
 
 ---------
@@ -624,8 +624,8 @@ Dæmi: Markgildið :math:`\infty`
 
 ------
 
-Markgildi þegar :math:`x` stefnir á óendanlegt
------------------------------------------------
+Markgildi þegar x stefnir á óendanlegt
+---------------------------------------
 
 .. image:: ./myndir/kafli02/06_liminf.png
 	:align: center

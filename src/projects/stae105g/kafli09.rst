@@ -4,9 +4,9 @@ Runur og raðir
 .. admonition:: Nauðsynleg undirstaða
   :class: athugasemd
 
-	- Eitthvað
+	- Föll
 
-	- Eitthvað
+	- Markgildi
 
 ------
 
@@ -62,7 +62,7 @@ tákna með
 
 .. math:: \{2^n\}_{n=1}^\infty \text{ eða eindaldlega } \{2^n\}.
 
-Runum má líka lísa með *rakningarvenslum*. Þá er sagt að
+Runum má líka lýsa með *rakningarvenslum*. Þá er sagt að
 
 .. math::
   \begin{cases}
@@ -100,12 +100,18 @@ kölluð *mismunaruna*) og *geómetrísk runa*.
 jafnmunaruna því það munar 4 á öllum liðunum og má nota rakningarvenslin
 
 .. math::
-  \begin{cases}
-    a_1=3\\
-    a_n = a_{n-1}+4, & n \geq 4
-  \end{cases}
+	\begin{cases}
+		a_1=3\\
+		a_n = a_{n-1}+4, & n \geq 2
+	\end{cases}
 
-til að lýsa henni. Almennt má skrifa jafnmunarunu á forminu :math:`a_n=cn+b`.
+til að lýsa henni. Þar sem fyrsti liður rununnar er :math:`3` og mismunur á milli liða er
+:math:`4` má einnig lýsa :math:`n`-ta lið rununnar með
+
+.. math:: a_n=3n+4.
+
+Jafnmunarunur hafa almennt lokaða formið :math:`a_n=cn+b` þar sem :math:`a_1 = c` er
+fyrsti liður rununnar og :math:`b` er mismunurmunurinn aðliggjandi liða.
 
 Í **geómetrískri runu** er hlutfallið milli allra liða það sama. Til að mynda er
 runan
@@ -122,11 +128,12 @@ geómetrísk runa því hlutfallið milli hverra tveggja aðliggjandi liða er
   \end{cases}
 
 til að lýsa henni. Þar sem fyrsti liður rununnar er :math:`2` og hlutfallið :math:`-\frac{1}{3}`
-þá má einnig lýsa :math:`n`-ta lið í rununni með lokaða forminu
+má lýsa :math:`n`-ta lið rununnar með
 
 .. math:: a_n = 2\left(-\frac{1}{3}\right)^{n-1}.
 
-Almennt má skrifa geómetríska runu á forminu :math:`a_n=cr^n`.
+Almennt hefur geómetrísk runa lokaða formið :math:`a_n=cr^{n-1}` þar sem :math:`c` er
+fyrsti liður rununnar og :math:`a_1=r` er hlutfallið milli aðliggjandi liða.
 
 Dæmi: Lokað form
 ~~~~~~~~~~~~~~~~~
@@ -141,7 +148,7 @@ Dæmi: Lokað form
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Teljarar brotanna eru :math:`3,9,27,81,243, \dots` á meðan nefarar þeirra eru :math:`4,7,10,13,16, \dots`.
+	Teljarar brotanna eru :math:`3,9,27,81,243, \dots` á meðan nefnarar þeirra eru :math:`4,7,10,13,16, \dots`.
 	Við sjáum að fyrri runan er geómetrísk runa þar sem sérhver liður er þrefalt stærri
 	en liðurinn á undan á meðan seinni runan er jafnmunaruna þar sem það munar 3 á
 	hverjum tveimur aðliggjandi liðum. Fyrri rununni má því lýsa með :math:`3^n` en
@@ -187,7 +194,7 @@ Markgildi runa
 
 Ein af þeim grundvallarspurningum sem hægt er að spurja þegar kemur að runum er
 hvernig runan hegðar sér þegar knévísirinn :math:`n` stefnir á :math:`\infty`.
-Þar sem runa er fall sem er skilgrein á náttúrulegu tölunum er rökrétt að
+Þar sem runa er fall sem er skilgreint á náttúrulegu tölunum er rökrétt að
 leiða hugann að því hvort allir liðirnir stefni á sama gildið, þ.e. hvort
 markgildi liðanna í rununni sé samleitið.
 
@@ -268,7 +275,7 @@ Setning: Markgildi runu skilgreint með falli
 
 	er sagt að runan sé samleitin og
 
-	.. math:: \lim_{n \rightarrow \infty a_n} = L.
+	.. math:: \lim_{n \rightarrow \infty} a_n = L.
 
 	Við getum notað þessa setningu til að meta markgildið
 
@@ -311,8 +318,8 @@ Setning: Markgildisreglur fyrir runur
   :class: setning
 
 	Látum :math:`\{a_n\}` og :math:`\{b_n\}` vera gefnar runur og :math:`c` einhverja
-	rauntölu. Ef til eru fastar :math:`A` og :math:`B` þannig að :math:`\lim_{n \rightarrow \rightarrow} a_n = A`
-	og :math:`\lim_{n \rightarrow \rightarrow} b_n = B` gildir
+	rauntölu. Ef til eru fastar :math:`A` og :math:`B` þannig að :math:`\lim_{n \rightarrow \infty} a_n = A`
+	og :math:`\lim_{n \rightarrow \infty} b_n = B` gildir
 
 	  #. :math:`\lim_{n \rightarrow \infty} c = c`
 
@@ -335,6 +342,9 @@ Dæmi: Ákvarða samleitni og reikna markgildið
 	.. math:: \left\{5 - \frac{3}{n^2} \right\}
 
 	sé samleitin og ef svo er reiknum þá markgildi hennar.
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	Við vitum að :math:`1/n \rightarrow 0` og því gildir að
 
@@ -404,6 +414,9 @@ Dæmi: Klemmureglan fyrir runur
 
 	.. math:: \left\{ \frac{\cos(n)}{n^2}\right \}.
 
+.. admonition:: Lausn
+	:class: daemi, dropdown
+
 	Þar sem :math:`-1 \leq \cos(n) \leq 1` fyrir allar heiltölur :math:`n` höfum við að
 
 	.. math:: -\frac{1}{n^2} \leq \frac{\cos(n)}{n} \leq \frac{1}{n^2}.
@@ -416,8 +429,8 @@ Dæmi: Klemmureglan fyrir runur
 Takmarkaðar runur
 ~~~~~~~~~~~~~~~~~~
 
-Við beinum nú sjónum okkar að einni mikilvægustu setningum sem við kemur runum,
-setningin um einhalla samleitni.
+Við beinum nú sjónum okkar að einni mikilvægustu setningu stærðfræðgreingarinnar sem við kemur runum,
+setningin um einhalla samleitni. Við þurfum hins vegar að byrja á því að skilgreina örfá hugtök.
 
 Skilgreining: Takmörkun
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -478,7 +491,7 @@ Skilgreining: Einhalla runa
 	Runa :math:`\{a_n\}` er sögð *einhalla* fyrir öll :math:`n \geq n_0` er hún
 	er vaxandi fyrir öll :math:`n \geq n_0` eða minnkandi fyrir öll :math:`n \geq n_0`.
 
-	Þá er ekkert annað að gera en að setja fram setninguna um einhalla runur.
+Þá er ekkert annað að gera en að setja fram setninguna um einhalla runur.
 
 Setning: Setningin um einhalla runur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -576,18 +589,18 @@ Skilreining: Röð
 
 	Ef runa hlutsumanna er ósamleitin segjum við að *röðin sé ósamleitin*.
 
-	Athugum að röðin þarf ekki að byrja í :math:`n=1`, ef þörf krefst má byrja
-	röðina í :math:`n=0` eða :math:`n=-1` eða hvaða tölu sem er. Sem dæmi þá er
-	röðin
+Athugum að röðin þarf ekki að byrja í :math:`n=1`, ef þörf krefst má byrja
+röðina í :math:`n=0` eða :math:`n=-1` eða hvaða tölu sem er. Sem dæmi þá er
+röðin
 
-	.. math:: \sum_{n=2} \frac{1}{n^2}
+.. math:: \sum_{n=2} \frac{1}{n^2}
 
-	fullkomlega fullgild röð. Ef við viljum skrifa hana þannig að summuvísirinn
-	byrji í 1 má nota innsetningu með :math:`m=n+1` og fæst þá
+fullkomlega fullgild röð. Ef við viljum skrifa hana þannig að summuvísirinn
+byrji í 1 má nota innsetningu með :math:`m=n+1` og fæst þá
 
-	.. math:: \sum_{m=1}^\infty \frac{1}{(m+1)^2}
+.. math:: \sum_{m=1}^\infty \frac{1}{(m+1)^2}
 
-	sem er algerlega jafngild framsetning af sömu röðinni.
+sem er algerlega jafngild framsetning af sömu röðinni.
 
 Dæmi: Markgildi hlutsumma
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -611,7 +624,7 @@ Dæmi: Markgildi hlutsumma
 		S_1 &= \frac{1}{2}\\
 		S_2 &= \frac{1}{2}+\frac{2}{3}\\
 		S_3 &= \frac{1}{2}+\frac{2}{3}+\frac{3}{4}\\
-		S_4 &= \frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}\\
+		S_4 &= \frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}.\\
 		\end{align}
 
 	Athugum að hverjum lið sem bætt er við er stærri en :math:`1/2`. Af því leiðir að
@@ -626,19 +639,23 @@ Dæmi: Markgildi hlutsumma
 
 	Út frá þessu mynstri sést að :math:`S_k > k\left(\frac{1}{2}\right)` fyrir
 	sérhverja heiltölu :math:`k`. Þar með er :math:`\{S_k\}` ótakmörkuð og
-	þar með ósamleitin. Því fæst að röðin
+	því ósamleitin. Því fæst að röðin
 
 	.. math:: \sum_{n=1}^\infty \frac{n}{n+1}
 
 	er ósamleitin.
 
-Harmoníska röðin
-~~~~~~~~~~~~~~~~~
+Skilgreining: Harmoníska röðin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gagnlegt getur verið að kannast við harmonísku röðina (e. *the harmonic series*).
-Hún er skilgreind sem
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-.. math:: \sum_{n=1}^\infty 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots .
+	 Röðin
+
+	.. math:: \sum_{n=1}^\infty 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots .
+
+	nefnist *harmoníska röðin* (e. *the harmonic series*).
 
 Harmoníska röðin er áhugaverð að því leyti að hún er ósamleitin en verður það afar hægt.
 Það er ekki auðvelt að sjá það út undan sér að hún sé ósamleitin,
@@ -667,7 +684,7 @@ Dæmi: Reiknireglur um samleitnar raðir
 
 	Metum
 
-	.. math:: \sum_{n=1}^\infty \left( \frac{3}{n(n+1)} + \left(\frac{1}{2}\right)^{n-2} \right).
+	.. math:: \sum_{n=1}^\infty \left( \frac{3}{n(n+1)} + \left(\frac{1}{2}\right)^{n-2} \right)
 
 	af því gefnu að vitað sé að
 
@@ -676,6 +693,9 @@ Dæmi: Reiknireglur um samleitnar raðir
 	og
 
 	.. math:: \sum_{n=1}^\infty \left(\frac{1}{2}\right)^{n-1} = 2.
+
+.. admonition:: Lausn
+	:class: daemi, dropdown
 
 	Fáum samkvæmt reglum um samleitnar raðir að
 
@@ -697,8 +717,8 @@ Skilgreining: Geómetrísk röð
 
 	.. math:: a+ar+ar^2+ar^3+\dots = \sum_{n=1}^\infty ar^{n-1}.
 
-	Þar sem hlutfallið milli aðliggjandi liða er :math:`r` er :math:`r` nefnd *hlutfallstala* raðarinnar
-	og talan :math:`a` er nefnd *fyrsti liður raðarinnar*.
+	Þar sem hlutfallið milli aðliggjandi liða er táknað með :math:`r` og nefnist *hlutfallstala* raðarinnar
+	og talan :math:`a` er nefnist *fyrsti liður raðarinnar*.
 
 	Ef :math:`|r|<1` er röðin samleitin og
 
@@ -780,7 +800,7 @@ Dæmi: Kíkisröð
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Ef við skrifum út liði hlutsummanna fáum vi ðað
+	Ef við skrifum út liði hlutsummanna fáum við að
 
 	.. math::
 		\begin{align}
@@ -796,7 +816,7 @@ Dæmi: Kíkisröð
 
 	Þar sem :math:`1/(k+1) \rightarrow 0` þegar :math:`k \rightarrow 0` og
 	:math:`\cos(x)` er samfellt fall þá gildir að :math:`\cos(1/(k+1)) \rightarrow \cos(0)=1`.
-	Þar með gildir að :math:`S_k \rightarrow \cos(1)-1`. Kíkisröðin er því samleitin og
+	Þar með fæst að :math:`S_k \rightarrow \cos(1)-1`. Kíkisröðin er því samleitin og
 	summa hennar er gefin með
 
 	.. math:: \sum_{n=1}^\infty \left( \cos\left(\frac{1}{n}\right) - \cos\left(\frac{1}{n+1}\right) \right) = \cos(1) - 1.
@@ -806,7 +826,7 @@ Dæmi: Kíkisröð
 Sundurleitnipróf og heildispróf
 --------------------------------
 
-Ef röðin :math:`\sum_{n=1}^\infty a_n` á að vera samleitin verður að gildanna
+Ef röðin :math:`\sum_{n=1}^\infty a_n` á að vera samleitin verður að gilda
 að :math:`a_n \rightarrow 0` þegar :math:`n \rightarrow \infty`. Því er hægt að setja
 fram eftirfarandi setningu.
 
@@ -831,7 +851,7 @@ Setning: Sundurleitnipróf
 	.. math:: \sum_{n=1}^\infty a_n
 
 	sé samleitin. Við segjum við að :math:`\lim_{n \rightarrow \infty} a_n = 0` sé
-	nauðsynleg en ekki nægjanleg forsenda fyrir samleitni raða.
+	nauðsynleg en ekki nægjanleg forsenda fyrir samleitni raðar.
 
 --------
 
@@ -839,8 +859,6 @@ Heildisprófið
 --------------
 
 Heildisprófið gerir samanburð á milli óendanlegrar summu og óeiginlegs heildis.
-Skal það tekið fram að prófið virkar eingöngu fyrir raðir sem hafa einungis
-jákvæða liði.
 
 Setning: Heildisprófið
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -848,7 +866,7 @@ Setning: Heildisprófið
 .. admonition:: Setning
   :class: setning
 
-	Gerum ráð fyrir að :math:`\sum_{n=1}^\infty` sé röð af jákvæðum liðum :math:`a_n`þ
+	Gerum ráð fyrir að :math:`\sum_{n=1}^\infty a_i` sé röð af jákvæðum liðum :math:`a_n`þ
 	Gerum einnig ráð fyrir að til sé fall :math:`f` og jákvæð heiltala :math:`N`
 	þannig að eftirfarandi þrjú skilyrði séu uppfyllt:
 
@@ -858,11 +876,12 @@ Setning: Heildisprófið
 
 		#. :math:`f(n)=a_n` fyrir allar heiltölur :math:`n \geq N`.
 
-	Þá gildir ar
+	Þá gildir að
 
 	.. math:: \int_{n=1}^\infty a_n \text{ og } \int_N^\infty f(x) dx.
 
-	Athugum að jafnvel þó :math:`\int_N^\infty f(x) dx` sé samleitið hafi það í
+	eru annað hvort bæði samleitin eða bæði ósamleitin.
+	Athugum að jafnvel þó samleitni heildisins :math:`\int_N^\infty f(x) dx` hafi það í
 	för með sér að :math:`\sum_{n=1}^\infty a_n` sé samleitið þýðir það ekki að
 	gildi þeirra er það saman.
 
@@ -999,7 +1018,7 @@ látum
 
 .. math:: R_n = \sum_{n=1}^\infty a_n - \sum_{n=1}^N a_n
 
-hve stórt er :math:`R_N`? Sumar raðir leyfa okkur að nota svipaða aðferðarfræði
+hve stórt er þá :math:`R_N`? Sumar raðir leyfa okkur að nota svipaða aðferðarfræði
 og notuð er í heildisprófinu til að meta *skekkjuna* :math:`R_n`.
 
 Setning: Skekkjumat
@@ -1024,7 +1043,7 @@ Setning: Skekkjumat
 
 	.. math:: S_n + \int_{N+1}^\infty f(x) dx < \sum_{n=1}^\infty a_n < S_n + \int_N^\infty f(x) dx.
 
-	Með öðrum orðum þá uppfyllgir afgangurinn
+	Með öðrum orðum þá uppfyllir skekkjan
 
 	.. math:: R_n = \sum_{n=1}^\infty  a_n - S_n = \sum_{n=N+1}^\infty a_n
 
@@ -1044,40 +1063,42 @@ Dæmi: Skekkjumat
 
 	.. math:: \sum_{n=1}^\infty 1/n^3.
 
-	a. Reiknum hlutsummuna :math:`S_{10} = \sum_{n=1}^{10} 1/n^3` og metum skekkjuna.
+	a) Reiknum hlutsummuna :math:`S_{10} = \sum_{n=1}^{10} 1/n^3` og metum skekkjuna.
 
-	b. Ákvörðum minnsta gildið á :math:`N` sem uppfyllir að skekkjan sé minni en :math:`0,001`.
+	b) Ákvörðum minnsta gildið á :math:`N` sem uppfyllir að skekkjan sé minni en :math:`0,001`.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	a. Reiknum og fáum að
+	a) Lausn:
+		Reiknum og fáum að
 
-	.. math:: S_{10} = 1 + \frac{1}{2^3} + \frac{1}{3^3} + \frac{1}{4^3} + \dots + \frac{1}{10^3} \approx 1,19753.
+		.. math:: S_{10} = 1 + \frac{1}{2^3} + \frac{1}{3^3} + \frac{1}{4^3} + \dots + \frac{1}{10^3} \approx 1,19753.
 
-	skekkjumatið gefur okkur að
+		Skekkjumatið gefur okkur að
 
-	.. math:: R_n < \int_N^\infty \frac{1}{x^3} dx.
+		.. math:: R_n < \int_N^\infty \frac{1}{x^3} dx.
 
-	Við höfum því að
+		Við höfum því að
 
-	.. math::
-		\begin{align}
-			\int_{10}^\infty \frac{1}{x^3} dx &= \lim_{b \rightarrow \infty} \int_{10}^\infty \frac{1}{x^3}\\
-			&= \lim_{b \rightarrow \infty} \left[-\frac{1}{2x^2}\right]_N^b\\
-			&= \lim_{b \rightarrow \infty} \left(-\frac{1}{2b^2} + \frac{1}{2N^2}\right)\\
-			&= \frac{1}{2N^2}.
-		\end{align}
+		.. math::
+			\begin{align}
+				\int_{10}^\infty \frac{1}{x^3} dx &= \lim_{b \rightarrow \infty} \int_{10}^\infty \frac{1}{x^3} dx\\
+				&= \lim_{b \rightarrow \infty} \left[-\frac{1}{2x^2}\right]_N^b\\
+				&= \lim_{b \rightarrow \infty} \left(-\frac{1}{2b^2} + \frac{1}{2N^2}\right)\\
+				&= \frac{1}{2N^2}.
+			\end{align}
 
-	Svo skekkjan er :math:`R_{10} < \frac{1}{2\cdot 10^2} = 0,005`.
+		Svo skekkjan er :math:`R_{10} < \frac{1}{2\cdot 10^2} = 0,005`.
 
-	b. Í a. hluta sýndum við að :math:`R_N < \frac{1}{2N^2}`. Þar með er
-	skekkjan :math:`R_N < 0,001` svo lengi sem :math:`\frac{1}{2N^2} < 0,001`. Ef við
-	einangrum :math:`N^2` fæst að :math:`N^2 > 500`. Við getum nú tekið rótina af báðum hliðum
-	ójöfnunnar og þar sem :math:`N` er jákvæð tala fæst að lausnin sé :math:`N > 22,36`.
-	Þar sem :math:`N` er heil tala þurfum við að námunda upp í næstu heilu tölu til
-	að tryggja að skekkjan sé innan þeirra marga sem óskað var eftir. Því fæst að minnsta
-	gildið sé :math:`N=23`.
+	b) Lausn:
+		Í a. hluta sýndum við að :math:`R_N < \frac{1}{2N^2}`. Þar með er
+		skekkjan :math:`R_N < 0,001` svo lengi sem :math:`\frac{1}{2N^2} < 0,001`. Ef við
+		einangrum :math:`N^2` fæst að :math:`N^2 > 500`. Við getum nú tekið rótina af báðum hliðum
+		ójöfnunnar og þar sem :math:`N` er jákvæð tala fæst að lausnin sé :math:`N > 22,36`.
+		Þar sem :math:`N` er heil tala þurfum við að námunda upp í næstu heilu tölu til
+		að tryggja að skekkjan sé innan þeirra marga sem óskað var eftir. Því fæst að minnsta
+		gildið sé :math:`N=23`.
 
 Samanburðarprófið
 ------------------
@@ -1088,7 +1109,7 @@ Setning: Samanburðarprófið
 .. admonition:: Setning
   :class: setning
 
-		#. Gerum ráð fyrir að til sé heil tala :math:`N` þannig að :math:`\leq a_n \leq b_n` fyrir öll :math:`n \geq N`. Ef :math:`\sum_{n=1}^\infty b_n` er samleitið þá er :math:`\sum_{n=1}^\infty a_n` það einnig.
+		#. Gerum ráð fyrir að til sé heil tala :math:`N` þannig að :math:`0 \leq a_n \leq b_n` fyrir öll :math:`n \geq N`. Ef :math:`\sum_{n=1}^\infty b_n` er samleitið þá er :math:`\sum_{n=1}^\infty a_n` það einnig.
 
 		#. Gerum ráð fyrir að til sé heil tala :math:`N` þannig að :math:`a_n \geq b_n \geq 0` fyrir öll :math:`n \geq N`. Ef :math:`\sum_{n=1}^\infty b_n` er ósamleitin þá er :math:`\sum_{n=1}^\infty a_n` það einnig.
 
@@ -1122,13 +1143,13 @@ Setning: Samanburður með markgildi
 .. admonition:: Setning
   :class: setning
 
-	Látum :math:`a_,b_n \geq 0` fyrir öll :math:`n \geq 1`.
+	Látum :math:`a_n,b_n \geq 0` fyrir öll :math:`n \geq 1`.
 
-		#. Ef :math:`\lim_{n \ rightarrow \infty} a_n/b_n = L \neq 0` þá eru :math:`\sum_{n=1}^\infty a_n` og :math:`\sum_{n=1}^\infty b_n` annað hvort báðar samleitnar eða ósamleitnar.
+		#. Ef :math:`\lim_{n \rightarrow \infty} a_n/b_n = L \neq 0` þá eru :math:`\sum_{n=1}^\infty a_n` og :math:`\sum_{n=1}^\infty b_n` annað hvort báðar samleitnar eða ósamleitnar.
 
-		#. Ef :math:`\lim_{n \ rightarrow \infty} a_n/b_n = 0` og :math:`\sum_{n=1}^\infty b_n` er samleitið þá er :math:`\sum_{n=1}^\infty a_n` það einnig.
+		#. Ef :math:`\lim_{n \rightarrow \infty} a_n/b_n = 0` og :math:`\sum_{n=1}^\infty b_n` er samleitin þá er :math:`\sum_{n=1}^\infty a_n` það einnig.
 
-		#. Ef :math:`\lim_{n \ rightarrow \infty} a_n/b_n = \infty` og :math:`\sum_{n=1}^\infty b_n` er ósamleitið þá er :math:`\sum_{n=1}^\infty a_n` það einnig.
+		#. Ef :math:`\lim_{n \rightarrow \infty} a_n/b_n = \infty` og :math:`\sum_{n=1}^\infty b_n` er ósamleitin þá er :math:`\sum_{n=1}^\infty a_n` það einnig.
 
 Dæmi: Samanburður með markgildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1142,10 +1163,16 @@ Dæmi: Samanburður með markgildi
 
 	sé samleitin eða ekki.
 
+.. admonition:: Lausn
+	:class: daemi, dropdown
+
 	Berum röðina :math:`\sum_{n=1}^\infty \frac{1}{\sqrt{n}+1}` saman við :math:`\sum_{n=1}^\infty \frac{1}{\sqrt{n}}`.
 	Reiknum markgildið
 
 	.. math:: \lim_{n \rightarrow \infty} \frac{1/(\sqrt{n}+1)}{1/\sqrt{n}} = \lim_{n \rightarrow \infty} \frac{1}{1+1/\sqrt{n}} = 1
+
+	Með því að nota samanburð með markgildi fæst að þar sem röðin :math:`\sum_{n=1}^\infty \frac{1}{\sqrt{n}}` er ósamleitin er röðin
+	:math:`\sum_{n=1}^\infty \frac{1}{\sqrt{n}+1}` það einnig.
 
 -----
 
@@ -1169,7 +1196,7 @@ Skilgreining: Víxlmerkjaröð
 	Sérhver röð sem hefur liði sem skiptast á að vera jákvæðir og neikvæðir á mis
 	er kölluð *víxlmerkjaröð*. Víxlmerkjaröð má skrifa á forminu
 
-	.. math:: \sum_{(-1)^{n+1} b_n} = b_1 - b_2 + b_3 - b_4 + \dots
+	.. math:: \sum_{n=1}^\infty (-1)^{n+1} b_n = b_1 - b_2 + b_3 - b_4 + \dots
 
 	eða
 
@@ -1183,9 +1210,9 @@ Setning: Próf fyrir víxlmerkjaraðir
 .. admonition:: Setning
   :class: setning
 
-	Víxlmerkaröð á forminu
+	Víxlmerkjaröð á forminu
 
-	.. math:: \sum_{(-1)^{n+1} b_n} \text{ eða } \sum_{n=1}^\infty (-1)^n b_n
+	.. math:: \sum_{n=1}^\infty (-1)^{n+1} b_n \text{ eða } \sum_{n=1}^\infty (-1)^n b_n
 
 	er samleitin ef
 
@@ -1204,12 +1231,14 @@ Dæmi: Próf fyrir víxlmerkjaröð
 
 	.. math:: \sum_{n=1}^\infty (-1)^{n+1}/n^2
 
+	sé samleitin eða ekki.
+
 .. admonition:: Lausn
   :class: daemi, dropdown
 
 	Þar sem
 
-	.. math:: \frac{1}{(n+1)^2} < \frac{1}{n^3}
+	.. math:: \frac{1}{(n+1)^2} < \frac{1}{n^2}
 
 	og
 
@@ -1227,8 +1256,8 @@ Setning: Skekkja í víxlmerkjaröðum
 
 	.. math:: \sum_{n=1}^\infty (-1)^{n+1} b_n \text{ eða } \sum_{n=1}^\infty (-1)^n b_n
 
-	sem uppfyllir skilyrði prófsins fyrir víxlmerkjaraðir. Látun :math:`S` merkja
-	summu raðarinnar og :math:`S_N` sé :math:`N`ta hlutsumma raðarinnar. Fyrir
+	sem uppfyllir skilyrði prófsins fyrir víxlmerkjaraðir. Látum :math:`S` merkja
+	summu raðarinnar og :math:`S_N` tákna :math:`N`-tu hlutsummu raðarinnar. Fyrir
 	sérhverja heiltölu :math:`N \geq 1` uppfyllir *skekkjan* :math:`R_N = S - S_N` að
 
 	.. math:: |R_N| \leq b_{N+1}.
@@ -1279,40 +1308,41 @@ Dæmi: Alsamleitni vs. skilyrt samleitni
 .. admonition:: Dæmi
   :class: daemi
 
-	Fyrir hverja af eftirfarandi röðum skulum við ákvarða hvort þær séu alsamleitnar,
+	Ákvörðum hvort eftirfarandi raðir séu alsamleitnar,
 	skilyrt samleitnar eða ósamleitnar.
 
-		a. :math:`\sum_{n=1}^\infty (-1)^{n+1}/(3n+1)`
+		a) :math:`\sum_{n=1}^\infty (-1)^{n+1}/(3n+1)`
 
-		b. :math:`\sum_{n=1}^\infty \cos(n)/n^2`.
+		b) :math:`\sum_{n=1}^\infty \cos(n)/n^2`.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-		a. Við getum séð að
+		a) Lausn:
+			Við getum séð að
 
-		.. math:: \sum_{n=1}^\infty \left| \frac{(-1)^{n+1}}{3n+1} \right| = \sum_{n=1}^\infty \frac{1}{3n+1}
+			.. math:: \sum_{n=1}^\infty \left| \frac{(-1)^{n+1}}{3n+1} \right| = \sum_{n=1}^\infty \frac{1}{3n+1}
 
-		sem er ósamleitin með því að nota samanburð með markgildi fyrir harmoníska röð. Raunar gildir að
+			sem er ósamleitin með því að nota samanburð með markgildi fyrir harmoníska röð. Raunar gildir að
 
-		.. math:: \lim_{n \rightarrow \infty} \frac{1/(3n+1)}{1/n} = \frac{1}{3}.
+			.. math:: \lim_{n \rightarrow \infty} \frac{1/(3n+1)}{1/n} = \frac{1}{3}.
 
-		Þar með er röðin ekki alsamleitin. Hinsvegar gildir að
+			Þar með er röðin ekki alsamleitin. Hinsvegar gildir að
 
-		.. math:: \frac{1}{3(n+1)+1} < \frac{1}{3n+1} \text{ og } \frac{1}{3n+1} \rightarrow 0.
+			.. math:: \frac{1}{3(n+1)+1} < \frac{1}{3n+1} \text{ og } \frac{1}{3n+1} \rightarrow 0.
 
-		og þar með er röðin samleitin. Við ályktum sem svo að röðin :math:`\sum_{n=1}^\infty (-1)^{n+1}/(3n+1)`
-		sé skilyrt samleitin.
+			og þar með er röðin samleitin. Við ályktum sem svo að röðin :math:`\sum_{n=1}^\infty (-1)^{n+1}/(3n+1)`
+			sé skilyrt samleitin.
 
-		b. Tökum eftir að :math:`|\cos(n)| \leq 1` og notum það til að ákvarða hvort röðin
-		sé alsamleitin. Berum röðina
+		b) Lausn:
+			Tökum eftir að :math:`|\cos(n)| \leq 1` og notum það til að ákvarða hvort röðin
+			sé alsamleitin. Berum röðina
 
-		.. math:: \sum_{n=1}^\infty \left| \frac{\cos(n)}{n^2} \right|
+			.. math:: \sum_{n=1}^\infty \left| \frac{\cos(n)}{n^2} \right|
 
-		saman við :math:`\sum_{n=1}^\infty 1/n^2`. Þar sem :math:`\sum_{n=1}^\infty 1/n^2`
-		er samleitin fæst skv. samanburðarprófinu að :math:`\sum_{n=1}^\infty |\cos(n)/n^2|`
-		sé samleitin og þar með er :math:`\sum_{n=1}^\infty \cos(n)/n^2` alsamleitin.
-
+			saman við :math:`\sum_{n=1}^\infty 1/n^2`. Þar sem :math:`\sum_{n=1}^\infty 1/n^2`
+			er samleitin fæst skv. samanburðarprófinu að :math:`\sum_{n=1}^\infty |\cos(n)/n^2|`
+			sé samleitin og þar með er :math:`\sum_{n=1}^\infty \cos(n)/n^2` alsamleitin.
 
 Dæmi: Munurinn á alsamleitni og skilyrtri samleitni
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1337,7 +1367,7 @@ Dæmi: Munurinn á alsamleitni og skilyrtri samleitni
 
 	.. math:: \sum_{n=1}^\infty \frac{1}{2}a_n = \frac{1}{2} - \frac{1}{4} + \frac{1}{6} - \frac{1}{8} + \dots = \frac{1}{2} \sum_{n=1}^\infty a_n = \frac{\ln(2)}{2}.
 
-	Kynnum nú til sögunnar röðuna :math:`\sum_{n=1}^\infty b_n` sem uppfyllir að fyrir
+	Kynnum nú til sögunnar röðina :math:`\sum_{n=1}^\infty b_n` sem uppfyllir að fyrir
 	öll :math:`n \geq 1` að :math:`b_{2n-1} = 0` og :math:`b_{2n} = a_n/2`. Þá gildir að
 
 	.. math:: \sum_{n=1}^\infty b_n = 0 + \frac{1}{2} - 0 - \frac{1}{4} + 0 + \frac{1}{6} + 0 - \frac{1}{8} + \dots = \frac{\ln(2)}{2}.
@@ -1352,7 +1382,8 @@ Dæmi: Munurinn á alsamleitni og skilyrtri samleitni
 
 	.. math::
 		\begin{aligned}
-			\sum_{n=1}^\infty (a_n+b_n) &= (1+0)+ (-\tfrac{1}{2}+-\tfrac{1}{2}) + (\tfrac{1}{3}+0)+(-\tfrac{1}{4}+\tfrac{1}{4})+(\tfrac{1}{5}+0)+(-\tfrac{1}{6}+\tfrac{1}{6}) + (\tfrac{1}{7}+0)+(-\tfrac{1}{8}+\tfrac{1}{8}) + \dots \\
+			\sum_{n=1}^\infty (a_n+b_n) &= (1+0)+ (-\tfrac{1}{2}+-\tfrac{1}{2}) + (\tfrac{1}{3}+0)+(-\tfrac{1}{4}+\tfrac{1}{4})+(\tfrac{1}{5}+0)\\
+			&+(-\tfrac{1}{6}+\tfrac{1}{6}) + (\tfrac{1}{7}+0)+(-\tfrac{1}{8}+\tfrac{1}{8}) + \dots \\
 			&= 1 + \frac{1}{3}-\frac{1}{2}+\frac{1}{5}+\frac{1}{7}-\frac{1}{4} + \dots \quad (*)\\
 			&= \frac{3\ln(2)}{2}
 		\end{aligned}
@@ -1369,8 +1400,8 @@ Dæmi: Munurinn á alsamleitni og skilyrtri samleitni
 	summa raðarinnar breyttist, þ.e. tvær raðir sem eru alveg eins nema að því leyti
 	að liðir þeirra birtast ekki í sömu röð hafa tvær, mismunandi summur.
 
-	Þetta er einn af mikilvægustu og skrítnustu eiginleigum raða sem eru skilyrt samleitnar, þ.e.
-	það að breyta því í hvaða röð liðir eru lagðir saman getum við breytt summu raðarinnar.
+	Þetta er einn af mikilvægustu og skrítnustu eiginleikum raða sem eru skilyrt samleitnar, þ.e.
+	það að breyta því í hvaða röð liðir eru lagðir saman getur breytt summu raðarinnar.
 	Þetta er hins vegar ekki hægt að gera í alsamleitnum röðum. Þar skiptir engu máli
 	í hvaða röð liðir eru lagðir saman, summan er alltaf sú saman.
 
@@ -1387,7 +1418,7 @@ Setning: Kvótaprófið
 
 	Látum :math:`\sum_{n=1}^\infty a_n` vera röð með enga núllliði. Látum
 
-	.. math:: \rho = \lim_{n=1}^\infty \left| \frac{a_{n+1}}{a_n} \right|.
+	.. math:: \rho = \lim_{n \rightarrow \infty} \left| \frac{a_{n+1}}{a_n} \right|.
 
 	Þá gildir eftirfarandi:
 
@@ -1395,7 +1426,7 @@ Setning: Kvótaprófið
 
 		#. Ef :math:`\rho > 1` eða :math:`\rho = \infty` er röðin ósamleitin.
 
-		#. Ef :math:`\rho = 1` er niðurstaða prófsins ófullnægjandi og segir okkur ekkret um samleitni raðarinnar.
+		#. Ef :math:`\rho = 1` er niðurstaða prófsins ófullnægjandi og segir okkur ekkert um samleitni raðarinnar.
 
 Dæmi: Kvótaprófið
 ~~~~~~~~~~~~~~~~~~
@@ -1414,7 +1445,7 @@ Dæmi: Kvótaprófið
 
 	Samkvæmt rótarprófinu fæst að
 
-	.. math:: \rho = \lim_{n=1}^\infty \frac{2^{n+1}/(n+1)!}{2^n/n!} = \lim_{n \rightarrow \infty} \frac{2^{n+1}}{(n+1)!} \cdot \frac{n!}{2^n}.
+	.. math:: \rho = \lim_{n \rightarrow \infty} \frac{2^{n+1}/(n+1)!}{2^n/n!} = \lim_{n \rightarrow \infty} \frac{2^{n+1}}{(n+1)!} \cdot \frac{n!}{2^n}.
 
 	Þar sem :math:`(n+1)! = (n+1)\cdot n!` fæst að
 
@@ -1481,7 +1512,7 @@ Samantekt
 		Ef markgildið :math:`\lim_{n \rightarrow \infty} a_n = 0` er prófið ómarktækt.
 
 		Ef :math:`\lim_{n \rightarrow \infty} a_n \neq 0` er röðin ósamleitin.
-	  - Ekki er hægt að nota prófði til að sýna fram á samleitni raða.
+	  - Ekki er hægt að nota prófið til að sýna fram á samleitni raða.
 	* - **Geómetrískar raðir:**
 
 			:math:`\sum_{n=1}^\infty ar^{n-1}`
@@ -1490,7 +1521,7 @@ Samantekt
 
 			Sérhverja geómetrísk röð má skrifa á forminu :math:`a + ar + ar^2 + \dots`.
 
-			Talan :math:`a` er nefnist fyrsti liður raðarinnar.
+			Talan :math:`a` nefnist fyrsti liður raðarinnar.
 
 			Talan :math:`r` nefnist hlutfallstala raðarinnar.
 	* - :math:`p`-**raðir:**

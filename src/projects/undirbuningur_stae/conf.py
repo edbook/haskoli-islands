@@ -79,9 +79,7 @@ numfig_format["section"] = "%s"
 
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
-katex_render = (
-    "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-)
+katex_render = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
 
@@ -202,7 +200,7 @@ html_favicon = "_static/favicon_2.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
-html_copy_source = False
+#html_copy_source = False
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -277,8 +275,7 @@ latex_elements = {
     # The font size ('10pt', '11pt' or '12pt').
     # 'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
-    "preamble": """
-
+    "preamble": """\
 \\usepackage{amsmath}
 \\usepackage{amssymb}
 \\usepackage{hyperref}
@@ -362,3 +359,10 @@ texinfo_documents = [
 # css fyrir Dæmi, Athugasemd, Setning, o.sv.fr...
 def setup(app):
     app.add_css_file("custom_admonitions.css")
+
+
+# Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
+hint_indent = (
+    r"\00a0" * 12
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2

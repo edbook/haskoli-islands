@@ -1,7 +1,7 @@
 #!/usr/bin/python
+import os
 import re
 import sys
-import os
 
 """
 Under construction, open for modification
@@ -27,25 +27,27 @@ def replace_all(text, dic):
 
 # Dictionary with our find:replace values.
 reps = {
-    '\\mbox': '\\text',
-    '\\nonumber': '',
-    '\{align\}': '{aligned}',
+    "\\mbox": "\\text",
+    "\\nonumber": "",
+    "\{align\}": "{aligned}",
     #'\}\\ ': '}\\ ',
-    re.compile(r'\{?\\cal ([a-zA-Z])\}?'): '\\mathcal{\\1}',
-    re.compile(r'\\substack\{(.*?)\\\\(.*?)\}', re.DOTALL): '\\scriptstyle \\1 \\\\atop\\scriptstyle \\2',
-    re.compile(r'\\label\{(.*?)\}'): ''
+    re.compile(r"\{?\\cal ([a-zA-Z])\}?"): "\\mathcal{\\1}",
+    re.compile(
+        r"\\substack\{(.*?)\\\\(.*?)\}", re.DOTALL
+    ): "\\scriptstyle \\1 \\\\atop\\scriptstyle \\2",
+    re.compile(r"\\label\{(.*?)\}"): "",
 }
 
 directory = os.listdir(os.path.dirname(os.getcwd()))
 directory = [d for d in directory if ".rst" in d]
 
 for file in directory:
-    f = open(os.path.dirname(os.getcwd())+"/"+file, encoding='utf8')
+    f = open(os.path.dirname(os.getcwd()) + "/" + file, encoding="utf8")
     filedata = f.read()
     f.close()
-    
+
     replacement = replace_all(filedata, reps)
 
-    f = open(os.path.dirname(os.getcwd())+"/"+file, 'w', encoding='utf8')
-    f.write(''.join(replacement))
+    f = open(os.path.dirname(os.getcwd()) + "/" + file, "w", encoding="utf8")
+    f.write("".join(replacement))
     f.close()

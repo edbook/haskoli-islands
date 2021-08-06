@@ -27,10 +27,10 @@ Vigurinn :math:`\alpha` nefnist í þessu samhengi *fjölvísir*.
 
 Ritháttur - Laplace-virki
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Virkinn 
+Virkinn
 
 .. math::
-    \Delta = \partial_{x_1}^2+\cdots + \partial_{x_m}^2 
+    \Delta = \partial_{x_1}^2+\cdots + \partial_{x_m}^2
 
 kallast Laplace-virkinn í :math:`m` breytistærðum.
 
@@ -41,10 +41,13 @@ kallast Laplace-virkinn í :math:`m` breytistærðum.
 Skilgreining - Stig hlutafleiðu og hlutafleiðujöfnu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hlutafleiðan :math:`\partial^\alpha u` hefur stig :math:`|\alpha| = \alpha_1 + \cdots + \alpha_m`.  Hæsta stig á afleiðu sem kemur fyrir í hlutafleiðujöfnu nefnist *stig* hlutafleiðujöfnunnar.
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Hlutafleiðan :math:`\partial^\alpha u` hefur stig :math:`|\alpha| = \alpha_1 + \cdots + \alpha_m`.  Hæsta stig á afleiðu sem kemur fyrir í hlutafleiðujöfnu nefnist *stig* hlutafleiðujöfnunnar.
 
 
-Við munum skoða **dæmi um hlutafleiðujöfnur** og læra **mismunandi aðferðir við að leysa þær**. Í sumum tilfellum má leysa jöfnurnar og skrifa niður beina lausn en oft þarf að nota **tölulegar aðferðir** til að leysa verkefnin. Töluleg verkefni verða viðfangsefni síðara hluta námskeiðsins.
+	Við munum skoða **dæmi um hlutafleiðujöfnur** og læra **mismunandi aðferðir við að leysa þær**. Í sumum tilfellum má leysa jöfnurnar og skrifa niður beina lausn en oft þarf að nota **tölulegar aðferðir** til að leysa verkefnin. Töluleg verkefni verða viðfangsefni síðara hluta námskeiðsins.
 
 
 
@@ -54,7 +57,7 @@ Línulegar hlutafleiðujöfnur
 Við munum eingöngu fást við línulegar hlutafleiðujöfnur í þessu námskeiði. Hlutafleiðujafna er sögð vera **línulegt** ef hægt er að rita hana á forminu
 
 .. math::
-    \sum_{|\alpha|\leq m} a_\alpha(x) \partial^\alpha u(x) = f(x), \quad x\in X \subseteq \mathbb{R}^n.    
+    \sum_{|\alpha|\leq m} a_\alpha(x) \partial^\alpha u(x) = f(x), \quad x\in X \subseteq \mathbb{R}^n.
 
 Fallið :math:`u` er óþekkta stærðin sem við viljum reikna, :math:`a_\alpha(x)` eru stuðlar sem geta verið háðir :math:`x` og fallið :math:`f` er gefið. Ef :math:`f` er núllfallið segjum við að hlutafleiðujafan sé **óhliðruð** en annars að hún sé **hliðruð**.
 
@@ -66,7 +69,7 @@ Við munum einnig nota ritháttin
 þar sem við lítum á
 
 .. math::
-    L = \sum_{|\alpha|\leq m} a_\alpha(x) \partial^\alpha     
+    L = \sum_{|\alpha|\leq m} a_\alpha(x) \partial^\alpha
 
 sem línulegan virkja :math:`L: C^m(X) \to C(X), X\subseteq \mathbb{R}^n` sem úthlutar falli línulegri samantekt af fallinu sjálfu og hlutafleiðum þess upp að stigi :math:`m`. Virkinn :math:`L` er línulegur því
 
@@ -77,14 +80,14 @@ fyrir hvaða tölur :math:`a` og :math:`b` sem er. **Kjarni** eða **núllrúm**
 
 
 
-Dæmi um hlutafleiðujöfnur í eðlisfræði 
+Dæmi um hlutafleiðujöfnur í eðlisfræði
 --------------------------------------
 
 
 
 Varmaleiðnijafnan
 ~~~~~~~~~~~~~~~~~
-Ef :math:`T` er fall af :math:`m+1` breytistærðum :math:`x_1,\ldots,x_m,t` kallast jafnan 
+Ef :math:`T` er fall af :math:`m+1` breytistærðum :math:`x_1,\ldots,x_m,t` kallast jafnan
 
 .. math::
     \frac{\partial T}{\partial t} - \kappa \Delta T = f(x_1,\ldots,x_m,t)
@@ -96,7 +99,7 @@ Varmaleiðnijafnan lýsir því hvernig hitastig :math:`T` í hlut breytist með
 Bylgjujafnan
 ~~~~~~~~~~~~
 
-Ef :math:`u` er fall af :math:`m+1` breytistærðum :math:`t, x_1,\ldots,x_m` kallast jafnan 
+Ef :math:`u` er fall af :math:`m+1` breytistærðum :math:`t, x_1,\ldots,x_m` kallast jafnan
 
 .. math::
     \frac{\partial^2 u}{\partial t^2} - c^2 \Delta u = f(x_1,\ldots,x_m,t)
@@ -108,28 +111,31 @@ Bylgjujafnan kemur mjög víða við sögu í eðlisfræði. Hún getur til dæm
 Dæmi - Sveifla á einvíðum streng
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hér má sjá lausn á bylgjujöfnunni
+.. admonition:: Dæmi
+	:class: daemi
 
-.. math::
-    \frac{\partial^2 u(x,t)}{\partial t^2} - c^2  \frac{\partial^2 u(x,t)}{\partial x^2} = 0 
+	Hér má sjá lausn á bylgjujöfnunni
 
-fyrir :math:`x` á bilinu :math:`[0,L]` með jaðarskilyrðunum :math:`u(0,t) = u(L,t)=0` (strengurinn er fastur í báða enda) og upphafsskilyrðunum :math:`u(x,0) = a(x),~\partial_t u(x,0) = b(x)`. Upphaflegu stillingarnar eru :math:`L=2\pi`, :math:`a(x) = \sin(2x)+\sin(3x)` og :math:`b(x) = \sin(x)`.
-       
+	.. math::
+	    \frac{\partial^2 u(x,t)}{\partial t^2} - c^2  \frac{\partial^2 u(x,t)}{\partial x^2} = 0
 
-.. ggb:: cfyvqajc
-  :width: 700
-  :height: 550
-  :img: polarggb.png
-  :imgwidth: 4cm
-  :zoom_drag: true 
+	fyrir :math:`x` á bilinu :math:`[0,L]` með jaðarskilyrðunum :math:`u(0,t) = u(L,t)=0` (strengurinn er fastur í báða enda) og upphafsskilyrðunum :math:`u(x,0) = a(x),~\partial_t u(x,0) = b(x)`. Upphaflegu stillingarnar eru :math:`L=2\pi`, :math:`a(x) = \sin(2x)+\sin(3x)` og :math:`b(x) = \sin(x)`.
+
+
+	.. ggb:: cfyvqajc
+	  :width: 700
+	  :height: 550
+	  :img: polarggb.png
+	  :imgwidth: 4cm
+	  :zoom_drag: true
 
 |
 |
 
-Hliðarskilyrði. Vel framsett verkefni  
+Hliðarskilyrði. Vel framsett verkefni
 -------------------------------------
 
-Skoðum verkefnið að ákvarða fall :math:`u` sem uppfyllir hlutafleiðujöfnu :math:`Lu = f` á mengi :math:`X \times I \in \mathbb{R}^{n+1}`, þar sem :math:`X\subseteq \mathbb{R}^n` er opið mengi og :math:`I \subseteq \mathbb{R}` er bil. Hugsum um breytuna :math:`x\in X` sem rúmbreytu og breytuna :math:`t\in I` sem tíma. 
+Skoðum verkefnið að ákvarða fall :math:`u` sem uppfyllir hlutafleiðujöfnu :math:`Lu = f` á mengi :math:`X \times I \in \mathbb{R}^{n+1}`, þar sem :math:`X\subseteq \mathbb{R}^n` er opið mengi og :math:`I \subseteq \mathbb{R}` er bil. Hugsum um breytuna :math:`x\in X` sem rúmbreytu og breytuna :math:`t\in I` sem tíma.
 
 
 
@@ -138,7 +144,7 @@ Til að ákvarða :math:`u`  ótvírætt þarf oft hliðarskilyrði á fallið. 
 
 Upphafsskilyrði
 ~~~~~~~~~~~~~~~
-Þá eru gildi á fallinu :math:`u` og einhverjum tímaafleiðum þess :math:`\partial_t u,\partial_t^2 u,\ldots` gefin á ákveðnum upphafstíma. Nefnast einnig *Cauchy-skilyrði*. 
+Þá eru gildi á fallinu :math:`u` og einhverjum tímaafleiðum þess :math:`\partial_t u,\partial_t^2 u,\ldots` gefin á ákveðnum upphafstíma. Nefnast einnig *Cauchy-skilyrði*.
 
 Jaðarskilyrði
 ~~~~~~~~~~~~~
@@ -153,7 +159,7 @@ Skilgreinum stefnuafleiðu :math:`u` út um jaðar :math:`X` með
 Mikilvæg jaðarskilyrði sem koma upp víða í eðlisfræði eru á eftirfarandi formi
 
 #. Lausnin :math:`u` er tilgreind á jaðri svæðisins. Nefnist *Dirichlet-skilyðri* eða *fallsjaðarskilyrði*.
- 
+
 #. Stefnuafleiðan :math:`\partial u/\partial n` er tilgreind á jaðri svæðisins. Nefnist *Neumann-skilyrði* eða *flæðisskilyrði*.
 
 #. Línuleg samantekt af :math:`u` og :math:`\partial u/\partial n` er tilgreind á jaðri svæðis. Nefnist *Robin-skilyrði* eða *blandað jaðarskilyrði*.
@@ -193,58 +199,73 @@ Kennilínuaðferðin
 Setning
 ~~~~~~~
 
-Fall :math:`u\in C^1(\mathbb{R}^2)` er lausn á jöfnunni
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-    a\frac{\partial u}{\partial x}+ b\frac{\partial u}{\partial y} = 0
+	Fall :math:`u\in C^1(\mathbb{R}^2)` er lausn á jöfnunni
 
-þar sem :math:`(a,b)\in\mathbb{R}^2` og :math:`(a,b)\neq (0,0)` þá og því aðeins að :math:`u` sé af gerðinni
+	.. math::
+	    a\frac{\partial u}{\partial x}+ b\frac{\partial u}{\partial y} = 0
 
-.. math::
-    u(x,y) = f(bx-ay)
+	þar sem :math:`(a,b)\in\mathbb{R}^2` og :math:`(a,b)\neq (0,0)` þá og því aðeins að :math:`u` sé af gerðinni
 
-með :math:`f\in C^1(\mathbb{R})`.
+	.. math::
+	    u(x,y) = f(bx-ay)
+
+	með :math:`f\in C^1(\mathbb{R})`.
 
 
 Setning
 ~~~~~~~
 
-Upphafsgildisverkefnið
+.. admonition:: Setning
+	:class: setning
 
-.. math::
-    \left\{\begin {array}{l} 
-    a\frac{\partial u}{\partial x}+ b\frac{\partial u}{\partial y} = 0, \quad (x,y)\in \mathbb{R}^2, \\
-    u(x,0) = \phi(x),\quad x \in \mathbb{R}
-    \end{array}\right.
+	Upphafsgildisverkefnið
 
-þar sem :math:`\phi \in C^1(\mathbb{R})` er gefið fall og :math:`b\neq 0` hefur ótvírætt ákvarðaða lausn
+	.. math::
+	    \left\{\begin {array}{l}
+	    a\frac{\partial u}{\partial x}+ b\frac{\partial u}{\partial y} = 0, \quad (x,y)\in \mathbb{R}^2, \\
+	    u(x,0) = \phi(x),\quad x \in \mathbb{R}
+	    \end{array}\right.
 
-.. math::
-    u(x,y) = \phi(x-ay/b).
+	þar sem :math:`\phi \in C^1(\mathbb{R})` er gefið fall og :math:`b\neq 0` hefur ótvírætt ákvarðaða lausn
+
+	.. math::
+	    u(x,y) = \phi(x-ay/b).
 
 Skilgreining
 ~~~~~~~~~~~~
-Lína sem hefur stefnuvigur samsíða :math:`(a, b)` nefnist kennilína afleiðuvirkjans :math:`a\partial_x + b\partial_y`.
+
+.. admonition:: Skilgreining
+	:class: skilgreining
+
+	Lína sem hefur stefnuvigur samsíða :math:`(a, b)` nefnist kennilína afleiðuvirkjans :math:`a\partial_x + b\partial_y`.
 
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~
-Sérhver lausn  á afleiðujöfnuhneppinu
 
-.. math::
-    \xi' = a(\xi,\eta), \qquad \eta' = b(\xi,\eta),
+.. admonition:: Skilgreining
+	:class: skilgreining
 
-nefnist kenniferill eða kennilína afleiðuvirkjans
+	Sérhver lausn  á afleiðujöfnuhneppinu
 
-.. math::
-    a(x,y)\frac{\partial}{\partial x} + b(x,y) \frac{\partial}{\partial y}
+	.. math::
+	    \xi' = a(\xi,\eta), \qquad \eta' = b(\xi,\eta),
+
+	nefnist kenniferill eða kennilína afleiðuvirkjans
+
+	.. math::
+	    a(x,y)\frac{\partial}{\partial x} + b(x,y) \frac{\partial}{\partial y}
 
 Reikniaðferð
 ~~~~~~~~~~~~
+
 Finna skal lausn á upphafsgildisverkefninu
 
 .. math::
-    \left\{\begin {array}{l} 
+    \left\{\begin {array}{l}
     a(x,y)\frac{\partial u}{\partial x}+ b(x,y)\frac{\partial u}{\partial y} = 0, \quad (x,y)\in \mathbb{R}^2, \\
     u(x,0) = \phi(x), \quad x \in \mathbb{R}.
     \end{array}\right.
@@ -281,21 +302,20 @@ sem má leysa með almennri lausnarformúlu.
 Dæmi
 ~~~~
 
-Upphafsgildisverkefnið
+.. admonition:: Dæmi  
+	:class: daemi
 
-.. math::
-    \left\{\begin {array}{l} 
-    \frac{\partial u}{\partial t}+ x\frac{\partial u}{\partial x} + u = f(x,t), x>0, t>0, \\
-    u(x,0) = u(0,t) = 0.
-    \end{array}\right.
+	Upphafsgildisverkefnið
 
-hefur lausnina
+	.. math::
+	    \left\{\begin {array}{l}
+	    \frac{\partial u}{\partial t}+ x\frac{\partial u}{\partial x} + u = f(x,t), x>0, t>0, \\
+	    u(x,0) = u(0,t) = 0.
+	    \end{array}\right.
 
-.. math::
-    u(x,t) = x^{-1}\int_{0}^x H(t-\ln(x/\xi)) f(\xi,t-\ln(x/\xi)) d\xi
+	hefur lausnina
 
-þar sem :math:`H` táknar Heaviside-fallið.
+	.. math::
+	    u(x,t) = x^{-1}\int_{0}^x H(t-\ln(x/\xi)) f(\xi,t-\ln(x/\xi)) d\xi
 
-
-
-
+	þar sem :math:`H` táknar Heaviside-fallið.
