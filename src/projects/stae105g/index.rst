@@ -10,7 +10,10 @@ Höfundar efnis: Valentina Giangreco M Puletti, vgmp@hi.is og Hulda Hvönn Krist
 
 Síðast uppfært: 2021-07-15
 
-
+.. toctree::
+	formali
+	umnamskeidid
+	
 .. toctree::
    :maxdepth: 2
    :numbered:

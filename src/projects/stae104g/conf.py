@@ -67,7 +67,8 @@ extensions = [
     # 'Sphinx_ext.activityduration',
     # 'Sphinx_ext.htmlform',
     # 'Sphinx_ext.instructorfeedback',
-    # 'Sphinx_ext.eqt',
+	# Extension for multiple options quizzes
+     'eqtextension.eqt',
     # 'Sphinx_ext.instructorguide',
     # 'Sphinx_ext.embeddedvideo',
     # 'Sphinx_ext.xy_click',

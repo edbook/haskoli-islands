@@ -1,4 +1,4 @@
-Inngagur að línulegri algebru
+Inngangur að línulegri algebru
 ==============================
 
 .. admonition:: Nauðsynleg undirstaða

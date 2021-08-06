@@ -21,6 +21,28 @@ There is another theory which states that this has already happened.*
 
 \- Douglas Adams, The Restaurant at the End of the Universe
 
+.. eqt:: daemi-lengdvigurs
+
+  **Æfingadæmi** Hver er lengd vigursins :math:`\vec{b}=\begin{pmatrix} 5 \\ -2 \end{pmatrix}` ?
+
+  A) :eqt:`I` :math:`|\vec{b}| = 7`
+
+  #) :eqt:`I` :math:`|\vec{b}| = \sqrt{21}`
+
+  #) :eqt:`C` :math:`|\vec{b}| = \sqrt{29}`
+
+  .. eqt-solution::
+    Notum reglu Pýþagórasar:
+
+		.. math::
+			\begin{aligned}
+				|\bar{b}| &= \sqrt{b_x^2 + b_y^2} \\
+				&= \sqrt{(5)^2+(-2)^2}\\
+				&=\sqrt{25+4}\\
+				&= \sqrt{29}
+			\end{aligned}
+
+
 Grunnhugmyndin
 ~~~~~~~~~~~~~~
 

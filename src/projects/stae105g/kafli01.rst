@@ -282,7 +282,7 @@ Skilgreining: fall
   :class: skilgreining
 
   Fall er þrennd :math:`(f,X,Y)` þar sem :math:`f` er vörpun sem uppfyllir að sérhvert stak :math:`x` í skilgreiningarmenginu :math:`X`
-  varpast eitt og aðeins eitt stak :math:`y` í bakmenginu :math:`Y`.
+  varpast á eitt og aðeins eitt stak :math:`y` í bakmenginu :math:`Y`.
 
 .. index::
     fall; samskeyting
