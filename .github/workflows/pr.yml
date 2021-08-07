@@ -144,7 +144,7 @@ jobs:
           }
           EOF
           )
-          ./test.sh  \
+          ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
   notify-discord-merge:
@@ -230,6 +230,6 @@ jobs:
           }
           EOF
           )
-          ./test.sh  \
+          ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
