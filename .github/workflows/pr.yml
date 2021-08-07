@@ -5,9 +5,11 @@ env:
   SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
 on:
   pull_request:
-    types: [opened, closed]
-    paths-ignore:
-      - "**/README.md"
+    branches: [ master ]
+    types: [ opened, synchronize, closed ]
+  push:
+    branches-ignore:
+      - master
 jobs:
   setup:
     name: Setup
