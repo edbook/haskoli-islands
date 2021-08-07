@@ -107,6 +107,8 @@ jobs:
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
       - name: Notify open PR
         if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
         run: |
@@ -144,7 +146,7 @@ jobs:
           }
           EOF
           )
-          ./${{ github.workspace }}/.github/discord.sh  \
+          ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
   notify-discord-merge:
@@ -189,7 +191,7 @@ jobs:
           }
           EOF
           )
-          ./${{ github.workspace }}/.github/discord.sh  \
+          ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
   notify-discord-merge-failed:
@@ -230,6 +232,6 @@ jobs:
           }
           EOF
           )
-          ./${{ github.workspace }}/.github/discord.sh  \
+          ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
