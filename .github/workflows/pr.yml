@@ -144,7 +144,7 @@ jobs:
           }
           EOF
           )
-          ./.github/discord.sh  \
+          ./${{ github.workspace }}/.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
   notify-discord-merge:
@@ -189,7 +189,7 @@ jobs:
           }
           EOF
           )
-          ./.github/discord.sh  \
+          ./${{ github.workspace }}/.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
   notify-discord-merge-failed:
@@ -230,6 +230,6 @@ jobs:
           }
           EOF
           )
-          ./.github/discord.sh  \
+          ./${{ github.workspace }}/.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c ${{ steps.debug.outputs.discord_payload }}
