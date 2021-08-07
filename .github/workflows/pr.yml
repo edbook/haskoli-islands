@@ -106,7 +106,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Notify open PR
-        if: ${{ github.event_name == 'pull_request' && github.event.action = 'opened' }}
+        if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
         run: |
           content_title="Nýtt PR opnað"
           title=${{ github.event.pull_request.title }}
@@ -151,7 +151,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Notify merge
-        if: ${{ github.event_name == 'pull_request' && github.event.action = 'closed' && github.event.pull_request.merged = 'true' }}
+        if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true' }}
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
           title="${{ github.event.pull_request.base.ref }} ↩️ ${{ github.event.pull_request.head.ref }}"
