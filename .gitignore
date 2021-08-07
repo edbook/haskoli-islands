@@ -25,11 +25,5 @@ build/
 *.ZIP
 .DS_Store
 *.mo
-<<<<<<< HEAD
 html
 .github/act
-=======
-
-# act
-.github/act
->>>>>>> a35464a (ci: precommit fix)
