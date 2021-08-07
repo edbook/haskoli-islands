@@ -154,6 +154,8 @@ jobs:
     name: Notify Discord (merged to main)
     runs-on: ubuntu-20.04
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
       - name: Notify merge
         if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true' }}
         run: |
@@ -200,6 +202,8 @@ jobs:
     name: Notify Discord (build failed)
     runs-on: ubuntu-20.04
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
       - name: Notify build or deploy failed
         run: |
           content_title="Eitthvað fór úrskeiðis ☠️"
