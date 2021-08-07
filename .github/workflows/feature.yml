@@ -1,7 +1,3 @@
-#----------------------------------------------
-# TODO:
-#   Fix "if" conditions in each job, feels redundant.
-#   There is alot of replication of steps here since Github actions seems limited.
 name: edbook
 env:
   SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
@@ -28,22 +24,21 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: "1.1.6"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
+          python-version: '3.9.6'
+      - name: Load cached $HOME/.local
         id: cached-poetry-dependencies
         uses: actions/cache@v2
         with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          path: ~/.local
+          key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/feature.yml') }}
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.1.6
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
       - name: Install dependencies
         run: poetry install
-        if: steps.cached_poetry_dependencies.outputs.cache-hit != 'true'
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
   build-all:
     needs: [setup]
     name: Build and deploy
@@ -54,19 +49,15 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: '3.9.6'
       - name: Load cached venv
         id: cached-poetry-dependencies
         uses: actions/cache@v2
         with:
           path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ hashFiles('.github/workflows/feature.yml') }}
       - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: "1.1.6"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
+        uses: snok/install-poetry@v1.1.6
       - name: Configure SSH
         run: |
           echo "#### Creating ~/.ssh/config from secrets ####"
@@ -86,25 +77,26 @@ jobs:
       - name: Build
         id: build
         run: |
-          source .venv/bin/activate
+          ls -al
           poetry --version
           make build-all
           echo "#### Build destination ####"
-          set -x -e
           ls -d ${{ github.workspace }}/_build/*
-      - name: Debug
-        run: |
-          set -x -e
-          echo ${{ github.event }}
-          echo ${{ github.event_name }}
-          echo ${{ github.base_ref }}
-          echo ${{ github.ref }}
-          echo ${{ github.event.push.ref }}
       - name: Deploy feature
         if: github.ref != 'refs/heads/main'
         run: |
-          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+          if [ -z ${{env.ACT}} ]; then
+          ./${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+          fi
       - name: Deploy production
         if: github.ref == 'refs/heads/main'
         run: |
-          bash -x -e ${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
+          if [ -z ${{env.ACT}} ]; then
+            ./${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
+          fi
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilshidur/action-discord@0.3.2
+        with:
+          args: '{{ EVENT_PAYLOAD.head_commit.author.name }} pushed _{{ EVENT_PAYLOAD.head_commit.message }}_ to _{{ needs.setup.outputs.branch_name }}_.'

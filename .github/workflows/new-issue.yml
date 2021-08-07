@@ -1,0 +1,46 @@
+name: Issue
+on:
+  issues:
+    types: [opened, edited, closed]
+jobs:
+  issue:
+    name: Discord notification
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/checkout@v2
+      - name: debug
+        id: debug
+        env:
+          DISC_TITLE: ${{ github.event.issue.title }}
+          DISC_BODY: ${{ github.event.issue.body }}
+          DISC_URL: ${{ github.event.issue.url }}
+          DISC_USER: ${{ github.event.issue.user.login}}
+          DISC_AVATAR: ${{ github.event.issue.user.avatar_url}}
+        run: |
+          payload=$(cat <<EOF
+          {
+            "content": "Content title",
+            "embeds": [
+              {
+                "title": "$DISC_TITLE",
+                "description": "$DISC_BODY",
+                "url": "$DISC_URL",
+                "color": "#171B22",
+                "author": {
+                  "name": "$DISC_USER",
+                  "icon_url": "$DISC_AVATAR"
+                }
+              }
+            ]
+          }
+          EOF
+          )
+          echo ::set-output name=discord_payload::$(echo "$payload")
+      - name: Notify
+        run: |
+          echo ${{ steps.debug.outputs.discord_payload }}
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_EMBEDS: ${{ toJson(steps.debug.outputs.discord_payload)}}
+        uses: Ilshidur/action-discord@master
