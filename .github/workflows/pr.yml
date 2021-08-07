@@ -148,7 +148,7 @@ jobs:
           )
           ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
-            -c ${{ steps.debug.outputs.discord_payload }}
+            -c "$payload"
   notify-discord-merge:
     needs: [build-all]
     name: Notify Discord (merged to main)
@@ -195,7 +195,7 @@ jobs:
           )
           ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
-            -c ${{ steps.debug.outputs.discord_payload }}
+            -c "$payload"
   notify-discord-merge-failed:
     needs: [build-all]
     if: always() && (needs.build-all.result == 'failure')
@@ -238,4 +238,4 @@ jobs:
           )
           ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
-            -c ${{ steps.debug.outputs.discord_payload }}
+            -c "$payload"
