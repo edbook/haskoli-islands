@@ -1,0 +1,244 @@
+name: edbook
+env:
+  SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
+  SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
+  SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
+on:
+  pull_request:
+    branches: [ master ]
+    types: [ opened, synchronize, closed ]
+  push:
+    paths:
+      - 'src/**'
+      - 'cli/**'
+    branches-ignore:
+      - master
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-20.04
+    outputs:
+      branch_name: ${{ steps.extract_branch.outputs.branch_name }}
+    steps:
+      - name: Extract branch name
+        id: extract_branch
+        shell: bash
+        run: |
+          echo "::set-output name=branch_name::$(echo ${GITHUB_REF#refs/heads/})"
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: "1.1.6"
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install dependencies
+        run: poetry install
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+  build-all:
+    needs: [setup]
+    name: Build and deploy
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: "1.1.6"
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: Configure SSH
+        run: |
+          echo "#### Creating ~/.ssh/config from secrets ####"
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/staging.key
+          chmod 600 ~/.ssh/staging.key
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/staging.key
+            StrictHostKeyChecking no
+          END
+      - name: Test SSH connection
+        run: |
+          ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
+      - name: Build
+        id: build
+        run: |
+          source .venv/bin/activate
+          poetry --version
+          make build-all
+          echo "#### Build destination ####"
+          set -x -e
+          ls -d ${{ github.workspace }}/_build/*
+      - name: Deploy branch
+        id: deploy-branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+      - name: Deploy production
+        if: github.ref == 'refs/heads/main'
+        run: |
+          if [ -z ${{env.ACT}} ]; then
+            ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
+          fi
+  notify-discord-pr:
+    needs: [build-all]
+    name: Notify Discord (open PR)
+    runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Notify open PR
+        run: |
+          content_title="Nýtt PR opnað"
+          title=${{ github.event.pull_request.title }}
+          color=2061822
+          description=${{ github.event.pull_request.body }}
+          url=${{ github.event.pull_request.html_url }}
+          author_name=${{ github.event.pull_request.user.login}}
+          author_url=${{ github.event.pull_request.user.url}}
+          author_avatar=${{ github.event.pull_request.user.avatar_url}}
+          branch=${{ github.event.pull_request.head.ref}}
+
+          payload=$(cat <<EOF
+          {
+            "content": "$content_title",
+            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+            "embeds": [
+              {
+                "title": "$title",
+                "description": "$description",
+                "url": "$url",
+                "color": $color,
+                "fields": [
+                  "name": "url",
+                  "value": "[Skoða á edbook](https://edbook.hi.is/staging/edbook/${branch})"
+                ]
+                "author": {
+                  "name": "$author_name",
+                  "url": "$author_url",
+                  "icon_url": "$author_avatar"
+                }
+              }
+            ]
+          }
+          EOF
+          )
+          ./.github/discord.sh  \
+            -w ${{ secrets.DISCORD_WEBHOOK }} \
+            -c "$payload"
+  notify-discord-merge:
+    needs: [build-all]
+    name: Notify Discord (merged to main)
+    runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true'
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Notify merge
+        run: |
+          content_title="Ný útgáfa er kominn í loftið 🎉"
+          title="${{ github.event.pull_request.base.ref }} ↩️ ${{ github.event.pull_request.head.ref }}"
+          color=32768
+          description=${{ github.event.pull_request.body }}
+          url=${{ github.event.pull_request.html_url }}
+          author_name=${{ github.event.pull_request.user.login}}
+          author_url=${{ github.event.pull_request.user.url}}
+          author_avatar=${{ github.event.pull_request.user.avatar_url}}
+          branch=${{ github.event.pull_request.head.ref}}
+
+          payload=$(cat <<EOF
+          {
+            "content": "$content_title",
+            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+            "embeds": [
+              {
+                "title": "$title",
+                "description": "$description",
+                "url": "$url",
+                "color": $color,
+                "fields": [
+                  "name": "url",
+                  "value": "[Skoða á edbook](https://edbook.hi.is)"
+                ]
+                "author": {
+                  "name": "$author_name",
+                  "url": "$author_url",
+                  "icon_url": "$author_avatar"
+                }
+              }
+            ]
+          }
+          EOF
+          )
+          ./.github/discord.sh  \
+            -w ${{ secrets.DISCORD_WEBHOOK }} \
+            -c "$payload"
+  notify-discord-build-failed:
+    needs: [build-all, setup]
+    if: always() && needs.build-all.result == 'failure' && github.event_name == 'push'
+    name: Notify Discord (build failed)
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Notify build or deploy failed
+        run: |
+          workflow_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          content_title="Eitthvað fór úrskeiðis ☠️"
+          title="${{ needs.setup.outputs.branch_name }}"
+          color=16711680
+          description="Ekki tókst að byggja og deploya verkefnunum"
+          url="$workflow_url"
+          author_name=${{ github.event.push.sender.login}}
+          author_url=${{ github.event.push.sender.url}}
+          author_avatar=${{ github.event.push.sender.avatar_url}}
+
+          payload=$(cat <<EOF
+          {
+            "content": "$content_title",
+            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+            "embeds": [
+              {
+                "title": "$title",
+                "description": "$description",
+                "url": "$url",
+                "color": $color,
+                "author": {
+                  "name": "$author_name",
+                  "url": "$author_url",
+                  "icon_url": "$author_avatar"
+                }
+              }
+            ]
+          }
+          EOF
+          )
+          ./.github/discord.sh  \
+            -w ${{ secrets.DISCORD_WEBHOOK }} \
+            -c "$payload"
