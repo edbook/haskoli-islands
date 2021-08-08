@@ -95,12 +95,12 @@ jobs:
         id: deploy-branch
         if: github.ref != 'refs/heads/main'
         run: |
-          ./${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+          ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
       - name: Deploy production
         if: github.ref == 'refs/heads/main'
         run: |
           if [ -z ${{env.ACT}} ]; then
-            ./${{ github.workspace }}/.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
+            ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
           fi
   notify-discord-pr:
     needs: [build-all]
