@@ -8,6 +8,9 @@ on:
     branches: [ master ]
     types: [ opened, synchronize, closed ]
   push:
+    paths:
+      - 'src/**'
+      - 'cli/**'
     branches-ignore:
       - master
 jobs:
@@ -106,11 +109,11 @@ jobs:
     needs: [build-all]
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Notify open PR
-        if: github.event_name == 'pull_request' && github.event.action == 'opened'
         run: |
           content_title="Nýtt PR opnað"
           title=${{ github.event.pull_request.title }}
@@ -153,11 +156,11 @@ jobs:
     needs: [build-all]
     name: Notify Discord (merged to main)
     runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true'
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Notify merge
-        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true'
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
           title="${{ github.event.pull_request.base.ref }} ↩️ ${{ github.event.pull_request.head.ref }}"
