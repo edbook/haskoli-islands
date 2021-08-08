@@ -110,7 +110,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Notify open PR
-        if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
+        if: github.event_name == 'pull_request' && github.event.action == 'opened'
         run: |
           content_title="Nýtt PR opnað"
           title=${{ github.event.pull_request.title }}
@@ -157,7 +157,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Notify merge
-        if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true' }}
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true'
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
           title="${{ github.event.pull_request.base.ref }} ↩️ ${{ github.event.pull_request.head.ref }}"
@@ -196,9 +196,9 @@ jobs:
           ./.github/discord.sh  \
             -w ${{ secrets.DISCORD_WEBHOOK }} \
             -c "$payload"
-  notify-discord-merge-failed:
-    needs: [build-all]
-    if: always() && (needs.build-all.result == 'failure')
+  notify-discord-build-failed:
+    needs: [build-all, setup]
+    if: always() && needs.build-all.result == 'failure' && github.event_name == 'push'
     name: Notify Discord (build failed)
     runs-on: ubuntu-20.04
     steps:
@@ -206,15 +206,15 @@ jobs:
         uses: actions/checkout@v2
       - name: Notify build or deploy failed
         run: |
+          workflow_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           content_title="Eitthvað fór úrskeiðis ☠️"
-          title="${{ github.event.pull_request.base.ref }} ↩️ ${{ github.event.pull_request.head.ref }}"
+          title="${{ needs.setup.outputs.branch_name }}"
           color=16711680
-          description=${{ github.event.pull_request.body }}
-          url=${{ github.event.pull_request.html_url }}
-          author_name=${{ github.event.pull_request.user.login}}
-          author_url=${{ github.event.pull_request.user.url}}
-          author_avatar=${{ github.event.pull_request.user.avatar_url}}
-          branch=${{ github.event.pull_request.head.ref}}
+          description="Ekki tókst að byggja og deploya verkefnunum"
+          url="$workflow_url"
+          author_name=${{ github.event.push.sender.login}}
+          author_url=${{ github.event.push.sender.url}}
+          author_avatar=${{ github.event.push.sender.avatar_url}}
 
           payload=$(cat <<EOF
           {
