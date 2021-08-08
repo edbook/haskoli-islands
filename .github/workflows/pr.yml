@@ -11,6 +11,7 @@ on:
     paths:
       - 'src/**'
       - 'cli/**'
+      - '.github/**'
     branches-ignore:
       - master
 jobs:
