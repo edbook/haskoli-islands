@@ -202,7 +202,7 @@ html_favicon = "_static/favicon_2.ico"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 html_js_files = ["plotly.js-gl3d-dist/plotly-gl3d.js"]
-html_css_files = ["css/custom_admonitions.css"]
+html_css_files = ["css/custom_admonitions_ofl.css"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied

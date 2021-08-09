@@ -347,15 +347,17 @@ Skilgreining
 
     ef markgildin eru til.
 
-.. figure:: ./myndir/xpart.png
-    :width: 100%
-    :align: center
+.. raw:: html
+    :file: plotly/k2graf2.html
+
+.. rst-class:: midja
 
     *Hlutafleiða m.t.t.* \ :math:`x` *fyrir* :math:`y=1`.
 
-.. figure:: ./myndir/ypart.png
-    :width: 100%
-    :align: center
+.. raw:: html
+    :file: plotly/k2graf3.html
+
+.. rst-class:: midja
 
     *Hlutafleiða m.t.t.* \ :math:`y` *fyrir* :math:`x=1`.
 
