@@ -1,0 +1,162 @@
+<div id="plotly_graf1"></div>
+<script>
+    function drawGraf1() {
+        // Þurfum námundunarfall til að forðast floating point klúður á eftir
+        function round(num, prec = 3) {
+            return Math.round((num + Number.EPSILON) * (10 ** prec)) / (10 ** prec)
+        }
+
+        // z-hnitið sem fall af x og y
+        function fall(x, y) {
+            return Math.sqrt(1 - x * x - y * y);
+        }
+
+        // Plotly stillingar (layout og config)
+        let layout = {
+            scene: {
+                xaxis: {
+                    gridcolor: '#7d7d7d',
+                    showspikes: false,
+                    showbackground: true,
+                    backgroundcolor: 'rgba(0, 0, 0, 0)',
+                    range: [-0.7, 0.7],
+                    // tickmode: 'array',
+                    // tickvals: [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5],
+                    tickmode: 'linear',
+                    tick0: 0,
+                    dtick: 0.25,
+                    showline: true,
+                    linewidth: 3,
+                    ticks: 'outside',
+                    tickwidth: 2,
+                    tickcolor: 'black',
+                    ticklen: 10,
+                },
+                yaxis: {
+                    gridcolor: '#7d7d7d',
+                    showspikes: false,
+                    showbackground: true,
+                    backgroundcolor: 'rgba(0, 0, 0, 0)',
+                    range: [-0.7, 0.7],
+                    // tickmode: 'array',
+                    // tickvals: [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5],
+                    tickmode: 'linear',
+                    tick0: 0,
+                    dtick: 0.25,
+                    linewidth: 3,
+                    ticks: 'outside',
+                    tickwidth: 2,
+                    tickcolor: 'black',
+                    ticklen: 10,
+                },
+                zaxis: {
+                    gridcolor: '#7d7d7d',
+                    showspikes: false,
+                    showbackground: true,
+                    backgroundcolor: 'rgba(0, 0, 0, 0)',
+                    tickmode: 'linear',
+                    tick0: 1,
+                    dtick: 0.05,
+                    linewidth: 3,
+                    ticks: 'outside',
+                    tickwidth: 2,
+                    tickcolor: 'black',
+                    ticklen: 10,
+                    tickson: 'boundaries',
+                },
+                aspectratio: {
+                    x: 1,
+                    y: 1,
+                    z: .75,
+                },
+                hovermode: false,
+                camera: {
+                    center: {
+                        x: .3,
+                        y: .3,
+                        z: 0,
+                    },
+                    eye: {
+                        x: 1.3,
+                        y: 1.5,
+                        z: .8,
+                    }
+                },
+            },
+            showlegend: false,
+            width: 700,
+            height: 500,
+            margin: {
+                l: 0,
+                r: 0,
+                t: 0,
+                b: 0,
+            },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+        };
+        let config = {
+            'displayModeBar': false,
+            'scrollZoom': false,
+        }
+
+        // Skilgreinum data
+        let steps = 20;
+        let axisMin = -0.5;
+        let axisMax = 0.5;
+        let axisStep = (axisMax - axisMin) / steps;
+        let traces = []
+        let x = []
+        let y = []
+        let z = []
+        for (let i = axisMin; i <= axisMax; i += axisStep) {
+            x_row = []
+            y_row = []
+            z_row = []
+            for (let j = axisMin; j <= axisMax; j += axisStep) {
+                x_row.push(round(i))
+                y_row.push(round(j))
+                z_row.push(fall(i, j))
+            }
+            x.push(x_row)
+            y.push(y_row)
+            z.push(z_row)
+        }
+        let data = {
+            x: x,
+            y: y,
+            z: z,
+            type: 'surface',
+            showscale: false,
+            colorscale: 'Rainbow',
+            hidesurface: true,
+            contours: {
+                x: {
+                    show: true,
+                    width: 1,
+                    usecolormap: true,
+                    highlight: false,
+                    color: '#212121',
+                    start: -0.5,
+                    end: 0.5,
+                    size: 0.05,
+                },
+                y: {
+                    show: true,
+                    width: 1,
+                    usecolormap: true,
+                    highlight: false,
+                    color: '#212121',
+                    start: -0.5,
+                    end: 0.5,
+                    size: 0.05,
+
+                },
+            },
+        };
+        traces = [data];
+
+        Plotly.newPlot(document.getElementById('plotly_graf1'), traces, layout, config);
+    }
+    drawGraf1()
+</script>

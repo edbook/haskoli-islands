@@ -3,7 +3,7 @@ Hlutafleiður
 
 *“If you need help bark like a dog." - Gendry. "That's stupid. If I need help I'll shout help." - Arya”*
 
-\- George R.R. Martin, A Clash of Kings 
+\- George R.R. Martin, A Clash of Kings
 
 Graf falls
 ----------
@@ -11,11 +11,11 @@ Graf falls
 .. index::
     graf falls
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f:{\mathbb  R}^2\rightarrow {\mathbb  R}` vera fall. *Graf*
     fallsins er skilgreint sem mengið
@@ -28,11 +28,11 @@ Skilgreining
     .. math:: \displaystyle \{(x,y,z,f(x,y,z))\mid (x,y,z)\in{\mathbb  R}^3\}\subseteq {\mathbb  R}^4.
 
 
-.. figure:: ./myndir/surface.png
-    :width: 100%
-    :align: center
+.. raw:: html
+    :file: plotly/k2graf1.html
 
-    *Graf fallsins* :math:`f(x,y) = \sqrt{1-x^2-y^2}`, :math:`-0.5\leq x,y\leq 0.5`.
+
+*Graf fallsins* :math:`f(x,y) = \sqrt{1-x^2-y^2}`, :math:`-0.5\leq x,y\leq 0.5`.
 
 Jafnhæðarlínur
 --------------
@@ -43,11 +43,11 @@ Jafnhæðarlínur
     jafnhæðar-;ferill
     jafnhæðar-;flötur
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f:{\mathbb  R}^2\rightarrow {\mathbb  R}` vera fall. Ef
     :math:`c` er fasti þá er mengið
@@ -63,8 +63,8 @@ Skilgreining
 
     *Nokkrar jafnæðarlínur fallsins* :math:`f(x,y) = \sqrt{1-x^2-y^2}`, :math:`-0.5\leq x,y\leq 0.5`.
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f:{\mathbb  R}^3\rightarrow {\mathbb  R}` vera fall. Ef
     :math:`c` er fasti þá er mengið
@@ -80,19 +80,19 @@ Fjarlægð milli punkta
 .. index::
     fjarlægð
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     *Fjarlægðin* milli tveggja punkta
     :math:`\mbox{${\bf x}$}=(x_1,x_2, \ldots,x_n)` og
     :math:`\mbox{${\bf y}$}=(y_1,y_2, \ldots,y_n)` í
     :math:`\mbox{${\bf R}^n$}` er skilgreind sem talan
 
-    .. math:: 
-        \displaystyle 
+    .. math::
+        \displaystyle
         |\mbox{${\bf x}$}-\mbox{${\bf y}$}|=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+\cdots+(x_n-y_n)^2}.
 
 Opnar kúlur
@@ -101,11 +101,11 @@ Opnar kúlur
 .. index::
     opin kúla
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`P=(p_1,p_2,\ldots,p_n)` vera punkt í
     :math:`\mbox{${\bf R}^n$}`. Skilgreinum *opnu kúluna* með miðju í
@@ -125,11 +125,11 @@ Opin mengi
     lokað mengi
     fyllimengi
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`U` vera hlutmengi í :math:`\mbox{${\bf R}^n$}`.
 
@@ -147,11 +147,11 @@ Jaðarpunktur
 .. index::
     jaðarpunktur
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`U` vera mengi í :math:`\mbox{${\bf R}^n$}`. Punktur
     :math:`P` í :math:`\mbox{${\bf R}^n$}` er sagður :hover:`jaðarpunktur`
@@ -166,11 +166,11 @@ Skilgreiningarmengi
 .. index::
     skilgreiningarmengi
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Fyrir fall :math:`f(x_1,x_2,\ldots,x_n)` þá táknar :math:`{\cal D}(f)`
     :hover:`skilgreiningarmengi` fallsins :math:`f`. Ef fallið er gefið með formúlu
@@ -185,11 +185,11 @@ Skilgreining
 Markgildi
 ---------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f(x_1,x_2,\ldots,x_n)` vera fall af :math:`n` breytistærðum
     með skilgreiningarmengi :math:`{\cal D}(f)\subseteq \mbox{${\bf R}^n$}`.
@@ -202,18 +202,18 @@ Skilgreining
     eftirfarandi gildir:
 
     Fyrir sérhverja tölu :math:`\epsilon>0` er til tala :math:`\delta>0`
-    þannig að ef :math:`(x_1,x_2,\ldots,x_n)\in{\cal D}(f)` og  
+    þannig að ef :math:`(x_1,x_2,\ldots,x_n)\in{\cal D}(f)` og
 
     .. math:: \displaystyle
 
-        0<|(x_1,x_2,\ldots,x_n)-(p_1,p_2,\ldots,p_n)|<\delta 
+        0<|(x_1,x_2,\ldots,x_n)-(p_1,p_2,\ldots,p_n)|<\delta
 
-    þá er 
+    þá er
 
     .. math:: \displaystyle
         |f(x_1,x_2,\ldots,x_n)-L|<\epsilon.
 
-Ritháttur 
+Ritháttur
 ~~~~~~~~~~
 
 Ef :math:`f(x_1,x_2,\ldots,x_n)` stefnir á tölu :math:`L` þegar
@@ -227,23 +227,23 @@ er ritað
 
 og :math:`L` kallast :hover:`markgildi,markgildi` fallsins :math:`f` í punktinum :math:`(x_1,x_2,\ldots,x_n)`.
 
-Ef við skrifum :math:`\mathbf x = (x_1,x_2,\ldots,x_n)` og 
+Ef við skrifum :math:`\mathbf x = (x_1,x_2,\ldots,x_n)` og
 :math:`\mathbf p = (p_1,p_2,\ldots,p_n)` þá getum við skrifað þetta svona
 
-.. math:: \displaystyle 
+.. math:: \displaystyle
 
     \lim_{\mathbf x \to \mathbf p} f(\mathbf x) = L.
-    
-| 
+
+|
 
 ..
     XXX reference
 
-Skilgreining (Skilgreining 2.8.1 sett fram fyrir föll af tveimur breytum.) 
+Skilgreining (Skilgreining 2.8.1 sett fram fyrir föll af tveimur breytum.)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f(x,y)` vera fall skilgreint á mengi
     :math:`{\cal D}(f)\subseteq {\mathbb  R}^2`. Látum :math:`(a,b)` vera
@@ -254,13 +254,13 @@ Skilgreining (Skilgreining 2.8.1 sett fram fyrir föll af tveimur breytum.)
     stefnir á :math:`(a,b)` ef eftirfarandi gildir:
 
     Fyrir sérhverja tölu :math:`\epsilon>0` er til tala :math:`\delta>0`
-    þannig að ef :math:`(x,y)\in{\cal D}(f)` og  
+    þannig að ef :math:`(x,y)\in{\cal D}(f)` og
 
     .. math:: \displaystyle
 
         \delta > |(x,y)-(a,b)| = \sqrt{(x-a)^2+(y-b)^2} > 0
 
-    þá er 
+    þá er
 
     .. math:: \displaystyle
         |f(x,y)-L|<\epsilon.
@@ -268,10 +268,10 @@ Skilgreining (Skilgreining 2.8.1 sett fram fyrir föll af tveimur breytum.)
 Reglur um markgildi
 -------------------
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f` og :math:`g` vera föll af tveimur breytum. Gerum ráð
@@ -302,11 +302,11 @@ Setning
 Samfelldni
 ----------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f` vera fall af :math:`n` breytistærðum skilgreint á mengi
     :math:`{\cal D}(f)` í :math:`\mbox{${\bf R}^n$}`. Fallið :math:`f` er
@@ -327,11 +327,11 @@ Hlutafleiður
 .. index::
     hlutafleiða
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f(x,y)` vera fall af tveimur breytum :math:`x` og :math:`y`
     sem er skilgreint á opinni skífu með miðju í punktinum :math:`(a,b)`.
@@ -358,11 +358,11 @@ Skilgreining
 
     *Hlutafleiða m.t.t.* \ :math:`y` *fyrir* :math:`x=1`.
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f(x,y,z)` vera fall af þremur breytum :math:`x`, :math:`y`
     og :math:`z` sem er skilgreint á opinni kúlu með miðju í punktinum
@@ -382,11 +382,11 @@ Skilgreining
 
     ef markgildin eru til.
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Látum :math:`f` vera fall af :math:`n` breytum
     :math:`x_1,x_2,\ldots,x_n` sem er skilgreint á opinni kúlu um punktinn
@@ -407,18 +407,18 @@ Ritháttur
 
 Ritum :math:`z=f(x,y)`.  Ýmis konar ritháttur er fyrir hlutafleiður, m.a.
 
-.. math:: \displaystyle 
+.. math:: \displaystyle
 
     \begin{aligned}
     f_1(x,y)&=\frac{\partial z}{\partial x}=  \frac{\partial }{\partial x}f(x,y)
-    =D_1f(x,y)=f_x(x,y)=D_xf(x,y)=\partial_xf(x,y) \\  
+    =D_1f(x,y)=f_x(x,y)=D_xf(x,y)=\partial_xf(x,y) \\
     f_2(x,y)&=\frac{\partial z}{\partial y}=  \frac{\partial }{\partial y}f(x,y)
     =D_2f(x,y)=f_y(x,y)=D_yf(x,y)=\partial_yf(x,y). \end{aligned}
 
 Þegar við viljum tákna gildið á hlutafleiðu :math:`f` í ákveðnum punkti
-:math:`(x,y)=(a,b)` þá eru líka ýmsir möguleikar, til dæmis 
+:math:`(x,y)=(a,b)` þá eru líka ýmsir möguleikar, til dæmis
 
-.. math:: \displaystyle 
+.. math:: \displaystyle
 
     \begin{aligned}
     \frac{\partial z}{\partial x}\bigg|_{(a,b)}&=
@@ -428,10 +428,10 @@ Ritum :math:`z=f(x,y)`.  Ýmis konar ritháttur er fyrir hlutafleiður, m.a.
     \left(\frac{\partial }{\partial y}f(x,y)\right)\bigg|_{(a,b)}
     =f_2(a,b)=D_2f(a,b). \end {aligned}
 
-| 
+|
 
-.. admonition:: Aðvörun 
-    :class: advorun 
+.. admonition:: Aðvörun
+    :class: advorun
 
     Strangt til tekið merkir rithátturinn :math:`\frac{\partial}{\partial x} f(a,b)` að við stingum fyrst
     inn tölunum :math:`a` og :math:`b` og diffrum síðan með tilliti til :math:`x`. En þar sem :math:`f(a,b)` er
@@ -481,7 +481,7 @@ kallast :math:`S` :hover:`snertiplan,snertislétta` við grafið :math:`z=f(x,y)
     :height: 600
     :img: polarggb.png
     :imgwidth: 4cm
-    :zoom_drag: true 
+    :zoom_drag: true
 
 
 
@@ -493,11 +493,11 @@ Hlutafleiður af hærra stigi
     hlutafleiða;hrein
     hlutafleiða;blönduð
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
-    :class: skilgreining 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
     Ritum :math:`z=f(x,y)`. *Annars stigs hlutafleiður* :math:`f` eru
     skilgreindar með formúlunum
@@ -531,10 +531,10 @@ Skilgreining
     kallast blandaðar hlutafleiður.
 
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f(x,y)` vera fall sem er skilgreint á opinni skífu
@@ -545,7 +545,7 @@ Setning
 
     .. math:: \displaystyle f_{12}(a,b)=f_{21}(a,b).
 
-Hugmynd að skilgreiningu 
+Hugmynd að skilgreiningu
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Skilgreiningu 5.6 má útvíkka á augljósan hátt til að skilgreina 2. stigs
@@ -572,7 +572,7 @@ og
 Setning (Almenn útgáfa af Setningu 2.13.2)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f` vera fall :math:`n` breytistærðum sem er skilgreint á
@@ -588,7 +588,7 @@ Setning (Almenn útgáfa af Setningu 2.13.2)
 Dæmi:
 ~~~~~
 
-.. admonition:: Dæmi 
+.. admonition:: Dæmi
     :class: daemi
 
     Ef :math:`w = f(x,y,z)` er fall af þremur breytistærðum þá er t.d. 
@@ -609,7 +609,7 @@ Keðjuregla
 Setning (Keðjureglan í einni breytistærð.)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Við munum nú skoða nokkrar útgáfur af :hover:`keðjureglu,keðjuregla` fyrir föll af mörgum breytistærðum. Gerum ráð fyrir að fallið :math:`f(u)` sé diffranlegt í punktinum
@@ -619,10 +619,10 @@ Setning (Keðjureglan í einni breytistærð.)
 
     .. math:: \displaystyle (f\circ g)'(x)=f'(g(x))g'(x).
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f(x,y)` vera fall þar sem :math:`x=x(t)` og :math:`y=y(t)`
@@ -638,7 +638,7 @@ Setning
 
     .. math:: \displaystyle g'(t)=f_1(x(t),y(t))x'(t)+f_2(x(t),y(t))y'(t).
 
-Ritháttur 
+Ritháttur
 ~~~~~~~~~~
 
 Ritum :math:`z=f(x,y)` þar sem :math:`x=x(t)` og :math:`y=y(t)` eru föll
@@ -653,7 +653,7 @@ af breytu :math:`t`. Þá er
     :width: 27%
     :align: center
 
-Setning 
+Setning
 ~~~~~~~~
 
 .. admonition:: Setning
@@ -676,7 +676,7 @@ Setning
 ..
     XXX reference
 
-Ritháttur 
+Ritháttur
 ~~~~~~~~~~
 
 Ritum :math:`z=f(x,y)` þar sem :math:`x=x(s,t)` og :math:`y=y(s,t)` eru
@@ -703,17 +703,17 @@ föll af breytum :math:`s` og :math:`t`. Þá er
 
 .. math:: \displaystyle
 
-    \begin{bmatrix}\frac{\partial z}{\partial s} 
+    \begin{bmatrix}\frac{\partial z}{\partial s}
     & \frac{\partial z}{\partial t}\end{bmatrix}
-    =\begin{bmatrix}\frac{\partial z}{\partial x} 
+    =\begin{bmatrix}\frac{\partial z}{\partial x}
     & \frac{\partial z}{\partial y}\end{bmatrix}
-    \begin{bmatrix}\frac{\partial x}{\partial s} 
+    \begin{bmatrix}\frac{\partial x}{\partial s}
     & \frac{\partial x}{\partial t}\\
-    \frac{\partial y}{\partial s} 
+    \frac{\partial y}{\partial s}
     & \frac{\partial y}{\partial t}
     \end{bmatrix}
 
-Setning 
+Setning
 ~~~~~~~~
 
 .. admonition:: Setning
@@ -740,7 +740,7 @@ Setning
         :align: center
 
 
-Dæmi 
+Dæmi
 ~~~~~
 
 .. admonition:: Dæmi
@@ -757,19 +757,19 @@ Dæmi
         :width: 40%
         :align: center
 
-    | 
+    |
 
-    Sjáum á myndinni að: 
+    Sjáum á myndinni að:
 
     .. math:: \displaystyle \frac{d T}{d t} = \frac{\partial T}{\partial x} \frac{d x}{d t} +\frac{\partial T}{\partial y} \frac{d y}{d t} + \frac{\partial T}{\partial t} .
 
-Dæmi 
+Dæmi
 ~~~~~
 
 .. admonition:: Dæmi
     :class: daemi
 
-    Látum :math:`T` vera fall af :math:`x`, :math:`y` og :math:`s` og látum enn fremur 
+    Látum :math:`T` vera fall af :math:`x`, :math:`y` og :math:`s` og látum enn fremur
     :math:`t`, :math:`x` og :math:`y` vera föll af :math:`s` og :math:`t`.
     Finnum :math:`\frac{ \partial T}{\partial t}`.
 
@@ -780,13 +780,13 @@ Dæmi
         :width: 50%
         :align: center
 
-    | 
+    |
 
     Sjáum á myndinni að:
 
     .. math:: \displaystyle \frac{\partial T}{\partial t} = \frac{\partial T}{\partial x} \frac{\partial x}{\partial t} +\frac{\partial T}{\partial y} \frac{\partial y}{\partial t} + \left(\frac{\partial T}{\partial t}\right)_{x,y,s} .
 
-Dæmi 
+Dæmi
 ~~~~~
 
 .. admonition:: Dæmi
@@ -794,7 +794,7 @@ Dæmi
 
     Látum :math:`z` vera fall af :math:`u`, :math:`v` og :math:`r`. Látum
     :math:`u` og :math:`v` vera föll af :math:`x`, :math:`y` og :math:`r`. Látum
-    :math:`r` vera fall af :math:`x` og :math:`y`. Finnum 
+    :math:`r` vera fall af :math:`x` og :math:`y`. Finnum
     :math:`\frac{\partial z}{\partial x}`.
 
 .. admonition:: Lausn
@@ -804,22 +804,22 @@ Dæmi
         :width: 40%
         :align: center
 
-    | 
+    |
 
     Sjáum á myndinni að:
 
     .. math:: \displaystyle
 
-        \displaystyle\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x} +\frac{\partial z}{\partial u} \frac{\partial u}{\partial r} \frac{\partial r}{\partial x} 
+        \displaystyle\frac{\partial z}{\partial x} = \frac{\partial z}{\partial u} \frac{\partial u}{\partial x} +\frac{\partial z}{\partial u} \frac{\partial u}{\partial r} \frac{\partial r}{\partial x}
         + \frac{\partial z}{\partial v} \frac{\partial v}{\partial x} + \frac{\partial z}{\partial v} \frac{\partial v}{\partial r} \frac{\partial r}{\partial x} +\frac{\partial z}{\partial r} \frac{\partial r}{\partial x}.
 
 Diffranleiki í einni breytistærð
 --------------------------------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`f` vera fall af einni breytistærð og gerum ráð fyrir að
@@ -837,10 +837,10 @@ Skilgreining
 Diffranleiki í einni breytistærð - önnur lýsing
 -----------------------------------------------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`f` vera fall af einni breytistærð og gerum ráð fyrir að
@@ -861,10 +861,10 @@ Diffranleiki
 .. index::
     diffranleiki;falls af tveimur breytistærðum
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Fall :math:`f(x,y)` sem er skilgreint á opinni skífu umhverfis
@@ -906,7 +906,7 @@ Diffranleiki
 Setning (Meðalgildissetningin)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Gerum ráð fyrir að fallið :math:`f` sé samfellt á lokaða bilinu
@@ -915,10 +915,10 @@ Setning (Meðalgildissetningin)
 
     .. math:: \displaystyle f(b)-f(a)=f'(c)(b-a).
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f(x,y)` vera fall sem er skilgreint á opinni skífu
@@ -930,10 +930,10 @@ Setning
 
     .. math:: \displaystyle f(a+h,b+k)-f(a,b)=hf_1(a+\theta_1h,b+k)+kf_2(a,b+\theta_2k).
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f(x,y)` vera fall sem er skilgreint á opinni skífu
@@ -941,10 +941,10 @@ Setning
     báðar fyrsta stigs hlutafleiður :math:`f` skilgreindar og samfelldar. Þá
     er fallið :math:`f` diffranlegt í :math:`(a,b)`.
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Gerum ráð fyrir að :math:`f(x,y)` sé fall sem er diffranlegt í punktinum
@@ -953,7 +953,7 @@ Setning
 Keðjuregla
 ~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Ritum :math:`z=f(x,y)` þar sem :math:`x=x(s,t)` og :math:`y=y(s,t)`.
@@ -990,10 +990,10 @@ Diffur
 .. index::
     diffur
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Ritum :math:`z=f(x_1, x_2, \ldots, x_n)`. :hover:`Diffrið,diffur` af :math:`z` er
@@ -1015,7 +1015,7 @@ Skilgreining
 Varpanir :math:`\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}`
 ----------------------------------------------------------------
 
-Táknmál 
+Táknmál
 ~~~~~~~~
 
 Látum
@@ -1035,13 +1035,13 @@ Jacobi-fylki
 .. index::
     Jacobi-;fylki
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
 ..
     XXX reference
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Notum táknmálið úr 2.22.1. Ef allar hlutafleiðurnar :math:`\partial
@@ -1067,13 +1067,13 @@ Skilgreining
 Diffranleiki varpana :math:`\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}`
 ----------------------------------------------------------------------------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
 ..
     XXX reference
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Notum táknmálið úr 2.22.1 og 2.23.1. Látum
@@ -1097,10 +1097,10 @@ Skilgreining
 `Keðjuregla`
 -------------
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum
@@ -1123,10 +1123,10 @@ Setning
 Stigull
 -------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`f(x,y)` vera fall og :math:`(x,y)` punkt þar sem báðar
@@ -1137,7 +1137,7 @@ Skilgreining
 
     :hover:`Stigull` :math:`f` er stundum táknaður með **grad**\ :math:`\,f`.
 
-Ritháttur 
+Ritháttur
 ~~~~~~~~~~
 
 Oft hentugt að rita
@@ -1163,10 +1163,10 @@ Dæmi
 
     *Jafnhæðarlínur* :math:`z=1-x^2-y^2`. *Stigull og snertilína við jafnhæðarlínuna* :math:`z=0.5` *í* :math:`(x,y) = (0.5,0.5)`.
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Gerum ráð fyrir að fallið :math:`f(x,y)` sé diffranlegt í punktinum
@@ -1180,10 +1180,10 @@ Setning
 Snertilína við jafnhæðarferil
 -----------------------------
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Gerum ráð fyrir að fallið :math:`f(x,y)` sé diffranlegt í punktinum
@@ -1203,7 +1203,7 @@ Setning
 Stefnuafleiða
 -------------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
@@ -1217,7 +1217,7 @@ Skilgreining
 
     ef markgildið er skilgreint.
 
-.. admonition:: Aðvörun 
+.. admonition:: Aðvörun
     :class: advorun
 
     Í skilgreiningunni á stefnuafleiðu er tekið einhliða markgildi. Berið það saman við skilgreiningu á hlutafleiðu þar sem markgildið er tvíhliða.
@@ -1226,7 +1226,7 @@ Skilgreining
 Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Gerum ráð fyrir að fallið :math:`f` sé diffranlegt í :math:`(a,b)` og
@@ -1236,10 +1236,10 @@ Setning
 
     .. math:: \displaystyle D_{\mbox{${\bf u}$}}f(a,b)=\mbox{${\bf u}$}\cdot \nabla f(a,b).
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f` vera gefið fall og gerum ráð fyrir að :math:`f` sé
@@ -1265,10 +1265,10 @@ Setning
     :align: center
 
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f` vera gefið fall og gerum ráð fyrir að :math:`f` sé
@@ -1288,7 +1288,7 @@ Setning
 Stigull (aftur)
 ---------------
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
@@ -1307,10 +1307,10 @@ Skilgreining
 Snertiplan við jafnhæðarflöt
 ----------------------------
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`f` vera fall af þremur breytistærðum þannig að fallið
@@ -1334,7 +1334,7 @@ Fólgin föll og Taylor-nálganir
     fólgið fall
     fall; fólgið fall
 
-Upprifjun 
+Upprifjun
 ~~~~~~~~~~
 
 Skoðum feril sem gefinn er með jöfnu :math:`F(x,y)=0` og gerum ráð fyrir
@@ -1349,10 +1349,10 @@ að báðar fyrsta stigs hlutafleiður :math:`F` séu samfelldar. Látum
 Sagt að jafnan :math:`F(x,y)=0` skilgreini :math:`y` sem :hover:`fólgið fall`
 af :math:`x` í grennd við :math:`(x_0,y_0)`.
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`F` vera fall af :math:`n`-breytum :math:`x_1, \ldots,
@@ -1382,7 +1382,7 @@ Setning
 .. index::
     Jacobi-;ákveða
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
@@ -1394,7 +1394,7 @@ Skilgreining
     .. math:: \displaystyle
 
         \frac{\partial(u,v)}{\partial(x,y)}=
-        \begin{vmatrix} 
+        \begin{vmatrix}
         \frac{\partial u}{\partial x}&\frac{\partial u}{\partial y}\\
         \frac{\partial v}{\partial x}&\frac{\partial v}{\partial y}
         \end{vmatrix}.
@@ -1405,12 +1405,12 @@ Skilgreining
     .. math:: \displaystyle
 
         \frac{\partial(F,G)}{\partial(x,y)}=
-        \begin{vmatrix} 
+        \begin{vmatrix}
         \frac{\partial F}{\partial x}&\frac{\partial F}{\partial y}\\
         \frac{\partial G}{\partial x}&\frac{\partial G}{\partial y}
         \end{vmatrix}\quad \mbox{og}\quad
         \frac{\partial(F,G)}{\partial(y,z)}=
-        \begin{vmatrix} 
+        \begin{vmatrix}
         \frac{\partial F}{\partial y}&\frac{\partial F}{\partial z}\\
         \frac{\partial G}{\partial y}&\frac{\partial G}{\partial z}
         \end{vmatrix}.
@@ -1421,7 +1421,7 @@ Skilgreining
     .. math:: \displaystyle
 
         \frac{\partial(F,G,H)}{\partial(w,z,y)}=
-        \begin{vmatrix} 
+        \begin{vmatrix}
         \frac{\partial F}{\partial w}&\frac{\partial F}{\partial z}
         &\frac{\partial F}{\partial y}\\
         \frac{\partial G}{\partial w}&\frac{\partial G}{\partial z}
@@ -1436,7 +1436,7 @@ Skilgreining
 Setning (Upprifjun á reglu Cramers.)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Látum :math:`A` vera andhverfanlegt :math:`n\times n` fylki og
@@ -1456,7 +1456,7 @@ Setning (Upprifjun á reglu Cramers.)
 Setning (:hover:`Setningin um fólgin föll,setning um fólgin föll`)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Skoðum jöfnuhneppi
@@ -1499,7 +1499,7 @@ Setning (:hover:`Setningin um fólgin föll,setning um fólgin föll`)
     að
 
     .. math:: \displaystyle
-    
+
         \frac{\partial \varphi_i}{\partial x_j}
         =\frac{\partial y_i}{\partial x_j}
         =-\frac{\frac{\partial(F_{(1)}, \ldots, F_{(n)})}
@@ -1512,7 +1512,7 @@ Setning (:hover:`Setningin um fólgin föll,setning um fólgin föll`)
 Setning (Setningin um staðbundna andhverfu)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     | Látum
@@ -1573,7 +1573,7 @@ sem er kallað :math:`n`\ *-ta stigs Taylor-formúla.*
 .. index::
     Taylor-;margliða
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
@@ -1587,7 +1587,7 @@ Skilgreining
     kallast *fyrsta stigs Taylor-margliða* :math:`f` *með miðju í*
     :math:`(a,b)`.
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
@@ -1606,10 +1606,10 @@ Skilgreining
     kallast *annars stigs Taylor-margliða* :math:`f` *með miðju í*
     :math:`(a,b)`.
 
-Skilgreining og athugasemd 
+Skilgreining og athugasemd
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning 
+.. admonition:: Setning
     :class: setning
 
     Skilgreinum tvo :hover:`diffurvirkja,diffurvirki` :math:`D_1` og :math:`D_2` þannig að
@@ -1619,7 +1619,7 @@ Skilgreining og athugasemd
         D_1f(a,b)=f_1(a,b)\qquad\mbox{og}\qquad
         D_2f(a,b)=f_2(a,b).
 
-.. admonition:: Athugasemd 
+.. admonition:: Athugasemd
     :class: athugasemd
 
     Athugið að ef hlutafleiður :math:`f` af nógu háum stigum eru allar
@@ -1636,7 +1636,7 @@ Upprifjun (:hover:`Tvíliðuregla,tvíliðusetning`)
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Skilgreinum :math:`{n\choose j}` (lesið n yfir j) með: 
+    Skilgreinum :math:`{n\choose j}` (lesið n yfir j) með:
 
     .. math:: \displaystyle {n\choose j}=\frac{n!}{j!(n-j)!}.
 
@@ -1645,11 +1645,11 @@ Talan :math:`{n\choose j}` er
 
 .. math:: \displaystyle (x+y)^n=\sum_{j=0}^n \textstyle{n\choose j}x^jy^{n-j}.
 
-Regla 
+Regla
 ~~~~~~
 
-.. admonition:: Setning 
-    :class: setning 
+.. admonition:: Setning
+    :class: setning
 
     Ef :math:`f(x,y)` er fall þannig að allar hlutafleiður af :math:`n`-ta
     og lægri stigum eru samfelldar þá gildir að
@@ -1659,10 +1659,10 @@ Regla
         (hD_1+kD_2)^nf(a,b)=\sum_{j=0}^n \textstyle{n\choose j}
         h^jk^{n-j}D_1^jD_2^{n-j}f(a,b).
 
-Skilgreining 
+Skilgreining
 ~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining 
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Fyrir fall :math:`f(x,y)` þannig að allar hlutafleiður af :math:`n`-ta
@@ -1679,11 +1679,11 @@ Skilgreining
         &=\sum_{m=0}^n\sum_{j=0}^m \frac{1}{j!(m-j)!}
         D_1^jD_2^{m-j}f(a,b)(x-a)^j(y-b)^{m-j}.\end{aligned}
 
-Setning 
+Setning
 ~~~~~~~~
 
-.. admonition:: Setning 
-    :class: setning 
+.. admonition:: Setning
+    :class: setning
 
     Fyrir fall :math:`f(x,y)` þannig að allar hlutafleiður af :math:`n+1`-ta
     og lægri stigum eru samfelldar þá gildir um skekkjuna í :math:`n`-ta
