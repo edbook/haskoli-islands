@@ -1,4 +1,8 @@
-/* Dæmi */
+.rst-content .midja {
+        text-align: center !important;
+}
+
+/* Admonition: Dæmi */
 .rst-content .daemi .admonition-title {
    background: #F8961E
 }
@@ -12,7 +16,7 @@
 }
 
 
-/* Skilgreining */
+/* Admonition: Skilgreining */
 .rst-content .skilgreining .admonition-title {
    background: #90BE6D
 }
@@ -29,7 +33,7 @@
 }
 
 
-/* Setning */
+/* Admonition: Setning */
 .rst-content .setning .admonition-title {
    background: #e6b43c
 }
@@ -42,7 +46,7 @@
     padding: 0px 12px 12px ;
 }
 
-/* Fylgisetning */
+/* Admonition: Fylgisetning */
 .rst-content .fylgisetning .admonition-title {
    background: #e6ba53
 }
@@ -55,7 +59,7 @@
     padding: 0px 12px 12px ;
 }
 
-/* Athugasemd */
+/* Admonition: Athugasemd */
 .rst-content .athugasemd .admonition-title {
    background: #577590
 }
@@ -69,7 +73,7 @@
 }
 
 
-/* Aðvörun */
+/* Admonition: Aðvörun */
 .rst-content .advorun .admonition-title {
    background: #d11d1d
 }
@@ -86,7 +90,7 @@
 }
 
 
-/* Sjá einnig */
+/* Admonition: Sjá einnig */
 .rst-content .sjaeinnig .admonition-title {
    background: #F3722C
 }
