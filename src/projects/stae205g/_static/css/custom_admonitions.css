@@ -98,3 +98,9 @@
     margin-top: 20px;
     padding: 0px 12px 12px ;
 }
+
+.rst-content .midja {
+        text-align: center;
+        margin: auto;
+        width: 50%;
+}

@@ -32,12 +32,14 @@ Dæmi um graf falls af tveimur breytistærðum:
 .. raw:: html
     :file: plotly/k2graf1.html
 
-.. math:: 
-        f(x,y) = \sqrt{1-x^2-y^2} \text{, } -0.5\leq x,y\leq 0.5.
+.. math:: f(x,y) = \sqrt{1-x^2-y^2} \text{, } -0.5\leq x,y\leq 0.5.
 
 Jafnhæðarlínur
 --------------
 
+.. rst-class:: midja
+
+        This paragraph will be centered.
 
 .. index::
     jafnhæðar-;lína
