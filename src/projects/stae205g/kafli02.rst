@@ -27,12 +27,13 @@ Skilgreining
 
     .. math:: \displaystyle \{(x,y,z,f(x,y,z))\mid (x,y,z)\in{\mathbb  R}^3\}\subseteq {\mathbb  R}^4.
 
+Dæmi um graf falls af tveimur breytistærðum:
 
 .. raw:: html
     :file: plotly/k2graf1.html
 
-
-*Graf fallsins* :math:`f(x,y) = \sqrt{1-x^2-y^2}`, :math:`-0.5\leq x,y\leq 0.5`.
+.. math:: 
+        f(x,y) = \sqrt{1-x^2-y^2} \text{, } -0.5\leq x,y\leq 0.5.
 
 Jafnhæðarlínur
 --------------
