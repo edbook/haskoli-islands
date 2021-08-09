@@ -107,7 +107,6 @@ jobs:
             ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
           fi
   notify-discord-pr:
-    needs: [build-all]
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
     if: github.event_name == 'pull_request' && github.event.action == 'opened'

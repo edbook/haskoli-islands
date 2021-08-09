@@ -7,8 +7,10 @@
 
 from docutils import nodes
 from docutils.parsers.rst import Directive
+from jinja2 import Template
 
 from . import dictlookup
+from .utils import get_html, get_latex, serialize
 
 
 def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -55,12 +57,9 @@ def save_to_listfile(filename, node):
 
     for no, item in enumerate(newlinecontent):
         # Make sure the strings are all str type and not bytes.
-        if isinstance(item, bytes):
-            # newlinecontent[no] = item.decode("utf-8")
-            newlinecontent[no] = item
+        newlinecontent[no] = item
 
     newline = ";".join(newlinecontent) + "\n"
-
     with open(filename, "a+") as f:
         listcontents = f.readlines()
         listcontents.insert(0, newline)
@@ -80,87 +79,20 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictiona
         translation = dictentry["enTerm"]
         hover_node["translation"] = translation
         hover_node["citationform"] = dictentry["isTerm"]
+
     # If translation was not found create error message and code snippets.
     except KeyError:
-        errormsg = "Ekki fannst þýðing á hugtakinu: "
-        html = (
-            '<a class="tooltip" target="_blank">'
-            + word
-            + '<span><staelink style="line-height:4px; font-size:80%;">'
-            + errormsg
-            + "<i>"
-            + term
-            + "</i></staelink></span></a>"
+        hover_node["htmlcode"] = get_html(
+            "not_found.html",
+            word,
+            term,
         )
-
-        latex = word
-        if latexIt:
-            latex = "\\textit{" + latex + "}"
-        if latexLink:
-            searchURL = "http://www.stae.is/os/leita/" + term.replace(" ", "\_")
-            latex = "\\href{" + searchURL + "}{" + word + "}"
-
-        # Add the HTML and Latex code snippets to the node.
-        hover_node["latexcode"] = latex
-        hover_node["htmlcode"] = html
+        hover_node["latexcode"] = get_latex(latexIt, latexLink, word, term)
         return hover_node
 
-    # If a translation was found create string with translations and HTML and Latex code snippets.
-    tranStr = ""
-    for transl in translation:
-        # tranStr = tranStr + transl.decode("utf-8") + ", "
-        tranStr = tranStr + transl + ", "
-    all_translations = tranStr[:-2] + "."
-
-    # TODO: figure out what's happening, temporary exception to keep build healthy
-    try:
-        # single_translation = translation[0].decode("utf-8") + "."
-        single_translation = translation[dictionary_index] + "."
-    except KeyError:
-        single_translation = ""
-
-    # HTML snippet
-    html = "<a "
-    if htmlLink:
-        html = html + 'href="http://www.stae.is/os/leita/' + single_translation.replace(" ", "_")
-    if transNum == "single":
-        html = (
-            html
-            + '" class="tooltip" target="_lank">'
-            + word
-            + "<span>en: <i>"
-            + single_translation
-            + "</i>"
-        )
-    else:
-        hover_node["translation"] = all_translations
-        html = (
-            html
-            + '" class="tooltip" target="_blank">'
-            + word
-            + "<span>en: <i>"
-            + all_translations
-            + "</i>"
-        )
-    if htmlLink:
-        html = (
-            html + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
-            " þýðingu.</staelink>"
-        )
-    html = html + "</span></a>"
-
-    # Latex snippet
-    latex = word
-    if latexIt:
-        latex = "\\textit{" + latex + "}"
-    if latexLink:
-        urlTerm = single_translation.rstrip()
-        searchURL = "http://www.stae.is/os/leita/" + urlTerm.replace(" ", "\_")
-        latex = "\\href{" + searchURL[:-1] + "}{" + word + "}"
-
-    # Add the HTML and Latex code snippets to the node.
-    hover_node["latexcode"] = latex
-    hover_node["htmlcode"] = html
+    hover_node["translation"] = serialize(translation)
+    hover_node["htmlcode"] = get_html("translation.html", word, translation, htmlLink)
+    hover_node["latexcode"] = get_latex(latexIt, latexLink, word, translation)
 
     return hover_node
 
@@ -206,7 +138,7 @@ def create_hoverlist(app, doctree, fromdocname):
     words = {}
     content = []
     filename = "LIST_OF_HOVER_TERMS"
-    # with codecs.open("LIST_OF_HOVER_TERMS", encoding = "utf-8") as listfile:
+
     with open(filename, "r") as f:
         listcontents = f.readlines()
 
@@ -261,7 +193,6 @@ def delete_hoverlist(app, doctree):
     if app.config.hover_translationList:
         filename = "LIST_OF_HOVER_TERMS"
         try:
-            # with codecs.open("LIST_OF_HOVER_TERMS", encoding = "utf-8") as listfile:
             with open(filename, "a+") as f:
                 f.truncate()
         except:
