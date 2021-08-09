@@ -213,7 +213,7 @@ jobs:
           content_title="Eitthvað fór úrskeiðis ☠️"
           title="${{ needs.setup.outputs.branch_name }}"
           color=16711680
-          description="Ekki tókst að byggja og deploya verkefnunum"
+          description="Ekki tókst að byggja og/eða deploya branchinu _${{ needs.setup.outputs.branch_name }}_"
           url="$workflow_url"
           author_name=${{ github.event.push.sender.login}}
           author_url=${{ github.event.push.sender.url}}
