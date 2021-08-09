@@ -1,6 +1,10 @@
+import logging
+import os
+from logging.config import dictConfig
 from pathlib import Path
 from typing import Optional, Union
 
+import coloredlogs
 from jinja2 import (
     Environment,
     FileSystemLoader,
@@ -12,6 +16,32 @@ from jinja2 import (
 SEARCH_URL = "https://www.stae.is/os/leita/{}"
 
 jinja2_env = Environment(loader=PackageLoader("hoverrole"), autoescape=select_autoescape())
+
+
+def configure_logger(name):
+    level = os.getenv("LOG_LEVEL", "INFO")
+    fmt = "[%(levelname)s] %(name)s(%(lineno)d) - %(message)s"
+    styles = coloredlogs.DEFAULT_FIELD_STYLES | {"levelname": {"bold": True, "color": "white"}}
+    # config = dict(
+    #     disable_existing_loggers=False,
+    #     version=1,
+    #     formatters={"f": {"format": '[%(levelname)s] %(name)s(%(lineno)d) - "%(message)s"'}},
+    #     handlers={
+    #         "h": {
+    #             "class": "logging.StreamHandler",
+    #             "formatter": "f",
+    #             "level": level,
+    #         },
+    #     },
+    #     root={
+    #         "handlers": ["h"],
+    #         "level": level,
+    #     },
+    # )
+    # dictConfig(config)
+    logger = logging.getLogger(name)
+    coloredlogs.install(fmt=fmt, field_styles=styles, level=level, logger=logger)
+    return logger
 
 
 def get_first_term(terms: Union[list, str]) -> str:

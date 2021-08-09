@@ -3,7 +3,9 @@ import logging
 import sys
 from pathlib import Path
 
-logger = logging.getLogger(__name__)
+from .utils import configure_logger
+
+logger = configure_logger(__name__)
 # Look up icelandic searchterm 'word' in the dictionaries 'minstae' and 'binstae'
 # and return a dict containing the english and icelandic citation forms of the word.
 base_dir = Path(__file__).parent.resolve().parent.parent.parent
@@ -15,7 +17,6 @@ binstae_data = json.loads(data_file.read_text())
 
 
 def lookup(word):
-    print(word)
     word = word.lower()
     # If 'word' is in citation form, look up in 'minstae' returns the translation.
     try:

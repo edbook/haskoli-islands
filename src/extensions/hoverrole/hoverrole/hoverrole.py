@@ -10,7 +10,9 @@ from docutils.parsers.rst import Directive
 from jinja2 import Template
 
 from . import dictlookup
-from .utils import get_html, get_latex, serialize
+from .utils import configure_logger, get_html, get_latex, serialize
+
+logger = configure_logger(__name__)
 
 
 def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -50,8 +52,10 @@ def save_to_listfile(filename, node):
         newlinecontent.append(node["word"])
         newlinecontent.append(node["term"])
         newlinecontent.append(node["citationform"])
-        for translation in node["translation"]:
-            newlinecontent.append(translation)
+        newlinecontent.append(node["translation"])
+        # for translation in node["translation"]:
+        #     newlinecontent.append(translation)
+        logger.debug(newlinecontent)
     except KeyError:
         return
 
