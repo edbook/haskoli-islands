@@ -53,8 +53,6 @@ def save_to_listfile(filename, node):
         newlinecontent.append(node["term"])
         newlinecontent.append(node["citationform"])
         newlinecontent.append(node["translation"])
-        # for translation in node["translation"]:
-        #     newlinecontent.append(translation)
         logger.debug(newlinecontent)
     except KeyError:
         return

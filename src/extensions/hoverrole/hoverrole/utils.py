@@ -22,23 +22,6 @@ def configure_logger(name):
     level = os.getenv("LOG_LEVEL", "INFO")
     fmt = "[%(levelname)s] %(name)s(%(lineno)d) - %(message)s"
     styles = coloredlogs.DEFAULT_FIELD_STYLES | {"levelname": {"bold": True, "color": "white"}}
-    # config = dict(
-    #     disable_existing_loggers=False,
-    #     version=1,
-    #     formatters={"f": {"format": '[%(levelname)s] %(name)s(%(lineno)d) - "%(message)s"'}},
-    #     handlers={
-    #         "h": {
-    #             "class": "logging.StreamHandler",
-    #             "formatter": "f",
-    #             "level": level,
-    #         },
-    #     },
-    #     root={
-    #         "handlers": ["h"],
-    #         "level": level,
-    #     },
-    # )
-    # dictConfig(config)
     logger = logging.getLogger(name)
     coloredlogs.install(fmt=fmt, field_styles=styles, level=level, logger=logger)
     return logger
