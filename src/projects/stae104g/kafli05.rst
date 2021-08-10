@@ -198,6 +198,8 @@ Athugasemd
        (f')' = f'' \geq 0 \qquad   \text{og} \qquad
            (g')' = g'' \leq 0.
 
+.. index::
+    kupt-setn
 
 Setning
 ~~~~~~~
@@ -212,6 +214,9 @@ Setning
     (iii) :math:`f'' \geq 0`
 
 .. todo::  Sönnun
+
+.. index::
+    hvelft-setn
 
 Setning
 ~~~~~~~
@@ -490,3 +495,41 @@ Hvernig er stærsti (mesta rúmmálið) loklausi kassinn sem hægt er búa til �
 .. image:: ./myndir/kafli05/09_kassi.png
 	:align: center
 	:width: 12cm
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-utgildi
+
+  **Æfingadæmi**
+	Látum :math:`f(x)=x^3-2x^2-x+2` vera gefið fall. Hakið við þann kross sem á við um fallið.
+
+  A) :eqt:`I` Fallið hefur staðbundið hágildi í :math:`x \approx 1,55` og er hvelft á bilinu :math:`(-\infty,\tfrac{2}{3})`.
+
+  #) :eqt:`I` Fallið hefur núllstöðvar í :math:`x=\pm 1` og :math:`x=2` og er kúpt á bilinu :math:`(-\infty,\tfrac{2}{3})`.
+
+  #) :eqt:`C` Fallið hvelft á bilinu :math:`(-\infty,\tfrac{2}{3})` og vaxandi á bilinu :math:`(-\infty , \tfrac{2-\sqrt{7}}{3}) \cup (\tfrac{2+\sqrt{7}}{3},\infty)`.
+
+  #) :eqt:`I` Fallið hefur núllstöðvar í :math:`x=\pm 1` og :math:`x=2` og er minnkandi á bilinu :math:`(-\infty , \tfrac{2-\sqrt{7}}{3}) \cup (\tfrac{2+\sqrt{7}}{3},\infty)`.
+
+  .. eqt-solution::
+
+
+		Reiknum fyrstu og aðra afleiðu fallsins. Fáum
+
+		.. math:: f'(x) = 3x^2 - 4x - 1
+
+		og
+
+		.. math:: f''(x) = 6x - 4.
+
+		Fáum að
+
+		.. math:: 3x^2 - 4x - 1 = 0 \iff x = \tfrac{2 \pm \sqrt{7}}{3}
+
+		og
+
+		.. math:: 6x - 4 = 0 \iff x = \tfrac{2}{3}.
+
+		Auðvelt er að sýna að :math:`f'(x)>0` ef :math:`x \in (-\infty;\tfrac{2-\sqrt{7}}{3}) \cup (\tfrac{2+\sqrt{7}}{3},\infty)` og er því fallið vaxandi á því bili
+		sem og að :math:`f''(x)<0` ef :math:`x \in (-\infty,\tfrac{2}{3})` og gefur :ref:`setning 5.3.3 <hvelft-setn>` að fallið sé hvelft á því bili.

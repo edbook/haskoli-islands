@@ -333,3 +333,25 @@ Setning Pappusar, II
     snúðflötur með flatarmál
 
     .. math:: S=2\pi\overline{r}s.
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-snudur
+
+  **Æfingadæmi**
+	Látum :math:`f(x)=x^2` vera gefið fall. Finnið rúmmál snúðsins (:math:`V`) sem myndast þegar fallinu :math:`f` er snúið um :math:`x`-ás og er á milli línanna :math:`x=-2` og :math:`x=1`.
+
+  A) :eqt:`I` :math:`V= \tfrac{17\pi}{5}`
+
+  #) :eqt:`C` :math:`V= \tfrac{33\pi}{5}`
+
+  #) :eqt:`I` :math:`V= \tfrac{51\pi}{5}`
+
+  #) :eqt:`I` :math:`V= \tfrac{63\pi}{5}`
+
+  .. eqt-solution::
+
+	Setn. 7.1.3 gefur að
+
+		.. math:: V= \pi \int_{-2}^1 \left(x^2 \right)^2 dx = \pi\left[ \tfrac{x^5}{5} \right]_{-2}^1 = \tfrac{33\pi}{5}.

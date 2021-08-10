@@ -160,6 +160,27 @@ Sjá einnig `Óræðar tölur | stæ.is <http://www.xn--st-2ia.is/fletta/%C3%B3r
 
 .. _`FrumsendanUmEfraMark`:
 
+.. eqt:: daemi-hradi1
+
+  **Æfingadæmi** Hversu langt kemst maður sem gengur á hraðanum :math:`v=3 \text{ m/s}` á einni mínútu?
+
+  A) :eqt:`I` 300 metra
+
+  #) :eqt:`I` 3 metra
+
+  #) :eqt:`C` 180 metra
+
+  #) :eqt:`I` Ekkert af ofangreindu
+
+  .. eqt-solution::
+    Í einni mínútu eru 60 sekúndur. Við margföldum saman hraðann og tímann og fáum:
+
+    .. math::
+      60\text{ s} \cdot 3 \text{ m/s} = 180 \text{ m}
+
+
+HER A EITTHAÐ AAE>WFOGjweræa
+
 Bil
 ---
 

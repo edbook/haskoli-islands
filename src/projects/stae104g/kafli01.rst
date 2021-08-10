@@ -21,28 +21,6 @@ There is another theory which states that this has already happened.*
 
 \- Douglas Adams, The Restaurant at the End of the Universe
 
-.. eqt:: daemi-lengdvigurs
-
-  **Æfingadæmi** Hver er lengd vigursins :math:`\vec{b}=\begin{pmatrix} 5 \\ -2 \end{pmatrix}` ?
-
-  A) :eqt:`I` :math:`|\vec{b}| = 7`
-
-  #) :eqt:`I` :math:`|\vec{b}| = \sqrt{21}`
-
-  #) :eqt:`C` :math:`|\vec{b}| = \sqrt{29}`
-
-  .. eqt-solution::
-    Notum reglu Pýþagórasar:
-
-		.. math::
-			\begin{aligned}
-				|\bar{b}| &= \sqrt{b_x^2 + b_y^2} \\
-				&= \sqrt{(5)^2+(-2)^2}\\
-				&=\sqrt{25+4}\\
-				&= \sqrt{29}
-			\end{aligned}
-
-
 Grunnhugmyndin
 ~~~~~~~~~~~~~~
 
@@ -244,6 +222,33 @@ Skilgreining: Bil
     og
 
     .. math:: |x-a| < \eta.
+
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-tolur
+
+  **Æfingadæmi**
+	Hakið við réttan kross.
+
+  A) :eqt:`I` Talan 2,4 er náttúruleg tala.
+
+  #) :eqt:`I` Til eru tölur sem eru bæði í senn ræðar og óræðar.
+
+  #) :eqt:`C` Allar ræðar tölur eru rauntölur en ekki eru allar rauntölur ræðar.
+
+  #) :eqt:`I` Kvaðratrætur náttúrulegra talna eru allar óræðar.
+
+  .. eqt-solution::
+
+		A) 2,4 er ekki náttúruleg tala því hún er ekki heil tala.
+
+		#) Tölur geta ekki bæði verið ræðar og óræðar af því þetta eru andstæð hugtök.
+
+		#) Kvaðratrót náttúrulegra talna geta verið ræðar, t.d. :math:`\sqrt{9}=3`.
+
+		#) Ræðu tölurnar eiginlegt hlutmengi í rauntölunum og því eru allar ræðar tölur rauntölur en til eru rauntölur, t.d. :math:`\pi` sem ekki eru ræðar.
 
 ------
 
@@ -466,3 +471,29 @@ Skilgreining: Jafnstætt og oddstætt
 .. image::  ./myndir/kafli01/04_JafnstaettOddstaett.png
     :align: center
     :width: 60%
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-andhverfa
+
+  **Æfingadæmi**
+	Hakið við réttan kross.
+
+  A) :eqt:`C` Öll gagntæk föll eiga sér andhverfu.
+
+  #) :eqt:`I` Öll átækt föll eiga sér andhverfu.
+
+  #) :eqt:`I` Fallið :math:`f: \mathbb{R} \mapsto \mathbb{R}`, :math:`f(x)=\sqrt{x}` er andhverfa falls :math:`g(x)=x^2`.
+
+  #) :eqt:`I` Til þess að fallið :math:`f(x)` geti verið andhverfa fallsins :math:`g(x)` verða föllin að hafa sama skilgreiningarmengi.
+
+  .. eqt-solution::
+
+		A) Þar sem :math:`x^2` er ekki gagntækt er það ekki andhverfanlegt.
+
+		#) Skilgreiningarmengi fallsins er bakmengi andhverfunnar og öfugt. Það er alls ekki nauðsynlegt að skilgreiningarmengi andhverfunnar sé það sama og skilgreiningarmengi fallsins.
+
+		#) Ekki nægir að fall sé átækt til þess að það sé andhverfanlegt. T.a.m. er fallið :math:`f: \mathbb{R} \mapsto \mathbb{R}`, :math:`f(x)=\tan(x)` átækt en ekki andhverfanlegt (athugið, tangens er andhverfanlegur sé skilgreiningarmengi hans takmarkaðvið bilið :math:`\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)` en ekki þegar skilgreningarmengið er :math:`\mathbb{R}`).
+
+		#) Öll gagntæk föll eru andhverfanleg.

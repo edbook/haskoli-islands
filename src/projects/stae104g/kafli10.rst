@@ -436,6 +436,28 @@ Taylorraðir nokkra falla
        =1+\frac{x^2}{2!}+\frac{x^4}{4!}+\frac{x^6}{6!}+\cdots
        &\text{fyrir öll } x\\\end{aligned}
 
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-ODE
+
+  **Æfingadæmi**
+	Röðin :math:`\sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}2^{2n+1}x^{4n+2}` er Taylor röð fallsins
+
+  A) :eqt:`I` :math:`\tan(3x)` 
+
+  #) :eqt:`I` :math:`\cos(2x^2)` 
+
+  #) :eqt:`I` :math:`\sin(2x)` 
+
+  #) :eqt:`C` :math:`\sin(2x^2)` 
+
+  .. eqt-solution::
+
+	Við getum notfært okkur að :math:`\sin(x)=\sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1}` og skipt
+	:math:`x` út fyrir :math:`2x^2`, þ.e.
+
+	.. math:: \sin(2x^2) = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}(2x^2)^{2n+1} = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}2^{2n+1}x^{4n+2}.
 
 
 *I may not have gone where I intended to go, but I think I have ended up where I needed to be.*

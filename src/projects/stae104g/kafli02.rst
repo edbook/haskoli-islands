@@ -235,7 +235,7 @@ Setning
 Dæmi: Tölugildisfallið
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Dæmi 
+.. admonition:: Dæmi
     :class: daemi
 
     :hover:`Tölugildisfallið,tölugildi` :math:`|x|` er skilgreint sem :math:`x`
@@ -625,6 +625,33 @@ Skilgreining: Markgildið :math:`-\infty`
     samfelldni; í punkti
 
 -------
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-markgildi
+
+  **Æfingadæmi**
+	Hakið við réttan kross.
+
+  A) :eqt:`I` Ef fallið :math:`f(x)` er rætt fall og :math:`a` er núllstöð nefnara þess þá er markgildið :math:`\lim_{x \rightarrow a} f(x)` alltaf til.
+
+  #) :eqt:`I` Þar sem :math:`\pi` er óræð tala þá getur ekkert fall uppfyllt að :math:`\lim_{x \rightarrow \pi} f(x)` sé til.
+
+  #) :eqt:`I` Ef :math:`f(x)` er fastafall (þ.e. :math:`f(x)=c` þar sem :math:`c` er einhver tala) þá gildir alltaf að :math:`\lim_{x \rightarrow \infty} f(x) = 0`.
+
+  #) :eqt:`C` Til að markgildi falls í punkti sé til verður markgildið þegar fallið stefnir á punktinn frá hægri að vera það sama og það stefnir á punktinn frá vinstri.
+
+  .. eqt-solution::
+
+		A) Ræða fallið :math:`f(x)=\tfrac{1}{x}` hefur nefnara með núllstöð :math:`x=0` en markgildið :math:`\lim_{x \rightarrow 0} \tfrac{1}{x}` er ekki til.
+
+		#) Þetta er bara bull. T.d. gildir um fastafallið :math:`f(x)=\pi` að það hefur markgildið :math:`\pi` í öllum punktum.
+
+		#) Þetta væri rétt ef stæði „...þá gildir alltaf að :math:`\lim_{x \rightarrow \infty} f(x) = c`.”
+
+		#) Þetta er skilgreiningin á að markgildi sé til svo þetta er rétt.
+
 
 .. _samfelldni:
 
