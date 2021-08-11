@@ -58,10 +58,11 @@ Skilgreining
     kallað :hover:`jafnhæðarlína,hæðarlína` eða :hover:`jafnhæðarferill,hæðarferill` fallsins
     :math:`f` fyrir fastann :math:`c`.
 
-.. figure:: ./myndir/contour.png
-    :width: 100%
-    :align: center
+.. raw:: html
+    :file: plotly/k2graf1b.html
 
+.. rst-class:: midja
+    
     *Nokkrar jafnæðarlínur fallsins* :math:`f(x,y) = \sqrt{1-x^2-y^2}`, :math:`-0.5\leq x,y\leq 0.5`.
 
 .. admonition:: Skilgreining
@@ -446,9 +447,8 @@ Snertiplan
 Látum :math:`f(x,y)` vera fall af tveimur breytistærðum þannig að
 hlutafleiðurnar :math:`f_1(a,b)` og :math:`f_2(a,b)` séu skilgreindar.
 
-.. image:: ./myndir/bothpart.png
-    :width: 100%
-    :align: center
+.. raw:: html
+    :file: plotly/k2graf4.html
 
 Í punktinum :math:`(a,b,f(a,b))` er
 
@@ -1132,11 +1132,11 @@ Skilgreining
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`f(x,y)` vera fall og :math:`(x,y)` punkt þar sem báðar
+    Látum :math:`f(x,y)` vera fall og :math:`(a,b)` punkt þar sem báðar
     fyrsta stigs hlutafleiður :math:`f` eru skilgreindar. Skilgreinum
-    :hover:`stigul,stigull` :math:`f` í punktinum :math:`(x,y)` sem vigurinn
+    :hover:`stigul,stigull` :math:`f` í punktinum :math:`(a,b)` sem vigurinn
 
-    .. math:: \displaystyle \nabla f(x,y)=f_1(x,y)\mbox{${\bf i}$}+f_2(x,y)\mbox{${\bf j}$}.
+    .. math:: \displaystyle \nabla f(a,b)=f_1(a,b)\mbox{${\bf i}$}+f_2(a,b)\mbox{${\bf j}$}.
 
     :hover:`Stigull` :math:`f` er stundum táknaður með **grad**\ :math:`\,f`.
 
@@ -1151,21 +1151,6 @@ Oft hentugt að rita
 þ.e.a.s. \ :math:`\nabla` gefur fyrirmæli um hvað á að gera við
 :math:`f` til að fá :math:`\nabla f(x,y)`.
 
-Dæmi
-~~~~
-
-.. figure:: ./myndir/gradfurf.png
-    :width: 80%
-    :align: center
-
-    *Graf* :math:`z=1-x^2-y^2`
-
-.. figure:: ./myndir/gradient.png
-    :width: 80%
-    :align: center
-
-    *Jafnhæðarlínur* :math:`z=1-x^2-y^2`. *Stigull og snertilína við jafnhæðarlínuna* :math:`z=0.5` *í* :math:`(x,y) = (0.5,0.5)`.
-
 Setning
 ~~~~~~~~
 
@@ -1176,6 +1161,13 @@ Setning
     :math:`(a,b)` og að :math:`\nabla f(a,b) \neq \mathbf{0}`. Þá er
     vigurinn :math:`\nabla f(a,b)` hornréttur á þá jafnhæðarlínu :math:`f`
     sem liggur í gegnum punktinn :math:`(a,b)`.
+
+.. raw :: html 
+    :file: plotly/k2graf5.html
+
+.. rst-class:: midja 
+
+    *Graf fallsins* :math:`f(x,y)=1-x^2-y^2`. *Sjáum að stigullinn í* :math:`(x,y)=(0.4, 0.4)` *er hornréttur á jafnhæðarlínuna* :math:`f(x,y)=0.68` *sem fer í gegnum punktinn* :math:`(0.4, 0.4)`. 
 
 .. index::
     snertilína;við jafnhæðarferil

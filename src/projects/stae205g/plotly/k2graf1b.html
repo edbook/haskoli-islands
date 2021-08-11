@@ -1,0 +1,244 @@
+<div id="plotly_graf1b"></div>
+<script>
+        function drawGraf1b() {
+                // Þurfum námundunarfall til að forðast floating point klúður á eftir
+                function round(num, prec = 4) {
+                        return Math.round((num + Number.EPSILON) * (10 ** prec)) / (10 ** prec)
+                }
+
+                // z-hnitið sem fall af x og y
+                function fall(x, y) {
+                        return Math.sqrt(1 - x * x - y * y);
+                }
+
+                // Plotly stillingar (layout og config)
+                let layout = {
+                        scene: {
+                                xaxis: {
+                                        gridcolor: '#7d7d7d',
+                                        showspikes: false,
+                                        showbackground: true,
+                                        backgroundcolor: 'rgba(0, 0, 0, 0)',
+                                        range: [-0.7, 0.7],
+                                        // tickmode: 'array',
+                                        // tickvals: [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5],
+                                        tickmode: 'linear',
+                                        tick0: 0,
+                                        dtick: 0.25,
+                                        showline: true,
+                                        linewidth: 3,
+                                        ticks: 'outside',
+                                        tickwidth: 2,
+                                        tickcolor: 'black',
+                                        ticklen: 10,
+                                },
+                                yaxis: {
+                                        gridcolor: '#7d7d7d',
+                                        showspikes: false,
+                                        showbackground: true,
+                                        backgroundcolor: 'rgba(0, 0, 0, 0)',
+                                        range: [-0.7, 0.7],
+                                        // tickmode: 'array',
+                                        // tickvals: [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5],
+                                        tickmode: 'linear',
+                                        tick0: 0,
+                                        dtick: 0.25,
+                                        linewidth: 3,
+                                        ticks: 'outside',
+                                        tickwidth: 2,
+                                        tickcolor: 'black',
+                                        ticklen: 10,
+                                },
+                                zaxis: {
+                                        gridcolor: '#7d7d7d',
+                                        showspikes: false,
+                                        showbackground: true,
+                                        backgroundcolor: 'rgba(0, 0, 0, 0)',
+                                        range: [0.69, 1.0],
+                                        tickmode: 'linear',
+                                        tick0: 1,
+                                        dtick: 0.05,
+                                        linewidth: 3,
+                                        ticks: 'outside',
+                                        tickwidth: 2,
+                                        tickcolor: 'black',
+                                        ticklen: 10,
+                                        tickson: 'boundaries',
+                                        hoverformat: '.2f',
+                                },
+                                aspectratio: {
+                                        x: 1,
+                                        y: 1,
+                                        z: .75,
+                                },
+                                hovermode: 'z',
+                                camera: {
+                                        center: {
+                                                x: .2,
+                                                y: .3,
+                                                z: -.05,
+                                        },
+                                        eye: {
+                                                x: 1.3,
+                                                y: 1.5,
+                                                z: .4,
+                                        }
+                                },
+                                annotations: [
+                                        {
+                                                x: 0.25,
+                                                y: -0.187,
+                                                z: 0.69,
+                                                ax: -50,
+                                                ay: 10,
+                                                xanchor: 'right',
+                                                // xshift: 1,
+                                                // yshift: 1,
+                                                text: 'Jafnhæðarlínan f(x,y) = 0.95',
+                                                bordercolor: '#000000',
+                                                borderwidth: 1,
+                                                borderpad: 3,
+                                                bgcolor: '#f2f1e6',
+                                        },
+                                        {
+                                                x: 0.05,
+                                                y: 0.433,
+                                                z: 0.69,
+                                                ax: 40,
+                                                ay: 40,
+                                                xanchor: 'left',
+                                                xshift: 1,
+                                                yshift: 1,
+                                                text: 'Jafnhæðarlínan f(x,y) = 0.90',
+                                                bordercolor: '#000000',
+                                                borderwidth: 1,
+                                                borderpad: 3,
+                                                bgcolor: '#f2f1e6',
+                                        },
+                                        {
+                                                x: -0.35,
+                                                y: 0.394,
+                                                z: 0.69,
+                                                ax: 50,
+                                                ay: -20,
+                                                xanchor: 'left',
+                                                xshift: 1,
+                                                yshift: 1,
+                                                text: 'Jafnhæðarlínan f(x,y) = 0.85',
+                                                bordercolor: '#000000',
+                                                borderwidth: 1,
+                                                borderpad: 3,
+                                                bgcolor: '#f2f1e6',
+                                        },
+
+                                ]
+
+                        },
+                        showlegend: false,
+                        width: 700,
+                        height: 500,
+                        margin: {
+                                l: 0,
+                                r: 0,
+                                t: 0,
+                                b: 0,
+                        },
+                        paper_bgcolor: 'rgba(0,0,0,0)',
+                        plot_bgcolor: 'rgba(0,0,0,0)',
+                        hoverlabel: {
+                                bgcolor: '#fffce8',
+                                bordercolor: '#101010',
+                                font: {
+                                        color: 'black',
+                                        size: 18,
+                                },
+                        },
+                };
+                let config = {
+                        'displayModeBar': false,
+                }
+
+                // Skilgreinum data
+                let steps = 32;
+                let axisMin = -0.5;
+                let axisMax = 0.5;
+                let axisStep = round((axisMax - axisMin) / steps);
+                let traces = []
+                let x = []
+                let y = []
+                let z = []
+                for (let i = axisMin; i <= axisMax; i += axisStep) {
+                        x_row = []
+                        y_row = []
+                        z_row = []
+                        for (let j = axisMin; j <= axisMax; j += axisStep) {
+                                x_row.push(round(i))
+                                y_row.push(round(j))
+                                z_row.push(fall(i, j))
+                        }
+                        x.push(x_row)
+                        y.push(y_row)
+                        z.push(z_row)
+                }
+                let data = {
+                        x: x,
+                        y: y,
+                        z: z,
+                        type: 'surface',
+                        showscale: false,
+                        colorscale: 'Rainbow',
+                        hidesurface: true,
+                        // hoverinfo: 'z',
+                        hovertemplate: 'f(x,y) = %{z:.2f}<extra></extra>',
+                        contours: {
+                                x: {
+                                        show: true,
+                                        width: 1, // ATH webGL: óáreiðanlegt að breyta
+                                        usecolormap: true,
+                                        highlight: false,
+                                        color: '#212121',
+                                        start: axisMin,
+                                        end: axisMax,
+                                        size: axisStep * 0.5,
+                                },
+                                y: {
+                                        show: true,
+                                        width: 1, // ATH webGL: óáreiðanlegt að breyta
+                                        usecolormap: true,
+                                        highlight: false,
+                                        color: '#212121',
+                                        start: axisMin,
+                                        end: axisMax,
+                                        size: axisStep * 0.5,
+                                },
+                                z: {
+                                        show: true,
+                                        width: 1, // ATH webGL: óáreiðanlegt að breyta
+                                        color: '#000000',
+                                        highlight: true,
+                                        highlightcolor: '#000000',
+                                        start: 0.85,
+                                        end: 1.0,
+                                        size: 0.05,
+                                        project: {
+                                                z: true,
+                                        },
+                                }
+                        },
+                };
+                // let data_fill = {
+                //         x: x,
+                //         y: y,
+                //         z: z,
+                //         type: 'surface',
+                //         showscale: false,
+                //         colorscale: [[0, '#FFFFFF'], [1, '#FFFFFF']],
+                // };
+
+                // traces = [data, data_fill];
+                traces = [data];
+
+                Plotly.newPlot(document.getElementById('plotly_graf1b'), traces, layout, config);
+        }
+        drawGraf1b()
+</script>

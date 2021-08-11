@@ -28433,24 +28433,23 @@ function createCamera(element, options) {
       return true
     }
 
-    // TKJ commenta þetta út til að eyðileggja ekki page scrolling
-    // camera.wheelListener = mouseWheel(element, function(dx, dy) {
-    //   // TODO remove now that we can disable scroll via scrollZoom?
-    //   if(camera.keyBindingMode === false) return
-    //   if(!camera.enableWheel) return
+    camera.wheelListener = mouseWheel(element, function(dx, dy) {
+      // TODO remove now that we can disable scroll via scrollZoom?
+      if(camera.keyBindingMode === false) return
+      if(!camera.enableWheel) return
 
-    //   var flipX = camera.flipX ? 1 : -1
-    //   var flipY = camera.flipY ? 1 : -1
-    //   var t = now()
-    //   if(Math.abs(dx) > Math.abs(dy)) {
-    //     view.rotate(t, 0, 0, -dx * flipX * Math.PI * camera.rotateSpeed / window.innerWidth)
-    //   } else {
-    //     if(!camera._ortho) {
-    //       var kzoom = -camera.zoomSpeed * flipY * dy / window.innerHeight * (t - view.lastT()) / 20.0
-    //       view.pan(t, 0, 0, distance * (Math.exp(kzoom) - 1))
-    //     }
-    //   }
-    // }, true)
+      var flipX = camera.flipX ? 1 : -1
+      var flipY = camera.flipY ? 1 : -1
+      var t = now()
+      if(Math.abs(dx) > Math.abs(dy)) {
+        view.rotate(t, 0, 0, -dx * flipX * Math.PI * camera.rotateSpeed / window.innerWidth)
+      } else {
+        if(!camera._ortho) {
+          var kzoom = -camera.zoomSpeed * flipY * dy / window.innerHeight * (t - view.lastT()) / 20.0
+          view.pan(t, 0, 0, distance * (Math.exp(kzoom) - 1))
+        }
+      }
+    }, true)
   }
 
   camera.enableMouseListeners()
@@ -38870,6 +38869,7 @@ function mouseWheelListen(element, callback, noScroll) {
   }
   var lineHeight = toPX('ex', element)
   var listener = function(ev) {
+    if (ev.shiftKey == false) {return}; // tkj: zooma bara á shift 
     if(noScroll) {
       ev.preventDefault()
     }
