@@ -54,6 +54,7 @@
                                         showspikes: false,
                                         showbackground: true,
                                         backgroundcolor: 'rgba(0, 0, 0, 0)',
+                                        range: [0.69, 1.0],
                                         tickmode: 'linear',
                                         tick0: 1,
                                         dtick: 0.05,
@@ -72,7 +73,7 @@
                                 hovermode: false,
                                 camera: {
                                         center: {
-                                                x: .3,
+                                                x: .2,
                                                 y: .3,
                                                 z: -.05,
                                         },
@@ -97,7 +98,6 @@
                 };
                 let config = {
                         'displayModeBar': false,
-                        'scrollZoom': false,
                 }
 
                 // Skilgreinum data
@@ -139,7 +139,7 @@
                                         color: '#212121',
                                         start: axisMin,
                                         end: axisMax,
-                                        size: axisStep,
+                                        size: axisStep * 0.5,
                                 },
                                 y: {
                                         show: true,
@@ -149,7 +149,7 @@
                                         color: '#212121',
                                         start: axisMin,
                                         end: axisMax,
-                                        size: axisStep,
+                                        size: axisStep * 0.5,
                                 },
                                 z: {
                                         show: false,

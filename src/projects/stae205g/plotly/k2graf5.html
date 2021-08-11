@@ -1,0 +1,273 @@
+<div id="plotly_graf5"></div>
+<script>
+        function drawGraf5() {
+                // Þurfum námundunarfall til að forðast floating point klúður á eftir
+                function round(num, prec = 4) {
+                        return Math.round((num + Number.EPSILON) * (10 ** prec)) / (10 ** prec)
+                }
+
+                // z-hnitið sem fall af x og y
+                function fall(x, y) {
+                        return 1 - x * x - y * y;
+                }
+
+                // Plotly stillingar (layout og config)
+                let layout = {
+                        scene: {
+                                xaxis: {
+                                        gridcolor: '#7d7d7d',
+                                        showspikes: false,
+                                        showbackground: true,
+                                        backgroundcolor: 'rgba(0, 0, 0, 0)',
+                                        range: [-1, 1],
+                                        // tickmode: 'array',
+                                        // tickvals: [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5],
+                                        tickmode: 'linear',
+                                        tick0: 0,
+                                        dtick: 0.2,
+                                        showline: true,
+                                        linewidth: 3,
+                                        ticks: 'outside',
+                                        tickwidth: 2,
+                                        tickcolor: 'black',
+                                        ticklen: 10,
+                                },
+                                yaxis: {
+                                        gridcolor: '#7d7d7d',
+                                        showspikes: false,
+                                        showbackground: true,
+                                        backgroundcolor: 'rgba(0, 0, 0, 0)',
+                                        range: [-1, 1],
+                                        // tickmode: 'array',
+                                        // tickvals: [-0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5],
+                                        tickmode: 'linear',
+                                        tick0: 0,
+                                        dtick: 0.2,
+                                        linewidth: 3,
+                                        ticks: 'outside',
+                                        tickwidth: 2,
+                                        tickcolor: 'black',
+                                        ticklen: 10,
+                                },
+                                zaxis: {
+                                        gridcolor: '#7d7d7d',
+                                        showspikes: false,
+                                        showbackground: true,
+                                        backgroundcolor: 'rgba(0, 0, 0, 0)',
+                                        range: [-1, 1],
+                                        // tickmode: 'linear',
+                                        // tick0: 1,
+                                        // dtick: 0.05,
+                                        linewidth: 3,
+                                        ticks: 'outside',
+                                        tickwidth: 2,
+                                        tickcolor: 'black',
+                                        ticklen: 10,
+                                        tickson: 'boundaries',
+                                },
+                                aspectratio: {
+                                        x: 1,
+                                        y: 1,
+                                        z: .75,
+                                },
+                                camera: {
+                                        center: {
+                                                x: .2,
+                                                y: .3,
+                                                z: -.05,
+                                        },
+                                        eye: {
+                                                x: 1.3,
+                                                y: 1.5,
+                                                z: .7,
+                                        }
+                                },
+                                hovermode: false,
+                                annotations: [
+                                        {
+                                                showarrow: false,
+                                                x: 0,
+                                                y: 0,
+                                                z: -1,
+                                                xshift: 12,
+                                                yshift: 6,
+                                                xanchor: 'left',
+                                                text: "$\\nabla f(0.4,0.4)$",
+                                                textangle: 0,
+                                                font: {
+                                                        color: "#408fc7",
+                                                        size: 16,
+                                                },
+                                        },
+                                        {
+                                                x: 0.4,
+                                                y: -0.40,
+                                                z: -1,
+                                                ax: -50,
+                                                ay: 10,
+                                                xanchor: 'right',
+                                                // xshift: 1,
+                                                // yshift: 1,
+                                                text: '$\\text{Jafnhæðarlínan } f(x,y) = 0.68$',
+                                                bordercolor: '#000000',
+                                                borderwidth: 1,
+                                                borderpad: 3,
+                                                bgcolor: '#f2f1e6',
+                                        },
+                                ],
+                        },
+                        showlegend: false,
+                        width: 700,
+                        height: 500,
+                        margin: {
+                                l: 0,
+                                r: 0,
+                                t: 0,
+                                b: 0,
+                        },
+                        paper_bgcolor: 'rgba(0,0,0,0)',
+                        plot_bgcolor: 'rgba(0,0,0,0)',
+                        hoverlabel: {
+                                bgcolor: '#fffce8',
+                                bordercolor: '#101010',
+                                font: {
+                                        color: 'black',
+                                        size: 18,
+                                },
+                        },
+                };
+                let config = {
+                        'displayModeBar': false,
+                }
+
+                // Skilgreinum data
+                let steps = 40;
+                let axisMin = -1;
+                let axisMax = 1;
+                let axisStep = round((axisMax - axisMin) / steps);
+                let traces = []
+                let x = []
+                let y = []
+                let z = []
+                x_lina = []
+                y_lina = []
+                z_lina = []
+                x_vigur = []
+                y_vigur = []
+                z_vigur = []
+                for (let i = axisMin; i <= axisMax; i += axisStep) {
+                        x_row = []
+                        y_row = []
+                        z_row = []
+                        for (let j = axisMin; j <= axisMax; j += axisStep) {
+                                x_row.push(round(i))
+                                y_row.push(round(j))
+                                z_row.push(fall(i, j))
+                        }
+                        x.push(x_row)
+                        y.push(y_row)
+                        z.push(z_row)
+                }
+                for (let i = -0.2; i <= 1; i += 0.6) {
+                        x_lina.push(i)
+                        y_lina.push(-i + 0.8)
+                        z_lina.push(-1)
+                }
+
+                let data = {
+                        x: x,
+                        y: y,
+                        z: z,
+                        type: 'surface',
+                        showscale: false,
+                        colorscale: 'Rainbow',
+                        hidesurface: true,
+                        hovertemplate: 'f(x=%{x:.2f}, y=%{y:.2f}) = %{z:.2f}<extra></extra>',
+                        contours: {
+                                x: {
+                                        show: true,
+                                        width: 1, // ATH webGL: óáreiðanlegt að breyta
+                                        usecolormap: true,
+                                        highlight: false,
+                                        color: '#000000',
+                                        start: axisMin,
+                                        end: axisMax,
+                                        size: axisStep * 0.5,
+                                },
+                                y: {
+                                        show: true,
+                                        width: 1, // ATH webGL: óáreiðanlegt að breyta
+                                        usecolormap: true,
+                                        highlight: false,
+                                        color: '#000000',
+                                        start: axisMin,
+                                        end: axisMax,
+                                        size: axisStep * 0.5,
+                                },
+                                z: {
+                                        show: true,
+                                        width: 1, // ATH webGL: óáreiðanlegt að breyta
+                                        color: '#000000',
+                                        highlight: false,
+                                        highlightcolor: '#000000',
+                                        start: 0.68,
+                                        end: 1.0,
+                                        size: 0.5,
+                                        project: {
+                                                z: true,
+                                        },
+                                },
+                        },
+                };
+                let data_lina = {
+                        x: [1, -0.2],
+                        y: [-0.2, 1],
+                        z: [-1, -1],
+                        type: 'scatter3d',
+                        mode: 'lines',
+                        line: {
+                                width: 1,
+                                color: 'black',
+                        },
+                }
+                let data_hornrett = {
+                        x: [0.35, 0.30, 0.35],
+                        y: [0.35, 0.40, 0.45],
+                        z: [-1, -1, -1],
+                        type: 'scatter3d',
+                        mode: 'lines',
+                        line: {
+                                width: 1,
+                                color: 'black',
+                        },
+                }
+                let data_vigur = {
+                        x: [0.4, -0.3],
+                        y: [0.4, -0.3],
+                        z: [-1, -1],
+                        type: 'scatter3d',
+                        mode: 'lines',
+                        line: {
+                                width: 8,
+                                color: '#408fc7',
+                        },
+                }
+                let data_viguroddur = {
+                        x: [-0.4],
+                        y: [-0.4],
+                        z: [-1],
+                        u: [-0.4],
+                        v: [-0.4],
+                        w: [0],
+                        type: 'cone',
+                        anchor: 'tip',
+                        sizeref: 0.3,
+                        showscale: false,
+                        colorscale: [[0, '#408fc7'], [1, '#408fc7']],
+                }
+                traces = [data, data_lina, data_hornrett, data_vigur, data_viguroddur];
+
+                Plotly.newPlot(document.getElementById('plotly_graf5'), traces, layout, config);
+        }
+        drawGraf5()
+</script>
