@@ -50,14 +50,15 @@ def save_to_listfile(filename, node):
     for no, item in enumerate(newlinecontent):
         # Make sure the strings are all str type and not bytes.
         if isinstance(item, bytes):
-            newlinecontent[no] = item.decode("utf-8")
+            # newlinecontent[no] = item.decode("utf-8")
+            newlinecontent[no] = item
 
     newline = ";".join(newlinecontent) + "\n"
 
     with open(filename, "a+") as f:
         listcontents = f.readlines()
         listcontents.insert(0, newline)
-        f.write(listcontents)
+        f.writelines(listcontents)
     return
 
 
@@ -101,12 +102,14 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     # If a translation was found create string with translations and HTML and Latex code snippets.
     tranStr = ""
     for transl in translation:
-        tranStr = tranStr + transl.decode("utf-8") + ", "
+        # tranStr = tranStr + transl.decode("utf-8") + ", "
+        tranStr = tranStr + transl + ", "
     all_translations = tranStr[:-2] + "."
 
     # TODO: figure out what's happening, temporary exception to keep build healthy
     try:
-        single_translation = translation[0].decode("utf-8") + "."
+        # single_translation = translation[0].decode("utf-8") + "."
+        single_translation = translation[0] + "."
     except KeyError:
         single_translation = ""
 
@@ -135,8 +138,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
         )
     if htmlLink:
         html = (
-            html
-            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
+            html + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
             " þýðingu.</staelink>"
         )
     html = html + "</span></a>"

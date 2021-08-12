@@ -18,8 +18,8 @@ def lookup(word):
     word = word.lower()
 
     # Make sure that word is 'byte' type
-    if isinstance(word, str):
-        word = word.encode("utf-8")
+    # if isinstance(word, str):
+    #     word = word.encode("utf-8")
 
     # If 'word' is in citation form, look up in 'minstae' returns the translation.
     try:

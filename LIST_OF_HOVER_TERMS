@@ -1,0 +1,152 @@
+stikaferill;stikaður ferill;stikaður ferill;parametric curve
+Ferill í plani;ferill;ferill;curve;curved line;line;trajectory
+stikun;stikun;stikun;parametrization
+hraða;hraði;hraði;velocity
+hröðun;hröðun;hröðun;acceleration
+samfellt diffranlegur;samfellt diffranlegur;samfellt diffranlegur;continuously differentiable
+þjáll;þjáll;þjáll;infinitely differentiable;smooth
+þjáll á köflum;þjáll á köflum;þjáll á köflum;piecewise smooth
+snertilínu;snertilína;snertilína;tangent;tangent line
+þverlínu;þverlína;þverlína;normal;normal line;perpendicular
+bogalengd;bogalengd;bogalengd;arc length
+Pólhnit;Pólhnit;pólhnit;polar coordinates
+hornrétt hnit;hornrétt hnit;hornrétt hnit;orthogonal coordinates;rectangular coordinates
+snertils;snertill;snertill;tangent line;tangent vector
+Flatarmál;Flatarmál;flatarmál;area;measure of area;surface area
+Bogalengd;Bogalengd;bogalengd;arc length
+Krappi;Krappi;krappi;curvature
+Krappageisli;Krappageisli;krappageisli;radius of curvature
+Meginþverill;Meginþverill;meginþverill;first normal;principal normal
+Hjúfurplanið;hjúfurslétta;hjúfurslétta;osculating plane
+Hjúfurhringur;Hjúfurhringur;hjúfurhringur;circle of curvature;osculating circle
+tvíþverill;tvíþverill;tvíþverill;binormal
+vindingur;vindingur;vindingur;second curvature;torsion
+jafnhæðarlína;hæðarlína;hæðarlína;contour line;depth contour;first principal line;height line;isobath;level curve
+jafnhæðarferill;hæðarferill;hæðarferill;contour line;depth contour;first principal line;height line;isobath;level curve
+jafnhæðarflötur;hæðarflötur;hæðarflötur;contour surface;level surface
+opið mengi;opið mengi;opið mengi;open set;region
+lokað;lokað mengi;lokað mengi;closed set
+fyllimengið;fyllimengi;fyllimengi;complement;complementary subset
+jaðarpunktur;jaðarpunktur;jaðarpunktur;boundary point;frontier point
+skilgreiningarmengi;skilgreiningarmengi;skilgreiningarmengi;argument domain;domain;domain carrier;index set;latent domain;range of arguments;set of definition;source
+stefni á;stefna á;stefna á;converge to
+markgildi;markgildi;markgildi;limit
+grennd;grennd;grennd;neighbourhood
+snertivigur;snertivigur;snertivigur;tangent vector
+snertivigur;snertivigur;snertivigur;tangent vector
+Þverlína;Þverlína;þverlína;normal;normal line;perpendicular
+snertiplan;snertislétta;snertislétta;tangent plane
+keðjureglu;keðjuregla;keðjuregla;chain rule
+diffranlegt;diffranlegur;diffranlegur;differentiable
+diffranlegt;diffranlegur;diffranlegur;differentiable
+diffranlegt;diffranlegur;diffranlegur;differentiable
+snertiplan;snertislétta;snertislétta;tangent plane
+Diffrið;diffur;diffur;differential
+stigul;stigull;stigull;gradient
+Stigull;Stigull;stigull;gradient
+diffurvirki;diffurvirki;diffurvirki;differential operator
+snertilínu;snertilína;snertilína;tangent;tangent line
+jafnhæðarferil;hæðarferill;hæðarferill;contour line;depth contour;first principal line;height line;isobath;level curve
+Stigull;Stigull;stigull;gradient
+jafnhæðarflöt;hæðarflötur;hæðarflötur;contour surface;level surface
+snertiplan;snertislétta;snertislétta;tangent plane
+fólgið fall;fólgið fall;fólgið fall;implicit function
+Setningin um fólgin föll;setning um fólgin föll;setning um fólgin föll;implicit function theorem
+diffurvirkja;diffurvirki;diffurvirki;differential operator
+Tvíliðuregla;tvíliðusetning;tvíliðusetning;binomial theorem
+staðbundið lággildi;staðbundið lággildi;staðbundið lággildi;local minimum;minimum;minimum in the small;relative minimum
+staðbundið hágildi;staðbundið hágildi;staðbundið hágildi;local maximum;maximum;maximum in the small;relative maximum
+staðbundið útgildi;staðbundið útgildi;staðbundið útgildi;extremum in the small;local extremum;relative extremum
+hæsta gildi;hæsta gildi;hæsta gildi;absolute maximum;global maximum;largest value;maximum in the large
+stöðupunktur;stöðupunktur;stöðupunktur;critical point;equilibrium point;extremal;singular point;stationary point;vanishing
+jaðarpunktur;jaðarpunktur;jaðarpunktur;boundary point;frontier point
+staðbundið útgildi;staðbundið útgildi;staðbundið útgildi;extremum in the small;local extremum;relative extremum
+stöðupunktur;stöðupunktur;stöðupunktur;critical point;equilibrium point;extremal;singular point;stationary point;vanishing
+Stigullinn;stigull;stigull;gradient
+jaðarpunktur;jaðarpunktur;jaðarpunktur;boundary point;frontier point
+söðulpunktur;söðulpunktur;söðulpunktur;saddle point
+staðbundið lággildi;staðbundið lággildi;staðbundið lággildi;local minimum;minimum;minimum in the small;relative minimum
+staðbundið hágildi;staðbundið hágildi;staðbundið hágildi;local maximum;maximum;maximum in the small;relative maximum
+Ferningsform;Ferningsform;ferningsform;quadratic form
+jákvætt ákvarðað;jákvætt ákveðinn;jákvætt ákveðinn;positive definite
+neikvætt ákvarðað;neikvætt ákveðinn;neikvætt ákveðinn;negative definite
+óákvarðað;óákvarðaður;óákvarðaður;undetermined
+eigingildi;eigingildi;eigingildi;characteristic value;eigenvalue;proper value
+eigingildi;eigingildi;eigingildi;characteristic value;eigenvalue;proper value
+eigingildi;eigingildi;eigingildi;characteristic value;eigenvalue;proper value
+staðbundið lággildi;staðbundið lággildi;staðbundið lággildi;local minimum;minimum;minimum in the small;relative minimum
+staðbundið hágildi;staðbundið hágildi;staðbundið hágildi;local maximum;maximum;maximum in the small;relative maximum
+söðulpunkt;söðulpunktur;söðulpunktur;saddle point
+staðbundið lággildi;staðbundið lággildi;staðbundið lággildi;local minimum;minimum;minimum in the small;relative minimum
+staðbundið hágildi;staðbundið hágildi;staðbundið hágildi;local maximum;maximum;maximum in the small;relative maximum
+söðulpunkt;söðulpunktur;söðulpunktur;saddle point
+jákvætt ákvarðað;jákvætt ákveðinn;jákvætt ákveðinn;positive definite
+neikvætt ákvarðað;neikvætt ákveðinn;neikvætt ákveðinn;negative definite
+óákvarðað;óákvarðaður;óákvarðaður;undetermined
+Stöðupunktar;stöðupunktur;stöðupunktur;critical point;equilibrium point;extremal;singular point;stationary point;vanishing
+Stöðupunktar;stöðupunktur;stöðupunktur;critical point;equilibrium point;extremal;singular point;stationary point;vanishing
+Stöðupunktar;stöðupunktur;stöðupunktur;critical point;equilibrium point;extremal;singular point;stationary point;vanishing
+heildanlegt;heildanlegur;heildanlegur;integrable
+heildi;tegur;tegur;integral;root;solution;solving
+heildanlegt;heildanlegur;heildanlegur;integrable
+heildanlegt;heildanlegur;heildanlegur;integrable
+takmarkað;takmarkaður;takmarkaður;bounded
+heildanlegt;heildanlegur;heildanlegur;integrable
+heildanlegt;heildanlegur;heildanlegur;integrable
+óeiginlega heildið;óeiginlegt heildi;óeiginlegt heildi;improper integral
+Meðalgildissetning;Meðalgildissetning;meðalgildissetning;mean value theorem
+Pólhnit;Pólhnit;pólhnit;polar coordinates
+heildanlegt;heildanlegur;heildanlegur;integrable
+pólhnit;pólhnit;pólhnit;polar coordinates
+Heildi;tegur;tegur;integral;root;solution;solving
+Heildi;tegur;tegur;integral;root;solution;solving
+heildanlegt;heildanlegur;heildanlegur;integrable
+Sívalningshnit;Sívalningshnit;sívalningshnit;cylindrical coordinates
+Kúluhnit;Kúluhnit;kúluhnit;spherical coordinates
+kúluhnit;kúluhnit;kúluhnit;spherical coordinates
+kúluhnit;kúluhnit;kúluhnit;spherical coordinates
+heildanlegt;heildanlegur;heildanlegur;integrable
+rúmskika;rúmskiki;rúmskiki;body;geometric figure;object;solid
+Vigursvið;Vigursvið;vigursvið;vector field
+samfellt;samfelldur;samfelldur;continuous
+Ferill;Ferill;ferill;curve;curved line;line;trajectory
+straumlína;straumlína;straumlína;flow line;stream line
+vigursvið;vigursvið;vigursvið;vector field
+snertivigur;snertivigur;snertivigur;tangent vector
+mætti;mætti;mætti;potential
+mætti;mætti;mætti;potential
+samfellt diffranlegur;samfellt diffranlegur;samfellt diffranlegur;continuously differentiable
+markgildin;markgildi;markgildi;limit
+opið mengi;opið mengi;opið mengi;open set;region
+Flötur;Flötur;flötur;face
+jafnhæðarflötur;hæðarflötur;hæðarflötur;contour surface;level surface
+jafnhæðarflötur;hæðarflötur;hæðarflötur;contour surface;level surface
+snertiplan;snertislétta;snertislétta;tangent plane
+þvervigurinn;þvervigur;þvervigur;normal vector
+snertiplan;snertislétta;snertislétta;tangent plane
+einingarvigur;einingarvigur;einingarvigur;normalized vector;unit vector
+vigursvið;vigursvið;vigursvið;vector field
+áttanlegur;áttanlegur;áttanlegur;orientable
+Áttun;Áttun;áttun;orientation
+áttanlegur;áttanlegur;áttanlegur;orientable
+áttanlegan;áttanlegur;áttanlegur;orientable
+flæði;flæði;flæði;flux
+áttun;áttun;áttun;orientation
+stigul;stigull;stigull;gradient
+sundurleitni;sundurleitni;sundurleitni;divergence
+rót;rót;rót;root;radix;radical;solution
+diffurvirki;diffurvirki;diffurvirki;differential operator
+sundurleitni;sundurleitni;sundurleitni;divergence
+rót;rót;rót;root;radix;radical;solution
+sundurleitnilaust;uppsprettulaus;uppsprettulaus;solenoidal
+rótlaust;rótlaus;rótlaus;irrotational;lamellar;non-rotational
+sundurleitnilaus;uppsprettulaus;uppsprettulaus;solenoidal
+rótlaust;rótlaus;rótlaus;irrotational;lamellar;non-rotational
+stjörnusvæði;stjörnusvæði;stjörnusvæði;star domain
+stjörnusvæði;stjörnusvæði;stjörnusvæði;star domain
+stjörnusvæði;stjörnusvæði;stjörnusvæði;star domain
+stjörnusvæði;stjörnusvæði;stjörnusvæði;star domain
+jaðar;jaðar;jaðar;boundary;frontier;periphery
+áttun;áttun;áttun;orientation
+snertiplan;snertislétta;snertislétta;tangent plane
+opnu mengi;opið mengi;opið mengi;open set;region
