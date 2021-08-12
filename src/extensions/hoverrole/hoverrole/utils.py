@@ -20,8 +20,10 @@ jinja2_env = Environment(loader=PackageLoader("hoverrole"), autoescape=select_au
 
 def configure_logger(name):
     level = os.getenv("LOG_LEVEL", "INFO")
-    fmt = "[%(levelname)s] %(name)s(%(lineno)d) - %(message)s"
-    styles = coloredlogs.DEFAULT_FIELD_STYLES | {"levelname": {"bold": True, "color": "white"}}
+    fmt = "%(name)s(%(lineno)d): [%(levelname)s] %(message)s"
+    styles = coloredlogs.DEFAULT_FIELD_STYLES | {
+        "levelname": {"bold": True, "color": "blue", "faint": True}
+    }
     logger = logging.getLogger(name)
     coloredlogs.install(fmt=fmt, field_styles=styles, level=level, logger=logger)
     return logger
