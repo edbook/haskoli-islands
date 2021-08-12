@@ -1,8 +1,14 @@
 Warning: This extension requires Python 3!
 
-This module is an extension for Sphinx. It defines a role :hover: which takes a single string argument of the form `arg1,arg2`. The directive .. hoverlist:: is also defined and contains a list of terms translated by :hover: along with their translations.
+This module is an extension for Sphinx. It defines a role :hover: which takes a single string argument of the form `arg1,arg2`. 
+The directive .. hoverlist:: is also defined and contains a list of terms translated by :hover: along with their translations.
 
-In the Sphinx-generated HTML code the string 'arg1' is highlighted and will provide a translation of the string 'arg2' to English (from Icelandic) on mouse-over based on the stae.is/os database (stored locally in 'ordasafn.py'). If no comma is found in the argument, 'arg2' is assumed to be the same as 'arg1'.
+In the Sphinx-generated HTML code the string 'arg1' is highlighted and will provide a translation of 
+the string 'arg2' to English (from Icelandic) on mouse-over based on the stae.is/os database (stored locally in 'ordasafn.py'). 
+If no comma is found in the argument, 'arg2' is assumed to be the same as 'arg1'.
+You can also add a non-negative integer to indicate the index of the entry wanted, f.ex. 
+    :hover:`Mengi, mengi, 5` náttúrulegu talnanna er táknað með...
+would fetch the 6th (indexing starts at 0) entry of the translation of "mengi". 
 
 
 The extension recognizes the following user settings which can be set in conf.py:
@@ -32,7 +38,8 @@ Set to 1 to make the list of translations smaller in HTML output.
 
 Example:
 ========
-Ef gefinn er rétthyrndur þríhyrningur segir reglan til um að ef lögð eru saman önnur veldi :hover:`skammhliða,skammhlið` þríhyrningsins jafngildi sú summa öðru :hover:`veldi` langhliðarinnar.
+Ef gefinn er rétthyrndur þríhyrningur segir reglan til um að ef lögð eru saman önnur 
+veldi :hover:`skammhliða,skammhlið` þríhyrningsins jafngildi sú summa öðru :hover:`veldi` langhliðarinnar.
 
 
 

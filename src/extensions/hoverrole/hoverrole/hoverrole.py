@@ -22,13 +22,19 @@ def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     translationList = app.config.hover_translationList
 
     # for text input of the form: "word,term"
-    try:
-        [word, term] = text.split(",")
+    split_text = text.split(",")
+    dictionary_index = 0
+    if len(split_text) == 3:
+        word, term, dictionary_index = split_text
+        dictionary_index = int(dictionary_index)
         term = term.lstrip()
-    # If no 'term' is provided, it is assumed to be the same as 'word'.
-    except ValueError:
+    elif len(split_text) == 2:
+        word, term = split_text
+        term = term.lstrip()
+    else:
         word = term = text
-    node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt)
+
+    node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index)
     # Save the translated term to file for later use in hoverlist.
     if translationList:
         save_to_listfile("LIST_OF_HOVER_TERMS", node)
@@ -50,18 +56,19 @@ def save_to_listfile(filename, node):
     for no, item in enumerate(newlinecontent):
         # Make sure the strings are all str type and not bytes.
         if isinstance(item, bytes):
-            newlinecontent[no] = item.decode("utf-8")
+            # newlinecontent[no] = item.decode("utf-8")
+            newlinecontent[no] = item
 
     newline = ";".join(newlinecontent) + "\n"
 
     with open(filename, "a+") as f:
         listcontents = f.readlines()
         listcontents.insert(0, newline)
-        f.write(listcontents)
+        f.writelines(listcontents)
     return
 
 
-def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
+def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index=0):
     # Create new hover object.
     hover_node = hover()
     hover_node["word"] = word
@@ -101,12 +108,14 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     # If a translation was found create string with translations and HTML and Latex code snippets.
     tranStr = ""
     for transl in translation:
-        tranStr = tranStr + transl.decode("utf-8") + ", "
+        # tranStr = tranStr + transl.decode("utf-8") + ", "
+        tranStr = tranStr + transl + ", "
     all_translations = tranStr[:-2] + "."
 
     # TODO: figure out what's happening, temporary exception to keep build healthy
     try:
-        single_translation = translation[0].decode("utf-8") + "."
+        # single_translation = translation[0].decode("utf-8") + "."
+        single_translation = translation[dictionary_index] + "."
     except KeyError:
         single_translation = ""
 
@@ -135,8 +144,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
         )
     if htmlLink:
         html = (
-            html
-            + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
+            html + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
             " þýðingu.</staelink>"
         )
     html = html + "</span></a>"

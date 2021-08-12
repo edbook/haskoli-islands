@@ -12,7 +12,7 @@ Talnakerfi
 Náttúrulegu tölurnar  :math:`\mathbb{N}`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tölurnar :math:`0,1,2,3, \dots` köllum við :hover:`náttúrulegu tölurnar, náttúruleg tala`. :hover:`Mengi, set` náttúrulegu talnanna er táknað með :math:`\mathbb{N}.`
+Tölurnar :math:`0,1,2,3, \dots` köllum við :hover:`náttúrulegu tölurnar, náttúruleg tala`. :hover:`Mengi, mengi, 5` náttúrulegu talnanna er táknað með :math:`\mathbb{N}.`
 
 Heiltölurnar :math:`\mathbb{Z}`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
