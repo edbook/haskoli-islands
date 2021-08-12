@@ -22,13 +22,19 @@ def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     translationList = app.config.hover_translationList
 
     # for text input of the form: "word,term"
-    try:
-        [word, term] = text.split(",")
+    split_text = text.split(",")
+    dictionary_index = 0
+    if len(split_text) == 3:
+        word, term, dictionary_index = split_text
+        dictionary_index = int(dictionary_index)
         term = term.lstrip()
-    # If no 'term' is provided, it is assumed to be the same as 'word'.
-    except ValueError:
+    elif len(split_text) == 2:
+        word, term = split_text
+        term = term.lstrip()
+    else:
         word = term = text
-    node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt)
+
+    node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index)
     # Save the translated term to file for later use in hoverlist.
     if translationList:
         save_to_listfile("LIST_OF_HOVER_TERMS", node)
@@ -62,7 +68,7 @@ def save_to_listfile(filename, node):
     return
 
 
-def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
+def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index=0):
     # Create new hover object.
     hover_node = hover()
     hover_node["word"] = word
@@ -109,7 +115,7 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt):
     # TODO: figure out what's happening, temporary exception to keep build healthy
     try:
         # single_translation = translation[0].decode("utf-8") + "."
-        single_translation = translation[0] + "."
+        single_translation = translation[dictionary_index] + "."
     except KeyError:
         single_translation = ""
 
