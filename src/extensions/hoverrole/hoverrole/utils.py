@@ -58,3 +58,8 @@ def get_latex(latexIt: bool, latexLink: bool, word: str, term: str) -> str:
         url = urlify(term, "\_")
         return f"\\href{{{url}}}{{{word}}}"
     return word
+
+
+def get_translations_file():
+    # TODO: add to extension config
+    return "LIST_OF_HOVER_TERMS.json"

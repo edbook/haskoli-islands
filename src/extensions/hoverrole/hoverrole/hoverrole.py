@@ -5,14 +5,44 @@
 # Author: Símon Böðvarsson
 # 1.08.2016
 
+import json
+from pathlib import Path
+from typing import List, TypedDict
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from jinja2 import Template
 
 from . import dictlookup
-from .utils import configure_logger, get_html, get_latex, serialize
+from .utils import (
+    configure_logger,
+    get_html,
+    get_latex,
+    get_translations_file,
+    serialize,
+)
 
 logger = configure_logger(__name__)
+
+
+class HoverType(TypedDict):
+    word: str
+    term: str
+    citationform: str
+    translation: str
+
+
+class hover(nodes.General, nodes.Element):
+    pass
+
+
+class hoverlist(nodes.General, nodes.Element):
+    pass
+
+
+class HoverListDirective(Directive):
+    def run(self):
+        return [hoverlist("")]
 
 
 def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -41,31 +71,35 @@ def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index)
     # Save the translated term to file for later use in hoverlist.
     if translationList:
-        save_to_listfile("LIST_OF_HOVER_TERMS", node)
+        save_to_listfile(get_translations_file(), node)
 
     return [node], []
 
 
-def save_to_listfile(filename, node):
+def save_to_listfile(filename: str, node: hover):
     try:
-        newlinecontent = []
-        newlinecontent.append(node["word"])
-        newlinecontent.append(node["term"])
-        newlinecontent.append(node["citationform"])
-        newlinecontent.append(node["translation"])
-        logger.debug(newlinecontent)
+        hover_obj: HoverType = {
+            "word": node["word"],
+            "term": node["term"],
+            "citationform": node["citationform"],
+            "translation": node["translation"],
+        }
     except KeyError:
         return
 
-    for no, item in enumerate(newlinecontent):
-        # Make sure the strings are all str type and not bytes.
-        newlinecontent[no] = item
+    f = Path(filename)
+    f.touch(exist_ok=True)
+    data = f.read_text(encoding="utf-8")
 
-    newline = ";".join(newlinecontent) + "\n"
-    with open(filename, "a+") as f:
-        listcontents = f.readlines()
-        listcontents.insert(0, newline)
-        f.writelines(listcontents)
+    if not data:
+        data = []
+    else:
+        data = json.loads(data)
+    data.append(hover_obj)
+    Path(filename).write_text(
+        json.dumps(data, sort_keys=True, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
     return
 
 
@@ -99,10 +133,6 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictiona
     return hover_node
 
 
-class hover(nodes.General, nodes.Element):
-    pass
-
-
 def html_hover_visit(self, node):
     pass
 
@@ -119,15 +149,6 @@ def tex_hover_depart(self, node):
     self.body.append(node["latexcode"])
 
 
-class hoverlist(nodes.General, nodes.Element):
-    pass
-
-
-class HoverListDirective(Directive):
-    def run(self):
-        return [hoverlist("")]
-
-
 def create_hoverlist(app, doctree, fromdocname):
     # If translationlists are set to not appear, replace them with empty nodes.
     if not app.config.hover_translationList:
@@ -139,25 +160,12 @@ def create_hoverlist(app, doctree, fromdocname):
     # Words is a dictionary with translated terms as keys and translations as values.
     words = {}
     content = []
-    filename = "LIST_OF_HOVER_TERMS"
+    data: List[HoverType] = json.loads(Path(get_translations_file()).read_text())
 
-    with open(filename, "r") as f:
-        listcontents = f.readlines()
-
-    for line in listcontents:
-        # Clean up the strings.
-        line = line.split(";")
-        for idx, entry in enumerate(line):
-            beginindex = entry.find("'")
-            newentry = entry[beginindex + 1 :]
-            line[idx] = newentry
-
-        citationform = line[2]
-        translation = line[3]
-
-        if citationform in words:
+    for item in data:
+        if item["citationform"] in words:
             continue
-        words[citationform] = translation
+        words[item["citationform"]] = item["translation"]
 
     # Add words and translations (sorted) to nodes.
     for key, value in sorted(words.items()):
@@ -193,14 +201,14 @@ def create_hoverlist(app, doctree, fromdocname):
 
 def delete_hoverlist(app, doctree):
     if app.config.hover_translationList:
-        filename = "LIST_OF_HOVER_TERMS"
+        filename = get_translations_file()
         try:
             with open(filename, "a+") as f:
                 f.truncate()
         except:
-            print(
-                "Could not write over contents in: 'LIST_OF_HOVER_TERMS'",
-                " for unknown reasons. User may need to erase contents manually.",
+            logger.error(
+                f"Could not write over contents in: '{filename}' for unknown"
+                " reasons. User may need to erase contents manually.",
             )
     else:
         pass
@@ -224,6 +232,7 @@ def setup(app):
     app.add_config_value("hover_translationList", 1, "env")
     # Enable for a smaller version of the list of translations.
     app.add_config_value("hover_miniTranslationList", 0, "env")
+    app.add_config_value("hover_outputFile", "translations.json", "env")
 
     app.add_node(
         hover,
