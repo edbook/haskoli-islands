@@ -36,7 +36,9 @@ def get_first_term(terms: Union[list, str]) -> str:
 
 
 def serialize(items: list) -> str:
-    return ", ".join(items)
+    if items and isinstance(items, list):
+        return ", ".join(items)
+    return items
 
 
 def urlify(item: str, split_char: str = "_") -> str:
@@ -44,9 +46,15 @@ def urlify(item: str, split_char: str = "_") -> str:
     return SEARCH_URL.format(term)
 
 
-def get_html(tpl: str, word: str, terms: list, html_link: bool = False) -> str:
-    term: str = serialize(terms)
-    url: Optional[str] = urlify(terms) if html_link else None
+def get_html(
+    tpl: str, word: str, terms: list, html_link: bool = False, stae_index: bool = None
+) -> str:
+    if stae_index == None:
+        term: str = serialize(terms)
+        url: Optional[str] = urlify(terms) if html_link else None
+    else:
+        term: str = terms[stae_index]
+        url: Optional[str] = SEARCH_URL.format(term) if html_link else None
     template = jinja2_env.get_template(tpl)
     return template.render(word=word, term=term, url=url)
 
