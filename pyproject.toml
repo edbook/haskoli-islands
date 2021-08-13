@@ -85,6 +85,7 @@ datacamp = {path = "src/extensions/datacamp-extension", develop = true}
 google-analytics = {path = "src/extensions/google-analytics", develop = true}
 sphinx-togglebutton = "^0.2.3"
 PyYAML = "^5.4.1"
+coloredlogs = "^15.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

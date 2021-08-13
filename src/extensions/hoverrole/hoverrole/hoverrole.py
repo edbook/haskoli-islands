@@ -5,10 +5,44 @@
 # Author: Símon Böðvarsson
 # 1.08.2016
 
+import json
+from pathlib import Path
+from typing import List, TypedDict
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
+from jinja2 import Template
 
 from . import dictlookup
+from .utils import (
+    configure_logger,
+    get_html,
+    get_latex,
+    get_translations_file,
+    serialize,
+)
+
+logger = configure_logger(__name__)
+
+
+class HoverType(TypedDict):
+    word: str
+    term: str
+    citationform: str
+    translation: str
+
+
+class hover(nodes.General, nodes.Element):
+    pass
+
+
+class hoverlist(nodes.General, nodes.Element):
+    pass
+
+
+class HoverListDirective(Directive):
+    def run(self):
+        return [hoverlist("")]
 
 
 def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -37,34 +71,35 @@ def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index)
     # Save the translated term to file for later use in hoverlist.
     if translationList:
-        save_to_listfile("LIST_OF_HOVER_TERMS", node)
+        save_to_listfile(get_translations_file(), node)
 
     return [node], []
 
 
-def save_to_listfile(filename, node):
+def save_to_listfile(filename: str, node: hover):
     try:
-        newlinecontent = []
-        newlinecontent.append(node["word"])
-        newlinecontent.append(node["term"])
-        newlinecontent.append(node["citationform"])
-        for translation in node["translation"]:
-            newlinecontent.append(translation)
+        hover_obj: HoverType = {
+            "word": node["word"],
+            "term": node["term"],
+            "citationform": node["citationform"],
+            "translation": node["translation"],
+        }
     except KeyError:
         return
 
-    for no, item in enumerate(newlinecontent):
-        # Make sure the strings are all str type and not bytes.
-        if isinstance(item, bytes):
-            # newlinecontent[no] = item.decode("utf-8")
-            newlinecontent[no] = item
+    f = Path(filename)
+    f.touch(exist_ok=True)
+    data = f.read_text(encoding="utf-8")
 
-    newline = ";".join(newlinecontent) + "\n"
-
-    with open(filename, "a+") as f:
-        listcontents = f.readlines()
-        listcontents.insert(0, newline)
-        f.writelines(listcontents)
+    if not data:
+        data = []
+    else:
+        data = json.loads(data)
+    data.append(hover_obj)
+    Path(filename).write_text(
+        json.dumps(data, sort_keys=True, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
     return
 
 
@@ -80,93 +115,22 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictiona
         translation = dictentry["enTerm"]
         hover_node["translation"] = translation
         hover_node["citationform"] = dictentry["isTerm"]
+
     # If translation was not found create error message and code snippets.
     except KeyError:
-        errormsg = "Ekki fannst þýðing á hugtakinu: "
-        html = (
-            '<a class="tooltip" target="_blank">'
-            + word
-            + '<span><staelink style="line-height:4px; font-size:80%;">'
-            + errormsg
-            + "<i>"
-            + term
-            + "</i></staelink></span></a>"
+        hover_node["htmlcode"] = get_html(
+            "not_found.html",
+            word,
+            term,
         )
-
-        latex = word
-        if latexIt:
-            latex = "\\textit{" + latex + "}"
-        if latexLink:
-            searchURL = "http://www.stae.is/os/leita/" + term.replace(" ", "\_")
-            latex = "\\href{" + searchURL + "}{" + word + "}"
-
-        # Add the HTML and Latex code snippets to the node.
-        hover_node["latexcode"] = latex
-        hover_node["htmlcode"] = html
+        hover_node["latexcode"] = get_latex(latexIt, latexLink, word, term)
         return hover_node
 
-    # If a translation was found create string with translations and HTML and Latex code snippets.
-    tranStr = ""
-    for transl in translation:
-        # tranStr = tranStr + transl.decode("utf-8") + ", "
-        tranStr = tranStr + transl + ", "
-    all_translations = tranStr[:-2] + "."
-
-    # TODO: figure out what's happening, temporary exception to keep build healthy
-    try:
-        # single_translation = translation[0].decode("utf-8") + "."
-        single_translation = translation[dictionary_index] + "."
-    except KeyError:
-        single_translation = ""
-
-    # HTML snippet
-    html = "<a "
-    if htmlLink:
-        html = html + 'href="http://www.stae.is/os/leita/' + single_translation.replace(" ", "_")
-    if transNum == "single":
-        html = (
-            html
-            + '" class="tooltip" target="_lank">'
-            + word
-            + "<span>en: <i>"
-            + single_translation
-            + "</i>"
-        )
-    else:
-        hover_node["translation"] = all_translations
-        html = (
-            html
-            + '" class="tooltip" target="_blank">'
-            + word
-            + "<span>en: <i>"
-            + all_translations
-            + "</i>"
-        )
-    if htmlLink:
-        html = (
-            html + '<staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri'
-            " þýðingu.</staelink>"
-        )
-    html = html + "</span></a>"
-
-    # Latex snippet
-    latex = word
-    if latexIt:
-        latex = "\\textit{" + latex + "}"
-    if latexLink:
-        urlTerm = single_translation.rstrip()
-        searchURL = "http://www.stae.is/os/leita/" + urlTerm.replace(" ", "\_")
-        latex = "\\href{" + searchURL[:-1] + "}{" + word + "}"
-
-    # Add the HTML and Latex code snippets to the node.
-    hover_node["latexcode"] = latex
-    hover_node["htmlcode"] = html
+    hover_node["translation"] = serialize(translation)
+    hover_node["htmlcode"] = get_html("translation.html", word, translation, htmlLink)
+    hover_node["latexcode"] = get_latex(latexIt, latexLink, word, translation)
 
     return hover_node
-
-
-class hover(nodes.General, nodes.Element):
-    pass
 
 
 def html_hover_visit(self, node):
@@ -185,15 +149,6 @@ def tex_hover_depart(self, node):
     self.body.append(node["latexcode"])
 
 
-class hoverlist(nodes.General, nodes.Element):
-    pass
-
-
-class HoverListDirective(Directive):
-    def run(self):
-        return [hoverlist("")]
-
-
 def create_hoverlist(app, doctree, fromdocname):
     # If translationlists are set to not appear, replace them with empty nodes.
     if not app.config.hover_translationList:
@@ -205,25 +160,12 @@ def create_hoverlist(app, doctree, fromdocname):
     # Words is a dictionary with translated terms as keys and translations as values.
     words = {}
     content = []
-    filename = "LIST_OF_HOVER_TERMS"
-    # with codecs.open("LIST_OF_HOVER_TERMS", encoding = "utf-8") as listfile:
-    with open(filename, "r") as f:
-        listcontents = f.readlines()
+    data: List[HoverType] = json.loads(Path(get_translations_file()).read_text())
 
-    for line in listcontents:
-        # Clean up the strings.
-        line = line.split(";")
-        for idx, entry in enumerate(line):
-            beginindex = entry.find("'")
-            newentry = entry[beginindex + 1 :]
-            line[idx] = newentry
-
-        citationform = line[2]
-        translation = line[3]
-
-        if citationform in words:
+    for item in data:
+        if item["citationform"] in words:
             continue
-        words[citationform] = translation
+        words[item["citationform"]] = item["translation"]
 
     # Add words and translations (sorted) to nodes.
     for key, value in sorted(words.items()):
@@ -259,15 +201,14 @@ def create_hoverlist(app, doctree, fromdocname):
 
 def delete_hoverlist(app, doctree):
     if app.config.hover_translationList:
-        filename = "LIST_OF_HOVER_TERMS"
+        filename = get_translations_file()
         try:
-            # with codecs.open("LIST_OF_HOVER_TERMS", encoding = "utf-8") as listfile:
             with open(filename, "a+") as f:
                 f.truncate()
         except:
-            print(
-                "Could not write over contents in: 'LIST_OF_HOVER_TERMS'",
-                " for unknown reasons. User may need to erase contents manually.",
+            logger.error(
+                f"Could not write over contents in: '{filename}' for unknown"
+                " reasons. User may need to erase contents manually.",
             )
     else:
         pass
@@ -291,6 +232,7 @@ def setup(app):
     app.add_config_value("hover_translationList", 1, "env")
     # Enable for a smaller version of the list of translations.
     app.add_config_value("hover_miniTranslationList", 0, "env")
+    app.add_config_value("hover_outputFile", "translations.json", "env")
 
     app.add_node(
         hover,
