@@ -8,7 +8,8 @@ the string 'arg2' to English (from Icelandic) on mouse-over based on the stae.is
 If no comma is found in the argument, 'arg2' is assumed to be the same as 'arg1'.
 You can also add a non-negative integer to indicate the index of the entry wanted, f.ex. 
     :hover:`Mengi, mengi, 5` náttúrulegu talnanna er táknað með...
-would fetch the 6th (indexing starts at 0) entry of the translation of "mengi". 
+would fetch the 5th entry of the translation of "mengi". 
+If no integer index is provided, all available translations are shown.
 
 
 The extension recognizes the following user settings which can be set in conf.py:

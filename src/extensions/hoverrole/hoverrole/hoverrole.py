@@ -57,10 +57,10 @@ def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
 
     # for text input of the form: "word,term"
     split_text = text.split(",")
-    dictionary_index = 0
+    stae_index = None
     if len(split_text) == 3:
-        word, term, dictionary_index = split_text
-        dictionary_index = int(dictionary_index)
+        word, term, stae_index = split_text
+        stae_index = int(stae_index) - 1  # indexum frá 1 en ekki 0
         term = term.lstrip()
     elif len(split_text) == 2:
         word, term = split_text
@@ -68,7 +68,7 @@ def hover_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     else:
         word = term = text
 
-    node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index)
+    node = make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, stae_index)
     # Save the translated term to file for later use in hoverlist.
     if translationList:
         save_to_listfile(get_translations_file(), node)
@@ -97,13 +97,12 @@ def save_to_listfile(filename: str, node: hover):
         data = json.loads(data)
     data.append(hover_obj)
     Path(filename).write_text(
-        json.dumps(data, sort_keys=True, indent=2, ensure_ascii=False),
-        encoding="utf-8",
+        json.dumps(data, sort_keys=True, indent=2, ensure_ascii=False), encoding="utf-8",
     )
     return
 
 
-def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictionary_index=0):
+def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, stae_index):
     # Create new hover object.
     hover_node = hover()
     hover_node["word"] = word
@@ -118,16 +117,18 @@ def make_hover_node(word, term, transNum, htmlLink, latexLink, latexIt, dictiona
 
     # If translation was not found create error message and code snippets.
     except KeyError:
-        hover_node["htmlcode"] = get_html(
-            "not_found.html",
-            word,
-            term,
-        )
+        hover_node["htmlcode"] = get_html("not_found.html", word, term,)
         hover_node["latexcode"] = get_latex(latexIt, latexLink, word, term)
         return hover_node
 
-    hover_node["translation"] = serialize(translation)
-    hover_node["htmlcode"] = get_html("translation.html", word, translation, htmlLink)
+    if stae_index == None:
+        hover_node["translation"] = serialize(translation)
+        hover_node["htmlcode"] = get_html("translation.html", word, translation, htmlLink)
+    else:
+        hover_node["translation"] = translation[stae_index]
+        hover_node["htmlcode"] = get_html(
+            "translation.html", word, translation, htmlLink, stae_index
+        )
     hover_node["latexcode"] = get_latex(latexIt, latexLink, word, translation)
 
     return hover_node

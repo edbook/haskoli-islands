@@ -104,9 +104,9 @@ Skilgreining: Tölur
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    (i)   :hover:`Náttúrlegu tölurnar,náttúrleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og
+    (i)   :hover:`Náttúrlegu tölurnar,náttúruleg tala` eru tölurnar :math:`1, 2, 3, 4, \ldots` og
           mengi þeirra er táknað með :math:`\mathbb{N}`.
-    (ii)  Mengi :hover:`heiltalna,heiltala` er táknað með :math:`\mathbb{Z}`.
+    (ii)  Mengi :hover:`heiltalna,heiltala,1` er táknað með :math:`\mathbb{Z}`.
           :math:`\mathbb{Z}= \ldots,-2,-1,0,1,2,3,\ldots`
     (iii) Mengi :hover:`ræðra talna,ræð tala` er táknað með :math:`\mathbb{Q}`.
           :math:`\mathbb{Q}= \{ \frac pq ; p,q \in \mathbb{Z}, q\neq 0\}`.
