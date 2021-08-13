@@ -61,8 +61,16 @@ Skilgreining
 .. raw:: html
     :file: plotly/k2graf1b.html
 
+
+
 .. rst-class:: midja
     
+    *Nokkrar jafnæðarlínur fallsins* :math:`f(x,y) = \sqrt{1-x^2-y^2}`, :math:`-0.5\leq x,y\leq 0.5`.
+
+.. figure:: ./myndir/contour.png
+    :width: 100%
+    :align: center
+
     *Nokkrar jafnæðarlínur fallsins* :math:`f(x,y) = \sqrt{1-x^2-y^2}`, :math:`-0.5\leq x,y\leq 0.5`.
 
 .. admonition:: Skilgreining
