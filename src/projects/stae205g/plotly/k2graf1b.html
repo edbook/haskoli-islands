@@ -189,8 +189,6 @@
         let jhl1_y = []
         let jhl2_x = []
         let jhl2_y = []
-        let jhl3_x = []
-        let jhl3_y = []
         for (let i = axisMin; i <= axisMax; i += axisStep) {
             x_row = []
             y_row = []
@@ -209,9 +207,28 @@
             jhl1_y.push(0.25 * Math.sin(t))
             jhl2_x.push(0.45 * Math.cos(t))
             jhl2_y.push(0.45 * Math.sin(t))
-            // NEMA FARI YFIR 
-            jhl3_x.push(0.60 * Math.cos(t))
-            jhl3_y.push(0.60 * Math.sin(t))
+        }
+        let jhl3a_x = []
+        let jhl3a_y = []
+        let jhl3b_x = []
+        let jhl3b_y = []
+        let jhl3c_x = []
+        let jhl3c_y = []
+        let jhl3d_x = []
+        let jhl3d_y = []
+        for (let t = 0; t <= 1.57; t += 0.02) {
+            let xx = 0.60 * Math.cos(t)
+            let yy = 0.60 * Math.sin(t)
+            if (Math.abs(xx) < 0.5 && Math.abs(yy) < 0.5) {
+                jhl3a_x.push(xx)
+                jhl3a_y.push(yy)
+                jhl3b_x.push(-xx)
+                jhl3b_y.push(yy)
+                jhl3c_x.push(xx)
+                jhl3c_y.push(-yy)
+                jhl3d_x.push(-xx)
+                jhl3d_y.push(-yy)
+            }
         }
         let data = {
             x: x,
@@ -318,9 +335,42 @@
             },
             type: 'scatter',
         }
-        let data_jhl3 = {
-            x: jhl3_x,
-            y: jhl3_y,
+        let data_jhl3a = {
+            x: jhl3a_x,
+            y: jhl3a_y,
+            xaxis: 'x2',
+            yaxis: 'y2',
+            mode: 'lines',
+            line: {
+                color: 'blue'
+            },
+            type: 'scatter',
+        }
+        let data_jhl3b = {
+            x: jhl3b_x,
+            y: jhl3b_y,
+            xaxis: 'x2',
+            yaxis: 'y2',
+            mode: 'lines',
+            line: {
+                color: 'blue'
+            },
+            type: 'scatter',
+        }
+        let data_jhl3c = {
+            x: jhl3c_x,
+            y: jhl3c_y,
+            xaxis: 'x2',
+            yaxis: 'y2',
+            mode: 'lines',
+            line: {
+                color: 'blue'
+            },
+            type: 'scatter',
+        }
+        let data_jhl3d = {
+            x: jhl3d_x,
+            y: jhl3d_y,
             xaxis: 'x2',
             yaxis: 'y2',
             mode: 'lines',
@@ -330,7 +380,8 @@
             type: 'scatter',
         }
 
-        traces = [data, data2, data_jhl1, data_jhl2, data_jhl3];
+
+        traces = [data, data2, data_jhl1, data_jhl2, data_jhl3a, data_jhl3b, data_jhl3c, data_jhl3d];
 
         Plotly.newPlot(document.getElementById('plotly_graf1b'), traces, layout, config);
     }
