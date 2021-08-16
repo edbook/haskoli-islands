@@ -918,7 +918,7 @@ Sýnidæmi: Dirichlet-verkefni á ferningi
 
 	Setjum :math:`h={1\over 3}`. Við röðum punktum þ.a. punktar :math:`(x_j,y_j)` fyrir :math:`j=1, \dots, 4` eru innri punktar og :math:`(x_j,y_j)` fyrir :math:`j=5,\dots, 16` eru jaðarpunktar. Við sjáum þetta á eftirfarandi mynd
 
-	.. image:: ./Drawings/Dirichlet-example.png
+	.. image:: ./Drawings/dirichlet-example.png
 	    :width: 45 %
 	    :align: center
 
