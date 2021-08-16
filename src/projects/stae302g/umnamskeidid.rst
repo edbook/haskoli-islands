@@ -1,3 +1,5 @@
+:orphan:
+
 Gagnlegar upplýsingar
 =====================
 
