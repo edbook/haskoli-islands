@@ -118,7 +118,7 @@ Snertill
 ~~~~~~~~
 
 Afleiðu falls :math:`f` í punktinum :math:`a` fæst með því að taka
-:hover:`sniðil,sniðill` í gegnum punktana :math:`(a,f(a))` og :math:`(a+h,f(a+h))`, og
+sniðil (e. secant) í gegnum punktana :math:`(a,f(a))` og :math:`(a+h,f(a+h))`, og
 láta svo :math:`h` stefna á :math:`0`.
 
 Þetta gefur hallatölu :hover:`snertilsins,snertill` við graf fallsins í punktinum
@@ -311,7 +311,7 @@ Skilgreining: Hærri afleiður
 
   Ef fallið :math:`f'` er diffranlegt í punkti :math:`x` þá er afleiða
   :math:`f'` í punktinum :math:`x` táknuð með :math:`f''(x)` og kölluð
-  :hover:`önnur afleiða` :math:`f` í punktinum :math:`x`. Líta má á aðra afleiðu
+  önnur afleiða (e. second derivative) :math:`f` í punktinum :math:`x`. Líta má á aðra afleiðu
   :math:`f` sem fall :math:`f''` sem er skilgreint í öllum punktum þar sem
   :math:`f'` er diffranlegt.
 
