@@ -11,7 +11,7 @@ Installation
     python setup.py build
     sudo python setup.py install  OR  python setup.py install --user
 
-   2. Move 'layout.html' and 'resizegg.js' to your '_templates' directory 
+   2. Move 'layout.html' to your '_templates' directory 
     (if there is already a custom layout file then copy lines 2-7 of 
     'layout.html' and paste to that file).    
 
@@ -36,4 +36,3 @@ There are 5 optional parameters.
     :img: ../../_static/hi_logo.jpg
     :imgwidth: 4cm
     :zoom_drag: true 
-
