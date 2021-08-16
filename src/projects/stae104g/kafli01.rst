@@ -435,7 +435,7 @@ Skilgreining: Graf
     :class: skilgreining
 
     Látum :math:`f:X \to Y` vera fall þannig að :math:`X`
-    og :math:`Y` eru mengi af rauntölum. :hover:`Graf` fallsins :math:`f` er þá
+    og :math:`Y` eru mengi af rauntölum. Graf (e. graph) fallsins :math:`f` er þá
     mengi allra punkta í planinu :math:`\mathbb{R}^2` af gerðinni
     :math:`(x,f(x))` þar sem :math:`x\in X`. Hér notum við oft :math:`y` í stað
     :math:`f(x)`.
@@ -462,7 +462,7 @@ Skilgreining: Jafnstætt og oddstætt
     .. math:: f(x) = f(-x)
 
     fyrir öll :math:`x` í skilgreiningarmengi :math:`f`.
-    Við segjum að fall :math:`f` sé :hover:`oddstætt` ef
+    Við segjum að fall :math:`f` sé :hover:`oddstætt, oddstæður` ef
 
     .. math:: f(x) = -f(-x)
 

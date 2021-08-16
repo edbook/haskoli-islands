@@ -132,7 +132,7 @@ Setning
 
     Látum :math:`\sum_{n=0}^\infty a_n(x-c)^n` vera veldaröð.
 
-    (i)  :hover:`Kvótapróf`: Gerum ráð fyrir að
+    (i)  :hover:`Kvótapróf,hlutfallspróf` (hlutfallspróf): Gerum ráð fyrir að
          :math:`L=\lim_{n\rightarrow\infty}\left|\frac{a_{n+1}}{a_n}\right|`
          sé til eða :math:`\infty`.
 

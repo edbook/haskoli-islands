@@ -239,7 +239,7 @@ Skilgreining: Massamiðja punktmassa
 
     .. math:: M_{x=0}=\sum_{i=1}^n x_im_i,
 
-    og :hover:`massamiðja,þyngdarmiðja` kerfisins er
+    og massamiðja (e. center of mass) kerfisins er
 
     .. math:: \overline{x}=\frac{M_{x=0}}{m} = \frac{\sum_{i=1}^n x_im_i}{\sum_{i=1}^n m_i}.
 
