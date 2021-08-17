@@ -11,9 +11,8 @@ Höfundar efnis: Valentina Giangreco M Puletti, vgmp@hi.is og Hulda Hvönn Krist
 Síðast uppfært: 2021-07-15
 
 .. toctree::
-	formali
-	umnamskeidid
-	
+   formali
+
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -22,8 +21,9 @@ Síðast uppfært: 2021-07-15
    kafli*
 
 .. toctree::
-	vidauki
-        ordaskra
+   vidauki
+   umnamskeidid
+   ordaskra
 
 * :ref:`genindex`
 
