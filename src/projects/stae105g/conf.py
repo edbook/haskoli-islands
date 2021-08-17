@@ -17,12 +17,15 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath("."))
-sys.path.append(os.path.abspath("../../extensions"))
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath("."))
+sys.path.append(os.path.abspath("../../extensions"))
+from eqt_ext import (
+    get_eqt_ext_static_dir,  # Verður að koma eftir að bæta extensions í path
+)
 
 # -- General configuration ------------------------------------------------
 
@@ -38,6 +41,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
     "sphinx_togglebutton",
+    "eqt_ext.eqt",
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #    'katex.katex',
@@ -214,7 +218,7 @@ html_favicon = "_static/favicon_2.ico"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+html_static_path = ["_static", get_eqt_ext_static_dir()]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -285,9 +289,9 @@ latex_elements = {
     "fncychap": "\\usepackage[Sonny]{fncychap}",
     "papersize": "a4paper",
     "preamble": """\
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{hyperref}
+\\usepackage{amsmath}
+\\usepackage{amssymb}
+\\usepackage{hyperref}
 """,
 }
 
