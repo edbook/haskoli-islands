@@ -80,7 +80,7 @@ numfig = True
 numfig_format = {}
 numfig_format["figure"] = "Mynd %s:"
 numfig_format["table"] = "Tafla %s:"
-numfig_format["code-block"] = "%s"
+numfig_format["code-block"] = "Forrit %s"
 numfig_format["section"] = "%s"
 # For self-numbering of labeled equations
 math_eqref_format = "{number}"
@@ -192,7 +192,7 @@ pygments_style = "sphinx"
 # }
 
 html_theme = "sphinx_rtd_theme"
-# html_theme_path = ["_themes"]
+#html_theme_path = ["_themes"]
 
 
 # html_permalinks = True
@@ -234,6 +234,7 @@ html_favicon = "_static/favicon_2.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ["css/strei.css", "css/edbook.css"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -477,10 +478,6 @@ epub_exclude_files = ["search.html"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
 
-
-# css fyrir Dæmi, Athugasemd, Setning, o.sv.fr...
-def setup(app):
-    app.add_css_file("custom_admonitions.css")
 
 
 from docutils import nodes

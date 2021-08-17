@@ -1,6 +1,12 @@
+/* 
+Notað með 
+ .. rst-class:: midja 
+til að miðja texta 
+*/
 .rst-content .midja {
         text-align: center !important;
 }
+
 
 /* Admonition: Dæmi */
 .rst-content .daemi .admonition-title {

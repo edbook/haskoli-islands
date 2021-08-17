@@ -200,6 +200,7 @@ html_favicon = "_static/favicon_2.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ["css/edbook.css"]
 #html_copy_source = False
 
 # Add any extra paths that contain custom files (such as robots.txt or
@@ -355,11 +356,6 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 # texinfo_no_detailmenu = False
-
-# css fyrir Dæmi, Athugasemd, Setning, o.sv.fr...
-def setup(app):
-    app.add_css_file("custom_admonitions.css")
-
 
 # Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
 hint_indent = (

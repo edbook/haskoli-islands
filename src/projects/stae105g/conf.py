@@ -219,6 +219,7 @@ html_favicon = "_static/favicon_2.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static", get_eqt_ext_static_dir()]
+html_css_files = ["css/edbook.css"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -460,11 +461,6 @@ epub_exclude_files = ["search.html"]
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
-
-# custom frá Tryggva
-def setup(app):
-    app.add_css_file("custom_admonitions.css")
-
 
 # Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
 hint_indent = (
