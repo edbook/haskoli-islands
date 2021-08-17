@@ -364,7 +364,7 @@ Fylgisetning
     :class: setning
 
     Röðin :math:`\sum_{n=1}^\infty\frac{1}{n^{p}}` er samleitin ef
-    :math:`p>1` en ósamleitin ef :math:`p\leq 1`.
+    :math:`p>1` en ósamleitin ef :math:`p\leq 1`. Svona röð er jafnan kölluð :math:`p`-röð.
 
 Setning: Samleitnipróf IV – Markgildissamanburðarpróf
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -531,7 +531,39 @@ Setning: Umröðun
 
 .. admonition:: Athugasemd
     :class: athugasemd
-    
+
 	Með öðrum orðum:
 	Liðum skilyrt samleitinnar raðar má umraða þannig að summan getur orðið
 	hvað sem er, það skiptir því máli í hvaða röð við leggjum saman.
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-ODE
+
+  **Æfingadæmi**
+	Röðin :math:`\sum_{n=2}^\infty \frac{sin(n)}{n^2}` er:
+
+  A) :eqt:`C` Alsamleitin
+
+  #) :eqt:`I` Skilyrt samleitin
+
+  #) :eqt:`I` Ósamleitin
+
+  #) :eqt:`I` Hálfsamleitin
+
+  .. eqt-solution::
+
+	Hér er valmöguleiki d) augljóslega ekki réttur þar sem ekkert er til sem heitir *hálfsamleitni*.
+	Athugum nú að :math:`\frac{|\sin(n)|}{n^2} \leq \frac{1}{n^2}` þar sem :math:`|\sin(n)| \leq 1` fyrir öll :math:`n`.
+	Hlutsummurnar
+
+	.. math:: s_n = \sum_{j=2}^n \frac{|\sin(j)|}{j^2}
+
+	eru vaxandi og takmarkaðar að ofan af
+
+	.. math:: t_n = \sum_{j=2}^n \frac{1}{j^2}<L
+
+	þar sem :math:`L` er summa :math:`p`-raðarinnar :math:`\sum_{n=2}^\infty \frac{1}{n^2}`. Þar með er röðin
+	:math:`\sum_{n=2}^\infty \frac{|sin(n)|}{n^2}` samleitin og af því leiðir að röðin
+	:math:`\sum_{n=2}^\infty \frac{sin(n)}{n^2}` er alsamleitin skv. skilgreiningu 9.4.1.

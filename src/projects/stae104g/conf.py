@@ -23,6 +23,9 @@ import sys
 # sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath("."))
 sys.path.append(os.path.abspath("../../extensions"))
+from eqt_ext import (
+    get_eqt_ext_static_dir,  # Verður að koma eftir að bæta extensions í path
+)
 
 # -- General configuration ------------------------------------------------
 
@@ -49,6 +52,7 @@ extensions = [
     # See README.txt in toggleblock-extension folder.
     "toggleblock.toggleBlock",
     "sphinx_togglebutton",
+    "eqt_ext.eqt",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # Note: sagecell must not be listed before katex.katex
@@ -67,7 +71,7 @@ extensions = [
     # 'Sphinx_ext.activityduration',
     # 'Sphinx_ext.htmlform',
     # 'Sphinx_ext.instructorfeedback',
-    # 'Sphinx_ext.eqt',
+    # Extension for multiple options quizzes
     # 'Sphinx_ext.instructorguide',
     # 'Sphinx_ext.embeddedvideo',
     # 'Sphinx_ext.xy_click',
@@ -224,7 +228,7 @@ html_favicon = "_static/favicon_2.ico"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+html_static_path = ["_static", get_eqt_ext_static_dir()]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -264,7 +268,7 @@ html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 html_show_copyright = False
-#html_copy_source = False
+# html_copy_source = False
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
 # base URL from which the finished HTML is served.

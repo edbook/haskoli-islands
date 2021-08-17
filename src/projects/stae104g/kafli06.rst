@@ -388,6 +388,31 @@ Setning: Undirstöðusetning stærðfræðigreiningar, fyrri hluti
 .. index::
     stofnfall
 
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-heildun
+
+  **Æfingadæmi**
+	Gefið er óeignilega heildið :math:`\int \frac{x+1}{x^2+2x+2} dx`. Hvaða innsetning væri heppileg til að leysa þetta heildi? Hakið við réttan kross.
+
+  A) :eqt:`C` :math:`u=x^2 + 2x + 2` og :math:`du = 2(x+1) dx`.
+
+  #) :eqt:`I` :math:`u=x^2+2x` og :math:`du = 2(x+1) dx`.
+
+  #) :eqt:`I` :math:`u=x^2` og :math:`du = 2x dx`.
+
+  #) :eqt:`I` Ekkert af ofantöldu.
+
+  .. eqt-solution::
+
+		Ef við setjum :math:`u=x^2+2x+2` þá er :math:`du=2(x+1)`. Þetta er heppilegt því nú getum séð að :math:`\tfrac{1}{2} du = (x+1)dx`
+		og skrifað heildið sem
+
+		.. math:: \frac{1}{2} \int \frac{1}{u} du
+
+		sem er mun auðveldara að leysa.
+
 Stofnföll
 ---------
 
@@ -688,7 +713,7 @@ Dæmi 1 um stofnbrotaliðun
 .. admonition:: Dæmi
     :class: daemi
 
-    Liðið :math:`\frac{x+4}{x^2-5x+6}` í stofnbrot. 
+    Liðið :math:`\frac{x+4}{x^2-5x+6}` í stofnbrot.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -949,6 +974,52 @@ Sjá einnig `wikipedia síðuna um stofnbrotaliðun <https://en.wikipedia.org/wi
 .. index::
     heildi; óeiginleg
 
+Æfingadæmi
+~~~~~~~~~~
+
+
+.. eqt:: daemi-stofnbrotalidun
+
+  **Æfingadæmi**
+	Gefið er ræða fallið :math:`f(x) = \frac{3x+11}{x^2-x-6}`. Stofbrotaliðun gefur að:
+
+  A) :eqt:`I` :math:`f(x)=\frac{3}{3x-2} - \frac{3}{x+2}`
+
+  #) :eqt:`I` :math:`f(x)=\frac{3+x}{x-3} - \frac{4}{x+2}`
+
+  #) :eqt:`I` :math:`f(x)=\frac{3}{x-3} - \frac{2x+4}{x+2}`
+
+  #) :eqt:`C` :math:`f(x) = \frac{4}{x-3} - \frac{1}{x+2}`
+
+  .. eqt-solution::
+
+		Fylgjum dæmi 6.6.12. (Dæmi 1 um stofnbrotaliðun). Við getum þáttað nefnara fallsins í :math:`(x-3)(x+2)`. Þá fæst að
+
+		.. math:: \frac{3x+11}{(x-3)(x+2)} = \frac{A}{x-3}+\frac{B}{x+2}
+
+		þar sem :math:`A,B \in \mathbb{R}`. Ef við samnefnum nú brotið hægra megin jafnaðarmerkisins fæst
+		að
+
+		.. math:: \frac{3x+11}{(x-3)(x+2)} = \frac{A(x+2)+B(x-3)}{(x+2)(x-3)}.
+
+		Af þessu sést að
+
+		.. math:: 3x + 11 = A(x+2)+B(x-3) \iff 3x + 11 = (A+B)x + 2A - 3B.
+
+		Þetta gefur okkur jöfnuhneppið
+
+		.. math::
+			\begin{aligned}
+				A + B = 3\\
+				2A - 3B = 11\\
+			\end{aligned}
+
+		sem hefur lausnina :math:`A=4` og :math:`B=-1`. Því fæst að stofnbrot þessa falls séu
+
+		.. math:: f(x) = \frac{4}{x-3} - \frac{1}{x+2}.
+
+-----------
+
 Óeiginleg heildi
 ----------------
 
@@ -984,7 +1055,7 @@ markgildið er til, en ósamleitið ef markgildið er ekki til.
 Dæmi
 ~~~~
 
-.. admonition:: Dæmi 
+.. admonition:: Dæmi
     :class: daemi
 
     Heildið :math:`\int_1^\infty \frac{1}{x^p}\,dx` er samleitið ef
@@ -1039,7 +1110,7 @@ Skilgreining: Óeiginleg heildi II
 Dæmi
 ~~~~
 
-.. admonition:: Dæmi 
+.. admonition:: Dæmi
     :class: daemi
 
     Heildið :math:`\int_0^1 \frac{1}{x^p}\,dx` er samleitið ef :math:`p<1`

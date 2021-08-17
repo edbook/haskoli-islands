@@ -452,3 +452,23 @@ Lausn á liðruðu jöfnunni  á :math:`ay''+by'+cy=f(x)` er mögulega hægt að
 með :ref:`ásgiskun <Ágiskun>`. Sérhver lausn á óhliðruðu jöfnunni :math:`ay''+by'+cy=f(x)`
 er svo á forminu :math:`y+y_p` þar sem :math:`y` er
 lausn á óhliðruðu jöfnunni.
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-ODE
+
+  **Æfingadæmi**
+	Hver er kennijafna diffurjöfnunnar :math:`3y’’ + 2y’+5y=0`?
+
+  A) :eqt:`I` :math:`3r^2 + 2r + 5=e^x`
+
+  #) :eqt:`C` :math:`3r^2 + 2r + 5=0`
+
+  #) :eqt:`I` :math:`9r^2 + 4r + 25=e^x`
+
+  #) :eqt:`I` :math:`9r^2 + 4r + 25=0`
+
+  .. eqt-solution::
+
+	Skilgr. 8.3.2 gefur að kennijafnan sé :math:`3r^2 + 2r + 5=0` þar sem :math:`a=5`, :math:`b=2` og :math:`c=5`.

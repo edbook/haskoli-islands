@@ -162,7 +162,7 @@ Athugasemd: Hallatalan :math:`\infty` er ekki leyfð
     	:align: center
     	:width: 12cm
 
-    | 
+    |
 
     Við viljum að snertillinn sé nálgun við graf fallsins fyrir :math:`x` nálægt
     :math:`a`, lóðrétt lína er gagnslaus nálgun því hún er ekki skilgreind sem
@@ -1014,8 +1014,8 @@ Staðbundnar nálganir
 
 Skoðum diffranlegt fall :math:`f` í grennd um fastan punkt
 :math:`a`. Látum :math:`x` vera punkt í grennd um :math:`a`.
-Ef graf fallsins er ekki ,,mjög
-sveigt” þá er snertillinn við :math:`(a,f(a))` næstum samsíða
+Ef graf fallsins er ekki „mjög
+sveigt“ þá er snertillinn við :math:`(a,f(a))` næstum samsíða
 sniðlinum gegnum :math:`(a,f(a))` og :math:`(x,f(x))`.
 Það þýðir að
 
@@ -1026,7 +1026,7 @@ sniðlinum gegnum :math:`(a,f(a))` og :math:`(x,f(x))`.
         f(x) &\approx f'(a)(x-a) + f(a).
    \end{aligned}
 
-| 
+|
 
 .. admonition:: Aðvörun
     :class: advorun
@@ -1313,7 +1313,7 @@ Dæmi
 
 .. admonition:: Dæmi
     :class: daemi
-    
+
     Við höfum áður séð að :math:`\lim_{x\to 0} \sin(x)/x = 1`.
     Skoðum hvernig hægt er að sýna þetta með lítilli fyrirhöfn og reglu l’Hôpital.
 
@@ -1364,3 +1364,23 @@ Regla l’Hôpital, tvíhliða útgáfa
     Þá er
 
     .. math:: \lim_{x\rightarrow a}\frac{f(x)}{g(x)}=L.
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-afleidur-og-samfelldni
+
+  **Æfingadæmi**
+	Hakið við **rangan** kross.
+
+  A) :eqt:`I` Fall getur verið samfellt í punkti :math:`x=5` án þess að það sé diffranlegt í :math:`x=5`.
+
+  #) :eqt:`I` Ef fall :math:`f` er diffranlegt í punkti :math:`x=3` þá er :math:`f` samfellt í punktinum :math:`x=3`.
+
+  #) :eqt:`I` Fallið :math:`f(x) = |x+1|` er samfellt og diffranlegt í punktinum :math:`x=-1`.
+
+  #) :eqt:`C` Gerum ráð fyrir að fallið :math:`f: \mathbb{R} \mapsto \mathbb{R}` sé gagntækt og að graf fallsins sé ekki „mjög sveigt“. Þá er snertillinn við :math:`(3,f(3))` næstum samsíða sniðlinum gegnum :math:`(3,f(3))` og :math:`(x,f(x))`.
+
+  .. eqt-solution::
+
+		Fallið :math:`f(x)=|x+1|` er samfellt en ekki diffranlegt í :math:`x=-1`.

@@ -52,7 +52,7 @@ Skilgreining: Náttúrlegi logrinn
     :zoom_drag: false
 
 .. admonition:: Aðvörun
-    :class: advorun 
+    :class: advorun
 
     Fallið :math:`\ln` er bara skilgreint fyrir jákvæðar rauntölur
 
@@ -81,7 +81,7 @@ Setning
     (ii)  :math:`\ln(xy)=\ln x+\ln y`
     (iii) :math:`\ln(1/x)=-\ln x`
     (iv)  :math:`\ln(x/y)=\ln x-\ln y`
-    (v)   :math:`\ln (x^r)=r\ln x`, fyrir :math:`r \in mathbb Q`.
+    (v)   :math:`\ln (x^r)=r\ln x`, fyrir :math:`r \in \mathbb Q`.
 
 .. index::
     veldisvísisfallið
@@ -299,6 +299,29 @@ Setning
     - Veldisvísisföll vaxa hraðar en allar margliður.
 
     - Lograr vaxa hægar en allar margliður.
+
+
+Æfingadæmi
+~~~~~~~~~~
+
+.. eqt:: daemi-lograr
+
+  **Æfingadæmi**
+	Hakið við réttan kross.
+
+  A) :eqt:`C` :math:`\ln(\frac{6x^2}{e^x}) = \ln(6)+2\ln(x)-x`
+
+  #) :eqt:`I` :math:`\ln(4a+6b) = 2\ln(2a)+\ln(6b)`
+
+  #) :eqt:`I` :math:`\frac{\ln(x)}{\ln(y)} = \ln\left( \frac{\ln(x)}{\ln(y)} \right)`
+
+  #) :eqt:`I` Fyrir öll :math:`x \in \mathbb{R}` gildir að :math:`e^{\ln(x)} = 1`
+
+  .. eqt-solution::
+
+		Lograreglur gefa
+
+		.. math:: \ln\left(\frac{6x^2}{e^x}\right) = \ln(6x^2) - \ln(e^x) = \ln(6) + 2\ln(x) + x.
 
 Andhverfur hornafalla
 ---------------------
