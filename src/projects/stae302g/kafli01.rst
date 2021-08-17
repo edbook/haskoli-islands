@@ -414,7 +414,7 @@ Skilgreining og setning (Sjá §1.3)
 .. admonition:: Aðvörun
 	:class: advorun
 
-  Ef :math:`z` er tvinntala hefur táknmálið :math:`\sqrt{z}` almennt ekki merkingu. Ef það er notað þarf ávallt að tilgreina fyrir hvað það stendur.
+  	Ef :math:`z` er tvinntala hefur táknmálið :math:`\sqrt{z}` almennt ekki merkingu. Ef það er notað þarf ávallt að tilgreina fyrir hvað það stendur.
 
 Skilgreining
 ~~~~~~~~~~~~
@@ -446,13 +446,13 @@ Stuðlarnir eru gefnir með
 .. admonition:: Athugasemd
 	:class: athugasemd
 
-  Við getum diffrað tvinngildar margliður líkt og raungildar margliður með því að nota
+	Við getum diffrað tvinngildar margliður líkt og raungildar margliður með því að nota
 
-  .. math::
+	.. math::
 
-    \frac{dz^n}{dz} = n z^{n-1}
+		\frac{dz^n}{dz} = n z^{n-1}
 
-  ásamt því að diffrun er línuleg. Réttlæting kemur síðar.
+	ásamt því að diffrun er línuleg. Réttlæting kemur síðar.
 
 Ef :math:`Q(z)=a(z-\alpha_1)^{m_1}\cdots(z-\alpha_k)^{m_k}`  og :math:`\alpha_1, \ldots, \alpha_k` eru ólíkar tvinntölur þá eru til fastar
 :math:`A_{11},\ldots, ,A_{m_11}, A_{12},\ldots, ,A_{m_12}, \ldots, A_{1k},\ldots, ,A_{m_1k}` þannig að
@@ -516,7 +516,7 @@ Fallegasta jafna stærðfræðinnar.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Athugasemd
-	:class: athugasemd
+    :class: athugasemd
 
     .. math::
         e^{i\pi}+1=0

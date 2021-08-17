@@ -1,4 +1,14 @@
-/* Dæmi */
+/* 
+Notað með 
+ .. rst-class:: midja 
+til að miðja texta 
+*/
+.rst-content .midja {
+        text-align: center !important;
+}
+
+
+/* Admonition: Dæmi */
 .rst-content .daemi .admonition-title {
    background: #F8961E
 }
@@ -8,11 +18,11 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px  ;
+    padding: 0px 12px 12px ;
 }
 
 
-/* Skilgreining */
+/* Admonition: Skilgreining */
 .rst-content .skilgreining .admonition-title {
    background: #90BE6D
 }
@@ -22,14 +32,14 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px  ;
+    padding: 0px 12px 12px ;
 /*    border-bottom: 6px;
     border-style: solid ;
     border-color: #555555 ; */
 }
 
 
-/* Setning */
+/* Admonition: Setning */
 .rst-content .setning .admonition-title {
    background: #e6b43c
 }
@@ -39,10 +49,10 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px  ;
+    padding: 0px 12px 12px ;
 }
 
-/* Fylgisetning */
+/* Admonition: Fylgisetning */
 .rst-content .fylgisetning .admonition-title {
    background: #e6ba53
 }
@@ -52,10 +62,10 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px  ;
+    padding: 0px 12px 12px ;
 }
 
-/* Athugasemd */
+/* Admonition: Athugasemd */
 .rst-content .athugasemd .admonition-title {
    background: #577590
 }
@@ -65,11 +75,11 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px  ;
+    padding: 0px 12px 12px ;
 }
 
 
-/* Aðvörun */
+/* Admonition: Aðvörun */
 .rst-content .advorun .admonition-title {
    background: #d11d1d
 }
@@ -79,14 +89,14 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px  ;
+    padding: 0px 12px 12px ;
 /*    border-bottom: 6px;
     border-style: solid ;
     border-color: #555555 ; */
 }
 
 
-/* Sjá einnig */
+/* Admonition: Sjá einnig */
 .rst-content .sjaeinnig .admonition-title {
    background: #F3722C
 }
@@ -96,5 +106,5 @@
     margin-right: auto ;
     margin-bottom: 20px;
     margin-top: 20px;
-    padding: 0px 12px 12px  ;
+    padding: 0px 12px 12px ;
 }

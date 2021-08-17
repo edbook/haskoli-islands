@@ -123,8 +123,8 @@ Setning
 
 .. admonition:: Athugasemd
 	:class: athugasemd
-
-    Skilgreining 2.3 er sambærileg skilgreiningu á markgildi úr Stærðfræðigreiningu I og II og Setning 2.4 er sambærileg og reiknireglur fyrir markgildi raungildra falla í Stærðfræðigreiningu I og II.
+	
+	Skilgreining 2.3 er sambærileg skilgreiningu á markgildi úr Stærðfræðigreiningu I og II og Setning 2.4 er sambærileg og reiknireglur fyrir markgildi raungildra falla í Stærðfræðigreiningu I og II.
 
 Fáguð föll
 ----------
