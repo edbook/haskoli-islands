@@ -1,7 +1,0 @@
-:orphan:
-
-ToDo listi
-==========
-
-
-.. todolist::

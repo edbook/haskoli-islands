@@ -185,7 +185,7 @@ pygments_style = "sphinx"
 # }
 
 html_theme = "sphinx_rtd_theme"
-html_theme_path = ["_themes"]
+# html_theme_path = ["_themes"]
 
 
 html_permalinks = True

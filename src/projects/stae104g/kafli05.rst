@@ -215,8 +215,8 @@ Setning
 
 .. todo::  Sönnun
 
-.. index::
-    hvelft-setn
+
+.. _hvelft-setn:
 
 Setning
 ~~~~~~~
@@ -514,7 +514,6 @@ Hvernig er stærsti (mesta rúmmálið) loklausi kassinn sem hægt er búa til �
 
   .. eqt-solution::
 
-
 		Reiknum fyrstu og aðra afleiðu fallsins. Fáum
 
 		.. math:: f'(x) = 3x^2 - 4x - 1
@@ -532,4 +531,4 @@ Hvernig er stærsti (mesta rúmmálið) loklausi kassinn sem hægt er búa til �
 		.. math:: 6x - 4 = 0 \iff x = \tfrac{2}{3}.
 
 		Auðvelt er að sýna að :math:`f'(x)>0` ef :math:`x \in (-\infty;\tfrac{2-\sqrt{7}}{3}) \cup (\tfrac{2+\sqrt{7}}{3},\infty)` og er því fallið vaxandi á því bili
-		sem og að :math:`f''(x)<0` ef :math:`x \in (-\infty,\tfrac{2}{3})` og gefur :ref:`setning 5.3.3 <hvelft-setn>` að fallið sé hvelft á því bili.
+		sem og að :math:`f''(x)<0` ef :math:`x \in (-\infty,\tfrac{2}{3})` og gefur :ref:`setning 5.3.3<hvelft-setn>` að fallið sé hvelft á því bili.

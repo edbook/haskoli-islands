@@ -155,7 +155,7 @@ Skilgreining: Línuleg diffurjafna
     kallast :hover:`línuleg diffurjafna`. Hún er :math:`n`-ta stigs ef
     :math:`a_n(x)` er ekki fastafallið :math:`0`.
 
-    Ef :math:`f` er fastafallið :math:`0` þá er jafnan sögð :hover:`óhliðruð`
+    Ef :math:`f` er fastafallið :math:`0` þá er jafnan sögð óhliðruð (e. homogeneous)
     en ef :math:`f` er ekki fastafallið :math:`0` þá er hún
     sögð :hover:`hliðruð,hliðruð línuleg diffurjafna`.
 

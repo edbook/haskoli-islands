@@ -482,7 +482,7 @@ Skoðum graf fallsins
 .. math::
 	f^{-1}(x) = \ln(x).
 
-Fallið :math:`\ln(x)` er kallað :hover:`náttúrulegi logrinn` .
+Fallið :math:`\ln(x)` er kallað :hover:`náttúrulegi logrinn, náttúrlegur logri` .
 Skoðum graf hans:
 
 .. image:: ./myndir/foll/ln.svg

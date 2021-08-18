@@ -297,6 +297,6 @@ def setup(app):
         texinfo=(non_html_visit_node, None),
     )
 
-    app.add_stylesheet("css/eqt.css")
-    app.add_javascript("js/eqt.js")
+    app.add_css_file("css/eqt.css")
+    app.add_js_file("js/eqt.js")
 
