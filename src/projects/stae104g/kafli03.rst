@@ -764,8 +764,6 @@ Setning
     sem þýðir að :math:`\lim_{h\to 0^-} \frac{f(x+h)-f(x)}h \geq 0`. Og þar af leiðandi
     er :math:`f'(x) = \lim_{h\to 0} \frac{f(x+h)-f(x)}h \geq 0`.
 
-    --------------
-
     Gerum nú ráð fyrir :math:`f'\geq 0` og sýnum að þá sé fallið vaxandi.
     Festum tvo punkta :math:`x_1 < x_2`. Ef :math:`f(x_1) > f(x_2)`, það er
     :math:`f(x_2)-f(x_1)<0`

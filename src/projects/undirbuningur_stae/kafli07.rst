@@ -376,7 +376,7 @@ Lítum á horn af gerðinni :math:`2x` þar sem :math:`x` er einhver tala. Við 
 Andhverfur hornafallanna
 ------------------------
 
-:hover:`Andhverfur hornafallanna`, bogafall ― :math:`\arcsin, \arccos` og :math:`\arctan` ― eru :hover:`andhverfur, andhverfa` fallana :math:`\sin, \cos` og :math:`\tan`.
+Andhverfur hornafallanna, einnig þekkt sem :hover:`bogaföll,bogafall,1` ― :math:`\arcsin, \arccos` og :math:`\arctan` ― eru :hover:`andhverfur, andhverfa, 1` fallana :math:`\sin, \cos` og :math:`\tan`.
 
 Skoðum aðeins jöfnuna
 
