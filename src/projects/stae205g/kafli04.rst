@@ -516,9 +516,9 @@ Umræða
 skilgreint á sambærilegan hátt og tvöfalt heildi er skilgreint.
 
 Á sama hátt og fyrir tvöföld heildi má svo skilgreina heildi fyrir
-almennari :hover:`rúmskika,rúmskiki~ í :math:`{\mathbb  R}^3`.
+almennari :hover:`rúmskika,rúmskiki,1` í :math:`{\mathbb  R}^3`.
 
-:hover:`Heildi,tegur` falls :math:`f(x,y,z)` yfir :hover:`rúmskika` :math:`R` er táknað með
+:hover:`Heildi,tegur` falls :math:`f(x,y,z)` yfir rúmskika :math:`R` er táknað með
 
 .. math:: \displaystyle \int\!\!\!\int\!\!\!\int_R f(x,y,z)\,dV.
 
