@@ -1,4 +1,4 @@
-.. _s.verklegt:
+.. _s.verklegt8kf:
 
 Verklegar tilraunir
 ===================
