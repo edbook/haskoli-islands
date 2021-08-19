@@ -14,28 +14,27 @@ Nótur um línulega algebru eftir Gunnar Stefánsson, Rögnvald Möller og Önnu
 
    \medskip
 
-Fyrirlestrar
-------------
+Kennsluhættir STÆ 105G
+----------------------
 
-Fyrirlestrar verða á mánudögum kl. 8:20-9:50 og á miðvikudögum kl. 10:00-11:30.
-Í fyrirlestraáætlun og á dæmablöðunum er sagt nánar frá efni fyrirlestra
-hverrar viku og vísað á viðeigandi efnisgreinar í kennsluefni.
-Í fyrirlestrum mun aðeins gefast tími til að fara yfir helstu atriði
-námsefnisins og verðið þið sjálf að kynna ykkur mikinn hluta af
-námsefninu upp á eigin spýtur. Yfirferð námsefnisins er hröð og farið er
-yfir mikið efni.
-Sérstaklega:
+    #.  **Mánudagstímar**: Fyrirlestrar verða **á mánudögum kl. 8:20-9:50 fyrir STÆ105G og STÆ108G**. **Tímarnir fara fram í gegnum Zoom**. Í fyrirlestraáætlun og á dæmablöðunum er sagt nánar frá efni fyrirlestra hverrar viku og vísað á viðeigandi efnisgreinar í kennsluefni. Í fyrirlestrum mun aðeins gefast tími til að fara yfir helstu atriði námsefnisins og verðið þið sjálf að kynna ykkur mikinn hluta af námsefninu upp á eigin spýtur. Yfirferð námsefnisins er hröð og farið er yfir mikið efni.
+    #.  **Miðvikudagstímar**: Fyrirlestrar verða **á miðvikudögum kl. 11:40-13:10 fyrir STÆ105G**. Í fyrirlestrum á miðvikudögum ætlar kennarinn að fara yfir helstu dæmi námsefnisins.
+    #.  **Vinnutímar eða dæmatímar**: Vinnutímar verða **á fimmtudögum kl. 13:20-15:40 fyrir STÆ105G**. Markmiðið vinnutímanna er að nemendur vinna í litlum hópum. Nemendur geta fengið hjálp frá aðstoðarkennara í þessum tímum. Nemendur þurfa skila lausn á Canvas á vinnutímadæmunum. Leysa þarf að minnsta kosti helming vinnutímadæmanna sómasamlega. Ekki verður gefin einkunn fyrir dæmin en með sómasamlega er átt við að í það minnsta helmingur dæmanna sem skilað er inn í hvert sinn sé nánast hnökralaus (mætti þá miða við að dæmi sé a.m.k. 90% rétt svo það telji). Sé það uppfyllt fást skil fyrir blaðið. **Til að öðlast próftökurétt þurfa nemendur að fá skil fyrir að lágmarki 9 af 14 vinnutímadæmum**.
+    #.  **Skiladæmi.** Á misserinu eru skiladæmi, alls 10 talsins sem sett eru fyrir samkvæmt kennsluáætlun í viðauka. Ætlast er til að lausnir séu sjálfstæðar. Afritaðar lausnir, hvorki frumrit né afrit     eru teknar gildar. Þó eruð þið að sjálsögðu hvött til að skiptast á skoðunum og hugmyndum við að leysa verkefnin. **Til að fá próftökurétt þarf nemandi að skila dæmum í að minnsta kosti 8 af 10 skiptum. Skiladæmi gilda 20% af lokaeinkunn**. Einkunn fyrir skiladæmi byggist á 8 hæstu dæmunum.
 
-#. Í fyrirlestrum á mánudögum ætlar kennarin að fara yfir helstu atriði
-námsefnisins
+ 
+Kennsluhættir STÆ 108G
+----------------------
 
-#. Í fyrirlestrum á miðvikudögum ætlar kennarin að fara yfir helstu dæmi námsefnisins
-
+    #.  **Mánudagstímar**: Fyrirlestrar verða **á mánudögum kl. 8:20-9:50 fyrir STÆ105G og STÆ108G**. **Tímarnir fara fram í gegnum Zoom**. Í fyrirlestraáætlun og á dæmablöðunum er sagt nánar frá efni fyrirlestra hverrar viku og vísað á viðeigandi efnisgreinar í kennsluefni. Í fyrirlestrum mun aðeins gefast tími til að fara yfir helstu atriði námsefnisins og verðið þið sjálf að kynna ykkur mikinn hluta af námsefninu upp á eigin spýtur. Yfirferð námsefnisins er hröð og farið er yfir mikið efni.
+    #.  **Miðvikudagstímar**: Fyrirlestrar verða **á miðvikudögum kl. 10:00-11:30 fyrir STÆ108G**. Í fyrirlestrum á miðvikudögum ætlar kennarinn að fara yfir helstu dæmi námsefnisins.
+    #. **Vinnutímar eða dæmatímar**: Vinnutímar verða **á miðvikudögum kl. 15:00-17:20 fyrir STÆ108G**. Markmiðið vinnutímanna er að nemendur vinna í litlum hópum. Nemendur geta fengið hjálp frá aðstoðarkennara í þessum tímum. Nemendur þurfa skila lausn á Canvas á vinnutímadæmunum. Leysa þarf að minnsta kosti helming vinnutímadæmanna sómasamlega. Ekki verður gefin einkunn fyrir dæmin en með sómasamlega er átt við að í það minnsta helmingur dæmanna sem skilað er inn í hvert sinn sé nánast hnökralaus (mætti þá miða við að dæmi sé a.m.k. 90% rétt svo það telji). Sé það uppfyllt fást skil fyrir blaðið. **Til að öðlast próftökurétt þurfa nemendur að fá skil fyrir að lágmarki 9 af 14 vinnutímadæmum**.
+    #.  **Skiladæmi**. Á misserinu eru skiladæmi, alls 10 talsins sem sett eru fyrir samkvæmt kennsluáætlun í viðauka. Ætlast er til að lausnir séu sjálfstæðar. Afritaðar lausnir, hvorki frumrit né afrit     eru teknar gildar. Þó eruð þið að sjálsögðu hvött til að skiptast á skoðunum og hugmyndum við að leysa verkefnin. **Til að fá próftökurétt þarf nemandi að skila dæmum í að minnsta kosti 8 af 10 skiptum**. Skiladæmi gilda 20% af lokaeinkunn. Einkunn fyrir skiladæmi byggist á 8 hæstu dæmunum.
 
 Vinnutímar og vinnustofur
 -------------------------
 
-Vinnutímar verða á á miðvikudögum kl. 15:00-17:20. Markmiðið vinnutímanna er að nemendur vinna í litlum hópum. Nemendur geta fengið hjálp frá aðstoðarkennara í þessum tímum.
+Vinnutímar verða á miðvikudögum kl. 15:00-17:20 fyrir STÆ108G og á fimmtudögum kl. 13:20-15:40 fyrir STÆ105G. Markmiðið vinnutímanna er að nemendur vinna í litlum hópum. Nemendur geta fengið hjálp frá aðstoðarkennara í þessum tímum.
 
 **Nemendur þurfa skila lausn á Canvas á vinnutímadæmunum.** Leysa þarf að minnsta kosti helming vinnutímadæmanna sómasamlega. Ekki verður gefin einkunn fyrir dæmin en með sómasamlega er átt við að í það minnsta helmingur dæmanna sem skilað er inn í hvert sinn sé nánast hnökralaus (mætti þá miða við að dæmi sé a.m.k. 90% rétt svo það telji). **Sé það uppfyllt fást skil fyrir blaðið.**
 
@@ -118,7 +117,7 @@ Námsmat
    
 Stefnt er að því að hafa prófin á dagsetningum sem koma fram í kennsluáætlun í viðauka. Þá verður prófað úr skiladæmunum og vinnutímadæmunum.
 
-#. Stöðupróf 10%. TO CHECK with Sigdis.
+#. Stöðupróf sem gildir 10% af lokaeinkunn. Stöðuprófið verður á fimmtudaginn 26. águst og sjúkraprófið verður  í lok september. **Til að fá próftökurétt þurfa nemendur að ná lágmarkseinkunn (5) á stöðuprófi.**
 
 #. Vinnutímar. Það eru 14 vinnutímar. Markmiðið vinnutímanna er að nemendur vinna í litlum hópum. Nemendur geta fengið hjálp frá aðstoðarkennara í þessum tímum. **Nemendur þurfa skila lausn á Canvas á vinnutímadæmunum.**
 
@@ -133,6 +132,8 @@ Próftökuréttur
 --------------
 
 Til að fá próftökurétt þurfa nemendur að hafa
+
+#. náð lágmarkseinkunn (5) á stöðuprófi
 
 #. tekið 1 af 2 hlutaprófum
 
@@ -157,7 +158,7 @@ Að taka námskeiðið í annað sinn
 Viðtalstímar kennara og fyrirspurnir
 ------------------------------------
 
-Kennari námskeiðsins er Valentina Giangreco M Puletti og hún er með skrifstofu 309 á 3. hæð í Tæknigarði. Viðtalstímar við kennara eru samkvæmt samkomulagi.
+Kennari námskeiðsins er Valentina Giangreco M Puletti og hún er með skrifstofu 309 á 3. hæð í Tæknigarði. Viðtalstímar við kennara eru eru á föstudögum kl. 13:30-15:30. 
 
 Við munum notast við Piazza vefinn þar sem þið getið spjallað um efni námskeiðsins, skipulag, heimaverkefni og fleira. Ég legg áherslu á að þetta er hugsað sem vettvangur fyrir **ykkur** til að ræða saman og þið getið ekki treyst því að öllum fyrirspurnum verði svarað þar samstundis. 
 
