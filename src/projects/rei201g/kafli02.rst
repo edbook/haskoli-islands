@@ -31,7 +31,7 @@ Hvað er reiknifræði
     fræðasviðanna í þessum lista auk annarra, t.d. verkfræði, eðlisfræði og efnafræði
     
 **Gagnavísindi** (*data science*), stundum flokkað sem undirgrein tölvunarfræði
-  
+
   - **Vélanám** (*machine learning*), stundum talið það sama og reiknigreind
     (*computational intelligence*),
   - **Gagnanám** (*data mining*), e.t.v. stundum talið undirgrein vélanáms. Ath. að hér
@@ -44,14 +44,14 @@ Hvað er reiknifræði
     translate*)
 
 **Tölvunarfræði** (*computer science*)
-  
+
   - **Gagnagrindur og reiknirit** (*data structures and algorithms*), hér teljast m.a.
     ýmis leitar-, röðunar- og netafræðireiknirit
   - **Gervigreind** (*artificial intelligence*), tengist náið ýmsum undirsviðum gagnavísinda
   - **Ofurtölvuvinnsla** (*high performance computing (HPC)*, *parallel computing*)
 
 **Tölfræði** (*statistics*)
-  
+
   - **Hagnýtt tölfræði** (*applied statistics*)
   - **Reiknifræðileg tölfræði** (*computational statistics*)
   - **Bayesísk tölfræði** (*Bayesian statistics*)

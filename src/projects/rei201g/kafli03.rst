@@ -21,8 +21,8 @@ Föll af tveimur breytistærðum eða tvívíð föll
 Stærðfræðileg skilgreining
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Við höldum áfram að blanda svolítið saman stærðfræði og Python. Hér er sem sé
-stærðfræðikafli. Í dæmi 4 í kafla :numref:`teikning-punktasafns`
+Við höldum áfram að blanda svolítið saman stærðfræði og Python. Hér er sem 
+sé stærðfræðikafli. Í dæmi 4 í kafla :numref:`teikning-punktasafns`
 var skilgreint fall sem hægt var að lágmarka til að finna jöfnu bestu línu:
 
    .. math::
