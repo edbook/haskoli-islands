@@ -6,11 +6,11 @@ Afleiður
 
     **Nauðsynleg undirstaða**
 
-    - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/kafli10.html>`_.
-    - :ref:`Samfelldni`. Sjá einnig `undirstöðuatriði um samfelld föll <https://edbook.hi.is/undirbuningur_stae/kafli10.html#id1>`_.
-    - :ref:`Samskeyting falla <samskeyting>`. Sjá einnig `undirstöðuatriði um um samskeytingu <https://edbook.hi.is/undirbuningur_stae/kafli09.html#samskeyting-falla>`_.
-    - :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://edbook.hi.is/undirbuningur_stae/kafli05.html#andhverfur-falla>`_.
-    - `Hornaföll, P7 <https://edbook.hi.is/undirbuningur_stae/kafli07.html>`_.
+    - :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/kafli10/index.html>`_.
+    - :ref:`Samfelldni`. Sjá einnig `undirstöðuatriði um samfelld föll <https://edbook.hi.is/undirbuningur_stae/kafli10/index.html#id1>`_.
+    - :ref:`Samskeyting falla <samskeyting>`. Sjá einnig `undirstöðuatriði um um samskeytingu <https://edbook.hi.is/undirbuningur_stae/kafli09/index.html#samskeyting-falla>`_.
+    - :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://edbook.hi.is/undirbuningur_stae/kafli05/index.html#andhverfur-falla>`_.
+    - `Hornaföll, P7 <https://edbook.hi.is/undirbuningur_stae/kafli07/index.html>`_.
 
 *He felt that his whole life was some kind of dream and he sometimes wondered whose it was and whether they were enjoying it.*
 
@@ -160,7 +160,7 @@ Athugasemd: Hallatalan :math:`\infty` er ekki leyfð
 
     .. image:: ./myndir/kafli03/01_x13.png
     	:align: center
-    	:width: 12cm
+    	:width: 75%
 
     |
 
@@ -852,7 +852,7 @@ Dæmi
 
 .. image:: ./myndir/kafli03/11_hringur.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Setning: Andhverfusetningin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

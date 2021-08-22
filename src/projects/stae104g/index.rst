@@ -8,7 +8,7 @@ Stærðfræðigreining I (STÆ104G), Háskóli Íslands
 
 Höfundur efnis: Benedikt Steinar Magnússon, bsm@hi.is.
 
-Síðast uppfært: 2020-08-21
+Síðast uppfært: 2021-08-22
 
 .. todo::
     **Global**:

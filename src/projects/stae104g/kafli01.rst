@@ -6,12 +6,12 @@ Tölur og föll
 
     **Nauðsynleg undirstaða**
 
-    -  `Undirstöðuatriði tölur og talnakerfi <https://edbook.hi.is/undirbuningur_stae/kafli01.html#talnakerfi>`_.
-    -  `Forgangsröðun aðgerða <https://edbook.hi.is/undirbuningur_stae/kafli01.html#forgangsroun-agera>`_.
-    -  `Reiknireglur <https://notendur.hi.is/undirbuningur_stae/kafli01.html#reiknireglur>`_.
-    -  `Brotareikningur <https://edbook.hi.is/undirbuningur_stae/kafli01.html#brotareikningur>`_.
-    -  `Veldi og rætur <https://edbook.hi.is/undirbuningur_stae/kafli01.html#veldi-og-raetur>`_.
-    -  `Sjá undirstöðuatriði um föll <https://edbook.hi.is/undirbuningur_stae/kafli05.html>`_.
+    -  `Undirstöðuatriði tölur og talnakerfi <https://edbook.hi.is/undirbuningur_stae/kafli01/index.html#talnakerfi>`_.
+    -  `Forgangsröðun aðgerða <https://edbook.hi.is/undirbuningur_stae/kafli01/index.html#forgangsroun-agera>`_.
+    -  `Reiknireglur <https://notendur.hi.is/undirbuningur_stae/kafli01/index.html#reiknireglur>`_.
+    -  `Brotareikningur <https://edbook.hi.is/undirbuningur_stae/kafli01/index.html#brotareikningur>`_.
+    -  `Veldi og rætur <https://edbook.hi.is/undirbuningur_stae/kafli01/index.html#veldi-og-raetur>`_.
+    -  `Sjá undirstöðuatriði um föll <https://edbook.hi.is/undirbuningur_stae/kafli05/index.html>`_.
 
 
 Inngangur
@@ -40,7 +40,7 @@ Sett fram samtímis, en óháð, af
 `Gottfried Leibniz <http://www.visindavefur.is/svar.php?id=59920>`__ í lok 17. aldar.
 
 .. image:: ./myndir/kafli01/01_NewtonLeibniz.jpg
-    :width: 50 %
+    :width: 75 %
     :align: center
 
 Ítarefni
@@ -121,7 +121,7 @@ Skilgreining: Tölur
     fjölda. Ef maður lítur hins vegar þannig á að þær séu notaðar til að
     númera hluti þá er 0 ekki með.
 
-Sjá einnig http://edbook.hi.is/undirbuningur_stae/kafli01.html#talnakerfi.
+Sjá einnig http://edbook.hi.is/undirbuningur_stae/kafli01/index.html#talnakerfi.
 
 Smíði rauntalna
 ~~~~~~~~~~~~~~~
@@ -242,13 +242,14 @@ Skilgreining: Bil
 
   .. eqt-solution::
 
-		A) 2,4 er ekki náttúruleg tala því hún er ekki heil tala.
+		A) Talan 2,4 er ekki náttúruleg tala því hún er ekki heil tala.
 
-		#) Tölur geta ekki bæði verið ræðar og óræðar af því þetta eru andstæð hugtök.
+		#) Tölur geta ekki bæði verið ræðar og óræðar af því þetta eru andstæð hugtök, http://edbook.hi.is/undirbuningur_stae/kafli01/index.html#rauntolurnar-mathbb-r.
+
+		#) Ræðu tölurnar eiginlegt hlutmengi í rauntölunum og því eru allar ræðar tölur rauntölur en til eru rauntölur, t.d. :math:`\pi` sem ekki eru ræðar.
 
 		#) Kvaðratrót náttúrulegra talna geta verið ræðar, t.d. :math:`\sqrt{9}=3`.
 
-		#) Ræðu tölurnar eiginlegt hlutmengi í rauntölunum og því eru allar ræðar tölur rauntölur en til eru rauntölur, t.d. :math:`\pi` sem ekki eru ræðar.
 
 ------
 
@@ -292,7 +293,7 @@ Skilgreining
 
 .. image:: ./myndir/kafli01/02_Mynd_vorpunar.png
     :align: center
-    :width: 50%
+    :width: 75%
 
 .. admonition:: Aðvörun
     :class: advorun
@@ -322,7 +323,7 @@ Skilgreining: Samskeyting
 
 .. image:: ./myndir/kafli01/02_Samskeyting.png
     :align: center
-    :width: 50%
+    :width: 75%
 
 Dæmi
 ~~~~
@@ -392,7 +393,7 @@ Skilgreining: Andhverfa
 
 .. image:: ./myndir/kafli01/02_Andhverfa.png
     :align: center
-    :width: 50%
+    :width: 75%
 
 .. admonition:: Athugasemd
     :class: athugasemd
@@ -416,7 +417,7 @@ Dæmi
 
 .. image::  ./myndir/kafli01/04_andhverfa.png
     :align: center
-    :width: 50%
+    :width: 75%
 
 .. admonition:: Athugasemd
     :class: athugasemd
@@ -470,7 +471,7 @@ Skilgreining: Jafnstætt og oddstætt
 
 .. image::  ./myndir/kafli01/04_JafnstaettOddstaett.png
     :align: center
-    :width: 60%
+    :width: 75%
 
 Æfingadæmi
 ~~~~~~~~~~
@@ -478,22 +479,22 @@ Skilgreining: Jafnstætt og oddstætt
 .. eqt:: daemi-andhverfa
 
   **Æfingadæmi**
-	Hakið við réttan kross.
+	Hakið við rétta fullyrðingu.
 
   A) :eqt:`C` Öll gagntæk föll eiga sér andhverfu.
 
   #) :eqt:`I` Öll átækt föll eiga sér andhverfu.
 
-  #) :eqt:`I` Fallið :math:`f: \mathbb{R} \mapsto \mathbb{R}`, :math:`f(x)=\sqrt{x}` er andhverfa falls :math:`g(x)=x^2`.
+  #) :eqt:`I` Fallið :math:`f: \mathbb{R} \mapsto \mathbb{R_+}`, :math:`f(x)=\sqrt{x}` er andhverfa falls :math:`f: \mathbb{R} \mapsto \mathbb{R_+}`, :math:`g(x)=x^2`.
 
   #) :eqt:`I` Til þess að fallið :math:`f(x)` geti verið andhverfa fallsins :math:`g(x)` verða föllin að hafa sama skilgreiningarmengi.
 
   .. eqt-solution::
 
-		A) Þar sem :math:`x^2` er ekki gagntækt er það ekki andhverfanlegt.
+		A) Öll gagntæk föll eru andhverfanleg.
 
-		#) Skilgreiningarmengi fallsins er bakmengi andhverfunnar og öfugt. Það er alls ekki nauðsynlegt að skilgreiningarmengi andhverfunnar sé það sama og skilgreiningarmengi fallsins.
+		#) Ef fallið er ekki eintækt, þ.e. ef til eru punktar :math:`x_1\neq x_2` þannig að :math:`f(x_1)=y=f(x_2)` þá getum við sagt hvort andhverfan á að taka gildið :math:`x_1` eða :math:`x_2` í punktinum :math:`y`.
 
-		#) Ekki nægir að fall sé átækt til þess að það sé andhverfanlegt. T.a.m. er fallið :math:`f: \mathbb{R} \mapsto \mathbb{R}`, :math:`f(x)=\tan(x)` átækt en ekki andhverfanlegt (athugið, tangens er andhverfanlegur sé skilgreiningarmengi hans takmarkaðvið bilið :math:`\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)` en ekki þegar skilgreningarmengið er :math:`\mathbb{R}`).
+		#) Ef þetta Kvaðratrótin skilar aldrei neikvæðri tölu og því er myndmengi hennar ekki allt :math:`\mathbb R` sem er skilgreiningarmengi :math:`g`. 
 
-		#) Öll gagntæk föll eru andhverfanleg.
+		#) asfd
