@@ -6,15 +6,15 @@ Könnun falla
 
 	**Nauðsynleg undirstaða**
 
-	- :ref:`Vaxandi/minnkandi föll <vaxandiminnkandi>`. Sjá einnig `undirstöðuatriði um einhalla föll <https://edbook.hi.is/undirbuningur_stae/kafli05.html#einhalla-foll>`_.
+	- :ref:`Vaxandi/minnkandi föll <vaxandiminnkandi>`. Sjá einnig `undirstöðuatriði um einhalla föll <https://edbook.hi.is/undirbuningur_stae/kafli05/index.html#einhalla-foll>`_.
 
-	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/kafli11.html>`_.
+	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/kafli11/index.html>`_.
 
 	- :ref:`Útgildi <utgildi>`.
 
-	- `Ójöfnur <https://edbook.hi.is/undirbuningur_stae/kafli02.html#ojofnur>`_.
+	- `Ójöfnur <https://edbook.hi.is/undirbuningur_stae/kafli02/index.html#ojofnur>`_.
 
-	- `Graf vörpunnar <https://edbook.hi.is/undirbuningur_stae/kafli05.html#graf-vorpunnar>`_.
+	- `Graf vörpunnar <https://edbook.hi.is/undirbuningur_stae/kafli05/index.html#graf-vorpunnar>`_.
 
 
 *"The Guide says there is an art to flying", said Ford, "or rather a knack.
@@ -277,7 +277,7 @@ Setning
 
 .. image:: ./myndir/kafli05/04_beygjuskilapunktur.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 
 .. index::
@@ -356,7 +356,7 @@ Skilgreining: Lóðrétt aðfella
 
 .. image:: ./myndir/kafli05/06_lodfellur.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 *Fallið* :math:`\frac{1}{\sin(x)}` *hefur lóðréttar aðfellur í öllum punktum þar sem* :math:`\sin(x)=0`.
 
@@ -372,7 +372,7 @@ Skilgreining: Lárétt aðfella
 
 .. image:: ./myndir/kafli05/06_arctanadfellur.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 *Fallið* :math:`\arctan(x)` *hefur tvær láréttar aðfellur,* :math:`y=\frac{\pi}{2}` *og* :math:`y=\frac{-\pi}{2}`.
 
@@ -391,7 +391,7 @@ Skáfella
 
 .. image:: ./myndir/kafli05/06_lodogskafellur.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 *Fallið* :math:`\frac{x^2}{2x-4}` *hefur skáfelluna* :math:`y=\frac{1}{2}x+1` *auk lóðréttu aðfellunnar* :math:`x=2`.
 
@@ -494,7 +494,7 @@ Hvernig er stærsti (mesta rúmmálið) loklausi kassinn sem hægt er búa til �
 
 .. image:: ./myndir/kafli05/09_kassi.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Æfingadæmi
 ~~~~~~~~~~

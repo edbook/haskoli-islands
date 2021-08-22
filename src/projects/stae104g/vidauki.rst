@@ -119,7 +119,7 @@ Robert Adams og Christopher Essex. Hér fyrir grófur samanburður
 | 10\. Veldaraðir                  | 10.3      | 9.6                          |
 +----------------------------------+-----------+------------------------------+
 
-Kaflanúmer í Adam’s Calculus miðast við 9. útgáfu kennslubókarinnar.
+Kaflanúmer í Adam’s Calculus miðast við 10. útgáfu kennslubókarinnar.
 
 
 ---------

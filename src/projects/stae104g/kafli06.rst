@@ -6,9 +6,9 @@ Heildun
 
 	**Nauðsynleg undirstaða**
 
-	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/kafli10.html>`_.
+	- :ref:`Markgildi`. Sjá einnig `undirstöðuatriði um markgildi <https://edbook.hi.is/undirbuningur_stae/kafli10/index.html>`_.
 
-	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/kafli11.html>`_.
+	- :ref:`Afleiður <afleidur>`.  Sjá einnig `undirstöðuatriði um afleiður <https://edbook.hi.is/undirbuningur_stae/kafli11/index.html>`_.
 
 	- :ref:`Reiknireglur fyrir afleiður <reiknireglura>`, sér í lagi :ref:`keðjureglan <kedjuregla>`.
 
@@ -67,7 +67,7 @@ Athugið að :math:`f(x)=f_+(x)-f_-(x)`.
 
 .. image:: ./myndir/kafli06/01_fplusminus.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 
 Óformleg skilgreining á heildi falls
@@ -113,7 +113,7 @@ Skilgreining: Undirsumma
 
 .. image:: ./myndir/kafli06/03_undirsumma.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Látum :math:`u_k` vera flatarmál rétthyrninganna, þar sem
 :math:`k=1,\ldots,n`.
@@ -141,7 +141,7 @@ Skilgreining: Yfirsumma
 
 .. image:: ./myndir/kafli06/03_yfirsumma.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Táknum flatarmál hans með :math:`y_k`, þar sem :math:`k=1,\ldots,n`. Við
 köllum summu flatarmáls allra rétthyrninganna :hover:`yfirsummu,yfirsumma` fyrir heildið

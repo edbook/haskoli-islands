@@ -6,13 +6,13 @@ Torræð föll
 
 	**Nauðsynleg undirstaða**
 
-	- `Hornaföll, P7 <https://edbook.hi.is/undirbuningur_stae/kafli07.html>`_.
+	- `Hornaföll, P7 <https://edbook.hi.is/undirbuningur_stae/kafli07>`_.
 
-	- :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://edbook.hi.is/undirbuningur_stae/kafli05.html#andhverfur-falla>`_.
+	- :ref:`Andhverfur falla <andhverfa>`. Sjá einnig `undirstöðuatriði um andhverfur <https://edbook.hi.is/undirbuningur_stae/kafli05/index.html#andhverfur-falla>`_.
 
-	- Sjá einnig `undirstöðuatriði um logra <https://edbook.hi.is/undirbuningur_stae/kafli09.html#lograr>`_.
+	- Sjá einnig `undirstöðuatriði um logra <https://edbook.hi.is/undirbuningur_stae/kafli09/index.html#lograr>`_.
 
-	- Sjá einnig `undirstöðuatriði um náttúrulega veldisvísisfallið og náttúrulega logrann <https://edbook.hi.is/undirbuningur_stae/kafli09.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn>`_.
+	- Sjá einnig `undirstöðuatriði um náttúrulega veldisvísisfallið og náttúrulega logrann <https://edbook.hi.is/undirbuningur_stae/kafli09/index.html#natturulega-veldisvisisfalli-og-natturulegi-logrinn>`_.
 
 *We are stuck with technology when what we really want is just stuff that works.*
 
@@ -110,7 +110,7 @@ Skilgreining: Veldisvísisfallið
 
 .. image:: ./myndir/kafli04/02_ln-exp.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 .. index::
     e
@@ -130,7 +130,7 @@ Skilgreining: Talan :math:`e`
 
 .. image:: ./myndir/kafli04/02_ln-e.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 
 .. admonition:: Athugasemd
@@ -351,7 +351,7 @@ Skilgreining: arcsin
 
 .. image:: ./myndir/kafli04/05_arcsin.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Andhverfa kósínus
 ~~~~~~~~~~~~~~~~~
@@ -377,7 +377,8 @@ Skilgreining: arccos
 
 .. image:: ./myndir/kafli04/05_arccos.png
 	:align: center
-	:width: 12cm
+	:width: 75%
+
 
 Andhverfa tangens
 ~~~~~~~~~~~~~~~~~
@@ -408,7 +409,7 @@ Skilgreining: arctan
 
 .. image:: ./myndir/kafli04/05_arctan.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Setning
 ~~~~~~~
@@ -440,7 +441,7 @@ Skilgreining: cosh og sinh
 
 .. image:: ./myndir/kafli04/06_sinh-cosh.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Setning
 ~~~~~~~
@@ -555,7 +556,7 @@ Skilgreining
 
 .. image:: ./myndir/kafli04/07_arcosh.png
 	:align: center
-	:width: 12cm
+	:width: 75%
 
 Í framtíðinni
 ~~~~~~~~~~~~~
@@ -568,4 +569,4 @@ eru bara mismunandi hliðar á veldisvísisfallinu.
 
 .. image:: ./myndir/kafli04/07_exp.png
 	:align: center
-	:width: 10cm
+	:width: 75%
