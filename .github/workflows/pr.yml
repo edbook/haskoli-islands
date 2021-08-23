@@ -7,13 +7,17 @@ on:
   pull_request:
     branches: [ main ]
     types: [ opened, synchronize, closed ]
-  push:
     paths:
       - 'src/**'
       - 'cli/**'
       - '.github/**'
-    branches-ignore:
-      - main
+  # push:
+  #   paths:
+  #     - 'src/**'
+  #     - 'cli/**'
+  #     - '.github/**'
+  #   branches-ignore:
+  #     - main
 jobs:
   setup:
     name: Setup
@@ -116,9 +120,9 @@ jobs:
       - name: Notify open PR
         run: |
           content_title="Nýtt PR opnað"
-          title=${{ github.event.pull_request.title }}
+          title="${{ github.event.pull_request.title }}"
           color=2061822
-          description=${{ github.event.pull_request.body }}
+          description="${{ github.event.pull_request.body }}"
           url=${{ github.event.pull_request.html_url }}
           author_name=${{ github.event.pull_request.user.login}}
           author_url=${{ github.event.pull_request.user.url}}
