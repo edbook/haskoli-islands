@@ -7,4 +7,3 @@ Stærðfræðigreining 105G og Stærðfræðigreining 108G við Háskóla Íslan
 Efnið byggir að miklu leyti á bókinni *Calculus 1 og 2* eftir Gilbert Strang og Edwin Herman, á *nótum um línulega algebru* eftir Gunnar Stefánsson, Rögnvald Möller og Önnu Helgu Jónsdóttur, og á *nótum um Stærðfræðigreiningu IA* eftir Valentina Giangreco.
 
 **Ágúst 2021, Hulda Hvönn Kristinsdóttir og Valentina Giangreco**
-
