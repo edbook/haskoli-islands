@@ -55,7 +55,6 @@ extensions = [
     "sagecell.sagecell",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    "hoverrole.hoverrole",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     # "analytics.analytics",
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
@@ -91,9 +90,9 @@ katex_css = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.css"
 datacamp_path = "https://cdn.datacamp.com/datacamp-light-latest.min.js"
 
 # Paths for sagecell javascript files
-#sage_jquery_path = "http://sagecell.sagemath.org/static/jquery.min.js"
-#sage_path = "http://sagecell.sagemath.org/static/embedded_sagecell.js"
-#custom_sage_path = "custom_sage.js"
+# sage_jquery_path = "http://sagecell.sagemath.org/static/jquery.min.js"
+# sage_path = "http://sagecell.sagemath.org/static/embedded_sagecell.js"
+# custom_sage_path = "custom_sage.js"
 
 # Google Analytics ID, enable_custom_scrolldepth default value is False if not set
 ga_id = "UA-78633732-9"
@@ -213,6 +212,7 @@ html_favicon = "_static/favicon_2.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ["css/strei.css", "css/edbook.css"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
