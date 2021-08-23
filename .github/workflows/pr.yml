@@ -5,7 +5,7 @@ env:
   SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     types: [ opened, synchronize, closed ]
   push:
     paths:
@@ -13,7 +13,7 @@ on:
       - 'cli/**'
       - '.github/**'
     branches-ignore:
-      - master
+      - main
 jobs:
   setup:
     name: Setup
