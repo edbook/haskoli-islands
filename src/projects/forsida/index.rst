@@ -65,7 +65,7 @@ Námskeið við HÍ
 
 .. button::
   :text: REI201G: Stærðfræði og reiknifræði
-  :link: https://cs.hi.is/strei/
+  :link: rei201g/index.html
 
 .. button::
   :text: Tölfræði frá grunni
