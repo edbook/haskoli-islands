@@ -101,23 +101,21 @@ jobs:
           ls -d ${{ github.workspace }}/_build/*
       - name: Deploy branch
         id: deploy-branch
-        if: github.ref != 'refs/heads/main'
+        if: github.event.action == 'synchronize' || github.event.action == 'opened'
         run: |
-          ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ needs.setup.outputs.branch_name }}"
+          ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
       - name: Deploy production
-        if: github.ref == 'refs/heads/main'
+        if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
         run: |
-          if [ -z ${{env.ACT}} ]; then
             ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
-          fi
       - name: Delete stale deployments
-        if: github.event_name == 'pull_request' && github.event.action == 'closed'
+        if: github.event.action == 'closed' && github.head_ref != 'main'
         run: |
           ssh staging 'rm -r ~/public_html/staging/edbook/${{ github.head_ref }}'
   notify-discord-pr:
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
-    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    if: github.event.action == 'opened'
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
@@ -131,7 +129,7 @@ jobs:
           author_name=${{ github.event.pull_request.user.login}}
           author_url=${{ github.event.pull_request.user.url}}
           author_avatar=${{ github.event.pull_request.user.avatar_url}}
-          branch=${{ github.event.pull_request.head.ref}}
+          branch=${{ github.head_ref }}
 
           payload=$(cat <<EOF
           {
@@ -164,7 +162,7 @@ jobs:
     needs: [build-all]
     name: Notify Discord (merged to main)
     runs-on: ubuntu-20.04
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    if: github.event.action == 'closed' && github.event.pull_request.merged == true
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
