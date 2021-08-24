@@ -110,15 +110,10 @@ jobs:
           if [ -z ${{env.ACT}} ]; then
             ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
           fi
-  delete-stale-deployment:
-    needs: [build-all]
-    name: Notify Discord (merged to main)
-    runs-on: ubuntu-20.04
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    steps:
-      - name: Delete sftp folder
+      - name: Delete stale deployments
+        if: github.event_name == 'pull_request' && github.event.action == 'closed'
         run: |
-          echo "deleting ${{ github.head_ref }}"
+          ssh staging 'rm -r ~/public_html/staging/edbook/${{ github.head_ref }}'
   notify-discord-pr:
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
@@ -169,7 +164,7 @@ jobs:
     needs: [build-all]
     name: Notify Discord (merged to main)
     runs-on: ubuntu-20.04
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == 'true'
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
