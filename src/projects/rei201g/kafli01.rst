@@ -38,7 +38,7 @@ Frá upphafi var markmiðið að búa til einfalt og auðlært forritunarmál, s
 
 Fallasafn og pakkar
 ~~~~~~~~~~~~~~~~~~~
-Með Python fylgir viðamikið fallasafn (*standard library*) og auk þess eru til ótal viðbætur sem kallast **pakkar** (*packages*) og eru ekki hluti af hinu eiginlega forritunarmáli. Opinber `pakkavefur <https://pypi.org>`_ fyrir Python hefur 282.000 pakka í janúar 2021, og hann fer ört vaxandi (voru 164.000 í janúar 2019). Fallasafnið samanstendur af mörgum **einingum** (*modules*), og það sama gildir um flesta pakka. Það er sama hvort ætlunin sé að tengjast Oracle gagnagrunni, búa til vefsíðu, skrifa tölvuleik eða leysa stærðfræðileg verkefni: maður getur alltaf fundið vandaðan og almennan Python-pakka í verkið. Síðar í þessum nótum verður fjallað um nokkra slíka m.a. NumPy (fyrir vigur- (*vector-*) og fylkjareikninga), SciPy (fyrir reiknifræði), Pandas (fyrir gagnavinnslu) og Matplotlib (til að teikna).
+Með Python fylgir viðamikið fallasafn (*standard library*) og auk þess eru til ótal viðbætur sem kallast **pakkar** (*packages*) og eru ekki hluti af hinu eiginlega forritunarmáli. Opinber `pakkavefur <https://pypi.org>`_ fyrir Python hefur 322.000 pakka í ágúst 2021, og hann fer ört vaxandi (voru 164.000 í janúar 2019). Fallasafnið samanstendur af mörgum **einingum** (*modules*), og það sama gildir um flesta pakka. Það er sama hvort ætlunin sé að tengjast Oracle gagnagrunni, búa til vefsíðu, skrifa tölvuleik eða leysa stærðfræðileg verkefni: maður getur alltaf fundið vandaðan og almennan Python-pakka í verkið. Síðar í þessum nótum verður fjallað um nokkra slíka m.a. NumPy (fyrir vigur- (*vector-*) og fylkjareikninga), SciPy (fyrir reiknifræði), Pandas (fyrir gagnavinnslu) og Matplotlib (til að teikna).
 
 Útbreiðsla
 ~~~~~~~~~~
@@ -46,7 +46,6 @@ Með Python fylgir viðamikið fallasafn (*standard library*) og auk þess eru t
 
 .. figure:: myndir/python-vöxtur.png
    :align: center
-   :figwidth: 14cm
 
    Vöxtur í vinsældum Python
 
@@ -64,7 +63,7 @@ Python-leiðbeiningar á netinu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Fjölmargar leiðbeiningar um Python má finna á netinu, stuttar og langar, ókeypis og til sölu. Hér eru nokkrar gjaldfrjálsar:
 
-- `Think Python <https://greenteapress.com/wp/think-python-2e/>`_ (ókeypis byrjendakennslubók, var kennd í Tölvunarfræði 1a)
+- `Think Python <https://greenteapress.com/wp/think-python-2e/>`_ (ókeypis byrjendakennslubók sem hefur verið kennd í Tölvunarfræði 1a)
 - `Google's Python Class <https://developers.google.com/edu/python/>`_ (líka fyrir byrjendur)
 - `Learn Python <https://www.learnpython.org/>`_ (með reitum til að keyra forrit og skoða úttak)
 - `The Python Tutorial <https://docs.python.org/3/tutorial/index.html>`_ (opinberar Python leiðbeiningar á python.org, fyrir svolítið lengra komna)
@@ -73,6 +72,28 @@ Fjölmargar leiðbeiningar um Python má finna á netinu, stuttar og langar, ók
 
 Dæmi um Python forrit
 ---------------------
+Tafla yfir veldi
+~~~~~~~~~~~~~~~~
+Eitt af því sem tölvur eru góðar í er að framkvæma sömu hlutina aftur og aftur. Ein einfaldasta leiðin til að endurtaka skipanir í Python er að nota *for*-skipun. Hér er dæmi um Python-forrit sem reiknar og skrifar út önnur og þriðju veldi talnanna 1 til 5:
+
+.. code-block:: python
+   :caption: Veldatafla
+   :name: veldatafla
+
+   print(" k  k²   k³")
+   print("–––––––––––")
+   for k in range(1,6):
+      print(f"{k:2} {k**2:3} {k**3:4}")
+
+Þetta forrit kynnir fleira til sögunnar, t.d. svonefnda f-strengi til að stjórna sniði þess sem er prentað og virkjann :code:`**` sem gefur veldi.
+
+.. Æfing
+.. hint::
+   Ýmsar vefsíður bjóða upp á keyrslu Python forrita, t.d. `ideone.com
+   <http://ideone.com/l/python-3>`_ og `online-python.com
+   <http://online-python.com/online_python_compiler>`_
+   Afritið (eða sláið inn) forritið Veldatafla inn í aðra hvora af þessum síðum
+   og keyrið það. Prófið að breyta forritinu (finnið t.d. fleiri veldi).
 
 Collatz-runur
 ~~~~~~~~~~~~~
@@ -98,6 +119,7 @@ Eftirfarandi Python forrit finnur og prentar út Collatz-runur sem byrja á 2, 3
    :caption: Collatz
    :name: Collatz
 
+   # COLLATZ ÆFING
    def næsta(x):
        '''skilar næstu tölu á eftir x í Collatz-runu'''
        if x % 2 == 0:
@@ -116,8 +138,8 @@ Eftirfarandi Python forrit finnur og prentar út Collatz-runur sem byrja á 2, 3
 
    # Forrit sem prentar út Collatz-runur sem byrja á 2, 3,...,7:
    print('Nokkrar Collatz-runur')
-   for n in range(2,8):
-       collatz_runa(n)
+   for n0 in range(2,8):
+       collatz_runa(n0)
 
 .. _icollatz:
    
@@ -175,7 +197,7 @@ Python atriði sem koma fyrir í forritinu Collatz
 
 - Föll sem **skila gildi** enda oftast á :code:`return gildi`
 
-- **Inndráttur** er notaður til að sýna hvar blokkir enda (þ.e.a.s. blokkir sem *def*, *if*, *else*, *while* o.fl. skilgreina). Skipanir sem byrja slíkar blokkir enda alltaf á :
+- **Inndráttur** er notaður til að sýna hvar blokkir enda (þ.e.a.s. blokkir sem *def*, *if*, *else*, *while* o.fl. skilgreina). Skipanir sem byrja slíkar blokkir enda alltaf á tvípunkti (þ.e.a.s. :)
 
 - **Strengi** má búa til með því að setja einfaldar gæsalappir utan um þá, en líka má
   nota tvöfaldar, t.d. :code:`"strengur"`.
@@ -186,22 +208,78 @@ Python atriði sem koma fyrir í forritinu Collatz
 - Fallið **print** fer sjálfkrafa í næstu línu eftir prentun, nema ef viðbótin
   *end=...* er með.
 
-  .. Æfing
-  .. hint::
-     Á vefnum `programiz <https://www.programiz.com/python-programming/online-compiler>`_
-     er hægt að prófa Python forrit. Farið þangað og afritið (eða sláið inn) forritið 
-     :numref:`Collatz` (þ.e. Collatz). Prófið nokkrar fleiri byrjunartölur, m.a.
-     27.
-     
-Umhverfi fyrir Python: *JupyterLab*
+Umhverfi fyrir Python: Jupyterbækur
 -----------------------------------
+Árið 2014 var byrjað á verkefni sem nefnist `Jupyter <http://jupyter.org>`_ (sbr. `Wikipediu <https://en.wikipedia.org/wiki/Project_Jupyter>`_) sem snýst um að búa til umhverfi þar sem blanda má saman lýsingu verkefna, stærðfræðiformúlum, forritum, og úttaki forrita í sama skjali eða vinnubók. Upphaflega var hægt að nota eitt af þremur forritunarmálum, Julia, Python og R, og af þeim er nafnið dregið, en síðan hafa bæst við fleiri mál. Hægt er að nota Jupyter vinnubækur á eigin tölvu, t.d. með því að setja upp hugbúnað sem nefnist *JupyterLab*, en það er líka hægt að búa þær til í vafra í kerfinu *Google Colaboratory* (oft stytt í Colab) sem keyrir `í skýinu <http://colab.research.google.com>`_. Þessar fyrirlestrarnótur miðast við að Jupyter-vinnubækur séu notaðar.
 
-Í þessum fyrirlestrarnótum er miðað við að notað sé umhverfi sem nefnist *JupyterLab*. Segja má að JupyterLab sé arftaki kerfis sem nefnist *Jupyter Notebook*. Skipanirnar eru að mestu þær sömu en JupyterLab er að ýmsu leyti nútímalegra og höfundar þess búast við að það muni um síðir leysa Jupyter Notebook af hólmi.
+.. _colab:
 
-Uppsetning Python og JupyterLab
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Notkun Google Colab
+~~~~~~~~~~~~~~~~~~~
+Google Colabatory er þjónusta hjá Google til að búa til og vinna með Jupyter
+vinnubækur. Vinnubækurnar eru geymdar á Google Drive svæði notanda, og forritin
+í þeim eru keyrð á sérstakri gervitölvu (*virtual machine*) sem Google leggur
+til. Skrár sem sem forritin þurfa eða búa til eru geymdar á tímabundnu disksvæði
+á þesari gervitölvu. Python-þýðandinn er nýlegur (nánar
+tiltekið útgáfa 3.7.11 í ágúst 2021), helstu pakkar eru þegar uppsettir (m.a. þeir
+sem nefndir eru í kafla :numref:`pakkar`), og auðvelt er að bæta við pökkum
+eftir þörf.
 
-Auðveldasta leiðin til að setja upp bæði Python og Jupyter í einu lagi er að setja upp hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python er líka svoleiðis slanga). Með Anaconda fylgir nýjasti Python túlkurinn, Jupyter, meira en 1000 vinsælir Python-pakkar (þar á meðal þeir þrír sem taldir eru að ofan, NumPy, SciPy og Matplotlib) og ýmislegt fleira. Til að setja það upp þarf að heimsækja `anaconda.com <https://anaconda.com/>`_, velja *Products–Individual Edition*, hlaða niður 64 bita *Graphical Installer* fyrir ykkar stýrikerfi og fylgja leiðbeiningum.
+Til að byrja á vinnubók á Colab þarf fyrst að stofna reikning hjá Google. Síðan má heimsækja `colab.research.google.com <http://colab.research.google.com>`_ og velja *File–New notebook*. Í reitinn sem birtist má slá inn Python-forrit, og svo má keyra forritið með því að smella á þríhyrningstáknið á vinstri brún reitsins eða með því að slá á ctrl/enter. Hægt er að bæta við textareitum og forritsreitum, vista vinnubókina, prenta hana o.s.frv. og eru helstu slíkar skipanir sýndar hér að neðan í kafla :numref:`jupyter-skipanir`.
+
+.. attention:: Ef þið viljið ekki nota reikning hjá Google getið þið í staðinn sett upp Anaconda á eigin tölvu og notað JupyterLab, eins og lýst er að neðan í kafla :numref:`anaconda-uppsetning`.
+               
+.. Æfing
+.. hint::
+   
+   a) Farið inn á Google Colab, afritið forritið :numref:`Collatz` (þ.e. Collatz)
+      inn í keyrslureitinn og prófið að keyra hann.
+
+   b) Bætið við textareit ofan við keyrslureitinn (ef smellt er á **+ Text** kemur
+      textareitur fyrir neðan, sem hægt er að færa upp með því að smella á
+      **uppörina** efst til hægri (**↑**). Setjið titil og smá skýringartexta inn í
+      reitinn með því slá inn:
+
+      .. code-block:: text
+
+          # Forrit sem reiknar Collatz-runur
+      
+          $n_{k+1} = 3n_k + 1$ ef $n$ er oddatala<br>
+          $n_{k+1} = \dfrac{n_k}{2}$ ef $n$ er slétt tala
+      
+          Ef nýja talan $n_{k+1} = 1$ þá er hætt að reikna.
+          ***
+
+   c) Búið til nýjan forritsreit neðst (með **+ Code**) og setjið þar eftirfarandi
+      skipanir:
+
+      .. code:: python3
+
+         n0 = int(input("Sláið inn tölu til að byrja Collatz runu"))
+         collatz_runa(n0)
+
+      Keyrið reitinn og sláið inn 27 (sem gefur langa röð) og aðrar tölur ef vill.
+
+   d) Búið til PDF-skjal úr vinnubókinni með því að velja **File**–*Print* og
+      síðan *PDF–Save as PDF* eða *Microsoft Print to PDF* eða *PDF–Open in
+      Preview* (eftir vafra/tölvu). Takið eftir að lárétta línan sem fæst með
+      :code:`***` hjálpar til við að aðskilja textareitinn og forritsreitinn.
+      
+.. figure:: myndir/colab.jpg
+   :align: center
+
+   Google Colab viðmótið.
+
+   Hér hefur verið smellt á hnappinn í græna hringnum til að fá efnisyfirlit.
+   Aðrir hnappar sem nefndir eru í æfingunni að framan eru sýndir með rauðum hring.
+
+.. _anaconda-uppsetning:
+   
+Uppsetning á Anaconda og JupyterLab
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Athugið að þessum kafla má sleppa ef Google Colab er notað.
+
+**Anaconda.** Auðveldasta leiðin til að setja upp bæði Python og Jupyter á eigin tölvu er að setja upp hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python er líka svoleiðis slanga). Með Anaconda fylgir nýlegur Python túlkur, Jupyter, meira en 1000 vinsælir Python-pakkar og ýmislegt fleira. Til að setja það upp þarf að heimsækja `anaconda.com <https://anaconda.com/>`_, velja *Products–Individual Edition*, hlaða niður 64 bita *Graphical Installer* fyrir ykkar stýrikerfi og fylgja leiðbeiningum.
 
 .. figure:: myndir/anaconda.jpg
    :align: center
@@ -209,14 +287,14 @@ Auðveldasta leiðin til að setja upp bæði Python og Jupyter í einu lagi er 
 
    Græn anaconda slanga
        
-Keyrsla JupyterLab
-~~~~~~~~~~~~~~~~~~
-
-Eftir uppsetningu Anaconda má smella á "Anaconda-Navigator" appið og velja þar *JupyterLab*. Þá opnast JupyterLab í glugga í aðalvafra tölvunnar. Heimamappa er sjálfgefin í fyrsta sinn, en næst opnast JupyterLab á sama stað og síðast var hætt. JupyterLab-glugginn lítur svona út:
+**Keyrsla JupyterLab.** Eftir uppsetningu Anaconda má smella á
+"Anaconda-Navigator" appið og velja þar *JupyterLab*. Þá opnast JupyterLab í
+glugga í aðalvafra tölvunnar. Heimamappa er sjálfgefin í fyrsta sinn, en næst
+opnast JupyterLab á sama stað og síðast var hætt. JupyterLab-glugginn lítur
+svona út:
 
 .. figure:: myndir/jupyterlab.png
    :align: center
-   :figwidth: 15cm
 
    JupyterLab-glugginn
 
@@ -224,124 +302,184 @@ Hér hefur verið byrjað í möppunni :code:`dropbox/strei` undir heimamöppu. 
 
 Jupyter vinnubækur
 ~~~~~~~~~~~~~~~~~~
-Vinnubækur innihalda **reiti** (*cells*) af tvennu tagi, **forritsreiti** (*code*), og **textareiti** (*markdown*). Í þeim fyrrnefndu eru Python-forrit eða forritsbútar, en í hinum eru fyrirsagnir og skýringartextar sniðnir með umbrotsmálinu (*markup language*) *Markdown*. Í textareitina er líka hægt að setja stærðfræðiformúlur sniðnar með formúlumálinu *LaTeX* og jafnvel myndir ef vill. Forritsbútana er hægt að keyra og fer úttak keyrslu inn í bókina, neðst í viðkomandi forritsreit. Segðin sem er neðst í hverjum reit skrifast sjálfkrafa út, en nota þarf print-fallið til að skrifa út niðurstöður framar í reitnum.
+Eins og fram kom í æfingunni í kafla :numref:`colab` innihalda vinnubækur **reiti** (*cells*) af tvennu tagi, **forritsreiti** (*code*), og **textareiti** (*markdown*). Í þeim fyrrnefndu eru Python-forrit eða forritsbútar, en í hinum eru fyrirsagnir og skýringartextar sniðnir með umbrotsmálinu (*markup language*) *Markdown*. Í textareitina er líka hægt að setja stærðfræðiformúlur sniðnar með formúlumálinu *LaTeX* og jafnvel myndir ef vill. Forritsbútana er hægt að keyra og fer úttak keyrslu inn í bókina, neðst í viðkomandi forritsreit. Segðin sem er neðst í hverjum reit skrifast sjálfkrafa út, en nota þarf print-fallið til að skrifa út niðurstöður framar í reitnum.
 
-Það er sæmilega auðvelt að læra á notkun Jupyters með því að prófa sig áfram, en líka getur verið gagnlegt að fara í gegn um leiðbeiningar sem valdar eru með *Help---User Interface Tour* (úr opinni bók), eða skoða leiðbeiningar á netinu, sbr grein :numref:`jupyter-leiðbein-á-netinu`. Með *Help*-hnappnum má líka fá hjálp um Python sjálft, Markdown-málið og ýmislegt fleira.
+Það er sæmilega auðvelt að læra á notkun hvort sem er Colab eða JupyterLab með því að prófa sig áfram, en líka getur verið gagnlegt að skoða leiðbeiningar á netinu, sbr grein :numref:`jupyter-leiðbein-á-netinu`. Mikilvægustu skipanir beggja labbanna fylgja svo hér í næsta kafla.
+
+.. _jupyter-skipanir:
 
 Jupyter skipanir
 ~~~~~~~~~~~~~~~~
 
-.. list-table:: Skráaskipanir fyrir Jupyter-vinnubækur
+.. list-table:: Skráaskipanir
    :widths: auto
-   :name: jupyterskráaskipanir            
+   :name: jupyterskráaskipanir
+   :header-rows: 1
+
+   * - Aðgerð
+     - Colab skipun
+     - JupyterLab skipun
        
-   * - Hægri-smellt á *Untitled* efst t.v. og *Rename-Notebook* |br|
-       File→Rename-Notebook
-     - Skipta um nafn á bók
+   * - Skipta um nafn á vinnubók
+     - Smella á nafnið efst t.v. 
+     - ▸ Hægri-smella á nafnið efst t.v. og velja *Rename-Notebook* |br|
+       ▸ File→Rename-Notebook
 
-   * - File→Save-Notebook-As |br|
-       ctrl/shift/s (command/shift/s á Mac)
-     - Vista undir nýju nafni
+   * - Ná í eintak á eigin tölvu
+     - File→Download
+     - (þarf ekki)
+       
+   * - Vista undir nýju nafni
+     - File→Save-a-copy-in-Drive og endurnefna afritið
+     - File→Save-Notebook-As
 
-   * - File→Save-Notebeook |br|
-       ctrl/s (command/s á Mac) |br|
-       smellt á diskling
-     - Vista  
+   * - Vista
+     - ▸ File→Save |br|
+       ▸ ctrl/s (⌘s á Mac)
+     - ▸ File→Save-Notebeook |br|
+       ▸ ctrl/s (⌘s á Mac) |br|
+       ▸ smellt á diskling
 
-   * - "Drag-and-drop" beitt á glugga
-     - Endurraða gluggum
+   * - Vista sem PDF
+     - File→Print→Save-as-PDF
+     - File→Export notebook as→HTML, opna HTML-skjal og velja File→Print þar.  
 
-.. list-table:: Keyrsluskipanir fyrir Jupyter-vinnubækur
+.. list-table:: Keyrsluskipanir
    :widths: auto
    :name: jupyterkeyrsluskipanir            
+   :header-rows: 1
+
+   * - Aðgerð
+     - Colab skipun
+     - JupyterLab skipun
        
-   * - ctrl/enter
-     - Keyra forritsreit / sníða textareit
+   * - Keyra forritsreit
+     - ▸ ctrl/enter |br|
+       ▸ smella á "play"
+     - ▸ ctrl/enter |br|
+       ▸ smella á "play"
 
-   * - esc-0-0 |br|
-       Kernel→Restart-kernel
-     - Núllstilla Python, m.a. eyða öllum breytum
+   * - Stoppa keyrslu
+     - ▸ ctrl/m i |br|
+       ▸ smella á "stop" |br|
+       ▸ Runtime→Interrupt-execution
+     - ▸ esc i i |br|
+       ▸ smella á "stop" |br|
+       ▸ Kernel→Interrupt-kernel
 
-   * - ▶▶
-     - Núllstilla og keyra alla reiti
+   * - Núllstilla Python
+     - ▸ ctrl/m . |br|
+       ▸ Runtime→Restart-runtime
+     - ▸ esc 0 0 |br|
+       ▸ Kernel→Restart-kernel
 
-.. list-table:: Reitaskipanir fyrir Jupyter-vinnubækur
+.. list-table:: Reitaskipanir
    :widths: auto
    :name: jupyterreitaskipanir            
+   :header-rows: 1
+
+   * - Aðgerð
+     - Colab skipun
+     - JupyterLab skipun
        
-   * - Tvísmellt í textareit sem búið er að sníða
-     - Sýna reit sem *markdown* (til að breyta innihaldinu)
+   * - Setja inn forritsreit
+       neðan við virkan reit
+     - ▸ smella á **+ Code** |br|
+       ▸ esc b
+     - ▸ smella á **+** |br|
+       ▸ esc b
 
-   * - esc-m |br|
-       Code→Markdown
-     - Breyta forritsreit í textareit
+   * - Setja inn textareit neðan við virkan reit
+     - ▸ smella á **+ Text** |br|
+       ▸ esc b ctrl/m m
+     - ▸ smella á **+** og svo Code → Markdown |br|
+       ▸ esc b esc m
 
-   * - esc-y |br|
-       Markdown→Code
-     - Breyta textareit í forritsreit
+   * - Færa reit
+     - smella á upp-ör/niur-ör efst t.h.
+     - beita "Drag-and-drop" á reit
 
-   * - esc-d-d
-     - Eyða reit
+   * - Kljúfa reit
+     - ctrl/m – |br|
+     - ▸ ctrl/shift/– |br|
+       ▸ Edit→Split-cell
 
-   * - esc-a, esc-b
-     - Bæta við reit fyrir ofan ("above") eða neðan ("below") virkan reit
+   * - Sameina reiti
+     - mála reiti → hægri smella → Merge-selected-cells
+     - mála reiti → Edit → Merge-Selected-Cells
 
-   * - ctrl/shift/– |br|
-       Edit→Split-cell
-     - Kljúfa reit
+   * - Eyða reit
+     - ▸ ctrl/m d |br|
+       ▸ hægri-smella → Delete cell 
+     - ▸ esc d d |br|
+       ▸ hægri-smella → Delete cells
 
-   * - Mála reiti og Edit→Merge-Selected-Cells
-     - Sameina reiti
+   * - Sýna textareit sem *markdown* (til að breyta)
+     - ▸ tvísmella á reit |br|
+       ▸ velja reit og slá á Enter
+     - ▸ tvísmella á reit |br|
+       ▸ velja reit og slá á Enter
 
-   * - "Drag-and-drop" beitt á reit
-     - Færa reit
+   * - Sníða textareit
+     - Velja einhvern annan reit
+     - ▸ ctrl/enter |br|
+       ▸ smella á "play"
 
-   * - esc-z
-     - Afturkalla ("undo") reitaskipun
+   * - Afturkalla ("undo") reitaskipun
+     - ▸ Edit→Undo ... |br|
+       ▸ ctrl/m z
+     - ▸ Edit→Undo-Cell-Operation |br|
+       ▸ esc z
 
-   * - esc-shift/z
-     - Endurtaka ("redo") reitaskipun
+   * - Endurtaka ("redo") reitaskipun
+     - Edit→Redo ...
+     - Edit→Redo-Cell-Operation
 
-.. list-table:: Ritilskipanir fyrir Jupyter-vinnubækur
+.. list-table:: Ritilskipanir
    :widths: auto
    :name: jupyterritilskipanir
+   :header-rows: 1
 
-   * - örvar |br|
-       Home, End (Fn/←, Fn/→ á Mac) |br|
-       PgUp, PgDn (Fn/↑, Fn/↓)
-     - Færa bendil eins og hefðbundið er í ritlum
-   * - Backspace, Del (Fn/Bcksp)
-     - Eyða
-   * - mála með mús |br|
-       shift/örvar |br|
-       control/xcv (command/xcv)
-     - Velja, klippa, afrita, líma
-   * - control/a (command/a)
-     - Velja allt í reit
-   * - tab, shift/tab
-     - Flytja til hægri, vinstri (indent, unindent)
-   * - ctrl/z (command/z)
-     - Afturkalla ("undo")
-   * - ctrl/shift/z (command/shift/z)
-     - Endurtaka ("redo")
-
+   * - Aðgerð
+     - Colab/JupyterLab skipun
+       
+   * - Færa bendil
+     - ▸ örvar |br|
+       ▸ Home, End (Fn/←, Fn/→ á Mac) |br|
+       ▸ PgUp, PgDn (Fn/↑, Fn/↓)
+   * - Eyða
+     - Backspace, Del (Fn/Bcksp)
+   * - Velja, klippa, afrita, líma
+     - ▸ mála með mús |br|
+       ▸ shift/örvar |br|
+       ▸ ctrl/xcv (⌘/xcv á Mac)     - 
+   * - Velja allt í reit
+     - ctrl/a (⌘/a)
+   * - Flytja til hægri, vinstri (indent, unindent)
+     - tab, shift/tab
+   * - Afturkalla ("undo")
+     - ctrl/z (⌘/z)
+   * - Endurtaka ("redo")
+     - ctrl/shift/z (⌘/shift/z)
        
 Vistun vinnubóka á PDF-sniði
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Colab.** Veljið *File → Print*, eða sláið á ctrl/p eða ⌘/p (Mac), og svo
+*Destination → Save-as-PDF* (*PDF → Save-as-PDF* á Mac). Þá birtist gluggi þar
+sem velja má möppu og nafn fyrir PDF-skjalið.
 
-Til að vista vinnubók í PDF-skjal veljið þá File→Print, eða sláið á command-p
-(Mac) eða ctrl-p (Windows), og svo Destination *Save-as-PDF*. Þá birtist gluggi
-þar sem velja má möppu og nafn fyrir PDF-skjalið [ath. að smella á File í
-JupyterLab en ekki í vafranum]. Því miður er lús í kerfinu þannig að ef
-Latex-stærðfræðiformúlur eru settar inn í textareiti í Jupyter-bókinni þá
-prentast þær ekki rétt. Til að prenta þær þarf að velja File–Export notebook
-as–HTML, og svo þarf að vista HTML-skjalið sem verður til í PDF.
+.. danger::
+   Í Safari virðist stundum þurfa að velja *File → Print* í vafranum en ekki í
+   Colab-flipanum, en í Chrome virðist ekki skipta máli hvoru megin *File → Print*
+   er valið.
+
+**JupyterLab.** Í JupyterLab er lús þannig að með *File → Print* vistast stærðfræðiformúlur ekki rétt. Það þarf að fara krókaleið og velja fyrst *File → Export notebook as → HTML* og svo þarf að opna HTML-skjalið sem verður til og vista það í PDF með *File → Print*.
+PDF.
 
 Markdown og Latex
 ~~~~~~~~~~~~~~~~~
 
-Finna má ýmsar leiðbeiningar um *Markdown*-málið á netinu, t.d. eftir Inge
-Halilovic (neðsti hlekkurinn í grein :numref:`jupyter-leiðbein-á-netinu`). Þar er
+Finna má ýmsar leiðbeiningar um *Markdown*-málið á netinu, sbr. grein :numref:`jupyter-leiðbein-á-netinu`). Þar er
 útskýrt hvernig búa má til fyrirsagnir (með #, ##, ###), skáletra og feitletra
 (með \*texti\* og \*\*texti\*\*), búa til lista, setja inn myndir (þær er hægt
 að líma inn eða draga inn með músinni), setja láréttar línur og ýmislegt fleira.
@@ -357,7 +495,7 @@ Texti sem er inndreginn um a.m.k. fjögur bil birtist óbreyttur með jafnbilale
 Til að búa til töflu má nota lóðrétt strik til að afmarka dálka og : til að tilgreina
 vinstri/hægri jöfnun eða miðjun. Hér er einfalt dæmi:
 
-.. code:: none
+.. code-block:: text
           
    nr |nafn    |aldur
    ---|:------:|----:
@@ -383,28 +521,35 @@ stærðfræði, hvort sem það eru flóknar formúlur eða bara ":math:`x=3`" o
 ":math:`a` og :math:`b` eru vigrar" (sem sé :code:`$x=3$` og :code:`$a$ og $b$
 eru vigrar`) en ekki "x=3" og "a og b eru vigrar".
 
+
+
 .. _jupyter-leiðbein-á-netinu:
 
 Jupyter-leiðbeiningar á netinu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hægt er að finna ýmsar vefsíður með leiðbeiningum um Jupyter Notebook og JupyterLab á netinu, t.d.
+Hægt er að finna ýmsar vefsíður með leiðbeiningum um Google Colab og JupyterLab, t.d.:
 
-    - `Jupyter Notebook for Beginners <https://www.dataquest.io/blog/jupyter-notebook-tutorial/>`_
-    - `Using Jupyter notebooks and JupyterLab <http://www.rpgroup.caltech.edu/ncbs_pboc/code/t0b_jupyter_notebooks.html>`_
+    - `Google Colab yfirlit <https://colab.research.google.com/notebooks/basic_features_overview.ipynb>`_
+    - `Markdown fyrir Colab <https://colab.research.google.com/notebooks/markdown_guide.ipynb>`_
+    - `Nokkuð ítarlegar Colab leiðbeiningar hjá Tutorialspoint <https://www.tutorialspoint.com/google_colab/google_colab_quick_guide.htm>`_
+    - `Stuttar JupiterLab leiðbeiningar <http://www.rpgroup.caltech.edu/ncbs_pboc/code/t0b_jupyter_notebooks.html>`_
     - `Working efficiently with JupyterLab Notebooks <https://florianwilhelm.info/2018/11/working_efficiently_with_jupyter_lab>`_
-    - `Markdown for Jupyter notebooks cheatsheet <https://medium.com/ibm-data-science-experience/markdown-for-jupyter-notebooks-cheatsheet-386c05aeebed>`_
 
+(fyrstu tvær eru frá Google sjálfum).
+      
 .. _jupyter-æfing:
       
 .. Æfing
 .. hint::
    
-   Vinnubókin :h:`<a href="kynning.ipynb"
-   download="kynning.ipynb"><b>kynning.ipynb</b></a>` byrjar á nokkrum æfingum í
-   notkun JupyterLab. Hlaðið niður þessari vinnubók, færið hana yfir í
-   vinnumöppuna ykkar, opnið hana í Jupyter og fylgið leiðbeiningum í fyrstu
-   þremur æfingunum.
+   Vinnubókin `kynning.ipynb
+   <https://colab.research.google.com/drive/1H-x6BX7OhkTRVj3YHH5_2mSOtJEnA9l8?usp=sharing>`_
+   byrjar á tveimur æfingum í notkun Google Colab. Ef smellt er á hana opnast
+   hún hjá Google Drive og hægt er að velja *Copy-to-Drive* (eða *File→Download*
+   til að nota JupyterLab). Þá lendir skráin sjálfkrafa í möppu sem heitir
+   *Colab Notebooks* og þar er hægt að breyta henni og vista breytingar.
+   Náið í þessa skrá og leysið tvær fyrstu æfingarnar, A og B.
 
 .. _grunn-python:
    
@@ -434,11 +579,13 @@ Grunntögin í Python og dæmi um fasta af hverju tagi eru:
     - *Ítrarar (iterator)*
     - *Uppflettitöflur (dictionary)*
       
-Loks gildir sú regla að nafn breytu skal vera runa af bókstöfum, tölustöfum, og _, hún má ekki byrja á tölu og hún má ekki vera lykilorð í málinu eins og "for" eða "return". Dæmi: x_1, hæð, ∆.
+Loks gildir sú regla að nafn breytu skal vera runa af bókstöfum, tölustöfum, og _, hún má ekki byrja á tölu og hún má ekki vera lykilorð í málinu eins og "for" eða "return". Í sumum forritunarmálum verða bókstafirnir að vera enskir, en sú takmörkun á ekki við um Python, Dæmi um lögleg breytunöfn eru: x_1, hæð, ∆.
+
+Í nútímaforritum er algengt að nota fremur löng og lýsandi breytunöfn, t.d. :code:`radíus_hrings`. Sú regla er oft brotin í inngangsnámskeiðum í forritun, því þar þvælast löng nöfn frekar fyrir en að hjálpa til, og dæmigert væri að nota :code:`r` fyrir geisla hrings.
 
 Aðgerðir og virkjar
 ~~~~~~~~~~~~~~~~~~~
-Það að ákvarða útkomu segðar er oft kallað **aðgerð** (*operation*). Grunnbyggingareiningar segða eru oftast **einstæðar** (*unary*) eða **tvístæðar** (*binary*) aðgerðir. Einstæð aðgerð er ýmist af taginu :math:`\circ x` eða :math:`f(x)` þar sem :math:`\circ` er einstæður **virki** (*operator*), :math:`f` er **fall** (*function*) og :math:`x` er gildi. Tvístæð aðgerð er oft af taginu :math:`x \circ y` þar sem :math:`x` og :math:`y` eru gildi og :math:`\circ` er tvístæður virki. Gildin sem virkjar verka á eru stundum kallaðir **þolendur** (*operands*). Hér eru nokkur dæmi:
+Í stærðfræði er það að ákvarða útkomu segðar oft kallað **aðgerð** (*operation*). Grunnbyggingareiningar segða eru oftast **einstæðar** (*unary*) eða **tvístæðar** (*binary*) aðgerðir. Einstæð aðgerð er ýmist af taginu :math:`\circ x` eða :math:`f(x)` þar sem :math:`\circ` er einstæður **virki** (*operator*), :math:`f` er **fall** (*function*) og :math:`x` er gildi. Tvístæð aðgerð er oft af taginu :math:`x \circ y` þar sem :math:`x` og :math:`y` eru gildi og :math:`\circ` er tvístæður virki. Gildin sem virkjar verka á eru stundum kallaðir **þolendur** (*operands*). Hér eru nokkur dæmi:
 
     .. math::
        \begin{align}
@@ -459,10 +606,10 @@ Loks notar Python ensk orð, *and*, *or* og *not*, fyrir **rökvirkja** (*logica
 
 **Yfirlit.** Hér er yfirlit yfir helstu virkja fyrir grunntögin í Python:
 
-.. code:: none
+.. code:: python
 
    + – * /          # eins og í flestum öðrum forritunarmálum
-   %                # x % y er afgangur úr deilingunni x//y
+   %                # x % y er afgangur úr deilingunni x//y (7%4 gefur 3)
    **               # veldi (x**y táknar x í veldinu y)
    //               # heiltöludeiling (aukastafir skornir af; 7//4 gefur 1)
    < > <= >= == !=  # samanburðarvirkar, eins og í Java eða C
@@ -474,9 +621,11 @@ Loks notar Python ensk orð, *and*, *or* og *not*, fyrir **rökvirkja** (*logica
 
 **Útkoma úr blönduðum útreikningi.** Grunnreglan um útkomu úr aðgerð með tveimur tölum er að ef önnur eða báðar eru kommutala þá er niðurstaðan kommutala, en ef báðar eru heiltölur kemur út heiltala. Aðalundantekningin er deiling, en deiling tveggja heiltalna með /-virkja gefur kommutölu.
 
+Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðilegri merkingu, sem sé að viðkomandi gildi séu af heiltölu- eða kommutölutagi. Tölvur greina nefnilega á milli heiltölnnar 2 og kommutölunnar 2.0, þær eru af mismunandi tagi og geymdar með mismunandi bitarunum í minni tölvunnar.
+
 **Forgangsröð aðgerða.** Eftirfarandi tafla sýnir röð sem aðgerðir eru framkvæmdar í ef svigar segja ekki til um aðra röð:
 
-.. code:: none
+.. code:: python
 
    **             # frá hægri til vinstri, 4**3**2 = 4**(3**2) = 262144
    *, /, // og %  # frá vinstri til hægri; x/y*z jafngildir (x/y)*z
@@ -490,47 +639,45 @@ Loks notar Python ensk orð, *and*, *or* og *not*, fyrir **rökvirkja** (*logica
    
 Gildisgjöf
 ~~~~~~~~~~
-Í stærðfræði er **gildisgjöf** (*assignment*) stundum táknuð með virkjanum :math:`:=` (t.d. :math:`x := 1`), og í reikniritum er stundum notuð ör (:math:`x \gets 1`), og þá er einfalt jafnaðarmerki notað til að segja að tvær stærðir séu jafnar eða kanna hvort þær séu jafnar: ":math:`x = 1`" þýðir að breytan :math:`x` (sem þegar hefur verið skilgreind) hafi gildið 1, og "ef :math:`x = 1`, þá..." spyr hvort :math:`x` sé 1. Í forritunarmálum er hinsvegar orðið mjög algengt að nota einfalt jafnaðarmerki fyrir gildisgjöf og tvö í röð fyrir samanburðarvirkjann `==` og Python er engin undantekning á þeirri venju.
+Í stærðfræði er **gildisgjöf** (*assignment*) stundum táknuð með virkjanum :math:`:=` (t.d. :math:`x := 1`), og í reikniritum er stundum notuð ör (:math:`x \gets 1`), og þá er einfalt jafnaðarmerki notað til að segja að tvær stærðir séu jafnar eða kanna hvort þær séu jafnar: ":math:`x = 1`" þýðir að breytan :math:`x` (sem þegar hefur verið skilgreind) hafi gildið 1, og "ef :math:`x = 1`, þá..." spyr hvort :math:`x` sé 1. Í forritunarmálum er hinsvegar orðið mjög algengt að nota einfalt jafnaðarmerki fyrir gildisgjöf og tvö í röð fyrir samanburðarvirkjann `==` og Python er engin undantekning frá þeirri venju.
 
 Gildisgjöf í Python er tvennskonar, hægt er að gefa breytu gildi og svo er líka hægt að uppfæra gildið sem breyta geymir, sem sé:
 
    .. code:: python
 
       breyta = segð   # t.d. a = x + 3
-      breyta += segð  # leggur segð við breytu
+      breyta += segð  # leggur segð við breytu, t.d. er a += 3 jafngilt a = a + 3
       breyta -= segð  # dregur frá; líka má *=, /= o.s.frv.
 
-Það eru síðan nokkrir fleiri möguleikar sem verða útskýrðir betur í seinni köflum. Viðtakandi gildisins má vera stak í lista (t.d. :code:`L[i]`) eða eiginleiki í hlut (:code:`punktur.x`). Svo er líka hægt að gefa mörgum breytum gildi samtímis með því að skrifa:
+Það eru síðan nokkrir fleiri möguleikar sem verða útskýrðir betur í næstu köflum: Viðtakandi gildisins má vera stak í lista (t.d. :code:`L[i]`) eða eiginleiki í hlut (:code:`punktur.x`). Svo er líka hægt að gefa mörgum breytum gildi samtímis með því að skrifa:
 
    .. code:: python
 
       breyta, breyta... = runa    # lengd runu þarf að vera jafn fjölda breyta
       (breyta, breyta...) = runa  # annar möguleiki
       (x,y) = (y,x)               # þessi skipun skiptir á gildum x og y
-
+      
 .. _útprentun:      
       
 Útprentun og innlestur
 ~~~~~~~~~~~~~~~~~~~~~~
-Aðalaðferðin til að prenta út gildi í Python er að nota :code:`print`-fallið en í Jupyter-vinnubókum er líka hægt að nota fallið :code:`display`, sem gefur stundum öðruvísi úttak, t.d. ef prentaðir eru strengir eða nöfn taga og falla (sjá æfingu í grein :numref:`útprentun`). Sumir pakkar sem þið gætuð átt eftir að kynnast, t.d. pandas og statmodels, skila stundum HTML-sniðnum töflum, og til að birta þær þarf að nota :code:`display`.
+Aðalaðferðin til að prenta út gildi í Python er að nota :code:`print`-fallið en í Jupyter-vinnubókum er líka hægt að nota fallið :code:`display`, sem gefur stundum öðruvísi úttak, t.d. ef prentaðir eru strengir eða nöfn taga og falla (sjá næstu æfingu). Sumir pakkar sem þið gætuð átt eftir að kynnast, t.d. pandas og statmodels, skila stundum HTML-sniðnum töflum, og til að birta þær þarf að nota :code:`display`.
 
     - :code:`print(segð,segð...)`: Prentar segðirnar með bilum á milli
     - :code:`print(..., sep=",")`: Prentar með kommum á milli
     - :code:`print(..., end=" ")`: Endar með bili í stað nýrrar línu |br|
       Sjá mörg dæmi um print að framan og í sýnidæminu í grein :numref:`stýriskipanir`.
     - :code:`s = input('texti')`: Prentar textann og bíður eftir að notandi
-      slái inn streng og <Enter>; innslegið gildi → s. Ath. að notkun
-      :code:`input` í Jupíter er svolítið gölluð og skipunin verður því ekki
-      mikið notuð. Hún er samt prófuð í næstu æfingu.
+      slái inn streng og <Enter>; innslegið gildi → s.
 
 Næsta grein (:numref:`fstrengir`) útskýrir svo hvernig **sníða** (*formatera*) má útprentuð gildi með svonefndum f-strengjum.
 
     .. Æfing
     .. hint::
        
-       a) Input-fallið skilar streng s, sem hægt er að breyta í tölu með
+       a. Input-fallið skilar streng s, sem hægt er að breyta í tölu með
           :code:`t = float(s)` eða :code:`k = int(x)`. Afritið eftirfarandi
-          skipanir yfir í Jupyter. Notið tækifærið og prófið Jupyter-skipanirnar
+          skipanir yfir í Colab. Notið tækifærið og prófið Colab-skipanirnar
           til að velja allt í reit og flytja það til vinstri (shift/tab,
           *unindent*), sbr. :numref:`jupyterritilskipanir`. Keyrið, sláið inn
           tölu, og prófið líka að slá inn eitthvað annað en tölu.
@@ -540,8 +687,8 @@ Næsta grein (:numref:`fstrengir`) útskýrir svo hvernig **sníða** (*formater
              s = input('Sláðu inn tölu: ')
              t = float(s)
              print(t)
-             
-       b) Afritið eftirfarandi forritsbút yfir í Jupyter. Keyrið, og prófið svo
+
+       b. Afritið eftirfarandi forritsbút yfir í Colab. Keyrið, og prófið svo
           að nota :code:`end=";"` og :code:`sep=","` og prófið líka að breyta
           print í display.
 
@@ -764,7 +911,7 @@ Stýriskipanir
    talnanna 2, 3, 4 og 5. Það sýnir notkun á nokkrum atriðum sem fjallað hefur
    verið um hér á undan.
 
-   .. code-block:: python3
+   .. code-block:: python
 
        import math
        print('x     √x     x²')
@@ -774,7 +921,7 @@ Stýriskipanir
 
    Fallið prentar út eftirfarandi töflu
 
-   .. code-block:: none
+   .. code-block:: text
 
        x     √x     x²
        ―――――――――――――――
@@ -783,10 +930,10 @@ Stýriskipanir
        4   2.0000   16
        5   2.2361   25
 
-.. æfing
+.. Æfing
 .. hint ::
 
-    Sláið forritið í sýnidæminu hér á undan inn í Jupyter-vinnubók (eða
+    Sláið forritið í sýnidæminu hér á undan inn í vinnubók (eða
     afritið það). Prófið svo að breyta forritinu með því að:
 
       a) Sleppa 2, í range kallinu
@@ -822,7 +969,7 @@ Til dæmis mætti reikna tölugildi með ``a = -x if x < 0 else x``.
    Í vinnubókinni :ref:`kynning.ipynb<jupyter-æfing>` sem náð var í í Æfingu
    aftan við kafla :numref:`jupyter-leiðbein-á-netinu` er hægt að prófa mörg af
    þeim Python-atriðum sem lýst hefur verið í þessum kafla og æfa sig í þeim.
-   Opnið þessa bók í Jupyter og fylgið leiðbeiningum í henni.
+   Opnið þessa bók í Colab og fylgið leiðbeiningum í henni.
 
 .. _söfn:
    
@@ -989,7 +1136,7 @@ Stærðfræðihugtakið **mengi** (`set <https://en.wikipedia.org/wiki/Set_(math
 
 Mengi í Python eru táknuð með sama hætti:
 
-   .. code::
+   .. code:: python3
       
       M = {gildi, gildi, ...}
 
@@ -1484,8 +1631,8 @@ notkun þeirra o.s.frv. Skráin sem sýnd er á :numref:`forritssnið` væri sk�
 nafni með endingu :code:`.py`, til dæmis :code:`forrit.py`.
 
 .. attention::
-   Þegar **Jupyter-kerfið** er notað er ekki höfð sérstök forritsskrá. Í staðinn
-   er forritið og undanfarandi skilgreiningar geymt í reitum í Python-bók.
+   Bæði í Colab og JupyterLab er ekki höfð sérstök forritsskrá. Í staðinn
+   er forritið og undanfarandi skilgreiningar geymt í reitum í vinnubók.
 
 .. attention::
    **Víðværu breyturnar** (*global variables*) eru þekktar inni í öllum föllum sem
@@ -1546,7 +1693,7 @@ með tveimur föllum sem breyta milli pólhnita (`polar coordinates <https://en.
       :figwidth: 9cm
 
    Afritið nú eftirfarandi forrit sem *importerar* og prófar eininguna
-   **polhnit** inn í JupyterLab. Keyrið það og staðfestið að allt vinni rétt
+   **polhnit** inn í Colab. Keyrið það og staðfestið að allt vinni rétt
    (ef þið fáið villu má prófa *Kernel–Restart kernel*).
          
    .. code:: python
