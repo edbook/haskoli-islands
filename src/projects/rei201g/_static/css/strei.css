@@ -1,5 +1,5 @@
 .rst-content .linenodiv pre, .rst-content div[class^="highlight"] pre, .rst-content pre.literal-block {
-    font-size: 14px;
+    font-size: 13px;
     border:2px solid #aaa;
     background:#f2f5f9;
     line-height: 1.2;
@@ -20,8 +20,14 @@
     text-align: center;
 }
 
-h1{color:#003399}
-h2{color:#f03399}
-h3{color:#003399}
-h4{color:#003399}
-h5{color:#003399}
+.rst-content code.literal, .rst-content tt.literal {
+    font-size: 13px;
+    padding: 1px 1px;
+    color: #000000;
+}
+
+h1{color:#000069}
+h2{color:#000069}
+h3{color:#000069}
+h4{color:#000069}
+h5{color:#000069}
