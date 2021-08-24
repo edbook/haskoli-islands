@@ -5,15 +5,19 @@ env:
   SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     types: [ opened, synchronize, closed ]
-  push:
     paths:
       - 'src/**'
       - 'cli/**'
       - '.github/**'
-    branches-ignore:
-      - master
+  # push:
+  #   paths:
+  #     - 'src/**'
+  #     - 'cli/**'
+  #     - '.github/**'
+  #   branches-ignore:
+  #     - main
 jobs:
   setup:
     name: Setup
@@ -106,6 +110,15 @@ jobs:
           if [ -z ${{env.ACT}} ]; then
             ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
           fi
+  delete-stale-deployment:
+    needs: [build-all]
+    name: Notify Discord (merged to main)
+    runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    steps:
+      - name: Delete sftp folder
+        run: |
+          echo "deleting ${{ github.head_ref }}"
   notify-discord-pr:
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
@@ -116,9 +129,9 @@ jobs:
       - name: Notify open PR
         run: |
           content_title="Nýtt PR opnað"
-          title=${{ github.event.pull_request.title }}
+          title="${{ github.event.pull_request.title }}"
           color=2061822
-          description=${{ github.event.pull_request.body }}
+          description="${{ github.event.pull_request.body }}"
           url=${{ github.event.pull_request.html_url }}
           author_name=${{ github.event.pull_request.user.login}}
           author_url=${{ github.event.pull_request.user.url}}
@@ -134,7 +147,7 @@ jobs:
                 "title": "$title",
                 "description": "$description",
                 "url": "$url",
-                "color": $color,
+                "color": "$color",
                 "fields": [
                   "name": "url",
                   "value": "[Skoða á edbook](https://edbook.hi.is/staging/edbook/${branch})"
@@ -163,14 +176,14 @@ jobs:
       - name: Notify merge
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
-          title="${{ github.event.pull_request.base.ref }} ↩️ ${{ github.event.pull_request.head.ref }}"
+          title="${{ github.base_ref }} ↩️ ${{ github.head_ref }}"
           color=32768
-          description=${{ github.event.pull_request.body }}
+          description="${{ github.event.pull_request.body }}"
           url=${{ github.event.pull_request.html_url }}
           author_name=${{ github.event.pull_request.user.login}}
           author_url=${{ github.event.pull_request.user.url}}
           author_avatar=${{ github.event.pull_request.user.avatar_url}}
-          branch=${{ github.event.pull_request.head.ref}}
+          branch=${{ github.head_ref }}
 
           payload=$(cat <<EOF
           {
