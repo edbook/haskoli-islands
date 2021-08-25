@@ -417,8 +417,18 @@ svo eru þær grunnurinn í svonefndum hlutafleiðujöfnum, sem eru mikið nota�
 til að smíða stærðfræðileg líkön t.d. í eðlisfræði, verkfræði, jarðeðlisfræði og
 hagfræði.
 
-.. Sýnidæmi
-.. important::
+.. admonition:: Skilgreining
+   :class: skilgreining
+
+   xxxxx
+           
+.. admonition:: Aðvörun
+   :class: advorun
+
+   xxxxx
+           
+.. admonition:: Sýnidæmi
+   :class: synidaemi
                 
    Látum :math:`f(x,y) = x^2y + 2y`. Þá er
 

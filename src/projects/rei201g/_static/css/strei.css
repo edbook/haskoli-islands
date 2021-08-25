@@ -13,6 +13,15 @@
     text-align: left;
 }
 
+.rst-content .important .admonition-title {
+    background: #ffcf00
+}
+.rst-content .important {
+    background: #fff0b3
+}
+
+.rst-content .
+
 .wy-table caption, .rst-content table.docutils caption, .rst-content table.field-list caption {
     font: normal 100%/1 arial, sans-serif;
     font-weight: bold;

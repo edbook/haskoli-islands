@@ -31,3 +31,22 @@ h2{color:#000069}
 h3{color:#000069}
 h4{color:#000069}
 h5{color:#000069}
+
+.rst-content .important .admonition-title {background: #ffcf00}
+.rst-content .important                   {background: #fff0b3}
+
+.rst-content .synidaemi .admonition-title {background: #ffcf00}
+.rst-content .synidaemi                   {background: #fff0b3}
+
+.rst-content .athugid .admonition-title {background: #f0b37e}
+.rst-content .athugid                   {background: #ffedcc}
+
+.rst-content .aefing .admonition-title {background: #1abc9c}
+.rst-content .aefing                   {background: #dbfaf4}
+
+.rst-content .python .admonition-title {background: #6ab0de}
+.rst-content .python                   {background: #e7f2fa}
+
+/* Aðvörun (rauð), athugasemd (blá), setning (drapp), skilgreining (ljósgræn), 
+og dæmi (appeelsínugult) er skilgreint í edbook.css */
+}

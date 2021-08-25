@@ -87,8 +87,9 @@ Eitt af því sem tölvur eru góðar í er að framkvæma sömu hlutina aftur o
 
 Þetta forrit kynnir fleira til sögunnar, t.d. svonefnda f-strengi til að stjórna sniði þess sem er prentað og virkjann :code:`**` sem gefur veldi.
 
-.. Æfing
-.. hint::
+.. admonition:: Æfing
+   :class: hint
+
    Ýmsar vefsíður bjóða upp á keyrslu Python forrita, t.d. `ideone.com
    <http://ideone.com/l/python-3>`_ og `online-python.com
    <http://online-python.com/online_python_compiler>`_
@@ -606,7 +607,7 @@ Loks notar Python ensk orð, *and*, *or* og *not*, fyrir **rökvirkja** (*logica
 
 **Yfirlit.** Hér er yfirlit yfir helstu virkja fyrir grunntögin í Python:
 
-.. code:: python
+.. code:: text
 
    + – * /          # eins og í flestum öðrum forritunarmálum
    %                # x % y er afgangur úr deilingunni x//y (7%4 gefur 3)
@@ -625,7 +626,7 @@ Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðile
 
 **Forgangsröð aðgerða.** Eftirfarandi tafla sýnir röð sem aðgerðir eru framkvæmdar í ef svigar segja ekki til um aðra röð:
 
-.. code:: python
+.. code:: text
 
    **             # frá hægri til vinstri, 4**3**2 = 4**(3**2) = 262144
    *, /, // og %  # frá vinstri til hægri; x/y*z jafngildir (x/y)*z

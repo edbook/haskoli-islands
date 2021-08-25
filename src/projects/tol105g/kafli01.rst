@@ -297,16 +297,16 @@ svona út:
 
 Hér hefur verið byrjað í möppunni :code:`dropbox/strei` undir heimamöppu. Þarna eru tvær undirmöppur og fjórar skrár: tvær vinnubækur eða Jupyter-bækur (auðkenndar með .ipynb, en Jupyter hét áður IPython), eitt Python-forrit (auðkennt með .py) og ein pdf-skrá. Til að búa til nýja vinnubók er smellt á efri *Python 3*-hnappinn, og þá opnast bókin í nýjum flipa í vafranum. Hún heitir sjálfkrafa *Untitled2* en með því að hægri-smella á nafnið (eða smella á *File*) og velja *Rename notebook* má skíra hana einhverju skynsemlegra nafni. Eldri bók er opnuð með því að smella á hana í skráalistanum vinstra megin.
 
-Jupyter vinnubækur
-------------------
+Vinnubækur
+----------
 Eins og fram kom í æfingunni í kafla :numref:`colab` innihalda vinnubækur **reiti** (*cells*) af tvennu tagi, **forritsreiti** (*code*), og **textareiti** (*markdown*). Í þeim fyrrnefndu eru Python-forrit eða forritsbútar, en í hinum eru fyrirsagnir og skýringartextar sniðnir með umbrotsmálinu (*markup language*) *Markdown*. Í textareitina er líka hægt að setja stærðfræðiformúlur sniðnar með formúlumálinu *LaTeX* og jafnvel myndir ef vill. Forritsbútana er hægt að keyra og fer úttak keyrslu inn í bókina, neðst í viðkomandi forritsreit. Segðin sem er neðst í hverjum reit skrifast sjálfkrafa út, en nota þarf print-fallið til að skrifa út niðurstöður framar í reitnum.
 
 Það er sæmilega auðvelt að læra á notkun hvort sem er Colab eða JupyterLab með því að prófa sig áfram, en líka getur verið gagnlegt að skoða leiðbeiningar á netinu, sbr grein :numref:`jupyter-leiðbein-á-netinu`. Mikilvægustu skipanir beggja labbanna fylgja svo hér í næsta kafla.
 
 .. _jupyter-skipanir:
 
-Jupyter skipanir
-----------------
+Colab og JupyterLab skipanir
+----------------------------
 
 .. list-table:: Skráaskipanir
    :widths: auto
@@ -522,8 +522,8 @@ eru vigrar`) en ekki "x=3" og "a og b eru vigrar".
 
 .. _jupyter-leiðbein-á-netinu:
 
-Jupyter-leiðbeiningar á netinu
-------------------------------
+Colab- og JupyterLab-leiðbeiningar á netinu
+-------------------------------------------
 
 Hægt er að finna ýmsar vefsíður með leiðbeiningum um Google Colab og JupyterLab, t.d.:
 
@@ -603,7 +603,7 @@ Loks notar Python ensk orð, *and*, *or* og *not*, fyrir **rökvirkja** (*logica
 
 **Yfirlit.** Hér er yfirlit yfir helstu virkja fyrir grunntögin í Python:
 
-.. code:: python
+.. code-block:: text
 
    + – * /          # eins og í flestum öðrum forritunarmálum
    %                # x % y er afgangur úr deilingunni x//y (7%4 gefur 3)
@@ -622,7 +622,7 @@ Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðile
 
 **Forgangsröð aðgerða.** Eftirfarandi tafla sýnir röð sem aðgerðir eru framkvæmdar í ef svigar segja ekki til um aðra röð:
 
-.. code:: python
+.. code:: text
 
    **             # frá hægri til vinstri, 4**3**2 = 4**(3**2) = 262144
    *, /, // og %  # frá vinstri til hægri; x/y*z jafngildir (x/y)*z
@@ -658,7 +658,7 @@ Gildisgjöf í Python er tvennskonar, hægt er að gefa breytu gildi og svo er l
       
 Útprentun og innlestur
 ----------------------
-Aðalaðferðin til að prenta út gildi í Python er að nota :code:`print`-fallið en í Jupyter-vinnubókum er líka hægt að nota fallið :code:`display`, sem gefur stundum öðruvísi úttak, t.d. ef prentaðir eru strengir eða nöfn taga og falla (sjá næstu æfingu). Sumir pakkar sem þið gætuð átt eftir að kynnast, t.d. pandas og statmodels, skila stundum HTML-sniðnum töflum, og til að birta þær þarf að nota :code:`display`.
+Aðalaðferðin til að prenta út gildi í Python er að nota :code:`print`-fallið en í vinnubókum er líka hægt að nota fallið :code:`display`, sem gefur stundum öðruvísi úttak, t.d. ef prentaðir eru strengir eða nöfn taga og falla (sjá næstu æfingu). Sumir pakkar sem þið gætuð átt eftir að kynnast, t.d. pandas og statmodels, skila stundum HTML-sniðnum töflum, og til að birta þær þarf að nota :code:`display`.
 
     - :code:`print(segð,segð...)`: Prentar segðirnar með bilum á milli
     - :code:`print(..., sep=",")`: Prentar með kommum á milli
@@ -828,7 +828,7 @@ Mikilvægustu innbyggð föll
 
     .. Æfing
     .. hint::
-       a) Opnið Jupyter-bók og prófið öll þessi föll. Látið t.d. x = –3,
+       a) Opnið vinnubók og prófið öll þessi föll. Látið t.d. x = –3,
           y = 2.7, s = \"abc\" og finnið \|x\|, max(x,y), min(x,y), float(x),
           int(y), range(4), len(s) og type(s).
           
@@ -871,24 +871,23 @@ Fallbreytur
 -----------
 Breytur geta tekið gildi sem eru föll: :code:`def fall: ...` og neðar: :code:`x = fall` eins og eftirfarandi dæmi sýnir.
 
-   .. Sýnidæmi
-   .. important::
 
-      .. 
+   .. admonition:: Sýnidæmi
+      :class: synidaemi
 
-   .. code:: python3
+      .. code:: python3
 
-      def gera_tvisvar(f):
-          '''framkvæmir f tvisvar'''
-          f()
-          f()
+         def gera_tvisvar(f):
+             '''framkvæmir f tvisvar'''
+             f()
+             f()
 
-      def bulla():
-          '''skrifar "bull"'''
-          print("bull")
+         def bulla():
+             '''skrifar "bull"'''
+             print("bull")
 
-      b = bulla         # b er fallbreyta
-      gera_tvisvar(b)   # prentar bull tvisvar
+         b = bulla         # b er fallbreyta
+         gera_tvisvar(b)   # prentar bull tvisvar
 
 .. _stýriskipanir:
       
