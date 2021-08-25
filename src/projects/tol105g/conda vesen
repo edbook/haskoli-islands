@@ -1,0 +1,7 @@
+
+To install local package:
+
+i) Navigate to where the setup.py file is located
+ii) Run "python3 setup.py bdist_conda", without quotes.
+iii) Navigate to where the xxx.tar.bz2 file was created (the above step prints the location).
+iv) run "conda install xxx.tar.bz2", without the quotes.
