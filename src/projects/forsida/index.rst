@@ -68,6 +68,10 @@ Námskeið við HÍ
   :link: rei201g/index.html
 
 .. button::
+   :text: TÖL105G: Tölvunarfræði 1a
+   :link: tol105g/index.html
+
+.. button::
   :text: Tölfræði frá grunni
   :link: tolfraedi_fra_grunni/index.html
 
