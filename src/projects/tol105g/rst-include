@@ -1,0 +1,28 @@
+.. |br| raw:: html
+              
+    <br>
+
+.. |br2| raw:: html
+
+   <br><br>
+              
+.. |sp| raw:: html
+
+    &thinsp;
+
+.. |sp1| raw:: html
+
+    &nbsp;
+
+.. |sp2| raw:: html
+
+    &ensp;
+
+.. |sp3| raw:: html
+
+    &emsp;
+
+.. role:: h(raw)
+   :format: html
+
+.. 
