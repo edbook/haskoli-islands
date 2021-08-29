@@ -8,8 +8,6 @@ Hagnýt stærðfræðigreining (STÆ105G), Háskóli Íslands
 
 Höfundar efnis: Valentina Giangreco M Puletti, vgmp@hi.is og Hulda Hvönn Kristinsdóttir, hhk6@hi.is.
 
-Síðast uppfært: 2021-07-15
-
 .. toctree::
    formali
 
