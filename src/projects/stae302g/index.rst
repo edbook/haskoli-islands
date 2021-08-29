@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Stærðfræðigreining III (STÆ302G), Háskóli Íslands, haust 2019
-=============================================================
+Stærðfræðigreining III (STÆ302G), Háskóli Íslands
+=================================================
 
 .. toctree::
 	formali

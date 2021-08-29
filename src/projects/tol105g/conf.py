@@ -120,8 +120,8 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Stærðfræðigreining I (STÆ104G)"
-copyright = "2021,Benedikt Steinar Magnusson"
+project = "Tölvunarfræði 1a (TÖL105G)"
+copyright = "2021, Kristján Jónasson"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
