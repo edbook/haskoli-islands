@@ -69,7 +69,7 @@ Námskeið við HÍ
 
 .. button::
    :text: TÖL105G: Tölvunarfræði 1a
-   :link: tol105g/index.html
+   :link: https://cs.hi.is/t1a
 
 .. button::
   :text: Tölfræði frá grunni

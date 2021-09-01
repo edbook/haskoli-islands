@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. include:: rst-include
+
 Tölvunarfræði 1a
 ================
 
@@ -14,3 +16,6 @@ Höfundur efnis og kennari: Kristján Jónasson
    :glob:
 
    kafli01
+   kafli02
+   kafli03
+   kafli04
