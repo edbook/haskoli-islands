@@ -56,6 +56,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
+	rm -rf html
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)
 	cp jupy/{numpykynning,kynning,profpol,fallateikning}.ipynb $(BUILDDIR)
 	cp jupy/polhnit.py $(BUILDDIR)
