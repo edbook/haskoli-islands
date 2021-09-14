@@ -1,5 +1,7 @@
 .. include:: rst-include
 
+.. _dæmi-um-forrit:
+             
 Dæmi um Python forrit
 =====================
 Tafla yfir veldi

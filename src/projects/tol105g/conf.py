@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # -*- coding: utf-8 -*-
 #
-# Stærðfræðigreining I documentation build configuration file, created by
+# Tölvunafræði 1a documentation build configuration file, created by
 # sphinx-quickstart on Thu May 21 20:43:00 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -120,7 +120,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Stærðfræðigreining I (STÆ104G)"
+project = "Tölvunafræði 1a (TÖL105G)"
 copyright = "2021,Benedikt Steinar Magnusson"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -190,7 +190,6 @@ pygments_style = "sphinx"
 
 html_theme = "sphinx_rtd_theme"
 # html_theme_path = ["_themes"]
-
 
 # html_permalinks = True
 ## CLOUD
@@ -327,7 +326,7 @@ latex_documents = [
     (
         "index",
         "StaeI.tex",
-        "Stærðfræðigreining I (STÆ104G)",
+        "Tölvunafræði 1a (TÖL105G)",
         "Benedikt Steinar Magnússon",
         "manual",
     ),
@@ -362,7 +361,7 @@ man_pages = [
     (
         "index",
         "strfrigreiningi",
-        "Stærðfræðigreining I Documentation",
+        "Tölvunafræði 1a Documentation",
         ["Benedikt Steinar Magnússon"],
         1,
     )
@@ -381,7 +380,7 @@ texinfo_documents = [
     (
         "index",
         "StrfrigreiningI",
-        "Stærðfræðigreining I Documentation",
+        "Tölvunafræði 1a Documentation",
         "Benedikt Steinar Magnússon",
         "StrfrigreiningI",
         "One line description of project.",
@@ -405,13 +404,13 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-# epub_title = 'Stærðfræðigreining I'
+# epub_title = 'Tölvunafræði 1a'
 # epub_author = 'Benedikt Steinar Magnússon'
 # epub_publisher = 'Benedikt Steinar Magnússon'
 # epub_copyright = '2015, Benedikt Steinar Magnússon'
 
 # The basename for the epub file. It defaults to the project name.
-# epub_basename = 'Stærðfræðigreining I'
+# epub_basename = 'Tölvunafræði 1a'
 
 # The HTML theme for the epub output. Since the default themes are not optimized
 # for small screen space, using the same theme for HTML and epub output is
@@ -475,13 +474,11 @@ epub_exclude_files = ["search.html"]
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
 
-
 from docutils import nodes
 from docutils.nodes import Element
 
 # Hulda bætti mér við. Opna linka í öðrum gluggan.
 from sphinx.writers.html import HTMLTranslator
-
 
 class PatchedHTMLTranslator(HTMLTranslator):
     def visit_reference(self, node: Element) -> None:
@@ -511,3 +508,6 @@ class PatchedHTMLTranslator(HTMLTranslator):
         if "target" in node:
             atts["target"] = node["target"]
         self.body.append(self.starttag(node, "a", "", **atts))
+
+def setup(app):
+    app.set_translator('html', PatchedHTMLTranslator)
