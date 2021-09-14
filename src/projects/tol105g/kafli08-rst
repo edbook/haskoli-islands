@@ -1,0 +1,152 @@
+.. include:: rst-include
+
+Aðalforrit og einingar
+======================
+
+Skrá með aðalforriti
+--------------------
+
+Hugtakið **aðalforrit** (*main program*) er notað um sjálfstætt Pythonforrit (sem
+er ekki hluti af Jupíter-bók). Dæmigert innihald skrár með slíku forriti er eins
+og hér er sýnt:
+
+.. _forritssnið:
+
+.. figure:: myndir/forritssnið.png
+   :align: center
+   :figwidth: 14cm
+
+   Algengt snið skrár með aðalforriti í Python
+
+Það er reyndar engin skylda að kaflarnir komi í þessari röð heldur má blanda
+saman skipunum úr öllum fjórum köflunum að vild, en með þeirri skorðu að það
+verður að vera búið að skilgreina hluti áður en þeir eru notaðir. Þannig verður
+að flytja inn einingu áður en vísað er í hana, föll þarf að skilgreina fyrir
+notkun þeirra o.s.frv. Skráin sem sýnd er á :numref:`forritssnið` væri skírð
+nafni með endingu :code:`.py`, til dæmis :code:`forrit.py`.
+
+.. attention::
+   Bæði í Colab og JupyterLab er ekki höfð sérstök forritsskrá. Í staðinn
+   er forritið og undanfarandi skilgreiningar geymt í reitum í vinnubók.
+
+.. attention::
+   **Víðværu breyturnar** (*global variables*) eru þekktar inni í öllum föllum sem
+   koma á eftir þeim, en breytur sem fyrst eru skilgreindar inni í skilgreiningu
+   falls eru **staðværar** (*local*), og aðeins þekktar í viðkomandi falli.
+
+   .. _polhnit:
+
+Einingar skrifaðar af notanda
+-----------------------------
+Að framan hefur verið fjallað um einingar (*modules*) og pakka (*packages*) sem
+ýmist fylgja með Python eða aðrir hafa skrifað, en notandi getur líka búið til
+sínar eigin einingar. Slík eining er sett í sér skrá, :code:`eining.py` sem
+hefur sama snið og skráin á :numref:`forritssnið` nema hvað aðalforritið vantar.
+Einfaldast er að hafa eininguna í sömu möppu og aðalforritið (hún getur líka
+verið annarsstaðar eins og rætt verður síðar).
+
+Til að nota fall :code:`f` sem skilgreint er í einingunni þarf aðalforritið að
+hafa skipun :code:`import eining` fremst, og kalla síðan á fallið með
+:code:`eining.f(...)`. Það er líka hægt að rita :code:`from eining import f` og
+þá er hægt að kalla á fallið beint án þess að setja :code:`eining.` á undan, sem
+sé með :code:`f(...)`.
+
+.. attention:: Öfugt við aðalforrit sem hægt er að geyma í reitum í Python-bók þá
+   þarf að geyma **einingar** í sérstakri .py-forritsskrá svo hægt sé að vísa í
+   þær með :code:`import`
+
+Hér á eftir er æfing sem sýnir þetta í praxís, með því að búa til einingu
+með tveimur föllum sem breyta milli pólhnita (`polar coordinates <https://en.wikipedia.org/wiki/Polar_coordinate_system>`_) og rétthyrndra hnita, sem m.a. notar fallið `atan2 <https://en.wikipedia.org/wiki/Atan2>`_.
+
+.. Æfing
+.. hint::
+   **Eining polhnit.** Búið til nýja textaskrá með því að velja *File–New–Text
+   file*. Endurnefnið skrána **polhnit.py** (með *File–Rename*). Afritið svo
+   innihald eftirfarandi reits yfir í skrána og vistið. Þið getið líka gert
+   þetta með einhverjum ritli að eigin vali. Gætið þess að enda síðustu línuna
+   með Enter.
+
+   .. code:: python
+
+      # Breytt milli pólhnita og rétthyrndra hnita
+      from math import sin, cos, sqrt, atan2
+
+      def pol2rec(r,theta):
+          '''skilar rétthyrndum hnitum (x,y) fyrir pólhnitin (r,theta); r í radíönum'''
+          x = r*sin(theta)
+          y = r*cos(theta)
+          return (x,y)
+
+      def rec2pol(x,y):
+          '''skilar pólhnitum (r,theta) fyrir rétthyrndu hnitin (x,y); r í radíönum'''
+          r = sqrt(x**2 + y**2)
+          theta = atan2(y,x)
+          return (r,theta)   
+
+   .. figure:: myndir/polhnit.png
+      :align: center
+      :figwidth: 9cm
+
+   Afritið nú eftirfarandi forrit sem *importerar* og prófar eininguna
+   **polhnit** inn í Colab. Keyrið það og staðfestið að allt vinni rétt
+   (ef þið fáið villu má prófa *Kernel–Restart kernel*).
+         
+   .. code:: python
+
+      # Forrit sem prófar eininguna polhnit
+      # -----------------------------------
+      from math import pi, degrees
+      import polhnit as p
+
+      (x,y) = p.pol2rec(1, pi/6)
+      print(f'xy-hnit: ({x:.4f}, {y:.4f})')
+
+      (r,theta) = p.rec2pol(1,1)
+      g = degrees(theta)
+      print(f'Pólhnit: ({r:.4f}, {g:.2f}°)')
+
+      # Ætti að skrifa út:
+      #   xy-hnit: (0.5, 0.866)
+      #   Pólhnit: (1.4142, 45.00°)
+   
+Tækifærið hefur (aftur) verið notað til að kynna/skerpa á nokkrum Python atriðum: 
+
+- Hér er dæmi um hvernig :code:`from eining import...` notast. Takið eftir hvernig
+  við sleppum við að setja :code:`math.` framan við :code:`cos`, :code:`pi` o.s.frv.
+
+- Föll geta skilað fleiri en einu gildi
+
+- Hægt er að skammstafa nöfn eininga í :code:`import`-skipun. Hér er polhnit
+  skammstafað með p. Það er t.d. alsiða að skammstafa *numpy* með np og
+  *matplotlib* með mpl.
+
+..
+    .. attention::
+       "attention" Athugið (gulbrún)
+
+    .. tip::
+       "tip" Ábending (græn)
+
+    .. note:: 
+       "Note" Python (blá)
+
+    .. warning::
+       "Warning" Aðvörun (gulbrún)
+
+    .. hint::
+       "Hint" Æfing (græn, notað í Strei)
+         
+    .. danger::
+       "danger" Aðvörun (rauð, notað í Strei)
+
+    .. important::
+       "important" Sýnidæmi (endurforrituð gul, í Strei)
+
+    Ónotaðar:
+       
+    .. caution::
+       "caution" Aðgát (gulbrún)
+
+    .. error::
+       "error" Villa, (rauð)
+

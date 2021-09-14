@@ -1,0 +1,118 @@
+.. include:: rst-include
+
+.. _adal-ein:
+
+Meira um skilgreiningu falla
+============================
+Við höfum séð að hægt er að kalla á print-fallið með einum eða fleiri viðföngum, og svo er líka hægt að bæta við viðföngunum :code:`end=xxx` og :code:`sep=xxx`. Slík nefnd viðföng eru kölluð **lykilorðsviðföng** (*keyword argument*). Við eigum eftir að sjá mörg fleiri dæmi um svona sveiganleika í köllum á föll, þegar við kynnumst fleiri innbyggðum pökkum, t.d. Matplotlib. Hér verður litið á nokkrar leiðir til að skilgreina og kalla á föll, en umfjöllun um alla möguleikana væri of viðamikil til að hafa hér, til þess verður að vísa á opinberu `Python-leiðbeiningarnar
+<https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions>`_.
+
+Valkvæðir stikar
+----------------
+Stiki er skilgreindur sem **valkvæður** (*optional*) með því að gefa honum **sjálfgefið** (*default*) gildi í def-skipun. Valkvæðu stikarnir verða að koma á eftir hinum í stikalistanum. Hér er dæmi um fall sem reiknar n-tu rót, með kvaðratrót sjálfgefna:
+
+.. code:: python
+          
+   import math
+   def rót(x, n=2):
+       """skilar n-tu rót (kvaðratrót er sjálfgefin)"""
+       return x**(1/n)
+
+   a = rót(16)    # kvaðratrót
+   b = rót(16,2)  # líka kvaðratrót
+   c = rót(16,4)  # fjórða rót
+   print(f"√16 = {a} = {b}, ⁴√16 = {c}")  # Prentar út: √16 = 4.0 = 4.0, ⁴√16 = 2.0
+
+.. Æfing
+.. hint::
+   Skrifið fall :code:`logb(x,b)` sem reiknar logra (lógaritma) með grunntölu
+   :math:`b` með formúlunni :math:`\log{}_b(x) = \ln x /\ln b`. Ath. að í Python fæst
+   náttúrulegur logri, :math:`\ln x`, með ``math.log(x)``. Prófið ``logb(8,2)``
+   sem ætti að gefa 3.0. Gerið svo ``b`` valkvæðan með sjálfgefið gildi 2 og
+   prófið ``logb(8)`` og ``logb(100,10)`` (ætti að gefa 3.0 og 2.0)
+
+Lykilorðsviðföng
+----------------
+Þegar kallað er á fall er hægt að tilgreina viðföngin með nöfnum tilsvarandi stika svo:
+
+   :code:`x = fall(stiki1 = viðfang1, stiki2 = viðfang2,...)`
+
+Ef þetta er gert má hafa viðföngin í hvaða röð sem verkast vill. Það er líka hægt nefna bara hluta viðfanganna , en þau sem ekki eru nefnd verða þá að koma fremst og þau eru pöruð í réttri röð við fremstu stikana. Hér er dæmi sem sýnir svona köll:
+
+.. code:: python
+          
+   def fall(x, y, z):
+      print(f"x={x} y={y} z={z}")
+
+   fall(1, 2, 3)        # prentar x=1 y=2 z=3
+   fall(z=6, y=5, x=4)  # prentar x=4 y=5 z=6
+   fall(7, z=9, y=8)    # prentar x=7 y=8 z=9
+
+Það er líka hægt að blanda saman valkvæðum stikum og lykilorðsviðföngum eins og hér er sýnt:
+
+.. code:: python
+          
+   def fall(x, y=10, z=20):
+      print(f"x={x} y={y} z={z}")
+
+   fall(1, 2)      # prentar x=1 y=2 z=20
+   fall(z=6, x=4)  # prentar x=4 y=10 z=6
+   fall(z=9, y=8)  # gefur villu, það má ekki sleppa x
+
+Byrjað er á að para viðföng sem ekki eru nefnd (þ.e. ekki hafa ``stiki=`` framan við sig) saman við tilsvarandi stika í röð, þvínæst eru nefnd viðföng pöruð við sína stika, og loks fá stikar sem enn eru óparaðir sjálfgefin gildi. Ef einhverjir stikar standa útaf kemur villa.
+
+Föll með breytilegan stikafjölda
+--------------------------------
+Hægt er að skrifa fall sem tekur ótiltekinn stikafjölda (líkt og innbyggða fallið *print*) með því að nota def-skipun:
+
+    :code:`def fall(*x):`
+
+Þegar kallað er á slíkt fall, fær stikinn ``x`` gildi sem er samstæða með öllum viðföngunum sem gefin eru. Ef t.d. kallað er ``fall(1,2,3)`` þá verður ``x = (1,2,3)``. Í þessu samhengi er virkinn ``*`` kallaður **söfnunarvirki** (*gather-operator*) því hann safnar öllum viðföngunum í eina breytu.  
+   
+.. Sýnidæmi
+.. important::
+   Hér er fall sem margfaldar saman öll viðföng sín. Ef ekkert viðfang er gefið
+   skilar það margfeldinu 1, eins og `hefðbundið
+   <https://en.wikipedia.org/wiki/Empty_product>`_ er í stærðfræði.
+
+   .. code:: python
+
+      def margfeldi(*x):
+          '''margfeldi(x1,x2...) skilar x1*x2*...'''
+          p = 1
+          for s in x:
+              p *= s
+          return p
+
+   Nú mundi kallið :code:`margfeldi(2,3,4)` skila 24.
+
+Ef fall með söfnunarstika hefur jafnframt aðra stika verður að gefa þeim gildi, annaðhvort sjálfgefin eða með lykilorðsviðföngum. Næsta æfing sýnir hvernig þetta getur gagnast.
+
+.. Æfing
+.. hint::
+   Skrifið |sp| fall með haus ``def concat(*x, sep=" "):`` sem tekur við einum eða
+   fleiri strengjum og skeytir þeim saman með bilum á milli, t.d. með kallinu
+   ``concat("aa", "bb")`` sem mundi skila **\"aa bb\"**. Einnig er hægt að kalla á
+   það með ``concat("aa", "bb", sep=",")`` og þá setur það kommur á milli í
+   staðin fyrir bil. Notið þetta fall til að skeyta saman strengjunum **\"kaffi\"**,
+   **\"mjólk\"** og **\"sykur\"** í strenginn :code:`"kaffi, mjólk, sykur"``.
+      
+Föll með margar útkomur
+-----------------------
+Til að láta fall skila mörgum útkomum er return-skipun  einfaldlega látin skila samstæðu með útkomunum, t.d. :code:`return (a,b,c)`, og svo er kallað á fallið með :code:`(a,b,c) = f(...)` eða án sviga, með :code:`a,b,c = f(...)`.
+
+.. Sýnidæmi
+.. important::
+   Hér er fall sem skilar minnstu og stærstu tölu í lista sem það fær sem viðfang.
+
+   .. code:: python
+
+      def minmax(L):
+          m = min(L)
+          M = max(L)
+          return (m,M)
+
+   Ef kallað er :code:`x,y = minmax([2,5,8])` skilar það x=2 og y=8.
+   
+Í kafla :numref:`polhnit` hér rétt á eftir eru tvö dæmi í viðbót um föll sem skila tveimur útkomum.
+

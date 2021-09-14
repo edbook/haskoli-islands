@@ -2,11 +2,12 @@
 
 .. _grunn-python:
    
-Grunnatriði Python
-==================
+====================
+ Grunnatriði Python
+====================
 
 Breytur og tög
---------------
+==============
 .. rubric:: Breytur
 
 **Breyta** (*variable*) er nafn á minnishólfi í tölvu, þar sem geyma má **gildi** (*value*). Gildin geta svo verið af ýmsu tagi, eða haft ýmis **tög** (*types*), og eins og fyrr segir eru þessi tög tengd gildunum en ekki breytunum sjálfum. Fyrir utan gildi sem geymd eru í breytum er líka talað um gildi sem útkomu úr **útreikningi** (*computation*) eða **segð** (*expression*), t.d. hefur segðin :math:`2 + 2` gildið :math:`4`. Ósamsett gildi, t.d. 2, heitir **fasti** (*constant*).
@@ -57,7 +58,7 @@ Sú regla gildir að nafn breytu skal vera runa af bókstöfum, tölustöfum, og
 .. _adgerdir-og-virkjar:   
 
 Aðgerðir og virkjar
--------------------
+===================
 Í stærðfræði er það að ákvarða útkomu segðar oft kallað **aðgerð** (*operation*). Grunnbyggingareiningar segða eru oftast **einstæðar** (*unary*) eða **tvístæðar** (*binary*) aðgerðir. Einstæð aðgerð er ýmist af taginu :math:`\circ x` eða :math:`f(x)` þar sem :math:`\circ` er einstæður **virki** (*operator*), :math:`f` er **fall** (*function*) og :math:`x` er gildi. Tvístæð aðgerð er oft af taginu :math:`x \circ y` þar sem :math:`x` og :math:`y` eru gildi og :math:`\circ` er tvístæður virki. Gildin sem virkjar verka á eru stundum kallaðir **þolendur** (*operands*). Hér eru nokkur dæmi:
 
     .. math::
@@ -136,7 +137,7 @@ Eftirfarandi tafla sýnir röð sem aðgerðir eru framkvæmdar í ef svigar seg
 .. _gildisgjöf:
    
 Gildisgjöf
-----------
+==========
 Í stærðfræði er **gildisgjöf** (*assignment*) stundum táknuð með virkjanum :math:`:=` (t.d. :math:`x := 1`), og í reikniritum er stundum notuð ör (:math:`x \gets 1`), og þá er einfalt jafnaðarmerki notað til að segja að tvær stærðir séu jafnar eða kanna hvort þær séu jafnar: ":math:`x = 1`" þýðir að breytan :math:`x` (sem þegar hefur verið skilgreind) hafi gildið 1, og "ef :math:`x = 1`, þá..." spyr hvort :math:`x` sé 1. Í forritunarmálum er hinsvegar orðið mjög algengt að nota einfalt jafnaðarmerki fyrir gildisgjöf og tvö í röð fyrir samanburðarvirkjann `==` og Python er engin undantekning frá þeirri venju.
 
 Gildisgjöf í Python er tvennskonar, hægt er að gefa breytu gildi og svo er líka hægt að uppfæra gildið sem breyta geymir, sem sé:
@@ -168,7 +169,7 @@ Gildisgjöf í Python er tvennskonar, hægt er að gefa breytu gildi og svo er l
 .. _útprentun:      
       
 Útprentun og innlestur
-----------------------
+======================
 Aðalaðferðin til að prenta út gildi í Python er að nota :code:`print`-fallið en í vinnubókum er líka hægt að nota fallið :code:`display`, sem gefur stundum öðruvísi úttak, t.d. ef prentaðir eru strengir eða nöfn taga og falla (sjá næstu æfingu). Sumir pakkar sem þið gætuð átt eftir að kynnast, t.d. pandas og statmodels, skila stundum HTML-sniðnum töflum, og til að birta þær þarf að nota :code:`display`. 
 
     - :code:`print(segð,segð...)`: Prentar segðirnar með bilum á milli
@@ -210,7 +211,7 @@ Næsta grein (:numref:`fstrengir`) útskýrir svo hvernig **sníða** (*formater
 .. _fstrengir:
 
 F-strengir
-----------
+==========
 
 F-strengir (*f-strings*) eru ætlaðir til útprentunar, og með þeim má tvinna
 saman strengi (textabúta), breytur og gildi (segðir). Breytur og gildi eru sett
@@ -288,7 +289,7 @@ kommutölubreytur og nafn sé strengjabreyta.
 .. _ny-foll:
    
 Föll notanda (ný föll)
-----------------------
+======================
 Notendaföll (*user-defined functions*) eru næstum jafngömul forritun, og fyrstu
 forritunarmálin gáfu kost á skilgreiningu þeirra. Stundum er reyndar notað orðið
 **undirforrit** (*subroutine*) í stað falls einkum um föll sem engu skila (sbr.
@@ -370,7 +371,7 @@ Líka má sleppa svigunum: :code:`g1,g2... = fall(viðföng)` |br|
 .. _virka:
    
 Hvernig virka föll
-------------------
+==================
 .. rubric:: Viðföng og stikar
             
 Breyturnar innan sviga á eftir fallsnafninu þar sem það er skilgreint kallast **stikar** (*parameters*), en þegar kallað er á fallið þá heita gildin sem sett eru í sviga á eftir fallsnafninu **viðföng** (*arguments*). Þau þurfa ekki að vera breytur en mega vera hvaða segðir sem er. **Viðfang** er sem sé gildi sem sent er inn í fall, en **stiki** er breyta í skilgreiningu fallsins sem tekur við gildinu.
@@ -433,7 +434,7 @@ litum á næstu línum í línuritinu.
 .. _mikilvægustu-innbyggð:
        
 Innbyggð föll
--------------
+=============
 Fyrir utan föll sem notendur skrifa hafa forritunarmál yfirleitt fjöldan allan af
 innbyggðum föllum, sem hönnuðir málanna hafa skrifað og gert aðgengileg fyrir
 notendur. Mörg þessara falla eru notuð í útreikningum, en auk þess eru ýmis önnur
@@ -544,9 +545,8 @@ Hér er upptalning á helstu innbyggðum stærðfræðiföllum:
       út sveiflutímann á sniðinu `T = x.xxx` (með f-streng).
 
 Fallbreytur
------------
+===========
 Breytur geta tekið gildi sem eru föll: :code:`def fall: ...` og neðar: :code:`x = fall` eins og eftirfarandi dæmi sýnir.
-
 
    .. admonition:: Sýnidæmi: Bulla tvisvar
       :class: synidaemi
@@ -565,31 +565,162 @@ Breytur geta tekið gildi sem eru föll: :code:`def fall: ...` og neðar: :code:
          b = bulla         # b er fallbreyta
          gera_tvisvar(b)   # prentar bull tvisvar
 
+Meðal þess sem hægt er að nota fallbreytur í er ýmis vinna með stærðfræðiföll, til
+dæmis að teikna þau, finna heildi (*integrals*) eða leysa jöfnur. Segjum til
+dæmis að við viljum reikna heildið:
+
+.. math::  (*)\hspace{4cm}\int_1^2\frac{\sin(x)}{x} dx\hspace{4cm}
+
+Þetta heildi er ekki hægt að reikna með venjulegum aðferðum stærðfræðigreiningar
+en hinsvegar er auðvelt að reikna það tölulega, t.d. með svonefndri
+`trapisureglu <https://en.wikipedia.org/wiki/Trapezoidal_rule>`_, sem nálgar
+heildið með flatarmáli trapisu, nánar tiltekið:
+
+.. math:: \int_a^b{f(x)dx} \approx \frac{(b-a)(f(a) + f(b))}{2}
+
+Það væri hægt að skrifa Python-fall til að reikna :math:`(*)` með
+trapisureglu, en ef við vildum reikna eitthvað annað heildi þyrfti að skrifa
+nýtt fall. Með því að nota fallbreytu er hægt að forrita trapisureglu í eitt
+skipti fyrir öll Í Python, eins og hér er sýnt:
+
+.. admonition:: Sýnidæmi: Ósamsett trapisuregla
+   :class: synidaemi
+
+   Í þessu dæmi er heildið :math:`(*)` nálgað með ósamsettri trapisureglu og einnig heildið
+   :math:`\int_0^1 h(x)dx` þar sem :math:`h(x)=e^x`.
+
+   .. code:: python3
+
+      def trap1(f,a,b):
+          '''heildi f frá a til b með ósamsettri trapisureglu'''
+          I = (b-a)*(f(a)+f(b))/2
+          return I
+
+      import math
+      def g(x): return math.sin(x)/x
+      def h(x): return math.e**x
+
+      I1 = trap1(g,1,2)
+      I2 = trap1(h,0,1)
+      print(f'I1={I1:.3f}, I2={I2:.3f}')
+          # prentar "I1=0.648, I2=1.859"
+
+   Nákvæm gildi á þessum heildum eru I1 = 0.659 og I2 = 1.718. Takið
+   eftir að hægt er að skilgreina einföld föll á einni línu.
+
+.. admonition:: Æfing: Tvær trapisur
+   :class: aefing
+
+   Betri nálgun á heildi fæst með því að nota tvær trapisur:
+
+   :math:`\qquad\displaystyle\int_a^b{f(x)dx} \approx`
+   :code:`trap1(f,a,m) + trap1(f,m,b)`
+   
+   þar sem :math:`m` er miðpunktur bilsins; :math:`m = \dfrac{a+b}{2}`. Skrifið
+   fall :code:`trap2` sem útfærir slíka reglu með því að kalla tvisvar á :code:`trap1` og
+   prófið með því að nálga sömu heildi og í sýnidæminu. Ef rétt er forritað fást
+   nú gildin I1 = 0.657 og I2 = 1.754.
+   
 .. _stýriskipanir:
       
 Stýriskipanir
--------------
+=============
+Í kafla :numref:`virka` var talað um að forrit keyri þannig að bendill færist
+niður eftir forritstextanum og bendi á næstu línu sem á að framkvæma, og hvernig
+þessi bendill stekkur á annan stað þegar kallað er á föll. Þetta er hinsvegar
+ekki eina leiðin til að flytja bendilinn, það er líka hægt með svonefndum
+**stýriskipunum** (*control statements*). Það eru tvær aðalgerðir af stýriskipunum
+**ef-setningar** (*if statement*) og **lykkjuskipanir** (*loop statement*).
+Við höfum þegar séð ef-setningar í Collatz-forritinu í kafla :numref:`dæmi-um-forrit`,
+og þar voru líka tvær gerðir af lykkjuskipunum, while-lykkjur og for-lykkjur.
 
-- :code:`if-elif-else`: sjá grein :numref:`icollatz`
-- :code:`while`: sjá grein :numref:`icollatz`
-- :code:`for-in`: sjá grein :numref:`icollatz`
-- :code:`continue`: fara í næstu umferð lykkju (for- eða while-)
-- :code:`break`: brjótast út úr lykkju
+Ef-setningar
+------------
+Hlutverk ef-setninga er að keyra mismunandi kafla forrits eftir því hvort
+tiltekið skilyrði er uppfyllt eða ekki. Ef-setningin er stundum kölluð
+*ef-þá-annars* (*if-then-else*) skipun því í mörgum forritunarmálum er orðið
+*then* notað á eftir skilyrðinu. Eins og sýnt var í kafla :numref:`icollatz`
+er grunnsnið ef-setningar svona:
+
+.. code:: python
+
+   if skilyrði:
+       skipun1
+       skipun2
+       ...
+   else:
+       skipun3
+       skipun4
+       ...
+   skipun5
+
+Ef skilyrðið er uppfyllt keyra skipanir 1 og 2 og svo fer bendillinn í skipun 5,
+en annars keyra skipanir 3 og 4 og svo áfram í númer 5. Kaflarnir sem
+ef-setningin stýrir eru inndregnir um eitt eða fleiri bil. Maður ræður hve
+mikill inndrátturinn er, en það þarf að draga allar línur hvers kafla jafnmikið
+inn. Svo er hægt að bæta við *elif* (stytting á *else if*) kafla eða köflum á
+undan else-kaflanum eins og næsta sýnidæmi sýnir:
+
+.. admonition:: Sýnidæmi: Notkun ef-setningar
+   :class: synidaemi
+
+   Þetta dæmi les aldur tveggja manna Jóns og Páls og athugar hvor er eldri.
+
+   .. code:: python
+             
+      ajons = int(input("Aldur Jóns: "))
+      apals = int(input("Aldur Páls: "))
+      if ajons > apals:
+          print("Jón er eldri en Páll")
+      elif ajons == apals:
+          print("Jón og Páll eru jafngamlir")
+      else
+          print("Páll er eldri en Jón")
+      print("–og hér heldur forritið áfram"
+
+.. _for-lykkur:      
+      
+For-lykkjur
+-----------
+Til að keyra kafla í forriti aftur og aftur og uppfæra svonefnda **stýribreytu**
+(*control variable*) í hverri umferð með nýju gildi má nota for-lykkjur. Snið
+for-lykkju er:
+
+.. code:: python
+
+   for stýribreyta in runa:
+       skipun1
+       skipun2
+       ...
+   skipun3
+      
+Hér er :code:`runa` einhver Python-aðferð til að búa til endanlega runu
+(*sequence*) af gildum sem stýribreytan fær. Skipanir 1 og 2 keyra jafn oft og
+lengd rununnar er, og í hverri umferð fær breytan næsta gildi rununnar. Að því
+loknu er haldið áfram með skipun 3. Algengasta aðferðin til að búa til rununa er
+að nota range-fallið, sbr. Collatz-forritið og næsta sýnidæmi. Hér eru helstu
+möguleikar á range fallinu:
+
+.. code:: python
+
+   range(5)       runan 0, 1, 2, 3, 4
+   range(2,5)     runan 2, 3, 4
+   range(2,10,2)  runan 2, 4, 6, 8
+   range(6,1,-1)  runan 6, 5, 4, 3, 2
 
 .. admonition:: Sýnidæmi: Rætur og veldi
    :class: synidaemi
 
-   Eftirfarandi forrit reiknar kvaðratrætur og önnur veldi
-   talnanna 2, 3, 4 og 5. Það sýnir notkun á nokkrum atriðum sem fjallað hefur
-   verið um hér á undan.
+   Eftirfarandi forrit reiknar kvaðratrætur og önnur veldi talnanna 2, 3, 4 og
+   5. Það sýnir notkun á nokkrum atriðum sem fjallað hefur verið um hér á undan.
 
    .. code-block:: python
 
-       import math
-       print('x     √x     x²')
-       print('―――――――――――――――')
-       for x in range(2,6):
-           print(f'{x}   {math.sqrt(x):.4f}   {x**2:2}')
+      import math
+      print('x     √x     x²')
+      print('―――――――――――――――')
+      for x in range(2,6):
+          print(f'{x}   {math.sqrt(x):.4f}   {x**2:2}')
 
    Fallið prentar út eftirfarandi töflu
 
@@ -615,9 +746,95 @@ Stýriskipanir
    (Ath. að nota má V, |sp| ^2 og - í stað *unicode* táknanna √, |sp| ² og
    ― ef maður vill)       
 
-Skilyrt gildi
+While-lykkjur
 -------------
-Skipunin:
+Stundum þarf enga stýribreytu, heldur er eðlilegra að halda áfram að endurtaka
+meðan tiltekið skilyrði er uppfyllt. Gott dæmi um þetta er í forritinu Collatz,
+þar sem haldið er áfram meðan ný tala í rununni er stærri en 1. Eins og þar
+sást er snið while-lykkju svona:
+
+.. code:: python
+
+   while skilyrði:
+       skipun1
+       skipun2
+       ...
+   skipun3
+
+Næsta æfing gefur síðan klassíska notkun á while-lykkju. Það er dálítið ítarlegt
+og verður notað í tímadæmi og/eða skiladæmi. Það gefur líka innsýn inn í hugtakið
+reiknirit (*algorithm*) sbr. athugasemdina aftan við sýnidæmið.
+
+.. admonition:: Æfing: Rætur og veldi
+   :class: aefing
+
+   Reiknirit Evklíðs er notað til að finna stærsta samþátt (*greatest common
+   divisor*) tveggja talna :math:`x` og :math:`y`, sem oft er táknaður
+   :math:`\gcd(x,y)`. Til dæmis er :math:`\gcd(9,15) = 3` því 3 er stærsta talan
+   sem gengur upp í bæði 9 og 15. Skoðið stuttlega 
+   `Wikipediugreinina <https://en.wikipedia.org/wiki/Euclidean_algorithm>`_ um
+   reikniritið. Hér er lýsing á því í orðum: "Deilið minni tölunni í þá stærri.
+   Ef afgangurinn er ekki núll verður hann nýr deilir og minni talan verður nýr
+   deilistofn. Svo er deilt aftur og aftur þar til deilingin gengur upp. Stærsti
+   samþátturinn er síðasti jákvæði afgangurinn."
+
+   1. Hvað er þetta reiknirit gamalt?
+   2. Nefnið a.m.k. eitt notkunarsvið þess nú á tímum.
+   3. Reiknið :math:`\gcd(102,27)` með blaði og blýanti.
+   4. Wikipedia er með nokkrar útfærslur reikniritsins á blendingsmáli í
+      `Implementations <https://en.wikipedia.org/wiki/Euclidean_algorithm#Implementations>`_.
+      Þýðið þá fyrstu yfir í Python og prófið. Setjið inn print-skipun til að
+      skoða alla afgangana sem fást.
+
+|br|
+
+.. admonition:: Athugasemd: Reiknirit og Python
+   :class: athugid
+
+   **Reiknirit** er endanleg runa af skipunum sem hægt er að þýða yfir í
+   tölvuforrit. Reiknirit eru venjulega notuð til að leysa ákveðin verkefni og
+   þau eru alltaf ótvíræð. Reiknirit eru of skrifuð í blendingsmáli
+   (*pseudocode*), en það er frjálsleg lýsing á tölvureikningum, þar sem blandað
+   er saman forritsskipunum, lýsingu skrefa á íslensku (eða ensku) og
+   stærðfræðiformúlum (sbr. `þetta
+   <https://en.wikipedia.org/wiki/Ford–Fulkerson_algorithm#Algorithm>`_).
+   Forritsskipanirnar mega vera á íslensku og svolítið frjálslegar, og
+   stærðfræðiformúlurnar mega vera allflóknar, t.d. með brotastrikum og summum.
+   Ef borin eru saman forrit í Python, forrit í ýmsum öðrum forritunarmálum, og
+   reiknirit á blendingsmáli (t.d. á Wikipediu) sést að Python minnir um margt á
+   sum þessara reiknirita.
+  
+Skipanirnar *continue* og *break*
+---------------------------------
+Inni í lykkjum er hægt að nota tvær skipanir í viðbót til að færa
+keyrslubendilinn sem talað var um í byrjun kaflans, :code:`continue` sem
+hleypur yfir afgang lykkjukaflans og byrjar strax á næstu umferð, og svo er
+:code:`break` notað til að brjótast strax út úr lykkjunni og halda áfram
+með næstu skipun á eftir henni. Af þessum tveimur er :code:`break` meira
+notuð. Með henni er hægt að láta for-lykkju herma eftir while-lykkju, svona:
+
+.. code:: python
+          
+   for i in range(99999999):
+       if not skilyrði: break
+       skipun1
+       skipun2
+       ...
+
+Hér þarf að passa að velja nógu stóra tölu í range-fallinu.
+
+Skilyrt gildi
+=============
+Í stærðfræði er hægt að skilgreina breytur og föll með svonefndum gaffalformúlum,
+þar sem gildið sem breytan eða fallið fær fer eftir tilteknu skilyrði. Hér er dæmi:
+
+.. math::
+   f(x) =
+   \begin{cases} x^2 & \text{ef } x < 1 \\ 2x - 1 & \text{annars}
+   \end{cases}
+
+Svona skilgreiningu má búa til í Python með svonefndu **skilyrtu gildi** (*conditional
+expression*). Skipunin:
 
   .. code:: python3
 
@@ -632,14 +849,25 @@ jafngildir:
      else
         x = segð2
 
-Þetta jafngildir skipuninni ``x = skilyrði ? segð1 : segð2`` í Java eða C.
-Til dæmis mætti reikna tölugildi með ``a = -x if x < 0 else x``.
-      
+Til dæmis mætti reikna tölugildi með ``a = -x if x < 0 else x``. Í Java og C er
+hægt að búa til svona gildi með :code:`x = skilyrði ? segð1 : segð2` og
+tölugildið fengist með ``a = x < 1 ? -x : x``.
+
+.. admonition:: Æfing: Gaffalformúla
+   :class: aefing
+
+   Búið til Python fall til að reikna fallið :math:`f(x)` sem skilgreint er með
+   gaffalformúlunni hér að ofan. Notið skilyrt gildi. Prófið að reikna
+   :math:`f(0)`, og :math:`f(3)` (sem ætti að gefa 0 og 5).
+
+Lokaæfingin
+===========
 .. admonition:: Æfing: Kynning á vinnubókum II
    :class: aefing
 
 
    Í vinnubókinni :ref:`kynning.ipynb<jupyter-æfing>` sem náð var í í Æfingu
    aftan við kafla :numref:`jupyter-leiðbein-á-netinu` er hægt að prófa mörg af
-   þeim Python-atriðum sem lýst hefur verið í þessum kafla og æfa sig í þeim.
-   Opnið þessa bók í Colab og fylgið leiðbeiningum í henni.
+   þeim Python-atriðum sem lýst hefur verið í þessum :numref:`grunn-python`.
+   kafla og æfa sig í þeim. Opnið þessa bók í Colab og fylgið leiðbeiningum í
+   henni.
