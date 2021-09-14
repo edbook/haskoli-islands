@@ -632,25 +632,25 @@ Skilgreining: Markgildið :math:`-\infty`
 .. eqt:: daemi-markgildi
 
   **Æfingadæmi**
-	Hakið við réttan kross.
+	Látum :math:`f(x)` vera rætt fall, þ.e. hægt er að skrifa :math:`f(x)=p(x)/q(x)` þar sem :math:`p` og :math:`q` eru margliður. Gerum ráð fyrir að :math:`q` hafi núllstöð í punktinum :math:`a`. Hakið við rétta fullyrðingu.
 
-  A) :eqt:`I` Ef fallið :math:`f(x)` er rætt fall og :math:`a` er núllstöð nefnara þess þá er markgildið :math:`\lim_{x \rightarrow a} f(x)` alltaf til.
+  A) :eqt:`I` Markgildið :math:`\lim_{x \rightarrow a} f(x)` er alltaf til.
 
-  #) :eqt:`I` Þar sem :math:`\pi` er óræð tala þá getur ekkert fall uppfyllt að :math:`\lim_{x \rightarrow \pi} f(x)` sé til.
+  #) :eqt:`C` Markgildið :math:`\lim_{x \rightarrow a} f(x)` er stundum til.
 
-  #) :eqt:`I` Ef :math:`f(x)` er fastafall (þ.e. :math:`f(x)=c` þar sem :math:`c` er einhver tala) þá gildir alltaf að :math:`\lim_{x \rightarrow \infty} f(x) = 0`.
+  #) :eqt:`I` Markgildið :math:`\lim_{x \rightarrow a} f(x)` er aldrei til.
 
-  #) :eqt:`C` Til að markgildi falls í punkti sé til verður markgildið þegar fallið stefnir á punktinn frá hægri að vera það sama og það stefnir á punktinn frá vinstri.
+  #) :eqt:`I` Það er ekki hægt að skoða markgildið :math:`\lim_{x \rightarrow a} f(x)` því :math:`f(a)` er ekki skilgreint.
 
   .. eqt-solution::
 
-		A) Ræða fallið :math:`f(x)=\tfrac{1}{x}` hefur nefnara með núllstöð :math:`x=0` en markgildið :math:`\lim_{x \rightarrow 0} \tfrac{1}{x}` er ekki til.
+		A) Þetta er ekki rétt, t.d. er :math:`\lim_{x \rightarrow 0} \tfrac{1}{x}` ekki til. Hér er :math:`p(x)=1`, :math:`q(x)=x` og :math:`a=0`.
 
-		#) Þetta er bara bull. T.d. gildir um fastafallið :math:`f(x)=\pi` að það hefur markgildið :math:`\pi` í öllum punktum.
+		#) Fyrst að markgildið er ekki aldrei til og ekki alltaf til þá hlítur það að vera stundum til. 
 
-		#) Þetta væri rétt ef stæði „...þá gildir alltaf að :math:`\lim_{x \rightarrow \infty} f(x) = c`.”
+		#) Þetta er ekki rétt, t.d. er :math:`\lim_{x \rightarrow 0} \tfrac{x}{x} = 1`. Hér er :math:`p(x)=x`, :math:`q(x)=x`, :math:`a=0` og ef við fullstyttum þá sjáum við að :math:`f(x)=1`.
 
-		#) Þetta er skilgreiningin á að markgildi sé til svo þetta er rétt.
+		#) Vissulega er :math:`f(a)` ekki skilgreint en það er samt hægt að skoða markgildið þegar :math:`x\to a`eins og við höfum séð hér að ofan.
 
 
 .. _samfelldni:

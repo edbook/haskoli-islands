@@ -498,7 +498,7 @@ Nokkur þekkt samfelld föll
 1. Fallið :math:`f(x)=x` er samfellt.
 2. Sérhver margliða er samfelld.
 3. Sérhvert rætt fall er samfellt á skilgreiningarmengi sínu (þ.e. þar sem nefnarinn er ekki núll).
-4. Fyrir allar náttúrlegar tölur :math:`n` þá er fallið :math:`f(x)=\root n \of {x}` samfellt.
+4. Fyrir allar náttúrlegar tölur :math:`n` þá er fallið :math:`f(x)=x^{1/n}` samfellt.
 5. Ef :math:`r \in \mathbb{R}` er rauntala þá er fallið :math:`f(x)=x^r` samfellt.
 6. Vísisföll eru samfelld.
 7. Lograr eru samfelldir.
