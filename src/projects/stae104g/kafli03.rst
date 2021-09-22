@@ -1315,7 +1315,7 @@ Dæmi
     Við höfum áður séð að :math:`\lim_{x\to 0} \sin(x)/x = 1`.
     Skoðum hvernig hægt er að sýna þetta með lítilli fyrirhöfn og reglu l’Hôpital.
 
-    Sjáum að :math:`f(x) = \sin(x)` og :math:`g(x)` eru diffranleg í grennd um 0
+    Sjáum að :math:`f(x) = \sin(x)` og :math:`g(x) = x` eru diffranleg í grennd um 0
     og að :math:`g'(x) = 1 \neq 0`. Þá fæst að
 
     .. math::
@@ -1369,16 +1369,16 @@ Regla l’Hôpital, tvíhliða útgáfa
 .. eqt:: daemi-afleidur-og-samfelldni
 
   **Æfingadæmi**
-	Hakið við **rangan** kross.
+	Hakið við þá fullyrðingu sem er **ósönn**.
 
   A) :eqt:`I` Fall getur verið samfellt í punkti :math:`x=5` án þess að það sé diffranlegt í :math:`x=5`.
 
   #) :eqt:`I` Ef fall :math:`f` er diffranlegt í punkti :math:`x=3` þá er :math:`f` samfellt í punktinum :math:`x=3`.
 
-  #) :eqt:`I` Fallið :math:`f(x) = |x+1|` er samfellt og diffranlegt í punktinum :math:`x=-1`.
+  #) :eqt:`C` Fallið :math:`f(x) = |x+1|` er samfellt og þar af leiðandi diffranlegt í punktinum :math:`x=-1`.
 
-  #) :eqt:`C` Gerum ráð fyrir að fallið :math:`f: \mathbb{R} \mapsto \mathbb{R}` sé gagntækt og að graf fallsins sé ekki „mjög sveigt“. Þá er snertillinn við :math:`(3,f(3))` næstum samsíða sniðlinum gegnum :math:`(3,f(3))` og :math:`(x,f(x))`.
+  #) :eqt:`I` Gerum ráð fyrir að fallið :math:`f: \mathbb{R} \mapsto \mathbb{R}` sé diffranlegt og að graf fallsins sé ekki „mjög sveigt“. Þá er snertillinn við :math:`(3,f(3))` næstum samsíða sniðlinum gegnum :math:`(3,f(3))` og :math:`(a,f(a))` þar sem :math:`a` er einhver tala nálægt 3.
 
   .. eqt-solution::
 
-		Fallið :math:`f(x)=|x+1|` er samfellt en ekki diffranlegt í :math:`x=-1`.
+		Fallið :math:`f(x)=|x+1|` er samfellt en ekki diffranlegt í :math:`x=-1`, en samfelldni hefur ekki endilega í för með sér diffranleika (sjá 3.1.3).
