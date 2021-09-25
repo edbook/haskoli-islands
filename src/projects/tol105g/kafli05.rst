@@ -55,27 +55,29 @@ Ef s er strengur þá er hægt að ná í einstaka stafi með :code:`s[i]` þar 
         :widths: 1 2
         :name: tab:strengjaaðgerðir
                  
-        +------------------+-----------------------------------+
-        |``s = s1 + s2``   |samskeyting strengja               |
-        +------------------+-----------------------------------+
-        |``s = s1*3``      |sama og s1 + s1 + s1               |
-        +------------------+-----------------------------------+
-        |``s[3]``          |stafur í sæti 3                    |
-        +------------------+-----------------------------------+
-        |``s[2:5]``        |hlutstrengur í sætum 2,3,4         |
-        +------------------+-----------------------------------+
-        |``s.lower()``     |breyta í lágstafi                  |
-        +------------------+-----------------------------------+
-        |``s.upper()``     |breyta í hástafi                   |
-        +------------------+-----------------------------------+
-        |``s.capitalize()``|breyta fremsta staf í hástaf       |
-        +------------------+-----------------------------------+
-        |``s.find(s1)``    |staðsetning s1 í s, -1 ef ekkert s1|
-        +------------------+-----------------------------------+
-        |``len(s)``        |lengd strengsins                   |
-        +------------------+-----------------------------------+
-        |``c in s``        |er stafurinn c í strengnum s?      |
-        +------------------+-----------------------------------+
+        +------------------+------------------------------------------+
+        |``s = s1 + s2``   |samskeyting strengja                      |
+        +------------------+------------------------------------------+
+        |``s = s1*3``      |sama og s1 + s1 + s1                      |
+        +------------------+------------------------------------------+
+        |``s[3]``          |stafur í sæti 3                           |
+        +------------------+------------------------------------------+
+        |``s[2:5]``        |hlutstrengur í sætum 2,3,4                |
+        +------------------+------------------------------------------+
+        |``s.lower()``     |breyta í lágstafi                         |
+        +------------------+------------------------------------------+
+        |``s.upper()``     |breyta í hástafi                          |
+        +------------------+------------------------------------------+
+        |``s.capitalize()``|breyta fremsta staf í hástaf              |
+        +------------------+------------------------------------------+
+        |``s.find(s1)``    |staðsetning s1 í s, -1 ef ekkert s1 finnst|
+        +------------------+------------------------------------------+
+        |``len(s)``        |lengd strengsins                          |
+        +------------------+------------------------------------------+
+        |``c in s``        |er stafurinn c í strengnum s?             |
+        +------------------+------------------------------------------+
+        |``s.isupper()``   |eru allir stafir í s hástafir?            |
+        +------------------+------------------------------------------+
 
 .. admonition:: Æfing: Strengjablús
    :class: Æfing
@@ -271,23 +273,25 @@ Af því mengin eru ekki röðuð er alls ekki tryggt print skipun prenti þau �
 
    Samhverfi mismunurinn *A* ∆ *B*
 
+.. admonition:: Æfing: Prímtölur < 20
+   :class: aefing
 
-.. Æfing
-.. hint::
+   a) Búið til mengi S með sléttum tölum 2–20 og M3 með tölunum 3, 6,..., 18
+      og M5 með 5, 10, 15, 20 (með því að nota :code:`set(range(...))`).
+      Prentið svo M6 = S :math:`\cap` M3 (margfeldi af 6 sem eru < 20).
 
-     a) Búið til mengi S með sléttum tölum 2–20 og M3 með tölunum 3, 6,..., 18
-        og M5 með 5, 10, 15, 20 (með því að nota :code:`set(range(...))`).
-        Prentið svo M6 = S :math:`\cap` M3 (margfeldi af 6 sem eru < 20).
+   b) Látið X vera mengi talnanna 2–20 og finnið P = mengi prímtalna < 20 sem
+      (X – (S :math:`\cup` M3 :math:`\cup` M5)) :math:`\cup` {2,3,5}
 
-     b) Látið X vera mengi talnanna 2–20 og finnið P = mengi prímtalna < 20 sem
-        (X – (S :math:`\cup` M3 :math:`\cup` M5)) | {2,3,5}
-
-     c) Ef E er mengi nemenda í Ensku og S er mengi nemenda í Sögu þá er E
-        :math:`\cap` S mengi þeirra sem eru í báðum fögum, E :math:`\cup` S er
-        mengi þeirra sem eru í einhverju fagi og E :math:`\Delta` S eru þeir sem
-        eru í nákvæmlega einu fagi. Látið :code:`E = {"Ari", "Ása", "Fía", "Jói"}`,
-        :code:`S = {"Fía", "Jói", "Nói"}` og ákvarðið samsettu mengin þrjú með
-        Python-mengjaaðgerðum. Teiknið gjarna mynd á blað.
+.. admonition:: Æfing: Enska og saga
+   :class: aefing
+         
+   Ef E er mengi nemenda í Ensku og S er mengi nemenda í Sögu þá er E
+   :math:`\cap` S mengi þeirra sem eru í báðum fögum, E :math:`\cup` S er mengi
+   þeirra sem eru í einhverju fagi og E :math:`\Delta` S eru þeir sem eru í
+   nákvæmlega einu fagi. Látið :code:`E = {"Ari", "Ása", "Fía", "Jói"}`,
+   :code:`S = {"Fía", "Jói", "Nói"}` og ákvarðið samsettu mengin þrjú með
+   Python-mengjaaðgerðum. Teiknið gjarna mynd á blað.
         
 .. _ítrarar:
 
@@ -366,7 +370,7 @@ setja pörin sem verða til inn í sérstaka breytu:
 parar þá saman: :code:`zip([0,1,2], [5,6,7])` skilar pörunum :code:`(0,5)`,
 :code:`(1,6)` og :code:`(2,7)`.
 
-.. admonition:: Æfing: 
+.. admonition:: Æfing: enumerate og zip 
    :class: aefing
                
    a) Smíðið pörin (0,2), (1,4), (2,6), (3,8), (4,10) með *enumerate* og prentið

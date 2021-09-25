@@ -2,7 +2,7 @@
 SPHINXOPTS    = -b dirhtml
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = _build
+BUILDDIR      = _build/$(project)
 PROJECTSDIR   = src/projects
 
 # User-friendly check for sphinx-build
@@ -33,22 +33,22 @@ update:
 build-all:
 	poetry run cli build $(SPHINXOPTS) $(O)
 autobuild:
-	sphinx-autobuild $(PROJECTSDIR)/$(project) $(BUILDDIR)/$(project) $(SPHINXOPTS) $(O)
+	sphinx-autobuild $(PROJECTSDIR)/$(project) $(BUILDDIR) $(SPHINXOPTS) $(O)
 build:
-	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(BUILDDIR)/$(project) $(SPHINXOPTS) $(O)
+	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(BUILDDIR) $(SPHINXOPTS) $(O)
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)"
 latex:
-	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(BUILDDIR)/$(project)/latex -v -b latex $(O)
+	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(BUILDDIR)/latex -v -b latex $(O)
 	@echo
-	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/$(project)/latex."
+	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
 		  "(use \`make latexpdf' here to do that automatically)."
 latexpdf:
-	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(BUILDDIR)/$(project)/latex -v -b latex $(O)
+	$(SPHINXBUILD) $(PROJECTSDIR)/$(project) $(BUILDDIR)/latex -v -b latex $(O)
 	@echo "Running LaTeX files through pdflatex..."
-	$(MAKE) -C $(BUILDDIR)/$(project)/latex all-pdf
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/$(project)/latex."
+	$(MAKE) -C $(BUILDDIR)/latex all-pdf
+	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
 	@echo

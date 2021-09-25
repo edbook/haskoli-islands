@@ -174,8 +174,7 @@ Aðalaðferðin til að prenta út gildi í Python er að nota :code:`print`-fal
 
     - :code:`print(segð,segð...)`: Prentar segðirnar með bilum á milli
     - :code:`print(..., sep=",")`: Prentar með kommum á milli
-    - :code:`print(..., end=" ")`: Endar með bili í stað nýrrar línu |br|
-      Sjá mörg dæmi um print að framan og í sýnidæminu í grein :numref:`stýriskipanir`.
+    - :code:`print(..., end=" ")`: Endar með bili í stað nýrrar línu
     - :code:`s = input('texti')`: Prentar textann og bíður eftir að notandi
       slái inn streng og <Enter>; innslegið gildi → s.
 
@@ -266,7 +265,7 @@ Hér er tafla yfir nokkur möguleg snið:
        til að fá lítið e í útskriftina (t.d. :code:`1.00e+13`)
 
 Tilgangurinn með að gefa heildarfjölda stafa (breidd sviðs) getur t.d. verið að
-láta dálka í töflu standast á: forritið í sýnidæminu í grein :numref:`stýriskipanir`
+láta dálka í töflu standast á: forritið í sýnidæminu í grein :numref:`for-lykkjur`
 notar f-strengi til að sníða (*"formatera"*) litla töflu. Hér eru þrjú dæmi í
 viðbót:
 
@@ -282,7 +281,7 @@ kommutölubreytur og nafn sé strengjabreyta.
 .. danger::
    F-strengir eru nýleg viðbót við Python, þeir komu í Python 3.6 í desember
    2016. Í eldri Python-útgáfum er hægt að nota %-virkja. Forritið í sýnidæminu
-   í grein :numref:`stýriskipanir` gæti t.d. haft: |br|
+   í grein :numref:`for-lykkjur` gæti t.d. haft: |br|
    |sp3| |sp3| :code:`print('%d   %.4f   %2d' % (x, math.sqrt(x), x**2))` |br|
    í öftustu línunni.
    
@@ -496,11 +495,15 @@ Hér er upptalning á helstu innbyggðum stærðfræðiföllum:
     :code:`exp, log, log2, log10, sqrt`: Vísisfall, lograr og kvaðratrót |br|
     :code:`pi, e, inf, nan`: (stærðfræði)fastar |br|
     :code:`radians, degrees`: breytt úr gráðum í radíana og öfugt |br| 
-    Ef nota á sin, cos og pi (til dæmis) má rita fremst: |br|
-    |sp3| :code:`import math` og svo :code:`math.sin`, :code:`math.cos`... |br|
-    Sjá nánar í `Python hjálpinni
-    <https://docs.python.org/3/library/math.html>`_, |sp2| og greinar
-    :numref:`stýriskipanir` og :numref:`polhnit`.
+
+Ef nota á sin, cos og pi (til dæmis) má rita fremst: |br| |sp3| |sp3|
+:code:`from math import sin, cos, pi`, eða: |br| |sp3| |sp3|
+:code:`import math` og svo :code:`math.sin`, :code:`math.cos`... |br|
+
+Sjá nánar í `Python hjálpinni <https://docs.python.org/3/library/math.html>`_,
+og ýmis dæmi í þessum fyrirlestrarnótum, t.d. sýnidæmið hér næst, "Ósamsett trapisuregla" í kafla :numref:`fallbreytur`, "Rætur og veldi" í kafla
+:numref:`for-lykkjur` og `verkefni 8
+<http://cs.hi.is/t1a/verkefni/#polhnit-t4>`_ aftast í nótunum.
 
 .. admonition:: Sýnidæmi: Regla Herons
    :class: synidaemi
@@ -544,6 +547,8 @@ Hér er upptalning á helstu innbyggðum stærðfræðiföllum:
    b) Skrifið forrit sem prófar fallið með m = 2, k1 = 3 og k2 = 4, og skrifar
       út sveiflutímann á sniðinu `T = x.xxx` (með f-streng).
 
+.. _fallbreytur:
+      
 Fallbreytur
 ===========
 Breytur geta tekið gildi sem eru föll: :code:`def fall: ...` og neðar: :code:`x = fall` eins og eftirfarandi dæmi sýnir.
@@ -596,9 +601,9 @@ skipti fyrir öll Í Python, eins og hér er sýnt:
           I = (b-a)*(f(a)+f(b))/2
           return I
 
-      import math
-      def g(x): return math.sin(x)/x
-      def h(x): return math.e**x
+      from math import sin, e
+      def g(x): return sin(x)/x
+      def h(x): return e**x
 
       I1 = trap1(g,1,2)
       I2 = trap1(h,0,1)
@@ -678,7 +683,7 @@ undan else-kaflanum eins og næsta sýnidæmi sýnir:
           print("Páll er eldri en Jón")
       print("–og hér heldur forritið áfram"
 
-.. _for-lykkur:      
+.. _for-lykkjur:      
       
 For-lykkjur
 -----------

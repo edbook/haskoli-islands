@@ -17,6 +17,8 @@ strengjaaðgerðir, auk þess sem föllin í kafla :numref:`öll-söfn` duga sé
 líka bæði á strengi og mengi og þau í kafla :numref:`söfn-af-tölum` má nota á
 mengi.
 
+.. _bua-til-sofn:
+
 Föll til að búa til söfn eða breyta tegund safns
 ------------------------------------------------
 
@@ -36,7 +38,7 @@ Föll til að búa til söfn eða breyta tegund safns
       ``E = enumerate(r)``    ; býr til enumerate-ítrara, (0, r[0]), (1, r[1]), …
       ``z = zip(R,r)``        ; býr til zip-ítrara (R[0], r[0]), (R[1], r[1]), …
 
-   .. admonition:: Æfing: 
+   .. admonition:: Æfing: Ýmis söfn búin til
       :class: aefing
 
       a) Búið til lista af tölum sem er ekki í röð og inniheldur einhver endurtekin
@@ -44,7 +46,7 @@ Föll til að búa til söfn eða breyta tegund safns
       b) Breytið strengnum "abc" í lista með skipuninni :code:`L = list("abc")`.
       c) Notið split til að skipta :code:`"Afi minn og amma mín"` í stök orð.
       d) Búið til enumerate-ítrara E úr L. Prentið bæði E og list(E).
-      e) Búið til zip-ítrara Z úr L og listanum ["Ari", "Bjarni", "Ceres"].
+      e) Búið til zip-ítrara Z úr L og listanum ``["Ari", "Bjarni", "Ceres"]``.
          Prentið Z og list(Z).
 
 .. _öll-söfn:
@@ -63,12 +65,12 @@ Aðgerðir sem duga á öll söfn
       ``len(S)``       , fjöldi staka í S
       ``S1 = S.copy()``, býr til afrit af S og setur í S1      
 
-   .. Æfing
-   .. hint::
+   .. admonition:: Æfing: Mismunandi samanburður
+      :class: aefing
 
       Rifjið upp það sem stendur í kafla :numref:`listar` um tilvísanir og
       fallið ``copy``. Búið til lista L = [2, 3, 5, 7], afritið hann í L1 og L2
-      með venjulegri gildisgjöf (L1 = L) og með copy (L2 = L.copy). Prófið svo
+      með venjulegri gildisgjöf (L1 = L) og með copy (``L2 = L.copy()``). Prófið svo
       að bera listana saman bæði með "==" og með "is".
          
 .. _söfn-af-tölum:   
@@ -84,11 +86,34 @@ Föll sem duga á söfn af tölum eða rökgildum
       ``any(S)``, er eitthvert stak í S satt eða :math:`\neq 0`?  
       ``all(S)``, eru öll stök í S sönn eða :math:`\neq 0`?
 
-   .. admonition:: Æfing: 
+   Það má reyndar líka beita min og max á söfn af strengjum, og þá finnast
+   strengir sem eru fremst eða aftast í stafrófsröð.
+
+   .. admonition:: Æfing: min, max og sum
       :class: aefing
 
-      Prófið þessi föll.
+      Notið fyrstu þrjú föllin til að finna minnsta og stærsta stak og summu
+      staka í listanum ``L=[1,2,3,5]`` og menginu ``{2,8,4}``.
+
+   .. admonition:: Æfing: Rökgildalistar
+      :class: aefing
+   
+      Beitið ``any`` og ``all`` á rökgildalistana ``[True, True, False]``,
+      ``[False, False]`` og ``[True, True]``.
       
+   .. admonition:: Æfing: Mengjalisti
+      :class: aefing
+
+      a) Skrifið fall :code:`meðx(M,x)` þar M er listi af mengjum, :code:`M =
+         [M[0], M[1],...]`, og x er eitthvað gildi. Fallið á að skila lista af
+         rökgildum, r, þannig að r[i] sé satt ef x :math:`{}\in{}` M[i], annars
+         ósatt. Prófið með :code:`M = [{0,1,2}, {1,2,3}, {2,3,4}]` og
+         :code:`x=3` sem ætti að skila :code:`[False, True, True]`.
+
+      b) Prófið föllin any og all á niðurstöðu prófunarinnar í a-lið.
+
+.. _allar-runur:
+         
 Aðgerðir sem duga á allar runur
 -------------------------------
        
@@ -101,31 +126,20 @@ Aðgerðir sem duga á allar runur
       ``R.count(s)`` ; hve oft kemur s fyrir í R
       ``R.index(s)`` ; númer fyrstu staðsetningar s í R, villa ef ekkert finnst
 
-   .. Æfing
-   .. hint::
-
-      a) Skrifið fall :code:`meðx(M,x)` þar M er listi af mengjum, :code:`M =
-         [M[0], M[1],...]`, og x er eitthvað gildi. Fallið á að skila lista af
-         rökgildum, r, þannig að r[i] sé satt ef x :math:`{}\in{}` M[i], annars
-         ósatt. Prófið með :code:`M = [{0,1,2}, {1,2,3}, {2,3,4}]` og
-         :code:`x=3` sem ætti að skila :code:`[False, True, True]`.
-
-      b) Prófið föllin any og all á niðurstöðu prófunarinnar í a-lið.
-
-      c) Búið til talnalista og talnamengi að eigin vali og prófið föllin min,
-         max og sum.
-
-      d) Búið til samstæðuna (1, 2, 3, 1, 2, 3) bæði með samskeytingu og
-         fjölföldun (``+`` og ``*``)
-
-      e) Hvað eru mörg r í "Rómverskur riddari réðst inn í Rómarborg, rændi þar
+   .. admonition:: Æfing: Rómverskur riddari
+      :class: aefing
+         
+      a) Hvað eru mörg r í "Rómverskur riddari réðst inn í Rómarborg, rændi þar
          og ruplaði radísum og rófum" (notið lower og count). Í hvaða sæti er æ-ið?
 
-      f) Ef s kemur alls ekki fyrir í R þá skilar index villu. Ef hætta er á að það
+      b) Ef s kemur alls ekki fyrir í R þá skilar index villu. Ef hætta er á að það
          gerist þarf að verja sig með því að byrja á að spyrja ``if s in R:...``.
          Framkallið þessi villuskilaboð og búið í framhaldi til fall sem finnur
          staðsetninguna, en skilar -1 í staðinn fyrir að gefa villu þegar s finnst
          ekki. Prófið.
+
+      c) Búið til samstæðuna (1, 2, 3, 1, 2, 3) bæði með samskeytingu og
+         fjölföldun (``+`` og ``*``)
 
 .. _bara-listar:      
       
@@ -143,7 +157,7 @@ Föll sem duga bara á lista
       ``L.remove(g)``   ;fjarlægir fyrsta stakið sem hefur gildið g úr L
       ``L.insert(i,s)`` ;stingur staki s inn í L á stað i
 
-.. admonition:: Sýnidæmi: Breyting á lista
+.. admonition:: Sýnidæmi: Listaviðbót og -brottfall
    :class: synidaemi
 
    .. code:: python3
@@ -153,9 +167,9 @@ Föll sem duga bara á lista
       L.append(1)
       L.append(2)    # Nú er L = [1,2]
       L.extend(M)    # jafngilt og L = L + M
-      L.remove(2)    # Nú er L = [1,2,8]
+      L.remove(2)    # Nú er L = [1,7,8]
 
-.. admonition:: Æfing: 
+.. admonition:: Æfing: Lista breytt
    :class: aefing
 
    Sláið inn skipanirnar í sýnidæminu og prófið í framhaldi föllin
@@ -177,15 +191,15 @@ og til að gera eitthvað við öll stök í mengi M mætti skrifa:
 
     :code:`for s in M: ...`
 
-.. Æfing
-.. hint::
+.. admonition:: Æfing: Nemendalisti
+   :class: aefing
 
    Látið :code:`L = ["Ari", "Ása", "Fía", "Jói", "Nói"]` (nemendurnir í mengjaæfingunni).
 
-   a) Notið for-lykkju sem byrjar ``for x in M:`` til að prenta nöfn nemendanna,
+   a) Notið for-lykkju sem byrjar ``for x in L:`` til að prenta nöfn nemendanna,
       eitt á hverja línu.
 
-   b) Notið nú for-lykkju sem byrjar á ``for (i,x) in enumerate(M):`` til að prenta
+   b) Notið nú for-lykkju sem byrjar á ``for (i,x) in enumerate(L):`` til að prenta
       nöfnin í töflu með númeri hvers nemanda fremst (byrjið sem sé á ``1. Ari``).
           
 Yfirgrip (*comprehension*)
@@ -224,8 +238,9 @@ Yfirgrip (*comprehension*)
        for k in L1:
            if k > 5: L3.append(k)
            
-.. Æfing
-.. hint::
+.. admonition:: Æfing:  Yfirgrip
+   :class: aefing
+
    a) Notið yfirgrip til að búa til lista með veldum af 2 frá 1 til 10, ``[2,4,8,..., 1024]``
       
    b) Látið ``x = [3,4,0,2,0,8,5]`` og notið yfirgrip til að búa til y með
