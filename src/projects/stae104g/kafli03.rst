@@ -129,7 +129,7 @@ láta svo :math:`h` stefna á :math:`0`.
 Þetta gefur hallatölu :hover:`snertilsins,snertill` við graf fallsins í punktinum
 :math:`(a,f(a))`
 
-Jafna snertils við graf fallsins í punktingum :math:`a` er línan
+Jafna snertils við graf fallsins í punktinum :math:`a` er línan
 
 .. math:: y = f'(a)(x-a) + f(a).
 
