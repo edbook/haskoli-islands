@@ -274,13 +274,13 @@ Athugasemd
 
 	.. math::
 
-	   x^{\alpha}\cos(\ln(\beta x)), (\ln x)x^{\alpha}\cos(\ln(\beta x)), \ldots,
-	   (\ln x)^{m-1}x^{\alpha}\cos(\ln(\beta x)),
+	   x^{\alpha}\cos(\beta \ln(x)), (\ln x)x^{\alpha}\cos(\beta \ln(x)), \ldots,
+	   (\ln x)^{m-1}x^{\alpha}\cos(\beta \ln(x)),
 
 	.. math::
 
-	   x^{\alpha}\sin(\ln(\beta x)),
-	   (\ln x)x^{\alpha t}\sin(\ln(\beta x)), \ldots, (\ln x)^{m-1}x^{\alpha}\sin(\ln(\beta x)).
+	   x^{\alpha}\sin(\beta \ln(x)),
+	   (\ln x)x^{\alpha t}\sin(\beta \ln(x)), \ldots, (\ln x)^{m-1}x^{\alpha}\sin(\beta \ln(x)).
 
 Sérlausnir og Green-föll
 ------------------------
