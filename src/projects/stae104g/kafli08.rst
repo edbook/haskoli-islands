@@ -342,61 +342,61 @@ Setning
     :math:`y'=e^{kx} + kxe^{kx}` og 
     :math:`y''=ke^{kx} + ke^{kx} + k^2xe^{kx}=2ke^{kx}`. 
     Stingum þessu inn í diffurjöfnuna, þá fæst
-    
+     
     .. math::
-    	
-	a(2ke^{kx} + k^2xe^{kx}) + b(e^{kx}+kxe^{kx}) + cxe^{kx}
-	= e^{kx} (a2k + ak^2x + b+ bxk+cx)
-	= e^{kx}(2ak+b + x(ak^2+bk+c))
+        & a(2ke^{kx}+k^2xe^{kx}) + b(e^{kx}+kxe^{kx})+cxe^{kx}\\
+        =& e^{kx}(a2k+ak^2x+b+bxk+cx) \\
+        =& e^{kx}(2ak+b + x(ak^2+bk+c))
+    
+    Þar sem :math:`k` er lausn á kennijöfnunni þá er innri sviginn jafn 0, 
+    og þar sem :math:`k=-\frac b{2a}` þá er :math:`2ak=-b`, sem segir 
+    okkur að fyrstu tveir liðirnir í ytri sviganum styttast út. 
+    
+    Af þessu sést að :math:`xe^{kx}` er lausn og þá er 
+    :math:`Ae^{kx}+Bxe^{kx}` lausn fyrir öll :math:`A` og :math:`B`
+     
+    Tilvik III: Sýnum að :math:`y=e^{kx}\cos(\omega x)` sé lausn.
+    Þá er 
+     
+    .. math:: y' = ke^{kx}\cos(\omega x) - e^{kx}\sin(\omega x)\omega
+     
+    og 
+     
+    .. math:: 
+    	y'' = k^2e^{kx}\cos(\omega x) - ke^{kx}\sin(\omega x)\omega
+        -ke^{kx}\sin(\omega x)\omega - e^{kx}\cos(\omega x)\omega^2
+      
+    Setjum þetta inn í diffurjöfnuna, þá fæst
+      
+    .. math::
+        \begin{aligned}
+	&a(k^2e^{kx}\cos(\omega x) - ke^{kx}\sin(\omega x)\omega
+	-ke^{kx}\sin(\omega x)\omega - e^{kx}\cos(\omega x)\omega^2)\\
+	&+b(ke^{kx}\cos(\omega x) - e^{kx}\sin(\omega x)\omega)\\
+	&+ce^{kx}\cos(\omega x)\\
+	=& e^{kx}\cos(\omega x)(ak^2-a\omega^2+bk+c)\\
+	&+ e^{kx}\sin(\omega x)\omega(-2ak -b)
+        \end{aligned}
+	
+    Ef við stingum nú inn :math:`k=-\frac b{2a}` og 
+    :math:`\omega=\frac{\sqrt{ac-b^2}}{2a}` þá sjáum við að 
+    fyrri sviginn jafngildir
+      
+    .. math:: 
+      	\begin{aligned}&a\left(-\frac b{2a}\right)^2 - a\left(\frac{\sqrt{ac-b^2}}{2a}\right)^2
+	+b\left(-\frac b{2a}\right)+c\\
+	=& \frac{b^2}{4a} - \frac{4ac-b^2}{4a} - \frac{b^2}{2a} +c =0
+        \end{aligned}
+	
+    og seinni sviginn jafngildir
+      
+    .. math::  -2a\left(-\frac b{2a} - b\right) = 0.
+      
+    Af þessu sést að :math:`e^{kx}\cos(\omega x)` er lausn. Með sama hætti 
+    fæst að :math:`e^{kx}\sin(\omega x)` er lausn, og þá er 
+    :math:`Ae^{kx}\cos(\omega x) + Be^{kx}\sin(\omega x)` lausn fyrir
+    öll :math:`A` og :math:`B`.
 
-     Þar sem :math:`k` er lausn á kennijöfnunni þá er innri sviginn jafn 0, 
-     og þar sem :math:`k=-frac b{2a}` þá er :math:`2ak=-b`, sem segir 
-     okkur að fyrstu tveir liðirnir í sviganum styttast út. 
-     
-     Af þessu sést að :math:`xe^{kx}` er lausn og þá er 
-     :math:`Ae^{kx}+Bxe^{kx}` lausn fyrir öll :math:`A` og :math:`B`
-     
-     Tilvik III: Sýnum að :math:`y=e^{kx}\cos(\omega x)` sé lausn.
-     Þá er 
-     
-     .. math:: y' = ke^{kx}\cos(\omega x) - e^{kx}\sin(\omega x)\omega
-     
-     og 
-     
-     .. math:: 
-     
-     	y'' = k^2e^{kx}\cos(\omega x) - ke^{kx}\sin(\omega x)\omega
-	-ke^{kx}\sin(\omega x)\omega - e^{kx}\cos(\omega x)\omega^2
-      
-      Setjum þetta inn í diffurjöfnuna, þá fæst
-      
-      .. math::
-      	
-	a(k^2e^{kx}\cos(\omega x) - ke^{kx}\sin(\omega x)\omega
-	-ke^{kx}\sin(\omega x)\omega - e^{kx}\cos(\omega x)\omega^2)
-	+b(ke^{kx}\cos(\omega x) - e^{kx}\sin(\omega x)\omega)
-	+ce^{kx}\cos(\omega x)
-	= e^{kx}\cos(\omega x)(ak^2-a\omega^2+bk+c)
-	+ e^{kx}\sin(\omega x)\omega(-2ak -b)
-	
-      Ef við stingum nú inn :math:`k=-\frac b{2a}` og 
-      :math:`\omega=\frac{\sqrt{ac-b^2}{2a}` þá sjáum við að 
-      fyrri sviginn jafngildir
-      
-      .. math:: 
-      
-      	a\left(-\frac b{2a}\right)^2 - a\left(\frac{\sqrt{ac-b^2}{2a}\right)^2
-	+b\left(-\frac b{2a}+c
-	= \frac{b^2}{4a} - \frac{4ac-b^2}{4a} - \frac{b^2}{2a} +c =0
-	
-      og seinni sviginn jafngildir
-      
-      .. math::  -2a\left(-\frac b{2a} - b = 0.
-      
-      Af þessu sést að :math:`e^{kx}\cos(\omega x)` er lausn. Með sama hætti 
-      fæst að :math:`e^{kx}\sin(\omega x)` er lausn, og þá er 
-      :math:`Ae^{kx}\cos(\omega x) + Be^{kx}\sin(\omega x)` lausn fyrir
-      öll :math:`A` og :math:`B`
 
 Setning
 ~~~~~~~
