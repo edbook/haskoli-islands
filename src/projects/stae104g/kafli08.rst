@@ -397,6 +397,7 @@ Setning
     :math:`Ae^{kx}\cos(\omega x) + Be^{kx}\sin(\omega x)` lausn fyrir
     öll :math:`A` og :math:`B`.
 
+
 Setning
 ~~~~~~~
 
