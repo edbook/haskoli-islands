@@ -176,7 +176,8 @@ Setning
           \frac{\lim_{n\rightarrow\infty}a_n}{\lim_{n\rightarrow\infty}b_n}`,
     (v)   ef :math:`a_n\leq b_n` fyrir öll :math:`n` sem eru nógu stór, þá
           er
-          .. math:: \lim_{n\rightarrow\infty}a_n\leq\lim_{n\rightarrow\infty}b_n,
+          .. math:: 
+	  	\lim_{n\rightarrow\infty}a_n\leq\lim_{n\rightarrow\infty}b_n,
 
           (frasinn *fyrir öll* :math:`n` *sem eru nógu stór* þýðir að til er
           einhver tala :math:`N` þannig að skilyrðið gildir fyrir öll
