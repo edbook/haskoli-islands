@@ -201,7 +201,9 @@ og til að gera eitthvað við öll stök í mengi M mætti skrifa:
 
    b) Notið nú for-lykkju sem byrjar á ``for (i,x) in enumerate(L):`` til að prenta
       nöfnin í töflu með númeri hvers nemanda fremst (byrjið sem sé á ``1. Ari``).
-          
+
+.. _yfirgrip:
+      
 Yfirgrip (*comprehension*)
 --------------------------
 - Við höfum séð hvernig hægt að gefa listum gildi með því að telja upp stökin í

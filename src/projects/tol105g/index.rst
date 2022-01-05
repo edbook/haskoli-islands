@@ -22,6 +22,12 @@ Höfundur efnis og kennari: Kristján Jónasson
    kafli05
    kafli06
    kafli07
-
+   kafli08
+   kafli09
+   kafli10
+   kafli11
+   kafli12
+   kafli13
+   
 .. toctree::
    verkefni

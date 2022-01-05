@@ -4,11 +4,10 @@
    :language: matlab
    :class: highlight
 
+.. _inngangur:
 
 Inngangur: Um Python
 ====================
-
-.. _inngangur:
 
 Einfalt og auðlært mál
 ----------------------
@@ -21,11 +20,11 @@ Python er forritunarmál sem kom fram árið 1991 og hefur náð mikilli útbrei
 
    Monty Python grínistarnir
 
-Vinsælasta útgáfan af Python nefnist formlega CPython og er opin og ókeypis. Hana er að finna á `python.org <http://python.org>`_ og þar má líka lesa um *Python Software Foundation* sem hefur síðan 2001 séð um þróun málsins, leyfi, dreifingu, Python-ráðstefnur o.s.frv.
+Vinsælasta útgáfan af Python nefnist formlega CPython og er opin og ókeypis. Hana er að finna á `python.org <https://python.org>`_ og þar má líka lesa um *Python Software Foundation* sem hefur síðan 2001 séð um þróun málsins, leyfi, dreifingu, Python-ráðstefnur o.s.frv.
 
 Frá upphafi var markmiðið að búa til einfalt og auðlært forritunarmál, sem væri þannig að oftast væri bara ein augljós og einföld leið til að útfæra tiltekna aðgerð eða reikninga. Forrit áttu að samanstanda af enskum orðum að mestu leyti en ekki samansuðu tákna eins og algengt er t.d. í Perl-forritum, sem minna á blótsyrði í Andrés-blaði.
 
-.. figure:: myndir/perl.png
+.. figure:: myndir/perl.jpg
    :align: center
    :figwidth: 10cm
 
@@ -62,4 +61,4 @@ Fjölmargar leiðbeiningar um Python má finna á netinu, stuttar og langar, ók
 - `Think Python <https://greenteapress.com/wp/think-python-2e/>`_ (ókeypis byrjendakennslubók sem hefur verið kennd í Tölvunarfræði 1a)
 - `Google's Python Class <https://developers.google.com/edu/python/>`_ (líka fyrir byrjendur)
 - `Learn Python <https://www.learnpython.org/>`_ (með reitum til að keyra forrit og skoða úttak)
-- `The Python Tutorial <https://docs.python.org/3/tutorial/index.html>`_ (opinberar Python leiðbeiningar á python.org, fyrir svolítið lengra komna)
+- `The Python Tutorial <https://docs.python.org/3/tutorial/index.html>`_ (opinberar Python leiðbeiningar á python.org, fyrir svolítið lengra komna).

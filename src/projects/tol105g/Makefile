@@ -1,8 +1,9 @@
 PROJECT=$(notdir $(CURDIR))
-PROJECTCSS=_static/css/$(PROJECT).css
+PROJECTCSSDIR=_static/css/$(PROJECT).css
+PROJECTCSS=$(PROJECTCSSDIR)/$(PROJECT).css
 BUILD=../../../_build/$(PROJECT)
-BUILDCSS=$(BUILD)/_static/css/$(PROJECT).css
-BDIR=$(CURDIR)/html
+BUILDCSSDIR=$(BUILD)/_static/css/$(PROJECT).css
+BUILSCSS=$(BUILDCSSDIR)/$(PROJECT).css
 
 build:	$(BUILDCSS)
 	$(MAKE) --directory=../../.. build project=$(PROJECT)
@@ -15,9 +16,13 @@ auto:	$(BUILDCSS)
 	@echo
 	$(MAKE) --directory=../../.. autobuild project=$(PROJECT)
 
+clean:
+	rm -rf $(BUILD)
+
 www:
 	$(MAKE) build
-	copy-to-cs $(BUILD) /Volumes/cs/t1a
+	copy-to-cs $(BUILD) /Volumes/cs/htdocs/t1a
 
 $(BUILDCSS): $(PROJECTCSS)
+	mkdir -p $(BUILDCSSDIR)
 	cp $(PROJECTCSS) $(BUILDCSS)

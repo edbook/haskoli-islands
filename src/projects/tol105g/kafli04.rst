@@ -8,11 +8,16 @@
 
 Breytur og tög
 ==============
-.. rubric:: Breytur
+
+Breytur
+-------
 
 **Breyta** (*variable*) er nafn á minnishólfi í tölvu, þar sem geyma má **gildi** (*value*). Gildin geta svo verið af ýmsu tagi, eða haft ýmis **tög** (*types*), og eins og fyrr segir eru þessi tög tengd gildunum en ekki breytunum sjálfum. Fyrir utan gildi sem geymd eru í breytum er líka talað um gildi sem útkomu úr **útreikningi** (*computation*) eða **segð** (*expression*), t.d. hefur segðin :math:`2 + 2` gildið :math:`4`. Ósamsett gildi, t.d. 2, heitir **fasti** (*constant*).
 
-.. rubric:: Grunntög
+.. _grunntög:
+
+Grunntög
+--------
 
 Hér er listi yfir grunntögin í Python og dæmi um fasta af hverju tagi:
 
@@ -25,7 +30,8 @@ Hér er listi yfir grunntögin í Python og dæmi um fasta af hverju tagi:
     - *"EkkertTag" (NoneType)*, :code:`None` sérstakt tag sem fæst m.a. úr
       föllum sem engu skila.
 
-.. rubric:: Önnur tög      
+Önnur tög
+---------
 
 Önnur algengustu innbyggð tög eru (sjá kafla :numref:`söfn`) eru:
 
@@ -35,7 +41,8 @@ Hér er listi yfir grunntögin í Python og dæmi um fasta af hverju tagi:
     - *Ítrarar (iterator)*
     - *Uppflettitöflur (dictionary)*
 
-.. rubric:: Nöfn breyta
+Nöfn breyta
+-----------
       
 Sú regla gildir að nafn breytu skal vera runa af bókstöfum, tölustöfum, og _, það má ekki byrja á tölu og það má ekki vera lykilorð í málinu eins og "for" eða "return". Í sumum forritunarmálum verða bókstafirnir að vera enskir, en sú takmörkun á ekki við um Python, Dæmi um lögleg breytunöfn eru: x_1, hæð, ∆.
 
@@ -239,6 +246,10 @@ Hér er tafla yfir nokkur möguleg snið:
      - Skrifað í n stafa breitt svið, tölur hægri-jafnaðar og  |br|
        strengir vinstri-jafnaðir
 
+   * - :code:`{heiltala:0n}`
+     - Skrifa töluna hægri-jafnaða í n-stafa breitt svið og fylla með |br|
+       núllum frá vinstri; ``{k:03}`` myndi skrifa ``007`` ef k=7
+
    * - :code:`{heiltala:<n}`
      - Vinstri-jafna heiltölu í n stafa svið
 
@@ -276,7 +287,13 @@ viðbót:
        f'Halló {nafn} og vertu velkomin(n)'
 
 þar sem gert er ráð fyrir að h, x og y séu heiltölubreytur, A og B séu
-kommutölubreytur og nafn sé strengjabreyta.
+kommutölubreytur og nafn sé strengjabreyta. Forritið gæti t.d. skrifað út:
+
+   .. code:: text
+      
+      hæð = 10, breidd = 28
+      A = 6.281, B = 11.37
+      Halló Kristján og vertu velkomin(n)
        
 .. danger::
    F-strengir eru nýleg viðbót við Python, þeir komu í Python 3.6 í desember
@@ -413,7 +430,7 @@ litum á næstu línum í línuritinu.
           return F,U
 
       (F,U) = flat_og_um(1)
-      print(r"Flatarmálið er {F:.3f} og ummálið {U:.3f}")
+      print(f"Flatarmálið er {F:.3f} og ummálið {U:.3f}")
 
 .. admonition:: Sýnidæmi: Fall sem skilar engu
    :class: synidaemi
@@ -450,25 +467,31 @@ kafla :numref:`pakkar`. Þau þarf að gera aðgengileg með því að *flytja i
     :widths: auto
     :name: tab:almenn-föll
 
-    +-----+------------------------------------------+
-    |abs  |tölugildi, abs(-3) → 3                    |
-    +-----+------------------------------------------+
-    |max  |hámark: max(1,2) → 2                      |
-    +-----+------------------------------------------+
-    |min  |lágmark: min(1,2) → 1                     |
-    +-----+------------------------------------------+
-    |int  |kommutala → heiltala, strengur → heiltala |
-    +-----+------------------------------------------+
-    |float|heiltala → kommutala, strengur → kommutala|
-    +-----+------------------------------------------+
-    |range|býr til runu til að nota í for-lykkju,    |
-    |     |sjá grein :numref:`icollatz`              |
-    +-----+------------------------------------------+
-    |len  |lengd strengs                             |
-    +-----+------------------------------------------+
-    |type |tag breytu                                |
-    +-----+------------------------------------------+
+    +-----+---------------------------------------------+
+    |abs  |tölugildi, abs(-3) → 3                       |
+    +-----+---------------------------------------------+
+    |max  |hámark: max(1,2) → 2                         |
+    +-----+---------------------------------------------+
+    |min  |lágmark: min(1,2) → 1                        |
+    +-----+---------------------------------------------+
+    |int  |kommutala → heiltala, strengur → heiltala    |
+    +-----+---------------------------------------------+
+    |round|kommutala → næsta heiltala (rúnnað)          |
+    +-----+---------------------------------------------+
+    |float|heiltala → kommutala, strengur → kommutala   |
+    +-----+---------------------------------------------+
+    |range|býr til runu til að nota í for-lykkju,       |
+    |     |sjá grein :numref:`icollatz`                 |
+    +-----+---------------------------------------------+
+    |len  |lengd strengs                                |
+    +-----+---------------------------------------------+
+    |type |tag breytu                                   |
+    +-----+---------------------------------------------+
 
+**Ath.** Með ``int`` eru aukastafir skornir af en með ``round`` eru tölur
+hækkaðar eða lækkaðar eftir því hvort aukastafirnir eru > 0.5 eða < 0.5.
+Ef aukastafir eru = 0.5 er valin næsta slétta tala: 2.5 → 2 og 3.5 → 4.
+    
 .. admonition:: Æfing: Prófun almennra falla
    :class: aefing
            
@@ -481,7 +504,7 @@ kafla :numref:`pakkar`. Þau þarf að gera aðgengileg með því að *flytja i
 .. rubric::       
    Helstu stærðfræðiföll og fastar
 
-Til að virkja innbyggð stærðfræðiföll í Python þarf að skrifa fremst í forritið:
+Til að virkja innbyggð stærðfræðiföll í Python þarf að flytja inn sérstakt fallasafn eða einingu, ``math`` með því að skrifa fremst í forritinu:
 
     :code:`import math`
 
@@ -496,6 +519,7 @@ Hér er upptalning á helstu innbyggðum stærðfræðiföllum:
     :code:`pi, e, inf, nan`: (stærðfræði)fastar |br|
     :code:`radians, degrees`: breytt úr gráðum í radíana og öfugt |br| 
 
+Ath. að ``log(x)`` gefur náttúrulegan logra (lógaritma), sem oft er táknaður ln(x).
 Ef nota á sin, cos og pi (til dæmis) má rita fremst: |br| |sp3| |sp3|
 :code:`from math import sin, cos, pi`, eða: |br| |sp3| |sp3|
 :code:`import math` og svo :code:`math.sin`, :code:`math.cos`... |br|
@@ -503,7 +527,7 @@ Ef nota á sin, cos og pi (til dæmis) má rita fremst: |br| |sp3| |sp3|
 Sjá nánar í `Python hjálpinni <https://docs.python.org/3/library/math.html>`_,
 og ýmis dæmi í þessum fyrirlestrarnótum, t.d. sýnidæmið hér næst, "Ósamsett trapisuregla" í kafla :numref:`fallbreytur`, "Rætur og veldi" í kafla
 :numref:`for-lykkjur` og `verkefni 8
-<http://cs.hi.is/t1a/verkefni/#polhnit-t4>`_ aftast í nótunum.
+<https://cs.hi.is/t1a/verkefni/#polhnit-t4>`_ aftast í nótunum.
 
 .. admonition:: Sýnidæmi: Regla Herons
    :class: synidaemi

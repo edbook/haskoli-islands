@@ -357,7 +357,7 @@ Um margfeldi fylkja og vigra gilda dreifireglurnar
    &A(x + y) = Ax + Ay\;\:\text{og}\\
    &(A + B)x = Ax + Bx
 
-þar sem :math:`A` og :math:`B` eru fylki og :math:`x` og :math:`y` vigrar. Hér má setja $-$ í stað $+$.
+þar sem :math:`A` og :math:`B` eru fylki og :math:`x` og :math:`y` vigrar. Hér má setja :math:`-` í stað :math:`+`.
 
 .. note::
    Ef A er NumPy fylki og x er NumPy vigur þá fæst b = margfeldi A og x með :code:`b

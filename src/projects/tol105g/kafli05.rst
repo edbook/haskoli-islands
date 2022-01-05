@@ -4,6 +4,11 @@
    
 Söfn: Eitt nafn en mörg gildi
 =============================
+
+.. _söfn-inngangur:
+
+Inngangur
+---------
 Fyrir utan grunngagnatögin sem fjallað hefur verið um að framan er Python með ýmis innbyggð tög fyrir **söfn** (*containers*), en breytur af slíku tagi geta geymt mörg stök eða gildi. Reyndar hefur þegar verið talað svolítið um eitt slíkt tag, nefnilega strengi sem geta geymt marga stafi. Mörg safntögin í Python teljast **runur** (*sequences*), nánar tiltekið eru það **strengir**, **listar** (*lists*), **samstæður** (*tuples*) og **ítrarar** (*iterators*; t.d. útkoma úr range), en önnur teljast ekki runur, m.a. **mengi** (*sets*) og **uppflettitöflur** (*dictionaries*). Uppflettitöflurnar eru svolítið sér á parti og umfjöllun um þær kemur seinna, en í þessum kafla og þeim næsta verða hin safntögin á dagskrá. Eftirfarandi tafla sýnir hvernig hægt er að safna tölunum 1, 2, 3 og 4 í streng, lista, samstæðu, mengi og ítrara:
 
    .. list-table::
@@ -187,7 +192,7 @@ Listar
 
 Samstæður
 ---------
-Annað safntag í Python sem líka útfærir tölvunarfræðilega lista er **samstæða** (*tuple*). Enska orðið *tuple* er fengið að láni úr stærðfræði, en stærðfræðilegt `tuple <https://en.wikipedia.org/wiki/Tuple>`_ (þýtt í `stærðfræðiorðasafninu <http://stæ.is/os>`_ með n-und) er skilgreint sem "endanleg röðuð runa af stökum", venjulega táknuð með því að telja stökin upp innan sviga t.d. :math:`(2, 3, 4)`. N-undir eiga margt skylt með punktum í plani eða rúmi, enda rithátturinn sá sami. Hér er hugtakið þýtt með samstæða, en undirrituðum finnst n-und stirt og hálfljótt. Svigarithátturinn er einmitt notaður til að búa til samstæður í Python:
+Annað safntag í Python sem líka útfærir tölvunarfræðilega lista er **samstæða** (*tuple*). Enska orðið *tuple* er fengið að láni úr stærðfræði, en stærðfræðilegt `tuple <https://en.wikipedia.org/wiki/Tuple>`_ (þýtt í `stærðfræðiorðasafninu <https://stæ.is/os>`_ með n-und) er skilgreint sem "endanleg röðuð runa af stökum", venjulega táknuð með því að telja stökin upp innan sviga t.d. :math:`(2, 3, 4)`. N-undir eiga margt skylt með punktum í plani eða rúmi, enda rithátturinn sá sami. Hér er hugtakið þýtt með samstæða, en undirrituðum finnst n-und stirt og hálfljótt. Svigarithátturinn er einmitt notaður til að búa til samstæður í Python:
 
     :code:`S = (gildi, gildi...)`.
 
@@ -202,7 +207,14 @@ Hornklofa má áfram nota til að vísa í einstök stök og hlutsamstæður: :c
       S = (1,2,3)  # þrennd
       S[1] = 4     # þetta gefur villu
 
-Sagt er að samstæður séu **óbreytanlegar** (*immutable*) en listar séu **breytanlegir** (*mutable*). Stundum er gott að geta treyst því að einstök gildi breytist ekki, og auk þess notar Python málið samstæður í ýmsum skipunum, t.d. þegar kallað er á föll sem skila fleiru en einu gildi, sbr. grein :numref:`polhnit`, og til að búa til föll með breytilegum stikafjölda (sjá xxxxx). Eitt í viðbót sem er frábrugðið: Hægt er að búa til mengi af samstæðum, og þær geta verið lyklar í uppflettitöflum, en hvorugt má með listum.
+Sagt er að samstæður séu **óbreytanlegar** (*immutable*) en listar séu
+**breytanlegir** (*mutable*). Stundum er gott að geta treyst því að einstök
+gildi breytist ekki, og auk þess notar Python málið samstæður í ýmsum skipunum,
+t.d. þegar kallað er á föll sem skila fleiru en einu gildi, sbr. sýnidæmið "Fall
+sem skilar tveimur niðurstöðum" í kafla :numref:`virka`, og til að búa til föll
+með breytilegum stikafjölda (sjá xxxxx). Eitt í viðbót sem er frábrugðið: Hægt
+er að búa til mengi af samstæðum, og þær geta verið lyklar í uppflettitöflum, en
+hvorugt má með listum.
 
 Flest föllin sem talin eru upp í kafla :numref:`helstu-aðgerðir` duga á samstæður, nema föllin í grein :numref:`bara-listar`. Eins og fyrr segir má líka nota samskeytingarvirkjana + og * á þær.
 

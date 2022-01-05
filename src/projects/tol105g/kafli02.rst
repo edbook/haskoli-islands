@@ -23,8 +23,8 @@ Eitt af því sem tölvur eru góðar í er að framkvæma sömu hlutina aftur o
    :class: aefing
 
    Ýmsar vefsíður bjóða upp á keyrslu Python forrita, t.d. `ideone.com
-   <http://ideone.com/l/python-3>`_ og `online-python.com
-   <http://online-python.com/online_python_compiler>`_
+   <https://ideone.com/l/python-3>`_ og `online-python.com
+   <https://online-python.com/online_python_compiler>`_
    Afritið (eða sláið inn) forritið Veldatafla inn í aðra hvora af þessum síðum
    og keyrið það. Prófið að breyta forritinu (finnið t.d. fleiri veldi).
 
