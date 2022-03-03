@@ -856,15 +856,15 @@ Setning
 .. admonition:: Setning
 	:class: setning
 
-	Gerum ráð fyrir að :math:`f` sé samfellt fall á opna efra hálfplaninu :math:`\{(x,t); t>0\}`, sé takmarkað á lokuninni :math:`\{(x,t); t\geq 0\}` og taki gildið 0 á neðra hálfplaninu :math:`\{(x,t); t<0\}`. Gerum ráð fyrir að  :math:`{\varphi}` sé samfellt takmarkað fall á :math:`{{\mathbb R}}`. Þá hefur :ref:`upphafsgildisverkefnið að ofan<UpphafVarmi2>` ótvírætt ákvarðaða lausn :math:`u`, sem gefin er með formúlunni
+	Gerum ráð fyrir að :math:`f` sé samfellt fall á opna efra hálfplaninu :math:`\{(x,t); t>0\}`, sé takmarkað á lokuninni :math:`\{(x,t); t\geq 0\}` og taki gildið 0 á neðra hálfplaninu :math:`\{(x,t); t<0\}`. Þá hefur :ref:`upphafsgildisverkefnið að ofan<UpphafVarmi2>` ótvírætt ákvarðaða lausn :math:`u`, sem gefin er með formúlunni
 
 	.. math::
-		u(x,t)=E_t\ast {\varphi}(x)+E\ast f(x,t), \qquad x\in {{\mathbb  R}},\ t>0,
+		u(x,t)=E\ast f(x,t), \qquad x\in {{\mathbb  R}},\ t>0,
 
 	þar sem :math:`E` táknar hitakjarnann, sem skilgreindur er með formúlunni
 
 	.. math::
-		E(x,t)=E_t(x)=H(t) \dfrac
+		E(x,t)=H(t) \dfrac
 		1{\sqrt{4{\pi}{\kappa}t}}e^{-x^2/4{\kappa}t},
 		\qquad (x,t)\neq (0,0).
 
