@@ -66,7 +66,7 @@ extensions = [
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #'katex.katex',
-    "sphinxcontrib.katex",
+    #"sphinxcontrib.katex",
     # hieroglyph is used to generate html slides, needs to be installed for use,
     # see https://github.com/nyergler/hieroglyph
     #'hieroglyph',
@@ -99,13 +99,13 @@ enable_custom_scrolldepth = True
 
 # The mathjax path needs to be set to https in order to work on notendur.hi.is, it can be changed here to suit other needs
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-katex_css_path = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-katex_js_path = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+#katex_css_path = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+#katex_js_path = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
 # katex_autorender_path = 'https://cdn.jsdelivr.net/npm/katex@0.12.0/contrib/auto-render.min.js'
 # katex_inline = [r'\(', r'\)']
 # katex_display = [r'\[', r'\]']
-katex_prerender = False
-katex_options = ""
+#katex_prerender = False
+#katex_options = ""
 # katex_path = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/katex.min.js'
 # katex_render = 'https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js'
 # render_math = 'rendermath.js'

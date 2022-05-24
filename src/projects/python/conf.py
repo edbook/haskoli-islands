@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # -*- coding: utf-8 -*-
 #
-# Valin efni í stærðfræði og reiknifræði documentation build configuration file, created by
+# Fyrirlestrarnótur um Python documentation build configuration file, created by
 # sphinx-quickstart on Thu May 21 20:43:00 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -129,7 +129,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Valin efni í stærðfræði og reiknifræði"
+project = "Fyrirlestrarnótur um Python"
 copyright = "2021,Kristján Jónasson"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -335,7 +335,7 @@ latex_documents = [
     (
         "index",
         "StaeI.tex",
-        "Valin efni í stærðfræði og reiknifræði",
+        "Fyrirlestrarnótur um Python",
         "Kristján Jónasson",
         "manual",
     ),
@@ -370,7 +370,7 @@ man_pages = [
     (
         "index",
         "strfrigreiningi",
-        "Valin efni í stærðfræði og reiknifræði",
+        "Fyrirlestrarnótur um Python",
         ["Kristján Jónasson"],
         1,
     )
@@ -389,7 +389,7 @@ texinfo_documents = [
     (
         "index",
         "StrfrigreiningI",
-        "Valin efni í stærðfræði og reiknifræði",
+        "Fyrirlestrarnótur um Python",
         "Kristján Jónasson",
         "StrfrigreiningI",
         "One line description of project.",
@@ -413,13 +413,13 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-# epub_title = 'Valin efni í stærðfræði og reiknifræði'
+# epub_title = 'Fyrirlestrarnótur um Python'
 # epub_author = 'Kristján Jónasson'
 # epub_publisher = 'Kristján Jónasson'
-# epub_copyright = '2022, Kristján Jónasson'
+# epub_copyright = '2015, Kristján Jónasson'
 
 # The basename for the epub file. It defaults to the project name.
-# epub_basename = 'Valin efni í stærðfræði og reiknifræði'
+# epub_basename = 'Fyrirlestrarnótur um Python'
 
 # The HTML theme for the epub output. Since the default themes are not optimized
 # for small screen space, using the same theme for HTML and epub output is

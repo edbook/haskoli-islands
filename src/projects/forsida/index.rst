@@ -68,8 +68,8 @@ Námskeið við HÍ
   :link: rei201g/index.html
 
 .. button::
-   :text: TÖL105G: Tölvunarfræði 1a
-   :link: https://cs.hi.is/t1a
+   :text: Fyrirlestrarnótur um Python
+   :link: https://cs.hi.is/python
 
 .. button::
   :text: Tölfræði frá grunni

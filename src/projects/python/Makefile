@@ -21,7 +21,7 @@ clean:
 
 www:
 	$(MAKE) build
-	copy-to-cs $(BUILD) /Volumes/cs/htdocs/strei
+	copy-to-cs $(BUILD) /Volumes/cs/htdocs/python
 
 $(BUILDCSS): $(PROJECTCSS)
 	mkdir -p $(BUILDCSSDIR)

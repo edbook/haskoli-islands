@@ -3,10 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Valin efni í stærðfræði og reiknifræði
-======================================
+.. include:: rst-include
 
-Höfundur efnis og kennari: Kristján Jónasson
+Fyrirlestrarnótur um Python
+===========================
+
+Höfundur efnis: Kristján Jónasson
 
 .. toctree::
    :maxdepth: 3
@@ -14,8 +16,7 @@ Höfundur efnis og kennari: Kristján Jónasson
    :glob:
 
    kafli*
-
-.. toctree::
    
-   vidauki-A
-   verkefni
+.. toctree::
+
+   verkefnafyrirsogn
