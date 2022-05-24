@@ -3,11 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Töluleg greining (STÆ405G) 
-=======================================================
-
-Háskóli Íslands, haust 2016
----------------------------
+Töluleg greining (STÆ405G), Háskóli Íslands 
+===========================================
 
 Kennari: Benedikt Steinar Magnússon, bsm@hi.is.
 

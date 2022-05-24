@@ -336,7 +336,7 @@ Dæmi
     Þá er samskeytingin :math:`g\circ f`
 
     .. math::
-        g(f(x) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
+        g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
 
     Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið
 

@@ -107,7 +107,7 @@ master_doc = "index"
 # General information about the project.
 # SET PROJECT INFO HERE
 project = "Stærðfræðigreining II (STÆ205G)"
-copyright = "2019, Sigurður Örn Stefánsson"
+copyright = "2021, Sigurður Örn Stefánsson"
 author = "Sigurður Örn Stefánsson"
 
 # The version info for the project you're documenting, acts as replacement for

@@ -128,7 +128,7 @@ source_suffix = ".rst"
 # The master toctree document.
 master_doc = "index"
 
-# General information about the project.
+# General information about the project.<<<<<<< HEAD:src/projects/python/conf.py
 project = "Fyrirlestrarnótur um Python"
 copyright = "2021,Kristján Jónasson"
 
