@@ -26,5 +26,6 @@ build/
 .DS_Store
 *.mo
 html
+.tmp.*
 .github/act
 LIST_OF_HOVER_TERMS*
