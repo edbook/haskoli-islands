@@ -65,11 +65,11 @@ Námskeið við HÍ
 
 .. button::
   :text: REI201G: Stærðfræði og reiknifræði
-  :link: rei201g/index.html
+  :link: https://cs.hi.is/strei/
 
 .. button::
-   :text: TÖL105G: Tölvunarfræði 1a
-   :link: https://cs.hi.is/t1a
+   :text: Fyrirlestrarnótur um Python
+   :link: https://cs.hi.is/python/
 
 .. button::
   :text: Tölfræði frá grunni
