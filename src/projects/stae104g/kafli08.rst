@@ -321,6 +321,83 @@ Setning
         alltaf lausn sama hvernig fastarnir :math:`A` og :math:`B` eru
         valdir og sérhverja lausn má rita á þessu formi.
 
+.. admonition:: Sönnun
+    :class: setning, dropdown
+    
+    Tilvik I: Sýnum að :math:`e^{r_1x}` sé lausn á diffurjöfnunni. Það gerum við með 
+    því að stinga inn :math:`y=e^{r_1x}`, ef út kemur 0 þá er þetta lausn.
+    Byrjum á að reikna :math:`y'=r_1e^{r_1x}` og :math:`y''=r_1^2 e^{r_1x}`. 
+    Stingum þessu inn í diffurjöfnuna, 
+    
+    .. math:: ar_1^2 e^{r_1x} + br_1e^{r_1x} + ce^{r_1} = e^{r_1x}(ar_1^2+br_1+c).
+    
+    Þar sem :math:`r_1` er lausn á :math:`ar^2+br+c=0` þá jafngildir sviginn 0 og 
+    þar með höfum við lausn. 
+    
+    Eins fæst að :math:`e^{r_2x}` er lausn. Og þá segir setningin á undan að 
+    :math:`Ae^{r_1x}+Be^{r_2x}` er lausn fyrir öll :math:`A` og :math:`B`.
+    
+    Tilvik II: Það fæst með sama hætti fyrir ofan að :math:`e^{kx}` er lausn. 
+    Sýnum að :math:`y=xe^{kx}` sé einnig lausn. Þá er
+    :math:`y'=e^{kx} + kxe^{kx}` og 
+    :math:`y''=ke^{kx} + ke^{kx} + k^2xe^{kx}=2ke^{kx}`. 
+    Stingum þessu inn í diffurjöfnuna, þá fæst
+     
+    .. math::
+        & a(2ke^{kx}+k^2xe^{kx}) + b(e^{kx}+kxe^{kx})+cxe^{kx}\\
+        =& e^{kx}(a2k+ak^2x+b+bxk+cx) \\
+        =& e^{kx}(2ak+b + x(ak^2+bk+c))
+    
+    Þar sem :math:`k` er lausn á kennijöfnunni þá er innri sviginn jafn 0, 
+    og þar sem :math:`k=-\frac b{2a}` þá er :math:`2ak=-b`, sem segir 
+    okkur að fyrstu tveir liðirnir í ytri sviganum styttast út. 
+    
+    Af þessu sést að :math:`xe^{kx}` er lausn og þá er 
+    :math:`Ae^{kx}+Bxe^{kx}` lausn fyrir öll :math:`A` og :math:`B`
+     
+    Tilvik III: Sýnum að :math:`y=e^{kx}\cos(\omega x)` sé lausn.
+    Þá er 
+     
+    .. math:: y' = ke^{kx}\cos(\omega x) - e^{kx}\sin(\omega x)\omega
+     
+    og 
+     
+    .. math:: 
+    	y'' = k^2e^{kx}\cos(\omega x) - ke^{kx}\sin(\omega x)\omega
+        -ke^{kx}\sin(\omega x)\omega - e^{kx}\cos(\omega x)\omega^2
+      
+    Setjum þetta inn í diffurjöfnuna, þá fæst
+      
+    .. math::
+        \begin{aligned}
+	&a(k^2e^{kx}\cos(\omega x) - ke^{kx}\sin(\omega x)\omega
+	-ke^{kx}\sin(\omega x)\omega - e^{kx}\cos(\omega x)\omega^2)\\
+	&+b(ke^{kx}\cos(\omega x) - e^{kx}\sin(\omega x)\omega)\\
+	&+ce^{kx}\cos(\omega x)\\
+	=& e^{kx}\cos(\omega x)(ak^2-a\omega^2+bk+c)\\
+	&+ e^{kx}\sin(\omega x)\omega(-2ak -b)
+        \end{aligned}
+	
+    Ef við stingum nú inn :math:`k=-\frac b{2a}` og 
+    :math:`\omega=\frac{\sqrt{ac-b^2}}{2a}` þá sjáum við að 
+    fyrri sviginn jafngildir
+      
+    .. math:: 
+      	\begin{aligned}&a\left(-\frac b{2a}\right)^2 - a\left(\frac{\sqrt{ac-b^2}}{2a}\right)^2
+	+b\left(-\frac b{2a}\right)+c\\
+	=& \frac{b^2}{4a} - \frac{4ac-b^2}{4a} - \frac{b^2}{2a} +c =0
+        \end{aligned}
+	
+    og seinni sviginn jafngildir
+      
+    .. math::  -2a\left(-\frac b{2a} - b\right) = 0.
+      
+    Af þessu sést að :math:`e^{kx}\cos(\omega x)` er lausn. Með sama hætti 
+    fæst að :math:`e^{kx}\sin(\omega x)` er lausn, og þá er 
+    :math:`Ae^{kx}\cos(\omega x) + Be^{kx}\sin(\omega x)` lausn fyrir
+    öll :math:`A` og :math:`B`.
+
+
 Setning
 ~~~~~~~
 
