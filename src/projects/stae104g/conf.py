@@ -78,6 +78,7 @@ extensions = [
     # 'Sphinx_ext.questions',
     # 'Sphinx_ext.iframe',
     # 'Sphinx_ext.button'
+    "sphinxcontrib.youtube"
 ]
 
 # -- Custom extension options and paths --------------------------------------
