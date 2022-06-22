@@ -379,6 +379,11 @@ Skilgreining: Gagntækni
 
 .. _andhverfa:
 
+Myndband: Varpanir, eintækni og átækni
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: j6axhu7Hxag
+
 Skilgreining: Andhverfa
 ~~~~~~~~~~~~~~~~~~~~~~~
 
