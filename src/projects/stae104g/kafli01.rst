@@ -457,6 +457,11 @@ Skilgreining: Graf
 	fall; jafnstætt
 	fall; oddstætt
 
+Myndband: Föll og gröf
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: U3Q4u1gLGWk
+
 Skilgreining: Jafnstætt og oddstætt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
