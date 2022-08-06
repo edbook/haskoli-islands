@@ -64,8 +64,8 @@ Námskeið við HÍ
   :link: stae405g/index.html
 
 .. button::
-  :text: REI201G: Stærðfræði og reiknifræði
-  :link: rei201g/index.html
+  :text: Valin efni í stærðfræði og reiknifræðæi
+  :link: https://cs.hi.is/strei/index.html
 
 .. button::
    :text: Fyrirlestrarnótur um Python
