@@ -136,6 +136,7 @@ Dæmi um markgildi
 
         (iii) :math:`\delta=\epsilon`.
 
+.. youtube:: hnVNyDEQnZw
 
 ------
 
@@ -938,6 +939,9 @@ Setning: Milligildissetningin
 
     Það er möguleiki að það séu fleiri en einn punktur á bilinu þar sem fallið tekur
     gildið :math:`s`. Sönnunin hér á undan finnur þann stærsta.
+
+
+.. youtube:: wwwvSIKHjeM
 
 Fylgisetning
 ~~~~~~~~~~~~
