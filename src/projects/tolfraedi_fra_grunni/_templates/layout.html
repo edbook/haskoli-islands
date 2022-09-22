@@ -98,7 +98,7 @@
 </style>
 
 
-{{ super() }} {% endblock %} {% block footer %} {{ footerscripttags }}
+{{ super() }} {% endblock %} {% block footer %} {{ footerscripttags }} {{ super() }}
 <style>
     /* Sidebar header (and topbar for mobile) */
     
@@ -112,4 +112,5 @@
         background: #343131;
     }
 </style>
+
 {% endblock %}
