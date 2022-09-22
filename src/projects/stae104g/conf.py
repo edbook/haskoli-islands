@@ -78,10 +78,14 @@ extensions = [
     # 'Sphinx_ext.questions',
     # 'Sphinx_ext.iframe',
     # 'Sphinx_ext.button'
-    "sphinxcontrib.youtube"
+    "sphinxcontrib.youtube",
+    "sphinx_rtd_dark_mode"
 ]
 
 # -- Custom extension options and paths --------------------------------------
+
+# user starts in light mode
+default_dark_mode = False
 
 # mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
