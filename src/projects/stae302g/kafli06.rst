@@ -9,16 +9,13 @@ Undirstöðuatriði um afleiðujöfnur
 Afleiðujöfnur
 -------------
 
-Skilgreining (Sjá §6.1)
+Skilgreining (Sjá §6.1) 
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Venjuleg afleiðujafna (eða bara afleiðujafna eða diffurjafna) er jafna sem lýsir sambandinu á milli gilda falls af einni breytistærð og gilda afleiðu þess.
+   
 
-	Venjuleg afleiðujafna (eða bara afleiðujafna eða diffurjafna) er jafna sem lýsir sambandinu á milli gilda falls af einni breytistærð og gilda afleiðu þess.
-
-
-Uppsetning (Sjá §6.1)
+Uppsetning (Sjá §6.1) 
 ~~~~~~~~~~~~~~~~~~~~~
 
 Sérhverja afleiðujöfnu má rita á forminu
@@ -35,23 +32,20 @@ Lausn á afleiðujöfnunni er fall :math:`u` skilgreint á opnu bili :math:`I` �
 
  F(t,u(t),u'(t),u''(t),\dots,u^{(m)}(t))=0.
 
-
+   
 
 Skilgreining (Sjá §6.1)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Stig afleiðujöfnu er hæsta stig á afleiðu, sem kemur fyrir í jöfnunni. Við segjum að :math:`m`-ta stigs afleiðujafna sé á staðalformi þegar hún hefur verið umrituð yfir í jafngilda jöfnu af taginu
 
-	Stig afleiðujöfnu er hæsta stig á afleiðu, sem kemur fyrir í jöfnunni. Við segjum að :math:`m`-ta stigs afleiðujafna sé á staðalformi þegar hún hefur verið umrituð yfir í jafngilda jöfnu af taginu
+.. math::
 
-	.. math::
+ u^{(m)}=G(t,u,u',\dots,u^{(m-1)}).
 
-	 u^{(m)}=G(t,u,u',\dots,u^{(m-1)}).
+   
 
-
-
-Grundvallarspurningar
+Grundvallarspurningar 
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Ef gefin er afleiðujafna er þá endilega til lausn?
@@ -65,121 +59,103 @@ Hvernig finnur maður lausn?
 Ef maður getur ekki fundið beina formúlu fyrir lausn er samt hægt að
 álykta eitthvað um eiginleika lausnar?
 
-
+   
 
 Skilgreining (Sjá §6.1)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Afleiðujafna af gerðinni
 
-	Afleiðujafna af gerðinni
+.. math::
 
-	.. math::
+   a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_0(t)u
+    =f(t),
 
-	   a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_0(t)u
-	    =f(t),
+þar sem föllin :math:`a_0,\dots,a_m,f` eru skilgreind á bili :math:`I\subset \mathbb{R}`, er sögð vera línuleg. Línuleg afleiðujafna er sögð óhliðruð ef fallið :math:`f(t)` í hægri hlið er fastafallið 0 en hliðruð annars.
 
-	þar sem föllin :math:`a_0,\dots,a_m,f` eru skilgreind á bili :math:`I\subset \mathbb{R}`, er sögð vera línuleg. Línuleg afleiðujafna er sögð óhliðruð ef fallið :math:`f(t)` í hægri hlið er fastafallið 0 en hliðruð annars.
+   
+Skilgreining (Sjá §6.3)
+~~~~~~~~~~~~~~~~~~~~~~~
 
+Afleiðujöfnuhneppi (nákvæmar, venjulegt afleiðujöfnuhneppi) er safn af jöfnum sem lýsa sambandi milli gilda óþekktra falla :math:`u_1, \ldots, u_k` af einni breytistærð og gilda á einstökum afleiðum þeirra. Venjulegt afleiðujöfnuhneppi er alltaf hægt að umrita yfir í jöfnur af gerðinni
+
+.. math::
+
+   F_j(t,u_1,\dots,u_k,u_1',\dots,u_k',\dots,
+   u_1^{(m)},\dots,u_k^{(m)})=0,\qquad
+   j=1,\dots,l,
+
+þar sem :math:`t` táknar breytistærðina, :math:`u_1,\dots,u_k` eru óþekktu föllin og föllin :math:`F_1,\dots,F_l` taka gildi í :math:`\mathbb{R}` eða :math:`{\mathbb{C}}`. Til þess að einfalda ritháttinn, þá skilgreinum við vigurgildu föllin :math:`u=(u_1,\dots,u_k)` og :math:`F=(F_1,\dots,F_l)`. Þá eru jöfnurnar hér að ofan jafngildar vigurjöfnunni 
+
+.. math::
+    F(t,u,u',\dots,u^{(m)})=0.
+
+Lausn jöfnunnar er vigurfall :math:`u=(u_1,\dots,u_k)` þar sem föllin :math:`u_1, \cdots, u_k` eru öll skilgreind á opnu bili :math:`I`, þannig að vigurinn :math:`u(t)` er í skilgreiningarmengi fallsins :math:`F` fyrir öll :math:`t\in I` og uppfyllir jöfnuna. 
+
+Stig afleiðujöfnuhneppis er skilgreint sem hæsta stig á afleiðu sem
+kemur fyrir í jöfnunni.
+
+   
 
 Skilgreining (Sjá §6.3)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Við segjum að hneppið sé á staðalformi, ef fjöldi jafna og fjöldi óþekktra falla er sá sami og það má rita á forminu
 
-	Afleiðujöfnuhneppi (nákvæmar, venjulegt afleiðujöfnuhneppi) er safn af jöfnum sem lýsa sambandi milli gilda óþekktra falla :math:`u_1, \ldots, u_k` af einni breytistærð og gilda á einstökum afleiðum þeirra. Venjulegt afleiðujöfnuhneppi er alltaf hægt að umrita yfir í jöfnur af gerðinni
+.. math::
 
-	.. math::
-
-	   F_j(t,u_1,\dots,u_k,u_1',\dots,u_k',\dots,
-	   u_1^{(m)},\dots,u_k^{(m)})=0,\qquad
-	   j=1,\dots,l,
-
-	þar sem :math:`t` táknar breytistærðina, :math:`u_1,\dots,u_k` eru óþekktu föllin og föllin :math:`F_1,\dots,F_l` taka gildi í :math:`\mathbb{R}` eða :math:`{\mathbb{C}}`. Til þess að einfalda ritháttinn, þá skilgreinum við vigurgildu föllin :math:`u=(u_1,\dots,u_k)` og :math:`F=(F_1,\dots,F_l)`. Þá eru jöfnurnar hér að ofan jafngildar vigurjöfnunni
-
-	.. math::
-	    F(t,u,u',\dots,u^{(m)})=0.
-
-	Lausn jöfnunnar er vigurfall :math:`u=(u_1,\dots,u_k)` þar sem föllin :math:`u_1, \cdots, u_k` eru öll skilgreind á opnu bili :math:`I`, þannig að vigurinn :math:`u(t)` er í skilgreiningarmengi fallsins :math:`F` fyrir öll :math:`t\in I` og uppfyllir jöfnuna.
-
-	Stig afleiðujöfnuhneppis er skilgreint sem hæsta stig á afleiðu sem
-	kemur fyrir í jöfnunni.
-
-
+   \begin{aligned}
+   u_1'&= G_1(t, u_1,\dots, u_m),\\
+   u_2'&= G_2(t, u_1,\dots, u_m),\\
+   &\quad \vdots\\
+   u_m'&= G_m(t, u_1,\dots, u_m),\end{aligned}
 
 Skilgreining (Sjá §6.3)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Við segjum að fyrsta stigs afleiðujöfnuhneppi sé línulegt ef það má rita á forminu 
 
-	Við segjum að hneppið sé á staðalformi, ef fjöldi jafna og fjöldi óþekktra falla er sá sami og það má rita á forminu
+.. math::
 
-	.. math::
+   \begin{aligned}
+   u_1'&=a_{11}(t)u_1+\cdots+a_{1m}(t)u_m+f_1(t),\\
+   u_2'&=a_{21}(t)u_1+\cdots+a_{2m}(t)u_m+f_2(t),\\
+   &\qquad \qquad \vdots\qquad \qquad \qquad \qquad \vdots\\
+   u_m'&=a_{m1}(t)u_1+\cdots+a_{mm}(t)u_m+f_m(t).\end{aligned}
 
-	   \begin{aligned}
-	   u_1'&= G_1(t, u_1,\dots, u_m),\\
-	   u_2'&= G_2(t, u_1,\dots, u_m),\\
-	   &\quad \vdots\\
-	   u_m'&= G_m(t, u_1,\dots, u_m),\end{aligned}
-
-Skilgreining (Sjá §6.3)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-	:class: skilgreining
-
-	Við segjum að fyrsta stigs afleiðujöfnuhneppi sé línulegt ef það má rita á forminu
-
-	.. math::
-
-	   \begin{aligned}
-	   u_1'&=a_{11}(t)u_1+\cdots+a_{1m}(t)u_m+f_1(t),\\
-	   u_2'&=a_{21}(t)u_1+\cdots+a_{2m}(t)u_m+f_2(t),\\
-	   &\qquad \qquad \vdots\qquad \qquad \qquad \qquad \vdots\\
-	   u_m'&=a_{m1}(t)u_1+\cdots+a_{mm}(t)u_m+f_m(t).\end{aligned}
-
-	Við segjum að hneppið sé óhliðrað ef :math:`f_i` er núllfallið fyrir öll :math:`i` og við segjum að það sé hliðrað annars.
-
+Við segjum að hneppið sé óhliðrað ef :math:`f_i` er núllfallið fyrir öll :math:`i` og við segjum að það sé hliðrað annars.
+  
 Setning (Sjá §6.3)
 ~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning
-	:class: setning
+Sérhverja venjulega afleiðujöfnu á staðalformi
 
-	Sérhverja venjulega afleiðujöfnu á staðalformi
+.. math::
 
-	.. math::
+ v^{(m)}=G(t,v,v',\dots,v^{(m-1)})
 
-	 v^{(m)}=G(t,v,v',\dots,v^{(m-1)})
+má umrita sem jafngilt afleiðujöfnuhneppi (lausnir afleiðujöfnunnar gefa lausnir á hneppinu og öfugt) sem er fundið þannig að við setjum
 
-	má umrita sem jafngilt afleiðujöfnuhneppi (lausnir afleiðujöfnunnar gefa lausnir á hneppinu og öfugt) sem er fundið þannig að við setjum
+.. math::
 
-	.. math::
+ u_1=v, \qquad u_2=u_1', \quad \ldots\quad u_m=v^{(m-1)},
 
-	 u_1=v, \qquad u_2=u_1', \quad \ldots\quad u_m=v^{(m-1)},
+og jöfnuhneppið er
 
-	og jöfnuhneppið er
+.. math::
 
-	.. math::
+   \begin{aligned}
+   u_1'&=u_2\\
+   u_2'&=u_3\\
+   &\ \,\vdots\\
+   u_m'&=G(t,u_1,u_2,\dots,u_m).\end{aligned}
 
-	   \begin{aligned}
-	   u_1'&=u_2\\
-	   u_2'&=u_3\\
-	   &\ \,\vdots\\
-	   u_m'&=G(t,u_1,u_2,\dots,u_m).\end{aligned}
-
-Skilgreining (Sjá §6.4)
+Skilgreining (Sjá §6.4) 
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Upphafsgildisverkefni snúast um að leysa afleiðujöfnu eða afleiðujöfnuhneppi með því hliðarskilyrði að lausnin og einhverjar afleiður hennar taki fyrirfram gefin gildi í ákveðnum punkti.
 
-	Upphafsgildisverkefni snúast um að leysa afleiðujöfnu eða afleiðujöfnuhneppi með því hliðarskilyrði að lausnin og einhverjar afleiður hennar taki fyrirfram gefin gildi í ákveðnum punkti.
-
-
+   
 Upphafsgildisverkefni fyrir línulega afleiðujöfnu (Sjá §6.4)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -193,29 +169,26 @@ Upphafsgildisverkefni fyrir línulega :math:`m`-ta stigs afleiðujöfnu er sett 
 
 Það að leysa upphafgildis verkefnið felst í því að finna lausn :math:`v` á afleiðujöfnunni sem uppfyllir skilyrðin um gildi á :math:`v(a),\ldots, v^{(m-1)}(a)`.
 
-
+   
 Skilgreining (Sjá §6.5)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Jaðargildisverkefni snúast um að leysa afleiðujöfnu
 
-	Jaðargildisverkefni snúast um að leysa afleiðujöfnu
+.. math::
 
-	.. math::
+ u^{(m)}=f(t,u,u',\dots,u^{(m-1)})
 
-	 u^{(m)}=f(t,u,u',\dots,u^{(m-1)})
+af stigi :math:`m` á takmörkuðu bili :math:`I=[a,b]` með skilyrðum á einhver gildanna (ekki endilega öll)
 
-	af stigi :math:`m` á takmörkuðu bili :math:`I=[a,b]` með skilyrðum á einhver gildanna (ekki endilega öll)
+.. math::
 
-	.. math::
+   u(a), \ u'(a),\dots,  \ u^{(m-1)}(a)\qquad \text{ og } 
+   \qquad  u(b), \ u(b),\dots, \ u^{(m-1)}(b).
 
-	   u(a), \ u'(a),\dots,  \ u^{(m-1)}(a)\qquad \text{ og }
-	   \qquad  u(b), \ u(b),\dots, \ u^{(m-1)}(b).
+   
 
-
-
-Útfærsla jaðargildisverkefna
+Útfærsla jaðargildisverkefna 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Skilyrði eru venjulega sett fram þannig að ákveðnar línulegar samantektir af þessum fallgildum og afleiðum eigi að taka fyrirfram gefin gildi. Fyrir annars stigs jöfnu geta jaðarskilyrðin til dæmis verið
@@ -230,15 +203,12 @@ Lotubundin jaðarskilyrði eru af gerðinni
 
  u(a)=u(b), \qquad u'(a)=u'(b).
 
-
+   
 
 Skilgreining
 ~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
-
-	Hlutafleiðujafna er jafna sem lýsir sambandinu á milli gilda falls af fleiri en einni breytistærð og einstakra hlutafleiða þess.
+Hlutafleiðujafna er jafna sem lýsir sambandinu á milli gilda falls af fleiri en einni breytistærð og einstakra hlutafleiða þess.
 
 Upprifjun á lausnaaðferðum og hagnýtingar
 -----------------------------------------
@@ -264,7 +234,7 @@ Fyrsta stigs aðgreinanlegar afleiðujöfnur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Fyrsta stigs afleiðujafna sem hægt er að rita á forminu
-
+ 
 .. math::
 
  \frac{du}{dt}=f(t)g(u)
@@ -324,103 +294,82 @@ Tilvist og ótvíræðni lausna
 Setning Peano (Sjá Setningu 6.6.1)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning
-	:class: setning
+Gerum ráð fyrir að :math:`\Omega` sé grennd um punktinn :math:`(a,b)\in \mathbb{R}\times\mathbb{R}^m` og að :math:`f\in C(\Omega,\mathbb{R}^m)`. Þá er til opið bil :math:`I` sem inniheldur punktinn :math:`a` og fall :math:`u:I\to \mathbb{R}^m`, þannig að :math:`(t,u(t))\in \Omega`, :math:`u'(t)=f(t,u(t))` fyrir öll :math:`t\in I` og :math:`u(a)=b`.
+  
 
-	Gerum ráð fyrir að :math:`\Omega` sé grennd um punktinn :math:`(a,b)\in \mathbb{R}\times\mathbb{R}^m` og að :math:`f\in C(\Omega,\mathbb{R}^m)`. Þá er til opið bil :math:`I` sem inniheldur punktinn :math:`a` og fall :math:`u:I\to \mathbb{R}^m`, þannig að :math:`(t,u(t))\in \Omega`, :math:`u'(t)=f(t,u(t))` fyrir öll :math:`t\in I` og :math:`u(a)=b`.
-
-
-Dæmi (Sjá Sýnidæmi 6.6.2)
+Dæmi (Sjá Sýnidæmi 6.6.2) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Dæmi
-	:class: daemi
+Athugum upphafsgildisverkefnið :math:`u'=3u^{2/3}`, :math:`u(0)=0`. Fyrir sérhvert :math:`\alpha>0` fáum við lausnina :math:`u_\alpha`, sem skilgreind er með
 
-	Athugum upphafsgildisverkefnið :math:`u'=3u^{2/3}`, :math:`u(0)=0`. Fyrir sérhvert :math:`\alpha>0` fáum við lausnina :math:`u_\alpha`, sem skilgreind er með
+.. math::
 
-	.. math::
+   u_\alpha(t)=\begin{cases}
+   (t+\alpha)^3, &t<-\alpha,\\
+   0, &-\alpha\leq t<\alpha,\\
+   (t-\alpha)^3, &\alpha\leq t.
+   \end{cases}
 
-	   u_\alpha(t)=\begin{cases}
-	   (t+\alpha)^3, &t<-\alpha,\\
-	   0, &-\alpha\leq t<\alpha,\\
-	   (t-\alpha)^3, &\alpha\leq t.
-	   \end{cases}
+Þetta dæmi sýnir okkur að til þess að fá ótvírætt ákvarðaða lausn þurfum við að setja einhver strangari skilyrði á :math:`f` en samfelldni.
 
-	Þetta dæmi sýnir okkur að til þess að fá ótvírætt ákvarðaða lausn þurfum við að setja einhver strangari skilyrði á :math:`f` en samfelldni.
-
-
+   
 Skilgreining (Sjá Skilgreiningu 6.6.3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
-	:class: skilgreining
+Látum :math:`f:\Omega\to\mathbb{R}^m` vera fall, þar sem :math:`\Omega\subset \mathbb{R}\times \mathbb{R}^m` og :math:`A\subset \Omega`. Ef til er fasti :math:`C` þannig að
 
-	Látum :math:`f:\Omega\to\mathbb{R}^m` vera fall, þar sem :math:`\Omega\subset \mathbb{R}\times \mathbb{R}^m` og :math:`A\subset \Omega`. Ef til er fasti :math:`C` þannig að
+.. math::
 
-	.. math::
+   |f(t,x)-f(t,y)|\leq C|x-y|,\qquad (t,x), (t,y)\in
+    A,
 
-	   |f(t,x)-f(t,y)|\leq C|x-y|,\qquad (t,x), (t,y)\in
-	    A,
+þá segjum við að :math:`f` uppfylli Lipschitz–skilyrði í menginu :math:`A`.
 
-	þá segjum við að :math:`f` uppfylli Lipschitz–skilyrði í menginu :math:`A`.
-
-
+   
 
 Setning (Sjá Setningu 6.6.5) (Picard. Víðfeðm útgáfa.)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning
-	:class: setning
+Látum :math:`I\subset \mathbb{R}` vera opið bil, :math:`a\in I`, :math:`b\in \mathbb{R}^m`, :math:`f\in C(I\times \mathbb{R}^m,\mathbb{R}^m)` og gerum ráð fyrir að :math:`f` uppfylli Lipschitz–skilyrði í :math:`J\times \mathbb{R}^m` fyrir sérhvert lokað og takmarkað hlutbil :math:`J` í :math:`I`. Þá er til ótvírætt ákvörðuð lausn :math:`u\in C^1(I,\mathbb{R}^ m)` á upphafsgildisverkefninu
 
-	Látum :math:`I\subset \mathbb{R}` vera opið bil, :math:`a\in I`, :math:`b\in \mathbb{R}^m`, :math:`f\in C(I\times \mathbb{R}^m,\mathbb{R}^m)` og gerum ráð fyrir að :math:`f` uppfylli Lipschitz–skilyrði í :math:`J\times \mathbb{R}^m` fyrir sérhvert lokað og takmarkað hlutbil :math:`J` í :math:`I`. Þá er til ótvírætt ákvörðuð lausn :math:`u\in C^1(I,\mathbb{R}^ m)` á upphafsgildisverkefninu
+.. math::
 
-	.. math::
+ u'=f(t,u), \qquad u(a)=b.
 
-	 u'=f(t,u), \qquad u(a)=b.
+   
 
-
-
-Fylgisetning (Sjá Fylgisetningu 6.6.6)
+Fylgisetning. (Sjá Fylgisetningu 6.6.6) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Fylgisetning
-	:class: setning
+Látum :math:`I\subset \mathbb{R}` vera opið bil, :math:`a\in I`, :math:`b\in {\mathbb{C}}^m`, :math:`A\in C(I,{\mathbb{C}}^{m\times m})` og :math:`f\in C(I,{\mathbb{C}}^m)`. Þá er til ótvírætt ákvörðuð lausn :math:`u\in C^1(I,{\mathbb{C}}^ m)` á upphafsgildisverkefninu
 
-	Látum :math:`I\subset \mathbb{R}` vera opið bil, :math:`a\in I`, :math:`b\in {\mathbb{C}}^m`, :math:`A\in C(I,{\mathbb{C}}^{m\times m})` og :math:`f\in C(I,{\mathbb{C}}^m)`. Þá er til ótvírætt ákvörðuð lausn :math:`u\in C^1(I,{\mathbb{C}}^ m)` á upphafsgildisverkefninu
+.. math::
 
-	.. math::
+ u'=A(t)u+f(t) \qquad u(a)=b.
 
-	 u'=A(t)u+f(t) \qquad u(a)=b.
-
-Fylgisetning. (Sjá Fylgisetningu 6.6.7)
+Fylgisetning. (Sjá Fylgisetningu 6.6.7) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Fylgisetning
-	:class: setning
+Látum :math:`I\subset \mathbb{R}` vera opið bil, :math:`a\in I`, :math:`b_0,\dots,b_{m-1} \in {\mathbb{C}}`, :math:`a_0,\dots,a_m, g\in C(I)` og :math:`a_m(t)\neq 0` fyrir öll :math:`t\in I`. Þá er til ótvírætt ákvörðuð lausn :math:`u\in C^m(I)` á upphafsgildisverkefninu
 
-	Látum :math:`I\subset \mathbb{R}` vera opið bil, :math:`a\in I`, :math:`b_0,\dots,b_{m-1} \in {\mathbb{C}}`, :math:`a_0,\dots,a_m, g\in C(I)` og :math:`a_m(t)\neq 0` fyrir öll :math:`t\in I`. Þá er til ótvírætt ákvörðuð lausn :math:`u\in C^m(I)` á upphafsgildisverkefninu
+.. math::
 
-	.. math::
-
-	   \begin{gathered}
-	   a_m(t)u^{(m)}+\cdots+a_1(t)u'+a_0(t)u=g(t),\\
-	   u(a)=b_0, u'(a)=b_1,\dots, u^{(m-1)}(a)=b_{m-1}.\end{gathered}
+   \begin{gathered}
+   a_m(t)u^{(m)}+\cdots+a_1(t)u'+a_0(t)u=g(t),\\
+   u(a)=b_0, u'(a)=b_1,\dots, u^{(m-1)}(a)=b_{m-1}.\end{gathered}
 
 Setning (Sjá Setningu 6.6.8) (Picard. Staðbundin útgáfa.)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning
-	:class: setning
+Látum :math:`\Omega` vera opið hlutmengi í :math:`\mathbb{R}\times \mathbb{R}^{m}`, :math:`a\in \mathbb{R}`, :math:`b\in \mathbb{R}^m`, :math:`(a,b)\in \Omega` og :math:`f\in C(\Omega,\mathbb{R}^m)`. Gerum ráð fyrir að til sé grennd :math:`U` um punktinn :math:`(a,b)` innihaldin í :math:`\Omega` og að fallið :math:`f` uppfylli Lipschitz–skilyrði í :math:`U`. Þá er til opið bil :math:`I` á :math:`\mathbb{R}` sem inniheldur :math:`a` og ótvírætt ákvörðuð lausn :math:`u\in C^1(I, \mathbb{R}^m)` á upphafsgildisverkefninu
 
-	Látum :math:`\Omega` vera opið hlutmengi í :math:`\mathbb{R}\times \mathbb{R}^{m}`, :math:`a\in \mathbb{R}`, :math:`b\in \mathbb{R}^m`, :math:`(a,b)\in \Omega` og :math:`f\in C(\Omega,\mathbb{R}^m)`. Gerum ráð fyrir að til sé grennd :math:`U` um punktinn :math:`(a,b)` innihaldin í :math:`\Omega` og að fallið :math:`f` uppfylli Lipschitz–skilyrði í :math:`U`. Þá er til opið bil :math:`I` á :math:`\mathbb{R}` sem inniheldur :math:`a` og ótvírætt ákvörðuð lausn :math:`u\in C^1(I, \mathbb{R}^m)` á upphafsgildisverkefninu
+.. math::
 
-	.. math::
+ u'=f(t,u), \qquad u(a)=b.
 
-	 u'=f(t,u), \qquad u(a)=b.
+   
 
-
-
-Picard-nálgun (Sjá Sýnidæmi 6.6.10 og 6.6.11)
+Picard-nálgun. (Sjá Sýnidæmi 6.6.10 og 6.6.11)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (i) Upphafsgildisverkefnið
@@ -447,10 +396,10 @@ Runan :math:`u_0, u_1, u_2, \ldots` hefur sem markgildi fall :math:`u` sem er la
 
  u'=f(t,u),\qquad u(a)=b.
 
-
+   
 
 Merking tilvistar- og ótvíræðnisetninga
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
 Skoðum upphafsgildisverkefni
 
