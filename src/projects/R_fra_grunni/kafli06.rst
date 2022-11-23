@@ -244,7 +244,7 @@ Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæ
     :lang: r
 
     # Gogn sott og sett i breytuna puls.
-    puls <- read.table ("https://edbook.hi.is/gogn/pulsAll.csv", header=TRUE, sep=";")
+    puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
 
     # Setjid ykkar eigin koda her fyrir nedan:
     # Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
