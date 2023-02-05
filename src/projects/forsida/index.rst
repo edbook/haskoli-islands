@@ -6,14 +6,16 @@
 Edbook
 ======
 
-Hér eru rafrænar kennslubækur sem opnar eru fyrir öllum.
-Umsjónarmaður síðunnar er Benedikt Steinar Magnússon (bsm@hi.is).
+Hér eru rafrænar kennslubækur opnar öllum sem geta haft gagn af þeim.
+
+Umsjónarmaður síðunnar er Benedikt Steinar Magnússon <bsm@hi.is> og allt efni
+hennar er hýst á Github, https://github.com/edbook/haskoli-islands.
 
 
 Undirbúningsefni
 ================
 
-Á þessum síðum er efni til upprifjunar í ýmsum fræðigreinum sem er ætlað þeim sem vilja skerpa á þessum atriðum.
+Á þessum síðum er efni til undirbúningsefni í raunvísindum fyrir háskólanema.
 
 .. button::
   :text: Undirbúningur í stærðfræði
@@ -64,7 +66,7 @@ Námskeið við HÍ
   :link: stae405g/index.html
 
 .. button::
-  :text: Valin efni í stærðfræði og reiknifræðæi
+  :text: Valin efni í stærðfræði og reiknifræði
   :link: https://cs.hi.is/strei/index.html
 
 .. button::

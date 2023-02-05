@@ -6,8 +6,6 @@
 Töluleg greining (STÆ405G), Háskóli Íslands 
 ===========================================
 
-Kennari: Benedikt Steinar Magnússon, bsm@hi.is.
-
 Höfundar efnis: Benedikt Steinar Magnússon <bsm@hi.is> og Ragnar Sigurðsson <ragnar@hi.is>.
 
 Efnisyfirlit

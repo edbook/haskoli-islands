@@ -157,6 +157,13 @@ todo_include_todos = True
 # a list of builtin themes.
 html_theme = "sphinx_rtd_theme"
 # html_theme_path = ['_themes']
+html_context = {
+  'display_github': True,
+  'github_user': 'edbook',
+  'github_repo': 'haskoli-islands',
+  'github_version': 'master/src/projects/undirbuningur_efn/',
+}
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -176,7 +183,7 @@ html_theme = "sphinx_rtd_theme"
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 # SET TO UNIVERSITY OF ICELAND RAUNVÍSINDADEILD LOGO
-html_logo = "_static/hi_horiz_raunvisindadeild.png"
+html_logo = "_static/haskoli_islands-edbook.svg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
