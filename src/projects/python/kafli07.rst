@@ -63,7 +63,8 @@ nýjum, og henda út. Hér er skematísk mynd af því hvernig þetta gæti liti
    fletta upp og listana þrjá sem stika. Fallið á að skrifa út nafn og skuld
    þess sem flett er upp, eða "finnst ekki" ef hann finnst ekki. Notið virkjann
    ``in`` og fallið ``index``, sbr. kafla :numref:`öll-söfn` og :numref:`allar-runur`
-   (sjá líka æfinguna um rómverska riddarann þar).
+   (sjá líka æfinguna um rómverska riddarann þar). Ath. að það á ekki að nota
+   Python dict við lausnina, slíkt forrit er á dagskrá í kafla 7.7)
               
 Varpanir í stærðfræði
 ~~~~~~~~~~~~~~~~~~~~~
@@ -247,7 +248,7 @@ Athugið að nota má næstefstu aðgerðina ásamt zip til að búa til uppflet
 
 Yfirgrip fyrir uppflettitöflur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Í kafla :numref:`yfirgrip (*comprehension*)` var útskýrt hvernig búa má til lista útfrá einhverri runu með svonefndu yfirgripi (*comprension*), t.d. má búa til lista af kvaðratrótum talnanna 1 til 10 með:
+Í kafla :numref:`yfirgrip (*comprehension*)` var útskýrt hvernig búa má til lista útfrá einhverri runu með svonefndu yfirgripi (*comprehension*), t.d. má búa til lista af kvaðratrótum talnanna 1 til 10 með:
 
     ``k = [math.sqrt(x) for x in range(1,11)]``.
 

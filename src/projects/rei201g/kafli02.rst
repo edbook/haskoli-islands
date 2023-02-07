@@ -87,7 +87,7 @@ Einstakar tölur í fylki eru kölluð **stök** og staðsetning þeirra er **s�
 gildir :math:`a_{23} = 8`.
 
 .. note::
-   Um fylki í NumPy var fjallað í 11. kafla í Fyrirlestrarnótum um Python.Þar
+   Um fylki í NumPy var fjallað í 11. kafla í Fyrirlestrarnótum um Python. Þar
    var meðal annars útskýrt hvernig hægt er að búa til fylki og ná í einstök
    stök. Fylkið A að ofan væri búið til með :code:`A =
    np.array([[1,2,3],[6,7,8]])` og stakið :math:`a_{23}` fengist með

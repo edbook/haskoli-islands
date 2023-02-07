@@ -91,6 +91,13 @@ Svo eru til skipanir til að búa til ýmsa sérstaka vigra, til dæmis fæst n�
 
    ``z = np.zeros(3)``
 
+Loks skal tekið fram að ef vigur er gefið gildi með öðrum vigri (t.d. ``y = x``)
+er ekki tekið afrit heldur er búin til ný tilvísun í vigurinn, sbr. kafla
+:numref:`gildisgjöf gefur tilvísun` og :numref:`aðgerðir sem duga á öll söfn`.
+Til að taka afrit mætti nota:
+
+   ``y = x.copy()``
+
 Einstök stök og hlutvigrar
 --------------------------
 Vísað í einstök stök í vigrum með hornklofum, alveg eins og í listum, og fyrsta
@@ -430,11 +437,28 @@ Stök fylkis, línur og dálkar
 ----------------------------
 Hægt er að vísa í :math:`a_{ij}` (þ.e.a.s. stakið í línu :math:`i` og dálki
 :math:`j`) með ``A[i,j]``. Lína i fæst með ``A[i]`` eða ``A[i,:]`` og dálkur j
-fæst með ``A[:,j]``. Þessar tilvísanir má líka nota vinstra megin í gildisgjöf
-til að breyta stökum, línum eða dálkum.
+fæst með ``A[:,j]``. Eins og fyrir vigra þá byrjar Python að telja í 0 og þessar
+vísanir má líka nota vinstra megin í gildisgjöf til að breyta stökum, línum eða
+dálkum, t.d. ``A[0,0]=37``, ``A[0,:]=[2,2,2]`` eða ``A[:,0]=0`` (setur öll stök
+í fremsta dálki = 0)`.
 
-Eins og fyrir vigra þá byrjar Python að telja í 0, þannig að ``A[0,:]`` er t.d.
-fyrsta línan.
+.. admonition:: Athugasemd: Gildisgjöf gefur tilvísun
+   :class: athugid
+
+   Ef gefin er skipunin
+
+       ``a0 = A[0,:]``
+
+   þá er búin til **tilvísun** í fyrstu línuna en ekki ný breyta með gildi hennar
+   (sbr. kafla :numref:`gildisgjöf gefur tilvísun`, :numref:`aðgerðir sem duga á
+   öll söfn` og :numref:`vigur gefið gildi`). Í raun er verið að gefa línunni
+   nafn, þannig að framhaldsskipunin ``a0 = [2,2,2]`` mundi breyta fyrstu
+   línunni í A. Á sama hátt mundi skipunin
+
+       ``B = A``
+
+   búa til tilvísun í fylkið. Til að taka afrit á nýjan stað í minni tölvnnar má
+   nota aðferðina ``copy``, t.d. ``a0 = A[0,:].copy()`` eða ``B = A.copy()``.
 
 Núllfylki
 ---------
@@ -462,7 +486,9 @@ np.zeros((m,n),int)`` gefur heiltölu-núllfylki (það má líka skrifa
 
 Bylting
 -------
-Bylting (*transpose*) fylkis fæst með því að skipta á línum og dálkum. Stærðfræðilegi rithátturinn fyrir byltingu fylkis :math:`A` er :math:`A^T`, lesið "A bylt". Í NumPy má rita ``A.T`` til að bylta fylki ``A``, til dæmis:
+Bylting (*transpose*) fylkis fæst með því að skipta á línum og dálkum.
+Stærðfræðilegi rithátturinn fyrir byltingu fylkis :math:`A` er :math:`A^T`,
+lesið "A bylt". Í NumPy má rita ``A.T`` til að bylta fylki ``A``, til dæmis:
 
 .. code:: python
 
@@ -478,6 +504,12 @@ Bylting (*transpose*) fylkis fæst með því að skipta á línum og dálkum. S
    [[3 0 2]
     [2 1 2]
     [1 0 2]]
+
+.. admonition:: Athugasemd: Bylta fylkið er tilvísun
+   :class: athugid
+
+   Fylkið B í dæminu hér að framan verður tilvísun í A bylt, sem uppfærist sjálfkrafa
+   ef A breytist. Til að fá nýtt fylki mætti nota ``B = A.copy().T``.
 
 Afpökkun
 --------

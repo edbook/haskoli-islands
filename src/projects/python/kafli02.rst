@@ -82,14 +82,15 @@ Python atriði sem koma fyrir í forritinu Collatz
 ------------------------------------------------
 - Ný föll má skilgreina með því að byrja á **def** og nöfn þeirra mega hafa
   íslenska stafi (og líka gríska). Á eftir *def*-línunni er hefð fyrir að setja
-  **skjölunarstreng** (*dokk-streng*; *dock-string*) innan þrefaldra gæsalappa,
+  annaðhvort **athugasemd** (*comment*) sem byrjar á :code:`#` eða
+  **skjölunarstreng** (*doc-string*) innan þrefaldra gæsalappa,
   sem lýsir því hvað fallið gerir. Nánar tiltekið er ritað:
 
     .. code:: python3
 
-       def nafn(stiki1, stiki2... ):
-          '''útskýring-á-hvað-fallið-gerir'''
-          skilgreining-falls
+       def nafn(stiki1, stiki2... ):    eða:  def nafn(stiki1, stiki2... ):      
+          # lýsing-á-hvað-fallið-gerir           '''lýsing-á-hvað-fallið-gerir'''
+          skilgreining-falls                     skilgreining-falls              
 
 - **Ef**-setning hefur ekki sviga utan um skilyrðið, öfugt við mörg forritunarmál (t.d. C og Java). Sniðið er svona:
 

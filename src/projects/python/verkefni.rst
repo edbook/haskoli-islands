@@ -6,7 +6,7 @@ Skrifið forrit sem leysir annars stigs jöfnu
 
 .. math:: a x^2 + b x + c = 0
 
-Fallið á að lesa inn :math:`a`, :math:`b` og :math:`c` með ``input``-skipunum
+Forritið á að lesa inn :math:`a`, :math:`b` og :math:`c` með ``input``-skipunum
 (með viðeigandi beiðnum til notanda). Ef jafnan hefur tvær lausnir á forritið að
 skrifa „Lausnirnar eru:“ og síðan lausnirnar, ef hún hefur eina lausn á að
 skrifa hana með viðeigandi skýringu og ef engin lausn er skal skrifa skilaboð um
@@ -163,22 +163,26 @@ Lokamarkmiðið þessa dæmis er að búa til fall sem prentar út :math:`n \tim
     +-----------------+
 
 Það eru þrjár gerðir af línum:
-   1. Efsta og neðsta línan, með :math:`+`, :math:`2n + 1` striki og aftur :math:`+`.
-   2. Línur eins og önnur línan með þrjú bil og X endurtekið :math:`n/2` sinnum.
-   3. Línur eins og þriðja línan með X og þrjú bil endurtekið :math:`n/2` sinnum
+   a. Efsta og neðsta línan, með :math:`+`, :math:`2n + 1` striki og aftur :math:`+`.
+   b. Línur eins og önnur línan með þrjú bil og X endurtekið :math:`n/2` sinnum.
+   c. Línur eins og þriðja línan með X og þrjú bil endurtekið :math:`n/2` sinnum
 
-1. Skrifið þrjú föll, til að prenta línur af tagi a, b og 3. Prófið hvert um sig fyrir :math:`n=2` og :math:`n=8`.
-2. Skrifið fall kallar á föllin í lið 1. og prentar :math:`n \times n` borð. Látið fallið skrifa villuboð og hætta ef :math:`n` er ekki slétt tala > 2. Prófið með :math:`n=8`
+1. Skrifið þrjú föll, til að prenta línur af tagi a, b og c. Prófið hvert um sig fyrir :math:`n=2` og :math:`n=8`.
+2. Skrifið fall sem kallar á föllin í lið 1. og prentar :math:`n \times n` borð. Látið fallið skrifa villuboð og hætta ef :math:`n` er ekki slétt tala > 2. Prófið með :math:`n=8`
 
 Munið að nota ``*``-virkjann, sem fjölfaldar strengi.
 
 .. rubric:: F. Viðsnúningur lista
-            
-1. Skrifið fall ``hausaftast(L)`` sem færir haus L aftast. Ef kallað er með
-   :code:`L=[1,2,3,4]` ætti að koma út :code:`L=[2,3,4,1]`. Prófið líka með
-   lista búnum til útfrá afmælisdegi (t.d. 3.8.1999 :math:`\to` :code:`[3,8,99]`).
 
-2. Skrifið fall ``snúavið(L)`` sem snýr við lista. Hér er reiknirit:
+1. Skrifið fall ``hali(L)`` sem skilar *hala* L, þ.e. lista með öllum stökum
+   nema því fremsta.
+
+2. Skrifið fall ``hausaftast(L)`` sem skilar nýjum lista þar sem haus L hefur
+   verið færður aftast. Ef kallað er með :code:`L=[1,2,3,4]` ætti fallið að
+   skila :code:`[2,3,4,1]`. Prófið líka með lista búnum til útfrá afmælisdegi
+   (t.d. 3.8.1999 :math:`\to` :code:`[3,8,99]`).
+
+3. Skrifið fall ``snúavið(L)`` sem snýr við lista. Hér er reiknirit:
 
    .. code::
 
@@ -190,7 +194,7 @@ Munið að nota ``*``-virkjann, sem fjölfaldar strengi.
           skila M
           
    Prófið að snúa við ``L=[1,2,3,4]`` sem ætti að skila ``[4,3,2,1]``
-   og líka afmælisdagalistanum úr lið 1.
+   og líka afmælisdagalistanum úr lið 2.
 
 Orðaleikur
 ~~~~~~~~~~
@@ -209,8 +213,9 @@ Orðaleikur
    upphrópunarmerkjum. Hrópið svo nafnið ykkar :)
 
 3. Til að athuga hvort stafur ``c`` sé hástafur má spyrja: ``c == c.upper()``.
-   Skrifið fall ``stórir(s)`` sem skilar lista af rökgildum með i-ta gildið
-   satt ef i-ta orðið í :code:`s` byrjar á stórum staf. Prófið.
+   Skrifið fall ``stórir(s)`` sem skilar lista af rökgildum með i-ta gildið satt
+   ef i-ta orðið í :code:`s` byrjar á stórum staf. Prófið með sjálfvöldu dæmi og
+   sýnið niðurstöðuna.
 
 Kvaðratrót
 ~~~~~~~~~~
@@ -307,10 +312,39 @@ Lesið aðeins um `pólhnit <https://en.wikipedia.org/wiki/Polar_coordinate_syst
       þannig að :math:`\tan \theta = y/x`, nema ef :math:`x=0`, þá skilar fallið
       :math:`\pm\pi/2` með sama formerki og :math:`y`. Hornið er valið þannig að
       það sé stefnuhorn vigursins :math:`(x,y)`.
+                 
+Innsetningarröðun og Pythontutor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Ein einfaldasta röðunaraðferðin er innsetningarröðun (*insertion sort*).
+   Forritið fyrsta reikniritið í lýsingu hennar á `Wikipediu
+   <https://en.wikipedia.org/wiki/Insertion_sort#Algorithm>`_ í Python falli.
+   Notið paragildisgjöf, ``(x,y) = (y,x)`` til að víxla (*swap*) í 5. línu
+   reikniritsins. Prófið að raða listanum `[3,8,1,2,5,4]`. Leysið verkefnið með
+   falli sem hefur listann sem raða skal sem inntaksstika og skilar röðuðum
+   lista. Gætið þess að breyta ekki inntaksstikanum inni í fallinu.
+
+2. Á vefsíðan `pythontutor.com <https://pythontutor.com>`_ er hægt að keyra
+   forrit skref fyrir skref og skoða hvernig gildi á breytum breytast. Setjið
+   forritið sem þið skrifuðuð í lið 1 inn á þessa síðu og prófið ykkur áfram.
+
+Töluleg diffrun
+~~~~~~~~~~~~~~~
+1. Eftirfarandi formúlu má nota til að nálga afleiðu falls í punkti :math:`a`:
+
+   .. math::  f'(a) \approx \frac{f(a+h) - f(a-h)}{2h} 
+
+   þar sem :math:`h` er lítil tala. Skrifið fall ``töldiff(f, a, h)`` sem
+   reiknar slíka nálgun og skilar henni. Prófið með :math:`f(x) = \sqrt{x}`,
+   :math:`a = 4` og :math:`h = 10^{-4}` (sem ætti að skila tölu sem er nálægt
+   :math:`\frac{1}{2\sqrt{4}}`).
+
+2. Skrifið nú töflu yfir nálgunina fyrir :math:`h = 10^{-k}, k=1,...10,` og
+   látið fylgja með dálk sem sýnir hve skekkjan er mikil. Merkið með :math:`*`
+   línuna þar sem skekkjan er minnst.
 
 Uppflettitafla afturábak
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Hugsum okkur að ``ísl_ens`` sé uppflettitafla sem geymir ensk-íslenska orðabók.
+Hugsum okkur að ``ísl_ens`` sé uppflettitafla sem geymir íslensk-enska orðabók.
 Hún gæti t.d. innihaldið pörin:
 
    ``"reipi"`` :math:`\to` ``"rope"`` |br|
@@ -321,20 +355,56 @@ Ef við vilum búa til ensk-íslenska orðabók gætum við snúið töflunni vi
 fengið pörin ``"rope"`` :math:`\to` ``"reipi"``, ``"house"`` :math:`\to`
 ``"hús"`` o.s.frv.
 
-1. Skrifið fall ``snúavið(U)`` sem snýr uppflettitöflu við á þennan hátt. Gerið
-   ráð fyrir að taflan ``U`` hafi hvergi sama gildi fyrir tvo mismunandi lykla.
-   Prófið með orðaskránni að framan og búið til ``ens-ísl``.
+1. Skrifið fall ``snúavið(U)`` sem snýr uppflettitöflu við á þennan hátt og
+   skilar viðsnúnu töflunni. Gerið ráð fyrir að taflan ``U`` hafi hvergi sama
+   gildi fyrir tvo mismunandi lykla. Prófið með orðaskránni að framan og búið
+   til ``ens_ísl``.
 
 2. Skrifið nýja útgáfu af fallinu, ``snúavið2(U)``, sem er ekki með slíkri
    einkvæmnitakmörkun. Það á að skila nýrri uppflettitöflu ``V`` sem er þannig
    að ef ``g`` er gildi svarandi til tveggja mismunandi lykla, ``U[x] = U[y] =
    g`` þá á gildi ``V`` fyrir lykilinn ``g`` að vera listi með ``x`` og ``y``,
-   ``V[g] = [x,y]``. Bætið nú tveimur pörum:
+   ``V[g] = [x,y]``. Bætið nú tveimur pörum við ``ísl_ens``:
 
       ``"tómarúm"`` :math:`\to` ``"vaccum"`` |br|
       ``"ryksuga"`` :math:`\to` ``"vaccum"`` |br|
 
-   við ``ísl_ens`` og prófið ``snúavið2``.
+   og prófið ``snúavið2``.
+
+Shell-röðun
+~~~~~~~~~~~
+Árið 1959 kom út `grein <https://dl.acm.org/doi/pdf/10.1145/368370.368387>`_
+eftir Donald L Shell með hraðvirku reikniriti til að raða :math:`N` tölum (eða
+öðrum hlutum) sem síðar var kallað *Shell-sort*. Það er áhugavert að skoða
+greinina, sérstaklega hvernig reikniritið er sett fram með svonefndu
+*flæðiriti*, en í byrjun tölvualdar voru þau algeng. Reikniritið vinnur með
+minnkandi runu af bilum (*gaps*), :math:`b_1 > b_2 >...> b_n = 1`. Í fyrstu
+umferð er sætum :math:`0, b_1, 2b_1,\ldots` raðað með innsetningarröðun (sjá
+:numref:`verkefni %s<Innsetningarröðun og Pythontutor>`), þvínæst sætum
+:math:`1, 1+b_1, 1+2b_1,\ldots`, o.s.frv. þar til allar hlutrunur sæta með
+millibili :math:`b_1` eru komnar í röð. Þetta er svo endurtekið fyrir öll bilin.
+Í upphaflegu grein Shells var :math:`b_k` valið sem :math:`\left\lfloor N/2^k
+\right\rfloor` en síðan hafa menn þróað ýmsar aðrar bilarunur
+(:math:`\left\lfloor x \right\rfloor = \operatorname{int}(x)`; þ.e. sker
+aukastafi af :math:`x`).
+
+Hér er reiknirit sem Shell-raðar lista ``a[0],a[1]...a[N-1]`` með upphaflegu bilarununni:
+
+.. code:: text
+
+   fyrir k = 1,2,3,...:
+      bil = int(N/2^k)
+      ef bil < 1 þá út úr lykkju
+      fyrir i = 0, 1,..., bil-1:
+          raða a[i], a[i+bil], a[i+2*bil],... með innsetningarröðun
+
+Skrifið Python-fall sem Shell-raðar. Byrjið á að leysa :numref:`verkefni
+%s<Innsetningarröðun og Pythontutor>` ef þið eruð ekki þegar búin að því. Það er
+hægt að nota heiltöludeilingu (``//``) til að reikna ``bil`` og hlutrunan í
+neðstu línunni fæst með ``a[i:N:bil]``. Byggið á reikniritinu að framan (og alls
+ekki ná í tilbúið forrit af netinu). Prófið að raða listunum ``[8,3,2]`` og
+``[8,5,1,9,6,2,1,7,11,3]``, og auk þess einum sjálfvöldum lista með 12 tveggja
+stafa tölum.
 
 Skrá með íslenskum orðum
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -476,18 +546,19 @@ Sameining nafnaskrár og einkunnaskrár
 `https://cs.hi.is/python/nofn.txt <https://cs.hi.is/python/nofn.txt>`_,
 inniheldur prófnúmer og nöfn.
 
-1. **Skrá lesin.** Skrifið forrit sem les einkunnaskrána inn í uppflettitöflu (*dictionary*)
-   ``eink_tafla`` þannig að ``eink_tafla[nr]`` gefi einkunn próftaka með
-   prófnúmer ``nr`` sbr. fyrra sýnidæmið í kafla
-   :numref:`uppflettitafla lesin úr skrá`. Prófið.
+1. **Skrá lesin.** Skrifið forrit sem les einkunnaskrána inn í uppflettitöflu
+   (*dictionary*) ``eink_tafla`` þannig að ``eink_tafla[nr]`` gefi einkunn
+   próftaka með prófnúmer ``nr`` sbr. dæmin í kafla :numref:`uppflettitafla
+   lesin úr skrá`. Prófið (t.d. með því að sýna úttakið sem skipunin
+   ``print(eink_tafla)`` skilar).
 
 2. **Uppflettitafla.** Skráin ``nofn.txt`` byrjar svona:
 
    .. code::
 
-      0176  Sigrún Ása Jónsdóttir
-      0542  Kristín Fjóludóttir
-      0970  Birta Lárusdóttir
+      0176  Kjartan Valur Jónsson
+      0542  Aðalheiður Pétursdóttir
+      0970  Sigrún Ása Jónsdóttir
 
    Prófnúmerið er sem sé aðskilið frá nafninu með tveimur bilum og svo er nafnið
    ýmist með millinafni eða án. Til að höndla þetta er hægt að nota ``split``
@@ -499,11 +570,12 @@ inniheldur prófnúmer og nöfn.
    skipta strengnum rétt í tvo hluta, númer og nafn (``strip()`` þarf að vera
    með hér til að losna við línuskiptatákn). Notið þetta trix til að lesa
    nafnaskrána inn í uppflettitöflu ``nafn_tafla`` sem nota má til að fletta upp
-   á nafni útfrá prófnúmeri. Prófið.
+   á nafni útfrá prófnúmeri. Prófið með sama hætti og fyrr.
 
 3. **Úskrift lista.** Skrifið forrit sem rennir í gegn um prófnúmerin í
    ``eink_tafla``, flettir upp nafni hvers nemanda í ``nafn_tafla``, og skrifar
-   allt þrennt: prófnúmer, einkunn, og nafn.
+   allt þrennt: prófnúmer, einkunn, og nafn í snyrtilegri töflu með fyrirsögnum
+   og dálkum sem standast á.
 
 4. **Hæsta einkunn.** Skrifið loks forrit sem ákvarðar hver fékk hæstu
    einkunnina og skrifar nafn hans/hennar ásamt einkunninni (gera má ráð fyrir
@@ -595,11 +667,10 @@ Athugið að allar töflurnar sem þið prentið út þurfa að vera snyrtilegar
 fyrirsögnum, hæfilegum aukastafafjölda í tölum, vinstri-jöfnuðum textadálkum
 og hægri-jöfnuðum talnadálkum.
 
-Dálkar í CSV-skrá
-~~~~~~~~~~~~~~~~~
+Dálkar í CSV-skrá [leyst með Colab]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Í kafla :numref:`csv-lestur-dalka` var skoðað hvernig hægt er að lesa dálk úr
-CSV-skrá og hér æfum við okkur í því, og líka hvernig búa má til skrár í
-Colab-skýinu.
+CSV-skrá og hér æfum við okkur í því, og líka hvernig búa má til skrár.
 
 1. 
    .. figure:: myndir/aefing-14.jpg
@@ -624,6 +695,20 @@ Colab-skýinu.
 
 3. **Skrá hlaðið niður og upp**. Prófið að lokum að hlaða skránni niður frá
    Colab-skýinu, breyta henni með ritli á eigin tölvu og hlaða henni aftur upp.
+
+Fallateikning
+~~~~~~~~~~~~~
+1. Skrifið forrit sem reiknar fallsgildi fallsins:
+
+   .. math:: f(x) = (x+3)(x+2)x(x-2)(x-3)
+
+   Prófið t.d. að reikna f(1) (á að gefa 24)
+
+2. Búið til vandaða teikningu af fallinu á bilinu :math:`[-3.4, 3.4]` sbr. kafla
+   `9.6 <https://cs.hi.is/python/kafli09/#teikning-af-grofum-falla>`_. Notið
+   ``linspace`` fallið og stikana/föllin ``xlim``, ``ylim``, ``xticks``,
+   ``yticks``, ``linewidth``, ``color``, ``axvline``, ``axhline``, ``grid``,
+   ``box`` og ``tick_params`` með hæfilegum viðföngum.
 
 Hiti og úrkoma
 ~~~~~~~~~~~~~~
@@ -694,33 +779,6 @@ kafla :numref:`innlestur textaskrár af vefnum` og :numref:`dæmi um teikningu t
    útreikningum í Python (t.d. meðalhiti á tilteknum köldum/hlýjum tímabilum,
    staðalfrávik einhverra valdra stærða, fylgni milli hita og úrkomu).
 
-                 
-Innsetningarröðun og Pythontutor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1. Ein einfaldasta röðunaraðferðin er innsetningarröðun (*insertion sort*).
-   Forritið fyrsta reikniritið í lýsingu hennar á `Wikipediu
-   <https://en.wikipedia.org/wiki/Insertion_sort#Algorithm>`_ í Python falli.
-   Notið paragildisgjöf, ``(x,y) = (y,x)`` til að víxla (*swap*) í 5. línu
-   reikniritsins. Prófið að raða listanum `[3,8,1,2,5,4]`.
-
-2. Á vefsíðan `pythontutor.com <https://pythontutor.com>`_ er hægt að keyra
-   forrit skref fyrir skref og skoða hvernig gildi á breytum breytast. Setjið
-   forritið sem þið skrifuðuð í lið 1 inn á þessa síðu og prófið ykkur áfram.
-
-Fallateikning
-~~~~~~~~~~~~~
-1. Skrifið forrit sem reiknar fallsgildi fallsins:
-
-   .. math:: f(x) = (x+3)(x+2)x(x-2)(x-3)
-
-   Prófið t.d. að reikna f(1) (á að gefa 24)
-
-2. Búið til vandaða teikningu af fallinu á bilinu :math:`[-3.4, 3.4]` sbr. kafla
-   `9.6 <https://cs.hi.is/python/kafli09/#teikning-af-grofum-falla>`_. Notið
-   ``linspace`` fallið og stikana/föllin ``xlim``, ``ylim``, ``xticks``,
-   ``yticks``, ``linewidth``, ``color``, ``axvline``, ``axhline``, ``grid``,
-   ``box`` og ``tick_params`` með hæfilegum viðföngum.
-
 .. _numpy-og-vigrar:
    
 Numpy og vigrar
@@ -736,41 +794,6 @@ Búið til vigrana :math:`x = (6,7,18)` og :math:`y = (1,1,6)`. Reiknið svo:
 .. figure:: myndir/shell-sort.jpg
    :align: right
    :figwidth: 10cm
-
-Shell-röðun
-~~~~~~~~~~~
-Árið 1959 kom út `grein <https://dl.acm.org/doi/pdf/10.1145/368370.368387>`_
-eftir Donald L Shell með hraðvirku reikniriti til að raða :math:`N` tölum (eða
-öðrum hlutum) sem síðar var kallað *Shell-sort*. Það er áhugavert að skoða
-greinina, sérstaklega hvernig reikniritið er sett fram með svonefndu
-*flæðiriti*, en í byrjun tölvualdar voru þau algeng. Reikniritið vinnur með
-minnkandi runu af bilum (*gaps*), :math:`b_1 > b_2 >...> b_n = 1`. Í fyrstu
-umferð er sætum :math:`0, b_1, 2b_1,\ldots` raðað með innsetningarröðun (sjá
-:numref:`verkefni %s<Innsetningarröðun og Pythontutor>`), þvínæst sætum
-:math:`1, 1+b_1, 1+2b_1,\ldots`, o.s.frv. þar til allar hlutrunur sæta með
-millibili :math:`b_1` eru komnar í röð. Þetta er svo endurtekið fyrir öll bilin.
-Í upphaflegu grein Shells var :math:`b_k` valið sem :math:`\left\lfloor N/2^k
-\right\rfloor` en síðan hafa menn þróað ýmsar aðrar bilarunur
-(:math:`\left\lfloor x \right\rfloor = \operatorname{int}(x)`; þ.e. sker
-aukastafi af :math:`x`).
-
-Hér er reiknirit sem Shell-raðar lista ``a[0],a[1]...a[N-1]`` með upphaflegu bilarununni:
-
-.. code:: text
-
-   fyrir k = 1,2,3,...:
-      bil = int(N/2^k)
-      ef bil < 1 þá út úr lykkju
-      fyrir i = 0, 1,..., bil-1:
-          raða a[i], a[i+bil], a[i+2*bil],... með innsetningarröðun
-
-Skrifið Python-fall sem Shell-raðar. Byrjið á að leysa :numref:`verkefni
-%s<Innsetningarröðun og Pythontutor>` ef þið eruð ekki þegar búin að því. Það er
-hægt að nota heiltöludeilingu (``//``) til að reikna ``bil`` og hlutrunan í
-neðstu línunni fæst með ``a[i:N:bil]``. Byggið á reikniritinu að framan (og alls
-ekki ná í tilbúið forrit af netinu). Prófið að raða listunum ``[8,3,2]`` og
-``[8,5,1,9,6,2,1,7,11,3]``, og auk þess einum sjálfvöldum lista með 12 tveggja
-stafa tölum.
 
 Raðað í íslenska stafrófsröð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1446,21 +1469,6 @@ Stærð jarðskjálfta (nánar tiltekið vægisstærð, *moment magnitude*) er g
       USGS      5.60
       ...
     
-Töluleg diffrun
-~~~~~~~~~~~~~~~
-1. Eftirfarandi formúlu má nota til að nálga afleiðu falls í punkti :math:`a`:
-
-   .. math::  f'(a) \approx \frac{f(a+h) - f(a-h)}{2h} 
-
-   þar sem :math:`h` er lítil tala. Skrifið fall ``töldiff(f, a, h)`` sem
-   reiknar slíka nálgun og skilar henni. Prófið með :math:`f(x) = \sqrt{x}`,
-   :math:`a = 4` og :math:`h = 10^{-4}` (sem ætti að skila tölu sem er nálægt
-   :math:`\frac{1}{2\sqrt{4}}`).
-
-2. Skrifið nú töflu yfir nálgunina fyrir :math:`h = 10^{-k}, k=1,...10,` og
-   látið fylgja með dálk sem sýnir hve skekkjan er mikil. Merkið með :math:`*`
-   línuna þar sem skekkjan er minnst.
-
 Valkvæðir stikar
 ~~~~~~~~~~~~~~~~
 Föll geta haft **valkvæða stika** sem taka sjálfgefin gildi ef þeim er sleppt.

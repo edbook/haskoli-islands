@@ -78,22 +78,18 @@ til að miðja texta
     padding: 0px 12px 12px ;
 }
 
-
 /* Admonition: Aðvörun */
-.rst-content .advorun .admonition-title {
-   background: #d11d1d
-}
-.rst-content .advorun {
-    background: #f7b9b5;
-    margin-left: auto ;
-    margin-right: auto ;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 0px 12px 12px ;
-/*    border-bottom: 6px;
-    border-style: solid ;
-    border-color: #555555 ; */
-}
+/* .rst-content .advorunz .admonition-title { */
+/*    background: #f22000 */
+/* } */
+/* .rst-content .advorunz { */
+/*     background: #fcbbbb; */
+/*     margin-left: auto ; */
+/*     margin-right: auto ; */
+/*     margin-bottom: 20px; */
+/*     margin-top: 20px; */
+/*     padding: 0px 12px 12px ; */
+/* } */
 
 
 /* Admonition: Sjá einnig */

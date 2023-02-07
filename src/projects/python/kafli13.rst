@@ -45,7 +45,7 @@ stærðfræðingnum merka `Carl Gauss <https://en.wikipedia.org/wiki/Carl_Friedr
       :width: 6cm
       :align: right
 
-   Afritið forritið að ofan inn í Colab og keyrið það nokkrum sinnum. Breytið
+   Afritið forritið að ofan inn í vinnubók og keyrið það nokkrum sinnum. Breytið
    svo forritinu í fall, ``dragaspil()`` sem skilar streng með dregnu spili.
 
    1. Búið í framhaldi til forrit sem dregur fimm spil, sem er einmitt fjöldi
@@ -91,7 +91,7 @@ að byrjað sé á að skilgreina:
 (rng er skammstöfun á *random number generator*, *slembitölugjafi*). Eftir það
 má svo nota föllin ``rng.random``, ``rng.normal`` og ``rng.integers`` til að búa
 til slembivigra og -fylki, og reyndar er gott að þekkja líka fallið
-``rng.uniform`` sem býr til jafnt dreifðar slembitölur.
+``rng.uniform`` sem býr til jafnt dreifðar slembitölur á almennu bili :math:`[a,b]`.
 
 Hér er svo dæmi sem sýnir hvernig þessi NumPy slembiföll eru notuð. Takið eftir
 hvernig þeirri reglu er fylgt að rita ``size=`` fyrir framan stærðarviðföng en
@@ -126,7 +126,7 @@ Normaldreifðu tölurnar hafa meðaltal 5 og staðalfrávik 2. Svo sjáum við a
 .. admonition:: Æfing: 
    :class: aefing
 
-   Afritið sýnidæmið að framan inn í Colab og breytið því svo og dragið:
+   Afritið sýnidæmið að framan inn í vinnubók og breytið því svo og dragið:
 
    1. :math:`4 \times 4` fylki með tölum úr stöðluðu normaldreifingunni, N(0,1)
    2. vigur með 7 tölum í :math:`\{2,4,6,\ldots,100\}`

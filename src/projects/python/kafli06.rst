@@ -7,7 +7,7 @@ Helstu aðgerðir fyrir söfn
 Töflurnar í þessum kafla eru ekki hugsaðar til að læra utanað, heldur fremur til að fletta
 upp í þeim. Aðgerðirnar eru flokkaðar bæði eftir notkunarsviði og tögunum sem þær virka á. Þegar þær eru skoðaðar er gott að muna að **söfn** (*containers*) geta verið strengir, listar, samstæður, mengi og ítrarar, öll söfnin nema mengi teljast vera **runur** (*sequences*), og loks eru listar einu söfnin sem eru **breytanleg** (*mutable*; það er hægt að breyta stökum gildum í þeim). Það er skýringin á því að föll sem breyta stökum gildum eru öll saman í töflunni í kafla :numref:`bara-listar`: "Föll sem duga bara á lista".
 
-Það er líka ágætt að rifja upp það sem stendur í kafla :numref:`listar` um **aðferðir** (*methods*). Þær eru ein tegund af föllum sem kallað er á með ``breyta.aðferð(v1,v2...)``. Breytan á undan punktinum nefnist *hlutur* og aðferðin virkar á hann, og svo eru ``v1``, ``v2``... önnur viðföng sem send eru inn í aðferðina.
+Það er líka ágætt að rifja upp það sem stendur í kafla :numref:`aðferðir` um **aðferðir** (*methods*). Þær eru ein tegund af föllum sem kallað er á með ``breyta.aðferð(v1,v2...)``. Breytan á undan punktinum nefnist *hlutur* og aðferðin virkar á hann, og svo eru ``v1``, ``v2``... önnur viðföng sem send eru inn í aðferðina.
 
 Í þessum kafla er orðið **aðgerð** (*operation*) notað sem samheiti yfir virkja,
 aðgerðir og venjuleg föll. Töflur yfir sérstakar aðgerðir fyrir strengi og mengi
@@ -63,12 +63,13 @@ Aðgerðir sem duga á öll söfn
       ``s in S``       , er stakið s í S?
       ``s not in S``   , er s ekki í S?
       ``len(S)``       , fjöldi staka í S
+      ``S1 = S``       , býr til tilvísun í S (sjá kafla :numref:`vísað í stök`)
       ``S1 = S.copy()``, býr til afrit af S og setur í S1      
 
    .. admonition:: Æfing: Mismunandi samanburður
       :class: aefing
 
-      Rifjið upp það sem stendur í kafla :numref:`listar` um tilvísanir og
+      Rifjið upp það sem stendur í kafla :numref:`vísað í stök` um tilvísanir og
       fallið ``copy``. Búið til lista L = [2, 3, 5, 7], afritið hann í L1 og L2
       með venjulegri gildisgjöf (L1 = L) og með copy (``L2 = L.copy()``). Prófið svo
       að bera listana saman bæði með "==" og með "is".
