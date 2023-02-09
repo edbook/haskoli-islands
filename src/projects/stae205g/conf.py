@@ -67,6 +67,7 @@ extensions = [
 ]
 
 # -- Custom extension options and paths --------------------------------------
+mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
 katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
