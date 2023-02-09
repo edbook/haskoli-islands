@@ -379,6 +379,11 @@ Skilgreining: Gagntækni
 
 .. _andhverfa:
 
+Myndband: Varpanir, eintækni og átækni
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: j6axhu7Hxag
+
 Skilgreining: Andhverfa
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -451,6 +456,11 @@ Skilgreining: Graf
 .. index::
 	fall; jafnstætt
 	fall; oddstætt
+
+Myndband: Föll og gröf
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: U3Q4u1gLGWk
 
 Skilgreining: Jafnstætt og oddstætt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

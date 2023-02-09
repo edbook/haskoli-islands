@@ -32,3 +32,7 @@ Sem nýr kennari í námskeiðinu hef ég gert smávægilegar breytingar á nám
 Litlar breytingar hafa orðið á námsefninu aðrar en þær að allar hagnýtar upplýsingar hafa verið fluttar yfir í Canvas síðu námskeiðsins.
 
 **Janúar 2020, Benedikt Steinar Magnússon og Sigurður Örn Stefánsson**
+
+Tek aftur við námskeiðinu vorið 2023. Engar breytingar frá því síðast en verða ef til vill unnar samhliða kennslunni.
+
+**Janúar 2023, Sigurður Örn Stefánsson**

@@ -1,0 +1,27 @@
+.rst-content .linenodiv pre, .rst-content div[class^="highlight"] pre, .rst-content pre.literal-block {
+    font-size: 15px;
+    border:2px solid #aaa;
+    background:#f2f5f9;
+    line-height: 1.2;
+}
+.rst-content .code-block-caption {
+    font-style: normal;
+    font-size: 100%;
+    line-height: 1;
+    padding: 0px;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.wy-table caption, .rst-content table.docutils caption, .rst-content table.field-list caption {
+    font: normal 100%/1 arial, sans-serif;
+    font-weight: bold;
+    padding: 7px 0;
+    text-align: center;
+}
+
+h1{color:#003399}
+h2{color:#003399}
+h3{color:#003399}
+h4{color:#003399}
+h5{color:#003399}

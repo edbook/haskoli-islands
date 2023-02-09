@@ -67,6 +67,8 @@ Dæmi
     :img: ./01_afleida.png
     :imgwidth: 12cm
 
+.. youtube:: qWbFOjuO_fU
+
 Setning
 ~~~~~~~
 

@@ -67,6 +67,7 @@ extensions = [
 ]
 
 # -- Custom extension options and paths --------------------------------------
+mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
 katex_render = "https://cdn.jsdelivr.net/npm/katex@0.10.0-rc/dist/contrib/auto-render.min.js"
@@ -107,7 +108,7 @@ master_doc = "index"
 # General information about the project.
 # SET PROJECT INFO HERE
 project = "Stærðfræðigreining II (STÆ205G)"
-copyright = "2021, Sigurður Örn Stefánsson"
+copyright = "2023, Sigurður Örn Stefánsson"
 author = "Sigurður Örn Stefánsson"
 
 # The version info for the project you're documenting, acts as replacement for
@@ -170,6 +171,14 @@ pygments_style = "sphinx"
 # a list of builtin themes.
 html_theme = "sphinx_rtd_theme"
 # html_theme_path = ['_themes']
+html_context = {
+  'display_github': True,
+  'github_user': 'edbook',
+  'github_repo': 'haskoli-islands',
+  'github_version': 'master/src/projects/stae205g/',
+}
+
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -189,7 +198,7 @@ html_theme = "sphinx_rtd_theme"
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 # SET TO UNIVERSITY OF ICELAND RAUNVÍSINDADEILD LOGO
-html_logo = "_static/hi_horiz_raunvisindadeild.png"
+html_logo = "_static/haskoli_islands-edbook.svg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

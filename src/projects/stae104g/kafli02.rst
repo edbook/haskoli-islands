@@ -136,6 +136,7 @@ Dæmi um markgildi
 
         (iii) :math:`\delta=\epsilon`.
 
+.. youtube:: hnVNyDEQnZw
 
 ------
 
@@ -650,7 +651,7 @@ Skilgreining: Markgildið :math:`-\infty`
 
 		#) Þetta er ekki rétt, t.d. er :math:`\lim_{x \rightarrow 0} \tfrac{x}{x} = 1`. Hér er :math:`p(x)=x`, :math:`q(x)=x`, :math:`a=0` og ef við fullstyttum þá sjáum við að :math:`f(x)=1`.
 
-		#) Vissulega er :math:`f(a)` ekki skilgreint en það er samt hægt að skoða markgildið þegar :math:`x\to a`eins og við höfum séð hér að ofan.
+		#) Vissulega er :math:`f(a)` ekki skilgreint en það er samt hægt að skoða markgildið þegar :math:`x\to a` eins og við höfum séð hér að ofan.
 
 
 .. _samfelldni:
@@ -938,6 +939,9 @@ Setning: Milligildissetningin
 
     Það er möguleiki að það séu fleiri en einn punktur á bilinu þar sem fallið tekur
     gildið :math:`s`. Sönnunin hér á undan finnur þann stærsta.
+
+
+.. youtube:: wwwvSIKHjeM
 
 Fylgisetning
 ~~~~~~~~~~~~
