@@ -35,11 +35,11 @@ báðar aðferðirnar.
 .. important::   
 
    Á vef hagstofunnar er hægt að hlaða niður allskonar talnaefni, m.a.
-   kosningaúrslitum. :h:`<a href="https://cs.hi.is/python/kosningar.xlsx"
-   download="kosningar.xlsx"><b>cs.hi.is/python/kosningar.xlsx</b></a>` er að
-   finna úrslit alþingiskosninga 2017. Skráin hefur fjóra dálka: **stafur**,
-   **flokkur**, **atkvæði** og **þingsæti** (*stafur* er listabókstafur).
-   Smellið gjarna á þessa skrá og skoðið hana í Excel.
+   kosningaúrslitum. Skráin :h:`<a href="https://cs.hi.is/python/kosningar.xlsx"
+   download="kosningar.xlsx"><b>cs.hi.is/python/kosningar.xlsx</b></a>` sem er
+   fengin þaðan geymir úrslit alþingiskosninga 2017. Skráin hefur fjóra dálka:
+   **stafur**, **flokkur**, **atkvæði** og **þingsæti** (*stafur* er
+   listabókstafur). Smellið gjarna á þessa skrá og skoðið hana í Excel.
 
    Hér er svo forritsbútur sem les skrána, og birtir hana, reiknar heildarfjölda
    atkvæða, bætir við dálki með hlutfalli atkvæðanna sem hver flokkur fékk, og
@@ -62,7 +62,7 @@ báðar aðferðirnar.
 .. Æfing
 .. hint::
 
-   Afritið Sýnidæmið yfir í Colab og keyrið það. Prófið að nota print í
+   Afritið Sýnidæmið yfir í vinnubók og keyrið það. Prófið að nota print í
    stað display. Bætið svo við samtals-línu með:
 
    .. code:: python
@@ -96,6 +96,60 @@ stak eða reit í töflunni eins og í NumPy fylki með
 ``gagnatafla.loc[lína,dálkur]``. Tökum líka eftir að reikniaðgerð (hér deiling)
 verkar á öll stök dálks í einu, eins og í NumPy.
 
+Smíði gagnatafla
+~~~~~~~~~~~~~~~~
+Í stað þess að lesa gagnatöflur úr skrám eins og gert er í kaflanum hér á undan
+er hægt að búa þær til úr breytum sem þegar eru fyrir hendi, hvort sem er
+uppflettitöflum, listum eða NumPy-fylkjum. Til þess er hægt að nota
+gagnatöflusmiðinn (-constructor) ``pd.DataFrame``. Einfallt kall á hann er:
+
+.. code::
+   
+   df = pd.DataFrame(data)
+          
+þar sem ``data`` getur verið *NumPy-fylki*, *listi af listum* eða
+*uppflettitafla*. Í tveimur fyrri tilvikunum fá dálkarnir nöfn 0, 1, 2,... en
+með uppflettitöflu gefa lyklar hennar nöfn dálkanna. Þegar ``data`` er listi af
+listum verður hver innri listi lína í gagnatöflunni, en ef það er uppflettitafla
+með gildi sem eru listar lenda þeir í dálkum gagnatöflunnar. Svo er hægt að bæta
+viðbótarstikum við kallið á ``DataFrame``, t.d. ``columns=["D1", "D2"]`` til að
+gefa dálkunum nöfn og ``index=[1,2,3]`` til að gefa línunum nöfn (auðkenni).
+
+Þegar gagnatafla er búin til úr NumPy-fylki með ``df = pd.DataFrame(A)`` er
+fylkið ekki afritað heldur geymir taflan tilvísun í fylkið, sbr. athugasemd í
+kafla :numref:`stök fylkis, línur og dálkar`. Til að taka í staðinn afrit má
+nota kallið
+
+    ``df = pd.DataFrame(A, copy=True)``
+
+.. admonition:: Sýnidæmi: 
+   :class: synidaemi
+
+   Skipanirnar:
+   
+   .. code:: python
+
+      T = {"nafn": ["Ari", "Ása"], "aldur":[12,18]}
+      rng = np.random.default_rng(seed=42)
+      A = rng.random(size=(2,3))
+      df = pd.DataFrame(T)
+      slembi = pd.DataFrame(A, columns=["A", "B", "C"])
+      print(df)
+      print(slembi)
+
+   prenta út:
+
+   .. code:: text
+   
+      nafn  aldur
+    0  Ari     12
+    1  Ása     18
+              A         B         C
+    0  0.773956  0.438878  0.858598
+    1  0.697368  0.094177  0.975622
+
+
+
 Helstu Pandas-skipanir
 ~~~~~~~~~~~~~~~~~~~~~~
 Hér fylgja töflur yfir nokkrar helstu Pandas-skipanirnar. Þær eru hvergi nærri
@@ -103,6 +157,14 @@ tæmandi, en í staðinn vísast í *svindlblöðin* sem nefnd eru hér fremst �
 :ref:`innganginum <Pandas>`. Í töflunum stendur ``df.`` fyrir gagnatöflu
 (*DataFrame*) og ``s.`` fyrir runu (*Series*), sem sé stakan dálk eða línu.
 
+
+.. list-table:: DataFrame smiðurinn
+   :widths: auto
+   :name: dataframe-smiðurinn
+
+   * - ``df = pd.DataFrame(uppflettitafla)
+     - Býr til {"col1":[1,2,3], col2
+          
 .. list-table:: Skipanir til að ná í dálka, línur og hluttöflur
    :widths: auto
    :name: helstu-pandas-skipanir
@@ -311,7 +373,7 @@ Matplotlib teikniskipanir geta notað dálka í Pandas-töflum sem viðföng. Ti
 Fleiri Pandas æfingar
 ~~~~~~~~~~~~~~~~~~~~~
 Til að læra betur á Pandas er tilvalið að beita því til að leysa ýmis verkefni tengd
-skráavinnslu aftast í þessum fyrirlestrarnótum, t.d. verkefni 11, 12, 13, 15, 22, 26 og 34c. Með því gefst tækifæri til að nota ýmsar af þeim skipunum sem gefnar eru í töflunum í kafla :numref:`helstu pandas-skipanir`
+skráavinnslu aftast í þessum fyrirlestrarnótum, t.d. verkefni :numref:`reiknað með fylkjum`, :numref:`sameining nafnaskrár og einkunnaskrár`, :numref:`kosningaúrslit`, :numref:`hiti og úrkoma`, :numref:`málmavinnsla`, :numref:`körfuboltamenn` og :numref:`póker`. Með því gefst tækifæri til að nota ýmsar af þeim skipunum sem gefnar eru í töflunum í kafla :numref:`helstu pandas-skipanir`
 
 Punktritháttur
 ~~~~~~~~~~~~~~

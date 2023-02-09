@@ -441,14 +441,7 @@ texinfo_documents = [
 
 # A unique identification for the text.
 # epub_uid = ''
-
-# A tuple containing the cover image and cover page html template filenames.
-# epub_cover = ()
-
-# A sequence of (type, uri, title) tuples for the guide element of ontent.opf.
-# epub_guide = ()
-
-# HTML files that should be inserted before the pages created by sphinx.
+hould be inserted before the pages created by sphinx.
 # The format is a list of tuples containing the path and title.
 # epub_pre_files = []
 

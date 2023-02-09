@@ -15,13 +15,13 @@ vinnubækur. Vinnubækurnar eru geymdar á Google Drive svæði notanda, og forr
 í þeim eru keyrð á sérstakri gervitölvu (*virtual machine*) sem Google leggur
 til. Skrár sem sem forritin þurfa eða búa til eru geymdar á tímabundnu disksvæði
 á þesari gervitölvu. Python-þýðandinn er nýlegur (nánar
-tiltekið útgáfa 3.7.11 í ágúst 2021), helstu pakkar eru þegar uppsettir (m.a. þeir
+tiltekið útgáfa 3.8.16 í janúar 2023), helstu pakkar eru þegar uppsettir (m.a. þeir
 sem nefndir eru í kafla :numref:`pakkar`), og auðvelt er að bæta við pökkum
 eftir þörf.
 
 Til að byrja á vinnubók á Colab þarf fyrst að stofna reikning hjá Google. Síðan má heimsækja `colab.research.google.com <https://colab.research.google.com>`_ og velja *File–New notebook*. Í reitinn sem birtist má slá inn Python-forrit, og svo má keyra forritið með því að smella á þríhyrningstáknið á vinstri brún reitsins eða með því að slá á ctrl/enter. Hægt er að bæta við textareitum og forritsreitum, vista vinnubókina, prenta hana o.s.frv. og eru helstu slíkar skipanir sýndar hér að neðan í kafla :numref:`jupyter-skipanir`.
 
-.. admonition:: Æfing: Collatz-prófun
+.. admonition:: Æfing: Google Colab prófun
    :class: aefing
    
    1. Farið inn á Google Colab, afritið forritið :numref:`Collatz` (þ.e. Collatz)
@@ -29,7 +29,7 @@ Til að byrja á vinnubók á Colab þarf fyrst að stofna reikning hjá Google.
 
    2. Bætið við textareit ofan við keyrslureitinn (ef smellt er á **+ Text** kemur
       textareitur fyrir neðan, sem hægt er að færa upp með því að smella á
-      **uppörina** efst til hægri (**↑**). Setjið titil og smá skýringartexta inn í
+      **upp-örina** efst til hægri (**↑**). Setjið titil og smá skýringartexta inn í
       reitinn með því slá inn:
 
       .. code-block:: text
@@ -52,8 +52,19 @@ Til að byrja á vinnubók á Colab þarf fyrst að stofna reikning hjá Google.
 
       Keyrið reitinn og sláið inn 27 (sem gefur langa röð) og aðrar tölur ef vill.
 
-   4. Búið til PDF-skjal úr vinnubókinni með því að velja **File**–*Print* og
-      síðan *PDF–Save as PDF* eða *Microsoft Print to PDF* eða *PDF–Open in
+   4. Búið til nýjan forritsreit og sláið inn:
+
+      .. code:: python3
+
+         tala = 3.4
+         viðbót = 5.6
+         útkoma = tala + viðbót
+
+      Smellið svo á táknið :code:`{x}` á vinstri spássíu og skoðið innihaldið í
+      breytunum með því að láta bendilinn svífa yfir nöfnunum sem birtast.
+
+   5. Búið til PDF-skjal úr vinnubókinni með því að velja **File**–*Print* og
+      síðan *PDF–Save as PDF* eða *Microsoft Print to PDF* eða (*More settings*)–*PDF–Open in
       Preview* (eftir vafra/tölvu). Takið eftir að lárétta línan sem fæst með
       :code:`***` hjálpar til við að aðskilja textareitinn og forritsreitinn.
       
@@ -62,16 +73,18 @@ Til að byrja á vinnubók á Colab þarf fyrst að stofna reikning hjá Google.
 
    Google Colab viðmótið.
 
-   Hér hefur verið smellt á hnappinn í græna hringnum til að fá efnisyfirlit.
+   Hér hefur verið smellt á hnappinn í græna juhringnum til að fá efnisyfirlit.
    Aðrir hnappar sem nefndir eru í æfingunni að framan eru sýndir með rauðum hring.
 
-.. _anaconda-uppsetning:
+      .. _anaconda-uppsetning:
    
-Uppsetning á Anaconda og JupyterLab
+Uppsetning JupyterLab á eigin tölvu
 -----------------------------------
-Athugið að þessum kafla má sleppa ef Google Colab er notað.
-
-**Anaconda.** Auðveldasta leiðin til að setja upp bæði Python og Jupyter á eigin tölvu er að setja upp hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python er líka svoleiðis slanga). Með Anaconda fylgir nýlegur Python túlkur, Jupyter, meira en 1000 vinsælir Python-pakkar og ýmislegt fleira. Til að setja það upp þarf að heimsækja `anaconda.com <https://anaconda.com/>`_, velja *Products–Individual Edition*, hlaða niður 64 bita *Graphical Installer* fyrir ykkar stýrikerfi og fylgja leiðbeiningum.
+**Anaconda.** Auðveldasta leiðin til að setja upp bæði Python og Jupyter á eigin tölvu er að
+nota hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python
+er líka svoleiðis slanga). Til að flýta fyrir uppsetningu er hægt að nota minni útgáfu
+af Anaconda sem kallast Miniconda og leiðbeiningarnar hér miðast við hana. Anaconda með öllu
+inniheldur u.þ.b. 1500 pakka og það tekur tíma að ná í þá alla og setja upp.
 
 .. figure:: myndir/anaconda.jpg
    :align: center
@@ -79,24 +92,70 @@ Athugið að þessum kafla má sleppa ef Google Colab er notað.
 
    Græn anaconda slanga
        
-**Keyrsla JupyterLab.** Eftir uppsetningu Anaconda má smella á
-"Anaconda-Navigator" appið og velja þar *JupyterLab*. Þá opnast JupyterLab í
-glugga í aðalvafra tölvunnar. Heimamappa er sjálfgefin í fyrsta sinn, en næst
-opnast JupyterLab á sama stað og síðast var hætt. JupyterLab-glugginn lítur
-svona út:
+**Uppsetning Miniconda með nýjasta Python** Heimsækið `docs.conda.io/en/latest/miniconda
+<http://docs.conda.io/en/latest/miniconda>`_, hlaðið niður uppsetningarforriti fyrir
+ykkar stýrikerfi úr efstu töflunni (*Latest Miniconda Installer Links*) og keyrið það.
+Á Windows-tölvum er næst farið í *Start Menu* (neðst til vinstri) og valið *Anaconda
+Powershell Prompt*, en á Mökkum og Linux-tölvum skal opna *Terminal*. Þar er gefin
+skipunin:
 
-.. figure:: myndir/jupyterlab.png
+.. code:: text
+
+   conda install scipy matplotlib pandas jupyterlab
+
+(hún tekur nokkra stund að klárast)
+
+**Keyrsla JupyterLab.** Eftir uppsetningu Miniconda/Anaconda má keyra JupyterLab
+með því að opna *terminal*-glugga og gefa þar einhverja eftirfarandi skipana:
+
+.. code::
+
+   jupyter-lab
+   jupyter lab
+   jupyter-lab skrá.ipynb
+
+Þá opnast JupyterLab í glugga í aðalvafra tölvunnar með möppuna sem byrjað var í
+sjálfgefna. Síðasttalda skipunin opnar sjálfkrafa eldri vinnubók :code:`skrá.ipynb`.
+JupyterLab-glugginn lítur nokkurnveginn svona út:
+
+.. figure:: myndir/jupyterlab.jpeg
    :align: center
 
-   JupyterLab-glugginn
+   Upphafsgluggi JupyterLab
 
-Hér hefur verið byrjað í möppunni :code:`dropbox/strei` undir heimamöppu. Þarna eru tvær undirmöppur og fjórar skrár: tvær vinnubækur eða Jupyter-bækur (auðkenndar með .ipynb, en Jupyter hét áður IPython), eitt Python-forrit (auðkennt með .py) og ein pdf-skrá. Til að búa til nýja vinnubók er smellt á efri *Python 3*-hnappinn, og þá opnast bókin í nýjum flipa í vafranum. Hún heitir sjálfkrafa *Untitled2* en með því að hægri-smella á nafnið (eða smella á *File*) og velja *Rename notebook* má skíra hana einhverju skynsemlegra nafni. Eldri bók er opnuð með því að smella á hana í skráalistanum vinstra megin.
+Hér eru tvær undirmöppur og fjórar skrár: tvær vinnubækur eða Jupyter-bækur
+(auðkenndar með .ipynb, en Jupyter hét áður IPython), eitt Python-forrit
+(auðkennt með .py) og ein pdf-skrá. Til að búa til nýja vinnubók er smellt á
+efri *Python 3*-hnappinn, og þá opnast bókin í nýjum flipa í vafranum. Hún
+heitir sjálfkrafa *Untitled2* en með því að hægri-smella á nafnið (eða smella á
+*File*) og velja *Rename notebook* má skíra hana einhverju skynsemlegra nafni.
+Eldri bók er opnuð annaðhvort með því að smella á hana í skráalistanum vinstra
+megin eða tilgreina hana á skipanalínunni eins og sýnt er að ofan.
+
+.. figure:: myndir/jupyterlab-s2.jpg
+   :align: center
+
+   JupyterLab með opinni vinnubók og aflúsunarhnappi (í rauðum hring)
+
+**Aflúsun í JupyterLab** Einn kostur við JupyterLab umfram Google Colab er að það er hægt að
+setja bremsur sem stoppa keyrslu í miðju kafi, og þegar forritið hefur stöðvast má
+skoða gildi á breytum áður en forritið er sett aftur af stað. Til að virkja aflúsnarham
+er smellt á mynd af pöddu sem er efst hægra megin í forritsglugganum (sjá mynd), og bremsa er
+virkjuð með því að smella vinstra megin við línunúmer í forritinu (þar kemur rauður hringur).
 
 Vinnubækur
 ----------
 Eins og fram kom í æfingunni í kafla :numref:`colab` innihalda vinnubækur **reiti** (*cells*) af tvennu tagi, **forritsreiti** (*code*), og **textareiti** (*markdown*). Í þeim fyrrnefndu eru Python-forrit eða forritsbútar, en í hinum eru fyrirsagnir og skýringartextar sniðnir með umbrotsmálinu (*markup language*) *Markdown*. Í textareitina er líka hægt að setja stærðfræðiformúlur sniðnar með formúlumálinu *LaTeX* og jafnvel myndir ef vill. Forritsbútana er hægt að keyra og fer úttak keyrslu inn í bókina, neðst í viðkomandi forritsreit. Segðin sem er neðst í hverjum reit skrifast sjálfkrafa út, en nota þarf print-fallið til að skrifa út niðurstöður framar í reitnum.
 
 Það er sæmilega auðvelt að læra á notkun hvort sem er Colab eða JupyterLab með því að prófa sig áfram, en líka getur verið gagnlegt að skoða leiðbeiningar á netinu, sbr grein :numref:`jupyter-leiðbein-á-netinu`. Mikilvægustu skipanir beggja labbanna fylgja svo hér í næsta kafla.
+
+.. admonition:: Æfing: JupyterLab
+   :class: aefing
+   
+   a. Setjið upp JupyterLab á eigin tölvu
+   b. Endurtakið æfinguna í kafla :numref:`notkun google colab`.
+   c. Prófið aflúsun.
+   d. Prófið einhverjar af skipununum úr næsta kafla.
 
 .. _jupyter-skipanir:
 
@@ -274,13 +333,14 @@ Vistun vinnubóka á PDF-sniði
 *Destination → Save-as-PDF* (*PDF → Save-as-PDF* á Mac). Þá birtist gluggi þar
 sem velja má möppu og nafn fyrir PDF-skjalið.
 
-.. danger::
+.. admonition:: Aðvörun:
+   :class: advorun
+   
    Í Safari virðist stundum þurfa að velja *File → Print* í vafranum en ekki í
    Colab-flipanum, en í Chrome virðist ekki skipta máli hvoru megin *File → Print*
    er valið.
 
 **JupyterLab.** Í JupyterLab er lús þannig að með *File → Print* vistast stærðfræðiformúlur ekki rétt. Það þarf að fara krókaleið og velja fyrst *File → Export notebook as → HTML* og svo þarf að opna HTML-skjalið sem verður til og vista það í PDF með *File → Print*.
-PDF.
 
 Markdown og Latex
 -----------------
@@ -352,9 +412,9 @@ Hægt er að finna ýmsar vefsíður með leiðbeiningum um Google Colab og Jupy
    :class: aefing
    
    Vinnubókin `kynning.ipynb
-   <https://colab.research.google.com/drive/1H-x6BX7OhkTRVj3YHH5_2mSOtJEnA9l8?usp=sharing>`_
-   byrjar á tveimur æfingum í notkun Google Colab. Ef smellt er á hana opnast
-   hún hjá Google Drive og hægt er að velja *Copy-to-Drive* (eða *File→Download*
-   til að nota JupyterLab). Þá lendir skráin sjálfkrafa í möppu sem heitir
-   *Colab Notebooks* og þar er hægt að breyta henni og vista breytingar.
-   Náið í þessa skrá og leysið tvær fyrstu æfingarnar, A og B.
+   <https://gist.github.com/jonasson2/71221ffea4a0339cc2406d76fce3ce6a>`_ byrjar
+   á tveimur æfingum í notkun Google Colab. Ef smellt er á hana opnast hún hjá
+   GitHub Gist og hægt er að velja *Open-in-Colab*. Þar má svo velja *File–Save
+   a copy in Drive* og þá lendir skráin í Google-Drive möppu sem heitir *Colab
+   Notebooks*, þar sem hægt er að breyta henni og vista breytingar. Náið í þessa
+   skrá og leysið tvær fyrstu æfingarnar, A og B.

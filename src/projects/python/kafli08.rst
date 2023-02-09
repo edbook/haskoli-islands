@@ -52,23 +52,38 @@ stað, annaðhvort á vefnum eða í svonefndri sjálfgefinni möppu, en í kafl
 
 Skrár heita langoftast einhverju nafni sem er textastrengur. Það eru mun minni
 takmarkanir á nöfnum skráa en á breytunöfnum: skráanöfn mega innihalda ýmis
-sértákn, og t.d. er algengt er að nota –, :, . og bil, auk bókstafa og
-tölustafa. Það er samt ekki hægt að nota skástrik, hvorki / né \. Reyndar geta
-séríslenskir stafir valdið vandræðum á það á til dæmis við ef skrám er er hlaðið
-upp til notkunar í Google Colab :(. Skráanöfn eru oft með sniðinu
+sértákn, og t.d. er algengt að nota –, :, . og bil, auk bókstafa og
+tölustafa. Það er samt ekki hægt að nota skástrik, hvorki / né \\. Reyndar geta
+séríslenskir stafir valdið vandræðum. Á það á til dæmis við ef skrám er er
+hlaðið upp til notkunar í Google Colab :(. Skráanöfn eru oft með sniðinu
 ``aðalnafn.undirnafn`` (*basename.extension*) þar sem .undirnafn segir til um
 tegund skrárinnar og getur t.d. verið ``.txt`` fyrir textaskrár, ``.xlsx`` fyrir
-Excel-skjöl og ``.png`` fyrir myndir á png-sniði. Dæmi um skráanöfn eru ``gögn
-14.09.2021 14:59:00.txt`` og ``skiladæmi-12.pdf``.
+Excel-skjöl og ``.png`` fyrir myndir á png-sniði. Dæmi um skráanöfn eru:
+
+     ``gögn 14.09.2021 14:59:00.txt`` |br|
+     ``skiladæmi-12.pdf``.
+
+Reyndar er það svo á bæði Windows-tölvum og Mökkum að sjálfgefið er að
+undirnafnið sé falið. Tegund skrárinnar er þá sýnd með öðrum hætti, oft bæði með
+teikni (*icon*) og textalýsingu, sbr. :numref:`mynd %s <finder>`, þar sem tölvan
+hefur reyndar verið stillt á að fela undirnafnið ekki.
+
+.. _finder:
+
+.. figure:: myndir/finder.jpg
+   :align: center
+   :figwidth: 18cm
+
+   "Finder" á Makka. Tegundir skráa sýndar með teikni, undirnafni, og textalýsingu
 
 .. rubric:: Pakkar til að lesa og skrifa skrár
-
+   
 Það eru ýmsar leiðir til að lesa og skrifa skrár í Python. Hefðbundna aðferðin
 er að nota innbyggðu föllin ``open``, ``read`` og ``write`` (og reyndar nokkur
 skyld föll), sem einkum nýtast fyrir textaskrár. Stundum eru skrárnar sniðnar á
 ákveðinn hátt, til dæmis með því að aðskilja dálka með kommum, semíkommum eða
 tab-táknum, og þá gæti pakkinn ``csv`` (*comma-separated-values*) hentað.
-Pakkasöfnin *Pandas* og *Numpy* sem rædd voru í :numref:`inngangur`. kafla eru
+Pakkasöfnin *Pandas* og *Numpy* sem rædd voru í kafla :numref:`inngangur` eru
 með sín föll til að lesa skrár, og svo eru til sérstakir pakkar til að lesa
 ýmsar sérsniðnar skrár t.d. Excel-skjöl og myndaskrár. Loks má nefna pakkann
 *pathlib* sem er á dagskrá í kafla :numref:`skraakerfi`.
@@ -108,7 +123,7 @@ Til að þetta virki þarf fallið BYRJUN að vera samhæft við notkun with-ski
 út úr with-blokkinni. With-skipunin hefur annan kost, að ef skipanablokkin
 inniheldur einhverjar skipanir sem brjótast út úr henni (``return``, ``break``
 eða ``continue``) þá missum við af lokaskipununum með forritsbútnum hægra megin,
-en ekki ef with notum with. Nánar tiltekið:
+en ekki ef við notum *with*. Nánar tiltekið:
 
 .. code:: text
 
@@ -132,10 +147,11 @@ innlesturinn þarf að loka henni með **close**. Hinsvegar eru *open–close*
 einmitt par af skipunum BYRJUN–LOKASKIPUN sem eru samhæfðar við *with*. Hefðin
 er sú að nota with-skipun með open, og þessar fyrirlestrarnótur miðast við það.
 
-Python hefur þrjú innbyggð föll til að lesa textaskrá **readline**,
-**readlines** og **read**. Fyrsta fallið les eina línu úr skránni, þ.m.t.
-línuskiptatákn, inn í streng, næsta fall les allar línur sem eftir er að lesa
-inn í lista af strengjum og það þriðja les alla skrána inn í einn streng.
+Python hefur þrjú innbyggð föll til að lesa textaskrá, **readline**,
+**readlines** og **read**. Fyrsta fallið les eina línu úr skránni inn í streng,
+næsta fall les allar línur sem eftir er að lesa inn í lista af strengjum og það
+þriðja les alla skrána inn í einn streng. Í öllum tilfellum eru línuskiptatákn
+aftast í hverjum lesnum streng.
 
 .. admonition:: Sýnidæmi: Lestur skrár
    :class: synidaemi
@@ -162,7 +178,7 @@ inn í lista af strengjum og það þriðja les alla skrána inn í einn streng.
 
    Þá verður hauslína strengurinn ``"Nafn Hæð\n"``, ``línur`` verður listinn
    ``["Bára 171\n", "Jóna 168\n", "Kári 178\n"]``, og ``skráin`` verður
-   strengurinn ``Hæð\nBára 171\nJóna 168\nKári 178"\n"``
+   strengurinn ``"Nafn Hæð\nBára 171\nJóna 168\nKári 178\n"``
 
    Takið eftir að það þarf að opna skrána aftur áður en kallað er á **read**.
 
@@ -209,7 +225,7 @@ að losna við línuskiptatáknin, svona:
       
    # Nú er L listinn ['Nafn Hæð', 'Bára 171', 'Jóna 168', 'Kári 178']
 
-.. admonition:: Æfing: Textaskrá í Colab
+.. admonition:: Æfing: Textaskrá lesin inn
    :class: aefing
 
    1. Búið til skrána "data.txt" á tölvunni ykkar með innihaldinu sem gefið er í
@@ -221,7 +237,9 @@ að losna við línuskiptatáknin, svona:
       sleginn inn, valið *File–Save* og skránni loks valinn staður, t.d. í
       *Documents* möppu.
 
-   2. Farið nú í Google Colab og opnið nýja vinnubók. Smellið á möpputáknið í
+   2. Þið ráðið hvort þið leysið þennan lið í Colab eða JupyterLab.
+      
+      **Í Colab:** Farið nú í Google Colab og opnið nýja vinnubók. Smellið á möpputáknið í
       vinstri spássíu og þvínæst upphleðslutáknið sem birtist og hlaðið upp nýju
       skránni, ``data.txt``. Smellið á hana til að skoða innihaldið og
       staðfestið að allt sé rétt.
@@ -230,9 +248,14 @@ að losna við línuskiptatáknin, svona:
          :align: center
          :figwidth: 9cm
 
+      **Í JupyterLab** Opnið JupyterLab í möppunni þar sem skránni var valinn staður
+      í lið 1 og búið til nýja vinnubók.
+                    
    3. Skrifið nú forrit sem les skrána og prentar hana jafnóðum út, eins og gert
       er í seinna sýnidæminu að ofan, nema hvað ekki á að meðhöndla hauslínuna
       sérstaklega.
+
+
 
 Innlestur textaskrár af vefnum
 ------------------------------
@@ -243,10 +266,10 @@ skrá á vefnum ekki sjálfkrafa kóðaðir í Python-strengi heldur helst snið
 og það er nánast alltaf svonefnt "utf-8" snið. Til að fá rétta Python-strengi
 þarf að beita fallinu `decode()`.
 
-Hér fylgir sýnidæmi um svona innlestur, sem sýnir
-líka hvernig hægt er að ná í einstök atriði í hverri línu með ``split`` fallinu.
-Það losar okkur í leiðinni við línuskiptatáknin og gerir þar með ``strip()``
-óþarft. Mörg fleiri dæmi um lestur skrá af vefnum eru í verkefnunum aftast í þessum fyrirlestrarnótum.
+Hér fylgir sýnidæmi um svona innlestur, sem sýnir líka hvernig hægt er að ná í
+einstök atriði í hverri línu með ``split`` fallinu. Það losar okkur í leiðinni
+við línuskiptatáknin og gerir þar með ``strip()`` óþarft. Mörg fleiri dæmi um
+lestur skráa af vefnum eru í verkefnunum aftast í þessum fyrirlestrarnótum.
 
 .. admonition:: Sýnidæmi: Skrá lesin af vefnum
    :class: synidaemi
@@ -321,7 +344,7 @@ Notast er við sömu skrá og síðast.
 .. admonition:: Sýnidæmi: Uppflettitafla eftir innlestur
    :class: synidaemi
 
-   Við byrjum að keyra fyrstu átta línurnar í forritunu í sýnidæmi **Skrá lesin
+   Við byrjum að keyra fyrstu átta línurnar í forritinu í sýnidæmi **Skrá lesin
    af vefnum** í kaflanum á undan og fá þannig tvo lista Síðan búum við töfluna til
    með aðstoð dict og zip og prentum hana út eins og fyrr:
 
@@ -331,10 +354,59 @@ Notast er við sömu skrá og síðast.
       
       for (nafn,hæð) in tafla.items():
          print(f"{nafn} {hæð}"
-      
+
+.. admonition:: Æfing: Prófnúmer og einkunnir
+   :class: aefing
+
+   Skráin `https://cs.hi.is/python/profnumer.txt <http:////cs.hi.is/python/profnumer.txt>`_
+   inniheldur tvo dálka, prófnúmer og skírnarnafn. Lesið þessa skrá inn í uppflettitöflu,
+   prófnúmer :math:`\to` nafn,
+
+   a. með því að byrja með tóma töflu og bæta við hana samhliða innlestri, eins
+      og í fyrra sýnidæminu að framan, og
+
+   b. með því að lesa inn tvo lista og nota ``dict(zip(...))`` eftir innlesturinn,
+      eins og í seinna sýnidæminu.
+
+   c. Gunnar íslenskukennari notaði prófnúmer þegar hann fór yfir ritgerðir (svo hann
+      yrði ekki hlutdrægur). Hér eru einkunnirnar sem hann gaf:
+
+     .. code :: text
+
+        prófnúmer:   176,  542, 1577, 2785, 4218, 6354, 8003, 9134
+        einkunn:     8.5, 10.0,  4.5,  9.0,  7.5,  6.0,  8.5,  8.0
+        
+     Skrifið forrit sem býr til tvo lista úr þessum upplýsingum, flettir upp á
+     nöfnum í uppflettitöflunni og býr til einkunnalista sem byrjar svona:
+
+     .. code:: text
+
+        Nemandi     Prófnúmer  Einkunn
+        ––––––––––––––––––––––––––––––
+        Kjartan     0176         8.5
+        Aðalheiður  0542        10.0
+        Hulda       1577         4.5
+        ...
+
+     .. admonition:: Athugasemd: 
+        :class: athugid
+
+        Ef sýnidæmunum að framan er fylgt verða prófnúmerin sjálfkrafa strengir,
+        en listinn í c-lið gefur heiltölur. Til að komast hjá þessu ósamræmi
+        mætti breyta prófnúmerinu í tölu eftir að það er lesið inn úr skránni,
+        t.d. með ``prófnr = int(prófnr)``. Til að prenta 0 fremst í prófnúmerum í
+        lokatöflunni má svo nota f-streng með sniði ``{...:04}`` sbr.
+        :numref:`töflu %s<fstrengjasnið>`.
+        
+        
 CSV-skrár
 ~~~~~~~~~
-Gögnum í skrám er oft skipað í dálka, t.d. nöfn í fyrsta dálki, símanúmer í 2. dálki og heimilisföng í 3. dálki. Það eru ýmsar leiðir notaðar til að afmarka dálkana: Stundum eru dálkarnir af fastri breidd, en stundum eru þeir afmarkaðir með sérstöku afmörkunartákni (*delmiter*), oftast kommu, semikommu (;), tab-tákni eða bilum. Skrár sem nota kommu eða semikommu eru kallaðar CSV-skrár (*comma separated values*) og slíkar skrár er auðvelt að búa til með Excel.
+Gögnum í skrám er oft skipað í dálka, t.d. nöfn í fyrsta dálki, símanúmer í 2.
+dálki og heimilisföng í 3. dálki. Það eru ýmsar leiðir notaðar til að afmarka
+dálkana: Stundum eru dálkarnir af fastri breidd, en stundum eru þeir afmarkaðir
+með sérstöku afmörkunartákni (*delmiter*), oftast kommu, semikommu (;),
+tab-tákni eða bilum. Skrár sem nota kommu eða semikommu eru kallaðar CSV-skrár
+(*comma separated values*) og slíkar skrár er auðvelt að búa til með Excel.
 
 .. _daemi-um-csv-skra:
 
@@ -486,7 +558,7 @@ milli dálka og láta þá standast á.
             bræðslum = int(lína[2])
             ...
 
-Þessi skrá verður notuð í :numref:`verkefni %s<dálkar í csv-skrá>`
+Þessi skrá verður notuð í :numref:`verkefni %s<dálkar í csv-skrá [leyst með colab]>`
    
 .. _csv-lestur-dalka:
             
@@ -560,12 +632,13 @@ eftirfarandi dæmi
         print(f"x = {x}", file=f)
         print(f"y = {y}", file=f)
    
-.. admonition:: Æfing: Skráaskrift í Colab
+.. admonition:: Æfing: Skráaskrift úr vinnubók
    :class: aefing
 
-   Afritið forritin í sýnidæmunum tveimur hér að framan inn í Google Colab reiti
-   og keyrið þau. Smellið svo á möpputáknið í vinstri spássíu og skoðið skrárnar
-   sem urðu til.
+   Afritið forritin í sýnidæmunum tveimur hér að framan inn í reiti í vinnubók
+   og keyrið þau. Skoðið svo skrárnar sem urðu til [í Colab má smella á
+   möpputáknið í vinstri spássíu, en á eigin tölvu má nota Finder (Mac) eða File
+   Explorer (Windows)].
          
 .. _skraakerfi:
 
@@ -580,7 +653,9 @@ skrár geta möppur innihaldið aðrar möppur, sem eru þá kallaðar **undirm�
 
 Möpputré
 --------
-Möppum er oft raðað saman í kerfi sem er eins og tré á hvolfi, en kerfið er líka stundum sýnt með því að lista innihald möppu inndregið fyrir neðan nafn möppunnar. Hér eru tvö dæmi:
+Möppum er oft raðað saman í kerfi sem er eins og tré á hvolfi, en kerfið er líka
+stundum sýnt með því að lista innihald möppu inndregið fyrir neðan nafn
+möppunnar. Hér eru tvö dæmi:
 
 .. _moppur-toms:
 
@@ -614,13 +689,30 @@ sýnir *Finder* (=*File Explorer*) rótarmöppuna á Makka höfundar undir heiti
 
 Heimamappa
 ----------
-Á flestum tölvum á hver notandi sína heimamöppu, sem heitir nafni sem er líka notendanafn hans. Á Mökkum og Windows-tölvum er kerfið oft sett þannig upp að undir rótarmöppu tölvunnar er mappa *Users*, og undir henni eru heimamöppur þeirra notenda sem hafa verið settir upp. Í heimamöppunum eru síðan möppurnar *Documents*, *Downloads*, *Desktop*, *Pictures*, *Music* o.fl. Í Ubuntu Linux heitir yfirmappa heimamöppunnar *home* en ekki *Users*.
+Á flestum tölvum á hver notandi sína heimamöppu, sem heitir nafni sem er líka
+notendanafn hans. Á Mökkum og Windows-tölvum er kerfið oft sett þannig upp að
+undir rótarmöppu tölvunnar er mappa *Users*, og undir henni eru heimamöppur
+þeirra notenda sem hafa verið settir upp. Í heimamöppunum eru síðan möppurnar
+*Documents*, *Downloads*, *Desktop*, *Pictures*, *Music* o.fl. Í Ubuntu Linux
+heitir yfirmappa heimamöppunnar *home* en ekki *Users*.
 
 Núverandi mappa
 ---------------
-Þegar forrit keyrir er það oftast statt í tiltekinni möppu sem kölluð er *sjálfgefin mappa* eða *núverandi mappa* (*current working directory*). Þetta er sú mappa sem skrár lenda í þegar þær eru vistaðar úr forritinu, og líka sú þar sem fyrst er leitað að skrá til að opna. Oft er það heimamappan sem er sú sjálfgefna, eða þá mappan *Documents*, nema um sé að ræða myndvinnsluforrit eða tónlistarforrit t.d.
+Þegar forrit keyrir er það oftast statt í tiltekinni möppu sem kölluð er
+*sjálfgefin mappa* eða *núverandi mappa* (*current working directory*). Þetta er
+sú mappa sem skrár lenda í þegar þær eru vistaðar úr forritinu, og líka sú þar
+sem fyrst er leitað að skrá til að opna. Oft er það heimamappan sem er sú
+sjálfgefna, eða þá mappan *Documents*, nema um sé að ræða myndvinnsluforrit eða
+tónlistarforrit t.d.
 
-Það gildir líka um Python-forrit notanda að það er statt í tiltekinni möppu þegar það keyrir. Ef Python er keyrt með Anaconda á eigin tölvu þá lendir maður sjálfkrafa í heimamöppu. En  þegar keyrt er með Google Colab þá er maður staddur á einhverri tölvu uppi í *Skýinu*, nánar tiltekið í möppu sem heitir "/content". Það er hægt að skoða skráakerfi þessarar tölvu með því að smella á möpputáknið í vinstri spássíu gluggans. Þá birtast líka hnappar til að hlaða upp eða niður skrám frá/á eigin tölvu og sömuleiðis er hægt að tengja Google Drive notanda við þetta skráakerfi.
+Það gildir líka um Python-forrit notanda að það er statt í tiltekinni möppu
+þegar það keyrir. Þegar JupyterLab er keyrt upp frá skipanalínu í ákveðinni
+möppu þá er forritið í byrjun statt þar. En þegar keyrt er með Google Colab þá
+er maður staddur á einhverri tölvu uppi í *Skýinu*, nánar tiltekið í möppu sem
+heitir "/content". Það er hægt að skoða skráakerfi þessarar tölvu með því að
+smella á möpputáknið í vinstri spássíu gluggans. Þá birtast líka hnappar til að
+hlaða upp eða niður skrám frá/á eigin tölvu og sömuleiðis er hægt að tengja
+Google Drive notanda við þetta skráakerfi.
 
 Slóðir
 ------
@@ -660,7 +752,7 @@ Einingin pathlib
 Í (eldri) Python-forritum er algengt að notuð sé einingin *os* (*operating
 system*) til að meðhöndla möppur og slóðir. Einingin **pathlib** er nýleg og
 tilgangur hennar er að leysa *os* af hólmi með einfaldari aðgerðum. Hér lýsum
-við bara hvernig nota má *pathlib*, en nefna má að Think_Python-bókin útskýrir
+við bara hvernig nota má *pathlib*, en nefna má að Think Python-bókin útskýrir
 *os*-eininguna í kafla 14.4.
 
 Mikilvægasta fallið í *pathlib* er kallað ``Path`` og það er virkjað með því að
@@ -730,10 +822,9 @@ reyndar þannig að það skiptir engu máli hvaða slóð var notuð til að b�
 
    Reiknað er með að æfingarnar í köflum :numref:`hefdbundinn-innlestur` og
    :numref:`skrar-skrifadar-ut` hafi verið leystar og því séu nokkrar skrár í
-   Colab-möppunni (*data.txt*, *xy.dat*, *xy1.dat*, auk möppunnar sem Colab sjálft
-   setur þar, *sample_data*).
+   núverandi möppu (*data.txt*, *xy.dat*, *xy1.dat*).
 
-   1. Finnið út algilda slóð sjálfgefnu möppunnar í Colab með því að nota Path.
+   1. Finnið út algilda slóð núverandi möppu með því að nota Path.
       
    2. Skrifið forritsbút sem ítrar yfir innihald þessarar möppu og ákvarðar
       fyrir hvern hlut sem finnst hvort hann sé skrá eða mappa.

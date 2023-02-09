@@ -99,15 +99,20 @@ Listar
 
     :code:`L = [gildi, gildi...]`
 
-**Aðgerðir fyrir tölvufræðilega lista** eru m.a. að ná í fremsta stakið (**haus**, *head*), að ná í öll hin stökin (**hali**, *tail*) að bæta staki framan á eða aftan á lista, og að ná í stak í tilteknu sæti. Python listar bjóða upp á þessar aðgerðir og ýmsar fleiri (sjá æfinguna aftast í þessari grein).
+Listaaðgerðir
+~~~~~~~~~~~~~
+          
+**Aðgerðir fyrir tölvufræðilega lista** eru m.a. að ná í fremsta stakið (**haus**, *head*), að ná í öll hin stökin (**hali**, *tail*) að bæta staki framan á eða aftan á lista, og að ná í stak í tilteknu sæti. Python listar bjóða upp á þessar aðgerðir og ýmsar fleiri (sjá æfinguna í kafla :numref:`fleiri listaföll`).
 
 .. figure:: myndir/head-tail.png
    :align: center
    :figwidth: 7cm
 
    Haus og hali
-          
-**Vísað í stök.** Eins og fyrr segir má vísa í einstök stök í lista með :code:`L[i]` þar sem i er heiltala með númeri staks, og **hlutlistar** (*slices*) fást eins og fyrir strengi, sbr. eftirfarandi dæmi:
+
+Vísað í stök
+~~~~~~~~~~~~
+Eins og fyrr segir má vísa í einstök stök í lista með :code:`L[i]` þar sem i er heiltala með númeri staks, og **hlutlistar** (*slices*) fást eins og fyrir strengi, sbr. eftirfarandi dæmi:
 
    .. code:: python3
 
@@ -121,9 +126,13 @@ Listar
       ['abc', 4.33]
       [4.33, [1, 2]]
 
-**Samskeyting og margföldun.** Aðgerðunum + og * sem við höfum séð að duga til að skeyta saman og fjölfalda strengi má líka beita á lista. Þannig gefur :code:`[2,3,5] + [7,11]` listann :code:`[2,3,5,7,11]` og :code:`[2,3,5]*2` er :code:`[2,3,5,2,3,5]`.
+Samskeyting og margföldun
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Aðgerðunum ``+`` og ``*`` sem við höfum séð að duga til að skeyta saman og fjölfalda strengi má líka beita á lista. Þannig gefur :code:`[2,3,5] + [7,11]` listann :code:`[2,3,5,7,11]` og :code:`[2,3,5]*2` er :code:`[2,3,5,2,3,5]`.
  
-**Gildisgjöf gefur tilvísun.** Ef lista er gefið gildi með venjulegri gildisgjöf :code:`M = L` þá verður ekki til nýr listi heldur bara ný **tilvísun** (*reference*) eða nýtt nafn á listann :code:`L`. Til að afrita listann mætti rita :code:`N = L.copy()`. Hér er dæmi:
+Gildisgjöf gefur tilvísun
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Ef lista er gefið gildi með venjulegri gildisgjöf :code:`M = L` þá verður ekki til nýr listi heldur bara ný **tilvísun** (*reference*) eða nýtt nafn á listann :code:`L`. Til að afrita listann mætti rita :code:`N = L.copy()`. Hér er dæmi:
 
 .. admonition:: Sýnidæmi: Afrit og tilvísun
    :class: synidaemi
@@ -159,16 +168,23 @@ Listar
       listafall(listi)
       print(tala,listi)  # prentar 5 [3, 6] 
 
-**Bætt við lista.** Í dæmunum hér á undan sést hvernig hægt er að breyta einu staki í lista, en sú aðferð dugar ekki til að lengja listann: :code:`L[5] = 13` mundi gefa villu. Til að bæta 13 aftan á listann mætti nota aðra hvora af eftirfarandi skipunum
+Bætt við lista
+~~~~~~~~~~~~~~
+Í dæmunum hér á undan sést hvernig hægt er að breyta einu staki í lista, en sú aðferð dugar ekki til að lengja listann: :code:`L[5] = 13` mundi gefa villu. Til að bæta 13 aftan á listann mætti nota aðra hvora af eftirfarandi skipunum
 
    .. code:: python3
 
       L.append(13)
       L = L + [13]
 
-**Aðferðir.** Köllin á :code:`copy` og :code:`append` eru óvenjuleg. Fall sem kallað er á svona, með :code:`breyta.fall(...)`, er kallað **aðferð** (*method*), en aðferðir eru eitt af grundvallarhugtökum í hlutbundinni forritun (*object oriented programming*). Breytan á undan punktinum er þá kölluð **hlutur** (*object*), og aðferðin virkar sem sé á hann. Fallið :code:`find` í töflunni yfir strengjaðgerðir hér framar er annað dæmi um aðferð.
+Aðferðir
+~~~~~~~~
+Köllin á :code:`copy` og :code:`append` eru óvenjuleg. Fall sem kallað er á svona, með :code:`breyta.fall(...)`, er kallað **aðferð** (*method*), en aðferðir eru eitt af grundvallarhugtökum í hlutbundinni forritun (*object oriented programming*). Breytan á undan punktinum er þá kölluð **hlutur** (*object*), og aðferðin virkar sem sé á hann. Fallið :code:`find` í töflunni yfir strengjaðgerðir hér framar er annað dæmi um aðferð.
 
-**Fleiri listaföll.** Til eru fjölmörg fleiri föll fyrir lista til viðbótar við :code:`copy` og :code:`append`. Mörg þessara falla duga líka á önnur safntög, sér í lagi samstæður og mengi, og í þessum fyrirlestrarnótum hafa töflur með mikilvægustu safnaföllum verið settar á einn stað, í kafla :numref:`helstu-aðgerðir`. Þar á meðal eru ýmis fleiri dæmi um hlutbundnar aðferðir
+Fleiri listaföll
+~~~~~~~~~~~~~~~~
+
+Til eru fjölmörg fleiri föll fyrir lista til viðbótar við :code:`copy` og :code:`append`. Mörg þessara falla duga líka á önnur safntög, sér í lagi samstæður og mengi, og í þessum fyrirlestrarnótum hafa töflur með mikilvægustu safnaföllum verið settar á einn stað, í :numref:`%s. kafla <helstu-aðgerðir>`. Þar á meðal eru ýmis fleiri dæmi um hlutbundnar aðferðir
 
 .. admonition:: Æfing: Listablús
    :class: aefing
@@ -374,7 +390,7 @@ setja pörin sem verða til inn í sérstaka breytu:
           p = (i+1, L[i])
           print(p)
 
-**zip** er annað fall sem smíðar pör; það tekur inn tvo jafnlanga lista og
+**zip** er annað fall sem smíðar pör; það tekur inn tvo (eða fleiri) jafnlanga lista og
 parar þá saman: :code:`zip([0,1,2], [5,6,7])` skilar pörunum :code:`(0,5)`,
 :code:`(1,6)` og :code:`(2,7)`.
 
@@ -401,7 +417,7 @@ parar þá saman: :code:`zip([0,1,2], [5,6,7])` skilar pörunum :code:`(0,5)`,
 
       **Leiðbeining:** Hægt er að nota *enumerate* og *zip* saman svona:
       
-          :code:`for nr,(s1,s2) = enumerate(zip(L1,L2),1)`
+          :code:`for nr,(s1,s2) in enumerate(zip(L1,L2),1)`
 
       Þá hleypur nr í gegn um 1,2,3... og samtímis hlaupa s1 og s2 í gegn um
       stökin í L1 og L2.

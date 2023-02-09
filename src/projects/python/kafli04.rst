@@ -49,11 +49,13 @@ Sú regla gildir að nafn breytu skal vera runa af bókstöfum, tölustöfum, og
       
    1. Hverjir eftirfarandi strengja eru ekki lögleg breytunöfn?
 
-      1. 1abc
-      2. Sérdeilis_afskaplega_langt_breytunafn_sem_ætti_að_reyna_að_stytta
-      3. RST-01
-      4. abc
-      5. def
+      a. 01rst
+      b. rst01
+      c. rst-01
+      e. ρστ01
+      d. Sérdeilis_afskaplega_langt_breytunafn_sem_ætti_að_reyna_að_stytta
+      f. abc
+      g. def
          
    2. Googlið "python reserved words". Hvaða lykilorð í málinu byrja á a eða b (og eru þar
       með dæmi um ólögleg breytunöfn)?
@@ -104,7 +106,7 @@ Hér er yfirlit yfir helstu virkja fyrir grunntögin í Python:
 
 Grunnreglan um útkomu úr aðgerð með tveimur tölum er að ef önnur eða báðar eru kommutala þá er niðurstaðan kommutala, en ef báðar eru heiltölur kemur út heiltala. Aðalundantekningin er deiling, en deiling tveggja heiltalna með /-virkja gefur kommutölu.
 
-Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðilegri merkingu, sem sé að viðkomandi gildi séu af heiltölu- eða kommutölutagi. Tölvur greina nefnilega á milli heiltölnnar 2 og kommutölunnar 2.0, þær eru af mismunandi tagi og geymdar með mismunandi bitarunum í minni tölvunnar.
+Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðilegri merkingu, sem sé að viðkomandi gildi séu af heiltölu- eða kommutölutagi. Tölvur greina nefnilega á milli heiltölunnar 2 og kommutölunnar 2.0, þær eru af mismunandi tagi og geymdar með mismunandi bitarunum í minni tölvunnar.
 
 .. rubric:: Forgangsröð aðgerða
 
@@ -123,7 +125,7 @@ Eftirfarandi tafla sýnir röð sem aðgerðir eru framkvæmdar í ef svigar seg
 .. admonition:: Æfing: Útreikningur
    :class: aefing
 
-   Opnið tóma vinnubók í Colab.
+   Byrjið á að opna tóma vinnubók.
    
    1. Reiknið :code:`7/4, 7//4, 8/4, 8//4`
       
@@ -186,7 +188,7 @@ Næsta grein (:numref:`fstrengir`) útskýrir svo hvernig **sníða** (*formater
 
    1. Input-fallið skilar streng s, sem hægt er að breyta í tölu með
       :code:`t = float(s)` eða :code:`k = int(x)`. Afritið eftirfarandi
-      skipanir yfir í Colab. Notið tækifærið og prófið Colab-skipanirnar
+      skipanir yfir í vinnubók. Notið tækifærið og prófið vinnubókarskipanir
       til að velja allt í reit og flytja það til vinstri (shift/tab,
       *unindent*), sbr. :numref:`vinnubokarritilskipanir`. Keyrið, sláið inn
       tölu, og prófið líka að slá inn eitthvað annað en tölu.
@@ -197,7 +199,7 @@ Næsta grein (:numref:`fstrengir`) útskýrir svo hvernig **sníða** (*formater
          t = float(s)
          print(t)
 
-   2. Afritið eftirfarandi forritsbút yfir í Colab. Keyrið, og prófið svo
+   2. Afritið eftirfarandi forritsbút yfir í vinnubók. Keyrið, og prófið svo
       að nota :code:`end=";"` og :code:`sep=","` og prófið líka að breyta
       :code:`print` í :code:`display`.
 
@@ -527,7 +529,7 @@ Hér er upptalning á helstu innbyggðum stærðfræðiföllum og -föstum:
 .. code::
    
     sin, cos, tan, asin, acos, atan  # Hornaföll í radíönum
-    atan2                            # Arctan fyrir pólhnit, Sjá verkefni 8
+    atan2                            # Arctan fyrir pólhnit, Sjá verkefni :numref:`pólhnit`
     exp, log, log2, log10, sqrt      # Vísisfall, lograr og kvaðratrót
     pi, e, inf, nan                  # (stærðfræði)fastar
     radians, degrees                 # breytt úr gráðum í radíana og öfugt
@@ -896,7 +898,6 @@ Lokaæfingin
 ===========
 .. admonition:: Æfing: Kynning á vinnubókum II
    :class: aefing
-
 
    Í vinnubókinni :ref:`kynning.ipynb<jupyter-æfing>` sem náð var í í Æfingu
    aftan við kafla :numref:`jupyter-leiðbein-á-netinu` er hægt að prófa mörg af

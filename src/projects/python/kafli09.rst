@@ -8,7 +8,7 @@ Teikning með Matplotlib
 Inngangur
 ~~~~~~~~~
 Matplotlib er teiknipakki fyrir Python sem er byggður á tölvugrafík í
-Matlab-kerfinu. Með Matplot er hægt að teikna (eða birta, sýna) myndir
+Matlab-kerfinu. Með Matplotlib er hægt að teikna (eða birta, sýna) myndir
 (*images*), hæðarlínur (*countours*), *skatterplott*, línurit og gröf (*line
 plots*) og þrívíðar *upplýstar* myndir. Pakkinn er þannig að framendinn
 (*frontend*) eða skilgreining teikningarinnar er aðskilinn frá bakendanum
@@ -94,7 +94,7 @@ Punktarit (*scatter-plot*) og línurit
    .. admonition:: Æfing: 
       :class: aefing
 
-      Afritið skipanirnar að ofan inn í Colab og keyrið. Prófið að breyta:
+      Afritið skipanirnar að ofan inn í vinnubók og keyrið. Prófið að breyta:
 
       - fjölda punkta
       - stærð myndarinnar
@@ -176,7 +176,7 @@ Hér eru tvö sýnidæmi um teikningu gagna sem eru fengin úr gagnaskrám. Þa�
 
    Í kafla :numref:`csv-lestur-bilafmark` var skoðuð skrá með bræðslumarki og
    eðlisþyngd fjögurra málma (sbr. líka :numref:`verkefni %s<dálkar í
-   csv-skrá>`. Hér er forrit sem teiknar punktarit af `skránni
+   csv-skrá [leyst með colab]>`. Hér er forrit sem teiknar punktarit af `skránni
    <https://cs.hi.is/python/malmar.txt>`_.
 
    .. code:: python
