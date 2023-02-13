@@ -5,12 +5,12 @@ env:
   SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
 on:
   pull_request:
-    branches: [ main ]
-    types: [ opened, synchronize, closed ]
+    branches: [main]
+    types: [opened, synchronize, closed]
     paths:
-      - 'src/**'
-      - 'cli/**'
-      - '.github/**'
+      - "src/**"
+      - "cli/**"
+      - ".github/**"
   # push:
   #   paths:
   #     - 'src/**'
@@ -74,22 +74,22 @@ jobs:
           version: "1.2.1"
           virtualenvs-create: true
           virtualenvs-in-project: true
-      - name: Configure SSH
-        run: |
-          echo "#### Creating ~/.ssh/config from secrets ####"
-          mkdir -p ~/.ssh/
-          echo "$SSH_KEY" > ~/.ssh/staging.key
-          chmod 600 ~/.ssh/staging.key
-          cat >>~/.ssh/config <<END
-          Host staging
-            HostName $SSH_HOST
-            User $SSH_USER
-            IdentityFile ~/.ssh/staging.key
-            StrictHostKeyChecking no
-          END
-      - name: Test SSH connection
-        run: |
-          ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
+      # - name: Configure SSH
+      #   run: |
+      #     echo "#### Creating ~/.ssh/config from secrets ####"
+      #     mkdir -p ~/.ssh/
+      #     echo "$SSH_KEY" > ~/.ssh/staging.key
+      #     chmod 600 ~/.ssh/staging.key
+      #     cat >>~/.ssh/config <<END
+      #     Host staging
+      #       HostName $SSH_HOST
+      #       User $SSH_USER
+      #       IdentityFile ~/.ssh/staging.key
+      #       StrictHostKeyChecking no
+      #     END
+      # - name: Test SSH connection
+      #   run: |
+      #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
       - name: Build
         id: build
         run: |
@@ -99,19 +99,30 @@ jobs:
           echo "#### Build destination ####"
           set -x -e
           ls -d ${{ github.workspace }}/_build/*
-      - name: Deploy branch
-        id: deploy-branch
-        if: github.event.action == 'synchronize' || github.event.action == 'opened'
-        run: |
-          ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
-      - name: Deploy production
-        if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
-        run: |
-            ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
-      - name: Delete stale deployments
-        if: github.event.action == 'closed' && github.head_ref != 'main'
-        run: |
-          ssh staging 'rm -r ~/public_html/staging/edbook/${{ github.head_ref }}'
+      # - name: Deploy branch
+      #   id: deploy-branch
+      #   if: github.event.action == 'synchronize' || github.event.action == 'opened'
+      #   run: |
+      #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.OK_FTP_IP_ADDRESS }}
+          username: ${{ secrets.OK_FTP_USER }}
+          password: ${{ secrets.OK_FTP_PASSWORD }}
+          local-dir: "~/public_html"
+          dry-run: true
+          server-dir: "staging/edbook/${{ github.head_ref }}"
+
+      # - name: Deploy production
+      #   if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
+      #   run: |
+      #       ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
+      # - name: Delete stale deployments
+      #   if: github.event.action == 'closed' && github.head_ref != 'main'
+      #   run: |
+      #     ssh staging 'rm -r ~/public_html/staging/edbook/${{ github.head_ref }}'
   notify-discord-pr:
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
