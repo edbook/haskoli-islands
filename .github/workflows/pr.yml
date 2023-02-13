@@ -111,7 +111,7 @@ jobs:
           server: ${{ secrets.OK_FTP_IP_ADDRESS }}
           username: ${{ secrets.OK_FTP_USER }}
           password: ${{ secrets.OK_FTP_PASSWORD }}
-          local-dir: "~/public_html"
+          local-dir: "~/public_html/"
           dry-run: true
           server-dir: "staging/edbook/${{ github.head_ref }}"
 
