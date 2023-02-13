@@ -105,7 +105,8 @@ jobs:
       #   run: |
       #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
 
-      - name: list affected
+      - name: List affected
+        id: list-affected
         run: |
           git diff --dirstat=files  main..HEAD | cut -d "/" -f2
 
