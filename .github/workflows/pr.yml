@@ -108,7 +108,7 @@ jobs:
       - name: List affected
         id: list-affected
         run: |
-          git diff --dirstat=files  main..HEAD | cut -d "/" -f2
+          git diff --dirstat=files  origin/main..HEAD | cut -d "/" -f3
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
