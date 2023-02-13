@@ -105,15 +105,27 @@ jobs:
       #   run: |
       #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      # - name: 📂 Sync files
+      #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      #   with:
+      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
+      #     username: ${{ secrets.OK_FTP_USER }}
+      #     password: ${{ secrets.OK_FTP_PASSWORD }}
+      #     local-dir: ${{ github.workspace }}/_build/
+      #     dry-run: false
+      #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+
+      - name: Upload from public_html via FTP
+        uses: airvzxf/ftp-deployment-action@latest
         with:
           server: ${{ secrets.OK_FTP_IP_ADDRESS }}
-          username: ${{ secrets.OK_FTP_USER }}
+          user: ${{ secrets.OK_FTP_USER }}
           password: ${{ secrets.OK_FTP_PASSWORD }}
           local-dir: ${{ github.workspace }}/_build/
-          dry-run: false
-          server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+          remote_dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+          no_symlinks: "false"
+          ftp_ssl_allow: "true"
+          ftp_use_feat: "true"
 
       # - name: Deploy production
       #   if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
