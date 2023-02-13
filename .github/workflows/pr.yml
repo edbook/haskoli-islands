@@ -99,32 +99,32 @@ jobs:
           echo "#### Build destination ####"
           set -x -e
           ls -d ${{ github.workspace }}/_build/*
-      # - name: Deploy branch
-      #   id: deploy-branch
-      #   if: github.event.action == 'synchronize' || github.event.action == 'opened'
-      #   run: |
-      #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
+      - name: Deploy branch
+        id: deploy-branch
+        if: github.event.action == 'synchronize' || github.event.action == 'opened'
+        run: |
+          ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
 
-      # - name: 📂 Sync files
-      #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      #   with:
-      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
-      #     username: ${{ secrets.OK_FTP_USER }}
-      #     password: ${{ secrets.OK_FTP_PASSWORD }}
-      #     local-dir: ${{ github.workspace }}/_build/
-      #     dry-run: false
-      #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
-
-      - name: Upload from public_html via FTP
-        uses: airvzxf/ftp-deployment-action@latest
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.OK_FTP_IP_ADDRESS }}
-          user: ${{ secrets.OK_FTP_USER }}
+          username: ${{ secrets.OK_FTP_USER }}
           password: ${{ secrets.OK_FTP_PASSWORD }}
-          local_dir: ${{ github.workspace }}/_build/
-          remote_dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
-          no_symlinks: "false"
-          ftp_use_feat: "true"
+          local-dir: ${{ github.workspace }}/_build/
+          dry-run: false
+          server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+
+      # - name: Upload from public_html via FTP
+      #   uses: airvzxf/ftp-deployment-action@latest
+      #   with:
+      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
+      #     user: ${{ secrets.OK_FTP_USER }}
+      #     password: ${{ secrets.OK_FTP_PASSWORD }}
+      #     local_dir: ${{ github.workspace }}/_build/
+      #     remote_dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+      #     no_symlinks: "false"
+      #     ftp_use_feat: "true"
 
       # - name: Deploy production
       #   if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
