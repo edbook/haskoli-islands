@@ -58,6 +58,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Set up python
         uses: actions/setup-python@v2
         with:
@@ -112,7 +114,7 @@ jobs:
         run: |
           source .venv/bin/activate
           poetry --version
-          for i in $(git diff --dirstat=files origin/main..HEAD | cut -d "/" -f3); do make build project=${i}; done
+          for i in $(git diff --dirstat=files origin/main ${{github.sha}} | cut -d "/" -f3); do make build project=${i}; done
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
