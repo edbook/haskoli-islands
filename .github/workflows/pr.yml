@@ -113,7 +113,7 @@ jobs:
           password: ${{ secrets.OK_FTP_PASSWORD }}
           local-dir: ${{ github.workspace }}/_build/
           dry-run: true
-          server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}"
+          server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
 
       # - name: Deploy production
       #   if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
