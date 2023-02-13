@@ -90,7 +90,8 @@ jobs:
       # - name: Test SSH connection
       #   run: |
       #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-      - name: Build
+      - name: 🏗️ Build
+        if: github.event_name != 'pull_request'
         id: build
         run: |
           source .venv/bin/activate
@@ -105,10 +106,13 @@ jobs:
       #   run: |
       #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
 
-      - name: List affected
-        id: list-affected
+      - name: 🚧 Build affected
+        if: github.event_name == 'pull_request'
+        id: build-affected
         run: |
-          git diff --dirstat=files  origin/main..HEAD | cut -d "/" -f3
+          source .venv/bin/activate
+          poetry --version
+          for i in $(git diff --dirstat=files origin/main..HEAD | cut -d "/" -f3); do make build project=${i}; done
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
