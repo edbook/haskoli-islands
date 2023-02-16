@@ -10,7 +10,7 @@ Allar upplýsingar um námsmat, fyrirkomulag, kennsluefni og annað er að finna
 -------------
 
 Fyrirlestraáætlun
--------------
+-----------------
 
 +-------------------------------------+------------+------------------------------------------+
 | Efni                                | Nótur      | Adams Calculus                           |

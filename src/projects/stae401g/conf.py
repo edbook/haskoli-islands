@@ -301,7 +301,7 @@ latex_documents = [
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 # LOGO FOR LATEX TITLE PAGE IS SET TO UNIVERSITY OF ICELAND RAUNVÍSINDADEILD LOGO
-latex_logo = "_static/hi_horiz_raunvisindadeild.png"
+latex_logo = "_static/haskoli_islands-edbook.svg"
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
