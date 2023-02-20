@@ -10,7 +10,6 @@ Toggle-block
   :label: Sýna útleiðslu á hreyfijöfnum
   :starthidden: True
 
-Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
 
 .. math::
   \begin{aligned}
