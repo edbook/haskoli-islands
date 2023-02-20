@@ -441,7 +441,7 @@ texinfo_documents = [
 
 # A unique identification for the text.
 # epub_uid = ''
-hould be inserted before the pages created by sphinx.
+# Should be inserted before the pages created by sphinx.
 # The format is a list of tuples containing the path and title.
 # epub_pre_files = []
 
