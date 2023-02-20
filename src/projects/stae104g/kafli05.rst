@@ -454,8 +454,6 @@ okkur upp.
 Að leysa útgildisvandamál
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sjá einnig bls. 260 (8. útg.), 259 (7. útg.) eða 238 (6. útg.) í kennslubókinni.
-
 (i)    Lesið vandamálið vandlega og áttið ykkur á því hvert það er og
        hvað á að finna.
 
