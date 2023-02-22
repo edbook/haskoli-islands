@@ -86,3 +86,28 @@ Námskeið við HÍ
 .. button::
   :text: Nánar um Edbook-kerfið
   :link: https://edbook.hi.is/kynning/
+
+Þakkir
+======
+
+Eftirfarandi einstaklingar hafa komið að verkefninu 
+með einum eða öðrum hætti og fá kærar þakkir fyrir:
+
+- Alexander Berg Garðarsson
+- Arnór Pétur Marteinsson
+- Áshildur Jónsdóttir
+- Eggert Karl Hafsteinsson
+- Guðný Halldórsdóttir
+- Hans Adolf Linnet
+- Huld Hvönn Kristinsdóttir
+- Jón Leví 
+- Júlía Þóra Oddsdóttir
+- Rakel María Brynjólfsdóttir
+- Símon Böðvarsson
+- Sólrún Halla Einarsdóttir
+- Tryggvi Kalman Jónsson
+- Una Kamilla Steinsen
+
+Verkefnið hefur verið unnið með styrk frá Kennslumálasjóði
+Háskóla Íslands og aðstoðar Stræðfræðistofu Raunvísindastofnunar. 
+      
