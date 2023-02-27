@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gagnlegar upplýsingar &mdash; Stærðfræðigreining III 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Stærðfræðigreining III
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tvinntölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fáguð föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Cauchy-setningin og Cauchy-formúlan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Leifareikningur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Þýð föll og fágaðar varpanir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Undirstöðuatriði um afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Línulegar afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Veldaraðalausnir á afleiðujöfnum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Línuleg afleiðujöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Laplace-ummyndunin</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Stærðfræðigreining III</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Gagnlegar upplýsingar</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae302g/umnamskeidid.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gagnlegar-upplysingar">
+<h1>Gagnlegar upplýsingar<a class="headerlink" href="#gagnlegar-upplysingar" title="Permalink to this heading"></a></h1>
+<section id="namsefni">
+<h2>Námsefnið<a class="headerlink" href="#namsefni" title="Permalink to this heading"></a></h2>
+<p>Námskeiðið er í tveimur hlutum. Í fyrri hlutanum er fjallað um
+tvinntölurnar <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> og föll <span class="math notranslate nohighlight">\(f:\mathbb{C}\rightarrow \mathbb{C}\)</span>. Í seinni hluta námskeiðsins er fjallað um afleiðujöfnur (diffurjöfnur). Á nokkrum
+stöðum í þeirri umfjöllun munum við nýta okkur það sem gert var í fyrri
+hlutanum.</p>
+<p>Aðallesefni námskeiðsins er bók Ragnars Sigurðssonar sem þið finnið í
+námsefnis möppunni á UGLU. Bókin Advanced engineering mathematics eftir
+Kreyszig hefur stundum verið notuð í þessu námskeiði og ykkur gæti þótt
+gagnlegt að glugga í hana. Aðrar bækur með sama (eða líkum) titli
+innihalda einnig fróðleik um flest það sem verður til umfjöllunar.</p>
+</section>
+<section id="fyrirlestrar">
+<h2>Fyrirlestrar<a class="headerlink" href="#fyrirlestrar" title="Permalink to this heading"></a></h2>
+<p>Fyrirlestrar verða á miðvikudögum 13:20–14:50 og á föstudögum 8:20–9:50.
+Í fyrirlestraáætlun og á dæmablöðunum er sagt nánar frá efni fyrirlestra
+hverrar viku og vísað á viðeigandi efnisgreinar í kennsluefni. Að mestu
+verður fylgt þeirri efnisröð sem er í fyrirlestranótum Ragnars. Í
+fyrirlestrum mun aðeins gefast tími til að fara yfir helstu atriði
+námsefnisins og verðið þið sjálf að kynna ykkur mikinn hluta af
+námsefninu upp á eigin spýtur. Yfirferð námsefnisins er hröð og farið er
+yfir mikið efni.</p>
+</section>
+<section id="daematimar-og-vinnustofur">
+<h2>Dæmatímar og vinnustofur<a class="headerlink" href="#daematimar-og-vinnustofur" title="Permalink to this heading"></a></h2>
+<p>Sameiginlegur dæmatími með dæmareikningi á töflu verður á mánudögum
+13:20–14:50 (nema í fyrstu vikunni). Í námskeiðinu er einnig boðið upp á
+vinnustofur síðdegis á miðvikudögum og fimmtudögum (nema í fyrstu
+vikunni) sem eru hugsaðar þannig að þið getið komið og fengið aðstoð við
+dæmareikning eða fengið nánari útskýringar á atriðum sem hafa vafist
+fyrir ykkur.</p>
+</section>
+<section id="skiladaemi">
+<h2>Skiladæmi<a class="headerlink" href="#skiladaemi" title="Permalink to this heading"></a></h2>
+<p>Í hverri viku (nema í fyrstu viku og vikunni með miðmisserisprófinu) eru
+skiladæmi, alls 11 talsins. Ætlast er til að lausnir séu sjálfstæðar og
+afritaðar lausnir, hvorki frumrit né afrit eru teknar gildar. Þó eruð
+þið að sjálsögðu hvött til að skiptast á skoðunum og hugmyndum við að
+leysa verkefnin. Mögulegt er að einhver skilaverkefnin síðar á misserinu
+verði hópverkefni.</p>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Til að fá próftökurétt þarf nemandi að skila dæmum í að minnsta kosti <strong>7 af 11</strong> skiptum.</p>
+</div>
+<p>Til að fá skil metin þarf að hafa leyst í hvert skipti að
+minnsta kosti helming dæmanna (við munum ekki gefa einkunn fyrir
+skiladæmi en þið getið hugsað þetta þannig að þið þurfið að fá a.m.k. 5
+fyrir skiladæmi til að þau gildi) og frágangur þarf að vera
+sómasamlegur. Þið eigið að miða við að úrlausnin sé þannig að jafningjar
+ykkar ættu að geta lesið og skilið hana frá upphafi til enda án
+hjálpargagna. Takið vinsamlegast tillit til eftirfarandi atriða</p>
+<ol class="arabic simple">
+<li><p>Merkið lausnina ykkar efst hægra megin á forsíðu.</p></li>
+<li><p>Skrifið upp dæmatextann og tilgreinið hvar lausnin byrjar.</p></li>
+<li><p>Hafið útreikninga og röksemdafærslur í vel uppsettum texta og hafið í
+huga að stærðfræðitexti lýtur sömu reglum og venjulegt skrifað mál,
+t.d. byrja setningar á stórum staf og enda á punkti. Stærri formúlur
+er gott að afmarka sérstaklega en stundum fer betur á því að hafa
+smærri formúlur inni í texta. <strong>Dæmi:</strong></p></li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<blockquote>
+<div><p>Fallið <span class="math notranslate nohighlight">\(f(x) = \sin(x)/x^2\)</span> hefur afleiðuna</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[f'(x) = \frac{\cos(x)x^2-2\sin(x)x}{x^4}.\]</div>
+</div>
+<p>Takið eftir að málsgreinin hefst á stórum staf og endar á punkti, jafnvel þótt formúla sé í lok málsgreinar. Smærri formúlan er inni í texta en sú stærri er afmörkuð sérstaklega.</p>
+</section>
+<section id="namsmat">
+<h2>Námsmat<a class="headerlink" href="#namsmat" title="Permalink to this heading"></a></h2>
+<p>Um miðbik misseris verður stutt próf sem gildir 30% til lokaeinkunnar.
+Ég stefni að því að hafa þetta próf í tíma 11. október. Þá verður prófað
+úr lesnu efni, skilgreiningum og setningum í tvinnfallagreiningu og
+jafnframt úr skiladæmunum úr tvinnfallagreiningu.</p>
+<p>Í lok námskeiðsins er þriggja tíma skriflegt próf sem gildir 70%. Þar
+mun eingöngu reyna á afmörkuð atriði úr fyrri hluta námskeiðs og
+megináhersla verður á efni síðari hlutans. Nauðsynlegt er að þið fáið
+a.m.k. 5 í lokaprófinu til að standast námskeiðið. Engin hjálpargögn eru
+heimil í lokaprófinu, nema hvað prófverkefni fylgir formúlublað sem má
+finna á UGLU í námsefnis möppunni.</p>
+</section>
+<section id="tolvunotkun">
+<h2>Tölvunotkun<a class="headerlink" href="#tolvunotkun" title="Permalink to this heading"></a></h2>
+<p>Af og til verða á dæmablöðum verkefni þar sem nota á tölvukerfi til að teikna ferla og fleti og annað það sem kemur fyrir í námskeiðinu. Tölvukerfi, t.d. Geogebra, Sage, Octave/Matlab, Maple og Wolfram alpha kerfið <a class="reference external" href="http://www.wolframalpha.com/">http://www.wolframalpha.com/</a>, geta nýst við útreikninga og til að prófa útreikninga. Athugið að hægt er að keyra létta reikninga í Octave í vafra <a class="reference external" href="http://octave-online.com">http://octave-online.com</a>. Athugið samt að á prófi þurfið þið að reikna sjálf án aðstoðar vasareikna og tölvukerfa. Á prófinu verður ekki spurt um notkun tölvukerfanna.</p>
+</section>
+<section id="a-taka-namskeii-i-anna-sinn">
+<h2>Að taka námskeiðið í annað sinn<a class="headerlink" href="#a-taka-namskeii-i-anna-sinn" title="Permalink to this heading"></a></h2>
+<p>Þau sem sátu námskeiðið í fyrra og unnu sér inn próftökurétt þá halda
+próftökuréttinum en eldri próftökuréttur gildir ekki. Vinsamlegast
+sendið tölvupóst á mig ef þið viljið halda próftökuréttinum frá því í
+fyrra. <strong>Einkunnir úr miðmisserisprófum/ vetrareinkunn gilda ekki frá
+því í fyrra.</strong> Ég hvet ykkur eindregið til að taka þátt í námskeiðinu af
+fullum krafti og skila dæmum þó svo að þið hafið eldri próftökurétt.</p>
+</section>
+<section id="vitalstimar-kennara-og-fyrirspurnir">
+<h2>Viðtalstímar kennara og fyrirspurnir<a class="headerlink" href="#vitalstimar-kennara-og-fyrirspurnir" title="Permalink to this heading"></a></h2>
+<p>Kennari námskeiðsins er Sigurður Örn Stefánsson, og skrifstofu í
+Tæknigarði, 3. hæð númer 330. Ég verð með viðtalstíma eftir samkomulagi.
+Yfirleitt nægir að líta við á skrifstofunni minni en við getum einnig
+samið um tímasetningu í tölvupósti. Tölvupóstfangið er <a class="reference external" href="mailto:sigurdur&#37;&#52;&#48;hi&#46;is">sigurdur<span>&#64;</span>hi<span>&#46;</span>is</a>.</p>
+<p>Við munum notast við Piazza vefinn þar sem þið getið spjallað um efni námskeiðsins, skipulag, heimaverkefni og fleira. Ég legg áherslu á að þetta er hugsað sem vettvangur fyrir <strong>ykkur</strong> til að ræða saman og þið getið ekki treyst því að ég svari öllum fyrirspurnum þar samstundis.</p>
+<div class="admonition important">
+<p class="admonition-title">Mikilvægt</p>
+<p>Þar sem mjög margir nemendur eru í námskeiðinu bið ég ykkur um að íhuga áður en þið sendið tölvupóst hvort svarið við spurningunni sé að finna í þessu skjali eða hvort þið gætuð borið spurninguna fram í fyrirlestri, dæmatíma, stoðtíma, á Piazza vefnum eða í viðtalstíma.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

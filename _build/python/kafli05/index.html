@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Söfn: Eitt nafn en mörg gildi &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/python.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="6 Helstu aðgerðir fyrir söfn" href="../kafli06/" />
+    <link rel="prev" title="4 Grunnatriði Python" href="../kafli04/" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+          </a>
+              <div class="version">
+                2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5  Söfn: Eitt nafn en mörg gildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">5.1  Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strengir">5.2  Strengir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listar">5.3  Listar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listaagerir">5.3.1  Listaaðgerðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visa-i-stok">5.3.2  Vísað í stök</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samskeyting-og-margfoldun">5.3.3  Samskeyting og margföldun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gildisgjof-gefur-tilvisun">5.3.4  Gildisgjöf gefur tilvísun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baett-vi-lista">5.3.5  Bætt við lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aferir">5.3.6  Aðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fleiri-listafoll">5.3.7  Fleiri listaföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samstaeur">5.4  Samstæður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mengi">5.5  Mengi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#itrarar">5.6  Ítrarar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6  Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7  Uppflettitöflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8  Skrár</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9  Teikning með Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10  NumPy pakkinn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11  Reiknað með fylkjum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12  Dæmi um hagnýtingu fylkjareikninga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5  </span>Söfn: Eitt nafn en mörg gildi</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kafli05.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sofn-eitt-nafn-en-morg-gildi">
+<span id="sofn"></span><h1><span class="section-number">5  </span>Söfn: Eitt nafn en mörg gildi<a class="headerlink" href="#sofn-eitt-nafn-en-morg-gildi" title="Permalink to this heading"></a></h1>
+<section id="inngangur">
+<span id="sofn-inngangur"></span><h2><span class="section-number">5.1  </span>Inngangur<a class="headerlink" href="#inngangur" title="Permalink to this heading"></a></h2>
+<p>Fyrir utan grunngagnatögin sem fjallað hefur verið um að framan er Python með ýmis innbyggð tög fyrir <strong>söfn</strong> (<em>containers</em>), en breytur af slíku tagi geta geymt mörg stök eða gildi. Reyndar hefur þegar verið talað svolítið um eitt slíkt tag, nefnilega strengi sem geta geymt marga stafi. Mörg safntögin í Python teljast <strong>runur</strong> (<em>sequences</em>), nánar tiltekið eru það <strong>strengir</strong>, <strong>listar</strong> (<em>lists</em>), <strong>samstæður</strong> (<em>tuples</em>) og <strong>ítrarar</strong> (<em>iterators</em>; t.d. útkoma úr range), en önnur teljast ekki runur, m.a. <strong>mengi</strong> (<em>sets</em>) og <strong>uppflettitöflur</strong> (<em>dictionaries</em>). Uppflettitöflurnar eru svolítið sér á parti og umfjöllun um þær kemur seinna, en í þessum kafla og þeim næsta verða hin safntögin á dagskrá. Eftirfarandi tafla sýnir hvernig hægt er að safna tölunum 1, 2, 3 og 4 í streng, lista, samstæðu, mengi og ítrara:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>strengur</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">st</span> <span class="pre">=</span> <span class="pre">&quot;1234&quot;</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>listi</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>samstæða</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">S</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>mengi</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>ítrari</p></td>
+<td><p><code class="code docutils literal notranslate"><span class="pre">Í</span> <span class="pre">=</span> <span class="pre">range(1,5)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Strengurinn er reyndar sér á parti því hann geymir ekki heiltölurnar 1–4 heldur tölustafina 1–4, sem eru geymdir öðruvísi í minni tölvunnar.</p>
+<p>Það sem er sameiginlegt öllum runum er að hægt er að vísa í tiltekin stök eða gildi í rununni með hornklofum: ef R er runa og k er heiltala þá er</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">R[k]</span></code></p>
+</div></blockquote>
+<p>stakið í sæti k í rununni, og fremsta stakið telst vera númer 0. Fyrir runur og mengi er hægt er að nota:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">g</span> <span class="pre">in</span> <span class="pre">R:...</span></code>  til að kanna hvort gildi <code class="docutils literal notranslate"><span class="pre">g</span></code> sé í <code class="docutils literal notranslate"><span class="pre">R</span></code>, og <br>
+<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">g</span> <span class="pre">in</span> <span class="pre">R:...</span></code> til að láta <code class="docutils literal notranslate"><span class="pre">g</span></code> hlaupa í gegn um öll stökin í <code class="docutils literal notranslate"><span class="pre">R</span></code></p>
+</div></blockquote>
+<p>Svo má telja stökin með <code class="code docutils literal notranslate"><span class="pre">len(R)</span></code> og ennfremur er hægt að nota samskeytingar- og fjölföldunarvirkjana (<code class="docutils literal notranslate"><span class="pre">+</span></code> og <code class="docutils literal notranslate"><span class="pre">*</span></code>) á allar runur. Öll þessi atriði verða útlistuð nánar að neðan, m.a. í kafla <a class="reference internal" href="../kafli06/#helstu-agerir"><span class="std std-numref">6</span></a>.</p>
+</section>
+<section id="strengir">
+<h2><span class="section-number">5.2  </span>Strengir<a class="headerlink" href="#strengir" title="Permalink to this heading"></a></h2>
+<p>Strengjatagið heitir <code class="code docutils literal notranslate"><span class="pre">str</span></code> og í strengjum má geyma runur af hvaða <em>Unicode</em> stöfum sem vera skal (Unicode er alþjóðlegur staðall til að skrá í tölvu bókstafi allra heimsins tungumála auk fjölmargra annarra rittákna: tölur, greinarmerki, stærðfræðitákn, broskallar, o.s.frv.). Strengir eru búnir til með því að setja texta innan einfaldra eða tvöfaldra gæsalappa:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">s1</span> <span class="pre">=</span> <span class="pre">&quot;Ísland&quot;</span></code>, <code class="code docutils literal notranslate"><span class="pre">s2</span> <span class="pre">=</span> <span class="pre">'Ísland'</span></code>, <code class="code docutils literal notranslate"><span class="pre">s3</span> <span class="pre">=</span></code> <span class="math notranslate nohighlight">\(\textrm{&quot;}\mathrm{\beta\in A \cap B}\textrm{&quot;}\)</span></p>
+</div></blockquote>
+<p>Ef s er strengur þá er hægt að ná í einstaka stafi með <code class="code docutils literal notranslate"><span class="pre">s[i]</span></code> þar sem i er númer sætis (fremst er sæti 0), og svo er hægt að ná í <strong>hlutstrengi</strong> (<em>slices</em>) með <code class="code docutils literal notranslate"><span class="pre">s[i:j]</span></code> (stök <code class="docutils literal notranslate"><span class="pre">i</span></code>,…, <code class="docutils literal notranslate"><span class="pre">j-1</span></code>), <code class="code docutils literal notranslate"><span class="pre">s[:j]</span></code> (frá byrjun til <code class="docutils literal notranslate"><span class="pre">j-1</span></code>) og <code class="code docutils literal notranslate"><span class="pre">s[i:]</span></code> (frá <code class="docutils literal notranslate"><span class="pre">i</span></code> og út í enda). Ef i er mínustala er talið aftanfrá. Ef s er <code class="code docutils literal notranslate"><span class="pre">&quot;abcdef&quot;</span></code> og gefin er skipun <code class="code docutils literal notranslate"><span class="pre">print(a[0],</span> <span class="pre">a[1:3],</span> <span class="pre">a[-3:-1],</span> <span class="pre">a[-1]</span></code> þá prentast út:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">a</span> <span class="pre">bc</span> <span class="pre">de</span> <span class="pre">f</span></code></p>
+</div></blockquote>
+<p>Í grein <a class="reference internal" href="../kafli04/#gildisgjof"><span class="std std-numref">4.3</span></a> var sýnt hvernig hægt er að skeyta saman og fjölfalda strengi, og ýmsar strengjaaðgerðir eru sýndar í kynningarvinnubókinni í æfingunni aftan við kafla <a class="reference internal" href="../kafli03/#jupyter-leibein-a-netinu"><span class="std std-numref">3.7</span></a>.</p>
+<blockquote>
+<div><table class="docutils align-default" id="tab-strengjaagerir">
+<caption><span class="caption-number">Tafla 5.1: </span><span class="caption-text">Nokkrar strengjaaðgerðir</span><a class="headerlink" href="#tab-strengjaagerir" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">s1</span> <span class="pre">+</span> <span class="pre">s2</span></code></p></td>
+<td><p>samskeyting strengja</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">s1*3</span></code></p></td>
+<td><p>sama og s1 + s1 + s1</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s[3]</span></code></p></td>
+<td><p>stafur í sæti 3</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">s[2:5]</span></code></p></td>
+<td><p>hlutstrengur í sætum 2,3,4</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s.lower()</span></code></p></td>
+<td><p>breyta í lágstafi</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">s.upper()</span></code></p></td>
+<td><p>breyta í hástafi</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s.capitalize()</span></code></p></td>
+<td><p>breyta fremsta staf í hástaf</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">s.find(s1)</span></code></p></td>
+<td><p>staðsetning s1 í s, -1 ef ekkert s1 finnst</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">len(s)</span></code></p></td>
+<td><p>lengd strengsins</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">in</span> <span class="pre">s</span></code></p></td>
+<td><p>er stafurinn c í strengnum s?</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">s.isupper()</span></code></p></td>
+<td><p>eru allir stafir í s hástafir?</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Strengjablús</p>
+<p>Búið til streng með nafninu ykkar (t.d. <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">&quot;Kristján</span> <span class="pre">Jónasson&quot;</span></code>). Notið aðgerðir úr töflunnin að ofan til að:</p>
+<ol class="arabic simple">
+<li><p>finna hvar fyrsta bilið er (á eftir fornafni/fyrsta nafni) með <code class="docutils literal notranslate"><span class="pre">find</span></code>,</p></li>
+<li><p>ná í fornafnið,</p></li>
+<li><p>finna lengd þess,</p></li>
+<li><p>athuga hvort það sé r í nafninu (hér ætti að nota <code class="docutils literal notranslate"><span class="pre">lower</span></code> ef nafnið skyldi byrja á R.</p></li>
+<li><p>prófið líka <code class="docutils literal notranslate"><span class="pre">upper</span></code> og <code class="docutils literal notranslate"><span class="pre">capitalize</span></code></p></li>
+</ol>
+</div>
+</section>
+<section id="listar">
+<h2><span class="section-number">5.3  </span>Listar<a class="headerlink" href="#listar" title="Permalink to this heading"></a></h2>
+<p><strong>Listi</strong> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_(abstract_data_type)">list</a>) er grunnhugtak í tölvufræði. Listi geymir endanlegan fjölda staka í röð og hvert stak getur komið fyrir oftar en einu sinni. Python hefur safntag <em>list</em> sem útfærir lista. Það eru engin takmörk á því hvernig stök má geyma, þau mega sjálf vera söfn og þurfa ekki öll að vera af sama tagi. <strong>Tómur listi</strong> fæst með <code class="code docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[]</span></code> og almennan lista má búa til með því að skrifa:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">[gildi,</span> <span class="pre">gildi...]</span></code></p>
+</div></blockquote>
+<section id="listaagerir">
+<h3><span class="section-number">5.3.1  </span>Listaaðgerðir<a class="headerlink" href="#listaagerir" title="Permalink to this heading"></a></h3>
+<p><strong>Aðgerðir fyrir tölvufræðilega lista</strong> eru m.a. að ná í fremsta stakið (<strong>haus</strong>, <em>head</em>), að ná í öll hin stökin (<strong>hali</strong>, <em>tail</em>) að bæta staki framan á eða aftan á lista, og að ná í stak í tilteknu sæti. Python listar bjóða upp á þessar aðgerðir og ýmsar fleiri (sjá æfinguna í kafla <a class="reference internal" href="#fleiri-listafoll"><span class="std std-numref">5.3.7</span></a>).</p>
+<figure class="align-center" id="id1" style="width: 7cm">
+<img alt="../_images/head-tail.png" src="../_images/head-tail.png" />
+<figcaption>
+<p><span class="caption-number">Mynd 5.1: </span><span class="caption-text">Haus og hali</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="visa-i-stok">
+<h3><span class="section-number">5.3.2  </span>Vísað í stök<a class="headerlink" href="#visa-i-stok" title="Permalink to this heading"></a></h3>
+<p>Eins og fyrr segir má vísa í einstök stök í lista með <code class="code docutils literal notranslate"><span class="pre">L[i]</span></code> þar sem i er heiltala með númeri staks, og <strong>hlutlistar</strong> (<em>slices</em>) fást eins og fyrir strengi, sbr. eftirfarandi dæmi:</p>
+<blockquote>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mf">4.33</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+
+<span class="c1"># Forritið að ofan prentar út:</span>
+<span class="n">abc</span> <span class="mf">4.33</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mf">4.33</span><span class="p">]</span>
+<span class="p">[</span><span class="mf">4.33</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="samskeyting-og-margfoldun">
+<h3><span class="section-number">5.3.3  </span>Samskeyting og margföldun<a class="headerlink" href="#samskeyting-og-margfoldun" title="Permalink to this heading"></a></h3>
+<p>Aðgerðunum <code class="docutils literal notranslate"><span class="pre">+</span></code> og <code class="docutils literal notranslate"><span class="pre">*</span></code> sem við höfum séð að duga til að skeyta saman og fjölfalda strengi má líka beita á lista. Þannig gefur <code class="code docutils literal notranslate"><span class="pre">[2,3,5]</span> <span class="pre">+</span> <span class="pre">[7,11]</span></code> listann <code class="code docutils literal notranslate"><span class="pre">[2,3,5,7,11]</span></code> og <code class="code docutils literal notranslate"><span class="pre">[2,3,5]*2</span></code> er <code class="code docutils literal notranslate"><span class="pre">[2,3,5,2,3,5]</span></code>.</p>
+</section>
+<section id="gildisgjof-gefur-tilvisun">
+<h3><span class="section-number">5.3.4  </span>Gildisgjöf gefur tilvísun<a class="headerlink" href="#gildisgjof-gefur-tilvisun" title="Permalink to this heading"></a></h3>
+<p>Ef lista er gefið gildi með venjulegri gildisgjöf <code class="code docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">L</span></code> þá verður ekki til nýr listi heldur bara ný <strong>tilvísun</strong> (<em>reference</em>) eða nýtt nafn á listann <code class="code docutils literal notranslate"><span class="pre">L</span></code>. Til að afrita listann mætti rita <code class="code docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">L.copy()</span></code>. Hér er dæmi:</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Afrit og tilvísun</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">L</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">L</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>   <span class="c1"># prentar [2, 3, 5, 7, 11]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>   <span class="c1"># prentar [2, 3, 5, 7, 9]</span>
+</pre></div>
+</div>
+<p>Takið eftir að <code class="docutils literal notranslate"><span class="pre">L</span></code> og <code class="docutils literal notranslate"><span class="pre">M</span></code> verða tvö nöfn á sama listanum, en <code class="docutils literal notranslate"><span class="pre">N</span></code> er nýr listi sem geymdur
+er á öðrum stað í minni tölvunnar.</p>
+</div>
+<p>Þegar kallað er á fall með lista sem viðfang þá fær fallið tilvísun í listann.
+Það þýðir að fallið getur breytt listanum sem það hefur sem stika og við
+það breytist tilsvarandi viðfang þar sem kallið er. Þetta gerist ekki ef kallað er
+á föll með stök gildi sem viðfang. Hér er dæmi sem sýnir þetta:</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Listaviðfang og töluviðfang</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">listafall</span><span class="p">(</span><span class="n">A</span><span class="p">):</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">def</span> <span class="nf">tölufall</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>  <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">tala</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">listi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">tölufall</span><span class="p">(</span><span class="n">tala</span><span class="p">)</span>
+<span class="n">listafall</span><span class="p">(</span><span class="n">listi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tala</span><span class="p">,</span><span class="n">listi</span><span class="p">)</span>  <span class="c1"># prentar 5 [3, 6]</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="baett-vi-lista">
+<h3><span class="section-number">5.3.5  </span>Bætt við lista<a class="headerlink" href="#baett-vi-lista" title="Permalink to this heading"></a></h3>
+<p>Í dæmunum hér á undan sést hvernig hægt er að breyta einu staki í lista, en sú aðferð dugar ekki til að lengja listann: <code class="code docutils literal notranslate"><span class="pre">L[5]</span> <span class="pre">=</span> <span class="pre">13</span></code> mundi gefa villu. Til að bæta 13 aftan á listann mætti nota aðra hvora af eftirfarandi skipunum</p>
+<blockquote>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">L</span> <span class="o">+</span> <span class="p">[</span><span class="mi">13</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="aferir">
+<h3><span class="section-number">5.3.6  </span>Aðferðir<a class="headerlink" href="#aferir" title="Permalink to this heading"></a></h3>
+<p>Köllin á <code class="code docutils literal notranslate"><span class="pre">copy</span></code> og <code class="code docutils literal notranslate"><span class="pre">append</span></code> eru óvenjuleg. Fall sem kallað er á svona, með <code class="code docutils literal notranslate"><span class="pre">breyta.fall(...)</span></code>, er kallað <strong>aðferð</strong> (<em>method</em>), en aðferðir eru eitt af grundvallarhugtökum í hlutbundinni forritun (<em>object oriented programming</em>). Breytan á undan punktinum er þá kölluð <strong>hlutur</strong> (<em>object</em>), og aðferðin virkar sem sé á hann. Fallið <code class="code docutils literal notranslate"><span class="pre">find</span></code> í töflunni yfir strengjaðgerðir hér framar er annað dæmi um aðferð.</p>
+</section>
+<section id="fleiri-listafoll">
+<h3><span class="section-number">5.3.7  </span>Fleiri listaföll<a class="headerlink" href="#fleiri-listafoll" title="Permalink to this heading"></a></h3>
+<p>Til eru fjölmörg fleiri föll fyrir lista til viðbótar við <code class="code docutils literal notranslate"><span class="pre">copy</span></code> og <code class="code docutils literal notranslate"><span class="pre">append</span></code>. Mörg þessara falla duga líka á önnur safntög, sér í lagi samstæður og mengi, og í þessum fyrirlestrarnótum hafa töflur með mikilvægustu safnaföllum verið settar á einn stað, í <a class="reference internal" href="../kafli06/#helstu-agerir"><span class="std std-numref">6. kafla</span></a>. Þar á meðal eru ýmis fleiri dæmi um hlutbundnar aðferðir</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Listablús</p>
+<ol class="arabic simple">
+<li><p>Skrifið föll <code class="code docutils literal notranslate"><span class="pre">haus(L)</span></code> og <code class="code docutils literal notranslate"><span class="pre">hali(L)</span></code> sem skila haus og hala
+lista L. Prófið.</p></li>
+<li><p>Flettið upp á <em>insert</em>-fallinu í grein <a class="reference internal" href="../kafli06/#bara-listar"><span class="std std-numref">6.5</span></a> og notið
+það til að búa til fall <code class="code docutils literal notranslate"><span class="pre">setjafremst(L,g)</span></code> sem bætir <code class="docutils literal notranslate"><span class="pre">g</span></code> við sem
+nýjum haus fremst í listann. Ath. að fallið á ekki að hafa neina return
+skipun, heldur notfærir það sér að listaviðföng eru tilvísanir. Prófið.</p></li>
+<li><p>Búið til fall <code class="code docutils literal notranslate"><span class="pre">oddalisti(n)</span></code> sem skilar lista með n fyrstu
+oddatölunum. Byrjið með tóman lista, <code class="code docutils literal notranslate"><span class="pre">[]</span></code>, og notið svo for-lykkju
+sem hleypur í gegn um tölurnar <span class="math notranslate nohighlight">\(1, 3,\ldots, 2n-1\)</span> og bætir hverri
+þeirra aftan á listann. Prófið.</p></li>
+</ol>
+</div>
+</section>
+</section>
+<section id="samstaeur">
+<h2><span class="section-number">5.4  </span>Samstæður<a class="headerlink" href="#samstaeur" title="Permalink to this heading"></a></h2>
+<p>Annað safntag í Python sem líka útfærir tölvunarfræðilega lista er <strong>samstæða</strong> (<em>tuple</em>). Enska orðið <em>tuple</em> er fengið að láni úr stærðfræði, en stærðfræðilegt <a class="reference external" href="https://en.wikipedia.org/wiki/Tuple">tuple</a> (þýtt í <a class="reference external" href="https://stæ.is/os">stærðfræðiorðasafninu</a> með n-und) er skilgreint sem „endanleg röðuð runa af stökum“, venjulega táknuð með því að telja stökin upp innan sviga t.d. <span class="math notranslate nohighlight">\((2, 3, 4)\)</span>. N-undir eiga margt skylt með punktum í plani eða rúmi, enda rithátturinn sá sami. Hér er hugtakið þýtt með samstæða, en undirrituðum finnst n-und stirt og hálfljótt. Svigarithátturinn er einmitt notaður til að búa til samstæður í Python:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">S</span> <span class="pre">=</span> <span class="pre">(gildi,</span> <span class="pre">gildi...)</span></code>.</p>
+</div></blockquote>
+<p>Reyndar má sleppa svigunum: <code class="code docutils literal notranslate"><span class="pre">S</span> <span class="pre">=</span> <span class="pre">gildi,</span> <span class="pre">gildi...</span></code> er jafngilt. Til að búa til <strong>tóma samstæðu</strong> má rita <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">=</span> <span class="pre">()</span></code> og til að búa til <strong>samstæðu með einu staki</strong> þarf að enda á kommu, t.d. <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">=</span> <span class="pre">(4,)</span></code>. Samstæða tveggja staka nefnist <strong>par</strong> eða <strong>tvennd</strong> (<em>pair</em>, <em>couple</em>), og þriggja staka samstæða er <strong>þrennd</strong> (<em>triple</em>).</p>
+<p>Hornklofa má áfram nota til að vísa í einstök stök og hlutsamstæður: <code class="code docutils literal notranslate"><span class="pre">print(S[0])</span></code> prentar fyrsta gildið í <code class="code docutils literal notranslate"><span class="pre">S</span></code> og <code class="code docutils literal notranslate"><span class="pre">print(S[0:2])</span></code> prentar fyrstu tvö. Einn helsti munurinn á listum og samstæðum er sá að það er ekki hægt að breyta stökum gildum í samstæðum, stækka þær eða minnka eftir að þær hafa verið búnar til:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># þriggja staka listi</span>
+<span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>     <span class="c1"># þetta má</span>
+<span class="n">S</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># þrennd</span>
+<span class="n">S</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>     <span class="c1"># þetta gefur villu</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Sagt er að samstæður séu <strong>óbreytanlegar</strong> (<em>immutable</em>) en listar séu
+<strong>breytanlegir</strong> (<em>mutable</em>). Stundum er gott að geta treyst því að einstök
+gildi breytist ekki, og auk þess notar Python málið samstæður í ýmsum skipunum,
+t.d. þegar kallað er á föll sem skila fleiru en einu gildi, sbr. <a class="reference internal" href="../kafli04/#virka"><span class="std std-numref">kafla
+4.7</span></a>, og til að búa til föll með breytilegum stikafjölda (sjá kafla 12.4 í
+<a class="reference external" href="https://greenteapress.com/thinkpython2/thinkpython2.pdf">Think Python</a>
+kennslubók). Eitt í viðbót sem er frábrugðið: Hægt er að búa til mengi af
+samstæðum, og þær geta verið lyklar í uppflettitöflum, en hvorugt má með listum.</p>
+<p>Flest föllin sem talin eru upp í <a class="reference internal" href="../kafli06/#helstu-agerir"><span class="std std-numref">6. kafla</span></a> duga á samstæður, nema föllin í grein <a class="reference internal" href="../kafli06/#bara-listar"><span class="std std-numref">6.5</span></a>. Eins og fyrr segir má líka nota samskeytingarvirkjana + og * á þær.</p>
+</section>
+<section id="mengi">
+<h2><span class="section-number">5.5  </span>Mengi<a class="headerlink" href="#mengi" title="Permalink to this heading"></a></h2>
+<p>Stærðfræðihugtakið <strong>mengi</strong> (<a class="reference external" href="https://en.wikipedia.org/wiki/Set_(mathematics)">set</a>) er skilgreint sem „safn ólíkra staka“ og endanleg mengi má tákna með því að telja stökin upp innan slaufusviga: <span class="math notranslate nohighlight">\(\{2, 3, 4\}\)</span>. Mengi eru óröðuð og þótt stök séu talin tvisvar breytir það ekki menginu. Þannig gildir:</p>
+<div class="math notranslate nohighlight">
+\[\{4, 3, 2\} = \{2, 3, 4\} = \{2, 3, 3, 4\}\]</div>
+<p>Mengi í Python eru táknuð með sama hætti:</p>
+<blockquote>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="p">{</span><span class="n">gildi</span><span class="p">,</span> <span class="n">gildi</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Tómamengið er búið til með <code class="code docutils literal notranslate"><span class="pre">tómt</span> <span class="pre">=</span> <span class="pre">set()</span></code> (rithátturinn <code class="docutils literal notranslate"><span class="pre">{}</span></code> er frátekinn til að búa til tóma uppflettitöflu). Mengi eru óbreytileg eins og samstæður þannig að eftir að þau hafa verið búin til er ekki hægt að breyta þeim. Það er heldur ekki hægt að vísa í stök með hornklofum, en hinsvegar eru til Python-virkjar fyrir helstu mengjaaðgerðir, eins og sýnt er í töflunni hér að neðan, og auk þess er hægt að nota föllin í töflunum í greinum <a class="reference internal" href="../kafli06/#oll-sofn"><span class="std std-numref">6.2</span></a> og <a class="reference internal" href="../kafli06/#sofn-af-tolum"><span class="std std-numref">6.3</span></a>.</p>
+<p>Af því mengin eru ekki röðuð er alls ekki tryggt print skipun prenti þau í röð. Ef við viljum prenta mengi í röð er hægt að breyta þeim í raðaðan lista með fallinu <code class="docutils literal notranslate"><span class="pre">sorted</span></code> og prenta hann svo, sem sé <code class="docutils literal notranslate"><span class="pre">print(sorted(M))</span></code>.</p>
+<table class="docutils align-center" id="tab-mengjavirkjar">
+<caption><span class="caption-number">Tafla 5.2: </span><span class="caption-text">Mengjavirkjar</span><a class="headerlink" href="#tab-mengjavirkjar" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Python-virki</p></th>
+<th class="head"><p>stærðfræði-virki</p></th>
+<th class="head"><p>aðgerð</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">in</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\in\)</span></p></td>
+<td><p>er stak í</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\notin\)</span></p></td>
+<td><p>er ekki stak í</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\subseteq\)</span></p></td>
+<td><p>er hlutmengi í</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">&amp;</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cap\)</span></p></td>
+<td><p>sniðmengi</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">|</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cup\)</span></p></td>
+<td><p>sammengi</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">–</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\textrm{ eða }\smallsetminus\)</span></p></td>
+<td><p>mengjamismunur</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">^</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Delta\)</span></p></td>
+<td><p>samhverfur mismunur</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-center" id="id2" style="width: 8cm">
+<img alt="../_images/mengjamunur.png" src="../_images/mengjamunur.png" />
+<figcaption>
+<p><span class="caption-number">Mynd 5.2: </span><span class="caption-text">Mengjamismunurinn <em>A</em> – <em>B</em></span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3" style="width: 9cm">
+<img alt="../_images/samhverfur-munur.png" src="../_images/samhverfur-munur.png" />
+<figcaption>
+<p><span class="caption-number">Mynd 5.3: </span><span class="caption-text">Samhverfi mismunurinn <em>A</em> ∆ <em>B</em></span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Prímtölur &lt; 20</p>
+<ol class="arabic simple">
+<li><p>Búið til mengi S með sléttum tölum 2–20 og M3 með tölunum 3, 6,…, 18
+og M5 með 5, 10, 15, 20 (með því að nota <code class="code docutils literal notranslate"><span class="pre">set(range(...))</span></code>).
+Prentið svo M6 = S <span class="math notranslate nohighlight">\(\cap\)</span> M3 (margfeldi af 6 sem eru &lt; 20).</p></li>
+<li><p>Látið X vera mengi talnanna 2–20 og finnið P = mengi prímtalna &lt; 20 sem
+(X – (S <span class="math notranslate nohighlight">\(\cup\)</span> M3 <span class="math notranslate nohighlight">\(\cup\)</span> M5)) <span class="math notranslate nohighlight">\(\cup\)</span> {2,3,5}</p></li>
+</ol>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Enska og saga</p>
+<p>Ef E er mengi nemenda í Ensku og S er mengi nemenda í Sögu þá er E
+<span class="math notranslate nohighlight">\(\cap\)</span> S mengi þeirra sem eru í báðum fögum, E <span class="math notranslate nohighlight">\(\cup\)</span> S er mengi
+þeirra sem eru í einhverju fagi og E <span class="math notranslate nohighlight">\(\Delta\)</span> S eru þeir sem eru í
+nákvæmlega einu fagi. Látið <code class="code docutils literal notranslate"><span class="pre">E</span> <span class="pre">=</span> <span class="pre">{&quot;Ari&quot;,</span> <span class="pre">&quot;Ása&quot;,</span> <span class="pre">&quot;Fía&quot;,</span> <span class="pre">&quot;Jói&quot;}</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">S</span> <span class="pre">=</span> <span class="pre">{&quot;Fía&quot;,</span> <span class="pre">&quot;Jói&quot;,</span> <span class="pre">&quot;Nói&quot;}</span></code> og ákvarðið samsettu mengin þrjú með
+Python-mengjaaðgerðum. Teiknið gjarna mynd á blað.</p>
+</div>
+</section>
+<section id="itrarar">
+<h2><span class="section-number">5.6  </span>Ítrarar<a class="headerlink" href="#itrarar" title="Permalink to this heading"></a></h2>
+<p>Um fallið <strong>range</strong> sem notað er í for-lykkjum var fjallað í greinum
+<a class="reference internal" href="../kafli02/#icollatz"><span class="std std-numref">2.4</span></a> og <a class="reference internal" href="../kafli04/#for-lykkjur"><span class="std std-numref">4.10.2</span></a>. Það skilar gildi af taginu
+<strong>ítrari</strong> (<em>iterator</em>). Í for-lykkjum má líka nota nota aðrar gerðir af runum
+en ítararnir hafa þann kost að spara minnispláss, því aðeins byrjunargildið,
+lokagildið og skrefið eru geymd. Hér eru nokkur dæmi:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span> <span class="o">...</span> <span class="c1"># þ.e. fyrir i = 0,1,2...999</span>
+<span class="n">r</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>            <span class="c1"># r geymir bara 2, 8 og skrefið 1</span>
+<span class="n">r1</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>        <span class="c1"># r1 geymir 2, 11 og skrefið 3</span>
+<span class="n">L1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span>             <span class="c1"># gefur L1 = [2, 5, 8]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">r1</span><span class="p">:</span> <span class="o">...</span>          <span class="c1"># fyrir i = 2, 5, 8</span>
+<span class="n">L</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">))</span>     <span class="c1"># gefur L = [0,1,...,999]</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span> <span class="o">...</span>           <span class="c1"># jafngilt fyrsta dæminu en þarf meira minni</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing:</p>
+<p>Fallið <code class="code docutils literal notranslate"><span class="pre">sys.getsizeof(x)</span></code> skilar fjölda bæta sem breytan <code class="code docutils literal notranslate"><span class="pre">x</span></code>
+tekur í minni. Finnið út hve mikið minni <code class="code docutils literal notranslate"><span class="pre">range(1000)</span></code> og
+<code class="code docutils literal notranslate"><span class="pre">list(range(1000))</span></code> taka (byrjið með <code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">sys</span></code>).</p>
+</div>
+<p>Annað þægilegt fall sem skilar ítrara er fallið <strong>enumerate</strong>, en <code class="docutils literal notranslate"><span class="pre">enumerate(L)</span></code> skilar ítrara sem rennir sér í gegn um öll stök í <code class="docutils literal notranslate"><span class="pre">L</span></code> og býr til pör (0, L[0]), (1, L[1]) o.s.frv. Hugsum okkur að við höfum lista af nöfnum og viljum skrifa þau út ásamt númerum þeirra í listanum. Eftirfarandi dæmi sýnir tvær jafngildar leiðir til þess.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Nöfn og númer</p>
+<p>Báðar lykkjurnar í eftirfarandi forriti skrifa út:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1 Ása
+2 Bjarni
+3 Dóra
+4 Einar
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nöfn</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ása&quot;</span><span class="p">,</span> <span class="s2">&quot;Bjarni&quot;</span><span class="p">,</span> <span class="s2">&quot;Dóra&quot;</span><span class="p">,</span> <span class="s2">&quot;Einar&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="n">nafn</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nöfn</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="n">nafn</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">nr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nöfn</span><span class="p">)):</span> <span class="c1"># Þessi lykkja er jafngild þeirri að ofan</span>
+    <span class="n">nafn</span> <span class="o">=</span> <span class="n">nöfn</span><span class="p">[</span><span class="n">nr</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="n">nafn</span><span class="p">)</span>
+
+<span class="n">Við</span> <span class="n">sjáum</span> <span class="n">að</span> <span class="n">forritið</span> <span class="n">er</span> <span class="n">aðeins</span> <span class="n">einfaldara</span> <span class="n">þegar</span> <span class="nb">enumerate</span> <span class="n">er</span> <span class="n">notað</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>Það er líka hægt að byrja að telja í 1 með <code class="docutils literal notranslate"><span class="pre">enumerate(L,1)</span></code> og svo má líka
+setja pörin sem verða til inn í sérstaka breytu:</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Byrjað með númer 1</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">125</span><span class="p">],</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># veldi af 5</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>                        <span class="c1"># prentar (1, 5), (2, 25) og (3, 125)</span>
+</pre></div>
+</div>
+<p>Þetta jafngildir:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">125</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><strong>zip</strong> er annað fall sem smíðar pör; það tekur inn tvo (eða fleiri) jafnlanga lista og
+parar þá saman: <code class="code docutils literal notranslate"><span class="pre">zip([0,1,2],</span> <span class="pre">[5,6,7])</span></code> skilar pörunum <code class="code docutils literal notranslate"><span class="pre">(0,5)</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">(1,6)</span></code> og <code class="code docutils literal notranslate"><span class="pre">(2,7)</span></code>.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: enumerate og zip</p>
+<ol class="arabic">
+<li><p>Smíðið pörin (0,2), (1,4), (2,6), (3,8), (4,10) með <em>enumerate</em> og prentið
+út (til dæmis dugar <code class="code docutils literal notranslate"><span class="pre">E</span> <span class="pre">=</span> <span class="pre">enumerate(...)</span></code> og <code class="code docutils literal notranslate"><span class="pre">print(list(E))</span></code>).</p></li>
+<li><p>Smíðið sömu pör með <em>zip</em>.</p></li>
+<li><p>Látið <code class="docutils literal notranslate"><span class="pre">nöfn</span></code> vera nafnalistann í sýnidæminu „Nöfn og númer“ og <code class="docutils literal notranslate"><span class="pre">eink</span></code> vera
+<code class="docutils literal notranslate"><span class="pre">[8,</span> <span class="pre">7,</span> <span class="pre">10,</span> <span class="pre">9]</span></code> (einkunnir í landafræði). Skrifið forrit sem notar enumerate
+til að búa til töfluna:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Nr  Nafn  Einkunn
+–––––––––––––––––
+1   Ása      8
+2   Bjarni   7
+3   Dóra    10
+4   Einar    9
+</pre></div>
+</div>
+<p><strong>Leiðbeining:</strong> Hægt er að nota <em>enumerate</em> og <em>zip</em> saman svona:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">for</span> <span class="pre">nr,(s1,s2)</span> <span class="pre">in</span> <span class="pre">enumerate(zip(L1,L2),1)</span></code></p>
+</div></blockquote>
+<p>Þá hleypur nr í gegn um 1,2,3… og samtímis hlaupa s1 og s2 í gegn um
+stökin í L1 og L2.</p>
+</li>
+</ol>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli04/" class="btn btn-neutral float-left" title="4 Grunnatriði Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli06/" class="btn btn-neutral float-right" title="6 Helstu aðgerðir fyrir söfn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

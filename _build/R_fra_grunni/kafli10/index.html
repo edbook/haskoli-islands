@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Línuleg aðhvarfsgreining &mdash; R frá Grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="11. Tvíkosta aðhvarfsgreining" href="../kafli11/" />
+    <link rel="prev" title="9. Einþátta fervikagreining" href="../kafli09/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            R frá Grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Einþátta fervikagreining</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Línuleg aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linulegt-likan-smia">10.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">10.1.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lm">10.1.1.1. lm()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oryggisbil-fyrir-stula-likansins">10.2. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">10.2.1. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#confint">10.2.1.1. confint()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#matgaei-likansins-konnu">10.3. Mátgæði líkansins könnuð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spagildi-og-spabil">10.4. Spágildi og spábil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">10.4.1. Spágildi og spábil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#predict">10.4.1.1. predict()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#prof-a-fylgnistuli">10.5. Próf á fylgnistuðli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strjal-skyribreyta">10.6. Strjál skýribreyta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fleiri-skyribreytur-ast">10.7. Fleiri skýribreytur<span class="math">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">10.8. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_R_leiksvaedi/">Um R leiksvæði</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">R frá Grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10. </span>Línuleg aðhvarfsgreining</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli10.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="linuleg-ahvarfsgreining">
+<span id="c-linulegtadhvarf"></span><h1><span class="section-number">10. </span>Línuleg aðhvarfsgreining<a class="headerlink" href="#linuleg-ahvarfsgreining" title="Permalink to this heading"></a></h1>
+<p>Aðhvarfsgreining er notuð til að kanna samband milli einnar samfelldrar
+svarbreytu og einnar eða fleiri skýribreyta sem geta hvort sem heldur
+verið samfelldar eða strjálar. Í einfaldasta tilvikinu er eingöngu ein
+samfelld skýribreyta og er þá talað um einfalt línulegt aðhvarf. Því
+tilviki helgum við meginhluta kaflans en útfærslur með strjálli
+skýribreytu sem og fleiri en einni skýribreytu eru ræddar undir lok
+hans.</p>
+<p>Í kafla <a class="reference internal" href="#s-likanmetid"><span class="std std-numref">10.1</span></a> kynntum við skipunina <code class="docutils literal notranslate"><span class="pre">lm()</span></code> sem metur
+einfalt línulegt aðhvarf og skoðum úttak hennar með <code class="docutils literal notranslate"><span class="pre">summary()</span></code>. Þar
+næst, í kafla <a class="reference internal" href="#s-lmoryggis"><span class="std std-numref">10.2</span></a>, skoðum við hvernig skipunin
+<code class="docutils literal notranslate"><span class="pre">confint()</span></code> gefur okkur öryggisbil fyrir stuðla líkansins. Í kafla
+<a class="reference internal" href="#s-lmleifar"><span class="std std-numref">10.3</span></a> könnum við mátgæði líkansins með fallinu <code class="docutils literal notranslate"><span class="pre">resid()</span></code>
+og í kafla <a class="reference internal" href="#s-lmspa"><span class="std std-numref">10.4</span></a> sjáum við hvernig framkvæma má spár með
+fallinu <code class="docutils literal notranslate"><span class="pre">predict()</span></code>. Að lokum fjallar kafli <a class="reference internal" href="#s-onnurprof"><span class="std std-numref">10.5</span></a> um
+hvernig framkvæma má tilgátupróf fyrir fylgnistuðul með <code class="docutils literal notranslate"><span class="pre">cor.test()</span></code>.</p>
+<section id="linulegt-likan-smia">
+<span id="s-likanmetid"></span><h2><span class="section-number">10.1. </span>Línulegt líkan smíðað<a class="headerlink" href="#linulegt-likan-smia" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">10.1.1. </span>Línulegt líkan smíðað<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<section id="lm">
+<h4><span class="section-number">10.1.1.1. </span>lm()<a class="headerlink" href="#lm" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> formúlan sem við viljum meta, gögnin sem við byggjum á</p>
+<p><strong>Úttak:</strong> metnir stuðlar, p-gildi, skýringarhlutfall ofl.</p>
+</div>
+<hr class="docutils" />
+<p>Einfalt línulegt aðhvarfsgreiningarlíkan er líkan á forminu:</p>
+<div class="math">
+\[y = \beta_0 + \beta_1 x
+
+\]</div>
+<p>Aðferðin <code class="docutils literal notranslate"><span class="pre">lm()</span></code> metur gildi stikanna <span class="math">\(\beta_0\)</span> og
+<span class="math">\(\beta_1\)</span> ásamt ýmiss annars. Hún er mötuð með tvennu:</p>
+<ul class="simple">
+<li><p>Formúlu með heitum breytanna sem lýsir sambandinu sem við viljum
+meta. Svarbreytan er vinstra megin við <span class="math">\(\sim\)</span> merkið, en hægra
+megin koma skýribreyturnar.</p></li>
+<li><p>Gagnatöflunni sem geymir gögnin.</p></li>
+</ul>
+<p>Þegar aðhvarfsgreining er framkvæmd margborgar sig að búa til hlut sem
+inniheldur allt það sem hún skilar. Metum nú stuðla í líkani sem lýsir
+því hvaða áhrif hæð hefur á þyngd nemenda og vistum líkanið undir
+nafninu <code class="docutils literal notranslate"><span class="pre">lm1</span></code>. Þar sem við metum áhrif hæðar á þyngd er svarbreytan
+<code class="docutils literal notranslate"><span class="pre">thyngd</span></code> vinstra megin í formúlunni.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">lm1</span><span class="o">&lt;-</span><span class="nf">lm</span><span class="p">(</span><span class="n">thyngd</span><span class="o">~</span><span class="n">haed</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">lm1</span><span class="p">)</span>
+<span class="c1">##  [1] &quot;coefficients&quot;  &quot;residuals&quot;     &quot;effects&quot;       &quot;rank&quot;</span>
+<span class="c1">##  [5] &quot;fitted.values&quot; &quot;assign&quot;        &quot;qr&quot;            &quot;df.residual&quot;</span>
+<span class="c1">##  [9] &quot;na.action&quot;     &quot;xlevels&quot;       &quot;call&quot;          &quot;terms&quot;</span>
+<span class="c1">## [13] &quot;model&quot;</span>
+</pre></div>
+</div>
+<p>Eins og þið sjáið eru þarna heilmargt að finna. Þar við bætist að
+skipunina <code class="docutils literal notranslate"><span class="pre">summary()</span></code> má, líkt og svo oft áður, mata með
+aðhvarfsgreiningarhlutnum <code class="docutils literal notranslate"><span class="pre">lm1</span></code> til að fá ýmsar upplýsingar:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">lm1</span><span class="p">)</span>
+<span class="c1">##</span>
+<span class="c1">## Call:</span>
+<span class="c1">## lm(formula = thyngd ~ haed, data = puls)</span>
+<span class="c1">##</span>
+<span class="c1">## Residuals:</span>
+<span class="c1">##     Min      1Q  Median      3Q     Max</span>
+<span class="c1">## -27.781  -7.473  -1.984   5.306  37.215</span>
+<span class="c1">##</span>
+<span class="c1">## Coefficients:</span>
+<span class="c1">##               Estimate Std. Error t value Pr(&gt;|t|)</span>
+<span class="c1">## (Intercept) -108.75402    9.18021  -11.85   &lt;2e-16 ***</span>
+<span class="c1">## haed           1.03987    0.05288   19.66   &lt;2e-16 ***</span>
+<span class="c1">## ---</span>
+<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">##</span>
+<span class="c1">## Residual standard error: 11.17 on 458 degrees of freedom</span>
+<span class="c1">##   (11 observations deleted due to missingness)</span>
+<span class="c1">## Multiple R-squared:  0.4577, Adjusted R-squared:  0.4566</span>
+<span class="c1">## F-statistic: 386.6 on 1 and 458 DF,  p-value: &lt; 2.2e-16</span>
+</pre></div>
+</div>
+<p>Ýmislegt má lesa út úr úttakinu. Þar ber helst að:</p>
+<ul class="simple">
+<li><p>Matið á skurðpunktinum (<span class="math">\(b_0\)</span>) er -108.75402.</p></li>
+<li><p>Matið á hallatölunni (<span class="math">\(b_1\)</span>) er 1.03987.</p></li>
+<li><p>Prófstærðin t = -11.85 kannar tilgátuprófið hvort <span class="math">\(\beta_0 = 0\)</span>.</p></li>
+<li><p>Prófstærðin t = 19.66 kannar tilgátuprófið hvort <span class="math">\(\beta_1 = 0\)</span>.</p></li>
+<li><p>Skýringarhlutfallið er <span class="math">\(R^2\)</span> = 0.458.</p></li>
+<li><p>Matið á <span class="math">\(\sigma\)</span> er <span class="math">\(s_e =\)</span> 11.17.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="oryggisbil-fyrir-stula-likansins">
+<span id="s-lmoryggis"></span><h2><span class="section-number">10.2. </span>Öryggisbil fyrir stuðla líkansins<a class="headerlink" href="#oryggisbil-fyrir-stula-likansins" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">10.2.1. </span>Öryggisbil fyrir stuðla líkansins<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<section id="confint">
+<h4><span class="section-number">10.2.1.1. </span>confint()<a class="headerlink" href="#confint" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> metið líkan</p>
+<p><strong>Úttak:</strong> öryggisbil fyrir stuðla líkansins</p>
+<p><strong>Helstu stillingar:</strong> level</p>
+</div>
+<hr class="docutils" />
+<p>Öryggisbil fyrir <span class="math">\(\beta_0\)</span> og <span class="math">\(\beta_1\)</span> má finna með
+skipuninni <code class="docutils literal notranslate"><span class="pre">confint()</span></code>. Hún er mötuð með aðhvarfsgreiningarhlutnum sem
+við bjuggum til en skilar öryggisbili fyrir hvorn stuðul fyrir sig. Með
+stillingunni <code class="docutils literal notranslate"><span class="pre">level</span></code> má tilgreina hvert öryggi bilsins er. Sjálfgefið
+er að það sé 95%.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">confint</span><span class="p">(</span><span class="n">lm1</span><span class="p">)</span>
+<span class="c1">##                    2.5 %     97.5 %</span>
+<span class="c1">## (Intercept) -126.7945689 -90.713462</span>
+<span class="c1">## haed           0.9359419   1.143796</span>
+</pre></div>
+</div>
+<p>Hér sést að:</p>
+<ul class="simple">
+<li><p>Öryggisbil fyrir <span class="math">\(\beta_0\)</span> er <span class="math">\([-126.7945689, -90.7134618]\)</span>.</p></li>
+<li><p>Öryggisbil fyrir <span class="math">\(\beta_1\)</span> er <span class="math">\([0.9359419, 1.1437964]\)</span>.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="matgaei-likansins-konnu">
+<span id="s-lmleifar"></span><h2><span class="section-number">10.3. </span>Mátgæði líkansins könnuð<a class="headerlink" href="#matgaei-likansins-konnu" title="Permalink to this heading"></a></h2>
+<p>Forsenda aðhvarfsgreiningar er að leifar hennar séu óháðar og
+normaldreifðar, með sömu dreifni. Leifarnar má nálgast með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">lm1</span><span class="o">$</span><span class="n">resid</span>
+<span class="c1">##            1            2            4            5            6</span>
+<span class="c1">##   1.33508486  31.37822565  -5.18321388  -3.74465341 -14.22308301</span>
+<span class="c1">##            7            8            9           10           11</span>
+<span class="c1">##  -6.34269041   4.13901085  -6.26295215   7.73704785  -6.78125088</span>
+<span class="c1">##           12           13           14           15           16</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>Gott er að teikna normaldreifingarrit af leifunum. Takið eftir því að
+hér mötum við skipunina <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> með aðhvarfsgreiningarhlutnum
+<code class="docutils literal notranslate"><span class="pre">lm1</span></code>, en ekki gagnatöflunni <code class="docutils literal notranslate"><span class="pre">puls</span></code>.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">lm1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">sample</span><span class="o">=</span><span class="n">.resid</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">stat_qq</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../_images/unnamed-chunk-235-1.svg" src="../_images/unnamed-chunk-235-1.svg" /></figure>
+</section>
+<section id="spagildi-og-spabil">
+<span id="s-lmspa"></span><h2><span class="section-number">10.4. </span>Spágildi og spábil<a class="headerlink" href="#spagildi-og-spabil" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">10.4.1. </span>Spágildi og spábil<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<section id="predict">
+<h4><span class="section-number">10.4.1.1. </span>predict()<a class="headerlink" href="#predict" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> metið líkan, gagnatafla með gildum skýribreytanna sem á að
+spá fyrir með</p>
+<p><strong>Úttak:</strong> spá og spábil</p>
+<p><strong>Helstu stillingar:</strong> level</p>
+</div>
+<hr class="docutils" />
+<p>Við getum spáð fyrir gildi á svarbreytunni fyrir ákveðið gildi á
+skýribreytunni með aðferðinni <code class="docutils literal notranslate"><span class="pre">predict()</span></code>. Mata þarf aðferðina með
+nafninu á aðhvarfsgreiningarhlutnum, nafninu á skýribreytunni og
+gagnatöflu sem inniheldur þau gildi á skýribreytunni sem við viljum fá
+spá fyrir. Hér fyrir neðan reiknum við spá fyrir þyngd einstaklings serm
+er 180 cm á hæð:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">haed</span><span class="o">=</span><span class="m">180</span><span class="p">))</span>
+<span class="c1">##        1</span>
+<span class="c1">## 78.42243</span>
+</pre></div>
+</div>
+<p>Aðferðina má einnig nota til að fá spábil:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">interval</span><span class="o">=</span><span class="s">&quot;prediction&quot;</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">haed</span><span class="o">=</span><span class="m">180</span><span class="p">))</span>
+<span class="c1">##        fit      lwr      upr</span>
+<span class="c1">## 1 78.42243 56.43465 100.4102</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="prof-a-fylgnistuli">
+<span id="s-onnurprof"></span><h2><span class="section-number">10.5. </span>Próf á fylgnistuðli<a class="headerlink" href="#prof-a-fylgnistuli" title="Permalink to this heading"></a></h2>
+<p>Tilgátupróf fyrir <span class="math">\(\rho\)</span> má framkvæma með <code class="docutils literal notranslate"><span class="pre">cor.test()</span></code>
+aðferðinni. Við þurfum að mata aðferðina með heitunum á breytunum sem
+við ætlum að kanna fylgnina á milli. Viljum við kanna fylgnina á milli
+breytanna <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> og <code class="docutils literal notranslate"><span class="pre">haed</span></code> notum við skipunina:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">cor.test</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">thyngd</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">)</span>
+<span class="c1">##</span>
+<span class="c1">##  Pearson&#39;s product-moment correlation</span>
+<span class="c1">##</span>
+<span class="c1">## data:  puls$thyngd and puls$haed</span>
+<span class="c1">## t = 19.663, df = 458, p-value &lt; 2.2e-16</span>
+<span class="c1">## alternative hypothesis: true correlation is not equal to 0</span>
+<span class="c1">## 95 percent confidence interval:</span>
+<span class="c1">##  0.6237265 0.7232602</span>
+<span class="c1">## sample estimates:</span>
+<span class="c1">##       cor</span>
+<span class="c1">## 0.6765718</span>
+</pre></div>
+</div>
+<p>Takið eftir að prófstærðin er t = 19.663 sem er nákvæmlega það sama og
+þegar við prófuðum núlltilgátuna <span class="math">\(H_0: \beta_1=0\)</span>.</p>
+</section>
+<section id="strjal-skyribreyta">
+<span id="s-lmstrjal"></span><h2><span class="section-number">10.6. </span>Strjál skýribreyta<a class="headerlink" href="#strjal-skyribreyta" title="Permalink to this heading"></a></h2>
+<p>Í kafla <a class="reference internal" href="../kafli09/#c-fervikagreining"><span class="std std-numref">9</span></a> fjölluðum við um einþátta
+fervikagreiningu en líta má á fervikagreiningu sem sértilfelli af
+aðhvarfsgreiningu þegar skýribreyta er strjál. Einþátta fervikagreiningu
+má skrifa sem línulegt líkan á eftirfarandi hátt:</p>
+<div class="math">
+\[y_{ij}  = \mu + \tau_i  + \varepsilon_{ij}
+
+\]</div>
+<p>þar sem <span class="math">\(i = 1,2,...,a\)</span> og <span class="math">\(j = 1,2,...,n\)</span>. Hér gerum við
+ráð fyrir að við höfum jafn margar mælingar í hverjum flokki/hópi
+(<span class="math">\(n\)</span>).</p>
+<ul class="simple">
+<li><p><span class="math">\(y_{ij}\)</span> er mæling nr. <span class="math">\(j\)</span> í hópi/flokki nr. <span class="math">\(i\)</span>.</p></li>
+<li><p><span class="math">\(\mu\)</span> er heildarmeðaltalið.</p></li>
+<li><p><span class="math">\(\tau_i\)</span> er frávik flokks nr. <span class="math">\(i\)</span> frá heildarmeðaltalinu <span class="math">\(\mu\)</span>.</p></li>
+<li><p><span class="math">\(\varepsilon_{ij}\)</span> eru frávik mælingar nr. <span class="math">\(j\)</span> frá
+gildinu <span class="math">\(\mu + \tau_i\)</span> sem henni tilheyrir, við köllum
+<span class="math">\(\varepsilon_{ij}\)</span> <em>leifar</em> (e. residuals).</p></li>
+</ul>
+<p>Við sáum í kafla <a class="reference internal" href="../kafli09/#c-fervikagreining"><span class="std std-numref">9</span></a> að nota má <code class="docutils literal notranslate"><span class="pre">aov()</span></code> aðferðina
+og <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðirnar til að fá fervikagreiningartöfluna. Í stað
+<code class="docutils literal notranslate"><span class="pre">aov()</span></code> aðferðarinnar má nota <code class="docutils literal notranslate"><span class="pre">lm()</span></code> aðferðina líkt og við gerðum
+hér að ofan fyrir línulegu aðhvarfsgreininguna. Skoðum aftur samband
+<code class="docutils literal notranslate"><span class="pre">fyrriPuls</span></code> og <code class="docutils literal notranslate"><span class="pre">likamsraektf</span></code> en notum nú <code class="docutils literal notranslate"><span class="pre">lm()</span></code> aðferðina:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">lm.puls</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">likamsraektf</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puls</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Við getum fengið fervikasummutöfluna á sama hátt og áður með <code class="docutils literal notranslate"><span class="pre">anova()</span></code>
+aðferðinni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">anova</span><span class="p">(</span><span class="n">lm.puls</span><span class="p">)</span>
+<span class="c1">## Analysis of Variance Table</span>
+<span class="c1">##</span>
+<span class="c1">## Response: fyrriPuls</span>
+<span class="c1">##               Df Sum Sq Mean Sq F value    Pr(&gt;F)</span>
+<span class="c1">## likamsraektf   2   2580  1289.9  9.5055 9.065e-05 ***</span>
+<span class="c1">## Residuals    446  60521   135.7</span>
+<span class="c1">## ---</span>
+<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+</pre></div>
+</div>
+<p>en við getum einnig fengið möt á stikum líkansins með <code class="docutils literal notranslate"><span class="pre">summary()</span></code>
+aðferðinni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">lm.puls</span><span class="p">)</span>
+<span class="c1">##</span>
+<span class="c1">## Call:</span>
+<span class="c1">## lm(formula = fyrriPuls ~ likamsraektf, data = puls)</span>
+<span class="c1">##</span>
+<span class="c1">## Residuals:</span>
+<span class="c1">##     Min      1Q  Median      3Q     Max</span>
+<span class="c1">## -31.217  -8.217  -0.148   6.783  46.783</span>
+<span class="c1">##</span>
+<span class="c1">## Coefficients:</span>
+<span class="c1">##                      Estimate Std. Error t value Pr(&gt;|t|)</span>
+<span class="c1">## (Intercept)            75.148      1.294  58.060  &lt; 2e-16 ***</span>
+<span class="c1">## likamsraektfMiðlungs   -1.931      1.553  -1.243 0.214522</span>
+<span class="c1">## likamsraektfMikil      -6.012      1.553  -3.871 0.000125 ***</span>
+<span class="c1">## ---</span>
+<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">##</span>
+<span class="c1">## Residual standard error: 11.65 on 446 degrees of freedom</span>
+<span class="c1">##   (22 observations deleted due to missingness)</span>
+<span class="c1">## Multiple R-squared:  0.04088,    Adjusted R-squared:  0.03658</span>
+<span class="c1">## F-statistic: 9.505 on 2 and 446 DF,  p-value: 9.065e-05</span>
+</pre></div>
+</div>
+<p>Hægt er að stilla hvaða <em>samanburðarstuðla</em> (e. contrasts) eru notaðir en
+sjálfgegna stillingin er að nota svo kallaða <em>contr.treatment</em> en þá er
+lægsti flokkur flokkabreytu valinn sem viðmiðunarflokkur. Í einþátta
+fervikagreiningu má lesa matið fyrir viðmiðunarflokkinn úr
+<code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code> línunni og finna svo matið fyrir hina flokkana með að
+leggja gildið á viðkomandi stika við matið fyrir viðmiðunarflokkinn.</p>
+<p>Í dæminu hér að ofan má því lesa eftirfarandi:</p>
+<ul class="simple">
+<li><p>Matið á fyrri púls í flokknum sem stundar litla líkamsrækt er 75.148.</p></li>
+<li><p>Matið á fyrri púls í flokknum sem stundar miðlungs líkamsrækt er
+75.148 + (-1.931) = 73.217.</p></li>
+<li><p>Matið á fyrri púls í flokknum sem stundar mikla líkamsrækt er 75.148
++ (-6.012) = 69.136.</p></li>
+</ul>
+</section>
+<section id="fleiri-skyribreytur-ast">
+<span id="s-lmfleiribreytur"></span><h2><span class="section-number">10.7. </span>Fleiri skýribreytur<span class="math">\(^\ast\)</span><a class="headerlink" href="#fleiri-skyribreytur-ast" title="Permalink to this heading"></a></h2>
+<p>Eins og fjallað var um í hluta <a class="reference internal" href="../kafli09/#s-aovfleiribreytur"><span class="std std-numref">9.4</span></a> má mata
+<code class="docutils literal notranslate"><span class="pre">aov()</span></code> aðferðina með fleiri en einum þætti. Sömu sögu er að segja um
+<code class="docutils literal notranslate"><span class="pre">lm()</span></code> aðferðina. Mötum við hana með fleiri en einni samfelldri breytu
+smíðum við fjölvítt aðhvarfsgreiningrlíkan, með fleiri en einni
+flokkabreytu smíðum við fjölþátta fervikagreiningarlíkan en ef
+skýribreyturnar eru sambland af samfeldum breytum og flokkabreytur
+smíðum við samvikagreiningarlíkan (ANCOVA). Það er gríðarlega margt sem
+hafa þarf í huga þegar líkön af þessum gerðum eru smíðuð og verður ekki
+farið í það nánar hér en líkt og greint var frá í kafla
+<a class="reference internal" href="../kafli09/#s-aovfleiribreytur"><span class="std std-numref">9.4</span></a> geta <code class="docutils literal notranslate"><span class="pre">add1()</span></code>, <code class="docutils literal notranslate"><span class="pre">drop1()</span></code> og <code class="docutils literal notranslate"><span class="pre">step()</span></code>
+aðferðirnar komið að góðum notum þegar velja á skýribreytur í líkanið.</p>
+</section>
+<section id="leiksvaei-fyrir-r-koa">
+<h2><span class="section-number">10.8. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
+<div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
+puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
+
+# Setjid ykkar eigin koda her fyrir nedan:
+# Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
+# asamt dalkarheitum.
+head(puls)</code></div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli09/" class="btn btn-neutral float-left" title="9. Einþátta fervikagreining" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli11/" class="btn btn-neutral float-right" title="11. Tvíkosta aðhvarfsgreining" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

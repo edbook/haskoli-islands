@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Aðferðir í heildun &mdash; Hagnýt stærðfræðigreining (STÆ105G) 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		/* .sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		} */
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="8. Inngagur að diffurjöfnur" href="../kafli08/" />
+    <link rel="prev" title="6. Hagnýting á heildun" href="../kafli06/" />
+
+
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+	
+
+     
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Hagnýt stærðfræðigreining (STÆ105G)
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tölur og föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Markgildi og samfelldni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Afleiður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Hagnýting á diffrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Heildun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Hagnýting á heildun</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Aðferðir í heildun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hlutheildun">7.1. Hlutheildun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hlutheildun">7.1.1. Setning: Hlutheildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-hlutheildun">7.1.2. Dæmi: Hlutheildun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-hlutheildun-beitt-tvisvar">7.1.3. Dæmi: Hlutheildun beitt tvisvar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlutheildun-fyrir-akvein-heildi">7.1.4. Hlutheildun fyrir ákveðin heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hlutheildun-fyrir-akvein-heildi">7.1.5. Setning: Hlutheildun fyrir ákveðin heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-hlutheildun-fyrir-akvein-heildi">7.1.6. Dæmi: Hlutheildun fyrir ákveðin heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oeiginleg-heildi">7.2. Óeiginleg heildi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-oeiginlegt-heildi">7.2.1. Skilgreining: Óeiginlegt heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-oeiginlegt-heildi">7.2.2. Dæmi: Óeiginlegt heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">7.2.3. Dæmi: Óeiginlegt heildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#osamfelldur-heilidsstofn">7.3. Ósamfelldur heilidsstofn</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-osamfelldur-heildisstofn">7.3.1. Skilgreining: Ósamfelldur heildisstofn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-osamfelldur-heildisstofn">7.3.2. Dæmi: Ósamfelldur heildisstofn</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samanburarprof">7.4. Samanburðarpróf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-samanburarprof">7.4.1. Setning: Samanburðarpróf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-samanburarprof">7.4.2. Dæmi: Samanburðarpróf</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngagur að diffurjöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Runur og raðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Veldaraðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli_linuleg_algebra/">11. Inngangur að línulegri algebru</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../umnamskeidid/">Gagnlegar upplýsingar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Hagnýt stærðfræðigreining (STÆ105G)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Aðferðir í heildun</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae105g/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aferir-i-heildun">
+<h1><span class="section-number">7. </span>Aðferðir í heildun<a class="headerlink" href="#aferir-i-heildun" title="Permalink to this heading"></a></h1>
+<div class="athugasemd admonition">
+<p class="admonition-title">Nauðsynleg undirstaða</p>
+<ul class="simple">
+<li><p>Föll</p></li>
+<li><p>Markgildi</p></li>
+<li><p>Afleiður</p></li>
+<li><p>Heildi</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<blockquote class="epigraph">
+<div><p><em>May it be a light to you in dark places, when all other lights go out.</em></p>
+<p>– Galadriel, The Two Towers</p>
+</div></blockquote>
+<hr class="docutils" />
+<section id="hlutheildun">
+<h2><span class="section-number">7.1. </span>Hlutheildun<a class="headerlink" href="#hlutheildun" title="Permalink to this heading"></a></h2>
+<p>Í fyrri köflum höfum við lært að heilda með því að nota innsetningu. En innsetning
+ræður aðeins við lítinn hluta mögulegra heilda. Innsetning með <span class="math notranslate nohighlight">\(u=x^2\)</span> gerir okkur kleift
+að reikna</p>
+<div class="math notranslate nohighlight">
+\[\int x \sin(x^2) dx\]</div>
+<p>en getur okkur engar bjargir veitt þegar kemur að heildinu</p>
+<div class="math notranslate nohighlight">
+\[\int x \sin(x) dx.\]</div>
+<p>Til þess þarf að grípa til annarra aðferða. Þar sem innsetningu þrýtur má oft
+líta til hlutheildunar.</p>
+<section id="setning-hlutheildun">
+<h3><span class="section-number">7.1.1. </span>Setning: Hlutheildun<a class="headerlink" href="#setning-hlutheildun" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<blockquote>
+<div><p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> og <span class="math notranslate nohighlight">\(g(x)\)</span> vera föll sem samfelldar afleiður. Þá
+gildir að</p>
+<div class="math notranslate nohighlight">
+\[\int f'(x)g(x) dx = f(x)g(x) - \int f(x)g'(x) dx.\]</div>
+<p>Þessi formúla er stundum stytt í</p>
+<div class="math notranslate nohighlight">
+\[\int f'g = fg - \int fg'.\]</div>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-hlutheildun">
+<h3><span class="section-number">7.1.2. </span>Dæmi: Hlutheildun<a class="headerlink" href="#daemi-hlutheildun" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>Notum hlutheildun til að meta heildið</p>
+<div class="math notranslate nohighlight">
+\[\int x \sin(x) dx.\]</div>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Látum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+        f'(x)&amp;=\sin(x) &amp; g(x) &amp;= x\\
+        f(x)&amp;=-\cos(x) &amp; g'(x) &amp;= 1.
+\end{aligned}\end{split}\]</div>
+<p>Þá fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        \int x \sin(x) dx &amp;= -\cos(x)x - \int -\cos(x) \cdot 1 dx\\
+        &amp;= -x\cos(x)+\int \cos(x)dx\\
+        &amp;= -x\cos(x) + \sin(x) + C.
+\end{align}\end{split}\]</div>
+</div></blockquote>
+</div>
+<p>Stundum getur verið nauðsynelgt að beita hlutheildun oftar en einu sinni
+til að leysa dæmi.</p>
+</section>
+<section id="daemi-hlutheildun-beitt-tvisvar">
+<h3><span class="section-number">7.1.3. </span>Dæmi: Hlutheildun beitt tvisvar<a class="headerlink" href="#daemi-hlutheildun-beitt-tvisvar" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>Metum heildið</p>
+<div class="math notranslate nohighlight">
+\[\int x^2 e^{3x} dx.\]</div>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Látum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+        f'(x)&amp;=e^{3x} &amp; g(x) &amp;= x^2\\
+        f(x)&amp;=\frac{1}{3}e^{3x} &amp; g'(x) &amp;= 2x.
+\end{aligned}\end{split}\]</div>
+<p>Fáum að</p>
+<div class="math notranslate nohighlight">
+\[\int x^2 e^{3x} dx = \frac{1}{3}e^{3x}x^2 - \int \frac{1}{3}e^{3x} 2x dx.\]</div>
+<p>Beitum nú hlutheildun aftur. Látum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+        f'(x)&amp;=\frac{1}{3}e^{3x} &amp; g(x) &amp;= 2x \\
+ f(x)&amp;=\frac{1}{9}e^{3x} &amp; g'(x) &amp;= 2.
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+        \int \frac{1}{3}e^{3x} 2x dx &amp;= \frac{1}{9}e^{3x} 2x - \int \frac{1}{9}e^{3x} 2 dx\\
+        &amp;= \frac{1}{9}e^{3x} 2x - \frac{2}{27}e^{3x} + C.
+\end{aligned}\end{split}\]</div>
+<p>Ef við tökum þetta saman fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        \int x^2 e^{3x} dx &amp;= \frac{1}{3}e^{3x}x^2 - \left(\frac{1}{9}e^{3x} 2x - \frac{2}{27}e^{3x} + C\right)\\
+        &amp;= e^{3x}\left(\frac{1}{3} x^2 - \frac{2}{9} x + \frac{2}{27}\right) - C
+\end{align}\end{split}\]</div>
+</div></blockquote>
+</div>
+</section>
+<section id="hlutheildun-fyrir-akvein-heildi">
+<h3><span class="section-number">7.1.4. </span>Hlutheildun fyrir ákveðin heildi<a class="headerlink" href="#hlutheildun-fyrir-akvein-heildi" title="Permalink to this heading"></a></h3>
+<p>Við höfum nú séð hvernig á að nota hlutheildun fyrir óákveðin heildi. Aðferðin er
+að flestu leyti sú sama fyrir ákveðin heildi.</p>
+</section>
+<section id="setning-hlutheildun-fyrir-akvein-heildi">
+<h3><span class="section-number">7.1.5. </span>Setning: Hlutheildun fyrir ákveðin heildi<a class="headerlink" href="#setning-hlutheildun-fyrir-akvein-heildi" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<blockquote>
+<div><p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> og <span class="math notranslate nohighlight">\(g(x)\)</span> vera föll með samfelldar afleiður á bilinu
+<span class="math notranslate nohighlight">\([a,b]\)</span>. Þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f'(x) g(x) dx = \left[ f(x)g(x) \right]_a^b  - \int_a^b f(x) g'(x)dx.\]</div>
+<p>Þessi formúla er stundum stytt í</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f' g = \left[ fg \right]_a^b  - \int_a^b f g'.\]</div>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-hlutheildun-fyrir-akvein-heildi">
+<h3><span class="section-number">7.1.6. </span>Dæmi: Hlutheildun fyrir ákveðin heildi<a class="headerlink" href="#daemi-hlutheildun-fyrir-akvein-heildi" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>H áfram með dæmið hér að ofan, þar sem við mátum heildið</p>
+<div class="math notranslate nohighlight">
+\[\int x \sin(x) dx.\]</div>
+<p>Nú skulum við bæta við heilda það yfir bilið <span class="math notranslate nohighlight">\([0,\pi]\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[\int_0^\pi x \sin(x) dx.\]</div>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Látum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+        f'(x)&amp;=\sin(x) &amp; g(x) &amp;= x\\
+        f(x)&amp;=-\cos(x) &amp; g'(x) &amp;= 1.
+\end{aligned}\end{split}\]</div>
+<p>Með hlutheildun fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        \int_0^\pi x \sin(x) dx &amp;= [-\cos(x)x]_0^\pi - \int_0^\pi -\cos(x) \cdot 1 dx\\
+        &amp;= -\cos(\pi)\cdot \pi - (-\cos(0)\cdot 0 )  + \int_0^\pi \cos(x)dx\\
+        &amp;= \pi + [\sin(x)]_0^\pi\\
+        &amp;= \pi + (\sin(\pi)-\sin(0))\\
+        &amp;= \pi
+\end{align}\end{split}\]</div>
+</div></blockquote>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="oeiginleg-heildi">
+<h2><span class="section-number">7.2. </span>Óeiginleg heildi<a class="headerlink" href="#oeiginleg-heildi" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-oeiginlegt-heildi">
+<h3><span class="section-number">7.2.1. </span>Skilgreining: Óeiginlegt heildi<a class="headerlink" href="#skilgreining-oeiginlegt-heildi" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<blockquote>
+<div><ol class="lowerroman">
+<li><p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> vera samfellt á bilinu <span class="math notranslate nohighlight">\([a,\infty[\)</span>. Þá gildir að</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\int_a^\infty f(x) dx = \lim_{t\rightarrow \infty } \int_a^t f(x) dx\]</div>
+</div></blockquote>
+</li>
+</ol>
+<p>af því gefnu að markgildið sé til.</p>
+<ol class="lowerroman" start="2">
+<li><p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> vera samfellt á bilinu <span class="math notranslate nohighlight">\(]-\infty,b]\)</span>. Þá gildir að</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\int_{-\infty}^b f(x) dx = \lim_{t\rightarrow \infty } \int_t^b f(x) dx\]</div>
+</div></blockquote>
+</li>
+</ol>
+<p>af því gefnu að markgildið sé til.
+Í báðum tilfellum er sagt að <em>óeiginlega heildið</em> sé samleitið. Ef markgildið
+er ekki til er það sagt vera ósamleitið.</p>
+<ol class="lowerroman" start="3">
+<li><p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> vera samfellt á <span class="math notranslate nohighlight">\(]-\infty;\infty[\)</span>. Þá gildir að</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\int_{-\infty}^\infty f(x)dx = \int_{-\infty}^0 f(x) dx + \int_0^\infty f(x) dx,\]</div>
+</div></blockquote>
+</li>
+</ol>
+<p>af því gefnu að bæði <span class="math notranslate nohighlight">\(\int_{-\infty}^0 f(x) dx\)</span> og <span class="math notranslate nohighlight">\(\int_0^\infty f(x) dx\)</span>
+séu samleitin . Ef annað hvort þeirra er ósamleitið þá er heildið <span class="math notranslate nohighlight">\(\int_{-\infty}^\infty f(x)dx\)</span>
+ósamleitið.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-oeiginlegt-heildi">
+<h3><span class="section-number">7.2.2. </span>Dæmi: Óeiginlegt heildi<a class="headerlink" href="#daemi-oeiginlegt-heildi" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>Ákvörðum flatarmál svæðiðisins sem myndast undir ferli fallsin <span class="math notranslate nohighlight">\(f(x)=\frac{1}{x}\)</span>
+yfir <span class="math notranslate nohighlight">\(x\)</span>-ásinum og hægra megin við línuna <span class="math notranslate nohighlight">\(x=1\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/PMA_oeiginleg_heildi.png"><img alt="../_images/PMA_oeiginleg_heildi.png" class="align-center" src="../_images/PMA_oeiginleg_heildi.png" style="width: 60%;" /></a>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Við viljum með öðrum orðum reikna óeiginlega heildið</p>
+<div class="math notranslate nohighlight">
+\[A = \int_1^\infty \frac{1}{x}dx.\]</div>
+<p>Höfum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        A &amp;= \int_1^\infty\\
+        &amp;= \lim_{t \rightarrow \infty} \int_1^t \frac{1}{x} dx\\
+        &amp;= \lim_{t \rightarrow \infty} \left[|x|\right]_1^t\\
+        &amp;= \lim_{t \rightarrow \infty} (\ln|t|-\ln(1))\\
+        &amp;= \infty
+\end{align}\end{split}\]</div>
+<p>Sjáum að heildið er ósamleitið sem þýðir að flatarmál svæðisins er óendanlega stórt.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="id1">
+<h3><span class="section-number">7.2.3. </span>Dæmi: Óeiginlegt heildi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>Metum heildið</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^0 \frac{1}{x^2+4} dx.\]</div>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        \int_{-\infty}^0 \frac{1}{x^2+4}dx &amp;= \lim_{x \rightarrow -\infty} \int_t^0 \frac{1}{x^2+4}dx\\
+        &amp;= \lim_{t \rightarrow -\infty } \left[\frac{1}{2}\tan^{-1}(\frac{1}{2})\right]_t^0\\
+        &amp;= \frac{1}{2}\lim_{t \rightarrow -\infty}(\tan^{-1}(0)-\tan^{-1}(t/2))\\
+        &amp;= \frac{\pi}{4}
+\end{align}\end{split}\]</div>
+<p>Svo heildið er samleitið að <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="osamfelldur-heilidsstofn">
+<h2><span class="section-number">7.3. </span>Ósamfelldur heilidsstofn<a class="headerlink" href="#osamfelldur-heilidsstofn" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-osamfelldur-heildisstofn">
+<h3><span class="section-number">7.3.1. </span>Skilgreining: Ósamfelldur heildisstofn<a class="headerlink" href="#skilgreining-osamfelldur-heildisstofn" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> vera samfellt á bilinu <span class="math notranslate nohighlight">\([a,b[\)</span>. Þá gildir</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) dx = \lim_{t \rightarrow b^-} \int_a^t f(x) dx.\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Látum <span class="math notranslate nohighlight">\(f(x) vera samfellt á bilinu :math:\)</span>]a,b]`. Þá gildir</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) dx = \lim_{t \rightarrow a^+} \int_t^b f(x) dx.\]</div>
+<p>Í báðum tilfellum segjum við að óeiginlega heildið sé samleitið ef markgildið er til.
+Annars segjum við að það sé ósamleitið.</p>
+<ol class="lowerroman simple" start="3">
+<li><p>Ef <span class="math notranslate nohighlight">\(f(x)\)</span> er samfellt á <span class="math notranslate nohighlight">\([a,b]\)</span> nema í einum innripunkti <span class="math notranslate nohighlight">\(c\)</span> þá gildir</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx,\]</div>
+<p>af því gefnu að bæði <span class="math notranslate nohighlight">\(\int_a^b f(x) dx\)</span> og <span class="math notranslate nohighlight">\(\int_c^b f(x) dx\)</span>
+séu samleitin. Annars er sagt að heildið <span class="math notranslate nohighlight">\(\int_a^b f(x) dx\)</span> sé ósamleitið.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-osamfelldur-heildisstofn">
+<h3><span class="section-number">7.3.2. </span>Dæmi: Ósamfelldur heildisstofn<a class="headerlink" href="#daemi-osamfelldur-heildisstofn" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>Metum heildið</p>
+<div class="math notranslate nohighlight">
+\[\int_0^4 \frac{1}{\sqrt{4-x}} dx.\]</div>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Tökum eftir því að heildisstofninn er samfelldur alls staðar á <span class="math notranslate nohighlight">\([0,4]\)</span> nema
+í hægri endapunktinum. Við fáum því að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        \int_0^4 \frac{1}{\sqrt{4-x}} dx &amp;= \lim_{t \rightarrow 4^-} \int_0^t \frac{1}{\sqrt{4-x}}\\
+        &amp;= \lim_{t \rightarrow 4^-} [(-2–\sqrt{4-x})]_0^t\\
+        &amp;= \lim_{t \rightarrow 4^-} (-2\sqrt{4-t}+4)\\
+        &amp;=4
+\end{align}\end{split}\]</div>
+<p>Svo heildið er samleitið að 4.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="samanburarprof">
+<h2><span class="section-number">7.4. </span>Samanburðarpróf<a class="headerlink" href="#samanburarprof" title="Permalink to this heading"></a></h2>
+<section id="setning-samanburarprof">
+<h3><span class="section-number">7.4.1. </span>Setning: Samanburðarpróf<a class="headerlink" href="#setning-samanburarprof" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<blockquote>
+<div><p>Látum <span class="math notranslate nohighlight">\(f(x)\)</span> og <span class="math notranslate nohighlight">\(g(x)\)</span> vera samfelld á <span class="math notranslate nohighlight">\([a,\infty[\)</span>.
+Gerum ráð fyrir að <span class="math notranslate nohighlight">\(0 \leq f(x)\leq g(x)\)</span> fyrir <span class="math notranslate nohighlight">\(x \geq a\)</span>.</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>Ef</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_a^{\infty} f(x) dx = \lim_{t \rightarrow \infty} \int_a^t f(x) dx = \infty\]</div>
+<p>þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[\int_a^{\infty} g(x) dx = \lim_{t \rightarrow \infty} \int_a^t g(x) dx = \infty\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Ef</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_a^{\infty} g(x) dx = \lim_{t \rightarrow \infty} \int_a^t g(x) dx = L\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(L\)</span> er rauntala, þá gildir að</p>
+<div class="math notranslate nohighlight">
+\[\int_a^{\infty} f(x) dx = \lim_{t \rightarrow \infty} \int_a^t f(x) dx = M\]</div>
+<p>fyrir einhverja rauntölu <span class="math notranslate nohighlight">\(M \leq L\)</span>.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-samanburarprof">
+<h3><span class="section-number">7.4.2. </span>Dæmi: Samanburðarpróf<a class="headerlink" href="#daemi-samanburarprof" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>Notum samanburðarpróf til að sýna að heildið</p>
+<div class="math notranslate nohighlight">
+\[\int_1^\infty \frac{1}{xe^x} dx\]</div>
+<p>sé samleitið.</p>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Höfum að</p>
+<div class="math notranslate nohighlight">
+\[0 \leq \frac{1}{xe^x} \leq \frac{1}{e^x} = e^{-x}.\]</div>
+<p>Svo ef <span class="math notranslate nohighlight">\(\int_1^\infty e^{-x} dx\)</span> er samleitið þá er <span class="math notranslate nohighlight">\(\int_1^\infty \frac{1}{xe^x} dx\)</span> það einnig.
+Fáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+        \int_1^\infty e^{-x}dx &amp;= \lim_{t \rightarrow \infty} \int_1^t e^{-x} dx\\
+        &amp;= \lim_{t \rightarrow \infty} \left[e^{-x}\right]_1^t\\
+        &amp;= \lim_{t \rightarrow \infty} (-e^{-t}+e^{-1})\\
+        &amp;= e^{-1}.
+\end{align}\end{split}\]</div>
+<p>Fyrst <span class="math notranslate nohighlight">\(\int_1^\infty e^{-x}dx\)</span> er samleitið þá er <span class="math notranslate nohighlight">\(\int_1^{\infty} \frac{1}{xe^x}\)</span>
+það einnig.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kafli08/" class="btn btn-neutral float-right" title="8. Inngagur að diffurjöfnur" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../kafli06/" class="btn btn-neutral" title="6. Hagnýting á heildun" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+        <script>
+            window.addEventListener("load", function(){
+                for(var i in ggbAppletId){
+                    ggbAppletId[i].inject(i);
+                }
+            });
+        </script>
+
+	
+  	 
+	<style>
+	/* Sidebar header (and topbar for mobile) */
+	.wy-side-nav-search, .wy-nav-top {
+	  background: #10099F;
+	}
+	/* Sidebar */
+	.wy-nav-side {
+	  background: #262626;
+	}
+	</style>
+
+
+
+</body>
+</html>

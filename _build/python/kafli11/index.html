@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11 Reiknað með fylkjum &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/python.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="12 Dæmi um hagnýtingu fylkjareikninga" href="../kafli12/" />
+    <link rel="prev" title="10 NumPy pakkinn" href="../kafli10/" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+          </a>
+              <div class="version">
+                2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5  Söfn: Eitt nafn en mörg gildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6  Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7  Uppflettitöflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8  Skrár</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9  Teikning með Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10  NumPy pakkinn</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11  Reiknað með fylkjum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#grunnreikniagerir">11.1  Grunnreikniaðgerðir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nullfylki-og-einingafylki">11.2  Núllfylki og einingafylki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lausn-jofnuhneppa">11.3  Lausn jöfnuhneppa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jofnuhneppi-me-n-oekktum">11.4  Jöfnuhneppi með n óþekktum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#andhverfur-og-akveur">11.5  Andhverfur og ákveður</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12  Dæmi um hagnýtingu fylkjareikninga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11  </span>Reiknað með fylkjum</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kafli11.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reikna-me-fylkjum">
+<h1><span class="section-number">11  </span>Reiknað með fylkjum<a class="headerlink" href="#reikna-me-fylkjum" title="Permalink to this heading"></a></h1>
+<p><strong>Línuleg algebra</strong> (<em>linear algebra</em>) er undirgrein stærðfræði sem fjallar meðal annars um vigra og fylki, vigurrúm (<em>vector spaces</em>), línuleg jöfnuhneppi (<em>systems of linear equations</em>) og línuleg föll. Hægt er að beita línulegri algebru bæði fræðilega og tölulega, og þegar það er gert tölulega koma fylkjareikningar oftar en ekki við sögu, og þá er NumPy ómissandi. Oft tengjast reikningarnir því að vigrar og fylki eru notuð til að vinna með talnagögn (<em>data</em>).</p>
+<p>Í nýlegri kennslubók um línulega algebru eru talin upp fjölbreytt
+notkunarsvið hennar, svo sem leikjafræði, skógrækt, tölvugrafík, sneiðmyndatöku,
+dulmálsfræði, erfðafræði, stofnstærðarspár, líkön af heyrn, netleit og andlitskennsl.</p>
+<p>Í <a class="reference internal" href="../kafli12/#daemi-um-hagnytingu-fylkjareikninga"><span class="std std-numref">12. kafla</span></a> verður fjallað um nokkur notkunarsvið fylkjareikninga, en í þessum kafla höldum við okkur að mestu við útskýringar á NumPy vigur- og fylkjaaðgerðum, og hvernig hægt er að leysa jöfnuhneppi með NumPy.</p>
+<section id="grunnreikniagerir">
+<span id="samlagning-fylkja"></span><h2><span class="section-number">11.1  </span>Grunnreikniaðgerðir<a class="headerlink" href="#grunnreikniagerir" title="Permalink to this heading"></a></h2>
+<p>Í grein <a class="reference internal" href="../kafli10/#reikna-me-vigrum"><span class="std std-numref">10.3.1</span></a> var rætt hverning hægt er að leggja saman tvo vigra, draga annan frá hinum og margfalda vigur með tölu. Þessum aðgerðum má líka beita á fylki, og þá verka þær á tilsvarandi stök, eins og fyrir vigrana. Þannig gildir:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix} +
+\begin{pmatrix}2 &amp; 2\\5 &amp; 5\end{pmatrix} =
+\begin{pmatrix}3 &amp; 4\\8 &amp; 9\end{pmatrix}\end{split}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2\cdot\begin{pmatrix}2 &amp; 2\\5 &amp; 6\end{pmatrix} =
+\begin{pmatrix}4 &amp; 4\\10 &amp; 12\end{pmatrix}\end{split}\]</div>
+<div class="python admonition">
+<p class="admonition-title">Python: Stakvísar fylkjaaðgerðir</p>
+<p>Í Python eru venjulegu reikniaðgerðirnar, <span class="math notranslate nohighlight">\(+\)</span> <span class="math notranslate nohighlight">\(-\)</span> og <span class="math notranslate nohighlight">\(*\)</span>
+notaðar til að reikna með öllum stökum fylkis samtímis, og auk þess má beita
+<span class="math notranslate nohighlight">\(*\)</span> til að margfalda saman tvö fylki sem gefur það stærðfræðilega
+óvenjulega svar að tilsvarandi stök eru margfölduð saman. Og eins og hægt var
+með vigrana er líka hægt að beita stærðfræðiföllum stakvíst á fylki með því
+að nota <code class="docutils literal notranslate"><span class="pre">np.</span></code>-útgáfur af þeim í staðinn fyrir að nota math-eininguna.</p>
+</div>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Stakvís margföldun og logri</p>
+<p>Ef eftirfarandi forritsbútur er framkvæmdur:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">10</span>  <span class="p">],</span>
+              <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">]])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">B</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>þá prentast út:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[[   1   20]
+ [ 300 4000]]
+[[0. 1.]
+ [2. 3.]]
+</pre></div>
+</div>
+</div>
+<p>Eins og fyrr segir er það óvenjulegt í stærðfræði að margföldun með fylkjum sé
+framkvæmd stakvís. Í línulegri algebru er slík margföldun nefnilega skilgreind
+sem útvíkkun á innfeldi og felur í sér margföldun staka og samlagningu í
+kjölfarið. Þetta á bæði við um margföldun fylkis og vigurs og margföldun tveggja
+fylkja.</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Margföldun fylkis og vigurs</p>
+<p>Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(x\)</span> er <span class="math notranslate nohighlight">\(n\)</span>-vigur þá
+er margfeldi <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(x\)</span>, táknað <span class="math notranslate nohighlight">\(Ax\)</span> eða <span class="math notranslate nohighlight">\(A \cdot x\)</span>,
+<span class="math notranslate nohighlight">\(m\)</span>-vigur með <span class="math notranslate nohighlight">\(i\)</span>-ta stak jafnt og innfeldi <span class="math notranslate nohighlight">\(i\)</span>-tu línu
+<span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(x\)</span>. Nánar tiltekið gildir að</p>
+<div class="math notranslate nohighlight">
+\[\text{ef}\;y = Ax\;\text{þá er}\;y_i = \sum_{j=1}^n a_{ij}x_j\;\:(i=1,...,m)\]</div>
+</div>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Fylki sinnum vigur handreiknað</p>
+<p>Margfeldi fylkisins <span class="math notranslate nohighlight">\(\,A = \begin{pmatrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp;
+6\end{pmatrix}\,\)</span> og vigursins <span class="math notranslate nohighlight">\(\,x = (3, 1, -2)\,\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Ax = \begin{pmatrix}
+1\cdot 3 + 2\cdot 1 - 3\cdot 2\\
+4\cdot 3 + 5\cdot 1 - 6\cdot 2\end{pmatrix} =
+\begin{pmatrix}
+3 + 2 - 6\\
+12 + 5 - 12
+\end{pmatrix} =
+\begin{pmatrix}
+-1\\
+5
+\end{pmatrix}\end{split}\]</div>
+</div>
+<p>Stundum er gerður greinarmunur á dálkvigri (<em>column vector</em>) og línuvigri (<em>row
+vector</em>), t.d. <span class="math notranslate nohighlight">\(\begin{pmatrix}1\\2\end{pmatrix}\)</span> og <span class="math notranslate nohighlight">\((1, 2)\)</span>. Þegar
+<span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru báðir dálkvigrar þá er innfeldið <span class="math notranslate nohighlight">\(x \cdot y\)</span>
+stundum táknað með <span class="math notranslate nohighlight">\(x^\text{T}y\)</span>. Þá er nefnilega <span class="math notranslate nohighlight">\(x^\text{T}\)</span>
+línuvigur og ef við lítum á hann sem <span class="math notranslate nohighlight">\(1 \times n\)</span> fylki þá er margfeldi
+þess og vigursins <span class="math notranslate nohighlight">\(y\)</span> einmitt jafnt og innfeldið <span class="math notranslate nohighlight">\(x\cdot y\)</span>.</p>
+<div class="regla admonition">
+<p class="admonition-title">Reglur: Dreifireglur</p>
+<p>Um margfeldi fylkja og vigra gilda dreifireglurnar</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;A(x + y) = Ax + Ay\;\:\text{og}\\
+&amp;(A + B)x = Ax + Bx\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru fylki og <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> vigrar.
+Hér má setja <span class="math notranslate nohighlight">\(-\)</span> í stað <span class="math notranslate nohighlight">\(+\)</span>.</p>
+</div>
+<div class="python admonition">
+<p class="admonition-title">Python: &#64;-virkinn</p>
+<p>Í <strong>NumPy</strong> fæst margfeldi fylkis og vigurs með aðgerðinni <strong>&#64;</strong>, t.d.
+reiknar <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">A</span> <span class="pre">&#64;</span> <span class="pre">x</span></code> margfeldi fylkisins A og vigursins x.</p>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Reiknað með Python</p>
+<p>Gefnir eru vigrarnir <span class="math notranslate nohighlight">\(a = (2, 0, 3)\)</span>, <span class="math notranslate nohighlight">\(b = (1, -1, 2)\)</span> og <span class="math notranslate nohighlight">\(c
+= (1, 2, 3)\)</span> og fylkin</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1 &amp; 2\\3 &amp; 3\\1 &amp; 4\end{pmatrix}\;\text{og}\;
+B = \begin{pmatrix}2 &amp; 3 &amp; 0\\1 &amp; 2 &amp; 3\end{pmatrix}\end{split}\]</div>
+<p>Reiknið með NumPy:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(a + b + c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3a - 2b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\cdot b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Bc\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A^\text{T}a\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2A + B^\text{T}\)</span></p></li>
+</ol>
+</div>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Fylkjamargföldun</p>
+<p>Margfeldi <span class="math notranslate nohighlight">\(m \times p\)</span> fylkis <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(p \times n\)</span> fylkis
+<span class="math notranslate nohighlight">\(B\)</span> er <span class="math notranslate nohighlight">\(m \times n\)</span> fylkið <span class="math notranslate nohighlight">\(C = AB\)</span> sem hefur
+<span class="math notranslate nohighlight">\((i,j)\)</span>-stak</p>
+<div class="math notranslate nohighlight">
+\[c_{ij} = \sum_{k=1}^p a_{ik} b_{kj}\]</div>
+</div>
+<p>Samkvæmt skilgreiningunni fæst <span class="math notranslate nohighlight">\((i,j)\)</span> stak margfeldisins <span class="math notranslate nohighlight">\(C\)</span> með
+því að taka innfeldi af <span class="math notranslate nohighlight">\(i\)</span>-tu línu <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(j\)</span>-ta dálki B.</p>
+<p>Önnur leið til að lýsa fylkjamargfeldi er að segja að <span class="math notranslate nohighlight">\(j\)</span>-ti dálkur
+útkomunnar sé margfeldi af <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(j\)</span>-ta dálki <span class="math notranslate nohighlight">\(B\)</span>. Ef
+<span class="math notranslate nohighlight">\(B = [b_1|b_2|\ldots|b_n]\)</span> gildir sem sé að:</p>
+<div class="math notranslate nohighlight">
+\[C = [c_1|c_2|\ldots|c_n]\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(c_i = Ab_i\)</span>.</p>
+<div class="admonition important">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Reiknum margfeldi tveggja <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkja <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}
+\begin{pmatrix}5 &amp; 6 \\ 0 &amp; -2 \end{pmatrix}\end{split}\]</div>
+<p>og fáum <span class="math notranslate nohighlight">\(c_{11} = 1 \cdot 5 + 2 \cdot 0 = 5\)</span>, <span class="math notranslate nohighlight">\(c_{12} = 1 \cdot 6
+- 2 \cdot 2 = 2\)</span>, <span class="math notranslate nohighlight">\(c_{21} = 3 \cdot 5 + 4 \cdot 0 = 15\)</span> og
+<span class="math notranslate nohighlight">\(c_{22} = 3 \cdot 6 - 4 \cdot 2 = 10\)</span>, sem sé</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}C = \begin{pmatrix}5 &amp; 2 \\ 15 &amp; 10 \end{pmatrix}\end{split}\]</div>
+</div>
+<p><strong>Veldi</strong> af ferningsfylkjum eru skilgreind með endurtekinni margföldun: <span class="math notranslate nohighlight">\(A^2\)</span>
+er <span class="math notranslate nohighlight">\(A \cdot A = AA\)</span>, <span class="math notranslate nohighlight">\(A^3 = AAA\)</span> o.s.frv. Í kafla
+<a class="reference internal" href="../kafli12/#fylki-og-net"><span class="std std-numref">12.2</span></a> verður sýnd skemmtileg hagnýting á fylkjaveldum.</p>
+<div class="python admonition">
+<p class="admonition-title">Python: Fylkjamargföldun og -veldi</p>
+<p>Í NumPy má margfalda saman fylki með virkjanum <strong>&#64;</strong> og fallið
+<code class="code docutils literal notranslate"><span class="pre">la.matrix_power</span></code> má nota til að hefja fylki í veldi, t.d.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">B</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+<span class="c1"># ---prentar [[ 5  2]</span>
+<span class="c1">#             [15 10]]</span>
+<span class="c1">#            [[ 7 10]</span>
+<span class="c1">#             [15 22]]</span>
+</pre></div>
+</div>
+</div>
+<div class="python admonition">
+<p class="admonition-title">Python: Samanburður vigra og fylkja</p>
+<p>Til að kanna hvort tveir vigrar eða tvö fylki séu eins er ekki hægt að nota
+virkjann == því hann verkar stakvíst og gefur auk þess villu ef vigrarnir eða
+fylkin eru misstór. NumPy er með séstakt fall sem er ætlað í svona samanburð,
+<code class="docutils literal notranslate"><span class="pre">np.array_equal</span></code>. Ef</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A = [[2 2]     og   B = [[4 4]
+     [2 2]]              [4 4]]
+
+þá skilar :code:`np.array_equal(A + A, B)` gildinu ``True``.
+</pre></div>
+</div>
+</div>
+</section>
+<section id="nullfylki-og-einingafylki">
+<h2><span class="section-number">11.2  </span>Núllfylki og einingafylki<a class="headerlink" href="#nullfylki-og-einingafylki" title="Permalink to this heading"></a></h2>
+<div class="regla admonition">
+<p class="admonition-title">Skillgreining: Núllfylki og einingafylki</p>
+<p><strong>Núllfylki</strong> (<em>zero matrix</em>) hefur öll stök = 0 og <strong>einingafylki</strong>
+(<em>identity matrix</em>) hefur hornalínustökin = 1 og öll önnur stök = 0.</p>
+</div>
+<p>Einingafylki er oftast táknað með <span class="math notranslate nohighlight">\(I\)</span> og stærð þess ræðst yfirleitt af
+samhenginu. Núllfylki eru stundum táknuð með <span class="math notranslate nohighlight">\(0\)</span> eða <span class="math notranslate nohighlight">\(O\)</span> (núll eða
+bókstafurinn O), og stærðin ræðst líka af samhenginu.</p>
+<p>Hér eru <span class="math notranslate nohighlight">\(2 \times 2\)</span> og <span class="math notranslate nohighlight">\(3 \times 3\)</span> einingafylki og <span class="math notranslate nohighlight">\(2 \times
+3\)</span> núllfylki:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} \quad
+\begin{pmatrix}1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \quad
+\begin{pmatrix}0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix}\end{split}\]</div>
+<p>Núllfylkið er <strong>samlagningarhlutleysa</strong> (<em>neutral element</em>) og eingarfylkið
+er <strong>margföldunarhlutleysa</strong> (<em>identity element</em>) því <span class="math notranslate nohighlight">\(O + A = A + O =
+A\)</span> og <span class="math notranslate nohighlight">\(I\cdot A = A\cdot I = A\)</span> fyrir öll A</p>
+<div class="python admonition">
+<p class="admonition-title">Python: zeros og eye</p>
+<p>Í NumPy má búa til <span class="math notranslate nohighlight">\(m \times n\)</span> núllfylki með <code class="code docutils literal notranslate"><span class="pre">np.zeros((m,n))</span></code>
+og <span class="math notranslate nohighlight">\(n \times n\)</span> einingafylki með <code class="code docutils literal notranslate"><span class="pre">np.identity(n)</span></code> eða
+<code class="code docutils literal notranslate"><span class="pre">np.eye(n)</span></code> (<em>eye</em> er borið fram eins og <em>I</em> ).</p>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Hlutleysur</p>
+<p>Búið til fylkið: <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1.2 &amp; 3.4 \\ 5.6 &amp; 7.8
+\end{pmatrix}\)</span> <br>
+og auk þess <span class="math notranslate nohighlight">\(2 \times 2\)</span> núllfylki og einingarfylki. Notið fallið
+<code class="docutils literal notranslate"><span class="pre">np.array_equal</span></code> til að sannreyna það sem sagt er um hlutleysur að ofan.</p>
+</div>
+</section>
+<section id="lausn-jofnuhneppa">
+<h2><span class="section-number">11.3  </span>Lausn jöfnuhneppa<a class="headerlink" href="#lausn-jofnuhneppa" title="Permalink to this heading"></a></h2>
+<p>Ein mikilvæg hagnýting fylkja er að leysa saman margar jöfnur í mörgum línulegum
+jöfnum. Það er nefnilega hægt að setja slíkar jöfnur fram sem <strong>fylkja- og
+vigurjöfnu</strong>. Ef jöfnurnar eru jafn margar og óþekktu stærðirnar er yfirleitt
+til nákæmlega ein lausn.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Tvær jöfnur í tveimur óþekktum</p>
+<p>Leysum jöfnurnar:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2 x_1 + 3 x_2 &amp;= 8 \\
+5 x_1 - 2 x_2 &amp;= 1\end{split}\]</div>
+<p>Við margföldum fyrri jöfnuna með <span class="math notranslate nohighlight">\(2\)</span> og þá seinni með <span class="math notranslate nohighlight">\(3\)</span> og
+leggjum saman (til að losna við <span class="math notranslate nohighlight">\(x_2\)</span>) og fáum <span class="math notranslate nohighlight">\(19x_1 = 19\)</span> svo
+<span class="math notranslate nohighlight">\(x_1=1\)</span>. Seinni jafnan gefur svo <span class="math notranslate nohighlight">\(2x_2 = 5x_1 - 1 = 4\)</span> svo
+<span class="math notranslate nohighlight">\(x_2=2\)</span>. Til að undirstrika að hér var miðað við lausn með blaði og
+blýanti voru stök <span class="math notranslate nohighlight">\(x\)</span> og <cite>y</cite> tölusett með 1 og 2 í staðinn fyrir 0 og 1.</p>
+</div>
+<p>Jöfnurnar í þessu sýnidæmi má líka rita með fylki og vigrum:</p>
+<div class="math notranslate nohighlight">
+\[A x = b\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(A = \begin{pmatrix}2 &amp; 3\\5 &amp; -2\end{pmatrix}\)</span> og <span class="math notranslate nohighlight">\(b =
+\begin{pmatrix}8\\1\end{pmatrix}\)</span>, sbr. kafla <a class="reference internal" href="#grunnreikniagerir"><span class="std std-numref">11.1</span></a>.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Fylkjaframsetning</p>
+<p>Gefnar eru jöfnurnar</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x + 2y &amp;= z + t + 8 \\
+z – x &amp;= 3 \\
+x + y + z + t &amp;= 12 \\
+y + 3 &amp;= 2x\end{split}\]</div>
+<p>Ákvarðið tilsvarandi fylki <span class="math notranslate nohighlight">\(A\)</span> og vigur <span class="math notranslate nohighlight">\(b\)</span> þannig að þessar
+jöfnur svari til <span class="math notranslate nohighlight">\(Av = b\)</span> þar sem <span class="math notranslate nohighlight">\(v = (x, y, z, t)\)</span></p>
+</div>
+<div class="python admonition">
+<p class="admonition-title">Python: Lausn jöfnuhneppis</p>
+<p>Fylkjaframsetning á jöfnuhneppi einfaldar kannski ekki mikið lausn með blaði
+og blýanti en með því að nota fallið <strong>la.solve</strong> verður lausnin beint af
+augum:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1">#--- prentar [1., 2.]</span>
+</pre></div>
+</div>
+</div>
+<p>Það sem NumPy gerir bak við tjöldin er að umrita jöfnurnar með svipuðum hætti og
+gert var í sýnidæminu hér á undan og einangra þannig óþekktu stærðirnar hverja á
+fætur annari og ákvarða gildi þeirra.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Hollur matur</p>
+<p>Sigga hefur ákveðið að borða bara skyr, rúgbrauð og kæfu, en þessar
+fæðutegundir innihalda næringarefni í 100 g sem hér segir:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p><strong>Skyr</strong></p></td>
+<td><p><strong>Rúgbrauð</strong></p></td>
+<td><p><strong>Kæfa</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Kolvetni</p></td>
+<td><p>3.7</p></td>
+<td><p>36</p></td>
+<td><p>2.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prótein</p></td>
+<td><p>11</p></td>
+<td><p>8.6</p></td>
+<td><p>12.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Fita</p></td>
+<td><p>0.2</p></td>
+<td><p>6.7</p></td>
+<td><p>29.3</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Notið NumPy til að ákvarða hvað hún á að borða mikið af hverju á dag ef hún
+vill fá 100 g af kolvetnum, 150 g af próteini og 150 g af fitu úr matnum?</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/matur.png"><img alt="../_images/matur.png" src="../_images/matur.png" style="width: 16cm;" /></a>
+</figure>
+<div class="admonition danger">
+<p class="admonition-title">Aðvörun</p>
+<p>Sigga ætti að borða eitthvað grænmeti líka.</p>
+</div>
+</section>
+<section id="jofnuhneppi-me-n-oekktum">
+<h2><span class="section-number">11.4  </span>Jöfnuhneppi með n óþekktum<a class="headerlink" href="#jofnuhneppi-me-n-oekktum" title="Permalink to this heading"></a></h2>
+<p>Til að átta sig á sambandi jöfnuhneppa og fylkja getur gagnast að skoða eftirfarandi algenga framsetningu almenns <span class="math notranslate nohighlight">\(n \times n\)</span> jöfnuhneppis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n =\; &amp;b_1 \\
+&amp;\vdots                                            &amp;\vdots \\
+&amp;a_{n1} x_1 + a_{n2} x_2 + \ldots + a_{nn} x_n =\; &amp;b_n\end{split}\]</div>
+<p>Á fylkjaformi verður þetta:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+\vdots &amp;        &amp;        &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{pmatrix} &amp;
+\begin{pmatrix} x_1 \\ \vdots \\ x_n \end{pmatrix}\;&amp;=
+\begin{pmatrix} b_1 \\ \vdots \\ b_n \end{pmatrix}\\
+\\
+A &amp; x&amp; = b\end{split}\]</div>
+<p>Hér hefur verið byrjað að telja í einum eins og algengast er í stærðfræði. Til að reikna í NumPy þarf að taka tillit til þess að það byrjar að telja í núll.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Jöfnunheppi byggt í skrefum</p>
+<p>Í raunverulegum verkefnum eru jöfnuhneppi oftast gefin með því að setja fram
+einstakar jöfnur í þeim, sem þarf svo að stinga inn á réttan stað í fylki sem
+búið er til smám saman. Hér er einfalt dæmi:</p>
+<p>Um <span class="math notranslate nohighlight">\(x_1, x_2,\ldots x_n\)</span> gildir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2x_{i+1} - x_i &amp;= 0\quad(i=1,...,n-1)\\
+\sum_{i=1}^n x_i  &amp;= 3n\end{split}\]</div>
+<p>Skrifum Python-fall sem leysir þessar jöfnur. Byrjum á að endurskrifa
+jöfnurnar miðað við að fyrsta breytan heiti <span class="math notranslate nohighlight">\(x_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2x_{i+1} - x_i &amp;= 0\quad(i=0,...,n-2)\\
+\sum_{i=0}^{n-1} x_i  &amp;= 3n\end{split}\]</div>
+<p>Svo byrjum við með <span class="math notranslate nohighlight">\(n \times n\)</span> núllfylki og núll í hægri hlið, og
+tökum eftir að fyrir <span class="math notranslate nohighlight">\(i&lt;n-1\)</span> verður lína nr. <span class="math notranslate nohighlight">\(i\)</span> í fylkinu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(0,\ldots,0,-1&amp;,2,0,\ldots,0)\\
+\uparrow&amp;\\
+i\text{-ta}&amp;\text{ sæti}\end{split}\]</div>
+<p>og neðsta línan er svo full af ásum. Hægri hlið hneppisins er núll, nema í
+neðsta sætinu, þar stendur <span class="math notranslate nohighlight">\(3n\)</span>. Við fáum því fallið:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">leysa</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+   <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+   <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+      <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,(</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># setjum tvö stök í einu</span>
+   <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+      <span class="n">A</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>            <span class="c1"># ásar í neðstu línu</span>
+   <span class="n">b</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span>
+   <span class="n">x</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<p>Til að skýra betur hvað er að gerast í sýnidæminu fylgir jöfnuhneppið í
+tilfellinu <span class="math notranslate nohighlight">\(n = 5\)</span> hér:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+-1 &amp; 2 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; -1 &amp; 2 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; -1 &amp; 2 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; -1 &amp; 2\\
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 1
+\end{pmatrix}
+\begin{pmatrix} x_0\\x_1\\x_2\\x_3\\x_4 \end{pmatrix}
+\begin{pmatrix} 0\\0\\0\\0\\15 \end{pmatrix}\end{split}\]</div>
+</div></blockquote>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Jöfnuhneppi búin til í lykkju</p>
+<ol class="arabic">
+<li><p>Leysið jöfnuhneppið í sýnidæminu fyrir <span class="math notranslate nohighlight">\(n=4\)</span> (ætti að gefa <span class="math notranslate nohighlight">\(x
+= (6.4, 3.2, 1.6, 0.8)\)</span>).</p></li>
+<li><p>Búið til fall <code class="docutils literal notranslate"><span class="pre">lausn(a,n)</span></code> sem leysir jöfnurnar</p>
+<div class="math notranslate nohighlight">
+\[- a\sum_{j=1}^{i-1}x_j + x_i = 1\quad(i=1,...,n)\]</div>
+<p>Prófið með <code class="docutils literal notranslate"><span class="pre">leysa(2,4)</span></code> sem ætti að gefa <span class="math notranslate nohighlight">\((1,3,9,27)\)</span>.</p>
+</li>
+</ol>
+</div>
+</section>
+<section id="andhverfur-og-akveur">
+<h2><span class="section-number">11.5  </span>Andhverfur og ákveður<a class="headerlink" href="#andhverfur-og-akveur" title="Permalink to this heading"></a></h2>
+<p>Flest fylki eru það sem kallað er <strong>andhverfanleg</strong> (<em>nonsingular</em>), og eins og
+ráða má af orðinu er hægt að reikna <strong>andhverfu</strong> (<em>inverse</em>) slíkra fylkja,
+nánar tiltekið margföldunarandhverfu.</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Andhverfa</p>
+<p>Andhverfa fylkis <span class="math notranslate nohighlight">\(A\)</span> er annað fylki <span class="math notranslate nohighlight">\(B\)</span> sem uppfyllir</p>
+<div class="math notranslate nohighlight">
+\[AB = BA = I\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(I\)</span> er einingafylkið úr kafla <a class="reference internal" href="#nullfylki-og-einingafylki"><span class="std std-numref">11.2</span></a>.</p>
+</div>
+<p>Andhverft fylki <span class="math notranslate nohighlight">\(A\)</span> er táknað <span class="math notranslate nohighlight">\(A^{-1}\)</span>. Ef andhverfa
+fylkis <span class="math notranslate nohighlight">\(A\)</span> er þekkt, þá er hægt að leysa jöfnuhneppi</p>
+<div class="math notranslate nohighlight">
+\[Ax = b\]</div>
+<p>með því að margfalda í gegn með <span class="math notranslate nohighlight">\(A^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^{-1}Ax &amp;= A^{-1}b\\
+Ix       &amp;= A^{-1}b\\
+x        &amp;= A^{-1}b\end{split}\]</div>
+<p>Annar eiginleiki fylkis sem kemur við sögu í línulegri algebru er <strong>ákveða</strong>
+þess (<em>determinant</em>), táknuð <span class="math notranslate nohighlight">\(\det A\)</span>, sem reyndar verður ekki mikið
+notuð í þessum fyrirlestrarnótum.</p>
+<div class="python admonition">
+<p class="admonition-title">Python:</p>
+<p>Það er fremur flókið að reikna andhverfur og ákveður með blaði og blýanti, en
+talsvert einfaldara með NumPy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Andhverfa og ákveða</p>
+<p>Sláið inn eða afritið forritið hér á undan og ákvarðið með því andhverfu og
+ákveðu fylkisins <span class="math notranslate nohighlight">\(\begin{pmatrix}2&amp;3&amp;4\\2&amp;4&amp;8\\3&amp;4&amp;9\end{pmatrix}\)</span>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Aðvörun</p>
+<p>Það er bæði nákvæmara og hraðvirkara að leysa jöfnuhneppi með
+<code class="code docutils literal notranslate"><span class="pre">np.solve</span></code> heldur en með því að reikna andhverfu. Í útreikningum
+fyrir raunveruleg verkefni ætti alltaf að reyna að umrita reiknirit
+með fylkjaandhverfum yfir í reiknirit sem leysa jöfnuhneppi.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli10/" class="btn btn-neutral float-left" title="10 NumPy pakkinn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli12/" class="btn btn-neutral float-right" title="12 Dæmi um hagnýtingu fylkjareikninga" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

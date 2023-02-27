@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Frá tilraun til gagna &mdash; Tölfræði frá grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="3. Myndræn framsetning" href="../kafli03/" />
+    <link rel="prev" title="1. Inngangur" href="../kafli01/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Frá tilraun til gagna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#urtak-og-yi">2.1. Úrtak og þýði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.1.1. Úrtak og þýði</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#yi-population">2.1.1.1. Þýði (population)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#urtak-sample">2.1.1.2. Úrtak (sample)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#breytur">2.2. Breytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.2.1. Breytur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#breyta-variable">2.2.1.1. Breyta (variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flokkabreytur-categorical-variables">2.2.1.2. Flokkabreytur (categorical variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rou-flokkabreyta-ordinal-categorical-variable">2.2.1.3. Röðuð flokkabreyta (ordinal categorical variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orou-flokkabreyta-categorical-variable">2.2.1.4. Óröðuð flokkabreyta (categorical variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#talnabreytur-numerical-variables">2.2.1.5. Talnabreytur (numerical variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samfelldar-breytur-continuous-variables">2.2.1.6. Samfelldar breytur (continuous variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#strjalar-breytur-discrete-variables">2.2.1.7. Strjálar breytur (discrete variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#svarbreytur-og-skyribreytur-response-and-explanatory-variables">2.2.1.8. Svarbreytur og skýribreytur (response and explanatory variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nyjar-breytur-bunar-til">2.2.2. Nýjar breytur búnar til</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bjagi-og-breytileiki">2.3. Bjagi og breytileiki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.3.1. Bjagi og breytileiki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#breytileiki-variability">2.3.1.1. Breytileiki (variability)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bjagi-bias">2.3.1.2. Bjagi (bias)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#urtakshogun">2.4. Úrtakshögun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.4.1. Úrtakshögun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#urtaksbjagi-sampling-bias">2.4.1.1. Úrtaksbjagi (Sampling bias)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slembival-randomization">2.4.1.2. Slembival (randomization)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#einfalt-og-lagskipt-slembiurtak">2.4.2. Einfalt og lagskipt slembiúrtak</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#einfalt-slembiurtak-simple-random-sample">2.4.2.1. Einfalt slembiúrtak (simple random sample)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lagskipt-slembiurtak-stratified-random-sample">2.4.2.2. Lagskipt slembiúrtak (stratified random sample)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#para-slembiurtak">2.4.3. Parað slembiúrtak</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#para-slembiurtak-paired-random-sample">2.4.3.1. Parað slembiúrtak (paired random sample)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hva-ef-slembiurtak-er-ogerlegt">2.4.4. Hvað ef slembiúrtak er ógerlegt?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algengar-urtaksaferir-sem-ekki-eru-slembiurtok">2.4.5. Algengar úrtaksaðferðir sem ekki eru slembiúrtök</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vontun-maelinga">2.4.6. Vöntun mælinga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vontun-maelinga-missing-values">2.4.6.1. Vöntun mælinga (missing values)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#blindun">2.5. Blindun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rannsakandabjagi-og-lyfleysuahrif">2.5.1. Rannsakandabjagi og lyfleysuáhrif</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rannsakandabjagi-experimenters-bias">2.5.1.1. Rannsakandabjagi (experimenters bias)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lyfleysa-placebo">2.5.1.2. Lyfleysa (placebo)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lyfleysuahrif-placebo-effect">2.5.1.3. Lyfleysuáhrif (placebo effect)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#einblindar-og-tviblindar-rannsoknir">2.5.2. Einblindar og tvíblindar rannsóknir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tviblindar-rannsoknir-double-blind-trials">2.5.2.1. Tvíblindar rannsóknir (double-blind trials)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#einblindar-rannsoknir-single-blind-trials">2.5.2.2. Einblindar rannsóknir (single-blind trials)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#orsakasamband">2.6. Orsakasamband</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.6.1. Orsakasamband</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#styr-tilraun-controlled-experiment">2.6.1.1. Stýrð tilraun (controlled experiment)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hvaa-skilyri-aetti-styr-tilraun-a-uppfylla">2.6.1.2. Hvaða skilyrði ætti stýrð tilraun að uppfylla?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#orsakasamband-causation">2.6.1.3. Orsakasamband (causation)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#daemi">2.7. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2.7.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">2.7.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">2.7.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">2.7.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">2.7.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">2.7.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">2.7.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">2.7.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">2.7.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">2.7.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">2.7.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">2.7.12. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">2.7.13. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">2.7.14. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">2.7.15. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../toflur_all_final/">Töflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svor_final/">Svör við dæmum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thakkir/">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Frá tilraun til gagna</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli02.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fra-tilraun-til-gagna">
+<span id="c-fratilrauntilgagna"></span><h1><span class="section-number">2. </span>Frá tilraun til gagna<a class="headerlink" href="#fra-tilraun-til-gagna" title="Permalink to this heading"></a></h1>
+<p>Ef tölfræðileg rannsókn á að vera vel úr garði gerð er nauðsynlegt að
+gæta þess að ákveðin skilyrði séu uppfyllt. Þar ber helst að nefna
+<em>úrtakshögun</em>, <em>blindun</em> og <em>endurtekningar</em> en þessi atriði falla undir
+það sem tölfræðingar kalla <em>tilraunahögun</em> (e. experimental design).</p>
+<p>Tilraunahögun er einn mikilvægasti þáttur hverrar rannsóknar og sé illa
+að henni staðið getur farið svo að rannsakendur geti ekki fylgt eftir
+neinum af þeim markmiðum sem þeir upphaflega settu sér. Léleg
+tilraunahögun getur jafnvel orsakað að rannsakendur haldi fram
+orsakasamböndum sem eru í raun röng.</p>
+<p>Því miður eru fjölmörg dæmi um slíkt og oftar en ekki má skýra
+,,furðufréttir“ af sérkennilegum útkomum rannsókna með lélegri hönnun
+tilraunarinnar. Enn fremur er oft ógerlegt að leiðrétta fyrir slæmri
+tilraunahögun. Í verstu tilfellunum eru allar mælingar ónothæfar og
+rannsóknin ónýt! Góðu fréttirnar eru þær að veigamestu atriðin sem hafa
+þarf í huga eru ekki mörg og mikilvægi þeirra er hægt að rökstyðja með
+einföldum dæmum.</p>
+<p>Í þessum kafla fetum við í gegnum þau spor sem þarf að stíga frá því að
+tölfræðileg rannsókn er áformuð og þangað til gögn eru tilbúin til
+tölfræðilegrar úrvinnslu. Við byrjum á að kynnast hugtökunum <em>þýði</em> og
+<em>úrtak</em> í kafla <a class="reference internal" href="#s-urtakogthydi"><span class="std std-numref">2.1</span></a> og ræðum því næst um <em>breytur</em> og
+ýmsar gerðir þeirra í kafla <a class="reference internal" href="#s-breytur"><span class="std std-numref">2.2</span></a>. <em>Bjagi</em> og <em>breytileiki</em>
+eru þau tvö meginhugtök sem torvelda okkur að draga ályktanir af
+tölulegum upplýsingum. Þau eru efni kafla <a class="reference internal" href="#s-bjagiogbreytileiki"><span class="std std-numref">2.3</span></a>.
+Meginvopn okkar í baráttunni við bjaga er <em>úrtakshögun</em>, sem verður
+tekin fyrir í kafla <a class="reference internal" href="#s-urtakshogun"><span class="std std-numref">2.4</span></a>, og <em>blindun</em>, í kafla
+<a class="reference internal" href="#s-blindun"><span class="std std-numref">2.5</span></a>. Sé nægjanlega vel að þessum atriðum staðið er unnt að
+nota <em>stýrða tilraun</em> til að fullyrða um <em>orsakasamband</em> sem eru efni
+kafla <a class="reference internal" href="#s-orsakasamband"><span class="std std-numref">2.6</span></a>.</p>
+<section id="urtak-og-yi">
+<span id="s-urtakogthydi"></span><h2><span class="section-number">2.1. </span>Úrtak og þýði<a class="headerlink" href="#urtak-og-yi" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">2.1.1. </span>Úrtak og þýði<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Eitt af því fyrsta sem hafa ber í huga þegar tölfræðirannsókn er
+fyrirhuguð er að skilgreina nákvæmlega hver viðfangsefni rannsóknarinnar
+eru. Það köllum við að skilgreina hvert <em>þýði</em> rannsóknarinnar er.</p>
+<section id="yi-population">
+<h4><span class="section-number">2.1.1.1. </span>Þýði (population)<a class="headerlink" href="#yi-population" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Þýði</em> rannsóknar er safn allra viðfangsefna sem draga á ályktanir um.</p>
+</div>
+<hr class="docutils" />
+<p>Ef fjöldi þeirra viðfangsefna er óendanlegur segjum við að þýðið sé
+óendanlegt. Annars er það endanlegt. Til sumra rannsókna svarar eingöngu
+eitt þýði, til annarra svara mörg þýði sem við berum þá gjarnan saman.
+Yfirleitt er æði dýrt og stundum hreinlega ómögulegt að ætla sér að skrá
+mælingar hjá sérhverju viðfangsefni þýðisins. Því vinnum við nær
+undantekningarlaust aðeins með hluta þýðisins, sem við köllum <em>úrtak</em>.</p>
+</section>
+<section id="urtak-sample">
+<h4><span class="section-number">2.1.1.2. </span>Úrtak (sample)<a class="headerlink" href="#urtak-sample" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Úrtak</em> er safn viðfangsefna sem eru valin úr tilteknu þýði.</p>
+</div>
+<hr class="docutils" />
+<figure class="align-center" id="id25">
+<span id="g-thydiurtak"></span><img alt="Þýði og úrtak" src="../_images/Thydi_urtak.svg" /><figcaption>
+<p><span class="caption-number">Mynd 2.1: </span><span class="caption-text">Þýði og úrtak</span><a class="headerlink" href="#id25" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Ef þýðið okkar er til dæmis allir íslenskir ríkisborgarar þá er úrtak úr
+því þýði safn einstaklinga með íslenskan ríkisborgararétt, það er hluti
+af öllum þeim sem ríkisborgararéttinn hafa. Mynd <a class="reference internal" href="#g-thydiurtak"><span class="std std-numref">2.1</span></a>
+sýnir dæmigert þýði og úrtak. Þýðið er allir karlarnir á myndinni og
+þeir sem búið er að draga hring um eru úrtakið. Best er ef viðfangsefnin
+í úrtakinu eru valin á handahófskenndan hátt en þá tölum við um
+<em>slembiúrtak</em>.</p>
+<p>Hvert úrtak getur eingöngu verið úr einu þýði, en það má taka mörg úrtök
+úr sama þýðinu. Ef við gerum rannsókn á fleiri en einu þýði tökum við að
+minnsta kosti eitt úrtak úr sérhverju þýðanna.</p>
+</section>
+</section>
+</section>
+<section id="breytur">
+<span id="s-breytur"></span><h2><span class="section-number">2.2. </span>Breytur<a class="headerlink" href="#breytur" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">2.2.1. </span>Breytur<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Þegar við höfum áttað okkur á því hvert þýði rannsóknarinnar er vaknar
+næsta spurning: Hvernig er best að lýsa því? Í tölfræðiúrvinnslu setjum
+við sérhvern eiginleika viðfangsefna okkar fram sem <em>breytu</em>.</p>
+<section id="breyta-variable">
+<h4><span class="section-number">2.2.1.1. </span>Breyta (variable)<a class="headerlink" href="#breyta-variable" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Breyta</em> er ákveðinn eiginleiki sem við skráum niður eða mælum á
+viðfangsefnunum í úrtakinu okkar.</p>
+</div>
+<hr class="docutils" />
+<p>Stundum skráum við eingöngu eina breytu hjá hverju viðfangsefni, stundum
+margar. Séu viðfangsefni okkar menn gætum við til dæmis skráð niður
+aldur, kyn, þyngd og blóðþrýsting hjá sérhverjum einstaklingi. Þá höfum
+við mælingar á fjórum breytum fyrir sérhvert viðfangsefni. Breytur
+skiptast gróflega í tvær gerðir, <em>talnabreytur</em> og <em>flokkabreytur</em>,
+eftir því hvort þær taka gildi sem eru mæld í tölulegum einingum eða
+ekki.</p>
+</section>
+<section id="flokkabreytur-categorical-variables">
+<h4><span class="section-number">2.2.1.2. </span>Flokkabreytur (categorical variables)<a class="headerlink" href="#flokkabreytur-categorical-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Flokkabreytur</em> (e. categorical variables) eru ekki mældar í tölulegum
+einingum, heldur segja, eins og nafnið gefur til kynna, til um það hvaða
+flokki viðfangsefnið tilheyrir.</p>
+</div>
+<hr class="docutils" />
+<p>Dæmi um flokkabreytur sem lýsa einstaklingum eru kyn, hæsta prófgráða
+sem viðkomandi hefur lokið, póstnúmer lögheimilis og hvort
+einstaklingurinn reyki eða sé reyklaus. Gildin sem flokkabreyta getur
+tekið eru oft kölluð <em>flokkar</em> hennar.</p>
+</section>
+<section id="rou-flokkabreyta-ordinal-categorical-variable">
+<h4><span class="section-number">2.2.1.3. </span>Röðuð flokkabreyta (ordinal categorical variable)<a class="headerlink" href="#rou-flokkabreyta-ordinal-categorical-variable" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar flokkabreyta er <em>röðuð</em> (e. ordinal categorical variable) er flokkum
+hennar raðað í stærðarröð.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="orou-flokkabreyta-categorical-variable">
+<h4><span class="section-number">2.2.1.4. </span>Óröðuð flokkabreyta (categorical variable)<a class="headerlink" href="#orou-flokkabreyta-categorical-variable" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar flokkabreyta er <em>óröðuð</em> (e. categorical variable) er flokkum hennar
+ekki raðað í stærðarröð.</p>
+</div>
+<hr class="docutils" />
+<p>Kyn er gott dæmi um óraðaða flokkabreytu, þar sem ekki er eðlilegt að
+tala um hversu mikið einstaklingar hafi af kyni og að sama skapi er
+kynjunum ekki raðað í stærðarröð. Annað dæmi um óraðaða flokkabreytu
+væri breytan hárlitur sem hefði flokkana ljóst, dökkt og rautt. Breytan
+hæsta prófgráða er hins vegar gott dæmi um raðaða flokkabreytu. Algengt
+er að breytan hafi flokkana grunnskólapróf, stúdentspróf/iðnnám,
+BS/BA-próf, MS/MA-próf og að lokum doktorsgráða. Þar hefur einstaklingur
+með MA-gráðu lokið hærri prófgráðu heldur en einstaklingur með BA-gráðu
+og með því móti er flokkunum raðað í stærðarröð.</p>
+</section>
+<section id="talnabreytur-numerical-variables">
+<h4><span class="section-number">2.2.1.5. </span>Talnabreytur (numerical variables)<a class="headerlink" href="#talnabreytur-numerical-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Talnabreytur</em> (e. numerical variables) taka töluleg gildi sem eru mæld í
+tilteknum einingum.</p>
+</div>
+<hr class="docutils" />
+<p>Talnabreytur eru frábrugðnar flokkabreytum að því leyti að þær taka ætíð
+töluleg gildi sem eru mæld í tilteknum einingum. Dæmi um talnabreytur
+sem lýsa einstaklingum eru aldur (mældur í árum), hæð (mæld í cm), þyngd
+(mæld í kg) og púls (mæld í slögum á mínútu). Talnabreytum er sömuleiðis
+skipt upp í tvær gerðir, eftir því hvort þær eru <em>samfelldar</em> eða
+<em>strjálar</em>.</p>
+</section>
+<section id="samfelldar-breytur-continuous-variables">
+<h4><span class="section-number">2.2.1.6. </span>Samfelldar breytur (continuous variables)<a class="headerlink" href="#samfelldar-breytur-continuous-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar talnabreyta getur tekið hvaða gildi sem er á einhverju bili þá
+segjum við að hún sé <em>samfelld</em>. Eingöngu talnabreytur geta verið
+samfelldar.</p>
+</div>
+<hr class="docutils" />
+<p>Sem dæmi um samfelldar breytur má nefna hárlengd, þyngd, líftíma og
+hitastig. Lengd á einu mannshári getur verið 20 cm. Hún getur líka verið
+21 cm, 20.8, 20.4 cm eða hvaða tala sem er á milli 20 cm og 21 cm. Einu
+skorðurnar eru nákvæmni mælitækjanna okkar.</p>
+</section>
+<section id="strjalar-breytur-discrete-variables">
+<h4><span class="section-number">2.2.1.7. </span>Strjálar breytur (discrete variables)<a class="headerlink" href="#strjalar-breytur-discrete-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef breytur eru ekki samfelldar segjum við að þær séu <em>strjálar</em>. Allar
+flokkabreytur eru strjálar og sumar talnabreytur.</p>
+</div>
+<hr class="docutils" />
+<p>Dæmi um strjálar talnabreytur eru til dæmis fjöldi eggja í hreiðri,
+gildi sem kemur upp í teningakasti og heildarfjöldi marka sem skoruð eru
+í knattspyrnuleik.</p>
+<p>Sumar strjálar breytur geta tekið gífurlega mörg gildi. Hugsum okkur sem
+dæmi fjölda bíla í mismunandi löndum. Það er breyta sem getur tekið
+fjölmörg gildi, á mjög breiðu bili, en fjöldinn er samt alltaf heil
+tala. Því getur breytan ekki tekið hvaða gildi sem er á einhverju bili.
+Það er ekkert land með 1684927.4 bíla. Tölfræðiúrvinnsla á strjálum
+talnabreytum sem taka mjög mörg gildi getur verið snúin. Því er oft
+farin önnur af tveimur leiðum, að skipta breytunni upp í raðaða
+flokkabreytu eða þá að beita þeirri nálgun að líta á hana sem samfellda
+talnabreytu.</p>
+<p>Að gefnu tilefni viljum við brýna muninn á strjálum talnabreytum og
+flokkabreytum sem taka töluleg gildi. Stundum eru flokkabreytur kóðaðar
+með tölum eins og til dæmis flokkabreytan póstnúmer lögheimils
+einstaklings. Þá er hætt við að þeim sé ruglað við strjálar
+talnabreytur. Góð leið til að forðast slíkan rugling er að skoða nánar
+mælieininginuna sem breytan er mæld í. Þegar breyta er talnabreyta hafa
+einingarnar sem hún er mæld í einhverja merkingu. Viðfangsefni sem
+hlýtur mælinguna 2 á tiltekinni breytu hefur tvöfalt meira af þeirri
+breytu en viðfangsefni með mælinguna 1. Þannig hefur tveggja ára barn
+lifað tvöfalt lengur en ársgamalt barn. Það er fráleitt að tala svo um
+flokkabreytuna póstnúmer, sem þó er kóðuð með tölum. Póstnúmerið 220
+(Hafnarfjörður) er ekki það sama og tvöfalt magn af póstnúmerinu 110
+(Árbær). Það er líka rangt að segja að sá sem býr í Árbæ hafi minna af
+póstnúmeri en sá sem býr í Hafnarfirði, þó talan 110 sé minni en talan
+220. Tölulega gildið er flokkunartæki.</p>
+<p>Þegar viðfangsefnunum er lýst með fleiri en einni breytu getum við
+stundum skipt breytunum upp í <em>svarbreytur</em> og <em>skýribreytur</em>.</p>
+</section>
+<section id="svarbreytur-og-skyribreytur-response-and-explanatory-variables">
+<span id="em-svarbreyturogskyribreytur"></span><h4><span class="section-number">2.2.1.8. </span>Svarbreytur og skýribreytur (response and explanatory variables)<a class="headerlink" href="#svarbreytur-og-skyribreytur-response-and-explanatory-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Fyrir sérhvert viðfangsefni mun gildi <em>skýribreytu</em> þess hafa áhrif á
+það hvaða gildi <em>svarbreytan</em> mun taka. Til einnar svarbreytu geta
+svarað margar skýribreytur sem hafa áhrif á hana.</p>
+</div>
+<hr class="docutils" />
+<p>Hugsum okkur að verið sé að kanna áhrif saltlakkríss á blóðþrýsting.
+Fólk borðar mismikið magn af saltlakkrís og eftir klukkutíma er
+blóðþrýstingur þeirra mældur og munurinn kannaður. Þetta er skýrt dæmi
+um svarbreytu og skýribreytu. Við teljum að blóðþrýstingurinn, sem er
+svarbreytan, breytist eftir því sem magn skýribreytunnar saltlakkríss
+breytist. Takið eftir að gildi skýribreytu hafa áhrif á gildi
+svarbreytunnar, en ekki öfugt. Hár blóðþrýstingur lætur okkur ekki borða
+mikinn saltlakkrís, það er saltlakkrísinn sem veldur háum blóðþrýstingi.
+Þessi munur verður mikilvægur þegar við fjöllum um orsakasambönd seinna
+í kaflanum og aftur þegar við kynnumst aðhvarfsgreiningu í kafla
+<a class="reference internal" href="../kafli10/#c-adhvarfsgreining"><span class="std std-numref">10</span></a>.</p>
+</section>
+</section>
+<section id="nyjar-breytur-bunar-til">
+<span id="ss-nyjarbreytur"></span><h3><span class="section-number">2.2.2. </span>Nýjar breytur búnar til<a class="headerlink" href="#nyjar-breytur-bunar-til" title="Permalink to this heading"></a></h3>
+<p>Oft getur verið gagnlegt að nota mælingarnar okkar til að búa til nýjar
+breytur í gagnasafnið. Það má gera á ýmsa vegu. Þegar unnið er með
+talnabreytur gætum viljum við sem dæmi oft skipta um einingu á breytunni
+okkar, eins og þegar lengdir eru mældar í tommum en við viljum vinna með
+lengdir í sentimetrum. Við gætum líka viljað beita formúlum á eina eða
+fleiri talnabreytu til þess að búa til nýja breytu, eins og þegar hæð og
+þyngd er notuð til að reikna líkamsþyngdarstuðul (BMI).</p>
+<p>Þegar unnið er með flokkabreytur er algengt að flokkabreytan sé
+óþarflega fínskipt. Dæmi um slíkt væri ef við hefðum spurt hvert
+póstnúmer einstaklings væri en okkur nægði í raun að vita í hvaða
+sveitarfélagi hann byggi. Þá er okkur óhætt að búa til nýja breytu þar
+em við sameinum alla flokka sem tilheyra saman sveitafélaginu. Sú breyta
+lýsir þá sveitarfélagi en ekki póstnúmeri.</p>
+<p>Að lokum eru flokkabreytur einnig búnar til með því að beita skilyrðum á
+eina eða fleiri talnabreytu eða flokkabreytu. Sem dæmi þá skilgreinir
+alþjóðaheilbrigðismálastofnunin (WHO) einstakling með háþrýsting ef að
+annað hvort slagbilsþrýstingur er yfir 140 mm Hg og/eða
+lagbilsþrýstingur er yfr 90 mm Hg. Við gætum viljað nota mælingar á
+talnabreytunum slagbilsþrýstingur og lagbilsþrýstingur til að búa til
+nýja flokkabreytu, háþrýstingur sem segir til um hvort einstaklingur er
+með háþrýsting eða ekki.</p>
+</section>
+</section>
+<section id="bjagi-og-breytileiki">
+<span id="s-bjagiogbreytileiki"></span><h2><span class="section-number">2.3. </span>Bjagi og breytileiki<a class="headerlink" href="#bjagi-og-breytileiki" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">2.3.1. </span>Bjagi og breytileiki<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Tölfræðilega eru tvö meginatriði sem torvalda okkur að meta eðli þeirra
+breyta sem við erum að kanna. Þau eru <em>bjagi</em> og <em>breytileiki</em>
+mælinganna, sjá mynd <a class="reference internal" href="#g-bjagi"><span class="std std-numref">2.2</span></a>.</p>
+<section id="breytileiki-variability">
+<h4><span class="section-number">2.3.1.1. </span>Breytileiki (variability)<a class="headerlink" href="#breytileiki-variability" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Breytileiki</em> verður vegna þess að breyturnar sem við erum að skoða eru
+slembni háðar og því geta útkomur mælinganna breyst í hvert sinn sem
+tilraunin er framkvæmd.</p>
+</div>
+<hr class="docutils" />
+<p>Við beitum tölfræði vegna þess að mælingarnar sem við skoðum eru alltaf
+háðar einhverri <em>slembni</em> (e. randomness). Slembnin getur átt sér ýmsar
+orsakir. Algengasta orsökin er sú að við vinnum með úrtök en ekki allt
+þýðið. Það er slembið hvaða viðfangsefni veljast í úrtakið hverju sinni
+sem veldur því að niðurstöðurnar geta breyst í hvert sinn sem nýtt úrtak
+er valið og rannsóknin endurtekin.</p>
+<p>Þeim meiri breytileika sem mælingar hafa, þeim mun erfiðara er að átta sig á
+þeim lögmálum sem þær lúta. Breytileiki mælinga er bundinn eðli þeirra
+viðfangsefna sem verið er að skoða og við höfum engar leiðir til að
+minnka hann. Hins vegar gera endurtekningar okkur kleift að fá skýrari
+mynd af þeirri reglu sem mælingarnar fylgja. Ef við framkvæmum mælingu á
+eingöngu einu viðfangsefni er engin leið fyrir okkur að meta hversu stór
+sá breytileiki er. Um leið og við höfum mælingu á fleiri en einu
+viðfangsefni, það er <em>endurtekningu</em>, höfum við einhverja hugmynd um það
+á hvaða bili mælingarnar geta legið. Því fleiri endurtekningar, því
+betur vitum við hversu breytilegar mælingarnar geta verið. Þessi
+breytileiki er lykilatriði í allri ályktunartölfræði, sem er stærsti
+hluti þeirrar tölfræði sem þessi bók fjallar um.</p>
+</section>
+<section id="bjagi-bias">
+<h4><span class="section-number">2.3.1.2. </span>Bjagi (bias)<a class="headerlink" href="#bjagi-bias" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Bjagi</em> verður þegar aðferðirnar gefa markvisst bjagaða mynd af þýðinu
+sem verið er að skoða.</p>
+</div>
+<hr class="docutils" />
+<p>Bjagi er í eðli sínu gerólíkur breytileika. Á meðan breytileiki er
+bundinn í eðli mælinganna og þannig á vissan hátt ,,sannur“ í eðli sínu,
+veldur bjagi því að við fáum kerfisbundið skakka mynd af viðfangsefnunum
+sem við erum að skoða og því viljum við lágmarka hann með öllum ráðum.
+Sá bjagi sem við munum fjalla um getur átt sér tvennar orsakir. Annars
+vegar verður hann þegar viðfangsefnin í úrtakinu eru valin á
+kerfisbundið bjagaðan hátt. Þá er talað um <em>úrtaksbjaga</em>. Úrtakshögun
+snýr að því að lágmarka úrtaksbjaga og er hún viðfangsefni kafla
+<a class="reference internal" href="#s-urtakshogun"><span class="std std-numref">2.4</span></a>. Hins vegar geta væntingar bæði rannsakanda og
+viðfangsefna valdið kerfisbundið bjöguðum mælingum. Þá er um
+<em>rannsakandabjaga</em> og <em>lyfleysuáhrif</em> að ræða. <em>Blindun</em> er notuð til að
+lágmarka þann bjaga og er hún viðfangsefni kafla <a class="reference internal" href="#s-blindun"><span class="std std-numref">2.5</span></a>.</p>
+<figure class="align-center" id="id26">
+<span id="g-bjagi"></span><img alt="Bjagi og breytileiki" src="../_images/Bjagi_breytileiki.svg" /><figcaption>
+<p><span class="caption-number">Mynd 2.2: </span><span class="caption-text">Bjagi og breytileiki</span><a class="headerlink" href="#id26" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="urtakshogun">
+<span id="s-urtakshogun"></span><h2><span class="section-number">2.4. </span>Úrtakshögun<a class="headerlink" href="#urtakshogun" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">2.4.1. </span>Úrtakshögun<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Fyrsta viðfangsefni tilraunahögunar sem við tökum fyrir er <em>úrtakshögun</em>
+(e. sampling). <em>Úrtakshögun</em> snýr bæði að því hvernig úrtak er valið úr
+þýði en einnig hvaða viðfangsefnum er úthlutað hvaða inngrip. Markmið
+úrtakshögunar er ætíð það sama fyrir allar gerðir rannsókna, að lágmarka
+<em>úrtaksbjaga</em> (e. sampling bias).</p>
+<section id="urtaksbjagi-sampling-bias">
+<h4><span class="section-number">2.4.1.1. </span>Úrtaksbjagi (Sampling bias)<a class="headerlink" href="#urtaksbjagi-sampling-bias" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Úrtaksbjagi</em> verður þegar ákveðin viðfangsefni þýðis eru líklegri til
+að vera valin í úrtak heldur en önnur.</p>
+</div>
+<hr class="docutils" />
+<p>Því meiri sem úrtaksbjaginn er því verr endurspeglar úrtakið þýðið. Sé
+bjaginn of mikill verður ekki hægt að álykta um þýðið út frá úrtakinu og
+því engin ályktunartölfræði möguleg! Besta leiðin til að forðast
+úrtaksbjaga er að velja slembiúrtak, því slembiúrtök eru laus við bjaga.
+Athugið að séum við að framkvæma tilraun þar sem viðfangsefnum er skipt
+í hópa sem hljóta ólík inngrip þurfum við ekki eingöngu að gæta þess
+hvernig úrtakið er valið heldur einnig að gæta þess hvernig
+viðfangsefnum er skipt upp í hópa.</p>
+</section>
+<section id="slembival-randomization">
+<h4><span class="section-number">2.4.1.2. </span>Slembival (randomization)<a class="headerlink" href="#slembival-randomization" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Það að velja slembið, eða <em>slembival</em>, þýðir að velja handahófskennt
+þannig að öll viðfangsefni eru jafnlíkleg til að vera valin.</p>
+</div>
+<hr class="docutils" />
+<p>Úrtak sem er valið með slembivali kallast <em>slembiúrtak</em> (e. random sample).
+Við munum fjalla um þrjár gerðir af slembiúrtökum: <em>einfalt
+slembiúrtak</em>, <em>lagskipt slembiúrtak</em> og <em>parað slembiúrtak</em>.</p>
+</section>
+</section>
+<section id="einfalt-og-lagskipt-slembiurtak">
+<span id="ss-einfaltoglagskiptslembiurtak"></span><h3><span class="section-number">2.4.2. </span>Einfalt og lagskipt slembiúrtak<a class="headerlink" href="#einfalt-og-lagskipt-slembiurtak" title="Permalink to this heading"></a></h3>
+<section id="einfalt-slembiurtak-simple-random-sample">
+<h4><span class="section-number">2.4.2.1. </span>Einfalt slembiúrtak (simple random sample)<a class="headerlink" href="#einfalt-slembiurtak-simple-random-sample" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar við framkvæmum <em>einfalt slembiúrtak</em> veljum við einstaklinga af
+handahófi úr öllu þýðinu.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="lagskipt-slembiurtak-stratified-random-sample">
+<h4><span class="section-number">2.4.2.2. </span>Lagskipt slembiúrtak (stratified random sample)<a class="headerlink" href="#lagskipt-slembiurtak-stratified-random-sample" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar við framkvæmum <em>lagskipt slembiúrtak</em> er þýðinu fyrst skipt niður
+í nokkur lög eða hópa og síðan eru viðfangsefni valin með einföldu
+slembiúrtaki úr hverju lagi fyrir sig. Fjöldi viðfangsefna sem valinn er
+úr hverju lagi verður að vera ákveðinn fyrirfram en hann má vera
+mismikill eftir lögum.</p>
+</div>
+<hr class="docutils" />
+<p>Lagskipting getur komið að góðum notum þegar verið er að rannsaka
+fyrirbæri þar sem utanaðkomandi breytur, aðrar en þær sem ætlunin er að
+rannsaka, hafa áhrif á mælingarnar á viðfangsefnunum. Dæmi um slíkt væri
+ef bera ætti orkuinnihald í matarræði saman við ákefð hreyfingar
+Íslendinga. Orkuþörf og þar af leiðandi orkuinnihald í mat er ólík eftir
+kynjunum og því myndum við fá skýrari mynd af sambandi orkuneyslu og
+hreyfingar ef við hefðum jafnt kynjahlutfall í mælingunum okkar. Það
+myndum við gera með því að velja lagskipt slembiúrtak, t.d. 20 karlmenn
+af handahófi og 20 konur af handahófi og bera saman orkuneyslu og
+hreyfingu hjá þeim hóp. Lagskipt slembiúrtak getur einnig verið afar
+gagnlegt þegar viðfangsefnin skiptast niður í svo misstóra hópa að ef
+við myndum velja einfalt slembiúrtak úr öllum lögunum væri hætta á að
+velja sárafá eða engin viðfangsefni úr minnstu hópunum.</p>
+<p>Hugsum okkur til dæmis að við vildum kanna mun á árstekjum eftir
+sveitarfélögum. Ef við veldum fólk af handahófi úr þjóðskrá myndu
+gróflega 2/3 viðfangsefnanna koma af höfuðborgarsvæðinu. Því myndum við
+heldur kjósa að velja af handahófi úr hverju sveitarfélagi fyrir sig.
+Takið þó vel eftir því að það má alls ekki slaka á kröfunum um að velja
+slembið úr hverjum hópi fyrir sig sem í þessu tilviki eru
+sveitarfélögin.</p>
+</section>
+</section>
+<section id="para-slembiurtak">
+<span id="ss-paradslembiurtak"></span><h3><span class="section-number">2.4.3. </span>Parað slembiúrtak<a class="headerlink" href="#para-slembiurtak" title="Permalink to this heading"></a></h3>
+<section id="para-slembiurtak-paired-random-sample">
+<h4><span class="section-number">2.4.3.1. </span>Parað slembiúrtak (paired random sample)<a class="headerlink" href="#para-slembiurtak-paired-random-sample" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Parað slembiúrtak</em> fæst þegar viðfangsefnin í þýðinu eru pöruð saman
+tvö og tvö og síðan er ákveðinn fjöldi para valinn af handahófi í
+úrtakið.</p>
+</div>
+<hr class="docutils" />
+<p>Paraðar mælingar koma líkt og lagskipt slembiúrtök að góðum notum þegar
+mælingarnar okkar eru mjög breytilegar vegna áhrifa utanaðkomandi
+breyta, annarra en þeirra sem ætlunin var að rannsaka. Sér í lagi eru
+paraðar mælingar vinsælar þegar slíkar utanaðkomandi breytur eru mjög
+margar og jafnvel erfitt að festa hönd á þær. Sú er oft raunin þegar
+verið er að rannsaka fólk og aðrar flóknar lífverur.</p>
+<p>Með pöruðu slembiúrtaki lágmörkum við áhrif utanaðkomandi breyta með því
+að para saman viðfangsefni sem hafa mjög lík eða sömu gildi á
+utanaðkomandi breytum. Raunverulega mælingin sem við höfum þá áhuga á að
+skoða er mismunur mælinganna hjá hverju og einu pari. Stundum eru
+viðfangsefnin jafnvel pöruð við sig sjálf. Þá er til dæmis fyrst
+framkvæmd mæling án inngrips og síðan önnur mæling að inngripi loknu og
+þær tvær mælingar paraðar saman, ef slíkt er við hæfi.</p>
+<p>Hugsum okkur að við höfum tvær gerðir af hlaupaskóm og viljum kanna
+hvort þær hafi mismikil áhrif á hlaupahraða. Við gætum valið af
+handahófi tvo hópa af fólki, látið annan hópinn hlaupa kílómeter í einni
+gerðinni og hinn hópinn hlaupa sömu vegalengd í hinni gerðinni. Að því
+loknu myndum við kanna muninn á meðaltíma hópanna tveggja. Slíkt væri
+dæmi um óparaðar mælingar og þá myndum við líta á hópana tvo sem sitt
+hvort úrtakið, hvort úr sínu þýði. Vandamál þeirrar aðferðar er að
+hlaupahraði fólks er mjög breytilegur og því gæti þurft mikinn fjölda
+einstaklinga í hvorn hóp til að meta með góðu móti þann mun sem má rekja
+til hlaupaskónna en ekki annarra utanaðkomandi þátta. Við gætum einnig
+framkvæmt sömu tilraun með pöruðum mælingum. Þá myndi hver hlaupari
+hlaupa kílómeterinn tvisvar, eina ferð í hvoru pari, og að lokum væri
+munurinn á hlaupahraða hvers einstaklings reiknaður. Að vísu gæti tíminn
+í fyrri ferðinni verið betri, vegna þess að þá væri hlauparinn óþreyttur
+en þann bjaga má leiðrétta með því að láta helming hlauparanna hlaupa
+fyrst í annarri gerðinni en hinn helminginn hlaupa fyrst í hinni
+gerðinni. Með þessu móti hverfur sá breytileiki í mælingunum sem rekja
+má til ólíkrar hlaupagetu viðfangsefnanna og því þarf ekki eins stórt
+úrtak til að fá skýra mynd af áhrifum hlaupaskónna.</p>
+<p>Við munum fjalla nánar um paraðar mælingar og ályktanir um mun á
+meðaltölum þeirra í kafla <a class="reference internal" href="../kafli08/#s-paradarmaelingar"><span class="std std-numref">8.2.3</span></a>.</p>
+</section>
+</section>
+<section id="hva-ef-slembiurtak-er-ogerlegt">
+<h3><span class="section-number">2.4.4. </span>Hvað ef slembiúrtak er ógerlegt?<a class="headerlink" href="#hva-ef-slembiurtak-er-ogerlegt" title="Permalink to this heading"></a></h3>
+<p>Stundum valda erfiðleikar í framkvæmd því að við getum ómögulega valið
+slembiúrtak úr þýði. Þá er farin önnur af tveimur leiðum:</p>
+<ol class="arabic">
+<li><p>Að skilgreina þýðið upp á nýtt þannig að úrtakið verði slembiúrtak.</p>
+<blockquote>
+<div><p>Dæmi um slíkt væri að skilgreina þýði Íslendinga sem eru skráðir í
+símaskrána í stað þýðis allra Íslendinga. Vandamálið við þá aðferð er
+það að þá eiga ályktanir okkar eingöngu við um þá Íslendinga sem eru
+skráðir í símaskrána sem er ef til vill ekki það sem við viljum.</p>
+</div></blockquote>
+</li>
+<li><p>Að sætta sig við bjagann.</p>
+<blockquote>
+<div><p>Þá þurfum við að gera grein fyrir úrtaksbjaganum í umfjöllun okkar og
+ræða ítarlega hvaða afleiðingar hann getur haft í för með sér.
+Stundum getum við leyft okkur að gera ráð fyrir því að bjaginn sé
+léttvægur með tilliti til þess sem við erum að rannsaka. Þá getur
+verið meira viðeigandi að sætta sig við bjagann heldur en að
+skilgreina þýðið upp á nýtt.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>Hugsum okkur að við viljum kanna stafakunnáttu 4 ára barna á Íslandi.
+Ein leið til þess væri að velja slembiúrtak leikskólabarna. Vissulega
+eru ekki öll 4 ára börn í leikskólum, svo úrtakið verður bjagað. Við
+gætum sagt sem svo að þýðið sé eingöngu leikskólabörn á Íslandi. Hin
+leiðin væri sú að tiltaka að undantekningarnar séu svo fáar, langflest 4
+ára börn eru í leikskóla svo við getum fært rök fyrir því að bjaginn
+verði ekki mikill.</p>
+</section>
+<section id="algengar-urtaksaferir-sem-ekki-eru-slembiurtok">
+<h3><span class="section-number">2.4.5. </span>Algengar úrtaksaðferðir sem ekki eru slembiúrtök<a class="headerlink" href="#algengar-urtaksaferir-sem-ekki-eru-slembiurtok" title="Permalink to this heading"></a></h3>
+<p><em>Sjálfboðaliðaúrtök</em> (e. voluntary response sampling) og <em>aðgengisúrtök</em>
+(e. convenience sampling) eru tvö dæmi um úrtaksaðferðir sem gefa ekki
+slembiúrtök en eru þó mikið notaðar.</p>
+<p><strong>Sjálboðaliðaúrtök</strong> eiga við þegar viðfangsefnin eru fólk og þá eru
+eingöngu framkvæmdar mælingar á þeim sem bjóða sig fram til þess. Hér
+verður úrtaksbjagi vegna þess að ákveðin viðfangsefni geta verið
+líklegri til að bjóða sig fram en önnur. Oft getur sá bjagi orðið svo
+mikill að lítið er hægt að álykta út frá þeim mælingum sem fengnar eru.</p>
+<p>19. október 2010 var spurt í Reykjavík síðdegis: ,,Hversu sammála eða
+ósammála ertu að banna þjóðkirkjunni aðgang að grunn- og leikskólum? “
+Könnunin er dæmigerð ,,netkönnun“, hýst á léninu visir.is en allir
+lesendur vefsíðunnar geta svarað spurningunni. Slíkar netkannanir eru
+klassískt dæmi um sjálfboðaliðaúrtök og eru stórkostlega bjagaðar. Í
+fyrsta lagi sjá eingöngu lesendur síðunnar spurninguna og þeir eru svo
+sannarlega ekki slembiúrtak úr þjóðinni. Í öðru lagi svara lesendur
+yfirleitt eingöngu spurningum sem höfða til þeirra. Í þessu tiltekna
+dæmi er sennilegt að áhugafólk um trúmál vilji koma skoðun sinni á
+framfæri sem og kennarar og foreldrar barna.</p>
+<p><strong>Aðgengisúrtök</strong> eru fengin þegar eingöngu eru framkvæmdar mælingar á
+þeim viðfangsefnum sem eru (þægilega) aðgengileg rannsakendum. Þar
+verður úrtaksbjagi vegna þess að ákveðin viðfangsefni þýðisins eru
+líklegri til að vera aðgengileg rannsakendum en önnur. Sá bjagi getur
+verið mikill og valdið því að ekki er hægt að draga ályktanir út frá
+fengnum mælingum.</p>
+<p>Dæmi um slíkt væri að velja í úrtak vegfarendur í Kringlunni frá klukkan
+17 til 19 á fimmtudegi. Slíkt þýði er augljóslega bjagað. Í því eru
+væntanlega að megninu til íbúar í nærliggjandi hverfum sem ekki vinna á
+kvöldin og svo mætti lengi telja. Að minnsta kosti er ljóst að slíkt
+úrtak getur ekki verið lýsandi fyrir alla Íslendinga.</p>
+</section>
+<section id="vontun-maelinga">
+<span id="ss-vontunmaelinga"></span><h3><span class="section-number">2.4.6. </span>Vöntun mælinga<a class="headerlink" href="#vontun-maelinga" title="Permalink to this heading"></a></h3>
+<section id="vontun-maelinga-missing-values">
+<h4><span class="section-number">2.4.6.1. </span>Vöntun mælinga (missing values)<a class="headerlink" href="#vontun-maelinga-missing-values" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef ekki tekst að framkvæma mælingu á öllum þeim viðfangsefnunum sem hafa
+verið valin í úrtak er sagt að það <em>vanti mælingu</em> fyrir viðkomandi
+viðfangsefni.</p>
+</div>
+<hr class="docutils" />
+<p>Vöntun mælinga snýr því ekki að því hvernig úrtak er valið og ætti því
+strangt til tekið ekki að eiga heima í kafla um úrtakshögun. Hins vegar
+má oft sjá rannsóknir þar sem vöntun mælinga er mjög mikil, jafnvel
+vantar upp undir helming allra mælinga. Þá má ekki framkvæma
+tölfræðiúrvinnslu eingöngu á þeim viðfangsefnum sem hægt var að
+framkvæma mælingar á, eins og ekkert hefði í skorist, því það er í raun
+sambærilegt því að minnka úrtakið eftir á. Það getur verið stórkostlega
+vafasamt því oft er líklegra að það vanti frekar mælingar hjá ákveðnum
+viðfangsefnum heldur en öðrum og þá er um leið líklegra að þau
+viðfangsefni lendi ekki í minnkaða ,,úrtakinu“ sem veldur úrtaksbjaga!</p>
+<p>Það er til dæmis vel þekkt að kjósendur eru ekki allir búnir að gera upp
+hug sinn, eða tilbúnir til að gefa upp afstöðu sína, nokkrum dögum fyrir
+þingkosningar og að atkvæði þeirra skiptast öðruvísi heldur en atkvæði
+annarra kjósenda. Þetta útskýrir að miklu leyti þann mun sem ætíð má
+finna í skoðanakönnunum fyrir kosningar og svo kosningaúrslitunum
+sjálfum. Að sjálfsögðu má tína til aðra þætti en þeir verða ekki
+tíundaðir hér.</p>
+</section>
+</section>
+</section>
+<section id="blindun">
+<span id="s-blindun"></span><h2><span class="section-number">2.5. </span>Blindun<a class="headerlink" href="#blindun" title="Permalink to this heading"></a></h2>
+<p>Þegar við framkvæmum tilraun viljum við geta tryggt að sjáist munur á
+mælingunum okkar megi rekja hann til inngripanna sem við beitum en ekki
+annarra utanaðkomandi áhrifa. Þið hafið nú séð hvernig val á
+viðfangsefnum í úrtök getur valdið bjaga ef ekki er nægilega vel að
+gætt. Þann bjaga kölluðum við <em>úrtaksbjaga</em>.</p>
+<p>Nú munum við áfram fjalla um atriði sem bjaga mælingar en nú eiga þau
+sér aðrar orsakir. Annars vegar verður bjaginn vegna þess að
+rannsakandinn býst við því að sjá mismunandi niðurstöður eftir því hvaða
+inngripum er beitt. Hins vegar vegna þess að viðfangsefnin geta sýnt mun
+í mælingum vegna þess að þau telja að inngripið hafi áhrif á þann
+eiginleika sem verið er að mæla. Yfirleitt valda báðir þessir bjagar því
+að meiri áhrif mælast af beitingu inngrips en raunverulega eru. Í slæmum
+tilvikum orsakar það að rannsakendur draga ranglega ályktanir um ágæti
+gagnslausra inngripa.</p>
+<section id="rannsakandabjagi-og-lyfleysuahrif">
+<h3><span class="section-number">2.5.1. </span>Rannsakandabjagi og lyfleysuáhrif<a class="headerlink" href="#rannsakandabjagi-og-lyfleysuahrif" title="Permalink to this heading"></a></h3>
+<section id="rannsakandabjagi-experimenters-bias">
+<h4><span class="section-number">2.5.1.1. </span>Rannsakandabjagi (experimenters bias)<a class="headerlink" href="#rannsakandabjagi-experimenters-bias" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Rannsakandabjagi</em> verður þegar væntingar rannsakanda um áhrif inngrips
+hafa áhrif á mælingarnar á viðfangsefnunum.</p>
+</div>
+<hr class="docutils" />
+<p>Rannsakandabjagi getur komið til á bæði beina og óbeina vegu. Bein áhrif
+verða þegar væntingar rannsakanda valda bjaga í því hvernig hann skráir
+niður mælingarnar. Óbein áhrif verða þegar væntingar rannsakandans valda
+breytingum á viðfangsefninu sjálfu. Sem dæmi um bein áhrif má nefna að
+búist rannsakandi við lágum mælingum gæti hann frekar lesið að málband
+sýni 15.4 cm en 15.5 cm þegar mælingin er nákvæmlega mitt á milli. Sem
+dæmi um óbein áhrif gæti rannsakandi átt erfitt með að leyna undrun
+sinni þegar svör viðmælenda (sem væru þá mælingarnar) eru í mótsögn við
+kenningar rannsakandans. Viðmælandinn gæti skynjað þá undrun og því
+ósjálfrátt efast um svör sín og jafnvel breytt þeim, eða öðrum sem á
+eftir fylgja.</p>
+<p>Þrátt fyrir að rannsakandinn sjálfur valdi rannsakandabjaga á
+mælingunum, má alls ekki skilja sem svo að munurinn í mælingunum komi
+til vegna ásetnings rannsakandans. Að sjálfsögðu göngum við út frá því
+að sérhver rannsakandi vilji vanda gerð rannsóknar sinnar sem mest hann
+má og forðast allt það sem gæti bjagað niðurstöðurnar. Rannsakandabjagi
+er því ekki ætlunarverk rannsakanda heldur óhjákvæmileg afleiðing og
+ekkert annað en góð tilraunahögun getur komið í veg fyrir hann. Það er
+að rannsakandinn viti ekki hvort viðfangsefnið hafi hlotið inngrip eða
+ekki.</p>
+<p>Væntingar rannsakandans eru ekki einar um að geta valdið bjöguðum
+niðurstöðum, væntingar viðfangsefnanna geta sömuleiðis haft mikil áhrif
+á útkomur mælinga. Góð leið til að komast hjá þeim bjaga er að nota
+lyfleysur.</p>
+</section>
+<section id="lyfleysa-placebo">
+<h4><span class="section-number">2.5.1.2. </span>Lyfleysa (placebo)<a class="headerlink" href="#lyfleysa-placebo" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Lyfleysa</em> er sérhvert inngrip sem viðfangsefni telur ranglega að sé
+inngripið sem mæla á.</p>
+</div>
+<hr class="docutils" />
+<p>Lyfleysa getur verið hveititafla í stað blóðþrýstingslyfs,
+,,nikótínplástur“ með engu nikótíni, ,,gerviheilun“, það er að segja
+hvað eina sem viðfangsefnið getur ekki greint mun á hvort sé ,,alvöru“
+inngrip - eða plat!</p>
+</section>
+<section id="lyfleysuahrif-placebo-effect">
+<span id="em-lyfleysuahrif"></span><h4><span class="section-number">2.5.1.3. </span>Lyfleysuáhrif (placebo effect)<a class="headerlink" href="#lyfleysuahrif-placebo-effect" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þann mun í mælingum viðfangsefna sem við sjáum fyrir og eftir
+lyfleysuinngrip köllum við <em>lyfleysuáhrif</em>.</p>
+</div>
+<hr class="docutils" />
+<p>Hugsum okkur hóp fólks sem þjáist af höfuðverk. Hópnum er skipt í tvennt
+og öðrum hópnum gefið virkt höfuðverkjalyf en hinum hópnum gefin
+lyfleysa. Fólkið er svo beðið um að meta hversu mikið höfuðverkurinn
+batnaði við inntöku. Munur á höfuðverk fyrir og eftir að lyfleysan er
+gefin eru lyfleysuáhrif.</p>
+<p>Yfirleitt eru rannsóknir framkvæmdar með það fyrir augum að staðfesta að
+tilteknir eiginleikar inngrips hafi merkjanleg áhrif á ákveðna
+eiginleika viðfangsefnanna. Í dæminu hér að ofan væri markmiðið að sýna
+að virku efnin í höfuðverkjalyfinu hafi merkjanleg áhrif á höfuðverk hjá
+viðkomandi einstaklingum. Takið eftir því að bæði hópurinn sem fékk
+lyfið og sá sem fékk lyfleysuna verða fyrir lyfleysuáhrifum. Það er
+báðir hóparnir töldu sig vera að hljóta tiltekið inngrip og trú þeirra á
+að inngripið virki hafði áhrif á matið sem fékkst. Sá munur sem skýrist
+með virku efnunum í lyfjunum er því eingöngu <strong>munurinn</strong> á hópunum
+tveimur eftir að inngripinu var beitt, sjá mynd <a class="reference internal" href="#g-lyfleysuahrif"><span class="std std-numref">2.3</span></a>.
+Því er þess krafist af lyfjum að þau sýni virkni umfram lyfleysuáhrif.</p>
+<figure class="align-center" id="id27">
+<span id="g-lyfleysuahrif"></span><img alt="Lyfleysuáhrif" src="../_images/lyfleysa.svg" /><figcaption>
+<p><span class="caption-number">Mynd 2.3: </span><span class="caption-text">Lyfleysuáhrif</span><a class="headerlink" href="#id27" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Mörgum gæti þótt það smámunasemi að þurfa að leiðrétta fyrir
+lyfleysuáhrifum, enda ætla margir að þau áhrif séu hér um bil hverfandi.
+Því er síður en svo farið og eru smáskammtalækningar (hómópatía) ágætt
+dæmi. Smáskammtalækningar hafa ávallt verið mjög umdeildar og hafa
+fjölmargar rannsóknir sýnt fram á að áhrif þeirra séu engu meiri en
+lyfleysuáhrif <a class="footnote-reference brackets" href="#id23" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Neðri deild breska þingsins hefur í því tilliti
+lýst því yfir að flokka skuli smáskammtalækningar sem lyfleysuinngrip
+<a class="footnote-reference brackets" href="#id24" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Þrátt fyrir það starfar fjöldi manns við smáskammtalækningar hér
+á landi sem og annars staðar í heiminum.</p>
+<p>Athugið einnig að notkun lyfleysu er eitt og sér ekki nægjanlegt
+skilyrði til að sýna fram á virkni inngripa heldur þarf tilraunin einnig
+að uppfylla ákveðnar kröfur um úrtakshögun sem þið kynntust í kafla
+<a class="reference internal" href="#s-urtakshogun"><span class="std std-numref">2.4</span></a> og nægjanlegan fjölda endurtekinna mælinga. Þessi
+skilyrði verða tekin saman í kafla <a class="reference internal" href="#s-orsakasamband"><span class="std std-numref">2.6</span></a>.</p>
+</section>
+</section>
+<section id="einblindar-og-tviblindar-rannsoknir">
+<h3><span class="section-number">2.5.2. </span>Einblindar og tvíblindar rannsóknir<a class="headerlink" href="#einblindar-og-tviblindar-rannsoknir" title="Permalink to this heading"></a></h3>
+<p>Þar sem rannsakandabjagi og lyfleysuáhrif geta verið töluverð, flokkum
+við tilraunir eftir því hvort gerðar eru ráðstafanir til að lágmarka
+þann bjaga. Þeir tveir flokkar sem notaðir eru kallast annars vegar
+<em>einblindar rannsóknir</em> og hins vegar <em>tvíblindar rannsóknir</em>.</p>
+<section id="tviblindar-rannsoknir-double-blind-trials">
+<h4><span class="section-number">2.5.2.1. </span>Tvíblindar rannsóknir (double-blind trials)<a class="headerlink" href="#tviblindar-rannsoknir-double-blind-trials" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar rannsókn er <em>tvíblind</em> vita hvorki rannsakandi né viðfangsefni
+tilraunarinnar hvaða inngrip hvert viðfangsefni hlýtur. Athugið að
+inngrip getur verið lyfleysuinngrip.</p>
+</div>
+<hr class="docutils" />
+<p>Með öðrum orðum eru bæði rannsakandinn og viðfangsefnið blind á það
+hvaða inngripi var beitt í hverju tilviki. Stundum verðum við að sætta
+okkur við að ekki sé hægt að dylja það fyrir rannsakandanum hvaða
+inngripi var beitt, það sé til dæmis augljóst í hverju tilviki. Þá er
+tvíblind rannsókn ekki möguleg en hins vegar væri hægt að framkvæma
+<em>einblinda rannsókn</em>.</p>
+</section>
+<section id="einblindar-rannsoknir-single-blind-trials">
+<h4><span class="section-number">2.5.2.2. </span>Einblindar rannsóknir (single-blind trials)<a class="headerlink" href="#einblindar-rannsoknir-single-blind-trials" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar rannsókn er <em>einblind</em> vita annað hvort viðfangsefnin eða
+rannsakandinn ekki hvaða inngripi er beitt.</p>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+<section id="orsakasamband">
+<span id="s-orsakasamband"></span><h2><span class="section-number">2.6. </span>Orsakasamband<a class="headerlink" href="#orsakasamband" title="Permalink to this heading"></a></h2>
+<section id="id7">
+<h3><span class="section-number">2.6.1. </span>Orsakasamband<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>Tölfræðilegar rannsóknir geta verið af ýmsum toga. Ein mikilvæg gerð
+rannsókna er <em>stýrð tilraun</em>.</p>
+<section id="styr-tilraun-controlled-experiment">
+<span id="em-styrdtilraun"></span><h4><span class="section-number">2.6.1.1. </span>Stýrð tilraun (controlled experiment)<a class="headerlink" href="#styr-tilraun-controlled-experiment" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Til að rannsókn geti flokkast sem stýrð tilraun þurfa tvö atriði að vera
+til staðar:</p>
+<ol class="arabic simple">
+<li><p>Rannsakandinn getur stýrt því hvaða viðfangsefni hljóta hvaða
+inngrip.</p></li>
+<li><p>Mælingar eru framkvæmdar á viðfangsefnum bæði fyrir og eftir að
+inngripinu er beitt.</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<p>Ímyndum okkur að við ætlum að kanna samband reykinga og líkamsþyngdar
+með því að framkvæma mælingar á 100 viðfangsefnum sem væri skipt í tvo
+jafnstóra hópa. Ein aðferð væri að velja af handahófi 50 reykingamenn og
+50 reyklausa einstaklinga og mæla líkamsþyngd þeirra. Sú aðferð myndi þó
+ekki flokkast undir stýrða tilraun. Dæmi um stýrða tilraun væri að velja
+100 reyklausa einstaklinga og mæla líkamsþyngd þeirra. Velja síðan 50
+þeirra af handahófi og láta þá reykja einn pakka af sígarettum á dag á
+meðan hinir 50 myndu ekki reykja. Að ári liðnu yrði líkamsþyngd beggja
+hópa könnuð aftur.</p>
+<p>Ef við höfum framkvæmt stýrða tilraun stjórnum við því alfarið hvaða
+inngrip viðfangsefnin hljóta en mælingin er ekki framkvæmd fyrr en eftir
+að við höfum tekið þá ákvörðun. Því eru mælingarnar ætíð svarbreytur en
+inngripin skýribreytur. Inngripin geta haft áhrif á mælingarnar en ekki
+öfugt.</p>
+</section>
+<section id="hvaa-skilyri-aetti-styr-tilraun-a-uppfylla">
+<span id="em-godtilraun"></span><h4><span class="section-number">2.6.1.2. </span>Hvaða skilyrði ætti stýrð tilraun að uppfylla?<a class="headerlink" href="#hvaa-skilyri-aetti-styr-tilraun-a-uppfylla" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Sérhver rannsakandi ætti að leitast við að tilraun hans uppfylli
+eftirfarandi skilyrði:</p>
+<ol class="arabic">
+<li><p>Úrtakshögun.</p>
+<blockquote>
+<div><p>Viðfangsefni eru valin úr þýðinu með slembiúrtaki og/eða skipt í hópa
+með slembivali.</p>
+</div></blockquote>
+</li>
+<li><p>Blindun.</p>
+<blockquote>
+<div><p>Rannsóknin er tvíblind en einblind ef því verður ekki komið við.</p>
+</div></blockquote>
+</li>
+<li><p>Endurtekningar.</p>
+<blockquote>
+<div><p>Inngripinu er beitt á endurtekinn fjölda viðfangsefna.</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<hr class="docutils" />
+<p>Markmið margra rannsókna er að geta fullyrt hvaða áhrif tiltekin inngrip
+hafa á viðfangsefnin okkar. Uppfylli stýrð tilraun skilyrðin í kassa
+<a class="reference internal" href="#em-godtilraun"><span class="std std-numref">2.6.1.2</span></a> verður sá munur sem greinist á mælingunum eingöngu
+skýrður með inngripunum sem beitt var en ekki öðrum utanaðkomandi
+áhrifum. Þannig er hægt að fullyrða að tilteknu inngripin hafi valdið
+þeim mun á eiginleika viðfangsefnanna sem mældur var. Það getum við
+orðað sem svo að við getum fullyrt um <em>orsakasamband</em> inngripanna á þær
+breytur sem við mælum hjá viðfangsefnunum okkar.</p>
+</section>
+<section id="orsakasamband-causation">
+<h4><span class="section-number">2.6.1.3. </span>Orsakasamband (causation)<a class="headerlink" href="#orsakasamband-causation" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Orsakasamband</strong> milli tveggja breyta er þegar gildi einnar breytu
+hefur áhrif á þau gildi sem önnur breyta mun taka. Eingöngu verður sýnt
+fram á orsakasamband með stýrðum tilraunum.</p>
+</div>
+<hr class="docutils" />
+<p>Skýrt dæmi um samband, sem þó er ekki orsakasamband, er samband milli
+drukknana og íssölu á Benidorm. Einstaklingur er ekki líklegri til að
+drukkna í sjónum þótt hann hafi borðað ís fyrr um daginn. Þó drukkna
+fleiri þá daga sem íssala er mikil en þegar íssala er lítil. Ástæðan er
+einfaldlega sú að þegar hlýtt er úti flykkist fólk á ströndina, þar sem
+það getur drukknað. Þá daga selst jafnframt mikið af ís. Á köldum dögum
+er enginn í sjónum og því lítill möguleiki á að drukkna. Þá daga selst
+minna af ís.</p>
+<p>Mynd <a class="reference internal" href="#g-orsakasamband"><span class="std std-numref">2.4</span></a> lýsir sambandi tveggja breyta, <span class="math notranslate nohighlight">\(x\)</span> og
+<span class="math notranslate nohighlight">\(y\)</span>. Vinstra megin á myndinni er orsakasamband milli breytanna en
+ekki á myndinni hægra megin. Myndin hægra megin lýsir dæminu hér að ofan
+þar sem <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru drukknanir og ísát en <span class="math notranslate nohighlight">\(z\)</span> er
+hitastig.</p>
+<figure class="align-center" id="id28">
+<span id="g-orsakasamband"></span><img alt="Orsakasamband" src="../_images/Orsakasamband.svg" /><figcaption>
+<p><span class="caption-number">Mynd 2.4: </span><span class="caption-text">Orsakasamband</span><a class="headerlink" href="#id28" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="daemi">
+<h2><span class="section-number">2.7. </span>Dæmi<a class="headerlink" href="#daemi" title="Permalink to this heading"></a></h2>
+<section id="id8">
+<h3><span class="section-number">2.7.1. </span>Dæmi<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<p>Birgir er mikill listakokkur og almennur áhugamaður um matarvenjur
+Íslendinga. Hann framkvæmir könnun þar sem hann velur handahófskennt
+úrtak 20 manna og 20 kvenna og spyr þau hversu oft í viku þau borði
+heitan mat í hádeginu. Birgir listakokkur skráir mælinguna 1 hjá
+tilteknu viðfangsefni ef það borðar heitan hádegismat einu sinni í viku,
+2 ef það borðar heitan mat tvisvar í viku og svo framvegis. Að hámarki
+skráir hann mælinguna 7 ef viðfangsefnin borða heitan hádegismat alla
+daga vikunnar.</p>
+<ol class="loweralpha simple">
+<li><p>Er breytan sem Birgir skráir talnabreyta eða flokkabreyta?</p></li>
+<li><p>Er breytan sem Birgir skráir samfelld eða strjál?</p></li>
+</ol>
+</section>
+<section id="id9">
+<h3><span class="section-number">2.7.2. </span>Dæmi<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<p>Hverjar af eftirtöldum breytum eru samfelldar og hverjar eru strjálar?</p>
+<ol class="loweralpha simple">
+<li><p>Fjöldi eggja í andahreiðrum við Tjörnina.</p></li>
+<li><p>Stjörnumerki nemenda í Vogaskóla</p></li>
+<li><p>Fjöldi alþingismanna sem eiga jeppa.</p></li>
+<li><p>Lengd höfuðhára á nýfæddum börnum.</p></li>
+<li><p>Þyngd jólatrjáa sem seld eru hjá Flugbjörgunarsveitinni.</p></li>
+</ol>
+</section>
+<section id="id10">
+<h3><span class="section-number">2.7.3. </span>Dæmi<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<p>Heiða Dóra kannar hvort samband sé á milli skulda einstaklinga og
+fæðingarmánaða þeirra. Hún skoðar skuldastöðu 100 handahófsvaldra
+einstaklinga og skráir tvær breytur. Önnur þeirra er heildarupphæð sem
+einstaklingarnir skulda. Hin breytan tekur gildi frá 1 upp í tólf eftir
+því í hvaða mánuði einstaklingarnir eru fæddir (1 fyrir janúar, 2 fyrir
+febrúar o.s.frv). Af hvaða gerð væri réttast að skrá breyturnar sem
+Heiða Dóra mælir?</p>
+</section>
+<section id="id11">
+<h3><span class="section-number">2.7.4. </span>Dæmi<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<p>Hverjar af eftirtöldum breytum eru talnabreytur og hverjar eru
+flokkabreytur?</p>
+<ol class="loweralpha simple">
+<li><p>Innsláttarhraði unglinga á lyklaborði.</p></li>
+<li><p>Litur á jólaseríum í gluggum landsmanna.</p></li>
+<li><p>Fjöldi bifreiða sem aka um Suðurgötuna föstudaginn 3. febrúar 2012.</p></li>
+<li><p>Ferðamáti sálfræðinema til og frá Háskóla Íslands.</p></li>
+<li><p>Fjöldi innsláttavillna í þessari bók.</p></li>
+</ol>
+</section>
+<section id="id12">
+<h3><span class="section-number">2.7.5. </span>Dæmi<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>Fjóla rannsakar beinþynningu hjá íslenskum konum og kannar hvaða áhrif
+mataræði og hreyfing spila þar inn. Hún mælir beinþéttni
+handahófsvalinna kvenna (í <span class="math notranslate nohighlight">\(mg/cm^2\)</span>) og spyr þær einnig hversu
+mikið þær hreyfi sig (lítið, í meðallagi eða mikið) og hvort þær neyti
+mjólkurvara (aldrei, stundum, oft). Með hvaða hætti væri rétt að skrá
+þessar breytur?</p>
+</section>
+<section id="id13">
+<h3><span class="section-number">2.7.6. </span>Dæmi<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<p>María kannar hljóðvist í leikhússölum borgarinnar. Hún mætir á eina
+leiksýningu af hverju einasta verki sem sett er upp á Höfuðborgarsvæðinu
+í desember og skráir mesta hljóðstyrkinn sem mældist á sýningunni (í
+desíbelum). Af hvaða gerð er breytan sem María mælir?</p>
+</section>
+<section id="id14">
+<h3><span class="section-number">2.7.7. </span>Dæmi<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<p>Skráið niður dæmi um þrjár samfelldar og þrjár strjálar talnabreytur.</p>
+</section>
+<section id="id15">
+<h3><span class="section-number">2.7.8. </span>Dæmi<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<p>Hvort væri hentugra að skrá fjölda systkina sem einstaklingur á sem
+strjála eða samfellda talnabreytu? En fjölda barrnála á grenitré?
+Rökstyðjið svar ykkar.</p>
+</section>
+<section id="id16">
+<h3><span class="section-number">2.7.9. </span>Dæmi<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<p>Kári kannar gerðir kenninafna á Íslandi. Hann velur 1000 manna
+handahófsúrtak úr þjóskrá og kannar hvort einstaklingar beri ættarnöfn
+og hvort þeir kenni sig við móður eða föður. Af hvaða gerð er breytan
+sem Kári skráir?</p>
+</section>
+<section id="id17">
+<h3><span class="section-number">2.7.10. </span>Dæmi<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h3>
+<p>Birgir er mikill listakokkur og almennur áhugamaður um matarvenjur
+Íslendinga. Hann framkvæmir könnun þar sem hann velur handahófskennt
+úrtak 20 manna og 20 kvenna og spyr þau hversu oft í viku þau borði
+heitan mat í hádeginu. Er úrtakið sem Birgir valdi dæmi um: lagskipt
+slembiúrtak, einfalt slembiúrtak, parað slembiúrtak eða sjálfboðaúrtak?</p>
+</section>
+<section id="id18">
+<h3><span class="section-number">2.7.11. </span>Dæmi<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
+<p>Finn langar að kanna meðalfjölda veitingastaða sem ferðamenn á
+gistihúsum heimsækja á meðan dvöl þeirra stendur. Til þess útbjó hann
+spurningalista sem lágu í móttöku allra gistihúsa á Höfuðborgarsvæðinu.
+Könnunin var auglýst mjög vel og gestir hvattir til að taka þátt og
+skila svörunum í þar til gerða kassa sem einnig lágu í móttökunni. Hvert
+er helsta vandamálið við tilraunahögun könnunarinnar hans Finns?</p>
+</section>
+<section id="id19">
+<h3><span class="section-number">2.7.12. </span>Dæmi<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h3>
+<p>Gunnar Þór þrekþjálfari telur að það séu sterk tengsl milli matarvenja
+og heilsu. Hann framkvæmir því tilraun þar sem hann parar saman tvo og
+tvo nemendur, sem valdir voru með slembiúrtaki, sem honum þykir svipaðir
+að þreki. Hann lætur svo annan meðlim hvers pars á sérstakt mataræði á
+meðan hinn borðar eins og hann er vanur. Þáttakendur eru á þessu mataræði
+í 4 vikur en að því loknu eru framkvæmd þrekpróf á öllum einstaklingunum.</p>
+<ol class="loweralpha simple">
+<li><p>Er úrtakið sem Gunnar Þór valdi dæmi um: lagskipt slembiúrtak,
+einfalt slembiúrtak, parað slembiúrtak eða sjálfboðaúrtak?</p></li>
+<li><p>Hverjir eru helstu vankantarnir á tilraunahögun Gunnars Þórs?</p></li>
+</ol>
+</section>
+<section id="id20">
+<h3><span class="section-number">2.7.13. </span>Dæmi<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
+<p>Agnar vill kanna hvers konar auglýsingar höfða best til viðskiptavina.
+Hann sendir því stuttan spurningalista á alla vini sína á Facebook en
+til að tryggja hátt svarhlutfall gefur hann öllum þeim sem svara
+könnuninni lítinn happdrættismiða þar sem í vinning er 10 þúsund króna
+inneign í útivistarbúð. Hvað er athugavert við tilraunahögun Agnars?</p>
+</section>
+<section id="id21">
+<h3><span class="section-number">2.7.14. </span>Dæmi<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
+<p>Fríðu langar að kanna meðalfjölda veitingastaða sem ferðamenn á
+gistihúsum heimsækja á meðan dvöl þeirra stendur. Hún hefur hins vegar
+þá kenningu að smekklega klæddir ferðamenn (að hennar mati) heimsæki
+fleiri veitingastaði heldur en þeir síður smekkvísu. Hún framkvæmir
+könnun þar sem hún velur 100 gesti af handahófi, spyr þá hversu marga
+veitingastaði þeir hafi heimsótt og skráir að því loknu hjá sér hversu
+smekklega henni finnst þeir klæddir (á skalanum 1 til 10). Hvert er
+helsta vandamálið við tilraunahögun könnuninarinnar hennar Fríðu?</p>
+</section>
+<section id="id22">
+<h3><span class="section-number">2.7.15. </span>Dæmi<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h3>
+<p>Einar telur að of mikið sjónvarpsáhorf valdi offitu hjá börnum. Hann
+framkvæmir því rannsókn þar sem hann velur 100 börn af handahófi úr
+þjóðskrá, skráir nákvæmlega sjónvarpsáhorf þeirra og mælir líkamsfitu
+þeirra. Hann kemst að þeirri niðurstöðu að börn sem horfa á sjónvarp í
+meira en þrjár klukkustundir á dag eru tvöfalt líklegri til að þjást af
+offitu heldur en þau sem horfa skemur á sjónvarpið. Getur Einar fullyrt
+út frá þessari rannsókn að sjónvarpsáhorf valdi offitu hjá börnum?
+Rökstyðjið svar ykkar.</p>
+<hr class="docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id23" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">1</a><span class="fn-bracket">]</span></span>
+<p>Shang, A., Huwiler-Muntener, K., Nartey, L., Juni, P., Dorig, S.,
+Sterne, J. A. og fleiri. 2005. ,,Are the clinical effects of
+homoeopathy placebo effects? Comparative study of placebo-controlled
+trials of homoeopathy and allopathy“, <em>Lancet</em>, 366: 726–732.</p>
+</aside>
+<aside class="footnote brackets" id="id24" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">2</a><span class="fn-bracket">]</span></span>
+<p>House of Commons Science and Technology Committee. ,,Evidence Check
+2: Homeopathy Fourth Report of Session 2009–10“.</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli01/" class="btn btn-neutral float-left" title="1. Inngangur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli03/" class="btn btn-neutral float-right" title="3. Myndræn framsetning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

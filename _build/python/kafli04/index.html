@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Grunnatriði Python &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/python.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="5 Söfn: Eitt nafn en mörg gildi" href="../kafli05/" />
+    <link rel="prev" title="3 Umhverfi fyrir Python: Jupyter og Colab" href="../kafli03/" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+          </a>
+              <div class="version">
+                2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4  Grunnatriði Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#breytur-og-tog">4.1  Breytur og tög</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agerir-og-virkjar">4.2  Aðgerðir og virkjar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gildisgjof">4.3  Gildisgjöf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utprentun-og-innlestur">4.4  Útprentun og innlestur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#f-strengir">4.5  F-strengir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#foll-notanda-ny-foll">4.6  Föll notanda (ný föll)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hvernig-virka-foll">4.7  Hvernig virka föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#innbygg-foll">4.8  Innbyggð föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fallbreytur">4.9  Fallbreytur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#styriskipanir">4.10  Stýriskipanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ef-setningar">4.10.1  Ef-setningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-lykkjur">4.10.2  For-lykkjur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#while-lykkjur">4.10.3  While-lykkjur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skipanirnar-continue-og-break">4.10.4  Skipanirnar <em>continue</em> og <em>break</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skilyrt-gildi">4.11  Skilyrt gildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lokaaefingin">4.12  Lokaæfingin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5  Söfn: Eitt nafn en mörg gildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6  Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7  Uppflettitöflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8  Skrár</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9  Teikning með Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10  NumPy pakkinn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11  Reiknað með fylkjum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12  Dæmi um hagnýtingu fylkjareikninga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4  </span>Grunnatriði Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kafli04.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="grunnatrii-python">
+<span id="grunn-python"></span><h1><span class="section-number">4  </span>Grunnatriði Python<a class="headerlink" href="#grunnatrii-python" title="Permalink to this heading"></a></h1>
+<section id="breytur-og-tog">
+<h2><span class="section-number">4.1  </span>Breytur og tög<a class="headerlink" href="#breytur-og-tog" title="Permalink to this heading"></a></h2>
+<p class="rubric">Breytur</p>
+<p><strong>Breyta</strong> (<em>variable</em>) er nafn á minnishólfi í tölvu, þar sem geyma má <strong>gildi</strong> (<em>value</em>). Gildin geta svo verið af ýmsu tagi, eða haft ýmis <strong>tög</strong> (<em>types</em>), og eins og fyrr segir eru þessi tög tengd gildunum en ekki breytunum sjálfum. Fyrir utan gildi sem geymd eru í breytum er líka talað um gildi sem útkomu úr <strong>útreikningi</strong> (<em>computation</em>) eða <strong>segð</strong> (<em>expression</em>), t.d. hefur segðin <span class="math notranslate nohighlight">\(2 + 2\)</span> gildið <span class="math notranslate nohighlight">\(4\)</span>. Ósamsett gildi, t.d. 2, heitir <strong>fasti</strong> (<em>constant</em>).</p>
+<p class="rubric">Grunntög</p>
+<p>Hér er listi yfir grunntögin í Python og dæmi um fasta af hverju tagi:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>kommutala (float)</em> t.d. <code class="code docutils literal notranslate"><span class="pre">2.0</span></code>, <code class="code docutils literal notranslate"><span class="pre">-543.62</span></code>, <code class="code docutils literal notranslate"><span class="pre">16e-22</span></code></p></li>
+<li><p><em>heiltala (int)</em>   t.d. <code class="code docutils literal notranslate"><span class="pre">2</span></code>, <code class="code docutils literal notranslate"><span class="pre">123456789012345678901234567890</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">round(1e100)</span></code>; engin takmörk á stærð</p></li>
+<li><p><em>strengur (str)</em>   t.d. <code class="code docutils literal notranslate"><span class="pre">'abc'</span></code>, <code class="code docutils literal notranslate"><span class="pre">&quot;strengur</span> <span class="pre">með</span> <span class="pre">bili&quot;</span></code>;
+nota má hvort sem maður vill <code class="code docutils literal notranslate"><span class="pre">&quot;</span></code> eða <code class="code docutils literal notranslate"><span class="pre">'</span></code></p></li>
+<li><p><em>rökgildi (bool)</em> , <code class="code docutils literal notranslate"><span class="pre">True</span></code> og <code class="code docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><em>„EkkertTag“ (NoneType)</em>, <code class="code docutils literal notranslate"><span class="pre">None</span></code> sérstakt tag sem fæst m.a. úr
+föllum sem engu skila.</p></li>
+</ul>
+</div></blockquote>
+<p class="rubric">Önnur tög</p>
+<p>Önnur algengustu innbyggð tög eru:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Listar (list)</em></p></li>
+<li><p><em>Samantektir (tuple)</em></p></li>
+<li><p><em>Mengi (set)</em></p></li>
+<li><p><em>Ítrarar (iterator)</em></p></li>
+<li><p><em>Uppflettitöflur (dictionary)</em></p></li>
+</ul>
+</div></blockquote>
+<p>Um öll þessi tög ef fjallað síðar í þessum fyrirlestrarnótum.</p>
+<p class="rubric">Nöfn breyta</p>
+<p>Sú regla gildir að nafn breytu skal vera runa af bókstöfum, tölustöfum, og _, það má ekki byrja á tölu og það má ekki vera lykilorð í málinu eins og „for“ eða „return“. Í sumum forritunarmálum verða bókstafirnir að vera enskir, en sú takmörkun á ekki við um Python, Dæmi um lögleg breytunöfn eru: x_1, hæð, ∆.</p>
+<p>Í nútímaforritum er algengt að nota fremur löng og lýsandi breytunöfn, t.d. <code class="code docutils literal notranslate"><span class="pre">radíus_hrings</span></code>. Sú regla er oft brotin í inngangsnámskeiðum í forritun, því þar þvælast löng nöfn frekar fyrir en að hjálpa til, og dæmigert væri að nota <code class="code docutils literal notranslate"><span class="pre">r</span></code> fyrir geisla hrings.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Ólögleg breytunöfn</p>
+<ol class="arabic">
+<li><p>Hverjir eftirfarandi strengja eru ekki lögleg breytunöfn?</p>
+<ol class="loweralpha simple">
+<li><p>01rst</p></li>
+<li><p>rst01</p></li>
+</ol>
+<p>c. rst-01
+e. ρστ01
+d. Sérdeilis_afskaplega_langt_breytunafn_sem_ætti_að_reyna_að_stytta
+f. abc
+g. def</p>
+</li>
+<li><p>Googlið „python reserved words“. Hvaða lykilorð í málinu byrja á a eða b (og eru þar
+með dæmi um ólögleg breytunöfn)?</p></li>
+</ol>
+</div>
+</section>
+<section id="agerir-og-virkjar">
+<span id="adgerdir-og-virkjar"></span><h2><span class="section-number">4.2  </span>Aðgerðir og virkjar<a class="headerlink" href="#agerir-og-virkjar" title="Permalink to this heading"></a></h2>
+<p>Í stærðfræði er það að ákvarða útkomu segðar oft kallað <strong>aðgerð</strong> (<em>operation</em>). Grunnbyggingareiningar segða eru oftast <strong>einstæðar</strong> (<em>unary</em>) eða <strong>tvístæðar</strong> (<em>binary</em>) aðgerðir. Einstæð aðgerð er ýmist af taginu <span class="math notranslate nohighlight">\(\circ x\)</span> eða <span class="math notranslate nohighlight">\(f(x)\)</span> þar sem <span class="math notranslate nohighlight">\(\circ\)</span> er einstæður <strong>virki</strong> (<em>operator</em>), <span class="math notranslate nohighlight">\(f\)</span> er <strong>fall</strong> (<em>function</em>) og <span class="math notranslate nohighlight">\(x\)</span> er gildi. Tvístæð aðgerð er oft af taginu <span class="math notranslate nohighlight">\(x \circ y\)</span> þar sem <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru gildi og <span class="math notranslate nohighlight">\(\circ\)</span> er tvístæður virki. Gildin sem virkjar verka á eru stundum kallaðir <strong>þolendur</strong> (<em>operands</em>). Hér eru nokkur dæmi:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\textrm{einstæðar aðgerðir }&amp;
+\begin{cases}
+\texttt{not p}\\
+\texttt{–segð}\\
+\texttt{fall(13)}
+\end{cases}\\
+\textrm{tvístæð aðgerð: }&amp;\text{a + 2}
+\end{align}\end{split}\]</div>
+</div></blockquote>
+<p>Virkjar í Python eru flestir eins og algengast er í forritunarmálum, sér í lagi gildir það um venjulegu reikningsaðgerðirnar fjórar og <strong>samanburðarvirkja</strong> (<em>relational operators</em>) til að bera saman stærð. Forritunarmál skiptast svo í þrennt varðandi <a class="reference external" href="https://en.wikipedia.org/wiki/Exponentiation#In_programming_languages">veldisvirkja</a>, sum nota <code class="code docutils literal notranslate"><span class="pre">**</span></code>, sum nota <code class="docutils literal notranslate"><span class="pre">^</span></code> og sum hafa engan sérstakan virkja fyrir veldishafningu (t.d. C, C++ og Java). Python fellur í fyrsta flokkinn.</p>
+<p>Útkoma úr <strong>deilingu heiltalna</strong> er annað vandamál sem forritunarmál leysa með mismunandi hætti: sum skila kommutölu og sum skera aukastafi af og skila heiltölu. Í Python er málið leyst með því að hafa tvo virkja, <code class="code docutils literal notranslate"><span class="pre">/</span></code> skilar kommutölu, en <code class="code docutils literal notranslate"><span class="pre">//</span></code> lækkar útkomu í átt að núlli og skilar heiltölu. Virkjar til að finna <a class="reference external" href="https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages">afgang</a> úr heiltöludeilingu eru nokkuð misjafnir milli forritunarmála, en virkinn sem Python notar, <code class="code docutils literal notranslate"><span class="pre">%</span></code>, er algengastur.</p>
+<p>Loks notar Python ensk orð, <em>and</em>, <em>or</em> og <em>not</em>, fyrir <strong>rökvirkja</strong> (<em>logical operators</em>), eins og boðað var í innganginum að framan, en ekki virkjana <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code>, <code class="docutils literal notranslate"><span class="pre">||</span></code> og <code class="docutils literal notranslate"><span class="pre">!</span></code> sem mörg forritunarmál hafa.</p>
+<p class="rubric">Yfirlit</p>
+<p>Hér er yfirlit yfir helstu virkja fyrir grunntögin í Python:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+ – * /          # eins og í flestum öðrum forritunarmálum
+%                # x % y er afgangur úr deilingunni x//y (7%4 gefur 3)
+**               # veldi (x**y táknar x í veldinu y)
+//               # heiltöludeiling (aukastafir skornir af; 7//4 gefur 1)
+&lt; &gt; &lt;= &gt;= == !=  # samanburðarvirkar (eins og í Java eða C)
+and or not       # rökvirkjar
+&lt;&lt; &gt;&gt; &amp; ~ ^      # bitavirkjar, eins og í C, ~ er fyllitala og ^ er xor
+str + str        # samskeyting strengja (&quot;ab&quot; + &quot;12&quot; gefur &quot;ab12&quot;)
+str*n            # fjölföldun strengs (&quot;ab&quot;*3 er &quot;ababab&quot;)
+(...)            # svigar stýra röð útreiknings
+</pre></div>
+</div>
+<p class="rubric">Útkoma úr blönduðum útreikningi</p>
+<p>Grunnreglan um útkomu úr aðgerð með tveimur tölum er að ef önnur eða báðar eru kommutala þá er niðurstaðan kommutala, en ef báðar eru heiltölur kemur út heiltala. Aðalundantekningin er deiling, en deiling tveggja heiltalna með /-virkja gefur kommutölu.</p>
+<p>Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðilegri merkingu, sem sé að viðkomandi gildi séu af heiltölu- eða kommutölutagi. Tölvur greina nefnilega á milli heiltölunnar 2 og kommutölunnar 2.0, þær eru af mismunandi tagi og geymdar með mismunandi bitarunum í minni tölvunnar.</p>
+<p class="rubric">Forgangsröð aðgerða</p>
+<p>Eftirfarandi tafla sýnir röð sem aðgerðir eru framkvæmdar í ef svigar segja ekki til um aðra röð:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>**             # frá hægri til vinstri, 4**3**2 = 4**(3**2) = 262144
+*, /, // og %  # frá vinstri til hægri; x/y*z jafngildir (x/y)*z
++ og –         # frá v til h; a - b*c + d jafngildir (a - (b*c)) + d
+samanburður    # frá v til h; x &lt; y &lt; z jafngildir x &lt; y og y &lt; z
+not            # ath. að not x &lt; y jafngildir not (x &lt; y)
+and
+or
+</pre></div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Útreikningur</p>
+<p>Byrjið á að opna tóma vinnubók.</p>
+<ol class="arabic">
+<li><p>Reiknið <code class="code docutils literal notranslate"><span class="pre">7/4,</span> <span class="pre">7//4,</span> <span class="pre">8/4,</span> <span class="pre">8//4</span></code></p></li>
+<li><p>Búið til nýjan reit og reiknið þar <code class="code docutils literal notranslate"><span class="pre">7</span> <span class="pre">%</span> <span class="pre">4</span></code> og <code class="code docutils literal notranslate"><span class="pre">7**4</span></code>.
+Hvað er verið að reikna?</p></li>
+<li><p>Látið <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code> og notið rökvirkja, samanburðarvirkja og
+afgangsvirkjann <code class="code docutils literal notranslate"><span class="pre">%</span></code> til að kanna sannleiksgildi yrðinganna:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; 2 &lt; x &lt; 7\text{ og }x \neq 10 \\
+&amp; x \text{ er slétt tala minni en } 8\end{split}\]</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="gildisgjof">
+<h2><span class="section-number">4.3  </span>Gildisgjöf<a class="headerlink" href="#gildisgjof" title="Permalink to this heading"></a></h2>
+<p>Í stærðfræði er <strong>gildisgjöf</strong> (<em>assignment</em>) stundum táknuð með virkjanum <span class="math notranslate nohighlight">\(:=\)</span> (t.d. <span class="math notranslate nohighlight">\(x := 1\)</span>), og í reikniritum er stundum notuð ör (<span class="math notranslate nohighlight">\(x \gets 1\)</span>), og þá er einfalt jafnaðarmerki notað til að segja að tvær stærðir séu jafnar eða kanna hvort þær séu jafnar: „<span class="math notranslate nohighlight">\(x = 1\)</span>“ þýðir að breytan <span class="math notranslate nohighlight">\(x\)</span> (sem þegar hefur verið skilgreind) hafi gildið 1, og „ef <span class="math notranslate nohighlight">\(x = 1\)</span>, þá…“ spyr hvort <span class="math notranslate nohighlight">\(x\)</span> sé 1. Í forritunarmálum er hinsvegar orðið mjög algengt að nota einfalt jafnaðarmerki fyrir gildisgjöf og tvö í röð fyrir samanburðarvirkjann <cite>==</cite> og Python er engin undantekning frá þeirri venju.</p>
+<p>Gildisgjöf í Python er tvennskonar, hægt er að gefa breytu gildi og svo er líka hægt að uppfæra gildið sem breyta geymir, sem sé:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">breyta</span> <span class="o">=</span> <span class="n">segð</span>   <span class="c1"># t.d. a = x + 3</span>
+<span class="n">breyta</span> <span class="o">+=</span> <span class="n">segð</span>  <span class="c1"># leggur segð við breytu, t.d. er a += 3 jafngilt a = a + 3</span>
+<span class="n">breyta</span> <span class="o">-=</span> <span class="n">segð</span>  <span class="c1"># dregur frá; líka má *=, /= o.s.frv.</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Það eru síðan nokkrir fleiri möguleikar sem verða útskýrðir betur í næstu köflum: Viðtakandi gildisins má vera stak í lista (t.d. <code class="code docutils literal notranslate"><span class="pre">L[i]</span></code>) eða eiginleiki í hlut (<code class="code docutils literal notranslate"><span class="pre">punktur.x</span></code>). Svo er líka hægt að gefa mörgum breytum gildi samtímis með því að skrifa:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">breyta</span><span class="p">,</span> <span class="n">breyta</span><span class="o">...</span> <span class="o">=</span> <span class="n">runa</span>    <span class="c1"># lengd runu þarf að vera jafn fjölda breyta</span>
+                            <span class="c1"># Dæmi: x,y,z = 5,6,7</span>
+<span class="p">(</span><span class="n">breyta</span><span class="p">,</span> <span class="n">breyta</span><span class="o">...</span><span class="p">)</span> <span class="o">=</span> <span class="n">runa</span>  <span class="c1"># annar möguleiki; dæmi (x,y,z) = (5,6,7)</span>
+<span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>               <span class="c1"># þessi skipun skiptir á gildum x og y</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Breytum breytt</p>
+<p>Haldið áfram með vinnubókina úr síðustu æfingu og búið til nýja reiti eftir þörfum.</p>
+<ol class="arabic simple">
+<li><p>Lát <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code> og reiknið svo <code class="code docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">5</span></code> og <code class="code docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">6</span></code>.</p></li>
+<li><p>Hækkið x um 2 með <code class="code docutils literal notranslate"><span class="pre">+=</span></code> virkja</p></li>
+<li><p>Lát <code class="code docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">10</span></code> og skiptið á x og y</p></li>
+</ol>
+</div>
+</section>
+<section id="utprentun-og-innlestur">
+<span id="utprentun"></span><h2><span class="section-number">4.4  </span>Útprentun og innlestur<a class="headerlink" href="#utprentun-og-innlestur" title="Permalink to this heading"></a></h2>
+<p>Aðalaðferðin til að prenta út gildi í Python er að nota <code class="code docutils literal notranslate"><span class="pre">print</span></code>-fallið en í vinnubókum er líka hægt að nota fallið <code class="code docutils literal notranslate"><span class="pre">display</span></code>, sem gefur stundum öðruvísi úttak, t.d. ef prentaðir eru strengir eða nöfn taga og falla (sjá næstu æfingu). Sumir pakkar sem þið gætuð átt eftir að kynnast, t.d. pandas og statmodels, skila stundum HTML-sniðnum töflum, og til að birta þær þarf að nota <code class="code docutils literal notranslate"><span class="pre">display</span></code>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">print(segð,segð...)</span></code>: Prentar segðirnar með bilum á milli</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">print(...,</span> <span class="pre">sep=&quot;,&quot;)</span></code>: Prentar með kommum á milli</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">print(...,</span> <span class="pre">end=&quot;</span> <span class="pre">&quot;)</span></code>: Endar með bili í stað nýrrar línu</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">s</span> <span class="pre">=</span> <span class="pre">input('texti')</span></code>: Prentar textann og bíður eftir að notandi
+slái inn streng og &lt;Enter&gt;; innslegið gildi → s.</p></li>
+</ul>
+</div></blockquote>
+<p>Næsta grein (<a class="reference internal" href="#fstrengir"><span class="std std-numref">4.5</span></a>) útskýrir svo hvernig <strong>sníða</strong> (<em>formatera</em>) má útprentuð gildi með svonefndum f-strengjum.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: input og print</p>
+<ol class="arabic">
+<li><p>Input-fallið skilar streng s, sem hægt er að breyta í tölu með
+<code class="code docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">float(s)</span></code> eða <code class="code docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">int(x)</span></code>. Afritið eftirfarandi
+skipanir yfir í vinnubók. Notið tækifærið og prófið vinnubókarskipanir
+til að velja allt í reit og flytja það til vinstri (shift/tab,
+<em>unindent</em>), sbr. <a class="reference internal" href="../kafli03/#vinnubokarritilskipanir"><span class="std std-numref">Tafla 3.4:</span></a>. Keyrið, sláið inn
+tölu, og prófið líka að slá inn eitthvað annað en tölu.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Sláðu inn tölu: &#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Afritið eftirfarandi forritsbút yfir í vinnubók. Keyrið, og prófið svo
+að nota <code class="code docutils literal notranslate"><span class="pre">end=&quot;;&quot;</span></code> og <code class="code docutils literal notranslate"><span class="pre">sep=&quot;,&quot;</span></code> og prófið líka að breyta
+<code class="code docutils literal notranslate"><span class="pre">print</span></code> í <code class="code docutils literal notranslate"><span class="pre">display</span></code>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;AB&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">s</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="f-strengir">
+<span id="fstrengir"></span><h2><span class="section-number">4.5  </span>F-strengir<a class="headerlink" href="#f-strengir" title="Permalink to this heading"></a></h2>
+<p>F-strengir (<em>f-strings</em>) eru ætlaðir til útprentunar, og með þeim má tvinna
+saman strengi (textabúta), breytur og gildi (segðir). Breytur og gildi eru sett
+innan slaufusviga og þeim getur líka fylgt snið á eftir tvípunkti, sem sé:</p>
+<blockquote>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;texti </span><span class="si">{</span><span class="n">segð</span><span class="si">}</span><span class="s1"> texti </span><span class="si">{</span><span class="n">segð</span><span class="si">:</span><span class="s1">snið</span><span class="si">}</span><span class="s1"> texti </span><span class="si">{</span><span class="n">segð</span><span class="si">:</span><span class="s1">snið</span><span class="si">}</span><span class="s1"> ...&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Hér getur hver segð (<em>expression</em>) verið breyta eða útreiknuð stærð, og snið (sem
+má sem sé sleppa) gefur oftast heildarfjölda stafa og/eða fjölda aukastafa.
+Hér er tafla yfir nokkur möguleg snið:</p>
+<table class="docutils align-default" id="fstrengjasni">
+<caption><span class="caption-number">Tafla 4.1: </span><span class="caption-text">Nokkur möguleg snið í f-strengjum</span><a class="headerlink" href="#fstrengjasni" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">{heiltala}</span></code> <br>
+<code class="code docutils literal notranslate"><span class="pre">{strengur}</span></code> <br>
+<code class="code docutils literal notranslate"><span class="pre">{kommutala}</span></code></p></td>
+<td><p>Heiltala og strengur skrifast óbreytt og kommutala með  <br>
+jafnmörgum aukastöfum og þarf til að sýna nákvæmt gildi hennar.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">{heiltala:n}</span></code> <br>
+<code class="code docutils literal notranslate"><span class="pre">{strengur:n}</span></code></p></td>
+<td><p>Skrifað í n stafa breitt svið, tölur hægri-jafnaðar og  <br>
+strengir vinstri-jafnaðir</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">{heiltala:0n}</span></code></p></td>
+<td><p>Skrifa töluna hægri-jafnaða í n-stafa breitt svið og fylla með <br>
+núllum frá vinstri; <code class="docutils literal notranslate"><span class="pre">{k:03}</span></code> myndi skrifa <code class="docutils literal notranslate"><span class="pre">007</span></code> ef k=7</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">{heiltala:&lt;n}</span></code></p></td>
+<td><p>Vinstri-jafna heiltölu í n stafa svið</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">{strengur:&gt;n}</span></code></p></td>
+<td><p>Hægri-jafna streng í n stafa svið</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">{heiltala:^n}</span></code> <br>
+<code class="code docutils literal notranslate"><span class="pre">{strengur:^n}</span></code></p></td>
+<td><p>Skrifa miðjað í n stafa svið</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">{kommutala:n}</span></code></p></td>
+<td><p>Skrifa kommutölu með n „marktækum stöfum“ (<em>significant digits</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">{kommutala:.mf}</span></code></p></td>
+<td><p>Skrifa kommutölu með m aukastöfum fyrir aftan kommu</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">{kommutala:n.mf}</span></code></p></td>
+<td><p>Skrifa kommutölu með m aukastöfum í n stafa breitt svið</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">{kommutala:.mE}</span></code></p></td>
+<td><p>Skrifa kommutölu á staðalformi með tugveldistáknun og m <br>
+aukastöfum, t.d. skrifar <code class="code docutils literal notranslate"><span class="pre">{10**13:.2E}</span></code> út <code class="code docutils literal notranslate"><span class="pre">1.00E+13</span></code>. <br>
+Nota má <code class="code docutils literal notranslate"><span class="pre">n.mE</span></code> til að skrifa í n stafa breitt svið, og <code class="code docutils literal notranslate"><span class="pre">n.me</span></code> <br>
+til að fá lítið e í útskriftina (t.d. <code class="code docutils literal notranslate"><span class="pre">1.00e+13</span></code>)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Tilgangurinn með að gefa heildarfjölda stafa (breidd sviðs) getur t.d. verið að
+láta dálka í töflu standast á: forritið í sýnidæminu í grein <a class="reference internal" href="#for-lykkjur"><span class="std std-numref">4.10.2</span></a>
+notar f-strengi til að sníða (<em>„formatera“</em>) litla töflu. Hér eru þrjú dæmi í
+viðbót:</p>
+<blockquote>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;hæð = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1">, breidd = </span><span class="si">{</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="sa">f</span><span class="s2">&quot;A = </span><span class="si">{</span><span class="n">A</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, B = </span><span class="si">{</span><span class="n">B</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="sa">f</span><span class="s1">&#39;Halló </span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s1"> og vertu velkomin(n)&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>þar sem gert er ráð fyrir að h, x og y séu heiltölubreytur, A og B séu
+kommutölubreytur og nafn sé strengjabreyta. Forritið gæti t.d. skrifað út:</p>
+<blockquote>
+<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hæð = 10, breidd = 28
+A = 6.281, B = 11.37
+Halló Kristján og vertu velkomin(n)
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition danger">
+<p class="admonition-title">Aðvörun</p>
+<p>F-strengir eru nýleg viðbót við Python, þeir komu í Python 3.6 í desember
+2016. Í eldri Python-útgáfum er hægt að nota %-virkja. Forritið í sýnidæminu
+í grein <a class="reference internal" href="#for-lykkjur"><span class="std std-numref">4.10.2</span></a> gæti t.d. haft: <br>
+&emsp; &emsp; <code class="code docutils literal notranslate"><span class="pre">print('%d</span>&#160;&#160; <span class="pre">%.4f</span>&#160;&#160; <span class="pre">%2d'</span> <span class="pre">%</span> <span class="pre">(x,</span> <span class="pre">math.sqrt(x),</span> <span class="pre">x**2))</span></code> <br>
+í öftustu línunni.</p>
+</div>
+</section>
+<section id="foll-notanda-ny-foll">
+<span id="ny-foll"></span><h2><span class="section-number">4.6  </span>Föll notanda (ný föll)<a class="headerlink" href="#foll-notanda-ny-foll" title="Permalink to this heading"></a></h2>
+<p>Notendaföll (<em>user-defined functions</em>) eru næstum jafngömul forritun, og fyrstu
+forritunarmálin gáfu kost á skilgreiningu þeirra. Stundum er reyndar notað orðið
+<strong>undirforrit</strong> (<em>subroutine</em>) í stað falls einkum um föll sem engu skila (sbr.
+kafla <a class="reference internal" href="#virka"><span class="std std-numref">4.7</span></a>), en í Python er yfirleitt bara talað um föll. Við höfum
+þegar séð dæmi um föll, í forritinu Collatz í kafla <a class="reference internal" href="../kafli02/#collatz"><span class="std std-numref">Forrit 2.2</span></a>.</p>
+<p class="rubric">Af hverju þarf föll?</p>
+<p>Það eru ýmsar ástæður til að skilgreina og nota ný
+föll, en þær mikilvægustu eru:</p>
+<ol class="arabic simple">
+<li><p>Að gera forritin skýrari, helst þannig að þau útskýri sig sjálf.
+Forsenda fyrir því er að valin séu góð nöfn á föllin, sem segja
+í orðum hvað föllin gera.</p></li>
+<li><p>Að skipta stærri forritum upp minni einingar sem auðvelt er að útfæra
+(skrifa forrit fyrir) hverja um sig. Það getur verið erfitt að halda
+utan um alla þræði stórs forrits og muna hvað hver hluti þess gerir.
+En ef búið er að skrifa fall fyrir ákveðna aðgerð, og lýsa því hvað
+það gerir og hvernig kallað er á það, þá má gleyma öllu um hvernig
+það vinnur.</p></li>
+<li><p>Að losna við endurteknar blokkir af sömu skipunum. Þessi ástæða
+birtist þannig að kallað er á fall oftar en einu sinni í sama forriti.</p></li>
+<li><p>Að geta endurnýtt forritsbúta seinna. Þessi ástæða birtist þannig að kallað
+er á sama fall í mismunandi forritum.</p></li>
+</ol>
+<p>Föllin í Collatz-forritinu falla í flokka 1 og 2. Til að láta þau falla vel
+í flokk 1 ættum við reyndar að skíra þau lengri nöfnum, t.d.
+<code class="code docutils literal notranslate"><span class="pre">finna_næstu_tölu_á_eftir</span></code> og <code class="code docutils literal notranslate"><span class="pre">finna_collatz_runu_sem_byrjar_á</span></code>.
+Ef það er gert mætti sem best sleppa dokk-strengjunum.</p>
+<p class="rubric">Skilgreining falls</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fall</span><span class="p">(</span><span class="n">stiki</span><span class="p">,</span> <span class="n">stiki</span><span class="o">...</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;skjölunarstrengur&#39;&#39;&#39;</span>
+    <span class="n">skipanir</span>
+    <span class="k">return</span> <span class="n">g</span>
+
+<span class="c1"># Skjölunarstrengurinn er valkvæður en góð regla að hafa hann með</span>
+<span class="c1"># Ef fallið skilar mörgum gildum endar það á: return (g1,g2...)</span>
+<span class="c1"># Ef það skilar engu er return-skipun sleppt</span>
+</pre></div>
+</div>
+<p class="rubric">Kallað á fall</p>
+<p><code class="code docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">fall(viðfang,</span> <span class="pre">viðfang...)</span></code> <br>
+Má líka nota í segð: <code class="code docutils literal notranslate"><span class="pre">h</span> <span class="pre">=</span> <span class="pre">2*fall(viðföng)</span> <span class="pre">+</span> <span class="pre">1</span></code> <br>
+Ef fallið skilar engu: <code class="code docutils literal notranslate"><span class="pre">fall(viðföng)</span></code> <br>
+Ef fallið skilar mörgum gildum: <code class="code docutils literal notranslate"><span class="pre">(g1,g2...)</span> <span class="pre">=</span> <span class="pre">fall(viðföng)</span></code> <br>
+Líka má sleppa svigunum: <code class="code docutils literal notranslate"><span class="pre">g1,g2...</span> <span class="pre">=</span> <span class="pre">fall(viðföng)</span></code> <br></p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Rúmmál keilu</p>
+<p>Hér er fall sem reiknar rúmmál keilu með gefna hæð og radíus grunnflatar, skv. formúlunni</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{\pi r^2 h}{3}\]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rúmmál_keilu</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;skilar rúmmáli keilu með hæð h og radíus grunnflatar r&#39;&#39;&#39;</span>
+    <span class="n">pí</span> <span class="o">=</span> <span class="mf">3.14159265</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">pí</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">/</span><span class="mi">3</span>
+    <span class="k">return</span> <span class="n">R</span>
+</pre></div>
+</div>
+<p>og hér er fall sem reiknar rúmmál tveggja keila, sú fyrri hefur <span class="math notranslate nohighlight">\(h=4\)</span> og
+<span class="math notranslate nohighlight">\(r=3\)</span> og hin hefur <span class="math notranslate nohighlight">\(h=2\)</span> og <span class="math notranslate nohighlight">\(r=1\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Forrit sem reiknar rúmmál tveggja keila</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="n">rúmmál_keilu</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="n">rúmmál_keilu</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rúmmál keilanna eru </span><span class="si">{</span><span class="n">R1</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> og </span><span class="si">{</span><span class="n">R2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fallið prentar út <code class="code docutils literal notranslate"><span class="pre">Rúmmál</span> <span class="pre">keilanna</span> <span class="pre">eru</span> <span class="pre">37.699</span> <span class="pre">og</span> <span class="pre">2.094</span></code></p>
+</div>
+</section>
+<section id="hvernig-virka-foll">
+<span id="virka"></span><h2><span class="section-number">4.7  </span>Hvernig virka föll<a class="headerlink" href="#hvernig-virka-foll" title="Permalink to this heading"></a></h2>
+<p class="rubric">Viðföng og stikar</p>
+<p>Breyturnar innan sviga á eftir fallsnafninu þar sem það er skilgreint kallast <strong>stikar</strong> (<em>parameters</em>), en þegar kallað er á fallið þá heita gildin sem sett eru í sviga á eftir fallsnafninu <strong>viðföng</strong> (<em>arguments</em>). Þau þurfa ekki að vera breytur en mega vera hvaða segðir sem er. <strong>Viðfang</strong> er sem sé gildi sem sent er inn í fall, en <strong>stiki</strong> er breyta í skilgreiningu fallsins sem tekur við gildinu.</p>
+<p class="rubric">Keyrsla forrits og falla</p>
+<p>Hægt er að hugsa sér að forrit keyri þannig að það sé bendill sem færist niður eftir
+forritstextanum og bendi á næstu línu sem á að framkvæma. Þegar bendillinn kemur
+að kalli á fall færist hann yfir í fyrstu línu fallsins. Áður en hann
+heldur áfram þar eru framkvæmdar ósýnilegar gildisgjafarskipanir, <code class="code docutils literal notranslate"><span class="pre">stiki</span> <span class="pre">=</span> <span class="pre">viðfang</span></code>
+fyrir alla stikana sem koma við sögu. Í fyrra kallinu í sýnidæminu er framkvæmt:
+<code class="code docutils literal notranslate"><span class="pre">h=4</span></code> og <code class="code docutils literal notranslate"><span class="pre">r=3</span></code>. Þegar fallið er á enda færist bendillinn svo aftur
+þangað sem frá var horfið í forritinu sem kallaði, og þar er niðurstöðu fallsins
+skilað inn í viðtökubreytu (sem í dæminu okkar er <code class="code docutils literal notranslate"><span class="pre">R1</span></code>).</p>
+<p class="rubric">Fjöldi skilagilda</p>
+<p>Fallið í sýnidæminu í kafla <a class="reference internal" href="#ny-foll"><span class="std std-numref">4.6</span></a> skilaði einu gildi, rúmmálinu sem
+verið var að reikna. En það er líka hægt að búa til föll sem skila <strong>mörgum gildum</strong>
+eða <strong>engu</strong> gildi, sbr eftirfarandi sýnidæmi.</p>
+<p>Forrit sem engu skila gegna oft því hlutverki að birta eitthvað á skjá, t.d.
+útprentun á tölu, hnapp á vefsíðu, eða merkingu á x-ás í línuriti sem verið er
+að teikna. Þau gætu líka skrifað gögn í skrá, og stundum eru þau notuð til að
+stjórna ýmsu sem síðar er birt, t.d. litum á næstu línum í línuritinu.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Fall sem skilar tveimur niðurstöðum</p>
+<p>Fall sem skilar bæði ummáli og flatarmáli hrings með radíus <code class="code docutils literal notranslate"><span class="pre">r</span></code> ásamt
+tilheyrandi kalli fyrir hring með radíus 1. Þetta forrit prentar út
+<code class="code docutils literal notranslate"><span class="pre">Flatarmálið</span> <span class="pre">er</span> <span class="pre">3.142</span> <span class="pre">og</span> <span class="pre">ummálið</span> <span class="pre">6.283</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">flat_og_um</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">pi</span>
+    <span class="k">return</span> <span class="n">F</span><span class="p">,</span><span class="n">U</span>
+
+<span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="n">U</span><span class="p">)</span> <span class="o">=</span> <span class="n">flat_og_um</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Flatarmálið er </span><span class="si">{</span><span class="n">F</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> og ummálið </span><span class="si">{</span><span class="n">U</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Fall sem skilar engu</p>
+<p>Þetta fall prentar línu með stjörnum. Ef kallað er með
+<code class="code docutils literal notranslate"><span class="pre">prenta_stjörnur(10)</span></code> prentar það <code class="code docutils literal notranslate"><span class="pre">**********</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prenta_stjörnur</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;prentar línu með n stjörnum&#39;&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="s2">&quot;*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fallið notar virkjann <code class="code docutils literal notranslate"><span class="pre">*</span></code> til að fjölfalda streng; sjá kafla
+<a class="reference internal" href="#adgerdir-og-virkjar"><span class="std std-numref">4.2</span></a></p>
+</div>
+</section>
+<section id="innbygg-foll">
+<span id="mikilvaegustu-innbygg"></span><h2><span class="section-number">4.8  </span>Innbyggð föll<a class="headerlink" href="#innbygg-foll" title="Permalink to this heading"></a></h2>
+<p>Fyrir utan föll sem notendur skrifa hafa forritunarmál yfirleitt fjöldan allan af
+innbyggðum föllum, sem hönnuðir málanna hafa skrifað og gert aðgengileg fyrir
+notendur. Mörg þessara falla eru notuð í útreikningum, en auk þess eru ýmis önnur
+föll, t.d. föll til að prenta (sem sé sýna texta og gildi á breytum á skjá),
+til að búa til runur, eða til að breyta um tög (t.d. breyta kommutölu í heiltölu
+eða streng í tölu). Í Python eru nokkur almenn föll sem alltaf eru aðgengileg,
+en flest föll eru geymd einingum (<em>modules</em>) sem tilheyra pökkum (<em>packages</em>) sbr.
+kafla <a class="reference internal" href="../kafli01/#pakkar"><span class="std std-numref">1.2</span></a>. Þau þarf að gera aðgengileg með því að <em>flytja inn</em> viðkomandi einingu með <code class="code docutils literal notranslate"><span class="pre">import</span></code> skipun.</p>
+<p class="rubric">Mikilvæg almenn föll</p>
+<table class="docutils align-default" id="tab-almenn-foll">
+<tbody>
+<tr class="row-odd"><td><p>abs</p></td>
+<td><p>tölugildi, abs(-3) → 3</p></td>
+</tr>
+<tr class="row-even"><td><p>max</p></td>
+<td><p>hámark: max(1,2) → 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>min</p></td>
+<td><p>lágmark: min(1,2) → 1</p></td>
+</tr>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>kommutala → heiltala, strengur → heiltala</p></td>
+</tr>
+<tr class="row-odd"><td><p>round</p></td>
+<td><p>kommutala → næsta heiltala (rúnnað)</p></td>
+</tr>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>heiltala → kommutala, strengur → kommutala</p></td>
+</tr>
+<tr class="row-odd"><td><p>range</p></td>
+<td><p>býr til runu til að nota í for-lykkju,
+sjá grein <a class="reference internal" href="../kafli02/#icollatz"><span class="std std-numref">2.4</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>len</p></td>
+<td><p>lengd strengs</p></td>
+</tr>
+<tr class="row-odd"><td><p>type</p></td>
+<td><p>tag breytu</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ath.</strong> Með <code class="docutils literal notranslate"><span class="pre">int</span></code> eru aukastafir skornir af en með <code class="docutils literal notranslate"><span class="pre">round</span></code> eru tölur
+hækkaðar eða lækkaðar eftir því hvort aukastafirnir eru &gt; 0.5 eða &lt; 0.5.
+Ef aukastafir eru = 0.5 er valin næsta slétta tala: 2.5 → 2 og 3.5 → 4.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Prófun almennra falla</p>
+<ol class="arabic simple">
+<li><p>Opnið vinnubók og prófið öll þessi föll. Látið t.d. x = –3,
+y = 2.7, s = &quot;abc&quot; og finnið |x|, max(x,y), min(x,y), float(x),
+int(y), range(4), len(s) og type(s).</p></li>
+<li><p>Skoðið muninn á því sem <code class="code docutils literal notranslate"><span class="pre">print(type(s))</span></code> og <code class="code docutils literal notranslate"><span class="pre">display(type(s)</span></code> birta.</p></li>
+</ol>
+</div>
+<p class="rubric">Helstu stærðfræðiföll og fastar</p>
+<p>Til að virkja innbyggð stærðfræðiföll í Python þarf að flytja inn sérstakt fallasafn eða einingu, <code class="docutils literal notranslate"><span class="pre">math</span></code> með því að skrifa fremst í forritinu:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code></p>
+</div></blockquote>
+<p>og svo þarf að setja <code class="code docutils literal notranslate"><span class="pre">math.</span></code> framan við fallsnafnið þar sem fallið er
+notað, t.d. mundi</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>reikna og prenta út <span class="math notranslate nohighlight">\(\sin \pi/6\)</span> (sem er 0.5). Svo er líka hægt að skrifa</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">nafn,</span> <span class="pre">nafn...</span></code></p>
+</div></blockquote>
+<p>þar sem nafn, nafn… eru stærðfræðiföll eða -fastar, og þá þarf ekki að setja
+<code class="docutils literal notranslate"><span class="pre">math.</span></code> framan við nöfnin. Önnur leið til að reikna <span class="math notranslate nohighlight">\(\sin \pi/6\)</span> er sem sé:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Hér er upptalning á helstu innbyggðum stærðfræðiföllum og -föstum:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">tan</span><span class="p">,</span> <span class="n">asin</span><span class="p">,</span> <span class="n">acos</span><span class="p">,</span> <span class="n">atan</span>  <span class="c1"># Hornaföll í radíönum</span>
+<span class="n">atan2</span>                            <span class="c1"># Arctan fyrir pólhnit, Sjá verkefni :numref:`pólhnit`</span>
+<span class="n">exp</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">log2</span><span class="p">,</span> <span class="n">log10</span><span class="p">,</span> <span class="n">sqrt</span>      <span class="c1"># Vísisfall, lograr og kvaðratrót</span>
+<span class="n">pi</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">inf</span><span class="p">,</span> <span class="n">nan</span>                  <span class="c1"># (stærðfræði)fastar</span>
+<span class="n">radians</span><span class="p">,</span> <span class="n">degrees</span>                 <span class="c1"># breytt úr gráðum í radíana og öfugt</span>
+</pre></div>
+</div>
+<p>Ath. að <code class="docutils literal notranslate"><span class="pre">log(x)</span></code> gefur náttúrulegan logra (lógaritma), sem oft er táknaður ln(x).</p>
+<p>Sjá nánar í <a class="reference external" href="https://docs.python.org/3/library/math.html">Python hjálpinni</a>,
+og ýmis dæmi í þessum fyrirlestrarnótum, t.d. sýnidæmið hér næst, „Ósamsett trapisuregla“ í kafla <a class="reference internal" href="#fallbreytur"><span class="std std-numref">4.9</span></a>, „Rætur og veldi“ í kafla
+<a class="reference internal" href="#for-lykkjur"><span class="std std-numref">4.10.2</span></a> og <a class="reference internal" href="../verkefni/#polhnit"><span class="std std-numref">verkefni 8</span></a> aftast í nótunum.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Regla Herons</p>
+<p>Flatarmál þríhyrnings með hliðarlengdir <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> og <span class="math notranslate nohighlight">\(c\)</span> er
+gefið með reglu Herons:</p>
+<div class="math notranslate nohighlight">
+\[F = \sqrt{s(s-a)(s-b)(s-c)}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(s\)</span> er hálft ummál þríhyrningsins, <span class="math notranslate nohighlight">\(s=\dfrac{a+b+c}{3}\)</span>.
+Hér er Python-forrit sem reiknar flatarmál þríhyrnings með hliðarlengdir
+3, 4 og 5 (auðvelt er að sjá að það á að koma út 6):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">c</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Flatarmálið er </span><span class="si">{</span><span class="n">F</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Sveiflutími gorms</p>
+<figure class="align-center" style="width: 10cm">
+<img alt="../_images/gormakerfi.png" src="../_images/gormakerfi.png" />
+</figure>
+<p>Á myndinni er gormakerfi: Hlutur með massa <span class="math notranslate nohighlight">\(m\)</span> hvílir á fleti án
+núningsmótstöðu og er festur við veggina með gormum með stífnifasta
+<span class="math notranslate nohighlight">\(k_1\)</span> og <span class="math notranslate nohighlight">\(k_2\)</span>. Eiginsveiflutími kerfisins verður</p>
+<div class="math notranslate nohighlight">
+\[T = 2\pi\sqrt{\frac{m}{k_1+k_2}}\]</div>
+<ol class="arabic simple">
+<li><p>Skrifið fall <code class="code docutils literal notranslate"><span class="pre">sveifla(m,k1,k2)</span></code> sem reiknar sveiflutímann. Pí fæst
+með <code class="code docutils literal notranslate"><span class="pre">math.pi</span></code>.</p></li>
+<li><p>Skrifið forrit sem prófar fallið með m = 2, k1 = 3 og k2 = 4, og skrifar
+út sveiflutímann á sniðinu <cite>T = x.xxx</cite> (með f-streng).</p></li>
+</ol>
+</div>
+</section>
+<section id="fallbreytur">
+<h2><span class="section-number">4.9  </span>Fallbreytur<a class="headerlink" href="#fallbreytur" title="Permalink to this heading"></a></h2>
+<p>Breytur geta tekið gildi sem eru föll: <code class="code docutils literal notranslate"><span class="pre">def</span> <span class="pre">fall:</span> <span class="pre">...</span></code> og neðar: <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">fall</span></code> eins og eftirfarandi dæmi sýnir.</p>
+<blockquote>
+<div><div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Bulla tvisvar</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gera_tvisvar</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;framkvæmir f tvisvar&#39;&#39;&#39;</span>
+    <span class="n">f</span><span class="p">()</span>
+    <span class="n">f</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">bulla</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;skrifar &quot;bull&quot;&#39;&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bull&quot;</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">bulla</span>         <span class="c1"># b er fallbreyta</span>
+<span class="n">gera_tvisvar</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>   <span class="c1"># prentar bull tvisvar</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+<p>Meðal þess sem hægt er að nota fallbreytur í er ýmis vinna með stærðfræðiföll, til
+dæmis að teikna þau, finna heildi (<em>integrals</em>) eða leysa jöfnur. Segjum til
+dæmis að við viljum reikna heildið:</p>
+<div class="math notranslate nohighlight">
+\[(*)\hspace{4cm}\int_1^2\frac{\sin(x)}{x} dx\hspace{4cm}\]</div>
+<p>Þetta heildi er ekki hægt að reikna með venjulegum aðferðum stærðfræðigreiningar
+en hinsvegar er auðvelt að reikna það tölulega, t.d. með svonefndri
+<a class="reference external" href="https://en.wikipedia.org/wiki/Trapezoidal_rule">trapisureglu</a>, sem nálgar
+heildið með flatarmáli trapisu, nánar tiltekið:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b{f(x)dx} \approx \frac{(b-a)(f(a) + f(b))}{2}\]</div>
+<p>Það væri hægt að skrifa Python-fall til að reikna <span class="math notranslate nohighlight">\((*)\)</span> með
+trapisureglu, en ef við vildum reikna eitthvað annað heildi þyrfti að skrifa
+nýtt fall. Með því að nota fallbreytu er hægt að forrita trapisureglu í eitt
+skipti fyrir öll Í Python, eins og hér er sýnt:</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Ósamsett trapisuregla</p>
+<p>Í þessu dæmi er heildið <span class="math notranslate nohighlight">\((*)\)</span> nálgað með ósamsettri trapisureglu og einnig heildið
+<span class="math notranslate nohighlight">\(\int_0^1 h(x)dx\)</span> þar sem <span class="math notranslate nohighlight">\(h(x)=e^x\)</span>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trap1</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;heildi f frá a til b með ósamsettri trapisureglu&#39;&#39;&#39;</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">I</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">e</span>
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span>
+<span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">e</span><span class="o">**</span><span class="n">x</span>
+
+<span class="n">I1</span> <span class="o">=</span> <span class="n">trap1</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">I2</span> <span class="o">=</span> <span class="n">trap1</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;I1=</span><span class="si">{</span><span class="n">I1</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, I2=</span><span class="si">{</span><span class="n">I2</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="c1"># prentar &quot;I1=0.648, I2=1.859&quot;</span>
+</pre></div>
+</div>
+<p>Nákvæm gildi á þessum heildum eru I1 = 0.659 og I2 = 1.718. Takið
+eftir að hægt er að skilgreina einföld föll á einni línu.</p>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Tvær trapisur</p>
+<p>Betri nálgun á heildi fæst með því að nota tvær trapisur:</p>
+<p><span class="math notranslate nohighlight">\(\qquad\displaystyle\int_a^b{f(x)dx} \approx\)</span>
+<code class="code docutils literal notranslate"><span class="pre">trap1(f,a,m)</span> <span class="pre">+</span> <span class="pre">trap1(f,m,b)</span></code></p>
+<p>þar sem <span class="math notranslate nohighlight">\(m\)</span> er miðpunktur bilsins; <span class="math notranslate nohighlight">\(m = \dfrac{a+b}{2}\)</span>. Skrifið
+fall <code class="code docutils literal notranslate"><span class="pre">trap2</span></code> sem útfærir slíka reglu með því að kalla tvisvar á <code class="code docutils literal notranslate"><span class="pre">trap1</span></code> og
+prófið með því að nálga sömu heildi og í sýnidæminu. Ef rétt er forritað fást
+nú gildin I1 = 0.657 og I2 = 1.754.</p>
+</div>
+</section>
+<section id="styriskipanir">
+<h2><span class="section-number">4.10  </span>Stýriskipanir<a class="headerlink" href="#styriskipanir" title="Permalink to this heading"></a></h2>
+<p>Í kafla <a class="reference internal" href="#virka"><span class="std std-numref">4.7</span></a> var talað um að forrit keyri þannig að bendill færist
+niður eftir forritstextanum og bendi á næstu línu sem á að framkvæma, og hvernig
+þessi bendill stekkur á annan stað þegar kallað er á föll. Þetta er hinsvegar
+ekki eina leiðin til að flytja bendilinn, það er líka hægt með svonefndum
+<strong>stýriskipunum</strong> (<em>control statements</em>). Það eru tvær aðalgerðir af stýriskipunum
+<strong>ef-setningar</strong> (<em>if statement</em>) og <strong>lykkjuskipanir</strong> (<em>loop statement</em>).
+Við höfum þegar séð ef-setningar í Collatz-forritinu í kafla <a class="reference internal" href="../kafli02/#daemi-um-forrit"><span class="std std-numref">2</span></a>,
+og þar voru líka tvær gerðir af lykkjuskipunum, while-lykkjur og for-lykkjur.</p>
+<section id="ef-setningar">
+<h3><span class="section-number">4.10.1  </span>Ef-setningar<a class="headerlink" href="#ef-setningar" title="Permalink to this heading"></a></h3>
+<p>Hlutverk ef-setninga er að keyra mismunandi kafla forrits eftir því hvort
+tiltekið skilyrði er uppfyllt eða ekki. Ef-setningin er stundum kölluð
+<em>ef-þá-annars</em> (<em>if-then-else</em>) skipun því í mörgum forritunarmálum er orðið
+<em>then</em> notað á eftir skilyrðinu. Eins og sýnt var í kafla <a class="reference internal" href="../kafli02/#icollatz"><span class="std std-numref">2.4</span></a>
+er grunnsnið ef-setningar svona:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">skilyrði</span><span class="p">:</span>
+    <span class="n">skipun1</span>
+    <span class="n">skipun2</span>
+    <span class="o">...</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">skipun3</span>
+    <span class="n">skipun4</span>
+    <span class="o">...</span>
+<span class="n">skipun5</span>
+</pre></div>
+</div>
+<p>Ef skilyrðið er uppfyllt keyra skipanir 1 og 2 og svo fer bendillinn í skipun 5,
+en annars keyra skipanir 3 og 4 og svo áfram í númer 5. Kaflarnir sem
+ef-setningin stýrir eru inndregnir um eitt eða fleiri bil. Maður ræður hve
+mikill inndrátturinn er, en það þarf að draga allar línur hvers kafla jafnmikið
+inn. Svo er hægt að bæta við <em>elif</em> (stytting á <em>else if</em>) kafla eða köflum á
+undan else-kaflanum eins og næsta sýnidæmi sýnir:</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Notkun ef-setningar</p>
+<p>Þetta dæmi les aldur tveggja manna Jóns og Páls og athugar hvor er eldri.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ajons</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Aldur Jóns: &quot;</span><span class="p">))</span>
+<span class="n">apals</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Aldur Páls: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">ajons</span> <span class="o">&gt;</span> <span class="n">apals</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jón er eldri en Páll&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">ajons</span> <span class="o">==</span> <span class="n">apals</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jón og Páll eru jafngamlir&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Páll er eldri en Jón&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;–og hér heldur forritið áfram&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="for-lykkjur">
+<h3><span class="section-number">4.10.2  </span>For-lykkjur<a class="headerlink" href="#for-lykkjur" title="Permalink to this heading"></a></h3>
+<p>Til að keyra kafla í forriti aftur og aftur og uppfæra svonefnda <strong>stýribreytu</strong>
+(<em>control variable</em>) í hverri umferð með nýju gildi má nota for-lykkjur. Snið
+for-lykkju er:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">stýribreyta</span> <span class="ow">in</span> <span class="n">runa</span><span class="p">:</span>
+    <span class="n">skipun1</span>
+    <span class="n">skipun2</span>
+    <span class="o">...</span>
+<span class="n">skipun3</span>
+</pre></div>
+</div>
+<p>Hér er <code class="code docutils literal notranslate"><span class="pre">runa</span></code> einhver Python-aðferð til að búa til endanlega runu
+(<em>sequence</em>) af gildum sem stýribreytan fær. Skipanir 1 og 2 keyra jafn oft og
+lengd rununnar er, og í hverri umferð fær breytan næsta gildi rununnar. Að því
+loknu er haldið áfram með skipun 3. Algengasta aðferðin til að búa til rununa er
+að nota range-fallið, sbr. Collatz-forritið og næsta sýnidæmi. Hér eru helstu
+möguleikar á range fallinu:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>       <span class="n">runan</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+<span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>     <span class="n">runan</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+<span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>  <span class="n">runan</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span>
+<span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="n">runan</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Rætur og veldi</p>
+<p>Eftirfarandi forrit reiknar kvaðratrætur og önnur veldi talnanna 2, 3, 4 og
+5. Það sýnir notkun á nokkrum atriðum sem fjallað hefur verið um hér á undan.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x     √x     x²&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;―――――――――――――――&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s1">2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fallið prentar út eftirfarandi töflu</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>x     √x     x²
+―――――――――――――――
+2   1.4142    4
+3   1.7321    9
+4   2.0000   16
+5   2.2361   25
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: <em>Range</em> og breytilegur aukastafafjöldi</p>
+<p>Sláið forritið í sýnidæminu hér á undan inn í vinnubók (eða
+afritið það). Prófið svo að breyta forritinu með því að:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Sleppa 2, í range kallinu</p></li>
+<li><p>Nota <code class="code docutils literal notranslate"><span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">range(0,8,2)</span></code></p></li>
+<li><p>Láta n = 3 (á undan for-lykkjunni) og breyta .4f í .{n}f</p></li>
+</ol>
+</div></blockquote>
+<p>(Ath. að nota má V, &thinsp; ^2 og - í stað <em>unicode</em> táknanna √, &thinsp; ² og
+― ef maður vill)</p>
+</div>
+</section>
+<section id="while-lykkjur">
+<h3><span class="section-number">4.10.3  </span>While-lykkjur<a class="headerlink" href="#while-lykkjur" title="Permalink to this heading"></a></h3>
+<p>Stundum þarf enga stýribreytu, heldur er eðlilegra að halda áfram að endurtaka
+meðan tiltekið skilyrði er uppfyllt. Gott dæmi um þetta er í forritinu Collatz,
+þar sem haldið er áfram meðan ný tala í rununni er stærri en 1. Eins og þar
+sást er snið while-lykkju svona:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">skilyrði</span><span class="p">:</span>
+    <span class="n">skipun1</span>
+    <span class="n">skipun2</span>
+    <span class="o">...</span>
+<span class="n">skipun3</span>
+</pre></div>
+</div>
+<p>Næsta æfing gefur síðan klassíska og nokkuð ítarlega notkun á while-lykkju. Það
+gefur líka innsýn inn í hugtakið reiknirit (<em>algorithm</em>) sbr. athugasemdina
+aftan við sýnidæmið.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Reiknirit Evklíðs</p>
+<p>Reiknirit Evklíðs er notað til að finna stærsta samþátt (<em>greatest common
+divisor</em>) tveggja talna <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>, sem oft er táknaður
+<span class="math notranslate nohighlight">\(\gcd(x,y)\)</span>. Til dæmis er <span class="math notranslate nohighlight">\(\gcd(9,15) = 3\)</span> því 3 er stærsta talan
+sem gengur upp í bæði 9 og 15. Skoðið stuttlega
+<a class="reference external" href="https://en.wikipedia.org/wiki/Euclidean_algorithm">Wikipediugreinina</a> um
+reikniritið. Hér er lýsing á því í orðum: „Deilið minni tölunni í þá stærri.
+Ef afgangurinn er ekki núll verður hann nýr deilir og minni talan verður nýr
+deilistofn. Svo er deilt aftur og aftur þar til deilingin gengur upp. Stærsti
+samþátturinn er síðasti jákvæði afgangurinn.“</p>
+<ol class="arabic simple">
+<li><p>Hvað er þetta reiknirit gamalt?</p></li>
+<li><p>Nefnið a.m.k. eitt notkunarsvið þess nú á tímum.</p></li>
+<li><p>Reiknið <span class="math notranslate nohighlight">\(\gcd(102,27)\)</span> með blaði og blýanti.</p></li>
+<li><p>Wikipedia er með nokkrar útfærslur reikniritsins á blendingsmáli í
+<a class="reference external" href="https://en.wikipedia.org/wiki/Euclidean_algorithm#Implementations">Implementations</a>.
+Þýðið þá fyrstu yfir í Python og prófið. Setjið inn print-skipun til að
+skoða alla afgangana sem fást.</p></li>
+</ol>
+</div>
+<p><br></p>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd: Reiknirit og Python</p>
+<p><strong>Reiknirit</strong> er endanleg runa af skipunum sem hægt er að þýða yfir í
+tölvuforrit. Reiknirit eru venjulega notuð til að leysa ákveðin verkefni og
+þau eru alltaf ótvíræð. Reiknirit eru of skrifuð í blendingsmáli
+(<em>pseudocode</em>), en það er frjálsleg lýsing á tölvureikningum, þar sem blandað
+er saman forritsskipunum, lýsingu skrefa á íslensku (eða ensku) og
+stærðfræðiformúlum (sbr. <a class="reference external" href="https://en.wikipedia.org/wiki/Ford–Fulkerson_algorithm#Algorithm">þetta</a>).
+Forritsskipanirnar mega vera á íslensku og svolítið frjálslegar, og
+stærðfræðiformúlurnar mega vera allflóknar, t.d. með brotastrikum og summum.
+Ef borin eru saman forrit í Python, forrit í ýmsum öðrum forritunarmálum, og
+reiknirit á blendingsmáli (t.d. á Wikipediu) sést að Python minnir um margt á
+sum þessara reiknirita.</p>
+</div>
+</section>
+<section id="skipanirnar-continue-og-break">
+<h3><span class="section-number">4.10.4  </span>Skipanirnar <em>continue</em> og <em>break</em><a class="headerlink" href="#skipanirnar-continue-og-break" title="Permalink to this heading"></a></h3>
+<p>Inni í lykkjum er hægt að nota tvær skipanir í viðbót til að færa
+keyrslubendilinn sem talað var um í byrjun kaflans, <code class="code docutils literal notranslate"><span class="pre">continue</span></code> sem
+hleypur yfir afgang lykkjukaflans og byrjar strax á næstu umferð, og svo er
+<code class="code docutils literal notranslate"><span class="pre">break</span></code> notað til að brjótast strax út úr lykkjunni og halda áfram
+með næstu skipun á eftir henni. Af þessum tveimur er <code class="code docutils literal notranslate"><span class="pre">break</span></code> meira
+notuð. Með henni er hægt að láta for-lykkju herma eftir while-lykkju, svona:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">99999999</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">skilyrði</span><span class="p">:</span> <span class="k">break</span>
+    <span class="n">skipun1</span>
+    <span class="n">skipun2</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Hér þarf að passa að velja nógu stóra tölu í range-fallinu.</p>
+</section>
+</section>
+<section id="skilyrt-gildi">
+<h2><span class="section-number">4.11  </span>Skilyrt gildi<a class="headerlink" href="#skilyrt-gildi" title="Permalink to this heading"></a></h2>
+<p>Í stærðfræði er hægt að skilgreina breytur og föll með svonefndum gaffalformúlum,
+þar sem gildið sem breytan eða fallið fær fer eftir tilteknu skilyrði. Hér er dæmi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) =
+\begin{cases} x^2 &amp; \text{ef } x &lt; 1 \\ 2x - 1 &amp; \text{annars}
+\end{cases}\end{split}\]</div>
+<p>Svona skilgreiningu má búa til í Python með svonefndu <strong>skilyrtu gildi</strong> (<em>conditional
+expression</em>). Skipunin:</p>
+<blockquote>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">segð1</span> <span class="k">if</span> <span class="n">skilyrði</span> <span class="k">else</span> <span class="n">segð2</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>jafngildir:</p>
+<blockquote>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">skilyrði</span><span class="p">:</span>
+   <span class="n">x</span> <span class="o">=</span> <span class="n">segð1</span>
+<span class="k">else</span>
+   <span class="n">x</span> <span class="o">=</span> <span class="n">segð2</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Til dæmis mætti reikna tölugildi með <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">-x</span> <span class="pre">if</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">0</span> <span class="pre">else</span> <span class="pre">x</span></code>. Í Java og C er
+hægt að búa til svona gildi með <code class="code docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">skilyrði</span> <span class="pre">?</span> <span class="pre">segð1</span> <span class="pre">:</span> <span class="pre">segð2</span></code> og
+tölugildið fengist með <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">1</span> <span class="pre">?</span> <span class="pre">-x</span> <span class="pre">:</span> <span class="pre">x</span></code>.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Gaffalformúla</p>
+<p>Búið til Python fall til að reikna fallið <span class="math notranslate nohighlight">\(f(x)\)</span> sem skilgreint er með
+gaffalformúlunni hér að ofan. Notið skilyrt gildi. Prófið að reikna
+<span class="math notranslate nohighlight">\(f(0)\)</span>, og <span class="math notranslate nohighlight">\(f(3)\)</span> (sem ætti að gefa 0 og 5).</p>
+</div>
+</section>
+<section id="lokaaefingin">
+<h2><span class="section-number">4.12  </span>Lokaæfingin<a class="headerlink" href="#lokaaefingin" title="Permalink to this heading"></a></h2>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Kynning á vinnubókum II</p>
+<p>Í vinnubókinni <a class="reference internal" href="../kafli03/#jupyter-aefing"><span class="std std-ref">kynning.ipynb</span></a> sem náð var í í Æfingu
+aftan við kafla <a class="reference internal" href="../kafli03/#jupyter-leibein-a-netinu"><span class="std std-numref">3.7</span></a> er hægt að prófa mörg af
+þeim Python-atriðum sem lýst hefur verið í þessum <a class="reference internal" href="#grunn-python"><span class="std std-numref">4</span></a>.
+kafla og æfa sig í þeim. Opnið þessa bók í Colab og fylgið leiðbeiningum í
+henni.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli03/" class="btn btn-neutral float-left" title="3 Umhverfi fyrir Python: Jupyter og Colab" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli05/" class="btn btn-neutral float-right" title="5 Söfn: Eitt nafn en mörg gildi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

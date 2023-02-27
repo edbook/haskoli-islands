@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Ályktunartölfræði &mdash; R frá Grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="7. Ályktanir um flokkabreytur" href="../kafli07/" />
+    <link rel="prev" title="5. Líkindafræðileg undirstaða" href="../kafli05/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            R frá Grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Ályktunartölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#slembiurtok-valin">6.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">6.1.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sample">6.1.1.1. sample()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar">6.2. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">6.2.1. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#replicate">6.2.1.1. replicate()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oryggisbil-reikna-me-endurvalsafer">6.3. Öryggisbil reiknað með endurvalsaðferð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">6.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Einþátta fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_R_leiksvaedi/">Um R leiksvæði</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">R frá Grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Ályktunartölfræði</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli06.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="alyktunartolfraei">
+<span id="c-alyktunartolfraedi"></span><h1><span class="section-number">6. </span>Ályktunartölfræði<a class="headerlink" href="#alyktunartolfraei" title="Permalink to this heading"></a></h1>
+<p>Góð leið til að átta sig á líkindadreifingum gagna er með hermunum. Í
+þessum kafla munum við annars vegar fjalla um hvernig velja má
+<em>slembiúrtök</em> í R og hins vegar fjalla um <em>endurvalsaðferðir</em>.
+Endurvalsaðferðir eru geysilega öflugar aðferðir sem nota má til að
+reikna öryggisbil og framkvæma tilgátupróf fyrir nánast hvaða lýsistærð
+sem er og byggja margar gerðir af útreiknuðum öryggisbilum í R á slíkum
+aðferðum. Í kafla <a class="reference internal" href="#s-slembiurtak"><span class="std std-numref">6.1</span></a> lýsum við hvernig nota má
+skipunina <code class="docutils literal notranslate"><span class="pre">sample()</span></code> til að velja slembiúrtök. Í kafla
+<a class="reference internal" href="#s-urtaksdreifing"><span class="std std-numref">6.2</span></a> kynnumst við skipuninni <code class="docutils literal notranslate"><span class="pre">replicate()</span></code> og sýnum
+með henni fram á virkni höfuðsetningar tölfræðinnar. Að því loknu notum
+við sömu skipun til að reikna öryggisbil í kafla <a class="reference internal" href="#s-oryggisbil"><span class="std std-numref">6.3</span></a>.</p>
+<section id="slembiurtok-valin">
+<span id="s-slembiurtak"></span><h2><span class="section-number">6.1. </span>Slembiúrtök valin<a class="headerlink" href="#slembiurtok-valin" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">6.1.1. </span>Slembiúrtök valin<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<section id="sample">
+<h4><span class="section-number">6.1.1.1. </span>sample()<a class="headerlink" href="#sample" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á vigri og stærð úrtaks</p>
+<p><strong>Úttak:</strong> úrtak</p>
+<p><strong>Helstu stillingar:</strong> replace, prob</p>
+</div>
+<hr class="docutils" />
+<p>R býr yfir skemmtilegri skipun sem við getum bæði notað til að velja
+úrtak úr endanlegu þýði en einnig til að líkja eftir slembnu fyrirbæri
+sem er mælt aftur og aftur. Það er skipunin <code class="docutils literal notranslate"><span class="pre">sample()</span></code>. Skipunin er
+mötuð með tvennu, annars vegar vigri sem inniheldur þýðið okkar (allar
+mögulegar útkomur) sem við viljum velja úr og hins vegar heildarfjölda
+þeirra mælinga sem við viljum safna (stærð úrtaksins). Gætið þess að
+gefa fyrst útkomumengið og svo fjölda mælinga. Í hjálpinni sjáum við
+líka að <code class="docutils literal notranslate"><span class="pre">sample()</span></code> hefur tvo stillingamöguleika, <code class="docutils literal notranslate"><span class="pre">replace</span></code> og
+<code class="docutils literal notranslate"><span class="pre">prob</span></code>. Sjálfgefnu stillingarnar eru <code class="docutils literal notranslate"><span class="pre">replace=FALSE</span></code> og
+<code class="docutils literal notranslate"><span class="pre">prob=NULL</span></code>.</p>
+<p>Við munum ekki nota stillingarmöguleikann <code class="docutils literal notranslate"><span class="pre">prob</span></code> mikið en hann segir
+til um líkurnar á því að hvert og eitt gildi í vigrinum sé valið.
+Sjálfgefna stillingin er að allar útkomurnar séu jafnlíklegar sem er
+yfirleitt það sem við viljum.</p>
+<p>Stillingarmöguleikann <code class="docutils literal notranslate"><span class="pre">replace</span></code> munum við hins vegar nota. Sjálfgefna
+stillingin (<code class="docutils literal notranslate"><span class="pre">replace=FALSE</span></code>) gefur til kynna að valið sé án skila eins
+og það er kallað. Það þýðir að um leið og ein útkoma hefur verið valin
+þá getur hún ekki verið valin aftur. Þessa stillingu myndum við t.d.
+nota ef við vildum velja ákveðinn fjölda viðfangsefna úr endanlegu þýði.
+Látum til gamans útkomumengið okkar vera jólasveinana 13. Við búum til
+vigurinn <code class="docutils literal notranslate"><span class="pre">jolasveinar</span></code> sem inniheldur heiti allra jólasveinanna með
+skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">jolasveinar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Stekkjastaur&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Giljagaur&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Stufur&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Thvorusleikir&quot;</span><span class="p">,</span>
+<span class="s">&quot;Pottaskefill&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Askasleikir&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hurdaskellir&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Skyrgamur&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bjugnakraekir&quot;</span><span class="p">,</span>
+<span class="s">&quot;Gluggagaegir&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Gattathefur&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Ketkrokur&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Kertasnikir&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Takið eftir því hvernig við setjum gæsalappir utanum nafnið á hverjum
+einasta jólasveini. Þær mega ekki gleymast því þá gefur R villu.
+Skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sample</span><span class="p">(</span><span class="n">jolasveinar</span><span class="p">,</span><span class="m">4</span><span class="p">)</span>
+<span class="c1">## [1] &quot;Stufur&quot;       &quot;Hurdaskellir&quot; &quot;Stekkjastaur&quot; &quot;Gattathefur&quot;</span>
+</pre></div>
+</div>
+<p>velur fjögur ólík gildi úr vigrinum <code class="docutils literal notranslate"><span class="pre">jolasveinar</span></code> af handahófi,
+þ.e.a.s. velur fjóra ólíka jólasveina af handahófi. Skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sample</span><span class="p">(</span><span class="n">jolasveinar</span><span class="p">,</span><span class="m">14</span><span class="p">)</span>
+<span class="c1">## Error in sample.int(length(x), size, replace, prob): cannot take a</span>
+<span class="c1">## sample larger than the population when ’replace = FALSE’</span>
+</pre></div>
+</div>
+<p>gefur hins vegar villu, því jólasveinarnir eru bara 13 og því enginn
+möguleiki að velja 14 ólíka jólasveina. Ef við notum stillinguna
+<code class="docutils literal notranslate"><span class="pre">replace=TRUE</span></code> og gefum skipunina</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sample</span><span class="p">(</span><span class="n">jolasveinar</span><span class="p">,</span><span class="m">14</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="c1">##  [1] &quot;Giljagaur&quot;     &quot;Thvorusleikir&quot; &quot;Pottaskefill&quot;  &quot;Stekkjastaur&quot;</span>
+<span class="c1">##  [5] &quot;Stufur&quot;        &quot;Thvorusleikir&quot; &quot;Stekkjastaur&quot;  &quot;Stufur&quot;</span>
+<span class="c1">##  [9] &quot;Bjugnakraekir&quot; &quot;Stufur&quot;        &quot;Gluggagaegir&quot;  &quot;Giljagaur&quot;</span>
+<span class="c1">## [13] &quot;Stekkjastaur&quot;  &quot;Gattathefur&quot;</span>
+</pre></div>
+</div>
+<p>lendum við hins vegar í engum vandræðum, því þá megum við velja sama
+jólasveininn aftur og aftur. Þessa stillingu er kjörið að nota þegar við
+viljum líkja eftir slembnu fyrirbæri sem er mælt aftur og aftur. Til
+dæmis má gefa skipanirnar</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">krona</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;thorskur&quot;</span><span class="p">,</span><span class="s">&quot;landvaettir&quot;</span><span class="p">)</span>
+<span class="nf">sample</span><span class="p">(</span><span class="n">krona</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="c1">## [1] &quot;landvaettir&quot; &quot;landvaettir&quot; &quot;thorskur&quot;    &quot;thorskur&quot;</span>
+</pre></div>
+</div>
+<p>til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.</p>
+<p>Við getum að sjálfsögðu matað sample með nafni á breytu sem tilheyrir
+gagnafölu. Viljum við t.d. velja handahófskennt 10 hæðarmælingar úr puls
+gögnunum okkar gerum við það með</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sample</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="m">10</span><span class="p">)</span>
+<span class="c1">##  [1] 160 188 180 160 162 164 174 170 180 165</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar">
+<span id="s-urtaksdreifing"></span><h2><span class="section-number">6.2. </span>Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar<a class="headerlink" href="#endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">6.2.1. </span>Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<section id="replicate">
+<h4><span class="section-number">6.2.1.1. </span>replicate()<a class="headerlink" href="#replicate" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> fjöldi hermana, fall sem skal beita í hverri hermun</p>
+<p><strong>Úttak:</strong> fylki með einn dálk fyrir útkomu hverrar hermunar</p>
+<p><strong>Helstu stillingar:</strong></p>
+</div>
+<hr class="docutils" />
+<p>Aðferðin <code class="docutils literal notranslate"><span class="pre">replicate()</span></code> endurtekur það fall sem við mötum hana með eins
+oft og við biðjum hana um.</p>
+<p><em>Höfuðsetning tölfræðinnar</em> (e. the central limit theorem) segir að sé
+úrtaksdreifing meðaltals slembistærðar fylgi normaldreifingu ef
+meðaltalið byggir á nægjanlega mörgum mælingum, óháð því hver upphaflega
+dreifing slembistærðarinnar var. Gott dæmi um hana má sjá með því að
+skoða breytuna <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code> sem lýsir hversu marga klukkutíma í viku
+nemendur stunda líkamsrækt. Byrjum á því að skoða stuðlarit af
+breytunni.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puls</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">likamsraekt</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../_images/unnamed-chunk-171-1.svg" src="../_images/unnamed-chunk-171-1.svg" /></figure>
+<p>Á stuðlaritinu sést að líkindadreifing breytunnar <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code> er
+langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
+útlaga til hægri að auki. Hins vegar er <em>meðaltal</em> líkamsræktar
+normaldreift, sé tekið meðaltal af nægjanlega mörgum mælingum. Með
+skipuninni <code class="docutils literal notranslate"><span class="pre">replicate()</span></code> getum við framkvæmt 1000 „gervitilraunir“
+þar sem við veljum slembiúrtak af stærð 100 úr þýði upprunalegu
+mælinganna okkar:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">endurvalsurtak</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">replicate</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="n">replace</span><span class="o">=</span><span class="bp">T</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Útkoman er fylki með 1000 dálka, einn fyrir hverja gervitilraun og 100
+línur, eina fyrir hverja útkomu í hverri gervitilraun.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">endurvalsurtak</span><span class="p">)</span>
+<span class="c1">## [1]  100 1000</span>
+</pre></div>
+</div>
+<p>Með skipuninni <code class="docutils literal notranslate"><span class="pre">apply()</span></code> getum við svo reiknað meðaltal líkamsræktar
+fyrir hverja og eina gervitilraun</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">medaltol</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="n">endurvalsurtak</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>og eins og sjá má á stuðlariti meðaltalanna, eru þau ansi nálægt því að
+vera normaldreifð:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">medaltol</span><span class="p">),</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">medaltol</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">geom_histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../_images/unnamed-chunk-175-1.svg" src="../_images/unnamed-chunk-175-1.svg" /></figure>
+<p>Athugið að hér er lykilatriði að nægjanlega mörg viðfangsefni séu valin
+í hverju og einu gerviúrtaki. Sé eingöngu valið gerviúrtak af stærð 3 í
+hvert skipti er útkoman langt frá því að vera normaldreifð, eins og sjá
+má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">litid.endurvalsurtak</span><span class="w"> </span><span class="o">&lt;-</span>
+<span class="nf">replicate</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="n">replace</span><span class="o">=</span><span class="bp">T</span><span class="p">))</span>
+
+<span class="n">ny.medaltol</span><span class="w"> </span><span class="o">&lt;-</span>
+<span class="nf">apply</span><span class="p">(</span><span class="n">litid.endurvalsurtak</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">ny.medaltol</span><span class="p">),</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">ny.medaltol</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="nf">geom_histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="../_images/unnamed-chunk-176-1.svg" src="../_images/unnamed-chunk-176-1.svg" /></figure>
+</section>
+</section>
+</section>
+<section id="oryggisbil-reikna-me-endurvalsafer">
+<span id="s-oryggisbil"></span><h2><span class="section-number">6.3. </span>Öryggisbil reiknað með endurvalsaðferð<a class="headerlink" href="#oryggisbil-reikna-me-endurvalsafer" title="Permalink to this heading"></a></h2>
+<p>Gerviúrtökin sem fengust með skipuninni <code class="docutils literal notranslate"><span class="pre">replicate()</span></code> má einnig nota
+til að reikna öryggisbil fyrir meðaltal líkamsræktar. 95% öryggisbil er
+smíðað þannig að það innihaldi sanna gildið á stikanum í 95% tilvika ef
+tilraunin er endurtekin nægjanlega oft. Við getum notað metnu meðaltölin
+úr gervitilraununum 1000 til að áætla hvaða útkomur væru mögulegar ef að
+tilraunin væri endurtekin. 95% öryggisbil fæst þá með því að einfaldlega
+reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">quantile</span><span class="p">(</span><span class="n">medaltol</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.025</span><span class="p">,</span><span class="w"> </span><span class="m">0.975</span><span class="p">))</span>
+<span class="c1">##     2.5%    97.5%</span>
+<span class="c1">## 3.825000 5.255003</span>
+</pre></div>
+</div>
+<p>95% öryggisbilið er því <span class="math">\([3.825, 5.2550026 ]\)</span>.</p>
+</section>
+<section id="leiksvaei-fyrir-r-koa">
+<h2><span class="section-number">6.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
+<div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
+puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
+
+# Setjid ykkar eigin koda her fyrir nedan:
+# Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
+# asamt dalkarheitum.
+head(puls)</code></div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli05/" class="btn btn-neutral float-left" title="5. Líkindafræðileg undirstaða" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli07/" class="btn btn-neutral float-right" title="7. Ályktanir um flokkabreytur" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12. Knitr &mdash; R frá Grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="Orðalistar" href="../ordalistar/" />
+    <link rel="prev" title="11. Tvíkosta aðhvarfsgreining" href="../kafli11/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            R frá Grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Einþátta fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Knitr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#umbrot-a-texta">12.1. Umbrot á texta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#markdown-html-ea-docx">12.1.1. Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#latex-pdf-ast">12.1.2. LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#jofnur">12.2. Jöfnur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#klumpastillingar">12.3. Klumpastillingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">12.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_R_leiksvaedi/">Um R leiksvæði</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">R frá Grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12. </span>Knitr</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli12.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="knitr">
+<span id="c-knitr"></span><h1><span class="section-number">12. </span>Knitr<a class="headerlink" href="#knitr" title="Permalink to this heading"></a></h1>
+<p>Í kafla <a class="reference internal" href="../kafli01/#c-inngangur"><span class="std std-numref">1</span></a> er fjallað um hvernig við getum framkvæmt
+tölfræðiúrvinnslu með því að skrifa skipanir í skipanaskrá (.R). Ef við
+þurfum að skrifa skýrslu, grein eða annað þar sem úrvinnslunni og
+niðurstöðum hennar er lýst þyrftum við að færa niðurstöðuna inn í það
+umhverfi sem við kjósum að nota til að skrifa skýrsluna (Word,
+LibreOffice, LaTeX, …). Í því felst að afrita (e. copy) niðurstöður frá R
+og líma (e. paste) þær svo inn í viðkomandi ritvinnsluforrit. Ýmislegt
+getur farið úrskeiðis í því ferli.</p>
+<p>Pakkinn <code class="docutils literal notranslate"><span class="pre">knitr</span></code> gerir okkur kleift að prjóna saman texta, fagrar
+jöfnur og R-kóða í eitt og sama skjalið. Helsti kosturinn er að
+greiningin sem við erum að framkvæma fléttast inn í textann og óþarfi er
+að klippa og líma úttök, myndir og töflur úr R inn í annað
+ritvinnsluforrit. Annar stór kostur er að greiningin uppfærist
+sjálfkrafa þó svo að gögnin sem notast er við breytist, ekki þarf að
+endurgera töflur og myndir og líma þær á ný inn í skýrsluna.</p>
+<p>Áður en pakkinn er notaður þarf að hlaða honum niður með
+<code class="docutils literal notranslate"><span class="pre">install.packages()</span></code> eins og aðra pakka. Hér verður stiklað á stóru um
+notkun pakkans en lesa má meira um pakkann hér:</p>
+<p><a class="reference external" href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.</p>
+<p>Ef þið lendið í vandræðum með að sækja pakkann er sennilegt að þið séuð
+ekki með nýjustu útgáfuna af R og eða RStudio, þá þurfið þið að uppfæra
+útgáfurnar ykkar.</p>
+<p>Eins og kom fram hér að ofan er greiningin og skýrslan unnin í einu og
+sama skjalinu þegar unnið er með <code class="docutils literal notranslate"><span class="pre">knitr</span></code>. Það fer eftir því hvaða tæki
+og tól við viljum nota við umbrot á textanum og hvaða snið (format) við
+kjósum á skýrslunni okkar (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>, <code class="docutils literal notranslate"><span class="pre">.docx</span></code> eða <code class="docutils literal notranslate"><span class="pre">.html</span></code>) af hvaða
+gerð skjalið sem við vinnum í verður (<code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> eða <code class="docutils literal notranslate"><span class="pre">.Rnw</span></code>). Vinnulagið
+er svipað en í öllum tilvikum mun skjalið okkar samanstanda af haus
+(e. preamble), texta, R-klumpum (e. R-chunks) og mögulega jöfnum skrifaðar í
+LaTeX. R-kóði sem við viljum að sé keyrður þarf að vera í R-klumpum í
+skjalinu okkar, annars er litið á hann sem venjulegan texta. Þó er
+einnig er hægt að kalla á R-úttök í textann en hvernig að þessu er
+staðið fer eftir hvaða snið er valið.</p>
+<section id="umbrot-a-texta">
+<h2><span class="section-number">12.1. </span>Umbrot á texta<a class="headerlink" href="#umbrot-a-texta" title="Permalink to this heading"></a></h2>
+<p>Áður en vinnslan hefst er nauðsynlegt að ákveða hvaða tól eigi að nota
+við umbrot á texta og á hvaða sniði skýrslan á að vera. LaTeX notendur
+geta á auðveldan hátt prjónað saman LaTeX kóða og R-kóða en það er ekki
+nauðsynlegt að tileinka sér LaTeX til að nota <code class="docutils literal notranslate"><span class="pre">knitr</span></code>. Annar möguleiki
+er til staðar en það er að nota ívafsmálið (e. markup language) Markdown en
+það er mjög einfalt í notkun.</p>
+<section id="markdown-html-ea-docx">
+<h3><span class="section-number">12.1.1. </span>Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)<a class="headerlink" href="#markdown-html-ea-docx" title="Permalink to this heading"></a></h3>
+<p>Til að búa til nýja R-Markdown skrá í RStudio veljið <code class="docutils literal notranslate"><span class="pre">File</span></code>,
+<code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">File</span></code> og <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">Markdown</span></code>. Þar eruð þið beðin um að velja á hvaða
+sniði skýrslan á að vera. Ef <code class="docutils literal notranslate"><span class="pre">Word</span></code> er valið þarf Word að vera uppsett
+á vélinni. Ef <code class="docutils literal notranslate"><span class="pre">PDF</span></code> er valið þarf TeX að vera uppsett á vélinni.
+Ávallt er hægt að velja <code class="docutils literal notranslate"><span class="pre">HTML</span></code>. Til verður <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code>- skrá. Skráin sem
+opnast inniheldur sýnishorn af nokkrum skipunum sem þið getið eytt. Þið
+skuluð þó halda í hausinn, þar sem þið setjið inn nafnið ykkar og titil
+á skýrsluna. Gætið þess að breyta ekki hausnum of mikið eftirá, það gæti
+valdið villum sem orsaka það að skjalið keyrist ekki.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/knitr.png" />
+</figure>
+<p>Þegar <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skrá er opnuð í RStudio birtist <code class="docutils literal notranslate"><span class="pre">Knit</span> <span class="pre">HTML</span></code> eða
+<code class="docutils literal notranslate"><span class="pre">Knit</span> <span class="pre">Word</span></code> takki (í efri vinstra glugganum) eftir því hvaða snið var
+valið. Þegar ýtt er á takkann keyrast allar R-skipanir sem eru innan í
+R-klumpum nema annað sé sérstaklega tekið fram (sjá hér að neðan). Til
+verður <code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code> skjal sem ber sama heiti og <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code>
+skráin ykkar. Nýju skrána má finna í sömu möppu og <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skrána
+ykkar. Þið verðið að vista (e. save) <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skrána ykkar áður en þið ýtið
+á <code class="docutils literal notranslate"><span class="pre">Knit</span> <span class="pre">HTML</span></code> takkann. Ef eitthvað er ekki eins og það á að vera
+birtast rauð villuskilaboð í keyrslugluggann og ekki verður til
+<code class="docutils literal notranslate"><span class="pre">.html</span></code>/<code class="docutils literal notranslate"><span class="pre">.doc</span></code> - skjal. Skoðið villuskilaboðin, lagið villuna og
+ýtið svo aftur á <code class="docutils literal notranslate"><span class="pre">Knit</span></code> takkann.</p>
+<p>Eins og fram kom hér að ofan skrifum við R-kóða í klumpa. Við byrjum
+R-klump á <code class="docutils literal notranslate"><span class="pre">```{r}</span></code> svo skrifum við R-skipun/skipanir og til að loka
+klumpnum notum við <code class="docutils literal notranslate"><span class="pre">```</span></code>. Línurnar tvær má fá á auðveldan hátt með að
+velja <code class="docutils literal notranslate"><span class="pre">Chunks</span></code> og <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">chunks</span></code> eða halda niðri <code class="docutils literal notranslate"><span class="pre">Ctrl,</span> <span class="pre">Alt</span></code> og
+<code class="docutils literal notranslate"><span class="pre">I</span></code>. Hér er dæmigerður R-klumpur í <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skrá:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">```{r}</span>
+<span class="n">puls&lt;-read.table(&quot;pulsAll.csv&quot;,sep=&quot;;&quot;,header=T)</span>
+<span class="n">```</span>
+</pre></div>
+</div>
+<p>Þær R-skipanir sem eru í klumpum keyrast þegar ýtt er á <code class="docutils literal notranslate"><span class="pre">Knit</span></code> takkann
+nema annað sé tekið fram (sjá hér að neðan). Sé skipun ekki hluti af
+R-klump er litið á hana sem venjulegan texta. Úttök þeirra skipana sem
+eru í klumpunum birtast svo í skýrslunni (svo sem töflur og myndir).
+Hlutir sem er smíðaðir í klumpum verða ekki til í vinnusvæðinu okkar en
+til að búa þá til þar þurfum við að keyra þær skipanir á sama hátt og
+áður (með að halda niðri <kbd class="kbd docutils literal notranslate">⌘</kbd> + <kbd class="kbd docutils literal notranslate">⏎</kbd> á MacOs en <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">⏎</kbd> á Windows/linux). Einnig er hægt að
+keyra allar R-skipanirnar í einu með að velja <code class="docutils literal notranslate"><span class="pre">Chunks</span></code> og <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">All</span></code>.</p>
+<p>Það er líka hægt að að láta R reikna fyrir okkur og birta svarið inn í
+texta. Viljum við t.d. tilgreina gildið á meðalhæð einstaklinganna í
+<code class="docutils literal notranslate"><span class="pre">puls</span></code> gagnasafninu getum við skrifað eftirfarandi í <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skrána
+okkar:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Meðalhæð</span><span class="w"> </span><span class="n">einstaklinganna</span><span class="w"> </span><span class="n">er</span><span class="w"> </span><span class="n">`r mean(puls$haed)`</span>
+</pre></div>
+</div>
+<p>og útkoma <code class="docutils literal notranslate"><span class="pre">mean(puls$haed)</span></code> mun birtast í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu.</p>
+<p>Það er fyrir utan efni þessarar bókar að fjalla í smáatriðum um
+ívafsmálið Markdown. Aðeins verður fjallað um það helsta hér en við
+hvetjum ykkur til að skoða efni sem finna má á netinu.</p>
+<p>Fyrstu línurnar í <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skjali geta verið eftirfarandi:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
+<span class="n">title</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Skilaverkefni&quot;</span>
+<span class="n">author</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Sigrún Anna Bjarkadóttir - sigrunannabjarka@hi.is&quot;</span>
+<span class="n">output</span><span class="o">:</span><span class="w"> </span><span class="n">html_document</span>
+<span class="o">---</span>
+</pre></div>
+</div>
+<p>Þið ráðið hvort þið hafið dagsetninguna líka inni.</p>
+<p>Við notum myllumerki (#) til að tákna fyrirsagnir. Letrið minnkar með
+fleiri myllumerkjum:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Þetta verður mjög stór fyrirsögn</span>
+<span class="c1">## Þessi fyrirsögn verður minni</span>
+<span class="c1">### Þessi fyrirsögn verður enn minni</span>
+</pre></div>
+</div>
+<p>Auðvelt er að skáletra og feitletra orð:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>Þ<span class="n">etta</span><span class="w"> </span><span class="n">verður</span><span class="w"> </span><span class="n">skáletrað</span><span class="o">*</span><span class="w"> </span><span class="n">og</span><span class="w"> </span><span class="o">**</span>þ<span class="n">etta</span><span class="w"> </span><span class="n">verður</span><span class="w"> </span><span class="n">feitletrað</span><span class="o">**</span><span class="w"> </span><span class="n">en</span><span class="w"> </span>þ<span class="n">essi</span>
+<span class="n">texti</span><span class="w"> </span><span class="n">verður</span><span class="w"> </span><span class="n">hvorki</span><span class="w"> </span><span class="n">skáletraður</span><span class="w"> </span><span class="n">né</span><span class="w"> </span><span class="n">feitletraður.</span>
+</pre></div>
+</div>
+<p>Viljum við útbúa lista gerum við það svona:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Trallalallalaaa</span>
+
+<span class="o">-</span><span class="w"> </span>þ<span class="n">að</span><span class="w"> </span>þ<span class="n">arf</span><span class="w"> </span><span class="n">að</span><span class="w"> </span><span class="n">passa</span><span class="w"> </span><span class="n">að</span><span class="w"> </span>þ<span class="n">að</span><span class="w"> </span><span class="n">sé</span>
+<span class="o">-</span><span class="w"> </span><span class="n">auð</span><span class="w"> </span><span class="n">lína</span><span class="w"> </span><span class="n">fyrir</span><span class="w"> </span><span class="n">ofan</span><span class="w"> </span><span class="n">og</span><span class="w"> </span><span class="n">neðan...</span>
+
+<span class="n">Dúddiraríreiii.</span>
+</pre></div>
+</div>
+</section>
+<section id="latex-pdf-ast">
+<h3><span class="section-number">12.1.2. </span>LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math">\(^\ast\)</span><a class="headerlink" href="#latex-pdf-ast" title="Permalink to this heading"></a></h3>
+<p>Það er fyrir utan efni þessara bókar að kenna á LaTeX en finna má
+ógrynni af efni um LaTeX á netinu. Í þessum undirkafla er því gert ráð
+fyrir LaTeX kunnáttu.</p>
+<p>Áður en <code class="docutils literal notranslate"><span class="pre">knitr</span></code> kom á markaðinn mátti nota <code class="docutils literal notranslate"><span class="pre">Sweave</span></code> til að tvinna
+saman LaTeX og R-kóða. Það má vera að áður en R-LaTeX skrá er keyrð í
+fyrsta skipti þurfi að breyta stillingu í RStudio. Það er gert með að
+velja <code class="docutils literal notranslate"><span class="pre">Tools</span></code>, <code class="docutils literal notranslate"><span class="pre">Global</span> <span class="pre">Options</span></code> og í vinstri stikunni velja
+<code class="docutils literal notranslate"><span class="pre">Sweave</span></code> svo <code class="docutils literal notranslate"><span class="pre">Weave</span> <span class="pre">Rnw</span> <span class="pre">files</span> <span class="pre">using</span></code> og velja <code class="docutils literal notranslate"><span class="pre">knitr</span></code> - þetta þarf
+aðeins að gera einu sinni.</p>
+<p>Til að búa til nýja R-LaTeX skrá í RStudio veljið <code class="docutils literal notranslate"><span class="pre">File</span></code>, <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">File</span></code>
+og <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">Sweave</span></code>. Þá verður til <code class="docutils literal notranslate"><span class="pre">.Rnw</span></code> skrá. Í henni má finna lítinn
+haus (e. preamble) og enda (e. postamble). Hægt er að vinna með þennan haus
+eða líma þann haus sem þið eruð vön að nota inn í skjalið. Þið getið svo
+notað þær LaTeX skipanir sem þið eruð vön að nota en bætið svo við
+R-klumpum með greiningunni ykkar. R-klumparnir eru ekki á sama formi og
+þegar Markdown er notað.</p>
+<p>Við byrjum R-klump á <code class="docutils literal notranslate"><span class="pre">&lt;&lt;&gt;&gt;=</span></code> svo skrifum við R-skipun/skipanir og til
+að loka klumpnum skrifum við <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>. Línurnar tvær má fá á auðveldan hátt
+með að velja <code class="docutils literal notranslate"><span class="pre">Chunks</span></code> og <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">chunks</span></code> eða halda niðri
+<code class="docutils literal notranslate"><span class="pre">Ctrl,</span> <span class="pre">Alt</span></code> og <code class="docutils literal notranslate"><span class="pre">I</span></code>. Hér er dæmigerður R-klumpur í <code class="docutils literal notranslate"><span class="pre">.Rnw</span></code> skrá:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;&lt;&gt;&gt;=</span></code></p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">&lt;-</span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;pulsAll.csv&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;;&quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&#64;</span></code></p>
+<p>Líkt og þegar unnið er í Markdown er hægt að láta R reikna fyrir okkur
+og birta svarið inn í texta. Viljum við t.d. tilgreina gildið á meðalhæð
+einstaklinganna í <code class="docutils literal notranslate"><span class="pre">puls</span></code> gagnasafninu getum við skrifað eftirfarandi í
+<code class="docutils literal notranslate"><span class="pre">.Rnw</span></code> skrána okkar:</p>
+<p>Meðalhæð einstaklinganna er \Sexpr{mean(puls$haed)}</p>
+<p>og útkoma <code class="docutils literal notranslate"><span class="pre">mean(puls$haed)</span></code> mun birtast í <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> skjalinu.</p>
+</section>
+</section>
+<section id="jofnur">
+<h2><span class="section-number">12.2. </span>Jöfnur<a class="headerlink" href="#jofnur" title="Permalink to this heading"></a></h2>
+<p>Eins og fram kom hér að ofan er LaTeX kunnátta ekki nauðsynleg þegar
+unnið er með <code class="docutils literal notranslate"><span class="pre">knitr</span></code> pakkann en einn af styrkleikum LaTeX er hversu
+auðvelt er að skrifa stærðfræðitákn og hversu fögur útkoman verður. Þó
+ekki sé unnið með LaTeX snið er hægt að tvinna LaTeX jöfnur inn í Markup
+textann. Við sýnum aðeins eitt lítið dæmi hér fyrir neðan en hvetjum þá
+sem ekki hafa notað LaTeX kynna sér málið frekar.</p>
+<p>Hægt er að nota stærðfræðitákn inni í textanum og skrifa jöfnur/stæður
+sem standa einar og sér:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Viljum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="n">stærðfræðitákn</span><span class="w"> </span><span class="n">inni</span><span class="w"> </span>í<span class="w"> </span><span class="n">texta</span><span class="w"> </span><span class="n">notum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">eitt</span>
+<span class="n">dollaramerki</span><span class="o">:</span><span class="w"> </span><span class="n">Meðaltal</span><span class="w"> </span>ú<span class="n">rtaks</span><span class="w"> </span><span class="n">táknum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">með</span><span class="w"> </span><span class="n">gríska</span><span class="w"> </span><span class="n">bókstafnum</span><span class="w"> </span><span class="o">$</span>\<span class="n">mu</span><span class="o">$</span><span class="n">.</span>
+<span class="n">Viljum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">láta</span><span class="w"> </span><span class="n">jöfnur</span><span class="o">/</span><span class="n">stæður</span><span class="w"> </span><span class="n">standa</span><span class="w"> </span><span class="n">einar</span><span class="w"> </span>í<span class="w"> </span><span class="n">línu</span><span class="w"> </span><span class="n">notum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">tvö</span>
+<span class="n">dollaramerki</span><span class="o">:</span>
+
+<span class="o">$$</span>
+
+\<span class="n">bar</span><span class="p">{</span><span class="n">x</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>\<span class="n">frac</span><span class="p">{</span>\<span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="m">1</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">n</span><span class="p">}</span><span class="n">x_i</span><span class="p">}{</span><span class="n">n</span><span class="p">}</span><span class="n">.</span>
+
+<span class="o">$$</span>
+</pre></div>
+</div>
+<p>Textinn hér að ofan birtist svona:</p>
+<p>Viljum við nota stærðfræðitákn inni í texta notum við eitt dollaramerki:
+Meðaltal úrtaks táknum við með gríska bókstafnum <span class="math">\(\mu\)</span>. Viljum við
+láta jöfnur/stæður standa einar og sér notum við tvö dollaramerki:</p>
+<div class="math">
+\[\bar{x} = \frac{\sum_{i=1}^{n}x_i}{n}.
+
+\]</div>
+<p>Ef unnið er í Markdown og villa leynist í LaTeX kóðanum birtist kassi
+sem inniheldur LaTeX kóðann í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu, ekki jafnan sjálf. Þá
+þurfið þið að laga villuna og ýta svo aftur á <code class="docutils literal notranslate"><span class="pre">Knit</span></code> takkann.</p>
+</section>
+<section id="klumpastillingar">
+<h2><span class="section-number">12.3. </span>Klumpastillingar<a class="headerlink" href="#klumpastillingar" title="Permalink to this heading"></a></h2>
+<p>Á milli R-klumpa getið þið skrifað texta sem lýsir greiningunni sem þið
+eruð að framkvæma. Sjálfgefnu stillingar R-klumpa eru:</p>
+<ul class="simple">
+<li><p>skipanir sem í þeim eru birtast í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu í gráum kassa</p></li>
+<li><p>skipanir sem í þeim eru keyrast</p></li>
+<li><p>úttakið sem skipanirnar skila birtist í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu. Þetta
+getur verið útkoma, mynd og fleira.</p></li>
+</ul>
+<p>Klumpana má mata með ýmsum stillingum og má sjá nokkrar þeirra hér að
+neðan:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Heiti stillingar</p></th>
+<th class="head"><p>Mögulegar stillingar</p></th>
+<th class="head"><p>Virkni</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>eval</p></td>
+<td><p>T eða F</p></td>
+<td><div class="line-block">
+<div class="line">Ef T þá keyrist kóðinn (sjálfgefið)</div>
+<div class="line">Ef F þá keyrist kóðinn ekki</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>echo</p></td>
+<td><p>T eða F</p></td>
+<td><div class="line-block">
+<div class="line">Ef T þá birtist kóðinn í .html skalinu (sjálfgefið)</div>
+<div class="line">Ef F þá birtist kóðinn ekki</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>results</p></td>
+<td><p>„markup“, „hide“ …</p></td>
+<td><div class="line-block">
+<div class="line">Ef „markup“ (sjálfgefið) þá birtist það</div>
+<div class="line-block">
+<div class="line">sem aðferðin skilar í .html skalinu</div>
+</div>
+<div class="line">Ef „hide“ er kóðinn keyrður en úttakið birtist ekki</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>fig.width</p></td>
+<td><p>tala</p></td>
+<td><div class="line-block">
+<div class="line">Breidd myndar í tommum</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>fig.height</p></td>
+<td><p>tala</p></td>
+<td><div class="line-block">
+<div class="line">Hæð myndar í tommum</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Lista yfir allar stillingar má finna hér:</p>
+<p><a class="reference external" href="http://yihui.name/knitr/options/">http://yihui.name/knitr/options/</a>.</p>
+<p>Viljum við t.d. lesa inn pakka með <code class="docutils literal notranslate"><span class="pre">library()</span></code> aðferðinni en viljum
+ekki að kóðinn birtist í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu okkar notum við:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">```{r, echo = F}</span>
+<span class="n">library(ggplot2)</span>
+<span class="n">```</span>
+</pre></div>
+</div>
+<p>Þá keyrist <code class="docutils literal notranslate"><span class="pre">library(ggplot2)</span></code> en skipunin birtist ekki í <code class="docutils literal notranslate"><span class="pre">.html</span></code>
+skjalinu. Munið að ef þið ætlið að nota aðferðir í pakka sem ekki er
+hluti af grunnpökkum R (t.d. <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> pakkinn) þurfið þið að nota
+<code class="docutils literal notranslate"><span class="pre">library()</span></code> aðferðina til að sækja pakkann.</p>
+<p>Viljum við teikna stöplarit, stjórna stærðinni á myndinni en láta aðeins
+myndina birtast i <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu, ekki R-kóðann, gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">```{r, echo=F, fig.width=5, fig.height=3}</span>
+<span class="n">ggplot(puls, aes(x=namskeid)) + geom_bar() + xlab(&quot;Námskeið&quot;) +</span>
+<span class="n">ylab(&quot;Fjöldi&quot;)</span>
+<span class="n">```</span>
+</pre></div>
+</div>
+</section>
+<section id="leiksvaei-fyrir-r-koa">
+<h2><span class="section-number">12.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
+<div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
+puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
+
+# Setjid ykkar eigin koda her fyrir nedan:
+# Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
+# asamt dalkarheitum.
+head(puls)</code></div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli11/" class="btn btn-neutral float-left" title="11. Tvíkosta aðhvarfsgreining" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ordalistar/" class="btn btn-neutral float-right" title="Orðalistar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

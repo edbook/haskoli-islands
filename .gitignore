@@ -17,7 +17,7 @@ var/
 .installed.cfg
 .vscode
 .python-version
-_build/
+# _build/
 build/
 .env
 .mypy_cache

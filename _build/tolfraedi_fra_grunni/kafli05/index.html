@@ -1,0 +1,2491 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Líkindafræðileg undirstaða &mdash; Tölfræði frá grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="6. Ályktunartölfræði" href="../kafli06/" />
+    <link rel="prev" title="4. Lýsandi tölfræði" href="../kafli04/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Líkindafræðileg undirstaða</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#slembistaerir">5.1. Slembistærðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">5.1.1. Slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#slembistaer-random-variable">5.1.1.1. Slembistærð (random variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rithattur-slembistaera-syntax-for-random-variables">5.1.1.2. Ritháttur slembistærða (syntax for random variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#strjalar-og-samfelldar-slembistaerir">5.1.2. Strjálar og samfelldar slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#strjalar-slembistaerir-discrete-random-variables">5.1.2.1. Strjálar slembistærðir (discrete random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samfelldar-slembistaerir-continuous-random-variables">5.1.2.2. Samfelldar slembistærðir (continuous random variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#likindadreifing-slembistaera">5.1.3. Líkindadreifing slembistærða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rithattur-fyrir-likindi-slembistaera">5.1.3.1. Ritháttur fyrir líkindi slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-rithattur-fyrir-likindi-slembistaera">5.1.3.2. Sýnidæmi: Ritháttur fyrir líkindi slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#likindadreifing-slembistaera-probability-distribution-of-random-variables">5.1.3.3. Líkindadreifing slembistærða (probability distribution of random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#strjalar-og-samfelldar-likindadreifingar">5.1.3.4. Strjálar og samfelldar líkindadreifingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stiki-parameter">5.1.3.5. Stiki (parameter)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#staerfraeilegir-eiginleikar-slembistaera">5.2. Stærðfræðilegir eiginleikar slembistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ohaar-og-einsdreifar-slembistaerir">5.2.1. Óháðar og einsdreifðar slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ohaar-slembistaerir-independent-random-variables">5.2.1.1. Óháðar slembistærðir (independent random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#haar-slembistaerir-dependent-random-variables">5.2.1.2. Háðar slembistærðir (dependent random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ohaar-og-einsdreifar-slembistaerir-iid-random-variables">5.2.1.3. Óháðar og einsdreifðar slembistærðir (iid random variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#logmal-mikils-fjolda">5.2.2. Lögmál mikils fjölda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vaentigildi-slembistaera-expected-value">5.2.2.1. Væntigildi slembistærða (Expected value)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logmal-mikils-fjolda-law-of-large-numbers">5.2.2.2. Lögmál mikils fjölda (law of large numbers)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dreifni-slembistaera-var-x">5.2.2.3. Dreifni slembistærða, <span class="math notranslate nohighlight">\(Var[X]\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linuleg-umbreyting-a-samfelldum-slembistaerum">5.2.3. Línuleg umbreyting á samfelldum slembistærðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#linuleg-umbreyting-linear-transformation">5.2.3.1. Línuleg umbreyting (Linear transformation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a-breyta-til-baka">5.2.3.2. Að breyta til baka</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vaentigildi-og-dreifni-eftir-linulega-umbreytingu">5.2.3.3. Væntigildi og dreifni eftir línulega umbreytingu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#strjalar-likindadreifingar">5.3. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#massafall">5.3.1. Massafall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#massafall-mass-function">5.3.1.1. Massafall (mass function)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-fyrir-strjalar-slembistaerir">5.3.2. Reiknireglur fyrir strjálar slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#e-reglur">5.3.2.1. Reiknireglur fyrir strjálar slembistærðir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tvikostadreifingin">5.3.3. Tvíkostadreifingin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bernoulli-tilraun-bernoulli-trial">5.3.3.1. Bernoulli tilraun (Bernoulli trial)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tvikostadreifingin-binomial-distribution">5.3.3.2. Tvíkostadreifingin (binomial distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tviliustuullinn-binomial-coefficient">5.3.3.3. Tvíliðustuðullinn (binomial coefficient)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-tviliustuullinn">5.3.3.4. Sýnidæmi: Tvíliðustuðullinn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-tvikostadreifingin">5.3.3.5. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ex-tvikostkronukast">5.3.3.6. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">5.3.3.7. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">5.3.3.8. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">5.3.3.9. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">5.3.3.10. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">5.3.3.11. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vaentigildi-og-dreifni-tvikostadreifingarinnar">5.3.3.12. Væntigildi og dreifni tvíkostadreifingarinnar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-vaentigildi-og-dreifni-tvikostadreifingarinnar">5.3.3.13. Sýnidæmi: Væntigildi og dreifni tvíkostadreifingarinnar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#poisson-dreifingin">5.3.4. Poisson dreifingin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#poisson-dreifingin-poisson-distribution">5.3.4.1. Poisson dreifingin (Poisson distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-poisson-dreifingin">5.3.4.2. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">5.3.4.3. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#poisson-dreifingin-logu-a-nyrri-einingu">5.3.4.4. Poisson dreifingin löguð að nýrri einingu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-poisson-dreifingin-logu-a-nyrri-einingu">5.3.4.5. Sýnidæmi: Poisson dreifingin löguð að nýrri einingu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">5.3.4.6. Sýnidæmi: Poisson dreifingin löguð að nýrri einingu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">5.3.4.7. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vaentigildi-og-dreifni-poisson-dreifingar">5.3.4.8. Væntigildi og dreifni Poisson dreifingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">5.3.4.9. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samanburur-a-tvikosta-og-poisson-dreifingunni">5.3.4.10. Samanburður á tvíkosta- og Poisson dreifingunni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samfelldar-likindadreifingar">5.4. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">5.4.1. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reiknireglur-fyrir-samfelldar-slembistaerir">5.4.1.1. Reiknireglur fyrir samfelldar slembistærðir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dreififall-distribution-function">5.4.1.2. Dreififall (Distribution function)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ettifall-og-ettiferill-density-function-and-density-curve">5.4.1.3. Þéttifall og þéttiferill (Density function and density curve)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#normaldreifing">5.4.2. Normaldreifing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#normaldreifingin-normal-distribution">5.4.2.1. Normaldreifingin (normal distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reglan">5.4.2.2. 68-95-99.7% reglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stolu-normaldreifing">5.4.2.3. Stöðluð normaldreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stalaa-normaldreifingin-standardized-normal-distribution">5.4.2.4. Staðlaða normaldreifingin (Standardized normal distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samband-x-og-z">5.4.2.5. Samband <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Z\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#likur-normaldreifra-slembistaera">5.4.2.6. Líkur normaldreifðra slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notkun-toflu-stoluu-normaldreifingarinnar">5.4.2.7. Notkun töflu stöðluðu normaldreifingarinnar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-normaldreifingin">5.4.2.8. Sýnidæmi: Normaldreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">5.4.2.9. Sýnidæmi: Normaldreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rithatturinn-z-a">5.4.2.10. Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">5.4.2.11. Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-rithatturinn-z-a">5.4.2.12. Sýnidæmi: Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#normaldreifingarrit">5.4.2.13. Normaldreifingarrit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#normaldreifingarrit-normal-probability-plot">5.4.2.14. Normaldreifingarrit (normal probability plot)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#arar-samfelldar-likindadreifingar">5.4.3. Aðrar samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#t-dreifing">5.4.3.1. t-dreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rithatturinn-t-a-k">5.4.3.2. Rithátturinn <span class="math notranslate nohighlight">\(t_{a,(k)}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-flett-upp-i-t-toflu">5.4.3.3. Sýnidæmi: Flett upp í t-töflu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chi-2-dreifing">5.4.3.4. <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rithatturinn-chi-2-a-k">5.4.3.5. Rithátturinn <span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-flett-upp-i-chi-2-toflu">5.4.3.6. Sýnidæmi: Flett upp í <span class="math notranslate nohighlight">\(\chi^2\)</span>-töflu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#f-dreifing">5.4.3.7. F-dreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rithatturinn-f-a-v-1-v-2">5.4.3.8. Rithátturinn <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-flett-upp-i-f-toflu">5.4.3.9. Sýnidæmi: Flett upp í F-töflu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#daemi">5.5. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">5.5.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">5.5.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">5.5.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">5.5.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">5.5.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">5.5.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">5.5.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">5.5.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">5.5.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">5.5.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">5.5.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">5.5.12. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">5.5.13. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">5.5.14. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">5.5.15. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">5.5.16. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">5.5.17. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">5.5.18. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">5.5.19. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">5.5.20. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">5.5.21. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">5.5.22. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">5.5.23. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../toflur_all_final/">Töflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svor_final/">Svör við dæmum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thakkir/">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Líkindafræðileg undirstaða</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli05.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="likindafraeileg-undirstaa">
+<span id="c-likindafraedi"></span><h1><span class="section-number">5. </span>Líkindafræðileg undirstaða<a class="headerlink" href="#likindafraeileg-undirstaa" title="Permalink to this heading"></a></h1>
+<p>Nú höfum við lokið umfjöllun okkar um lýsandi tölfræði en
+ályktunartölfræðin bíður enn. Í ályktunartölfræði lítum við svo á að
+mælingarnar okkar séu slembni háðar, hver svo sem orsökin er. Því geta
+mismunandi mælingar fengist í hvert sinn sem rannsóknin er endurtekin og
+um leið vitum við ekki hver gildi mælinganna verða fyrr en eftir að við
+höfum safnað þeim. Til að lýsa þessu fyrirbæri notum við
+líkindafræðilegt hugtak sem nefnum <em>slembistærð</em> sem er
+meginumfjöllunarefni þessa kafla.</p>
+<p>Við byrjum á almennri umfjöllun um hugtakið slembistærð í kafla
+<a class="reference internal" href="#s-slembistaerdir"><span class="std std-numref">5.1</span></a> og kynnumst þar afar mikilvægu hugtaki,
+<em>líkindadreifingu slembistærða</em>. Að því loknu (kafli
+<a class="reference internal" href="#s-vaentigildislembi"><span class="std std-numref">5.2</span></a>) fjöllum við um mikilvæga stærðfræðilega
+eiginleika slembistærða og hefjum þar á eftir umfjöllun um slembistærðir
+sem lýsa strjálum breytum (kafli <a class="reference internal" href="#s-strjalarlikindadreifingar"><span class="std std-numref">5.3</span></a>) og
+kynnumst <em>tvíkosta líkindadreifingu</em> og <em>Poisson líkindadreifingu</em>.</p>
+<p>Í kafla <a class="reference internal" href="#s-samfelldarlikindadreifingar"><span class="std std-numref">5.4</span></a> fjöllum við um
+slembistærðir sem lýsa samfelldum breytum. Að því loknu tekur við
+umfjöllun um fjórar gerðir samfelldra líkindadreifinga. Við byrjum á að
+fjalla um <em>normaldreifinguna</em> en hún er án efa sú dreifing sem mest er
+notuð innan tölfræðinnar.Að því loknu munum við fjalla um þrjár aðrar
+gerðir líkindadreifinga, <span class="math notranslate nohighlight">\(t\)</span>-dreifingu, <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu
+og <span class="math notranslate nohighlight">\(F\)</span>-dreifingu, sem við munum nota þegar kemur að
+ályktunartölfræði.</p>
+<section id="slembistaerir">
+<span id="s-slembistaerdir"></span><h2><span class="section-number">5.1. </span>Slembistærðir<a class="headerlink" href="#slembistaerir" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">5.1.1. </span>Slembistærðir<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Í ályktunartölfræði lítum við svo á að þeim breytum sem við höfum áhuga
+á að draga ályktanir um megi lýsa með slembistærð.</p>
+<section id="slembistaer-random-variable">
+<h4><span class="section-number">5.1.1.1. </span>Slembistærð (random variable)<a class="headerlink" href="#slembistaer-random-variable" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Slembistærð</em> lýsir útkomu breytu áður en hún er mæld.</p>
+</div>
+<hr class="docutils" />
+<p>Hugsum okkur að við viljum framkvæma rannsókn þar sem við könnum hversu
+hátt hlutfall flugfarþega á Keflavíkurflugvelli hefur fartölvu meðferðis
+í flugið. Við framkvæmum litla tilraun þar sem við veljum nokkra
+flugfarþega af handahófi og skráum niður breytu sem tekur gildið 1 ef
+farþeginn hafði fartölvu meðferðis í flugið en 0 ef ekki. Slembistærðin
+sem lýsir þessari útkomu þessarar breytu myndi annars vegar segja okkur
+að eingöngu gildin 0 og 1 væru mögulegar útkomur og hins vegar hversu
+líklegt að útkoman sé 0 og hversu líklegt að hún sé 1 - áður en
+tilraunin er framkvæmd!</p>
+<p>Slembistærðir eru ekki tölur í venjulegum skilningi heldur eins konar
+slembið fyrirbæri sem mun verða að einhverri tölu. Til að láta það ríma
+við mælingarnar okkar, þarf útkoman sem við skráum að vera <strong>tölur</strong>.
+Það þýðir að ef breytan sem við erum að mæla er flokkabreyta þá þurfum
+við að kóða flokkana yfir í tölur með einhverjum hætti. Séum við að mæla
+kyn gætum við til dæmis táknað útkomuna ,,karl“ með 0 og útkomuna
+,,kona“ með ,,1“ og þar fram eftir götunum. Flest tölfræðiforrit gera
+það sjálfkrafa fyrir okkur.</p>
+<p>Gætið þess að rugla ekki slembistærð saman við gildi sem hún hefur
+tekið. Áður en við mælum hvort að flugfarþegi er með fartölvu eða ekki
+getur slembistærðin sem því lýsir vissulega tekið gildið einn, en það er
+út í hött að kalla töluna 1 slembistærð - það er ekkert slembið við
+hana. Einn er alltaf einn og getur aldrei mögulega orðið núll. Til að
+gera greinarmun á slembistærð og þeim gildum sem hún hefur tekið erum
+við mjög nákvæm með rithátt.</p>
+</section>
+<section id="rithattur-slembistaera-syntax-for-random-variables">
+<h4><span class="section-number">5.1.1.2. </span>Ritháttur slembistærða (syntax for random variables)<a class="headerlink" href="#rithattur-slembistaera-syntax-for-random-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Við táknum slembistærð með <strong>stórum</strong> staf, oft <span class="math notranslate nohighlight">\(X\)</span>, eða staf úr
+gríska stafrófinu, t.d. <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>Við táknum gildi sem slembistærð <strong>hefur tekið</strong> með <strong>litlum</strong> staf,
+oft <span class="math notranslate nohighlight">\(x\)</span>, eða með því að setja hatt yfir stafinn, t.d
+<span class="math notranslate nohighlight">\(\hat \beta\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Víkjum nú aftur að flugfarþegunum. Við lítum svo á að til sé ein
+slembistærð sem lýsir því hvort að flugfarþegi af handahófi muni hafa
+fartölvu meðferðis. Köllum slembistærðina <span class="math notranslate nohighlight">\(X\)</span>. Í hvert sinn sem
+kannað er hvort flugfarþegi sé með fartölvu, fæst ný útkoma sem að
+slembistærðin <span class="math notranslate nohighlight">\(X\)</span> hefur tekið. Þegar við höfum mörg gildi sem sama
+slembistærðin hefur tekið tölusetjum við gildin með vísum
+(<span class="math notranslate nohighlight">\(x_1, x_2, x_3\)</span> o.s.frv.). Takið eftir samræminu við tölusetningu
+margra mælinga á sömu breytunni í kafla <a class="reference internal" href="../kafli04/#c-lysanditolfraedi"><span class="std std-numref">4</span></a>. Þessi
+samsvörun er engin tilviljun. Við lítum á endurteknar mælingar á sömu
+breytunni sem mörg gildi sem sama slembistærðin hefur tekið.</p>
+</section>
+</section>
+<section id="strjalar-og-samfelldar-slembistaerir">
+<span id="ss-strjalsamfslembi"></span><h3><span class="section-number">5.1.2. </span>Strjálar og samfelldar slembistærðir<a class="headerlink" href="#strjalar-og-samfelldar-slembistaerir" title="Permalink to this heading"></a></h3>
+<p>Við flokkum slembistærðir í <em>strjálar slembistærðir</em> og <em>samfelldar
+slembistærðir</em> eftir því hvort breyturnar sem þær lýsa séu strjálar eða
+samfelldar.</p>
+<section id="strjalar-slembistaerir-discrete-random-variables">
+<h4><span class="section-number">5.1.2.1. </span>Strjálar slembistærðir (discrete random variables)<a class="headerlink" href="#strjalar-slembistaerir-discrete-random-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Strjálar slembistærðir</em> lýsa strjálum breytum. Þær geta eingöngu tekið
+endanlega mörg gildi á sérhverju takmörkuðu bili.</p>
+</div>
+<hr class="docutils" />
+<p>Dæmi um strjálar slembistærðir eru til dæmis talan sem upp kemur í
+teningakasti eða fjöldi auglýsinga sem sýndar verða fyrir kvöldfréttir
+handahófsvalinn dag.</p>
+<p>Í þessu riti er fjallað um tvær gerðir af strjálum slembistærðum. Önnur
+gerðin getur tekið hvaða heiltölugildi sem er. Hin gerðin getur eingöngu
+tekið endanlega mörg heiltölugildi sem ná frá 0 upp í einhverja tölu
+<span class="math notranslate nohighlight">\(n\)</span>.</p>
+</section>
+<section id="samfelldar-slembistaerir-continuous-random-variables">
+<h4><span class="section-number">5.1.2.2. </span>Samfelldar slembistærðir (continuous random variables)<a class="headerlink" href="#samfelldar-slembistaerir-continuous-random-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Samfelldar slembistærðir</em> lýsa samfelldum breytum. Þær geta tekið hvaða
+gildi sem er á einhverju bili.</p>
+</div>
+<hr class="docutils" />
+<p>Dæmi um samfellda slembistærð er hæð handahófsvalinna kvenna. Hún getur
+tekið hvaða gildi sem er á bilinu frá 50 cm upp í 250 cm. Annað dæmi er
+hitastig í Reykjavík handahófsvalinn dag. Það getur tekið hvaða gildi
+sem er á bilinu frá -30<span class="math notranslate nohighlight">\(^\circ\)</span>C upp í 30<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p>
+</section>
+</section>
+<section id="likindadreifing-slembistaera">
+<span id="ss-likindadreifingslembistaerda"></span><h3><span class="section-number">5.1.3. </span>Líkindadreifing slembistærða<a class="headerlink" href="#likindadreifing-slembistaera" title="Permalink to this heading"></a></h3>
+<p>Við getum reiknað líkurnar á því að útkoma slembistærða hljóti tiltekin
+gildi eða eitthvert gildi á tilteknu bili. Venjan er að nota ritháttinn
+hér að neðan til að tákna þessar líkur.</p>
+<section id="rithattur-fyrir-likindi-slembistaera">
+<span id="e-rithattur"></span><h4><span class="section-number">5.1.3.1. </span>Ritháttur fyrir líkindi slembistærða<a class="headerlink" href="#rithattur-fyrir-likindi-slembistaera" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(P(X \leq a)\)</span>: Táknar líkur þess að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\text{ }\)</span><span class="math notranslate nohighlight">\(\text{ }\)</span> <strong>minni eða jöfn</strong> gildinu <span class="math notranslate nohighlight">\(a\)</span>.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(P(X \geq a)\)</span>: Táknar líkur þess að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\text{ }\)</span><span class="math notranslate nohighlight">\(\text{ }\)</span> <strong>stærri eða jöfn</strong> gildinu <span class="math notranslate nohighlight">\(a\)</span>.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(P(a \leq X \leq b)\)</span>: Táknar líkur þess að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\text{ }\)</span> <strong>á milli</strong> <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span>, bæði gildin meðtalin.</div>
+</div>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(P(X = a)\)</span>: Táknar líkur þess að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\qquad\)</span><span class="math notranslate nohighlight">\(\text{ }\)</span><span class="math notranslate nohighlight">\(\text{ }\)</span> <strong>nákvæmlega</strong> gildið <span class="math notranslate nohighlight">\(a\)</span>.</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-rithattur-fyrir-likindi-slembistaera">
+<h4><span class="section-number">5.1.3.2. </span>Sýnidæmi: Ritháttur fyrir líkindi slembistærða<a class="headerlink" href="#synidaemi-rithattur-fyrir-likindi-slembistaera" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Notið rithátt fyrir líkindi slembistærða til að tákna eftirfarandi:</p>
+<ol class="loweralpha simple">
+<li><p>líkurnar á því að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði minni eða
+jöfn 3.</p></li>
+<li><p>líkurnar á því að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði stærri
+eða jöfn 3.</p></li>
+<li><p>líkurnar á því að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði
+nákvæmlega -10.</p></li>
+<li><p>líkurnar á því að útkoma slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði stærri
+eða jöfn 1, en þó ekki stærri en 3.</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\(P(X \leq 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(X \geq 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(X = -10)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(1 \leq X \leq 3)\)</span></p></li>
+</ol>
+</div>
+<p><em>Líkindadreifing</em> slembistærðar gefur okkur líkur þess að útkomur hennar
+taki tiltekin gildi. Með þeim hætti gefur hún okkur allar þær
+upplýsingar sem hægt er að hafa um slembistærðina. Hún er skilgreind með
+ólíkum hætti fyrir samfelldar og strjálar slembistærðir.</p>
+</section>
+<section id="likindadreifing-slembistaera-probability-distribution-of-random-variables">
+<h4><span class="section-number">5.1.3.3. </span>Líkindadreifing slembistærða (probability distribution of random variables)<a class="headerlink" href="#likindadreifing-slembistaera-probability-distribution-of-random-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Líkindadreifing</em> slembistærðar er regla sem segir okkur hvaða gildi
+slembistærðin getur tekið og enn fremur:</p>
+<p><span class="math notranslate nohighlight">\(P(X=a)\)</span> fyrir öll gildi <span class="math notranslate nohighlight">\(a\)</span> sem hún getur tekið ef líkindadreifingin er <strong>strjál</strong>.</p>
+<p><span class="math notranslate nohighlight">\(P(a \leq X \leq b)\)</span> fyrir öll gildi <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> ef líkindadreifingin er <strong>samfelld</strong>.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Skilgreininguna að ofan má líka orða svo:</p>
+<p>Fyrir strjálar slembistærðir finnum við, fyrir hvaða mögulegu útkomu sem
+er, líkurnar á því að slembistærðin taki það gildi.</p>
+<p>Fyrir samfelldar slembistærðir finnum við, fyrir hvaða bil sem er,
+líkurnar á að útkoma slembistærðarinnar verði á því bili.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="strjalar-og-samfelldar-likindadreifingar">
+<h4><span class="section-number">5.1.3.4. </span>Strjálar og samfelldar líkindadreifingar<a class="headerlink" href="#strjalar-og-samfelldar-likindadreifingar" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef slembistærð er <strong>strjál</strong> segjum við að líkindadreifing hennar sé
+strjál.</p>
+<p>Ef slembistærð er <strong>samfelld</strong> segjum við að líkindadreifing hennar sé
+samfelld.</p>
+</div>
+<hr class="docutils" />
+<p>Þar sem slembni margra þeirra breyta sem við skoðum er svipuð í eðli
+sínu haga slembistærðirnar sem þær lýsa sér svipað og hafa þar af
+leiðandi svipaða líkindadreifingu. Við segjum þá að líkindadreifingar
+slembistærðanna séu af sömu <em>gerð</em>. Ein slík gerð er til dæmis
+normaldreifing sem margir kannast við.</p>
+<p>Til eru nokkrar gerðir af bæði strjálum og samfelldum líkindadreifingum
+sem ná að lýsa stórum flokki breyta. Þeim þurfa allir sem nota og beita
+tölfræði að kunna skil á. Við munum fjalla um mikilvægustu gerðir bæði
+strjálla og samfelldra líkindadreifinga. Þá sjáum við jafnframt hvers
+vegna dreifingarnar eru skilgreindar á mismunandi hátt eftir því hvort
+þær eru strjálar eða samfelldar.</p>
+<p>Hvort sem líkindadreifingar eru strjálar eða samfelldar þá eiga þær það
+sameiginlegt að þeim má lýsa með tölum sem kallast <em>stikar</em>
+líkindadreifingarinnar.</p>
+</section>
+<section id="stiki-parameter">
+<h4><span class="section-number">5.1.3.5. </span>Stiki (parameter)<a class="headerlink" href="#stiki-parameter" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Sérhverri gerð líkindadreifingar er lýst með tölum sem kallast <em>stikar</em>
+líkindadreifingarinnar. Mismunandi stikar lýsa mismunandi
+líkindadreifingum og yfirleitt eru stikarnir bara einn eða tveir. Ef við
+vitum af hvaða gerð líkindadreifing slembistærðar er þá gefa gildin á
+stikum hennar allar þær upplýsingar sem hægt er að fá um slembistærðina.</p>
+</div>
+<hr class="docutils" />
+<p>Til að geta talað stuttort og skýrt um þær slembistærðir sem fylgja
+algengustu líkindadreifingunum sem og stikunum sem lýsa þeim, hafa
+nokkrir bókstafir verið teknir frá fyrir þessar dreifingar, sem og
+stikana þeirra. Þannig er til dæmis bókstafurinn <span class="math notranslate nohighlight">\(N\)</span> notaður til
+að lýsa gerðinni normaldreifingu og grísku stafirnir <span class="math notranslate nohighlight">\(\mu\)</span> og
+<span class="math notranslate nohighlight">\(\sigma^2\)</span> lýsa stikunum tveimur sem henni er lýst með. Þannig
+segir fullyrðingin <span class="math notranslate nohighlight">\(X \sim N(\mu,\sigma^2)\)</span> að slembistærðin
+<span class="math notranslate nohighlight">\(X\)</span> fylgi normaldreifingu þar sem gildi stikanna eru <span class="math notranslate nohighlight">\(\mu\)</span>
+og <span class="math notranslate nohighlight">\(\sigma^2\)</span>. Þessi ritháttur verður sýndur samhliða
+líkindadreifingunum sem kynntar eru.</p>
+<p>Takið eftir að ef við vitum af hvaða gerð líkindadreifing slembistærðar
+er þá gefa gildin á stikum hennar allar þær upplýsingar sem hægt er að
+fá um slembistærðina. Því kemur það ekki á óvart að stikar munu spila
+stórt hlutverk þegar við förum í ályktunartölfræði í kafla
+<a class="reference internal" href="../kafli06/#c-alyktunartolfraedi"><span class="std std-numref">6</span></a>.</p>
+<p>Tökum nú saman það sem við fórum yfir í þessum hluta. Hægt er að reikna
+líkur þess að slembistærðir taki tiltekin gildi. Þeim líkum er lýst með
+líkindadreifingu slembistærðanna sem gefa okkur allar mögulegar
+upplýsingar um þær. Margar slembistærðir hafa líkindadreifingar af
+ákveðnum þekktum gerðum. Hverri gerð líkindadreifingar er lýst með tölum
+sem kallast stikar og til hverrar gerðar af líkindadreifingum tilheyra
+mismunandi stikar. Ef við vitum af hvaða gerð líkindadreifing er þá gefa
+gildi stika hennar allar þær upplýsingar sem hægt er að fá um
+líkinadreifinguna.</p>
+</section>
+</section>
+</section>
+<section id="staerfraeilegir-eiginleikar-slembistaera">
+<span id="s-vaentigildislembi"></span><h2><span class="section-number">5.2. </span>Stærðfræðilegir eiginleikar slembistærða<a class="headerlink" href="#staerfraeilegir-eiginleikar-slembistaera" title="Permalink to this heading"></a></h2>
+<section id="ohaar-og-einsdreifar-slembistaerir">
+<span id="ss-iid"></span><h3><span class="section-number">5.2.1. </span>Óháðar og einsdreifðar slembistærðir<a class="headerlink" href="#ohaar-og-einsdreifar-slembistaerir" title="Permalink to this heading"></a></h3>
+<p>Nú munum við fjalla um hugtök sem lýsa sambandi tveggja eða fleiri
+slembistærða en ekki hverri einstakri slembistærð. Þessi hugtök eru
+<em>hæði</em>, <em>óhæði</em> og <em>einsdreifni</em>.</p>
+<section id="ohaar-slembistaerir-independent-random-variables">
+<h4><span class="section-number">5.2.1.1. </span>Óháðar slembistærðir (independent random variables)<a class="headerlink" href="#ohaar-slembistaerir-independent-random-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Við segjum að tvær slembistærðir séu <em>óháðar</em> ef útkoma annarrar
+slembistærðarinnar hefur engin áhrif á hver útkoma hinnar
+slembistærðarinnar verður.</p>
+</div>
+<hr class="docutils" />
+<p>Ímyndum okkur að við ætlum að kasta teningi og krónu. Látum
+slembistærðina <span class="math notranslate nohighlight">\(X\)</span> vera útkomuna úr teningakastinu en
+slembistærðina <span class="math notranslate nohighlight">\(Y\)</span> vera útkomuna úr krónukastinu. Við trúum því að
+það séu allar útkomur jafnlíklegar í hvert sinn sem teningi er kastað og
+þá skiptir engu máli hvaða útkoma kom úr krónukastinu. Það getum við
+orðað sem svo að við trúum því að útkoman í teningakastinu sé óháð
+útkomunni í krónukastinu, það er að slembistærðirnar <span class="math notranslate nohighlight">\(X\)</span> og
+<span class="math notranslate nohighlight">\(Y\)</span> séu óháðar.</p>
+</section>
+<section id="haar-slembistaerir-dependent-random-variables">
+<h4><span class="section-number">5.2.1.2. </span>Háðar slembistærðir (dependent random variables)<a class="headerlink" href="#haar-slembistaerir-dependent-random-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Við segjum að tvær slembistærðir séu <em>háðar</em> ef þær eru ekki óháðar, það
+er ef útkoma annarrar breytunnar veldur því að einhverjar útkomur hinnar
+breytunnar verði líklegri eða ólíklegri en ella.</p>
+</div>
+<hr class="docutils" />
+<p>Fjöldinn allur af slembistærðum eru háðar. Hugsum okkur nú að
+slembistærðin <span class="math notranslate nohighlight">\(X\)</span> sé hæð skólabarns sem valið er af handahófi úr
+fyrsta bekk í Melaskóla og að slembistærðin <span class="math notranslate nohighlight">\(Y\)</span> sé þyngd sama
+barns. Ef útkoma <span class="math notranslate nohighlight">\(X\)</span> er há tala (hávaxið barn), þá er útkoma
+<span class="math notranslate nohighlight">\(Y\)</span> líklegri til að vera sömuleiðis há tala (þyngra barn) - og
+öfugt. Því eru slembistærðirnar <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> háðar.</p>
+<p>Ef óháðar slembistærðir hafa allar sömu líkindadreifingu þá segjum við
+að þær séu <em>óháðar og einsdreifðar</em>.</p>
+</section>
+<section id="ohaar-og-einsdreifar-slembistaerir-iid-random-variables">
+<h4><span class="section-number">5.2.1.3. </span>Óháðar og einsdreifðar slembistærðir (iid random variables)<a class="headerlink" href="#ohaar-og-einsdreifar-slembistaerir-iid-random-variables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Við segjum að slembistærðir <span class="math notranslate nohighlight">\(X_1, \ldots, X_n\)</span> séu <em>óháðar</em>
+(e. indipendent) ef hver þeirra er óháð öllum hinum og <em>einsdreifðar</em>
+(e. identically distributed) ef þær hafa allar sömu líkindadreifingu.</p>
+</div>
+<hr class="docutils" />
+<p>Þegar slembistærðir eru óháðar og einsdreifðar gerum við engan
+greinarmun á því að sjá tíu útkomur tíu ólíkra slembistærða, þ.e.a.s.
+eina útkomu fyrir hverja slembistærð, eða að sjá tíu mismunandi útkomur
+sem að sama slembistærðin tók. Þá notum við stundum orðalagið að hafa
+<em>óháðar mælingar</em> á sömu slembistærðinni. Skoðum nú aftur flugfarþegana
+okkar. Ef að flugfarþegarnir eru valdir af algjöru handahófi eru
+líkurnar á því að einn flugfarþegi hafi fartölvu meðferðis óháðar
+líkunum á því að einhver annar hafi fartölvu meðferðis. Því getum við
+litið svo á að við höfum tíu óháðar mælingar á sömu slembistærðinni.</p>
+<p>Úrvinnsla okkar í tölfræði byggist æði oft á því að mælingarnar okkar
+séu útkomur óháðra og einsdreifðra slembistærða. Það er, við teljum að
+við höfum í höndunum útkomur endurtekinna mælinga á sömu breytunni og
+enn fremur trúum við að útkoma einnar mælingar hafi ekki áhrif á útkomu
+hinna mælinganna og þar af leiðandi séu mælingarnar óháðar. Óhæði og
+einsdreifni mælinga verður eingöngu tryggð með góðri úrtakshögun sem
+farið var í í kafla <a class="reference internal" href="../kafli02/#s-urtakshogun"><span class="std std-numref">2.4</span></a>.</p>
+</section>
+</section>
+<section id="logmal-mikils-fjolda">
+<h3><span class="section-number">5.2.2. </span>Lögmál mikils fjölda<a class="headerlink" href="#logmal-mikils-fjolda" title="Permalink to this heading"></a></h3>
+<p>Það er óhætt að fullyrða að <em>meðaltal</em> sé algengasta lýsistærðin sem við
+vinnum með. Bæði er einfalt að reikna og skilja útkomu meðaltals og ekki
+er verra að meðaltal hefur afskaplega góða stærðfræðilega eiginleika. Sá
+fyrsti sem við munum kynnast er <em>lögmál mikils földa</em>. . Látum <span class="math notranslate nohighlight">\(X\)</span>
+vera slembistærðina sem tekur gildið 0 ef upp kemur þorskur þegar krónu
+er kastað, en 1 ef landvættirnir koma upp. Krónunni var kastað 20 sinnum
+og upp komu þessar útkomur:</p>
+<div class="math notranslate nohighlight">
+\[1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0\]</div>
+<p>Skoðum nú hvernig meðaltal mælinganna breytist eftir því sem mælingunum
+fjölgar. Meðaltal fyrstu mælingar er einungis einn. Meðaltal fyrstu
+tveggja er (1+1)/2, sem er líka einn. Meðaltal fyrstu þriggja er
+(1+1+0)/3 sem er tveir þriðju. Alls fáum við eftirfarandi niðurstöður:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Fjöldi:</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Meðaltal:</p></td>
+<td><p>1.00</p></td>
+<td><p>1.00</p></td>
+<td><p>0.67</p></td>
+<td><p>0.75</p></td>
+<td><p>0.80</p></td>
+<td><p>0.83</p></td>
+<td><p>0.71</p></td>
+<td><p>0.62</p></td>
+<td><p>0.67</p></td>
+<td><p>0.60</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Fjöldi:</p></td>
+<td><p>11</p></td>
+<td><p>12</p></td>
+<td><p>13</p></td>
+<td><p>14</p></td>
+<td><p>15</p></td>
+<td><p>16</p></td>
+<td><p>17</p></td>
+<td><p>18</p></td>
+<td><p>19</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-odd"><td><p>Meðaltal:</p></td>
+<td><p>0.55</p></td>
+<td><p>0.50</p></td>
+<td><p>0.54</p></td>
+<td><p>0.57</p></td>
+<td><p>0.53</p></td>
+<td><p>0.56</p></td>
+<td><p>0.53</p></td>
+<td><p>0.56</p></td>
+<td><p>0.58</p></td>
+<td><p>0.55</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-center" id="id39">
+<span id="g-lmfmynd"></span><img alt="Lögmál mikils fjölda" src="../_images/logmalmikilsfjolda1.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.1: </span><span class="caption-text">Lögmál mikils fjölda</span><a class="headerlink" href="#id39" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Vinstra megin á mynd <a class="reference internal" href="#g-lmfmynd"><span class="std std-numref">5.1</span></a> má sjá myndrænt hvernig meðaltalið
+á dæminu hér að ofan breytist. Hægra megin á sömu mynd má sjá svipaða
+tilraun þeirri hér að ofan en nú var krónunni kastað 1000 sinnum. Á
+myndinni má sjá hvernig meðaltal útkomanna okkar færðist nær og nær einu
+ákveðnu gildi eftir því sem fleiri og fleiri útkomur voru notaðar til að
+reikna meðaltalið. Þetta ákveðna gildi má líta á sem raunverulegt
+meðaltal slembistærðarinnar. Í tölfræði köllum við þetta gildi
+<em>væntigildi</em> slembistærðarinnar, og þegar við á, <em>meðaltal þýðisins</em>.</p>
+<section id="vaentigildi-slembistaera-expected-value">
+<h4><span class="section-number">5.2.2.1. </span>Væntigildi slembistærða (Expected value)<a class="headerlink" href="#vaentigildi-slembistaera-expected-value" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Væntigildi slembistærðar</em> er <em>raunverulegt</em> meðaltal
+slembistærðarinnar. Það er ýmist táknað með <span class="math notranslate nohighlight">\(\mu\)</span> eða
+<span class="math notranslate nohighlight">\(E[X]\)</span>. Það er einnig kallað <em>meðaltal þýðis</em> (e. population mean)
+þegar við á.</p>
+</div>
+<hr class="docutils" />
+<p>Hugsum okkur nú að við viljum meta meðalhæð Íslendinga með slembiúrtaki
+tekið úr þýðinu Íslendingar. Það er handahófskennt hvaða einstaklingar
+veljast í úrtakið hverju sinni. Ef við tökum fleiri en eitt úrtak mun
+meðaltal mælinganna breytast í hvert sinn sem nýtt úrtak er valið. Hins
+vegar fyrirfinnst eitthvert eitt raunverulegt gildi, sem við fyndum ef
+við mældum hæð allra Íslendinga og reiknuðum meðaltalið. Það er meðaltal
+þýðisins og væntigildi slembistærðarinnar ,,meðalhæð Íslendinga“. Það er
+sjaldnast svo að við þekkjum meðaltal þýðisins.</p>
+<p>Skoðum einnig krónukastið hér að ofan. Við vitum aldrei hvort upp kemur
+þorskur eða landvættir en þó munu þau koma upp álíka oft ef krónunni er
+kastað nægjanlega oft. Hér á ekki við að tala um meðaltal þýðis, heldur
+er nær að tala um hið raunverulega meðaltal krónukastanna. Þar sem það
+er jafnlíklegt að upp komi þorskur eða landvættir, er jafnlíklegt að
+slembistærðin taki gildið 0 eða 1, svo raunverulegt meðaltal
+slembistærðarinnar ,,krónukast“ er 1/2.</p>
+<p>Við sáum jafnframt í krónukastinu hvernig meðaltal mælinganna færðist
+nær og nær 1/2 eftir því sem fjöldi mælinga jókst. Þetta er <em>lögmál
+mikils fjölda</em>.</p>
+</section>
+<section id="logmal-mikils-fjolda-law-of-large-numbers">
+<h4><span class="section-number">5.2.2.2. </span>Lögmál mikils fjölda (law of large numbers)<a class="headerlink" href="#logmal-mikils-fjolda-law-of-large-numbers" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Eftir því sem fjöldi mælinga á slembistærð <span class="math notranslate nohighlight">\(X\)</span> eykst þá stefnir
+meðaltal mælinganna, táknað <span class="math notranslate nohighlight">\(\bar x\)</span>, nær <em>væntigildi</em>
+slembistærðarinnar, táknað <span class="math notranslate nohighlight">\(\mu\)</span> eða <span class="math notranslate nohighlight">\(E[X]\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Lögmál mikils fjölda segir okkur að eftir því sem við höfum stærra úrtak
+því nær meðaltali þýðisins verður meðaltal útkomanna okkar. Það segir
+okkur líka að eftir því sem við höfum fleiri mælingar á breytu, því nær
+raunverulegu meðaltali breytunnar verður meðaltal mælinganna.</p>
+<p>Stundum viljum við fjalla samtímis um væntigildi tveggja slembistærða,
+til dæmis <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span>. Þá er vonlaust að nota sama táknið,
+<span class="math notranslate nohighlight">\(\mu\)</span>, fyrir væntigildi þeirra beggja. Það vandamál má leysa á tvo
+vegu. Annars vegar með því að láta <span class="math notranslate nohighlight">\(\mu_X\)</span> tákna væntigildi
+slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(\mu_Y\)</span> væntigildi
+slembistærðarinnar <span class="math notranslate nohighlight">\(Y\)</span> en hins vegar með því að láta <span class="math notranslate nohighlight">\(E[X]\)</span>
+tákna væntigildi slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> og samsvarandi
+<span class="math notranslate nohighlight">\(E[Y]\)</span> fyrir <span class="math notranslate nohighlight">\(Y\)</span>.</p>
+</section>
+<section id="dreifni-slembistaera-var-x">
+<h4><span class="section-number">5.2.2.3. </span>Dreifni slembistærða, <span class="math notranslate nohighlight">\(Var[X]\)</span><a class="headerlink" href="#dreifni-slembistaera-var-x" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Á sama hátt og slembistærðir hafa raunverulegt meðaltal, hafa þær einnig
+<em>raunverulega dreifni</em>. Hana táknum við ýmist með <span class="math notranslate nohighlight">\(\sigma^2\)</span>, eða
+<span class="math notranslate nohighlight">\(Var[X]\)</span>. Hún er einnig kölluð <em>dreifni þýðis</em> (e. population
+variance) þegar við á.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="linuleg-umbreyting-a-samfelldum-slembistaerum">
+<h3><span class="section-number">5.2.3. </span>Línuleg umbreyting á samfelldum slembistærðum<a class="headerlink" href="#linuleg-umbreyting-a-samfelldum-slembistaerum" title="Permalink to this heading"></a></h3>
+<p>Oft eru mælingar á samfelldum breytum ekki á þeim kvarða sem við hefðum
+viljað. Oftar en ekki dugar <strong>línuleg umbreyting</strong> til að koma gögnunum
+á kvarða sem við skiljum.</p>
+<section id="linuleg-umbreyting-linear-transformation">
+<h4><span class="section-number">5.2.3.1. </span>Línuleg umbreyting (Linear transformation)<a class="headerlink" href="#linuleg-umbreyting-linear-transformation" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Línuleg umbreyting</em> slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> með
+samlagningarstuðulinn <span class="math notranslate nohighlight">\(a\)</span> og margföldunarstuðulinn <span class="math notranslate nohighlight">\(b\)</span> er
+slembistærðin <span class="math notranslate nohighlight">\(a + bX\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Við margföldum sem sagt sérhvert gildi með tölunni <span class="math notranslate nohighlight">\(b\)</span> og leggjum
+sérhverja útkomu við töluna <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</section>
+<section id="a-breyta-til-baka">
+<h4><span class="section-number">5.2.3.2. </span>Að breyta til baka<a class="headerlink" href="#a-breyta-til-baka" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef slembistærðin <span class="math notranslate nohighlight">\(Y\)</span> er fengin með línulegu umbreytingunni
+<span class="math notranslate nohighlight">\(Y = a + bX\)</span>, þá er slembistærðin <span class="math notranslate nohighlight">\(X\)</span> fengin með formúlunni:</p>
+<div class="math notranslate nohighlight">
+\[X = \frac{Y - a}{b}\]</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="vaentigildi-og-dreifni-eftir-linulega-umbreytingu">
+<h4><span class="section-number">5.2.3.3. </span>Væntigildi og dreifni eftir línulega umbreytingu<a class="headerlink" href="#vaentigildi-og-dreifni-eftir-linulega-umbreytingu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef <span class="math notranslate nohighlight">\(X\)</span> er slembistærð og <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> eru gefnar tölur,
+þá eru væntigildi og dreifni línulegu umbreytingarinnar <span class="math notranslate nohighlight">\(a + bX\)</span>
+stærðirnar:</p>
+<div class="math notranslate nohighlight">
+\[E[a + bX] = a + b\cdot E[X]\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[Var[a + bX] = b^2 Var[X]\]</div>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+<section id="strjalar-likindadreifingar">
+<span id="s-strjalarlikindadreifingar"></span><h2><span class="section-number">5.3. </span>Strjálar líkindadreifingar<a class="headerlink" href="#strjalar-likindadreifingar" title="Permalink to this heading"></a></h2>
+<p>Núna skulum við skoða nánar strjálar líkindadreifingar, þ.e.a.s.
+líkindadreifingar sem að lýsa strjálum breytum. Strjálum
+líkindadreifingum er best lýst með <em>massafalli</em>.</p>
+<section id="massafall">
+<span id="ss-massafall"></span><h3><span class="section-number">5.3.1. </span>Massafall<a class="headerlink" href="#massafall" title="Permalink to this heading"></a></h3>
+<section id="massafall-mass-function">
+<h4><span class="section-number">5.3.1.1. </span>Massafall (mass function)<a class="headerlink" href="#massafall-mass-function" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Með <em>massafalli</em> (e. mass function) reiknum við líkur stakra útkoma
+strjálla slembistærða. Við táknum massafallið með <span class="math notranslate nohighlight">\(f(x)\)</span> og það má
+skrifa sem</p>
+<div class="math notranslate nohighlight" id="equation-eq-massafall">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-massafall" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[f(x) = P(X = x)\]</div>
+<p>Um massafallið gildir að</p>
+<div class="math notranslate nohighlight" id="equation-eq-strjalsstaerriedajafntognull">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-strjalsstaerriedajafntognull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+f(x) &amp;\geq 0\end{aligned}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-strjalsummaeinn">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-strjalsummaeinn" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+\sum_{\text{yfir öll x}} f(x) &amp; = 1 \end{aligned}\]</div>
+<p>Við notum stöplarit, sjá kafla <a class="reference internal" href="../kafli03/#s-myndraenastrjalumbreytum"><span class="std std-numref">3.1</span></a>, til að
+lýsa massafalli myndrænt.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Jöfnu <a class="reference internal" href="#equation-eq-massafall">5.1</a> má lesa sem ,,massafallið gefur líkurnar á að
+slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki gildið <span class="math notranslate nohighlight">\(x\)</span>“, þar sem <span class="math notranslate nohighlight">\(x\)</span>
+getur verið hvaða tala sem er. Jafna
+<a class="reference internal" href="#equation-eq-strjalsstaerriedajafntognull">5.2</a> segir okkur að massafallið er
+alltaf stærra eða jafnt og núll og jafna <a class="reference internal" href="#equation-eq-strjalsummaeinn">5.3</a> segir
+okkur að ef við leggjum saman gildin sem massafall <span class="math notranslate nohighlight">\(X\)</span> tekur fyrir
+öll gildi á <span class="math notranslate nohighlight">\(x\)</span> verði útkoman einn.</p>
+</div>
+<hr class="docutils" />
+<p>Dæmigert stöplarit sem lýsir massafalli má sjá á mynd
+<a class="reference internal" href="#g-stoplaritmassafalls"><span class="std std-numref">5.2</span></a>. Á x-ásnum má sjá mögulegar útkomur
+slembistærðarinnar og á y-ásnum má sjá líkurnar á þessum útkomum.</p>
+<figure class="align-center" id="id40">
+<span id="g-stoplaritmassafalls"></span><img alt="Stöplarit massafalls" src="../_images/binom0.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.2: </span><span class="caption-text">Stöplarit massafalls</span><a class="headerlink" href="#id40" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Takið eftir samsvörunni milli strjálla slembistærða og strjálla breyta.
+Við notum stöplarit til að lýsa strjálum slembistærðum myndrænt á sama
+hátt og við notum stöplarit til að lýsa strjálum breytum myndrænt, hvort
+sem þær eru talna- eða flokkabreytur.</p>
+</section>
+</section>
+<section id="reiknireglur-fyrir-strjalar-slembistaerir">
+<span id="ss-reglur"></span><h3><span class="section-number">5.3.2. </span>Reiknireglur fyrir strjálar slembistærðir<a class="headerlink" href="#reiknireglur-fyrir-strjalar-slembistaerir" title="Permalink to this heading"></a></h3>
+<p>Áður en við ræðum um strjálar líkindadreifingar og reiknum út líkur á að
+slembistærð taki ákveðið gildi, skulum við skoða nokkrar reglur sem munu
+koma að góðum notum síðar í kaflanum. Þessar reglur sýna okkur hvernig
+umrita má líkur svo auðveldara verði fyrir okkur að reikna þær.</p>
+<section id="e-reglur">
+<span id="id2"></span><h4><span class="section-number">5.3.2.1. </span>Reiknireglur fyrir strjálar slembistærðir<a class="headerlink" href="#e-reglur" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar reikna á líkur fyrir strjála slembistærð <span class="math notranslate nohighlight">\(X\)</span> má oft auðvelda
+útreikninga með því að snúa líkunum við</p>
+<div class="math notranslate nohighlight" id="equation-eq-reglur1">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-reglur1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+P(X \leq k)  = &amp;  1 - P(X &gt; k)\end{aligned}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-reglur2">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-reglur2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+%= 1 - P(X \geq {k+1})
+P(X &lt; k)     = &amp;  1 - P(X \geq k)\end{aligned}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-reglur3">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-eq-reglur3" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+P(X \geq k)  = &amp;  1 - P(X &lt; k)\end{aligned}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-reglur4">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-eq-reglur4" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+ %= 1 - P(X \leq k-1)
+P(X &gt; k)     = &amp;  1 - P(X \leq k)\end{aligned}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(k\)</span> getur verið hvaða mögulega útkoma sem <span class="math notranslate nohighlight">\(X\)</span> getur
+tekið.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur1">5.4</a> ef reikna á líkurnar að gildi
+slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>minna eða jafnt</strong> tölunni
+<span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur2">5.5</a> ef reikna á líkurnar að gildi
+slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>minna en</strong> talan <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur3">5.6</a> ef reikna á líkurnar að gildi
+slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>stærra eða jafnt</strong> tölunni
+<span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur4">5.7</a> ef reikna á líkurnar að gildi
+slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>stærra en</strong> talan <span class="math notranslate nohighlight">\(k\)</span>.</p>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="tvikostadreifingin">
+<span id="s-binom"></span><h3><span class="section-number">5.3.3. </span>Tvíkostadreifingin<a class="headerlink" href="#tvikostadreifingin" title="Permalink to this heading"></a></h3>
+<p>Mörg tölfræðileg viðfangsefni fjalla um sams konar tilraunir sem eru
+endurteknar mörgum sinnum. Ef hver og ein þessara tilrauna uppfyllir
+skilyrðin í kassa <a class="reference internal" href="#em-bernoulli"><span class="std std-numref">5.3.3.1</span></a>, flokkast þær hver og ein sem
+<em>Bernoulli tilraun</em> og þá má reikna líkur alls kyns mögulegra uppákoma á
+þægilegan hátt.</p>
+<section id="bernoulli-tilraun-bernoulli-trial">
+<span id="em-bernoulli"></span><h4><span class="section-number">5.3.3.1. </span>Bernoulli tilraun (Bernoulli trial)<a class="headerlink" href="#bernoulli-tilraun-bernoulli-trial" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Sérhver tilraun í safni endurtekinna tilrauna flokkast sem <em>Bernoulli
+tilraun</em> ef eftirfarandi gildir:</p>
+<ol class="arabic simple">
+<li><p>Hver tilraun hefur aðeins tvær mögulegar útkomur. Það er venja að
+kalla þessar útkomur <em>jákvæða útkomu</em> (e. success) og <em>neikvæða útkomu</em>
+(e. failure).</p></li>
+<li><p>Líkurnar á jákvæðri útkomu eru þær sömu í hverri tilraun fyrir sig.</p></li>
+<li><p>Útkoma í einni tilraun hefur ekki áhrif á útkomu í annarri tilraun,
+þ.e.a.s. mælingarnar eru óháðar (e. independent).</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Skilyrði 2 er jafngilt því að líkurnar á neikvæðri útkomu séu þær sömu í
+hverri tilraun fyrir sig, þar sem líkurnar á neikvæðri útkomu eru ávallt
+1 mínus líkurnar á jákvæðri útkomu.</p>
+</div>
+<hr class="docutils" />
+<p>Oft höfum við eingöngu áhuga á því að reikna hversu oft við sjáum
+jákvæða útkomu meðal safns Bernoulli tilrauna. Við gætum til dæmis
+viljað reikna líkurnar á því að fá tvær sexur (sem væru þá jákvæða
+útkoman) þegar teningi er kastað fimm sinnum. Þá er þægilegt að líta á
+heildarfjölda jákvæðra útkoma sem eina slembistærð, <span class="math notranslate nohighlight">\(X\)</span>. Hún hefur
+þekkta líkindadreifingu, sem kallast <em>tvíkostadreifingin</em> og er henni
+lýst með stikunum <span class="math notranslate nohighlight">\(n\)</span>, sem er fjöldi Bernoulli tilrauna sem
+framkvæmdar eru, og <span class="math notranslate nohighlight">\(p\)</span> sem er líkurnar á því að hver og ein
+Bernoulli tilraun heppnist.</p>
+</section>
+<section id="tvikostadreifingin-binomial-distribution">
+<span id="em-tvikostadreifingin"></span><h4><span class="section-number">5.3.3.2. </span>Tvíkostadreifingin (binomial distribution)<a class="headerlink" href="#tvikostadreifingin-binomial-distribution" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> fylgja tvíkostadreifingu með stikana <span class="math notranslate nohighlight">\(n\)</span> og
+<span class="math notranslate nohighlight">\(p\)</span>, táknað <span class="math notranslate nohighlight">\(X \sim B(n, p)\)</span>. Ef <span class="math notranslate nohighlight">\(k\)</span> er eitthvert
+gildanna <span class="math notranslate nohighlight">\(\{0,1,2,...\)</span>n<span class="math notranslate nohighlight">\(\}\)</span> má reikna líkurnar á að
+slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki gildið <span class="math notranslate nohighlight">\(k\)</span> með massafalli
+tvíkostadreifingarinnar :</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvikostadreifing">
+<span class="eqno">(5.8)<a class="headerlink" href="#equation-eq-tvikostadreifing" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \hspace{1cm} k = 0,1,2,...n\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> er tvíliðustuðullinn. Sjá kassa
+<a class="reference internal" href="#em-tvilidustudull"><span class="std std-numref">5.3.3.3</span></a>.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Slembistærðin <span class="math notranslate nohighlight">\(X\)</span> táknar fjölda jákvæðra tilrauna úr <span class="math notranslate nohighlight">\(n\)</span>
+Bernoulli tilraunum þar sem <span class="math notranslate nohighlight">\(p\)</span> eru líkurnar á jákvæðri útkomu í
+hverri tilraun fyrir sig. Mögulegur fjöldi jákvæðra útkoma spannar frá 0
+til <span class="math notranslate nohighlight">\(n\)</span> svo <span class="math notranslate nohighlight">\(X\)</span> getur mögulega tekið gildin
+<span class="math notranslate nohighlight">\(\{0,1,2,...\)</span>n<span class="math notranslate nohighlight">\(\}\)</span>.</p>
+</div>
+<hr class="docutils" />
+</section>
+<section id="tviliustuullinn-binomial-coefficient">
+<span id="em-tvilidustudull"></span><h4><span class="section-number">5.3.3.3. </span>Tvíliðustuðullinn (binomial coefficient)<a class="headerlink" href="#tviliustuullinn-binomial-coefficient" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Tvíliðustuðullinn (e. binomial coefficient) er táknaður með
+<span class="math notranslate nohighlight">\(\binom{n}{k}\)</span>. Hann er jafn fjölda möguleika á að fá <span class="math notranslate nohighlight">\(k\)</span>
+jákvæðar útkomur í <span class="math notranslate nohighlight">\(n\)</span> tilraunum og er reiknaður með</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvilidustudull">
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-eq-tvilidustudull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\binom{n}{k} = \frac{n!}{k!(n-k)!},\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(k! = k\cdot(k-1)\cdot(k-2)\cdot ... \cdot(1)\)</span>. Sér í lagi
+er <span class="math notranslate nohighlight">\(0! = 1\)</span>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-tviliustuullinn">
+<h4><span class="section-number">5.3.3.4. </span>Sýnidæmi: Tvíliðustuðullinn<a class="headerlink" href="#synidaemi-tviliustuullinn" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Á hve marga vegu má fá nákvæmlega tvo þorska þegar krónu er kastað
+fjórum sinnum?</p>
+<p>Táknum útkomuna landvætti með L og útkomuna þorsk með Þ og skrifum
+útkomurnar í sömu röð og þær koma fyrir í krónukastinu. Mögulegar leiðir
+til að fá tvær jákvæðar útkomur eru þá</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LLÞÞ</span> <span class="n">ÞÞLL</span> <span class="n">ÞLLÞ</span> <span class="n">LÞÞL</span> <span class="n">LÞLÞ</span> <span class="n">ÞLÞL</span>
+</pre></div>
+</div>
+<p>Þetta eru sex mögulegar leiðir. Munið að tvíliðustuðullinn gefur okkur á
+hversu marga vegu við getum fengið <span class="math notranslate nohighlight">\(k\)</span> jákvæðar útkomur í
+<span class="math notranslate nohighlight">\(n\)</span> tilraunum. Í þessu tilviki er <span class="math notranslate nohighlight">\(k=2\)</span> og <span class="math notranslate nohighlight">\(n=4\)</span> svo
+við hefðum einnig getað reiknað beint <span class="math notranslate nohighlight">\(\binom{4}{2} = 6\)</span>.</p>
+</div>
+</section>
+<section id="synidaemi-tvikostadreifingin">
+<h4><span class="section-number">5.3.3.5. </span>Sýnidæmi: Tvíkostadreifingin<a class="headerlink" href="#synidaemi-tvikostadreifingin" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Hvaða líkindadreifingu fylgir slembistærðin <span class="math notranslate nohighlight">\(X\)</span>, sem lýsir því
+hversu oft sexa kemur upp þegar teningi er kastað fimm sinnum?</p>
+<p>Þar sem teningnum er kastað fimm sinnum er <span class="math notranslate nohighlight">\(n=5\)</span>. Líkurnar á því
+að upp komi sexa í hvert og eitt skipti eru <span class="math notranslate nohighlight">\(1/6\)</span> og því er
+<span class="math notranslate nohighlight">\(p=1/6\)</span>. Þá getum við sagt að <span class="math notranslate nohighlight">\(X\)</span> fylgi tvíkostadreifingu
+með stuðlana <span class="math notranslate nohighlight">\(p = 1/6\)</span> og <span class="math notranslate nohighlight">\(n=5\)</span> eða <span class="math notranslate nohighlight">\(X \sim B(5,1/6)\)</span>.</p>
+</div>
+</section>
+<section id="ex-tvikostkronukast">
+<span id="id3"></span><h4><span class="section-number">5.3.3.6. </span>Sýnidæmi: Tvíkostadreifingin<a class="headerlink" href="#ex-tvikostkronukast" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Benni hefur gaman af því að kasta krónum. Hverjar eru líkurnar á því að
+Benni fái nákvæmlega tvo þorska þegar hann kastar krónu fjórum sinnum?</p>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> tákna fjölda þorska sem upp koma (við skilgreinum þorsk
+sem jákvæða útkomu). Áður en við reiknum líkurnar þurfum við að finna
+hvaða líkindadreifingu <span class="math notranslate nohighlight">\(X\)</span> fylgir.</p>
+<p>Að kasta upp krónu er Bernoulli tilraun þar sem það eru aðeins tvær
+mögulegar útkomur þorskur, jákvæð og landvættir, neikvæð. Líkurnar á
+jákvæðri útkomu eru þær sömu í hverri tilraun fyrir sig (líkurnar eru
+alltaf 0.5) og útkomurnar eru óháðar.</p>
+<p>Þar sem við framkvæmum Bernoulli tilraunir 4 sinnum fylgir <span class="math notranslate nohighlight">\(X\)</span>
+tvíkostadreifingu með <span class="math notranslate nohighlight">\(n\)</span> = 4, <span class="math notranslate nohighlight">\(p\)</span> = 0.5 og við getum
+skrifað <span class="math notranslate nohighlight">\(X \sim B(4,0.5)\)</span>. Við getum því notað jöfnu
+<a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar. Byrjum á að reikna út
+gildið á tvíliðustuðlinum með jöfnu <a class="reference internal" href="#equation-eq-tvilidustudull">5.9</a></p>
+<div class="math notranslate nohighlight">
+\[\binom{n}{k} = \binom{4}{2} = \frac{4!}{2!(4-2)!} = \frac{4 \cdot 3 \cdot 2 \cdot 1}{2\cdot 1 \cdot(2 \cdot 1)} = 6\]</div>
+<p>og reiknum svo líkurnar með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a></p>
+<div class="math notranslate nohighlight">
+\[P(X = 2) = \binom{n}{k} p^k (1-p)^{n-k} = \binom{4}{2} 0.5^2 (1-0.5)^{4-2} = 6 \cdot 0.5^2 \cdot 0.5^2 = 0.3750\]</div>
+<p>Líkurnar á að fá 2 þorska þegar krónu er kastað 4 sinnum eru því 37.5%.</p>
+</div>
+</section>
+<section id="id4">
+<h4><span class="section-number">5.3.3.7. </span>Sýnidæmi: Tvíkostadreifingin<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Teiknið upp massafall slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> sem táknar fjölda
+jákvæðra útkoma þegar krónu er kastað fjórum sinnum.</p>
+<p>Við sáum í dæmi <a class="reference internal" href="#ex-tvikostkronukast"><span class="std std-numref">5.3.3.6</span></a> að <span class="math notranslate nohighlight">\(X\)</span> fylgir
+tvíkostadreifingu með stikana <span class="math notranslate nohighlight">\(p=0.5\)</span> og <span class="math notranslate nohighlight">\(n = 4\)</span>.</p>
+<p>Til þess að teikna massafallið þurfum við að reikna líkurnar fyrir allar
+mögulegar útkomur <span class="math notranslate nohighlight">\(X\)</span>, það er að segja við þurfum að finna auk
+<span class="math notranslate nohighlight">\(P(X=2)\)</span> sem við fundum í dæmi <a class="reference internal" href="#ex-tvikostkronukast"><span class="std std-numref">5.3.3.6</span></a>,
+<span class="math notranslate nohighlight">\(P(X=0)\)</span>, <span class="math notranslate nohighlight">\(P(X=1)\)</span>, <span class="math notranslate nohighlight">\(P(X=3)\)</span> og <span class="math notranslate nohighlight">\(P(X=4)\)</span>. Þetta
+gerum við á sama máta og í dæmi <a class="reference internal" href="#ex-tvikostkronukast"><span class="std std-numref">5.3.3.6</span></a> og við fáum
+að</p>
+<div class="math notranslate nohighlight">
+\[P(X=0) = 0.0625, \ P(X=1)= 0.25, \ P(X=3)= 0.25, \  P(X=4) = 0.0625\]</div>
+<p>Massafallið má sjá hér að neðan.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/binom1.svg" /></figure>
+</div>
+</section>
+<section id="id5">
+<h4><span class="section-number">5.3.3.8. </span>Sýnidæmi: Tvíkostadreifingin<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Ólöf kastar teningi þrisvar sinnum. Hverjar eru líkurnar á að hún fái
+einu sinni sexu í þessum þremur köstum?</p>
+<p>Köllum nú <span class="math notranslate nohighlight">\(X\)</span> fjölda skipta þegar upp kemur sexa. Áður en við
+reiknum líkurnar þurfum við að finna hvaða líkindadreifingu <span class="math notranslate nohighlight">\(X\)</span>
+fylgir.</p>
+<p>Hér er um Bernoulli tilraun að ræða þar sem við lítum svo á að það séu
+aðeins tvær mögulegar útkomur (fá sexu, jákvæð, og fá ekki sexu,
+neikvæð) líkurnar á jákvæðri útkomu eru þær sömu í hverri tilraun fyrir
+sig (líkurnar eru alltaf 1/6) og útkomurnar eru óháðar.</p>
+<p>Þar sem við framkvæmum Bernoulli tilraunir 3 sinnum fylgir <span class="math notranslate nohighlight">\(X\)</span>
+tvíkostadreifingu með <span class="math notranslate nohighlight">\(n\)</span> = 3, <span class="math notranslate nohighlight">\(p\)</span> = 1/6 og við getum
+skrifað <span class="math notranslate nohighlight">\(X \in B(3,1/6)\)</span>. Við getum því notað jöfnu
+<a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar og fáum</p>
+<div class="math notranslate nohighlight">
+\[P(X = 1) = \binom{3}{1} (1/6)^1 (1-1/6)^{3-1} = 3 \cdot (1/6)^1 \cdot (5/6)^2 = 0.3472\]</div>
+<p>Líkurnar eru því um 34.7%.</p>
+<p>Teiknum að lokum massafall <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(X \in B(3,1/6)\)</span>.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/binom3.svg" /></figure>
+</div>
+</section>
+<section id="id6">
+<h4><span class="section-number">5.3.3.9. </span>Sýnidæmi: Tvíkostadreifingin<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Jói er mikið fyrir radísur og ákveður því að prófa að gróðursetja nokkur
+radísufræ. Jói hefur aldrei komið nálægt garðrækt og ákveður því að fara
+rólega í sakirnar í byrjun og gróðursetur 8 radísufræ. Hann hringir svo
+stoltur í móður sína sem er radísusérfræðingur mikill. Af áralangri
+reynslu veit hún að líkurnar á að radísufræ verði að fullvaxta radísu
+eru <span class="math notranslate nohighlight">\(75\%\)</span> miðað við aðstæðurnar í garðinum hans Jóa. Hverjar eru
+líkurnar á að öll fræin hans Jóa verði að fullvaxta radísum og hvaða
+forsendur þurfa að gilda svo útreikningarnir séu réttir?</p>
+<p>Reikna má líkurnar með að því að nota tvíkostadreifinguna en þá verður
+að gilda að atburðirnir séu óháðir. Gerum ráð fyrir at atburðirnir séu
+óháðir og notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar.
+Notum <span class="math notranslate nohighlight">\(X\)</span> til að tákna fjölda radísufræja sem verða að radísu,
+<span class="math notranslate nohighlight">\(X \in B(8,0.75)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[P(X = 8) = \binom{8}{8} (0.75)^8 (1-0.75)^{8-8} = 0.10\]</div>
+<p>Líkurnar eru því 10% en útreikningarnir gilda aðeins ef atburðirnir eru
+óháðir.</p>
+</div>
+</section>
+<section id="id7">
+<h4><span class="section-number">5.3.3.10. </span>Sýnidæmi: Tvíkostadreifingin<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Stjórnendur framleiðslufyrirtækis hér í bæ huga mikið að gæðamálum og
+halda þeir fram að líkurnar á að vara sem framleidd er í fyrirtækinu sé
+gölluð séu 0.1%. Séu 100 vörur frá fyrirtækinu valdar af handahófi,
+hverjar eru líkurnar á að engin þeirra sé gölluð? Gerið ráð fyrir að
+atburðirnir séu óháðir.</p>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> tákna fjölda gallaðra vara, <span class="math notranslate nohighlight">\(X \in B(100,0.001)\)</span>.
+Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar á að
+engin vara sé gölluð:</p>
+<div class="math notranslate nohighlight">
+\[P(X = 0) = \binom{100}{0} (0.001)^0 (1-0.001)^{100-0} = 0.999^{100} = 0.90\]</div>
+<p>Líkurnar eru því 90%.</p>
+</div>
+<p>Við höfum nú séð að reikna má líkurnar á að slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki
+eitthvert ákveðið gildi <span class="math notranslate nohighlight">\(k\)</span> með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a>.
+Auk þess að reikna <span class="math notranslate nohighlight">\(P(X=k)\)</span> höfum við oft áhuga á að reikna
+<span class="math notranslate nohighlight">\(P(a \leq X \leq b)\)</span>, <span class="math notranslate nohighlight">\(P(a &lt; X &lt; b)\)</span>, <span class="math notranslate nohighlight">\(P(X \leq k))\)</span>,
+<span class="math notranslate nohighlight">\((X &lt; k)\)</span>, <span class="math notranslate nohighlight">\(P(X \geq k))\)</span> eða <span class="math notranslate nohighlight">\((X &gt; k)\)</span>. Við getum
+reiknað allar þessar líkur með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> ásamt því
+að nota reglurnar í kassa <a class="reference internal" href="#e-reglur"><span class="std std-numref">5.3.2.1</span></a>. Skoðum nú nokkur dæmi sem
+sýna hvernig þetta er gert.</p>
+</section>
+<section id="id8">
+<h4><span class="section-number">5.3.3.11. </span>Sýnidæmi: Tvíkostadreifingin<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Sigga kastar krónu 10 sinnum. Táknum fjölda þorska með <span class="math notranslate nohighlight">\(X\)</span>,
+<span class="math notranslate nohighlight">\(X \sim B(10,0.5)\)</span>.</p>
+<ol class="loweralpha simple">
+<li><p>Hverjar eru líkurnar á því að Sigga fái á milli 4 og 6 þorska?</p></li>
+<li><p>Hverjar eru líkurnar á því að Sigga fái 3 eða færri þorska?</p></li>
+<li><p>Hverjar eru líkurnar á því að Sigga fái 8 eða fleiri þorska?</p></li>
+<li><p>Hverjar eru líkurnar á því að Sigga fái fleiri en 2 þorska?</p></li>
+<li><p>Teiknið massafall <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
+</ol>
+<p>a. Finnum nú líkurnar á því að fjöldi þorska verði á milli 4 og 6:
+<span class="math notranslate nohighlight">\(P(4 \leq X \leq 6)\)</span></p>
+<p>Til að reikna þessar líkur verðum við að leggja saman líkurnar á því að
+fá 4, 5 og 6 þorska eða</p>
+<div class="math notranslate nohighlight">
+\[P(4 \leq X \leq 6) = P(X = 4) + P(X = 5) + P(X = 6)\]</div>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[P(4 \leq X \leq 6) = 0.2051 + 0.2461 + 0.2051 = 0.6563\]</div>
+<p>Líkurnar á því að fá milli 4 og 6 þorska þegar krónu er kastað 10 sinnum
+eru því um 65.6%.</p>
+<p>b. Finnum nú líkurnar á því að fjöldi þorska verði 3 eða færri:
+<span class="math notranslate nohighlight">\(P(X \leq 3)\)</span>.</p>
+<p>Til að reikna þessar líkur verðum við að leggja saman líkurnar að fá 0,
+1, 2 og 3 þorska eða</p>
+<div class="math notranslate nohighlight">
+\[P(X \leq 3) = P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3)\]</div>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[P(X \leq 3) = 0.0010 + 0.0098 + 0.0439 + 0.1172 = 0.1719\]</div>
+<p>Líkurnar eru því um 17.2%.</p>
+<p>VARÚÐ: Ef beðið hefði verið um líkurnar á að fá færri en 3 þorska væru
+líkurnar:</p>
+<div class="math notranslate nohighlight">
+\[P(X&lt;3) = P(X = 0) + P(X = 1) + P(X = 2) = 0.0527\]</div>
+<p>c. Finnum nú líkur þess að fjöldi þorska verði 8 eða fleiri:
+<span class="math notranslate nohighlight">\(P(X \geq 8)\)</span>.</p>
+<p>Til að reikna þessar líkur verðum við að leggja saman líkurnar á því að
+fá 8, 9, eða 10 þorska (við köstum krónunni 10 sinnum og því getur
+fjöldi þorska ekki verið fleiri en 10) eða</p>
+<div class="math notranslate nohighlight">
+\[P(X \geq 8) = P(X = 8) + P(X = 9) + P(X = 10)\]</div>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[P(X \geq 8) = 0.0439 + 0.0098 + 0.0010 = 0.0547\]</div>
+<p>Líkurnar eru því um 5.5%.</p>
+<p>VARÚÐ: Ef beðið hefði verið um líkurnar á að fá fleiri en 8 þorska væru
+líkurnar</p>
+<div class="math notranslate nohighlight">
+\[P(X&gt;8) = P(X = 9) + P(X = 10) = 0.0108\]</div>
+<p>d. Finnum nú líkur á því að fjöldi þorska verði fleiri en 2:
+<span class="math notranslate nohighlight">\(P(X &gt; 2)\)</span>.</p>
+<p>Við getum reiknað þessar líkur sem</p>
+<div class="math notranslate nohighlight">
+\[P(X &gt; 2) = P(X = 3) + P(X = 4) + ... + P(X = 10)\]</div>
+<p>en auðveldara er að nota jöfnu <a class="reference internal" href="#equation-eq-reglur4">5.7</a> til að umskrifa líkurnar</p>
+<div class="math notranslate nohighlight">
+\[P (X &gt; 2) = 1 - P(X \leq 2) = 1 - (P(X = 2) + P(X = 1) + P(X = 0))\]</div>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[P (X &gt; 2) = 1 - (0.0439 + 0.0098 + 0.0010) = 0.9453\]</div>
+<p>Líkurnar á að fá fleiri en tvo þorska eru því um 94.5%.</p>
+<p>e. Teiknum nú massafall slembibreytunnar <span class="math notranslate nohighlight">\(X\)</span>,
+<span class="math notranslate nohighlight">\(X \in B(10,0.5)\)</span>.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/binom2.svg" /></figure>
+</div>
+</section>
+<section id="vaentigildi-og-dreifni-tvikostadreifingarinnar">
+<h4><span class="section-number">5.3.3.12. </span>Væntigildi og dreifni tvíkostadreifingarinnar<a class="headerlink" href="#vaentigildi-og-dreifni-tvikostadreifingarinnar" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef <span class="math notranslate nohighlight">\(X\)</span> fylgir tvíkostadreifingu, <span class="math notranslate nohighlight">\(X \sim B(n,p)\)</span> þá gildir</p>
+<div class="math notranslate nohighlight" id="equation-eq-vaentigilditvikostadreifingar">
+<span class="eqno">(5.10)<a class="headerlink" href="#equation-eq-vaentigilditvikostadreifingar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+\text{E}[X] &amp; =  np\end{aligned}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-dreifnitvikostadreifingar">
+<span class="eqno">(5.11)<a class="headerlink" href="#equation-eq-dreifnitvikostadreifingar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+\text{Var}[X] &amp; =  np(1-p)\end{aligned}\]</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-vaentigildi-og-dreifni-tvikostadreifingarinnar">
+<h4><span class="section-number">5.3.3.13. </span>Sýnidæmi: Væntigildi og dreifni tvíkostadreifingarinnar<a class="headerlink" href="#synidaemi-vaentigildi-og-dreifni-tvikostadreifingarinnar" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Árni Pétur ætlar að kasta teningi 900 sinnum. Látum <span class="math notranslate nohighlight">\(X\)</span> tákna
+fjölda skipta sem fjarki kemur upp, <span class="math notranslate nohighlight">\(X \sim B(900,1/6)\)</span>. Finnið
+<span class="math notranslate nohighlight">\(\text{E}[X]\)</span> og <span class="math notranslate nohighlight">\(\text{Var}[X]\)</span>.</p>
+<p>Við notum jöfnur <a class="reference internal" href="#equation-eq-vaentigilditvikostadreifingar">5.10</a> og
+<a class="reference internal" href="#equation-eq-dreifnitvikostadreifingar">5.11</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{E}[X] &amp; = np \ = \ 900 \cdot 1/6 = 150\\
+\text{Var}[X] &amp; = np(1-p) \ = \ 125 \end{aligned}\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="poisson-dreifingin">
+<span id="s-poisson"></span><h3><span class="section-number">5.3.4. </span>Poisson dreifingin<a class="headerlink" href="#poisson-dreifingin" title="Permalink to this heading"></a></h3>
+<p>Poisson dreifingin er oft notuð til að lýsa fjölda slembinna atvika sem
+eiga sér stað <strong>á ákveðinni einingu</strong> en mögulegar útkomur hafa engin
+efri mörk. Einingarnar geta sem dæmi verið tímabil, svæði eða einhver
+hlutur. Sem dæmi má nefna fjölda símtala til nemendaskrár <strong>á</strong> mínútu,
+fjölda hreindýra <strong>á</strong> ferkílómetra og fjölda innsláttarvillna <strong>á</strong>
+blaðsíðu.</p>
+<p>Poisson dreifingin hefur bara einn stika sem er táknaður með
+<span class="math notranslate nohighlight">\(\lambda\)</span>. Hann lýsir því hvað við væntum að margar jákvæðar
+útkomur eigi sér stað að meðaltali á tiltekinni mælieiningu. Við setjum
+engar skorður á hvaða heiltölugildi slembistærð <span class="math notranslate nohighlight">\(X\)</span>, sem fylgir
+Poisson dreifingu, getur tekið. Sama hvað við skoðum hátt gildi eru ætíð
+einhverjar líkur á því að <span class="math notranslate nohighlight">\(X\)</span> taki það gildi (þó þær geti verið
+agnarsmáar).</p>
+<section id="poisson-dreifingin-poisson-distribution">
+<h4><span class="section-number">5.3.4.1. </span>Poisson dreifingin (Poisson distribution)<a class="headerlink" href="#poisson-dreifingin-poisson-distribution" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> fylgja Poisson dreifingu með stikann <span class="math notranslate nohighlight">\(\lambda\)</span>,
+táknað <span class="math notranslate nohighlight">\(X \sim \text{Pois}(\lambda)\)</span>. Ef <span class="math notranslate nohighlight">\(k\)</span> er eitthvert
+jákvætt heiltölugildi (núll meðtalið) má reikna líkurnar á að
+slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki gildið <span class="math notranslate nohighlight">\(k\)</span> með massafalli Poisson
+dreifingarinnar :</p>
+<div class="math notranslate nohighlight" id="equation-eq-poisson">
+<span class="eqno">(5.12)<a class="headerlink" href="#equation-eq-poisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}\]</div>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Slembistærðin <span class="math notranslate nohighlight">\(X\)</span> lýsir fjölda jákvæðra útkoma á tiltekna
+mælieiningu, þar sem <span class="math notranslate nohighlight">\(\lambda\)</span> er meðafjöldi jákvæðra útkoma á
+hverja einingu. Það eru engin efri mörk á fjölda jákvæðra útkoma svo
+<span class="math notranslate nohighlight">\(X\)</span> getur mögulega tekið hvaða gildi <span class="math notranslate nohighlight">\(\{0,1,2,...\}\)</span> sem er.</p>
+<p>Bókstafurinn <span class="math notranslate nohighlight">\(e\)</span> í jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a>, stendur fyrir ákveðna
+tölu, sem er kölluð <span class="math notranslate nohighlight">\(e\)</span>. Gildi hennar er um það bil 2.72. Töluna
+<span class="math notranslate nohighlight">\(e\)</span> má, líkt og töluna <span class="math notranslate nohighlight">\(\pi\)</span>, finna á flestum vasareiknum.
+Hún er þá yfirleitt táknuð með <span class="math notranslate nohighlight">\(e^x\)</span>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-poisson-dreifingin">
+<h4><span class="section-number">5.3.4.2. </span>Sýnidæmi: Poisson dreifingin<a class="headerlink" href="#synidaemi-poisson-dreifingin" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Anna Vigdís er á hraðferð og veltir því fyrir sér hversu löng biðröðin
+verði á hraðkassanum í Krónunni úti á Granda. Meðalfjöldi kúnna sem koma
+að hraðkassanum er 1.5 á mínútu. Hvaða líkindadreifingu má nota til að
+lýsa fjölda kúnna sem koma að hraðkassanum á hverri mínútu?</p>
+<p>Það eru engin efri mörk á því hve margir kúnnar geta staðið við kassann
+hverju sinni og við vitum meðalfjöldann sem kemur að kassanum á hverri
+mínútu. Því notum við Poisson dreifinguna til að lýsa fjölda kúnna sem
+koma að kassanum á hverri mínútu með stikann <span class="math notranslate nohighlight">\(\lambda = 1.5\)</span> eða
+<span class="math notranslate nohighlight">\(X \sim \text{Pois}(1.5)\)</span></p>
+</div>
+<p>Jafna <a class="reference internal" href="#equation-eq-poisson">5.12</a> sýnir okkur hvernig reikna má líkurnar á að
+slembistærð <span class="math notranslate nohighlight">\(X\)</span> sem fylgir Poisson dreifingunni taki eitthvert
+ákveðið gildi <span class="math notranslate nohighlight">\(k\)</span>. Eins og með tvíkostadreifinguna höfum við oft
+áhuga á að reikna aðrar líkur eða <span class="math notranslate nohighlight">\(P(a \leq X \leq b)\)</span>,
+<span class="math notranslate nohighlight">\(P(a &lt; X &lt; b)\)</span>, <span class="math notranslate nohighlight">\(P(X \leq k)\)</span>, <span class="math notranslate nohighlight">\(P(X &lt; k)\)</span>,
+<span class="math notranslate nohighlight">\(P(X \geq k)\)</span> eða <span class="math notranslate nohighlight">\(P(X &gt; k)\)</span>. Við getum reiknað allar þessar
+líkur með jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> ásamt því að nota reglurnar í kassa
+<a class="reference internal" href="#e-reglur"><span class="std std-numref">5.3.2.1</span></a>.</p>
+</section>
+<section id="id9">
+<h4><span class="section-number">5.3.4.3. </span>Sýnidæmi: Poisson dreifingin<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Nú fjöllum við aftur um Önnu Vigdísi og fjölda kúnna sem koma að
+hraðkassanum í Krónunni á hverri mínútu. Meðalfjöldi kúnna sem koma að
+kassanum er 1.5 á mínútu.</p>
+<p>Finnið líkurnar á að</p>
+<ol class="loweralpha simple">
+<li><p>3 kúnnar komi að kassanum á einni mínútu.</p></li>
+<li><p>í mesta lagi 2 kúnnar komi að kassanum á einni mínútu.</p></li>
+<li><p>í minnsta lagi 1 kúnni komi að kassanum á einni mínútu.</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p>Finnum líkurnar á að 3 kúnnar komi að kassanum á einni mínútu.</p></li>
+</ol>
+<p>Við vitum að meðalfjöldi kúnna á mínútu er 1.5. Því er
+<span class="math notranslate nohighlight">\(\lambda = 1.5\)</span>. Við notum jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[P(X = 3) = \frac{e^{-1.5}1.5^3}{3!} = 0.1255\]</div>
+<p>Líkurnar eru því um 12.5%.</p>
+<p>b. Finnum líkurnar á að í mesta lagi 2 kúnnar komi að kassanum á einni
+mínútu.</p>
+<p>Til að reikna líkurnar á að í mesta lagi 2 kúnnar komi að kassanum
+þurfum við að leggja saman líkurnar á að það komi enginn, ein eða tvær
+manneskjur að kassanum á einni mínútu. Við notum jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P(X \leq 2) &amp;=&amp; P(X = 0) + P(X = 1) + P(X = 2)\\
+&amp;=&amp; 0.2231 + 0.3347 + 0.2510 \\
+&amp;=&amp; 0.8088 \end{aligned}\end{split}\]</div>
+<p>Líkurnar eru því um 80.9%.</p>
+<p>c. Finnum líkurnar á að í minnsta lagi 1 kúnni komi að kassanum á einni
+mínútu.</p>
+<p>Líkurnar á að í minnsta lagi einn kúnni komi að kassanum má skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[P(X \geq 1)\]</div>
+<p>Þessar líkur getum við ekki reiknað beint þar sem það eru engin efri
+mörk. Við notum því jöfnu <a class="reference internal" href="#equation-eq-reglur3">5.6</a> til að umskrifa líkurnar og
+fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P(X \geq 1) &amp;=&amp; 1 - P(X &lt; 1)\\
+&amp;=&amp; 1 - P(X = 0)\\
+&amp;=&amp; 1 - 0.2231\\
+&amp;=&amp; 0.7769 \end{aligned}\end{split}\]</div>
+<p>Líkurnar eru því um 77.7%.</p>
+<p>Teiknum að lokum massafall slembibreytunnar <span class="math notranslate nohighlight">\(X\)</span>,
+<span class="math notranslate nohighlight">\(X \in P(1.5)\)</span>.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/pois1.svg" /></figure>
+</div>
+<p>Þegar reikna á líkur á að slembistærð sem fylgir Poisson dreifingu taki
+eitthvert gildi fáum við <span class="math notranslate nohighlight">\(\lambda\)</span> oft gefið sem fjölda á annarri
+einingu en þeirri sem við viljum vinna með. Við gætum til dæmis vitað
+fjölda tilkynntra bilana af fólksbílagerð á hverjum degi en við viljum
+lýsa fjölda tilkynntra bilana á viku. Þá væri gefna einingin dagur en
+einingin sem við viljum vinna með er vika. Þá þarf að laga
+<span class="math notranslate nohighlight">\(\lambda\)</span> að nýrri einingu.</p>
+</section>
+<section id="poisson-dreifingin-logu-a-nyrri-einingu">
+<h4><span class="section-number">5.3.4.4. </span>Poisson dreifingin löguð að nýrri einingu<a class="headerlink" href="#poisson-dreifingin-logu-a-nyrri-einingu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Gerum ráð fyrir að slembistærðin <span class="math notranslate nohighlight">\(X \sim \text{Pois}(\lambda)\)</span>
+lýsi fjölda jákvæðra útkoma á tiltekinni einingu. Þá lýsir slembistærðin
+<span class="math notranslate nohighlight">\(Y \sim \text{Pois}(a\cdot\lambda)\)</span> fjölda jákvæðra útkoma á
+<span class="math notranslate nohighlight">\(a\)</span> einingum.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-poisson-dreifingin-logu-a-nyrri-einingu">
+<h4><span class="section-number">5.3.4.5. </span>Sýnidæmi: Poisson dreifingin löguð að nýrri einingu<a class="headerlink" href="#synidaemi-poisson-dreifingin-logu-a-nyrri-einingu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Gerum ráð fyrir að fjöldi tilkynntra bilana af ákveðinni fólksbílagerð
+fylgi Poisson dreifingu með stikann <span class="math notranslate nohighlight">\(\lambda = 8\)</span>. Hvaða
+líkindadreifingu fylgir fjöldi tilkynntra bilana á hverri viku?</p>
+<p>Látum slembistærðina <span class="math notranslate nohighlight">\(X\)</span> tákna fjölda tilkynntra bilana á hverjum
+<strong>degi</strong>. Þá er gildir að <span class="math notranslate nohighlight">\(X \sim \text{Pois}(8)\)</span>. Látum
+slembistærðina <span class="math notranslate nohighlight">\(Y\)</span> tákna fjölda tilkynntra bilana á hverri
+<strong>viku</strong>. Þar sem það eru 7 dagar í hverri viku, er meðalfjöldi bilana á
+hverri viku <span class="math notranslate nohighlight">\(7\cdot8\)</span> = 56. Því fylgir <span class="math notranslate nohighlight">\(Y\)</span> Poisson dreifingu
+með stikann <span class="math notranslate nohighlight">\(\lambda = 7\cdot 8=56\)</span> eða
+<span class="math notranslate nohighlight">\(Y \sim \text{Pois}(56)\)</span>.</p>
+</div>
+</section>
+<section id="id10">
+<h4><span class="section-number">5.3.4.6. </span>Sýnidæmi: Poisson dreifingin löguð að nýrri einingu<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Enn fjöllum við um Önnu Vigdísi og fjölda kúnna sem koma að hraðkassanum
+í Krónunni á hverri mínútu. Meðalfjöldi kúnna sem koma að kassanum er
+1.5 á mínútu. Hverjar eru líkurnar á því að 4 kúnnar komi að kassanum á
+tveimur mínútum.</p>
+<p>Við vitum að meðalfjöldi kúnna á <strong>einni</strong> mínútu er 1.5 =
+<span class="math notranslate nohighlight">\(\lambda\)</span>. Nú eigum við að reikna líkurnar á að 4 kúnnar komi að
+kassanum á <strong>tveimur</strong> mínútum og þarf því að aðlaga <span class="math notranslate nohighlight">\(\lambda\)</span> að
+nýrri einingu.</p>
+<p>Þar sem meðalfjöldi kúnna á einni mínútu er 1.5 reiknum við með því að á
+meðaltali komi <span class="math notranslate nohighlight">\(2 \cdot 1.5 = 3\)</span> kúnnar á tveimur mínútum. Við
+notum því <span class="math notranslate nohighlight">\(\lambda = 3\)</span>. Notum jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[P(X = 4) = \frac{e^{-3}3^4}{4!} = 0.1680\]</div>
+<p>Líkurnar eru því um 16.8%.</p>
+</div>
+</section>
+<section id="id11">
+<h4><span class="section-number">5.3.4.7. </span>Sýnidæmi: Poisson dreifingin<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Gerum ráð fyrir að fjöldi fæðinga á spítala nokkrum fylgi Poisson
+dreifingu með meðaltal 3 fæðingar á vakt.</p>
+<ol class="loweralpha simple">
+<li><p>Hverjar eru líkurnar á að á einni vakt fæðast fleiri en eitt barn?</p></li>
+<li><p>Hverjar eru líkurnar á að á tveimur vöktum fæðist sex börn?</p></li>
+</ol>
+<ol class="loweralpha">
+<li><p>Við vitum að meðalfjöldi fæðinga er 3. Því er <span class="math notranslate nohighlight">\(\lambda = 3\)</span>.
+Við gerum ekki reiknað líkurnar beint þar sem það eru engin efri
+mörk. Við notum því jöfnu <a class="reference internal" href="#equation-eq-reglur4">5.7</a> til að umskrifa líkurnar
+og jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> til að reikna líkurnar og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P(X &gt; 1) &amp;=&amp; 1 - P(X \leq 1)\\
+&amp;=&amp; 1 - P(X = 1) - P(X = 0)\\
+&amp;=&amp; 1 - 0.15 - 0.05 = 0.80 \end{aligned}\end{split}\]</div>
+<p>Líkurnar eru því 80%.</p>
+</li>
+<li><p>Við eigum að finna líkurnar á að á tveimur vöktum fæðist sex börn,
+því notum við <span class="math notranslate nohighlight">\(\lambda = 2\cdot 3 = 6\)</span>. Við reiknum líkurnar
+með jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a></p>
+<div class="math notranslate nohighlight">
+\[P(Y = 6) = \frac{e^{-6}6^6}{6!} = 0.16\]</div>
+<p>Líkurnar eru því 16%.</p>
+</li>
+</ol>
+</div>
+</section>
+<section id="vaentigildi-og-dreifni-poisson-dreifingar">
+<h4><span class="section-number">5.3.4.8. </span>Væntigildi og dreifni Poisson dreifingar<a class="headerlink" href="#vaentigildi-og-dreifni-poisson-dreifingar" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef <span class="math notranslate nohighlight">\(X\)</span> fylgir Poisson dreifingu,
+<span class="math notranslate nohighlight">\(X \in \text{Pois}(\lambda)\)</span> þá gildir</p>
+<div class="math notranslate nohighlight" id="equation-eq-vaentigildipoisson">
+<span class="eqno">(5.13)<a class="headerlink" href="#equation-eq-vaentigildipoisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+\text{E}[X] &amp; =  \lambda\end{aligned}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-dreifnipoisson">
+<span class="eqno">(5.14)<a class="headerlink" href="#equation-eq-dreifnipoisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+\text{Var}[X] &amp; =  \lambda \end{aligned}\]</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id12">
+<h4><span class="section-number">5.3.4.9. </span>Sýnidæmi: Poisson dreifingin<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> tákna slembistærð sem fylgir Poisson dreifingu með
+<span class="math notranslate nohighlight">\(\lambda = 2\)</span>. Finnið væntigildi og dreifni <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>Notum jöfnur <a class="reference internal" href="#equation-eq-vaentigildipoisson">5.13</a> og <a class="reference internal" href="#equation-eq-dreifnipoisson">5.14</a> og
+fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{E}[X] &amp; = &amp; \lambda \ = \ 2\\
+\text{Var}[X] &amp; = &amp; \lambda \ = \ 2 \end{aligned}\end{split}\]</div>
+</div>
+</section>
+<section id="samanburur-a-tvikosta-og-poisson-dreifingunni">
+<h4><span class="section-number">5.3.4.10. </span>Samanburður á tvíkosta- og Poisson dreifingunni<a class="headerlink" href="#samanburur-a-tvikosta-og-poisson-dreifingunni" title="Permalink to this heading"></a></h4>
+<p>Oft vill vefjast fyrir fólki hvort tvíkostadreifingin eða Poisson
+dreifingin eigi betur við til að lýsa strjálum breytum. Því viljum við
+skerpa á hvaða tilfelli eiga við hvora dreifingu:</p>
+<ul class="simple">
+<li><p>Tvíkostadreifinguna notum við þegar við höfum <strong>endanlegan</strong> fjölda
+tilrauna og við vitum <strong>líkurnar</strong> á því að hver og ein tilraun
+heppnist.</p></li>
+<li><p>Poisson dreifinguna notum við þegar við höfum <strong>engin efri mörk</strong> á
+fjölda tilrauna og við vitum <strong>meðalfjölda</strong> jákvæðra útkoma <strong>á
+tiltekna einingu</strong>.</p></li>
+</ul>
+<p>Poisson dreifinguna má, líkt og tvíkostadreifinguna, tengja við
+Bernoulli tilraunir sjá kassa <a class="reference internal" href="#em-bernoulli"><span class="std std-numref">5.3.3.1</span></a>. Það gerum við þó
+einungis þegar fjöldi tilrauna er gríðarmikill og líkurnar á að hver og
+ein Bernoulli tilraun sé jákvæð eru litlar. Í því tilviki fáum við mjög
+svipaðar niðurstöður með því að nota Poisson dreifinguna í stað
+tvíkostadreifingarinnar. Það er mun auðveldara að reikna tilteknar líkur
+með Poisson dreifingunni heldur en tvíkostadreifingunni þegar <span class="math notranslate nohighlight">\(n\)</span>
+er mjög stórt og því kjósum við heldur að nota Poisson dreifinguna í
+þeim tilfellum. Þetta má orða sem svo að Poisson dreifingin sé góð
+<em>nálgun</em> (e. approximation) á tvíkostadreifingunni þegar <span class="math notranslate nohighlight">\(n\)</span> er
+mjög stórt.</p>
+</section>
+</section>
+</section>
+<section id="samfelldar-likindadreifingar">
+<span id="s-samfelldarlikindadreifingar"></span><h2><span class="section-number">5.4. </span>Samfelldar líkindadreifingar<a class="headerlink" href="#samfelldar-likindadreifingar" title="Permalink to this heading"></a></h2>
+<section id="id13">
+<h3><span class="section-number">5.4.1. </span>Samfelldar líkindadreifingar<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<p>Meginmunur samfelldra og strjálla slembistærða er sá að samfelldar
+slembistærðir geta tekið hvaða gildi sem er á einhverju bili. Þar af
+leiðandi eru líkurnar á að samfelld slembistærð taki eitthvert eitt
+tiltekið gildi engar, þ.e.</p>
+<div class="math notranslate nohighlight" id="equation-eq-samfelldnull">
+<span class="eqno">(5.15)<a class="headerlink" href="#equation-eq-samfelldnull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = x) = 0\]</div>
+<p>Athugið að þetta gildir um hvert eitt og einasta gildi sem slembistærðin
+getur tekið! Því gildir að</p>
+<div class="math notranslate nohighlight">
+\[P(a \leq X \leq b) = P(a &lt; X \leq b) = P(a \leq X &lt; b) = P(a &lt; X &lt; b)\]</div>
+<p>þegar <span class="math notranslate nohighlight">\(X\)</span> er samfelld. Munið að þetta gildir almennt ekki um
+strjálar slembistærðir, samanber kassa <a class="reference internal" href="#e-reglur"><span class="std std-numref">5.3.2.1</span></a>.</p>
+<section id="reiknireglur-fyrir-samfelldar-slembistaerir">
+<span id="e-reiknireglursamfelldar"></span><h4><span class="section-number">5.4.1.1. </span>Reiknireglur fyrir samfelldar slembistærðir<a class="headerlink" href="#reiknireglur-fyrir-samfelldar-slembistaerir" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Um samfellda slembistærð <span class="math notranslate nohighlight">\(X\)</span> gildir að:</p>
+<div class="math notranslate nohighlight" id="equation-eq-snualikindum">
+<span class="eqno">(5.16)<a class="headerlink" href="#equation-eq-snualikindum" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X &gt; a) = 1 - P(X &lt; a)\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-likindiabili">
+<span class="eqno">(5.17)<a class="headerlink" href="#equation-eq-likindiabili" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(a &lt; X &lt;  b) = P(X &lt; b) - P(X &lt; a)\]</div>
+</div>
+<hr class="docutils" />
+<p>Við sáum hvernig sérhverri strjálli dreifingu er lýst með massafalli sem
+við notum til að reikna líkur á að slembistærð sem fylgir strjálli
+dreifingu taki ákveðið gildi. Sú aðferð er hins vegar ónothæf til að
+lýsa samfelldum slembistærðum, þar sem líkurnar á því að þær taki
+ákveðið stakt gildi eru alltaf núll, sama hvert gildið er, samanber
+jöfnu <a class="reference internal" href="#equation-eq-samfelldnull">5.15</a>. Þess í stað lýsum við líkunum á því að
+samfelldar slembistærðir taki gildi á tilteknum <strong>bilum</strong>.</p>
+<p>Skoðum nú aftur reiknireglurnar í kassa <a class="reference internal" href="#e-reiknireglursamfelldar"><span class="std std-numref">5.4.1.1</span></a>.
+Þær fela í sér að ef við viljum reikna líkurnar á því að <span class="math notranslate nohighlight">\(X\)</span> lendi
+á tilteknu bili, þá dugir okkur að geta reiknað <span class="math notranslate nohighlight">\(P(X &lt; x)\)</span> fyrir
+hvaða <span class="math notranslate nohighlight">\(x\)</span> sem er. Með öðrum orðum, reiknað líkurnar á því að
+slembistærðin taki gildi sem er minna en eitthvað ákveðið
+viðmiðunargildi <span class="math notranslate nohighlight">\(x\)</span>, fyrir hvaða viðmiðunargildi <span class="math notranslate nohighlight">\(x\)</span> sem er.
+<em>Dreififall</em> (e. distribution function) er einmitt fallið sem reiknar
+þessar líkur.</p>
+</section>
+<section id="dreififall-distribution-function">
+<h4><span class="section-number">5.4.1.2. </span>Dreififall (Distribution function)<a class="headerlink" href="#dreififall-distribution-function" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Með <em>dreififalli</em> reiknum við líkurnar á að samfelld slembistærð
+<span class="math notranslate nohighlight">\(X\)</span> taki gildi sem er minna en viðmiðunargildið <span class="math notranslate nohighlight">\(x\)</span>. Við
+táknum dreififallið með <span class="math notranslate nohighlight">\(F(x)\)</span> og það má skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[F(x) = P(X &lt; x)\]</div>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Við stingum viðmiðunargildi <span class="math notranslate nohighlight">\(x\)</span> inn í fallið og fáum út líkurnar á
+því að slembistærðin <span class="math notranslate nohighlight">\(X\)</span>, sem dreififallið lýsir, taki gildi sem
+er minna en <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Ekki er til lokuð formúla til að lýsa dreififalli margra algengra
+líkindadreifinga, eins og t.d. normaldreifingarinnar. Þess í stað er
+henni lýst með <em>þéttifalli</em> líkindadreifingarinnar.</p>
+</section>
+<section id="ettifall-og-ettiferill-density-function-and-density-curve">
+<h4><span class="section-number">5.4.1.3. </span>Þéttifall og þéttiferill (Density function and density curve)<a class="headerlink" href="#ettifall-og-ettiferill-density-function-and-density-curve" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Þéttifall</em> (e. density function) er táknað með <span class="math notranslate nohighlight">\(f(x)\)</span> og kallast
+graf þess <em>þéttiferill</em> (density curve). Flatarmálið undir þéttiferlinum
+milli tveggja stærða <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> er jafnt <span class="math notranslate nohighlight">\(P(a&lt;X&lt;b)\)</span>,
+líkunum á því að slembistærðin taki gildi á milli <span class="math notranslate nohighlight">\(a\)</span> og
+<span class="math notranslate nohighlight">\(b\)</span>. Þetta er sýnt á mynd <a class="reference internal" href="#g-thettiferill"><span class="std std-numref">5.3</span></a>.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Þar sem líkurnar á að slembistærð taki hvaða gildi sem er eru 100% eða
+1, er heildarflatarmálið undir þéttiferlinum öllum alltaf 1. Ef þið
+þekkið til heildunar þá hafið þið kannski áttað ykkur á því að
+dreififallið er einmitt stofnfall þéttifallsins.</p>
+</div>
+<hr class="docutils" />
+<figure class="align-center" id="id41">
+<span id="g-thettiferill"></span><img alt="Þéttiferill þéttifalls samfelldrar dreifingar" src="../_images/norm10.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.3: </span><span class="caption-text">Þéttiferill þéttifalls samfelldrar dreifingar</span><a class="headerlink" href="#id41" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="normaldreifing">
+<span id="s-normaldreifingin"></span><h3><span class="section-number">5.4.2. </span>Normaldreifing<a class="headerlink" href="#normaldreifing" title="Permalink to this heading"></a></h3>
+<p>Eins og nefnt var í upphafi kaflans er normaldreifingin mest notaða
+líkindadreifing tölfræðinnar. Lýsa má margs konar breytum með
+normaldreifingu svo sem hæð, blóðþrýstingi, þyngd og svo mætti lengi
+telja og mikilvægi hennar verður enn ljósara þegar farið verður í
+höfuðsetningu tölfræðinnar í kafla <a class="reference internal" href="../kafli06/#c-alyktunartolfraedi"><span class="std std-numref">6</span></a>.
+Normaldreifingunni er lýst með stikunum <span class="math notranslate nohighlight">\(\mu\)</span>, sem er meðaltal
+hennar og <span class="math notranslate nohighlight">\(\sigma^2\)</span> sem er dreifni hennar.</p>
+<section id="normaldreifingin-normal-distribution">
+<h4><span class="section-number">5.4.2.1. </span>Normaldreifingin (normal distribution)<a class="headerlink" href="#normaldreifingin-normal-distribution" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Gerum ráð fyrir að slembistærðin <span class="math notranslate nohighlight">\(X\)</span> fylgi normaldreifingu með
+meðaltal <span class="math notranslate nohighlight">\(\mu\)</span> og dreifni <span class="math notranslate nohighlight">\(\sigma^2\)</span>, táknað
+<span class="math notranslate nohighlight">\(X \sim N(\mu , \sigma^2)\)</span>. Þá er þéttifall hennar, táknað með
+<span class="math notranslate nohighlight">\(\phi(x)\)</span>, gefið með</p>
+<div class="math notranslate nohighlight" id="equation-eq-normaldreifing">
+<span class="eqno">(5.18)<a class="headerlink" href="#equation-eq-normaldreifing" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[f(x) = \phi(x) = \frac{1}{\sigma \sqrt{2 \pi }}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\]</div>
+<p>Dreififall normaldreifingarinnar er táknað með <span class="math notranslate nohighlight">\(\Phi(x)\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Meðaltal normaldreifingarinnar er táknað með <span class="math notranslate nohighlight">\(\mu\)</span> en dreifni
+hennar er táknuð með <span class="math notranslate nohighlight">\(\sigma^2\)</span>. Staðalfrávik hennar er þar af
+leiðandi <span class="math notranslate nohighlight">\(\sigma\)</span>. Dreififallið <span class="math notranslate nohighlight">\(\Phi(x)\)</span> er jafnt
+<span class="math notranslate nohighlight">\(P(X &lt; x)\)</span> og gefur því líkurnar á að slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki
+gildi sem er minna en <span class="math notranslate nohighlight">\(x\)</span>. Það er ekki hægt að skrifa einfalda
+jöfnu fyrir <span class="math notranslate nohighlight">\(\Phi(x)\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Til að ná góðum tökum á normaldreifingunni er mikilvægt að átta sig á
+því hvernig þéttiferill hennar lítur út og hvaða áhrif stikarnir
+<span class="math notranslate nohighlight">\(\mu\)</span> og <span class="math notranslate nohighlight">\(\sigma^2\)</span> hafa á hann. Þéttiferillinn er
+samhverfur og bjöllulaga og miðja hans er <span class="math notranslate nohighlight">\(\mu\)</span>, meðaltal
+dreifingarinnar. Dreifnin, <span class="math notranslate nohighlight">\(\sigma^2\)</span> stýrir því hins vegar hversu
+flatur ferillinn er. Þeim stærri sem <span class="math notranslate nohighlight">\(\sigma^2\)</span> er, þeim flatari
+er ferillinn og toppur hans lægri.</p>
+<p>Á mynd <a class="reference internal" href="#g-tvaernormaldreifingar"><span class="std std-numref">5.4</span></a> má sjá tvær normaldreifingar.
+Meðaltal dreifinganna, <span class="math notranslate nohighlight">\(\mu\)</span>, er það sama þar sem miðja þeirra er
+á sama stað. Dreifni dreifingar 1 er hins vegar minni en dreifni
+dreifingar 2. Á mynd <a class="reference internal" href="#g-thrjarnormaldreifingar"><span class="std std-numref">5.5</span></a> má sjá þrjár
+normaldreifingar sem allar hafa sömu dreifnina. Meðaltal dreifingar 1 er
+það lægsta og meðaltal dreifingar 3 það hæsta.</p>
+<figure class="align-center" id="id42">
+<span id="g-tvaernormaldreifingar"></span><img alt="Tvær normaldreifingar með sama meðaltal en ólíka dreifni" src="../_images/norm1.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.4: </span><span class="caption-text">Tvær normaldreifingar með sama meðaltal en ólíka dreifni</span><a class="headerlink" href="#id42" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id43">
+<span id="g-thrjarnormaldreifingar"></span><img alt="Þrjár normaldreifingar með sömu dreifni en ólík meðaltöl" src="../_images/norm2.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.5: </span><span class="caption-text">Þrjár normaldreifingar með sömu dreifni en ólík meðaltöl</span><a class="headerlink" href="#id43" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="reglan">
+<h4><span class="section-number">5.4.2.2. </span>68-95-99.7% reglan<a class="headerlink" href="#reglan" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Fyrir sérhverja normaldreifingu með meðaltal <span class="math notranslate nohighlight">\(\mu\)</span> og dreifni
+<span class="math notranslate nohighlight">\(\sigma^2\)</span> og þar af leiðandi staðalfrávik <span class="math notranslate nohighlight">\(\sigma\)</span> gildir
+að</p>
+<ul class="simple">
+<li><p>u.þ.b. 68% mælinga munu liggja innan við eitt staðalfrávik frá
+meðaltalinu</p></li>
+<li><p>u.þ.b. 95% mælinga munu liggja innan við tvö staðalfrávik frá
+meðaltalinu</p></li>
+<li><p>u.þ.b. 99.7% mælinga munu liggja innan við þrjú staðalfrávik frá
+meðaltalinu</p></li>
+</ul>
+<p>Þetta má sjá á mynd <a class="reference internal" href="#g-68reglan"><span class="std std-numref">5.6</span></a></p>
+</div>
+<hr class="docutils" />
+<figure class="align-center" id="id44">
+<span id="g-68reglan"></span><img alt="68-95-99.7% reglan" src="../_images/norm3.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.6: </span><span class="caption-text">68-95-99.7% reglan</span><a class="headerlink" href="#id44" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="stolu-normaldreifing">
+<h4><span class="section-number">5.4.2.3. </span>Stöðluð normaldreifing<a class="headerlink" href="#stolu-normaldreifing" title="Permalink to this heading"></a></h4>
+<p>Normaldreifing með meðaltal <span class="math notranslate nohighlight">\(\mu = 0\)</span> og dreifni
+<span class="math notranslate nohighlight">\(\sigma^2 = 1\)</span> er kölluð staðlaða normaldreifingin. Hefð er fyrir
+því að tákna slembibreytur sem fylgja stöðluðu normaldreifingunni með
+bókstafnum <span class="math notranslate nohighlight">\(Z\)</span>.</p>
+</section>
+<section id="stalaa-normaldreifingin-standardized-normal-distribution">
+<h4><span class="section-number">5.4.2.4. </span>Staðlaða normaldreifingin (Standardized normal distribution)<a class="headerlink" href="#stalaa-normaldreifingin-standardized-normal-distribution" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef slembistærðin <span class="math notranslate nohighlight">\(X\)</span> fylgir normaldreifingu með meðaltal
+<span class="math notranslate nohighlight">\(\mu\)</span> og dreifni <span class="math notranslate nohighlight">\(\sigma^2\)</span>, skrifað</p>
+<div class="math notranslate nohighlight">
+\[X \sim N(\mu,\sigma^2)\]</div>
+<p>þá fylgir</p>
+<div class="math notranslate nohighlight" id="equation-eq-stadladanormal">
+<span class="eqno">(5.19)<a class="headerlink" href="#equation-eq-stadladanormal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{X - \mu}{\sigma}\]</div>
+<p>normaldreifingu með meðaltal 0 og dreifni 1, skrifað</p>
+<div class="math notranslate nohighlight">
+\[Z \sim N(0,1)\]</div>
+</div>
+<hr class="docutils" />
+</section>
+<section id="samband-x-og-z">
+<span id="em-sambandxogz"></span><h4><span class="section-number">5.4.2.5. </span>Samband <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Z\)</span><a class="headerlink" href="#samband-x-og-z" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef slembistærðin <span class="math notranslate nohighlight">\(X\)</span> fylgir normaldreifingu með meðaltal
+<span class="math notranslate nohighlight">\(\mu\)</span> og dreifni <span class="math notranslate nohighlight">\(\sigma^2\)</span>, <span class="math notranslate nohighlight">\(X \in N(\mu,\sigma^2)\)</span>,
+og slembistærðin <span class="math notranslate nohighlight">\(Z\)</span> fylgir stöðluðu normaldreifingunni,
+<span class="math notranslate nohighlight">\(Z \in N(0,1)\)</span>, þá gildir að</p>
+<div class="math notranslate nohighlight" id="equation-eq-xz">
+<span class="eqno">(5.20)<a class="headerlink" href="#equation-eq-xz" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X \leq x) = P(Z \leq z)\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(z = \frac{x- \mu}{\sigma}\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Aðgerðina <span class="math notranslate nohighlight">\(z = \frac{x- \mu}{\sigma}\)</span> köllum við að <em>staðla</em> og í
+kassa <a class="reference internal" href="#em-notkunnormtoflu"><span class="std std-numref">5.4.2.7</span></a> sjáum við hvernig nota má hana til að
+reikna líkur fyrir hvaða normaldreifðu slembistærð sem er út frá
+stöðluðu normaldreifingunni.</p>
+</section>
+<section id="likur-normaldreifra-slembistaera">
+<h4><span class="section-number">5.4.2.6. </span>Líkur normaldreifðra slembistærða<a class="headerlink" href="#likur-normaldreifra-slembistaera" title="Permalink to this heading"></a></h4>
+<p>Dreififallið <span class="math notranslate nohighlight">\(\Phi(z)\)</span> gefur líkurnar á að normaldreifing sem
+fylgir stöðluðu normaldreifingunni taki gildi sem er minna en <span class="math notranslate nohighlight">\(z\)</span>,
+þ.e.</p>
+<div class="math notranslate nohighlight">
+\[\Phi(z) = P(Z &lt; z)\]</div>
+<p>Viðmiðunargildið <span class="math notranslate nohighlight">\(z\)</span> sem við reiknum líkurnar fyrir er kallað
+<span class="math notranslate nohighlight">\(z\)</span> <em>-gildið</em>. Mynd <a class="reference internal" href="#g-normtafla"><span class="std std-numref">5.7</span></a> sýnir samband dreififallsins
+<span class="math notranslate nohighlight">\(\Phi(z)\)</span> og þéttiferils normaldreifingarinnar. Líkurnar
+<span class="math notranslate nohighlight">\(\Phi(z)\)</span> eru jafnar flatarmálinu undir þéttiferlinum vinstra
+megin við <span class="math notranslate nohighlight">\(z\)</span>-gildið.</p>
+<figure class="align-center" id="id45">
+<span id="g-normtafla"></span><img alt="Staðalaða normaldreifingin." src="../_images/norm4.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.7: </span><span class="caption-text">Staðalaða normaldreifingin.</span><a class="headerlink" href="#id45" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Þar sem ekki er hægt að skrifa einfalda formúlu fyrir <span class="math notranslate nohighlight">\(\Phi(z)\)</span>
+eru búnar til gildistöflur þar sem útkoma dreififallsins hefur verið
+reiknuð fyrir fjölmörg viðmiðunargildi <span class="math notranslate nohighlight">\(z\)</span>. Umræddar gildistöflur
+eru eingöngu birtar fyrir <em>stöðluðu normaldreifinguna</em> og því þarf að
+<em>staðla</em> gildin okkar áður en flett er upp í töflunni. Sú aðferð er
+útskýrð í kassa <a class="reference internal" href="#em-notkunnormtoflu"><span class="std std-numref">5.4.2.7</span></a>. Í kafla <a class="reference internal" href="../toflur_all_final/#a-normaltafla"><span class="std std-ref">T.1</span></a>
+má finna gildistöflu fyrir stöðluðu normaldreifinguna.</p>
+<p>Ef finna á líkurnar</p>
+<div class="math notranslate nohighlight">
+\[P(Z &gt; z)\]</div>
+<p>notum við okkur jöfnu <a class="reference internal" href="#equation-eq-snualikindum">5.16</a></p>
+<div class="math notranslate nohighlight">
+\[P(Z &gt; z) = 1 - P(Z &lt; z)\]</div>
+<p>Þetta er sýnt vinstra megin á mynd <a class="reference internal" href="#g-normreglur"><span class="std std-numref">5.8</span></a>. Ef finna á
+líkurnar á að <span class="math notranslate nohighlight">\(Z\)</span> liggi á bilinu frá <span class="math notranslate nohighlight">\(a\)</span> til <span class="math notranslate nohighlight">\(b\)</span> notum
+við jöfnu <a class="reference internal" href="#equation-eq-likindiabili">5.17</a></p>
+<div class="math notranslate nohighlight">
+\[P(a &lt; Z &lt; b) = P(Z &lt; b) - P(Z &lt; a)\]</div>
+<p>Þetta er sýnt hægra megin á mynd <a class="reference internal" href="#g-normreglur"><span class="std std-numref">5.8</span></a>. Munið að töfluna
+er eingöngu hægt að nota fyrir stöðluðu normaldreifinguna.</p>
+<figure class="align-center" id="id46">
+<span id="g-normreglur"></span><img alt=":math:`P(Z &gt; z)` og :math:`P(a &lt; Z &lt; b)` þar sem :math:`Z \sim N(0,1)`" src="../_images/norm5.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.8: </span><span class="caption-text"><span class="math notranslate nohighlight">\(P(Z &gt; z)\)</span> og <span class="math notranslate nohighlight">\(P(a &lt; Z &lt; b)\)</span> þar sem <span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span></span><a class="headerlink" href="#id46" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="notkun-toflu-stoluu-normaldreifingarinnar">
+<span id="em-notkunnormtoflu"></span><h4><span class="section-number">5.4.2.7. </span>Notkun töflu stöðluðu normaldreifingarinnar<a class="headerlink" href="#notkun-toflu-stoluu-normaldreifingarinnar" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Hægt er að nota töfluna á tvo vegu:</p>
+<ol class="arabic">
+<li><p>Ef við viljum finna líkurnar sem svara til ákveðins viðmiðunargildis:
+Ef gildið er fengið úr staðlaðri normaldreifingu er það gildi sjálft
+<span class="math notranslate nohighlight">\(z\)</span>-gildið. Ef gildið er ekki fengið úr staðlaðri
+normaldreifingu finnum við staðlaða <span class="math notranslate nohighlight">\(z\)</span>-gildið með</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{x - \mu}{\sigma}\]</div>
+<p>Við finnum <span class="math notranslate nohighlight">\(z\)</span>-gildið í töflunni (feitletrað) og líkurnar eru
+<span class="math notranslate nohighlight">\(\Phi(z)\)</span> gildið því á hægri hlið.</p>
+</li>
+<li><p>Ef við viljum finna hvaða viðmiðunargildi svarar til ákveðinna
+líkinda: Við finnum líkurnar, eða þær líkur sem þeim eru næstar,
+meðal <span class="math notranslate nohighlight">\(\Phi(z)\)</span>-gildanna í töflunni og z-gildið stendur
+(feitletrað) því á vinstri hlið.</p>
+<p>Ef viðmiðunargildið er ekki fengið úr staðlaðri normaldreifingu
+þurfum við að <em>varpa</em> <span class="math notranslate nohighlight">\(z\)</span>-gildinu aftur í upphaflegu
+dreifinguna, svo tilsvarandi gildi verður</p>
+<div class="math notranslate nohighlight" id="equation-eq-varpaurstadlada">
+<span class="eqno">(5.21)<a class="headerlink" href="#equation-eq-varpaurstadlada" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[x = \mu + z \sigma\]</div>
+</li>
+</ol>
+</div>
+<hr class="docutils" />
+<p>Skoðum nú með tveimur dæmum hvernig nota skal töfluna. Í fyrra dæminu (í
+þremur liðum) þekkjum við viðmiðunargildið og viljum finna líkurnar en í
+því seinna þekkjum við líkurnar en viljum finna viðmiðunargildið.</p>
+</section>
+<section id="synidaemi-normaldreifingin">
+<h4><span class="section-number">5.4.2.8. </span>Sýnidæmi: Normaldreifingin<a class="headerlink" href="#synidaemi-normaldreifingin" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Í USA þurfa nemendur að þreyta staðlað próf, svokallað SAT próf, áður en
+þeir fara í menntaskóla. Gera má ráð fyrir því að einkunnir nemenda á
+prófinu séu u.þ.b. normaldreifðar með meðaltal 1026 og staðalfrávik 209.
+Köllum nú einkunnirnar <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(X \sim N(1026,209^2).\)</span></p>
+<ol class="loweralpha simple">
+<li><p>Reiknið líkurnar á að einkunn nemanda sem þreytir prófið og valinn er
+af handahófi sé lægri en 720, þ.e.a.s. <span class="math notranslate nohighlight">\(P(X \leq 720)\)</span>.</p></li>
+<li><p>Reiknið líkurnar á að einkunn nemanda sem þreytir prófið og valinn er
+af handahófi sé hærri en 820, þ.e.a.s. <span class="math notranslate nohighlight">\(P(X \geq 820).\)</span></p></li>
+<li><p>Reiknið líkurnar á að einkunn nemanda sem þreytir prófið og valinn er
+af handahófi sé á bilinu 720 og 820, þ.e.a.s.
+<span class="math notranslate nohighlight">\(P(720 \leq X \leq 820).\)</span></p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p>Við höfum <span class="math notranslate nohighlight">\(X \sim N(1026,209^2)\)</span> og viljum reikna</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[P(X &lt; 720)\]</div>
+<p>Áður en við getum notað töfluna þurfum við að staðla:</p>
+<div class="math notranslate nohighlight">
+\[\frac{720 - 1026}{209} = -1.46\]</div>
+<p>Þá fæst, skv. jöfnu <a class="reference internal" href="#equation-eq-xz">5.20</a></p>
+<div class="math notranslate nohighlight">
+\[P(X &lt; 720) = P(Z &lt; -1.46)\]</div>
+<p>Við notum töfluna og finnum að <span class="math notranslate nohighlight">\(\Phi(z) = 0.0721\)</span> eða u.þ.b. 7%
+líkur.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/norm6.svg" /></figure>
+<ol class="loweralpha simple" start="2">
+<li><p>Við höfum <span class="math notranslate nohighlight">\(X \sim N(1026,209^2)\)</span> og viljum reikna</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[P(X &gt; 820)\]</div>
+<p>Áður en við getum notað töfluna þurfum við að staðla:</p>
+<div class="math notranslate nohighlight">
+\[\frac{820 - 1026}{209} = -0.99\]</div>
+<p>Þá fæst, skv. jöfnum <a class="reference internal" href="#equation-eq-snualikindum">5.16</a> og <a class="reference internal" href="#equation-eq-xz">5.20</a></p>
+<div class="math notranslate nohighlight">
+\[P(X &gt; 820) = P(Z &gt; -0.99) = 1 - P(Z &lt; -0.99)\]</div>
+<p><span class="math notranslate nohighlight">\(\Phi(-0.99) = 0.1611\)</span>, svo líkurnar eru 1-0.1611 = 0.8389 eða
+u.þ.b. 84%.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/norm7.svg" /></figure>
+<ol class="loweralpha simple" start="3">
+<li><p>Við höfum <span class="math notranslate nohighlight">\(X \sim N(1026,209^2)\)</span> og viljum reikna</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[P(720 &lt; X &lt; 820)\]</div>
+<p>Við náum í stöðluðu gildin frá í a) og b) lið.</p>
+<p>Við fáum þá, skv. jöfnum <a class="reference internal" href="#equation-eq-snualikindum">5.16</a> og <a class="reference internal" href="#equation-eq-xz">5.20</a>:</p>
+<div class="math notranslate nohighlight">
+\[P(720 &lt; X &lt; 820) = P(-1.46 &lt; Z &lt; -0.99) = P(Z &lt; - 0.99) - P(Z &lt; -1.46)\]</div>
+<p>Við vorum búin að fletta upp að <span class="math notranslate nohighlight">\(\Phi(-0.99) = 0.1611\)</span> og
+<span class="math notranslate nohighlight">\(\Phi(-1.46) = 0.0721\)</span> svo líkurnar eru</p>
+<div class="math notranslate nohighlight">
+\[0.1611 - 0.0721 = 0.089\]</div>
+<p>eða u.þ.b. 9%.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/norm8.svg" /></figure>
+</div>
+</section>
+<section id="id14">
+<h4><span class="section-number">5.4.2.9. </span>Sýnidæmi: Normaldreifingin<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Hvaða einkunn þarf nemandi að ná í SAT prófinu ætli hann sér að vera í
+hópi 10<span class="math notranslate nohighlight">\(\%\)</span> efstu nemendanna?</p>
+<p>Sé nemandi í hópi <span class="math notranslate nohighlight">\(10\%\)</span> efstu nemendanna eru <span class="math notranslate nohighlight">\(90\%\)</span> nemenda
+með lægri einkunn en hann. Við viljum því finna hvaða viðmiðunargildi
+svarar til þess að líkur þess að taka gildi minna en það séu
+<span class="math notranslate nohighlight">\(90\%\)</span>.</p>
+<p>Til þess þurfum við að finna það <span class="math notranslate nohighlight">\(z\)</span>-gildi sem er þannig að
+<span class="math notranslate nohighlight">\(\Phi(z)\)</span> sé sem næst 0.9. Við sjáum i töflunni að það gildi sem
+kemst næst því er <span class="math notranslate nohighlight">\(z=1.28\)</span> en <span class="math notranslate nohighlight">\(\Phi(1.28) = 0.8997\)</span> sem er
+mjög nærri 0.9.</p>
+<p>Einkunnir nemendanna fylgdu ekki stöðluðu normaldreifingunni heldur var
+<span class="math notranslate nohighlight">\(X \sim N(1026,209^2)\)</span> svo við verðum að varpa <span class="math notranslate nohighlight">\(z\)</span>-gildinu í
+upphaflegu dreifinguna með því að nota jöfnu <a class="reference internal" href="#equation-eq-varpaurstadlada">5.21</a></p>
+<div class="math notranslate nohighlight">
+\[x = \mu + z \sigma\]</div>
+<p>Lágmarkseinkunnin er því
+<span class="math notranslate nohighlight">\(1026 + 1.28 \cdot 209 = 1292.5 \ \text{stig}\)</span>.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/norm9.svg" /></figure>
+</div>
+</section>
+<section id="rithatturinn-z-a">
+<h4><span class="section-number">5.4.2.10. </span>Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span><a class="headerlink" href="#rithatturinn-z-a" title="Permalink to this heading"></a></h4>
+<p>Síðar í þessari bók, þegar farið verður í ályktunartölfræði, munum við
+nota töflu stöðluðu normaldreifingarinnar mikið. Því kynnum við til
+sögunnar þægilegan rithátt sem við munum nota héðan í frá. Í tilviki
+stöðluðu normaldreifingarinnar er hann <span class="math notranslate nohighlight">\(z_{a}\)</span> en þið munuð síðar
+í þessum kafla sjá dæmi um þennan rithátt fyrir fleiri
+líkindadreifingar.</p>
+</section>
+<section id="id15">
+<h4><span class="section-number">5.4.2.11. </span>Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span><a class="headerlink" href="#id15" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Með <span class="math notranslate nohighlight">\(z_{a}\)</span> táknum við það <span class="math notranslate nohighlight">\(z\)</span>-gildi sem er þannig að
+slembistærð sem fylgir stöðluðu normaldreifingunni hefur líkurnar
+<span class="math notranslate nohighlight">\(a\)</span> að taka gildi sem er <strong>minna</strong> en <span class="math notranslate nohighlight">\(z_{a}\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Þetta má skrifa sem:</p>
+<div class="math notranslate nohighlight">
+\[a = P(Z &lt; z_a),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(Z\)</span> fylgir stöðluðu normaldreifingunni. <span class="math notranslate nohighlight">\(z_{a}\)</span> er
+því <span class="math notranslate nohighlight">\(a\)</span>-ta prósentumark (sjá kafla <a class="reference internal" href="../kafli04/#ss-prosentumork"><span class="std std-numref">4.3.6</span></a>)
+stöðluðu normaldreifingarinnar.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-rithatturinn-z-a">
+<h4><span class="section-number">5.4.2.12. </span>Sýnidæmi: Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span><a class="headerlink" href="#synidaemi-rithatturinn-z-a" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Notið töflu staðlaðrar normaldreifingar í kafla <a class="reference internal" href="../toflur_all_final/#a-normaltafla"><span class="std std-ref">T.1</span></a> til
+að finna <span class="math notranslate nohighlight">\(z_{0.95}\)</span>.</p>
+<p>Hér þekkjum við líkurnar en okkur vantar <span class="math notranslate nohighlight">\(z\)</span>-gildið. Við finnum
+því 0.95 meðal <span class="math notranslate nohighlight">\(\Phi\)</span>-gildanna í töflunni og lesum z-gildið við
+hlið þess. Í töflunni má sjá að</p>
+<div class="math notranslate nohighlight">
+\[\Phi(1.64) = 0.95\]</div>
+<p>svo</p>
+<div class="math notranslate nohighlight">
+\[z_{0.95} = 1.64\]</div>
+</div>
+</section>
+<section id="normaldreifingarrit">
+<h4><span class="section-number">5.4.2.13. </span>Normaldreifingarrit<a class="headerlink" href="#normaldreifingarrit" title="Permalink to this heading"></a></h4>
+<p>Margar tölfræðilegar aðferðir eru háðar því að gögnin sem þeim er beitt
+á fylgi normaldreifingu. Áður en aðferðirnar eru notaðar þarf því að
+ganga úr skugga um að svo sé raunin. Ýmsar aðferðir finnast til þess og
+er algengt að nota svonefnt <em>normaldreifingarrit</em>. Normaldreifingarrit
+er myndræn aðferð til að kanna hvort gögn fylgi normaldreifingu eða
+ekki. Normaldreifingarrit eru sjaldan gerð í höndunum heldur er notast
+við tölfræðiforrit en mikilvægt er að kunna að túlka þau.</p>
+</section>
+<section id="normaldreifingarrit-normal-probability-plot">
+<h4><span class="section-number">5.4.2.14. </span>Normaldreifingarrit (normal probability plot)<a class="headerlink" href="#normaldreifingarrit-normal-probability-plot" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Ef punktarnir á normaldreifingarritinu liggja nálægt beinu línunni sem
+sýnd er á ritinu og endapunktarnir báðum megin sveigjast ekki afgerandi
+upp eða niður þá er ásættanlegt að gera ráð fyrir að gögnin fylgi
+normaldreifingu.</p>
+</div>
+<hr class="docutils" />
+<p>Á mynd <a class="reference internal" href="#g-normaldreifingarrit"><span class="std std-numref">5.9</span></a> má sjá stuðlarit og
+normaldreifingarrit af þremur gagnasöfnum. Ekki er hægt að gera ráð
+fyrir að gagnasöfn 1 og 3 fylgi normaldreifingu þar sem punktarnir eru
+ekki nægilega nálægt beinu línunni. Það má aftur á móti gera ráð fyrir
+að gagnasafn 2 fylgi normaldreifingu þar sem punktarnir á
+normaldreifingarritinu liggja nálægt beinu línunni.</p>
+<figure class="align-center" id="id47">
+<span id="g-normaldreifingarrit"></span><img alt="Normaldreifingarrit" src="../_images/normaldreifingarrit.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.9: </span><span class="caption-text">Normaldreifingarrit</span><a class="headerlink" href="#id47" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="arar-samfelldar-likindadreifingar">
+<span id="s-adrarsamfelldar"></span><h3><span class="section-number">5.4.3. </span>Aðrar samfelldar líkindadreifingar<a class="headerlink" href="#arar-samfelldar-likindadreifingar" title="Permalink to this heading"></a></h3>
+<p>Nú tekur við umfjöllun um aðrar líkindadreifingar en normaldreifinguna.
+Sú fyrsta sem við munum fjalla um er t-dreifingin, eða Student’s t. Hún
+er samfelld líkindadreifing sem minnir á normaldreifinguna. Hún er
+bjöllulaga og samhverf um meðaltal dreifingarinnar sem er 0. Við munum
+nota t-dreifinguna til að framkvæma ályktunartölfræði í köflum
+<a class="reference internal" href="../kafli08/#c-alyktanirumtalnabreytur"><span class="std std-numref">8</span></a> og <a class="reference internal" href="../kafli10/#c-adhvarfsgreining"><span class="std std-numref">10</span></a>.</p>
+<section id="t-dreifing">
+<span id="ss-tdreifing"></span><h4><span class="section-number">5.4.3.1. </span>t-dreifing<a class="headerlink" href="#t-dreifing" title="Permalink to this heading"></a></h4>
+<p>t-dreifingin hefur einn stika sem kallast frígráður . Hann ræður lögun
+hennar. Við táknum fjölda frígráða með bókstafnum <span class="math notranslate nohighlight">\(k\)</span>. t-dreifingu
+með <span class="math notranslate nohighlight">\(k\)</span> frígráður táknum við með <span class="math notranslate nohighlight">\(t_{(k)}\)</span>.</p>
+<p>t-töflu má finna í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>. Við flettum upp í töflunni
+eftir fjölda frígráða. Gildin sem við fáum út úr töflunni táknum við með
+<span class="math notranslate nohighlight">\(t_{a,(k)}\)</span>. Um <span class="math notranslate nohighlight">\(t_{a,(k)}\)</span> gildir að slembistærð sem fylgir
+t-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður hefur líkurnar <span class="math notranslate nohighlight">\(a\)</span> að taka
+gildi sem er <strong>minna</strong> en <span class="math notranslate nohighlight">\(t_{a,(k)}\)</span>. Dálkur er valinn eftir
+<span class="math notranslate nohighlight">\(a\)</span>-gildinu en lína eftir fjölda frígráða.</p>
+</section>
+<section id="rithatturinn-t-a-k">
+<h4><span class="section-number">5.4.3.2. </span>Rithátturinn <span class="math notranslate nohighlight">\(t_{a,(k)}\)</span><a class="headerlink" href="#rithatturinn-t-a-k" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Með <span class="math notranslate nohighlight">\(t_{a,(k)}\)</span> táknum við það <span class="math notranslate nohighlight">\(t\)</span>-gildi sem er þannig að
+slembistærð sem fylgir t-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður hefur
+líkurnar <span class="math notranslate nohighlight">\(a\)</span> að taka gildi sem er <strong>minna</strong> en <span class="math notranslate nohighlight">\(t_{a,(k)}\)</span>.
+Þetta má skrifa sem:</p>
+<div class="math notranslate nohighlight">
+\[a = P(T &lt; t_{a,(k)}),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(T\)</span> fylgir t-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður.
+<span class="math notranslate nohighlight">\(t_{a,(k)}\)</span> er því <span class="math notranslate nohighlight">\(a\)</span>-ta prósentumark t-dreifingar með
+<span class="math notranslate nohighlight">\(k\)</span> frígráður.</p>
+</div>
+<hr class="docutils" />
+<p>Eftir því sem fjöldi frígráða eykst því meira líkist t-dreifingin
+stöðluðu normaldreifingunni. Á mynd <a class="reference internal" href="#g-tdreifingar"><span class="std std-numref">5.10</span></a> má sjá nokkrar
+t-dreifingar ásamt stöðluðu normaldreifingunni.</p>
+<figure class="align-center" id="id48">
+<span id="g-tdreifingar"></span><img alt="Nokkrar t-dreifingar" src="../_images/t1.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.10: </span><span class="caption-text">Nokkrar t-dreifingar</span><a class="headerlink" href="#id48" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="synidaemi-flett-upp-i-t-toflu">
+<h4><span class="section-number">5.4.3.3. </span>Sýnidæmi: Flett upp í t-töflu<a class="headerlink" href="#synidaemi-flett-upp-i-t-toflu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Finnið <span class="math notranslate nohighlight">\(t_{0.95,(17)}\)</span>.</p>
+<p>Við notum t-töfluna í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>. Við veljum
+<span class="math notranslate nohighlight">\(a = 0.95\)</span> dálkinn og <span class="math notranslate nohighlight">\(k = 17\)</span> línuna í töflunni og fáum út
+að <span class="math notranslate nohighlight">\(t_{0.95,(17)}\)</span> = 1.740.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/t2.svg" /></figure>
+</div>
+</section>
+<section id="chi-2-dreifing">
+<span id="ss-kikvadratdreifing"></span><h4><span class="section-number">5.4.3.4. </span><span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifing<a class="headerlink" href="#chi-2-dreifing" title="Permalink to this heading"></a></h4>
+<p><span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingin, lesist kí-kvaðrat dreifingin, er samfelld
+líkindadreifing og er hún mikið notuð í ályktunartölfræði. Hún er ekki
+samhverf eins og normaldreifingin. <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingin hefur einn
+stika, kallaður frígráður, sem ræður lögun hennar. Eins og í
+t-dreifingunni notum við <span class="math notranslate nohighlight">\(k\)</span> til að tákna fjölda frígráða.
+<span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður táknum við með
+<span class="math notranslate nohighlight">\(\chi^2_{(k)}\)</span>. Meðaltal <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar er jafnt fjölda
+frígráða hennar. Á mynd <a class="reference internal" href="#g-chisqdreifingar"><span class="std std-numref">5.11</span></a> má sjá nokkrar
+<span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar.</p>
+<figure class="align-center" id="id49">
+<span id="g-chisqdreifingar"></span><img alt="Nokkrar :math:`\chi^2`-dreifingar" src="../_images/chisq1.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.11: </span><span class="caption-text">Nokkrar <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar</span><a class="headerlink" href="#id49" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p><span class="math notranslate nohighlight">\(\chi^2\)</span>-töflu má finna í kafla <a class="reference internal" href="../toflur_all_final/#a-chisqtafla"><span class="std std-ref">T.3</span></a>. Við
+flettum upp í töflunni eftir fjölda frígráða. Gildin sem við fáum út úr
+töflunni táknum við með <span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span>. Um
+<span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span> gildir að slembistærð sem fylgir
+<span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður hefur líkurnar
+<span class="math notranslate nohighlight">\(a\)</span> á að taka gildi sem er <strong>minna</strong> en <span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span>.
+Við veljum dálk eftir <span class="math notranslate nohighlight">\(a\)</span>-gildinu en línu eftir fjölda frígráða.</p>
+</section>
+<section id="rithatturinn-chi-2-a-k">
+<h4><span class="section-number">5.4.3.5. </span>Rithátturinn <span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span><a class="headerlink" href="#rithatturinn-chi-2-a-k" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Með <span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span> táknum við það <span class="math notranslate nohighlight">\(\chi^2\)</span>-gildi sem er
+þannig að slembistærð sem fylgir <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með <span class="math notranslate nohighlight">\(k\)</span>
+frígráður hefur líkurnar <span class="math notranslate nohighlight">\(a\)</span> að taka gildi sem er <strong>minna</strong> en
+<span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span>. Þetta má skrifa sem:</p>
+<div class="math notranslate nohighlight">
+\[a = P(\chi^2 &lt; \chi^2_{a,(k)}),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\chi^2\)</span> fylgir <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með <span class="math notranslate nohighlight">\(k\)</span>
+frígráður. <span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span> er því <span class="math notranslate nohighlight">\(a\)</span>-ta prósentumark
+<span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar með <span class="math notranslate nohighlight">\(k\)</span> frígráður.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-flett-upp-i-chi-2-toflu">
+<h4><span class="section-number">5.4.3.6. </span>Sýnidæmi: Flett upp í <span class="math notranslate nohighlight">\(\chi^2\)</span>-töflu<a class="headerlink" href="#synidaemi-flett-upp-i-chi-2-toflu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Finnið <span class="math notranslate nohighlight">\(\chi^2_{0.95,(4)}\)</span>.</p>
+<p>Við notum <span class="math notranslate nohighlight">\(\chi^2\)</span>-töfluna í kafla <a class="reference internal" href="../toflur_all_final/#a-chisqtafla"><span class="std std-ref">T.3</span></a>. Við
+veljum <span class="math notranslate nohighlight">\(a = 0.95\)</span> dálkinn og <span class="math notranslate nohighlight">\(k = 4\)</span> línuna í töflunni og
+fáum út að <span class="math notranslate nohighlight">\(\chi^2_{0.95,(4)}\)</span> = 9.488.</p>
+<figure class="align-default">
+<img alt="../_images/chisq2.svg" src="../_images/chisq2.svg" /></figure>
+</div>
+</section>
+<section id="f-dreifing">
+<span id="ss-fdreifing"></span><h4><span class="section-number">5.4.3.7. </span>F-dreifing<a class="headerlink" href="#f-dreifing" title="Permalink to this heading"></a></h4>
+<p>F-dreifingin er samfelld líkindadreifing sem við munum nota þegar kemur
+að ályktunartölfræði. Líkt og <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingin er hún ekki
+samhverf. F-dreifingin hefur tvo stika sem við köllum frígráður og
+táknum með <span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span>. Lögun dreifingarinnar ræðst af
+fjölda frígráða. F-dreifingu með <span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span> fjölda
+frígráða táknum við með <span class="math notranslate nohighlight">\(F_{(v_1,v_2)}\)</span>.</p>
+<p>Fjórar F-töflur má finna í kafla <a class="reference internal" href="../toflur_all_final/#a-ftafla10"><span class="std std-ref">T.4</span></a> til
+<a class="reference internal" href="../toflur_all_final/#a-ftafla1"><span class="std std-ref">T.7</span></a> og þarf að passa vel að nota þá réttu hverju sinni.
+Töflurnar fjórar eru fyrir fjögur mismunandi <span class="math notranslate nohighlight">\(a\)</span>-gildi,
+<span class="math notranslate nohighlight">\(a = 0.90\)</span>, <span class="math notranslate nohighlight">\(a = 0.95\)</span>, <span class="math notranslate nohighlight">\(a = 0.975\)</span> og
+<span class="math notranslate nohighlight">\(a = 0.99\)</span>. Dálkarnir í töflunum tákna mismunandi gildi á
+<span class="math notranslate nohighlight">\(v_1\)</span> og línurnar mismunandi gildi á <span class="math notranslate nohighlight">\(v_2\)</span>. Gildin sem við
+fáum út úr töflunni táknum við svo með <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span>. Um
+<span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span> gildir að slembistærð sem fylgir F-dreifingu með
+<span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span> frígráður hefur líkurnar <span class="math notranslate nohighlight">\(a\)</span> á að taka
+gildi sem er <strong>minna</strong> en <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span>. Á mynd
+<a class="reference internal" href="#g-fdreifingar"><span class="std std-numref">5.12</span></a> má sjá nokkrar F-dreifingar.</p>
+<figure class="align-center" id="id50">
+<span id="g-fdreifingar"></span><img alt="Nokkrar F-dreifingar" src="../_images/f1.svg" /><figcaption>
+<p><span class="caption-number">Mynd 5.12: </span><span class="caption-text">Nokkrar F-dreifingar</span><a class="headerlink" href="#id50" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="rithatturinn-f-a-v-1-v-2">
+<h4><span class="section-number">5.4.3.8. </span>Rithátturinn <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span><a class="headerlink" href="#rithatturinn-f-a-v-1-v-2" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Með <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span> táknum við það <span class="math notranslate nohighlight">\(F\)</span>-gildi sem er þannig
+að slembistærð sem fylgir <span class="math notranslate nohighlight">\(F\)</span>-dreifingu með <span class="math notranslate nohighlight">\(v_1\)</span> og
+<span class="math notranslate nohighlight">\(v_2\)</span> frígráður hefur líkurnar <span class="math notranslate nohighlight">\(a\)</span> að taka gildi sem er
+<strong>minna</strong> en <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span>. Þetta má skrifa sem:</p>
+<div class="math notranslate nohighlight">
+\[a = P(F &lt; F_{a,(v_1,v_2)}),\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(F\)</span> fylgir <span class="math notranslate nohighlight">\(F\)</span>-dreifingu með <span class="math notranslate nohighlight">\(v_1\)</span> og
+<span class="math notranslate nohighlight">\(v_2\)</span> frígráður. <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span> er því <span class="math notranslate nohighlight">\(a\)</span>-ta
+prósentumark <span class="math notranslate nohighlight">\(F\)</span>-dreifingar með <span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span>
+frígráður.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-flett-upp-i-f-toflu">
+<h4><span class="section-number">5.4.3.9. </span>Sýnidæmi: Flett upp í F-töflu<a class="headerlink" href="#synidaemi-flett-upp-i-f-toflu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Finnið <span class="math notranslate nohighlight">\(F_{0.95,(7,12)}\)</span>.</p>
+<p>Við notum <span class="math notranslate nohighlight">\(F\)</span>-töfluna í kafla <a class="reference internal" href="../toflur_all_final/#a-ftafla5"><span class="std std-ref">T.5</span></a> þar sem
+<span class="math notranslate nohighlight">\(a = 0.95\)</span>. Við veljum dálk <span class="math notranslate nohighlight">\(v_1 = 7\)</span> og línu
+<span class="math notranslate nohighlight">\(v_2 = 12\)</span> og fáum út að <span class="math notranslate nohighlight">\(F_{0.95,(7,12)}\)</span> = 2.913.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/f2.svg" /></figure>
+</div>
+</section>
+</section>
+</section>
+<section id="daemi">
+<h2><span class="section-number">5.5. </span>Dæmi<a class="headerlink" href="#daemi" title="Permalink to this heading"></a></h2>
+<section id="id16">
+<h3><span class="section-number">5.5.1. </span>Dæmi<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<p>Hvert er gildi tvíliðustuðulsins <span class="math notranslate nohighlight">\(\binom{8}{2}\)</span>?</p>
+</section>
+<section id="id17">
+<h3><span class="section-number">5.5.2. </span>Dæmi<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h3>
+<p>Framkvæmum eftirfarandi tilraun: Við köstum teningi fjórum sinnum. Látum
+<span class="math notranslate nohighlight">\(X\)</span> tákna fjölda skipta sem annað hvort fimma eða sexa koma upp.
+<span class="math notranslate nohighlight">\(X\)</span> fylgir þá tvíkostadreifingu með stikana <span class="math notranslate nohighlight">\(n\)</span> og
+<span class="math notranslate nohighlight">\(p\)</span>. Hver eru gildin á <span class="math notranslate nohighlight">\(n\)</span> og <span class="math notranslate nohighlight">\(p\)</span>?</p>
+</section>
+<section id="id18">
+<h3><span class="section-number">5.5.3. </span>Dæmi<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
+<p>Sé teningi kastað 8 sinnum. Hverjar eru líkurnar að fá:</p>
+<ol class="loweralpha simple">
+<li><p>þrisvar sinnum fimmu?</p></li>
+<li><p>tvo eða færri ása?</p></li>
+<li><p>færri en þrjár sexur?</p></li>
+<li><p>slétta tölu í öllum köstunum?</p></li>
+</ol>
+</section>
+<section id="id19">
+<h3><span class="section-number">5.5.4. </span>Dæmi<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h3>
+<p>Atli líkindafræðingur ákveður að spila í happdrætti þar sem margir
+vinningar eru í boði. Líkurnar á að vinna á hvern miða í happdrættinu
+eru 1/100 eða 0.01. Atli ákveður að freista gæfunnar og kaupir 10 miða.</p>
+<ol class="loweralpha simple">
+<li><p>Hverjar eru líkurnar á að Atli vinni vinning á nákvæmlega einn af
+miðunum?</p></li>
+<li><p>Hverjar eru líkurnar á að Atli vinni vinning á að minnsta kosti einn
+af miðunum?</p></li>
+</ol>
+</section>
+<section id="id20">
+<h3><span class="section-number">5.5.5. </span>Dæmi<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að fjöldi Kötlugosa á öld fylgi Poisson dreifingu með
+stikann <span class="math notranslate nohighlight">\(\lambda\)</span> = 2. Hverjar eru líkurnar á að minnsta kosti
+eitt Kötlugos verði á öld?</p>
+</section>
+<section id="id21">
+<h3><span class="section-number">5.5.6. </span>Dæmi<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
+<p>Líkurnar á að harður diskur af ákveðinni gerð bili á fyrsta árinu eftir
+að hann er tekinn í notkun er 0.1 eða <span class="math notranslate nohighlight">\(10\%\)</span>. Tökum nú úrtak af
+stærð 20 og gerum ráð fyrir að hörðu diskarnir séu óháðir. Við fylgjumst
+með diskunum í eitt ár og að ári loknu teljum við fjölda bilaðra diska.
+Látum nú <span class="math notranslate nohighlight">\(X\)</span> tákna fjölda harðra diska sem bila á fyrsta árinu.</p>
+<ol class="loweralpha simple">
+<li><p>Hvaða dreifingu fylgir slembistærðin <span class="math notranslate nohighlight">\(X\)</span>, fjöldi harðra diska
+sem bila á fyrsta árinu?</p></li>
+<li><p>Hvert er væntigildi <span class="math notranslate nohighlight">\(X\)</span>, fjölda harðra diska sem bila á fyrsta
+árinu?</p></li>
+<li><p>Hverjar eru líkurnar á að nákvæmlega þrír diskar úr úrtakinu muni
+bila á fyrsta árinu?</p></li>
+</ol>
+</section>
+<section id="id22">
+<h3><span class="section-number">5.5.7. </span>Dæmi<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að meðalfjöldi marka á mínútu í handboltaleik sé 0.8.
+Notum nú <span class="math notranslate nohighlight">\(Y\)</span> til að tákna fjölda marka á mínútu.</p>
+<ol class="loweralpha simple">
+<li><p>Hvaða dreifingu er eðlilegt er að gera ráð fyrir að slembistærðin
+<span class="math notranslate nohighlight">\(Y\)</span>, fjöldi marka á mínútu, fylgi?</p></li>
+<li><p>Hverjar eru líkurnar á að í handboltaleik séu skoruð nákvæmlega tvö
+mörk á mínútu?</p></li>
+<li><p>Hverjar eru líkurnar á að í handboltaleik séu skoruð nákvæmlega fimm
+mörk á þremur mínútum?</p></li>
+</ol>
+</section>
+<section id="id23">
+<h3><span class="section-number">5.5.8. </span>Dæmi<a class="headerlink" href="#id23" title="Permalink to this heading"></a></h3>
+<p>Hlutfall kvenkyns eðla af ákveðinni gerð sem fæðast á hitabeltiseyju
+langt langt í burtu er 0.48. Hverjar eru líkurnar á að í sex (einbura)
+fæðingum fæðist nákvæmlega þrjár kvenkyns eðlur?</p>
+</section>
+<section id="id24">
+<h3><span class="section-number">5.5.9. </span>Dæmi<a class="headerlink" href="#id24" title="Permalink to this heading"></a></h3>
+<p>Á hversu marga máta má fá þrjá þorska sé krónu kastað sjö sinnum?</p>
+</section>
+<section id="id25">
+<h3><span class="section-number">5.5.10. </span>Dæmi<a class="headerlink" href="#id25" title="Permalink to this heading"></a></h3>
+<p>Skiptiborðið í Arion banka fær að meðaltali 2.4 símtöl á mínútu. Reiknið
+líkurnar á að skiptiborðið fái:</p>
+<ol class="loweralpha simple">
+<li><p>þrjú símtöl á einni mínútu.</p></li>
+<li><p>að minnsta kosti tvö símtöl á einni mínútu.</p></li>
+<li><p>fleiri en þrjú símtöl á einni mínútu.</p></li>
+<li><p>sex símtöl á tveimur mínútum.</p></li>
+<li><p>sjö símtöl á þremur mínútum.</p></li>
+</ol>
+</section>
+<section id="id26">
+<h3><span class="section-number">5.5.11. </span>Dæmi<a class="headerlink" href="#id26" title="Permalink to this heading"></a></h3>
+<p>Stefnt er að því að sólarrafvæða vita hér á landi á næstu árum. Því er
+haldið fram að spara megi rafmagnsnotkun vitanna um helming í 40%
+tilfella. Hverjar eru líkurnar á að rafmagnsnotkun minnki um helming í:</p>
+<ol class="loweralpha simple">
+<li><p>fjórum af fimm vitum sem hafa verið sólarrafvæddir?</p></li>
+<li><p>að minnsta kosti fjórum af fimm vitum sem hafa verið sólarrafvæddir?</p></li>
+<li><p>færri en tveimur af fimm vitum sem hafa verið sólarrafvæddir?</p></li>
+<li><p>tveimur eða færri af fimm vitum sem hafa verið sólarrafvæddir?</p></li>
+</ol>
+</section>
+<section id="id27">
+<h3><span class="section-number">5.5.12. </span>Dæmi<a class="headerlink" href="#id27" title="Permalink to this heading"></a></h3>
+<p>Fjöldi bíla sem fer yfir kindahlið á sveitavegi nokkrum á Snæfellsnesi
+er að meðaltali 1.8 á mínútu. Reiknið líkurnar að á einni mínútu fari:</p>
+<ol class="loweralpha simple">
+<li><p>enginn bíll yfir hliðið.</p></li>
+<li><p>tveir bílar yfir hliðið.</p></li>
+<li><p>færri en tveir bílar yfir hliðið.</p></li>
+<li><p>einn eða fleiri bílar yfir hliðið.</p></li>
+</ol>
+</section>
+<section id="id28">
+<h3><span class="section-number">5.5.13. </span>Dæmi<a class="headerlink" href="#id28" title="Permalink to this heading"></a></h3>
+<p>Að meðaltali seljast 1.8 Corny sælgætisstykki á hverjum klukkutíma í
+Select versluninni á Birkimel. Georg er samviskusamur starfsmaður og
+hefur tekið eftir því sér til skelfingar að öll Corny sælgætisstykkin
+eru búin í versluninni. Hann hringir í ofboði eftir fleiri stykkjum en
+þau eru ekki væntanleg fyrr en eftir klukkutíma.</p>
+<ol class="loweralpha simple">
+<li><p>Hverjar eru líkurnar á því að Georg fá engan viðskiptavin sem hefði
+hug á því að kaupa sér Corny stykki á þeim tíma?</p></li>
+<li><p>Um leið og Georg hefur lagt niður símtólið uppgötvar hann sér til
+mikillar ánægju að eitt Corny stykki leynist í Kit-kat kassanum.
+Hverjar eru nú líkurnar á því að Georg geti fullnægt eftirspurn
+viðskiptavina um Corny sælgætisstykki, ef einhver verður, næsta
+klukkutímann.</p></li>
+</ol>
+</section>
+<section id="id29">
+<h3><span class="section-number">5.5.14. </span>Dæmi<a class="headerlink" href="#id29" title="Permalink to this heading"></a></h3>
+<p>Finnið eftirfarandi gildi í viðeigandi töflu:</p>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\(z_{0.975}\)</span>, <span class="math notranslate nohighlight">\(z_{0.1}\)</span>, <span class="math notranslate nohighlight">\(z_{0.05}\)</span>,
+<span class="math notranslate nohighlight">\(z_{0.95}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(t_{0.95, (40)}\)</span>, <span class="math notranslate nohighlight">\(t_{0.90, (3)}\)</span>,
+<span class="math notranslate nohighlight">\(t_{0.975, (17)}\)</span>, <span class="math notranslate nohighlight">\(t_{0.05, (12)}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\chi^2_{0.95, (1)}\)</span>, <span class="math notranslate nohighlight">\(\chi^2_{0.05, (2)}\)</span>,
+<span class="math notranslate nohighlight">\(\chi^2_{0.975, (17)}\)</span>, <span class="math notranslate nohighlight">\(\chi^2_{0.99, (3)}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_{0.95, (10,20)}\)</span>, <span class="math notranslate nohighlight">\(F_{0.90, (20,10)}\)</span>,
+<span class="math notranslate nohighlight">\(F_{0.975, (3,17)}\)</span>, <span class="math notranslate nohighlight">\(F_{0.99, (5,5)}\)</span>.</p></li>
+</ol>
+</section>
+<section id="id30">
+<h3><span class="section-number">5.5.15. </span>Dæmi<a class="headerlink" href="#id30" title="Permalink to this heading"></a></h3>
+<p>Hvert er gildið á <span class="math notranslate nohighlight">\(\Phi(z)\)</span> þegar:</p>
+<ol class="loweralpha simple">
+<li><p>z = -0.82?</p></li>
+<li><p>z = 1.96?</p></li>
+<li><p>z = 1.65?</p></li>
+<li><p>z = 0.0?</p></li>
+</ol>
+</section>
+<section id="id31">
+<h3><span class="section-number">5.5.16. </span>Dæmi<a class="headerlink" href="#id31" title="Permalink to this heading"></a></h3>
+<p>Ögmundur er að fást við normaldreifingu með meðaltal 8 og dreifni 4.
+Hann hefur gildið <span class="math notranslate nohighlight">\(x\)</span> = 10. Hvert er tilsvarandi staðlað z-gildi?</p>
+</section>
+<section id="id32">
+<h3><span class="section-number">5.5.17. </span>Dæmi<a class="headerlink" href="#id32" title="Permalink to this heading"></a></h3>
+<p>Slembistærðin <span class="math notranslate nohighlight">\(Z\)</span> fylgir staðlaðri normaldreifingu,
+<span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span>. Reiknið:</p>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\(P(Z &lt; 2.5)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(Z \leq 2.5)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(Z &gt; 2.5)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(Z = 2.5)\)</span>.</p></li>
+</ol>
+</section>
+<section id="id33">
+<h3><span class="section-number">5.5.18. </span>Dæmi<a class="headerlink" href="#id33" title="Permalink to this heading"></a></h3>
+<p>Þyngd sex ára barna í landi nokkru fylgir normaldreifingu með meðaltal
+21 kg og staðalfrávik 2.8 kg. Sé barn valið af handahófi, hverja eru
+líkurnar á að barnið sé:</p>
+<ol class="loweralpha simple">
+<li><p>léttara en 20 kg?</p></li>
+<li><p>þyngra en 30 kg?</p></li>
+<li><p>á bilinu 17 til 19 kg?</p></li>
+<li><p>á bilinu 25 til 27 kg?</p></li>
+<li><p>21 kg?</p></li>
+</ol>
+</section>
+<section id="id34">
+<h3><span class="section-number">5.5.19. </span>Dæmi<a class="headerlink" href="#id34" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að slembistærðin <span class="math notranslate nohighlight">\(Z\)</span> fylgi stöðluðu
+normaldreifingunni. Hvert er gildið á <span class="math notranslate nohighlight">\(z\)</span> ef
+<span class="math notranslate nohighlight">\(P(Z &gt; z) =  0.0287\)</span>?</p>
+</section>
+<section id="id35">
+<h3><span class="section-number">5.5.20. </span>Dæmi<a class="headerlink" href="#id35" title="Permalink to this heading"></a></h3>
+<p>Sigrún er mikil áhugakona um samgöngumál og er mikið í mun að breyta
+samgönguvenjum stúdenta Háskóla Íslands. Hún hefur sér í lagi áhuga á að
+skoða hversu langa vegalengd stúdentar sem ferðast á einkabílum aka frá
+heimili sínu og í Háskólann. Sigrún hefur undir höndum metnaðarfulla
+skýrslu sem verkfræðistofa hér í bæ vann. Í henni segir að gera megi ráð
+fyrir vegalengd þeirra nemenda sem aka á einkabílum í Háskólann fylgi
+normaldreifingu með meðaltal 8.2 kílómetrar og staðalfrávik 2.2
+kílómetrar.</p>
+<ol class="loweralpha simple">
+<li><p>Sé nemandi sem notar einkabíl til að komast í Háskólann valinn af
+handahófi, hverjar eru líkurnar á að hann aki 8.2 kílómetra í
+skólann?</p></li>
+<li><p>Sé nemandi sem notar einkabíl til að komast í Háskólann valinn af
+handahófi, hverjar eru líkurnar að hann þurfi að aka meira en 10
+kílómetra til að komast í skólann?</p></li>
+<li><p>Sé nemandi sem notar einkabíl til að komst í Háskólann valinn af
+handahófi, hverjar eru líkurnar á að hann þurfi að aka á milli 10 og
+12 kílómetra til að komast í skólann?</p></li>
+<li><p>Sé nemandi sem notar einkabíl til að komst í Háskólann valinn af
+handahófi, hverjar eru líkurnar á að hann þurfi að aka minna en 3.7
+kílómetra til að komast í skólann?</p></li>
+<li><p>Hversu langt þyrfti nemandi að aka að lágmarki til að vera í hópi
+þeirra 10% nemenda sem aka hve lengst í Háskólann?</p></li>
+<li><p>Hversu langt mætti nemandi að aka að hámarki til að vera í hópi
+þeirra 20% nemenda sem aka hve styst í Háskólann?</p></li>
+</ol>
+</section>
+<section id="id36">
+<h3><span class="section-number">5.5.21. </span>Dæmi<a class="headerlink" href="#id36" title="Permalink to this heading"></a></h3>
+<p>Vísindamaður nokkur frá fjarlægu landi hefur mikinn áhuga á simpönsum.
+Eftir áralanga rannsóknir á þessum frændum okkar þróaði vísindamaðurinn
+simpansagreindarvísitölu sem hann kallaði SIQ. Rannsóknir hans sýndu
+einnig að SIQ í ákveðnum hóp simpansa fylgir normaldreifingu með
+meðaltal 100 stig og staðalfrávik 16 stig.</p>
+<ol class="loweralpha simple">
+<li><p>Sé simpansi valinn af handahófi úr hópnum, hverjar eru líkurnar á að
+hann hafi greindarvísitölu sem er hærri en 120 stig?</p></li>
+<li><p>Sé simpansi valinn af handahófi úr hópnum, hverjar eru líkurnar á að
+hann hafi greindarvísitölu á bilinu 90 til 120 stig?</p></li>
+<li><p>Hversu háa SIQ þarf simpansi að hafa til að vera meðal 10% greindustu
+simpansa í hópnum?</p></li>
+</ol>
+</section>
+<section id="id37">
+<h3><span class="section-number">5.5.22. </span>Dæmi<a class="headerlink" href="#id37" title="Permalink to this heading"></a></h3>
+<p>Normaldreifing nokkur hefur þéttifallið
+<span class="math notranslate nohighlight">\(\displaystyle f(x)=\phi(x)=\frac{1}{4\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-10}{4})^2}.\)</span>
+Hver eru meðaltal hennar og dreifni?</p>
+</section>
+<section id="id38">
+<h3><span class="section-number">5.5.23. </span>Dæmi<a class="headerlink" href="#id38" title="Permalink to this heading"></a></h3>
+<p>Þyngd íslenskra karlmanna á aldrinum 25 til 35 ára fylgir u.þ.b.
+normaldreifingu með meðaltal 85.6 kg og staðalfrávik 9.1 kg.</p>
+<ol class="loweralpha simple">
+<li><p>Sé íslenskur karlmaður á aldrinum 25 til 35 ára valinn af handahófi
+hverjar eru líkurnar að hann sé þyngri en 100 kg?</p></li>
+<li><p>Sé íslenskur karlmaður á aldrinum 25 til 35 ára valinn af handahófi
+hverjar eru líkurnar að hann sé léttari en 75 kg?</p></li>
+<li><p>Sé íslenskur karlmaður á aldrinum 25 til 35 ára valinn af handahófi
+hverjar eru líkurnar að hann sé á milli 75 og 100 kg?</p></li>
+<li><p>Sé íslenskur karlmaður á aldrinum 25 til 35 ára valinn af handahófi
+hverjar eru líkurnar að hann sé nákvæmlega 85.6 kg?</p></li>
+<li><p>Sigga landfræðinema þykir bjórinn góður og er hann með dálítið stóra
+ístru fyrir vikið. Læknirinn hans hefur svolitlar áhyggjur af
+holdarfari Sigga og ráðleggur honum að megra sig. Siggi ákveður því
+að létta sig og setur sér það markmið að ná þeirri þyngd þannig að,
+að minnsta kosti 30% íslenskra karlmanna á aldrinum 25 til 35 ára séu
+þyngri en hann. Hvaða þyngd þarf Siggi að ná?</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli04/" class="btn btn-neutral float-left" title="4. Lýsandi tölfræði" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli06/" class="btn btn-neutral float-right" title="6. Ályktunartölfræði" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

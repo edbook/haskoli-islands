@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Frumefni og sameindir &mdash; Undirbúningur í efnafræði 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+    <!-- hoverrole.py css code -->
+    <style type="text/css">
+        a.tooltip {
+            outline: none;
+            border-bottom: thin dotted;
+            background: #ffeedd
+        }
+        
+        a.tooltip strong {
+            line-height: 30px;
+        }
+        
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+        
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: -30px;
+            margin-left: 12px;
+            width: 310px;
+            line-height: 16px;
+        }
+        
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            color: #111;
+            border: 1px solid #DCA;
+            background: #fffAF0;
+        }
+        
+        .callout {
+            z-index: 20;
+            position: absolute;
+            top: 30px;
+            border: 0;
+            left: -12px;
+        }
+        /*CSS3*/
+        
+        a.tooltip span {
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
+    <!-- End hoverrole.py css code -->
+
+    <style type="text/css">
+        .sagecell .CodeMirror-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .sagecell .CodeMirror {
+            height: auto;
+        }
+    </style>
+
+
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="3. Efnahvörf" href="../kafli03/" />
+    <link rel="prev" title="1. Einingar og reikniaðferðir" href="../kafli01/" /> 
+    <!-- Eftirfarandi sagecell import eyðileggur searchið -->
+    <!-- <script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script> -->
+    <!-- <script>
+        // the buttonText string says what will be written on the
+        // sage cell evaluation button.
+        // It can be changed here.
+        var buttonText = "Keyra"
+    </script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({
+            inputLocation: ".sage",
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsage",
+            languages: ["r"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osage",
+            languages: ["octave"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAuto",
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAuto",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAuto",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAutoHidden",
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAutoHidden",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAutoHidden",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+    </script> -->
+    <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    <script>
+        ggbAppletId = [];
+    </script>
+    <script>
+        top.scrolldepth_tags = [];
+    </script>
+
+
+
+
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Undirbúningur í efnafræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Leita í bók" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Um námsefnið</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Einingar og reikniaðferðir</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Frumefni og sameindir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#atom">2.1. Atóm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lotukerfi">2.2. Lotukerfið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sameindir">2.3. Sameindir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jonaefni">2.4. Jónaefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#efnaformulur">2.5. Efnaformúlur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mol">2.6. Mól</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#molmassi">2.6.1. Mólmassi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#molstyrkur">2.6.2. Mólstyrkur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#molalstyrkur">2.6.3. Mólalstyrkur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#efnaformulur-framhald">2.7. Efnaformúlur framhald</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Efnahvörf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Skammtafræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Efnatengi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kjörgaslögmálið</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Varmaefnafræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Hraðafræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Efnajafnvægi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Sýrur og basar</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Undirbúningur í efnafræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Yfirlit</a> &raquo;</li>
+      
+    <li><span class="section-number">2. </span>Frumefni og sameindir</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/undirbuningur_efn/kafli02.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frumefni-og-sameindir">
+<span id="s-frumefni"></span><h1><span class="section-number">2. </span>Frumefni og sameindir<a class="headerlink" href="#frumefni-og-sameindir" title="Permalink to this heading"></a></h1>
+<section id="atom">
+<h2><span class="section-number">2.1. </span>Atóm<a class="headerlink" href="#atom" title="Permalink to this heading"></a></h2>
+<p>Í efnafræði er <em>efni</em> skilgreint sem svo að það hefur massa og hefur rúmmál. <em>Atóm</em> er örsmá grunneining sem allt efni í alheiminum er búið til úr. Nú eru þekktar 118 tegundir atóma, þar sem hver tegund telst sem eitt <em>frumefni</em> (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_element">element</a>). Þó atóm séu örsmá þá eru þau ekki minnsta eining efnis, en þau eru gerð úr jákvætt hlöðnum <em>róteindum</em> (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Proton">proton</a>), neikvætt hlöðnum <em>rafeindum</em> (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Electron">electron</a>) og  hleðslulausum <em>nifteindum</em> (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Neutron">neutron</a>).
+Róteindir og nifteindir mynda <em>kjarna</em> (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Atomic_nucleus">nucleus</a>) atómsins meðan rafeindirnar sveima kringum kjarnann.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/transparent.png"><img alt="../_images/transparent.png" src="../_images/transparent.png" style="width: 50%;" /></a>
+</figure>
+<p>Gerð frumefnis ákvarðast af fjölda róteinda í kjarna þess. Sem dæmi má nefna að vetni hefur alltaf 1 róteind í kjarna á meðan helíum hefur alltaf 2 róteindir í sínum kjarna. Ólík frumefni hafa ólíkan fjölda róteinda í kjarna. Frumefni eru hleðslulaus vegna þess að þau hafa jafnan fjölda af róteindum og rafeindum. <em>Sætistala</em> (e. atomic number) frumefnis er fjöldi róteinda í kjarnanum. Frumefni getur þó haft mismunandi fjölda nifteinda í kjarna og mynda þá mismunandi <em>samsætur</em> (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Isotope">isotopes</a>). Samsætur hafa mismunandi <em>massatölu</em> (e. mass number), en massatala er samanlagður fjöldi nifteinda og róteinda. Massi rafeindar er svo lítill (<span class="math notranslate nohighlight">\(m_e=9,11\cdot 10^{-31}\)</span> kg)
+miðað við hinar tvær öreindirnar (<span class="math notranslate nohighlight">\(m_n \approx m_p=1,67\cdot 10^{-27}\)</span> kg) að ekki þarf að taka tillit til massa þeirra í massatölu samsætu. Samsætur eru svo nefndar eftir massatölu sinni, t.d. kolefni-13 (C-13) hefur massatöluna 13. Massatala hefur eininguna <em>amu</em> (atómmassaeining (e. atomic mass unit))</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/symbols.png"><img alt="../_images/symbols.png" src="../_images/symbols.png" style="width: 50%;" /></a>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array} {c|c}
+\hline
+\text{Sætistala} &amp; \text{Fjöldi róteinda í kjarna}\\
+\hline
+\text{Massatala} &amp; \text{Fjöldi kjarneinda}\\
+&amp; \text{róteindir+nifteindir}\\
+\hline
+&amp; \text{Ólíkar gerðir sama frumefnis.}\\
+\text{Samsætur} &amp; \text{Mismunandi fjöldi nifteinda en}\\
+&amp; \text{fjöldi róteinda er alltaf sá sami.}\\
+&amp; \text{Massatalan mismunandi}\\
+\hline
+\end{array}\end{split}\]</div>
+<div class="admonition tip">
+<p class="admonition-title">Dæmi</p>
+<p><strong>Kolefni hefur sætistöluna 6. Hver er fjöldi nifteinda, róteinda og rafeinda í C-13?</strong></p>
+<p>Kolefni hefur sætistöluna 6, og hefur því 6 róteindir og rafeindir. Nú er jafnan fyrir massatölu:</p>
+<div class="math notranslate nohighlight">
+\[A=Z+N\]</div>
+<p>þar sem A er massatalan, Z er fjöldi róteinda, og N er fjöldi nifteinda.
+Þá má sjá að fyrir massatölu 13 og 6 róteindir fæst að það eru 7 nifteindir í C-13</p>
+</div>
+</section>
+<section id="lotukerfi">
+<h2><span class="section-number">2.2. </span>Lotukerfið<a class="headerlink" href="#lotukerfi" title="Permalink to this heading"></a></h2>
+<p>Fyrsta lotukerfið (e. The Periodic Table) var smíðað af <a class="reference external" href="https://en.wikipedia.org/wiki/Dmitri_Mendeleev">Mendeleev</a> árið 1869, þar sem frumefnunum var raðað eftir sætistölu (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Atomic_number">atomic number</a>), þ.e. fjölda róteinda. Þeim var svo hópað saman eftir efnafræðilegum eiginleikum. Þó svo að ekki hafi öll frumefnin
+verið fundin á þessum tíma, tókst Mandeleev að mestu leyti að áætla hvar vantaði frumefni, með því að tengja sætistöluna við eiginleika frumefnisins. Einungis fyrstu 94 frumefnin finnast náttúrulega en frumefni 95-118 hafa verið smíðuð á rannsóknarstofu.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/lotukerfi.png"><img alt="../_images/lotukerfi.png" src="../_images/lotukerfi.png" style="width: 100%;" /></a>
+</figure>
+<p>Góð vefsíða fyrir lotukerfið er t.d. <a class="reference external" href="https://www.ptable.com/">þessi</a>, en þar er hægt að velja íslensku og ensku og fá upplýsingar um ýmsa eiginleika allra frumefnanna.</p>
+<p>Lotukerfið hefur sjö raðir, þar sem lotubundnir eiginleikar koma fram, og 18 dálka þar sem hver hópur hefur sameiginlega efnafræðilega eiginleika. Þessir hópar hafa margir eigið nafn, t.d. heitir hópur 1 alkalímálmar og hópur 2 jarðalkalímálmar, en hópur 17 ber nafnið halógenar og 18 eðalgastegundir.
+Efnin í lotukerfinu flokkast líka í málma, hálfmálma og málmleysingja. Á myndinni fyrir neðan, sem er fengin af ptable.com, sést skipting efnanna í lotukerfinu í flokka.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/lotukerfi2.png"><img alt="../_images/lotukerfi2.png" src="../_images/lotukerfi2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="sameindir">
+<h2><span class="section-number">2.3. </span>Sameindir<a class="headerlink" href="#sameindir" title="Permalink to this heading"></a></h2>
+<p><em>Sameindir</em> (e. molecule) myndast þegar tveir eða fleiri málmleysingjar koma saman og tengjast efnatengjum.
+Sameind getur verið af einni gerð frumefnis, t.d. vetnisgas  sem hefur <em>efnaformúluna</em>, <span class="math notranslate nohighlight">\(\require{mhchem} \ce{H_2}\)</span> eða nitur í andrúmslofti, <span class="math notranslate nohighlight">\(\ce{N_2}\)</span>.
+Þegar sameind er gerð úr fleiri en einni tegund af frumefni, kallast það <em>efnasamband</em> (e. chemical compound). Dæmi um þetta væri t.d. vatnssameind, <span class="math notranslate nohighlight">\(\ce{H_2O}\)</span> sem hefur tvö vetnisatóm og eitt súrefnisatóm.</p>
+</section>
+<section id="jonaefni">
+<h2><span class="section-number">2.4. </span>Jónaefni<a class="headerlink" href="#jonaefni" title="Permalink to this heading"></a></h2>
+<p>Jónaefni eru svipaðar og sameindir en það er smíðað úr <em>jónum</em> (e. ions). Jónir hafa ekki sama fjölda rafeinda (-) og róteinda (+) og fá þannig <em>hleðslu</em>. Jónir með mismunandi hleðslur koma saman og mynda <em>jónaefni</em> en jónir geta einnig fundist stakar í <em>lausn</em> (e. solution), þ.e. uppleystar.</p>
+<p>Það verður fjallað ítarlegra um jónaefnið og jónatengi í næstu köflum.</p>
+</section>
+<section id="efnaformulur">
+<h2><span class="section-number">2.5. </span>Efnaformúlur<a class="headerlink" href="#efnaformulur" title="Permalink to this heading"></a></h2>
+<p>Uppbygging efna er lýst með formúlu, t.d. jónin</p>
+<div class="math notranslate nohighlight">
+\[\ce{NO_3- (aq)}\]</div>
+<p>Hér lýsa stafirnir hvað frumefni eru í sameindinni (<span class="math notranslate nohighlight">\(\ce{N}\)</span> fyrir nitur og <span class="math notranslate nohighlight">\(\ce{O}\)</span> fyrir súrefni), <span class="math notranslate nohighlight">\(_3\)</span> lýsir fjölda súrefnisatóma, en <span class="math notranslate nohighlight">\(^-\)</span> er heildarhleðsla sameindarinnar. Einungis er settur tölustafur í hnéskrift ef það er fleiri en eitt atóm af efninu.</p>
+<p>Að lokum segir <span class="math notranslate nohighlight">\(\ce{(aq)}\)</span> til um að efnið sé uppleyst í vökva. Þá er einnig notað <span class="math notranslate nohighlight">\(\ce{(s)}\)</span>, <span class="math notranslate nohighlight">\(\ce{(l)}\)</span> og <span class="math notranslate nohighlight">\(\ce{(g)}\)</span> til að lýsa sameindinni sem föstu efni, vökva eða gasi.</p>
+</section>
+<section id="mol">
+<h2><span class="section-number">2.6. </span>Mól<a class="headerlink" href="#mol" title="Permalink to this heading"></a></h2>
+<p>Atóm og aðrar eindir eru svo litlar að það er ekki hentugt að reikna fyrir stakar eindir. Þess í stað er notað <em>mól</em>. Mól er fjöldi sem notað er yfir eindir, en þessi fjöldi er skilgreindur sem fjöldi atóma í 12 grömmum af C-12 samsætunni. Þessi fjöldi er nefndur <em>Avogadrostala</em> og hefur gildið</p>
+<div class="math notranslate nohighlight">
+\[N_A=6,022 \times 10^{23}\, \frac{1}{\text{mól}}.\]</div>
+<p>Sumir eiga það til að flækja hugtakið í huganum, en mól lýsir einfaldlega fjölda einda líkt og kippa af gosi lýsir 6 dósum!</p>
+<section id="molmassi">
+<h3><span class="section-number">2.6.1. </span>Mólmassi<a class="headerlink" href="#molmassi" title="Permalink to this heading"></a></h3>
+<p>Massi eins móls af frumefni er kallaður <em>mólmassi</em> efnisins, en frumefnin eru mismassamikil. Mismunandi samsætur hafa vissulega mismunandi mólmassa en notað er vegið meðaltal þeirra sem finna má í flestum lotukerfum, fyrir neðan nafnið. Þessi tala er notuð fyrir
+alla mólreikninga, nema tilgreint sé að önnur samsæta sé notuð.</p>
+<p>Til að finna mólmassa sameindar er einfaldlega lagt saman mólmassi allra atóma í sameindinni.</p>
+<p>Mólmassi, massi og mól tengjast með formúlunni</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\mathcal{M}\cdot n=m\]</div>
+</div></blockquote>
+<p>Þar sem <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> er mólmassi í g/mól, <span class="math notranslate nohighlight">\(n\)</span> er mólfjöldi og <span class="math notranslate nohighlight">\(m\)</span> er massinn í grömmum</p>
+<div class="admonition tip">
+<p class="admonition-title">Dæmi</p>
+<p><strong>Hver er massi 100 trilljón sameinda af járn(II)oxíðs,</strong> <span class="math notranslate nohighlight">\(\ce{FeO}\)</span>?</p>
+<p>Þessi spurning krefst nokkura skrefa. Fyrst þarf að finna hve mörg mól 100 trilljón sameindir eru. Hér er notast við íslensku skilgreininguna á trilljón, þ.e. <span class="math notranslate nohighlight">\(1 \times 10^{18}\)</span> og borið saman við avogadrostöluna.</p>
+<div class="math notranslate nohighlight">
+\[\frac{100\cdot 1 \times 10^{18} \text{sameindir}}{6,022\times10^{23}\, \text{sameindir/mól}}=0,00166\text{ mól}\]</div>
+<p>Til að finna massa sameindanna þarf að finna mólmassa efnanna. Fyrir það er hægt að nota t.d. <a class="reference external" href="https://ptable.com/?lang=is">Ptable</a>. Fyrir járn og súrefni fæst í lotukerfinu:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/jarnsurefni.png"><img alt="../_images/jarnsurefni.png" src="../_images/jarnsurefni.png" style="width: 45%;" /></a>
+</figure>
+<p>Í sameindinni er eitt atóm af hvoru svo mólmassi efnisins er þá:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{M} = 55,845\, \text{g/mól} + 15,999 \,\text{g/mól} = 71,844\,\text{g/mól}\]</div>
+<p>Þá er hægt að finna massa eindanna:</p>
+<div class="math notranslate nohighlight">
+\[m= \mathcal{M} \cdot n = 0,00166\text{ mól} \cdot 71,844 \text{ g/mól} = 0,119 \text{ g}\]</div>
+<p>Eins og sjá má nær massi 100 trilljón sameinda ekki einu sinni einu grammi!</p>
+</div>
+</section>
+<section id="molstyrkur">
+<h3><span class="section-number">2.6.2. </span>Mólstyrkur<a class="headerlink" href="#molstyrkur" title="Permalink to this heading"></a></h3>
+<p><em>Mólstyrkur</em> (e. molar concentration) er mæling á mólfjölda á rúmmálseiningu af lausn. Almennt eru lítrar notaðir sem rúmmálseiningin.  Þegar mólstyrkur er reiknaður fyrir jónir þarf að passa að taka mið af fjölda jóna í sameind, t.d. hefur ** <span class="math notranslate nohighlight">\(\ce{CaCl2}\)</span> ** tvær klóríð jónir og þarf því að passa að reikna mólstyrkinn miðað við það (sjá sýnidæmi aðeins neðar).</p>
+<p>Mólstyrkur er oft táknaður með <span class="math notranslate nohighlight">\(C\)</span> en einnig er notað tákn eindinnar í hornklofa t.d. táknar <span class="math notranslate nohighlight">\([\ce{Cl^-}]\)</span> mólstyrk klóríðjóna. Eining mólstyrks er mól/L stundum táknuð með M og er kölluð mólar. Þ.e. lausn sem er einn lítri að rúmmáli með einu móli af uppleystu efni er kölluð <em>eins mólar lausn</em> .</p>
+<p>Jafnan fyrir mólstyrk er:</p>
+<div class="math notranslate nohighlight">
+\[C=\frac{n}{V}\]</div>
+<p>Þar sem <span class="math notranslate nohighlight">\(C\)</span> er mólstyrkur, <span class="math notranslate nohighlight">\(n\)</span> er mólfjöldi og <span class="math notranslate nohighlight">\(V\)</span> er rúmmál lausnar í lítrum.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Rúmmál lausnar getur breyst við það að leysa upp efni og nota ætti það rúmmál í jöfnunni. Ef leyst er upp föst efni s.s. sölt, má oftast nær gera ráð fyrir óbreyttu rúmmáli.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dæmi</p>
+<p><strong>Hver er mólstyrkur magnesíums og klóríðs ef blandað er 2,00 mólum af</strong> <span class="math notranslate nohighlight">\(\ce{MgCl2}\)</span> <strong>í 1,00 líter af vatni?</strong></p>
+<p>Byrjum á að skoða klofnun <span class="math notranslate nohighlight">\(\ce{MgCl2}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\ce{MgCl2 -&gt; Mg^{2+} + 2Cl^{-}}\]</div>
+<p>Hér eru tvær gerðir af eindum og því betra að tákna styrkinn með hornklofum til aðgreiningar. Í hverri sameind af <span class="math notranslate nohighlight">\(\ce{MgCl2}\)</span> er ein magnesíum jón og tvær klóríð jónir.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{aligned}\\\begin{split}       [\ce{Mg^{2+}}] &amp;=\frac{2,00\text{ mól }\ce{MgCl2}}{1,00 \text{ L}} \cdot \frac{1\text{ mól }\ce{Mg}}{1\text{ mól }\ce{MgCl_2}} = 2,00\,\text{M}\\
+ [\ce{Cl^-}] &amp;=\frac{2,00\text{ mól }\ce{MgCl2}}{1,00 \text{ L}} \cdot \frac{2\text{ mól }\ce{Cl}}{1\text{ mól }\ce{MgCl2}} = 4,00\,\text{M}\end{split}\\\end{aligned}\end{aligned}\end{align} \]</div>
+</div>
+</section>
+<section id="molalstyrkur">
+<h3><span class="section-number">2.6.3. </span>Mólalstyrkur<a class="headerlink" href="#molalstyrkur" title="Permalink to this heading"></a></h3>
+<p><em>Mólalstyrkur</em> (e. molal concentration) svipar til mólarstyrks nema mólalstyrkur er mælieining á mólarfjölda á kíló, í stað lítra. Þetta er almennt óalgengara í efnafræði, en gott að geta gert skil á.</p>
+<p>Fyrir vatnslausnir fást sambærilegar tölur enda eðlismassi vatns kringum 1 kg/L.</p>
+</section>
+</section>
+<section id="efnaformulur-framhald">
+<h2><span class="section-number">2.7. </span>Efnaformúlur framhald<a class="headerlink" href="#efnaformulur-framhald" title="Permalink to this heading"></a></h2>
+<p>Efni getur haft mismunandi efnaformúlur en einna helst er talað um þrjár gerðir af efnaformúlum. Munurinn á þessum formúlum er hve miklar upplýsingar um efnið þær innihalda.</p>
+<dl class="simple">
+<dt>Reynsluformúla (e. empirical formula)</dt><dd><p>Þær lýsa einungis hlutfalli frumefna í sameind. Þessi formúla er oft milliskref í efnagreiningu við að finna sameindarformúluna.</p>
+</dd>
+<dt>Sameindarformúla (e. molecular formula)</dt><dd><p>Þær lýsa hlutfalli efna sem og fjölda af hverju og einu atómi.</p>
+</dd>
+<dt>Byggingarformúla (e. structural formula)</dt><dd><p>Þær sýna myndrænt hvernig atómin eru tengd við hvort annað og lýsir þannig byggingu efnisins.</p>
+</dd>
+</dl>
+<p>Ef ediksýra er tekin sem dæmi þá er reynsluformúlan hennar <span class="math notranslate nohighlight">\(\ce{CH2O}\)</span> en sameindaformúlan hennar er <span class="math notranslate nohighlight">\(\ce{C2H4O2}\)</span>.
+Byggingarformúla ediksýru er aftur á móti:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ediksyra.png"><img alt="../_images/ediksyra.png" src="../_images/ediksyra.png" style="width: 25%;" /></a>
+</figure>
+<p>Ef það á að finna hvort að reynsluformúla og sameindaformúla sameindar sé sú hin sama, þarf að komast að mólmassa sameindarinnar. Ef
+mólmassi reynsluformúlunnar er sá sami, eru formúlurnar þær sömu. Ef ekki, þarf að margfalda reynsluformúlu með heiltölu svo að mólmössunum beri saman.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dæmi</p>
+<p><strong>Glúkósi er einn helsti orkugjafi líkamans, en hann hefur reynsluformúluna</strong> <span class="math notranslate nohighlight">\(\ce{CH2O}\)</span> <strong>og mólmassa 180,156 g/mól. Hver er sameindaformúla glúkósa?</strong></p>
+<p>Hér er fyrsta skrefið að finna mólmassa reynsluformúlunnar. Sambærilega og í dæmi á undan fæst mólmassinn:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathcal{M}_{RF}&amp;= \mathcal{M}_{\ce{C}}+2\mathcal{M}_{\ce{H}}+\mathcal{M}_{\ce{O}}\\
+&amp;=12,011 \text{ g/mól} + 2(1,008 \text{ g/mól})+ 15,999 \text{ g/mól}\\
+&amp;= 30,026 \text{ g/mól}
+\end{aligned}\end{split}\]</div>
+<p>Nú þarf að bera saman mólmassa sameindarinnar og reynsluformúlunnar:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathcal{M}_{S}}{\mathcal{M}_{RF}}=\frac{180,156 \text{ g/mól}}{30,026 \text{ g/mól}}=6\]</div>
+<p>Það þarf því greinilega að margfalda reynsluformúluna í gegn með 6 til að fá sameindaformúluna. Sameindaformúlan er
+þá <span class="math notranslate nohighlight">\(\ce{C_6H_{12}O_6}\)</span>.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kafli03/" class="btn btn-neutral float-right" title="3. Efnahvörf" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../kafli01/" class="btn btn-neutral" title="1. Einingar og reikniaðferðir" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Efnið er sett upp í <a href="https://github.com/edbook">Edbook</a> en það kerfi samanstendur af <a href="http://sphinx-doc.org/">Sphinx</a> ásamt sérsniðnum viðbótum. <a href="https://github.com/snide/sphinx_rtd_theme">Þemað</a> kemur frá <a href="https://readthedocs.org">Read the Docs</a>.
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <script>
+        window.addEventListener("load", function() {
+            for (var i in ggbAppletId) {
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+      
+    <style>
+        /* Sidebar header (and topbar for mobile) */
+        
+        .wy-side-nav-search,
+        .wy-nav-top {
+            background: #10099F;
+        }
+        /* Sidebar */
+        
+        .wy-nav-side {
+            background: #262626;
+        }
+    </style>
+
+
+</body>
+</html>

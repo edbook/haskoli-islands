@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12 Dæmi um hagnýtingu fylkjareikninga &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/python.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="13 Slembitölur" href="../kafli13/" />
+    <link rel="prev" title="11 Reiknað með fylkjum" href="../kafli11/" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+          </a>
+              <div class="version">
+                2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5  Söfn: Eitt nafn en mörg gildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6  Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7  Uppflettitöflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8  Skrár</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9  Teikning með Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10  NumPy pakkinn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11  Reiknað með fylkjum</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12  Dæmi um hagnýtingu fylkjareikninga</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fylkjamargfoldun-og-tolvugrafik">12.1  Fylkjamargföldun og tölvugrafík</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fylki-og-net">12.2  Fylki og net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flaeinet">12.2.1  Flæðinet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lindir-og-osar">12.2.2  Lindir og ósar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linuleg-hreyfikerfi">12.3  Línuleg hreyfikerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linulegra-hreyfikerfa">12.3.1  Skilgreining línulegra hreyfikerfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roun-mannfjolda-ea-stofnstaerar">12.3.2  Þróun mannfjölda eða stofnstærðar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diffurjafna-fyrir-hreyfingu-hlutar">12.3.3  Diffurjafna fyrir hreyfingu hlutar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diffurjofnu-breytt-i-linulegt-hreyfikerfi">12.3.4  Diffurjöfnu breytt í línulegt hreyfikerfi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12  </span>Dæmi um hagnýtingu fylkjareikninga</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kafli12.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="daemi-um-hagnytingu-fylkjareikninga">
+<h1><span class="section-number">12  </span>Dæmi um hagnýtingu fylkjareikninga<a class="headerlink" href="#daemi-um-hagnytingu-fylkjareikninga" title="Permalink to this heading"></a></h1>
+<section id="fylkjamargfoldun-og-tolvugrafik">
+<h2><span class="section-number">12.1  </span>Fylkjamargföldun og tölvugrafík<a class="headerlink" href="#fylkjamargfoldun-og-tolvugrafik" title="Permalink to this heading"></a></h2>
+<p class="rubric">Nokkrar myndavarpanir</p>
+<p>Hægt er að líta á flatarmyndir, t.d. hringi, þríhyrninga, eða myndir af húsum
+sem mengi af punktum í plani, og punktarnir jafngilda svo auðvitað tvívíðum vigrum. Ef við höfum gefið fylki <span class="math notranslate nohighlight">\(A\)</span> þá er hægt að skilgreina vörpun eða fall frá planinu yfir í sjálft sig sem svarar til margföldunar með <span class="math notranslate nohighlight">\(A\)</span>, með öðrum orðum:</p>
+<div class="math notranslate nohighlight">
+\[f_A: \Bbb{R}^2 \to \Bbb{R}^2, f_A(x) = Ax\]</div>
+<p>Svo má beita fallinu á alla punkta flatarmyndar og skoða myndmengið sem kemur út. Nokkrar tegundir af fylkjum svara til vel þekktra breytinga á flatarmyndunum, þeirra á meðal eru:</p>
+<ul class="simple">
+<li><p><strong>snúningur</strong> (<em>rotation</em>) um tiltekið horn miðað við <span class="math notranslate nohighlight">\((0,0)\)</span></p></li>
+<li><p><strong>skölun</strong> (<em>scaling</em>) í x- og/eða y-stefnu</p></li>
+<li><p><strong>skekking</strong> (<em>shear deformation</em>) um tiltekið horn</p></li>
+<li><p><strong>speglun</strong> (<em>reflection</em>) um x-ás eða y-ás</p></li>
+</ul>
+<p>Sem dæmis er fylkið:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}K = \begin{pmatrix} 1 &amp; \sin 30° \\ 0 &amp; 1 \end{pmatrix}\end{split}\]</div>
+<p>skekkingarfylki sem hallar lóðréttum línum um 30° til hægri. Aftar í þessum
+kafla eru formúlur fyrir fleiri fylkjum, en skoðum þær fyrst myndrænt með dæmum:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/tvividarvarpanir.png"><img alt="../_images/tvividarvarpanir.png" src="../_images/tvividarvarpanir.png" style="width: 100%;" /></a>
+</figure>
+<p>Svona fylkjamargföldunarvarpanir eru kallaðar <strong>línulegar varpanir</strong> (<em>linear
+mappings</em>). Þær hafa þann eiginleika að línustrik varpast í línustrik, þannig að
+til að finna myndmengi slíks striks nægir að varpa endapunktum þess.</p>
+<p class="rubric">Samskeyting varpana er fylkjamargföldun</p>
+<p>Með því að skeyta slíkum vörpunum saman má svo t.d. spegla um hvaða ás sem er
+(snúa, spegla, snúa til baka) eða bæði skala og skekkja (feitletra og skáletra).
+Svona samskeyting varpananna svarar til fylkjamargföldunar því að:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;f_A(f_B(x)) = f_A(Bx) = ABx\quad\text{þ.e.a.s.}\\
+&amp;f_A \circ f_B = f_{AB}\end{split}\]</div>
+<p>Svo er hægt að framkvæma hliðrun með því að leggja hliðrunarvigur, <span class="math notranslate nohighlight">\(h\)</span> við alla punkta mengisins. Þá erum við að nota fallið</p>
+<div class="math notranslate nohighlight">
+\[g_h: \Bbb{R}^2 \to \Bbb{R}^2, g_h(x) = x + h\]</div>
+<p>Með því að skeyta saman hliðrun og fylkjavörpununum er svo t.d. hægt að snúa
+miðað við hvaða punkt sem er (hliðra, snúa og hliðra til baka).</p>
+<p class="rubric">Myndmengi fundið með einni fylkjamargföldun</p>
+<p>Ef mynd samanstendur af punktunum <span class="math notranslate nohighlight">\((x_1, y_1), (x_2, y_2),\ldots (x_n, y_n)\)</span> og strikum milli þeirra má varpa myndinni með fylki <span class="math notranslate nohighlight">\(A\)</span> með því að byrja á að búa til fylkið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B = \begin{pmatrix}x_1 &amp; x_2 &amp; \cdots &amp; x_n\\y_1 &amp; y_2 &amp; \cdots &amp; y_n\end{pmatrix}\end{split}\]</div>
+<p>reikna svo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AB = C = \begin{pmatrix}c_1 &amp; c_2 &amp; \cdots &amp; c_n\\d_1 &amp; d_2 &amp; \cdots &amp; d_n\end{pmatrix}\end{split}\]</div>
+<p>Svo eru búnir til punktar <span class="math notranslate nohighlight">\((c_1, d_1), (c_2, d_2), \ldots\)</span> úr dálkunum í C og nýja myndin fæst með því að tengja þá saman með strikum. Í Python er hægt að „lyfta pennanum“ og hoppa á nýjan stað með því að hafa dálka af svokölluðum <em>ekki-tölum</em> (<em>not-a-number</em>) sem hægt er að búa til með <code class="docutils literal notranslate"><span class="pre">nan</span></code> eftir innflutning <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">nan</span></code>.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Rétthyrningur með striki</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../_images/rétthyrningur-með-striki.png"><img alt="../_images/r%C3%A9tthyrningur-me%C3%B0-striki.png" src="../_images/r%C3%A9tthyrningur-me%C3%B0-striki.png" style="width: 3cm;" /></a>
+</figure>
+<p>Hér er dæmi um fylki sem lýsir rétthyrningi með striki inni í sér (sjá mynd):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M = \begin{pmatrix}
+0 &amp; 3 &amp; 3 &amp; 0 &amp; 0 &amp; \text{nan} &amp; 1 &amp; 2 \\
+0 &amp; 0 &amp; 2 &amp; 2 &amp; 0 &amp; \text{nan} &amp; 1 &amp; 1
+\end{pmatrix}\end{split}\]</div>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../_images/samsíðungur.png"><img alt="../_images/sams%C3%AD%C3%B0ungur.png" src="../_images/sams%C3%AD%C3%B0ungur.png" style="width: 4cm;" /></a>
+</figure>
+<p>Ef <span class="math notranslate nohighlight">\(K\)</span> er skekkingarfylkið sem gefið er hér neðar myndi fylkið</p>
+<div class="math notranslate nohighlight">
+\[C = KM\]</div>
+<p>lýsa samsíðungi með striki.</p>
+</div>
+<p class="rubric" id="formulur-fyrir-vorpunarfylkjum">Formúlur fyrir tvívíðum vörpunarfylkjum</p>
+<p><strong>SNÚNINGSFYLKI</strong> sem snýr mynd rangsælis um hornið <span class="math notranslate nohighlight">\(\theta\)</span> með
+snúningspunkt <span class="math notranslate nohighlight">\((0,0)\)</span> er gefið með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R_{\theta} = \begin{pmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{pmatrix}\end{split}\]</div>
+<p>Til að spegla réttsælis má nota neikvætt <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p><strong>SKÖLUNARFYLKI</strong> sem skalar um <span class="math notranslate nohighlight">\(a\)</span> í <span class="math notranslate nohighlight">\(x\)</span>-stefnu og <span class="math notranslate nohighlight">\(b\)</span> í
+<span class="math notranslate nohighlight">\(y\)</span>-stefnu er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S_{a,b} = \begin{pmatrix}a &amp; 0 \\ 0 &amp; b \end{pmatrix}\end{split}\]</div>
+<p><strong>SKEKKINGARFYLKI:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}K_{x,\theta} = \begin{pmatrix} 1 &amp; \sin \theta \\ 0 &amp; 1 \end{pmatrix}
+\;\text{ og }\;
+K_{y,\theta} = \begin{pmatrix} 1 &amp; 0 \\ \sin \theta &amp; 1 \end{pmatrix}\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(K_{x,\theta}\)</span> hallar lóðréttum línum um horn <span class="math notranslate nohighlight">\(\theta\)</span> til hægri en varðveitir
+láréttar línur, og <span class="math notranslate nohighlight">\(K_{y,\theta}\)</span> hallar láréttum línum upp en varðveitir þær
+lóðréttu. Til að halla til vinstri eða niður má nota neikvætt <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p><strong>SPEGLUNARFYLKI</strong> sem spegla um <span class="math notranslate nohighlight">\(x\)</span>-ás og <span class="math notranslate nohighlight">\(y\)</span>-ás eru</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_x = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} \;\text{ og }\;
+M_y = \begin{pmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}\end{split}\]</div>
+<p class="rubric">Fylki í tölvugrafík</p>
+<p>Allar þessar aðgerðir eru grunnaðgerðir í tölvugrafík. Hliðranir eru stundum
+líka útfærðar með fylkjamargföldun með því að bæta við gervihniti og vinna með
+svonefnd <em>jafnþætt</em> eða <em>hómógen</em> (<em>homogeneous</em>) hnit, þrívíða vigra og
+<span class="math notranslate nohighlight">\(3 \times 3\)</span> fylki.</p>
+<p>Nútíma tölvugrafík er svo auðvitað oftast þrívíð og þar þarf að takast á við
+þrívíða snúninga, speglanir og skalanir, og auk þess bæði hliðranir og
+fjarvídd (<em>perspective</em>). Allt þetta er hægt að útfæra með fjórvíðum
+vigrum og <span class="math notranslate nohighlight">\(4 \times 4\)</span> fylkjum, þar sem eitt hnitið er gervihnit.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Snúið, skekkt og speglað.</p>
+<p>Leysið <a class="reference internal" href="../verkefni/#aefing-i-tolvugrafik"><span class="std std-numref">verkefni 30</span></a>: Æfing í tölvugrafík.</p>
+</div>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd:</p>
+<p>Til að varpanirnar sem hér hefur verið lýst gefi réttar myndir í Matplotlib
+teiknigluggum þarf að gæta þess að einingar á x- og y-ás séu jafnar. Það má
+gera með því að láta stærð myndarinnar (sem stilla má með
+<code class="docutils literal notranslate"><span class="pre">figure(figsize=...)</span></code>) passa við fjölda eininga á hvorum ás fyrir sig, en
+svo er líka hægt að enda með skipuninni <code class="docutils literal notranslate"><span class="pre">plt.axis('scaled')</span></code> sem mjókkar
+eða breikkar myndina til að einingar á x- og y-ás verði jafnar, eða
+skipuninni <code class="docutils literal notranslate"><span class="pre">plt.axis('equal')</span></code> sem breytir mörkum á x-ás til að einingarnar
+verði jafnar.</p>
+</div>
+</section>
+<section id="fylki-og-net">
+<h2><span class="section-number">12.2  </span>Fylki og net<a class="headerlink" href="#fylki-og-net" title="Permalink to this heading"></a></h2>
+<p><strong>Net</strong> (<em>graph</em> eða <em>network</em>) er safn af <strong>hnútum</strong> (eða <em>punktum</em>) (<em>vertices</em>, nodes*) og <strong>leggjum</strong> (<em>edges</em>) milli hnútanna. Net geta verið <strong>stefnd</strong> (<em>directed</em>) eða <strong>óstefnd</strong>, og þegar þau eru stefnd eru leggirnir stundum kallaðir örvar. Net geta líka haft leggi sem tengja punkta við sjálfa sig, kallaðir <strong>snörur</strong> (<em>loops</em>). <a class="reference internal" href="#daemi-um-net"><span class="std std-numref">Mynd 12.1:</span></a> sýnir dæmi um net. Netið í miðjunni er það sama og netið til hægri.</p>
+<figure class="align-center" id="daemi-um-net">
+<a class="reference internal image-reference" href="../_images/dæmi-um-net.png"><img alt="../_images/d%C3%A6mi-um-net.png" src="../_images/d%C3%A6mi-um-net.png" style="width: 13cm;" /></a>
+<figcaption>
+<p><span class="caption-number">Mynd 12.1: </span><span class="caption-text">Óstefnt net (t.v.) og stefnt net (í miðju og t.h.).</span><a class="headerlink" href="#daemi-um-net" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Margar fleiri myndir af netum má skoða með því að gúgla <em>graph mathematics</em> og
+smella á <em>images</em>.</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Grannafylki</p>
+<p><strong>Grannafylki</strong> (<em>adjacency matrix</em>) stefnds nets er fylki <span class="math notranslate nohighlight">\(A\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a_{ij} = \left\{\begin{array}{ll}
+1 &amp;\text{ef það er ör frá hnút } i \text{ yfir í hnút } j \\
+0 &amp;\text{annars}
+\end{array}
+\right.\end{split}\]</div>
+<p><strong>Grannafylki</strong> óstefnds nets er samhverft fylki <span class="math notranslate nohighlight">\(A\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a_{ij} = a_{ji} = \left\{\begin{array}{ll}
+1 &amp;\text{ef leggur tengir hnút } i \text{ og hnút } j \\
+0 &amp;\text{annars}
+\end{array}
+\right.\end{split}\]</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Grannafylki netanna á <a class="reference internal" href="#daemi-um-net"><span class="std std-numref">Mynd 12.1:</span></a> eru</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 0
+\end{pmatrix}
+\;\text{ (netið t.v.) og }\;
+\begin{pmatrix}
+0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0
+\end{pmatrix}
+\;\text{ (hin tvö)}\;\end{split}\]</div>
+</div>
+<p class="rubric">Vegir í netum</p>
+<p><strong>Vegur</strong> (<em>path</em>) með lengd <span class="math notranslate nohighlight">\(L\)</span> í neti er runa af <span class="math notranslate nohighlight">\(L + 1\)</span> hnút þannig
+að leggur tengi hnút 1 við hnút 2, hnút 2 við hnút 3, o.s.frv. Sagt er að
+vegurinn tengi fyrsta hnútinn við þann síðasta. Veg með lengd 3 frá <span class="math notranslate nohighlight">\(v_1\)</span>
+til <span class="math notranslate nohighlight">\(v_4\)</span> má rita</p>
+<div class="math notranslate nohighlight">
+\[v_1 \to v_2 \to v_3 \to v_4 \;\text{ eða }\; (v_1, v_2, v_3, v_4).\]</div>
+<p>Skemmtileg regla tengir fjölda vega milli hnúta og veldi grannafylka:</p>
+<div class="regla admonition">
+<p class="admonition-title">Regla: Vegafjöldi</p>
+<p>Grannafylki nets sé <span class="math notranslate nohighlight">\(A\)</span>. Þá er <span class="math notranslate nohighlight">\((i,j)\)</span>-stak
+<span class="math notranslate nohighlight">\(A^n\)</span> jafnt og fjöldi mismunandi vega með lengd <span class="math notranslate nohighlight">\({} = n\)</span> frá
+hnút <span class="math notranslate nohighlight">\(i\)</span> til hnúts <span class="math notranslate nohighlight">\(j\)</span> og <span class="math notranslate nohighlight">\((i,j)\)</span>-stak fylkisins</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[B = A + A^2 + A^3 + \ldots + A^n`\]</div>
+<p>gefur fjölda mismunandi vega með lengd <span class="math notranslate nohighlight">\({} \leq n\)</span> (hér
+er <span class="math notranslate nohighlight">\(A^n\)</span> fylkjaveldi, sbr. kafla <a class="reference internal" href="../kafli11/#grunnreikniagerir"><span class="std std-numref">11.1</span></a>).</p>
+</div></blockquote>
+</div>
+<p>Þessi skilgreining og reglan sömuleiðis eiga bæði við um stefnd og óstefnd net.</p>
+<div class="admonition important">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Skoðum stefnda netið á eftirfarandi mynd:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/stefnt-net.png"><img alt="../_images/stefnt-net.png" src="../_images/stefnt-net.png" style="width: 6cm;" /></a>
+</figure>
+<p>Grannafylkið og annað veldi þess eru gefin með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A =
+\begin{pmatrix}0&amp;1&amp;0&amp;1&amp;0\\1&amp;0&amp;0&amp;0&amp;0\\0&amp;1&amp;1&amp;0&amp;0\\0&amp;0&amp;1&amp;0&amp;1\\1&amp;0&amp;1&amp;0&amp;0\end{pmatrix}
+\;\text{ og }\; A^2 = B =
+\begin{pmatrix}1&amp;0&amp;1&amp;0&amp;1\\0&amp;1&amp;0&amp;1&amp;0\\1&amp;1&amp;1&amp;0&amp;0\\1&amp;1&amp;2&amp;0&amp;0\\0&amp;2&amp;1&amp;1&amp;0\end{pmatrix}\end{split}\]</div>
+<p>Við sjáum að <span class="math notranslate nohighlight">\(b_{11} = 1\)</span> og að það er nákvæmlega einn vegur sem tengir
+hnút 1 við sjálfan sig, nefnilega vegurinn <span class="math notranslate nohighlight">\(1 \to 2 \to 1\)</span>.  Til að
+taka annað dæmi þá eru tveir vegir frá hnút 4 til hnúts 3, nefnilega
+<span class="math notranslate nohighlight">\(4 \to 5 \to 3\)</span> og <span class="math notranslate nohighlight">\(4 \to 3 \to 3\)</span>, enda er <span class="math notranslate nohighlight">\((4,3)\)</span>-stak
+<span class="math notranslate nohighlight">\(A^2\)</span> <span class="math notranslate nohighlight">\({}= b_{43} = 2\)</span>.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Stefnt net hefur leggi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ll}
+1 \to 2 &amp;\qquad 2 \to 3 \\
+1 \to 3 &amp;\qquad 2 \to 4 \\
+1 \to 4 &amp;\qquad 3 \to 4
+\end{array}\end{split}\]</div>
+<ol class="arabic simple">
+<li><p>Teiknið netið</p></li>
+<li><p>Finnið grannafylkið <span class="math notranslate nohighlight">\(A\)</span></p></li>
+<li><p>Reiknið <span class="math notranslate nohighlight">\(A^2\)</span> og <span class="math notranslate nohighlight">\(A^3\)</span></p></li>
+<li><p>Reiknið <span class="math notranslate nohighlight">\(B = A + A^2 + A^3\)</span>. Þið ættuð að fá út að <span class="math notranslate nohighlight">\(b_{14} = 4\)</span>.
+Finnið vegina fjóra frá hnút 1 til hnúts 4.</p></li>
+</ol>
+</div>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Legufylki</p>
+<p>Ef bæði hnútar og leggir nets eru tölusettir þá er hægt að skilgreina
+<strong>legufylki</strong> (<em>incidence matrix</em>) þess. Fyrir <strong>óstefnt</strong> net með <span class="math notranslate nohighlight">\(n\)</span>
+hnútum og <span class="math notranslate nohighlight">\(m\)</span> leggum er það <span class="math notranslate nohighlight">\(n \times m\)</span> fylki <span class="math notranslate nohighlight">\(A\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a_{ij} = \left\{\begin{array}{ll}
+1 &amp;\text{ef hnútur } i \text{ er endi á legg } j \\
+0 &amp;\text{annars}
+\end{array}
+\right.\end{split}\]</div>
+<p>Ef netið er <strong>stefnt</strong> þá er sett formerki á stök legufylkisins til að sýna
+stefnu örvanna:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a_{ij} = \left\{\begin{array}{ll}
+-1 &amp;\text{ef ör } j \text{ byrjar í hnút } i \\
+1  &amp;\text{ef ör } j \text{ endar í hnút } i \\
+0  &amp;\text{annars}
+\end{array}
+\right.\end{split}\]</div>
+</div>
+<p>Það eru sem sé tveir ásar (stak sem er <span class="math notranslate nohighlight">\(= 1\)</span>) í dálki hvers leggs óstefnds nets, nema
+hann sé snara, þá er bara einn ás. Ef netið er stefnt og leggurinn ekki snara er <span class="math notranslate nohighlight">\(-1\)</span> í línu hnútsins þar sem leggurinn byrjar og <span class="math notranslate nohighlight">\(1\)</span> í línu hnútsins þar sem hann endar Stundum er þetta samt haft öfugt. Fyrir snörur látum við formerkið vera <span class="math notranslate nohighlight">\({}+{}\)</span>.</p>
+<div class="admonition important">
+<p class="admonition-title">Sýnidæmi</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/legufylki.png"><img alt="../_images/legufylki.png" src="../_images/legufylki.png" style="width: 6cm;" /></a>
+</figure>
+<p>Netið á myndinni hefur legufylki:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}-1&amp;-1&amp;0&amp;1&amp;0\\1&amp;0&amp;-1&amp;0&amp;0\\0&amp;0&amp;1&amp;-1&amp;-1\\0&amp;1&amp;0&amp;0&amp;1\end{pmatrix}\end{split}\]</div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Óstefnt net hefur leggi <span class="math notranslate nohighlight">\(e_1: v_1\)</span>—<span class="math notranslate nohighlight">\(v_2\)</span>, <span class="math notranslate nohighlight">\(e_2:
+v_2\)</span>—<span class="math notranslate nohighlight">\(v_2\)</span> og <span class="math notranslate nohighlight">\(e_3: v_2\)</span>—<span class="math notranslate nohighlight">\(v_3\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Teiknið netið.</p></li>
+<li><p>Ákvarðið grannafylki þess.</p></li>
+<li><p>Ákvarðið legufylki þess.</p></li>
+<li><p>Ákvarðið legufylkið fyrir tilsvarandi stefnt net með örvar <span class="math notranslate nohighlight">\(v_1 \to
+v_2\)</span>, <span class="math notranslate nohighlight">\(v_2 \to v_2\)</span> og <span class="math notranslate nohighlight">\(v_2 \to v_3\)</span></p></li>
+</ol>
+</div>
+<section id="flaeinet">
+<h3><span class="section-number">12.2.1  </span>Flæðinet<a class="headerlink" href="#flaeinet" title="Permalink to this heading"></a></h3>
+<p>Net sem lýsir kerfi þar sem eitthvað flæðir eftir hverjum legg, rafmagn, vatn,
+umferð, vörur o.s.frv. er kallað <strong>flæðinet</strong> (<em>network</em>). Hnútpunktarnir eru þá
+t.d. tengibox/tengivirki, tengipunktar, gatnamót eða dreifistöðvar. Í
+slíkum netum eru tölur tengdar hverjum legg, stundum fleiri en ein. Fyrir legg
+<span class="math notranslate nohighlight">\(e_j\)</span> gæti t.d. gilt:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\text{flæði } = x_j \\
+&amp;\text{hámarksflæði eða burðargeta } = b_j \\
+&amp;\text{kostnaður á flutta einingu } = c_j\end{split}\]</div>
+<p>Aðrir möguleikar á upplýsingum um leggi gætu t.d. verið lengdir þeirra eða
+viðnám í þeim. Þessar upplýsingar mætti setja fram með fylki sem hefur ekki-núll
+í sömu sætum og í grannafylki netsins (því þar er jú ás í sæti
+<span class="math notranslate nohighlight">\((i,j)\)</span> ef leggur tengir hnúta <span class="math notranslate nohighlight">\(i\)</span> og <span class="math notranslate nohighlight">\(j\)</span>). Flæðinet
+eru oft stefnd, en þá táknar stefna örvanna/leggjanna ekki stefnu
+flæðisins, heldur einungis í hvaða stefnu flæðið telst jákvætt. Ef flæði er á
+móti ör verður <span class="math notranslate nohighlight">\(x_j &lt; 0\)</span>.</p>
+</section>
+<section id="lindir-og-osar">
+<h3><span class="section-number">12.2.2  </span>Lindir og ósar<a class="headerlink" href="#lindir-og-osar" title="Permalink to this heading"></a></h3>
+<p>Legufylki eru oft gagnleg fyrir verkefni sem tengjast flæðinetum. Það
+er ekki erfitt að sjá að ef <span class="math notranslate nohighlight">\(x\)</span> er flæðivigur með <span class="math notranslate nohighlight">\(x_j\)</span> =
+flæði eftir ör <span class="math notranslate nohighlight">\(j\)</span> í stefndu neti með legufylki <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(y =
+Ax\)</span> þá gefur <span class="math notranslate nohighlight">\(y_i\)</span> nettóflæði inn í hnút <span class="math notranslate nohighlight">\(i\)</span> fyrir öll <span class="math notranslate nohighlight">\(i\)</span>.
+Ef <span class="math notranslate nohighlight">\(y_i &gt; 0\)</span> þá er yfirflæði í hnútnum sem við hugsum okkur að renni út
+úr netinu, og slíkur hnútur er kallaður <strong>ós</strong> (<em>sink</em>). Ef hinsvegar <span class="math notranslate nohighlight">\(y_i &lt;
+0\)</span> þá þarf að bæta í flæðið í hnút <span class="math notranslate nohighlight">\(i\)</span> til að flæðið í netinu sé
+allsstaðar varðveitt; slíkur hnútur kallast <strong>lind</strong> (<em>source</em>). Ef
+<span class="math notranslate nohighlight">\(s\)</span> er vigur með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;s_i = \text{ nettóflæði inn í hnút } i \text{, og þar með:} \\
+&amp;s_i \left\{\begin{array}{l}
+{} &lt; 0 \text{ fyrir ósa}\\
+{} &gt; 0 \text{ fyrir lindir}\\
+{} = 0 \text{ fyrir aðra hnúta}
+\end{array}\right.\end{split}\]</div>
+<div class="regla admonition">
+<p class="admonition-title">Regla: Varðveisla flæðis</p>
+<p>Ef <span class="math notranslate nohighlight">\(A\)</span> er legufylki nets með flæðivigur <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(s\)</span> lýsir
+nettó innflæði þá gildir:</p>
+<div class="math notranslate nohighlight">
+\[Ax + s = 0\]</div>
+</div>
+<p>Ef netið er tré (hringalaust) þá má leysa þessa jöfnu til að finna flæði í öllum
+leggjum, en annars þarf meiri upplýsingar t.d. um viðnám eða þrýsting/spennu.</p>
+<p>Eftirfarandi mynd sýnir flæðinet. Myndin segir ekkert um formerki flæðigilda svo
+það er ekki hægt að sjá hvaða hnútpunktar eru lindir og hverjir eru ósar. Öll
+<span class="math notranslate nohighlight">\(s_i\)</span>-in eru látin stefna inn í netið. Þar sem <span class="math notranslate nohighlight">\(s_i\)</span> er jákvætt
+passar sú stefna, þar eru lindir sem skila flæði inn í netið, en þar sem
+<span class="math notranslate nohighlight">\(s_i\)</span> er neikvætt er raunverulega að flæða út úr netinu.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/flæðinet.png"><img alt="../_images/fl%C3%A6%C3%B0inet.png" src="../_images/fl%C3%A6%C3%B0inet.png" style="width: 9cm;" /></a>
+</figure>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Gerið ráð fyrir að flæðivigur á myndinni hér á undan sé <span class="math notranslate nohighlight">\(x = (1, 3, 2, 4, -1)\)</span>.
+Ákvarðið legufylkið <span class="math notranslate nohighlight">\(A\)</span> og í framhaldi nettóinnflæðið <span class="math notranslate nohighlight">\(s\)</span>.
+Flokkið svo hnútana í lindir, ósa og aðra hnúta.</p>
+</div>
+</section>
+</section>
+<section id="linuleg-hreyfikerfi">
+<h2><span class="section-number">12.3  </span>Línuleg hreyfikerfi<a class="headerlink" href="#linuleg-hreyfikerfi" title="Permalink to this heading"></a></h2>
+<p>Í þessari grein kynnumst við notkun fylkjamargföldunar til að lýsa
+kerfum sem breytast með tíma. Tekin verða dæmi um stofnstærð/mannfjölda
+þar sem svonefnd Leslie fylki koma við sögu, og um hreyfingu massa
+sem kraftar verka á.</p>
+<section id="skilgreining-linulegra-hreyfikerfa">
+<h3><span class="section-number">12.3.1  </span>Skilgreining línulegra hreyfikerfa<a class="headerlink" href="#skilgreining-linulegra-hreyfikerfa" title="Permalink to this heading"></a></h3>
+<p>Lát <span class="math notranslate nohighlight">\(x_t\)</span> vera <span class="math notranslate nohighlight">\(n\)</span>-vigur sem lýsir einhverju <strong>ástandi</strong> (<em>state</em>)
+kerfis á tíma <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(t = 0, 1, 2, \ldots\)</span> (stundum er <em>state</em> líka
+þýtt með <strong>staða</strong>). Við skoðum sem sé kerfið á gefnum tímapunktum: tíminn líður
+í strjálum (<em>discrete</em>) skrefum sem gætu verið sekúndur eða ár.</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Línulegt hreyfikerfi</p>
+<p><strong>Línulegt hreyfikerfi</strong> (<em>linear dynamical system</em>) er líkan af kerfi með
+ástandsvigur <span class="math notranslate nohighlight">\(x_t\)</span> þar sem <span class="math notranslate nohighlight">\(x_{t+1}\)</span> er línulegt fall af
+<span class="math notranslate nohighlight">\(x_t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_{t+1} = A_t x_t\quad (t = 0, 1, 2, \ldots)\]</div>
+</div>
+<p>Fylkin <span class="math notranslate nohighlight">\(A_t\)</span> (sem eru <span class="math notranslate nohighlight">\(n \times n\)</span>) eru kölluð <strong>hreyfifylki</strong>
+(<em>dynamics matrices</em>). Ef þessi fylki og <span class="math notranslate nohighlight">\(x_0\)</span> eru þekkt þá er hægt
+að nota líkanið til að reikna öll framtíðargildi ástandsvigursins <span class="math notranslate nohighlight">\(x_t\)</span>.
+Hér er fylkinu leyft að vera háð <span class="math notranslate nohighlight">\(t\)</span> en oft er <span class="math notranslate nohighlight">\(A\)</span>-fylkið fast og
+óháð <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Ef ytri aðstæður hafa áhrif á þróun kerfisins er hægt að útvíkka hugtakið:</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Hliðrað línulegt hreyfikerfi</p>
+<p><strong>Hliðruðu línulegu hreyfikerfi</strong> (<em>non-homogeneous…</em>) er lýst með líkani:</p>
+<div class="math notranslate nohighlight">
+\[x_{t+1} = A_t x_t + B_t u_t \quad (t = 0, 1, 2, \ldots)\]</div>
+<p><span class="math notranslate nohighlight">\(B_t\)</span> er <strong>inntaksfylki</strong> (<em>input matrix</em>) og <span class="math notranslate nohighlight">\(u_t\)</span> eru <strong>ytri</strong>
+(<em>exogenous</em>) breytur (“<span class="math notranslate nohighlight">\(B\)</span> tekur ytri breyturnar <strong>inn</strong> í kerfið“).</p>
+</div>
+<p>Eins og að ofan eru fylkin <span class="math notranslate nohighlight">\(A_t\)</span> og/eða <span class="math notranslate nohighlight">\(B_t\)</span> oft föst og óháð <span class="math notranslate nohighlight">\(t\)</span>: <span class="math notranslate nohighlight">\(A_t = A\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(B_t = B\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\)</span>.</p>
+</section>
+<section id="roun-mannfjolda-ea-stofnstaerar">
+<h3><span class="section-number">12.3.2  </span>Þróun mannfjölda eða stofnstærðar<a class="headerlink" href="#roun-mannfjolda-ea-stofnstaerar" title="Permalink to this heading"></a></h3>
+<p>Við byrjum á að tala um mannfjölda, en augljóslega má nota sömu stærðfræði til
+að lýsa stofnstærð dýrategunda. Gerum ráð fyrir að <span class="math notranslate nohighlight">\(x_t\)</span> sé
+<span class="math notranslate nohighlight">\(n\)</span>-vigur með <span class="math notranslate nohighlight">\(i\)</span>-ta stak jafnt og fjöldi fólks í tilteknu landi sem
+eru á <span class="math notranslate nohighlight">\(i\)</span>-ta aldursári (sem sé <span class="math notranslate nohighlight">\(i-1\)</span> ára gamlir), <span class="math notranslate nohighlight">\(t\)</span> árum
+eftir tiltekinn byrjunartíma. Við gætum látið <span class="math notranslate nohighlight">\(n = 120\)</span>. Oft er svona
+vigur kallaður <em>aldursdreifing</em> í landinu og hér er mynd sem sýnir
+aldursdreifingu fólks yngra en 100 ára í Bandaríkjunum árið 2010.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/aldursdreifing.png"><img alt="../_images/aldursdreifing.png" src="../_images/aldursdreifing.png" style="width: 9cm;" /></a>
+<figcaption>
+<p><span class="caption-number">Mynd 12.2: </span><span class="caption-text">Aldursdreifing Bandaríkjamanna árið 2010. <br>
+Milljónir á <span class="math notranslate nohighlight">\(y\)</span>-ás og aldur á <span class="math notranslate nohighlight">\(x\)</span>-ás.</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Látum fæðingartíðni og dánartíðni vera gefna með vigrum <span class="math notranslate nohighlight">\(b\)</span> og <span class="math notranslate nohighlight">\(d\)</span>: <span class="math notranslate nohighlight">\(b_i\)</span> = árlegur meðalfjöldi lifandi fæddra barna foreldra sem eru að meðaltali á <span class="math notranslate nohighlight">\(i\)</span>-ta aldursári og <span class="math notranslate nohighlight">\(d_i\)</span> = hlutfall fólks á <span class="math notranslate nohighlight">\(i\)</span>-ta aldursári sem deyr. Til að vera nákvæmur mætti síðan skoða karla og konur aðskilið. Hér er mynd af <span class="math notranslate nohighlight">\(b\)</span> og <span class="math notranslate nohighlight">\(d\)</span> fyrir Bandaríkin í kring um árið 2010. Á þessum myndum er aftur miðað við fólk yngra en 100 ára.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/fæðingarogdánartíðni.png"><img alt="../_images/f%C3%A6%C3%B0ingarogd%C3%A1nart%C3%AD%C3%B0ni.png" src="../_images/f%C3%A6%C3%B0ingarogd%C3%A1nart%C3%AD%C3%B0ni.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Mynd 12.3: </span><span class="caption-text">Fæðingartíðni (t.v.) og dánartíðni (t.h.) í prósentum eftir aldri í
+Bandaríkjunum í lok árs 2010.</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p class="rubric">Leslie-fylki</p>
+<p>Smá skoðun leiðir nú í ljós að ef horft er framhjá aðfluttum og
+brottfluttum má lýsa þróun mannfjöldans með línulega hreyfikerfinu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_{t+1} = A x_t =
+\begin{pmatrix}
+b_1 &amp; b_2 &amp; b_3 &amp; \cdots &amp; b_{119} &amp; b_{120} \\
+1-d_1 &amp; 0 &amp; 0   &amp; \cdots &amp; 0 &amp; 0 \\
+0 &amp; 1-d_2 &amp; 0   &amp; \cdots &amp; 0 &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp;&amp; \vdots &amp; \vdots \\
+0 &amp; 0 &amp; 0       &amp; \cdots &amp; 1-d_{119} &amp; 0
+\end{pmatrix}
+x_t\end{split}\]</div>
+<p>Svona mannfjöldafylki (eða stofnstærðar-) er kallað <strong>Leslie-fylki</strong>. Það er sett
+saman úr þremur þáttum:</p>
+<ol class="arabic simple">
+<li><p>Fæðingartíðni eftir ári í efstu línu</p></li>
+<li><p>Dánartíðni eftir ári á skálínu neðan hornalínu</p></li>
+<li><p>Ásar á sömu skálínu sem færa <span class="math notranslate nohighlight">\(i\)</span> ára á ári <span class="math notranslate nohighlight">\(t\)</span> í <span class="math notranslate nohighlight">\(i+1\)</span>
+ára árið <span class="math notranslate nohighlight">\(t+1\)</span>.</p></li>
+</ol>
+<p>Ef taka skal tillit til aðfluttra og brottfluttra má nota hliðrað hreyfikerfi:</p>
+<div class="math notranslate nohighlight">
+\[x_{t+1} = A x_t + B u_t\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(B\)</span> er einingafylkið og <span class="math notranslate nohighlight">\((i+1)\)</span>-ta stak <span class="math notranslate nohighlight">\(u_t\)</span> er fjöldi
+<span class="math notranslate nohighlight">\(i\)</span> ára gamalla aðfluttra umfram brottflutta á ári <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<p>Tegund lifir í hámark 3 ár. Hver 0 ára gefur 0.2 núll-ára afkvæmi árið eftir,
+hver 1 árs 0.6 afkvæmi ári síðar og hver 2 ára 0.8. 20% núll-ára eru dauð ári
+seinna, og dánartíðni eins-árs er 50%.</p>
+<p>Í upphafi er stofnstærðin 3000 einstaklingar, 1200 núll-ára, 1000 eins árs og 800 tveggja ára.</p>
+<ol class="arabic simple">
+<li><p>Ákvarðið Leslie-fylkið</p></li>
+<li><p>Ákvarðið stofnstærð eftir 1 ár</p></li>
+<li><p>Ákvarðið stofnstærð eftir 2 ár</p></li>
+</ol>
+</div>
+</section>
+<section id="diffurjafna-fyrir-hreyfingu-hlutar">
+<h3><span class="section-number">12.3.3  </span>Diffurjafna fyrir hreyfingu hlutar<a class="headerlink" href="#diffurjafna-fyrir-hreyfingu-hlutar" title="Permalink to this heading"></a></h3>
+<p>Línuleg hreyfikerfi má nota til að líkja eftir hreyfingu margvíslegra
+aflfræðilegra kerfa, t.d. flugféla, skipa, bíla eða bygginga í jarðskjálfta. Hér
+lýsum við mjög einföldu kerfi, massa sem færist í beina línu fyrir áhrif
+drifkrafts og verður jafnframt fyrir núningsmótstöðu. Við getum hugsað okkur
+að um sé að ræða bát með utanborðsmótor.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/hraðbátur.png"><img alt="../_images/hra%C3%B0b%C3%A1tur.png" src="../_images/hra%C3%B0b%C3%A1tur.png" style="width: 12cm;" /></a>
+<figcaption>
+<p><span class="caption-number">Mynd 12.4: </span><span class="caption-text">Hraðbátur á Khövsgöl vatni í Mongólíu</span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Um slíka hreyfingu gildir 2. lögmál Newtons:</p>
+<div class="math notranslate nohighlight">
+\[\text{kraftur} = \text{massi} \cdot \text{hröðun}\]</div>
+<p>Auk þess gildir að núningsmótstaðan verkar eins og kraftur sem er í
+réttu hlutfalli við hraðann, sem sé</p>
+<div class="math notranslate nohighlight">
+\[\text{núningskraftur} = n \cdot \text{hraði}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(n\)</span> er núningsstuðull. Ef:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;m = \text{massi} \\
+&amp;t = \text{tími} \\
+&amp;f(t) = \text{drifkraftur á tíma } t\\
+&amp;v(t) = \text{hraði á tíma } t \text{ og} \\
+&amp;a(t) = \text{hröðun á tíma } t\end{split}\]</div>
+<p>og hugað er að formerkjum liða þá fæst:</p>
+<div class="math notranslate nohighlight">
+\[(*)\qquad\qquad m a(t) = -n v(t) + f(t) \qquad\qquad\quad{}\]</div>
+<p>Ef við látum líka <span class="math notranslate nohighlight">\(p(t)\)</span> vera staðsetningu á tíma <span class="math notranslate nohighlight">\(t\)</span> þá segir
+eðlisfræðin okkur að <span class="math notranslate nohighlight">\(v(t) = p'(t)\)</span> og <span class="math notranslate nohighlight">\(a(t) = p''(t)\)</span> og þar með
+verður <span class="math notranslate nohighlight">\((*)\)</span> að diffurjöfnunni:</p>
+<div class="math notranslate nohighlight">
+\[m p''(t) = -n p'(t) + f(t)\]</div>
+<p>Þessa annarsstigs diffurjöfnu er einfalt að umrita sem fyrsta stigs
+diffurjöfnukerfi í tvívíða fallinu <span class="math notranslate nohighlight">\((p(t), v(t))\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}p'(t)\\mv'(t)\end{pmatrix} =
+\begin{pmatrix}v(t)\\-nv(t) + f(t)\end{pmatrix}\end{split}\]</div>
+</section>
+<section id="diffurjofnu-breytt-i-linulegt-hreyfikerfi">
+<h3><span class="section-number">12.3.4  </span>Diffurjöfnu breytt í línulegt hreyfikerfi<a class="headerlink" href="#diffurjofnu-breytt-i-linulegt-hreyfikerfi" title="Permalink to this heading"></a></h3>
+<p>Nálgun við diffurjöfnukerfið að framan fæst með því að umrita staðsetningu og
+hraða á tíma <span class="math notranslate nohighlight">\(t^+ = t+1\)</span> útfrá sömu stærðum á tíma <span class="math notranslate nohighlight">\(t\)</span> með fyrsta stigs
+Taylor-nálgun, sem fjallað er um í stærðfræðigreiningu. Hún segir að</p>
+<div class="math notranslate nohighlight">
+\[f(x) \approx f(a) + f'(a)(x-a)\]</div>
+<p>Við beitum þessari setningu annarsvegar á <span class="math notranslate nohighlight">\(p\)</span> og hinsvegar á <span class="math notranslate nohighlight">\(v\)</span> og það gefur:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}p(t^+) &amp;\approx p(t)+p'(t)(t^+-t) \text{ þ.e. }p'(t) \approx p(t^+)-p(t)\\
+v(t^+) &amp;\approx v(t)+v'(t)(t^+-t) \text{ þ.e. }v'(t) \approx v(t^+)-v(t)\end{split}\]</div>
+<p>Þessi nálgun verður góð ef við veljum tímaeininguna nógu litla (t.d. 1 sekúndu).
+Ef þessari nálgun er stungið inn í diffurjöfnukerfið og við notum ritháttinn
+<span class="math notranslate nohighlight">\(p_t, v_t\)</span> og <span class="math notranslate nohighlight">\(f_t\)</span> í stað <span class="math notranslate nohighlight">\(p(t), v(t)\)</span> og <span class="math notranslate nohighlight">\(f(t)\)</span> fæst:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}p_{t+1}-p_t \\ m(v_{t+1} - v_t)\end{pmatrix} =
+\begin{pmatrix}v_t\\-nv_t + f_t\end{pmatrix}\end{split}\]</div>
+<p>það er að segja:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}p_{t+1} \\ v_{t+1}\end{pmatrix} &amp;=
+\begin{pmatrix}p_t + v_t\\ (1 - n/m) v_t + (1/m)f_t\end{pmatrix}\\ &amp;=
+\begin{pmatrix}1 &amp; 1\\ 0 &amp; 1-n/m\end{pmatrix}
+\begin{pmatrix}p_t\\ v_t\end{pmatrix} +
+\begin{pmatrix}0\\ 1/m\end{pmatrix} f_t\end{split}\]</div>
+<p>Þetta kerfi er greinilega hliðrað línulegt hreyfikerfi:</p>
+<div class="math notranslate nohighlight">
+\[(**)\qquad\qquad x_{t+1} = Ax_t + Bf_t\qquad\qquad\;\;{}\]</div>
+<p>með ástandsvigri <span class="math notranslate nohighlight">\(x_t = (p_t, v_t)\)</span>, ytri breytum
+<span class="math notranslate nohighlight">\(f_t\)</span>, og hreyfifylki og inntaksfylki:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{pmatrix}1 &amp; 1\\ 0 &amp; 1-n/m\end{pmatrix}\;\text{ og }\;
+B = \begin{pmatrix}0\\1/m\end{pmatrix}\end{split}\]</div>
+<div class="admonition important">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Látum hreyfikerfið líkja eftir ferð 500 kg báts með utanborðsmótor í 50
+sekúndur. Mótorinn er settur í gang eftir 5 sekúndur með 3000 newtona krafti
+áfram, 10 sekúndum seinna er skipt í bakkgír, með 2500 newtona krafti í 15
+sekúndur og svo er drepið á mótornum. Núningsstuðull er <span class="math notranslate nohighlight">\(n = 100\)</span>.</p>
+<p>Byrjað er með <span class="math notranslate nohighlight">\(x_0 = (0,0)\)</span> og svo er <span class="math notranslate nohighlight">\(x_{t+1}\)</span> reiknað 50 sinnum
+með <span class="math notranslate nohighlight">\((**)\)</span>. Hér eru myndir með niðurstöðum reikninganna (kN eru kílónewton):</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/krafturhraði.png"><img alt="../_images/krafturhra%C3%B0i.png" src="../_images/krafturhra%C3%B0i.png" style="width: 100%;" /></a>
+</figure>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Æfing</p>
+<ol class="arabic simple">
+<li><p>Notið tölurnar sem gefnar eru í sýnidæminu hér á undan og ákvarðið
+hreyfifylkið <span class="math notranslate nohighlight">\(A\)</span> og inntaksfylkið <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
+<li><p>Báturinn er kyrr í 5 sekúndur en þá fer hann af stað.
+Reiknið staðsetningu og hraða hans eftir 6 og 7 sekúndur með blaði og
+blýanti.</p></li>
+<li><p>Notið nú Python til að líkja eftir hreyfingu bátsins í 50
+sekúndur og endurskapa þannig línuritin í sýnidæminu.</p></li>
+<li><p>Notið Python til að finna hámarkshraða bátsins.</p></li>
+</ol>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli11/" class="btn btn-neutral float-left" title="11 Reiknað með fylkjum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli13/" class="btn btn-neutral float-right" title="13 Slembitölur" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

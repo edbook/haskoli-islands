@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Ályktanir um talnabreytur &mdash; Tölfræði frá grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="9. Fervikagreining" href="../kafli09/" />
+    <link rel="prev" title="7. Ályktanir um flokkabreytur" href="../kafli07/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Ályktanir um talnabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#alyktanir-um-dreifni">8.1. Ályktanir um dreifni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#alyktanir-um-dreifni-i-einu-yi">8.1.1. Ályktanir um dreifni í einu þýði</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#oryggisbil-fyrir-dreifni-normaldreifs-yis">8.1.1.1. Öryggisbil fyrir dreifni normaldreifðs þýðis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tilgatuprof-fyrir-dreifni-normaldreifs-yis">8.1.1.2. Tilgátupróf fyrir dreifni normaldreifðs þýðis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-dreifni-yis">8.1.1.3. Sýnidæmi: Ályktanir um dreifni þýðis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#alyktanir-um-dreifni-tveggja-ya">8.1.2. Ályktanir um dreifni tveggja þýða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tilgatuprof-fyrir-dreifni-tveggja-normaldreifra-ya">8.1.2.1. Tilgátupróf fyrir dreifni tveggja normaldreifðra þýða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-dreifni-tveggja-normaldreifra-ya">8.1.2.2. Sýnidæmi: Ályktanir um dreifni tveggja normaldreifðra þýða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#alyktanir-um-mealtol">8.2. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#alyktanir-um-mealtal-yis">8.2.1. Ályktanir um meðaltal þýðis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#z-prof-og-oryggisbil">8.2.1.1. Z-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#z-oryggisbil-fyrir-mu">8.2.1.2. Z - öryggisbil fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#z-prof-fyrir-mu">8.2.1.3. Z-próf fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-mealtal">8.2.1.4. Sýnidæmi: Ályktanir um meðaltal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-mu">8.2.1.5. Sýnidæmi: Ályktanir um <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-prof-og-oryggisbil">8.2.1.6. T-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-oryggisbil-fyrir-mu">8.2.1.7. T-öryggisbil fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-prof-fyrir-mu">8.2.1.8. T-próf fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-fyrir-mu">8.2.1.9. Sýnidæmi: Ályktanir fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#alyktanir-um-mealtol-tveggja-ohara-ya">8.2.2. Ályktanir um meðaltöl tveggja óháðra þýða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">8.2.2.1. Z-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#z-oryggisbil-fyrir-mismun-tveggja-mealtala">8.2.2.2. Z-öryggisbil fyrir mismun tveggja meðaltala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#z-prof-fyrir-mismun-tveggja-mealtala">8.2.2.3. Z-próf fyrir mismun tveggja meðaltala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-mu-1-mu-2">8.2.2.4. Sýnidæmi: <span class="math notranslate nohighlight">\(\mu_1 - \mu_2\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">8.2.2.5. T-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama">8.2.2.6. T-öryggisbil fyrir mismun meðaltala tveggja þýða - gert er ráð fyrir að dreifnin sé sú sama</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-prof-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama">8.2.2.7. T-próf fyrir mismun meðaltala tveggja þýða - gert er ráð fyrir að dreifnin sé sú sama</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni">8.2.2.8. T-öryggisbil fyrir mismun meðaltala tveggja þýða - ólík dreifni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-prof-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni">8.2.2.9. T-próf fyrir mismun meðaltala tveggja þýða - ólík dreifni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-tvo-mealtol">8.2.2.10. Sýnidæmi: Ályktanir um tvö meðaltöl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">8.2.2.11. Sýnidæmi: Ályktanir um tvö meðaltöl</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tilgatuprof-fyrir-paraar-maelingar">8.2.3. Tilgátupróf fyrir paraðar mælingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#t-prof-fyrir-paraar-maelingar">8.2.3.1. T-pŕof fyrir paraðar mælingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-paraar-maelingar">8.2.3.2. Sýnidæmi: Ályktanir um paraðar mælingar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hvenaer-notum-vi-hvaa-prof">8.2.4. Hvenær notum við hvaða próf?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#daemi">8.3. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">8.3.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">8.3.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">8.3.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">8.3.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">8.3.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">8.3.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">8.3.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">8.3.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">8.3.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">8.3.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">8.3.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">8.3.12. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">8.3.13. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">8.3.14. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">8.3.15. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">8.3.16. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">8.3.17. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">8.3.18. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">8.3.19. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">8.3.20. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../toflur_all_final/">Töflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svor_final/">Svör við dæmum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thakkir/">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>Ályktanir um talnabreytur</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli08.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="alyktanir-um-talnabreytur">
+<span id="c-alyktanirumtalnabreytur"></span><h1><span class="section-number">8. </span>Ályktanir um talnabreytur<a class="headerlink" href="#alyktanir-um-talnabreytur" title="Permalink to this heading"></a></h1>
+<p>Í þessum kafla munum við fjalla um öryggisbil og tilgátupróf sem við
+framkvæmum til að draga ályktanir um talnabreytur. Algengast er að
+ályktanir um talnabreytur séu byggðar á meðaltölum þeirra og fjallar
+meginhluti þessa kafla, eða allur kafli <a class="reference internal" href="#s-alyktanirummedaltol"><span class="std std-numref">8.2</span></a>, um
+<em>ályktanir um meðaltöl</em>. Það veltur hins vegar stundum á því hvernig
+dreifni talnabreytanna er háttað, hvaða tilgátupróf um meðaltal er
+viðeigandi að framkvæma og eru þá tilgátupróf fyrir dreifni oft
+framkvæmd áður en hafist er handa við að kanna meðaltölin. Því munum við
+hefja umfjöllunina á <em>ályktunum um dreifni</em>, sem er efni kafla
+<a class="reference internal" href="#s-alyktanirumdreifni"><span class="std std-numref">8.1</span></a>.</p>
+<section id="alyktanir-um-dreifni">
+<span id="s-alyktanirumdreifni"></span><h2><span class="section-number">8.1. </span>Ályktanir um dreifni<a class="headerlink" href="#alyktanir-um-dreifni" title="Permalink to this heading"></a></h2>
+<p>Tilgátuprófin og öryggisbilin sem við munum skoða í þessum hluta eiga
+við þegar draga á ályktun um dreifni normaldreifðra þýða, sem við táknum
+<span class="math notranslate nohighlight">\(\sigma^2\)</span>. Við byrjum á að skoða ályktanir um dreifni í einu
+þýði, en þess konar ályktanir eru meðal annars mikið notaðar við könnun
+ýmissa framleiðsluferla. Við munu sjá dæmi um slíkt í hluta
+<a class="reference internal" href="#ss-alyktanirumdreifni"><span class="std std-numref">8.1.1</span></a>. Þar á eftir, í hluta
+<a class="reference internal" href="#ss-alyktanirumdreifnitveggjathyda"><span class="std std-numref">8.1.2</span></a>, skoðum við tilgátupróf sem
+notað er til að kanna hvort dreifni tveggja þýða, <span class="math notranslate nohighlight">\(\sigma^2_1\)</span> og
+<span class="math notranslate nohighlight">\(\sigma^2_2\)</span>, sé ólík. Ef við getum gert ráð fyrir að dreifni
+tveggja þýða sé sú sama notum við annað tilgátupróf til að draga
+ályktanir um mismun meðaltala þeirra, heldur en ef dreifnin væri ólík.
+Því er tilgátuprófið í hluta <a class="reference internal" href="#ss-alyktanirumdreifnitveggjathyda"><span class="std std-numref">8.1.2</span></a>
+oft framkvæmt áður en meðaltöl þýðanna eru könnuð.</p>
+<section id="alyktanir-um-dreifni-i-einu-yi">
+<span id="ss-alyktanirumdreifni"></span><h3><span class="section-number">8.1.1. </span>Ályktanir um dreifni í einu þýði<a class="headerlink" href="#alyktanir-um-dreifni-i-einu-yi" title="Permalink to this heading"></a></h3>
+<p>Þegar reikna á öryggisbil og prófa tilgátur um dreifni þýðis er notast
+við <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifinguna, sjá kafla <a class="reference internal" href="../kafli05/#ss-kikvadratdreifing"><span class="std std-numref">5.4.3.4</span></a>.
+Núlltilgátan er sett fram á þann hátt að dreifni þýðisins sé jöfn
+einhverju ákveðnu gildi sem við köllum <span class="math notranslate nohighlight">\(\sigma^2_0\)</span>, ritað
+<span class="math notranslate nohighlight">\(H_0: \sigma^2 = \sigma^2_0\)</span>. Byrjum á að skoða hvernig smíða má
+öryggisbilið:</p>
+<section id="oryggisbil-fyrir-dreifni-normaldreifs-yis">
+<h4><span class="section-number">8.1.1.1. </span>Öryggisbil fyrir dreifni normaldreifðs þýðis<a class="headerlink" href="#oryggisbil-fyrir-dreifni-normaldreifs-yis" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight">
+\[\frac{(n-1) \cdot s^2}{\chi^2_{1-\alpha/2,(n-1)}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight">
+\[\frac{(n-1) \cdot s^2}{\chi^2_{\alpha/2,(n-1)}}\]</div>
+<p>Öryggisbilið má því skrifa:</p>
+<div class="math notranslate nohighlight">
+\[\frac{(n-1) \cdot s^2}{\chi^2_{1-\alpha/2,(n-1)}} &lt; \sigma^2 &lt;
+\frac{(n-1) \cdot s^2}{\chi^2_{\alpha/2,(n-1)}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(n\)</span> er fjöldi mælinga í úrtakinu og <span class="math notranslate nohighlight">\(s^2\)</span> er dreifni
+úrtaksins. <span class="math notranslate nohighlight">\(\chi^2_{1-\alpha/2,(n-1)}\)</span> og
+<span class="math notranslate nohighlight">\(\chi^2_{\alpha/2,(n-1)}\)</span> má finna í <span class="math notranslate nohighlight">\(\chi^2\)</span>-töfluna í kafla <a class="reference internal" href="../toflur_all_final/#a-chisqtafla"><span class="std std-ref">T.3</span></a>.</p>
+</div>
+<hr class="docutils" />
+<p>Tilgátuprófið má svo framkvæma á eftirfarandi hátt:</p>
+</section>
+<section id="tilgatuprof-fyrir-dreifni-normaldreifs-yis">
+<h4><span class="section-number">8.1.1.2. </span>Tilgátupróf fyrir dreifni normaldreifðs þýðis<a class="headerlink" href="#tilgatuprof-fyrir-dreifni-normaldreifs-yis" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \sigma^2 = \sigma_0^2\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight">
+\[\chi^2 = \frac{(n-1)S^2}{\sigma_0^2}\]</div>
+<p>Gagntilgáturnar og höfnunarsvæðin eru</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \sigma^2 &lt; \sigma_0^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\chi^2 &lt; \chi^2_{\alpha,(n-1)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \sigma^2 &gt; \sigma_0^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\chi^2 &gt; \chi^2_{1-\alpha,(n-1)}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \sigma^2 \neq \sigma_0^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\chi^2 &lt; \chi^2_{\alpha/2,(n-1)}\)</span> eða <span class="math notranslate nohighlight">\(\chi^2 &gt; \chi^2_{1-\alpha/2,(n-1)}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-alyktanir-um-dreifni-yis">
+<h4><span class="section-number">8.1.1.3. </span>Sýnidæmi: Ályktanir um dreifni þýðis<a class="headerlink" href="#synidaemi-alyktanir-um-dreifni-yis" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Bjarki drekkur mikið gos. Hann og fleiri neytendur hafa undanfarið sent
+kvartanir til gosverksmiðju nokkurrar um að of lítið gos sé í flöskum
+sem verksmiðjan selur. Mikilvægt er að áfyllingarferlið í verksmiðjunni
+sé stöðugt og dreifnin fari ekki yfir 10 ml<span class="math notranslate nohighlight">\(^2\)</span> því fari hún
+yfir það mark mun of hátt hlutfall flaskanna innihalda of lítið eða of
+mikið gos. Til að kanna þetta frekar ákvað stjórn fyrirtækisins að
+framkvæma tilraun þar sem slembiúrtak af stærð 30 var tekið og magn í
+flöskunum mælt. Gera má ráð fyrir að magn í flöskunum fylgi
+normaldreifingu. Staðalfrávik magns í flöskunum 30 var reiknað,
+<span class="math notranslate nohighlight">\(s = 3.5\)</span>. Kannið með viðeigandi tilgátuprófi hvort dreifni
+ferlisins sé hærri en 10 ml<span class="math notranslate nohighlight">\(^2\)</span>. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+<p>Förum eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að kanna tilgátu um dreifni normaldreifðs þýðis.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við ætlum að kanna hvort dreifnin sé hærri en þar sem að dreifnin
+gæti í raun verið lægri notum við tvíhliða próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \sigma^2 = 10\\
+H_1&amp;:&amp; \sigma^2 \neq 10 \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight">
+\[\chi^2 = \frac{(n-1)S^2}{\sigma_0^2}\]</div>
+<p>Pössum okkur á að við fengum gefið að staðalfrávikið sé
+<span class="math notranslate nohighlight">\(s = 3.5\)</span>. Við þurfum því að hefja í annað veldi til að finna
+dreifnina, <span class="math notranslate nohighlight">\(s^2 = 3.5^2 = 12.25\)</span>. Við höfum einnig að
+<span class="math notranslate nohighlight">\(n - 1 = 30 - 1 = 29\)</span>, <span class="math notranslate nohighlight">\(\sigma_0^2\)</span> = 10. Við setjum
+þessar tölur inn í jöfnu prófstærðarinnar og fáum</p>
+<div class="math notranslate nohighlight">
+\[\chi^2 = \frac{29 \cdot 12.25}{10} = 35.53\]</div>
+</li>
+<li><p>Við þurfum að finna höfnunarsvæðið og notum til þess
+<span class="math notranslate nohighlight">\(\chi^2\)</span>-töflu, <span class="math notranslate nohighlight">\(\chi^2_{0.025,(29)}\)</span> = 16.05 og
+<span class="math notranslate nohighlight">\(\chi^2_{0.975,(29)}\)</span> = 45.72. Við höfnum því núlltilgátunni ef
+<span class="math notranslate nohighlight">\(\chi^2 &lt; 16.05\)</span> eða <span class="math notranslate nohighlight">\(\chi^2 &gt; 45.72\)</span>. Við sjáum að svo
+prófstærðin fellur ekki á höfnunarsvæðið.</p></li>
+<li><p>Við getum ekki hafnað núlltilgátunni og getum því ekki ályktað að
+dreifnin sé hærri en 10 ml<span class="math notranslate nohighlight">\(^2\)</span>.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/chisq29_tvihlida.svg" /></figure>
+</div>
+</section>
+</section>
+<section id="alyktanir-um-dreifni-tveggja-ya">
+<span id="ss-alyktanirumdreifnitveggjathyda"></span><h3><span class="section-number">8.1.2. </span>Ályktanir um dreifni tveggja þýða<a class="headerlink" href="#alyktanir-um-dreifni-tveggja-ya" title="Permalink to this heading"></a></h3>
+<p>Tilgátuprófin sem við skoðum í þessum hluta eru notuð til að bera saman
+dreifni tveggja þýða sem fylgja normaldreifingu . Próf af þessu tagi eru
+meðal annars oft gerð áður en tilgátupróf fyrir mismun meðaltals tveggja
+þýða er framkvæmt. Þegar reikna á öryggisbil og prófa tilgátur um
+dreifni tveggja þýðis er notast við <span class="math notranslate nohighlight">\(F\)</span>-dreifinguna, sjá kafla
+<a class="reference internal" href="../kafli05/#ss-fdreifing"><span class="std std-numref">5.4.3.7</span></a>.</p>
+<p>Núlltilgátan lýsir hlutlausu ástandi, þ.e. að dreifni þýðanna tveggja sé
+jöfn, ritað <span class="math notranslate nohighlight">\(H_0: \sigma_1^2 = \sigma_2^2\)</span>.</p>
+<section id="tilgatuprof-fyrir-dreifni-tveggja-normaldreifra-ya">
+<span id="k-dreifnitveggjathyda"></span><h4><span class="section-number">8.1.2.1. </span>Tilgátupróf fyrir dreifni tveggja normaldreifðra þýða<a class="headerlink" href="#tilgatuprof-fyrir-dreifni-tveggja-normaldreifra-ya" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \sigma_1^2 = \sigma_2^2\]</div>
+<p>Gagntilgátan getur verið einhliða eða tvíhliða og er prófstærðin
+mismunandi eftir því hvernig gagntilgátan er sett upp. Mögulegar
+gagntilgátur, prófstærðir og höfnunarsvæði þeirra má sjá hér að neðan.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Prófstærð</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \sigma_1^2 &lt; \sigma_2^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F = \frac{S_2^2}{S_1^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F&gt;F_{1-\alpha,(n_2-1,n_1-1)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \sigma_1^2 &gt; \sigma_2^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F = \frac{S_1^2}{S_2^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F&gt;F_{1-\alpha,(n_1-1,n_2-1)}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \sigma_1^2 \neq \sigma_2^2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F = \frac{S_M^2}{S_m^2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F&gt;F_{1-\alpha/2,(n_M-1,n_m-1)}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Í tvíhliða prófinu skal ávallt velja úrtakið með hærri dreifni sem úrtak
+<span class="math notranslate nohighlight">\(M\)</span> og úrtakið með lægri dreifni sem úrtak <span class="math notranslate nohighlight">\(m\)</span>.</p>
+</div>
+<hr class="docutils" />
+</section>
+<section id="synidaemi-alyktanir-um-dreifni-tveggja-normaldreifra-ya">
+<span id="e-alyktanirumdreifni1"></span><h4><span class="section-number">8.1.2.2. </span>Sýnidæmi: Ályktanir um dreifni tveggja normaldreifðra þýða<a class="headerlink" href="#synidaemi-alyktanir-um-dreifni-tveggja-normaldreifra-ya" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Ingunn og Árni vinna á Jafnréttisstofu og hafa þau mikinn áhuga á
+rannsaka laun karla og kvenna sem starfa við kjötvinnslu.
+Jafnréttisstofa stóð því fyrir rannsókn til að kanna hvort munur sé á
+meðallaunum karla og kvenna. Slembiúrtök voru því tekin úr báðum þýðum,
+20 karlar og 20 konur. Meðaltal og staðalfrávik launa í karla úrtakinu
+voru 245163 kr og 22814. Í konu úrtakinu voru meðaltal og staðalfrávik
+218634 og 18312. Gerið ráð fyrir að launin fylgi normaldreifingu.</p>
+<p>Kannið með viðeigandi tilgátuprófi hvort dreifni þýðanna sé misjöfn.
+Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+<p>Förum eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að kanna tilgátu um dreifni tveggja normaldreifðra þýða.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við ætlum að kanna hvort dreifni þýðanna er mismunandi og notum við
+því tvíhliða próf.</p>
+<p>Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \sigma_1^2 = \sigma_2^2\\
+H_1&amp;:&amp; \sigma_1^2 \neq \sigma_2^2\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight">
+\[F = \frac{S_M^2}{S_m^2}\]</div>
+<p>Þar sem staðalfrávik í karla úrtakinu er hærra köllum við karla
+hópinn hóp <span class="math notranslate nohighlight">\(M\)</span> og kvenna hópinn hóp <span class="math notranslate nohighlight">\(m\)</span>. Setjum nú inn í
+prófstærðina og fáum</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{22814^2}{18312^2} = 1.55\]</div>
+</li>
+<li><p>Við þurfum að finna höfnunarsvæðið og notum til þess <span class="math notranslate nohighlight">\(F\)</span>-töflu.
+<span class="math notranslate nohighlight">\(F_{1-\alpha/2,(n_M-1,n_m-1)} = F_{0.975,(19,19)}\)</span>. Sé F-taflan
+í kafla <a class="reference internal" href="../toflur_all_final/#a-ftafla25"><span class="std std-ref">T.6</span></a> skoðuð má sjá að þar er ekki að finna
+gildi fyrir <span class="math notranslate nohighlight">\(F_{0.975,(19,19)}\)</span> og notum við því það sem er
+næst, <span class="math notranslate nohighlight">\(F_{0.975,(20,19)} = 2.506\)</span>, svo við höfnum
+núlltilgátunni ef <span class="math notranslate nohighlight">\(f &gt; 2.506\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(f &lt; 2.506\)</span>
+svo prófstærðin fellur ekki á höfnunarsvæðið.</p></li>
+<li><p>Við getum ekki hafnað núlltilgátunni og getum því ekki ályktað að
+dreifnin sé mismunandi.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/f2019.svg" /></figure>
+</div>
+</section>
+</section>
+</section>
+<section id="alyktanir-um-mealtol">
+<span id="s-alyktanirummedaltol"></span><h2><span class="section-number">8.2. </span>Ályktanir um meðaltöl<a class="headerlink" href="#alyktanir-um-mealtol" title="Permalink to this heading"></a></h2>
+<p>Það er óhætt að segja að ályktanir um meðaltöl séu einna algengasta
+ályktunartölfræði sem beitt er. Í þessum hluta skoðum við tilgátupróf og
+öryggisbil sem eiga við þegar draga á ályktun um meðaltöl þýða, sem við
+táknum <span class="math notranslate nohighlight">\(\mu\)</span>. Í kafla <a class="reference internal" href="#ss-alyktanirummedaltal"><span class="std std-numref">8.2.1</span></a> skoðum við
+ályktanir um meðaltal í <em>einu þýð</em>i. Í kafla
+<a class="reference internal" href="#ss-alyktanirummedaltoltveggja"><span class="std std-numref">8.2.2</span></a> skoðum svo tilgátupróf sem notað er
+til að kanna hvort meðaltöl <em>tveggja óháðra þýða</em>, <span class="math notranslate nohighlight">\(\mu_1\)</span> og
+<span class="math notranslate nohighlight">\(\mu_2\)</span>, séu ólík og að lokum er fjallað um tilgátupróf fyrir
+<em>paraðar mælingar</em> í hluta <a class="reference internal" href="#s-paradarmaelingar"><span class="std std-numref">8.2.3</span></a>.</p>
+<p>Það fer eftir aðstæðum hvers kyns tilgátupróf og öryggisbil við reiknum
+þegar draga á ályktanir um meðaltöl þýðis. Í þessum kafla munum við
+fjalla um z-próf/öryggisbil annars vegar og t-próf/öryggisbil hins
+vegar. Almennt byrjum við á að skoða hvenær z-próf/öryggisbil eiga við
+og í framhaldinu könnum við hvenær er viðeigandi að nota
+t-próf/öryggisbil. Við munum sjá að t-próf hafa ætíð minni líkur á villu
+af gerð I heldur en z-próf og þar af leiðandi er algengara að notast við
+t-próf þegar unnið er í tölfræðihugbúnaði. Z-próf er hins vegar
+auðveldara að reikna í höndunum.</p>
+<p>Við viljum benda á að aðferðirnar í þessum kafla eiga ekki við ef hvort
+tveggja gildir í senn: að úrtökin sem við byggjum ályktarnir okkar á eru
+lítil og að ekki er hægt að gera ráð fyrir að þýðin fylgi
+normaldreifingu. Í þeim tilvikum er stundum hægt að <em>umbreyta</em> (e.
+transform) gögnunum, nota <em>endurvalsaðferðir</em> (e. resampling methods)
+eða nota <em>stikalaus próf</em> (e. nonparametric tests) en ekki verður farið
+nánar í það hér.</p>
+<section id="alyktanir-um-mealtal-yis">
+<span id="ss-alyktanirummedaltal"></span><h3><span class="section-number">8.2.1. </span>Ályktanir um meðaltal þýðis<a class="headerlink" href="#alyktanir-um-mealtal-yis" title="Permalink to this heading"></a></h3>
+<p>Við byrjum á því að fjalla um tilgátupróf og öryggisbil fyrir meðaltal
+þýðis, <span class="math notranslate nohighlight">\(\mu\)</span>. Þessar aðferðir notum við ef við viljum til dæmis
+sýna fram á að meðalvirkni lyfs sé meiri en eitthvað ákveðið
+viðmiðunargildi eða að meðalfjöldi gistinátta í júlí síðustu tíu ár sé
+frábrugðinn einhverju ákveðnu gildi.</p>
+<p>Núlltilgátan er ávalt sú sama, hvort meðaltal þýðisins sé jafnt
+einhverju ákveðnu gildi sem við köllum <span class="math notranslate nohighlight">\(\mu_0\)</span>. Núlltilgátuna
+ritum við <span class="math notranslate nohighlight">\(H_0: \mu = \mu_0\)</span>.</p>
+<section id="z-prof-og-oryggisbil">
+<h4><span class="section-number">8.2.1.1. </span>Z-próf og öryggisbil<a class="headerlink" href="#z-prof-og-oryggisbil" title="Permalink to this heading"></a></h4>
+<p>Ein ástæða þess hve meðaltöl eru mikið notuð til að lýsa samfelldum
+breytum er normaldreifingin. Við sáum í kafla
+<a class="reference internal" href="../kafli06/#s-lysistaerdinmedaltal"><span class="std std-numref">6.2</span></a> að þegar þýðið sem verið er að kanna
+fylgir normaldreifingu mun úrtaksdreifing meðaltalsins fylgja
+normaldreifingu sama hversu lítið úrtakið er. Jafnframt sagði
+<em>Höfuðsetning tölfræðinnar</em> okkur, í kafla
+<a class="reference internal" href="../kafli06/#s-hofudsetningtolfraedinnar"><span class="std std-numref">6.3</span></a>, að ef úrtakið er stórt má nálga
+úrtaksdreifingu meðaltalsins með normaldreifingu. Við miðum oft við
+þumalputtaregluna að úrtakið þurfi að vera stærra en 30 til að svo
+gildi.</p>
+<p>Í kafla <a class="reference internal" href="../kafli06/#s-hofudsetningtolfraedinnar"><span class="std std-numref">6.3</span></a> sáum við líka að í þessum
+ofangreindu tilvikum er dreifni úrtaksdreifingar meðaltalsins
+<span class="math notranslate nohighlight">\(\sigma^2/n\)</span>, þar sem <span class="math notranslate nohighlight">\(\sigma^2\)</span> er dreifni þýðisins, en
+<span class="math notranslate nohighlight">\(n\)</span> fjöldi mælinga. Ef að dreifni þýðisins, væri þekkt gætum við
+þannig reiknað öryggisbil á svipstundu með því að margfalda
+<span class="math notranslate nohighlight">\(\sigma^2/n\)</span> með <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> og draga frá eða bæta við
+reiknaða meðaltalið. Sú aðferð er sýnd í kassa
+<a class="reference internal" href="#em-zobileittmedaltal"><span class="std std-numref">8.2.1.2</span></a>. Á sambærilegan hátt er hægt að framkvæma
+tilgátupróf og er það sýnt í kafla <a class="reference internal" href="#em-zprofeittmedaltal"><span class="std std-numref">8.2.1.3</span></a>.</p>
+<p>Í reynd þekkjum við yfirleitt aðeins dreifni úrtaksins, <span class="math notranslate nohighlight">\(s^2\)</span>, sem
+við reiknum út frá gögnunum okkar, en ekki dreifni alls þýðisins. Í þeim
+tilvikum sem úrtaksstærðin er stór (<span class="math notranslate nohighlight">\(n\)</span> &gt; 30) veitir dreifni
+úrtaksins þó góða nálgun á dreifni þýðisins og megum við því einnig nota
+z-próf og öryggisbil í því tilviki. Til að draga þetta saman megum við
+framkvæma <span class="math notranslate nohighlight">\(z\)</span>-próf til að draga ályktanir um meðaltöl þegar:</p>
+<ul class="simple">
+<li><p>Þýðið fylgir normaldreifingu og við gerum ráð fyrir að við þekkjum
+dreifni þess.</p></li>
+<li><p>Úrtakið er stórt.</p></li>
+</ul>
+<p>Í þessum tilvikum má nota eftirfarandi öryggisbil fyrir hið óþekkta
+meðaltal þýðisins:</p>
+</section>
+<section id="z-oryggisbil-fyrir-mu">
+<span id="em-zobileittmedaltal"></span><h4><span class="section-number">8.2.1.2. </span>Z - öryggisbil fyrir <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#z-oryggisbil-fyrir-mu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut1nedra">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-eq-mut1nedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} - z_{1-\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut1efra">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-eq-mut1efra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} + z_{1-\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\]</div>
+<p>Öryggisbilið má því skrifa:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut1bil">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-eq-mut1bil" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} - z_{1-\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} &lt;  \mu  &lt; \bar{x} + z_{1-\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\bar{x}\)</span> er meðaltal úrtaksins og <span class="math notranslate nohighlight">\(\sigma\)</span> er
+staðalfrávik þýðisins. <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> gildið má finna í töflu
+stöðluðu normaldreifingarinnar í kafla <a class="reference internal" href="../toflur_all_final/#a-normaltafla"><span class="std std-ref">T.1</span></a>.</p>
+</div>
+<hr class="docutils" />
+<p>Eins og fram kom hér að ofan veitir dreifni úrtaksins góða nálgun á
+dreifni þýðisins þegar úrtakið er stórt. Þegar <span class="math notranslate nohighlight">\(n\)</span> er stórt má því
+skipta <span class="math notranslate nohighlight">\(\sigma\)</span> út fyrir <span class="math notranslate nohighlight">\(s\)</span> í formúlunum hér að ofan.
+Samsvarandi tilgátupróf má framkvæma með:</p>
+</section>
+<section id="z-prof-fyrir-mu">
+<span id="em-zprofeittmedaltal"></span><h4><span class="section-number">8.2.1.3. </span>Z-próf fyrir <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#z-prof-fyrir-mu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \mu = \mu_0\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut1profstaerd">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-eq-mut1profstaerd" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{\overline{X}-\mu_0}{\sigma/\sqrt{n}}\]</div>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin stöðluðu normaldreifingunni,
+eða <span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span>.</p>
+<p>Höfnunarsvæðin eru:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu &lt; \mu_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \mu &gt; \mu_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu \neq \mu_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha/2}\)</span> eða <span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha/2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p>Að sama skapi og hér að ofan má skipta <span class="math notranslate nohighlight">\(\sigma\)</span> út fyrir <span class="math notranslate nohighlight">\(s\)</span>
+þegar <span class="math notranslate nohighlight">\(n\)</span> er stórt.</p>
+</section>
+<section id="synidaemi-alyktanir-um-mealtal">
+<h4><span class="section-number">8.2.1.4. </span>Sýnidæmi: Ályktanir um meðaltal<a class="headerlink" href="#synidaemi-alyktanir-um-mealtal" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Jón rekur fiskvinnslu á Bíldudal sem verkar þorsk til sölu á
+Bretlandseyjum. Þorskurinn er sendur út í um 50 kg. pakkningum. Þar á bæ
+hafa menn fylgst grannt með þyngd pakkanna og komist að því að þyngd
+þeirra fylgir normaldreifingu með <span class="math notranslate nohighlight">\(\sigma^2\)</span> = 0.8 kg. Við höfum
+nú áhuga á að draga ályktanir um <span class="math notranslate nohighlight">\(\mu\)</span>. Til þess er tekið
+slembiúrtak af stærð <span class="math notranslate nohighlight">\(n = 12\)</span> og meðalþyngd úrtaksins reiknuð,
+50.84 kg. Finnið 95% öryggisbil fyrir <span class="math notranslate nohighlight">\(\mu\)</span> og kannið hvort
+meðalþyngd pakkanna sé frábrugðin 50 kg. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+<p>Fengum upp gefið að:
+<span class="math notranslate nohighlight">\(\bar{x} = 50.84, \ n = 12, \ \sigma^2 = 0.8\)</span>. Neðri mörk
+öryggisbilsins reiknum við með jöfnu <a class="reference internal" href="#equation-eq-mut1nedra">8.1</a>. Við þurfum að
+því að byrja á að finna <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span>.
+<span class="math notranslate nohighlight">\(z_{1-\alpha/2}= z_{1-0.05/2} = z_{0.975} = 1.96\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\bar{x} - z_{1-\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 50.84 - 1.96 \cdot \frac{\sqrt{0.8}}{\sqrt{12}}
+= 50.84 - 0.506 = 50.33\]</div>
+<p>og efri mörk öryggisbilsins með jöfnu <a class="reference internal" href="#equation-eq-mut1efra">8.2</a></p>
+<div class="math notranslate nohighlight">
+\[\bar{x} + z_{1-\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 50.84 + 0.506 = 51.35\]</div>
+<p>Öryggisbilið má þá skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[50.33 &lt; \mu &lt; 51.35\]</div>
+<p>Til að kanna hvort meðalþyngd pakkanna sé frábrugðin 50 kg. förum við
+eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um <span class="math notranslate nohighlight">\(\mu\)</span> og notum því próf fyrir meðaltal
+þýðis. Gefið er upp að þýðið fylgi normaldreifingu með þekktri
+dreifni og getum við því notað z-próf.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við eigum að kanna hvort meðalþyngd pakkanna sé <strong>frábrugðin</strong> 50 kg.
+Það gerum við með tvíhliða prófi. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \mu = 50\\
+H_1&amp;:&amp; \mu \neq 50\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Fengum upp gefið að:
+<span class="math notranslate nohighlight">\(\bar{x} = 50.84, \ n = 12, \ \sigma^2 = 0.8\)</span>. Prófstærðina
+reiknum við með jöfnu <a class="reference internal" href="#equation-eq-mut1profstaerd">8.4</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{\overline{x}-\mu_0}{\sigma/\sqrt{n}} = \frac{50.84 - 50} {\sqrt{0.8}/\sqrt{12}} = 3.25\]</div>
+</li>
+<li><p>Við notum töflu stöðluðu normaldreifingarinnar til að finna
+höfnunarsvæðin og fáum <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> = <span class="math notranslate nohighlight">\(z_{0.975}\)</span> =
+1.96. Við höfnum því núlltilgátunni ef <span class="math notranslate nohighlight">\(z&lt; -1.96\)</span> eða
+<span class="math notranslate nohighlight">\(z&gt; 1.96\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(z&gt; 1.96\)</span> svo prófstærðin fellur
+á höfnunarsvæði.</p></li>
+<li><p>Við höfnum núlltilgátunni og ályktum að meðalþyngd kassanna sé
+frábrugðin 50 kg.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/z196th.svg" src="../_images/z196th.svg" /></figure>
+</div>
+</section>
+<section id="synidaemi-alyktanir-um-mu">
+<h4><span class="section-number">8.2.1.5. </span>Sýnidæmi: Ályktanir um <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#synidaemi-alyktanir-um-mu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Gúgú er forstjóri í stóru fyrirtæki sem framleiðir bíla. Hún fullyrðir
+að bílategund nokkur geti keyrt að meðaltali 20 km. á lítra. Allmargar
+kvartanir hafa borist til Ingibjargar, formanns Neytendasamtakanna,
+vegna þessarar fullyrðingar og vill fólk meina að það nái alls ekki að
+keyra 20 km. á lítra. Neytendasamtökin framkvæmdu því tilraun til að
+sýna fram á að meðalfjöldi kílómetra á lítra væru færri en 20.
+Slembiúrtak af stærð 40 var tekið og meðaltal þess reiknað sem 19.2 og
+staðalfrávik úrtaksins reiknað sem 1.7. Notið viðeigandi tilgátupróf til
+að kanna hvort meðalfjöldi kílómetra á lítra séu færri en 20 með því að
+kanna hvort prófstærðin falli á höfnunarsvæði en einnig með að kanna
+p-gildi tilgátuprófsins. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+<p>Förum eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic simple">
+<li><p>Við ætlum að álykta um <span class="math notranslate nohighlight">\(\mu\)</span> og notum því próf fyrir meðaltal
+þýðis. Við þekkjum hvorki líkindadreifingu né dreifni þýðisins en
+úrtakið er stórt svo við getum notað z-próf.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+</ol>
+<ol class="arabic" start="3">
+<li><p>Við eigum að kanna hvort meðalkílómetra fjöldi sé færri en 20 km en
+þar sem að fjöldinn getur í raun verið hærri en 20 km notum við tvíhliða
+próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \mu = 20\\
+H_1&amp;:&amp; \mu \neq 20\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við fengum upp gefið að <span class="math notranslate nohighlight">\(\bar{x} = 19.2, \ s = 1.7, \ n = 40\)</span>.
+Við reiknum prófstærðina með jöfnu <a class="reference internal" href="#equation-eq-mut1profstaerd">8.4</a> en skiptum
+<span class="math notranslate nohighlight">\(\sigma\)</span> út fyrir <span class="math notranslate nohighlight">\(s\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{\overline{x}-\mu_0}{s/\sqrt{n}} = \frac{19.2 - 20}{1.7/\sqrt{40}} = -2.98\]</div>
+</li>
+</ol>
+<p>5a. Við notum töflu stöðluðu normaldreifingarinnar til að finna höfnunarsvæðið:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> = <span class="math notranslate nohighlight">\(z_{0.975}\)</span> = 1.96. Við
+höfnum því núlltilgátunni ef <span class="math notranslate nohighlight">\(z&lt; -1.96\)</span> eða <span class="math notranslate nohighlight">\(z&gt; 1.96\)</span>. Við
+sjáum að <span class="math notranslate nohighlight">\(z &lt; -1.96\)</span> svo prófstærðin fellur á höfnunarsvæði.</p>
+</div></blockquote>
+<p>5b. Við notum töflu stöðluðu normaldreifingarinnar til að finna p-gildið.</p>
+<blockquote>
+<div><p>Gildið á prófstærðinni er -2.98 svo við finnum z= -2.98 í
+töflunni og lesum 0.0014. Þar sem tilgátuprófið er tvíhliða margföldum
+við p-gildið með 2 og fáum að p-gildið er 0.0028. Þar sem p-gildið er
+minna en <span class="math notranslate nohighlight">\(\alpha\)</span> höfnum við núlltilgátunni.</p>
+</div></blockquote>
+<ol class="arabic" start="6">
+<li><p>Við höfnum núlltilgátunni og ályktum að meðalfjöldi kílómetra er
+lægri en 20 á lítrann.</p>
+<figure class="align-default">
+<img alt="../_images/z196th.svg" src="../_images/z196th.svg" /></figure>
+</li>
+</ol>
+</div>
+</section>
+<section id="t-prof-og-oryggisbil">
+<h4><span class="section-number">8.2.1.6. </span>T-próf og öryggisbil<a class="headerlink" href="#t-prof-og-oryggisbil" title="Permalink to this heading"></a></h4>
+<p>Rifjum nú aftur upp að þegar við vinnum með normaldreift þýði, þá fylgir
+úrtaksdreifing meðaltalsins alltaf normaldreifingu, sama hversu lítið
+úrtakið er. Hins vegar er eitt vandamál við að framkvæma z-próf í því
+tilviki, nefnilega það að matið á staðalfrávikinu verður ekki lengur
+eins áreiðanlegt og því þurfum við að taka tillit til óvissunnar í því
+mati.</p>
+<p>Þegar þýðið fylgir normaldreifingu og við deilum í úrtaksdreifingu
+meðaltalsins með <span class="math notranslate nohighlight">\(s/\sqrt{n}\)</span> fylgir útkoman þekktri
+líkindadreifingu, nefnilega <em>t-dreifingu</em> (sjá kafla
+<a class="reference internal" href="../kafli05/#ss-tdreifing"><span class="std std-numref">5.4.3.1</span></a>). T-dreifingin hefur mjög svipaða lögun og
+normaldreifingin en hefur örlítið <em>þyngri hala</em> (meiri líkur á að fá
+mjög stór eða mjög lítil gildi). Því eru minni líkur á villu af gerð I
+þegar t-próf, í stað z-prófs, er framkvæmt á sömu gögnunum. Því er ætíð
+óhætt að nota t-próf þegar z-próf á líka við og þar af leiðandi er
+t-próf útfært í öllum helstu tölfræðihugbúnuðum en z-próf síður.</p>
+<p>Til að draga saman, megum við nota t-próf og öryggisbil byggð á
+t-dreifingu þegar:</p>
+<ul class="simple">
+<li><p>Þýðið fylgir normaldreifingu, óháð stærð úrtaksins.</p></li>
+<li><p>Úrtakið er stórt.</p></li>
+</ul>
+<p>Í þessum tilvikum má notast við eftirfarandi öryggisbil:</p>
+</section>
+<section id="t-oryggisbil-fyrir-mu">
+<h4><span class="section-number">8.2.1.7. </span>T-öryggisbil fyrir <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#t-oryggisbil-fyrir-mu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut3nedra">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-eq-mut3nedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} - t_{1-\alpha/2,(n-1)} \cdot \frac{s}{\sqrt{n}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut3efra">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-eq-mut3efra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} + t_{1-\alpha/2,(n-1)} \cdot \frac{s}{\sqrt{n}}\]</div>
+<p>Öryggisbilið má því skrifa:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut3bil">
+<span class="eqno">(8.7)<a class="headerlink" href="#equation-eq-mut3bil" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} - t_{1-\alpha/2,(n-1)} \cdot \frac{s}{\sqrt{n}} &lt;  \mu  &lt; \bar{x} + t_{1-\alpha/2,(n-1)} \cdot \frac{s}{\sqrt{n}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\bar{x}\)</span> og <span class="math notranslate nohighlight">\(s\)</span> eru meðaltal og staðalfrávik
+úrtaksins. <span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n-1)}\)</span> gildið má finna í t-töflu í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>.</p>
+</div>
+<hr class="docutils" />
+<p>og eftirfarandi tilgátupróf:</p>
+</section>
+<section id="t-prof-fyrir-mu">
+<h4><span class="section-number">8.2.1.8. </span>T-próf fyrir <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#t-prof-fyrir-mu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \mu = \mu_0\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-mut3profstaed">
+<span class="eqno">(8.8)<a class="headerlink" href="#equation-eq-mut3profstaed" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[T = \frac{\overline{X}-\mu_0}{S/\sqrt{n}}\]</div>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin t-dreifingu með <span class="math notranslate nohighlight">\((n-1)\)</span>
+frígráðu, eða <span class="math notranslate nohighlight">\(T \sim t_{(n-1)}\)</span>.</p>
+<p>Höfnunarsvæðin eru:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu &lt; \mu_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha,(n-1)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \mu &gt; \mu_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha,(n-1)}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu \neq \mu_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha/2,(n-1)}\)</span> eða <span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha/2,(n-1)}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-alyktanir-fyrir-mu">
+<h4><span class="section-number">8.2.1.9. </span>Sýnidæmi: Ályktanir fyrir <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#synidaemi-alyktanir-fyrir-mu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Sígarettuframleiðandi nokkur fullyrðir að nikótíninnihald í ákveðinni
+tegund af sígarettum sé að meðaltali 14 mg/sígarettu.
+Heilbrigðisyfirvöld í viðkomandi landi héldu því fram að
+nikótíninnihaldið væri að meðaltali hærra. Þau stóðu því fyrir tilraun
+til að sýna fram á að meðalinnihald nikótíns væri hærra en 14
+mg/sígarettu. Slembiúrtak af stærð 12 var tekið og meðaltal úrtaksins
+reiknað sem 14.3 og staðalfrávik þess 0.9. Kannið með viðeigandi
+tilgátuprófi hvort meðalinnihald nikótíns sé hærra en 14 mg/sígarettu.
+Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>. Gera má ráð fyrir að nikótíninnihald í
+sígarettum fylgi normaldreifingu.</p>
+<p>Förum nú eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um <span class="math notranslate nohighlight">\(\mu\)</span> og notum því próf fyrir meðaltal
+þýðis. <span class="math notranslate nohighlight">\(\sigma^2\)</span> er óþekkt og <span class="math notranslate nohighlight">\(n\)</span> er lítið en þar sem
+við getum gert ráð fyrir að þýðið sem úrtakið er tekið úr fylgi
+normaldreifingu getum við notað t-próf.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við eigum að kanna hvort meðalinnihald nikótíns sé hærra en 14
+mg/sígarettu en þar sem það getur í raun verið lægra notum við
+tvíhliða próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \mu = 14\\
+H_1&amp;:&amp; \mu \neq 14\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við fáum upp gefið: <span class="math notranslate nohighlight">\(n = 12, \ \bar{x} = 14.3, \ s = 0.9\)</span>. Við
+reiknum prófstærðina með jöfnu <a class="reference internal" href="#equation-eq-mut3profstaed">8.8</a> og fáum</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{\overline{x}-\mu_0}{s/\sqrt{n}} = \frac{14.3 - 14}{0.9/\sqrt{12}} = 1.15\]</div>
+</li>
+<li><p>Við notum t-töfluna til að finna höfnunarsvæðið og flettum upp eftir
+<span class="math notranslate nohighlight">\(n - 1 = 11\)</span> frígráðum:
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n-1)} = t_{0.975,(11)}\)</span> = 2.20. Við höfnum því
+núlltilgátunni ef <span class="math notranslate nohighlight">\(t &lt; -2.20\)</span> eða <span class="math notranslate nohighlight">\(t &gt; 2.20\)</span>. Við sjáum
+að prófstærðin fellur ekki á höfnunarsvæði.</p></li>
+<li><p>Við getum ekki hafnað núlltilgátunni og getum því ekki ályktað að
+meðalnikótíninnihaldið sé hærra en 14 mg/sígarettu.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/t11_tvihlida.svg" src="../_images/t11_tvihlida.svg" /></figure>
+</div>
+</section>
+</section>
+<section id="alyktanir-um-mealtol-tveggja-ohara-ya">
+<span id="ss-alyktanirummedaltoltveggja"></span><h3><span class="section-number">8.2.2. </span>Ályktanir um meðaltöl tveggja óháðra þýða<a class="headerlink" href="#alyktanir-um-mealtol-tveggja-ohara-ya" title="Permalink to this heading"></a></h3>
+<p>Nú er komið að því að fjalla um tilgátupróf og öryggisbil sem eiga við
+þegar bera á saman meðaltöl tveggja óháðra þýða. Við köllum meðaltölin
+<span class="math notranslate nohighlight">\(\mu_1\)</span> og <span class="math notranslate nohighlight">\(\mu_2\)</span> og viljum draga ályktanir um mismun
+þeirra, <span class="math notranslate nohighlight">\(\mu_1 - \mu_2\)</span>. Próf af þessu tagi mundum við nota ef við
+viljum t.d. bera saman meðalhæð karla og kvenna og ef við viljum bera
+saman meðalfjölda gistinátta í júlí og ágúst.</p>
+<p>Í þessum hluta er núlltilgátan ávallt sú sama, þ.e. hvort mismunur
+meðaltalanna tveggja sé jafn einhverju ákveðnu gildi sem við köllum
+<span class="math notranslate nohighlight">\(\delta\)</span>. Hana ritum við <span class="math notranslate nohighlight">\(H_0: \mu_1 - \mu_2 = \delta\)</span>.
+Takið eftir að <span class="math notranslate nohighlight">\(\delta\)</span> er gríski bókstafurinn sem svarar til
+latneska bókstafsins d samanber enska orðið difference. Það er í samræmi
+við notkun okkar, við viljum yfirleitt sýna að munurinn á meðaltölum
+hópanna tveggja sé frábrugðinn <span class="math notranslate nohighlight">\(\delta\)</span>. Algengast er að nota
+<span class="math notranslate nohighlight">\(\delta = 0\)</span> en þá viljum við einfaldlega sýna að það sé munur á
+milli hópanna. Núlltilgátan er þá eftirfarandi: ,,Eru meðaltöl þýðanna
+tveggja jöfn?“</p>
+<p>Líkt og þegar við viljum draga ályktanir um eitt meðaltal geta aðstæður
+verið mismunandi. Við munum eins og áður notast við z-próf/öryggisbil og
+t-próf/öryggisbil og má sjá hér að neðan hvenær þau eiga við.</p>
+<section id="id1">
+<h4><span class="section-number">8.2.2.1. </span>Z-próf og öryggisbil<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Svipað og við lýstum í kafla <a class="reference internal" href="#ss-alyktanirummedaltal"><span class="std std-numref">8.2.1</span></a> er mismunur
+tveggja meðaltala normaldreifður ef þýðið sem hvort meðaltal fyrir sig
+er fengið úr er einnig normaldreift. Sömuleiðis leiðir Höfuðsetning
+tölfræðinnar af sér að það sama gildir ef að úrtakið er nógu stórt.</p>
+<p>Ef að við vissum hver dreifni þýðanna væri, gætum deilt í mismun
+meðaltalanna með dreifni hans til að fá út staðlaða normaldreifða stærð.
+Í þessu tilviki er dreifni mismunarins stærðin
+<span class="math notranslate nohighlight">\(\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}\)</span>. Einnig
+gildir að ef úrtökin eru nægjanlega stór veitir dreifni úrtakanna það
+gott mat á dreifni þýðanna að hana má nota í staðinn. Hér er oft miðað
+við að hvort úrtak þurfi að vera að minnsta kosti af stærð 30 til að
+nægjanlegur fjöldi sé fyrir hendi.</p>
+<p>Þar af leiðandi er í textanum gert ráð fyrir að dreifni þýðanna, þ.e.
+<span class="math notranslate nohighlight">\(\sigma^2_1\)</span> og <span class="math notranslate nohighlight">\(\sigma^2_2\)</span>, sé þekkt, þó svo að sú sé
+sjaldnast ekki raunin. Við þekkjum yfirleitt aðeins dreifni úrtakanna,
+<span class="math notranslate nohighlight">\(s^2_1\)</span> og <span class="math notranslate nohighlight">\(s^2_2\)</span>, sem við reiknum út frá gögnunum okkar.
+Til að draga þetta saman megum við nota z-próf og öryggisbil byggð á
+normaldreifingu þegar:</p>
+<ul class="simple">
+<li><p>Þýðin fylgja normaldreifingu og við gerum ráð fyrir að við þekkjum
+dreifni þýðanna.</p></li>
+<li><p>Úrtökin eru stór.</p></li>
+</ul>
+<p>Í þessum tilvikum má nota eftirfarandi öryggisbil fyrir mismun meðaltala
+þýðanna:</p>
+</section>
+<section id="z-oryggisbil-fyrir-mismun-tveggja-mealtala">
+<h4><span class="section-number">8.2.2.2. </span>Z-öryggisbil fyrir mismun tveggja meðaltala<a class="headerlink" href="#z-oryggisbil-fyrir-mismun-tveggja-mealtala" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut1nedra">
+<span class="eqno">(8.9)<a class="headerlink" href="#equation-eq-tvomut1nedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 - z_{1-\alpha/2} \cdot \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut1efra">
+<span class="eqno">(8.10)<a class="headerlink" href="#equation-eq-tvomut1efra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 + z_{1-\alpha/2} \cdot \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}\]</div>
+<p>Öryggisbilið má því skrifa:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut1bil">
+<span class="eqno">(8.11)<a class="headerlink" href="#equation-eq-tvomut1bil" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 - z_{1-\alpha/2} \cdot \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}
+&lt; \mu_1 - \mu_2  &lt;
+\bar{x}_1 - \bar{x}_2 + z_{1-\alpha/2} \cdot \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\bar{x}_1\)</span>, <span class="math notranslate nohighlight">\(\bar{x}_2\)</span> eru meðaltöl úrtakanna og
+<span class="math notranslate nohighlight">\(\sigma_1^2\)</span>, <span class="math notranslate nohighlight">\(\sigma_2^2\)</span> eru dreifni þýðanna.
+<span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> má finna í töflu stöðluðu normaldreifingarinnar í
+kafla <a class="reference internal" href="../toflur_all_final/#a-normaltafla"><span class="std std-ref">T.1</span></a>.</p>
+</div>
+<hr class="docutils" />
+<p>Eins og fram kom hér að ofan veitir dreifni úrtaks góða nálgun á dreifni
+þýðisins þegar úrtakið er stórt. Þegar <span class="math notranslate nohighlight">\(n_1\)</span> og <span class="math notranslate nohighlight">\(n_2\)</span> eru
+stór má því skipta <span class="math notranslate nohighlight">\(\sigma_1\)</span> og <span class="math notranslate nohighlight">\(\sigma_2\)</span> út fyrir
+<span class="math notranslate nohighlight">\(s_1\)</span> og <span class="math notranslate nohighlight">\(s_2\)</span> í formúlunum hér að ofan. Þegar framkvæma á
+samsvarandi tilgátupróf má notast við eftirfarandi:</p>
+</section>
+<section id="z-prof-fyrir-mismun-tveggja-mealtala">
+<h4><span class="section-number">8.2.2.3. </span>Z-próf fyrir mismun tveggja meðaltala<a class="headerlink" href="#z-prof-fyrir-mismun-tveggja-mealtala" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \mu_1 - \mu_2 = \delta\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut1prof">
+<span class="eqno">(8.12)<a class="headerlink" href="#equation-eq-tvomut1prof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{\overline{X}_1 - \overline{X}_2 - \delta}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}}\]</div>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin stöðluðu normaldreifingunni,
+eða <span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 &lt; \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 &gt; \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 \neq \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha/2}\)</span> eða <span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha/2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Athugið að <span class="math notranslate nohighlight">\(\delta\)</span> getur verið hvaða tala sem er en í mörgum
+tilvikum er <span class="math notranslate nohighlight">\(\delta = 0\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Eins og áður má skipta skipta <span class="math notranslate nohighlight">\(\sigma_1\)</span> og <span class="math notranslate nohighlight">\(\sigma_2\)</span> út
+fyrir <span class="math notranslate nohighlight">\(s_1\)</span> og <span class="math notranslate nohighlight">\(s_2\)</span> þegar <span class="math notranslate nohighlight">\(n_1\)</span> og <span class="math notranslate nohighlight">\(n_2\)</span> eru
+stór.</p>
+</section>
+<section id="synidaemi-mu-1-mu-2">
+<h4><span class="section-number">8.2.2.4. </span>Sýnidæmi: <span class="math notranslate nohighlight">\(\mu_1 - \mu_2\)</span><a class="headerlink" href="#synidaemi-mu-1-mu-2" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Hænsnabóndi nokkur hefur fylgst vel með þyngd unga við fæðingu.
+Hænsnabóndi þessi hefur áhuga á að kanna hvort munur sé á þyngd unganna
+eftir kyni og til að rannsaka það valdi hann 35 karlkyns unga og 35
+kvenkyns unga og vigtaði þá. Kvenkyns ungarnir vógu að meðaltali 212
+grömm og var staðalfrávikið 21 grömm. Karlkyns ungarnir vógu að
+meðaltali 220 grömm og var staðalfrávikið 26 grömm. Kannið með
+viðeigandi tilgátuprófi hvort munur sé á þyngd unganna eftir kyni.</p>
+<p>Förum nú eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um mun á meðaltölum tveggja þýða. Úrtökin eru
+<strong>óháð</strong>. Ekki er tekið fram að gera megi ráð fyrir að þyngdin fylgi
+normaldreifingu, við þekkjum ekki dreifni þýðanna en <span class="math notranslate nohighlight">\(n\)</span>-in
+okkar eru stór og því megum við nota z-próf.</p></li>
+<li><p>Notum <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við ætlum að kanna hvort <strong>munur</strong> sé á meðalþyngd unga eftir kyni og
+notum við til þess tvíhliða próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \mu_1 - \mu_2 = 0\\
+H_1&amp;:&amp; \mu_1 - \mu_2 \neq 0\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Prófstærðina reiknum við með jöfnu <a class="reference internal" href="#equation-eq-tvomut1prof">8.12</a> en skiptum út
+<span class="math notranslate nohighlight">\(\sigma_1\)</span> og <span class="math notranslate nohighlight">\(\sigma_2\)</span> með <span class="math notranslate nohighlight">\(s_1\)</span> og <span class="math notranslate nohighlight">\(s_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{\overline{x}_1 - \overline{x}_2 - \delta}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</div>
+<p>Við vitum að <span class="math notranslate nohighlight">\(n_1 = 35\)</span>, <span class="math notranslate nohighlight">\(n_2 = 35\)</span>, <span class="math notranslate nohighlight">\(\bar{x}_1\)</span> =
+220, <span class="math notranslate nohighlight">\(s_1\)</span> = 26, <span class="math notranslate nohighlight">\(\bar{x}_2\)</span> = 212, <span class="math notranslate nohighlight">\(s_2\)</span> = 21 og
+<span class="math notranslate nohighlight">\(\delta\)</span> = 0 (við látum karlkyns ungana vera þýði 1 og kvenkyns
+ungana vera þýði 2). Við setjum þessar tölur inn í jöfnuna og fáum</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{220 - 212 - 0}{\sqrt{\frac{26^2}{35} + \frac{21^2}{35}}} = 1.42\]</div>
+</li>
+<li><p>Við þurfum að finna höfnunarsvæðið og notum til þess z-töflu. Sé
+núlltilgátan sönn fylgir prófstærðin stöðluðu normaldreifingunni:
+<span class="math notranslate nohighlight">\(z_{1-\alpha/2,} = z_{0.975}\)</span> = 1.96, svo við höfnum
+núlltilgátunni ef <span class="math notranslate nohighlight">\(z &gt; 1.96\)</span> eða <span class="math notranslate nohighlight">\(z &lt; -1.96\)</span>. Við sjáum
+að hvorugt gildir svo prófstærðin fellur ekki á höfnunarsvæði.</p></li>
+<li><p>Við getum ekki hafnað núlltilgátunni svo við drögum enga ályktun.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h4><span class="section-number">8.2.2.5. </span>T-próf og öryggisbil<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>Á sama hátt og við lýstum í kafla <a class="reference internal" href="#ss-alyktanirummedaltal"><span class="std std-numref">8.2.1</span></a> er
+mismunur tveggja meðaltala normaldreifður ef þýðið sem hvort meðaltal
+fyrir sig er fengið úr er einnig normaldreift. Við getum skalað
+mismuninn til með því að deila með dreifninni á úrtaksdreifingu mismuns
+meðaltalanna og þá fylgir útkoman <em>t-dreifingu</em> (sjá kafla
+<a class="reference internal" href="../kafli05/#ss-tdreifing"><span class="std std-numref">5.4.3.1</span></a>), alveg eins og í tilvikinu með eitt meðaltal. Þar
+sem t-dreifing hefur þyngri hala en normaldreifing er ætíð óhætt að nota
+t-próf þegar z-próf á líka við og þar af leiðandi er t-próf útfært í
+öllum helstu tölfræðihugbúnuðum en z-próf síður.</p>
+<p>Við megum því nota t-próf og öryggisbil byggð á t-dreifingu þegar:</p>
+<ul class="simple">
+<li><p>Þýðin fylgja normaldreifingu, óháð stærð úrtakanna.</p></li>
+<li><p>Úrtökin eru stór.</p></li>
+</ul>
+<p>Við notum ólíka formúlu til að meta dreifnina á mismun meðaltal þýðanna
+eftir því hvort við megum gera ráð fyrir því að dreifnin sé jöfn í
+þýðunum tveimur eða ekki. Þar af leiðandi verða t-prófin og öryggisbilin
+sem nota má til að kanna ályktanir um mismun tveggja óháðra þýða tvenns
+konar. Annað prófið notum við þegar gera má ráð fyrir að dreifni þýðanna
+er jöfn en hitt þegar svo er ekki. Takið efir að hér þekkjum við ekki
+dreifni þýðanna en við getum notað tilgátupróf fyrir dreifni tveggja
+þýða (sjá kassa <a class="reference internal" href="#k-dreifnitveggjathyda"><span class="std std-numref">8.1.2.1</span></a>) til að skera úr um hvort
+dreifni þýðanna sé það ólík að ekki sé hægt að gera ráð fyrir að hún sé
+sú sama.</p>
+<p>Ef gera má ráð fyrir að dreifni þýðanna sé jöfn þurfum við að reikna út
+svokallaða <em>vegna dreifni</em> (e. pooled variance) úrtakanna sem við táknum
+<span class="math notranslate nohighlight">\(s_p^2\)</span> áður en við getum reiknað öryggisbil og kannað tilgátur:</p>
+<div class="math notranslate nohighlight" id="equation-eq-vegindreifni">
+<span class="eqno">(8.13)<a class="headerlink" href="#equation-eq-vegindreifni" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(s_1^2\)</span> og <span class="math notranslate nohighlight">\(s_2^2\)</span> eru dreifni úrtakanna.
+Öryggisbilið má svo smíða með:</p>
+</section>
+<section id="t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama">
+<h4><span class="section-number">8.2.2.6. </span>T-öryggisbil fyrir mismun meðaltala tveggja þýða - gert er ráð fyrir að dreifnin sé sú sama<a class="headerlink" href="#t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut3nedra">
+<span class="eqno">(8.14)<a class="headerlink" href="#equation-eq-tvomut3nedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 - t_{1-\alpha/2,(n_1 + n_2 - 2)} \cdot s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut3efra">
+<span class="eqno">(8.15)<a class="headerlink" href="#equation-eq-tvomut3efra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 + t_{1-\alpha/2,(n_1 + n_2 - 2)} \cdot s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\bar{x}_1\)</span>, <span class="math notranslate nohighlight">\(\bar{x}_2\)</span> er meðaltöl úrtakanna og
+<span class="math notranslate nohighlight">\(s_1^2\)</span>, <span class="math notranslate nohighlight">\(s_2^2\)</span> er dreifni úrtakanna.
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n_1 + n_2 - 2)}\)</span> má finna í t-töflu í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>.</p>
+</div>
+<hr class="docutils" />
+<p>og framkvæma tilgátuprófið með:</p>
+</section>
+<section id="t-prof-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama">
+<h4><span class="section-number">8.2.2.7. </span>T-próf fyrir mismun meðaltala tveggja þýða - gert er ráð fyrir að dreifnin sé sú sama<a class="headerlink" href="#t-prof-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \mu_1 - \mu_2 = \delta\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut3profstaerd">
+<span class="eqno">(8.16)<a class="headerlink" href="#equation-eq-tvomut3profstaerd" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[T = \frac{\overline{X}_1 - \overline{X}_2 - \delta}{s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(s_p\)</span> er reiknað með jöfnu <a class="reference internal" href="#equation-eq-vegindreifni">8.13</a>. Ef
+núlltilgátan er sönn fylgir prófstærðin t dreifingu með
+<span class="math notranslate nohighlight">\((n_1 + n_2 - 2)\)</span> frígráður, eða
+<span class="math notranslate nohighlight">\(T \sim t_{(n_1 + n_2 -2)}\)</span>. Gagntilgáturnar og höfnunarsvæðin
+eru:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 &lt; \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha,(n_1 + n_2 - 2)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 &gt; \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha,(n_1 + n_2 - 2)}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 \neq \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha/2,(n_1 + n_2 - 2)}\)</span> eða <span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha/2,(n_1 + n_2 - 2)}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Athugið að <span class="math notranslate nohighlight">\(\delta\)</span> getur verið hvaða fasti sem er en í mörgum
+tilvikum er <span class="math notranslate nohighlight">\(\delta = 0\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Ef við getum ekki gert ráð fyrir að dreifnin í hópunum sé sú sama notum
+við annars konar t-próf og öryggisbil. Við þurfum ekki að byrja á að
+reikna út vegna dreifni en fjöldi frígráða í t-dreifingunni sem við
+notum er ekki <span class="math notranslate nohighlight">\(n_1 + n_2 - 2\)</span> eins og áður heldur táknum við þær
+með <span class="math notranslate nohighlight">\(\nu\)</span> og reiknum með</p>
+<div class="math notranslate nohighlight" id="equation-eq-fjoldifrigrada">
+<span class="eqno">(8.17)<a class="headerlink" href="#equation-eq-fjoldifrigrada" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\nu = \frac{\Big(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} \Big)^2}{\frac{(s_1^2/n_1)^2}{n_1 - 1} +
+\frac{(s_2^2/n_2)^2}{n_2 - 1}}\]</div>
+<p>Öryggisbilið má svo smíða með:</p>
+</section>
+<section id="t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni">
+<h4><span class="section-number">8.2.2.8. </span>T-öryggisbil fyrir mismun meðaltala tveggja þýða - ólík dreifni<a class="headerlink" href="#t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut4nedra">
+<span class="eqno">(8.18)<a class="headerlink" href="#equation-eq-tvomut4nedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 - t_{1-\alpha/2,(\nu)} \cdot \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut4efra">
+<span class="eqno">(8.19)<a class="headerlink" href="#equation-eq-tvomut4efra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 + t_{1-\alpha/2,(\nu)} \cdot \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\]</div>
+<p>Öryggisbilið má því skrifa:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut4bil">
+<span class="eqno">(8.20)<a class="headerlink" href="#equation-eq-tvomut4bil" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_1 - \bar{x}_2 - t_{1-\alpha/2,(\nu)} \cdot \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+&lt; \mu_1 - \mu_2  &lt;
+\bar{x}_1 - \bar{x}_2 + t_{1-\alpha/2,(\nu)} \cdot \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\bar{x}_1\)</span> og <span class="math notranslate nohighlight">\(\bar{x}_2\)</span> eru meðaltöl úrtakanna og
+<span class="math notranslate nohighlight">\(s_1^2\)</span> og <span class="math notranslate nohighlight">\(s_2^2\)</span> eru dreifni úrtakanna.
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2,(\nu)}\)</span> má finna í t-töflu í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>.
+Fjöldi frígráða í t-dreifingunum, <span class="math notranslate nohighlight">\(\nu\)</span> er reiknað með jöfnu <a class="reference internal" href="#equation-eq-fjoldifrigrada">8.17</a>.</p>
+</div>
+<hr class="docutils" />
+<p>og tilgátuprófið má framkvæma með:</p>
+</section>
+<section id="t-prof-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni">
+<h4><span class="section-number">8.2.2.9. </span>T-próf fyrir mismun meðaltala tveggja þýða - ólík dreifni<a class="headerlink" href="#t-prof-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \mu_1 - \mu_2 = \delta\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvomut4profstaerd">
+<span class="eqno">(8.21)<a class="headerlink" href="#equation-eq-tvomut4profstaerd" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[T = \frac{\overline{X}_1 - \overline{X}_2 - \delta}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</div>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin t-dreifingu með <span class="math notranslate nohighlight">\(\nu\)</span>
+frígráðum eða <span class="math notranslate nohighlight">\(T \sim t(\nu)\)</span> þar sem <span class="math notranslate nohighlight">\(\nu\)</span> er reiknað með
+jöfnu <a class="reference internal" href="#equation-eq-fjoldifrigrada">8.17</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 &lt; \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha,(\nu)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 &gt; \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha,(\nu)}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_1 - \mu_2 \neq \delta\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha/2,(\nu)}\)</span> eða <span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha/2,(\nu)}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Athugið að <span class="math notranslate nohighlight">\(\delta\)</span> getur verið hvaða fasti sem er en í mörgum
+tilvikum er <span class="math notranslate nohighlight">\(\delta = 0\)</span>.</p>
+</div>
+<hr class="docutils" />
+</section>
+<section id="synidaemi-alyktanir-um-tvo-mealtol">
+<span id="e-alyktanirumtvomedaltol"></span><h4><span class="section-number">8.2.2.10. </span>Sýnidæmi: Ályktanir um tvö meðaltöl<a class="headerlink" href="#synidaemi-alyktanir-um-tvo-mealtol" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Skoðum nú aftur dæmi <a class="reference internal" href="#e-alyktanirumdreifni1"><span class="std std-numref">8.1.2.2</span></a>. Þar framkvæmdum við
+tilgátupróf til að kanna hvort dreifni launa milli kynja væri misjöfn.
+Nú vilja Ingunn og Árni kanna hvort munur sé á meðallaunum karla og
+kvenna sem starfa við kjötvinnslu.</p>
+<p>Við rifjum upp að Jafnréttisstofa stóð fyrir rannsókn þar sem að
+slembiúrtök voru tekin úr báðum þýðum, 20 karlar og 20 konur. Meðaltal
+og staðalfrávik launa í karla úrtakinu voru 245163 kr og 22814. Í konu
+úrtakinu voru meðaltal og staðalfrávik 218634 og 18312. Kannið nú með
+viðeigandi tilgátuprófi hvort munur sé á meðallaunum karla og kvenna sem
+starfa við kjötvinnslu. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>. Gera má ráð fyrir
+að laun í báðum þýðum fylgi normaldreifingu.</p>
+<p>Förum nú eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um mun á meðaltölum tveggja þýða. Úrtökin eru
+<strong>óháð</strong>. Gera má ráð fyrir að launin séu normaldreifð. Við þekkjum
+ekki dreifni þýðanna en gerum ráð fyrir að hún sé jöfn (sjá dæmi
+<a class="reference internal" href="#e-alyktanirumdreifni1"><span class="std std-numref">8.1.2.2</span></a>).</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við ætlum að kanna hvort <strong>munur</strong> sé á meðallaunum karla og kvenna
+og notum við til þess tvíhliða próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \mu_1 - \mu_2 = 0\\
+H_1&amp;:&amp; \mu_1 - \mu_2 \neq 0 \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Prófstærðina reiknum við með jöfnu <a class="reference internal" href="#equation-eq-tvomut3profstaerd">8.16</a>:</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{\overline{x}_1 - \overline{x}_2 - \delta}{s_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(s_p^2\)</span> er reiknað samkvæmt jöfnu <a class="reference internal" href="#equation-eq-vegindreifni">8.13</a></p>
+<div class="math notranslate nohighlight">
+\[s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}\]</div>
+<p>Við vitum að <span class="math notranslate nohighlight">\(n_1 = 20\)</span>, <span class="math notranslate nohighlight">\(n_2 = 20\)</span>, <span class="math notranslate nohighlight">\(\bar{x}_1\)</span> =
+245163, <span class="math notranslate nohighlight">\(s_1\)</span> = 22814, <span class="math notranslate nohighlight">\(\bar{x}_2\)</span> = 218634, <span class="math notranslate nohighlight">\(s_2\)</span>
+= 18312 og <span class="math notranslate nohighlight">\(\delta\)</span> = 0. Við setjum þessar tölur inn í
+jöfnurnar og fáum</p>
+<div class="math notranslate nohighlight">
+\[s_p = \sqrt{\frac{(20 - 1)\cdot 22814^2 + (20 - 1)\cdot 18312^2}{20 + 20 - 2}} = 20685.84\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{245163 - 218634 - 0}{20685.84 \sqrt{\frac{1}{20} + \frac{1}{20}}} = 4.06\]</div>
+</li>
+<li><p>Við þurfum að finna höfnunarsvæðið og notum til þess t-töflu. Við
+flettum upp eftir <span class="math notranslate nohighlight">\(n_1 + n_2 - 2 = 38\)</span>.
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n_1 + n_2 - 2)} = t_{0.975,(38)}\)</span> = 2.024, svo
+við höfnum núlltilgátunni ef <span class="math notranslate nohighlight">\(t &gt; 2.024\)</span> eða
+<span class="math notranslate nohighlight">\(t &lt; -2.024\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(t &gt; 2.024\)</span> svo prófstærðin
+fellur á höfnunarsvæði.</p></li>
+<li><p>Við höfnum núlltilgátunni og ályktum að meðallaun karla og kvenna sem
+starfa í kjötiðnaði séu ekki jöfn.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/t38.svg" /></figure>
+</div>
+</section>
+<section id="id3">
+<h4><span class="section-number">8.2.2.11. </span>Sýnidæmi: Ályktanir um tvö meðaltöl<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Hópur líffræðinga sem er að bera saman þyngd silunga í vötnum á Íslandi
+veiddi 51 silung í Þingvallavatni og reyndist meðalþyngd þeirra vera 550
+grömm og staðalfrávikið 65 grömm. Hópurinn veiddi auk þess 60 silunga í
+Úlfljótsvatni og var meðalþyngd þeirra 522 grömm og staðalfrávikið 30
+grömm. Kannið með viðeigandi tilgátuprófi hvort munur sé á meðalþyngd
+fiska í vötnunum tveimur. Gera má ráð fyrir að þyngd silunga fylgi
+normaldreifingu.</p>
+<p>Við þekkjum hvorki dreifni þýðanna né dreifingu þeirra en úrtökin eru
+stór. Við getum því notað t-próf. Við byrjum á að kanna hvort gera megi
+ráð fyrir að dreifnin í hópunum sé sú sama áður en við veljum viðeigandi
+t-próf.</p>
+<p>Förum eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að kanna tilgátu um dreifni tveggja normaldreifðra þýða.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við ætlum að kanna hvort dreifni þýðanna er mismunandi og notum við
+því tvíhliða próf.</p>
+<p>Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \sigma_1^2 = \sigma_2^2\\
+H_1&amp;:&amp; \sigma_1^2 \neq \sigma_2^2\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight">
+\[F = \frac{S_M^2}{S_m^2}\]</div>
+<p>Þar sem staðalfrávik í Þingvalla úrtakinu er hærra köllum við
+Þingvalla hópinn hóp <span class="math notranslate nohighlight">\(M\)</span> og Úlfljótsvatns hópinn hóp <span class="math notranslate nohighlight">\(m\)</span>.
+Setjum nú inn í prófstærðina og fáum</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{65^2}{30^2} = 4.69\]</div>
+</li>
+<li><p>Við þurfum að finna höfnunarsvæðið og notum til þess <span class="math notranslate nohighlight">\(F\)</span>-töflu.
+<span class="math notranslate nohighlight">\(F_{1-\alpha/2,(n_M-1,n_m-1)} = F_{0.975,(50,59)}\)</span>. Sé F-taflan
+í kafla <a class="reference internal" href="../toflur_all_final/#a-ftafla25"><span class="std std-ref">T.6</span></a> skoðuð má sjá að þar er ekki að finna
+gildi fyrir <span class="math notranslate nohighlight">\(F_{0.975,(50,59)}\)</span> og notum við því það sem er
+næst, <span class="math notranslate nohighlight">\(F_{0.975,(\infty,60)} = 1.482\)</span>, svo við höfnum
+núlltilgátunni ef <span class="math notranslate nohighlight">\(f &gt; 1.482\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(f &gt; 1.482\)</span>
+svo prófstærðin fellur á höfnunarsvæði.</p></li>
+<li><p>Við getum höfnað núlltilgátunni ályktað að dreifnin sé mismunandi.</p></li>
+</ol>
+<p>Þá erum við tilbúin til að kanna mismun meðaltalanna og förum við eftir
+samantekt um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um mun á meðaltölum tveggja þýða. Úrtökin eru
+<strong>óháð</strong>. Gera má ráð fyrir að þyngdin fylgi normaldreifingu. Við
+þekkjum ekki dreifni þýðanna og getum ekki gert ráð fyrir að hún sé
+jöfn. Við framkvæmum því t-próf fyrir ólíka dreifni.</p></li>
+<li><p>Notum <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við ætlum að kanna hvort <strong>munur</strong> sé á meðalþyngd silunga í
+Þingvallavatni og Úlfljótsvatni og notum við til þess tvíhliða próf.
+Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \mu_1 - \mu_2 = 0\\
+H_1&amp;:&amp; \mu_1 - \mu_2 \neq 0 \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Prófstærðina reiknum við með jöfnu <a class="reference internal" href="#equation-eq-tvomut4profstaerd">8.21</a>:</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{\overline{x}_1 - \overline{x}_2 - \delta}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</div>
+<p>Við vitum að <span class="math notranslate nohighlight">\(n_1 = 51\)</span>, <span class="math notranslate nohighlight">\(n_2 = 60\)</span>, <span class="math notranslate nohighlight">\(\bar{x}_1\)</span> =
+550, <span class="math notranslate nohighlight">\(s_1\)</span> = 65, <span class="math notranslate nohighlight">\(\bar{x}_2\)</span> = 522, <span class="math notranslate nohighlight">\(s_2\)</span> = 30 og
+<span class="math notranslate nohighlight">\(\delta\)</span> = 0. Við setjum þessar tölur inn í jöfnurnar og fáum</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{550 - 522 - 0}{\sqrt{\frac{65^2}{51} + \frac{30^2}{60}}} = 2.83\]</div>
+</li>
+<li><p>Við þurfum að finna höfnunarsvæðið og notum til þess t-töflu. Sé
+núlltilgátan sönn fylgir prófstærðin t-dreifingu með <span class="math notranslate nohighlight">\(\nu\)</span>
+frígráður. <span class="math notranslate nohighlight">\(\nu\)</span> reiknum við með jöfnu <a class="reference internal" href="#equation-eq-fjoldifrigrada">8.17</a>:</p>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{\Big(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} \Big)^2}{\frac{(s_1^2/n_1)^2}{n_1 - 1} +
+\frac{(s_2^2/n_2)^2}{n_2 - 1}} = 67.9\]</div>
+<p>Sé t-taflan skoðuð má sjá að næsta gildi sem við höfum er fyrir 60
+frígráður, við notum það gildi.
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2,\nu} = t_{0.975,(60)}\)</span> = 2, svo við höfnum
+núlltilgátunni ef <span class="math notranslate nohighlight">\(t &gt; 2\)</span> eða <span class="math notranslate nohighlight">\(t &lt; -2\)</span>. Við sjáum að
+<span class="math notranslate nohighlight">\(t &gt; 2\)</span> svo prófstærðin fellur á höfnunarsvæði.</p>
+</li>
+<li><p>Við höfnum núlltilgátunni og ályktum að meðalþyngd silunga í vötnunum
+tveimur sé ekki sú saman.</p></li>
+</ol>
+</div>
+</section>
+</section>
+<section id="tilgatuprof-fyrir-paraar-maelingar">
+<span id="s-paradarmaelingar"></span><h3><span class="section-number">8.2.3. </span>Tilgátupróf fyrir paraðar mælingar<a class="headerlink" href="#tilgatuprof-fyrir-paraar-maelingar" title="Permalink to this heading"></a></h3>
+<p>Margar rannsóknir eru gerðar á pöruðum slembiúrtökum eins og við kynntum
+í kassa <a class="reference internal" href="../kafli02/#ss-paradslembiurtak"><span class="std std-numref">2.4.3</span></a> í kafla <a class="reference internal" href="../kafli02/#c-fratilrauntilgagna"><span class="std std-numref">2</span></a>.
+Þær rannsóknir eru oftar en ekki þannig að gögnum er aflað fyrir og
+eftir eitthvert inngrip. Tilgáturnar ganga þá iðulega út á að kanna
+hvort inngripið hafi borið árangur. Við notum parað próf til að kanna
+þessar tilgátur.</p>
+<p>Gerum nú ráð fyrir að við höfum <span class="math notranslate nohighlight">\(n\)</span> pör mælinga
+<span class="math notranslate nohighlight">\((X_i, Y_i)\)</span>, <span class="math notranslate nohighlight">\(i = 1,2,3...n\)</span>. Það fyrsta sem við þurfum að
+gera er að finna mismun þessara pöruðu mælinga,</p>
+<div class="math notranslate nohighlight" id="equation-eq-paradmismunur">
+<span class="eqno">(8.22)<a class="headerlink" href="#equation-eq-paradmismunur" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[D_i = X_i - Y_i\]</div>
+<p>Við lítum á <span class="math notranslate nohighlight">\(D_i\)</span> sem slembiúrtak af stærð <span class="math notranslate nohighlight">\(n\)</span> úr þýði með
+meðaltal <span class="math notranslate nohighlight">\(\mu_D\)</span>. Tilgátuprófin ganga út á að kanna <span class="math notranslate nohighlight">\(\mu_D\)</span>.
+Áður en við getum hafist handa við tilgátuprófin þurfum við að reikna
+eftirfarandi stærðir:</p>
+<div class="math notranslate nohighlight" id="equation-eq-paradmedaltal">
+<span class="eqno">(8.23)<a class="headerlink" href="#equation-eq-paradmedaltal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\overline{D} = \frac{\sum_{i = 1}^{n} D_    i}{n}\]</div>
+<p>sem er meðaltal mismunanna og</p>
+<div class="math notranslate nohighlight" id="equation-eq-paraddreifni">
+<span class="eqno">(8.24)<a class="headerlink" href="#equation-eq-paraddreifni" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[{S_{D}}^{2} = \frac{\sum_{i = 1}^{n}(D_i - \overline{D})^2}{n-1}\]</div>
+<p>sem er dreifni mismunanna.</p>
+<p>Tilgátuprófin í þessum hluta prófa núlltilgátuna, hvort meðaltal mismuns
+pöruðu mælinganna sé jafnt einhverju ákveðnu gildi sem við köllum
+<span class="math notranslate nohighlight">\(\mu_{D,0}\)</span>. Núlltilgátuna ritum við
+<span class="math notranslate nohighlight">\(H_0: \mu_D = \mu_{D,0}\)</span>. Algengast er að nota
+<span class="math notranslate nohighlight">\(\mu_{D,0} = 0\)</span> en þá er núlltilgátan einfaldlega: ,,Eru pöruðu
+mælingarnar að meðaltali jafnar? “.</p>
+<p>Líkt og áður eru notuð z-próf eða t-próf. Mun algengara er að nota
+t-próf og munum við sýna það hér. Ef ekki er hægt að gera ráð fyrir að
+mismunur mælinganna okkar fylgi normaldreifinu og mælingarnar okkar eru
+fáar er hvorki hægt að framkvæma z- né t-próf. Þá þarf að grípa til
+annarra aðferða, svo sem <em>stikalausra prófa</em> eða <em>endurvalsaðferða</em>, en
+ekki verður fjallað um það nánar hér.</p>
+<p>Fylgir mismunur mælinganna okkar normaldreifingu og/eða ef úrtakið er
+stórt getum við notað eftirfarandi t-próf:</p>
+<section id="t-prof-fyrir-paraar-maelingar">
+<h4><span class="section-number">8.2.3.1. </span>T-pŕof fyrir paraðar mælingar<a class="headerlink" href="#t-prof-fyrir-paraar-maelingar" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \mu_D = \mu_{D,0}\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-paradtprof">
+<span class="eqno">(8.25)<a class="headerlink" href="#equation-eq-paradtprof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[T = \frac{\overline{D}-\mu_{D,0}}{S_D/\sqrt{n}}\]</div>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin t-dreifingu með (<span class="math notranslate nohighlight">\(n-1\)</span>)
+frígráðu, eða <span class="math notranslate nohighlight">\(T \sim t_{(n-1)}\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_D &lt; \mu_{D,0}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha,(n-1)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_D &gt; \mu_{D,0}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha,(n-1)}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \mu_D \neq \mu_{D,0}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha/2,(n-1)}\)</span> eða <span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha/2,(n-1)}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n-1)}\)</span> má finna í t-töflu í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-alyktanir-um-paraar-maelingar">
+<h4><span class="section-number">8.2.3.2. </span>Sýnidæmi: Ályktanir um paraðar mælingar<a class="headerlink" href="#synidaemi-alyktanir-um-paraar-maelingar" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Lýðheilsustöð ákvað að standa fyrir rannsókn til að kanna hvort miðaldra
+menn sem eru yfir kjörþyngd geti lést á tveimur mánuðum hreyfi þeir sig
+í 30 mínútur dag hvern. Til að kanna það var slembiúrtak tekið af stærð
+6. Þyngd mannanna var mæld í upphafi átaksins og aftur í lok átaksins,
+tveimur mánuðum síðar. Mælingarnar má sjá hér að neðan. Kannið nú með
+viðeigandi tilgátuprófi hvort miðaldra menn sem eru yfir kjörþyngd geti
+að meðaltali lést á tveimur mánuðum hreyfi þeir sig í 30 mínútur dag
+hvern. Gera má ráð fyrir að þyngd fylgi normaldreifingu. Notið
+<span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Maður númer</p></th>
+<th class="head"><p>Þyngd fyrir [kg]</p></th>
+<th class="head"><p>Þyngd eftir [kg]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>123</p></td>
+<td><p>120</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>112</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>107</p></td>
+<td><p>106</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>101</p></td>
+<td><p>99</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>112</p></td>
+<td><p>112</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>116</p></td>
+<td><p>114</p></td>
+</tr>
+</tbody>
+</table>
+<p>Áður en við hefjumst handa þurfum við að reikna <span class="math notranslate nohighlight">\(D_i\)</span>,
+<span class="math notranslate nohighlight">\(\overline{D}\)</span> og <span class="math notranslate nohighlight">\(S_D\)</span>. Bætum nú við dálki í töfluna,
+<span class="math notranslate nohighlight">\(d\)</span>. (við notum <span class="math notranslate nohighlight">\(d\)</span> þar sem það eru mælingar á <span class="math notranslate nohighlight">\(D\)</span>).</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Maður númer</p></th>
+<th class="head"><p>Þyngd fyrir (<span class="math notranslate nohighlight">\(x_i\)</span>)</p></th>
+<th class="head"><p>Þyngd eftir (<span class="math notranslate nohighlight">\(y_i\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(d_i = x_i - y_i\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>123</p></td>
+<td><p>120</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>112</p></td>
+<td><p>108</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>107</p></td>
+<td><p>106</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>101</p></td>
+<td><p>99</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>112</p></td>
+<td><p>112</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>116</p></td>
+<td><p>114</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+<p>Reiknum nú meðaltal mismunanna með jöfnu <a class="reference internal" href="#equation-eq-paradmedaltal">8.23</a></p>
+<div class="math notranslate nohighlight">
+\[\overline{d} = \frac{\sum_{i = 1}^{n} d_i}{n} = \frac{3+4+1+2+0+2}{6} = 2\]</div>
+<p>og dreifni mismunanna með jöfnu <a class="reference internal" href="#equation-eq-paraddreifni">8.24</a></p>
+<div class="math notranslate nohighlight">
+\[{s_d}^2 = \frac{\sum_{i = 1}^{n}(d_i - \bar{d})^2}{n-1} = \frac{(3-2)^2 + (4-2)^2 + ... + (2-2)^2}{5} =2\]</div>
+<p>Förum nú eftir samantektinni um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við höfum <strong>paraðar</strong> mælingar þar sem <span class="math notranslate nohighlight">\(n\)</span> er lítið en gera má
+ráð fyrir normaldreifðum þýðum. Við notum því parað t-próf.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við viljum sýna fram á að fólkið léttist en þar sem að fólkið gæti í
+raun verið að þyngjast notum við tvíhliða próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \mu_D = 0\\
+H_1&amp;:&amp; \mu_D \neq 0\end{aligned}\end{split}\]</div>
+<p>(munið að við reiknuðum <span class="math notranslate nohighlight">\(d = \text{fyrir} - \text{eftir}\)</span>.)</p>
+</li>
+<li><p>Prófstærðina reiknum við með jöfnu <a class="reference internal" href="#equation-eq-paradtprof">8.25</a></p>
+<div class="math notranslate nohighlight">
+\[t = \frac{\overline{d}-\mu_{D,0}}{s_D/\sqrt{n}} = \frac{2 - 0}{\sqrt{2/6}} = 3.46\]</div>
+</li>
+<li><p>Við notum t-töfluna til að finna höfnunarsvæðin og flettum upp eftir
+<span class="math notranslate nohighlight">\(n - 1 = 5\)</span> frígráðum:
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2, (n-1)} = t_{0.975,5}\)</span> = 2.57, svo við höfnum
+núlltilgátunni ef <span class="math notranslate nohighlight">\(t &lt; -2.57\)</span> eða <span class="math notranslate nohighlight">\(t &gt; 2.57\)</span>. Við sjáum
+að <span class="math notranslate nohighlight">\(t &gt; 2.57\)</span> svo prófstærðin fellur á höfnunarsvæði.</p></li>
+<li><p>Við höfnum núlltilgátunni og ályktum að það að hreyfa sig í 30
+mínútur á dag í tvo mánuði ber árangur í baráttunni við aukakílóin
+fyrir miðaldra menn yfir kjörþyngd.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/t5_tvihlida.svg" /></figure>
+</div>
+</section>
+</section>
+<section id="hvenaer-notum-vi-hvaa-prof">
+<h3><span class="section-number">8.2.4. </span>Hvenær notum við hvaða próf?<a class="headerlink" href="#hvenaer-notum-vi-hvaa-prof" title="Permalink to this heading"></a></h3>
+<p>Við höfum nú fjallað um ályktanir fyrir meðaltal í einu þýði, mismun
+óháðra meðaltala og mismun paraðra mælinga. Í öllum tilvikum getum við
+notað z-próf/öryggisbil eða t-próf/öryggisbil við verkið. Tökum nú
+stuttlega saman hvenær hvor dreifing á við.</p>
+<p>Z-próf má nota þegar:</p>
+<ul class="simple">
+<li><p>Þýðin fylgja normaldreifingu og við gerum ráð fyrir að við þekkjum
+dreifni þýðanna.</p></li>
+<li><p>Úrtökin eru stór, óháð því hver dreifing þýðanna er.</p></li>
+</ul>
+<p>t-próf má nota þegar:</p>
+<ul class="simple">
+<li><p>Þýðin fylgja normaldreifingu, sama hversu lítil úrtökin eru.</p></li>
+<li><p>Úrtökin eru stór, óháð því hver dreifing þýðanna er.</p></li>
+</ul>
+<p>Þegar úrtökin eru stór hafa t-dreifingin og z-dreifingin nánast sömu
+lögun og þá verða prófin/öryggisbilin tvö nánast jafngild. Þar sem
+t-dreifingin hefur þyngri hala en normaldreifingin er erfiðara að hafna
+núlltilgátunni í því tilviki og þar af leiðandi minni hætta á villu af
+gerð eitt. Því er ívið varfærnara að nota t-prófið/öryggisbilið og þar
+að auki eru t-próf innbyggð í flest tölfræðiforrit, ólíkt z-prófum, enda
+mun algengari. Eins og þið sjáið er eina tilvikið sem stendur eftir
+þegar úrtökin eru lítil og ekki er hægt að gera ráð fyrir að þýðin fylgi
+normaldreifingu. Í þeim tilvikum er stundum hægt að <em>umbreyta</em>
+(e. transform) gögnunum, nota <em>endurvalsaðferðir</em> (e. resampling methods) eða
+nota <em>stikalaus próf</em> (e. nonparametric tests) en ekki verður farið nánar í
+það hér.</p>
+<p>Að lokum viljum við ítreka það að gæta vel að því hvenær við höfum í
+höndunum <em>paraðar</em> mælingar og hvenær við könnum <em>tvö óháð</em> þýði. Í
+hvert sinn sem við höfum innbyggða pörun fyrir hendi, þannig að við
+getum með eðlilegum hætti reiknað mismun hvers pars og dregið ályktanir
+um það, fæst meiri styrkur með því að nota tilgátupróf fyrir paraðar
+mælingar og því skyldi það alltaf notað. Ef að hins vegar engin eðlileg
+pörun er fyrir hendi er sá samanburður á sandi byggður. Í því tilviki
+þegar mælingarnar eru mismargar grípa tölfræðiforritin oft þá villu og
+vara okkur við. Ef ekki, erum við að gefa okkur forsendur sem gilda ekki
+og líkurnar á villu af gerð I verða hærri en við höldum.</p>
+</section>
+</section>
+<section id="daemi">
+<h2><span class="section-number">8.3. </span>Dæmi<a class="headerlink" href="#daemi" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">8.3.1. </span>Dæmi<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Gera má ráð fyrir að hitastig á hádegi í júlí á ákveðnum stað á landinu
+fylgi normaldreifingu. Ferðamálfræðingur nokkur hefur mikinn áhuga á að
+meta stikana í þessari dreifingu og valdi hann tilviljunarkennt einn dag
+í júlí síðustu átta ár og skráði hitastigið. Hann reiknaði meðaltal og
+staðalfrávik mælinganna átta og fékk út að meðaltalið var 14.7 gráður og
+staðalfrávikið 5.6 gráður. Finnið 95% öryggisbil fyrir dreifnina.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">8.3.2. </span>Dæmi<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>Láki landfræðingur vill kanna hvort munur sé á dreifni í tveimur
+normaldreifðum þýðum sem hann er að kanna. Til þess tók hann úrtök úr
+þýðunum, bæði af stærð 18. Hann reiknaði staðalfrávik úrtakanna og fékk
+út að staðalfrávikið í því fyrra var 21.43 og í því seinna 32.18. Hvert
+er gildið á prófstærðinni sem nota á til að kanna að munur sé á dreifni
+þýðanna tveggja?</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">8.3.3. </span>Dæmi<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Finnur ferðamálafræðingur er að kanna hversu mikið ferðamenn eru
+tilbúnir til að greiða fyrir að fá að sjá Gullfoss. Hann valdi af
+handahófi 20 ferðamenn og reiknaði að ferðamennirnir 20 voru tilbúnir að
+greiða 1243 krónur að meðaltali og var staðalfrávikið 126 krónur. Gera
+má ráð fyrir að upphæðin sem ferðamenn eru tilbúnir til að greiða fylgi
+normaldreifingu. Hvert er efra mark 95% öryggisbils fyrir dreifni
+upphæðarinnar sem ferðamenn eru tilbúnir til að greiða?</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">8.3.4. </span>Dæmi<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>Fuglavinafélagið fylgist náið með þyngd stokkanda við tjörnina og
+fullyrða vísindamenn innan félagsins að þyngd andanna fylgi
+normaldreifingu. Félagið ákvað að skoða hvort dreifni þyngdar
+stokkandarsteggja og stokkandakolla sé misjöfn og mældi því þyngd 7
+steggja og 7 kollna og skráði. Niðurstöðurnar má sjá hér að neðan (mælt
+í grömmum).</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kollur</p></th>
+<th class="head"><p>Steggir</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>999.70</p></td>
+<td><p>990.12</p></td>
+</tr>
+<tr class="row-odd"><td><p>981.38</p></td>
+<td><p>989.23</p></td>
+</tr>
+<tr class="row-even"><td><p>1012.47</p></td>
+<td><p>987.56</p></td>
+</tr>
+<tr class="row-odd"><td><p>976.15</p></td>
+<td><p>976.46</p></td>
+</tr>
+<tr class="row-even"><td><p>968.19</p></td>
+<td><p>1029.37</p></td>
+</tr>
+<tr class="row-odd"><td><p>974.81</p></td>
+<td><p>948.75</p></td>
+</tr>
+<tr class="row-even"><td><p>1023.01</p></td>
+<td><p>975.55</p></td>
+</tr>
+</tbody>
+</table>
+<p>Meðlimir fuglavinafélagsins reiknuðu út að staðalfrávik þyngdar
+kollnanna sem mælar voru er 21.04 g og steggjanna 24.14 g. Kannið hvort
+munur sé á dreifni þyngdar á kollum og steggjum. Notið
+<span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">8.3.5. </span>Dæmi<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<p>Ferðamálafræðingur nokkur framkvæmdi tilraun til að meta hitastig í
+náttúrulegri laug nálægt Hveragerði. Hann mældi hitastigið 40 sinnum og
+var hitastigið að meðaltali 38.8 gráður og var staðalfrávikið 4.3
+gráður. Finnið 90% öryggisbil fyrir meðalhitastigið í lauginni.</p>
+</section>
+<section id="id9">
+<h3><span class="section-number">8.3.6. </span>Dæmi<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<p>Ferðamálafræðingarnir Siggi og Sigga ákváðu að kanna meðalfjölda hvala
+sem sjást þegar farið er í hvalaskoðun á Húsavík í maí. Þau völdu af
+handahófi 8 ferðir og skráðu fjölda hvala sem sáust. Að meðaltali sáust
+12.3 hvalir í ferðunum og staðalfrávikið í þessum 8 ferðum var 4.3. Gera
+má ráð fyrir að fjöldi hvala sem sjást í hvalaskoðunarferð fylgi
+normaldreifingu.</p>
+<ol class="loweralpha simple">
+<li><p>Finnið <span class="math notranslate nohighlight">\(95\%\)</span> öryggisbil fyrir meðalfjölda hvala sem sjást
+þegar farið er í hvalaskoðun á Húsavík í maí.</p></li>
+<li><p>Kannið hvort meðalfjöldi hvala sem sjást þegar farið er í hvalaskoðun
+á Húsvík í maí sé frábrugðið 10 hvölum. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+</ol>
+</section>
+<section id="id10">
+<h3><span class="section-number">8.3.7. </span>Dæmi<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<p>Lífefnafræðingur nokkur er að kanna ákveðið efnahvarf. Þetta efnahvarf
+hefur verið rannsakað mikið og gera má ráð fyrir tíminn sem það tekur
+fyrir efnahvarfið að ljúka fylgi normaldreifingu með þekkta dreifni sem
+er 1.2 mínútur. Lífefnafræðingurinn hefur bætt við hvata í efnahvarfið
+og vill hann sýna fram á að með þessum hvata sé efnahvarfið að meðaltali
+hraðara en 7.9 mínútur. Gera má ráð fyrir að dreifnin sé þekkt og sé sú
+sama og án hvatans. Lífefnafræðingurinn tekur tímann sem það tekur
+efnahvarfið með hvatanum að ljúka 12 sinnum og var meðaltíminn 7.2
+mínútur. Kannið með viðeigandi tilgátuprófi hvort efnahvarfið sé að
+meðaltali hraðara en 7.9 mínútur. Hér skal nota tvíhliða próf því
+efnahvarfið gæti í raun verið hægara en 7.9 mínútur. Notið
+<span class="math notranslate nohighlight">\(\alpha = 5\%.\)</span></p>
+</section>
+<section id="id11">
+<h3><span class="section-number">8.3.8. </span>Dæmi<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<p>Borgaryfirvöld voru að velta fyrir sér meðalfjölda íbúa á heimili í
+hverfi einu. Könnuð voru 24 heimili og kom í ljós að meðalfjöldi íbúa á
+hvert heimili var 2.7 og staðalfrávikið var 2.6. Finnið 90% öryggisbil
+fyrir meðalfjölda íbúa á heimili. Gerið ráð fyrir að fjöldi íbúa fylgi
+normaldreifingu.</p>
+</section>
+<section id="id12">
+<h3><span class="section-number">8.3.9. </span>Dæmi<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>Siggi sæti hefur áhuga á þyngd snickersstykkja. Hann fer útí búð og
+kaupir 100 stykki sem hann svo vigtar og skráir samviskusamlega hjá sér
+hvað hvert stykki er þungt. Á umbúðunum stendur að stykkið sé 42 grömm
+en Sigga grunar að á meðaltali séu stykkin léttari en það sem gefið er
+upp á pakkanum. Meðaltal stykkjanna sem Siggi sæti keypti var 40.5 grömm
+og var staðalfrávikið 0.9 grömm. Kannið hvort snickersstykki séu að
+meðaltali léttari en það sem gefið er upp á pakkanum, notið
+<span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+</section>
+<section id="id13">
+<h3><span class="section-number">8.3.10. </span>Dæmi<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<p>Rafhlöðuframleiðandi nokkur fullyrðir að meðallíftími rafhlaðna sem
+fyrirtækið framleiðir sé 240 klukkustundir. Uppi er sú kenning hjá
+gæðadeild fyrirtækisins að líftíminn sé frábrugðinn 240 klukkustundum.
+Gæðadeildin ákvað því að framkvæma tilraun til að kanna þessa kenningu
+sína. Tekið var slembiúrtak af stærð 18 og líftíminn kannaður.
+Meðallíftími rafhlaðanna sem kannaðar voru var 237.056 klukkustundir og
+staðalfrávik 11.280. Gera má ráð fyrir að líftími rafhlaðanna fylgi
+normaldreifingu.</p>
+<ol class="loweralpha simple">
+<li><p>Finnið 95% öryggisbil fyrir meðallíftíma rafhlaðna.</p></li>
+<li><p>Kannið hvort meðallíftími rafhlaðna sé frábrugðin 240 klukkustundum.
+Setjið fram tilgáturnar, kannið tilgátuna með viðeigandi prófstærð og
+lýsið niðurstöðum ykkar stuttlega í orðum. Notið <span class="math notranslate nohighlight">\(\alpha\)</span> =
+0.05.</p></li>
+</ol>
+</section>
+<section id="id14">
+<h3><span class="section-number">8.3.11. </span>Dæmi<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<p>Lyfjafræðingar sem hafa mikinn áhuga á kólestrólmagni í blóði íslenskra
+karlmanna völdu af handahófi 20 karlmenn og mældu svo kólesterólið hjá
+þeim. Meðaltal mælinganna var 205.2 og staðalfrávikið 6.4. Finnið
+<span class="math notranslate nohighlight">\(99\%\)</span> öryggisbil fyrir meðalkólestrólmagn í blóði íslenskra
+karlmanna. Gera má ráð fyrir að kólesteról í blóði karlmanna á Íslandi
+fylgir normaldreifingu.</p>
+</section>
+<section id="id15">
+<h3><span class="section-number">8.3.12. </span>Dæmi<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<p>Margrét matvælafræðingur var að kanna gæði appelsínusafa sem hún er að
+þróa og fékk 40 manns til að bragða á safanum og gefa honum einkunn frá
+0 til 10. Appelsínuvinafélagið flokkar safa sem skora að meðaltali hærra
+en 7 á sambærilegu prófi sem eðalappelsínusafa. Að tilrauninni lokinni
+reiknaði Margrét út meðaleinkunn og staðalfrávik og fann hún að
+meðaleinkunnin var 7.8 og staðalfrávikið 1.8. Kannið með viðeigandi
+tilgátuprófi hvort Margrét geti kallað safann sinn eðalappelsínusafa
+samkvæmt skilgreiningu appelsínuvinafélagsins. Sýnið öll skrefin sex.
+Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+</section>
+<section id="id16">
+<h3><span class="section-number">8.3.13. </span>Dæmi<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<p>Palli jarðfræðingur hefur áhuga á að bera saman skjálftavirkni á
+suðurlandi og norðurlandi. Hann valdi 40 vikur af handahófi og taldi
+fjölda skjálfta á hvorum staðnum fyrir sig. Á suðurlandi urðu að
+meðaltali 23.3 skjálftar á viku og á norðurlandi 31.3 skjálftar.
+Staðalfrávikið þessar 40 vikur á suðurlandi var 7.7 skjálftar og á
+norðurlandi 9.1 skjálftar.</p>
+<ol class="loweralpha simple">
+<li><p>Finnið <span class="math notranslate nohighlight">\(95\%\)</span> öryggisbil fyrir mun á meðalfjölda skjálfta á
+norðurlandi og suðurlandi.</p></li>
+<li><p>Kannið með viðeigandi tilgátuprófi hvort munur sé á skjálftavirkni á
+suðurlandi og norðurlandi. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p></li>
+</ol>
+</section>
+<section id="id17">
+<h3><span class="section-number">8.3.14. </span>Dæmi<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h3>
+<p>Gulla lyfjafræðingur ætlar að kanna virkni hjartalyfs og ætlar hún að
+framkvæma tilraunirnar á músum. Áður en hún framkvæmir tilraunina vill
+hún kanna hvort munur sé á hjartslætti karlkyns og kvenkyns músa. Gera
+má ráð fyrir að hjartsláttur kvenkyns og karlkyns músa fylgi
+normaldreifingu. Gulla velur af handahófi 10 kvenkyns og 10 karlkyns mýs
+og mældi hjartslátt þeirra. Hjartsláttur kvenkyns músanna var að
+meðaltali 582.7 slög á mínútu og karlkyns músanna var hann 531.7 slög á
+mínútu. Staðalfrávikið í kvenkyns hópnum voru 34.2 slög og 45.7 í karla
+hópnum. Kannið með viðeigandi tilgátuprófi hvort munur sé á
+meðalhjartslætti karkyns og kvenkyns músa. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+</section>
+<section id="id18">
+<h3><span class="section-number">8.3.15. </span>Dæmi<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
+<p>Eftirfarandi tölur sýna landaðan afla (í tonnum) á tveimur togurum mánuð
+einn. Kannið hort munur sé á meðalafla togaranna með viðeigandi
+tilgátuprófi. Gera ráð fyrir að þyngd aflans fylgi normaldreifingu.
+Notið <span class="math notranslate nohighlight">\(\alpha\)</span> = 0.05.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Togari 1</p></th>
+<th class="head"><p>Togari 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="6"></td>
+<td><p>109</p></td>
+<td><p>56</p></td>
+</tr>
+<tr class="row-odd"><td><p>62</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-even"><td><p>69</p></td>
+<td><p>89</p></td>
+</tr>
+<tr class="row-odd"><td><p>85</p></td>
+<td><p>69</p></td>
+</tr>
+<tr class="row-even"><td><p>32</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td><p>115</p></td>
+<td><p>162</p></td>
+</tr>
+<tr class="row-even"><td><p>Meðaltal</p></td>
+<td><p>78.67</p></td>
+<td><p>81.17</p></td>
+</tr>
+<tr class="row-odd"><td><p>Staðalfrávik</p></td>
+<td><p>31.08</p></td>
+<td><p>43.46</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id19">
+<h3><span class="section-number">8.3.16. </span>Dæmi<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h3>
+<p>Til að kanna hvort nagladekk minnki að meðaltali hemlunarvegalengd miðað
+við venjuleg dekk var eftirfarandi tilraun framkvæmd. Sex bílar voru
+notaðir og hemlunarvegalengd mæld með venjulegum dekkjum og
+nagladekkjum. Aðrar breytur svo sem hraði, ástand vegar osfrv. var sá
+sami í öllum tilraununum. Gögnin má sjá hér að neðan.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bíll númer</p></th>
+<th class="head"><p>Venjuleg dekk</p></th>
+<th class="head"><p>Nagladekk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>73</p></td>
+<td><p>71</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>79</p></td>
+<td><p>73</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>64</p></td>
+<td><p>63</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>55</p></td>
+<td><p>57</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>72</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>70</p></td>
+<td><p>69</p></td>
+</tr>
+</tbody>
+</table>
+<p>Gera má ráð fyrir að hemlunarvegalengd fylgi normaldreifingu. Rökstyðjið
+hvaða próf er viðeigandi fyrir þessi gögn til að kanna hvort nagladekk
+minnki að meðaltali hemlunarvegalengd miðað við venjuleg dekk. Notið
+tvíhliða próf því nagladekk geta í raun aukið hemlunarvegalengdina.
+Notið <span class="math notranslate nohighlight">\(\alpha\)</span> = 0.05. Setjið fram tilgáturnar, kannið tilgátuna
+með viðeigandi prófstærð og lýsið niðurstöðu ykkar stuttlega í orðum.</p>
+</section>
+<section id="id20">
+<h3><span class="section-number">8.3.17. </span>Dæmi<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
+<p>Svokallað PEFR skor (e. Peak Expiratory Flow Rate) er mælikvarði notaður
+til að mæla lungnastarfsemi í astmasjúklingum. Því hærra sem gildið er
+því betur starfa lungun. Sú kenning hefur lengi verið við líði að
+göngutúrar í köldu veðri hafi jákvæð áhrif á lungnastarfsemina. Til að
+kanna þessa kenningu ákvað landlæknisembættið að standa fyrir rannsókn
+þar sem sex astmasjúklingar voru valdir af handahófi og þeir látnir
+ganga úti í köldu veðri í einn klukkutíma. PEFR skor þeirra var mælt
+fyrir göngutúrinn og aftur eftir göngutúrinn, einum tíma síðar. Gögnin
+má sjá hér að neðan.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Astmasjúklingur númer</p></th>
+<th class="head"><p>PEFR skor fyrir</p></th>
+<th class="head"><p>PEFR skor eftir</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>300</p></td>
+<td><p>312</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>201</p></td>
+<td><p>242</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>232</p></td>
+<td><p>340</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>312</p></td>
+<td><p>388</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>220</p></td>
+<td><p>296</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>256</p></td>
+<td><p>254</p></td>
+</tr>
+</tbody>
+</table>
+<p>Gera má ráð fyrir að PEFR skor í astmasjúklingum fylgi normaldreifingu.
+Rökstyðjið hvaða próf er viðeigandi fyrir þessi gögn til að kanna hvort
+að ganga í köldu veðri í klukkustund hafi jákvæð áhrif á lungnastarfsemi
+astmasjúklinga. Notið tvíhliða próf því ganga í köldu veðri getur í raun
+haft neikvæð áhrif á lungnastarfsemi. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.
+Setjið fram tilgáturnar, kannið tilgátuna með viðeigandi prófstærð og
+lýsið niðurstöðu ykkar stuttlega í orðum.</p>
+</section>
+<section id="id21">
+<h3><span class="section-number">8.3.18. </span>Dæmi<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
+<p>Ögmundur er mikill áhugamaður um kvikmyndir og ákvað hann að gera
+óformlega könnun á lengd spennumynda annars vegar og rómantískra
+gamanmynda hins vegar. Hann valdi sex spennumyndir og sex rómantískar
+gamanmyndir af handahófi og skráði hversu langar þær voru.
+Spennumyndirnar voru að meðaltali 112 mínútur og rómatísku
+gamanmyndirnar voru að meðaltali 92 mínútur að lengd. Lengd kvikmynda af
+þessum gerðum hefur verið rannsökuð mikið af kvikmyndavísindamönnum og
+því má gera ráð fyrir að lengd spennumynda fylgi normaldreifingu með
+þekkt staðalfrávik 22 mínútur og lengd rómantískra gamanmynda fylgi
+normaldreifingu með þekkt staðalfrávik 8 mínútur.</p>
+<ol class="loweralpha simple">
+<li><p>Hvert er neðra öryggismark 95% öryggisbils fyrir mismun á meðaltölum
+spennumynda og gamanmynda?</p></li>
+<li><p>Með rannsókninni vildi Ögmundur sýna að meðallengd rómantískra
+gamanmynda sé frábrugðin meðallengdar spennumynda. Hver á
+gagntilgátan að vera?</p></li>
+</ol>
+</section>
+<section id="id22">
+<h3><span class="section-number">8.3.19. </span>Dæmi<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h3>
+<p>Bjórvinafélag Íslands ákvað að framkvæma litla tilraun þar sem gæði
+tveggja bjórtegunda var borin saman. 10 manns tóku þátt í rannsókninni
+og var þeim skipt tilviljunarkennt í tvo hópa. Annar hópurinn fékk bjór
+<code class="docutils literal notranslate"><span class="pre">x</span></code> og hinn bjór <code class="docutils literal notranslate"><span class="pre">y</span></code>. Þátttakendurnir gáfu svo bjórnum einkunn frá 0
+til 10. Gera má ráð fyrir að einkunnirnar fylgi normaldreifingu.
+Niðurstöðurnar má sjá hér að neðan:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bjór x</p></th>
+<th class="head"><p>Bjór y</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8.6</p></td>
+<td><p>6.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>9.2</p></td>
+<td><p>7.2</p></td>
+</tr>
+<tr class="row-even"><td><p>7.8</p></td>
+<td><p>7.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>7.2</p></td>
+<td><p>8.2</p></td>
+</tr>
+<tr class="row-even"><td><p>8.9</p></td>
+<td><p>6.1</p></td>
+</tr>
+</tbody>
+</table>
+<p>Kannið með viðeigandi tilgátuprófi hvort munur sé á meðalgæðum bjóranna.
+Notið <span class="math notranslate nohighlight">\(\alpha = 0.01\)</span>.</p>
+</section>
+<section id="id23">
+<h3><span class="section-number">8.3.20. </span>Dæmi<a class="headerlink" href="#id23" title="Permalink to this heading"></a></h3>
+<p>Hjartsláttur 5 kvenna var mældur fyrir og eftir að þær voru látnar
+hlaupa upp 100 tröppur. Mælingarnar sjást í töflunni.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kona</p></th>
+<th class="head"><p>Hjartsláttur fyrir</p></th>
+<th class="head"><p>Hjartsláttur eftir</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>60</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>55</p></td>
+<td><p>61</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>62</p></td>
+<td><p>88</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>63</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>59</p></td>
+<td><p>80</p></td>
+</tr>
+</tbody>
+</table>
+<p>Kannið með viðeigandi tilgátuprófi hvort hjartsláttur aukist að
+meðaltali við að hlaupa upp 100 tröppur. Gera má ráð fyrir að
+hjartsláttur fylgi normaldreifingu. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli07/" class="btn btn-neutral float-left" title="7. Ályktanir um flokkabreytur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli09/" class="btn btn-neutral float-right" title="9. Fervikagreining" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

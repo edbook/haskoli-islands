@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Leifareikningur &mdash; Stærðfræðigreining III 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="5. Þýð föll og fágaðar varpanir" href="../kafli05/" />
+    <link rel="prev" title="3. Cauchy-setningin og Cauchy-formúlan" href="../kafli03/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Stærðfræðigreining III
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tvinntölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fáguð föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Cauchy-setningin og Cauchy-formúlan</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Leifareikningur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#laurent-rair-og-serstoupunktar">4.1. Laurent-raðir og sérstöðupunktar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-4-1">4.1.1. Skilgreining (Sjá §4.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-4-1-1-laurent">4.1.2. Setning  (Sjá Setningu 4.1.1) (Laurent)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-4-1-2">4.1.3. Skilgreining (Sjá Skilgreiningu 4.1.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-4-2">4.1.4. Skilgreining (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.1.5. Skilgreining  (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">4.1.6. Skilgreining (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-4-2-og-setningu-4-2-1">4.1.7. Setning (Sjá §4.2 og Setningu 4.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-riemanns">4.1.8. Setning Riemanns.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-4-2">4.1.9. Setning (Sjá §4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">4.1.10. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-stora-picard-setningin">4.1.11. Setning (Stóra Picard-setningin.)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-4-4-jofnur-4-4-3-og-4-4-4">4.1.12. Setning (Sjá §4.4, jöfnur 4.4.3 og 4.4.4)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#leifasetningin">4.2. Leifasetningin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#leifasetningin-sja-setningu-4-3-1">4.2.1. Leifasetningin (Sjá Setningu 4.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-4-4-jofnur-4-4-6-og-4-4-7">4.2.2. Setning (Sjá §4.4, jöfnur 4.4.6 og 4.4.7)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-4-5">4.2.3. Setning (Sjá §4.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4.2.4. Setning (Sjá §4.5)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Þýð föll og fágaðar varpanir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Undirstöðuatriði um afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Línulegar afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Veldaraðalausnir á afleiðujöfnum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Línuleg afleiðujöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Laplace-ummyndunin</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Stærðfræðigreining III</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Leifareikningur</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae302g/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="leifareikningur">
+<h1><span class="section-number">4. </span>Leifareikningur<a class="headerlink" href="#leifareikningur" title="Permalink to this heading"></a></h1>
+<p><em>Big flashy things have my name written all over them. Well… not yet, give me time and a crayon.</em></p>
+<p>- The Doctor, Doctor Who</p>
+<section id="laurent-rair-og-serstoupunktar">
+<h2><span class="section-number">4.1. </span>Laurent-raðir og sérstöðupunktar<a class="headerlink" href="#laurent-rair-og-serstoupunktar" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-sja-4-1">
+<h3><span class="section-number">4.1.1. </span>Skilgreining (Sjá §4.1)<a class="headerlink" href="#skilgreining-sja-4-1" title="Permalink to this heading"></a></h3>
+<p>Mengi af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[A(\alpha,\varrho_1,\varrho_2)=\{z\in {\mathbb{C}}\mid
+\varrho_1&lt;|z-\alpha|&lt;\varrho_2\}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(0\leq\varrho_1&lt;\varrho_2\leq +\infty\)</span> kallast opinn hringkragi með miðju í <span class="math notranslate nohighlight">\(\alpha\)</span>, innri geisla <span class="math notranslate nohighlight">\(\varrho_1\)</span>, og ytri geisla <span class="math notranslate nohighlight">\(\varrho_2\)</span>.</p>
+</section>
+<section id="setning-sja-setningu-4-1-1-laurent">
+<h3><span class="section-number">4.1.2. </span>Setning  (Sjá Setningu 4.1.1) (Laurent)<a class="headerlink" href="#setning-sja-setningu-4-1-1-laurent" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> vera opið hlutmengi af <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> og gerum ráð fyrir að <span class="math notranslate nohighlight">\(A(\alpha,\varrho_1,\varrho_2)\subset X\)</span>. Ef <span class="math notranslate nohighlight">\(f\in {\cal O}(X)\)</span>, þá er unnt að skrifa <span class="math notranslate nohighlight">\(f\)</span> sem</p>
+<div class="math notranslate nohighlight">
+\[f(z)=\sum_{n=-\infty}^{+\infty}a_n(z-\alpha)^ n, \qquad z\in
+A(\alpha,\varrho_1,\varrho_2),\]</div>
+<p>stuðlar raðarinnar <span class="math notranslate nohighlight">\(a_n\)</span> eru gefnir með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[a_n=\dfrac 1{2\pi i}\int_{\partial S(\alpha,r)} \dfrac{f(\zeta)}
+{(\zeta-\alpha)^{n+1}} \, d\zeta,\]</div>
+<p>og <span class="math notranslate nohighlight">\(r\)</span> getur verið hvaða tala sem er á bilinu
+<span class="math notranslate nohighlight">\(]\varrho_1,\varrho_2[\)</span>. Röðin</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^{+\infty}a_n(z-\alpha)^ n\]</div>
+<p>er samleitin ef <span class="math notranslate nohighlight">\(|z-\alpha|&lt;\varrho_2\)</span> og röðin</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=-\infty}^{-1}a_n(z-\alpha)^ n\]</div>
+<p>er samleitin ef <span class="math notranslate nohighlight">\(|z-\alpha|&gt;\varrho_1\)</span>. Báðar raðir eru
+samleitnar á opna hringkraganum <span class="math notranslate nohighlight">\(A(\alpha,\varrho_1, \varrho_2)\)</span>.</p>
+</section>
+<section id="skilgreining-sja-skilgreiningu-4-1-2">
+<h3><span class="section-number">4.1.3. </span>Skilgreining (Sjá Skilgreiningu 4.1.2)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-4-1-2" title="Permalink to this heading"></a></h3>
+<p>Röð af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[\sum_{-\infty}^{+\infty}a_n(z-\alpha)^ n\]</div>
+<p>kallast Laurent-röð. Innri samleitnigeisli raðarinnar <span class="math notranslate nohighlight">\(\varrho_1\)</span> er skilgreindur sem neðra mark yfir <span class="math notranslate nohighlight">\(\varrho=|z-\alpha|\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[\sum_{-\infty}^{-1} a_n(z-{\alpha})^ n\]</div>
+<p>er samleitin, ytri samleitnigeisli raðarinnar <span class="math notranslate nohighlight">\(\varrho_2\)</span> er skilgreindur sem efra mark yfir öll <span class="math notranslate nohighlight">\(\varrho=|z-\alpha|\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^{+\infty}a_n(z-{\alpha})^ n\]</div>
+<p>er samleitin. Ef <span class="math notranslate nohighlight">\(\varrho_1&lt;\varrho_2\)</span> þá segjum við að Laurent-röðin sé samleitin.</p>
+</section>
+<section id="skilgreining-sja-4-2">
+<h3><span class="section-number">4.1.4. </span>Skilgreining (Sjá §4.2)<a class="headerlink" href="#skilgreining-sja-4-2" title="Permalink to this heading"></a></h3>
+<p>Gefin er Laurent-röð</p>
+<div class="math notranslate nohighlight">
+\[\sum_{-\infty}^{+\infty}a_n(z-\alpha)^ n\]</div>
+<p>fyrir fágað fall <span class="math notranslate nohighlight">\(f\)</span>. Stuðullinn <span class="math notranslate nohighlight">\(a_{-1}\)</span> kallast leif Laurent-raðarinnar eða leif <span class="math notranslate nohighlight">\(f\)</span> í <span class="math notranslate nohighlight">\(\alpha\)</span> og er táknaður <span class="math notranslate nohighlight">\(\operatorname{Res}(f,\alpha)\)</span> og röðin</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=-\infty}^{-1}a_n(z-{\alpha})^ n\]</div>
+<p>kallast höfuðhluti Laurent-raðarinnar eða höfuðhluti fallsins <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+</section>
+<section id="id1">
+<h3><span class="section-number">4.1.5. </span>Skilgreining  (Sjá §4.2)<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Punktur <span class="math notranslate nohighlight">\(\alpha\)</span> í mengi <span class="math notranslate nohighlight">\(A\)</span> kallast einangraður punktur í <span class="math notranslate nohighlight">\(A\)</span> ef til er opin hringskífa með miðju í <span class="math notranslate nohighlight">\(\alpha\)</span> sem inniheldur engan punkt úr <span class="math notranslate nohighlight">\(A\)</span> nema <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Látum <span class="math notranslate nohighlight">\(f\in{\cal O}(X)\)</span>. Ef <span class="math notranslate nohighlight">\(\alpha\in\mathbb{C}\setminus X\)</span> er einangraður punktur í <span class="math notranslate nohighlight">\(A=\mathbb{C}\setminus X\)</span> þá nefnist <span class="math notranslate nohighlight">\(\alpha\)</span> einangraður sérstöðupunktur <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</section>
+<section id="id2">
+<h3><span class="section-number">4.1.6. </span>Skilgreining (Sjá §4.2)<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(\alpha\)</span> vera einangraðan sérstöðupunkt fyrir fágað fall <span class="math notranslate nohighlight">\(f\)</span>. Ritum Laurent-röð <span class="math notranslate nohighlight">\(f\)</span> í <span class="math notranslate nohighlight">\(\alpha\)</span> sem</p>
+<div class="math notranslate nohighlight">
+\[\sum_{-\infty}^{+\infty}a_n(z-\alpha)^ n.\]</div>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> er sagður afmáanlegur sérstöðupunktur ef höfuðhluti Laurent-raðarinnar er <span class="math notranslate nohighlight">\(0\)</span>, þ.e.a.s. <span class="math notranslate nohighlight">\(a_n=0\)</span> fyrir öll <span class="math notranslate nohighlight">\(n\leq -1\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> er sagt vera skaut ef höfuðhluti Laurent-raðarinnar er endanlegur en ekki 0. Skautið er sagt hafa stig <span class="math notranslate nohighlight">\(m\)</span> ef <span class="math notranslate nohighlight">\(a_{-m}\neq 0\)</span> en <span class="math notranslate nohighlight">\(a_n=0\)</span> fyrir öll <span class="math notranslate nohighlight">\(n&lt;-m\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> er sagt vera verulegur sérstöðupunktur ef höfuðhluti Laurent-raðarinnar er óendanlegur.</p></li>
+</ol>
+</section>
+<section id="setning-sja-4-2-og-setningu-4-2-1">
+<h3><span class="section-number">4.1.7. </span>Setning (Sjá §4.2 og Setningu 4.2.1)<a class="headerlink" href="#setning-sja-4-2-og-setningu-4-2-1" title="Permalink to this heading"></a></h3>
+<p>Einangraður sérstöðupunktur <span class="math notranslate nohighlight">\({\alpha}\)</span> fágaða fallsins <span class="math notranslate nohighlight">\(f\)</span> sem skilgreint er á opnu mengi <span class="math notranslate nohighlight">\(X\)</span> er afmáanlegur ef og aðeins ef til er <span class="math notranslate nohighlight">\(r&gt;0\)</span> og <span class="math notranslate nohighlight">\(g\in {\cal O}(S({\alpha},r))\)</span> þannig að <span class="math notranslate nohighlight">\(S^*({\alpha},r)\subset X\)</span> og <span class="math notranslate nohighlight">\(f(z)=g(z)\)</span> fyrir öll <span class="math notranslate nohighlight">\(z\in S^*({\alpha},r)\)</span>.</p>
+</section>
+<section id="setning-riemanns">
+<h3><span class="section-number">4.1.8. </span>Setning Riemanns.<a class="headerlink" href="#setning-riemanns" title="Permalink to this heading"></a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(\alpha\)</span> er einangraður sérstöðupunktur
+fágaða fallsins <span class="math notranslate nohighlight">\(f\)</span>, og
+<span class="math notranslate nohighlight">\(\lim_{z\to \alpha}(z-\alpha)f(z)= 0\)</span>, þá er <span class="math notranslate nohighlight">\(\alpha\)</span>
+afmáanlegur sérstöðupunktur.</p>
+</section>
+<section id="setning-sja-4-2">
+<h3><span class="section-number">4.1.9. </span>Setning (Sjá §4.2)<a class="headerlink" href="#setning-sja-4-2" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fágað fall á opnu mengi <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(\alpha\)</span> vera einangraðan sérstöðupunkt fallsins <span class="math notranslate nohighlight">\(f\)</span>. Sérstöðupunkturinn <span class="math notranslate nohighlight">\(\alpha\)</span> er skaut af stigi <span class="math notranslate nohighlight">\(m&gt;0\)</span>, ef og aðeins ef til er fágað fall <span class="math notranslate nohighlight">\(g\in {\cal O}(U)\)</span>, þar sem <span class="math notranslate nohighlight">\(U\)</span> er grennd um <span class="math notranslate nohighlight">\(\alpha\)</span>, þannig að <span class="math notranslate nohighlight">\(g(\alpha)\neq 0\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[f(z)=\dfrac{g(z)}{(z-\alpha)^ m}, \qquad z\in U\setminus\{\alpha\}.\]</div>
+</section>
+<section id="setning">
+<h3><span class="section-number">4.1.10. </span>Setning<a class="headerlink" href="#setning" title="Permalink to this heading"></a></h3>
+<p>Fall <span class="math notranslate nohighlight">\(f\)</span> hefur skaut í <span class="math notranslate nohighlight">\(\alpha\)</span> ef og
+aðeins ef <span class="math notranslate nohighlight">\(|f(z)|\to +\infty\)</span> þegar <span class="math notranslate nohighlight">\(z\to \alpha\)</span>.</p>
+</section>
+<section id="setning-stora-picard-setningin">
+<h3><span class="section-number">4.1.11. </span>Setning (Stóra Picard-setningin.)<a class="headerlink" href="#setning-stora-picard-setningin" title="Permalink to this heading"></a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(\alpha\)</span> er verulegur sérstöðupunktur fágaðs falls <span class="math notranslate nohighlight">\(f\)</span> þá gildir að fyrir sérhvert <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> að mengið</p>
+<div class="math notranslate nohighlight">
+\[f(S^*(\alpha, \delta))=\{f(z)\mid z\in S^*(\alpha, \delta)\}\]</div>
+<p>er annaðhvort allt <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> eða til jafnt og <span class="math notranslate nohighlight">\({\mathbb{C}}\setminus\{z_0\}\)</span> þar sem <span class="math notranslate nohighlight">\(z_0\)</span> er einhver föst tvinntala.</p>
+</section>
+<section id="setning-sja-4-4-jofnur-4-4-3-og-4-4-4">
+<h3><span class="section-number">4.1.12. </span>Setning (Sjá §4.4, jöfnur 4.4.3 og 4.4.4)<a class="headerlink" href="#setning-sja-4-4-jofnur-4-4-3-og-4-4-4" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fágað fall og <span class="math notranslate nohighlight">\(\alpha\)</span> skaut <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<ol class="lowerroman simple">
+<li><p>Ef skautið er einfalt (af stigi 1) þá er</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\operatorname{Res}(f,\alpha)=\lim_{z\to \alpha}(z-\alpha)f(z).\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Ef skautið er af stigi <span class="math notranslate nohighlight">\(m\)</span> og við ritum <span class="math notranslate nohighlight">\(f(z)=g(z)/(z-\alpha)^m\)</span> þannig að <span class="math notranslate nohighlight">\(g(\alpha)\neq 0\)</span> þá er</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\operatorname{Res}(f,\alpha)=\dfrac{g^{(m-1)}(\alpha)}{(m-1)!}.\]</div>
+</section>
+</section>
+<section id="leifasetningin">
+<h2><span class="section-number">4.2. </span>Leifasetningin<a class="headerlink" href="#leifasetningin" title="Permalink to this heading"></a></h2>
+<section id="leifasetningin-sja-setningu-4-3-1">
+<h3><span class="section-number">4.2.1. </span>Leifasetningin (Sjá Setningu 4.3.1)<a class="headerlink" href="#leifasetningin-sja-setningu-4-3-1" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(X\)</span> vera opið hlutmengi í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> og látum <span class="math notranslate nohighlight">\(\Omega\)</span> vera opið hlutmengi af <span class="math notranslate nohighlight">\(X\)</span> sem uppfyllir sömu forsendur og í Cauchy-setningunni. Látum <span class="math notranslate nohighlight">\(A\)</span> vera dreift hlutmengi af <span class="math notranslate nohighlight">\(X\)</span> sem sker ekki jaðarinn <span class="math notranslate nohighlight">\(\partial\Omega\)</span> á <span class="math notranslate nohighlight">\(\Omega\)</span>. Ef <span class="math notranslate nohighlight">\(f\in {\cal O}(X\setminus A)\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_{\partial\Omega}f(z)\, dz = 2\pi i \sum_{\alpha\in \Omega\cap A}
+\operatorname{Res}(f,\alpha).\]</div>
+<p>(Sjá §4.4, jöfnur 4.4.3 og 4.4.4) Látum <span class="math notranslate nohighlight">\(f\)</span> vera fágað fall og <span class="math notranslate nohighlight">\(\alpha\)</span> skaut <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<ol class="lowerroman simple">
+<li><p>Ef skautið er einfalt (af stigi 1) þá er</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\operatorname{Res}(f,\alpha)=\lim_{z\to \alpha}(z-\alpha)f(z).\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Ef skautið er af stigi <span class="math notranslate nohighlight">\(m\)</span> og við ritum <span class="math notranslate nohighlight">\(f(z)=g(z)/(z-\alpha)^m\)</span> fyrir <span class="math notranslate nohighlight">\(z\)</span> í gataðri grennd um <span class="math notranslate nohighlight">\(\alpha\)</span> þannig að <span class="math notranslate nohighlight">\(g(\alpha)\neq 0\)</span> þá er</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\operatorname{Res}(f,\alpha)=\dfrac{g^{(m-1)}(\alpha)}{(m-1)!}.\]</div>
+</section>
+<section id="setning-sja-4-4-jofnur-4-4-6-og-4-4-7">
+<h3><span class="section-number">4.2.2. </span>Setning (Sjá §4.4, jöfnur 4.4.6 og 4.4.7)<a class="headerlink" href="#setning-sja-4-4-jofnur-4-4-6-og-4-4-7" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f(z)=g(z)/h(z)\)</span> í grennd við punkt <span class="math notranslate nohighlight">\(\alpha\)</span> þar sem <span class="math notranslate nohighlight">\(g(\alpha)\neq 0\)</span> og <span class="math notranslate nohighlight">\(\alpha\)</span> er <span class="math notranslate nohighlight">\(m\)</span>-föld núllstöð fallsins <span class="math notranslate nohighlight">\(h\)</span> og <span class="math notranslate nohighlight">\(h(z)=(z-\alpha)^mh_1(z)\)</span> þar sem <span class="math notranslate nohighlight">\(h_1(\alpha)\neq 0\)</span>. Þá er <span class="math notranslate nohighlight">\(f\)</span> með skaut af stigi <span class="math notranslate nohighlight">\(m\)</span> í <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(m=1\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\operatorname{Res}(f,\alpha)=\frac{g(\alpha)}{h'(\alpha)}.\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(m&gt;1\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\operatorname{Res}(f,\alpha)=\dfrac 1{(m-1)!}\cdot
+\left.\dfrac {d^{m-1}}{dz^{m-1}}\bigg(\dfrac
+{g(z)}{h_1(z)}\bigg)\right|_{z=\alpha}. \label{11.1.7}\]</div>
+</section>
+<section id="setning-sja-4-5">
+<h3><span class="section-number">4.2.3. </span>Setning (Sjá §4.5)<a class="headerlink" href="#setning-sja-4-5" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f(x,y)\)</span> vera fall af tveimur breytum sem er skilgreint á opnu mengi sem inniheldur einingarhringinn <span class="math notranslate nohighlight">\(x^2+y^2=1\)</span>. Gerum ráð fyrir að til sé dreift mengi <span class="math notranslate nohighlight">\(A\)</span> sem inniheldur enga punkta úr einingarhringnum <span class="math notranslate nohighlight">\(\partial S(0,1)\)</span> og opið mengi <span class="math notranslate nohighlight">\(X\)</span> sem inniheldur <span class="math notranslate nohighlight">\(\overline{S}(0,1)\)</span> þannig að fallið</p>
+<div class="math notranslate nohighlight">
+\[g(z)=f\left(\frac{z^2+1}{2z}, \frac{z^2-1}{2iz}\right)\frac{1}{iz}\]</div>
+<p>sé fágað á <span class="math notranslate nohighlight">\(X\setminus A\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int_0^{2\pi}f(\cos\theta, \sin\theta)\,d\theta
+=\int_{\partial S(0,1)}g(z)\,dz\\
+= 2\pi i\sum_{\alpha\in A\cap S(0,1)}\operatorname{Res}(g(z),\alpha).\end{split}\]</div>
+</section>
+<section id="id3">
+<h3><span class="section-number">4.2.4. </span>Setning (Sjá §4.5)<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem er fágað á menginu <span class="math notranslate nohighlight">\({\mathbb{C}}\setminus A\)</span> þar sem <span class="math notranslate nohighlight">\(A\)</span> er dreift mengi. Gerum ráð fyrir að í menginu <span class="math notranslate nohighlight">\(A\)</span> séu engar rauntölur. Fyrir rauntölu <span class="math notranslate nohighlight">\(r&gt;0\)</span> látum við <span class="math notranslate nohighlight">\(\gamma_r(\theta)=re^{i\theta}\)</span> með <span class="math notranslate nohighlight">\(0\leq\theta\leq \pi\)</span> vera stikunn á hringboganum í efra hálfplaninu <span class="math notranslate nohighlight">\(H_+\)</span> frá <span class="math notranslate nohighlight">\(r\)</span> til <span class="math notranslate nohighlight">\(-r\)</span>. Ef</p>
+<div class="math notranslate nohighlight">
+\[\int_{\gamma_r}f(z)\,dz\xrightarrow[r\rightarrow\infty]{} 0\]</div>
+<p>þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^\infty f(x)\,dx=2\pi i\sum_{\alpha\in A\cap H_+}\operatorname{Res}(f,\alpha).\]</div>
+<p>(Efra hálfplanið <span class="math notranslate nohighlight">\(H_+\)</span> er mengi allra tvinntalna <span class="math notranslate nohighlight">\(z\)</span> þannig
+að <span class="math notranslate nohighlight">\(\operatorname{Im\, } z&gt;0\)</span>. Hægt er að setja fram álíka setningu þar sem er
+tekinn sá hringbogi sem liggur í neðra hálfplaninu
+<span class="math notranslate nohighlight">\(H_-=\{z\in {\mathbb{C}}\mid \operatorname{Im\, } z&lt;0\}\)</span>.)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli03/" class="btn btn-neutral float-left" title="3. Cauchy-setningin og Cauchy-formúlan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli05/" class="btn btn-neutral float-right" title="5. Þýð föll og fágaðar varpanir" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

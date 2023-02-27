@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Monte Carlo hermanir &mdash; Töluleg greining (STÆ405G) 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+<script>
+    // the buttonText string says what will be written on the 
+    // sage cell evaluation button.
+    // It can be changed here.
+    var buttonText = "Keyra"
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".sage",
+        evalButtonText: buttonText
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".rsage",
+        languages: ["r"],
+        evalButtonText: buttonText
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".osage",
+        languages: ["octave"],
+        evalButtonText: buttonText
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".sageAuto",
+        evalButtonText: buttonText,
+        autoeval: true
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".rsageAuto",
+        languages: ["r"],
+        evalButtonText: buttonText,
+        autoeval: true
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".osageAuto",
+        languages: ["octave"],
+        evalButtonText: buttonText,
+        autoeval: true
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".sageAutoHidden",
+        evalButtonText: buttonText,
+        autoeval: true,
+        hide: ["evalButton"],
+        template: sagecell.templates.minimal
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".rsageAutoHidden",
+        languages: ["r"],
+        evalButtonText: buttonText,
+        autoeval: true,
+        hide: ["evalButton"],
+        template: sagecell.templates.minimal
+    });
+</script>
+
+<script>
+    sagecell.makeSagecell({
+        inputLocation: ".osageAutoHidden",
+        languages: ["octave"],
+        evalButtonText: buttonText,
+        autoeval: true,
+        hide: ["evalButton"],
+        template: sagecell.templates.minimal
+    });
+</script>
+
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+</style>
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="Viðauki" href="../vidauki/" />
+    <link rel="prev" title="9. Eigingildisverkefni" href="../kafli09/" />  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Töluleg greining (STÆ405G)
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Núllstöðvar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Brúun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Töluleg diffrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Töluleg heildun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Upphafsgildisverkefni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Jaðargildisverkefni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Jöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Eigingildisverkefni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Monte Carlo hermanir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">10.1. Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nalgun-a-pi">10.1.1. Nálgun á pi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forrit-fyrir-nalgun-a-pi">10.1.2. Forrit fyrir nálgun á pi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heildi-i-einni-breytistaer">10.2. Heildi í einni breytistærð</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nalgun-a-heildi">10.2.1. Nálgun á heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nalgun-a-heildi-daemi">10.2.2. Nálgun á heildi: Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#margfold-heildi-og-rummal">10.3. Margföld heildi og rúmmál</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#margfold-heildi">10.3.1. Margföld heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#margfold-heildi-daemi">10.3.2. Margföld heildi: Dæmi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hermun">10.4. Hermun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nal-buffons">10.4.1. Nál Buffons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Töluleg greining (STÆ405G)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10. </span>Monte Carlo hermanir</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae405g/kafli10.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="monte-carlo-hermanir">
+<h1><span class="section-number">10. </span>Monte Carlo hermanir<a class="headerlink" href="#monte-carlo-hermanir" title="Permalink to this heading"></a></h1>
+<p><em>Chaos is found in greatest abundance wherever order is being sought.
+It always defeats order, because it is better organized.</em>
+– Terry Pratchett, Interesting Times: The Play</p>
+<section id="inngangur">
+<h2><span class="section-number">10.1. </span>Inngangur<a class="headerlink" href="#inngangur" title="Permalink to this heading"></a></h2>
+<p>Hér ætlum við að skoða hvernig hægt er að nota slembitölur til þess að heilda
+tölulega og leysa verkefni tengd hermun.</p>
+<p>Við munum ekki skoða hvernig slembitölur eru fundnar í tölvum og hversu
+slembnar þær í raun og veru eru. Það er töluvert efni um þetta á
+netinu og í bókum.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">https://en.wikipedia.org/wiki/Pseudorandom_number_generator</a></p></li>
+<li><p><a class="reference external" href="https://www.random.org/randomness/">https://www.random.org/randomness/</a></p></li>
+<li><ol class="upperalpha simple" start="4">
+<li><ol class="upperalpha simple" start="5">
+<li><p>Knuth. The Art of Computer Programming, Volume 2: Seminumerical Algorithms.</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<p>Í Matlab og Octave gefa skipanirnar  <em>rand</em>, <em>randn</em> og <em>randi</em> slembitölur með mismunandi
+eiginleika. <em>rand</em> gefur jafndreifðar slembitölur á bilinu <span class="math notranslate nohighlight">\([0,1]\)</span>,
+<em>randn</em> gefur normaldreifðar rauntölur og <em>randi</em> gefur heiltölur á ákveðnu bili.</p>
+<section id="nalgun-a-pi">
+<h3><span class="section-number">10.1.1. </span>Nálgun á pi<a class="headerlink" href="#nalgun-a-pi" title="Permalink to this heading"></a></h3>
+<p>Byrjum á að skoða einfalt verkefni. Við ætlum að nota flatarmál hringskífu til að
+nálga <span class="math notranslate nohighlight">\(pi\)</span>. Við vitum að flatarmál hringskífu með geisla <span class="math notranslate nohighlight">\(r\)</span> er <span class="math notranslate nohighlight">\(\pi r^2\)</span>.
+Setjum <span class="math notranslate nohighlight">\(r=1\)</span> og punkt af handahófi í rétthyrningnum <span class="math notranslate nohighlight">\([-1,1]\times[-1,1]\)</span>, þá
+eru líkurnar á að hann lendi á hringskífunni <span class="math notranslate nohighlight">\(p=\pi/4\)</span>. Þannig að ef við
+getum fundið líkurnar <span class="math notranslate nohighlight">\(p\)</span> þá finnum við gildið á <span class="math notranslate nohighlight">\(\pi\)</span>. Líkurnar er hægt að herma
+með því að velja marga punkta af handahófi og athuga hversu hátt hlutfall þeirra
+lendir á skífunni. Af samhverfuástæðum er nóg fyrir okkur að skoða fyrsta fjórðung
+þannig að við veljum punkta <span class="math notranslate nohighlight">\((x_1,y_1),\ldots,(x_n,y_n) \in [0,1]\times[0,1]\)</span>
+af handahófi og skilgreinum <span class="math notranslate nohighlight">\(S_n\)</span> sem fjölda þeirra punkta sem lenda
+innan hringskífunnar og þá mun</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \frac{S_n}{n} = \frac{\pi}{4}.\]</div>
+</section>
+<section id="forrit-fyrir-nalgun-a-pi">
+<h3><span class="section-number">10.1.2. </span>Forrit fyrir nálgun á pi<a class="headerlink" href="#forrit-fyrir-nalgun-a-pi" title="Permalink to this heading"></a></h3>
+<p>Forritum þetta í <a class="reference external" href="https://www.sagemath.org">Sage</a> sem er forritunarmál fyrir
+vísindalega útreikninga sem byggir á Python.</p>
+<div class='sageAuto'><script type='text/x-sage'>var ('x y r n'); r = 1; inside = 0; points = []
+n = 100  ## Try changing this! This is the number of shots the estimate is based on
+### Shoot randomly into the square:
+for i in range(0,n):
+    [x,y]=[random(),random()]
+    points.append([x,y])
+
+### If a shot lands inside the circle, make a note of it
+    if (y <= sqrt((r^2)-(x^2))):
+        inside += 1
+
+### Approximate pi based on the fraction of shots that landed in the circle
+### Area of circle = pi*r^2; Area of square = (2*r)^2 = 4*r^2
+### Shots in circle / Shots in square = (pi*r^2)/(4*r^20 = pi()/4
+piapprox = 4*(inside / n)
+estimate = "Með því að nota "
+estimate += str(n)
+estimate += " punkta, fæst að pi er um það bil "
+estimate += str(piapprox.n())
+show(estimate)
+### Graph the solution
+circle = []
+for i in range(0,1000):
+    x = i/1000
+    y = sqrt((r^2)-(i/1000)^2)
+    circle.append([x,y])
+graph = list_plot(points)
+graph += list_plot(circle,color='red',figsize=[5,4],plotjoined=true)
+show(graph)
+</script></div><p>Byggt á. <a class="reference external" href="https://github.com/BC-Design/sage/blob/master/monte-carlo.html">https://github.com/BC-Design/sage/blob/master/monte-carlo.html</a> .</p>
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Prófið að breyta gildinu á n í forritinu og sjáið hvort ekki er hægt að
+bæta nálgunina.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Þar sem aðferðin er slembin þá fæst ekki alltaf sama svarið þegar forritið er keyrt fyrir sama
+gildið á n.</p>
+</div>
+</section>
+</section>
+<section id="heildi-i-einni-breytistaer">
+<h2><span class="section-number">10.2. </span>Heildi í einni breytistærð<a class="headerlink" href="#heildi-i-einni-breytistaer" title="Permalink to this heading"></a></h2>
+<section id="nalgun-a-heildi">
+<h3><span class="section-number">10.2.1. </span>Nálgun á heildi<a class="headerlink" href="#nalgun-a-heildi" title="Permalink to this heading"></a></h3>
+<p>Það er lítill vandi að nálga heildi með þessari aðferð. <em>Meðalgildi</em> falls <span class="math notranslate nohighlight">\(f\)</span> á bilinu
+<span class="math notranslate nohighlight">\([a,b]\)</span> er skilgreint sem</p>
+<div class="math notranslate nohighlight">
+\[\overline f = \frac{1}{b-a} \int_a^b f(x)\, dx,\]</div>
+<p>þannig að ef við getum fundið nálgun á meðalgildinu þá getum við nálgað heildið.
+Ef við veljum af handahófi punkta <span class="math notranslate nohighlight">\(x_1,x_2,\ldots,x_n \in [a,b]\)</span> þá er eðlilegt að
+ætla að meðaltal fallgildanna í þessum punktum stefni á meðalgildi fallsins, það er</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\to \infty} \frac 1n \sum_{i=1}^n f(x_i) = \overline f.\]</div>
+</section>
+<section id="nalgun-a-heildi-daemi">
+<h3><span class="section-number">10.2.2. </span>Nálgun á heildi: Dæmi<a class="headerlink" href="#nalgun-a-heildi-daemi" title="Permalink to this heading"></a></h3>
+<p>Prófum að nálga heildið</p>
+<div class="math notranslate nohighlight">
+\[\int_0^2 x^2 - \frac 12 x^3 + \frac 1{10}x\, dx\]</div>
+<p>með því að velja af handahófi 1000 punkta á bilinu <span class="math notranslate nohighlight">\([0,2]\)</span> og nálga meðalgildið með meðaltali
+fallgildanna. Athugið að rétt svar er <span class="math notranslate nohighlight">\(13/15 \approx 0.86667\)</span>.</p>
+<div class='osageAuto'><script type='text/x-sage'>n=1000;
+x=2*rand(n,1); % Veljum n punkta af handahófi á bilinu [0,2]
+f=@(x) x.^2 - x.^3/2 + x/10;
+medf = sum(f(x))/n; % Meðalgildi f
+heildi = medf*2 % Heildið er margfeldi meðalgildisins og billengdarinnar
+</script></div></section>
+</section>
+<section id="margfold-heildi-og-rummal">
+<h2><span class="section-number">10.3. </span>Margföld heildi og rúmmál<a class="headerlink" href="#margfold-heildi-og-rummal" title="Permalink to this heading"></a></h2>
+<section id="margfold-heildi">
+<h3><span class="section-number">10.3.1. </span>Margföld heildi<a class="headerlink" href="#margfold-heildi" title="Permalink to this heading"></a></h3>
+<p>Aðferðin hér að ofan er ekki mjög góð til þess að nálga heildi, skekkjan er af stærðargráðunni
+<span class="math notranslate nohighlight">\(1/\sqrt n\)</span> samanborið við <span class="math notranslate nohighlight">\(1/n^2\)</span> í <a class="reference external" href="kafli05.html#id5">samsettu trapisureglunni</a>.
+Helstu kostir þess að nota slembni til að nálga heildi koma fram þegar við þurfum að reikna
+heildi í mörgum breytistærðum. Þá þurfa hefðbundnar aðferðir eins og samsetta trapisureglan
+<span class="math notranslate nohighlight">\(n^d\)</span> punkta, þar sem <span class="math notranslate nohighlight">\(d\)</span> er fjöldi breytistærða.
+En helsti kostur Monte Carlo heildunar er að það er auðvelt að heilda yfir flókin svæði. Hefðbundnar
+aðferðir þurfa stikun á svæðinu til þess að ákvarða mörkin á heildunum en Monte Carlo þarf bara
+að geta ákvarðað hvort tiltekinn punktur er innan svæðisins eða ekki.</p>
+</section>
+<section id="margfold-heildi-daemi">
+<h3><span class="section-number">10.3.2. </span>Margföld heildi: Dæmi<a class="headerlink" href="#margfold-heildi-daemi" title="Permalink to this heading"></a></h3>
+<p>Reiknum rúmmál hlutarins <span class="math notranslate nohighlight">\(S \subset \mathbb R^3\)</span> sem samanstendur af öllum punktum í
+<span class="math notranslate nohighlight">\([0,1]^3\)</span> sem uppfylla eftirfarandi ójöfnur</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x^2 + \sin(y) &amp;\leq z \\
+x-z+\exp(y) \leq 1
+\end{aligned}\end{split}\]</div>
+<p>Rúmmálið, <span class="math notranslate nohighlight">\(V\)</span>, fæst með því að reikna eftirfarandi heildi</p>
+<div class="math notranslate nohighlight">
+\[V = \int \int \int_S 1\, dx\, dy\, dz.\]</div>
+<div class='osageAuto'><script type='text/x-sage'># Reiknar rúmmálið af hlutunum í [0,1]x[0,1]x[0,1] í R^3
+# sem uppfyllir bæði
+#          x^2 + sin(y)<=z   (f)
+#          x-z+exp(y)<=1     (g)
+# Skilgreinum n punkta í [0,1]^3 af handahófi
+n=1000;
+
+x = rand(1,n);
+y = rand(1,n);
+z = rand(1,n);
+
+# n-vigur þar sem x^2+sin(y)<=z er uppfyllt (1 satt, 0 ósatt)
+f = (x.^2 + sin(y)<=z);
+# n-vigur þar sem x-z+exp(y)<=1 er uppfyllt (1 satt, 0 ósatt)
+g = (x-z+exp(y)<=1);
+
+# f&g er vigur þeirra sem punkta sem uppfylla bæði skilyrðin,
+# hlutfalla þeirra margfaldað við rúmmál tenginsins (sem er 1) gefur okkur
+# rúmmál hlutarins
+V = sum(f & g)/n
+</script></div></section>
+</section>
+<section id="hermun">
+<h2><span class="section-number">10.4. </span>Hermun<a class="headerlink" href="#hermun" title="Permalink to this heading"></a></h2>
+<p>Skoðum að lokum einfalt dæmi sem er ekki auðvelt að leysa beint, en er auðvelt að herma með því
+að nota sömu hugmyndir og hér að ofan.</p>
+<section id="nal-buffons">
+<h3><span class="section-number">10.4.1. </span>Nál Buffons<a class="headerlink" href="#nal-buffons" title="Permalink to this heading"></a></h3>
+<p>Nál af einingarlengd er hent af handahófi á blað með tveimur samsíða línum
+og lengdin á milli línanna er 1.
+Gefið að miðja nálarinnar lendi á milli línanna, hverjar eru líkurnar
+á að nálin öll lendi á milli línanna?</p>
+<div class='osageAuto'><script type='text/x-sage'># Nál af einingarlengd er hent á blað með tveimur samsíða línum
+# og lengdin á milli línanna er 1.
+# Gefið að miðja nálarinnar lendi á milli línanna, hverjar eru líkurnar
+# á að nálin öll lendi á milli línanna?
+#
+# Hendum n nálum að handahófi og athugum. Hvert kast ákvarðast
+# af miðju nálarinnar u (af samhverfu ástæðum er nóg að hugsa um að
+# miðjan lendi á bilinu [0,0.5]) og hornið v sem er á bilinu [0,pi/2]
+#
+# Nálin lendir á milli línanna ef
+#       2u <= sin(v)
+#
+# Sjá nánar http://en.wikipedia.org/wiki/Buffon%27s_needle
+
+n=1000;
+u = rand(1,n)/2;
+v = rand(1,n)*pi/2;
+
+p = sum(2*u <= sin(v))/n # rétt svar er 2/pi, sem er u.þ.b. 0.63662
+</script></div></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli09/" class="btn btn-neutral float-left" title="9. Eigingildisverkefni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../vidauki/" class="btn btn-neutral float-right" title="Viðauki" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

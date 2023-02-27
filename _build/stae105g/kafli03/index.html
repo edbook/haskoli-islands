@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Afleiður &mdash; Hagnýt stærðfræðigreining (STÆ105G) 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+	<!-- hoverrole.py css code -->
+	<style type="text/css">
+		a.tooltip {outline:none; border-bottom: thin dotted; background: #ffeedd}
+		a.tooltip strong {line-height:30px;}
+		a.tooltip:hover {text-decoration:none;} 
+		a.tooltip span {
+		    z-index:10;display:none; padding:14px 20px;
+		    margin-top:-30px; margin-left:12px;
+		    width:310px; line-height:16px;
+		}
+		a.tooltip:hover span{
+		    display:inline; position:absolute; color:#111;
+		    border:1px solid #DCA; background:#fffAF0;}
+		.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+		    
+		/*CSS3*/
+		a.tooltip span
+		{
+		    border-radius:4px;
+		    box-shadow: 5px 5px 8px #CCC;
+		}
+	</style>
+	<!-- End hoverrole.py css code -->
+
+	<style type="text/css">
+		/* .sagecell .CodeMirror-scroll {
+			overflow-y: hidden;
+			overflow-x: auto;
+		}
+		.sagecell .CodeMirror {
+			height: auto;
+		} */
+
+		/* - Begin equation reference style - */
+		h6.eqno{
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		h6 .headerlink{
+			display: inline-block !important;
+		}
+		h6 .headerlink:after{
+			visibility: hidden !important;
+		}
+		h6 .headerlink:hover:after{
+			visibility: visible !important;
+		}
+		.eqno:hover > .headerlink:after{
+			visibility: visible !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+
+		table > caption > .headerlink{
+			visibility: hidden !important;
+		}
+		/* - End - */
+
+	</style>
+
+
+    
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="4. Hagnýting á diffrun" href="../kafli04/" />
+    <link rel="prev" title="2. Markgildi og samfelldni" href="../kafli02/" />
+
+
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+	<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+	<script>ggbAppletId = []; </script>
+	
+
+     
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Hagnýt stærðfræðigreining (STÆ105G)
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tölur og föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Markgildi og samfelldni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Afleiður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#skilgreining-a-afleiu">3.1. Skilgreining á afleiðu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-afleia">3.1.1. Dæmi: afleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-diffranleiki-i-punkti">3.1.2. Setning: Diffranleiki í punkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-diffranleiki-i-punkti">3.1.3. Dæmi: Diffranleiki í punkti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#snertill">3.1.4. Snertill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd-hallatalan-infty-er-ekki-leyf">3.1.5. Athugasemd: Hallatalan <span class="math notranslate nohighlight">\(\infty\)</span> er ekki leyfð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afleia-sem-fall">3.2. Afleiða sem fall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utvikkun-fyrir-loku-bil">3.2.1. Útvíkkun fyrir lokuð bil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-haegri-vinstri-afleia">3.2.2. Skilgreining: Hægri/vinstri afleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">3.2.3. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-diffranlegt-fall">3.2.4. Skilgreining: Diffranlegt fall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rithattur">3.2.5. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3.2.6. Dæmi: Afleiða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-haerri-afleiur">3.2.7. Skilgreining: Hærri afleiður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-haerri-afleiur">3.2.8. Dæmi: Hærri afleiður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.2.9. Ritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reiknireglur">3.3. Reiknireglur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-diffranleg-foll">3.3.1. Reiknireglur: Diffranleg föll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-nokkrar-afleiur">3.3.2. Dæmi: Nokkrar afleiður</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#afleiur-marglia">3.3.3. Afleiður margliða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-afleia-margliu">3.3.4. Dæmi: Afleiða margliðu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afleiur-hornafallanna">3.4. Afleiður hornafallanna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-afleia-kosinus-og-sinus">3.4.1. Setning: Afleiða kósínus og sínus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-afleia-sinus">3.4.2. Dæmi: Afleiða sínus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-afleia-tangens">3.4.3. Setning: Afleiða tangens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-afleia-tangens">3.4.4. Dæmi: Afleiða tangens</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kejureglan">3.5. Keðjureglan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-kejureglan">3.5.1. Setning: Keðjureglan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-kejureglan">3.5.2. Dæmi: Keðjureglan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#andhverf-foll">3.6. Andhverf föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">3.6.1. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eiginleikar-andhverfa">3.6.2. Setning; Eiginleikar andhverfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-afleia-andhverfunnar">3.6.3. Setning: Afleiða andhverfunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#folgin-diffrun">3.7. Fólgin diffrun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-folgin-diffrun">3.7.1. Dæmi: Fólgin diffrun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-andhverfusetningin">3.7.2. Setning: Andhverfusetningin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#me-orum-orum">3.7.3. Með öðrum orðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vinnulag">3.7.4. Vinnulag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hagnyting-a-folginni-diffrun">3.7.5. Setning: Hagnýting á fólginni diffrun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afleiur-logra-og-visisfalla">3.8. Afleiður logra og vísisfalla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-afleiur-logra-og-visisfalla">3.8.1. Setning: Afleiður logra og vísisfalla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-afleia-visisfalls">3.8.2. Dæmi: Afleiða vísisfalls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-afleia-lografalls">3.8.3. Dæmi: Afleiða lografalls</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Hagnýting á diffrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Heildun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Hagnýting á heildun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Aðferðir í heildun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngagur að diffurjöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Runur og raðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Veldaraðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli_linuleg_algebra/">11. Inngangur að línulegri algebru</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../umnamskeidid/">Gagnlegar upplýsingar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Hagnýt stærðfræðigreining (STÆ105G)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Afleiður</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae105g/kafli03.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="afleiur">
+<h1><span class="section-number">3. </span>Afleiður<a class="headerlink" href="#afleiur" title="Permalink to this heading"></a></h1>
+<div class="athugasemd admonition">
+<p class="admonition-title">Nauðsynleg undirstaða</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../kafli02/#markgildi"><span class="std std-ref">Skilgreiningar á markgildi</span></a></p></li>
+<li><p><a class="reference internal" href="../kafli02/#samfelldni"><span class="std std-ref">Samfelldni</span></a></p></li>
+<li><p><a class="reference internal" href="../kafli01/#samskeyting"><span class="std std-ref">samskeyting falla</span></a></p></li>
+<li><p><a class="reference internal" href="../kafli01/#andhverfa"><span class="std std-ref">andhverfur falla</span></a></p></li>
+<li><p>Hornaföll</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<blockquote class="epigraph">
+<div><p><em>The Quest stands upon the edge of a knife. Stray but a little, and it
+will fail, to the ruin of all. Yet hope remains while the Company is true.</em></p>
+<p>– Galadriel, The Fellowship of the Ring</p>
+</div></blockquote>
+<hr class="docutils" />
+<section id="skilgreining-a-afleiu">
+<span id="afleidur"></span><span id="index-0"></span><h2><span class="section-number">3.1. </span>Skilgreining á afleiðu<a class="headerlink" href="#skilgreining-a-afleiu" title="Permalink to this heading"></a></h2>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(a\)</span> vera innri punkt skilgreiningarmengis falls <span class="math notranslate nohighlight">\(f\)</span>.
+<a class="tooltip"  href="https://www.stae.is/os/leita/derivative"  target="_blank">
+  Afleiða falls
+    <span>en: <i>derivative</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math notranslate nohighlight">\(f\)</span> <em>í punkti</em> <span class="math notranslate nohighlight">\(a\)</span> er skilgreind sem</p>
+<div class="math notranslate nohighlight">
+\[f'(a)=\lim_{h\rightarrow 0}\frac{f(a+h)-f(a)}{h}.\]</div>
+<p>Ef markgildið er til þá er sagt að fallið <span class="math notranslate nohighlight">\(f\)</span> sé
+<a class="tooltip"  href="https://www.stae.is/os/leita/differentiable"  target="_blank">
+  diffranlegt
+    <span>en: <i>differentiable</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <em>í
+punktinum</em> <span class="math notranslate nohighlight">\(a\)</span>, en annars er sagt að fallið sé <em>ekki diffranlegt í
+punktinum</em> <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+<section id="daemi-afleia">
+<h3><span class="section-number">3.1.1. </span>Dæmi: afleiða<a class="headerlink" href="#daemi-afleia" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Fallið <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> er diffranlegt í sérhverjum punkti <span class="math notranslate nohighlight">\(a\)</span>.
+Það sést af því að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\lim_{h\to 0} \frac{f(a+h)-f(a)}{h}
+&amp;= \lim_{h\to 0} \frac{(a+h)^2-a^2}{h}\\
+&amp;= \lim_{h\to 0} \frac{a^2+2ah+h^2-a^2}{h}\\
+&amp;= \lim_{h\to 0} \frac{2ah+h^2}{h}\\
+&amp;= \lim_{h\to 0} 2a+h = 2a.\end{aligned}\end{split}\]</div>
+<div id="UhMWezT7SYwWxAtVDkAQhEDiKPa84X"></div>
+<script>
+var ggbApp_UhMWezT7SYwWxAtVDkAQhEDiKPa84X = new GGBApplet({
+"appName": "calculator", 
+"width": 700, 
+"height": 500, 
+"material_id": "SUnNEmTG", 
+"preventFocus": true, 
+"enableShiftDragZoom": false 
+}, true);
+ggbAppletId["UhMWezT7SYwWxAtVDkAQhEDiKPa84X"] = ggbApp_UhMWezT7SYwWxAtVDkAQhEDiKPa84X;
+</script>
+<p></p>
+</div>
+</section>
+<section id="setning-diffranleiki-i-punkti">
+<h3><span class="section-number">3.1.2. </span>Setning: Diffranleiki í punkti<a class="headerlink" href="#setning-diffranleiki-i-punkti" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef fall <span class="math notranslate nohighlight">\(f\)</span> er diffranlegt í punkti <span class="math notranslate nohighlight">\(c\)</span> þá er <span class="math notranslate nohighlight">\(f\)</span>
+samfellt í punktinum <span class="math notranslate nohighlight">\(c\)</span>.</p>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<blockquote>
+<div><p>Fall getur verið samfellt í punkti <span class="math notranslate nohighlight">\(c\)</span> án þess að það sé
+diffranlegt í <span class="math notranslate nohighlight">\(c\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-diffranleiki-i-punkti">
+<h3><span class="section-number">3.1.3. </span>Dæmi: Diffranleiki í punkti<a class="headerlink" href="#daemi-diffranleiki-i-punkti" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Fallið <span class="math notranslate nohighlight">\(f(x) = |x|\)</span> er samfellt. En það er ekki diffranlegt í
+punktinum <span class="math notranslate nohighlight">\(x=0\)</span>. Það sést af því að</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h\to 0^+} \frac{f(0+h)-f(0)}{h} = \lim_{h\to 0^+} \frac{|h|}{h} = 1\]</div>
+<p>en</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h\to 0^-} \frac{f(0+h)-f(0)}{h} = \lim_{h\to 0^-} \frac{|h|}{h} = -1.\]</div>
+<p>Þannig að markgildið <span class="math notranslate nohighlight">\(\lim_{h\to 0} \frac{f(0+h)-f(0)}{h}\)</span> er ekki til og því er
+fallið ekki diffranlegt í <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+</div>
+</section>
+<section id="snertill">
+<span id="index-1"></span><h3><span class="section-number">3.1.4. </span>Snertill<a class="headerlink" href="#snertill" title="Permalink to this heading"></a></h3>
+<p>Afleiðu falls <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\(a\)</span> fæst með því að taka
+sniðil (e. secant) í gegnum punktana <span class="math notranslate nohighlight">\((a,f(a))\)</span> og <span class="math notranslate nohighlight">\((a+h,f(a+h))\)</span>, og
+láta svo <span class="math notranslate nohighlight">\(h\)</span> stefna á <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>Þetta gefur hallatölu <a class="tooltip"  href="https://www.stae.is/os/leita/tangent_line"  target="_blank">
+  snertilsins
+    <span>en: <i>tangent line, tangent vector</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> við graf fallsins í punktinum
+<span class="math notranslate nohighlight">\((a,f(a))\)</span></p>
+<p>Jafna snertils við graf fallsins í punktingum <span class="math notranslate nohighlight">\(a\)</span> er línan</p>
+<div class="math notranslate nohighlight">
+\[y = f'(a)(x-a) + f(a).\]</div>
+<div id="50M3Q2I0h50J4U4asYg7Wyq2O7cfke"></div>
+<script>
+var ggbApp_50M3Q2I0h50J4U4asYg7Wyq2O7cfke = new GGBApplet({
+"appName": "calculator", 
+"width": 700, 
+"height": 400, 
+"material_id": "1425869", 
+"preventFocus": true, 
+"enableShiftDragZoom": true 
+}, true);
+ggbAppletId["50M3Q2I0h50J4U4asYg7Wyq2O7cfke"] = ggbApp_50M3Q2I0h50J4U4asYg7Wyq2O7cfke;
+</script>
+<p></p>
+</section>
+<section id="athugasemd-hallatalan-infty-er-ekki-leyf">
+<h3><span class="section-number">3.1.5. </span>Athugasemd: Hallatalan <span class="math notranslate nohighlight">\(\infty\)</span> er ekki leyfð<a class="headerlink" href="#athugasemd-hallatalan-infty-er-ekki-leyf" title="Permalink to this heading"></a></h3>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Við leyfum ekki <span class="math notranslate nohighlight">\(f'(a) = \infty\)</span> eða
+<span class="math notranslate nohighlight">\(f'(a) = -\infty\)</span>. Samanber
+<span class="math notranslate nohighlight">\(f(x) = x^{\frac 13}\)</span> í <span class="math notranslate nohighlight">\(a=0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h \to 0} \frac{f(0+h)-f(0)}h =
+   \lim_{h \to 0} \frac{h^{\frac 13}}h =
+    \lim_{h \to 0} h^{-\frac 23} = \infty.\]</div>
+<p>Hér ætti því jafna snertilsins að vera <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/01_x13.png"><img alt="../_images/01_x13.png" class="align-center" src="../_images/01_x13.png" style="width: 12cm;" /></a>
+<p>Við viljum að snertillinn sé nálgun við graf fallsins fyrir <span class="math notranslate nohighlight">\(x\)</span> nálægt
+<span class="math notranslate nohighlight">\(a\)</span>, lóðrétt lína er gagnslaus nálgun því hún er ekki skilgreind sem
+fall af <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="afleia-sem-fall">
+<h2><span class="section-number">3.2. </span>Afleiða sem fall<a class="headerlink" href="#afleia-sem-fall" title="Permalink to this heading"></a></h2>
+<section id="utvikkun-fyrir-loku-bil">
+<h3><span class="section-number">3.2.1. </span>Útvíkkun fyrir lokuð bil<a class="headerlink" href="#utvikkun-fyrir-loku-bil" title="Permalink to this heading"></a></h3>
+<p>Ef fallið <span class="math notranslate nohighlight">\(f\)</span> er skilgreint á lokuðu bili þá getum við skilgreint
+afleiðuna í endapunktunum með því að taka markgildi frá hægri/vinstri
+eftir því sem við á.</p>
+</section>
+<section id="skilgreining-haegri-vinstri-afleia">
+<span id="index-2"></span><h3><span class="section-number">3.2.2. </span>Skilgreining: Hægri/vinstri afleiða<a class="headerlink" href="#skilgreining-haegri-vinstri-afleia" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<ol class="lowerroman">
+<li><p><em>Hægri afleiða falls</em> <span class="math notranslate nohighlight">\(f\)</span> <em>í punkti</em> <span class="math notranslate nohighlight">\(x\)</span> er skilgreind
+sem</p>
+<div class="math notranslate nohighlight">
+\[f_+'(x)=\lim_{h\rightarrow 0^+}\frac{f(x+h)-f(x)}{h}.\]</div>
+</li>
+<li><p><em>Vinstri afleiða falls</em> <span class="math notranslate nohighlight">\(f\)</span> <em>í punkti</em> <span class="math notranslate nohighlight">\(x\)</span> er
+skilgreind sem</p>
+<div class="math notranslate nohighlight">
+\[f_-'(x)=\lim_{h\rightarrow 0^-}\frac{f(x+h)-f(x)}{h}.\]</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="setning">
+<h3><span class="section-number">3.2.3. </span>Setning<a class="headerlink" href="#setning" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef <span class="math notranslate nohighlight">\(x\)</span> er innri punktur í skilgreiningarmengi fallsins <span class="math notranslate nohighlight">\(f\)</span>
+þá er <span class="math notranslate nohighlight">\(f\)</span> diffranlegt í <span class="math notranslate nohighlight">\(x\)</span> þá og því aðeins að</p>
+<div class="math notranslate nohighlight">
+\[f_+'(x)=\lim_{h\rightarrow 0^+}\frac{f(x+h)-f(x)}{h}
+=   f_-'(x)=\lim_{h\rightarrow 0^-}\frac{f(x+h)-f(x)}{h},\]</div>
+<p>og þá er <span class="math notranslate nohighlight">\(f'(x)\)</span> jafnt og markgildin hér fyrir ofan.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Hægt er að túlka afleiðu falls sem fall í sínum eigin rétti. Lauslega er þá talað um
+að fallið <span class="math notranslate nohighlight">\(f(x)\)</span> sé diffranlegt ef til er fall <span class="math notranslate nohighlight">\(f'(x)\)</span> þar sem
+það að skipta út breytunni <span class="math notranslate nohighlight">\(x\)</span> fyrir einhvern innripunkt <span class="math notranslate nohighlight">\(a\)</span> í skilgreiningarmengi
+<span class="math notranslate nohighlight">\(f\)</span> gefur afleiðuna í punktinu <span class="math notranslate nohighlight">\(a\)</span>. Til þess að skilgreiningin haldi
+vatni endanlega þarf svo að leyfa hægri/vinstri afleiður í jaðarpunktum skilgreiningarmengisins.</p>
+</div>
+</section>
+<section id="skilgreining-diffranlegt-fall">
+<span id="index-3"></span><h3><span class="section-number">3.2.4. </span>Skilgreining: Diffranlegt fall<a class="headerlink" href="#skilgreining-diffranlegt-fall" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall með skilgreiningarmengi <span class="math notranslate nohighlight">\(A\)</span>. Gerum ráð
+fyrir að <span class="math notranslate nohighlight">\(A\)</span> sé sammengi endanlega margra bila. Við segjum að
+fallið <span class="math notranslate nohighlight">\(f\)</span> sé <em>diffranlegt</em> ef það er diffranlegt í öllum innri
+punktum <span class="math notranslate nohighlight">\(A\)</span> og diffranlegt frá vinstri/hægri í jaðarpunktum
+<span class="math notranslate nohighlight">\(A\)</span> eftir því sem við á.</p>
+</div>
+</section>
+<section id="rithattur">
+<h3><span class="section-number">3.2.5. </span>Ritháttur<a class="headerlink" href="#rithattur" title="Permalink to this heading"></a></h3>
+<p>Afleiða falls <span class="math notranslate nohighlight">\(f\)</span> er ýmist táknuð með</p>
+<div class="math notranslate nohighlight">
+\[f', \qquad \frac {df}{dx}, \qquad D_x f \qquad \text{eða} \qquad Df.\]</div>
+<p>Ef við skrifum <span class="math notranslate nohighlight">\(y=f(x)\)</span> þá má einnig tákna hana með</p>
+<div class="math notranslate nohighlight">
+\[y', \qquad \frac {dy}{dx}, \qquad D_x y \qquad \text{eða} \qquad Dy.\]</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Enn og aftur er túlkun bókarinnar á hugtakinu diffranlegt fall örlítið lausari
+í reipunum en sú sem er notuð hérna. Hún virkar ágætlega fyrir afleiður í
+öllum innri punktum skilgreiningarmengisins en athugar ekki hvað gerist í
+jaðarpunktum þess.</p>
+</div>
+</section>
+<section id="id1">
+<h3><span class="section-number">3.2.6. </span>Dæmi: Afleiða<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Skoðum afleiðu fallsins</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sqrt{x}, f: [0,\infty[ \to \mathbb{R}\]</div>
+<p>í vinstri endapunkti skilgreiningarmengisins.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fallið <span class="math notranslate nohighlight">\(f(x) = \sqrt{x}\)</span>, <span class="math notranslate nohighlight">\(f:[0,\infty[\to {{\mathbb  R}}\)</span>
+er diffranlegt á menginu <span class="math notranslate nohighlight">\(]0,\infty[\)</span> og afleiðan er gefin með
+<span class="math notranslate nohighlight">\(f'(x) = \frac 1{2\sqrt{x}} = \frac 12 x^{-1/2}\)</span> þar. Hins vegar
+er <span class="math notranslate nohighlight">\(f\)</span> ekki diffranlegt í <span class="math notranslate nohighlight">\(x=0\)</span> þrátt fyrir að fallgildið sé
+vel skilgreint (og fallið samfellt frá hægri) þar.</p>
+<p>Ef <span class="math notranslate nohighlight">\(x&gt;0\)</span> þá fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \lim_{h\to 0} \frac{\sqrt{x+h}-\sqrt{x}}h &amp;=
+  \lim_{h\to 0} \frac{(\sqrt{x+h}-\sqrt{x})(\sqrt{x+h}+\sqrt{x})}{h(\sqrt{x+h}+\sqrt{x})}\\
+  &amp;= \lim_{h\to 0} \frac{\sqrt{x+h}^2-\sqrt{x}^2}{h(\sqrt{x+h}+\sqrt{x})}\\
+  &amp;= \lim_{h\to 0} \frac{x+h-x}{h(\sqrt{x+h}+\sqrt{x})}\\
+  &amp;= \lim_{h\to 0} \frac{1}{\sqrt{x+h}+\sqrt{x}} = \frac{1}{2\sqrt{x}},\end{aligned}\end{split}\]</div>
+<p>sem segir okkur að <span class="math notranslate nohighlight">\(f'(x) = \frac 12 x^{-1/2}\)</span>.</p>
+<p>Í vinstri endapunkti skilgreingarsvæðisins, <span class="math notranslate nohighlight">\(x=0\)</span>, þá fæst hins
+vegar</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \lim_{h\to 0^+} \frac{\sqrt{h}-\sqrt{0}}h &amp;=
+  \lim_{h\to 0^+} \frac{\sqrt{h}}h\\
+  &amp;= \lim_{h\to 0^+} \frac{1}{\sqrt{h}} = \infty,\end{aligned}\end{split}\]</div>
+<p>sem sýnir að fallið er ekki diffranlegt frá hægri í <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+</div>
+</section>
+<section id="skilgreining-haerri-afleiur">
+<h3><span class="section-number">3.2.7. </span>Skilgreining: Hærri afleiður<a class="headerlink" href="#skilgreining-haerri-afleiur" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall. <em>Afleiðan</em> <span class="math notranslate nohighlight">\(f'\)</span> er fall sem skilgreint er
+í öllum punktum þar sem <span class="math notranslate nohighlight">\(f\)</span> er diffranlegt.</p>
+<p>Ef fallið <span class="math notranslate nohighlight">\(f'\)</span> er diffranlegt í punkti <span class="math notranslate nohighlight">\(x\)</span> þá er afleiða
+<span class="math notranslate nohighlight">\(f'\)</span> í punktinum <span class="math notranslate nohighlight">\(x\)</span> táknuð með <span class="math notranslate nohighlight">\(f''(x)\)</span> og kölluð
+önnur afleiða (e. second derivative) <span class="math notranslate nohighlight">\(f\)</span> í punktinum <span class="math notranslate nohighlight">\(x\)</span>. Líta má á aðra afleiðu
+<span class="math notranslate nohighlight">\(f\)</span> sem fall <span class="math notranslate nohighlight">\(f''\)</span> sem er skilgreint í öllum punktum þar sem
+<span class="math notranslate nohighlight">\(f'\)</span> er diffranlegt.</p>
+<p>Almennt má skilgreina <span class="math notranslate nohighlight">\(n\)</span><em>-tu afleiðu</em> <span class="math notranslate nohighlight">\(f\)</span>, táknaða með
+<span class="math notranslate nohighlight">\(f^{(n)}\)</span>, þannig að í þeim punktum <span class="math notranslate nohighlight">\(x\)</span> þar sem fallið
+<span class="math notranslate nohighlight">\(f^{(n-1)}\)</span> er diffranlegt þá er
+<span class="math notranslate nohighlight">\(f^{(n)}(x)=\frac{d}{dx}f^{(n-1)}(x)\)</span>.</p>
+</div>
+</section>
+<section id="daemi-haerri-afleiur">
+<h3><span class="section-number">3.2.8. </span>Dæmi: Hærri afleiður<a class="headerlink" href="#daemi-haerri-afleiur" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum fyrstu og aðra afleiðu fallsins <span class="math notranslate nohighlight">\(f(x)=3x^2\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Ef <span class="math notranslate nohighlight">\(f(x)  = 3x^2\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[f'(x) = 3\frac{d}{dx}x^2 = 3\cdot 2x = 6x\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[f''(x) = \frac{d}{dx} 6x = 6.\]</div>
+</div>
+</section>
+<section id="id2">
+<h3><span class="section-number">3.2.9. </span>Ritháttur<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Ritum <span class="math notranslate nohighlight">\(y=f(x)\)</span>.</p>
+<p>Þá má tákna fyrstu afleiðu <span class="math notranslate nohighlight">\(f\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[y'= f'(x)=\frac{d}{dx}f(x)=D_xf(x)\ =\ D_x y= \frac{dy}{dx},\]</div>
+<p>aðra afleiðuna með</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+y'' &amp;=
+f''(x)=\frac{d}{dx}f'(x)=\frac{d}{dx}\frac{d}{dx}f(x)
+= D^2_xf(x)= D^2_x y=\frac{d^2}{dx^2}f(x)=\frac{d^2 y}{dx^2}\end{aligned}\]</div>
+<p>og almennt <span class="math notranslate nohighlight">\(n\)</span>-tu afleiðuna</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+y^{(n)} &amp;= f^{(n)}(x)=\frac{d}{dx}f^{(n-1)}(x)=
+\frac{d}{dx}\Big(\frac{d^{n-1}}{dx^{n-1}}f(x)\Big) \\
+&amp;=D^n_xf(x)\ =\ D^n_x y
+=\frac{d^n}{dx^n}f(x)
+= \frac{d^n y}{dx^n}.\end{aligned}\end{split}\]</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<blockquote>
+<div><p>Venja er að rita <span class="math notranslate nohighlight">\(f'''\)</span> til að tákna þriðju afleiðu <span class="math notranslate nohighlight">\(f\)</span> en
+afar sjaldgæft að <span class="math notranslate nohighlight">\(f''''\)</span> sé notað til að tákna fjórðu afleiðu
+<span class="math notranslate nohighlight">\(f\)</span> og mun algengara að nota <span class="math notranslate nohighlight">\(f^{(4)}\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="reiknireglur">
+<h2><span class="section-number">3.3. </span>Reiknireglur<a class="headerlink" href="#reiknireglur" title="Permalink to this heading"></a></h2>
+<section id="reiknireglur-diffranleg-foll">
+<span id="setning-3-3-1"></span><h3><span class="section-number">3.3.1. </span>Reiknireglur: Diffranleg föll<a class="headerlink" href="#reiknireglur-diffranleg-foll" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Reiknireglur: Diffranleg föll</p>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> vera föll sem eru diffranleg í punkti
+<span class="math notranslate nohighlight">\(x\)</span>. Þá eru föllin <span class="math notranslate nohighlight">\(f+g,\ f-g, kf\)</span> (þar sem <span class="math notranslate nohighlight">\(k\)</span> er
+fasti) og <span class="math notranslate nohighlight">\(fg\)</span> diffranleg í punktinum <span class="math notranslate nohighlight">\(x\)</span>, og ef
+<span class="math notranslate nohighlight">\(g(x)\neq 0\)</span> þá eru föllin <span class="math notranslate nohighlight">\(1/g\)</span> og <span class="math notranslate nohighlight">\(f/g\)</span> líka
+diffranleg í <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Eftirfarandi formúlur gilda um afleiður fallanna sem talin eru upp hér
+að framan:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} c=0, c \in \mathbb{R}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} x^n = nx^{n-1}, n \in \mathbb{Z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((f+g)'(x)=f'(x)+g'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((f-g)'(x)=f'(x)-g'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((kf)'(x)=kf'(x)\)</span>, þar sem <span class="math notranslate nohighlight">\(k\)</span> er fasti</p></li>
+<li><p><span class="math notranslate nohighlight">\((fg)'(x)=f'(x)g(x)+f(x)g'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left(\frac{1}{g}\right)'(x)=\frac{-g'(x)}{g(x)^2}\)</span>, ef <span class="math notranslate nohighlight">\(g(x)\neq 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left(\frac{f}{g}\right)'(x)= \frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}\)</span>, ef <span class="math notranslate nohighlight">\(g(x)\neq 0\)</span></p></li>
+</ol>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-nokkrar-afleiur">
+<span id="setning-3-3-2"></span><h3><span class="section-number">3.3.2. </span>Dæmi: Nokkrar afleiður<a class="headerlink" href="#daemi-nokkrar-afleiur" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} 1 =  \lim_{h\to 0} \frac{1-1}h = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} x =  \lim_{h\to 0} \frac{x+h-x}h = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} x^2 = \lim_{h\to 0} \frac{x^2+2xh+h^2-x^2}h
+= \lim_{h\to 0} \frac{2xh + h^2}h = \lim_{h\to 0} 2x+h= 2x\)</span></p></li>
+</ol>
+</div>
+</section>
+<section id="afleiur-marglia">
+<h3><span class="section-number">3.3.3. </span>Afleiður margliða<a class="headerlink" href="#afleiur-marglia" title="Permalink to this heading"></a></h3>
+<p>Með því að nota setningarnar að ofan þá eigum við ekki í neinum
+vandræðum með að diffra margliður. <a class="reference internal" href="#setning-3-3-1">Setning 3.3.1</a> (i) segir
+að við getum diffrað hvern lið fyrir sig, liður (iii) í sömu setningu
+segir að við getum tekið fastana fram fyrir afleiðuna og loks segir
+Sama setning segir hvernig við diffrum <span class="math notranslate nohighlight">\(x^n\)</span>.</p>
+</section>
+<section id="daemi-afleia-margliu">
+<h3><span class="section-number">3.3.4. </span>Dæmi: Afleiða margliðu<a class="headerlink" href="#daemi-afleia-margliu" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum afleiðu margliðunnar <span class="math notranslate nohighlight">\(p(x) = 4x^3-2x + 5\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   p'(x) &amp;= \frac{d}{dx} p(x)\\
+   &amp;= \frac{d}{dx}4x^3 - \frac{d}{dx}2x + \frac{d}{dx}5 \\
+   &amp;= 4\frac{d}{dx}x^3 -2\frac{d}{dx}x + \frac{d}{dx}5\\
+   &amp;= 4\cdot 3x^2 -2\cdot 1 + 0 = 12x^2-2
+\end{aligned}\end{split}\]</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="afleiur-hornafallanna">
+<h2><span class="section-number">3.4. </span>Afleiður hornafallanna<a class="headerlink" href="#afleiur-hornafallanna" title="Permalink to this heading"></a></h2>
+<section id="setning-afleia-kosinus-og-sinus">
+<h3><span class="section-number">3.4.1. </span>Setning: Afleiða kósínus og sínus<a class="headerlink" href="#setning-afleia-kosinus-og-sinus" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Hornaföllin kósínus og sínus eiga sér eftirfarandi afleiður:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \sin(x) = \cos(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \cos(x) = -\sin(x)\)</span></p></li>
+</ol>
+</div></blockquote>
+</div>
+</section>
+<section id="daemi-afleia-sinus">
+<h3><span class="section-number">3.4.2. </span>Dæmi: Afleiða sínus<a class="headerlink" href="#daemi-afleia-sinus" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum afleiðu fallsins <span class="math notranslate nohighlight">\(f(x)=5x^3\sin(x)\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Við beitum margföldunarreglunni
+fyrir afleiður auk reglunnar hér að ofan um afleiðu sínus og fáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{d}{dx} (5x^3+\sin(x)) &amp;= \frac{d}{dx} (5x^3) \cdot \sin(x) + (5x^3) \cdot \frac{d}{dx} \sin(x)\\
+  &amp;= 15 x^2 \sin(x) + 5x^3\cos(x)
+\end{aligned}\end{split}\]</div>
+</div>
+</section>
+<section id="setning-afleia-tangens">
+<h3><span class="section-number">3.4.3. </span>Setning: Afleiða tangens<a class="headerlink" href="#setning-afleia-tangens" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Tangens á sér eftirfarandi afleiðu:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx} \tan(x) = \frac{1}{\cos^2(x)}\]</div>
+</div>
+</section>
+<section id="daemi-afleia-tangens">
+<h3><span class="section-number">3.4.4. </span>Dæmi: Afleiða tangens<a class="headerlink" href="#daemi-afleia-tangens" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum afleiðu fallsins <span class="math notranslate nohighlight">\(f(x)=\cos(x)+\tan(x)\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Notum setninguna um afleiðu kósínus og afleiðu tangens og fáum að
+og fáum að</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}(\tan(x)+\cos(x)) = \frac{1}{\cos^2(x)}-\sin(x)\]</div>
+</div>
+</section>
+</section>
+<span id="index-4"></span><hr class="docutils" id="kedjuregla" />
+<section id="kejureglan">
+<h2><span class="section-number">3.5. </span>Keðjureglan<a class="headerlink" href="#kejureglan" title="Permalink to this heading"></a></h2>
+<section id="setning-kejureglan">
+<h3><span class="section-number">3.5.1. </span>Setning: Keðjureglan<a class="headerlink" href="#setning-kejureglan" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Keðjureglan</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> séu föll þannig að <span class="math notranslate nohighlight">\(g\)</span>
+er diffranlegt í <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(f\)</span> er diffranlegt í <span class="math notranslate nohighlight">\(g(x)\)</span>.
+Þá er samskeytingin <span class="math notranslate nohighlight">\(f\circ g\)</span> diffranleg í <span class="math notranslate nohighlight">\(x\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[(f\circ g)'(x) = f'(g(x))\cdot g'(x).\]</div>
+</div>
+</section>
+<section id="daemi-kejureglan">
+<h3><span class="section-number">3.5.2. </span>Dæmi: Keðjureglan<a class="headerlink" href="#daemi-kejureglan" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum afleiðu samskeytingarinnar <span class="math notranslate nohighlight">\(f \circ g\)</span> ef <span class="math notranslate nohighlight">\(f(x) = \sqrt{x}\)</span>
+og <span class="math notranslate nohighlight">\(g(x)=3x^5\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Skoðum föllin <span class="math notranslate nohighlight">\(f(x) = \sqrt{x}\)</span> og <span class="math notranslate nohighlight">\(g(x) = 3x^5\)</span>. Bæði þessi föll eru
+diffranleg og afleiðurnar eru <span class="math notranslate nohighlight">\(f'(x) = \frac 12 x^{-1/2}\)</span> og
+<span class="math notranslate nohighlight">\(g'(x) = 15x^4\)</span>. Afleiða samskeytingarinnar <span class="math notranslate nohighlight">\(f\circ g\)</span> er þá
+samkvæmt keðjureglunni</p>
+<div class="math notranslate nohighlight">
+\[(f\circ g)'(x) = \frac 12 (3x^5)^{-1/2} \cdot 15x^4.\]</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="andhverf-foll">
+<h2><span class="section-number">3.6. </span>Andhverf föll<a class="headerlink" href="#andhverf-foll" title="Permalink to this heading"></a></h2>
+<p>Rifjum upp að gagntæk vörpun <span class="math notranslate nohighlight">\(f:X\to Y\)</span> hefur andhverfu
+<span class="math notranslate nohighlight">\(f^{-1}:Y\to X\)</span> sem uppfyllir að</p>
+<div class="math notranslate nohighlight">
+\[y=f(x)\qquad\text{þá og því aðeins að}\qquad x=f^{-1}(y).\]</div>
+<p>Sjá <a class="reference internal" href="../kafli01/#andhverfa"><span class="std std-ref">kafla 1.4</span></a>.</p>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Látum <span class="math notranslate nohighlight">\(f:X \to Y\)</span> vera fall sem skilgreint er á mengi <span class="math notranslate nohighlight">\(X\)</span>. Gerum ráð
+fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé eintækt. Með því að einskorða bakmengi <span class="math notranslate nohighlight">\(f\)</span> við
+myndmengið <span class="math notranslate nohighlight">\(\tilde Y = f(X)\)</span> þá verður <span class="math notranslate nohighlight">\(f:X\to \tilde Y\)</span> gagntækt fall.
+Þá er til andhverfa <span class="math notranslate nohighlight">\(f^{-1}:\tilde Y \to X\)</span> sem uppfyllir</p>
+<div class="math notranslate nohighlight">
+\[y=f(x)\qquad\text{þá og því aðeins að}\qquad x=f^{-1}(y).\]</div>
+</div>
+<section id="id3">
+<h3><span class="section-number">3.6.1. </span>Setning<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Fall sem er strangt vaxandi eða strangt minnkandi er eintækt og á sér
+því andhverfu.</p>
+</div>
+</section>
+<section id="setning-eiginleikar-andhverfa">
+<h3><span class="section-number">3.6.2. </span>Setning; Eiginleikar andhverfa<a class="headerlink" href="#setning-eiginleikar-andhverfa" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(y=f^{-1}(x)\)</span> þá og því aðeins að <span class="math notranslate nohighlight">\(x=f(y)\)</span>.</p></li>
+<li><p>Skilgreingarsvæði <span class="math notranslate nohighlight">\(f\)</span> er myndmengi <span class="math notranslate nohighlight">\(f^{-1}\)</span>.</p></li>
+<li><p>Myndmengi <span class="math notranslate nohighlight">\(f^{-1}\)</span> er jafnt skilgreiningarmengi <span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f^{-1}(f(x))=x\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\)</span> í skilgreiningarmengi
+<span class="math notranslate nohighlight">\(f\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(f^{-1}(x))=x\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\)</span> í skilgreiningarmengi
+<span class="math notranslate nohighlight">\(f^{-1}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\((f^{-1})^{-1}(x)=f(x)\)</span> fyrir öll <span class="math notranslate nohighlight">\(x\)</span> í
+skilgreiningarmengi <span class="math notranslate nohighlight">\(f\)</span>, alltsvo <span class="math notranslate nohighlight">\((f^{-1})^{-1}=f\)</span>.</p></li>
+<li><p>Graf <span class="math notranslate nohighlight">\(f^{-1}\)</span> er speglun á grafi <span class="math notranslate nohighlight">\(f\)</span> um línuna
+<span class="math notranslate nohighlight">\(y=x\)</span>.</p></li>
+</ol>
+</div>
+</section>
+<section id="setning-afleia-andhverfunnar">
+<span id="index-5"></span><h3><span class="section-number">3.6.3. </span>Setning: Afleiða andhverfunnar<a class="headerlink" href="#setning-afleia-andhverfunnar" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(f\)</span> hafi andhverfu <span class="math notranslate nohighlight">\(f^{-1}\)</span>. Látum
+<span class="math notranslate nohighlight">\(x\)</span> vera á skilgreiningarmengi <span class="math notranslate nohighlight">\(f\)</span> og gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(f\)</span> sé diffranlegt í punktinum <span class="math notranslate nohighlight">\(f^{-1}(x)\)</span> og að
+<span class="math notranslate nohighlight">\(f'(f^{-1}(x)) \neq 0\)</span>. Þá er <span class="math notranslate nohighlight">\(f^{-1}\)</span> diffranlegt í
+punktinum <span class="math notranslate nohighlight">\(x\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\left(f^{-1}\right)'(x)=\frac{1}{f'(f^{-1}(x))}\]</div>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Setningin segir okkur sér í lagi að láréttur snertill við <span class="math notranslate nohighlight">\(f\)</span>
+svarar til lóðrétts snertils við <span class="math notranslate nohighlight">\(f^{-1}\)</span>.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="folgin-diffrun">
+<h2><span class="section-number">3.7. </span>Fólgin diffrun<a class="headerlink" href="#folgin-diffrun" title="Permalink to this heading"></a></h2>
+<p>Hugtakinu <em>fólgin diffrun</em> er e.t.v. auðveldast að lýsa með dæmi.</p>
+<section id="daemi-folgin-diffrun">
+<h3><span class="section-number">3.7.1. </span>Dæmi: Fólgin diffrun<a class="headerlink" href="#daemi-folgin-diffrun" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Jafna hrings með geisla 1 og miðju í (0,0) er <span class="math notranslate nohighlight">\(x^2+y^2=1\)</span>. Við vitum að hægt er að
+skrifa efri og neðri helminga hans sem föll af <span class="math notranslate nohighlight">\(y\)</span>, annars vegar
+<span class="math notranslate nohighlight">\(y=\sqrt{1-x^2}\)</span> og hins vegar <span class="math notranslate nohighlight">\(y=-\sqrt{1-x^2}\)</span>. Ef við
+viljum finna snertil við hringinn getum við notað þessi föll. En þar sem
+við vitum að hægt er að skrifa <span class="math notranslate nohighlight">\(y\)</span> sem fall af <span class="math notranslate nohighlight">\(x\)</span> þá getum
+við einnig diffrað jöfnu hringsins beint með aðstoð keðjureglunnar,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   \frac{d}{dx}(x^2+y^2) &amp;=&amp; \frac{d}{dx} 1\\
+   2x + 2y\frac{dy}{dx} &amp;= 0\\
+   y\frac{dy}{dx} &amp;= -x\\
+   \frac{dy}{dx} &amp;= -\frac xy.
+ \end{aligned}\end{split}\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/11_hringur.png"><img alt="../_images/11_hringur.png" src="../_images/11_hringur.png" style="width: 12cm;" /></a>
+</figure>
+</div>
+</section>
+<section id="setning-andhverfusetningin">
+<h3><span class="section-number">3.7.2. </span>Setning: Andhverfusetningin<a class="headerlink" href="#setning-andhverfusetningin" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Andhverfusetningin</p>
+<p>Látum feril vera gefinn með <span class="math notranslate nohighlight">\(F(x,y) =0\)</span>, þar sem <span class="math notranslate nohighlight">\(F\)</span> er
+diffranlegt í bæði <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>. Í punktum þar sem <em>snertill</em>
+ferilsins er ekki lóðréttur (þ.e. <span class="math notranslate nohighlight">\(\frac{d}{dy}F \neq 0\)</span>) þá er hægt að
+skrifa <span class="math notranslate nohighlight">\(y\)</span> sem fall af <span class="math notranslate nohighlight">\(x\)</span> og þá fæst af keðjureglunni að</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx} F(x,y) + \frac{d}{dy}F(x,y) \frac{dy}{dx} = 0,\]</div>
+<p>þ.e.</p>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{dx} = -\frac{\frac{d}{dx} F(x,y)}{\frac{d}{dy} F(x,y)}.\]</div>
+<p>Sjá <a class="reference external" href="https://en.wikipedia.org/wiki/Inverse_function_theorem">https://en.wikipedia.org/wiki/Inverse_function_theorem</a></p>
+</div>
+</section>
+<section id="me-orum-orum">
+<h3><span class="section-number">3.7.3. </span>Með öðrum orðum<a class="headerlink" href="#me-orum-orum" title="Permalink to this heading"></a></h3>
+<p>Það kemur í sama stað niður að einangra <span class="math notranslate nohighlight">\(y=f(x)\)</span>, ef það er
+mögulegt, og finna <span class="math notranslate nohighlight">\(y'\)</span> með því að diffra, eins og að diffra
+<span class="math notranslate nohighlight">\(F(x,y)=0\)</span> og einangra svo <span class="math notranslate nohighlight">\(y'=\frac{dy}{dx}\)</span>.</p>
+</section>
+<section id="vinnulag">
+<h3><span class="section-number">3.7.4. </span>Vinnulag<a class="headerlink" href="#vinnulag" title="Permalink to this heading"></a></h3>
+<ol class="lowerroman simple">
+<li><p>Diffrum báðar hliðar jöfnunar með tilliti til <span class="math notranslate nohighlight">\(x\)</span>, og lítum á
+<span class="math notranslate nohighlight">\(y\)</span> sem fall af <span class="math notranslate nohighlight">\(x\)</span> sem við diffrum með aðstoð
+keðjureglunnar (og gleymum ekki <span class="math notranslate nohighlight">\(y'\)</span>)</p></li>
+<li><p>Einangrum <span class="math notranslate nohighlight">\(y'\)</span></p></li>
+<li><p>Skiptum <span class="math notranslate nohighlight">\(y\)</span> út fyrir <span class="math notranslate nohighlight">\(f(x)\)</span>.</p></li>
+</ol>
+</section>
+<section id="setning-hagnyting-a-folginni-diffrun">
+<h3><span class="section-number">3.7.5. </span>Setning: Hagnýting á fólginni diffrun<a class="headerlink" href="#setning-hagnyting-a-folginni-diffrun" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef <span class="math notranslate nohighlight">\(n\)</span> og <span class="math notranslate nohighlight">\(m\)</span> eru heilar tölur þá er</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx} x^{\frac nm} = \frac nm x^{\frac nm -1}.\]</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="afleiur-logra-og-visisfalla">
+<h2><span class="section-number">3.8. </span>Afleiður logra og vísisfalla<a class="headerlink" href="#afleiur-logra-og-visisfalla" title="Permalink to this heading"></a></h2>
+<section id="setning-afleiur-logra-og-visisfalla">
+<h3><span class="section-number">3.8.1. </span>Setning: Afleiður logra og vísisfalla<a class="headerlink" href="#setning-afleiur-logra-og-visisfalla" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Eftirfarandi gildir um afleiður logra og vísisfalla:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} e^x = e^x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} e^{g(x)}=g'(x)e^x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \ln(x) = \frac{1}{x}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \ln(g(x)) = \frac{1}{x}g'(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} b^x = b^x \ln(b)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} b^{g(x)} = b^{g(x)}g'(x)\ln(b)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \log_b(x) = \frac{1}{x\ln(b)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \log_b(g(x))=\frac{g'(x)}{g(x)\ln(b)}\)</span></p></li>
+</ol>
+</div>
+</section>
+<section id="daemi-afleia-visisfalls">
+<h3><span class="section-number">3.8.2. </span>Dæmi: Afleiða vísisfalls<a class="headerlink" href="#daemi-afleia-visisfalls" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum fleiðu fallsins <span class="math notranslate nohighlight">\(f(x)=3^x\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Samkvæmt reglu 5 hér að ofan
+fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+  f'(x) &amp;= \frac{d}{dx} 3^x\\
+  &amp;= 3^x\ln(3).
+\end{align}\end{split}\]</div>
+</div>
+</section>
+<section id="daemi-afleia-lografalls">
+<h3><span class="section-number">3.8.3. </span>Dæmi: Afleiða lografalls<a class="headerlink" href="#daemi-afleia-lografalls" title="Permalink to this heading"></a></h3>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum afleiðu fallsins <span class="math notranslate nohighlight">\(g(x)=\log_2(x^3)\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Samkvæmt reglu 8 hér að ofan fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+  g'(x) &amp;= \frac{d}{dx} \log_2(x^3)\\
+  &amp;= \frac{3x^2}{x^3\ln(2)}.
+\end{align}\end{split}\]</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kafli04/" class="btn btn-neutral float-right" title="4. Hagnýting á diffrun" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../kafli02/" class="btn btn-neutral" title="2. Markgildi og samfelldni" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+        <script>
+            window.addEventListener("load", function(){
+                for(var i in ggbAppletId){
+                    ggbAppletId[i].inject(i);
+                }
+            });
+        </script>
+
+	
+  	 
+	<style>
+	/* Sidebar header (and topbar for mobile) */
+	.wy-side-nav-search, .wy-nav-top {
+	  background: #10099F;
+	}
+	/* Sidebar */
+	.wy-nav-side {
+	  background: #262626;
+	}
+	</style>
+
+
+
+</body>
+</html>

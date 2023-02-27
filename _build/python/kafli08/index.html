@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8 Skrár &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/python.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="9 Teikning með Matplotlib" href="../kafli09/" />
+    <link rel="prev" title="7 Uppflettitöflur" href="../kafli07/" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+          </a>
+              <div class="version">
+                2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5  Söfn: Eitt nafn en mörg gildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6  Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7  Uppflettitöflur</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8  Skrár</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#yfirlit">8.1  Yfirlit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#innlestur-skraa">8.2  Innlestur skráa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#linuskiptatakn">8.2.1  Línuskiptatákn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#with-skipun">8.2.2  With-skipun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hefbundinn-innlestur-textaskrar-af-diski">8.2.3  Hefðbundinn innlestur textaskrár af diski</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innlestur-textaskrar-af-vefnum">8.2.4  Innlestur textaskrár af vefnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uppflettitafla-lesin-ur-skra">8.2.5  Uppflettitafla lesin úr skrá</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#csv-skrar">8.3  CSV-skrár</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-csv-skra">8.3.1  Dæmi um CSV-skrá</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innlestur-me-pakkanum-csv">8.3.2  Innlestur með pakkanum csv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-lestur-ur-lista-af-strengjum">8.3.3  CSV-lestur úr lista af strengjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-skra-lesin-af-vefnum">8.3.4  CSV-skrá lesin af vefnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skrar-afmarkaar-me-bilum">8.3.5  Skrár afmarkaðar með bilum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#na-i-dalk-i-csv-skra">8.3.6  Náð í dálk í CSV-skrá</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skrar-skrifaar-ut">8.4  Skrár skrifaðar út</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#skraakerfi">8.5  Skráakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mopputre">8.5.1  Möpputré</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heimamappa">8.5.2  Heimamappa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nuverandi-mappa">8.5.3  Núverandi mappa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sloir">8.5.4  Slóðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einingin-pathlib">8.5.5  Einingin pathlib</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9  Teikning með Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10  NumPy pakkinn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11  Reiknað með fylkjum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12  Dæmi um hagnýtingu fylkjareikninga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8  </span>Skrár</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kafli08.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="skrar">
+<span id="id1"></span><h1><span class="section-number">8  </span>Skrár<a class="headerlink" href="#skrar" title="Permalink to this heading"></a></h1>
+<section id="yfirlit">
+<h2><span class="section-number">8.1  </span>Yfirlit<a class="headerlink" href="#yfirlit" title="Permalink to this heading"></a></h2>
+<p class="rubric">Langtímageymslur</p>
+<p>Til að geyma gögn til lengri tíma en rétt á meðan forrit er að keyra eru
+yfirleitt notaðar <strong>skrár</strong> (<em>files</em>). Þær eru oft geymdar á svonefndum <strong>hörðum
+diski</strong> (<a class="reference external" href="https://en.wikipedia.org/wiki/Hard_disk_drive">hard disk</a>), sem er
+búinn til úr þunnum segulmögnuðum skífum sem snúast á miklum hraða í diskdrifi.
+Nú til dags eru reyndar gagnageymslur með <strong>leifturminni</strong> (<em>flash drive</em>,
+<em>solid state drive</em>, <em>SSD</em>) orðnar algengar. Lesandi sem vill kynna sér svona
+geymslur betur verður að leita út fyrir þessar fyrirlestrarnótur, því hér höldum
+við okkur við hugbúnaðarhliðina (<em>software</em>).</p>
+<figure class="align-center" id="id4" style="width: 9cm">
+<img alt="../_images/har%C3%B0ur-diskur.jpg" src="../_images/har%C3%B0ur-diskur.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 8.1: </span><span class="caption-text">Harður diskur frá 1998</span><a class="headerlink" href="#id4" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p class="rubric">Staðsetningar skráa</p>
+<p>Með Python er hægt að lesa gögn úr skrá inn í minni tölvunnar, og það er líka
+hægt að skrifa út í skrár. Skráin getur verið hvort sem er á diski tölvunnar eða
+úti á vefnum (þá bara til að lesa), og þriðji möguleikinn er að skráin sé í
+skýinu, og það á sér í lagi við þegar Python keyrir á tölvu í skýinu, eins og raunin
+er þegar Google Colab er notað.</p>
+<figure class="align-center" id="id5" style="width: 15cm">
+<img alt="../_images/%C3%BEr%C3%ADr-sta%C3%B0ir1.jpg" src="../_images/%C3%BEr%C3%ADr-sta%C3%B0ir1.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 8.2: </span><span class="caption-text">Þrír staðir fyrir skrár</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p class="rubric">Skráategundir</p>
+<p>Eins og flestir lesendur vita væntanlega geta skrár líka verið með ýmsu sniði,
+og stundum eru skrárnar kallaðar <strong>skjöl</strong> (<em>documents</em>). Nokkur dæmi eru
+textaskrár, Word-skjöl, Excel-skjöl, myndaskrár og PDF-skjöl. Til að byrja með
+gera þessar nótur ráð fyrir að skrárnar séu staðsettar á beint aðgengilegum
+stað, annaðhvort á vefnum eða í svonefndri sjálfgefinni möppu, en í kafla
+<a class="reference internal" href="#skraakerfi"><span class="std std-numref">8.5</span></a> verða aðrir möguleikar skoðaðir.</p>
+<p class="rubric">Nöfn skráa</p>
+<p>Skrár heita langoftast einhverju nafni sem er textastrengur. Það eru mun minni
+takmarkanir á nöfnum skráa en á breytunöfnum: skráanöfn mega innihalda ýmis
+sértákn, og t.d. er algengt að nota –, :, . og bil, auk bókstafa og
+tölustafa. Það er samt ekki hægt að nota skástrik, hvorki / né \. Reyndar geta
+séríslenskir stafir valdið vandræðum. Á það á til dæmis við ef skrám er er
+hlaðið upp til notkunar í Google Colab :(. Skráanöfn eru oft með sniðinu
+<code class="docutils literal notranslate"><span class="pre">aðalnafn.undirnafn</span></code> (<em>basename.extension</em>) þar sem .undirnafn segir til um
+tegund skrárinnar og getur t.d. verið <code class="docutils literal notranslate"><span class="pre">.txt</span></code> fyrir textaskrár, <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> fyrir
+Excel-skjöl og <code class="docutils literal notranslate"><span class="pre">.png</span></code> fyrir myndir á png-sniði. Dæmi um skráanöfn eru:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">gögn</span> <span class="pre">14.09.2021</span> <span class="pre">14:59:00.txt</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">skiladæmi-12.pdf</span></code>.</p>
+</div></blockquote>
+<p>Reyndar er það svo á bæði Windows-tölvum og Mökkum að sjálfgefið er að
+undirnafnið sé falið. Tegund skrárinnar er þá sýnd með öðrum hætti, oft bæði með
+teikni (<em>icon</em>) og textalýsingu, sbr. <a class="reference internal" href="#finder"><span class="std std-numref">mynd 8.3</span></a>, þar sem tölvan
+hefur reyndar verið stillt á að fela undirnafnið ekki.</p>
+<figure class="align-center" id="id6" style="width: 18cm">
+<span id="finder"></span><img alt="myndir/finder.jpg" src="myndir/finder.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 8.3: </span><span class="caption-text">„Finder“ á Makka. Tegundir skráa sýndar með teikni, undirnafni, og textalýsingu</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p class="rubric">Pakkar til að lesa og skrifa skrár</p>
+<p>Það eru ýmsar leiðir til að lesa og skrifa skrár í Python. Hefðbundna aðferðin
+er að nota innbyggðu föllin <code class="docutils literal notranslate"><span class="pre">open</span></code>, <code class="docutils literal notranslate"><span class="pre">read</span></code> og <code class="docutils literal notranslate"><span class="pre">write</span></code> (og reyndar nokkur
+skyld föll), sem einkum nýtast fyrir textaskrár. Stundum eru skrárnar sniðnar á
+ákveðinn hátt, til dæmis með því að aðskilja dálka með kommum, semíkommum eða
+tab-táknum, og þá gæti pakkinn <code class="docutils literal notranslate"><span class="pre">csv</span></code> (<em>comma-separated-values</em>) hentað.
+Pakkasöfnin <em>Pandas</em> og <em>Numpy</em> sem rædd voru í kafla <a class="reference internal" href="../kafli10/#inngangur"><span class="std std-numref">10.1</span></a> eru
+með sín föll til að lesa skrár, og svo eru til sérstakir pakkar til að lesa
+ýmsar sérsniðnar skrár t.d. Excel-skjöl og myndaskrár. Loks má nefna pakkann
+<em>pathlib</em> sem er á dagskrá í kafla <a class="reference internal" href="#skraakerfi"><span class="std std-numref">8.5</span></a>.</p>
+</section>
+<section id="innlestur-skraa">
+<h2><span class="section-number">8.2  </span>Innlestur skráa<a class="headerlink" href="#innlestur-skraa" title="Permalink to this heading"></a></h2>
+<section id="linuskiptatakn">
+<h3><span class="section-number">8.2.1  </span>Línuskiptatákn<a class="headerlink" href="#linuskiptatakn" title="Permalink to this heading"></a></h3>
+<p>Áður en hefðbundinn innlestur skráa verður útskýrður þarf að segja nokkur orð um
+línuskiptatákn (<em>line feed</em>, <em>line break</em> eða <em>newline character</em>), sem er
+notaður til að fara í nýja línu í textaskrá. Hann er kóðaður með tölunni 10 og
+oft táknaður með stafasamstæðunni <code class="docutils literal notranslate"><span class="pre">\n</span></code>, m.a. í Python. Það er líka hægt að
+nota hann í <code class="docutils literal notranslate"><span class="pre">print</span></code>-köllum, t.d.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>       <span class="c1"># prentar x og y hvort á sína línuna</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="se">\n</span><span class="s2">y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># prentar líka á tvær línur).</span>
+</pre></div>
+</div>
+</section>
+<section id="with-skipun">
+<h3><span class="section-number">8.2.2  </span>With-skipun<a class="headerlink" href="#with-skipun" title="Permalink to this heading"></a></h3>
+<p>Annað atriði sem þarf að ræða áður en við hellum okkur í innlesturinn er
+<strong>with</strong>-skipun. Hún er notuð til að einfalda forrit þar sem par af skipunum
+umlykur skipanablokk. Þetta virkar svona:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>with BYRJUN(...) as v                   v = BYRJUN(...)
+   skipanablokk          jafngildir:    skipanablokk
+...                                     LOKASKIPUN
+                                        ...
+</pre></div>
+</div>
+<p>Til að þetta virki þarf fallið BYRJUN að vera samhæft við notkun with-skipunar,
+þannig að það sjái líka um lokaskipunina, sem framkvæmist þá sjálfkrafa þegar komið er
+út úr with-blokkinni. With-skipunin hefur annan kost, að ef skipanablokkin
+inniheldur einhverjar skipanir sem brjótast út úr henni (<code class="docutils literal notranslate"><span class="pre">return</span></code>, <code class="docutils literal notranslate"><span class="pre">break</span></code>
+eða <code class="docutils literal notranslate"><span class="pre">continue</span></code>) þá missum við af lokaskipununum með forritsbútnum hægra megin,
+en ekki ef við notum <em>with</em>. Nánar tiltekið:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>with BYRJUN(...) as v                   v = BYRJUN(...)
+   skipanir1                            skipanir1
+   if skilyrði:          jafngildir:    if skilyrði:
+      return                               LOKASKIPUN
+   skipanir2                               return
+...                                     skipanir2
+                                        LOKASKIPUN
+                                        ...
+</pre></div>
+</div>
+<p>Einföldunin er sem sé orðin umtalsverð.</p>
+</section>
+<section id="hefbundinn-innlestur-textaskrar-af-diski">
+<span id="hefdbundinn-innlestur"></span><h3><span class="section-number">8.2.3  </span>Hefðbundinn innlestur textaskrár af diski<a class="headerlink" href="#hefbundinn-innlestur-textaskrar-af-diski" title="Permalink to this heading"></a></h3>
+<p>Til að lesa úr textaskrá þarf fyrst að opna hana með <strong>open</strong> og eftir
+innlesturinn þarf að loka henni með <strong>close</strong>. Hinsvegar eru <em>open–close</em>
+einmitt par af skipunum BYRJUN–LOKASKIPUN sem eru samhæfðar við <em>with</em>. Hefðin
+er sú að nota with-skipun með open, og þessar fyrirlestrarnótur miðast við það.</p>
+<p>Python hefur þrjú innbyggð föll til að lesa textaskrá, <strong>readline</strong>,
+<strong>readlines</strong> og <strong>read</strong>. Fyrsta fallið les eina línu úr skránni inn í streng,
+næsta fall les allar línur sem eftir er að lesa inn í lista af strengjum og það
+þriðja les alla skrána inn í einn streng. Í öllum tilfellum eru línuskiptatákn
+aftast í hverjum lesnum streng.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Lestur skrár</p>
+<p>Gerum ráð fyrir að skráin <code class="docutils literal notranslate"><span class="pre">data.txt</span></code> innihaldi:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Nafn Hæð
+Bára 171
+Jóna 168
+Kári 178
+</pre></div>
+</div>
+<p>og eftirfarandi forritsbútur sé framkvæmdur:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="n">hauslína</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+   <span class="n">línur</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="n">skráin</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Þá verður hauslína strengurinn <code class="docutils literal notranslate"><span class="pre">&quot;Nafn</span> <span class="pre">Hæð\n&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">línur</span></code> verður listinn
+<code class="docutils literal notranslate"><span class="pre">[&quot;Bára</span> <span class="pre">171\n&quot;,</span> <span class="pre">&quot;Jóna</span> <span class="pre">168\n&quot;,</span> <span class="pre">&quot;Kári</span> <span class="pre">178\n&quot;]</span></code>, og <code class="docutils literal notranslate"><span class="pre">skráin</span></code> verður
+strengurinn <code class="docutils literal notranslate"><span class="pre">&quot;Nafn</span> <span class="pre">Hæð\nBára</span> <span class="pre">171\nJóna</span> <span class="pre">168\nKári</span> <span class="pre">178\n&quot;</span></code></p>
+<p>Takið eftir að það þarf að opna skrána aftur áður en kallað er á <strong>read</strong>.</p>
+</div>
+<p>Til að losna við línuskiptatákn aftast í streng má nota fallið <code class="docutils literal notranslate"><span class="pre">strip()</span></code>.
+Þetta fall hentar ágætlega þegar skrá er lesin línu fyrir línu, og eitthvað gert
+við hverja línu, eins og gert er í næsta sýnidæmi sem prentar línurnar. Dæmið
+nýtir sér að hægt er að nota opnaðar Python-skrár sem ítrara. Fallið <code class="docutils literal notranslate"><span class="pre">next</span></code>
+nær í fremsta gildi ítrara, og stillir hann samtímis þannig að næst skili hann
+afgangi gilda sinna.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Skrá lesin og prentuð</p>
+<p>Hér er forrit sem les línur skrár hverja á fætur annarri og prentar þær út.
+Byrjað er á að lesa hauslínuna sér.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="n">hauslína</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hauslína:, hauslína&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aðrar línur:&quot;</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+      <span class="n">strengur</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+      <span class="nb">print</span><span class="p">(</span><span class="n">strengur</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Forritið prentar:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hauslína: Nafn Hæð
+Aðrar línur:
+Bára 171
+Jóna 168
+Kári 178
+</pre></div>
+</div>
+</div>
+<p>Þegar skrá er lesin öll í einu með <code class="docutils literal notranslate"><span class="pre">read</span></code> er hægt að nota <code class="docutils literal notranslate"><span class="pre">splitlines</span></code> til
+að losna við línuskiptatáknin, svona:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="n">L</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+
+<span class="c1"># Nú er L listinn [&#39;Nafn Hæð&#39;, &#39;Bára 171&#39;, &#39;Jóna 168&#39;, &#39;Kári 178&#39;]</span>
+</pre></div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Textaskrá lesin inn</p>
+<ol class="arabic">
+<li><p>Búið til skrána „data.txt“ á tölvunni ykkar með innihaldinu sem gefið er í
+sýnidæminu „Lestur skrár“ að ofan. Á <strong>Windows</strong> má opna File Explorer,
+fara t.d. í möppuna <em>Documents</em>, hægri smella og velja <em>New–Text
+Document</em>. Síðan má tvísmella á skrána, slá inn texta og velja að lokum
+<em>File–Save</em>. Á <strong>Makka</strong> má smella á <em>command–space</em>, slá inn <em>TextEdit</em>
+og enter. Síðan er valið <em>Format–Make Plain Text</em>. Þá er texti skrárinnar
+sleginn inn, valið <em>File–Save</em> og skránni loks valinn staður, t.d. í
+<em>Documents</em> möppu.</p></li>
+<li><p>Þið ráðið hvort þið leysið þennan lið í Colab eða JupyterLab.</p>
+<p><strong>Í Colab:</strong> Farið nú í Google Colab og opnið nýja vinnubók. Smellið á möpputáknið í
+vinstri spássíu og þvínæst upphleðslutáknið sem birtist og hlaðið upp nýju
+skránni, <code class="docutils literal notranslate"><span class="pre">data.txt</span></code>. Smellið á hana til að skoða innihaldið og
+staðfestið að allt sé rétt.</p>
+<figure class="align-center" style="width: 9cm">
+<img alt="../_images/m%C3%B6pput%C3%A1kn.jpg" src="../_images/m%C3%B6pput%C3%A1kn.jpg" />
+</figure>
+<p><strong>Í JupyterLab</strong> Opnið JupyterLab í möppunni þar sem skránni var valinn staður
+í lið 1 og búið til nýja vinnubók.</p>
+</li>
+<li><p>Skrifið nú forrit sem les skrána og prentar hana jafnóðum út, eins og gert
+er í seinna sýnidæminu að ofan, nema hvað ekki á að meðhöndla hauslínuna
+sérstaklega.</p></li>
+</ol>
+</div>
+</section>
+<section id="innlestur-textaskrar-af-vefnum">
+<h3><span class="section-number">8.2.4  </span>Innlestur textaskrár af vefnum<a class="headerlink" href="#innlestur-textaskrar-af-vefnum" title="Permalink to this heading"></a></h3>
+<p>Hægt er að lesa textaskrá beint af vefnum ef hún er opnuð með fallinu <em>urlopen</em>
+sem er í pakkanum <em>urllib.request</em>. Ekki þarf að loka slíkri skrá eftir notkun
+svo það er engin þörf á <em>with</em>-skipun. Hinsvegar eru strengir sem eru lesnir úr
+skrá á vefnum ekki sjálfkrafa kóðaðir í Python-strengi heldur helst snið þeirra,
+og það er nánast alltaf svonefnt „utf-8“ snið. Til að fá rétta Python-strengi
+þarf að beita fallinu <cite>decode()</cite>.</p>
+<p>Hér fylgir sýnidæmi um svona innlestur, sem sýnir líka hvernig hægt er að ná í
+einstök atriði í hverri línu með <code class="docutils literal notranslate"><span class="pre">split</span></code> fallinu. Það losar okkur í leiðinni
+við línuskiptatáknin og gerir þar með <code class="docutils literal notranslate"><span class="pre">strip()</span></code> óþarft. Mörg fleiri dæmi um
+lestur skráa af vefnum eru í verkefnunum aftast í þessum fyrirlestrarnótum.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Skrá lesin af vefnum</p>
+<p>Skráin sem notuð var í sýnidæmunum hér á undan hefur verið sett á vefinn, í
+<a class="reference external" href="https://cs.hi.is/python/data.txt">https://cs.hi.is/python/data.txt</a>. Hér
+er hún lesin inn í tvo lista sem svo eru prentaðir út. Listarnir byrja tómir
+og svo lengjast þeir í hverri umferð for-lykkjunnar. Við notum tækifærið og
+sýnum samspil <em>enumerate</em> og <em>zip</em>, sbr. æfingu afast í <a class="reference internal" href="../kafli05/#itrarar"><span class="std std-numref">kafla
+5.6</span></a>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/data.txt&quot;</span><span class="p">)</span>
+<span class="n">nöfn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hæðir</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+   <span class="p">(</span><span class="n">nafn</span><span class="p">,</span><span class="n">hæð</span><span class="p">)</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+   <span class="n">nöfn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nafn</span><span class="p">)</span>
+   <span class="n">hæðir</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hæð</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">nr</span><span class="p">,(</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nöfn</span><span class="p">,</span> <span class="n">hæðir</span><span class="p">)):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nr</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Út prentast:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0: Nafn Hæð
+1: Bára 171
+2: Jóna 168
+3: Kári 178
+</pre></div>
+</div>
+</div>
+</section>
+<section id="uppflettitafla-lesin-ur-skra">
+<h3><span class="section-number">8.2.5  </span>Uppflettitafla lesin úr skrá<a class="headerlink" href="#uppflettitafla-lesin-ur-skra" title="Permalink to this heading"></a></h3>
+<p>Í sýnidæminu hér næst á undan var gagnaskrá lesin inn í tvo lista, en oft hentar
+betur að vinna með gögn í uppflettitöflum. Sýnidæmin hér á eftir sýnir tvo
+möguleika á að ná uppflettitöflu úr skrá: (a) að búa töfluna til samhliða
+innlestrinum, og (b) að lesa inn í tvo lista sem svo er breytt í uppflettitöflu.
+Notast er við sömu skrá og síðast.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Uppflettitafla samhliða innlestri</p>
+<p>Nöfnin verða lyklar í uppflettitöflunni sem búin er til og hæðirnar gildi. Að
+loknum innlestri er taflan prentuð. Takið eftir hvernig <code class="docutils literal notranslate"><span class="pre">items</span></code> er notað
+til að renna samhliða í gegn um pör nafna og hæða.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/data.txt&quot;</span><span class="p">)</span>
+<span class="n">tafla</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+   <span class="p">(</span><span class="n">nafn</span><span class="p">,</span><span class="n">hæð</span><span class="p">)</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+   <span class="n">tafla</span><span class="p">[</span><span class="n">nafn</span><span class="p">]</span> <span class="o">=</span> <span class="n">hæð</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">nafn</span><span class="p">,</span><span class="n">hæð</span><span class="p">)</span> <span class="ow">in</span> <span class="n">tafla</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">hæð</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Út prentast:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Nafn Hæð
+Bára 171
+Jóna 168
+Kári 178
+</pre></div>
+</div>
+</div>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Uppflettitafla eftir innlestur</p>
+<p>Við byrjum að keyra fyrstu átta línurnar í forritinu í sýnidæmi <strong>Skrá lesin
+af vefnum</strong> í kaflanum á undan og fá þannig tvo lista Síðan búum við töfluna til
+með aðstoð dict og zip og prentum hana út eins og fyrr:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">tafla</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nöfn</span><span class="p">,</span><span class="n">hæðir</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">nafn</span><span class="p">,</span><span class="n">hæð</span><span class="p">)</span> <span class="ow">in</span> <span class="n">tafla</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">hæð</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Prófnúmer og einkunnir</p>
+<p>Skráin <a class="reference external" href="http:////cs.hi.is/python/profnumer.txt">https://cs.hi.is/python/profnumer.txt</a>
+inniheldur tvo dálka, prófnúmer og skírnarnafn. Lesið þessa skrá inn í uppflettitöflu,
+prófnúmer <span class="math notranslate nohighlight">\(\to\)</span> nafn,</p>
+<ol class="loweralpha simple">
+<li><p>með því að byrja með tóma töflu og bæta við hana samhliða innlestri, eins
+og í fyrra sýnidæminu að framan, og</p></li>
+<li><p>með því að lesa inn tvo lista og nota <code class="docutils literal notranslate"><span class="pre">dict(zip(...))</span></code> eftir innlesturinn,
+eins og í seinna sýnidæminu.</p></li>
+<li><p>Gunnar íslenskukennari notaði prófnúmer þegar hann fór yfir ritgerðir (svo hann
+yrði ekki hlutdrægur). Hér eru einkunnirnar sem hann gaf:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>prófnúmer:   176,  542, 1577, 2785, 4218, 6354, 8003, 9134
+einkunn:     8.5, 10.0,  4.5,  9.0,  7.5,  6.0,  8.5,  8.0
+</pre></div>
+</div>
+<p>Skrifið forrit sem býr til tvo lista úr þessum upplýsingum, flettir upp á
+nöfnum í uppflettitöflunni og býr til einkunnalista sem byrjar svona:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Nemandi     Prófnúmer  Einkunn
+––––––––––––––––––––––––––––––
+Kjartan     0176         8.5
+Aðalheiður  0542        10.0
+Hulda       1577         4.5
+...
+</pre></div>
+</div>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd:</p>
+<p>Ef sýnidæmunum að framan er fylgt verða prófnúmerin sjálfkrafa strengir,
+en listinn í c-lið gefur heiltölur. Til að komast hjá þessu ósamræmi
+mætti breyta prófnúmerinu í tölu eftir að það er lesið inn úr skránni,
+t.d. með <code class="docutils literal notranslate"><span class="pre">prófnr</span> <span class="pre">=</span> <span class="pre">int(prófnr)</span></code>. Til að prenta 0 fremst í prófnúmerum í
+lokatöflunni má svo nota f-streng með sniði <code class="docutils literal notranslate"><span class="pre">{...:04}</span></code> sbr.
+<a class="reference internal" href="../kafli04/#fstrengjasni"><span class="std std-numref">töflu 4.1</span></a>.</p>
+</div>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="csv-skrar">
+<h2><span class="section-number">8.3  </span>CSV-skrár<a class="headerlink" href="#csv-skrar" title="Permalink to this heading"></a></h2>
+<p>Gögnum í skrám er oft skipað í dálka, t.d. nöfn í fyrsta dálki, símanúmer í 2.
+dálki og heimilisföng í 3. dálki. Það eru ýmsar leiðir notaðar til að afmarka
+dálkana: Stundum eru dálkarnir af fastri breidd, en stundum eru þeir afmarkaðir
+með sérstöku afmörkunartákni (<em>delmiter</em>), oftast kommu, semikommu (;),
+tab-tákni eða bilum. Skrár sem nota kommu eða semikommu eru kallaðar CSV-skrár
+(<em>comma separated values</em>) og slíkar skrár er auðvelt að búa til með Excel.</p>
+<section id="daemi-um-csv-skra">
+<span id="id2"></span><h3><span class="section-number">8.3.1  </span>Dæmi um CSV-skrá<a class="headerlink" href="#daemi-um-csv-skra" title="Permalink to this heading"></a></h3>
+<p>Hér er dæmi um símaskrá sem notar semíkommu til að afmarka dálka:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NAFN;         SÍMI;    HEIMILI
+Jón Jónsson;  8883333; Geiragötu 18, Reykjavík
+Ása Bára Jónsdóttir;7772222; Unugötu 3, Akureyri
+Ari Arason; 5551111; Arastíg 1, Selfossi
+</pre></div>
+</div>
+<p>Það væri líka hægt að nota tab-tákn til að afmarka, en kommur eða bil mundu
+síður henta því einstök atriði (<em>svið</em>; <em>fields</em>) í skránni innihalda bæði
+kommur og bil. Sá sem sló inn þessa skrá var ekki mikið að hugsa um samræmi, það
+er allur gangur á því hvort eitt eða fleiri bil koma á eftir semíkommunum, en
+við sjáum í næsta kafla að það kemur ekki að sök.</p>
+<p>Í <a class="reference external" href="https://en.wikipedia.org/wiki/Comma-separated_values">Wikipedíugrein</a> um
+CSV-skrár eru fleiri dæmi t.d. í kaflanum <a class="reference external" href="https://en.wikipedia.org/wiki/Comma-separated_values#Example">Example</a>. Þar er m.a.
+rætt hvernig hægt er að geyma svið sem innihalda bil með því að slá gæsalöppum
+utan um þau, en við förum ekki nánar út í þá sálma hér.</p>
+</section>
+<section id="innlestur-me-pakkanum-csv">
+<span id="csv-lestur"></span><h3><span class="section-number">8.3.2  </span>Innlestur með pakkanum csv<a class="headerlink" href="#innlestur-me-pakkanum-csv" title="Permalink to this heading"></a></h3>
+<p>Til að lesa skrá sem afmarkar dálka með sérstöku tákni eða bilum inn í Python
+hentar ágætlega að nota pakkann <code class="docutils literal notranslate"><span class="pre">csv</span></code>. Með honum er notað <code class="docutils literal notranslate"><span class="pre">with</span> <span class="pre">open</span></code> alveg
+eins og gert er í kafla <a class="reference internal" href="#hefdbundinn-innlestur"><span class="std std-numref">8.2.3</span></a>, síðan er búinn til
+svonefndur lesari (hlutur af taginu <code class="docutils literal notranslate"><span class="pre">csv_reader</span></code>) og hann loks notaður til að
+lesa, sbr. eftirfarandi dæmi.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: CSV-skrá lesin</p>
+<p>Gerum ráð fyrir að skráin í kafla <a class="reference internal" href="#daemi-um-csv-skra"><span class="std std-numref">8.3.1</span></a> sé geymd í
+<code class="docutils literal notranslate"><span class="pre">simaskra.txt</span></code>. Eftirfarandi forrit mundi lesa hana inn og prenta á skjá:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simaskra.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">röð</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">20</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">7</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Við sjáum að lesarinn <em>reader</em> er ítrari sem skilar lista með atriðum hverrar
+línu þegar hann er notaður í for-setningu. Viðfangið <code class="docutils literal notranslate"><span class="pre">skipinitalspace=True</span></code>
+sér til þess að bilunum sem koma aftan við semíkommurnar (þ.e. fremst í
+hverju sviði) sé sleppt. Forritið mundi prenta út:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NAFN                  SÍMI     HEIMILI
+Jón Jónsson           8883333  Geiragötu 18, Reykjavík
+Ása Bára Jónsdóttir   7772222  Unugötu 3, Akureyri
+Ari Arason            5551111  Aragötu 1, Selfossi
+</pre></div>
+</div>
+</div>
+<p>Komma er sjálfgefið afmörkunartákn. Skrá sem er afmörkuð með tab-táknum má lesa
+með <code class="docutils literal notranslate"><span class="pre">delimiter=&quot;\t&quot;</span></code>. Ef sleppa ætti innlestri á fyrirsagnarlínunni mætti
+skrifa <code class="docutils literal notranslate"><span class="pre">next(reader)</span></code> næst á undan for-lykkjunni.</p>
+</section>
+<section id="csv-lestur-ur-lista-af-strengjum">
+<span id="csv-lestur-strengja"></span><h3><span class="section-number">8.3.3  </span>CSV-lestur úr lista af strengjum<a class="headerlink" href="#csv-lestur-ur-lista-af-strengjum" title="Permalink to this heading"></a></h3>
+<p>Ef gefinn er listi af strengjum sem hver um sig inniheldur svið afmörkuð með
+kommum eða öðrum táknum þá er hægt að nota csv-pakkann til að ná í þessi svið
+alveg eins og um væri að ræða línur í skrá. Hér er einfalt dæmi:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">línur</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;grænn, 0.1, 0.6, 0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;blár, 0, 0.2, 0.9&quot;</span><span class="p">,</span> <span class="s2">&quot;gulur, 1, 0.9, 0&quot;</span><span class="p">]</span>
+<span class="n">rdr</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">línur</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="n">rdr</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sem prentar út:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[&#39;grænn&#39;, &#39;0.1&#39;, &#39;0.6&#39;, &#39;0.1&#39;]
+[&#39;blár&#39;, &#39;0&#39;, &#39;0.2&#39;, &#39;0.9&#39;]
+[&#39;gulur&#39;, &#39;1&#39;, &#39;0.9&#39;, &#39;0&#39;]
+</pre></div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Verð mjólkurlítra</p>
+<p>Lesið eftirfarandi verðlista og prentið hann út sem töflu: <br>
+<code class="docutils literal notranslate"><span class="pre">[[&quot;Nýmjólk;177&quot;,</span> <span class="pre">&quot;Léttmjólk;179&quot;,</span> <span class="pre">&quot;Fjörmjólk;219&quot;]]</span></code></p>
+</div>
+</section>
+<section id="csv-skra-lesin-af-vefnum">
+<span id="csv-lestur-bilafmark"></span><h3><span class="section-number">8.3.4  </span>CSV-skrá lesin af vefnum<a class="headerlink" href="#csv-skra-lesin-af-vefnum" title="Permalink to this heading"></a></h3>
+<p>Símaskrána í kafla <a class="reference internal" href="#innlestur-me-pakkanum-csv"><span class="std std-numref">8.3.2</span></a> má finna í
+<a class="reference external" href="https://cs.hi.is/python/simaskra.txt">https://cs.hi.is/python/simaskra.txt</a>.
+Til að lesa þessa skrá beint af netinu með csv-lesara þarf að fara krókaleið og
+lesa fyrst líkt og gert er í fyrra sýnidæminu í kafla <a class="reference internal" href="#hefbundinn-innlestur-textaskrar-af-diski"><span class="std std-numref">8.2.3</span></a> áður en lesaranum er beitt á strengjalistann
+sem kemur út úr því. Hér er forritsbútur sem útfærir þetta:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://cs.hi.is/python/simaskra.txt&quot;</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()]</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">nafn</span><span class="p">,</span> <span class="n">sími</span><span class="p">,</span> <span class="n">heimili</span><span class="p">)</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">nafn</span><span class="si">:</span><span class="s1">19</span><span class="si">}</span><span class="s1">  </span><span class="si">{</span><span class="n">sími</span><span class="si">:</span><span class="s1">7</span><span class="si">}</span><span class="s1">  </span><span class="si">{</span><span class="n">heimili</span><span class="si">:</span><span class="s1">20</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="skrar-afmarkaar-me-bilum">
+<h3><span class="section-number">8.3.5  </span>Skrár afmarkaðar með bilum<a class="headerlink" href="#skrar-afmarkaar-me-bilum" title="Permalink to this heading"></a></h3>
+<p>Ef ekkert atriði inniheldur bil má nota bil til að afmarka dálkana. Á ensku er
+talað um <em>whitespace-delimited file</em>. Algengt er að nota eitt eða fleiri bil
+milli dálka og láta þá standast á.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Bilaafmörkuð skrá</p>
+<p>Lát skrána malmar.txt innihalda:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Málmur  Eðlisþyngd  Bræðslumark
+Ál         2.70         933
+Járn       7.87        1538
+Kopar      8.96        1085
+Gull      19.30        1064
+</pre></div>
+</div>
+<p>Eftirfarandi forritsbútur mundi lesa skrána:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;malmar.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span>
+   <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+   <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>     <span class="c1"># titillína lesin (og henni hent)</span>
+   <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+      <span class="n">málmur</span> <span class="o">=</span> <span class="n">lína</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+      <span class="n">eðlisþ</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lína</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+      <span class="n">bræðslum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">lína</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+      <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<p>Þessi skrá verður notuð í <a class="reference internal" href="../verkefni/#dalkar-i-csv-skra-leyst-me-colab"><span class="std std-numref">verkefni 17</span></a></p>
+</section>
+<section id="na-i-dalk-i-csv-skra">
+<span id="csv-lestur-dalka"></span><h3><span class="section-number">8.3.6  </span>Náð í dálk í CSV-skrá<a class="headerlink" href="#na-i-dalk-i-csv-skra" title="Permalink to this heading"></a></h3>
+<p>Ef búið er að búa til lesara <code class="docutils literal notranslate"><span class="pre">rdr</span> <span class="pre">=</span> <span class="pre">csv.reader(...)</span></code> eins og í sýnidæmunum í
+köflum <a class="reference internal" href="#csv-lestur"><span class="std std-numref">8.3.2</span></a> og <a class="reference internal" href="#csv-lestur-bilafmark"><span class="std std-numref">8.3.4</span></a> þá má breyta honum
+í lista af listum sem hver geymir upplýsingar úr einni línu skrárinnar með því
+að skrifa:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">list(rdr)</span></code></p>
+</div></blockquote>
+<p>Hér notum við að <code class="docutils literal notranslate"><span class="pre">rdr</span></code> er ítrari, og fallið <code class="docutils literal notranslate"><span class="pre">list</span></code> úr kafla
+<a class="reference internal" href="../kafli06/#bua-til-sofn"><span class="std std-numref">6.1</span></a> býr til lista úr honum. Svo má nota yfirgrip til að ná til dæmis í
+stak nr. 1 í öllum undirlistunum í L svona:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">dálkur1</span> <span class="pre">=</span> <span class="pre">[undirlisti[1]</span> <span class="pre">for</span> <span class="pre">undirlisti</span> <span class="pre">in</span> <span class="pre">L]</span></code></p>
+</div></blockquote>
+<p>eða bara <code class="docutils literal notranslate"><span class="pre">d1</span> <span class="pre">=</span> <span class="pre">[x[1]</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">L]</span></code>. Ef dálkurinn inniheldur kommutölur má ná
+í lista af þeim með <code class="docutils literal notranslate"><span class="pre">d1</span> <span class="pre">=</span> <span class="pre">[float(x[1])</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">L]</span></code>.</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing:</p>
+<p>Búið til lista af strengjum með upplýsingum um málmana í kafla
+<a class="reference internal" href="#csv-lestur-bilafmark"><span class="std std-numref">8.3.4</span></a> en látið strengina vera kommu-afmarkaða (t.d.
+verður fyrsti strengurinn <code class="docutils literal notranslate"><span class="pre">&quot;Ál,2.70,933&quot;</span></code>. Búið til lesara fyrir þennan lista,
+sbr. kafla <a class="reference internal" href="#csv-lestur-strengja"><span class="std std-numref">8.3.3</span></a> og náið í framhaldi í
+eðlisþyngdadálkinn inn í lista af kommutölum.</p>
+</div>
+</section>
+</section>
+<section id="skrar-skrifaar-ut">
+<span id="skrar-skrifadar-ut"></span><h2><span class="section-number">8.4  </span>Skrár skrifaðar út<a class="headerlink" href="#skrar-skrifaar-ut" title="Permalink to this heading"></a></h2>
+<p>Til að skrifa í textaskrá þarf að opna hana í útskriftarham með því að rita</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">with</span> <span class="pre">open(&quot;skráarnafn&quot;,</span> <span class="pre">mode=&quot;w&quot;)</span> <span class="pre">as</span> <span class="pre">file:</span></code></p>
+</div></blockquote>
+<p>Reyndar má sleppa <em>mode=</em> og rita <code class="docutils literal notranslate"><span class="pre">open(&quot;skráarnafn&quot;,</span> <span class="pre">&quot;w&quot;)</span></code>. Skráin lendir
+sjálfkrafa í núverandi möppu. Síðan má nota fallið <code class="docutils literal notranslate"><span class="pre">write</span></code> til að skrifa
+strengi í skrána en þess þarf að gæta að setja handvirkt línuskiptatákn
+aftast í hverja línu.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Skráaskrift með write</p>
+<p>Forrit sem býr til skrá <code class="docutils literal notranslate"><span class="pre">xy.dat</span></code> með strengjunum „x=3“ og „y=4“. Takið eftir að
+hægt er að skrifa f-strengi með write.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;xy.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;x = </span><span class="si">{x}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;y = </span><span class="si">{y}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Það er líka hægt að nota <code class="docutils literal notranslate"><span class="pre">print</span></code> til að skrifa í skrár með því að hafa
+viðfangið <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">=</span> <span class="pre">f</span></code> með, og þá koma línuskiptin sjálfkrafa með, sbr.
+eftirfarandi dæmi</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Skráaskrift með print</p>
+<p>Eftirfarandi forrit býr til eins skrá og dæmið að framan.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;xy1.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Skráaskrift úr vinnubók</p>
+<p>Afritið forritin í sýnidæmunum tveimur hér að framan inn í reiti í vinnubók
+og keyrið þau. Skoðið svo skrárnar sem urðu til [í Colab má smella á
+möpputáknið í vinstri spássíu, en á eigin tölvu má nota Finder (Mac) eða File
+Explorer (Windows)].</p>
+</div>
+</section>
+<section id="skraakerfi">
+<span id="id3"></span><h2><span class="section-number">8.5  </span>Skráakerfi<a class="headerlink" href="#skraakerfi" title="Permalink to this heading"></a></h2>
+<p>Tölvuskrár eru oftast settar upp í svonefnt <strong>skráakerfi</strong> (<em>file system</em>).
+Gögnum er skipað í skrár sem hver hefur sitt nafn, og síðan er skrám skipað í
+<strong>möppur</strong> (<em>folders</em>, <em>directories</em>), líka hver með sínu nafni. Fyrir utan
+skrár geta möppur innihaldið aðrar möppur, sem eru þá kallaðar <strong>undirmöppur</strong>
+(<em>subfolder</em>, <em>subdirectory</em>) en mappan sem inniheldur þær er <strong>yfirmappa</strong>
+(<em>parent folder</em>).</p>
+<section id="mopputre">
+<h3><span class="section-number">8.5.1  </span>Möpputré<a class="headerlink" href="#mopputre" title="Permalink to this heading"></a></h3>
+<p>Möppum er oft raðað saman í kerfi sem er eins og tré á hvolfi, en kerfið er líka
+stundum sýnt með því að lista innihald möppu inndregið fyrir neðan nafn
+möppunnar. Hér eru tvö dæmi:</p>
+<figure class="align-center" id="id7" style="width: 12cm">
+<span id="moppur-toms"></span><img alt="../_images/tommaskr%C3%A1r.jpg" src="../_images/tommaskr%C3%A1r.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 8.4: </span><span class="caption-text">Möppurnar hans Toms</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<figure class="align-right" id="id8" style="width: 35%">
+<span id="makka-skraakerfi"></span><img alt="../_images/makkakerfi.png" src="../_images/makkakerfi.png" />
+<figcaption>
+<p><span class="caption-number">Mynd 8.5: </span><span class="caption-text">Hluti af skráakerfi á Makka</span><a class="headerlink" href="#id8" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Í fyrra dæminu eru bara hluti af möppum á tölvunni sýndar, þær sem tilheyra
+tilteknum notanda. En stór hluti af skrám á tölvu tilheyra stýrikerfinu og ýmsum
+hugbúnaði (<em>applications</em>) sem er uppsettur á henni. Síðara dæmið sýnir hluta af
+skráakerfi á Makka höfundar þar á meðal ýmsar slíkar stýrikerfisskrár, en líka
+heimamöppu hans (<em>jonasson</em>) og tvær undirmöppur hennar.</p>
+<p>Oft er eitt svona möpputré fyrir hvern disk á tölvunni, og ef maður stingur
+USB-kubbi í hana sýnir hún sérstakt tré fyrir hann. Ef Google drive eða Dropbox
+eru notuð eru líka sérstök möpputré fyrir þau. Efsta mappan í svona möpputré er
+kölluð <strong>rót</strong> (<em>root</em>) eða <strong>rótarmappa</strong>. Á Linux og Mökkum er rótarmappan
+táknuð með „/“ en á Windows gjarna með „C:&quot;. En þetta er ekki algilt, t.d.
+sýnir <em>Finder</em> (=*File Explorer*) rótarmöppuna á Makka höfundar undir heitinu
+<em>Macintosh HD</em>.</p>
+</section>
+<section id="heimamappa">
+<h3><span class="section-number">8.5.2  </span>Heimamappa<a class="headerlink" href="#heimamappa" title="Permalink to this heading"></a></h3>
+<p>Á flestum tölvum á hver notandi sína heimamöppu, sem heitir nafni sem er líka
+notendanafn hans. Á Mökkum og Windows-tölvum er kerfið oft sett þannig upp að
+undir rótarmöppu tölvunnar er mappa <em>Users</em>, og undir henni eru heimamöppur
+þeirra notenda sem hafa verið settir upp. Í heimamöppunum eru síðan möppurnar
+<em>Documents</em>, <em>Downloads</em>, <em>Desktop</em>, <em>Pictures</em>, <em>Music</em> o.fl. Í Ubuntu Linux
+heitir yfirmappa heimamöppunnar <em>home</em> en ekki <em>Users</em>.</p>
+</section>
+<section id="nuverandi-mappa">
+<h3><span class="section-number">8.5.3  </span>Núverandi mappa<a class="headerlink" href="#nuverandi-mappa" title="Permalink to this heading"></a></h3>
+<p>Þegar forrit keyrir er það oftast statt í tiltekinni möppu sem kölluð er
+<em>sjálfgefin mappa</em> eða <em>núverandi mappa</em> (<em>current working directory</em>). Þetta er
+sú mappa sem skrár lenda í þegar þær eru vistaðar úr forritinu, og líka sú þar
+sem fyrst er leitað að skrá til að opna. Oft er það heimamappan sem er sú
+sjálfgefna, eða þá mappan <em>Documents</em>, nema um sé að ræða myndvinnsluforrit eða
+tónlistarforrit t.d.</p>
+<p>Það gildir líka um Python-forrit notanda að það er statt í tiltekinni möppu
+þegar það keyrir. Þegar JupyterLab er keyrt upp frá skipanalínu í ákveðinni
+möppu þá er forritið í byrjun statt þar. En þegar keyrt er með Google Colab þá
+er maður staddur á einhverri tölvu uppi í <em>Skýinu</em>, nánar tiltekið í möppu sem
+heitir „/content“. Það er hægt að skoða skráakerfi þessarar tölvu með því að
+smella á möpputáknið í vinstri spássíu gluggans. Þá birtast líka hnappar til að
+hlaða upp eða niður skrám frá/á eigin tölvu og sömuleiðis er hægt að tengja
+Google Drive notanda við þetta skráakerfi.</p>
+</section>
+<section id="sloir">
+<h3><span class="section-number">8.5.4  </span>Slóðir<a class="headerlink" href="#sloir" title="Permalink to this heading"></a></h3>
+<p>Þegar vísað er í skrá er hægt að gera það með því að gefa upp svonefnda <strong>slóð</strong>
+(<em>path</em>) skrárinnar, en það er runa af möppum sem sýnir hvar skráin er, aðskilin
+með skástrikum, sem endar á skránni sjálfri. Svo er líka talað um slóð möppu,
+sem endar þá á möppunafninu. Sérstaka möppunafnið <code class="docutils literal notranslate"><span class="pre">..</span></code> táknar yfirmöppu, þ.e.
+að farið sé upp tréð. Slíka slóð má gefa upp miðað við rót trésins (<strong>algild
+slóð</strong>, <em>absolute path</em>), og þá er byrjað á <code class="docutils literal notranslate"><span class="pre">/</span></code>, eða miðað við núverandi möppu
+(<strong>afstæð slóð</strong>, <em>relative path</em>), og þá byrjar slóðin ekki á <code class="docutils literal notranslate"><span class="pre">/</span></code>. Stundum er
+líka notað sérstaka möppunafnið <code class="docutils literal notranslate"><span class="pre">.</span></code> sem táknar núverandi möppu.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Slóðir</p>
+<ol class="arabic simple">
+<li><p>Notandi sem er staddur í möppunni <em>Old</em> neðst til hægri á mynd
+<a class="reference internal" href="#moppur-toms"><span class="std std-numref">8.4</span></a> getur vísað í skrána <em>Two.txt</em> á sömu mynd með
+slóðinni <code class="docutils literal notranslate"><span class="pre">../../Data/Two.txt</span></code></p></li>
+<li><p>Notandi sem er staddur í möppunni <em>Downloads</em> á mynd <a class="reference internal" href="#makka-skraakerfi"><span class="std std-numref">8.5</span></a>
+getur vísað í skrána <em>listi.xlsx</em> hvort sem er með
+<code class="docutils literal notranslate"><span class="pre">/Users/jonasson/Documents/listi.xlsx</span></code> eða <code class="docutils literal notranslate"><span class="pre">../Documents/listi.xlsx</span></code>.</p></li>
+<li><p>Mappan <em>Downloads</em> á mynd <a class="reference internal" href="#makka-skraakerfi"><span class="std std-numref">8.5</span></a> hefur slóð
+<code class="docutils literal notranslate"><span class="pre">/Users/jonasson/Downloads</span></code>.</p></li>
+</ol>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Afstætt og algilt</p>
+<ol class="arabic simple">
+<li><p>Finnið afstæða slóð skrárinnar <em>Format</em> ef notandi er staddur í
+rótarmöppunni <em>Tom</em> á mynd <a class="reference internal" href="#moppur-toms"><span class="std std-numref">8.4</span></a></p></li>
+<li><p>Ákvarðið algilda slóð möppunnar <em>Desktop</em> hjá notandanum <em>uppsetning</em> á
+mynd <a class="reference internal" href="#makka-skraakerfi"><span class="std std-numref">8.5</span></a>.</p></li>
+</ol>
+</div>
+</section>
+<section id="einingin-pathlib">
+<h3><span class="section-number">8.5.5  </span>Einingin pathlib<a class="headerlink" href="#einingin-pathlib" title="Permalink to this heading"></a></h3>
+<p>Í (eldri) Python-forritum er algengt að notuð sé einingin <em>os</em> (<em>operating
+system</em>) til að meðhöndla möppur og slóðir. Einingin <strong>pathlib</strong> er nýleg og
+tilgangur hennar er að leysa <em>os</em> af hólmi með einfaldari aðgerðum. Hér lýsum
+við bara hvernig nota má <em>pathlib</em>, en nefna má að Think Python-bókin útskýrir
+<em>os</em>-eininguna í kafla 14.4.</p>
+<p>Mikilvægasta fallið í <em>pathlib</em> er kallað <code class="docutils literal notranslate"><span class="pre">Path</span></code> og það er virkjað með því að
+rita:</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">pathlib</span> <span class="pre">import</span> <span class="pre">Path</span></code></p>
+</div></blockquote>
+<p>Við algengustu notkun tekur <em>Path</em> einn stika sem er slóð á strengjaformi,
+annaðhvort afstæð eða algild, og það skilar hlut af taginu <em>PosixPath</em> sem er í
+rauninni gagnatag fyrir slóð. Sjálfgefið gildi stikans er <code class="docutils literal notranslate"><span class="pre">.</span></code> þ.e.a.s.
+núverandi mappa. Hlutur af taginu <em>PosixPath</em> hefur ýmsar aðferðir, og eru
+nokkrar þær helstu sýndar í næstu töflu, sem miðast við að Path-hluturinn <code class="docutils literal notranslate"><span class="pre">p</span></code>
+hafi verið búin til með</p>
+<blockquote>
+<div><p><code class="code docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">Path(&quot;mappa/mappa/...&quot;)</span></code></p>
+</div></blockquote>
+<table class="docutils align-default" id="posixpath-hlutir">
+<caption><span class="caption-number">Tafla 8.1: </span><span class="caption-text">Helstu aðgerðir fyrir <em>PosixPath</em>-hluti</span><a class="headerlink" href="#posixpath-hlutir" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p.resolve()</span></code></p></td>
+<td><p>algild slóð fyrir p</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p.parent</span></code></p></td>
+<td><p>yfirmappa p</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p.name</span></code></p></td>
+<td><p>aftasti hluti p, skráin eða mappan sem p lýsir</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p.suffix</span></code></p></td>
+<td><p>undirnafn skrár (t.d. <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p.stem</span></code></p></td>
+<td><p>aðalnafn skrár (nafn án undirnafns)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p.cwd()</span></code></p></td>
+<td><p>slóð núverandi möppu (<em>current working directory</em>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p.home()</span></code></p></td>
+<td><p>slóð heimamöppu</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p.exists()</span></code></p></td>
+<td><p>satt ef slóðin p er til</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p.is_dir()</span></code></p></td>
+<td><p>satt ef p er mappa (<em>directory</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p.is_file()</span></code></p></td>
+<td><p>satt ef p er skrá</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p.unlink()</span></code></p></td>
+<td><p>eyðir skrá með slóð p</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p.rmdir()</span></code></p></td>
+<td><p>eyðir möppu með slóð p (<em>remove</em>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p.mkdir()</span></code></p></td>
+<td><p>býr til möppu með slóð p (<em>make</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p.iterdir()</span></code></p></td>
+<td><p>ítrari fyrir allar skrár og undirmöppur í p</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">p/&quot;mappa&quot;</span></code></p></td>
+<td><p>slóð fyrir möppu undir p</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">p/&quot;skrá&quot;</span></code></p></td>
+<td><p>slóð fyrir skrá undir p</p></td>
+</tr>
+</tbody>
+</table>
+<p>Takið eftir að sumar aðgerðirnar eru ekki með () á eftir: Þær eru það sem kallað
+er „eiginleikar“ en ekki aðferðir. Aðferðirnar <code class="docutils literal notranslate"><span class="pre">p.cwd()</span></code> og <code class="docutils literal notranslate"><span class="pre">p.home()</span></code> eru
+reyndar þannig að það skiptir engu máli hvaða slóð var notuð til að búa til p.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Notkun Pathlib</p>
+<figure class="align-right" style="width: 45%">
+<img alt="../_images/tommaskr%C3%A1r-hluti.jpg" src="../_images/tommaskr%C3%A1r-hluti.jpg" />
+</figure>
+<p>Hér t.h. er hluti af möppukerfi Toms. Ef notandi er staddur í möppunni Tools
+þá mundi eftirfarandi forritsbútur ítra sig yfir innihald hennar og skrifa út
+<code class="docutils literal notranslate"><span class="pre">Format,</span> <span class="pre">Stats,</span> <span class="pre">Old</span></code>. Að því loknu skrifast <code class="docutils literal notranslate"><span class="pre">True,</span> <span class="pre">Notes</span></code> (aðalnafn
+<em>Notes.txt</em>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">mappa</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mappa</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="n">nótur</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../Notes.txt&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nótur</span><span class="o">.</span><span class="n">exists</span><span class="p">(),</span> <span class="n">nótur</span><span class="o">.</span><span class="n">stem</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Ítrað yfir möppu</p>
+<p>Reiknað er með að æfingarnar í köflum <a class="reference internal" href="#hefdbundinn-innlestur"><span class="std std-numref">8.2.3</span></a> og
+<a class="reference internal" href="#skrar-skrifadar-ut"><span class="std std-numref">8.4</span></a> hafi verið leystar og því séu nokkrar skrár í
+núverandi möppu (<em>data.txt</em>, <em>xy.dat</em>, <em>xy1.dat</em>).</p>
+<ol class="arabic simple">
+<li><p>Finnið út algilda slóð núverandi möppu með því að nota Path.</p></li>
+<li><p>Skrifið forritsbút sem ítrar yfir innihald þessarar möppu og ákvarðar
+fyrir hvern hlut sem finnst hvort hann sé skrá eða mappa.</p></li>
+<li><p>Búið til nýja möppu „prufa“ og skrifið svo skrá þar, „tilraun.txt“ með
+nafninu ykkar. Finnið hana í vinstri spássíunni og skoðið [Hér má
+nota neðstu skipunina í töflu <a class="reference internal" href="#posixpath-hlutir"><span class="std std-numref">8.1</span></a> og svo er
+hægt að nota Path-hluti sem viðföng í open-fallið].</p></li>
+</ol>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli07/" class="btn btn-neutral float-left" title="7 Uppflettitöflur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli09/" class="btn btn-neutral float-right" title="9 Teikning með Matplotlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

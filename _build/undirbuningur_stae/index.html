@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undirbúningur í stærðfræði, Háskóli Íslands &mdash; Undirbúningur í stærðfræði 2023 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="_static/katex.min.js"></script>
+        <script src="_static/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <!-- hoverrole.py css code -->
+    <style type="text/css">
+        a.tooltip {
+            outline: none;
+            border-bottom: thin dotted;
+            background: #ffeedd
+        }
+        
+        a.tooltip strong {
+            line-height: 30px;
+        }
+        
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+        
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: -30px;
+            margin-left: 12px;
+            width: 310px;
+            line-height: 16px;
+        }
+        
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            color: #111;
+            border: 1px solid #DCA;
+            background: #fffAF0;
+        }
+        
+        .callout {
+            z-index: 20;
+            position: absolute;
+            top: 30px;
+            border: 0;
+            left: -12px;
+        }
+        /*CSS3*/
+        
+        a.tooltip span {
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
+    <!-- End hoverrole.py css code -->
+
+    <style type="text/css">
+        .sagecell .CodeMirror-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .sagecell .CodeMirror {
+            height: auto;
+        }
+    </style>
+
+
+
+
+
+    <link rel="index" title="Yfirlit" href="genindex/" />
+    <link rel="search" title="Leit" href="search/" />
+    <link rel="next" title="Um námsefnið" href="formali/" /> 
+    <!-- Eftirfarandi sagecell import eyðileggur searchið -->
+    <!-- <script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script> -->
+    <!-- <script>
+        // the buttonText string says what will be written on the
+        // sage cell evaluation button.
+        // It can be changed here.
+        var buttonText = "Keyra"
+    </script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({
+            inputLocation: ".sage",
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsage",
+            languages: ["r"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osage",
+            languages: ["octave"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAuto",
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAuto",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAuto",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAutoHidden",
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAutoHidden",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAutoHidden",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+    </script> -->
+    <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    <script>
+        ggbAppletId = [];
+    </script>
+    <script>
+        top.scrolldepth_tags = [];
+    </script>
+
+
+
+
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Undirbúningur í stærðfræði
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali/">Um námsefnið</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01/">1. Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02/">2. Jöfnur og ójöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03/">3. Rúmfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04/">4. Mengi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05/">5. Föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06/">6. Margliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07/">7. Hornaföll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08/">8. Vigrar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09/">9. Meira um föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10/">10. Markgildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11/">11. Diffrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12/">12. Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Undirbúningur í stærðfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Undirbúningur í stærðfræði, Háskóli Íslands</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/undirbuningur_stae/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="undirbuningur-i-staerfraei-haskoli-islands">
+<h1>Undirbúningur í stærðfræði, Háskóli Íslands<a class="headerlink" href="#undirbuningur-i-staerfraei-haskoli-islands" title="Permalink to this heading"></a></h1>
+<p>Hér er námsefni í stærðfræði þar sem farið er yfir helstu grunnhugtök greinarinnar.
+Einnig er til sambærileg yfirlit um eðlisfræði og efnafræði.</p>
+
+<a href="../undirbuningur_edl/index.html">
+    <span class="button">Undirbúningur í eðlisfræði</span>
+</a>
+<a href="../undirbuningur_efn/index.html">
+    <span class="button">Undirbúningur í efnafræði</span>
+</a><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="formali/">Um námsefnið</a></li>
+</ul>
+</div>
+<section id="efnisyfirlit">
+<h2>Efnisyfirlit<a class="headerlink" href="#efnisyfirlit" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01/">1. Algebra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#talnakerfi">1.1. Talnakerfi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#forgangsroun-agera">1.2. Forgangsröðun aðgerða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#reiknireglur">1.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#frumtolur">1.4. Frumtölur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#brotareikningur">1.5. Brotareikningur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#deiling-me-afgangi">1.6. Deiling með afgangi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#veldi-og-raetur">1.7. Veldi og rætur</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02/">2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#jofnur">2.1. Jöfnur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#liun-og-attun">2.2. Liðun og þáttun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#jofnuhneppi">2.3. Jöfnuhneppi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#ojofnur-og-tolugildi">2.4. Ójöfnur og tölugildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#summu-og-margfeldistakni">2.5. Summu- og margfeldistáknið</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03/">3. Rúmfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#hnitakerfi">3.1. Hnitakerfi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#jafna-linu-i-hnitakerfinu">3.2. Jafna línu í hnitakerfinu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#hallatala-og-skurpunktur-vi-asa">3.3. Hallatala og skurðpunktur við ása</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#meira-um-jofnu-linu">3.4. Meira um jöfnu línu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#keilusni">3.5. Keilusnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#flatarmyndir">3.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04/">4. Mengi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#grunnhugtok">4.1. Grunnhugtök</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#yringar-til-a-skilgreina-mengi">4.2. Yrðingar til að skilgreina mengi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#agerir-a-mengjum">4.3. Aðgerðir á mengjum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#meira-um-agerir-a-mengjum">4.4. Meira um aðgerðir á mengjum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#rauntalnabil">4.5. Rauntalnabil</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05/">5. Föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#varpanir-og-foll">5.1. Varpanir og föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#graf-vorpunnar">5.2. Graf vörpunnar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#jafnstae-og-oddstae-foll">5.3. Jafnstæð og oddstæð föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#einhalla-foll">5.4. Einhalla föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#gaffalforskrift">5.5. Gaffalforskrift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#lotubundin-foll">5.6. Lotubundin föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#andhverfur-falla">5.7. Andhverfur falla</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06/">6. Margliður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#id1">6.1. Margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#nullstovar-marglia">6.2. Núllstöðvar margliða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#fyrsta-og-annars-stigs-margliur">6.3. Fyrsta og annars stigs margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#deiling-me-afgangi-margliur">6.4. Deiling með afgangi - margliður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#attun-marglia">6.5. Þáttun margliða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#p-q-afer">6.6. p/q-aðferð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#pascal">6.7. Pascal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07/">7. Hornaföll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#bogaeiningar">7.1. Bogaeiningar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#kosinus-og-sinus">7.2. Kósínus og sínus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#ekkt-gildi-a-hornafollum">7.3. Þekkt gildi á hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#tangens-og-kotangens">7.4. Tangens og kótangens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#myndir-af-hornafollum">7.5. Myndir af hornaföllum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#hornafallareglur">7.6. Hornafallareglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#tvofold-horn">7.7. Tvöföld horn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#andhverfur-hornafallanna">7.8. Andhverfur hornafallanna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#tengsl-i-rumfraei">7.9. Tengsl í rúmfræði</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#hornafallareglurnar">7.10. Hornafallareglurnar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08/">8. Vigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#skilgreining">8.1. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#a-lia-vigra">8.2. Að liða vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#einingarvigrar">8.3. Einingarvigrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#samlagning-vigra">8.4. Samlagning vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#margfoldun-vigra">8.5. Margföldun vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#flatarmyndir">8.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09/">9. Meira um föll</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#andhverfur">9.1. Andhverfur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#eintaek-og-ataek-foll">9.2. Eintæk og átæk föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#samskeyting-falla">9.3. Samskeyting falla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#nokkur-mikilvaeg-foll">9.4. Nokkur mikilvæg föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#ummyndanir">9.5. Ummyndanir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10/">10. Markgildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#markgildi-falls">10.1. Markgildi falls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#gerir-markgilda">10.2. Gerðir markgilda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#reikniagerir-a-markgildum">10.3. Reikniaðgerðir á markgildum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#samfelld-foll">10.4. Samfelld föll</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11/">11. Diffrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli11/#skyringardaemi">11.1. Skýringardæmi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11/#skilgreining">11.2. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11/#reiknireglur">11.3. Reiknireglur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11/#ekktar-afleiur">11.4. Þekktar afleiður</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12/">12. Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli12/#repun">12.1. Þrepun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12/#rithattur">12.2. Ritháttur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12/#formulubla">12.3. Formúlublað</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<dl class="simple">
+<dt>.</dt><dd><p>_comment debug 089f03fffffvgff</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="formali/" class="btn btn-neutral float-right" title="Um námsefnið" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <script>
+        window.addEventListener("load", function() {
+            for (var i in ggbAppletId) {
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+      
+    <style>
+        /* Sidebar header (and topbar for mobile) */
+        
+        .wy-side-nav-search,
+        .wy-nav-top {
+            background: #10099F;
+        }
+        /* Sidebar */
+        
+        .wy-nav-side {
+            background: #262626;
+        }
+    </style>
+
+
+</body>
+</html>

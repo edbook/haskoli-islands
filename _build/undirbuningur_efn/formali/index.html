@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Um námsefnið &mdash; Undirbúningur í efnafræði 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <!-- hoverrole.py css code -->
+    <style type="text/css">
+        a.tooltip {
+            outline: none;
+            border-bottom: thin dotted;
+            background: #ffeedd
+        }
+        
+        a.tooltip strong {
+            line-height: 30px;
+        }
+        
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+        
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: -30px;
+            margin-left: 12px;
+            width: 310px;
+            line-height: 16px;
+        }
+        
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            color: #111;
+            border: 1px solid #DCA;
+            background: #fffAF0;
+        }
+        
+        .callout {
+            z-index: 20;
+            position: absolute;
+            top: 30px;
+            border: 0;
+            left: -12px;
+        }
+        /*CSS3*/
+        
+        a.tooltip span {
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
+    <!-- End hoverrole.py css code -->
+
+    <style type="text/css">
+        .sagecell .CodeMirror-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .sagecell .CodeMirror {
+            height: auto;
+        }
+    </style>
+
+
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="1. Einingar og reikniaðferðir" href="../kafli01/" />
+    <link rel="prev" title="Undirbúningur í efnafræði, Háskóli Íslands" href="../" /> 
+    <!-- Eftirfarandi sagecell import eyðileggur searchið -->
+    <!-- <script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script> -->
+    <!-- <script>
+        // the buttonText string says what will be written on the
+        // sage cell evaluation button.
+        // It can be changed here.
+        var buttonText = "Keyra"
+    </script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({
+            inputLocation: ".sage",
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsage",
+            languages: ["r"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osage",
+            languages: ["octave"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAuto",
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAuto",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAuto",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAutoHidden",
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAutoHidden",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAutoHidden",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+    </script> -->
+    <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    <script>
+        ggbAppletId = [];
+    </script>
+    <script>
+        top.scrolldepth_tags = [];
+    </script>
+
+
+
+
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Undirbúningur í efnafræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Leita í bók" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Um námsefnið</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Um námsefnið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hva-er-efnafraei">Hvað er efnafræði?</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Einingar og reikniaðferðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frumefni og sameindir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Efnahvörf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Skammtafræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Efnatengi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kjörgaslögmálið</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Varmaefnafræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Hraðafræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Efnajafnvægi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Sýrur og basar</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Undirbúningur í efnafræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../">Yfirlit</a> &raquo;</li>
+      
+    <li>Um námsefnið</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/undirbuningur_efn/formali.rst" class="fa fa-github"> Edit on GitHub</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="um-namsefni">
+<h1>Um námsefnið<a class="headerlink" href="#um-namsefni" title="Permalink to this heading"></a></h1>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><em>Vandinn að skrifa er í því fólginn að þegja yfir nógu mörgu.</em></div>
+<div class="line">-Halldór Kiljan Laxness, Úngur eg var (1976)</div>
+</div>
+</div></blockquote>
+<section id="id1">
+<h2>Um námsefnið<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>Þetta námsefni er ætlað þeim sem vilja læra eða rifja upp undirstöðuatriði í efnafræði.</p>
+<p>Farið er yfir helstu atriði efnafræðinnar sem gott er að hafa góð tök á í upphafi námsins en efnið er sett fram til að gefa verðandi nemendum tækifæri til að skerpa á þessum atriðum áður en kennsla hefst.</p>
+<p>Hafa ber í huga að í námskeiðum í efnafræði er líklega farið ítarlegra í flest þessara atriða. Þetta er að námsefni sem margir hafa séð í menntaskóla og því getur reynst vel að rifja það upp. Þessi síða gæti einnig nýst
+til hliðsjónar í efnafræðinámskeiðum.</p>
+<p>Námsefnið var unnið með styrk úr <a class="reference external" href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði HÍ</a> og við gerð þess var m.a. stuðst við efni frá síðunni <a class="reference external" href="http://www.efnafraedi.is">Efnafræði.is</a>.</p>
+</section>
+<section id="hva-er-efnafraei">
+<h2>Hvað er efnafræði?<a class="headerlink" href="#hva-er-efnafraei" title="Permalink to this heading"></a></h2>
+<p>Efnafræði er grein raunvísindanna þar sem skoðuð er hegðun efna; efnasambanda og frumefna, og hvernig myndun, sundrun og víxlverkun þeirra mynda alheiminn sem þekkist í dag.
+Efnafræðin er ein af grunnstoðum raunvísindanna, en hún kemur við á flestum sviðum, s.s. eðlisfræði og líffræði. Hún er því oft kölluð <em>miðstöð vísindanna</em> (e. The Central Science).</p>
+<p>Hagnýting efnafræðinnar er ekki ný af nálinni, en fundist hafa leifar af 100 þúsund ára gamalli vinnslu á  <a class="reference external" href="https://is.wikipedia.org/wiki/Okkur">okkur</a>. Mannkynið hefur þá stundað efnahvörf lengi, þar sem það elsta er
+<em>bruni</em>. Hagnýting efnafræðinnar kom langt á undan fræðilegum skilningi en fyrstu hugmyndir um tilveru atóma komu fram 380 árum f.kr. hjá <a class="reference external" href="https://is.wikipedia.org/wiki/Dem%C3%B3kr%C3%ADtos">Demókrítós</a> en hann var forsprakki <em>eindahyggjunar</em> (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Atomism">atomism</a>). Þessi kenning hefur að miklu leyti verið afsönnuð en var þó á réttri leið. Efnafræðin sem skipulögð fræðigrein á rætur sínar að rekja til upphaf 17. aldar, en fram að því einkenndist efnafræðin af gullgerðarmönnum (e. Alchemists) svo sem <a class="reference external" href="https://is.wikipedia.org/wiki/Isaac_Newton">Isaac Newton</a> en
+orðið „Chemistry“ er komið af orðinu „<a class="reference external" href="https://en.wikipedia.org/wiki/Alchemy">Alchemy</a>“.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/Newton.jpg"><img alt="../_images/Newton.jpg" src="../_images/Newton.jpg" style="width: 45%;" /></a>
+<figcaption>
+<p><span class="caption-number">Mynd 1: </span><span class="caption-text">Isaac Newton</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Mikið vatn hefur runnið til sjávar síðan þá en nútímaefnafræðin tekur fyrir breitt svið, allt frá skammtaefnafræði (e. <a class="reference external" href="https://en.wikipedia.org/wiki/Quantum_chemistry">Quantum Chemistry</a>) sem tekur fyrir víxlverkun staka einda, til kjarnasamruna í sólinni.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aðvörun</p>
+<p>Þetta efni var skrifað sumarið 2019 og er birt með fyrirvara um villur. Ef rekist er á villur, hvort sem stafsetnings eða efnislegar, má endilega láta vita með tölvupóst í <em>sef6&#64;hi.is</em> eða <em>sgg23&#64;hi.is</em></p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kafli01/" class="btn btn-neutral float-right" title="1. Einingar og reikniaðferðir" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Undirbúningur í efnafræði, Háskóli Íslands" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Efnið er sett upp í <a href="https://github.com/edbook">Edbook</a> en það kerfi samanstendur af <a href="http://sphinx-doc.org/">Sphinx</a> ásamt sérsniðnum viðbótum. <a href="https://github.com/snide/sphinx_rtd_theme">Þemað</a> kemur frá <a href="https://readthedocs.org">Read the Docs</a>.
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <script>
+        window.addEventListener("load", function() {
+            for (var i in ggbAppletId) {
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+      
+    <style>
+        /* Sidebar header (and topbar for mobile) */
+        
+        .wy-side-nav-search,
+        .wy-nav-top {
+            background: #10099F;
+        }
+        /* Sidebar */
+        
+        .wy-nav-side {
+            background: #262626;
+        }
+    </style>
+
+
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viðauki &mdash; Stærðfræðigreining IV 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="prev" title="6. Bútaaðferðir" href="../kafli06/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Stærðfræðigreining IV
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../umnamskeidid/">Gagnlegar upplýsingar</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Hlutafleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fourier-raðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Eigingildisverkefni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Fourier-ummyndun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Mismunaaðferðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Bútaaðferðir</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Stærðfræðigreining IV</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Viðauki</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae401g/vidauki.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viauki">
+<h1>Viðauki<a class="headerlink" href="#viauki" title="Permalink to this heading"></a></h1>
+<section id="kennsluaaetlun">
+<h2>Kennsluáætlun<a class="headerlink" href="#kennsluaaetlun" title="Permalink to this heading"></a></h2>
+<p>Með fyrirvara um smávægilegar breytingar. Engir dæmatímar eða vinnustofur eru í fyrstu viku.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dagsetning</p></th>
+<th class="head"><p>Efni</p></th>
+<th class="head"><p>Lesefni</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>vika 1</p></td>
+<td><ol class="arabic simple">
+<li><p>Dæmi um hlutafleiðujöfnur í eðlisfræði.</p></li>
+</ol>
+</td>
+<td><p>11.1-11.2.</p></td>
+</tr>
+<tr class="row-odd"><td><p>vika 1</p></td>
+<td><p>2. Hliðarskilyrði. Vel framsett verkefni.
+Fyrsta stigs jöfnur.</p></td>
+<td><p>11.3-11.4,12.1-12.3.</p></td>
+</tr>
+<tr class="row-even"><td><p>vika 2</p></td>
+<td><ol class="arabic simple" start="3">
+<li><p>Fourier-raðir.</p></li>
+</ol>
+</td>
+<td><p>13.1-13.3.</p></td>
+</tr>
+<tr class="row-odd"><td><p>vika 2</p></td>
+<td><ol class="arabic simple" start="4">
+<li><p>Samleitni Fourier-raða.</p></li>
+</ol>
+</td>
+<td><p>13.4-13.6.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>Skiladæmi 1.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vika 3</p></td>
+<td><p>5. Úrlausn hlutafleiðujafa með
+Fourier-röðum.</p></td>
+<td><p>13.7-13.8.</p></td>
+</tr>
+<tr class="row-even"><td><p>vika 3</p></td>
+<td><p>6. Eigingildisverkefni.
+Aðskilnaður breytistærða.</p></td>
+<td><p>14.1-14.3</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Skiladæmi 2.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vika 4</p></td>
+<td><ol class="arabic simple" start="7">
+<li><p>Virkjar af Sturm-Liouville-gerð.</p></li>
+</ol>
+</td>
+<td><p>14.4-14.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>vika 4</p></td>
+<td><p>8. Úrlausn hlutafleiðujafa
+með eiginfallaröðum.</p></td>
+<td><p>15.1-4.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>Skiladæmi 3.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vika 5</p></td>
+<td><p>9. Áfram um eigingildisverkefni
+- aðskilnaður breytistærða.</p></td>
+<td><p>15.5-7</p></td>
+</tr>
+<tr class="row-even"><td><p>vika 5</p></td>
+<td><p>10. Fourier-ummyndun. Reiknireglur.
+Plancerel-jafnan.</p></td>
+<td><p>16.1-2.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Skiladæmi 4.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vika 6</p></td>
+<td><p>11. Andhverfuformúla Fouriers.
+Afleiðujöfnur.</p></td>
+<td><p>16.3-6</p></td>
+</tr>
+<tr class="row-odd"><td><p>vika 6</p></td>
+<td><p>12. Úrlausn hlutafleiðajafa
+með Fourier-ummyndun.</p></td>
+<td><p>18.1-4,19.1-2</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>Próf 1</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vika 7</p></td>
+<td><ol class="arabic simple" start="13">
+<li><p>Fourier-ummyndun og leifareikningur.</p></li>
+</ol>
+</td>
+<td><p>16.7</p></td>
+</tr>
+<tr class="row-even"><td><p>vika 7</p></td>
+<td><ol class="arabic simple" start="14">
+<li><p>Laplace-ummyndun og leifareikningur.</p></li>
+</ol>
+</td>
+<td><p>16.8-9.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Skiladæmi 5.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vika 8</p></td>
+<td><ol class="arabic simple" start="15">
+<li><p>Fourier-ummyndun. Laplace-ummyndun.</p></li>
+</ol>
+</td>
+<td><p>16.7-9.</p></td>
+</tr>
+<tr class="row-odd"><td><p>vika 8</p></td>
+<td><p>16. Mismunaaðferð fyrir venjulegar
+afleiðujöfnur.</p></td>
+<td><p>21.1-2.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>Skiladæmi 6.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vika 9</p></td>
+<td><ol class="arabic simple" start="17">
+<li><p>Heildun yfir hlutbil.</p></li>
+</ol>
+</td>
+<td><p>21.3.</p></td>
+</tr>
+<tr class="row-even"><td><p>vika 9</p></td>
+<td><p>18. Mismunaaðferð fyrir
+hlutaafleiðujöfnur.</p></td>
+<td><p>21.5.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Skiladæmi 7.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vika 10</p></td>
+<td><p>19. Almenn mismunaaðferð á
+rétthyrningi.</p></td>
+<td><p>21.6.</p></td>
+</tr>
+<tr class="row-odd"><td><p>vika 10</p></td>
+<td><p>20. Hlutheildun, innfeldi og
+tvílínulegt form.</p></td>
+<td><p>22.1-2.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>Skiladæmi 8.</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vika 11</p></td>
+<td><p>21. Aðferð Galerkins fyrir
+Dirichlet-verkefnið.</p></td>
+<td><p>22.3.</p></td>
+</tr>
+<tr class="row-even"><td><p>vika 11</p></td>
+<td><p>22.Bútaaðferð í einni vídd.</p></td>
+<td><p>22.5</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Próf 2</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vika 12</p></td>
+<td><p>23. Aðferð Galerkins með almennum
+jaðarskilyrðum.</p></td>
+<td><p>22.4.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Umræður um heimaverkefni</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vika 12</p></td>
+<td><p>24. Aðferð Galerkins með almennum
+jaðarskilyrðum.</p></td>
+<td><p>22.4</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Umræður um heimaverkefni</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vika 13</p></td>
+<td><ol class="arabic simple" start="25">
+<li><p>Bútaaðferð í tveimur víddum.</p></li>
+</ol>
+</td>
+<td><p>22.6.</p></td>
+</tr>
+<tr class="row-odd"><td><p>vika 13</p></td>
+<td><ol class="arabic simple" start="26">
+<li><p>Bútaaðferð í tveimur víddum.</p></li>
+</ol>
+</td>
+<td><p>22.6.</p></td>
+</tr>
+<tr class="row-even"><td><p>vika 14</p></td>
+<td><ol class="arabic simple" start="27">
+<li><p>Bútaaðferð í tveimur víddum.</p></li>
+</ol>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vika 14</p></td>
+<td><p>28. Upprifjun og undirbúningur fyrir
+Próf. Valin prófdæmi.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>Skil á heimaverkefni</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Í dálkinum <strong>Lesefni</strong> er vísað
+í kennslubók Ragnars Sigurðssonar.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex/"><span class="std std-ref">Atriðaskrá</span></a></p></li>
+<li><p><a class="reference external" href="stae401.pdf">Pdf-útgáfa</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli06/" class="btn btn-neutral float-left" title="6. Bútaaðferðir" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

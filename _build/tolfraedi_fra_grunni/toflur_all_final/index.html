@@ -1,0 +1,5927 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Töflur &mdash; Tölfræði frá grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="Svör við dæmum" href="../svor_final/" />
+    <link rel="prev" title="11. Tvíkosta aðhvarfsgreining" href="../kafli11/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Töflur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#t-1-stolu-normaldreifing-z-gildi">T.1: Stöðluð normaldreifing - z-gildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#t-2-t-dreifing">T.2: t-dreifing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#t-3-chi-2-dreifing">T.3: <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#t-4-f-dreifing-a-0-90">T.4: F-dreifing - <span class="math notranslate nohighlight">\(a=0.90\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#t-5-f-dreifing-a-0-95">T.5: F-dreifing - <span class="math notranslate nohighlight">\(a=0.95\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#t-6-f-dreifing-a-0-975">T.6: F-dreifing - <span class="math notranslate nohighlight">\(a=0.975\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#t-7-f-dreifing-a-0-99">T.7: F-dreifing - <span class="math notranslate nohighlight">\(a=0.99\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../svor_final/">Svör við dæmum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thakkir/">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Töflur</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/toflur_all_final.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="toflur">
+<h1>Töflur<a class="headerlink" href="#toflur" title="Permalink to this heading"></a></h1>
+<section id="t-1-stolu-normaldreifing-z-gildi">
+<span id="a-normaltafla"></span><h2>T.1: Stöðluð normaldreifing - z-gildi<a class="headerlink" href="#t-1-stolu-normaldreifing-z-gildi" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/normal_plot.svg" /></figure>
+<p>Taflan gefur gildi á <span class="math notranslate nohighlight">\(\Phi\)</span>, það er líkurnar á að <span class="math notranslate nohighlight">\(Z\)</span> taki
+gildi sem er minna en <span class="math notranslate nohighlight">\(z\)</span>, þar sem <span class="math notranslate nohighlight">\(Z\)</span> fylgir staðlaðri
+normaldreifingu, sem við munum er normaldreifingu með meðaltal 0 og
+staðalfrávik 1. Vinstra megin í töflunni er talið upp gildi <span class="math notranslate nohighlight">\(\Phi\)</span>
+miðað við neikvætt gildi á <span class="math notranslate nohighlight">\(z\)</span>, meðan hægra megin í töfluna er
+talið upp gildi <span class="math notranslate nohighlight">\(\Phi\)</span> miðað við jákvætt gildi á <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{z}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\Phi(\mathbf{z})\)</span></p></th>
+<th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{z}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\Phi(\mathbf{z})\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.00</p></td>
+<td><p>0.5000</p></td>
+<td></td>
+<td><p>0.00</p></td>
+<td><p>0.5000</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.01</p></td>
+<td><p>0.4960</p></td>
+<td></td>
+<td><p>0.01</p></td>
+<td><p>0.5040</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.02</p></td>
+<td><p>0.4920</p></td>
+<td></td>
+<td><p>0.02</p></td>
+<td><p>0.5080</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.03</p></td>
+<td><p>0.4880</p></td>
+<td></td>
+<td><p>0.03</p></td>
+<td><p>0.5120</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.04</p></td>
+<td><p>0.4840</p></td>
+<td></td>
+<td><p>0.04</p></td>
+<td><p>0.5160</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.05</p></td>
+<td><p>0.4801</p></td>
+<td></td>
+<td><p>0.05</p></td>
+<td><p>0.5199</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.06</p></td>
+<td><p>0.4761</p></td>
+<td></td>
+<td><p>0.06</p></td>
+<td><p>0.5239</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.07</p></td>
+<td><p>0.4721</p></td>
+<td></td>
+<td><p>0.07</p></td>
+<td><p>0.5279</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.08</p></td>
+<td><p>0.4681</p></td>
+<td></td>
+<td><p>0.08</p></td>
+<td><p>0.5319</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.09</p></td>
+<td><p>0.4641</p></td>
+<td></td>
+<td><p>0.09</p></td>
+<td><p>0.5359</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.10</p></td>
+<td><p>0.4602</p></td>
+<td></td>
+<td><p>0.10</p></td>
+<td><p>0.5398</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.11</p></td>
+<td><p>0.4562</p></td>
+<td></td>
+<td><p>0.11</p></td>
+<td><p>0.5438</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.12</p></td>
+<td><p>0.4522</p></td>
+<td></td>
+<td><p>0.12</p></td>
+<td><p>0.5478</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.13</p></td>
+<td><p>0.4483</p></td>
+<td></td>
+<td><p>0.13</p></td>
+<td><p>0.5517</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.14</p></td>
+<td><p>0.4443</p></td>
+<td></td>
+<td><p>0.14</p></td>
+<td><p>0.5557</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.15</p></td>
+<td><p>0.4404</p></td>
+<td></td>
+<td><p>0.15</p></td>
+<td><p>0.5596</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.16</p></td>
+<td><p>0.4364</p></td>
+<td></td>
+<td><p>0.16</p></td>
+<td><p>0.5636</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.17</p></td>
+<td><p>0.4325</p></td>
+<td></td>
+<td><p>0.17</p></td>
+<td><p>0.5675</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.18</p></td>
+<td><p>0.4286</p></td>
+<td></td>
+<td><p>0.18</p></td>
+<td><p>0.5714</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.19</p></td>
+<td><p>0.4247</p></td>
+<td></td>
+<td><p>0.19</p></td>
+<td><p>0.5753</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.20</p></td>
+<td><p>0.4207</p></td>
+<td></td>
+<td><p>0.20</p></td>
+<td><p>0.5793</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.21</p></td>
+<td><p>0.4168</p></td>
+<td></td>
+<td><p>0.21</p></td>
+<td><p>0.5832</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.22</p></td>
+<td><p>0.4129</p></td>
+<td></td>
+<td><p>0.22</p></td>
+<td><p>0.5871</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.23</p></td>
+<td><p>0.4090</p></td>
+<td></td>
+<td><p>0.23</p></td>
+<td><p>0.5910</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.24</p></td>
+<td><p>0.4052</p></td>
+<td></td>
+<td><p>0.24</p></td>
+<td><p>0.5948</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.25</p></td>
+<td><p>0.4013</p></td>
+<td></td>
+<td><p>0.25</p></td>
+<td><p>0.5987</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.26</p></td>
+<td><p>0.3974</p></td>
+<td></td>
+<td><p>0.26</p></td>
+<td><p>0.6026</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.27</p></td>
+<td><p>0.3936</p></td>
+<td></td>
+<td><p>0.27</p></td>
+<td><p>0.6064</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.28</p></td>
+<td><p>0.3897</p></td>
+<td></td>
+<td><p>0.28</p></td>
+<td><p>0.6103</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.29</p></td>
+<td><p>0.3859</p></td>
+<td></td>
+<td><p>0.29</p></td>
+<td><p>0.6141</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.30</p></td>
+<td><p>0.3821</p></td>
+<td></td>
+<td><p>0.30</p></td>
+<td><p>0.6179</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.31</p></td>
+<td><p>0.3783</p></td>
+<td></td>
+<td><p>0.31</p></td>
+<td><p>0.6217</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.32</p></td>
+<td><p>0.3745</p></td>
+<td></td>
+<td><p>0.32</p></td>
+<td><p>0.6255</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.33</p></td>
+<td><p>0.3707</p></td>
+<td></td>
+<td><p>0.33</p></td>
+<td><p>0.6293</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.34</p></td>
+<td><p>0.3669</p></td>
+<td></td>
+<td><p>0.34</p></td>
+<td><p>0.6331</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.35</p></td>
+<td><p>0.3632</p></td>
+<td></td>
+<td><p>0.35</p></td>
+<td><p>0.6368</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.36</p></td>
+<td><p>0.3594</p></td>
+<td></td>
+<td><p>0.36</p></td>
+<td><p>0.6406</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.37</p></td>
+<td><p>0.3557</p></td>
+<td></td>
+<td><p>0.37</p></td>
+<td><p>0.6443</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.38</p></td>
+<td><p>0.3520</p></td>
+<td></td>
+<td><p>0.38</p></td>
+<td><p>0.6480</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.39</p></td>
+<td><p>0.3483</p></td>
+<td></td>
+<td><p>0.39</p></td>
+<td><p>0.6517</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.40</p></td>
+<td><p>0.3446</p></td>
+<td></td>
+<td><p>0.40</p></td>
+<td><p>0.6554</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.41</p></td>
+<td><p>0.3409</p></td>
+<td></td>
+<td><p>0.41</p></td>
+<td><p>0.6591</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.42</p></td>
+<td><p>0.3372</p></td>
+<td></td>
+<td><p>0.42</p></td>
+<td><p>0.6628</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.43</p></td>
+<td><p>0.3336</p></td>
+<td></td>
+<td><p>0.43</p></td>
+<td><p>0.6664</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.44</p></td>
+<td><p>0.3300</p></td>
+<td></td>
+<td><p>0.44</p></td>
+<td><p>0.6700</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.45</p></td>
+<td><p>0.3264</p></td>
+<td></td>
+<td><p>0.45</p></td>
+<td><p>0.6736</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.46</p></td>
+<td><p>0.3228</p></td>
+<td></td>
+<td><p>0.46</p></td>
+<td><p>0.6772</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.47</p></td>
+<td><p>0.3192</p></td>
+<td></td>
+<td><p>0.47</p></td>
+<td><p>0.6808</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.48</p></td>
+<td><p>0.3156</p></td>
+<td></td>
+<td><p>0.48</p></td>
+<td><p>0.6844</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.49</p></td>
+<td><p>0.3121</p></td>
+<td></td>
+<td><p>0.49</p></td>
+<td><p>0.6879</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.50</p></td>
+<td><p>0.3085</p></td>
+<td></td>
+<td><p>0.50</p></td>
+<td><p>0.6915</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.51</p></td>
+<td><p>0.3050</p></td>
+<td></td>
+<td><p>0.51</p></td>
+<td><p>0.6950</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.52</p></td>
+<td><p>0.3015</p></td>
+<td></td>
+<td><p>0.52</p></td>
+<td><p>0.6985</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.53</p></td>
+<td><p>0.2981</p></td>
+<td></td>
+<td><p>0.53</p></td>
+<td><p>0.7019</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.54</p></td>
+<td><p>0.2946</p></td>
+<td></td>
+<td><p>0.54</p></td>
+<td><p>0.7054</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.55</p></td>
+<td><p>0.2912</p></td>
+<td></td>
+<td><p>0.55</p></td>
+<td><p>0.7088</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.56</p></td>
+<td><p>0.2877</p></td>
+<td></td>
+<td><p>0.56</p></td>
+<td><p>0.7123</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.57</p></td>
+<td><p>0.2843</p></td>
+<td></td>
+<td><p>0.57</p></td>
+<td><p>0.7157</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.58</p></td>
+<td><p>0.2810</p></td>
+<td></td>
+<td><p>0.58</p></td>
+<td><p>0.7190</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.59</p></td>
+<td><p>0.2776</p></td>
+<td></td>
+<td><p>0.59</p></td>
+<td><p>0.7224</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.60</p></td>
+<td><p>0.2743</p></td>
+<td></td>
+<td><p>0.60</p></td>
+<td><p>0.7257</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.61</p></td>
+<td><p>0.2709</p></td>
+<td></td>
+<td><p>0.61</p></td>
+<td><p>0.7291</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.62</p></td>
+<td><p>0.2676</p></td>
+<td></td>
+<td><p>0.62</p></td>
+<td><p>0.7324</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.63</p></td>
+<td><p>0.2643</p></td>
+<td></td>
+<td><p>0.63</p></td>
+<td><p>0.7357</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.64</p></td>
+<td><p>0.2611</p></td>
+<td></td>
+<td><p>0.64</p></td>
+<td><p>0.7389</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.65</p></td>
+<td><p>0.2578</p></td>
+<td></td>
+<td><p>0.65</p></td>
+<td><p>0.7422</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.66</p></td>
+<td><p>0.2546</p></td>
+<td></td>
+<td><p>0.66</p></td>
+<td><p>0.7454</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.67</p></td>
+<td><p>0.2514</p></td>
+<td></td>
+<td><p>0.67</p></td>
+<td><p>0.7486</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.68</p></td>
+<td><p>0.2483</p></td>
+<td></td>
+<td><p>0.68</p></td>
+<td><p>0.7517</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.69</p></td>
+<td><p>0.2451</p></td>
+<td></td>
+<td><p>0.69</p></td>
+<td><p>0.7549</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.70</p></td>
+<td><p>0.2420</p></td>
+<td></td>
+<td><p>0.70</p></td>
+<td><p>0.7580</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.71</p></td>
+<td><p>0.2389</p></td>
+<td></td>
+<td><p>0.71</p></td>
+<td><p>0.7611</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.72</p></td>
+<td><p>0.2358</p></td>
+<td></td>
+<td><p>0.72</p></td>
+<td><p>0.7642</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.73</p></td>
+<td><p>0.2327</p></td>
+<td></td>
+<td><p>0.73</p></td>
+<td><p>0.7673</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.74</p></td>
+<td><p>0.2296</p></td>
+<td></td>
+<td><p>0.74</p></td>
+<td><p>0.7704</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.75</p></td>
+<td><p>0.2266</p></td>
+<td></td>
+<td><p>0.75</p></td>
+<td><p>0.7734</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.76</p></td>
+<td><p>0.2236</p></td>
+<td></td>
+<td><p>0.76</p></td>
+<td><p>0.7764</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.77</p></td>
+<td><p>0.2206</p></td>
+<td></td>
+<td><p>0.77</p></td>
+<td><p>0.7794</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.78</p></td>
+<td><p>0.2177</p></td>
+<td></td>
+<td><p>0.78</p></td>
+<td><p>0.7823</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.79</p></td>
+<td><p>0.2148</p></td>
+<td></td>
+<td><p>0.79</p></td>
+<td><p>0.7852</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.80</p></td>
+<td><p>0.2119</p></td>
+<td></td>
+<td><p>0.80</p></td>
+<td><p>0.7881</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.81</p></td>
+<td><p>0.2090</p></td>
+<td></td>
+<td><p>0.81</p></td>
+<td><p>0.7910</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.82</p></td>
+<td><p>0.2061</p></td>
+<td></td>
+<td><p>0.82</p></td>
+<td><p>0.7939</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.83</p></td>
+<td><p>0.2033</p></td>
+<td></td>
+<td><p>0.83</p></td>
+<td><p>0.7967</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.84</p></td>
+<td><p>0.2005</p></td>
+<td></td>
+<td><p>0.84</p></td>
+<td><p>0.7995</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.85</p></td>
+<td><p>0.1977</p></td>
+<td></td>
+<td><p>0.85</p></td>
+<td><p>0.8023</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.86</p></td>
+<td><p>0.1949</p></td>
+<td></td>
+<td><p>0.86</p></td>
+<td><p>0.8051</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.87</p></td>
+<td><p>0.1922</p></td>
+<td></td>
+<td><p>0.87</p></td>
+<td><p>0.8078</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.88</p></td>
+<td><p>0.1894</p></td>
+<td></td>
+<td><p>0.88</p></td>
+<td><p>0.8106</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.89</p></td>
+<td><p>0.1867</p></td>
+<td></td>
+<td><p>0.89</p></td>
+<td><p>0.8133</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.90</p></td>
+<td><p>0.1841</p></td>
+<td></td>
+<td><p>0.90</p></td>
+<td><p>0.8159</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.91</p></td>
+<td><p>0.1814</p></td>
+<td></td>
+<td><p>0.91</p></td>
+<td><p>0.8186</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.92</p></td>
+<td><p>0.1788</p></td>
+<td></td>
+<td><p>0.92</p></td>
+<td><p>0.8212</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.93</p></td>
+<td><p>0.1762</p></td>
+<td></td>
+<td><p>0.93</p></td>
+<td><p>0.8238</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.94</p></td>
+<td><p>0.1736</p></td>
+<td></td>
+<td><p>0.94</p></td>
+<td><p>0.8264</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.95</p></td>
+<td><p>0.1711</p></td>
+<td></td>
+<td><p>0.95</p></td>
+<td><p>0.8289</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.96</p></td>
+<td><p>0.1685</p></td>
+<td></td>
+<td><p>0.96</p></td>
+<td><p>0.8315</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.97</p></td>
+<td><p>0.1660</p></td>
+<td></td>
+<td><p>0.97</p></td>
+<td><p>0.8340</p></td>
+</tr>
+<tr class="row-even"><td><p>-0.98</p></td>
+<td><p>0.1635</p></td>
+<td></td>
+<td><p>0.98</p></td>
+<td><p>0.8365</p></td>
+</tr>
+<tr class="row-odd"><td><p>-0.99</p></td>
+<td><p>0.1611</p></td>
+<td></td>
+<td><p>0.99</p></td>
+<td><p>0.8389</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.00</p></td>
+<td><p>0.1587</p></td>
+<td></td>
+<td><p>1.00</p></td>
+<td><p>0.8413</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.01</p></td>
+<td><p>0.1562</p></td>
+<td></td>
+<td><p>1.01</p></td>
+<td><p>0.8438</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.02</p></td>
+<td><p>0.1539</p></td>
+<td></td>
+<td><p>1.02</p></td>
+<td><p>0.8461</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.03</p></td>
+<td><p>0.1515</p></td>
+<td></td>
+<td><p>1.03</p></td>
+<td><p>0.8485</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.04</p></td>
+<td><p>0.1492</p></td>
+<td></td>
+<td><p>1.04</p></td>
+<td><p>0.8508</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.05</p></td>
+<td><p>0.1469</p></td>
+<td></td>
+<td><p>1.05</p></td>
+<td><p>0.8531</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.06</p></td>
+<td><p>0.1446</p></td>
+<td></td>
+<td><p>1.06</p></td>
+<td><p>0.8554</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.07</p></td>
+<td><p>0.1423</p></td>
+<td></td>
+<td><p>1.07</p></td>
+<td><p>0.8577</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.08</p></td>
+<td><p>0.1401</p></td>
+<td></td>
+<td><p>1.08</p></td>
+<td><p>0.8599</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.09</p></td>
+<td><p>0.1379</p></td>
+<td></td>
+<td><p>1.09</p></td>
+<td><p>0.8621</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.10</p></td>
+<td><p>0.1357</p></td>
+<td></td>
+<td><p>1.10</p></td>
+<td><p>0.8643</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.11</p></td>
+<td><p>0.1335</p></td>
+<td></td>
+<td><p>1.11</p></td>
+<td><p>0.8665</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.12</p></td>
+<td><p>0.1314</p></td>
+<td></td>
+<td><p>1.12</p></td>
+<td><p>0.8686</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.13</p></td>
+<td><p>0.1292</p></td>
+<td></td>
+<td><p>1.13</p></td>
+<td><p>0.8708</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.14</p></td>
+<td><p>0.1271</p></td>
+<td></td>
+<td><p>1.14</p></td>
+<td><p>0.8729</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.15</p></td>
+<td><p>0.1251</p></td>
+<td></td>
+<td><p>1.15</p></td>
+<td><p>0.8749</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.16</p></td>
+<td><p>0.1230</p></td>
+<td></td>
+<td><p>1.16</p></td>
+<td><p>0.8770</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.17</p></td>
+<td><p>0.1210</p></td>
+<td></td>
+<td><p>1.17</p></td>
+<td><p>0.8790</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.18</p></td>
+<td><p>0.1190</p></td>
+<td></td>
+<td><p>1.18</p></td>
+<td><p>0.8810</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.19</p></td>
+<td><p>0.1170</p></td>
+<td></td>
+<td><p>1.19</p></td>
+<td><p>0.8830</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.20</p></td>
+<td><p>0.1151</p></td>
+<td></td>
+<td><p>1.20</p></td>
+<td><p>0.8849</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.21</p></td>
+<td><p>0.1131</p></td>
+<td></td>
+<td><p>1.21</p></td>
+<td><p>0.8869</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.22</p></td>
+<td><p>0.1112</p></td>
+<td></td>
+<td><p>1.22</p></td>
+<td><p>0.8888</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.23</p></td>
+<td><p>0.1093</p></td>
+<td></td>
+<td><p>1.23</p></td>
+<td><p>0.8907</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.24</p></td>
+<td><p>0.1075</p></td>
+<td></td>
+<td><p>1.24</p></td>
+<td><p>0.8925</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.25</p></td>
+<td><p>0.1056</p></td>
+<td></td>
+<td><p>1.25</p></td>
+<td><p>0.8944</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.26</p></td>
+<td><p>0.1038</p></td>
+<td></td>
+<td><p>1.26</p></td>
+<td><p>0.8962</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.27</p></td>
+<td><p>0.1020</p></td>
+<td></td>
+<td><p>1.27</p></td>
+<td><p>0.8980</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.28</p></td>
+<td><p>0.1003</p></td>
+<td></td>
+<td><p>1.28</p></td>
+<td><p>0.8997</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.29</p></td>
+<td><p>0.0985</p></td>
+<td></td>
+<td><p>1.29</p></td>
+<td><p>0.9015</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.30</p></td>
+<td><p>0.0968</p></td>
+<td></td>
+<td><p>1.30</p></td>
+<td><p>0.9032</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.31</p></td>
+<td><p>0.0951</p></td>
+<td></td>
+<td><p>1.31</p></td>
+<td><p>0.9049</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.32</p></td>
+<td><p>0.0934</p></td>
+<td></td>
+<td><p>1.32</p></td>
+<td><p>0.9066</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.33</p></td>
+<td><p>0.0918</p></td>
+<td></td>
+<td><p>1.33</p></td>
+<td><p>0.9082</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.34</p></td>
+<td><p>0.0901</p></td>
+<td></td>
+<td><p>1.34</p></td>
+<td><p>0.9099</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.35</p></td>
+<td><p>0.0885</p></td>
+<td></td>
+<td><p>1.35</p></td>
+<td><p>0.9115</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.36</p></td>
+<td><p>0.0869</p></td>
+<td></td>
+<td><p>1.36</p></td>
+<td><p>0.9131</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.37</p></td>
+<td><p>0.0853</p></td>
+<td></td>
+<td><p>1.37</p></td>
+<td><p>0.9147</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.38</p></td>
+<td><p>0.0838</p></td>
+<td></td>
+<td><p>1.38</p></td>
+<td><p>0.9162</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.39</p></td>
+<td><p>0.0823</p></td>
+<td></td>
+<td><p>1.39</p></td>
+<td><p>0.9177</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.40</p></td>
+<td><p>0.0808</p></td>
+<td></td>
+<td><p>1.40</p></td>
+<td><p>0.9192</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.41</p></td>
+<td><p>0.0793</p></td>
+<td></td>
+<td><p>1.41</p></td>
+<td><p>0.9207</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.42</p></td>
+<td><p>0.0778</p></td>
+<td></td>
+<td><p>1.42</p></td>
+<td><p>0.9222</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.43</p></td>
+<td><p>0.0764</p></td>
+<td></td>
+<td><p>1.43</p></td>
+<td><p>0.9236</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.44</p></td>
+<td><p>0.0749</p></td>
+<td></td>
+<td><p>1.44</p></td>
+<td><p>0.9251</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.45</p></td>
+<td><p>0.0735</p></td>
+<td></td>
+<td><p>1.45</p></td>
+<td><p>0.9265</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.46</p></td>
+<td><p>0.0721</p></td>
+<td></td>
+<td><p>1.46</p></td>
+<td><p>0.9279</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.47</p></td>
+<td><p>0.0708</p></td>
+<td></td>
+<td><p>1.47</p></td>
+<td><p>0.9292</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.48</p></td>
+<td><p>0.0694</p></td>
+<td></td>
+<td><p>1.48</p></td>
+<td><p>0.9306</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.49</p></td>
+<td><p>0.0681</p></td>
+<td></td>
+<td><p>1.49</p></td>
+<td><p>0.9319</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.50</p></td>
+<td><p>0.0668</p></td>
+<td></td>
+<td><p>1.50</p></td>
+<td><p>0.9332</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.51</p></td>
+<td><p>0.0655</p></td>
+<td></td>
+<td><p>1.51</p></td>
+<td><p>0.9345</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.52</p></td>
+<td><p>0.0643</p></td>
+<td></td>
+<td><p>1.52</p></td>
+<td><p>0.9357</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.53</p></td>
+<td><p>0.0630</p></td>
+<td></td>
+<td><p>1.53</p></td>
+<td><p>0.9370</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.54</p></td>
+<td><p>0.0618</p></td>
+<td></td>
+<td><p>1.54</p></td>
+<td><p>0.9382</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.55</p></td>
+<td><p>0.0606</p></td>
+<td></td>
+<td><p>1.55</p></td>
+<td><p>0.9394</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.56</p></td>
+<td><p>0.0594</p></td>
+<td></td>
+<td><p>1.56</p></td>
+<td><p>0.9406</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.57</p></td>
+<td><p>0.0582</p></td>
+<td></td>
+<td><p>1.57</p></td>
+<td><p>0.9418</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.58</p></td>
+<td><p>0.0571</p></td>
+<td></td>
+<td><p>1.58</p></td>
+<td><p>0.9429</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.59</p></td>
+<td><p>0.0559</p></td>
+<td></td>
+<td><p>1.59</p></td>
+<td><p>0.9441</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.60</p></td>
+<td><p>0.0548</p></td>
+<td></td>
+<td><p>1.60</p></td>
+<td><p>0.9452</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.61</p></td>
+<td><p>0.0537</p></td>
+<td></td>
+<td><p>1.61</p></td>
+<td><p>0.9463</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.62</p></td>
+<td><p>0.0526</p></td>
+<td></td>
+<td><p>1.62</p></td>
+<td><p>0.9474</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.63</p></td>
+<td><p>0.0516</p></td>
+<td></td>
+<td><p>1.63</p></td>
+<td><p>0.9484</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.64</p></td>
+<td><p>0.0505</p></td>
+<td></td>
+<td><p>1.64</p></td>
+<td><p>0.9495</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.65</p></td>
+<td><p>0.0495</p></td>
+<td></td>
+<td><p>1.65</p></td>
+<td><p>0.9505</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.66</p></td>
+<td><p>0.0485</p></td>
+<td></td>
+<td><p>1.66</p></td>
+<td><p>0.9515</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.67</p></td>
+<td><p>0.0475</p></td>
+<td></td>
+<td><p>1.67</p></td>
+<td><p>0.9525</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.68</p></td>
+<td><p>0.0465</p></td>
+<td></td>
+<td><p>1.68</p></td>
+<td><p>0.9535</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.69</p></td>
+<td><p>0.0455</p></td>
+<td></td>
+<td><p>1.69</p></td>
+<td><p>0.9545</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.70</p></td>
+<td><p>0.0446</p></td>
+<td></td>
+<td><p>1.70</p></td>
+<td><p>0.9554</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.71</p></td>
+<td><p>0.0436</p></td>
+<td></td>
+<td><p>1.71</p></td>
+<td><p>0.9564</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.72</p></td>
+<td><p>0.0427</p></td>
+<td></td>
+<td><p>1.72</p></td>
+<td><p>0.9573</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.73</p></td>
+<td><p>0.0418</p></td>
+<td></td>
+<td><p>1.73</p></td>
+<td><p>0.9582</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.74</p></td>
+<td><p>0.0409</p></td>
+<td></td>
+<td><p>1.74</p></td>
+<td><p>0.9591</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.75</p></td>
+<td><p>0.0401</p></td>
+<td></td>
+<td><p>1.75</p></td>
+<td><p>0.9599</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.76</p></td>
+<td><p>0.0392</p></td>
+<td></td>
+<td><p>1.76</p></td>
+<td><p>0.9608</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.77</p></td>
+<td><p>0.0384</p></td>
+<td></td>
+<td><p>1.77</p></td>
+<td><p>0.9616</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.78</p></td>
+<td><p>0.0375</p></td>
+<td></td>
+<td><p>1.78</p></td>
+<td><p>0.9625</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.79</p></td>
+<td><p>0.0367</p></td>
+<td></td>
+<td><p>1.79</p></td>
+<td><p>0.9633</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.80</p></td>
+<td><p>0.0359</p></td>
+<td></td>
+<td><p>1.80</p></td>
+<td><p>0.9641</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.81</p></td>
+<td><p>0.0351</p></td>
+<td></td>
+<td><p>1.81</p></td>
+<td><p>0.9649</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.82</p></td>
+<td><p>0.0344</p></td>
+<td></td>
+<td><p>1.82</p></td>
+<td><p>0.9656</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.83</p></td>
+<td><p>0.0336</p></td>
+<td></td>
+<td><p>1.83</p></td>
+<td><p>0.9664</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.84</p></td>
+<td><p>0.0329</p></td>
+<td></td>
+<td><p>1.84</p></td>
+<td><p>0.9671</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.85</p></td>
+<td><p>0.0322</p></td>
+<td></td>
+<td><p>1.85</p></td>
+<td><p>0.9678</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.86</p></td>
+<td><p>0.0314</p></td>
+<td></td>
+<td><p>1.86</p></td>
+<td><p>0.9686</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.87</p></td>
+<td><p>0.0307</p></td>
+<td></td>
+<td><p>1.87</p></td>
+<td><p>0.9693</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.88</p></td>
+<td><p>0.0301</p></td>
+<td></td>
+<td><p>1.88</p></td>
+<td><p>0.9699</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.89</p></td>
+<td><p>0.0294</p></td>
+<td></td>
+<td><p>1.89</p></td>
+<td><p>0.9706</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.90</p></td>
+<td><p>0.0287</p></td>
+<td></td>
+<td><p>1.90</p></td>
+<td><p>0.9713</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.91</p></td>
+<td><p>0.0281</p></td>
+<td></td>
+<td><p>1.91</p></td>
+<td><p>0.9719</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.92</p></td>
+<td><p>0.0274</p></td>
+<td></td>
+<td><p>1.92</p></td>
+<td><p>0.9726</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.93</p></td>
+<td><p>0.0268</p></td>
+<td></td>
+<td><p>1.93</p></td>
+<td><p>0.9732</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.94</p></td>
+<td><p>0.0262</p></td>
+<td></td>
+<td><p>1.94</p></td>
+<td><p>0.9738</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.95</p></td>
+<td><p>0.0256</p></td>
+<td></td>
+<td><p>1.95</p></td>
+<td><p>0.9744</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.96</p></td>
+<td><p>0.0250</p></td>
+<td></td>
+<td><p>1.96</p></td>
+<td><p>0.9750</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.97</p></td>
+<td><p>0.0244</p></td>
+<td></td>
+<td><p>1.97</p></td>
+<td><p>0.9756</p></td>
+</tr>
+<tr class="row-even"><td><p>-1.98</p></td>
+<td><p>0.0239</p></td>
+<td></td>
+<td><p>1.98</p></td>
+<td><p>0.9761</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1.99</p></td>
+<td><p>0.0233</p></td>
+<td></td>
+<td><p>1.99</p></td>
+<td><p>0.9767</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.00</p></td>
+<td><p>0.0228</p></td>
+<td></td>
+<td><p>2.00</p></td>
+<td><p>0.9772</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.01</p></td>
+<td><p>0.0222</p></td>
+<td></td>
+<td><p>2.01</p></td>
+<td><p>0.9778</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.02</p></td>
+<td><p>0.0217</p></td>
+<td></td>
+<td><p>2.02</p></td>
+<td><p>0.9783</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.03</p></td>
+<td><p>0.0212</p></td>
+<td></td>
+<td><p>2.03</p></td>
+<td><p>0.9788</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.04</p></td>
+<td><p>0.0207</p></td>
+<td></td>
+<td><p>2.04</p></td>
+<td><p>0.9793</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.05</p></td>
+<td><p>0.0202</p></td>
+<td></td>
+<td><p>2.05</p></td>
+<td><p>0.9798</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.06</p></td>
+<td><p>0.0197</p></td>
+<td></td>
+<td><p>2.06</p></td>
+<td><p>0.9803</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.07</p></td>
+<td><p>0.0192</p></td>
+<td></td>
+<td><p>2.07</p></td>
+<td><p>0.9808</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.08</p></td>
+<td><p>0.0188</p></td>
+<td></td>
+<td><p>2.08</p></td>
+<td><p>0.9812</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.09</p></td>
+<td><p>0.0183</p></td>
+<td></td>
+<td><p>2.09</p></td>
+<td><p>0.9817</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.10</p></td>
+<td><p>0.0179</p></td>
+<td></td>
+<td><p>2.10</p></td>
+<td><p>0.9821</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.11</p></td>
+<td><p>0.0174</p></td>
+<td></td>
+<td><p>2.11</p></td>
+<td><p>0.9826</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.12</p></td>
+<td><p>0.0170</p></td>
+<td></td>
+<td><p>2.12</p></td>
+<td><p>0.9830</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.13</p></td>
+<td><p>0.0166</p></td>
+<td></td>
+<td><p>2.13</p></td>
+<td><p>0.9834</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.14</p></td>
+<td><p>0.0162</p></td>
+<td></td>
+<td><p>2.14</p></td>
+<td><p>0.9838</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.15</p></td>
+<td><p>0.0158</p></td>
+<td></td>
+<td><p>2.15</p></td>
+<td><p>0.9842</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.16</p></td>
+<td><p>0.0154</p></td>
+<td></td>
+<td><p>2.16</p></td>
+<td><p>0.9846</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.17</p></td>
+<td><p>0.0150</p></td>
+<td></td>
+<td><p>2.17</p></td>
+<td><p>0.9850</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.18</p></td>
+<td><p>0.0146</p></td>
+<td></td>
+<td><p>2.18</p></td>
+<td><p>0.9854</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.19</p></td>
+<td><p>0.0143</p></td>
+<td></td>
+<td><p>2.19</p></td>
+<td><p>0.9857</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.20</p></td>
+<td><p>0.0139</p></td>
+<td></td>
+<td><p>2.20</p></td>
+<td><p>0.9861</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.21</p></td>
+<td><p>0.0136</p></td>
+<td></td>
+<td><p>2.21</p></td>
+<td><p>0.9864</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.22</p></td>
+<td><p>0.0132</p></td>
+<td></td>
+<td><p>2.22</p></td>
+<td><p>0.9868</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.23</p></td>
+<td><p>0.0129</p></td>
+<td></td>
+<td><p>2.23</p></td>
+<td><p>0.9871</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.24</p></td>
+<td><p>0.0125</p></td>
+<td></td>
+<td><p>2.24</p></td>
+<td><p>0.9875</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.25</p></td>
+<td><p>0.0122</p></td>
+<td></td>
+<td><p>2.25</p></td>
+<td><p>0.9878</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.26</p></td>
+<td><p>0.0119</p></td>
+<td></td>
+<td><p>2.26</p></td>
+<td><p>0.9881</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.27</p></td>
+<td><p>0.0116</p></td>
+<td></td>
+<td><p>2.27</p></td>
+<td><p>0.9884</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.28</p></td>
+<td><p>0.0113</p></td>
+<td></td>
+<td><p>2.28</p></td>
+<td><p>0.9887</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.29</p></td>
+<td><p>0.0110</p></td>
+<td></td>
+<td><p>2.29</p></td>
+<td><p>0.9890</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.30</p></td>
+<td><p>0.0107</p></td>
+<td></td>
+<td><p>2.30</p></td>
+<td><p>0.9893</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.31</p></td>
+<td><p>0.0104</p></td>
+<td></td>
+<td><p>2.31</p></td>
+<td><p>0.9896</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.32</p></td>
+<td><p>0.0102</p></td>
+<td></td>
+<td><p>2.32</p></td>
+<td><p>0.9898</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.33</p></td>
+<td><p>0.0099</p></td>
+<td></td>
+<td><p>2.33</p></td>
+<td><p>0.9901</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.34</p></td>
+<td><p>0.0096</p></td>
+<td></td>
+<td><p>2.34</p></td>
+<td><p>0.9904</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.35</p></td>
+<td><p>0.0094</p></td>
+<td></td>
+<td><p>2.35</p></td>
+<td><p>0.9906</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.36</p></td>
+<td><p>0.0091</p></td>
+<td></td>
+<td><p>2.36</p></td>
+<td><p>0.9909</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.37</p></td>
+<td><p>0.0089</p></td>
+<td></td>
+<td><p>2.37</p></td>
+<td><p>0.9911</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.38</p></td>
+<td><p>0.0087</p></td>
+<td></td>
+<td><p>2.38</p></td>
+<td><p>0.9913</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.39</p></td>
+<td><p>0.0084</p></td>
+<td></td>
+<td><p>2.39</p></td>
+<td><p>0.9916</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.40</p></td>
+<td><p>0.0082</p></td>
+<td></td>
+<td><p>2.40</p></td>
+<td><p>0.9918</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.41</p></td>
+<td><p>0.0080</p></td>
+<td></td>
+<td><p>2.41</p></td>
+<td><p>0.9920</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.42</p></td>
+<td><p>0.0078</p></td>
+<td></td>
+<td><p>2.42</p></td>
+<td><p>0.9922</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.43</p></td>
+<td><p>0.0075</p></td>
+<td></td>
+<td><p>2.43</p></td>
+<td><p>0.9925</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.44</p></td>
+<td><p>0.0073</p></td>
+<td></td>
+<td><p>2.44</p></td>
+<td><p>0.9927</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.45</p></td>
+<td><p>0.0071</p></td>
+<td></td>
+<td><p>2.45</p></td>
+<td><p>0.9929</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.46</p></td>
+<td><p>0.0069</p></td>
+<td></td>
+<td><p>2.46</p></td>
+<td><p>0.9931</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.47</p></td>
+<td><p>0.0068</p></td>
+<td></td>
+<td><p>2.47</p></td>
+<td><p>0.9932</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.48</p></td>
+<td><p>0.0066</p></td>
+<td></td>
+<td><p>2.48</p></td>
+<td><p>0.9934</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.49</p></td>
+<td><p>0.0064</p></td>
+<td></td>
+<td><p>2.49</p></td>
+<td><p>0.9936</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.50</p></td>
+<td><p>0.0062</p></td>
+<td></td>
+<td><p>2.50</p></td>
+<td><p>0.9938</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.51</p></td>
+<td><p>0.0060</p></td>
+<td></td>
+<td><p>2.51</p></td>
+<td><p>0.9940</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.52</p></td>
+<td><p>0.0059</p></td>
+<td></td>
+<td><p>2.52</p></td>
+<td><p>0.9941</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.53</p></td>
+<td><p>0.0057</p></td>
+<td></td>
+<td><p>2.53</p></td>
+<td><p>0.9943</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.54</p></td>
+<td><p>0.0055</p></td>
+<td></td>
+<td><p>2.54</p></td>
+<td><p>0.9945</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.55</p></td>
+<td><p>0.0054</p></td>
+<td></td>
+<td><p>2.55</p></td>
+<td><p>0.9946</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.56</p></td>
+<td><p>0.0052</p></td>
+<td></td>
+<td><p>2.56</p></td>
+<td><p>0.9948</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.57</p></td>
+<td><p>0.0051</p></td>
+<td></td>
+<td><p>2.57</p></td>
+<td><p>0.9949</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.58</p></td>
+<td><p>0.0049</p></td>
+<td></td>
+<td><p>2.58</p></td>
+<td><p>0.9951</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.59</p></td>
+<td><p>0.0048</p></td>
+<td></td>
+<td><p>2.59</p></td>
+<td><p>0.9952</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.60</p></td>
+<td><p>0.0047</p></td>
+<td></td>
+<td><p>2.60</p></td>
+<td><p>0.9953</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.61</p></td>
+<td><p>0.0045</p></td>
+<td></td>
+<td><p>2.61</p></td>
+<td><p>0.9955</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.62</p></td>
+<td><p>0.0044</p></td>
+<td></td>
+<td><p>2.62</p></td>
+<td><p>0.9956</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.63</p></td>
+<td><p>0.0043</p></td>
+<td></td>
+<td><p>2.63</p></td>
+<td><p>0.9957</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.64</p></td>
+<td><p>0.0041</p></td>
+<td></td>
+<td><p>2.64</p></td>
+<td><p>0.9959</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.65</p></td>
+<td><p>0.0040</p></td>
+<td></td>
+<td><p>2.65</p></td>
+<td><p>0.9960</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.66</p></td>
+<td><p>0.0039</p></td>
+<td></td>
+<td><p>2.66</p></td>
+<td><p>0.9961</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.67</p></td>
+<td><p>0.0038</p></td>
+<td></td>
+<td><p>2.67</p></td>
+<td><p>0.9962</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.68</p></td>
+<td><p>0.0037</p></td>
+<td></td>
+<td><p>2.68</p></td>
+<td><p>0.9963</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.69</p></td>
+<td><p>0.0036</p></td>
+<td></td>
+<td><p>2.69</p></td>
+<td><p>0.9964</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.70</p></td>
+<td><p>0.0035</p></td>
+<td></td>
+<td><p>2.70</p></td>
+<td><p>0.9965</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.71</p></td>
+<td><p>0.0034</p></td>
+<td></td>
+<td><p>2.71</p></td>
+<td><p>0.9966</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.72</p></td>
+<td><p>0.0033</p></td>
+<td></td>
+<td><p>2.72</p></td>
+<td><p>0.9967</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.73</p></td>
+<td><p>0.0032</p></td>
+<td></td>
+<td><p>2.73</p></td>
+<td><p>0.9968</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.74</p></td>
+<td><p>0.0031</p></td>
+<td></td>
+<td><p>2.74</p></td>
+<td><p>0.9969</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.75</p></td>
+<td><p>0.0030</p></td>
+<td></td>
+<td><p>2.75</p></td>
+<td><p>0.9970</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.76</p></td>
+<td><p>0.0029</p></td>
+<td></td>
+<td><p>2.76</p></td>
+<td><p>0.9971</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.77</p></td>
+<td><p>0.0028</p></td>
+<td></td>
+<td><p>2.77</p></td>
+<td><p>0.9972</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.78</p></td>
+<td><p>0.0027</p></td>
+<td></td>
+<td><p>2.78</p></td>
+<td><p>0.9973</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.79</p></td>
+<td><p>0.0026</p></td>
+<td></td>
+<td><p>2.79</p></td>
+<td><p>0.9974</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.80</p></td>
+<td><p>0.0026</p></td>
+<td></td>
+<td><p>2.80</p></td>
+<td><p>0.9974</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.81</p></td>
+<td><p>0.0025</p></td>
+<td></td>
+<td><p>2.81</p></td>
+<td><p>0.9975</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.82</p></td>
+<td><p>0.0024</p></td>
+<td></td>
+<td><p>2.82</p></td>
+<td><p>0.9976</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.83</p></td>
+<td><p>0.0023</p></td>
+<td></td>
+<td><p>2.83</p></td>
+<td><p>0.9977</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.84</p></td>
+<td><p>0.0023</p></td>
+<td></td>
+<td><p>2.84</p></td>
+<td><p>0.9977</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.85</p></td>
+<td><p>0.0022</p></td>
+<td></td>
+<td><p>2.85</p></td>
+<td><p>0.9978</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.86</p></td>
+<td><p>0.0021</p></td>
+<td></td>
+<td><p>2.86</p></td>
+<td><p>0.9979</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.87</p></td>
+<td><p>0.0021</p></td>
+<td></td>
+<td><p>2.87</p></td>
+<td><p>0.9979</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.88</p></td>
+<td><p>0.0020</p></td>
+<td></td>
+<td><p>2.88</p></td>
+<td><p>0.9980</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.89</p></td>
+<td><p>0.0019</p></td>
+<td></td>
+<td><p>2.89</p></td>
+<td><p>0.9981</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.90</p></td>
+<td><p>0.0019</p></td>
+<td></td>
+<td><p>2.90</p></td>
+<td><p>0.9981</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.91</p></td>
+<td><p>0.0018</p></td>
+<td></td>
+<td><p>2.91</p></td>
+<td><p>0.9982</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.92</p></td>
+<td><p>0.0018</p></td>
+<td></td>
+<td><p>2.92</p></td>
+<td><p>0.9982</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.93</p></td>
+<td><p>0.0017</p></td>
+<td></td>
+<td><p>2.93</p></td>
+<td><p>0.9983</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.94</p></td>
+<td><p>0.0016</p></td>
+<td></td>
+<td><p>2.94</p></td>
+<td><p>0.9984</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.95</p></td>
+<td><p>0.0016</p></td>
+<td></td>
+<td><p>2.95</p></td>
+<td><p>0.9984</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.96</p></td>
+<td><p>0.0015</p></td>
+<td></td>
+<td><p>2.96</p></td>
+<td><p>0.9985</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.97</p></td>
+<td><p>0.0015</p></td>
+<td></td>
+<td><p>2.97</p></td>
+<td><p>0.9985</p></td>
+</tr>
+<tr class="row-even"><td><p>-2.98</p></td>
+<td><p>0.0014</p></td>
+<td></td>
+<td><p>2.98</p></td>
+<td><p>0.9986</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2.99</p></td>
+<td><p>0.0014</p></td>
+<td></td>
+<td><p>2.99</p></td>
+<td><p>0.9986</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.00</p></td>
+<td><p>0.0013</p></td>
+<td></td>
+<td><p>3.00</p></td>
+<td><p>0.9987</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.01</p></td>
+<td><p>0.0013</p></td>
+<td></td>
+<td><p>3.01</p></td>
+<td><p>0.9987</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.02</p></td>
+<td><p>0.0013</p></td>
+<td></td>
+<td><p>3.02</p></td>
+<td><p>0.9987</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.03</p></td>
+<td><p>0.0012</p></td>
+<td></td>
+<td><p>3.03</p></td>
+<td><p>0.9988</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.04</p></td>
+<td><p>0.0012</p></td>
+<td></td>
+<td><p>3.04</p></td>
+<td><p>0.9988</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.05</p></td>
+<td><p>0.0011</p></td>
+<td></td>
+<td><p>3.05</p></td>
+<td><p>0.9989</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.06</p></td>
+<td><p>0.0011</p></td>
+<td></td>
+<td><p>3.06</p></td>
+<td><p>0.9989</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.07</p></td>
+<td><p>0.0011</p></td>
+<td></td>
+<td><p>3.07</p></td>
+<td><p>0.9989</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.08</p></td>
+<td><p>0.0010</p></td>
+<td></td>
+<td><p>3.08</p></td>
+<td><p>0.9990</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.09</p></td>
+<td><p>0.0010</p></td>
+<td></td>
+<td><p>3.09</p></td>
+<td><p>0.9990</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.10</p></td>
+<td><p>0.0010</p></td>
+<td></td>
+<td><p>3.10</p></td>
+<td><p>0.9990</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.11</p></td>
+<td><p>0.0009</p></td>
+<td></td>
+<td><p>3.11</p></td>
+<td><p>0.9991</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.12</p></td>
+<td><p>0.0009</p></td>
+<td></td>
+<td><p>3.12</p></td>
+<td><p>0.9991</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.13</p></td>
+<td><p>0.0009</p></td>
+<td></td>
+<td><p>3.13</p></td>
+<td><p>0.9991</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.14</p></td>
+<td><p>0.0008</p></td>
+<td></td>
+<td><p>3.14</p></td>
+<td><p>0.9992</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.15</p></td>
+<td><p>0.0008</p></td>
+<td></td>
+<td><p>3.15</p></td>
+<td><p>0.9992</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.16</p></td>
+<td><p>0.0008</p></td>
+<td></td>
+<td><p>3.16</p></td>
+<td><p>0.9992</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.17</p></td>
+<td><p>0.0008</p></td>
+<td></td>
+<td><p>3.17</p></td>
+<td><p>0.9992</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.18</p></td>
+<td><p>0.0007</p></td>
+<td></td>
+<td><p>3.18</p></td>
+<td><p>0.9993</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.19</p></td>
+<td><p>0.0007</p></td>
+<td></td>
+<td><p>3.19</p></td>
+<td><p>0.9993</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.20</p></td>
+<td><p>0.0007</p></td>
+<td></td>
+<td><p>3.20</p></td>
+<td><p>0.9993</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.21</p></td>
+<td><p>0.0007</p></td>
+<td></td>
+<td><p>3.21</p></td>
+<td><p>0.9993</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.22</p></td>
+<td><p>0.0006</p></td>
+<td></td>
+<td><p>3.22</p></td>
+<td><p>0.9994</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.23</p></td>
+<td><p>0.0006</p></td>
+<td></td>
+<td><p>3.23</p></td>
+<td><p>0.9994</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.24</p></td>
+<td><p>0.0006</p></td>
+<td></td>
+<td><p>3.24</p></td>
+<td><p>0.9994</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.25</p></td>
+<td><p>0.0006</p></td>
+<td></td>
+<td><p>3.25</p></td>
+<td><p>0.9994</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.26</p></td>
+<td><p>0.0006</p></td>
+<td></td>
+<td><p>3.26</p></td>
+<td><p>0.9994</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.27</p></td>
+<td><p>0.0005</p></td>
+<td></td>
+<td><p>3.27</p></td>
+<td><p>0.9995</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.28</p></td>
+<td><p>0.0005</p></td>
+<td></td>
+<td><p>3.28</p></td>
+<td><p>0.9995</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.29</p></td>
+<td><p>0.0005</p></td>
+<td></td>
+<td><p>3.29</p></td>
+<td><p>0.9995</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.30</p></td>
+<td><p>0.0005</p></td>
+<td></td>
+<td><p>3.30</p></td>
+<td><p>0.9995</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.31</p></td>
+<td><p>0.0005</p></td>
+<td></td>
+<td><p>3.31</p></td>
+<td><p>0.9995</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.32</p></td>
+<td><p>0.0005</p></td>
+<td></td>
+<td><p>3.32</p></td>
+<td><p>0.9995</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.33</p></td>
+<td><p>0.0004</p></td>
+<td></td>
+<td><p>3.33</p></td>
+<td><p>0.9996</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.34</p></td>
+<td><p>0.0004</p></td>
+<td></td>
+<td><p>3.34</p></td>
+<td><p>0.9996</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.35</p></td>
+<td><p>0.0004</p></td>
+<td></td>
+<td><p>3.35</p></td>
+<td><p>0.9996</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.36</p></td>
+<td><p>0.0004</p></td>
+<td></td>
+<td><p>3.36</p></td>
+<td><p>0.9996</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.37</p></td>
+<td><p>0.0004</p></td>
+<td></td>
+<td><p>3.37</p></td>
+<td><p>0.9996</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.38</p></td>
+<td><p>0.0004</p></td>
+<td></td>
+<td><p>3.38</p></td>
+<td><p>0.9996</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.39</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.39</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.40</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.40</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.41</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.41</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.42</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.42</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.43</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.43</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.44</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.44</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.45</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.45</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.46</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.46</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.47</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.47</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.48</p></td>
+<td><p>0.0003</p></td>
+<td></td>
+<td><p>3.48</p></td>
+<td><p>0.9997</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3.49</p></td>
+<td><p>0.0002</p></td>
+<td></td>
+<td><p>3.49</p></td>
+<td><p>0.9998</p></td>
+</tr>
+<tr class="row-even"><td><p>-3.50</p></td>
+<td><p>0.0002</p></td>
+<td></td>
+<td><p>3.50</p></td>
+<td><p>0.9998</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t-2-t-dreifing">
+<span id="a-ttafla"></span><h2>T.2: t-dreifing<a class="headerlink" href="#t-2-t-dreifing" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/t_plot_vinstri.svg" /></figure>
+<p>Taflan gefur <span class="math notranslate nohighlight">\(t_{a}\)</span>. Um <span class="math notranslate nohighlight">\(t_{a}\)</span> gildir að slembistærð sem
+fylgir <span class="math notranslate nohighlight">\(t\)</span>-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður hefur líkurnar
+<span class="math notranslate nohighlight">\(a\)</span> að taka gildi sem er minna en <span class="math notranslate nohighlight">\(t_a\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(a=\)</span></p></th>
+<th class="head"><p>0.75</p></th>
+<th class="head"><p>0.80</p></th>
+<th class="head"><p>0.85</p></th>
+<th class="head"><p>0.90</p></th>
+<th class="head"><p>0.95</p></th>
+<th class="head"><p>0.975</p></th>
+<th class="head"><p>0.99</p></th>
+<th class="head"><p>0.995</p></th>
+<th class="head"><p>0.999</p></th>
+<th class="head"><p>0.9995</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1.376</p></td>
+<td><p>1.963</p></td>
+<td><p>3.078</p></td>
+<td><p>6.314</p></td>
+<td><p>12.71</p></td>
+<td><p>31.82</p></td>
+<td><p>63.66</p></td>
+<td><p>318.3</p></td>
+<td><p>636.6</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>0.8165</p></td>
+<td><p>1.061</p></td>
+<td><p>1.386</p></td>
+<td><p>1.886</p></td>
+<td><p>2.92</p></td>
+<td><p>4.303</p></td>
+<td><p>6.965</p></td>
+<td><p>9.925</p></td>
+<td><p>22.33</p></td>
+<td><p>31.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>0.7649</p></td>
+<td><p>0.9785</p></td>
+<td><p>1.25</p></td>
+<td><p>1.638</p></td>
+<td><p>2.353</p></td>
+<td><p>3.182</p></td>
+<td><p>4.541</p></td>
+<td><p>5.841</p></td>
+<td><p>10.21</p></td>
+<td><p>12.92</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>0.7407</p></td>
+<td><p>0.941</p></td>
+<td><p>1.19</p></td>
+<td><p>1.533</p></td>
+<td><p>2.132</p></td>
+<td><p>2.776</p></td>
+<td><p>3.747</p></td>
+<td><p>4.604</p></td>
+<td><p>7.173</p></td>
+<td><p>8.61</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>0.7267</p></td>
+<td><p>0.9195</p></td>
+<td><p>1.156</p></td>
+<td><p>1.476</p></td>
+<td><p>2.015</p></td>
+<td><p>2.571</p></td>
+<td><p>3.365</p></td>
+<td><p>4.032</p></td>
+<td><p>5.893</p></td>
+<td><p>6.869</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>0.7176</p></td>
+<td><p>0.9057</p></td>
+<td><p>1.134</p></td>
+<td><p>1.44</p></td>
+<td><p>1.943</p></td>
+<td><p>2.447</p></td>
+<td><p>3.143</p></td>
+<td><p>3.707</p></td>
+<td><p>5.208</p></td>
+<td><p>5.959</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>0.7111</p></td>
+<td><p>0.896</p></td>
+<td><p>1.119</p></td>
+<td><p>1.415</p></td>
+<td><p>1.895</p></td>
+<td><p>2.365</p></td>
+<td><p>2.998</p></td>
+<td><p>3.499</p></td>
+<td><p>4.785</p></td>
+<td><p>5.408</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>0.7064</p></td>
+<td><p>0.8889</p></td>
+<td><p>1.108</p></td>
+<td><p>1.397</p></td>
+<td><p>1.86</p></td>
+<td><p>2.306</p></td>
+<td><p>2.896</p></td>
+<td><p>3.355</p></td>
+<td><p>4.501</p></td>
+<td><p>5.041</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>0.7027</p></td>
+<td><p>0.8834</p></td>
+<td><p>1.1</p></td>
+<td><p>1.383</p></td>
+<td><p>1.833</p></td>
+<td><p>2.262</p></td>
+<td><p>2.821</p></td>
+<td><p>3.25</p></td>
+<td><p>4.297</p></td>
+<td><p>4.781</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>0.6998</p></td>
+<td><p>0.8791</p></td>
+<td><p>1.093</p></td>
+<td><p>1.372</p></td>
+<td><p>1.812</p></td>
+<td><p>2.228</p></td>
+<td><p>2.764</p></td>
+<td><p>3.169</p></td>
+<td><p>4.144</p></td>
+<td><p>4.587</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>0.6974</p></td>
+<td><p>0.8755</p></td>
+<td><p>1.088</p></td>
+<td><p>1.363</p></td>
+<td><p>1.796</p></td>
+<td><p>2.201</p></td>
+<td><p>2.718</p></td>
+<td><p>3.106</p></td>
+<td><p>4.025</p></td>
+<td><p>4.437</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>0.6955</p></td>
+<td><p>0.8726</p></td>
+<td><p>1.083</p></td>
+<td><p>1.356</p></td>
+<td><p>1.782</p></td>
+<td><p>2.179</p></td>
+<td><p>2.681</p></td>
+<td><p>3.055</p></td>
+<td><p>3.93</p></td>
+<td><p>4.318</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>0.6938</p></td>
+<td><p>0.8702</p></td>
+<td><p>1.079</p></td>
+<td><p>1.35</p></td>
+<td><p>1.771</p></td>
+<td><p>2.16</p></td>
+<td><p>2.65</p></td>
+<td><p>3.012</p></td>
+<td><p>3.852</p></td>
+<td><p>4.221</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>0.6924</p></td>
+<td><p>0.8681</p></td>
+<td><p>1.076</p></td>
+<td><p>1.345</p></td>
+<td><p>1.761</p></td>
+<td><p>2.145</p></td>
+<td><p>2.624</p></td>
+<td><p>2.977</p></td>
+<td><p>3.787</p></td>
+<td><p>4.14</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>0.6912</p></td>
+<td><p>0.8662</p></td>
+<td><p>1.074</p></td>
+<td><p>1.341</p></td>
+<td><p>1.753</p></td>
+<td><p>2.131</p></td>
+<td><p>2.602</p></td>
+<td><p>2.947</p></td>
+<td><p>3.733</p></td>
+<td><p>4.073</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>0.6901</p></td>
+<td><p>0.8647</p></td>
+<td><p>1.071</p></td>
+<td><p>1.337</p></td>
+<td><p>1.746</p></td>
+<td><p>2.12</p></td>
+<td><p>2.583</p></td>
+<td><p>2.921</p></td>
+<td><p>3.686</p></td>
+<td><p>4.015</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>0.6892</p></td>
+<td><p>0.8633</p></td>
+<td><p>1.069</p></td>
+<td><p>1.333</p></td>
+<td><p>1.74</p></td>
+<td><p>2.11</p></td>
+<td><p>2.567</p></td>
+<td><p>2.898</p></td>
+<td><p>3.646</p></td>
+<td><p>3.965</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>0.6884</p></td>
+<td><p>0.862</p></td>
+<td><p>1.067</p></td>
+<td><p>1.33</p></td>
+<td><p>1.734</p></td>
+<td><p>2.101</p></td>
+<td><p>2.552</p></td>
+<td><p>2.878</p></td>
+<td><p>3.61</p></td>
+<td><p>3.922</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>0.6876</p></td>
+<td><p>0.861</p></td>
+<td><p>1.066</p></td>
+<td><p>1.328</p></td>
+<td><p>1.729</p></td>
+<td><p>2.093</p></td>
+<td><p>2.539</p></td>
+<td><p>2.861</p></td>
+<td><p>3.579</p></td>
+<td><p>3.883</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>0.687</p></td>
+<td><p>0.86</p></td>
+<td><p>1.064</p></td>
+<td><p>1.325</p></td>
+<td><p>1.725</p></td>
+<td><p>2.086</p></td>
+<td><p>2.528</p></td>
+<td><p>2.845</p></td>
+<td><p>3.552</p></td>
+<td><p>3.85</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>0.6864</p></td>
+<td><p>0.8591</p></td>
+<td><p>1.063</p></td>
+<td><p>1.323</p></td>
+<td><p>1.721</p></td>
+<td><p>2.08</p></td>
+<td><p>2.518</p></td>
+<td><p>2.831</p></td>
+<td><p>3.527</p></td>
+<td><p>3.819</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>0.6858</p></td>
+<td><p>0.8583</p></td>
+<td><p>1.061</p></td>
+<td><p>1.321</p></td>
+<td><p>1.717</p></td>
+<td><p>2.074</p></td>
+<td><p>2.508</p></td>
+<td><p>2.819</p></td>
+<td><p>3.505</p></td>
+<td><p>3.792</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>0.6853</p></td>
+<td><p>0.8575</p></td>
+<td><p>1.06</p></td>
+<td><p>1.319</p></td>
+<td><p>1.714</p></td>
+<td><p>2.069</p></td>
+<td><p>2.5</p></td>
+<td><p>2.807</p></td>
+<td><p>3.485</p></td>
+<td><p>3.768</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>0.6848</p></td>
+<td><p>0.8569</p></td>
+<td><p>1.059</p></td>
+<td><p>1.318</p></td>
+<td><p>1.711</p></td>
+<td><p>2.064</p></td>
+<td><p>2.492</p></td>
+<td><p>2.797</p></td>
+<td><p>3.467</p></td>
+<td><p>3.745</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>0.6844</p></td>
+<td><p>0.8562</p></td>
+<td><p>1.058</p></td>
+<td><p>1.316</p></td>
+<td><p>1.708</p></td>
+<td><p>2.06</p></td>
+<td><p>2.485</p></td>
+<td><p>2.787</p></td>
+<td><p>3.45</p></td>
+<td><p>3.725</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>0.684</p></td>
+<td><p>0.8557</p></td>
+<td><p>1.058</p></td>
+<td><p>1.315</p></td>
+<td><p>1.706</p></td>
+<td><p>2.056</p></td>
+<td><p>2.479</p></td>
+<td><p>2.779</p></td>
+<td><p>3.435</p></td>
+<td><p>3.707</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>0.6837</p></td>
+<td><p>0.8551</p></td>
+<td><p>1.057</p></td>
+<td><p>1.314</p></td>
+<td><p>1.703</p></td>
+<td><p>2.052</p></td>
+<td><p>2.473</p></td>
+<td><p>2.771</p></td>
+<td><p>3.421</p></td>
+<td><p>3.69</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>0.6834</p></td>
+<td><p>0.8546</p></td>
+<td><p>1.056</p></td>
+<td><p>1.313</p></td>
+<td><p>1.701</p></td>
+<td><p>2.048</p></td>
+<td><p>2.467</p></td>
+<td><p>2.763</p></td>
+<td><p>3.408</p></td>
+<td><p>3.674</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>0.683</p></td>
+<td><p>0.8542</p></td>
+<td><p>1.055</p></td>
+<td><p>1.311</p></td>
+<td><p>1.699</p></td>
+<td><p>2.045</p></td>
+<td><p>2.462</p></td>
+<td><p>2.756</p></td>
+<td><p>3.396</p></td>
+<td><p>3.659</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>0.6828</p></td>
+<td><p>0.8538</p></td>
+<td><p>1.055</p></td>
+<td><p>1.31</p></td>
+<td><p>1.697</p></td>
+<td><p>2.042</p></td>
+<td><p>2.457</p></td>
+<td><p>2.75</p></td>
+<td><p>3.385</p></td>
+<td><p>3.646</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>0.6822</p></td>
+<td><p>0.853</p></td>
+<td><p>1.054</p></td>
+<td><p>1.309</p></td>
+<td><p>1.694</p></td>
+<td><p>2.037</p></td>
+<td><p>2.449</p></td>
+<td><p>2.738</p></td>
+<td><p>3.365</p></td>
+<td><p>3.622</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>0.6818</p></td>
+<td><p>0.8523</p></td>
+<td><p>1.052</p></td>
+<td><p>1.307</p></td>
+<td><p>1.691</p></td>
+<td><p>2.032</p></td>
+<td><p>2.441</p></td>
+<td><p>2.728</p></td>
+<td><p>3.348</p></td>
+<td><p>3.601</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>0.6814</p></td>
+<td><p>0.8517</p></td>
+<td><p>1.052</p></td>
+<td><p>1.306</p></td>
+<td><p>1.688</p></td>
+<td><p>2.028</p></td>
+<td><p>2.434</p></td>
+<td><p>2.719</p></td>
+<td><p>3.333</p></td>
+<td><p>3.582</p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>0.681</p></td>
+<td><p>0.8512</p></td>
+<td><p>1.051</p></td>
+<td><p>1.304</p></td>
+<td><p>1.686</p></td>
+<td><p>2.024</p></td>
+<td><p>2.429</p></td>
+<td><p>2.712</p></td>
+<td><p>3.319</p></td>
+<td><p>3.566</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>0.6807</p></td>
+<td><p>0.8507</p></td>
+<td><p>1.05</p></td>
+<td><p>1.303</p></td>
+<td><p>1.684</p></td>
+<td><p>2.021</p></td>
+<td><p>2.423</p></td>
+<td><p>2.704</p></td>
+<td><p>3.307</p></td>
+<td><p>3.551</p></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p>0.6794</p></td>
+<td><p>0.8489</p></td>
+<td><p>1.047</p></td>
+<td><p>1.299</p></td>
+<td><p>1.676</p></td>
+<td><p>2.009</p></td>
+<td><p>2.403</p></td>
+<td><p>2.678</p></td>
+<td><p>3.261</p></td>
+<td><p>3.496</p></td>
+</tr>
+<tr class="row-odd"><td><p>60</p></td>
+<td><p>0.6786</p></td>
+<td><p>0.8477</p></td>
+<td><p>1.045</p></td>
+<td><p>1.296</p></td>
+<td><p>1.671</p></td>
+<td><p>2</p></td>
+<td><p>2.39</p></td>
+<td><p>2.66</p></td>
+<td><p>3.232</p></td>
+<td><p>3.46</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>0.677</p></td>
+<td><p>0.8452</p></td>
+<td><p>1.042</p></td>
+<td><p>1.29</p></td>
+<td><p>1.66</p></td>
+<td><p>1.984</p></td>
+<td><p>2.364</p></td>
+<td><p>2.626</p></td>
+<td><p>3.174</p></td>
+<td><p>3.39</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p>0.6765</p></td>
+<td><p>0.8446</p></td>
+<td><p>1.041</p></td>
+<td><p>1.289</p></td>
+<td><p>1.658</p></td>
+<td><p>1.98</p></td>
+<td><p>2.358</p></td>
+<td><p>2.617</p></td>
+<td><p>3.16</p></td>
+<td><p>3.373</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t-3-chi-2-dreifing">
+<span id="a-chisqtafla"></span><h2>T.3: <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifing<a class="headerlink" href="#t-3-chi-2-dreifing" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/chisq_plot_vinstri.svg" /></figure>
+<p>Taflan gefur <span class="math notranslate nohighlight">\(\chi^2_{a}\)</span>. Um <span class="math notranslate nohighlight">\(\chi^2_{a}\)</span> gildir að
+slembistærð sem fylgir <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður
+hefur líkurnar <span class="math notranslate nohighlight">\(a\)</span> að taka gildi sem er minna en <span class="math notranslate nohighlight">\(\chi^2_a\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(a=\)</span></p></th>
+<th class="head"><p>0.005</p></th>
+<th class="head"><p>0.01</p></th>
+<th class="head"><p>0.025</p></th>
+<th class="head"><p>0.05</p></th>
+<th class="head"><p>0.95</p></th>
+<th class="head"><p>0.975</p></th>
+<th class="head"><p>0.99</p></th>
+<th class="head"><p>0.995</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0.0000393</p></td>
+<td><p>0.000157</p></td>
+<td><p>0.000982</p></td>
+<td><p>0.00393</p></td>
+<td><p>3.841</p></td>
+<td><p>5.024</p></td>
+<td><p>6.635</p></td>
+<td><p>7.879</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>0.0100</p></td>
+<td><p>0.0201</p></td>
+<td><p>0.05064</p></td>
+<td><p>0.1026</p></td>
+<td><p>5.991</p></td>
+<td><p>7.378</p></td>
+<td><p>9.21</p></td>
+<td><p>10.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>0.0717</p></td>
+<td><p>0.1148</p></td>
+<td><p>0.2158</p></td>
+<td><p>0.3518</p></td>
+<td><p>7.815</p></td>
+<td><p>9.348</p></td>
+<td><p>11.34</p></td>
+<td><p>12.84</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>0.207</p></td>
+<td><p>0.2971</p></td>
+<td><p>0.4844</p></td>
+<td><p>0.7107</p></td>
+<td><p>9.488</p></td>
+<td><p>11.14</p></td>
+<td><p>13.28</p></td>
+<td><p>14.86</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>0.4117</p></td>
+<td><p>0.5543</p></td>
+<td><p>0.8312</p></td>
+<td><p>1.145</p></td>
+<td><p>11.07</p></td>
+<td><p>12.83</p></td>
+<td><p>15.09</p></td>
+<td><p>16.75</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>0.6757</p></td>
+<td><p>0.8721</p></td>
+<td><p>1.237</p></td>
+<td><p>1.635</p></td>
+<td><p>12.59</p></td>
+<td><p>14.45</p></td>
+<td><p>16.81</p></td>
+<td><p>18.55</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>0.9893</p></td>
+<td><p>1.239</p></td>
+<td><p>1.69</p></td>
+<td><p>2.167</p></td>
+<td><p>14.07</p></td>
+<td><p>16.01</p></td>
+<td><p>18.48</p></td>
+<td><p>20.28</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>1.344</p></td>
+<td><p>1.646</p></td>
+<td><p>2.18</p></td>
+<td><p>2.733</p></td>
+<td><p>15.51</p></td>
+<td><p>17.53</p></td>
+<td><p>20.09</p></td>
+<td><p>21.95</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>1.735</p></td>
+<td><p>2.088</p></td>
+<td><p>2.7</p></td>
+<td><p>3.325</p></td>
+<td><p>16.92</p></td>
+<td><p>19.02</p></td>
+<td><p>21.67</p></td>
+<td><p>23.59</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>2.156</p></td>
+<td><p>2.558</p></td>
+<td><p>3.247</p></td>
+<td><p>3.94</p></td>
+<td><p>18.31</p></td>
+<td><p>20.48</p></td>
+<td><p>23.21</p></td>
+<td><p>25.19</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>2.603</p></td>
+<td><p>3.053</p></td>
+<td><p>3.816</p></td>
+<td><p>4.575</p></td>
+<td><p>19.68</p></td>
+<td><p>21.92</p></td>
+<td><p>24.72</p></td>
+<td><p>26.76</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>3.074</p></td>
+<td><p>3.571</p></td>
+<td><p>4.404</p></td>
+<td><p>5.226</p></td>
+<td><p>21.03</p></td>
+<td><p>23.34</p></td>
+<td><p>26.22</p></td>
+<td><p>28.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>3.565</p></td>
+<td><p>4.107</p></td>
+<td><p>5.009</p></td>
+<td><p>5.892</p></td>
+<td><p>22.36</p></td>
+<td><p>24.74</p></td>
+<td><p>27.69</p></td>
+<td><p>29.82</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>4.075</p></td>
+<td><p>4.66</p></td>
+<td><p>5.629</p></td>
+<td><p>6.571</p></td>
+<td><p>23.68</p></td>
+<td><p>26.12</p></td>
+<td><p>29.14</p></td>
+<td><p>31.32</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>4.601</p></td>
+<td><p>5.229</p></td>
+<td><p>6.262</p></td>
+<td><p>7.261</p></td>
+<td><p>25</p></td>
+<td><p>27.49</p></td>
+<td><p>30.58</p></td>
+<td><p>32.8</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>5.142</p></td>
+<td><p>5.812</p></td>
+<td><p>6.908</p></td>
+<td><p>7.962</p></td>
+<td><p>26.3</p></td>
+<td><p>28.85</p></td>
+<td><p>32</p></td>
+<td><p>34.27</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>5.697</p></td>
+<td><p>6.408</p></td>
+<td><p>7.564</p></td>
+<td><p>8.672</p></td>
+<td><p>27.59</p></td>
+<td><p>30.19</p></td>
+<td><p>33.41</p></td>
+<td><p>35.72</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>6.265</p></td>
+<td><p>7.015</p></td>
+<td><p>8.231</p></td>
+<td><p>9.39</p></td>
+<td><p>28.87</p></td>
+<td><p>31.53</p></td>
+<td><p>34.81</p></td>
+<td><p>37.16</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>6.844</p></td>
+<td><p>7.633</p></td>
+<td><p>8.907</p></td>
+<td><p>10.12</p></td>
+<td><p>30.14</p></td>
+<td><p>32.85</p></td>
+<td><p>36.19</p></td>
+<td><p>38.58</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>7.434</p></td>
+<td><p>8.26</p></td>
+<td><p>9.591</p></td>
+<td><p>10.85</p></td>
+<td><p>31.41</p></td>
+<td><p>34.17</p></td>
+<td><p>37.57</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>8.034</p></td>
+<td><p>8.897</p></td>
+<td><p>10.28</p></td>
+<td><p>11.59</p></td>
+<td><p>32.67</p></td>
+<td><p>35.48</p></td>
+<td><p>38.93</p></td>
+<td><p>41.4</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>8.643</p></td>
+<td><p>9.542</p></td>
+<td><p>10.98</p></td>
+<td><p>12.34</p></td>
+<td><p>33.92</p></td>
+<td><p>36.78</p></td>
+<td><p>40.29</p></td>
+<td><p>42.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>9.26</p></td>
+<td><p>10.2</p></td>
+<td><p>11.69</p></td>
+<td><p>13.09</p></td>
+<td><p>35.17</p></td>
+<td><p>38.08</p></td>
+<td><p>41.64</p></td>
+<td><p>44.18</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>9.886</p></td>
+<td><p>10.86</p></td>
+<td><p>12.4</p></td>
+<td><p>13.85</p></td>
+<td><p>36.42</p></td>
+<td><p>39.36</p></td>
+<td><p>42.98</p></td>
+<td><p>45.56</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>10.52</p></td>
+<td><p>11.52</p></td>
+<td><p>13.12</p></td>
+<td><p>14.61</p></td>
+<td><p>37.65</p></td>
+<td><p>40.65</p></td>
+<td><p>44.31</p></td>
+<td><p>46.93</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>11.16</p></td>
+<td><p>12.2</p></td>
+<td><p>13.84</p></td>
+<td><p>15.38</p></td>
+<td><p>38.89</p></td>
+<td><p>41.92</p></td>
+<td><p>45.64</p></td>
+<td><p>48.29</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>11.81</p></td>
+<td><p>12.88</p></td>
+<td><p>14.57</p></td>
+<td><p>16.15</p></td>
+<td><p>40.11</p></td>
+<td><p>43.19</p></td>
+<td><p>46.96</p></td>
+<td><p>49.64</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>12.46</p></td>
+<td><p>13.56</p></td>
+<td><p>15.31</p></td>
+<td><p>16.93</p></td>
+<td><p>41.34</p></td>
+<td><p>44.46</p></td>
+<td><p>48.28</p></td>
+<td><p>50.99</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>13.12</p></td>
+<td><p>14.26</p></td>
+<td><p>16.05</p></td>
+<td><p>17.71</p></td>
+<td><p>42.56</p></td>
+<td><p>45.72</p></td>
+<td><p>49.59</p></td>
+<td><p>52.34</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>13.79</p></td>
+<td><p>14.95</p></td>
+<td><p>16.79</p></td>
+<td><p>18.49</p></td>
+<td><p>43.77</p></td>
+<td><p>46.98</p></td>
+<td><p>50.89</p></td>
+<td><p>53.67</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>15.13</p></td>
+<td><p>16.36</p></td>
+<td><p>18.29</p></td>
+<td><p>20.07</p></td>
+<td><p>46.19</p></td>
+<td><p>49.48</p></td>
+<td><p>53.49</p></td>
+<td><p>56.33</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>16.5</p></td>
+<td><p>17.79</p></td>
+<td><p>19.81</p></td>
+<td><p>21.66</p></td>
+<td><p>48.6</p></td>
+<td><p>51.97</p></td>
+<td><p>56.06</p></td>
+<td><p>58.96</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>17.89</p></td>
+<td><p>19.23</p></td>
+<td><p>21.34</p></td>
+<td><p>23.27</p></td>
+<td><p>51</p></td>
+<td><p>54.44</p></td>
+<td><p>58.62</p></td>
+<td><p>61.58</p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>19.29</p></td>
+<td><p>20.69</p></td>
+<td><p>22.88</p></td>
+<td><p>24.88</p></td>
+<td><p>53.38</p></td>
+<td><p>56.9</p></td>
+<td><p>61.16</p></td>
+<td><p>64.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>20.71</p></td>
+<td><p>22.16</p></td>
+<td><p>24.43</p></td>
+<td><p>26.51</p></td>
+<td><p>55.76</p></td>
+<td><p>59.34</p></td>
+<td><p>63.69</p></td>
+<td><p>66.77</p></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p>27.99</p></td>
+<td><p>29.71</p></td>
+<td><p>32.36</p></td>
+<td><p>34.76</p></td>
+<td><p>67.5</p></td>
+<td><p>71.42</p></td>
+<td><p>76.15</p></td>
+<td><p>79.49</p></td>
+</tr>
+<tr class="row-odd"><td><p>60</p></td>
+<td><p>35.53</p></td>
+<td><p>37.48</p></td>
+<td><p>40.48</p></td>
+<td><p>43.19</p></td>
+<td><p>79.08</p></td>
+<td><p>83.3</p></td>
+<td><p>88.38</p></td>
+<td><p>91.95</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>67.33</p></td>
+<td><p>70.06</p></td>
+<td><p>74.22</p></td>
+<td><p>77.93</p></td>
+<td><p>124.3</p></td>
+<td><p>129.6</p></td>
+<td><p>135.8</p></td>
+<td><p>140.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p>83.85</p></td>
+<td><p>86.92</p></td>
+<td><p>91.57</p></td>
+<td><p>95.7</p></td>
+<td><p>146.6</p></td>
+<td><p>152.2</p></td>
+<td><p>159</p></td>
+<td><p>163.6</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t-4-f-dreifing-a-0-90">
+<span id="a-ftafla10"></span><h2>T.4: F-dreifing - <span class="math notranslate nohighlight">\(a=0.90\)</span><a class="headerlink" href="#t-4-f-dreifing-a-0-90" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/f_plot90_vinstri.svg" /></figure>
+<p>Taflan gefur <span class="math notranslate nohighlight">\(F_{0.90}\)</span>. Um <span class="math notranslate nohighlight">\(F_{0.90}\)</span> gildir að slembistærð
+sem fylgir <span class="math notranslate nohighlight">\(F\)</span>-dreifingu með <span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span> frígráður
+hefur líkurnar <span class="math notranslate nohighlight">\(0.90\)</span> að taka gildi sem er minna en
+<span class="math notranslate nohighlight">\(F_{0.90}\)</span>.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_1\)</span></p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>12</p></td>
+<td><p>20</p></td>
+<td><p>25</p></td>
+<td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_2\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>39.86</p></td>
+<td><p>49.5</p></td>
+<td><p>53.59</p></td>
+<td><p>55.83</p></td>
+<td><p>57.24</p></td>
+<td><p>58.2</p></td>
+<td><p>58.91</p></td>
+<td><p>59.44</p></td>
+<td><p>59.86</p></td>
+<td><p>60.19</p></td>
+<td><p>60.71</p></td>
+<td><p>61.74</p></td>
+<td><p>62.05</p></td>
+<td><p>63.33</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>8.526</p></td>
+<td><p>9</p></td>
+<td><p>9.162</p></td>
+<td><p>9.243</p></td>
+<td><p>9.293</p></td>
+<td><p>9.326</p></td>
+<td><p>9.349</p></td>
+<td><p>9.367</p></td>
+<td><p>9.381</p></td>
+<td><p>9.392</p></td>
+<td><p>9.408</p></td>
+<td><p>9.441</p></td>
+<td><p>9.451</p></td>
+<td><p>9.491</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>5.538</p></td>
+<td><p>5.462</p></td>
+<td><p>5.391</p></td>
+<td><p>5.343</p></td>
+<td><p>5.309</p></td>
+<td><p>5.285</p></td>
+<td><p>5.266</p></td>
+<td><p>5.252</p></td>
+<td><p>5.24</p></td>
+<td><p>5.23</p></td>
+<td><p>5.216</p></td>
+<td><p>5.184</p></td>
+<td><p>5.175</p></td>
+<td><p>5.134</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>4.545</p></td>
+<td><p>4.325</p></td>
+<td><p>4.191</p></td>
+<td><p>4.107</p></td>
+<td><p>4.051</p></td>
+<td><p>4.01</p></td>
+<td><p>3.979</p></td>
+<td><p>3.955</p></td>
+<td><p>3.936</p></td>
+<td><p>3.92</p></td>
+<td><p>3.896</p></td>
+<td><p>3.844</p></td>
+<td><p>3.828</p></td>
+<td><p>3.761</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>4.06</p></td>
+<td><p>3.78</p></td>
+<td><p>3.619</p></td>
+<td><p>3.52</p></td>
+<td><p>3.453</p></td>
+<td><p>3.405</p></td>
+<td><p>3.368</p></td>
+<td><p>3.339</p></td>
+<td><p>3.316</p></td>
+<td><p>3.297</p></td>
+<td><p>3.268</p></td>
+<td><p>3.207</p></td>
+<td><p>3.187</p></td>
+<td><p>3.105</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>3.776</p></td>
+<td><p>3.463</p></td>
+<td><p>3.289</p></td>
+<td><p>3.181</p></td>
+<td><p>3.108</p></td>
+<td><p>3.055</p></td>
+<td><p>3.014</p></td>
+<td><p>2.983</p></td>
+<td><p>2.958</p></td>
+<td><p>2.937</p></td>
+<td><p>2.905</p></td>
+<td><p>2.836</p></td>
+<td><p>2.815</p></td>
+<td><p>2.722</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>3.589</p></td>
+<td><p>3.257</p></td>
+<td><p>3.074</p></td>
+<td><p>2.961</p></td>
+<td><p>2.883</p></td>
+<td><p>2.827</p></td>
+<td><p>2.785</p></td>
+<td><p>2.752</p></td>
+<td><p>2.725</p></td>
+<td><p>2.703</p></td>
+<td><p>2.668</p></td>
+<td><p>2.595</p></td>
+<td><p>2.571</p></td>
+<td><p>2.471</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>3.458</p></td>
+<td><p>3.113</p></td>
+<td><p>2.924</p></td>
+<td><p>2.806</p></td>
+<td><p>2.726</p></td>
+<td><p>2.668</p></td>
+<td><p>2.624</p></td>
+<td><p>2.589</p></td>
+<td><p>2.561</p></td>
+<td><p>2.538</p></td>
+<td><p>2.502</p></td>
+<td><p>2.425</p></td>
+<td><p>2.4</p></td>
+<td><p>2.293</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>3.36</p></td>
+<td><p>3.006</p></td>
+<td><p>2.813</p></td>
+<td><p>2.693</p></td>
+<td><p>2.611</p></td>
+<td><p>2.551</p></td>
+<td><p>2.505</p></td>
+<td><p>2.469</p></td>
+<td><p>2.44</p></td>
+<td><p>2.416</p></td>
+<td><p>2.379</p></td>
+<td><p>2.298</p></td>
+<td><p>2.272</p></td>
+<td><p>2.159</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>3.285</p></td>
+<td><p>2.924</p></td>
+<td><p>2.728</p></td>
+<td><p>2.605</p></td>
+<td><p>2.522</p></td>
+<td><p>2.461</p></td>
+<td><p>2.414</p></td>
+<td><p>2.377</p></td>
+<td><p>2.347</p></td>
+<td><p>2.323</p></td>
+<td><p>2.284</p></td>
+<td><p>2.201</p></td>
+<td><p>2.174</p></td>
+<td><p>2.055</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>3.225</p></td>
+<td><p>2.86</p></td>
+<td><p>2.66</p></td>
+<td><p>2.536</p></td>
+<td><p>2.451</p></td>
+<td><p>2.389</p></td>
+<td><p>2.342</p></td>
+<td><p>2.304</p></td>
+<td><p>2.274</p></td>
+<td><p>2.248</p></td>
+<td><p>2.209</p></td>
+<td><p>2.123</p></td>
+<td><p>2.095</p></td>
+<td><p>1.972</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>3.177</p></td>
+<td><p>2.807</p></td>
+<td><p>2.606</p></td>
+<td><p>2.48</p></td>
+<td><p>2.394</p></td>
+<td><p>2.331</p></td>
+<td><p>2.283</p></td>
+<td><p>2.245</p></td>
+<td><p>2.214</p></td>
+<td><p>2.188</p></td>
+<td><p>2.147</p></td>
+<td><p>2.06</p></td>
+<td><p>2.031</p></td>
+<td><p>1.904</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>3.136</p></td>
+<td><p>2.763</p></td>
+<td><p>2.56</p></td>
+<td><p>2.434</p></td>
+<td><p>2.347</p></td>
+<td><p>2.283</p></td>
+<td><p>2.234</p></td>
+<td><p>2.195</p></td>
+<td><p>2.164</p></td>
+<td><p>2.138</p></td>
+<td><p>2.097</p></td>
+<td><p>2.007</p></td>
+<td><p>1.978</p></td>
+<td><p>1.846</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>3.102</p></td>
+<td><p>2.726</p></td>
+<td><p>2.522</p></td>
+<td><p>2.395</p></td>
+<td><p>2.307</p></td>
+<td><p>2.243</p></td>
+<td><p>2.193</p></td>
+<td><p>2.154</p></td>
+<td><p>2.122</p></td>
+<td><p>2.095</p></td>
+<td><p>2.054</p></td>
+<td><p>1.962</p></td>
+<td><p>1.933</p></td>
+<td><p>1.797</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>3.073</p></td>
+<td><p>2.695</p></td>
+<td><p>2.49</p></td>
+<td><p>2.361</p></td>
+<td><p>2.273</p></td>
+<td><p>2.208</p></td>
+<td><p>2.158</p></td>
+<td><p>2.119</p></td>
+<td><p>2.086</p></td>
+<td><p>2.059</p></td>
+<td><p>2.017</p></td>
+<td><p>1.924</p></td>
+<td><p>1.894</p></td>
+<td><p>1.755</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>3.048</p></td>
+<td><p>2.668</p></td>
+<td><p>2.462</p></td>
+<td><p>2.333</p></td>
+<td><p>2.244</p></td>
+<td><p>2.178</p></td>
+<td><p>2.128</p></td>
+<td><p>2.088</p></td>
+<td><p>2.055</p></td>
+<td><p>2.028</p></td>
+<td><p>1.985</p></td>
+<td><p>1.891</p></td>
+<td><p>1.86</p></td>
+<td><p>1.718</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>3.026</p></td>
+<td><p>2.645</p></td>
+<td><p>2.437</p></td>
+<td><p>2.308</p></td>
+<td><p>2.218</p></td>
+<td><p>2.152</p></td>
+<td><p>2.102</p></td>
+<td><p>2.061</p></td>
+<td><p>2.028</p></td>
+<td><p>2.001</p></td>
+<td><p>1.958</p></td>
+<td><p>1.862</p></td>
+<td><p>1.831</p></td>
+<td><p>1.686</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>3.007</p></td>
+<td><p>2.624</p></td>
+<td><p>2.416</p></td>
+<td><p>2.286</p></td>
+<td><p>2.196</p></td>
+<td><p>2.13</p></td>
+<td><p>2.079</p></td>
+<td><p>2.038</p></td>
+<td><p>2.005</p></td>
+<td><p>1.977</p></td>
+<td><p>1.933</p></td>
+<td><p>1.837</p></td>
+<td><p>1.805</p></td>
+<td><p>1.657</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>2.99</p></td>
+<td><p>2.606</p></td>
+<td><p>2.397</p></td>
+<td><p>2.266</p></td>
+<td><p>2.176</p></td>
+<td><p>2.109</p></td>
+<td><p>2.058</p></td>
+<td><p>2.017</p></td>
+<td><p>1.984</p></td>
+<td><p>1.956</p></td>
+<td><p>1.912</p></td>
+<td><p>1.814</p></td>
+<td><p>1.782</p></td>
+<td><p>1.631</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>2.975</p></td>
+<td><p>2.589</p></td>
+<td><p>2.38</p></td>
+<td><p>2.249</p></td>
+<td><p>2.158</p></td>
+<td><p>2.091</p></td>
+<td><p>2.04</p></td>
+<td><p>1.999</p></td>
+<td><p>1.965</p></td>
+<td><p>1.937</p></td>
+<td><p>1.892</p></td>
+<td><p>1.794</p></td>
+<td><p>1.761</p></td>
+<td><p>1.607</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>2.961</p></td>
+<td><p>2.575</p></td>
+<td><p>2.365</p></td>
+<td><p>2.233</p></td>
+<td><p>2.142</p></td>
+<td><p>2.075</p></td>
+<td><p>2.023</p></td>
+<td><p>1.982</p></td>
+<td><p>1.948</p></td>
+<td><p>1.92</p></td>
+<td><p>1.875</p></td>
+<td><p>1.776</p></td>
+<td><p>1.742</p></td>
+<td><p>1.586</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>2.949</p></td>
+<td><p>2.561</p></td>
+<td><p>2.351</p></td>
+<td><p>2.219</p></td>
+<td><p>2.128</p></td>
+<td><p>2.06</p></td>
+<td><p>2.008</p></td>
+<td><p>1.967</p></td>
+<td><p>1.933</p></td>
+<td><p>1.904</p></td>
+<td><p>1.859</p></td>
+<td><p>1.759</p></td>
+<td><p>1.726</p></td>
+<td><p>1.567</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>2.937</p></td>
+<td><p>2.549</p></td>
+<td><p>2.339</p></td>
+<td><p>2.207</p></td>
+<td><p>2.115</p></td>
+<td><p>2.047</p></td>
+<td><p>1.995</p></td>
+<td><p>1.953</p></td>
+<td><p>1.919</p></td>
+<td><p>1.89</p></td>
+<td><p>1.845</p></td>
+<td><p>1.744</p></td>
+<td><p>1.71</p></td>
+<td><p>1.549</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>2.927</p></td>
+<td><p>2.538</p></td>
+<td><p>2.327</p></td>
+<td><p>2.195</p></td>
+<td><p>2.103</p></td>
+<td><p>2.035</p></td>
+<td><p>1.983</p></td>
+<td><p>1.941</p></td>
+<td><p>1.906</p></td>
+<td><p>1.877</p></td>
+<td><p>1.832</p></td>
+<td><p>1.73</p></td>
+<td><p>1.696</p></td>
+<td><p>1.533</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>2.918</p></td>
+<td><p>2.528</p></td>
+<td><p>2.317</p></td>
+<td><p>2.184</p></td>
+<td><p>2.092</p></td>
+<td><p>2.024</p></td>
+<td><p>1.971</p></td>
+<td><p>1.929</p></td>
+<td><p>1.895</p></td>
+<td><p>1.866</p></td>
+<td><p>1.82</p></td>
+<td><p>1.718</p></td>
+<td><p>1.683</p></td>
+<td><p>1.518</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>2.909</p></td>
+<td><p>2.519</p></td>
+<td><p>2.307</p></td>
+<td><p>2.174</p></td>
+<td><p>2.082</p></td>
+<td><p>2.014</p></td>
+<td><p>1.961</p></td>
+<td><p>1.919</p></td>
+<td><p>1.884</p></td>
+<td><p>1.855</p></td>
+<td><p>1.809</p></td>
+<td><p>1.706</p></td>
+<td><p>1.671</p></td>
+<td><p>1.504</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>2.901</p></td>
+<td><p>2.511</p></td>
+<td><p>2.299</p></td>
+<td><p>2.165</p></td>
+<td><p>2.073</p></td>
+<td><p>2.005</p></td>
+<td><p>1.952</p></td>
+<td><p>1.909</p></td>
+<td><p>1.874</p></td>
+<td><p>1.845</p></td>
+<td><p>1.799</p></td>
+<td><p>1.695</p></td>
+<td><p>1.66</p></td>
+<td><p>1.491</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>2.894</p></td>
+<td><p>2.503</p></td>
+<td><p>2.291</p></td>
+<td><p>2.157</p></td>
+<td><p>2.064</p></td>
+<td><p>1.996</p></td>
+<td><p>1.943</p></td>
+<td><p>1.9</p></td>
+<td><p>1.865</p></td>
+<td><p>1.836</p></td>
+<td><p>1.79</p></td>
+<td><p>1.685</p></td>
+<td><p>1.65</p></td>
+<td><p>1.478</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>2.887</p></td>
+<td><p>2.495</p></td>
+<td><p>2.283</p></td>
+<td><p>2.149</p></td>
+<td><p>2.057</p></td>
+<td><p>1.988</p></td>
+<td><p>1.935</p></td>
+<td><p>1.892</p></td>
+<td><p>1.857</p></td>
+<td><p>1.827</p></td>
+<td><p>1.781</p></td>
+<td><p>1.676</p></td>
+<td><p>1.64</p></td>
+<td><p>1.467</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>2.881</p></td>
+<td><p>2.489</p></td>
+<td><p>2.276</p></td>
+<td><p>2.142</p></td>
+<td><p>2.049</p></td>
+<td><p>1.98</p></td>
+<td><p>1.927</p></td>
+<td><p>1.884</p></td>
+<td><p>1.849</p></td>
+<td><p>1.819</p></td>
+<td><p>1.773</p></td>
+<td><p>1.667</p></td>
+<td><p>1.632</p></td>
+<td><p>1.456</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>2.869</p></td>
+<td><p>2.477</p></td>
+<td><p>2.263</p></td>
+<td><p>2.129</p></td>
+<td><p>2.036</p></td>
+<td><p>1.967</p></td>
+<td><p>1.913</p></td>
+<td><p>1.87</p></td>
+<td><p>1.835</p></td>
+<td><p>1.805</p></td>
+<td><p>1.758</p></td>
+<td><p>1.652</p></td>
+<td><p>1.616</p></td>
+<td><p>1.437</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>2.859</p></td>
+<td><p>2.466</p></td>
+<td><p>2.252</p></td>
+<td><p>2.118</p></td>
+<td><p>2.024</p></td>
+<td><p>1.955</p></td>
+<td><p>1.901</p></td>
+<td><p>1.858</p></td>
+<td><p>1.822</p></td>
+<td><p>1.793</p></td>
+<td><p>1.745</p></td>
+<td><p>1.638</p></td>
+<td><p>1.601</p></td>
+<td><p>1.419</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>2.85</p></td>
+<td><p>2.456</p></td>
+<td><p>2.243</p></td>
+<td><p>2.108</p></td>
+<td><p>2.014</p></td>
+<td><p>1.945</p></td>
+<td><p>1.891</p></td>
+<td><p>1.847</p></td>
+<td><p>1.811</p></td>
+<td><p>1.781</p></td>
+<td><p>1.734</p></td>
+<td><p>1.626</p></td>
+<td><p>1.589</p></td>
+<td><p>1.404</p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>2.842</p></td>
+<td><p>2.448</p></td>
+<td><p>2.234</p></td>
+<td><p>2.099</p></td>
+<td><p>2.005</p></td>
+<td><p>1.935</p></td>
+<td><p>1.881</p></td>
+<td><p>1.838</p></td>
+<td><p>1.802</p></td>
+<td><p>1.772</p></td>
+<td><p>1.724</p></td>
+<td><p>1.615</p></td>
+<td><p>1.578</p></td>
+<td><p>1.39</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>2.835</p></td>
+<td><p>2.44</p></td>
+<td><p>2.226</p></td>
+<td><p>2.091</p></td>
+<td><p>1.997</p></td>
+<td><p>1.927</p></td>
+<td><p>1.873</p></td>
+<td><p>1.829</p></td>
+<td><p>1.793</p></td>
+<td><p>1.763</p></td>
+<td><p>1.715</p></td>
+<td><p>1.605</p></td>
+<td><p>1.568</p></td>
+<td><p>1.377</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>2.791</p></td>
+<td><p>2.393</p></td>
+<td><p>2.177</p></td>
+<td><p>2.041</p></td>
+<td><p>1.946</p></td>
+<td><p>1.875</p></td>
+<td><p>1.819</p></td>
+<td><p>1.775</p></td>
+<td><p>1.738</p></td>
+<td><p>1.707</p></td>
+<td><p>1.657</p></td>
+<td><p>1.543</p></td>
+<td><p>1.504</p></td>
+<td><p>1.291</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p>2.748</p></td>
+<td><p>2.347</p></td>
+<td><p>2.13</p></td>
+<td><p>1.992</p></td>
+<td><p>1.896</p></td>
+<td><p>1.824</p></td>
+<td><p>1.767</p></td>
+<td><p>1.722</p></td>
+<td><p>1.684</p></td>
+<td><p>1.652</p></td>
+<td><p>1.601</p></td>
+<td><p>1.482</p></td>
+<td><p>1.44</p></td>
+<td><p>1.193</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>2.706</p></td>
+<td><p>2.303</p></td>
+<td><p>2.084</p></td>
+<td><p>1.945</p></td>
+<td><p>1.847</p></td>
+<td><p>1.774</p></td>
+<td><p>1.717</p></td>
+<td><p>1.67</p></td>
+<td><p>1.632</p></td>
+<td><p>1.599</p></td>
+<td><p>1.546</p></td>
+<td><p>1.421</p></td>
+<td><p>1.375</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t-5-f-dreifing-a-0-95">
+<span id="a-ftafla5"></span><h2>T.5: F-dreifing - <span class="math notranslate nohighlight">\(a=0.95\)</span><a class="headerlink" href="#t-5-f-dreifing-a-0-95" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/f_plot95_vinstri.svg" /></figure>
+<p>Taflan gefur <span class="math notranslate nohighlight">\(F_{0.95}\)</span>. Um <span class="math notranslate nohighlight">\(F_{0.95}\)</span> gildir að slembistærð
+sem fylgir <span class="math notranslate nohighlight">\(F\)</span>-dreifingu með <span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span> frígráður
+hefur líkurnar <span class="math notranslate nohighlight">\(0.95\)</span> að taka gildi sem er minna en
+<span class="math notranslate nohighlight">\(F_{0.95}\)</span>.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_1\)</span></p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>12</p></td>
+<td><p>20</p></td>
+<td><p>25</p></td>
+<td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_2\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>161.4</p></td>
+<td><p>199.5</p></td>
+<td><p>215.7</p></td>
+<td><p>224.6</p></td>
+<td><p>230.2</p></td>
+<td><p>234</p></td>
+<td><p>236.8</p></td>
+<td><p>238.9</p></td>
+<td><p>240.5</p></td>
+<td><p>241.9</p></td>
+<td><p>243.9</p></td>
+<td><p>248</p></td>
+<td><p>249.3</p></td>
+<td><p>254.3</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>18.51</p></td>
+<td><p>19</p></td>
+<td><p>19.16</p></td>
+<td><p>19.25</p></td>
+<td><p>19.3</p></td>
+<td><p>19.33</p></td>
+<td><p>19.35</p></td>
+<td><p>19.37</p></td>
+<td><p>19.38</p></td>
+<td><p>19.4</p></td>
+<td><p>19.41</p></td>
+<td><p>19.45</p></td>
+<td><p>19.46</p></td>
+<td><p>19.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>10.13</p></td>
+<td><p>9.552</p></td>
+<td><p>9.277</p></td>
+<td><p>9.117</p></td>
+<td><p>9.013</p></td>
+<td><p>8.941</p></td>
+<td><p>8.887</p></td>
+<td><p>8.845</p></td>
+<td><p>8.812</p></td>
+<td><p>8.786</p></td>
+<td><p>8.745</p></td>
+<td><p>8.66</p></td>
+<td><p>8.634</p></td>
+<td><p>8.526</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>7.709</p></td>
+<td><p>6.944</p></td>
+<td><p>6.591</p></td>
+<td><p>6.388</p></td>
+<td><p>6.256</p></td>
+<td><p>6.163</p></td>
+<td><p>6.094</p></td>
+<td><p>6.041</p></td>
+<td><p>5.999</p></td>
+<td><p>5.964</p></td>
+<td><p>5.912</p></td>
+<td><p>5.803</p></td>
+<td><p>5.769</p></td>
+<td><p>5.628</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>6.608</p></td>
+<td><p>5.786</p></td>
+<td><p>5.409</p></td>
+<td><p>5.192</p></td>
+<td><p>5.05</p></td>
+<td><p>4.95</p></td>
+<td><p>4.876</p></td>
+<td><p>4.818</p></td>
+<td><p>4.772</p></td>
+<td><p>4.735</p></td>
+<td><p>4.678</p></td>
+<td><p>4.558</p></td>
+<td><p>4.521</p></td>
+<td><p>4.365</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>5.987</p></td>
+<td><p>5.143</p></td>
+<td><p>4.757</p></td>
+<td><p>4.534</p></td>
+<td><p>4.387</p></td>
+<td><p>4.284</p></td>
+<td><p>4.207</p></td>
+<td><p>4.147</p></td>
+<td><p>4.099</p></td>
+<td><p>4.06</p></td>
+<td><p>4</p></td>
+<td><p>3.874</p></td>
+<td><p>3.835</p></td>
+<td><p>3.669</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>5.591</p></td>
+<td><p>4.737</p></td>
+<td><p>4.347</p></td>
+<td><p>4.12</p></td>
+<td><p>3.972</p></td>
+<td><p>3.866</p></td>
+<td><p>3.787</p></td>
+<td><p>3.726</p></td>
+<td><p>3.677</p></td>
+<td><p>3.637</p></td>
+<td><p>3.575</p></td>
+<td><p>3.445</p></td>
+<td><p>3.404</p></td>
+<td><p>3.23</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>5.318</p></td>
+<td><p>4.459</p></td>
+<td><p>4.066</p></td>
+<td><p>3.838</p></td>
+<td><p>3.687</p></td>
+<td><p>3.581</p></td>
+<td><p>3.5</p></td>
+<td><p>3.438</p></td>
+<td><p>3.388</p></td>
+<td><p>3.347</p></td>
+<td><p>3.284</p></td>
+<td><p>3.15</p></td>
+<td><p>3.108</p></td>
+<td><p>2.928</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>5.117</p></td>
+<td><p>4.256</p></td>
+<td><p>3.863</p></td>
+<td><p>3.633</p></td>
+<td><p>3.482</p></td>
+<td><p>3.374</p></td>
+<td><p>3.293</p></td>
+<td><p>3.23</p></td>
+<td><p>3.179</p></td>
+<td><p>3.137</p></td>
+<td><p>3.073</p></td>
+<td><p>2.936</p></td>
+<td><p>2.893</p></td>
+<td><p>2.707</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>4.965</p></td>
+<td><p>4.103</p></td>
+<td><p>3.708</p></td>
+<td><p>3.478</p></td>
+<td><p>3.326</p></td>
+<td><p>3.217</p></td>
+<td><p>3.135</p></td>
+<td><p>3.072</p></td>
+<td><p>3.02</p></td>
+<td><p>2.978</p></td>
+<td><p>2.913</p></td>
+<td><p>2.774</p></td>
+<td><p>2.73</p></td>
+<td><p>2.538</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>4.844</p></td>
+<td><p>3.982</p></td>
+<td><p>3.587</p></td>
+<td><p>3.357</p></td>
+<td><p>3.204</p></td>
+<td><p>3.095</p></td>
+<td><p>3.012</p></td>
+<td><p>2.948</p></td>
+<td><p>2.896</p></td>
+<td><p>2.854</p></td>
+<td><p>2.788</p></td>
+<td><p>2.646</p></td>
+<td><p>2.601</p></td>
+<td><p>2.404</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>4.747</p></td>
+<td><p>3.885</p></td>
+<td><p>3.49</p></td>
+<td><p>3.259</p></td>
+<td><p>3.106</p></td>
+<td><p>2.996</p></td>
+<td><p>2.913</p></td>
+<td><p>2.849</p></td>
+<td><p>2.796</p></td>
+<td><p>2.753</p></td>
+<td><p>2.687</p></td>
+<td><p>2.544</p></td>
+<td><p>2.498</p></td>
+<td><p>2.296</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>4.667</p></td>
+<td><p>3.806</p></td>
+<td><p>3.411</p></td>
+<td><p>3.179</p></td>
+<td><p>3.025</p></td>
+<td><p>2.915</p></td>
+<td><p>2.832</p></td>
+<td><p>2.767</p></td>
+<td><p>2.714</p></td>
+<td><p>2.671</p></td>
+<td><p>2.604</p></td>
+<td><p>2.459</p></td>
+<td><p>2.412</p></td>
+<td><p>2.206</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>4.6</p></td>
+<td><p>3.739</p></td>
+<td><p>3.344</p></td>
+<td><p>3.112</p></td>
+<td><p>2.958</p></td>
+<td><p>2.848</p></td>
+<td><p>2.764</p></td>
+<td><p>2.699</p></td>
+<td><p>2.646</p></td>
+<td><p>2.602</p></td>
+<td><p>2.534</p></td>
+<td><p>2.388</p></td>
+<td><p>2.341</p></td>
+<td><p>2.131</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>4.543</p></td>
+<td><p>3.682</p></td>
+<td><p>3.287</p></td>
+<td><p>3.056</p></td>
+<td><p>2.901</p></td>
+<td><p>2.79</p></td>
+<td><p>2.707</p></td>
+<td><p>2.641</p></td>
+<td><p>2.588</p></td>
+<td><p>2.544</p></td>
+<td><p>2.475</p></td>
+<td><p>2.328</p></td>
+<td><p>2.28</p></td>
+<td><p>2.066</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>4.494</p></td>
+<td><p>3.634</p></td>
+<td><p>3.239</p></td>
+<td><p>3.007</p></td>
+<td><p>2.852</p></td>
+<td><p>2.741</p></td>
+<td><p>2.657</p></td>
+<td><p>2.591</p></td>
+<td><p>2.538</p></td>
+<td><p>2.494</p></td>
+<td><p>2.425</p></td>
+<td><p>2.276</p></td>
+<td><p>2.227</p></td>
+<td><p>2.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>4.451</p></td>
+<td><p>3.592</p></td>
+<td><p>3.197</p></td>
+<td><p>2.965</p></td>
+<td><p>2.81</p></td>
+<td><p>2.699</p></td>
+<td><p>2.614</p></td>
+<td><p>2.548</p></td>
+<td><p>2.494</p></td>
+<td><p>2.45</p></td>
+<td><p>2.381</p></td>
+<td><p>2.23</p></td>
+<td><p>2.181</p></td>
+<td><p>1.96</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>4.414</p></td>
+<td><p>3.555</p></td>
+<td><p>3.16</p></td>
+<td><p>2.928</p></td>
+<td><p>2.773</p></td>
+<td><p>2.661</p></td>
+<td><p>2.577</p></td>
+<td><p>2.51</p></td>
+<td><p>2.456</p></td>
+<td><p>2.412</p></td>
+<td><p>2.342</p></td>
+<td><p>2.191</p></td>
+<td><p>2.141</p></td>
+<td><p>1.917</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>4.381</p></td>
+<td><p>3.522</p></td>
+<td><p>3.127</p></td>
+<td><p>2.895</p></td>
+<td><p>2.74</p></td>
+<td><p>2.628</p></td>
+<td><p>2.544</p></td>
+<td><p>2.477</p></td>
+<td><p>2.423</p></td>
+<td><p>2.378</p></td>
+<td><p>2.308</p></td>
+<td><p>2.155</p></td>
+<td><p>2.106</p></td>
+<td><p>1.878</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>4.351</p></td>
+<td><p>3.493</p></td>
+<td><p>3.098</p></td>
+<td><p>2.866</p></td>
+<td><p>2.711</p></td>
+<td><p>2.599</p></td>
+<td><p>2.514</p></td>
+<td><p>2.447</p></td>
+<td><p>2.393</p></td>
+<td><p>2.348</p></td>
+<td><p>2.278</p></td>
+<td><p>2.124</p></td>
+<td><p>2.074</p></td>
+<td><p>1.843</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>4.325</p></td>
+<td><p>3.467</p></td>
+<td><p>3.072</p></td>
+<td><p>2.84</p></td>
+<td><p>2.685</p></td>
+<td><p>2.573</p></td>
+<td><p>2.488</p></td>
+<td><p>2.42</p></td>
+<td><p>2.366</p></td>
+<td><p>2.321</p></td>
+<td><p>2.25</p></td>
+<td><p>2.096</p></td>
+<td><p>2.045</p></td>
+<td><p>1.812</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>4.301</p></td>
+<td><p>3.443</p></td>
+<td><p>3.049</p></td>
+<td><p>2.817</p></td>
+<td><p>2.661</p></td>
+<td><p>2.549</p></td>
+<td><p>2.464</p></td>
+<td><p>2.397</p></td>
+<td><p>2.342</p></td>
+<td><p>2.297</p></td>
+<td><p>2.226</p></td>
+<td><p>2.071</p></td>
+<td><p>2.02</p></td>
+<td><p>1.783</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>4.279</p></td>
+<td><p>3.422</p></td>
+<td><p>3.028</p></td>
+<td><p>2.796</p></td>
+<td><p>2.64</p></td>
+<td><p>2.528</p></td>
+<td><p>2.442</p></td>
+<td><p>2.375</p></td>
+<td><p>2.32</p></td>
+<td><p>2.275</p></td>
+<td><p>2.204</p></td>
+<td><p>2.048</p></td>
+<td><p>1.996</p></td>
+<td><p>1.757</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>4.26</p></td>
+<td><p>3.403</p></td>
+<td><p>3.009</p></td>
+<td><p>2.776</p></td>
+<td><p>2.621</p></td>
+<td><p>2.508</p></td>
+<td><p>2.423</p></td>
+<td><p>2.355</p></td>
+<td><p>2.3</p></td>
+<td><p>2.255</p></td>
+<td><p>2.183</p></td>
+<td><p>2.027</p></td>
+<td><p>1.975</p></td>
+<td><p>1.733</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>4.242</p></td>
+<td><p>3.385</p></td>
+<td><p>2.991</p></td>
+<td><p>2.759</p></td>
+<td><p>2.603</p></td>
+<td><p>2.49</p></td>
+<td><p>2.405</p></td>
+<td><p>2.337</p></td>
+<td><p>2.282</p></td>
+<td><p>2.236</p></td>
+<td><p>2.165</p></td>
+<td><p>2.007</p></td>
+<td><p>1.955</p></td>
+<td><p>1.711</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>4.225</p></td>
+<td><p>3.369</p></td>
+<td><p>2.975</p></td>
+<td><p>2.743</p></td>
+<td><p>2.587</p></td>
+<td><p>2.474</p></td>
+<td><p>2.388</p></td>
+<td><p>2.321</p></td>
+<td><p>2.265</p></td>
+<td><p>2.22</p></td>
+<td><p>2.148</p></td>
+<td><p>1.99</p></td>
+<td><p>1.938</p></td>
+<td><p>1.691</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>4.21</p></td>
+<td><p>3.354</p></td>
+<td><p>2.96</p></td>
+<td><p>2.728</p></td>
+<td><p>2.572</p></td>
+<td><p>2.459</p></td>
+<td><p>2.373</p></td>
+<td><p>2.305</p></td>
+<td><p>2.25</p></td>
+<td><p>2.204</p></td>
+<td><p>2.132</p></td>
+<td><p>1.974</p></td>
+<td><p>1.921</p></td>
+<td><p>1.672</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>4.196</p></td>
+<td><p>3.34</p></td>
+<td><p>2.947</p></td>
+<td><p>2.714</p></td>
+<td><p>2.558</p></td>
+<td><p>2.445</p></td>
+<td><p>2.359</p></td>
+<td><p>2.291</p></td>
+<td><p>2.236</p></td>
+<td><p>2.19</p></td>
+<td><p>2.118</p></td>
+<td><p>1.959</p></td>
+<td><p>1.906</p></td>
+<td><p>1.654</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>4.183</p></td>
+<td><p>3.328</p></td>
+<td><p>2.934</p></td>
+<td><p>2.701</p></td>
+<td><p>2.545</p></td>
+<td><p>2.432</p></td>
+<td><p>2.346</p></td>
+<td><p>2.278</p></td>
+<td><p>2.223</p></td>
+<td><p>2.177</p></td>
+<td><p>2.104</p></td>
+<td><p>1.945</p></td>
+<td><p>1.891</p></td>
+<td><p>1.638</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>4.171</p></td>
+<td><p>3.316</p></td>
+<td><p>2.922</p></td>
+<td><p>2.69</p></td>
+<td><p>2.534</p></td>
+<td><p>2.421</p></td>
+<td><p>2.334</p></td>
+<td><p>2.266</p></td>
+<td><p>2.211</p></td>
+<td><p>2.165</p></td>
+<td><p>2.092</p></td>
+<td><p>1.932</p></td>
+<td><p>1.878</p></td>
+<td><p>1.622</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>4.149</p></td>
+<td><p>3.295</p></td>
+<td><p>2.901</p></td>
+<td><p>2.668</p></td>
+<td><p>2.512</p></td>
+<td><p>2.399</p></td>
+<td><p>2.313</p></td>
+<td><p>2.244</p></td>
+<td><p>2.189</p></td>
+<td><p>2.142</p></td>
+<td><p>2.07</p></td>
+<td><p>1.908</p></td>
+<td><p>1.854</p></td>
+<td><p>1.594</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>4.13</p></td>
+<td><p>3.276</p></td>
+<td><p>2.883</p></td>
+<td><p>2.65</p></td>
+<td><p>2.494</p></td>
+<td><p>2.38</p></td>
+<td><p>2.294</p></td>
+<td><p>2.225</p></td>
+<td><p>2.17</p></td>
+<td><p>2.123</p></td>
+<td><p>2.05</p></td>
+<td><p>1.888</p></td>
+<td><p>1.833</p></td>
+<td><p>1.569</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>4.113</p></td>
+<td><p>3.259</p></td>
+<td><p>2.866</p></td>
+<td><p>2.634</p></td>
+<td><p>2.477</p></td>
+<td><p>2.364</p></td>
+<td><p>2.277</p></td>
+<td><p>2.209</p></td>
+<td><p>2.153</p></td>
+<td><p>2.106</p></td>
+<td><p>2.033</p></td>
+<td><p>1.87</p></td>
+<td><p>1.815</p></td>
+<td><p>1.547</p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>4.098</p></td>
+<td><p>3.245</p></td>
+<td><p>2.852</p></td>
+<td><p>2.619</p></td>
+<td><p>2.463</p></td>
+<td><p>2.349</p></td>
+<td><p>2.262</p></td>
+<td><p>2.194</p></td>
+<td><p>2.138</p></td>
+<td><p>2.091</p></td>
+<td><p>2.017</p></td>
+<td><p>1.853</p></td>
+<td><p>1.798</p></td>
+<td><p>1.527</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>4.085</p></td>
+<td><p>3.232</p></td>
+<td><p>2.839</p></td>
+<td><p>2.606</p></td>
+<td><p>2.449</p></td>
+<td><p>2.336</p></td>
+<td><p>2.249</p></td>
+<td><p>2.18</p></td>
+<td><p>2.124</p></td>
+<td><p>2.077</p></td>
+<td><p>2.003</p></td>
+<td><p>1.839</p></td>
+<td><p>1.783</p></td>
+<td><p>1.509</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>4.001</p></td>
+<td><p>3.15</p></td>
+<td><p>2.758</p></td>
+<td><p>2.525</p></td>
+<td><p>2.368</p></td>
+<td><p>2.254</p></td>
+<td><p>2.167</p></td>
+<td><p>2.097</p></td>
+<td><p>2.04</p></td>
+<td><p>1.993</p></td>
+<td><p>1.917</p></td>
+<td><p>1.748</p></td>
+<td><p>1.69</p></td>
+<td><p>1.389</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p>3.92</p></td>
+<td><p>3.072</p></td>
+<td><p>2.68</p></td>
+<td><p>2.447</p></td>
+<td><p>2.29</p></td>
+<td><p>2.175</p></td>
+<td><p>2.087</p></td>
+<td><p>2.016</p></td>
+<td><p>1.959</p></td>
+<td><p>1.91</p></td>
+<td><p>1.834</p></td>
+<td><p>1.659</p></td>
+<td><p>1.598</p></td>
+<td><p>1.254</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>3.841</p></td>
+<td><p>2.996</p></td>
+<td><p>2.605</p></td>
+<td><p>2.372</p></td>
+<td><p>2.214</p></td>
+<td><p>2.099</p></td>
+<td><p>2.01</p></td>
+<td><p>1.938</p></td>
+<td><p>1.88</p></td>
+<td><p>1.831</p></td>
+<td><p>1.752</p></td>
+<td><p>1.571</p></td>
+<td><p>1.506</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="math notranslate nohighlight">
+\[\text{ }\]</div>
+</section>
+<section id="t-6-f-dreifing-a-0-975">
+<span id="a-ftafla25"></span><h2>T.6: F-dreifing - <span class="math notranslate nohighlight">\(a=0.975\)</span><a class="headerlink" href="#t-6-f-dreifing-a-0-975" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/f_plot975_vinstri.svg" /></figure>
+<p>Taflan gefur <span class="math notranslate nohighlight">\(F_{0.975}\)</span>. Um <span class="math notranslate nohighlight">\(F_{0.975}\)</span> gildir að
+slembistærð sem fylgir <span class="math notranslate nohighlight">\(F\)</span>-dreifingu með <span class="math notranslate nohighlight">\(v_1\)</span> og
+<span class="math notranslate nohighlight">\(v_2\)</span> frígráður hefur líkurnar <span class="math notranslate nohighlight">\(0.975\)</span> að taka gildi sem er
+minna en <span class="math notranslate nohighlight">\(F_{0.975}\)</span>.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_1\)</span></p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>12</p></td>
+<td><p>20</p></td>
+<td><p>25</p></td>
+<td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_2\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>647.8</p></td>
+<td><p>799.5</p></td>
+<td><p>864.2</p></td>
+<td><p>899.6</p></td>
+<td><p>921.8</p></td>
+<td><p>937.1</p></td>
+<td><p>948.2</p></td>
+<td><p>956.7</p></td>
+<td><p>963.3</p></td>
+<td><p>968.6</p></td>
+<td><p>976.7</p></td>
+<td><p>993.1</p></td>
+<td><p>998.1</p></td>
+<td><p>1018</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>38.51</p></td>
+<td><p>39</p></td>
+<td><p>39.17</p></td>
+<td><p>39.25</p></td>
+<td><p>39.3</p></td>
+<td><p>39.33</p></td>
+<td><p>39.36</p></td>
+<td><p>39.37</p></td>
+<td><p>39.39</p></td>
+<td><p>39.4</p></td>
+<td><p>39.41</p></td>
+<td><p>39.45</p></td>
+<td><p>39.46</p></td>
+<td><p>39.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>17.44</p></td>
+<td><p>16.04</p></td>
+<td><p>15.44</p></td>
+<td><p>15.1</p></td>
+<td><p>14.88</p></td>
+<td><p>14.73</p></td>
+<td><p>14.62</p></td>
+<td><p>14.54</p></td>
+<td><p>14.47</p></td>
+<td><p>14.42</p></td>
+<td><p>14.34</p></td>
+<td><p>14.17</p></td>
+<td><p>14.12</p></td>
+<td><p>13.9</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>12.22</p></td>
+<td><p>10.65</p></td>
+<td><p>9.979</p></td>
+<td><p>9.605</p></td>
+<td><p>9.364</p></td>
+<td><p>9.197</p></td>
+<td><p>9.074</p></td>
+<td><p>8.98</p></td>
+<td><p>8.905</p></td>
+<td><p>8.844</p></td>
+<td><p>8.751</p></td>
+<td><p>8.56</p></td>
+<td><p>8.501</p></td>
+<td><p>8.257</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>10.01</p></td>
+<td><p>8.434</p></td>
+<td><p>7.764</p></td>
+<td><p>7.388</p></td>
+<td><p>7.146</p></td>
+<td><p>6.978</p></td>
+<td><p>6.853</p></td>
+<td><p>6.757</p></td>
+<td><p>6.681</p></td>
+<td><p>6.619</p></td>
+<td><p>6.525</p></td>
+<td><p>6.329</p></td>
+<td><p>6.268</p></td>
+<td><p>6.015</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>8.813</p></td>
+<td><p>7.26</p></td>
+<td><p>6.599</p></td>
+<td><p>6.227</p></td>
+<td><p>5.988</p></td>
+<td><p>5.82</p></td>
+<td><p>5.695</p></td>
+<td><p>5.6</p></td>
+<td><p>5.523</p></td>
+<td><p>5.461</p></td>
+<td><p>5.366</p></td>
+<td><p>5.168</p></td>
+<td><p>5.107</p></td>
+<td><p>4.849</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>8.073</p></td>
+<td><p>6.542</p></td>
+<td><p>5.89</p></td>
+<td><p>5.523</p></td>
+<td><p>5.285</p></td>
+<td><p>5.119</p></td>
+<td><p>4.995</p></td>
+<td><p>4.899</p></td>
+<td><p>4.823</p></td>
+<td><p>4.761</p></td>
+<td><p>4.666</p></td>
+<td><p>4.467</p></td>
+<td><p>4.405</p></td>
+<td><p>4.142</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>7.571</p></td>
+<td><p>6.059</p></td>
+<td><p>5.416</p></td>
+<td><p>5.053</p></td>
+<td><p>4.817</p></td>
+<td><p>4.652</p></td>
+<td><p>4.529</p></td>
+<td><p>4.433</p></td>
+<td><p>4.357</p></td>
+<td><p>4.295</p></td>
+<td><p>4.2</p></td>
+<td><p>3.999</p></td>
+<td><p>3.937</p></td>
+<td><p>3.67</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>7.209</p></td>
+<td><p>5.715</p></td>
+<td><p>5.078</p></td>
+<td><p>4.718</p></td>
+<td><p>4.484</p></td>
+<td><p>4.32</p></td>
+<td><p>4.197</p></td>
+<td><p>4.102</p></td>
+<td><p>4.026</p></td>
+<td><p>3.964</p></td>
+<td><p>3.868</p></td>
+<td><p>3.667</p></td>
+<td><p>3.604</p></td>
+<td><p>3.333</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>6.937</p></td>
+<td><p>5.456</p></td>
+<td><p>4.826</p></td>
+<td><p>4.468</p></td>
+<td><p>4.236</p></td>
+<td><p>4.072</p></td>
+<td><p>3.95</p></td>
+<td><p>3.855</p></td>
+<td><p>3.779</p></td>
+<td><p>3.717</p></td>
+<td><p>3.621</p></td>
+<td><p>3.419</p></td>
+<td><p>3.355</p></td>
+<td><p>3.08</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>6.724</p></td>
+<td><p>5.256</p></td>
+<td><p>4.63</p></td>
+<td><p>4.275</p></td>
+<td><p>4.044</p></td>
+<td><p>3.881</p></td>
+<td><p>3.759</p></td>
+<td><p>3.664</p></td>
+<td><p>3.588</p></td>
+<td><p>3.526</p></td>
+<td><p>3.43</p></td>
+<td><p>3.226</p></td>
+<td><p>3.162</p></td>
+<td><p>2.883</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>6.554</p></td>
+<td><p>5.096</p></td>
+<td><p>4.474</p></td>
+<td><p>4.121</p></td>
+<td><p>3.891</p></td>
+<td><p>3.728</p></td>
+<td><p>3.607</p></td>
+<td><p>3.512</p></td>
+<td><p>3.436</p></td>
+<td><p>3.374</p></td>
+<td><p>3.277</p></td>
+<td><p>3.073</p></td>
+<td><p>3.008</p></td>
+<td><p>2.725</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>6.414</p></td>
+<td><p>4.965</p></td>
+<td><p>4.347</p></td>
+<td><p>3.996</p></td>
+<td><p>3.767</p></td>
+<td><p>3.604</p></td>
+<td><p>3.483</p></td>
+<td><p>3.388</p></td>
+<td><p>3.312</p></td>
+<td><p>3.25</p></td>
+<td><p>3.153</p></td>
+<td><p>2.948</p></td>
+<td><p>2.882</p></td>
+<td><p>2.595</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>6.298</p></td>
+<td><p>4.857</p></td>
+<td><p>4.242</p></td>
+<td><p>3.892</p></td>
+<td><p>3.663</p></td>
+<td><p>3.501</p></td>
+<td><p>3.38</p></td>
+<td><p>3.285</p></td>
+<td><p>3.209</p></td>
+<td><p>3.147</p></td>
+<td><p>3.05</p></td>
+<td><p>2.844</p></td>
+<td><p>2.778</p></td>
+<td><p>2.487</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>6.2</p></td>
+<td><p>4.765</p></td>
+<td><p>4.153</p></td>
+<td><p>3.804</p></td>
+<td><p>3.576</p></td>
+<td><p>3.415</p></td>
+<td><p>3.293</p></td>
+<td><p>3.199</p></td>
+<td><p>3.123</p></td>
+<td><p>3.06</p></td>
+<td><p>2.963</p></td>
+<td><p>2.756</p></td>
+<td><p>2.689</p></td>
+<td><p>2.395</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>6.115</p></td>
+<td><p>4.687</p></td>
+<td><p>4.077</p></td>
+<td><p>3.729</p></td>
+<td><p>3.502</p></td>
+<td><p>3.341</p></td>
+<td><p>3.219</p></td>
+<td><p>3.125</p></td>
+<td><p>3.049</p></td>
+<td><p>2.986</p></td>
+<td><p>2.889</p></td>
+<td><p>2.681</p></td>
+<td><p>2.614</p></td>
+<td><p>2.316</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>6.042</p></td>
+<td><p>4.619</p></td>
+<td><p>4.011</p></td>
+<td><p>3.665</p></td>
+<td><p>3.438</p></td>
+<td><p>3.277</p></td>
+<td><p>3.156</p></td>
+<td><p>3.061</p></td>
+<td><p>2.985</p></td>
+<td><p>2.922</p></td>
+<td><p>2.825</p></td>
+<td><p>2.616</p></td>
+<td><p>2.548</p></td>
+<td><p>2.247</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>5.978</p></td>
+<td><p>4.56</p></td>
+<td><p>3.954</p></td>
+<td><p>3.608</p></td>
+<td><p>3.382</p></td>
+<td><p>3.221</p></td>
+<td><p>3.1</p></td>
+<td><p>3.005</p></td>
+<td><p>2.929</p></td>
+<td><p>2.866</p></td>
+<td><p>2.769</p></td>
+<td><p>2.559</p></td>
+<td><p>2.491</p></td>
+<td><p>2.187</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>5.922</p></td>
+<td><p>4.508</p></td>
+<td><p>3.903</p></td>
+<td><p>3.559</p></td>
+<td><p>3.333</p></td>
+<td><p>3.172</p></td>
+<td><p>3.051</p></td>
+<td><p>2.956</p></td>
+<td><p>2.88</p></td>
+<td><p>2.817</p></td>
+<td><p>2.72</p></td>
+<td><p>2.509</p></td>
+<td><p>2.441</p></td>
+<td><p>2.133</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>5.871</p></td>
+<td><p>4.461</p></td>
+<td><p>3.859</p></td>
+<td><p>3.515</p></td>
+<td><p>3.289</p></td>
+<td><p>3.128</p></td>
+<td><p>3.007</p></td>
+<td><p>2.913</p></td>
+<td><p>2.837</p></td>
+<td><p>2.774</p></td>
+<td><p>2.676</p></td>
+<td><p>2.464</p></td>
+<td><p>2.396</p></td>
+<td><p>2.085</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>5.827</p></td>
+<td><p>4.42</p></td>
+<td><p>3.819</p></td>
+<td><p>3.475</p></td>
+<td><p>3.25</p></td>
+<td><p>3.09</p></td>
+<td><p>2.969</p></td>
+<td><p>2.874</p></td>
+<td><p>2.798</p></td>
+<td><p>2.735</p></td>
+<td><p>2.637</p></td>
+<td><p>2.425</p></td>
+<td><p>2.356</p></td>
+<td><p>2.042</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>5.786</p></td>
+<td><p>4.383</p></td>
+<td><p>3.783</p></td>
+<td><p>3.44</p></td>
+<td><p>3.215</p></td>
+<td><p>3.055</p></td>
+<td><p>2.934</p></td>
+<td><p>2.839</p></td>
+<td><p>2.763</p></td>
+<td><p>2.7</p></td>
+<td><p>2.602</p></td>
+<td><p>2.389</p></td>
+<td><p>2.32</p></td>
+<td><p>2.003</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>5.75</p></td>
+<td><p>4.349</p></td>
+<td><p>3.75</p></td>
+<td><p>3.408</p></td>
+<td><p>3.183</p></td>
+<td><p>3.023</p></td>
+<td><p>2.902</p></td>
+<td><p>2.808</p></td>
+<td><p>2.731</p></td>
+<td><p>2.668</p></td>
+<td><p>2.57</p></td>
+<td><p>2.357</p></td>
+<td><p>2.287</p></td>
+<td><p>1.968</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>5.717</p></td>
+<td><p>4.319</p></td>
+<td><p>3.721</p></td>
+<td><p>3.379</p></td>
+<td><p>3.155</p></td>
+<td><p>2.995</p></td>
+<td><p>2.874</p></td>
+<td><p>2.779</p></td>
+<td><p>2.703</p></td>
+<td><p>2.64</p></td>
+<td><p>2.541</p></td>
+<td><p>2.327</p></td>
+<td><p>2.257</p></td>
+<td><p>1.935</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>5.686</p></td>
+<td><p>4.291</p></td>
+<td><p>3.694</p></td>
+<td><p>3.353</p></td>
+<td><p>3.129</p></td>
+<td><p>2.969</p></td>
+<td><p>2.848</p></td>
+<td><p>2.753</p></td>
+<td><p>2.677</p></td>
+<td><p>2.613</p></td>
+<td><p>2.515</p></td>
+<td><p>2.3</p></td>
+<td><p>2.23</p></td>
+<td><p>1.906</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>5.659</p></td>
+<td><p>4.265</p></td>
+<td><p>3.67</p></td>
+<td><p>3.329</p></td>
+<td><p>3.105</p></td>
+<td><p>2.945</p></td>
+<td><p>2.824</p></td>
+<td><p>2.729</p></td>
+<td><p>2.653</p></td>
+<td><p>2.59</p></td>
+<td><p>2.491</p></td>
+<td><p>2.276</p></td>
+<td><p>2.205</p></td>
+<td><p>1.878</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>5.633</p></td>
+<td><p>4.242</p></td>
+<td><p>3.647</p></td>
+<td><p>3.307</p></td>
+<td><p>3.083</p></td>
+<td><p>2.923</p></td>
+<td><p>2.802</p></td>
+<td><p>2.707</p></td>
+<td><p>2.631</p></td>
+<td><p>2.568</p></td>
+<td><p>2.469</p></td>
+<td><p>2.253</p></td>
+<td><p>2.183</p></td>
+<td><p>1.853</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>5.61</p></td>
+<td><p>4.221</p></td>
+<td><p>3.626</p></td>
+<td><p>3.286</p></td>
+<td><p>3.063</p></td>
+<td><p>2.903</p></td>
+<td><p>2.782</p></td>
+<td><p>2.687</p></td>
+<td><p>2.611</p></td>
+<td><p>2.547</p></td>
+<td><p>2.448</p></td>
+<td><p>2.232</p></td>
+<td><p>2.161</p></td>
+<td><p>1.829</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>5.588</p></td>
+<td><p>4.201</p></td>
+<td><p>3.607</p></td>
+<td><p>3.267</p></td>
+<td><p>3.044</p></td>
+<td><p>2.884</p></td>
+<td><p>2.763</p></td>
+<td><p>2.669</p></td>
+<td><p>2.592</p></td>
+<td><p>2.529</p></td>
+<td><p>2.43</p></td>
+<td><p>2.213</p></td>
+<td><p>2.142</p></td>
+<td><p>1.807</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>5.568</p></td>
+<td><p>4.182</p></td>
+<td><p>3.589</p></td>
+<td><p>3.25</p></td>
+<td><p>3.026</p></td>
+<td><p>2.867</p></td>
+<td><p>2.746</p></td>
+<td><p>2.651</p></td>
+<td><p>2.575</p></td>
+<td><p>2.511</p></td>
+<td><p>2.412</p></td>
+<td><p>2.195</p></td>
+<td><p>2.124</p></td>
+<td><p>1.787</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>5.531</p></td>
+<td><p>4.149</p></td>
+<td><p>3.557</p></td>
+<td><p>3.218</p></td>
+<td><p>2.995</p></td>
+<td><p>2.836</p></td>
+<td><p>2.715</p></td>
+<td><p>2.62</p></td>
+<td><p>2.543</p></td>
+<td><p>2.48</p></td>
+<td><p>2.381</p></td>
+<td><p>2.163</p></td>
+<td><p>2.091</p></td>
+<td><p>1.75</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>5.499</p></td>
+<td><p>4.12</p></td>
+<td><p>3.529</p></td>
+<td><p>3.191</p></td>
+<td><p>2.968</p></td>
+<td><p>2.808</p></td>
+<td><p>2.688</p></td>
+<td><p>2.593</p></td>
+<td><p>2.516</p></td>
+<td><p>2.453</p></td>
+<td><p>2.353</p></td>
+<td><p>2.135</p></td>
+<td><p>2.062</p></td>
+<td><p>1.717</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>5.471</p></td>
+<td><p>4.094</p></td>
+<td><p>3.505</p></td>
+<td><p>3.167</p></td>
+<td><p>2.944</p></td>
+<td><p>2.785</p></td>
+<td><p>2.664</p></td>
+<td><p>2.569</p></td>
+<td><p>2.492</p></td>
+<td><p>2.429</p></td>
+<td><p>2.329</p></td>
+<td><p>2.11</p></td>
+<td><p>2.037</p></td>
+<td><p>1.687</p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>5.446</p></td>
+<td><p>4.071</p></td>
+<td><p>3.483</p></td>
+<td><p>3.145</p></td>
+<td><p>2.923</p></td>
+<td><p>2.763</p></td>
+<td><p>2.643</p></td>
+<td><p>2.548</p></td>
+<td><p>2.471</p></td>
+<td><p>2.407</p></td>
+<td><p>2.307</p></td>
+<td><p>2.088</p></td>
+<td><p>2.015</p></td>
+<td><p>1.661</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>5.424</p></td>
+<td><p>4.051</p></td>
+<td><p>3.463</p></td>
+<td><p>3.126</p></td>
+<td><p>2.904</p></td>
+<td><p>2.744</p></td>
+<td><p>2.624</p></td>
+<td><p>2.529</p></td>
+<td><p>2.452</p></td>
+<td><p>2.388</p></td>
+<td><p>2.288</p></td>
+<td><p>2.068</p></td>
+<td><p>1.994</p></td>
+<td><p>1.637</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>5.286</p></td>
+<td><p>3.925</p></td>
+<td><p>3.343</p></td>
+<td><p>3.008</p></td>
+<td><p>2.786</p></td>
+<td><p>2.627</p></td>
+<td><p>2.507</p></td>
+<td><p>2.412</p></td>
+<td><p>2.334</p></td>
+<td><p>2.27</p></td>
+<td><p>2.169</p></td>
+<td><p>1.944</p></td>
+<td><p>1.869</p></td>
+<td><p>1.482</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p>5.152</p></td>
+<td><p>3.805</p></td>
+<td><p>3.227</p></td>
+<td><p>2.894</p></td>
+<td><p>2.674</p></td>
+<td><p>2.515</p></td>
+<td><p>2.395</p></td>
+<td><p>2.299</p></td>
+<td><p>2.222</p></td>
+<td><p>2.157</p></td>
+<td><p>2.055</p></td>
+<td><p>1.825</p></td>
+<td><p>1.746</p></td>
+<td><p>1.31</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>5.024</p></td>
+<td><p>3.689</p></td>
+<td><p>3.116</p></td>
+<td><p>2.786</p></td>
+<td><p>2.567</p></td>
+<td><p>2.408</p></td>
+<td><p>2.288</p></td>
+<td><p>2.192</p></td>
+<td><p>2.114</p></td>
+<td><p>2.048</p></td>
+<td><p>1.945</p></td>
+<td><p>1.708</p></td>
+<td><p>1.626</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="t-7-f-dreifing-a-0-99">
+<span id="a-ftafla1"></span><h2>T.7: F-dreifing - <span class="math notranslate nohighlight">\(a=0.99\)</span><a class="headerlink" href="#t-7-f-dreifing-a-0-99" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/f_plot99_vinstri.svg" /></figure>
+<p>Taflan gefur <span class="math notranslate nohighlight">\(F_{0.99}\)</span>. Um <span class="math notranslate nohighlight">\(F_{0.99}\)</span> gildir að slembistærð
+sem fylgir <span class="math notranslate nohighlight">\(F\)</span>-dreifingu með <span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span> frígráður
+hefur líkurnar <span class="math notranslate nohighlight">\(0.99\)</span> að taka gildi sem er minna en
+<span class="math notranslate nohighlight">\(F_{0.99}\)</span>.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v_1\)</span></p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>10</p></td>
+<td><p>12</p></td>
+<td><p>20</p></td>
+<td><p>25</p></td>
+<td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_2\)</span></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>4052</p></td>
+<td><p>4999</p></td>
+<td><p>5403</p></td>
+<td><p>5625</p></td>
+<td><p>5764</p></td>
+<td><p>5859</p></td>
+<td><p>5928</p></td>
+<td><p>5981</p></td>
+<td><p>6022</p></td>
+<td><p>6056</p></td>
+<td><p>6106</p></td>
+<td><p>6209</p></td>
+<td><p>6240</p></td>
+<td><p>6366</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>98.5</p></td>
+<td><p>99</p></td>
+<td><p>99.17</p></td>
+<td><p>99.25</p></td>
+<td><p>99.3</p></td>
+<td><p>99.33</p></td>
+<td><p>99.36</p></td>
+<td><p>99.37</p></td>
+<td><p>99.39</p></td>
+<td><p>99.4</p></td>
+<td><p>99.42</p></td>
+<td><p>99.45</p></td>
+<td><p>99.46</p></td>
+<td><p>99.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>34.12</p></td>
+<td><p>30.82</p></td>
+<td><p>29.46</p></td>
+<td><p>28.71</p></td>
+<td><p>28.24</p></td>
+<td><p>27.91</p></td>
+<td><p>27.67</p></td>
+<td><p>27.49</p></td>
+<td><p>27.35</p></td>
+<td><p>27.23</p></td>
+<td><p>27.05</p></td>
+<td><p>26.69</p></td>
+<td><p>26.58</p></td>
+<td><p>26.13</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>21.2</p></td>
+<td><p>18</p></td>
+<td><p>16.69</p></td>
+<td><p>15.98</p></td>
+<td><p>15.52</p></td>
+<td><p>15.21</p></td>
+<td><p>14.98</p></td>
+<td><p>14.8</p></td>
+<td><p>14.66</p></td>
+<td><p>14.55</p></td>
+<td><p>14.37</p></td>
+<td><p>14.02</p></td>
+<td><p>13.91</p></td>
+<td><p>13.46</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>16.26</p></td>
+<td><p>13.27</p></td>
+<td><p>12.06</p></td>
+<td><p>11.39</p></td>
+<td><p>10.97</p></td>
+<td><p>10.67</p></td>
+<td><p>10.46</p></td>
+<td><p>10.29</p></td>
+<td><p>10.16</p></td>
+<td><p>10.05</p></td>
+<td><p>9.888</p></td>
+<td><p>9.553</p></td>
+<td><p>9.449</p></td>
+<td><p>9.02</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>13.75</p></td>
+<td><p>10.92</p></td>
+<td><p>9.78</p></td>
+<td><p>9.148</p></td>
+<td><p>8.746</p></td>
+<td><p>8.466</p></td>
+<td><p>8.26</p></td>
+<td><p>8.102</p></td>
+<td><p>7.976</p></td>
+<td><p>7.874</p></td>
+<td><p>7.718</p></td>
+<td><p>7.396</p></td>
+<td><p>7.296</p></td>
+<td><p>6.88</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>12.25</p></td>
+<td><p>9.547</p></td>
+<td><p>8.451</p></td>
+<td><p>7.847</p></td>
+<td><p>7.46</p></td>
+<td><p>7.191</p></td>
+<td><p>6.993</p></td>
+<td><p>6.84</p></td>
+<td><p>6.719</p></td>
+<td><p>6.62</p></td>
+<td><p>6.469</p></td>
+<td><p>6.155</p></td>
+<td><p>6.058</p></td>
+<td><p>5.65</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>11.26</p></td>
+<td><p>8.649</p></td>
+<td><p>7.591</p></td>
+<td><p>7.006</p></td>
+<td><p>6.632</p></td>
+<td><p>6.371</p></td>
+<td><p>6.178</p></td>
+<td><p>6.029</p></td>
+<td><p>5.911</p></td>
+<td><p>5.814</p></td>
+<td><p>5.667</p></td>
+<td><p>5.359</p></td>
+<td><p>5.263</p></td>
+<td><p>4.859</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>10.56</p></td>
+<td><p>8.022</p></td>
+<td><p>6.992</p></td>
+<td><p>6.422</p></td>
+<td><p>6.057</p></td>
+<td><p>5.802</p></td>
+<td><p>5.613</p></td>
+<td><p>5.467</p></td>
+<td><p>5.351</p></td>
+<td><p>5.257</p></td>
+<td><p>5.111</p></td>
+<td><p>4.808</p></td>
+<td><p>4.713</p></td>
+<td><p>4.311</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>10.04</p></td>
+<td><p>7.559</p></td>
+<td><p>6.552</p></td>
+<td><p>5.994</p></td>
+<td><p>5.636</p></td>
+<td><p>5.386</p></td>
+<td><p>5.2</p></td>
+<td><p>5.057</p></td>
+<td><p>4.942</p></td>
+<td><p>4.849</p></td>
+<td><p>4.706</p></td>
+<td><p>4.405</p></td>
+<td><p>4.311</p></td>
+<td><p>3.909</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>9.646</p></td>
+<td><p>7.206</p></td>
+<td><p>6.217</p></td>
+<td><p>5.668</p></td>
+<td><p>5.316</p></td>
+<td><p>5.069</p></td>
+<td><p>4.886</p></td>
+<td><p>4.744</p></td>
+<td><p>4.632</p></td>
+<td><p>4.539</p></td>
+<td><p>4.397</p></td>
+<td><p>4.099</p></td>
+<td><p>4.005</p></td>
+<td><p>3.602</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>9.33</p></td>
+<td><p>6.927</p></td>
+<td><p>5.953</p></td>
+<td><p>5.412</p></td>
+<td><p>5.064</p></td>
+<td><p>4.821</p></td>
+<td><p>4.64</p></td>
+<td><p>4.499</p></td>
+<td><p>4.388</p></td>
+<td><p>4.296</p></td>
+<td><p>4.155</p></td>
+<td><p>3.858</p></td>
+<td><p>3.765</p></td>
+<td><p>3.361</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>9.074</p></td>
+<td><p>6.701</p></td>
+<td><p>5.739</p></td>
+<td><p>5.205</p></td>
+<td><p>4.862</p></td>
+<td><p>4.62</p></td>
+<td><p>4.441</p></td>
+<td><p>4.302</p></td>
+<td><p>4.191</p></td>
+<td><p>4.1</p></td>
+<td><p>3.96</p></td>
+<td><p>3.665</p></td>
+<td><p>3.571</p></td>
+<td><p>3.165</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>8.862</p></td>
+<td><p>6.515</p></td>
+<td><p>5.564</p></td>
+<td><p>5.035</p></td>
+<td><p>4.695</p></td>
+<td><p>4.456</p></td>
+<td><p>4.278</p></td>
+<td><p>4.14</p></td>
+<td><p>4.03</p></td>
+<td><p>3.939</p></td>
+<td><p>3.8</p></td>
+<td><p>3.505</p></td>
+<td><p>3.412</p></td>
+<td><p>3.004</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>8.683</p></td>
+<td><p>6.359</p></td>
+<td><p>5.417</p></td>
+<td><p>4.893</p></td>
+<td><p>4.556</p></td>
+<td><p>4.318</p></td>
+<td><p>4.142</p></td>
+<td><p>4.004</p></td>
+<td><p>3.895</p></td>
+<td><p>3.805</p></td>
+<td><p>3.666</p></td>
+<td><p>3.372</p></td>
+<td><p>3.278</p></td>
+<td><p>2.868</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>8.531</p></td>
+<td><p>6.226</p></td>
+<td><p>5.292</p></td>
+<td><p>4.773</p></td>
+<td><p>4.437</p></td>
+<td><p>4.202</p></td>
+<td><p>4.026</p></td>
+<td><p>3.89</p></td>
+<td><p>3.78</p></td>
+<td><p>3.691</p></td>
+<td><p>3.553</p></td>
+<td><p>3.259</p></td>
+<td><p>3.165</p></td>
+<td><p>2.753</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>8.4</p></td>
+<td><p>6.112</p></td>
+<td><p>5.185</p></td>
+<td><p>4.669</p></td>
+<td><p>4.336</p></td>
+<td><p>4.102</p></td>
+<td><p>3.927</p></td>
+<td><p>3.791</p></td>
+<td><p>3.682</p></td>
+<td><p>3.593</p></td>
+<td><p>3.455</p></td>
+<td><p>3.162</p></td>
+<td><p>3.068</p></td>
+<td><p>2.653</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>8.285</p></td>
+<td><p>6.013</p></td>
+<td><p>5.092</p></td>
+<td><p>4.579</p></td>
+<td><p>4.248</p></td>
+<td><p>4.015</p></td>
+<td><p>3.841</p></td>
+<td><p>3.705</p></td>
+<td><p>3.597</p></td>
+<td><p>3.508</p></td>
+<td><p>3.371</p></td>
+<td><p>3.077</p></td>
+<td><p>2.983</p></td>
+<td><p>2.566</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>8.185</p></td>
+<td><p>5.926</p></td>
+<td><p>5.01</p></td>
+<td><p>4.5</p></td>
+<td><p>4.171</p></td>
+<td><p>3.939</p></td>
+<td><p>3.765</p></td>
+<td><p>3.631</p></td>
+<td><p>3.523</p></td>
+<td><p>3.434</p></td>
+<td><p>3.297</p></td>
+<td><p>3.003</p></td>
+<td><p>2.909</p></td>
+<td><p>2.489</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>8.096</p></td>
+<td><p>5.849</p></td>
+<td><p>4.938</p></td>
+<td><p>4.431</p></td>
+<td><p>4.103</p></td>
+<td><p>3.871</p></td>
+<td><p>3.699</p></td>
+<td><p>3.564</p></td>
+<td><p>3.457</p></td>
+<td><p>3.368</p></td>
+<td><p>3.231</p></td>
+<td><p>2.938</p></td>
+<td><p>2.843</p></td>
+<td><p>2.421</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>8.017</p></td>
+<td><p>5.78</p></td>
+<td><p>4.874</p></td>
+<td><p>4.369</p></td>
+<td><p>4.042</p></td>
+<td><p>3.812</p></td>
+<td><p>3.64</p></td>
+<td><p>3.506</p></td>
+<td><p>3.398</p></td>
+<td><p>3.31</p></td>
+<td><p>3.173</p></td>
+<td><p>2.88</p></td>
+<td><p>2.785</p></td>
+<td><p>2.36</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>7.945</p></td>
+<td><p>5.719</p></td>
+<td><p>4.817</p></td>
+<td><p>4.313</p></td>
+<td><p>3.988</p></td>
+<td><p>3.758</p></td>
+<td><p>3.587</p></td>
+<td><p>3.453</p></td>
+<td><p>3.346</p></td>
+<td><p>3.258</p></td>
+<td><p>3.121</p></td>
+<td><p>2.827</p></td>
+<td><p>2.733</p></td>
+<td><p>2.305</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>7.881</p></td>
+<td><p>5.664</p></td>
+<td><p>4.765</p></td>
+<td><p>4.264</p></td>
+<td><p>3.939</p></td>
+<td><p>3.71</p></td>
+<td><p>3.539</p></td>
+<td><p>3.406</p></td>
+<td><p>3.299</p></td>
+<td><p>3.211</p></td>
+<td><p>3.074</p></td>
+<td><p>2.781</p></td>
+<td><p>2.686</p></td>
+<td><p>2.256</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>7.823</p></td>
+<td><p>5.614</p></td>
+<td><p>4.718</p></td>
+<td><p>4.218</p></td>
+<td><p>3.895</p></td>
+<td><p>3.667</p></td>
+<td><p>3.496</p></td>
+<td><p>3.363</p></td>
+<td><p>3.256</p></td>
+<td><p>3.168</p></td>
+<td><p>3.032</p></td>
+<td><p>2.738</p></td>
+<td><p>2.643</p></td>
+<td><p>2.211</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>7.77</p></td>
+<td><p>5.568</p></td>
+<td><p>4.675</p></td>
+<td><p>4.177</p></td>
+<td><p>3.855</p></td>
+<td><p>3.627</p></td>
+<td><p>3.457</p></td>
+<td><p>3.324</p></td>
+<td><p>3.217</p></td>
+<td><p>3.129</p></td>
+<td><p>2.993</p></td>
+<td><p>2.699</p></td>
+<td><p>2.604</p></td>
+<td><p>2.169</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>7.721</p></td>
+<td><p>5.526</p></td>
+<td><p>4.637</p></td>
+<td><p>4.14</p></td>
+<td><p>3.818</p></td>
+<td><p>3.591</p></td>
+<td><p>3.421</p></td>
+<td><p>3.288</p></td>
+<td><p>3.182</p></td>
+<td><p>3.094</p></td>
+<td><p>2.958</p></td>
+<td><p>2.664</p></td>
+<td><p>2.569</p></td>
+<td><p>2.131</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>7.677</p></td>
+<td><p>5.488</p></td>
+<td><p>4.601</p></td>
+<td><p>4.106</p></td>
+<td><p>3.785</p></td>
+<td><p>3.558</p></td>
+<td><p>3.388</p></td>
+<td><p>3.256</p></td>
+<td><p>3.149</p></td>
+<td><p>3.062</p></td>
+<td><p>2.926</p></td>
+<td><p>2.632</p></td>
+<td><p>2.536</p></td>
+<td><p>2.097</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>7.636</p></td>
+<td><p>5.453</p></td>
+<td><p>4.568</p></td>
+<td><p>4.074</p></td>
+<td><p>3.754</p></td>
+<td><p>3.528</p></td>
+<td><p>3.358</p></td>
+<td><p>3.226</p></td>
+<td><p>3.12</p></td>
+<td><p>3.032</p></td>
+<td><p>2.896</p></td>
+<td><p>2.602</p></td>
+<td><p>2.506</p></td>
+<td><p>2.064</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>7.598</p></td>
+<td><p>5.42</p></td>
+<td><p>4.538</p></td>
+<td><p>4.045</p></td>
+<td><p>3.725</p></td>
+<td><p>3.499</p></td>
+<td><p>3.33</p></td>
+<td><p>3.198</p></td>
+<td><p>3.092</p></td>
+<td><p>3.005</p></td>
+<td><p>2.868</p></td>
+<td><p>2.574</p></td>
+<td><p>2.478</p></td>
+<td><p>2.034</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>7.562</p></td>
+<td><p>5.39</p></td>
+<td><p>4.51</p></td>
+<td><p>4.018</p></td>
+<td><p>3.699</p></td>
+<td><p>3.473</p></td>
+<td><p>3.304</p></td>
+<td><p>3.173</p></td>
+<td><p>3.067</p></td>
+<td><p>2.979</p></td>
+<td><p>2.843</p></td>
+<td><p>2.549</p></td>
+<td><p>2.453</p></td>
+<td><p>2.006</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>7.499</p></td>
+<td><p>5.336</p></td>
+<td><p>4.459</p></td>
+<td><p>3.969</p></td>
+<td><p>3.652</p></td>
+<td><p>3.427</p></td>
+<td><p>3.258</p></td>
+<td><p>3.127</p></td>
+<td><p>3.021</p></td>
+<td><p>2.934</p></td>
+<td><p>2.798</p></td>
+<td><p>2.503</p></td>
+<td><p>2.406</p></td>
+<td><p>1.956</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>7.444</p></td>
+<td><p>5.289</p></td>
+<td><p>4.416</p></td>
+<td><p>3.927</p></td>
+<td><p>3.611</p></td>
+<td><p>3.386</p></td>
+<td><p>3.218</p></td>
+<td><p>3.087</p></td>
+<td><p>2.981</p></td>
+<td><p>2.894</p></td>
+<td><p>2.758</p></td>
+<td><p>2.463</p></td>
+<td><p>2.366</p></td>
+<td><p>1.911</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>7.396</p></td>
+<td><p>5.248</p></td>
+<td><p>4.377</p></td>
+<td><p>3.89</p></td>
+<td><p>3.574</p></td>
+<td><p>3.351</p></td>
+<td><p>3.183</p></td>
+<td><p>3.052</p></td>
+<td><p>2.946</p></td>
+<td><p>2.859</p></td>
+<td><p>2.723</p></td>
+<td><p>2.428</p></td>
+<td><p>2.331</p></td>
+<td><p>1.872</p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>7.353</p></td>
+<td><p>5.211</p></td>
+<td><p>4.343</p></td>
+<td><p>3.858</p></td>
+<td><p>3.542</p></td>
+<td><p>3.319</p></td>
+<td><p>3.152</p></td>
+<td><p>3.021</p></td>
+<td><p>2.915</p></td>
+<td><p>2.828</p></td>
+<td><p>2.692</p></td>
+<td><p>2.397</p></td>
+<td><p>2.299</p></td>
+<td><p>1.837</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>7.314</p></td>
+<td><p>5.179</p></td>
+<td><p>4.313</p></td>
+<td><p>3.828</p></td>
+<td><p>3.514</p></td>
+<td><p>3.291</p></td>
+<td><p>3.124</p></td>
+<td><p>2.993</p></td>
+<td><p>2.888</p></td>
+<td><p>2.801</p></td>
+<td><p>2.665</p></td>
+<td><p>2.369</p></td>
+<td><p>2.271</p></td>
+<td><p>1.805</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>7.077</p></td>
+<td><p>4.977</p></td>
+<td><p>4.126</p></td>
+<td><p>3.649</p></td>
+<td><p>3.339</p></td>
+<td><p>3.119</p></td>
+<td><p>2.953</p></td>
+<td><p>2.823</p></td>
+<td><p>2.718</p></td>
+<td><p>2.632</p></td>
+<td><p>2.496</p></td>
+<td><p>2.198</p></td>
+<td><p>2.098</p></td>
+<td><p>1.601</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p>6.851</p></td>
+<td><p>4.787</p></td>
+<td><p>3.949</p></td>
+<td><p>3.48</p></td>
+<td><p>3.174</p></td>
+<td><p>2.956</p></td>
+<td><p>2.792</p></td>
+<td><p>2.663</p></td>
+<td><p>2.559</p></td>
+<td><p>2.472</p></td>
+<td><p>2.336</p></td>
+<td><p>2.035</p></td>
+<td><p>1.932</p></td>
+<td><p>1.381</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>6.635</p></td>
+<td><p>4.605</p></td>
+<td><p>3.782</p></td>
+<td><p>3.319</p></td>
+<td><p>3.017</p></td>
+<td><p>2.802</p></td>
+<td><p>2.639</p></td>
+<td><p>2.511</p></td>
+<td><p>2.407</p></td>
+<td><p>2.321</p></td>
+<td><p>2.185</p></td>
+<td><p>1.878</p></td>
+<td><p>1.773</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli11/" class="btn btn-neutral float-left" title="11. Tvíkosta aðhvarfsgreining" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../svor_final/" class="btn btn-neutral float-right" title="Svör við dæmum" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

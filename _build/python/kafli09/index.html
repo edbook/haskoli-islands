@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9 Teikning með Matplotlib &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/python.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="10 NumPy pakkinn" href="../kafli10/" />
+    <link rel="prev" title="8 Skrár" href="../kafli08/" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+          </a>
+              <div class="version">
+                2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5  Söfn: Eitt nafn en mörg gildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6  Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7  Uppflettitöflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8  Skrár</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9  Teikning með Matplotlib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#inngangur">9.1  Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#einfaldar-myndir">9.2  Einfaldar myndir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#undirbuningur-teikningar">9.2.1  Undirbúningur teikningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#punktarit-scatter-plot-og-linurit">9.2.2  Punktarit (<em>scatter-plot</em>) og línurit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sulurit">9.2.3  Súlurit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#teikningar-af-gognum-i-skram">9.3  Teikningar af gögnum í skrám</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#innlestur-talnagagna-i-dalkum">9.3.1  Innlestur talnagagna í dálkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-teikningu-talnagagna">9.3.2  Dæmi um teikningu talnagagna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#toflur-yfir-matplotlib-skipanir">9.4  Töflur yfir Matplotlib-skipanir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rju-daemi-um-teikningar">9.5  Þrjú dæmi um teikningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-plot">9.5.1  Dæmi um plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-legend">9.5.2  Dæmi um legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-hist">9.5.3  Dæmi um hist</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#teikning-af-grofum-falla">9.6  Teikning af gröfum falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einfalt-graf">9.6.1  Einfalt graf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finna-graf">9.6.2  Fínna graf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kosinus-baett-vi">9.6.3  Kósínus bætt við</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#graf-visisfallsins-exp-x">9.6.4  Graf vísisfallsins exp(x)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10  NumPy pakkinn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11  Reiknað með fylkjum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12  Dæmi um hagnýtingu fylkjareikninga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9  </span>Teikning með Matplotlib</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kafli09.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="teikning-me-matplotlib">
+<span id="id1"></span><h1><span class="section-number">9  </span>Teikning með Matplotlib<a class="headerlink" href="#teikning-me-matplotlib" title="Permalink to this heading"></a></h1>
+<section id="inngangur">
+<h2><span class="section-number">9.1  </span>Inngangur<a class="headerlink" href="#inngangur" title="Permalink to this heading"></a></h2>
+<p>Matplotlib er teiknipakki fyrir Python sem er byggður á tölvugrafík í
+Matlab-kerfinu. Með Matplotlib er hægt að teikna (eða birta, sýna) myndir
+(<em>images</em>), hæðarlínur (<em>countours</em>), <em>skatterplott</em>, línurit og gröf (<em>line
+plots</em>) og þrívíðar <em>upplýstar</em> myndir. Pakkinn er þannig að framendinn
+(<em>frontend</em>) eða skilgreining teikningarinnar er aðskilinn frá bakendanum
+(<em>backend</em>) sem birtir hana. Þannig er hægt að skrifa forrit sem býr til
+teikningu, og svo er hægt að sýna teikninguna inni í Jupyter-bók, sem sjálfstæðan
+glugga á skjá, á vef, í pdf-skjali, í Latex-skjali, á prentara o.s.frv. án þess
+að breyta teikniforritinu sjálfu. Auk þess er hægt að fá alls kyns viðbætur við
+Matlplotlib, t.d. fyrir kortagerð, þrívíða teikningu, og samskipti við Excel,
+svo fáeinar séu nefndar. Eftirfarandi mynd sýnir dæmi um myndir teiknaðar
+með Matplotlib.</p>
+<figure class="align-center" id="id12" style="width: 15cm">
+<img alt="../_images/matplotlib-d%C3%A6mi.jpeg" src="../_images/matplotlib-d%C3%A6mi.jpeg" />
+<figcaption>
+<p><span class="caption-number">Mynd 9.1: </span><span class="caption-text">Matplotlib myndir</span><a class="headerlink" href="#id12" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Hér verður talað um teikniskipanir þegar strangt tiltekið ætti kannski frekar
+að tala um teikniföll: scatter-fallið, plot-fallið o.s.frv. Einn kostur við
+að segja frekar <em>skipun</em> er að það veldur síður ruglingi þegar verið er að
+teikna föll.</p>
+</div>
+</section>
+<section id="einfaldar-myndir">
+<span id="id2"></span><h2><span class="section-number">9.2  </span>Einfaldar myndir<a class="headerlink" href="#einfaldar-myndir" title="Permalink to this heading"></a></h2>
+<section id="undirbuningur-teikningar">
+<h3><span class="section-number">9.2.1  </span>Undirbúningur teikningar<a class="headerlink" href="#undirbuningur-teikningar" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Venjulegasta notkun Matplotlib er að nota undirpakkann <em>pyplot</em> og í
+Matplotlib notendahandbókinni er mælt með að flytja hann inn sem <em>plt</em>, svo
+það er fyrir vikið alsiða. Teiknaðar myndir birtast sjálfkrafa inni í
+bókinni, neðan við forritsreitinn. Hér er kafli sem hægt er að setja fremst í
+vinnubók sem teiknar, þar sem bætt hefur verið við skipunum sem láta rúðunet
+teiknast undir öðrum teiknuðum hlutum, breyta sjálfgefinni stærð myndar, og
+laga galla á <em>savefig</em>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Frumstilling teikningar</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">axisbelow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># (6,4) er sjálfgefið</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;savefig&#39;</span><span class="p">,</span><span class="n">bbox</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>  <span class="c1"># laga galla á savefig</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="punktarit-scatter-plot-og-linurit">
+<span id="skatter-plott-og-linurit"></span><h3><span class="section-number">9.2.2  </span>Punktarit (<em>scatter-plot</em>) og línurit<a class="headerlink" href="#punktarit-scatter-plot-og-linurit" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Ein mikilvægasta notkunin á Matplotlib er teikna myndir af talnalistum, sem
+geta hvort sem er verið venjulegir Python listar eða NumPy vigrar eins og við
+kynnumst í <a class="reference internal" href="../kafli10/#numpy"><span class="std std-numref">10</span></a>. kafla.</p>
+<p>Hér er forrit sem teiknar punktana <span class="math notranslate nohighlight">\((x,y)\)</span> þar sem <span class="math notranslate nohighlight">\(y = \sqrt x\)</span>
+fyrir <span class="math notranslate nohighlight">\(x = 0, 1, 2, 3, 4, 5\)</span> og tengir þá með beinum línustrikum.
+Skipunin <code class="docutils literal notranslate"><span class="pre">plt.figure</span></code> býr til nýja mynd og tilgreinir breidd hennar og hæð,
+scatter-skipunin teiknar punktana sjálfa með flatarmál u.þ.b. 40 ferpunkta
+(punktur ≈ 1/3 mm) og plot-skipunin teiknar strikin á milli þeirra. Að lokum
+teiknar grid rúðunet. Í <code class="docutils literal notranslate"><span class="pre">skipuninni</span></code> er hægt að tilgreina lit punkta, sbr.
+fyrra sýnidæmið í kafla <a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a> og þeir geta
+líka verið hver með sínum lit sbr. dæmið um besta plan í kafla <a class="reference internal" href="../kafli13/#gervigogn"><span class="std std-numref">13.6</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sqrt</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 11cm">
+<img alt="../_images/matplotlib-kynning.png" src="../_images/matplotlib-kynning.png" />
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Stærð myndarinnar er gefin í tommum og (6,4) er sjálfgefið. Myndin er sköluð
+niður í ca. 2/3 þegar hún birtist á venjulegum fartölvuskjá, en er (a.m.k.
+nokkurnvegin) ósköluð ef bókin er prentuð sem pdf.</p>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing:</p>
+<p>Afritið skipanirnar að ofan inn í vinnubók og keyrið. Prófið að breyta:</p>
+<ul class="simple">
+<li><p>fjölda punkta</p></li>
+<li><p>stærð myndarinnar</p></li>
+<li><p>stærð punktanna (aftasti stikinn í <code class="docutils literal notranslate"><span class="pre">scatter</span></code>)</p></li>
+<li><p>sleppa rúðunetinu</p></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
+<section id="sulurit">
+<span id="id3"></span><h3><span class="section-number">9.2.3  </span>Súlurit<a class="headerlink" href="#sulurit" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Hér er búið til súlurit (<em>histogram</em>) af normaldreifðum slembigögnum. Stikinn
+<code class="docutils literal notranslate"><span class="pre">bins</span></code> gefur fjölda súlna og <code class="docutils literal notranslate"><span class="pre">range</span></code> gefur svæðið á x-ás sem súluritið
+nær yfir. Kallið <code class="docutils literal notranslate"><span class="pre">gauss(mu,sigma)</span></code> skilar slemitölu úr normaldreifingu með
+meðaltal mu og staðalfrávik sigma (Gauss-dreifing er annað nafn á normaldreifingu)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">gauss</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;fjöldi gilda á hverju bili (af 500)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 11cm">
+<img alt="../_images/sulurit.png" src="../_images/sulurit.png" />
+</figure>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing:</p>
+<p>Prófið skipanirnar að ofan. Prófið að fækka og fjölga punktum. Prófið líka að
+nota 6 súlur (það þarf að breyta bæði bins og range).</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> er valkvæð þegar teiknað er beint í úttaksglugga í
+vinnubók, en það er hægt að opna sérstakan glugga með myndinni og þá þarf
+þessa skipun. Notkun hennar hefur þann viðbótarkost að losna við aukaupplýsingar
+sem sumar teikniskipanir skrifa ef þær eru aftast í vinnubók.</p>
+</div>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">hist</span></code> reiknar sjálf hæð hverrar súlu en það er líka hægt að láta
+hæð súlnanna koma úr lista eða vigri með því að nota skipunina <code class="docutils literal notranslate"><span class="pre">bar</span></code>. Um það
+er sýnt dæmi í næsta kafla.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="teikningar-af-gognum-i-skram">
+<span id="id4"></span><h2><span class="section-number">9.3  </span>Teikningar af gögnum í skrám<a class="headerlink" href="#teikningar-af-gognum-i-skram" title="Permalink to this heading"></a></h2>
+<section id="innlestur-talnagagna-i-dalkum">
+<span id="innlestur-talnagagna"></span><h3><span class="section-number">9.3.1  </span>Innlestur talnagagna í dálkum<a class="headerlink" href="#innlestur-talnagagna-i-dalkum" title="Permalink to this heading"></a></h3>
+<p>Algengt er að maður vilji teikna upplýsingar sem eru geymdar í skrám, og oft eru
+það dálkar í skránni sem þarf að teikna. Í sýnidæminu í kafla <a class="reference internal" href="../kafli08/#innlestur-textaskrar-af-vefnum"><span class="std std-numref">8.2.4</span></a> var sýnt hvernig hægt er að lesa dálka í slíkri skrá inn í lista af strengjum. Ef dálkarnir geyma tölur þarf beita <code class="docutils literal notranslate"><span class="pre">float</span></code>-fallinu á innihaldið. Til að lesa inn skrá <code class="docutils literal notranslate"><span class="pre">xy.txt</span></code> með tveimur talnadálkum má nota:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;xy.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+       <span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">xy</span><span class="p">)</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+       <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">xs</span><span class="p">))</span>
+       <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">xy</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ef skráin er á vefnum þarf í fyrsta lagi að nota <code class="docutils literal notranslate"><span class="pre">urlopen</span></code> í stað <code class="docutils literal notranslate"><span class="pre">open</span></code> og svo þarf líka að nota <code class="docutils literal notranslate"><span class="pre">decode()</span></code> á línuna, eins og gert var í kafla <a class="reference internal" href="../kafli08/#innlestur-textaskrar-af-vefnum"><span class="std std-numref">8.2.4</span></a>. Annar möguleiki er svo að nota NumPy sem er á dagskrá í <a class="reference internal" href="../kafli10/#numpy-pakkinn"><span class="std std-numref">10. kafla</span></a>.</p>
+</section>
+<section id="daemi-um-teikningu-talnagagna">
+<span id="id5"></span><h3><span class="section-number">9.3.2  </span>Dæmi um teikningu talnagagna<a class="headerlink" href="#daemi-um-teikningu-talnagagna" title="Permalink to this heading"></a></h3>
+<p>Hér eru tvö sýnidæmi um teikningu gagna sem eru fengin úr gagnaskrám. Það fyrra teiknar punktarit (<em>scatter plot</em>) og það síðara súlurit.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Eðlisþyngd og bræðslumark</p>
+<p>Í kafla <a class="reference internal" href="../kafli08/#csv-lestur-bilafmark"><span class="std std-numref">8.3.4</span></a> var skoðuð skrá með bræðslumarki og
+eðlisþyngd fjögurra málma (sbr. líka <a class="reference internal" href="../verkefni/#dalkar-i-csv-skra-leyst-me-colab"><span class="std std-numref">verkefni 17</span></a>. Hér er forrit sem teiknar punktarit af <a class="reference external" href="https://cs.hi.is/python/malmar.txt">skránni</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/malmar.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># sleppa fyrirsögnum</span>
+       <span class="n">nafn</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">eðlisþ</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">bræðslum</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">nafn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">eðlisþ</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+    <span class="n">bræðslum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">eðlisþ</span><span class="p">,</span> <span class="n">bræðslum</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Crimson&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="mi">1800</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">eðlisþ</span><span class="p">,</span> <span class="n">bræðslum</span><span class="p">,</span> <span class="n">nafn</span><span class="p">):</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;DarkBlue&#39;</span><span class="p">,</span>
+           <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Eðlisþyngd g/ml&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Bræðslumark °C&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Hér fylgir myndin sem birtist, og tækifærið hefur verið notað til að sýna
+hvernig hægt er að skrifa texta inn á mynd með <code class="docutils literal notranslate"><span class="pre">plt.text</span></code> (sjá töflu
+<a class="reference internal" href="#text-falli"><span class="std std-numref">9.2</span></a>)</p>
+<figure class="align-center" style="width: 10cm">
+<img alt="../_images/malmar.jpg" src="../_images/malmar.jpg" />
+</figure>
+</div>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Kosningasúlurit</p>
+<p>Hér er dæmi sem teiknar súlurit af kosningaúrslitunum 2021. Þessi úrslit eru
+aftur á dagskrá í verkefnum <a class="reference internal" href="../verkefni/#kosningaurslit"><span class="std std-numref">verkefni 16</span></a>) og
+<a class="reference internal" href="../verkefni/#kosningaurslit-i-lit"><span class="std std-numref">24</span></a>; í því síðara er fínna súlurit búið til.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/kosningar-2021.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+  <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+  <span class="n">listi</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">atkvæði</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="mf">6.</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">listi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">atkvæði</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">listi</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">atkvæði</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tomato&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">listi</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Atkvæði&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Úrslit alþingiskosninga 2021&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Hér er verður x listinn [0,1,2…10] (það voru 11 framboðslistar). Hér er
+<a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors#Extended_colors">listi</a> yfir liti.
+Forritið teiknar svo þessa mynd:</p>
+<figure class="align-center" style="width: 13cm">
+<img alt="../_images/kosningar-2021.jpg" src="../_images/kosningar-2021.jpg" />
+</figure>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Súlurit af einkunnum</p>
+<p>Notið <code class="docutils literal notranslate"><span class="pre">hist</span></code> til að teikna súlurit af einkunnunum í skránni <a class="reference external" href="https://cs.hi.is/python/einkunn.txt">https://cs.hi.is/python/einkunn.txt</a>.</p>
+</div>
+</section>
+</section>
+<section id="toflur-yfir-matplotlib-skipanir">
+<h2><span class="section-number">9.4  </span>Töflur yfir Matplotlib-skipanir<a class="headerlink" href="#toflur-yfir-matplotlib-skipanir" title="Permalink to this heading"></a></h2>
+<p>Hér eru töflur yfir helstu teikniskipanirnar, stýristika og stýriskipanir.
+Aftast í seinni dálki taflanna er víða í svigum tilvísun í kafla sem útskýrir
+notkun viðkomandi skipunar eða stika. Eins og framar í þessum fyrirlestrarnótum
+eru töflurnar fyrst og fremst hugsaður til uppflettingar og ekki til að læra
+utanað.</p>
+<p>Fyrst er tafla yfir aðal teikniskipanirnar og svo sérstök tafla bara um hvernig
+hægt er að setja texta inn á myndir með <em>text</em>-skipuninni.</p>
+<table class="docutils align-center" id="id13">
+<caption><span class="caption-number">Tafla 9.1: </span><span class="caption-text">Helstu teikniskipanir</span><a class="headerlink" href="#id13" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">figure</span></code></p></td>
+<td><p>Býr til mynd (kafli <a class="reference internal" href="#skatter-plott-og-linurit"><span class="std std-numref">9.2.2</span></a> og <a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scatter</span></code></p></td>
+<td><p>Teiknar punkta í tilgreindum x- og y-hnitum (<a class="reference internal" href="#skatter-plott-og-linurit"><span class="std std-numref">9.2.2</span></a>)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plot</span></code></p></td>
+<td><p>Teiknar línustrik sem tengja saman punkta
+<a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a> og <a class="reference internal" href="#einfalt-graf"><span class="std std-numref">9.6.1</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hist</span></code></p></td>
+<td><p>Teiknar súlurit yfir tíðni – hæð súlna fæst með talningu
+(<a class="reference internal" href="#sulurit"><span class="std std-numref">9.2.3</span></a> og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bar</span></code></p></td>
+<td><p>Teiknar súlurit með gefinni súluhæð (<a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">savefig</span></code></p></td>
+<td><p>Vistar teikningu í png-skrá (<code class="docutils literal notranslate"><span class="pre">savefig(&quot;skrá.png&quot;)</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text</span></code></p></td>
+<td><p>Skrifar texta inn á mynd (sjá töflu ref:<cite>%s&lt;text-fallið&gt;</cite>)
+(<a class="reference internal" href="#innlestur-talnagagna"><span class="std std-numref">9.3.1</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">show</span></code></p></td>
+<td><p>Birtir mynd (þarf ekki ef teiknað er í glugga í vinnubók (<a class="reference internal" href="#sulurit"><span class="std std-numref">9.2.3</span></a>)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-center" id="text-falli">
+<caption><span class="caption-number">Tafla 9.2: </span><span class="caption-text">Texti settur inn á mynd</span><a class="headerlink" href="#text-falli" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text(x,y,&quot;texti&quot;)</span></code></p></td>
+<td><p>skrifar texta aftan við punkt (x,y)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,</span> <span class="pre">fontsize=n)</span></code></p></td>
+<td><p>– með n punkta letri (<a class="reference internal" href="#innlestur-talnagagna"><span class="std std-numref">9.3.1</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,va=&quot;top&quot;)</span></code></p></td>
+<td><p>– neðan við punkt (<em>vertical alignment</em>) (<a class="reference internal" href="#innlestur-talnagagna"><span class="std std-numref">9.3.1</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,va=&quot;bottom&quot;)</span></code></p></td>
+<td><p>– ofan við punkt (eða center/baseline)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,ha=&quot;left&quot;)</span></code></p></td>
+<td><p>– aftan við punkt (<em>horizontal algn</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,ha=&quot;center&quot;)</span></code></p></td>
+<td><p>– með punkt í miðjum texta (eða right)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Teikniskipanirnar bjóða svo upp á fjölda stýristika (<em>control parameters</em>) til
+að stjórna lit teikninga, breidd súlna, leturstærð, merkingum ása o.s.frv. Auk
+stýristikanna eru svo notaðar ýmsar hjálpar- eða stýriskipanir til breyta mörkum
+ása, bæta við skýringartextum, rúðuneti o.fl. Næstu töflur gefar yfirlit yfir
+helstu stýristika og stýriskipanir.</p>
+<table class="docutils align-center" id="plothiststyring">
+<caption><span class="caption-number">Tafla 9.3: </span><span class="caption-text">Helstu stikar í <strong>plot</strong>, <strong>hist</strong> og <strong>bar</strong></span><a class="headerlink" href="#plothiststyring" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">color</span></code></p></td>
+<td><p>Litur línurits (grafs) eða súlurits. Má skammstafa r, g, b, y, w, k <br>
+(black), c (cyan), m (magenta) eða nota streng með <a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors#Extended_colors">litanafni;</a> <br>
+<code class="docutils literal notranslate"><span class="pre">color</span></code> má skammstafa <code class="docutils literal notranslate"><span class="pre">c</span></code> í plot en ekki í hist og bar
+(<a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a> og <a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code></p></td>
+<td><p>gagnsæi, 0 alveg gagnsætt, 1 alveg ógagnsætt (sjálfgefið)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">linewidth</span></code> eða <code class="docutils literal notranslate"><span class="pre">lw</span></code></p></td>
+<td><p>Breidd línu í línuriti eða súluramma í súluriti. Eining punktar <br>
+(~1/3 mm), sjálfgefið lw=1.5 (<a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">linestyle</span></code> eða <code class="docutils literal notranslate"><span class="pre">ls</span></code></p></td>
+<td><p>Línutegund, getur t.d. verið <code class="docutils literal notranslate"><span class="pre">''</span></code> (engin lína) <code class="docutils literal notranslate"><span class="pre">':'</span></code> <br>
+(punktalína), <code class="docutils literal notranslate"><span class="pre">'-'</span></code> (heil lína, sjálfgefið) (<a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">marker</span></code></p></td>
+<td><p>Merki fyrir punkta í plot. Algengur marker er <code class="docutils literal notranslate"><span class="pre">'o'</span></code> (en líka má nota <br>
+<code class="docutils literal notranslate"><span class="pre">'.'</span> <span class="pre">'+'</span> <span class="pre">'x'</span></code> og fleiri); plot-skipun með <code class="docutils literal notranslate"><span class="pre">marker</span> <span class="pre">=</span> <span class="pre">'o',</span> <span class="pre">ls=''</span></code> <br>
+gefur svipaða niðurstöðu og <code class="docutils literal notranslate"><span class="pre">scatter</span></code> með sjálfgefnum stikum (<a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">markersize</span></code> eða <code class="docutils literal notranslate"><span class="pre">ms</span></code></p></td>
+<td><p>Stærð <em>markers</em> í <code class="docutils literal notranslate"><span class="pre">plot</span></code>, sjálfgefið 6 punktar (~2 mm) (k.
+<a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">edgecolor</span></code> eða <code class="docutils literal notranslate"><span class="pre">ec</span></code></p></td>
+<td><p>Litur á rönd súlna eða merkja. Ein tegund súlurita notar <br>
+<code class="docutils literal notranslate"><span class="pre">color='w',</span> <span class="pre">ec='k'</span></code> (<a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">label</span></code></p></td>
+<td><p>notað með <code class="docutils literal notranslate"><span class="pre">legend</span></code>-skipun,
+(sjá töflu <a class="reference internal" href="#plothjalparskip"><span class="std std-numref">9.5</span></a>) (<a class="reference internal" href="#daemi-um-legend"><span class="std std-numref">9.5.2</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bins</span></code></p></td>
+<td><p>fjöldi súlna (<a class="reference internal" href="#sulurit"><span class="std std-numref">9.2.3</span></a> og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">range</span></code></p></td>
+<td><p>ytri mörk súlurits (gott að velja bins í samræmi við range) (k.
+<a class="reference internal" href="#sulurit"><span class="std std-numref">9.2.3</span></a> og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rwidth</span></code></p></td>
+<td><p>„relative width“ (sjálfgefið 1.0) (<a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-center" id="scatterstyring">
+<caption><span class="caption-number">Tafla 9.4: </span><span class="caption-text">Helstu stikar í <strong>scatter</strong></span><a class="headerlink" href="#scatterstyring" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">marker</span></code></p></td>
+<td><p>Merki fyrir punkta, sjá <em>marker</em> í töflu <a class="reference internal" href="#plothiststyring"><span class="std std-numref">9.3</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td><p>stærð punkta, flatarmál í <em>ferpunktum</em> (punktur ≈ 1/3 mm). Má vera vigur og <br>
+þá fær hver punktur sína stærð (<a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">color</span></code></p></td>
+<td><p>litur (allir punktar í sama lit), sjá <em>color</em> í töflunni að ofan
+(<a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td><p>vigur af litum (hver punktur í sínum lit). Má vera vigur af
+tölum og þá litast <br> punktarnir með <strong>litaskala</strong> (<em>color map</em>;
+sjá athugasemd hér fyrir neðan) (<a class="reference internal" href="../kafli13/#gervigogn"><span class="std std-numref">13.6</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code></p></td>
+<td><p>gagnsæi, sjá töfluna að ofan</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">edgecolor</span></code></p></td>
+<td><p>litur á rönd punkta</p></td>
+</tr>
+</tbody>
+</table>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd: Um punktastærð</p>
+<p>Sjálfgefin punktastærð er 36 = 6^2, sem gefur sömu stærð og <code class="docutils literal notranslate"><span class="pre">o</span></code>-merki í
+plot-skipun með <em>markersize</em> 6 (sem er sjálfgefna stærðin í plot). Ath. að það
+er ekki stutt að skrifa <code class="code docutils literal notranslate"><span class="pre">size</span></code> í stað <code class="code docutils literal notranslate"><span class="pre">s</span></code></p>
+</div>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd: Um litaskala</p>
+<p>Þessar fyrirlestrarnótur skauta framhjá umfjöllun um <strong>litaskala</strong>, en um þá
+er fjallað allítarlega í <a class="reference external" href="https://cs.hi.is/strei/vi%C3%B0auki-A/#a4-litaskalar">Viðauka A4</a> í <em>Fyrirlestrarnótum
+í stærðfræði og reiknifræði</em>. Um litaskala er líka fjallað í 4. kafla í
+<a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook">Python Data Science Handbook</a>.</p>
+</div>
+<table class="docutils align-center" id="plothjalparskip">
+<caption><span class="caption-number">Tafla 9.5: </span><span class="caption-text">Helstu hjálparskipanir fyrir teikningar</span><a class="headerlink" href="#plothjalparskip" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xlim(min,max)</span></code></p></td>
+<td><p>stillir neðri og efri mörk x-áss (kafli <a class="reference internal" href="#rju-daemi"><span class="std std-numref">9.5</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.ylim(min,max)</span></code></p></td>
+<td><p>Stillir neðri og efri mörk y-áss (<a class="reference internal" href="#rju-daemi"><span class="std std-numref">9.5</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.clim(cmin,</span> <span class="pre">cmax)</span></code></p></td>
+<td><p>Stillir neðri og efri mörk &quot;litaáss&quot; innan <strong>litaskala</strong> sem er <br>
+í notkun – sjá athugasemd hér næst á undan (<a class="reference internal" href="../kafli13/#gervigogn"><span class="std std-numref">13.6</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.title(strengur)</span></code></p></td>
+<td><p>setur fyrirsögn á teikningu (<a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xlabel(strengur)</span></code></p></td>
+<td><p>setur textaskýringu við x-ás (<a class="reference internal" href="#sulurit"><span class="std std-numref">9.2.3</span></a>, <a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>
+og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.ylabel(strengur)</span></code></p></td>
+<td><p>setur textaskýringu við y-ás (<a class="reference internal" href="#sulurit"><span class="std std-numref">9.2.3</span></a>, <a class="reference internal" href="#daemi-um-plot"><span class="std std-numref">9.5.1</span></a>
+og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xticks(listi)</span></code></p></td>
+<td><p>setur merkingar á tilgreindar staðsetningar á x-ás <br>
+(<code class="docutils literal notranslate"><span class="pre">listi</span></code> gæti t.d. verið <code class="docutils literal notranslate"><span class="pre">range(0,6)</span></code>)
+(<a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.yticks(listi)</span></code></p></td>
+<td><p>setur merkingar á tilgreindar staðsetningar á y-ás</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xticks(listi,</span> <span class="pre">merki)</span></code></p></td>
+<td><p>setur bæði staðsetningar og merkingar (eins fyrir y-ás)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.gca().set_xticklabels</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">(['A',</span> <span class="pre">'B',</span> <span class="pre">'C'])</span></code></p></td>
+<td><p>lætur merkingar á x-ás verða A, B og C (eins fyrir y-ás)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.tick_params(length=l,</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">width=w,</span> <span class="pre">direction=&quot;in&quot;)</span></code></p></td>
+<td><p>stillir strikin við ásamerkingarnar (l og w mælt <br>
+í punktum (1/3 mm)); í stað <code class="docutils literal notranslate"><span class="pre">&quot;in&quot;</span></code> má nota <code class="docutils literal notranslate"><span class="pre">&quot;out&quot;</span></code>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.grid(True)</span></code></p></td>
+<td><p>teiknar rúðunet (nota má <code class="docutils literal notranslate"><span class="pre">grid(True,</span> <span class="pre">axis='y')</span></code> fyrir <br>
+bara láréttar línur) (<a class="reference internal" href="#skatter-plott-og-linurit"><span class="std std-numref">9.2.2</span></a>,
+<a class="reference internal" href="#daemi-um-legend"><span class="std std-numref">9.5.2</span></a> og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.box(False)</span></code></p></td>
+<td><p>fjarlægir ramma utanum teikningu (<a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.axvline(x)</span></code></p></td>
+<td><p>bætir við lóðréttri línu (sjálfgefið er x = 0) (<a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a> og
+<a class="reference internal" href="#graf-visisfallsins"><span class="std std-numref">9.6.4</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.axhline(y)</span></code></p></td>
+<td><p>bætir við láréttri línu (sjálfgefið er y = 0) (<a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a> og
+<a class="reference internal" href="#graf-visisfallsins"><span class="std std-numref">9.6.4</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code></p></td>
+<td><p>bætir við kassa með skýringum á línum/skatter-punktum <br>
+/ súlum sem búnar voru til með <code class="docutils literal notranslate"><span class="pre">label</span></code>; sjá töflu
+<a class="reference internal" href="#plothiststyring"><span class="std std-numref">9.3</span></a> (<a class="reference internal" href="#daemi-um-legend"><span class="std std-numref">9.5.2</span></a>)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Loks er hér <a class="reference external" href="https://matplotlib.org/api/pyplot_summary.html">hlekkur</a>  á yfirlit yfir allar Matplotlib-skipanir.</p>
+</section>
+<section id="rju-daemi-um-teikningar">
+<span id="rju-daemi"></span><h2><span class="section-number">9.5  </span>Þrjú dæmi um teikningar<a class="headerlink" href="#rju-daemi-um-teikningar" title="Permalink to this heading"></a></h2>
+<p>Til frekari glöggvunar eru hér þrjú viðbótardæmi og nokkrar æfingar.</p>
+<section id="daemi-um-plot">
+<span id="id6"></span><h3><span class="section-number">9.5.1  </span>Dæmi um plot<a class="headerlink" href="#daemi-um-plot" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sqrt</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span> <span class="c1"># dpi=72 sjálfgefið</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y = √x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 7cm">
+<img alt="../_images/rauttgraf.png" src="../_images/rauttgraf.png" />
+</figure>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Stikar í plot</p>
+<p>Prófið þessar skipanir. Prófið að breyta:</p>
+<ul class="simple">
+<li><p>dpi (<em>dots-per-inch</em>; myndin stækkar)</p></li>
+<li><p>ls (<em>line style</em>, prófið <code class="docutils literal notranslate"><span class="pre">'-'</span></code>)</p></li>
+<li><p>lw (<em>line width</em>)</p></li>
+<li><p>c (<em>color</em> prófið t.d. <code class="docutils literal notranslate"><span class="pre">'b'</span></code>)</p></li>
+<li><p>marker (prófið <code class="docutils literal notranslate"><span class="pre">'+'</span></code> og <code class="docutils literal notranslate"><span class="pre">'x'</span></code>)</p></li>
+<li><p>ms (<em>marker size</em>)</p></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
+<section id="daemi-um-legend">
+<span id="id7"></span><h3><span class="section-number">9.5.2  </span>Dæmi um legend<a class="headerlink" href="#daemi-um-legend" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">20</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">21</span><span class="p">)]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">t</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">21</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;slembitölur&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 9cm">
+<img alt="../_images/legend-daemi.png" src="../_images/legend-daemi.png" />
+</figure>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Legend</p>
+<p>Prófið þessar skipanir. Prófið svo að bæta við cos(x) með tilheyrandi
+label. Prófið líka að fjölga punktunum (það þarf að breyta bæði 20 og 21 í
+stærri tölur).</p>
+</div>
+</div></blockquote>
+</section>
+<section id="daemi-um-hist">
+<span id="id8"></span><h3><span class="section-number">9.5.3  </span>Dæmi um hist<a class="headerlink" href="#daemi-um-hist" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">gauss</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-gildi&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;fjöldi&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center" style="width: 11cm">
+<img alt="../_images/sulur2.png" src="../_images/sulur2.png" />
+</figure>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Súlurit</p>
+<p>Prófið skipanirnar og einhverjar breytingar á þeim. Stikunum er lýst í töflu
+<a class="reference internal" href="#plothiststyring"><span class="std std-numref">9.3</span></a></p>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="teikning-af-grofum-falla">
+<span id="groffalla"></span><h2><span class="section-number">9.6  </span>Teikning af gröfum falla<a class="headerlink" href="#teikning-af-grofum-falla" title="Permalink to this heading"></a></h2>
+<p>Við byrjum þennan kafla á æfingu, sem snýst bæði um efni undanfarandi kafla og
+þessa. Lesendur eru hvattir til að spreyta sig á henni áður en þeir lesa áfram
+því hér á eftir koma svör við ýmsum atriðum í henni.</p>
+<p>Til að teikna graf er byrjað á að núllstilla með því að keyra:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">axisbelow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+   <span class="k">return</span> <span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">i</span><span class="o">/</span><span class="mi">200</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">201</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Með <code class="docutils literal notranslate"><span class="pre">linspace(a,b)</span></code> fæst listi með 200 jafnt dreifðum þétt liggjandi
+<span class="math notranslate nohighlight">\(x\)</span>-gildum á bilinu frá a til b, og svo reiknum við fallsgildin <span class="math notranslate nohighlight">\(y =
+f(x)\)</span> í öllum þessum <span class="math notranslate nohighlight">\(x\)</span>-um og nálgum graf fallsins með því að teikna
+línustrik sem tengja alla punktana.</p>
+<section id="einfalt-graf">
+<span id="id9"></span><h3><span class="section-number">9.6.1  </span>Einfalt graf<a class="headerlink" href="#einfalt-graf" title="Permalink to this heading"></a></h3>
+<p>Við getum teiknað graf sínus-fallsins á bilinu <span class="math notranslate nohighlight">\([0, 4\pi]\)</span> með:</p>
+<blockquote>
+<div><dl>
+<dt>Forrit:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">exp</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><figure class="align-center" style="width: 9cm">
+<img alt="../_images/output_3_0.png" src="../_images/output_3_0.png" />
+</figure>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="finna-graf">
+<span id="id10"></span><h3><span class="section-number">9.6.2  </span>Fínna graf<a class="headerlink" href="#finna-graf" title="Permalink to this heading"></a></h3>
+<p>Hægt er að bæta ýmsu við forritsbúinn í kafla <a class="reference internal" href="#einfalt-graf"><span class="std std-numref">9.6.1</span></a>. Byrjum á að afrita hann og endurbætum hann svo:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>teygjum á grafinu (breikkum myndina) með skipuninni
+<code class="docutils literal notranslate"><span class="pre">plt.figure(figsize=(12,4))</span></code> (á undan plot).</p></li>
+<li><p>Svo má bæta við rúðuneti með <code class="docutils literal notranslate"><span class="pre">plt.grid</span></code></p></li>
+<li><p>Það er hægt að teikna x- og y-ása með <code class="docutils literal notranslate"><span class="pre">plt.axhline</span></code> og
+<code class="docutils literal notranslate"><span class="pre">plt.axvline</span></code>. Notið með stika <code class="docutils literal notranslate"><span class="pre">c='k'</span></code> til að fá svarta ása.</p></li>
+<li><p>Við getum látið x-ásinn ná t.d. frá -0.2 til <span class="math notranslate nohighlight">\(4\pi\)</span> með
+<code class="docutils literal notranslate"><span class="pre">plt.xlim([-0.2,</span> <span class="pre">4*pi])</span></code>.</p></li>
+<li><p>Það má fjarlægja rammann með <code class="docutils literal notranslate"><span class="pre">plt.box(False)</span></code></p></li>
+<li><p>Síðasta tötsið fæst með <code class="docutils literal notranslate"><span class="pre">plt.tick_params(length=0)</span></code></p></li>
+</ul>
+<dl>
+<dt>Forrit (sjá úttak í svari við lið 3):</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="kosinus-baett-vi">
+<span id="id11"></span><h3><span class="section-number">9.6.3  </span>Kósínus bætt við<a class="headerlink" href="#kosinus-baett-vi" title="Permalink to this heading"></a></h3>
+<p>Teiknum í framhaldi <span class="math notranslate nohighlight">\(y = \cos x\)</span> inn á sömu mynd.</p>
+<blockquote>
+<div><dl>
+<dt>Forrit:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">yc</span> <span class="o">=</span> <span class="p">[</span><span class="n">cos</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">yc</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak (úr <a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a> og <a class="reference internal" href="#kosinus-baett-vi"><span class="std std-numref">9.6.3</span></a>):</dt><dd><figure class="align-center" style="width: 16cm">
+<img alt="../_images/output_6_0.png" src="../_images/output_6_0.png" />
+</figure>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="graf-visisfallsins-exp-x">
+<span id="graf-visisfallsins"></span><h3><span class="section-number">9.6.4  </span>Graf vísisfallsins exp(x)<a class="headerlink" href="#graf-visisfallsins-exp-x" title="Permalink to this heading"></a></h3>
+<p>Teiknum nú nýja mynd með <span class="math notranslate nohighlight">\(y = e^x\)</span> á bilinu <span class="math notranslate nohighlight">\([-5, 2]\)</span>.</p>
+<blockquote>
+<div><dl>
+<dt>Forrit:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">));</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>Úttak:</dt><dd><figure class="align-center" style="width: 12cm">
+<img alt="../_images/output_7_0.png" src="../_images/output_7_0.png" />
+</figure>
+</dd>
+</dl>
+</div></blockquote>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Fallateikning.</p>
+<p>Æfið ykkur í að teikna föll með því að nota hugmyndir í þessum kafla. Teiknið
+t.d. gröf eftirfarandi falla og prófið ykkur áfram í hverju tilviki til að
+finna hæfilegt bil á x-ás svo helstu eiginleikar fallanna komi fram. Þið
+getið byrjað á að afrita forritið hér næst á undan.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(x\sin x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(e^{-2x+1}\)</span></p></li>
+</ol>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli08/" class="btn btn-neutral float-left" title="8 Skrár" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli10/" class="btn btn-neutral float-right" title="10 NumPy pakkinn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

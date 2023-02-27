@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12. Viðauki &mdash; Undirbúningur í stærðfræði 2023 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <!-- hoverrole.py css code -->
+    <style type="text/css">
+        a.tooltip {
+            outline: none;
+            border-bottom: thin dotted;
+            background: #ffeedd
+        }
+        
+        a.tooltip strong {
+            line-height: 30px;
+        }
+        
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+        
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: -30px;
+            margin-left: 12px;
+            width: 310px;
+            line-height: 16px;
+        }
+        
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            color: #111;
+            border: 1px solid #DCA;
+            background: #fffAF0;
+        }
+        
+        .callout {
+            z-index: 20;
+            position: absolute;
+            top: 30px;
+            border: 0;
+            left: -12px;
+        }
+        /*CSS3*/
+        
+        a.tooltip span {
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
+    <!-- End hoverrole.py css code -->
+
+    <style type="text/css">
+        .sagecell .CodeMirror-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .sagecell .CodeMirror {
+            height: auto;
+        }
+    </style>
+
+
+
+
+
+    <link rel="index" title="Yfirlit" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="prev" title="11. Diffrun" href="../kafli11/" /> 
+    <!-- Eftirfarandi sagecell import eyðileggur searchið -->
+    <!-- <script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script> -->
+    <!-- <script>
+        // the buttonText string says what will be written on the
+        // sage cell evaluation button.
+        // It can be changed here.
+        var buttonText = "Keyra"
+    </script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({
+            inputLocation: ".sage",
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsage",
+            languages: ["r"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osage",
+            languages: ["octave"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAuto",
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAuto",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAuto",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAutoHidden",
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAutoHidden",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAutoHidden",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+    </script> -->
+    <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    <script>
+        ggbAppletId = [];
+    </script>
+    <script>
+        top.scrolldepth_tags = [];
+    </script>
+
+
+
+
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Undirbúningur í stærðfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Um námsefnið</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Jöfnur og ójöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Rúmfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Mengi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Margliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Hornaföll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Vigrar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Meira um föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Markgildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Diffrun</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#repun">12.1. Þrepun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rithattur">12.2. Ritháttur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formulubla">12.3. Formúlublað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#algebra">12.3.1. Algebra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#einfaldar-reiknireglur">12.3.1.1. Einfaldar reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#brotareiknireglur">12.3.1.2. Brotareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#veldareiknireglur">12.3.1.3. Veldareiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reiknireglur-fyrir-raetur">12.3.1.4. Reiknireglur fyrir rætur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#jofnur-og-ojofnur">12.3.2. Jöfnur og ójöfnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lausnarformula-annars-stigs-jofnu">12.3.2.1. Lausnarformúla annars stigs jöfnu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reiknireglur-fyrir-tolugildi">12.3.2.2. Reiknireglur fyrir tölugildi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regla-pyagorasar">12.3.2.3. Regla Pýþagórasar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fjarlaeg-milli-punkta">12.3.2.4. Fjarlægð milli punkta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hallatala-linu">12.3.2.5. Hallatala línu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mipunktsregla">12.3.2.6. Miðpunktsregla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flatarmal">12.3.2.7. Flatarmál</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#foll">12.3.3. Föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#oddstaett-og-jafnstaett">12.3.3.1. Oddstætt og jafnstætt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lograreglur">12.3.3.2. Lograreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stofnbrotaliun">12.3.3.3. Stofnbrotaliðun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#margliur">12.3.4. Margliður</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nokkrar-lianir">12.3.4.1. Nokkrar liðanir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hornafoll">12.3.5. Hornaföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graur-og-bogaeiningar">12.3.5.1. Gráður og bogaeiningar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hliar-rihyrnings">12.3.5.2. Hliðar þríhyrnings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grunnreglan">12.3.5.3. Grunnreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hlirunarreglur">12.3.5.4. Hliðrunarreglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summuformulur">12.3.5.5. Summuformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tvofoldunarformulur">12.3.5.6. Tvöföldunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#helmingunarformulur">12.3.5.7. Helmingunarformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summu-og-margfeldisformulur">12.3.5.8. Summu- og margfeldisformúlur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kosinusreglan">12.3.5.9. Kósínusreglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sinusreglan">12.3.5.10. Sínusreglan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vigrar">12.3.6. Vigrar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reiknireglur">12.3.6.1. Reiknireglur</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#markgildi">12.3.7. Markgildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#reiknireglur-fyrir-markgildi">12.3.7.1. Reiknireglur fyrir markgildi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#diffrun">12.3.8. Diffrun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">12.3.8.1. Reiknireglur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ekktar-afleiur">12.3.8.2. Þekktar afleiður</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Undirbúningur í stærðfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12. </span>Viðauki</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/undirbuningur_stae/kafli12.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viauki">
+<h1><span class="section-number">12. </span>Viðauki<a class="headerlink" href="#viauki" title="Permalink to this heading"></a></h1>
+<section id="repun">
+<h2><span class="section-number">12.1. </span>Þrepun<a class="headerlink" href="#repun" title="Permalink to this heading"></a></h2>
+<p>Þrepun er leið til þess að sanna setningar og formúlur.
+Þá er fyrst sýnt fram á að setningin gildi um grunntilvik (upphafstilvik, núlltilvik).
+Að því loknu er sýnt fram á að ef setningin gildir um eitthvert ótiltekið tilvik, þá gildir það um það næsta.</p>
+<p>Þetta svipar til þess að ganga upp stiga: ef við getum komist upp fyrsta þrepið og frá hverju þrepi í það næsta, þá hljótum við að geta gengið upp allan stigann.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/threpun.svg"><img alt="../_images/threpun.svg" src="../_images/threpun.svg" width="70%" /></a>
+</figure>
+<p>Hér er til dæmis reglan um að summa allra heiltalna frá einum upp í <span class="math">\(n\)</span> er:</p>
+<div class="math">
+\[\sum_{i=1}^n = \frac{n(n+1)}{2}
+
+\]</div>
+<p>Við ætlum að sýna fram á að þessi formúla gildi um allar jákvæðar heiltölur <span class="math">\(n=1,2,3, \dots\)</span> .
+Sjáum til dæmis að hún gildir fyrir <span class="math">\(n=4\)</span> því</p>
+<div class="math">
+\[\sum_{i=1}^4 = 1+2+3+4 = 10
+
+\]</div>
+<p>og</p>
+<div class="math">
+\[\frac{4\cdot(4+1)}{2} = \frac{20}{2} = 10
+
+\]</div>
+<p>Sönnum setninguna með þrepun:</p>
+<p><strong>Grunntilvik:</strong></p>
+<p>Prófum að setja <span class="math">\(n=1\)</span> í setninguna:</p>
+<div class="math">
+\[\begin{aligned}
+  \sum_{i=1}^n &= \frac{n(n+1)}{2}\\
+  \sum_{i=1}^1 &= \frac{1(1+1)}{2}\\
+  1&=\frac{1\cdot2}{2}=1
+\end{aligned}
+
+\]</div>
+<p>Formúlan virkar því til þess að reikna summu allra talna frá einum upp í einn.</p>
+<p><strong>Þrepun:</strong></p>
+<p>Gerum núna ráð fyrir að formúlan virki fyrir eitthvert <span class="math">\(n\)</span> , þ.e. að</p>
+<div class="math">
+\[\sum_{i=1}^n = \frac{n(n+1)}{2}
+
+\]</div>
+<p>sé sönn staðhæfing.</p>
+<p>Þá ætlum við að sýna að hún gildi líka fyrir næsta skref <span class="math">\(n+1\)</span> .</p>
+<div class="math">
+\[\begin{aligned}
+  \sum_{i=1}^{n+1} &= \sum_{i=1}^n + (n+1) \\
+  &= \frac{n(n+1)}{2} + (n+1) \\
+  &= \frac{n(n+1)}{2} + \frac{2(n+1)}{2} \\
+  &=\frac{n(n+1)+2(n+1)}{2}\\
+  &= \frac{(n+1)(n+2)}{2} \\
+\end{aligned}
+
+\]</div>
+<p>Í síðustu línunni birtist formúlan eins og hún væri ef <span class="math">\(n+1\)</span> væri sett inn í formúluna og því gildir formúlan líka fyrir <span class="math">\(n+1\)</span> .</p>
+<p>Því getum við ályktað að setningin gildi um öll <span class="math">\(n\)</span> .</p>
+</section>
+<section id="rithattur">
+<h2><span class="section-number">12.2. </span>Ritháttur<a class="headerlink" href="#rithattur" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><span class="math">\(\mathbb{N} \quad\)</span> „Náttúrulegu tölurnar“</dt><dd><ul>
+<li><p><span class="math">\(0,1,2,3, \dots\)</span> köllum við náttúrulegu tölurnar</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\mathbb{Z} \quad\)</span> „Heiltölur“</dt><dd><ul>
+<li><p><span class="math">\(\dots ,-3, -2, -1, 0,1,2,3, \dots\)</span> köllum við heiltölurnar</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\mathbb{Q} \quad\)</span> „Ræðu tölurna“</dt><dd><ul>
+<li><p><span class="math">\(\frac{p}{q}\)</span> þar sem <span class="math">\(p\)</span> og <span class="math">\(q\)</span> eru heilar tölur og <span class="math">\(q \neq 0\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\mathbb{R} \quad\)</span> „Rauntölurnar“</dt><dd><ul>
+<li><p>mengi allra ræðra talna, auk óræðra talna</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(:= \; \text{eða} \; \equiv \quad\)</span> „skilgreint sem“</dt><dd><ul>
+<li><p>notað til að skilgreina stærðir</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\in \quad\)</span> „stak í“</dt><dd><ul>
+<li><p>oft erum við að tala um stak í menginu <span class="math">\(x \in A\)</span> <span class="math">\(x\)</span> er stak í menginu <span class="math">\(A\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\notin \quad\)</span> „ekki stak í“</dt><dd><ul>
+<li><p><span class="math">\(x \notin A\)</span> <span class="math">\(x\)</span> er ekki stak í menginu <span class="math">\(A\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\forall \quad\)</span> „fyrir öll“</dt><dd><ul>
+<li><p><span class="math">\(\forall n \in \mathbb{N}\)</span> fyrir öll stök í mengi náttúrulegra talna</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\approx \quad\)</span> „um það bil“</dt><dd><ul>
+<li><p><span class="math">\(\pi \approx 3.14\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(&lt; \qquad\)</span>  „minna en“</dt><dd><ul>
+<li><p><span class="math">\(3&lt;4\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(&gt; \qquad\)</span> „stærra en“</dt><dd><ul>
+<li><p><span class="math">\(6&gt;2\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\leq \qquad\)</span> „minna en eða jafnt og“</dt><dd><ul>
+<li><p><span class="math">\(a \leq x \leq b\)</span> lokað bil</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\geq \qquad\)</span> „stærra en eða jafnt og“</dt><dd><ul>
+<li><p><span class="math">\(a \geq x \geq b\)</span> opið bil</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\sum_{n}^{m} \quad\)</span> „summa frá n upp í m“</dt><dd><ul>
+<li><p>við getum haf endanlegar og óendanlegar summur, þ.e.a.s. <span class="math">\(m= \infty\)</span> eða/og  <span class="math">\(n= -\infty\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\prod_{n}^{m} \quad\)</span> „margfeldi frá n upp í m“</dt><dd><ul>
+<li><p>við getum haft endanleg og óendanleg margfeldi, þ.e.a.s. <span class="math">\(m= \infty\)</span> eða/og  <span class="math">\(n= -\infty\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\parallel \quad\)</span> „samsíða“</dt><dd><ul>
+<li><p>sjá <a class="reference internal" href="../kafli03/#s-samsia"><span class="std std-ref">kafla um samsíða</span></a> línur</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\perp  \quad\)</span> „hornrétt“ eða „þverstætt“</dt><dd><ul>
+<li><p>sjá <a class="reference internal" href="../kafli03/#s-verstae"><span class="std std-ref">kafla um þverstæð</span></a> línur</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\subset \quad\)</span> „hlutmengi“</dt><dd><ul>
+<li><p>t.d. <span class="math">\(A \subset B\)</span>  <span class="math">\(B\)</span> er hlutmengi í <span class="math">\(A\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(| \quad \text{eða} \quad ; \quad\)</span> „þar sem“</dt><dd><ul>
+<li><p>oft þegar við erum að skilgreina mengi þá erum við með skilyrði <span class="math">\(p(x)\)</span>, t.d. <span class="math">\(A = \{x \in C \ | \ p(x)\}\)</span>. Þetta þýðir að í <span class="math">\(A\)</span> eru öll stök í <span class="math">\(C\)</span> <strong>þar sem</strong> <span class="math">\(p(x)\)</span> gildir</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\cup \quad\)</span> „sammengi“</dt><dd><ul>
+<li><p><span class="math">\(A \cup B\)</span> „sammengi <span class="math">\(A\)</span> og <span class="math">\(B\)</span>“</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\cap \quad\)</span> „sniðmengi“</dt><dd><ul>
+<li><p><span class="math">\(A \cap B\)</span> „sniðmengi <span class="math">\(A\)</span> og <span class="math">\(B\)</span>“</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\setminus \quad\)</span> „mengjamismunur“</dt><dd><ul>
+<li><p><span class="math">\(A\setminus B\)</span> „<span class="math">\(A\)</span> án <span class="math">\(B\)</span>“</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(A^c \quad\)</span> „fyllimengi <span class="math">\(A\)</span>“</dt><dd><ul>
+<li><p><span class="math">\(A^c \quad\)</span> „allt sem er ekki í <span class="math">\(A\)</span>“</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\((a,b) \quad \text{eða} \quad ]a,b[ \quad\)</span> „opið bil“</dt><dd><ul>
+<li><p><span class="math">\((a,b)=\{x\in \mathbb{R}; a&lt;x&lt;b\}\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\([a,b] \quad\)</span> „lokað bil“</dt><dd><ul>
+<li><p><span class="math">\([a,b]=\{x\in \mathbb{R}; a\leq x\leq b\}\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(f(x)|_{x=a} \quad\)</span> „stingum in <span class="math">\(x=a\)</span>“</dt><dd><ul>
+<li><p><span class="math">\(x^2+3x-1|_{x=3} = (3)^2+3(3)-1 = 17\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(! \qquad\)</span> „aðfeldi“ eða „hrópmerkt“</dt><dd><ul>
+<li><p><span class="math">\(6! = 1 \cdot 2\cdot 3\cdot 4 \cdot 5 \cdot 6 =720\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(°  \qquad\)</span>“gráður“</dt><dd><ul>
+<li><p><span class="math">\(30°\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(Rad \quad\)</span> „radian“ eða „bogaeining“</dt><dd><ul>
+<li><p><span class="math">\(\frac{\pi}{6} Rad\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(\boldsymbol{a} \quad \vec{a} \quad \bar{a}  \quad\)</span> „vigurinn <span class="math">\(a\)</span>“</dt><dd><ul>
+<li><p>sjá  <a class="reference internal" href="../kafli08/#s-vigrar"><span class="std std-ref">Vigrar</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><span class="math">\(f'(x) \quad f' \quad \frac{df}{dx} \quad \frac{d}{dx} f(x) \quad D_x f \qquad\)</span> „afleiða <span class="math">\(f(x)\)</span>“</dt><dd><ul>
+<li><p>með tilliti til <span class="math">\(x\)</span></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="formulubla">
+<h2><span class="section-number">12.3. </span>Formúlublað<a class="headerlink" href="#formulubla" title="Permalink to this heading"></a></h2>
+<p>Samantekt af hentugum reglum og formúlum úr köflunum.</p>
+<section id="algebra">
+<h3><span class="section-number">12.3.1. </span>Algebra<a class="headerlink" href="#algebra" title="Permalink to this heading"></a></h3>
+<section id="einfaldar-reiknireglur">
+<h4><span class="section-number">12.3.1.1. </span>Einfaldar reiknireglur<a class="headerlink" href="#einfaldar-reiknireglur" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[\begin{aligned}
+    &(a+b)+c=a+(b+c)   \qquad &\textit{ (tengiregla samlagningar)}\\
+\qquad \\
+    &(ab)c=a(bc)  \qquad &\textit{ (tengiregla margföldunar)}\\
+\qquad \\
+    &a+b=b+a  \qquad &\textit{ (víxlregla samlagningar)} \\
+\qquad \\
+    &ab=ba  \qquad &\textit{ (víxlregla margföldunar)}\\
+\qquad \\
+    &a(b+c)=ab+ac  \qquad &\textit{ (dreifiregla)}\\
+\qquad \\
+    &1 \cdot a=a  \qquad &\textit{ (1 er margföldunarhlutleysa)}\\
+\qquad \\
+    &a+0=a  \qquad &\textit{ (0 er samlagningarhlutleysa)}\\
+\qquad \\
+    &0 \cdot a=0   \qquad &\textit{ (margföldun með núlli gefur núll)}\\
+    \end{aligned}
+
+\]</div>
+</section>
+<section id="brotareiknireglur">
+<h4><span class="section-number">12.3.1.2. </span>Brotareiknireglur<a class="headerlink" href="#brotareiknireglur" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[\begin{aligned}
+& \frac{p}{q}+\frac{r}{s}=\frac{ps}{qs}+\frac{qr}{qs}=\frac{ps+qr}{qs} \\
+\qquad \\
+&\frac{p}{q}-\frac{r}{s}=\frac{ps-qr}{qs} \\
+\qquad \\
+& \frac{p}{q} \cdot \frac{r}{s}=\frac{pr}{qs} \\
+\qquad \\
+&\frac{p/q}{r/s} =\frac{ps}{qr} \\
+\end{aligned}
+
+\]</div>
+</section>
+<section id="veldareiknireglur">
+<h4><span class="section-number">12.3.1.3. </span>Veldareiknireglur<a class="headerlink" href="#veldareiknireglur" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[    \begin{aligned}
+&a^0=1\\
+\qquad \\
+&a^n=a \cdot a \cdot \dots \cdot a \\
+\qquad \\
+    &a^{-n}=\frac{1}{a^n} \\
+\qquad \\
+&a^n\cdot a^m=a^{n+m}\\
+\qquad \\
+    &\dfrac {a^n}{a^m}=a^{n-m}\\
+\qquad \\
+    &a^n\cdot b^n=(ab)^n\\
+\qquad \\
+    &(a^n)^m=a^{nm}
+\qquad \\
+(-1)^n &= 1 \qquad \text{þegar } n \text{ er slétt tala} \\
+\qquad \\
+    (-1)^n &= -1 \qquad \text{þegar } n \text{ er oddatala} \\
+    \end{aligned}\]</div>
+</section>
+<section id="reiknireglur-fyrir-raetur">
+<h4><span class="section-number">12.3.1.4. </span>Reiknireglur fyrir rætur<a class="headerlink" href="#reiknireglur-fyrir-raetur" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[      \begin{aligned}
+        \sqrt[q]{ab} &=\sqrt[q]{a}\cdot \sqrt[q]{b} \\
+  & \qquad \\
+  \sqrt[q]{\dfrac ab}& =\dfrac{\sqrt[q]{a}}{\sqrt[q] {b}}\\
+  & \qquad \\
+  \sqrt[q]{a^p}& =(\sqrt[q]{a})^p\\
+  & \qquad \\
+  \sqrt[sq]{a^{sp}} &={\sqrt[q]{a^p}}\\
+  & \qquad \\
+  \sqrt[sq]{ a} &=\sqrt[s]{\sqrt[q]{a}}\\
+\end{aligned}\]</div>
+</section>
+</section>
+<section id="jofnur-og-ojofnur">
+<h3><span class="section-number">12.3.2. </span>Jöfnur og ójöfnur<a class="headerlink" href="#jofnur-og-ojofnur" title="Permalink to this heading"></a></h3>
+<section id="lausnarformula-annars-stigs-jofnu">
+<h4><span class="section-number">12.3.2.1. </span>Lausnarformúla annars stigs jöfnu<a class="headerlink" href="#lausnarformula-annars-stigs-jofnu" title="Permalink to this heading"></a></h4>
+<p>Látum <span class="math">\(ax^2+bx+c=0\)</span> vera annars stigs jöfnu.</p>
+<ol class="arabic simple">
+<li><p>Ef <span class="math">\(d = b^2-4ac&lt;0\)</span> þá hefur jafnan enga rauntölulausn.</p></li>
+<li><p>Ef <span class="math">\(d  = b^2-4ac=0\)</span> þá hefur jafnan eina lausn:</p></li>
+</ol>
+<div class="math">
+\[x=\frac{-b}{2a}
+
+\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Ef <span class="math">\(d = b^2-4ac&gt;0\)</span> þá hefur jafnan tvær lausnir:</p></li>
+</ol>
+<div class="math">
+\[x_1=\frac{-b+\sqrt{b^2-4ac}}{2a} \qquad \text{og} \qquad x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}
+
+\]</div>
+<p>eða</p>
+<div class="math">
+\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+
+\]</div>
+</section>
+<section id="reiknireglur-fyrir-tolugildi">
+<h4><span class="section-number">12.3.2.2. </span>Reiknireglur fyrir tölugildi<a class="headerlink" href="#reiknireglur-fyrir-tolugildi" title="Permalink to this heading"></a></h4>
+<p>Látum <span class="math">\(a\)</span> og <span class="math">\(b\)</span> vera rauntölur. Þá gildir eftirfarandi:</p>
+<div class="math">
+\[\begin{aligned}
+    & a \leq |a|  \qquad  &\text{(tölugildi getur aðeins stækkað tölu)}\\
+\qquad \\
+    & |a|=|-a|  \qquad  &\text{(tölugildi eru óháð formerki)}\\
+\qquad \\
+    & |a|\cdot|b|=|ab| \qquad  &\text{(tölugildi varðveitir margföldun)}\\
+\qquad \\
+    & |a|^2=a^2 \qquad   &\text{(önnur veldi eyða tölugildi)}\\
+    \end{aligned}
+
+\]</div>
+</section>
+<section id="regla-pyagorasar">
+<h4><span class="section-number">12.3.2.3. </span>Regla Pýþagórasar<a class="headerlink" href="#regla-pyagorasar" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[a^2+b^2=c^2
+
+\]</div>
+</section>
+<section id="fjarlaeg-milli-punkta">
+<h4><span class="section-number">12.3.2.4. </span>Fjarlægð milli punkta<a class="headerlink" href="#fjarlaeg-milli-punkta" title="Permalink to this heading"></a></h4>
+<p>Fjarlægðin milli punktanna <span class="math">\(P_1=(x_1,y_1)\)</span> og <span class="math">\(P_2=(x_2,y_2)\)</span> í hnitakerfinu er</p>
+<div class="math">
+\[\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
+
+\]</div>
+</section>
+<section id="hallatala-linu">
+<h4><span class="section-number">12.3.2.5. </span>Hallatala línu<a class="headerlink" href="#hallatala-linu" title="Permalink to this heading"></a></h4>
+<p>Ef við höfum tvo punkta <span class="math">\((x_1,y_1)\)</span> og <span class="math">\((x_2,y_2)\)</span> fæst með formúlunni</p>
+<div class="math">
+\[h=\frac{y_2-y_1}{x_2-x_1}
+
+\]</div>
+</section>
+<section id="mipunktsregla">
+<h4><span class="section-number">12.3.2.6. </span>Miðpunktsregla<a class="headerlink" href="#mipunktsregla" title="Permalink to this heading"></a></h4>
+<p>Reikna má miðpunkt striksins á milli <span class="math">\(A(x_1, x_2)\)</span> og <span class="math">\(B(x_2,y_2)\)</span> með:</p>
+<div class="math">
+\[M = \left( \frac{x_1+x_2}{2} , \frac{y_1+y_2}{2} \right)
+
+\]</div>
+</section>
+<section id="flatarmal">
+<h4><span class="section-number">12.3.2.7. </span>Flatarmál<a class="headerlink" href="#flatarmal" title="Permalink to this heading"></a></h4>
+<p>Flatarmál <a class="tooltip"  href="https://www.stae.is/os/leita/rectangle"  target="_blank">
+  rétthyrnings
+    <span>en: <i>rectangle</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> er <span class="math">\(F=a\cdot b\)</span> og ummálið er <span class="math">\(U=2a+2b\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_rett.svg"><img alt="../_images/fl_rett.svg" src="../_images/fl_rett.svg" width="40%" /></a>
+</figure>
+<p>Flatarmál <a class="tooltip"  href="https://www.stae.is/os/leita/parallelogram"  target="_blank">
+  samsíðungs
+    <span>en: <i>parallelogram</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> er <span class="math">\(F=g\cdot h\)</span>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_sams.svg"><img alt="../_images/fl_sams.svg" src="../_images/fl_sams.svg" width="40%" /></a>
+</figure>
+<p>Flatarmálið er þá <span class="math">\(F=|\bar{a}| \cdot |\bar{b}| \cdot \sin(\theta)\)</span> og ummálið er <span class="math">\(U=2|\bar{a}|+2|\bar{b}|\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_sams2.svg"><img alt="../_images/fl_sams2.svg" src="../_images/fl_sams2.svg" width="40%" /></a>
+</figure>
+<p>Flatarmál hrings er <span class="math">\(F=r^2\cdot\pi\)</span> og ummálið er <span class="math">\(U=2r\pi\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_hring.svg"><img alt="../_images/fl_hring.svg" src="../_images/fl_hring.svg" width="40%" /></a>
+</figure>
+<p>Flatarmál sporöskju er <span class="math">\(F=a\cdot b\cdot\pi\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_spor.svg"><img alt="../_images/fl_spor.svg" src="../_images/fl_spor.svg" width="40%" /></a>
+</figure>
+<p>Flatarmál <a class="tooltip"  href="https://www.stae.is/os/leita/triangle"  target="_blank">
+  þríhyrnings
+    <span>en: <i>triangle</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> er <span class="math">\(F=\frac{1}{2}g\cdot h\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_thri1.svg"><img alt="../_images/fl_thri1.svg" src="../_images/fl_thri1.svg" width="40%" /></a>
+</figure>
+<p>Flatarmálið er þá <span class="math">\(F=\frac{1}{2}|\bar{a}| \cdot |\bar{b}| \cdot \sin(\theta)\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_thri2.svg"><img alt="../_images/fl_thri2.svg" src="../_images/fl_thri2.svg" width="40%" /></a>
+</figure>
+</section>
+</section>
+<section id="foll">
+<h3><span class="section-number">12.3.3. </span>Föll<a class="headerlink" href="#foll" title="Permalink to this heading"></a></h3>
+<section id="oddstaett-og-jafnstaett">
+<h4><span class="section-number">12.3.3.1. </span>Oddstætt og jafnstætt<a class="headerlink" href="#oddstaett-og-jafnstaett" title="Permalink to this heading"></a></h4>
+<p>Látum <span class="math">\(f: \mathbb{R} \to \mathbb{R}\)</span> vera fall.</p>
+<p><a class="tooltip"  href="https://www.stae.is/os/leita/even"  target="_blank">
+  Jafnstætt
+    <span>en: <i>even</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> ef <span class="math">\(f(-x)=f(x)\)</span> fyrir öll <span class="math">\(x \in \mathbb{R}\)</span>.</p>
+<p><a class="tooltip"  href="https://www.stae.is/os/leita/odd"  target="_blank">
+  Oddstætt
+    <span>en: <i>odd</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> ef <span class="math">\(f(-x)=-f(x)\)</span> fyrir öll <span class="math">\(x \in \mathbb{R}\)</span>.</p>
+</section>
+<section id="lograreglur">
+<h4><span class="section-number">12.3.3.2. </span>Lograreglur<a class="headerlink" href="#lograreglur" title="Permalink to this heading"></a></h4>
+<p>Fyrir <span class="math">\(a,b,x,y\in \mathbb{R}_+\)</span> og <span class="math">\(r \in \mathbb{R}\)</span> gildir:</p>
+<ol class="arabic simple">
+<li><p><span class="math">\(\qquad \log_a(1)=0\)</span></p></li>
+<li><p><span class="math">\(\qquad \log_a(1/x)=-\log_a(x)\)</span></p></li>
+<li><p><span class="math">\(\qquad \log_a(xy)=\log_a(x)+\log_a(y)\)</span></p></li>
+<li><p><span class="math">\(\qquad \log_a(x/y)=\log_a(x)-\log_a(y)\)</span></p></li>
+<li><p><span class="math">\(\qquad \log_a(x^r)=r\log_a(x)\)</span></p></li>
+<li><p><span class="math">\(\qquad \log_a(x)=\dfrac{\log_b(x)}{\log_b(a)}\)</span>.</p></li>
+</ol>
+</section>
+<section id="stofnbrotaliun">
+<h4><span class="section-number">12.3.3.3. </span>Stofnbrotaliðun<a class="headerlink" href="#stofnbrotaliun" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[\begin{aligned}
+&\frac{ax+b}{(x-\alpha)(x-\beta)} = \frac{A}{(x-\alpha)}+ \frac{B}{(x-\beta)} \\
+&\qquad \text{þar sem} \\
+& \alpha \neq \beta, \quad A= \frac{a\alpha + b}{\alpha - \beta} \quad \text{og} \quad B= \frac{a\beta + b}{\beta - \alpha}
+\end{aligned}
+
+\]</div>
+</section>
+</section>
+<section id="margliur">
+<h3><span class="section-number">12.3.4. </span>Margliður<a class="headerlink" href="#margliur" title="Permalink to this heading"></a></h3>
+<section id="nokkrar-lianir">
+<h4><span class="section-number">12.3.4.1. </span>Nokkrar liðanir<a class="headerlink" href="#nokkrar-lianir" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[(a + b)^0 = 1
+
+\]</div>
+<div class="math">
+\[(a + b)^1 = a + b
+
+\]</div>
+<div class="math">
+\[(a + b)^2 = a^2 + 2ab + b^2
+
+\]</div>
+<div class="math">
+\[(a + b)^3 = a^3 + 3a^2 b + 3a b^2 + b^3
+
+\]</div>
+<div class="math">
+\[(a + b)^4 = a^4 + 4 a^3 b + 6a^2 b^2 + 4ab^3 + b^4
+
+\]</div>
+<div class="math">
+\[(a + b)^5 = a^5 + 5a^4 b + 10a^3b^2 + 10a^2 b^3 + 5 ab^4 +b^5
+
+\]</div>
+</section>
+</section>
+<section id="hornafoll">
+<h3><span class="section-number">12.3.5. </span>Hornaföll<a class="headerlink" href="#hornafoll" title="Permalink to this heading"></a></h3>
+<section id="graur-og-bogaeiningar">
+<h4><span class="section-number">12.3.5.1. </span>Gráður og bogaeiningar<a class="headerlink" href="#graur-og-bogaeiningar" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[x \text{Rad} = \left(x \cdot \frac{360}{2 \pi}\right)° \qquad og \qquad  x°=\left( x \cdot \frac{2 \pi}{360}\right) \text{Rad}
+
+\]</div>
+</section>
+<section id="hliar-rihyrnings">
+<h4><span class="section-number">12.3.5.2. </span>Hliðar þríhyrnings<a class="headerlink" href="#hliar-rihyrnings" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[\begin{aligned}
+\sin(\alpha) = \frac{b}{c} \\
+\qquad \\
+\cos(\alpha) = \frac{a}{c} \\
+\qquad \\
+\tan(\alpha) = \frac{b}{a} \\
+\qquad \\
+\end{aligned}
+
+\]</div>
+<a class="reference internal image-reference" href="../_images/sohcahtoa2.svg"><img alt="../_images/sohcahtoa2.svg" class="align-center" src="../_images/sohcahtoa2.svg" width="40%" /></a>
+</section>
+<section id="grunnreglan">
+<h4><span class="section-number">12.3.5.3. </span>Grunnreglan<a class="headerlink" href="#grunnreglan" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[\sin^2(x) + \cos^2(x) = 1
+
+\]</div>
+</section>
+<section id="hlirunarreglur">
+<h4><span class="section-number">12.3.5.4. </span>Hliðrunarreglur<a class="headerlink" href="#hlirunarreglur" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[\begin{aligned}
+    & \qquad \cos(-\theta)=\cos \theta\\
+    \qquad \\
+& \qquad \sin(-\theta)=-\sin\theta\\
+    \qquad \\
+& \qquad \cos(\pi-\theta)=-\cos \theta\\
+    \qquad \\
+& \qquad \sin(\pi-\theta)=\sin \theta\\
+    \qquad \\
+& \qquad \cos(\theta+\pi)=-\cos \theta\\
+    \qquad \\
+    & \qquad \sin(\theta+\pi)=-\sin \theta\\
+    \qquad \\
+    & \qquad \cos\left(\frac{\pi}{2}-\theta\right)=\sin\theta\\
+    \qquad \\
+    & \qquad \sin\left(\frac{\pi}{2}-\theta\right)=\cos\theta
+    \end{aligned}
+
+\]</div>
+</section>
+<section id="summuformulur">
+<h4><span class="section-number">12.3.5.5. </span>Summuformúlur<a class="headerlink" href="#summuformulur" title="Permalink to this heading"></a></h4>
+<p><strong>1.</strong></p>
+<div class="math">
+\[\sin( u + v ) = \sin(u)  \cos(v) + \cos(u) \sin(v)
+
+\]</div>
+<p><strong>2.</strong></p>
+<div class="math">
+\[\sin( u - v ) = \sin(u) \cos(v) - \cos(u) \sin(v)
+
+\]</div>
+<p><strong>3.</strong></p>
+<div class="math">
+\[\cos( u + v ) = \cos(u)  \cos(v) - \sin(u)  \sin(v)
+
+\]</div>
+<p><strong>4.</strong></p>
+<div class="math">
+\[\cos( u - v ) = \cos(u)  \cos(v) + \sin(u)  \sin(v)
+
+\]</div>
+<p><strong>5.</strong></p>
+<div class="math">
+\[\tan(u-v) = \frac{\tan(u) - \tan(v)}{1 + \tan(u)  \tan(v)}
+
+\]</div>
+<p><strong>6.</strong></p>
+<div class="math">
+\[\tan(u+v) = \frac{\tan(u) + \tan(v)}{1 - \tan(u)  \tan(v)}
+
+\]</div>
+</section>
+<section id="tvofoldunarformulur">
+<h4><span class="section-number">12.3.5.6. </span>Tvöföldunarformúlur<a class="headerlink" href="#tvofoldunarformulur" title="Permalink to this heading"></a></h4>
+<p><strong>1.</strong></p>
+<div class="math">
+\[\sin(2u) = 2\sin(u)\cos(u)
+
+\]</div>
+<p><strong>2.</strong></p>
+<div class="math">
+\[\begin{aligned}
+\cos(2x)&= \cos^2(x)-\sin^2(x) \\
+&= 2\cos^2(x)-1 \\
+&= 1-2 \sin^2(x)
+\end{aligned}
+
+\]</div>
+<p><strong>3.</strong></p>
+<div class="math">
+\[\tan(2u) = \frac{2\tan(u)}{1-\tan^2(u)}
+
+\]</div>
+</section>
+<section id="helmingunarformulur">
+<h4><span class="section-number">12.3.5.7. </span>Helmingunarformúlur<a class="headerlink" href="#helmingunarformulur" title="Permalink to this heading"></a></h4>
+<p><strong>1.</strong></p>
+<div class="math">
+\[\sin^2(u) = \frac{1- \cos(2u)}{2} \qquad \text{eða} \qquad \sin\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1- \cos(u)}{2} }
+
+\]</div>
+<p><strong>2.</strong></p>
+<div class="math">
+\[\cos^2(u) = \frac{1+ \cos(2u)}{2} \qquad \text{eða} \qquad \cos\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1+ \cos(u)}{2} }
+
+\]</div>
+<p><strong>3.</strong></p>
+<div class="math">
+\[\tan^2(u) = \frac{1- \cos(2u)}{1+\cos(2u)} \qquad \text{eða} \qquad \tan\left(\frac{u}{2}\right) = \pm \sqrt{\frac{1- \cos(u)}{1+\cos(u)} }
+
+\]</div>
+</section>
+<section id="summu-og-margfeldisformulur">
+<h4><span class="section-number">12.3.5.8. </span>Summu- og margfeldisformúlur<a class="headerlink" href="#summu-og-margfeldisformulur" title="Permalink to this heading"></a></h4>
+<p><strong>Margfeldisritháttur í summurithátt</strong></p>
+<blockquote>
+<div><p><strong>1.</strong></p>
+<div class="math">
+\[\sin(u)\sin(v) = \frac{1}{2}\left(\cos(u-v) - \cos(u+v)\right)
+
+\]</div>
+<p><strong>2.</strong></p>
+<div class="math">
+\[\cos(u)\cos(v) = \frac{1}{2}\left(\cos(u-v) + \cos(u+v)\right)
+
+\]</div>
+<p><strong>3.</strong></p>
+<div class="math">
+\[\sin(u)\cos(v) = \frac{1}{2}\left(\sin(u+v) + \sin(u-v)\right)
+
+\]</div>
+<p><strong>4.</strong></p>
+<div class="math">
+\[\cos(u)\sin(v) = \frac{1}{2}\left(\sin(u+v) - \sin(u-v)\right)
+
+\]</div>
+</div></blockquote>
+<p><strong>Summuritháttur í margfeldisrithátt</strong></p>
+<blockquote>
+<div><p><strong>1.</strong></p>
+<div class="math">
+\[\sin(u) + \sin(v) = 2\sin\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)
+
+\]</div>
+<p><strong>2.</strong></p>
+<div class="math">
+\[\sin(u) - \sin(v) = 2\cos\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)
+
+\]</div>
+<p><strong>3.</strong></p>
+<div class="math">
+\[\cos(u) + \cos(v) = 2\cos\left(\frac{u+v}{2}\right)\cos\left(\frac{u-v}{2}\right)
+
+\]</div>
+<p><strong>4.</strong></p>
+<div class="math">
+\[\cos(u) - \cos(v) = -2\sin\left(\frac{u+v}{2}\right)\sin\left(\frac{u-v}{2}\right)
+
+\]</div>
+</div></blockquote>
+</section>
+<section id="kosinusreglan">
+<h4><span class="section-number">12.3.5.9. </span>Kósínusreglan<a class="headerlink" href="#kosinusreglan" title="Permalink to this heading"></a></h4>
+<p>Í <span class="math">\(\triangle ABC\)</span> gildir</p>
+<div class="math">
+\[\begin{aligned}
+a^2 &= b^2+c^2-2\cdot b \cdot c \cdot \cos(A) \\
+b^2 &= a^2+c^2-2\cdot a \cdot c \cdot \cos(B) \\
+c^2 &= b^2+a^2-2\cdot b \cdot a \cdot \cos(C) \\
+\end{aligned}
+
+\]</div>
+</section>
+<section id="sinusreglan">
+<h4><span class="section-number">12.3.5.10. </span>Sínusreglan<a class="headerlink" href="#sinusreglan" title="Permalink to this heading"></a></h4>
+<p>Í <span class="math">\(\triangle ABC\)</span> gildir</p>
+<div class="math">
+\[\frac{a}{\sin(A)} = \frac{b}{\sin(B)} = \frac{c}{\sin(C)}
+
+\]</div>
+<p>Þar sem <span class="math">\(A\)</span>, <span class="math">\(B\)</span> og <span class="math">\(C\)</span> eru horn þríhyrningsins og <span class="math">\(a\)</span>, <span class="math">\(b\)</span> og <span class="math">\(c\)</span> eru lengdir hliðanna</p>
+</section>
+</section>
+<section id="vigrar">
+<h3><span class="section-number">12.3.6. </span>Vigrar<a class="headerlink" href="#vigrar" title="Permalink to this heading"></a></h3>
+<section id="reiknireglur">
+<h4><span class="section-number">12.3.6.1. </span>Reiknireglur<a class="headerlink" href="#reiknireglur" title="Permalink to this heading"></a></h4>
+<div class="math">
+\[\begin{aligned}
+& |\bar{a}| = a = \sqrt{a_x^2 + a_y^2 + a_z^2} \\
+\qquad \\
+& \bar{a} + \bar{b} = (a_x+b_x, a_y+b_y, a_z+b_z) \\
+\qquad \\
+& c \cdot \bar{v} = (c \cdot v_x, c \cdot v_y, c \cdot v_z) \\
+\qquad \\
+& \bar{a} \cdot \bar{b} = a b \cos{\phi} \\
+\qquad \\
+& \bar{a} \times \bar{b} = (a_y b_z - a_z b_y)\hat{\imath} + (a_z b_x - a_x b_z)\hat{\jmath} + (a_x b_y - a_y b_x)\hat{k} \\
+\qquad \\
+& \bar{a} \times \bar{b} = - \bar{b} \times \bar{a}
+\end{aligned}
+
+\]</div>
+</section>
+</section>
+<section id="markgildi">
+<h3><span class="section-number">12.3.7. </span>Markgildi<a class="headerlink" href="#markgildi" title="Permalink to this heading"></a></h3>
+<section id="reiknireglur-fyrir-markgildi">
+<h4><span class="section-number">12.3.7.1. </span>Reiknireglur fyrir markgildi<a class="headerlink" href="#reiknireglur-fyrir-markgildi" title="Permalink to this heading"></a></h4>
+<p>Gerum ráð fyrir að <span class="math">\(f\)</span> og <span class="math">\(g\)</span> séu föll og að <span class="math">\(c\in \mathbb{R} \cup\{-\infty,\infty\}\)</span>
+Gerum ráð fyrir að bæði markgildin</p>
+<div class="math">
+\[\lim_{x\to c}f(x)\qquad \text{og}\qquad \lim_{x\to c}g(x)
+
+\]</div>
+<p>séu skilgreind og að hvorugt þeirra sé jafnt plús eða mínus óendanlegu.
+Gerum ráð fyrir að <span class="math">\(k\in\mathbb{R}\)</span> sé fasti.
+Þá gildir:</p>
+<div class="math">
+\[\begin{aligned}
+1. & \qquad \lim_{x\to c}k=k \\
+2. & \qquad \lim_{x\to c} \left(kf(x) \right)=k \cdot \left(\lim_{x\to c}f(x)\right) \\
+3. & \qquad \lim_{x\to c} \left(f(x)+g(x)\right)=\lim_{x\to c}f(x)+\lim_{x\to c}g(x) \\
+4. & \qquad \lim_{x\to c} \left(f(x)-g(x)\right)=\lim_{x\to c}f(x)-\lim_{x\to c}g(x) \\
+5. & \qquad \lim_{x\to c} \left(f(x)\cdot g(x)\right)= \left( \lim_{x\to c}f(x) \right)\cdot \left(\lim_{x\to c}g(x) \right) \\
+6. & \qquad \lim_{x\to c} \left( \frac{f(x)}{g(x)} \right)=\frac{\lim_{x\to c}f(x)}{\lim_{x\to c}g(x)} \qquad \text{ef} \qquad \lim_{x\to c}g(x)\not=0 \\
+\end{aligned}
+
+\]</div>
+</section>
+</section>
+<section id="diffrun">
+<h3><span class="section-number">12.3.8. </span>Diffrun<a class="headerlink" href="#diffrun" title="Permalink to this heading"></a></h3>
+<section id="id1">
+<h4><span class="section-number">12.3.8.1. </span>Reiknireglur<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Gerum ráð fyrir að <span class="math">\(f,g\)</span> séu deildanleg föll á <span class="math">\(\mathbb{R}\)</span>.</p>
+<p>Látum <span class="math">\(a\in \mathbb{R}\)</span> vera fasta.</p>
+<p>Þá gildir:</p>
+<ol class="arabic simple">
+<li><p><span class="math">\((a\cdot f)'=af'\)</span></p></li>
+<li><p><span class="math">\((f+g)'=f'+g'\)</span></p></li>
+<li><p><span class="math">\((f-g)'=f'-g'\)</span></p></li>
+<li><p><span class="math">\((f\cdot g)'=f'g+fg'\)</span></p></li>
+<li><p><span class="math">\((f\circ g)'=(f'\circ g)\cdot g'\)</span></p></li>
+</ol>
+<p>Ef <span class="math">\(g(x)\)</span> er ekki jafnt núlli fyrir öll <span class="math">\(x\in I\)</span>, þá gildir einnig:</p>
+<ol class="arabic simple" start="6">
+<li><p><span class="math">\(\left(\frac{1}{g}\right)'=\frac{-g'}{g^2}\)</span></p></li>
+<li><p><span class="math">\(\left(\frac{f}{g}\right)'=\frac{f'g-fg'}{g^2}\)</span></p></li>
+</ol>
+<p>Ef <span class="math">\(f\)</span> er andhverfanlegt gildir einnig:</p>
+<ol class="arabic simple" start="8">
+<li><p>Ef <span class="math">\(f(x_0)=y_0\)</span> þá er <span class="math">\((f^{-1})'\circ f=\frac{1}{f'}\)</span></p></li>
+</ol>
+</section>
+<section id="ekktar-afleiur">
+<h4><span class="section-number">12.3.8.2. </span>Þekktar afleiður<a class="headerlink" href="#ekktar-afleiur" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Ef <span class="math">\(a\)</span> er fasti og <span class="math">\(f(x)=a\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x)=0
+
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Ef <span class="math">\(n\in \mathbb{R}\setminus\{0\}\)</span> og <span class="math">\(f(x)=x^n\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x)=nx^{n-1}
+
+\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Ef <span class="math">\(a\in \mathbb{R}_+\)</span> og <span class="math">\(f(x)=a^x\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x)=\ln(a)a^x
+
+\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Ef <span class="math">\(a\in \mathbb{R}_+\)</span> og <span class="math">\(f(x)=\log_a(x)\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x)=\frac{1}{\ln(a)x}
+
+\]</div>
+<ol class="arabic simple" start="5">
+<li><p>Ef <span class="math">\(f(x) = \ln(x)\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x) = \frac{1}{x}
+
+\]</div>
+<ol class="arabic simple" start="6">
+<li><p>Ef <span class="math">\(f(x) = e^x\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x) = e^x
+
+\]</div>
+<ol class="arabic simple" start="7">
+<li><p>Ef <span class="math">\(f(x)=\cos(x)\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x)=-\sin(x)
+
+\]</div>
+<ol class="arabic simple" start="8">
+<li><p>Ef <span class="math">\(f(x)=\sin(x)\)</span> þá er</p></li>
+</ol>
+<div class="math">
+\[f'(x)=\cos(x)
+
+\]</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../kafli11/" class="btn btn-neutral" title="11. Diffrun" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <script>
+        window.addEventListener("load", function() {
+            for (var i in ggbAppletId) {
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+      
+    <style>
+        /* Sidebar header (and topbar for mobile) */
+        
+        .wy-side-nav-search,
+        .wy-nav-top {
+            background: #10099F;
+        }
+        /* Sidebar */
+        
+        .wy-nav-side {
+            background: #262626;
+        }
+    </style>
+
+
+</body>
+</html>

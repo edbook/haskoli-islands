@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11. Tvíkosta aðhvarfsgreining &mdash; Tölfræði frá grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="Töflur" href="../toflur_all_final/" />
+    <link rel="prev" title="10. Aðhvarfsgreining" href="../kafli10/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Aðhvarfsgreining</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Tvíkosta aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tvikosta-ahvarfsgreiningarlikani">11.1. Tvíkosta aðhvarfsgreiningarlíkanið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">11.1.1. Tvíkosta aðhvarfsgreiningarlíkanið</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tengifall-link-function">11.1.1.1. Tengifall (link function)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tvikosta-ahvarfsgreiningarlikani-logistic-regression-model">11.1.1.2. Tvíkosta aðhvarfsgreiningarlíkanið (logistic regression model)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu">11.2. Tvíkosta aðhvarfsgreining með samfelldri skýribreytu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">11.2.1. Tvíkosta aðhvarfsgreining með samfelldri skýribreytu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tvikosta-ahvarf-me-samfelldri-skyribreytu-logistic-regression-with-a-continuous-explanatory-variable">11.2.1.1. Tvíkosta aðhvarf með samfelldri skýribreytu (logistic regression with a continuous explanatory variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu">11.2.1.2. Sýnidæmi: Tvíkosta aðhvarfsgreining með samfelldri skýribreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tvikosta-ahvarfsgreining-me-strjalli-skyribreytu">11.3. Tvíkosta aðhvarfsgreining með strjálli skýribreytu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">11.3.1. Tvíkosta aðhvarfsgreining með strjálli skýribreytu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tvikosta-ahvarf-me-strjalli-skyribreytu-logistic-regression-with-a-discrete-explanatory-variable">11.3.1.1. Tvíkosta aðhvarf með strjálli skýribreytu (logistic regression with a discrete explanatory variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-tvikosta-ahvarfsgreining-me-strjalli-skyribreytu">11.3.1.2. Sýnidæmi: Tvíkosta aðhvarfsgreining með strjálli skýribreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#likur-i-tvikosta-ahvarfsgreiningu">11.4. Líkur í tvíkosta aðhvarfsgreiningu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">11.4.1. Líkur í tvíkosta aðhvarfsgreiningu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tvikosta-ahvarf-og-likur-logistic-regression-and-probability">11.4.1.1. Tvíkosta aðhvarf og líkur (logistic regression and probability)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-samfelldri-skyribreytu">11.4.1.2. Sýnidæmi: Líkur í tvíkosta aðhvarfsgreiningu með samfelldri skýribreytu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-strjalli-skyribreytu">11.4.1.3. Sýnidæmi: Líkur í tvíkosta aðhvarfsgreiningu með strjálli skýribreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../toflur_all_final/">Töflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svor_final/">Svör við dæmum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thakkir/">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Tvíkosta aðhvarfsgreining</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli11.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tvikosta-ahvarfsgreining">
+<span id="c-tvikostaadhvarfsgreining"></span><h1><span class="section-number">11. </span>Tvíkosta aðhvarfsgreining<a class="headerlink" href="#tvikosta-ahvarfsgreining" title="Permalink to this heading"></a></h1>
+<p>Í kafla <a class="reference internal" href="../kafli10/#c-adhvarfsgreining"><span class="std std-numref">10</span></a> kynntumst við því hvernig línuleg
+aðhvarfsgreining er framkvæmd til að kanna samband svarbreytu og
+skýribreytu hennar. Línulegri aðhvarfsgreiningu má einungis beita þegar
+svarbreytan er samfelld en er ekki boðleg þegar svarbreytan er mjög
+strál. Hins vegar er afar algengt að verkefni okkar fjalli um strjálar
+svarbreytur og þá sérstaklega <em>tvíkosta</em> breytur (e. binary variables),
+en svo kallast breytur sem taka einungis tvö gildi. Í þeim tilvikum
+kemur <em>tvíkosta aðhvarfsgreining</em> (e. logistic regression) til bjargar.</p>
+<p>Við byrjum á að kynnast fræðilegri undirstöðu tvíkosta
+aðhvarfsgreiningarlíkansins og þá sérstaklega ákveðið <em>tengifall</em> (e. link
+function) sem á ensku kallast the logit function í kafla <a class="reference internal" href="#c-logit"><span class="std std-numref">11.1</span></a>.
+Í kafla <a class="reference internal" href="#c-logitstrjal"><span class="std std-numref">11.3</span></a> munum við framkvæma tvíkosta
+aðhvarfsgreiningu þar sem skýribreytan er líka strjál og sjá hvernig
+gagnlíkindahlutföll skjótast út úr líkaninu. Í kafla
+<a class="reference internal" href="#c-logitsamfelld"><span class="std std-numref">11.2</span></a> munum við gera slíkt hið sama fyrir samfelldar
+skýribreytur. Að lokum verður fjallað um hvernig reikna má líkur út frá
+metnum stikum í tvíkosta aðhvarfsgreiningarlíkani í kafla
+<a class="reference internal" href="#c-logitlikur"><span class="std std-numref">11.4</span></a>.</p>
+<section id="tvikosta-ahvarfsgreiningarlikani">
+<span id="c-logit"></span><h2><span class="section-number">11.1. </span>Tvíkosta aðhvarfsgreiningarlíkanið<a class="headerlink" href="#tvikosta-ahvarfsgreiningarlikani" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">11.1.1. </span>Tvíkosta aðhvarfsgreiningarlíkanið<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Í tvíkosta aðhvarfsgreiningu gerum við ráð fyrir að gildin tvö sem
+svarbreytan getur tekið séu gildin 0 og 1, þ.e.a.s. talan núll stendur
+fyrir annan möguleikann en talan einn hinn. Til samanburðar gat
+svarbreytan í línulegri aðhvarfsgreiningu tekið hvaða gildi sem er. Í
+línulegri aðhvarfsgreiningu lýstum við sambandi svarbreytu og
+skýribreytu með jöfnu beinnar línu, <span class="math notranslate nohighlight">\(y = \beta_0 + \beta_1 x\)</span>
+(jafna <a class="reference internal" href="../kafli04/#equation-eq-jafnabeinnarlinu">4.10</a>). Sú framsetning er hins vegar ótæk
+þegar útkoman er tvíkosta, því þá eru útkomurnar víðsfjarri því að detta
+á beina línu, gildið á <span class="math notranslate nohighlight">\(y\)</span> ás er annað hvort núll eða einn og
+ekkert þar á milli.</p>
+<p>Ein leið til að brúa þetta bil er með aðstoð svokallaðs <em>tengifalls</em> (e.
+link funcion). Algengast er að nota ákveðið tengifall sem á ensku
+kallast logistic fallið en ekki hefur gengið vel að þýða á íslensku.</p>
+<section id="tengifall-link-function">
+<h4><span class="section-number">11.1.1.1. </span>Tengifall (link function)<a class="headerlink" href="#tengifall-link-function" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Tengifallið</p>
+<div class="math notranslate nohighlight" id="equation-eq-tengifall">
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-eq-tengifall" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[p(t) = \frac{e^t}{1+e^t}\]</div>
+<p>varpar hvaða tölu sem er yfir í gildi á milli 0 og 1. Andhverfa þess er</p>
+<div class="math notranslate nohighlight" id="equation-eq-logit">
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-eq-logit" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[g(p) = \log \left( \frac{p}{1-p} \right)\]</div>
+</div>
+<hr class="docutils" />
+<p>Með aðstoð tengifallsins opnast nýr möguleiki, með því að stinga
+útkomunni úr aðhvarfslínunni inn í tengifallið tryggjum við að útkoman
+verði á milli 0 og 1. Þannig getum við notað aðhvarfsgreiningu til að
+meta <em>líkurnar</em> á að svarbreytan okkar taki gildið 1. Á þessu byggir
+tvíkosta aðhvarfsgreining.</p>
+</section>
+<section id="tvikosta-ahvarfsgreiningarlikani-logistic-regression-model">
+<span id="em-tvikostaadhvarf"></span><h4><span class="section-number">11.1.1.2. </span>Tvíkosta aðhvarfsgreiningarlíkanið (logistic regression model)<a class="headerlink" href="#tvikosta-ahvarfsgreiningarlikani-logistic-regression-model" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Tvíkosta aðhvarfsgreiningarlíkanið er</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvikostaadhvarf">
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-eq-tvikostaadhvarf" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\log \left( \frac{p}{1-p} \right)  = \beta_0 + \beta_1 x + \varepsilon\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(p\)</span> eru líkurnar á því að svarbreytan taki gildið 1.</p>
+</div>
+<hr class="docutils" />
+<p>Takið eftir því að á vinstri hlið jöfnu <a class="reference internal" href="#equation-eq-tvikostaadhvarf">11.3</a> stendur
+lógarithminn af stærðinni <span class="math notranslate nohighlight">\(\frac{p}{1-p}\)</span> sem er einmitt
+gagnlíkindin á því að svarbreytan taki gildið 1. Gagnlíkindum kynntumst
+við í kassa <a class="reference internal" href="../kafli04/#em-gagnlikindi"><span class="std std-numref">4.5.2.1</span></a> í kafla <a class="reference internal" href="../kafli04/#ss-gagnlikindahlutfall"><span class="std std-numref">4.5.2</span></a>.</p>
+</section>
+</section>
+</section>
+<section id="tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu">
+<span id="c-logitsamfelld"></span><h2><span class="section-number">11.2. </span>Tvíkosta aðhvarfsgreining með samfelldri skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">11.2.1. </span>Tvíkosta aðhvarfsgreining með samfelldri skýribreytu<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<section id="tvikosta-ahvarf-me-samfelldri-skyribreytu-logistic-regression-with-a-continuous-explanatory-variable">
+<span id="em-logsamfelld"></span><h4><span class="section-number">11.2.1.1. </span>Tvíkosta aðhvarf með samfelldri skýribreytu (logistic regression with a continuous explanatory variable)<a class="headerlink" href="#tvikosta-ahvarf-me-samfelldri-skyribreytu-logistic-regression-with-a-continuous-explanatory-variable" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Gerum ráð fyrir að sambandi skýribreytunnar <span class="math notranslate nohighlight">\(x\)</span> og því svarbreyta
+taki gildið 1 megi lýsa með tvíkosta aðhvarfsgreiningarlíkaninu</p>
+<div class="math notranslate nohighlight">
+\[\log \left( \frac{p}{1-p} \right)  = \beta_0 + \beta_1 x + \varepsilon\]</div>
+<p>Þá er gagnlíkindahlutfallið á því að svarbreytan taki gildið 1 fyrir
+hverja <span class="math notranslate nohighlight">\(a\)</span> eininga hækkun á skýribreytunni metið með
+<span class="math notranslate nohighlight">\(e^{\hat \beta_1 a}\)</span>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu">
+<h4><span class="section-number">11.2.1.2. </span>Sýnidæmi: Tvíkosta aðhvarfsgreining með samfelldri skýribreytu<a class="headerlink" href="#synidaemi-tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Jói kannar hvort nemendur sem stunda mikla líkamsrækt séu líklegri til
+að reykja heldur en þeir sem stunda litla líkamsrækt. Hann metur
+tvíkosta aðhvarfsgreiningarlíkan til að kanna sambandið þar sem
+skýribreytan er fjöldi klukkustunda sem nemendur stunda líkamsrækt á
+viku. Hann mat stuðlana sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat \beta_0 &amp;= -1.7428, \\
+\hat \beta_1 &amp;= -0.1164 \end{aligned}\end{split}\]</div>
+<p>Hvert er gagnlíkindahlutfall þess að nemandi sem stundar líkamsrækt í 8
+klukkustundir á viku reyki sígarettur á móti þeim sem stundar líkamsrækt
+í 5 klukkustundir á viku?</p>
+<p>Fyrri nemandinn stundar <span class="math notranslate nohighlight">\(8-5 = 3\)</span> klukkustundum meiri líkamsrækt í
+viku heldur en sá seinni. Því er gagnlíkindahlutfall þess að hann reyki
+á móti hinum nemandanum gefið með</p>
+<div class="math notranslate nohighlight">
+\[e^{\hat \beta_1} = e^{-0.1164 \cdot 3 } =  e^{-0.3492 } = 0.7052521\]</div>
+<p>Þar sem gagnlíkindahlutfallið er minna en einn minnka líkurnar á því að
+nemendur reyki eftir því sem þeir stunda meiri líkamsrækt.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="tvikosta-ahvarfsgreining-me-strjalli-skyribreytu">
+<span id="c-logitstrjal"></span><h2><span class="section-number">11.3. </span>Tvíkosta aðhvarfsgreining með strjálli skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-strjalli-skyribreytu" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">11.3.1. </span>Tvíkosta aðhvarfsgreining með strjálli skýribreytu<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Þegar skýribreyta tvíkostaaðhvarfsgreiningarlíkans er strál er litið á
+einn flokk breytunnar sem viðmiðunarflokk en stuðlar líkansins meta
+frávik frá þessum viðmiðunarflokki.</p>
+<section id="tvikosta-ahvarf-me-strjalli-skyribreytu-logistic-regression-with-a-discrete-explanatory-variable">
+<span id="em-logstrjal"></span><h4><span class="section-number">11.3.1.1. </span>Tvíkosta aðhvarf með strjálli skýribreytu (logistic regression with a discrete explanatory variable)<a class="headerlink" href="#tvikosta-ahvarf-me-strjalli-skyribreytu-logistic-regression-with-a-discrete-explanatory-variable" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Gerum ráð fyrir að sambandi skýribreytunnar <span class="math notranslate nohighlight">\(x\)</span> og því svarbreyta
+taki gildið 1 megi lýsa með tvíkosta aðhvarfsgreiningarlíkaninu</p>
+<div class="math notranslate nohighlight">
+\[\log \left( \frac{p}{1-p} \right)  = \beta_0 + \beta_a I_{x=a} + \varepsilon\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(I_{x=a}\)</span> er 1 ef <span class="math notranslate nohighlight">\(x=a\)</span> en núll annars. Þá er
+gagnlíkindahlutfallið á því að svarbreytan taki gildið 1 þegar
+skýribreytan <span class="math notranslate nohighlight">\(x\)</span> tekur gildið <span class="math notranslate nohighlight">\(a\)</span> á móti því þegar hún tekur
+viðmiðunargildið metið með <span class="math notranslate nohighlight">\(e^{\hat \beta_a}\)</span>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-tvikosta-ahvarfsgreining-me-strjalli-skyribreytu">
+<h4><span class="section-number">11.3.1.2. </span>Sýnidæmi: Tvíkosta aðhvarfsgreining með strjálli skýribreytu<a class="headerlink" href="#synidaemi-tvikosta-ahvarfsgreining-me-strjalli-skyribreytu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Guðný kannar hvort nemendur sem drekka áfengi séu líklegri til að reykja
+heldur en þeir sem ekki drekka áfengi. Hún metur tvíkosta
+aðhvarfsgreiningarlíkan til að kanna sambandið og metur gildi stuðlanna
+sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat \beta_0 &amp;= -4.248, \\
+\hat \beta_a &amp;= 2.235 \end{aligned}\end{split}\]</div>
+<p>Þeir nemendur sem ekki drukku áfengi töldust til viðmiðunarflokksins.
+Hvert er gagnlíkindahlutfall þess að nemandi sem drekkur áfengi reyki
+sígarettur á móti þeim sem ekki drekkur áfengi?</p>
+<p>Gagnlíkindahlutfall þess að nemandi sem drekkur áfengi reyki sígarettur
+á móti þeim sem ekki drekkur áfengi er gefið með</p>
+<div class="math notranslate nohighlight">
+\[e^{\hat \beta_a} = e^{2.235} = 9.346482\]</div>
+<p>Þar sem gagnlíkindahlutfallið er stærra en einn eru nemendur sem drekka
+áfengi líklegri til að reykja heldur en þeir sem ekki drekka áfengi.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="likur-i-tvikosta-ahvarfsgreiningu">
+<span id="c-logitlikur"></span><h2><span class="section-number">11.4. </span>Líkur í tvíkosta aðhvarfsgreiningu<a class="headerlink" href="#likur-i-tvikosta-ahvarfsgreiningu" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">11.4.1. </span>Líkur í tvíkosta aðhvarfsgreiningu<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<section id="tvikosta-ahvarf-og-likur-logistic-regression-and-probability">
+<h4><span class="section-number">11.4.1.1. </span>Tvíkosta aðhvarf og líkur (logistic regression and probability)<a class="headerlink" href="#tvikosta-ahvarf-og-likur-logistic-regression-and-probability" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Gerum ráð fyrir að sambandi skýribreytunnar <span class="math notranslate nohighlight">\(x\)</span> og því svarbreyta
+taki gildið 1 megi lýsa með tvíkosta aðhvarfsgreiningarlíkaninu</p>
+<div class="math notranslate nohighlight">
+\[\log \left( \frac{p}{1-p} \right)  = \beta_0 + \beta_1 x + \varepsilon\]</div>
+<p>Þá eru líkurnar á því að svarbreytan taki gildið 1 þegar gildi
+skýribreytunnar er <span class="math notranslate nohighlight">\(x\)</span> eru gefnar með</p>
+<div class="math notranslate nohighlight" id="equation-eq-logitlikur">
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-eq-logitlikur" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat p = \frac{e^{\hat \beta_0 + \hat \beta_1 x}}{1 + e^{\hat \beta_0 + \hat \beta_1 x }}\]</div>
+<p>ef skýribreytan er samfelld en</p>
+<div class="math notranslate nohighlight" id="equation-eq-logitlikurstrjal">
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-eq-logitlikurstrjal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat p = \frac{e^{\hat \beta_0 + \hat \beta_a I_{x=a}}}{1 + e^{\hat \beta_0 + \hat \beta_a I_{x=a} }}\]</div>
+<p>ef skýribreytan er strjál.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-samfelldri-skyribreytu">
+<h4><span class="section-number">11.4.1.2. </span>Sýnidæmi: Líkur í tvíkosta aðhvarfsgreiningu með samfelldri skýribreytu<a class="headerlink" href="#synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-samfelldri-skyribreytu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Jói kannar hvort nemendur sem stunda mikla líkamsrækt séu líklegri til
+að reykja heldur en þeir sem stunda litla líkamsrækt. Hann metur
+tvíkosta aðhvarfsgreiningarlíkan til að kanna sambandið þar sem
+skýribreytan er fjöldi klukkustunda sem nemendur stunda líkamsrækt á
+viku. Hann mat stuðlana sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat \beta_0 &amp;= -1.7428, \\
+\hat \beta_1 &amp;= -0.1164 \end{aligned}\end{split}\]</div>
+<p>Hverjar eru líkur þess að nemandi sem stundar líkamsrækt í 8
+klukkustundir á viku reyki sígarettur? En nemanda sem stundar líkamsrækt
+í 5 klukkustundir á viku?</p>
+<p>Líkur þess að nemandi sem stundar líkamsrækt í 8 klukkustundir á viku
+reyki sígarettur eru gefnar með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat p &amp;= \frac{e^{\hat \beta_0 + \hat \beta_1 \cdot 8}}{1 + e^{\hat \beta_0 + \hat \beta_1 \cdot 8 }} \\
+&amp;= \frac{e^{ -1.7428  -0.1164  \cdot 8}}{1 + e^{ -1.7428  -0.1164   \cdot 8}} \\
+&amp;=  0.0645251 \end{aligned}\end{split}\]</div>
+<p>Líkur þess að nemandi sem stundar líkamsrækt í 5 klukkustundir á viku
+reyki sígarettur eru gefnar með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat p &amp;= \frac{e^{\hat \beta_0 + \hat \beta_1 \cdot 5}}{1 + e^{\hat \beta_0 + \hat \beta_1 \cdot 5 }} \\
+&amp;= \frac{e^{ -1.7428  -0.1164  \cdot 5}}{1 + e^{ -1.7428  -0.1164   \cdot 5}}\\
+&amp;=  0.08908976 \end{aligned}\end{split}\]</div>
+</div>
+</section>
+<section id="synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-strjalli-skyribreytu">
+<h4><span class="section-number">11.4.1.3. </span>Sýnidæmi: Líkur í tvíkosta aðhvarfsgreiningu með strjálli skýribreytu<a class="headerlink" href="#synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-strjalli-skyribreytu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Guðný kannar hvort nemendur sem drekka áfengi séu líklegri til að reykja
+heldur en þeir sem ekki drekka áfengi. Hún metur tvíkosta
+aðhvarfsgreiningarlíkan til að kanna sambandið og metur gildi stuðlanna
+sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat \beta_0 &amp;= -4.248, \\
+\hat \beta_a &amp;= 2.235 \end{aligned}\end{split}\]</div>
+<p>Þeir nemendur sem ekki drukku áfengi töldust til viðmiðunarflokksins.
+Hverjar eru líkur þess að nemandi sem drekkur áfengi reyki sígarettur?
+Hverjar eru líkurnar á því að nemandi sem drekkur ekki áfengi reyki
+sígarettur</p>
+<p>Líkur þess að nemandi sem drekkur áfengi reyki sígarettur eru gefnar með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat p &amp;= \frac{e^{\hat \beta_0 + \hat \beta_a I_{x=a}}}{1 + e^{\hat \beta_0 + \hat \beta_a I_{x=a} }} \\
+&amp;= \frac{e^{-4.248 + 2.235}}{1 + e^{-4.248 + 2.235}} \\
+&amp;=  0.1178447 \end{aligned}\end{split}\]</div>
+<p>Þar sem nemendur sem drekka ekki áfengi tilheyra viðmiðunarhópnum er <span class="math notranslate nohighlight">\(I_{x=a}=0\)</span> og því eru
+líkur þess að þeir reyki sígarettur gefnar með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\hat p &amp;= \frac{e^{\hat \beta_0 }}{1 + e^{\hat \beta_0  }} \\
+&amp;= \frac{e^{-4.248 }}{1 + e^{-4.248 }} \\
+&amp;=  0.01409139 \end{aligned}\end{split}\]</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli10/" class="btn btn-neutral float-left" title="10. Aðhvarfsgreining" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../toflur_all_final/" class="btn btn-neutral float-right" title="Töflur" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

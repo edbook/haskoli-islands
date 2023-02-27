@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Myndræn framsetning &mdash; Tölfræði frá grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="4. Lýsandi tölfræði" href="../kafli04/" />
+    <link rel="prev" title="2. Frá tilraun til gagna" href="../kafli02/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Myndræn framsetning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#stoplarit-og-kokurit">3.1. Stöplarit og kökurit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stoplarit">3.1.1. Stöplarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stoplarit-bar-chart">3.1.1.1. Stöplarit (bar chart)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-stoplarit">3.1.1.2. Sýnidæmi: Stöplarit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#kokurit">3.1.2. Kökurit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kokurit-pie-chart">3.1.2.1. Kökurit (pie chart)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-kokurit">3.1.2.2. Sýnidæmi: Kökurit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#stularit">3.2. Stuðlarit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ss-studlarit">3.2.1. Stuðlarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#stularit-histogram">3.2.1.1. Stuðlarit (histogram)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-stularit">3.2.1.2. Sýnidæmi: Stuðlarit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#logun-stularita-og-utlagar">3.2.2. Lögun stuðlarita og útlagar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logun-dreifinga-shape-of-distributions">3.2.2.1. Lögun dreifinga (Shape of distributions)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utlagar-outliers">3.2.2.2. Útlagar (Outliers)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kassarit">3.3. Kassarit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3.3.1. Kassarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kassarit-boxplot">3.3.1.1. Kassarit (Boxplot)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-kassarit">3.3.1.2. Sýnidæmi: Kassarit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ast-iqr-reglan-fyrir-utlaga">3.3.2. 1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan fyrir útlaga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.3.2.1. 1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan fyrir útlaga</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ast-iqr-reglan-og-kassarit">3.3.3. 1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan og kassarit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#punktarit">3.4. Punktarit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.4.1. Punktarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#punktarit-scatter-plot">3.4.1.1. Punktarit (scatter plot)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-punktarit">3.4.1.2. Sýnidæmi: Punktarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-punktarit-me-flokkabreytu">3.4.1.3. Sýnidæmi: Punktarit með flokkabreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#daemi">3.5. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.5.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3.5.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">3.5.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">3.5.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">3.5.5. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../toflur_all_final/">Töflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svor_final/">Svör við dæmum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thakkir/">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Myndræn framsetning</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli03.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="myndraen-framsetning">
+<span id="c-myndraenframsetning"></span><h1><span class="section-number">3. </span>Myndræn framsetning<a class="headerlink" href="#myndraen-framsetning" title="Permalink to this heading"></a></h1>
+<p>Ein mynd segir meira en þúsund orð. Þau eru vandfundin fræði þar sem
+þessi setning á betur við en í tölfræði. Sama hvert markmið
+rannsóknarinnar er, og hvers eðlis gögnin eru, er það nánast
+ófrávíkjanleg regla að fyrsta skref í tölfræðiúrvinnslu ætti ætíð að
+vera að skoða gögnin myndrænt. Í þessum kafla ætlum við að skoða
+algengustu tegundir grafa sem notuð eru við myndræna framsetningu gagna.</p>
+<p>Kjarni tölfræðiúrvinnslu er að átta sig sem best á eðli mælinganna sem
+skoðaðar eru. Þar eru hugtök eins og breytileiki gagnanna lykilatriði.
+Hversu mikinn mun sjáum við á útkomum viðfangsefna okkar? Hvernig
+dreifast útkomurnar? Þetta köllum við einfaldlega dreifingu mælinganna
+en myndræn framsetning er ein besta leiðin til að átta sig á dreifingu
+mælinganna.</p>
+<p>Í kafla <a class="reference internal" href="#s-myndraenastrjalumbreytum"><span class="std std-numref">3.1</span></a> skoðum við algengustu tegundir
+grafa fyrir strjálar breytur, stöplarit og kökurit. Þar á eftir, í
+köflum <a class="reference internal" href="#s-myndraenasamfelldumbreytum"><span class="std std-numref">3.2</span></a> og <a class="reference internal" href="#s-kassarit"><span class="std std-numref">3.3</span></a>, taka
+við algengustu tegundir grafa fyrir samfelldar breytur, stuðlarit og
+kassarit. Að lokum fjöllum við um punktarit í kafla <a class="reference internal" href="#s-punktarit"><span class="std std-numref">3.4</span></a>
+en með þeim er gott að átta sig á sambandi tveggja samfelldra breyta.</p>
+<section id="stoplarit-og-kokurit">
+<span id="s-myndraenastrjalumbreytum"></span><h2><span class="section-number">3.1. </span>Stöplarit og kökurit<a class="headerlink" href="#stoplarit-og-kokurit" title="Permalink to this heading"></a></h2>
+<p>Algengustu tegundir grafa fyrir strjálar breytur eru <em>stöplarit</em> (e. bar
+chart) og <em>kökurit</em> (e. pie chart). Kökurit eru mikið notuð í
+viðskiptaheiminum og í fjölmiðlum en eru sjaldséð í tímaritum og bókum
+um raunvísindi. Stöplarit má sjá víðsvegar og eru þau í nánast öllum
+tilfellum betur til þess fallin að sýna gildi strjállar breytu myndrænt
+en kökuritin. Skoðum nú hvernig búa má til stöplarit og kökurit.</p>
+<section id="stoplarit">
+<span id="ss-stoplarit"></span><h3><span class="section-number">3.1.1. </span>Stöplarit<a class="headerlink" href="#stoplarit" title="Permalink to this heading"></a></h3>
+<p>Stöplarit er algengasta aðferðin til að sýna gildi strjállar breytu
+myndrænt og á það jafnt við um flokkabreytur sem strjálar talnabreytur.
+Áður en hafist er handa við að teikna stöplarit er gott að setja upp
+litla töflu sem sýnir mögulegar útkomur breytunnar og hversu mörg
+viðfangsefni hljóta hverja útkomu.</p>
+<section id="stoplarit-bar-chart">
+<h4><span class="section-number">3.1.1.1. </span>Stöplarit (bar chart)<a class="headerlink" href="#stoplarit-bar-chart" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Með stöplariti teiknum við eina súlu fyrir hverja útkomu breytunnar og
+mega þær ekki liggja hvor að annarri. Hæð súlnanna sýnir tíðni eða
+hlutfall viðkomandi útkomu. Raða skal súlunum svo auðvelt sé að greina
+upplýsingarnar. Ef breytan er óröðuð flokkabreyta er súlunum oft raðað
+upp eftir stærðarröð tíðni útkomanna í hvort sem heldur vaxandi eða
+minnkandi röð. Ef breytan er röðuð flokkabreyta eða strjál talnabreyta
+er súlunum yfirleitt raðað upp í vaxandi stærðarröð útkomanna sjálfra,
+ekki tíðni þeirra.</p>
+</div>
+<hr class="docutils" />
+</section>
+<section id="synidaemi-stoplarit">
+<span id="ex-erlendirgestir"></span><h4><span class="section-number">3.1.1.2. </span>Sýnidæmi: Stöplarit<a class="headerlink" href="#synidaemi-stoplarit" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Útlendingaeftirlitið annaðist talningar á erlendum gestum til og frá
+Íslandi frá árinu 1949 til ársins 2000 og náðu talningar yfir gesti með
+millilandaflugi og skipum. Ferðamálastofa hefur tekið saman þessar tölur
+og þar má meðal annars sjá að árið 2000 var heildarfjöldi erlendra gesta
+302913. Héðinn hefur mikinn áhuga á ferðamálafræði og ákvað hann að
+skoða þessar tölur nánar. Þær sjö þjóðir sem flestir gestirnir komu frá
+voru Bandaríkin með 53637 gesti, Bretland með 45106 gesti, Danmörk með
+28456 gesti, Frakkland með 14955 gesti, Noregur með 24280 gesti, Svíþjóð
+með 29488 gesti og Þýskaland með 32664 gesti. Teiknið stöplarit sem
+sýnir mismunandi þjóðerni erlendra gesta árið 2000.</p>
+<p>Breytan sem við höfum áhuga á að skoða hér er fjöldi erlendra gesta,
+flokkuð eftir þjóðerni. Tökum nú saman upplýsingarnar í litla töflu.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Þjóðerni</p></th>
+<th class="head"><p>Fjöldi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bandaríkin</p></td>
+<td><p>53637</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bretland</p></td>
+<td><p>45106</p></td>
+</tr>
+<tr class="row-even"><td><p>Danmörk</p></td>
+<td><p>28456</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frakkland</p></td>
+<td><p>14955</p></td>
+</tr>
+<tr class="row-even"><td><p>Noregur</p></td>
+<td><p>24280</p></td>
+</tr>
+<tr class="row-odd"><td><p>Svíþjóð</p></td>
+<td><p>29488</p></td>
+</tr>
+<tr class="row-even"><td><p>Þýskaland</p></td>
+<td><p>32664</p></td>
+</tr>
+</tbody>
+</table>
+<p>Við höfum nú val um að gera stöplarit sem sýnir þessi sjö lönd eða að
+bæta við einni súlu til viðbótar sem sýnir fjölda ferðalanga frá öðrum
+löndum en þessum sjö og mun þá stöplaritið okkar sýna heildarfjölda
+erlendra gesta árið 2000. Áður en við gerum það þurfum við að reikna út
+hversu margir gestir komu frá öðrum þjóðum en þessum sjö. Við vitum að
+heildarfjöldi gesta var 302913 og því fáum við fjölda gesta frá öðrum
+löndum með að draga fjöldann frá þessum sjö frá heildarfjöldanum.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\text{Önnur lönd} &amp;= 302913 - 53637 - 45106 - 28456 - 14955 - 24280 - 29488 - 32664 \\
+&amp;= 74327\end{aligned}\end{split}\]</div>
+<p>Búum nú til tvö stöplarit sem sýna skiptingu erlendra gesta eftir
+þjóðerni. Á fyrra stöplaritinu er súlunum raðað eftir stafrófsröð en á
+því seinna eftir stærðarröð. Auðveldara er að lesa úr því sem raðað er
+eftir stærðarröð.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/barplot_erlendir_gestir.svg" /></figure>
+</div>
+<p>Við vinnum oft með gagnasöfn sem innihalda nokkrar flokkabreytur. Hægt
+er að búa til stöplarit af tveimur flokkabreytum í einu með því að nota
+mismunandi liti fyrir flokka annarrar flokkabreytunnar.</p>
+</section>
+</section>
+<section id="kokurit">
+<span id="ss-kokurit"></span><h3><span class="section-number">3.1.2. </span>Kökurit<a class="headerlink" href="#kokurit" title="Permalink to this heading"></a></h3>
+<p>Áður en hafist er handa við að teikna kökurit er gott að gera litla
+töflu sem sýnir flokka breytunnar, fjölda í hverjum flokki og hlutfall
+viðfangsefna í hverjum flokki af heildinni.</p>
+<section id="kokurit-pie-chart">
+<h4><span class="section-number">3.1.2.1. </span>Kökurit (pie chart)<a class="headerlink" href="#kokurit-pie-chart" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar búa á til kökurit er mikilvægt að allir flokkar breytunnar sem
+verið er að skoða séu með á myndinni. Fjöldi sneiða í kökuritinu ræðst
+af fjölda flokka breytunnar. Stærð sneiðarinnar ræðst af hlutfallslegum
+fjölda í viðkomandi flokki af heildinni. Gætið þess að hlutföllin séu
+samanlagt 100%. Við gerum sjaldnast kökurit í höndunum heldur notum við
+tölfræðihugbúnað til verksins.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-kokurit">
+<h4><span class="section-number">3.1.2.2. </span>Sýnidæmi: Kökurit<a class="headerlink" href="#synidaemi-kokurit" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Skoðum aftur fjölda erlendra gesta árið 2000. Bætum nú við töfluna sem
+við bjuggum til í dæmi <a class="reference internal" href="#ex-erlendirgestir"><span class="std std-numref">3.1.1.2</span></a> hlutfall gesta í hverjum
+flokki fyrir sig og fjölda gesta frá öðrum löndum.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Þjóðerni</p></th>
+<th class="head"><p>Fjöldi</p></th>
+<th class="head"><p>Hlutfall</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bandaríkin</p></td>
+<td><p>53637</p></td>
+<td><p>0.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bretland</p></td>
+<td><p>45106</p></td>
+<td><p>0.15</p></td>
+</tr>
+<tr class="row-even"><td><p>Danmörk</p></td>
+<td><p>28456</p></td>
+<td><p>0.09</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frakkland</p></td>
+<td><p>14955</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-even"><td><p>Noregur</p></td>
+<td><p>24280</p></td>
+<td><p>0.08</p></td>
+</tr>
+<tr class="row-odd"><td><p>Svíþjóð</p></td>
+<td><p>29488</p></td>
+<td><p>0.09</p></td>
+</tr>
+<tr class="row-even"><td><p>Þýskaland</p></td>
+<td><p>32664</p></td>
+<td><p>0.11</p></td>
+</tr>
+<tr class="row-odd"><td><p>Önnur lönd</p></td>
+<td><p>74327</p></td>
+<td><p>0.25</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hlutfallstölurnar segja okkur hversu hátt hlutfall kökunnar á að
+tilheyra hverjum flokki. Við þyrftum á gráðuboga að halda ætluðum við að
+gera kökurit í höndunum en við látum okkur nægja að gera kökurit með
+hjálp tölfræðiforrits.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/pieplot_erlendir_gestir.svg" /></figure>
+<p>Eins og sjá má á kökuritinu er erfitt að greina muninn á löndunum og enn
+erfiðara er að lesa úr kökuritinu um það bil hversu margir gestirnir eru
+frá hverju landi fyrir sig þó svo að við þekktum heildarfjölda gesta.
+Við mælum því eindregið með að stöplarit séu notuð frekar en kökurit.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="stularit">
+<span id="s-myndraenasamfelldumbreytum"></span><h2><span class="section-number">3.2. </span>Stuðlarit<a class="headerlink" href="#stularit" title="Permalink to this heading"></a></h2>
+<p>Algengasta aðferðin til að skoða samfellda breytu myndrænt er stuðlarit.
+Við munum skoða hvernig búa á til stuðlarit og kynna nokkur hugtök sem
+notuð eru til að lýsa lögun stuðlarita. Kassarit eru einnig góð aðferð
+til að skoða samfelldar breytur, en til að teikna þau þarf að reikna
+fimm tölu samantekt, sem við kynnumst í kafla
+<a class="reference internal" href="../kafli04/#ss-fimmtolusamantekt"><span class="std std-numref">4.3.4</span></a>. Síðar, í kafla <a class="reference internal" href="#s-punktarit"><span class="std std-numref">3.4</span></a>, munum
+við einnig skoða punktarit en þau eru notuð til að kanna samband tveggja
+talnabreyta. Öll þessi rit eru einnig oft notuð til að lýsa strjálum
+talnabreytum sem taka <em>mjög</em> mörg gildi.</p>
+<section id="ss-studlarit">
+<span id="id1"></span><h3><span class="section-number">3.2.1. </span>Stuðlarit<a class="headerlink" href="#ss-studlarit" title="Permalink to this heading"></a></h3>
+<p>Stuðlarit er svipað stöplariti í útliti en helsti munur á útliti þeirra
+er að ekkert bil er á milli súlnanna í stuðlariti (gott er að hugsa sér
+stuðlaberg til að muna hvort bil eigi að vera á milli súlnanna í
+stuðlariti). Það er örlítið snúnara að búa til stuðlarit en stöplarit
+þar sem samfelldar breytur geta tekið óendanlega mörg gildi. Því þarf að
+byrja á að mynda flokka áður en talið er hversu margar mælingar falla í
+hvern flokk. Þegar flokkarnir hafa verið myndaðir er gott að búa til
+töflu sem inniheldur flokkana ásamt fjölda mælinga í hverjum flokki
+fyrir sig.</p>
+<section id="stularit-histogram">
+<h4><span class="section-number">3.2.1.1. </span>Stuðlarit (histogram)<a class="headerlink" href="#stularit-histogram" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Stuðlarit samanstendur af súlum sem standa hver upp að annarri. Fjöldi
+súlna ræðst af fjölda flokka sem talnabreytunni er skipt upp í. Þegar
+flokkarnir eru myndaðir er gott að hafa eftirfarandi í huga.</p>
+<ul>
+<li><p>Neðri og efri mörk eiga að vera einföld og auðskilin</p></li>
+<li><p>Bilin mega ekki skarast og verða að ná yfir allar mælingar</p></li>
+<li><p>Bilin eiga að vera jafn breið</p></li>
+<li><p>Flokkarnir eiga að vera hæfilega margir. Engin ein rétt lausn er til
+en ágætt er að nota þumalputtaregluna að fjöldi flokka á að vera
+u.þ.b. 5 sinnum logaritminn af fjölda mælinga</p>
+<div class="math notranslate nohighlight">
+\[\text{fjöldi flokka} = 5 \cdot \log(\text{fjöldi mælinga})\]</div>
+</li>
+</ul>
+<p>Þegar flokkarnir hafa verið myndaðir er teiknuð ein súla fyrir hvern
+flokk og ræðst hæð súlunnar af fjölda (eða hlutfalli) mælinga í þeim
+flokki.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Þegar við tökum logaritma af tölu finnum við í hvaða veldi þarf að setja
+töluna 10 til að útkoman verði sú tala. Til dæmis er logaritminn af 100
+talan 2, því <span class="math notranslate nohighlight">\(10^2 = 100\)</span>. Á flestum vasareiknum má finna takka
+sem tekur logaritma af tölu. Hann er yfirleitt merktur með <code class="docutils literal notranslate"><span class="pre">log</span></code>.</p>
+</div>
+<hr class="docutils" />
+<p>Yfirleitt eru stuðlarit ekki teiknuð í höndunum, heldur er stuðst við
+tölfræðihugbúnað til verksins. Hér fyrir neðan má þó sjá hvernig gera má
+stuðlarit í höndunum.</p>
+</section>
+<section id="synidaemi-stularit">
+<h4><span class="section-number">3.2.1.2. </span>Sýnidæmi: Stuðlarit<a class="headerlink" href="#synidaemi-stularit" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Hagstofan hefur tekið saman meðalhitastig á Stykkishólmi frá árunum 1841
+til 1995. Mælingarnar má sjá hér að neðan.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.94</span> <span class="mf">0.95</span> <span class="mf">1.27</span> <span class="mf">1.48</span> <span class="mf">1.67</span> <span class="mf">1.76</span> <span class="mf">1.95</span> <span class="mf">1.97</span> <span class="mf">2.06</span> <span class="mf">2.10</span> <span class="mf">2.16</span> <span class="mf">2.25</span>
+<span class="mf">2.27</span> <span class="mf">2.32</span> <span class="mf">2.37</span> <span class="mf">2.38</span> <span class="mf">2.41</span> <span class="mf">2.44</span> <span class="mf">2.47</span> <span class="mf">2.48</span> <span class="mf">2.50</span> <span class="mf">2.55</span> <span class="mf">2.56</span> <span class="mf">2.58</span>
+<span class="mf">2.61</span> <span class="mf">2.61</span> <span class="mf">2.62</span> <span class="mf">2.65</span> <span class="mf">2.66</span> <span class="mf">2.67</span> <span class="mf">2.73</span> <span class="mf">2.75</span> <span class="mf">2.84</span> <span class="mf">2.85</span> <span class="mf">2.86</span> <span class="mf">2.91</span>
+<span class="mf">2.92</span> <span class="mf">2.95</span> <span class="mf">2.97</span> <span class="mf">2.98</span> <span class="mf">2.98</span> <span class="mf">3.01</span> <span class="mf">3.03</span> <span class="mf">3.03</span> <span class="mf">3.04</span> <span class="mf">3.04</span> <span class="mf">3.05</span> <span class="mf">3.07</span>
+<span class="mf">3.12</span> <span class="mf">3.14</span> <span class="mf">3.14</span> <span class="mf">3.15</span> <span class="mf">3.20</span> <span class="mf">3.23</span> <span class="mf">3.24</span> <span class="mf">3.25</span> <span class="mf">3.26</span> <span class="mf">3.27</span> <span class="mf">3.27</span> <span class="mf">3.28</span>
+<span class="mf">3.28</span> <span class="mf">3.30</span> <span class="mf">3.31</span> <span class="mf">3.32</span> <span class="mf">3.33</span> <span class="mf">3.33</span> <span class="mf">3.34</span> <span class="mf">3.35</span> <span class="mf">3.36</span> <span class="mf">3.37</span> <span class="mf">3.38</span> <span class="mf">3.40</span>
+<span class="mf">3.40</span> <span class="mf">3.41</span> <span class="mf">3.41</span> <span class="mf">3.42</span> <span class="mf">3.44</span> <span class="mf">3.45</span> <span class="mf">3.48</span> <span class="mf">3.51</span> <span class="mf">3.52</span> <span class="mf">3.52</span> <span class="mf">3.52</span> <span class="mf">3.56</span>
+<span class="mf">3.56</span> <span class="mf">3.58</span> <span class="mf">3.58</span> <span class="mf">3.58</span> <span class="mf">3.60</span> <span class="mf">3.62</span> <span class="mf">3.62</span> <span class="mf">3.64</span> <span class="mf">3.65</span> <span class="mf">3.67</span> <span class="mf">3.68</span> <span class="mf">3.71</span>
+<span class="mf">3.73</span> <span class="mf">3.75</span> <span class="mf">3.77</span> <span class="mf">3.77</span> <span class="mf">3.77</span> <span class="mf">3.78</span> <span class="mf">3.79</span> <span class="mf">3.82</span> <span class="mf">3.82</span> <span class="mf">3.83</span> <span class="mf">3.84</span> <span class="mf">3.85</span>
+<span class="mf">3.86</span> <span class="mf">3.87</span> <span class="mf">3.88</span> <span class="mf">3.92</span> <span class="mf">3.92</span> <span class="mf">3.92</span> <span class="mf">3.94</span> <span class="mf">3.94</span> <span class="mf">3.97</span> <span class="mf">3.97</span> <span class="mf">3.97</span> <span class="mf">3.98</span>
+<span class="mf">4.00</span> <span class="mf">4.01</span> <span class="mf">4.02</span> <span class="mf">4.03</span> <span class="mf">4.03</span> <span class="mf">4.07</span> <span class="mf">4.07</span> <span class="mf">4.08</span> <span class="mf">4.10</span> <span class="mf">4.11</span> <span class="mf">4.12</span> <span class="mf">4.18</span>
+<span class="mf">4.19</span> <span class="mf">4.19</span> <span class="mf">4.23</span> <span class="mf">4.28</span> <span class="mf">4.28</span> <span class="mf">4.33</span> <span class="mf">4.34</span> <span class="mf">4.43</span> <span class="mf">4.44</span> <span class="mf">4.45</span> <span class="mf">4.45</span> <span class="mf">4.55</span>
+<span class="mf">4.55</span> <span class="mf">4.62</span> <span class="mf">4.72</span> <span class="mf">4.77</span> <span class="mf">4.82</span> <span class="mf">4.83</span> <span class="mf">4.92</span> <span class="mf">5.06</span> <span class="mf">5.09</span> <span class="mf">5.11</span> <span class="mf">5.17</span>
+</pre></div>
+</div>
+<p>Það er erfitt að gera sér grein fyrir því hvar gögnin liggja með því að
+skoða einungis tölurnar og því búum við til stuðlarit sem hjálpar til
+við að fá tilfinningu fyrir gögnunum. Við þurfum að byrja á að ákveða
+hversu marga flokka (súlur) við ætlum að nota. Þumalputtareglan segir að
+flokkarnir eigi að vera u.þ.b. 5 <span class="math notranslate nohighlight">\(\cdot\)</span> logaritminn af fjölda
+mælinga. Við höfum 155 mælingar og því fæst</p>
+<div class="math notranslate nohighlight">
+\[\text{Fjöldi flokka} = 5 \cdot \log(155) = 10.95\]</div>
+<p>Þumalputtareglan segir okkur því að 10 til 11 flokkar passa vel. Skoðum
+nú á hvaða bili gögnin okkar liggja. Við sjáum að lægsta gildið er 0.94
+og hæsta gildið er 5.17. Því væri eðlilegt að lægsti flokkurinn næði frá
+0.50 gráðum og sá efsti upp í 5.50 gráður (munið að efri og neðri mörk
+eiga að vera auðskilin). Þetta segir okkur að gögnin spanna um 5 gráður.
+Við sjáum því að eðlilegast væri að nota 10 flokka þar sem auðvelt er að
+skipta gráðunum 5 upp í 10 flokka.</p>
+<p>Búum nú til flokkana og teljum hversu margar mælingar falla í hvern
+flokk og reiknum hlutfallið. Hornklofi <span class="math notranslate nohighlight">\([\)</span> þýðir frá og með
+mælingunni, en svigi <span class="math notranslate nohighlight">\()\)</span> þýðir að mælingunni en ekki með henni.
+<span class="math notranslate nohighlight">\([0.5,1)\)</span> þýðir því allar mælingar frá og með 0.5 og að 1, þar sem
+1 er ekki talinn með.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Flokkur</p></th>
+<th class="head"><p>Fjöldi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\([0.5,1)\)</span></p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\([1,1.5)\)</span></p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\([1.5,2)\)</span></p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\([2,2.5)\)</span></p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\([2.5,3)\)</span></p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\([3,3.5)\)</span></p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\([3.5,4)\)</span></p></td>
+<td><p>41</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\([4,4.5)\)</span></p></td>
+<td><p>23</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\([4.5,5)\)</span></p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\([5,5.5)\)</span></p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<p>Á stuðlaritum er ýmist fjöldinn eða hlutfallið teiknað. Stuðlaritið hér
+að neðan sýnir fjöldann.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/studlarit_hitastig.svg" /></figure>
+<p>Það er mun auðveldara að fá tilfinningu fyrir gögnunum með því að horfa á
+stuðlarit en ef gögnin sjálf eru skoðuð. Við sjáum að algengasti
+meðalhitinn er 3-4 gráður.</p>
+</div>
+</section>
+</section>
+<section id="logun-stularita-og-utlagar">
+<span id="ss-logundreifinga"></span><h3><span class="section-number">3.2.2. </span>Lögun stuðlarita og útlagar<a class="headerlink" href="#logun-stularita-og-utlagar" title="Permalink to this heading"></a></h3>
+<p>Fyrsta skrefið í nær allri tölfræðiúrvinnslu er að fá tilfinningu fyrir
+dreifingu mælinganna sem við erum að vinna með. Besta leiðin til þess er
+að teikna stuðlarit. Þá horfum við sérstaklega á eftirfarandi atriði sem
+notuð eru til að lýsa dreifingu gagna.</p>
+<section id="logun-dreifinga-shape-of-distributions">
+<h4><span class="section-number">3.2.2.1. </span>Lögun dreifinga (Shape of distributions)<a class="headerlink" href="#logun-dreifinga-shape-of-distributions" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Eftirfarandi hugtök eru oft notuð til að lýsa dreifingum mælinga.</p>
+<ul class="simple">
+<li><p>Dreifingu minnstu mælinganna köllum við <em>vinstri hala</em> (e. left-tail)
+dreifingarinnar. Dreifingu stærstu mælinganna köllum við <em>hægri hala</em>
+(e. right-tail) dreifingarinnar.</p></li>
+<li><p>Dreifing er <em>samhverf</em> (e. symmetric) ef hægri hlið hennar dreifist eins
+og spegilmynd vinstri hliðarinnar.</p></li>
+<li><p>Dreifing sem ekki er samhverf er <em>skekkt</em> (e. skewed). Dreifing er
+<em>skekkt til hægri</em> (e. skewed to the right) ef hægri hali hennar er
+lengri en sá vinstri og <em>skekkt til vinstri</em> (e. skewed to the left) ef
+sá vinstri er lengri en sá hægri.</p></li>
+<li><p>Ef dreifingin hefur einn topp er talað um <em>einkryppudreifingu</em>
+(e. unimodal).</p></li>
+<li><p>Ef dreifingin hefur tvo toppa er talað um <em>tvíkryppudreifingu</em>
+(e. bimodal).</p></li>
+<li><p>Ef dreifing hefur fleiri en tvo toppa er talað um
+<em>fjölkryppudreifingu</em> (e. multimodal).</p></li>
+</ul>
+<p>Hugtökin eru útskýrð frekar á mynd <a class="reference internal" href="#g-logunstudlarita"><span class="std std-numref">3.1</span></a>.</p>
+</div>
+<hr class="docutils" />
+<figure class="align-center" id="id10">
+<span id="g-logunstudlarita"></span><img alt="Lögun stuðlarita" src="../_images/dreifingar.svg" /><figcaption>
+<p><span class="caption-number">Mynd 3.1: </span><span class="caption-text">Lögun stuðlarita</span><a class="headerlink" href="#id10" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Stuðlarit eru einnig góð til að koma auga á svokallaða útlaga
+(e. outliers).</p>
+</section>
+<section id="utlagar-outliers">
+<span id="em-utlagar"></span><h4><span class="section-number">3.2.2.2. </span>Útlagar (Outliers)<a class="headerlink" href="#utlagar-outliers" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Útlagar</em> eru mæligildi sem eru mjög ólík öðrum mæligildum í sama
+gagnasafni. Ýmsar ástæður geta verið fyrir útlögum og er mjög mikilvægt
+að skoða þá sérstaklega og hugleiða ástæðu þeirra. Útlagar munu koma
+fyrir aftur í bókinni t.d. í köflum <a class="reference internal" href="#s-kassarit"><span class="std std-numref">3.3</span></a> og
+<a class="reference internal" href="../kafli10/#s-einfaltadhvarf"><span class="std std-numref">10.1</span></a></p>
+</div>
+<hr class="docutils" />
+<p>Á mynd <a class="reference internal" href="#g-utlagistudlarit"><span class="std std-numref">3.2</span></a> má sjá stuðlarit af mælisafni sem
+inniheldur útlaga. Útlagar geta komið í samhverfum dreifingum jafnt og
+skekktum og fjölkryppudreifingum.</p>
+<figure class="align-center" id="id11">
+<span id="g-utlagistudlarit"></span><img alt="Stuðlarit af mælisafni sem inniheldur útlaga" src="../_images/utlagi.svg" /><figcaption>
+<p><span class="caption-number">Mynd 3.2: </span><span class="caption-text">Stuðlarit af mælisafni sem inniheldur útlaga</span><a class="headerlink" href="#id11" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Í kafla <a class="reference internal" href="../kafli05/#c-likindafraedi"><span class="std std-numref">5</span></a> munum við koma með formlegri
+skilgreiningu á hugtakinu <em>líkindadreifing</em> breyta. Þar verða helstu
+líkindadreifingar strjálla breyta sem og samfelldra teknar fyrir.</p>
+</section>
+</section>
+</section>
+<section id="kassarit">
+<span id="s-kassarit"></span><h2><span class="section-number">3.3. </span>Kassarit<a class="headerlink" href="#kassarit" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">3.3.1. </span>Kassarit<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p><em>Kassarit</em> er notað til að skoða staðsetningu og dreifingu mælinga. Þau
+endurspegla gögnin vel, sýna glöggt hvort dreifingin er samhverf eða
+skekkt og eru auk þess góð til að bera kennsl á útlaga. Kassarit má nota
+hvort heldur til að skoða dreifingu einnar talnabreytu sem og að kanna
+samband talnabreytu og flokkabreytu. Til að teikna kassarit þarf að
+reikna fyrst fimm tölu samantekt sem er sýnt í kafla
+<a class="reference internal" href="../kafli04/#ss-fimmtolusamantekt"><span class="std std-numref">4.3.4</span></a>, sem gefur okkur gildin <span class="math notranslate nohighlight">\(Q_1\)</span>,
+<span class="math notranslate nohighlight">\(Q_2\)</span> og <span class="math notranslate nohighlight">\(Q_3\)</span>.</p>
+<p>Til eru nokkrar útfærslur af kassaritum. Útgáfan sem við skoðum hér að
+neðan er sú einfaldasta en við skoðum einnig flóknari útgáfu í lok
+kaflans.</p>
+<section id="kassarit-boxplot">
+<h4><span class="section-number">3.3.1.1. </span>Kassarit (Boxplot)<a class="headerlink" href="#kassarit-boxplot" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<ul class="simple">
+<li><p>Kassarit samanstendur af kassa og tveimur línum sem ganga út frá
+endum kassans. Þessar línur eru oft kallaðar skegg (e. whiskers).</p></li>
+<li><p>Kassinn má liggja (láréttur) eða standa (lóðréttur) en í þessari bók
+látum við kassana standa. Í því tilfelli skal y-ásinn hafa gildi sem
+nær frá neðsta gildi gagnasafnsins (eða rétt þar fyrir neðan) og upp
+í hæsta gildi gagnasafnsins (eða rétt þar fyrir ofan).</p></li>
+<li><p>Neðri endi kassans skal standa í <span class="math notranslate nohighlight">\(Q_1\)</span> og efri hluti kassans í
+<span class="math notranslate nohighlight">\(Q_3\)</span>. Draga skal línu í gegnum kassann í <span class="math notranslate nohighlight">\(Q_2\)</span>.</p></li>
+<li><p>Neðra skeggið skal ná í minnsta mæligildið (e. min) og efra skeggið skal
+ná í það hæsta (e. max).</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<p>Ef að kassaritið er samhvert um <span class="math notranslate nohighlight">\(Q_2\)</span> er dreifing breytunnar
+samhverf. Ef að það er minni munur á minnsta gildinu, <span class="math notranslate nohighlight">\(Q_1\)</span> og
+<span class="math notranslate nohighlight">\(Q_2\)</span> en á milli <span class="math notranslate nohighlight">\(Q_2\)</span>, <span class="math notranslate nohighlight">\(Q_3\)</span> og stærsta gildisins er
+dreifingin hægri skekkt, en vinstri skekkt ef því er öfugt farið.</p>
+</section>
+<section id="synidaemi-kassarit">
+<h4><span class="section-number">3.3.1.2. </span>Sýnidæmi: Kassarit<a class="headerlink" href="#synidaemi-kassarit" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">9,</span> <span class="pre">15,</span> <span class="pre">17</span></code>. Búið til
+kassarit fyrir mælingarnar. Er dreifing mælinganna samhverf?</p>
+<p>Við munum sjá í dæmi <a class="reference internal" href="../kafli04/#ex-fjordungsmork"><span class="std std-numref">4.3.3.2</span></a> að fimm-tölu samantekt
+gagnasafnsins er:
+<span class="math notranslate nohighlight">\(\text{min} = 1, \ Q_1 = 2.5, \ Q_2 = 7, Q_3 = 12 \ \text{og max} = 17.\)</span></p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/boxplot1.svg" /></figure>
+<p>Dreifing þessara mælinga er hægri skekkt.</p>
+</div>
+<p>Kassarit eru einnig nytsamleg til að bera saman dreifingu tveggja eða
+fleiri hópa mælinga. Á mynd <a class="reference internal" href="#g-kassaritsamanburdur"><span class="std std-numref">3.3</span></a> má sjá kassarit
+af mælingum þriggja hópa. Dreifing mælinga hóps 1 er skekkt til vinstri,
+dreifing mælinga hóps 2 er samhverf og dreifing mælinga hóps 3 er skekkt
+til hægri.</p>
+<figure class="align-center" id="id12">
+<span id="g-kassaritsamanburdur"></span><img alt="Kassarit" src="../_images/boxplot2.svg" /><figcaption>
+<p><span class="caption-number">Mynd 3.3: </span><span class="caption-text">Kassarit</span><a class="headerlink" href="#id12" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="ast-iqr-reglan-fyrir-utlaga">
+<span id="ss-iqrfyrirutlaga"></span><h3><span class="section-number">3.3.2. </span>1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan fyrir útlaga<a class="headerlink" href="#ast-iqr-reglan-fyrir-utlaga" title="Permalink to this heading"></a></h3>
+<p>Útlagar (e. outliers) eru mæligildi sem eru mjög ólík öðrum mæligildum (sjá
+kassa <a class="reference internal" href="#em-utlagar"><span class="std std-numref">3.2.2.2</span></a>) og því er mikilvægt að finna þá. Ein leið til
+að átta sig á hvort um útlaga sé að ræða er að bera saman fjarlægð frá
+gildinu sem sker sig úr og í næsta fjórðungamark (<span class="math notranslate nohighlight">\(Q_1\)</span> eða
+<span class="math notranslate nohighlight">\(Q_3\)</span>).</p>
+<section id="id3">
+<h4><span class="section-number">3.3.2.1. </span>1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan fyrir útlaga<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<ul class="simple">
+<li><p>Byrjum á að reikna út fjarlægð mælingarinnar sem sker sig úr frá
+næsta fjórðungamarki (<span class="math notranslate nohighlight">\(Q_1\)</span> eða <span class="math notranslate nohighlight">\(Q_3\)</span>).</p></li>
+<li><p>Þessi fjarlægð er síðan borin saman við fjórðungaspönnina . Ef
+fjarlægð mæligildisins frá næsta fjórðungamarki er meiri en
+<span class="math notranslate nohighlight">\(1.5 \!\ast\! IQR\)</span> er litið á mælinguna sem útlaga.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+</section>
+</section>
+<section id="ast-iqr-reglan-og-kassarit">
+<span id="ss-iqrkassarit"></span><h3><span class="section-number">3.3.3. </span>1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan og kassarit<a class="headerlink" href="#ast-iqr-reglan-og-kassarit" title="Permalink to this heading"></a></h3>
+<p>Mörg tölfræðiforrit nota 1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR regluna þegar teiknuð
+eru kassarit og eru þau oft kölluð <em>breytt kassarit</em> (e. modified boxplot).
+Línurnar sem ganga út frá kassanum, skeggið, eru þá látnar ná allt að
+einni og hálfri kassalengd frá brúnum kassans en ekki að hæsta og lægsta
+gildinu eins og gert er í einföldustu útgáfunni. Mæligildi sem eru utan
+við skeggið eru útlagar og merktir inn á ritið með hring.</p>
+<figure class="align-center" id="id13">
+<span id="g-breyttkassarit"></span><img alt="Breytt kassarit" src="../_images/boxplotmodified.svg" /><figcaption>
+<p><span class="caption-number">Mynd 3.4: </span><span class="caption-text">Breytt kassarit</span><a class="headerlink" href="#id13" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="punktarit">
+<span id="s-punktarit"></span><h2><span class="section-number">3.4. </span>Punktarit<a class="headerlink" href="#punktarit" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">3.4.1. </span>Punktarit<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<section id="punktarit-scatter-plot">
+<h4><span class="section-number">3.4.1.1. </span>Punktarit (scatter plot)<a class="headerlink" href="#punktarit-scatter-plot" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Við notum <em>punktarit</em> (e. scatter plot) til að skoða samband milli tveggja
+talnabreyta. Gildi annarrar breytunnar eru á y-ásnum (lóðréttur) og
+hinnar á x-ásnum (láréttur). Þegar önnur breytan er skýribreyta og hin
+er svarbreyta er svarbreytan alltaf á y-ásnum og skýribreytan á x-ásnum.</p>
+</div>
+<hr class="docutils" />
+</section>
+<section id="synidaemi-punktarit">
+<span id="ex-bjor"></span><h4><span class="section-number">3.4.1.2. </span>Sýnidæmi: Punktarit<a class="headerlink" href="#synidaemi-punktarit" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Þorgerður og Birna eru miklar áhugakonur um bjór. Þær ákváðu því að
+framkvæma tilraun þar sem samband á milli áfengismagns í blóði og fjölda
+drukkinna bjóra var kannað. 16 nemendur tóku þátt í tilrauninni. Gögnin
+má sjá hér að neðan.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Nemi</p></td>
+<td><p>Fjöldi</p></td>
+<td><p>Alkóhólmagn</p></td>
+<td><p>Nemi</p></td>
+<td><p>Fjöldi</p></td>
+<td><p>Alkóhólmagn</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bjóra</p></td>
+<td><p>í blóði</p></td>
+<td></td>
+<td><p>bjóra</p></td>
+<td><p>í blóði</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>5</p></td>
+<td><p>0.100</p></td>
+<td><p>9</p></td>
+<td><p>8</p></td>
+<td><p>0.120</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>0.030</p></td>
+<td><p>10</p></td>
+<td><p>3</p></td>
+<td><p>0.040</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>9</p></td>
+<td><p>0.190</p></td>
+<td><p>11</p></td>
+<td><p>5</p></td>
+<td><p>0.060</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>7</p></td>
+<td><p>0.095</p></td>
+<td><p>12</p></td>
+<td><p>5</p></td>
+<td><p>0.050</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>3</p></td>
+<td><p>0.070</p></td>
+<td><p>13</p></td>
+<td><p>6</p></td>
+<td><p>0.100</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>3</p></td>
+<td><p>0.020</p></td>
+<td><p>14</p></td>
+<td><p>7</p></td>
+<td><p>0.090</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>4</p></td>
+<td><p>0.070</p></td>
+<td><p>15</p></td>
+<td><p>1</p></td>
+<td><p>0.010</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>5</p></td>
+<td><p>0.085</p></td>
+<td><p>16</p></td>
+<td><p>4</p></td>
+<td><p>0.050</p></td>
+</tr>
+</tbody>
+</table>
+<p>Teiknið punktarit af gögnunum. Eru breyturnar talnabreytur eða
+flokkabreytur? Má flokka aðra breytuna sem skýribreytu og hina sem
+svarbreytu?</p>
+<p>Breyturnar eru báðar talnabreytur. Alkóhólmagn i blóði er svarbreyta og
+fjöldi bjóra er skýribreyta. Punktarit af gögnunum má sjá hér að neðan.
+Fyrsti punkturinn í mælisafninu er merktur sérstaklega.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/bjor1.svg" /></figure>
+</div>
+<p>Við vinnum oft með gagnasöfn sem innihalda bæði talnabreytur og
+flokkabreytur. Hægt er að búa til punktarit af tveimur talnabreytum og
+einni flokkabreytu í einu. Talnabreyturnar fara þá hvor á sinn ás eins
+og áður og mismunandi litir/tákn notaðir fyrir flokka flokkabreytunnar.</p>
+</section>
+<section id="synidaemi-punktarit-me-flokkabreytu">
+<h4><span class="section-number">3.4.1.3. </span>Sýnidæmi: Punktarit með flokkabreytu<a class="headerlink" href="#synidaemi-punktarit-me-flokkabreytu" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Við höfum gögn yfir heimsmetstíma í 1500m hlaupi frá árinu 1912.
+Breyturnar í gagnasafninu eru þrjár: Ár, tími og kyn. Hverjar af
+breytunum eru talnabreytur og hver er flokkabreyta?</p>
+<p>Ár og tími eru talnabreytur og kyn er flokkabreyta. Hér að neðan má sjá
+punktarit þar sem talnabreyturnar eru hvor á sínum ás og flokkabreytan
+er sýnd með mismunandi táknum.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/hlaup2.svg" /></figure>
+</div>
+<p>Gott er að nota punktarit til að koma auga á útlaga sem voru
+skilgreindir í kassa <a class="reference internal" href="#em-utlagar"><span class="std std-numref">3.2.2.2</span></a>. Á mynd <a class="reference internal" href="#g-punktaritutlagi"><span class="std std-numref">3.5</span></a>
+má sjá punktarit þar sem útlagi er í gagnasafninu en í hluta
+<a class="reference internal" href="../kafli10/#s-einfaltadhvarf"><span class="std std-numref">10.1</span></a> munum við skoða betur hvaða áhrif útlagar geta
+haft í aðhvarfsgreiningu. Punktarit eru einnig mikilvæg til að kanna
+hvort samband tveggja breyta sé <em>línulegt</em> og ef svo er, átta sig á
+<em>stefnu</em> og <em>styrkleika</em> sambandsins. Þessum hugtökum kynnumst við í
+hluta <a class="reference internal" href="../kafli04/#s-fylgni"><span class="std std-numref">4.4</span></a>.</p>
+<figure class="align-center" id="id14">
+<span id="g-punktaritutlagi"></span><img alt="Punktarit þar sem útlagi er í gagnasafninu" src="../_images/utlagi3.svg" /><figcaption>
+<p><span class="caption-number">Mynd 3.5: </span><span class="caption-text">Punktarit þar sem útlagi er í gagnasafninu</span><a class="headerlink" href="#id14" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="daemi">
+<h2><span class="section-number">3.5. </span>Dæmi<a class="headerlink" href="#daemi" title="Permalink to this heading"></a></h2>
+<section id="id5">
+<h3><span class="section-number">3.5.1. </span>Dæmi<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<figure class="align-default">
+<img alt="../_images/hist.svg" src="../_images/hist.svg" /></figure>
+<p>Hver af eftirfarandi lýsingum passar við myndina að ofan?</p>
+<ol class="loweralpha simple">
+<li><p>Stuðlarit af hægri skekktri einkryppudreifingu.</p></li>
+<li><p>Stöplarit af vinstri skekktri einkryppudreifingu.</p></li>
+<li><p>Stuðlarit af vinstri skekktri tvíkryppudreifingu.</p></li>
+<li><p>Stöplarit af hægri skekktri tvíkryppudreifingu.</p></li>
+</ol>
+</section>
+<section id="id6">
+<h3><span class="section-number">3.5.2. </span>Dæmi<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Héðinn hefur mælt þyngd 100 barna og ætlar hann að sýna mælingarnar með
+stuðlariti. Hversu margar súlur er æskilegt að séu á stuðlaritinu?</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">3.5.3. </span>Dæmi<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>Á hvaða bili liggja flestar mælingarnar á stuðlaritinu hér að neðan?</p>
+<figure class="align-default">
+<img alt="../_images/histdaemi.svg" src="../_images/histdaemi.svg" /></figure>
+</section>
+<section id="id8">
+<h3><span class="section-number">3.5.4. </span>Dæmi<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<p>Hver af eftirfarandi lýsingum passar við lögun dreifingarinnar á
+myndinni hér að neðan?</p>
+<ol class="loweralpha simple">
+<li><p>Hægri skekkt einkryppudreifing.</p></li>
+<li><p>Vinstri skekkt einkryppudreifing.</p></li>
+<li><p>Fjölkryppudreifing</p></li>
+<li><p>Tvíkryppudreifing.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/histfjolkryppu.svg" src="../_images/histfjolkryppu.svg" /></figure>
+</section>
+<section id="id9">
+<h3><span class="section-number">3.5.5. </span>Dæmi<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<p>Á myndinni hér að neðan má sjá kassarit mælisafns. Lesið af grafinu
+minnsta gildi, hæsta gildi, <span class="math notranslate nohighlight">\(Q_1\)</span>, <span class="math notranslate nohighlight">\(Q_2\)</span> og <span class="math notranslate nohighlight">\(Q_3\)</span>.</p>
+<figure class="align-default">
+<img alt="../_images/boxplotdaemi.svg" src="../_images/boxplotdaemi.svg" /></figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli02/" class="btn btn-neutral float-left" title="2. Frá tilraun til gagna" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli04/" class="btn btn-neutral float-right" title="4. Lýsandi tölfræði" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

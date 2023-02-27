@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11. Tvíkosta aðhvarfsgreining &mdash; R frá Grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="12. Knitr" href="../kafli12/" />
+    <link rel="prev" title="10. Línuleg aðhvarfsgreining" href="../kafli10/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            R frá Grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Einþátta fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Tvíkosta aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#glm">11.1. glm()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tvikosta-ahvarfsgreining-me-samfellda-skyribreytu">11.1.1. Tvíkosta aðhvarfsgreining með samfellda skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tvikosta-ahvarfsgreining-me-strjala-skyribreytu">11.1.2. Tvíkosta aðhvarfsgreining með strjála skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">11.1.3. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_R_leiksvaedi/">Um R leiksvæði</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">R frá Grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Tvíkosta aðhvarfsgreining</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli11.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tvikosta-ahvarfsgreining">
+<span id="c-tvikostaadhvarf"></span><h1><span class="section-number">11. </span>Tvíkosta aðhvarfsgreining<a class="headerlink" href="#tvikosta-ahvarfsgreining" title="Permalink to this heading"></a></h1>
+<p>Á eftir línulegri aðhvarfsgreiningu, sem við fjölluðum um í kafla
+<a class="reference internal" href="../kafli10/#c-linulegtadhvarf"><span class="std std-numref">10</span></a>, er tvíkosta aðhvarfsgreining sennilega mest
+notaða aðhvarfsgreiningarlíkanið. Í R er tvíkosta aðhvarfsgreining
+framkvæmd á mjög sambærilegan hátt og línuleg aðhvarfsgreining, nema nú
+er notast við fallið <code class="docutils literal notranslate"><span class="pre">glm()</span></code> í stað fallsins <code class="docutils literal notranslate"><span class="pre">lm()</span></code>. Í tvíkosta
+aðhvarfsgreiningu hefur svarbreytan eingöngu tvær útkomur, 0 og 1 og eru
+líkönin því metin með aðstoð tengifalla. Algengasta tengifallið kallast
+á ensku the logistic function og því er oft talað um lógistíska
+aðhvarfsgreiningu. Í raun má nota fallið <code class="docutils literal notranslate"><span class="pre">glm()</span></code> til að framkvæma
+fjölda annarra alhæfðra línulegra aðhvarfsgreiningarlíkana en það er
+utan efnis þessarar bókar.</p>
+<section id="glm">
+<h2><span class="section-number">11.1. </span>glm()<a class="headerlink" href="#glm" title="Permalink to this heading"></a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> formúla, gögn</p>
+<p><strong>Úttak:</strong> tvíkosta aðhvarfsgreining á gögnunum byggt á formúlunni</p>
+<p><strong>Helstu stillingar:</strong> family</p>
+</div>
+<hr class="docutils" />
+<p>Auk fallsins <code class="docutils literal notranslate"><span class="pre">glm()</span></code> munum við einnig nota skipanirnar <code class="docutils literal notranslate"><span class="pre">summary()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">coef()</span></code> og <code class="docutils literal notranslate"><span class="pre">confint()</span></code> á svipaðan hátt og þið sáuð í kafla
+<a class="reference internal" href="../kafli10/#c-linulegtadhvarf"><span class="std std-numref">10</span></a>.</p>
+<p>Í kafla <a class="reference internal" href="#s-tvikostasamfelld"><span class="std std-numref">11.1.1</span></a> sýnum við hvernig tvíkosta
+aðhvarfsgreining er framkvæmd þegar skýribreytan er samfelld en í kafla
+<a class="reference internal" href="#s-tvikostastrjal"><span class="std std-numref">11.1.2</span></a> sýnum við hvað gerist þegar skýribreytan er
+strjál. Við munum finna möt á stikum líkansins, framkvæma tilgátupróf
+fyrir þá og reikna öryggisbil.</p>
+<section id="tvikosta-ahvarfsgreining-me-samfellda-skyribreytu">
+<span id="s-tvikostasamfelld"></span><h3><span class="section-number">11.1.1. </span>Tvíkosta aðhvarfsgreining með samfellda skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-samfellda-skyribreytu" title="Permalink to this heading"></a></h3>
+<p>Tvíkosta aðhvarfsgreiningu má nota til að meta hvort nemendur sem stunda
+mikla líkamsrækt séu ólíklegri til að reykja heldur en þá sem stunda
+litla líkamsrækt. Líkanið metum við með neðangreindri skipun og það
+borgar sig að vista líkanið sem hlut.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">glm1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glm</span><span class="p">(</span><span class="n">reykir</span><span class="o">==</span><span class="s">&#39;ja&#39;</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">likamsraekt</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="o">=</span><span class="s">&#39;binomial&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fyrsta inntakið í skipunina er formúla. Á vinstri hönd hennar verður að
+vera breyta sem tekur gildin 0 og 1, eða þá TRUE og FALSE. Í þessu dæmi
+er inntakið yrðingin <code class="docutils literal notranslate"><span class="pre">reykir==’ja’</span></code> sem skilar TRUE ef
+einstaklingurinn reykir en FALSE annars. Þar af leiðandi mun líkanið
+meta gagnlíkindin á því að reykja. Á hægri hönd formúlunnar er
+skýribreytan, sem í þessu tilviki er <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code>.</p>
+<p>Næstu tvö inntök skipunarinnar er nafnið á gagnatöflunni sem geymir
+gögnin (<code class="docutils literal notranslate"><span class="pre">puls</span></code>) og af hvaða gerð aðhvarfsgreiningarlíkanið er. Með
+stillingunni <code class="docutils literal notranslate"><span class="pre">family=’binomial’</span></code> tilgreinum við að tvíkosta
+aðhvarfsgreining skuli framkvæmd með logistic tengifallinu.</p>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">summary()</span></code> gefur okkur miklar upplýsingar um útkomu
+aðhvarfsgreiningarinnar:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">glm1</span><span class="p">)</span>
+<span class="c1">##</span>
+<span class="c1">## Call:</span>
+<span class="c1">## glm(formula = reykir == &quot;ja&quot; ~ likamsraekt, family = &quot;binomial&quot;,</span>
+<span class="c1">##     data = puls)</span>
+<span class="c1">##</span>
+<span class="c1">## Deviance Residuals:</span>
+<span class="c1">##     Min       1Q   Median       3Q      Max</span>
+<span class="c1">## -0.5680  -0.4825  -0.4566  -0.3864   3.0534</span>
+<span class="c1">##</span>
+<span class="c1">## Coefficients:</span>
+<span class="c1">##             Estimate Std. Error z value Pr(&gt;|z|)</span>
+<span class="c1">## (Intercept)  -1.7428     0.2482  -7.023 2.18e-12 ***</span>
+<span class="c1">## likamsraekt  -0.1164     0.0547  -2.127   0.0334 *</span>
+<span class="c1">## ---</span>
+<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">##</span>
+<span class="c1">## (Dispersion parameter for binomial family taken to be 1)</span>
+<span class="c1">##</span>
+<span class="c1">##     Null deviance: 293.2  on 452  degrees of freedom</span>
+<span class="c1">## Residual deviance: 287.9  on 451  degrees of freedom</span>
+<span class="c1">##   (18 observations deleted due to missingness)</span>
+<span class="c1">## AIC: 291.9</span>
+<span class="c1">##</span>
+<span class="c1">## Number of Fisher Scoring iterations: 5</span>
+</pre></div>
+</div>
+<p>Mikilvægustu upplýsingarnar úr aðhvarfsgreiningunni eru fólgnar í
+töflunni <code class="docutils literal notranslate"><span class="pre">Coefficients:</span></code></p>
+<ul class="simple">
+<li><p>Í fyrsta dálki hennar má sjá metnu stuðlana,
+<span class="math">\(\hat \beta_0 = -1.7428\)</span> og <span class="math">\(\hat \beta_1 = -0.1164\)</span>.</p></li>
+<li><p>Staðalskekkju fyrir mat á stuðlunum má sjá í öðrum dálki.</p></li>
+<li><p>Í þriðja dálki má sjá prófstærðir fyrir tilgátupróf sem prófa
+núlltilgátuna hvort stuðlarnir séu núll. Þannig prófar prófstærðin
+<span class="math">\(-7.023\)</span> núlltilgátuna <span class="math">\(\beta_0 = 0\)</span> og prófstærðin
+<span class="math">\(-2.127\)</span> prófar núlltilgátuna <span class="math">\(\beta_1=0\)</span>.</p></li>
+<li><p>P-gildin sem svara til þessara prófstærða má svo finna í fjórða
+dálkinum. P-gildið fyrir núlltilgátuna <span class="math">\(\beta_1=0\)</span> er
+<span class="math">\(0.0334\)</span>, sem er minna en 0.05 og þar sem stuðullin er
+neikvæður getum við fullyrt að nemendur sem stunda mikla líkamsrækt
+séu ólíklegri til að reykja heldur en þeir sem stunda litla
+líkamsrækt.</p></li>
+</ul>
+<p>Með því að setja metnu stuðlana í veldið á e fæst gagnlíkindahlutfall
+fyrir því að reykja við hverja aukna klukkustund sem að einstaklingur
+stundar líkamsrækt á viku. Þau finnum við með skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="nf">coef</span><span class="p">(</span><span class="n">glm1</span><span class="p">))</span>
+<span class="c1">## (Intercept) likamsraekt</span>
+<span class="c1">##   0.1750381   0.8901369</span>
+</pre></div>
+</div>
+<p>Í flestum tilvikum höfum við lítin áhuga á gagnlíkindahlutfallinu sem
+svarar til <code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>. Hins vegar höfum við mikinn áhuga á
+gagnlíkindahlutfallinu sem stendur við <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code>.
+Hér sjáum við að gagnlíkindahlutfallið fyrir því að reykja við
+hverja aukna klukkustund sem að einstaklingur stundar líkamsrækt á viku
+er <span class="math">\(0.8901369\)</span>.</p>
+<p>95% öryggisbil fyrir gagnlíkindahlutföllin sem fengust í tvíkosta
+aðhvarfsgreiningunni má finna með skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="nf">confint</span><span class="p">(</span><span class="n">glm1</span><span class="p">))</span>
+<span class="c1">##                 2.5 %    97.5 %</span>
+<span class="c1">## (Intercept) 0.1061636 0.2811427</span>
+<span class="c1">## likamsraekt 0.7941909 0.9840247</span>
+</pre></div>
+</div>
+<p>Sem fyrr höfum við ekki áhuga á öryggisbilinu sem svarar til
+<code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>. Öryggisbilið fyrir <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code> er það sem við
+viljum skoða, það er <span class="math">\([0.7941909, 0.9840247]\)</span>. Öryggisbilið
+inniheldur ekki 1 í samræmi við það að við höfnuðum núlltilgátunni.</p>
+</section>
+<section id="tvikosta-ahvarfsgreining-me-strjala-skyribreytu">
+<span id="s-tvikostastrjal"></span><h3><span class="section-number">11.1.2. </span>Tvíkosta aðhvarfsgreining með strjála skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-strjala-skyribreytu" title="Permalink to this heading"></a></h3>
+<p>Tvíkosta aðhvarfsgreiningu má einnig beita á strjála skýribreytu. Til
+dæmis til að meta hvort nemendur sem drekka áfengi séu líklegri til að
+reykja heldur en þá sem ekki drekka áfengi. Líkanið metum við með
+neðangreindri skipun:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">glm2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">glm</span><span class="p">(</span><span class="n">reykir</span><span class="o">==</span><span class="s">&#39;ja&#39;</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">drekkur</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span><span class="w"> </span><span class="n">family</span><span class="o">=</span><span class="s">&#39;binomial&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Skipunin lítur á nákvæmlega sama hátt út og í kafla
+<a class="reference internal" href="#s-tvikostasamfelld"><span class="std std-numref">11.1.1</span></a> nema að nú hefur breytan <code class="docutils literal notranslate"><span class="pre">drekkur</span></code> tekið
+stað breytunnar <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code>. Skoðum nú <code class="docutils literal notranslate"><span class="pre">summary()</span></code> af útkomu
+aðhvarfsgreiningarinnar:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">glm2</span><span class="p">)</span>
+<span class="c1">##</span>
+<span class="c1">## Call:</span>
+<span class="c1">## glm(formula = reykir == &quot;ja&quot; ~ drekkur, family = &quot;binomial&quot;,</span>
+<span class="c1">##     data = puls)</span>
+<span class="c1">##</span>
+<span class="c1">## Deviance Residuals:</span>
+<span class="c1">##     Min       1Q   Median       3Q      Max</span>
+<span class="c1">## -0.5007  -0.5007  -0.5007  -0.1684   2.9198</span>
+<span class="c1">##</span>
+<span class="c1">## Coefficients:</span>
+<span class="c1">##             Estimate Std. Error z value Pr(&gt;|z|)</span>
+<span class="c1">## (Intercept)  -2.0134     0.1587 -12.686   &lt;2e-16 ***</span>
+<span class="c1">## drekkurnei   -2.2351     1.0190  -2.193   0.0283 *</span>
+<span class="c1">## ---</span>
+<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">##</span>
+<span class="c1">## (Dispersion parameter for binomial family taken to be 1)</span>
+<span class="c1">##</span>
+<span class="c1">##     Null deviance: 297.59  on 452  degrees of freedom</span>
+<span class="c1">## Residual deviance: 287.48  on 451  degrees of freedom</span>
+<span class="c1">##   (18 observations deleted due to missingness)</span>
+<span class="c1">## AIC: 291.48</span>
+<span class="c1">##</span>
+<span class="c1">## Number of Fisher Scoring iterations: 6</span>
+</pre></div>
+</div>
+<p>Mikilvægustu upplýsingarnar úr aðhvarfsgreiningunni eru sem fyrr fólgnar
+í töflunni <code class="docutils literal notranslate"><span class="pre">Coefficients:</span></code>. Taflan er einnig byggð upp á sama hátt en
+nú birtist sér lína fyrir hvern flokk skýribreytunnar, annan en
+viðmiðunarflokkinn. Þannig gefur heitið í línunni <code class="docutils literal notranslate"><span class="pre">drekkurnei</span></code> að um
+sé að ræða stuðla fyrir flokkinn <code class="docutils literal notranslate"><span class="pre">nei</span></code> í skýribreytunni <code class="docutils literal notranslate"><span class="pre">drekkur</span></code> og
+viðmiðunarflokkurinn er því <code class="docutils literal notranslate"><span class="pre">ja</span></code>.</p>
+<ul class="simple">
+<li><p>Í fyrsta dálki töflunnar má sjá metnu stuðlana,
+<span class="math">\(\hat \beta = -2.0134\)</span> og <span class="math">\(\hat \beta_a = -2.2351\)</span>.</p></li>
+<li><p>Í þriðja dálki má sjá að prófstærðin <span class="math">\(-12.686\)</span> prófa
+núlltilgátuna <span class="math">\(\beta = 0\)</span> og prófstærðin <span class="math">\(-2.193\)</span> prófar
+núlltilgátuna <span class="math">\(\beta_a=0\)</span>.</p></li>
+<li><p>P-gildið fyrir núlltilgátuna <span class="math">\(\beta_a=0\)</span> er <span class="math">\(0.0283\)</span>, sem
+er minna en 0.05 og þar sem stuðullin er neikvæður getum við fullyrt
+að nemendur sem ekki drekka áfengi séu ólíklegri til að reykja heldur
+en þeir sem stunda drekka áfengi.</p></li>
+</ul>
+<p>Með því að setja metnu stuðlana í veldið á e fæst gagnlíkindahlutfall
+fyrir því að reykja á móti því að drekka ekki áfengi. Þau finnum við með
+skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="nf">coef</span><span class="p">(</span><span class="n">glm2</span><span class="p">))</span>
+<span class="c1">## (Intercept)  drekkurnei</span>
+<span class="c1">##   0.1335312   0.1069842</span>
+</pre></div>
+</div>
+<p>Við höfum ekki áhuga á gagnlíkindahlutfallinu sem svarar til <code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>,
+en það sem stendur við <code class="docutils literal notranslate"><span class="pre">drekkurnei</span></code> sýnir okkur gagnlíkindahlutfallið
+fyrir því að reykja á móti því að drekka ekki er <span class="math">\(0.1069842\)</span> sem
+telst ansi lítið.</p>
+<p>95% öryggisbil fyrir gagnlíkindahlutföllin sem fengust í tvíkosta
+aðhvarfsgreiningunni má finna með skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="nf">confint</span><span class="p">(</span><span class="n">glm2</span><span class="p">))</span>
+<span class="c1">##                   2.5 %    97.5 %</span>
+<span class="c1">## (Intercept) 0.096558897 0.1801504</span>
+<span class="c1">## drekkurnei  0.005988971 0.5029970</span>
+</pre></div>
+</div>
+<p>Sem fyrr höfum við ekki áhuga á öryggisbilinu sem svarar til
+<code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>, heldur það sem stendur við <code class="docutils literal notranslate"><span class="pre">drekkurnei</span></code>, það er
+<span class="math">\([0.005989, 0.502997]\)</span>. Öryggisbilið inniheldur ekki 1 í samræmi
+við það að við höfnuðum núlltilgátunni.</p>
+</section>
+<section id="leiksvaei-fyrir-r-koa">
+<h3><span class="section-number">11.1.3. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h3>
+<p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
+<div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
+puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
+
+# Setjid ykkar eigin koda her fyrir nedan:
+# Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
+# asamt dalkarheitum.
+head(puls)</code></div></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli10/" class="btn btn-neutral float-left" title="10. Línuleg aðhvarfsgreining" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli12/" class="btn btn-neutral float-right" title="12. Knitr" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

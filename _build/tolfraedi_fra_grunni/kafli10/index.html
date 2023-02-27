@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Aðhvarfsgreining &mdash; Tölfræði frá grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="11. Tvíkosta aðhvarfsgreining" href="../kafli11/" />
+    <link rel="prev" title="9. Fervikagreining" href="../kafli09/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Fervikagreining</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#einfalt-linulegt-ahvarf">10.1. Einfalt línulegt aðhvarf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">10.1.1. Einfalt línulegt aðhvarf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ahvarfsgreiningarlikani-simple-linear-regression-model">10.1.1.1. Aðhvarfsgreiningarlíkanið (simple linear regression model)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#afer-minnstu-kvarata">10.1.2. Aðferð minnstu kvaðrata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jafna-ahvarfslinu-minnstu-kvarata-least-squares-equation">10.1.2.1. Jafna aðhvarfslínu minnstu kvaðrata (least squares equation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-einfalt-linulegt-ahvarf">10.1.2.2. Sýnidæmi: Einfalt línulegt aðhvarf</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#leifar">10.1.3. Leifar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#leifar-residuals">10.1.3.1. Leifar (residuals)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#bruun-og-bryggjun">10.1.4. Brúun og bryggjun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bruun-interpolation">10.1.4.1. Brúun (interpolation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-bruun">10.1.4.2. Sýnidæmi: Brúun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bryggjun-extrapolation">10.1.4.3. Bryggjun (extrapolation)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skyringarhlutfall">10.1.5. Skýringarhlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#r-2-i-ahvarfsgreiningu">10.1.5.1. <span class="math notranslate nohighlight">\(r^2\)</span> í aðhvarfsgreiningu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-skyringarhlutfall">10.1.5.2. Sýnidæmi: Skýringarhlutfall</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#utlagar-og-ahrifamikil-maeligildi">10.1.6. Útlagar og áhrifamikil mæligildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#alyktanir-i-ahvarfsgreiningu">10.2. Ályktanir í aðhvarfsgreiningu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#slembistaerin-varepsilon">10.2.1. Slembistærðin <span class="math notranslate nohighlight">\(\varepsilon\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mat-a-sigma-2-i-einfoldu-linulegu-ahvarfi-estimate-of-sigma-2-in-simple-linear-regression">10.2.1.1. Mat á <span class="math notranslate nohighlight">\(\sigma^2\)</span> í einföldu línulegu aðhvarfi (estimate of <span class="math notranslate nohighlight">\(\sigma^2\)</span> in simple linear regression)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#oryggisbil-fyrir-beta-0-og-beta-1">10.2.2. Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#oryggisbil-fyrir-beta-0-confidense-interval-for-beta-0">10.2.2.1. Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> (confidense interval for <span class="math notranslate nohighlight">\(\beta_0\)</span>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#oryggisbil-fyrir-beta-1-confidence-interval-for-beta-1">10.2.2.2. Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_1\)</span> (confidence interval for <span class="math notranslate nohighlight">\(\beta_1\)</span>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spabil-fyrir-framtiarmaelingar">10.2.3. Spábil fyrir framtíðarmælingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#spabil-fyrir-framtiarmaelingar-prediction-interval-for-future-observations">10.2.3.1. Spábil fyrir framtíðarmælingar (prediction interval for future observations)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#prof-a-fylgnistuli-rho">10.2.4. Próf á fylgnistuðli (<span class="math notranslate nohighlight">\(\rho\)</span>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tilgatuprof-fyrir-rho">10.2.4.1. Tilgátupróf fyrir <span class="math notranslate nohighlight">\(\rho\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-prof-a-fylgnistuli">10.2.4.2. Sýnidæmi: Próf á fylgnistuðli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fervikagreining-i-ahvarfsgreiningu">10.3. Fervikagreining í aðhvarfsgreiningu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">10.3.1. Fervikagreining í aðhvarfsgreiningu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fervikasummur-i-einfoldu-linulegu-ahvarfi-sums-of-squares-in-a-simple-linear-regression-anova">10.3.1.1. Fervikasummur í einföldu línulegu aðhvarfi (sums of squares in a simple linear regression ANOVA)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skyringarhlutfall-r-2">10.3.1.2. Skýringarhlutfall (<span class="math notranslate nohighlight">\(R^2\)</span>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tilgatuprof-i-fervikagreiningu-fyrir-ahvarfsgreiningu">10.3.2. Tilgátupróf í fervikagreiningu fyrir aðhvarfsgreiningu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tilgatuprof-fyrir-einhlia-fervikagreiningu">10.3.2.1. Tilgátupróf fyrir einhliða fervikagreiningu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#daemi">10.4. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">10.4.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">10.4.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">10.4.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">10.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">10.4.5. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../toflur_all_final/">Töflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../svor_final/">Svör við dæmum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thakkir/">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10. </span>Aðhvarfsgreining</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli10.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ahvarfsgreining">
+<span id="c-adhvarfsgreining"></span><h1><span class="section-number">10. </span>Aðhvarfsgreining<a class="headerlink" href="#ahvarfsgreining" title="Permalink to this heading"></a></h1>
+<p>Umfjöllunarefni þessa kafla er <em>aðhvarfsgreining</em> (e. regression).
+Aðhvarfsgreining er gífurlega almenn aðferð sem er notuð til að kanna
+samband <em>háðrar breytu</em> (e. dependent variable) og einnar eða fleiri
+<em>óháðra breyta</em> (e. independent variables). Sé óháða breytan aðeins ein er
+talað um <em>einfalt línulegt aðhvarf</em> (e. simple linear regression) en séu
+þær fleiri er talað um <em>fjölþætt línulegt aðhvarf</em> (e. multiple linear
+regression). Við munum einungis fjalla um einfalt línulegt aðhvarf í
+þessari bók.</p>
+<p>Með einföldu línulegu aðhvarfi viljum við finna jöfnu þeirra línu (sjá
+kassa <a class="reference internal" href="../kafli04/#em-jafnabeinnarlinu"><span class="std std-numref">4.4.1.1</span></a> í kafla <a class="reference internal" href="../kafli04/#c-lysanditolfraedi"><span class="std std-numref">4</span></a>) sem
+lýsir best sambandi tveggja breyta og metur hversu gott það mat er.
+Stundum má áætla að orsakasamband sé á milli breytanna tveggja og þá er
+svarbreytan alltaf háða breytan en skýribreytan sú óháða (sjá kassa
+<a class="reference internal" href="../kafli02/#em-svarbreyturogskyribreytur"><span class="std std-numref">2.2.1.8</span></a> í kafla <a class="reference internal" href="../kafli02/#s-breytur"><span class="std std-numref">2.2</span></a>). Það er
+umdeilt að nota línulega aðhvarfsgreiningu þegar ekki er orsakasamband
+milli breytanna og munum við því ekki taka dæmi um slíkt. Við munum gera
+ráð fyrir að það sé orsakasamband á milli breytanna og því getum við
+talað um háðu breytuna sem svarbreytu og þá óháðu sem skýribreytu.</p>
+<p>Það gefur að skilja að það er lítið vit í að framkvæma línulegt aðhvarf
+nema sambandi breytanna sé yfir höfuð hægt að lýsa með beinni línu.
+Fyrsta skrefið í allri aðhvarfsgreiningu ætti því ætíð að vera að skoða
+<em>punktarit</em> af breytunum (kafli <a class="reference internal" href="../kafli03/#s-punktarit"><span class="std std-numref">3.4</span></a>) til að kanna hvort
+svo sé. Ef okkur sýnast punktarnir þyrpast í kringum einhverja beina
+línu er sambandið línulegt. Ef við sjáum skýr merki um sveigjur í
+punktaritinu getur sambandið ekki verið línulegt.</p>
+<section id="einfalt-linulegt-ahvarf">
+<span id="s-einfaltadhvarf"></span><h2><span class="section-number">10.1. </span>Einfalt línulegt aðhvarf<a class="headerlink" href="#einfalt-linulegt-ahvarf" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">10.1.1. </span>Einfalt línulegt aðhvarf<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Byrjum á því að rifja aftur upp dæmi <a class="reference internal" href="../kafli03/#ex-bjor"><span class="std std-numref">3.4.1.2</span></a> þar sem Þorgerður og
+Birna könnuðu samband bjórdrykku og áfengismagns í blóði. Markmið
+línulegrar aðhvarfsgreiningar væri að meta jöfnu línu sem lýsir sambandi
+bjórdrykku og áfengismagnsins í blóðinu sem og að meta hversu
+áreiðanlegt þetta samband sé.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/bjor1.svg" /></figure>
+<p>Í einföldu línulegu aðhvarfi göngum við út frá því að skýribreytan sé
+<em>föst</em> (e. fixed), það er að segja að skýribreytan sé ekki slembin
+(e. random). Við getum líka orðað það sem svo að við trúum því að það sé
+engin óvissa í mælingum okkar á skýribreytunni. Svarbreytan er hins
+vegar slembin og dreifing hennar er háð <span class="math notranslate nohighlight">\(x\)</span>. Við notum <span class="math notranslate nohighlight">\(Y\)</span>
+til að tákna svarbreytuna og <span class="math notranslate nohighlight">\(x\)</span> til að tákna skýribreytuna. Í
+dæminu um bjórdrykkjuna útleggst það svo að engin óvissa sé fólgin í því
+hversu marga bjóra hver og einn einstaklingur drakk, en hins vegar geti
+verið óvissa fólgin í því hversu mikið áfengismagn í blóði mælist í
+kjölfarið.</p>
+<p>Aðhvarfslína (e. regression line) er bein lína sem lýsir því hvernig
+svarbreytan <span class="math notranslate nohighlight">\(Y\)</span> breytist þegar skýribreytan <span class="math notranslate nohighlight">\(x\)</span> breytist.
+Aðhvarfslínan er oft notuð til að <em>spá</em> (e. predict) fyrir um það hvaða
+gildi <span class="math notranslate nohighlight">\(Y\)</span> mun taka fyrir gefið gildi á <span class="math notranslate nohighlight">\(x\)</span>. Þegar við notum
+aðhvarfslínuna til að spá fyrir um gildi á <span class="math notranslate nohighlight">\(Y\)</span> þá táknum við
+spágildin með <span class="math notranslate nohighlight">\(\hat{y}\)</span>, lesið <span class="math notranslate nohighlight">\(y\)</span>-hattur. Í dæminu okkar
+spáir aðhvarfslínan fyrir um hve mikið áfengismagn mun mælast í blóði
+eftir að tiltekinn fjöldi bjóra hefur verið drukkinn.</p>
+<section id="ahvarfsgreiningarlikani-simple-linear-regression-model">
+<h4><span class="section-number">10.1.1.1. </span>Aðhvarfsgreiningarlíkanið (simple linear regression model)<a class="headerlink" href="#ahvarfsgreiningarlikani-simple-linear-regression-model" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><em>Einfalda aðhvarfsgreiningarlíkanið</em> (e. simple linear regression model) má
+skrifa sem</p>
+<div class="math notranslate nohighlight" id="equation-eq-adhvarfslikan">
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-eq-adhvarfslikan" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Y = \beta_0 + \beta_1 x + \varepsilon\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span> eru óþekktir stikar og
+<span class="math notranslate nohighlight">\(\varepsilon\)</span> er normaldreifð slembistærð með meðaltal 0.</p>
+</div>
+<hr class="docutils" />
+<p>Skoðum nú aftur jöfnu <a class="reference internal" href="#equation-eq-adhvarfslikan">10.1</a>. Við sjáum að
+<span class="math notranslate nohighlight">\(\beta_0\)</span> er skurðpunktur línunnar við y-ásinn og <span class="math notranslate nohighlight">\(\beta_1\)</span>
+er hallatala línunnar. Þetta eru hin sanna hallatala og skurðpunktur sem
+við ekki þekkjum og eru stikarnir oft kallaðir þýðishallatala og
+þýðisskurðpunktur. Við getum aftur á móti tekið úrtak og notað gögnin
+til að meta þá. Til að meta stikana <span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span>
+framkvæmum við því tilraun og söfnum saman gögnum fyrir <span class="math notranslate nohighlight">\(Y\)</span> og
+<span class="math notranslate nohighlight">\(x\)</span> og notum þau til að meta stikana.</p>
+<p>Skoðum nú aftur bjórdæmið. Þar var safnað saman gögnum um áfengismagn í
+blóði og fjölda drukkinna bjóra. Út frá þessum gögnum má meta stikana í
+aðhvarfslíkani sem lýsir sambandi áfengismagns í blóði og fjölda
+drukkinna bjóra. Á mynd <a class="reference internal" href="#g-beinarlinur"><span class="std std-numref">10.1</span></a> má sjá gögnin úr dæminu en
+á myndina er einnig búið að setja nokkrar línur sem hafa ólíka
+skurðpunkta og hallatölur.</p>
+<figure class="align-center" id="id8">
+<span id="g-beinarlinur"></span><img alt="Margar línur en hvaða lína er best?" src="../_images/linur.svg" /><figcaption>
+<p><span class="caption-number">Mynd 10.1: </span><span class="caption-text">Margar línur en hvaða lína er best?</span><a class="headerlink" href="#id8" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Með því að skoða myndina er alls ekki augljóst hvaða línu er best að
+nota til að lýsa sambandi <span class="math notranslate nohighlight">\(Y\)</span> og <span class="math notranslate nohighlight">\(x\)</span>. Við þurfum því
+eitthvert viðmið til að ákveða hvaða lína er best. Það viðmið sem við
+notum er <em>aðferð minnstu kvaðrata</em>.</p>
+</section>
+</section>
+<section id="afer-minnstu-kvarata">
+<h3><span class="section-number">10.1.2. </span>Aðferð minnstu kvaðrata<a class="headerlink" href="#afer-minnstu-kvarata" title="Permalink to this heading"></a></h3>
+<p>Aðferð minnstu kvaðrata er algengasta aðferðin til að meta stikana í
+aðhvarfsgreiningar líkaninu. Aðferðin finnur línunni stað þar sem summa
+lóðréttar fjarlægðar milli einstakra punkta og línunar í öðru veldi er
+lágmörkuð. Þessi fjarlægð er kölluð <em>leifar</em> (e. residuals) . Á mynd
+<a class="reference internal" href="#g-leifar"><span class="std std-numref">10.2</span></a> má aftur sjá gögnin frá dæmi <a class="reference internal" href="../kafli03/#ex-bjor"><span class="std std-numref">3.4.1.2</span></a> ásamt línu
+minnstu kvaðrata og leifunum sem merktar eru inn á myndina með örvum.</p>
+<figure class="align-center" id="id9">
+<span id="g-leifar"></span><img alt="Aðferð minnstu kvaðrata" src="../_images/leifar.svg" /><figcaption>
+<p><span class="caption-number">Mynd 10.2: </span><span class="caption-text">Aðferð minnstu kvaðrata</span><a class="headerlink" href="#id9" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<section id="jafna-ahvarfslinu-minnstu-kvarata-least-squares-equation">
+<h4><span class="section-number">10.1.2.1. </span>Jafna aðhvarfslínu minnstu kvaðrata (least squares equation)<a class="headerlink" href="#jafna-ahvarfslinu-minnstu-kvarata-least-squares-equation" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Gerum ráð fyrir að við höfum <span class="math notranslate nohighlight">\(n\)</span> paraðar mælingar
+<span class="math notranslate nohighlight">\((x_i,y_i)\)</span> þar sem gera má ráð fyrir að aðhvarf <span class="math notranslate nohighlight">\(Y\)</span> á
+<span class="math notranslate nohighlight">\(x\)</span> sé línulegt. Táknum meðaltal og staðalfrávik <span class="math notranslate nohighlight">\(x\)</span>
+breytunnar með <span class="math notranslate nohighlight">\(\bar{x}\)</span> og <span class="math notranslate nohighlight">\(s_x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> breytunnar
+með <span class="math notranslate nohighlight">\(\bar{y}\)</span> og <span class="math notranslate nohighlight">\(s_y\)</span>. Fylgnina á milli <span class="math notranslate nohighlight">\(x\)</span> og
+<span class="math notranslate nohighlight">\(y\)</span> táknum við með <span class="math notranslate nohighlight">\(r\)</span>. Notum <span class="math notranslate nohighlight">\(b_0\)</span> til að tákna mat á
+<span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(b_1\)</span> til að tákna mat á <span class="math notranslate nohighlight">\(\beta_1\)</span>. Þá
+reiknum við <span class="math notranslate nohighlight">\(b_0\)</span> og <span class="math notranslate nohighlight">\(b_1\)</span> með</p>
+<div class="math notranslate nohighlight" id="equation-eq-beta1">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-eq-beta1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[b_1 = r \frac{s_y}{s_x}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight" id="equation-eq-beta0">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-eq-beta0" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[b_0 = \bar{y} -  b_1 \bar{x}\]</div>
+<p>Við notum stikana <span class="math notranslate nohighlight">\(b_0\)</span> og <span class="math notranslate nohighlight">\(b_1\)</span> til að smíða jöfnuna</p>
+<div class="math notranslate nohighlight" id="equation-eq-spay">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-eq-spay" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{y} =  b_0 +  b_1x\]</div>
+<p>sem við notum til að <em>spá</em> (e. predict) fyrir um hvert gildið á <span class="math notranslate nohighlight">\(y\)</span>
+verður fyrir þekkt gildi á <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+<hr class="docutils" />
+</section>
+<section id="synidaemi-einfalt-linulegt-ahvarf">
+<span id="ex-bjorjafna"></span><h4><span class="section-number">10.1.2.2. </span>Sýnidæmi: Einfalt línulegt aðhvarf<a class="headerlink" href="#synidaemi-einfalt-linulegt-ahvarf" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Skoðum aftur gögnin úr dæmi <a class="reference internal" href="../kafli03/#ex-bjor"><span class="std std-numref">3.4.1.2</span></a>. Finnið jöfnu
+aðhvarfslínunnar með því að nota aðferð minnstu kvaðrata.</p>
+<p>Út frá gögnunum má reikna:</p>
+<div class="math notranslate nohighlight">
+\[\bar{x} = 4.813, \; \; s_x = 2.198, \; \; \bar{y} = 0.074, \; \; s_y = 0.044, \; \;
+r = 0.894\]</div>
+<p>Þá getum við reiknað</p>
+<div class="math notranslate nohighlight">
+\[b_1 = r\frac{s_y}{s_x} = 0.894 \cdot \frac{0.044}{2.198} = 0.018\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[b_0 = \bar{y} -  \beta_1 \bar{x} = 0.074 - (0.018 \cdot 4.813) = - 0.013\]</div>
+<p>Jafna minnstu kvaðrata er þá</p>
+<div class="math notranslate nohighlight">
+\[\hat{y} = -0.013 + 0.018x\]</div>
+</div>
+</section>
+</section>
+<section id="leifar">
+<h3><span class="section-number">10.1.3. </span>Leifar<a class="headerlink" href="#leifar" title="Permalink to this heading"></a></h3>
+<section id="leifar-residuals">
+<h4><span class="section-number">10.1.3.1. </span>Leifar (residuals)<a class="headerlink" href="#leifar-residuals" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Lóðrétta fjarlægðin frá mælingunum okkar að aðhvarfslínunni köllum við
+<em>leifar</em> og táknum með <span class="math notranslate nohighlight">\(e\)</span>. Stærð leifa má reikna með</p>
+<div class="math notranslate nohighlight">
+\[e_i = y_i - \hat{y}_i\]</div>
+<p>Punktar ofan aðhvarfslínunnar hafa jákvæða leif en punktar neðan hennar
+neikvæða.</p>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Athugasemd</p>
+<p>Ef punktur lendir ofan við aðhvarfslínuna er <span class="math notranslate nohighlight">\(y\)</span> gildið stærra en
+aðhvarfslínan spáir fyrir um. Þá er leifin jákvæð. Ef punktur lendir
+neðan við aðhvarfslínuna er <span class="math notranslate nohighlight">\(y\)</span> gildið minna en aðhvarfslínan
+spáir fyrir um. Þá er leifin neikvæð.</p>
+</div>
+<hr class="docutils" />
+<p>Leifar segja okkur hversu vel aðhvarfslínan lýsir gögnunum. Því skal
+alltaf skoða leifarnar að lokinni aðhvarfsgreiningu en til þess notum
+við <em>leifarit</em> (e. residual plot). Leifaritið sýnir leifarnar á y-ásnum og
+skýribreytuna á x-ásnum. Fleiri tegundir leifarita eru til en við látum
+þetta nægja hér. Vinstra megin á mynd <a class="reference internal" href="#g-leifarit"><span class="std std-numref">10.3</span></a> má sjá punktarit
+af gögnunum úr dæmi <a class="reference internal" href="../kafli03/#ex-bjor"><span class="std std-numref">3.4.1.2</span></a> ásamt aðhvarfslínunni. Hægra megin á
+myndinni má sjá leifarit fyrir sömu gögn. Takið eftir að x-ásinn er því
+sá sami og er á punktaritinu en y-ásinn ekki.</p>
+<figure class="align-center" id="id10">
+<span id="g-leifarit"></span><img alt="Punktarit af gögnum og leifarit" src="../_images/bjor2.svg" /><figcaption>
+<p><span class="caption-number">Mynd 10.3: </span><span class="caption-text">Punktarit af gögnum og leifarit</span><a class="headerlink" href="#id10" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Dreifing leifanna á að vera tilviljunarkennd umhverfis 0. Enga reglu á
+að sjá í leifunum. Séu þessi skilyrði brotin skal ekki nota
+aðhvarfslíkanið til að lýsa gögnunum. Skoðum nú mynd <a class="reference internal" href="#g-leifarit2"><span class="std std-numref">10.4</span></a>
+þar sem sjá má fjögur leifarit.</p>
+<ol class="upperalpha simple">
+<li><p>Hér eru leifarnar dreifðar tilviljunarkennt kringum núll.
+Allt er eins og það á að vera.</p></li>
+<li><p>Hér eru leifarnar dreifðar tilviljunarkennt en ekki kringum núll.
+Ekki ásættanlegt.</p></li>
+<li><p>Hér fylgja leifarnar bogadregnu mynstri. Það bendir til þess að samband <span class="math notranslate nohighlight">\(Y\)</span> og <span class="math notranslate nohighlight">\(x\)</span> sé ekki línulegt.
+Ekki ásættanlegt.</p></li>
+<li><p>Leifarnar eru ekki dreifðar tilviljunarkennt. Dreifni leifanna virðist aukast með hærri gildum á <span class="math notranslate nohighlight">\(x\)</span>.
+Ekki ásættanlegt.</p></li>
+</ol>
+<figure class="align-center" id="id11">
+<span id="g-leifarit2"></span><img alt="Leifarit" src="../_images/leifar2.svg" /><figcaption>
+<p><span class="caption-number">Mynd 10.4: </span><span class="caption-text">Leifarit</span><a class="headerlink" href="#id11" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="bruun-og-bryggjun">
+<h3><span class="section-number">10.1.4. </span>Brúun og bryggjun<a class="headerlink" href="#bruun-og-bryggjun" title="Permalink to this heading"></a></h3>
+<p>Við getum notað jöfnu aðhvarfslínunnar, jöfnu <a class="reference internal" href="#equation-eq-spay">10.4</a>, til að spá
+fyrir um hvaða gildi <span class="math notranslate nohighlight">\(Y\)</span> mun taka fyrir ákveðið gildi á <span class="math notranslate nohighlight">\(x\)</span>.
+Áður en það er gert skal skoða á hvaða bili <span class="math notranslate nohighlight">\(x\)</span>-gildin sem við
+notuðum til að meta líkanið liggja. Það getur nefnilega verið mjög
+vafasamt að nota jöfnu aðhvarfslínunnar til að spá fyrir um gildi á
+<span class="math notranslate nohighlight">\(Y\)</span> fyrir gildi á <span class="math notranslate nohighlight">\(x\)</span> sem eru ekki á sama reki og
+<span class="math notranslate nohighlight">\(x\)</span>-gildin sem notuð voru til að meta stikana í líkaninu.</p>
+<section id="bruun-interpolation">
+<h4><span class="section-number">10.1.4.1. </span>Brúun (interpolation)<a class="headerlink" href="#bruun-interpolation" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Sé aðhvarfslíkan notað til að spá fyrir um gildi á <span class="math notranslate nohighlight">\(Y\)</span> fyrir
+eitthvert gildi á <span class="math notranslate nohighlight">\(x\)</span> sem er á sama reki og <span class="math notranslate nohighlight">\(x\)</span>-gildin sem
+notuð voru til að meta stikana í líkaninu er talað um að <em>brúa</em>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-bruun">
+<h4><span class="section-number">10.1.4.2. </span>Sýnidæmi: Brúun<a class="headerlink" href="#synidaemi-bruun" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Skoðum nú aftur gögnin úr dæmi <a class="reference internal" href="../kafli03/#ex-bjor"><span class="std std-numref">3.4.1.2</span></a>. Spáið fyrir um
+áfengismagn í blóði einstaklings sem drukkið hefur 6.5 bjóra.</p>
+<p>Við sáum í dæmi <a class="reference internal" href="#ex-bjorjafna"><span class="std std-numref">10.1.2.2</span></a> að jafna minnstu kvaðrata er</p>
+<div class="math notranslate nohighlight">
+\[\hat{y} = -0.013 + 0.018x\]</div>
+<p>Enginn í rannsókninni drakk 6.5 bjóra en rannsóknin náði yfir
+einstaklinga sem drukkið höfðu frá einum og upp í níu bjóra. 6.5 liggur
+á því bili og því erum við að brúa þegar við notum aðhvarfslínuna til að
+spá fyrir um áfengismagnið. Við setjum 6.5 inn í stað <span class="math notranslate nohighlight">\(x\)</span> í
+jöfnunni hér að ofan og fáum að</p>
+<div class="math notranslate nohighlight">
+\[\hat{y} = -0.013 + (0.018 \cdot 6.5) = 0.104\]</div>
+<p>Við spáum því að manneskja sem drekki 6.5 bjóra mælist með alkohólmagn
+0.104.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/bruun.svg" /></figure>
+</div>
+</section>
+<section id="bryggjun-extrapolation">
+<h4><span class="section-number">10.1.4.3. </span>Bryggjun (extrapolation)<a class="headerlink" href="#bryggjun-extrapolation" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Sé aðhvarfslíkan notað til að spá fyrir um gildi á <span class="math notranslate nohighlight">\(Y\)</span> fyrir
+eitthvert gildi á <span class="math notranslate nohighlight">\(x\)</span> sem er <strong>fjarri</strong> þeim <span class="math notranslate nohighlight">\(x\)</span>-gildum sem
+notuð voru til að meta stikana í líkaninu er talað um að <em>bryggja</em>.
+Þetta svarar til að lengja aðhvarfslínuna. Það getur verið mjög vafasamt
+að bryggja!</p>
+</div>
+<hr class="docutils" />
+<p>Á mynd <a class="reference internal" href="#g-bryggjun"><span class="std std-numref">10.5</span></a> má sjá niðurstöður mælinga á hæð drengja á
+aldrinum 3-15 ára. Sjá má á myndinni að aðhvarfslínan lýsir vel sambandi
+hæðar og aldurs drengja á bilinu 3-15 ára og væri því hægt að nota
+líkanið til að spá fyrir um hæð drengja á þeim aldri. Hins vegar væri
+rangt að nota líkanið til að spá fyrir um hæð drengja á aldri sem ekki
+liggur á bilinu 3-15 ára. Sé myndin skoðuð má til dæmis sjá að líkanið
+okkar spáir því að 30 ára gamall maður sé tæplega 250 cm á hæð! Hér erum
+við að nota líkanið til að spá fyrir um <span class="math notranslate nohighlight">\(Y\)</span>-gildi fyrir
+<span class="math notranslate nohighlight">\(x\)</span>-gildi sem liggur fjarri upphaflegu <span class="math notranslate nohighlight">\(x\)</span> gildanna. Því
+erum við að bryggja og það ber ávallt að varast!</p>
+<figure class="align-center" id="id12">
+<span id="g-bryggjun"></span><img alt="Bryggjun" src="../_images/bryggjun.svg" /><figcaption>
+<p><span class="caption-number">Mynd 10.5: </span><span class="caption-text">Bryggjun</span><a class="headerlink" href="#id12" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="skyringarhlutfall">
+<h3><span class="section-number">10.1.5. </span>Skýringarhlutfall<a class="headerlink" href="#skyringarhlutfall" title="Permalink to this heading"></a></h3>
+<p>Munið að fylgni segir okkur til um stefnu og styrkleika línulegs
+sambands tveggja breyta en ekki hvert sambandið milli breytanna er.
+Fylgnistuðull hefur hins vegar beina tengingu inn í línulega
+aðhvarfsgreiningu, því með honum má reikna <em>skýringarhlutfall</em> (e. R
+squared).</p>
+<section id="r-2-i-ahvarfsgreiningu">
+<span id="em-skyringarhlutfall"></span><h4><span class="section-number">10.1.5.1. </span><span class="math notranslate nohighlight">\(r^2\)</span> í aðhvarfsgreiningu<a class="headerlink" href="#r-2-i-ahvarfsgreiningu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Sé fylgnistuðullinn settur í annað veldi, <span class="math notranslate nohighlight">\(r^2\)</span>, er talað um
+skýringarhlutfall. <span class="math notranslate nohighlight">\(r^2\)</span> stendur fyrir hlutfallslegan breytileika
+í <span class="math notranslate nohighlight">\(Y\)</span> sem er hægt að skýra út með breytingum á <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-skyringarhlutfall">
+<h4><span class="section-number">10.1.5.2. </span>Sýnidæmi: Skýringarhlutfall<a class="headerlink" href="#synidaemi-skyringarhlutfall" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Skoðum aftur dæmi <a class="reference internal" href="#ex-bjorjafna"><span class="std std-numref">10.1.2.2</span></a>. Hversu mikið af breytileika í
+áfengismagni má skýra út með fjölda drukkinna bjóra?</p>
+<p>Við sáum áður að í tilrauninni var fylgnistuðullinn <span class="math notranslate nohighlight">\(r\)</span> = 0.894.
+Því fáum við að <span class="math notranslate nohighlight">\(r^2 = 0.894^2 = 0.799.\)</span> Því má segja að um 80% af
+breytileika í alkóhólmagni megi skýra með fjölda drukkinna bjóra.</p>
+</div>
+</section>
+</section>
+<section id="utlagar-og-ahrifamikil-maeligildi">
+<h3><span class="section-number">10.1.6. </span>Útlagar og áhrifamikil mæligildi<a class="headerlink" href="#utlagar-og-ahrifamikil-maeligildi" title="Permalink to this heading"></a></h3>
+<p>Útlagi (kassi <a class="reference internal" href="../kafli03/#em-utlagar"><span class="std std-numref">3.2.2.2</span></a>) er mæligildi sem er ólíkt öðrum
+mæligildum í safninu. Mæligildi þar sem <span class="math notranslate nohighlight">\(y\)</span> gildið er frábrugðið
+hinum <span class="math notranslate nohighlight">\(y\)</span> gildunum hefur háa leif. Aðrir útlagar eru ekki endilega
+með háa leif . Á mynd <a class="reference internal" href="#g-utlagarogleifar"><span class="std std-numref">10.6</span></a> má sjá tvo útlaga.
+Útlaginn á myndinni til vinstri er með háa leif en útlaginn hægra megin
+ekki.</p>
+<figure class="align-center" id="id13">
+<span id="g-utlagarogleifar"></span><img alt="Útlagar og leifar þeirra" src="../_images/utlagarleif.svg" /><figcaption>
+<p><span class="caption-number">Mynd 10.6: </span><span class="caption-text">Útlagar og leifar þeirra</span><a class="headerlink" href="#id13" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Mæligildi er sagt <em>áhrifaríkt</em> (e. influential) ef útkoma útreikninga
+breytist mikið við það að fjarlægja það úr gagnasafninu. Mæligildi þar
+sem <span class="math notranslate nohighlight">\(x\)</span> gildið er frábrugðið hinum <span class="math notranslate nohighlight">\(x\)</span> gildunum (og er þar
+af leiðandi útlagi) er oft áhrifaríkt.</p>
+<p>Skoðum nú mynd <a class="reference internal" href="#g-ahrifamikil"><span class="std std-numref">10.7</span></a>. Á myndinni vinstra megin má sjá
+útlaga. Gráa brotalínan er aðhvarfslínan sem fæst þegar allar
+mælingarnar eru notaðar til að meta hana en svarta heila línan fæst ef
+útlaganum er sleppt. Það sést að ekki er mikill munur á línunum og því
+er útlaginn ekki áhrifamikill. Skoðum við aftur á móti myndina hægra
+megin sést að mikill munur er á línunum og því er útlaginn þeim megin
+áhrifamikill.</p>
+<figure class="align-center" id="id14">
+<span id="g-ahrifamikil"></span><img alt="Áhrifamikil mæligildi" src="../_images/ahrifamikil.svg" /><figcaption>
+<p><span class="caption-number">Mynd 10.7: </span><span class="caption-text">Áhrifamikil mæligildi</span><a class="headerlink" href="#id14" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p>Það er ekki alltaf augljóst hvað gera á við útlaga og áhrifamikil
+mæligildi. Ágætt er að hafa eftirfarandi í huga þegar áhrifamikil
+mæligildi og/eða útlagar leynast í gagnasafni:</p>
+<ol class="arabic simple">
+<li><p>Það á alltaf að skoða útlaga og áhrifamikil mæligildi sérstaklega.</p></li>
+<li><p>Ef mistök hafa átt sér stað skal fjarlæga mæligildið úr safninu.</p></li>
+<li><p>Ef ekki er hægt að sýna fram á að um mistök hafi verið að ræða er oft
+gott að sýna útreikninga með og án þessara gilda.</p></li>
+<li><p>Í sumum tilfellum er eðlilegast að byggja útreikninga á mælisafninu
+án útlaga/áhrifamikilla mæligilda en í þeim tilfellum verður að taka
+fram að líkanið gildi ekki fyrir mæligildi utan þess ramma mæligilda
+sem notuð voru við gerð líkansins.</p></li>
+</ol>
+</section>
+</section>
+<section id="alyktanir-i-ahvarfsgreiningu">
+<h2><span class="section-number">10.2. </span>Ályktanir í aðhvarfsgreiningu<a class="headerlink" href="#alyktanir-i-ahvarfsgreiningu" title="Permalink to this heading"></a></h2>
+<p>Nú er kominn tími til að setja aðhvarfsgreiningu í samhengi við það sem
+við höfum áður lært um ályktunartölfræði. Mælingarnar okkar eru
+einhverri slembni háðar og því getum við fengið aðrar niðurstöður ef við
+endurtökum tilraunina og þar af leiðandi annað mat á aðhvarfslínunni
+okkar. Því er eðlilegt að reikna öryggisbil og tilgátupróf í einföldu
+línulegu aðhvarfi líkt og þið hafið séð svo mörg dæmi um hingað til.</p>
+<p>Til að kanna hvaða tilgátupróf og öryggisbil eru viðeigandi skulum við
+skoða aftur aðhvarfsgreiningarlíkanið frá jöfnu <a class="reference internal" href="#equation-eq-adhvarfslikan">10.1</a>.
+Ef við gerum ráð fyrir að við höfum <span class="math notranslate nohighlight">\(n\)</span> paraðar mælingar
+<span class="math notranslate nohighlight">\((x_1,y_1), \ldots, (x_n,y_n)\)</span>, má skrifa líkanið sem</p>
+<div class="math notranslate nohighlight">
+\[Y_i = \beta_0 + \beta_1 x_i + \varepsilon_i\]</div>
+<p>Í þessari jöfnu er <span class="math notranslate nohighlight">\(\beta_0\)</span> hinn sanni skurðpunktur sem við ekki
+þekkjum, þýðisskurðpunkturinn, og <span class="math notranslate nohighlight">\(\beta_1\)</span> hin sanna hallatala,
+þýðishallatalan. <span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span> eru því lýsistærðir
+sem við viljum bæði meta og draga ályktanir um. Við sáum hér að framan
+að hægt er að meta <span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span> með því að safna
+saman gögnum og nota aðferð minnstu kvaðrata. Við köllum mötin
+<span class="math notranslate nohighlight">\(b_0\)</span> og <span class="math notranslate nohighlight">\(b_1\)</span> (jöfnur <a class="reference internal" href="#equation-eq-beta0">10.3</a> og <a class="reference internal" href="#equation-eq-beta1">10.2</a>).
+Síðar í þessum kafla munum við sjá fjölmörg öryggisbil og tilgátupróf
+sem varða þessa stika. Við eigum hins vegar enn eftir að skoða eina
+breytu í jöfnunni nánar en það eru stærðinar <span class="math notranslate nohighlight">\(\varepsilon_i\)</span>.</p>
+<section id="slembistaerin-varepsilon">
+<h3><span class="section-number">10.2.1. </span>Slembistærðin <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#slembistaerin-varepsilon" title="Permalink to this heading"></a></h3>
+<p>Við notum slembistærðina <span class="math notranslate nohighlight">\(\varepsilon\)</span> til að lýsa þeirri óvissu
+sem er til staðar í mælingum okkar á <span class="math notranslate nohighlight">\(Y\)</span>. Við gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(\varepsilon_i\)</span> séu einsdreifðar óháðar slembistærðir sem fylgja
+normaldreifingu með meðaltal 0 og dreifni <span class="math notranslate nohighlight">\(\sigma^2\)</span>. Við
+krefjumst þess að <span class="math notranslate nohighlight">\(\varepsilon_i\)</span> séu óháðar og einsdreifðar, til
+að tryggja að það sé engin kerfisbundin óvissa í mælingunum okkar og við
+krefjumst þess að meðaltal þeirra sé 0, því annars værum við markvisst
+að van- eða ofmeta aðhvarfslínuna.</p>
+<p>Líkt og með allar slembistærðir, gefur gildi stika líkindadreifingar
+<span class="math notranslate nohighlight">\(\varepsilon\)</span> allar þær upplýsingar sem hægt er að fá um
+slembistærðina. Munið að normaldreifingin hefur stikana <span class="math notranslate nohighlight">\(\mu\)</span> og
+<span class="math notranslate nohighlight">\(\sigma^2\)</span>. Í þessu tilviki vitum við að <span class="math notranslate nohighlight">\(\mu = 0\)</span> en við
+vitum ekki hvert gildi <span class="math notranslate nohighlight">\(\sigma^2\)</span> er. Mat á <span class="math notranslate nohighlight">\(\sigma^2\)</span> fæst
+með því að finna kvaðratsummu leifanna og deila í hana með
+(<span class="math notranslate nohighlight">\(n-2\)</span>).</p>
+<section id="mat-a-sigma-2-i-einfoldu-linulegu-ahvarfi-estimate-of-sigma-2-in-simple-linear-regression">
+<h4><span class="section-number">10.2.1.1. </span>Mat á <span class="math notranslate nohighlight">\(\sigma^2\)</span> í einföldu línulegu aðhvarfi (estimate of <span class="math notranslate nohighlight">\(\sigma^2\)</span> in simple linear regression)<a class="headerlink" href="#mat-a-sigma-2-i-einfoldu-linulegu-ahvarfi-estimate-of-sigma-2-in-simple-linear-regression" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Mat á <span class="math notranslate nohighlight">\(\sigma^2\)</span> í einföldu línulegu aðhvarfi táknum við með
+<span class="math notranslate nohighlight">\(s_e^2\)</span> og reiknum með</p>
+<div class="math notranslate nohighlight" id="equation-eq-sigmaest">
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-eq-sigmaest" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[s_e^2 = \frac{\sum_{i=1}^n (y_i-\hat{y}_i)^2}{n-2}\]</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="oryggisbil-fyrir-beta-0-og-beta-1">
+<h3><span class="section-number">10.2.2. </span>Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span><a class="headerlink" href="#oryggisbil-fyrir-beta-0-og-beta-1" title="Permalink to this heading"></a></h3>
+<p>Þar sem mælingarnar okkar eru slembni háðar, geta allar ályktanir
+dregnar út frá þeim breyst í hvert sinn sem tilraunin er endurtekin.
+Markmið okkar í aðhvarfsgreiningu er að meta stikana <span class="math notranslate nohighlight">\(\beta_0\)</span> og
+<span class="math notranslate nohighlight">\(\beta_1\)</span> í aðhvarfslínunni og því er eðlilegast að skoða hversu
+nákvæm þau möt eru. Besta leiðin til þess er að skoða öryggisbil fyrir
+stikana.</p>
+<section id="oryggisbil-fyrir-beta-0-confidense-interval-for-beta-0">
+<h4><span class="section-number">10.2.2.1. </span>Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> (confidense interval for <span class="math notranslate nohighlight">\(\beta_0\)</span>)<a class="headerlink" href="#oryggisbil-fyrir-beta-0-confidense-interval-for-beta-0" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> er:</p>
+<div class="math notranslate nohighlight">
+\[b_0 - t_{1-\alpha/2,(n-2)} \cdot s_e \sqrt{\frac{1}{n} + \frac{(\bar{x})^2}{s_x^2\cdot(n-1)}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight">
+\[b_0 + t_{1-\alpha/2,(n-2)} \cdot s_e \sqrt{\frac{1}{n} + \frac{(\bar{x})^2}{s_x^2\cdot(n-1)}}\]</div>
+<p>Öryggisbilið má því skrifa:</p>
+<div class="math notranslate nohighlight">
+\[b_0 - t_{1-\alpha/2,(n-2)} \cdot s_e \sqrt{\frac{1}{n} + \frac{(\bar{x})^2}{s_x^2\cdot(n-1)}}
+&lt; \beta_0  &lt;
+b_0 + t_{1-\alpha/2,(n-2)} \cdot s_e \sqrt{\frac{1}{n} + \frac{(\bar{x})^2}{s_x^2\cdot(n-1)}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(b_0\)</span> má reikna með jöfnu <a class="reference internal" href="#equation-eq-beta0">10.3</a>, <span class="math notranslate nohighlight">\(n\)</span> er
+fjöldi paraðra mælinga, <span class="math notranslate nohighlight">\(\bar{x}\)</span> er meðaltal skýribreytunnar,
+<span class="math notranslate nohighlight">\(s_x\)</span> er staðalfrávik skýribreytunnar og
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n-2)}\)</span> má finna í t-töflu í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="oryggisbil-fyrir-beta-1-confidence-interval-for-beta-1">
+<h4><span class="section-number">10.2.2.2. </span>Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_1\)</span> (confidence interval for <span class="math notranslate nohighlight">\(\beta_1\)</span>)<a class="headerlink" href="#oryggisbil-fyrir-beta-1-confidence-interval-for-beta-1" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils fyrir <span class="math notranslate nohighlight">\(\beta_1\)</span> er:</p>
+<div class="math notranslate nohighlight">
+\[b_1 - t_{1-\alpha/2,(n-2)} \cdot s_e \frac{1}{\sqrt{s_x^2 \cdot (n-1)}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> öryggisbils er:</p>
+<div class="math notranslate nohighlight">
+\[b_1 + t_{1-\alpha/2,(n-2)} \cdot s_e \frac{1}{\sqrt{s_x^2 \cdot (n-1)}}\]</div>
+<p>Öryggisbilið má því skrifa:</p>
+<div class="math notranslate nohighlight">
+\[b_1 - t_{1-\alpha/2,(n-2)} \cdot s_e \frac{1}{\sqrt{s_x^2 \cdot (n-1)}}
+&lt; \beta_1  &lt;
+b_1 + t_{1-\alpha/2,(n-2)} \cdot s_e \frac{1}{\sqrt{s_x^2 \cdot (n-1)}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(b_1\)</span> má reikna með jöfnu <a class="reference internal" href="#equation-eq-beta1">10.2</a>, <span class="math notranslate nohighlight">\(n\)</span> er
+fjöldi paraðra mælinga, <span class="math notranslate nohighlight">\(s_x\)</span> er staðalfrávik skýribreytunnar og
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n-2)}\)</span> má finna í t-töflu í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="spabil-fyrir-framtiarmaelingar">
+<h3><span class="section-number">10.2.3. </span>Spábil fyrir framtíðarmælingar<a class="headerlink" href="#spabil-fyrir-framtiarmaelingar" title="Permalink to this heading"></a></h3>
+<p>Við höfum séð að við getum notað aðhvarfslíkanið til að spá fyrir um
+gildi á <span class="math notranslate nohighlight">\(Y\)</span>. Þessi spá er slembni háð, bæði vegna slembni í
+<span class="math notranslate nohighlight">\(Y\)</span> og óvissu í matinu okkar á stikunum. Hér að neðan má sjá
+hvernig reikna má spábil fyrir framtíðarmælingu á <span class="math notranslate nohighlight">\(Y\)</span> (það er að
+segja mælingu sem ekki hefur verið framkvæmd) fyrir eitthvert gildi
+<span class="math notranslate nohighlight">\(x = x_0\)</span>.</p>
+<section id="spabil-fyrir-framtiarmaelingar-prediction-interval-for-future-observations">
+<h4><span class="section-number">10.2.3.1. </span>Spábil fyrir framtíðarmælingar (prediction interval for future observations)<a class="headerlink" href="#spabil-fyrir-framtiarmaelingar-prediction-interval-for-future-observations" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Neðra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> spábils fyrir framtíðarmælingu á
+<span class="math notranslate nohighlight">\(Y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(b_0 + b_1x_0) - t_{1-\alpha/2,(n-2)} \cdot s_e \sqrt{1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{s_x^2(n-1)}}\]</div>
+<p>Efra mark <span class="math notranslate nohighlight">\(1 - \alpha\)</span> spábils er:</p>
+<div class="math notranslate nohighlight">
+\[(b_0 + b_1x_0) + t_{1-\alpha/2,(n-2)} \cdot s_e \sqrt{1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{s_x^2(n-1)}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(b_0\)</span> og <span class="math notranslate nohighlight">\(b_1\)</span> má reikna með jöfnum <a class="reference internal" href="#equation-eq-beta0">10.3</a>
+og <a class="reference internal" href="#equation-eq-beta1">10.2</a>, <span class="math notranslate nohighlight">\(n\)</span> er fjöldi paraðra mælinga, <span class="math notranslate nohighlight">\(\bar{x}\)</span>
+er meðaltal skýribreytunnar, <span class="math notranslate nohighlight">\(s_x\)</span> er staðalfrávik skýribreytunnar
+og <span class="math notranslate nohighlight">\(t_{1-\alpha/2,(n-2)}\)</span> má finna í t-töflu í kafla <a class="reference internal" href="../toflur_all_final/#a-ttafla"><span class="std std-ref">T.2</span></a>.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="prof-a-fylgnistuli-rho">
+<h3><span class="section-number">10.2.4. </span>Próf á fylgnistuðli (<span class="math notranslate nohighlight">\(\rho\)</span>)<a class="headerlink" href="#prof-a-fylgnistuli-rho" title="Permalink to this heading"></a></h3>
+<p>Við höfum nú séð að <span class="math notranslate nohighlight">\(b_0\)</span> og <span class="math notranslate nohighlight">\(b_1\)</span> eru möt á
+<span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span> sem við gátum reiknað út frá úrtakinu
+okkar. Að sama skapi lítum við svo á að fylgnistuðullinn <span class="math notranslate nohighlight">\(r\)</span> sem
+við reiknum út (sjá kassa <a class="reference internal" href="../kafli04/#em-fylgnistudull"><span class="std std-numref">4.4.2.1</span></a>) sé eingöngu mat á
+sanna fylgnistuðli þýðisins. Við táknum sanna fylgnistuðulinn með
+<span class="math notranslate nohighlight">\(\rho\)</span> sem er bókstafurinn r í gríska stafrófinu. Yfirleitt höfum
+við áhuga á því að sýna fram á að það sé fylgni á milli breytanna sem
+við erum að skoða. Það er við viljum geta fullyrt að fylgnin sé ekki 0.
+Því er núlltilgátan sú að <span class="math notranslate nohighlight">\(\rho = 0\)</span>.</p>
+<section id="tilgatuprof-fyrir-rho">
+<h4><span class="section-number">10.2.4.1. </span>Tilgátupróf fyrir <span class="math notranslate nohighlight">\(\rho\)</span><a class="headerlink" href="#tilgatuprof-fyrir-rho" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[H_0: \rho = 0\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-rhoprof">
+<span class="eqno">(10.6)<a class="headerlink" href="#equation-eq-rhoprof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[T = \frac{r\sqrt{n-2}}{\sqrt{1-r^2}}\]</div>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin t dreifingu með n-2
+frígráður, eða <span class="math notranslate nohighlight">\(T \sim t_{(n-2)}\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \rho &lt; 0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha,(n-2)}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: \rho &gt; 0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha,(n-2)}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: \rho \neq 0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T &lt; -t_{1-\alpha/2,(n-2)}\)</span> eða <span class="math notranslate nohighlight">\(T &gt; t_{1-\alpha/2,(n-2)}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-prof-a-fylgnistuli">
+<h4><span class="section-number">10.2.4.2. </span>Sýnidæmi: Próf á fylgnistuðli<a class="headerlink" href="#synidaemi-prof-a-fylgnistuli" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Atli elskar ís. Af einskærum áhuga gerði hann rannsókn þar sem hann
+kannaði fylgni veltu ísbúða á einum tilteknum degi við hitastigið úti
+þann dag. Alls skoðaði hann útkomur fyrir 38 daga sem hann valdi af
+handahófi yfir árið. Fylgnin milli hitastigs og seldra ísa reyndist vera
+0.5 fyrir þetta úrtak. Getur Atli fullyrt að það sé í raun fylgni milli
+hitastigs og ísáts? Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span></p>
+<p>Förum eftir leiðbeiningunum um framkvæmd tilgátuprófa:</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um fylgni tveggja breyta og notum því tilgátupróf
+fyrir <span class="math notranslate nohighlight">\(\rho\)</span>.</p></li>
+<li><p>Notum <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> eins og gefið er í textanum.</p></li>
+<li><p>Við ætlum að kanna hvort fylgnin sé önnur en núll.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \rho= 0\\
+H_1&amp;:&amp; \rho \neq 0 \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Prófstærðina reiknum við með jöfnu <a class="reference internal" href="#equation-eq-rhoprof">10.6</a>:</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{r\sqrt{n-2}}{\sqrt{1-r^2}}\]</div>
+<p>Við höfum að <span class="math notranslate nohighlight">\(n=38\)</span> og <span class="math notranslate nohighlight">\(r = 0.5\)</span>. Við setjum þessar tölur
+inn í jöfnurnar og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+t &amp;= \frac{0.5\sqrt{38 -2}}{\sqrt{1-0.5^2}} = \frac{0.5\sqrt{36}}{\sqrt{1-0.25}}\\
+&amp;= \frac{0.5\cdot 6}{\sqrt{0.75}} = \frac{3}{\sqrt{0.75}} = 3.46 \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við þurfum að finna höfnunarsvæðið og notum til þess t-töflu. Við
+flettum upp eftir <span class="math notranslate nohighlight">\(n - 2 = 36\)</span> frígráðum.
+<span class="math notranslate nohighlight">\(t_{1-\alpha/2, (n-2)}\)</span> = <span class="math notranslate nohighlight">\(t_{0.975, (36)}\)</span> = 2.028, svo
+við höfnum núlltilgátunni ef <span class="math notranslate nohighlight">\(t &gt; 2.028\)</span> eða
+<span class="math notranslate nohighlight">\(t &lt; -2.028\)</span>.</p>
+<p>Við sjáum að <span class="math notranslate nohighlight">\(t = 3.46 &gt; 2.028\)</span> svo prófstærðin fellur á
+höfnunarsvæðið.</p>
+</li>
+<li><p>Við höfnum núlltilgátunni að fylgni milli hitastigs og ísáts sé núll
+og fullyrðum að það sé fylgni á milli ísáts og hitastigs úti.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/t36.svg" /></figure>
+</li>
+</ol>
+</div>
+</section>
+</section>
+</section>
+<section id="fervikagreining-i-ahvarfsgreiningu">
+<h2><span class="section-number">10.3. </span>Fervikagreining í aðhvarfsgreiningu<a class="headerlink" href="#fervikagreining-i-ahvarfsgreiningu" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">10.3.1. </span>Fervikagreining í aðhvarfsgreiningu<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Nota má fervikagreiningu til að draga ályktanir í línulegri
+aðhvarfgreiningu. Uppsetningin er á margan hátt svipuð og í kafla
+<a class="reference internal" href="../kafli09/#c-fervikagreining"><span class="std std-numref">9</span></a> þegar við notum fervikagreiningu til að draga
+ályktanir um meðaltöl, en fervikasummurnar eru reiknaðar á örlítið annan
+hátt. Fyrir sérhverja mælingu <span class="math notranslate nohighlight">\(y_i\)</span> gildir að</p>
+<div class="math notranslate nohighlight">
+\[(y_i - \bar y_.) = (\hat y_i - \bar y_.) + (y_i -\hat y_i)\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\bar y_.\)</span> er meðaltal <span class="math notranslate nohighlight">\(y\)</span>-mælinganna og
+<span class="math notranslate nohighlight">\(\hat y_i\)</span> er spágildið fyrir <span class="math notranslate nohighlight">\(y_i\)</span>.</p>
+<p>Þegar aðhvarfsgreiningarlíkan er metið með jöfnu minnstu kvaðrata gildir
+enn fremur að</p>
+<div class="math notranslate nohighlight">
+\[\sum_{i=1}^n (y_i - \bar y_.)^2 = \sum_{i=1}^n (\hat y_i - \bar y_.)^2 + \sum_{i=1}^n (y_i - \hat y_i)^2\]</div>
+<p>Út frá þessu reiknum við fervikasummur í einföldu línulegu aðhvarfi.</p>
+<section id="fervikasummur-i-einfoldu-linulegu-ahvarfi-sums-of-squares-in-a-simple-linear-regression-anova">
+<h4><span class="section-number">10.3.1.1. </span>Fervikasummur í einföldu línulegu aðhvarfi (sums of squares in a simple linear regression ANOVA)<a class="headerlink" href="#fervikasummur-i-einfoldu-linulegu-ahvarfi-sums-of-squares-in-a-simple-linear-regression-anova" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Fervikasummurnar eru reiknaðar með</p>
+<div class="math notranslate nohighlight" id="equation-eq-sst-r">
+<span class="eqno">(10.7)<a class="headerlink" href="#equation-eq-sst-r" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+SS_T= &amp; \sum_{i = 1}^{n} (y_{i} - \bar{y}_{.})^2\end{aligned},\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-ssr">
+<span class="eqno">(10.8)<a class="headerlink" href="#equation-eq-ssr" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+SS_R = &amp; \sum_{i = 1}^{n} (\hat y_i - \bar y_.)^2\end{aligned},\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-sse-r">
+<span class="eqno">(10.9)<a class="headerlink" href="#equation-eq-sse-r" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+SS_E = &amp; \sum_{i = 1}^{n} (y_i - \hat y_i)^2\end{aligned}\]</div>
+<p>Heildarbreytileikanum má skipta upp í breytileika metnu gildanna annars
+vegar og breytileika leifanna hins vegar eða</p>
+<div class="math notranslate nohighlight" id="equation-eq-anovauppskiptingk9">
+<span class="eqno">(10.10)<a class="headerlink" href="#equation-eq-anovauppskiptingk9" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[SS_T = SS_{R} + SS_E\]</div>
+</div>
+<hr class="docutils" />
+<p>Algengt er að setja kvaðratsummurnar upp í svokallaða
+<em>fervikagreiningartöflu</em> (e. ANOVA table). Sú tafla samanstendur af þremur
+dálkum og þremur línum. Fyrsti dálkurinn inniheldur fervikasummurnar
+(reiknaðar með jöfnum <a class="reference internal" href="#equation-eq-sst-r">10.7</a> - <a class="reference internal" href="#equation-eq-sse-r">10.9</a>). Annar dálkurinn
+inniheldur fjölda <em>frígráða</em> fyrir hverja fervikasummu fyrir sig en það
+heiti bera stærðirnar <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(N-2\)</span> og <span class="math notranslate nohighlight">\(N-1\)</span>. Þriðji
+dálkurinn inniheldur svokallaðar meðalfervikasummur. Þær reiknum við með
+því að deila viðkomandi fervikasummu með fjölda frígráða sem henni
+tilheyra (í sömu línu). Dæmigerða fervikasummutöflu má sjá hér að neðan.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fervikasummur</p></th>
+<th class="head"><p>Frígráður</p></th>
+<th class="head"><p>Meðalfervikasummur</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(SS_R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(MS_R = SS_R\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(SS_E\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N - 2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(MS_E = \frac{SS_E}{N - 2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(SS_T\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(N - 1\)</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fervikasummurnar má einnig nota til að reikna skýringarhlutfall með
+öðrum hætti. Sú framsetning útskýrir jafnvel enn betur hvers vegna
+<span class="math notranslate nohighlight">\(r^2\)</span> stendur fyrir hlutfallslegan breytileika í <span class="math notranslate nohighlight">\(Y\)</span> sem er
+hægt að skýra með breytingum á <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</section>
+<section id="skyringarhlutfall-r-2">
+<span id="em-skyringanova"></span><h4><span class="section-number">10.3.1.2. </span>Skýringarhlutfall (<span class="math notranslate nohighlight">\(R^2\)</span>)<a class="headerlink" href="#skyringarhlutfall-r-2" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Skýringarhlutfall má reikna með jöfnunni</p>
+<div class="math notranslate nohighlight">
+\[r^2 = \frac{SSR}{SST}\]</div>
+<p>Það stendur fyrir hlutfallslegan breytileika í <span class="math notranslate nohighlight">\(Y\)</span> sem er hægt að
+skýra með breytingum á <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tilgatuprof-i-fervikagreiningu-fyrir-ahvarfsgreiningu">
+<h3><span class="section-number">10.3.2. </span>Tilgátupróf í fervikagreiningu fyrir aðhvarfsgreiningu<a class="headerlink" href="#tilgatuprof-i-fervikagreiningu-fyrir-ahvarfsgreiningu" title="Permalink to this heading"></a></h3>
+<p>Tilgátuprófið sem við notum í fervikagreiningu gerir ráð fyrir að
+frávikin frá aðhvarfslínunni séu i.i.d. normaldreifð. Það skilyrði má
+kanna með því að teikna normaldreifingarrit af leifunum.</p>
+<section id="tilgatuprof-fyrir-einhlia-fervikagreiningu">
+<span id="em-anovalm"></span><h4><span class="section-number">10.3.2.1. </span>Tilgátupróf fyrir einhliða fervikagreiningu<a class="headerlink" href="#tilgatuprof-fyrir-einhlia-fervikagreiningu" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Tilgátan sem við viljum kanna er</p>
+<div class="math notranslate nohighlight">
+\[H_0: \beta_1 = 0\]</div>
+<p>á móti gagntilgátunni</p>
+<div class="math notranslate nohighlight">
+\[H_1: \beta_1 \neq 0\]</div>
+<p>Prófstærðin er</p>
+<div class="math notranslate nohighlight" id="equation-eq-anovaprofk9">
+<span class="eqno">(10.11)<a class="headerlink" href="#equation-eq-anovaprofk9" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[F = \frac{SS_{R}/(1)}{SS_{E}/(N-2)} = \frac{MS_{R}}{MS_E}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(SS_R\)</span> og <span class="math notranslate nohighlight">\(SS_{E}\)</span> má reikna með jöfnum <a class="reference internal" href="#equation-eq-ssr">10.8</a>
+og <a class="reference internal" href="../kafli09/#equation-eq-sse">9.5</a>. Sé núlltilgátan sönn fylgir prófstærðin F-dreifingu með
+<span class="math notranslate nohighlight">\(1\)</span> og <span class="math notranslate nohighlight">\(N-2\)</span> fjölda fríráða, eða <span class="math notranslate nohighlight">\(F \sim F_{(1,N-2)}\)</span>,
+þar sem <span class="math notranslate nohighlight">\(N\)</span> er heildarfjöldi mældra para.</p>
+<p>Hafna skal <span class="math notranslate nohighlight">\(H_0\)</span> ef <span class="math notranslate nohighlight">\(F &gt; F_{1-\alpha,(1,N-2)}\)</span>.</p>
+<p>Sé núlltilgátunni hafnað er <span class="math notranslate nohighlight">\(\beta_1\)</span> frábrugðið núlli.</p>
+</div>
+<hr class="docutils" />
+<p>Þetta tilgátupróf er illframkvæmanlegt í höndunum en má reikna á
+einfaldan hátt í öllum helstu tölfræðiforritum.</p>
+</section>
+</section>
+</section>
+<section id="daemi">
+<h2><span class="section-number">10.4. </span>Dæmi<a class="headerlink" href="#daemi" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">10.4.1. </span>Dæmi<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Jöfnu beinnar línu má skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[y = b_0 + b_1x\]</div>
+<p>Hver eru gildin á <span class="math notranslate nohighlight">\(b_0\)</span> og <span class="math notranslate nohighlight">\(b_1\)</span> fyrir línuna á myndinni hér
+að neðan?</p>
+<figure class="align-default">
+<img alt="../_images/beinlina.jpg" src="../_images/beinlina.jpg" />
+</figure>
+</section>
+<section id="id4">
+<h3><span class="section-number">10.4.2. </span>Dæmi<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Eftirfarandi tölur sýna aldur lamba (í dögum) og þunga þeirra við vigtun
+að hausti.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>aldur</p></th>
+<th class="head"><p>þungi</p></th>
+<th class="head"><p>aldur</p></th>
+<th class="head"><p>þungi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>135</p></td>
+<td><p>39</p></td>
+<td><p>120</p></td>
+<td><p>33</p></td>
+</tr>
+<tr class="row-odd"><td><p>125</p></td>
+<td><p>37</p></td>
+<td><p>133</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-even"><td><p>130</p></td>
+<td><p>38</p></td>
+<td><p>123</p></td>
+<td><p>34</p></td>
+</tr>
+<tr class="row-odd"><td><p>129</p></td>
+<td><p>38</p></td>
+<td><p>126</p></td>
+<td><p>35</p></td>
+</tr>
+<tr class="row-even"><td><p>121</p></td>
+<td><p>34</p></td>
+<td><p>130</p></td>
+<td><p>39</p></td>
+</tr>
+<tr class="row-odd"><td><p>125</p></td>
+<td><p>35</p></td>
+<td><p>126</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-even"><td><p>137</p></td>
+<td><p>38</p></td>
+<td><p>140</p></td>
+<td><p>41</p></td>
+</tr>
+<tr class="row-odd"><td><p>129</p></td>
+<td><p>36</p></td>
+<td><p>132</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-even"><td><p>121</p></td>
+<td><p>34</p></td>
+<td><p>137</p></td>
+<td><p>44</p></td>
+</tr>
+<tr class="row-odd"><td><p>137</p></td>
+<td><p>41</p></td>
+<td><p>137</p></td>
+<td><p>43</p></td>
+</tr>
+</tbody>
+</table>
+<p>Meðalaldur er 129.65 dagar og staðalfrávik 6.18. Meðalþyngd er 37.65 kg
+og staðalfrávik 3.10. Fylgnin milli aldurs og þunga er 0.86.</p>
+<ol class="loweralpha simple">
+<li><p>Finnið jöfnu aðhvarfslínu fyrir aldur lambanna og þunga þeirra.</p></li>
+<li><p>Hversu mikið af breytileikanum í þunga má skýra með aldri?</p></li>
+<li><p>Hversu mikið breytist þyngdin á 30 dögum skv. aðhvarfsgreiningunni?</p></li>
+<li><p>Spáið fyrir um þyngd lambs sem er 136 daga gamalt og gefið 95%
+öryggisbil fyrir spána, notið <span class="math notranslate nohighlight">\(s_e = 1.64\)</span>.</p></li>
+</ol>
+</section>
+<section id="id5">
+<h3><span class="section-number">10.4.3. </span>Dæmi<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>Sigrún tölfræðingur er að hugsa um að kaupa sér íbúð í 101 Reykjavík.
+Hún hefur áhuga á íbúðum á bilinu 40 til 100 fermetrar af stærð. Sigrún
+ákveður því að taka slembiúrtak af stærð 50 af fasteignavef nokkrum. Hún
+skráir svo niður <code class="docutils literal notranslate"><span class="pre">verð</span></code> (í milljónum króna) og <code class="docutils literal notranslate"><span class="pre">stærð</span></code> (í fermetrum)
+íbúðanna í þeim tilgangi að skoða sambandið milli verðs og stærðar
+íbúðanna. Á myndinn hér að neðan má sjá punktrit af gögnunum.</p>
+<figure class="align-center" id="g-sigrun">
+<img alt="Mynd" src="../_images/ibudir1.svg" /></figure>
+<p>Þið getið stuðst við eftirfarandi við útreikningana:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Breyta</p></th>
+<th class="head"><p>Meðaltal</p></th>
+<th class="head"><p>Staðalfrávik</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Verð</span></code></p></td>
+<td><p><strong>20.376</strong></p></td>
+<td><p><strong>3.526</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Stærð</span></code></p></td>
+<td><p><strong>71.040</strong></p></td>
+<td><p><strong>16.975</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>Fylgnin (e. correlation) á milli verðs og stærðar er <strong>0.756</strong>.</p>
+<ol class="loweralpha">
+<li><p>Sigrún ákveður að framkvæma aðhvarfsgreiningu. Er breytan <code class="docutils literal notranslate"><span class="pre">verð</span></code>
+skýribreyta eða svarbreyta?</p></li>
+<li><p>Hvert er gildið á <span class="math notranslate nohighlight">\(b_1\)</span> í jöfnu aðhvarfslínu minnstu kvaðrata
+fyrir gögnin hennar Sigrúnar?</p></li>
+<li><p>Hvert er gildið á <span class="math notranslate nohighlight">\(b_0\)</span> í jöfnu aðhvarfslínu minnstu kvaðrata
+fyrir gögnin hennar Sigrúnar?</p></li>
+<li><p>Hversu stóran hluta af breytileikanum í verði íbúðanna má skýra með
+stærð?</p></li>
+<li><p>Sigrún hefur nú áhuga á að spá fyrir hversu mikið íbúð kostar sem er
+150 fermetrar af stærð. Væri Sigrún að brúa eða bryggja noti hún
+aðhvarfslínuna sem hún mat út frá gagnapunktunum 50?</p></li>
+<li><p>Eftir að hafa skoðað íbúðirnar 50 aðeins nánar fellur Sigrún
+kylliflöt fyrir íbúð á Haðarstíg. Sú íbúð er 96 fermetrar og kostar
+28.9 milljónir (sú dýrasta í gagnasafninu). Er leif þeirrar íbúðar
+jákæð eða neikvæð?</p>
+<p>Óli tölfræðingur er uppalinn í Breiðholtinu. Hann og Sigrún eru
+miklir vinir svo Óli vill eiga Sigrúnu sem nágranna. Óli tekur ekki í
+mál að búa í 101 Reykjavík svo hann ákveður að kanna samband milli
+verðs og stærðar íbúða í Breiðholtinu með það markmið að lokka
+Sigrúnu í Breiðholtið. Óli metur eftirfarandi aðhvarfslíkan út frá 50
+íbúðum á bilinu 40 til 100 fermetrar að stærð. Eins og í líkani
+Sigrúnar þá er verðið í milljónum króna og stærðin í fermetrum.</p>
+<div class="math notranslate nohighlight">
+\[\hat{y} = 7.30 + 0.13x\]</div>
+</li>
+<li><p>Spáið fyrir um verð á 60 fermetra íbúð í Breiðholtinu.</p></li>
+<li><p>Hversu mikið hækkar verð íbúða í Breiðholtinu með hverjum fermetra
+samkvæmt líkaninu.</p></li>
+<li><p>Af íbúðunum 50 sem Óli hefur skoðað líst honum best á íbúð í
+Dúfnahólum 10. Hún er 80 fermetrar að stærð og kostar 16.5 milljónir.
+Hver er gildið á leif þeirrar íbúðar?</p></li>
+<li><p>Óli er mjög fær tölfræðingur. Því getum við gert ráð fyrir að
+aðhvarfslíkanið hans uppfylli öll skilyrði sem það þarf að uppfylla.
+Á mynd <a class="reference internal" href="#g-oli"><span class="std std-numref">10.8</span></a> má sjá fjögur leifarit. Hvert leifaritanna er
+leifarit aðhvarfslíkans Óla?</p>
+<figure class="align-center" id="id15">
+<span id="g-oli"></span><img alt="Hvert er leifarit Óla?" src="../_images/ibudir2.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 10.8: </span><span class="caption-text">Hvert er leifarit Óla?</span><a class="headerlink" href="#id15" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h3><span class="section-number">10.4.4. </span>Dæmi<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Til að rannsaka hljóðmengun á svæðinu í kringum Miklubraut var
+hljóðmælum komið fyrir með 20 metra millibili frá gatnamótunum
+Miklabraut - Langahlíð. Tvær breytur eru i gagnasafninu,
+<code class="docutils literal notranslate"><span class="pre">Hljóðstyrkur</span></code> og <code class="docutils literal notranslate"><span class="pre">Fjarlægð</span></code>.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/hljod1.svg" /></figure>
+<p>Þið getið stuðst við eftirfarandi við útreikningana:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Breyta</p></th>
+<th class="head"><p>Meðaltal</p></th>
+<th class="head"><p>Staðalfrávik</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Hljóðstyrkur</p></td>
+<td><p><strong>71.35</strong></p></td>
+<td><p><strong>7.35</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Fjarlægð</p></td>
+<td><p><strong>90.00</strong></p></td>
+<td><p><strong>46.41</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>Fylgnin (e. correlation) á milli hljóðstyrks og fjarlægðar er <strong>-0.94</strong>.</p>
+<ol class="loweralpha simple">
+<li><p>Á myndinni hér að ofan má sjá punktrit af gögnunum. Á myndina er
+einnig búið að teikna línu minnstu kvaðrata (e. least square line). Hver
+er jafna þessarar línu? Gefið stikana (e. parameters) með tveimur
+aukastöfum (þið eigið að reikna út stærð stikana í jöfnunni ekki lesa
+þá út frá grafinu).</p></li>
+<li><p>Notið líkanið sem þið fenguð í lið a) til að spá (e. predict) fyrir um
+hljóðstyrk 90 metra annars vegar og hins vegar 500 metra frá
+gatnamótunum. Eru báðar þessar spár áreiðanlegar? Rökstyðjið svar
+ykkar.</p></li>
+<li><p>Hversu mikinn hluta af breytilekanum í hljóðstyrknum má skýra með
+fjarlægð frá gatnamótunum?</p></li>
+<li><p>Á myndinni hér að neðan má sjá samsvarandi gögn en frá tveimur öðrum
+stöðum í borginni. Á hvorum staðnum er sambandið milli hljóðstyrks og
+fjarlægðar sterkara? Rökstyðjið svarið ykkar.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/hljod2.svg" /></figure>
+</section>
+<section id="id7">
+<h3><span class="section-number">10.4.5. </span>Dæmi<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>Umskrifið jöfnuna fyrir skýringarhlutfall í kassa
+<a class="reference internal" href="#em-skyringarhlutfall"><span class="std std-numref">10.1.5.1</span></a> til að sýna að hún sé jafngild jöfnunni
+fyrir skýringarhlutfall í kassa <a class="reference internal" href="#em-skyringanova"><span class="std std-numref">10.3.1.2</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli09/" class="btn btn-neutral float-left" title="9. Fervikagreining" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli11/" class="btn btn-neutral float-right" title="11. Tvíkosta aðhvarfsgreining" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

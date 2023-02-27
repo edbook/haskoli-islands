@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Vigrar &mdash; Undirbúningur í stærðfræði 2023 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <!-- hoverrole.py css code -->
+    <style type="text/css">
+        a.tooltip {
+            outline: none;
+            border-bottom: thin dotted;
+            background: #ffeedd
+        }
+        
+        a.tooltip strong {
+            line-height: 30px;
+        }
+        
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+        
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: -30px;
+            margin-left: 12px;
+            width: 310px;
+            line-height: 16px;
+        }
+        
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            color: #111;
+            border: 1px solid #DCA;
+            background: #fffAF0;
+        }
+        
+        .callout {
+            z-index: 20;
+            position: absolute;
+            top: 30px;
+            border: 0;
+            left: -12px;
+        }
+        /*CSS3*/
+        
+        a.tooltip span {
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
+    <!-- End hoverrole.py css code -->
+
+    <style type="text/css">
+        .sagecell .CodeMirror-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .sagecell .CodeMirror {
+            height: auto;
+        }
+    </style>
+
+
+
+
+
+    <link rel="index" title="Yfirlit" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="9. Meira um föll" href="../kafli09/" />
+    <link rel="prev" title="7. Hornaföll" href="../kafli07/" /> 
+    <!-- Eftirfarandi sagecell import eyðileggur searchið -->
+    <!-- <script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script> -->
+    <!-- <script>
+        // the buttonText string says what will be written on the
+        // sage cell evaluation button.
+        // It can be changed here.
+        var buttonText = "Keyra"
+    </script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({
+            inputLocation: ".sage",
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsage",
+            languages: ["r"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osage",
+            languages: ["octave"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAuto",
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAuto",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAuto",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAutoHidden",
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAutoHidden",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAutoHidden",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+    </script> -->
+    <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    <script>
+        ggbAppletId = [];
+    </script>
+    <script>
+        top.scrolldepth_tags = [];
+    </script>
+
+
+
+
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Undirbúningur í stærðfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Um námsefnið</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Jöfnur og ójöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Rúmfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Mengi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Margliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Hornaföll</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Vigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#skilgreining">8.1. Skilgreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-lia-vigra">8.2. Að liða vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#einingarvigrar">8.3. Einingarvigrar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#samlagning-vigra">8.4. Samlagning vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#margfoldun-vigra">8.5. Margföldun vigra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flatarmyndir">8.6. Flatarmyndir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Meira um föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Markgildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Diffrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Undirbúningur í stærðfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>Vigrar</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/undirbuningur_stae/kafli08.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vigrar">
+<h1><span class="section-number">8. </span>Vigrar<a class="headerlink" href="#vigrar" title="Permalink to this heading"></a></h1>
+<section id="skilgreining">
+<span id="s-vigrar"></span><h2><span class="section-number">8.1. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Permalink to this heading"></a></h2>
+<p><a class="tooltip"  href="https://www.stae.is/os/leita/vector"  target="_blank">
+  Vigrar
+    <span>en: <i>vector</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> er stærðfræðilegt hugtak fyrir stærð sem hefur bæði lengd og stefnu.
+Þeir eru jafnan teiknaðir sem örvar í hnitakerfi og lýst með hnitum.
+Hnit vigurs eru venjulegar tölur, líka kallaðar <a class="tooltip"  href="https://www.stae.is/os/leita/scalar"  target="_blank">
+  skalarstærðir
+    <span>en: <i>scalar</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>, og lýsa staðsetningu endapunkts miðað við upphafspunkt.
+Hvert hnit er tengt einum ás í hnitakerfinu sem notað er og stærð hnitsins (tölunnar) lýsir lengd vigursins í þá átt.</p>
+<p>Vigrar eru oftast táknaðir með striki eða ör fyrir ofan bókstafinn, <span class="math">\(\overline{a}\)</span> , <span class="math">\(\vec{a}\)</span> , en sumir setja strikið undir, <span class="math">\(\underline{a}\)</span> .
+Í kennslubókum eru vigrar stundum feitletraðir: <span class="math">\(\boldsymbol{a}\)</span>.</p>
+<p>Lengd vigra er táknuð með lóðréttum strikum, algildismerkjum, <span class="math">\(|\overline{a}|\)</span> , eða einfaldlega bókstafnum án yfirstriksins, <span class="math">\(a\)</span> .
+Þegar vísað er í lengd vigurs eftir einhverjum ás, <a class="tooltip"  href="https://www.stae.is/os/leita/component"  target="_blank">
+  þátt
+    <span>en: <i>component, connected component, factor, maximal connected subgraph</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> hans, er það sýnt með því að merkja með heiti ássins í <a class="tooltip"  href="https://www.stae.is/os/leita/subscript"  target="_blank">
+  lágvísi
+    <span>en: <i>subscript, lower index</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>; <span class="math">\(a_x\)</span> er lengd vigursins <span class="math">\(\overline{a}\)</span> í stefnu <span class="math">\(x\)</span> - áss.
+Þættir vigra eru ekki vigrar sjálfir, heldur tölur.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vigur.svg"><img alt="../_images/vigur.svg" src="../_images/vigur.svg" width="60%" /></a>
+</figure>
+<p>Yfirleitt er notað rétthyrnt hnitakerfi (einnig nefnt <a class="tooltip"  href="https://www.stae.is/os/leita/cartesian_plane"  target="_blank">
+  kartesískt
+    <span>en: <i>cartesian plane</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>).
+Vigurinn á myndinni hefur lengd 4 eftir x-ásnum og 3 eftir y-ásnum, svo hnit hans eru:</p>
+<div class="math">
+\[\overline{a} = (a_x,a_y) = (4,3) = \begin{pmatrix} 4 \\ 3 \end{pmatrix}
+
+\]</div>
+<p>Lengd vigursins sjálfs er reiknuð með jöfnu Pýþagórasar, <span class="math">\(|\overline{a}| = a = \sqrt{a_x^2 + a_y^2}\)</span> .
+Vigurinn á myndinni hefur því lengdina <span class="math">\(a = \sqrt{4^2 + 3^2} = 5\)</span> .</p>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Stærð og stefna vigurs er óháð því hvar í hnitakerfinu hann er.</p>
+</div>
+<p>Algengt er að láta vigra liggja frá upphafspunkti hnitakerfisins (stöðu- eða staðarvigur) en það er hægt að reikna vigra á milli gefinna upphafs- og endapunkta.
+Vigurinn frá punktinum <span class="math">\(A=(x_1,y_1)\)</span> til punktsins <span class="math">\(B=(x_2,y_2)\)</span> er</p>
+<div class="math">
+\[\overline{AB} = (x_2-x_1,y_2-y_1) = \begin{pmatrix} x_2-x_1 \\ y_2-y_1 \end{pmatrix}
+
+\]</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið vigurinn frá punktinum <span class="math">\(A=(-1,7)\)</span> til punktsins <span class="math">\(B=(5,2)\)</span> .</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><div class="math">
+\[\begin{aligned}
+        \overline{AB} &= \begin{pmatrix} x_2-x_1 \\ y_2-y_1 \end{pmatrix}\\
+        &= \begin{pmatrix} 5-(-1) \\ 2-7 \end{pmatrix} \\
+        &= \begin{pmatrix} 6 \\ -5 \end{pmatrix}
+\end{aligned}
+
+\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vigurtveirpkt.svg"><img alt="../_images/vigurtveirpkt.svg" src="../_images/vigurtveirpkt.svg" width="60%" /></a>
+</figure>
+</div></blockquote>
+<p>Vigurinn <span class="math">\(\begin{pmatrix} 6 \\ -5 \end{pmatrix}\)</span> er sá sami, hvort sem hann liggur á milli <span class="math">\(A\)</span> og <span class="math">\(B\)</span> eða frá upphafspunktinum til punktsins <span class="math">\((6,-5)\)</span> .</p>
+</div>
+<p>Stundum er talað um að vigur hafi <a class="tooltip"  href="https://www.stae.is/os/leita/slope"  target="_blank">
+  hallatölu
+    <span>en: <i>slope</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> : <span class="math">\(h=\frac{a_y}{a_x}\)</span> , ef <span class="math">\(a_x\neq 0\)</span> .
+Tveir vigrar eru <a class="tooltip"  href="https://www.stae.is/os/leita/parallel"  target="_blank">
+  samsíða
+    <span>en: <i>parallel</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> ef þeir hafa sömu hallatölu.</p>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnið vigur sem er samsíða <span class="math">\(\overline{a}=(-1,6)\)</span> og hefur lengdina 9.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Hallatala <span class="math">\(\overline{a}\)</span> er <span class="math">\(h_{\bar{a}}=\frac{a_y}{a_x}=\frac{6}{-1}=-6\)</span> .
+Þá vitum við að vigurinn sem við leitum að, <span class="math">\(b\)</span> , uppfyllir það sama:</p>
+<div class="math">
+\[h_{\bar{b}}=\frac{b_y}{b_x}=-6
+
+\]</div>
+<p>sem er jafngilt því að <span class="math">\(b_y=-6b_x\)</span> .</p>
+<p>Skilyrðið að <span class="math">\(\overline{b}\)</span> þurfi að hafa lengdina 9 gefur að:</p>
+<div class="math">
+\[|\overline{b}| = \sqrt{b_x^2+b_y^2} =9
+
+\]</div>
+<p>Setjum <span class="math">\(b_y=-6b_x\)</span> inn og fáum:</p>
+<div class="math">
+\[\begin{aligned}
+  9 &= \sqrt{b_x^2+b_y^2}\\
+  &=\sqrt{b_x^2+(-6b_x)^2} \\
+  &= \sqrt{b_x^2+36b_x^2} \\
+  &=\sqrt{37b_x^2} \\
+  &=b_x\sqrt{37} \\
+  b_x&=\frac{9}{\sqrt{37}} \approx 1.480\\
+  b_y&= -6b_x = \frac{-54}{\sqrt{37}} \approx -8.878
+\end{aligned}
+
+\]</div>
+<p>Vigur sem er samsíða <span class="math">\(\overline{a}=(-1,6)\)</span> og hefur lengdina 9 er því</p>
+<div class="math">
+\[\overline{b}= \begin{pmatrix} \frac{9}{\sqrt{37}} \\  \frac{-54}{\sqrt{37}} \end{pmatrix}
+
+\]</div>
+</div>
+</section>
+<section id="a-lia-vigra">
+<h2><span class="section-number">8.2. </span>Að liða vigra<a class="headerlink" href="#a-lia-vigra" title="Permalink to this heading"></a></h2>
+<p>Vigra er líka hægt að tákna með lengd og stefnuhorni.
+Hornið <span class="math">\(\theta\)</span> er skilgreint frá jákvæðum x-ás og að vigrinum.
+Með þessum upplýsingum er hægt að liða vigurinn eftir x- og y-ás með því að nota hornaföll.</p>
+<p>Þættir vigursins eru föll af stefnuhorninu sem er oft merkt <span class="math">\(\theta\)</span> eða <span class="math">\(\phi\)</span> :</p>
+<div class="math">
+\[a_x = a\cos(\theta) \\
+a_y = a\sin(\theta)
+
+\]</div>
+<p>þar sem <span class="math">\(a=|\overline{a}|\)</span>.</p>
+<p>Stefnuhorn vigurs <span class="math">\(\overline{a} = (a_x,a_y)\)</span> má því reikna:</p>
+<div class="math">
+\[\frac{a_y}{a_x} = \frac{a\sin(\theta)}{a\cos(\theta)} = \tan(\theta)\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/mynd-vigur.svg"><img alt="../_images/mynd-vigur.svg" src="../_images/mynd-vigur.svg" width="60%" /></a>
+</figure>
+</section>
+<section id="einingarvigrar">
+<h2><span class="section-number">8.3. </span>Einingarvigrar<a class="headerlink" href="#einingarvigrar" title="Permalink to this heading"></a></h2>
+<p>Einingarvigrar eru vigrar sem hafa lengdina 1.
+Vigrarnir</p>
+<div class="math">
+\[\begin{aligned}
+\hat{\imath} &= \begin{pmatrix} 1 \\0 \\0 \end{pmatrix} \\
+\hat{\jmath} &= \begin{pmatrix} 0 \\1 \\0 \end{pmatrix} \\
+\hat{k} &= \begin{pmatrix} 0\\0 \\1 \end{pmatrix} \\
+\end{aligned}
+
+\]</div>
+<p>liggja samsíða <span class="math">\(x\)</span> - , <span class="math">\(y\)</span> - og  <span class="math">\(z\)</span> -  ásunum í rétthyrndu hnitakerfi .
+Þeir eru líka táknaðir:</p>
+<div class="math">
+\[\begin{gather}
+\hat{e}_x, \quad \hat{e}_y, \quad \hat{e}_z
+\end{gather}
+
+\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/einingarvigrar.svg"><img alt="../_images/einingarvigrar.svg" src="../_images/einingarvigrar.svg" width="60%" /></a>
+</figure>
+<p>Einingarvigrarnir <span class="math">\(\hat{e}_x, \hat{e}_y\)</span> og <span class="math">\(\hat{e}_z\)</span> eru <a class="tooltip"  href="https://www.stae.is/os/leita/linearly_independent"  target="_blank">
+  línulega óháðir
+    <span>en: <i>linearly independent</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>, sem þýðir að engan þeirra er hægt að mynda úr hinum tveimur með samlagningu þeirra eða margföldun með tölu.
+Hvernig sem þú teygir á og raðar saman <span class="math">\(\hat{\imath}\)</span> og <span class="math">\(\hat{\jmath}\)</span> færðu aldrei út <span class="math">\(\hat{k}\)</span> .
+Þessi eiginleiki kemur til vegna þess að einingarvigrarnir eru allir hornréttir á hvorn annan.</p>
+<p>Alla vigra má skrifa sem skalarstærðir margfaldaðar við einingarvigrana:</p>
+<div class="math">
+\[\overline{a} = (a_x, \; a_y, \; a_z ) = a_x \hat{\imath} + a_y \hat{\jmath} + a_z \hat{k}
+
+\]</div>
+</section>
+<section id="samlagning-vigra">
+<h2><span class="section-number">8.4. </span>Samlagning vigra<a class="headerlink" href="#samlagning-vigra" title="Permalink to this heading"></a></h2>
+<p>Þegar vigrar eru lagðir saman eru hnit eftir hverjum ás fyrir sig lögð saman.
+Summa tveggja vigra <span class="math">\(\overline{a} = (a_x,a_y)\)</span> og <span class="math">\(\overline{b} = (b_x,b_y)\)</span> er:</p>
+<div class="math">
+\[\overline{c} = \overline{a} + \overline{b} = (a_x + b_x, a_y +b_y) = \begin{pmatrix} a_x+b_x \\ a_y+b_y \end{pmatrix}
+
+\]</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leggjið saman vigrana <span class="math">\(\overline{a}=(4,3)\)</span> og <span class="math">\(\overline{b}=(1,3)\)</span> .</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<div class="math">
+\[\overline{a}+\overline{b}=(4,3) + (1,3) = (4+1, 3+3) = (5,6)
+
+\]</div>
+</div>
+<p>Myndrænt má ímynda sér að upphafspunktur seinni vigursins sé settur í endapunkt fyrri vigursins,
+og summa þeirra er frá upphafspunkti fyrri vigursins til endapunkts þess seinni.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vigrasamlagning.svg"><img alt="../_images/vigrasamlagning.svg" src="../_images/vigrasamlagning.svg" width="60%" /></a>
+</figure>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Þó að <span class="math">\(\overline{c} = \overline{a} + \overline{b}\)</span> þýðir það <strong>ekki</strong> að <span class="math">\(c = a + b\)</span>.</p>
+<p>Í dæminu hér á undan er til dæmis</p>
+<div class="math">
+\[c = |\overline{c}| = \sqrt{5^2+6^2} \approx 7,8 \\
+a + b = \sqrt{4^2+3^2} + \sqrt{1^2+3^2} \approx 8,2
+
+\]</div>
+</div>
+<hr class="docutils" />
+<p>Um samlagningu vigra gilda eftirfarandi reglur:</p>
+<div class="math">
+\[\begin{aligned}
+  \overline{a} +\overline{b} &= \overline{b} + \overline{a} & \text{Víxlregla}\\
+  (\overline{a}+\overline{b})+\overline{c} &= \overline{a} + (\overline{b}+\overline{c}) & \text{Tengiregla}
+\end{aligned}
+
+\]</div>
+<hr class="docutils" />
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Gefnir eru þrír punktar:</p>
+<div class="math">
+\[\begin{aligned}
+A&=(x_1,y_1)=(1,2) \\
+B&=(x_2,y_2)=(4,5) \\
+C&=(x_3,y_3)=(3,-1)
+\end{aligned}
+
+\]</div>
+<p>Reiknið vigrana <span class="math">\(\overline{AB}, \overline{AC} \text{ og } \overline{BC}\)</span> .</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum:</p>
+<div class="math">
+\[\begin{aligned}
+  \overline{AB} &= \begin{pmatrix} x_2-x_1 \\ y_2-y_1 \end{pmatrix}\\
+  &=\begin{pmatrix} 4-1 \\5-2\end{pmatrix} =\begin{pmatrix} 3 \\3\end{pmatrix} \\
+  & \\
+  \overline{AC} &= \begin{pmatrix}x_3-x_1\\ y_3-y_1 \end{pmatrix}\\
+  &=\begin{pmatrix} 3-1 \\(-1)-2\end{pmatrix} =\begin{pmatrix} 2 \\-3\end{pmatrix} \\
+  & \\
+  \overline{BC} &= \begin{pmatrix}x_3-x_2\\ y_3-y_2 \end{pmatrix}\\
+  &=\begin{pmatrix} 3-4 \\(-1)-5\end{pmatrix} =\begin{pmatrix} -1 \\-6\end{pmatrix} \\
+\end{aligned}
+
+\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/innskots.svg"><img alt="../_images/innskots.svg" src="../_images/innskots.svg" width="50%" /></a>
+</figure>
+<p>Hér eru punktarnir teiknaðir inn ásamt vigrunum <span class="math">\(\overline{AB}, \overline{AC} \text{ og } \overline{BC}\)</span> .</p>
+</div>
+<p>Af þessu dæmi má sjá <em>innskotsregluna</em> :</p>
+<div class="math">
+\[\overline{AC} = \overline{AB} + \overline{BC}
+
+\]</div>
+</section>
+<section id="margfoldun-vigra">
+<h2><span class="section-number">8.5. </span>Margföldun vigra<a class="headerlink" href="#margfoldun-vigra" title="Permalink to this heading"></a></h2>
+<p>Þegar vigur <span class="math">\(\overline{v}\)</span> er margfaldaður með tölu <span class="math">\(s\)</span> er hver þáttur vigursins margfaldaður með tölunni:</p>
+<div class="math">
+\[\begin{aligned}
+    s\cdot\overline{v}  &= s\cdot(v_x, v_y, v_z)  \\
+    &= (s \cdot v_x, s \cdot v_y, s \cdot v_z)
+\end{aligned}
+
+\]</div>
+<p>Margfeldi vigra er tvenns konar, <a class="tooltip"  href="https://www.stae.is/os/leita/dot_product"  target="_blank">
+  innfeldi (punktfeldi)
+    <span>en: <i>dot product, euclidean inner product, hermitian inner product, inner product, scalar product</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>, og <a class="tooltip"  href="https://www.stae.is/os/leita/cross_product"  target="_blank">
+  krossfeldi
+    <span>en: <i>cross product, alternating product, exterior product, Grassmann product, outer product, skew product, vector product, wedge product</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>.</p>
+<hr class="docutils" />
+<p><strong>Innfeldi</strong> tveggja vigra er táknað með punkti og útkoman er <em>tala</em>: <span class="math">\(\overline{a} \cdot \overline{b}\)</span> .
+Ef þættir vigranna eru þekktir er innfeldið:</p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a_x b_x + a_y b_y
+
+\]</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reikið innfeldi vigranna <span class="math">\(\overline{a}=(7,8)\)</span> og <span class="math">\(\overline{b}=(-1,3)\)</span> .</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum:</p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 7\cdot (-1)+ 8\cdot 3 = -7+24 =17
+
+\]</div>
+</div>
+<p>Ef vigrarnir eru gefnir með lengd og stefnuhorni er innfeldið:</p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a b \cos{\phi}
+
+\]</div>
+<p>þar sem <span class="math">\(\phi\)</span> er hornið milli <span class="math">\(\overline{a}\)</span> og <span class="math">\(\overline{b}\)</span> þegar þeir hafa sama upphafspunkt.</p>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p><strong>Tveir vigrar eru hornréttir ef innfeldi þeirra er núll.</strong></p>
+</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið hornið <span class="math">\(\phi\)</span> á milli vigranna <span class="math">\(\overline{a}=(2,4)\)</span> og <span class="math">\(\overline{b}=(4,2)\)</span> :</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/innfeldi.svg"><img alt="../_images/innfeldi.svg" src="../_images/innfeldi.svg" width="60%" /></a>
+</figure>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Við vitum að <span class="math">\(\overline{a} \cdot \overline{b} = a b \cos{\phi}\)</span> , þar sem <span class="math">\(a\)</span> og <span class="math">\(b\)</span> eru lengdir vigranna.
+Lengdirnar eru:</p>
+<div class="math">
+\[\begin{aligned}
+  a = \sqrt{a_x^2 + a_y^2} = \sqrt{2^2 + 4^2} = \sqrt{20} \\
+  b = \sqrt{b_x^2 + b_y^2} = \sqrt{4^2 + 2^2} = \sqrt{20}
+\end{aligned}
+
+\]</div>
+<p>Reiknum innfeldi vigranna:</p>
+<div class="math">
+\[\overline{a} \cdot \overline{b} = a_x b_x + a_y b_y = 2\cdot 4+ 4\cdot 2 = 16
+
+\]</div>
+<p>Því er</p>
+<div class="math">
+\[\begin{aligned}
+  \overline{a} \cdot \overline{b} &= a b \cos{\phi} \\
+  \cos{\phi} &= \frac{\overline{a} \cdot \overline{b}}{a b} = \frac{16}{\sqrt{20} \cdot \sqrt{20}} = \frac{16}{20}\\
+  \phi &= 36.8 ° = 0.644
+\end{aligned}
+
+\]</div>
+</div>
+<hr class="docutils" />
+<p><strong>Krossfeldi</strong> tveggja vigra er táknað með krossi og útkoman er nýr <em>vigur</em>: <span class="math">\(\overline{c} = \overline{a} \times \overline{b}\)</span> .
+<a class="tooltip"  href="https://www.stae.is/os/leita/cross_product"  target="_blank">
+  Krossfeldi
+    <span>en: <i>cross product, alternating product, exterior product, Grassmann product, outer product, skew product, vector product, wedge product</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> eru reiknuð með þáttum vigranna, það er vigrum gefnum á forminu <span class="math">\(\overline{a} = a_x \hat{\imath} + a_y \hat{\jmath} + a_z \hat{k}\)</span> .</p>
+<div class="math">
+\[\begin{aligned}
+\overline{a} \times \overline{b} &= (a_x \hat{\imath} + a_y \hat{\jmath} + a_z \hat{k}) \times (b_x \hat{\imath} + b_y \hat{\jmath} + b_z \hat{k}) \\
+&= (a_y b_z - a_z b_y)\hat{\imath} + (a_z b_x - a_x b_z)\hat{\jmath} + (a_x b_y - a_y b_x)\hat{k} \\
+\end{aligned}
+
+\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/krossfeldi.svg"><img alt="../_images/krossfeldi.svg" src="../_images/krossfeldi.svg" width="60%" /></a>
+</figure>
+<p>Útkoma krossfeldisins er vigur sem er hornréttur á bæði <span class="math">\(a\)</span> og <span class="math">\(b\)</span>.
+Til að ákvarða sefnu vigursins getum við notað <strong>hægri</strong> handar regluna.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/hhr.svg"><img alt="../_images/hhr.svg" src="../_images/hhr.svg" width="90%" /></a>
+</figure>
+<p>Lengd krossfeldis <span class="math">\(\overline{a} \text{ og } \overline{b}\)</span> má reikna úr frá lengdum vigranna og horninu á milli þeirra.</p>
+<div class="math">
+\[|\overline{a} \times \overline{b}| = |\overline{a}| |\overline{b}| \sin(\phi)
+
+\]</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Þegar krossfeldi er reiknað skiptir máli hvor vigurinn er á undan!</p>
+<div class="math">
+\[\overline{a} \times \overline{b} = - \overline{b} \times \overline{a}
+
+\]</div>
+</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknum krossfeldi vigranna <span class="math">\(\overline{a}=(1,2,3)\)</span> og <span class="math">\(\overline{b}=(4,5,6)\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum:</p>
+<div class="math">
+\[\begin{aligned}
+  \overline{a} \times \overline{b} &= (a_y b_z - a_z b_y)\hat{\imath} + (a_z b_x - a_x b_z)\hat{\jmath} + (a_x b_y - a_y b_x)\hat{k} \\
+  &= (2\cdot 6-3\cdot 5)\hat{\imath} + (3\cdot 4 - 1 \cdot 6) \hat{\jmath} + ( 1\cdot 5 - 2\cdot 4) \hat{k}\\
+  &= -3 \hat{\imath} +6 \hat{\jmath} - 3\hat{k}\\
+  &= (-3,6,-3)
+\end{aligned}
+
+\]</div>
+</div>
+</section>
+<section id="flatarmyndir">
+<h2><span class="section-number">8.6. </span>Flatarmyndir<a class="headerlink" href="#flatarmyndir" title="Permalink to this heading"></a></h2>
+<p>Ef hliðar þríhyrnings eru gefnar með vigrunum <span class="math">\(\overline{a}\)</span> og <span class="math">\(\overline{b}\)</span> er hægt að reikna hornið <span class="math">\(\theta\)</span> .
+Flatarmálið er þá <span class="math">\(F=\frac{1}{2}|\overline{a}| \cdot |\overline{b}| \cdot \sin(\theta)\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_thri2.svg"><img alt="../_images/fl_thri2.svg" src="../_images/fl_thri2.svg" width="40%" /></a>
+</figure>
+<p>Ef hliðar samsíðungs eru gefnar með vigrunum <span class="math">\(\overline{a}\)</span> og <span class="math">\(\overline{b}\)</span> er hægt að reikna hornið <span class="math">\(\theta\)</span> .
+Flatarmálið er þá <span class="math">\(F=|\overline{a}| \cdot |\overline{b}| \cdot \sin(\theta)\)</span> og ummálið er <span class="math">\(U=2|\overline{a}|+2|\overline{b}|\)</span> .</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fl_sams2.svg"><img alt="../_images/fl_sams2.svg" src="../_images/fl_sams2.svg" width="40%" /></a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kafli09/" class="btn btn-neutral float-right" title="9. Meira um föll" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../kafli07/" class="btn btn-neutral" title="7. Hornaföll" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <script>
+        window.addEventListener("load", function() {
+            for (var i in ggbAppletId) {
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+      
+    <style>
+        /* Sidebar header (and topbar for mobile) */
+        
+        .wy-side-nav-search,
+        .wy-nav-top {
+            background: #10099F;
+        }
+        /* Sidebar */
+        
+        .wy-nav-side {
+            background: #262626;
+        }
+    </style>
+
+
+</body>
+</html>

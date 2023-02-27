@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Línulegar afleiðujöfnur &mdash; Stærðfræðigreining III 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="8. Veldaraðalausnir á afleiðujöfnum" href="../kafli08/" />
+    <link rel="prev" title="6. Undirstöðuatriði um afleiðujöfnur" href="../kafli06/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Stærðfræðigreining III
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tvinntölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fáguð föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Cauchy-setningin og Cauchy-formúlan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Leifareikningur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Þýð föll og fágaðar varpanir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Undirstöðuatriði um afleiðujöfnur</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Línulegar afleiðujöfnur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">7.1. Línulegar afleiðujöfnur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd">7.1.1. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-7-1">7.1.2. Skilgreining (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-og-setning-sja-7-1">7.1.3. Skilgreining og setning (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">7.1.4. Skilgreining (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-7-1">7.1.5. Setning (Sjá §7.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning-sja-setningu-7-1-3">7.1.6. Fylgisetning (Sjá Setningu 7.1.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning-sja-setningu-7-1-4">7.1.7. Fylgisetning (Sjá Setningu 7.1.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-7-2">7.1.8. Skilgreining  (Sjá §7.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-7-2-1">7.1.9. Setning (Sjá Setningu 7.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">7.1.10. Athugasemd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-7-3">7.1.11. Skilgreining (Sjá §7.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-7-3-1">7.1.12. Setning (Sjá Setningu 7.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">7.1.13. Athugasemd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#serlausnir-og-green-foll">7.2. Sérlausnir og Green-föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun">7.2.1. Upprifjun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#agiskun-sja-7-4">7.2.2. Ágiskun (Sjá §7.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#goar-agiskanir">7.2.3. Góðar ágiskanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-deyf-sveifla-me-drifkrafti">7.2.4. Dæmi - Deyfð sveifla með drifkrafti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serlausnir-fundnar-me-virkjareikningi-sja-7-4">7.2.5. Sérlausnir fundnar með virkjareikningi (Sjá §7.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hjalparsetning-sja-hjalparsetningu-7-5-1">7.2.6. Hjálparsetning (Sjá Hjálparsetningu 7.5.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-og-umraea-sja-7-5">7.2.7. Skilgreining og umræða (Sjá §7.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-7-5">7.2.8. Setning (Sjá §7.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-7-5-2">7.2.9. Setning (Sjá Setningu 7.5.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning-sja-fylgisetningu-7-5-4">7.2.10. Fylgisetning (Sjá Fylgisetningu 7.5.4)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#green-foll-og-wronski-akveur">7.3. Green-föll og Wronski-ákveður</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reikniafer">7.3.1. Reikniaðferð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-7-6">7.3.2. Skilgreining (Sjá §7.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-7-6-3">7.3.3. Setning (Sjá Setningu 7.6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">7.3.4. Setning (Sjá Setningu 7.6.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-7-6-4">7.3.5. Setning (Sjá Setningu 7.6.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning-er-hluti-af-setningu-7-6-4">7.3.6. Fylgisetning (Er hluti af Setningu 7.6.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning-sja-fylgisetning-7-6-5">7.3.7. Fylgisetning (Sjá Fylgisetning 7.6.5)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Veldaraðalausnir á afleiðujöfnum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Línuleg afleiðujöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Laplace-ummyndunin</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Stærðfræðigreining III</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Línulegar afleiðujöfnur</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae302g/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="linulegar-afleiujofnur">
+<h1><span class="section-number">7. </span>Línulegar afleiðujöfnur<a class="headerlink" href="#linulegar-afleiujofnur" title="Permalink to this heading"></a></h1>
+<p><em>This,’ whispered the Doctor to Romana, ‘is going to be like trying to find a book about needles in a room full of books about haystacks.</em></p>
+<p>- The Doctor, Doctor Who</p>
+<section id="id1">
+<h2><span class="section-number">7.1. </span>Línulegar afleiðujöfnur<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<section id="athugasemd">
+<h3><span class="section-number">7.1.1. </span>Athugasemd<a class="headerlink" href="#athugasemd" title="Permalink to this heading"></a></h3>
+<p>Umfjöllun á þessu efni verður skýrari ef við leyfum
+föllunum sem fengist er við að taka ekki bara rauntölugildi heldur líka
+tvinntölugildi. Fastar og stuðlar sem koma fyrir geta því verið
+tvinntölur og þurfa ekki að vera rauntölur. Breytistæðirnar i föllunum,
+oftast táknaðar með <span class="math notranslate nohighlight">\(t\)</span> eða <span class="math notranslate nohighlight">\(x\)</span>, eru hinsvegar alltaf
+rauntölur.</p>
+</section>
+<section id="skilgreining-sja-7-1">
+<h3><span class="section-number">7.1.2. </span>Skilgreining (Sjá §7.1)<a class="headerlink" href="#skilgreining-sja-7-1" title="Permalink to this heading"></a></h3>
+<p>Afleiðujafna af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_1(t)u'+a_0(t)u=f(t),\]</div>
+<p>þar sem föllin <span class="math notranslate nohighlight">\(a_0,\dots,a_m,f\)</span> eru skilgreind á bili <span class="math notranslate nohighlight">\(I\subset \mathbb{R}\)</span>, er sögð vera línuleg afleiðujafna. Við segjum að jafnan sé óhliðruð ef <span class="math notranslate nohighlight">\(f\)</span> er núllfallið, annars er sagt að hún sé hliðruð.</p>
+<p>Fyrir sérhvern punkt <span class="math notranslate nohighlight">\(t\in I\)</span> fæst margliða í einni breytistærð <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<div class="math notranslate nohighlight">
+\[P(t,\lambda)= a_m(t)\lambda^{m}+a_{m-1}(t)\lambda^{m-1}+
+\cdots+a_1(t)\lambda+a_0(t),\]</div>
+<p>sem er kölluð kennimargliða jöfnunnar.</p>
+</section>
+<section id="skilgreining-og-setning-sja-7-1">
+<h3><span class="section-number">7.1.3. </span>Skilgreining og setning (Sjá §7.1)<a class="headerlink" href="#skilgreining-og-setning-sja-7-1" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(a_0(t), \ldots, a_m(t)\)</span> vera samfelld föll sem eru öll skilgreind á bili <span class="math notranslate nohighlight">\(I\)</span>. Rifjum upp að mengi samfelldra falla sem eru skilgreind á <span class="math notranslate nohighlight">\(I\)</span> er táknað <span class="math notranslate nohighlight">\(C(I)\)</span> og mengi falla á <span class="math notranslate nohighlight">\(I\)</span> sem eru <span class="math notranslate nohighlight">\(m\)</span>-sinnum diffranleg með samfellda <span class="math notranslate nohighlight">\(m\)</span>-tu afleiðu er táknað <span class="math notranslate nohighlight">\(C^m(I)\)</span>. Skilgreinum afleiðuvirkja <span class="math notranslate nohighlight">\(L:C^m(I)\to C(I)\)</span> þannig að fyrir fall <span class="math notranslate nohighlight">\(u(t)\in C^m(I)\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[Lu(t)=a_m(t)u^{(m)}(t)+a_{m-1}(t)u^{(m-1)}(t)+\cdots+a_1(t)u'(t)+
+a_0(t)u(t).\]</div>
+<p>Þegar mengin <span class="math notranslate nohighlight">\(C(I)\)</span> og <span class="math notranslate nohighlight">\(C^m(I)\)</span> eru skoðuð sem vigurrúm yfir <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> þá er vörpunin <span class="math notranslate nohighlight">\(L\)</span> línuleg.</p>
+</section>
+<section id="id2">
+<h3><span class="section-number">7.1.4. </span>Skilgreining (Sjá §7.1)<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Skilgreinum virkja <span class="math notranslate nohighlight">\(D:C^1(I)\to C(I)\)</span> þar sem <span class="math notranslate nohighlight">\(I\)</span> er bil þannig að <span class="math notranslate nohighlight">\(Du=u'\)</span>. Látum <span class="math notranslate nohighlight">\(a_0(t), \ldots, a_m(t)\)</span> vera samfelld föll sem eru öll skilgreind á bili <span class="math notranslate nohighlight">\(I\)</span> og setjum</p>
+<div class="math notranslate nohighlight">
+\[P(t,D)= a_m(t)D^{m}+a_{m-1}(t)D^{m-1}+
+\cdots+a_1(t)D+a_0(t).\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(L\)</span> er afleiðuvirkinn sem er skilgreindur hér að ofan þá er <span class="math notranslate nohighlight">\(Lu=P(t,D)u\)</span> fyrir öll föll <span class="math notranslate nohighlight">\(u\in C^m(I)\)</span>.</p>
+</section>
+<section id="setning-sja-7-1">
+<h3><span class="section-number">7.1.5. </span>Setning (Sjá §7.1)<a class="headerlink" href="#setning-sja-7-1" title="Permalink to this heading"></a></h3>
+<p>Kjarni eða núllrúm virkjans <span class="math notranslate nohighlight">\(P(t,D)\)</span> samanstendur af öllum lausnum <span class="math notranslate nohighlight">\(u\)</span> á óhliðruðu jöfnunni <span class="math notranslate nohighlight">\(P(t,D)u=0\)</span>. Fyrst <span class="math notranslate nohighlight">\(P(t,D)\)</span> er línulegur virki, þá er núllrúmið vigurrúm yfir tvinntölurnar. Við táknum það með <span class="math notranslate nohighlight">\({\cal N}(P(t,D))\)</span>.</p>
+</section>
+<section id="fylgisetning-sja-setningu-7-1-3">
+<h3><span class="section-number">7.1.6. </span>Fylgisetning (Sjá Setningu 7.1.3)<a class="headerlink" href="#fylgisetning-sja-setningu-7-1-3" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(a_0(t), \ldots, a_m(t)\)</span> vera samfelld föll sem eru öll skilgreind á bili <span class="math notranslate nohighlight">\(I\)</span>. Gerum ráð fyrir að <span class="math notranslate nohighlight">\(a_m(t)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\in I\)</span>. Til eru föll <span class="math notranslate nohighlight">\(u_1, \ldots, u_m\)</span> skilgreind á <span class="math notranslate nohighlight">\(I\)</span> þannig að sérhverja lausn á afleiðujöfnunni</p>
+<div class="math notranslate nohighlight">
+\[a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_1(t)u'+a_0(t)u=0,\]</div>
+<p>má rita sem <span class="math notranslate nohighlight">\(u=c_1u_1+\cdots+c_mu_m\)</span> þar sem <span class="math notranslate nohighlight">\(c_1, \ldots, c_m\)</span> eru fastar. Föllin <span class="math notranslate nohighlight">\(u_1, \ldots, u_m\)</span> mynda grunn fyrir núllrúm virkjans <span class="math notranslate nohighlight">\(P(t,D)\)</span>.</p>
+</section>
+<section id="fylgisetning-sja-setningu-7-1-4">
+<h3><span class="section-number">7.1.7. </span>Fylgisetning (Sjá Setningu 7.1.4)<a class="headerlink" href="#fylgisetning-sja-setningu-7-1-4" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(a_0(t), \ldots, a_m(t), f(t)\)</span> vera samfelld föll sem eru öll skilgreind á bili <span class="math notranslate nohighlight">\(I\)</span>. Ef <span class="math notranslate nohighlight">\(v(t)\)</span> er einhver ein lausn (,,sérlausn‘‘) afleiðujöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_1(t)u'+a_0(t)u=f(t),\]</div>
+<p>þá má rita sérhverja lausn sem <span class="math notranslate nohighlight">\(u=c_1u_1+\cdots+c_mu_m+v\)</span> þar sem <span class="math notranslate nohighlight">\(c_1, \ldots, c_m\)</span> eru fastar og föllin <span class="math notranslate nohighlight">\(u_1, \ldots, u_m\)</span> mynda grunn fyrir núllrúm virkjans <span class="math notranslate nohighlight">\(P(t,D)\)</span>.</p>
+<p>Línulega samantektin <span class="math notranslate nohighlight">\(c_1u_1+\cdots+c_mu_m\)</span> gefur almenna lausnarformúlu fyrir afleiðujöfnuna</p>
+<div class="math notranslate nohighlight">
+\[a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_1(t)u'+a_0(t)u=0.\]</div>
+<p>Sérhverja lausn má því rita sem (lausn óhliðraðar)+(ákveðin sérlausn).</p>
+</section>
+<section id="skilgreining-sja-7-2">
+<h3><span class="section-number">7.1.8. </span>Skilgreining  (Sjá §7.2)<a class="headerlink" href="#skilgreining-sja-7-2" title="Permalink to this heading"></a></h3>
+<p>Afleiðujafna á forminu</p>
+<div class="math notranslate nohighlight">
+\[a_mu^{(m)}+\cdots + a_1u'+a_0u=f(t)\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(a_0, a_1, \ldots, a_m\)</span> eru fastar kallast línuleg <span class="math notranslate nohighlight">\(m\)</span>-ta stigs afleiðujafna með fastastuðla. Kennimargliða hennar er</p>
+<div class="math notranslate nohighlight">
+\[P(\lambda)=a_m\lambda^{m}+\cdots + a_1\lambda+a_0.\]</div>
+</section>
+<section id="setning-sja-setningu-7-2-1">
+<h3><span class="section-number">7.1.9. </span>Setning (Sjá Setningu 7.2.1)<a class="headerlink" href="#setning-sja-setningu-7-2-1" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(P(D)\)</span> sé línulegur afleiðuvirki af <span class="math notranslate nohighlight">\(m\)</span> með fastastuðla og að kennimargliðan <span class="math notranslate nohighlight">\(P(\lambda)\)</span> hafi <span class="math notranslate nohighlight">\(\ell\)</span> ólíkar núllstöðvar <span class="math notranslate nohighlight">\(\lambda_1,\dots,\lambda_\ell\in {\mathbb{C}}\)</span> með margfeldnina <span class="math notranslate nohighlight">\(m_1,\dots,m_\ell\)</span>. Þá mynda föllin</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+e^{\lambda_1t}, te^{\lambda_1t},\dots, t^{m_1-1}e^{\lambda_1t},\\
+e^{\lambda_2t}, te^{\lambda_2t},\dots, t^{m_2-1}e^{\lambda_2t},\\
+\quad \vdots\qquad \vdots \qquad \qquad \vdots\\
+e^{\lambda_\ell t}, te^{\lambda_\ell t},\dots, t^{m_\ell-1}e^{\lambda_\ell t},\end{gathered}\end{split}\]</div>
+<p>grunn í núllrúmi virkjans <span class="math notranslate nohighlight">\(P(D)\)</span> og sérhvert stak í núllrúminu má rita sem</p>
+<div class="math notranslate nohighlight">
+\[q_1(t)e^{\lambda_1t}+\cdots+q_\ell(t)e^{\lambda_\ell t},\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(q_j\)</span> eru margliður af stigi <span class="math notranslate nohighlight">\(&lt;m_j\)</span>,
+<span class="math notranslate nohighlight">\(1\leq j\leq \ell\)</span>.</p>
+</section>
+<section id="id3">
+<h3><span class="section-number">7.1.10. </span>Athugasemd<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(a_0, \ldots, a_m\)</span> vera rauntölur. Viljum
+finna raungildar lausnir</p>
+<div class="math notranslate nohighlight">
+\[a_nu^{(n)}+\cdots+a_1u'+a_0u=0.\]</div>
+<p>Hugsum okkur að <span class="math notranslate nohighlight">\(\lambda=\alpha+i\beta\)</span> sé <span class="math notranslate nohighlight">\(m\)</span>-föld rót kennimargliðu afleiðujöfnunar. Þá er <span class="math notranslate nohighlight">\(\mu=\overline{\lambda}=\alpha-i\beta\)</span> líka <span class="math notranslate nohighlight">\(m\)</span>-föld rót kennijöfnu. Þegar grunnur fyrir lausnarúmið er skrifaður má í stað</p>
+<div class="math notranslate nohighlight">
+\[e^{\lambda t}, te^{\lambda t},\dots, t^{m-1}e^{\lambda t},
+e^{\mu t}, te^{\mu t},\dots, t^{m-1}e^{\mu t}\]</div>
+<p>hafa í grunninum raungildu föllin</p>
+<div class="math notranslate nohighlight">
+\[e^{\alpha t}\cos(\beta t), te^{\alpha t}\cos(\beta t), \ldots,
+t^{m-1}e^{\alpha t}\cos(\beta t), e^{\alpha t}\sin(\beta t),
+te^{\alpha t}\sin(\beta t), \ldots, t^{m-1}e^{\alpha t}\sin(\beta t).\]</div>
+</section>
+<section id="skilgreining-sja-7-3">
+<h3><span class="section-number">7.1.11. </span>Skilgreining (Sjá §7.3)<a class="headerlink" href="#skilgreining-sja-7-3" title="Permalink to this heading"></a></h3>
+<p>Afleiðujafna af gerðinni</p>
+<div class="math notranslate nohighlight">
+\[a_mx^mu^{(m)}+\cdots+a_1xu'+a_0u=0,\]</div>
+<p>þar sem stuðlarnir <span class="math notranslate nohighlight">\(a_0,\ldots, a_m\)</span> eru tvinntölur, kallast <span class="math notranslate nohighlight">\(m\)</span>-ta stigs Euler-jafna (sumsstaðar kallaðar Cauchy-Euler jöfnur).</p>
+</section>
+<section id="setning-sja-setningu-7-3-1">
+<h3><span class="section-number">7.1.12. </span>Setning (Sjá Setningu 7.3.1)<a class="headerlink" href="#setning-sja-setningu-7-3-1" title="Permalink to this heading"></a></h3>
+<p>Gefin er afleiðujafna</p>
+<div class="math notranslate nohighlight">
+\[a_mx^mu^{(m)}+\cdots+a_1xu'+a_0u=0,\]</div>
+<p>Skilgreinum margliðu</p>
+<div class="math notranslate nohighlight">
+\[Q(r)=a_m r(r-1)\cdots(r-m+1)+\cdots+a_1r+a_0.\]</div>
+<p>Almenn lausn afleiðujöfnunnar á jákvæða raunásnum er línuleg samantekt fallanna</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+x^{r_1}, \big(\ln x \big) x^{r_1}, \dots,
+\big(\ln x\big)^{m_1-1}x^{r_1},\\
+x^{r_2}, \big(\ln x\big)x^{r_2}, \dots,
+\big(\ln x \big)^{m_2-1} x^{r_2},\\
+\vdots \qquad \qquad \qquad \vdots \qquad \qquad \qquad \vdots\\
+x^{r_\ell}, \big(\ln x \big)x^{r_\ell}, \dots,
+\big(\ln x\big)^{m_\ell-1} x^{r_\ell},\end{gathered}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(r_1,\dots,r_\ell\)</span> eru ólíkar núllstöðvar margliðunnar <span class="math notranslate nohighlight">\(Q\)</span> með margfeldni <span class="math notranslate nohighlight">\(m_1,\dots,m_\ell\)</span>.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">7.1.13. </span>Athugasemd<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Gerum nú ráð fyrir að <span class="math notranslate nohighlight">\(a_0, \ldots, a_m\)</span> séu rauntölur. Hugsum okkur að <span class="math notranslate nohighlight">\(\lambda=\alpha+i\beta\)</span> sé <span class="math notranslate nohighlight">\(m\)</span>-föld rót margliðunni <span class="math notranslate nohighlight">\(Q(r)\)</span>. Þá er <span class="math notranslate nohighlight">\(\mu=\overline{\lambda}=\alpha-i\beta\)</span> líka <span class="math notranslate nohighlight">\(m\)</span>-föld rót <span class="math notranslate nohighlight">\(Q(r)\)</span>. Þegar grunnur fyrir lausnarúmið er skrifaður má í stað</p>
+<div class="math notranslate nohighlight">
+\[x^{\lambda}, (\ln x)x^{\lambda},\dots, (ln x)^{m-1}x^{\lambda},
+x^{\mu}, (\ln x)x^{\mu},\dots, (\ln x)^{m-1}x^{\mu}\]</div>
+<p>hafa í grunninum raungildu föllin</p>
+<div class="math notranslate nohighlight">
+\[x^{\alpha}\cos(\ln(\beta x)), (\ln x)x^{\alpha}\cos(\ln(\beta x)), \ldots,
+(\ln x)^{m-1}x^{\alpha}\cos(\ln(\beta x)),\]</div>
+<div class="math notranslate nohighlight">
+\[x^{\alpha}\sin(\ln(\beta x)),
+(\ln x)x^{\alpha t}\sin(\ln(\beta x)), \ldots, (\ln x)^{m-1}x^{\alpha}\sin(\ln(\beta x)).\]</div>
+</section>
+</section>
+<section id="serlausnir-og-green-foll">
+<h2><span class="section-number">7.2. </span>Sérlausnir og Green-föll<a class="headerlink" href="#serlausnir-og-green-foll" title="Permalink to this heading"></a></h2>
+<section id="upprifjun">
+<h3><span class="section-number">7.2.1. </span>Upprifjun<a class="headerlink" href="#upprifjun" title="Permalink to this heading"></a></h3>
+<p>Viljum leysa afleiðujöfnu af taginu</p>
+<div class="math notranslate nohighlight">
+\[a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_1(t)u'+a_0(t)u=f(t).\]</div>
+<p>Fyrst er að finna grunn fyrir lausnarúm óhliðruðu jöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_1(t)u'+a_0(t)u=0.\]</div>
+<p>Svo finnum við einhverja eina lausn (,,sérlausn‘‘)</p>
+<div class="math notranslate nohighlight">
+\[a_m(t)u^{(m)}+a_{m-1}(t)u^{(m-1)}+\cdots+a_1(t)u'+a_0(t)u=f(t).\]</div>
+<p>Þá getum við lýst öllum lausnum afleiðujöfnunnar.</p>
+<p>Það að finna sérlausnina getur verið erfitt.</p>
+</section>
+<section id="agiskun-sja-7-4">
+<h3><span class="section-number">7.2.2. </span>Ágiskun (Sjá §7.4)<a class="headerlink" href="#agiskun-sja-7-4" title="Permalink to this heading"></a></h3>
+<p>Giskum á sérlausn sem er fall af ,,sömu gerð‘‘ og fallið <span class="math notranslate nohighlight">\(f(t)\)</span>, nema hvað ekki settar inn ákveðnar tölur fyrir stuðla sem koma fyrir. Stungið inn í jöfnu og reynt að ákvarða stuðla.</p>
+</section>
+<section id="goar-agiskanir">
+<h3><span class="section-number">7.2.3. </span>Góðar ágiskanir<a class="headerlink" href="#goar-agiskanir" title="Permalink to this heading"></a></h3>
+<p>Höfum línulega afleiðujöfnu með fastastuðlum</p>
+<div class="math notranslate nohighlight">
+\[a_mu^{(m)}+a_{m-1}u^{(m-1)}+\cdots+a_1u'+a_0u=f(t).\]</div>
+<p>Látum <span class="math notranslate nohighlight">\(P_n(t)\)</span> standa fyrir einhverja <span class="math notranslate nohighlight">\(n\)</span>-ta stigs margliðu og látum <span class="math notranslate nohighlight">\(A_n(t)\)</span> og <span class="math notranslate nohighlight">\(B_n(t)\)</span> tákna <span class="math notranslate nohighlight">\(n\)</span>-ta stigs margliður með óákveðnum stuðlum.</p>
+<p>Ef <span class="math notranslate nohighlight">\(f(t)=P_n(t)\)</span> þá giskað á <span class="math notranslate nohighlight">\(u_{\rm p}(t)=t^lA_n(t)\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(f(t)=P_n(t)e^{rt}\)</span> þá giskað á <span class="math notranslate nohighlight">\(u_{\rm p}(t)=t^lA_n(t)e^{rt}\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(f(t)=P_n(t)e^{rt}\sin(kt)\)</span> þá giskað á <span class="math notranslate nohighlight">\(u_{\rm p}(t)=t^le^{rt}[A_n(t)\cos(kt)+B_n(t)\sin(kt)]\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(f(t)=P_n(t)e^{rt}\cos(kt)\)</span> þá giskað á <span class="math notranslate nohighlight">\(u_{\rm p}(t)=t^le^{rt}[A_n(t)\cos(kt)+B_n(t)\sin(kt)]\)</span>.</p>
+<p>Hér táknar <span class="math notranslate nohighlight">\(l\)</span> minnstu töluna af tölunum <span class="math notranslate nohighlight">\(0, 1, \ldots, m-1\)</span> sem tryggir að enginn liður í ágiskuninni sé lausn á óhliðruðu jöfnunni <span class="math notranslate nohighlight">\(a_mu^{(m)}+a_{m-1}u^{(m-1)}+\cdots+a_1u'+a_0u=0\)</span>.</p>
+</section>
+<section id="daemi-deyf-sveifla-me-drifkrafti">
+<h3><span class="section-number">7.2.4. </span>Dæmi - Deyfð sveifla með drifkrafti<a class="headerlink" href="#daemi-deyf-sveifla-me-drifkrafti" title="Permalink to this heading"></a></h3>
+<p>Lítum á diffurjöfnuna <span class="math notranslate nohighlight">\(mx''+cx'+kx=A\cos(\omega t)\)</span>.</p>
+<div id="svUbr9tgluCGBbnjSWq3PbERz5sZfD"></div>
+<script>
+var ggbApp_svUbr9tgluCGBbnjSWq3PbERz5sZfD = new GGBApplet({
+"appName": "calculator", 
+"width": 700, 
+"height": 400, 
+"material_id": "sexg37mt", 
+"preventFocus": true, 
+"enableShiftDragZoom": true 
+}, true);
+ggbAppletId["svUbr9tgluCGBbnjSWq3PbERz5sZfD"] = ggbApp_svUbr9tgluCGBbnjSWq3PbERz5sZfD;
+</script>
+<p></p>
+</section>
+<section id="serlausnir-fundnar-me-virkjareikningi-sja-7-4">
+<h3><span class="section-number">7.2.5. </span>Sérlausnir fundnar með virkjareikningi (Sjá §7.4)<a class="headerlink" href="#serlausnir-fundnar-me-virkjareikningi-sja-7-4" title="Permalink to this heading"></a></h3>
+<p>Aðferðin snýst um að nýta sér ákveðin mynstur sem koma upp þegar línulegum afleiðuvirkja með fastastuðla er beitt á ákveðnar gerðir falla. Lykilformúlur eru:</p>
+<div class="math notranslate nohighlight">
+\[P(D)e^{\alpha t}=P(\alpha)e^{\alpha t}.\]</div>
+<div class="math notranslate nohighlight">
+\[(D-\alpha)v(t)e^{\alpha t}=v'(t)e^{\alpha t}\quad\mbox{og
+  almennar}\quad (D-\alpha)^kv(t)  e^{\alpha t}=v^{(k)}(t)e^{\alpha
+  t},\]</div>
+<div class="math notranslate nohighlight">
+\[\mbox{ef } P(D)=Q(D)(D-\alpha)^k\mbox{ þá }
+P(D)\frac{t^ke^{\alpha t}}{k!Q(\alpha)}=e^{\alpha t}.\]</div>
+</section>
+<section id="hjalparsetning-sja-hjalparsetningu-7-5-1">
+<h3><span class="section-number">7.2.6. </span>Hjálparsetning (Sjá Hjálparsetningu 7.5.1)<a class="headerlink" href="#hjalparsetning-sja-hjalparsetningu-7-5-1" title="Permalink to this heading"></a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(I\)</span> er bil á raunásnum, <span class="math notranslate nohighlight">\(a\in I\)</span>, <span class="math notranslate nohighlight">\(f\in C(I)\)</span> og <span class="math notranslate nohighlight">\(g\in C(I\times I)\)</span>, er samfellt deildanlegt fall af fyrri breytistærðinni, þ.e. <span class="math notranslate nohighlight">\({\partial}_tg\in C(I\times I)\)</span>, þá er fallið <span class="math notranslate nohighlight">\(h\)</span>, sem gefið er með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[h(t)=\int_a^t g(t, \tau)f(\tau) \, d\tau, \qquad t\in I,\]</div>
+<p>í <span class="math notranslate nohighlight">\(C^1(I)\)</span> og afleiða þess er</p>
+<div class="math notranslate nohighlight">
+\[h'(t)=g(t,t)f(t)+\int_a^t \partial_tg(t,\tau)f(\tau) \, d\tau,
+\qquad t\in I.\]</div>
+</section>
+<section id="skilgreining-og-umraea-sja-7-5">
+<h3><span class="section-number">7.2.7. </span>Skilgreining og umræða (Sjá §7.5)<a class="headerlink" href="#skilgreining-og-umraea-sja-7-5" title="Permalink to this heading"></a></h3>
+<p>Skoðum afleiðujöfnu</p>
+<div class="math notranslate nohighlight">
+\[P(t,D)u=\big(a_m(t)D^m+\cdots+a_1(t)D+a_0(t)\big)u=f(t)\]</div>
+<p>þar sem föllin <span class="math notranslate nohighlight">\(a_0(t),\dots,a_m(t),f(t)\)</span> eru í <span class="math notranslate nohighlight">\(C(I)\)</span> og <span class="math notranslate nohighlight">\(a_m(t)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\in I\)</span>.</p>
+<p>Samkvæmt <a class="reference external" href="./Kafli06.html#fylgisetning-sja-fylgisetningu-6-6-7">Fylgisetningu 6.3.6.</a>  gildir fyrir sérhvern punkt <span class="math notranslate nohighlight">\(\tau\in I\)</span> að til er ótvírætt ákvörðuð lausn</p>
+<p><span class="math notranslate nohighlight">\(u_\tau\)</span> á upphafsgildisverkefninu <span class="math notranslate nohighlight">\(P(t,D)u=0\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[u_\tau(\tau)=u_\tau'(\tau)=\cdots=u_\tau^{(m-2)}(\tau)=0\qquad\mbox{og}\qquad
+u_\tau^{(m-1)}(\tau)=1/a_m(\tau).\]</div>
+<p>Skilgreinum Green-fall virkjans <span class="math notranslate nohighlight">\(P(t, D)\)</span> sem fallið
+<span class="math notranslate nohighlight">\(G(t,\tau)\)</span> þannig að fyrir öll <span class="math notranslate nohighlight">\(t,\tau\in I\)</span> er
+<span class="math notranslate nohighlight">\(G(t,\tau)=u_\tau(t)\)</span>.</p>
+</section>
+<section id="setning-sja-7-5">
+<h3><span class="section-number">7.2.8. </span>Setning (Sjá §7.5)<a class="headerlink" href="#setning-sja-7-5" title="Permalink to this heading"></a></h3>
+<p>Um Green-fall línulegs afleiðuvirkja</p>
+<div class="math notranslate nohighlight">
+\[P(t,D)=a_m(t)D^m+\cdots+a_1(t)D+a_0(t)\]</div>
+<p>þar sem föllin <span class="math notranslate nohighlight">\(a_0(t),\dots,a_m(t),f(t)\)</span> eru í <span class="math notranslate nohighlight">\(C(I)\)</span> og <span class="math notranslate nohighlight">\(a_m(t)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\in I\)</span> gildir:</p>
+<div class="math notranslate nohighlight">
+\[P(t,D_t)G(t,\tau)=0,  \qquad \mbox{fyrir öll }t,\tau\in I,\label{2.5.2}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gathered}
+G(\tau,\tau)=\partial_tG(\tau,\tau)=\cdots=
+\partial_t^{(m-2)}G(\tau,\tau)=0,\\
+\partial_t^{(m-1)}G(\tau,\tau)=1/a_m({\tau})\label{2.5.3}.
+\end{gathered}\end{split}\]</div>
+<p>Green-fallið ákvarðast ótvírætt af þessum skilyrðum.</p>
+<p>Fallið <span class="math notranslate nohighlight">\(G(t,\tau)\)</span> er <span class="math notranslate nohighlight">\(m\)</span>-sinnum samfellt deildanlegt fall af <span class="math notranslate nohighlight">\(t\)</span> fyrir sérhvert <span class="math notranslate nohighlight">\(\tau\in I\)</span> og <span class="math notranslate nohighlight">\(\partial_t^jG\in C(I\times I)\)</span> fyrir <span class="math notranslate nohighlight">\(j=0,\dots,m\)</span>.</p>
+</section>
+<section id="setning-sja-setningu-7-5-2">
+<h3><span class="section-number">7.2.9. </span>Setning (Sjá Setningu 7.5.2)<a class="headerlink" href="#setning-sja-setningu-7-5-2" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P(t,D)\)</span> vera línulegan afleiðuvirkja á forminu</p>
+<div class="math notranslate nohighlight">
+\[P(t,D)u=(a_m(t)D^m+\cdots+a_1(t)D+a_0(t))u\]</div>
+<p>þar sem föllin <span class="math notranslate nohighlight">\(a_0(t),\dots,a_m(t),f(t)\)</span> eru í <span class="math notranslate nohighlight">\(C(I)\)</span> og <span class="math notranslate nohighlight">\(a_m(t)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\in I\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(a\)</span> er einhver punktur í <span class="math notranslate nohighlight">\(I\)</span> þá hefur upphafsgildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[P(t,D)u=f(t),\]</div>
+<p>með</p>
+<div class="math notranslate nohighlight">
+\[u(a)=u'(a)=\cdots=u^{(m-1)}(a)=0,\]</div>
+<p>ótvírætt ákvarðaða lausn <span class="math notranslate nohighlight">\(u_p\in C^m(I)\)</span> sem gefin er með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[u_p(t) = \int_a^t G(t,\tau)f(\tau) \, d\tau, \qquad t\in I,\]</div>
+<p>og <span class="math notranslate nohighlight">\(G(t,\tau)\)</span> er Green-fall virkjans <span class="math notranslate nohighlight">\(P(t, D)\)</span>.</p>
+</section>
+<section id="fylgisetning-sja-fylgisetningu-7-5-4">
+<h3><span class="section-number">7.2.10. </span>Fylgisetning (Sjá Fylgisetningu 7.5.4)<a class="headerlink" href="#fylgisetning-sja-fylgisetningu-7-5-4" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(P(D)=a_mD^m+\cdots+a_1D+a_0\)</span> sé línulegur afleiðuvirki með fastastuðla. Látum <span class="math notranslate nohighlight">\(g\in C^{\infty}(\mathbb{R})\)</span> vera fallið sem uppfyllir</p>
+<div class="math notranslate nohighlight">
+\[P(D)g=0,\  \text{með }
+g(0)=g'(0)=\cdots=g^{(m-2)}(0)=0,\mbox{ og }
+g^{(m-1)}(0)=1/a_m.\]</div>
+<p>Þá er <span class="math notranslate nohighlight">\(G(t,\tau)=g(t-\tau)\)</span> Green-fall virkjans <span class="math notranslate nohighlight">\(P(D)\)</span>.</p>
+</section>
+</section>
+<section id="green-foll-og-wronski-akveur">
+<h2><span class="section-number">7.3. </span>Green-föll og Wronski-ákveður<a class="headerlink" href="#green-foll-og-wronski-akveur" title="Permalink to this heading"></a></h2>
+<section id="reikniafer">
+<h3><span class="section-number">7.3.1. </span>Reikniaðferð<a class="headerlink" href="#reikniafer" title="Permalink to this heading"></a></h3>
+<p>Finna skal Green-fall <span class="math notranslate nohighlight">\(G(t,\tau)\)</span> fyrir <span class="math notranslate nohighlight">\(m\)</span>-ta stigs línulegan afleiðuvirkja <span class="math notranslate nohighlight">\(P(t,D)\)</span>.</p>
+<hr class="docutils" />
+<ol class="upperalpha simple">
+<li><p>Stuðlar afleiðuvirkjans eru fastar, þ.e.a.s. <span class="math notranslate nohighlight">\(P(D)=a_mD^m+\cdots+a_1D+a_0\)</span>.</p></li>
+</ol>
+<p>Fyrst er fundinn grunnur <span class="math notranslate nohighlight">\(u_1(t), \ldots, u_m(t)\)</span> fyrir lausnarúm jöfnunnar <span class="math notranslate nohighlight">\(P(D)u=0\)</span>. Almenna lausnin er á á forminu</p>
+<div class="math notranslate nohighlight">
+\[u=c_1u_1+\cdots+c_mu_m,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(c_1, \ldots, c_m\)</span> eru fastar.</p>
+<p>Næst er fundin ein ákveðin lausn <span class="math notranslate nohighlight">\(g(t)\)</span> á jöfnunni <span class="math notranslate nohighlight">\(P(D)u=0\)</span> sem uppfyllir skilyrðin <span class="math notranslate nohighlight">\(g(0)=\cdots=g^{(m-2)}(0)=0\)</span> og <span class="math notranslate nohighlight">\(g^{(m-1)}(0)=1/a_m\)</span>.</p>
+<p>Green-fallið er svo gefið með formúlunni <span class="math notranslate nohighlight">\(G(t,\tau)=g(t-\tau)\)</span>.</p>
+<hr class="docutils" />
+<ol class="upperalpha simple" start="2">
+<li><p>Stuðlar í <span class="math notranslate nohighlight">\(P(t,D)\)</span> eru föll <span class="math notranslate nohighlight">\(a_0(t), \ldots, a_m(t)\)</span> skilgreind á bili <span class="math notranslate nohighlight">\(I\)</span> þannig að</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[P(t,D)=a_m(t)D^m+\cdots+a_1(t)D+a_0(t).\]</div>
+<p>Fyrst er fundinn grunnur <span class="math notranslate nohighlight">\(u_1(t), \ldots, u_m(t)\)</span> fyrir lausnarúm <span class="math notranslate nohighlight">\(P(t,D)u=0\)</span>. Almenna lausnin er á forminu</p>
+<div class="math notranslate nohighlight">
+\[u=c_1u_1+\cdots+c_mu_m,\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(c_1, \ldots, c_m\)</span> eru fastar.</p>
+<p>Svo finnum við fyrir almennan punkt <span class="math notranslate nohighlight">\(\tau\in I\)</span> gildi á fastana <span class="math notranslate nohighlight">\(c_1(\tau), \ldots, c_m(\tau)\)</span> þannig að um lausnina <span class="math notranslate nohighlight">\(u_\tau(t)= c_1(\tau)u_1(t)+\cdots+c_m(\tau)u_m(t)\)</span> á <span class="math notranslate nohighlight">\(P(t,D)u=0\)</span> gildi að</p>
+<div class="math notranslate nohighlight">
+\[u_\tau(\tau)=u_\tau'(\tau)=\cdots=u_\tau^{(m-2)}(\tau)=0\qquad\mbox{og}\qquad
+u_\tau^{(m-1)}(\tau)=1/a_m(\tau).\]</div>
+<p>Green-fallið er þá gefið með formúlunni <span class="math notranslate nohighlight">\(G(t,\tau)=u_\tau(t)\)</span>.</p>
+</section>
+<section id="skilgreining-sja-7-6">
+<h3><span class="section-number">7.3.2. </span>Skilgreining (Sjá §7.6)<a class="headerlink" href="#skilgreining-sja-7-6" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(u_1, \ldots, u_m\)</span> vera vera <span class="math notranslate nohighlight">\((m-1)\)</span>-sinni deildanleg föll skilgreind á bili I. Wronski-fylki fallanna <span class="math notranslate nohighlight">\(u_1, u_2, \ldots, u_m\)</span> er skilgreint sem fylkið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V(u_1, u_2, \ldots, u_m)=\begin{bmatrix}
+u_1(t)&amp;u_2(t)&amp;\cdots&amp;u_m(t)\\
+u_1'(t)&amp;u_2'(t)&amp;\cdots&amp;u_m'(t)\\
+\vdots&amp;\vdots&amp;\dots&amp;\vdots\\
+u_1^{(m-1)}(t)&amp;u_2^{(m-1)}(t)&amp;\cdots&amp;u_m^{(m-1)}(t)
+\end{bmatrix}.\end{split}\]</div>
+<p>Ákveða þessa fylkis er kölluð Wronski-ákveða fallanna <span class="math notranslate nohighlight">\(u_1, u_2, \ldots, u_m\)</span>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Stuðlarnir í Wronski-fylkinu eru föll af breytunni <span class="math notranslate nohighlight">\(t\)</span> og sömuleiðis er Wronski-ákveðan fall af breytunni <span class="math notranslate nohighlight">\(t\)</span>.</p>
+</div>
+</section>
+<section id="setning-sja-setningu-7-6-3">
+<h3><span class="section-number">7.3.3. </span>Setning (Sjá Setningu 7.6.3)<a class="headerlink" href="#setning-sja-setningu-7-6-3" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P(t,D)=a_m(t)D^m+\cdots+a_1(t)D+a_0(t)\)</span> vera afleiðuvirkja með samfellda stuðla, <span class="math notranslate nohighlight">\(u_1,\dots,u_m\)</span> vera lausnir á óhliðruðu jöfnunni <span class="math notranslate nohighlight">\(P(t,D)u=0\)</span> og táknum Wronski-ákveðu þeirra með <span class="math notranslate nohighlight">\(W(t)\)</span>. Þá uppfyllir <span class="math notranslate nohighlight">\(W\)</span> fyrsta stigs afleiðujöfnuna</p>
+<div class="math notranslate nohighlight">
+\[a_m(t) W'+a_{m-1}(t)W=0\]</div>
+<p>og þar með gildir formúlan</p>
+<div class="math notranslate nohighlight">
+\[W(t)=W(a)\exp\bigg(-\int_a^t\dfrac{a_{m-1}(\tau)}{a_m(\tau)}\,
+d\tau\bigg)\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(t\)</span> á bili <span class="math notranslate nohighlight">\(J\)</span> þar sem <span class="math notranslate nohighlight">\(a_m\)</span> er núllstöðvalaust.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">7.3.4. </span>Setning (Sjá Setningu 7.6.3)<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(u_1,\dots,u_m\)</span> vera lausnir á óhliðruðu jöfnunni <span class="math notranslate nohighlight">\(P(t,D)u=0\)</span>, þar sem</p>
+<div class="math notranslate nohighlight">
+\[P(t,D)=a_m(t)D^m \cdots+a_1(t)D+a_0(t)\]</div>
+<p>og föllin <span class="math notranslate nohighlight">\(a_0(t), \ldots, a_m(t)\)</span> eru skilgreind og samfelld á bili <span class="math notranslate nohighlight">\(I\)</span> og við gerum ráð fyrir að <span class="math notranslate nohighlight">\(a_m\)</span> sé núllstöðvalaust á opnu bili <span class="math notranslate nohighlight">\(J\subseteq I\)</span>. Þá eru eftirfarandi skilyrði jafngild:</p>
+<ol class="lowerroman simple">
+<li><p>Föllin <span class="math notranslate nohighlight">\(u_1,\dots,u_m\)</span> eru línulega óháð á bilinu <span class="math notranslate nohighlight">\(J\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(W(u_1,\dots,u_m)(t)\neq 0\)</span> fyrir sérhvert <span class="math notranslate nohighlight">\(t\in J\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(W(u_1,\dots,u_m)(a)\neq 0\)</span> fyrir eitthvert <span class="math notranslate nohighlight">\(a\in J\)</span>.</p></li>
+</ol>
+</section>
+<section id="setning-sja-setningu-7-6-4">
+<h3><span class="section-number">7.3.5. </span>Setning (Sjá Setningu 7.6.4)<a class="headerlink" href="#setning-sja-setningu-7-6-4" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P(t,D)=a_m(t)D^m+\cdots+a_1(t)D+a_0(t)\)</span> vera afleiðuvirkja með stuðla sem eru samfelld föll skilgreind á bili <span class="math notranslate nohighlight">\(I\)</span> og <span class="math notranslate nohighlight">\(u_1,\dots,u_m\)</span> vera grunn í <span class="math notranslate nohighlight">\({\cal N}(P(t,D))\)</span>. Green-fall virkjans er gefið með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[G(t,\tau)=c_1(\tau)u_1(t)+\cdots+c_m(\tau)u_m(t), \qquad t,\tau\in I,\]</div>
+<p>þar sem vigurinn <span class="math notranslate nohighlight">\(a_m({\tau})(c_1(\tau),\dots,c_m(\tau))\)</span> myndar aftasta dálkinn í andhverfu Wronski-fylkisins <span class="math notranslate nohighlight">\(V(u_1,\dots,u_m)(\tau)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[c_j(\tau)=(-1)^{m+j} \dfrac{\det V_{mj}(u_1,\dots,u_m)(\tau)}
+{a_m({\tau})W(u_1,\dots, u_m)(\tau)},\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(V_{mj}(u_1,\dots,u_m)(\tau)\)</span> táknar <span class="math notranslate nohighlight">\((m-1)\times (m-1)\)</span> fylkið sem fæst með því að fella niður neðstu línuna og dálk númer <span class="math notranslate nohighlight">\(j\)</span> í <span class="math notranslate nohighlight">\(V(u_1,\dots,u_m)(\tau)\)</span>.</p>
+</section>
+<section id="fylgisetning-er-hluti-af-setningu-7-6-4">
+<h3><span class="section-number">7.3.6. </span>Fylgisetning (Er hluti af Setningu 7.6.4)<a class="headerlink" href="#fylgisetning-er-hluti-af-setningu-7-6-4" title="Permalink to this heading"></a></h3>
+<p>Sérlausn á afleiðujöfnunni <span class="math notranslate nohighlight">\(P(t,D)u=f(t)\)</span> er gefin með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[u_p(t)=v_1(t)u_1(t)+\cdots+v_m(t)u_m(t), \qquad  t\in I,\]</div>
+<p>þar sem stuðlaföllin <span class="math notranslate nohighlight">\(v_j\)</span> eru gefin með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[v_j(t)=\int_a^t c_j(\tau)f(\tau) \, d\tau.\]</div>
+</section>
+<section id="fylgisetning-sja-fylgisetning-7-6-5">
+<h3><span class="section-number">7.3.7. </span>Fylgisetning (Sjá Fylgisetning 7.6.5)<a class="headerlink" href="#fylgisetning-sja-fylgisetning-7-6-5" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(P(t,D)=a_2(t)D^2+a_1(t)D+a_0(t)\)</span> vera annars stigs afleiðuvirkja á bilinu <span class="math notranslate nohighlight">\(I\)</span> með samfellda stuðla og <span class="math notranslate nohighlight">\(a_2(t)\neq 0\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\in I\)</span>. Gerum nú ráð fyrir að <span class="math notranslate nohighlight">\(u_1\)</span> og <span class="math notranslate nohighlight">\(u_2\)</span> séu línulega óháðar lausnir á óhliðruðu jöfnunni <span class="math notranslate nohighlight">\(P(t,D)u=0\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}G(t,\tau)
+=a_2(\tau)^{-1}
+\left|\begin{matrix}
+u_1(\tau) &amp; u_1(t)\\
+u_2(\tau) &amp; u_2(t)
+\end{matrix}\right|\bigg /
+\left|\begin{matrix}
+u_1(\tau) &amp; u_2({\tau})\\
+u_1'(\tau) &amp; u_2'({\tau})
+\end{matrix}\right|.\end{split}\]</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli06/" class="btn btn-neutral float-left" title="6. Undirstöðuatriði um afleiðujöfnur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli08/" class="btn btn-neutral float-right" title="8. Veldaraðalausnir á afleiðujöfnum" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Mengi &mdash; Undirbúningur í stærðfræði 2023 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <!-- hoverrole.py css code -->
+    <style type="text/css">
+        a.tooltip {
+            outline: none;
+            border-bottom: thin dotted;
+            background: #ffeedd
+        }
+        
+        a.tooltip strong {
+            line-height: 30px;
+        }
+        
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+        
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: -30px;
+            margin-left: 12px;
+            width: 310px;
+            line-height: 16px;
+        }
+        
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            color: #111;
+            border: 1px solid #DCA;
+            background: #fffAF0;
+        }
+        
+        .callout {
+            z-index: 20;
+            position: absolute;
+            top: 30px;
+            border: 0;
+            left: -12px;
+        }
+        /*CSS3*/
+        
+        a.tooltip span {
+            border-radius: 4px;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
+    <!-- End hoverrole.py css code -->
+
+    <style type="text/css">
+        .sagecell .CodeMirror-scroll {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        
+        .sagecell .CodeMirror {
+            height: auto;
+        }
+    </style>
+
+
+
+
+
+    <link rel="index" title="Yfirlit" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="5. Föll" href="../kafli05/" />
+    <link rel="prev" title="3. Rúmfræði" href="../kafli03/" /> 
+    <!-- Eftirfarandi sagecell import eyðileggur searchið -->
+    <!-- <script type="text/javascript" src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script> -->
+    <!-- <script>
+        // the buttonText string says what will be written on the
+        // sage cell evaluation button.
+        // It can be changed here.
+        var buttonText = "Keyra"
+    </script>
+    <script type="text/javascript">
+        sagecell.makeSagecell({
+            inputLocation: ".sage",
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsage",
+            languages: ["r"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osage",
+            languages: ["octave"],
+            evalButtonText: buttonText
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAuto",
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAuto",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAuto",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".sageAutoHidden",
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".rsageAutoHidden",
+            languages: ["r"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+        sagecell.makeSagecell({
+            inputLocation: ".osageAutoHidden",
+            languages: ["octave"],
+            evalButtonText: buttonText,
+            autoeval: true,
+            hide: ["evalButton"],
+            template: sagecell.templates.minimal
+        });
+    </script> -->
+    <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    <script>
+        ggbAppletId = [];
+    </script>
+    <script>
+        top.scrolldepth_tags = [];
+    </script>
+
+
+
+
+  
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Undirbúningur í stærðfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Um námsefnið</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Jöfnur og ójöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Rúmfræði</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Mengi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#grunnhugtok">4.1. Grunnhugtök</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#umfangsfrumsenda">4.1.1. Umfangsfrumsenda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlutmengi">4.1.2. Hlutmengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#yringar-til-a-skilgreina-mengi">4.2. Yrðingar til að skilgreina mengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining">4.2.1. Skilgreining</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#agerir-a-mengjum">4.3. Aðgerðir á mengjum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#faldmengi">4.3.1. Faldmengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fyllimengi">4.3.2. Fyllimengi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#meira-um-agerir-a-mengjum">4.4. Meira um aðgerðir á mengjum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rauntalnabil">4.5. Rauntalnabil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.5.1. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gerir-af-bilum">4.5.2. Gerðir af bilum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Margliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Hornaföll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Vigrar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Meira um föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Markgildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Diffrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Undirbúningur í stærðfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Mengi</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/undirbuningur_stae/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mengi">
+<h1><span class="section-number">4. </span>Mengi<a class="headerlink" href="#mengi" title="Permalink to this heading"></a></h1>
+<figure><iframe src='https://rec.hi.is/Panopto/Pages/Embed.aspx?id=f624b32e-178d-41cc-8ccb-a559712471d7' width=100% height=405 style=padding: 0px; border: 1px solid #464646; frameborder='0'></iframe></figure><hr class="docutils" />
+<section id="grunnhugtok">
+<h2><span class="section-number">4.1. </span>Grunnhugtök<a class="headerlink" href="#grunnhugtok" title="Permalink to this heading"></a></h2>
+<p><a class="tooltip" target="_blank">
+  Mengi
+  <span>
+    <staelink style="line-height:4px; font-size:80%;">
+      Ekki fannst þýðing á hugtakinu: <i>set</i>
+    </staelink>
+  </span>
+</a> er safn aðgreindra hluta eða hugtaka sem saman mynda eina heild. Hlutirnir eða
+hugtökin sem mynda mengið nefnast <em>stök</em> þess. Ef <span class="math">\(x\)</span> er <a class="tooltip"  href="https://www.stae.is/os/leita/element"  target="_blank">
+  stak
+    <span>en: <i>element, component, coefficient, entry, member</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> í menginu <span class="math">\(A\)</span>, þá skrifum við
+<span class="math">\(x \in A\)</span>. Ef <span class="math">\(x\)</span> er ekki stak í menginu <span class="math">\(A\)</span> þá skrifum við <span class="math">\(x \notin A\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/mengiA.svg"><img alt="../_images/mengiA.svg" class="align-center" src="../_images/mengiA.svg" width="60%" /></a>
+<p>Hér dæmi um mengi <span class="math">\(A\)</span> þar sem <span class="math">\(x_1 \in A\)</span> en <span class="math">\(x_2 \notin A\)</span>.</p>
+<p>Oft eru mengi sett fram sem upptalning á stökum. Til dæmis er</p>
+<ul class="simple">
+<li><p><span class="math">\(\{1,2,3,\dots\}\)</span> mengi náttúrlegra talna,</p></li>
+<li><p><span class="math">\(\{2,4,6,8,10\}\)</span> mengið sem samanstendur af fimm fyrstu jákvæðu sléttu tölunum og</p></li>
+<li><p><span class="math">\(\{2,3,5,7,11\}\)</span> mengið sem samanstendur af fimm fyrstu frumtölunum.</p></li>
+</ul>
+<p><a class="tooltip"  href="https://www.stae.is/os/leita/empty_set"  target="_blank">
+  Tómamengið
+    <span>en: <i>empty set, vacuous set, void set</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> er mengi sem inniheldur ekkert stak. Það er táknað með <span class="math">\(\emptyset\)</span>.</p>
+<section id="umfangsfrumsenda">
+<h3><span class="section-number">4.1.1. </span>Umfangsfrumsenda<a class="headerlink" href="#umfangsfrumsenda" title="Permalink to this heading"></a></h3>
+<p>Tvö mengi <span class="math">\(A\)</span> og <span class="math">\(B\)</span> eru sögð vera jöfn,  ef þau innihalda sömu stök og við
+skrifum þá <span class="math">\(A=B\)</span>.</p>
+</section>
+<section id="hlutmengi">
+<h3><span class="section-number">4.1.2. </span>Hlutmengi<a class="headerlink" href="#hlutmengi" title="Permalink to this heading"></a></h3>
+<p id="s-hlutmengi">Mengið <span class="math">\(B\)</span> er sagt vera <a class="tooltip"  href="https://www.stae.is/os/leita/subset"  target="_blank">
+  hlutmengi
+    <span>en: <i>subset</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> í menginu <span class="math">\(A\)</span> ef sérhvert stak í <span class="math">\(B\)</span> er einnig stak í <span class="math">\(A\)</span>. Við skrifum þá <span class="math">\(B \subset A\)</span>.</p>
+<a class="reference internal image-reference" href="../_images/hlutmengi.svg"><img alt="../_images/hlutmengi.svg" class="align-center" src="../_images/hlutmengi.svg" width="60%" /></a>
+<p>Hér er dæmi um mengi <span class="math">\(A\)</span> sem inniheldur mengið <span class="math">\(B\)</span>, m.ö.o. <span class="math">\(B \subset A\)</span></p>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Mengið <span class="math">\(B=\{ 2,4,6 \}\)</span> er hlutmengi í menginu <span class="math">\(A=\{1,2,3,4,5,6\}\)</span> því öll stökin í <span class="math">\(B\)</span> má líka finna í <span class="math">\(A\)</span> .</p>
+</div>
+</section>
+</section>
+<section id="yringar-til-a-skilgreina-mengi">
+<h2><span class="section-number">4.2. </span>Yrðingar til að skilgreina mengi<a class="headerlink" href="#yringar-til-a-skilgreina-mengi" title="Permalink to this heading"></a></h2>
+<p>Stundum getur verið gagnlegt að skilgreina mengi með stökum sem öll hafa einhverja
+ákveðna eiginleika. Við þurfum að geta táknað þetta mengi á einfaldan hátt en stundum eru
+stökin óendanlega mörg og því ómögulegt að beinlínis telja þau upp eins og í dæmunum að
+ofan.</p>
+<p><a class="tooltip"  href="https://www.stae.is/os/leita/proposition"  target="_blank">
+  Yrðing
+    <span>en: <i>proposition, sentence, statement</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> er staðhæfing sem er annaðhvort sönn eða ósönn.
+Oft skilgreinum við mengi með því að skrifa yrðingar um stök mengisins.
+Við segjum að stak <span class="math">\(x\)</span> sé í menginu ef og aðeins ef allar yrðingarnar um það eru sannar.</p>
+<p>Formlegri leið til að segja þetta er:</p>
+<section id="skilgreining">
+<h3><span class="section-number">4.2.1. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Permalink to this heading"></a></h3>
+<p>Hægt er að setja fram mengi með opinni yrðingu <span class="math">\(p(x)\)</span>, þannig að mengið samanstandi af öllum stökum  <span class="math">\(x\)</span> þannig að <span class="math">\(p(x)\)</span> sé sönn yrðing.</p>
+<div class="math">
+\[A = \{x \in C \ | \ p(x)\}
+
+\]</div>
+<p>Sjáum að mengið <span class="math">\(A\)</span> er hlutmengi í <span class="math">\(C\)</span> .</p>
+<p>Þetta verður best skýrt með dæmum.</p>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p><strong>1.</strong> Látum <span class="math">\(A = \{x \text{ er frumtala }| x \text{ hefur } 3 \text{ í einingasætinu }\}\)</span>.</p>
+<blockquote>
+<div><p>Nú getum við sagt að t.d. <span class="math">\(3 \in A, 13 \in A, 103 \in A\)</span> þar sem allar þessar tölur eru frumtölur með <span class="math">\(3\)</span> í einingarsætinu.</p>
+<p><span class="math">\(33\)</span> er ekki stak í <span class="math">\(A\)</span> (ritað <span class="math">\(33 \notin A)\)</span> því <span class="math">\(33\)</span> er ekki frumtala.</p>
+<p><span class="math">\(51\)</span> er heldur ekki stak í <span class="math">\(A\)</span> því að hún hefur <span class="math">\(1\)</span> í einingasætinu en ekki <span class="math">\(3\)</span>.</p>
+</div></blockquote>
+<p><strong>2.</strong> Látum <span class="math">\(C = \{x \text{ er heiltala }| x \text{ er slétt tala }, x \text{ er oddatala}\}\)</span>.</p>
+<blockquote>
+<div><p>Hér er <span class="math">\(C = \emptyset\)</span> þar sem að engin tala getur verið bæði slétt tala og oddatala í einu.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="agerir-a-mengjum">
+<h2><span class="section-number">4.3. </span>Aðgerðir á mengjum<a class="headerlink" href="#agerir-a-mengjum" title="Permalink to this heading"></a></h2>
+<p>Ef <span class="math">\(A\)</span> og <span class="math">\(B\)</span> eru mengi þá táknum við mengi allra staka sem eru í <span class="math">\(A\)</span> eða í <span class="math">\(B\)</span> með
+<span class="math">\(A\cup B\)</span>. Þetta mengi köllum við <a class="tooltip"  href="https://www.stae.is/os/leita/union"  target="_blank">
+  sammengi
+    <span>en: <i>union, join</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math">\(A\)</span> og <span class="math">\(B\)</span>.
+Formlega skilgreiningin er:</p>
+<div class="math">
+\[A\cup B = \{x| x \in A \text{ eða } x \in B\}.
+
+\]</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Í stærðfræðilegu samhengi hefur samtengingin „eða“ merkinguna „og/eða“.</p>
+</div>
+<p>Mengi allra staka sem eru bæði í <span class="math">\(A\)</span> og <span class="math">\(B\)</span> er táknað með <span class="math">\(A \cap B\)</span>. Þetta mengi er kallað
+<a class="tooltip"  href="https://www.stae.is/os/leita/intersection"  target="_blank">
+  sniðmengi
+    <span>en: <i>intersection, meet</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math">\(A\)</span> og <span class="math">\(B\)</span>.
+Formlega skilgreiningin er:</p>
+<div class="math">
+\[A\cap B = \{x| x \in A \text{ og } x \in B\}.
+
+\]</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Við segjum að <span class="math">\(A\)</span> og <span class="math">\(B\)</span> séu <a class="tooltip"  href="https://www.stae.is/os/leita/mutually_exclusive"  target="_blank">
+  sundurlæg
+    <span>en: <i>mutually exclusive, mutually disjoint, pairwise disjoint</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> ef sniðmengið er tómamengið, þ.e. ef mengin hafa ekkert sameiginlegt stak.</p>
+</div>
+<p>Mengi allra staka sem eru í <span class="math">\(A\)</span> en ekki í <span class="math">\(B\)</span> er kallað mismunur (eða <a class="tooltip"  href="https://www.stae.is/os/leita/difference"  target="_blank">
+  mengjamismunur
+    <span>en: <i>difference, relative complement, remainder</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>) <span class="math">\(A\)</span> og
+<span class="math">\(B\)</span>. Hann er táknaður með <span class="math">\(A\backslash B\)</span>.
+Formlega skilgreiningin er:</p>
+<div class="math">
+\[A\backslash B = \{x| x \in A \text{ og }x \notin B\}.
+
+\]</div>
+<a class="reference internal image-reference" href="../_images/snidmengi.svg"><img alt="../_images/snidmengi.svg" class="align-center" src="../_images/snidmengi.svg" width="100%" /></a>
+<p>Hér er dæmi um tvö mengi <span class="math">\(A\)</span> og <span class="math">\(B\)</span> sem hafa sniðmengi, m.ö.o eru ekki <a class="tooltip"  href="https://www.stae.is/os/leita/mutually_exclusive"  target="_blank">
+  sundurlæg
+    <span>en: <i>mutually exclusive, mutually disjoint, pairwise disjoint</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a>. <span class="math">\(A \cap B\)</span> er merkt þar sem hringirnir skarast og <span class="math">\(A\backslash B\)</span> er merkt með þykkum ramma.</p>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math">\(A=\{x\in\mathbb{N}|x\text{ er slétt tala}\},B=\{x\in\mathbb{N}|x\text{ er oddatala}\}\)</span> og <span class="math">\(C=\{2,3,5,6,8\}\)</span></p>
+<p>Hér er <span class="math">\(A\cup B=\mathbb{N}\)</span> því að allar náttúrulegar tölur eru annað hvort sléttar tölur eða oddatölur.</p>
+<p><span class="math">\(A\cap B=\emptyset\)</span> því að engin tala er bæði slétt tala og oddatala.</p>
+<p><span class="math">\(A\setminus B=A\)</span> því að ekkert stak í <span class="math">\(A\)</span> er líka í <span class="math">\(B\)</span> og því er ekkert dregið frá.</p>
+<p><span class="math">\(A\cap C=\{2,6,8\}\)</span></p>
+<p><span class="math">\(C\setminus B=\{2,6,8\}\)</span></p>
+</div>
+<section id="faldmengi">
+<h3><span class="section-number">4.3.1. </span>Faldmengi<a class="headerlink" href="#faldmengi" title="Permalink to this heading"></a></h3>
+<p><a class="tooltip"  href="https://www.stae.is/os/leita/cartesian_product"  target="_blank">
+  Faldmengi
+    <span>en: <i>cartesian product, cross product, outer product, product set, set product</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> eða margfeldismengi <span class="math">\(A\times B\)</span> tveggja mengja <span class="math">\(A\)</span> og <span class="math">\(B\)</span> er skilgreint sem mengi allra
+para <span class="math">\((a,b)\)</span> af stökum þ.a. <span class="math">\(a \in A\)</span> og <span class="math">\(b \in B\)</span>. Með yrðingum er þetta skrifað:</p>
+<div class="math">
+\[A\times B = \{(a,b)| a \in A \text{ og } b \in B\}.
+
+\]</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math">\(A=\{2,3,6\}\)</span></p>
+<p><span class="math">\(\left(2,\dfrac{5}{4}\right)\)</span> er stak í <span class="math">\(\mathbb{N}\times\mathbb{Q}\)</span>. Það er  ritað <span class="math">\(\left(2,\dfrac{5}{4}\right)\in \mathbb{N}\times\mathbb{Q}\)</span></p>
+<p><span class="math">\(\left(2,\dfrac{5}{4}\right)\)</span> er líka stak í <span class="math">\(\mathbb{Q}\times\mathbb{Q}\)</span> því að <span class="math">\(2=\dfrac{2}{1}\)</span> er í báðum mengjunum <span class="math">\(\mathbb{N}\)</span> og <span class="math">\(\mathbb{Q}\)</span></p>
+<p><span class="math">\(\left(2,\dfrac{5}{4}\right)\)</span> er líka stak í menginu <span class="math">\(A\times\mathbb{Q}\)</span></p>
+<p><span class="math">\(\left(2,\dfrac{5}{4}\right)\)</span> er <strong>ekki</strong> stak í menginu <span class="math">\(\mathbb{N}\times\mathbb{N}\)</span> því <span class="math">\(\dfrac{5}{4}\)</span> er ekki í <span class="math">\(\mathbb{N}\)</span></p>
+</div>
+</section>
+<section id="fyllimengi">
+<h3><span class="section-number">4.3.2. </span>Fyllimengi<a class="headerlink" href="#fyllimengi" title="Permalink to this heading"></a></h3>
+<p>Þegar verið er að fjalla um hlutmengi <span class="math">\(A\)</span> í ákveðnu mengi <span class="math">\(X\)</span>, þá er mengið <span class="math">\(X \backslash A\)</span> oft nefnt <a class="tooltip"  href="https://www.stae.is/os/leita/complement"  target="_blank">
+  fyllimengi
+    <span>en: <i>complement, complementary subset</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> hlutmengisins <span class="math">\(A\)</span>, það er einnig táknað <span class="math">\(A^c\)</span>.
+Í <span class="math">\(A^c\)</span> eru því öll stök sem eru í <span class="math">\(X\)</span> en ekki í <span class="math">\(A\)</span> .</p>
+<a class="reference internal image-reference" href="../_images/fyllimengi.svg"><img alt="../_images/fyllimengi.svg" class="align-center" src="../_images/fyllimengi.svg" width="45%" /></a>
+<p>Hér er bláa svæðið fyllimengi hlutmengisins  <span class="math">\(A\)</span>, <span class="math">\(A^c\)</span>.</p>
+<p>Mengið X er kallað <a class="tooltip"  href="https://www.stae.is/os/leita/universal_set"  target="_blank">
+  almengi
+    <span>en: <i>universal set</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> og inniheldur alla hlutina sem verið er að vinna með. Oftast er ljóst af samhenginu hvað
+þetta almengi er. Í dæminu að ofan sjáum við að <span class="math">\(X\)</span> er allt svæðið inní rétthyrningum.</p>
+</section>
+</section>
+<section id="meira-um-agerir-a-mengjum">
+<h2><span class="section-number">4.4. </span>Meira um aðgerðir á mengjum<a class="headerlink" href="#meira-um-agerir-a-mengjum" title="Permalink to this heading"></a></h2>
+<p>Auðvelt er að sannfæra sig um eftirfarandi reiknireglur á mengjum:</p>
+<div class="math">
+\[\left(A\cup B\right)\cup C=A\cup\left(B\cup C\right)
+
+\]</div>
+<div class="math">
+\[\left(A\cap B\right)\cap C=A\cap\left(B\cap C\right)
+
+\]</div>
+<p>Þessi regla segir að það skipti ekki máli í hvaða röð maður tekur sammengi og sniðmengi.
+Því má skrifa <span class="math">\(A\cup B\cup C\)</span> eða <span class="math">\(A\cap B\cap C\)</span> og sleppa öllum svigum.</p>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Það þarf alls ekki að gilda að <span class="math">\(\left(A\cup B\right)\cap C=A\cup\left(B\cap C\right)\)</span>, til dæmis. Lesandi er hvattur til að ganga úr skugga um þetta sjálfur.</p>
+<p>Það skiptir höfuðmáli hvaða aðgerð er gerð fyrst þegar sam- og sniðmengjum er blandað saman. Að nota sviga er nauðsynlegt;  skrifa <span class="math">\(A\cup B\cap C\)</span> eða <span class="math">\(A\cap B\cup C\)</span> er merkingarlaust.</p>
+</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Gefin eru mengin  <span class="math">\(A:= \{ 1,2,3,4,5 \}, B := \{ 2,4,6,8,10\}\)</span> og <span class="math">\(C := \{ 6,7,8,9,10\}\)</span></p>
+<p><strong>1.</strong> Finnið <span class="math">\((A \cup B) \cap C\)</span>.</p>
+<p>Byrjum á að finna <span class="math">\(A \cup B\)</span>. Það er mengi allra staka sem eru stök í öðru hvoru mengjanna <span class="math">\(A\)</span> eða <span class="math">\(B\)</span>, það er, <span class="math">\(A \cup B = \{1,2,3,4,5,6,8,10 \}\)</span>.</p>
+<p><span class="math">\((A \cup B) \cap C\)</span> inniheldur síðan nákvæmlega þau stök sem eru bæði í <span class="math">\(A \cup B\)</span> og <span class="math">\(C\)</span>.</p>
+<p><span class="math">\((A \cup B) \cap C = \{6,8,10 \}\)</span>.</p>
+<p><strong>2.</strong>  Finnið <span class="math">\(A \cup (B \cap C)\)</span>.</p>
+<p>Nú er <span class="math">\(B \cap C = \{6,8,10 \}\)</span> og þá er <span class="math">\(A \cup (B \cap C) = \{1,2,3,4,5,6,8,10 \}\)</span>.</p>
+<p>Tökum eftir að hér er dæmi þar sem að <span class="math">\((A \cup B) \cap C \neq A \cup (B  \cap C)\)</span> gildir.</p>
+<p><strong>3.</strong> Finnið <span class="math">\((A \cap B) \cap C\)</span>.</p>
+<p>Nú er <span class="math">\(A \cap B = \{ 2,4 \}\)</span> svo <span class="math">\((A \cap B) \cap C = \{2,4 \} \cap \{6,7,8,9,10 \} = \emptyset\)</span> því <span class="math">\(2\)</span> og <span class="math">\(4\)</span> eru ekki í <span class="math">\(C\)</span> .</p>
+</div>
+<hr class="docutils" />
+<p>Nú skulum við skilgreina sam- og sniðmengi fleiri en tveggja mengja.
+Látum <span class="math">\(n \in \mathbb{N_+}\)</span> og <span class="math">\(A_1,A_2,\dots,A_n\)</span> vera mengi. Látum <span class="math">\(I = \{1, \dots, n \}\)</span>. Skilgreinum:</p>
+<div class="math">
+\[\begin{aligned}
+& \bigcup_{i=1}^n A_i=\{x|x\in A_i \text{ fyrir eitthvað } i = 1, \dots, n \}, \\
+\quad\\
+& \bigcap_{i=1}^n A_i=\{x|x\in A_i \text{ fyrir öll }  i = 1, \dots, n\}.
+\end{aligned}
+
+\]</div>
+<p>Í raun er <span class="math">\(\bigcup_{i=1}^n A_i\)</span> bara önnur leið til að skrifa</p>
+<div class="math">
+\[A_1\cup A_2\cup A_3\cup...\cup A_n
+
+\]</div>
+<p>og <span class="math">\(\bigcap_{i=1}^n A_i\)</span> er bara önnur leið til að skrifa</p>
+<div class="math">
+\[A_1\cap A_2\cap A_3\cap...\cap A_n
+
+\]</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Hér nýtum við okkur reikniregluna að <span class="math">\(\left(A\cup B\right)\cup C=A\cup\left(B\cup C\right)\)</span>, og hliðstæðu hennar fyrir sniðmengi, aftur og aftur.</p>
+</div>
+<p>Inn á milli kemur fyrir að stærðfræðingur vilji taka sammengi óendanlegra margra mengja. Segjum að við höfum eitthvað safn af mengjum (eða mengi af mengjum) þannig að búið sé að merkja öll mengin með einhverjum <a class="tooltip"  href="https://www.stae.is/os/leita/index"  target="_blank">
+  vísi
+    <span>en: <i>index</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> úr einhverju <a class="tooltip"  href="https://www.stae.is/os/leita/index_set"  target="_blank">
+  vísamengi
+    <span>en: <i>index set</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math">\(I\)</span>. Það er, öll mengin í safninu má tákna með <span class="math">\(A_i\)</span> með <span class="math">\(i\in I\)</span>, þar sem <span class="math">\(I \neq \emptyset\)</span>. Þá er sammengi allra þessara mengja táknað með <span class="math">\(\bigcup_{i\in I}A_i\)</span>.</p>
+<p>Með yrðingum er þetta skilgreint:</p>
+<div class="math">
+\[\bigcup_{i\in I}A_i=\{x|x\in A_i \text{ fyrir eitthvað } i\in I \}
+
+\]</div>
+<p>Eins eru sniðmengin skilgreind:</p>
+<div class="math">
+\[\bigcap_{i\in I}A_i=\{x|x\in A_i \text{ fyrir öll } i\in I \}
+
+\]</div>
+<p>Tökum nokkur dæmi um þetta.</p>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p><strong>1.</strong> Látum <span class="math">\(\mathbb{P}\)</span> tákna mengi allra frumtalna.</p>
+<blockquote>
+<div><p>Fyrir sérhvert <span class="math">\(p\in\mathbb{P}\)</span> skulum við láta <span class="math">\(A_p\)</span> vera mengi allra náttúrulegra talna sem <span class="math">\(p\)</span> gengur upp í. Með yrðingum skrifum við:</p>
+<div class="math">
+\[A_p=\{n\in\mathbb{N}|p\text{ gengur upp í }n \}
+
+\]</div>
+<p>Hér er vísismengið <span class="math">\(\mathbb{P}\)</span> og</p>
+<div class="math">
+\[\bigcup_{p\in\mathbb{P}}A_p=\mathbb{N}\setminus\{1\}
+
+\]</div>
+<p>Það er af því að sérhver tala í <span class="math">\(\mathbb{N}\)</span> sem er stærri en <span class="math">\(1\)</span> er deilanleg með einhverri frumtölu, og því er til <span class="math">\(p\)</span> þannig að talan sé í <span class="math">\(A_p\)</span>.</p>
+</div></blockquote>
+<p><strong>2.</strong> Fyrir sérhvert <span class="math">\(n\in \mathbb{Z}\)</span> skulum við láta <span class="math">\(B_n\)</span> vera mengi allra almennra brota sem hafa <span class="math">\(n\)</span> sem teljara þegar þau eru fullstytt. Með yrðingum skilgreinum við þetta mengi:</p>
+<blockquote>
+<div><div class="math">
+\[B_n=\{r\in\mathbb{Q}|\,\, \text{Ef }r=\dfrac{a}{b}\text{ og } \dfrac{a}{b}\text{ er fullstytt brot þá er }a=n \}
+
+\]</div>
+<p>Hér er <span class="math">\(\mathbb{Z}\)</span> vísismengið og:</p>
+<div class="math">
+\[\bigcup_{n\in\mathbb{Z}}B_n=\mathbb{Q}
+
+\]</div>
+<p>Af því að sérhvert almennt brot er í einhverju af mengjunum <span class="math">\(A_n\)</span>.</p>
+</div></blockquote>
+<p><strong>3.</strong> Látum <span class="math">\(T\)</span> vera mengið sem hefur sem stök öll tré í heiminum. Ef <span class="math">\(t\in T\)</span> er eitthvað tré látum við mengið <span class="math">\(L_t\)</span> vera mengi allra laufblaða á trénu <span class="math">\(t\)</span>. Með yrðingum skrifum við:</p>
+<blockquote>
+<div><div class="math">
+\[L_t=\{l\text{ er laufblað}|\, l\text{ er á trénu }t \}
+
+\]</div>
+<p>Hér er <span class="math">\(T\)</span> vísismengið og</p>
+<div class="math">
+\[\bigcup_{t\in T}L_t=\{l\text{ er laufblað}|\, l\text{ er á einhverju tréi } \}
+
+\]</div>
+</div></blockquote>
+</div>
+</section>
+<section id="rauntalnabil">
+<h2><span class="section-number">4.5. </span>Rauntalnabil<a class="headerlink" href="#rauntalnabil" title="Permalink to this heading"></a></h2>
+<p>Látum <span class="math">\(I\)</span> vera hlutmengi í <span class="math">\(\mathbb{R}\)</span>.
+Við köllum hlutmengið <span class="math">\(I\)</span> <a class="tooltip"  href="https://www.stae.is/os/leita/interval"  target="_blank">
+  bil
+    <span>en: <i>interval</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> ef engin göt eru í <span class="math">\(I\)</span> .
+Með öðrum orðum, við segjum að mengið <span class="math">\(I\)</span> sé bil ef við getum táknað það á talnalínunni með breiðu línustriki með engum götum.
+Á hvorn endapunkt striksins setjum við annað hvort fylltan hring eða tóman, eftir því hvort sá <a class="tooltip"  href="https://www.stae.is/os/leita/end_point"  target="_blank">
+  endapunktur
+    <span>en: <i>end point, extremity, extremum, limit of integration</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> sé með í bilinu eða ekki.
+Ef punkturinn á að vera með setjum við fylltan hring, annars tóman.</p>
+<a class="reference internal image-reference" href="../_images/bil.svg"><img alt="../_images/bil.svg" class="align-center" src="../_images/bil.svg" width="50%" /></a>
+<p>Formlega skilgreiningin á bili er svohljóðandi:</p>
+<section id="id1">
+<h3><span class="section-number">4.5.1. </span>Skilgreining<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Hlutmengi <span class="math">\(I\)</span> í <span class="math">\(\mathbb{R}\)</span> kallast <a class="tooltip"  href="https://www.stae.is/os/leita/interval"  target="_blank">
+  bil
+    <span>en: <i>interval</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> ef fyrir sérhvert <span class="math">\(a,b\in I\)</span> og <span class="math">\(c\in\mathbb{R}\)</span> þ.a. <span class="math">\(a&lt;c&lt;b\)</span> þá gildir <span class="math">\(c\in I\)</span> .</p>
+</section>
+<section id="gerir-af-bilum">
+<h3><span class="section-number">4.5.2. </span>Gerðir af bilum<a class="headerlink" href="#gerir-af-bilum" title="Permalink to this heading"></a></h3>
+<p>Til að tákna bil í prenti þarf að nota tvær tölur, hornklofa og/eða sviga eftir aðstæðum og eina kommu. Hér verða nokkur bil útskýrð í töluðu máli:</p>
+<p>Bilið <span class="math">\([a,b]\)</span> er mengi allra rauntalna sem eru á milli <span class="math">\(a\)</span> og <span class="math">\(b\)</span>, meðtaldar eru tölurnar <span class="math">\(a\)</span> og <span class="math">\(b\)</span>.</p>
+<p>Bilið <span class="math">\((a,b)\)</span> er mengi allra rauntalna sem eru á milli <span class="math">\(a\)</span> og <span class="math">\(b\)</span> en hér eru <span class="math">\(a\)</span> og <span class="math">\(b\)</span> frátaldar.</p>
+<p>Bilið <span class="math">\((a,\infty)\)</span> er mengi allra rauntalna sem eru stærri en <span class="math">\(a\)</span> en hér er <span class="math">\(a\)</span> ekki tekið með.</p>
+<p>Bilið <span class="math">\([a,b)\)</span> er mengi allra rauntalna sem eru á milli <span class="math">\(a\)</span> og <span class="math">\(b\)</span> að stakinu <span class="math">\(a\)</span> meðtöldu en án staksins <span class="math">\(b\)</span>.</p>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Hér eru notaðir svigar fyrir opin bil, en í sumum bókum er opið bil táknað með því að snúa hornklofunum öfugt.
+Því <span class="math">\(]a,b[\)</span> táknar það sama og <span class="math">\((a,b)\)</span> .</p>
+</div>
+<p>Hér er tæmandi listi yfir allar gerðir af endanlegum bilum, skilgreindum með yrðingum:</p>
+<p>Látum <span class="math">\(a\)</span> og <span class="math">\(b\)</span> vera rauntölur þannig að
+<span class="math">\(a&lt;b\)</span>. Skilgreinum</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><a class="tooltip"  href="https://www.stae.is/os/leita/open_interval"  target="_blank">
+  opið bil
+    <span>en: <i>open interval</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math">\((a,b)=\{x\in \mathbb{R}| a&lt;x&lt;b\}\)</span></p></li>
+<li><p><a class="tooltip"  href="https://www.stae.is/os/leita/closed_interval"  target="_blank">
+  lokað bil
+    <span>en: <i>closed interval</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math">\([a,b]=\{x\in \mathbb{R}| a\leq x\leq b\}\)</span></p></li>
+<li><p><a class="tooltip"  href="https://www.stae.is/os/leita/half-open_interval"  target="_blank">
+  hálfopið bil
+    <span>en: <i>half-open interval, semi-open interval</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math">\([a,b)=\{x\in \mathbb{R}| a\leq x&lt;b\}\)</span></p></li>
+<li><p><a class="tooltip"  href="https://www.stae.is/os/leita/half-open_interval"  target="_blank">
+  hálfopið bil
+    <span>en: <i>half-open interval, semi-open interval</i>
+    
+      <staelink style="font-size:80%;"><br><strong>Smelltu</strong> fyrir ítarlegri þýðingu.</staelink>
+    
+  </span>
+</a> <span class="math">\((a,b]=\{x\in \mathbb{R}| a&lt; x\leq b\}\)</span></p></li>
+</ol>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/endanlegbil.svg"><img alt="../_images/endanlegbil.svg" class="align-center" src="../_images/endanlegbil.svg" width="60%" /></a>
+<hr class="docutils" />
+<p>Óendanlegu bilin eru þau sem halda áfram óendanlega langt í aðra hvora eða báðar áttir.
+Látum <span class="math">\(a\)</span> vera rauntölu. Skilgreinum</p>
+<blockquote>
+<div><ol class="arabic simple" start="5">
+<li><p><em>opið óendanlegt bil</em> <span class="math">\((a,\infty)=\{x\in \mathbb{R}| a&lt;x\}\)</span></p></li>
+<li><p><em>opið óendanlegt bil</em> <span class="math">\((-\infty, a)=\{x\in \mathbb{R}; x&lt;a\}\)</span></p></li>
+<li><p><em>lokað óendanlegt bil</em> <span class="math">\([a,\infty)=\{x\in \mathbb{R}; a\leq x\}\)</span></p></li>
+<li><p><em>lokað óendanlegt bil</em> <span class="math">\((-\infty, a]=\{x\in \mathbb{R}; x\leq a\}\)</span></p></li>
+<li><p><em>öll rauntalnalínan</em> <span class="math">\((-\infty, \infty)= \mathbb{R}\)</span>.</p></li>
+</ol>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/oendanlegbil.svg"><img alt="../_images/oendanlegbil.svg" class="align-center" src="../_images/oendanlegbil.svg" width="60%" /></a>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../kafli05/" class="btn btn-neutral float-right" title="5. Föll" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../kafli03/" class="btn btn-neutral" title="3. Rúmfræði" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+         Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi.
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
+  Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>
+  </p>
+  </div>
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <script>
+        window.addEventListener("load", function() {
+            for (var i in ggbAppletId) {
+                ggbAppletId[i].inject(i);
+            }
+        });
+    </script>
+      
+    <style>
+        /* Sidebar header (and topbar for mobile) */
+        
+        .wy-side-nav-search,
+        .wy-nav-top {
+            background: #10099F;
+        }
+        /* Sidebar */
+        
+        .wy-nav-side {
+            background: #262626;
+        }
+    </style>
+
+
+</body>
+</html>

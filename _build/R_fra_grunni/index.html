@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R frá grunni &mdash; R frá Grunni 2023</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/strei.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="_static/katex.min.js"></script>
+        <script src="_static/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex/" />
+    <link rel="search" title="Leit" href="search/" />
+    <link rel="next" title="1. Inngangur" href="kafli01/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            R frá Grunni
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09/">9. Einþátta fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10/">10. Línuleg aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12/">12. Knitr</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="um_R_leiksvaedi/">Um R leiksvæði</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">R frá Grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">R frá grunni</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="r-fra-grunni">
+<h1>R frá grunni<a class="headerlink" href="#r-fra-grunni" title="Permalink to this heading"></a></h1>
+<p>Höfundar efnis: Sigrún Helga Lund, Anna Helga Jónsdóttir og Bjarki Þór Elvarson</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01/">1. Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#um-essa-bok">1.1. Um þessa bók</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01/#id1">1.1.1. Um þessa bók</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#afer">1.1.1.1. aðferð()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#hvernig-virkar-r">1.2. Hvernig virkar R?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#vinnulag-i-r-rstudio">1.3. Vinnulag í R/RStudio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01/#id2">1.3.1. Vinnulag í R/RStudio</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#verkefnautanumhald-i-rstudio">1.3.1.1. Verkefnautanumhald í Rstudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#slokkt-a-rstudio">1.3.1.2. Slökkt á Rstudio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#aferir-skipanir-foll">1.4. Aðferðir/skipanir/föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01/#id3">1.4.1. Aðferðir/skipanir/föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#help">1.4.1.1. help()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#help-search">1.4.1.2. help.search()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#rsitesearch">1.4.1.3. RSiteSearch()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#apropos">1.4.1.4. apropos()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#args">1.4.1.5. args()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#r-sem-vasareiknir">1.5. R sem vasareiknir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#r-pakkar">1.6. R-pakkar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01/#id4">1.6.1. R-pakkar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01/#install-packages">1.6.1.1. install.packages()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#r-a-islensku">1.7. R á íslensku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#gogn">1.8. Gögn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#leiksvaei-fyrir-r-koa">1.9. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02/">2. Frá tilraun til gagna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#skraning-gagna">2.1. Skráning gagna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#innlestur-gagna">2.2. Innlestur gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#id1">2.2.1. Innlestur gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#read-table">2.2.1.1. read.table()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#c">2.2.1.2. c()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#seq">2.2.1.3. seq()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#rep">2.2.1.4. rep()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#stasetning-skraa-ast">2.2.2. Staðsetning skráa<span class="math">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#groft-yfirlit-gagna">2.3. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#id2">2.3.1. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#view">2.3.1.1. View()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#names">2.3.1.2. names()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#head">2.3.1.3. head()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#str">2.3.1.4. str()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#length">2.3.1.5. length()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#dim">2.3.1.6. dim()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#vontun-maelinga">2.4. Vöntun mælinga</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#id3">2.4.1. Vöntun mælinga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#is-na">2.4.1.1. is.na()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#na-omit">2.4.1.2. na.omit()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#akvein-gildi-valin-ur-gagnatoflu">2.5. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#id4">2.5.1. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#slice">2.5.1.1. slice()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#filter">2.5.1.2. filter()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#which">2.5.1.3. which()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#grep">2.5.1.4. grep()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#koun-breyta">2.6. Kóðun breyta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#a-flokkabreytur-skilgreindar">2.6.1. A: Flokkabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#factor">2.6.1.1. factor()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#levels">2.6.1.2. levels()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#b-talnabreytum-skipt-upp-i-bil">2.6.2. B: Talnabreytum skipt upp í bil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#cut">2.6.2.1. cut()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#c-flokkar-sameinair">2.6.3. C: Flokkar sameinaðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#d-dagsetningabreytur-skilgreindar">2.6.4. D: Dagsetningabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#as-date">2.6.4.1. as.Date()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#e-leita-eftir-textastrengjum">2.6.5. E: Leitað eftir textastrengjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#f-breytt-um-heiti-a-breytum">2.6.6. F: Breytt um heiti á breytum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#rename">2.6.6.1. rename()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#g-vorpunum-beitt-a-talnabreytur">2.6.7. G: Vörpunum beitt á talnabreytur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#umroun-gagna">2.7. Umröðun gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#id5">2.7.1. Umröðun gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#sort">2.7.1.1. sort()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#arrange">2.7.1.2. arrange()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#gather">2.7.1.3. gather()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#spread">2.7.1.4. spread()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#merge">2.7.1.5. merge()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#fleiri-skipanir-fyrir-koun-breyta-ast">2.8. Fleiri skipanir fyrir kóðun breyta<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#id6">2.8.1. Fleiri skipanir fyrir kóðun breyta<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#paste">2.8.1.1. paste()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#sprintf">2.8.1.2. sprintf()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#separate">2.8.1.3. separate()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#substr">2.8.1.4. substr()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#fleiri-skipanir-fyrir-sameiningu-gagna-ast">2.9. Fleiri skipanir fyrir sameiningu gagna<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02/#id8">2.9.1. Fleiri skipanir fyrir sameiningu gagna<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#cbind">2.9.1.1. cbind()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02/#rbind">2.9.1.2. rbind()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#leiksvaei-fyrir-r-koa">2.10. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03/">3. Myndræn framsetning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#ggplot">3.1. ggplot()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03/#algengustu-grof">3.1.1. Algengustu gröf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#punktarit">3.1.1.1. Punktarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#stoplarit">3.1.1.2. Stöplarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#stularit">3.1.1.3. Stuðlarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#kassarit">3.1.1.4. Kassarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#normaldreifingarrit">3.1.1.5. Normaldreifingarrit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03/#asar">3.1.2. Ásar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#nofn-asa">3.1.2.1. Nöfn ása</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#nofn-kvara">3.1.2.2. Nöfn kvarða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#hok-kvara">3.1.2.3. Hök kvarða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#mork-kvara">3.1.2.4. Mörk kvarða</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03/#litir-og-takn">3.1.3. Litir og tákn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03/#grofum-skipt-upp-i-reiti">3.1.4. Gröfum skipt upp í reiti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03/#skipt-um-bakgrunn">3.1.5. Skipt um bakgrunn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03/#myndir-vistaar">3.1.6. Myndir vistaðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03/#id1">3.1.6.1. Myndir vistaðar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#ggsave">3.2. ggsave()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03/#leiksvaei-fyrir-r-koa">3.2.1. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04/">4. Lýsandi tölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#talnabreytur">4.1. Talnabreytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04/#id1">4.1.1. Talnabreytur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#max">4.1.1.1. max()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#min">4.1.1.2. min()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04/#mija">4.1.2. Miðja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#mean">4.1.2.1. mean()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#median">4.1.2.2. median()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04/#breytileiki">4.1.3. Breytileiki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#var">4.1.3.1. var()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#sd">4.1.3.2. sd()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#quantile">4.1.3.3. quantile()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04/#samspil-tveggja-talnabreyta">4.1.4. Samspil tveggja talnabreyta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#cor">4.1.4.1. cor()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#flokkabreytur">4.2. Flokkabreytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04/#tini-og-hlutfall">4.2.1. Tíðni og hlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#table">4.2.1.1. table()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#prop-table">4.2.1.2. prop.table()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#arar-gagnlegar-skipanir">4.3. Aðrar gagnlegar skipanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04/#id2">4.3.1. Aðrar gagnlegar skipanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#round">4.3.1.1. round()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#summary">4.3.1.2. summary()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04/#tapply">4.3.1.3. tapply()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#leiksvaei-fyrir-r-koa">4.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05/">5. Líkindafræðileg undirstaða</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#likindareikningur">5.1. Líkindareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05/#id1">5.1.1. Líkindareikningur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#factorial">5.1.1.1. factorial()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#choose">5.1.1.2. choose()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#strjalar-likindadreifingar">5.2. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05/#id2">5.2.1. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#dbinom">5.2.1.1. dbinom()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#pbinom">5.2.1.2. pbinom()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#dpois">5.2.1.3. dpois()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#ppois">5.2.1.4. ppois()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#samfelldar-likindadreifingar">5.3. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05/#id3">5.3.1. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#pnorm">5.3.1.1. pnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#qnorm">5.3.1.2. qnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#rnorm">5.3.1.3. rnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#pt">5.3.1.4. pt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#qt">5.3.1.5. qt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#pchisq">5.3.1.6. pchisq()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#id4">5.3.1.7. qt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#pf">5.3.1.8. pf()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05/#qf">5.3.1.9. qf()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#leiksvaei-fyrir-r-koa">5.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06/">6. Ályktunartölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#slembiurtok-valin">6.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06/#id1">6.1.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06/#sample">6.1.1.1. sample()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar">6.2. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06/#id2">6.2.1. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06/#replicate">6.2.1.1. replicate()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#oryggisbil-reikna-me-endurvalsafer">6.3. Öryggisbil reiknað með endurvalsaðferð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#leiksvaei-fyrir-r-koa">6.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07/">7. Ályktanir um flokkabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#alyktanir-um-eitt-hlutfall">7.1. Ályktanir um eitt hlutfall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07/#id1">7.1.1. Ályktanir um eitt hlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07/#binom-test">7.1.1.1. binom.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#alyktanir-um-tvo-ea-fleiri-hlutfoll">7.2. Ályktanir um tvö eða fleiri hlutföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07/#id2">7.2.1. Ályktanir um tvö eða fleiri hlutföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07/#prop-test">7.2.1.1. prop.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#alyktanir-um-tengslatoflur">7.3. Ályktanir um tengslatöflur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07/#id3">7.3.1. Ályktanir um tengslatöflur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07/#chisq-test">7.3.1.1. chisq.test()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli07/#fisher-test">7.3.1.2. fisher.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07/#leiksvaei-fyrir-r-koa">7.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08/">8. Ályktanir um talnabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#alyktanir-um-dreifni">8.1. Ályktanir um dreifni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#dreifni-i-tveimur-yum">8.1.1. Dreifni í tveimur þýðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08/#var-test">8.1.1.1. var.test()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#dreifni-i-fleiri-yum">8.1.2. Dreifni í fleiri þýðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08/#bartlett-test">8.1.2.1. bartlett.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#alyktanir-um-mealtol">8.2. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#id1">8.2.1. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08/#t-test">8.2.1.1. t.test()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#alyktanir-um-eitt-mealtal">8.2.2. Ályktanir um eitt meðaltal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#alyktanir-um-mismun-tveggja-mealtala">8.2.3. Ályktanir um mismun tveggja meðaltala</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#alyktanir-um-mismun-fleiri-mealtala">8.2.4. Ályktanir um mismun fleiri meðaltala</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#alyktanir-um-mismun-mealtala-parara-maelinga">8.2.5. Ályktanir um mismun meðaltala paraðra mælinga</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#levene-prof-fyrir-dreifni-ast">8.3. Levene próf fyrir dreifni<span class="math">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#stikalaus-prof-ast">8.4. Stikalaus próf<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08/#id2">8.4.1. Stikalaus próf<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08/#wilcox-test">8.4.1.1. wilcox.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08/#leiksvaei-fyrir-r-koa">8.5. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09/">9. Einþátta fervikagreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#alyktanir-um-tvo-ea-fleiri-mealtol">9.1. Ályktanir um tvö eða fleiri meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09/#id1">9.1.1. Ályktanir um tvö eða fleiri meðaltöl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09/#aov">9.1.1.1. aov()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli09/#anova">9.1.1.2. anova()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#eftiraprofanir">9.2. Eftiráprófanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09/#id2">9.2.1. Eftiráprófanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09/#tukeyhsd">9.2.1.1. TukeyHSD()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#stikalaus-prof-ast">9.3. Stikalaus próf<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09/#id3">9.3.1. Stikalaus próf<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09/#kruskal-test">9.3.1.1. kruskal.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#fleiri-en-tveir-aettir-ast">9.4. Fleiri en tveir þættir<span class="math">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09/#leiksvaei-fyrir-r-koa">9.5. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10/">10. Línuleg aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#linulegt-likan-smia">10.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10/#id1">10.1.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10/#lm">10.1.1.1. lm()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#oryggisbil-fyrir-stula-likansins">10.2. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10/#id2">10.2.1. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10/#confint">10.2.1.1. confint()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#matgaei-likansins-konnu">10.3. Mátgæði líkansins könnuð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#spagildi-og-spabil">10.4. Spágildi og spábil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10/#id3">10.4.1. Spágildi og spábil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10/#predict">10.4.1.1. predict()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#prof-a-fylgnistuli">10.5. Próf á fylgnistuðli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#strjal-skyribreyta">10.6. Strjál skýribreyta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#fleiri-skyribreytur-ast">10.7. Fleiri skýribreytur<span class="math">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10/#leiksvaei-fyrir-r-koa">10.8. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11/">11. Tvíkosta aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli11/#glm">11.1. glm()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli11/#tvikosta-ahvarfsgreining-me-samfellda-skyribreytu">11.1.1. Tvíkosta aðhvarfsgreining með samfellda skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli11/#tvikosta-ahvarfsgreining-me-strjala-skyribreytu">11.1.2. Tvíkosta aðhvarfsgreining með strjála skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli11/#leiksvaei-fyrir-r-koa">11.1.3. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12/">12. Knitr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli12/#umbrot-a-texta">12.1. Umbrot á texta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli12/#markdown-html-ea-docx">12.1.1. Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12/#latex-pdf-ast">12.1.2. LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12/#jofnur">12.2. Jöfnur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12/#klumpastillingar">12.3. Klumpastillingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12/#leiksvaei-fyrir-r-koa">12.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="viaukar">
+<h1>Viðaukar<a class="headerlink" href="#viaukar" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ordalistar/">Orðalistar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar/#islenskur-enskur-oralisti">Íslenskur-Enskur orðalisti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar/#enskur-islenskur-oralisti">Enskur-íslenskur orðalisti</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="um_hofunda/">Um höfunda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda/#anna-helga-jonsdottir">Anna Helga Jónsdóttir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda/#sigrun-helga-lund">Sigrún Helga Lund</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda/#bjarki-or-elvarsson">Bjarki Þór Elvarsson</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="um_R_leiksvaedi/">Um R leiksvæði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi/#leiksvaein-eru-oflug">Leiksvæðin eru öflug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi/#datacamp">DataCamp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi/#vandamal-me-keyrslu">Vandamál með keyrslu</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kafli01/" class="btn btn-neutral float-right" title="1. Inngangur" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

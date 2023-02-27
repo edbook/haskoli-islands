@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Veldaraðalausnir á afleiðujöfnum &mdash; Stærðfræðigreining III 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="9. Línuleg afleiðujöfnuhneppi" href="../kafli09/" />
+    <link rel="prev" title="7. Línulegar afleiðujöfnur" href="../kafli07/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Stærðfræðigreining III
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tvinntölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fáguð föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Cauchy-setningin og Cauchy-formúlan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Leifareikningur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Þýð föll og fágaðar varpanir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Undirstöðuatriði um afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Línulegar afleiðujöfnur</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Veldaraðalausnir á afleiðujöfnum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#veldaraalausnir">8.1. Veldaraðalausnir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-8-1-1">8.1.1. Skilgreining (Sjá Skilgreiningu 8.1.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#umraea-sja-8-1">8.1.2. Umræða (Sjá §8.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-8-2-6">8.1.3. Skilgreining (Sjá Skilgreiningu 8.2.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-samanber-setning-8-2-8">8.1.4. Setning (Samanber Setning 8.2.8)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reikniafer-sja-8-2">8.1.5. Reikniaðferð (Sjá §8.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-8-3">8.1.6. Skilgreining (Sjá §8.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nokkrar-formulur-sja-8-3">8.1.7. Nokkrar formúlur (Sjá §8.3)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afer-frobeniusar">8.2. Aðferð Frobeniusar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#umraea">8.2.1. Umræða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-8-4-1">8.2.2. Skilgreining (Sjá Skilgreiningu 8.4.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-8-4-2">8.2.3. Skilgreining (Sjá Skilgreiningu 8.4.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-8-4-4">8.2.4. Skilgreining (Sjá Skilgreiningu 8.4.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-frobeniusar-sja-setningu-8-4-5">8.2.5. Setning Frobeniusar (Sjá Setningu 8.4.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-8-5-1">8.2.6. Skilgreining (Sjá Skilgreiningu 8.5.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-skilgreiningu-8-5-2">8.2.7. Skilgreining (Sjá Skilgreiningu 8.5.2)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Línuleg afleiðujöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Laplace-ummyndunin</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Stærðfræðigreining III</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>Veldaraðalausnir á afleiðujöfnum</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae302g/kafli08.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="veldaraalausnir-a-afleiujofnum">
+<h1><span class="section-number">8. </span>Veldaraðalausnir á afleiðujöfnum<a class="headerlink" href="#veldaraalausnir-a-afleiujofnum" title="Permalink to this heading"></a></h1>
+<p>Rose: <em>If you are an alien, how come you sound like you’re from the north?</em></p>
+<p>Doctor: <em>Lots of planets have a north!</em></p>
+<p>- Doctor Who</p>
+<section id="veldaraalausnir">
+<h2><span class="section-number">8.1. </span>Veldaraðalausnir<a class="headerlink" href="#veldaraalausnir" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-sja-skilgreiningu-8-1-1">
+<h3><span class="section-number">8.1.1. </span>Skilgreining (Sjá Skilgreiningu 8.1.1)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-8-1-1" title="Permalink to this heading"></a></h3>
+<p>Fall <span class="math notranslate nohighlight">\(f:X\to {\mathbb{C}}\)</span> skilgreint á opnu mengi <span class="math notranslate nohighlight">\(X\)</span> á raunásnum, er sagt vera raunfágað á <span class="math notranslate nohighlight">\(X\)</span> ef fyrir sérhvern punkt <span class="math notranslate nohighlight">\(a\in X\)</span> er til tala <span class="math notranslate nohighlight">\(\rho&gt;0\)</span> þannig að bilið <span class="math notranslate nohighlight">\(]a-\rho, a+\rho[\subseteq X\)</span> og til er veldaröð <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_n(x-a)^n\)</span> þannig að fyrir öll <span class="math notranslate nohighlight">\(x\in ]a-\rho, a+\rho[\)</span> er <span class="math notranslate nohighlight">\(f(x)=\sum_{n=0}^\infty c_n(x-a)^n\)</span>.</p>
+</section>
+<section id="umraea-sja-8-1">
+<h3><span class="section-number">8.1.2. </span>Umræða (Sjá §8.1)<a class="headerlink" href="#umraea-sja-8-1" title="Permalink to this heading"></a></h3>
+<p>Mörg hugtök og skilgreiningar fyrir raunfáguð föll eru eins og fyrir fáguð föll af tvinntölubreytu. Látum nú <span class="math notranslate nohighlight">\(f(x)\)</span> vera raunfágað fall skilgreint á opnu mengi <span class="math notranslate nohighlight">\(X\)</span> í <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(f(a)=0\)</span> og <span class="math notranslate nohighlight">\(f(x)=\sum_{n=0}^\infty c_n(x-a)^n\)</span>. Ef <span class="math notranslate nohighlight">\(n\)</span> er minnsta tala þannig að <span class="math notranslate nohighlight">\(c_n\neq 0\)</span> þá segjum við að <span class="math notranslate nohighlight">\(f(x)\)</span> hafi núllstöð af stigi <span class="math notranslate nohighlight">\(n\)</span> í <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>Segjum að punktur <span class="math notranslate nohighlight">\(a\)</span> sé einangraður sérstöðupunktur ef til er tala <span class="math notranslate nohighlight">\(\delta&gt;0\)</span> þannig að fallið <span class="math notranslate nohighlight">\(f(x)\)</span> er skilgreint á öllu bilinu <span class="math notranslate nohighlight">\(]a-\delta, a+\delta[\)</span> nema í punktinum <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>Einangraður sérstöðupunktur <span class="math notranslate nohighlight">\(a\)</span> er sagður afmáanlegur ef hægt er að gefa <span class="math notranslate nohighlight">\(f(a)\)</span> gildi þannig að útvíkkaða fallið verði raunfágað á <span class="math notranslate nohighlight">\(X\cup\{a\}\)</span>.</p>
+</section>
+<section id="skilgreining-sja-skilgreiningu-8-2-6">
+<h3><span class="section-number">8.1.3. </span>Skilgreining (Sjá Skilgreiningu 8.2.6)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-8-2-6" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(a_0(x), a_1(x), a_2(x)\)</span> vera föll sem eru raunfáguð á bili <span class="math notranslate nohighlight">\(I\)</span>. Segjum að punktur <span class="math notranslate nohighlight">\(a\in I\)</span> sé venjulegur punktur fyrir afleiðujöfnuna</p>
+<div class="math notranslate nohighlight">
+\[a_2(x)u''+a_1(x)u'+a_0(x)u=0,\]</div>
+<p>ef <span class="math notranslate nohighlight">\(a_2(a)\neq 0\)</span> eða ef <span class="math notranslate nohighlight">\(a_2(a)=0\)</span> þá hafi föllin <span class="math notranslate nohighlight">\(P(x)=a_1(x)/a_2(x)\)</span> og <span class="math notranslate nohighlight">\(Q(x)=a_0(x)/a_2(x)\)</span> afmáanlegan sérstöðupunkt í <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</section>
+<section id="setning-samanber-setning-8-2-8">
+<h3><span class="section-number">8.1.4. </span>Setning (Samanber Setning 8.2.8)<a class="headerlink" href="#setning-samanber-setning-8-2-8" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(a\)</span> sé venjulegur punktur afleiðujöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[a_2(x)u''+a_1(x)u'+a_0(x)u=0.\]</div>
+<p>Þá er sérhver lausn <span class="math notranslate nohighlight">\(u\)</span> á afleiðujöfnunni raunfáguð á bili umhverfis <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</section>
+<section id="reikniafer-sja-8-2">
+<h3><span class="section-number">8.1.5. </span>Reikniaðferð (Sjá §8.2)<a class="headerlink" href="#reikniafer-sja-8-2" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(a\)</span> sé venjulegur punktur afleiðujöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[a_2(x)u''+a_1(x)u'+a_0(x)u=0.\]</div>
+<hr class="docutils" />
+<p>Skref 0: Setjum <span class="math notranslate nohighlight">\(P(x)=a_1(x)/a_2(x)\)</span> og <span class="math notranslate nohighlight">\(Q(x)=a_0(x)/a_2(x)\)</span> og ritum afleiðujöfnuna sem</p>
+<div class="math notranslate nohighlight">
+\[u''+P(x)u'+Q(x)u=0.\]</div>
+<hr class="docutils" />
+<p>Skref 1: Finnum veldaraðir með miðju í <span class="math notranslate nohighlight">\(a\)</span> fyrir föllin <span class="math notranslate nohighlight">\(P(x)\)</span> og <span class="math notranslate nohighlight">\(Q(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[P(x)=\sum_{n=0}^\infty P_n(x-a)^n\qquad\mbox{ og }\qquad
+Q(x)=\sum_{n=0}^\infty Q_n(x-a)^n.\]</div>
+<hr class="docutils" />
+<p>Skref 2: Setjum inn í afleiðujöfnuna</p>
+<div class="math notranslate nohighlight">
+\[u(x)=\sum_{n=0}^\infty c_n(x-a)^n,\quad
+u'(x)=\sum_{n=0}^\infty (n+1)c_{n+1}(x-a)^n,\quad
+u''(x)=\sum_{n=0}^\infty (n+2)(n+1)c_{n+2}(x-a)^n.\]</div>
+<hr class="docutils" />
+<p>Skref 3: Tökum saman í eina veldaröð og fáum að</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=0}^\infty
+\bigg((n+2)(n+1)c_{n+2} +
+\sum_{k=0}^{n} \big((k+1)P_{n-k}c_{k+1}+
+Q_{n-k} c_k\big)\bigg)(x-a)^n=0.\]</div>
+<hr class="docutils" />
+<p>Skref 4: Allir stuðlar í þessari síðustu veldaröð eru 0. Stuðlana <span class="math notranslate nohighlight">\(c_0\)</span> og <span class="math notranslate nohighlight">\(c_1\)</span> má velja frjálst og svo fæst rakningarformúla fyrir <span class="math notranslate nohighlight">\(c_n\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[c_{n+2} = \dfrac{-1}{(n+2)(n+1)}
+\sum_{k=0}^n \big[(k+1)P_{n-k}c_{k+1}+ Q_{n-k}c_k\big].\]</div>
+<hr class="docutils" />
+<p>Skref 5: Þegar rakningarformúlan er fengin þá er oft hægt að átta sig á hvaða fall er lausn eða reikna má fyrstu stuðlana í veldaröðinni og fá þannig Taylor-margliðu fallsins <span class="math notranslate nohighlight">\(u\)</span> sem má nota til að reikna nálgunargildi. Athugið einnig að <span class="math notranslate nohighlight">\(c_0=u(a)\)</span> og <span class="math notranslate nohighlight">\(c_1=u'(a)\)</span> þannig að oft ákvarðast því <span class="math notranslate nohighlight">\(c_0\)</span> og <span class="math notranslate nohighlight">\(c_1\)</span> af upphafsgildum.</p>
+</section>
+<section id="skilgreining-sja-8-3">
+<h3><span class="section-number">8.1.6. </span>Skilgreining (Sjá §8.3)<a class="headerlink" href="#skilgreining-sja-8-3" title="Permalink to this heading"></a></h3>
+<p><span class="math notranslate nohighlight">\(\Gamma\)</span>-fallið er skilgreint með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[\Gamma(z)=\int_0^\infty e^{-t}t^{z-1}\, dt, \quad z\in {\mathbb{C}}, \quad \operatorname{Re\, }
+z&gt;0.\]</div>
+</section>
+<section id="nokkrar-formulur-sja-8-3">
+<h3><span class="section-number">8.1.7. </span>Nokkrar formúlur (Sjá §8.3)<a class="headerlink" href="#nokkrar-formulur-sja-8-3" title="Permalink to this heading"></a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Gamma(z+1)&amp;=z\Gamma(z)\\
+\Gamma(z+n)&amp;=z(z+1)\cdots(z+n-1)\Gamma(z)\\
+\Gamma(1)&amp;=1\\
+\Gamma(n)&amp;=(n-1)!\\
+\Gamma(1/2)&amp;=\sqrt{\pi}\\
+\Gamma(-1/2)&amp;=2\sqrt{\pi}\\
+\Gamma(n+1/2)&amp;=\frac{(2n-1)!}{2^{2n-1}(n-1)!}\sqrt{\pi}.\end{aligned}\end{split}\]</div>
+</section>
+</section>
+<section id="afer-frobeniusar">
+<h2><span class="section-number">8.2. </span>Aðferð Frobeniusar<a class="headerlink" href="#afer-frobeniusar" title="Permalink to this heading"></a></h2>
+<section id="umraea">
+<h3><span class="section-number">8.2.1. </span>Umræða<a class="headerlink" href="#umraea" title="Permalink to this heading"></a></h3>
+<p>Afleiðujafnan</p>
+<div class="math notranslate nohighlight">
+\[x^2u''+xu'+(x^2-\alpha^2)u=0\]</div>
+<p>kallast jafna Bessel. Besseljafnan og lausnir hennar, sem kallaðar eru Bessel-föll, koma upp í rafsegulfræði, varmafræði, skammtafræði, …</p>
+<p>Punkturinn <span class="math notranslate nohighlight">\(a=0\)</span> er ekki venjulegur punktur. Aðeins í undantekningartilfellum fæst lausn með aðferðinni úr síðasta fyrirlestri við að prófa veldaraðarlausn með miðju í <span class="math notranslate nohighlight">\(a=0\)</span> og í engu tilfelli fæst grunnur fyrir lausnarúmið. Samt er hægt að nota aðferð sem er áþekk því sem lýst var í síðasta fyrirlestri.</p>
+</section>
+<section id="skilgreining-sja-skilgreiningu-8-4-1">
+<h3><span class="section-number">8.2.2. </span>Skilgreining (Sjá Skilgreiningu 8.4.1)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-8-4-1" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera raunfágað fall á opnu mengi <span class="math notranslate nohighlight">\(X\)</span> í <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Við segjum að einangraður sérstöðupunktur <span class="math notranslate nohighlight">\(a\)</span> raunfágaða fallsins <span class="math notranslate nohighlight">\(f\)</span> sé skaut af stigi <span class="math notranslate nohighlight">\(m&gt;0\)</span>, ef til er tala <span class="math notranslate nohighlight">\(\varrho&gt;0\)</span> og raunfágað fall <span class="math notranslate nohighlight">\(g\)</span> skilgreint á bilinu <span class="math notranslate nohighlight">\(\{x\mid |x-a|&lt;\varrho\}\)</span>, þannig að <span class="math notranslate nohighlight">\(\{x\mid 0&lt;|x-a|&lt;{\varrho}\}\subseteq X\)</span>, <span class="math notranslate nohighlight">\(g(a)\neq 0\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[f(x)=\dfrac {g(x)}{(x-a)^m}\qquad \mbox{ef }0&lt;|x-a|&lt;\varrho.\]</div>
+</section>
+<section id="skilgreining-sja-skilgreiningu-8-4-2">
+<h3><span class="section-number">8.2.3. </span>Skilgreining (Sjá Skilgreiningu 8.4.2)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-8-4-2" title="Permalink to this heading"></a></h3>
+<p>Við segjum að <span class="math notranslate nohighlight">\(a\)</span> sé reglulegur sérstöðupunktur afleiðujöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[a_2(x)u''+a_1(x)u'+a_0(x)u=0\]</div>
+<p>ef <span class="math notranslate nohighlight">\(a\)</span> er sérstöðupunktur jöfnunnar, fallið <span class="math notranslate nohighlight">\(P=a_1(x)/a_2(x)\)</span> hefur annað hvort afmáanlegan sérstöðupunkt í <span class="math notranslate nohighlight">\(a\)</span> eða skaut af stigi <span class="math notranslate nohighlight">\(\leq 1\)</span> og <span class="math notranslate nohighlight">\(Q=a_0(x)/a_2(x)\)</span> hefur annað hvort afmáanlegan sérstöðupunkt í <span class="math notranslate nohighlight">\(a\)</span> eða skaut af stigi <span class="math notranslate nohighlight">\(\leq 2\)</span>.</p>
+</section>
+<section id="skilgreining-sja-skilgreiningu-8-4-4">
+<h3><span class="section-number">8.2.4. </span>Skilgreining (Sjá Skilgreiningu 8.4.4)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-8-4-4" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(a\)</span> sé reglulegur sérstöðupunktur afleiðujöfnu sem rituð er á forminu</p>
+<div class="math notranslate nohighlight">
+\[(x-a)^2u''+(x-a)p(x)u'+q(x)u=0.\label{3.4.7}\]</div>
+<p>Þá kallast margliðan</p>
+<div class="math notranslate nohighlight">
+\[\varphi(\lambda)=\lambda(\lambda-1)+p(a)\lambda+q(a)\]</div>
+<p>vísamargliða afleiðujöfnunnar í punktinum <span class="math notranslate nohighlight">\(a\)</span>, og jafnan <span class="math notranslate nohighlight">\(\varphi(\lambda)=0\)</span> kallast vísajafna afleiðujöfnunnar í punktinum <span class="math notranslate nohighlight">\(a\)</span>. Núllstöðvarnar kallast vísar jöfnunnar í punkti <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</section>
+<section id="setning-frobeniusar-sja-setningu-8-4-5">
+<h3><span class="section-number">8.2.5. </span>Setning Frobeniusar (Sjá Setningu 8.4.5)<a class="headerlink" href="#setning-frobeniusar-sja-setningu-8-4-5" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir því að <span class="math notranslate nohighlight">\(a\)</span> sé reglulegur sérstöðupunktur afleiðujöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[(x-a)^2u''+ (x-a)p(x)u'+q(x)u=0\]</div>
+<p>og gerum ráð fyrir að föllin <span class="math notranslate nohighlight">\(p\)</span> og <span class="math notranslate nohighlight">\(q\)</span> séu sett fram með veldaröðunum</p>
+<div class="math notranslate nohighlight">
+\[p(x)=\sum_{n=0}^\infty p_n(x-a)^n, \qquad\quad
+q(x)=\sum_{n=0}^\infty q_n(x-a)^n,\]</div>
+<p>og að þær séu samleitnar ef <span class="math notranslate nohighlight">\(|x-a|&lt;\varrho\)</span>. Látum <span class="math notranslate nohighlight">\(r_1\)</span> og <span class="math notranslate nohighlight">\(r_2\)</span> vera núllstöðvar vísajöfnunnar</p>
+<div class="math notranslate nohighlight">
+\[\varphi(\lambda)=\lambda(\lambda-1)+p(a)\lambda+q(a)=0\]</div>
+<p>og gerum ráð fyrir að <span class="math notranslate nohighlight">\(\operatorname{Re\, } r_1\geq \operatorname{Re\, } r_2\)</span>. Þá gildir:</p>
+<ol class="lowerroman simple">
+<li><p>Til er lausn <span class="math notranslate nohighlight">\(u_1\)</span> á jöfnunni sem gefin er með</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[u_1(x)=|x-a|^{r_1}\sum_{n=0}^\infty a_n(x-a)^n.\]</div>
+<p>Röðin er samleitin fyrir öll <span class="math notranslate nohighlight">\(x\)</span> sem uppfylla <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\varrho\)</span>. Valið á <span class="math notranslate nohighlight">\(a_0\)</span> er frjálst, en hinir stuðlar raðarinnar fást með rakningarformúlunni</p>
+<div class="math notranslate nohighlight">
+\[a_n=\dfrac{-1}{\varphi(n+r_1)}
+\sum_{k=0}^{n-1}((k+r_1)p_{n-k}+q_{n-k})a_k, \qquad n=1,2,3,\dots.\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Ef <span class="math notranslate nohighlight">\(r_1-r_2\neq 0,1,2,\dots\)</span>, þá er til önnur línulega óháð lausn <span class="math notranslate nohighlight">\(u_2\)</span> á jöfnunni sem gefin er með</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[u_2(x)=|x-a|^{r_2}\sum_{n=0}^\infty b_n(x-a)^n.\]</div>
+<p>Röðin er samleitin fyrir öll <span class="math notranslate nohighlight">\(x\)</span> sem uppfylla <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\varrho\)</span>. Valið á <span class="math notranslate nohighlight">\(b_0\)</span> er frjálst, en hinir stuðlar raðarinnar fást með rakningarformúlunni</p>
+<div class="math notranslate nohighlight">
+\[b_n=\dfrac{-1}{\varphi(n+r_2)}
+\sum_{k=0}^{n-1}((k+r_2)p_{n-k}+q_{n-k})b_k, \qquad n=1,2,3,\dots.\]</div>
+<ol class="lowerroman simple" start="3">
+<li><p>Ef <span class="math notranslate nohighlight">\(r_1-r_2=0\)</span>, þá er til önnur línulega óháð lausn <span class="math notranslate nohighlight">\(u_2\)</span> á jöfnunni sem gefin er með</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[u_2(x)=|x-a|^{r_1+1}\sum_{n=0}^\infty b_n(x-a)^n+
+u_1(x)\ln|x-a|.\]</div>
+<p>Röðin er samleitin fyrir öll <span class="math notranslate nohighlight">\(x\)</span> sem uppfylla <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\varrho\)</span> og stuðlar raðarinnar fást með innsetningu í jöfnuna.</p>
+<ol class="lowerroman simple" start="4">
+<li><p>Ef <span class="math notranslate nohighlight">\(r_1-r_2=N\)</span>, þar sem <span class="math notranslate nohighlight">\(N\)</span> er jákvæð heiltala, þá er til önnur línulega óháð lausn <span class="math notranslate nohighlight">\(u_2\)</span> á upphaflegu jöfnunni sem gefin er með</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[u_2(x)=|x-a|^{r_2}\sum_{n=0}^\infty b_n(x-a)^n+
+\gamma u_1(x)\ln|x-a|.\]</div>
+<p>Röðin er samleitin fyrir öll <span class="math notranslate nohighlight">\(x\)</span> sem uppfylla <span class="math notranslate nohighlight">\(0&lt;|x-a|&lt;\varrho\)</span>. Stuðlar raðarinnar og <span class="math notranslate nohighlight">\(\gamma\)</span> fást með innsetningu í jöfnuna.</p>
+</section>
+<section id="skilgreining-sja-skilgreiningu-8-5-1">
+<h3><span class="section-number">8.2.6. </span>Skilgreining (Sjá Skilgreiningu 8.5.1)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-8-5-1" title="Permalink to this heading"></a></h3>
+<p>Lausn á Bessel-jöfnunni <span class="math notranslate nohighlight">\(x^2u''+xu'+(x^2-\alpha^2)u=0\)</span>, sem gefin er með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[J_\alpha(x)=\left|\dfrac x2\right|^\alpha\sum_{k=0}^\infty
+\dfrac{(-1)^k}{k!\Gamma(\alpha+k+1)}\left( \dfrac x2\right)^{2k}\]</div>
+<p>er kölluð Bessel-fall af fyrstu gerð með vísi <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+</section>
+<section id="skilgreining-sja-skilgreiningu-8-5-2">
+<h3><span class="section-number">8.2.7. </span>Skilgreining (Sjá Skilgreiningu 8.5.2)<a class="headerlink" href="#skilgreining-sja-skilgreiningu-8-5-2" title="Permalink to this heading"></a></h3>
+<p>Fallið <span class="math notranslate nohighlight">\(Y_{\alpha}\)</span>, <span class="math notranslate nohighlight">\({\alpha}=1,2,3,\dots\)</span> sem skilgreint er með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+Y_{\alpha}(x)=\dfrac 2{\pi}\bigg[&amp;
+J_{\alpha}(x)\bigg(\ln \dfrac {|x|}2+{\gamma}\bigg)\\
+&amp;+x^{\alpha}\sum\limits_{k=0}^{\infty}
+\dfrac{(-1)^{k-1}\big(h_k+h_{k+\alpha}\big)}
+{2^{2k+\alpha+1}k!(k+{\alpha})!} x^{2k}\\
+&amp;-x^{-\alpha}\sum\limits_{k=0}^{\alpha-1}
+\dfrac{(\alpha-k-1)!}{2^{2k-\alpha+1}k!}x^{2k}\bigg],\end{aligned}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(h_k=1+1/2+1/3+\cdots+1/k\)</span> og <span class="math notranslate nohighlight">\({\gamma}\)</span> táknar fasta Eulers, nefnist Bessel-fall af annarri gerð með vísi <span class="math notranslate nohighlight">\({\alpha}\)</span>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli07/" class="btn btn-neutral float-left" title="7. Línulegar afleiðujöfnur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli09/" class="btn btn-neutral float-right" title="9. Línuleg afleiðujöfnuhneppi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

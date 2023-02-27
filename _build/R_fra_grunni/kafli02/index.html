@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Frá tilraun til gagna &mdash; R frá Grunni 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="../_static/katex.min.js"></script>
+        <script src="../_static/auto-render.min.js"></script>
+        <script src="../_static/katex_autorenderer.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="3. Myndræn framsetning" href="../kafli03/" />
+    <link rel="prev" title="1. Inngangur" href="../kafli01/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            R frá Grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Frá tilraun til gagna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#skraning-gagna">2.1. Skráning gagna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#innlestur-gagna">2.2. Innlestur gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.2.1. Innlestur gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#read-table">2.2.1.1. read.table()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c">2.2.1.2. c()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seq">2.2.1.3. seq()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rep">2.2.1.4. rep()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#stasetning-skraa-ast">2.2.2. Staðsetning skráa<span class="math">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#groft-yfirlit-gagna">2.3. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.3.1. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#view">2.3.1.1. View()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#names">2.3.1.2. names()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#head">2.3.1.3. head()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#str">2.3.1.4. str()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#length">2.3.1.5. length()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dim">2.3.1.6. dim()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vontun-maelinga">2.4. Vöntun mælinga</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.4.1. Vöntun mælinga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#is-na">2.4.1.1. is.na()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#na-omit">2.4.1.2. na.omit()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#akvein-gildi-valin-ur-gagnatoflu">2.5. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.5.1. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#slice">2.5.1.1. slice()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter">2.5.1.2. filter()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#which">2.5.1.3. which()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grep">2.5.1.4. grep()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#koun-breyta">2.6. Kóðun breyta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-flokkabreytur-skilgreindar">2.6.1. A: Flokkabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#factor">2.6.1.1. factor()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#levels">2.6.1.2. levels()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#b-talnabreytum-skipt-upp-i-bil">2.6.2. B: Talnabreytum skipt upp í bil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cut">2.6.2.1. cut()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#c-flokkar-sameinair">2.6.3. C: Flokkar sameinaðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d-dagsetningabreytur-skilgreindar">2.6.4. D: Dagsetningabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#as-date">2.6.4.1. as.Date()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#e-leita-eftir-textastrengjum">2.6.5. E: Leitað eftir textastrengjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#f-breytt-um-heiti-a-breytum">2.6.6. F: Breytt um heiti á breytum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rename">2.6.6.1. rename()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#g-vorpunum-beitt-a-talnabreytur">2.6.7. G: Vörpunum beitt á talnabreytur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#umroun-gagna">2.7. Umröðun gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.7.1. Umröðun gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sort">2.7.1.1. sort()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#arrange">2.7.1.2. arrange()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gather">2.7.1.3. gather()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spread">2.7.1.4. spread()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#merge">2.7.1.5. merge()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fleiri-skipanir-fyrir-koun-breyta-ast">2.8. Fleiri skipanir fyrir kóðun breyta<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">2.8.1. Fleiri skipanir fyrir kóðun breyta<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#paste">2.8.1.1. paste()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sprintf">2.8.1.2. sprintf()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#separate">2.8.1.3. separate()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#substr">2.8.1.4. substr()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fleiri-skipanir-fyrir-sameiningu-gagna-ast">2.9. Fleiri skipanir fyrir sameiningu gagna<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2.9.1. Fleiri skipanir fyrir sameiningu gagna<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cbind">2.9.1.1. cbind()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rbind">2.9.1.2. rbind()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">2.10. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Einþátta fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_R_leiksvaedi/">Um R leiksvæði</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">R frá Grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Frá tilraun til gagna</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli02.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fra-tilraun-til-gagna">
+<span id="c-tilraun"></span><h1><span class="section-number">2. </span>Frá tilraun til gagna<a class="headerlink" href="#fra-tilraun-til-gagna" title="Permalink to this heading"></a></h1>
+<p>Mörg verk þarf að vinna frá því að niðurstöðum rannsóknar hefur verið
+safnað þar til að hægt er að framkvæma tölfræðiúrvinnslu á þeim
+niðurstöðum. Í þessum kafla verður gengið í gegnum þau helstu skref sem
+þarf að stíga á þeirri leið.</p>
+<p>Við hefjum umfjöllunina á góðum ráðleggingum varðandi innslátt og
+skráningu gagnanna, sem er efni kafla <a class="reference internal" href="#s-skraning"><span class="std std-numref">2.1</span></a>. Í kafla
+<a class="reference internal" href="#s-innlestur"><span class="std std-numref">2.2</span></a> sýnum við hvernig gögnin eru lesin inn í R, með
+aðstoð skipunarinnar <code class="docutils literal notranslate"><span class="pre">read.table()</span></code>. Einnig sýnum við nokkrar
+handhægar skipanir til að búa til mælingar, þær eru <code class="docutils literal notranslate"><span class="pre">c()</span></code>, <code class="docutils literal notranslate"><span class="pre">rep()</span></code>
+og <code class="docutils literal notranslate"><span class="pre">seq()</span></code>.</p>
+<p>Eftir að gögn hafa verið lesið inn er mikilvægt að fá gróft yfirlit yfir
+gögnin til að tryggja að innlesturinn hafi gengið sem skildi. Til þess
+notum við skipanirnar <code class="docutils literal notranslate"><span class="pre">View()</span></code>, <code class="docutils literal notranslate"><span class="pre">names()</span></code>, <code class="docutils literal notranslate"><span class="pre">head()</span></code>, <code class="docutils literal notranslate"><span class="pre">str()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">length()</span></code> og <code class="docutils literal notranslate"><span class="pre">dim()</span></code> sem við sjáum í kafla <a class="reference internal" href="#s-innlestur"><span class="std std-numref">2.2</span></a>.</p>
+<p>Mikilvægt atriði í meðhöndlun gagna er meðhöndlun mælinga sem vantar í
+gagnasafnið. Það er umfjöllunarefni kafla <a class="reference internal" href="#s-vontun"><span class="std std-numref">2.4</span></a> þar sem við
+kynnumst skipununum <code class="docutils literal notranslate"><span class="pre">is.na()</span></code> og <code class="docutils literal notranslate"><span class="pre">na.omit()</span></code>. Í kafla
+<a class="reference internal" href="#s-gildivalin"><span class="std std-numref">2.5</span></a> sjáum við svo leiðir til að velja tilteknar línur úr
+gagnatöflunni. Til þess notum við skipanirnar <code class="docutils literal notranslate"><span class="pre">slice()</span></code>, <code class="docutils literal notranslate"><span class="pre">filter()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">which()</span></code> og <code class="docutils literal notranslate"><span class="pre">grep()</span></code>.</p>
+<p>Í kafla <a class="reference internal" href="#s-kodun"><span class="std std-numref">2.6</span></a>  sýnum við handhægar skipanir til að koma
+breytunum okkar á það form sem við viljum vinna með, þ.e.a.s. <em>kóða</em>
+þær. Mesta púðrið fer yfirleitt í að kóða flokkabreytur en einnig lýsum
+við því beita má vörpunum á talnabreytur og dagsetningar eru
+meðhöndlaðar. Þar koma við sögu skipanirnar <code class="docutils literal notranslate"><span class="pre">factor()</span></code>, <code class="docutils literal notranslate"><span class="pre">levels()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">cut()</span></code>, <code class="docutils literal notranslate"><span class="pre">as.Date()</span></code> og <code class="docutils literal notranslate"><span class="pre">rename()</span></code>.</p>
+<p>Síðast en ekki síst fjallar kafli <a class="reference internal" href="#s-umrodun"><span class="std std-numref">2.7</span></a> um handhægar leiðir
+til að umraða og umbreyta gagnatöflum. Skipunin <code class="docutils literal notranslate"><span class="pre">select()</span></code> hjálpar
+okkur að búa til minni gagnatöflur með færri breytum. Skipanirnar
+<code class="docutils literal notranslate"><span class="pre">sort()</span></code> og <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> gera okkur kleift að raða gildum eftir línum
+og dálkum á meðan skipanirnar <code class="docutils literal notranslate"><span class="pre">spread()</span></code> og <code class="docutils literal notranslate"><span class="pre">gather()</span></code> varpað úr
+löngu sniði í vítt og öfugt. Að lokum gerir skipunin <code class="docutils literal notranslate"><span class="pre">merge()</span></code> okkur
+kleift að sameina tvær eða fleiri gagnatöflur.</p>
+<section id="skraning-gagna">
+<span id="s-skraning"></span><h2><span class="section-number">2.1. </span>Skráning gagna<a class="headerlink" href="#skraning-gagna" title="Permalink to this heading"></a></h2>
+<p>Fyrsta ráðleggingin sem við viljum gefa varðandi skráningu gagna er að
+gæta þess að geyma ætíð frumeintak af mælingunum í annarri skrá áður en
+þið hefjist handa við nokkra úrvinnslu, þar á meðal að undirbúa lestur
+gagnanna inn í R. Bæði viljum við ekki eiga á hættu á að gera einhverjar
+óafturkræfar breytingar á mælingunum og eins gætum við viljað skrá hjá
+okkur ýmsar upplýsingar sem við notum ekki beint í tölfræðiúrvinnslunni
+en gætum viljað kanna síðar meir.</p>
+<p>Gögn eru oftar en ekki skráð í einhvers konar töflureikni, til dæmis
+Excel, Numbers, LibreOffice eða Google Sheets, og miðum við umfjöllun
+kaflans við það. Við gerum ráð fyrir að við mælum margar breytur en
+höfum eingöngu eina mælingu á hverri breytu fyrir hvert viðfangsefni.
+Séu fleiri en ein mæling framkvæmd á hverju viðfangsefni þarf að velja á
+hvaða <em>gagnasniði</em> gögnin eru. Við ræðum slíkt stuttlega í kafla
+<a class="reference internal" href="#s-umrodun"><span class="std std-numref">2.7</span></a>.</p>
+<p>Eftirfarandi gátlisti spannar það helsta sem þarf að hafa í huga við
+skráningu gagna í töflureikni:</p>
+<ol class="arabic">
+<li><p>Hefur hver breyta sinn dálk og hvert viðfangsefni sína línu?</p>
+<p>Gætið þess að allar mælingar á sama viðfangsefni séu í einni og sömu
+línunni og að allar mælingar á sömu breytu séu í einum og sama
+dálkinum.</p>
+</li>
+</ol>
+<p>2. Eru nokkrar óþarfa línur?</p>
+<blockquote>
+<div><p>Skráin á að halda gagnatöfluna eina og ekkert annað. Efsta línan á að
+geyma nöfnin á breytunum, þar fyrir neðan koma mælingarnar á
+viðfangsefnunum. Ekkert annað á að vera í skránni.</p>
+</div></blockquote>
+<p>3. Inniheldur skráin séríslenska stafi?</p>
+<blockquote>
+<div><p>Séríslenskir stafir, svo sem þ, ð og æ, geta oft valdið usla þegar
+gögn eru flutt á milli tölva. Því borgar sig að forðast alla
+séríslenska stafi, hvort sem heldur í breytuheitum eða þeim gildum
+sem mælingarnar taka. Ritið þannig breytuna <code class="docutils literal notranslate"><span class="pre">hæð</span></code> heldur sem
+breytuna <code class="docutils literal notranslate"><span class="pre">haed</span></code> svo dæmi sé nefnt. Ef þið skráið ekki gögnin sjálf
+heldur fáið í hendur gögn sem innihalda séríslenska stafi þá má þó
+prófa að notast við skrána með séríslensku stöfunum og skipta þeim
+ekki út fyrr en við höfum séð að þeir valdi vandræðum.</p>
+</div></blockquote>
+<p>4. Eru nokkur bil?</p>
+<blockquote>
+<div><p>Það getur að sama skapi valdið vandræðum þegar breytuheiti eða gildi
+mælinga eru skráð með tveimur eða fleiri orðum. Það er hægt að komast
+hjá því með því að annað hvort leika sér með hástafi og lágstafi eða
+nota <span class="math">\(\_\)</span> táknið. Þannig væri hægt að skrá breytuna
+<code class="docutils literal notranslate"><span class="pre">fyrsta</span> <span class="pre">koma</span></code> sem annað hvort sem <code class="docutils literal notranslate"><span class="pre">fyrstaKoma</span></code> eða
+<code class="docutils literal notranslate"><span class="pre">fyrsta\_koma</span></code> til dæmis.</p>
+</div></blockquote>
+<p>5. Eru sömu útkomurnar skráðar á sama hátt?</p>
+<blockquote>
+<div><p>Við þurfum alltaf að gæta þess að skilgreina nákvæmlega hvaða útkomur
+breyturnar okkar geta tekið og að skrá sömu útkomurnar á sama hátt.
+Að <code class="docutils literal notranslate"><span class="pre">ja</span></code> sé ekki stundum skráð sem <code class="docutils literal notranslate"><span class="pre">Ja</span></code> eða jafnvel <code class="docutils literal notranslate"><span class="pre">ju</span></code>.
+Stundum þvælast óþarfa auð tákn með í útkomuna sem valda vandræðum
+seinna meir. Oft getur borgað sig að kóða útkomurnar heldur með
+tölustöfum heldur en orðum.</p>
+</div></blockquote>
+<p>6. Hefur hver breyta sitt nafn?</p>
+<blockquote>
+<div><p>Pössum að engar tvær breytur hafi sama nafnið. Að það séu til dæmis
+ekki tveir dálkar sem bera heitið <code class="docutils literal notranslate"><span class="pre">numer</span></code>. Gætið þess að hafa
+breytuheiti lýsandi án þess að vera of löng.</p>
+</div></blockquote>
+<p>7. Er fullt samræmi í því hvernig tölur eru skráðar?</p>
+<blockquote>
+<div><p>Er „þrír komma fjórir“ ritað sem 3,4 eða 3.4 eða kannski beggja
+blands hér og þar í skjalinu?</p>
+</div></blockquote>
+<p>8. Eru nokkrir punktar sem gætu valið misskilningi?</p>
+<blockquote>
+<div><p>Notum eingöngu punkta til að aðgreina á milli heiltöluhluta og
+aukastafa en ekki til að gera þúsund og milljónir læsilegri. Á
+Íslandi er stærðin 3482 oft rituð sem 3.482 en fáum við eingöngu
+töluna 3.482 gefna er ekki ljóst hvort hún eigi við töluna „þrjú
+þúsund fjögur hundruð áttatíu og tveir“ eða „þrír komma fjórir átta
+tveir“.</p>
+</div></blockquote>
+<p>Þegar við höfum gengið úr skugga um ofangreind atriði er tímabært að
+vista gögnin á forminu .csv. Nær allir ritlar geta vistað skrár á þessu
+formi. Þá þurfum við oftast að fara í <code class="docutils literal notranslate"><span class="pre">File</span></code>, <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> og velja svo
+<code class="docutils literal notranslate"><span class="pre">comma</span> <span class="pre">seperated</span> <span class="pre">value</span></code>, <code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">csv</span></code> eða eitthvað álíka eftir því
+hvert forritið er. Þessa .csv skrá köllum við <em>gagnaskrá</em>.</p>
+<p>Oft koma einhverjir valmöguleikar upp með það hvernig breytur séu
+aðgreindar frá dálki til dálks. Við mælum með því að nota annað hvort
+<code class="docutils literal notranslate"><span class="pre">tab</span></code> eða semikommur en alls ekki kommur því þær gætu einnig verið
+notaðar til að aðgreina heiltöluhluta og tugabrot.</p>
+<p>Flest forrit á Íslandi nota kommur til að aðgreina heiltöluhluta og
+tölustafi en R aðgreinir með punkti. Séu heiltöluhlutar og tugabrot
+aðskilin með kommu í .csv skránni okkar þurfum við að fara aðra af
+tveimur leiðum:</p>
+<ol class="arabic simple">
+<li><p>Gefa R til kynna að kommur séu notaðar til að aðgreina milli
+heiltöluhluta og tugabrota. Það er stillingaratriði í aðferðinni
+<code class="docutils literal notranslate"><span class="pre">read.table()</span></code> sem við kynnumst hér að neðan.</p></li>
+<li><p>Opna .csv skrána í einföldum ritli eins og <code class="docutils literal notranslate"><span class="pre">Notepad</span></code> eða
+<code class="docutils literal notranslate"><span class="pre">TextEdit</span></code>. Fara svo yfir skjalið með <code class="docutils literal notranslate"><span class="pre">find</span></code> og <code class="docutils literal notranslate"><span class="pre">replace</span></code> og
+skipta öllum kommum út fyrir punkta. Gætið þess að vista skrána aftur
+á forminu .csv. Stundum er hægt að gera þetta beint í Excel eða Open
+Office.</p></li>
+</ol>
+<p>Fyrst um sinn er einfaldast og þægilegast að vista gagnaskrárnar í sömu
+möppu og við geymum skipanaskrárnar. R gerir að vísu enga kröfu um það,
+R getur náð í skrár hvaðan sem er af tölvunni (við þurfum bara að vísa á
+réttan stað), en það einfaldar ykkur úrvinnslu þegar verkefnin eru ekki
+mjög stór og gagnasöfnin sem við vinnum með eru ekki mörg. Séum við hins
+vegar að vinna stærri verkefni með nokkrum gagnasöfnum borgar sig að
+hafa sérstaka undirmöppu sem geymir einvörðungu gögnin.</p>
+<p>Nú fyrst er tímabært að lesa gögnin inn í R.</p>
+</section>
+<section id="innlestur-gagna">
+<span id="s-innlestur"></span><h2><span class="section-number">2.2. </span>Innlestur gagna<a class="headerlink" href="#innlestur-gagna" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">2.2.1. </span>Innlestur gagna<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<section id="read-table">
+<h4><span class="section-number">2.2.1.1. </span>read.table()<a class="headerlink" href="#read-table" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnaskrá</p>
+<p><strong>Úttak:</strong> gagnatafla</p>
+<p><strong>Helstu stillingar:</strong> header, sep, dec, na.strings, stringsAsFactors</p>
+</div>
+<hr class="docutils" />
+<p>Á síðu bókarinnar má finna gagnaskrána <code class="docutils literal notranslate"><span class="pre">pulsAll.csv</span></code>. Byrjið á því að
+vista hana í vinnumöppunni ykkar, þ.e.a.s. sömu möppu og þið geymið
+skipanaskrána ykkar. Þá má lesa þau inn í R með skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;pulsAll.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fyrst tilgreinum við nafnið á skránni: <code class="docutils literal notranslate"><span class="pre">pulsAll.csv</span></code>. Þar á eftir
+gefum við ýmis konar stillingar, aðgreindar með kommum.</p>
+<p>Þær stillingar sem við komum oft til með að nota eru:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">header=TRUE</span></code>: Að breytuheiti séu í efstu línu gagnaskráarinnar.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sep=”;”</span></code>: Dálkar/breytur eru aðgreindir með semikommu.</p>
+<p>Séu dálkar t.d. aðgreindir með <code class="docutils literal notranslate"><span class="pre">tab</span></code> skiptum við <code class="docutils literal notranslate"><span class="pre">sep=”;”</span></code> út
+fyrir <code class="docutils literal notranslate"><span class="pre">sep=”\t”</span></code>.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dec=”,”</span></code>: Ef tugabrot og heiltöluhlutar eru aðgreind með kommu í
+stað punkts þarf að nota þessa stillingu.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">na.strings</span></code>: Tilgreinir hvaða tákn á að líta á sem vantaðar
+mælingar (t.d. 999, NA osfrv).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stringsAsFActors</span></code>: Tilgreinir að strengjabreytur eigi ekki að
+vista sem flokkabreytur.</p></li>
+</ul>
+<p>Um leið og við gefum skipunina höfum við lesið inn gögnin okkar og
+vistað sem gagnatöflu undir heitinu <code class="docutils literal notranslate"><span class="pre">puls</span></code>. Við hefðum getað gefið
+töflunni hvaða heiti sem við viljum, hún hefði allt eins geta heitið
+<code class="docutils literal notranslate"><span class="pre">gogn</span></code>, <code class="docutils literal notranslate"><span class="pre">tilraun1</span></code> eða hvað annað sem okkur dettur í hug . Það eina
+sem ekki má er að láta nöfn byrja á tölustaf. Það væri því ekki í lagi
+að gefa töflunni heitið <code class="docutils literal notranslate"><span class="pre">1tilraun</span></code>.</p>
+<p>Ef við sláum</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span>
+</pre></div>
+</div>
+<p>inn í keyrslugluggann birtist svo öll taflan. Gætið ykkar að ef
+gagnataflan er mjög stór fyllir hún fljótt marga skjái svo þetta er ekki
+góð leið til að fá yfirlit yfir gögnin. Betra er að nota skipanirnar
+s.s. <code class="docutils literal notranslate"><span class="pre">head()</span></code> og <code class="docutils literal notranslate"><span class="pre">str()</span></code> sem við fjöllum um hér fyrir neðan.</p>
+<p>Þegar við höfum lesið gögn inn sem töflu getum við hæglega „dregið“
+eina og eina breytu út úr töflunni, skoðað nánar og jafnvel breytt.
+Viljum við t.d. ná í breytuna <code class="docutils literal notranslate"><span class="pre">haed</span></code> úr gagnatöflunni <code class="docutils literal notranslate"><span class="pre">puls</span></code> gerum
+við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span>
+</pre></div>
+</div>
+</section>
+<section id="c">
+<h4><span class="section-number">2.2.1.2. </span>c()<a class="headerlink" href="#c" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> gildi vigurs</p>
+<p><strong>Úttak:</strong> vigur</p>
+</div>
+<hr class="docutils" />
+<p>Þegar við vinnum með lítil gagnasöfn eða fáar mælingar getur oft verið
+hentugt að skrá þær beint inn í R, í stað þess að lesa gögnin úr .csv
+skrá. Til þess höfum við skipunina <code class="docutils literal notranslate"><span class="pre">c()</span></code>. Þannig býr skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">postnumer</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">170</span><span class="p">,</span><span class="m">107</span><span class="p">,</span><span class="m">110</span><span class="p">,</span><span class="w"> </span><span class="m">101</span><span class="p">,</span><span class="m">105</span><span class="p">,</span><span class="m">107</span><span class="p">,</span><span class="m">111</span><span class="p">,</span><span class="m">108</span><span class="p">,</span><span class="m">104</span><span class="p">,</span><span class="m">101</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>til vigurinn <code class="docutils literal notranslate"><span class="pre">postnumer</span></code> sem inniheldur 10 mælingar á póstnúmerum.
+Röðun póstnúmera í vigrinum er í þeirri röð sem þær eru slegnar:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">postnumer</span>
+<span class="c1">##  [1] 170 107 110 101 105 107 111 108 104 101</span>
+</pre></div>
+</div>
+</section>
+<section id="seq">
+<h4><span class="section-number">2.2.1.3. </span>seq()<a class="headerlink" href="#seq" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> upphafs- og endagildi</p>
+<p><strong>Úttak:</strong> vigur</p>
+<p><strong>Helstu stillingar:</strong> by</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">seq()</span></code> er sérlega handhæg til að búa til talnarunur.
+Algengast er að mata hana með tveimur heiltölum og þá skilar hún vigri
+með öllum heiltölum á því bili. Einnig má hafa styttra eða lengra bil á
+milli talnanna í vigrinum, með stillingunni <code class="docutils literal notranslate"><span class="pre">by</span></code> tilgreinum við hvert
+bilið á að vera á milli talnanna. Hér eru tvö dæmi:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">seq</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">)</span>
+<span class="c1">## [1] 3 4 5 6 7</span>
+<span class="nf">seq</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="m">0.5</span><span class="p">)</span>
+<span class="c1">## [1] 3.0 3.5 4.0 4.5 5.0 5.5 6.0 6.5 7.0</span>
+</pre></div>
+</div>
+<p>Einnig er hægt að búa til runur af heiltölum með einföldum hætti með
+tvípunkti:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3</span><span class="o">:</span><span class="m">7</span>
+<span class="c1">## [1] 3 4 5 6 7</span>
+</pre></div>
+</div>
+</section>
+<section id="rep">
+<h4><span class="section-number">2.2.1.4. </span>rep()<a class="headerlink" href="#rep" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> gildi sem á að endurtaka</p>
+<p><strong>Úttak:</strong> vigur</p>
+<p><strong>Helstu stillingar:</strong> each</p>
+</div>
+<hr class="docutils" />
+<p>Önnur þægileg skipun er <code class="docutils literal notranslate"><span class="pre">rep()</span></code>. Með henni getum við búið til vigra
+þar sem sömu gildin eru endurtekin með kerfisbundnum hætti. Skipunin er
+mötuð með gildi eða vigri sem á að endurtaka og hversu oft vigurinn skal
+endurtekinn. Skipunin hér að neðan endurtekur vigurinn <span class="math">\(1, 2, 3\)</span>
+fjórum sinnum.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">)</span>
+<span class="c1">##  [1] 1 2 3 1 2 3 1 2 3 1 2 3</span>
+</pre></div>
+</div>
+<p>Einnig er hægt að gefa stillinguna <code class="docutils literal notranslate"><span class="pre">each</span></code> og þá er hvert stak í
+upphaflega vigrinum endurtekið:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">rep</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="n">each</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+<span class="c1">##  [1] 1 1 1 1 2 2 2 2 3 3 3 3</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="stasetning-skraa-ast">
+<h3><span class="section-number">2.2.2. </span>Staðsetning skráa<span class="math">\(^\ast\)</span><a class="headerlink" href="#stasetning-skraa-ast" title="Permalink to this heading"></a></h3>
+<p>Ein af stillingunum í <code class="docutils literal notranslate"><span class="pre">read.table</span></code>, <code class="docutils literal notranslate"><span class="pre">file=</span></code>, segir til um
+staðsetningu skráarinnar sem lesin er inn. Ef skráin er staðsett í
+vinnumöppu sem skilgreind er í R-setunni þá er <code class="docutils literal notranslate"><span class="pre">read.table</span></code>
+einfaldlega mötuð með nafninu á skránni. Hins vegar ef skráin er
+staðsett annars staðar flækist málið lítið eitt.</p>
+<figure class="align-center">
+<img alt="Mynd" src="../_images/tikz1.svg" /></figure>
+<p>Viljum við t.d. lesa Gagnaskrá_1 inn í R gefum við skipunina:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Gagnaskrá_1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Til þess að lesa Gagnaskrá_3 þurfum við að bæta við nafninu á möppunni
+sem hún er í, þ.e.a.s. Gagnamappa_1:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Gagnamappa_1/Gagnaskrá_3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Til þess að lesa inn Gagnaskrá_2 er hægt bakka upp í yfirmöppuna með því
+að vísa í hana með „..“ og svo fara í Gagnamöppu_2:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;../Gagnamappa_2/Gagnaskrá_2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Skipunin að ofan vísar afstætt í Gagnaskrá_2. Einnig er hægt að víst
+algilt á skránna. Sé yfirmappann staðsett sem fyrsta mappa á
+stýrikerfisdisk má lesa skránna inn svona fyrir linux/MacOsX</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;/Yfirmappa/Gagnamappa_2/Gagnaskrá_2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>og fyrir Windows (að því gefnu að stýrikerfis sé á c drifi):</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;c:/Yfirmappa/Gagnamappa_2/Gagnaskrá_2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="groft-yfirlit-gagna">
+<span id="s-yfirlit"></span><h2><span class="section-number">2.3. </span>Gróft yfirlit gagna<a class="headerlink" href="#groft-yfirlit-gagna" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">2.3.1. </span>Gróft yfirlit gagna<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Eftir að gögnin hafa verið lesin inn er skynsamlegt að kanna að
+innlesturinn hafi gengið sem skyldi. Sé unnið í RStudio má smella á
+nafnið á gagnatöflunni í glugganum í efra hægra horninu en þá opnast
+gögnin á töfluformi. Til þess má einnig nota skipunina <code class="docutils literal notranslate"><span class="pre">View()</span></code>.</p>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">read.table()</span></code> skráir sérhverja breytu hjá sér ýmist sem
+flokkabreytu (<code class="docutils literal notranslate"><span class="pre">factor</span></code>) eða talnabreytu (<code class="docutils literal notranslate"><span class="pre">num</span></code> eða <code class="docutils literal notranslate"><span class="pre">int</span></code>). Breytur
+sem innihalda eingöngu tölur eru sjálfkrafa vistaðar sem talnabreytur.
+Ef þær innihalda bara heiltölur eru þær vistaðar sem <code class="docutils literal notranslate"><span class="pre">int</span></code> en ef þær
+innihalda tugabrot eru þær vistaðar sem <code class="docutils literal notranslate"><span class="pre">num</span></code>. Það skiptir engu máli í
+úrvinnslunni hvort þær eru vistaðar sem <code class="docutils literal notranslate"><span class="pre">int</span></code> eða <code class="docutils literal notranslate"><span class="pre">num</span></code>.</p>
+<p>Algengt er að notaðir séu talnakóðar fyrir gildi á flokkabreytum. Dæmi
+um þetta er að nota gildið 1 fyrir <code class="docutils literal notranslate"><span class="pre">kona</span></code> og 2 fyrir <code class="docutils literal notranslate"><span class="pre">karl</span></code> í
+breytunni <code class="docutils literal notranslate"><span class="pre">kyn</span></code>. Þar sem breytan inniheldur eingöngu tölur er <code class="docutils literal notranslate"><span class="pre">kyn</span></code>
+skilgreind sem talnabreyta eftir innlestur í R. Áður en úrvinnsla hefst
+þarf að breyta talnabreytunni í flokkabreytu (sjá kafla <a class="reference internal" href="#s-kodun"><span class="std std-numref">2.6</span></a> ).
+Það getur einnig gerst að talnabreytur séu ranglega vistaðar sem
+flokkabreytur og getur það t.d. gerst þegar einhverjar mælingar á
+breytunni innihalda bókstafi eða þegar ekki er rétt tilgreint hvernig
+tugabrot eru aðskilin. Þetta þarf allt að laga áður en úrvinnsla hefst.</p>
+<section id="view">
+<h4><span class="section-number">2.3.1.1. </span>View()<a class="headerlink" href="#view" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu</p>
+<p><strong>Úttak:</strong> gögnin birtast á töfluformi</p>
+</div>
+<hr class="docutils" />
+<p>R lítur sjálfkrafa á hvern dálk úr gagnaskrá sem mælingu á einni breytu.
+Skipunin <code class="docutils literal notranslate"><span class="pre">names()</span></code> skilar nöfnunum á öllum breytum sem eru geymdar í
+gagnatöflu.</p>
+</section>
+<section id="names">
+<h4><span class="section-number">2.3.1.2. </span>names()<a class="headerlink" href="#names" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu</p>
+<p><strong>Úttak:</strong> nöfn breytanna í gagnatöflunni skrifaðar út</p>
+</div>
+<hr class="docutils" />
+<p>Þannig gefur skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<span class="c1">##  [1] &quot;namskeid&quot;    &quot;kronukast&quot;   &quot;haed&quot;        &quot;thyngd&quot;      &quot;aldur&quot;</span>
+<span class="c1">##  [6] &quot;kyn&quot;         &quot;reykir&quot;      &quot;drekkur&quot;     &quot;likamsraekt&quot; &quot;fyrriPuls&quot;</span>
+<span class="c1">## [11] &quot;seinniPuls&quot;  &quot;inngrip&quot;     &quot;dagsetning&quot;</span>
+</pre></div>
+</div>
+<p>nöfnin á öllum þeim breytum sem tilheyra gagnatöflunni <code class="docutils literal notranslate"><span class="pre">puls</span></code>.</p>
+</section>
+<section id="head">
+<h4><span class="section-number">2.3.1.3. </span>head()<a class="headerlink" href="#head" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu</p>
+<p><strong>Úttak:</strong> fyrstu sex línur gagnatöflunnar skrifaðar út</p>
+<p><strong>Helstu stillingar:</strong> n</p>
+</div>
+<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">head()</span></code> skipunin sýnir okkur mælingar á fyrstu sex viðfangsefnunum.
+Þannig getum við fengið fljótt yfirlit yfir það hvaða breytur eru
+vistaðar í gagnatöflunni og hvernig þær eru skráðar. Í okkar tilviki
+væri útkoman:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<span class="c1">##   namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1  STAE209 landvaettir  161     60    23   1    nei     nei         3.5</span>
+<span class="c1">## 2   LAN203    thorskur  185    115    52   2   &lt;NA&gt;      ja         0.0</span>
+<span class="c1">## 3   LAN203 landvaettir  167     NA    22   1    nei      ja         2.0</span>
+<span class="c1">## 4  STAE209    thorskur  174     67    21   1    nei      ja         1.0</span>
+<span class="c1">## 5  STAE209    thorskur  163     57    20   1    nei      ja         5.0</span>
+<span class="c1">## 6  STAE209 landvaettir  175     59    20   1    nei      ja         5.0</span>
+<span class="c1">##   fyrriPuls seinniPuls  inngrip dagsetning</span>
+<span class="c1">## 1        83         84 sat_kyrr   7.1.2013</span>
+<span class="c1">## 2        80        103    hljop   7.1.2013</span>
+<span class="c1">## 3        43         52 sat_kyrr   7.1.2013</span>
+<span class="c1">## 4        76        105    hljop   7.1.2013</span>
+<span class="c1">## 5        71         68 sat_kyrr   7.1.2013</span>
+<span class="c1">## 6        65         65 sat_kyrr   7.1.2013</span>
+</pre></div>
+</div>
+</section>
+<section id="str">
+<h4><span class="section-number">2.3.1.4. </span>str()<a class="headerlink" href="#str" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu</p>
+<p><strong>Úttak:</strong> samantektir fyrir breyturnar</p>
+</div>
+<hr class="docutils" />
+<p>Önnur góð leið til að fá fljótt yfirlit yfir breytur gagnatöflunnar er
+að nota skipunina <code class="docutils literal notranslate"><span class="pre">str()</span></code>. Hún sýnir okkur á hvaða formi R skráir
+hvaða breytu og gefur einnig stutt yfirlit yfir það á hvaða bili
+mælingarnar liggja. Í okkar tilviki væri skipunin:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<span class="c1">## &#39;data.frame&#39;:    471 obs. of  13 variables:</span>
+<span class="c1">##  $ namskeid   : Factor w/ 2 levels &quot;LAN203&quot;,&quot;STAE209&quot;: 2 1 1 2 2 2 1 2 2 1 ...</span>
+<span class="c1">##  $ kronukast  : Factor w/ 2 levels &quot;landvaettir&quot;,..: 1 2 1 2 2 1 1 1 2 1 ...</span>
+<span class="c1">##  $ haed       : num  161 185 167 174 163 175 178 191 176 176 ...</span>
+<span class="c1">##  $ thyngd     : num  60 115 NA 67 57 59 70 94 68 82 ...</span>
+<span class="c1">##  $ aldur      : int  23 52 22 21 20 20 39 21 20 70 ...</span>
+<span class="c1">##  $ kyn        : int  1 2 1 1 1 1 1 2 1 2 ...</span>
+<span class="c1">##  $ reykir     : Factor w/ 2 levels &quot;ja&quot;,&quot;nei&quot;: 2 NA 2 2 2 2 NA 2 2 2 ...</span>
+<span class="c1">##  $ drekkur    : Factor w/ 2 levels &quot;ja&quot;,&quot;nei&quot;: 2 1 1 1 1 1 1 1 1 1 ...</span>
+<span class="c1">##  $ likamsraekt: num  3.5 0 2 1 5 5 3.5 0 10 14 ...</span>
+<span class="c1">##  $ fyrriPuls  : int  83 80 43 76 71 65 77 79 73 65 ...</span>
+<span class="c1">##  $ seinniPuls : int  84 103 52 105 68 65 75 83 90 78 ...</span>
+<span class="c1">##  $ inngrip    : Factor w/ 2 levels &quot;hljop&quot;,&quot;sat_kyrr&quot;: 2 1 2 1 2 2 2 2 1 1 ...</span>
+<span class="c1">##  $ dagsetning : Factor w/ 3 levels &quot;5.1.2015&quot;,&quot;6.1.2014&quot;,..: 3 3 3 3 3 3 3 3 ...</span>
+</pre></div>
+</div>
+<p>Við mælum eindregið með að nota ávalt <code class="docutils literal notranslate"><span class="pre">str()</span></code> skipunina til að kanna
+hvort allar breytur gagnatöflunnar séu á réttu formi eftir innlestur
+gagnanna.</p>
+</section>
+<section id="length">
+<h4><span class="section-number">2.3.1.5. </span>length()<a class="headerlink" href="#length" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á vigri</p>
+<p><strong>Úttak:</strong> lengd vigursins</p>
+<p><strong>Helstu stillingar:</strong></p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">length()</span></code> gefur okkur lengd þess vigurs (breytu) sem hún er
+mötuð með, þ.e.a.s. hún segir okkur hversu margar mælingar eru geymdar í
+tilteknum vigri. Í dæminu að ofan gefur skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">)</span>
+<span class="c1">## [1] 471</span>
+</pre></div>
+</div>
+<p>útkomuna <span class="math">\(471\)</span>. Þ.e.a.s. það eru <span class="math">\(471\)</span> mælingar á hæð
+geymdar í breytunni <code class="docutils literal notranslate"><span class="pre">haed</span></code> í gagnatöflunni <code class="docutils literal notranslate"><span class="pre">puls</span></code>.</p>
+</section>
+<section id="dim">
+<h4><span class="section-number">2.3.1.6. </span>dim()<a class="headerlink" href="#dim" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu/fylki</p>
+<p><strong>Úttak:</strong> vídd gagnatöflunnar/fylkisins</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">dim()</span></code> skilar fjölda lína og fjölda dálka í gagnatöflu,
+þ.e.a.s. hversu margar mælingar og breytur eru í töflunni.</p>
+</section>
+</section>
+</section>
+<section id="vontun-maelinga">
+<span id="s-vontun"></span><h2><span class="section-number">2.4. </span>Vöntun mælinga<a class="headerlink" href="#vontun-maelinga" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">2.4.1. </span>Vöntun mælinga<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Við vinnum afar oft með gagnatöflur þar sem það vantar mælingar á
+einhverjum breytum hjá sumum viðfangsefnum. R leysir úr því með því að
+gefa þeim mælingum gildið <code class="docutils literal notranslate"><span class="pre">NA</span></code> sem stendur einfaldlega fyrir „not
+available“, þ.e. mælinguna vantar. Í þessum undirkafla munum við kynnast
+skipununum <code class="docutils literal notranslate"><span class="pre">is.na()</span></code>, sem hjálpar okkur að finna mælingar sem vantar
+og <code class="docutils literal notranslate"><span class="pre">na.omit()</span></code> sem fjarlægir mælingar sem vantar.</p>
+<p>Margar þeirra R-skipana sem þið munuð kynnast seinna meir gefa villu ef
+vigurinn sem við mötum þær með inniheldur NA gildi. Þar sem
+stillingarnar eru ólíkar eftir því hverjar skipanirnar eru munum við
+tilgreina þær með umfjöllun hverrar og einnar skipunar en ekki hér í
+þessum kafla.</p>
+<section id="is-na">
+<h4><span class="section-number">2.4.1.1. </span>is.na()<a class="headerlink" href="#is-na" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> vigur eða fylki</p>
+<p><strong>Úttak:</strong> vigur eða fylki</p>
+</div>
+<hr class="docutils" />
+<p>Það er alltaf gott að kanna hvort það séu einhver NA gildi í breytunum
+okkar áður en við hefjum úrvinnslu og hversu mörg þau eru. Til þess er
+gott að nota skipunina <code class="docutils literal notranslate"><span class="pre">is.na()</span></code> en hún segir okkur hvort mæling sé NA
+eða ekki. Sjáið sem dæmi:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fjoldi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="kc">NA</span><span class="p">,</span><span class="m">1</span><span class="p">)</span>
+<span class="nf">is.na</span><span class="p">(</span><span class="n">fjoldi</span><span class="p">)</span>
+<span class="c1">## [1] FALSE FALSE FALSE  TRUE FALSE</span>
+</pre></div>
+</div>
+<p>Við mötuðum skipunina <code class="docutils literal notranslate"><span class="pre">is.na()</span></code> með vigri með fimm mælingum. Út kemur
+vigur með fimm mælingum, þar sem stendur <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> þar sem við höfum
+mælingu en <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> þar sem við höfum <code class="docutils literal notranslate"><span class="pre">NA</span></code> gildi, sem í þessu tilviki
+er í fjórða sæti vigursins.</p>
+<p>Það má líka mata gagnatöflu í <code class="docutils literal notranslate"><span class="pre">is.na()</span></code> og þá gefur skipunin töflu af
+sömu stærð sem inniheldur FALSE á hverjum þeim stað sem mæling er til
+staðar en TRUE þar sem NA gildi eru.</p>
+</section>
+<section id="na-omit">
+<h4><span class="section-number">2.4.1.2. </span>na.omit()<a class="headerlink" href="#na-omit" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> vigur eða fylki</p>
+<p><strong>Úttak:</strong> vigur eða fylki</p>
+</div>
+<hr class="docutils" />
+<p>Önnur skipun, náskyld <code class="docutils literal notranslate"><span class="pre">is.na()</span></code>, er <code class="docutils literal notranslate"><span class="pre">na.omit()</span></code>. Hún getur bæði
+verið mötuð á vigri og gagnatöflu. Sé hún mötuð á vigri skilar hún
+samsvarandi vigri þar sem búið er að fjarlægja NA gildi. Sé hún mötuð
+með gagnatöflu skilar hún nýrri gagnatöflu með viðfangsefnum sem enga
+mælingu vantar hjá.</p>
+<p>Skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls2</span><span class="w"> </span><span class="o">&lt;-</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>smíðar gagnatöfluna <code class="docutils literal notranslate"><span class="pre">puls2</span></code> sem inniheldur aðeins einstaklinga sem
+enga mælingu vantar hjá. Gætið ykkar að við viljum afar sjaldan eyða út
+öllum einstaklingum í gagnatöflu sem vantar <em>einhverja</em> mælingu hjá.
+Segjum sem sem dæmi að það vanti margar mælingar á breytunni <code class="docutils literal notranslate"><span class="pre">reykir</span></code>
+í gagnasafninu okkar en í raun höfum við mestan áhuga á að rannsaka
+breytuna <code class="docutils literal notranslate"><span class="pre">haed</span></code>. Með því að henda út öllum einstaklingum sem vantar
+mælingar á breytunni <code class="docutils literal notranslate"><span class="pre">reykir</span></code> erum við búin að henda út mælingum sem
+við gætum notað í rannsóknum okkar á hæð.</p>
+</section>
+</section>
+</section>
+<section id="akvein-gildi-valin-ur-gagnatoflu">
+<span id="s-gildivalin"></span><h2><span class="section-number">2.5. </span>Ákveðin gildi valin úr gagnatöflu<a class="headerlink" href="#akvein-gildi-valin-ur-gagnatoflu" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">2.5.1. </span>Ákveðin gildi valin úr gagnatöflu<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Mikilvægur hluti af meðhöndlun gagna er að velja út ákveðinn hluta
+gagnatöflunnar okkar. Eitt dæmi er ef við viljum skipta gögnunum okkar
+upp í <code class="docutils literal notranslate"><span class="pre">lög</span></code> (e. strata) og annað er þegar við viljum búa til nýjar
+breytur út frá þeim mælingum sem fyrir eru. Í þessum undirkafla munum
+við fjalla um margar öflugar leiðir til að velja mælingar úr vigrum eða
+gagnatöflum. Margar frábærar leiðir til slíks tilheyra pakkanum
+<code class="docutils literal notranslate"><span class="pre">dplyr()</span></code> og munum við kynnast nokkrum þeirra hér á eftir. Þá þarf að
+gæta að pakkinn sé aðgengilegur í vinnulotunni okkar áður en við notum
+aðferðirnar.</p>
+<p>Nær allar aðferðir til að velja hluta af gögnum krefjast notkun
+samanburðarvirkja. Sá einfaldasti þeirra er <code class="docutils literal notranslate"><span class="pre">==</span></code> en hann notum við til
+að kanna hvort vigur innihaldi eitthvað tiltekið gildi. Þá ritum við
+vigurinn fyrst, þá == og loks tiltekna gildið. Skipunin skilar
+jafnlöngum vigri og þeim sem við mötuðum í skipunina sem inniheldur
+eingöngu TRUE eða FALSE gildi. Sé ákveðna gildið í tilteknu sæti
+vigursins inniheldur útkomuvigurinn TRUE í tilsvarandi sæti, en FALSE
+annars. Í skipuninni hér að neðan skoðum við vigurinn <code class="docutils literal notranslate"><span class="pre">puls$kyn</span></code> sem
+inniheldur kyn viðmælanda.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span>
+<span class="c1">##   [1]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE</span>
+<span class="c1">##  [12] FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE</span>
+<span class="c1">##  [23] FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>Ekki gleyma því að setja gæsalappir utanum gildi breytunnar eigi það
+við. Þær þurfum við alltaf að setja þegar gildið sem við viljum kanna er
+kóðað með <em>orði</em> en ekki tölustaf.</p>
+<p>Berið útkomuvigurinn saman við vigurinn</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span>
+<span class="c1">##   [1] 1 2 1 1 1 1 1 2 1 2 2 2 1 2 1 1 2 2 1 2 1 1 2 1 1 1 2 1 2 1 2 1 2 2 1</span>
+<span class="c1">##  [36] 2 1 2 1 1 1 1 1 1 2 2 1 2 2 1 1 1 1 2 1 1 2 1 1 1 2 2 1 1 2 2 1 2 1 1</span>
+<span class="c1">##  [71] 1 1 1 1 2 2 1 1 1 1 1 1 2 2 2 2 1 2 1 1 1 2 1 1 1 1 1 1 1 2 1 1 2 2 1</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>þannig sjáið þið að útkomuvigurinn inniheldur <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> alls staðar þar
+sem <code class="docutils literal notranslate"><span class="pre">puls$kyn</span></code> hefur gildið <code class="docutils literal notranslate"><span class="pre">2</span></code> en <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> annars.
+Samanburðarvirkinn er mikið notaður við lagskiptingu gagna.</p>
+<p>Líkt og við notum <code class="docutils literal notranslate"><span class="pre">==</span></code> getum við einnig notað aðra samanburðarvirkja:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td><p>stærri en</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td><p>stærri eða jafnt og</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td><p>minni en</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td><p>minni eða jafnt og</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td><p>ekki jafnt og</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></p></td>
+<td><p>og</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">|</span></code></p></td>
+<td><p>eða</p></td>
+</tr>
+</tbody>
+</table>
+<p>Efstu virkjarnir fjórir skýra sig að mestu leyti sjálfir. Ef við viljum
+t.d. búa til nýja gagnatöflu <code class="docutils literal notranslate"><span class="pre">pulsS</span></code> sem inniheldur aðeins einstaklinga
+sem eru hærri en 170 cm á hæð gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pulsS</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">puls</span><span class="p">[</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">170</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Hvað varðar neðri virkjana tvo, þá er virkinn <span class="math">\(\&amp;\)</span> mataður með
+tveimur skilyrðum og skilar <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> eingöngu ef <em>bæði</em> skilyrðin eru
+uppfyllt. Virkinn <span class="math">\(|\)</span> er sömuleiðis mataður með tveimur skilyrðum
+en það nægir að eingöngu <em>annað</em> þeirra séu uppfyllt til að hann skili
+<code class="docutils literal notranslate"><span class="pre">TRUE</span></code>.</p>
+<p>Síðast en ekki síst er virkinn <code class="docutils literal notranslate"><span class="pre">%in%</span></code> mikið notaður. Hann má nota til
+að spyrja hvort gildi mælingar sé meðal einhverra annarra gildi. T.d.
+skilar skipunin:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt</span><span class="o">%in%</span><span class="nf">c</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">9</span><span class="p">)</span>
+<span class="c1">##   [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
+<span class="c1">##  [12] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE</span>
+<span class="c1">##  [23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>gildinu <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> ef breytan <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code> tekur eitthvert gildanna 7,
+8 eða 9, en <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> annars.</p>
+<section id="slice">
+<h4><span class="section-number">2.5.1.1. </span>slice()<a class="headerlink" href="#slice" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu og vigur</p>
+<p><strong>Úttak:</strong> gagnatafla</p>
+<p><strong>Pakki:</strong> dplyr</p>
+</div>
+<hr class="docutils" />
+<p>Fyrsta aðferðin sem við kynnumst úr <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> er <code class="docutils literal notranslate"><span class="pre">slice()</span></code>. Hana notum
+við til að velja ákveðnar línur út gagnatöflu. Ef við viljum t.d. geyma
+mælingar á fyrstu 10 viðfangsefnunum í <code class="docutils literal notranslate"><span class="pre">puls</span></code> gagnatöflunni í nýrri
+gagnatöflu getum við gert það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls.first</span><span class="o">&lt;-</span><span class="nf">slice</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="filter">
+<h4><span class="section-number">2.5.1.2. </span>filter()<a class="headerlink" href="#filter" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu og nöfn á breytum ásamt skilyrðum</p>
+<p><strong>Úttak:</strong> gagnatafla</p>
+<p><strong>Pakki:</strong> dplyr</p>
+</div>
+<hr class="docutils" />
+<p>Næsta skipun er <code class="docutils literal notranslate"><span class="pre">filter()</span></code>. Hana notum við til að velja aðeins hluta
+eða <em>lag</em> af gagnatöflunni okkar. Við mötum hana með nafninu á
+gagnatöflunni sem við viljum lagskipta ásamt skilyrðum sem það lag sem
+við ætlum að draga út þarf að uppfylla. Við getum t.d. búið til nýja
+gagnatöflu sem inniheldur aðeins þá sem reykja með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls.konur</span><span class="o">&lt;-</span><span class="nf">filter</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">reykir</span><span class="o">==</span><span class="s">&#39;ja&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ef við viljum skoða gögn þeirra sem reykja og fengu landvætti getum við
+gert það með (takið eftir að hér er ekki búin til ný gagnatafla):</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">reykir</span><span class="o">==</span><span class="s">&quot;ja&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">kronukast</span><span class="o">==</span><span class="s">&#39;landvaettir&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">##    namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1   STAE209 landvaettir  194     79    28   2     ja      ja         4.0</span>
+<span class="c1">## 2    LAN203 landvaettir  185     78    44   2     ja      ja         2.0</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>Einnig er, eins og við sáum hér á undan, hægt að nota hornklofa
+(<code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>) til að velja hluta af gagnatöflu. Þá mötum við hornklofann með
+tveimur vigrum af vísum sem við aðgreinum með kommu. Fyrst kemur
+vísavigurinn sem tilgreinir hvaða viðfangsefni (línur) við viljum velja
+síðan kemur vísavigurinn sem tilgreinir hvaða breytur (dálka) við viljum
+velja. Við númerum viðfangsefni frá efsta viðfangsefninu til þess neðsta
+(þ.e.a.s. efsta línan er númer eitt), en breyturnar frá vinstri til
+hægri (þ.e.a.s. breytan lengst til vinstri er númer eitt).</p>
+<p>Ef við viljum skoða hver mælingin á breytu 2 (<code class="docutils literal notranslate"><span class="pre">haed</span></code>) á viðfangsefni
+23 er í gagnatöflunni okkar <code class="docutils literal notranslate"><span class="pre">puls</span></code> gefum við skipunina:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="p">[</span><span class="m">23</span><span class="p">,</span><span class="m">2</span><span class="p">]</span>
+<span class="c1">## [1] thorskur</span>
+<span class="c1">## Levels: landvaettir thorskur</span>
+</pre></div>
+</div>
+<p>Ef við sleppum fyrri vísavigrinum fáum við mælingar á öllum
+viðfangsefnum fyrir breyturnar sem við tilgreinum í seinni vigrinum.
+Þannig gefur skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="p">[,</span><span class="m">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>mælingarnar á hæð fyrir öll viðfangsefnin. Ef við sleppum seinni
+vísavigrinum fáum við mælingar á öllum breytum fyrir viðfangsefnin sem
+við tilgreinum í fyrri vigrinum. Þannig gefur skipunin</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">23</span><span class="p">,</span><span class="m">49</span><span class="p">),]</span>
+<span class="c1">##    namskeid kronukast haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 23  STAE209  thorskur  173     72    33   2     ja      ja           2</span>
+<span class="c1">## 49  STAE209  thorskur  184     74    20   2    nei      ja          10</span>
+<span class="c1">##    fyrriPuls seinniPuls inngrip dagsetning</span>
+<span class="c1">## 23        68         79   hljop   7.1.2013</span>
+<span class="c1">## 49        62         75   hljop   7.1.2013</span>
+</pre></div>
+</div>
+<p>allar mælingar fyrir viðfangsefni númer 23 og 49.</p>
+<p>Að lokum getum við notað mínus til að skoða mælingar í gagnatöflu fyrir
+öll viðfangsefni <em>nema</em> einhver tiltekin, eða allar breytur <em>nema</em>
+einhverjar tilteknar.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="p">[</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">23</span><span class="p">,</span><span class="m">49</span><span class="p">),</span><span class="w"> </span><span class="m">-2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>gefur mælingar fyrir öll viðfangsefni <em>nema</em> númer 23 og 49 og allar
+breytur <em>nema</em> þá aðra.</p>
+</section>
+<section id="which">
+<h4><span class="section-number">2.5.1.3. </span>which()<a class="headerlink" href="#which" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> skilyrði</p>
+<p><strong>Úttak:</strong> vigur eða fylki með vísum í stök sem uppfylla skilyrðið/in</p>
+<p><strong>Helstu stillingar:</strong> arr.ind</p>
+</div>
+<hr class="docutils" />
+<p>Að lokum viljum við nefna tvær aðferðir sem fylgja grunnpakka R.
+<code class="docutils literal notranslate"><span class="pre">which()</span></code> aðferðin er einstaklega gagnleg og gefur hún okkur vísa á
+gildi í vigri, gagnatöflu eða fylki sem uppfylla ákveðin skilyrði. Við
+getum t.d. kannað hvaða einstaklingar eru hærri en 190 cm á hæð í puls
+gögnunum okkar:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">which</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="o">&gt;</span><span class="m">190</span><span class="p">)</span>
+<span class="c1">##  [1]   8  17  33  34  46  75  84 107 113 161 238 263 297 301 332 341 357</span>
+<span class="c1">## [18] 358 370 399 408 431 437</span>
+</pre></div>
+</div>
+<p>Ef við mötum <code class="docutils literal notranslate"><span class="pre">which()</span></code> með tvívíðum hlut (fylki) og notum <code class="docutils literal notranslate"><span class="pre">arr.ind</span></code>
+stillinguna skilar aðferðin númerinu á línunni og á dálkinum sem
+skilyrðunum er uppfyllt.</p>
+</section>
+<section id="grep">
+<span id="rf-grep"></span><h4><span class="section-number">2.5.1.4. </span>grep()<a class="headerlink" href="#grep" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á skilyrði og nafn á vigri</p>
+<p><strong>Úttak:</strong> gildi eða vísar fyrir gildi</p>
+<p><strong>Helstu stillingar:</strong> value</p>
+</div>
+<hr class="docutils" />
+<p>Seinni skipunin er <code class="docutils literal notranslate"><span class="pre">grep()</span></code>. Hún getur verið einstaklega handhæg ef
+við viljum sem dæmi búa til flokkabreytur út frá textastrengjum.
+Eftirfarandi skipun finnur til dæmis vísi allra þeirra dagsetninga sem
+innihalda textastrenginn <code class="docutils literal notranslate"><span class="pre">2013</span></code>.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">grep</span><span class="p">(</span><span class="m">2013</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">dagsetning</span><span class="p">)</span>
+<span class="c1">##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17</span>
+<span class="c1">##  [18]  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34</span>
+<span class="c1">##  [35]  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>Ef við gefum stillinguna <code class="docutils literal notranslate"><span class="pre">value=TRUE</span></code> fáum við mælingarnar sem pössuðu
+við leitarskilyrðið en ekki bara vísa þeirra:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">grep</span><span class="p">(</span><span class="m">2013</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">dagsetning</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="c1">##   [1] &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot;</span>
+<span class="c1">##   [7] &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot;</span>
+<span class="c1">##  [13] &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot; &quot;7.1.2013&quot;</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="koun-breyta">
+<span id="s-kodun"></span><h2><span class="section-number">2.6. </span>Kóðun breyta<a class="headerlink" href="#koun-breyta" title="Permalink to this heading"></a></h2>
+<p>Yfirleitt þarf að vinna talsvert með breyturnar í gagnatöflunni áður en
+tölfræðileg úrvinnsla getur hafist. Bæði þarf oft að búa til nýjar,
+afleiddar breytur, en einnig að gæta þess að breytur séu vistaðar á
+réttu sniði og jafnvel að beita vörpunum af talnabreytum. Slíkt köllum
+við einu orði að <em>kóða</em> breytur. Algengustu kóðanirnar sem við
+framkvæmum eru að:</p>
+<ol class="arabic simple">
+<li><p>Kóða breytur sem voru skráðar sem tölur sem flokkabreytur og
+skilgreina gildi flokkanna með skipununum <code class="docutils literal notranslate"><span class="pre">factor()</span></code> og
+<code class="docutils literal notranslate"><span class="pre">levels()</span></code>.</p></li>
+<li><p>Skipta talnabreytum upp í bil og búa til flokkabreytur út frá þeim
+með skipuninni <code class="docutils literal notranslate"><span class="pre">cut()</span></code>.</p></li>
+<li><p>Sameina tvo eða fleiri flokka í flokkabreytu.</p></li>
+<li><p>Kóða strengi eða flokkabreytur sem dagsetningar með <code class="docutils literal notranslate"><span class="pre">as.Date()</span></code>.</p></li>
+<li><p>Búa til breytu með því að leita eftir textabútum í strengjum með
+<code class="docutils literal notranslate"><span class="pre">grep()</span></code>.</p></li>
+<li><p>Gefa breytum þægilegri heiti með skipuninni <code class="docutils literal notranslate"><span class="pre">rename()</span></code>.</p></li>
+<li><p>Beita vörpunum á talnabreytur.</p></li>
+</ol>
+<p>Við förum nánar í þessi atriði hér fyrir neðan.</p>
+<section id="a-flokkabreytur-skilgreindar">
+<h3><span class="section-number">2.6.1. </span>A: Flokkabreytur skilgreindar<a class="headerlink" href="#a-flokkabreytur-skilgreindar" title="Permalink to this heading"></a></h3>
+<section id="factor">
+<h4><span class="section-number">2.6.1.1. </span>factor()<a class="headerlink" href="#factor" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn talnabreytu</p>
+<p><strong>Úttak:</strong> flokkabreyta</p>
+<p><strong>Helstu stillingar:</strong> levels, labels, ordered</p>
+</div>
+<hr class="docutils" />
+<p>Flokkabreytur eru oft kóðaðar með tölum og þá mun R vista þær sem
+talnabreytur þegar gögnin eru lesin inn. Slíkt á t.d. við breytuna
+<code class="docutils literal notranslate"><span class="pre">kyn</span></code> í gagnatöflunni <code class="docutils literal notranslate"><span class="pre">puls</span></code>. Við notum skipunina <code class="docutils literal notranslate"><span class="pre">factor()</span></code> til
+að gefa R til kynna að breyta sé flokkabreyta. Ef við viljum leiðrétta
+hvernig breytan <code class="docutils literal notranslate"><span class="pre">kyn</span></code> er vistuð í gagnatöflunni sjálfri notum við
+skipunina:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Takið eftir því að hér að ofan yfirskrifum við gömlu talnabreytuna
+<code class="docutils literal notranslate"><span class="pre">kyn</span></code> með nýju flokkabreytunni (þær bera sama nafn). Í þessu tilviki
+er það einmitt það sem við viljum gera. Það gæti þó komið fyrir að við
+viljum halda í gömlu talnabreytuna en þá þurfum við að búa til nýja
+breytu í stað þess að skrifa yfir þá gömlu. Til að gera það þurfum við
+að gæta að nota annað nafn en á upphaflegu talnabreytunni. Með
+eftirfarandi skipun búum við til nýja breytu <code class="docutils literal notranslate"><span class="pre">kynf</span></code> í gagnatöflunni
+<code class="docutils literal notranslate"><span class="pre">puls</span></code>.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">kynf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hefðum við aðeins keyrt seinni <code class="docutils literal notranslate"><span class="pre">factor()</span></code> skipunina ættum við til
+talnabreytuna <code class="docutils literal notranslate"><span class="pre">kyn</span></code> í gagnatöflunni ásamt flokkabreytunni <code class="docutils literal notranslate"><span class="pre">kynf</span></code>.</p>
+<p>R meðhöndlar flokkabreytur á annan hátt en talnabreytur, réttilega. Því
+er mikilvægt að breytur séu ætíð rétt skráðar svo að til að mynda gröf
+af þeim breytum séu rétt teiknuð og margt fleira.</p>
+</section>
+<section id="levels">
+<h4><span class="section-number">2.6.1.2. </span>levels()<a class="headerlink" href="#levels" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á flokkabreytu</p>
+<p><strong>Úttak:</strong> nöfn á flokkum flokkabreytunnar</p>
+</div>
+<hr class="docutils" />
+<p>Hægt er að nota <code class="docutils literal notranslate"><span class="pre">levels()</span></code> skipunina til að endurskýra nöfn á flokkum
+í flokkabreytu. Viljum við endurskýra nöfnin á flokkunum í breytunni
+<code class="docutils literal notranslate"><span class="pre">kyn</span></code> er ágætt að byrja á að keyra skipunina</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">levels</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">)</span>
+<span class="c1">## [1] &quot;1&quot; &quot;2&quot;</span>
+</pre></div>
+</div>
+<p>því hún skilar okkur núverandi nöfnum. Viljum við breyta nöfnunum á
+flokkunum í <code class="docutils literal notranslate"><span class="pre">kvk</span></code> og <code class="docutils literal notranslate"><span class="pre">kk</span></code> gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">levels</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;kvk&quot;</span><span class="p">,</span><span class="s">&quot;kk&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hér þarf að passa að röðunin sé rétt miðað við gömlu heitin, annars
+breytum við öllum konum í kk og körlum í kvk.</p>
+</section>
+</section>
+<section id="b-talnabreytum-skipt-upp-i-bil">
+<h3><span class="section-number">2.6.2. </span>B: Talnabreytum skipt upp í bil<a class="headerlink" href="#b-talnabreytum-skipt-upp-i-bil" title="Permalink to this heading"></a></h3>
+<section id="cut">
+<h4><span class="section-number">2.6.2.1. </span>cut()<a class="headerlink" href="#cut" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> talnabreyta</p>
+<p><strong>Úttak:</strong> flokkabreyta</p>
+<p><strong>Helstu stillingar:</strong> breaks, include.lowest, right</p>
+</div>
+<hr class="docutils" />
+<p>Stundum viljum við skipta gildum talnabreytu upp í flokka. <code class="docutils literal notranslate"><span class="pre">cut()</span></code>
+aðferðin tekur inn talnabreytu, skiptir gildum hennar upp í flokka sem
+notandinn skilgreinir og skilar svo flokkabreytu. Við mötum aðferðina
+með mörkunum á flokkunum en það má gera á nokkra vegu með hjálp
+<code class="docutils literal notranslate"><span class="pre">include.lowest</span></code> og <code class="docutils literal notranslate"><span class="pre">right</span></code> stillingunum. Skoðið <code class="docutils literal notranslate"><span class="pre">help(cut)</span></code> til
+að kanna nánar hvernig aðferðin virkar.</p>
+<p>Búum nú til flokkabreytu úr talna breytunni <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code>. Við ætlum
+að skipta viðfangsefnunum upp í þrjá flokka, þá sem stunda litla
+líkamsrækt (0-1 klst. á viku), miðlungs (2-4 klst. á viku) og þá sem
+stunda mikla líkamsrækt (<span class="math">\(&gt;\)</span> 5 klst. á viku). Gætið þess að skýra
+nýju breytuna eitthvað annað en <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code> svo við yfirskrifum ekki
+talnabreytuna heldur búum þess í stað til nýja breytu. Við mötum
+aðferðina með nafninu á talnabreytunni <code class="docutils literal notranslate"><span class="pre">likamsraekt</span></code> og mörkunum á
+flokkunum. Ætlum við að tilgreina vinstri mörkin á flokkunum okkar
+(lægri mörkin) notum við <code class="docutils literal notranslate"><span class="pre">right=F</span></code> stillinguna. Við mötum því
+aðferðina með 0,2,5 (neðri mörkin á flokkunum okkar) en þurfum svo að
+gefa efra mark á síðasta flokknum. Þetta þarf að vera gildi sem er
+a.m.k. einu gildi hærra en hæsta gildið sem talnabreytan tekur. Hér
+notum við gildið 100 (fallegra væri að nota
+<code class="docutils literal notranslate"><span class="pre">max(puls$likamsraekt)+1</span></code>):</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="o">&lt;-</span><span class="nf">cut</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt</span><span class="p">,</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">100</span><span class="p">),</span><span class="n">right</span><span class="o">=</span><span class="bp">F</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hér sjáum við hversu margir verða í hverjum flokki:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">)</span>
+<span class="c1">##</span>
+<span class="c1">##   [0,2)   [2,5) [5,100)</span>
+<span class="c1">##      85     191     190</span>
+</pre></div>
+</div>
+<p>Við getum svo notað <code class="docutils literal notranslate"><span class="pre">levels()</span></code> skipunina til að endurskýra flokkana:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">levels</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">)</span><span class="o">&lt;-</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Lítil&quot;</span><span class="p">,</span><span class="s">&quot;Miðlungs&quot;</span><span class="p">,</span><span class="s">&quot;Mikil&quot;</span><span class="p">)</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">)</span>
+<span class="c1">##</span>
+<span class="c1">##    Lítil Miðlungs    Mikil</span>
+<span class="c1">##       85      191      190</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="c-flokkar-sameinair">
+<h3><span class="section-number">2.6.3. </span>C: Flokkar sameinaðir<a class="headerlink" href="#c-flokkar-sameinair" title="Permalink to this heading"></a></h3>
+<p>Afar oft viljum við sameina tvo eða fleiri flokka flokkabreytu. Í R
+framkvæmum við það með því að gefa tveimur eða fleiri flokkum sama
+heitið með skipuninni <code class="docutils literal notranslate"><span class="pre">levels()</span></code>. Segjum sem svo að við viljum
+sérstaklega kanna mun á þeim nemendum sem stunda mikla líkamsrækt í
+samanburði við alla aðra nemendur. Þá væri handhægt að hafa nýja breytu
+<code class="docutils literal notranslate"><span class="pre">likamsraekt2</span></code> sem tekur bara tvö gildi: <code class="docutils literal notranslate"><span class="pre">ekkiMikil</span></code> og <code class="docutils literal notranslate"><span class="pre">Mikil</span></code>.</p>
+<p>Þegar við búum til breytuna ætlum við að sameina flokkana <code class="docutils literal notranslate"><span class="pre">Lítil</span></code> og
+<code class="docutils literal notranslate"><span class="pre">Miðlungs</span></code> undir nafninu <code class="docutils literal notranslate"><span class="pre">ekkiMikil</span></code>. Búum fyrst til afrit af
+breytunni og sjáum í hvaða röð flokkarnir eru taldir upp:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span>
+<span class="nf">levels</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt2</span><span class="p">)</span>
+<span class="c1">## [1] &quot;Lítil&quot;    &quot;Miðlungs&quot; &quot;Mikil&quot;</span>
+</pre></div>
+</div>
+<p>Flokkarnir sem við ætlum að sameina eru fyrstu tveir flokkarnir sem eru
+taldir upp. Því skrifum við <code class="docutils literal notranslate"><span class="pre">ekkiMikil</span></code> í fyrstu tvö sætin en
+<code class="docutils literal notranslate"><span class="pre">Mikil</span></code> á sama stað og hún stóð áður.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">levels</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;ekkiMikil&#39;</span><span class="p">,</span><span class="s">&#39;ekkiMikil&#39;</span><span class="p">,</span><span class="s">&#39;Mikil&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nýja sameinaða breytan hefur eingöngu tvo flokka:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraekt2</span><span class="p">)</span>
+<span class="c1">##  Factor w/ 2 levels &quot;ekkiMikil&quot;,&quot;Mikil&quot;: 1 1 1 1 2 2 1 1 2 2 ...</span>
+</pre></div>
+</div>
+</section>
+<section id="d-dagsetningabreytur-skilgreindar">
+<h3><span class="section-number">2.6.4. </span>D: Dagsetningabreytur skilgreindar<a class="headerlink" href="#d-dagsetningabreytur-skilgreindar" title="Permalink to this heading"></a></h3>
+<section id="as-date">
+<h4><span class="section-number">2.6.4.1. </span>as.Date()<a class="headerlink" href="#as-date" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn bókstafabreytu</p>
+<p><strong>Úttak:</strong> dagsetningabreyta</p>
+<p><strong>Helstu stillingar:</strong> format</p>
+</div>
+<hr class="docutils" />
+<p>Það er mjög algengt að einhverjar breytanna okkar geymi dagsetningar.
+Yfirleitt verða þær sjálfkrafa lesnar inn sem flokkabreytur en við getum
+sjaldnast unnið með þær á því formi. Þess í stað vistum við þær sem
+dagsetningar með skipuninni <code class="docutils literal notranslate"><span class="pre">as.Date()</span></code>. Með stillingunni <code class="docutils literal notranslate"><span class="pre">format</span></code>
+tilgreinum við hvernig dagsetningarnar eru skráðar. Kemur ártalið fyrst,
+svo mánuðurinn og svo dagurinn eða jafnvel öfugt? Eru dagar og mánuðir
+aðgreindir með punkti eða bandstriki? Allt það má tilgreina með
+auðveldum hætti og má sjá öll möguleg snið með því að skoða:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">help</span><span class="p">(</span><span class="n">strptime</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Í okkar tilviki kemur fyrst dagur, svo mánuður og þá fjögurra bókstafa
+ár, allt aðskilið með punkti. Því gefum við stillinguna
+<code class="docutils literal notranslate"><span class="pre">format=’%d.%m.%Y’</span></code>. Einnig vistaðist dagsetningin sem flokkabreyta
+við innlestur (þar sem hún inniheldur ekki bara tölur, heldur líka
+punkta). Því þarf að mata <code class="docutils literal notranslate"><span class="pre">as.Date()</span></code> með
+<code class="docutils literal notranslate"><span class="pre">as.character(puls$dagsetning)</span></code>, skipun sem breytir flokkabreytu í
+orðabreytu.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">dagsetning</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.Date</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">dagsetning</span><span class="p">),</span><span class="w"> </span><span class="n">format</span><span class="o">=</span><span class="s">&#39;%d.%m.%Y&#39;</span><span class="w"> </span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nú sjáið þið að dagsetningin er komin á rétt form:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<span class="c1">## &#39;data.frame&#39;:    471 obs. of  15 variables:</span>
+<span class="c1">##  $ namskeid    : Factor w/ 2 levels &quot;LAN203&quot;,&quot;STAE209&quot;: 2 1 1 2 2 2 1 2 2 1 ...</span>
+<span class="c1">##  $ kronukast   : Factor w/ 2 levels &quot;landvaettir&quot;,..: 1 2 1 2 2 1 1 1 2 1 ...</span>
+<span class="c1">##  $ haed        : num  161 185 167 174 163 175 178 191 176 176 ...</span>
+<span class="c1">##  $ thyngd      : num  60 115 NA 67 57 59 70 94 68 82 ...</span>
+<span class="c1">##  $ aldur       : int  23 52 22 21 20 20 39 21 20 70 ...</span>
+<span class="c1">##  $ kyn         : Factor w/ 2 levels &quot;kvk&quot;,&quot;kk&quot;: 1 2 1 1 1 1 1 2 1 2 ...</span>
+<span class="c1">##  $ reykir      : Factor w/ 2 levels &quot;ja&quot;,&quot;nei&quot;: 2 NA 2 2 2 2 NA 2 2 2 ...</span>
+<span class="c1">##  $ drekkur     : Factor w/ 2 levels &quot;ja&quot;,&quot;nei&quot;: 2 1 1 1 1 1 1 1 1 1 ...</span>
+<span class="c1">##  $ likamsraekt : num  3.5 0 2 1 5 5 3.5 0 10 14 ...</span>
+<span class="c1">##  $ fyrriPuls   : int  83 80 43 76 71 65 77 79 73 65 ...</span>
+<span class="c1">##  $ seinniPuls  : int  84 103 52 105 68 65 75 83 90 78 ...</span>
+<span class="c1">##  $ inngrip     : Factor w/ 2 levels &quot;hljop&quot;,&quot;sat_kyrr&quot;: 2 1 2 1 2 2 2 2 1 1 ...</span>
+<span class="c1">##  $ dagsetning  : Date, format: &quot;2013-01-07&quot; &quot;2013-01-07&quot; ...</span>
+<span class="c1">##  $ likamsraektf: Factor w/ 3 levels &quot;Lítil&quot;,&quot;Miðlungs&quot;,..: 2 1 2 1 3 3 2 1 3 ...</span>
+<span class="c1">##  $ likamsraekt2: Factor w/ 2 levels &quot;ekkiMikil&quot;,&quot;Mikil&quot;: 1 1 1 1 2 2 1 1 2 2 ...</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="e-leita-eftir-textastrengjum">
+<h3><span class="section-number">2.6.5. </span>E: Leitað eftir textastrengjum<a class="headerlink" href="#e-leita-eftir-textastrengjum" title="Permalink to this heading"></a></h3>
+<p>Stundum eru sumar breyturnar okkar langir textastrengir sem geyma ýmsar
+upplýsingar en við viljum draga tilteknar upplýsingar út úr strengjunum
+og nota til að búa til breytur. Þá kemur skipunin <code class="docutils literal notranslate"><span class="pre">grep()</span></code>, sem við
+sáum í kassa <a class="reference internal" href="#rf-grep"><span class="std std-numref">2.5.1.4</span></a>, að góðum notum. Ef við viljum sem dæmi búa
+til nýja breytu, <code class="docutils literal notranslate"><span class="pre">ar</span></code> sem geymir hvaða ár tilraunin var framkvæmd
+fyrir hverja mælingu þá má útbúa hana með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">ar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NA</span>
+<span class="n">puls</span><span class="o">$</span><span class="n">ar</span><span class="p">[</span><span class="nf">grep</span><span class="p">(</span><span class="m">2013</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">dagsetning</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2013</span>
+<span class="n">puls</span><span class="o">$</span><span class="n">ar</span><span class="p">[</span><span class="nf">grep</span><span class="p">(</span><span class="m">2014</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">dagsetning</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2014</span>
+<span class="n">puls</span><span class="o">$</span><span class="n">ar</span><span class="p">[</span><span class="nf">grep</span><span class="p">(</span><span class="m">2015</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">dagsetning</span><span class="p">)]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2015</span>
+</pre></div>
+</div>
+<p>Nú er orðin til ný breyta, sem inniheldur bara ártalið. Það sem það eru
+bara tölur er breytan talnabreyta.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">ar</span><span class="p">)</span>
+<span class="c1">##  num [1:471] 2013 2013 2013 2013 2013 ...</span>
+</pre></div>
+</div>
+</section>
+<section id="f-breytt-um-heiti-a-breytum">
+<h3><span class="section-number">2.6.6. </span>F: Breytt um heiti á breytum<a class="headerlink" href="#f-breytt-um-heiti-a-breytum" title="Permalink to this heading"></a></h3>
+<section id="rename">
+<h4><span class="section-number">2.6.6.1. </span>rename()<a class="headerlink" href="#rename" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu og nöfn á breytum</p>
+<p><strong>Úttak:</strong> gagnatafla</p>
+<p><strong>Pakki:</strong> dplyr</p>
+</div>
+<hr class="docutils" />
+<p>Hægt er, á auðveldan hátt, að endurskýra breytur í gagnatöflu með
+<code class="docutils literal notranslate"><span class="pre">rename()</span></code> aðferðinni. Viljum við t.d. breyta nafninu á breytunni
+<code class="docutils literal notranslate"><span class="pre">namskeid</span></code> í <code class="docutils literal notranslate"><span class="pre">nam</span></code> gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">&lt;-</span><span class="nf">rename</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">nam</span><span class="o">=</span><span class="n">namskeid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Til að valda ekki ruglingi hér breytum við nafninu aftur í <code class="docutils literal notranslate"><span class="pre">namskeid</span></code>
+með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">&lt;-</span><span class="nf">rename</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">namskeid</span><span class="o">=</span><span class="n">nam</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="g-vorpunum-beitt-a-talnabreytur">
+<h3><span class="section-number">2.6.7. </span>G: Vörpunum beitt á talnabreytur<a class="headerlink" href="#g-vorpunum-beitt-a-talnabreytur" title="Permalink to this heading"></a></h3>
+<p>Að lokum viljum við oft búa til nýjar, afleiddar breytur út frá öðrum
+flokkabreytum. Þannig getum við t.d. búið til breytuna BMI út frá hæð og
+þyngd:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">BMI</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">thyngd</span><span class="o">/</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="o">/</span><span class="m">100</span><span class="p">)</span><span class="o">**</span><span class="m">2</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="umroun-gagna">
+<span id="s-umrodun"></span><h2><span class="section-number">2.7. </span>Umröðun gagna<a class="headerlink" href="#umroun-gagna" title="Permalink to this heading"></a></h2>
+<section id="id5">
+<h3><span class="section-number">2.7.1. </span>Umröðun gagna<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>Ef gagnatöflurnar sem verið er að vinna með innihalda margar breytur
+getur verið gott að geta valið þær breytur sem við ætlum að vinna með á
+auðveldan hátt. Við getum t.d. búið til nýja gagnatöflu sem inniheldur
+aðeins breyturnar <code class="docutils literal notranslate"><span class="pre">haed</span></code> og <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> (takið eftir að nýja
+gagnataflan er ekki geymd í nýjum hlut hér, ætlum við að nota hana
+þurfum við að búa til nýja töflu eins og hér að neðan).</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">haed</span><span class="p">,</span><span class="n">thyngd</span><span class="p">)</span>
+<span class="c1">##      haed thyngd</span>
+<span class="c1">## 1   161.0   60.0</span>
+<span class="c1">## 2   185.0  115.0</span>
+<span class="c1">## 3   167.0     NA</span>
+<span class="c1">## 4   174.0   67.0</span>
+<span class="c1">## 5   163.0   57.0</span>
+<span class="c1">## 6   175.0   59.0</span>
+<span class="c1">## 7   178.0   70.0</span>
+<span class="c1">## 8   191.0   94.0</span>
+<span class="c1">## 9   176.0   68.0</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>Við getum einnig notað <code class="docutils literal notranslate"><span class="pre">select()</span></code> aðferðina til að búa til nýja
+gagnatöflu sem inniheldur alla dálka upphaflegu töflunnar að
+undanskildum nokkrum. Viljum við t.d. búa til nýja gagnatöflu sem
+inniheldur allar breytur upphaflegu töflunnar nema <code class="docutils literal notranslate"><span class="pre">haed</span></code> og
+<code class="docutils literal notranslate"><span class="pre">thyngd</span></code> gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls.minni</span><span class="o">&lt;-</span><span class="nf">select</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">haed</span><span class="p">,</span><span class="n">thyngd</span><span class="p">))</span>
+</pre></div>
+</div>
+<section id="sort">
+<h4><span class="section-number">2.7.1.1. </span>sort()<a class="headerlink" href="#sort" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á vigri</p>
+<p><strong>Úttak:</strong> vigur með röðuðum gildum</p>
+<p><strong>Helstu stillingar:</strong> decreasing</p>
+</div>
+<hr class="docutils" />
+<p>Oft getur verið þægilegt að raða mælingunum okkar eftir stærðarröð.
+Viljum við raða gildunum á einni breytu/vigri í stærðarröð gerum við það
+með <code class="docutils literal notranslate"><span class="pre">sort()</span></code> aðferðinni. Viljum við t.d. skoða mælingarnar á hæð í
+stærðarröð gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sort</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">)</span>
+<span class="c1">##   [1] 150.0 152.0 152.0 154.0 154.0 155.0 156.0 156.0 157.0 157.0 157.0</span>
+<span class="c1">##  [12] 157.0 157.0 157.0 157.0 157.0 158.0 158.0 158.0 159.0 159.0 159.0</span>
+<span class="c1">##  [23] 159.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0</span>
+<span class="c1">##  [34] 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.5 161.0 161.0 161.0</span>
+<span class="c1">##  [45] 161.0 161.0 161.0 161.0 161.0 161.0 161.0 161.0 162.0 162.0 162.0</span>
+<span class="c1">##  [56] 162.0 162.0 162.0 162.0 162.0 162.0 162.0 163.0 163.0 163.0 163.0</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+</section>
+<section id="arrange">
+<h4><span class="section-number">2.7.1.2. </span>arrange()<a class="headerlink" href="#arrange" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu og nöfn á breytum</p>
+<p><strong>Úttak:</strong> gagnatafla</p>
+<p><strong>Pakki:</strong> dplyr</p>
+</div>
+<hr class="docutils" />
+<p>Í sumum tilfellum er einnig gott að geta raðað viðfangsefnum í
+gagnatöflu eftir ákveðinni röð. <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> aðferðin gerir okkur það
+kleift á auðveldan hátt. Við mötum aðferðina með nafninu á gagnatöflunni
+og breytunum sem við viljum raða eftir. Viljum við t.d. raða
+viðfangsefnunum í puls gagnasafninu eftir hæð gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">arrange</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">haed</span><span class="p">)</span>
+<span class="c1">##     namskeid   kronukast  haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1    STAE209 landvaettir 150.0   76.3    23 kvk    nei     nei         2.0</span>
+<span class="c1">## 2    STAE209 landvaettir 152.0   47.0    20 kvk    nei     nei         2.0</span>
+<span class="c1">## 3    STAE209 landvaettir 152.0   47.0    20 kvk    nei     nei         2.0</span>
+<span class="c1">## 4     LAN203 landvaettir 154.0   50.0    28 kvk    nei     nei         4.0</span>
+<span class="c1">## 5     LAN203 landvaettir 154.0   50.0    28 kvk    nei     nei         4.0</span>
+<span class="c1">## 6     LAN203 landvaettir 155.0   49.0    22 kvk     ja      ja        12.0</span>
+<span class="c1">## 7     LAN203    thorskur 156.0   69.0    36 kvk    nei      ja         3.0</span>
+<span class="c1">## 8    STAE209 landvaettir 156.0   65.0    21 kvk    nei     nei         2.0</span>
+<span class="c1">## 9    STAE209 landvaettir 157.0   51.0    20 kvk    nei      ja         0.0</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+<p>Viljum við hins vegar raða fyrst eftir aldri og svo eftir hæð gerum við
+það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">arrange</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">aldur</span><span class="p">,</span><span class="n">haed</span><span class="p">)</span>
+<span class="c1">##     namskeid   kronukast  haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1    STAE209    thorskur 162.0   56.0    19 kvk    nei     nei         2.0</span>
+<span class="c1">## 2    STAE209    thorskur 164.0   58.0    19 kvk    nei      ja         4.0</span>
+<span class="c1">## 3    STAE209    thorskur 164.0   58.0    19 kvk    nei      ja         4.0</span>
+<span class="c1">## 4    STAE209 landvaettir 172.0   55.0    19 kvk    nei      ja         6.0</span>
+<span class="c1">## 5    STAE209    thorskur 172.0   53.0    19  kk    nei    &lt;NA&gt;         7.0</span>
+<span class="c1">## 6    STAE209 landvaettir 172.0   55.0    19 kvk    nei      ja         6.0</span>
+<span class="c1">## 7    STAE209 landvaettir 177.0   72.0    19 kvk    nei      ja         2.0</span>
+<span class="c1">## 8     LAN203 landvaettir 181.0   85.0    19  kk    nei      ja         2.0</span>
+<span class="c1">## 9     LAN203 landvaettir 185.0   60.0    19  kk    nei     nei         6.0</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+</section>
+<section id="gather">
+<span id="rf-gather"></span><h4><span class="section-number">2.7.1.3. </span>gather()<a class="headerlink" href="#gather" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu og tveir vigrar</p>
+<p><strong>Úttak:</strong> gagnatafla</p>
+<p><strong>Pakki:</strong> tidyr</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">gather()</span></code> varpar gögnum úr víðu sniði í langt á handhægan
+hátt. Sem dæmi eru upplýsingarnar um púls núna geymdar í tveimur
+breytum, <code class="docutils literal notranslate"><span class="pre">fyrriPuls</span></code> og <code class="docutils literal notranslate"><span class="pre">seinniPuls</span></code>. Við gætum þess í stað haft
+eina breytu, <code class="docutils literal notranslate"><span class="pre">pulsmaeling</span></code>, sem geymir púlsmælinguna og aðra breytu,
+<code class="docutils literal notranslate"><span class="pre">nr.maelingar</span></code> sem tilgreinir hvort mælingin eigi við fyrri eða seinni
+púlsmælinguna. Þetta er framkvæmt með skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pulslangt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gather</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="w"> </span><span class="n">nr.maelingar</span><span class="p">,</span><span class="w"> </span><span class="n">pulsmaeling</span><span class="p">,</span><span class="w"> </span><span class="n">fyrriPuls</span><span class="o">:</span><span class="n">seinniPuls</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Fyrst tilgreinum við nafnið á gagnatöflunni sem við erum að vinna með,
+þar næst kemur hvað breytan sem greinir að hvort að mælingin er fyrr eða
+seinni púlsmæling á að heita. Við látum hana heita <code class="docutils literal notranslate"><span class="pre">nr.maelingar</span></code>. Þar
+næst kemur hvað breytan sem tilgreinir hver mældi púlsinn er heitir, við
+gefum henni nafnið <code class="docutils literal notranslate"><span class="pre">pulsmaeling</span></code> og að lokum koma breyturnar tvær
+<code class="docutils literal notranslate"><span class="pre">fyrriPuls</span></code> og <code class="docutils literal notranslate"><span class="pre">seinniPuls</span></code>, aðgreindar með <code class="docutils literal notranslate"><span class="pre">:</span></code>, sem að áður
+geymdu púlsmælingarnar á víðu sniði. Sjáið muninn:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">pulslangt</span><span class="p">)</span>
+<span class="c1">##   namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1  STAE209 landvaettir  161     60    23 kvk    nei     nei         3.5</span>
+<span class="c1">## 2   LAN203    thorskur  185    115    52  kk   &lt;NA&gt;      ja         0.0</span>
+<span class="c1">## 3   LAN203 landvaettir  167     NA    22 kvk    nei      ja         2.0</span>
+<span class="c1">## 4  STAE209    thorskur  174     67    21 kvk    nei      ja         1.0</span>
+<span class="c1">## 5  STAE209    thorskur  163     57    20 kvk    nei      ja         5.0</span>
+<span class="c1">## 6  STAE209 landvaettir  175     59    20 kvk    nei      ja         5.0</span>
+<span class="c1">##    inngrip dagsetning likamsraektf likamsraekt2   ar      BMI nr.maelingar</span>
+<span class="c1">## 1 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013 23.14726    fyrriPuls</span>
+<span class="c1">## 2    hljop 2013-01-07        Lítil    ekkiMikil 2013 33.60117    fyrriPuls</span>
+<span class="c1">## 3 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013       NA    fyrriPuls</span>
+<span class="c1">## 4    hljop 2013-01-07        Lítil    ekkiMikil 2013 22.12974    fyrriPuls</span>
+<span class="c1">## 5 sat_kyrr 2013-01-07        Mikil        Mikil 2013 21.45357    fyrriPuls</span>
+<span class="c1">## 6 sat_kyrr 2013-01-07        Mikil        Mikil 2013 19.26531    fyrriPuls</span>
+<span class="c1">##   pulsmaeling</span>
+<span class="c1">## 1          83</span>
+<span class="c1">## 2          80</span>
+<span class="c1">## 3          43</span>
+<span class="c1">## 4          76</span>
+<span class="c1">## 5          71</span>
+<span class="c1">## 6          65</span>
+</pre></div>
+</div>
+</section>
+<section id="spread">
+<span id="rf-spread"></span><h4><span class="section-number">2.7.1.4. </span>spread()<a class="headerlink" href="#spread" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu og tveir vigrar</p>
+<p><strong>Úttak:</strong> gagnatafla</p>
+<p><strong>Pakki:</strong> tidyr</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">spread</span></code> er andhverfa <code class="docutils literal notranslate"><span class="pre">gather()</span></code>, þ.e.a.s. hún varpar
+gögnum úr löngu sniði í vítt. Þannig vörpum við löngu <code class="docutils literal notranslate"><span class="pre">pulslangt</span></code>
+gögnunum sem við bjuggum til að ofan yfir í langt snið með skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pulsvitt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">spread</span><span class="p">(</span><span class="n">pulslangt</span><span class="p">,</span><span class="w"> </span><span class="n">nr.maelingar</span><span class="p">,</span><span class="w"> </span><span class="n">pulsmaeling</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hér þarf eingöngu að tilgreina breyturnar tvær sem á að skilja í sundur.
+R sér um rest, eins og sjá má:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">pulsvitt</span><span class="p">)</span>
+<span class="c1">##   namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1  STAE209 landvaettir  161     60    23 kvk    nei     nei         3.5</span>
+<span class="c1">## 2   LAN203    thorskur  185    115    52  kk   &lt;NA&gt;      ja         0.0</span>
+<span class="c1">## 3   LAN203 landvaettir  167     NA    22 kvk    nei      ja         2.0</span>
+<span class="c1">## 4  STAE209    thorskur  174     67    21 kvk    nei      ja         1.0</span>
+<span class="c1">## 5  STAE209    thorskur  163     57    20 kvk    nei      ja         5.0</span>
+<span class="c1">## 6  STAE209 landvaettir  175     59    20 kvk    nei      ja         5.0</span>
+<span class="c1">##    inngrip dagsetning likamsraektf likamsraekt2   ar      BMI fyrriPuls</span>
+<span class="c1">## 1 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013 23.14726        83</span>
+<span class="c1">## 2    hljop 2013-01-07        Lítil    ekkiMikil 2013 33.60117        80</span>
+<span class="c1">## 3 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013       NA        43</span>
+<span class="c1">## 4    hljop 2013-01-07        Lítil    ekkiMikil 2013 22.12974        76</span>
+<span class="c1">## 5 sat_kyrr 2013-01-07        Mikil        Mikil 2013 21.45357        71</span>
+<span class="c1">## 6 sat_kyrr 2013-01-07        Mikil        Mikil 2013 19.26531        65</span>
+<span class="c1">##   seinniPuls</span>
+<span class="c1">## 1         84</span>
+<span class="c1">## 2        103</span>
+<span class="c1">## 3         52</span>
+<span class="c1">## 4        105</span>
+<span class="c1">## 5         68</span>
+<span class="c1">## 6         65</span>
+</pre></div>
+</div>
+</section>
+<section id="merge">
+<span id="rf-merge"></span><h4><span class="section-number">2.7.1.5. </span>merge()<a class="headerlink" href="#merge" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> tvær gagnatöflur</p>
+<p><strong>Úttak:</strong> ein sameinuð gagnatafla</p>
+<p><strong>Helstu stillingar:</strong> by, all.x, all.y</p>
+</div>
+<hr class="docutils" />
+<p>Að lokum er <code class="docutils literal notranslate"><span class="pre">merge()</span></code> einstaklega handhæg skipun til að sameina tvær
+gagnatöflur. Hugsum okkur sem svo að við hefðum bakgrunnsupplýsingar um
+nemendurna í einni gagnatöflu, en púlsmælingarnar í annarri gagnatöflu.
+Hver og ein skrá hefði svo að geyma <em>lykil</em>, t.d. gervinúmer fyrir hvern
+og einn nemanda sem gerir okkur kleift að para saman mælingarnar. Búum
+til að byrja með til tvær slíkar gagnatöflur til að geta sýnt hvernig
+þær væru sameinaðar ef svo væri raunin:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">puls</span><span class="p">)[</span><span class="m">1</span><span class="p">])</span><span class="w">  </span><span class="c1">#lykill með gervinúmerum</span>
+<span class="n">bakgrunnur</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">namskeid</span><span class="p">,</span><span class="w"> </span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">thyngd</span><span class="p">,</span><span class="w"> </span><span class="n">aldur</span><span class="p">,</span>
+<span class="n">kyn</span><span class="p">,</span><span class="w"> </span><span class="n">reykir</span><span class="p">,</span><span class="w"> </span><span class="n">drekkur</span><span class="p">,</span><span class="w"> </span><span class="n">likamsraekt</span><span class="p">,</span><span class="w"> </span><span class="n">likamsraektf</span><span class="w"> </span><span class="p">)</span>
+<span class="n">pulsmaeling</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">kronukast</span><span class="p">,</span><span class="w"> </span><span class="n">fyrriPuls</span><span class="p">,</span><span class="w"> </span><span class="n">seinniPuls</span><span class="p">,</span>
+<span class="n">inngrip</span><span class="p">,</span><span class="w"> </span><span class="n">dagsetning</span><span class="p">,</span><span class="w"> </span><span class="n">ar</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hér má sjá gagnatöflurnar tvær:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">bakgrunnur</span><span class="p">)</span>
+<span class="c1">##   id namskeid haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1  1  STAE209  161     60    23 kvk    nei     nei         3.5</span>
+<span class="c1">## 2  2   LAN203  185    115    52  kk   &lt;NA&gt;      ja         0.0</span>
+<span class="c1">## 3  3   LAN203  167     NA    22 kvk    nei      ja         2.0</span>
+<span class="c1">## 4  4  STAE209  174     67    21 kvk    nei      ja         1.0</span>
+<span class="c1">## 5  5  STAE209  163     57    20 kvk    nei      ja         5.0</span>
+<span class="c1">## 6  6  STAE209  175     59    20 kvk    nei      ja         5.0</span>
+<span class="c1">##   likamsraektf</span>
+<span class="c1">## 1     Miðlungs</span>
+<span class="c1">## 2        Lítil</span>
+<span class="c1">## 3     Miðlungs</span>
+<span class="c1">## 4        Lítil</span>
+<span class="c1">## 5        Mikil</span>
+<span class="c1">## 6        Mikil</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">pulsmaeling</span><span class="p">)</span>
+<span class="c1">##   id   kronukast fyrriPuls seinniPuls  inngrip dagsetning   ar</span>
+<span class="c1">## 1  1 landvaettir        83         84 sat_kyrr 2013-01-07 2013</span>
+<span class="c1">## 2  2    thorskur        80        103    hljop 2013-01-07 2013</span>
+<span class="c1">## 3  3 landvaettir        43         52 sat_kyrr 2013-01-07 2013</span>
+<span class="c1">## 4  4    thorskur        76        105    hljop 2013-01-07 2013</span>
+<span class="c1">## 5  5    thorskur        71         68 sat_kyrr 2013-01-07 2013</span>
+<span class="c1">## 6  6 landvaettir        65         65 sat_kyrr 2013-01-07 2013</span>
+</pre></div>
+</div>
+<p>Þær eru sameinaðar með skipuninni <code class="docutils literal notranslate"><span class="pre">merge():</span></code></p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">merge</span><span class="p">(</span><span class="n">bakgrunnur</span><span class="p">,</span><span class="w"> </span><span class="n">pulsmaeling</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sem er sama skrá og við byrjuðum með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<span class="c1">## [1] 471  16</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<span class="c1">##   id namskeid haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1  1  STAE209  161     60    23 kvk    nei     nei         3.5</span>
+<span class="c1">## 2  2   LAN203  185    115    52  kk   &lt;NA&gt;      ja         0.0</span>
+<span class="c1">## 3  3   LAN203  167     NA    22 kvk    nei      ja         2.0</span>
+<span class="c1">## 4  4  STAE209  174     67    21 kvk    nei      ja         1.0</span>
+<span class="c1">## 5  5  STAE209  163     57    20 kvk    nei      ja         5.0</span>
+<span class="c1">## 6  6  STAE209  175     59    20 kvk    nei      ja         5.0</span>
+<span class="c1">##   likamsraektf   kronukast fyrriPuls seinniPuls  inngrip dagsetning   ar</span>
+<span class="c1">## 1     Miðlungs landvaettir        83         84 sat_kyrr 2013-01-07 2013</span>
+<span class="c1">## 2        Lítil    thorskur        80        103    hljop 2013-01-07 2013</span>
+<span class="c1">## 3     Miðlungs landvaettir        43         52 sat_kyrr 2013-01-07 2013</span>
+<span class="c1">## 4        Lítil    thorskur        76        105    hljop 2013-01-07 2013</span>
+<span class="c1">## 5        Mikil    thorskur        71         68 sat_kyrr 2013-01-07 2013</span>
+<span class="c1">## 6        Mikil landvaettir        65         65 sat_kyrr 2013-01-07 2013</span>
+</pre></div>
+</div>
+<p>Sjálfgefið er að sameina gagnatöflurnar tvær á öllum þeim breytum sem
+bera sama heiti í töflunum tveimur. Í þessu tilviki er bara ein breyta
+sem ber sama heitið, það er breytan <code class="docutils literal notranslate"><span class="pre">id</span></code> og því er eingöngu sameinað
+eftir henni. Ef að fleiri breytur hafa sama heiti, en við viljum þó ekki
+sameina eftir þeim, þá tilgreinum við það með stillingunni <code class="docutils literal notranslate"><span class="pre">by</span></code>.</p>
+<p>Sömuleiðis er sjálfgefið að sameina eingöngu þær mælingar sem svara til
+lykils sem er að finna í báðum töflunum. Þ.e.a.s. ef að tiltekið <code class="docutils literal notranslate"><span class="pre">id</span></code>
+í dæminu hér að ofan væri eingöngu að finna í gagnatöflunni
+<code class="docutils literal notranslate"><span class="pre">bakgrunnur</span></code> en ekki í gagnatöflunni <code class="docutils literal notranslate"><span class="pre">pulsmaeling</span></code> þá væri henni
+sleppt. Við getum sagt R að sleppa engri mælingu í fyrri gagnatöflunni
+(og fylla þá upp í breyturnar úr seinni töflunni með <code class="docutils literal notranslate"><span class="pre">NA</span></code> með
+stillingunni <code class="docutils literal notranslate"><span class="pre">all.x=TRUE</span></code>). Á sama hátt getum við bætt við
+<code class="docutils literal notranslate"><span class="pre">all.y=TRUE</span></code> ef við viljum að það sama gildi fyrir seinni
+gagnatöfluna.</p>
+</section>
+</section>
+</section>
+<section id="fleiri-skipanir-fyrir-koun-breyta-ast">
+<span id="meira"></span><h2><span class="section-number">2.8. </span>Fleiri skipanir fyrir kóðun breyta<span class="math">\(^\ast\)</span><a class="headerlink" href="#fleiri-skipanir-fyrir-koun-breyta-ast" title="Permalink to this heading"></a></h2>
+<section id="id6">
+<h3><span class="section-number">2.8.1. </span>Fleiri skipanir fyrir kóðun breyta<span class="math">\(^\ast\)</span><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Fjórar skipanir sem koma oft að góðum notum við kóðun breyta eru
+<code class="docutils literal notranslate"><span class="pre">paste()</span></code>, <code class="docutils literal notranslate"><span class="pre">sprintf()</span></code>, <code class="docutils literal notranslate"><span class="pre">separate()</span></code> og <code class="docutils literal notranslate"><span class="pre">substr()</span></code>.</p>
+<section id="paste">
+<h4><span class="section-number">2.8.1.1. </span>paste()<a class="headerlink" href="#paste" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> tveir vigrar, eða vigur og gildi</p>
+<p><strong>Úttak:</strong> vigur með gildunum sameinuðum</p>
+<p><strong>Helstu stillingar:</strong> sep</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">paste()</span></code> býr til einn vigur með því að skella saman gildunum
+í tveimur vigrum. Stillingin <code class="docutils literal notranslate"><span class="pre">sep</span></code> tilgreinir hvaða tákna skal notað
+til að sameina vigrana. Þannig getum við búið til nýja breytur sem
+tilgreinir í hvaða námskeiði, hvaða ár nemendurnir eru með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">$</span><span class="n">namskeidar</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">ar</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeidar</span><span class="p">)</span>
+<span class="c1">##  chr [1:471] &quot;STAE209 2013&quot; &quot;LAN203 2013&quot; &quot;LAN203 2013&quot; ...</span>
+</pre></div>
+</div>
+</section>
+<section id="sprintf">
+<h4><span class="section-number">2.8.1.2. </span>sprintf()<a class="headerlink" href="#sprintf" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> strengur (eða strengjavigur) með skiptitákni, annað inntak</p>
+<p><strong>Úttak:</strong> vigur með nýjum streng byggðum á inntaki</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">sprintf()</span></code> býr til einn vigur með því að taka streng með
+sérstökum skiptitáknum og skipta þeim út fyrir gildin úr öðru inntaki
+fallsins. Vilji maður t.d. búa til streng sem gefur manni dagsetningu þá
+er það hægt með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sprintf</span><span class="p">(</span><span class="s">&#39;Dagurinn i dag er %s&#39;</span><span class="p">,</span><span class="w"> </span><span class="nf">Sys.Date</span><span class="p">())</span>
+<span class="c1">## [1] &quot;Dagurinn i dag er 2016-01-04&quot;</span>
+</pre></div>
+</div>
+<p>þar sem <span class="math">\(\%\)</span>s er skiptitáknið.</p>
+</section>
+<section id="separate">
+<h4><span class="section-number">2.8.1.3. </span>separate()<a class="headerlink" href="#separate" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> einn vigur og tákn sem á skipta gildunum upp eftir</p>
+<p><strong>Úttak:</strong> tveir eða fleiri vigrara</p>
+<p><strong>Pakki:</strong> tidyr</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">separate()</span></code> er andhverfa skipunarinnar <code class="docutils literal notranslate"><span class="pre">paste()</span></code>, þ.e.a.s.
+hún slítur í sundur breytur eftir einhverju tákni og býr til tvær eða
+fleiri nýjar. Þannig getum við skipt dagsetningunni upp í þrjár breytur:
+dag, mánuð og ár með skipuninni:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">pulsnytt</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">separate</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="w"> </span><span class="n">dagsetning</span><span class="p">,</span><span class="w"> </span><span class="n">into</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;ar&#39;</span><span class="p">,</span><span class="s">&#39;manudur&#39;</span><span class="p">,</span><span class="s">&#39;dagur&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s">&#39;-&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Hér má sjá nýju gagnatöfluna, með þremur nýjum breytum:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">pulsnytt</span><span class="p">)</span>
+<span class="c1">##   id namskeid haed thyngd aldur kyn reykir drekkur likamsraekt</span>
+<span class="c1">## 1  1  STAE209  161     60    23 kvk    nei     nei         3.5</span>
+<span class="c1">## 2  2   LAN203  185    115    52  kk   &lt;NA&gt;      ja         0.0</span>
+<span class="c1">## 3  3   LAN203  167     NA    22 kvk    nei      ja         2.0</span>
+<span class="c1">## 4  4  STAE209  174     67    21 kvk    nei      ja         1.0</span>
+<span class="c1">## 5  5  STAE209  163     57    20 kvk    nei      ja         5.0</span>
+<span class="c1">## 6  6  STAE209  175     59    20 kvk    nei      ja         5.0</span>
+<span class="c1">##   likamsraektf   kronukast fyrriPuls seinniPuls  inngrip   ar manudur</span>
+<span class="c1">## 1     Miðlungs landvaettir        83         84 sat_kyrr 2013      01</span>
+<span class="c1">## 2        Lítil    thorskur        80        103    hljop 2013      01</span>
+<span class="c1">## 3     Miðlungs landvaettir        43         52 sat_kyrr 2013      01</span>
+<span class="c1">## 4        Lítil    thorskur        76        105    hljop 2013      01</span>
+<span class="c1">## 5        Mikil    thorskur        71         68 sat_kyrr 2013      01</span>
+<span class="c1">## 6        Mikil landvaettir        65         65 sat_kyrr 2013      01</span>
+<span class="c1">##   dagur   ar   namskeidar</span>
+<span class="c1">## 1    07 2013 STAE209 2013</span>
+<span class="c1">## 2    07 2013  LAN203 2013</span>
+<span class="c1">## 3    07 2013  LAN203 2013</span>
+<span class="c1">## 4    07 2013 STAE209 2013</span>
+<span class="c1">## 5    07 2013 STAE209 2013</span>
+<span class="c1">## 6    07 2013 STAE209 2013</span>
+</pre></div>
+</div>
+</section>
+<section id="substr">
+<h4><span class="section-number">2.8.1.4. </span>substr()<a class="headerlink" href="#substr" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> orðabreyta og vísar bókstafa sem skulu valdir</p>
+<p><strong>Úttak:</strong> sá hluti úr orðabreytunni sem svarar til þeirra vísa</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">substr()</span></code> velur ákveðna bókstafi úr orðabreytu, til dæmis
+þriðja til sjöunda bókstafinn, eða álíka. Ef við viljum sem dæmi bara fá
+fyrstu þrjá stafina í nöfnunum á námskeiðunum, þá gerum við það með:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">substr</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>
+<span class="c1">##   [1] &quot;STA&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;STA&quot; &quot;STA&quot; &quot;STA&quot; &quot;LAN&quot; &quot;STA&quot; &quot;STA&quot; &quot;LAN&quot; &quot;LAN&quot;</span>
+<span class="c1">##  [12] &quot;STA&quot; &quot;STA&quot; &quot;STA&quot; &quot;STA&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;STA&quot; &quot;LAN&quot; &quot;STA&quot; &quot;LAN&quot;</span>
+<span class="c1">##  [23] &quot;STA&quot; &quot;STA&quot; &quot;STA&quot; &quot;STA&quot; &quot;STA&quot; &quot;STA&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;STA&quot; &quot;STA&quot; &quot;STA&quot;</span>
+<span class="c1">##  [34] &quot;STA&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;STA&quot; &quot;LAN&quot; &quot;LAN&quot; &quot;STA&quot; &quot;LAN&quot; &quot;LAN&quot;</span>
+<span class="n">....</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="fleiri-skipanir-fyrir-sameiningu-gagna-ast">
+<span id="id7"></span><h2><span class="section-number">2.9. </span>Fleiri skipanir fyrir sameiningu gagna<span class="math">\(^\ast\)</span><a class="headerlink" href="#fleiri-skipanir-fyrir-sameiningu-gagna-ast" title="Permalink to this heading"></a></h2>
+<section id="id8">
+<h3><span class="section-number">2.9.1. </span>Fleiri skipanir fyrir sameiningu gagna<span class="math">\(^\ast\)</span><a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<section id="cbind">
+<h4><span class="section-number">2.9.1.1. </span>cbind()<a class="headerlink" href="#cbind" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> vigrar, gagnatöflur eða fylki</p>
+<p><strong>Úttak:</strong> gagnatöflur eða fylki</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="rbind">
+<h4><span class="section-number">2.9.1.2. </span>rbind()<a class="headerlink" href="#rbind" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> vigrar, gagnatöflur eða fylki</p>
+<p><strong>Úttak:</strong> gagnatöflur eða fylki</p>
+</div>
+<hr class="docutils" />
+<p>Það er einnig einfalt að sameina vigra, fylki eða gagnatöflur. Til þess
+notum við skipanirnar <code class="docutils literal notranslate"><span class="pre">rbind()</span></code> og <code class="docutils literal notranslate"><span class="pre">cbind()</span></code>. Skipunin <code class="docutils literal notranslate"><span class="pre">rbind()</span></code>
+bætir við línu á meðan skipunin <code class="docutils literal notranslate"><span class="pre">cbind()</span></code> bætir við dálki.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">rbind</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="o">:</span><span class="m">8</span><span class="p">)</span>
+<span class="c1">##      [,1] [,2] [,3] [,4]</span>
+<span class="c1">## [1,]    1    2    3    4</span>
+<span class="c1">## [2,]    5    6    7    8</span>
+<span class="nf">cbind</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="o">:</span><span class="m">8</span><span class="p">)</span>
+<span class="c1">##      [,1] [,2]</span>
+<span class="c1">## [1,]    1    5</span>
+<span class="c1">## [2,]    2    6</span>
+<span class="c1">## [3,]    3    7</span>
+<span class="c1">## [4,]    4    8</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="leiksvaei-fyrir-r-koa">
+<h2><span class="section-number">2.10. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
+<div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
+puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
+
+# Setjid ykkar eigin koda her fyrir nedan:
+# Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
+# asamt dalkarheitum.
+head(puls)</code></div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli01/" class="btn btn-neutral float-left" title="1. Inngangur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli03/" class="btn btn-neutral float-right" title="3. Myndræn framsetning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

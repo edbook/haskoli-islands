@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viðauki &mdash; Stærðfræðigreining III 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="prev" title="10. Laplace-ummyndunin" href="../kafli10/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Stærðfræðigreining III
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tvinntölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fáguð föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Cauchy-setningin og Cauchy-formúlan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Leifareikningur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Þýð föll og fágaðar varpanir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Undirstöðuatriði um afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Línulegar afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Veldaraðalausnir á afleiðujöfnum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Línuleg afleiðujöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Laplace-ummyndunin</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kennsluaaetlun">Kennsluáætlun</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Stærðfræðigreining III</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Viðauki</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae302g/vidauki.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="viauki">
+<h1>Viðauki<a class="headerlink" href="#viauki" title="Permalink to this heading"></a></h1>
+<p><em>Do what I do. Hold tight and pretend it’s a plan!</em></p>
+<p>- The Doctor, Doctor Who</p>
+<section id="kennsluaaetlun">
+<h2>Kennsluáætlun<a class="headerlink" href="#kennsluaaetlun" title="Permalink to this heading"></a></h2>
+<p>Með fyrirvara um smávægilegar breytingar.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dagsetning</p></th>
+<th class="head"><p>Efni</p></th>
+<th class="head"><p>Lesefni</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>26.08.20.</p></td>
+<td><ol class="arabic simple">
+<li><p>Tvinntölur</p></li>
+</ol>
+</td>
+<td><p>1.1, 1.2, 1.3,</p></td>
+</tr>
+<tr class="row-odd"><td><p>28.08.20.</p></td>
+<td><p>2. Margliður, ræð
+föll og
+veldisvísisföll.</p></td>
+<td><p>1.4, 1.5, 1.6.</p></td>
+</tr>
+<tr class="row-even"><td><p>02.09.20</p></td>
+<td><p>3. <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>-
+og <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>-
+línulegar varpanir.
+Markgildi
+og samfelldni.</p></td>
+<td><p>1.7.1–1.7.4, 2.1.</p></td>
+</tr>
+<tr class="row-odd"><td><p>04.09.20.</p></td>
+<td><ol class="arabic simple" start="4">
+<li><p>Fáguð föll.</p></li>
+</ol>
+</td>
+<td><p>2.1, 2.2.</p></td>
+</tr>
+<tr class="row-even"><td><p>09.09.20.</p></td>
+<td><p>5. Veldisvísisfallið
+og lograr.</p></td>
+<td><p>2.3, 2.4, 2.4, 2.5.</p></td>
+</tr>
+<tr class="row-odd"><td><p>11.09.20.</p></td>
+<td><p>6. Heildi,
+Cauchy-setningin og
+Cauchy-formúlan.</p></td>
+<td><p>3.1, 3.2, 3.3.</p></td>
+</tr>
+<tr class="row-even"><td><p>16.09.20.</p></td>
+<td><p>7. Afleiðingar
+Cauchy-setningarinnar
+.</p></td>
+<td><p>3.3, 3.4, 3.5, 3.6,</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>3.7, 3.8, 3.9, 3.10.</p></td>
+</tr>
+<tr class="row-even"><td><p>18.09.20.</p></td>
+<td><p>8. Fleiri afleiðingar
+Cauchy-setningarinnar
+.</p></td>
+<td><p>3.3, 3.4, 3.5, 3.6,</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>3.7, 3.8, 3.9, 3.10.</p></td>
+</tr>
+<tr class="row-even"><td><p>23.09.20.</p></td>
+<td><p>9. Laurent-raðir og
+sérstöðupunktar.</p></td>
+<td><p>4.1, 4.2.</p></td>
+</tr>
+<tr class="row-odd"><td><p>25.09.20.</p></td>
+<td><ol class="arabic simple" start="10">
+<li><p>Leifasetningin.</p></li>
+</ol>
+</td>
+<td><p>4.3, 4.4, 4.5, 4.6.</p></td>
+</tr>
+<tr class="row-even"><td><p>30.09.20.</p></td>
+<td><ol class="arabic simple" start="11">
+<li><p>Þýð föll.</p></li>
+</ol>
+</td>
+<td><p>5.1, 5.2.</p></td>
+</tr>
+<tr class="row-odd"><td><p>02.10.20.</p></td>
+<td><p>12. Hagnýtingar í
+straumfræði.</p></td>
+<td><p>5.2.</p></td>
+</tr>
+<tr class="row-even"><td><p>07.10.20.</p></td>
+<td><ol class="arabic simple" start="13">
+<li><p>Afleiðujöfnur.</p></li>
+</ol>
+</td>
+<td><p>6.1, 6.2, 6.3, 6.4.</p></td>
+</tr>
+<tr class="row-odd"><td><p>09.10.20.</p></td>
+<td><p>14. <strong>Próf.</strong> 30% af
+lokaeinkunn<span class="math notranslate nohighlight">\(^
+1\)</span>.</p></td>
+<td><p>Tvinnfallagreining.</p></td>
+</tr>
+<tr class="row-even"><td><p>14.10.20.</p></td>
+<td><p>Upprifjun á
+lausnaaðferðum.
+Hagnýtingar.</p></td>
+<td><p>6.3, 6.4, 6.5, 6.6.</p></td>
+</tr>
+<tr class="row-odd"><td><p>16.10.20.</p></td>
+<td><p>15. Tilvist og
+ótvíræðni lausna.</p></td>
+<td><p>6.7, 6.8.</p></td>
+</tr>
+<tr class="row-even"><td><p>21.10.20.</p></td>
+<td><p>16. Línulegar
+afleiðujöfnur.</p></td>
+<td><p>7.1, 7.2, 7.3.</p></td>
+</tr>
+<tr class="row-odd"><td><p>23.10.20.</p></td>
+<td><p>17. Sérlausnir.
+Green-föll.</p></td>
+<td><p>7.4, 7.5.</p></td>
+</tr>
+<tr class="row-even"><td><p>28.10.20.</p></td>
+<td><p>18. Green-föll og
+Wronski-ákveður.</p></td>
+<td><p>7.4, 7.5, 7.6.</p></td>
+</tr>
+<tr class="row-odd"><td><p>30.11.20.</p></td>
+<td><ol class="arabic simple" start="19">
+<li><p>Veldaraðalausnir.</p></li>
+</ol>
+</td>
+<td><p>8.1, 8.2, 8.3.</p></td>
+</tr>
+<tr class="row-even"><td><p>04.11.20.</p></td>
+<td><p>20. Aðferð
+Frobeniusar.</p></td>
+<td><p>8.4, 8.5.</p></td>
+</tr>
+<tr class="row-odd"><td><p>06.11.20.</p></td>
+<td><p>21. Línuleg
+afleiðujöfnuhneppi.</p></td>
+<td><p>9.1, 9.2, 9.3.</p></td>
+</tr>
+<tr class="row-even"><td><p>11.11.20.</p></td>
+<td><ol class="arabic simple" start="22">
+<li><p><span class="math notranslate nohighlight">\(e^{tA}\)</span>.</p></li>
+</ol>
+</td>
+<td><p>9.4, 9.5, 9.6.</p></td>
+</tr>
+<tr class="row-odd"><td><p>13.11.20.</p></td>
+<td><p>23. Útreikningar
+lausna.</p></td>
+<td><p>9.6, 9.7.</p></td>
+</tr>
+<tr class="row-even"><td><p>18.11.20.</p></td>
+<td><ol class="arabic simple" start="24">
+<li><p>Laplace-ummyndun.</p></li>
+</ol>
+</td>
+<td><p>10.1, 10.2.</p></td>
+</tr>
+<tr class="row-odd"><td><p>20.11.20.</p></td>
+<td><p>25. Notkun
+Laplace-ummyndunar.</p></td>
+<td><p>10.3, 10.4.</p></td>
+</tr>
+<tr class="row-even"><td><p>25.11.20.</p></td>
+<td><p>26. Dæmi um notkun
+fræðanna.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>27.11.20.</p></td>
+<td><p>Dæmatími.</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Í dálkinum <strong>Lesefni</strong> er vísað í kennslubók Ragnars Sigurðssonar.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex/"><span class="std std-ref">Atriðaskrá</span></a></p></li>
+<li><p><a class="reference external" href="stae302.pdf">Pdf-útgáfa</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli10/" class="btn btn-neutral float-left" title="10. Laplace-ummyndunin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

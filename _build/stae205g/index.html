@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stærðfræðigreining II (STÆ205G), Háskóli Íslands &mdash; Stærðfræðigreining II (STÆ205G) 2023</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="#" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/togglebutton.js"></script>
+        <script src="_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script src="_static/plotly.js-gl3d-dist/plotly-gl3d.js"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex/" />
+    <link rel="search" title="Leit" href="search/" />
+    <link rel="next" title="Formáli" href="formali/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>
+    ggbAppletId = [];
+</script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Stærðfræðigreining II (STÆ205G)
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali/">Formáli</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01/">1. Ferlar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02/">2. Hlutafleiður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03/">3. Útgildisverkefni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04/">4. Margföld heildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05/">5. Vigursvið</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06/">6. Diffur- og heildareikningur vigursviða</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki/">Viðauki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Stærðfræðigreining II (STÆ205G)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Stærðfræðigreining II (STÆ205G), Háskóli Íslands</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae205g/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="staerfraeigreining-ii-stae205g-haskoli-islands">
+<h1>Stærðfræðigreining II (STÆ205G), Háskóli Íslands<a class="headerlink" href="#staerfraeigreining-ii-stae205g-haskoli-islands" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="formali/">Formáli</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01/">1. Ferlar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#inngangur">1.1. Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#stikaferlar">1.2. Stikaferlar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#ferlar-og-stikanir-a-ferlum">1.3. Ferlar og stikanir á ferlum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#diffrun-stikaferla">1.4. Diffrun stikaferla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#lengd-stikaferils">1.5. Lengd stikaferils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#polhnit">1.6. Pólhnit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#polhnitagraf">1.7. Pólhnitagraf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#snertill-vi-polhnitagraf">1.8. Snertill við pólhnitagraf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#flatarmal">1.9. Flatarmál</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#bogalengd">1.10. Bogalengd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#einingarsnertivigur">1.11. Einingarsnertivigur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#krappi">1.12. Krappi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#meginverill">1.13. Meginþverill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#hjufurplan">1.14. Hjúfurplan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#tviverill">1.15. Tvíþverill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#vindingur">1.16. Vindingur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01/#frenet-serret-jofnurnar">1.17. Frenet-Serret jöfnurnar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02/">2. Hlutafleiður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#graf-falls">2.1. Graf falls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#jafnhaearlinur">2.2. Jafnhæðarlínur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#fjarlaeg-milli-punkta">2.3. Fjarlægð milli punkta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#opnar-kulur">2.4. Opnar kúlur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#opin-mengi">2.5. Opin mengi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#jaarpunktur">2.6. Jaðarpunktur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#skilgreiningarmengi">2.7. Skilgreiningarmengi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#markgildi">2.8. Markgildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#reglur-um-markgildi">2.9. Reglur um markgildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#samfelldni">2.10. Samfelldni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#id9">2.11. Hlutafleiður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#snertiplan">2.12. Snertiplan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#hlutafleiur-af-haerra-stigi">2.13. Hlutafleiður af hærra stigi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#kejuregla">2.14. Keðjuregla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#diffranleiki-i-einni-breytistaer">2.15. Diffranleiki í einni breytistærð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#diffranleiki-i-einni-breytistaer-onnur-lysing">2.16. Diffranleiki í einni breytistærð - önnur lýsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#diffranleiki">2.17. Diffranleiki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#index-15">2.18. Snertiplan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#id29">2.19. Diffranleiki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#diffur">2.20. Diffur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#varpanir-mbox-bf-r-n-rightarrow-mbox-bf-r-m">2.21. Varpanir <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#jacobi-fylki">2.22. Jacobi-fylki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#diffranleiki-varpana-mbox-bf-r-n-rightarrow-mbox-bf-r-m">2.23. Diffranleiki varpana <span class="math notranslate nohighlight">\(\mbox{${\bf R}^n$}\rightarrow\mbox{${\bf R}^m$}\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#id37">2.24. <cite>Keðjuregla</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#stigull">2.25. Stigull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#snertilina-vi-jafnhaearferil">2.26. Snertilína við jafnhæðarferil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#stefnuafleia">2.27. Stefnuafleiða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#stigull-aftur">2.28. Stigull (aftur)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#snertiplan-vi-jafnhaearflot">2.29. Snertiplan við jafnhæðarflöt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02/#folgin-foll-og-taylor-nalganir">2.30. Fólgin föll og Taylor-nálganir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03/">3. Útgildisverkefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#utgildi">3.1. Útgildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#stabundi-utgildi">3.2. Staðbundið útgildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#tilvist-utgilda">3.3. Tilvist útgilda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#soulpunktur">3.4. Söðulpunktur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#id3">3.5. Staðbundið útgildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#hesse-fylki">3.6. Hesse-fylki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#ferningsform-sja-kafla-10-7-i-adams">3.7. Ferningsform (sjá kafla 10.7 í Adams)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#id9">3.8. Staðbundið útgildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#ferningsform">3.9. Ferningsform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#utgildi-falla-ar-sem-breytur-uppfylla-skorujofnur">3.10. Útgildi falla þar sem breytur uppfylla skorðujöfnur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03/#lagrange-margfaldarar">3.11. Lagrange-margfaldarar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04/">4. Margföld heildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#skiptingar">4.1. Skiptingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#riemann-summa">4.2. Riemann-summa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#tvofalt-heildi-yfir-retthyrning">4.3. Tvöfalt heildi yfir rétthyrning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#tvofalt-heildi-yfir-takmarka-svaei">4.4. Tvöfalt heildi yfir takmarkað svæði</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#x-einfold-og-y-einfold-svaei">4.5. <span class="math notranslate nohighlight">\(x\)</span>-einföld og <span class="math notranslate nohighlight">\(y\)</span>-einföld svæði</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#heildi-yfir-x-einfold-og-y-einfold-svaei">4.6. Heildi yfir <span class="math notranslate nohighlight">\(x\)</span>-einföld og <span class="math notranslate nohighlight">\(y\)</span>-einföld svæði</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#oeiginleg-heildi">4.7. Óeiginleg heildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#breytuskipti">4.8. Breytuskipti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#refold-heildi">4.9. Þreföld heildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#kuluhnit">4.10. Kúluhnit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#breytuskipti-i-kuluhnit">4.11. Breytuskipti í kúluhnit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#massamija">4.12. Massamiðja</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#hverfitrega">4.13. Hverfitregða</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04/#yfirborsflatarmal">4.14. Yfirborðsflatarmál</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05/">5. Vigursvið</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#id1">5.1. Vigursvið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#straumlina">5.2. Straumlína</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#stigulsvi">5.3. Stigulsvið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#heildi-falls-yfir-feril">5.4. Heildi falls yfir feril</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#heildi-vigursvis-eftir-ferli">5.5. Heildi vigursviðs eftir ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#ferilheildi-og-stigulsvi">5.6. Ferilheildi og stigulsvið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#fletir">5.7. Fletir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#stikafletir">5.8. Stikafletir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#snertiplon">5.9. Snertiplön</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#flatarheildi">5.10. Flatarheildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#flatarmal-flata">5.11. Flatarmál flata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#einingarvervigrasvi">5.12. Einingarþvervigrasvið</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#attanlegir-fletir">5.13. Áttanlegir fletir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05/#heildi-vigursvis-yfir-flot-flaei">5.14. Heildi vigursviðs yfir flöt - Flæði</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06/">6. Diffur- og heildareikningur vigursviða</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#grad-div-og-curl">6.1. grad, div og curl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#sundurleitnisetningin-i">6.2. Sundurleitnisetningin I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#sundurleitnisetningin-ii">6.3. Sundurleitnisetningin II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#setning-stokes">6.4. Setning Stokes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06/#hagnytingar-i-elisfraei">6.5. Hagnýtingar í eðlisfræði</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vidauki/">Viðauki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vidauki/#fyrirlestraaaetlun">Fyrirlestraáætlun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ordaskra/">Orðaskrá</a></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex/"><span class="std std-ref">Atriðaskrá</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="formali/" class="btn btn-neutral float-right" title="Formáli" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function() {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

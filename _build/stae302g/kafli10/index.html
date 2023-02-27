@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Laplace-ummyndunin &mdash; Stærðfræðigreining III 2023</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="Viðauki" href="../vidauki/" />
+    <link rel="prev" title="9. Línuleg afleiðujöfnuhneppi" href="../kafli09/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Stærðfræðigreining III
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2023
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Tvinntölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fáguð föll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Cauchy-setningin og Cauchy-formúlan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Leifareikningur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Þýð föll og fágaðar varpanir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Undirstöðuatriði um afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Línulegar afleiðujöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Veldaraðalausnir á afleiðujöfnum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Línuleg afleiðujöfnuhneppi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Laplace-ummyndunin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">10.1. Laplace-ummyndunin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-10-1">10.1.1. Skilgreining (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-og-setning-sja-skilgreiningu-10-1-1">10.1.2. Skilgreining og setning  (Sjá Skilgreiningu 10.1.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-10-1">10.1.3. Setning (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-10-1-6">10.1.4. Setning (Sjá Setningu 10.1.6)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">10.1.5. Setning (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-10-1-5">10.1.6. Setning (Sjá Setningu 10.1.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tafla-yfir-laplace-myndir-sja-10-1">10.1.7. Tafla yfir Laplace-myndir (Sjá §10.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setning-10-2-1">10.1.8. Setning (Sjá Setning 10.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reikniafer-sja-10-2">10.1.9. Reikniaðferð (Sjá §10.2)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#notkun-laplace-ummyndunar">10.2. Notkun Laplace-ummyndunar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-sja-10-2">10.2.1. Skilgreining (Sjá §10.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-10-2-4">10.2.2. Setning (Sjá Setningu 10.2.4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upprifjun-sja-10-3-og-7-5">10.2.3. Upprifjun (Sjá §10.3 og §7.5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-10-3">10.2.4. Setning (Sjá §10.3)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setning-10-3-1">10.2.5. Setning (Sjá Setning 10.3.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning-sja-fylgisetningu-10-3-2">10.2.6. Fylgisetning (Sjá Fylgisetningu 10.3.2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-sja-setningu-10-2-1">10.2.7. Setning (Sjá Setningu 10.2.1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-og-setning">10.2.8. Skilgreining og setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">10.2.9. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">10.2.10. Skilgreining og setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-andhvefuformula-fourier-mellin">10.2.11. Setning (Andhvefuformúla Fourier-Mellin)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">10.2.12. Setning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fylgisetning">10.2.13. Fylgisetning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Stærðfræðigreining III</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10. </span>Laplace-ummyndunin</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/stae302g/kafli10.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="laplace-ummyndunin">
+<h1><span class="section-number">10. </span>Laplace-ummyndunin<a class="headerlink" href="#laplace-ummyndunin" title="Permalink to this heading"></a></h1>
+<p><em>Think you’ve seen it all? Think again. Outside those doors, we might see anything. We could find new worlds, terrifying monsters, impossible things. And if you come with me… nothing will ever be the same again!</em></p>
+<p>- The Doctor, Doctor Who</p>
+<section id="id1">
+<h2><span class="section-number">10.1. </span>Laplace-ummyndunin<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-sja-10-1">
+<h3><span class="section-number">10.1.1. </span>Skilgreining (Sjá §10.1)<a class="headerlink" href="#skilgreining-sja-10-1" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f\)</span> vera fall sem skilgreint er á menginu <span class="math notranslate nohighlight">\(\mathbb{R}_+=\{t\in \mathbb{R}; t\geq 0\}\)</span> með gildi í <span class="math notranslate nohighlight">\({\mathbb{C}}\)</span> og gerum ráð fyrir að <span class="math notranslate nohighlight">\(f\)</span> sé heildanlegt á sérhverju lokuðu og takmörkuðu bili <span class="math notranslate nohighlight">\([0,b]\)</span>. Laplace–mynd <span class="math notranslate nohighlight">\(f\)</span>, sem við táknum með <span class="math notranslate nohighlight">\({\cal L} f\)</span> eða <span class="math notranslate nohighlight">\({\cal L}\{f\}\)</span>, er skilgreind með formúlunni</p>
+<div class="math notranslate nohighlight">
+\[{\cal L} f(s)=\int_0^ \infty e^{-st}f(t)\, dt.\label{7.1.1}\]</div>
+<p>Skilgreiningarmengi fallsins <span class="math notranslate nohighlight">\({\cal L} f\)</span> samanstendur af öllum tvinntölum <span class="math notranslate nohighlight">\(s\)</span> þannig að heildið í hægri hliðinni sé samleitið. Laplace-ummyndun er vörpunin <span class="math notranslate nohighlight">\({\cal L}\)</span> sem úthlutar falli <span class="math notranslate nohighlight">\(f\)</span> Laplace-mynd sinni <span class="math notranslate nohighlight">\({\cal L} f\)</span>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Stundum er skilgreind ,,tvíhliða Laplace-mynd‘‘ falls þar sem heildið er reiknað frá <span class="math notranslate nohighlight">\(-\infty\)</span> til <span class="math notranslate nohighlight">\(\infty\)</span> og þá gæti maður kallað okkar Laplace-mynd ,,einhliða Laplace-mynd‘‘.</p>
+</div>
+</section>
+<section id="skilgreining-og-setning-sja-skilgreiningu-10-1-1">
+<h3><span class="section-number">10.1.2. </span>Skilgreining og setning  (Sjá Skilgreiningu 10.1.1)<a class="headerlink" href="#skilgreining-og-setning-sja-skilgreiningu-10-1-1" title="Permalink to this heading"></a></h3>
+<p>Við segjum að fallið <span class="math notranslate nohighlight">\(f:\mathbb{R}_+\to {\mathbb{C}}\)</span> sé af veldisvísisgerð ef til eru jákvæðir fastar <span class="math notranslate nohighlight">\(M\)</span> og <span class="math notranslate nohighlight">\(c\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[|f(t)|\leq Me^{c t}, \qquad t\in \mathbb{R}_+.\label{7.1.2}\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> er þar að auki heildanlegt á sérhverju takmörkuðu bili <span class="math notranslate nohighlight">\([0,b]\)</span>, þá er <span class="math notranslate nohighlight">\({\cal L} f\)</span> skilgreint fyrir öll <span class="math notranslate nohighlight">\(s\in {\mathbb{C}}\)</span> með <span class="math notranslate nohighlight">\(\operatorname{Re\, } s&gt;c\)</span>. Við fáum að auki vaxtartakmarkanir á <span class="math notranslate nohighlight">\({\cal L} f\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[|{\cal L} f(s) |\leq
+\int_0^\infty e^{-\operatorname{Re\, } st} Me^{c t} \, dt =
+\dfrac M{\operatorname{Re\, }\,  s-c}, \qquad \operatorname{Re\, }\,  s&gt;c.\]</div>
+</section>
+<section id="setning-sja-10-1">
+<h3><span class="section-number">10.1.3. </span>Setning (Sjá §10.1)<a class="headerlink" href="#setning-sja-10-1" title="Permalink to this heading"></a></h3>
+<p>Laplace-ummyndunin er línuleg vörpun, en það þýðir að</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{\alpha f+\beta g\}(s)=\alpha{\cal L}\{f\}(s)+\beta{\cal L}\{g\}(s)\]</div>
+<p>ef <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> eru föll af veldisvísisgerð, <span class="math notranslate nohighlight">\(\alpha\)</span> og <span class="math notranslate nohighlight">\(\beta\)</span> eru tvinntölur og <span class="math notranslate nohighlight">\(s\in {\mathbb{C}}\)</span> liggur í skilgreiningarmengi fallanna <span class="math notranslate nohighlight">\({\cal L}\{f\}\)</span> og <span class="math notranslate nohighlight">\({\cal L}\{g\}\)</span>.</p>
+</section>
+<section id="setning-sja-setningu-10-1-6">
+<h3><span class="section-number">10.1.4. </span>Setning (Sjá Setningu 10.1.6)<a class="headerlink" href="#setning-sja-setningu-10-1-6" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að föllin <span class="math notranslate nohighlight">\(f,g\in C(\mathbb{R}_+)\)</span> séu bæði af veldisvísisgerð og að til sé fasti <span class="math notranslate nohighlight">\(c\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[{\cal L} f(s)={\cal L} g(s), \qquad s\in {\mathbb{C}}, \quad \operatorname{Re\, } s\geq c.\]</div>
+<p>Þá er <span class="math notranslate nohighlight">\(f(t)=g(t)\)</span> fyrir öll <span class="math notranslate nohighlight">\(t\in \mathbb{R}_+\)</span>.</p>
+</section>
+<section id="id2">
+<h3><span class="section-number">10.1.5. </span>Setning (Sjá §10.1)<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<ol class="lowerroman simple">
+<li><p>Ef <span class="math notranslate nohighlight">\(\alpha\in \mathbb{R}\)</span> og <span class="math notranslate nohighlight">\(\alpha&gt;-1\)</span>, þá er</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{t^\alpha\}(s)=\dfrac {\Gamma(\alpha+1)}{s^{\alpha+1}},\]</div>
+<p>og sér í lagi gildir ef <span class="math notranslate nohighlight">\(\alpha\)</span> er heiltala að</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{t^\alpha\}(s)=\dfrac {\alpha!}{s^{\alpha+1}}.\]</div>
+<ol class="lowerroman simple" start="2">
+<li><p>Fyrir sérhvert <span class="math notranslate nohighlight">\(\alpha\in {\mathbb{C}}\)</span> gildir</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{e^{\alpha t}\}(s)=\dfrac{1}{s-\alpha}.\]</div>
+</section>
+<section id="setning-sja-setningu-10-1-5">
+<h3><span class="section-number">10.1.6. </span>Setning (Sjá Setningu 10.1.5)<a class="headerlink" href="#setning-sja-setningu-10-1-5" title="Permalink to this heading"></a></h3>
+<p><span class="math notranslate nohighlight">\({\cal L}\{e^{\alpha t}f\}(s) = {\cal L}\{f\}(s-\alpha)\)</span>.</p>
+</section>
+<section id="tafla-yfir-laplace-myndir-sja-10-1">
+<h3><span class="section-number">10.1.7. </span>Tafla yfir Laplace-myndir (Sjá §10.1)<a class="headerlink" href="#tafla-yfir-laplace-myndir-sja-10-1" title="Permalink to this heading"></a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+{\cal L}\{\cos\beta t\}(s) &amp;=
+\frac 12 {\cal L}\{e^{i\beta t}\}(s) +\frac 12{\cal L}\{e^{-i\beta t}\}(s)\\
+&amp;=\frac 12\left[\dfrac 1{s-i\beta}+\dfrac 1{s+i\beta}\right]
+=\dfrac s{s^2+\beta^2},\\
+{\cal L}\{\sin\beta t\}(s) &amp;=
+\frac 1{2i}{\cal L}\{e^{i\beta t}\}(s) -\frac 1{2i}{\cal L}\{e^{-i\beta t}\}(s)\\
+&amp;=\frac 1{2i}\left[\dfrac 1{s-i\beta}-\dfrac 1{s+i\beta}\right]
+=\dfrac {\beta}{s^2+\beta^2},\\
+{\cal L}\{\cosh \beta t\}(s) &amp;=
+\frac 12 {\cal L}\{e^{\beta t}\}(s) +\frac 12{\cal L}\{e^{-\beta t}\}(s)\\
+&amp;=\frac 12\left[\dfrac 1{s-\beta}+\dfrac 1{s+\beta}\right]
+=\dfrac s{s^2-\beta^2},\\
+{\cal L}\{\sinh \beta t\}(s) &amp;=
+\frac 1{2}{\cal L}\{e^{\beta t}\}(s) -\frac 1{2}{\cal L}\{e^{-i\beta t}\}(s)\\
+&amp;=\frac 1{2}\left[\dfrac 1{s-\beta}-\dfrac 1{s+\beta}\right]
+=\dfrac \beta{s^2-\beta^2},\\
+{\cal L}\{e^{\alpha t}t^{\beta}\}(s)
+&amp;=\dfrac{\Gamma(\beta+1)}{(s-\alpha)^{\beta+1}},\\
+{\cal L}\{e^{\alpha t}\cos \beta t\}(s)
+&amp;=\dfrac{s-\alpha}{(s-\alpha)^2+\beta^2},\\
+{\cal L}\{e^{\alpha t}\sin \beta t\}(s)
+&amp;=\dfrac{\beta}{(s-\alpha)^2+\beta^2},\\
+{\cal L}\{e^{\alpha t}\cosh \beta t\}(s)
+&amp;=\dfrac{s-\alpha}{(s-\alpha)^2-\beta^2},\\
+{\cal L}\{e^{\alpha t}\sinh \beta t\}(s)
+&amp;=\dfrac{\beta}{(s-\alpha)^2-\beta^2}.\end{aligned}\end{split}\]</div>
+</section>
+<section id="setning-sja-setning-10-2-1">
+<h3><span class="section-number">10.1.8. </span>Setning (Sjá Setning 10.2.1)<a class="headerlink" href="#setning-sja-setning-10-2-1" title="Permalink to this heading"></a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(u\in C^ m(\mathbb{R}_+)\)</span> og <span class="math notranslate nohighlight">\(u, u', u'', \dots, u^{(m-1)}\)</span>, eru af veldisvísisgerð, þá er <span class="math notranslate nohighlight">\({\cal L}\{u^{(m)}\}(s)\)</span> skilgreint fyrir öll <span class="math notranslate nohighlight">\(s\in {\mathbb{C}}\)</span> með <span class="math notranslate nohighlight">\(\operatorname{Re\, } s\)</span> nógu stórt og</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{u^{(m)}\}(s)=s^
+m{\cal L}\{u\}(s)-s^{m-1}u(0)-\cdots
+-su^{(m-2)}(0)-u^{(m-1)}(0).\]</div>
+<p>Sér í lagi gildir að ef <span class="math notranslate nohighlight">\(U(s)={\cal L}\{u(t)\}(s)\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{u'\}(s)  = sU(s)-u(0),\qquad\mbox{og}\qquad
+{\cal L}\{u''\}(s) =s^2U(s)-su(0)-u'(0).\]</div>
+</section>
+<section id="reikniafer-sja-10-2">
+<h3><span class="section-number">10.1.9. </span>Reikniaðferð (Sjá §10.2)<a class="headerlink" href="#reikniafer-sja-10-2" title="Permalink to this heading"></a></h3>
+<p>Leysa á upphafsgildisverkefni af taginu:</p>
+<div class="math notranslate nohighlight">
+\[a_mu^{(m)}+\cdots +a_1u'+a_0u=f(t), \qquad u(0)=b_0,\ u'(0)=b_1,\ldots,u^{(m-1)}(0)=b_{m-1}.\]</div>
+<p>Skref 1: Reiknið Laplace-mynd hvorrar hliðar fyrir sig. Setning 10.1.7. gefur aðferð til að reikna Laplace-mynd vinstri hliðarinnar.</p>
+<p>Skref 2: Notið jöfnuna sem kemur út úr Skrefi 1 til að fá formúlu fyrir <span class="math notranslate nohighlight">\(U(s)={\cal L}\{u(t)\}(s)\)</span>.</p>
+<p>Skref 3: Notið töflu eða andhverfa Laplace-ummyndun til að finna samfellt fall <span class="math notranslate nohighlight">\(u(t)\)</span> sem hefur <span class="math notranslate nohighlight">\(U(s)\)</span> sem fundið var í Skrefi 2 sem Laplace-mynd. Gætuð t.d. þurft að nota stofnbrotaliðun.</p>
+<p>Skref 4: Fallið <span class="math notranslate nohighlight">\(u(t)\)</span> sem fannst í Skrefi 3 er lausn upphafsgildisverkefnisins.</p>
+</section>
+</section>
+<section id="notkun-laplace-ummyndunar">
+<h2><span class="section-number">10.2. </span>Notkun Laplace-ummyndunar<a class="headerlink" href="#notkun-laplace-ummyndunar" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-sja-10-2">
+<h3><span class="section-number">10.2.1. </span>Skilgreining (Sjá §10.2)<a class="headerlink" href="#skilgreining-sja-10-2" title="Permalink to this heading"></a></h3>
+<p>Fyrir vigurgilt fall <span class="math notranslate nohighlight">\(u(t)=\big(u_1(t), \ldots, u_m(t)\big)\)</span> má skilgreina Laplace-mynd þannig að tekin er Laplace-mynd í hverju hniti fyrir sig,</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{u(t)\}(s)=\big({\cal L}\{u_1(t)\}(s), \ldots,{\cal L}\{u_m(t)\}(s)\big).\]</div>
+<p>Laplace-mynd fylkjagilds falls er reiknuð á sama hátt.</p>
+</section>
+<section id="setning-sja-setningu-10-2-4">
+<h3><span class="section-number">10.2.2. </span>Setning (Sjá Setningu 10.2.4)<a class="headerlink" href="#setning-sja-setningu-10-2-4" title="Permalink to this heading"></a></h3>
+<p>Um sérhvert <span class="math notranslate nohighlight">\(m\times m\)</span> fylki <span class="math notranslate nohighlight">\(A\)</span> gildir</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{e^{tA}\}(s) = (sI-A)^{-1}.\]</div>
+</section>
+<section id="upprifjun-sja-10-3-og-7-5">
+<h3><span class="section-number">10.2.3. </span>Upprifjun (Sjá §10.3 og §7.5)<a class="headerlink" href="#upprifjun-sja-10-3-og-7-5" title="Permalink to this heading"></a></h3>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(P(D)=a_mD^ m+\cdots+a_1D+a_0\)</span> sé línulegur afleiðuvirki með fastastuðla. Látum <span class="math notranslate nohighlight">\(g\in C^{\infty}(\mathbb{R})\)</span> vera fallið sem uppfyllir</p>
+<div class="math notranslate nohighlight">
+\[P(D)g=0,\qquad \mbox{með }
+g(0)=g'(0)=\cdots=g^{(m-2)}(0)=0,\mbox{ og }
+g^{(m-1)}(0)=1/a_m.\]</div>
+<p>Þá er <span class="math notranslate nohighlight">\(G(t,\tau)=g(t-\tau)\)</span> Green-fall virkjans <span class="math notranslate nohighlight">\(P(D)\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(a\)</span> er einhver punktur þá hefur upphafsgildisverkefnið</p>
+<div class="math notranslate nohighlight">
+\[P(D)u=f(t),\]</div>
+<p>með</p>
+<div class="math notranslate nohighlight">
+\[u(a)=u'(a)=\cdots=u^{(m-1)}(a)=0,\]</div>
+<p>ótvírætt ákvarðaða lausn <span class="math notranslate nohighlight">\(u_p\in C^m(I)\)</span> sem gefin er með
+formúlunni</p>
+<div class="math notranslate nohighlight">
+\[u_p(t) = \int_a^ t G(t,\tau)f(\tau) \, d\tau, \qquad t\in I,\]</div>
+<p>og <span class="math notranslate nohighlight">\(G(t,\tau)\)</span> er Green-fall virkjans <span class="math notranslate nohighlight">\(P(D)\)</span>.</p>
+</section>
+<section id="setning-sja-10-3">
+<h3><span class="section-number">10.2.4. </span>Setning (Sjá §10.3)<a class="headerlink" href="#setning-sja-10-3" title="Permalink to this heading"></a></h3>
+<p>Með sama táknmál og hér að ofan gildir að</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{g\}(s)=\frac{1}{P(s)}.\]</div>
+<p>Einnig gildir</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{u_p\}(s)={\cal L}\left\{\int_0^tg(t-\tau)f(\tau)\, d\tau\right\}(s)=
+{\cal L}\{g\}(s){\cal L}\{f\}(s).\]</div>
+</section>
+<section id="setning-sja-setning-10-3-1">
+<h3><span class="section-number">10.2.5. </span>Setning (Sjá Setning 10.3.1)<a class="headerlink" href="#setning-sja-setning-10-3-1" title="Permalink to this heading"></a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> og <span class="math notranslate nohighlight">\(g\)</span> eru föll af veldisvísisgerð og heildanleg á sérhverju bili <span class="math notranslate nohighlight">\([0,b]\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\left\{\int_0^tf(t-\tau)g(\tau)\, d\tau\right\}(s)=
+{\cal L}\{f\}(s){\cal L}\{g\}(s).\]</div>
+</section>
+<section id="fylgisetning-sja-fylgisetningu-10-3-2">
+<h3><span class="section-number">10.2.6. </span>Fylgisetning (Sjá Fylgisetningu 10.3.2)<a class="headerlink" href="#fylgisetning-sja-fylgisetningu-10-3-2" title="Permalink to this heading"></a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> er af veldisvísisgerð og heildanlegt á sérhverju bili <span class="math notranslate nohighlight">\([0,b]\)</span>, þá er</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\left\{\int_0^t f(\tau) \, d\tau\right\}(s) = \dfrac 1s
+{\cal L}\{f\}(s).\]</div>
+</section>
+<section id="setning-sja-setningu-10-2-1">
+<h3><span class="section-number">10.2.7. </span>Setning (Sjá Setningu 10.2.1)<a class="headerlink" href="#setning-sja-setningu-10-2-1" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:\mathbb{R}_+\to {\mathbb{C}}\)</span> vera fall af veldisvísigerð sem er heildanlegt á sérhverju bili <span class="math notranslate nohighlight">\([0,b]\)</span>. Þá er <span class="math notranslate nohighlight">\({\cal L}f\)</span> fágað á menginu <span class="math notranslate nohighlight">\(\{s\in {\mathbb{C}}\mid \operatorname{Re\, } s&gt;c\}\)</span> (þar sem <span class="math notranslate nohighlight">\(c\)</span> er fastinn úr 10.1.2.) og</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^k}{ds^k}{\cal L}\{f\}(s)=(-1)^k{\cal L}\{t^kf(t)\}(s),\qquad \operatorname{Re\, } s&gt;c.\]</div>
+</section>
+<section id="skilgreining-og-setning">
+<h3><span class="section-number">10.2.8. </span>Skilgreining og setning<a class="headerlink" href="#skilgreining-og-setning" title="Permalink to this heading"></a></h3>
+<p>Heaviside-fallið <span class="math notranslate nohighlight">\(H(x)\)</span> er skilgreint þannig að <span class="math notranslate nohighlight">\(H(t)=1\)</span> ef <span class="math notranslate nohighlight">\(t\geq 0\)</span> og <span class="math notranslate nohighlight">\(H(t)=0\)</span> ef <span class="math notranslate nohighlight">\(t&lt;0\)</span>.</p>
+<p>Fallið <span class="math notranslate nohighlight">\(H_a(t)=H(t-a)\)</span> er þannig að <span class="math notranslate nohighlight">\(H_a(t)=1\)</span> ef <span class="math notranslate nohighlight">\(t\geq a\)</span> og <span class="math notranslate nohighlight">\(H(t)=0\)</span> ef <span class="math notranslate nohighlight">\(t&lt;a\)</span>.</p>
+<p>Fyrir <span class="math notranslate nohighlight">\(a\geq 0\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{H_a\}(s)=\frac{e^{-as}}{s}.\]</div>
+</section>
+<section id="setning">
+<h3><span class="section-number">10.2.9. </span>Setning<a class="headerlink" href="#setning" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:\mathbb{R}_+\to {\mathbb{C}}\)</span> vera fall af veldisvísisgerð. Þá gildir um sérhvert <span class="math notranslate nohighlight">\(a\geq 0\)</span> að</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{H(t-a)f(t-a)\}(s) = e^{-as}{\cal L}\{f\}(s).\]</div>
+<p>þar sem fallið <span class="math notranslate nohighlight">\(t\mapsto H(t-a)f(t-a)\)</span> tekur gildið <span class="math notranslate nohighlight">\(0\)</span> fyrir öll <span class="math notranslate nohighlight">\(t&lt;a\)</span>.</p>
+</section>
+<section id="id3">
+<h3><span class="section-number">10.2.10. </span>Skilgreining og setning<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(a\)</span> vera gefna rauntölu. Skilgreinum fall <span class="math notranslate nohighlight">\(f_\epsilon(t)\)</span> þannig að <span class="math notranslate nohighlight">\(f_\epsilon(t)=1/\epsilon\)</span> ef <span class="math notranslate nohighlight">\(a&lt;t&lt;a+\epsilon\)</span> en <span class="math notranslate nohighlight">\(f(t)=0\)</span> fyrir öll önnur gildi á <span class="math notranslate nohighlight">\(t\)</span>. Athugið að ef <span class="math notranslate nohighlight">\(a&gt;0\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\int_0^\infty f_\epsilon(t)\,dt=1.\]</div>
+<p>Skilgreinum nú <span class="math notranslate nohighlight">\(\delta_a\)</span> sem „markgildið“ <span class="math notranslate nohighlight">\(\lim_{\epsilon\to 0}f_\epsilon\)</span>. Sérstaklega skilgreinum við Dirac delta fallið sem <span class="math notranslate nohighlight">\(\delta=\delta_0\)</span>. Athugið að <span class="math notranslate nohighlight">\(\delta_a(t)=\delta(t-a)\)</span>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Athugið að <span class="math notranslate nohighlight">\(\delta_a\)</span> er ekki venjulegt fall heldur útvíkkuð gerð af falli sem er kölluð dreififall.</p>
+</div>
+<p>Hægt er að reikna heildi af <span class="math notranslate nohighlight">\(\delta_a\)</span> og við fáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int_c^d \delta_a(t)\,dt=\left\{\begin{array}{ll}
+1 &amp; \mbox{ef }c\leq a\leq d,\\
+0 &amp; \mbox{annars.}
+\end{array}\right.\end{split}\]</div>
+<p>Auðvelt er að sjá að ef <span class="math notranslate nohighlight">\(c\leq a\leq d\)</span> þá er <span class="math notranslate nohighlight">\(\int_c^d f(t)\delta_a(t)\,dt=f(a)\)</span>. Sérstaklega gildir að</p>
+<div class="math notranslate nohighlight">
+\[{\cal L}\{\delta_a\}(s)=e^{-as}.\]</div>
+</section>
+<section id="setning-andhvefuformula-fourier-mellin">
+<h3><span class="section-number">10.2.11. </span>Setning (Andhvefuformúla Fourier-Mellin)<a class="headerlink" href="#setning-andhvefuformula-fourier-mellin" title="Permalink to this heading"></a></h3>
+<p>Ef <span class="math notranslate nohighlight">\(f:\mathbb{R}_+\to {\mathbb{C}}\)</span> er samfellt deildanlegt á köflum og uppfyllir <span class="math notranslate nohighlight">\(|f(t)|\leq Me^{ct}\)</span>, <span class="math notranslate nohighlight">\(t\in \mathbb{R}_+\)</span>, þar sem <span class="math notranslate nohighlight">\(M\)</span> og <span class="math notranslate nohighlight">\(c\)</span> eru jákvæðir fastar, þá gildir um sérhvert <span class="math notranslate nohighlight">\(\xi&gt;c\)</span> og sérhvert <span class="math notranslate nohighlight">\(t&gt;0\)</span> að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\tfrac 12(f(t+)+f(t-)) &amp;= \lim_{R\to +\infty} \dfrac 1{2\pi}
+\int_{-R}^{+R}e^{(\xi+i\eta)t}{\cal L} f(\xi+i\eta) \, d\eta\\
+&amp;= \lim_{R\to +\infty} \dfrac 1{2\pi i}
+\int_{\xi-iR}^{\xi+iR}e^{\zeta t}{\cal L} f(\zeta) \, d\zeta,\nonumber\end{aligned}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\int_{\xi-iR}^{\xi+iR}\)</span> táknar að heildað sé eftir línustrikinu með upphafspunktinn <span class="math notranslate nohighlight">\(\xi-iR\)</span> og lokapunktinn <span class="math notranslate nohighlight">\(\xi+iR\)</span>. Ef <span class="math notranslate nohighlight">\({\cal L} f(\xi+i\eta)\)</span> er í <span class="math notranslate nohighlight">\(L^ 1(\mathbb{R})\)</span> sem fall af <span class="math notranslate nohighlight">\(\eta\)</span>, þá er <span class="math notranslate nohighlight">\(f\)</span> samfellt í <span class="math notranslate nohighlight">\(t\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+f(t)&amp;=  \dfrac 1{2\pi}
+\int_{-\infty}^{+\infty}e^{(\xi+i\eta)t}{\cal L} f(\xi+i\eta) \, d\eta\\
+&amp;= \dfrac 1{2\pi i}
+\int_{\xi-i\infty}^{\xi+i\infty}e^{\zeta t}{\cal L} f(\zeta) \,
+d\zeta,\nonumber\end{aligned}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\int_{\xi-i\infty}^{\xi+i\infty}\)</span> táknar að heildað sé eftir línunni <span class="math notranslate nohighlight">\(\{\xi+i\eta; \eta\in \mathbb{R}\}\)</span> í stefnu vaxandi <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">10.2.12. </span>Setning<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(f:\mathbb{R}_+\to {\mathbb{C}}\)</span> vera samfellt deildanlegt á köflum og af veldisvísisgerð, með <span class="math notranslate nohighlight">\(|f(t)|\leq Me^{ct}\)</span>, <span class="math notranslate nohighlight">\(t&gt;0\)</span>, og gerum ráð fyrir að hægt sé að framlengja <span class="math notranslate nohighlight">\({\cal L} f\)</span> yfir í fágað fall á <span class="math notranslate nohighlight">\({\mathbb{C}}\setminus A\)</span>, þar sem <span class="math notranslate nohighlight">\(A\)</span> er endanlegt mengi. Ef <span class="math notranslate nohighlight">\(\xi&gt;c\)</span>, <span class="math notranslate nohighlight">\(M_r\)</span> táknar hálfhringinn sem stikaður er með <span class="math notranslate nohighlight">\(\gamma_r(\theta)=\xi+ire^{i\theta}\)</span>, <span class="math notranslate nohighlight">\(\theta\in [0,\pi]\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\max_{\zeta\in M_r}|{\cal L} f(\zeta)|\to 0, \qquad r\to +\infty,\]</div>
+<p>þá er</p>
+<div class="math notranslate nohighlight">
+\[\frac 12(f(t+)+f(t-))=
+\sum_{\alpha\in A}\operatorname{Res}(e^{\zeta t}{\cal L} f(\zeta),\alpha).\]</div>
+<p>Ef <span class="math notranslate nohighlight">\(f\)</span> er samfellt í <span class="math notranslate nohighlight">\(t\)</span>, þá gildir</p>
+<div class="math notranslate nohighlight">
+\[f(t)= \sum_{\alpha\in A}\operatorname{Res}(e^{\zeta t}{\cal L} f(\zeta),\alpha).\]</div>
+</section>
+<section id="fylgisetning">
+<h3><span class="section-number">10.2.13. </span>Fylgisetning<a class="headerlink" href="#fylgisetning" title="Permalink to this heading"></a></h3>
+<p>Notum áfram táknmálið í 10.2.3. Táknum með <span class="math notranslate nohighlight">\(A\)</span> núllstöðvamengi margliðunnar <span class="math notranslate nohighlight">\(P(\zeta)\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[g(t)= \sum\limits_{\alpha\in A}
+\operatorname{Res}\bigg( \dfrac {e^{t\zeta}}{P(\zeta)},\alpha\bigg).\]</div>
+<hr class="docutils" />
+<p><em>If it’s time to go, remember what you’re leaving. Remember the best.</em></p>
+<p>- The Doctor, Doctor Who</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli09/" class="btn btn-neutral float-left" title="9. Línuleg afleiðujöfnuhneppi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../vidauki/" class="btn btn-neutral float-right" title="Viðauki" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+</body>
+</html>
