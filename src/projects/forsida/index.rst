@@ -87,6 +87,10 @@ Námskeið við HÍ
   :text: Nánar um Edbook-kerfið
   :link: https://edbook.hi.is/kynning/
 
+.. button::
+   :text: Sniðmát fyrir ný námskeið
+   :link: https://edbook.hi.is/tmp001g/
+
 Þakkir
 ======
 
