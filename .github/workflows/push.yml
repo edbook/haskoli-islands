@@ -68,7 +68,7 @@ jobs:
           version: "1.2.1"
           virtualenvs-create: true
           virtualenvs-in-project: true
-      - name: 🏗️ Build
+      - name: 🏗️ Build affected (merge)
         id: build
         run: |
           source .venv/bin/activate

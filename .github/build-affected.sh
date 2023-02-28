@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -euox pipefail
 
 base_sha=${1:-origin/main}
 head_sha=${2:-HEAD}
