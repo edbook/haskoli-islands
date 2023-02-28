@@ -73,7 +73,8 @@ jobs:
         run: |
           source .venv/bin/activate
           poetry --version
-          make build-all
+          ./.github/build-affected.sh ${{ github.event.base_ref }} ${{ github.event.before }}
+
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
