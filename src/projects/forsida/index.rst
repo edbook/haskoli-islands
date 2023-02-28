@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
 
 
-Edbook :)
-=========
+Edbook
+======
 
 Hér eru rafrænar kennslubækur opnar öllum sem geta haft gagn af þeim.
 
