@@ -1,4 +1,0 @@
-Orðaskrá
-========
-
-.. hoverlist::
