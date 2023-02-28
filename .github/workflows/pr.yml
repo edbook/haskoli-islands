@@ -3,6 +3,11 @@ env:
   SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
   SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
   SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
+  BUCKET_NAME: "edbook-dev"
+  AWS_REGION: "eu-west-1"
+permissions:
+  id-token: write
+  contents: read
 on:
   pull_request:
     branches: [main]
@@ -57,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Set up python
@@ -116,15 +121,24 @@ jobs:
           poetry --version
           for i in $(git diff --dirstat=files origin/main ${{github.sha}} | grep "src/projects" | cut -d "/" -f3); do make build project=${i}; done
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      # - name: 📂 Sync files
+      #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      #   with:
+      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
+      #     username: ${{ secrets.OK_FTP_USER }}
+      #     password: ${{ secrets.OK_FTP_PASSWORD }}
+      #     local-dir: ${{ github.workspace }}/_build/
+      #     dry-run: false
+      #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          server: ${{ secrets.OK_FTP_IP_ADDRESS }}
-          username: ${{ secrets.OK_FTP_USER }}
-          password: ${{ secrets.OK_FTP_PASSWORD }}
-          local-dir: ${{ github.workspace }}/_build/
-          dry-run: false
-          server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+          role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
+          role-session-name: github-deploy
+          aws-region: ${{ env.AWS_REGION }}
+      - name: 📂 Sync files to s3
+        run: |
+          aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --cache-control max-age=0,no-cache,no-store,must-revalidate
 
       # - name: Upload from public_html via FTP
       #   uses: airvzxf/ftp-deployment-action@latest
