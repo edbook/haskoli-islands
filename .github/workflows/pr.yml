@@ -110,7 +110,7 @@ jobs:
         run: |
           source .venv/bin/activate
           poetry --version
-          ./.github/build-affected.sh ${{ github.event.pull_request.base.sha }} origin/main
+          ./.github/build-affected.sh origin/main ${{ github.head_ref }}
 
       # - name: 📂 Sync files
       #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
