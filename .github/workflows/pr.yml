@@ -28,17 +28,17 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     outputs:
-      branch_name: ${{ steps.extract_branch.outputs.branch_name }}
+      branch_name: ${{ steps.extract_branch.outputs.BRANCH_NAME }}
     steps:
       - name: Extract branch name
         id: extract_branch
         shell: bash
         run: |
-          echo "::set-output name=branch_name::$(echo ${GITHUB_REF#refs/heads/})"
+          echo "{BRANCH_NAME}={$(echo ${GITHUB_REF#refs/heads/})}" >> $GITHUB_OUTPUT
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
       - name: Install Poetry
@@ -49,7 +49,7 @@ jobs:
           virtualenvs-in-project: true
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
@@ -66,12 +66,12 @@ jobs:
         with:
           fetch-depth: 0
       - name: Set up python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
@@ -165,7 +165,7 @@ jobs:
     if: github.event.action == 'opened'
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Notify open PR
         run: |
           content_title="Nýtt PR opnað"
@@ -212,7 +212,7 @@ jobs:
     if: github.event.action == 'closed' && github.event.pull_request.merged == true
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Notify merge
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
@@ -259,14 +259,14 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Notify build or deploy failed
         run: |
           workflow_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           content_title="Eitthvað fór úrskeiðis ☠️"
-          title="${{ needs.setup.outputs.branch_name }}"
+          title="${{ env.BRANCH_NAME }}"
           color=16711680
-          description="Ekki tókst að byggja og/eða deploya branchinu _${{ needs.setup.outputs.branch_name }}_"
+          description="Ekki tókst að byggja og/eða deploya branchinu _${{ env.BRANCH_NAME }}_"
           url="$workflow_url"
           author_name=${{ github.event.push.sender.login}}
           author_url=${{ github.event.push.sender.url}}
