@@ -129,9 +129,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
       - name: 📂 Sync files to s3
         run: |
-          aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }}
-      # aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --delete --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
-
+          aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
       # - name: Upload from public_html via FTP
       #   uses: airvzxf/ftp-deployment-action@latest
       #   with:
