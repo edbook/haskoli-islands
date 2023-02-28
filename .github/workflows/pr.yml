@@ -97,17 +97,6 @@ jobs:
       # - name: Test SSH connection
       #   run: |
       #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-      - name: 🏗️ Build
-        # if: github.event_name != 'pull_request'
-        id: build
-        run: |
-          source .venv/bin/activate
-          poetry --version
-          make build-all
-          echo "#### Build destination ####"
-          set -x -e
-          ls -d ${{ github.workspace }}/_build/*
-          echo "{DEST_PATH}={${{ github.head_ref }}}" >> $GITHUB_OUTPUT
 
       # - name: Deploy branch
       #   id: deploy-branch
