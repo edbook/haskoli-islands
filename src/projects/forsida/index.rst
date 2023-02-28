@@ -105,7 +105,7 @@ með einum eða öðrum hætti og fá kærar þakkir fyrir:
 - Guðný Halldórsdóttir
 - Hans Adolf Linnet
 - Huld Hvönn Kristinsdóttir
-- Jón Levy
+- Jón Levy Guðmundsson
 - Júlía Þóra Oddsdóttir
 - Rakel María Brynjólfsdóttir
 - Símon Böðvarsson
