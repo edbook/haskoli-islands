@@ -40,7 +40,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
-#    "sphinx_search.extension",
+    #    "sphinx_search.extension",
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #    'katex.katex',
@@ -80,7 +80,7 @@ extensions = [
     # 'Sphinx_ext.iframe',
     # 'Sphinx_ext.button'
     "sphinxcontrib.youtube",
-    "sphinx_rtd_dark_mode"
+    "sphinx_rtd_dark_mode",
 ]
 
 # -- Custom extension options and paths --------------------------------------
@@ -196,10 +196,10 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_path = ["_themes"]
 
 html_context = {
-  'display_github': True,
-  'github_user': 'edbook',
-  'github_repo': 'haskoli-islands',
-  'github_version': 'master/src/projects/stae104g/',
+    "display_github": True,
+    "github_user": "edbook",
+    "github_repo": "haskoli-islands",
+    "github_version": "master/src/projects/stae104g/",
 }
 
 html_permalinks = True
@@ -441,7 +441,7 @@ texinfo_documents = [
 
 # A unique identification for the text.
 # epub_uid = ''
-# Should be inserted before the pages created by sphinx.
+# should be inserted before the pages created by sphinx.
 # The format is a list of tuples containing the path and title.
 # epub_pre_files = []
 

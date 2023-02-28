@@ -1,0 +1,134 @@
+name: edbook
+env:
+  SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
+  SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
+  SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
+  BUCKET_NAME: "edbook-dev"
+  AWS_REGION: "eu-west-1"
+permissions:
+  id-token: write
+  contents: read
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "cli/**"
+      - ".github/**"
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    outputs:
+      branch_name: ${{ steps.extract_branch.outputs.BRANCH_NAME }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: "1.2.1"
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install dependencies
+        run: poetry install
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+  build-all:
+    needs: [setup]
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: "1.2.1"
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: 🏗️ Build affected (merge)
+        id: build
+        run: |
+          source .venv/bin/activate
+          poetry --version
+          ./.github/build-affected.sh ${GITHUB_SHA} ${{ github.event.before }}
+
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
+          role-session-name: github-deploy
+          aws-region: ${{ env.AWS_REGION }}
+      - name: 📂 Sync files to s3
+        run: |
+          aws s3 sync _build/forsida/ s3://${{ env.BUCKET_NAME }}/forsida --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
+          aws s3 sync _build s3://${{ env.BUCKET_NAME }}/ --exclude "_build/forsida" --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
+
+  notify-discord-pr:
+    name: Notify Discord (open PR)
+    runs-on: ubuntu-20.04
+    if: github.event.action == 'opened'
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Notify open PR
+        run: |
+          content_title="Nýtt PR opnað"
+          title="${{ github.event.pull_request.title }}"
+          color=2061822
+          description="${{ github.event.pull_request.body }}"
+          url=${{ github.event.pull_request.html_url }}
+          author_name=${{ github.event.pull_request.user.login}}
+          author_url=${{ github.event.pull_request.user.url}}
+          author_avatar=${{ github.event.pull_request.user.avatar_url}}
+          branch=${{ github.head_ref }}
+
+          payload=$(cat <<EOF
+          {
+            "content": "$content_title",
+            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+            "embeds": [
+              {
+                "title": "$title",
+                "description": "$description",
+                "url": "$url",
+                "color": "$color",
+                "fields": [
+                  "name": "url",
+                  "value": "[Skoða á edbook](https://edbook.hi.is/staging/edbook/${branch})"
+                ]
+                "author": {
+                  "name": "$author_name",
+                  "url": "$author_url",
+                  "icon_url": "$author_avatar"
+                }
+              }
+            ]
+          }
+          EOF
+          )
+          ./.github/discord.sh  \
+            -w ${{ secrets.DISCORD_WEBHOOK }} \
+            -c "$payload"

@@ -3,14 +3,19 @@ env:
   SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
   SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
   SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
+  BUCKET_NAME: "edbook-dev"
+  AWS_REGION: "eu-west-1"
+permissions:
+  id-token: write
+  contents: read
 on:
   pull_request:
-    branches: [ main ]
-    types: [ opened, synchronize, closed ]
+    branches: [main]
+    types: [opened, synchronize, closed]
     paths:
-      - 'src/**'
-      - 'cli/**'
-      - '.github/**'
+      - "src/**"
+      - "cli/**"
+      - ".github/**"
   # push:
   #   paths:
   #     - 'src/**'
@@ -23,17 +28,17 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     outputs:
-      branch_name: ${{ steps.extract_branch.outputs.branch_name }}
+      branch_name: ${{ steps.extract_branch.outputs.BRANCH_NAME }}
     steps:
       - name: Extract branch name
         id: extract_branch
         shell: bash
         run: |
-          echo "::set-output name=branch_name::$(echo ${GITHUB_REF#refs/heads/})"
+          echo "{BRANCH_NAME}={$(echo ${GITHUB_REF#refs/heads/})}" >> $GITHUB_OUTPUT
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
       - name: Install Poetry
@@ -44,7 +49,7 @@ jobs:
           virtualenvs-in-project: true
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
@@ -57,14 +62,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Set up python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
       - name: Load cached venv
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
@@ -74,90 +81,105 @@ jobs:
           version: "1.2.1"
           virtualenvs-create: true
           virtualenvs-in-project: true
-      - name: Configure SSH
-        run: |
-          echo "#### Creating ~/.ssh/config from secrets ####"
-          mkdir -p ~/.ssh/
-          echo "$SSH_KEY" > ~/.ssh/staging.key
-          chmod 600 ~/.ssh/staging.key
-          cat >>~/.ssh/config <<END
-          Host staging
-            HostName $SSH_HOST
-            User $SSH_USER
-            IdentityFile ~/.ssh/staging.key
-            StrictHostKeyChecking no
-          END
-      - name: Test SSH connection
-        run: |
-          ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-      - name: Build
-        id: build
+      # - name: Configure SSH
+      #   run: |
+      #     echo "#### Creating ~/.ssh/config from secrets ####"
+      #     mkdir -p ~/.ssh/
+      #     echo "$SSH_KEY" > ~/.ssh/staging.key
+      #     chmod 600 ~/.ssh/staging.key
+      #     cat >>~/.ssh/config <<END
+      #     Host staging
+      #       HostName $SSH_HOST
+      #       User $SSH_USER
+      #       IdentityFile ~/.ssh/staging.key
+      #       StrictHostKeyChecking no
+      #     END
+      # - name: Test SSH connection
+      #   run: |
+      #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
+
+      # - name: Deploy branch
+      #   id: deploy-branch
+      #   if: github.event.action == 'synchronize' || github.event.action == 'opened'
+      #   run: |
+      #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
+
+      - name: 🚧 Build affected (pr)
+        if: github.event_name == 'pull_request'
+        id: build-affected
         run: |
           source .venv/bin/activate
           poetry --version
-          make build-all
-          echo "#### Build destination ####"
-          set -x -e
-          ls -d ${{ github.workspace }}/_build/*
-      - name: Deploy branch
-        id: deploy-branch
-        if: github.event.action == 'synchronize' || github.event.action == 'opened'
-        run: |
-          ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
-      - name: Deploy production
-        if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
-        run: |
-            ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
-      - name: Delete stale deployments
-        if: github.event.action == 'closed' && github.head_ref != 'main'
-        run: |
-          ssh staging 'rm -r ~/public_html/staging/edbook/${{ github.head_ref }}'
-  notify-discord-pr:
-    name: Notify Discord (open PR)
-    runs-on: ubuntu-20.04
-    if: github.event.action == 'opened'
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
-      - name: Notify open PR
-        run: |
-          content_title="Nýtt PR opnað"
-          title="${{ github.event.pull_request.title }}"
-          color=2061822
-          description="${{ github.event.pull_request.body }}"
-          url=${{ github.event.pull_request.html_url }}
-          author_name=${{ github.event.pull_request.user.login}}
-          author_url=${{ github.event.pull_request.user.url}}
-          author_avatar=${{ github.event.pull_request.user.avatar_url}}
-          branch=${{ github.head_ref }}
+          ./.github/build-affected.sh ${{ github.event.pull_request.base.sha }} ${GITHUB_SHA}
 
-          payload=$(cat <<EOF
-          {
-            "content": "$content_title",
-            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
-            "embeds": [
-              {
-                "title": "$title",
-                "description": "$description",
-                "url": "$url",
-                "color": "$color",
-                "fields": [
-                  "name": "url",
-                  "value": "[Skoða á edbook](https://edbook.hi.is/staging/edbook/${branch})"
-                ]
-                "author": {
-                  "name": "$author_name",
-                  "url": "$author_url",
-                  "icon_url": "$author_avatar"
-                }
-              }
-            ]
-          }
-          EOF
-          )
-          ./.github/discord.sh  \
-            -w ${{ secrets.DISCORD_WEBHOOK }} \
-            -c "$payload"
+      # - name: 📂 Sync files
+      #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      #   with:
+      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
+      #     username: ${{ secrets.OK_FTP_USER }}
+      #     password: ${{ secrets.OK_FTP_PASSWORD }}
+      #     local-dir: ${{ github.workspace }}/_build/
+      #     dry-run: false
+      #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
+          role-session-name: github-deploy
+          aws-region: ${{ env.AWS_REGION }}
+      - name: 📂 Sync files to s3
+        run: |
+          aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
+      # - name: Upload from public_html via FTP
+      #   uses: airvzxf/ftp-deployment-action@latest
+      #   with:
+      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
+      #     user: ${{ secrets.OK_FTP_USER }}
+      #     password: ${{ secrets.OK_FTP_PASSWORD }}
+      #     local_dir: ${{ github.workspace }}/_build/
+      #     remote_dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+      #     no_symlinks: "false"
+      #     ftp_use_feat: "true"
+
+      # - name: Deploy production
+      #   if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
+      #   run: |
+      #       ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
+      # - name: Delete stale deployments
+      #   if: github.event.action == 'closed' && github.head_ref != 'main'
+      #   run: |
+      #     ssh staging 'rm -r ~/public_html/staging/edbook/${{ github.head_ref }}'
+  # announce-affected:
+  #   name: Announce affected on PR
+  #   runs-on: ubuntu-20.04
+  #   if: github.event.action == 'opened'
+  #   steps:
+  #     - name: Find Comment
+  #       uses: peter-evans/find-comment@v2
+  #       id: fc
+  #       with:
+  #         issue-number: ${{ github.event.pull_request.number }}
+  #         comment-author: "github-actions[bot]"
+  #         body-includes: Affected projects
+
+  #     - name: Create comment
+  #       if: steps.fc.outputs.comment-id == ''
+  #       uses: peter-evans/create-or-update-comment@v2
+  #       with:
+  #         issue-number: ${{ github.event.pull_request.number }}
+  #         body: |
+  #           This comment was written by a bot!
+  #         reactions: rocket
+
+  #     - name: Update comment
+  #       if: steps.fc.outputs.comment-id != ''
+  #       uses: peter-evans/create-or-update-comment@v2
+  #       with:
+  #         comment-id: ${{ steps.fc.outputs.comment-id }}
+  #         body: |
+  #           This comment has been updated!
+  #         reactions: hooray
+
   notify-discord-merge:
     needs: [build-all]
     name: Notify Discord (merged to main)
@@ -165,7 +187,7 @@ jobs:
     if: github.event.action == 'closed' && github.event.pull_request.merged == true
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Notify merge
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
@@ -212,14 +234,14 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Notify build or deploy failed
         run: |
           workflow_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           content_title="Eitthvað fór úrskeiðis ☠️"
-          title="${{ needs.setup.outputs.branch_name }}"
+          title="${{ env.BRANCH_NAME }}"
           color=16711680
-          description="Ekki tókst að byggja og/eða deploya branchinu _${{ needs.setup.outputs.branch_name }}_"
+          description="Ekki tókst að byggja og/eða deploya branchinu _${{ env.BRANCH_NAME }}_"
           url="$workflow_url"
           author_name=${{ github.event.push.sender.login}}
           author_url=${{ github.event.push.sender.url}}

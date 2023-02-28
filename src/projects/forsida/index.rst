@@ -95,7 +95,7 @@ Námskeið við HÍ
 Þakkir
 ======
 
-Eftirfarandi einstaklingar hafa komið að verkefninu 
+Eftirfarandi einstaklingar hafa komið að verkefninu
 með einum eða öðrum hætti og fá kærar þakkir fyrir:
 
 - Alexander Berg Garðarsson
@@ -105,7 +105,7 @@ með einum eða öðrum hætti og fá kærar þakkir fyrir:
 - Guðný Halldórsdóttir
 - Hans Adolf Linnet
 - Huld Hvönn Kristinsdóttir
-- Jón Leví 
+- Jón Levy
 - Júlía Þóra Oddsdóttir
 - Rakel María Brynjólfsdóttir
 - Símon Böðvarsson
@@ -114,5 +114,5 @@ með einum eða öðrum hætti og fá kærar þakkir fyrir:
 - Una Kamilla Steinsen
 
 Verkefnið hefur verið unnið með styrk frá Kennslumálasjóði
-Háskóla Íslands og aðstoðar Stræðfræðistofu Raunvísindastofnunar. 
-      
+Háskóla Íslands og aðstoðar Stræðfræðistofu Raunvísindastofnunar.
+

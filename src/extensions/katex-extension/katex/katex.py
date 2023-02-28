@@ -97,7 +97,7 @@ def builder_inited(app):
         app.add_javascript(mathpath)
 
     if app.config.katex_css:
-        app.add_stylesheet(app.config.katex_css)
+        app.add_css_file(app.config.katex_css)
 
 
 def setup(app):
