@@ -15,7 +15,13 @@ hennar er hýst á Github, https://github.com/edbook/haskoli-islands.
 Undirbúningsefni
 ================
 
-Á þessum síðum er efni til undirbúningsefni í raunvísindum fyrir háskólanema.
+.. .. toctree::
+    :maxdepth: 1
+    :glob:
+
+    undirbuningur
+
+Á þessum síðum er undirbúningsefni fyrir háskólanema.
 
 .. button::
   :text: Undirbúningur í stærðfræði
@@ -29,6 +35,7 @@ Undirbúningsefni
   :text: Undirbúningur í efnafræði
   :link: undirbuningur_efn/index.html
 
+Nánari upplýsingar hér: `edbook.hi.is/undirbuningur <https://edbook.hi.is/undirbuningur>`_.
 
 ----------------------
 
