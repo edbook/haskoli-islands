@@ -8,7 +8,6 @@ Stærðfræðigreining IV (STÆ401G), Háskóli Íslands
 
 .. toctree::
 	formali
-	umnamskeidid
 
 .. toctree::
    :maxdepth: 2
