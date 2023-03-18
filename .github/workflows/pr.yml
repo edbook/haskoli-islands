@@ -6,8 +6,12 @@ env:
   BUCKET_NAME: "edbook-dev"
   AWS_REGION: "eu-west-1"
 permissions:
-  id-token: write
   contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 on:
   pull_request:
     branches: [main]
@@ -130,25 +134,16 @@ jobs:
       - name: 📂 Sync files to s3
         run: |
           aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
-      # - name: Upload from public_html via FTP
-      #   uses: airvzxf/ftp-deployment-action@latest
-      #   with:
-      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
-      #     user: ${{ secrets.OK_FTP_USER }}
-      #     password: ${{ secrets.OK_FTP_PASSWORD }}
-      #     local_dir: ${{ github.workspace }}/_build/
-      #     remote_dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
-      #     no_symlinks: "false"
-      #     ftp_use_feat: "true"
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "_build"
+      - name: 📂 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
-      # - name: Deploy production
-      #   if: github.event.action == 'closed' && github.event.pull_request.merged == true && github.base_ref == 'main'
-      #   run: |
-      #       ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "prod"
-      # - name: Delete stale deployments
-      #   if: github.event.action == 'closed' && github.head_ref != 'main'
-      #   run: |
-      #     ssh staging 'rm -r ~/public_html/staging/edbook/${{ github.head_ref }}'
   # announce-affected:
   #   name: Announce affected on PR
   #   runs-on: ubuntu-20.04
