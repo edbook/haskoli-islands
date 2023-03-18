@@ -5,9 +5,17 @@ env:
   SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
   BUCKET_NAME: "edbook-dev"
   AWS_REGION: "eu-west-1"
+
 permissions:
-  id-token: write
   contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 on:
   push:
     branches: [main]
@@ -47,6 +55,9 @@ jobs:
     needs: [setup]
     name: Build and deploy
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -74,7 +85,6 @@ jobs:
           source .venv/bin/activate
           poetry --version
           ./.github/build-affected.sh ${GITHUB_SHA} ${{ github.event.before }}
-
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -85,6 +95,15 @@ jobs:
         run: |
           aws s3 sync _build/forsida/ s3://${{ env.BUCKET_NAME }}/forsida --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
           aws s3 sync _build s3://${{ env.BUCKET_NAME }}/ --exclude "_build/forsida" --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "_build"
+      - name: 📂 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
   notify-discord-pr:
     name: Notify Discord (open PR)
