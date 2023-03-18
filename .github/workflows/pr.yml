@@ -15,7 +15,7 @@ concurrency:
 on:
   pull_request:
     branches: [main]
-    types: [opened, synchronize, closed]
+    types: [opened, synchronize, closed, labeled]
     paths:
       - "src/**"
       - "cli/**"
@@ -109,12 +109,20 @@ jobs:
       #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
 
       - name: 🚧 Build affected (pr)
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && github.event.label.name != 'build-all'
         id: build-affected
         run: |
           source .venv/bin/activate
           poetry --version
           ./.github/build-affected.sh ${{ github.event.pull_request.base.sha }} ${GITHUB_SHA}
+
+      - name: 🚧 Build all (pr)
+        if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
+        id: build-all
+        run: |
+          source .venv/bin/activate
+          poetry --version
+          make build-all
 
       # - name: 📂 Sync files
       #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -134,6 +142,9 @@ jobs:
       - name: 📂 Sync files to s3
         run: |
           aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
+      - name: 📂 prepare files for Github pages
+        run: |
+          mv _build/forsida/* _build/
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
