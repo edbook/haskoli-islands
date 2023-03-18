@@ -126,7 +126,7 @@ jobs:
       #     dry-run: false
       #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
       - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
           role-session-name: github-deploy
