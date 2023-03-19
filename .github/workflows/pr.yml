@@ -62,7 +62,7 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
   build-all:
     needs: [setup]
-    name: Build and deploy feature release
+    name: Deploy feature
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
