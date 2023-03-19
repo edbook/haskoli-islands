@@ -22,7 +22,7 @@ import sys
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath("."))
-sys.path.append(os.path.abspath("../../extensions"))
+# sys.path.append(os.path.abspath("../../extensions"))
 from eqt_ext import (
     get_eqt_ext_static_dir,  # Verður að koma eftir að bæta extensions í path
 )
@@ -48,10 +48,10 @@ extensions = [
     # see https://github.com/nyergler/hieroglyph
     #'hieroglyph',
     # Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "ggbextension.ggb",
+    "sphinxcontrib.geogebra",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     "sphinx_togglebutton",
     "eqt_ext.eqt",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
@@ -60,7 +60,7 @@ extensions = [
     #    'sagecell.sagecell',
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    "hoverrole.hoverrole",
+    "sphinxcontrib.hoverrole",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     #    'analytics.analytics',
     # Extension for embedding datacamp-light which enables constructing simple programming exercises

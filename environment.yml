@@ -1,0 +1,25 @@
+name: edbook-haskoli-islands
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pypandoc=1.5
+  - sphinx=6.1
+  - python=3.10
+  - typer=0.4.1
+  - sphinx-rtd-theme=1.2.0
+  - sphinxcontrib-youtube
+  - pip=23.0.1
+  - pip:
+    - sphinx-ext-eqt==1.4
+    - sphinx-togglebutton==0.3.2
+    - sphinxcontrib-katex==0.9.4
+    - sphinxcontrib-custombutton @ https://github.com/edbook/sphinxcontrib-custombutton/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-datacamp @ https://github.com/edbook/sphinxcontrib-datacamp/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-geogebra @ https://github.com/edbook/sphinxcontrib-geogebra/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-hoverrole @ https://github.com/edbook/sphinxcontrib-hoverrole/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-panopto @ https://github.com/edbook/sphinxcontrib-panopto/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-sagecell @ https://github.com/edbook/sphinxcontrib-sagecell/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-scrolldepth @ https://github.com/edbook/sphinxcontrib-scrolldepth/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-toggleblock @ https://github.com/edbook/sphinxcontrib-toggleblock/archive/refs/tags/v2.0.zip
+prefix: /home/bsm/github/haskoli-islands/envs
