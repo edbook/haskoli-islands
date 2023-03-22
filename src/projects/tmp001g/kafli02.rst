@@ -3,27 +3,25 @@ Extensions
 
 .. ggb:: mkyudgwh
 
-Toggle-block
+Togglebutton
 ------------
 
-.. begin-toggle::
-  :label: Sýna útleiðslu á hreyfijöfnum
-  :starthidden: True
+.. admonition:: Útleiðasla á hreyfijöfnum
+   :class: setning, dropdown
 
-Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
+    Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
 
-.. math::
-  \begin{aligned}
-    &\text{Upphaflega jafnan} &    a &=\frac{dv(t)}{dt} \\
-    &\text{Umritum} &    dv(t) &=  a\cdot dt \\
-    &\text{Heildum beggja vegna} &     \int_0^t dv &= a \cdot \int_0^t dt \\
-    &\text{ } &       v(t)-v(0) &= a\cdot (t-0) \\
-    &\text{} & v(t) &= a\cdot t +v_0
-  \end{aligned}
+    .. math::
+      \begin{aligned}
+        &\text{Upphaflega jafnan} &    a &=\frac{dv(t)}{dt} \\
+        &\text{Umritum} &    dv(t) &=  a\cdot dt \\
+        &\text{Heildum beggja vegna} &     \int_0^t dv &= a \cdot \int_0^t dt \\
+        &\text{ } &       v(t)-v(0) &= a\cdot (t-0) \\
+        &\text{} & v(t) &= a\cdot t +v_0
+      \end{aligned}
 
-sem er einmitt jafnan fyrir hraða sem fall af tíma.
+    sem er einmitt jafnan fyrir hraða sem fall af tíma.
 
-.. end-toggle::
 
 Buttons with links
 ~~~~~~~~~~~~~~~~~~

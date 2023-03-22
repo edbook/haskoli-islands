@@ -42,7 +42,7 @@ extensions = [
     "sagecell.sagecell",
     #    'sphinx.ext.graphviz',
     #    'sagecellext',
-    "toggleblock.toggleBlock",
+    "sphinx_togglebutton",
     #    'hieroglyph',
 ]
 
@@ -330,3 +330,10 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
+
+
+# Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
+hint_indent = (
+    r"\00a0" * 14
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2
