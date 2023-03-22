@@ -1,15 +1,15 @@
 .eqt-block {
-    background-color: #faddb9;
+    background-color: #f8f8f8;
     padding: 14px;
     margin-bottom: 28px;
 }
 
 .eqt-block.errored {
-    background-color: #faddb9;
+    background-color: #fff2f2;
 }
 
 .eqt-block.success {
-    background-color: #faddb9;
+    background-color: #f0fcf5;
 }
 
 .eqt-block .eqt-block-questions > p:first-child {
@@ -17,11 +17,11 @@
 }
 
 .eqt-block .eqt-answer-list label.correct {
-    color: #1fa11d;
+    color: #1abc9c;
 }
 
 .eqt-block .eqt-answer-list label.incorrect {
-    color: #d93d2e;
+    color: #f29f97;
 }
 
 .eqt-block .eqt-answer-list label .admonition {
@@ -38,12 +38,12 @@
 
 .eqt-block.errored .eqt-block-actions .result-icon {
     display: initial;
-    color: #d93d2e;
+    color: #f29f97;
 }
 
 .eqt-block.success .eqt-block-actions .result-icon {
     display: initial;
-    color: #1fa11d;
+    color: #1abc9c;
 }
 
 .eqt-block.solution .eqt-block-actions .result-icon {
@@ -73,16 +73,4 @@
 
 .eqt-block .expl {
     display: none;
-}
-
-.rst-content .daemi .admonition-title {
-    background: #F8961E
-}
-.rst-content .daemi {
-    background: #faddb9;
-    margin-left: auto ;
-    margin-right: auto ;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 0px 0px 0px ;
 }

@@ -72,10 +72,10 @@ extensions = [
     #'hieroglyph',
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    "hoverrole.hoverrole",
+    "sphinxcontrib.hoverrole",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     #    'analytics.analytics',
     "sphinx.ext.ifconfig",

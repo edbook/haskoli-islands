@@ -48,20 +48,20 @@ extensions = [
     #'ggbextension.ggb',
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # Note: sagecell must not be listed before katex.katex
-    "sagecell.sagecell",
+    "sphinxcontrib.sagecell",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     # "analytics.analytics",
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
     # in R and python, with much greater package support than sagecell in R
-    "datacamp.datacamp",
+    "sphinxcontrib.datacamp",
     # Extension that allows embedding panopto videos from rec.hi.is
-    "panoptoextension.panopto",
+    "sphinxcontrib.panopto",
 ]
 
 # For self-numbering of figures/tables, etc.
