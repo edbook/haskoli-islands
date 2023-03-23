@@ -45,9 +45,6 @@ sys.path.append(os.path.abspath("../../extensions"))
 #  see https://github.com/nyergler/hieroglyph
 #    'ggbextension.ggb',
 #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
-#    'toggleblock.toggleBlock',
-# Extension for toggleable blocks of text (click to show/hide).
-# See README.txt in toggleblock-extension folder.
 #    'sagecell.sagecell',
 # Extension for embedding sage cells (https://sagecell.sagemath.org/).
 # See README.txt in sagecell-extension folder.
@@ -70,9 +67,6 @@ extensions = [
     # hieroglyph is used to generate html slides, needs to be installed for use,
     # see https://github.com/nyergler/hieroglyph
     #'hieroglyph',
-    # Extension for toggleable blocks of text (click to show/hide).
-    # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
     "hoverrole.hoverrole",

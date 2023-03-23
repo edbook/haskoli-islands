@@ -42,7 +42,6 @@ extensions = [
     #  see https://github.com/nyergler/hieroglyph
     # 'ggbextension.ggb',
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "toggleblock.toggleBlock",
     "sphinx_togglebutton",
     # 'sagecell.sagecell',
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).

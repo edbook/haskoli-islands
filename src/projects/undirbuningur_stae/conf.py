@@ -49,10 +49,7 @@ extensions = [
     #    'katex.katex',
     "ggbextension.ggb",
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "toggleblock.toggleBlock",
     "sphinx_togglebutton",
-    # Extension for toggleable blocks of text (click to show/hide).
-    # See README.txt in toggleblock-extension folder.
     "sagecell.sagecell",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
