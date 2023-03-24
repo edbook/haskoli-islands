@@ -40,9 +40,6 @@ extensions = [
     #'hieroglyph',
     # Extension for embedding geogebra applets, see README.txt in ggbextension folder
     "ggbextension.ggb",
-    # Extension for toggleable blocks of text (click to show/hide).
-    # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # Note: sagecell must not be listed before katex.katex
