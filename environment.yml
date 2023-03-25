@@ -1,4 +1,4 @@
-name: edbook-haskoli-islands
+name: edbook
 channels:
   - conda-forge
   - defaults
