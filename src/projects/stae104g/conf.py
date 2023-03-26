@@ -53,7 +53,7 @@ extensions = [
     "sphinxcontrib.geogebra",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "sphinxcontrib.toggleblock",
+#    "sphinxcontrib.toggleblock",
     "sphinx_togglebutton",
     "sphinxcontrib.questionnaire",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
@@ -62,7 +62,7 @@ extensions = [
     #    'sagecell.sagecell',
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-#    "sphinxcontrib.hoverrole",
+    "sphinxcontrib.hoverrole",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     #    'analytics.analytics',
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
