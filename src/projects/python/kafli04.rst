@@ -50,11 +50,17 @@ Sú regla gildir að nafn breytu skal vera runa af bókstöfum, tölustöfum, og
    1. Hverjir eftirfarandi strengja eru ekki lögleg breytunöfn?
 
       a. 01rst
+
       b. rst01
+      
       c. rst-01
-      e. ρστ01
+      
+      e. ρστ01 
+      
       d. Sérdeilis_afskaplega_langt_breytunafn_sem_ætti_að_reyna_að_stytta
+      
       f. abc
+      
       g. def
          
    2. Googlið "python reserved words". Hvaða lykilorð í málinu byrja á a eða b (og eru þar

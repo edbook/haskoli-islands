@@ -45,7 +45,7 @@ extensions = [
     #  hieroglyph is used to generate html slides, needs to be installed for use,
     #  see https://github.com/nyergler/hieroglyph
     #'katex.katex',
-    "sphinxcontirb.geogebra",
+    "sphinxcontrib.geogebra",
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
     "sphinxcontrib.toggleblock",
     # Extension for toggleable blocks of text (click to show/hide).

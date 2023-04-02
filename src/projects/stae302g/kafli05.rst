@@ -71,7 +71,7 @@ Ef :math:`f` er fágað fall á opnu mengi :math:`X` í :math:`{\mathbb{C}}`, þ
    
 
 Skilgreining 
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
 Svæði :math:`X` í :math:`{\mathbb{C}}` er sagt vera einfaldlega samanhangandi ef ekki er til einfaldur lokaður vegur í :math:`X` þannig að punktur úr :math:`{\mathbb{C}}\setminus X` er innan ferilsins. (Á mannamáli þá er mengi einfaldlega samanhangandi ef það hefur engin ,,göt‘‘.)
 

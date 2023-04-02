@@ -157,7 +157,7 @@ Látum :math:`\mbox{${\bf r}$}:  [a,b]\rightarrow \mbox{${\bf R}^n$}`
 vera diffranlegan stikaferil. Venja er að rita
 :math:`\mbox{${\bf v}$}(t)=\mbox{${\bf r}$}'(t)` og tala um
 :math:`\mbox{${\bf v}$}(t)` sem :hover:`hraða,hraði` eða *hraðavigur*. Talan
-:math:`|\mbox{${\bf v}$}(t)|` er kölluð :hover:`ferð`. Einnig er ritað
+:math:`|\mbox{${\bf v}$}(t)|` er kölluð :hover:`ferð,hraði`. Einnig er ritað
 :math:`\mbox{${\bf a}$}(t)=\mbox{${\bf v}$}'(t)=\mbox{${\bf r}$}''(t)`
 og talað um :math:`\mbox{${\bf a}$}(t)` sem :hover:`hröðun` eða
 *hröðunarvigur*.
