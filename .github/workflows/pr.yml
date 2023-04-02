@@ -62,7 +62,18 @@ jobs:
         id: build-all
         run: |
           make build-all
-
+      - name: Push to edbook organization page
+        id: push-build
+        uses: cpina/github-action-push-to-another-repository@ssh-deploy-key
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.WORKFLOW_DEPLOY_KEY }}
+        with:
+          source-directory: _build
+          destination-github-username: 'edbook-deployer'
+          destination-repository-name: 'edbook.github.io'
+          user-email: edbook@hi.is
+          commit-message: pushed from $GITHUB_REF
+          target-branch: main
 
   build-all:
     needs: [setup]
