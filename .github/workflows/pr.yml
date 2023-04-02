@@ -17,7 +17,7 @@ on:
     branches: [main]
     types: [opened, synchronize, closed, labeled]
     paths:
-      - "src/**"
+      - "projects/**"
       - "cli/**"
       - ".github/**"
   # push:
@@ -33,6 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       branch_name: ${{ steps.extract_branch.outputs.BRANCH_NAME }}
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - name: Extract branch name
         id: extract_branch
@@ -41,25 +44,27 @@ jobs:
           echo "{BRANCH_NAME}={$(echo ${GITHUB_REF#refs/heads/})}" >> $GITHUB_OUTPUT
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Set up python
-        uses: actions/setup-python@v4
+      - uses: conda-incubator/setup-miniconda@v2
         with:
-          python-version: "3.10"
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: "1.2.1"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install dependencies
-        run: poetry install
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+          activate-environment: edbook
+          environment-file: environment.yml
+          python-version: 3.10.10
+          channels: conda-forge,defaults
+          mamba-version: "*"
+          channel-priority: true
+          use-mamba: true
+      - run: |
+          conda env update
+          conda activate edbook
+          conda info
+          conda list
+      - name: 🚧 Build all (pr)
+        if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
+        id: build-all
+        run: |
+          make build-all
+
+
   build-all:
     needs: [setup]
     name: Deploy feature

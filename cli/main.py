@@ -82,7 +82,7 @@ def cmd_export_word_dict(
 def cmd_build(
     ctx: typer.Context,
     path: str = typer.Option(
-        Path(__file__).parent.resolve().parent / "src" / "projects",
+        Path(__file__).parent.resolve().parent / "projects",
         help="Absolute path to edbook projects directory",
     ),
     build_path: str = typer.Option(
@@ -103,5 +103,5 @@ def cmd_build(
         call(["sphinx-build", project_path, Path(build_path) / project_path.name, *ctx.args])
 
 
-def run():
+if __name__ == "__main__":
     app()
