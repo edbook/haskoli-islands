@@ -50,9 +50,9 @@ jobs:
           environment-file: environment.yml
           python-version: 3.10.10
       - run: |
+          conda env update
           conda info
           conda list
-          conda env upgrade
 
   build-all:
     needs: [setup]
