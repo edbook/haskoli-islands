@@ -17,7 +17,7 @@ on:
     branches: [main]
     types: [opened, synchronize, closed, labeled]
     paths:
-      - "src/**"
+      - "projects/**"
       - "cli/**"
       - ".github/**"
   # push:
