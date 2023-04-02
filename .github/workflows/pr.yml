@@ -91,7 +91,7 @@ jobs:
           source-directory: _build
           target-directory: '.'
           destination-github-username: ${{ github.actor }}
-          destination-repository-name: 'edbook.github.io'
+          destination-repository-name: 'edbook/edbook.github.io'
           target-branch: main
 
   build-all:
