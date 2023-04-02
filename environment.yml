@@ -20,7 +20,7 @@ dependencies:
     - sphinxcontrib-custombutton @ https://github.com/edbook/sphinxcontrib-custombutton/archive/refs/tags/v2.0.zip
     - sphinxcontrib-datacamp @ https://github.com/edbook/sphinxcontrib-datacamp/archive/refs/tags/v2.0.zip
     - sphinxcontrib-geogebra @ https://github.com/edbook/sphinxcontrib-geogebra/archive/refs/tags/v2.0.zip
-    - sphinxcontrib-hoverrole @ https://github.com/edbook/sphinxcontrib-hoverrole/archive/refs/tags/v2.0.4.zip
+    - sphinxcontrib-hoverrole @ https://github.com/edbook/sphinxcontrib-hoverrole/archive/refs/tags/v2.0.6.zip
     - sphinxcontrib-panopto @ https://github.com/edbook/sphinxcontrib-panopto/archive/refs/tags/v2.0.zip
     - sphinxcontrib-questionnaire @ https://github.com/edbook/sphinxcontrib-questionnaire/archive/refs/tags/v2.0.9.zip
     - sphinxcontrib-sagecell @ https://github.com/edbook/sphinxcontrib-sagecell/archive/refs/tags/v2.0.zip
