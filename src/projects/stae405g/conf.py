@@ -37,12 +37,12 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
     #    'sphinx.ext.pngmath',
-    "ggbextension.ggb",
+    "sphinxcontrib.geogebra",
     "sphinx.ext.ifconfig",
-    "sagecell.sagecell",
+    "sphinxcontrib.sagecell",
     #    'sphinx.ext.graphviz',
     #    'sagecellext',
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     #    'hieroglyph',
 ]
 

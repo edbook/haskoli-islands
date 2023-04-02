@@ -45,19 +45,19 @@ extensions = [
     #  hieroglyph is used to generate html slides, needs to be installed for use,
     #  see https://github.com/nyergler/hieroglyph
     #'katex.katex',
-    "ggbextension.ggb",
+    "sphinxcontirb.geogebra",
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
     # 'sagecell.sagecell',
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
     # tok sage ut, er ekki ad nota
-    "hoverrole.hoverrole",
+    "sphinxcontrib.hoverrole",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    "scrolldepth.scrolldepth",
+    #"scrolldepth.scrolldepth",
     "sphinx.ext.ifconfig",
     # fyrir Reauthoring
     "Sphinx_ext.activityduration",
@@ -70,7 +70,7 @@ extensions = [
     "Sphinx_ext.questions",
     "Sphinx_ext.iframe",
     "Sphinx_ext.button",
-    "eqt_ext.eqt"
+    "sphinxcontrib.questionnaire"
 ]
 
 

@@ -45,10 +45,10 @@ extensions = [
     # see https://github.com/nyergler/hieroglyph
     #'hieroglyph',
     # Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "ggbextension.ggb",
+    "sphinxcontrib.geogebra",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     "sphinx_togglebutton",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
