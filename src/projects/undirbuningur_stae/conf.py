@@ -47,21 +47,21 @@ extensions = [
     #  see https://github.com/nyergler/hieroglyph
     "sphinxcontrib.katex",
     #    'katex.katex',
-    "ggbextension.ggb",
+    "sphinxcontrib.geogebra",
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     "sphinx_togglebutton",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "sagecell.sagecell",
+    "sphinxcontrib.sagecell",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
-    "hoverrole.hoverrole",
+    "sphinxcontrib.hoverrole",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    "scrolldepth.scrolldepth",
-    "panoptoextension.panopto",
-    "custom_button.custom_button",
+    #"scrolldepth.scrolldepth",
+    "sphinxcontrib.panopto",
+    "sphinxcontrib.custombutton",
 ]
 
 numfig = True

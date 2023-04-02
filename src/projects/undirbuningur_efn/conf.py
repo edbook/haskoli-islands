@@ -42,7 +42,7 @@ extensions = [
     #  see https://github.com/nyergler/hieroglyph
     # 'ggbextension.ggb',
     #  Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
     # 'sagecell.sagecell',
@@ -51,9 +51,9 @@ extensions = [
     # 'hoverrole.hoverrole',
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    "scrolldepth.scrolldepth",
-    "button",
-]
+    #"scrolldepth.scrolldepth",
+    "sphinxcontrib.custombutton",
+    ]
 
 
 # For self-numbering

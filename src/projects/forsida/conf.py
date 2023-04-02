@@ -64,7 +64,7 @@ extensions = [
     #'datacamp.datacamp',
     # Extension that allows embedding panopto videos from rec.hi.is
     #    'panoptoextension.panopto'
-    "custom_button.custom_button",
+    "sphinxcontrib.custombutton",
     # fyrir Reauthoring
     # 'Sphinx_ext.activityduration',
     # 'Sphinx_ext.htmlform',
