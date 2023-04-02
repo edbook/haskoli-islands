@@ -6,7 +6,7 @@ base_sha=${1:-origin/main}
 head_sha=${2:-HEAD}
 
 function get_affected() {
-  git diff --name-only "$base_sha" "$head_sha" | grep "src/projects" | cut -d "/" -f3 | uniq -u
+  git diff --name-only "$base_sha" "$head_sha" | grep "projects" | cut -d "/" -f3 | uniq -u
 }
 
 affected=$(get_affected)
