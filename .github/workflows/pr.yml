@@ -54,6 +54,11 @@ jobs:
           conda activate edbook
           conda info
           conda list
+      - name: 🚧 Build affected (pr)
+        if: github.event_name == 'pull_request' && github.event.label.name != 'build-all'
+        id: build-affected
+        run: |
+          ./.github/build-affected.sh ${{ github.event.pull_request.base.sha }} ${GITHUB_SHA}
 
 
   build-all:
