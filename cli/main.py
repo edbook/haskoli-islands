@@ -100,7 +100,7 @@ def cmd_build(
             f"""################ Preparing build of project {project_path.name} ##############""",
             fg=typer.colors.MAGENTA,
         )
-        call(["sphinx-build", project_path, Path(build_path).parent / project_path.name, *ctx.args])
+        call(["sphinx-build", project_path, Path(build_path) / project_path.name, *ctx.args])
 
 
 def run():
