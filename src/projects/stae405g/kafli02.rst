@@ -276,81 +276,80 @@ nákvæmlega einn fastapunkt :math:`r` á bilinu :math:`[a,b]` og runan
 
 stefnir á fastapunktinn.
 
-.. begin-toggle::
-	:label: Sönnun
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-Sönnunina brjótum við upp í nokkur skref.
+	Sönnunina brjótum við upp í nokkur skref.
 
-**1. skref, herping hefur í mesta lagi einn fastapunkt**
+	**1. skref, herping hefur í mesta lagi einn fastapunkt**
 
-Sönnum þetta með mótsögn.
+	Sönnum þetta með mótsögn.
 
-Gerum ráð fyrir að :math:`r` og :math:`s` séu tveir ólíkir fastapunktar
-á :math:`[a,b]`. Þá er
+	Gerum ráð fyrir að :math:`r` og :math:`s` séu tveir ólíkir fastapunktar
+	á :math:`[a,b]`. Þá er
 
-.. math::
-   |r - s| = |f(r) - f(s)|
-     \leq \lambda |r - s| < |r - s|
+	.. math::
+	   |r - s| = |f(r) - f(s)|
+	     \leq \lambda |r - s| < |r - s|
 
-því :math:`\lambda < 1`. Þetta fær ekki staðist, þannig að fjöldi
-fastapunkta er í mesta lagi einn
+	því :math:`\lambda < 1`. Þetta fær ekki staðist, þannig að fjöldi
+	fastapunkta er í mesta lagi einn
 
-**2. skref, fallið** :math:`f` **hefur fastapunkt:**
+	**2. skref, fallið** :math:`f` **hefur fastapunkt:**
 
-Látum :math:`g(x) = f(x) - x`, þá eru núllstöðvar :math:`g` nákvæmlega
-fastapunktar :math:`f`.
+	Látum :math:`g(x) = f(x) - x`, þá eru núllstöðvar :math:`g` nákvæmlega
+	fastapunktar :math:`f`.
 
-Þar sem :math:`a \leq f(x) \leq b` fyrir öll :math:`x \in [a,b]` er
+	Þar sem :math:`a \leq f(x) \leq b` fyrir öll :math:`x \in [a,b]` er
 
-.. math::
-   \left\{ \begin{array}{c}
-         g(a) = f(a) - a \geq 0 \\
-         g(b) = f(b) - b \leq 0
-     \end{array} \right.
+	.. math::
+	   \left\{ \begin{array}{c}
+		 g(a) = f(a) - a \geq 0 \\
+		 g(b) = f(b) - b \leq 0
+	     \end{array} \right.
 
-Ef annað hvort :math:`g(a) = 0` eða :math:`g(b) = 0` höfum við fundið
-fastapunkt fallsins :math:`f` og við getum hætt.
+	Ef annað hvort :math:`g(a) = 0` eða :math:`g(b) = 0` höfum við fundið
+	fastapunkt fallsins :math:`f` og við getum hætt.
 
-Ef hins vegar :math:`g(a) > 0` og :math:`g(b) < 0` þá hefur :math:`g`
-ólík formerki í endapunktum bilsins :math:`[a,b]` og hefur því núllstöð
-:math:`r` á bilinu skv. milligildissetninguninni. Þá er :math:`r`
-jafnframt fastapunktur :math:`f`.
+	Ef hins vegar :math:`g(a) > 0` og :math:`g(b) < 0` þá hefur :math:`g`
+	ólík formerki í endapunktum bilsins :math:`[a,b]` og hefur því núllstöð
+	:math:`r` á bilinu skv. milligildissetninguninni. Þá er :math:`r`
+	jafnframt fastapunktur :math:`f`.
 
-Skref 1 og 2 sýna því að fallið :math:`f` hefur nákvæmlega einn
-fastapunkt á bilinu.
+	Skref 1 og 2 sýna því að fallið :math:`f` hefur nákvæmlega einn
+	fastapunkt á bilinu.
 
-**3. skref, runan** :math:`(x_n)` **er samleitin**
+	**3. skref, runan** :math:`(x_n)` **er samleitin**
 
-Látum :math:`r` vera ótvírætt ákvarðaða fastapunktinn á :math:`[a,b]`.
+	Látum :math:`r` vera ótvírætt ákvarðaða fastapunktinn á :math:`[a,b]`.
 
-Við notfærum okkur að :math:`f` er herping og að :math:`r` er
-fastapunktur :math:`f`, þá fæst að fyrir sérhvert
-:math:`k\in {\mathbb  N}` þá er
+	Við notfærum okkur að :math:`f` er herping og að :math:`r` er
+	fastapunktur :math:`f`, þá fæst að fyrir sérhvert
+	:math:`k\in {\mathbb  N}` þá er
 
-.. math:: |r - x_k| = |f(r) - f(x_{k-1})|  \leq \lambda |r - x_{k-1}|
+	.. math:: |r - x_k| = |f(r) - f(x_{k-1})|  \leq \lambda |r - x_{k-1}|
 
-það er :math:`|r - x_k| \leq \lambda |r - x_{k-1}|`.
+	það er :math:`|r - x_k| \leq \lambda |r - x_{k-1}|`.
 
-Með því að nota þetta :math:`n`-sinnum þá fæst að
+	Með því að nota þetta :math:`n`-sinnum þá fæst að
 
-.. math::
-    \begin{aligned}
-        |r - x_n|   &\leq \lambda |r - x_{n-1}| & (k=n)\\
-        &\leq \lambda^2 |r - x_{n-2}| & (k=n-1)\\
-        &\vdots & \vdots\\
-        &\leq \lambda^n |r - x_0| & (k=1).
-    \end{aligned}
+	.. math::
+	    \begin{aligned}
+		|r - x_n|   &\leq \lambda |r - x_{n-1}| & (k=n)\\
+		&\leq \lambda^2 |r - x_{n-2}| & (k=n-1)\\
+		&\vdots & \vdots\\
+		&\leq \lambda^n |r - x_0| & (k=1).
+	    \end{aligned}
 
-Þar sem :math:`\lambda < 1` er því
+	Þar sem :math:`\lambda < 1` er því
 
-.. math::
-    \lim\limits_{n \to +\infty} |r - x_n|
-    \leq \lim\limits_{n \to +\infty} \lambda^n |r - x_0|
-    = 0,
+	.. math::
+	    \lim\limits_{n \to +\infty} |r - x_n|
+	    \leq \lim\limits_{n \to +\infty} \lambda^n |r - x_0|
+	    = 0,
 
-það er runan :math:`x_n` stefnir á :math:`r`.
+	það er runan :math:`x_n` stefnir á :math:`r`.
 
-.. end-toggle::
 
 Fastapunktsaðferð er að minnsta kosti línulega samleitin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -456,49 +455,48 @@ Niðurstaðan er að fyrir sérhvert :math:`x \in [a,b]` er til
 
 .. math:: f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1})
 
-.. begin-toggle::
-	:label: Sönnun
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-Ljóst er að matið gildir ef :math:`x=x_{n-1}` eða :math:`x=x_n`.
+	Ljóst er að matið gildir ef :math:`x=x_{n-1}` eða :math:`x=x_n`.
 
-Festum því punktinn :math:`x` og gerum ráð fyrir að :math:`x\neq x_1` og
-:math:`x\neq x_n`.
+	Festum því punktinn :math:`x` og gerum ráð fyrir að :math:`x\neq x_1` og
+	:math:`x\neq x_n`.
 
-Skilgreinum fallið
+	Skilgreinum fallið
 
-.. math:: g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})
+	.. math:: g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})
 
-þar sem :math:`\lambda` er valið þannig að :math:`g(x)=0`.
+	þar sem :math:`\lambda` er valið þannig að :math:`g(x)=0`.
 
-Látum nú :math:`\alpha<\beta<\gamma` vera uppröðun á punktunum
-:math:`x_{n-1}`, :math:`x_n` og :math:`x`.
+	Látum nú :math:`\alpha<\beta<\gamma` vera uppröðun á punktunum
+	:math:`x_{n-1}`, :math:`x_n` og :math:`x`.
 
-Fallið
+	Fallið
 
-.. math:: g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})
+	.. math:: g(t)=f(t)-p_n(t)-\lambda(t-x_n)(t-x_{n-1})
 
-hefur núllstöð í öllum punktunum þremur.
+	hefur núllstöð í öllum punktunum þremur.
 
-Meðalgildissetningin gefur þá að :math:`g'(t)` hefur eina núllstöð í
-punkti á bilinu :math:`]\alpha,\beta[` og aðra í :math:`]\beta,\gamma[`.
+	Meðalgildissetningin gefur þá að :math:`g'(t)` hefur eina núllstöð í
+	punkti á bilinu :math:`]\alpha,\beta[` og aðra í :math:`]\beta,\gamma[`.
 
-Af því leiðir aftur að :math:`g''(t)` hefur núllstöð, :math:`\xi_n`, í
-:math:`[\alpha,\gamma]`, sem er minnsta bilið sem inniheldur alla
-punktana :math:`x_{n-1}`, :math:`x_n` og :math:`x`.
+	Af því leiðir aftur að :math:`g''(t)` hefur núllstöð, :math:`\xi_n`, í
+	:math:`[\alpha,\gamma]`, sem er minnsta bilið sem inniheldur alla
+	punktana :math:`x_{n-1}`, :math:`x_n` og :math:`x`.
 
-Af þessu leiðir
+	Af þessu leiðir
 
-.. math::
+	.. math::
 
-   0=g''(\xi_n)=f''(\xi_n)-2\lambda \quad \text{þþaa} \quad
-   \lambda=\tfrac 12 f''(\xi_n).
+	   0=g''(\xi_n)=f''(\xi_n)-2\lambda \quad \text{þþaa} \quad
+	   \lambda=\tfrac 12 f''(\xi_n).
 
-Nú var :math:`\lambda` upprunalega valið þannig að :math:`g(x)=0`. Þar
-með er
+	Nú var :math:`\lambda` upprunalega valið þannig að :math:`g(x)=0`. Þar
+	með er
 
-.. math:: f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1}).
+	.. math:: f(x) - p_n(x) = \frac{1}{2}f''(\xi_n)(x-x_n)(x-x_{n-1}).
 
-.. end-toggle::
 
 Skekkjumat í sniðilsaðferð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -540,17 +538,16 @@ Setning
 Ef sniðilsaðferð er samleitin, :math:`f\in C^2([a,b])` (tvisvar
 diffranlegt) og :math:`f'(r)\neq 0`, þá er sniðilsaðferðin ofurlínuleg.
 
-.. begin-toggle::
-	:label: Sönnun
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-.. math::
+	.. math::
 
-   \lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|} =
-   \lim_{n\to \infty}\dfrac{|e_{n+1}e_{n-1}|}{|e_ne_{n-1}|}=
-   \lim_{n \to \infty} \frac{|e_{n-1}\frac{1}{2}f''(r)|}
-           {|f'(r)|} = 0
+	   \lim_{n\to \infty}\dfrac{|e_{n+1}|}{|e_n|} =
+	   \lim_{n\to \infty}\dfrac{|e_{n+1}e_{n-1}|}{|e_ne_{n-1}|}=
+	   \lim_{n \to \infty} \frac{|e_{n-1}\frac{1}{2}f''(r)|}
+		   {|f'(r)|} = 0
 
-.. end-toggle::
 
 
 Raunar þá er sniðilsaðferðin samleitin af stigi
@@ -668,16 +665,15 @@ Ef aðferð Newtons fyrir fallið :math:`f` er samleitin,
 
 Það þýðir að aðferð Newtons er ferningssamleitin.
 
-.. begin-toggle::
-	:label: Sönnun
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-.. math::
+	.. math::
 
-   \lim_{n\to \infty}\dfrac{e_{n+1}}{e_n^2}=
-   \lim_{n\to \infty}\frac{-\frac{1}{2}f''(\xi_n)}{f'(x_n)} =
-   \frac{-\frac{1}{2}f''(r)}{f'(r)}
+	   \lim_{n\to \infty}\dfrac{e_{n+1}}{e_n^2}=
+	   \lim_{n\to \infty}\frac{-\frac{1}{2}f''(\xi_n)}{f'(x_n)} =
+	   \frac{-\frac{1}{2}f''(r)}{f'(r)}
 
-.. end-toggle::
 
 .. note:: 
 	Athugið að það er ekki sjálfgefið að aðferð Newtons sé samleitin.

@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath("."))
 sys.path.append(os.path.abspath("../../extensions"))
-from eqt_ext import get_eqt_ext_static_dir # Verður að koma eftir að bæta extensions í path
+from eqt_ext import get_eqt_ext_static_dir  # Verður að koma eftir að bæta extensions í path
 
 # sys.path.append('/gudnyh/sumar/undirbuningur_edl/Sphinx_ext')
 
@@ -57,20 +57,20 @@ extensions = [
     "sphinxcontrib.hoverrole",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    #"scrolldepth.scrolldepth",
+    # "scrolldepth.scrolldepth",
     "sphinx.ext.ifconfig",
     # fyrir Reauthoring
     "Sphinx_ext.activityduration",
     "Sphinx_ext.htmlform",
     "Sphinx_ext.instructorfeedback",
-    #"Sphinx_ext.eqt",
+    # "Sphinx_ext.eqt",
     "Sphinx_ext.instructorguide",
     "Sphinx_ext.embeddedvideo",
     "Sphinx_ext.xy_click",
     "Sphinx_ext.questions",
     "Sphinx_ext.iframe",
     "Sphinx_ext.button",
-    "sphinxcontrib.questionnaire"
+    "sphinxcontrib.questionnaire",
 ]
 
 
@@ -178,10 +178,10 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_path = ['_themes']
 
 html_context = {
-  'display_github': True,
-  'github_user': 'edbook',
-  'github_repo': 'haskoli-islands',
-  'github_version': 'master/src/projects/undirbuningur_edl/',
+    "display_github": True,
+    "github_user": "edbook",
+    "github_repo": "haskoli-islands",
+    "github_version": "master/src/projects/undirbuningur_edl/",
 }
 
 
@@ -370,3 +370,9 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 # texinfo_no_detailmenu = False
+
+# Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
+hint_indent = (
+    r"\00a0" * 14
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2

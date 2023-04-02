@@ -10,8 +10,8 @@ project = "Sniðmát fyrir Edbook (TMP001G)"
 copyright = "2023, Jónmundur Gunnuson"
 author = "Jónmundur Gunnuson <asdf@hi.is>"
 year = str(datetime.datetime.now().year)
-version = year      # The short X.Y version.
-release = year      # The full version, including alpha/beta/rc tags.
+version = year  # The short X.Y version.
+release = year  # The full version, including alpha/beta/rc tags.
 ###################################################
 
 
@@ -43,7 +43,7 @@ extensions = [
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
     "sphinxcontrib.toggleblock",
-#    "sphinx_togglebutton",
+    #    "sphinx_togglebutton",
     "sphinxcontrib.questionnaire",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
@@ -51,7 +51,7 @@ extensions = [
     #    'sagecell.sagecell',
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-#    "sphinxcontrib.hoverrole",
+    #    "sphinxcontrib.hoverrole",
     # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
     #    'analytics.analytics',
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
@@ -71,7 +71,7 @@ extensions = [
     # 'Sphinx_ext.iframe',
     # 'Sphinx_ext.button'
     "sphinxcontrib.youtube",
-#    "sphinx_rtd_dark_mode"
+    #    "sphinx_rtd_dark_mode"
 ]
 
 # -- Custom extension options and paths --------------------------------------
@@ -95,8 +95,8 @@ sage_path = "http://sagecell.sagemath.org/static/embedded_sagecell.js"
 custom_sage_path = "custom_sage.js"
 
 # Google Analytics ID, enable_custom_scrolldepth default value is False if not set
-#ga_id = "UA-78633732-4"
-#enable_custom_scrolldepth = True
+# ga_id = "UA-78633732-4"
+# enable_custom_scrolldepth = True
 
 # -- Build options ----------------------------------------------------
 
@@ -174,10 +174,10 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_path = ["_themes"]
 
 html_context = {
-  'display_github': True,
-  'github_user': 'edbook',
-  'github_repo': 'haskoli-islands',
-  'github_version': str('master/src/projects/'+os.path.split(os.getcwd())[1]+'/'),
+    "display_github": True,
+    "github_user": "edbook",
+    "github_repo": "haskoli-islands",
+    "github_version": str("master/src/projects/" + os.path.split(os.getcwd())[1] + "/"),
 }
 
 html_permalinks = True
@@ -314,7 +314,7 @@ latex_documents = [
     (
         "index",
         str(os.path.split(os.getcwd())[1] + ".tex"),
-        project, 
+        project,
         author,
         "manual",
     ),

@@ -111,12 +111,10 @@ Að lokum eru svo rafeindirnar táknaðar sem örvar sem snúa upp eða niður, 
     :align: center
     :width: 40%
 
-.. begin-toggle::
-  :label: Hund's regla
-  :starthidden: True
+.. admonition:: Regla Hunds
+  :class: setning, dropdown
 
-*Regla Hund's* segir til um að það sé orkulega hagkvæmast og þannig stöðugast þegar rafeindir skipa sér stakar á svigrúm, meðan kostur er. Þær hafa þá sama spuna.
+  *Regla Hund's* segir til um að það sé orkulega hagkvæmast og þannig stöðugast þegar rafeindir skipa sér stakar á svigrúm, meðan kostur er. Þær hafa þá sama spuna.
 
-Þessi regla er oft kölluð *strætisvagnareglan*, þar sem vaninn er að setjast ekki í sætisröð með öðrum, ef það er tóm sætisröð í vagninum.
+  Þessi regla er oft kölluð *strætisvagnareglan*, þar sem vaninn er að setjast ekki í sætisröð með öðrum, ef það er tóm sætisröð í vagninum.
 
-.. end-toggle::

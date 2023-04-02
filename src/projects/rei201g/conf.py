@@ -37,7 +37,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
-    'sphinx.ext.autosectionlabel',
+    "sphinx.ext.autosectionlabel",
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #    'katex.katex',
@@ -74,7 +74,7 @@ extensions = [
     # 'Sphinx_ext.button'
 ]
 html_secnumber_suffix = "\u00a0\u00a0"
-suppress_warnings=['autosectionlabel.*']
+suppress_warnings = ["autosectionlabel.*"]
 # For self-numbering of figures/tables, etc.
 numfig = True
 numfig_format = {}
@@ -489,6 +489,7 @@ from docutils.nodes import Element
 # Hulda bætti mér við. Opna linka í öðrum gluggan.
 from sphinx.writers.html import HTMLTranslator
 
+
 class PatchedHTMLTranslator(HTMLTranslator):
     def visit_reference(self, node: Element) -> None:
         atts = {"class": "reference"}
@@ -518,5 +519,6 @@ class PatchedHTMLTranslator(HTMLTranslator):
             atts["target"] = node["target"]
         self.body.append(self.starttag(node, "a", "", **atts))
 
+
 def setup(app):
-    app.set_translator('html', PatchedHTMLTranslator)
+    app.set_translator("html", PatchedHTMLTranslator)

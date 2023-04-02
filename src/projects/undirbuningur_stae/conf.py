@@ -59,7 +59,7 @@ extensions = [
     "sphinxcontrib.hoverrole",
     # Extension for providing Icelandic to English translation of mathematical terms
     # on mouse-over. See README in hoverrole folder.
-    #"scrolldepth.scrolldepth",
+    # "scrolldepth.scrolldepth",
     "sphinxcontrib.panopto",
     "sphinxcontrib.custombutton",
 ]
@@ -170,10 +170,10 @@ todo_include_todos = True
 html_theme = "sphinx_rtd_theme"
 # html_theme_path = ["_themes"]
 html_context = {
-  'display_github': True,
-  'github_user': 'edbook',
-  'github_repo': 'haskoli-islands',
-  'github_version': 'master/src/projects/undirbuningur_stae/',
+    "display_github": True,
+    "github_user": "edbook",
+    "github_repo": "haskoli-islands",
+    "github_version": "master/src/projects/undirbuningur_stae/",
 }
 
 
@@ -208,7 +208,7 @@ html_favicon = "_static/favicon_2.ico"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 html_css_files = ["css/edbook.css"]
-#html_copy_source = False
+# html_copy_source = False
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied

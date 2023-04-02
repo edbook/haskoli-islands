@@ -224,52 +224,50 @@ Sömuleiðis er *augnablikshröðun* hlutar afleiða hraðans m.t.t. tíma:
 
 ----------------------------------------------------
 
-.. begin-toggle::
-  :label: Sýna útleiðslu á hreyfijöfnum
-  :starthidden: True
+.. admonition:: Útleiðsla á hreyfijöfnum
+  :class: setning, dropdown
 
-Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
+  Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
 
-.. math::
-  \begin{aligned}
-    &\text{Upphaflega jafnan} &    a &=\frac{dv(t)}{dt} \\
-    &\text{Umritum} &    dv(t) &=  a\cdot dt \\
-    &\text{Heildum beggja vegna} &     \int_0^t dv &= a \cdot \int_0^t dt \\
-    &\text{ } &       v(t)-v(0) &= a\cdot (t-0) \\
-    &\text{} & v(t) &= a\cdot t +v_0
-  \end{aligned}
+  .. math::
+    \begin{aligned}
+      &\text{Upphaflega jafnan} &    a &=\frac{dv(t)}{dt} \\
+      &\text{Umritum} &    dv(t) &=  a\cdot dt \\
+      &\text{Heildum beggja vegna} &     \int_0^t dv &= a \cdot \int_0^t dt \\
+      &\text{ } &       v(t)-v(0) &= a\cdot (t-0) \\
+      &\text{} & v(t) &= a\cdot t +v_0
+    \end{aligned}
 
-sem er einmitt jafnan fyrir hraða sem fall af tíma.
+  sem er einmitt jafnan fyrir hraða sem fall af tíma.
 
-Hraði er afleiða staðsetningarinnar :math:`v(t)=\frac{dx(t)}{dt}= a\cdot t +v_0`.
+  Hraði er afleiða staðsetningarinnar :math:`v(t)=\frac{dx(t)}{dt}= a\cdot t +v_0`.
 
-.. math::
-  \begin{aligned}
-    &\text{Upphaflega jafnan} & \frac{dx(t)}{dt}&= a\cdot t +v_0\\
-    &\text{Umritum}  &  dx(t) &=  (a\cdot t +v_0) dt\\
-    &\text{Heildum} & \int_0^x dx &= \int_0^t (a\cdot t +v_0) dt \\
-    &\text{ } & x(t)-x_0 &= \frac12 a\cdot t^2 + v_0 \cdot t \\
-    & \text{ } & x(t) &= x_0 + v_0 \cdot t +\frac12 a\cdot t^2
-  \end{aligned}
+  .. math::
+    \begin{aligned}
+      &\text{Upphaflega jafnan} & \frac{dx(t)}{dt}&= a\cdot t +v_0\\
+      &\text{Umritum}  &  dx(t) &=  (a\cdot t +v_0) dt\\
+      &\text{Heildum} & \int_0^x dx &= \int_0^t (a\cdot t +v_0) dt \\
+      &\text{ } & x(t)-x_0 &= \frac12 a\cdot t^2 + v_0 \cdot t \\
+      & \text{ } & x(t) &= x_0 + v_0 \cdot t +\frac12 a\cdot t^2
+    \end{aligned}
 
-sem er einmitt jafnan fyrir staðsetningu sem fall af tíma.
+  sem er einmitt jafnan fyrir staðsetningu sem fall af tíma.
 
-Tímaóháðu jöfnuna má leiða út með því að setja saman þessar tvær jöfnur. Fyrst þarf að einangra tímann úr jöfnunni sem lýsir hraða sem fall af tíma og svo er hann settur inn fyrir tímann í jöfnunni sem lýsir staðsetningunni.
+  Tímaóháðu jöfnuna má leiða út með því að setja saman þessar tvær jöfnur. Fyrst þarf að einangra tímann úr jöfnunni sem lýsir hraða sem fall af tíma og svo er hann settur inn fyrir tímann í jöfnunni sem lýsir staðsetningunni.
 
-.. math::
-  \begin{aligned}
-    &\text{} & v(t) &= a\cdot t +v_0 \\
-    &\text{Umritum} &  t &= \frac{v-v_0}{a} \\
-    &\text{Jafna fyrir } x(t) & x&=  x_0 + v_0 \cdot t +\frac12 a\cdot t^2 \\
-    &\text{Setjum tímann inn}  &  x&=x_0+ v_0 \cdot \frac{v-v_0}{a} +\frac12 a\cdot \left( \frac{v-v_0}{a} \right)^2\\
-    &\text{Margfalda inn í sviga} & x&=x_0+ \cdot \frac{v_0\cdot v-v_0^2}{a} +\frac{v^2+v_0^2-2v\cdot v_0}{2 a}\\
-    &\text{Margfalda með 2}a & 2a\cdot x &= 2a\cdot x_0 +2v\cdot v_0 -2v_0 +v^2 +v_0^2- 2v\cdot v_0\\ 
-    &  & 2a(x-x_0)&=v^2-v_0^2 \\
-    & & v^2&=v_0^2 + 2a\cdot (x-x_0)
-  \end{aligned}
+  .. math::
+    \begin{aligned}
+      &\text{} & v(t) &= a\cdot t +v_0 \\
+      &\text{Umritum} &  t &= \frac{v-v_0}{a} \\
+      &\text{Jafna fyrir } x(t) & x&=  x_0 + v_0 \cdot t +\frac12 a\cdot t^2 \\
+      &\text{Setjum tímann inn}  &  x&=x_0+ v_0 \cdot \frac{v-v_0}{a} +\frac12 a\cdot \left( \frac{v-v_0}{a} \right)^2\\
+      &\text{Margfalda inn í sviga} & x&=x_0+ \cdot \frac{v_0\cdot v-v_0^2}{a} +\frac{v^2+v_0^2-2v\cdot v_0}{2 a}\\
+      &\text{Margfalda með 2}a & 2a\cdot x &= 2a\cdot x_0 +2v\cdot v_0 -2v_0 +v^2 +v_0^2- 2v\cdot v_0\\ 
+      &  & 2a(x-x_0)&=v^2-v_0^2 \\
+      & & v^2&=v_0^2 + 2a\cdot (x-x_0)
+    \end{aligned}
 
 
-.. end-toggle::
 
 .. tip::
   Bíll bíður á rauðu ljósi. Þegar ljósið verður grænt fær bíllinn samstundis hröðunina :math:`6 \frac{\text{ m}}{\text{ s}^2}` . Hve hratt fer hann eftir 5 sekúndur og hve langt í burtu er hann?

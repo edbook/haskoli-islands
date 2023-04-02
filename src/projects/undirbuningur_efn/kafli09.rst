@@ -377,25 +377,23 @@ Fyrir þetta efnahvarf væri styrkur :math:`\ce{A}` við jafnvægi :math:`[\ce{A
 
 Algebran flækist hratt þegar fleiri en tvö efni eru í hvarfinu. Þá er mikilvægt að geta rifjað upp gamla stærðfræðitakta og leyst fyrir annars stigs margliðu. Fyrir enn flóknari dæmi, þarf að nálga eða beita enn flóknari aðferðum sem ekki verður farið í hér.
 
-.. begin-toggle::
-  :label: Leysa annars stigs margliðu
-  :starthidden: True
+.. admonition:: Lausn annars stigs margliðu
+  :class: setning, dropdown
 
-Margliðan
+  Margliðan
 
-.. math::
+  .. math::
 
-  ax^2 + bx + c =0
+    ax^2 + bx + c =0
 
-hefur rætur (lausnir):
+  hefur rætur (lausnir):
 
-.. math::
+  .. math::
 
-  x= \frac{-b +\sqrt{b^2-4ac}}{2a} \quad \text{eða} \quad x= \frac{-b -\sqrt{b^2-4ac}}{2a}
+    x= \frac{-b +\sqrt{b^2-4ac}}{2a} \quad \text{eða} \quad x= \frac{-b -\sqrt{b^2-4ac}}{2a}
 
-Margliðan hefur því oftast *tvær* lausnir en oft er hægt að útiloka aðra þeirra, út frá rökhugsun. T.d. getur styrkur efnis ekki orðið neikvæður.
+  Margliðan hefur því oftast *tvær* lausnir en oft er hægt að útiloka aðra þeirra, út frá rökhugsun. T.d. getur styrkur efnis ekki orðið neikvæður.
 
-.. end-toggle::
 
 .. tip::
 

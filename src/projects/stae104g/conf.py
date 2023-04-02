@@ -23,9 +23,9 @@ import sys
 # sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath("."))
 # sys.path.append(os.path.abspath("../../extensions"))
-#from eqt_ext import (
+# from eqt_ext import (
 #    get_eqt_ext_static_dir,  # Verður að koma eftir að bæta extensions í path
-#)
+# )
 
 from sphinxcontrib.questionnaire import get_eqt_ext_static_dir
 
@@ -53,7 +53,7 @@ extensions = [
     "sphinxcontrib.geogebra",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-#    "sphinxcontrib.toggleblock",
+    #    "sphinxcontrib.toggleblock",
     "sphinx_togglebutton",
     "sphinxcontrib.questionnaire",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
@@ -82,7 +82,7 @@ extensions = [
     # 'Sphinx_ext.iframe',
     # 'Sphinx_ext.button'
     "sphinxcontrib.youtube",
-#    "sphinx_rtd_dark_mode",
+    #    "sphinx_rtd_dark_mode",
 ]
 
 # -- Custom extension options and paths --------------------------------------
