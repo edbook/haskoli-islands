@@ -69,10 +69,9 @@ jobs:
           SSH_DEPLOY_KEY: ${{ secrets.WORKFLOW_DEPLOY_KEY }}
         with:
           source-directory: _build
+          target-directory: '.'
           destination-github-username: 'edbook-deployer'
           destination-repository-name: 'edbook.github.io'
-          user-email: edbook@hi.is
-          commit-message: pushed from $GITHUB_REF
           target-branch: main
 
   build-all:
