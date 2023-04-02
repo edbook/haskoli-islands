@@ -54,12 +54,11 @@ jobs:
           channel-priority: true
           use-mamba: true
       - run: |
-          conda env update
           conda activate edbook
           conda info
           conda list
       - name: 🚧 Build all (pr)
-        if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
+        # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
         id: build-all
         run: |
           make build-all
