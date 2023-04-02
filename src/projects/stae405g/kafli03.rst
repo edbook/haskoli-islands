@@ -234,19 +234,18 @@ Setning: Brúunarmargliðan er ótvírætt ákvörðuð
 Brúunarmargliðan af stigi :math:`\leq m` fyrir :math:`(x_0,y_0),\ldots,(x_m,y_m)` er
 ótvírætt ákvörðuð. 
 
-.. begin-toggle::
-	:label: Sönnun 
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-Ef :math:`p(x)` og :math:`q(x)` eru tvær
-brúunarmargliður af stigi :math:`\leq m` fyrir punktana
-:math:`(x_0,y_0), \ldots, (x_m,y_m)` þá er mismunurinn
-:math:`r(x) = p(x) - q(x)` margliða af stigi :math:`\leq m` með
-núllstöðvar :math:`x_0, \ldots, x_m`. Þetta eru :math:`m+1` ólíkir
-punktar og því er :math:`r(x)` núllmargliðan samkvæmt 
-`undirstöðusetningu algebrunnar <http://www.stae.is/fletta/undirst%C3%B6%C3%B0usetning/algebrunnar>`_. 
-Þar með er :math:`p(x) - q(x)` núllmargliðan, þ.e. \ :math:`p(x) = q(x)`.
+   Ef :math:`p(x)` og :math:`q(x)` eru tvær
+   brúunarmargliður af stigi :math:`\leq m` fyrir punktana
+   :math:`(x_0,y_0), \ldots, (x_m,y_m)` þá er mismunurinn
+   :math:`r(x) = p(x) - q(x)` margliða af stigi :math:`\leq m` með
+   núllstöðvar :math:`x_0, \ldots, x_m`. Þetta eru :math:`m+1` ólíkir
+   punktar og því er :math:`r(x)` núllmargliðan samkvæmt 
+   `undirstöðusetningu algebrunnar <http://www.stae.is/fletta/undirst%C3%B6%C3%B0usetning/algebrunnar>`_. 
+   Þar með er :math:`p(x) - q(x)` núllmargliðan, þ.e. \ :math:`p(x) = q(x)`.
 
-.. end-toggle::
 
 Setning: Brúunarmargliðan er til
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -255,43 +254,42 @@ Til er margliða :math:`p` af stigi :math:`\leq m` þannig að
 
 .. math:: p(x_0) = y_0, \quad \ldots \quad p(x_n)=y_n.
 
-.. begin-toggle::
-	:label: Sönnun
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-Við notum þrepun til að sýna fram á tilvistina.
+   Við notum þrepun til að sýna fram á tilvistina.
 
-Ef :math:`m = 0`, þá erum við aðeins með eitt brúunarskilyrði,
-:math:`p(x_0) = y_0`, og fastamargliðan :math:`p(x) = y_0` er lausn af
-stigi :math:`\leq 0`.
+   Ef :math:`m = 0`, þá erum við aðeins með eitt brúunarskilyrði,
+   :math:`p(x_0) = y_0`, og fastamargliðan :math:`p(x) = y_0` er lausn af
+   stigi :math:`\leq 0`.
 
-G.r.f. að við getum leyst öll brúunarverkefni þar sem fjöldi punkta er
-:math:`m` og sýnum að við getum þá leyst verkefnið fyrir :math:`m+1`
-punkt.
+   G.r.f. að við getum leyst öll brúunarverkefni þar sem fjöldi punkta er
+   :math:`m` og sýnum að við getum þá leyst verkefnið fyrir :math:`m+1`
+   punkt.
 
-Látum :math:`q` vera brúunarmargliðuna af stigi :math:`\leq m-1` fyrir
-punktana :math:`(x_0,y_0), \ldots,
-(x_{m-1},y_{m-1})` og :math:`r` vera brúunarmargliðuna af stigi
-:math:`\leq m-1` fyrir punktana :math:`(x_1,y_1), \ldots, (x_m,y_m)` og
-setjum síðan
+   Látum :math:`q` vera brúunarmargliðuna af stigi :math:`\leq m-1` fyrir
+   punktana :math:`(x_0,y_0), \ldots,
+   (x_{m-1},y_{m-1})` og :math:`r` vera brúunarmargliðuna af stigi
+   :math:`\leq m-1` fyrir punktana :math:`(x_1,y_1), \ldots, (x_m,y_m)` og
+   setjum síðan
 
-.. math:: p(x) = \frac{x-x_m}{x_0-x_m}q(x) + \frac{x-x_0}{x_m-x_0}r(x),
+   .. math:: p(x) = \frac{x-x_m}{x_0-x_m}q(x) + \frac{x-x_0}{x_m-x_0}r(x),
 
-:math:`p(x)` er greinilega margliða af stigi :math:`\leq m`. Skoðum nú
-gildin á :math:`p`
+   :math:`p(x)` er greinilega margliða af stigi :math:`\leq m`. Skoðum nú
+   gildin á :math:`p`
 
-.. math::
+   .. math::
 
-   \begin{aligned}
-     p(x_0) &= 1 \cdot q(x_0) + 0\cdot r(x_0) = y_0, \\
-     p(x_k) &= \frac{x_k-x_m}{x_0-x_m}y_k 
-     + \frac{x_k-x_0}{x_m-x_0}y_k = y_k,\qquad k = 1, \ldots, m-1,\\
-     p(x_m) &= 0 \cdot q(x_m) + 1 \cdot r(x_m) = y_m.\end{aligned}
+      \begin{aligned}
+	p(x_0) &= 1 \cdot q(x_0) + 0\cdot r(x_0) = y_0, \\
+	p(x_k) &= \frac{x_k-x_m}{x_0-x_m}y_k 
+	+ \frac{x_k-x_0}{x_m-x_0}y_k = y_k,\qquad k = 1, \ldots, m-1,\\
+	p(x_m) &= 0 \cdot q(x_m) + 1 \cdot r(x_m) = y_m.\end{aligned}
 
-Þar með er :math:`p` brúunarmargliðan sem uppfyllir :math:`p(x_j)=y_j`
-fyrir :math:`j=0,\dots,m` og við höfum leyst brúunarverkefnið fyrir
-:math:`m+1` punkt.
+   Þar með er :math:`p` brúunarmargliðan sem uppfyllir :math:`p(x_j)=y_j`
+   fyrir :math:`j=0,\dots,m` og við höfum leyst brúunarverkefnið fyrir
+   :math:`m+1` punkt.
 
-.. end-toggle::
 
 .. index::
 	margliður; Lagrange-form
@@ -375,34 +373,33 @@ Sýnidæmi
 Finnið brúunarmargliðuna gegnum punktana :math:`(1,1)`, :math:`(2,3)`
 og :math:`(3,6)` með því að nota Lagrange-margliður.
 
-.. begin-toggle::
-	:label: Lausn
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-Reiknum fyrst margliðurnar :math:`\ell_{0}`, :math:`\ell_{1}` og
-:math:`\ell_{2}`:
+   Reiknum fyrst margliðurnar :math:`\ell_{0}`, :math:`\ell_{1}` og
+   :math:`\ell_{2}`:
 
-.. math::
+   .. math::
 
-   \begin{aligned}
-     \ell_{0} &= \frac{(x-2)(x-3)}{(1-2)(1-3)} 
-     = \frac{(x-2)(x-3)}{2} \\
-     \ell_{1} &= \frac{(x-1)(x-3)}{(2-1)(2-3)}
-     = -(x-1)(x-3) \\
-     \ell_{2} &= \frac{(x-1)(x-2)}{(3-1)(3-2)}
-     = \frac{(x-1)(x-2)}{2}\end{aligned}
+      \begin{aligned}
+	\ell_{0} &= \frac{(x-2)(x-3)}{(1-2)(1-3)} 
+	= \frac{(x-2)(x-3)}{2} \\
+	\ell_{1} &= \frac{(x-1)(x-3)}{(2-1)(2-3)}
+	= -(x-1)(x-3) \\
+	\ell_{2} &= \frac{(x-1)(x-2)}{(3-1)(3-2)}
+	= \frac{(x-1)(x-2)}{2}\end{aligned}
 
-Þá fæst að brúunarmargliðan :math:`p` er
+   Þá fæst að brúunarmargliðan :math:`p` er
 
-.. math::
+   .. math::
 
-   p(x) = 1 \cdot \frac{(x-2)(x-3)}{2}
-     - 3 \cdot (x-1)(x-3)
-     + 6 \cdot \frac{(x-1)(x-2)}{2}
+      p(x) = 1 \cdot \frac{(x-2)(x-3)}{2}
+	- 3 \cdot (x-1)(x-3)
+	+ 6 \cdot \frac{(x-1)(x-2)}{2}
 
-Þetta er greinilega annars stigs margliða og auðvelt er að sannfæra sig
-um að :math:`p(1) = 1`, :math:`p(2) = 3` og :math:`p(3) = 6`.
+   Þetta er greinilega annars stigs margliða og auðvelt er að sannfæra sig
+   um að :math:`p(1) = 1`, :math:`p(2) = 3` og :math:`p(3) = 6`.
 
-.. end-toggle::
 
 .. index::
 	brúun; Newton-form
@@ -507,95 +504,91 @@ Mismunakvótatöflur fyrir :math:`m=0,1,2,3`
 Mismunakvótar eru venjulega reiknaðir út í svokölluðum
 *mismunakvótatöflum*.
 
-.. begin-toggle::
-	:label: Ef m=0
+.. admonition:: Tilfellið :math:`m=0`
+   :class: setning, dropdown
 
-Ef :math:`m = 0` er mismunakvótataflan aðeins ein lína
+   Ef :math:`m = 0` er mismunakvótataflan aðeins ein lína
 
-.. math::
+   .. math::
 
-   \begin{array}{c|c|c}
-       i & x_i & y[x_i] \\
-       \hline
-       0 & x_0 & y[x_0] = y_0
-     \end{array}
-
-.. end-toggle::
-
-.. begin-toggle::
-	:label: Ef m=1
-
-Ef :math:`m = 1` er taflan
-
-.. math::
-
-   \begin{array}{c|c|cc}
-       i & x_i & y[x_i] & y[x_i,x_{i+1}] \\
-       \hline
-       0 & x_0 & y[x_0] = y_0 & y[x_0,x_1] \\
-       1 & x_1 & y[x_1] = y_1 & 
-     \end{array}
-
-og margliðan er
-
-.. math:: p(x) = y[x_0] + y[x_0,x_1](x-x_0).
-
-.. end-toggle::
-
-.. begin-toggle::
-	:label: Ef m=2
-
-Ef :math:`m = 2` verður taflan
-
-.. math::
-
-   \begin{array}{c|c|ccc}
-       i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}] \\
-       \hline
-       0 & x_0 & y[x_0] = y_0 & y[x_0,x_1] & y[x_0,x_1,x_2] \\
-       1 & x_1 & y[x_1] = y_1 & y[x_1,x_2] & \\
-       2 & x_2 & y[x_2] = y_2 &  & 
-     \end{array}
-
-og margliðan er
-
-.. math::
-
-   p(x) = y[x_0] + y[x_0,x_1](x-x_0) 
-     + y[x_0,x_1,x_2](x-x_0)(x-x_1).
-
-.. end-toggle::
-
-.. begin-toggle::
-	:label: Ef m=3
+      \begin{array}{c|c|c}
+	  i & x_i & y[x_i] \\
+	  \hline
+	  0 & x_0 & y[x_0] = y_0
+	\end{array}
 
 
-Skoðum loks tilfellið :math:`m = 3`
+.. admonition:: Tilfellið :math:`m=1`
+   :class: setning, dropdown
 
-.. math::
+   Ef :math:`m = 1` er taflan
 
-   \begin{array}{c|c|cccc}
-       i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}]
-       & y[x_i,x_{i+1},x_{i+2},x_{i+3}] \\
-       \hline
-       0 & x_0 & y[x_0] = y_0 & y[x_0,x_1] & y[x_0,x_1,x_2]
-       & y[x_0,x_1,x_2,x_3] \\
-       1 & x_1 & y[x_1] = y_1 & y[x_1,x_2] & y[x_1,x_2,x_3] & \\
-       2 & x_2 & y[x_2] = y_2 & y[x_2,x_3] & & \\
-       3 & x_3 & y[x_3] = y_3 & & &
-     \end{array}
+   .. math::
 
-Brúunarmargliðan fæst svo með því að nota stuðlana úr fyrstu línu
-töflunnar:
+      \begin{array}{c|c|cc}
+	  i & x_i & y[x_i] & y[x_i,x_{i+1}] \\
+	  \hline
+	  0 & x_0 & y[x_0] = y_0 & y[x_0,x_1] \\
+	  1 & x_1 & y[x_1] = y_1 & 
+	\end{array}
 
-.. math::
+   og margliðan er
 
-   \begin{aligned}
-     p(x) = &y[x_0] + y[x_0,x_1](x-x_0) 
-     + y[x_0,x_1,x_2](x-x_0)(x-x_1) \\ 
-     &+ y[x_0,x_1,x_2,x_3](x-x_0)(x-x_1)(x-x_2)\end{aligned}
+   .. math:: p(x) = y[x_0] + y[x_0,x_1](x-x_0).
 
-.. end-toggle::
+
+.. admonition:: Tilfellið :math:`m=2`
+   :class: setning, dropdown
+
+   Ef :math:`m = 2` verður taflan
+
+   .. math::
+
+      \begin{array}{c|c|ccc}
+	  i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}] \\
+	  \hline
+	  0 & x_0 & y[x_0] = y_0 & y[x_0,x_1] & y[x_0,x_1,x_2] \\
+	  1 & x_1 & y[x_1] = y_1 & y[x_1,x_2] & \\
+	  2 & x_2 & y[x_2] = y_2 &  & 
+	\end{array}
+
+   og margliðan er
+
+   .. math::
+
+      p(x) = y[x_0] + y[x_0,x_1](x-x_0) 
+	+ y[x_0,x_1,x_2](x-x_0)(x-x_1).
+
+
+.. admonition:: Tilfellið :math:`m=3`
+   :class: setning, dropdown
+
+
+   Skoðum loks tilfellið :math:`m = 3`
+
+   .. math::
+
+      \begin{array}{c|c|cccc}
+	  i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}]
+	  & y[x_i,x_{i+1},x_{i+2},x_{i+3}] \\
+	  \hline
+	  0 & x_0 & y[x_0] = y_0 & y[x_0,x_1] & y[x_0,x_1,x_2]
+	  & y[x_0,x_1,x_2,x_3] \\
+	  1 & x_1 & y[x_1] = y_1 & y[x_1,x_2] & y[x_1,x_2,x_3] & \\
+	  2 & x_2 & y[x_2] = y_2 & y[x_2,x_3] & & \\
+	  3 & x_3 & y[x_3] = y_3 & & &
+	\end{array}
+
+   Brúunarmargliðan fæst svo með því að nota stuðlana úr fyrstu línu
+   töflunnar:
+
+   .. math::
+
+      \begin{aligned}
+	p(x) = &y[x_0] + y[x_0,x_1](x-x_0) 
+	+ y[x_0,x_1,x_2](x-x_0)(x-x_1) \\ 
+	&+ y[x_0,x_1,x_2,x_3](x-x_0)(x-x_1)(x-x_2)\end{aligned}
+
 
 Sýnidæmi
 ~~~~~~~~
@@ -603,64 +596,63 @@ Sýnidæmi
 Við skulum reikna út aftur brúunarmargliðuna gegnum :math:`(1,1)`,
 :math:`(2,3)` og :math:`(3,6)`. 
 
-.. begin-toggle::
-	:label: Lausn
+.. admonition:: Lausn
+   :class: daemi, dropdown
 
-Stillum fyrst upp mismunakvótatöflu
+   Stillum fyrst upp mismunakvótatöflu
 
-.. math::
+   .. math::
 
-   \begin{array}{cc||ccc}
-       i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}] \\
-       \hline
-       0 & 1   &  1     &    &   \\
-       1 & 2   &  3     &    &   \\
-       2 & 3   &  6     &    &   
-     \end{array}
+      \begin{array}{cc||ccc}
+	  i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}] \\
+	  \hline
+	  0 & 1   &  1     &    &   \\
+	  1 & 2   &  3     &    &   \\
+	  2 & 3   &  6     &    &   
+	\end{array}
 
-Fyllum svo út í hana með að ganga á hvern dálk á fætur öðrum
+   Fyllum svo út í hana með að ganga á hvern dálk á fætur öðrum
 
-.. math::
+   .. math::
 
-   \begin{array}{cc||ccc}
-       i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}] \\
-       \hline
-       0 & 1 & 1 & \dfrac{3-1}{2-1} = 2 & \dfrac{3-2}{3-1} = 1/2  \\
-       1 & 2 & 3 & \dfrac{6-3}{3-2} = 3 & \\
-       2 & 3 & 6 & &   
-     \end{array}
+      \begin{array}{cc||ccc}
+	  i & x_i & y[x_i] & y[x_i,x_{i+1}] & y[x_i,x_{i+1},x_{i+2}] \\
+	  \hline
+	  0 & 1 & 1 & \dfrac{3-1}{2-1} = 2 & \dfrac{3-2}{3-1} = 1/2  \\
+	  1 & 2 & 3 & \dfrac{6-3}{3-2} = 3 & \\
+	  2 & 3 & 6 & &   
+	\end{array}
 
-Lesum út brúunarmargliðuna :math:`p` með að ganga á efstu línuna:
+   Lesum út brúunarmargliðuna :math:`p` með að ganga á efstu línuna:
 
-.. math:: p(x) = 1 + 2 \cdot (x-1) + \frac{1}{2} \cdot (x-1)(x-2).
+   .. math:: p(x) = 1 + 2 \cdot (x-1) + \frac{1}{2} \cdot (x-1)(x-2).
 
-Reiknum út brúunarmargliðuna gegnum :math:`(3,1)`, :math:`(1,-3)`,
-:math:`(5,2)` og :math:`(6,4)`. Stillum upp og fyllum út í
-mismunakvótatöflu:
+   Reiknum út brúunarmargliðuna gegnum :math:`(3,1)`, :math:`(1,-3)`,
+   :math:`(5,2)` og :math:`(6,4)`. Stillum upp og fyllum út í
+   mismunakvótatöflu:
 
-.. math::
+   .. math::
 
-   \begin{array}{cc||cccc}
-       i & x_i & y[x_i], & y[x_i,x_{i+1}], &
-       y[x_i,x_{i+1},x_{i+2}], & y[x_i,\ldots,x_{i+3}] \\
-       \hline
-       1 & 3 & 1 & \frac{-3-1}{1-3} = 2 & \frac{5/4-2}{5-3} = -3/8 &
-       \frac{3/20-(-3/8)}{6-3} = 7/40 \\
-       2 & 1 & -3 & \frac{2-(-3)}{5-1} = 5/4 &
-       \frac{2-5/4}{6-1} = 3/20 & \\
-       3 & 5 & 2 & \frac{4-2}{6-5} = 2 & & \\
-       4 & 6 & 4 & & &
-     \end{array}
+      \begin{array}{cc||cccc}
+	  i & x_i & y[x_i], & y[x_i,x_{i+1}], &
+	  y[x_i,x_{i+1},x_{i+2}], & y[x_i,\ldots,x_{i+3}] \\
+	  \hline
+	  1 & 3 & 1 & \frac{-3-1}{1-3} = 2 & \frac{5/4-2}{5-3} = -3/8 &
+	  \frac{3/20-(-3/8)}{6-3} = 7/40 \\
+	  2 & 1 & -3 & \frac{2-(-3)}{5-1} = 5/4 &
+	  \frac{2-5/4}{6-1} = 3/20 & \\
+	  3 & 5 & 2 & \frac{4-2}{6-5} = 2 & & \\
+	  4 & 6 & 4 & & &
+	\end{array}
 
-Nú getum við lesið brúunarmargliðuna okkar úr töflunni með að ganga á
-efstu línuna, við fáum
+   Nú getum við lesið brúunarmargliðuna okkar úr töflunni með að ganga á
+   efstu línuna, við fáum
 
-.. math::
+   .. math::
 
-   p(x) = 1 + 2(x-3) - \frac 38 (x-3)(x-1)
-     + \frac 7{40} (x-3)(x-1)(x-5)
+      p(x) = 1 + 2(x-3) - \frac 38 (x-3)(x-1)
+	+ \frac 7{40} (x-3)(x-1)(x-5)
 
-.. end-toggle::
 
 .. todo::
 	Umraða
@@ -853,30 +845,29 @@ Nú ætlum við að sýna fram á að til sé nákvæmlega ein margliða
 
 Byrjum á að sýna að það er í mesta lagi ein margliða sem uppfyllir þetta.
      
-.. begin-toggle::
-    :label: Sönnun á ótvíræðni
-     
-Gerum ráð fyrir að
-:math:`p(x)` og :math:`q(x)` séu tvær margliður af stigi :math:`\leq m`
-sem uppfylla öll þessi skilyrði.
+.. admonition:: Sönnun
+   :class: setning, dropdown
+	
+   Gerum ráð fyrir að
+   :math:`p(x)` og :math:`q(x)` séu tvær margliður af stigi :math:`\leq m`
+   sem uppfylla öll þessi skilyrði.
 
-Þá uppfyllir margliðan :math:`r(x) = p(x) - q(x)` að
+   Þá uppfyllir margliðan :math:`r(x) = p(x) - q(x)` að
 
-.. math::
+   .. math::
 
-   r^{(j)}(a_i) = 0, \quad j = 0, \ldots, m_i-1,
-     \quad i = 1, \ldots,k
+      r^{(j)}(a_i) = 0, \quad j = 0, \ldots, m_i-1,
+	\quad i = 1, \ldots,k
 
-Af þessu leiðir að :math:`r(x)` er deilanlegt með :math:`(x-a_i)^{m_i}`
-en samanlagt stig þessara þátta er :math:`m_1 + \ldots + m_k = m + 1`.
+   Af þessu leiðir að :math:`r(x)` er deilanlegt með :math:`(x-a_i)^{m_i}`
+   en samanlagt stig þessara þátta er :math:`m_1 + \ldots + m_k = m + 1`.
 
-Nú er stig :math:`r(x)` minna eða jafnt :math:`m` svo þetta getur aðeins
-gerst ef :math:`r(x)` er núllmargliðan.
+   Nú er stig :math:`r(x)` minna eða jafnt :math:`m` svo þetta getur aðeins
+   gerst ef :math:`r(x)` er núllmargliðan.
 
-Við höfum því að :math:`p(x) = q(x)` og ályktum að við höfum nákvæmlega
-eina lausn á brúunarverkefninu ef við getum sýnt fram á tilvist á lausn.
+   Við höfum því að :math:`p(x) = q(x)` og ályktum að við höfum nákvæmlega
+   eina lausn á brúunarverkefninu ef við getum sýnt fram á tilvist á lausn.
 
-.. end-toggle::
 
 Tilvist á lausn
 ~~~~~~~~~~~~~~~
@@ -884,115 +875,114 @@ Tilvist á lausn
 Nú beitum við sams konar röksemdafærslu og í `byrjum kaflans <Setning: Brúunarmargliðan er til>`_ til þess að sýna
 fram á tilvist á lausn, þ.e. við notum þrepun.
 
-.. begin-toggle::
-    :label: Sönnun á tilvist
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-**Smíðum margliðuna:**
+   **Smíðum margliðuna:**
 
-Ef :math:`m = 0`, þá er lausnin fastamargliðan
-:math:`p(x) = y_1^{(0)}=y_0`.
+   Ef :math:`m = 0`, þá er lausnin fastamargliðan
+   :math:`p(x) = y_1^{(0)}=y_0`.
 
-Gerum nú ráð fyrir að við getum fundið brúunarmargliðu af stigi
-:math:`\leq m-1` fyrir sérhvert alhæft brúunarverkefni þar sem
-samanlagður fjöldi skilyrðanna er :math:`m`.
+   Gerum nú ráð fyrir að við getum fundið brúunarmargliðu af stigi
+   :math:`\leq m-1` fyrir sérhvert alhæft brúunarverkefni þar sem
+   samanlagður fjöldi skilyrðanna er :math:`m`.
 
-Lítum nú aftur á upprunalega brúunarverkefnið þar sem fjöldi skilyrðanna
-er :math:`m+1`. Skilgreinum tvær runur af punktum
+   Lítum nú aftur á upprunalega brúunarverkefnið þar sem fjöldi skilyrðanna
+   er :math:`m+1`. Skilgreinum tvær runur af punktum
 
-.. math::
+   .. math::
 
-   (x_0,x_1,\ldots,x_m) = 
-     (\underbrace{a_1, \ldots, a_1}_{m_1 \, \text{sinnum}}, 
-     \underbrace{a_2, \ldots , a_2}_{m_2 \, \text{sinnum}}, 
-     \ldots , 
-     \underbrace{a_k, \ldots , a_k}_{m_k \, \text{sinnum}})
+      (x_0,x_1,\ldots,x_m) = 
+	(\underbrace{a_1, \ldots, a_1}_{m_1 \, \text{sinnum}}, 
+	\underbrace{a_2, \ldots , a_2}_{m_2 \, \text{sinnum}}, 
+	\ldots , 
+	\underbrace{a_k, \ldots , a_k}_{m_k \, \text{sinnum}})
 
-og
+   og
 
-.. math::
+   .. math::
 
-   (y_0,y_1,\ldots,y_m) = 
-     (y_1^{(0)}, \ldots, y_1^{(m_1-1)}, \ldots,
-     y_k^{(0)}, \ldots, y_k^{(m_k-1)})
+      (y_0,y_1,\ldots,y_m) = 
+	(y_1^{(0)}, \ldots, y_1^{(m_1-1)}, \ldots,
+	y_k^{(0)}, \ldots, y_k^{(m_k-1)})
 
-Við höfum séð að í því tilfelli að við höfum einn punkt, :math:`k=1`,
-:math:`x_0 = x_1 = \ldots = x_m = a_1` er lausnin gefin með
-Taylor-margliðu í :math:`a_1`.
+   Við höfum séð að í því tilfelli að við höfum einn punkt, :math:`k=1`,
+   :math:`x_0 = x_1 = \ldots = x_m = a_1` er lausnin gefin með
+   Taylor-margliðu í :math:`a_1`.
 
-Við megum því gera ráð fyrir punktarnir séu a.m.k. tveir,
-:math:`k\geq 2`. Það gefur að :math:`x_0 \not= x_m`.
+   Við megum því gera ráð fyrir punktarnir séu a.m.k. tveir,
+   :math:`k\geq 2`. Það gefur að :math:`x_0 \not= x_m`.
 
-Látum :math:`q(x)` vera margliðuna af stigi :math:`\leq m-1` sem
-uppfyllir sömu skilyrði og :math:`p`, nema það síðasta um að
-:math:`q^{(m_k-1)}(a_k)` þurfi að vera :math:`y_k^{(m_k-1)}` .
+   Látum :math:`q(x)` vera margliðuna af stigi :math:`\leq m-1` sem
+   uppfyllir sömu skilyrði og :math:`p`, nema það síðasta um að
+   :math:`q^{(m_k-1)}(a_k)` þurfi að vera :math:`y_k^{(m_k-1)}` .
 
-og látum :math:`r(x)` vera margliðuna sem uppfyllir öll
-brúunarskilyrðin, nema síðasta skilyrðið í fyrsta punkti um að
-:math:`r^{(m_1-1)}(a_1)` sé jafnt :math:`y_1^{(m_1-1)}`.
+   og látum :math:`r(x)` vera margliðuna sem uppfyllir öll
+   brúunarskilyrðin, nema síðasta skilyrðið í fyrsta punkti um að
+   :math:`r^{(m_1-1)}(a_1)` sé jafnt :math:`y_1^{(m_1-1)}`.
 
-Setjum síðan
+   Setjum síðan
 
-.. math::
+   .. math::
 
-   p(x) = \frac{x-x_m}{x_0-x_m}q(x) 
-     + \frac{x-x_0}{x_m-x_0}r(x)
-     = \frac{x-a_k}{a_1-a_k}q(x)
-     + \frac{x-a_1}{a_k-a_1}r(x)
-
-
-**Sýnum að gefin fallgildi eru tekin**
-
-Nú þurfum við að staðfesta að öll skilyrðin séu uppfyllt.
-
-Við byrjum á því að taka :math:`j=0` sem svarar til þess að :math:`p`
-taki fyrirfram gefin fallgildi,
-
-.. math::
-
-   \begin{aligned}
-     p(a_1) &= \frac{a_1-a_k}{a_1-a_k}q(a_1)
-     + \frac{a_1-a_1}{a_k-a_1}r(a_1) = q(a_1) = y_1^{(0)}\\
-     p(a_i) &= \frac{a_i-a_k}{a_1-a_k}q(a_i)
-     + \frac{a_i-a_1}{a_k-a_1}r(a_i) 
-     = \left( \frac{a_i-a_k}{a_1-a_k} 
-       + \frac{a_i-a_1}{a_k-a_1} \right) y_i^{(0)} \\
-       &= y_i^{(0)},  \qquad \text{fyrir } i=2,\ldots,k-1,\\
-     p(a_k) &= \frac{a_k-a_k}{a_1-a_k}q(a_k)
-     + \frac{a_k-a_1}{a_k-a_1}r(a_k) = r(a_k) = y_k^{(0)}.\end{aligned}
+      p(x) = \frac{x-x_m}{x_0-x_m}q(x) 
+	+ \frac{x-x_0}{x_m-x_0}r(x)
+	= \frac{x-a_k}{a_1-a_k}q(x)
+	+ \frac{x-a_1}{a_k-a_1}r(x)
 
 
-Sýnum svo að gildin á afleiðum :math:`p` séu rétt.
+   **Sýnum að gefin fallgildi eru tekin**
 
-Rifjum upp margliðuna :math:`p`:
+   Nú þurfum við að staðfesta að öll skilyrðin séu uppfyllt.
 
-.. math::
+   Við byrjum á því að taka :math:`j=0` sem svarar til þess að :math:`p`
+   taki fyrirfram gefin fallgildi,
 
-   p(x) = \frac{x-x_m}{x_0-x_m}q(x) 
-     + \frac{x-x_0}{x_m-x_0}r(x)
-     = \frac{x-a_k}{a_1-a_k}q(x)
-     + \frac{x-a_1}{a_k-a_1}r(x)
+   .. math::
 
-Afleiður hennar eru
+      \begin{aligned}
+	p(a_1) &= \frac{a_1-a_k}{a_1-a_k}q(a_1)
+	+ \frac{a_1-a_1}{a_k-a_1}r(a_1) = q(a_1) = y_1^{(0)}\\
+	p(a_i) &= \frac{a_i-a_k}{a_1-a_k}q(a_i)
+	+ \frac{a_i-a_1}{a_k-a_1}r(a_i) 
+	= \left( \frac{a_i-a_k}{a_1-a_k} 
+	  + \frac{a_i-a_1}{a_k-a_1} \right) y_i^{(0)} \\
+	  &= y_i^{(0)},  \qquad \text{fyrir } i=2,\ldots,k-1,\\
+	p(a_k) &= \frac{a_k-a_k}{a_1-a_k}q(a_k)
+	+ \frac{a_k-a_1}{a_k-a_1}r(a_k) = r(a_k) = y_k^{(0)}.\end{aligned}
 
-.. math::
 
-   p^{(j)}(x) = \frac{(x-a_k)}{(a_1-a_k)}q^{(j)}(x)
-     + \frac{(x-a_1)}{(a_k-a_1)}r^{(j)}(x)
-     + j \frac{\left( q^{(j-1)}(x)-r^{(j-1)}(x)\right)}{a_k-a_1}
+   Sýnum svo að gildin á afleiðum :math:`p` séu rétt.
 
-Ef nú :math:`m_i > 1` þá er :math:`q^{(j-1)}(a_i) = y^{(j-1)}(a_i) =
-r^{(j-1)}(a_i)` fyrir :math:`j = 1, \ldots, m_i-1` og því kemur alltaf
-:math:`0` út úr síðasta liðnum ef við setjum inn :math:`x = a_i`, fyrir
-öll :math:`i = 1, \ldots, k`.
+   Rifjum upp margliðuna :math:`p`:
 
-Af þessu sést að afleiður :math:`p` uppfylla skilyrðin
+   .. math::
 
-.. math::
+      p(x) = \frac{x-x_m}{x_0-x_m}q(x) 
+	+ \frac{x-x_0}{x_m-x_0}r(x)
+	= \frac{x-a_k}{a_1-a_k}q(x)
+	+ \frac{x-a_1}{a_k-a_1}r(x)
 
-   p^{(j)}(a_i) = y^{(j)}_i, \qquad \text{fyrir } j=0,\ldots,m_i-1, 
-     \quad i=1,\ldots,k.
+   Afleiður hennar eru
 
-.. end-toggle::
+   .. math::
+
+      p^{(j)}(x) = \frac{(x-a_k)}{(a_1-a_k)}q^{(j)}(x)
+	+ \frac{(x-a_1)}{(a_k-a_1)}r^{(j)}(x)
+	+ j \frac{\left( q^{(j-1)}(x)-r^{(j-1)}(x)\right)}{a_k-a_1}
+
+   Ef nú :math:`m_i > 1` þá er :math:`q^{(j-1)}(a_i) = y^{(j-1)}(a_i) =
+   r^{(j-1)}(a_i)` fyrir :math:`j = 1, \ldots, m_i-1` og því kemur alltaf
+   :math:`0` út úr síðasta liðnum ef við setjum inn :math:`x = a_i`, fyrir
+   öll :math:`i = 1, \ldots, k`.
+
+   Af þessu sést að afleiður :math:`p` uppfylla skilyrðin
+
+   .. math::
+
+      p^{(j)}(a_i) = y^{(j)}_i, \qquad \text{fyrir } j=0,\ldots,m_i-1, 
+	\quad i=1,\ldots,k.
+
 
 Samantekt
 ~~~~~~~~~
@@ -1340,36 +1330,35 @@ Setning: Lágmörkun með Legendre margliðunum
 Ef :math:`p` er stöðluð margliða af stigi :math:`n+1` þá er
 :math:`\|p\|_2\geq \|\tilde P_{n+1}\|_2`. 
 
-.. begin-toggle::
-    :label: Sönnun 
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-Skilgreinum
-:math:`q = p-\tilde P_{n+1}`, sem þýðir að :math:`q` er margliða af
-stigi minna en :math:`n+1`. Nú er
+   Skilgreinum
+   :math:`q = p-\tilde P_{n+1}`, sem þýðir að :math:`q` er margliða af
+   stigi minna en :math:`n+1`. Nú er
 
-.. math::
+   .. math::
 
-   \begin{aligned}
-      \|p\|_2^2 &= \|\tilde P_{n+1} + q\|_2^2 \\
-      &= \int_{-1}^1 (\tilde P_{n+1}(x) + q(x))^2\, dx \\
-      &= \int_{-1}^1 \tilde P_{n+1}(x)^2 + 2q(x)\tilde P_{n+1}(x) + q(x)^2\, dx\\
-      &= \|\tilde P_{n+1}\|_2^2 + 2\int_{-1}^1 q(x)\tilde P_{n+1}(x)\, dx + \|q\|_2^2\\
-      &= \|\tilde P_{n+1}\|_2^2 +  \|q\|_2^2 \geq \|\tilde P_{n+1}\|_2^2
-     \end{aligned}
+      \begin{aligned}
+	 \|p\|_2^2 &= \|\tilde P_{n+1} + q\|_2^2 \\
+	 &= \int_{-1}^1 (\tilde P_{n+1}(x) + q(x))^2\, dx \\
+	 &= \int_{-1}^1 \tilde P_{n+1}(x)^2 + 2q(x)\tilde P_{n+1}(x) + q(x)^2\, dx\\
+	 &= \|\tilde P_{n+1}\|_2^2 + 2\int_{-1}^1 q(x)\tilde P_{n+1}(x)\, dx + \|q\|_2^2\\
+	 &= \|\tilde P_{n+1}\|_2^2 +  \|q\|_2^2 \geq \|\tilde P_{n+1}\|_2^2
+	\end{aligned}
 
-því :math:`\int_{-1}^1 q(x)\tilde P_{n+1}(x)\, dx=0` og
-:math:`\|q\|_2 \geq 0`.
+   því :math:`\int_{-1}^1 q(x)\tilde P_{n+1}(x)\, dx=0` og
+   :math:`\|q\|_2 \geq 0`.
 
-Af síðustu setningu sjáum við að til þess að lágmarka
+   Af síðustu setningu sjáum við að til þess að lágmarka
 
-.. math:: \|f(x)-p(x)\|_2 = \left\|\frac{f^{(n+1)}(\xi)}{(n+1)!}\, (x-x_0)(x-x_1)\cdots (x-x_n) \right\|_2,
+   .. math:: \|f(x)-p(x)\|_2 = \left\|\frac{f^{(n+1)}(\xi)}{(n+1)!}\, (x-x_0)(x-x_1)\cdots (x-x_n) \right\|_2,
 
-þá veljum við :math:`x_1,\ldots,x_n` þannig að
-:math:`(x-x_0)(x-x_1)\cdots (x-x_n) = \tilde P_{n+1}`.
-Þ.e. \ :math:`x_j` þurfa að vera rætur stöðluðu Legendre margliðunnar af
-stigi :math:`n+1`.
+   þá veljum við :math:`x_1,\ldots,x_n` þannig að
+   :math:`(x-x_0)(x-x_1)\cdots (x-x_n) = \tilde P_{n+1}`.
+   Þ.e. \ :math:`x_j` þurfa að vera rætur stöðluðu Legendre margliðunnar af
+   stigi :math:`n+1`.
 
-.. end-toggle::
 
 
 Núllstöðvar :math:`P_n`, fyrir :math:`n=1,\ldots,10`
@@ -1619,72 +1608,71 @@ bili sem inniheldur :math:`a_1, \ldots, a_k` og :math:`x` þannig að
 
 .. math:: f[x_0,\ldots,x_m,x] = \frac{f^{(m+1)}(\xi)}{(m+1)!}
 
-.. begin-toggle::
-    :label: Sönnun
+.. admonition:: Sönnun
+   :class: setning, dropdown
 
-Við skilgreinum fallið
+   Við skilgreinum fallið
 
-.. math:: g(t) = f(t) - p(t) - \lambda w(t),
+   .. math:: g(t) = f(t) - p(t) - \lambda w(t),
 
-þar sem
+   þar sem
 
-.. math:: w(t) = (t-a_1)^{m_1} \cdots (t-a_k)^{m_k}
+   .. math:: w(t) = (t-a_1)^{m_1} \cdots (t-a_k)^{m_k}
 
-og talan :math:`\lambda` er valin þannig að :math:`g(x) = 0`.
+   og talan :math:`\lambda` er valin þannig að :math:`g(x) = 0`.
 
-Nú er :math:`p^{(j)}(a_i)=f^{(j)}(a_i)` fyrir :math:`j=0,\dots,m_i-1`,
-þá gefur setning Taylors okkur að :math:`g` hefur núllstöð af stigi
-:math:`m_i` í sérhverjum punktanna :math:`a_i`. Auk þess hefur :math:`g`
-núllstöð í :math:`x`. Samanlagt eru þetta að minnsta kosti :math:`m+2`
-núllstöðvar taldar með margfeldni.
+   Nú er :math:`p^{(j)}(a_i)=f^{(j)}(a_i)` fyrir :math:`j=0,\dots,m_i-1`,
+   þá gefur setning Taylors okkur að :math:`g` hefur núllstöð af stigi
+   :math:`m_i` í sérhverjum punktanna :math:`a_i`. Auk þess hefur :math:`g`
+   núllstöð í :math:`x`. Samanlagt eru þetta að minnsta kosti :math:`m+2`
+   núllstöðvar taldar með margfeldni.
 
-Höfum:
+   Höfum:
 
--   :math:`g` hefur að minnsta kosti :math:`m+2` núllstöðvar taldar með margfeldni,
+   -   :math:`g` hefur að minnsta kosti :math:`m+2` núllstöðvar taldar með margfeldni,
 
--   :math:`g'` hefur að minnsta kosti :math:`m+1` núllstöð talda með margfeldni,
+   -   :math:`g'` hefur að minnsta kosti :math:`m+1` núllstöð talda með margfeldni,
 
--   :math:`g''` hefur að minnsta kosti :math:`m` núllstöðvar taldar með margfeldni
+   -   :math:`g''` hefur að minnsta kosti :math:`m` núllstöðvar taldar með margfeldni
 
--   og þannig áfram, þar til við ályktum að
+   -   og þannig áfram, þar til við ályktum að
 
--   :math:`g^{(m+1)}` hefur að minnsta kosti eina núllstöð.
+   -   :math:`g^{(m+1)}` hefur að minnsta kosti eina núllstöð.
 
-Tökum eina slíka og köllum hana :math:`\xi`.
+   Tökum eina slíka og köllum hana :math:`\xi`.
 
-Munum að
+   Munum að
 
-.. math:: g(t) = f(t) - p(t) - \lambda w(t),
+   .. math:: g(t) = f(t) - p(t) - \lambda w(t),
 
-þar sem
+   þar sem
 
-.. math:: w(t) = (t-a_1)^{m_1} \cdots (t-a_k)^{m_k}=t^{m+1}+b_mt^m+\cdots+b_1t+b_0
+   .. math:: w(t) = (t-a_1)^{m_1} \cdots (t-a_k)^{m_k}=t^{m+1}+b_mt^m+\cdots+b_1t+b_0
 
-Margliðan :math:`p` hefur stig :math:`\leq m` svo
-:math:`p^{(m+1)}(x) = 0` fyrir öll :math:`x`
+   Margliðan :math:`p` hefur stig :math:`\leq m` svo
+   :math:`p^{(m+1)}(x) = 0` fyrir öll :math:`x`
 
-og margliðan :math:`w` er af stigi :math:`m+1` með stuðul :math:`1` við
-hæsta veldið, svo :math:`w^{(m+1)}(t) = (m+1)!`. Við höfum því
+   og margliðan :math:`w` er af stigi :math:`m+1` með stuðul :math:`1` við
+   hæsta veldið, svo :math:`w^{(m+1)}(t) = (m+1)!`. Við höfum því
 
-.. math:: 0 = g^{(m+1)}(\xi) = f^{(m+1)}(\xi) - \lambda \cdot (m+1)!
+   .. math:: 0 = g^{(m+1)}(\xi) = f^{(m+1)}(\xi) - \lambda \cdot (m+1)!
 
-sem jafngildir því að
+   sem jafngildir því að
 
-.. math:: \lambda =\dfrac{f^{(m+1)}(\xi)}{(m+1)!}
+   .. math:: \lambda =\dfrac{f^{(m+1)}(\xi)}{(m+1)!}
 
-Við setjum nú inn :math:`t=x` sem gefur
+   Við setjum nú inn :math:`t=x` sem gefur
 
-.. math:: 0=g(x) = f(x) - p(x) - \lambda w(x),
+   .. math:: 0=g(x) = f(x) - p(x) - \lambda w(x),
 
-og við fáum þar með formúlu fyrir skekkjunni á nálgun á :math:`f(x)` með
-alhæfðu brúunarmargliðunni :math:`p(x)`,
+   og við fáum þar með formúlu fyrir skekkjunni á nálgun á :math:`f(x)` með
+   alhæfðu brúunarmargliðunni :math:`p(x)`,
 
-.. math::
+   .. math::
 
-   f(x) - p(x) =\lambda w(x) = \dfrac{f^{(m+1)}(\xi)}{(m+1)!} 
-   (x-a_1)^{m_1} \cdots (x-a_k)^{m_k}
+      f(x) - p(x) =\lambda w(x) = \dfrac{f^{(m+1)}(\xi)}{(m+1)!} 
+      (x-a_1)^{m_1} \cdots (x-a_k)^{m_k}
 
-.. end-toggle::
 
 Samantekt
 ~~~~~~~~~
@@ -1742,114 +1730,113 @@ Látum :math:`f(x)=x^2\ln x`.
     að ákvarða mismunakvótatöfluna fyrir :math:`q` með því að stækka töfluna
     í **a)**. Ákvarðið síðan :math:`q` og reiknið út :math:`q(1.3)`.
 
-.. begin-toggle::
-    :label: Lausn
+.. admonition:: Lausn
+   :class: daemi, dropdown
 
-**1. og 2.**
-Til þess að spara pláss skulum leysa fyrsta og þriðja lið báða í einu
-með því að reikna strax út mismunakvótatöfluna fyrir fjórða stigs margliðuna í
-3. lið. Punktarnir :math:`x_0,\dots,x_4` eru þá :math:`1,1,2,2,2` og
-við höfum gefin fallgildin
+   **1. og 2.**
+   Til þess að spara pláss skulum leysa fyrsta og þriðja lið báða í einu
+   með því að reikna strax út mismunakvótatöfluna fyrir fjórða stigs margliðuna í
+   3. lið. Punktarnir :math:`x_0,\dots,x_4` eru þá :math:`1,1,2,2,2` og
+   við höfum gefin fallgildin
 
-.. math::
+   .. math::
 
-   f(1)=f[x_0]=f[x_1]=0 \qquad  \text{ og } \qquad
-   f(2)=f[x_2]=f[x_3]=f[x_4].
+      f(1)=f[x_0]=f[x_1]=0 \qquad  \text{ og } \qquad
+      f(2)=f[x_2]=f[x_3]=f[x_4].
 
-Í 1. lið eru punktarnir tvöfaldir svo við höfum gefin gildi
-afleiðunnar :math:`f'(x)=2x\ln x+x` í punktunum :math:`1` og :math:`2`.
+   Í 1. lið eru punktarnir tvöfaldir svo við höfum gefin gildi
+   afleiðunnar :math:`f'(x)=2x\ln x+x` í punktunum :math:`1` og :math:`2`.
 
-.. math::
+   .. math::
 
-   f'(1)=f[1,1]=f[x_0,x_1]=1 \ \text{ og } \  
-   f'(2)=f[2,2]=f[x_2,x_3]=4\ln 2+2.
+      f'(1)=f[1,1]=f[x_0,x_1]=1 \ \text{ og } \  
+      f'(2)=f[2,2]=f[x_2,x_3]=4\ln 2+2.
 
-Í 3. lið er gildið á 2. afleiðu :math:`f''(x)=2\ln x +3` gefið í
-punktinum :math:`2`. Það gefur okkur
+   Í 3. lið er gildið á 2. afleiðu :math:`f''(x)=2\ln x +3` gefið í
+   punktinum :math:`2`. Það gefur okkur
 
-.. math:: f''(2)/2!=f[2,2,2]=f[x_2,x_3,x_4]=\ln 2+\tfrac 32.
+   .. math:: f''(2)/2!=f[2,2,2]=f[x_2,x_3,x_4]=\ln 2+\tfrac 32.
 
-Við setjum þessi gildi inn í mismunakvótatöfluna og fyllum hana út með
-því að taka mismunakvóta milli allra gilda
+   Við setjum þessi gildi inn í mismunakvótatöfluna og fyllum hana út með
+   því að taka mismunakvóta milli allra gilda
 
-.. math::
+   .. math::
 
-   \begin{matrix}
-   i&x_i & f[x_i] &f[x_i,x_{i+1}] & f[x_i,x_{i+1},x_{i+2}] &
-   f[x_i,\dots,x_{i+3}]&f[x_i,\dots,x_{i+4}] \\\hline
-   0&1&0     &1       &4\ln 2-1        &-4\ln 2+3& 5\ln 2-\tfrac 72\\
-   1&1&0     &4\ln 2  &2               &\ln 2-\tfrac 12\\
-   2&2&4\ln 2&4\ln 2+2&\ln 2+\tfrac 32\\
-   3&2&4\ln 2&4\ln 2+2\\
-   4&2&4\ln 2
-   \end{matrix}
+      \begin{matrix}
+      i&x_i & f[x_i] &f[x_i,x_{i+1}] & f[x_i,x_{i+1},x_{i+2}] &
+      f[x_i,\dots,x_{i+3}]&f[x_i,\dots,x_{i+4}] \\\hline
+      0&1&0     &1       &4\ln 2-1        &-4\ln 2+3& 5\ln 2-\tfrac 72\\
+      1&1&0     &4\ln 2  &2               &\ln 2-\tfrac 12\\
+      2&2&4\ln 2&4\ln 2+2&\ln 2+\tfrac 32\\
+      3&2&4\ln 2&4\ln 2+2\\
+      4&2&4\ln 2
+      \end{matrix}
 
-Margliðan í 1. lið er því
+   Margliðan í 1. lið er því
 
-.. math:: p(x)=(x-1)+(4\ln 2-1)(x-1)^2+(-4\ln 2+3)(x-1)^2(x-2).
+   .. math:: p(x)=(x-1)+(4\ln 2-1)(x-1)^2+(-4\ln 2+3)(x-1)^2(x-2).
 
-en í 3. lið er hún
+   en í 3. lið er hún
 
-.. math:: q(x)=p(x)+(5\ln 2-\tfrac 72)(x-1)^2(x-2)^2
+   .. math:: q(x)=p(x)+(5\ln 2-\tfrac 72)(x-1)^2(x-2)^2
 
-**2.** Við stingum gildinu :math:`x=1.3` inn í margliðuna og fáum
-:math:`p(1.3)=0.445206074`. Skekkjan er
+   **2.** Við stingum gildinu :math:`x=1.3` inn í margliðuna og fáum
+   :math:`p(1.3)=0.445206074`. Skekkjan er
 
-.. math:: f(x)-p(x)=\dfrac{f^{(4)}(\xi)}{4!}(x-1)^2(x-2)^2
+   .. math:: f(x)-p(x)=\dfrac{f^{(4)}(\xi)}{4!}(x-1)^2(x-2)^2
 
-þar sem :math:`\xi` er einhver punktur á bilinu :math:`[1,2]`.
+   þar sem :math:`\xi` er einhver punktur á bilinu :math:`[1,2]`.
 
-Við þurfum því að meta fjórðu afleiðuna,
+   Við þurfum því að meta fjórðu afleiðuna,
 
-.. math::
+   .. math::
 
-   \begin{aligned}
-   f(x) &=x^2\ln x, \quad
-   f'(x)=2x\ln x+x, \quad
-   f''(x)=2\ln x+3, \quad
-   \\  
-   f'''(x)& =2/x, \quad
-   f^{(4)}(x)=-2/x^2.\end{aligned}
+      \begin{aligned}
+      f(x) &=x^2\ln x, \quad
+      f'(x)=2x\ln x+x, \quad
+      f''(x)=2\ln x+3, \quad
+      \\  
+      f'''(x)& =2/x, \quad
+      f^{(4)}(x)=-2/x^2.\end{aligned}
 
-Ef :math:`x\in [1,2]`, þá höfum við matið
-:math:`-2\leq f^{(4)}(x)\leq -\tfrac 12`.
+   Ef :math:`x\in [1,2]`, þá höfum við matið
+   :math:`-2\leq f^{(4)}(x)\leq -\tfrac 12`.
 
-Af ójöfnunum :math:`-2\leq f^{(4)}(x)\leq -\tfrac 12` leiðir síðan að
+   Af ójöfnunum :math:`-2\leq f^{(4)}(x)\leq -\tfrac 12` leiðir síðan að
 
-.. math::
+   .. math::
 
-   \alpha=\dfrac{-2\cdot(0.3)^2\cdot(-0.7)^2}{24}\leq f(1.3)-p(1.3)
-   \leq \dfrac{-0.5\cdot(0.3)^2\cdot(-0.7)^2}{24}=\beta.
+      \alpha=\dfrac{-2\cdot(0.3)^2\cdot(-0.7)^2}{24}\leq f(1.3)-p(1.3)
+      \leq \dfrac{-0.5\cdot(0.3)^2\cdot(-0.7)^2}{24}=\beta.
 
-Við reiknum út úr báðum brotunum
+   Við reiknum út úr báðum brotunum
 
-.. math::
+   .. math::
 
-   \alpha=-0.003675 \qquad \text{ og } \qquad 
-   \beta=-0.00091875.
+      \alpha=-0.003675 \qquad \text{ og } \qquad 
+      \beta=-0.00091875.
 
-þar með er :math:`f(1.3)` á bilinu milli :math:`p(1.3)+\alpha=0.441531`
-og :math:`p(1.3)+\beta=0.444287`.
+   þar með er :math:`f(1.3)` á bilinu milli :math:`p(1.3)+\alpha=0.441531`
+   og :math:`p(1.3)+\beta=0.444287`.
 
-Nálgunargildi okkar á að vera miðpunktur þessa bils og algildi
-skekkjunnar verður þá hálf billengdin. Það færir okkur nálgunina
-:math:`f(1.3) \approx 0.442909` og skekkjuna :math:`\pm 0.0014`. Réttur
-afrúningur er :math:`f(1.3)=0.44`.
+   Nálgunargildi okkar á að vera miðpunktur þessa bils og algildi
+   skekkjunnar verður þá hálf billengdin. Það færir okkur nálgunina
+   :math:`f(1.3) \approx 0.442909` og skekkjuna :math:`\pm 0.0014`. Réttur
+   afrúningur er :math:`f(1.3)=0.44`.
 
-Við eigum aðeins eftir að reikna út gildi margliðunnar :math:`q` í
-punktinum :math:`1.3`. Út úr mismunakvótatöflunni fáum við
+   Við eigum aðeins eftir að reikna út gildi margliðunnar :math:`q` í
+   punktinum :math:`1.3`. Út úr mismunakvótatöflunni fáum við
 
-.. math:: q(x)=p(x)+(5\ln 2-\tfrac 72)(x-1)^2(x-2)^2
+   .. math:: q(x)=p(x)+(5\ln 2-\tfrac 72)(x-1)^2(x-2)^2
 
-sem gefur okkur gildið
+   sem gefur okkur gildið
 
-.. math:: q(1.3)=0.445206074-0.001511046=0.4436950278
+   .. math:: q(1.3)=0.445206074-0.001511046=0.4436950278
 
-Til samanburðar höfum við rétt gildi
+   Til samanburðar höfum við rétt gildi
 
-.. math:: f(1.3)=0.443395606950060\ldots.
+   .. math:: f(1.3)=0.443395606950060\ldots.
 
-.. end-toggle::
 
 .. index::
     brúun; splæsibrúun
@@ -1936,74 +1923,73 @@ Setjum til einföldunar :math:`h_i = t_{i+1}-t_i` fyrir :math:`i = 0,
 
 Skilyrðin tvö má því skrifa sem eftirfarandi jöfnuhneppi:
 
-.. begin-toggle::
-	:label: Útleiðsla á jöfnuhneppi
+.. admonition:: Útleiðsla á jöfnuhneppi
+   :class: setning, dropdown
 
 
-Á hverju hlutbili :math:`[t_i,t_{i+1}]` höfum við:
+   Á hverju hlutbili :math:`[t_i,t_{i+1}]` höfum við:
 
-.. math::
+   .. math::
 
-   S_i(x) = a_i+b_i(x-t_i)+c_i(x-t_i)^2+d_i(x-t_i)^3, 
-           \qquad x\in [t_i,t_{i+1}),
+      S_i(x) = a_i+b_i(x-t_i)+c_i(x-t_i)^2+d_i(x-t_i)^3, 
+	      \qquad x\in [t_i,t_{i+1}),
 
-sem þýðir að skilyrðin tvö má skrifa sem
+   sem þýðir að skilyrðin tvö má skrifa sem
 
-.. math::
+   .. math::
 
-   \begin{aligned}
-       a_i &=& &S_i(t_i)& &=& y_i  
-           &, \quad (1) \\
-       a_i + b_ih_i + c_ih_i^2 + d_ih_i^3 &=& &S_i(t_{i+1})
-           = S_{i+1}(t_{i+1})& &=& a_{i+1} 
-           &, \quad (2) \\
-       b_i + 2c_ih_i + 3d_ih_i^2 &=& &S_i'(t_{i+1}) 
-           = S_{i+1}'(t_{i+1})& &=& b_{i+1}
-           &, \quad (3) \\
-       2c_i + 6d_ih_i &=& &S_i''(t_{i+1})
-           = S_{i+1}''(t_{i+1})& &=& 2c_{i+1}
-           &, \quad (4)\end{aligned}
+      \begin{aligned}
+	  a_i &=& &S_i(t_i)& &=& y_i  
+	      &, \quad (1) \\
+	  a_i + b_ih_i + c_ih_i^2 + d_ih_i^3 &=& &S_i(t_{i+1})
+	      = S_{i+1}(t_{i+1})& &=& a_{i+1} 
+	      &, \quad (2) \\
+	  b_i + 2c_ih_i + 3d_ih_i^2 &=& &S_i'(t_{i+1}) 
+	      = S_{i+1}'(t_{i+1})& &=& b_{i+1}
+	      &, \quad (3) \\
+	  2c_i + 6d_ih_i &=& &S_i''(t_{i+1})
+	      = S_{i+1}''(t_{i+1})& &=& 2c_{i+1}
+	      &, \quad (4)\end{aligned}
 
-Í (1) höfum við :math:`i = 0,\ldots,n` og í (2)-(4) höfum við
-:math:`i=0,\ldots,n-2`.
+   Í (1) höfum við :math:`i = 0,\ldots,n` og í (2)-(4) höfum við
+   :math:`i=0,\ldots,n-2`.
 
-Samtals: :math:`(n+1)+3(n-1)=4n-2` línulegar jöfnur til þess að ákvarða
-:math:`4n` óþekktar stærðir.
+   Samtals: :math:`(n+1)+3(n-1)=4n-2` línulegar jöfnur til þess að ákvarða
+   :math:`4n` óþekktar stærðir.
 
-Það er því ljóst að okkur vantar tvö skilyrði til þess að geta fengið
-ótvírætt ákvarðaða lausn.
+   Það er því ljóst að okkur vantar tvö skilyrði til þess að geta fengið
+   ótvírætt ákvarðaða lausn.
 
-Fyrstu jöfnurnar gefa strax gildi :math:`a_i` og (4) gefur að
+   Fyrstu jöfnurnar gefa strax gildi :math:`a_i` og (4) gefur að
 
-.. math:: d_i = \frac{c_{i+1}-c_i}{3h_i}, \quad i=0,\ldots,n-2
+   .. math:: d_i = \frac{c_{i+1}-c_i}{3h_i}, \quad i=0,\ldots,n-2
 
-Ef við setjum þetta inn í (2) og (3) fæst
+   Ef við setjum þetta inn í (2) og (3) fæst
 
-.. math::
+   .. math::
 
-   \begin{aligned}
-       a_{i+1} = a_i + b_ih_i + \frac{c_{i+1}+c_i}{3}h_i^2
-           &, \quad i=0,\ldots,n-2 \\
-       b_{i+1} = b_i + (c_{i+1} + c_i)h_i
-           &, \quad i=0,\ldots,n-2\end{aligned}
+      \begin{aligned}
+	  a_{i+1} = a_i + b_ih_i + \frac{c_{i+1}+c_i}{3}h_i^2
+	      &, \quad i=0,\ldots,n-2 \\
+	  b_{i+1} = b_i + (c_{i+1} + c_i)h_i
+	      &, \quad i=0,\ldots,n-2\end{aligned}
 
-Þegar við leysum fyrri jöfnuna fyrir :math:`b_i` fæst
+   Þegar við leysum fyrri jöfnuna fyrir :math:`b_i` fæst
 
-.. math::
+   .. math::
 
-   b_i = \frac{a_{i+1}-a_i}{h_i}-\frac{c_i+c_{i+1}}{3}h_i
-           , \quad i=0,\ldots,n-2
+      b_i = \frac{a_{i+1}-a_i}{h_i}-\frac{c_i+c_{i+1}}{3}h_i
+	      , \quad i=0,\ldots,n-2
 
-og ef við setjum þetta inn í seinni jöfnuna fæst á endanum að
+   og ef við setjum þetta inn í seinni jöfnuna fæst á endanum að
 
-.. math::
+   .. math::
 
-   h_{i-1}c_{i-1} + 2(h_{i-1}+h_i)c_i + h_ic_{i+1} = 
-       \frac{3}{h_i}(a_{i+1}-a_i) 
-           - \frac{3}{h_{i-1}}(a_i-a_{i-1})
-       , \quad i=1,\ldots,n-1
+      h_{i-1}c_{i-1} + 2(h_{i-1}+h_i)c_i + h_ic_{i+1} = 
+	  \frac{3}{h_i}(a_{i+1}-a_i) 
+	      - \frac{3}{h_{i-1}}(a_i-a_{i-1})
+	  , \quad i=1,\ldots,n-1
 
-.. end-toggle::
 
 Jöfnuhneppið
 ~~~~~~~~~~~~
@@ -2369,71 +2355,70 @@ Gefin eru mæligildin
 Beitið aðferð minnstu fervika til þess að finna þá annars stigs margliðu
 sem best fellur að þessum gögnum Teiknið upp gögnin og graf marliðunnar.
 
-.. begin-toggle::
-	:label: Lausn
+.. admonition:: Lausn
+   :class: daemi, dropdown
 
-Við leitum hér að þremur tölum :math:`c_1`, :math:`c_2` og
-:math:`c_3` þannig að annars stigs margliðan
-:math:`f(x)=c_1f_1(x)+c_2f_2(x)+c_3f_3(x)` falli sem best að gögnunum. 
-Grunnföllin þrjú eru :math:`f_1(x)=1`, :math:`f_2(x)=x` og
-:math:`f_3(x)=x^2`.
+   Við leitum hér að þremur tölum :math:`c_1`, :math:`c_2` og
+   :math:`c_3` þannig að annars stigs margliðan
+   :math:`f(x)=c_1f_1(x)+c_2f_2(x)+c_3f_3(x)` falli sem best að gögnunum. 
+   Grunnföllin þrjú eru :math:`f_1(x)=1`, :math:`f_2(x)=x` og
+   :math:`f_3(x)=x^2`.
 
-Í þessu dæmi er fylkið :math:`A` gefið með
+   Í þessu dæmi er fylkið :math:`A` gefið með
 
-.. math::
+   .. math::
 
-   A=\left[\begin{matrix}
-   1 & 0&0\\
-   1 & 1&1\\
-   1&2&4\\
-   1&3&9\\
-   1&4&16\\
-   1&5&25\\
-   1&6&36
-   \end{matrix}\right],
+      A=\left[\begin{matrix}
+      1 & 0&0\\
+      1 & 1&1\\
+      1&2&4\\
+      1&3&9\\
+      1&4&16\\
+      1&5&25\\
+      1&6&36
+      \end{matrix}\right],
 
-því stak númer :math:`(i,j)` í A er gefið með :math:`A_{ij} = f_j(x_i)`.
+   því stak númer :math:`(i,j)` í A er gefið með :math:`A_{ij} = f_j(x_i)`.
 
-Nú látum við matlab um afganginn
+   Nú látum við matlab um afganginn
 
-::
+   ::
 
-    %  Matlab forrit sem teiknar upp bestu margliðunálgun á gefnum gögnum
-    x=[0; 1; 2; 3; 4; 5; 6] 
-    y=[2.7; -0.5; -1.7; -1.9; -1.5; 0.2; 2.3 ] 
-    m=length(x); 
+       %  Matlab forrit sem teiknar upp bestu margliðunálgun á gefnum gögnum
+       x=[0; 1; 2; 3; 4; 5; 6] 
+       y=[2.7; -0.5; -1.7; -1.9; -1.5; 0.2; 2.3 ] 
+       m=length(x); 
 
-    % Við leitum að bestu margliðu af stigi 2 eða lægri 
-    % og því eru  grunnföllin eru 3 talsins. 
-    n=3; 
+       % Við leitum að bestu margliðu af stigi 2 eða lægri 
+       % og því eru  grunnföllin eru 3 talsins. 
+       n=3; 
 
-    % Stuðlafylkið er A=(a_{ij}), a_{ij}=x_i^{j-1}  
-    A(1:m,1)=ones(m,1); 
-    A(1:m,2)=x; 
-    for j=3:n 
-        A(1:m,j)=A(1:m,j-1).*x; 
-    end  
-    % Reiknum úr úr normaljöfnuhneppinu A^TAc=A^Ty:  
-    c=(A'*A)\(A'*y); 
+       % Stuðlafylkið er A=(a_{ij}), a_{ij}=x_i^{j-1}  
+       A(1:m,1)=ones(m,1); 
+       A(1:m,2)=x; 
+       for j=3:n 
+	   A(1:m,j)=A(1:m,j-1).*x; 
+       end  
+       % Reiknum úr úr normaljöfnuhneppinu A^TAc=A^Ty:  
+       c=(A'*A)\(A'*y); 
 
-    % Teikning undirbúin 
-    N=100;   
-    X=linspace(min(x),max(x),N); 
+       % Teikning undirbúin 
+       N=100;   
+       X=linspace(min(x),max(x),N); 
 
-    % Hliðrun í reikniriti horners er 0 
-    % 
-    hlidrun=zeros(n,1); 
-    for j=1:N 
-        Y(j)=horner(c, hlidrun, X(j)); 
-    end 
-    figure 
-    plot(x,y,'*',X,Y) 
-    xlabel('x'), ylabel('y') 
-    title('Adferd minnstu fervika fyrir marglidu af stigi 2') 
-    print 
+       % Hliðrun í reikniriti horners er 0 
+       % 
+       hlidrun=zeros(n,1); 
+       for j=1:N 
+	   Y(j)=horner(c, hlidrun, X(j)); 
+       end 
+       figure 
+       plot(x,y,'*',X,Y) 
+       xlabel('x'), ylabel('y') 
+       title('Adferd minnstu fervika fyrir marglidu af stigi 2') 
+       print 
 
-Hér kemur myndin sem beðið var um:
+   Hér kemur myndin sem beðið var um:
 
-.. image:: ./myndir/synidaemi_minnstu_fervik.png
+   .. image:: ./myndir/synidaemi_minnstu_fervik.png
 
-.. end-toggle::

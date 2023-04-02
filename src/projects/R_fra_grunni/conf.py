@@ -182,10 +182,10 @@ todo_include_todos = True
 html_theme = "sphinx_rtd_theme"
 # html_theme_path = ['_themes']
 html_context = {
-  'display_github': True,
-  'github_user': 'edbook',
-  'github_repo': 'haskoli-islands',
-  'github_version': 'master/src/projects/R_fra_grunni/',
+    "display_github": True,
+    "github_user": "edbook",
+    "github_repo": "haskoli-islands",
+    "github_version": "master/src/projects/R_fra_grunni/",
 }
 
 

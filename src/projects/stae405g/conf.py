@@ -133,10 +133,10 @@ html_theme = "sphinx_rtd_theme"
 # html_theme_path = ['_themes']
 
 html_context = {
-  'display_github': True,
-  'github_user': 'edbook',
-  'github_repo': 'haskoli-islands',
-  'github_version': 'master/src/projects/stae405g/',
+    "display_github": True,
+    "github_user": "edbook",
+    "github_repo": "haskoli-islands",
+    "github_version": "master/src/projects/stae405g/",
 }
 
 
@@ -330,3 +330,10 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"http://docs.python.org/": None}
+
+
+# Ákvarðar textann í sphinx_togglebutton (Default er "Click to show")
+hint_indent = (
+    r"\00a0" * 14
+)  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
+togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2

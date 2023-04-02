@@ -146,32 +146,30 @@ Styrkur sem fall af tíma er ekki lengur línulegur heldur gildir jafnan:
 
   \text{ln}([\ce{A}]_t)=-a k t +\text{ln}([\ce{A}]_0)
 
-.. begin-toggle::
-  :label: Sönnun
-  :starthidden: True
+.. admonition:: Sönnun
+  :class: setning, dropdown
 
-**Ekki þarf að kunna sannanir og eru fyrst um sinn einungis fyrir áhugsama**
+  **Ekki þarf að kunna sannanir og eru fyrst um sinn einungis fyrir áhugsama**
 
-Fyrir fyrsta stigs hvarf gildir:
+  Fyrir fyrsta stigs hvarf gildir:
 
-.. math::
+  .. math::
 
-  \text{hraði} =-\frac{1}a\frac{d[\ce{A}]}{dt}=k[\ce{A}]
+    \text{hraði} =-\frac{1}a\frac{d[\ce{A}]}{dt}=k[\ce{A}]
 
-Þetta er aðgreinanleg diffurjafna sem hægt er að heilda:
+  Þetta er aðgreinanleg diffurjafna sem hægt er að heilda:
 
-.. math::
+  .. math::
 
-  \int_{[\ce{A}]_0}^{[\ce{A}]_t} \frac{d[\ce{A}]}{[\ce{A}]}=\int_{0}^{t} -ak
+    \int_{[\ce{A}]_0}^{[\ce{A}]_t} \frac{d[\ce{A}]}{[\ce{A}]}=\int_{0}^{t} -ak
 
-Með því að heilda báðum megin fæst svo jafnan:
+  Með því að heilda báðum megin fæst svo jafnan:
 
-.. math::
+  .. math::
 
-  \text{ln}([\ce{A}]_t)-\text{ln}([\ce{A}]_0) =-akt
+    \text{ln}([\ce{A}]_t)-\text{ln}([\ce{A}]_0) =-akt
 
 
-.. end-toggle::
 
 
 Efnahvarfið hægir þá á sér eftir því sem líður á.
@@ -258,31 +256,29 @@ Segjum sem svo að hraðinn sé mældur tvisvar og í seinna skiptið sé styrku
 
   \frac{\text{hraði}(x\times \ce{A})}{\text{hraði}(1\times \ce{A})}=x^m
 
-.. begin-toggle::
-    :label: Sönnun
-    :starthidden: True
+.. admonition:: Sönnun
+  :class: setning, dropdown
 
-Ef notað er :math:`x` sinnum meira af hvarfefni :math:`\ce{A}` er styrkurinn :math:`x[A]`. Hraðalíkanið verður þá:
+  Ef notað er :math:`x` sinnum meira af hvarfefni :math:`\ce{A}` er styrkurinn :math:`x[A]`. Hraðalíkanið verður þá:
 
-.. math::
+  .. math::
 
-  \require{cancel}
-
-  \begin{aligned}
-  \text{hraði}&=k(x[\ce{A}])^m[\ce{B}]^n\\
-  &=kx^m[\ce{A}]^m[\ce{B}]^n
-  \end{aligned}
-
-Þetta er hægt að deila í hraðalíkanið sem fæst fyrir upphaflega magnið af hvarfefni A:
-
-.. math::
+    \require{cancel}
 
     \begin{aligned}
-    \frac{\text{hraði}(x\times \ce{A})}{\text{hraði}(1\times \ce{A})}&=\frac{\bcancel{k} x^m\bcancel{[\ce{A}]^m}\bcancel{[\ce{B}]^n}}{\bcancel{k}\,\,\,\,\,\,\,\bcancel{[\ce{A}]^m}\bcancel{[\ce{B}]^n}}\\
-     &=x^m
+    \text{hraði}&=k(x[\ce{A}])^m[\ce{B}]^n\\
+    &=kx^m[\ce{A}]^m[\ce{B}]^n
     \end{aligned}
 
-.. end-toggle::
+  Þetta er hægt að deila í hraðalíkanið sem fæst fyrir upphaflega magnið af hvarfefni A:
+
+  .. math::
+
+      \begin{aligned}
+      \frac{\text{hraði}(x\times \ce{A})}{\text{hraði}(1\times \ce{A})}&=\frac{\bcancel{k} x^m\bcancel{[\ce{A}]^m}\bcancel{[\ce{B}]^n}}{\bcancel{k}\,\,\,\,\,\,\,\bcancel{[\ce{A}]^m}\bcancel{[\ce{B}]^n}}\\
+       &=x^m
+      \end{aligned}
+
 
 Þessar jöfnur geta litið flóknar út og því gæti verið auðveldara að skilja þetta sem dæmi.
 
