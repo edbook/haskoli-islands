@@ -52,7 +52,7 @@ jobs:
       - run: |
           conda info
           conda list
-          conda env install
+          conda env upgrade
 
   build-all:
     needs: [setup]
