@@ -93,13 +93,14 @@ def cmd_build(
     """
     Build all projects
     """
-    for path in Path(ctx.params["path"]).iterdir():
-        project_dir = PurePath(path)
+    # print(Path(ctx.params["path"].iterdir()))
+    for project in Path(ctx.params["path"]).iterdir():
+        project_path = PurePath(project)
         typer.secho(
-            f"""################ Preparing build of project {project_dir.name} ##############""",
+            f"""################ Preparing build of project {project_path.name} ##############""",
             fg=typer.colors.MAGENTA,
         )
-        call(["sphinx-build", path, build_path / project_dir.name, *ctx.args])
+        call(["sphinx-build", project_path, Path(build_path).parent / project_path.name, *ctx.args])
 
 
 def run():
