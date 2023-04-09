@@ -82,112 +82,90 @@ jobs:
         id: build-all
         run: |
           make build-all
-      - name: Push to edbook organization page
-        id: push-build
-        uses: cpina/github-action-push-to-another-repository@ssh-deploy-key
-        env:
-          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-        with:
-          source-directory: _build
-          target-directory: '.'
-          destination-github-username: busla
-          destination-repository-name: edbook.github.io
-          target-branch: main
-
-  build-all:
-    needs: [setup]
-    name: Deploy feature
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: "1.2.1"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      # - name: Configure SSH
-      #   run: |
-      #     echo "#### Creating ~/.ssh/config from secrets ####"
-      #     mkdir -p ~/.ssh/
-      #     echo "$SSH_KEY" > ~/.ssh/staging.key
-      #     chmod 600 ~/.ssh/staging.key
-      #     cat >>~/.ssh/config <<END
-      #     Host staging
-      #       HostName $SSH_HOST
-      #       User $SSH_USER
-      #       IdentityFile ~/.ssh/staging.key
-      #       StrictHostKeyChecking no
-      #     END
-      # - name: Test SSH connection
-      #   run: |
-      #     ssh -o BatchMode=yes -o ConnectTimeout=5 staging echo ok 2>&1
-
-      # - name: Deploy branch
-      #   id: deploy-branch
-      #   if: github.event.action == 'synchronize' || github.event.action == 'opened'
-      #   run: |
-      #     ./.github/deploy.sh ${{ github.workspace }} "~/public_html" "staging/edbook/${{ github.head_ref }}"
-
-      - name: 🚧 Build affected (pr)
-        if: github.event_name == 'pull_request' && github.event.label.name != 'build-all'
-        id: build-affected
-        run: |
-          source .venv/bin/activate
-          poetry --version
-          ./.github/build-affected.sh ${{ github.event.pull_request.base.sha }} ${GITHUB_SHA}
-
-      - name: 🚧 Build all (pr)
-        if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
-        id: build-all
-        run: |
-          source .venv/bin/activate
-          poetry --version
-          make build-all
-
-      # - name: 📂 Sync files
-      #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      #   with:
-      #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
-      #     username: ${{ secrets.OK_FTP_USER }}
-      #     password: ${{ secrets.OK_FTP_PASSWORD }}
-      #     local-dir: ${{ github.workspace }}/_build/
-      #     dry-run: false
-      #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
-      - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
-          role-session-name: github-deploy
-          aws-region: ${{ env.AWS_REGION }}
-      - name: 📂 Sync files to s3
-        run: |
-          aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
       - name: 📂 prepare files for Github pages
         run: |
           mv _build/forsida/* _build/
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v3
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     path: "_build"
+      # - name: Setup SSH Keys and known_hosts
+      #   env:
+      #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      #   run: |
+      #     ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+      #     ssh-add - <<< "${{ secrets.SSH_DEPLOY_KEY }}"
+      - name: Checkout edbook.github.io
+        uses: actions/checkout@v3
         with:
-          path: "_build"
-      - name: 📂 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          repository: 'edbook/edbook.github.io.git'
+          # ref: ''
+          ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
+      - run: |
+          git status
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add _build
+          git commit -m "ci: testing _build output commit"
+          git push
+
+  # build-all:
+  #   needs: [setup]
+  #   name: Deploy feature
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Check out repository
+  #       uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
+  #     - name: 🚧 Build affected (pr)
+  #       if: github.event_name == 'pull_request' && github.event.label.name != 'build-all'
+  #       id: build-affected
+  #       run: |
+  #         source .venv/bin/activate
+  #         poetry --version
+  #         ./.github/build-affected.sh ${{ github.event.pull_request.base.sha }} ${GITHUB_SHA}
+
+  #     - name: 🚧 Build all (pr)
+  #       if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
+  #       id: build-all
+  #       run: |
+  #         source .venv/bin/activate
+  #         poetry --version
+  #         make build-all
+
+  #     # - name: 📂 Sync files
+  #     #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
+  #     #   with:
+  #     #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
+  #     #     username: ${{ secrets.OK_FTP_USER }}
+  #     #     password: ${{ secrets.OK_FTP_PASSWORD }}
+  #     #     local-dir: ${{ github.workspace }}/_build/
+  #     #     dry-run: false
+  #     #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
+  #     - name: configure aws credentials
+  #       uses: aws-actions/configure-aws-credentials@v2
+  #       with:
+  #         role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
+  #         role-session-name: github-deploy
+  #         aws-region: ${{ env.AWS_REGION }}
+  #     - name: 📂 Sync files to s3
+  #       run: |
+  #         aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
+  #     - name: 📂 prepare files for Github pages
+  #       run: |
+  #         mv _build/forsida/* _build/
+  #     - name: Setup Pages
+  #       uses: actions/configure-pages@v3
+  #     - name: Upload artifact
+  #       uses: actions/upload-pages-artifact@v1
+  #       with:
+  #         path: "_build"
+  #     - name: 📂 Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v1
 
   # announce-affected:
   #   name: Announce affected on PR
