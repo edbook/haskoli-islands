@@ -16,8 +16,7 @@ Höfundur efnis: Jónmundur Gunnuson, asfd@hi.is.
    kafli*
 
 .. toctree::
-	vidauki
-        ordaskra
+	ordaskra
 
 * :ref:`genindex`
 

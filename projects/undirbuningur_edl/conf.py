@@ -20,10 +20,8 @@ import sphinx_rtd_theme
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath("."))
-sys.path.append(os.path.abspath("../../extensions"))
-from eqt_ext import get_eqt_ext_static_dir  # Verður að koma eftir að bæta extensions í path
 
-# sys.path.append('/gudnyh/sumar/undirbuningur_edl/Sphinx_ext')
+from sphinxcontrib.questionnaire import get_eqt_ext_static_dir
 
 # -- General configuration ------------------------------------------------
 

@@ -6,7 +6,7 @@ Geogebra
 
 Hægt er að greypa inn Geogebra-forrit með `sphinxcontrib-geogebra 
 <https://github.com/edbook/sphinxcontrib-geogebra>`_ viðbótinni.
-Vista þarf Geogebra-skjalið á `geogebra.org`_ þar sem það fær auðkenni, en auðkennið 
+Vista þarf Geogebra-skjalið á geogebra.org þar sem það fær auðkenni, en auðkennið 
 er aftasti hlutinn af vefslóðinni.
 Forritið er svo sett inn með: 
 
@@ -15,7 +15,7 @@ Forritið er svo sett inn með:
   .. ggb:: abcdefgh
 
 
-Sjá `https://github.com/edbook/sphinxcontrib-geogebra#options`_ fyrir fleiri stillingar.
+Sjá https://github.com/edbook/sphinxcontrib-geogebra#options fyrir fleiri stillingar.
 
 Dæmi
 ~~~~
@@ -26,7 +26,7 @@ Togglebutton
 ------------
 
 .. admonition:: Útleiðasla á hreyfijöfnum
-:class: setning, dropdown
+    :class: setning, dropdown
 
     Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
 
@@ -59,12 +59,13 @@ Panopto
 Hægt er að greypa inn Panopto-myndbönd með 
 
 .. code-block::
+    
     .. panopto:: ab027f4b-88b9-4647-af20-afdf0092304d
         :width: 100%
         :height: 400
 
 Hér er `ab027f4b-88b9-4647-af20-afdf0092304d` auðkennið sem myndbandið hefur á 
-Panopto-þjóninum. Til að finna það þá er best að fara inn á `https://hi.cloud.panopto.eu`_
+Panopto-þjóninum. Til að finna það þá er best að fara inn á hi.cloud.panopto.eu
 finna myndbandið og smella á `Settings` og undir `Viewer Link` er auðkennið það sem
 stendur fyrir aftan `id=`. 
 
@@ -126,7 +127,6 @@ R
 
 .. datacamp::
     :lang: r
-    :height: 500
 
     options(scipen=999)  # turn-off scientific notation like 1e+48
     library(ggplot2)

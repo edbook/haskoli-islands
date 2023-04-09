@@ -5,13 +5,13 @@ Undirkafli
 ----------
 
 Undir-undirkafli
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 
 
 Display images (supports at least pdf, jpg, jpeg and svg):
 
-.. figure:: ./images/pallas_athena_negativ.pdf
+.. figure:: ./myndir/pallas.svg
   :align: center
   :width: 70%
 

@@ -118,7 +118,7 @@ með því að opna *terminal*-glugga og gefa þar einhverja eftirfarandi skipan
 sjálfgefna. Síðasttalda skipunin opnar sjálfkrafa eldri vinnubók :code:`skrá.ipynb`.
 JupyterLab-glugginn lítur nokkurnveginn svona út:
 
-.. figure:: myndir/jupyterlab.jpeg
+.. figure:: _images/jupyterlab.jpeg
    :align: center
 
    Upphafsgluggi JupyterLab
@@ -132,7 +132,7 @@ heitir sjálfkrafa *Untitled2* en með því að hægri-smella á nafnið (eða 
 Eldri bók er opnuð annaðhvort með því að smella á hana í skráalistanum vinstra
 megin eða tilgreina hana á skipanalínunni eins og sýnt er að ofan.
 
-.. figure:: myndir/jupyterlab-s2.jpg
+.. figure:: _images/jupyterlab-s2.jpg
    :align: center
 
    JupyterLab með opinni vinnubók og aflúsunarhnappi (í rauðum hring)

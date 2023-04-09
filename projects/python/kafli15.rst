@@ -162,7 +162,7 @@ tæmandi, en í staðinn vísast í *svindlblöðin* sem nefnd eru hér fremst �
    :widths: auto
    :name: dataframe-smiðurinn
 
-   * - ``df = pd.DataFrame(uppflettitafla)
+   * - ``df = pd.DataFrame(uppflettitafla)``
      - Býr til {"col1":[1,2,3], col2
           
 .. list-table:: Skipanir til að ná í dálka, línur og hluttöflur

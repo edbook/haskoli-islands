@@ -15,9 +15,9 @@ sjá `Anaconda vs. Miniconda <https://docs.conda.io/projects/conda/en/stable/use
 
 Hægt er að hlaða þeim niður hér:
 
-* Miniconda: `docs.conda.io/en/main/miniconda.html#latest-miniconda-installer-links`_
+* Miniconda: https://docs.conda.io/en/main/miniconda.html#latest-miniconda-installer-links
 
-* Anaconda: `docs.anaconda.com/anaconda/install/`_
+* Anaconda: https://docs.anaconda.com/anaconda/install/
 
 
 Pakkastjórar

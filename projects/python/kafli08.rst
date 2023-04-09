@@ -70,7 +70,7 @@ hefur reyndar verið stillt á að fela undirnafnið ekki.
 
 .. _finder:
 
-.. figure:: myndir/finder.jpg
+.. figure:: _images/finder.jpg
    :align: center
    :figwidth: 18cm
 
