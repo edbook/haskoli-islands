@@ -44,39 +44,46 @@ jobs:
           echo "{BRANCH_NAME}={$(echo ${GITHUB_REF#refs/heads/})}" >> $GITHUB_OUTPUT
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Setup Mambaforge
-        uses: conda-incubator/setup-miniconda@v2
+      # - name: Setup Mambaforge
+      #   uses: conda-incubator/setup-miniconda@v2
+      #   with:
+      #     miniforge-variant: Mambaforge
+      #     miniforge-version: latest
+      #     activate-environment: edbook
+      #     use-mamba: true
+      - name: Check for Conda cache
+        id: conda-cache
+        uses: actions/cache@v3
         with:
-          miniforge-variant: Mambaforge
-          miniforge-version: latest
-          activate-environment: edbook
-          use-mamba: true
-      - name: Cache Conda env
-        uses: actions/cache@v2
-        with:
-          path: ${{ env.CONDA }}/envs
-          key:
-            conda-${{ runner.os }}--${{ runner.arch }}-${{hashFiles('environment.yml') }}-${{ env.CACHE_NUMBER}}
-        env:
-          CACHE_NUMBER: 0
-        id: cache
-      - name: Update environment
-        run:
+          path: ~/conda_pkgs_dir
+          key: conda-${{ runner.os }}-${{hashFiles('environment.yml') }}
+      - name: Install Conda dependencies
+        if: steps.conda-cache.outputs.cache-hit != 'true'
+        run: |
           mamba env update -n edbook env -f environment.yml
-        if: steps.cache.outputs.cache-hit != 'true'
       - uses: conda-incubator/setup-miniconda@v2
         with:
-          miniforge-variant: Mambaforge
-          miniforge-version: latest
           activate-environment: edbook
-          use-mamba: true
+          channel-priority: strict
           environment-file: environment.yml
           python-version: 3.10.10
+          use-mamba: true
           use-only-tar-bz2: true
-      - run: |
-          conda activate edbook
-          conda info
-          conda list
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+      # - uses: conda-incubator/setup-miniconda@v2
+      #   with:
+      #     miniforge-variant: Mambaforge
+      #     miniforge-version: latest
+      #     activate-environment: edbook
+      #     use-mamba: true
+      #     environment-file: environment.yml
+      #     python-version: 3.10.10
+      #     use-only-tar-bz2: true
+      # - run: |
+      #     conda activate edbook
+      #     conda info
+      #     conda list
       - name: 🚧 Build all (pr)
         # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
         id: build-all
