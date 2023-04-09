@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 on:
   pull_request:
-    branches: [main]
+    branches: [main, conda]
     types: [opened, synchronize, closed, labeled]
     paths:
       - "projects/**"
