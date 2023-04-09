@@ -10,76 +10,74 @@ concurrency:
   cancel-in-progress: false
 on:
   push:
-    branches: [main]
+    branches:
+      - conda
+      - main
     paths:
       - "projects/**"
       - "cli/**"
       - ".github/**"
 jobs:
-  build-all:
-    name: Build and deploy
+  setup:
+    name: Setup
     runs-on: ubuntu-latest
     outputs:
-      branch-slug: ${{ env.BRANCH_SLUG }}
+      deploy-url: ${{ steps.deployment.outputs.page_url }}/${{ env.BRANCH_SLUG }}
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: ${{ github.ref_name }}
+      url: ${{ steps.deployment.outputs.page_url }}/${{ env.BRANCH_SLUG }}
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Extract branch name
         id: extract_branch
         shell: bash
         run: |
-          echo "{BRANCH_NAME}={$(echo ${GITHUB_REF#refs/heads/})}" >> $GITHUB_OUTPUT
-      - name: Check out repository
-        uses: actions/checkout@v3
+          echo ${{ github.head_ref }}
+          slug=$(./.github/slugify.sh ${{ github.ref_name }})
+          echo "BRANCH_SLUG=$slug" >> $GITHUB_ENV
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v2
         with:
-          fetch-depth: 0
-      # - name: Setup Mambaforge
-      #   uses: conda-incubator/setup-miniconda@v2
-      #   with:
-      #     miniforge-variant: Mambaforge
-      #     miniforge-version: latest
-      #     activate-environment: edbook
-      #     use-mamba: true
-      - name: Check for Conda cache
-        id: conda-cache
-        uses: actions/cache@v3
-        with:
-          path: ~/conda_pkgs_dir
-          key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
-      - uses: conda-incubator/setup-miniconda@v2
-        if: steps.conda-cache.outputs.cache-hit != 'true'
-        with:
-          activate-environment: edbook
-          environment-file: environment.yml
+          auto-update-conda: false
           python-version: 3.10.10
           channels: conda-forge,defaults
           mamba-version: "*"
           channel-priority: true
           use-mamba: true
-      - run: |
-          conda activate edbook
-          conda info
-          conda list
-      - name: 📂 Prepare files for Github pages
+          environment-file: environment.yml
+          activate-environment: edbook
+      # TODO: needs work
+      # - name: Check for Conda cache
+      #   id: conda-cache
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/conda_pkgs_dir
+      #     key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
+      - name: 🚧 Build all (pr)
+        # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
+        id: build-all
+        run: |
+          make build-all
+      - name: 📂 Prepare pages for feature deployment
         run: |
           mv _build/forsida/* _build/
-      - name: Checkout edbook.github.io
-        uses: actions/checkout@v3
+          mkdir -p dist/${{ env.BRANCH_SLUG }}
+          mv _build/* dist/${{ env.BRANCH_SLUG }}/
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          repository: 'edbook/edbook.github.io'
-          path: org-repo
-          ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
-      - name: Push to edbook.github.io
-        run: |
-          mv _build/* org-repo/
-          cd org-repo
-          ls -al
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "ci: testing _build output commit"
-          git push
+          path: dist
+      - name: 📂 Deploy feature to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          preview: true
 
   notify-discord-merge:
     needs: [build-all]

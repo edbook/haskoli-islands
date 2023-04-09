@@ -19,10 +19,10 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     outputs:
-      deploy-url: ${{ steps.deployment.outputs.page_url }}/${{ env.BRANCH_SLUG }}
+      deploy-url: ${{ steps.deployment.outputs.page_url }}${{ env.BRANCH_SLUG }}
     environment:
       name: ${{ github.head_ref }}
-      url: ${{ steps.deployment.outputs.page_url }}/${{ env.BRANCH_SLUG }}
+      url: ${{ steps.deployment.outputs.page_url }}${{ env.BRANCH_SLUG }}
     defaults:
       run:
         shell: bash -el {0}
@@ -78,12 +78,12 @@ jobs:
 
   announce-url:
     name: Announce feature deploy url
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: setup
     # if: github.event.action == 'opened'
     steps:
       - name: Find Comment
-        uses: peter-evans/find-comment@v2
+        uses: peter-evans/find-comment@v3
         id: fc
         with:
           issue-number: ${{ github.event.pull_request.number }}
@@ -92,7 +92,7 @@ jobs:
 
       - name: Create comment
         if: steps.fc.outputs.comment-id == ''
-        uses: peter-evans/create-or-update-comment@v2
+        uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
