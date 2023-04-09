@@ -70,3 +70,67 @@ og þeir sem nota Homebrew á MacOS keyra:
     brew install git
 
 .. youtube:: 2ReR1YJrNOM
+
+Edbook hlaðið niður
+-------------------
+
+Nú þarf að hlaða niður öllum skránum frá https://github.com/edbook/haskoli-islands 
+og er það gert með Git. Í VSCode er smellt á Git-merkið vinstra megin og 
+valið *Clone repository*. Þá er slegið inn `https://github.com/edbook/haskoli-islands`,
+ýtt á Enter, valin mappa þar sem geyma á skrárnar og smellt á Ok.
+Þegar búið er að hlaða þeim niður þá er smellt á *Open*.
+
+.. note::
+   Í VSCode er hægt að opna heila möppu í einu og flakka á milli skráa með valmyndinni 
+   vinstra megin. Það er ráðlegt að gera þetta frekar en að opna stakar skrár, þ.e. fara í
+   *File->Open Folder* og opna *haskoli-islands*-möppuna. 
+
+.. image:: myndir/vscode-git.png
+
+Conda-umhverfi sett upp
+-----------------------
+
+Næst er að setja upp Conda-umhverfið sem inniheldur allt sem þarf til að 
+þýða (compile) nóturnar. Í VSCode er smellt á *Terminal* og svo
+*New Terminal*. Þá birtist skjáhermir niðri þar sem við keyrum
+
+.. code-block:: 
+
+   conda env create -f environment.yml
+
+Þetta tekur smástund því Conda er að ná í alla pakkana sem til þarf.
+
+Næst þarf að virkja umhverfið með 
+
+.. code-block::
+
+   conda activate edbook
+
+.. Note::
+    
+    Það ætti að standa *(edbook)* fremst í skipanalínunni 
+
+Stillingar fyrir nýtt verkefni
+------------------------------
+
+Smellið á  *projects* og veljið möppuna með nýja verkefninu og smellið þar á *conf.py*.
+Þar þarf að breyta línum 9, 10, 11 og 12. Að öðru leyti ætti ekki að þurfa að breyta þessari skrá. 
+
+Línurnar sem þarf að breyta
+
+.. code-block:: 
+   :lineno-start: 8
+
+   #################### PROJECT ######################
+   project = "Sniðmát fyrir Edbook (TMP001G)"
+   projectid = "tmp001g"
+   copyright = "2023, Jónmundur Gunnuson"
+   author = "Jónmundur Gunnuson <asdf@hi.is>"
+   year = str(datetime.datetime.now().year)
+   version = year  # The short X.Y version.
+   release = year  # The full version, including alpha/beta/rc tags.
+   ###################################################
+
+
+
+
