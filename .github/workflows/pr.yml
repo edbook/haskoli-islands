@@ -111,7 +111,9 @@ jobs:
           path: org-repo
           ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
       - run: |
+          mv _build/* org-repo/
           cd org-repo
+          ls -al
           git status
           git config user.name github-actions
           git config user.email github-actions@github.com
