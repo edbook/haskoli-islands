@@ -61,14 +61,17 @@ jobs:
         if: steps.conda-cache.outputs.cache-hit != 'true'
         uses: conda-incubator/setup-miniconda@v2
         with:
-          activate-environment: edbook
-          environment-file: environment.yml
-          python-version: 3.10.10
-          use-mamba: true
-          use-only-tar-bz2: true
           miniforge-variant: Mambaforge
           miniforge-version: latest
+          activate-environment: edbook
+          use-mamba: true
+          environment-file: environment.yml
+          python-version: 3.10.10
+          use-only-tar-bz2: true
       - run: |
+          mamba activate edbook
+          mamba info
+          mamba list
           mamba env update -n edbook env -f environment.yml
       # - uses: conda-incubator/setup-miniconda@v2
       #   with:
