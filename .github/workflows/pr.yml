@@ -72,7 +72,6 @@ jobs:
           mamba activate edbook
           mamba info
           mamba list
-          mamba env update -n edbook env -f environment.yml
       # - uses: conda-incubator/setup-miniconda@v2
       #   with:
       #     miniforge-variant: Mambaforge
