@@ -52,7 +52,7 @@ jobs:
       #     path: ~/conda_pkgs_dir
       #     key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
       - name: Conda activate
-        if: steps.conda-cache.outputs.cache-hit != 'true'
+        # if: steps.conda-cache.outputs.cache-hit != 'true'
         run: |
           mamba env update -n edbook -f environment.yml
       # - uses: conda-incubator/setup-miniconda@v2
