@@ -18,6 +18,9 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     defaults:
       run:
         shell: bash -el {0}
@@ -88,6 +91,8 @@ jobs:
       - name: 📂 Deploy feature to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          preview: true
 
   # build-all:
   #   needs: [setup]
