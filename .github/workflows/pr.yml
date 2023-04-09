@@ -27,7 +27,8 @@ jobs:
         shell: bash
         run: |
           echo ${{ github.head_ref }}
-          echo "BRANCH_SLUG=$(./.github/slugify.sh ${{ github.head_ref }})" >> $GITHUB_ENV
+          slug=$(./.github/slugify.sh ${{ github.head_ref || github.ref_name }})
+          echo "BRANCH_SLUG=$slug" >> $GITHUB_ENV
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Setup Conda
