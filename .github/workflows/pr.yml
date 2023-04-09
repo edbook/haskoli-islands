@@ -78,8 +78,8 @@ jobs:
         with:
           preview: true
 
-  announce-affected:
-    name: Announce affected projects
+  announce-url:
+    name: Announce feature url
     runs-on: ubuntu-latest
     needs: setup
     # if: github.event.action == 'opened'

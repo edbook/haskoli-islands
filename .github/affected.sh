@@ -21,12 +21,21 @@ function build_affected() {
   fi
 }
 
+is_print=true
+is_build=false
 while getopts 'pb' flag; do
   case "${flag}" in
-    p) is_print="${OPTARG}" ;;
-    b) is_build="${OPTARG}" ;;
+    b) is_build=true ;;
     *) print_usage
        exit 1 ;;
   esac
 done
+
+if $is_print ; then
+  get_affected
+fi
+
+if $is_build ; then
+  build_affected
+fi
 
