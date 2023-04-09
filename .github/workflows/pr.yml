@@ -42,6 +42,7 @@ jobs:
           mamba-version: "*"
           channel-priority: true
           use-mamba: true
+
           # auto-update-conda: true
           # auto-activate-base: true
       - name: Check for Conda cache
@@ -65,10 +66,7 @@ jobs:
       - name: Conda activate
         if: steps.conda-cache.outputs.cache-hit != 'true'
         run: |
-          conda env create -f environment.yml
-          conda activate edbook
-          conda info
-          conda list
+          mamba env update -n edbook -f environment.yml
       # - uses: conda-incubator/setup-miniconda@v2
       #   with:
       #     miniforge-variant: Mambaforge
