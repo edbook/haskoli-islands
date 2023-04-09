@@ -29,13 +29,13 @@ jobs:
           echo "BRANCH_SLUG=$(./.github/slugify.sh ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
       - name: Check out repository
         uses: actions/checkout@v3
-      # - name: Setup Mambaforge
-      #   uses: conda-incubator/setup-miniconda@v2
-      #   with:
-      #     miniforge-variant: Mambaforge
-      #     miniforge-version: latest
-      #     activate-environment: edbook
-      #     use-mamba: true
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          activate-environment: edbook
+          use-mamba: true
       - name: Check for Conda cache
         id: conda-cache
         uses: actions/cache@v3
@@ -52,7 +52,8 @@ jobs:
           mamba-version: "*"
           channel-priority: true
           use-mamba: true
-      - run: |
+      - name: Conda activate
+        run: |
           conda activate edbook
           conda info
           conda list
