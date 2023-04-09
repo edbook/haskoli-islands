@@ -201,7 +201,7 @@ jobs:
   notify-discord-pr:
     name: Notify Discord (open PR)
     runs-on: ubuntu-20.04
-    needs: [build-all]
+    needs: [setup]
     if: github.event.action == 'opened'
     steps:
       - name: Check out repository
