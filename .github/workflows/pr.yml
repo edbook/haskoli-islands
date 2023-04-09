@@ -19,7 +19,7 @@ jobs:
     name: Setup
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: ${{ github.head_ref }}
       url: ${{ steps.deployment.outputs.page_url }}
     defaults:
       run:
