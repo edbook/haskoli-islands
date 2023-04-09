@@ -18,6 +18,8 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    outputs:
+      deploy-url: ${{ steps.deployment.outputs.page_url }}/${{ env.BRANCH_SLUG }}
     environment:
       name: ${{ github.head_ref }}
       url: ${{ steps.deployment.outputs.page_url }}/${{ env.BRANCH_SLUG }}
@@ -37,9 +39,6 @@ jobs:
       - name: Setup Conda
         uses: conda-incubator/setup-miniconda@v2
         with:
-          # miniforge-variant: Mambaforge
-          # miniforge-version: latest
-          # use-mamba: true
           auto-update-conda: false
           python-version: 3.10.10
           channels: conda-forge,defaults
@@ -55,23 +54,6 @@ jobs:
       #   with:
       #     path: ~/conda_pkgs_dir
       #     key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
-      # - name: Conda activate
-      #   # if: steps.conda-cache.outputs.cache-hit != 'true'
-      #   run: |
-      #     mamba env update -n edbook -f environment.yml
-      # - uses: conda-incubator/setup-miniconda@v2
-      #   with:
-      #     miniforge-variant: Mambaforge
-      #     miniforge-version: latest
-      #     activate-environment: edbook
-      #     use-mamba: true
-      #     environment-file: environment.yml
-      #     python-version: 3.10.10
-      #     use-only-tar-bz2: true
-      # - run: |
-      #     conda activate edbook
-      #     conda info
-      #     conda list
       - name: 🚧 Build all (pr)
         # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
         id: build-all
@@ -94,92 +76,37 @@ jobs:
         with:
           preview: true
 
-  # build-all:
-  #   needs: [setup]
-  #   name: Deploy feature
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check out repository
-  #       uses: actions/checkout@v3
-  #       with:
-  #         fetch-depth: 0
-  #     - name: 🚧 Build affected (pr)
-  #       if: github.event_name == 'pull_request' && github.event.label.name != 'build-all'
-  #       id: build-affected
-  #       run: |
-  #         source .venv/bin/activate
-  #         poetry --version
-  #         ./.github/build-affected.sh ${{ github.event.pull_request.base.sha }} ${GITHUB_SHA}
+  announce-affected:
+    name: Announce feature deploy url
+    runs-on: ubuntu-20.04
+    needs: build-all
+    # if: github.event.action == 'opened'
+    steps:
+      - name: Find Comment
+        uses: peter-evans/find-comment@v2
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: "github-actions[bot]"
+          body-includes: Your deployment is here
 
-  #     - name: 🚧 Build all (pr)
-  #       if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
-  #       id: build-all
-  #       run: |
-  #         source .venv/bin/activate
-  #         poetry --version
-  #         make build-all
+      - name: Create comment
+        if: steps.fc.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Your deployment is here ${{needs.build-all.outputs.deploy-url}}
+          reactions: rocket
 
-  #     # - name: 📂 Sync files
-  #     #   uses: SamKirkland/FTP-Deploy-Action@4.3.3
-  #     #   with:
-  #     #     server: ${{ secrets.OK_FTP_IP_ADDRESS }}
-  #     #     username: ${{ secrets.OK_FTP_USER }}
-  #     #     password: ${{ secrets.OK_FTP_PASSWORD }}
-  #     #     local-dir: ${{ github.workspace }}/_build/
-  #     #     dry-run: false
-  #     #     server-dir: "~/public_html/staging/edbook/${{ github.head_ref }}/"
-  #     - name: configure aws credentials
-  #       uses: aws-actions/configure-aws-credentials@v2
-  #       with:
-  #         role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
-  #         role-session-name: github-deploy
-  #         aws-region: ${{ env.AWS_REGION }}
-  #     - name: 📂 Sync files to s3
-  #       run: |
-  #         aws s3 sync _build s3://${{ env.BUCKET_NAME }}/staging/edbook/${{ github.head_ref }} --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
-  #     - name: 📂 prepare files for Github pages
-  #       run: |
-  #         mv _build/forsida/* _build/
-  #     - name: Setup Pages
-  #       uses: actions/configure-pages@v3
-  #     - name: Upload artifact
-  #       uses: actions/upload-pages-artifact@v1
-  #       with:
-  #         path: "_build"
-  #     - name: 📂 Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v1
-
-  # announce-affected:
-  #   name: Announce affected on PR
-  #   runs-on: ubuntu-20.04
-  #   if: github.event.action == 'opened'
-  #   steps:
-  #     - name: Find Comment
-  #       uses: peter-evans/find-comment@v2
-  #       id: fc
-  #       with:
-  #         issue-number: ${{ github.event.pull_request.number }}
-  #         comment-author: "github-actions[bot]"
-  #         body-includes: Affected projects
-
-  #     - name: Create comment
-  #       if: steps.fc.outputs.comment-id == ''
-  #       uses: peter-evans/create-or-update-comment@v2
-  #       with:
-  #         issue-number: ${{ github.event.pull_request.number }}
-  #         body: |
-  #           This comment was written by a bot!
-  #         reactions: rocket
-
-  #     - name: Update comment
-  #       if: steps.fc.outputs.comment-id != ''
-  #       uses: peter-evans/create-or-update-comment@v2
-  #       with:
-  #         comment-id: ${{ steps.fc.outputs.comment-id }}
-  #         body: |
-  #           This comment has been updated!
-  #         reactions: hooray
+      # - name: Update comment
+      #   if: steps.fc.outputs.comment-id != ''
+      #   uses: peter-evans/create-or-update-comment@v2
+      #   with:
+      #     comment-id: ${{ steps.fc.outputs.comment-id }}
+      #     body: |
+      #       Your deployment is here ${{needs.build-all.outputs.deploy-url}}
+      #     reactions: hooray
 
   notify-discord-pr:
     name: Notify Discord (open PR)

@@ -19,6 +19,8 @@ jobs:
   build-all:
     name: Build and deploy
     runs-on: ubuntu-latest
+    outputs:
+      branch-slug: ${{ env.BRANCH_SLUG }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
