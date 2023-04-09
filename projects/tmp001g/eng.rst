@@ -1,24 +1,5 @@
-Viðbætur
+Extensions
 ==========
-
-Geogebra
---------
-
-Hægt er að greypa inn Geogebra-forrit með `sphinxcontrib-geogebra 
-<https://github.com/edbook/sphinxcontrib-geogebra>`_ viðbótinni.
-Vista þarf Geogebra-skjalið á `geogebra.org`_ þar sem það fær auðkenni, en auðkennið 
-er aftasti hlutinn af vefslóðinni.
-Forritið er svo sett inn með: 
-
-.. code-block::
-
-  .. ggb:: abcdefgh
-
-
-Sjá `https://github.com/edbook/sphinxcontrib-geogebra#options`_ fyrir fleiri stillingar.
-
-Dæmi
-~~~~
 
 .. ggb:: mkyudgwh
 
@@ -26,7 +7,7 @@ Togglebutton
 ------------
 
 .. admonition:: Útleiðasla á hreyfijöfnum
-:class: setning, dropdown
+    :class: setning, dropdown
 
     Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
 
@@ -42,42 +23,23 @@ Togglebutton
     sem er einmitt jafnan fyrir hraða sem fall af tíma.
 
 
-Takkar fyrir hlekki (sphinxcontrib-custombutton)
-------------------------------------------------
-
-Viðbótin `sphinxcontrib-custombutton <https://github.com/sphinxcontrib-custombutton>`_ 
-er fyrir sérsniðna takka með hlekkjum. Skráin ``_static/button.css`` geymir stillingar
-fyrir útlit takkans. 
+Buttons with links
+~~~~~~~~~~~~~~~~~~
 
 .. button::
   :text: Edbook home page
   :link: http://edbook.hi.is
 
 Panopto
--------
+~~~~~~~
+Displays videos hosted on Panopto
 
-Hægt er að greypa inn Panopto-myndbönd með 
-
-.. code-block::
-    .. panopto:: ab027f4b-88b9-4647-af20-afdf0092304d
-        :width: 100%
-        :height: 400
-
-Hér er `ab027f4b-88b9-4647-af20-afdf0092304d` auðkennið sem myndbandið hefur á 
-Panopto-þjóninum. Til að finna það þá er best að fara inn á `https://hi.cloud.panopto.eu`_
-finna myndbandið og smella á `Settings` og undir `Viewer Link` er auðkennið það sem
-stendur fyrir aftan `id=`. 
-
-.. panopto:: ab027f4b-88b9-4647-af20-afdf0092304d
+.. panopto:: bfb3abf8-891c-4a53-8cee-08640552d8f0
     :width: 100%
-
-Youtube
--------
-
-
+    :height: 405
 
 Math - Katex
-------------
+~~~~~~~~~~~~
 Math on page is rendered with Katex.
 Katex is faster in works for almost all latex syntax, there are documented cases of examples
 known to cause troubles in the katex-extension sub-directory
@@ -148,8 +110,7 @@ R
 
 Hoverrole Extension
 -------------------
-
-Þetta er texti um :hover:`stærðfræðigreiningu,stærðfræðigreining` og :hover:`afleiðujöfnur, deildajafna`. Fleiri hugtök: :hover:`heildi`, :hover:`ferill`, :hover:`vörpun`.
+Þetta er texti um :hover:`stærðfræðigreiningu,stærðfræðigreining` og :hover:`afleiðujöfnur, deildajafna`. Fleiri hugtök: :hover:`ferill`, :hover:`vörpun`.
 
 Auto-generated list of translated terms:
 

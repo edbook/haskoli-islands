@@ -7,6 +7,7 @@ import sys
 
 #################### PROJECT ######################
 project = "Sniðmát fyrir Edbook (TMP001G)"
+projectid = "tmp001g"
 copyright = "2023, Jónmundur Gunnuson"
 author = "Jónmundur Gunnuson <asdf@hi.is>"
 year = str(datetime.datetime.now().year)
@@ -19,9 +20,8 @@ release = year  # The full version, including alpha/beta/rc tags.
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath("."))
-sys.path.append(os.path.abspath("../../extensions"))
-from eqt_ext import (
+# sys.path.append(os.path.abspath("../../extensions"))
+from sphinxcontrib.questionnaire import (
     get_eqt_ext_static_dir,  # Verður að koma eftir að bæta extensions í path
 )
 
@@ -30,54 +30,34 @@ extensions = [
     "sphinx.ext.ifconfig",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
+    "sphinx_copybutton",
     "sphinx.ext.mathjax",
-    # "sphinx_search.extension",
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
-    #'katex.katex',
     #'sphinxcontrib.katex',
-    # hieroglyph is used to generate html slides, https://github.com/nyergler/hieroglyph
-    #'hieroglyph',
     # Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "sphinxcontrib.geogebra",
-    # Extension for toggleable blocks of text (click to show/hide).
-    # See README.txt in toggleblock-extension folder.
-    "sphinxcontrib.toggleblock",
-    #    "sphinx_togglebutton",
-    "sphinxcontrib.questionnaire",
-    # Extension for embedding sage cells (https://sagecell.sagemath.org/).
-    # See README.txt in sagecell-extension folder.
-    # Note: sagecell must not be listed before katex.katex
-    #    'sagecell.sagecell',
+    "sphinxcontrib.geogebra",          # (https://github.com/edbook/sphinxcontrib-geogebra)
+    "sphinxcontrib.toggleblock",       # (https://github.com/edbook/sphinxcontrib-toogleblock)
+    "sphinxcontrib.questionnaire",     # (https://github.com/edbook/sphinxcontrib-questionnaire)
     # Extension for providing Icelandic to English translation of mathematical terms
-    # on mouse-over. See README in hoverrole folder.
-    #    "sphinxcontrib.hoverrole",
-    # Extension for embedding tracking code from google-analytics and custom scroll depth measurement
-    #    'analytics.analytics',
+    "sphinxcontrib.hoverrole",         # (https://github.com/edbook/sphinxcontrib-hoverrole)
+    # Extension for embedding sage cells (https://github.com/edbook/sphinxcontrib-sagecell)
+    # Note: sagecell must not be listed before katex.katex
+    #    'sphinxcontrib.sagecell',
     # Extension for embedding datacamp-light which enables constructing simple programming exercises
     # in R and python, with much greater package support than sagecell in R
-    #'datacamp.datacamp',
+    'sphinxcontrib.datacamp',
     # Extension that allows embedding panopto videos from rec.hi.is
-    #    'panoptoextension.panopto'
-    # fyrir Reauthoring
-    # 'Sphinx_ext.activityduration',
-    # 'Sphinx_ext.htmlform',
-    # 'Sphinx_ext.instructorfeedback',
-    # Extension for multiple options quizzes
-    # 'Sphinx_ext.instructorguide',
-    # 'Sphinx_ext.embeddedvideo',
-    # 'Sphinx_ext.xy_click',
-    # 'Sphinx_ext.questions',
-    # 'Sphinx_ext.iframe',
-    # 'Sphinx_ext.button'
-    "sphinxcontrib.youtube",
+    'sphinxcontrib.panopto',
+    'sphinxcontrib.custombutton',
+    'sphinxcontrib.youtube',
     #    "sphinx_rtd_dark_mode"
 ]
 
 # -- Custom extension options and paths --------------------------------------
 
 # user starts in light mode
-default_dark_mode = False
+# default_dark_mode = False
 
 mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
@@ -177,7 +157,7 @@ html_context = {
     "display_github": True,
     "github_user": "edbook",
     "github_repo": "haskoli-islands",
-    "github_version": str("master/src/projects/" + os.path.split(os.getcwd())[1] + "/"),
+    "github_version": str("master/projects/" + os.path.split(os.getcwd())[1] + "/"),
 }
 
 html_permalinks = True
@@ -269,7 +249,7 @@ html_show_copyright = False
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "StrfrigreiningIdoc"
+htmlhelp_basename = "TMP001G"
 
 
 # -- Options for HTML Slide output ---------------------------------------------------
@@ -348,9 +328,9 @@ latex_show_urls = "inline"
 man_pages = [
     (
         "index",
-        "strfrigreiningi",
-        "Stærðfræðigreining I Documentation",
-        ["Benedikt Steinar Magnússon"],
+        id,
+        "TMP001G Documentation",
+        ["Jónmundur Gunnuson"],
         1,
     )
 ]
@@ -367,10 +347,10 @@ man_pages = [
 texinfo_documents = [
     (
         "index",
-        "StrfrigreiningI",
-        "Stærðfræðigreining I Documentation",
-        "Benedikt Steinar Magnússon",
-        "StrfrigreiningI",
+        "tmp001g",
+        project,
+        author,
+        projectid,
         "One line description of project.",
         "Miscellaneous",
     ),

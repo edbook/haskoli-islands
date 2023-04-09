@@ -112,13 +112,15 @@ með einum eða öðrum hætti og fá kærar þakkir fyrir:
 - Guðný Halldórsdóttir
 - Hans Adolf Linnet
 - Huld Hvönn Kristinsdóttir
-- Jón Levy Guðmundsson
 - Júlía Þóra Oddsdóttir
+- Kristján Jónasson
 - Rakel María Brynjólfsdóttir
 - Símon Böðvarsson
 - Sólrún Halla Einarsdóttir
 - Tryggvi Kalman Jónsson
 - Una Kamilla Steinsen
+
+Sérstakar þakkir fær Jón Levy Guðmundsson fyrir alla Github-galdrana. 
 
 Verkefnið hefur verið unnið með styrk frá Kennslumálasjóði
 Háskóla Íslands og aðstoðar Stræðfræðistofu Raunvísindastofnunar.
