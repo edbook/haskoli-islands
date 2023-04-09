@@ -76,10 +76,10 @@ jobs:
         with:
           preview: true
 
-  announce-affected:
+  announce-url:
     name: Announce feature deploy url
     runs-on: ubuntu-20.04
-    needs: build-all
+    needs: setup
     # if: github.event.action == 'opened'
     steps:
       - name: Find Comment
@@ -96,7 +96,7 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            Your deployment is here ${{needs.build-all.outputs.deploy-url}}
+            Your deployment is here ${{needs.setup.outputs.deploy-url}}
           reactions: rocket
 
       # - name: Update comment
