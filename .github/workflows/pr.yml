@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: ${{ github.head_ref }}
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}/${{ env.BRANCH_SLUG }}
     defaults:
       run:
         shell: bash -el {0}
