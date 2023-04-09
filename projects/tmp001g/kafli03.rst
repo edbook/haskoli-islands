@@ -10,6 +10,8 @@ skrifið nafnið á verkefninu (ef um er að ræða nótur fyrirnámskeið þá 
 nafn) og smellið á *Create new branch*. Framvegis er svo hægt að fylgjast með neðst til vinstri 
 í hvaða grein er verið að vinna.
 
+.. image:: myndir/vscode-branch.png
+
 Hér er aðeins farið í það hvernig unnið er með Git í VSCode
 
 .. youtube:: i_23KUAEtUM
