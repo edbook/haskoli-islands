@@ -62,7 +62,6 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: edbook
-          channel-priority: strict
           environment-file: environment.yml
           python-version: 3.10.10
           use-mamba: true
