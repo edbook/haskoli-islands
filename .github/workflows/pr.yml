@@ -22,6 +22,8 @@ jobs:
       run:
         shell: bash -el {0}
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
       - name: Extract branch name
         id: extract_branch
         shell: bash
@@ -29,8 +31,6 @@ jobs:
           echo ${{ github.head_ref }}
           slug=$(./.github/slugify.sh ${{ github.head_ref || github.ref_name }})
           echo "BRANCH_SLUG=$slug" >> $GITHUB_ENV
-      - name: Check out repository
-        uses: actions/checkout@v3
       - name: Setup Conda
         uses: conda-incubator/setup-miniconda@v2
         with:
