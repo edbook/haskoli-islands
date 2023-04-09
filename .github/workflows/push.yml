@@ -1,18 +1,10 @@
-name: edbook
-env:
-  SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
-  SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
-  SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
-  BUCKET_NAME: "edbook-dev"
-  AWS_REGION: "eu-west-1"
+name: Push
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -20,93 +12,72 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/**"
+      - "projects/**"
       - "cli/**"
       - ".github/**"
 jobs:
-  setup:
-    name: Setup
-    runs-on: ubuntu-latest
-    outputs:
-      branch_name: ${{ steps.extract_branch.outputs.BRANCH_NAME }}
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: "1.2.1"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: Load cached venv
-        id: cached-poetry-dependencies
-        uses: actions/cache@v3
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install dependencies
-        run: poetry install
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
   build-all:
-    needs: [setup]
     name: Build and deploy
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Extract branch name
+        id: extract_branch
+        shell: bash
+        run: |
+          echo "{BRANCH_NAME}={$(echo ${GITHUB_REF#refs/heads/})}" >> $GITHUB_OUTPUT
       - name: Check out repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-      - name: Load cached venv
-        id: cached-poetry-dependencies
+      # - name: Setup Mambaforge
+      #   uses: conda-incubator/setup-miniconda@v2
+      #   with:
+      #     miniforge-variant: Mambaforge
+      #     miniforge-version: latest
+      #     activate-environment: edbook
+      #     use-mamba: true
+      - name: Check for Conda cache
+        id: conda-cache
         uses: actions/cache@v3
         with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
+          path: ~/conda_pkgs_dir
+          key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
+      - uses: conda-incubator/setup-miniconda@v2
+        if: steps.conda-cache.outputs.cache-hit != 'true'
         with:
-          version: "1.2.1"
-          virtualenvs-create: true
-          virtualenvs-in-project: true
-      - name: 🚧 Build all (pr)
-        id: build-all
-        run: |
-          source .venv/bin/activate
-          poetry --version
-          make build-all
-      - name: configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          role-to-assume: arn:aws:iam::755547062946:role/edbook-github-deployer
-          role-session-name: github-deploy
-          aws-region: ${{ env.AWS_REGION }}
-      - name: 📂 Sync files to s3
-        run: |
-          aws s3 sync _build/forsida/ s3://${{ env.BUCKET_NAME }}/forsida --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
-          aws s3 sync _build s3://${{ env.BUCKET_NAME }}/ --exclude "_build/forsida" --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate
-      - name: 📂 prepare files for Github pages
+          activate-environment: edbook
+          environment-file: environment.yml
+          python-version: 3.10.10
+          channels: conda-forge,defaults
+          mamba-version: "*"
+          channel-priority: true
+          use-mamba: true
+      - run: |
+          conda activate edbook
+          conda info
+          conda list
+      - name: 📂 Prepare files for Github pages
         run: |
           mv _build/forsida/* _build/
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Checkout edbook.github.io
+        uses: actions/checkout@v3
         with:
-          path: "_build"
-      - name: 📂 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          repository: 'edbook/edbook.github.io'
+          path: org-repo
+          ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
+      - name: Push to edbook.github.io
+        run: |
+          mv _build/* org-repo/
+          cd org-repo
+          ls -al
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "ci: testing _build output commit"
+          git push
 
   notify-discord-merge:
     needs: [build-all]
@@ -157,7 +128,7 @@ jobs:
             -c "$payload"
 
   notify-discord-build-failed:
-    needs: [build-all, setup]
+    needs: [build-all]
     if: always() && needs.build-all.result == 'failure' && github.event_name == 'push'
     name: Notify Discord (build failed)
     runs-on: ubuntu-20.04

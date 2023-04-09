@@ -1,10 +1,4 @@
-name: edbook
-env:
-  SSH_USER: ${{ secrets.EDBOOK_SSH_USER }}
-  SSH_KEY: ${{ secrets.EDBOOK_SSH_KEY }}
-  SSH_HOST: ${{ secrets.EDBOOK_SSH_HOST }}
-  BUCKET_NAME: "edbook-dev"
-  AWS_REGION: "eu-west-1"
+name: Pull request
 permissions:
   contents: read
   pages: write
@@ -15,24 +9,15 @@ concurrency:
 on:
   pull_request:
     branches: [main, conda]
-    types: [opened, synchronize, closed, labeled]
+    types: [opened, synchronize, labeled]
     paths:
       - "projects/**"
       - "cli/**"
       - ".github/**"
-  # push:
-  #   paths:
-  #     - 'src/**'
-  #     - 'cli/**'
-  #     - '.github/**'
-  #   branches-ignore:
-  #     - main
 jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
-    outputs:
-      branch_name: ${{ steps.extract_branch.outputs.BRANCH_NAME }}
     defaults:
       run:
         shell: bash -el {0}
@@ -41,7 +26,7 @@ jobs:
         id: extract_branch
         shell: bash
         run: |
-          echo "{BRANCH_NAME}={$(echo ${GITHUB_REF#refs/heads/})}" >> $GITHUB_OUTPUT
+          echo "BRANCH_SLUG=$(./.github/slugify.sh ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
       - name: Check out repository
         uses: actions/checkout@v3
       # - name: Setup Mambaforge
@@ -89,37 +74,20 @@ jobs:
         id: build-all
         run: |
           make build-all
-      - name: 📂 prepare files for Github pages
+      - name: 📂 Prepare pages for feature deployment
         run: |
+          mkdir -p ${{ env.BRANCH_SLUG }}
           mv _build/forsida/* _build/
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v3
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v1
-      #   with:
-      #     path: "_build"
-      # - name: Setup SSH Keys and known_hosts
-      #   env:
-      #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-      #   run: |
-      #     ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-      #     ssh-add - <<< "${{ secrets.SSH_DEPLOY_KEY }}"
-      - name: Checkout edbook.github.io
-        uses: actions/checkout@v3
+          mv _build/* ${{ env.BRANCH_SLUG }}/
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          repository: 'edbook/edbook.github.io'
-          path: org-repo
-          ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
-      - run: |
-          mv _build/* org-repo/
-          cd org-repo
-          ls -al
-          git status
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "ci: testing _build output commit"
-          git push
+          path: ${{ env.BRANCH_SLUG }}
+      - name: 📂 Deploy feature to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
   # build-all:
   #   needs: [setup]
