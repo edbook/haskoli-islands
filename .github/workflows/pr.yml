@@ -26,7 +26,8 @@ jobs:
         id: extract_branch
         shell: bash
         run: |
-          echo "BRANCH_SLUG=$(./.github/slugify.sh ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
+          echo ${{ github.head_ref }}
+          echo "BRANCH_SLUG=$(./.github/slugify.sh ${{ github.head_ref }})" >> $GITHUB_ENV
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Setup Conda
@@ -35,7 +36,7 @@ jobs:
           # miniforge-variant: Mambaforge
           # miniforge-version: latest
           # use-mamba: true
-          # auto-update-conda: true
+          auto-update-conda: false
           python-version: 3.10.10
           channels: conda-forge,defaults
           mamba-version: "*"
