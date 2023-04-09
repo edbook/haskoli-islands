@@ -56,12 +56,10 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/conda_pkgs_dir
-          key: conda-${{ runner.os }}-${{hashFiles('environment.yml') }}
+          key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
       - name: Install Conda dependencies
         if: steps.conda-cache.outputs.cache-hit != 'true'
-        run: |
-          mamba env update -n edbook env -f environment.yml
-      - uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: edbook
           channel-priority: strict
@@ -71,6 +69,8 @@ jobs:
           use-only-tar-bz2: true
           miniforge-variant: Mambaforge
           miniforge-version: latest
+      - run: |
+          mamba env update -n edbook env -f environment.yml
       # - uses: conda-incubator/setup-miniconda@v2
       #   with:
       #     miniforge-variant: Mambaforge
