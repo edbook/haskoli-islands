@@ -35,34 +35,22 @@ jobs:
           # miniforge-variant: Mambaforge
           # miniforge-version: latest
           # use-mamba: true
-          # auto-update-conda: true
-          # auto-activate-base: true
+          auto-update-conda: true
+          auto-activate-base: true
           python-version: 3.10.10
           channels: conda-forge,defaults
           mamba-version: "*"
           channel-priority: true
           use-mamba: true
-
-          # auto-update-conda: true
-          # auto-activate-base: true
-      - name: Check for Conda cache
-        id: conda-cache
-        uses: actions/cache@v3
-        with:
-          path: ~/conda_pkgs_dir
-          key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
-      # - uses: conda-incubator/setup-miniconda@v2
-      #   if: steps.conda-cache.outputs.cache-hit != 'true'
+          environment-file: environment.yml
+          activate-environment: edbook
+      # TODO: needs work
+      # - name: Check for Conda cache
+      #   id: conda-cache
+      #   uses: actions/cache@v3
       #   with:
-      #     activate-environment: edbook
-      #     environment-file: environment.yml
-      #     python-version: 3.10.10
-      #     channels: conda-forge,defaults
-      #     mamba-version: "*"
-      #     channel-priority: true
-      #     use-mamba: true
-    # mamba env update -n anaconda-client-env -f
-    # etc/example-environment-caching.yml
+      #     path: ~/conda_pkgs_dir
+      #     key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
       - name: Conda activate
         if: steps.conda-cache.outputs.cache-hit != 'true'
         run: |
