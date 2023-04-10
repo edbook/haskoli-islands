@@ -63,9 +63,9 @@ jobs:
           make build-all
       - name: 📂 Prepare pages for feature deployment
         run: |
-          mv _build/forsida/* _build/
-          mkdir -p dist/${{ env.BRANCH_SLUG }}
-          mv _build/* dist/${{ env.BRANCH_SLUG }}/
+          rsync -avh _build/forsida/ ./_build/
+          rm -rf _build/forsida
+          rsync -avh --mkpath _build/ dist/${{ env.BRANCH_SLUG }}/
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
