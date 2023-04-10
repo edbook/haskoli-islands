@@ -1,1 +1,1 @@
-from .settings import extensions, vendors
+from .settings import *
