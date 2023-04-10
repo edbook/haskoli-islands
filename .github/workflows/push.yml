@@ -66,6 +66,7 @@ jobs:
           ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
       - name: Push to edbook.github.io
         run: |
+          rsync -a -v _build/forsida/ ./_build
           rsync -a -v _build/ ./org-repo
           cd org-repo
           ls -al
