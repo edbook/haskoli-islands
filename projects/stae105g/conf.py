@@ -39,7 +39,7 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
     "sphinx_togglebutton",
-    "eqt_ext.eqt",
+    "sphinxcontrib.questionnaire",
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #    'katex.katex',
