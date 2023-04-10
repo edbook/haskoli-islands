@@ -1,26 +1,15 @@
-![edbook](https://github.com/edbook/haskoli-islands/workflows/edbook/badge.svg)
+![edbook](https://github.com/edbook/haskoli-islands/workflows/edbook/push.yml/badge.svg)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/edbook/haskoli-islands?label=version)
 
 # Instructions
 
 This is a template for a web-based textbook/lecture notes for the University of Iceland's mathematics department, using sphinx (see sphinx-doc.org).
 
-## Install with Poetry
-
-See [Poetry docs](https://python-poetry.org/docs/#installation) for recommended install method.
-
-```sh
-poetry shell
-poetry install
-```
-
-Remember to run `poetry install` each time the main branch is pulled to install new packages or packages that might have been updated.
-
 ## Manual build
 
 You can manually build a particular project by passing the folder name as an argument, like so:
 
-```
+```bash
 make build project=undirbuningur_stae
 ```
 
@@ -63,11 +52,11 @@ cz commit
 
 **TODO: needs work**
 
-Each time you push changes to the remote branch a [pre-release](https://github.com/busla/undirbuningur_stae/releases) will be created and deployed to `https:/notendur.hi.is/some-user/path/to/branch`.
+When a pull request is opened a new [feature deployment](https://github.com/edbook/haskoli-islands/deployments) will be created and deployed to a custom url. It will be updated on each push to that pull request.
 
-When the project owners merge the feature branch to master an automatic release will be created and deployed to production.
+When the project owners merge the pull request to main an automatic release will be created and deployed to production.
 
-## Install without virtualenv
+## Install without virtualenv (not recommended)
 
 For ubuntu based distros run the following commands in the terminal:
 
@@ -133,6 +122,4 @@ Three custom extensions come with this framework (ggbextension to embed geogebra
 
 ## CI/CD
 
-All pull requests are deployed as feature deployments to a separate path (are we doing this still after migrating to FTP?) that can be used for smoke testing the changes before merging to main.
-
-To force build all the projects the `build-all` label can be added to the pull request.
+Pipelines are run on each push to a pull request. The checks must pass before merging to main is possible.

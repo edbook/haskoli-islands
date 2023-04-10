@@ -1,5 +1,8 @@
 # NOTE: example of global owners (remove @busla at some point)
 *                                                  @benediktmag
+!.github                                           @benediktmag
+!cli                                               @benediktmag
+
 .github                                            @busla
 cli                                                @busla
 
