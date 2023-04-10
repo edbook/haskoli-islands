@@ -4,7 +4,7 @@ SPHINXBUILD   = sphinx-build
 PYTHONBUILD = python -m sphinx.cmd.build
 PAPER         =
 BUILDDIR      = _build/$(project)
-PROJECTSDIR   = src/projects
+PROJECTSDIR   = projects
 
 # User-friendly check for sphinx-build
 # ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -32,7 +32,7 @@ update:
 	poetry update
 
 build-all:
-	poetry run cli build $(SPHINXOPTS) $(O)
+	python -m cli.main build $(SPHINXOPTS) $(O)
 autobuild:
 	sphinx-autobuild $(PROJECTSDIR)/$(project) $(BUILDDIR) $(SPHINXOPTS) $(O)
 build:
