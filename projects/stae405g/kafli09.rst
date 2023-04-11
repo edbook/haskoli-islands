@@ -99,21 +99,21 @@ Nánar tiltekið, ef
    :math:`n-k` skífurnar, þá inniheldur :math:`U` nákvæmlega :math:`k`
    eigingildi.
 
-Dæmi: Setning Gerschgorins
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. sagecell::
-    :auto: 
-    :hidecode:  
-    :codefile: gerschgorin.sage
-    :img: gerschgorin.png
-    :imgwidth: 8 cm
-
-
-.. index::
-    eiginvigur; grunnur
-    hornalínugeranlegt
-    
+.. Dæmi: Setning Gerschgorins
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+.. .. sagecell::
+..     :auto: 
+..     :hidecode:  
+..     :codefile: gerschgorin.sage
+..     :img: gerschgorin.png
+..     :imgwidth: 8 cm
+..
+..
+.. .. index::
+..     eiginvigur; grunnur
+..     hornalínugeranlegt
+..     
 
 Eiginvigragrunnar
 ~~~~~~~~~~~~~~~~~

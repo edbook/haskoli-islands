@@ -163,13 +163,13 @@ Seinni ójafnan jafngildir því að
     n>\dfrac{\ln\big((b-a)/\varepsilon\big)}{\ln 2}.
 
     
-.. sagecell::
-    :auto: 
-    :hidecode:  
-    :codefile: bisection.sage
-    :img: bisection.png
-    :imgwidth: 8 cm
-
+.. .. sagecell::
+..     :auto: 
+..     :hidecode:  
+..     :codefile: bisection.sage
+..     :img: bisection.png
+..     :imgwidth: 8 cm
+..
 .. index::
 	fastapunktsaðferð
 	fastapunktur
@@ -361,13 +361,13 @@ Af skilgreiningunni á rununni :math:`x_n` leiðir beint að
 sem segir okkur að fastapunktsaðferð sé að minnsta kosti línulega
 samleitin ef :math:`f` er herping.
 
-.. sagecell::
-    :auto: 
-    :hidecode:  
-    :codefile: fixedpoint.sage
-    :img: fixedpoint.png
-    :imgwidth: 8 cm 
-
+.. .. sagecell::
+..     :auto: 
+..     :hidecode:  
+..     :codefile: fixedpoint.sage
+..     :img: fixedpoint.png
+..     :imgwidth: 8 cm 
+..
 
 .. index::
 	sniðilsaðferð
@@ -644,13 +644,13 @@ Niðurstaðan verður því
    e_{n+1} = \frac{-\frac{1}{2}f''(\xi_n)}
            {f'(x_n)}e_n^2
 
-.. sagecell::
-	:auto:
-	:hidecode:
-	:codefile: newton.sage
-	:img: newton.png
-	:imgwidth: 8 cm
-
+.. .. sagecell::
+.. 	:auto:
+.. 	:hidecode:
+.. 	:codefile: newton.sage
+.. 	:img: newton.png
+.. 	:imgwidth: 8 cm
+..
 
 Setning
 ~~~~~~~

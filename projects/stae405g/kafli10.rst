@@ -43,27 +43,27 @@ innan hringskífunnar og þá mun
 .. math::
      \lim_{n \to \infty} \frac{S_n}{n} = \frac{\pi}{4}.
 
-Forrit fyrir nálgun á pi
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Forritum þetta í `Sage <https://www.sagemath.org>`_ sem er forritunarmál fyrir 
-vísindalega útreikninga sem byggir á Python.
-     
-.. sagecell::
-    :auto: 
-    :codefile: pi.sage
-    :img: pi.png
-    :imgwidth: 8 cm
-
-Byggt á. https://github.com/BC-Design/sage/blob/master/monte-carlo.html .
-
-.. note::
-    Prófið að breyta gildinu á n í forritinu og sjáið hvort ekki er hægt að 
-    bæta nálgunina.
-    
-.. warning::
-    Þar sem aðferðin er slembin þá fæst ekki alltaf sama svarið þegar forritið er keyrt fyrir sama
-    gildið á n.
+.. Forrit fyrir nálgun á pi
+.. ~~~~~~~~~~~~~~~~~~~~~~~~
+..
+.. Forritum þetta í `Sage <https://www.sagemath.org>`_ sem er forritunarmál fyrir 
+.. vísindalega útreikninga sem byggir á Python.
+..      
+.. .. sagecell::
+..     :auto: 
+..     :codefile: pi.sage
+..     :img: pi.png
+..     :imgwidth: 8 cm
+..
+.. Byggt á. https://github.com/BC-Design/sage/blob/master/monte-carlo.html .
+..
+.. .. note::
+..     Prófið að breyta gildinu á n í forritinu og sjáið hvort ekki er hægt að 
+..     bæta nálgunina.
+..     
+.. .. warning::
+..     Þar sem aðferðin er slembin þá fæst ekki alltaf sama svarið þegar forritið er keyrt fyrir sama
+..     gildið á n.
 
 Heildi í einni breytistærð
 --------------------------
@@ -85,22 +85,22 @@ Ef við veljum af handahófi punkta :math:`x_1,x_2,\ldots,x_n \in [a,b]` þá er
     \lim_{n\to \infty} \frac 1n \sum_{i=1}^n f(x_i) = \overline f. 
 
 
-Nálgun á heildi: Dæmi
-~~~~~~~~~~~~~~~~~~~~~
-
-Prófum að nálga heildið 
-
-.. math::
-    \int_0^2 x^2 - \frac 12 x^3 + \frac 1{10}x\, dx
-
-með því að velja af handahófi 1000 punkta á bilinu :math:`[0,2]` og nálga meðalgildið með meðaltali 
-fallgildanna. Athugið að rétt svar er :math:`13/15 \approx 0.86667`.
-   
-.. sagecell::
-    :auto: 
-    :lang: octave
-    :codefile: heildi.sage
-
+.. Nálgun á heildi: Dæmi
+.. ~~~~~~~~~~~~~~~~~~~~~
+..
+.. Prófum að nálga heildið 
+..
+.. .. math::
+..     \int_0^2 x^2 - \frac 12 x^3 + \frac 1{10}x\, dx
+..
+.. með því að velja af handahófi 1000 punkta á bilinu :math:`[0,2]` og nálga meðalgildið með meðaltali 
+.. fallgildanna. Athugið að rétt svar er :math:`13/15 \approx 0.86667`.
+..    
+.. .. sagecell::
+..     :auto: 
+..     :lang: octave
+..     :codefile: heildi.sage
+..
 
 Margföld heildi og rúmmál
 -------------------------
@@ -134,18 +134,18 @@ Rúmmálið, :math:`V`, fæst með því að reikna eftirfarandi heildi
 .. math::
     V = \int \int \int_S 1\, dx\, dy\, dz.
 
-.. sagecell::
-    :auto: 
-    :lang: octave
-    :codefile: rummal.sage
-    
-.. only:: latex
-
-    dd
-    \begin{verbatim}
-    asdf
-    ff
-    \end{verbatim}    
+.. .. sagecell::
+..     :auto: 
+..     :lang: octave
+..     :codefile: rummal.sage
+..     
+.. .. only:: latex
+..
+..     dd
+..     \begin{verbatim}
+..     asdf
+..     ff
+..     \end{verbatim}    
 
 Hermun
 ------
@@ -161,8 +161,8 @@ og lengdin á milli línanna er 1.
 Gefið að miðja nálarinnar lendi á milli línanna, hverjar eru líkurnar
 á að nálin öll lendi á milli línanna?
 
-.. sagecell::
-    :auto: 
-    :lang: octave
-    :codefile: NalBuffons.sage
+.. .. sagecell::
+..     :auto: 
+..     :lang: octave
+..     :codefile: NalBuffons.sage
     
