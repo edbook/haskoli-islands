@@ -5,20 +5,17 @@
 
 This is a template for a web-based textbook/lecture notes for the University of Iceland's mathematics department, using sphinx (see sphinx-doc.org).
 
-## Manual build
+## Building projects
 
-You can manually build a particular project by passing the folder name as an argument, like so:
+You can build all projects or a particular project by passing the folder name as an argument, like so:
 
 ```bash
-make build project=undirbuningur_stae
+edbook build
 ```
 
-## Build all projects
-
-For convenience or testing if all projects build correctly, run the following command:
 
 ```bash
-make build-all
+edbook build --project undirbuningur_stae
 ```
 
 ## Run development server
