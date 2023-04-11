@@ -45,3 +45,11 @@ latex_documents = [
         "manual",
     ),
 ]
+
+# Replace strings in rst files
+rst_epilog ="""
+.. |author| replace:: {author}
+.. |project| replace:: {project}
+.. |projectid| replace:: {projectid}
+.. |email| replace:: {email}
+""".format(author=config['author'],project=project,projectid=projectid.upper(),email=config['email'])
