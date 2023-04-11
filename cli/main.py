@@ -16,6 +16,11 @@ err = Console(stderr=True)
 app = typer.Typer(rich_markup_mode="rich", name="edbook")
 
 
+# TODO: move to generic settings file
+def get_template_name():
+    return "tmp001g"
+
+
 def get_value(item):
     if isinstance(item, bytes):
         return item.decode()
@@ -115,11 +120,17 @@ def cmd_build(
     projects = get_abs_path(projects_dir)
     build = get_abs_path(build_path)
     ctx.args += ["-b", "dirhtml"]
+    template = get_template_name()
     if project:
         build_project(Path.joinpath(projects / project), build, *ctx.args)
     else:
         print("[bold blue]No project defined, building all projects ...[/bold blue] :boom:")
         for pr in projects.iterdir():
+            if pr.name == template:
+                print(
+                    f"[yellow]Skip building {template} template course ...[/yellow] :fast_forward:"
+                )
+                continue
             build_project(pr, build, *ctx.args)
 
 
@@ -132,7 +143,7 @@ def cmd_create(
     author: str = typer.Option(..., prompt="Author name"),
     email: str = typer.Option(..., prompt="Author email"),
     template: str = typer.Option(
-        "tmp001g",
+        get_template_name(),
         help="Template course name",
     ),
 ):
