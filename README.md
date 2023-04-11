@@ -1,4 +1,4 @@
-![edbook](https://github.com/edbook/haskoli-islands/workflows/edbook/push.yml/badge.svg)
+![edbook](https://github.com/edbook/haskoli-islands/actions/workflows/push.yml/badge.svg)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/edbook/haskoli-islands?label=version)
 
 # Instructions
