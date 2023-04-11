@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Sniðmát fyrir Edbook (TMP001G), Háskóli Íslands
-===============================================
+|project| (|projectid|), Háskóli Íslands
+========================================
 
-Höfundur efnis: Jónmundur Gunnuson, asfd@hi.is.
+Höfundur efnis: |author|, |email|.
 
 .. toctree::
    :maxdepth: 2
