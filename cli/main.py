@@ -209,7 +209,7 @@ def cmd_create(
 @app.command(
     "list",
 )
-def cmd_create():
+def cmd_list():
     """
     [bold green]List all projects[/bold green]
     """
