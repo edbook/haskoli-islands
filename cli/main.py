@@ -81,6 +81,14 @@ def _build_all(ctx: typer.Context, param: typer.CallbackParam, value: str):
         raise typer.Exit()
 
 
+def _project_exists(project: Path):
+    print(project)
+    project = Path(get_projects_path() / project)
+    if project.exists():
+        return project
+    raise typer.BadParameter(f"{project.name} does not exist")
+
+
 @app.callback()
 def callback():
     """
@@ -151,7 +159,11 @@ def cmd_export_word_dict(
     "build",
 )
 def cmd_build(
-    project: str = typer.Argument(None, help="build specific project"),
+    project: Path = typer.Argument(
+        None,
+        help="build specific project",
+        callback=_project_exists,
+    ),
     auto: bool = typer.Option(
         False,
         help="run server on http://localhost:8000 and autobuild and refresh on file save",
@@ -163,9 +175,9 @@ def cmd_build(
     """
     Build a specific project or all projects (default).
     """
-    if project and auto:
-        sphinx_build(project, SphinxCmd.autobuild)
-    sphinx_build(project)
+    if auto:
+        sphinx_build(project.name, SphinxCmd.autobuild)
+    sphinx_build(project.name)
 
 
 @app.command(
