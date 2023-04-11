@@ -33,6 +33,11 @@ def build_project(project: Path, build_path: Path, *args):
     print(f"[dim light_sea_green]{' '.join(cmd)}[/dim light_sea_green]")
     call(cmd)
 
+def autobuild_project(project: Path, build_path: Path, *args):
+    cmd = ["sphinx-autobuild", str(project), str(Path(build_path / project.name)), *args]
+    print(f"[bold purple]Preparing to build {project.name}[/bold purple] :sunglasses:")
+    print(f"[dim light_sea_green]{' '.join(cmd)}[/dim light_sea_green]")
+    call(cmd)
 
 def get_abs_path(dir: str):
     return Path.joinpath(Path(__file__).parent.resolve().parent / dir)
@@ -133,6 +138,40 @@ def cmd_build(
                 continue
             build_project(pr, build, *ctx.args)
 
+@app.command(
+    "autobuild",
+    context_settings={"allow_extra_args": True, "ignore_unknown_options": True},
+)
+def cmd_autobuild(
+    ctx: typer.Context,
+    project: Optional[str] = typer.Option(None, help="build specific project"),
+    projects_dir: str = typer.Option(
+        "projects",
+        help="Projects directory relative from root",
+    ),
+    build_path: str = typer.Option(
+        "_build",
+        help="Build output path relative from root",
+    ),
+):
+    """
+    Build a specific project or all projects (default).
+    """
+    projects = get_abs_path(projects_dir)
+    build = get_abs_path(build_path)
+    ctx.args += ["-b", "dirhtml"]
+    template = get_template_name()
+    if project:
+        autobuild_project(Path.joinpath(projects / project), build, *ctx.args)
+    else:
+        print("[bold blue]No project defined, building all projects ...[/bold blue] :boom:")
+        for pr in projects.iterdir():
+            if pr.name == template:
+                print(
+                    f"[yellow]Skip building {template} template course ...[/yellow] :fast_forward:"
+                )
+                continue
+            autobuild_project(pr, build, *ctx.args)
 
 @app.command(
     "create",
