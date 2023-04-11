@@ -127,8 +127,8 @@ def cmd_build(
     "create",
 )
 def cmd_create(
-    name: str = typer.Option(..., prompt="Course name"),
-    description: str = typer.Option(..., prompt="Course description"),
+    name: str = typer.Option(..., prompt="Course id"),
+    description: str = typer.Option(..., prompt="Course name"),
     author: str = typer.Option(..., prompt="Author name"),
     email: str = typer.Option(..., prompt="Author email"),
     template: str = typer.Option(
