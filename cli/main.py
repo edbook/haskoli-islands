@@ -1,15 +1,14 @@
 import importlib
 import json
 import shutil
-from pathlib import Path, PurePath
+from pathlib import Path
 from subprocess import call
-from typing import List, Literal, Optional, Union
+from typing import List
 from enum import Enum
 import typer
 from rich import print
-from rich.prompt import Prompt
 from rich.console import Console
-
+from rich.table import Table
 import yaml
 
 
@@ -205,6 +204,27 @@ def cmd_create(
         yaml.dump(data, f, default_flow_style=False, allow_unicode=True)
     print()
     print(f"[bold blue]Your course is now available at {dest}[/bold blue]")
+
+
+@app.command(
+    "list",
+)
+def cmd_create():
+    """
+    [bold green]List all projects[/bold green]
+    """
+    projects = sorted(
+        [d.name for d in get_projects_path().iterdir() if d.is_dir()], key=str.lower
+    )
+    table = Table(title="Edbook projects")
+    table.add_column("Course", justify="left", style="cyan", no_wrap=True)
+    table.add_column("Author", style="magenta")
+    table.add_column("Created", justify="right", style="green")
+
+    for p in projects:
+        table.add_row(p, "TODO: get author", "TODO: get created")
+
+    print(table)
 
 
 if __name__ == "__main__":
