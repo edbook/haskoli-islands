@@ -1,13 +1,7 @@
-.. Stærðfræðigreining I documentation master file, created by
-   sphinx-quickstart on Thu May 21 20:43:00 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+|project| (|projectid|), Háskóli Íslands
+========================================
 
-Stærðfræðigreining I (STÆ104G), Háskóli Íslands
-===============================================
-
-Höfundur efnis: Benedikt Steinar Magnússon, bsm@hi.is.
-
+Höfundur efnis: |author|, |email|.
 
 .. todo::
     **Global**:
@@ -25,8 +19,7 @@ Höfundur efnis: Benedikt Steinar Magnússon, bsm@hi.is.
     - Formúlublað
     
     - táknalisti
-
-
+   
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -35,8 +28,9 @@ Höfundur efnis: Benedikt Steinar Magnússon, bsm@hi.is.
    kafli*
 
 .. toctree::
-	vidauki
-        ordaskra
+   
+   vidauki
+   ordaskra
 
 * :ref:`genindex`
 

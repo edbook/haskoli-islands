@@ -1,16 +1,8 @@
-.. Töluleg greining documentation master file, created by
-   sphinx-quickstart on Mon Jul 27 17:09:25 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+|project| (|projectid|), Háskóli Íslands
+========================================
 
-Töluleg greining (STÆ405G), Háskóli Íslands 
-===========================================
-
-Höfundar efnis: Benedikt Steinar Magnússon <bsm@hi.is> og Ragnar Sigurðsson <ragnar@hi.is>.
-
-Efnisyfirlit
-------------
-
+Höfundar efnis: |author|, |email| og Ragnar Sigurðsson ragnar@hi.is
+   
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -19,7 +11,7 @@ Efnisyfirlit
    kafli*
 
 .. toctree::
+   
    vidauki
 
 * :ref:`genindex`
-
