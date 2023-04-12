@@ -1,24 +1,45 @@
 import importlib
 import json
 import shutil
-from pathlib import Path, PurePath
+from pathlib import Path
 from subprocess import call
-from typing import List, Optional
-
+from typing import List
+from enum import Enum
 import typer
 from rich import print
-from rich.prompt import Prompt
 from rich.console import Console
-
+from rich.table import Table
 import yaml
+
+
+class SphinxCmd(str, Enum):
+    build = "sphinx-build"
+    autobuild = "sphinx-autobuild"
+
 
 err = Console(stderr=True)
 app = typer.Typer(rich_markup_mode="rich", name="edbook")
 
 
-# TODO: move to generic settings file
+# TODO: move all getters to generic settings file
 def get_template_name():
     return "tmp001g"
+
+
+def get_sphinx_args():
+    return ["-b", "dirhtml"]
+
+
+def get_abs_path(dir: str):
+    return Path.joinpath(Path(__file__).parent.resolve().parent / dir)
+
+
+def get_output_path(dir: str = "_build"):
+    return get_abs_path(dir)
+
+
+def get_projects_path(dir: str = "projects"):
+    return get_abs_path(dir)
 
 
 def get_value(item):
@@ -27,15 +48,44 @@ def get_value(item):
     return item
 
 
-def build_project(project: Path, build_path: Path, *args):
-    cmd = ["sphinx-build", str(project), str(Path(build_path / project.name)), *args]
-    print(f"[bold purple]Preparing to build {project.name}[/bold purple] :sunglasses:")
+def sphinx_build(project: str, sphinx_cmd: SphinxCmd = SphinxCmd.build):
+    project_path = Path(get_projects_path() / project)
+    output = Path(get_output_path() / project_path.name)
+    cmd = [
+        sphinx_cmd,
+        str(project_path),
+        str(output),
+        *get_sphinx_args(),
+    ]
+    print(
+        f"[bold purple]Preparing to build {project_path.name}[/bold purple] :sunglasses:"
+    )
     print(f"[dim light_sea_green]{' '.join(cmd)}[/dim light_sea_green]")
     call(cmd)
 
 
-def get_abs_path(dir: str):
-    return Path.joinpath(Path(__file__).parent.resolve().parent / dir)
+def _build_all(ctx: typer.Context, param: typer.CallbackParam, value: str):
+    if value:
+        print(
+            "[bold blue]No project defined, building all projects ...[/bold blue] :boom:"
+        )
+        template = get_template_name()
+        for pr in get_projects_path().iterdir():
+            if pr.name == get_template_name():
+                print(
+                    f"[yellow]Skip building {template} template course ...[/yellow] :fast_forward:"
+                )
+                continue
+            sphinx_build(pr.name)
+        raise typer.Exit()
+
+
+def _project_exists(project: Path):
+    print(project)
+    project = Path(get_projects_path() / project)
+    if project.exists():
+        return project
+    raise typer.BadParameter(f"{project.name} does not exist")
 
 
 @app.callback()
@@ -63,7 +113,9 @@ def cmd_export_word_dict(
     """
     Import word dictionary file from path
     """
-    word_mod = importlib.import_module(f"src.extensions.{extension}.{extension}.{package}")
+    word_mod = importlib.import_module(
+        f"src.extensions.{extension}.{extension}.{package}"
+    )
     word_data: dict = getattr(word_mod, package)
     data = {}
     v: dict
@@ -82,7 +134,9 @@ def cmd_export_word_dict(
         f"Exporting word list to {json_file}, hold on ...",
         fg=typer.colors.BLUE,
     )
-    json_file.write_text(json.dumps(data, ensure_ascii=False, indent=4), encoding="utf-8")
+    json_file.write_text(
+        json.dumps(data, ensure_ascii=False, indent=4), encoding="utf-8"
+    )
     typer.secho(
         f"Success: {json_file}",
         fg=typer.colors.GREEN,
@@ -91,7 +145,9 @@ def cmd_export_word_dict(
         f"Exporting word list to {yaml_file}, hold on ...",
         fg=typer.colors.BLUE,
     )
-    yaml_file.write_text(yaml.safe_dump(data, sort_keys=True, allow_unicode=True), encoding="utf-8")
+    yaml_file.write_text(
+        yaml.safe_dump(data, sort_keys=True, allow_unicode=True), encoding="utf-8"
+    )
     typer.secho(
         f"Success: {yaml_file}",
         fg=typer.colors.GREEN,
@@ -100,38 +156,27 @@ def cmd_export_word_dict(
 
 @app.command(
     "build",
-    context_settings={"allow_extra_args": True, "ignore_unknown_options": True},
 )
 def cmd_build(
-    ctx: typer.Context,
-    project: Optional[str] = typer.Option(None, help="build specific project"),
-    projects_dir: str = typer.Option(
-        "projects",
-        help="Projects directory relative from root",
+    project: Path = typer.Argument(
+        None,
+        help="build specific project",
+        callback=_project_exists,
     ),
-    build_path: str = typer.Option(
-        "_build",
-        help="Build output path relative from root",
+    auto: bool = typer.Option(
+        False,
+        help="run server on http://localhost:8000 and autobuild and refresh on file save",
+    ),
+    all: bool = typer.Option(
+        False, help="build all projects", callback=_build_all, is_eager=True
     ),
 ):
     """
     Build a specific project or all projects (default).
     """
-    projects = get_abs_path(projects_dir)
-    build = get_abs_path(build_path)
-    ctx.args += ["-b", "dirhtml"]
-    template = get_template_name()
-    if project:
-        build_project(Path.joinpath(projects / project), build, *ctx.args)
-    else:
-        print("[bold blue]No project defined, building all projects ...[/bold blue] :boom:")
-        for pr in projects.iterdir():
-            if pr.name == template:
-                print(
-                    f"[yellow]Skip building {template} template course ...[/yellow] :fast_forward:"
-                )
-                continue
-            build_project(pr, build, *ctx.args)
+    if auto:
+        sphinx_build(project.name, SphinxCmd.autobuild)
+    sphinx_build(project.name)
 
 
 @app.command(
@@ -159,6 +204,27 @@ def cmd_create(
         yaml.dump(data, f, default_flow_style=False, allow_unicode=True)
     print()
     print(f"[bold blue]Your course is now available at {dest}[/bold blue]")
+
+
+@app.command(
+    "list",
+)
+def cmd_list():
+    """
+    [bold green]List all projects[/bold green]
+    """
+    projects = sorted(
+        [d.name for d in get_projects_path().iterdir() if d.is_dir()], key=str.lower
+    )
+    table = Table(title="Edbook projects")
+    table.add_column("Course", justify="left", style="cyan", no_wrap=True)
+    table.add_column("Author", style="magenta")
+    table.add_column("Created", justify="right", style="green")
+
+    for p in projects:
+        table.add_row(p, "TODO: get author", "TODO: get created")
+
+    print(table)
 
 
 if __name__ == "__main__":

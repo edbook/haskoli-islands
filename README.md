@@ -1,4 +1,4 @@
-![edbook](https://github.com/edbook/haskoli-islands/workflows/edbook/push.yml/badge.svg)
+![edbook](https://github.com/edbook/haskoli-islands/actions/workflows/push.yml/badge.svg)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/edbook/haskoli-islands?label=version)
 
 # Instructions
@@ -10,12 +10,12 @@ This is a template for a web-based textbook/lecture notes for the University of 
 You can build all projects or a particular project by passing the folder name as an argument, like so:
 
 ```bash
-edbook build
+edbook build --all
 ```
 
 
 ```bash
-edbook build --project undirbuningur_stae
+edbook build undirbuningur_stae
 ```
 
 ## Run development server
@@ -23,7 +23,8 @@ edbook build --project undirbuningur_stae
 Run a dev server for local development. This will open a tab in your browser at http://localhost:8000 which will update each time you you save a document in the project being worked on in the [source](src/projects) directory. The build ends up in the `_build/your-project` where `your-project` is the project you are building.
 
 ```bash
-make autobuild project=undirbuningur_stae
+edbook build undirbuningur_stae --auto
+
 ```
 
 ## Sagecell
