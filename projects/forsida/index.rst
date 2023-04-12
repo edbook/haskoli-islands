@@ -111,7 +111,7 @@ með einum eða öðrum hætti og fá kærar þakkir fyrir:
 - Eggert Karl Hafsteinsson
 - Guðný Halldórsdóttir
 - Hans Adolf Linnet
-- Huld Hvönn Kristinsdóttir
+- Hulda Hvönn Kristinsdóttir
 - Júlía Þóra Oddsdóttir
 - Kristján Jónasson
 - Rakel María Brynjólfsdóttir
