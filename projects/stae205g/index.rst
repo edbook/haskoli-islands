@@ -1,14 +1,11 @@
-.. NAME documentation master file, created by
-   sphinx-quickstart on Thu Aug 13 10:33:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+|project| (|projectid|), Háskóli Íslands
+========================================
 
-Stærðfræðigreining II (STÆ205G), Háskóli Íslands
-================================================
+Höfundur efnis: |author|, |email|.
 
 .. toctree::
 	formali
-	
+
 .. toctree::
    :maxdepth: 2
    :numbered:
@@ -17,8 +14,8 @@ Stærðfræðigreining II (STÆ205G), Háskóli Íslands
    kafli*
 
 .. toctree::
-	vidauki
-	ordaskra
-	
+   vidauki
+   ordaskra
+
 * :ref:`genindex`
 

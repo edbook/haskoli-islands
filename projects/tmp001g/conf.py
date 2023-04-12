@@ -24,18 +24,6 @@ version = year  # The short X.Y version.
 release = year  # The full version, including alpha/beta/rc tags.
 ###################################################
 
-texinfo_documents = [
-    (
-        "index",
-        "tmp001g",
-        project,
-        author,
-        projectid,
-        "One line description of project.",
-        "Miscellaneous",
-    ),
-]
-
 latex_documents = [
     (
         "index",
