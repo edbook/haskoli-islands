@@ -10,7 +10,7 @@ Námsefnið var unnið með styrk úr `Kennslumálasjóði HÍ <http://sjodir.hi
 Hvað er eðlisfræði?
 -------------------
 
-.. embedded-video:: yWMKYID5fr8
+.. youtube:: yWMKYID5fr8
 
 Eðlisfræði er grein raunvísindanna þar sem skoðað er samhengi efnis, orku, tíma og rúms og því lýst á máli stærðfræðinnar.
 

@@ -15,15 +15,15 @@ with open(Path.joinpath(Path(__file__).parent / "config.yml"), "r") as f:
 
 year = date.today().year
 auth = config["authors"] # Dict of authors and their emails 
-
+print(auth[0]['name'])
 ############################### PROJECT ##############################
 project = config["description"]
 projectid = config["name"]
 # auth_title is the line with authors used in index.rst
-if len(auth) == 0: # No listed authors
-    auth_title = ""
+if auth[0]['name'] == None: # No listed authors
+    auth_title = "--"
 elif len(auth) == 1:
-    auth_title = "Höfundur efnis: " + auth[1]['name'] + " <" + auth[1]['email'] + ">."
+    auth_title = "Höfundur efnis: " + auth[0]['name'] + " <" + auth[0]['email'] + ">."
 else: 
     auth_title = "Höfundar efnis: "
     for a in auth:

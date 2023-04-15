@@ -1,10 +1,7 @@
-.. NAME documentation master file, created by
-   sphinx-quickstart on Thu Aug 13 10:33:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+|project|, Háskóli Íslands
+=====================================================
 
-Undirbúningur í efnafræði, Háskóli Íslands
-==========================================
+Ábyrgðarmaður: Benedikt Magnússon <bsm@hi.is>
 
 Hér er námsefni í efnafræði þar sem farið er yfir helstu grunnhugtök greinarinnar.
 Einnig er til sambærileg yfirlit um stærðfræði og eðlisfræði.
