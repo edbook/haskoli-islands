@@ -14,11 +14,15 @@ with open(Path.joinpath(Path(__file__).parent / "config.yml"), "r") as f:
     config = yaml.safe_load(f)
 
 year = date.today().year
-
-# auth_title is the line with authors in index.rst
 auth = config["authors"] # Dict of authors and their emails 
 
-if len(auth) == 1:
+############################### PROJECT ##############################
+project = config["description"]
+projectid = config["name"]
+# auth_title is the line with authors used in index.rst
+if len(auth) == 0: # No listed authors
+    auth_title = ""
+elif len(auth) == 1:
     auth_title = "Höfundur efnis: " + auth[1]['name'] + " <" + auth[1]['email'] + ">."
 else: 
     auth_title = "Höfundar efnis: "
@@ -29,23 +33,18 @@ else:
             auth_title += " og " + a['name'] + " <" + a['email'] + ">."
         else: # All other
             auth_title += ", " + a['name'] + " <" + a['email'] + ">"
-
-#################### PROJECT ######################
-project = config["description"]
-projectid = config["name"]
 copyright = f"{year}, {config['description']}"
-author = f"{config['author']} <{config['email']}>"
 year = str(year)
 version = year  # The short X.Y version.
 release = year  # The full version, including alpha/beta/rc tags.
-###################################################
+######################################################################
 
 latex_documents = [
     (
         "index",
         str(os.path.split(os.getcwd())[1] + ".tex"),
         project,
-        author,
+        auth_title,
         "manual",
     ),
 ]

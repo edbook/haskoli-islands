@@ -1,4 +1,5 @@
-author: Jónmundur Gunnuson
-description: Sniðmát fyrir Edbook
-email: adsf@hi.is
+authors:
+  - name: Jónmundur Gunnuson
+    email: asdf@hi.is
+description: Sniðmát fyrir Edbook 
 name: tmp001g

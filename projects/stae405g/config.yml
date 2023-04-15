@@ -1,4 +1,7 @@
-author: Benedikt Magnússon
-description: Töluleg greining
-email: bsm@hi.is
+authors:
+  - name: Benedikt Magnússon
+    email: bsm@hi.is
+  - name: Ragnar Sigurðsson
+    email: ragnar@hi.is
+description: Töluleg greining (STÆ405G)
 name: stae405g
