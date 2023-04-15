@@ -1,7 +1,7 @@
-|project| (|projectid|), Háskóli Íslands
-========================================
+|project|, Háskóli Íslands
+=====================================================
 
-Höfundur efnis: |author|, |email|.
+|auth_title|
 
 .. toctree::
    :maxdepth: 2

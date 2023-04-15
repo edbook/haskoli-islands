@@ -23,7 +23,7 @@ projectid = config["name"]
 if auth[0]['name'] == None: # No listed authors
     auth_title = "--"
 elif len(auth) == 1:
-    auth_title = "Höfundur efnis: " + auth[1]['name'] + " <" + auth[1]['email'] + ">."
+    auth_title = "Höfundur efnis: " + auth[0]['name'] + " <" + auth[0]['email'] + ">."
 else: 
     auth_title = "Höfundar efnis: "
     for a in auth:

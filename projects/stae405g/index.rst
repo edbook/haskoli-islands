@@ -1,7 +1,7 @@
-|project| (|projectid|), Háskóli Íslands
-========================================
+|project|, Háskóli Íslands
+=====================================================
 
-Höfundar efnis: |author|, |email| og Ragnar Sigurðsson ragnar@hi.is
+|auth_title|
    
 .. toctree::
    :maxdepth: 2

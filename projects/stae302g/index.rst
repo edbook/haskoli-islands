@@ -1,7 +1,7 @@
 |project|, Háskóli Íslands
 =====================================================
 
-|auth_title|
+Ábyrgðarmaður: Sigurður Örn Stefánsson <sigrudur@hi.is>.
 
 .. toctree::
    formali

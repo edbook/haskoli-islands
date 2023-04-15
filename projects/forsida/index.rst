@@ -1,11 +1,5 @@
-.. NAME documentation master file, created by
-   sphinx-quickstart on Thu Aug 13 10:33:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-
-Edbook
-======
+|project| -- Háskóli Íslands
+=====================================================
 
 Hér eru rafrænar kennslubækur opnar öllum sem geta haft gagn af þeim.
 
@@ -99,6 +93,8 @@ Námskeið við HÍ
    :text: Sniðmát fyrir ný námskeið
    :link: https://edbook.hi.is/tmp001g/
 
+-----------------------
+
 Þakkir
 ======
 
@@ -124,4 +120,6 @@ Sérstakar þakkir fær Jón Levy Guðmundsson fyrir alla Github-galdrana.
 
 Verkefnið hefur verið unnið með styrk frá Kennslumálasjóði
 Háskóla Íslands og aðstoðar Stræðfræðistofu Raunvísindastofnunar.
+
+Ábyrgðarmaður: Benedikt Magnússon <bsm@hi.is>.
 
