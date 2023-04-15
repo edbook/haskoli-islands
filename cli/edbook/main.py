@@ -10,7 +10,7 @@ from rich import print
 from rich.console import Console
 from rich.table import Table
 import yaml
-from lib.utils import (
+from edbook.lib.utils import (
     SphinxCmd,
     get_value,
     project_exists,

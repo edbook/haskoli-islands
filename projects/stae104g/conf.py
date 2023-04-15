@@ -4,7 +4,7 @@ import os, sys
 from datetime import date
 from pathlib import Path
 
-sys.path.insert(0, os.path.abspath("."))
-sys.path.append(os.path.abspath("../../settings"))
+# sys.path.insert(0, os.path.abspath("."))
+# sys.path.append(os.path.abspath("../../settings"))
 
-from settings import *
+from edbook.conf import *  # type: ignore

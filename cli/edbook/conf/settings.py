@@ -7,7 +7,7 @@ from datetime import date
 from typing import List, TypedDict
 from pathlib import Path
 import yaml
-from lib.utils import get_projects_path
+from edbook.lib.utils import get_projects_path
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
