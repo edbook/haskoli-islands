@@ -1,3 +1,3 @@
-from .main import app
+from cli import lib, main
 
-app(prog_name="edbook")
+main.app(prog_name="edbook")
