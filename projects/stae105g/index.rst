@@ -1,7 +1,7 @@
 |project|, Háskóli Íslands
 =====================================================
 
-Höfundar efnis: |author|, |email| og Hulda Hvönn Kristinsdóttir, hhk6@hi.is.
+|auth_title|
 
 .. toctree::
    formali
