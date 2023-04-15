@@ -15,7 +15,7 @@ with open(Path.joinpath(Path(__file__).parent / "config.yml"), "r") as f:
 
 year = date.today().year
 auth = config["authors"] # Dict of authors and their emails 
-print(auth[0]['name'])
+
 ############################### PROJECT ##############################
 project = config["description"]
 projectid = config["name"]
