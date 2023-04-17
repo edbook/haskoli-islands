@@ -54,7 +54,7 @@ jobs:
         # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
         id: build-all
         run: |
-          edbook build --all
+          edbook build-all
       - name: 📂 Prepare pages for deployment
         run: |
           mv _build/forsida/* _build/
