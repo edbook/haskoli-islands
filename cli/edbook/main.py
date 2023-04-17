@@ -105,7 +105,7 @@ def cmd_build(
         help="run server on http://localhost:8000 and autobuild and refresh on file save",
     ),
     all: bool = typer.Option(
-        False, help="build all projects", callback=build_all, is_eager=True
+        True, help="build all projects", callback=build_all, is_eager=True
     ),
 ):
     """
