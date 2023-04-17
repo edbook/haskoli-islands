@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 
 import os
-
+import inspect
+from datetime import date
+from typing import List, TypedDict
+from pathlib import Path
+import yaml
+from edbook.lib.utils import get_projects_path
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -48,10 +53,14 @@ extensions = [
     #    "sphinx_rtd_dark_mode"
 ]
 
-mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+mathjax_path = (
+    "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+)
 
 katex_path = "https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"
-katex_render = "https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"
+katex_render = (
+    "https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"
+)
 render_math = "rendermath.js"
 katex_css = "https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"
 
@@ -433,11 +442,15 @@ class PatchedHTMLTranslator(HTMLTranslator):
             # ---------------------------------------------------------
         if "refuri" in node:
             atts["href"] = node["refuri"] or "#"
-            if self.settings.cloak_email_addresses and atts["href"].startswith("mailto:"):
+            if self.settings.cloak_email_addresses and atts["href"].startswith(
+                "mailto:"
+            ):
                 atts["href"] = self.cloak_mailto(atts["href"])
                 self.in_mailto = True
         else:
-            assert "refid" in node, 'References must have "refuri" or "refid" attribute.'
+            assert (
+                "refid" in node
+            ), 'References must have "refuri" or "refid" attribute.'
             atts["href"] = "#" + node["refid"]
         if not isinstance(node.parent, nodes.TextElement):
             assert len(node) == 1 and isinstance(node[0], nodes.image)
@@ -454,3 +467,79 @@ hint_indent = (
     r"\00a0" * 12
 )  # Staðsetning textans er harðkóðuð í sphinx_togglebutton CSS-ið svo þurfum auka indent
 togglebutton_hint = hint_indent + "Sýna" + r"\00a0" * 2
+
+
+class EdbookAuthors(TypedDict):
+    name: str
+    email: str
+
+
+class EdbookConfig(TypedDict):
+    name: str
+    description: str
+    authors: List[EdbookAuthors]
+
+
+def get_authors(config: EdbookConfig):
+    year = date.today().year
+    auth = config["authors"]  # Dict of authors and their emails
+    print(auth[0]["name"])
+    ############################### PROJECT ##############################
+    project = config["description"]
+    projectid = config["name"]
+    # auth_title is the line with authors used in index.rst
+    if auth[0]["name"] == None:  # No listed authors
+        auth_title = "--"
+    elif len(auth) == 1:
+        auth_title = (
+            "Höfundur efnis: " + auth[0]["name"] + " <" + auth[0]["email"] + ">."
+        )
+    else:
+        auth_title = "Höfundar efnis: "
+        for a in auth:
+            if a == auth[0]:  # First author
+                auth_title += a["name"] + " <" + a["email"] + ">"
+            elif a == auth[-1]:  # Last author
+                auth_title += " og " + a["name"] + " <" + a["email"] + ">."
+            else:  # All other
+                auth_title += ", " + a["name"] + " <" + a["email"] + ">"
+    copyright = f"{year}, {config['description']}"
+    year = str(year)
+    version = year  # The short X.Y version.
+    release = year  # The full version, including alpha/beta/rc tags.
+    return project, projectid, auth_title
+
+
+def get_caller_path():
+    for n in inspect.stack()[0]:
+        if type(n) == str and get_projects_path() == Path(n).parent.resolve().parent:
+            print(f"{get_projects_path()} | {Path(n).parent.resolve()}")
+            return Path(n).parent.resolve()
+    raise Exception("This should not happen, call the ambulance")
+
+
+with open(Path.joinpath(get_caller_path() / "config.yml"), "r") as f:
+    config: EdbookConfig = yaml.safe_load(f)
+print(config)
+project, projectid, auth_title = get_authors(config)
+
+######################################################################
+
+latex_documents = [
+    (
+        "index",
+        str(os.path.split(os.getcwd())[1] + ".tex"),
+        project,
+        auth_title,
+        "manual",
+    ),
+]
+
+# Replace strings in rst files
+rst_epilog = """
+.. |auth_title| replace:: {auth_title}
+.. |project| replace:: {project}
+.. |projectid| replace:: {projectid}
+""".format(
+    auth_title=auth_title, project=project, projectid=projectid.upper()
+)
