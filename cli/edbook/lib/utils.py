@@ -52,20 +52,17 @@ def sphinx_build(project: str, sphinx_cmd: SphinxCmd = SphinxCmd.build):
     call(cmd)
 
 
-def build_all(ctx: typer.Context, param: typer.CallbackParam, value: str):
-    if value:
-        print(
-            "[bold blue]No project defined, building all projects ...[/bold blue] :boom:"
-        )
-        template = get_template_name()
-        for pr in get_projects_path().iterdir():
-            if pr.name == get_template_name():
-                print(
-                    f"[yellow]Skip building {template} template course ...[/yellow] :fast_forward:"
-                )
-                continue
-            sphinx_build(pr.name)
-        raise typer.Exit()
+def build_all():
+    print("[bold blue]No project defined, building all projects ...[/bold blue] :boom:")
+    template = get_template_name()
+    for pr in get_projects_path().iterdir():
+        if pr.name == get_template_name():
+            print(
+                f"[yellow]Skip building {template} template course ...[/yellow] :fast_forward:"
+            )
+            continue
+        sphinx_build(pr.name)
+    raise typer.Exit()
 
 
 def check_authors(ctx: typer.Context, param: typer.CallbackParam, value: str):
@@ -74,10 +71,7 @@ def check_authors(ctx: typer.Context, param: typer.CallbackParam, value: str):
 
 
 def project_exists(project: Path):
-    print(project)
     project = Path(get_projects_path() / project)
-    print(project)
-
     if project.exists():
         return project
-    raise typer.BadParameter(f"{project.name} does not exist")
+    raise typer.BadParameter(f"{project.name} does not exist.")
