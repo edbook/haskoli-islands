@@ -10,7 +10,7 @@ This is a template for a web-based textbook/lecture notes for the University of 
 You can build all projects or a particular project by passing the folder name as an argument, like so:
 
 ```bash
-edbook build --all
+edbook build-all
 ```
 
 

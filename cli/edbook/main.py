@@ -10,6 +10,7 @@ from rich import print
 from rich.console import Console
 from rich.table import Table
 import yaml
+
 from edbook.lib.utils import (
     SphinxCmd,
     get_value,
@@ -22,7 +23,7 @@ from edbook.lib.utils import (
 )
 
 err = Console(stderr=True)
-app = typer.Typer(rich_markup_mode="rich", name="edbook")
+app = typer.Typer(no_args_is_help=True, rich_markup_mode="rich", name="edbook")
 
 
 @app.callback()
@@ -96,16 +97,13 @@ def cmd_export_word_dict(
 )
 def cmd_build(
     project: Path = typer.Argument(
-        None,
+        ...,
         help="build specific project",
         callback=project_exists,
     ),
     auto: bool = typer.Option(
         False,
         help="run server on http://localhost:8000 and autobuild and refresh on file save",
-    ),
-    all: bool = typer.Option(
-        True, help="build all projects", callback=build_all, is_eager=True
     ),
 ):
     """
@@ -114,6 +112,16 @@ def cmd_build(
     if auto:
         sphinx_build(project.name, SphinxCmd.autobuild)
     sphinx_build(project.name)
+
+
+@app.command(
+    "build-all",
+)
+def cmd_build():
+    """
+    Build a specific project or all projects (default).
+    """
+    build_all()
 
 
 @app.command(

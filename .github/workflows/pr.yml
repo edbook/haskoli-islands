@@ -60,7 +60,7 @@ jobs:
         # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
         id: build-all
         run: |
-          edbook build --all
+          edbook build-all
       - name: 📂 Prepare pages for feature deployment
         run: |
           rsync -avh _build/forsida/ ./_build/
