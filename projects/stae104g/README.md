@@ -2,4 +2,6 @@
 
 Fyrirlestranótur fyrir Stærðfræðigreiningu I (STÆ104G) við Háskóla Íslands
 
-https://edbook.github.io/stae104g
+https://edbook.hi.is/stae104g
+
+Höfundur: Benedikt Magnússon <bsm@hi.is>
