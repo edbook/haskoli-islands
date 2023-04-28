@@ -11,10 +11,11 @@ The notes share common configuration, [settings.py](cli/edbook/conf/settings.py)
 
 For detailed instroctions on how to add notes see https://edbook.hi.is/tmp001g/. 
 
+The boiled down versions it the following.
 
-The boiled down versions it the following: 
+## Virtual environment
 
-After cloning the repository. Setup a Conda virtual environment:
+After cloning the repository. Setup a Conda virtual environment,
 
 ```bash
 conda env create -f environment.yml
