@@ -1,4 +1,4 @@
-# STÆ302G - Stæðrðfræðigreining III
+# STÆ302G - Stærðfræðigreining III
 
 Fyrirlestranótur fyrir Stærðfræðigreiningu III (STÆ302G) við Háskóla Íslands, https://edbook.hi.is/stae302g
 
