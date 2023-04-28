@@ -1,4 +1,4 @@
-# STÆ205G - Stæðrðfræðigreining II
+# STÆ205G - Stærðfræðigreining II
 
 Fyrirlestranótur fyrir Stærðfræðigreiningu II (STÆ205G) við Háskóla Íslands, https://edbook.hi.is/stae205g
 
