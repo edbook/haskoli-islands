@@ -1,4 +1,4 @@
-# STÆ401G - Stæðrðfræðigreining IV
+# STÆ401G - Stærðfræðigreining IV
 
 Fyrirlestranótur fyrir Stærðfræðigreiningu IV (STÆ401G) við Háskóla Íslands, https://edbook.hi.is/stae401g
 
