@@ -3,7 +3,7 @@
 
 # Instructions
 
-This is a template for a web-based textbook/lecture notes for the University of Iceland's mathematics department, using sphinx (see sphinx-doc.org).
+This is a template for a web-based textbook/lecture notes for the University of Iceland's mathematics department, using Sphinx (https://sphinx-doc.org). The notes are hosted on https://edbook.hi.is.
 
 ## Building projects
 
