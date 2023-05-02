@@ -112,3 +112,31 @@ Næst þarf að virkja umhverfið með
    conda activate edbook
 
 Nú ætti að standa *(edbook)* fremst í skipanalínunni 
+
+Nýtt verkefni búið til
+----------------------
+
+Ef allt hefur gengið að óskum og búið er að virkja ``edbook``-umhverfið í conda þá er hægt að búa til nýtt verkefni með skipuninni
+
+.. code-block::
+
+    edbook create 
+
+Þá er beðið um *Course id* sem allajafna er númerið á námskeiðinu sem nóturnar tilheyra
+ (hér er skynsamlegast að nota ekki séríslenska stafi), 
+*Course name* sem er nafn á námskeiðinu og svo höfund ásamt netfangi.
+
+Við þetta verður til mappa undir *projects* sem heitir námskeiðssnúmerinu og inniheldur allt sem þarf til að geta byrjað. 
+
+.. note::
+
+    Í möppunni er skrá sem heitir *config.yml* og heldur utanum upplýsingar um nóturnar. Ef það eru fleiri en einn
+    höfundur þá er hægt að opna þá skrá og bæta þeim við. Til dæmis: 
+
+    .. code-block::
+
+        authors: 
+            - name: Jónmundur Gunnuson
+              email: jon@hi.is 
+            - name: Gunna Jónmundsdótir 
+              email: gunna@hi.is

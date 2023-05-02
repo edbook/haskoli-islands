@@ -112,3 +112,28 @@ Næst þarf að virkja umhverfið með
    conda activate edbook
 
 Nú ætti að standa *(edbook)* fremst í skipanalínunni 
+
+Stillingar fyrir nýtt verkefni
+------------------------------
+
+Smellið á  *projects* og veljið möppuna með nýja verkefninu og smellið þar á *conf.py*.
+Þar þarf að breyta línum 9, 10, 11 og 12. Að öðru leyti ætti ekki að þurfa að breyta þessari skrá. 
+
+Línurnar sem þarf að breyta
+
+.. code-block:: 
+   :lineno-start: 8
+
+   #################### PROJECT ######################
+   project = "Sniðmát fyrir Edbook (TMP001G)"
+   projectid = "tmp001g"
+   copyright = "2023, Jónmundur Gunnuson"
+   author = "Jónmundur Gunnuson <asdf@hi.is>"
+   year = str(datetime.datetime.now().year)
+   version = year  # The short X.Y version.
+   release = year  # The full version, including alpha/beta/rc tags.
+   ###################################################
+
+
+
+
