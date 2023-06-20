@@ -83,6 +83,10 @@ Námskeið við HÍ
   :text: R frá grunni
   :link: R_fra_grunni/index.html
 
+.. button::
+  :text: Efnisfræði BYG302G
+  :link: byg302g/index.html
+
 ----------------------
 
 .. button::
