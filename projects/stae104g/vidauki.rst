@@ -16,9 +16,9 @@ This has made a lot of people very angry and been widely regarded as a bad move.
    
    * `GeoGebru skrárnar <http://edbook.hi.is/stae104g/stae104g_geogebra.zip>`_ sem eru notaðar.
    
-   * Námskeiðisvefur í `Canvas <https://haskoliislands.instructure.com/courses/1248>`_.
+   * Námskeiðisvefur í `Canvas <https://haskoliislands.instructure.com/courses/19780>`_.
 
-   * Námskeiðið í `kennsluskrá <https://ugla.hi.is/kennsluskra/index.php?tab=nam&chapter=namskeid&id=09101120196&kennsluar=2020>`_.
+   * Námskeiðið í `kennsluskrá <https://ugla.hi.is/kennsluskra/index.php?tab=nam&chapter=namskeid&id=09101120226>`_.
 
 .. only:: latex
 
@@ -28,9 +28,9 @@ This has made a lot of people very angry and been widely regarded as a bad move.
    
    * GeoGebru skrárnar sem eru notaðar, http://edbook.hi.is/stae104g/stae104g_geogebra.zip. 
       
-   * Námskeiðisvefur í `Canvas <https://haskoliislands.instructure.com/courses/1248>`_.
+   * Námskeiðisvefur í Canvas https://haskoliislands.instructure.com/courses/19780.
 
-   * Námskeiðið í kennsluskrá, https://ugla.hi.is/kennsluskra/index.php?tab=nam&chapter=namskeid&id=09101120196&kennsluar=2019.
+   * Námskeiðið í kennsluskrá, https://ugla.hi.is/kennsluskra/index.php?tab=nam&chapter=namskeid&id=09101120226.
 
 .. raw:: latex
 
@@ -48,8 +48,8 @@ runur og raðir, ásamt hagnýtingum á þessum hlutum.
 Samanburður á köflum í nótunum og Adams Calculus
 ------------------------------------------------
 
-Þessar nóturnar hafa verið kenndar samhliða bókinni *Calculus: A Complete Course* eftir
-Robert Adams og Christopher Essex. Hér fyrir grófur samanburður 
+Þessar fyrirlestrarnótur hafa verið kenndar samhliða bókinni *Calculus: A Complete Course* eftir
+Robert Adams og Christopher Essex. Taflan hér að neðan sýnir grófan samanburð 
 á köflunum í nótunum og tilsvarandi köflum í bókinni.
 
 *Reality is frequently inaccurate.*
@@ -139,11 +139,11 @@ Frágangur skiladæma
 -Douglas Adams, The Salmon of Doubt
 
 -  Skrifið upp **fyrirmælin** og lausnina snyrtilega. Gott er að skrifa fyrirmælin
-   með penna og lausnina með blýant.
+   með penna og lausnina með blýanti.
 
 -  Heftið blöðin saman með einu hefti í efra vinstra hornið. Ekki skila í plastvösum.
 
--  Vísið í setningar sem þið notið.
+-  Vísið í setningar (reglur) sem þið notið.
 
 -  Notið ekki rökfræðitákn eins og :math:`\Leftarrow`,
    :math:`\Rightarrow`, :math:`\Leftrightarrow`, :math:`\wedge`,
@@ -251,23 +251,23 @@ sem léttar reikniæfingar.
 meðferð hugtaka og að hjálpa ykkur að skilja 
 skilgreiningarnar.  Það er ekki nóg að læra niðurstöður, reglur og 
 reikniaðferðir: til að geta beitt þeim af öryggi þarf að hafa góðan 
-skilning á þeim grundvallarhugtökunum.
+skilning á grundvallarhugtökunum.
  
 Til að hafa fullt gagn af dæmatímunum þurfið þið að reyna við dæmin
 áður en þið mætið í dæmatímann.
-Ég hvet ykkur eindregið til að vinna saman í náminu.  Þannig getur
-maður fengið hjálp þegar maður er strand og
-einnig skerpir fátt skilning manns  jafn mikið og að útskýra
-fyrir öðrum.  Námið verður  skemmtilegra og þannig
+Ég hvet ykkur eindregið til að vinna saman í náminu.  Þannig getið
+þið fengið hjálp þegar þið eruð strand og
+einnig skerpir fátt skilning okkar jafnmikið og að útskýra
+fyrir öðrum.  Námið verður skemmtilegra og þannig
 léttara.  
 
 Einbeiting
 ~~~~~~~~~~
 
 Meiri árangur næst í náminu ef þið eruð einbeitt.
-Það er hægt að blekkja sjálfan sig í að halda að maður hafi verið að
-læra allan daginn þegar í raun var deginum eitt í spjall við félagana,
-netvafr, fésbókar stúss, msn, tölvuleiki, hlusta á ipodinn, og
+Það er hægt að blekkja sjálfan sig til að halda sig hafa verið að
+læra allan daginn þegar í raun var deginum eytt í spjall við félagana,
+netvafr, samfélagsmiðla, tölvuleiki, sjónvarpsþætti, og
 svo framvegis.   
 
 Frágangur skiladæma
@@ -281,18 +281,18 @@ Líkt og venjulegt tal- og ritmál þá hefur mál stærðfræðinnar sína
 málfræði, t.d. krefst táknið ":math:`=`" þess að sitthvoru megin við
 það standi stærðir eða stærðtákn, og ef fullyrðing sem er sett fram er
 rétt þá eru þessar stærðir jafnar. Sitthvoru megin við táknið
-":math:`\Rightarrow`" varða að standa fullyrðingar, og þegar það er
-notað rétt þá er fullyrðing hægra megin afleiðing fullyrðingarinnar
+":math:`\Rightarrow`" verða að standa fullyrðingar, og þegar það er
+notað rétt þá er fullyrðingin hægra megin afleiðing fullyrðingarinnar
 vinstra megin, þ.e.a.s. alltaf þegar fullyrðing vinstra megin er sönn þá
-er fullyrðingin hægrra megin líka sönn.
+er fullyrðingin hægra megin líka sönn.
 
 Táknin "\ :math:`\Rightarrow`", "\ :math:`\Leftrightarrow`" eru hentug
 þegar útreikningar eru sýndir á töflu, en mín ráðlegging er að nota þau
 sem minnst. Þau eru ekki notuð í kennslubókinni, ekki heldur í
 lausnaheftinu, og atvinnustærðfræðingar nota þessi tákn ekki í sínum
 skrifum. Í löngum útreikngum er oft hægt að nota ":math:`=`" í stað
-leiðingaörva. Engin ástæða er heldur til að nota táknin
-":math:`\vee`", ":math:`\wedge`" því orðin "eða" og "og" eru mun
+leiðingarörva. Engin ástæða er heldur til að nota táknin
+":math:`\vee`" og ":math:`\wedge`" því orðin "eða" og "og" eru mun
 skýrari; það eina sem táknin hafa fram yfir orðin er tilgerðin.
 
 Gott er að hafa eftirfarandi reglur í huga þegar gengið er frá lausnum
@@ -300,7 +300,7 @@ verkefna:
 
 1. Textinn á að vera ein samfelld heild sem fullnægir sömu kröfum og
    gerðar eru til annars ritaðs máls. Stærðfræðiformúla eða stærðtákn á
-   aldrei að koma fyrir eitt sér, heldur alltaf að vera felt inn í samfellt
+   aldrei að koma fyrir eitt sér, heldur alltaf að vera fellt inn í samfellt
    mál.
 
 2. Uppsetningin á að vera aðlaðandi og frágangur snyrtilegur.
