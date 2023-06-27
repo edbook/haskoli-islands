@@ -16,7 +16,7 @@ dependencies:
   - pip:
     - typer[all]
     - rich
-    - -e ./cli
+    - ./cli
     - sphinxcontrib-katex==0.9.4
     - sphinx-copybutton==0.5.1
     - sphinxcontrib-custombutton @ https://github.com/edbook/sphinxcontrib-custombutton/archive/refs/tags/v2.0.zip

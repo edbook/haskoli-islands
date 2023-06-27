@@ -19,7 +19,7 @@ def get_sphinx_args():
 
 
 def get_abs_path(dir: str):
-    return Path.joinpath(Path(__file__).parent.parent.parent.parent / dir)
+    return Path.joinpath(Path.cwd() / dir)
 
 
 def get_output_path(dir: str = "_build"):
