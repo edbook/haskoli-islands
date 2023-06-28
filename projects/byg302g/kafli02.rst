@@ -1,3 +1,35 @@
+Kafli 2 Gerð og uppbygging efna
+
+Allir eiginleikar efna byggja á gerð þeirra og uppbyggingu, sérstaklega gildir að styrkur,
+stífleiki, rafleiðni og ending eru beint háðir grunnuppbyggingu þeirra.
+
+:hover:`heildi`
+
+:hover:`Frumeindir,frumeind`
+Byggðar upp úr þremur tegundum einda; jákvætt hlaðin :hover:`róteind`, óhlaðin :hover:`nifteind` og neikvætt hlaðin :hover:`rafeind`.
+:hover:`Kjarninn,frumeindakjarni` er iðulega samsettur úr jafnmörgum róteindum (fjöldi; Z) og nifteindum (fjöldi; N) –
+vetni og mismunandi ísótópar eru undantekning frá þessu. Í frumeind sem er óhlaðin útávið þá er fjöldi rafeinda sá sami og róteinda (Z).
+Í módeli Bohr's er gert ráð fyrir að rafeindirnar raðist á sammiðja :hover:`hvel,rafeindahvel` um kjarnann.
+Hvert rafeindahvel getur innihaldið mest :math:`2\cdot n^2` rafeindir, þar sem n er númer hvels innanfrá.
+
+Hvel nr. (n) 1 2 3 4 5 6 7
+Heiti K L M N O P Q
+
+Ysta hvelið hverju sinni (valenshvelið) getur þó mest haft 8 rafeindir, og er einungis stöðugt ef það er fullsetið.
+
+In line: :math:`\lim_{x\to a^-} f(x) = \pm \infty`, or
+
+.. math::
+    \overline{x}=\frac{M_{x=0}}{m} = \frac{\sum_{i=1}^n x_im_i}{\sum_{i=1}^n m_i}.
+
+
+.. ggb:: xhyhu5fb
+    
+
+
+
+
+
 Undirbúningur
 =============
 
