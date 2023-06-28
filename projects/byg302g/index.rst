@@ -8,7 +8,7 @@
    :numbered:
    :glob:
 
-   kafli*
+   kafli01
 
 .. toctree::
 	ordaskra
