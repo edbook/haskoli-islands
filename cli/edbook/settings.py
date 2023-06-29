@@ -7,7 +7,6 @@ from datetime import date
 from typing import List, TypedDict
 from pathlib import Path
 import yaml
-from edbook.lib.utils import get_projects_path
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -510,15 +509,7 @@ def get_authors(config: EdbookConfig):
     return project, projectid, auth_title
 
 
-def get_caller_path():
-    for n in inspect.stack()[0]:
-        if type(n) == str and get_projects_path() == Path(n).parent.resolve().parent:
-            print(f"{get_projects_path()} | {Path(n).parent.resolve()}")
-            return Path(n).parent.resolve()
-    raise Exception("This should not happen, something is very broken ...")
-
-
-with open(Path.joinpath(get_caller_path() / "config.yml"), "r") as f:
+with open(Path.joinpath(Path.cwd() / "config.yml"), "r") as f:
     config: EdbookConfig = yaml.safe_load(f)
 print(config)
 project, projectid, auth_title = get_authors(config)
