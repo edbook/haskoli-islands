@@ -515,7 +515,7 @@ def get_caller_path():
         if type(n) == str and get_projects_path() == Path(n).parent.resolve().parent:
             print(f"{get_projects_path()} | {Path(n).parent.resolve()}")
             return Path(n).parent.resolve()
-    raise Exception("This should not happen, call the ambulance")
+    raise Exception("This should not happen, something is very broken ...")
 
 
 with open(Path.joinpath(get_caller_path() / "config.yml"), "r") as f:
