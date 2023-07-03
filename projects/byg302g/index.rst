@@ -9,6 +9,8 @@
    :glob:
 
    kafli01
+   kafli02
+   kafli03
 
 .. toctree::
 	ordaskra
