@@ -28,3 +28,4 @@ dependencies:
     - sphinxcontrib-sagecell @ https://github.com/edbook/sphinxcontrib-sagecell/archive/refs/tags/v2.0.zip
     - sphinxcontrib-scrolldepth @ https://github.com/edbook/sphinxcontrib-scrolldepth/archive/refs/tags/v2.0.zip
     - sphinxcontrib-toggleblock @ https://github.com/edbook/sphinxcontrib-toggleblock/archive/refs/tags/v2.0.zip
+    - sphinxcontrib-bibtex
