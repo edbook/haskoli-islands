@@ -12,6 +12,7 @@
    kafli02
    kafli03
    kafli04
+   kafli05
 
 .. toctree::
 	ordaskra

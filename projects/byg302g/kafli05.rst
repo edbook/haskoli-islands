@@ -1,162 +1,451 @@
-Viðbætur
-==========
+Kafli - Raki
+============
 
-Geogebra
---------
+Raki hefur mjög mikil áhrif á byggingarefni og eiginleika þeirra, og einnig á bygginguna
+sem slíka og umhverfi. Það er í vaxandi mæli talað um nauðsyn “rakahönnunar” samfara
+öðrum hönnunarferlum (útlit og fyrirkomulag, burðarkerfi, hita-og kælikerfi, vatn og
+frárennsli).
 
-Hægt er að greypa inn Geogebra-forrit með `sphinxcontrib-geogebra 
-<https://github.com/edbook/sphinxcontrib-geogebra>`_ viðbótinni.
-Vista þarf Geogebra-skjalið á geogebra.org þar sem það fær auðkenni, en auðkennið 
-er aftasti hlutinn af vefslóðinni.
-Forritið er svo sett inn með: 
+Rakaálag stafar frá;
 
-.. code-block::
-
-  .. ggb:: abcdefgh
+* Byggingarraka
+* Veðurfari
+* Innilofti
+* Jarðraki
+* Lekum lögnum
 
 
-Sjá https://github.com/edbook/sphinxcontrib-geogebra#options fyrir fleiri stillingar.
+Áhrif raka á byggingarefni, **með hækkandi efnisraka**;
 
-Dæmi
-~~~~
+* Vex rakur efnisþéttleiki (og þar með eigið álag byggingarefna)
+* Breytast stærðir breytast (efni þrútna eða lengjast)
+* Minnkar styrkur og stífleiki
+* Vex skrið (d: krybning, þ.e. tímaháð formbreyting)
+* Hækkar varmaleiðni efna (leiðnitalan vex)
+* Aukast líkur á niðurbroti og ending styttist (fúi í timbri, niðurbrot plastefna, frost og alkalískemmdir í steypu...)
 
-.. ggb:: mkyudgwh
+Fyrir flest efni gildir að ef efnisrakinn nær “krítískum” mörkum (háð efnistegund) þá vex
+hætta á niðurbroti og skemmdum mjög (þó þurfa önnur skilyrði iðulega að vera uppfyllt
+einnig);
 
-Togglebutton
-------------
+* fúi í timbri eða myglusveppir (:math:`HR>70 \%, \theta>5 ^{\circ}C`)
+* niðurbrot plastefna (rakafilma á yfirborði og UV geislun)
+* frost- og alkalískemmdir í steypu (frost: skrit og frost-þýðusveiflur)
+* tæring málma (:math:`HR>65 \%`)
 
-.. admonition:: Útleiðasla á hreyfijöfnum
-    :class: setning, dropdown
+Rakaþrýstingur og rakainnihald lofts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Andrúmsloft samanstendur af fjölda gastegunda; ca. 78% köfnunarfeni (N), 21% súrefni
+(O) og 1% eðalgös, til viðbótar er almennt einhver raki til staðar.
 
-    Hröðun er afleiða hraðans og því má lýsa sem afleiðujöfnu:
+Loftþrýstingurinn er summa hlutþrýstings allra loftegundanna (Lögmál Daltons);
+
+.. admonition:: Jafna 5.1
+    :class: jafna
 
     .. math::
-      \begin{aligned}
-        &\text{Upphaflega jafnan} &    a &=\frac{dv(t)}{dt} \\
-        &\text{Umritum} &    dv(t) &=  a\cdot dt \\
-        &\text{Heildum beggja vegna} &     \int_0^t dv &= a \cdot \int_0^t dt \\
-        &\text{ } &       v(t)-v(0) &= a\cdot (t-0) \\
-        &\text{} & v(t) &= a\cdot t +v_0
-      \end{aligned}
+        p_{tot} = \sum_i p_i
 
-    sem er einmitt jafnan fyrir hraða sem fall af tíma.
+Fyrir hverja og eina af gastegundunum má nota eðalgasjöfnuna sem nálgunarfall;
+
+.. admonition:: Jafna 5.2
+    :class: jafna
+
+    .. math::
+        p \cdot V = \frac{m}{M} \cdot R \cdot T 
+
+þar sem
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`p`
+    - þrýstingur (hlutþrýstingur)
+    - :math:`Pa`
+  * - :math:`V`
+    - rúmmál
+    - :math:`m^3`
+  * - :math:`m`
+    - massi efnis
+    - kg
+  * - :math:`M`
+    - mólmassinn
+    - kg/mól
+  * - :math:`R`
+    - almenni gasfastinn
+    - :math:`8,314 J/(mól \cdot K)`
+  * - :math:`T`
+    - aflfræðilegt hitastig
+    - K
+
+.. list-table:: Áhugaverðir fastar og kennitölur
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - Almenni gasfastinn R
+    - 8,314
+    - :math:`J/(mól \cdot K)`
+  * - Þurr loft, mólmasi
+    - :math:`28,96 \cdot 10^-3`
+    - :math:`kg/mól`
+  * - Vatnsgufa, mólmassi
+    - :math:`18,02 \cdot 10^-3`
+    - :math:`kg/mól`
+  * - Yfirborðsspenna vatns við :math:`20^{\circ}C`
+    - 0,0728
+    - N/m
+  
+Við gefið hitastig og þrýsting getur andrúmsloft innihaldið ákveðið hámarksmagn
+vatnsgufu, :math:`c_s (kg/m^3)`, samsvarandi gufuþrýstingur (hlutþrýstingur vatnsgufu í
+andrúmslofti), :math:`p_s (Pa)` kallast mettunarþrýstingur vatnsgufu (tafla 5.1).
+
+.. figure:: ./myndir/kafli05/Vanddamp.png
+  :align: center
+  :width: 100%
+
+Mollierlínurit:
+
+.. figure:: ./myndir/kafli05/Mollier.png
+  :align: center
+  :width: 100%
 
 
-Takkar fyrir hlekki (sphinxcontrib-custombutton)
-------------------------------------------------
+Fyrir loft sem inniheldur loftraka :math:`c`, með hlutþrýstingi :math:`p`, er skilgreindur hlutfallsraki, :math:`HR (\%)` eða :math:`\varphi (-)`
 
-Viðbótin `sphinxcontrib-custombutton <https://github.com/sphinxcontrib-custombutton>`_ 
-er fyrir sérsniðna takka með hlekkjum. Skráin ``_static/button.css`` geymir stillingar
-fyrir útlit takkans. 
+.. admonition:: Jafna 5.3
+    :class: jafna
 
-.. button::
-  :text: Edbook home page
-  :link: http://edbook.hi.is
-
-Panopto
--------
-
-Hægt er að greypa inn Panopto-myndbönd með 
-
-.. code-block::
+    .. math::
+        \varphi = \frac{c}{c_s} = \frac{p}{p_s}
     
-    .. panopto:: ab027f4b-88b9-4647-af20-afdf0092304d
-        :width: 100%
-        :height: 400
-
-Hér er `ab027f4b-88b9-4647-af20-afdf0092304d` auðkennið sem myndbandið hefur á 
-Panopto-þjóninum. Til að finna það þá er best að fara inn á hi.cloud.panopto.eu
-finna myndbandið og smella á `Settings` og undir `Viewer Link` er auðkennið það sem
-stendur fyrir aftan `id=`. 
-
-.. panopto:: ab027f4b-88b9-4647-af20-afdf0092304d
-    :width: 100%
-
-Youtube
--------
+    og :math:`HR(\%) = 100 \cdot \varphi`
 
 
+Hitastigið þegar rakaþétting á sér stað, fyrir loft með gefið rakainnihald (eða
+hlutfallsraka), er nefnt **daggarmark**.
 
-Math - Katex
-------------
-Math on page is rendered with Katex.
-Katex is faster in works for almost all latex syntax, there are documented cases of examples
-known to cause troubles in the katex-extension sub-directory
+Dæmi:
+Inniloft; lofthiti :math:`20^{\circ}C`, hlutfallsraki :math:`35 \%HR`
 
-In line: :math:`\lim_{x\to a^-} f(x) = \pm \infty`, or
+a) Hvert er rakainnihald loftsins :math:`(g/m^3)`?
+b) Hvert er daggarmark loftsins :math:`(^{\circ}C)`?
 
-.. math::
-    \overline{x}=\frac{M_{x=0}}{m} = \frac{\sum_{i=1}^n x_im_i}{\sum_{i=1}^n m_i}.
+Svar:
+
+a) Mettunarraki lofts við :math:`20^{\circ}C` er :math:`c_s= 17,3 g/m^3`. Rakainnihald við :math:`35 \%HR` er þá; :math:`c=(35/100)\cdot 17,3 = 6,05 g/m^3`
+b) Mettunarrakinn :math:`c_s=6,05 g/m^3` samsvarar hitastigi :math:`\theta`; :math:`\theta = 3,3 ^{\circ}` (fæst með brúun á töflugildum)
+
+.. admonition:: Aðgát
+    :class: caution
+
+        það fæst ekki rétt niðurstaða ef þessir reikningar eru gerðir útfrá rakaþrýstingi; ástæðan er sú að rakainnihald lofts :math:`(g/m^3)` breytist ekki þó svo hitastigi þess sé breytt, en það gerir rakaþrýstingurinn hins vegar.
+
+Væting yfirborðs; vatnssækin (d:hydrofil, e hydrophilic) efni og vatnsfælin (d:hydrofob, e: hydrophobic) 
+– ath. Fig 5.3 í bók; „snertihornið alltaf mælt milli flatar og yfirborðs vökva, mælt í gegnum vökvann“
+
+Vatnsyfirborð í hárpípu, eða póru, mun alltaf hafa sveigt (íhvolft) yfirborð—sem kallast vökvakúpull (d. menisk).
+
+Undirþrýstingur í póru (hárpípu)
+--------------------------------
+
+Í hárpípu gildir
+
+.. admonition:: Jafna 5.4
+    :class: jafna
+
+    .. math::
+        r_m = r_k \cdot \cos(\theta)
+
+og ekki gildir endilega að radíus vökvakúpulsins, :math:`r_m`, sé jafn
+radíus pórunnar, :math:`r_p`, þetta ræðst af því hvort vatn er bundið
+fyrir við póruvegginn.
+
+.. figure:: ./myndir/kafli05/vokvakupull.png
+  :align: center
+  :width: 50%
+
+Þegar tekið er tillit til ytri loftþrýstings á annan enda
+pípunnar, þá fæst undirþrýstingurinn p’ sem
+
+.. admonition:: Jafna 5.5
+    :class: jafna
+
+    .. math::
+        p \cdot \pi \cdot r_m^2 = p’ \cdot \pi \cdot r_m^2 + 2 \cdot \pi \cdot r_m \cdot \sigma \cdot \cos(\theta)
+
+.. admonition:: Jafna 5.6
+    :class: jafna
+
+    .. math::
+        p’ = p - \frac{2 \cdot \sigma \cdot \cos(\theta)}{r_m} = p - \frac{2 \cdot \sigma}{r_k}
+
+Undirþrýstingurinn í póruvatninu minnkar fría orku vatnsins og þar með er
+gufuþrýstingur í pórunni (yfir sveigðu vatnsyfirborðinu) lægri heldur en
+mettunarþrýstingur yfir sléttu vatnsyfirborði (eins og sjá má ef :math:`r_k \to \infty` í jöfnunni..)
+
+Líking Kelvins;
+
+.. admonition:: Jafna 5.7
+    :class: jafna
+
+    .. math::
+        \ln(\varphi) = \ln \left( \frac{p}{p_s} \right) = - \frac{ 2 \cdot \sigma \cdot M \cdot \cos(\theta)}{r \cdot \rho_w \cdot R \cdot T} = - \frac{2 \cdot \sigma \cdot M}{r_k \cdot \rho_w \cdot R \cdot T}
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`\varphi`
+    - hlutfallsraki lofts í pórunni
+    - --
+  * - :math:`p`
+    - rakaþrýstingur lofts
+    - Pa
+  * - :math:`p_s`
+    - mettunarþrýstingur lofts við hitastig T
+    - Pa
+  * - :math:`\sigma`
+    - yfirborðsspenna vatns við hitastig T
+    - N/m
+  * - :math:`M`
+    - mólmassi vökvans
+    - :math:`kg/(mól)`
+  * - :math:`\theta`
+    - snertihorn vökvans
+    - --
+  * - :math:`r`
+    - radíi hárpípunnar
+    - m
+  * - :math:`\rho_w`
+    - eðlisþéttleiki vökvans við hitastig T
+    - :math:`kg/m^3`
+  * - :math:`R`
+    - almenni gasfastinn
+    - :math:`J/(mól \cdot K)`
+  * - :math:`T`
+    - aflfræðilegt hitastig
+    - K
+  * - :math:`r_k`
+    - radíi vökvakúpulsins, Kelvin radíi
+    - m
+
+Af líkingu Kelvins má sjá að fyrir grannar hárpípur þá er lækkun rakaþrýstings í pórunni
+veruleg (sjá töflu í kennslubókinni).
+
+Iðulega er gert ráð fyrir að snertihornið :math:`\theta = 0` (gildir þokkalega fyrir vatn í snertingu við
+flest byggingarefni) :math:`\Rightarrow r_m = r_k`
+
+.. figure:: ./myndir/kafli05/Kelvinjafnan.png
+  :align: center
+  :width: 50%
+
+Fyrir t.d. sementsefju þá er póruradíi á bilinu 10-100 nm (sbr kafla 3)
+
+Rishæð, H, í hárpípu
+--------------------
+
+Gert er ráð fyrir að sami ytri loftþrýstingur verki á báða
+enda pípunnar, þá gildir um kraftajafnvægi fyrir hárpípu
+(mynd 5.1), sem er í snertingu við vatnsyfirborð, gefur
+jöfnu 5.8;
+
+.. admonition:: Jafna 5.8
+    :class: jafna
+
+    .. math::
+        \pi \cdot r^2 \cdot \rho \cdot g \cdot H =  2 \cdot \pi \cdot r \cdot \sigma \cdot \cos(\theta)
+    .. math::
+        H = \frac{2 \cdot \sigma}{r \cdot \rho \cdot g} \cdot \cos(\theta)
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+    * - :math:`r`
+      - radíus hárpípu
+      - m
+    * - :math:`\rho`
+      - eðlisþéttleiki vökvans
+      - :math:`kg/m^3`
+    * - :math:`H`
+      - vökvahæð í pípunni
+      - m
+    * - :math:`\sigma`
+      - yfirborðsspenna vatns við hitastig T
+      - N/m
+    * - :math:`\theta`
+      - snertihorn vökvans við pípuna
+      - --
+
+.. figure:: ./myndir/kafli05/Harpipa.png
+  :align: center
+  :width: 30%
+
+Uppgufun frá saltlausn er alltaf minni heldur en frá hreinu vatni, sjá töflu í bókinni.
+
+.. figure:: ./myndir/kafli05/uppgufunsaltlausn.png
+  :align: center
+  :width: 70%
+
+Vatn í byggingarefnum
+~~~~~~~~~~~~~~~~~~~~~
+Vatn er með ýmsu móti í byggingarefnum;
+
+.. line-block::
+    Bundið efnafræðilega (d:kemisk bundet) - t.d. í sementsefju og gifsi
+    Bundið eðlisfræðilega (d:fysisk bundet) – vatnsfilma innan á póruveggjum
+    Í pórum (d:fysisk fastholdt) – vatn í pórum og háræðum
+    Frítt vatn (d:frit vand) – í stærri glufum og yfirborðsvatn
 
 
-Datacamp extensions
--------------------
+Vatn sem telst til síðari flokkanna tveggja getur gufað upp við venjulegan efnishita
+(nothita) en til að losna við vatn í fyrri flokkunum tveim þá þarf verulega hækkun á
+hitastigi.
+- iðulega er þó bara talað um fatsbundið vatn og frítt vatn, þar sem síðarnefnda vatnið fer
+við upphitun í :math:`105^{\circ}` (þá er efnafræðilega bundna vatnið eftir- og hugsanlega eitthvað af
+því eðlisfræðilega bundna).
 
-Python
-~~~~~~
+Vatn í efnum .. jöfnur 5.11 og 5.12, gerður greinarmunur á því hvort efnið er algerlega
+vatnsmettað eða mettað með hárpípukröftum einungis (sbr. það sem áður var rætt í kafla
+um holrýmd).
 
-.. datacamp::
-    :lang: python
 
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import matplotlib.animation as animation
+Rakaupptaka efna
+----------------
+Raki binst við yfirborð póra – en þetta er háð hitastigi og umhverfisraka. Efni í
+rakajafnvægi við umhverfið: rakaþrýstingur í pórum sá sami og er í umhverfinu (lofti
+utan við sýnið).
 
-    fig = plt.figure()
+.. figure:: ./myndir/kafli05/Rakaupptakaefna.png
+  :align: center
+  :width: 70%
 
-    def f(x, y):
-        return np.sin(x) + np.cos(y)
 
-    x = np.linspace(0, 2 * np.pi, 120)
-    y = np.linspace(0, 2 * np.pi, 100).reshape(-1, 1)
+Jafnvægisrakinn er mismunandi eftir því hvort
+efnið er að bæta við sig raka, eða að þorna út
+(d:Adsorption – desorption).. .. og hver er
+eiginlega rakinn í sýninu í reynd ?
 
-    im = plt.imshow(f(x, y), animated=True)
+.. figure:: ./myndir/kafli05/Jafnvaegisrakalina.png
+  :align: center
+  :width: 60%
 
-    def updatefig(*args):
-        global x, y
-        x += np.pi / 15.
-        y += np.pi / 20.
-        im.set_array(f(x, y))
-        return im,
+Jafnvægisrakalínurit timburs;
 
-    ani = animation.FuncAnimation(fig, updatefig, interval=50, blit=True)
-    plt.show()
+.. figure:: ./myndir/kafli05/Jafnvaegisrakalinatimburs.png
+  :align: center
+  :width: 50%
 
-R
-~~~
+Dæmi:
 
-.. datacamp::
-    :lang: r
+Hver er jafnvægisraki timburs innanhúss þar sem loftraki er 60 %HR?
 
-    options(scipen=999)  # turn-off scientific notation like 1e+48
-    library(ggplot2)
-    theme_set(theme_bw())  # pre-set the bw theme.
-    data("midwest", package = "ggplot2")
+Svar: 
 
-    gg <- ggplot(midwest, aes(x=area, y=poptotal)) +
-        geom_point(aes(col=state, size=popdensity)) +
-        geom_smooth(method="loess", se=F) +
-        xlim(c(0, 0.1)) +
-        ylim(c(0, 500000)) +
-        labs(subtitle="Area Vs Population",
-        y="Population",
-        x="Area",
-        title="Scatterplot",
-        caption = "Source: midwest")
+12-14 %, háð því hvort efnið er að taka upp raka eða losa sig við raka
 
-    gg
+Rakaupptaka efna
+----------------
+Jafnvægisrakalínan er illa skilgreind við mjög háan efnisraka...
+ og þá stundum notuð “suctions” kúrfa í staðinn... á milli þessara kúrfa er þó samband:
+Útfrá jöfnu 5.6 er mismunaþrýstingurinn :math:`p_{suc}` skilgreindur sem
 
-Hoverrole Extension
--------------------
+.. admonition:: Jafna 5.9
+    :class: jafna
 
-Þetta er texti um :hover:`stærðfræðigreiningu,stærðfræðigreining` og :hover:`afleiðujöfnur, deildajafna`. Fleiri hugtök: :hover:`heildi`, :hover:`ferill`, :hover:`vörpun`.
+    .. math::
+        p_{suc} = p'-p = -\frac{2 \cdot \sigma}{r_k}
 
-Auto-generated list of translated terms:
+Jafna 5.9 og líking Kelvins (5.7) gefa saman;
 
-.. hoverlist::
+.. admonition:: Jafna 5.10
+    :class: jafna
 
-Google Analytics Extension
-----------------------------
-This extension enables the use of Google Analytics by inserting the tracking code on each page (except the index) and by inserting your tracking ID inside conf.py you should be able to monitor the use of your site.
+    .. math::
+        p_suc = -\frac{2 \cdot \sigma}{r_k} = \frac{\ln(\varphi) \cdot R \cdot \rho_w \cdot T}{M}
 
-This extension also tracks how far users have scrolled on the page. When a new section is scrolled into view a Google Analytics event is fired. These events can be seen in real time in the Javascript console (Chrome: CTRL+Shift+I OR Options-> More Tools -> Developer Tools).
+skýring tákna sem fyrr.
+
+Í kennslubókinni er talað um að reikna “suctions”kúrfuna útfrá mældri
+jafnvægisrakakúrfu, en í reynd gerist hið andstæða, það þarf að mæla “suctions”kúrfuna
+þar sem sviðið sem er áhugavert (við hátt RF) fæst ekki út úr jafnvægisrakalínuritinu með
+nægri nákvæmni. Enn sem komið er eru “suctions”kúrfur aðeins til fyrir fáein efni..
+Samanburður á jafnvægisrakalínu og “suctions”kúrfu fyrir frauðsteypu (d:gasbeton) sýnir
+vel hve miklar upplýsingar fást úr “suctions”kúrfunni á bilinu 98-100 %HR og hvað
+jafnvægisrakalínan gefur rangar hugmyndir varðandi efnisraka á þessu rakabili.
+
+Frauðsteypa; jafnvægisrakalínurit og „suctions“ kúrfa
+
+.. figure:: ./myndir/kafli05/Jafnvaegisrakalinasteypu.png
+  :align: center
+  :width: 30%
+
+.. figure:: ./myndir/kafli05/Suctionskurfa.png
+  :align: center
+  :width: 70%
+
+Rakaflutningur
+~~~~~~~~~~~~~~
+
+Rakaflutningur verður með þrennu móti;
+
+* Vatnsflutningur (v. vatnsþrýstings eða hárpípukrafta)
+* Rakaflæði
+* Rakastreymi
+
+.. figure:: ./myndir/kafli05/Rakaflutningur.png
+  :align: center
+  :width: 70%
+
+Skoðuð eru einfölduð, afmörkuð tilvik, í reynd samverka þau eitthvað en háð aðstæðum.
+
+Vatnsflutningur vegna mismunaþrýstings í vatni
+---------------------------------------------
+
+Einfaldað líkan: Vatnsflutningur í pípu
+Meðalvökvahraða í sívalri pípu má ákvarða ef þrýstistigullinn (d:gradient) er þekktur
+(búið að taka tillit til eðlilegrar hrýfni fyrir umræðuna);
+
+.. admonition:: Jafna 5.12
+    :class: jafna
+
+    .. math::
+        \frac{\delta p}{\delta x} = 8 \mu \cdot \frac{v}{r^2}
+
+þar sem 
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`\delta p / \delta x`
+    - þrýstistigull 
+    - Pa/m
+  * - :math:`\mu`
+    - kvik seigja vökvans
+    - :math:`Pa \cdot s`
+  * - :math:`v`
+    - meðalhraði vökvans
+    - m/s
+  * - :math:`r`
+    - radíi pípunnar
+    - m
+
+við stöðug skilyrði má skrifa stigulinn sem
+
+.. admonition:: Jafna 5.13
+    :class: jafna
+
+    .. math::
+        \frac{\delta p}{\delta x} = \frac{dp}{dx} = \frac{\Delta p}{\Delta x} 
+
+þar sem :math:`\Delta p` er þrýstifall (Pa) yfir lengdina :math:`\Delta l` (m).
+
+jöfnuna 5.13 má þá skrifa þannig (einangrað fyrir meðalhraðanum);
+
+.. admonition:: Jafna 5.13
+    :class: jafna
+
+    .. math::
+        v = \frac{r^2}{8 \cdot \mu}\cdot\frac{\Delta p}{\Delta l} = k \cdot \frac{\Delta p}{\Delta l}
