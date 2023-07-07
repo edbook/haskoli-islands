@@ -444,8 +444,215 @@ við stöðug skilyrði má skrifa stigulinn sem
 
 jöfnuna 5.13 má þá skrifa þannig (einangrað fyrir meðalhraðanum);
 
-.. admonition:: Jafna 5.13
+.. admonition:: Jafna 5.14
     :class: jafna
 
     .. math::
         v = \frac{r^2}{8 \cdot \mu}\cdot\frac{\Delta p}{\Delta l} = k \cdot \frac{\Delta p}{\Delta l}
+
+þar sem 
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`k`
+    - vökvarhleypnistuðull
+    - :math:`m^2 / (Pa \cdot s)`
+
+Vökvahleypnistuðullinn (d:permeabilitetskoefficient) er háður eiginleikum vökvans og póruuppbyggingu efnisins.
+
+Iðulega er reiknaður vökvaflutningur á fereiningu (þéttleiki vökvaflutnings) í gegnum efni;
+
+.. admonition:: Jafna 5.15
+    :class: jafna
+
+    .. math::
+        q_m = \rho_v \cdot v 
+
+þar sem 
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`q_m`
+    - þéttleiki vökvaflutnings á tímaeiningu
+    - :math:`kg / (m^2 \cdot s)`
+  * - :math:`\rho_v`
+    - þéttleiki vökvans
+    - :math:`kg / m^3`
+  * - :math:`v`
+    - meðalhraði vökva í gegnum efnið, jafna 4.14
+    - :math:`m / s`
+
+Iðulega er innfærð stærðin K sem sameinar stærðirnar k og eðlisþéttleika vökvans; :math:`K = k \cdot \rho_v`. Gildi á vökvahleypnistuðli fyrir vatn í nokkrum gerðum steypu eru gefin í töflu 5.7 í
+bókinni...
+
+Dæmi bls. 87..
+
+Flutningur með hárpípukröftum
+-----------------------------
+
+Ef við hugsum okkur efnislag sem annarsvegar, hlið 1, er í snertingu við vatn með
+þrýstingi p1 og hinsvegar á hlið 2 í snertingu við loft með stöðugt hitatsig T og
+hlutfallsraka HR. Þá má reikna Kelvin radía, rk, efnislags eins og áður er rætt (í
+sambandi við jöfnu 5.7 í fyrirlestrarnótum).
+
+.. math::
+    r_k = - \frac{2 \cdot \sigma \cdot M}{\rho_w \cdot R \cdot T \cdot \ln{\varphi}}
+
+.. admonition:: Aðgát
+    :class: caution
+
+        fundið :math:`r_k` er hér eingöngu viðmiðunarstærð þar sem efnislag samanstendur almennt mörgum mismunandi pórustærðum!!
+
+
+Fyrir skífuna getum við litið svo á að loftþrýstingur sé hinn sami beggja vegna og í
+pórunum er þá undirþrýstingur sem er gefinn samkvæmt 5.16 (sjá jöfnur 5.6 og 5.7 í
+fyrirlestrarnótum);
+[í fyrra tilvikinu, jafna 5.6, að framan var formerki undirþrýstings negatíft af því að
+loftþrýstingur ofan á filmu var +, nú reiknum við allan þrýsting frá 1 til 2;
+..vatnsþrýstingur á hlið 1 þrýstir vatni inn í efnislagið og undirþrýstingurinn :math:`p_2` dregur
+vatn í átt að yfirborði 2 – kraftarnir ættu að vinna saman og :math:`\Delta p=p_1+p_2`, en ekki :math:`\Delta p=p_1-p_2`
+eins og bókin sýnir ???]
+
+.. admonition:: Jafna 5.16
+    :class: jafna
+
+    .. math::
+       p_2 = \frac{2 \cdot \sigma}{r_k}
+
+
+Í pórum með póruradía minni en :math:`r_k` verður rakaþétting (sbr. fyrri umfjöllun) og hún
+hjálpar til að byggja upp samfelldan vatnsfasa frá yfirborði 1 og að meniskum sem hafa
+myndast. Undirþrýstingurinn dregur vatn að loftaða yfirborðinu, þar sem vatnið síðan
+gufar upp.. [ATH: uppgufunarhraðinn ræðst af rakaþrýstingi umhverfis og í yfirborði,
+það þarf því yfirleitt að skoða hvort er ráðandi fyrir flutninginn; hárpípukraftarnir eða
+uppgufunin..].
+
+Rakaflutning vegna hárpípukrafta má skrifa sem
+
+.. admonition:: Jafna 5.17 (jafna 5.28 bls 89)
+    :class: jafna
+
+    .. math::
+       q_m = -K \cdot \frac{\rho_w \cdot R \cdot T \cdot \ln{\varphi} }{2 \cdot \sigma \cdot M}
+
+skýring tákna sem fyrr.
+
+Til þess að jafna 5.17 gildi þarf loftrakinn :math:`\varphi` við yfirborð efnisins einnig að vera stöðugur,
+sem þýðir í reynd;
+
+(i) hæfilega lofthreyfingu við yfirborðið
+(ii) rýmið sem yfirborðið snýr að þarf að vera svo stórt að uppgufun frá yfirborðinu breyti ekki hlutfallsraka lofts í rýminu
+
+Fyrir tilvik þegar :math:`r_k` er lítil stærð, þá sést að áhrif :math:`p_2` verða fljótt mun meiri heldur en :math:`p_1`.
+
+ATH: Dæmi bls. 90
+
+Hárpípukraftar almennt
+++++++++++++++++++++++
+
+Kaflinn "kapillær opsugning" er síðan áframhald af hárpípukrafta umfjölluninni, en fyrir
+óstöðugt tilvik, þ.e. vökvinn er á hreyfingu (tímaháð ástand);
+
+
+.. figure:: ./myndir/kafli05/Harpipukraftar.png
+  :align: center
+  :width: 70%
+
+
+Fyrir vökva á hreyfingu í pípu þá er skúfáraun milli vökvayfirborðs og pípu;
+
+.. admonition:: Jafna 5.18 
+    :class: jafna
+
+    .. math::
+       \tau = 4 \cdot \mu \cdot \frac{v(t)}{r} = 4 \cdot \frac{\mu}{r} \cdot \frac{\delta z}{\delta t}
+
+þar sem 
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`\tau`
+    - skúfáraun
+    - :math:`Pa / m^2`
+  * - :math:`\mu`
+    - kvik seigja vökvans
+    - :math:`N \cdot s / m^2`
+  * - :math:`v(t)`
+    - meðalsteymishraði vökva í þversniði
+    - :math:`m / s`
+  * - :math:`r`
+    - innri þversniðsradíi pípunnar
+    - :math:`m`
+
+Á vökvakúpulinn verkar krafturinn
+
+.. math::
+    p_{kap} = \frac{2 \cdot \sigma}{r_k} = \frac{2 \cdot \sigma \cdot \cos{\theta}}{r}
+
+þar sem skýring tákna er sem fyrr
+gefum okkur að nettó þrýstingur við rörendann :math:`p=0`, jafnvægisjafna krafta verður þá;
+
+.. math::
+    \pi \cdot r^2 \cdot p_{kap} - 2 \cdot \pi \cdot r \cdot z(t) \cdot \tau = 0
+
+Með innsetningu stærða, heildun, og einföldun (sjá bókina) fæst;
+
+.. admonition:: Jafna 5.19
+    :class: jafna
+
+    .. math::
+        z(t) = \sqrt{\frac{t}{m}}
+    
+þá má auðveldlega reikna hversu mikill vökvi hefur gengið inn í sýnið á hverjum tíma..
+
+.. math::
+    Q(t) = \rho_w \cdot p_å \cdot z(t)
+
+þar sem 
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`p_å`
+    - opna holrýmdin
+    - --
+
+Rakaflutningur vegna gufuþrýstings
+----------------------------------
+
+Lögmál Fick's; rakaflutningur vegna kraftstiguls (gradients) má skrifa fyrir mismunandi
+tegundir stiguls; t.d. efnisraka (c) eða rakaþrýsting (p);
+
+.. admonition:: Jafna 5.20
+    :class: jafna
+
+    .. math::
+        q_d = -D \cdot \frac{dc}{dx} = -k \cdot \frac{dp}{dx}
+
+Fyrir rakaþrýsting sem stigul má ákvarða rakaflutningstölu efna :math:`\delta` (háð efnisgerð og
+pórudreifingu), sjá töflugildi í bókinni (tabel 5.9).
+
+Rakaflutningur er samsettur úr áhrifum frá hárpípukröftum og rakaþrýstingi, sem eru
+iðulega tekin saman í gildi á rakaflutningstölu og rakaflutningurinn síðan reiknaður útfrá
+lögmáli Fick's. Rakaflutningstalan er þá iðulega táknuð með :math:`\delta` (þegar tekið er tillit til
+áhrifa hitastigs eru aðrar stærðir innfærðar og efniseiginleikinn þá táknaður með :math:`\mu`)
+
+Fyrir þunn efnislög er iðulega skilgreind stærðin mótstaðan :math:`Z`
+
+.. math::
+    Z = \frac{d}{\delta}
+
+og jafna Fick's þá sem
+
+.. math::
+    q_d = \frac{p_1-p_2}{Z}
+
+
+Það verður að hafa í huga að rakaflutningstalan er háð efnisraka, sbr. Figur 5.22 !
