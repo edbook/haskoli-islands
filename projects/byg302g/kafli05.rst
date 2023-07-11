@@ -192,6 +192,8 @@ Líking Kelvins;
     .. math::
         \ln(\varphi) = \ln \left( \frac{p}{p_s} \right) = - \frac{ 2 \cdot \sigma \cdot M \cdot \cos(\theta)}{r \cdot \rho_w \cdot R \cdot T} = - \frac{2 \cdot \sigma \cdot M}{r_k \cdot \rho_w \cdot R \cdot T}
 
+þar sem 
+
 .. list-table:: 
   :widths: 5 5 5
   :header-rows: 0
