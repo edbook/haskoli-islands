@@ -84,14 +84,14 @@ Fyrir hverja og eina af gastegundunum má nota eðalgasjöfnuna sem nálgunarfal
   :header-rows: 0
 
   * - Almenni gasfastinn R
-    - 8,314
-    - :math:`J/(mól \cdot K)`
+    - :math:`8,314`
+    - :math:`\mathrm{J/(mól} \cdot \mathrm{K})`
   * - Þurr loft, mólmasi
-    - :math:`28,96 \cdot 10^-3`
+    - :math:`28,96 \cdot 10^{-3}`
     - :math:`kg/mól`
   * - Vatnsgufa, mólmassi
-    - :math:`18,02 \cdot 10^-3`
-    - :math:`kg/mól`
+    - :math:`18,02 \cdot 10^{-3}`
+    - :math:`\mathrm{kg}/mól`
   * - Yfirborðsspenna vatns við :math:`20^{\circ}C`
     - 0,0728
     - N/m
