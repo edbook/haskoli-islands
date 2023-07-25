@@ -1,4 +1,3 @@
-
 Kafli - Gler
 ============
 (byggt á Burström, 2001, ofl.)
@@ -17,7 +16,7 @@ t.d. :math:`\ce{Na2O}`, sem slík mynda ekki gler. Einnig er bætt við öðrum 
 
 Eiginleikar  
 ~~~~~~~~~~~
-Gler er “amorft”, þ.e. myndar ekki krystalla (sbr. kafla 2 í kennslubókinni). Við upphitun
+Gler er “amorft”, þ.e. myndar ekki kristalla (sbr. kafla 2 í kennslubókinni). Við upphitun
 þá breytist það úr stökku ástandi í teygjanlegt (plastískt) án þess að fara í gegnum
 skilgreind bræðslumörk. Í þessu tilliti hefur gler því svipaða eiginleika eins og
 undirkældur vökvi, seigja við venjulegt hitastig er hinsvegar mjög há og efnið tekur mjög
