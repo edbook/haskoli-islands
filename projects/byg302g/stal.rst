@@ -227,3 +227,103 @@ við TTT línuritið).
   :width: 80%
 
 Y-ásinn nær niður í 0 :math:`^{\circ}\textrm{C}`, það vantar tölurnar 100 og 200 :math:`^{\circ}\textrm{C}` !
+
+Enska orðið “quenching” táknar að heitu stálinu er dýft í vökva; hraðasta kælingin fæst ef
+vökvinn er vatn (e: water quenching) en oftar er þó notuð olía.
+
+Áhrif mismunandi hitaherslu á stál eru sýnd á línuriti (Burström, 2001). Sænska hugtakið
+“anlöpt vid 400 :math:`^{\circ}\textrm{C}`” táknar að stálið var hitað upp í 400 :math:`^{\circ}\textrm{C}` áður en það var kælt.
+Hitastig í upphituninni skiptir miklu máli fyrir endanlega eiginleika, lágt hitastig hefur
+lítil áhrif.. Hert stál er hægt að gera seigara með því að hita það upp í 400 :math:`^{\circ}\textrm{C}` og svo
+kælt niður á ný, þá er talað um seigherslu og er þetta nú algeng framleiðsluaðferð á
+bendistáli.
+
+.. figure:: ./myndir/stal/hersla.png
+  :align: center
+  :width: 70%
+
+Suðuhæft stál
+~~~~~~~~~~~~~
+Rafsuða er algeng samsetning á t.d. bendistáli, og óhjákvæmilega hitnar stálið, amk.
+staðbundið við suðuna. Hitunin getur augljóslega haft neikvæð áhrif á efniseiginleikana,
+og með hugtakinu “suðuhæft stál” er því átt við stál sem má sjóða án þess að gripið sé til
+sérstakra ráðstafana. 
+
+Stálgerðir og einkenni - Bendistál
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Þegar stál er steypt inn í steypu þá eru í upphafi aðallega um efnafræðilega bindinga að
+ræða, en þessir bindingar eru sjaldnast sterkir. Til að bæta tengingu stáls og steypu eru
+stangirnar því “prófíleraðar”, t.d. valsaðir kambar í járnið. Því sterkara sem stálið er, því
+þéttara er á milli kambanna.
+
+Í Evrópu er nú samkomulag um eftirfarandi merkingar;
+
+.. list-table:: Upphafsstafir í heiti
+  :widths: 1 5
+  :header-rows: 0
+
+  * - B 
+    - bendistál skv. ENV 10 080
+  * - S 
+    - slétt stöng
+  * - K 
+    - kambstál 
+  * - P
+    - prófíleruð stöng
+  * - Np
+    - soðið bendinet úr prófíleruðum stöngum 
+
+Síðan kemur oft lítið s, sem táknar flotmörk (eða 0,2 % mörkin) og þá kröfugildi fyrir
+flotmörkin í MPa.
+Stórt S á eftir flotspennugildinu táknar að stálið er suðuhæft (nánast allt bendistál sem er
+heitvalsað er suðuhæft).
+Kröfur til bendistáls er að finna í staðlinum ÍST 16, sem aftur vísar í Norska staðla (sem
+byggja á FS ENV 10080:1995). Stál er flokkað í þrjá flokka eftir (mest)
+seigjueiginleikum; A, B og C (staðallinn fjallar bara um B500 seríuna; B500A, B500B,
+B500C), A hefur minnsta seigju og C mesta. Hérlendis er almennt miðað við að nota
+alltaf stál í flokki C (sama verð, og óheppilegt að blanda saman mismunandi flokkum á
+sama byggingarstað).
+
+Stórt T aftarlega í heitinu táknar að stálið er seighert (sjá að framan).
+
+Dæmi um stálflokka (Burström, 2001)
+
+.. figure:: ./myndir/stal/bendistal.png
+  :align: center
+  :width: 70%
+
+.. admonition:: Aðgát
+  :class: caution 
+
+      stálið heitir ekki Ps500/700, Burström notar sömu mynd fyrir tvo gæðaflokka, þ.e. Ps500 og Ps700.
+
+
+.. figure:: ./myndir/stal/Taflabendistal.png
+  :align: center
+  :width: 100%
+
+Áður (og heyrist enn!) var slétt stál alltaf kallað St 37 (stál 37, flotspennan í kg/mm2
+) í
+kerfinu hér að ofan heitir slíkt stál þá væntanlega Ss370S.
+
+.. figure:: ./myndir/stal/vinnulinur.png
+  :align: center
+  :width: 70%
+
+Áhugaverðar heimasíður um stál:
+http://www.worldsteel.org/
+http://www.steeluniversity.org/content/html/eng/default.asp?catid=1&pageid=1016899460
+(þessa heimasíðu er hægt að komast á í gegnum fyrri síðuna!)
+
+Heimildir og ítarefni:
+
+P. G. Burström (2001) Byggnadsmaterial – uppbyggnad, tillverkning och egenskaper,
+Studentlitteratur, Lund, Sverige
+
+Pétur Sigurðsson, 1993, Smíðamálmar, Pétur Sigurðsson, Reykjavík
+
+FS ENV 120080:1995 Steel for reinforcement of concrete weldable ribbed reinforcing steel B 500
+– technical delivery conditions for bars, coils and welded fabric.
+
+W.D. Callister,Jr (2003) Materials Science and Engineering – an introduction, Wiley
+International edition, John Wiley & Sons, Inc
