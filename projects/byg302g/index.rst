@@ -20,6 +20,7 @@
    stal
    gler
    fjollidur
+   lim 
 
 .. toctree::
 	ordaskra
