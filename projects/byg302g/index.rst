@@ -18,6 +18,7 @@
    kafli08
    kafli09
    stal
+   gler
 
 .. toctree::
 	ordaskra
