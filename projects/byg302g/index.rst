@@ -19,6 +19,7 @@
    kafli09
    stal
    gler
+   fjollidur
 
 .. toctree::
 	ordaskra
