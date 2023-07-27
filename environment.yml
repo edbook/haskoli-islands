@@ -12,6 +12,7 @@ dependencies:
   - jinja2=3.*
   - sphinx-autobuild=2021.3.14
   - sphinx-togglebutton=0.3.*
+  - sphinxcontrib-bibtex
   - pip=23.*
   - pip:
     - typer[all]
@@ -28,3 +29,4 @@ dependencies:
     - sphinxcontrib-sagecell @ https://github.com/edbook/sphinxcontrib-sagecell/archive/refs/tags/v2.0.zip
     - sphinxcontrib-scrolldepth @ https://github.com/edbook/sphinxcontrib-scrolldepth/archive/refs/tags/v2.0.zip
     - sphinxcontrib-toggleblock @ https://github.com/edbook/sphinxcontrib-toggleblock/archive/refs/tags/v2.0.zip
+
