@@ -1,8 +1,8 @@
 Kafli - Fjölliður
 =================
-(byggt á S. G. Bergström et al., 1970, P. G. Burström, 2001, Páll Árnason, 2001, ofl.)
+(byggt á S. G. Bergström et al., 1970, P. G. Burström, 2001, Páll Árnason, 2001, ofl.) :math:`\require{\mhchem}` 
 
-:math:`\require{\mhchem}` Efni sem hafa uppbyggingu sem byggist á fjölliðum eru stór og mikilvægur efnisflokkur.
+Efni sem hafa uppbyggingu sem byggist á fjölliðum eru stór og mikilvægur efnisflokkur.
 Efnin hafa það sameiginlegt að byggjast upp af lífrænum fjölliðum, sem á einhverju
 skeiði framleiðslunnar eru seig (“plastískt”) formanlegar í fast efni. 
 

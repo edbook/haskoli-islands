@@ -35,32 +35,47 @@ Hvert rafeindahvel getur innihaldið mest :math:`2\cdot n^2` rafeindir, þar sem
      - Q
 
 
-Ysta hvelið hverju sinni (valenshvelið) getur þó mest haft 8 rafeindir, og er einungis stöðugt ef það er fullsetið.
+Ysta hvelið hverju sinni (valenshvelið) getur þó mest haft 8 rafeindir, og er einungis stöðugt ef það er fullsetið. :math:`\require{\mhchem}`
 
 .. figure:: ./myndir/kafli02/bohr-model-nitrogen-atom.png
   :align: center
   :width: 70%
 
-
 Frumeinda massi, mól og Avogadros-talan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Frumeind vegur mjög lítið, eða stærðargráðan 10-27 kg, því er til einföldunar iðulega
-notaður hlutfallslegur frumeindamassi, Ar;
+Frumeind vegur mjög lítið, eða stærðargráðan :math:`10^{-27}` kg, því er til einföldunar iðulega
+notaður hlutfallslegur frumeindamassi, :math:`A_r`; :math:`\require{\mhchem}`
 
 .. math:: 
     A_r = \frac{m}{m_u}
 
-þar sem m frumeindamassi (kg)
-mu frumeinda-massa-einingin (atomic mass unit) = 1/12 af massa C12
-frumeindar, eða mu=1,6605∙10-27 kg
-massi frumeinda er iðulega gefinn upp í fjölda frumeinda-massa-eininga, u, 1u=mu
+þar sem 
 
-Mol er það efnismagn sem hefur jafnmargar grunneiningar eins og eru í 12 g af C12
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`m`
+    - frumeindamassi
+    - kg
+  * - :math:`m_u`
+    - frumeinda-massa-einingin (atomic mass unit) 
+    
+      = 1/12 af massa :math:`\ce{C12}` frumeindar, eða :math:`m_u = 1,6605 \cdot 10^{-27} \textrm{kg}`
+    - 
+
+massi frumeinda er iðulega gefinn upp í fjölda frumeinda-massa-eininga, :math:`u`, :math:`1u = m_u`
+
+Mól er það efnismagn sem hefur jafnmargar grunneiningar eins og eru í 12 g af :math:`\ce{C12}`
 frumeindum, þessi tala er nefnd Avogadros-talan;
-NA=6,022∙1023 einingar
-Athuga skal að uppgefinn hlutfallslegur frumeindamassi efnis, Ar, fyrir eitt mól af efninu
-er jafngildir mólmassa í einingunni g/mol
+:math:`N_A = 6,022 \cdot 10^{23} \textrm{einingar}`.
+
+.. admonition:: Vísbending
+  :class: hint
+  
+  Athuga skal að uppgefinn hlutfallslegur frumeindamassi efnis, :math:`A_r`, fyrir eitt mól af efninu
+  er jafngildir mólmassa í einingunni g/mól.
 
 Til að finna massa frumefnis í grömmum þegar massinn er gefinn í frumeinda-massaeiningum
 (u), þá gildir
@@ -70,16 +85,18 @@ Til að finna massa frumefnis í grömmum þegar massinn er gefinn í frumeinda-
 
 Lotukerfið (skipting þess í svið og upplýsingar um eiginleika). Í góðri töflu má finna ýmis konar efnisupplýsingar.
 
-https://ptable.com/?lang=is#Eiginleikar
+.. button::
+  :text: Gagnvirkt lotukerfi á íslensku
+  :link: https://ptable.com/?lang=is#Eiginleikar
 
 
 Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. line-block::
-  :math:`1 \mu \text{m} = 10^{-6} \text{m}` (míkrómeter)
-  :math:`1 \text{nm} = 10^{-9} \text{m}` (nanómeter)
-  :math:`1 \text{Å} = 10^{-10} \text{m}` (Ångström)
-  :math:`1 \text{pm} = 10^{-12} \text{m}` (píkómeter)
+  :math:`1 \mu \textrm{m} = 10^{-6} \textrm{m}` (míkrómeter)
+  :math:`1 \textrm{nm} = 10^{-9} \textrm{m}` (nanómeter)
+  :math:`1 \textrm{Å} = 10^{-10} \textrm{m}` (Ångström)
+  :math:`1 \textrm{pm} = 10^{-12} \textrm{m}` (píkómeter)
 
 Stærðargráður „smárra“ eininga;
 
@@ -91,7 +108,7 @@ Stærð vatnssameindar (sjá t.d. Wikipedia; water);
   :align: center
   :width: 40%
 
-Mannshár er með þvermál á bilinu 17-181 :math:`\mu` m (1 :math:`\mu` m = :math:`10^{-6}` m), eða 0,017-0,181 mm.
+Mannshár er með þvermál á bilinu 17-181 :math:`\mu \textrm{m}` (1 :math:`\mu \textrm{m}` = :math:`10^{-6}` m), eða 0,017-0,181 mm.
 (http://hypertextbook.com/facts/1999/BrianLey.shtml).
 
 Uppleysni; minnsta stærð sem greina má
@@ -107,48 +124,55 @@ að 0,5 :math:`\mu` m.
 Rafeindasmásjá (e: scanning electron microscope, SEM);
 Stækkun 1 000 – 1 000 000 X, og uppleysni allt að 10 nm (100 Å)
 
-Dæmi (2.3 í bókinni):
-Ákvarðið sameindamassann (molekylmassen) fyrir gifs (“calciumsulfat, dihydrat”)
-CaSO4, 2H2O
+.. admonition:: Dæmi (2.3 í bókinni)
+  :class: tip 
 
-Lausn: Ekki ljóst hvort beðið er um mólmassa eða massa á einni sameind (sbr. Dæmi 2.4!); reikna bæði:
+  Dæmi (2.3 í bókinni):
+  Ákvarðið sameindamassann (molekylmassen) fyrir gifs (“calciumsulfat, dihydrat”)
+  :math:`\ce{CaSO4, 2H2O}`
 
-* Mólmassinn fæst þegar lagður er saman hlutfallslegur frumeindamassi (atomvægt)- tafla 15, fyrir allar einingarnar.
-* Sameindamassinn = mólmassi/Avogadrostalan,
+  Lausn: Ekki ljóst hvort beðið er um mólmassa eða massa á einni sameind (sbr. Dæmi 2.4!); reikna bæði:
 
-.. list-table:: Lausn á dæmi 2.3 í bókinni
-   :widths: 5 5 5 5
-   :header-rows: 1
+  * Mólmassinn fæst þegar lagður er saman hlutfallslegur frumeindamassi (atomvægt)- tafla 15, fyrir allar einingarnar.
+  * Sameindamassinn = mólmassi/Avogadrostalan,
 
-   * - Frumefni
-     - Massi/mól [g/mól]
-     - Fjöldi móla
-     - Alls [g]
-   * - Ca
-     - 40,08
-     - 1
-     - 40,08
-   * - S
-     - 32,064
-     - 1
-     - 30,064
-   * - O
-     - 16
-     - 6
-     - 96
-   * - H
-     - 1,008
-     - 4
-     - 4,032
-   * - 
-     - 
-     - mólmassi =
-     - 172,176
+  .. list-table:: Lausn á dæmi 2.3 í bókinni
+     :widths: 5 5 5 5
+     :header-rows: 1
 
-:math:`\text{sameindamassi} = \frac{\text{mólmassi}}{N_A} = \frac{172,176 \text{g/mól}}{6,02\cdot10^{23}\text{eindir}/\text{mól}} = 2,86\cdot10^{-22}\text{g}/\text{eind}`
+     * - Frumefni
+       - Massi/mól [g/mól]
+       - Fjöldi móla
+       - Alls [g]
+     * - Ca
+       - 40,08
+       - 1
+       - 40,08
+     * - S
+       - 32,064
+       - 1
+       - 30,064
+     * - O
+       - 16
+       - 6
+       - 96
+     * - H
+       - 1,008
+       - 4
+       - 4,032
+     * - 
+       - 
+       - mólmassi =
+       - 172,176
+
+  :math:`\text{sameindamassi} = \frac{\text{mólmassi}}{N_A} = \frac{172,176 \text{g/mól}}{6,02\cdot10^{23}\text{eindir}/\text{mól}} = 2,86\cdot10^{-22}\text{g}/\text{eind}`
 
 Orka í bindingum og kraftar milli frumeinda
 -------------------------------------------
+
+.. panopto:: 24fb07ae-23e9-4068-9002-b04d00a47940
+    :width: 100%
+    :height: 400
 
 Lennard- Jones (Breti, setti tilgátuna fram 1931) ;
 
@@ -176,9 +200,8 @@ Krafturinn
 Jafnframt gildir (almennt);
 
 * Efni með háa bindiorku (:math:`\Phi_0`) hafa hátt bræðsluhitastig, og mynda fast efni við stofuhita..
-* Fjaðurstuðull :math:`E_{mod}=\frac{\delta F_r}{\delta r}`, .. því dýpri og krappari sem “dældin” á :math:`\Phi-r`\ línuritinu
-er, því stífara er efnið..
-
+* Fjaðurstuðull :math:`E_{mod}=\frac{\delta F_r}{\delta r}`, .. því dýpri og krappari sem “dældin” á :math:`\Phi-r` línuritinu
+  er, því stífara er efnið..
 
 Efnafræðilegir bindingar (myndun sameinda)
 ------------------------------------------

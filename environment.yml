@@ -8,6 +8,7 @@ dependencies:
   - python=3.10.*
   - sphinx-rtd-theme=1.2.*
   - sphinxcontrib-youtube
+  - sphinxcontrib-bibtex
   - pyyaml=6.*
   - jinja2=3.*
   - sphinx-autobuild=2021.3.14
@@ -28,4 +29,3 @@ dependencies:
     - sphinxcontrib-sagecell @ https://github.com/edbook/sphinxcontrib-sagecell/archive/refs/tags/v2.0.zip
     - sphinxcontrib-scrolldepth @ https://github.com/edbook/sphinxcontrib-scrolldepth/archive/refs/tags/v2.0.zip
     - sphinxcontrib-toggleblock @ https://github.com/edbook/sphinxcontrib-toggleblock/archive/refs/tags/v2.0.zip
-    - sphinxcontrib-bibtex

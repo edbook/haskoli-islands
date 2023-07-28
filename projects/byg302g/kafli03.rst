@@ -29,6 +29,10 @@ hugtakið er þó enn til í heitinu kornarúmþyngd.
 
 Holrýmd (porøsitet)
 
+.. panopto:: 5ad66baa-2db4-4802-8bce-b04b00d2f1f9
+    :width: 100%
+    :height: 400
+
 .. math::
   p = p_å = \frac{V_å}{V}
 

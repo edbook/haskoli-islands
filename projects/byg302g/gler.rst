@@ -3,11 +3,11 @@ Kafli - Gler
 (byggt á Burström, 2001, ofl.)
 
 Gler er algengt byggingarefni og ber mest á því sem rúðugleri, en er einnig notað í
-glerjung á ýmsa hluti s.s. hreinlætistæki.
+glerjung á ýmsa hluti s.s. hreinlætistæki. :math:`\require{\mhchem}` 
 
 Samsetning 
 ~~~~~~~~~~
-:math:`\require{\mhchem}` Gler samanstendur af glermyndunarefni (oxíð sem krystallast ekki við kælingu),
+Gler samanstendur af glermyndunarefni (oxíð sem krystallast ekki við kælingu),
 algengast er kísiloxíð (:math:`\ce{SiO2}`) og bóroxíð (:math:`\ce{B2O3}`), það síðarnefnda er þó vatnsleysanlegt og
 því aðeins notað með kísiloxíði. Kísiloxíð er um 70 % þyngdar í gleri, og er unnið úr
 kvartssandi. Þar sem bræðsluhiti sandsins er um 1700 :math:`^{\circ}C` þá er bætt við öðrum oxíðum,
