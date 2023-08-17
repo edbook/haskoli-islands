@@ -94,10 +94,9 @@ b) Hve stórt er hlutfall ískristalla við :math:`-10^{\circ}C`
 
 Svar:
 
-a) lárétt lína dregin við :math:`-10^{\circ}C` og lóðrétt við 10 % :math:`NaCl`—skurðpunktur í fasa
-  “saltlake + iskristaller” (saltpækill með ískristöllum).
-b) Notum jafnvægisregluna; :math:`n_1` = hlutfall ískristalla, :math:`n_2` hlutfall saltpækils; almennt
-  gildir þá fyrir hlutföll eftir láréttu línunni;
+a) lárétt lína dregin við :math:`-10^{\circ}C` og lóðrétt við 10 % :math:`NaCl`—skurðpunktur í fasa “saltlake + iskristaller” (saltpækill með ískristöllum).
+
+b) Notum jafnvægisregluna; :math:`n_1` = hlutfall ískristalla, :math:`n_2` hlutfall saltpækils; almennt gildir þá fyrir hlutföll eftir láréttu línunni;
 
     .. math::
       n_1 \cdot l_1 = n_2 \cdot l_2  \qquad \textrm{ásamt} \qquad n_1 + n_2 = 1

@@ -264,21 +264,21 @@ jöfnu 5.8;
   :widths: 5 5 5
   :header-rows: 0
 
-    * - :math:`r`
-      - radíus hárpípu
-      - m
-    * - :math:`\rho`
-      - eðlisþéttleiki vökvans
-      - :math:`kg/m^3`
-    * - :math:`H`
-      - vökvahæð í pípunni
-      - m
-    * - :math:`\sigma`
-      - yfirborðsspenna vatns við hitastig T
-      - N/m
-    * - :math:`\theta`
-      - snertihorn vökvans við pípuna
-      - --
+  * - :math:`r`
+    - radíus hárpípu
+    - m
+  * - :math:`\rho`
+    - eðlisþéttleiki vökvans
+    - :math:`kg/m^3`
+  * - :math:`H`
+    - vökvahæð í pípunni
+    - m
+  * - :math:`\sigma`
+    - yfirborðsspenna vatns við hitastig T
+    - N/m
+  * - :math:`\theta`
+    - snertihorn vökvans við pípuna
+    - --
 
 .. figure:: ./myndir/kafli05/Harpipa.png
   :align: center
@@ -349,8 +349,9 @@ Svar:
 
 Rakaupptaka efna
 ----------------
-Jafnvægisrakalínan er illa skilgreind við mjög háan efnisraka...
- og þá stundum notuð “suctions” kúrfa í staðinn... á milli þessara kúrfa er þó samband:
+
+Jafnvægisrakalínan er illa skilgreind við mjög háan efnisraka... og þá stundum 
+notuð “suctions” kúrfa í staðinn... á milli þessara kúrfa er þó samband:
 Útfrá jöfnu 5.6 er mismunaþrýstingurinn :math:`p_{suc}` skilgreindur sem
 
 .. admonition:: Jafna 5.9
@@ -403,7 +404,7 @@ Rakaflutningur verður með þrennu móti;
 Skoðuð eru einfölduð, afmörkuð tilvik, í reynd samverka þau eitthvað en háð aðstæðum.
 
 Vatnsflutningur vegna mismunaþrýstings í vatni
----------------------------------------------
+----------------------------------------------
 
 Einfaldað líkan: Vatnsflutningur í pípu
 Meðalvökvahraða í sívalri pípu má ákvarða ef þrýstistigullinn (d:gradient) er þekktur

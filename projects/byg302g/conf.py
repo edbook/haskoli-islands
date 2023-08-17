@@ -1,3 +1,3 @@
 from edbook.conf import *  # type: ignore
-extensions = ['sphinxcontrib.bibtex']
+extensions.append('sphinxcontrib.bibtex')
 bibtex_bibfiles = ['refs.bib']

@@ -352,6 +352,7 @@ Varmaflutningur er háður geislun, streymi og leiðni, en iðulega eru þessir 
 .. figure:: ./myndir/kafli04/Leidnivsthettleiki.png
   :align: center
   :width: 70%
+
 Mynd 4.1. Áhrif leiðni og geislunnar á leiðnitölu trefjakennds einangrunarefnis.
 
 .. figure:: ./myndir/kafli04/Leidnivshitastig.png
