@@ -1,0 +1,4 @@
+Kafli - Heimildir
+==========================
+
+.. bibliography::
