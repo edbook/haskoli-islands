@@ -251,7 +251,7 @@ Setning: Lograreglur
 
 		#. :math:`\ln(ab)=\ln(a)+\ln(b)`
 
-		#. :math:`ln(a/b) = \ln(a)-\ln(b)`
+		#. :math:`\ln(a/b) = \ln(a)-\ln(b)`
 
 		#. :math:`\ln(a^r)=r\ln(a)`
 

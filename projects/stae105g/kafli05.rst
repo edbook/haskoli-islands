@@ -93,13 +93,13 @@ Dæmi: Stofnfall
 .. admonition:: Dæmi
   :class: daemi
 
-		#. :math:`f(x)=3x^2` á sér stofnfallði :math:`F(x)=x^3` af því :math:`F'(x)=3x^2`.
+		#. :math:`f(x)=3x^2` á sér stofnfallið :math:`F(x)=x^3` af því :math:`F'(x)=3x^2`.
 
-		#. :math:`f(x)=\frac{1}{x}` á sér stofnfallði :math:`F(x)=\ln(x)` af því :math:`F'(x)=\frac{1}{x}`.
+		#. :math:`f(x)=\frac{1}{x}` á sér stofnfallið :math:`F(x)=\ln(x)` af því :math:`F'(x)=\frac{1}{x}`.
 
-		#. :math:`f(x)=\cos(x)` á sér stofnfallði :math:`F(x)=\sin(x)` af því :math:`F'(x)=\cos(x)`.
+		#. :math:`f(x)=\cos(x)` á sér stofnfallið :math:`F(x)=\sin(x)` af því :math:`F'(x)=\cos(x)`.
 
-		#. :math:`f(x)=e^x` á sér stofnfallði :math:`F(x)=e^x` af því :math:`F'(x)=e^x`.
+		#. :math:`f(x)=e^x` á sér stofnfallið :math:`F(x)=e^x` af því :math:`F'(x)=e^x`.
 
 ---------
 
@@ -158,28 +158,25 @@ Setning: Veldisregla fyrir heildi
 
 	.. math:: \int x^n dx = \frac{x^{n+1}}{n+1}+C.
 
-Ábending: Gagnleg óeiginleg heildi og afleiður
+Ábending: Gagnleg óákveðin heildi og afleiður
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Athugasemd
   :class: Athugasemd
 
-	.. csv-table:: Óeiginleg heildi og afleiður sem gott er að kannast við
+	.. csv-table:: Óákveðin heildi og afleiður sem gott er að kannast við
 		:widths: 50, 50
 
-		"**Afleiða**","**Óeiginlegt heildi**"
+		"**Afleiða**","**Óákveðin heildi**"
 		":math:`\frac{d}{dx} k = 0`", ":math:`\int k dx = kx+C`"
 		":math:`\frac{d}{dx} x^n = nx^{n-1}`", ":math:`\int x^n dx = \frac{x^{n+1}}{n+1}+C \text{ fyrir } n \neq -1`"
 		":math:`\frac{d}{dx} \ln(|x|)=\frac{1}{x}`", ":math:`\int \frac{1}{x} dx = \ln(|x|)+C`"
 		":math:`\frac{d}{dx} e^x = e^x`", ":math:`\int e^x dx = e^x+C`"
 		":math:`\frac{d}{dx} \sin(x) = \cos(x)`", ":math:`\int \cos(x) dx = \sin(x)+C`"
 		":math:`\frac{d}{dx} \cos(x) = -\sin(x)`", ":math:`\int \sin(x) dx = -\cos(x)+C`"
-		":math:`\frac{d}{dx} \tan(x) = \frac{1}{\cos^2(x)}`", ":math:`\int e^x dx = e^x+C`"
-		":math:`\frac{d}{dx} \sin^{-1}(x) = \frac{1}{\sqrt{1-x^2}}`", ":math:`\int \frac{1}{\sqrt{1-x^2}} dx = \sin^{-1}(x)+C`"
-		":math:`\frac{d}{dx} \cos^{-1}(x) = -\frac{1}{\sqrt{1-x^2}}`", ":math:`\int -\frac{1}{\sqrt{1-x^2}} dx = \cos^{-1}(x)+C`"
-		":math:`\frac{d}{dx} \tan^{-1}(x) = \frac{1}{1+x^2}`", ":math:`\int \frac{1}{1+x^2} dx = \tan^{-1}(x)+C`"
+		":math:`\frac{d}{dx} \tan(x) = \frac{1}{\cos^2(x)}`", ":math:`\int frac{1}{\cos^2(x)} dx = \tan(x)+C`"
 
-Reiknireglur: Óeiginleg heildi
+Reiknireglur: Óákveðin heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Reiknireglur: Óeiginleg heildi
@@ -357,7 +354,7 @@ t.a.m. summan :math:`\sum_{i=1}^{20}` með 20 liðum en :math:`\sum_{i=21}^{30}`
 
 Summuna hér að ofan mætti rita
 
-.. math:: \sum_{i=1}^{10} i.
+.. math:: \sum_{i=1}^{20} i.
 
 Hún byrjar þá á því að láta :math:`i=1`, í næsta skrefi leggur hún við
 :math:`i=2` og svo koll af kolli upp í :math:`i=20`. Almennt form summu er
@@ -434,7 +431,7 @@ Skilgreining: Skipting
 
 Reglulega skiptingu bils má svo nota sem grunninn að því að meta svæði undir ferli.
 
-Setning: Nálgun með vinstri endapunkti
+Setning: Nálgun við vinstri endapunkt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
@@ -445,16 +442,16 @@ Setning: Nálgun með vinstri endapunkti
 	í vinstri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i-1})\cdot \Delta x_i`.
 	Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
 	flatarmál svæðisins :math:`A`. Við notum ritháttinn :math:`L_n` til að tákna að
-	þetta sé nálgun með vinstri endapunkti (:math:`L` fyrir e. *left*) með :math:`n`
+	þetta sé nálgun við vinstri endapunkt (:math:`L` fyrir e. *left*) með :math:`n`
 	hlutbilum. Formúlan er því
 
 	.. math:: A \approx L_n = \sum_{i=1}^n f(x_{i-1})\cdot \Delta x.
 
-	.. image:: ./myndir/kafli05/PMA_L6.png
+	.. image:: ./myndir/kafli05/PMA_L6.jpg
 		:align: center
 		:width: 75%
 
-Dæmi: Nálgun með vinstri endapunkti
+Dæmi: Nálgun við vinstri endapunkt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Dæmi
@@ -480,7 +477,7 @@ Dæmi: Nálgun með vinstri endapunkti
 	 :align: center
 	 :width: 75%
 
-Setning: Nálgun með hægri endapunkti
+Setning: Nálgun við hægri endapunkt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
@@ -491,7 +488,7 @@ Setning: Nálgun með hægri endapunkti
 	í hægri endapunkti hlutbilsins. Þá er flatarmál þessa rétthyrnings :math:`f(x_{i})\cdot \Delta x_i`.
 	Ef við summum saman flatarmál allra þessara rétthyrninga fæst nálgunargildi á
 	flatarmáli svæðisins :math:`A`. Við notum ritháttinn :math:`R_n` til að tákna að
-	þetta sé nálgun með vinstri endapunkti (:math:`R` fyrir e. *right*) með :math:`n`
+	þetta sé nálgun við vinstri endapunkt (:math:`R` fyrir e. *right*) með :math:`n`
 	hlutbilum. Formúlan er því
 
 	.. math:: A \approx R_n = \sum_{i=1}^n f(x_{i})\cdot \Delta x.
@@ -500,7 +497,7 @@ Setning: Nálgun með hægri endapunkti
 		:align: center
 		:width: 75%
 
-Dæmi: Nálgun með hægri endapunkti
+Dæmi: Nálgun við hægri endapunkt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Dæmi
@@ -722,7 +719,7 @@ Setning: Reiknireglur: ákveðin heildi
 
 		#. :math:`\int_b^a f(x) dx = - \int_a^b f(x) dx`
 
-		#. :math:`\int_a^n (f(x) \pm g(x))dx = \int_a^b f(x) dx \pm \int_a^b g(x) dx`
+		#. :math:`\int_a^b (f(x) \pm g(x))dx = \int_a^b f(x) dx \pm \int_a^b g(x) dx`
 
 		#. :math:`\int_a^b c f(x) dx = c \int_a^b f(x) dx`
 
@@ -998,21 +995,18 @@ Dæmi: Innsetning í óákveðin heildi
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Hér er :math:`f(x)=x^4`, :math:`g(x)=3x^2+4` og þ.a.l. :math:`g'(x)=6x`. Þá
-	segir setningin um innsetningu í óákveðin heildi að
+	Þetta heildi mætti skrifa 
 
-	.. math:: \int 6x(3x^2+4)^4 dx = F(3x^2+4) + C.
+	.. math:: \int u^4 du
 
-	Finnum nú eitthvað stofnfall fyrir :math:`f`. T.d. :math:`F(x) = \frac{1}{5}x^5.`
+	þar sem við höfum beitt innsetningunni :math:`u=3x^2+4` og með því að diffra fæst :math:`du = 6x dx`. Fáum nú að 
 
-	Þá er
+	.. math:: \int u^4 du = \frac{1}{5} u^5 + C.
 
-	.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5 + C.
+	Við stingum nú aftur inn fyrir :math:`u` og fáum að svarið er 
 
-	Þar sem valið á fastanum :math:`C` er frjálst megum við t.d. velja :math:`C=1`
-	og fáum þá að
+	.. math:: \frac{1}{5} (3x^2+4)^5 + C.
 
-	.. math:: \int 6x(3x^2+4)^4 dx = \frac{1}{5}(3x^2+4)^5+1.
 
 Setning: Innsetning í ákveðin heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1049,7 +1043,7 @@ Dæmi: Innsetning í ákveðin heildi
 	Ef við notum þá aðferð sem við kynntum í
 	kaflanum um diffur þá má líta á :math:`du` og :math:`dx` sem breytur og rita
 
-	.. math:: du = 6x^2 dx \Leftrightarrow \frac{1}{6} du = x^2 dx`.
+	.. math:: du = 6x^2 dx \Leftrightarrow \frac{1}{6} du = x^2 dx.
 
 	Með því að nota innsetninguna þá skiptum við :math:`x^2 dx` í heildinu út fyrir :math:`\frac{1}{6} du`
 	og :math:`(1+2x^3)^5` út fyrir :math:`u^5`. Það eina sem eftir stendur er að

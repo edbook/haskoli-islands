@@ -153,19 +153,19 @@ Dæmi: Upphafsgildisverkefni
 	Þessi diffurjafna er aðgreinanleg og við getum því heildað báðar hliðar hennar
 	til að fá að
 
-	.. math:: y = 3e^x + \frac{1}{3}x^3 - 4x + C
+	.. math:: y = 3e^x + x^2 + 3x + C
 
 	sé almenn lausn hennar. Stingum nú upphafsgildinu :math:`y(0)=5` inn til
 	að finna sérlausnina, þ.e.
 
 	.. math::
 		\begin{align}
-			5 &= 3e^0 + \frac{1}{3}\cdot 0^3 - 4\cdot 0 + C\\
+			5 &= 3e^0 + 0^2 + 3 \cdot 0 + C\\
 			5 &= 3 + C\\
 			C &= 2.
 		\end{align}
 
-	Sérlausn diffurjöfnunnar, þ.e. lausn upphafsgildisverkefnisins er því :math:`y=3e^x + \frac{1}{3}x^3-4x+2`.
+	Sérlausn diffurjöfnunnar, þ.e. lausn upphafsgildisverkefnisins er því :math:`y=3e^x + x^2+3x+2`.
 
 --------
 
@@ -312,7 +312,7 @@ Skilgreining: Lógistísk diffurjafna
 
 	.. math:: \frac{dP}{dt} = rP\left(1-\frac{P}{K}\right).
 
-	Ef lógistíska diffurjafnan er pöruð með upphafsgildinu :math:`P(0)=0` myndar
+	Ef lógistíska diffurjafnan er pöruð með upphafsgildinu :math:`P_0` myndar
 	hún upphafsgildsiverkefni fyrir :math:`P(t)`.
 
 Setning: Lausn lógistískra diffurjafna
@@ -342,7 +342,7 @@ Dæmi: Lógistísk diffurjafna
 	Ef svæðið sem hreindýrin lifa á er 39.732 ferkílómetrar og hver ferkílómetri getur
 	hýst í mestalagi 27 hreindýr þá er burðargeta svæðsisins
 
-	.. math:: K = 39.732 \cdot 27.1.072.764.
+	.. math:: K = 39.732 \cdot 27 = 1.072.764.
 
 	Við skulum:
 
@@ -354,7 +354,6 @@ Dæmi: Lógistísk diffurjafna
 
 		d) Finna hvenær stofninn mun ná stærðinni 1.200.000.
 
-ALVÖRU:
 
 .. admonition:: Lausn
   :class: daemi, dropdown
