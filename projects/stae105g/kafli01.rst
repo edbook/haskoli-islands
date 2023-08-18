@@ -548,7 +548,7 @@ Margliður hafa almenna formið
 og köllum þá fallið :math:`f(x)=0` *núllfallið*.
 
 Margliða af núlta stigi er einnig stundum kölluð *fastafall*.
-Línur fyrsta stigs margliður þar sem :math:`n=1` og forystustuðullinn
+Línur eru fyrsta stigs margliður þar sem :math:`n=1` og forystustuðullinn
 :math:`a_n` er hallatala línunnar. Margliða af öðru stigi kallast ferningsfall
 og er graf hennar fleygbogi. Fyrir fleygboga gildir að sé :math:`a_n>0` þá er
 fleygboginn *kúptur* (uppsveigður) en ef :math:`a_n<0` þá er hann *hvelfdur* (niðursveigður).
@@ -556,13 +556,11 @@ fleygboginn *kúptur* (uppsveigður) en ef :math:`a_n<0` þá er hann *hvelfdur*
 Veldisföll
 ~~~~~~~~~~~
 
-Veldisfall er skilgreint sem fall sem hefur formið
+Fall á forminu
 
-.. math:: f(x) = ax^b
+.. math:: f(x) = ax^n
 
-þar sem :math:`a,b\in \mathbb{R}`. Í því tilfelli sem :math:`b \in \mathbb{N}_0`
-þá er veldisfallið margliða af :math:`n`-ta stigi þar sem :math:`a_{n-1}=a_{n-2} = \ldots =a_0 = 0`.
-Ef :math:`n` er slétt tala þá er fallið :math:`f(x)` jafnstætt en oddstætt ef
+þar sem :math:`a,n\in \mathbb{R}` nefnist veldisfall. Í því tilfelli sem :math:`n \in \mathbb{N}_0` (þ.e.a.s :math:`n` er einhver náttúruleg tala eða 0) og :math:`a \neq 0` þá er veldisfallið margliða af :math:`n`-ta stigi þar sem allir stuðlar nema forystustuðullinn eru 0, þ.e. :math:`a_{n-1}=a_{n-2} = \ldots =a_0 = 0`. Ef :math:`n` er slétt tala þá er fallið :math:`f(x)` jafnstætt en oddstætt ef
 :math:`n` er oddatala.
 
 Hér er fallið :math:`g(x)` oddstætt en :math:`f(x)` jafnstætt.
@@ -821,10 +819,10 @@ að nota radíana, vegna tengingar þeirra við einingahringinn, og verður þa�
    :widths: 35 35 35 35
    :header-rows: 1
 
-   * - Rad
-     - Deg
+   * - Deg
      - Rad
      - Deg
+     - Rad
    * - :math:`0`
      - :math:`0`
      - :math:`120`
@@ -833,7 +831,7 @@ að nota radíana, vegna tengingar þeirra við einingahringinn, og verður þa�
      - :math:`\pi/6`
      - :math:`135`
      - :math:`3\pi/4`
-   * - :math:`145`
+   * - :math:`45`
      - :math:`\pi/4`
      - :math:`150`
      - :math:`5\pi/6`
@@ -1130,7 +1128,7 @@ Formlega má skilgreina andhverfu falls á eftirfarandi vegu.
 Ekki eru öll föll andhverfanleg, þ.e.a.s. ekki eiga öll föll sér andhverfur.
 Fall er andhverfanlegt ef og aðeins ef það er gagntækt, þ.e. eintækt og átækt.
 Til að mynda, þá er fallið :math:`g(x)=\sqrt{x}` ekki andhverfa fallsins :math:`f(x)=x^2`
-þar sem ekki er til neitt stak :math:`y`í myndmengi :math:`f` þannig að :math:`g(y)=-2`,
+þar sem ekki er til neitt stak :math:`y` í myndmengi :math:`f` þannig að :math:`g(y)=-2`,
 sem brýtur í bága við skilgreininguna á andhverfu þar sem :math:`-2` er í skilgreiningarmengi
 :math:`f`. Þetta er bein afleiðing þess að fallið :math:`x^2` er ekki eintækt.
 
@@ -1145,7 +1143,7 @@ sem brýtur í bága við skilgreininguna á andhverfu þar sem :math:`-2` er í
   deila engin tvö :math:`x`-gildi sama :math:`y`-gildinu þegar kemur að fallinu
   :math:`x^3`. Fallið er því eintækt. Þar að auki er fallið átækt þar sem að
   fyrir sérhvert :math:`y`-gildi er til eitthvað :math:`x`-gildi þannig að
-  :math:`y=x^3`. Þar með er fallið anhverfanlegt, samhvæmt því sem kom fram
+  :math:`y=x^3`. Þar með er fallið anhverfanlegt, samkvæmt því sem kom fram
   hér fyrir ofan.
 
   Einföld leið til að ákvaðarða hvort fall sé eintækt er að athuga hvort til sé
@@ -1226,7 +1224,7 @@ Dæmi: Takmörkun skilgreiningarmengis
   :class: daemi
 
   Takmörkum skilgreiningarmengi fallsins :math:`f(x)=x^2` við
-  :math:`\mathbb{R} \cup \{0\}`, þ.e. jákvæðar rauntölur eða 0. Finnum andhverfu þess.
+  :math:`\mathbb{R}_+ \cup \{0\}`, þ.e. jákvæðar rauntölur eða 0. Finnum andhverfu þess.
 
 .. admonition:: Lausn
   :class: daemi, dropdown

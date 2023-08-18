@@ -296,7 +296,7 @@ Skilgreining: Ósamfelldur heildisstofn
 
 		.. math:: \int_a^b f(x) dx = \lim_{t \rightarrow b^-} \int_a^t f(x) dx.
 
-		(ii) Látum :math:`f(x) vera samfellt á bilinu :math:`]a,b]`. Þá gildir
+		(ii) Látum :math:`f(x)` vera samfellt á bilinu :math:`]a,b]`. Þá gildir
 
 		.. math:: \int_a^b f(x) dx = \lim_{t \rightarrow a^+} \int_t^b f(x) dx.
 

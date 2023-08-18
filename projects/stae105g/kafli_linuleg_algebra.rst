@@ -46,7 +46,7 @@ Fylki má almennt rita sem:
 .. math::
   \mathbf{A}=\begin{bmatrix}
     a_{11} & a_{12} & \dots & a_{1n}\\
-    a_{11} & a_{12} & \dots & a_{1n}\\
+    a_{21} & a_{22} & \dots & a_{2n}\\
     \vdots & \vdots & \ddots & \vdots \\
     a_{m1} & a_{m2} & \dots & a_{mn}\\
   \end{bmatrix}
@@ -321,7 +321,7 @@ Dæmi: Fylkjaandhverfa
   og :math:`\mathbf{J}` er fylkið
 
   .. math::
-    \mathbf{H}=\begin{bmatrix}
+    \mathbf{J}=\begin{bmatrix}
       \tfrac{1}{4} & 0 & 0\\
       0 & \tfrac{1}{3} & 0\\
       0 & 0 & 1\\
