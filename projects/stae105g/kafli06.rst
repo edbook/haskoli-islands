@@ -435,7 +435,7 @@ má lýsa með formúlunni
 
 .. math:: y=y_0e^{kt}
 
-þar sem :math:`y_0`er upphafsástand kerfisins og :math:`k` er jákvæður fasti. Athugið
+þar sem :math:`y_0` er upphafsástand kerfisins og :math:`k` er jákvæður fasti. Athugið
 að um þessi líkön gildir að
 
 .. math:: y' = ky_0e^{kt} = ky.
@@ -453,7 +453,7 @@ Setning: Veldisvísisvöxtur
 
 	.. math:: y = y_0e^{kt}
 
-	þar sem :math:`y_0`er upphafsástand kerfisins og :math:`k` er jákvæður fasti
+	þar sem :math:`y_0` er upphafsástand kerfisins og :math:`k` er jákvæður fasti
 	sem kallaður er *vaxtarfasti*.
 
 Dæmi: Veldisvísisvöxtur

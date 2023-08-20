@@ -866,8 +866,8 @@ Setning: Heildisprófið
 .. admonition:: Setning
   :class: setning
 
-	Gerum ráð fyrir að :math:`\sum_{n=1}^\infty a_i` sé röð af jákvæðum liðum :math:`a_n`þ
-	Gerum einnig ráð fyrir að til sé fall :math:`f` og jákvæð heiltala :math:`N`
+	Gerum ráð fyrir að :math:`\sum_{n=1}^\infty a_i` sé röð af jákvæðum liðum :math:`a_n` og 
+	gerum einnig ráð fyrir að til sé fall :math:`f` og jákvæð heiltala :math:`N`
 	þannig að eftirfarandi þrjú skilyrði séu uppfyllt:
 
 		#. :math:`f` er samfellt
