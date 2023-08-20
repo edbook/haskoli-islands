@@ -1083,7 +1083,7 @@ Setning: Heildi vísisfalla
 
 	Vísisföll má heilda með því að nota eftirfarandi formúlur.
 
-	 	#. :math:`\int e^x dx = e^x + C:`
+	 	#. :math:`\int e^x dx = e^x + C`
 
 		#. :math:`\int a^x dx = \frac{a^x}{\ln(a)} + C`
 

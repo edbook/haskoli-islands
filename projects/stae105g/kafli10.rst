@@ -625,7 +625,7 @@ Setning: Samleitni Taylor-raða
 
   .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n
 
-  samleitin að :math:`f(x)`fyrir öll :math:`x\in I` ef og aðeins ef
+  samleitin að :math:`f(x)` fyrir öll :math:`x\in I` ef og aðeins ef
 
   .. math:: \lim_{n \rightarrow \infty} R_n(x) = 0
 

@@ -187,7 +187,7 @@ Skilgreining: Útgildi
 
   .. math:: f(x) \leq f(x_0), \quad \text{ fyrir öll } x \in ]a,b[.
 
-  Við segjum að fall 𝑓 hafi staðbundið lággildi í punktinum math:`x_0` ef til er bil math:`]a,b[` umhverfis math:`x_0`, sem er þannig að
+  Við segjum að fall :math:`f` hafi staðbundið lággildi í punktinum :math:`x_0` ef til er bil :math:`]a,b[` umhverfis :math:`x_0`, sem er þannig að
 
   .. math:: f(x) \geq f(x_0), \quad \text{ fyrir öll } x \in ]a,b[.
 
@@ -268,7 +268,7 @@ Skilgreining: Beygjuskil og beygjuskilapunktur
     :width: 75%
 
 
-Líkt og áður segir þá gildir að sé fall math:`f` tvídiffranlegt á bilinu math:`I` þá er math:`f` kúpt þar sem math:`f'' \geq 0` á bilinu og hvelft þar sem math:`f'' \leq 0` á bilinu. Þar sem beygjuskilapunktur markar þau mót þar sem fallið breytir um sveigju má til sanns vegar færa að ef math:`f` hefur beygjuskil í math:`a` þá er math:`f''(a)=0`. Athugum þó að þetta þýðir ekki að ef math:`f''(a)=0` þá séu endilega beygjuskil í math:`a`; það er nauðsynleg en ekki nægjanleg forsenda fyrir beygjuskilum. Annað skilyrði sem uppfylla þarf er að formerki annarrar afleiðu fallsins breytist í math:`a`. 
+Líkt og áður segir þá gildir að sé fall :math:`f` tvídiffranlegt á bilinu :math:`I` þá er :math:`f` kúpt þar sem :math:`f'' \geq 0` á bilinu og hvelft þar sem math:`f'' \leq 0` á bilinu. Þar sem beygjuskilapunktur markar þau mót þar sem fallið breytir um sveigju má til sanns vegar færa að ef :math:`f` hefur beygjuskil í :math:`a` þá er :math:`f''(a)=0`. Athugum þó að þetta þýðir ekki að ef :math:`f''(a)=0` þá séu endilega beygjuskil í :math:`a`; það er nauðsynleg en ekki nægjanleg forsenda fyrir beygjuskilum. Annað skilyrði sem uppfylla þarf er að formerki annarrar afleiðu fallsins breytist í :math:`a`. 
 
 
 Dæmi: Beygjuskilapunktur

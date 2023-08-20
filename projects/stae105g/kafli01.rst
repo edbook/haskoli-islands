@@ -1469,7 +1469,7 @@ náttúrulega logrann og veldisvísisfallið.
 
   #. :math:`\log_b(\frac{a}{c})=\log_b(a)-\log_b(c)`
 
-  #. :math:`\log(a^r))r\log_b(a)`
+  #. :math:`\log(a^r))=r\log_b(a)`
 
   *Reglur um lograstofn.*
 
