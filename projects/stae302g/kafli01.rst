@@ -57,8 +57,8 @@ Eftirfarandi reiknireglur gilda um tvinntölur:
 
 (vii) Talan :math:`1=1+i0` er margföldunarhlutleysa, þ.e.a.s. \ :math:`1(a+ib)=a+ib`.
 
-Ritháttur.
-~~~~~~~~~~ 
+Ritháttur
+~~~~~~~~~ 
 
 Þegar unnið er með tvinntölur þá er ekki gerður
 greinarmunur á rauntölunni :math:`a` og tvinntölunni :math:`a+i0.` Því
