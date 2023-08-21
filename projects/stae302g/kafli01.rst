@@ -23,8 +23,8 @@ samlagningu þá eru stökin í :math:`\mathbb{R}^2` kallaðar tvinntölur og me
 líta má á tvinntölu sem punkt í planinu :math:`\mathbb{R}^2` þá er talað um
 tvinntalnaplanið.
 
-Ritháttur. 
-~~~~~~~~~~
+Ritháttur 
+~~~~~~~~~
 
 Þegar fjallað er um tvinntölur þá er stakið :math:`(a,b)`
 venjulega ritað sem :math:`a+ib`.
