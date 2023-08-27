@@ -315,7 +315,7 @@ Dæmi: Samskeyting
 
   Skoðum föllin :math:`f:\mathbb R \to \mathbb R, f(x) = 2x-1`
   og :math:`g:\mathbb R \to \mathbb R, g(x) = x^2`.
-  Finnum :math:`g\circ f`.
+  Finnum :math:`g\circ f(x)`.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
@@ -323,12 +323,12 @@ Dæmi: Samskeyting
   Höfum að
 
   .. math::
-      g \circ f = g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
+      g \circ f(x) = g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1
 
   Athugið að samskeytingin :math:`f \circ g` er ekki sama fallið:
 
   .. math::
-    f \circ g = f(g(x)) = f(x^2) = 2x^2-1
+    f \circ g(x) = f(g(x)) = f(x^2) = 2x^2-1
 
   .. index::
       fall; átækt
@@ -388,8 +388,10 @@ Skilgreining: Andhverfa
     mengi af rauntölum. Þegar :math:`Y` er mengi af tölum þá er notast við
     orðið :hover:`fall` í stað orðsins *vörpun*.
 
-.. index::
-    fall; graf
+.. admonition:: Athugasemd
+  :class: athugasemd
+
+    Til þess að fall sé andhverfanlegt þarf það að vera *gagntækt*.
 
 Dæmi: Andhverfa
 ~~~~~~~~~~~~~~~
@@ -403,7 +405,7 @@ Dæmi: Andhverfa
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-  Þar sem :math:`f` gagntæk vörpun er andhverfan er gefin með
+  Þar sem :math:`f` er gagntæk vörpun er andhverfan til og er gefin með
   :math:`f^{-1}(x) = \sqrt x`.
 
   .. image::  ./myndir/kafli01/04_andhverfa.png
@@ -412,10 +414,11 @@ Dæmi: Andhverfa
 
 Athugum að hér má velja :math:`X` sem önnur mengi en :math:`[0,2]` svo lengi sem
 :math:`X` inniheldur ekki bæði :math:`a` og :math:`-a`, :math:`a\neq 0`,
-því þá er :math:`f` ekki lengur eintæk.
+því þá er :math:`f` ekki lengur eintæk. Mengið :math:`Y` yrði svo valið sem 
+myndmengið :math:`f(X)`.
 
-Mengið :math:`Y` er svo valið sem myndmengið :math:`f(X)`.
-
+.. index::
+    fall; graf
 
 Skilgreining: Graf
 ~~~~~~~~~~~~~~~~~~~
@@ -712,7 +715,7 @@ Hér fyrir neðan er sama falli hliðrað til hægri og vinstri um 2, meðfram :
     :width: 75 %
     :align: center
 
-Almennt gildir fyrir fallið :math:`y=f(x)` að :math:`y=f(x+b)` hliðrar fallinu til hægri
+Almennt gildir fyrir fallið :math:`y=f(x)` að :math:`y=f(x-b)` hliðrar fallinu til hægri
 um :math:`b` ef :math:`b>0` en til vinstri um :math:`b` ef :math:`b<0`.
 
 Skölun með jákvæðum fasta
