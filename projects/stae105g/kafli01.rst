@@ -715,7 +715,7 @@ Hér fyrir neðan er sama falli hliðrað til hægri og vinstri um 2, meðfram :
     :width: 75 %
     :align: center
 
-Almennt gildir fyrir fallið :math:`y=f(x)` að :math:`y=f(x+b)` hliðrar fallinu til hægri
+Almennt gildir fyrir fallið :math:`y=f(x)` að :math:`y=f(x-b)` hliðrar fallinu til hægri
 um :math:`b` ef :math:`b>0` en til vinstri um :math:`b` ef :math:`b<0`.
 
 Skölun með jákvæðum fasta
