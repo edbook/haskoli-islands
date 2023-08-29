@@ -816,31 +816,37 @@ að nota radíana, vegna tengingar þeirra við einingahringinn, og verður þa�
   Gott getur verið að kannast við algengar hornastærðir.
 
   .. list-table:: Radíanar og gráður
-   :widths: 35 35 35 35
+   :widths: 35 35 10 35 35
    :header-rows: 1
 
    * - Deg
      - Rad
+     - 
      - Deg
      - Rad
    * - :math:`0`
      - :math:`0`
+     - 
      - :math:`120`
      - :math:`2\pi/3`
    * - :math:`30`
      - :math:`\pi/6`
+     - 
      - :math:`135`
      - :math:`3\pi/4`
    * - :math:`45`
      - :math:`\pi/4`
+     - 
      - :math:`150`
      - :math:`5\pi/6`
    * - :math:`60`
      - :math:`\pi/3`
+     - 
      - :math:`180`
      - :math:`\pi`
    * - :math:`90`
      - :math:`\pi/2`
+     - 
      - :math:`360`
      - :math:`2\pi`
 
