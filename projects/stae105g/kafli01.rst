@@ -994,7 +994,7 @@ hornið sem myndast á milli :math:`x`-ássins og :math:`A` heita :math:`\theta`
 reglu Pýþagórasar fæst að
 
 .. math:: x^2 + y^2 = r^2\cos^2(\theta) + r^2\sin^2(\theta)
-  = r^2(cos^2(\theta)+\sin^2(\theta))=r^2
+  = r^2(\cos^2(\theta)+\sin^2(\theta))=r^2
 
 samkvæmt því sem við leiddum út hér að ofan. Þetta gildir fyrir öll :math:`r` og
 óháð horninu :math:`\theta`.
