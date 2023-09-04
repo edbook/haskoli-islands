@@ -39,7 +39,7 @@ extensions = [
     "sphinxcontrib.toggleblock",  # (https://github.com/edbook/sphinxcontrib-toogleblock)
     "sphinxcontrib.questionnaire",  # (https://github.com/edbook/sphinxcontrib-questionnaire)
     # Extension for providing Icelandic to English translation of mathematical terms
-    "sphinxcontrib.hoverrole",  # (https://github.com/edbook/sphinxcontrib-hoverrole)
+    #"sphinxcontrib.hoverrole",  # (https://github.com/edbook/sphinxcontrib-hoverrole)
     # Extension for embedding sage cells (https://github.com/edbook/sphinxcontrib-sagecell)
     # Note: sagecell must not be listed before katex.katex
     #    'sphinxcontrib.sagecell',
