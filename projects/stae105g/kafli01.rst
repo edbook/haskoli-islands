@@ -1265,7 +1265,7 @@ með þeim afleiðingum að þau verði eintæk.
 
     "**Hornafall**", ":math:`\sin(x)`", ":math:`\cos(x)`", ":math:`\tan(x)`"
     "**Tákn andhverfu**", ":math:`\sin^{-1}(x)`", ":math:`\cos^{-1}(x)`", ":math:`\tan^{-1}(x)`"
-    "**Skilgreiningarmengi**", ":math:`[-\frac{\pi}{2},\frac{\pi}{2}]`", ":math:`[0,\pi]`", ":math:`[-\frac{\pi}{2},\frac{\pi}{2}]`"
+    "**Skilgreiningarmengi**", ":math:`[-\frac{\pi}{2},\frac{\pi}{2}]`", ":math:`[0,\pi]`", ":math:`]-\frac{\pi}{2},\frac{\pi}{2}[`"
 
   .. csv-table::
     :widths: 35, 30, 30, 30
