@@ -1327,7 +1327,7 @@ fyrir um vöxt ýmissa stærða, eins og t.d. fólksfjölda, bankainnistæðu o.
 
   .. math:: f(x)=b^x
 
-  þar sem :math:`b` er einhver fasti, nefnist vísisfall.
+  þar sem :math:`b>0` er einhver fasti, nefnist vísisfall með grunntölu :math:`b`.
 
 .. admonition:: Aðvörun
   :class: advorun
@@ -1396,8 +1396,8 @@ náttúrunni og samfélaginu.
   Hægt er að túlka fastann :math:`e` sem gildið sem talan
   :math:`\left(1+\frac{1}{m}\right)^m` tekur þegar :math:`m \rightarrow \infty.`
 
-Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
-:math:`\mathbb{R}_+`. Þar sem :math:`e>0` þá er fallið vaxandi og stefnir á 0
+Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og myndmengið
+:math:`\mathbb{R}_+`. Þar sem :math:`e>1` þá er fallið vaxandi og stefnir á 0
 þegar :math:`x \rightarrow -\infty` og á :math:`\infty` þegar
 :math:`x \rightarrow \infty`.
 
@@ -1421,6 +1421,7 @@ Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
   :class: athugasemd
 
   **Veldareglur**
+  Hér eru :math:`a>0` og :math:`b>0` en :math:`x` og :math:`y` eru rauntölur.
 
   #. :math:`b^x \cdot b^y = b^{x+y}`
 
@@ -1455,8 +1456,8 @@ skilgreinir stofn lograns :math:`\log_b(x)`. Almennt gildir fyrir
 
   Mest notaði logrinn er tvímælalaust náttúrulegi logrinn :math:`\log_e{x}`, sem
   yfirleitt er skrifaður sem :math:`\ln(x)` til styttingar. Hann er andhverfa
-  veldisvísisfallsins :math:`e^x`. Skilgreiningarmengi hans er bakmengi veldisvísisfallsins,
-  þ.e. :math:`\mathbb{R}_+` og bakmengi hans er skilgreiningarmengi veldisvísisfallsins,
+  veldisvísisfallsins :math:`e^x`. Skilgreiningarmengi hans er myndmengi veldisvísisfallsins,
+  þ.e. :math:`\mathbb{R}_+` og myndmengi hans er skilgreiningarmengi veldisvísisfallsins,
   þ.e. :math:`\mathbb{R}`.
 
   .. image:: ./myndir/kafli01/PMA_lnx.png
@@ -1484,7 +1485,7 @@ náttúrulega logrann og veldisvísisfallið.
 
   #. :math:`\log_b(\frac{a}{c})=\log_b(a)-\log_b(c)`
 
-  #. :math:`\log(a^r))=r\log_b(a)`
+  #. :math:`\log_b(a^r))=r\log_b(a)`
 
   *Reglur um lograstofn.*
 
@@ -1492,7 +1493,7 @@ náttúrulega logrann og veldisvísisfallið.
 
   #. :math:`a^x = b^{x\log_b(a)}` fyrir sérhverja rauntölu :math:`x`.
 
-  #. :math:`\log_a(x)=\frac{\log_b(x)}{\log_b{a}}` fyrir sérhverja jákvæða rauntölu :math:`x`.
+  #. :math:`\log_a(x)=\frac{\log_b(x)}{\log_b(a)}` fyrir sérhverja jákvæða rauntölu :math:`x`.
 
 Breiðbogaföllin
 ~~~~~~~~~~~~~~~
