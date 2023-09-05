@@ -913,8 +913,8 @@ Gott getur verið að kannast við helstu hornafallastærðirnar.
       - :math:`\frac{\sqrt{3}}{2}`
     * - :math:`90`
       - :math:`\frac{\pi}{2}`
-      - :math:`1`
       - :math:`0`
+      - :math:`1`
 
 Hornaföllin má einnig skilgreina sem hlutfall milli hliða í rétthyrndum þríhyrningi
 (eins og betur kemur í ljós þegar við skoðum reglu Pýþagórasar fyrir hornaföllin).
