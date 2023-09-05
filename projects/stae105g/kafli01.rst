@@ -888,25 +888,31 @@ Gott getur verið að kannast við helstu hornafallastærðirnar.
   :class: athugasemd
 
   .. list-table:: Nokkrar algengar hornafallastærðir
-    :widths: 35 35 35
+    :widths: 35 35 35 35
     :header-rows: 1
 
-    * - :math:`\theta \text{ rad}`
+    * - :math:`\theta^\circ`
+      - :math:`\theta \text{ rad}`
       - :math:`\cos(\theta)`
       - :math:`\sin(\theta)`
     * - :math:`0`
+      - :math:`0`
       - :math:`1`
       - :math:`0`
-    * - :math:`\frac{\pi}{6}`
-      - :math:`\frac{1}{2}`
-      - :math:`\frac{\sqrt{3}}{2}`
-    * - :math:`\frac{\pi}{4}`
-      - :math:`\frac{\sqrt{2}}{2}`
-      - :math:`\frac{\sqrt{2}}{2}`
-    * - :math:`\frac{\pi}{3}`
+    * - :math:`30`
+      - :math:`\frac{\pi}{6}`
       - :math:`\frac{\sqrt{3}}{2}`
       - :math:`\frac{1}{2}`
-    * - :math:`\frac{\pi}{2}`
+    * - :math:`45`
+      - :math:`\frac{\pi}{4}`
+      - :math:`\frac{\sqrt{2}}{2}`
+      - :math:`\frac{\sqrt{2}}{2}`
+    * - :math:`60`
+      - :math:`\frac{\pi}{3}`
+      - :math:`\frac{1}{2}`
+      - :math:`\frac{\sqrt{3}}{2}`
+    * - :math:`90`
+      - :math:`\frac{\pi}{2}`
       - :math:`1`
       - :math:`0`
 
