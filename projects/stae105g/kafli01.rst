@@ -1338,11 +1338,11 @@ fyrir um vöxt ýmissa stærða, eins og t.d. fólksfjölda, bankainnistæðu o.
 Til eru óendanlega mörg vísisföll þar sem :math:`b` má vera hvaða fasti sem er.
 Einfalt er að skilgreina veldishafningu fyrir náttúrulegar tölur og útvíkka
 svo hugtakið fyrir neikvæðar heiltölur og svo ræðar tölur. Það getur hins vegar
-reynst erfitt að skilgreina hvað átt er við með :math:`x^b` þegar :math:`b` er
+reynst erfitt að skilgreina hvað átt er við með :math:`b^x` þegar :math:`x` er
 óræð tala, sér í lagi á þessu stigi, en við látum okkur nægja í bili að segja að
-sérhverja óræða :math:`b` tölu má nálga eins vel og vera má með ræðri tölu :math:`\tilde{b}`
-og því betri nálgun sem valin er því nær kemst :math:`x^{\bar{b}}` því að vera
-:math:`x^b`.
+sérhverja óræða :math:`x` tölu má nálga eins vel og vera má með ræðri tölu :math:`\tilde{x}`
+og því betri nálgun sem valin er því nær kemst :math:`b^{\tilde{x}}` því að vera
+:math:`b^x`.
 
 .. admonition:: Athugasemd
   :class: athugasemd
