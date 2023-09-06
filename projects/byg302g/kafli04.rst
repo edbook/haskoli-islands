@@ -337,6 +337,7 @@ efnislagsins, raungildi, en raðtengda líkanið gefur neðri mörk;
 .. math::
   \lambda_{vegið-rað} < \lambda_{raungildi} < \lambda_{vegið-samsíða}
 
+
 Leiðnitala efnis er augljóslega mjög háð holrýmd efnisins, en einnig efnisþéttleika;
 Varmaflutningur
 
@@ -457,3 +458,9 @@ Uppgefnar leiðnitölur algengra einangrunarefna
 .. figure:: ./myndir/kafli04/Einangrunarefni.png
   :align: center
   :width: 100%
+
+.. youtube:: t6FWPTZjwLo
+
+.. youtube:: n1l-nhRijSU
+
+.. youtube:: xdnLOv-zf_o
