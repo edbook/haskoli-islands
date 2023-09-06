@@ -444,6 +444,10 @@ Klumpurinn er látinn jafna sig (ná eðlilegum efnishita og gjarnan látinn þo
 á) og síðan sagaður niður í plötur, sjá t.d. www.varmamot.is/fraud.htm
 Freytt frauðplast (e:extruded polystyren, XPS)
 
+.. youtube:: n1l-nhRijSU
+
+.. youtube:: xdnLOv-zf_o
+
 *Steinull – framleiðsluferli (Ísland)*
 Basaltsandur (aðalefnið, efnisþörf um 1200 kg pr. tonn einangrunar) og skeljasandur
 bræddur á ofni við tæplega 1600 :math:`^{\circ}C`, þá fellur járn til botns og er því tappað frá. Bráðinni
@@ -453,14 +457,13 @@ hjólunum þá lenda droparnir í loftblæstri sem dregur þá út í þræði, 
 “Mottan” á færibandinu fer í hersluofn þar sem einangrunin er pressuð saman og hert við
 250 °C, (sjá t.d. www.steinull.is / vöruskrá /bls. 2).
 
+.. youtube:: t6FWPTZjwLo
+
 Uppgefnar leiðnitölur algengra einangrunarefna
 
 .. figure:: ./myndir/kafli04/Einangrunarefni.png
   :align: center
   :width: 100%
 
-.. youtube:: t6FWPTZjwLo
 
-.. youtube:: n1l-nhRijSU
 
-.. youtube:: xdnLOv-zf_o
