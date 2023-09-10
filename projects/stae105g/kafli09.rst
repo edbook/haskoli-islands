@@ -722,7 +722,7 @@ Skilgreining: Geómetrísk röð
 
 	Ef :math:`|r|<1` er röðin samleitin og
 
-	.. math:: \sum_{n=1}^\infty ar^{n-1} = \frac{1}{1-r} \text{ fyrir } |r|<1.
+	.. math:: \sum_{n=1}^\infty ar^{n-1} = \frac{a}{1-r} \text{ fyrir } |r|<1.
 
 	Ef :math:`|r| \geq 1` er röðin ósamleitin.
 
@@ -771,7 +771,7 @@ Dæmi: Samleitni geómetrískar raðar
 			&= 9 + 9 \cdot (-3/4) + 9 \cdot (-3/4)^2 + \dots.
 		\end{align}
 
-	Fyrsti liður raðarinnar er :math:`a=-3` og hlutfallstalan er :math:`r=-3/4`. Þar
+	Fyrsti liður raðarinnar er :math:`a=9` og hlutfallstalan er :math:`r=-3/4`. Þar
 	sem :math:`|r|=3/4 < 1` er röðin samleitin og summa hennar er
 
 	.. math:: \frac{9}{1-(-3/4)} = \frac{36}{7}.
@@ -866,8 +866,8 @@ Setning: Heildisprófið
 .. admonition:: Setning
   :class: setning
 
-	Gerum ráð fyrir að :math:`\sum_{n=1}^\infty a_i` sé röð af jákvæðum liðum :math:`a_n`þ
-	Gerum einnig ráð fyrir að til sé fall :math:`f` og jákvæð heiltala :math:`N`
+	Gerum ráð fyrir að :math:`\sum_{n=1}^\infty a_i` sé röð af jákvæðum liðum :math:`a_n` og 
+	gerum einnig ráð fyrir að til sé fall :math:`f` og jákvæð heiltala :math:`N`
 	þannig að eftirfarandi þrjú skilyrði séu uppfyllt:
 
 		#. :math:`f` er samfellt

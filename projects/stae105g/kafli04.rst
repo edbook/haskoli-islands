@@ -182,12 +182,12 @@ Skilgreining: Útgildi
   :class: skilgreining
 
   Við segjum að fall :math:`f` hafi :hover:`staðbundið hágildi` í punktinum
-  :math:`x_0` ef til er bil :math:`(a,b)` umhverfis :math:`x_0`, sem er
+  :math:`x_0` ef til er bil :math:`]a,b[` umhverfis :math:`x_0`, sem er
   þannig að
 
   .. math:: f(x) \leq f(x_0), \quad \text{ fyrir öll } x \in ]a,b[.
 
-  Við segjum að fall 𝑓 hafi staðbundið lággildi í punktinum 𝑥0 ef til er bil (𝑎,𝑏) umhverfis 𝑥0, sem er þannig að
+  Við segjum að fall :math:`f` hafi staðbundið lággildi í punktinum :math:`x_0` ef til er bil :math:`]a,b[` umhverfis :math:`x_0`, sem er þannig að
 
   .. math:: f(x) \geq f(x_0), \quad \text{ fyrir öll } x \in ]a,b[.
 
@@ -197,10 +197,6 @@ Skilgreining: Útgildi
   .. image:: ./myndir/kafli04/PMA_max.png
     :align: center
     :width: 75%
-
-  Við segjum að fall :math:`f` hafi :hover:`staðbundið lággildi` í punktinum
-  :math:`x_0` ef til er bil :math:`(a,b)` umhverfis :math:`x_0`, sem er
-  þannig að
 
   Hér fyrir neðan má t.a.m. sjá að fallið :math:`y=x^2+1` hefur lággildið
   :math:`y=1` þegar :math:`x=0`.
@@ -241,41 +237,11 @@ Setning Fermats
     Þó að :math:`f'(a)=0` þá er ekki víst að :math:`a` sé staðbundið útgildi.
 
     Til dæmis þá hefur fallið :math:`f(x) = x^3` ekkert staðbundið útgildi
-    þrátt fyrir að :math:`f'(0) = 0` (:math:`f'(x) = 3x^2`).
-
-Skilgreining: Beygjuskil og beygjuskilapunktur
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-  :class: skilgreining
-
-  Beygjuskil eru þar sem sveigja falls breytist. Ef :math:`x_0` uppfyllir að
-  beygjuskil fallsins :math:`f(x)` séu í :math:`f(x_0)` þá nefnist
-  :math:`(x_0,f(x_0))` beygjuskilapunktur.
-
-  Tvídiffranlegt fall uppfyllir að beygjuskil eru þar sem :math:`f''(x_0)=0`.
-  Þrjár gerðir af beygjuskilum eru til. Þær eru:
-
-    (i) Beygjuskil þar sem er *staðbundið hágildi*.
-
-    .. figure:: ./myndir/kafli04/PMA_beygjuskil_H.png
-      :width: 50%
-      :align: center
-
-    (ii) Beygjuskil þar sem er *staðbundið lággildi*.
-
-    .. figure:: ./myndir/kafli04/PMA_beygjuskil_L.png
-      :width: 50%
-      :align: center
-
-    (iii) Beygjuskil þar em er *söðulpunktur*.
-
-    .. figure:: ./myndir/kafli04/PMA_beygjuskil_S.png
-      :width: 50%
-      :align: center
+    þrátt fyrir að :math:`f'(0) = 0`. 
 
 Annarar afleiðu prófið
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 (i)  Ef :math:`f'(x_0)=0` og :math:`f''(x_0)<0` þá er :math:`x_0`
      staðbundið hágildi.
@@ -288,6 +254,22 @@ Annarar afleiðu prófið
 
     Athugið að ef :math:`f''(x_0)=0` þá getur :math:`x_0` verið hvort sem er
     staðbundið hágildi, staðbundið lággildi eða söðulpunktur.
+
+Skilgreining: Beygjuskil og beygjuskilapunktur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Ef fall :math:`f` er samfellt í :math:`a` og breytir um sveigju í :math:`a` (þ.e. fallið fer úr því að vera kúpt yfir í að vera hvelft eða öfugt) þá er punkturinn :math:`(a,f(a))` nefndur beygjuskilapunktur fallsins og stundum sagt að fallið :math:`f` hafi beygjuskil í :math:`a`. 
+
+  .. image:: ./myndir/kafli04/PMA_beygjuskilapunktur_skgr.png
+    :align: center
+    :width: 75%
+
+
+Líkt og áður segir þá gildir að sé fall :math:`f` tvídiffranlegt á bilinu :math:`I` þá er :math:`f` kúpt þar sem :math:`f'' \geq 0` á bilinu og hvelft þar sem :math:`f'' \leq 0` á bilinu. Þar sem beygjuskilapunktur markar þau mót þar sem fallið breytir um sveigju má til sanns vegar færa að ef :math:`f` hefur beygjuskil í :math:`a` þá er :math:`f''(a)=0`. Athugum þó að þetta þýðir ekki að ef :math:`f''(a)=0` þá séu endilega beygjuskil í :math:`a`; það er nauðsynleg en ekki nægjanleg forsenda fyrir beygjuskilum. Annað skilyrði sem uppfylla þarf er að formerki annarrar afleiðu fallsins breytist í :math:`a`. 
+
 
 Dæmi: Beygjuskilapunktur
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -314,7 +296,7 @@ Dæmi: Beygjuskilapunktur
 Dæmi: Útgildi
 ~~~~~~~~~~~~~
 
-.. admonition:: Lausn
+.. admonition:: Dæmi
   :class: daemi, dropdown
 
   Finnum öll útigildi fallsins :math:`f(x)=2 x^3 + 3 x^2 - 12 x + 1`.
@@ -368,7 +350,7 @@ Setning Rolle
   Látum :math:`g:[a,b]\rightarrow{{\mathbb  R}}` vera samfellt fall. Gerum
   ráð fyrir að :math:`g` sé diffranlegt í öllum punktum bilsins :math:`]a,b[`.
   Ef :math:`g(a)=g(b)` þá er til punktur :math:`c` á bilinu
-  :math:`]a,b[`. þannig að :math:`g'(c)=0`.
+  :math:`]a,b[` þannig að :math:`g'(c)=0`.
 
 .. index::
     meðalgildissetningin
@@ -381,7 +363,7 @@ Meðalgildissetningin
 
   Látum :math:`f:[a,b]\rightarrow{{\mathbb  R}}` vera samfellt fall. Gerum
   ráð fyrir að :math:`f` sé diffranlegt í öllum punktum bilsins
-  :math:`]a,b[`.. Þá er til punktur :math:`c` á bilinu :math:`]a,b[` þannig
+  :math:`]a,b[`. Þá er til punktur :math:`c` á bilinu :math:`]a,b[` þannig
   að
 
 .. math:: \frac{f(b)-f(a)}{b-a}=f'(c).
@@ -402,7 +384,7 @@ Alhæfða meðalgildissetningin
 
 Gerum ráð fyrir að föllin :math:`f` og :math:`g` séu samfelld á lokaða
 bilinu :math:`[a,b]` og diffranleg á opna bilinu :math:`]a,b[`. Gerum
-auk þess ráð fyrir að fyrir allar tölur :math:`x` í :math:`(a,b)` sé
+auk þess ráð fyrir að fyrir allar tölur :math:`x` í :math:`]a,b[` sé
 :math:`g'(x)\neq 0`. Þá er til tala :math:`c\in ]a,b[` þannig að
 
 .. math:: \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}.
@@ -449,27 +431,27 @@ Skilgreining: Vaxandi/minnkandi
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Fall :math:`f` er *vaxandi* á bili :math:`(a,b)` ef um
-  alla punkta :math:`x_1` og :math:`x_2` á :math:`(a,b)` þannig að
+  Fall :math:`f` er *vaxandi* á bili :math:`]a,b[` ef um
+  alla punkta :math:`x_1` og :math:`x_2` á :math:`]a,b[` þannig að
   :math:`x_1 < x_2` gildir að
 
   .. math:: f(x_1) \leq f(x_2).
 
-  Fall :math:`f` er *stranglega vaxandi* á bili :math:`(a,b)`
-  ef um alla punkta :math:`x_1` og :math:`x_2` á :math:`(a,b)` þannig að
+  Fall :math:`f` er *stranglega vaxandi* á bili :math:`]a,b[`
+  ef um alla punkta :math:`x_1` og :math:`x_2` á :math:`]a,b[` þannig að
   :math:`x_1 < x_2` gildir að
 
   .. math:: f(x_1) < f(x_2).
 
-  Fall :math:`f` er *minnkandi* á bili :math:`(a,b)` ef um
-  alla punkta :math:`x_1` og :math:`x_2` á :math:`(a,b)` þannig að
+  Fall :math:`f` er *minnkandi* á bili :math:`]a,b[` ef um
+  alla punkta :math:`x_1` og :math:`x_2` á :math:`]a,b[` þannig að
   :math:`x_1 < x_2` gildir að
 
   .. math:: f(x_1) \geq f(x_2).
 
   Fall :math:`f` er *stranglega minnkandi* á bili
-  :math:`(a,b)` ef um alla punkta :math:`x_1` og :math:`x_2` á
-  :math:`(a,b)` þannig að :math:`x_1 < x_2` gildir að
+  :math:`]a,b[` ef um alla punkta :math:`x_1` og :math:`x_2` á
+  :math:`]a,b[` þannig að :math:`x_1 < x_2` gildir að
 
   .. math:: f(x_1) > f(x_2).
 
@@ -579,16 +561,16 @@ Annarrar afleiðu próf
 
   Látum :math:`f` vera tvídiffranlegt fall yfir bilið :math:`I`.
 
-    #. Ef :math:`f''(x)>0` fyrir öll :math:`x \in I`, þá er :math:`f` kúpt á bilinu :math:`I`
+    #. Ef :math:`f''(x) \geq 0` fyrir öll :math:`x \in I`, þá er :math:`f` kúpt á bilinu :math:`I`
 
-    #. Ef :math:`f''(x)<0` fyrir öll :math:`x \in I`, þá er :math:`f` hvelft á bilinu :math:`I`
+    #. Ef :math:`f''(x) \geq 0` fyrir öll :math:`x \in I`, þá er :math:`f` hvelft á bilinu :math:`I`
 
 .. admonition:: Aðvörun
   :class: advorun
 
-  Föll eru ekki alltaf annað hvort kúpt eða hvelft alls staðar. Alveg
+  Föll eru ekki alltaf annað hvort kúpt eða hvelfd alls staðar. Alveg
   eins og það eru til föll sem eru sums staðar vaxandi og sums staðar
-  minnkandi, þá eru mörg föll sums staðar kúpt og sums staðar hveld.
+  minnkandi, þá eru mörg föll sums staðar kúpt og sums staðar hvelfd.
   Þetta á til dæmis við um hornaföllin.
 
 Ábending: Jafngildi

@@ -742,15 +742,15 @@ Setning: Afleiður logra og vísisfalla
 
   #. :math:`\frac{d}{dx} e^x = e^x`
 
-  #. :math:`\frac{d}{dx} e^{g(x)}=g'(x)e^x`
+  #. :math:`\frac{d}{dx} e^{g(x)}=e^{g(x)}g'(x)`
 
   #. :math:`\frac{d}{dx} \ln(x) = \frac{1}{x}`
 
-  #. :math:`\frac{d}{dx} \ln(g(x)) = \frac{1}{x}g'(x)`
+  #. :math:`\frac{d}{dx} \ln(g(x)) = \frac{1}{g(x)}g'(x)`
 
   #. :math:`\frac{d}{dx} b^x = b^x \ln(b)`
 
-  #. :math:`\frac{d}{dx} b^{g(x)} = b^{g(x)}g'(x)\ln(b)`
+  #. :math:`\frac{d}{dx} b^{g(x)} = b^{g(x)}\ln(b)g'(x)`
 
   #. :math:`\frac{d}{dx} \log_b(x) = \frac{1}{x\ln(b)}`
 

@@ -73,7 +73,7 @@ Dæmi: Samleitnibil og samleitnigeisli
 
   Finnum samleitnigeisla raðarinnar
 
-  .. math:: \sum_{n=0}^\infty \frac{x^m}{n!}.
+  .. math:: \sum_{n=0}^\infty \frac{x^n}{n!}.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
@@ -129,7 +129,7 @@ Setning: Sameining veldaraða
   Gerum ráð fyrir að veldaraðirnar :math:`\sum_{n=0}^\infty c_n x^n` og :math:`\sum_{n=0}^\infty d_n x^n`
   séu hvor um sig samleitnar að föllunum :math:`f` og :math:`g` á sameiginlegu bili :math:`I`.
 
-    #. Veldaröðin :math:`\sum_{n=0}^\infty (c_n \pm d_n) x^n` er samleitin að fallinu :math:`f+g` á :math:`I`.
+    #. Veldaröðin :math:`\sum_{n=0}^\infty (c_n \pm d_n) x^n` er samleitin að fallinu :math:`f \pm g` á :math:`I`.
 
     #. Fyrir hvaða heiltölu :math:`m>0` sem er og rauntölu :math:`b` er veldaröðin :math:`\sum_{n=0}^\infty b x^m c_n x^n` samleitin að :math:`bx^m f(x)` á :math:`I`.
 
@@ -171,7 +171,7 @@ Dæmi: Sameining veldaraða
 
   .. math:: f(x) = 3x\left( \frac{1}{1-(-x^2)} \right).
 
-  Notum nú veldaröð fallsin :math:`g(x)=\frac{1}{1-x}` og eiginleika veldaraða til þess að
+  Notum nú veldaröð fallsins :math:`g(x)=\frac{1}{1-x}` og eiginleika veldaraða til þess að
   setja fallið :math:`f` fram með
 
   .. math:: \sum_{n=0}^\infty 3x (-x^2)^n = \sum_{n=0}^\infty 3(-1)^n x^{2n+1}.
@@ -294,7 +294,14 @@ Dæmi: Afleiða veldaraðar
 .. admonition:: Dæmi
   :class: daemi
 
-  Notfærum okkur að
+ Finnum veldaröðina sem lýsir fallinu
+
+  .. math:: g(x) = \frac{1}{(1-x)^2}
+
+  á bilinu :math:`]-1,1[`. Ákvörðum svo hvort hún sé samleitin í
+  endapunktum bilsins.
+
+  **Ábending:** Hér má nota að
 
   .. math::
     \begin{aligned}
@@ -303,12 +310,7 @@ Dæmi: Afleiða veldaraðar
       &= 1 + x + x^2 + x^3 + \dots
     \end{aligned}
 
-  fyrir :math:`|x|<1` til að finna veldaröðina sem lýsir fallinu
-
-  .. math:: g(x) = \frac{1}{(1-x)^2}
-
-  á bilinu :math:`]-1,1[`. Ákvarðið svo að lokum hvort hún sé samleitin í
-  endapunktum bilsins.
+  fyrir :math:`|x|<1` til að
 
 .. admonition:: Lausn
   :class: daemi, dropdown
@@ -321,15 +323,15 @@ Dæmi: Afleiða veldaraðar
     \begin{aligned}
       g(x) &= \frac{1}{(1-x)^2}\\
       &= \frac{d}{dx} \left( \frac{1}{1-x} \right)\\
-      &= \sum_{n=0}^\infty \frac{d}{dx}(x^n)\\
+      &= \frac{d}{dx} \sum_{n=0}^\infty x^n\\
       &= \frac{d}{dx}(1+x+x^2+x^3+\dots)\\
       &= 0 + 1 + 2x + 3x^2 + 4x^3 + \dots\\
       &= \sum_{n=0}^\infty (n+1)x^n
     \end{aligned}
 
-  fyrir :math:`|x|<1`. Að diffra röðina lið fyrir lið segir ekkert til um hegðun
-  raðarinnar i endapunktum bilsins. Við getum skoðað hegðunina þar með því að nota
-  sundurleitniprófið og séð þannig að röðin er sundurleitin í :math:`x = \pm 1`.
+  fyrir :math:`|x|<1`. Að diffra röðina lið fyrir lið segir þó ekkert til um hegðun
+  raðarinnar í endapunktum bilsins. Við getum skoðað hegðunina þar með því að nota
+  sundurleitniprófið og séð þannig að röðin er sundurleitin í :math:`x = \pm 1`. Lesanda er eftirlátið að sýna fram á það með útreikingum. 
 
 Dæmi: Stofnfall veldaraðar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -512,7 +514,7 @@ Dæmi: Línulegar- og ferningsnálganir til að meta fallgildi
 
     b) Notið margliðurnar til þess að nálga :math:`\sqrt[3]{11}`.
 
-    c) Notið setningu Taylors um skekkju til að finna efra marg á skekkjunni.
+    c) Notið setningu Taylors um skekkju til að finna efra mark á skekkjunni.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
@@ -588,7 +590,7 @@ Dæmi: Að finna Taylor-röð falls
       f(x) &= \frac{1}{x} & f(1) &= 1\\
       f'(x) &= -\frac{1}{x^2} & f'(1) &= -1\\
       f''(x) &= \frac{2}{x^3} & f''(1) &= 2!\\
-      f'''(x) &= -\frac{3\cdot 2}{x^4} & f'''(1) &= 3!\\
+      f'''(x) &= -\frac{3\cdot 2}{x^4} & f'''(1) &= -3!\\
       f^{(4)}(x) &= \frac{4\cdot 3 \cdot 2}{x^5} & f^{(4)}(1) &= 4!.
     \end{aligned}
 
@@ -623,7 +625,7 @@ Setning: Samleitni Taylor-raða
 
   .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n
 
-  samleitin að :math:`f(x)`fyrir öll :math:`x\in I` ef og aðeins ef
+  samleitin að :math:`f(x)` fyrir öll :math:`x\in I` ef og aðeins ef
 
   .. math:: \lim_{n \rightarrow \infty} R_n(x) = 0
 
@@ -838,7 +840,7 @@ Dæmi: Meta erfið heildi með veldaröðum
 
   .. math::
     \begin{aligned}
-      \int e^{-x^2}dx &= \in \left(1 - x^2 + \frac{x^4}{2!} -\frac{x^6}{3!} + \dots + (-1)^n\frac{x^{2n}}{n!} \right) dx\\
+      \int e^{-x^2}dx &= \int \left(1 - x^2 + \frac{x^4}{2!} -\frac{x^6}{3!} + \dots + (-1)^n\frac{x^{2n}}{n!} \right) dx\\
       &= C + x - \frac{x^3}{3} + \frac{x^5}{5 \cdot 2!} - \frac{x^7}{7 \cdot 3!} + \dots + (-1)^n \frac{x^{2n+1}}{(2n+1)n!}\\
     \end{aligned}
 
