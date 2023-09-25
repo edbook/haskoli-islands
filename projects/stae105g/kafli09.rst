@@ -55,7 +55,7 @@ runur eru það, sem þýðir að röðin í runum skiptir máli en ekki í meng
 eru mengin :math:`\{1,2,3\}` og :math:`\{3,1,2\}` þau sömu en runurnar :math:`1,2,3,\dots`
 og :math:`3,1,2,\dots` það ekki. Ef við skoðum rununa
 
-.. math:: 2,4,8,18,32,\dots
+.. math:: 2,4,8,16,32,\dots
 
 sjáum við að hún inniheldur öll jákvæð heiltöluveldi af 2 í stækkandi röð. Hana má því
 tákna með
@@ -182,7 +182,7 @@ Dæmi: Lokað form
 	    a_2 &= -3 a_1 = (-3)\cdot 2\\
 	    a_3 &= -3 a_2 = (-3) \cdot (-3) \cdot 2\\
 	    a_4 &= -3 a_3 = (-3) \cdot (-3) \cdot (-3) \cdot 2\\
-	    \vdots
+	    &\vdots
 	  \end{align}
 
 	Oft getur hjálpað að reikna útreikningana ekki alveg til enda til að auðveldara
@@ -816,7 +816,7 @@ Dæmi: Kíkisröð
 
 	.. math:: S_k = \cos(1) - \cos(1/(k+1)).
 
-	Þar sem :math:`1/(k+1) \rightarrow 0` þegar :math:`k \rightarrow 0` og
+	Þar sem :math:`1/(k+1) \rightarrow 0` þegar :math:`k \rightarrow \infty` og
 	:math:`\cos(x)` er samfellt fall þá gildir að :math:`\cos(1/(k+1)) \rightarrow \cos(0)=1`.
 	Þar með fæst að :math:`S_k \rightarrow \cos(1)-1`. Kíkisröðin er því samleitin og
 	summa hennar er gefin með
@@ -825,8 +825,8 @@ Dæmi: Kíkisröð
 
 ---------
 
-Sundurleitnipróf og heildispróf
---------------------------------
+Sundurleitnipróf
+-----------------
 
 Ef röðin :math:`\sum_{n=1}^\infty a_n` á að vera samleitin verður að gilda
 að :math:`a_n \rightarrow 0` þegar :math:`n \rightarrow \infty`. Því er hægt að setja
@@ -880,7 +880,7 @@ Setning: Heildisprófið
 
 	Þá gildir að
 
-	.. math:: \int_{n=1}^\infty a_n \text{ og } \int_N^\infty f(x) dx.
+	.. math:: \sum_{n=1}^\infty a_n \text{ og } \int_N^\infty f(x) dx
 
 	eru annað hvort bæði samleitin eða bæði ósamleitin.
 	Athugum að jafnvel þó samleitni heildisins :math:`\int_N^\infty f(x) dx` hafi það í
