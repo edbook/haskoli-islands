@@ -638,7 +638,7 @@ Skilgreining: Lóðfella
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Ef um fallið :math:`f(x)` gildir annað hvort að :math:`|\lim_{x\to a^-} f(x)|= \infty`, þ.e.a.s. að :math:`\lim_{x\to a^-} f(x)=\pm \infty`, eða :math:`|\lim_{x\to a^+} f(x)|= \infty` þá er línan :math:`x=a` lóðrétt aðfella eða *lóðfella* fyrir
+  Ef um fallið :math:`f(x)` gildir annað hvort að :math:`|\lim_{x\to a^-} f(x)|= \infty`, þ.e.a.s.\ að :math:`\lim_{x\to a^-} f(x)=\pm \infty`, eða :math:`|\lim_{x\to a^+} f(x)|= \infty` þá er línan :math:`x=a` lóðrétt aðfella eða *lóðfella* fyrir
   fallið :math:`f`.
 
 Skilgreining: Láfella
