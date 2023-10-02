@@ -95,6 +95,26 @@ Brotorkan er iðulega reiknuð á rúmmmetra efnis; :math:`\overline{W} = \frac{
 Venjuleg áraun gefur upplýsingar um styrk undir álagi, en síður hversu vel efni standast
 mikið álag í mjög stuttan tíma (jarðskjálftar..)
 
+.. youtube:: BHZALtqAjeM
+
+.. admonition:: Hugtök í myndbandi
+    :class: tip
+
+      **stiff / stiffness** : stíft / stífleiki
+
+      **strong / strength** : sterkt / styrkur  
+
+      **ductile / ductility** : seigt / seigla
+
+      **brittle** : stökkt 
+
+      **toughness** : seigluorka
+
+      **hard / hardness** : hart / harka
+
+
+
+
 Formbreytingar og formbreytingarferlar
 --------------------------------------
 

@@ -44,7 +44,7 @@ lofti (í Kaldo-aðferðinni súrefni) er blásið í gegnum bráðina. Ofnarnir
 tonn í hvern blástur, sem stendur yfir í um 30 mínútur. Ofnarnir eru fóðraðir, áður
 einungis með súrri fóðringu (kvarts) og nefndist aðferðin þá Bessemer. Með súrri
 fóðringu næst að binda kolefni, kísil og mangan. Síðar var þróuð basísk fóðring, þar næst
-að binda fleiri gerðir af óæskilegum efnum, þessi aðferðin er nefnd eftir Thomas.
+að binda fleiri gerðir af óæskilegum efnum, þessi aðferð er nefnd eftir Thomas.
 Venjulegt byggingarstál inniheldur auk járns, kolefni, kísil, mangan, fosfór og
 brennistein. 
 
@@ -65,6 +65,24 @@ ráðandi – sjá línurit.
 .. figure:: ./myndir/stal/eiginleikarkolefnisinnihald.png
   :align: center
   :width: 70%
+
+
+
+.. youtube:: 7E__zqy6xcw
+
+.. admonition:: Hugtök í myndbandi
+    :class: tip
+
+      **iron** : járn
+
+      **cast iron** : pottjárn
+
+      **iron ore** : seigt / seigla
+
+      **blast furnace** : háofn 
+
+    
+
 
 Fasalínurit
 ~~~~~~~~~~~
@@ -240,6 +258,9 @@ bendistáli.
 .. figure:: ./myndir/stal/hersla.png
   :align: center
   :width: 70%
+
+
+.. youtube:: 6jQ4y0LK1kY
 
 Suðuhæft stál
 ~~~~~~~~~~~~~
