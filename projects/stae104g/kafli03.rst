@@ -1161,7 +1161,7 @@ og :math:`x`. Þá er til tala :math:`X` á milli :math:`a` og :math:`x`
 Fylgisetning
 ~~~~~~~~~~~~
 
-.. admonition:: Fylgietning
+.. admonition:: Fylgisetning
     :class: setning
 
     Gerum ráð fyrir að :math:`f` sé :math:`n+1` diffranlegt á bili sem
@@ -1274,14 +1274,14 @@ Regla l’Hôpital, einhliða útgáfa
     að til er :math:`c \in (a,x)` þannig að
 
     .. math::
-        \frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(0)} = \frac{f'(c)}{g'(c)}
+        \frac{f(x)}{g(x)} = \frac{f(x)-f(a)}{g(x)-g(a)} = \frac{f'(c)}{g'(c)}
 
     Þegar :math:`x \to a^+` þá gildir einnig að :math:`c \to a^+` því
     :math:`c` er klemmt á milli :math:`a` og :math:`x`.
     Þar sem markgildið
 
     .. math::
-        \lim_{c\to a^+} \frac{f'(c)}{g'(x)} = L
+        \lim_{c\to a^+} \frac{f'(c)}{g'(c)} = L
 
     er til, þá er markgildið :math:`\lim_{x\rightarrow a^+}\frac{f(x)}{g(x)}`
     einnig til og er jafnt og :math:`L`.
