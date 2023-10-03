@@ -77,7 +77,7 @@ ráðandi – sjá línurit.
 
       **cast iron** : pottjárn
 
-      **iron ore** : seigt / seigla
+      **iron ore** : járngrýti
 
       **blast furnace** : háofn 
 
