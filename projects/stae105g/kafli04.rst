@@ -627,7 +627,7 @@ Afleiður eru nánast nauðsynlegt tól þegar kemur að því að teikna gröf 
 kúpni þess er. Annað tæki sem getur reynst mjög hjálplegt þegar graf falls er
 teiknað eru aðfellur.
 
-Aðfella fyrir fall er lína sem fallið leggst upp að og nálgast óendanlega mikið.
+Aðfella fyrir fall er lína sem fallið leggst upp að og nálgast óendanlega mikið (eða nær í sumum tilfellum).
 Til eru þrjár gerðir af aðfellum, þær eru *lóðfellur*, *láfellur*
 og *skáfellur*.
 
@@ -638,8 +638,7 @@ Skilgreining: Lóðfella
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Ef fallið :math:`f(x)` er rætt fall með núllstöð :math:`a` í nefnara, sem er ekki
-  afmáanlegur sérstöðupunktur, þá er :math:`x=a` lóðrétt aðfella eða *lóðfella* fyrir
+  Ef um fallið :math:`f(x)` gildir annað hvort að :math:`|\lim_{x\to a^-} f(x)|= \infty`, þ.e.a.s.\ að :math:`\lim_{x\to a^-} f(x)=\pm \infty`, eða :math:`|\lim_{x\to a^+} f(x)|= \infty` þá er línan :math:`x=a` lóðrétt aðfella eða *lóðfella* fyrir
   fallið :math:`f`.
 
 Skilgreining: Láfella
@@ -657,7 +656,7 @@ Skilgreining: Skáfella
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Ef um ræða fallið :math:`f(x)` gildir að :math:`\lim_{x \rightarrow \infty} f(x)=hx+k`
+  Ef um fallið :math:`f(x)` gildir að :math:`\lim_{x \rightarrow \infty} f(x)=hx+k`
   eða :math:`\lim_{x \rightarrow -\infty} f(x)=hx+k` þar sem :math:`h,k \in \mathbb{R}`
   og :math:`h\neq 0` þá hefur fallið skáfellu í :math:`y=hx+k`. Þetta gerist einungis
   ef stig teljarans er einum hærra en stig nefnarans.

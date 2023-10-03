@@ -888,27 +888,33 @@ Gott getur verið að kannast við helstu hornafallastærðirnar.
   :class: athugasemd
 
   .. list-table:: Nokkrar algengar hornafallastærðir
-    :widths: 35 35 35
+    :widths: 35 35 35 35
     :header-rows: 1
 
-    * - :math:`\theta \text{ rad}`
+    * - :math:`\theta^\circ`
+      - :math:`\theta \text{ rad}`
       - :math:`\cos(\theta)`
       - :math:`\sin(\theta)`
     * - :math:`0`
+      - :math:`0`
       - :math:`1`
       - :math:`0`
-    * - :math:`\frac{\pi}{6}`
-      - :math:`\frac{1}{2}`
-      - :math:`\frac{\sqrt{3}}{2}`
-    * - :math:`\frac{\pi}{4}`
-      - :math:`\frac{\sqrt{2}}{2}`
-      - :math:`\frac{\sqrt{2}}{2}`
-    * - :math:`\frac{\pi}{3}`
+    * - :math:`30`
+      - :math:`\frac{\pi}{6}`
       - :math:`\frac{\sqrt{3}}{2}`
       - :math:`\frac{1}{2}`
-    * - :math:`\frac{\pi}{2}`
-      - :math:`1`
+    * - :math:`45`
+      - :math:`\frac{\pi}{4}`
+      - :math:`\frac{\sqrt{2}}{2}`
+      - :math:`\frac{\sqrt{2}}{2}`
+    * - :math:`60`
+      - :math:`\frac{\pi}{3}`
+      - :math:`\frac{1}{2}`
+      - :math:`\frac{\sqrt{3}}{2}`
+    * - :math:`90`
+      - :math:`\frac{\pi}{2}`
       - :math:`0`
+      - :math:`1`
 
 Hornaföllin má einnig skilgreina sem hlutfall milli hliða í rétthyrndum þríhyrningi
 (eins og betur kemur í ljós þegar við skoðum reglu Pýþagórasar fyrir hornaföllin).
@@ -1259,7 +1265,7 @@ með þeim afleiðingum að þau verði eintæk.
 
     "**Hornafall**", ":math:`\sin(x)`", ":math:`\cos(x)`", ":math:`\tan(x)`"
     "**Tákn andhverfu**", ":math:`\sin^{-1}(x)`", ":math:`\cos^{-1}(x)`", ":math:`\tan^{-1}(x)`"
-    "**Skilgreiningarmengi**", ":math:`[-\frac{\pi}{2},\frac{\pi}{2}]`", ":math:`[0,\pi]`", ":math:`[-\frac{\pi}{2},\frac{\pi}{2}]`"
+    "**Skilgreiningarmengi**", ":math:`[-\frac{\pi}{2},\frac{\pi}{2}]`", ":math:`[0,\pi]`", ":math:`]-\frac{\pi}{2},\frac{\pi}{2}[`"
 
   .. csv-table::
     :widths: 35, 30, 30, 30
@@ -1321,7 +1327,7 @@ fyrir um vöxt ýmissa stærða, eins og t.d. fólksfjölda, bankainnistæðu o.
 
   .. math:: f(x)=b^x
 
-  þar sem :math:`b` er einhver fasti, nefnist vísisfall.
+  þar sem :math:`b>0` er einhver fasti, nefnist vísisfall með grunntölu :math:`b`.
 
 .. admonition:: Aðvörun
   :class: advorun
@@ -1332,11 +1338,11 @@ fyrir um vöxt ýmissa stærða, eins og t.d. fólksfjölda, bankainnistæðu o.
 Til eru óendanlega mörg vísisföll þar sem :math:`b` má vera hvaða fasti sem er.
 Einfalt er að skilgreina veldishafningu fyrir náttúrulegar tölur og útvíkka
 svo hugtakið fyrir neikvæðar heiltölur og svo ræðar tölur. Það getur hins vegar
-reynst erfitt að skilgreina hvað átt er við með :math:`x^b` þegar :math:`b` er
+reynst erfitt að skilgreina hvað átt er við með :math:`b^x` þegar :math:`x` er
 óræð tala, sér í lagi á þessu stigi, en við látum okkur nægja í bili að segja að
-sérhverja óræða :math:`b` tölu má nálga eins vel og vera má með ræðri tölu :math:`\tilde{b}`
-og því betri nálgun sem valin er því nær kemst :math:`x^{\bar{b}}` því að vera
-:math:`x^b`.
+sérhverja óræða :math:`x` tölu má nálga eins vel og vera má með ræðri tölu :math:`\tilde{x}`
+og því betri nálgun sem valin er því nær kemst :math:`b^{\tilde{x}}` því að vera
+:math:`b^x`.
 
 .. admonition:: Athugasemd
   :class: athugasemd
@@ -1390,8 +1396,8 @@ náttúrunni og samfélaginu.
   Hægt er að túlka fastann :math:`e` sem gildið sem talan
   :math:`\left(1+\frac{1}{m}\right)^m` tekur þegar :math:`m \rightarrow \infty.`
 
-Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
-:math:`\mathbb{R}_+`. Þar sem :math:`e>0` þá er fallið vaxandi og stefnir á 0
+Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og myndmengið
+:math:`\mathbb{R}_+`. Þar sem :math:`e>1` þá er fallið vaxandi og stefnir á 0
 þegar :math:`x \rightarrow -\infty` og á :math:`\infty` þegar
 :math:`x \rightarrow \infty`.
 
@@ -1415,6 +1421,7 @@ Veldisvísisfallið hefur skilgreiningarmengið :math:`\mathbb{R}` og bakmengið
   :class: athugasemd
 
   **Veldareglur**
+  Hér eru :math:`a>0` og :math:`b>0` en :math:`x` og :math:`y` eru rauntölur.
 
   #. :math:`b^x \cdot b^y = b^{x+y}`
 
@@ -1449,8 +1456,8 @@ skilgreinir stofn lograns :math:`\log_b(x)`. Almennt gildir fyrir
 
   Mest notaði logrinn er tvímælalaust náttúrulegi logrinn :math:`\log_e{x}`, sem
   yfirleitt er skrifaður sem :math:`\ln(x)` til styttingar. Hann er andhverfa
-  veldisvísisfallsins :math:`e^x`. Skilgreiningarmengi hans er bakmengi veldisvísisfallsins,
-  þ.e. :math:`\mathbb{R}_+` og bakmengi hans er skilgreiningarmengi veldisvísisfallsins,
+  veldisvísisfallsins :math:`e^x`. Skilgreiningarmengi hans er myndmengi veldisvísisfallsins,
+  þ.e. :math:`\mathbb{R}_+` og myndmengi hans er skilgreiningarmengi veldisvísisfallsins,
   þ.e. :math:`\mathbb{R}`.
 
   .. image:: ./myndir/kafli01/PMA_lnx.png
@@ -1478,7 +1485,7 @@ náttúrulega logrann og veldisvísisfallið.
 
   #. :math:`\log_b(\frac{a}{c})=\log_b(a)-\log_b(c)`
 
-  #. :math:`\log(a^r))=r\log_b(a)`
+  #. :math:`\log_b(a^r))=r\log_b(a)`
 
   *Reglur um lograstofn.*
 
@@ -1486,7 +1493,7 @@ náttúrulega logrann og veldisvísisfallið.
 
   #. :math:`a^x = b^{x\log_b(a)}` fyrir sérhverja rauntölu :math:`x`.
 
-  #. :math:`\log_a(x)=\frac{\log_b(x)}{\log_b{a}}` fyrir sérhverja jákvæða rauntölu :math:`x`.
+  #. :math:`\log_a(x)=\frac{\log_b(x)}{\log_b(a)}` fyrir sérhverja jákvæða rauntölu :math:`x`.
 
 Breiðbogaföllin
 ~~~~~~~~~~~~~~~

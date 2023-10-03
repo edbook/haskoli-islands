@@ -55,7 +55,7 @@ runur eru það, sem þýðir að röðin í runum skiptir máli en ekki í meng
 eru mengin :math:`\{1,2,3\}` og :math:`\{3,1,2\}` þau sömu en runurnar :math:`1,2,3,\dots`
 og :math:`3,1,2,\dots` það ekki. Ef við skoðum rununa
 
-.. math:: 2,4,8,18,32,\dots
+.. math:: 2,4,8,16,32,\dots
 
 sjáum við að hún inniheldur öll jákvæð heiltöluveldi af 2 í stækkandi röð. Hana má því
 tákna með
@@ -108,9 +108,9 @@ jafnmunaruna því það munar 4 á öllum liðunum og má nota rakningarvenslin
 til að lýsa henni. Þar sem fyrsti liður rununnar er :math:`3` og mismunur á milli liða er
 :math:`4` má einnig lýsa :math:`n`-ta lið rununnar með
 
-.. math:: a_n=3n+4.
+.. math:: a_n=3+4n.
 
-Jafnmunarunur hafa almennt lokaða formið :math:`a_n=cn+b` þar sem :math:`a_1 = c` er
+Jafnmunarunur hafa almennt lokaða formið :math:`a_n=c+bn` ef :math:`a_1 = c` er
 fyrsti liður rununnar og :math:`b` er mismunurmunurinn aðliggjandi liða.
 
 Í **geómetrískri runu** er hlutfallið milli allra liða það sama. Til að mynda er
@@ -119,7 +119,7 @@ runan
 .. math:: 2, \frac{-2}{3}, \frac{2}{9}, -\frac{2}{27}, \frac{2}{81},\dots
 
 geómetrísk runa því hlutfallið milli hverra tveggja aðliggjandi liða er
-:math:`-\frac{1}{3}` og not má rakningarvenslin
+:math:`-\frac{1}{3}` og nota má rakningarvenslin
 
 .. math::
   \begin{cases}
@@ -130,10 +130,10 @@ geómetrísk runa því hlutfallið milli hverra tveggja aðliggjandi liða er
 til að lýsa henni. Þar sem fyrsti liður rununnar er :math:`2` og hlutfallið :math:`-\frac{1}{3}`
 má lýsa :math:`n`-ta lið rununnar með
 
-.. math:: a_n = 2\left(-\frac{1}{3}\right)^{n-1}.
+.. math:: a_n = 2\left(-\frac{1}{3}\right)^{n-1}, \quad n\geq 1.
 
-Almennt hefur geómetrísk runa lokaða formið :math:`a_n=cr^{n-1}` þar sem :math:`c` er
-fyrsti liður rununnar og :math:`a_1=r` er hlutfallið milli aðliggjandi liða.
+Almennt hefur geómetrísk runa lokaða formið :math:`a_n=cr^{n-1}` ef :math:`a_1=c` er
+fyrsti liður rununnar og :math:`r` er hlutfallið milli aðliggjandi liða.
 
 Dæmi: Lokað form
 ~~~~~~~~~~~~~~~~~
@@ -154,7 +154,7 @@ Dæmi: Lokað form
 	hverjum tveimur aðliggjandi liðum. Fyrri rununni má því lýsa með :math:`3^n` en
 	þeirri seinni :math:`3n+1`. Lokað form rununnar er því
 
-	.. math:: a_n = \frac{3^n}{3n+1}.
+	.. math:: a_n = \frac{3^n}{3n+1}, \quad n\geq 1.
 
 Dæmi: Lokað form
 ~~~~~~~~~~~~~~~~~
@@ -181,13 +181,14 @@ Dæmi: Lokað form
 	    a_1 &= 2\\
 	    a_2 &= -3 a_1 = (-3)\cdot 2\\
 	    a_3 &= -3 a_2 = (-3) \cdot (-3) \cdot 2\\
-	    a_4 &= -3 a_3 = (-3) \cdot (-3) \cdot (-3) \cdot 2\\.
+	    a_4 &= -3 a_3 = (-3) \cdot (-3) \cdot (-3) \cdot 2\\
+	    &\vdots
 	  \end{align}
 
 	Oft getur hjálpað að reikna útreikningana ekki alveg til enda til að auðveldara
 	sé að koma auga á mynstrið. Hér sést að
 
-	.. math:: a_n = (-3)^{n-1}\cdot2.
+	.. math:: a_n = (-3)^{n-1}\cdot2, \quad n\geq 1.
 
 Markgildi runa
 ~~~~~~~~~~~~~~~
@@ -198,28 +199,28 @@ hvernig runan hegðar sér þegar knévísirinn :math:`n` stefnir á :math:`\inf
 leiða hugann að því hvort allir liðirnir stefni á sama gildið, þ.e. hvort
 markgildi liðanna í rununni sé samleitið.
 
-Skilgreining: Markgildi runu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Markgildi runu (óformlega)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
   :class: skilgreining
 
-	Af því gefnu að liðir rununnar :math:`\{a_n\}` nálgist gildið :math:`L` óendanlega
-	mikið eftir því sem :math:`n` stækkar segjum við að :math:`\{a_n\}` sé *samleitin runa*
+	Af því gefnu að liðir rununnar :math:`\{a_n\}` nálgist gildið :math:`L` eins mikið og vera skal eftir því sem :math:`n` stækkar segjum við
+	að :math:`\{a_n\}` sé *samleitin runa*
 	og að :math:`L` sé *markgildi rununnar*. Við ritum þá að
 
 	.. math:: \lim_{n \rightarrow \infty} a_n = L.
 
 	Ef runan :math:`\{a_n\}` er ekki samleitin segjum við að hún sé *ósamleitin runa*.
 
-Skilgreining
-~~~~~~~~~~~~~
+Skilgreining: Markgildi runu (formlega)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
   :class: skilgreining
 
-	Runan :math:`\{a_n\}` er samleitin að rauntölu :math:`L` ef fyrir öll :math:`\varepsilon > 0`
-	er til heil tala :math:`N` þannig að :math:`|a_n - L|<\varepsilon` fyrir :math:`n \geq N`.
+	Runan :math:`\{a_n\}` er samleitin að rauntölu :math:`L` ef fyrir sérhvert :math:`\varepsilon > 0`
+	er til heil tala :math:`N` þannig að :math:`|a_n - L|<\varepsilon` fyrir öll :math:`n \geq N`.
 	Þá er talan :math:`L` kölluð *markgildi* rununnar og við skrifum
 
 	.. math:: \lim_{n \rightarrow \infty} a_n = L \text{ eða } a_n \rightarrow L.
@@ -252,7 +253,7 @@ Dæmi: Samleitin og ósamleitin runa
 	.. math:: \lim_{n \rightarrow \infty} a_n = \infty
 
 	og til þess að runa sé samleitin verður markgildi hennar að vera einhver
-	tala :math:`L < \infty`. Hinsvegar er runan
+	rauntala :math:`L`, sem :math:`\infty` er vissulega ekki. Hinsvegar er runan
 
 	.. math:: 1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \dots = \left\{\frac{1}{n}\right\}
 
@@ -261,8 +262,8 @@ Dæmi: Samleitin og ósamleitin runa
 
 	.. math:: \lim_{n \rightarrow \infty } \left\{\frac{1}{n}\right\}  = 0.
 
-Setning: Markgildi runu skilgreint með falli
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Markgildi runu reiknað með markgildi falls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
   :class: setning
@@ -329,7 +330,7 @@ Setning: Markgildisreglur fyrir runur
 
 	  #. :math:`\lim_{n\rightarrow \infty} (a_n \cdot b_n) = \left(\lim_{n\rightarrow \infty} a_n \right) \cdot \left(\lim_{n\rightarrow \infty} b_n \right) = A \cdot B`
 
-	  #. :math:`\lim_{n\rightarrow \infty} \lim_{n\rightarrow \infty} \left( \frac{a_n}{b_n} \right) = \frac{\lim_{n\rightarrow \infty} a_n}{\lim_{n\rightarrow \infty} b_n} = \frac{A}{B}` af því gefnu að :math:`B \neq 0` og hvert :math:`b_n \neq 0`.
+	  #. :math:`\lim_{n\rightarrow \infty} \left( \frac{a_n}{b_n} \right) = \frac{\lim_{n\rightarrow \infty} a_n}{\lim_{n\rightarrow \infty} b_n} = \frac{A}{B}` af því gefnu að :math:`B \neq 0` og hvert :math:`b_n \neq 0`.
 
 Dæmi: Ákvarða samleitni og reikna markgildið
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -363,11 +364,13 @@ Setning: Samfelld föll skilgreind á samleitnum runum
 	Látum :math:`\{a_n\}` vera runu og gerum ráð fyrir að til sé tala :math:`L` þannig
 	að
 
-	.. math:: \lim_{n \rightarrow n} a_n = L.
+	.. math:: \lim_{n \rightarrow \infty} a_n = L.
 
-	Gerum einnig ráð fyrir að fallið :math:`f` sé samfellt í :math:`L`. Þá er til
+	Gerum einnig ráð fyrir að fall :math:`f` sé samfellt í :math:`L`. Þá er til
 	heil tala :math:`N` sem uppfyllir að :math:`f` er skilgreint í öllum :math:`a_n`
 	fyrir :math:`n \geq N` og runan :math:`\{f(a_n)\}` er samleitin að :math:`f(L)`.
+
+	Með öðrum orðum segir setningin að það má taka markgildi inn fyrir föll ef þau eru samfelld.
 
 Dæmi: Samfelld föll skilgreind á samleitnum runum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -455,7 +458,7 @@ Skilgreining: Takmörkun
 
 Til að mynda er runan :math:`\{1/n\}` takmörkuð að ofan af því að :math:`1/n \leq 1`
 fyrir allar jákvæðar heiltölur :math:`n`. Hún er einnig takmörkuð að neðan þar sem
-:math:`1/n \geq 0` fyrir allar jákvæðar heiltölur :math:`n`. Ef við lítum hins
+:math:`1/n \geq 0` fyrir allar stranglega jákvæðar heiltölur :math:`n`. Ef við lítum hins
 vegar á rununa :math:`\{2^n\}` þá er hú ekki takmörkuð að ofan þar sem :math:`\lim_{n \rightarrow \infty} 2^n = \infty`
 og jafnvel þó hún sé takmörkuð að neðan þar sem :math:`2^n > 0` fyrir allar
 jákvæðar heiltölur þá segjum við samt sem áður að runan sé ótakmörkuð þar sem
@@ -480,16 +483,15 @@ Skilgreining: Einhalla runa
 .. admonition:: Skilgreining
   :class: skilgreining
 
-	Runa :math:`\{a_n\}` er sögð *vaxandi* fyrir öll :math:`n \geq n_0` ef
+	Runa :math:`\{a_n\}` er sögð *vaxandi* ef
 
-	.. math:: a_n \leq a_{n+1} \text{ fyrir öll } n \geq n_0.
+	.. math:: a_n \leq a_{n+1} \text{ fyrir öll } n \geq 1.
 
-	Runa :math:`\{a_n\}` er sögð *minnkandi* fyrir öll :math:`n \geq n_0` ef
+	Runa :math:`\{a_n\}` er sögð *minnkandi* ef
 
-	.. math:: a_n \geq a_{n+1} \text{ fyrir öll } n \geq n_0.
+	.. math:: a_n \geq a_{n+1} \text{ fyrir öll } n \geq 1.
 
-	Runa :math:`\{a_n\}` er sögð *einhalla* fyrir öll :math:`n \geq n_0` er hún
-	er vaxandi fyrir öll :math:`n \geq n_0` eða minnkandi fyrir öll :math:`n \geq n_0`.
+	Runa :math:`\{a_n\}` er sögð *einhalla* ef hún er vaxandi eða minnkandi.
 
 Þá er ekkert annað að gera en að setja fram setninguna um einhalla runur.
 
@@ -814,7 +816,7 @@ Dæmi: Kíkisröð
 
 	.. math:: S_k = \cos(1) - \cos(1/(k+1)).
 
-	Þar sem :math:`1/(k+1) \rightarrow 0` þegar :math:`k \rightarrow 0` og
+	Þar sem :math:`1/(k+1) \rightarrow 0` þegar :math:`k \rightarrow \infty` og
 	:math:`\cos(x)` er samfellt fall þá gildir að :math:`\cos(1/(k+1)) \rightarrow \cos(0)=1`.
 	Þar með fæst að :math:`S_k \rightarrow \cos(1)-1`. Kíkisröðin er því samleitin og
 	summa hennar er gefin með
@@ -823,8 +825,8 @@ Dæmi: Kíkisröð
 
 ---------
 
-Sundurleitnipróf og heildispróf
---------------------------------
+Sundurleitnipróf
+-----------------
 
 Ef röðin :math:`\sum_{n=1}^\infty a_n` á að vera samleitin verður að gilda
 að :math:`a_n \rightarrow 0` þegar :math:`n \rightarrow \infty`. Því er hægt að setja
@@ -878,7 +880,7 @@ Setning: Heildisprófið
 
 	Þá gildir að
 
-	.. math:: \int_{n=1}^\infty a_n \text{ og } \int_N^\infty f(x) dx.
+	.. math:: \sum_{n=1}^\infty a_n \text{ og } \int_N^\infty f(x) dx
 
 	eru annað hvort bæði samleitin eða bæði ósamleitin.
 	Athugum að jafnvel þó samleitni heildisins :math:`\int_N^\infty f(x) dx` hafi það í
