@@ -43,8 +43,8 @@ fosfór og brennisteinssamböndum er fjarlægt, brennt burtu) í sérstökum ofn
 lofti (í Kaldo-aðferðinni súrefni) er blásið í gegnum bráðina. Ofnarnir geta tekið 5 – 25
 tonn í hvern blástur, sem stendur yfir í um 30 mínútur. Ofnarnir eru fóðraðir, áður
 einungis með súrri fóðringu (kvarts) og nefndist aðferðin þá Bessemer. Með súrri
-fóðringu næst að binda kolefni, kísil og mangan. Síðar var þróuð basísk fóðring, þar næst
-að binda fleiri gerðir af óæskilegum efnum, þessi aðferð er nefnd eftir Thomas.
+fóðringu næst að binda kolefni, kísil og mangan. Síðar var þróuð basísk fóðring, 
+þar næst að binda fleiri gerðir af óæskilegum efnum, þessi aðferð er nefnd eftir Thomas.
 Venjulegt byggingarstál inniheldur auk járns, kolefni, kísil, mangan, fosfór og
 brennistein. 
 

@@ -149,12 +149,12 @@ Skilgreining: Kúpt/hvelft
 
          .. math:: f(\alpha x_1+(1-\alpha)x_2)\leq \alpha f(x_1)+(1-\alpha)f(x_2).
 
-    (ii) Segjum að fallið :math:`f` sé :hover:`hvelft,hvelft fall`
+    (ii) Segjum að fallið :math:`g` sé :hover:`hvelft,hvelft fall`
          ef um alla punkta :math:`x_1, x_2\in [a, b]` og sérhverja tölu
          :math:`0\leq
          \alpha\leq 1` gildir að
 
-         .. math:: f(\alpha x_1+(1-\alpha)x_2)\geq \alpha f(x_1)+(1-\alpha)f(x_2).
+         .. math:: g(\alpha x_1+(1-\alpha)x_2)\geq \alpha g(x_1)+(1-\alpha)g(x_2).
 
 .. admonition:: Athugasemd
     :class: athugasemd
