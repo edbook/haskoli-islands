@@ -493,7 +493,7 @@ Dæmi: Afleiða sínus
 
   .. math::
     \begin{aligned}
-      \frac{d}{dx} (5x^3+\sin(x)) &= \frac{d}{dx} (5x^3) \cdot \sin(x) + (5x^3) \cdot \frac{d}{dx} \sin(x)\\
+      \frac{d}{dx} (5x^3\sin(x)) &= \frac{d}{dx} (5x^3) \cdot \sin(x) + (5x^3) \cdot \frac{d}{dx} \sin(x)\\
       &= 15 x^2 \sin(x) + 5x^3\cos(x)
     \end{aligned}
 
