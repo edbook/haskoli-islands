@@ -638,7 +638,7 @@ Dæmi: Markgildið :math:`\infty`
       :width: 75 %
       :align: center
 
-  Þar sem :math:`\lim_{x \rightarrow 0^-}  \neq \lim_{x \rightarrow 0^+}` er ljóst
+  Þar sem :math:`\lim_{x \rightarrow 0^-} h(x) \neq \lim_{x \rightarrow 0^+} h(x)` er ljóst
   að markgildið er ekki til.
 
   .. figure:: ./myndir/kafli02/mean_girls.gif
