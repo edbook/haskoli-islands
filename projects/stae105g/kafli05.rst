@@ -127,7 +127,7 @@ Táknið :math:`\int` er kallað *heildistákn* og :math:`\int f(x) dx` er kalla
 
 	#. Í MR og víðar er talað um að diffra og tegra. Nafnorðin eru þá diffur og tegur.
 
-	#. Víða er talað um að heilda og deilda og nafnorðin heildun og deildun, sem formlegri tilraun til að íslenska orðin, en orðið diffur kemur af orðinu **differ**\ ernation og tegur er dregið af orðinu in\ **tegra**\ l.
+	#. Víða er talað um að heilda og deilda og nafnorðin heildun og deildun, sem formlegri tilraun til að íslenska orðin, en orðið diffur kemur af orðinu **differ**\ entiation og tegur er dregið af orðinu in\ **tegra**\ l.
 
 	#. Víðast hvar eru orðin afleiða og stofnfall notuð að einhverju leyti.
 
@@ -174,7 +174,7 @@ Setning: Veldisregla fyrir heildi
 		":math:`\frac{d}{dx} e^x = e^x`", ":math:`\int e^x dx = e^x+C`"
 		":math:`\frac{d}{dx} \sin(x) = \cos(x)`", ":math:`\int \cos(x) dx = \sin(x)+C`"
 		":math:`\frac{d}{dx} \cos(x) = -\sin(x)`", ":math:`\int \sin(x) dx = -\cos(x)+C`"
-		":math:`\frac{d}{dx} \tan(x) = \frac{1}{\cos^2(x)}`", ":math:`\int frac{1}{\cos^2(x)} dx = \tan(x)+C`"
+		":math:`\frac{d}{dx} \tan(x) = \frac{1}{\cos^2(x)}`", ":math:`\int \frac{1}{\cos^2(x)} dx = \tan(x)+C`"
 
 Reiknireglur: Óákveðin heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -597,7 +597,7 @@ Skilgreining: Ákveðið heildi
 	.. math:: \int_a^b f(x) dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i^*) \Delta x,
 
 	af því gefnu að markgildið sé til. Ef markgildið er til, þá er fallið :math:`f(x)`
-	sagt vera heildanlegt á bilinu :math:`[a,b]` eða einfaldlega bara heildanlegt.
+	sagt vera *heildanlegt* á bilinu :math:`[a,b]` eða einfaldlega bara heildanlegt.
 
 .. admonition:: Aðvörun
   :class: advorun
@@ -618,8 +618,8 @@ Setning: Samfelld föll eru heildanleg
 	Föll sem ekki eru samfelld á :math:`[a,b]` gætu verið heildanleg á bilinu. Það er
 	þó ekki hægt að tryggja það líkt og með samfelld föll.
 
-Dæmi: Ákveðið heildi
-~~~~~~~~~~~~~~~~~~~~~
+Dæmi: Ákveðið heildi reiknað út frá skilgreiningu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Dæmi
   :class: daemi
@@ -788,6 +788,8 @@ Skilgreining: Meðalgildi falls á bili
 Undirstöðusetning stærðfræðigreiningar
 --------------------------------------
 
+Eftirfarandi setning er notuð sem hjálparsetningu við sönnunina á undirstöðusetning stærðfræðigreiningarinnar.
+
 Meðalgildissetningin fyrir heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -798,20 +800,6 @@ Meðalgildissetningin fyrir heildi
 	punktur :math:`c\in [a,b]` sem uppfyllir að
 
 	.. math:: f(c) = \frac{1}{b-a} \int_a^b f(x) dx.
-
-Athugasemd: Ritháttur
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Athugasemd
-  :class: athugasemd
-
-	Oft er ritað að
-
-	.. math:: \int_a^b f(x) dx = \left[F(x)\right]_a^b = F(b)-F(a).
-
-	Þessi ritháttur gefur manni tækifæri til að finna fyrst stofnfallið :math:`F(x)` og
-	stinga svo heildismörkunum :math:`a` og :math:`b` inn í af því loknu.
-
 
 Dæmi: Meðalgildissetningin fyrir heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -883,6 +871,21 @@ Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)
 	eitthvað stofnfall fyrir :math:`f(x)` þá gildir að
 
 	.. math:: \int_a^b f(x) dx = F(b)-F(a).
+
+.. admonition:: Athugasemd
+  :class: athugasemd
+
+	Oft er ritað að
+
+	.. math:: \int_a^b f(x) dx = \left[F(x)\right]_a^b = F(b)-F(a).
+
+	Þessi ritháttur gefur manni tækifæri til að finna fyrst stofnfallið :math:`F(x)` og
+	stinga svo heildismörkunum :math:`a` og :math:`b` inn í af því loknu.
+
+
+
+Athugasemd: Mikilvægi undirstöðusetningar stærðfræðigreiningarinnar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Athugasemd
   :class: athugasemd

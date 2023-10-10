@@ -290,6 +290,9 @@ Uppgufun frá saltlausn er alltaf minni heldur en frá hreinu vatni, sjá töflu
   :align: center
   :width: 70%
 
+.. youtube:: h41NgpuTLZ8
+
+
 Vatn í byggingarefnum
 ~~~~~~~~~~~~~~~~~~~~~
 Vatn er með ýmsu móti í byggingarefnum;

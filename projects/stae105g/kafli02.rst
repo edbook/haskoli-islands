@@ -287,16 +287,39 @@ Reiknireglur fyrir markgildi
 Aðferðir til að meta markgildi
 ------------------------------
 
-Skilgreining: Sérstöðupunktur og afmáanlegur sérstöðupunktur
+Skilgreining: Einangraður sérstöðupunktur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Punktur :math:`x=a` kallast *einangraður sérstöðupunktur*, eða einfaldlega *sérstöðupunktur* fallsins :math:`f` ef til er tala :math`\delta>0` þannig að :math:`f` er ekki skilgreint í punktinum :math:`a` en :math:`f` er skilgreint á :math:`]a-\delta,a+\delta[ \setminus \{a\}`.
+  
+  Lauslega þýðir þetta að :math:`f` er ekki skilgreint í punktinum :math:`a` en :math:`f` er skilgreint fyrir aðra punkta í kring um :math:`a`. 
+
+Dæmi: Sérstöðupunktur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Finnum alla sérstöðupunkta fallsins
+
+  .. math:: f(x)=\frac{1}{x}.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Fallið :math:`f(x)=\frac{1}{x}` er vel skilgreint fyrir allar rauntölur nema :math:`x=0`. Fyrir vikið getum við valið til dæmis :math:`\delta=1` og séð að :math:`f` er skilgreint á :math:`]0-\delta,0+\delta[ \setminus \{0\}` en ekki í :math:`x=0` og því er :math:`x=0` eini sérstöðupunktur :math:`f`.
+
+Skilgreining: Afmáanlegur sérstöðupunktur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Lauslega má skilgreina *sérstöðupunkt* sem þær tölur :math:`a` sem uppfylla að
-  fallið :math:`f(x)` er ekki skilgreint í :math:`a`. Sérstöðupunktur
-  kallast *afmáanlegur sérstöðupunktur* ef hann uppfyllir að til er tala :math:`L`
-  þannig að
+  Sérstöðupunktur   kallast *afmáanlegur sérstöðupunktur* ef hann uppfyllir
+  að til er tala :math:`L` þannig að
 
   .. math:: \lim_{x \rightarrow a^-} f(x) = L = \lim_{x \rightarrow a^+} f(x).
 
@@ -615,7 +638,7 @@ Dæmi: Markgildið :math:`\infty`
       :width: 75 %
       :align: center
 
-  Þar sem :math:`\lim_{x \rightarrow 0^-}  \neq \lim_{x \rightarrow 0^+}` er ljóst
+  Þar sem :math:`\lim_{x \rightarrow 0^-} h(x) \neq \lim_{x \rightarrow 0^+} h(x)` er ljóst
   að markgildið er ekki til.
 
   .. figure:: ./myndir/kafli02/mean_girls.gif

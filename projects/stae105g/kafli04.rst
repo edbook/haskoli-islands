@@ -268,7 +268,7 @@ Skilgreining: Beygjuskil og beygjuskilapunktur
     :width: 75%
 
 
-Líkt og áður segir þá gildir að sé fall :math:`f` tvídiffranlegt á bilinu :math:`I` þá er :math:`f` kúpt þar sem :math:`f'' \geq 0` á bilinu og hvelft þar sem math:`f'' \leq 0` á bilinu. Þar sem beygjuskilapunktur markar þau mót þar sem fallið breytir um sveigju má til sanns vegar færa að ef :math:`f` hefur beygjuskil í :math:`a` þá er :math:`f''(a)=0`. Athugum þó að þetta þýðir ekki að ef :math:`f''(a)=0` þá séu endilega beygjuskil í :math:`a`; það er nauðsynleg en ekki nægjanleg forsenda fyrir beygjuskilum. Annað skilyrði sem uppfylla þarf er að formerki annarrar afleiðu fallsins breytist í :math:`a`. 
+Líkt og áður segir þá gildir að sé fall :math:`f` tvídiffranlegt á bilinu :math:`I` þá er :math:`f` kúpt þar sem :math:`f'' \geq 0` á bilinu og hvelft þar sem :math:`f'' \leq 0` á bilinu. Þar sem beygjuskilapunktur markar þau mót þar sem fallið breytir um sveigju má til sanns vegar færa að ef :math:`f` hefur beygjuskil í :math:`a` þá er :math:`f''(a)=0`. Athugum þó að þetta þýðir ekki að ef :math:`f''(a)=0` þá séu endilega beygjuskil í :math:`a`; það er nauðsynleg en ekki nægjanleg forsenda fyrir beygjuskilum. Annað skilyrði sem uppfylla þarf er að formerki annarrar afleiðu fallsins breytist í :math:`a`. 
 
 
 Dæmi: Beygjuskilapunktur
@@ -296,7 +296,7 @@ Dæmi: Beygjuskilapunktur
 Dæmi: Útgildi
 ~~~~~~~~~~~~~
 
-.. admonition:: Lausn
+.. admonition:: Dæmi
   :class: daemi, dropdown
 
   Finnum öll útigildi fallsins :math:`f(x)=2 x^3 + 3 x^2 - 12 x + 1`.
@@ -563,7 +563,7 @@ Annarrar afleiðu próf
 
     #. Ef :math:`f''(x) \geq 0` fyrir öll :math:`x \in I`, þá er :math:`f` kúpt á bilinu :math:`I`
 
-    #. Ef :math:`f''(x) \geq 0` fyrir öll :math:`x \in I`, þá er :math:`f` hvelft á bilinu :math:`I`
+    #. Ef :math:`f''(x) \leq 0` fyrir öll :math:`x \in I`, þá er :math:`f` hvelft á bilinu :math:`I`
 
 .. admonition:: Aðvörun
   :class: advorun
@@ -627,7 +627,7 @@ Afleiður eru nánast nauðsynlegt tól þegar kemur að því að teikna gröf 
 kúpni þess er. Annað tæki sem getur reynst mjög hjálplegt þegar graf falls er
 teiknað eru aðfellur.
 
-Aðfella fyrir fall er lína sem fallið leggst upp að og nálgast óendanlega mikið.
+Aðfella fyrir fall er lína sem fallið leggst upp að og nálgast óendanlega mikið (eða nær í sumum tilfellum).
 Til eru þrjár gerðir af aðfellum, þær eru *lóðfellur*, *láfellur*
 og *skáfellur*.
 
@@ -638,8 +638,7 @@ Skilgreining: Lóðfella
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Ef fallið :math:`f(x)` er rætt fall með núllstöð :math:`a` í nefnara, sem er ekki
-  afmáanlegur sérstöðupunktur, þá er :math:`x=a` lóðrétt aðfella eða *lóðfella* fyrir
+  Ef um fallið :math:`f(x)` gildir annað hvort að :math:`|\lim_{x\to a^-} f(x)|= \infty`, þ.e.a.s.\ að :math:`\lim_{x\to a^-} f(x)=\pm \infty`, eða :math:`|\lim_{x\to a^+} f(x)|= \infty` þá er línan :math:`x=a` lóðrétt aðfella eða *lóðfella* fyrir
   fallið :math:`f`.
 
 Skilgreining: Láfella
@@ -657,7 +656,7 @@ Skilgreining: Skáfella
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Ef um ræða fallið :math:`f(x)` gildir að :math:`\lim_{x \rightarrow \infty} f(x)=hx+k`
+  Ef um fallið :math:`f(x)` gildir að :math:`\lim_{x \rightarrow \infty} f(x)=hx+k`
   eða :math:`\lim_{x \rightarrow -\infty} f(x)=hx+k` þar sem :math:`h,k \in \mathbb{R}`
   og :math:`h\neq 0` þá hefur fallið skáfellu í :math:`y=hx+k`. Þetta gerist einungis
   ef stig teljarans er einum hærra en stig nefnarans.

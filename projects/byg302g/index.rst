@@ -22,7 +22,4 @@
    fjollidur
    lim 
 
-.. toctree::
-	ordaskra
-
 * :ref:`genindex`
