@@ -525,7 +525,7 @@ Annarrar afleiðu próf
 
     #. Ef :math:`f''(x) \geq 0` fyrir öll :math:`x \in I`, þá er :math:`f` kúpt á bilinu :math:`I`
 
-    #. Ef :math:`f''(x) \geq 0` fyrir öll :math:`x \in I`, þá er :math:`f` hvelft á bilinu :math:`I`
+    #. Ef :math:`f''(x) \leq 0` fyrir öll :math:`x \in I`, þá er :math:`f` hvelft á bilinu :math:`I`
 
 .. admonition:: Aðvörun
   :class: advorun
