@@ -255,44 +255,6 @@ Annarar afleiðu prófið
     Athugið að ef :math:`f''(x_0)=0` þá getur :math:`x_0` verið hvort sem er
     staðbundið hágildi, staðbundið lággildi eða söðulpunktur.
 
-Skilgreining: Beygjuskil og beygjuskilapunktur
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-  :class: skilgreining
-
-  Ef fall :math:`f` er samfellt í :math:`a` og breytir um sveigju í :math:`a` (þ.e. fallið fer úr því að vera kúpt yfir í að vera hvelft eða öfugt) þá er punkturinn :math:`(a,f(a))` nefndur beygjuskilapunktur fallsins og stundum sagt að fallið :math:`f` hafi beygjuskil í :math:`a`. 
-
-  .. image:: ./myndir/kafli04/PMA_beygjuskilapunktur_skgr.png
-    :align: center
-    :width: 75%
-
-
-Líkt og áður segir þá gildir að sé fall :math:`f` tvídiffranlegt á bilinu :math:`I` þá er :math:`f` kúpt þar sem :math:`f'' \geq 0` á bilinu og hvelft þar sem :math:`f'' \leq 0` á bilinu. Þar sem beygjuskilapunktur markar þau mót þar sem fallið breytir um sveigju má til sanns vegar færa að ef :math:`f` hefur beygjuskil í :math:`a` þá er :math:`f''(a)=0`. Athugum þó að þetta þýðir ekki að ef :math:`f''(a)=0` þá séu endilega beygjuskil í :math:`a`; það er nauðsynleg en ekki nægjanleg forsenda fyrir beygjuskilum. Annað skilyrði sem uppfylla þarf er að formerki annarrar afleiðu fallsins breytist í :math:`a`. 
-
-
-Dæmi: Beygjuskilapunktur
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  Finnum beygjuskil fallsins :math:`f(x)=x^3+3x^2+0.5x`.
-
-.. admonition:: Lausn
-  :class: daemi, dropdown
-
-  Lítum á fallið :math:`f(x)=x^3 + 3x^2 + 0.5x`. Önnur afleiða þess er :math:`f''(x)=6x+6`.
-  Samkvæmt annarrar afleiðu prófinu fæst að fallið hafi beygjuskil í
-
-  .. math:: 6x + 6 = 0 \Leftrightarrow x=-1.
-
-  Þá er ljóst að :math:`(-1,f(-1))=(-1,1.5)` er beygjuskilapunktur fallsins :math:`f`
-
-  .. image:: ./myndir/kafli04/PMA_beygjuskilapunktur.png
-    :align: center
-    :width: 75%
-
 Dæmi: Útgildi
 ~~~~~~~~~~~~~
 
@@ -572,6 +534,44 @@ Annarrar afleiðu próf
   eins og það eru til föll sem eru sums staðar vaxandi og sums staðar
   minnkandi, þá eru mörg föll sums staðar kúpt og sums staðar hvelfd.
   Þetta á til dæmis við um hornaföllin.
+
+Skilgreining: Beygjuskil og beygjuskilapunktur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Ef fall :math:`f` er samfellt í :math:`a` og breytir um sveigju í :math:`a` (þ.e. fallið fer úr því að vera kúpt yfir í að vera hvelft eða öfugt) þá er punkturinn :math:`(a,f(a))` nefndur beygjuskilapunktur fallsins og stundum sagt að fallið :math:`f` hafi beygjuskil í :math:`a`. 
+
+  .. image:: ./myndir/kafli04/PMA_beygjuskilapunktur_skgr.png
+    :align: center
+    :width: 75%
+
+
+Líkt og áður segir þá gildir að sé fall :math:`f` tvídiffranlegt á bilinu :math:`I` þá er :math:`f` kúpt þar sem :math:`f'' \geq 0` á bilinu og hvelft þar sem :math:`f'' \leq 0` á bilinu. Þar sem beygjuskilapunktur markar þau mót þar sem fallið breytir um sveigju má til sanns vegar færa að ef :math:`f` hefur beygjuskil í :math:`a` þá er :math:`f''(a)=0`. Athugum þó að þetta þýðir ekki að ef :math:`f''(a)=0` þá séu endilega beygjuskil í :math:`a`; það er nauðsynleg en ekki nægjanleg forsenda fyrir beygjuskilum. Annað skilyrði sem uppfylla þarf er að formerki annarrar afleiðu fallsins breytist í :math:`a`. 
+
+
+Dæmi: Beygjuskilapunktur
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Finnum beygjuskil fallsins :math:`f(x)=x^3+3x^2+0.5x`.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Lítum á fallið :math:`f(x)=x^3 + 3x^2 + 0.5x`. Önnur afleiða þess er :math:`f''(x)=6x+6`.
+  Samkvæmt annarrar afleiðu prófinu fæst að fallið hafi beygjuskil í
+
+  .. math:: 6x + 6 = 0 \Leftrightarrow x=-1.
+
+  Þá er ljóst að :math:`(-1,f(-1))=(-1,1.5)` er beygjuskilapunktur fallsins :math:`f`
+
+  .. image:: ./myndir/kafli04/PMA_beygjuskilapunktur.png
+    :align: center
+    :width: 75%
 
 Ábending: Jafngildi
 ~~~~~~~~~~~~~~~~~~~
