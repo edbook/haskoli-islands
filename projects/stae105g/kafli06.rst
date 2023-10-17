@@ -56,7 +56,7 @@ Dæmi: Flatarmál milli tveggja ferla
 
 	Samkvæmt setningunni hér að ofan fæst að
 
-	.. math:: A = \int_1^4 \left(x+4 - \left(3 - \frac{x}{2}\right)\right) dx = \int_1^4 \frac{3}{2}x +1 dx = \left[ \frac{3}{4}x^4 + x \right]_1^4 = 16 - \frac{7}{4} = \frac{57}{4}
+	.. math:: A = \int_1^4 \left(x+4 - \left(3 - \frac{x}{2}\right)\right) dx = \int_1^4 \frac{3}{2}x +1 dx = \left[ \frac{3}{4}x^2 + x \right]_1^4 = 16 - \frac{7}{4} = \frac{57}{4}
 
 	Svo flatarmál svæðisins er :math:`\frac{57}{4}` fereiningar.
 
@@ -116,7 +116,7 @@ Setning: Heildað m.t.t. :math:`y`
 	Látum :math:`R` tákna svæðið sem afmarkast af gröfum fallanna og línunum :math:`y=d`
 	og :math:`y=c`. Þá má reikna flatarmál svæðisins :math:`R` með
 
-	.. math:: A = \int_C^d (u(y)-v(y)) dy.
+	.. math:: A = \int_c^d (u(y)-v(y)) dy.
 
 Dæmi: Heildað m.t.t. :math:`y`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

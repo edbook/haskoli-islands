@@ -31,7 +31,9 @@ Skilgreining: Veldaröð
 
   .. math:: \sum_{n=0}^\infty c_n x^n = c_0 + c_1 x + c_2 x^2 + \dots
 
-  nefnist *veldaröð með miðju í* :math:`x=0`. Röð á forminu
+  nefnist *veldaröð með miðju í* :math:`x=0`.
+
+  Röð á forminu
 
   .. math:: \sum_{n=0}^\infty c_n (x-a)^n = c_0 + c_1(x-a) + c_2(x-a)^2+\dots
 
@@ -310,7 +312,7 @@ Dæmi: Afleiða veldaraðar
       &= 1 + x + x^2 + x^3 + \dots
     \end{aligned}
 
-  fyrir :math:`|x|<1` til að
+  fyrir :math:`|x|<1`.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
@@ -370,7 +372,7 @@ Dæmi: Stofnfall veldaraðar
 
   Þar sem :math:`f(x)=\ln(1+x)` er stofnfall fallsins :math:`\frac{1}{1+x}` þá er aðeins
   eftir að ákvarða fastann :math:`C`. Þar sem :math:`\ln(1+0)=0` höfum við að :math:`C=0`.
-  Þar me ðfæst að veldaröð fallsins :math:`f(x)=\ln(1+x)` sé
+  Þar með fæst að veldaröð fallsins :math:`f(x)=\ln(1+x)` sé
 
   .. math::
     \begin{aligned}
