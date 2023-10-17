@@ -425,7 +425,7 @@ Skilgreining: Skipting
   :class: skilgreining
 
 	Mengi punkta :math:`P=\{x_0,x_1,\dots,x_n\}` þar sem :math:`a<x_0<x_1<\dots < x_n=b`
-	sem skiptir bilinu [a,b] í hlutbil á forminu :math:`[x_0,x_1], [x_1,x_2], \dots, [x_{n-1},x_n]`
+	sem skiptir bilinu :math:`[a,b]` í hlutbil á forminu :math:`[x_0,x_1], [x_1,x_2], \dots, [x_{n-1},x_n]`
 	kallast *skipting* bilsins :math:`[a,b]`. Ef hlutbilin hafa öll sömu lengd, er
 	myndar mengi punktanna *reglulega skiptingu* bilsins :math:`[a,b]`.
 
