@@ -1469,7 +1469,7 @@ Setning: Rótarprófið
 
 	#. Ef :math:`\rho > 1` eða :math:`\rho = \infty` er röðin ósamleitin.
 
-	#. Ef :math:`\rho = 1` er niðurstaða prófsins ófullnægjandi og segir okkur ekkret um samleitni raðarinnar.
+	#. Ef :math:`\rho = 1` er niðurstaða prófsins ófullnægjandi og segir okkur ekkert um samleitni raðarinnar.
 
 Dæmi: Rótarprófið
 ~~~~~~~~~~~~~~~~~~
