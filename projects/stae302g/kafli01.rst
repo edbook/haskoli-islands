@@ -23,8 +23,8 @@ samlagningu þá eru stökin í :math:`\mathbb{R}^2` kallaðar tvinntölur og me
 líta má á tvinntölu sem punkt í planinu :math:`\mathbb{R}^2` þá er talað um
 tvinntalnaplanið.
 
-Ritháttur. 
-~~~~~~~~~~
+Ritháttur 
+~~~~~~~~~
 
 Þegar fjallað er um tvinntölur þá er stakið :math:`(a,b)`
 venjulega ritað sem :math:`a+ib`.
@@ -57,8 +57,8 @@ Eftirfarandi reiknireglur gilda um tvinntölur:
 
 (vii) Talan :math:`1=1+i0` er margföldunarhlutleysa, þ.e.a.s. \ :math:`1(a+ib)=a+ib`.
 
-Ritháttur.
-~~~~~~~~~~ 
+Ritháttur
+~~~~~~~~~ 
 
 Þegar unnið er með tvinntölur þá er ekki gerður
 greinarmunur á rauntölunni :math:`a` og tvinntölunni :math:`a+i0.` Því
