@@ -1129,24 +1129,24 @@ Dæmi: Heildun logra
 
 	Metum heildið
 
-	.. math:: \int \frac{3}{x-10}.
+	.. math:: \int \frac{3}{x-10}dx.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
 	Tökum fyrst 3 út fyrir heildið
 
-	.. math:: 3 \int \frac{1}{x-10}.
+	.. math:: 3 \int \frac{1}{x-10}dx.
 
 	Og notum svo innsetningu með :math:`f(x)=\frac{1}{x}` og :math:`g(x)=x-10`.
 	Þá er :math:`du = 1 dx` þar sem :math:`g'(x)=1`. Þetta gefur því
 
 	.. math:: 3 \int \frac{1}{u} du = 3\ln|u|+C.
 
-	Við getum nú skipt :math:`u` aftur út fyrir :math:`g(x)=x-10` og valið :math:`C=0`.
+	Við getum nú skipt :math:`u` aftur út fyrir :math:`g(x)=x-10`.
 	Þá fæst
 
-	.. math:: = 3 \ln|x-10|.
+	.. math:: = \int \frac{3}{x-10} 3 = \ln|x-10|+C.
 
 	Munum að lograr eru ekki skilgreindir í núlli og því gildi að :math:`x \in \mathbb{R}\setminus \{10\}`.
 

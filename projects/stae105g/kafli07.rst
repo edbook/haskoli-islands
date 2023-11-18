@@ -160,7 +160,7 @@ Dæmi: Hlutheildun fyrir ákveðin heildi
 .. admonition:: Dæmi
   :class: daemi
 
-	H áfram með dæmið hér að ofan, þar sem við mátum heildið
+	Höldum áfram með dæmið hér að ofan, þar sem við mátum heildið
 
 	.. math:: \int x \sin(x) dx.
 
@@ -247,14 +247,14 @@ Dæmi: Óeiginlegt heildi
 
 	.. math::
 		\begin{align}
-			A &= \int_1^\infty\\
+			A &= \int_1^\infty \frac{1}{x}dx\\
 			&= \lim_{t \rightarrow \infty} \int_1^t \frac{1}{x} dx\\
-			&= \lim_{t \rightarrow \infty} \left[|x|\right]_1^t\\
+			&= \lim_{t \rightarrow \infty} \left[\ln|x|\right]_1^t\\
 			&= \lim_{t \rightarrow \infty} (\ln|t|-\ln(1))\\
 			&= \infty
 		\end{align}
 
-	Sjáum að heildið er ósamleitið sem þýðir að flatarmál svæðisins er óendanlega stórt.
+	Sjáum að heildið er ósamleitið þar sem flatarmál svæðisins er óendanlega stórt.
 
 Dæmi: Óeiginlegt heildi
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -274,7 +274,7 @@ Dæmi: Óeiginlegt heildi
 	.. math::
 		\begin{align}
 			\int_{-\infty}^0 \frac{1}{x^2+4}dx &= \lim_{x \rightarrow -\infty} \int_t^0 \frac{1}{x^2+4}dx\\
-			&= \lim_{t \rightarrow -\infty } \left[\frac{1}{2}\tan^{-1}(\frac{1}{2})\right]_t^0\\
+			&= \lim_{t \rightarrow -\infty } \left[\frac{1}{2}\tan^{-1}\left(\frac{x}{2}\right)\right]_t^0\\
 			&= \frac{1}{2}\lim_{t \rightarrow -\infty}(\tan^{-1}(0)-\tan^{-1}(t/2))\\
 			&= \frac{\pi}{4}
 		\end{align}
@@ -307,7 +307,7 @@ Skilgreining: Ósamfelldur heildisstofn
 
 		.. math:: \int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx,
 
-		af því gefnu að bæði :math:`\int_a^b f(x) dx` og :math:`\int_c^b f(x) dx`
+		af því gefnu að bæði :math:`\int_a^c f(x) dx` og :math:`\int_c^b f(x) dx`
 		séu samleitin. Annars er sagt að heildið :math:`\int_a^b f(x) dx` sé ósamleitið.
 
 Dæmi: Ósamfelldur heildisstofn
@@ -330,7 +330,7 @@ Dæmi: Ósamfelldur heildisstofn
 		\begin{align}
 			\int_0^4 \frac{1}{\sqrt{4-x}} dx &= \lim_{t \rightarrow 4^-} \int_0^t \frac{1}{\sqrt{4-x}}\\
 			&= \lim_{t \rightarrow 4^-} [(-2–\sqrt{4-x})]_0^t\\
-			&= \lim_{t \rightarrow 4^-} (-2\sqrt{4-t}+4)\\
+			&= \lim_{t \rightarrow 4^-} (-2-\sqrt{4-t}+4)\\
 			&=4
 		\end{align}
 
