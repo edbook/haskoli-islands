@@ -17,7 +17,7 @@ Hvert rafeindahvel getur innihaldið mest :math:`2\cdot n^2` rafeindir, þar sem
    :widths: 15 5 5 5 5 5 5 5
    :header-rows: 1
 
-   * - Hver nr. (n)
+   * - Hvel nr. (n)
      - 1
      - 2
      - 3

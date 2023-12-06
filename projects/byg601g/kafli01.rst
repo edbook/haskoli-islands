@@ -4,17 +4,16 @@
 
    Björn Marteinsson
 
-1. Inngangur
-============
+Kafli - Inngangur
+=================
 
-1.1 Umfang byggingarstarfsemi og almennar kröfur til mannvirkja
+Umfang byggingarstarfsemi og almennar kröfur til mannvirkja
 ---------------------------------------------------------------
 
-Byggt á greininni;
+Umfjöllun byggir að hluta á greininni;
+Björn Marteinsson (2005) “Hönnun og framkvæmd nýbyggingar með tilliti til endingar”, Byggiðn- Blað Menntafélags byggingariðnaðarins,  Nr. 17 – September 2005, bls. 20-22, Reykjavík
 
-| 
-
-Í iðnríkjum liggja verulegir fjármunir\ `1 <#sdfootnote1sym>`__\  í hinu
+Í iðnríkjum liggja verulegir fjármunir :superscript:`1` í hinu
 byggða umhverfi, í Evrópu iðulega ríflega helmingur allra fjármuna [1]
 og enn hærra hérlendis eða um 84 %. Af heildar-fjármunamyndun hvers árs
 er hlutur byggingariðnaðar ennfremur mjög hár eða iðulega á bilinu 60-70
@@ -28,24 +27,18 @@ flugvellir. Umfang byggingariðnaðar er þó í raun mun stærra heldur en
 fjármunamyndunin ein ber með sér þar sem þar er ekki tekið tillit til
 þess hluta viðhalds mannvirkja sem eigendur sjá sjálfir um.
 
-| 
-
 Orkunotkun vegna byggingariðnaðar og rekstrar bygginga nemur í Evrópu
 meira en 40 % af allri orkunotkun og byggingariðnaður er talinn
 framleiða um 40 % alls manngerðs úrgangs. Vægi byggingariðnaðarins í
 fjárfestingum og nýtingu náttúruauðlinda er þannig umtalsvert.
-
-| 
 
 Það er því ekki að ósekju að Evrópusambandið setur í ”Samþykkt um
 verslun með byggingavörur” (sem einnig hefur gildi hérlendis) fram
 kröfur til bygginga, sem eiga að tryggja að hagkvæmni ráði för og að
 áhrif á umhverfi íbúa og nágranna verði ásættanleg.
 
-| 
-
 Það er því ekki að ósekju að Evrópusambandið setur í „Construction
-Products Regulation“\ `2 <#sdfootnote2sym>`__\  [3] frá 9. mars 2011
+Products Regulation“ :superscript:`2` [3] frá 9. mars 2011
 fram kröfur til bygginga, sem eiga að tryggja að hagkvæmni ráði för og
 að áhrif á umhverfi íbúa og nágranna verði ásættanleg.
 
@@ -57,15 +50,14 @@ einvörðungu taka mið af öryggi bygginga og annarra mannvirkja heldur
 einnig heilsu, endingu, orku hagkvæmni, varðveislu umhverfis, hagrænum
 þáttum og öðrum mikilvægum þáttum fyrir almanna hagsmuni“.
 
-| 
-
 Í reglugerðinni eru síðan sjö grunnkröfur nánar skilgreindar í viðauka
 (Annex 1) við skjalið.
 
-| 
+.. [1]   Fjármunir eru allar afskrifanlegar eignir (því ekki meðtalið t.d sparifé, hlutabréf eða lífeyrissparnaður)
+.. [2]   Tekur við af eldri kröfum í „Construction Products Directive“ frá 1989 [3], en breyting í grunnkröfum ekki áberandi
 
-**Grunnkröfur til mannvirkja í Evrópusambandinu (EU; Construction
-Products Regulation )**
+Grunnkröfur til mannvirkja í Evrópusambandinu (EU; Construction Products Regulation )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Eftirfarandi texti (skáletraður) er þýðing höfundar á grunnkröfunum ;
 
@@ -74,8 +66,6 @@ sem þeim er ætluð, að teknu sérstöku tilliti til hollustu og öryggis
 þess fólks sem að þeim kemur allan notkunartíma mannvirkjanna. Að
 uppfylltu eðlilegu viðhaldi skulu mannvirki uppfylla þessar grunnkröfur
 til mannvirkja í hagkvæman notkunartíma.*
-
-| 
 
 *1. Aflfræðileg mótstaða og stöðugleiki*
 
@@ -88,11 +78,7 @@ b. *verulegum formbreytingum*
 
 c. *skemmdum á öðrum hlutum vegna formbreytinga á burðarvirki*
 
-| 
-
 *2. Öryggi í eldsvoða*
-
-| 
 
 *3. Hreinlæti, heilsa og umhverfi*
 
@@ -120,8 +106,6 @@ f. *gölluð förgun frárennslis vatns, brunaloftegunda (e. flue gas),
 
 g. *raki í hluta mannvirkis eða á yfirborðum mannvirkja.*
 
-| 
-
 *4. Öryggi og aðgengi í notkun*
 
 *Mannvirki skal þannig hannað og byggt að það bjóði ekki upp á
@@ -137,16 +121,12 @@ fólk í grennd upplifir sé haldið innan þeirra marka að það ógni ekki
 heilsu þeirra og geri þeim mögulegt að sofa, hvílast og vinna við
 ásættanlegar aðstæður.*
 
-| 
-
 *6. Orkuhagkvæmni og orkunýting*
 
 *Bygging mannvirkja og upphitun, kæling, lýsing og loftræsing skal
 þannig hannað og byggt að orkunotkun sé lítil þegar tekið er tillit til
 notenda og umhverfisaðstæðna. Mannvirki skulu jafnframt vera orkunýtin
 og krefjast eins lítillar orku og mögulegt er í byggingu og förgun.*
-
-| 
 
 *7. Sjálfbær notkun náttúrulegra auðlinda*
 
@@ -161,8 +141,6 @@ b. *endingu mannvirkja*
 
 c. *notkun umhverfisvænna hráefna í mannvirkjagerð*
 
-| 
-
 Grunnkröfurnar og aðfararorðin varða ýmis öryggismál og heilsutengd mál
 að því er varðar efnagjöf og raka, aðgengi allra, varnir gegn hávaða,
 orkuhagkvæmni og sjálfbæra notkun náttúrulegra auðlinda. Í grunnkröfunum
@@ -172,33 +150,19 @@ og reglugerðum hvers lands, enda ljóst að hugmyndir manna um þessi mál
 geta verið mjög mismunandi og jafnvel farið eftir landsvæðum og
 menningu.
 
-| 
-
-.. image:: myndir/kafli01_html_15acc326eeb16cfc.png
-   :name: Image1
+.. figure:: myndir/kafli01/fjarmunamyndun.png
    :width: 576px
    :height: 411px
 
 Línurit 1.1 Fjármunamyndun á Íslandi árin 2000-2015, milljónir króna á
 föstu verðlagi. (heimild: Hagstofan)
 
-| 
-
-| 
-
-.. image:: myndir/kafli01_html_ad28f6d3ce780d18.png
-   :name: Image2
+.. figure:: myndir/kafli01/sundurgreining_fjarmunamyndunar.png
    :width: 576px
    :height: 446px
 
 Línurit 1.2 Sundurgreining fjármunamyndunar í mannvirkjagerð á Íslandi
 árin2000-2015, milljónir króna á föstu verðlagi (heimild: Hagstofan)
-
-| 
-
-| 
-
-| 
 
 Grunnkröfurnar gera þannig ráð fyrir að bygging (og mannvirki almennt)
 uppfylli ákveðin lágmarksskilyrði varðandi gæði strax í upphafi og síðan
@@ -214,64 +178,13 @@ bygginga og byggingahluta skipt í flokka þar sem ending byggingar í
 heild er háð tegund þeirra og ending einstakra byggingarhluta síðan háð
 tegund mannvirkis og hversu auðvelt (og kostnaðarsamt) er að sinna
 viðhaldi hvers og eins. Í töflu 1.1 eru sýnd dæmi um slík lágmarksgildi
-( uppgefin viðmiðunargildi vegna tækniumsagna
-EOTA\ `3 <#sdfootnote3sym>`__\ , svo nefndra
-ETAG\ `4 <#sdfootnote4sym>`__\ ).
+( uppgefin viðmiðunargildi vegna tækniumsagna European Organisation for Technical Approvals 
+(EOTA), svo nefndra European Technical Approval Guidelines (ETAG).
 
-| 
+.. figure:: myndir/kafli01/nottimi.png
+   :align: center
+   :width: 90%
 
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-Tafla 1.1 Nottími bygginga og byggingarhluta- viðmiðunargildi (Heimild
-[4])
-
-| |DrawObject1|
-
-Nottími mannvirkis Nottími byggingarefna og byggingarhluta
-
-(ár) (ár)
-
-| 
-
-Flokkur Ár Flokkur
-
-| 
-
-Viðgerðarhæft Viðgerðarhæft Endist
-
-eða auðvelt eða mögulegt að mannvirkið\ :sup:`2)`
-
-að skipta út \ :sup:`1)`\  skipta út án
-
-verulegs kostnaðar
-
-Stuttur 10 10 10 10
-
-Miðlungs 25 10 25 25
-
-Algengur 50 10 25 50
-
-Langur 100 10 25 100
-
-| 
-
-#. Í sértilvikum, og þegar slíkt er talið réttlætanlegt, fyrir viss
-   viðgerðarefni má , t.d. miða við nottímann 3 til 6 ár (ef slíkt er
-   samþykkt sérstaklega).
-
-#. Þegar fyrri tveir dálkarnir eiga ekki við.
-
-| |DrawObject2|
-
-| 
 
 Algengt viðmiðunargildi fyrir nottíma íbúðarhúsa er 50 ár (í öðrum
 heimildum oft 60 ár) en iðulega er miðað við að vandaðar opinberar
@@ -280,17 +193,13 @@ undirstöður eiga að endast jafnlengi og byggingin (óháð endingartíma
 hennar) en utanhúss klæðningar falla væntanlega undir viðmiðunargildi í
 miðdálknum og þá með endingartími upp á 25 ár.
 
-| 
-
-Heimildir
+**Heimildir**
 
 Umfjöllun byggir að hluta á greininni;
 
 Björn Marteinsson (2005) “Hönnun og framkvæmd nýbyggingar með tilliti
 til endingar”, Byggiðn- Blað Menntafélags byggingariðnaðarins, Nr. 17 –
 September 2005, bls. 20-22, Reykjavík
-
-| 
 
 [1] CIB (1999) Agenda 21 on Sustainable construction, CIB Report
 Publication 237
@@ -309,109 +218,82 @@ Standards, Edition December 1999
 [5] ISO (2000) Buildings and constructed assets - Service life planning
 – Part 1: General principles, ISO 15686-1:2000
 
-| 
-
-| 
-
-1.2 Byggingarlög, reglugerðir og staðlar
+Byggingarlög, reglugerðir og staðlar
 ----------------------------------------
 
-**Eftirfarandi lög og reglugerðir varða byggingarstarfsemi og hönnuði
-sérstaklega (sjá**
-`http://umhverfisraduneyti.is <http://umhverfisraduneyti.is/>`__\ **->
+Eftirfarandi lög og reglugerðir varða byggingarstarfsemi og hönnuði
+sérstaklega (sjá
+`http://umhverfisraduneyti.is <http://umhverfisraduneyti.is/>`__\ ->
 lagagögn -> reglugerðir (kafli V. Skipulags- og byggingarmál) eða**
-heimasíðu Mannvirkjastofnunar;
-\ `www.mannvirkjastofnun.is <http://www.mannvirkjastofnun.is/>`__\  :
-Lög og reglugerðir]
+heimasíðu Húsnæðis- og mannvirkjastofnunar;
+\ `www.hms.is <http://www.hms.is/>`__\  :
+`Lög og reglugerðir <https://hms.is/husnaedis-og-mannvirkjastofnun/log-og-reglugerdir-hms>`]
 
-| 
+- Lög nr. 160/2010 um mannvirki (Tóku gildi 1. janúar 2011. Breytt með l. 126/2011 (tóku gildi 30. sept. 2011), l. 131/2011 (tóku gildi 1. jan. 2012) og l. 80/2012 (taka gildi 1. jan. 2013).)
 
-Lög nr. 160/2010 um mannvirki
-
-[Tóku gildi 1. janúar 2011. Breytt með l. 126/2011 (tóku gildi 30. sept.
-2011), l. 131/2011 (tóku gildi 1. jan. 2012) og l. 80/2012 (taka gildi
-1. jan. 2013).]
-
-| 
-
-Byggingarreglugerð nr. 112/2012 (með áorðnum breytingum)
-
-| 
-
-Byggingarreglugerðin nr. 112/2012 (eða breytta útgáfan 1173/2012) er
-skrifuð sem útfærsla á mannvirkjalögunum og er aðalatriði í hönnun (og
-fyrir námsgreinina Húsagerð).
-
-| 
-
-| 
+- Byggingarreglugerð nr. 112/2012 (með áorðnum breytingum). Byggingarreglugerðin nr. 112/2012 (eða breytta útgáfan 1173/2012) er skrifuð sem útfærsla á mannvirkjalögunum og er aðalatriði í hönnun (og fyrir námsgreinina Húsagerð).
 
 Byggingarreglugerðir (í Evrópu almennt) hafa verið byggðar á s.k.
 kröfulýsingum, en skulu nú byggðar á s.k. efndalýsingum. Íslenska
 byggingarreglugerðin er sambland af báðum þessum aðferðum.
 
-| 
+.. admonition:: Skilgreining
+    :class: Definition
+    
+    Kröfulýsingar (e: descriptive requirements)
 
-Kröfulýsingar (e: descriptive requirements)
+    Þetta eru meira eða minna skýr fyrirmæli um hvernig frágangi skuli
+    háttað, dæmi úr reglugerðinni:
 
-Þetta eru meira eða minna skýr fyrirmæli um hvernig frágangi skuli
-háttað, dæmi úr reglugerðinni:
+    *103.3 Ef sérbýlishús eru sambyggð skulu veggir á milli þeirra vera
+    EI90. Veggirnir skulu ná út að ystu vegg- og þakklæðningum.*
 
-*103.3 Ef sérbýlishús eru sambyggð skulu veggir á milli þeirra vera
-EI90. Veggirnir skulu ná út að ystu vegg- og þakklæðningum.*
+.. admonition:: Skilgreining
+    :class: Definition
 
-| 
+    Efndalýsingar (e:functional requirements)
 
-Efndalýsingar (e:functional requirements)
+    Árangri sem skal náð er lýst, dæmi úr reglugerðinni:
 
-Árangri sem skal náð er lýst, dæmi úr reglugerðinni:
+    Markmið og algild hönnun.
 
-| 
+      6.1.1. gr.
 
-Markmið og algild hönnun.
+      *Markmið.*
 
-6.1.1. gr.
+      Mannvirki skulu þannig hönnuð og byggð að þau henti vel til fyrirhugaðra
+      nota. Við ákvörðun á útliti þeirra, efnisvali, litavali og gerð skulu
+      gæði byggingarlistar höfð að leiðarljósi.
 
-Markmið.
+      Tryggt skal fullt öryggi fólks og dýra innan bygginga og á lóðum þeirra.
+      Byggingarnar og lóðir þeirra skulu vera vandaðar og hagkvæmar m.t.t.
+      öryggis fólks, heilbrigðis, endingar, aðgengis og afnota allra.
 
-Mannvirki skulu þannig hönnuð og byggð að þau henti vel til fyrirhugaðra
-nota. Við ákvörðun á útliti þeirra, efnisvali, litavali og gerð skulu
-gæði byggingarlistar höfð að leiðarljósi.
+      Við gerð og hönnun bygginga ber að taka tillit til orkunotkunar, áhrifa
+      þeirra á umhverfið og gæta að hagkvæmni við rekstur, þrif og viðhald.
 
-Tryggt skal fullt öryggi fólks og dýra innan bygginga og á lóðum þeirra.
-Byggingarnar og lóðir þeirra skulu vera vandaðar og hagkvæmar m.t.t.
-öryggis fólks, heilbrigðis, endingar, aðgengis og afnota allra.
+      Ávallt skal leitast við að beita algildri hönnun þannig að byggingar og
+      lóðir þeirra séu aðgengilegar öllum án sérstakrar aðstoðar.
 
-Við gerð og hönnun bygginga ber að taka tillit til orkunotkunar, áhrifa
-þeirra á umhverfið og gæta að hagkvæmni við rekstur, þrif og viðhald.
+      Við gerð og hönnun bygginga skulu valin efni og aðferðir er henta við
+      íslenskar aðstæður, leitast við að lágmarka neikvæð umhverfisáhrif, velja vistvænar lausnir
+      þar sem það er mögulegt og miða hönnunina við allan líftíma þeirra.
+      Leitast skal við að lágmarka auðlindanotkun og hámarka notagildi,
+      hagkvæmni og þægindi notenda.
 
-Ávallt skal leitast við að beita algildri hönnun þannig að byggingar og
-lóðir þeirra séu aðgengilegar öllum án sérstakrar aðstoðar.
+      Við byggingar eða innan þeirra skal vera fullnægjandi aðstaða fyrir
+      reiðhjól, barnavagna, hjólastóla, sleða o.þ.h. og geymslu þeirra í
+      samræmi við eðli byggingarinnar.
 
-Við gerð og hönnun bygginga skulu valin efni og aðferðir er henta við
-íslenskar aðstæður,
+      Þess skal gætt að byggingar hafi eðlilega tengingu við lóð og annað
+      umhverfi. Við hönnun og byggingu þeirra skal huga að eðlilegum
+      innbrotavörnum.
 
-leitast við að lágmarka neikvæð umhverfisáhrif, velja vistvænar lausnir
-þar sem það er mögulegt og miða hönnunina við allan líftíma þeirra.
-Leitast skal við að lágmarka auðlindanotkun og hámarka notagildi,
-hagkvæmni og þægindi notenda.
-
-Við byggingar eða innan þeirra skal vera fullnægjandi aðstaða fyrir
-reiðhjól, barnavagna, hjólastóla, sleða o.þ.h. og geymslu þeirra í
-samræmi við eðli byggingarinnar.
-
-Þess skal gætt að byggingar hafi eðlilega tengingu við lóð og annað
-umhverfi. Við hönnun og byggingu þeirra skal huga að eðlilegum
-innbrotavörnum.
-
-| 
 
 Það er fyrirsjáanlegt að einnig íslenska reglugerðin mun í vaxandi mæli
 taka mið af efndalýsingum, en þetta mun þá einnig krefjast upplýsinga og
 tilvísunartexta í ritum til að auðvelda hönnuðum og verkkaupum að gera
 grein fyrir hönnun og lokagæðum.
-
-| 
 
 *Efnda- og gæðalýsingar*
 
@@ -421,14 +303,6 @@ byggingariðnaði hér sem erlendis) og því algengt að sjá texta sem byggir
 sambærilegum gæðum” í opinberum verklýsingum er nú bannað að taka
 viðmiðun af skráðum vörumerkjum, og þá vaknar spurningin; hvernig lýsir
 maður gæðum t.d. læsingar?
-
-| 
-
-| 
-
-| 
-
-| 
 
 *Staðlar*
 
@@ -440,9 +314,7 @@ alltaf forskeytið ÍST t.d.
 ÍST EN ISO 6946:1996 Building components and building elements - Thermal
 resistance and thermal transmittance - Calculation method
 
-| 
-
-Greinar;
+Greinar sem textinn byggir á;
 
 Benedikt Jónsson (2003) “Vottun byggingarvöru – staðfesting á samræmi”,
 grein í Tæknivísir - Blað Byggingartæknifræðinema, 27. árg. 2003
@@ -455,11 +327,8 @@ Hafsteinn Pálson (2005) “Verkefni Byggingarstaðlaráðs- séríslensk
 staðlavinna”, grein í Tæknivísir - Blað Byggingartæknifræðinema, 29.
 árg. 2005
 
-| 
 
-| 
-
-1.3 Húsagerð – þekkingarsvið
+Húsagerð – þekkingarsvið
 ----------------------------
 
 Í byggingarreglugerð (og Byggingavörusamþykkt) er sett fram sú krafa til
@@ -468,73 +337,20 @@ eiganda til öryggis, hollustu og þæginda og er hagkvæmt í rekstri. Þetta
 gerir að verkum að efndalýsing (eða kröfulýsing) verður margþætt og huga
 þarf að mjög ólíkum þáttum.
 
-Útlit, fyrirkomulag og tengsl við umhverfi
-
-Burðarþol
-
-Varmaeinangrun
-
-Loftþéttleiki
-
-Vatnsþéttleiki
-
-Innbrotsvörn (öryggi)
-
-Takmarka innsýn
-
-Hljóðdeyfing
-
-Brunaþol
-
-Hollusta (gæði innilofts) (e: Healthy buildings)
-
-Lagnakerfi; rafmagn, heitt og kalt vatn, hitun, kæling og frárennsli
-
-Lýsing og birta
-
-Kostnaður/hagkvæmni (LCC e: life cycle cost eða WLC e: whole life cost)
-
-Ending
-
-Rekstur og viðhald (e: facility management)
-
-Umhverfisáhrif (LCA e: life cycle assessment)
-
-Sjálfbærar byggingar (e: sustainable buildings), “Núll orku hús”
-
-| 
-
-.. container::
-   :name: sdfootnote1
-
-   `1 <#sdfootnote1anc>`__ Fjármunir eru allar afskrifanlegar eignir
-   (því ekki meðtalið t.d sparifé, hlutabréf eða lífeyrissparnaður)
-
-.. container::
-   :name: sdfootnote2
-
-   `2 <#sdfootnote2anc>`__\  Tekur við af eldri kröfum í „Construction
-   Products Directive“ frá 1989 [3], en breyting í grunnkröfum ekki
-   áberandi
-
-.. container::
-   :name: sdfootnote3
-
-   `3 <#sdfootnote3anc>`__\  EOTA; European Organisation for Technical
-   Approvals
-
-.. container::
-   :name: sdfootnote4
-
-   `4 <#sdfootnote4anc>`__ ETAG; European Technical Approval Guidelines
-
-.. container::
-
-   1.8
-
-.. |DrawObject1| image:: myndir/kafli01_html_1af5aa4c0085f1ea.png
-   :name: DrawObject1
-   :width: 600px
-.. |DrawObject2| image:: myndir/kafli01_html_1af5aa4c0085f1ea.png
-   :name: DrawObject2
-   :width: 600px
+- Útlit, fyrirkomulag og tengsl við umhverfi
+- Burðarþol
+- Varmaeinangrun
+- Loftþéttleiki
+- Vatnsþéttleiki
+- Innbrotsvörn (öryggi)
+- Takmarka innsýn
+- Hljóðdeyfing
+- Brunaþol
+- Hollusta (gæði innilofts) (e: Healthy buildings)
+- Lagnakerfi; rafmagn, heitt og kalt vatn, hitun, kæling og frárennsli
+- Lýsing og birta
+- Kostnaður/hagkvæmni (LCC e: life cycle cost eða WLC e: whole life cost)
+- Ending
+- Rekstur og viðhald (e: facility management)
+- Umhverfisáhrif (LCA e: life cycle assessment)
+- Sjálfbærar byggingar (e: sustainable buildings), “Núll orku hús”

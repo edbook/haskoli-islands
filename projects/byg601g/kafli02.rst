@@ -1,47 +1,30 @@
 .. container::
 
-   Háskóli Íslands – Umhverfis og byggingarverkfræðideild Húsagerð
+Varmaflutningur, kólnunartölur og hitastig í sniði
+==================================================
 
-   Björn Marteinsson
-
-   | 
-
-2. Varmaflutningur, kólnunartölur og hitastig í sniði
-=====================================================
-
-2.1 Almennt
------------
+Almennt
+-------
 
 Umfjöllun þessi varðar grunnhugtök varmaflutnings, þ.e. aðallega verður
 fjallað um hitastig í sniði og varmaflutning í einni vídd, við stöðugt
 hitaástand. Vitnað er til gildandi staðla og er listi yfir staðla, önnur
 heimildarrit og ítarefni aftast í kaflanum.
 
-| 
-
 Fjöldi staðla sem hér hafa gildi (ÍST EN og ÍST EN ISO seríur) fjalla um
 útreikning á varmaflutningi og er erfitt að henda reiður á þeim öllum
 nema fyrir sérstaka áhugamenn um staðla eða útreikning varmataps. Helstu
-ÍST EN .. staðlar sem snerta efni þessa kafla eru eftirfarandi;
+ÍST EN staðlar sem snerta efni þessa kafla eru eftirfarandi;
 
-| 
-
-ÍST EN ISO 6946:1996 Building components and building elements - Thermal
-resistance and thermal transmittance - Calculation method
-
-ÍST EN 10456:1999 Building materials and products - Procedures for
-determining declared and design thermal values
-
-ÍST EN 12524:2000 Building materials and products - Hygrothermal
-properties - tabulated design values
-
-| 
+- ÍST EN ISO 6946:1996 *Building components and building elements - Thermal
+resistance and thermal transmittance - Calculation method*
+- ÍST EN 10456:1999 *Building materials and products - Procedures for
+determining declared and design thermal values*
+- ÍST EN 12524:2000 *Building materials and products - Hygrothermal
+properties - tabulated design values*
 
 ÍST EN ISO 6946:1996 vísar ennfremur til ISO staðalsins
-
-ISO 7345:1987 Thermal insulation – Physical quantities and definitions
-
-| 
+- ISO 7345:1987 *Thermal insulation – Physical quantities and definitions*
 
 Til þess að gera útreikninga aðgengilegri þá er í staðlinum DS 418
 “Beregning av byggnaders varmetab” teknar saman algengustu aðferðir í
@@ -50,209 +33,186 @@ samræmi við gildandi staðla, þó stundum með nokkrum einföldunum, og
 verður í samræmi við DS 418, en þess verður getið sérstaklega þegar
 aðferðir DS 418 víkja frá EN stöðlunum.
 
-| 
-
 Varmaflutningur getur átt sér stað með þrennu móti; leiðni, streymi og
 geislun.
 
-| 
+.. admonition:: Skilgreining
+   :class: definitions
+   
+   **Leiðni**
+   Varmaflutningur í efni (e. conduction) , hreyfiorka (háð hitastigi) berst frá atómi til atóms.
+   
+   .. figure:: ./myndir/kafli02/leidni.png
+   
+   **Streymi**
+   Varmaflutningur í vökvum og lofttegundum á hreyfingu. Orkan
+   berst sem straumur atóma eða sameinda (t.d. lofthreyfing). Í varmafræðum
+   er hugtakið streymi (e:convection) einnig notað sérstaklega fyrir
+   varmaskipti milli loftegunda vökva á hreyfingu og fasts efnis.
+   
+   .. figure:: ./myndir/kafli02/streymi.png
 
-L\ Shape1 eiðni
+   **Geislun**
+   Allir hlutir geisla út orku í hlutfalli við hitastig þeirra. Geislun á
+   sér ekki stað í föstu efni heldur aðeins í lofttegundum og að einhverju
+   leyti í vökvum.
+   
+   .. figure:: ./myndir/kafli02/geislun.png
 
-Varmaflutningur í efni (e. conduction) , hreyfiorka (háð hitastigi)
-berst frá atómi til atóms.
-
-| 
-
-| 
-
-S\ Shape2 treymi
-
-V\ Shape3 armaflutningur í vökvum og lofttegundum á hreyfingu. Orkan
-berst sem straumur atóma eða sameinda (t.d. lofthreyfing). Í varmafræðum
-er hugtakið streymi (e:convection) einnig notað sérstaklega fyrir
-varmaskipti milli loftegunda vökva á hreyfingu og fasts efnis.
-
-| 
-
-Geislun
-
-Allir hlutir geisla út orku í hlutfalli við hitastig þeirra. Geislun á
-sér ekki stað í föstu efni heldur aðeins í lofttegundum og að einhverju
-leyti í vökvum.
-
-Skilgreiningar
+Fleiri skilgreiningar
 
 Orðin varmaflæði og varmastreymi eru iðulega notuð sem samheiti í
 stöðlunum þegar fjallað er um byggingar eða byggingarhluta, en orðin
 hafa sérmerkingu þegar fjallað er um varmaflutning í efni eða
 lofttegundum.
 
-| 
+.. list-table:: Skilgreiningar ISO 7345:1987
+  :widths: 5 5 5
+  :header-rows: 0
 
-Q varmaflutningur, J
+  * - :math:`Q`
+    - varmaflutningur
+    - :math:`J`
+  * - :math:`\Phi = \frac{dQ}{dt}`
+    - Varmaflutningur á tímaeiningu (e:heat flow rate)
+    - :math:`W`
+  * - :math:`q=\frac{d\Phi}{dA}`
+    - Þéttleiki varmaflutnings; varmaflutningur á flatareiningu (e:density of heat flow rate)
+    - :math:`W/m^2`
+  * - :math:`q_l=\frac{d\Phi}{dl}`
+    - Línu-þéttleiki varmaflutnings; varmaflutningur á lengdareiningu (e: linear density of heat flow rate)
+    - :math:`W/m`
+  * - :math:`\overrightarrow{q} = -\lambda\cdot \text{grad}T`
+    - Varmaleiðni :math:`\lambda` (efniseiginleiki) er gildi sem uppfyllir skilyrði
+      jöfnunnar, þ.e. þéttleiki varmaflutnings (vigur) er margfeldi
+      varmaleiðni og hitastiguls (vigur)
+    - :math:`W/(m\cdot K)`
+  * - :math:`R=\frac{T_1-T_2}{q}`
+    - Varmaflutningsmótstaða; hitamunur deilt með þéttleika varmaflutnings
+    - :math:`(m^2\cdot K)/W`   
+  * - :math:`R_n=\frac{d_n}{\lambda_n}`
+    - Fyrir efnislag (og að uppfylltum nokkrum skilyrðum, sjá neðar) þá einfaldast varmaflutningsmótstaðan í formið (fyrir
+      efnislag n) þar sem :math:`d_n` er þykkt efnislagsins.
+    - :math:`(m^2\cdot K)/W` 
+  * - 
+    - Línuleg varmaflutningsmótstaða; skilgreiningin er sambærileg og að ofan
+      fyrir varmaflutningsmótstöðu
+    - :math:`(m\cdot K)/W` 
+  * - :math:`h=\frac{q}{T_s-T_a}`
+    - Varmaflutningstala yfirborðs = þéttleiki varmaflutnings deilt
+      með hitamun milli yfirborðs og umhverfis
+    - :math:`W/(m^2 \cdot K)` 
+  * - :math:`R=\frac{1}{h}`
+    - Stundum (m.a. í DS 418) er notað andhverfa gildið; þ.e. Varmaflutningsmótstaða yfirborðs
+    - :math:`W/(m^2 \cdot K)` 
+  * - :math:`R_{si}=\frac{1}{h_{si}}`
+    - Varmaflutningsmótstaða yfirborðs, si stendur fyrir "surface interior"
+    - :math:`W/(m^2 \cdot K)` 
+  * - :math:`R_{se}=\frac{1}{h_{se}}`
+    - Varmaflutningsmótstaða yfirborðs, se stendur fyrir "surface exterior"
+    - :math:`W/(m^2 \cdot K)` 
+  * - :math:`\Lambda = \frac{1}{R}`
+    - Þéttleiki varmaflutnings á hverja gráðu K frá *einu yfirborði til annars*
+    - :math:`W/(m^2 \cdot K)` 
+  * - :math:`U = \frac{\Phi}{(T_1-T_2)A}`
+    - Kólnunartala, U-gildi; varmaflutnings deilt með hitamun milli umhverfa sitt hvoru megin og flatarmáli
+    - :math:`W/(m^2 \cdot K)` 
+  * - :math:`C=\frac{dQ}{dT}`
+    - Varmarýmd =breyting í varma deilt með breytingu í hitastigi
+    - :math:`J/K` 
+  * - 
+    - Eðlisvarmarýmd = varmarýmd deilt með efnismassa
+    - :math:`J/(kg\cdot K)`
 
-| 
-
-| 
-
-Skilgreiningar ISO 7345:1987
-
-| 
-
-|image1| Varmaflutningur á tímaeiningu (e:heat flow rate), W
-
-| 
-
-|image2| Þéttleiki varmaflutnings; varmaflutningur á flatareiningu
-(e:density of heat flow rate), W/m\ :sup:`2`
-
-| 
-
-|image3| Línu-þéttleiki varmaflutnings; varmaflutningur á lengdareiningu
-(e: linear density of heat flow rate), W/m
-
-| 
-
-|image4| Varmaleiðni  (efniseiginleiki) er gildi sem uppfyllir skilyrði
-jöfnunnar, þ.e. þéttleiki varmaflutnings (vigur) er margfeldi
-varmaleiðni og hitastiguls (vigur), W/(m·K)
-
-| 
-
-|image5| Varmaflutningsmótstaða ; hitamunur deilt með þéttleika
-varmaflutnings, (m\ :sup:`2`\ ·K)/W
-
-| 
-
-Fyrir efnislag (og að uppfylltum nokkrum skilyrðum; efnislagið skal vera
-slétt, jafnþykkt, með skilgreinda leiðnitölu sem er fasti eða breytist
+Skilyrðin fyrir :math:`R_n`: efnislagið skal vera slétt, jafnþykkt, með skilgreinda leiðnitölu sem er fasti eða breytist
 línulega, gegnumstreymisflatarmál varmaflutnings er fasti, þ.e. einvíður
-varmaflutningur, og viðmiðunarhitastigin T\ :sub:`1`\  og T\ :sub:`2`\ 
-á yfirborðum eru skilgreind) þá einfaldast þetta í formið (fyrir
-efnislag n)
-
-| 
-
-|image6| , þar sem d\ :sub:`n`\  er þykkt efnislagsins
-
-| 
-
-Línuleg varmaflutningsmótstaða; skilgreiningin er sambærileg og að ofan
-fyrir varmaflutningsmótstöðu, (m·K)/W
-
-| 
+varmaflutningur, og viðmiðunarhitastigin :math:`T_1` og :math:`T_2`
+á yfirborðum eru skilgreind.
 
 Vegna þess hvernig skilgreining varmaflutningsmótstöðu (og línulegrar
 varmaflutningsmótstöðu) er háð viðmiðunarhitastigum, þá verður alltaf að
 gefa hitastigin upp þegar gildi fyrir mótstöðurnar eru gefin upp – ath:
 sérstaklega kuldabrýr!.
 
-| 
-
-| 
-
-|image7| Varmaflutningstala yfirborðs = þéttleiki varmaflutnings deilt
-með hitamun milli yfirborðs og umhverfis, W/(m\ :sup:`2`\ ·K)
-
-| 
-
-Stundum (m.a. í DS 418) er notað andhverfa gildið; þ.e.
-
-Varmaflutningsmótstaða yfirborðs R= 1/h , t.d. nefnd R\ :sub:`si`\  eða
-R\ :sub:`se`\ eftir því hvort yfirborðiðer að innan eða utan
-
-| 
-
-| 
-
-|image8| Þéttleiki varmaflutnings á hverja gráðu K frá einu yfirborði
-til annars, W/(m\ :sup:`2`\ ·K)
-
-| 
-
-| 
-
-|image9| Kólnunartala, U-gildi; varmaflutnings deilt með hitamun milli
-umhverfa sitt hvoru megin og flatarmáli, W/(m\ :sup:`2`\ ·K)
-
-| 
-
-|image10| Varmarýmd =breyting í varma deilt með breytingu í hitastigi,
-J/K
-
-| 
-
-| 
-
-Eðlisvarmarýmd = varmarýmd deilt með efnismassa, J/(kg·K)
-
-| 
-
-| 
-
-| 
-
 Almennar líkingar
 
-Kyrrstætt loft; Varmaleiðni ; =0,024∙(1+0,0033∙T) , W/(m∙K)
+Kyrrstætt loft; Varmaleiðni ; :math:`\lambda = 0,024 \cdot (1+0,0033T)`,:math:` W/(m\cdot K)`
 
-2.2 Varmaflutningur og jafna Fourier´s
---------------------------------------
+Varmaflutningur og jafna Fourier's
+----------------------------------
 
 Þegar hitastigull (e: temperature gradient) er til staðar í efni þá á
 sér stað varmaflutningur, sem almennt er skilgreindur sem jákvæður í
 jákvæða stefnu hnitakerfis;
 
-| 
+.. admonition:: Jafna 2.1
+   :class: jafna
 
-|image11| (almennt) (2.1)
+   .. math::
+      \Phi = -\lambda \cdot A \cdot \text{T} \qquad \qquad \text{(almennt)}
+   .. math::
+      \Phi = -\lambda \cdot A \cdot \frac{\partial T}{\partial x} \qquad \qquad\text{(gildir fyrir eina stefnu í hnitakerfi)}
 
-| 
+þar sem 
 
-|image12| (gildir fyrir eina stefnu í hnitakerfi)
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-| 
+  * - :math:`\Phi`
+    - varmaflutningur
+    - W
+  * - :math:`\lambda`
+    - leiðnitala
+    - :math:`W/(m\cdot K)`
+  * - :math:`A`
+    - flatarmál
+    - :math:`m^2`
+  * - :math:`\text{grad}T`
+    - hitastigull
+    - :math:`K`
+  * - :math:`\frac{\partial T}{\partial x}`
+    - hitastigull eftir x-ás
+    - :math:`K/m`
 
-þ\ Shape4 ar sem  varmaflutningur (W)
+.. figure:: ./myndir/kafli02/varmaflutningur.png
+  :align: center
+  :width: 30%
 
- leiðnitala (W/mK)
-
-A flatarmál (m\ :sup:`2`\ )
-
-grad T hitastigull (K)
-
-\ |image13| hitastigull eftir x-ás (K/m)
-
-| 
-
-Mynd 2.1
-
-Hitastigull og varmaflutningur
-
-| 
+Mynd 2.1. Hitastigull og varmaflutningur
 
 Lögmálið um varmaflutning háð hitastigul, jafna 2.1, er kennt við
 Fourier.
 
-| 
-
-Fyrir ein-víðan varmaflutning, við stöðug hitaskilyrði, er lausn á jöfnu
+Fyrir einvíðan varmaflutning, við stöðug hitaskilyrði, er lausn á jöfnu
 2.1 auðfundin og með innsetningu á viðeigandi stærðum fæst;
 
-|image14| (2.2)
+.. admonition:: Jafna 2.2
+   :class: jafna
 
-| 
+   .. math:: \Phi = -\frac{\lambda}{d}\cdot A \cdot (T_1-T_0)
 
-þar sem  leiðnitala efnis (W/mK)
+þar sem 
 
-d þykkt efnislags (m)
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-T\ :sub:`0`\ , T\ :sub:`1`\  hitastig á yfirborðum efnislags
-
-... aðrar stærðir sem fyrr
-
-| 
+  * - :math:`\Phi`
+    - varmaflutningur
+    - :math:`W`
+  * - :math:`\lambda`
+    - leiðnitala
+    - :math:`W/(m\cdot K)`
+  * - :math:`d`
+    - þykkt efnislags
+    - :math:`m`
+  * - :math:`T_0,T_1`
+    - hitastig á yfirborðum efnislags
+    - :math:`K \text{eða} ^{\circ}C`
+  * - :math:`A`
+    - flatarmál þvert á stefnu varmaflutnings
+    - :math:`m^2`        
 
 Leiðnitalan, sem er skilgreind þannig að jafna 2.1. sé uppfyllt (sjá
 skilgreiningar fremst í kaflanum), er efnisháð og tekur mið af
@@ -273,20 +233,11 @@ leiðréttingarstuðlum. Aðferðir staðalsins eru ekki í fullu samræmi við
 ofannefnda skýrslu þar sem staðallinn tekur ekki tillit til annarra
 áhrifa en hita og raka.
 
-| 
+.. figure:: ./myndir/kafli02/leidnitala.png
+  :align: center
+  :width: 70%
 
-| 
-
-| 
-
-.. image:: myndir/kafli02_html_747fe66ff74a4b71.png
-   :name: Picture 1
-   :width: 288px
-   :height: 221px
-
-Mynd 2.2
-
-Varmaflutningur í þurri steinull, skipt eftir flutningsleiðum.
+Mynd 2.2. Varmaflutningur í þurri steinull, skipt eftir flutningsleiðum.
 
 | 
 
