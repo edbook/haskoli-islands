@@ -525,7 +525,7 @@ Tilvik III
     :math:`r_2=k-i\omega`, þar sem
     :math:`k=-\frac{b}{2a}` og :math:`\omega=\frac{\sqrt{4ac-b^2}}{2a}`.
 
-Lausn á liðruðu jöfnunni  á :math:`ay''+by'+cy=f(x)` er mögulega hægt að finna
+Lausn á hliðruðu jöfnunni  á :math:`ay''+by'+cy=f(x)` er mögulega hægt að finna
 með :ref:`ásgiskun <Ágiskun>`. Sérhver lausn á óhliðruðu jöfnunni :math:`ay''+by'+cy=f(x)`
 er svo á forminu :math:`y+y_p` þar sem :math:`y` er
 lausn á óhliðruðu jöfnunni.
