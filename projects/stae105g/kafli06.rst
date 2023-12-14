@@ -84,7 +84,7 @@ Dæmi: Flatarmál samsettra svæða
   :class: daemi
 
 	Látum :math:`R` vera svæðið sem myndast milli grafa fallanna :math:`f(x)=\sin(x)`
-	og :math:`f(x)=\cos(x)` á bilinu :math:`[0,\pi]`. Finnum flatarmál svæðisins :math:`R`.
+	og :math:`g(x)=\cos(x)` á bilinu :math:`[0,\pi]`. Finnum flatarmál svæðisins :math:`R`.
 
 .. admonition:: Lausn
   :class: daemi, dropdown

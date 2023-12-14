@@ -1,5 +1,5 @@
-Inngagur að diffurjöfnur
-========================
+Inngangur að diffurjöfnur
+=========================
 
 .. admonition:: Nauðsynleg undirstaða
   :class: athugasemd
@@ -201,7 +201,7 @@ Dæmi: Aðskilnaður breytistærða
 	.. math::
 		\begin{cases}
 	  	y' = (2x+3)(y^2-3)\\
-			y(0)=1
+			y(0)=-1
 		\end{cases}
 
 	með því að nota aðskilnað breytistærða.
@@ -237,7 +237,7 @@ Dæmi: Aðskilnaður breytistærða
 
 	Ef við lengjum báðar hliðar með 4 og notum lograreglur má fá
 
-	.. math:: \ln\left|\frac{y-2}{y+2}\right|= 4x^2+12x+C.
+	.. math:: \ln\left|\frac{y-2}{y+2}\right|= 4x^3+12x+C.
 
 	Athugum að þar sem :math:`C` er bara einhver fasti þá skiptir engu máli hvort ritað
 	sé :math:`4C` eða :math:`C`. Þegar öllu er á botninn hvolft þá er :math:`4C` líka
@@ -352,7 +352,7 @@ Dæmi: Lógistísk diffurjafna
 
 		c) Ákvarða hver fjöldi hreindýra verður eftir 3 ár.
 
-		d) Finna hvenær stofninn mun ná stærðinni 1.200.000.
+		d) Gefið að stofninn nái 1.2m dýrum, hvað spáir lógistíska jafnan fyrir um að muni gerast?
 
 
 .. admonition:: Lausn
@@ -399,7 +399,7 @@ Dæmi: Lógistísk diffurjafna
 
 		.. math:: P(t) = \frac{1.072.764 e^{0,2311t}}{0,19196+e^{0,2311t}}.
 
-	c. Lausn:
+	c) Lausn:
 		Til að finna hver fjöldinn verður eftir 3 ár stingum við einfaldlega :math:`t=3`
 		inn í jöfnuna og fáum
 
@@ -408,7 +408,7 @@ Dæmi: Lógistísk diffurjafna
 		Svo fjöldi hreindýra eftir 3 ár verður u.þ.b. 978.830 hreindýr. Við sjáum að
 		samkvæmt lógistíska líkaninu er það langt því frá að vera tvöföldun á stofninum.
 
-		d. Ef stofninn nær 1.200.000 hreindýrum þá væri nýja upphafsgildisverkefnið
+	d) Ef stofninn nær 1.200.000 hreindýrum þá væri nýja upphafsgildisverkefnið
 
 		.. math::
 			\begin{cases}
@@ -416,7 +416,7 @@ Dæmi: Lógistísk diffurjafna
 				P(0)=1.200.000\\
 			\end{cases}
 
-		sem hefur sömu almennu lausn og við fundum í b. lið.
+		sem hefur sömu almennu lausn og við fundum í b) lið.
 
 		.. math:: P(t) = \frac{1.072.764Ce^{0,2311t}}{1+Ce^{0,2311t}}.
 
@@ -544,7 +544,7 @@ Dæmi: Lausn línulegrar fyrsta stigs diffurjöfnu
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-	Við þurfum að byrja á því að koma diffurjöfnunni á staðalfrom sitt.
+	Við þurfum að byrja á því að koma diffurjöfnunni á staðalform sitt.
 	Fáum að
 
 	.. math::

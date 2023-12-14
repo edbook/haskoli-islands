@@ -413,7 +413,7 @@ Skilgreining: Taylor- og Maclaurin-röð
   Ef :math:`f` er óendanlega oft diffranlegt í :math:`x=a` þá er *Taylor-röð* fallsins
   :math:`f` í :math:`a` röðin
 
-  .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n + \dots .
+  .. math:: \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n + \dots .
 
   Taylor-röð fallsins :math:`f` í :math:`x=0` er kölluð *Maclaurin-röð* fallsins :math:`f`.
 
@@ -538,7 +538,7 @@ Dæmi: Línulegar- og ferningsnálganir til að meta fallgildi
 				\begin{aligned}
 						p_1(x) &= f(8)+f'(8)(x-8)\\
 						&= 2 + \tfrac{1}{12}(x-8)\\
-						p_2 &= f(8)+f'(8)(x-8) + \frac{f''(8)}{2!}(x-8)^2\\
+						p_2(x) &= f(8)+f'(8)(x-8) + \frac{f''(8)}{2!}(x-8)^2\\
 						&= 2 + \tfrac{1}{12}(x-8) - \tfrac{1}{288}(x-8)^2.
 				\end{aligned}
 
@@ -603,7 +603,7 @@ Dæmi: Að finna Taylor-röð falls
 
   Til að finna samleitnibilið getum við notað kvótaprófið. Fáum að
 
-  .. math:: \frac{|a_{n-1}|}{|a_n|} = \frac{\left|(-1)^{n+1}(x-1)^{n+1}\right|}{\left| (-1)^n(x-1)^n \right|} = |x-1|.
+  .. math:: \frac{|a_{n+1}|}{|a_n|} = \frac{\left|(-1)^{n+1}(x-1)^{n+1}\right|}{\left| (-1)^n(x-1)^n \right|} = |x-1|.
 
   Þar með er röðin samleitin ef :math:`|x-1|<1`, þ.e. röðin er samleitin ef :math:`0<x<2`.
   Næst athugum við endapunktana. Við sjáum að

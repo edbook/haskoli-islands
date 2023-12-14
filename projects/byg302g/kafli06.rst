@@ -411,11 +411,7 @@ Aðrar línur fyrir prófun í tiltekinn dagafjölda og loks skriðmörkin við
 
 Þegar efni verður fyrir síendurteknu álagi (álagshrinum) þá getur slíkt framkallað
 þreytubrot (þetta er almennt skýrt þannig að örsprungur (e:microcracks) séu til staðar í
-efni, eða myndist, og þær vaxi með hverri álagshrinu þar til brotstyrkur efnis er minni en
-BYG302G Efnisfræði Háskóli Íslands
-Björn Marteinsson Umhverfis og byggingarverkfræðideild
-Kafli 6 11
-brotáraunin). Þreytubrot getur þannig orðið við lægri spennur heldur en sem samsvarar
+efni, eða myndist, og þær vaxi með hverri álagshrinu þar til brotstyrkur efnis er minni en brotáraunin). Þreytubrot getur þannig orðið við lægri spennur heldur en sem samsvarar
 uppgefnum kennistyrk efnis..
 Brotspenna í þreytu reynist vera háð
 
