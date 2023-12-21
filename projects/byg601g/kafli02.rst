@@ -239,74 +239,66 @@ ofannefnda skýrslu þar sem staðallinn tekur ekki tillit til annarra
 
 Mynd 2.2. Varmaflutningur í þurri steinull, skipt eftir flutningsleiðum.
 
-| 
+.. admonition:: Skilgreiningar ISO/TR 9165:1998
+   :class: definitions
 
-| 
+      :math:`\lambda_{mean}` meðal (mæld) leiðnitala
 
-| 
+      :math:`\lambda_{b}` grunntala leiðni (e. basic thermal conductivity)
 
-Skilgreiningar ISO/TR 9165:1998;
+      :math:`\lambda_{p}` hönnunargildi (e. practical value - design value)
 
-\ :sub:`mean`\  meðal (mæld) leiðnitala
+      :math:`\alpha_{\lambda}` leiðréttingarstuðull á leiðni
 
-\ :sub:`b`\  grunntala leiðni (e: basic thermal conductivity)
+      :math:`s_{\lambda}` áætlað staðalfrávik leiðnitölu 
 
-\ :sub:`p`\  hönnunargildi (e: practical value - design value)
+.. admonition:: Jafna 2.3
+    :class: jafna
 
-\ :sub:``\  leiðréttingarstuðull á leiðni
+      :math:`\lambda_b = \lambda_{mean} + \alpha_{\lambda} \cdot s_{\lambda}`
 
-s\ :sub:``\  áætlað staðalfrávik leiðnitölu
+.. admonition:: Vísbending
+    :class: hint
 
-| 
+      Leiðréttingarstuðullinn :math:`\alpha_{\lambda}` tekur tillit til áhrifa;
 
-\ :sub:`b`\ =\ :sub:`mean`\  + \ :sub:``\ s\ :sub:``\  (2.3)
+      * breytileika (e: variability) í efni
 
-| 
+      * hitastigs
 
-Leiðréttingarstuðullinn \ :sub:``\  tekur tillit til áhrifa;
+      * efnisþykktar
 
-breytileika (e: variability) í efni
+      * efnisraka
 
-hitastigs
+      * öldrunar
 
-efnisþykktar
+      * lofthleypni
 
-efnisraka
-
-öldrunar
-
-lofthleypni
-
-framkvæmdar
-
-| 
+      * framkvæmdar
 
 Í viðauka (Annex) við skýrsluna er fjallað um varmaflutningsleiðir í
 einangrunarefnum, samband milli leiðni, rúmþyngdar, leiðni lofts og
 efnis og áhrif geislunar. Síðan er talsverð umfjöllun um
-leiðréttingarstuðla  fyrir mismunandi áhrif þannig að meta má suma
+leiðréttingarstuðla :math:`\Delta \lambda` fyrir mismunandi áhrif þannig að meta má suma
 stuðlana en aðra ekki. Það er hvergi sagt skýrt hvernig reikna skuli
-\ :sub:`p`\  en virðist sem það sé hugsað eins og jafna 2.4 sýnir.
+:math:`\lambda_p` en virðist sem það sé hugsað eins og jafna 2.4 sýnir:
 
-| 
+.. admonition:: Jafna 2.4
+    :class: jafna
 
-\ :sub:`p`\  = \ :sub:`b`\  +\ :sub:`m`\  +  \ :sub:`t`\  + (2.4)
-
-| 
+      :math:`\lambda_p = \lambda_b + \Delta\lambda_m + \Delta\lambda_t`
 
 Hönnunargildi leiðnitölu er þá fundið á sambærilegan hátt og tíðkast
-hefur á Norðurlöndunum um árabil, sjá t.d. “Den nordiske komité for
-bygningsbestemmelser” (1989).
+hefur á Norðurlöndunum um árabil, sjá t.d. *“Den nordiske komité for
+bygningsbestemmelser”* (1989).
 
 Í samræmi við þessar reglur eru hönnunargildi leiðnitalna fyrir öll
 algengustu byggingarefnin birt í staðlinum ÍST EN 12524:2000. Uppgefin
 leiðnitala tekur samkvæmt hefð tillit til allra þriggja
 varmaflutningsleiða í efni; leiðni, geislunar og streymis. Ítarlegar
-töflur yfir leiðnitölur má finna víða, t.d. í ritinu Varmaeinangrun húsa
+töflur yfir leiðnitölur má finna víða, t.d. í ritinu *Varmaeinangrun húsa*
 eftir þá Guðmund Halldórsson og Jón Sigurjónsson (1992). Leiðnitölur
 efna eru einnig gefnar upp af framleiðendum.
-
-| 
 
 Þegar reikna á varmaflutning samkvæmt jöfnu 2.1 (eða 2.2) þá þarf
 hitadreifingin augljóslega að vera þekkt. Jöfnu hitasviðsins má ákvarða
@@ -316,93 +308,96 @@ einvítt tilfelli (jafnvægi varmaflutnings, þ.e. varmaflutningur á
 tímaeiningu dt) og fyrir snið þar sem þéttleiki varmaflutnings er fasti
 (þ.e. umfjöllunin gildir t.d. ekki fyrir röraeinangrun!);
 
-| 
+.. admonition:: Jafna 2.5
+    :class: jafna
 
-| |Shape5|
+      a. Varmaflutningur inn frá vinstri
 
-#. Varmaflutningur inn frá vinstri
+      :math:`\Phi_1 = - \lambda \cdot A \cdot \frac{\partial T_x}{\partial x}`
 
-|image15| (2.5a)
+      b. Varmaflutningur út til hægri
 
-| 
+      :math:`\Phi_2 = - \lambda \cdot A \cdot \frac{\partial T_{x+dx}}{\partial x}`
+      
+      c. Varmagjöf
 
-2. Varmaflutningur út til hægri
+      :math:`\Phi_3 = A \cdot dx \cdot \Phi''`
+      
+      d. Uppsafnaður varmi
 
-|image16| (2.5b)
-
-3. Varmagjöf
-
-|image17| (2.5c)
-
-| 
-
-4. Uppsafnaður varmi
-
-|image18| (2.5d)
-
-| 
-
+      :math:`\Phi_4 = A \cdot dx \cdot \rho \cdot c_p \cdot \frac{\partial T}{\partial t}`
+      
 Fyrir varmaaukningu smábútsins sem jákvæða stærð;
 
-| 
-
-\ :sub:`4`\ =\ :sub:`1`\ -\ :sub:`2`\ +\ :sub:`3`\ 
-
-| 
+:math:`\Phi_4 = \Phi_1 - \Phi_2 + \Phi_3`
 
 Setjum inn jöfnurnar 2.5a-d (gerum hér ráð fyrir að leiðnitalan sé ekki
 háð hitastigi) og styttum. Með “innsæi” (eða samanburði við fyrstu liði
-Taylor raðar) sést að \ :sup:`2`\ T=(T\ :sub:`x+dx`\ -T\ :sub:`x`\ 
-), sem gefur jöfnu 2.6.
+Taylor raðar) sést að :math:`\partial^2 T = (\partial T_{x+dx} - \partial T_x)`, sem gefur jöfnu 2.6.
 
-| 
+.. admonition:: Jafna 2.6
+    :class: jafna
 
-|image19| (2.6)
-
-| 
+      :math:`\rho \cdot c_p \cdot \frac{\partial T}{\partial t} = \lambda \cdot \frac{\partial^2 T}{\partial x^2} + \Phi''`
 
 í jöfnum 2.5a-d og 2.6 er skýring tákna eftirfarandi;
 
- þéttleiki efnisins kg/m\ :sup:`3`
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-c\ :sub:`p`\  eðlisvarmarýmd efnis J/kg·K
+  * - :math:`\rho`
+    - þéttleiki efnisins
+    - :math:`kg/m^3`
+  * - :math:`c_p`
+    - eðlisvarmarýmd efnis
+    - :math:`J/(kg \cdot K)`
+  * - :math:`\frac{\partial T_x}{\partial x} , \frac{\partial T_{x+dx}}{\partial x}`
+    - varmastigull í sniðum x og x+dx
+    -
+  * - :math:`\Phi''`
+    - varmagjöf til smábúts
+    - :math:`W/m^3` 
+  * - ...
+    - aðrar stærðir sem fyrr
+    - 
 
-|image20| varmastigull í sniðum x og x+dx
-
-’’ varmagjöf til smábúts W/m\ :sup:`3`\ 
-
-... aðrar stærðir sem fyrr
-
-| 
 
 Samsvarandi fæst fyrir þrjá ása í rétthyrndu hnitakerfi jafnan 2.7 þegar
 notaðar eru tvær einfaldanir; (i) einsátta efni, þ.e. sama leiðnitala í
 allar stefnur og (ii) leiðnitalan er ekki hitastigsháð - en auðvelt er
 að gera jöfnuna óháða slíkum einföldunum.
 
-| 
+.. admonition:: Jafna 2.7
+    :class: jafna
 
-|image21| (2.7)
+      :math:`\rho \cdot c_p \cdot \frac{\partial T}{\partial t} = \lambda \cdot \left( \frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2} + \frac{\partial^2 T}{\partial z^2} \right) + \Phi''`
 
-| 
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-| 
-
-T varmafræðilegt hitastig K
-
-t tími s
-
-x,y,z lengdarmál m
-
-'' varmagjöf á tímaeiningu og rúmmál W/m\ :sup:`3`
-
- varmaleiðnitala W/(mK)
-
- þéttleiki efnis kg/m\ :sup:`3`
-
-c\ :sub:`p` eðlisvarmi J/(kgK)
-
-| 
+  * - :math:`T`
+    - varmafræðilegt hitastig K
+    - :math:`K`
+  * - :math:`t`
+    - tími
+    - :math:`s`
+  * - :math:`x,y,z`
+    - lengdarmál
+    - :math:`m`
+  * - :math:`\Phi''`
+    - varmagjöf á tímaeiningu og rúmmál
+    - :math:`W/m^3`  
+  * - :math:`\lambda`
+    - varmaleiðnitala
+    - :math:`W/(m \cdot K)` 
+  * - :math:`\rho`
+    - þéttleiki efnis
+    - :math:`kg/m^3` 
+  * - :math:`c_p`
+    - eðlisvarmi
+    - :math:`J/(kg \cdot K)` 
 
 Aðeins í undantekningartilvikum er hægt að ákvarða lausnina á jöfnu 2.7
 með stærðfræðigreiningu og er lausn því annaðhvort fengin með tölulegum
@@ -411,25 +406,21 @@ megin jöfnuna fræðilega. Síðari kosturinn er almennt notaður þegar telja
 má að varmaflutningur uppfylli skilyrðin; (i) ástandið er ekki tímaháð
 og (ii) varmaflutningur er einvíður (í eina stefnu í hnitakerfinu)
 
-| 
+Þá fæst (fyrir varmagjöf :math:`\Phi'' = 0`)
 
-Þá fæst (fyrir varmagjöf ´´=0)
+.. admonition:: Jafna 2.8
+    :class: jafna
 
-|image22| (2.8)
+      :math:`\lambda \cdot \left( \frac{\partial^2 T}{\partial x^2} \right) = 0`
 
 og lausnin er augljóslega bein lína, þ.e. línulegt hitafall í sniðinu
-svo lengi sem leiðnitalan, , er fasti. Með tegrun og innsetningu á
+svo lengi sem leiðnitalan, :math:`\lambda`, er fasti. Með tegrun og innsetningu á
 viðeigandi stærðum (Mynd 2.4) fæst jafna 2.9;
 
-| |Shape6|
+.. admonition:: Jafna 2.9
+    :class: jafna
 
-| 
-
-| 
-
-|image23| (2.9)
-
-| 
+      :math:`T_x = T_0 + \frac{x \cdot \lambda}{d \cdot \lambda} \cdot (T_1-T_0)=T_0+\frac{R_x}{R}(T_1-T_0)`
 
 þar sem R\ :sub:`x`\ = x/ mótstaða hluta efnislags með þykkt x
 
