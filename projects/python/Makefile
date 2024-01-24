@@ -21,7 +21,7 @@ clean:
 
 www:
 	$(MAKE) build
-	copy-to-cs $(BUILD) /Volumes/cs/htdocs/python
+	rsync -vru $(BUILD)/ pluto:/cs/$(PROJECT)
 
 $(BUILDCSS): $(PROJECTCSS)
 	mkdir -p $(BUILDCSSDIR)
