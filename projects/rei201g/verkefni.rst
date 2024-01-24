@@ -32,6 +32,10 @@ VV2. Formengi og útgildi
    Fallið hefur einn útgildispunkt sem ákvarða skal (með blaði og blýanti). Er
    hann lággildi eða hágildi? (rökstyðjið)
 
+3. Fallið :math:`f(x,y) = 6x^2 - 2x^3 + 3y^2 + 6xy` hefur tvo punkta þar sem
+   stigullinn er núll. Ákvarðið þessa punkta og beitið í framhaldi reglunni um
+   Hesse-fylki og útgildi til að flokka þá.
+
 VV3. Fall Rosenbrocks
 ---------------------
 Í æfingu í kafla :ref:`A3 <teikning-stigla>` er "Fall Rosenbrocks" skilgreint og
@@ -155,12 +159,7 @@ punkturinn :math:`p = (1,1)` og vigurinn :math:`u = (-1,-1)`.
    til einhvern punkt og vigur úr afmælisdegi ykkar og reiknið tilsvarandi
    stefnuafleiðu.
 
-3. Lát :math:`u = (-1,-1)`. Notið Python-fallið úr a-lið líka til að reikna
-   stefnuafleiðu :math:`f` í stefnu :math:`u` í punktinum :math:`p`. Búið líka
-   til einhvern punkt og vigur úr afmælisdegi ykkar og reiknið tilsvarandi
-   stefnuafleiðu.
-
-4. Teiknið að lokum hæðarlínur :math:`f` á svæðinu :math:`[0,3] \times [0,2]`.
+3. Teiknið að lokum hæðarlínur :math:`f` á svæðinu :math:`[0,3] \times [0,2]`.
 
 .. rubric:: B. Er punktur í plani?
 
@@ -212,16 +211,7 @@ punkturinn :math:`p = (1,1)` og vigurinn :math:`u = (-1,-1)`.
    hlutafleiðunni :math:`\dfrac{\partial f}{\partial x}` og hlutafleiðunni í
    tilteknum punkti, :math:`\dfrac{\partial f(a,b)}{\partial x}`
 
-6. Hver eftirfarandi falla :math:`f\colon\Bbb R^4\to\Bbb R` eru línuleg? (Það
-   þarf ekki að rökstyðja svörin, bara svara rétt).
-
-   :math:`a)` :math:`f(x) = x\cdot x` |br|
-   :math:`b)` :math:`f(x) = (3,4,5)\cdot x` |br|
-   :math:`c)` :math:`f(x) = \text{staðalfrávik }x` |br|
-   :math:`d)` :math:`f(x) = \text{minnsta stak }x` |br|
-   :math:`e)` :math:`f(x) = \text{aftasta stak }x` |br| |br|
-
-7. Greindar hafa verið 3 Íslendingasögur með orðtíðni. Hornin á milli þeirra eru
+6. Greindar hafa verið 3 Íslendingasögur með orðtíðni. Hornin á milli þeirra eru
    sýnd í eftirfarandi töflu:
 
    .. csv-table::
@@ -236,6 +226,15 @@ punkturinn :math:`p = (1,1)` og vigurinn :math:`u = (-1,-1)`.
 
    Talið er að Snorri Sturluson hafi skrifað tvær af sögunum. Hvaða sögur er
    líklegast að það hafi verið miðað við þessar upplýsingar? Rökstyðjið örstutt.
+
+7. Hver eftirfarandi falla :math:`f\colon\Bbb R^4\to\Bbb R` eru línuleg? (Það
+   þarf ekki að rökstyðja svörin, bara svara rétt).
+
+   :math:`a)` :math:`f(x) = x\cdot x` |br|
+   :math:`b)` :math:`f(x) = (3,4,5)\cdot x` |br|
+   :math:`c)` :math:`f(x) = \text{staðalfrávik }x` |br|
+   :math:`d)` :math:`f(x) = \text{minnsta stak }x` |br|
+   :math:`e)` :math:`f(x) = \text{aftasta stak }x` |br| |br|
 
 8. Sýnið dæmi um tvo vigra í :math:`\Bbb R^3` sem mynda grunn og annað dæmi um
    tvo vigra sem mynda ekki grunn.
@@ -360,7 +359,7 @@ ykkur strax á innihaldinu með því að smella á skrána.
    .. code:: python
 
       tími = pd.to_datetime(df.tími)
-      dagur1 = pd.to_datetime('24.02.2021')
+      dagur1 = pd.to_datetime('24.02.2021', dayfirst=True)
       dagur = (tími - dagur1).dt.total_seconds()/(60*60*24)
 
 2. **Línurit og töflur.** Búið nú til nokkrar teikningar og/eða töflur af
@@ -453,26 +452,29 @@ ykkur strax á innihaldinu með því að smella á skrána.
 
       #KORTFÖLL
       def lesa_qgis_kort(skrá):
-        # Les kort úr skrá.png og skrá.pgw og skilar pari (kort,mörk) með þrívíðu
-        # NumPy-fylki með kortinu ásamt fjögurra staka vigur með hnitum í kílómetrum
-        # á vestur-, austur-, suður- og norðurbrúnum kortsins, mörk = [xv,xa,ys,yn].
-        kort = np.flipud(plt.imread(skrá + ".png")) # svo kortið sé ekki á hvolfi
-        world = np.loadtxt(skrá + ".pgw")
-        (hæð,breidd) = np.shape(kort)[0:2]
-        skali = world[0]  # metrar á díl (pixel) í png-skránni
-        xv = world[4]
-        xa = xv + skali*breidd
-        yn = world[5]
-        ys = yn - skali*hæð
-        mörk = np.array([xv,xa,ys,yn])/1000  # breytt í km
-        return (kort,mörk)
+          # Les kort úr skrá.png og skrá.pgw og skilar pari (kort,mörk) með þrívíðu
+          # NumPy-fylki með kortinu ásamt fjögurra staka vigur með hnitum í kílómetrum
+          # á vestur-, austur-, suður- og norðurbrúnum kortsins, mörk = [xv,xa,ys,yn].
+          from PIL import Image
+          from urllib.request import urlopen
+          kort = Image.open(urlopen(skrá + ".png"))
+          kort = np.flipud(kort)  # svo kort sé ekki á hvolfi
+          world = np.loadtxt(skrá + ".pgw")
+          (hæð,breidd) = np.shape(kort)[0:2]
+          skali = world[0]  # metrar á díl (pixel) í png-skránni
+          xv = world[4]
+          xa = xv + skali*breidd
+          yn = world[5]
+          ys = yn - skali*hæð
+          mörk = np.array([xv,xa,ys,yn])/1000  # breytt í km
+          return (kort,mörk)
 
       def sýna_kort(kort, mörk, gluggabreidd, dpi=100):
-        # Birtir kort í Matplotlib glugga og setur mörk ása til samræmis við mörk 
-        # kortsins; gluggabreidd og dpi eru notuð til að búa gluggann til með 
-        # plt.figure kalli, sem gefur glugganum tilgreinda breidd (í tommum) og hæð 
-        # sem ákvarðast hlutfallslega eftir lögun kortsins
-        (hæð, breidd) = np.shape(kort)[0:2]
-        plt.figure(figsize=(gluggabreidd, gluggabreidd*hæð/breidd), dpi=dpi)
-        plt.axis(mörk)
-        plt.imshow(kort, origin='lower', extent=plt.axis())
+          # Birtir kort í Matplotlib glugga og setur mörk ása til samræmis við mörk
+          # kortsins; gluggabreidd og dpi eru notuð til að búa gluggann til með
+          # plt.figure kalli, sem gefur glugganum tilgreinda breidd (í tommum) og hæð
+          # sem ákvarðast hlutfallslega eftir lögun kortsins
+          (hæð, breidd) = np.shape(kort)[0:2]
+          plt.figure(figsize=(gluggabreidd, gluggabreidd*hæð/breidd), dpi=dpi)
+          plt.axis(mörk)
+          plt.imshow(kort, origin='lower', extent=plt.axis())

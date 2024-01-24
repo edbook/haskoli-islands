@@ -15,7 +15,7 @@ vinnubækur. Vinnubækurnar eru geymdar á Google Drive svæði notanda, og forr
 í þeim eru keyrð á sérstakri gervitölvu (*virtual machine*) sem Google leggur
 til. Skrár sem sem forritin þurfa eða búa til eru geymdar á tímabundnu disksvæði
 á þesari gervitölvu. Python-þýðandinn er nýlegur (nánar
-tiltekið útgáfa 3.8.16 í janúar 2023), helstu pakkar eru þegar uppsettir (m.a. þeir
+tiltekið útgáfa 3.10.12 í janúar 2024), helstu pakkar eru þegar uppsettir (m.a. þeir
 sem nefndir eru í kafla :numref:`pakkar`), og auðvelt er að bæta við pökkum
 eftir þörf.
 
@@ -82,9 +82,8 @@ Uppsetning JupyterLab á eigin tölvu
 -----------------------------------
 **Anaconda.** Auðveldasta leiðin til að setja upp bæði Python og Jupyter á eigin tölvu er að
 nota hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python
-er líka svoleiðis slanga). Til að flýta fyrir uppsetningu er hægt að nota minni útgáfu
-af Anaconda sem kallast Miniconda og leiðbeiningarnar hér miðast við hana. Anaconda með öllu
-inniheldur u.þ.b. 1500 pakka og það tekur tíma að ná í þá alla og setja upp.
+er líka svoleiðis slanga). Til að flýta fyrir uppsetningu væri hægt að nota minni útgáfu
+af Anaconda sem kallast Miniconda en leiðbeiningarnar hér miðast við Anaconda. Með því fylgja sjálfkrafa fjölmargir pakkar fyrir vísindalega forritun, þar á meðal flestallir sem fjallað er um í þessum fyrirlestrarnótum (NumPy, Matplotlib, SciPy, Pandas).
 
 .. figure:: myndir/anaconda.jpg
    :align: center
@@ -92,18 +91,9 @@ inniheldur u.þ.b. 1500 pakka og það tekur tíma að ná í þá alla og setja
 
    Græn anaconda slanga
        
-**Uppsetning Miniconda með nýjasta Python** Heimsækið `docs.conda.io/en/latest/miniconda
-<http://docs.conda.io/en/latest/miniconda>`_, hlaðið niður uppsetningarforriti fyrir
-ykkar stýrikerfi úr efstu töflunni (*Latest Miniconda Installer Links*) og keyrið það.
-Á Windows-tölvum er næst farið í *Start Menu* (neðst til vinstri) og valið *Anaconda
-Powershell Prompt*, en á Mökkum og Linux-tölvum skal opna *Terminal*. Þar er gefin
-skipunin:
-
-.. code:: text
-
-   conda install scipy matplotlib pandas jupyterlab
-
-(hún tekur nokkra stund að klárast)
+**Uppsetning Anaconda með nýjasta Python** Heimsækið `anaconda.com/download
+<http://www.anaconda.com/download>`_, og hlaðið niður uppsetningarforriti fyrir
+ykkar stýrikerfi og keyrið það.
 
 **Keyrsla JupyterLab.** Eftir uppsetningu Miniconda/Anaconda má keyra JupyterLab
 með því að opna *terminal*-glugga og gefa þar einhverja eftirfarandi skipana:
@@ -118,7 +108,7 @@ með því að opna *terminal*-glugga og gefa þar einhverja eftirfarandi skipan
 sjálfgefna. Síðasttalda skipunin opnar sjálfkrafa eldri vinnubók :code:`skrá.ipynb`.
 JupyterLab-glugginn lítur nokkurnveginn svona út:
 
-.. figure:: _images/jupyterlab.jpeg
+.. figure:: myndir/jupyterlab.jpeg
    :align: center
 
    Upphafsgluggi JupyterLab
@@ -132,7 +122,7 @@ heitir sjálfkrafa *Untitled2* en með því að hægri-smella á nafnið (eða 
 Eldri bók er opnuð annaðhvort með því að smella á hana í skráalistanum vinstra
 megin eða tilgreina hana á skipanalínunni eins og sýnt er að ofan.
 
-.. figure:: _images/jupyterlab-s2.jpg
+.. figure:: myndir/jupyterlab-s2.jpg
    :align: center
 
    JupyterLab með opinni vinnubók og aflúsunarhnappi (í rauðum hring)

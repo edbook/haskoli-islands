@@ -276,7 +276,7 @@ tæmandi, en í staðinn vísast í *svindlblöðin* sem nefnd eru hér fremst �
      - Skila töflu yfir meðaltöl, staðalfrávik o.fl.
 
    * - ``df = df1.join(df2)``
-     - Sameina ``df1`` og ``df1`` með
+     - Sameina ``df1`` og ``df2`` með
        `join
        <https://en.wikipedia.org/wiki/Relational_algebra#Joins_and_join-like_operators>`_-virkja
        útfrá |br| línuauðkennum (*indexum*)

@@ -260,7 +260,7 @@ Skrifið fall ``tölfræði(x)`` sem skilar pari ``(m, s)`` með meðaltali og s
    m &= \frac{1}{n}\sum_{i=0}^{n-1}{x[i]}\\
    s &= \sqrt{\frac{1}{n-1}\sum_{i=0}^{n-1}(x[i] - m)^2}
 
-Prófið með ``x = [3,7,7,1]`` (á að skila ``[4.5, 3.0]``) og líka með lista ``[d,m,á]`` búnum til úr fæðingardegi..
+Prófið með ``x = [3,7,7,1]`` (á að skila ``[4.5, 3.0]``) og líka með lista ``[d,m,á]`` búnum til úr fæðingardegi.
 
 Bóluröðun
 ~~~~~~~~~
@@ -371,6 +371,10 @@ fengið pörin ``"rope"`` :math:`\to` ``"reipi"``, ``"house"`` :math:`\to`
 
    og prófið ``snúavið2``.
 
+.. figure:: myndir/shell-sort.jpg
+   :align: right
+   :figwidth: 10cm
+
 Shell-röðun
 ~~~~~~~~~~~
 Árið 1959 kom út `grein <https://dl.acm.org/doi/pdf/10.1145/368370.368387>`_
@@ -469,7 +473,14 @@ kafla :numref:`strengir`.
               
 Fjöldi stafa í skrafli
 ~~~~~~~~~~~~~~~~~~~~~~
-1. Í þessu verkefni á að búa til töflu yfir hlutfallslega tíðni hvers stafs í
+
+1.
+
+   .. figure:: myndir/skrafl.jpg
+      :align: right
+      :width: 10cm
+
+   Í þessu verkefni á að búa til töflu yfir hlutfallslega tíðni hvers stafs í
    skránni ``ord.txt`` úr :numref:`verkefni %s<Skrá með íslenskum orðum>`, og
    jafnframt hvað sú tíðni samsvarar mörgum heilum stöfum af 98, sem er
    heildarfjöldi stafa í pokanum sem notaður er í borðspilinu skrafli
@@ -572,7 +583,7 @@ inniheldur prófnúmer og nöfn.
    nafnaskrána inn í uppflettitöflu ``nafn_tafla`` sem nota má til að fletta upp
    á nafni útfrá prófnúmeri. Prófið með sama hætti og fyrr.
 
-3. **Úskrift lista.** Skrifið forrit sem rennir í gegn um prófnúmerin í
+3. **Útskrift lista.** Skrifið forrit sem rennir í gegn um prófnúmerin í
    ``eink_tafla``, flettir upp nafni hvers nemanda í ``nafn_tafla``, og skrifar
    allt þrennt: prófnúmer, einkunn, og nafn í snyrtilegri töflu með fyrirsögnum
    og dálkum sem standast á.
@@ -589,7 +600,7 @@ inniheldur prófnúmer og nöfn.
 
    Forritin í liðum 1 og 2 má líka útfæra með NumPy; liður 1 er einfaldur:
    dálkar skrárinnar eru lesnir inn með ``np.loadtxt`` (sbr. kafla
-   :numref:`innlestur og útskrift`) og svo er uppflettitaflan búin til með
+   :numref:`innlestur úr skrám`) og svo er uppflettitaflan búin til með
    ``dict(zip(...))``, eins og í seinna sýnidæminu í :numref:`uppflettitafla
    lesin úr skrá`. Aftur er nafnaskráin erfiðari. Einn möguleiki er að lesa
    hana inn með ``L = np.loadtxt(..., dtype=str, delimiter=',')``. Af því að
@@ -713,7 +724,9 @@ Fallateikning
 Hiti og úrkoma
 ~~~~~~~~~~~~~~
 Í þessu verkefni ráðið þið hvort þið lesið gögnin með aðstoð ``urlopen`` (sjá
-kafla :numref:`innlestur textaskrár af vefnum` og :numref:`dæmi um teikningu talnagagna`), csv-lesara (sjá :numref:`náð í dálk í csv-skrá`) eða NumPy (sjá :numref:`innlestur og útskrift`).
+kafla :numref:`innlestur textaskrár af vefnum` og :numref:`dæmi um teikningu
+talnagagna`), csv-lesara (sjá :numref:`náð í dálk í csv-skrá`) eða NumPy (sjá
+:numref:`innlestur úr skrám`).
 
 1. **Veðurskrá lesin.** Í skránni `cs.hi.is/python/hiti-urkoma.txt
    <https://cs.hi.is/python/hiti-urkoma.txt>`_ eru gögn um meðalárshita og úrkomu í
@@ -791,13 +804,9 @@ Búið til vigrana :math:`x = (6,7,18)` og :math:`y = (1,1,6)`. Reiknið svo:
 4. :math:`\|x\|^2 - \|y\|^2`
 5. :math:`\|x + y\|\cdot\|x - y\|`
 
-.. figure:: myndir/shell-sort.jpg
-   :align: right
-   :figwidth: 10cm
-
 Raðað í íslenska stafrófsröð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Bæði ``sort``-fallið og ``sorted``-aðferðin sem útskýrð eru köflum
+Bæði ``sorted``-fallið og ``sort``-aðferðin sem útskýrð eru köflum
 :numref:`bua-til-sofn` og :numref:`bara-listar` geta raðað lista af strengjum í
 enskri stafrófsröð, en því miður lenda séríslenskir stafir ekki á réttum stað í
 röðinni. Séríslensku stafirnir eru aftast og ekki í réttri röð. Til að laga
@@ -818,7 +827,6 @@ attribute")
        """notað sem 'key' í sort eða sorted til að raða í íslenska stafrófsröð,
        t.d. print(sorted(['ár','bára','bali','akur'], key=íslenska))"""
        return [íslenska.k.get(c.lower(),0) for c in s]
-       return t
    íslenska.a = list('0123456789aábcdðeéfghiíjklmnoópqrstuúvwxyýzþæö')
    íslenska.k = dict(zip(íslenska.a, range(1,len(íslenska.a)+1)))
 
@@ -841,13 +849,13 @@ attribute")
    töflu frá L1 til L2 (sbr. sýnidæmi aftast í kafla :numref:`innlestur skráa`).
    Búið til slíka uppflettitöflu frá nöfnum yfir í prófnúmer og aðra yfir í
    kennitölur og skrifið út nýja töflu með þessum upplýsingum, með fyrirsögnum
-   og snyrtilega upp setta.
+   og snyrtilega upp setta (nöfnin enn í stafrófsröð).
 
 Sínussveiflur
 ~~~~~~~~~~~~~
-Teiknið mynd af fallinu :math:`f(x) = \sin x + \sin 2x - 2 \sin 3x` á bilinu
-:math:`[-\pi, 3\pi]`, sbr. dæmi V17. Hér er dæmi um slíka mynd með ýmsum
-fídusum, en ekki er farið fram á að þeir séu allir notaðir.
+Teiknið góða mynd af fallinu :math:`f(x) = \sin x + \sin 2x - 2 \sin 3x` á bilinu
+:math:`[-\pi, 3\pi]`, sbr. :numref:`verkefni %s<Fallateikning>`. Hér er dæmi um slíka mynd með ýmsum
+fídusum.
 
 .. figure:: myndir/sinsveiflur.jpg
    :align: center
@@ -939,14 +947,14 @@ nefnast **eðallofttegundir** (*noble gases*).
 4. **Eðlisþyngd eftir sæti.** Teiknið punktarit af sætistölu og eðlisþyngd sem
    er litað með lotu í lotukerfinu (sbr. :numref:`verkefni %s<hiti og úrkoma>` –
    ath. að Matplotlib getur teiknað hvort sem er lista af tölum eða NumPy
-   vigra). Munið að bæta ``colorbar`` við myndirnar.
+   vigra). Veljið hæfilega punktastærð, bætið ``colorbar`` við myndirnar,
+   stillið ásamerkingar eftir smekk, setjið texta við ása og bætið við rúðuneti (grid).
 
-5. **Fleiri myndir??** Ef tími vinnst til má t.d. teikna samskonar mynd af sætistölu
-   og bræðslumarki.
+5. **Fleiri myndir** Teiknið samskonar myndir af sætistölu og bræðslumarki.
 
 Kosningaúrslit í lit
 ~~~~~~~~~~~~~~~~~~~~
-Í kafla :numref:`dæmi-um-teikningu-talnagagna` var gefið sýnidæmi um einfalda
+Í kafla :numref:`dæmi um teikningu talnagagna` var gefið sýnidæmi um einfalda
 teikningu súlurits af kosningaúrslitum 2021. Þar voru gögnin lesin með aðstoð
 ``urlopen``, en í þessu verkefni verða þau lesin með NumPy og jafnframt búið
 til fínna súlurit þar sem:
@@ -967,7 +975,7 @@ Hér er mynd af súluritinu sem stefnt er að:
    <https://cs.hi.is/python/kosningar-2021.txt>`_. Það eru þrír dálkar, með
    listabókstaf, atkvæðatölu og þingsætafjölda fyrir hvert framboð. Skrána er
    hægt að lesa með ``numpy.loadtxt`` eins og lýst er í kafla
-   :numref:`numpy-skrár-með-textadálkum`. Skrifið fall ``lesaúrslit()`` sem les
+   :numref:`innlestur skráa með textadálkum`. Skrifið fall ``lesaúrslit()`` sem les
    þessa skrá og skilar þremur listum, ``listi``, ``atkvæði`` og ``þingsæti`` með
    innihaldinu. Prófið.
   
@@ -1039,7 +1047,7 @@ Hér er mynd af súluritinu sem stefnt er að:
          xy.set_major_formatter(FuncFormatter('{0:.0%}'.format))
 
    Flokkanöfnin eru sett neðan við hverja súlu með `xticks`-skipun eins og í
-   sýnidæminu í kafla :numref:`dæmi-um-teikningu-talnagagna`, en hinsvegar þarf
+   sýnidæminu í kafla :numref:`dæmi um teikningu talnagagna`, en hinsvegar þarf
    að skrifa þau lóðrétt, og það er gert með viðfangi ``rotation``, nánar
    tiltekið:
 
@@ -1047,7 +1055,7 @@ Hér er mynd af súluritinu sem stefnt er að:
 
    Þá er eftir að skrifa inn þingsætin. Til þess er notuð skipunin ``text``,
    sbr. :numref:`töflu %s <text-fallið>` og líka fyrra sýnidæmið í
-   :numref:`kafla %s <dæmi-um-teikningu-talnagagna>`. Við förum í lykkju yfir
+   :numref:`kafla %s <dæmi um teikningu talnagagna>`. Við förum í lykkju yfir
    x-hnitin í vigrunum og skrifum hvern þinsætafjölda ofan við sína súlu, t.d. í
    13 punkta letri. Vigurinn hlutfall gefur y-hnit fyrir textana.
 
@@ -1084,7 +1092,7 @@ skila stuðlum í jöfnu bestu línu og jöfnu bestu parabólu fyrir punktasafni
    y &= a x + b \\
    y &= A x^2 + B x + C
 
-Til að teikna línuna eða parabóluna er hægt að nota aðferðir kafla :numref:`groffalla`, en reyndar er hægt að einfalda málið með því að notfæra sér numpy reikninga. Til teikna línuna á bilinu :math:`[x_\text{min}, x_\text{max}]` má t.d. nota:
+Til að teikna línuna eða parabóluna er hægt að nota aðferðir kafla :numref:`teikning af gröfum falla`, en reyndar er hægt að einfalda málið með því að notfæra sér numpy reikninga. Til teikna línuna á bilinu :math:`[x_\text{min}, x_\text{max}]` má t.d. nota:
 
 .. code:: python
           
@@ -1122,12 +1130,12 @@ Reikningar með NumPy
       \quad\text{og}\quad
       B = \begin{pmatrix}5&5&5\\6&6&6\\7&8&9\end{pmatrix}
 
-   1. Finnið :math:`a\cdot b - \dfrac{c\cdot(Bb)}{3\|c\|}`
-   2. Finnið :math:`2(A^\text{T} + B^2)(a - 2b)`
-   3. Ákvarðið :math:`\det(A)` og :math:`A^{-1}`
-   4. Leysið jöfnuhneppið :math:`Ax = b`
+   a. Finnið :math:`a\cdot b - \dfrac{c\cdot(Bb)}{3\|c\|}`
+   b. Finnið :math:`2(A^\text{T} + B^2)(a - 2b)`
+   c. Ákvarðið :math:`\det(A)` og :math:`A^{-1}`
+   d. Leysið jöfnuhneppið :math:`Ax = b`
 
-   5. Palli er með fimmkalla og tíkalla í vasanum, alls 23 peninga, samtals
+   e. Palli er með fimmkalla og tíkalla í vasanum, alls 23 peninga, samtals
       170 kr. Hvað er hann með mikið af hvorri mynt?
 
 2. Skrifið fall til að leysa jöfnurnar:
@@ -1140,21 +1148,25 @@ Reikningar með NumPy
        
 Körfuboltamenn
 ~~~~~~~~~~~~~~
-Skráin `cs.hi.is/python/karfa.txt <https://cs.hi.is/python/karfa.txt>`_ inniheldur þrjá
-dálka með aldri hæð og þyngd 1064 bandarískra körfuboltamanna. Notið
-``np.loadtxt`` til að lesa skrána inn í þrjá vigra t.d. `aldur`, `hæð` og
+Skráin `cs.hi.is/python/karfa.txt <https://cs.hi.is/python/karfa.txt>`_
+inniheldur þrjá dálka með aldri hæð og þyngd 1064 bandarískra körfuboltamanna.
+Notið ``np.loadtxt`` til að lesa skrána inn í þrjá vigra t.d. `aldur`, `hæð` og
 `þyngd` eða `a`, `h` og `þ`. Eftirfarandi teikningar þarf að gera sæmilega
 snyrtilega, m.a. merkja ása og setja inn titla og passa að þær séu mátulega
-stórar. Þeir sem vilja mega setja einhverjar teikningar hlið við hlið með því að
-nota ``plt.subplot``, sbr. einfalda lýsingu `hér
+stórar. Mörk súlna í súluritunum þurfa að vera rúnnaðar tölur (t.d. heilar eða
+hálfar tölur) og súlurnar eiga að hafa bil á milli sín. Þeir sem vilja mega
+setja einhverjar teikningar hlið við hlið með því að nota ``plt.subplot``, sbr.
+kafla :numref:`gervigögn og aðhvarf` og einfalda lýsingu hjá `w3schools
 <https://www.w3schools.com/python/matplotlib_subplots.asp>`_.
 
-1. Teiknið þrjú (einföld) súlurit af aldri, hæð og þyngd.
+1. Teiknið þrjú súlurit af aldri, hæð og þyngd.
 
 2. Teiknið punktarit með hæð á x-ás og þyngd á y-ás. Finnið svo og teiknið jöfnu
    bestu línu inn á myndina (sbr. :numref:`verkefni %s<jafna bestu línu>`)
+
+3. Teiknið aðra mynd með bestu parabólu.
    
-3. Miðtölu (*median*) vigurs `x` má finna með `np.median(x)` (helmingur staka
+4. Miðtölu (*median*) vigurs `x` má finna með `np.median(x)` (helmingur staka
    `x` er minni en miðtalan og helmingur stærri). Hver er miðtala aldurs
    körfuboltamannanna. Notið miðtöluna til að skipta gögnunum í tvennt (með
    rökvísun), *yngri* og *eldri*. Finnið meðalhæð þeirra yngri og þeirra eldri.
@@ -1271,8 +1283,8 @@ framgangsmáta má nota í lið 6, en í lið 5 þarf myndafylkið að vera stik
 ``hiðra_snúa_hliðra(mynd, horn, punktur)`` því ekki er hægt að skeyta saman
 hliðrun og margföldun saman í eina fylkjaaðgerð.
 
-Grannafylki og legufylki
-~~~~~~~~~~~~~~~~~~~~~~~~
+Flæðinet
+~~~~~~~~
 Stefnt net hefur 5 hnúta og eftirfarandi 7 leggi:
 
   `•` frá hnút 1 til 2 og 3 |br|
@@ -1280,18 +1292,44 @@ Stefnt net hefur 5 hnúta og eftirfarandi 7 leggi:
   `•` frá 3 til 4 og 5 |br|
   `•` frá 4 til 5
 
-Í leggjunum er flæði 2 l/s nema í þeim síðassttalda, þar flæða 4 l/s.
-  
-1. 1. Teiknið netið
-   2. Finnið grannafylkið :math:`A`
-   3. Reiknið :math:`A^2` og :math:`A^3` og ákvarðið í framhaldi heildarfjölda
-      mismunandi vega með lengd 3 í netinu
-   4. Notið fylkjaveldi og samlagningu til að finna heildarfjölda vega frá 1 til 5
-
-2. 1. Finnið legufylki netsins, :math:`L`, miðað við að leggirnir séu tölusettir
+1. (til að leysa með blaði og blýanti)
+   
+   a. Teiknið netið
+   b. Finnið grannafylkið :math:`A`
+   c. Finnið legufylki netsins, :math:`L`, miðað við að leggirnir séu tölusettir
       í sömu röð og þeir eru taldir upp að ofan.
-   2. Notið flæðisvarðveislujöfnuna til að ákvarða hvaða hnútar eru lindir og
-      ósar og hve mikið streymir inn og út þar.
+   d. Lát burðargetu leggjanna vera sem hér segir:
+
+      .. table::
+         :align: center
+      
+         ======  ==========
+         leggur  burðargeta
+         ======  ==========
+         1–2     5
+         1–3     5
+         2–3     4
+         2–4     3
+         3–4     2
+         3–5     3
+         4–5     5
+         ======  ==========
+
+      Reiknið hámarksflæði með Ford-Fulkerson aðferðinni og blaði og blýanti.
+      Byrjið með veginn 1–2–4–5, svo 1–3–5 og loks 1–3–4–5 og sýnið flæðið eftir
+      hvert skref. Hvert er flæðifylkið eftir lokaskrefið (þ.e. fylki með
+      :math:`(i,j)`-stak jafnt flæðinu í legg :math:`i \to j`)?
+
+2. (til að leysa með Python)
+   
+   a. Reiknið :math:`A^2` og :math:`A^3` og ákvarðið í framhaldi heildarfjölda
+      mismunandi vega með lengd 3 í netinu
+   b. Notið fylkjaveldi og samlagningu til að finna heildarfjölda vega frá 1 til 5
+   c. Notið maximium_flow fallið í SciPy til að finna hámarksflæði og
+      tilsvarandi fylki, sbr. lið 1d.
+   d. Gerum nú ráð fyrir að það flæði 2 l/s í öllum leggjum nema 4–5, þar flæði
+      4 l/s. Notið flæðisvarðveislujöfnuna til að ákvarða hvaða hnútar eru
+      lindir og ósar og hve mikið streymir inn og út þar.
 
 Leslie-fylki fyrir fjögur ár
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1304,9 +1342,9 @@ og 40% tveggja ára lifa til næsta árs (en sem sé enginn þeirra sem eru þri
 500 þriggja ára.
 
 1. Finnið Leslie fylkið.
-2. 1. Hver er stofnstærðin eftir eitt ár?
-   2. Hver er stofnstærðin eftir 10 ár?
-   3. Fjölgar í það óendanlega eða deyr stofninn að lokum út?
+2. a. Hver er stofnstærðin eftir eitt ár?
+   b. Hver er stofnstærðin eftir 10 ár?
+   c. Fjölgar í það óendanlega eða deyr stofninn að lokum út?
 
 Leslie-fylki og gröf
 ~~~~~~~~~~~~~~~~~~~~
@@ -1338,12 +1376,17 @@ Tegund lifir að hámarki í 5 ár. Fæðingartíðni og dánartíðni og upphaf
    
 Mannfjöldaspá fyrir Ísland
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: myndir/mannfjoldi.jpg
+   :align: center
+   :figwidth: 15cm
+
 Í skránni `https://cs.hi.is/python/aldursdreifing.txt
 <https://cs.hi.is/python/aldursdreifing.txt>`_ eru gögn um mannfjölda á Íslandi
 árið 2020, fæðingartíðni og dánartíðni, og fjölda aðfluttra umfram brottflutta
 eftir aldri.
 
-1. Notið Leslie-fylki til að spá mannfjölda á Íslandi 2020–2050 ef ekki er tekið
+1. Notið Leslie-fylki til að spá mannfjölda á Íslandi 2020–2075 ef ekki er tekið
    tillit til innflytjenda. Skrifið töflu yfir heildarfjöldann á 5 ára fresti.
 
 2. Bætið við áhrifum innflytjenda ef gert er ráð fyrir að árlegur fjöldi
@@ -1359,9 +1402,9 @@ eftir aldri.
    4 inn á sömu mynd.
 
 5. Búið til textareit og skrifið nokkrar (t.d. 10) línur um niðurstöðurnar frá
-   eigin brjósti. Hafið einhverjar tölulegar upplýsingar fengnar með Python með.
-   Þið megið líka alveg bæta einhverju við sem þið finnið með netleit Það eru
-   viljandi ekki gefin frekari fyrirmæli heldur er ætlast til að þið notið
+   eigin brjósti. Hafið einhverjar tölulegar upplýsingar fengnar með Python með
+   og sömuleiðis eitthvað sem þið finnið með leit á netinu. Það eru viljandi
+   ekki gefin frekari fyrirmæli heldur er ætlast til að þið notið
    hugmyndaflugið.
    
 .. admonition:: Athugasemd:
@@ -1458,7 +1501,7 @@ Stærð jarðskjálfta (nánar tiltekið vægisstærð, *moment magnitude*) er g
       +-------+----------+--------------------------+
 
    Skrifið forrit sem býr til uppflettitöflu ``stærð`` með orku
-   jarðskjálftanna skv. miðstövunum þremur (þannig t.d. að ``stærð["USGS"]`` sé
+   jarðskjálftanna skv. miðstöðvunum þremur (þannig t.d. að ``stærð["USGS"]`` sé
    ``3.20e17``), og skrifar í framhaldi út töflu yfir niðurstöðuna sem byrjar
    svona:
 
@@ -1474,8 +1517,9 @@ Valkvæðir stikar
 Föll geta haft **valkvæða stika** sem taka sjálfgefin gildi ef þeim er sleppt.
 Þannig hefur print-fallið tvo valkvæða stika, ``sep`` og ``end``, sbr. kafla
 :numref:`útprentun`. Eftirfarandi dæmi, sem reiknar n-tu rót, sýnir hvernig hægt
-er að skilgreina fall með valkvæðan stika. Fallið reiknar kvaðratrót ef
-seinna viðfanginu er sleppt og prentar því út ``rætur: 4 og 2``.
+er að skilgreina fall með valkvæðan stika. Fallið reiknar kvaðratrót ef seinna
+viðfanginu er sleppt og prentar því út ``rætur: 4 og 2``. Annað dæmi er í
+verkefni :numref:`%s.3<hiti og úrkoma>`.
 
 .. code:: python
 
@@ -1519,7 +1563,7 @@ Dæmi af prófi í Tölvunarfræði 1a 2020
    tveimur niðurstöðum (t.d. með dæmi). Nefnið tvær aðgerðir sem beita má á
    lista en ekki samstæður.
 
-3. Útskýrið, t.d. með dæmum, muninn á aðgerðunum + og * þegar þeim er beitt á
+3. Útskýrið, t.d. með dæmum, muninn á aðgerðunum ``+`` og ``*`` þegar þeim er beitt á
    1. Lista
    2. NumPy vigra
 
@@ -1713,3 +1757,53 @@ eftir kommunum í skránni).
    kosningaúrslitin með flokksnöfnum.
 3. Bætið við dálki með hlutfalli atkvæða sem hver flokkur fékk og birtið svo nýja
    töflu yfir þá flokka sem fengu meira en 5% (og komu þar með manni á þing).
+
+Dýraklasi
+~~~~~~~~~
+a. Búið til afstrakt klasa ``Dýr``. Klasinn á að hafa klasabreytur ``tegund``
+   (strengur), ``fótafjöldi`` (heiltala), og ``segir`` (strengur, t.d.
+   ``"voff"``), og klasaaðferð ``segja`` sem á að skrifa tvisvar á skjáinn hvað
+   dýrið segir (t.d. ``"voff voff"``, ``"me me"``). Klasabreytur fá gildið
+   ``None``. Klasinn á líka að hafa eiginleika ``nafn`` (strengur) og ``litur``
+   (strengur). Ennfremur á klasinn að hafa *smið* og *útskriftaraðferð*
+   ``__str__``. Útskriftaraðferðin gæti t.d. skrifað út "Snúlla er bröndótt
+   kisa" (eftir að búið er að búa til kisuklasa sem erfir frá *Dýr*).
+   
+b. Búið til (konkret) klasa ``Hundur`` sem erfir frá klasanum ``Dýr``. Hann
+   hefur smið sem kallar á smið yfirklasans og aðferð ``gelta`` sem kallar á
+   ``segja`` í yfirklasanum. Það þarf líka að gefa klasabreytunum þremur
+   viðeigandi gildi. Búið svo til tilvik af hundi sem heitir Snati og er
+   svartur. Prentið hann út ásamt fótafjöldanum og látið hann gelta. Búið líka
+   til klasa ``Önd`` með aðferð ``kvaka`` og prófið með sama hætti. Forritið
+   ætti að skrifa út eitthvað á þessa leið:
+
+   .. code:: text
+
+      Snati er svartur hundur
+      Hann hefur 4 fætur
+      voff voff
+
+      Andrés er brún önd
+      Hún hefur 2 fætur
+      bra bra
+
+Ef forritað er eins og hér hefur verið lýst er ekkert sem kemur í veg fyrir að
+búin sé til hlutur af taginu *Dýr*, í andstöðu við tilganginn með afstrakt
+klösum. Byrjið á að skoða `Wikipedíugreinina um þá
+<https://en.wikipedia.org/wiki/Abstract_type>`_ og sömuleiðis eitthvað um Python
+pakkann *abc* (*abstract base classes*); mér sýnist `þessi síða
+<https://dev.to/dollardhingra/understanding-the-abstract-base-class-in-python-k7h>`_
+einföld og skilmerkileg. Leysið svo eftirfarandi:
+
+c. Sannreynið að það er ekkert mál að búa til dýr af engri sérstakri tegund. Til
+   að fá villu ef reynt er að búa til tilvik af afstrakt klasa þarf hann að vera
+   með a.m.k. eina afstract aðferð. Bætið afstrakt aðferð ``hreyfast`` við
+   klasann Dýr sem er bara með eina línu, ``pass``. Látið klasann erfa frá
+   yfirklasanum ABC (eftir ``from abc import ABC``) og látið nýju aðferðina
+   vera afstrakt (með því að setja ``@abstractmethod`` framan við hana).
+   Prófið nú að búa til dýr.
+   
+d. Eftir þessar "úrbætur" er orðið skylda að undirklasarnir útfæri (*implement*,
+   endurskilgreini) aðferðina ``hreyfast``. Prófið fyrst að búa til hund án
+   slíkrar útfærslu og svo með (hún gæti t.d. skrifað út "Ég get gengið og
+   hlaupið"). Endurtakið fyrir öndina (hún getur gengið, flogið og synt).

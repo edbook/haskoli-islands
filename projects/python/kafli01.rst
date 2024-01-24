@@ -4,13 +4,13 @@
    :language: matlab
    :class: highlight
 
-Inngangur: Um Python
-====================
+Inngangur: Um Python.
+=====================
 
 Einfalt og auðlært mál
 ----------------------
 
-Python er forritunarmál sem kom fram árið 1991 og hefur náð mikilli útbreiðslu. Það var hollenski tölvufræðingurinn Guido van Rossum sem bjó Python til og spilaði stórt hlutverk í þróun þess, en margir fleiri hafa lagt hönd á plóg. Málið heitir eftir grínistahópnum *Monty Python* (sem aftur dregur nafn af kyrkislöngum, *pythons*). 
+Python er forritunarmál sem kom fram árið 1991 og hefur náð mikilli útbreiðslu. Það var hollenski tölvufræðingurinn Guido van Rossum sem bjó Python til og spilaði stórt hlutverk í þróun þess, en margir fleiri hafa lagt hönd á plóg. Málið heitir eftir grínistahópnum *Monty Python* (sem aftur dregur nafn af kyrkislöngum, *pythons*).. 
 
 .. figure:: myndir/monty-python.jpg
    :align: center
@@ -36,9 +36,9 @@ Með Python fylgir viðamikið fallasafn (*standard library*) og auk þess eru t
 Útbreiðsla
 ----------
 Ýmsir vefir mæla vöxt og vinsældir forritunarmála og mælist Python í efstu sætunum á þeim flestum, ásamt Javascript, Java, C, C# og C++. Á einum þeirra má t.d. finna eftirfarandi mynd, og það er efst á blaði skv. svonefndum `Tiobe index
-<https://www.tiobe.com/tiobe-index/>`_ í janúar 2023.
+<https://www.tiobe.com/tiobe-index/>`_ í janúar 2024.
 
-.. figure:: myndir/python-vöxtur.png
+.. figure:: myndir/python-voxtur.png
    :align: center
 
    Vöxtur í vinsældum Python
@@ -49,7 +49,7 @@ Python er túlkað forritunarmál sem þýðir að forrit eru ekki þýdd fyrirf
 
 Umhverfi til að skrifa Python-forrit
 ------------------------------------
-Í :numref:`%s. kafla<jupyter-og-colab>` er fjallað um notkun Python í svonefndum vinnubókum (Jupyter eða Google Colab), en það er líka hægt að nota ritil (*editors*) til að búa til textaskrár með Pythonforritum og meðal vinsælla ritla má nefna *Atom* og *VS Code*. Svo má líka nota svonefnd *samhæfð þróunarumhverfi* (*IDE*, *interactive development environment*) til að þróa og prófa Python forrit. Líklega eru `PyCharm <https://www.jetbrains.com/pycharm/>`_, `Spyder <http://spyder-ide.org>`_ og `Visual Studio <https://visualstudio.microsoft.com>`_ vinsælust. Í þessum kerfum eru ritlar (*editors*), aflúsunarforrit (*debuggers*), hægt er að skoða gildi á öllum breytum, búa sjálkrafa til prófunarforrit og margt fleira, en óhjákvæmilega tekur talsverðan tíma að læra vel á þau.
+Í :numref:`%s. kafla<jupyter-og-colab>` er fjallað um notkun Python í svonefndum vinnubókum (Jupyter eða Google Colab), en það er líka hægt að nota ritil (*editors*) til að búa til textaskrár með Pythonforritum og meðal vinsælla ritla má nefna *Atom* og *VS Code*. Svo má líka nota svonefnd *samhæfð þróunarumhverfi* (*IDE*, *interactive development environment*) til að þróa og prófa Python forrit. Líklega eru `PyCharm <https://www.jetbrains.com/pycharm/>`_, `Spyder <http://spyder-ide.org>`_, `Visual Studio <https://visualstudio.microsoft.com>`_ og `VS Code <https://code.visualstudio.com>`_ vinsælust. Í þessum kerfum eru ritlar (*editors*), aflúsunarforrit (*debuggers*), hægt er að skoða gildi á öllum breytum, búa sjálkrafa til prófunarforrit og margt fleira, en óhjákvæmilega tekur talsverðan tíma að læra vel á þau.
 
 Enn einn möguleiki er að keyra Python beint úr skipanaglugga (*command window*). Hægt er að rita ``python`` til að opna Python túlkinn (og inni í honum má svo gefa Python skipanir) eða ``python forrit.py`` til að keyra forrit (í skránni *python.py*). Svo má líka setja svonefnda `shebang <https://en.wikipedia.org/wiki/Shebang_(Unix)>`_ línu fremst í forrit til að hægt sé að keyra það með því að rita beint ``forrit.py`` á skipanalínuna. 
 

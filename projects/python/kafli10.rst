@@ -1,4 +1,4 @@
-.. include:: rst-include
+.. include:: rst-include        
 
 .. _numpy:
    
@@ -68,10 +68,10 @@ Síðan er sett ``np.`` eða ``la.`` á undan NumPy-skipunum og -föllum sem not
 Vigrar í NumPy
 ==============
 Vigur í NumPy er að mörgu leyti líkur venjulegum Python lista. Aðalmunurinn er
-sá að í vigrum eru öll stök tölur, oftast kommutölur (*float*) en það er líka
-hægt að geyma heiltölur eða strengi. En öll stök vigursins verða að vera af sama
-gagnatagi, og með því sparast minnispláss og auk þess fæst mun hraðvirkari
-vinnsla þegar unnið er með mörg stök.
+sá að í vigrum verða öll stök að vera af sama gagnatagi, og með því sparast
+minnispláss og auk þess fæst mun hraðvirkari vinnsla þegar unnið er með mörg
+stök. Eins og við munum gildir slík skorða ekki um lista, þeir geta innihaldið
+blöndu gagnataga.
 
 .. _vigur-gefið-gildi:
 
@@ -111,21 +111,21 @@ stakið er líka númer 0. Ef x er :math:`(1,2,3,4,6)` þá væri ``x[2]`` = 3,
    Prófið skipanirnar í næsta kafla á undan (:numref:`vigur-gefið-gildi`) og
    þessum kafla
    
-Útprentun vigra
----------------
+Einföld útprentun vigra
+-----------------------
 Til að prenta út vigur x er hægt að skrifa einfaldlega
 
    ``print(x)`` eða ``print("x =", x)``
    
-Það er hægt að stjórna fjölda aukastafa sem ``print`` birtir en við látum það
-bíða aðeins (sjá kafla :numref:`innskot`). Svo er hægt að prenta einstök stök í
+Það er hægt að stjórna fjölda aukastafa sem ``print``, sbr. kafla
+:numref:`útskrift vigra og fylkja`. Svo er hægt að prenta einstök stök í
 for-lykkju, og þá er hægt að nota f-strengi, sbr. eftirfarandi dæmi
 
 .. code:: python
           
    a = np.array([5.55,7.77])
-   for (i,ai) in enumerate(a):
-      print(f"a[{i}] = {a[i]}")
+   for i,ai in enumerate(a):
+      print(f"a[{i}] = {ai}")
 
 sem mundi prenta
 
@@ -133,7 +133,7 @@ sem mundi prenta
 
    a[0] = 5.55
    a[1] = 7.77
-
+   
 Föll af vigrum
 --------------
 Föllin sem sagt var frá í köflum :numref:`öll-söfn` og :numref:`söfn-af-tölum`
@@ -202,8 +202,6 @@ Við tökum eftir að í arange er b ekki með í x, alveg eins og með innbygg�
 Útreikningur með vigrum
 =======================
 
-.. _reiknað-með-vigrum:
-
 Reiknað með vigrum í stærðfræði
 -------------------------------
 Í stærðfræði, nánar tiltekið undirgrein hennar sem kallast línuleg algebra, er fjallað um ýmsa útreikninga með vigrum. Það er hægt að leggja saman vigra, draga þá hvern frá öðrum og margfalda þá með tölum. Það er líka hægt að reikna **innfeldi** (*scalar product*) tveggja vigra og fá út tölu, og svo má reikna norm vigurs með fyrrnefndu norm-falli
@@ -226,8 +224,6 @@ Aðgerðin í neðstu línunni nefnist innfeldi, og það er skilgreint með:
    .. math:: x \cdot y = x_0 y_0 + x_1 y_1 + \ldots + x_{n-1} y_{n-1}
 
 þar sem bæði :math:`x` og :math:`y` eru :math:`n`-staka vigrar.   
-
-.. _plús-mínus-margföldun:
 
 Plús, mínus, margföldun og deiling í NumPy
 ------------------------------------------
@@ -300,11 +296,12 @@ Ef x og y eru jafnlangir vigrar þá er ``x < y`` vigur af rökgildum með
 :math:`i`-ta sæti satt (``True``) ef :math:`x_i < y_i`. Slíkan vigur má líka
 reikna með yfirgripi (*comprehension*) sbr. kafla :numref:`yfirgrip` þannig að:
 
-   ``x < y = np.array([x[i] < y[i] for i in range(len(x))])``
+   ``x < y`` er vigurinn ``np.array(xi < yi for (xi,yi) in zip(x,y))``.
 
-Svo mætti líka nota zip og fá sömu niðurstöðu með ``np.array([xi < yi for
-(xi,yi) in zip(x,y)])``. Í framhaldi má svo nota innbyggðu föllin :math:`any` og
-:math:`all` til að athuga hvort eitthvert eða öll stök rökvigranna séu sönn.
+Svo mætti líka nota ``range`` og ``len`` til að fá sömu niðurstöðu með
+``np.array([x[i] < y[i] for i in range(len(x))])``. Í framhaldi má svo nota
+innbyggðu föllin :math:`any` og :math:`all` til að athuga hvort eitthvert eða
+öll stök rökvigranna séu sönn.
 
 .. admonition:: Sýnidæmi: Jákvæð stök og samanburður vigra
    :class: synidaemi
@@ -479,7 +476,7 @@ np.zeros((m,n),int)`` gefur heiltölu-núllfylki (það má líka skrifa
       Leggið svo neðri línu :math:`D` við efri línu :math:`C` og prentið út nýja
       :math:`C`-ið.
    3. Búið til :math:`10 \times 10` fylki :math:`M` með margföldunartöflu með
-      því að byrja með heiltölu-núllfylki og reikna svo:
+      því að byrja með heiltölu-núllfylki og reikna svo (í tvöfaldri for-lykkju):
 
       .. math::
          m_{ij} = (i+1)(j+1)\quad (i=0,\ldots,9, j=0,\ldots, 9)
@@ -530,32 +527,45 @@ Slík afpökkun er notuð í næsta kafla þegar lesið er inn í NumPy vigra ú
    
    Náið svo í dálka þess inn í tvo vigra með því að bylta því fyrst og afpakka svo.
 
+Föll af fylkjum
+---------------
+Numpy er með ýmis föll sem hafa fylki sem viðfang. Fyrst má nefna NumPy-útgáfur
+af venjulegum stærðfræðiföllum, sem beita má stakvís á fylki jafnt sem vigra,
+sbr. grein :numref:`venjulegum stærðfræðiföllum beitt á vigra`. Í grein
+:numref:`andhverfur og ákveður` eru föllin ``np.det`` og ``np.inv``, sem reikna
+ákveður og andhverfur, kynnt til sögunnar, og loks skulu nefnd föllin ``np.sum``
+sem finnur summu allra staka í fylki og ``np.shape`` sem skilar tvennd með
+fjölda lína og dálka. Hér hafa aðeins verið talin örfá af þeim fjölda
+fylkjafalla sem NumPy hefur.
+   
 Föll til að búa til fylki
 -------------------------
 Við höfum þegar séð hvernig hægt er að búa til fylki með því að telja upp stökin
-í því og líka hvernig búa má til núllfylki með fallinu ``np.zeros``. Hér er
-tafla yfir fleiri föll til að búa til fylki, m.a. nokkur sem verður nánar lýst í
-seinni köflum.
+í því og nota ``np.array``, og líka hvernig búa má til núllfylki með fallinu
+``np.zeros``. Hér er tafla yfir þessi og fleiri föll til að búa til fylki, m.a.
+nokkur sem verður nánar lýst í seinni köflum.
 
 .. list-table::
    :widths: auto
 
-   * - ``zeros((n,m))``
-     - Skilar :math:`n \times m` núllfylki
+   * - ``np.array([L1,L2...])``
+     - Býr til nýtt fylki úr L1, L2,... sem hver um sig er listi af stökum til
+       að setja í línur fylkisins (allir jafn langir)
 
-   * - ``eye(n)``
+   * - ``np.zeros((m,n))``
+     - Skilar :math:`m \times n` núllfylki
+
+   * - ``np.eye(n)``
      - :math:`n \times n` einingafylki, sjá kafla :numref:`núllfylki og einingafylki`
 
-   * - ``diag(v)``
-     - (fyrir :math:`n`-vigur ``v``) skilar :math:`n \times n` hornalínufylki með stökum
-       ``v`` á |br| hornalínunni (sjá `Fyrirlestrarnótur um stærðfræði og reiknifræði
-       <https://cs.hi.is/strei/kafli02/#ymis-vigur-og-fylkjahugtok>`_) 
+   * - ``np.diag(v)``
+     - (fyrir :math:`n`-vigur ``v``) skilar :math:`n \times n` hornalínufylki
+       með stökum ``v`` á |br| hornalínunni (sjá `Valin efni í
+       stærðfræði og reiknifræði
+       <https://cs.hi.is/strei/kafli02/#ymis-vigur-og-fylkjahugtok>`_)
 
-   * - ``inv(A)``
-     - andhverfa ``A`` (sjá kafla :numref:`andhverfur og ákveður`)
-
-   * - ``rng.random((n,m))``
-     - :math:`n \times m` slembifylki (sjá kafla :numref:`slembitölur með numpy`)
+   * - ``rng.random((m,n))``
+     - :math:`m \times n` slembifylki (sjá kafla :numref:`slembitölur með numpy`)
 
    * - ``np.c_[x,y]``
      - (fyrir :math:`n`-vigra ``x`` og ``y``) skilar :math:`n \times 2` fylki með
@@ -568,12 +578,142 @@ seinni köflum.
 Í kaflanum um slembitölur (:numref:`slembitölur með numpy`) er lýst fleiri
 föllum til að búa til slembifylki. Varðandi neðstu tvö föllin þá eru líka til
 ``np.r_`` og ``np.hstack`` til að skeyta saman lóðrétt og lárétt en notkun
-þeirra er óþægilegri en þessara tveggja.
-   
-.. _inn-og-út:
+þeirra er óþægilegri en þessara tveggja.   
 
-Innlestur og útskrift
-=====================
+Breytt um lögun
+---------------
+Hægt er að breyta um lögun fylkja ef fjöldi staka helst óbreyttur, og sömuleiðis
+má breyta vigrum í fylki eða öfugt. Til dæmis má breyta :math:`3 \times 4` fylki
+í :math:`6 \times 2` fylki. Hér er tafla sem sýnir ýmsa möguleika. Í töflunni
+tákna ``A`` og ``B`` fylki og ``x`` vigur.
+
+.. list-table::
+   :widths: auto
+
+   * - ``A = np.reshape(x, (m,n))`` |br|
+       ``A = x.reshape(m,n)``
+       
+     - breytir ``x`` í :math:`m \times n` fylki; í efstu röð ``A`` koma
+       ``x[0]``, ``x[1]``:math:`\ldots` |br| í þá næstu ``x[n]``,
+       ``x[n+1]``:math:`\ldots` o.s.frv.
+
+   * - ``B = np.reshape(A, (m,n))`` |br|
+       ``B = A.reshape(m,n)``
+     - tekur stök ``A`` röð fyrir röð og setur þau inn í nýtt :math:`m \times n`
+       fylki ``B``
+
+   * - ``x = np.reshape(A, n)`` |br|
+       ``x = A.reshape(n)`` |br|
+       ``x = A.reshape(-1)`` |br|
+       ``x = A.flatten()``
+     - Allar þessar skipanir taka stök ``A`` röð fyrir röð |br| og setja þau inn í
+       nýjan n-vigur ``x`` (n er stakafjöldi A).
+
+   * - ``A = x[:, None]``
+
+     - Býr til :math:`n \times 1` fylki úr :math:`n\text{-vigrinum}` x
+       (dálkfylki, *column matrix*)
+
+   * - ``A = x[None, :]``
+
+     - Býr til :math:`1 \times n` fylki úr :math:`n\text{-vigrinum}` x
+       (línufylki, *row matrix*)
+
+ 
+Í öllum tilvikum má ekkert stak ganga af, t.d. þarf fjöldi staka í ``x`` að vera
+:math:`mn` efst í töflunni. Nota má ``-1`` fyrir víddir sem hægt er að reikna
+út, t.d eru ``x.reshape(4,3)`` og ``x.reshape(-1,3)`` jafngildar ef ``x`` hefur
+12 stök.
+
+Til að fara í gegn um stökin dálk fyrir dálk má nota byltingu, t.d. ``x = A.T.flatten()`` eða ``B = A.T.reshape(m,n).T``.
+
+.. admonition:: Sýnidæmi: Bankayfirlit
+   :class: synidaemi
+
+   Fyrir liggja upplýsingar um heildarfærslur tveggja bankareikninga í fjórum
+   dálkum sbr. eftirfarandi mynd. Til að sýna sömu upplýsingar með nýju
+   skipulagi í tveimur dálkum má nota skipun:
+
+        ``nýtt = gamalt.reshape(4,2)``
+
+   .. figure:: myndir/bankareikningar.jpg
+      :align: center
+      :figwidth: 16cm
+
+.. admonition:: Æfing: Bylting og ný lögun
+   :class: aefing
+
+   Hægt er að nota byltingu og *reshape* saman til að gera frekari breytingar
+   á skipulagi upplýsinga í töflum:
+
+   a. Hvernig töflu mundi gamalt.T.reshape(2,4) skila?
+   b. Búið til skipanir til að fá tvo dálka, einn fyrir hvort ár, og fjórar línur, fyrri
+      tvær með innborgunum á A og B og seinni tvær með útborgunum.
+             
+Útskrift vigra og fylkja
+========================
+
+Útprentun á skjá
+----------------
+Eins og sýnt hefur verið framar í þessum kafla má nota print-fallið til að
+prenta bæði vigra og fylki á skjá. Slík útprentun inniheldur hins vegar mismarga
+aukastafi, eftir því hve marga þarf til að sýna tölurnar með 8 stafa nákvæmni,
+og auk þess er bætt við hornklofum fremst og aftast. Úr þessum göllum má bæta
+með tvennu móti, með því að nota ``np.set_printoptions`` eða ``np.savetxt``.
+Næstu greinar útskýra þessa kosti.
+
+Stjórn útprentunar
+------------------
+Með fallinu ``np.set_printoptions`` má stjórna sniði útprentunar. Þetta fall
+hefur ýmsa stika en hér látum við duga að segja frá þremur: ``precision = n`` og
+``floatmode = "fixed"`` gefur alltaf *n* aukastafi (án floatmode koma ≤ n
+stafir), og ``suppress = True`` þýðir að engar tölur eru prentaðar með
+tugveldistáknun (t.d. -6.33e08 eða 5.22e-12). Til að prenta öll stök vigurs eða
+fylkis án tugveldisvísis og með nákvæmlega þremur aukastöfum má nota:
+
+   ``np.set_printoptions(suppress=True, floatmode="fixed", precision=3)``
+
+Án ``suppress=True`` hefur eitt lítið stak í vigri áhrif á prentun allra
+stakanna, og án ``floatmode="fixed"`` getur vantað 0 aftast í aukastöfunum. Hér
+er dæmi til skýringar:
+
+.. code:: text
+   
+   Lát x = np.array([0.000002, 1.25, 12.345]). Þá prentar print(x) út:
+   - með suppress=False:   [2.000e-06 1.250e+00 1.235e+01]
+   - með suppress=True:    [ 0.000  1.250 12.345]
+   - án floadmode="fixed": [ 0.     1.25  12.345]
+   
+Útprentun með *savetxt*
+-----------------------
+Annar möguleiki til að fá snyrtilega útprentun er að nota ``savetxt``-fallið með sniði:
+
+.. code:: python
+
+   from sys import stdout
+   np.savetxt(stdout, fylki, fmt="%w.df")
+
+þar sem w er breidd hvers sviðs (hverrar tölu) og d er fjöldi aukastafa (t.d.
+``fmt="%6.2f")``. Þá sleppur maður við hornklofana í útprentuninni, en hinsvegar
+verður að vita fyrirfram hver mesta breidd dálks þarf að vera.
+     
+Útskrift í skrá
+---------------
+Til að skrifa fylki í skrá má nota annaðhvort ``print`` eða ``savetxt``:
+   
+.. code:: python
+
+         with open("skrá.txt", 'w') as f:
+             print(fylki, file=f)
+   eða:
+         np.savetxt("skrá.txt", fylki, fmt="%5.2f")
+   
+Svo væri líka hægt að nota lykkju og f-strengi, sbr. kafla :numref:`skrár
+skrifaðar út` og :numref:`einföld útprentun vigra`.
+         
+Innlestur úr skrám
+==================
+
 Talnalestur
 -----------
 Það er fremur auðvelt að lesa fylki úr textaskrá með fallinu :code:`loadtxt`.
@@ -608,14 +748,6 @@ næsta kafla sjáum við hvernig hægt er að lesa inn textadálka.
    2. Lesið `https://cs.hi.is/python/malmar.txt <https://cs.hi.is/python/malmar.txt>`_ og
       teiknið punktarit. Það þarf að sleppa bæði fyrstu línunni og fyrsta dálkinum.
 
-Útskrift talna
---------------
-Til að skrifa fylki í skrá má nota ``savetxt`` fallið:
-   
-   ``np.savetxt('skrá.txt', x, fmt='«snið»')`` (t.d. með f.«snið» = ``%5.2f``)
-
-.. _numpy-skrár-með-textadálkum:
-   
 Innlestur skráa með textadálkum
 -------------------------------
 Í Numpy er hægt að lesa textafylki með því nota ``loadtxt(..., dtype=str)``.
@@ -721,6 +853,7 @@ prófa ýmsar aðferðir til að lesa skrár og vinna með gögn í NumPy (eða 
 - `flokkslitir.txt <https://cs.hi.is/python/flokkslitir.txt>`_
 - `malmar.txt <https://cs.hi.is/python/malmar.txt>`_
 - `allir-malmar.txt <https://cs.hi.is/python/allir-malmar.txt>`_
+- `aldursdreifing.txt <https://cs.hi.is/python/aldursdreifing.txt>`_
 - `blom.txt <https://cs.hi.is/python/blom.txt>`_
 - `evropulond.txt <https://cs.hi.is/python/evropulond.txt>`_
 - `hofudborgir.txt <https://cs.hi.is/python/hofudborgir.txt>`_

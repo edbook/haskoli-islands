@@ -292,8 +292,9 @@ Eins og nefnt var aftast í kafla :numref:`stigull` má teikna stigla með falli
 .. attention:: Til að skoða lista yfir alla eiginleika (*properties*) sem hægt
    er að stilla með ``ax.set`` má gefa skipunina ``plt.getp(ax)``
            
-.. Æfing
-.. hint::
+.. admonition:: Æfing: Rosenbrock-stigull
+   :class: aefing
+
    1. Reiknið (á blaði) stigul falls Rosenbrocks
 
       .. math:: f(x_0, x_1) = (1 - x_0)^2 + 100(x_1 - x_0^2)^2

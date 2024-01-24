@@ -75,6 +75,9 @@ p.caption {margin-top: 5px;}
 .rst-content .important .admonition-title {background: #ffcf00}
 .rst-content .important                   {background: #fff0b3}
 
+.rst-content .advorun .admonition-title {background: #f22000}
+.rst-content .advorun                   {background: #fcbbbb}
+
 .rst-content .synidaemi .admonition-title {background: #ffb800}
 .rst-content .synidaemi                   {background: #fff0b3}
 
