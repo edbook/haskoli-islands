@@ -362,16 +362,16 @@ Skilgreining
 .. admonition:: Athugasemd
 	:class: athugasemd
 
-	Við segjum að formið sé innfeldi á vigurrúmi samfelldra falla á :math:`[a,b]`, :math:`C[a,b]`, því það uppfyllir þær reiknireglur sem hið kunnuglega innfeldi endanlegra vigra uppfyllir. Við getum því unnið með það með sama hætti og gamla góða innfeldið.  Athugið einnig að þegar :math:`rho(x) = \frac{1}{b-a}` fæst sama innfeldi og sami staðall og við skilgreindum á :math:`L^2`. Almennt jákvætt fall :math:`rho` sem kemur fyrir í innfeldi af þessu tagi er oft kallað *vigt*.
+	Við segjum að formið sé innfeldi á vigurrúmi samfelldra falla á :math:`[a,b]`, :math:`C[a,b]`, því það uppfyllir þær reiknireglur sem hið kunnuglega innfeldi endanlegra vigra uppfyllir. Við getum því unnið með það með sama hætti og gamla góða innfeldið.  Athugið einnig að þegar :math:`\rho(x) = \frac{1}{b-a}` fæst sama innfeldi og sami staðall og við skilgreindum á :math:`L^2`. Almennt jákvætt fall :math:`\rho` sem kemur fyrir í innfeldi af þessu tagi er oft kallað *vigt*.
 
-Við munum nú skoða hvernig setja má fram jaðarskilyrði af tiltekinni gerð og athugum svo eigingildisverkefnin sem þau skilgreina ásamt virkjanum :math:`L` sem unnið er með. *Jaðargildisvirki* :math:`B` er vörpun sem úthlutar samfellt deildanlegu falli :math:`u\in C^1[a,b]` punkti :math:`Bu = (B_1 u , B_2)` þar sem
+Við munum nú skoða hvernig setja má fram jaðarskilyrði af tiltekinni gerð og athugum svo eigingildisverkefnin sem þau skilgreina ásamt virkjanum :math:`L` sem unnið er með. *Jaðargildisvirki* :math:`B` er vörpun sem úthlutar samfellt deildanlegu falli :math:`u\in C^1[a,b]` punkti :math:`Bu = (B_1 u , B_2 u)` þar sem
 
 .. math::
    \begin{align*}
    B_1 u&=\alpha_{11}u(a)+\alpha_{12}u{{^{\prime}}}(a)
    +\beta_{11}u(b)+\beta_{12}u{{^{\prime}}}(b) \\
-   B_1 u&=\alpha_{11}u(a)+\alpha_{12}u{{^{\prime}}}(a)
-   +\beta_{11}u(b)+\beta_{12}u{{^{\prime}}}(b) \\
+   B_2 u&=\alpha_{21}u(a)+\alpha_{22}u{{^{\prime}}}(a)
+   +\beta_{21}u(b)+\beta_{22}u{{^{\prime}}}(b) \\
    \end{align*}
 
 þar sem stuðlarnir :math:`\alpha_{jk}` og :math:`\beta_{jk}` eru
