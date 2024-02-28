@@ -1,1 +1,1 @@
-from edbook.conf import *  # type: ignore
+from edbook.settings import *  # type: ignore
