@@ -780,7 +780,7 @@ Dæmi 2 um stofnbrotaliðun
     lægra stigi en nefnarinn (tveimur lægra nánar til tekið) sem og að nefnarinn hefur þrjár, einfaldar núllstöðvar,
     getum við stofbrotaliðað það með eftirfarandi hætti.
 
-    .. math:: \frac{x+2}{x^3-x} = \frac{x+2}{x(x-1)(x+1)} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{x-1} = \frac{A(x^2-1)+B(x^2+x)+X(x^2-x)}{x(x-1)(x+1)}
+    .. math:: \frac{x+2}{x^3-x} = \frac{x+2}{x(x-1)(x+1)} = \frac{A}{x}+\frac{B}{x-1}+\frac{C}{x+1} = \frac{A(x^2-1)+B(x^2+x)+C(x^2-x)}{x(x-1)(x+1)}
 
     þar sem síðasti liður jöfnunnar fæst með því að samnefna brot þess næstseinasta.
     Með því að bera saman teljara fyrsta og síðasta liðs jöfnunnar sést að
@@ -791,7 +791,7 @@ Dæmi 2 um stofnbrotaliðun
 
     .. math:: x+2 = (A+B+C)x^2 +(B-C)x - A.
 
-    Þetta gefur okkurjöfnuhneppið
+    Þetta gefur okkur jöfnuhneppið
 
     .. math::
     	\begin{align*}
@@ -867,7 +867,7 @@ Dæmi 4 um stofnbrotaliðun
     en nefnarinn og nefnarinn hefur einfalda núllstöð í :math:`x=0` og tvöfalda
     núllstöð í :math:`x=1`. Þá má liða fallið í stofnbrot með eftirfarandi hætti.
 
-    .. math:: \frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2}.
+    .. math:: \frac{1}{x(x-1)^2} = \frac{A}{x} + \frac{B}{x-1} + \frac{C}{(x-1)^2}.
 
     Tökum sérstaklega eftir því að núllstöðin :math:`x=1` er tvöföld og því inniheldur
     stofnbrotaliðunin tvo liði með þáttinn :math:`(x-1)` í nefnara,
@@ -879,7 +879,7 @@ Dæmi 4 um stofnbrotaliðun
 
     Með því að samnefna fáum við að
 
-    .. math:: \frac{A}{x} + \frac{B}{x-1} + \frac{B}{(x-1)^2} = \frac{A(x^2-2x+1)+B(x^2-x)+Cx}{x(x-1)^2}.
+    .. math:: \frac{A}{x} + \frac{B}{x-1} + \frac{C}{(x-1)^2} = \frac{A(x^2-2x+1)+B(x^2-x)+Cx}{x(x-1)^2}.
 
     Með sambærilegum hætti og áður fæst að
 

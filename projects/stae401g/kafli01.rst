@@ -129,8 +129,6 @@ Dæmi - Sveifla á einvíðum streng
 	  :imgwidth: 4cm
 	  :zoom_drag: true
 
-|
-|
 
 Hliðarskilyrði. Vel framsett verkefni
 -------------------------------------
