@@ -36,8 +36,6 @@ aov()
     **Inntak:** nöfn á talnabreytu og flokkabreytu
     
     **Úttak:** fervikagreiningarhlutur
-    
-    **Helstu stillingar:**
 
 
 --------------
@@ -62,8 +60,6 @@ anova()
     **Inntak:** nafn á fervikagreiningarhlut
     
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
-    
-    **Helstu stillingar:**
 
 
 --------------
@@ -176,8 +172,6 @@ TukeyHSD()
     **Inntak:** nafn á fervikagreiningarhlut
     
     **Úttak:** p-gildi, öryggisbil og fl.
-    
-    **Helstu stillingar:**
 
 
 --------------
@@ -227,8 +221,6 @@ kruskal.test()
     **Inntak:** nafn á talnabreytu og nafn á flokkabreytu
     
     **Úttak:** gildi á prófstærð, p-gildi
-    
-    **Helstu stillingar:**
 
 
 --------------

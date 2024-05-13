@@ -131,8 +131,6 @@ bartlett.test()
     **Inntak:** nöfn á talnabreytu og flokkabreytu
     
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
-    
-    **Helstu stillingar:**
 
 
 --------------

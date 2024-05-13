@@ -472,8 +472,6 @@ apropos()
     **Inntak:** Textabrot innan gæsalappa
     
     **Úttak:** Listi að föllum sem innihalda textabrotið
-    
-    **Helstu stillingar:**
 
 
 --------------
