@@ -136,8 +136,6 @@ replicate()
     **Inntak:** fjöldi hermana, fall sem skal beita í hverri hermun
     
     **Úttak:** fylki með einn dálk fyrir útkomu hverrar hermunar
-    
-    **Helstu stillingar:**
 
 
 --------------
