@@ -523,7 +523,7 @@ vasareiknum. Þannig leggur skipunin
    ## [1] 8
 
 einfaldlega saman tölurnar 3 og 5. Á sama hátt og við erum vön notum við
-mínus (-), margföldun (*) og deilingu (:math:`\backslash`).
+mínus (-), margföldun (*) og deilingu (/).
 
 Aðferðin \*\* hefur tölur í veldi. Skipunin
 
