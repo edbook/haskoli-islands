@@ -112,13 +112,13 @@ dæmis má gefa skipanirnar
 til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.
 
 Við getum að sjálfsögðu matað sample með nafni á breytu sem tilheyrir
-gagnafölu. Viljum við t.d. velja handahófskennt 10 hæðarmælingar úr puls
-gögnunum okkar gerum við það með
+gagnafölu. Viljum við t.d. velja handahófskennt 10 ágiskanir hvenær nemendur 
+halda að Napóleon var fæddur úr dat gögnunum okkar. Gerum við það með
 
 ::
 
-   sample(puls$haed,10)
-   ##  [1] 160 188 180 160 162 164 174 170 180 165
+   sample(dat$napoleon_faeddur,10)
+   ##  [1] 1769 1770 1750 1874 1700 1498 1769 1560 1690 1800
 
 .. _s.urtaksdreifing:
 
@@ -147,13 +147,13 @@ oft og við biðjum hana um.
 úrtaksdreifing meðaltals slembistærðar fylgi normaldreifingu ef
 meðaltalið byggir á nægjanlega mörgum mælingum, óháð því hver upphaflega
 dreifing slembistærðarinnar var. Gott dæmi um hana má sjá með því að
-skoða breytuna ``likamsraekt`` sem lýsir hversu marga klukkutíma í viku
-nemendur stunda líkamsrækt. Byrjum á því að skoða stuðlarit af
+skoða breytuna ``ferdatimi_skoli`` sem lýsir því hve lengi nemendur eru á
+leið í skóla. Byrjum á því að skoða stuðlarit af
 breytunni.
 
 ::
 
-   ggplot(data = puls, aes(likamsraekt)) + geom_histogram(binwidth=1)
+   ggplot(data = dat, aes(ferdatimi_skoli)) + geom_histogram()
 
 .. figure:: myndir/unnamed-chunk-171-1.svg
 
