@@ -270,7 +270,7 @@ neðan:
 |                       |                       | | Ef F þá birtist ekki skilaboð                           |
 +-----------------------+-----------------------+-----------------------------------------------------------+
 | cache                 | T eða F               | | Ef T þá er niðurstaða kóðans vistuð í minni og notuð    |
-|                       |                       | |  ef kóðabúturinn er keyrður aftur                        |
+|                       |                       | |  ef kóðabúturinn er keyrður aftur                       |
 |                       |                       | | Ef F þá eru útreikningar endurteknir  (sjálfgefið)      |
 +-----------------------+-----------------------+-----------------------------------------------------------+
 | results               | "markup", "hide" ...  | | Ef "markup" (sjálfgefið) þá birtist það                 |
