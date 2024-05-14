@@ -157,9 +157,9 @@ breytunni.
 
 .. figure:: myndir/unnamed-chunk-171-1.svg
 
-Á stuðlaritinu sést að líkindadreifing breytunnar ``likamsraekt`` er
+Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
-útlaga til hægri að auki. Hins vegar er *meðaltal* líkamsræktar
+útlaga til hægri að auki. Hins vegar er *meðaltal* ferdatimi_skoli
 normaldreift, sé tekið meðaltal af nægjanlega mörgum mælingum. Með
 skipuninni ``replicate()`` getum við framkvæmt 1000 "gervitilraunir"
 þar sem við veljum slembiúrtak af stærð 100 úr þýði upprunalegu
@@ -167,7 +167,7 @@ mælinganna okkar:
 
 ::
 
-   endurvalsurtak <- replicate(1000, sample(puls$likamsraekt, 100,replace=T))
+   endurvalsurtak <- replicate(1000, sample(dat$ferdatimi_skoli, 100,replace=T))
 
 Útkoman er fylki með 1000 dálka, einn fyrir hverja gervitilraun og 100
 línur, eina fyrir hverja útkomu í hverri gervitilraun.
@@ -201,7 +201,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
 ::
 
    litid.endurvalsurtak <-
-   replicate(1000, sample(puls$likamsraekt, 3,replace=T))
+   replicate(1000, sample(dat$ferdatimi_skoli, 3,replace=T))
 
    ny.medaltol <-
    apply(litid.endurvalsurtak,2,mean, na.rm=T)
@@ -217,7 +217,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
 --------------------------------------
 
 Gerviúrtökin sem fengust með skipuninni ``replicate()`` má einnig nota
-til að reikna öryggisbil fyrir meðaltal líkamsræktar. 95% öryggisbil er
+til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 smíðað þannig að það innihaldi sanna gildið á stikanum í 95% tilvika ef
 tilraunin er endurtekin nægjanlega oft. Við getum notað metnu meðaltölin
 úr gervitilraununum 1000 til að áætla hvaða útkomur væru mögulegar ef að
@@ -228,9 +228,9 @@ reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.
 
    quantile(medaltol, c(0.025, 0.975))
    ##     2.5%    97.5%
-   ## 3.825000 5.255003
+   ##    17.12342 22.95835 
 
-95% öryggisbilið er því :math:`[3.825, 5.2550026 ]`.
+95% öryggisbilið er því :math:`[17.12342, 22.95835]`.
 
 
 Leiksvæði fyrir R kóða
