@@ -478,26 +478,26 @@ væri útkoman:
 
    head(dat)
    ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
-   ## 1  Vanilla     20                iOS               Með einkabíl      
-   ## 2  Súkkulaði   20                iOS               Með einkabíl     
-   ## 3  Jarðaberja  15                Android           Með einkabíl     
-   ## 4  Vanilla     20                iOS               Með einkabíl      
-   ## 5  Súkkulaði   60                iOS               Með strætó       
-   ## 6  Súkkulaði   8                 iOS               Með einkabíl     
-   ##    systkini_fjoldi   dyr      feministi      staerdfraedi_gaman
-   ## 1  4                 Ketti    Rangt          10
-   ## 2  0                 Ketti    Rétt           9
-   ## 3  1                 Hunda    Rétt           9
-   ## 4  2                 Hunda    Rétt           8
-   ## 5  1                 Hunda    Rétt           8
-   ## 6  3                 Hunda    Rangt          7
+   ## 1  Jarðaberja  15                Android           Með einkabíl      
+   ## 2  Vanilla     20                iOS               Með einkabíl     
+   ## 3  Súkkulaði   8                 iOS               Með einkabíl     
+   ## 4  Jarðaberja  12                Android           Gangandi/ skokkandi      
+   ## 5  Súkkulaði   15                iOS               Með einkabíl       
+   ## 6  Súkkulaði   42                Android           Með einkabíl     
+   ##    systkini_fjoldi   dyr      feministi     staerdfraedi_gaman
+   ## 1  1                 Hunda    Rétt          9
+   ## 2  2                 Hunda    Rétt          8
+   ## 3  3                 Hunda    Rangt         7
+   ## 4  2                 Ketti    Rétt          3
+   ## 5  2                 Hunda    Rétt          9
+   ## 6  5                 Hunda    Rétt          7
    ##   smjor_kostar    napoleon_faeddur  stefnumot   messi_staerd   kosid
-   ## 1  2000           1886              Á kaffihús  173            Rétt
-   ## 2  NA             1769              Á ísrúnt    170            Rétt
-   ## 3  750            1750              Á kaffihús  170            Rétt
-   ## 4  700            1784              Á ísrúnt    168            Rangt
-   ## 5  NA             1781              Á kaffihús  161            Rétt
-   ## 6  800            1778              Á ísrúnt    170            Rangt
+   ## 1  750            1750              Á kaffihús  170            Rétt
+   ## 2  700            1784              Á ísrúnt    168            Rangt
+   ## 3  800            1778              Á ísrúnt    170            Rangt
+   ## 4  700            1870              Á ísrúnt    160            Rétt
+   ## 5  1100           1779              Á kaffihús  169            Rétt
+   ## 6  437            1767              Á ísrúnt    174            Rétt
 
 str()
 ^^^^^
@@ -519,20 +519,20 @@ mælingarnar liggja. Í okkar tilviki væri skipunin:
 ::
 
    str(dat)
-   ## 'data.frame':	246 obs. of  13 variables:
-   ## $ is                : Factor w/ 3 levels "Jarðaberja","Súkkulaði",..: 3 2 1 3 2 2 1 3 3 2 ...
-   ## $ ferdatimi_skoli   : int  20 20 15 20 60 8 12 15 30 15 ...
-   ## $ styrikerfi_simi   : Factor w/ 3 levels "","Android","iOS": 3 3 2 3 3 3 2 2 2 3 ...
-   ## $ ferdamati_skoli   : Factor w/ 5 levels "Á annan hátt",..: 4 4 4 4 5 4 3 4 4 4 ...
-   ## $ systkini_fjoldi   : num  4 0 1 2 1 3 2 3 2 2 ...
-   ## $ dyr               : Factor w/ 2 levels "Hunda","Ketti": 2 2 1 1 1 1 2 1 1 1 ...
-   ## $ feministi         : Factor w/ 2 levels "Rangt","Rétt": 1 2 2 2 2 1 2 2 2 2 ...
-   ## $ staerdfraedi_gaman: num  10 9 9 8 8 ...
-   ## $ smjor_kostar      : int  2000 NA 750 700 NA 800 700 NA 450 1100 ...
-   ## $ napoleon_faeddur  : num  1886 1769 1750 1784 1781 ...
-   ## $ stefnumot         : Factor w/ 4 levels "Á ísrúnt","Á kaffihús",..: 2 1 2 1 2 1 1 4 2 2 ...
-   ## $ messi_staerd      : num  173 170 170 168 161 170 160 170 150 169 ...
-   ## $ kosid             : Factor w/ 2 levels "Rangt","Rétt": 2 2 2 1 2 1 2 2 2 2 ...
+   ## 'data.frame':	201 obs. of  13 variables:
+   ##  $ is                : chr [1:201] "Jarðaberja" "Vanilla" "Súkkulaði" "Jarðaberja" ...
+   ## $ ferdatimi_skoli   : num [1:201] 15 20 8 12 15 42 20 7 15 25 ...
+   ## $ styrikerfi_simi   : chr [1:201] "Android" "iOS" "iOS" "Android" ...
+   ## $ ferdamati_skoli   : chr [1:201] "Með einkabíl" "Með einkabíl" "Með einkabíl" "Gangandi / skokkandi" ...
+   ## $ systkini_fjoldi   : num [1:201] 1 2 3 2 2 5 2 3 2 2 ...
+   ## $ dyr               : chr [1:201] "Hunda" "Hunda" "Hunda" "Ketti" ...
+   ## $ feministi         : chr [1:201] "Rétt" "Rétt" "Rangt" "Rétt" ...
+   ## $ staerdfraedi_gaman: int [1:201] 9 8 7 3 9 7 7 7 9 8 ...
+   ## $ smjor_kostar      : num [1:201] 750 700 800 700 1100 437 1490 279 1400 1200 ...
+   ## $ napoleon_faeddur  : num [1:201] 1750 1784 1778 1870 1779 ...
+   ## $ stefnumot         : chr [1:201] "Á kaffihús" "Á ísrúnt" "Á ísrúnt" "Á ísrúnt" ...
+   ## $ messi_staerd      : num [1:201] 170 168 170 160 169 174 169 179 170 170 ...
+   ## $ kosid             : chr [1:201] "Rétt" "Rangt" "Rangt" "Rétt" ...
 
 Við mælum eindregið með að nota ávalt ``str()`` skipunina til að kanna
 hvort allar breytur gagnatöflunnar séu á réttu formi eftir innlestur
@@ -557,9 +557,9 @@ tilteknum vigri. Í dæminu að ofan gefur skipunin
 ::
 
    length(dat$ferdatimi_skoli)
-   ## [1] 246
+   ## [1] 201
 
-útkomuna :math:`246`. Þ.e.a.s. það eru :math:`246` mælingar á ferðatíma í skóla
+útkomuna :math:`201`. Þ.e.a.s. það eru :math:`201` mælingar á ferðatíma í skóla
 geymdar í breytunni ``ferdatimi_skoli`` í gagnatöflunni ``dat``.
 
 dim()
@@ -660,7 +660,7 @@ enga mælingu vantar hjá. Gætið ykkar að við viljum afar sjaldan eyða út
 öllum einstaklingum í gagnatöflu sem vantar *einhverja* mælingu hjá.
 Segjum sem sem dæmi að það vanti margar mælingar á breytunni ``smjor_kostar``
 í gagnasafninu okkar en í raun höfum við mestan áhuga á að rannsaka
-breytuna ``messi_haed``. Með því að henda út öllum einstaklingum sem vantar
+breytuna ``messi_staerd``. Með því að henda út öllum einstaklingum sem vantar
 mælingar á breytunni ``smjor_kostar`` erum við búin að henda út mælingum sem
 við gætum notað í rannsóknum okkar á hæð Messi.
 
@@ -722,7 +722,7 @@ Berið útkomuvigurinn saman við vigurinn
 
 ::
 
-   puls$kyn
+   dat$onothaefur_samningur
    ##  [1] 0 0 1 1 0 1 1 1 1 1 1 0
    ##  [13] 0 0 0 0 0 0 0 0 0 0 0 1
    ##  [25] 0 0 1 1 1 1 1 0 0 0 0 0
@@ -756,12 +756,12 @@ sem halda að Messi sé hærri en 170 cm gerum við það með:
 
 ::
 
-   datT <- dat[dat$messi_haed > 170, ]
+   datT <- dat[dat$messi_staerd > 170, ]
 
 eða
 ::
 
-   datT <- filter(dat$messi_haed > 170)
+   datT <- filter(dat$messi_staerd > 170)
 
 Skoðum ``filter()`` skipunina betur í `%s <s.filter()>`
 Hvað varðar neðri virkjana tvo, þá er virkinn :math:`\&` mataður með
@@ -777,9 +777,9 @@ skilar skipunin:
 ::
 
    dat$systkini_fjoldi%in%c(0,3,7)
-   ## [1] FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE
-   ## [9] FALSE FALSE FALSE FALSE TRUE FALSE FALSE FALSE
-   ## [17] FALSE  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE
+   ## [1] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE
+   ## [9] FALSE FALSE  TRUE FALSE TRUE FALSE FALSE FALSE
+   ## [17]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
    ....
 
 gildinu ``TRUE`` ef breytan ``systkini_fjoldi`` tekur eitthvert gildanna 0,
@@ -844,9 +844,12 @@ betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný ga
    ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli 
    ## 1  Jarðaberja  15                Android           Með einkabíl    
    ## 2  Jarðaberja  7                 Android           Gangandi/ skokkandi
-   ##    systkini_fjoldi   dyr      feministi   
-   ## 1  1                 Hunda    Rétt
-   ## 2  3                 Hunda    Rétt
+   ##    systkini_fjoldi   dyr      feministi   staerdfraedi_gaman   smjor_kostar
+   ## 1  1                 Hunda    Rétt        9                    750
+   ## 2  3                 Hunda    Rétt        7                    279
+   ##    napoleon_faeddur  stefnumot      messi_staerd   kosid
+   ## 1  1750              Á kaffihús     170            Rétt
+   ## 2  1551              Á ísrúnt       179            Rétt
    ....
 
 Einnig er, eins og við sáum hér á undan, hægt að nota hornklofa
@@ -881,15 +884,15 @@ við tilgreinum í fyrri vigrinum. Þannig gefur skipunin
 ::
 
    dat[c(46,52),]
-   ##    is             ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
-   ## 46  Jarðaberju    20                iOS               Með einkabíl      
-   ## 52  Súkkulaði     20                iOS               Með einkabíl      
-   ##    systkini_fjoldi   dyr      feministi     staerdfraedi_gaman
-   ## 46  3                Ketti    Rétt          8
-   ## 52  1                Hunda    Rétt          7
-   ##   smjor_kostar    napoleon_faeddur  stefnumot   messi_staerd   kosid
-   ## 46  295           1740              Í bíó       161            Rétt
-   ## 52  427           1700              Á Kaffihús  143            Rétt
+   ##     is         ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
+   ## 46  Vanilla    20                iOS               Með einkabíl      
+   ## 52  Vanilla    13                iOS               Með einkabíl      
+   ##     systkini_fjoldi   dyr      feministi     staerdfraedi_gaman
+   ## 46  7                 Ketti    Rétt          7
+   ## 52  3                 Hunda    Rétt          9
+   ##     smjor_kostar    napoleon_faeddur  stefnumot       messi_staerd   kosid
+   ## 46  549             1769              Í bíó           171            Rangt
+   ## 52  359             1120              Í fjallgöngu    171            Rétt
 
 allar mælingar fyrir viðfangsefni númer 46 og 52.
 
@@ -921,13 +924,13 @@ which()
 Að lokum viljum við nefna tvær aðferðir sem fylgja grunnpakka R.
 ``which()`` aðferðin er einstaklega gagnleg og gefur hún okkur vísa á
 gildi í vigri, gagnatöflu eða fylki sem uppfylla ákveðin skilyrði. Við
-getum t.d. kannað hvaða einstaklingar halda að Messi sé hærri en 190 cm í dat
+getum t.d. kannað hvaða einstaklingar halda að Messi sé hærri en 180 cm í dat
 gögnunum okkar:
 
 ::
 
-   which(dat$messi_haed>190)
-   ##  [1]   141  168   240
+   which(dat$messi_staerd>180)
+   ##  [1]   29   64    77    130    136     142   168   195    
 
 Ef við mötum ``which()`` með tvívíðum hlut (fylki) og notum ``arr.ind``
 stillinguna skilar aðferðin númerinu á línunni og á dálkinum sem
@@ -957,11 +960,10 @@ innihalda textastrenginn ``skokkandi``.
 ::
 
    grep("skokkandi", dat$ferdamati_skoli)
-   ## [1]   7  13  14  21  22  23  38  39  54
-   ## [10]  74  76  77  85  96 115 120 123 124
-   ## [19] 127 133 141 151 153 157 162 168 169
-   ## [28] 170 171 174 177 180 186 187 198 200
-   ## [37] 202 209 210 213 226 230 239 245
+   ## [1]  4   8   12  13  24  25  57  59  67
+   ## [10] 77  93  96  97  100 117 119 122 130
+   ## [19] 131 132 133 136 139 142 147 148 158
+   ## [28] 160 162 168 169 184 188 196 
    ....
 
 Ef við gefum stillinguna ``value=TRUE`` fáum við mælingarnar sem pössuðu

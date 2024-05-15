@@ -155,7 +155,7 @@ breytunni.
 
    ggplot(data = dat, aes(ferdatimi_skoli)) + geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-171-1.svg
+.. figure:: myndir/unnamed-chunk-171-1.svg   
 
 Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
@@ -228,9 +228,9 @@ reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.
 
    quantile(medaltol, c(0.025, 0.975))
    ##     2.5%    97.5%
-   ##    17.12342 22.95835 
+   ##    16.81950 22.01025 
 
-95% öryggisbilið er því :math:`[17.12342, 22.95835]`.
+95% öryggisbilið er því :math:`[16.81950, 22.01025 ]`.
 
 
 Leiksvæði fyrir R kóða
