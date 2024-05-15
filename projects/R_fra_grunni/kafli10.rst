@@ -11,7 +11,7 @@ tilviki helgum við meginhluta kaflans en útfærslur með strjálli
 skýribreytu sem og fleiri en einni skýribreytu eru ræddar undir lok
 hans.
 
-Í kafla :numref:`%s <s.likanmetid>` kynntum við skipunina ``lm()`` sem metur
+Í kafla :numref:`%s <s.likanmetid>` kynnum við skipunina ``lm()`` sem metur
 einfalt línulegt aðhvarf og skoðum úttak hennar með ``summary()``. Þar
 næst, í kafla :numref:`%s <s.lmoryggis>`, skoðum við hvernig skipunin
 ``confint()`` gefur okkur öryggisbil fyrir stuðla líkansins. Í kafla

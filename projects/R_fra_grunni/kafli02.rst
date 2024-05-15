@@ -405,14 +405,15 @@ innihalda tugabrot eru þær vistaðar sem ``num``. Það skiptir engu máli í
 úrvinnslunni hvort þær eru vistaðar sem ``int`` eða ``num``.
 
 Algengt er að notaðir séu talnakóðar fyrir gildi á flokkabreytum. Dæmi
-um þetta er að nota gildið 1 fyrir ``kona`` og 2 fyrir ``karl`` í
-breytunni ``kyn``. Þar sem breytan inniheldur eingöngu tölur er ``kyn``
-skilgreind sem talnabreyta eftir innlestur í R. Áður en úrvinnsla hefst
-þarf að breyta talnabreytunni í flokkabreytu (sjá kafla :numref:`%s <s.kodun>` ).
-Það getur einnig gerst að talnabreytur séu ranglega vistaðar sem
-flokkabreytur og getur það t.d. gerst þegar einhverjar mælingar á
-breytunni innihalda bókstafi eða þegar ekki er rétt tilgreint hvernig
-tugabrot eru aðskilin. Þetta þarf allt að laga áður en úrvinnsla hefst.
+um þetta er að nota gildið 1 ef samningur er ónothæfur og 0 ef samningurinn
+er nothæfur í kaupskrá í breytunni ``onothaefur_samningur``. Þar sem breytan 
+inniheldur eingöngu tölur er ``onothaefur_samningur`` skilgreind sem talnabreyta 
+eftir innlestur í R. Áður en úrvinnsla hefst þarf að breyta talnabreytunni 
+í flokkabreytu (sjá kafla :numref:`%s <s.kodun>` ). Það getur einnig gerst 
+að talnabreytur séu ranglega vistaðar sem flokkabreytur og getur það t.d. 
+gerst þegar einhverjar mælingar á breytunni innihalda bókstafi eða þegar ekki 
+er rétt tilgreint hvernig tugabrot eru aðskilin. Þetta þarf allt að laga 
+áður en úrvinnsla hefst.
 
 View()
 ^^^^^^
@@ -446,12 +447,13 @@ names()
 
 ::
 
-   names(puls)
-   ##  [1] "namskeid"    "kronukast"   "haed"        "thyngd"      "aldur"
-   ##  [6] "kyn"         "reykir"      "drekkur"     "likamsraekt" "fyrriPuls"
-   ## [11] "seinniPuls"  "inngrip"     "dagsetning"
+   names(dat)
+   ##  [1] "is"              "ferdatimi_skoli"  "styrikerfi_simi" "ferdamati_skoli"   
+   ##  [5] "systkini_fjoldi" "dyr"              "feministi"       "staerdfraedi_gaman"
+   ##  [9] "smjor_kostar"    "napoleon_faeddur" "stefnumot"       "messi_staerd"      
+   ##  [13] "kosid" 
 
-nöfnin á öllum þeim breytum sem tilheyra gagnatöflunni ``puls``.
+nöfnin á öllum þeim breytum sem tilheyra gagnatöflunni ``dat``.
 
 head()
 ^^^^^^
@@ -474,21 +476,28 @@ væri útkoman:
 
 ::
 
-   head(puls)
-   ##   namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 1  STAE209 landvaettir  161     60    23   1    nei     nei         3.5
-   ## 2   LAN203    thorskur  185    115    52   2   <NA>      ja         0.0
-   ## 3   LAN203 landvaettir  167     NA    22   1    nei      ja         2.0
-   ## 4  STAE209    thorskur  174     67    21   1    nei      ja         1.0
-   ## 5  STAE209    thorskur  163     57    20   1    nei      ja         5.0
-   ## 6  STAE209 landvaettir  175     59    20   1    nei      ja         5.0
-   ##   fyrriPuls seinniPuls  inngrip dagsetning
-   ## 1        83         84 sat_kyrr   7.1.2013
-   ## 2        80        103    hljop   7.1.2013
-   ## 3        43         52 sat_kyrr   7.1.2013
-   ## 4        76        105    hljop   7.1.2013
-   ## 5        71         68 sat_kyrr   7.1.2013
-   ## 6        65         65 sat_kyrr   7.1.2013
+   head(dat)
+   ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
+   ## 1  Vanilla     20                iOS               Með einkabíl      
+   ## 2  Súkkulaði   20                iOS               Með einkabíl     
+   ## 3  Jarðaberja  15                Android           Með einkabíl     
+   ## 4  Vanilla     20                iOS               Með einkabíl      
+   ## 5  Súkkulaði   60                iOS               Með strætó       
+   ## 6  Súkkulaði   8                 iOS               Með einkabíl     
+   ##    systkini_fjoldi   dyr      feministi      staerdfraedi_gaman
+   ## 1  4                 Ketti    Rangt          10
+   ## 2  0                 Ketti    Rétt           9
+   ## 3  1                 Hunda    Rétt           9
+   ## 4  2                 Hunda    Rétt           8
+   ## 5  1                 Hunda    Rétt           8
+   ## 6  3                 Hunda    Rangt          7
+   ##   smjor_kostar    napoleon_faeddur  stefnumot   messi_staerd   kosid
+   ## 1  2000           1886              Á kaffihús  173            Rétt
+   ## 2  NA             1769              Á ísrúnt    170            Rétt
+   ## 3  750            1750              Á kaffihús  170            Rétt
+   ## 4  700            1784              Á ísrúnt    168            Rangt
+   ## 5  NA             1781              Á kaffihús  161            Rétt
+   ## 6  800            1778              Á ísrúnt    170            Rangt
 
 str()
 ^^^^^
@@ -509,21 +518,21 @@ mælingarnar liggja. Í okkar tilviki væri skipunin:
 
 ::
 
-   str(puls)
-   ## 'data.frame':    471 obs. of  13 variables:
-   ##  $ namskeid   : Factor w/ 2 levels "LAN203","STAE209": 2 1 1 2 2 2 1 2 2 1 ...
-   ##  $ kronukast  : Factor w/ 2 levels "landvaettir",..: 1 2 1 2 2 1 1 1 2 1 ...
-   ##  $ haed       : num  161 185 167 174 163 175 178 191 176 176 ...
-   ##  $ thyngd     : num  60 115 NA 67 57 59 70 94 68 82 ...
-   ##  $ aldur      : int  23 52 22 21 20 20 39 21 20 70 ...
-   ##  $ kyn        : int  1 2 1 1 1 1 1 2 1 2 ...
-   ##  $ reykir     : Factor w/ 2 levels "ja","nei": 2 NA 2 2 2 2 NA 2 2 2 ...
-   ##  $ drekkur    : Factor w/ 2 levels "ja","nei": 2 1 1 1 1 1 1 1 1 1 ...
-   ##  $ likamsraekt: num  3.5 0 2 1 5 5 3.5 0 10 14 ...
-   ##  $ fyrriPuls  : int  83 80 43 76 71 65 77 79 73 65 ...
-   ##  $ seinniPuls : int  84 103 52 105 68 65 75 83 90 78 ...
-   ##  $ inngrip    : Factor w/ 2 levels "hljop","sat_kyrr": 2 1 2 1 2 2 2 2 1 1 ...
-   ##  $ dagsetning : Factor w/ 3 levels "5.1.2015","6.1.2014",..: 3 3 3 3 3 3 3 3 ...
+   str(dat)
+   ## 'data.frame':	246 obs. of  13 variables:
+   ## $ is                : Factor w/ 3 levels "Jarðaberja","Súkkulaði",..: 3 2 1 3 2 2 1 3 3 2 ...
+   ## $ ferdatimi_skoli   : int  20 20 15 20 60 8 12 15 30 15 ...
+   ## $ styrikerfi_simi   : Factor w/ 3 levels "","Android","iOS": 3 3 2 3 3 3 2 2 2 3 ...
+   ## $ ferdamati_skoli   : Factor w/ 5 levels "Á annan hátt",..: 4 4 4 4 5 4 3 4 4 4 ...
+   ## $ systkini_fjoldi   : num  4 0 1 2 1 3 2 3 2 2 ...
+   ## $ dyr               : Factor w/ 2 levels "Hunda","Ketti": 2 2 1 1 1 1 2 1 1 1 ...
+   ## $ feministi         : Factor w/ 2 levels "Rangt","Rétt": 1 2 2 2 2 1 2 2 2 2 ...
+   ## $ staerdfraedi_gaman: num  10 9 9 8 8 ...
+   ## $ smjor_kostar      : int  2000 NA 750 700 NA 800 700 NA 450 1100 ...
+   ## $ napoleon_faeddur  : num  1886 1769 1750 1784 1781 ...
+   ## $ stefnumot         : Factor w/ 4 levels "Á ísrúnt","Á kaffihús",..: 2 1 2 1 2 1 1 4 2 2 ...
+   ## $ messi_staerd      : num  173 170 170 168 161 170 160 170 150 169 ...
+   ## $ kosid             : Factor w/ 2 levels "Rangt","Rétt": 2 2 2 1 2 1 2 2 2 2 ...
 
 Við mælum eindregið með að nota ávalt ``str()`` skipunina til að kanna
 hvort allar breytur gagnatöflunnar séu á réttu formi eftir innlestur
@@ -547,11 +556,11 @@ tilteknum vigri. Í dæminu að ofan gefur skipunin
 
 ::
 
-   length(puls$haed)
-   ## [1] 471
+   length(dat$ferdatimi_skoli)
+   ## [1] 246
 
-útkomuna :math:`471`. Þ.e.a.s. það eru :math:`471` mælingar á hæð
-geymdar í breytunni ``haed`` í gagnatöflunni ``puls``.
+útkomuna :math:`246`. Þ.e.a.s. það eru :math:`246` mælingar á ferðatíma í skóla
+geymdar í breytunni ``ferdatimi_skoli`` í gagnatöflunni ``dat``.
 
 dim()
 ^^^^^
@@ -643,16 +652,30 @@ Skipunin
 
 ::
 
-   puls2 <-na.omit(puls)
+   dat2 <-na.omit(dat)
 
-smíðar gagnatöfluna ``puls2`` sem inniheldur aðeins einstaklinga sem
+
+smíðar gagnatöfluna ``dat2`` sem inniheldur aðeins einstaklinga sem
 enga mælingu vantar hjá. Gætið ykkar að við viljum afar sjaldan eyða út
 öllum einstaklingum í gagnatöflu sem vantar *einhverja* mælingu hjá.
-Segjum sem sem dæmi að það vanti margar mælingar á breytunni ``reykir``
+Segjum sem sem dæmi að það vanti margar mælingar á breytunni ``smjor_kostar``
 í gagnasafninu okkar en í raun höfum við mestan áhuga á að rannsaka
-breytuna ``haed``. Með því að henda út öllum einstaklingum sem vantar
-mælingar á breytunni ``reykir`` erum við búin að henda út mælingum sem
-við gætum notað í rannsóknum okkar á hæð.
+breytuna ``messi_haed``. Með því að henda út öllum einstaklingum sem vantar
+mælingar á breytunni ``smjor_kostar`` erum við búin að henda út mælingum sem
+við gætum notað í rannsóknum okkar á hæð Messi.
+
+Óraunhæfum mælingum breytt í NA
+^^^^^^^^^
+
+Stundum viljum við að mælingarnar okkar séu á ákveðnu bili. Þá getum við breytt 
+óraunhæfu mælingunum í NA gildi. Skoðum t.d. breytuna napoleon_faeddur þar sem 
+nemendur giskuðu hvenær þau héldu að Napóleon Bonaparte hafi fæðst. Viljum að 
+ágiskanirnar séu á bilinu 1500-1900. Við breytum þá óraunhæfum gildum í NA með 
+eftirfarandi skipun:
+
+::
+
+   dat$napoleon_faeddur[dat$<1500|dat$napoleon_faeddur>1900]<-NA
 
 .. _s.gildivalin:
 
@@ -679,15 +702,16 @@ vigurinn fyrst, þá == og loks tiltekna gildið. Skipunin skilar
 jafnlöngum vigri og þeim sem við mötuðum í skipunina sem inniheldur
 eingöngu TRUE eða FALSE gildi. Sé ákveðna gildið í tilteknu sæti
 vigursins inniheldur útkomuvigurinn TRUE í tilsvarandi sæti, en FALSE
-annars. Í skipuninni hér að neðan skoðum við vigurinn ``puls$kyn`` sem
-inniheldur kyn viðmælanda.
+annars. Í skipuninni hér að neðan skoðum við vigurinn 
+``kaupskra$onothaefur_samningur`` sem inniheldur hvort samningur sé nothæfur 
+eða ekki.
 
 ::
 
-   puls$kyn == 1
-   ##   [1]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE
-   ##  [12] FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE
-   ##  [23] FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE
+   kaupskra$onothaefur_samningur == 0
+   ##   [1] TRUE TRUE  FALSE  FALSE  TRUE  FALSE  FALSE FALSE  FALSE FALSE FALSE
+   ##  [12] FALSE  TRUE TRUE  TRUE  TRUE TRUE TRUE  TRUE TRUE  TRUE  TRUE
+   ##  [23] TRUE  FALSE  TRUE  TRUE FALSE  FALSE FALSE  FALSE FALSE  TRUE FALSE
    ....
 
 Ekki gleyma því að setja gæsalappir utanum gildi breytunnar eigi það
@@ -699,13 +723,13 @@ Berið útkomuvigurinn saman við vigurinn
 ::
 
    puls$kyn
-   ##   [1] 1 2 1 1 1 1 1 2 1 2 2 2 1 2 1 1 2 2 1 2 1 1 2 1 1 1 2 1 2 1 2 1 2 2 1
-   ##  [36] 2 1 2 1 1 1 1 1 1 2 2 1 2 2 1 1 1 1 2 1 1 2 1 1 1 2 2 1 1 2 2 1 2 1 1
-   ##  [71] 1 1 1 1 2 2 1 1 1 1 1 1 2 2 2 2 1 2 1 1 1 2 1 1 1 1 1 1 1 2 1 1 2 2 1
+   ##  [1] 0 0 1 1 0 1 1 1 1 1 1 0
+   ##  [13] 0 0 0 0 0 0 0 0 0 0 0 1
+   ##  [25] 0 0 1 1 1 1 1 0 0 0 0 0
    ....
 
 þannig sjáið þið að útkomuvigurinn inniheldur ``FALSE`` alls staðar þar
-sem ``puls$kyn`` hefur gildið ``2`` en ``TRUE`` annars.
+sem ``kaupskra$onothaefur_samningur`` hefur gildið ``1`` en ``TRUE`` annars.
 Samanburðarvirkinn er mikið notaður við lagskiptingu gagna.
 
 Líkt og við notum ``==`` getum við einnig notað aðra samanburðarvirkja:
@@ -727,13 +751,19 @@ Líkt og við notum ``==`` getum við einnig notað aðra samanburðarvirkja:
 +--------+---------------------+
 
 Efstu virkjarnir fjórir skýra sig að mestu leyti sjálfir. Ef við viljum
-t.d. búa til nýja gagnatöflu ``pulsS`` sem inniheldur aðeins einstaklinga
-sem eru hærri en 170 cm á hæð gerum við það með:
+t.d. búa til nýja gagnatöflu ``datT`` sem inniheldur aðeins einstaklinga
+sem halda að Messi sé hærri en 170 cm gerum við það með:
 
 ::
 
-   pulsS <- puls[puls$haed > 170, ]
+   datT <- dat[dat$messi_haed > 170, ]
 
+eða
+::
+
+   datT <- filter(dat$messi_haed > 170)
+
+Skoðum ``filter()`` skipunina betur í `%s <s.filter()>`
 Hvað varðar neðri virkjana tvo, þá er virkinn :math:`\&` mataður með
 tveimur skilyrðum og skilar ``TRUE`` eingöngu ef *bæði* skilyrðin eru
 uppfyllt. Virkinn :math:`|` er sömuleiðis mataður með tveimur skilyrðum
@@ -746,14 +776,14 @@ skilar skipunin:
 
 ::
 
-   puls$likamsraekt%in%c(7,8,9)
-   ##   [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-   ##  [12] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE
-   ##  [23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+   dat$systkini_fjoldi%in%c(0,3,7)
+   ## [1] FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE  TRUE
+   ## [9] FALSE FALSE FALSE FALSE TRUE FALSE FALSE FALSE
+   ## [17] FALSE  TRUE  TRUE FALSE FALSE FALSE  TRUE FALSE
    ....
 
-gildinu ``TRUE`` ef breytan ``likamsraekt`` tekur eitthvert gildanna 7,
-8 eða 9, en ``FALSE`` annars.
+gildinu ``TRUE`` ef breytan ``systkini_fjoldi`` tekur eitthvert gildanna 0,
+3 eða 7, en ``FALSE`` annars.
 
 slice()
 ^^^^^^^
@@ -776,7 +806,7 @@ gagnatöflu getum við gert það með:
 
 ::
 
-   puls.first<-slice(puls,1:10)
+   dat.first<-slice(dat,1:10)
 
 filter()
 ^^^^^^^^
@@ -796,24 +826,27 @@ Næsta skipun er ``filter()``. Hana notum við til að velja aðeins hluta
 eða *lag* af gagnatöflunni okkar. Við mötum hana með nafninu á
 gagnatöflunni sem við viljum lagskipta ásamt skilyrðum sem það lag sem
 við ætlum að draga út þarf að uppfylla. Við getum t.d. búið til nýja
-gagnatöflu sem inniheldur aðeins þá sem reykja með:
+gagnatöflu sem inniheldur aðeins þá sem eiga engin systkini með:
 
 ::
 
-   puls.konur<-filter(puls,reykir=='ja')
+   engin_systkini<-filter(dat, systkini_fjoldi==0)
 
-Ef við viljum skoða gögn þeirra sem reykja og fengu landvætti getum við
-gert það með (takið eftir að hér er ekki búin til ný gagnatafla):
-
-::
-
-   filter(puls,reykir=="ja", kronukast=='landvaettir')
+Ef við viljum skoða gögn þeirra sem finnst jarðaberjaís bestur og kunna 
+betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný gagnatafla):
 
 ::
 
-   ##    namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 1   STAE209 landvaettir  194     79    28   2     ja      ja         4.0
-   ## 2    LAN203 landvaettir  185     78    44   2     ja      ja         2.0
+   filter(dat, is=="Jarðaberja", dyr=="Hunda")
+
+::
+
+   ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli 
+   ## 1  Jarðaberja  15                Android           Með einkabíl    
+   ## 2  Jarðaberja  7                 Android           Gangandi/ skokkandi
+   ##    systkini_fjoldi   dyr      feministi   
+   ## 1  1                 Hunda    Rétt
+   ## 2  3                 Hunda    Rétt
    ....
 
 Einnig er, eins og við sáum hér á undan, hægt að nota hornklofa
@@ -825,14 +858,13 @@ velja. Við númerum viðfangsefni frá efsta viðfangsefninu til þess neðsta
 (þ.e.a.s. efsta línan er númer eitt), en breyturnar frá vinstri til
 hægri (þ.e.a.s. breytan lengst til vinstri er númer eitt).
 
-Ef við viljum skoða hver mælingin á breytu 2 (``haed``) á viðfangsefni
-23 er í gagnatöflunni okkar ``puls`` gefum við skipunina:
+Ef við viljum skoða hver mælingin á breytu 2 (``ferdatimi_skoli``) á viðfangsefni
+46 er í gagnatöflunni okkar ``dat`` gefum við skipunina:
 
 ::
 
-   puls[23,2]
-   ## [1] thorskur
-   ## Levels: landvaettir thorskur
+   dat[46,2]
+   ## [1] 20
 
 Ef við sleppum fyrri vísavigrinum fáum við mælingar á öllum
 viðfangsefnum fyrir breyturnar sem við tilgreinum í seinni vigrinum.
@@ -840,23 +872,26 @@ viðfangsefnum fyrir breyturnar sem við tilgreinum í seinni vigrinum.
 
 ::
 
-   puls[,2]
+   dat[,2]
 
-mælingarnar á hæð fyrir öll viðfangsefnin. Ef við sleppum seinni
+mælingarnar á ferðatíma í skóla fyrir öll viðfangsefnin. Ef við sleppum seinni
 vísavigrinum fáum við mælingar á öllum breytum fyrir viðfangsefnin sem
 við tilgreinum í fyrri vigrinum. Þannig gefur skipunin
 
 ::
 
-   puls[c(23,49),]
-   ##    namskeid kronukast haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 23  STAE209  thorskur  173     72    33   2     ja      ja           2
-   ## 49  STAE209  thorskur  184     74    20   2    nei      ja          10
-   ##    fyrriPuls seinniPuls inngrip dagsetning
-   ## 23        68         79   hljop   7.1.2013
-   ## 49        62         75   hljop   7.1.2013
+   dat[c(46,52),]
+   ##    is             ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
+   ## 46  Jarðaberju    20                iOS               Með einkabíl      
+   ## 52  Súkkulaði     20                iOS               Með einkabíl      
+   ##    systkini_fjoldi   dyr      feministi     staerdfraedi_gaman
+   ## 46  3                Ketti    Rétt          8
+   ## 52  1                Hunda    Rétt          7
+   ##   smjor_kostar    napoleon_faeddur  stefnumot   messi_staerd   kosid
+   ## 46  295           1740              Í bíó       161            Rétt
+   ## 52  427           1700              Á Kaffihús  143            Rétt
 
-allar mælingar fyrir viðfangsefni númer 23 og 49.
+allar mælingar fyrir viðfangsefni númer 46 og 52.
 
 Að lokum getum við notað mínus til að skoða mælingar í gagnatöflu fyrir
 öll viðfangsefni *nema* einhver tiltekin, eða allar breytur *nema*
@@ -864,9 +899,9 @@ einhverjar tilteknar.
 
 ::
 
-   puls[-c(23,49), -2]
+   dat[-c(46,52), -2]
 
-gefur mælingar fyrir öll viðfangsefni *nema* númer 23 og 49 og allar
+gefur mælingar fyrir öll viðfangsefni *nema* númer 46 og 52 og allar
 breytur *nema* þá aðra.
 
 which()
@@ -886,14 +921,13 @@ which()
 Að lokum viljum við nefna tvær aðferðir sem fylgja grunnpakka R.
 ``which()`` aðferðin er einstaklega gagnleg og gefur hún okkur vísa á
 gildi í vigri, gagnatöflu eða fylki sem uppfylla ákveðin skilyrði. Við
-getum t.d. kannað hvaða einstaklingar eru hærri en 190 cm á hæð í puls
+getum t.d. kannað hvaða einstaklingar halda að Messi sé hærri en 190 cm í dat
 gögnunum okkar:
 
 ::
 
-   which(puls$haed>190)
-   ##  [1]   8  17  33  34  46  75  84 107 113 161 238 263 297 301 332 341 357
-   ## [18] 358 370 399 408 431 437
+   which(dat$messi_haed>190)
+   ##  [1]   141  168   240
 
 Ef við mötum ``which()`` með tvívíðum hlut (fylki) og notum ``arr.ind``
 stillinguna skilar aðferðin númerinu á línunni og á dálkinum sem
@@ -917,15 +951,17 @@ grep()
 
 Seinni skipunin er ``grep()``. Hún getur verið einstaklega handhæg ef
 við viljum sem dæmi búa til flokkabreytur út frá textastrengjum.
-Eftirfarandi skipun finnur til dæmis vísi allra þeirra dagsetninga sem
-innihalda textastrenginn ``2013``.
+Eftirfarandi skipun finnur til dæmis vísi allra þeirra ferdamati_skoli sem
+innihalda textastrenginn ``skokkandi``.
 
 ::
 
-   grep(2013, puls$dagsetning)
-   ##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
-   ##  [18]  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34
-   ##  [35]  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51
+   grep("skokkandi", dat$ferdamati_skoli)
+   ## [1]   7  13  14  21  22  23  38  39  54
+   ## [10]  74  76  77  85  96 115 120 123 124
+   ## [19] 127 133 141 151 153 157 162 168 169
+   ## [28] 170 171 174 177 180 186 187 198 200
+   ## [37] 202 209 210 213 226 230 239 245
    ....
 
 Ef við gefum stillinguna ``value=TRUE`` fáum við mælingarnar sem pössuðu
@@ -933,10 +969,10 @@ við leitarskilyrðið en ekki bara vísa þeirra:
 
 ::
 
-   grep(2013, puls$dagsetning, value=TRUE)
-   ##   [1] "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013"
-   ##   [7] "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013"
-   ##  [13] "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013" "7.1.2013"
+   grep("skokkandi", dat$ferdamati_skoli, value=TRUE)
+   ##   [1] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi" 
+   ##   [4] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
+   ##   [7] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
    ....
 
 .. _s.kodun:
