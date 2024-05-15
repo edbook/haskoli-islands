@@ -27,7 +27,7 @@ Við notum aðferðina ``binom.test()`` til að kanna tilgátur og smíða
 öryggisbil fyrir hlutfall þýðis. Skipunin er mötuð á fjölda útkoma af
 hvorri gerð sem fá má með skipuninni ``table()`` sem var sýnd í kassa
 :numref:`%s <rf.table>`. Hér er dæmi þar sem aðferðin er notuð til að kanna
-hvort kynjahlutfallið sé jafnt í nemendahópnum sem púlsgögnin byggja á.
+hvort hlutfall hunda-og kattamanneskja sé jafnt í nemendahópnum sem dat gögnin byggja á.
 
 binom.test()
 ^^^^^^^^^^^^
@@ -44,43 +44,43 @@ binom.test()
 --------------
 
 Byrjum á því að nota ``prop.table()`` skipunina, (kassa
-:numref:`%s <rf.prop.table>`) til að sjá hvert kynjahlutfallið er:
+:numref:`%s <rf.prop.table>`) til að sjá hvert uppáhalds dýr fólks er:
 
 ::
 
-   prop.table(table(puls$kyn))
+   prop.table(table(dat$dyr))
    ##
-   ##       kvk        kk
-   ## 0.6518047 0.3481953
+   ##     Hunda     Ketti 
+   ## 0.6318408 0.3681592
 
 Tilgátuprófið, öryggisbilið og prófstærðin fást öll í
 einu með einni skipun:
 
 ::
 
-   binom.test(table(puls$kyn))
+   binom.test(table(dat$dyr))
    ##
    ##  Exact binomial test
-   ##
-   ## data:  table(puls$kyn)
-   ## number of successes = 307, number of trials = 471, p-value =
-   ## 4.308e-11
+   ## 
+   ## data:  table(dat$dyr)
+   ## number of successes = 127, number of trials = 201, p-value = 0.0002267
    ## alternative hypothesis: true probability of success is not equal to 0.5
    ## 95 percent confidence interval:
-   ##  0.6068703 0.6948191
+   ##  0.5611205 0.6986092
    ## sample estimates:
-   ## probability of success
-   ##              0.6518047
+   ## probability of success 
+   ##              0.6318408 
+
 
 Lesa má geysimiklar upplýsingar úr úttakinu. Fyrst sjáum við að fjöldi
-heppnaðra tilrauna (sem í þessu tilviki er fjöldi kvenna) er 307,
-heildarfjöldi nemenda er 471 og p-gildi tilgátuprófsins er
-:math:`4.3078955\times 10^{-11}`.
+heppnaðra tilrauna (sem í þessu tilviki er fjöldi hundamanneskja) er 127,
+heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
+:math:`0.0002267`.
 
 Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
-öryggisbil fyrir hlutfallið, sem reyndist
-:math:`[0.6068703, 0.6948191]`. Að lokum sjáum við sjálft matið á
-hlutfalli kvenna í námskeiðinu, :math:`\hat{p} = 0.6518047`.
+öryggisbil fyrir hlutfallið, sem reynist
+:math:`[0.5611205, 0.6986092]`. Að lokum sjáum við sjálft matið á
+hlutfalli hundafólks í námskeiðinu, :math:`\hat{p} = 0.6318408`.
 
 .. _s.tvohlutfoll:
 
@@ -110,46 +110,46 @@ prop.test()
 
 --------------
 
-Skoðum nú hvort kynjahlutfallið sé það sama í námskeiðunum LAN203 og
-STAE209. Byrjum sem fyrr á því að skoða hvert kynjahlutfallið er með
+Skoðum nú hvort hlutfall hunda-og kattafólks sé það sama hjá IOS og
+Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
 ``prop.table()`` (kassi :numref:`%s <rf.prop.table>`).
 
 ::
 
-   prop.table(table(puls$kyn, puls$namskeid),margin=2)
+   prop.table(table(dat$dyr, dat$styrikerfi_simi), margin=2)
    ##
-   ##          LAN203   STAE209
-   ##   kvk 0.6453488 0.6555184
-   ##   kk  0.3546512 0.3444816
+   ##          Android       iOS
+   ##  Hunda 0.5957447 0.6428571
+   ##  Ketti 0.4042553 0.3571429
 
 Tilgátuprófið, öryggisbilið og prófstærðin fást öll í
 einu með einni skipun:
 
 ::
 
-   prop.test(table(puls$namskeid, puls$kyn))
+   prop.test(table(dat$dyr, dat$styrikerfi_simi))
    ##
    ##  2-sample test for equality of proportions with continuity
    ##  correction
    ##
-   ## data:  table(puls$namskeid, puls$kyn)
-   ## X-squared = 0.015035, df = 1, p-value = 0.9024
+   ## data:  table(dat$styrikerfi_simi, dat$dyr)
+   ## X-squared = 0.17091, df = 1, p-value = 0.6793
    ## alternative hypothesis: two.sided
    ## 95 percent confidence interval:
-   ##  -0.10426340  0.08392429
+   ##  -0.2204061  0.1261812
    ## sample estimates:
-   ##    prop 1    prop 2
-   ## 0.6453488 0.6555184
+   ##    prop 1    prop 2 
+   ## 0.5957447 0.6428571 
 
-Fyrst sjáum við að prófstærðin er 0.015035, sem fylgir kí-kvaðrat prófi
-með 1 frígráðu og p-gildi tilgátuprófsins er 0.9024.
+Fyrst sjáum við að prófstærðin er 0.17091, sem fylgir kí-kvaðrat prófi
+með 1 frígráðu og p-gildi tilgátuprófsins er 0.6793.
 
 Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir mismun hlutfallanna, sem reyndist
-:math:`[-0.1042634, 0.0839243]`.
+:math:`[-0.2204061, 0.1261812]`.
 
-Að lokum sjáum við sjálf mötin á hlutfalli kvenna í námskeiðunum
-tveimur, 0.6453488 og 0.6555184.
+Að lokum sjáum við sjálf mötin á hlutfalli hundafólks eftir stýrikerfi,
+0.5957447 hjá Android notendum og 0.6428571 hjá IOS notendum.
 
 Einnig er hægt að nota skipunina ``prop.test()`` til að bera saman
 hlutföll fleiri en tveggja hópa. Þá þarf að gæta þess að tengslataflan
@@ -159,24 +159,24 @@ felst að flokkabreytan með fleiri en tvo flokka sé tilgreind á undan
 
 ::
 
-   prop.test(table(puls$likamsraektf, puls$kyn))
+   prop.test(table(dat$is, dat$dyr))
    ##
    ##  3-sample test for equality of proportions without continuity
    ##  correction
    ##
-   ## data:  table(puls$likamsraektf, puls$kyn)
-   ## X-squared = 11.3, df = 2, p-value = 0.003518
+   ## data:  table(dat$is, dat$dyr)
+   ## X-squared = 1.0863, df = 2, p-value = 0.5809
    ## alternative hypothesis: two.sided
    ## sample estimates:
-   ##    prop 1    prop 2    prop 3
-   ## 0.6117647 0.7382199 0.5789474
+   ##    prop 1    prop 2    prop 3 
+   ## 0.5897436 0.6703297 0.6056338
 
 Sé þessu snúið öfugt fæst villa og ekki er hægt að meta tilgátuprófið:
 
 ::
 
-   prop.test(table(puls$kyn, puls$likamsraektf))
-   ## Error in prop.test(table(puls$kyn, puls$likamsraektf)): ’x’ must have 2 columns
+   prop.test(table(dat$dyr, dat$is))
+   ## Error in prop.test(table(dat$dyr, dat$is)) : 'x' must have 2 columns
 
 .. _s.tengslatoflur:
 
@@ -205,20 +205,20 @@ chisq.test()
 
 --------------
 
-Könnum nú hvort samband sé á milli námskeiðs og líkamsræktarástundunar.
+Könnum nú hvort samband sé á milli hvaða ís fólk vill og hvort það hafi kosið.
 Við byrjum á að búa til töflu mældrar tíðni:
 
 ::
 
-   chisq.test(table(puls$namskeid,puls$likamsraektf))
+   chisq.test(table(dat$is,dat$kosid))
    ##
    ##  Pearson's Chi-squared test
    ##
-   ## data:  table(puls$namskeid, puls$likamsraektf)
-   ## X-squared = 4.1576, df = 2, p-value = 0.1251
+   ## data:  table(dat$is, dat$kosid)
+   ## X-squared = 0.41817, df = 2, p-value = 0.8113
 
-Hér sést að prófstærðin er 4.1576, sem fylgir kí-kvaðrat prófi með 2
-frígráður og p-gildi tilgátuprófsins er 0.1251.
+Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
+frígráðum og p-gildi tilgátuprófsins er 0.8113.
 
 Munið að til þess að geta notað kí-kvaðrat prófið þurfa allar tölurnar í
 væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnitöflu
@@ -230,40 +230,40 @@ væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnit�
    kikv1<-chisq.test(table(puls$namskeid,puls$likamsraektf))
    kikv1$expected
    ##
-   ##              Lítil  Miðlungs     Mikil
-   ##   LAN203  31.19099  70.08798  69.72103
-   ##   STAE209 53.80901 120.91202 120.27897
+   ##                 Rangt     Rétt
+   ##   Jarðaberja 11.05970 27.94030
+   ##   Súkkulaði  25.80597 65.19403
+   ##   Vanilla    20.13433 50.86567
 
 Ef einhverjar tölur eru minni en fimm í væntitíðnitöflunni varar R okkur
-við. Sjáum til dæmis hvað gerist ef við viljum skoða samband reykinga og
-hreyfingar fyrir eingöngu þá nemendur sem sátu námskeiðið árið 2013:
+við. Sjáum til dæmis hvað gerist ef við viljum skoða samband þess að vera hunda-eða kattamanneskja og
+hvert nemendur vilja fara á stefnumót:
 
 ::
 
-   puls2013 <- filter(puls, ar==2013)
-   chisq.test(table(puls2013$reykir,puls2013$likamsraektf))
-   
-   ## Warning in chisq.test(table(puls2013$reykir, puls2013$likamsraektf)):
-   ## Chi-squared approximation may be incorrect
-   
+   chisq.test(table(dat$dyr,dat$stefnumot))
    ##
    ##  Pearson's Chi-squared test
    ##
-   ## data:  table(puls2013$reykir, puls2013$likamsraektf)
-   ## X-squared = 11.247, df = 2, p-value = 0.003612
+   ## data:  table(dat$dyr, dat$stefnumot)
+   ## X-squared = 6.8392, df = 3, p-value = 0.0772 
+   ##
+   ## Warning message:
+   ## In chisq.test(table(dat$dyr, dat$stefnumot)) :
+   ##   Chi-squared approximation may be incorrect
 
 Þá getum við annað hvort reiknað prófstærðina með endurvalsaðferðum, sem
 er tilgreint með stillingunni ``simulate.p.value``:
 
 ::
 
-   chisq.test(table(puls2013$reykir,puls2013$likamsraektf), simulate.p.value=TRUE)
+   chisq.test(table(dat$dyr,dat$stefnumot), simulate.p.value=T)
    ##
    ##  Pearson's Chi-squared test with simulated p-value (based on 2000
    ##  replicates)
    ##
-   ## data:  table(puls2013$reykir, puls2013$likamsraektf)
-   ## X-squared = 11.247, df = NA, p-value = 0.002999
+   ## data:  table(dat$dyr, dat$stefnumot)
+   ## X-squared = 6.8392, df = NA, p-value = 0.07146 
 
 eða þá framkvæmt annað tilgátupróf sem kallast Fisher próf. Það er gert
 með skipuninni ``fisher.test()``:
@@ -274,8 +274,8 @@ með skipuninni ``fisher.test()``:
    ##
    ##  Fisher's Exact Test for Count Data
    ##
-   ## data:  table(puls2013$reykir, puls2013$likamsraektf)
-   ## p-value = 0.001259
+   ## data:  table(dat$dyr, dat$stefnumot)
+   ## p-value = 0.07907
    ## alternative hypothesis: two.sided
 
 fisher.test()
