@@ -364,8 +364,8 @@ Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
    ##  Súkkulaði  0.30348259 0.14925373
    ##  Vanilla    0.21393035 0.13930348
 
-Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu eru hundafólk
-sem elska súkkulaðiís. Viljum við aftur á máti skoða hlutföllin eftir línum
+Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu sem eru hrifinn af hundum
+elska súkkulaðiís. Viljum við aftur á máti skoða hlutföllin eftir línum
 í töflunni gerum við það með:
 
 ::
@@ -377,7 +377,7 @@ sem elska súkkulaðiís. Viljum við aftur á máti skoða hlutföllin eftir l�
    ##  Súkkulaði  0.6703297 0.3296703
    ##  Vanilla    0.6056338 0.3943662
 
-Í töflunni má t.d. sjá að um 67% nemenda sem elska súkkulaðiís eru hundafólk. 
+Í töflunni má t.d. sjá að um 67% nemenda sem elska súkkulaðiís eru hrifnir af hundum. 
 Viljum við hins vegar skoða hlutföllin eftir dálkum í töflunni gerum við það
 með:
 
@@ -390,7 +390,7 @@ með:
    ##  Súkkulaði  0.4803150 0.4054054
    ##  Vanilla    0.3385827 0.3783784
 
-Í töflunni má t.d. sjá að um 21.6% kattafólks elskar jarðaberjaís.
+Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elskar jarðaberjaís.
 
 Takið eftir að nota má ``prop.table()`` til að reikna lýsistærðirnar
 næmi (e. sensitivity) og sértæki (e. specificity).
@@ -530,11 +530,10 @@ ofan gerum við það með:
 ::
 
    tapply(dat$ferdatimi_skoli, dat$ferdamati_skoli, mean, na.rm=T)
-##            Á annan hátt Á hjóli / rafhlaupahjóli     Gangandi / skokkandi 
-##                2.500000                11.666667                 7.588235 
-##            Með einkabíl               Með strætó 
-##               19.923077                33.733333 
-
+   ##            Á annan hátt Á hjóli / rafhlaupahjóli     Gangandi / skokkandi 
+   ##                2.500000                11.666667                 7.588235 
+   ##            Með einkabíl               Með strætó 
+   ##               19.923077                33.733333
 
 Leiksvæði fyrir R kóða
 ----------------------

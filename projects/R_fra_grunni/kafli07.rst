@@ -27,7 +27,8 @@ Við notum aðferðina ``binom.test()`` til að kanna tilgátur og smíða
 öryggisbil fyrir hlutfall þýðis. Skipunin er mötuð á fjölda útkoma af
 hvorri gerð sem fá má með skipuninni ``table()`` sem var sýnd í kassa
 :numref:`%s <rf.table>`. Hér er dæmi þar sem aðferðin er notuð til að kanna
-hvort hlutfall hunda-og kattamanneskja sé jafnt í nemendahópnum sem dat gögnin byggja á.
+hvort hlutfall þeirra sem eru hrifinn af hundum og þeirra sem eru hrifinn af köttum
+sé jafnt í nemendahópnum sem dat gögnin byggja á.
 
 binom.test()
 ^^^^^^^^^^^^
@@ -73,14 +74,14 @@ einu með einni skipun:
 
 
 Lesa má geysimiklar upplýsingar úr úttakinu. Fyrst sjáum við að fjöldi
-heppnaðra tilrauna (sem í þessu tilviki er fjöldi hundamanneskja) er 127,
+heppnaðra tilrauna (sem í þessu tilviki er fjöldi þeirra sem er hrifinn af hundum) er 127,
 heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
 :math:`0.0002267`.
 
 Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir hlutfallið, sem reynist
 :math:`[0.5611205, 0.6986092]`. Að lokum sjáum við sjálft matið á
-hlutfalli hundafólks í námskeiðinu, :math:`\hat{p} = 0.6318408`.
+hlutfalli þeirra sem eru hrifinn af hundum í námskeiðinu, :math:`\hat{p} = 0.6318408`.
 
 .. _s.tvohlutfoll:
 
@@ -110,7 +111,7 @@ prop.test()
 
 --------------
 
-Skoðum nú hvort hlutfall hunda-og kattafólks sé það sama hjá IOS og
+Skoðum nú hvort hlutfall þeirra sem er hrifið af hundum og þeirra sem er hrifið af köttum sé það sama hjá iOS og
 Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
 ``prop.table()`` (kassi :numref:`%s <rf.prop.table>`).
 
@@ -148,8 +149,8 @@ Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir mismun hlutfallanna, sem reyndist
 :math:`[-0.2204061, 0.1261812]`.
 
-Að lokum sjáum við sjálf mötin á hlutfalli hundafólks eftir stýrikerfi,
-0.5957447 hjá Android notendum og 0.6428571 hjá IOS notendum.
+Að lokum sjáum við sjálf mötin á hlutfalli þeirra sem eru hrifinn af hundum eftir stýrikerfi,
+0.5957447 hjá Android notendum og 0.6428571 hjá iOS notendum.
 
 Einnig er hægt að nota skipunina ``prop.test()`` til að bera saman
 hlutföll fleiri en tveggja hópa. Þá þarf að gæta þess að tengslataflan
@@ -236,7 +237,7 @@ væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnit�
    ##   Vanilla    20.13433 50.86567
 
 Ef einhverjar tölur eru minni en fimm í væntitíðnitöflunni varar R okkur
-við. Sjáum til dæmis hvað gerist ef við viljum skoða samband þess að vera hunda-eða kattamanneskja og
+við. Sjáum til dæmis hvað gerist ef við viljum skoða samband þess að vera vera hrifinn af hundum eða köttum og
 hvert nemendur vilja fara á stefnumót:
 
 ::
