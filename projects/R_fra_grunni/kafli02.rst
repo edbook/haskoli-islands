@@ -665,7 +665,7 @@ mælingar á breytunni ``smjor_kostar`` erum við búin að henda út mælingum 
 við gætum notað í rannsóknum okkar á hæð Messi.
 
 Óraunhæfum mælingum breytt í NA
-^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Stundum viljum við að mælingarnar okkar séu á ákveðnu bili. Þá getum við breytt 
 óraunhæfu mælingunum í NA gildi. Skoðum t.d. breytuna napoleon_faeddur þar sem 
@@ -763,7 +763,7 @@ eða
 
    datT <- filter(dat$messi_staerd > 170)
 
-Skoðum ``filter()`` skipunina betur í `%s <s.filter()>`
+Skoðum ``filter()`` skipunina betur í `%s <s.Ákveðin gildi valin úr gagnatöflu>`
 Hvað varðar neðri virkjana tvo, þá er virkinn :math:`\&` mataður með
 tveimur skilyrðum og skilar ``TRUE`` eingöngu ef *bæði* skilyrðin eru
 uppfyllt. Virkinn :math:`|` er sömuleiðis mataður með tveimur skilyrðum
@@ -1028,30 +1028,31 @@ factor()
 
 Flokkabreytur eru oft kóðaðar með tölum og þá mun R vista þær sem
 talnabreytur þegar gögnin eru lesin inn. Slíkt á t.d. við breytuna
-``kyn`` í gagnatöflunni ``puls``. Við notum skipunina ``factor()`` til
-að gefa R til kynna að breyta sé flokkabreyta. Ef við viljum leiðrétta
-hvernig breytan ``kyn`` er vistuð í gagnatöflunni sjálfri notum við
+``onothaefur_samningur`` í gagnatöflunni ``kaupskra``. Við notum skipunina 
+``factor()`` til að gefa R til kynna að breyta sé flokkabreyta. Ef við viljum leiðrétta
+hvernig breytan ``onothaefur_samningur`` er vistuð í gagnatöflunni sjálfri notum við
 skipunina:
 
 ::
 
-   puls$kyn <- factor(puls$kyn)
+   kaupskra$onothaefur_samningur <- factor(kaupskra$onothaefur_samningur)
 
 Takið eftir því að hér að ofan yfirskrifum við gömlu talnabreytuna
-``kyn`` með nýju flokkabreytunni (þær bera sama nafn). Í þessu tilviki
-er það einmitt það sem við viljum gera. Það gæti þó komið fyrir að við
-viljum halda í gömlu talnabreytuna en þá þurfum við að búa til nýja
-breytu í stað þess að skrifa yfir þá gömlu. Til að gera það þurfum við
+``onothaefur_samningur`` með nýju flokkabreytunni (þær bera sama nafn). 
+Í þessu tilviki er það einmitt það sem við viljum gera. Það gæti þó komið 
+fyrir að við viljum halda í gömlu talnabreytuna en þá þurfum við að búa 
+til nýja breytu í stað þess að skrifa yfir þá gömlu. Til að gera það þurfum við
 að gæta að nota annað nafn en á upphaflegu talnabreytunni. Með
-eftirfarandi skipun búum við til nýja breytu ``kynf`` í gagnatöflunni
-``puls``.
+eftirfarandi skipun búum við til nýja breytu ``onothaefur_samningur2`` 
+í gagnatöflunni ``kaupskra``.
 
 ::
 
-   puls$kynf <- factor(puls$kyn)
+   kaupskra$onothaefur_samningur2 <- factor(kaupskra$onothaefur_samningur)
 
 Hefðum við aðeins keyrt seinni ``factor()`` skipunina ættum við til
-talnabreytuna ``kyn`` í gagnatöflunni ásamt flokkabreytunni ``kynf``.
+talnabreytuna ``onothaefur_samningur`` í gagnatöflunni ásamt flokkabreytunni 
+``onothaefur_samningur2``.
 
 R meðhöndlar flokkabreytur á annan hátt en talnabreytur, réttilega. Því
 er mikilvægt að breytur séu ætíð rétt skráðar svo að til að mynda gröf
@@ -1071,22 +1072,23 @@ levels()
 
 Hægt er að nota ``levels()`` skipunina til að endurskýra nöfn á flokkum
 í flokkabreytu. Viljum við endurskýra nöfnin á flokkunum í breytunni
-``kyn`` er ágætt að byrja á að keyra skipunina
+``onothaefur_samningur`` er ágætt að byrja á að keyra skipunina
 
 ::
 
-   levels(puls$kyn)
-   ## [1] "1" "2"
+   levels(kaupskra$onothaefur_samningur)
+   ## [1] "0" "1"
 
 því hún skilar okkur núverandi nöfnum. Viljum við breyta nöfnunum á
-flokkunum í ``kvk`` og ``kk`` gerum við það með:
+flokkunum í ``Nothæfur samningur`` og ``Ónothæfur samningur`` gerum 
+við það með:
 
 ::
 
-   levels(puls$kyn)<-c("kvk","kk")
+   levels(kaupskra$onothaefur_samningur)<-c("Nothæfur samningur","Ónothæfur samningur")
 
 Hér þarf að passa að röðunin sé rétt miðað við gömlu heitin, annars
-breytum við öllum konum í kk og körlum í kvk.
+breytum við öllum nothæfu samningunum í ónothæfa og öfugt.
 
 B: Talnabreytum skipt upp í bil
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1112,78 +1114,105 @@ með mörkunum á flokkunum en það má gera á nokkra vegu með hjálp
 ``include.lowest`` og ``right`` stillingunum. Skoðið ``help(cut)`` til
 að kanna nánar hvernig aðferðin virkar.
 
-Búum nú til flokkabreytu úr talna breytunni ``likamsraekt``. Við ætlum
-að skipta viðfangsefnunum upp í þrjá flokka, þá sem stunda litla
-líkamsrækt (0-1 klst. á viku), miðlungs (2-4 klst. á viku) og þá sem
-stunda mikla líkamsrækt (:math:`>` 5 klst. á viku). Gætið þess að skýra
-nýju breytuna eitthvað annað en ``likamsraekt`` svo við yfirskrifum ekki
-talnabreytuna heldur búum þess í stað til nýja breytu. Við mötum
-aðferðina með nafninu á talnabreytunni ``likamsraekt`` og mörkunum á
+Búum nú til flokkabreytu úr talnabreytunni ``systkini_fjoldi``. Við ætlum
+að skipta viðfangsefnunum upp í þrjá flokka, þau sem eiga engin systkini,
+þau sem eiga nokkur systkini (1-2) og þau sem eiga mörg systkini (:math:`>` 3 ). 
+Gætið þess að skýra nýju breytuna eitthvað annað en ``systkini_fjoldi`` svo við 
+yfirskrifum ekki talnabreytuna heldur búum þess í stað til nýja breytu. Við mötum
+aðferðina með nafninu á talnabreytunni ``systkini_fjoldi`` og mörkunum á
 flokkunum. Ætlum við að tilgreina vinstri mörkin á flokkunum okkar
 (lægri mörkin) notum við ``right=F`` stillinguna. Við mötum því
-aðferðina með 0,2,5 (neðri mörkin á flokkunum okkar) en þurfum svo að
+aðferðina með 0,1,3 (neðri mörkin á flokkunum okkar) en þurfum svo að
 gefa efra mark á síðasta flokknum. Þetta þarf að vera gildi sem er
 a.m.k. einu gildi hærra en hæsta gildið sem talnabreytan tekur. Hér
-notum við gildið 100 (fallegra væri að nota
-``max(puls$likamsraekt)+1``):
+notum við gildið 15 (fallegra væri að nota
+``max(dat$systkini_fjoldi)+1``):
 
 ::
 
-   puls$likamsraektf<-cut(puls$likamsraekt,c(0,2,5,100),right=F)
+   dat$systkini_fjoldi_stig<-cut(dat$systkini_fjoldi,c(0,1,3,15),right=F)
 
 Hér sjáum við hversu margir verða í hverjum flokki:
 
 ::
 
-   table(puls$likamsraektf)
+   table(dat$systkini_fjoldi_stig)
    ##
-   ##   [0,2)   [2,5) [5,100)
-   ##      85     191     190
+   ##   [0,1)   [1,3) [3,15)
+   ##      3     123     75
 
 Við getum svo notað ``levels()`` skipunina til að endurskýra flokkana:
 
 ::
 
-   levels(puls$likamsraektf)<-c("Lítil","Miðlungs","Mikil")
-   table(puls$likamsraektf)
+   levels(dat$systkini_fjoldi_stig)<-c("Engin","Nokkur","Mörg")
+   table(dat$systkini_fjoldi_stig)
    ##
-   ##    Lítil Miðlungs    Mikil
-   ##       85      191      190
+   ##    Engin    Nokkur   Mörg
+   ##    3        123      75
 
 C: Flokkar sameinaðir
 ~~~~~~~~~~~~~~~~~~~~~
 
 Afar oft viljum við sameina tvo eða fleiri flokka flokkabreytu. Í R
 framkvæmum við það með því að gefa tveimur eða fleiri flokkum sama
-heitið með skipuninni ``levels()``. Segjum sem svo að við viljum
-sérstaklega kanna mun á þeim nemendum sem stunda mikla líkamsrækt í
-samanburði við alla aðra nemendur. Þá væri handhægt að hafa nýja breytu
-``likamsraekt2`` sem tekur bara tvö gildi: ``ekkiMikil`` og ``Mikil``.
+heitið með skipuninni ``levels()``. Segjum að við viljum
+sérstaklega kanna mun á þeim nemendum sem koma í skólann með ökutæki í
+samanburði við alla aðra nemendur. Þá væri sniðugt að hafa nýja breytu
+``ferdamati_skoli_okutaeki`` sem tekur bara tvö gildi: ``med_okutaeki`` 
+og ``ekki_med_okutaeki``.
 
-Þegar við búum til breytuna ætlum við að sameina flokkana ``Lítil`` og
-``Miðlungs`` undir nafninu ``ekkiMikil``. Búum fyrst til afrit af
-breytunni og sjáum í hvaða röð flokkarnir eru taldir upp:
-
-::
-
-   puls$likamsraekt2 <- puls$likamsraektf
-   levels(puls$likamsraekt2)
-   ## [1] "Lítil"    "Miðlungs" "Mikil"
-
-Flokkarnir sem við ætlum að sameina eru fyrstu tveir flokkarnir sem eru
-taldir upp. Því skrifum við ``ekkiMikil`` í fyrstu tvö sætin en
-``Mikil`` á sama stað og hún stóð áður.
+Þegar við búum til breytuna ætlum við að sameina flokkana ``Með einkabíl`` og
+``Með strætó`` undir nafninu ``med_okutaeki`` og sameinum flokkana 
+``Á hjóli/ rafhlaupahjóli``, ``Gangandi/ skokkandi`` og ``Á annan hátt``. 
+Búum fyrst til afrit af breytunni og sjáum í hvaða röð flokkarnir eru taldir upp:
 
 ::
 
-   levels(puls$likamsraekt2) <- c('ekkiMikil','ekkiMikil','Mikil')
+   dat$ferdamati_skoli_okutaeki <- dat$ferdatimi_skoli
+   levels(dat$ferdamati_skoli_okutaeki)
+   ## [1] "Á annan hátt"  "Á hjóli/ rafhlaupahjóli"  "Gangandi/ skokkandi"
+   ## [4] "Með einkabíl"  "Með strætó"
+
+Flokkarnir sem við ætlum að sameina eru fyrstu þrír flokkarnir sem eru
+taldir upp. Því skrifum við ``ekki_med_okutaeki`` í fyrstu þrjú sætin en
+``með_okutakei`` í síðustu tv- sætin.
+
+::
+
+   levels(dat$ferdamati_skoli_okutaeki) <- 
+   c('ekki_med_okutaeki','ekki_med_okutaeki','ekki_med_okutaeki', 'med_okutaeki', 'med_okutaeki')
 
 Nýja sameinaða breytan hefur eingöngu tvo flokka:
 
 ::
 
-   str(puls$likamsraekt2)
-   ##  Factor w/ 2 levels "ekkiMikil","Mikil": 1 1 1 1 2 2 1 1 2 2 ...
+   str(dat$ferdamati_skoli_okutaeki)
+   ##  Factor w/ 2 levels "ekki_med_okutaeki","med_okutaeki
+   ": 2 2 2 1 2 2 1 2 2 1 ...
+
+
+Einnig má gera þetta með að nota ``fct_recode()`` skipunina úr forcats pakkanum.
+Hana má nota svona:
+
+byrjum að sækja forcats pakkann
+
+::
+   library(forcats)
+
+Búum fyrst til nýjan flokk sem er afrit að ferdamati_skoli
+
+::
+
+   dat$ferdamati_skoli_okutaeki <- dat$ferdatimi_skoli
+
+Búum svo til nýju flokkana
+
+::
+   dat$ferdamati_skoli_okutaeki<- fct_recode(dat$ferdamati_skoli_okutaeki, 
+   "ekki_med_okutaeki" = "Á hjóli / rafhlaupahjóli","ekki_med_okutaeki"  
+   = "Gangandi / skokkandi", "ekki_med_okutaeki" = "Á annan hátt", 
+   "med_okutaeki" = "Með einkabíl", "med_okutaeki" = "Með strætó")
 
 D: Dagsetningabreytur skilgreindar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1274,6 +1303,21 @@ bara tölur er breytan talnabreyta.
    str(puls$ar)
    ##  num [1:471] 2013 2013 2013 2013 2013 ...
 
+Getum líka notað ``str_detect()`` skipunina úr stringr pakkanum til að búa til breytur.
+Þá er hægt t.d. að búa til nýja breytu ``Laugarvegur`` sem geymir TRUE ef eignin er 
+á Laugarveginum.
+
+::
+   kaupskra$Laugarvegur<-str_detect(kaupskra$heimilisfang, "Laugarvegur") 
+
+Skoðum hvaða eignir eru á Laugarveginum
+
+::
+   which(kaupskra$Laugarvegur==TRUE)
+   ## [1]  75723  75724  75725  75726  75727  75728  75729  75730
+   ## [9]  75731  75732  75733  75734  75735  75736  75737  75903
+   ## [17] 75904  75905  75906  75907  75908  75909  75910  75911
+
 F: Breytt um heiti á breytum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1293,29 +1337,37 @@ rename()
 
 Hægt er, á auðveldan hátt, að endurskýra breytur í gagnatöflu með
 ``rename()`` aðferðinni. Viljum við t.d. breyta nafninu á breytunni
-``namskeid`` í ``nam`` gerum við það með:
+``is`` í ``uppahalds_is`` gerum við það með:
 
 ::
 
-   puls<-rename(puls,nam=namskeid)
+   dat<-rename(dat,uppahalds_is=is)
 
-Til að valda ekki ruglingi hér breytum við nafninu aftur í ``namskeid``
+Til að valda ekki ruglingi hér breytum við nafninu aftur í ``is``
 með:
 
 ::
 
-   puls<-rename(puls,namskeid=nam)
+   dat<-rename(dat,is=uppahalds_is)
 
 G: Vörpunum beitt á talnabreytur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Að lokum viljum við oft búa til nýjar, afleiddar breytur út frá öðrum
-flokkabreytum. Þannig getum við t.d. búið til breytuna BMI út frá hæð og
-þyngd:
+flokkabreytum. Þannig getum við t.d. búið til breytuna fermetraverð út 
+frá kaupverði og einingarflatarmál eignar:
 
 ::
 
-   puls$BMI <- puls$thyngd/(puls$haed/100)**2
+   kaupskra$fermetraverd <- kaupskra$kaupverd*1000/kaupskra$einflm
+
+Athugið að hér þarf að margfalda kaupverð með 1000, þar sem í kaupskra 
+er kaupverd ekki gefið í milljónum.
+
+Hér má einnig nota ``mutate()`` fallið sem er oft þægilegra.
+::
+   kaupskra <- mutate(kaupskra, fermetraverd=kaupverd*1000/einflm)
+
 
 .. _s.umrodun:
 
@@ -1328,34 +1380,41 @@ Umröðun gagna
 Ef gagnatöflurnar sem verið er að vinna með innihalda margar breytur
 getur verið gott að geta valið þær breytur sem við ætlum að vinna með á
 auðveldan hátt. Við getum t.d. búið til nýja gagnatöflu sem inniheldur
-aðeins breyturnar ``haed`` og ``thyngd`` (takið eftir að nýja
+aðeins breyturnar ``keupverd`` og ``einflm`` (takið eftir að nýja
 gagnataflan er ekki geymd í nýjum hlut hér, ætlum við að nota hana
 þurfum við að búa til nýja töflu eins og hér að neðan).
 
 ::
 
-   select(puls,haed,thyngd)
-   ##      haed thyngd
-   ## 1   161.0   60.0
-   ## 2   185.0  115.0
-   ## 3   167.0     NA
-   ## 4   174.0   67.0
-   ## 5   163.0   57.0
-   ## 6   175.0   59.0
-   ## 7   178.0   70.0
-   ## 8   191.0   94.0
-   ## 9   176.0   68.0
+   select(kaupskra,einflm,kaupverd)
+   ##     einflm  kaupverd
+   ## 1   780.4   87000
+   ## 2   400.0   36000
+   ## 3   310.2   31000
+   ## 4   310.2   31000
+   ## 5   71.4    23500
+   ## 6   325.0   33500
+   ## 7   310.2   31000
+   ## 8   310.2   31000
+   ## 9   307.2   37000
    ....
+
+Getum búið til nýtt gagnasett sem inniheldur einungis breyturnar 
+kaupverd og einflm með:
+
+::
+   kaupskra2 <-select(kaupskra, einflm, kaupverd)
+
 
 Við getum einnig notað ``select()`` aðferðina til að búa til nýja
 gagnatöflu sem inniheldur alla dálka upphaflegu töflunnar að
 undanskildum nokkrum. Viljum við t.d. búa til nýja gagnatöflu sem
-inniheldur allar breytur upphaflegu töflunnar nema ``haed`` og
-``thyngd`` gerum við það með:
+inniheldur allar breytur upphaflegu töflunnar nema ``postnr`` og
+``sveitarfelag`` gerum við það með:
 
 ::
 
-   puls.minni<-select(puls,-c(haed,thyngd))
+   kaupskra3<-select(kaupskra,-c(postnr,sveitarfelag))
 
 sort()
 ^^^^^^
@@ -1373,18 +1432,18 @@ sort()
 
 Oft getur verið þægilegt að raða mælingunum okkar eftir stærðarröð.
 Viljum við raða gildunum á einni breytu/vigri í stærðarröð gerum við það
-með ``sort()`` aðferðinni. Viljum við t.d. skoða mælingarnar á hæð í
+með ``sort()`` aðferðinni. Viljum við t.d. skoða mælingarnar á kaupverði í
 stærðarröð gerum við það með:
 
 ::
 
-   sort(puls$haed)
-   ##   [1] 150.0 152.0 152.0 154.0 154.0 155.0 156.0 156.0 157.0 157.0 157.0
-   ##  [12] 157.0 157.0 157.0 157.0 157.0 158.0 158.0 158.0 159.0 159.0 159.0
-   ##  [23] 159.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.0
-   ##  [34] 160.0 160.0 160.0 160.0 160.0 160.0 160.0 160.5 161.0 161.0 161.0
-   ##  [45] 161.0 161.0 161.0 161.0 161.0 161.0 161.0 161.0 162.0 162.0 162.0
-   ##  [56] 162.0 162.0 162.0 162.0 162.0 162.0 162.0 163.0 163.0 163.0 163.0
+   sort(kaupskra$kaupverd)
+   ##   [1]    1    1    1    1    1   1    1    1    1    1
+   ##   [11]   1    1    1    1    1   1    1    1    1    2
+   ##   [21]   10   19   20   30   30  30   40   50   50   50
+   ##   [31]   50   60   66   66  100  100  100  100  100  100
+   ##   [41]  100  100  100  100  100  100  100  100  130  150
+   ##   [51]  150  150  164  164  167  170  194  200  200  200
    ....
 
 arrange()
@@ -1405,39 +1464,39 @@ arrange()
 gagnatöflu eftir ákveðinni röð. ``arrange()`` aðferðin gerir okkur það
 kleift á auðveldan hátt. Við mötum aðferðina með nafninu á gagnatöflunni
 og breytunum sem við viljum raða eftir. Viljum við t.d. raða
-viðfangsefnunum í puls gagnasafninu eftir hæð gerum við það með:
+viðfangsefnunum í kaupskra gagnasafninu eftir kaupverði gerum við það með:
 
 ::
 
-   arrange(puls,haed)
-   ##     namskeid   kronukast  haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 1    STAE209 landvaettir 150.0   76.3    23 kvk    nei     nei         2.0
-   ## 2    STAE209 landvaettir 152.0   47.0    20 kvk    nei     nei         2.0
-   ## 3    STAE209 landvaettir 152.0   47.0    20 kvk    nei     nei         2.0
-   ## 4     LAN203 landvaettir 154.0   50.0    28 kvk    nei     nei         4.0
-   ## 5     LAN203 landvaettir 154.0   50.0    28 kvk    nei     nei         4.0
-   ## 6     LAN203 landvaettir 155.0   49.0    22 kvk     ja      ja        12.0
-   ## 7     LAN203    thorskur 156.0   69.0    36 kvk    nei      ja         3.0
-   ## 8    STAE209 landvaettir 156.0   65.0    21 kvk    nei     nei         2.0
-   ## 9    STAE209 landvaettir 157.0   51.0    20 kvk    nei      ja         0.0
+   arrange(kaupskra,kaupverd)
+   ##     kaupverd   utgdag      postnr   sveitarfelag      byggar   tegund 
+   ## 1   1          2006-09-05	580      Fjallabyggð       1937     Atvinnuhusnaedi
+   ## 2   1          2018-06-08  760      Fjallabyggð       1973     Atvinnuhusnaedi
+   ## 3   1          2015-10-13  750      Fjallabyggð       NA       Serbyli
+   ## 4   1          2006-09-05  580      Fjallabyggð       1947     Atvinnuhusnaedi
+   ## 5   1          2015-10-13	750      Fjallabyggð       NA       Serbyli
+   ## 6   1          2015-10-13  750      Fjallabyggð       NA       Serbyli
+   ## 7   1          2015-10-13  750      Fjallabyggð       NA       Serbyli
+   ## 8   1          2008-12-22  104      Reykjarvíkurborg  1967     Fjolbyli
+   ## 9   1          2016-06-02  640      Norðurþing        1995     Fjolbyli
    ....
 
-Viljum við hins vegar raða fyrst eftir aldri og svo eftir hæð gerum við
-það með:
+Viljum við hins vegar raða fyrst eftir dagsetning undirskriftar kaupsamnings og svo eftir 
+kaupverði gerum við það með:
 
 ::
 
-   arrange(puls,aldur,haed)
-   ##     namskeid   kronukast  haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 1    STAE209    thorskur 162.0   56.0    19 kvk    nei     nei         2.0
-   ## 2    STAE209    thorskur 164.0   58.0    19 kvk    nei      ja         4.0
-   ## 3    STAE209    thorskur 164.0   58.0    19 kvk    nei      ja         4.0
-   ## 4    STAE209 landvaettir 172.0   55.0    19 kvk    nei      ja         6.0
-   ## 5    STAE209    thorskur 172.0   53.0    19  kk    nei    <NA>         7.0
-   ## 6    STAE209 landvaettir 172.0   55.0    19 kvk    nei      ja         6.0
-   ## 7    STAE209 landvaettir 177.0   72.0    19 kvk    nei      ja         2.0
-   ## 8     LAN203 landvaettir 181.0   85.0    19  kk    nei      ja         2.0
-   ## 9     LAN203 landvaettir 185.0   60.0    19  kk    nei     nei         6.0
+   arrange(kaupskra,utgdag,kaupverd)
+   ##     kaupverd   utgdag      postnr   sveitarfelag      byggar    tegund 
+   ## 1   14800      2006-01-20	810      Hveragerðisbær    1930      Serbyli
+   ## 2   17411      2006-01-31  103      Reykjarvíkurborg  2007      Fjolbyli
+   ## 3   396000     2006-02-02  700      Múlaþing          1977      Atvinnuhusnaedi
+   ## 4   396000     2006-02-02  700      Múlaþing          1977      Atvinnuhusnaedi
+   ## 5   396000     2006-02-02	700      Múlaþing          1977      Atvinnuhusnaedi
+   ## 6   396000     2006-02-02  700      Múlaþing          1966      Atvinnuhusnaedi
+   ## 7   396000     2006-02-02  700      Múlaþing          1966      Atvinnuhusnaedi
+   ## 8   396000     2006-02-02  700      Múlaþing          1924      Atvinnuhusnaedi
+   ## 9   4000       2006-02-11  425      Ísafjarðarbær     1958      Serbyli
    ....
 
 .. _rf.gather:
@@ -1684,13 +1743,14 @@ paste()
 Skipunin ``paste()`` býr til einn vigur með því að skella saman gildunum
 í tveimur vigrum. Stillingin ``sep`` tilgreinir hvaða tákna skal notað
 til að sameina vigrana. Þannig getum við búið til nýja breytur sem
-tilgreinir í hvaða námskeiði, hvaða ár nemendurnir eru með:
+tilgreinir í hvaða sveitarfélago og hvaða póstnúmer ein er í.
 
 ::
 
-   puls$namskeidar <- paste(puls$namskeid, puls$ar)
-   str(puls$namskeidar)
-   ##  chr [1:471] "STAE209 2013" "LAN203 2013" "LAN203 2013" ...
+   kaupskra$sveitarf_post <- paste(kaupskra$sveitarfelag, kaupskra$postnr)
+   str(kaupskra$sveitarf_post)
+   ##  chr [1:169636] "Kópavogsbær 200" "Hafnarfjarðarkaupstaður 220" 
+   ##  "Reykjavíkurborg 104" ...
 
 sprintf()
 ^^^^^^^^^
@@ -1711,8 +1771,8 @@ er það hægt með:
 
 ::
 
-   sprintf('Dagurinn i dag er %s', Sys.Date())
-   ## [1] "Dagurinn i dag er 2016-01-04"
+   sprintf('Dagurinn í dag er %s', Sys.Date())
+   ## [1] "Dagurinn í dag er 2024-16-05"
 
 þar sem :math:`\%`\ s er skiptitáknið.
 
@@ -1737,34 +1797,21 @@ dag, mánuð og ár með skipuninni:
 
 ::
 
-   pulsnytt <- separate(puls, dagsetning, into=c('ar','manudur','dagur'), sep='-')
+   kaupskra_nytt <- separate(kaupskra, utgdag, into=c('ar','manudur','dagur'), sep='-')
 
 Hér má sjá nýju gagnatöfluna, með þremur nýjum breytum:
 
 ::
 
-   head(pulsnytt)
-   ##   id namskeid haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 1  1  STAE209  161     60    23 kvk    nei     nei         3.5
-   ## 2  2   LAN203  185    115    52  kk   <NA>      ja         0.0
-   ## 3  3   LAN203  167     NA    22 kvk    nei      ja         2.0
-   ## 4  4  STAE209  174     67    21 kvk    nei      ja         1.0
-   ## 5  5  STAE209  163     57    20 kvk    nei      ja         5.0
-   ## 6  6  STAE209  175     59    20 kvk    nei      ja         5.0
-   ##   likamsraektf   kronukast fyrriPuls seinniPuls  inngrip   ar manudur
-   ## 1     Miðlungs landvaettir        83         84 sat_kyrr 2013      01
-   ## 2        Lítil    thorskur        80        103    hljop 2013      01
-   ## 3     Miðlungs landvaettir        43         52 sat_kyrr 2013      01
-   ## 4        Lítil    thorskur        76        105    hljop 2013      01
-   ## 5        Mikil    thorskur        71         68 sat_kyrr 2013      01
-   ## 6        Mikil landvaettir        65         65 sat_kyrr 2013      01
-   ##   dagur   ar   namskeidar
-   ## 1    07 2013 STAE209 2013
-   ## 2    07 2013  LAN203 2013
-   ## 3    07 2013  LAN203 2013
-   ## 4    07 2013 STAE209 2013
-   ## 5    07 2013 STAE209 2013
-   ## 6    07 2013 STAE209 2013
+   head(kaupskra_nytt)
+   ##     kaupverd  ar    manudur   dagur    postnr   sveitarfelag    
+   ## 1   87000     2012  07        30	      200      Kópavogsbær       
+   ## 2   36000     2011  02        28       220      Hafnarfjarðarkaupstaður  
+   ## 3   31000     2012  04        16       104      Reykjarvíkurborg        
+   ## 4   31000     2012  04        16       104      Reykjarvíkurborg         
+   ## 5   23500     2018  02        20	      104      Reykjarvíkurborg          
+   ## 6   33500     2013  10        25       104      Reykjarvíkurborg          
+   ...
 
 substr()
 ^^^^^^^^
@@ -1784,11 +1831,10 @@ fyrstu þrjá stafina í nöfnunum á námskeiðunum, þá gerum við það með
 
 ::
 
-   substr(puls$namskeid, 1,3)
-   ##   [1] "STA" "LAN" "LAN" "STA" "STA" "STA" "LAN" "STA" "STA" "LAN" "LAN"
-   ##  [12] "STA" "STA" "STA" "STA" "LAN" "LAN" "LAN" "STA" "LAN" "STA" "LAN"
-   ##  [23] "STA" "STA" "STA" "STA" "STA" "STA" "LAN" "LAN" "STA" "STA" "STA"
-   ##  [34] "STA" "LAN" "LAN" "LAN" "LAN" "STA" "LAN" "LAN" "STA" "LAN" "LAN"
+   substr(kaupskra$tegund, 1,3)
+   ##   [1] "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Fjo" 
+   ##   [11] "Atv" "Atv" "Fjo" "Fjo" "Fjo" "Fjo" "Atv" "Atv" "Fjo" "Fjo" 
+   ##   [21] "Fjo" "Fjo" "Atv" "Fjo" "Fjo" "Atv" "Atv" "Atv" "Atv" "Atv"
    ....
 
 .. _2.meira:
