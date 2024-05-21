@@ -71,19 +71,18 @@ fervikagreiningarhlut:
 
    anova(fervik)
 
-Snúum okkur nú að gagnasafninu okkar. Í kafla :numref:`%s <s.kodun>` bjuggum við
-til nýja flokkabreytu sem gefur til kynna hvort viðfangsefnin okkar
-stundi "litla", "miðlungs" eða "mikla" líkamsrækt. Við reiknuðum svo
-meðalpúls einstaklinga í hópunum þremur í kafla :numref:`%s <s.adrargagnlegar>`.
-Nú getum við kannað með fervikagreiningu hvort munur sé á meðalpúlsi í
-hópunum þremur. Byrjum á því að skoða kassarit af púlsmælingum eftir
-líkamsræktarástundun:
+Snúum okkut nú að gagnasafninu possum. Sem inniheldur allskyns mælingar á pokarottum.
+Í gagnasettinu eru meðal annars breyturnar: aldur, kyn, lengd dýrs og hvaðan dýrið kemur.
+Könnum hvort munur sé á stærð pokarotta eftir kyni. Við reiknum meðallengd pokadýra
+eftir kyni eins og gert í kafla :numref:`%s <s.adrargagnlegar>`. Nú getum við kannað með 
+fervikagreiningu hvort munur sé á meðallend pokarotta eftir kyni. Byrjum á því að skoða 
+kassarit af lengdarmælingum eftir kyni: 
 
 ::
 
-   gogn <- na.omit(puls) # sleppum NA gildum
-   ggplot(data=gogn,aes(likamsraektf,fyrriPuls))+geom_boxplot() +
-   xlab("Líkamsræktarástundun") + ylab("Púls (slög/mínútu)")
+   gogn <- na.omit(possum) # sleppum NA gildum
+   ggplot(data=gogn,aes(sex, total_l))+geom_boxplot() +
+   xlab("kyn") + ylab("Lengd pokarotta (cm)")
 
 .. figure:: myndir/unnamed-chunk-217-1.svg
 
@@ -92,14 +91,14 @@ Eins og sjá má myndinni virðist dreifni í hópunum vera nokkuð jöfn.
 
 ::
 
-   bartlett.test(fyrriPuls ~ likamsraektf, data = puls)
+   bartlett.test(total_l ~ sex, data = possum)
    ##
    ##  Bartlett test of homogeneity of variances
    ##
-   ## data:  fyrriPuls by likamsraektf
-   ## Bartlett's K-squared = 4.1246, df = 2, p-value = 0.1272
+   ## data:  total_l by sex
+   ## Bartlett's K-squared = 0.06666, df = 1, p-value = 0.7963
 
-Eins og sjá má er p-gildið = 0.1272 og getum við því ekki hafnað
+Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
 núlltilgátunni um að dreifnin sé sú sama. Við verðum þó að gæta okkur á
 að hátt p-gildi þýðir ekki að við höfum sýnt fram á að dreifnin sé sú
 sama til þess þyrfti að kanna styrk prófsins (við samþykkjum jú ekki
@@ -111,7 +110,7 @@ Við framkvæmum fervikagreiningu með eftirfarandi skipunum:
 
 ::
 
-   fervik <- aov(fyrriPuls ~ likamsraektf, data = puls)
+   fervik <- aov(total_l ~ sex, data = possum)
 
 Takið eftir að við tilgreinum fyrst nöfnin á breytunum og svo nafnið á
 gagnatöflunni. Til að fá fervikasummutöfluna notum við ``anova()``
@@ -122,20 +121,20 @@ aðferðina.
    anova(fervik)
    ## Analysis of Variance Table
    ##
-   ## Response: fyrriPuls
-   ##               Df Sum Sq Mean Sq F value    Pr(>F)
-   ## likamsraektf   2   2580  1289.9  9.5055 9.065e-05 ***
-   ## Residuals    446  60521   135.7
+   ## Response: total_l
+   ##               Df  Sum Sq   Mean Sq  F value    Pr(>F)
+   ## likamsraektf   1  49.12    49.116    2.6867     0.1043 ***
+   ## Residuals    102  1864.71  18.281
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Hér sjáum við SSTr = 2580 og SSE = 60521 ásamt viðeigandi frígráðum (2
-og 446).
+Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
+og 102).
 
-Það er einnig búið að reikna meðalfervikasummurnar (1289.9 og 135.7) og
-finna hlutfall þeirra, sem er einmitt F-prófstærðin (9.505). p-gildi
+Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
+finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
 fyrir tilgátuprófið er svo lengst til hægri
-(:math:`9.07\times 10^{-5}`). Eins og sjá má er ýmislegt annað að finna
+(:math:`0.1043`). Eins og sjá má er ýmislegt annað að finna
 í ``aov()`` úttakinu:
 
 ::
@@ -185,13 +184,11 @@ hana með fervikagreiningarhlut.
    ##   Tukey multiple comparisons of means
    ##     95% family-wise confidence level
    ##
-   ## Fit: aov(formula = fyrriPuls ~ likamsraektf, data = puls)
+   ## Fit: aov(formula = total_l ~ sex, data = possum)
    ##
-   ## $likamsraektf
-   ##                     diff       lwr       upr     p adj
-   ## Miðlungs-Lítil -1.930757 -5.583459  1.721946 0.4284916
-   ## Mikil-Lítil    -6.012279 -9.664981 -2.359576 0.0003665
-   ## Mikil-Miðlungs -4.081522 -6.937460 -1.225583 0.0024289
+   ## $sex
+   ##                     diff         lwr        upr     p adj
+   ## m-f            -1.395501   -3.084208   0.2932054   0.104272
 
 Það má líka skoð niðurstöðuna myndrænt með:
 
@@ -237,15 +234,14 @@ margt sem þarf að gæta að, s.s. misjafn fjöldi mælinga í hópunum
 (e. unbalanced design), *gruggun* (e. confounding) og margt fleira. Við
 munum ekki taka á því hér, aðeins sýna hvaða tæki og tól eru til staðar.
 
-Skoðum aftur dæmið hér að ofan þar sem kannað var hvort meðalpúls fólks
-var mismunandi eftir hversu mikla líkamsrækt þeir stunda. Hugsum okkur
-sem svo að þessi tilraun hafi einnig verið framkvæmd til að kanna hvort
-munur væri á kynjum í þessu tilliti. Við höfum nú tvo þætti, líkamsrækt
-og kyn og notum því tveggja þátta fervikagreiningu til að kanna
-tengslin.
+Skoðum aftur dæmið hér að ofan þar sem kannað var hvort lengd pokarotta 
+væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
+verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu 
+tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja 
+þátta fervikagreiningu til að kanna tengslin.
 
-Til að kanna hvort líkamsrækt hafi misjöfn áhrif á púls eftir kynjum
-þurfum við að kanna hvort *víxlhrif* (e. interactions) séu til staðar á
+Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna 
+þurfum við að kanna hvort *víxlhrif* (e. interactions) séu til staðar á 
 milli breytanna tveggja. Gott er að byrja á því að skoða gögnin myndrænt
 til að kanna hvort víxlhrif séu til staðar. Við gerum það í R með
 *víxlhrifamynd*. Við búum til víxlhrifamynd með ``stat_summary``
@@ -255,16 +251,16 @@ mælingar.
 
 ::
 
-   puls.na<-na.omit(puls)
-   ggplot(puls.na,aes(likamsraektf,fyrriPuls,lty=kyn)) +
-   stat_summary(aes(group=kyn),fun.y=mean,geom='line')
+   puls.na<-na.omit(possum)
+   ggplot(puls.na,aes(sex,total_l,lty=pop)) +
+   stat_summary(aes(group=pop),fun.y=mean,geom='line')
 
 .. figure:: myndir/unnamed-chunk-226-1.svg
 
-Á myndinni sjáum við meðalpúls í hópunum sex (konur sem stunda litla
-líkamsrækt, karla sem stunda litla líkamsrækt, o.s.frv.). Við sjáum að
-konurnar eru almennt með lægri púls en karlarnir, sér í lagi meðal
-einstaklinga sem stunda litla líkamsrækt.
+Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns 
+pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.). 
+Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur, 
+óháð því hvaðan dýrin koma.
 
 Við metum svo líkanið með ``aov()`` aðferðinni. Séu víxlhrif til staðar
 prófum við ekki hina þættina í líkaninu. Ef engin víxlhrif eru til
@@ -273,37 +269,37 @@ prófum hina þættina tvo.
 
 ::
 
-   fervik.2<-aov(fyrriPuls~likamsraektf + kyn + likamsraektf:kyn, data=puls)
+   fervik.2<-aov(total_l~sex + pop + sex:pop, data=possum)
    anova(fervik.2)
    ## Analysis of Variance Table
    ##
-   ## Response: fyrriPuls
-   ##                   Df Sum Sq Mean Sq F value    Pr(>F)
-   ## likamsraektf       2   2580 1289.87  9.5709 8.525e-05 ***
-   ## kyn                1    603  602.54  4.4709   0.03504 *
-   ## likamsraektf:kyn   2    215  107.73  0.7994   0.45026
-   ## Residuals        443  59703  134.77
+   ## Response: total_l
+   ##           Df Sum Sq  Mean Sq  F value  Pr(>F)
+   ## sex       1   49.12  49.116   2.6480   0.1068 ***
+   ## pop       1   4.45   4.452    0.2400   0.62535 *
+   ## sex:pop   1   5.43   5.426    0.2925   0.5898
+   ## Residuals    100   1854.4  18.648  
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Við notum svo ``anova()`` aðferðina til að fá fervikasummurnar, p-gildi
 og prófstærð.
 
-Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.45026 og höfum við
-því ekki sýnt fram á að munur sé á áhrif líkamsræktar eftir kynjum. Við
+Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
+því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
 fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.
 
 ::
 
-   fervik.3<-aov(fyrriPuls~likamsraektf + kyn, data=puls)
+   fervik.3<-aov(total_l~sex + pop, data=possum)
    anova(fervik.3)
    ## Analysis of Variance Table
    ##
-   ## Response: fyrriPuls
-   ##               Df Sum Sq Mean Sq F value    Pr(>F)
-   ## likamsraektf   2   2580 1289.87  9.5795 8.448e-05 ***
-   ## kyn            1    603  602.54  4.4749   0.03495 *
-   ## Residuals    445  59919  134.65
+   ## Response: total_l
+   ##               Df  Sum Sq   Mean Sq  F value    Pr(>F)
+   ## sex            1  49.12    49.116   2.6667     0.1056
+   ## pop            1  4.45     4.452    0.2417     0.6240 
+   ## Residuals    101  1860.26  18.418
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -319,18 +315,17 @@ með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
    ## Single term deletions
    ##
    ## Model:
-   ## fyrriPuls ~ likamsraektf + kyn
-   ##              Df Sum of Sq   RSS    AIC F value    Pr(>F)
-   ## <none>                    59919 2205.3
-   ## likamsraektf  2   2340.59 62259 2218.5  8.6915 0.0001982 ***
-   ## kyn           1    602.54 60521 2207.8  4.4749 0.0349509 *
+   ## total_l ~ sex + pop
+   ##              Df  Sum of Sq    RSS     AIC   F value    Pr(>F)
+   ## <none>                     1860.3  305.94
+   ## likamsraektf  1  41.725    1902.0  306.25   2.2654   0.1354 
+   ## kyn           1  4.452     1864.7  304.19   0.2417   0.6340 
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Sjá má á úttakinu að báðar breyturnar eru marktækar. Hér höfum við sýnt
-fram á að marktækur munur sé á meðalpúls nemenda eftir því hversu mikla
-líkamsrækt þeir hafa stundað eftir að búið er að leiðrétta fyrir
-breytunni ``kyn``.
+Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki 
+sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið 
+er að leiðrétta fyrir breytunni ``pop``.
 
 Eins og sagt var frá í upphafi þessa hluta er margt sem þarf að hafa í
 huga þegar fjölþátta aðhvarfsgreining er framkvæmd. Hvernig á að velja

@@ -702,51 +702,49 @@ og endurræsa svo Rstudio. Þá ættu íslensku stafirnir að birtast rétt.
 
 Gögn
 ----
+Í þessari bók munum við notast við nokkur gagnasett. 
+Gagnasettið sem við köllum dat má finna í skránni ``skra`` sem hlaða
+niður hér: 
 
-Í þessari bók munum við aðallega notast við eitt gagnasafn en það má
-finna í skránni ``pulsAll.csv`` sem hlaða má niður hér:
-
-http://edbook.hi.is/gogn/pulsAll.csv.
+``linkur``
 
 Skráin inniheldur eftirfarandi breytur:
 
-+-------------+-----------------------------------------------+
-| Breyta      | Útskýring/gildi                               |
-+=============+===============================================+
-| namskeid    | LAN203, STAE209                               |
-+-------------+-----------------------------------------------+
-| kronukast   | thorskur, landvaettir                         |
-+-------------+-----------------------------------------------+
-| haed        | hæð í sentimetrum                             |
-+-------------+-----------------------------------------------+
-| thyngd      | þyngd í kílógrömmum                           |
-+-------------+-----------------------------------------------+
-| aldur       | aldur í árum                                  |
-+-------------+-----------------------------------------------+
-| kyn         | 1 = kona, 2 = karl                            |
-+-------------+-----------------------------------------------+
-| reykir      | ja, nei                                       |
-+-------------+-----------------------------------------------+
-| drekkur     | ja, nei                                       |
-+-------------+-----------------------------------------------+
-| likamsraekt | líkamsrækt í klst/viku                        |
-+-------------+-----------------------------------------------+
-| fyrriPuls   | fyrri púlsmæling slög/mín                     |
-+-------------+-----------------------------------------------+
-| seinniPuls  | seinni púlsmæling slög/mín                    |
-+-------------+-----------------------------------------------+
-| inngrip     | hljop, sat_kyrr                               |
-+-------------+-----------------------------------------------+
-| dagsetning  | hvaða dag tilraunin fór fram dagur.manudur.ar |
-+-------------+-----------------------------------------------+
++-------------------+------------------------------------------+
+| Breyta            | Útskýring/gildi                          |
++===================+==========================================+
+| is                | Vannilla, Jarðaberja, Súkkulaði          |
++-------------------+------------------------------------------+
+| ferdatimi_skoli   | tími í mínútum                           |
++-------------------+------------------------------------------+
+| styrikerfi_simi   | Android eða iOS                          |
++-------------------+------------------------------------------+
+| ferdatmati_skoli  | Með einkabíl, Gangandi/skokkandi,        |
+|                   | Með strætó, Hjólandi/rafhlaupahjól,      |
+|                   | Á annan hátt                             |
++-------------------+------------------------------------------+
+| systkini_fjoldi   | fjöldi systkina                          |
++-------------------+------------------------------------------+
+| dyr               | Ertu meira fyrir hunda eða ketti?        |
++-------------------+------------------------------------------+
+| feministi         | Ég er feministi: Rétt eða Rangt          |
++-------------------+------------------------------------------+
+| staerdfraedi_gaman| Einkunn: 1-10                            | 
++-------------------+------------------------------------------+
+| smjor_kostar      | Hvað smjör kostar í bónus?  kr.          |
++-------------------+------------------------------------------+
+| napoleon_faeddur  | Hvenær var Napóleon fæddur? ár           |
++-------------------+------------------------------------------+
+| stefnumot         | Á kaffihús, Á ísrúnt, Í fjallgöngu, í bíó|
++-------------------+------------------------------------------+
+| messi_staerd      | Hvað er Messi stór?                      |
++-------------------+------------------------------------------+
+| kosid             | Ég hef kosið: Rétt eða Rangt             |
++-------------------+------------------------------------------+
 
-Þessum gögnum var safnað saman í tveimur námskeiðum við Háskóla Íslands
-á árunum 2013 - 2015. Nemendur voru beðnir um að skrá niður ýmsar
-bakgrunnsupplýsingar (hæð, aldur, kyn, ...) og mæla svo púlsinn sinn.
-Því næst voru nemendurnir beðnir um að kasta krónu og þeir sem fengu upp
-þorsk voru beðnir um að hlaupa um stofuna í tvær mínútur en hinir beðnir
-um að sitja í sætunum sínum á meðan. Að þessu loknu mældu nemendur
-púlsinn sinn á ný.
+
+Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
+Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.
 
 Vistið skrána í vinnumöppunni á vélinni ykkar en forðist að opna hana í
 töflureikni, sér í lagi Excel, undarlegustu hlutir geta gerst! Ef þið
@@ -757,6 +755,11 @@ Við munum þá gera ráð fyrir að einstaklingarnir í gagnaskránni séu
 slembiúrtak úr stóru þýði nemenda og því getum við notað gögnin til að
 draga hinar ýmsu ályktanir um þýði nemenda.
 
+Í þessari bók er einnig unnið mikið með gagnasettið ``kaupskra`` sem inniheldur 
+upplýsingar kaupverð, dagsetningu kaupsamnings og staðsetningu fasteignar.  
+
+Kaupskrá má nálgast á: https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/
+Þar er einnig hægt að nálgast upplýsingar um allar breytur í kaupskra.
 
 Leiksvæði fyrir R kóða
 ----------------------
