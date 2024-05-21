@@ -261,13 +261,14 @@ cor()
 
 Reikna má fylgni milli tveggja breyta í R með ``cor()`` aðferðinni. Við
 þurfum að mata aðferðina með heitunum á breytunum sem við ætlum að
-reikna fylgnina á milli. Viljum við reikna fylgnina á milli breytanna
-``haed`` og ``thyngd`` notum við skipunina:
+reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
+höfuðlengdar pokarotta, semsagt breytanna ``total_l`` og ``head_l``,
+notum við skipunina:
 
 ::
 
-   cor(puls$haed,puls$thyngd,use="complete.obs")
-   ## [1] 0.6765718
+   cor(possum$total_l, possum$head_l)
+   ## [1] 0.6910937
 
 Stillinguna ``use="complete.obs"`` notum við vanti einhverjar mælingar.
 Munið að við reiknum aðeins út fylgnistuðul sé línulegt samband á milli
