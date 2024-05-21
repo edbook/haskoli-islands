@@ -7,7 +7,7 @@ Tölfræði sem fræðigrein snýst um að vinna upplýsingar út frá tölulegu
 mælingum. Gróflega skiptist tölfræðin í tvo anga: að lýsa sem best þeim
 gögnum sem fyrirliggjandi eru og að draga ályktanir um almenna hópa eða
 þýði út frá mælingum á úrtaki. Í flestum tilfellum er unnið með mikið
-magn mælinga og því fer almenn tölfræði- og gagnavinnsla að mestu fram
+magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
 með aðstoð tölva. Sérhæfð tölfræðiforrit komu snemma fram á sjónarsviðið
 og eftir því sem að möguleikar þeirra, sem og reiknigeta tölva, jukust,
 varð beiting tölfræði víðfeðmari. Mikill fjöldi forrita eru sérsniðin
@@ -28,8 +28,8 @@ tilraunaverkefnis tveggja prófessora í tölfræði rétt fyrir aldamót.
 Prófessoranir tveir, Ross Ihaka og Robert Gentleman við háskólann í
 Auckland Nýja Sjálandi, þróuðu hugbúnaðinn fyrst til kennslu. Síðar vatt
 þróunin uppá sig, ekki síst vegna þess að hún var opin og í mikilli
-samvinnu við notendur. Í dag er R bæði forritunarmál og -umhverfi fyrir
-alla almenna tölfræði- og gagnavinnslu. Stór þáttur í vinsældum R umfram
+samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
+alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 önnur tölfræðiforrit er sveigjanleiki og fjöldi viðbóta, svonefndra
 pakka, sem bæta og auka möguleika forritsins. R hefur því orðið á
 seinustu árum eitt helsta verkfæri tölfræðinga og nú orðið eru flestar
