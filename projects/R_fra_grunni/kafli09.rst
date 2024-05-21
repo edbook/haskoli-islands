@@ -84,7 +84,7 @@ kassarit af lengdarmælingum eftir kyni:
    ggplot(data=gogn,aes(sex, total_l))+geom_boxplot() +
    xlab("kyn") + ylab("Lengd pokarotta (cm)")
 
-.. figure:: myndir/unnamed-chunk-217-1.svg
+.. figure:: myndir/mynd9_1.svg
 
 Eins og sjá má myndinni virðist dreifni í hópunum vera nokkuð jöfn.
 Því næst framkvæmum við Bartlett prófið fyrir dreifnina:
@@ -196,7 +196,7 @@ hana með fervikagreiningarhlut.
 
    plot(TukeyHSD(fervik))
 
-.. figure:: myndir/unnamed-chunk-225-1.svg
+.. figure:: myndir/mynd9-2.svg
 
 Stikalaus próf\ :math:`^\ast`
 -----------------------------
@@ -255,7 +255,7 @@ mælingar.
    ggplot(puls.na,aes(sex,total_l,lty=pop)) +
    stat_summary(aes(group=pop),fun.y=mean,geom='line')
 
-.. figure:: myndir/unnamed-chunk-226-1.svg
+.. figure:: myndir/mynd9_3.svg
 
 Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns 
 pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.). 
