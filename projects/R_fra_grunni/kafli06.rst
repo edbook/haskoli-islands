@@ -155,7 +155,7 @@ breytunni.
 
    ggplot(data = dat, aes(ferdatimi_skoli)) + geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-171-1.svg   
+.. figure:: myndir/mynd6_1.svg   
 
 Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
@@ -191,7 +191,7 @@ vera normaldreifð:
 
    ggplot(data = data.frame(medaltol), aes(medaltol)) + geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-175-1.svg
+.. figure:: myndir/mynd6_2.svg
 
 Athugið að hér er lykilatriði að nægjanlega mörg viðfangsefni séu valin
 í hverju og einu gerviúrtaki. Sé eingöngu valið gerviúrtak af stærð 3 í
@@ -209,7 +209,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
    ggplot(data = data.frame(ny.medaltol), aes(ny.medaltol)) +
    geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-176-1.svg
+.. figure:: myndir/mynd6_3.svg
 
 .. _s.oryggisbil:
 
