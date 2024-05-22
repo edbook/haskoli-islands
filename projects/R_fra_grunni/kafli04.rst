@@ -365,9 +365,9 @@ Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
    ##  Súkkulaði  0.30348259 0.14925373
    ##  Vanilla    0.21393035 0.13930348
 
-Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu sem eru hrifinn af hundum
-elska súkkulaðiís. Viljum við aftur á máti skoða hlutföllin eftir línum
-í töflunni gerum við það með:
+Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við 
+hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti 
+skoða hlutföllin eftir línum í töflunni gerum við það með:
 
 ::
 
@@ -378,9 +378,9 @@ elska súkkulaðiís. Viljum við aftur á máti skoða hlutföllin eftir línum
    ##  Súkkulaði  0.6703297 0.3296703
    ##  Vanilla    0.6056338 0.3943662
 
-Í töflunni má t.d. sjá að um 67% nemenda sem elska súkkulaðiís eru hrifnir af hundum. 
-Viljum við hins vegar skoða hlutföllin eftir dálkum í töflunni gerum við það
-með:
+Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur 
+eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir 
+dálkum í töflunni gerum við það með:
 
 ::
 
@@ -391,7 +391,7 @@ með:
    ##  Súkkulaði  0.4803150 0.4054054
    ##  Vanilla    0.3385827 0.3783784
 
-Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elskar jarðaberjaís.
+Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
 
 Takið eftir að nota má ``prop.table()`` til að reikna lýsistærðirnar
 næmi (e. sensitivity) og sértæki (e. specificity).
@@ -525,8 +525,7 @@ sömu gagnatöflu og talnabreytan. Við mötum ``tapply()`` aðferðina með
 nafninu á talnabreytunni, nafninu á flokkabreytunni og nafninu á
 aðferðinni sem við viljum beita. Ef það vantar einhver gildi þurfum við
 að nota ``na.rm=TRUE`` líkt og áður. Viljum við t.d. reikna út meðaltal
-fyrri púlsmælinganna í líkamsræktarhópunum þremur sem við mynduðum hér að
-ofan gerum við það með:
+ferðatíma í skóla eftir ferðamáta gerum við það með:
 
 ::
 

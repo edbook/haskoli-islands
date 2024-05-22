@@ -112,8 +112,8 @@ dæmis má gefa skipanirnar
 til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.
 
 Við getum að sjálfsögðu matað sample með nafni á breytu sem tilheyrir
-gagnafölu. Viljum við t.d. velja handahófskennt 10 ágiskanir hvenær nemendur 
-halda að Napóleon var fæddur úr dat gögnunum okkar. Gerum við það með
+gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
+Hvenær fæddist Napóleon? Gerum við það með:
 
 ::
 
