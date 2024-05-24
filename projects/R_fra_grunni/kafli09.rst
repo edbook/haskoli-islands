@@ -61,6 +61,8 @@ anova()
     
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
 
+    **Forkröfur prófs:** Dreifni sú sama
+
 
 --------------
 

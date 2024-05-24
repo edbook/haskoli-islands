@@ -41,6 +41,8 @@ var.test()
     
     **Helstu stillingar:** alternative, conf.level
 
+    **Forkröfur prófs:** Normaldreifing
+
 
 --------------
 
@@ -131,6 +133,8 @@ bartlett.test()
     
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
 
+    **Forkröfur prófs:** Normaldreifing
+
 
 --------------
 
@@ -177,6 +181,8 @@ t.test()
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
     
     **Helstu stillingar:** paired, mu, alternative, conf.level
+
+    **Forkröfur prófs:** Meðaltöl normaldreifð, þ.e. mörg úrtök eða normaldreifð gögn
 
 
 --------------
@@ -484,6 +490,8 @@ wilcox.test()
     **Úttak:** gildi á prófstærð, p-gildi
     
     **Helstu stillingar:** paired, mu, alternative
+
+    **Forkröfur prófs:** Munur á dreifingu er hliðrun um fasta
 
 
 --------------
