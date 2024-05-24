@@ -1416,6 +1416,56 @@ inniheldur allar breytur upphaflegu töflunnar nema ``postnr`` og
 
    kaupskra3<-select(kaupskra,-c(postnr,sveitarfelag))
 
+group_by()
+^^^^^^^^^^
+
+.. attention::
+
+    **Inntak:** nafn á gagnatöflu og nafn á flokkabreytum
+    
+    **Úttak:** ???
+    
+    **Helstu stillingar:** .drop1
+
+
+--------------
+
+Group_by() skipunin leyfir okkur að skipta  gagnasafninu upp eftir einni eða fleiri
+ákveðinni breytu. Síðan má reikna allskyns lýsistærðir fyrir hvern og einn hóp. 
+
+Skoðum með meðalferðtími fólks er í skóla eftir ferðamáta
+
+::
+
+   hopar <- group_by(dat, ferdamati_skoli)
+   summarise(hopar, mean(ferdatimi_skoli))
+   ## ferdamati_skoli            mean(ferdatimi_skoli) 
+   ## Gangandi / skokkandi	      7.588235
+   ## Með einkabíl	            19.923077
+   ## Með strætó	               33.733333
+   ## Á annan hátt	            2.500000
+   ## Á hjóli / rafhlaupahjóli   11.666667
+
+
+Skoðum svo hver lengst ferðatími í skóla eftir bæði ferðamáta 
+og uppáhaldsís.
+
+::
+
+   hopar2 <- group_by(dat, ferdamati_skoli, is)
+   summarise(hopar, max(ferdatimi_skoli))
+   ## ferdamati_skoli         is             max(ferdamati_skoli)
+   ## Gangandi / skokkandi	   Jarðaberja	   30
+   ## Gangandi / skokkandi	   Súkkulaði	   25
+   ## Gangandi / skokkandi	   Vanilla	      11
+   ## Með einkabíl	         Jarðaberja	   45
+   ## Með einkabíl	         Súkkulaði	   50
+   ## Með einkabíl	         Vanilla	      60
+   ## Með strætó	            Jarðaberja	   70
+   ## Með strætó	            Súkkulaði	   45
+   ## Með strætó	            Vanilla	      75
+   ## Á annan hátt	         Jarðaberja     0
+
 sort()
 ^^^^^^
 
