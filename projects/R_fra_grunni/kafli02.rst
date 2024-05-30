@@ -1198,6 +1198,7 @@ Hana má nota svona:
 byrjum að sækja forcats pakkann
 
 ::
+
    library(forcats)
 
 Búum fyrst til nýjan flokk sem er afrit að ferdamati_skoli
@@ -1209,6 +1210,7 @@ Búum fyrst til nýjan flokk sem er afrit að ferdamati_skoli
 Búum svo til nýju flokkana
 
 ::
+
    dat$ferdamati_skoli_okutaeki<- fct_recode(dat$ferdamati_skoli_okutaeki, 
    "ekki_med_okutaeki" = "Á hjóli / rafhlaupahjóli","ekki_med_okutaeki"  
    = "Gangandi / skokkandi", "ekki_med_okutaeki" = "Á annan hátt", 
@@ -1404,6 +1406,7 @@ Getum búið til nýtt gagnasett sem inniheldur einungis breyturnar
 kaupverd og einflm með:
 
 ::
+
    kaupskra2 <-select(kaupskra, einflm, kaupverd)
 
 
@@ -1424,8 +1427,6 @@ group_by()
 
     **Inntak:** nafn á gagnatöflu og nafn á flokkabreytum
     
-    **Úttak:** ???
-    
     **Helstu stillingar:** .drop1
 
 
@@ -1440,12 +1441,12 @@ Skoðum með meðalferðtími fólks er í skóla eftir ferðamáta
 
    hopar <- group_by(dat, ferdamati_skoli)
    summarise(hopar, mean(ferdatimi_skoli))
-   ## ferdamati_skoli            mean(ferdatimi_skoli) 
-   ## Gangandi / skokkandi	      7.588235
-   ## Með einkabíl	            19.923077
-   ## Með strætó	               33.733333
-   ## Á annan hátt	            2.500000
-   ## Á hjóli / rafhlaupahjóli   11.666667
+   ## ferdamati_skoli               mean(ferdatimi_skoli) 
+   ## Gangandi / skokkandi	         7.588235
+   ## Með einkabíl	               19.923077
+   ## Með strætó	                  33.733333
+   ## Á annan hátt	               2.500000
+   ## Á hjóli / rafhlaupahjóli      11.666667
 
 
 Skoðum svo hver lengst ferðatími í skóla eftir bæði ferðamáta 

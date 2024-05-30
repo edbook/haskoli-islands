@@ -549,12 +549,14 @@ Ef við viljum t.d. finna meðaltalið á tölunum 1-101, taka svo kvaðratróti
 af meðaltalinu og skila með tveimur aukastöfum. Án pípunar er það gert svona:
 
 ::
+   
    round(sqrt(mean(1:101)),2)
    ## 7.14
 
 Með pípun:
 
 ::
+
    1:101 %>%
       mean() %>%
       sqrt() %>%
@@ -567,6 +569,7 @@ Ef við viljum skoða meðalferðatíma í skóla hjá þeim sem ferðast með s
 eftir því hvaða ís þeim finnst bestur. Byrjum að gera þetta án pípunar.
 
 ::
+
    dat1 <- dat 
    dat1 <- filter(dat1, ferdamati_skoli=="Með strætó")
    dat1 <- select(dat1, ferdatimi_skoli, is)
@@ -582,6 +585,7 @@ Hér þurftum við að búa til nýtt gagnasett og yfirskrifa það. Mun einfald
 er að gera þetta með pípurithætti.
 
 ::
+
    dat %>% 
       filter(ferdamati_skoli=="Með strætó") %>% 
       select(ferdatimi_skoli, is) %>% 
@@ -595,6 +599,7 @@ er að gera þetta með pípurithætti.
 Það má líka nota pípurithátt við að teikna myndir.
 
 ::
+
    dat %>% ggplot(aes(x=is, y=ferdatimi_skoli))+
    geom_boxplot()
 
@@ -603,6 +608,7 @@ er að gera þetta með pípurithætti.
 Skoðum fleiri dæmi:
 
 ::
+
    dat %>% select(ferdatimi_skoli) %>% summary()
    ## ferdamati_skoli
    ## Min.     :0.00
@@ -615,6 +621,7 @@ Skoðum fleiri dæmi:
 Einnig má nota ``kable()`` skipunina sem útbýr fína töflu.
 
 ::
+
    table(dat$stefnumot) %>% kable()
    ## Var1           Freq
    ## Á ísrúnt       93
@@ -626,6 +633,7 @@ Reiknum allskyns lýsistærðir fyrir breytuna ``smjor_kostar``
 eftir breytunni ``is``.
 
 ::
+
    dat %>%
       filter(!is.na(smjor_kostar)) %>%
       group_by(stefnumot) %>%

@@ -20,11 +20,13 @@ glm()
 
 .. attention::
 
-    **Inntak:** formúla, gögn
+    **Inntak:** formúla, gögn (tvíkosta breyta~breyta, gögn)
     
     **Úttak:** tvíkosta aðhvarfsgreining á gögnunum byggt á formúlunni
     
     **Helstu stillingar:** family
+
+    **Forkröfur prófs:** ??
 
 
 --------------
@@ -44,10 +46,10 @@ fyrir þá og reikna öryggisbil.
 Tvíkosta aðhvarfsgreining með samfellda skýribreytu
 ---------------------------------------------------
 
-Tvíkosta aðhvarfsgreiningu má nota til að meta hvort nemendur sem stunda
-mikla líkamsrækt séu ólíklegri til að reykja heldur en þá sem stunda
-litla líkamsrækt. Líkanið metum við með neðangreindri skipun og það
-borgar sig að vista líkanið sem hlut.
+Tvíkosta aðhvarfsgreiningu má nota til að meta hvort nemendur sem koma 
+gangandi eða skokkandi í skólann séu ólíklegri til að vera lengi á leiðinni 
+í skólann heldur en þeir sem ferðast á skólann á annan máta. Líkanið metum
+við með neðangreindri skipun og það borgar sig að vista líkanið sem hlut.
 
 ::
 
