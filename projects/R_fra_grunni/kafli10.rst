@@ -37,6 +37,8 @@ lm()
     
     **Úttak:** metnir stuðlar, p-gildi, skýringarhlutfall ofl.
 
+    **Forkröfur prófs:** Leifar normaldreifðar og handahófskenndar
+
 
 --------------
 

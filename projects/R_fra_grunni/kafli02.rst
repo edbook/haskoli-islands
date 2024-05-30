@@ -1285,34 +1285,35 @@ Stundum eru sumar breyturnar okkar langir textastrengir sem geyma ýmsar
 upplýsingar en við viljum draga tilteknar upplýsingar út úr strengjunum
 og nota til að búa til breytur. Þá kemur skipunin ``grep()``, sem við
 sáum í kassa :numref:`%s <rf.grep>`, að góðum notum. Ef við viljum sem dæmi búa
-til nýja breytu, ``ar`` sem geymir hvaða ár tilraunin var framkvæmd
-fyrir hverja mælingu þá má útbúa hana með:
+til nýja breytu, ``ibud`` sem geymir hvort hús sé íbúðarhúsnæði 
+þá má útbúa hana með:
 
 ::
 
-   puls$ar <- NA
-   puls$ar[grep(2013, puls$dagsetning)] <- 2013
-   puls$ar[grep(2014, puls$dagsetning)] <- 2014
-   puls$ar[grep(2015, puls$dagsetning)] <- 2015
+   kaupskra$ibud <- NA
+   kaupskra$ibud[grep("Fjolbyli|Serbyli", kaupskra$tegund)] <- "Íbúðarhúsnæði"
+   kaupskra$ibud[grep("Atvinnuhusnaedi|Annað|Bilskur/skur|Sumarhus", kaupskra$tegund)] <- "Ekki íbúðarhúsnæði"
 
-Nú er orðin til ný breyta, sem inniheldur bara ártalið. Það sem það eru
-bara tölur er breytan talnabreyta.
+Nú er orðin til ný breyta sem inniheldur hvort hús sé íbúðarhúsnæði. Breytan er sjálfkrafa orðabreyta
+fyrst við gáfum henni orðagildi.
 
 ::
 
-   str(puls$ar)
-   ##  num [1:471] 2013 2013 2013 2013 2013 ...
+   str(kaupskra$ibud)
+   ##  chr [1:169636] "Ekki íbúðarhúsnæði" "Ekki íbúðarhúsnæði" ...
 
 Getum líka notað ``str_detect()`` skipunina úr stringr pakkanum til að búa til breytur.
 Þá er hægt t.d. að búa til nýja breytu ``Laugarvegur`` sem geymir TRUE ef eignin er 
 á Laugarveginum.
 
 ::
+
    kaupskra$Laugarvegur<-str_detect(kaupskra$heimilisfang, "Laugarvegur") 
 
 Skoðum hvaða eignir eru á Laugarveginum
 
 ::
+
    which(kaupskra$Laugarvegur==TRUE)
    ## [1]  75723  75724  75725  75726  75727  75728  75729  75730
    ## [9]  75731  75732  75733  75734  75735  75736  75737  75903
@@ -1366,8 +1367,8 @@ er kaupverd ekki gefið í milljónum.
 
 Hér má einnig nota ``mutate()`` fallið sem er oft þægilegra.
 ::
+   
    kaupskra <- mutate(kaupskra, fermetraverd=kaupverd*1000/einflm)
-
 
 .. _s.umrodun:
 
@@ -1551,12 +1552,12 @@ kaupverði gerum við það með:
 
 .. _rf.gather:
 
-gather()
+pivot_longer
 ^^^^^^^^
 
 .. attention::
 
-    **Inntak:** nafn á gagnatöflu og tveir vigrar
+    **Inntak:** gagnatafla og tveir eða fleiri vigrar
     
     **Úttak:** gagnatafla
     
@@ -1565,7 +1566,7 @@ gather()
 
 --------------
 
-Skipunin ``gather()`` varpar gögnum úr víðu sniði í langt á handhægan
+Skipunin ``pivot_longer()`` varpar gögnum úr víðu sniði í langt á handhægan
 hátt. Sem dæmi eru upplýsingarnar um púls núna geymdar í tveimur
 breytum, ``fyrriPuls`` og ``seinniPuls``. Við gætum þess í stað haft
 eina breytu, ``pulsmaeling``, sem geymir púlsmælinguna og aðra breytu,
@@ -1574,44 +1575,33 @@ púlsmælinguna. Þetta er framkvæmt með skipuninni:
 
 ::
 
-   pulslangt <- gather(puls, nr.maelingar, pulsmaeling, fyrriPuls:seinniPuls)
+   pulslangt <- puls %>% pivot_longer(c(fyrriPuls,seinniPuls), names_to="nr.maelingar", values_to="pulsmaeling")
 
-Fyrst tilgreinum við nafnið á gagnatöflunni sem við erum að vinna með,
-þar næst kemur hvað breytan sem greinir að hvort að mælingin er fyrr eða
+Fyrst tökum við fram hvaða gagnatöflu við erum að vinna með og pípum henni í skipunina,
+við tilgreinum svo ``fyrriPuls`` og ``seinniPuls`` sem breyturnar sem við viljum varpa
+á langt snið. Næst kemur hvað breytan sem greinir að hvort að mælingin er fyrr eða
 seinni púlsmæling á að heita. Við látum hana heita ``nr.maelingar``. Þar
 næst kemur hvað breytan sem tilgreinir hver mældi púlsinn er heitir, við
-gefum henni nafnið ``pulsmaeling`` og að lokum koma breyturnar tvær
-``fyrriPuls`` og ``seinniPuls``, aðgreindar með ``:``, sem að áður
-geymdu púlsmælingarnar á víðu sniði. Sjáið muninn:
+gefum henni nafnið ``pulsmaeling`` 
+
+Eftir skipunina lítur gagnataflan svona út:
 
 ::
 
    head(pulslangt)
-   ##   namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 1  STAE209 landvaettir  161     60    23 kvk    nei     nei         3.5
-   ## 2   LAN203    thorskur  185    115    52  kk   <NA>      ja         0.0
-   ## 3   LAN203 landvaettir  167     NA    22 kvk    nei      ja         2.0
-   ## 4  STAE209    thorskur  174     67    21 kvk    nei      ja         1.0
-   ## 5  STAE209    thorskur  163     57    20 kvk    nei      ja         5.0
-   ## 6  STAE209 landvaettir  175     59    20 kvk    nei      ja         5.0
-   ##    inngrip dagsetning likamsraektf likamsraekt2   ar      BMI nr.maelingar
-   ## 1 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013 23.14726    fyrriPuls
-   ## 2    hljop 2013-01-07        Lítil    ekkiMikil 2013 33.60117    fyrriPuls
-   ## 3 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013       NA    fyrriPuls
-   ## 4    hljop 2013-01-07        Lítil    ekkiMikil 2013 22.12974    fyrriPuls
-   ## 5 sat_kyrr 2013-01-07        Mikil        Mikil 2013 21.45357    fyrriPuls
-   ## 6 sat_kyrr 2013-01-07        Mikil        Mikil 2013 19.26531    fyrriPuls
-   ##   pulsmaeling
-   ## 1          83
-   ## 2          80
-   ## 3          43
-   ## 4          76
-   ## 5          71
-   ## 6          65
+   ##    # A tibble: 6 × 5
+   ##      id likamsraekt inngrip  nr.maelingar pulsmaeling
+   ##   <int>       <dbl> <chr>    <chr>              <int>
+   ## 1     1         2   hljop    fyrriPuls             80
+   ## 2     1         2   hljop    seinniPuls           103
+   ## 3     2         1   sat_kyrr fyrriPuls             90
+   ## 4     2         1   sat_kyrr seinniPuls            91
+   ## 5     3         3.5 sat_kyrr fyrriPuls             83
+   ## 6     3         3.5 sat_kyrr seinniPuls            84
 
 .. _rf.spread:
 
-spread()
+pivot_wider()
 ^^^^^^^^
 
 .. attention::
@@ -1625,13 +1615,13 @@ spread()
 
 --------------
 
-Skipunin ``spread`` er andhverfa ``gather()``, þ.e.a.s. hún varpar
+Skipunin ``pivot_wider()`` er andhverfa ``pivot_longer()``, þ.e.a.s. hún varpar
 gögnum úr löngu sniði í vítt. Þannig vörpum við löngu ``pulslangt``
 gögnunum sem við bjuggum til að ofan yfir í langt snið með skipuninni:
 
 ::
 
-   pulsvitt <- spread(pulslangt, nr.maelingar, pulsmaeling)
+   pulsvitt <- pulslangt %>% pivot_wider(names_from=nr.maelingar, values_from=pulsmaeling)
 
 Hér þarf eingöngu að tilgreina breyturnar tvær sem á að skilja í sundur.
 R sér um rest, eins og sjá má:
@@ -1639,27 +1629,15 @@ R sér um rest, eins og sjá má:
 ::
 
    head(pulsvitt)
-   ##   namskeid   kronukast haed thyngd aldur kyn reykir drekkur likamsraekt
-   ## 1  STAE209 landvaettir  161     60    23 kvk    nei     nei         3.5
-   ## 2   LAN203    thorskur  185    115    52  kk   <NA>      ja         0.0
-   ## 3   LAN203 landvaettir  167     NA    22 kvk    nei      ja         2.0
-   ## 4  STAE209    thorskur  174     67    21 kvk    nei      ja         1.0
-   ## 5  STAE209    thorskur  163     57    20 kvk    nei      ja         5.0
-   ## 6  STAE209 landvaettir  175     59    20 kvk    nei      ja         5.0
-   ##    inngrip dagsetning likamsraektf likamsraekt2   ar      BMI fyrriPuls
-   ## 1 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013 23.14726        83
-   ## 2    hljop 2013-01-07        Lítil    ekkiMikil 2013 33.60117        80
-   ## 3 sat_kyrr 2013-01-07     Miðlungs    ekkiMikil 2013       NA        43
-   ## 4    hljop 2013-01-07        Lítil    ekkiMikil 2013 22.12974        76
-   ## 5 sat_kyrr 2013-01-07        Mikil        Mikil 2013 21.45357        71
-   ## 6 sat_kyrr 2013-01-07        Mikil        Mikil 2013 19.26531        65
-   ##   seinniPuls
-   ## 1         84
-   ## 2        103
-   ## 3         52
-   ## 4        105
-   ## 5         68
-   ## 6         65
+   ## # A tibble: 6 × 5
+   ##      id likamsraekt inngrip  fyrriPuls seinniPuls
+   ##   <int>       <dbl> <chr>        <int>      <int>
+   ## 1     1         2   hljop           80        103
+   ## 2     2         1   sat_kyrr        90         91
+   ## 3     3         3.5 sat_kyrr        83         84
+   ## 4     4         0   hljop           80        103
+   ## 5     5         2   sat_kyrr        43         52
+   ## 6     6         1   hljop           76        105
 
 .. _rf.merge:
 

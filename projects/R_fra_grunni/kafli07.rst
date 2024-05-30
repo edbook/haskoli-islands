@@ -41,6 +41,8 @@ binom.test()
     
     **Helstu stillingar:** conf.level, p
 
+    **Forkröfur prófs:** Engar
+
 
 --------------
 
@@ -107,6 +109,8 @@ prop.test()
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil ofl.
     
     **Helstu stillingar:** conf.level, p
+
+    **Forkröfur prófs:** Normalnálgun
 
 
 --------------
@@ -203,6 +207,8 @@ chisq.test()
     
     **Helstu stillingar:** conf.level, simulate.p.value
 
+    **Forkröfur prófs:** Normalnálgun, allar töflur í væntitöflu >5
+
 
 --------------
 
@@ -289,6 +295,8 @@ fisher.test()
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil ofl.
     
     **Helstu stillingar:** conf.level, p
+
+    **Forkröfur prófs:** Engar
 
 
 --------------
