@@ -181,8 +181,8 @@ lína hunsuð og við fáum jafnvel villu:
 
 ::
 
-   ggplot(data = puls, aes(kyn)) + geom_bar() + xlab('Kyn') + ylab('Fjöldi')
-   + scale_x_discrete(labels = c("Konur","Karlar"))
+   ggplot(data = dat, aes(is)) + geom_bar() + xlab('Uppáhalds ís') + ylab('Fjöldi')
+   + scale_x_discrete(labels = c("Jarðaberjaís","Súkkulaðiís","Vanilluís"))
    ## Error in `+.gg`:
    ## ! Cannot use `+` with a single argument.
    ## ℹ Did you accidentally put `+` on a new line?

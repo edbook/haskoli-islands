@@ -212,7 +212,7 @@ chisq.test()
 
 --------------
 
-Könnum nú hvort samband sé á milli hvaða ís fólk vill og hvort það hafi kosið.
+Könnum nú hvort samband sé á milli hvaða ís nemendur velja og hvort þau hafi kosið.
 Við byrjum á að búa til töflu mældrar tíðni:
 
 ::
@@ -244,7 +244,7 @@ væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnit�
 
 Ef einhverjar tölur eru minni en fimm í væntitíðnitöflunni varar R okkur
 við. Sjáum til dæmis hvað gerist ef við viljum skoða samband þess að vera vera hrifinn af hundum eða köttum og
-hvert nemendur vilja fara á stefnumót:
+hvert nemendur vilja helst fara á stefnumót:
 
 ::
 
@@ -277,7 +277,7 @@ með skipuninni ``fisher.test()``:
 
 ::
 
-   fisher.test(table(puls2013$reykir,puls2013$likamsraektf))
+   fisher.test(table(dat$dyr, dat$stefnumot))
    ##
    ##  Fisher's Exact Test for Count Data
    ##

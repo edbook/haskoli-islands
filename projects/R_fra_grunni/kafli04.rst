@@ -365,9 +365,9 @@ Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
    ##  Súkkulaði  0.30348259 0.14925373
    ##  Vanilla    0.21393035 0.13930348
 
-Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu sem eru hrifinn af hundum
-elska súkkulaðiís. Viljum við aftur á máti skoða hlutföllin eftir línum
-í töflunni gerum við það með:
+Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við 
+hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti 
+skoða hlutföllin eftir línum í töflunni gerum við það með:
 
 ::
 
@@ -378,9 +378,9 @@ elska súkkulaðiís. Viljum við aftur á máti skoða hlutföllin eftir línum
    ##  Súkkulaði  0.6703297 0.3296703
    ##  Vanilla    0.6056338 0.3943662
 
-Í töflunni má t.d. sjá að um 67% nemenda sem elska súkkulaðiís eru hrifnir af hundum. 
-Viljum við hins vegar skoða hlutföllin eftir dálkum í töflunni gerum við það
-með:
+Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur 
+eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir 
+dálkum í töflunni gerum við það með:
 
 ::
 
@@ -391,7 +391,7 @@ með:
    ##  Súkkulaði  0.4803150 0.4054054
    ##  Vanilla    0.3385827 0.3783784
 
-Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elskar jarðaberjaís.
+Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
 
 Takið eftir að nota má ``prop.table()`` til að reikna lýsistærðirnar
 næmi (e. sensitivity) og sértæki (e. specificity).
@@ -525,8 +525,7 @@ sömu gagnatöflu og talnabreytan. Við mötum ``tapply()`` aðferðina með
 nafninu á talnabreytunni, nafninu á flokkabreytunni og nafninu á
 aðferðinni sem við viljum beita. Ef það vantar einhver gildi þurfum við
 að nota ``na.rm=TRUE`` líkt og áður. Viljum við t.d. reikna út meðaltal
-fyrri púlsmælinganna í líkamsræktarhópunum þremur sem við mynduðum hér að
-ofan gerum við það með:
+ferðatíma í skóla eftir ferðamáta gerum við það með:
 
 ::
 
@@ -535,6 +534,110 @@ ofan gerum við það með:
    ##                2.500000                11.666667                 7.588235 
    ##            Með einkabíl               Með strætó 
    ##               19.923077                33.733333
+
+Pípurtiháttur
+^^^^^^^^^^^^^
+
+Hingað til hafið þið kynnst allskyns skipunum í R og ættuð að vera
+orðin nokkuð kunnug R umhverfinu. Þegar skipanir eru orðanr langar
+og flóknar getur verið gott að nota pípurithátt. Táknið ``%>%`` 
+lesið "og þá". Pípur eru notaðar til að "pípa" lausn úr einni skipun
+yfir í aðra. Með því að nota pípurihátt verða skipanirnar einfaldari
+og auðskiljanlegar. Skoðum nokkur dæmi um pípurithátt:
+
+Ef við viljum t.d. finna meðaltalið á tölunum 1-101, taka svo kvaðratrótina
+af meðaltalinu og skila með tveimur aukastöfum. Án pípunar er það gert svona:
+
+::
+   round(sqrt(mean(1:101)),2)
+   ## 7.14
+
+Með pípun:
+
+::
+   1:101 %>%
+      mean() %>%
+      sqrt() %>%
+      round(2)
+   ## 7.14
+
+Þessa skipun er auðveldara að lesa.
+
+Ef við viljum skoða meðalferðatíma í skóla hjá þeim sem ferðast með strætó
+eftir því hvaða ís þeim finnst bestur. Byrjum að gera þetta án pípunar.
+
+::
+   dat1 <- dat 
+   dat1 <- filter(dat1, ferdamati_skoli=="Með strætó")
+   dat1 <- select(dat1, ferdatimi_skoli, is)
+   dat1 <- group_by(dat1, is)
+   dat1 <- summarize(dat1, Meðalferðatími=mean(ferdatimi_skoli))
+   dat1
+   ## is             Meðalferðatími
+   ## Jarðaberja     48.60000
+   ## SúkkulaðI      25.07692
+   ## Vanilla        36.91667
+
+Hér þurftum við að búa til nýtt gagnasett og yfirskrifa það. Mun einfaldara
+er að gera þetta með pípurithætti.
+
+::
+   dat %>% 
+      filter(ferdamati_skoli=="Með strætó") %>% 
+      select(ferdatimi_skoli, is) %>% 
+      group_by(is) %>% 
+      summarise(mean(ferdatimi_skoli))
+   ## is             Meðalferðatími
+   ## Jarðaberja     48.60000
+   ## SúkkulaðI      25.07692
+   ## Vanilla        36.91667
+
+Það má líka nota pípurithátt við að teikna myndir.
+
+::
+   dat %>% ggplot(aes(x=is, y=ferdatimi_skoli))+
+   geom_boxplot()
+
+.. figure:: myndir/mynd_pipu_4.svg  
+
+Skoðum fleiri dæmi:
+
+::
+   dat %>% select(ferdatimi_skoli) %>% summary()
+   ## ferdamati_skoli
+   ## Min.     :0.00
+   ## 1at Qu.  :8.00 
+   ## Median   :16.00
+   ## Mean     :19.43
+   ## 3rd Qu   :25.00
+   ## Max.     :75.00
+
+Einnig má nota ``kable()`` skipunina sem útbýr fína töflu.
+
+::
+   table(dat$stefnumot) %>% kable()
+   ## Var1           Freq
+   ## Á ísrúnt       93
+   ## Á kaffihús     74
+   ## Í bíó          12
+   ## Í fjallgöngu   22
+
+Reiknum allskyns lýsistærðir fyrir breytuna ``smjor_kostar`` 
+eftir breytunni ``is``.
+
+::
+   dat %>%
+      filter(!is.na(smjor_kostar)) %>%
+      group_by(stefnumot) %>%
+      summarise("Miðgildi"=median(smjor_kostar), 
+      "Meðaltal" = mean(smjor_kostar),
+      "Staðalfrávik" = sd(smjor_kostar)) %>% kable()
+   ## stefnumot      Miðgildi    Meðaltal    Staðalfrávik
+   ## Á kaffihús	   500.0	      577.5676	   209.5798
+   ## Á ísrúnt	      618.0	      621.6667	   229.0420
+   ## Í bíó	         589.5	      576.0000	   184.0198
+   ## Í fjallgöngu	513.5	      540.5909	   153.5586 
+   
 
 Leiksvæði fyrir R kóða
 ----------------------

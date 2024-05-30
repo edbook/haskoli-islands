@@ -56,14 +56,15 @@ Aðferðin ``lm()`` metur gildi stikanna :math:`\beta_0` og
 -  Gagnatöflunni sem geymir gögnin.
 
 Þegar aðhvarfsgreining er framkvæmd margborgar sig að búa til hlut sem
-inniheldur allt það sem hún skilar. Metum nú stuðla í líkani sem lýsir
-því hvaða áhrif hæð hefur á þyngd nemenda og vistum líkanið undir
-nafninu ``lm1``. Þar sem við metum áhrif hæðar á þyngd er svarbreytan
-``thyngd`` vinstra megin í formúlunni.
+inniheldur allt það sem hún skilar. Metum nú stuðla í líknai sem lýsir 
+því hvaða áhrif lengd á skotti hefur á heildarlengd pokarottu og vistum
+líknaið undir nafninu ``lm1``. Þar sem við metum áhrif lengd á skotti á 
+heildarlengd pokarottu. Hér er svarbreytan ``tail_l`` og ``total_l`` 
+skýribreytan.
 
 ::
 
-   lm1<-lm(thyngd~haed,data=puls)
+   lm1<-lm(tail_l~total_l,data=possum)
    names(lm1)
    ##  [1] "coefficients"  "residuals"     "effects"       "rank"
    ##  [5] "fitted.values" "assign"        "qr"            "df.residual"
@@ -79,37 +80,36 @@ aðhvarfsgreiningarhlutnum ``lm1`` til að fá ýmsar upplýsingar:
    summary(lm1)
    ##
    ## Call:
-   ## lm(formula = thyngd ~ haed, data = puls)
+   ## lm(formula = tail_l ~ total_l, data = possum)
    ##
    ## Residuals:
    ##     Min      1Q  Median      3Q     Max
-   ## -27.781  -7.473  -1.984   5.306  37.215
+   ## -3.4441  -1.2476  0.1131   1.0238  4.8560
    ##
    ## Coefficients:
    ##               Estimate Std. Error t value Pr(>|t|)
-   ## (Intercept) -108.75402    9.18021  -11.85   <2e-16 ***
-   ## haed           1.03987    0.05288   19.66   <2e-16 ***
+   ## (Intercept)    14.61613    3.23648  4.516   1.7e-05 ***
+   ## haed           0.25713    0.03712   6.927   3.94e-10 ***
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
    ##
-   ## Residual standard error: 11.17 on 458 degrees of freedom
-   ##   (11 observations deleted due to missingness)
-   ## Multiple R-squared:  0.4577, Adjusted R-squared:  0.4566
-   ## F-statistic: 386.6 on 1 and 458 DF,  p-value: < 2.2e-16
+   ## Residual standard error: 1.624 on 102 degrees of freedom
+   ## Multiple R-squared:  0.32, Adjusted R-squared:  0.3133
+   ## F-statistic: 47.99 on 1 and 102 DF,  p-value:  3.935e-10
 
 Ýmislegt má lesa út úr úttakinu. Þar ber helst að:
 
--  Matið á skurðpunktinum (:math:`b_0`) er -108.75402.
+-  Matið á skurðpunktinum (:math:`b_0`) er 14.61613
 
--  Matið á hallatölunni (:math:`b_1`) er 1.03987.
+-  Matið á hallatölunni (:math:`b_1`) er 0.25713.
 
--  Prófstærðin t = -11.85 kannar tilgátuprófið hvort :math:`\beta_0 = 0`.
+-  Prófstærðin t = 4.516 kannar tilgátuprófið hvort :math:`\beta_0 = 0`.
 
--  Prófstærðin t = 19.66 kannar tilgátuprófið hvort :math:`\beta_1 = 0`.
+-  Prófstærðin t = 6.927 kannar tilgátuprófið hvort :math:`\beta_1 = 0`.
 
--  Skýringarhlutfallið er :math:`R^2` = 0.458.
+-  Skýringarhlutfallið er :math:`R^2` = 0.3133.
 
--  Matið á :math:`\sigma` er :math:`s_e =` 11.17.
+-  Matið á :math:`\sigma` er :math:`s_e =` 1.624.
 
 .. _s.lmoryggis:
 
@@ -142,15 +142,15 @@ er að það sé 95%.
 ::
 
    confint(lm1)
-   ##                    2.5 %     97.5 %
-   ## (Intercept) -126.7945689 -90.713462
-   ## haed           0.9359419   1.143796
+   ##                    2.5 %      97.5 %
+   ## (Intercept)       8.1965963   21.0356650
+   ## total_l           0.1835114   0.3307585
 
 Hér sést að:
 
--  Öryggisbil fyrir :math:`\beta_0` er :math:`[-126.7945689, -90.7134618]`.
+-  Öryggisbil fyrir :math:`\beta_0` er :math:`[8.1965963, 21.0356650]`.
 
--  Öryggisbil fyrir :math:`\beta_1` er :math:`[0.9359419, 1.1437964]`.
+-  Öryggisbil fyrir :math:`\beta_1` er :math:`[0.1835114, 0.3307585]`.
 
 .. _s.lmleifar:
 
@@ -163,11 +163,12 @@ normaldreifðar, með sömu dreifni. Leifarnar má nálgast með:
 ::
 
    lm1$resid
-   ##            1            2            4            5            6
-   ##   1.33508486  31.37822565  -5.18321388  -3.74465341 -14.22308301
-   ##            7            8            9           10           11
-   ##  -6.34269041   4.13901085  -6.26295215   7.73704785  -6.78125088
-   ##           12           13           14           15           16
+   ##             1             2             4              5     
+   ##  -1.501138677  -1.643975982  -0.172515669   -0.272543443   
+   ##             6             7             8              9
+   ##  -2.386841060  -1.629706138  -1.015408521   -1.143975982
+   ##            10            11            12             13  
+   ##  -0.129706138   1.370293862  -2.772543443   -1.629706138
    ....
 
 Gott er að teikna normaldreifingarrit af leifunum. Takið eftir því að
@@ -178,7 +179,7 @@ hér mötum við skipunina ``ggplot()`` með aðhvarfsgreiningarhlutnum
 
    ggplot(data=lm1, aes(sample=.resid)) + stat_qq()
 
-.. figure:: myndir/unnamed-chunk-235-1.svg
+.. figure:: myndir/mynd10_1.svg
 
 .. _s.lmspa:
 
@@ -207,22 +208,22 @@ Við getum spáð fyrir gildi á svarbreytunni fyrir ákveðið gildi á
 skýribreytunni með aðferðinni ``predict()``. Mata þarf aðferðina með
 nafninu á aðhvarfsgreiningarhlutnum, nafninu á skýribreytunni og
 gagnatöflu sem inniheldur þau gildi á skýribreytunni sem við viljum fá
-spá fyrir. Hér fyrir neðan reiknum við spá fyrir þyngd einstaklings serm
-er 180 cm á hæð:
+spá fyrir. Hér fyrir neðan reiknum við spá fyrir leng skotts á 90 cm 
+langri pokarottu:
 
 ::
 
-   predict(lm1,newdata=data.frame(haed=180))
+   predict(lm1,newdata=data.frame(total_l=90))
    ##        1
-   ## 78.42243
+   ## 37.75827
 
 Aðferðina má einnig nota til að fá spábil:
 
 ::
 
-   predict(lm1,interval="prediction",newdata=data.frame(haed=180))
-   ##        fit      lwr      upr
-   ## 1 78.42243 56.43465 100.4102
+   predict(lm1,interval="prediction",newdata=data.frame(total_l=90))
+   ##        fit      lwr         upr
+   ## 1 37.75827  34.5149   41.00164
 
 .. _s.onnurprof:
 
@@ -232,24 +233,24 @@ Próf á fylgnistuðli
 Tilgátupróf fyrir :math:`\rho` má framkvæma með ``cor.test()``
 aðferðinni. Við þurfum að mata aðferðina með heitunum á breytunum sem
 við ætlum að kanna fylgnina á milli. Viljum við kanna fylgnina á milli
-breytanna ``thyngd`` og ``haed`` notum við skipunina:
+breytanna ``tail_l`` og ``total_l`` notum við skipunina:
 
 ::
 
-   cor.test(puls$thyngd,puls$haed)
+   cor.test(possum$tail_l,possum$total_l)
    ##
    ##  Pearson's product-moment correlation
    ##
-   ## data:  puls$thyngd and puls$haed
-   ## t = 19.663, df = 458, p-value < 2.2e-16
+   ## data:  possum$tail_l and possum$total_l
+   ## t = 6.9275, df = 102, p-value = 3.935e-10
    ## alternative hypothesis: true correlation is not equal to 0
    ## 95 percent confidence interval:
-   ##  0.6237265 0.7232602
+   ##   0.4186653 0.6837485
    ## sample estimates:
    ##       cor
-   ## 0.6765718
+   ## 0.5656455 
 
-Takið eftir að prófstærðin er t = 19.663 sem er nákvæmlega það sama og
+Takið eftir að prófstærðin er t = 6.9275 sem er nákvæmlega það sama og
 þegar við prófuðum núlltilgátuna :math:`H_0: \beta_1=0`.
 
 .. _s.lmstrjal:
@@ -282,24 +283,24 @@ Við sáum í kafla :numref:`%s <c.fervikagreining>` að nota má ``aov()`` aðf
 og ``anova()`` aðferðirnar til að fá fervikagreiningartöfluna. Í stað
 ``aov()`` aðferðarinnar má nota ``lm()`` aðferðina líkt og við gerðum
 hér að ofan fyrir línulegu aðhvarfsgreininguna. Skoðum aftur samband
-``fyrriPuls`` og ``likamsraektf`` en notum nú ``lm()`` aðferðina:
+``total_l`` og ``sex`` en notum nú ``lm()`` aðferðina:
 
 ::
 
-   lm.puls <- lm(fyrriPuls ~ likamsraektf, data = puls)
+   lm.possum <- lm(total_l ~ sex, data = possum)
 
 Við getum fengið fervikasummutöfluna á sama hátt og áður með ``anova()``
 aðferðinni:
 
 ::
 
-   anova(lm.puls)
+   anova(lm.possum)
    ## Analysis of Variance Table
    ##
-   ## Response: fyrriPuls
-   ##               Df Sum Sq Mean Sq F value    Pr(>F)
-   ## likamsraektf   2   2580  1289.9  9.5055 9.065e-05 ***
-   ## Residuals    446  60521   135.7
+   ## Response: total_l
+   ##               Df  Sum Sq  Mean Sq   F value   Pr(>F)
+   ## sex            1  49.12   49.116    2.6867    0.1043
+   ## Residuals    102 1864.71  18.281
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -308,27 +309,26 @@ aðferðinni:
 
 ::
 
-   summary(lm.puls)
+   summary(lm.possum)
    ##
    ## Call:
-   ## lm(formula = fyrriPuls ~ likamsraektf, data = puls)
+   ## lm(formula = total_l ~ sex, data = possum)
    ##
    ## Residuals:
    ##     Min      1Q  Median      3Q     Max
-   ## -31.217  -8.217  -0.148   6.783  46.783
+   ## -12.907  -2.511   0.093   2.989   9.489 
    ##
    ## Coefficients:
-   ##                      Estimate Std. Error t value Pr(>|t|)
-   ## (Intercept)            75.148      1.294  58.060  < 2e-16 ***
-   ## likamsraektfMiðlungs   -1.931      1.553  -1.243 0.214522
-   ## likamsraektfMikil      -6.012      1.553  -3.871 0.000125 ***
+   ##                      Estimate Std. Error   t value   Pr(>|t|)
+   ## (Intercept)            87.9070     0.6520  134.819  <2e-16 ***
+   ## sexm                   -1.3955     0.8514  -1.639    0.104
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
    ##
-   ## Residual standard error: 11.65 on 446 degrees of freedom
+   ## Residual standard error: 4.276 on 102 degrees of freedom
    ##   (22 observations deleted due to missingness)
-   ## Multiple R-squared:  0.04088,    Adjusted R-squared:  0.03658
-   ## F-statistic: 9.505 on 2 and 446 DF,  p-value: 9.065e-05
+   ## Multiple R-squared:  0.02566,    Adjusted R-squared:  0.01611
+   ## F-statistic: 2.687 on 1 and 102 DF,  p-value: 0.1043
 
 Hægt er að stilla hvaða *samanburðarstuðla* (e. contrasts) eru notaðir en
 sjálfgegna stillingin er að nota svo kallaða *contr.treatment* en þá er
@@ -339,13 +339,9 @@ leggja gildið á viðkomandi stika við matið fyrir viðmiðunarflokkinn.
 
 Í dæminu hér að ofan má því lesa eftirfarandi:
 
--  Matið á fyrri púls í flokknum sem stundar litla líkamsrækt er 75.148.
+- Matið á lengd kvenkyns pokarottu er 87.9070.
 
--  Matið á fyrri púls í flokknum sem stundar miðlungs líkamsrækt er
-   75.148 + (-1.931) = 73.217.
-
--  Matið á fyrri púls í flokknum sem stundar mikla líkamsrækt er 75.148
-   + (-6.012) = 69.136.
+- Matið á lengd karlkyns pokarottu er 87.9070 + (-1.3955) = 86.5115.
 
 .. _s.lmfleiribreytur:
 
