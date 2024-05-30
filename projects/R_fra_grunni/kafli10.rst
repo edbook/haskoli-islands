@@ -53,6 +53,11 @@ Aðferðin ``lm()`` metur gildi stikanna :math:`\beta_0` og
 
 -  Gagnatöflunni sem geymir gögnin.
 
+Munum að gildi á skýribreytu hefur áhrif á hvaða gildi svarbreyta mun taka, 
+þ.e. svarbreytan er alltaf háða breytan og skýribreytan sú óháða.  Eins og 
+til dæmis er hæð skýribreyta og þyngd svarbreyta. Magn áfengis í blóði er 
+svarbreyta en fjöldi áfengra drykkja er skýribreyta.  
+
 Þegar aðhvarfsgreining er framkvæmd margborgar sig að búa til hlut sem
 inniheldur allt það sem hún skilar. Metum nú stuðla í líknai sem lýsir 
 því hvaða áhrif lengd á skotti hefur á heildarlengd pokarottu og vistum
