@@ -1,5 +1,5 @@
 Kafli 1
-=========
+=======
 
 Línuleg Algebra er sú grein innan stærðfræðinnar sem fæst við línuleg jöfnuhneppi,
 vigra, vigurrúm, línulegar varpanir og önnur tengd viðfangsefni. Í þessu námskeiði 
@@ -14,15 +14,15 @@ Línuleg jöfnuhneppi
 Línuleg algebra gengur út á að leysa jöfnuhneppi.
 
 Sýnidæmi: línulegt jöfnuhneppi
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. tip:: 
     
     Leysið jöfuhneppið :math: `x+2y=-3 \\ x-y= 6`. Drögum neðri jöfnuna frá þeirri efri
-    og fáum :math: `3y=-9` sem gefur `y=-3`. Stingum inn í neðri jöfnuna og gefur
-    `x=3`. Þar með er `(x,y)=(3,-3)` lausn jöfnuhneppisins.
+    og fáum :math: `3y=-9` sem gefur :math:`y=-3`. Stingum inn í neðri jöfnuna og gefur
+    :math:`x=3`. Þar með er :math:`(x,y)=(3,-3)` lausn jöfnuhneppisins.
 
 Skoðum jöfnuhneppið úr sýnidæminu að ofan. Þar sem jöfnuhneppið hefur lausn segjum við að
 jöfnuhneppið sé samkvæmt (e. consistent). Þar sem jöfnuhneppið hefur aðeins eina lausn 
 segjum við að lausnin sé ótvírætt ákvörðuð (e. unique). Við segjum að stuðlar 
-(e. coefficients) jöfnuhneppisins eru: :math: `1 & 2 \\ 1 & -1`
+(e. coefficients) jöfnuhneppisins eru: :math: :math:`1  2 \\ 1  -1`. 
