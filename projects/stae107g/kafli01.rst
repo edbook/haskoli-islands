@@ -16,13 +16,32 @@ Línuleg algebra gengur út á að leysa jöfnuhneppi.
 Sýnidæmi: línulegt jöfnuhneppi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tip:: 
+.. admonition:: Dæmi
+  :class: daemi
     
-    Leysið jöfuhneppið :math: `x+2y=-3 \\ x-y= 6`. Drögum neðri jöfnuna frá þeirri efri
-    og fáum :math: `3y=-9` sem gefur :math:`y=-3`. Stingum inn í neðri jöfnuna og gefur
+    Leysið jöfuhneppið:  
+    .. math::
+        \begin{aligned}
+        x + 2y &= -3 \\
+        x - y &= 6 
+        \end{aligned}
+        
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+    Drögum neðri jöfnuna frá þeirri efri og fáum :math: `3y=-9` sem gefur
+    :math:`y=-3`. Stingum inn í neðri jöfnuna og gefur
     :math:`x=3`. Þar með er :math:`(x,y)=(3,-3)` lausn jöfnuhneppisins.
 
 Skoðum jöfnuhneppið úr sýnidæminu að ofan. Þar sem jöfnuhneppið hefur lausn segjum við að
 jöfnuhneppið sé samkvæmt (e. consistent). Þar sem jöfnuhneppið hefur aðeins eina lausn 
 segjum við að lausnin sé ótvírætt ákvörðuð (e. unique). Við segjum að stuðlar 
 (e. coefficients) jöfnuhneppisins eru: :math: :math:`1  2 \\ 1  -1`. 
+
+
+Skilgreining: titill
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+        Hér kemur skilgreining
