@@ -148,7 +148,7 @@ def cmd_create(
     #data = {"name": name, "description": description, "author": author, "email": email}
     data = {"authors": [{"name": author, "email": email}], "description": description, "name": name}
     with open(dest / Path("config.yml"), "w") as f:
-        yaml.dump(data, f, default_flow_style=False, allow_unicode=True)
+        yaml.dump(data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
     print()
     print(f"[bold blue]Your course is now available at {dest}[/bold blue]")
 
