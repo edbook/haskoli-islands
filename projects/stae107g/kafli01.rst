@@ -5,13 +5,11 @@ Línuleg Algebra er sú grein innan stærðfræðinnar sem fæst við línuleg j
 vigra, vigurrúm, línulegar varpanir og önnur tengd viðfangsefni. Í þessu námskeiði 
 verður farið yfir helstu hugtök í línulegri algebru. Farið verður yfir: línuleg 
 jöfnuhneppi, fylki, ákveður, vigra og vigurrúm, eiginvigra og eigingildi og innfeldi. 
-Hagnýtingat línulegrar algebru má meðal annars finna innan verkfræðinnar, innan 
+Hagnýtingar línulegrar algebru má meðal annars finna innan verkfræðinnar, innan 
 eðlisfræðinnar, í tölvugrafík, fjármálum og í tengslum við gervigreind.
 
 Línuleg jöfnuhneppi
 -------------------
-
-Línuleg algebra gengur út á að leysa jöfnuhneppi.
 
 Sýnidæmi: línulegt jöfnuhneppi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,8 +32,8 @@ Sýnidæmi: línulegt jöfnuhneppi
   með er :math:`(x,y)=(3,-3)` lausn jöfnuhneppisins.
 
 Skoðum jöfnuhneppið úr sýnidæminu að ofan. Þar sem jöfnuhneppið hefur lausn segjum við að
-jöfnuhneppið sé samkvæmt (e. consistent). Þar sem jöfnuhneppið hefur aðeins eina lausn 
-segjum við að lausnin sé ótvírætt ákvörðuð (e. unique). Við segjum að stuðlar 
+jöfnuhneppið sé **samkvæmt** (e. consistent). Þar sem jöfnuhneppið hefur aðeins eina lausn 
+segjum við að lausnin sé **ótvírætt ákvörðuð** (e. unique). Við segjum að **stuðlar** 
 (e. coefficients) jöfnuhneppisins eru: 
 
     .. math:: \begin{bmatrix}
@@ -68,7 +66,7 @@ Sýnidæmi: línulegt jöfnuhneppi
      -2x+4y&= 6 
      \end{align*}
 
-  Leggjum svo saman jöfnurnar og fáum :math:`0=16` svo jöfnuhneppið 
+  Leggjum saman jöfnurnar og fáum :math:`0=16` svo jöfnuhneppið 
   hefur enga lausn. Við segjum því að jöfnuhneppið sé ósamkvæmt (e. inconsistent).
 
 Sýnidæmi: línulegt jöfnuhneppi
@@ -101,12 +99,12 @@ Sýnidæmi: línulegt jöfnuhneppi
        0 &= 0
        \end{align*}
     
-    Lína :math:`0=0` kallast núllína. Athugum þá hvort jafnan 
-    :math:`x+y=2` einhveja lausn. Já, :math:`(x,y)=(1,1)` og 
-    :math:`(x,y)=(2,0)` eru dæmi um lausnir. Jöfnuhneppið er 
-    samkvæmt en lausnin er ekki ótvírætt ákvörðuð. Ef við veljum 
-    til dæmis :math:`y=t` fæst :math:`x=2-t`. Svo allar tvenndir af
-    gerð :math:`(x,y)=(2-t,t)` eru lausnir jöfnuhneppisins. 
+   Lína :math:`0=0` kallast núllína. Athugum þá hvort jafnan 
+   :math:`x+y=2` einhveja lausn. Já, :math:`(x,y)=(1,1)` og 
+   :math:`(x,y)=(2,0)` eru dæmi um lausnir. Jöfnuhneppið er 
+   samkvæmt en lausnin er ekki ótvírætt ákvörðuð. Ef við veljum 
+   til dæmis :math:`y=t` fæst :math:`x=2-t`. Svo allar tvenndir af
+   gerð :math:`(x,y)=(2-t,t)` eru lausnir jöfnuhneppisins. 
 
 
 
@@ -125,6 +123,7 @@ Ath. setja inn töflu með myndum!!!
     :class: athugasemd
 
     Línulegt jöfnuhneppi með rauntölulausn getur haft:
+
         **(a)** Enga lausn
 
         **(b)** Nákvæmlega eina lausn
@@ -162,7 +161,7 @@ Skilgreining: Jafngild
 Einfaldar línuaðgerðir
 ----------------------      
 
-Eftirfarandi aðgerðir kallast einfaldar línuaðgerðir (e. elementary row operations) og 
+Eftirfarandi aðgerðir kallast **einfaldar línuaðgerðir** (e. elementary row operations) og 
 þeim má beita á jöfnur  í línulegum jöfnuhneppum (eða línur í fylkjum):
 
 .. admonition:: Setning
@@ -174,7 +173,7 @@ Eftirfarandi aðgerðir kallast einfaldar línuaðgerðir (e. elementary row ope
 
     **(3)** að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
 
-Þessum aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
+Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
 
 Skilgreining: línujafngild
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -202,7 +201,7 @@ Skilgreining: línujafngild
   
    Skrifum þetta á fylkjaformi.
    
-  .. math:: \begin{bmatrix}
+  .. math:: \begin{aligned}\begin{bmatrix}
     1 & -3 & 4 & -4\\
     3 & -7 & 7 & -8\\
     -4 & 6 & 2 & 4
@@ -244,6 +243,7 @@ Skilgreining: línujafngild
     0 & 1 & 0 & 2 \\
     0 & 0 & 1 & 0
     \end{bmatrix}
+    \end{aligned}
 
   Svo við fáum
 
@@ -318,7 +318,8 @@ vera fylki. Við segjum að :math:`A` sé :math:`{m\times n}` fylki.
 Jafnframt er :math:`m\times n` kallað **stærð fylkisins** :math:`A`.
 
 Skilgreining: Stuðlafylki og aukið fylki
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. admonition:: Skilgreining
     :class: skilgreining
 
@@ -329,6 +330,7 @@ Skilgreining: Stuðlafylki og aukið fylki
             \vdots&&\vdots\\
             a_{m1}x_{1}+\dots+a_{mn}x_n=b_m\\    
             \end{align*}
+        
         vera línulegt jöfnuhneppi. Við köllum fylkin
 
         .. math:: \begin{bmatrix}
@@ -342,6 +344,7 @@ Skilgreining: Stuðlafylki og aukið fylki
             \vdots&&\vdots&\vdots\\
             a_{m1}&\dots &a_{mn} &b_m\\  
             \end{bmatrix}
+        
         **Stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix) jöfnuhneppisins.
 
 Efri stallagerð
@@ -376,7 +379,7 @@ sjáum strax að jöfnuhneppið hefur lausn.
 Aukna fylkið fyrir jöfnuhneppið er dæmi um fylki af *efri stallagerð* (e. echelon form).  
 
 Skilgreining: Efri stallagerð
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. admonition:: Skilgreining
     :class: skilgreining
 
@@ -454,6 +457,7 @@ Gauess-eyðing er reiknirit sem umbreytir fylki í fylki af efri stallagerð.
 
 .. admonition:: Dæmi
   :class: daemi
+
   Notið Gauss-eyðingu til að koma fylkinu yfir á efri stallagerð
 
   .. math:: 
@@ -508,7 +512,8 @@ Gauess-eyðing er reiknirit sem umbreytir fylki í fylki af efri stallagerð.
 
 
 Skilgreining: Rudd efri stallagerð
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. admonition:: Skilgreining
     :class: skilgreining
 
@@ -638,9 +643,132 @@ Sýnidæmi: Rudd efri stallagerð
 
 Setning
 ^^^^^^^
+
 .. admonition:: Setning
   :class: setning
 
   Gefið er fylki :math:`A`. Fylkinu :math:`A` má með einföldum línuaðgerðum 
   umbreyta í eitt og aðeins eitt fylki af ruddri efri stallagerð. Með öðrum 
   orðum er rudd efri stallagerð fylkis er ótvírætt ákvörðuð. 
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Leysið línulega jöfnuhneppið
+
+  .. math:: \begin{align*}
+    x_1+2x_2+3x_3=4\\
+    5x_1+6x_2+7x_3=8\\    
+    9x_1+10x_2+11x_3=12
+    \end{align*}
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Skoðum línulega jöfnuhneppið
+  
+  .. math:: \begin{align*}
+    x_1+2x_2+3x_3=4\\
+    5x_1+6x_2+7x_3=8\\    
+    9x_1+10x_2+11x_3=12
+    \end{align*} 
+  
+  Skv. Sýnidæmi að ofan má umbreyta aukna fylki þess í
+ 
+  .. math:: \begin{bmatrix}
+    1 & 0 & -1 & -2 \\
+    0 & 1 & 2 & 3 \\
+    0 & 0 & 0 & 0
+    \end{bmatrix} 
+  
+  sem jafngildir jöfnuhneppinu
+
+  .. math::\begin{align*}
+    x_1&-x_3=-2\\
+    x_2&+2x_3=3
+    \end{align*}
+
+  Fáum að
+
+  .. math:: \begin{align*}
+    x_1&-x_3=-2\\
+    x_2&+2x_3=3
+    \end{align*}
+
+  jafngildir
+
+  .. math:: \begin{align*}
+    x_1&=x_3-2\\
+    x_2&=-2x_3+3
+    \end{align*}
+  
+  svo
+
+  .. math:: \begin{align*}
+    \begin{pmatrix}
+    x_1\\
+    x_2\\
+    x_3
+    \end{pmatrix}=
+    \begin{pmatrix}
+    x_3-2\\
+    -2x_3+3\\
+    x_3
+    \end{pmatrix}
+    \end{align*}
+
+  þar sem :math:`x_3` er **frjáls breyta** (e. free variable) .
+
+  Jöfnuhneppið er samkvæmt en lausnin ekki ótvírætt ákvörðuð.
+  Breyturnar :math:`x_1`, :math:`x_2` eru hér kallaðar **háðar breytur** (e. basic variable). 
+
+
+Texti um að ryðja eða að ryðja ekki? skoða betur!
+
+.. admonition:: Athugasemd
+  :class: athugasemd
+
+  Ef við umbreytum aukna fylki jöfnuhneppis yfir á (rudda) efri stallagerð getur eftirfarandi gerst:
+
+  **1.** Dálkurinn lengst til hægri er vendidálkur. Í þeim tilfellum hefur jöfnuhneppið enga lausn. **Dæmi:**
+
+  .. math:: \begin{bmatrix}
+    1 & * & 0 \\
+    0 & 0 & 1 \\
+    \end{bmatrix}
+
+ **2.** Allir dálkar nema dálkurinn lengst til hægri eru vendidálkar. Í þeim tilfellum hefur jöfnuhneppið nákvæmlega eina lausn. **Dæmi:**
+    
+ .. math:: \begin{bmatrix}
+    1 & 0 & * \\
+    0 & 1 & * \\
+    \end{bmatrix}
+
+ **3.** Dálkurinn lengst til hægri er ekki vendidálkur auk minnst eins annars til viðbótar. 
+ Í þeim tilfellum hefur jöfnuhneppið óendanlega margar lausnir. **Dæmi:**
+    
+ .. math:: \begin{bmatrix}
+    1 & 0 & * & * \\
+    0 & 1 & * & * \\    
+    \end{bmatrix}
+
+.. admonition:: Setning
+  :class: setning
+
+  Línulegt jöfnuhneppi er samkvæmt þá og því aðeins að dálkurinn lengst til hægri í efri 
+  stallagerð aukna fylkisins sé ekki vendidálkur, þ.e. er efri stallagerð aukna fylkisins 
+  hefur enga línu af gerð :math:`[0\ \dots \ 0 \ b]` þar sem :math:`b\neq 0`. 
+  Ef jöfnuhneppið er samkvæmt er lausnin ótvírætt ákvörðuð þá og því aðeins að allir 
+  dálkar fylkisins aðrir en sá sem er lengst til hægri eru vendidálkar. Ef lausnin er 
+  ekki ótvírætt ákvörðuð eru lausnirnar óendanlega margar.
+
+Vigrar
+------
+
+
+Línuleg samantekt
+-----------------
+
+
+Línuleg spönn
+-------------
