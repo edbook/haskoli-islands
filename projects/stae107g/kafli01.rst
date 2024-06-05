@@ -1321,11 +1321,332 @@ SETJA INN MYND !!!!
 Línuleg spönn í :math:`\mathbb{R}^3` getur líka verið: bara núllpunkturinn, 
 lína í gegnum núllpunkt eða allt :math:`\mathbb{R}^3` rúmið.
 
-Fylkjajafnan 
--------------
+Margfeldi fylkis og vigurs 
+--------------------------
+
+Skilgreining: Fylkjajafnan
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`A` vera :math:`m\times n` fylki þar sem :math:`\textbf{a}_1, \dots, \textbf{a}_n` eru dálkar þess. 
+    Látum **x** vera dálkvigur í :math:`\mathbb{R}^n`. Við skilgreinum margfeldið :math:`A \textbf{x}` með eftirfarandi hætti:
+
+    .. math:: A\textbf{x} = \begin{bmatrix}\textbf{a}_1 \dots \textbf{a}_n\end{bmatrix}
+        \begin{bmatrix}
+        x_1\\\dots\\x_n
+        \end{bmatrix}
+        =x_1\textbf{a}_1 +\dots x_n\textbf{a}_n.
+
+Til að margföldunin :math:`A\textbf{x}` sé framkvæmaleg þar fjöldi dálka :math:`A` vera jafn fjöldi lína **x**.
+
+.. math:: \underbrace{\begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        a_{21} & a_{22} & \cdots & a_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}}_{n \text{ dálkar}}
+        \left.\begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+        \end{bmatrix}\right\}n\text{ línur}
+
+Margfeldið er þá
+
+.. math:: \begin{bmatrix}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \\
+        \vdots    \\
+        a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n
+        \end{bmatrix}\quad \begin{bmatrix}
+        \rightarrow\\\\
+        \end{bmatrix}[\downarrow]
+
+Sýnidæmi: Margfeldi fylkis og vigurs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Skoðum margfeldi fylkisins :math:`A` og vigursins **x**.
+
+    .. math:: A = \begin{bmatrix}
+        2 & 3 & -1 \\
+        -1 & 4 & 6
+        \end{bmatrix}
+        \quad \text{, } \quad
+        \textbf{x} = \begin{bmatrix}
+        5 \\
+        -3 \\
+        2
+        \end{bmatrix}
+        
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum
+
+    .. math:: \begin{align*}
+        A\textbf{x}
+        =
+        \begin{bmatrix}
+        2 & 3 & -1 \\
+        -1 & 4 & 6
+        \end{bmatrix}
+        \begin{bmatrix}
+        5 \\
+        -3 \\
+        2
+        \end{bmatrix}&=
+        \begin{bmatrix}
+        2 \cdot 5 + 3 \cdot (-3) + (-1) \cdot 2 \\
+        (-1) \cdot 5 + 4 \cdot (-3) + 6 \cdot 2
+        \end{bmatrix}
+        \\&=
+        \begin{bmatrix}
+        10-9-2  \\
+        -5-12+12
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        -1  \\
+        -5
+        \end{bmatrix}
+        \end{align*}
 
 
+Sýnidæmi: Margfeldi fylkis og vigurs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Skoðum margfeldi eftirfarandi tveggja fylkja og vigurs:
+
+    .. math:: A = \begin{bmatrix}
+        0 & 0 \\
+        0 & 0 
+        \end{bmatrix}
+        \text{ , }\quad
+        I = \begin{bmatrix}
+        1 & 0 \\
+        0 & 1 
+        \end{bmatrix}
+        \text{ , }\quad
+        \textbf{x} = \begin{bmatrix}
+        2 \\
+        -7 \\
+        \end{bmatrix}
+
+.. admonition:: Launs
+    :class: daemi, dropdown
+
+    Fáum  
+
+    .. math:: \begin{align*}
+        A\textbf{x}
+        =
+        \begin{bmatrix}
+        0 & 0 \\
+        0 & 0 
+        \end{bmatrix}
+        \begin{bmatrix}
+        2 \\
+        -7 \\
+        \end{bmatrix}=
+        \begin{bmatrix}
+        0\cdot 2 + 0\cdot (-7)\\
+        0\cdot 2 + 0\cdot (-7)\\
+        \end{bmatrix}=
+        \begin{bmatrix}
+        0\\
+        0
+        \end{bmatrix}
+        \end{align*}
+
+    og 
+
+    .. math:: \begin{align*}
+        I\textbf{x}
+        =
+        \begin{bmatrix}
+        1 & 0 \\
+        0 & 1 
+        \end{bmatrix}
+        \begin{bmatrix}
+        2 \\
+        -7 \\
+        \end{bmatrix}=
+        \begin{bmatrix}
+        1\cdot 2 + 0\cdot (-7)\\
+        0\cdot 2 + 1\cdot (-7)\\
+        \end{bmatrix}=
+        \begin{bmatrix}
+        2\\
+        -7
+        \end{bmatrix}
+        \end{align*}
+
+    Fylkið :math:`I` kallast **einingarfylkið**. Það hefur þann eiginleika að 
+    :math:`I \textbf{x}=\textbf{x}` gildir fyrir alla vigra **x**.
 
 
+Fylkjajafnan
+------------
 
-:math:``
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`m\times n` fylki með dálkvigrum :math:`\textbf{a}_1,\dots,\textbf{a}_n` og **b** vera dálkvigur í :math:`\mathbb{R}^n`. Táknum :math:`\textbf{x} = [x_1,\dots x_n]^T`. 
+    Fylkjajafnan
+
+    .. math:: A\textbf{x} =  \textbf{b}
+
+    hefur sömu lausnir og jafnan
+
+    .. math:: x_1\textbf{a}_1 +\dots + x_n \textbf{a}_n = \textbf{b}
+
+    sem hefur sömu lausnir og fást með því að leysa jöfnhneppið sem svarar til aukna fylkisins
+
+    .. math:: \begin{bmatrix}
+        \textbf{a}_1 &\dots &\textbf{a}_n &\textbf b 
+        \end{bmatrix}
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Fylkjajafnan :math:`A\textbf{x} = \textbf{b}` hefur lausn þá og því aðeins að 
+    :math:`\textbf{b}` er línuleg samantekt af dálkum fylkis :math:`A`.
+
+Sýnidæmi: Fylkjajafnan
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Fyrir hvaða :math:`b_1` og :math:`b_2` hefur eftirfarandi jöfnuhneppi lausn?
+
+    .. math:: \begin{eqnarray*}
+        x_1+x_2 = b_1\\
+        x_1-x_2 = b_2
+        \end{eqnarray*}
+
+.. admonition:: Launs
+    :class: daemi, dropdown
+
+    Lítum á aukna fylkið og einföldum það með línuaðgerðum. Fáum
+
+    .. math:: \begin{bmatrix}
+        1 & 1 & b_1\\
+        1& -1 & b_2
+        \end{bmatrix}\sim 
+        \begin{bmatrix}
+        1 & 1 & b_1\\
+        0& -2 & b_2-b_1
+        \end{bmatrix}
+    
+    Með því að líta á vendistökin
+
+    .. math:: \begin{bmatrix}
+        \blacksquare & * & *\\
+        0& \blacksquare & *
+        \end{bmatrix}
+    
+    Má sjá að dálkurinn lengst til hægri er ekki vendidálkur svo jöfnuhneppið hefur alltaf lausn.
+
+Sýnidæmi: Fylkjajafnan
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Fyrir hvaða :math:`b_1,b_2,b_3` hefur eftirfarandi jöfnuhneppi lausn?
+
+    .. math:: \begin{eqnarray*}
+        x_1+2x_2+3x_3 = b_1\\
+        4x_1+5x_2+6x_3 = b_2\\
+        7x_1+8x_2+9x_3 = b_3
+        \end{eqnarray*}
+
+.. admonition:: Launs
+    :class: daemi, dropdown
+
+    Skoðum aukna fylkið og fáum
+
+    .. math:: \begin{align*}
+        \begin{bmatrix}
+        1 & 2 & 3 &b_1\\
+        4 & 5 & 6 &b_2\\
+        7 & 8 & 9 &b_3\\
+        \end{bmatrix}&\sim
+        \begin{bmatrix}
+        1 & 2 & 3& b_1\\
+        0 & -3 & -6 &b_2 -4b_1\\
+        0 & -6 & -12 &b_3-7b_1\\
+        \end{bmatrix}\\&\sim
+        \begin{bmatrix}
+        1 & 2 & 3& b_1\\
+        0 & -3 & -6 &b_2 -4b_1\\
+        0 & 0 & 0 &b_3-7b_1-2(b_2-4b_1)\\
+        \end{bmatrix}
+        \end{align*}
+
+    Einföldum stakið neðst til hægri og fáum :math:`b_3-7b_1-2(b_2-4b_1) = b_1-2b_2+b_3`.
+    Við erum því með aukna fylkið
+
+    .. math:: \begin{bmatrix}
+        1 & 2 & 3& b_1\\
+        0 & -3 & -6 &b_2 -4b_1\\
+        0 & 0 & 0 &b_1-2b_2+b_3\\
+        \end{bmatrix}
+
+    Aukna fylkið á efri ruddri stallagerð hefur því formin
+
+    .. math:: \begin{bmatrix}
+        \blacksquare & * & *&*\\
+        0& \blacksquare & * &*\\
+        0& 0& 0& \blacksquare
+        \end{bmatrix}
+        \text{ eða }
+        \begin{bmatrix}
+        \blacksquare & * & *&*\\
+        0& \blacksquare & * &*\\
+        0& 0& 0& 0
+        \end{bmatrix}  
+
+    allt eftir því hvort stærðin :math:`b_1-2b_2+b_3` sé núll eða ekki. 
+    Jöfnuhneppið okkar hefur lausn þá og því aðeins að dálkurinn lengst til hægri sé ekki vendidálkur.
+    Jöfnuhneppið því því lausn þá og því aðeins að :math:`b_1-2b_2+b_3=0`.
+
+Setning
+^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`m\times n` fylki. Eftirfarandi fullyrðingar eru jafngildar.
+
+        **1.** Jafnan :math:`A \textbf{x} = \textbf{b}` hefur lausn fyrir sérhvert :math:`\textbf{b} \in \mathbb{R}^m`.
+
+        **2.** Sérhvert :math:`\textbf{b} \in \mathbb{R}^m` er línuleg samantekt af dálkum fylkisins :math:`A`.
+
+        **3.** Dálkar fylkisins :math:`A` spanna :math:`\mathbb{R}^m`.
+
+        **4.** :math:`A` hefur vendistak í hverri línu.
+
+Setning
+^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`m\times n` fylki, látum :math:`\textbf{u}` og :math:`\textbf{v}` vera 
+    dálkvigra í :math:`\mathbb{R}^n` og látum :math:`c` vera rauntölu. Þá gildir:
+
+        **1.** :math:`A(\textbf{u} + \textbf{v}) = A\textbf{u} + A\textbf{v}`.
+
+        **2.** :math:`A(c\textbf{u}) = cA\textbf{u}`
