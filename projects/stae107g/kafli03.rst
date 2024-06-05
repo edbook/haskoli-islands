@@ -31,7 +31,7 @@ Skilgreining: Ákveða :math:`2 \times 2` fylkis
     Við sjáum að fylkið :math:`A^{-1}` er ekki skilgreint fyrir :math:`ad-bc=0`, m.ö.o. fylkið :math:`A` er andhverfanlegt ef og aðeins ef :math:`\det(A)\neq 0`.  
 
 Ákveður :math:`n \times n` fylkja
---------------------------------
+---------------------------------
 
 Skilgreining: Hlutfylki
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,8 +251,7 @@ Frumfylki eru þau fylki sem fást þegar einni einfaldri línuaðgerð er beitt
     :class: advorun
 
     Línuaðgerðir varðveita almennt ekki ákveður, heldur breyta þeim með mjög reglulegum hætti.
-
-Eftirfarandi breyting á ákveðu á sér stað fyrir frumfylki.
+ 
 
 Setning 
 ~~~~~~~
@@ -332,7 +331,94 @@ Sýnidæmi: Ákveður frumfylkja
         0 & 0 & 0 & 1
         \end{bmatrix}.
 
-    Við sjáum með því að margafalda hornalínuna að ákveðan er :math:`\det(E)=\pi`, :math:`\det(E)=k` og :math:`\det(E)=16`.
+    Við sjáum með því að margafalda hornalínuna að ákveðan er :math:`\det(E)=\pi`, :math:`\det(E)=k` og :math:`\det(E)=16` fyrir þessi þrjú fylki.
 
-Í mörgum dæmum kemur fyrir blanda af umskiptingum, víxlunum og skölunum. Til dæmis er alltaf hægt að koma ferningsfylki yfir á efri stallagerð með því að nota einungis umskiptingar og víxlanir.
-Ef :math:`U` er efri stallagerð :math:`A`, sem fékkst með því að nota aðeins þessar tvær aðgerðir, gildir að :math:`\det(A)=\pm \det(U)`.
+Í mörgum dæmum koma fyrir nokkrar umskiptingar, víxlanir og/eða skalanir. Til dæmis er alltaf hægt að koma ferningsfylki yfir á efri stallagerð með því að nota einungis umskiptingar og víxlanir.
+Ef :math:`U` er efri stallagerð :math:`A`, sem fékkst með því að nota aðeins þessar tvær aðgerðir, gildir að :math:`\det(A)=\pm \det(U)`. Þetta má setja fram sem hjálparsetningu.
+
+Hjálparsetning 
+~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Ef ferningsfylki :math:`A` má umbreyta í fylki af efri stallagerð :math:`U` með umskiptingu og víxlunum og
+
+    .. math:: \det(A)=\begin{cases}
+        (-1)^r (\text{margfeldi vendistaka } U) \quad \text{ef } A\  \text{er andhverfanlegt}\\
+        0 \quad \text{annars}
+        \end{cases}
+    
+    þar sem :math:`r` er fjöldi víxlana sem notaðar voru við að breyta :math:`A` í :math:`U`.
+
+Þessi niðurstaða gefur af sér reiknirit fyrir ákveðu. Fyrst er fylki komið yfir á efra stallaform með umskiptingu og víxlunum, síðan eru víxlanir taldar og ákveða
+efra þríhyrningsfylkisins reiknuð með því að margfalda stökin á hornalínunni.  
+
+
+Hjálparsetning 
+~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Ef ferningsfylki :math:`A` hefur tvær eins línur :math:`i=j` þá er :math:`\det(A)=0`.
+    Ennfremur, ef ein lína í :math:`A` er margfeldi af annarri þá er :math:`\det(A)=0`.
+
+
+Eiginleikar ákveðna
+-------------------
+
+Setning
+~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum A og B vera :math:`n \times n` fylki. Þá gildir
+
+        **1**. :math:`\det(A^T)=\det(A)`
+
+        **2**. :math:`\det(AB)=\det(A)\det(B)`
+
+        **3**. :math:`\det(A^{-1})=1/\det(A)`
+
+
+1 er sannað með þrepun. 2 fæst með því að nota að annað fylkið, sem er andhverfanlegt, er línu-jafngilt einingafylkinu.
+Jafnan helst einning ef annað fylkið er ekki andhverfanlegt, þá er ákveðan :math:`AB` einfaldlega :math:`0`. 3 leiðir beint af 2.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Um tvö ferningsfylki :math:`A` og :math:`B` gildir almennt :math:`\textbf{ekki}` að :math:`\det(A+B)=\det(A)+\det(B)`.
+
+
+Regla Cramers
+-------------
+
+Regla Cramers er fræðileg niðurstaða sem gefur beina lausn á :math:`A \textbf{x} = \textbf{b}`. Þó er oftast fljótlegra að leysa jöfnuhneppi beint heldur en að nota hana.
+
+Ritháttur
+~~~~~~~~~
+
+
+
+.. admonition:: Ritháttur
+    :class: setning
+
+    Látum :math:`A=[\textbf{a_1}...\textbf{a_n}]` vera :math:`n \times n` fylki og :math:`\textbf{b}\in \mathbb{R}^n` vera vigur.
+    Þá skilgreinum við :math:`A_=[\textbf{a_1}...\textbf{a_n}]`
+
+
+Setning: Regla Cramers
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera andhverfanlegt :math:`n \times n` fylki, og :math:`\textbf{b}\in \mathbb{R}^n` vera vigur.
+    Þá er lausnin á jöfnunni :math:`A \textbf{x} = \textbf{b}` gefin með formúlunni
+
+    .. math:: x_i = \frac{\det A_i(\textbf{b})}{\det(A)}
+
