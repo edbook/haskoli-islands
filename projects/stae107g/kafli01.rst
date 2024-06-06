@@ -1650,3 +1650,605 @@ Setning
         **1.** :math:`A(\textbf{u} + \textbf{v}) = A\textbf{u} + A\textbf{v}`.
 
         **2.** :math:`A(c\textbf{u}) = cA\textbf{u}`
+
+Óhliðruð jöfnuhneppi
+--------------------
+
+Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}`, 
+:math:`A` er :math:`m\times n` fylki, er sagt vera *óhliðrað* (e. homogeneous).
+Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
+
+.. math:: A\left.\begin{bmatrix}
+    0 \\ 0\\ \vdots \\ 0
+    \end{bmatrix}\right\}n =\left. \begin{bmatrix}
+    0 \\ \vdots \\ 0
+    \end{bmatrix}\right\}m
+
+Þessi lausn er kölluð *augljóslega lausnin*. Ef aðrar launsir eru til eru 
+þær kallaðar *óaugljósa lausninirnar* (e. nontrivial solutions).
+
+Sýnidæmi: Óhliðrað jöfnuhneppi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Leysið
+
+    .. math:: \begin{eqnarray*}
+        x_1+2x_2+3x_3 = 0\\
+        4x_1+5x_2+6x_3 =0\\
+        7x_1+8x_2+9x_3 =0
+        \end{eqnarray*}
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum að 
+
+    .. math:: \begin{bmatrix}
+        1 & 2 & 3 &0\\
+        4 & 5 & 6 &0\\
+        7 & 8 & 9 &0\\
+        \end{bmatrix} 
+        \sim
+        \begin{bmatrix}
+        1 & 2 & 3& 0\\
+        0 & -3 & -6 &0\\
+        0 & 0 & 0 &0\\
+        \end{bmatrix}
+        \sim
+        \begin{bmatrix}
+        1 & 2 & 3& 0\\
+        0 & 1 & 2 &0\\
+        0 & 0 & 0 &0\\
+        \end{bmatrix} \\
+        \sim
+        \begin{bmatrix}
+        1 & 0 & -1& 0\\
+        0 & 1 & 2 &0\\
+        0 & 0 & 0 &0\\
+        \end{bmatrix}
+    
+    Sem jafngildir
+
+    .. math:: \begin{aligned}
+        x_1 -x_3 =0\\
+        x_2+2x_3=0
+        \end{aligned}
+    
+    Þetta má umrita sem 
+
+    .. math:: \begin{aligned}
+        x_1 =x_3\\
+        x_2=-2x_3
+        \end{aligned}
+
+    
+    Eða
+
+    .. math:: \textbf{x} =\begin{bmatrix}
+        x_1\\x_2\\x_3
+        \end{bmatrix}=\mathop{\begin{bmatrix}
+        x_3\\-2x_3\\x_3
+        \end{bmatrix}}_{\textstyle x_3 \text{ er frjáls}} =
+        x_3\begin{bmatrix}
+        1\\-2\\1
+        \end{bmatrix}
+    
+    Með því að setja :math:`x_3=t` má rita allar lausnir á forminu
+    :math:`\textbf{x} = t \textbf{v}` þar sem 
+    :math:`\textbf{v} = \begin{bmatrix} 1\\-2\\1 \end{bmatrix}\text{ og } t\in \mathbb{R}`.
+    Ef við setjum :math:`t=1` fæst að :math:`\textbf{x} = \begin{bmatrix} 1\\-2\\1\end{bmatrix}` 
+    er lausn á jöfnuhneppinu svo jöfnuhneppið hefur óaugljósa lausn.
+
+
+Setning
+^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Línulegt jöfnuhneppi hefur lausn ef og aðeins ef dálkurinn lengst til hægri er 
+    ekki vendidálkur, þ.e.a.s. ef efri stallagerð aukna fylkinsins hefur enga 
+    línu af gerðinni
+
+    .. math:: \begin{bmatrix}
+        0&\dots & 0 & b
+        \end{bmatrix} \text{ þar sem }b\neq 0
+
+    Ef línulega jöfnunhneppið hefur lausn gildir að:
+
+        **1.** Lausnin er ótvírætt ákvörðuð ef jöfnuhneppið hefur engar frjálsar breytur.
+
+        **2.** Jöfnuhneppið hefur óendanlega margar lausnir er ef jöfnuhneppið hefur minnst eina frjálsa breytu.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    **Afleiðingar setningu:**
+
+        **1.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur alltaf lausn.
+
+        **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hef óaugljósa lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
+ 
+Fólgin og stikuð framsetning
+----------------------------
+
+Sýnidæmi: Stikuð framsetning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Leysið eftirfarandi jöfnuhneppi með einni jöfnu
+
+    .. math:: \begin{align*}
+        x_1-2x_2-3x_3=0\end{align*}
+    
+.. admonition:: Launs
+    :class: daemi, dropdown
+
+    Fáum að :math:`x_1 = 2x_2 +3x_3` þar sem :math:`x_2` og :math:`x_3` eru frjálsar breytur. 
+    Þannig fæst
+
+    .. math:: \textbf{x} = \begin{bmatrix}
+        x_1\\x_2\\x_3 
+        \end{bmatrix}= 
+        \begin{bmatrix}
+        2x_2+3x_3\\x_2\\x_3 
+        \end{bmatrix}=
+        \begin{bmatrix}
+        2x_2\\x_2\\0 
+        \end{bmatrix}+
+        \begin{bmatrix}
+        3x_3\\0\\x_3 
+        \end{bmatrix}
+        =x_2\begin{bmatrix}
+        2\\1\\0 
+        \end{bmatrix}+
+        x_3\begin{bmatrix}
+        3\\0\\1 
+        \end{bmatrix}
+
+    Getum því skrifað :math:`\textbf{x} = s\text{u} + t \textbf{v}` með 
+    :math:`\textbf{u} =\begin{bmatrix} 2&1&0 \end{bmatrix}^T`  og 
+    :math:`\textbf{v}= \begin{bmatrix} 3&0&1 \end{bmatrix}^T` og 
+    :math: `s,t\in \mathbb{R}`.
+    Þetta er dæmi um **stikaða framsetningu** (e. parametric form) á lausn.
+
+
+**Fólgin framsetning** (e. implicit form)
+    **Slétta**   :math:`\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1-2x_2-3x_3=0\end{aligned}`
+    
+    **Lína**     :math:`\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1+2x_2+3x_3 = 0\\ 4x_1+5x_2+6x_3 =0\\\end{aligned}`
+
+
+**Stikuð framsetning** (e. parametric form)
+    **Slétta** 
+    
+    .. math:: \textbf{x} = s\begin{bmatrix}
+        2\\1\\0 
+        \end{bmatrix} + t\begin{bmatrix}
+        3\\0\\1 
+        \end{bmatrix}, s,t\in \mathbb{R}$.
+    
+   
+    **Lína**
+
+    .. math:: \textbf{x} = t \begin{bmatrix}
+        1\\-2\\1
+        \end{bmatrix}, t\in \mathbb{R}$. 
+
+Hliðruð jöfnuhneppi
+--------------------
+
+Línulegt jöfnuhneppi kallast *hliðrað* (e. non-homogeneus) ef það 
+er ekki hægt að skrifa það á forminu :math:`A \textbf{x}=\textbf{0}`.
+Í þeim tilfellum geta ekki allar hliðar jafnanna verið núll.
+
+
+Sýnidæmi: Hliðrað jöfnuhneppi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Leysum löfnuhneppið
+
+    .. math:: \begin{eqnarray*}
+        x_1+2x_2+3x_3 = 0\\
+        4x_1+5x_2+6x_3 =1\\
+        7x_1+8x_2+9x_3 =2
+        \end{eqnarray*}
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum
+
+    .. math:: \begin{align*}
+        \begin{bmatrix}
+        1 & 2 & 3 &0\\
+        4 & 5 & 6 &1\\
+        7 & 8 & 9 &2\\
+        \end{bmatrix} &\sim
+        \begin{bmatrix}
+        1 & 2 & 3& 0\\
+        0 & -3 & -6 &1\\
+        0 & -6 & -12 &2\\
+        \end{bmatrix}
+        \sim 
+        \begin{bmatrix}
+        1 & 2 & 3& 0\\
+        0 & -3 & -6 &1\\
+        0 & 0 & 0 &0\\
+        \end{bmatrix}
+        \\&\sim 
+        \begin{bmatrix}
+        1 & 2 & 3& 0\\
+        0 & 1 & 2 &-\frac{1}{3}\\
+        0 & 0 & 0 &0\\
+        \end{bmatrix}
+        \sim 
+        \begin{bmatrix}
+        1 & 0 & -1& \frac{2}{3}\\
+        0 & 1 & 2 &-\frac{1}{3}\\
+        0 & 0 & 0 &0\\
+        \end{bmatrix} 
+        \end{align*}
+
+    Úr 
+
+    .. math:: \begin{bmatrix}
+        1 & 0 & -1& \frac{2}{3}\\
+        0 & 1 & 2 &-\frac{1}{3}\\
+        0 & 0 & 0 &0\\
+        \end{bmatrix} 
+    
+    fæst 
+
+    .. math:: \textbf{x} = \begin{bmatrix}
+        x_1\\x_2\\x_3
+        \end{bmatrix}
+        = \begin{bmatrix}
+        x_3+\frac{2}{3}\\-2x_3-\frac{1}{3}\\x_3
+        \end{bmatrix}=
+        x_3\begin{bmatrix}
+        1\\-2\\1
+        \end{bmatrix}+
+        \begin{bmatrix}
+        \frac{2}{3}\\-\frac{1}{3}\\0
+        \end{bmatrix}
+    
+    Við sjáum við að lausnarmengið er það sama og fyrir óhliðraða 
+    jöfnuhneppið nema að við bætist vigur :math:`\begin{bmatrix}\frac{2}{3}\\-\frac{1}{3}\\0\end{bmatrix}`.
+    Við getum því skrifað allar lausnir á forminu :math:`\textbf{x} = t\textbf{v} + \textbf{p}` þar sem er almenn lausn 
+    á óhliðruðu jöfnunni og  **p** ein lausn á þeirri hliðruðu.
+
+Setning
+^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Gerum ráð fyrir að fylkjajafnan :math:`A\textbf{x} = \textbf{b}` 
+    hafi lausn fyrir gefið **b** og látum **p** vera slíka lausn. 
+    Þá gildir að öll stök í lausnamengi :math:`A\textbf{x} = \textbf{b}` 
+    má rita á forminu :math:`\textbf{w} = \textbf{p} + \textbf{v}_h` þar sem :math:`\textbf{v}_h` 
+    er lausn óhliðruðu jöfnunnar :math:`A\textbf{x} = \textbf{0}`.
+
+
+Til að finna stikaða framsetningu á lausnum línulegs jöfnuhneppis þarf að:
+
+    **1.** Koma aukna fylkinu á  (rudda) efri stallagerð.
+
+    **2.** Rita háðu breyturnar með hinum frjálsum.
+
+    **3.** Umrita lausnavigurinn og sýna hann sem samantekt af einhverjum vigrum, með frjálsu breytunum sem stika. 
+
+
+Sýnidæmi: Lausnir prófaðar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Skoðum aftur jöfnuhneppið 
+
+    .. math:: \begin{eqnarray*}
+        x_1+2x_2+3x_3 = 0\\
+        4x_1+5x_2+6x_3 =1\\
+        7x_1+8x_2+9x_3 =2
+        \end{eqnarray*}
+    
+    og hugsum það á forminu :math:`A \textbf{x}=\textbf{b}`. 
+    Við fundum að lausnin var á forminu
+
+    .. math:: \textbf{x} = 
+        t\begin{bmatrix}
+        1\\-2\\1
+        \end{bmatrix}+
+        \begin{bmatrix}
+        \frac{2}{3}\\-\frac{1}{3}\\0
+        \end{bmatrix}
+    
+    Prófið lausnina til að staðfesta að hún séu rétt.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Prófum lausnina
+
+    .. math:: \begin{align*}
+        A\textbf{x} =&
+        A\left(t\begin{bmatrix}
+        1\\-2\\1
+        \end{bmatrix}+
+        \begin{bmatrix}
+        \frac{2}{3}\\-\frac{1}{3}\\0
+        \end{bmatrix} \right)
+        =
+        tA
+        \begin{bmatrix}
+        1\\-2\\1
+        \end{bmatrix}
+        +A
+        \begin{bmatrix}
+        \frac{2}{3}\\-\frac{1}{3}\\0\end{bmatrix}\\
+        &=t
+        \begin{bmatrix}
+        1 & 2 & 3\\
+        4 & 5 & 6\\
+        7 & 8 & 9\\
+        \end{bmatrix}
+        \begin{bmatrix}
+        1\\-2\\1
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+        1 & 2 & 3\\
+        4 & 5 & 6\\
+        7 & 8 & 9\\
+        \end{bmatrix}
+        \begin{bmatrix}
+        \frac{2}{3}\\-\frac{1}{3}\\0
+        \end{bmatrix}\\=&
+        t     \begin{bmatrix}
+        0\\0\\0
+        \end{bmatrix}+
+        \begin{bmatrix}
+        0\\1\\2
+        \end{bmatrix}=t\textbf{0} + \textbf{b}\ = \textbf{b}
+        \end{align*}
+
+
+
+Línulega óháð/háð mengi
+-----------------------
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Mengi af vigrum :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` er sagt vera **línulega óháð** ef jafnan
+    
+    .. math:: x_1\text{v}_1 + \dots + x_p\textbf{v}_p = \textbf{0}
+
+    hefur einungis augljósu lausnina. Að sama skapi er mengið :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` sagt vera **línulega háð** ef það er ekki línulega óháð.
+    Þar með vitum við að  :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` er línulega háð ef og aðeins ef til eru :math:`c_1,\dots,c_p`, ekki öll jöfn 0, þannig að 
+
+    .. math:: c_1\textbf{v}_1 + \dots+ c_p\textbf{v}_p = \textbf{0}.
+
+    Ef mengið :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` er línulega óháð/háð þá tölum 
+    við líka um að vigrarnir :math:`\textbf{v}_1, \dots ,\textbf{v}_p` séu línulega óháðir/háðir. 
+
+Sýnidæmi: Línulega óháðir vigrar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Skoðum vigrana
+
+    .. math:: \textbf{v}_1 = \begin{bmatrix}
+        1\\1
+        \end{bmatrix},
+        \textbf{v}_2=\begin{bmatrix}
+        0\\1
+        \end{bmatrix},
+        \textbf{v}_3 = \begin{bmatrix}
+        2\\1
+        \end{bmatrix},
+    
+    Er mengið :math:`\{\textbf{v}_1 ,\textbf{v}_2,\textbf{v}_3\}` línulega óháð?
+
+.. admonition:: Launs
+    :class: daemi, dropdown
+
+    Þar sem 
+
+    .. math:: 2\begin{bmatrix}
+        1\\1
+        \end{bmatrix}
+        -\begin{bmatrix}
+        0\\1
+        \end{bmatrix}
+        - \begin{bmatrix}
+        2\\1
+        \end{bmatrix}=\textbf{0}
+
+    eru vigrarnir þrír línulega háðir.
+
+
+Sýnidæmi: Línulega óháðir vigrara
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Eru vigrarnir 
+
+    .. math:: \textbf{v}_1 = \begin{bmatrix}
+        1\\0\\0
+        \end{bmatrix},
+        \textbf{v}_2=\begin{bmatrix}
+        0\\1\\1
+        \end{bmatrix},
+        \textbf{v}_3 = \begin{bmatrix}
+        2\\2\\1
+        \end{bmatrix},
+
+    línulega óháðir?
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Skoðum hvort 
+
+    .. math:: x_1 \begin{bmatrix}
+        1\\0\\0
+        \end{bmatrix}+
+        x_2\begin{bmatrix}
+        0\\1\\1
+        \end{bmatrix}+
+        x_3 \begin{bmatrix}
+        2\\2\\1
+        \end{bmatrix} = \begin{bmatrix}
+        0\\0\\0
+        \end{bmatrix}
+    
+    Hefur lausn sem er ekki augljós. Þetta jafngildir
+
+    .. math:: \begin{bmatrix}
+        1&0&2\\
+        0&1&2\\
+        0&1&1
+        \end{bmatrix}
+        \begin{bmatrix}
+        x_1\\x_2\\x_3
+        \end{bmatrix} = \begin{bmatrix}
+        0\\0\\0
+        \end{bmatrix}
+    
+    Fáum nú
+
+    .. math:: \begin{bmatrix}
+        1&0&2&0\\
+        0&1&2&0\\
+        0&1&1&0
+        \end{bmatrix}\sim
+        \begin{bmatrix}
+        1&0&2&0\\
+        0&1&2&0\\
+        0&0&-1&0
+        \end{bmatrix}.
+
+    Síðasta aukna fylkið er af efri stallagerð og hefur vendistak 
+    í hverjum dálki nema þeim lengst til hægri. Því hefur þetta jöfnuhneppi
+    aðeins eina lausn, augljósu lausnina :math:`x_1=x_2=x_3=0` og vigrarnir 
+    sem um ræðir eru línulega óháðir.
+
+Setning
+^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Dálkar í fylki :math:`A` eru línulega óháðir þá og því aðeins að jafnan 
+    :math:`A\textbf{x} = \textbf{0}` hafi einungis augljósu lausnina (núllausnina) sem lausn.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Þetta er almenna aðferðin sem við notum til að athuga hvort vigrar
+    séu línulega háðir eða óháðir.
+
+Setning
+^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Ef núllvigurinn **0** liggur í mengi þá er mengið línulega háð.
+
+.. admonition:: Rökstuðningur
+    :class: setning, dropdown
+
+    Látum mengið vera :math:`\{\textbf{0}, \textbf{v}_2, \dots, \text{v}_p\}`.
+    Skrifum:
+
+    .. math:: 1\cdot \text{0} + 0\cdot \textbf{v}_2 + \dots+0\cdot \text{v}_p=\textbf{0}
+
+    sem sýnir að mengið er línulega háð.
+
+Setning
+^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Ef mengi inniheldur aðeins einn vigur :math:`\textbf{v}_1` er það línulega 
+    óháð þá og því aðeins að :math:`\textbf{v}_1 \neq \textbf{0}`.
+
+.. admonition:: Rökstuðningur
+    :class: setning, dropdown
+
+    Út frá skilgreiningunni þurfum við að athuga hvenær jafnan 
+    :math:`x_1 \textbf{v}_1= \textbf{0}` hefur aðeins augljósu lausnina.
+    Það er ljóst að ef :math:`x_1 \textbf{v}_1= \textbf{0}` 
+    og :math:`\textbf{v}_1 \neq \textbf{0}` verður :math:`x_1` að vera núll.
+    Jafnframt er mengið :math:`\{ \textbf{v}_1\}` línulega háð ef :math:`\textbf{v}_1` 
+    er núllvigur samkvæmt síðustu setningu.
+
+Setning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Ef mengi inniheldur nákvæmlega tvo vigra :math:`\textbf{v}_1` og
+    :math:`\textbf{v}_2` er það línulega háð þá og því aðeins að einn
+    vigurinn sé margfeldi af hinum.
+
+.. admonition:: Rökstuðningur
+    :class: setning, dropdown
+
+    Ef :math:`\textbf{v}_1,\textbf{v}_2` eru línulega háðir eru til rauntölur :math:`x_1,x_2` ekki báðar núll, þannig að
+
+    .. math:: x_1 \textbf{v}_1 + x_2 \textbf{v}_2 =0
+
+    Megum gera ráð fyrir að :math:`x_1\neq 0`. Fáum
+
+    .. math:: \textbf{v}_1= -\frac{x_2}{x_1}\textbf{v}_2
+
+    sem sýnir það sem átti að sanna. Ef annar vigurinn er margfeldi af 
+    hinum getum við t.d. skrifað :math:`\textbf{v}_1 = c\textbf{v}_2` 
+    þar sem c er einhver rauntala. Þá er:
+
+    .. math:: 1\cdot \textbf{v}_1+(-c)\cdot \textbf{v}_2=0
+
+    svo  :math:`\textbf{v}_1,\textbf{v}_2` eru línulega háðir.
+
+
+Sýnidæmi: Setning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Mengi af vigrum er línulega háð þá og því aðeins að til
+     er vigur í menginu sem má skrifa sem línulega samantekt af hinum vigrunum. 
+
+
+Setning
+^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`\textbf{v}_1, \dots, \textbf{v}_p` vera vigra í :math:`\mathbb{R}^n`. 
+    Ef :math:`p>n` er mengið :math:`\textbf{v}_1, \dots, \textbf{v}_p` línulega háð.
+
+.. admonition:: Setning
+    :class: setning, dropdown
+
