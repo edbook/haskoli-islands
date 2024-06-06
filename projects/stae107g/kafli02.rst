@@ -1,7 +1,7 @@
 Fylkjaaðgerðir
 ==============
 
-TODO: bæta við einhverju um núllfylki, eingarfylki og hornalínufylki?????
+TODO: bæta við einhverju um núllfylki, eingarfylki, frumfylki(og þá þáttun), þríhyrningsfylki og hornalínufylki?????
 
 Samlagning og skölun 
 --------------------
@@ -516,7 +516,7 @@ Lausnir fylkjajafna
     .. math:: \textbf{x}=A^{-1}\textbf{b}.
 
 Sýnidæmi: Fylkjajafna leyst með andhverfu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Dæmi
   :class: daemi
@@ -574,3 +574,228 @@ Reiknireglur fyrir andhverfu fylkis
     **3.** :math:`A^T` er andhverfanlegt fylki og 
 
     .. math:: (A^T)^{-1}=(A^{-1})^T
+
+Aðferð til að reikna andhverfu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Aðferð
+    :class: skilgreining
+
+    Til að finna andhverfu fylkis :math:`A` búum við til aukna fylkið
+
+    .. math:: [A I]
+
+    og beitum línuaðgerðum til að koma því að efri rudda stallagerð. Ef fylkið :math:`A` er andhverfanlegt
+    fáum við jafngilt fylki með einingarfylkinu :math:`I` í vinstri hlut og :math:`A^{-1}` í hægri hlut.
+    Með öðrum orðum:
+
+    .. math:: [A I] \sim [I A^{-1}]
+
+Sýnidæmi: Andhverfa :math:`3\times3` fylkis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+  :class: daemi
+    
+    Reiknið andhverfu fylkisins
+
+    .. math:: A=\begin{bmatrix}
+            1 & 2 & 3\\
+    	    0 & 1 & 4 \\
+            5 & 6 & 0 
+        \end{bmatrix} 
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+    
+    Búum til aukna fylkið og einföldum:
+
+    .. math:: \begin{align*}
+        \begin{bmatrix}
+        1 & 2 & 3 & 1 & 0 & 0 \\
+        0 & 1 & 4 & 0 & 1 & 0 \\
+        5 & 6 & 0 & 0 & 0 & 1
+        \end{bmatrix}
+        &\sim
+        \begin{bmatrix}
+        1 & 2 & 3 & 1 & 0 & 0 \\
+        0 & 1 & 4 & 0 & 1 & 0 \\
+        0 &-4 &-15&-5 & 0 & 1
+        \end{bmatrix} 
+        \\&\sim
+        \begin{bmatrix}
+        1 & 2 & 3 & 1 & 0 & 0 \\
+        0 & 1 & 4 & 0 & 1 & 0 \\
+        0 & 0 & 1 &-5 & 4 & 1
+        \end{bmatrix}
+        \\&\sim
+        \begin{bmatrix}
+        1 & 0 &-5 & 1 &-2 & 0 \\
+        0 & 1 & 4 & 0 & 1 & 0 \\
+        0 & 0 & 1 &-5 & 4 & 1
+        \end{bmatrix}
+        \\&\sim
+        \begin{bmatrix}
+        1 & 0 & 0 & -24 &18 & 5 \\ 
+        0 & 1 & 0 & 20 & -15 & -4 \\
+        0 & 0 & 1 &-5 & 4 & 1
+        \end{bmatrix}
+        \end{align*} 
+
+    svo
+
+    .. math:: A^{-1} = \begin{bmatrix}
+        -24 &18 & 5 \\
+          20 & -15 & -4 \\
+         -5 & 4 & 1
+        \end{bmatrix}
+
+Setningin um eintækni og átækni
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning 
+    :class: setning
+
+    Látum :math:`T:\mathbb{R}^n \rightarrow \mathbb{R}^n` vera línulega vörpun. 
+    Þá fæst að :math:`T` er eintæk þá og því aðeins að hún er átæk.
+
+    **Rökstuðningur:** Skrifum :math:`T(\textbf{x})=A\textbf{x}`. 
+    Gerum ráð fyrir að :math:`T` sé eintæk. Fáum að :math:`A\textbf{x}=\textbf{0}` hefur aðeins augljósu lausnina.
+
+    Skoðum efri stallagerð :math:`A`. Fyrst jafnan hefur aðeins augljósu lausnina þá hefur 
+    efri stallagerðin forustustuðul í hverjum dálki (og engar frjálsar breytur) og samtals :manth:`` forustustuðla.
+
+    Þar með hefur stallagerðin líka forustustuðul í hverri línu (því fylkið er :math:`n\times n` fylki).
+
+    Þar með hefur jafnan :math:`A \textbf{x} = \textbf{b}` lausn fyrir alla vigra :math:`\textbf{b}\in\mathbb{R}^n` og
+    því er vörpunin :math:`T(\textbf{x})=A\textbf{x}` átæk.
+
+    Athugið að leiðingarnar hér gilda í báðar áttir.
+
+Einkenni andhverfalegra fylkja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning 
+    :class: setning
+
+    Látum :math:`A` vera :math:`n\times n` fylki. 
+    Þá eru eftirfarandi fullyrðingar annað hvort allar sannar eða allar ósannar.
+
+    **1.** :math:`A` er andhverfanlegt.
+
+    **2.** :math:`A` er línu-jafngilt (og þar með jafngilt) :math:`n\times n` einingarfylkinu.
+
+    **3.** :math:`A` hefur :math:`n` vendistök.
+
+    **4.** Jafnan :math:`A\textbf{x}=\textbf{0}` hefur aðeins augljósu lausnina.
+
+    **5.** Dálkar :math:`A` eru línulega óháðir.
+
+    **6.** Línulega vörpunin :math:`\textbf{x}\mapsto A\textbf{x}` er eintæk.
+
+    **7.** Jafnan :math:`A\textbf{x}=\textbf{b}` hefur lausn fyrir öll :math:`\textbf{b} \in \mathbb{R}^n`.
+
+    **8.** Dálkar :math:`A` spanna :math:`\mathbb{R}^n`.
+
+    **9.** Línulega vörpunin :math:`\textbf{x}\mapsto A\textbf{x}` er átæk.
+
+    **10.** Til er :math:`n\times n` fylki :math:`C` þannig að :math:`CA=I`.
+
+    **11.** Til er :math:`n\times n` fylki :math:`D` þannig að :math:`AD=I`.
+
+    **12.** :math:`A^T` er andhverfanlegt.
+
+
+TODO skrifa eitthvað aðeins meira um andhverfanleg fylki, klára það sem stendur um þau í fyrirlestri 9.
+
+
+LU-þáttun
+---------
+Skilgreining: Andhverfanleiki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Ef :math:`A` er :math:`m\times n` fylki þá segjum við að LU-þáttun A sé framsetning af gerðinni
+
+    .. math:: A=LU
+
+    þar sem :math:`L` er :math:`m\times m` neðra þríhyrningsfylki með :math:`1` á hornalínunni og
+    U er :math:`m\times n` fylki af efri stallagerð.
+
+    **Dæmi:** 
+    
+    .. math:: A= \begin{bmatrix}
+        1 & 0 & 0 \\
+        * & 1 & 0 \\
+        * & * & 1
+        \end{bmatrix}
+        \begin{bmatrix}
+        \blacksquare & * & * & * \\
+        0 & \blacksquare & * & * \\
+        0 & 0 & 0 & \blacksquare
+        \end{bmatrix}
+
+Sýnidæmi: LU þáttun
+~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+  :class: daemi
+    
+    LU-þáttið eftirfarandi fylki
+
+    .. math:: A=\begin{bmatrix}
+            2 & 1 & 3\\
+    	    4 & 2 & 8 
+        \end{bmatrix}, B=\begin{bmatrix}
+            3 & 1 & -2\\
+    	    -6 & 0 & 7 \\
+            9 & 5 & 1 
+        \end{bmatrix} 
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    TODO leysa dæmið
+
+
+Reikniaðferð fyrir fylkjamargföldun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Aðferð
+    :class: skilgreining
+
+    Til að finna LU þáttun fylks með aðferðum sýnidæmanna að ofan þarf að
+
+    **1.** Breyta :math:`A` í efri stallagerð með útskiptingum á borð við :math:`R_j\rightarrow R_j+cR_i` þar sem :math:`i<j`.
+
+    **2.** Búa til :math:`L` með því að skoða hvað línuaðgerðum var beitt og 
+    fylla í fylkið með $c$-föstunum, með víxluðum formerkjum.
+
+
+    Athugasemdir:
+
+    **1.**  Við megum ekki nota hinar tvær línuaðgerðirnar í Skrefi 1.  
+    Við megum ekki margfalda línur með fasta (:math:`R_i \rightarrow c R_i`) eða víxla á línum (:math:`R_i\leftrightarrow R_j`).
+
+    **2.** Að sleppa línumargföldun er alltaf hægt.
+
+    **3.** Oft verður hjá því ekki komist að víxla á línum. Í þeim tilfellum virkar reikniaðferðin ekki. 
+    Til eru leiðir til að vinna sig fram hjá þessu en það verður ekki farið í þær nú.
+
+
+LU-þáttun er gagnleg þegar leysa á jöfnur á borð við
+
+.. math:: A\textbf{x} = \textbf{b}_1, A\textbf{x} = \textbf{b}_2, \dots, A\textbf{x} = \textbf{b}_k
+
+þ.e.a.s. margar fylkjajöfnur þar sem vinstri hliðin er sú saman. Þá nýtist þáttunin til að spara útreikninga.
+
+Við skrifum þá
+
+.. math:: A\textbf{x} = \textbf{b} \iff L\cdot(U\textbf{x}) = \textbf{b}
+
+og leysum fyrst :math:`L\textbf{y} = \textbf{x}`, (sem er auvelt því :math:`L` er þríhyrningsfylki) 
+og svo :math:`U\textbf{x} = \textbf{y}` sem er líka auðvelt því :math:`U` er af efri stallagerð.
+
+TODO setja inn eitt dæmi enn um LU-þáttun.
