@@ -262,7 +262,7 @@ Setning
     Látum :math:`E` vera frumfylki. Ákveða frumfylkis er
 
     .. math:: \det(E)= \begin{cases}
-        1 \quad \text{ef}\ E\ \text{er umskipting/útskipting},\\
+        1 \quad \text{ef}\ E\ \text{er umskipting},\\
         -1 \quad \text{ef}\ E\ \text{er víxlun},\\
         k \quad \text{ef}\ E\ \text{er skölun með tölu}\ k.
         \end{cases}
@@ -365,7 +365,7 @@ Hjálparsetning
     Ennfremur, ef ein lína í :math:`A` er margfeldi af annarri þá er :math:`\det(A)=0`.
 
 
-Eiginleikar ákveðna
+Eiginleikar ákveða
 -------------------
 
 Setning
@@ -405,8 +405,11 @@ Ritháttur
 .. admonition:: Ritháttur
     :class: setning
 
-    Látum :math:`A=[\textbf{a_1}...\textbf{a_n}]` vera :math:`n \times n` fylki og :math:`\textbf{b}\in \mathbb{R}^n` vera vigur.
-    Þá skilgreinum við :math:`A_=[\textbf{a_1}...\textbf{a_n}]`
+    Látum :math:`A=[\bf{a}_1\dots\bf{a}_n]` vera :math:`n \times n` fylki og :math:`\textbf{b}\in \mathbb{R}^n` vera vigur.
+    Þá skilgreinum við :math:`A_j(\textbf{b})` sem fylkið þar sem :math:`j`-ta dálkvigur fylkisins er skipt út fyrir :math:`\textbf{b}`, þ.e.
+    
+    .. math::
+        A_j(\textbf{b})=[\bf{a}_1\dots\bf{a}_{j-1} \bf{b}\ \bf{a}_{j+1}\dots\bf{a}_n]
 
 
 Setning: Regla Cramers
@@ -420,5 +423,21 @@ Setning: Regla Cramers
     Látum :math:`A` vera andhverfanlegt :math:`n \times n` fylki, og :math:`\textbf{b}\in \mathbb{R}^n` vera vigur.
     Þá er lausnin á jöfnunni :math:`A \textbf{x} = \textbf{b}` gefin með formúlunni
 
-    .. math:: x_i = \frac{\det A_i(\textbf{b})}{\det(A)}
+    .. math:: \textbf{x}_i = \frac{\det A_i(\textbf{b})}{\det(A)}
 
+Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Dæmi
+  :class: daemi
+
+    Leysið eftirfarandi jöfnuhneppi með því að nota reglu Cramers
+
+    .. math:: 
+        4x+2y-z=0,\\
+        x+3y+7z=1,\\
+        -3x-y+2z=1
+
+.. admonition:: Lausn
+  :class: lausn
+
+    
