@@ -116,63 +116,54 @@ Sýnidæmi: Eiginrúm fylkis
 .. admonition:: Dæmi
     :class: daemi
 
-    Gefið er að 2 er eigingildi fylkisins :math:`A`. Finnið 
-    eiginrúm :math:`A` m.t.t. eigingildisins 2.
+    Gefið er að 3 og 4 eru eigingildi fylkisins :math:`A`. Finnið 
+    eiginrúm :math:`A` m.t.t. eigingildisins 3 og 4.
 
-    .. math:: A\begin{bmatrix} 2 & -2 & -2 \\ 0 & 0 & -2\\ 0 & 0 & -2 \end{bmatrix}
+    .. math:: A=\begin{bmatrix} 1 & 3 \\ -2 & 6 \end{bmatrix}
     
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Við viljum þá leysa :math:`(A-2I)\textbf{x}=0`. Fáum
+    Við viljum þá leysa :math:`(A-3I)\textbf{x}=0`. Fáum
 
-    .. math:: A-2I=
+    .. math:: A-3I=
         \begin{bmatrix}
-        0 & -2 & -2\\
-        0 & -2 & -2\\
-        0 & 0 & 0
+        -2 & 3\\
+        -2 & 3
         \end{bmatrix}
         \sim \dots \sim \begin{bmatrix}
-        0 & 1& 1\\
-        0 & 0 & 0\\
-        0 & 0 & 0
+        -2 & 3\\
+        0 & 0 
         \end{bmatrix}
     
+    og viljum leysa :math:`(A-4I)\textbf{x}=0`.
+
     sem gefur :math:`x_2+x_3=0` og :math:`x_1` er frjáls breyta. 
     Fáum að almenn lausn er 
 
-    .. math:: \begin{bmatrix}
-        x_1\\
-        x_2\\
-        x_3
-        \end{bmatrix}
-        =
+    .. math:: A-4I=
         \begin{bmatrix}
-        x_1\\
-        -x_3\\
-        x_3
-        \end{bmatrix}=
-        x_1\begin{bmatrix}
-        1\\
-        0\\
-        0
-        \end{bmatrix}+
-        x_3\begin{bmatrix}
-        0\\
-        -1\\
-        1
-        \end{bmatrix} 
+        -3 & 3\\
+        -2 & 2
+        \end{bmatrix}
+        \sim \dots \sim \begin{bmatrix}
+        1 & -1\\
+        -2 & 2 \\
+        \end{bmatrix}
+        \sim \dots \sim \begin{bmatrix}
+        1 & -1\\
+        0 & 0 \\
+        \end{bmatrix}
+    
     
     svo eiginrúmið er
 
     .. math:: Span \left\{\begin{bmatrix}
-        1\\
-        0\\
-        0
+        3\\
+        2
         \end{bmatrix},
         \begin{bmatrix}
-        0\\
-        -1\\
+        1\\
         1
         \end{bmatrix}\right\}
 
@@ -572,6 +563,21 @@ Setning
     Látum :math:`A` vera :math:`n \times n` fylki. Ef fylkið :math:`A` hefur :math:`n`
     ólík eigingildi þá er fylkið :math:`A` hornalínugeranlegt.
 
+Sýnidæmi: Er fylkið hornalínugeranlegt 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Er fylkið :math:`\begin{bmatrix} 1 & 2 & 3\\ 0 & 4 & 5 \\ 0 & 0 & 6\end{bmatrix}` hornalínugeranlegt?
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Kennimargliða :math:`A` er :math:`p(\lambda)=(1-\lambda)(4-\lambda)(6-\lambda)`.
+    Eigingildin eru :math:`\lambda_1=1, \lambda_2=4` og :math:`\lambda_3=6`. Höfum hér :math:`3 \times 3`
+    fylki með 3 ólík eigingildi. Fylkið er því hornalínugeranlegt.
+
 
 Setning
 ^^^^^^^
@@ -609,25 +615,149 @@ Skilgreining
     þá kallast :math:`\lambda` eigingildi :math:`T` og :math:`textbf{x}` kallast
     eiginvigur :math:`T` sem svara til :math:`\lambda`.
 
-Sýnidæmi: eiginvigrar línulegra varpana
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sýnidæmi: Eiginvigrar línulegra varpana
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
 
-    Skoðum vörpunina :math:`T \text{:} `
+    Skoðum vörpunina :math:`T\text{:}\mathbb{P}_1 \rightarrow \mathbb{P}_1`,
+    :math:`T(a_1x+a_0)=2a_1x+2a_0` þar sem við skoðum margliðuna :math:`p(x)=x`
+    og fáum 
+
+    .. math:: T(p(x))=T(x)=2x=2p(x)
+    
+    svo margliðan :math:`p(x)=x` er eiginvigur :math:`T` og :math:`\lambda=2` er eigingildi :math:`T`.
+    Einnig ef við tökum :math:`p(x)=1` fæst
+
+    .. math:: T(p(x))=T(1)=2=2\cdot 1=2p(x)
+    
+    svo :math:`p(x)=1` er líka eiginvigur :math:`T`, líka eigingildi :math:`\lambda=2`.
+
+Fylki línulegra varpana í :math:`V`
+------------------------------------
+
+Sýnidæmi: Fylki línulegra varpana í :math:`V`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Látum :math:`V` vera n-vítt vigurrúm og :math:`T\text{:}V \rightarrow V` vera línulega
+    vörpun. Hvernig finnum við fylki sem táknar :math:`T`?
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Við færum okkur yfir í :math:`\mathbb{R}^n`
+
+    Látum :math:`\mathcal{B}=\{\textbf{b}_1, \dots, \textbf{b}_n\}` vera einhvern grunn
+    fyrir :math:`V`. Tökum :math:`\textbf{x} \in V`. Þá má skrifa
+
+    .. math:: \textbf{x}=r_1\textbf{b}_1+\dots+r_n\textbf{b}_n
+
+    og við skrifum 
+
+    .. math:: [\textbf{x}]_\mathcal{B} = \begin{bmatrix}
+        r_1\\\vdots\\r_n
+        \end{bmatrix}
+
+    Þá gildir líka 
+
+    .. math:: T(\textbf{x})=T(r_1\textbf{b}_1+\dots+r_n\textbf{b}_n)=r_1T(\textbf{b}_1)+\dots+r_nT(\textbf{b}_n)
+
+    Beitum hnitavörpunninni :math:`V\rightarrow\mathbb{R}^n, \textbf{x}\mapsto[\textbf{x}]_\mathcal{B}` á báðar hliðar og fáum
+
+    .. math:: \begin{align*}
+        [T(\textbf{x})]_\mathcal{B}
+        &=r_1[T(\textbf{b}_1)]_\mathcal{B} + \dots +r_n[T(\textbf{b}_n)]_\mathcal{B}
+        \\&= \begin{bmatrix}
+        [T(\textbf{b}_1)]& \dots &[T(\textbf{b}_n)]_\mathcal{B}
+        \end{bmatrix}
+        \underbrace{\begin{bmatrix}
+        r_1 \\ \vdots \\ r_n
+        \end{bmatrix}}_{[\textbf{x}]_\mathcal{B}}
+        \end{align*} 
+    
+    Skilgreinum nú fylkið
+
+    .. math:: T_\mathcal{B}=\begin{bmatrix}
+        [T(\textbf{b}_1)]& \dots &[T(\textbf{b}_n)]_\mathcal{B}
+        \end{bmatrix}
+    
+    Og þá fæst
+
+    .. math:: [T(\textbf{x})]_\mathcal{B}=T_\mathcal{B}[\textbf{x}]_{\mathcal{B}}.
 
 
+Setning
+^^^^^^^
 
-dæmi: Speglun í plani
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^n` vera línulega vörpun með fylkið :math:`A`. Gerum ráð fyrir að 
+    :math:`A` sé hornalínugeranlegt. Látum :math:`\mathcal{B}` vera grunn sem myndaður er að eiginvigrum 
+    :math:`A` og :math:`P` vera fylkið sem hefur eiginvigra :math:`A` sem dálka. Hornalínufylkið 
+    :math:`D=P^{-1}AP` er þá fylki vörpunarinnar m.t.t. grunnsins :math:`\mathcal{B}`.
 
 
-Dæmi: snúningur í P í .riðja
+Sýnidæmi: Hornalínugjörningur
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. admonition:: Dæmi
+    :class: daemi
 
+    Látum :math:`\begin{bmatrix} 0 & 1\\ 5 & 6 \end{bmatrix}` vera venjulega fylkið
+    fyrir línulega vörpun :math:`\mathbb{R}^2 \rightarrow \mathbb{R}^2`.
+    finnið grunn :math:`\mathcal{B}` fyrir :math:`\mathbb{R}^2` þannig að 
+    :math:`\mathcal{B}` -fylki :math:`T` sé hornalínufylki.
 
-:math:``
+.. admonition:: Launs
+    :class: daemi, dropdown
 
-Skilgreining: Línuleg vörpun
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Fyrst finnum við eigingildin og eiginvigrana:
+
+    .. math:: \det(A-\lambda I)=\begin{vmatrix}
+        -\lambda & 1 \\
+        7 & 6 - \lambda
+        \end{vmatrix} = \lambda^2 - 6\lambda - 7 = 0
+    
+    Þetta gefur :math:`(\lambda-7)(\lambda+1)=0` 
+    og við fáum eigingildin: :math:`\lambda_1=7` og :math:`\lambda_2=-1`.
+    Finnum eiginvigra fyrir :math:`\lambda_1=5` 
+
+    .. math:: A-7I=\begin{bmatrix}
+        -7 & 1 \\
+        7 & -1
+        \end{bmatrix}
+        \sim \begin{bmatrix}
+        7 & -1 \\
+        0 & 0
+        \end{bmatrix}
+
+    Eiginvigur: :math:`\textbf{v}_1=\begin{bmatrix} 1 \\ 7 \end{bmatrix}`.
+    Finnum eiginvigra fyrir :math:`\lambda_2=-1`
+
+    .. math:: A-(-1)I=\begin{bmatrix}
+        1 & 1 \\
+        7 & 7
+        \end{bmatrix}\sim\begin{bmatrix}
+        1 & 1 \\
+        0 & 0
+        \end{bmatrix}\Rightarrow x + y = 0
+    
+    Eiginvigur: :math:`\textbf{v}_2=\begin{bmatrix} -1 \\ 1 \end{bmatrix}`
+    Getum því skrifað
+
+    .. math:: P=\begin{bmatrix}
+        1 & -1 \\
+        7 & 1
+        \end{bmatrix} \text{ og } D=\begin{bmatrix}
+        7 & 0 \\
+        0 & -1
+        \end{bmatrix}
+    
+    Þá gildir að :math:`A=PDP^{-1}` og :math:`\mathcal{B} = \left\{\begin{bmatrix} 1 \\ 7 \end{bmatrix},\begin{bmatrix} -1 \\ 1 \end{bmatrix}\right\}`.
 

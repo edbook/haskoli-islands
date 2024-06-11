@@ -11,6 +11,39 @@ eðlisfræðinnar, í tölvugrafík, fjármálum og í tengslum við gervigreind
 Línuleg jöfnuhneppi
 -------------------
 
+Skilgreining: Línuleg jafna
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Jafna af taginu 
+
+    .. math:: a_1x_1+a_2x_2+\dots+a_nx_n=b 
+
+    kallast **línuleg jafna** (e. linear equation).
+
+    :math:`a_1,a_2,\dots,a_n` kallast **stuðlar** (e. coefficients) jöfnunnar.
+    :math:`x_1,x_2,\dots,x_n` eru óþekktar stærðir, breytur (e. variables).
+
+
+Skilgreining: Línulegt jöfnuhneppi 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    **Línulegt jöfnuhneppi** (e. system of linear equations, linear system)
+    er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á formin
+
+    .. math:: \begin{align}
+        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
+        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &= b_2 \\
+        &\vdots \\
+        a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
+        \end{align}
+
+
 Setning
 ^^^^^^^
 
@@ -28,6 +61,33 @@ Setning
     Segjum að jöfnuhneppi sé **ósamkvæmt** (e. inconsistent) ef það hefur enga lausn.
 
     Jöfnuhneppi er sagt **samkvæmt** (e. consistent) ef það hefur að minnsta kosti eina lausn.
+
+
+Sýnidæmi: Jöfnuhneppi sem hefur enga lausn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Leysið jöfnuhneppið
+
+  .. math:: \begin{align*}
+    x-2y&=5 \\
+    -2x+4y&= 6 
+    \end{align*}
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+  
+   Margföldum efri jöfnuna með 2.
+   
+  .. math:: \begin{align*}
+     2x-4y&=10 \\
+     -2x+4y&= 6 
+     \end{align*}
+
+  Leggjum saman jöfnurnar og fáum :math:`0=16` svo jöfnuhneppið 
+  hefur enga lausn. Við segjum því að jöfnuhneppið sé ósamkvæmt (e. inconsistent).
 
 
 Sýnidæmi: Jöfnuhneppi sem hefur eina lausn
@@ -58,32 +118,6 @@ Sýnidæmi: Jöfnuhneppi sem hefur eina lausn
         1 & 2  \\
         1 & -1 \\
         \end{bmatrix}
-
-Sýnidæmi: Jöfnuhneppi sem hefur enga lausn
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  Leysið jöfnuhneppið
-
-  .. math:: \begin{align*}
-    x-2y&=5 \\
-    -2x+4y&= 6 
-    \end{align*}
-
-.. admonition:: Lausn
-  :class: daemi, dropdown
-  
-   Margföldum efri jöfnuna með 2.
-   
-  .. math:: \begin{align*}
-     2x-4y&=10 \\
-     -2x+4y&= 6 
-     \end{align*}
-
-  Leggjum saman jöfnurnar og fáum :math:`0=16` svo jöfnuhneppið 
-  hefur enga lausn. Við segjum því að jöfnuhneppið sé ósamkvæmt (e. inconsistent).
 
 Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -129,7 +163,7 @@ Skilgreining: Lausnamengi
 .. admonition:: Skilgreining
     :class: skilgreining
 
-        Mengi allra launsa jöfnuhneppis kallast **lausnamengi** þess (e. solution set).
+    Mengi allra launsa jöfnuhneppis kallast **lausnamengi** þess (e. solution set).
 
 
 Skilgreining: Jafngild
@@ -153,11 +187,11 @@ Setning
 
     Línuaðgerðir:
 
-    **(1)** að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
+    **(1)** Umskipting (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
 
-    **(2)** að víxla á línum :math:`R_i` og :math:`R_j`.
+    **(2)** Víxlun (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
 
-    **(3)** að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
+    **(3)** Skölun (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
 
     Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
 
@@ -691,29 +725,29 @@ Sýnidæmi: Frjálsar og háðar breytur
 .. admonition:: Athugasemd
     :class: athugasemd
 
-  Ef við umbreytum aukna fylki jöfnuhneppis yfir á (rudda) efri stallagerð getur eftirfarandi gerst:
+    Ef við umbreytum aukna fylki jöfnuhneppis yfir á (rudda) efri stallagerð getur eftirfarandi gerst:
 
-  **1.** Dálkurinn lengst til hægri er vendidálkur. Í þeim tilfellum hefur jöfnuhneppið enga lausn. **Dæmi:**
+    **1.** Dálkurinn lengst til hægri er vendidálkur. Í þeim tilfellum hefur jöfnuhneppið enga lausn. **Dæmi:**
 
-  .. math:: \begin{bmatrix}
-    1 & * & 0 \\
-    0 & 0 & 1 \\
-    \end{bmatrix}
+    .. math:: \begin{bmatrix}
+        1 & * & 0 \\
+        0 & 0 & 1 \\
+        \end{bmatrix}
 
- **2.** Allir dálkar nema dálkurinn lengst til hægri eru vendidálkar. Í þeim tilfellum hefur jöfnuhneppið nákvæmlega eina lausn. **Dæmi:**
+    **2.** Allir dálkar nema dálkurinn lengst til hægri eru vendidálkar. Í þeim tilfellum hefur jöfnuhneppið nákvæmlega eina lausn. **Dæmi:**
     
- .. math:: \begin{bmatrix}
-    1 & 0 & * \\
-    0 & 1 & * \\
-    \end{bmatrix}
+    .. math:: \begin{bmatrix}
+        1 & 0 & * \\
+        0 & 1 & * \\
+        \end{bmatrix}
 
- **3.** Dálkurinn lengst til hægri er ekki vendidálkur auk minnst eins annars til viðbótar. 
- Í þeim tilfellum hefur jöfnuhneppið óendanlega margar lausnir. **Dæmi:**
+    **3.** Dálkurinn lengst til hægri er ekki vendidálkur auk minnst eins annars til viðbótar. 
+    Í þeim tilfellum hefur jöfnuhneppið óendanlega margar lausnir. **Dæmi:**
     
- .. math:: \begin{bmatrix}
-    1 & 0 & * & * \\
-    0 & 1 & * & * \\    
-    \end{bmatrix}
+    .. math:: \begin{bmatrix}
+        1 & 0 & * & * \\
+        0 & 1 & * & * \\    
+        \end{bmatrix}
 
 .. admonition:: Setning
   :class: setning
@@ -726,7 +760,7 @@ Sýnidæmi: Frjálsar og háðar breytur
 
   þar sem :math:`b\neq 0`. 
 
-  Ef jöfnuhneppið hefur lausn þá er annaphvort
+  Ef jöfnuhneppið hefur lausn þá er annaðhvort
 
     **1.** nákvæmlega eina lausn, ef það er engin frjáls breyta.
 
@@ -2157,42 +2191,185 @@ Skilgreining: Línuleg vörpun
                .. math:: T(c_1\textbf{u}_1+c_2\textbf{u}_2+\cdots+c_p\textbf{u}_p)=c_1T(\textbf{u}_1)+c_2T(\textbf{u}_2)+\cdots+c_pT(\textbf{u}_p). 
 
 
-Algengar línulegar varpanir í :math:`\mathbb{R}^2`
--------------------------------------------------
-
-
-
-Einingarfylkið
---------------
-
-
 
 Línulegar varpanir :math:`\mathbb{R}^2\rightarrow \mathbb{R}^2` 
----------------------------------------------------------------
+----------------------------------------------------------------
+
+Sýnidæmi: Eiginvigrar línulegra varpana
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Segjum að við höfum línulega vörpun  :math:`T \text{:} \mathbb{R}^2 \rightarrow \mathbb{R}^2`
+    þannig að 
+
+    .. math:: T(\textbf{e}_1)=T\left(\begin{bmatrix}
+        1\\0
+        \end{bmatrix}\right) = \begin{bmatrix}
+        -2\\-1
+        \end{bmatrix} \text { og }
+        T(\textbf{e}_2) =T\left(\begin{bmatrix}
+        0\\1
+        \end{bmatrix}\right) = \begin{bmatrix}
+        3\\0
+        \end{bmatrix}.
+    
+    Hvað er :math:`T\left(\begin{bmatrix} 4\\5\end{bmatrix}\right)`?
+
+.. admonition:: Launs
+    :class: daemi, dropdown
+
+    Notum að vörpunin :math:`T` er línuleg og fáum
+
+    .. math:: \begin{align*}
+        T\left(\begin{bmatrix}
+        4\\5
+        \end{bmatrix}\right) &= T\left(4\begin{bmatrix}
+        1\\0
+        \end{bmatrix} +5\begin{bmatrix}
+        0\\1
+        \end{bmatrix}\right) =4T\left(\begin{bmatrix}
+        1\\0
+        \end{bmatrix}\right) +5T\left(\begin{bmatrix}
+        0\\1
+        \end{bmatrix}\right) \\&
+        = 4\cdot \begin{bmatrix}
+        -2\\-1
+        \end{bmatrix}+5\cdot\begin{bmatrix}
+        3\\0
+        \end{bmatrix}=\begin{bmatrix}
+        4(-2)+5\cdot 3\\ 4(-1) + 5\cdot 0
+        \end{bmatrix}=\begin{bmatrix}
+        7\\ -4
+        \end{bmatrix}
+        \end{align*}
+
+Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
+------------------------------------------------------------------------------
+
+Setning
+^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T` vera línulega vörpun :math:`\mathbb{R}^\rightarrow\mathbb{R}^m`.
+    Þá er til nákvæmlega eitt :math:`m \times n` fylki :math:`A` þannig að
+    :math:`T(\textbf{x})=A\textbf{x}` fyrir öll :math:`\textbf{x} \in \mathbb{R}^n`.
+    Jafnframt gildir að :math:`A=\begin{bmatrix} T(\textbf{e}_1) &\dots& T(\textbf{e}_n) \end{bmatrix}`
+    Við köllum fylkið :math:`A` gjarnan *venjulega* fylkið (e. standard matrix) fyrir :math:`T`
+    og segjum að línulega vörpunin :math:`T` sé gefin með fylkinu :math:`A`.
+
+
+Dæmi um línulegar varpanir  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Speglanir
+~~~~~~~~~
 
 Speglun um x-ás 
 
+ATH. MYND
+
 Speglun um y-ás
+
+ATH. MYND
 
 Speglun um línuna x=y
 
+ATH. MYND
+
 Speglun um línuna y=-x
+
+ATH. MYND
 
 Speglun um núllpunkturinn
 
+ATH. MYND
+
+Stríkkanir
+~~~~~~~~~~
+
 Lárétt stríkkun
+
+ATH. MYND
 
 Lóðrétt stríkkun
 
+ATH. MYND
+
+Skekkingar
+~~~~~~~~~~
+
 Lárétt skekking
+
+ATH. MYND
 
 Lóðrétt skekking
 
-Ofanvar á x-ás
+ATH. MYND
 
-Ofanvarp á y-áS
+Ofanvörp
+~~~~~~~~~
+
+Ofanvarp á x-ás
+
+ATH. MYND
+
+Ofanvarp á y-ás
+
+ATH. MYND
 
 
+Eintækar og átækar varpanir
+---------------------------
 
-:math:``
+Skilgreining: Átæk vörpun
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. admonition:: Skilgreinig
+    :class: skilgreining
+
+    Vörpun :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð 
+    **átæk** (e. onto) ef öll :math:`\textbf{b} \in \mathbb{R}^m` 
+    liggji í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
+
+Skilgreining: Eintæk vörpun
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Vörpun :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð
+    **eintæk** (e. one-to-one) ef sérhvert :math:`\textbf{b} \in \mathbb{R}^m`
+    er mynd í mesta lagi eins staks í :math:`\mathbb{R}^n` með tillit til :math:`T`.
+    Með öðrum orðum varpa eintækar varpanir ólíkum stökum í ólík stök.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Varpanir sem eru bæði eintækar og átækar kallast *gagntækar* (e. bijective).
+
+Setning
+^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun.
+    Þá er :math:`T` eintæk þá og því aðeins að :math:`T(\textbf{0}=\textbf{0})` hafi
+    aðeins augljósu lausnina.
+
+Setning
+^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun og
+    :math:`A` vera venjulega fylkið fyrir :math:`T`. Þá gildir
+
+        **1.** :math:`T` er átæk þá og því aðeins að dálkar :math:`A` spanni allt :math:`\mathbb{R}^m`.
+
+        **2.** :math:`T` er eintækt þá og því aðeins að dálkar :math:`A` séu línulega óháðir.
