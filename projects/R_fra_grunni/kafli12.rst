@@ -263,6 +263,16 @@ neðan:
 | echo                  | T eða F               | | Ef T þá birtist kóðinn í .html skalinu (sjálfgefið)     |
 |                       |                       | | Ef F þá birtist kóðinn ekki                             |
 +-----------------------+-----------------------+-----------------------------------------------------------+
+| warning               | T eða F               | | Ef T þá birtast villuskilaboð (sjálfgefið)              |
+|                       |                       | | Ef F þá ekki villuskilaboð                              |
++-----------------------+-----------------------+-----------------------------------------------------------+
+| message               | T eða F               | | Ef T þá birtast önnur skilaboð frá R (sjálfgefið)       |
+|                       |                       | | Ef F þá birtist ekki skilaboð                           |
++-----------------------+-----------------------+-----------------------------------------------------------+
+| cache                 | T eða F               | | Ef T þá er niðurstaða kóðans vistuð í minni og notuð    |
+|                       |                       | |  ef kóðabúturinn er keyrður aftur                       |
+|                       |                       | | Ef F þá eru útreikningar endurteknir  (sjálfgefið)      |
++-----------------------+-----------------------+-----------------------------------------------------------+
 | results               | "markup", "hide" ...  | | Ef "markup" (sjálfgefið) þá birtist það                 |
 |                       |                       | |  sem aðferðin skilar í .html skalinu                    |
 |                       |                       | | Ef "hide" er kóðinn keyrður en úttakið birtist ekki     |

@@ -20,7 +20,7 @@ Svo má beita fallinu á alla punkta flatarmyndar og skoða myndmengið sem kemu
 - **skekking** (*shear deformation*) um tiltekið horn
 - **speglun** (*reflection*) um x-ás eða y-ás
 
-Sem dæmis er fylkið:
+Sem dæmi er fylkið:
 
 .. math:: K = \begin{pmatrix} 1 & \sin 30° \\ 0 & 1 \end{pmatrix}
 
@@ -171,6 +171,9 @@ Fylki og net
 Margar fleiri myndir af netum má skoða með því að gúgla *graph mathematics* og
 smella á *images*.
 
+Grannafylki
+~~~~~~~~~~~
+
 .. admonition:: Skilgreining: Grannafylki 
    :class: regla
    
@@ -210,7 +213,8 @@ smella á *images*.
       \end{pmatrix}
       \;\text{ (hin tvö)}\;
 
-.. rubric:: Vegir í netum
+Vegir í netum
+~~~~~~~~~~~~~
 
 **Vegur** (*path*) með lengd :math:`L` í neti er runa af :math:`L + 1` hnút þannig
 að leggur tengi hnút 1 við hnút 2, hnút 2 við hnút 3, o.s.frv. Sagt er að
@@ -275,6 +279,9 @@ Skemmtileg regla tengir fjölda vega milli hnúta og veldi grannafylka:
    4. Reiknið :math:`B = A + A^2 + A^3`. Þið ættuð að fá út að :math:`b_{14} = 4`.
       Finnið vegina fjóra frá hnút 1 til hnúts 4.
 
+Legufylki
+~~~~~~~~~
+      
 .. admonition:: Skilgreining: Legufylki
    :class: regla
 
@@ -337,12 +344,12 @@ Net sem lýsir kerfi þar sem eitthvað flæðir eftir hverjum legg, rafmagn, va
 umferð, vörur o.s.frv. er kallað **flæðinet** (*network*). Hnútpunktarnir eru þá
 t.d. tengibox/tengivirki, tengipunktar, gatnamót eða dreifistöðvar. Í
 slíkum netum eru tölur tengdar hverjum legg, stundum fleiri en ein. Fyrir legg
-:math:`e_j` gæti t.d. gilt:
+:math:`e_k` gæti t.d. gilt:
 
 .. math::
-   &\text{flæði } = x_j \\
-   &\text{hámarksflæði eða burðargeta } = b_j \\
-   &\text{kostnaður á flutta einingu } = c_j
+   &\text{flæði } = x_k \\
+   &\text{hámarksflæði eða burðargeta } = b_k \\
+   &\text{kostnaður á flutta einingu } = c_k
 
 Aðrir möguleikar á upplýsingum um leggi gætu t.d. verið lengdir þeirra eða
 viðnám í þeim. Þessar upplýsingar mætti setja fram með fylki sem hefur ekki-núll
@@ -350,7 +357,7 @@ viðnám í þeim. Þessar upplýsingar mætti setja fram með fylki sem hefur e
 :math:`(i,j)` ef leggur tengir hnúta :math:`i` og :math:`j`). Flæðinet
 eru oft stefnd, en þá táknar stefna örvanna/leggjanna ekki stefnu
 flæðisins, heldur einungis í hvaða stefnu flæðið telst jákvætt. Ef flæði er á
-móti ör verður :math:`x_j < 0`.
+móti ör verður :math:`x_{ij} < 0`.
 
 Lindir og ósar
 ~~~~~~~~~~~~~~
@@ -401,6 +408,61 @@ passar sú stefna, þar eru lindir sem skila flæði inn í netið, en þar sem
    Ákvarðið legufylkið :math:`A` og í framhaldi nettóinnflæðið :math:`s`.
    Flokkið svo hnútana í lindir, ósa og aðra hnúta.
 
+Hámarksflæði
+~~~~~~~~~~~~
+Til að ákvarða hámarksflæði í gegn um net frá lind til óss má nota svonefnt
+`Ford-Fulkerson reiknirit
+<https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm>`_, sem lýsa má svo:
+
+.. code:: text
+
+   Lát flæði x[i,j] = 0 fyrir alla leggi i→j
+   Meðan til er vegur (lind=v0, v1,..., vn=ós) þannig
+            að hægt er að auka flæðið í öllum leggjum vi→vj:
+      c = hámarkið sem hægt er að auka flæðið um
+      x[i,j] += c fyrir alla leggi í veginum
+
+Svo eru til ýmsar útgáfur af þessu reikniriti eftir því hvernig vegurinn er
+fundinn, m.a. `Edmonds-Karp
+reikniritið <https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm>`_
+reikniritið og `reiknirit
+Dinic <https://en.wikipedia.org/wiki/Dinic%27s_algorithm>`_. Það fyrrnefnda er til í
+SciPy, í falli sem heitir ``maximum_flow``, sbr. eftirfarandi sýnidæmi. 
+
+.. admonition:: Sýnidæmi: Hámarksflæði með Edmonds-Karp
+   :class: synidaemi
+
+   .. code:: python
+           
+      import numpy as np, scipy.sparse as ssp
+      B = ssp.csr_matrix([[0,3,2,0],[0,0,1,3],[0,0,0,2],[0,0,0,0]])
+      flow = ssp.csgraph.maximum_flow(B, source=0, sink=3)
+      res = flow.residual.todense()
+      X = np.where(res > 0, res, 0)
+      print(f"Hámarksflæði = {flow.flow_value}")
+      print("Tilsvarandi flæðinet:")
+      print(X)
+
+   Við sjáum að fallið ``maximum_flow`` tekur burðargetuna inn í fylki sem svarar til
+   grannafylkis. Skipunina ``np.where`` sem ekki hefur komið við sögu áður má nota til að velja stök
+   fylkis sem uppfylla tiltekið skilyrði. Forritið prentar út:
+
+   .. code:: text
+
+      Hámarksflæði = 5
+      Tilsvarandi flæðinet:
+      [[0 3 2 0]
+       [0 0 0 3]
+       [0 0 0 2]
+       [0 0 0 0]]
+
+.. admonition:: Æfing: Tilraunir með hámarksflæði
+   :class: aefing
+
+   a. Teiknið netið sem unnið er með í sýnidæminu að framan. Merkið inn númer hnúta og burðargetu.
+   b. Afritið forritið í vinnubók og keyrið. Prófið að breyta einhverri burðargetu.
+   c. Prentið líka út flow.residual og res
+       
 Línuleg hreyfikerfi
 -------------------
 
