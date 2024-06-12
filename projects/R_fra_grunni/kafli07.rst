@@ -53,7 +53,7 @@ Byrjum á því að nota ``prop.table()`` skipunina, (kassa
    ##       kvk        kk
    ## 0.6518047 0.3481953
 
-Tilgátuprófið, öryggisbilið, prófstærðin og tilgátuprófið fást öll í
+Tilgátuprófið, öryggisbilið og prófstærðin fást öll í
 einu með einni skipun:
 
 ::
@@ -122,7 +122,7 @@ STAE209. Byrjum sem fyrr á því að skoða hvert kynjahlutfallið er með
    ##   kvk 0.6453488 0.6555184
    ##   kk  0.3546512 0.3444816
 
-Tilgátuprófið, öryggisbilið, prófstærðin og tilgátuprófið fást öll í
+Tilgátuprófið, öryggisbilið og prófstærðin fást öll í
 einu með einni skipun:
 
 ::

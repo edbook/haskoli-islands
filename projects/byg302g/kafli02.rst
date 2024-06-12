@@ -1,13 +1,14 @@
 Kafli - Gerð og uppbygging efna
 ===============================
 
-Allir eiginleikar efna byggja á gerð þeirra og uppbyggingu, sérstaklega gildir að styrkur,
-stífleiki, rafleiðni og ending eru beint háðir grunnuppbyggingu þeirra.
+Viðeigandi efnisnotkun er háð þekkingu á grunneiginleikum efnanna.  Allir eiginleikar efna byggja á gerð þeirra og uppbyggingu, sérstaklega gildir að styrkur, stífleiki, rafleiðni og ending eru beint háðir grunnuppbyggingu þeirra.  Við getum skoðað uppbyggingu efna á mismunandi skölum, frumeindaskala, kristaluppbyggingu á míkróskala og póruuppbyggingu á makróskala. Í þessum kafla verður fjallað um frumeindabyggingu, tengigerðir og kristalbyggingu en holrýmd og póruuppbyggingu er lýst nánar í 3. kafla.
+
+Aðeins skal líta á kaflann hér sem samantekt á nauðsynlegum hugtökum.
 
 Frumeindir (e. atom)
 --------------------
 
-Byggðar upp úr þremur tegundum einda; jákvætt hlaðin róteind (e. proton), óhlaðin nifteind (e. neutron) og neikvætt hlaðin rafeind (e. electron).
+Frumeindir eru byggðar upp úr þremur tegundum einda; jákvætt hlaðin róteind (e. proton), óhlaðin nifteind (e. neutron) og neikvætt hlaðin rafeind (e. electron).
 Kjarninn (e. nucleus) er iðulega samsettur úr jafnmörgum róteindum (fjöldi; Z) og nifteindum (fjöldi; N) –
 vetni og mismunandi ísótópar eru undantekning frá þessu. Í frumeind sem er óhlaðin útávið þá er fjöldi rafeinda sá sami og róteinda (Z).
 Í módeli Bohr's er gert ráð fyrir að rafeindirnar raðist á sammiðja hvel (e. electron shell) um kjarnann.
@@ -43,6 +44,10 @@ Ysta hvelið hverju sinni (valenshvelið) getur þó mest haft 8 rafeindir, og e
 
 Frumeinda massi, mól og Avogadros-talan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: wPGVQu3UXpw
+    :width: 100%
+    :height: 400
 
 Frumeind vegur mjög lítið, eða stærðargráðan :math:`10^{-27}` kg, því er til einföldunar iðulega
 notaður hlutfallslegur frumeindamassi, :math:`A_r`; :math:`\require{\mhchem}`
@@ -89,41 +94,6 @@ Lotukerfið (skipting þess í svið og upplýsingar um eiginleika). Í góðri 
   :text: Gagnvirkt lotukerfi á íslensku
   :link: https://ptable.com/?lang=is#Eiginleikar
 
-
-Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. line-block::
-  :math:`1 \mu \textrm{m} = 10^{-6} \textrm{m}` (míkrómeter)
-  :math:`1 \textrm{nm} = 10^{-9} \textrm{m}` (nanómeter)
-  :math:`1 \textrm{Å} = 10^{-10} \textrm{m}` (Ångström)
-  :math:`1 \textrm{pm} = 10^{-12} \textrm{m}` (píkómeter)
-
-Stærðargráður „smárra“ eininga;
-
-Algeng frumefni hafa frumefnaradía á bilinu 0,5-2 Å (1 Ångström = :math:`10^{-10}` m) eða 50-200 pm.
-
-Stærð vatnssameindar (sjá t.d. Wikipedia; water);
-
-.. figure:: ./myndir/kafli02/vatn.png
-  :align: center
-  :width: 40%
-
-Mannshár er með þvermál á bilinu 17-181 :math:`\mu \textrm{m}` (1 :math:`\mu \textrm{m}` = :math:`10^{-6}` m), eða 0,017-0,181 mm.
-(http://hypertextbook.com/facts/1999/BrianLey.shtml).
-
-Uppleysni; minnsta stærð sem greina má
-
-Með berum augum getur maður með venjulega sjón greint á milli grófgerðs hárs og
-fíngerðs hárs, uppleysni augans gæti því verið um 0,02 mm?
-
-Ljóssmásjá (Holland 1590 – 1608);
-
-Stækkun allt að 1 000 X, og uppleysni þá allt að 0,2 :math:`\mu` m. Stafræn ljóssmásjá (sjá t.d. www.lsw.com), dæmigerð stækkun 400 X, uppleysni allt
-að 0,5 :math:`\mu` m.
-
-Rafeindasmásjá (e: scanning electron microscope, SEM);
-Stækkun 1 000 – 1 000 000 X, og uppleysni allt að 10 nm (100 Å)
-
 .. admonition:: Dæmi (2.3 í bókinni)
   :class: tip 
 
@@ -167,6 +137,41 @@ Stækkun 1 000 – 1 000 000 X, og uppleysni allt að 10 nm (100 Å)
 
   :math:`\text{sameindamassi} = \frac{\text{mólmassi}}{N_A} = \frac{172,176 \text{g/mól}}{6,02\cdot10^{23}\text{eindir}/\text{mól}} = 2,86\cdot10^{-22}\text{g}/\text{eind}`
 
+Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. line-block::
+  :math:`1 \mu \textrm{m} = 10^{-6} \textrm{m}` (míkrómeter)
+  :math:`1 \textrm{nm} = 10^{-9} \textrm{m}` (nanómeter)
+  :math:`1 \textrm{Å} = 10^{-10} \textrm{m}` (Ångström)
+  :math:`1 \textrm{pm} = 10^{-12} \textrm{m}` (píkómeter)
+
+Stærðargráður „smárra“ eininga;
+
+Algeng frumefni hafa frumefnaradía á bilinu 0,5-2 Å (1 Ångström = :math:`10^{-10}` m) eða 50-200 pm.
+
+Stærð vatnssameindar (sjá t.d. Wikipedia; water);
+
+.. figure:: ./myndir/kafli02/vatn.png
+  :align: center
+  :width: 40%
+
+Mannshár er með þvermál á bilinu 17-181 :math:`\mu \textrm{m}` (1 :math:`\mu \textrm{m}` = :math:`10^{-6}` m), eða 0,017-0,181 mm.
+(http://hypertextbook.com/facts/1999/BrianLey.shtml).
+
+Uppleysni; minnsta stærð sem greina má
+
+Með berum augum getur maður með venjulega sjón greint á milli grófgerðs hárs og
+fíngerðs hárs, uppleysni augans gæti því verið um 0,02 mm?
+
+Ljóssmásjá (Holland 1590 – 1608);
+
+Stækkun allt að 1 000 X, og uppleysni þá allt að 0,2 :math:`\mu` m. Stafræn ljóssmásjá (sjá t.d. www.lsw.com), dæmigerð stækkun 400 X, uppleysni allt
+að 0,5 :math:`\mu` m.
+
+Rafeindasmásjá (e: scanning electron microscope, SEM);
+Stækkun 1 000 – 1 000 000 X, og uppleysni allt að 10 nm (100 Å)
+
+
 Orka í bindingum og kraftar milli frumeinda
 -------------------------------------------
 
@@ -205,38 +210,56 @@ Jafnframt gildir (almennt);
 
 Efnafræðilegir bindingar (myndun sameinda)
 ------------------------------------------
+Frumeindir mynda sameindir og kristalla með fyrsta stigs efnafræðilegum bindingum (e. primary chemical bonds). Þrjár efnafræðilegar bindingar eru skilgreindar sem frumbindingar; 1) Jónabiningar (e. ionic bond), 2) Kóvalentbindingar (e. covalent bond) og 3) málmbindingar (e. metalic bond). Í öllum þessum bindingum eru það rafeindirnar á ysta hvelinu (valenshvelinu) sem leika höfuðhlutverk. Bindingarnar verða til vegna viðleitni frumeindanna til þess að gera valenshvelið stöðugt, þ.e. fylla það rafeindum.
+
+Auk þessara frysta stigs bindinga eru skilgreindar annars stigs bindingar. Annars stigs bindingar eru veikari en fyrsta stigs bindingar. Van der Waal bindingar og vetnisbindingar eru algengustu annars stigs bindingarnar. 
+
 Jónabindingar
+~~~~~~~~~~~~~
 
 .. figure:: ./myndir/kafli02/jonabinding.png
   :align: center
   :width: 70%
 
+.. youtube:: 6DtrrWA5nkE
+    :width: 100%
+    :height: 400
+
 Kóvalentbindingar
+~~~~~~~~~~~~~~~~
 
 .. figure:: ./myndir/kafli02/kovalentbinding.png
   :align: center
   :width: 70%
 
-
 Málmbindingar
+~~~~~~~~~~~~~
 
 .. figure:: ./myndir/kafli02/malmbinding.png
   :align: center
   :width: 70%
 
+  
+.. youtube:: b1y2Q6YX1bQ
+    :width: 100%
+    :height: 400
+
 van der Waal bindingar
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: ./myndir/kafli02/VanDerWaalbinding.png
   :align: center
   :width: 70%
 
 Vetnisbindingar
+~~~~~~~~~~~~~~~
 
 .. figure:: ./myndir/kafli02/vetnisbinding.png
   :align: center
   :width: 70%
 
 Yfirlit yfir efnabindingar
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: ./myndir/kafli02/Efnabindingar.png
   :align: center
@@ -246,8 +269,7 @@ Kristallar
 ----------
 
 Frumeindir geta tengst þannig að þær myndi reglulega, samfellda kristalla og er innbyrðis
-röðun þeirra þá með ýmsu móti. Í þessum tilvikum er efninu lýst með minnsta “kerfinu”
-sem lýsir heildinni;
+röðun þeirra þá með ýmsu móti. Efnið mun taka minnstu pökkun sem það ræður við, það er minnsta orkan. Minnsta kerfið eða kristaleiningin lýsir kristallinum. Það eru til 14 mismunandi kristaleiningar.
 
 .. figure:: ./myndir/kafli02/Kristallar.png
   :align: center
@@ -265,6 +287,10 @@ BCC einingu er talan n=8*1/8 +1=2. Útfrá frumeindaradíus má reikna kantstær
 einingar og þannig reikna út m.a. þéttleika efnis byggt á grunnuppbyggingu þess.
 Kristallauppbyggingin er sjaldnast gallalaus;
 
+.. youtube:: Rm-i1c7zr6Q
+    :width: 100%
+    :height: 400
+
 .. figure:: ./myndir/kafli02/punktfejl.png
   :align: center
   :width: 70%
@@ -278,13 +304,9 @@ frekar útfrá slíkum göllum;
   :align: center
   :width: 70%
 
-Áraun á efni sem er byggt upp sem kristall; áraun eftir kristallaplani og formbreyting;
-veikasta plan er þéttsetnasta planið (stystir bindingar í plani), þ.e. efni formbreytist helst
-samsíða slíku plani....
-
-Það ber síðan að hafa í huga að þegar efni, jafnvel krystallað, er samsett úr mismunandi
-frumefnum (eða sama frumefni með mismunandi krystallagerð) þá er efnið ekki endilega
-eins krystallað í heild sinni;
+Það ber síðan að hafa í huga að þegar efni, jafnvel kristallað, er samsett úr mismunandi
+frumefnum (eða sama frumefni með mismunandi kristallagerð) þá er efnið ekki endilega
+eins kristallað í heild sinni.
 
 .. figure:: ./myndir/kafli02/smasjarmynd.png
   :align: center
@@ -293,14 +315,37 @@ eins krystallað í heild sinni;
 Smásjármynd af steypujárni með mismunandi uppbyggingu (myndin tekin úr : W. D.
 Callister (2003) Materials Science and Engineering – an Introduction)
 
+Skriðkerfi (e. slip system)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gallar (e. dislocation) í kristalgerðinni geta hreyfst til innan kristalsins. Þessi hreyfing er ekki jafn auðveld í allar áttir. Oftast er eitthvað ákveðið plan sem gallinn á auðveldar með að hreyfast eftir. Slíkt plan er kallað skriðplan (e. slip plane), áttin sem gallinn hreyfist eftir kallast þá skriðstefna (e. slip direction). Saman mynda skriðplanið og skriðstefnan svokallað skriðkerfi (e. slip system). Skriðkerfi er háð kristaluppbyggingu efnisins. Skriðplanið þéttpakkaðasta planið innan kristalsins og skriðstefnan er þéttpakkaðasta stefnan innan skriðplansins. Myndin sýnir skriðkerfi fyrir FCC kristal. Þetta skriðplan hefur þrjár skriðstefnur. Innan kristaleiningarinnar eru fjögur slík plön. Þess vegna eru 4x3 = 12 einstök skriðkerfi í FCC kristal. Sjá töflu.
+
+Málmar sem eru með FCC eða BCC kristalbyggingu eru með töluvert mörg skriðkerfi (amk. 12). Slíkir málmar eru seigir (e. ductile), þ.e. þeir geta formbreyst mikið áður en þeir brotna, vegna þess að skriðkerfi gera efninu kleift að formbreytast plastískt. Málmar byggðir HCP kristaleiningar með fáum skriðkerfum eru oftast stökkir (e. brittle).
+
+Þegar við setjum álag á efni sem er byggt upp sem kristall þá mun efnið formbreytast eftir þéttsetnustu stefnunni í þéttsetnasta planinu, því í skriðkerfinu eru stystar bindingar og auðveldast að mynda nýjar.  Því fleiri slík plön sem eru í kristallinum þeim mun seigara er efnið, því hver eind hefur fleiri "undankomu" leiðir til að tengjast nýjum eindum undir álagi.
+
+
+.. youtube:: F7e_iWCUfI4
+    :width: 100%
+    :height: 400
+
+.. button::
+  :text: Annað myndband um FCC og HCP
+  :link: https://www.youtube.com/watch?v=ku6u7yqNwAc&list=RDCMUCkFj-5ptpNAk3JDN4_vwiVQ&index=2
+
 
 Efni sem ekki mynda kristalla
 -----------------------------
 
-*Lífræn efni eru uppbyggð úr fjölliðum*
+Efni eru uppbyggð úr fjölliðum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hver fjölliða er keðja af frumefnum, en fjölliður tengjast innbyrðis lauslega og óreglulega
 með t.d. vetnisbindingum.
+
+.. youtube:: EP0zfm_FVqc
+    :width: 100%
+    :height: 400
 
 Dæmi:
 
@@ -308,7 +353,37 @@ Dæmi:
 * Plastefni
 * Gúmmí
 
-*Blandefni (disperse material) og þeytur (kolloider)*
+**Timbur**
+
+Timbur er byggt úr mismunandi náttúrulegum fjölliðum (e. polymer). Fjölliðurnar eru kallaðar beðmi (e. cellulose), hálfbeðmi (e. hemicellulose) og tréni (e. lignin).
+
+
+.. figure:: ./myndir/kafli02/timbur.png
+  :align: center
+  :width: 70%
+
+:cite:`2021:Thybring`
+
+**Plastefni**
+
+Plastefni eru manngerðar fjölliður.
+
+.. figure:: ./myndir/kafli02/plast1.png
+  :align: center
+  :width: 70%
+
+.. figure:: ./myndir/kafli02/plast2.png
+  :align: center
+  :width: 70%
+
+:cite:`2019:GreenChemUofT`
+
+**Gúmmí**
+
+Gúmmí (e. rubber or elastomer) getur ýmist verið náttúrlegt gúmmí eða gerviefni. Náttúrulegt gúmmí er fengið úr gúmmítrjám, gervigúmmí er búið til með fjölliðun á jarðolíuefnum. 
+
+Blandefni (disperse material) og þeytur (kolloider)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Efni geta verið uppbyggð sem blanda tveggja eða fleiri ólíkra efna sem ekki tengjast
 einhverju af áður nefndum efnafræðilegum böndum heldur fremur eðlisfræðilega
@@ -322,7 +397,17 @@ Dæmi:
 * Steypa (Hörðnuð; hörðnuð sementsefja; samfelldi fasinn + fylliefni)
 * Málning (blaut; leysiefni; samfelldi fasinn + fylliefni)
 
-*Gel*
+**Steypa**
+
+.. figure:: ./myndir/kafli02/steypa.jpg
+  :align: center
+  :width: 100%
+
+:cite:`2023:Silva2023`
+
+
+Gel
+~~~
 
 Sambland vökva og fasts efnis, þar sem bæði efnin mynda samfelldan fasa
 (kerfisuppbygging eins og í vatnsfylltum svampi).
@@ -332,3 +417,6 @@ Dæmi;
 
 * Alkalí-kísil gel
 
+Heimildir
+---------
+.. bibliography::

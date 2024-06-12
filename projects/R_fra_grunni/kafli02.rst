@@ -537,8 +537,6 @@ length()
     **Inntak:** nafn á vigri
     
     **Úttak:** lengd vigursins
-    
-    **Helstu stillingar:**
 
 
 --------------

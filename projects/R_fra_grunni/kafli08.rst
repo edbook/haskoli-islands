@@ -131,8 +131,6 @@ bartlett.test()
     **Inntak:** nöfn á talnabreytu og flokkabreytu
     
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
-    
-    **Helstu stillingar:**
 
 
 --------------
@@ -496,7 +494,7 @@ munurinn á dreifingu breytanna tveggja sé hliðrun um fasta tölu og því á
 það ekki við ef breytileiki breytanna er ólíkur.
 
 Hér fyrir neðan má sjá sömu dæmi og hér að ofan framkvæmd með
-``wilcos.test()``:
+``wilcox.test()``:
 
 ::
 
