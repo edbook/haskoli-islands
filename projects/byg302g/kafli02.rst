@@ -217,6 +217,7 @@ Kóvalentbindingar
   :align: center
   :width: 70%
 
+
 Málmbindingar
 
 .. figure:: ./myndir/kafli02/malmbinding.png
