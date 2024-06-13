@@ -1,4 +1,4 @@
-Kafli 3
+Ákveður
 =====================
 Ákveða (e. determinant) er fall frá :math:`\mathbb{R}^{n \times n}\rightarrow \mathbb{R}` sem úthlutar :math:`n \times n` fylki :math:`A` tölu :math:`\det(A)`.
 Ákveða er einungis skilgreind fyrir ferningsfylki og hana má nota t.d. til þess að segja til um hvort fylki sé andhverfanlegt. Ef ákveða fylkis er :math:`0` er fylkið ekki andhverfanlegt.
@@ -38,7 +38,7 @@ Skilgreining: Hlutfylki
 .. admonition:: Skilgreining
     :class: skilgreining
 
-        Látum :math:`A` vera :math:`n \times n` fylki. Fylkið sem fæst með því að fjarlægja :math:`i`-tu línu og :math:`j`-ta dálk kallast hlutfylk, :math:`A_{ij}`, og hefur stærð :math:`(n-1)\times (n-1)`.
+        Látum :math:`A` vera :math:`n \times n` fylki. Fylkið sem fæst með því að fjarlægja :math:`i`-tu línu og :math:`j`-ta dálk :math:`A` kallast hlutfylki, :math:`A_{ij}`, og hefur stærð :math:`(n-1)\times (n-1)`.
 
 Sýnidæmi: Hlutfylki
 ^^^^^^^^^^^^^^^^^^^
@@ -392,6 +392,49 @@ Jafnan helst einning ef annað fylkið er ekki andhverfanlegt, þá er ákveðan
     Um tvö ferningsfylki :math:`A` og :math:`B` gildir almennt :math:`\textbf{ekki}` að :math:`\det(A+B)=\det(A)+\det(B)`.
 
 
+
+Skilgreining: Hjáþáttafylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Fyrir hlutfylki :math:`A_{ij}` skilgreinum við *hjáþátt* :math:`C_{ij}` í sæti :math:`(i,j)` með
+
+    .. math:: C_{ij}=(-1)^{i+j}\det A_{ij}
+
+    og *hjáþáttafylki* (e. cofactor matrix) :math:`A` með
+
+    .. math::
+
+        C=\begin{bmatrix}
+        C_{11} & C_{12} & \dots & C_{1n}\\
+        C_{21} & C_{22} & \dots & C_{21}\\
+        \vdots & \vdots & \ddots & \vdots\\
+        C_{n1} & C_{n2} & \dots & C_{nn}
+        \end{bmatrix}
+
+Skilgreining: Aðokafylki
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`C` vera hjáþáttafylki :math:`A`. Þá skilgreinum við *aðoka fylkið* :math:`\text{adj}A` (e. adjoint matrix) með
+
+    .. math:: \text{adj}A = C^T
+
+
+Setning
+~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera andhverfanlegt :math:`n \times n` fylki þá er
+
+    .. math:: A^{-1} = \frac{\text{adj}A}{\det A}
+
+Þessi formúla fyrir andhverfu fylkis er tímafrek og almenn leið til þess að reikna andhverfu :math:`n \times n` fylkis oftast hagnýtari. 
+
 Regla Cramers
 -------------
 
@@ -415,8 +458,6 @@ Ritháttur
 Setning: Regla Cramers
 ~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 .. admonition:: Setning
     :class: setning
 
@@ -438,6 +479,154 @@ Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers
         -3x-y+2z=1
 
 .. admonition:: Lausn
-  :class: lausn
+  :class: daemi, dropdown
 
+    Fylkjaframsetning jöfhnuhneppisins er
+
+    .. math:: A= \left(
+        \begin{array}{ccc}
+        4 & 2 & -1 \\
+        1 & 3 & 7 \\
+        -3 & -1 & 2 \\
+        \end{array}
+        \right), \quad \textbf{b}=\left(
+        \begin{array}{c}
+        0 \\
+        1 \\
+        1 \\
+        \end{array}
+        \right),
+
+    með 
+
+    .. math::
+        A_1 (\textbf{b}) = \left(
+        \begin{array}{ccc}
+        0 & 2 & -1 \\
+        1 & 3 & 7 \\
+        1 & -1 & 2 \\
+        \end{array}
+        \right), \
+        A_2(\textbf{b})=\left(
+        \begin{array}{ccc}
+        4 & 0 & -1 \\
+        1 & 1 & 7 \\
+        -3 & 1 & 2 \\
+        \end{array}
+        \right), \
+        A_3(\textbf{b})=\left(
+        \begin{array}{ccc}
+        4 & 2 & 0 \\
+        1 & 3 & 1 \\
+        -3 & -1 & 1 \\
+        \end{array}
+        \right)
+
+
+    Athugum að :math:`\det A=-2`, :math:`\det A_1(\textbf{b})=14`, :math:`\det A_2(\textbf{b})=-24` og :math:`\det A_3(\textbf{b})=8`. Með reglu Cramers fæst því
+
+    .. math::
+        x_1 = \frac{\det A_1(\textbf{b})}{\det A}=-7,\ \
+        x_2 = \frac{\det A_2(\textbf{b})}{\det A}=12,\ \
+        x_3 = \frac{\det A_3(\textbf{b})}{\det A}=-4.
+        
+    Nú er um að gera að prófa lausnina með því að stinga inn fyrir :math:`\textbf{x}` í :math:`A \textbf{x}=\textbf{b}`.
+
+
+Ákveður og rúmfræði
+-------------------
+
+Skilgreining: Samsíðungur
+~~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`u=(u_1,u_2)` og :math:`v=(v_1,v_2)` vera tvo vigra í :math:`\mathbb{R}^2`.  *Samsíðungurinn* (e. paralellogram) sem vigrarnir ákvarða er ferhyrningurinn með hornpunkta :math:`(0,0), (u_1,u_2), (v_1,v_2),`
+    og :math:`(u_1+v_1,u_2+v_2)`.
+
+
+Skilgreining: Samhliðungur
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`u=(u_1,u_2,u_3), v=(v_1,v_2,v_3)` og :math:`w=(w_1,w_2,w_3)` vera vigra í :math:`\mathbb{R}^3`.
+    *Samhliðungurinn* (e. parallelepiped) sem vigrarnir ákvarða er rúmmálið með hornpunkta
+
+    .. math:: (0,0,0), (u_1,u_2,u_3), (v_1,v_2,v_3), (w_1,w_2,w_3),
+        (u_1+v_1,u_2+v_2,u_3+v_3),\\
+        (u_1+w_1,u_2+w_2,u_3+w_3),
+        (v_1+w_1,v_2+w_2,v_3+w_3),\\
+        (u_1+v_1+w_1,u_2+v_2+w_2,u_3+v_3+w_3)
+
+
+Setning
+~~~~~~~~
+.. admonition:: Setning
+    :class: setning
+
+    **1.** Látum :math:`A` vera :math:`2 \times 2` fylki. Flatarmál samsíðungana sem dálkvigrar :math:`A` ákvarða er :math:`\det A`.
     
+    **2.** Látum :math:`A` vera :math:`3 \times 3` fylki. Rúmmál samhliðungsins sem dálkvigrar :math:`A` ákvarða er :math:`\det A`.
+
+INSERT MYND
+
+Ryfjum upp að mynd mengis :math:`S \subseteq \R` er mengið :math:`T(S)=\{T(s) : s \in S\}`.
+
+Setning
+~~~~~~~~
+.. admonition:: Setning
+    :class: setning
+
+    **1.** Látum :math:`T: \R^2 \rightarrow \R^2` vera línulega vörpun og :math:`S` vera samsíðunginn sem ákvarðast af :math:`u` og :math:`v` í :math:`\R^2`.
+    Þá er myndin :math:`T(S)` samsíðungurinn sem ákvarðast af vigrunum :math:`T(u)` og :math:`T(v)`.
+
+    **2.** Látum :math:`T: \R^3 \rightarrow \R^3` vera línulega vörpun og :math:`S` vera samhliðunginn sem ákvarðast af :math:`u, v` og :math:`w` í :math:`\R^3`.
+    Þá er myndin :math:`T(S)` samhliðungurinn sem ákvarðast af vigrunum :math:`T(u), T(v)` og :math:`T(w)`.
+
+
+Setning
+~~~~~~~
+.. admonition:: Setning
+    :class: setning
+
+    **1.** Gerum ráð fyrir að :math:`T: \R^2 \rightarrow \R^2` sé línuleg vörpun með fylki :math:`A`, og :math:`S` vera samsíðunginn sem ákvarðast af :math:`u` og :math:`v` í :math:`\R^2`.
+    Þá er
+
+    .. math:: \{ \text{flatarmál} \ T(S) \} = |\det A | \cdot \{ \text{flatarmál} \ S \}
+
+    **2.** Gerum ráð fyrir að :math:`T: \R^3 \rightarrow \R^3` sé línuleg vörpun með fylki :math:`A`, og :math:`S` vera samhliðungurinn sem ákvarðast af :math:`u, v` og :math:`w` í :math:`\R^3`.
+    Þá er
+
+    .. math:: \{ \text{rúmmál} \ T(S)\} = |\det A | \cdot \{ \text{rúmmál} \ S \}
+
+Sýnidæmi: Flatarmál samsíðungs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Dæmi
+  :class: daemi
+
+    Reikna á flatarmál samsíðungsins sem ákvarðaður er af hornpunktunum :math:`(-1,-2), (0,2), (3,-1)` og :math:`(4,3)`.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+    Við byrjum á því að hliðra hornpunktunum þannig að einn þeirra sé í miðju hnitakerfisins :math:`(0,0)`.
+    Nýju hnitin sem fást eru :math:`(-1+1,-2+2)=(0,0), (0+1,2+2)=(1,4),` :math:`(3+1,-1+2)=(4,1)`
+    og :math:`(4+1,3+2)=(5,5)`.
+        
+    Samsíðungurinn er ákvarðaður af dálkvigrum fylkisins
+    
+    .. math:: 
+        A= \begin{bmatrix}
+        1 & 4\\
+        4 & 1
+        \end{bmatrix}
+
+    Þar sem :math:`|\det A| = |-15|` er flatarmál samsíðungsins :math:`15`.
+
+INSERT MYND AF SAMSÍÐUNGINUM OG HLIÐRUÐUM SAMSÍÐUNGI
+
+
+
+
+
