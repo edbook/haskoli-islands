@@ -392,7 +392,7 @@ Sýnidæmi: Eru þau andhverfanleg?
     
     Eru eftirfarandi fylki andhverfanleg?
 
-    .. math:: .. math:: \begin{bmatrix}
+    .. math::  \begin{bmatrix}
             0 & 0 \\
             0 & 0 \\
         \end{bmatrix} \text{ , } \begin{bmatrix}
@@ -799,3 +799,7 @@ og leysum fyrst :math:`L\textbf{y} = \textbf{x}`, (sem er auvelt því :math:`L`
 og svo :math:`U\textbf{x} = \textbf{y}` sem er líka auðvelt því :math:`U` er af efri stallagerð.
 
 TODO setja inn eitt dæmi enn um LU-þáttun.
+
+
+.. math::
+    \ve{x}
