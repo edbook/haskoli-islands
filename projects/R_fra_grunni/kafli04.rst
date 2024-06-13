@@ -559,6 +559,7 @@ Með pípun:
       mean() %>%
       sqrt() %>%
       round(2)
+
    ## 7.14
 
 Þessa skipun er auðveldara að lesa.
@@ -587,6 +588,7 @@ er að gera þetta með pípurithætti.
       select(ferdatimi_skoli, is) %>% 
       group_by(is) %>% 
       summarise(mean(ferdatimi_skoli))
+
    ## is             Meðalferðatími
    ## Jarðaberja     48.60000
    ## SúkkulaðI      25.07692
@@ -632,6 +634,7 @@ eftir breytunni ``is``.
       summarise("Miðgildi"=median(smjor_kostar), 
       "Meðaltal" = mean(smjor_kostar),
       "Staðalfrávik" = sd(smjor_kostar)) %>% kable()
+      
    ## stefnumot      Miðgildi    Meðaltal    Staðalfrávik
    ## Á kaffihús	   500.0	      577.5676	   209.5798
    ## Á ísrúnt	      618.0	      621.6667	   229.0420

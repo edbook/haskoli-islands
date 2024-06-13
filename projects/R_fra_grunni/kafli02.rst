@@ -32,7 +32,7 @@ breytunum okkar á það form sem við viljum vinna með, þ.e.a.s. *kóða*
 þær. Mesta púðrið fer yfirleitt í að kóða flokkabreytur en einnig lýsum
 við því beita má vörpunum á talnabreytur og dagsetningar eru
 meðhöndlaðar. Þar koma við sögu skipanirnar ``factor()``, ``levels()``,
-``cut()``, ``as.Date()`` og ``rename()``.
+``cut()``, ``as_date()`` og ``rename()``.
 
 Síðast en ekki síst fjallar kafli :numref:`%s <s.umrodun>` um handhægar leiðir
 til að umraða og umbreyta gagnatöflum. Skipunin ``select()`` hjálpar
@@ -1217,7 +1217,7 @@ Búum svo til nýju flokkana
 D: Dagsetningabreytur skilgreindar
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-as.Date()
+as_date()
 ^^^^^^^^^
 
 .. attention::
@@ -1234,7 +1234,7 @@ as.Date()
 Það er mjög algengt að einhverjar breytanna okkar geymi dagsetningar.
 Yfirleitt verða þær sjálfkrafa lesnar inn sem flokkabreytur en við getum
 sjaldnast unnið með þær á því formi. Þess í stað vistum við þær sem
-dagsetningar með skipuninni ``as.Date()``. Með stillingunni ``format``
+dagsetningar með skipuninni ``as_date()``. Með stillingunni ``format``
 tilgreinum við hvernig dagsetningarnar eru skráðar. Kemur ártalið fyrst,
 svo mánuðurinn og svo dagurinn eða jafnvel öfugt? Eru dagar og mánuðir
 aðgreindir með punkti eða bandstriki? Allt það má tilgreina með
@@ -1242,41 +1242,29 @@ auðveldum hætti og má sjá öll möguleg snið með því að skoða:
 
 ::
 
-   help(strptime)
+   help("lubridate")
 
-Í okkar tilviki kemur fyrst dagur, svo mánuður og þá fjögurra bókstafa
-ár, allt aðskilið með punkti. Því gefum við stillinguna
-``format=’%d.%m.%Y’``. Einnig vistaðist dagsetningin sem flokkabreyta
-við innlestur (þar sem hún inniheldur ekki bara tölur, heldur líka
-punkta). Því þarf að mata ``as.Date()`` með
-``as.character(puls$dagsetning)``, skipun sem breytir flokkabreytu í
-orðabreytu.
+Ef við erum til dæmis með lista af fæðingardögum þar sem fyrst kemur dagur, svo mánuður og loks fjögra stafa ártal,
+allt aðskilið með punkti þá notum við stillinguna ``format=’%d.%m.%Y’``.
 
 ::
 
-   puls$dagsetning <- as.Date(as.character(puls$dagsetning), format='%d.%m.%Y' )
+   afmaeli <- c("28.1.2004", "28.1.2004", "31.3.2004", "18.8.2004", "8.11.2004", "4.12.2004", "27.3.2005", "18.6.2005")
 
-Nú sjáið þið að dagsetningin er komin á rétt form:
+   afmaeli <- as_date(afmaeli, format='%d.%m.%Y')
+
+Nú eru dagsetningarnar komnar á rétt form:
 
 ::
 
-   str(puls)
-   ## 'data.frame':    471 obs. of  15 variables:
-   ##  $ namskeid    : Factor w/ 2 levels "LAN203","STAE209": 2 1 1 2 2 2 1 2 2 1 ...
-   ##  $ kronukast   : Factor w/ 2 levels "landvaettir",..: 1 2 1 2 2 1 1 1 2 1 ...
-   ##  $ haed        : num  161 185 167 174 163 175 178 191 176 176 ...
-   ##  $ thyngd      : num  60 115 NA 67 57 59 70 94 68 82 ...
-   ##  $ aldur       : int  23 52 22 21 20 20 39 21 20 70 ...
-   ##  $ kyn         : Factor w/ 2 levels "kvk","kk": 1 2 1 1 1 1 1 2 1 2 ...
-   ##  $ reykir      : Factor w/ 2 levels "ja","nei": 2 NA 2 2 2 2 NA 2 2 2 ...
-   ##  $ drekkur     : Factor w/ 2 levels "ja","nei": 2 1 1 1 1 1 1 1 1 1 ...
-   ##  $ likamsraekt : num  3.5 0 2 1 5 5 3.5 0 10 14 ...
-   ##  $ fyrriPuls   : int  83 80 43 76 71 65 77 79 73 65 ...
-   ##  $ seinniPuls  : int  84 103 52 105 68 65 75 83 90 78 ...
-   ##  $ inngrip     : Factor w/ 2 levels "hljop","sat_kyrr": 2 1 2 1 2 2 2 2 1 1 ...
-   ##  $ dagsetning  : Date, format: "2013-01-07" "2013-01-07" ...
-   ##  $ likamsraektf: Factor w/ 3 levels "Lítil","Miðlungs",..: 2 1 2 1 3 3 2 1 3 ...
-   ##  $ likamsraekt2: Factor w/ 2 levels "ekkiMikil","Mikil": 1 1 1 1 2 2 1 1 2 2 ...
+   str(afmaeli)
+   ##  Date[1:8], format: "2004-01-28" "2004-01-28" "2004-03-31" "2004-08-18" "2004-11-08" "2004-12-04" ...
+
+Ef dagsetningarnar okkar hefðu verið vistaðar sem flokkabreytur
+við innlestur þyrftum við að breyta henni fyrst í orðabreytu með skipun eins og
+``as.character()``. Við hefðum einnig getað notað skipunina ``dmy()`` úr ``lubridate`` pakkanum, í honum eru margar
+sniðugar skipanir sem gera vinnslu með dagsetningar margfalt þægilegri en ella.
+
 
 E: Leitað eftir textastrengjum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1424,7 +1412,7 @@ group_by()
 
     **Inntak:** nafn á gagnatöflu og nafn á flokkabreytum
     
-    **Úttak:** ???
+    **Úttak:** gagnatafla
     
     **Helstu stillingar:** .drop1
 
@@ -1553,7 +1541,7 @@ kaupverði gerum við það með:
 .. _rf.gather:
 
 pivot_longer()
-^^^^^^^^
+^^^^^^^^^^^^^^
 
 .. attention::
 
@@ -1602,7 +1590,7 @@ Eftir skipunina lítur gagnataflan svona út:
 .. _rf.spread:
 
 pivot_wider()
-^^^^^^^^
+^^^^^^^^^^^^^
 
 .. attention::
 

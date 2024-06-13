@@ -198,7 +198,7 @@ hana með fervikagreiningarhlut.
 
    plot(TukeyHSD(fervik))
 
-.. figure:: myndir/mynd9-2.svg
+.. figure:: myndir/mynd9_2.svg
 
 Stikalaus próf\ :math:`^\ast`
 -----------------------------
