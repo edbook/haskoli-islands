@@ -1,5 +1,5 @@
-Kafli
-=====
+Línuleg jöfnuhneppi
+====================
 
 Línuleg Algebra er sú grein innan stærðfræðinnar sem fæst við línuleg jöfnuhneppi,
 vigra, vigurrúm, línulegar varpanir og önnur tengd viðfangsefni. Í þessu námskeiði 
@@ -2116,8 +2116,8 @@ Setning
     svo  :math:`\textbf{v}_1,\textbf{v}_2` eru línulega háðir.
 
 
-Sýnidæmi: Setning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setning
+^^^^^^^^^
 
 .. admonition:: Setning
     :class: setning

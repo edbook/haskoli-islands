@@ -1,9 +1,8 @@
-Kafli
-==========
+Eigingildi og eiginvigrar
+==========================
 
 Eigingildi og eiginvigur
 ------------------------
-
 
 Skilgreining: Eigingildi og eiginvigur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
