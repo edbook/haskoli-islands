@@ -443,8 +443,6 @@ Regla Cramers er fræðileg niðurstaða sem gefur beina lausn á :math:`A \text
 Ritháttur
 ~~~~~~~~~
 
-
-
 .. admonition:: Ritháttur
     :class: setning
 
@@ -624,7 +622,7 @@ Sýnidæmi: Flatarmál samsíðungs
 
     Þar sem :math:`|\det A| = |-15|` er flatarmál samsíðungsins :math:`15`.
 
-INSERT MYND AF SAMSÍÐUNGINUM OG HLIÐRUÐUM SAMSÍÐUNGI
+.. figure:: myndir/kafli3mynd2.svg
 
 
 
