@@ -17,13 +17,12 @@ nema fyrir sérstaka áhugamenn um staðla eða útreikning varmataps. Helstu
 ÍST EN staðlar sem snerta efni þessa kafla eru eftirfarandi;
 
 - ÍST EN ISO 6946:1996 *Building components and building elements - Thermal
-resistance and thermal transmittance - Calculation method*
+  resistance and thermal transmittance - Calculation method*
 - ÍST EN 10456:1999 *Building materials and products - Procedures for
-determining declared and design thermal values*
+  determining declared and design thermal values*
 - ÍST EN 12524:2000 *Building materials and products - Hygrothermal
-properties - tabulated design values*
-
-ÍST EN ISO 6946:1996 vísar ennfremur til ISO staðalsins
+  properties - tabulated design values*
+- ÍST EN ISO 6946:1996 vísar ennfremur til ISO staðalsins
 - ISO 7345:1987 *Thermal insulation – Physical quantities and definitions*
 
 Til þess að gera útreikninga aðgengilegri þá er í staðlinum DS 418
@@ -335,6 +334,12 @@ Setjum inn jöfnurnar 2.5a-d (gerum hér ráð fyrir að leiðnitalan sé ekki
 háð hitastigi) og styttum. Með “innsæi” (eða samanburði við fyrstu liði
 Taylor raðar) sést að :math:`\partial^2 T = (\partial T_{x+dx} - \partial T_x)`, sem gefur jöfnu 2.6.
 
+.. figure:: ./myndir/kafli02/orkuflutningur_smabuts.png
+  :align: center
+  :width: 40%
+
+Mynd 2.3 Orkuflutningur smábúts
+
 .. admonition:: Jafna 2.6
     :class: jafna
 
@@ -361,7 +366,6 @@ Taylor raðar) sést að :math:`\partial^2 T = (\partial T_{x+dx} - \partial T_x
   * - ...
     - aðrar stærðir sem fyrr
     - 
-
 
 Samsvarandi fæst fyrir þrjá ása í rétthyrndu hnitakerfi jafnan 2.7 þegar
 notaðar eru tvær einfaldanir; (i) einsátta efni, þ.e. sama leiðnitala í
@@ -422,100 +426,83 @@ viðeigandi stærðum (Mynd 2.4) fæst jafna 2.9;
 
       :math:`T_x = T_0 + \frac{x \cdot \lambda}{d \cdot \lambda} \cdot (T_1-T_0)=T_0+\frac{R_x}{R}(T_1-T_0)`
 
-þar sem R\ :sub:`x`\ = x/ mótstaða hluta efnislags með þykkt x
+þar sem  
 
-R = d/ mótstaða alls efnislagsins með þykkt d
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-| 
+  * - :math:`R_x = x/\lambda`
+    - varmaflutningsmótstaða hluta efnislags með þykkt :math:`x`
+    - :math:`\frac{m^2 \cdot K}{W}`
+  * - :math:`R=d/\lambda`
+    - varmaflutningsmótstaða alls efnislagsins með þykkt :math:`d`
+    - :math:`\frac{m^2 \cdot K}{W}`
+ 
 
-Mynd 2.4
+.. figure:: ./myndir/kafli02/fleiri_log.png
+  :align: center
+  :width: 40%
 
-| 
+Mynd 2.4.
 
-| 
-
-| 
-
-Í jöfnu 2.9 hafa verið skilgreindar mótstöður R\ :sub:`x`\  og R, í stað
-þess að stytta  töluna út og halda efnisþykktum eftir í jöfnunni, þetta
+Í jöfnu 2.9 hafa verið skilgreindar mótstöður :math:`R_x` og :math:`R`, í stað
+þess að stytta :math:`\lambda` töluna út og halda efnisþykktum eftir í jöfnunni, þetta
 skýrist í umfjöllun sem fylgir. Þessi skilgreining á varmamótstöðu
 efnislags er í samræmi við EN ISO 6946:1996 (en hefur tíðkast mun
 lengur).
 
-| 
-
 Í langflestum tilvikum er áhugaverðast að skoða byggingarhluta sem
 samsettir eru úr mörgum efnislögum og því með breytilegar leiðnitölur.
 Til að ákvarða hitastig í sniði slíks byggingarhluta má setja upp
-jafnvægislíkingu, sjá mynd 2.5 fyrir tvö efnislög;
+jafnvægislíkingu, sjá mynd 2.5 fyrir tvö efnislög.
 
-| 
+.. figure:: ./myndir/kafli02/radtengt_kerfi.png
+  :align: center
+  :width: 40%
 
-V\ Shape7 ið stöðug skilyrði (og fyrir fast flatarmál A) gildir
-q\ :sub:`1`\ =q\ :sub:`2`\ 
+Mynd 2.5. Varmaflutningur og hitastigull í tveggja laga byggingarhluta
 
+Við stöðug skilyrði (og fyrir fast flatarmál A) gildir :math:`q_1=q_2`
 og með hliðsjón af jöfnu 2.1 fæst;
 
-| 
+:math:`-\lambda_1 \cdot \frac{T_1-T_0}{d_1} = -\lambda_2 \cdot \frac{T_2-T_1}{d_2}`
 
-.. image:: myndir/kafli02_html_91729907e51607b3.png
-   :name: Object24
+leyst fyrir :math:`T_1` (og með umröðun) fæst jafna 2.10
 
-| 
+.. admonition:: Jafna 2.10
+    :class: jafna
 
-leyst fyrir T\ :sub:`1`\  (og með umröðun) fæst jafna 2.10
+      :math:`T_1=T_0+\frac{R_1}{R}(T_2-T_0)`
 
-|image24| (2.10)
+þar sem 
 
-| 
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-þar sem R\ :sub:`1`\ = d\ :sub:`1`\ /\ :sub:`1`
+  * - :math:`R_1 = d_1/\lambda_1`
+    - varmaflutningsmótstaða efnislags 1
+    - :math:`\frac{m^2 \cdot K}{W}`
+  * - :math:`R=R_1+R_2 = d_1/\lambda_1 + d_2/\lambda_2`
+    - samanlögð varmaflutningsmótstaða alls beggja efnislaga
+    - :math:`\frac{m^2 \cdot K}{W}`
 
-R = R\ :sub:`1`\ +R\ :sub:`2`\ = d\ :sub:`1`\ /\ :sub:`1`\ +
-d\ :sub:`2`\ /\ :sub:`2`
+Hliðstætt fæst almenna jafnan fyrir :math:`n` efnislög og útreikning á hitastigi í sniði :math:`k` sem jafna 2.11
 
-| 
+.. admonition:: Jafna 2.11
+    :class: jafna
 
-| 
-
-H
-
-Mynd 2.5
-
-Varmaflutningur og
-
-hitastigull í tveggja laga byggingarhluta
-
-Varmaflutningur og
-
-hitastigull í tveggja laga
-
-byggingarhluta
-
-liðstætt fæst almenna jafnan fyrir n efnislög og
-
-útreikning á hitastigi í sniði k sem jafna 2.11
-
-| 
-
-|image25| (2.11)
-
-| 
+      :math:`T_k=T_0+\frac{\sum_{1}^{k} R_i}{\sum_{1}^{n}R_i}(T_n-T_0)`
 
 Með þekkt hitastig beggja vegna við byggingarhluta má því auðveldlega
 ákvarða hitastigsdreifingu í sniði við stöðug skilyrði ef
-varmaflutningsmótstöður einstakra efnislaga eru þekktar.
-
-| 
+varmaflutningsmótstöður pg þykktir einstakra efnislaga eru þekktar.
 
 Nánar er fjallað um þennan þátt í kafla 2.6.
 
-| 
-
-| 
-
-2.3 Varmastreymi
-----------------
+Varmastreymi
+------------
 
 Varmastreymi getur átt sér stað vegna tilfærslu vökva eða lofttegunda.
 Þetta gildir t.d. þegar loftskipti eiga sér stað í vistarverum og verður
@@ -525,140 +512,92 @@ efni, og hitastig fasta efnisins er annað en hins miðilsins. Í slíkum
 tilvikum er skilgreind varmaflutningstala yfirborðs, h (sjá einnig
 skilgreiningar fremst í kaflanum).
 
-| 
-
 Streymið getur verið ýmist þvingað, þ.e. ytri kraftar orsaka hreyfinguna
 eða óþvingað þ.e. þegar hitamunur einn milli t.d. yfirborðs og lofts
 kemur loftinu á hreyfingu (vegna uppdrifs, e: buyoancy).
-
-| 
 
 Í fræðiritum, t.d. Nevander og Elmarsson(1994), má finna nálgunarjöfnur
 til útreikninga á varmaflutningstölunni h, sjá töflu 2.1, og sést þar
 ljóslega hvaða áhrif annarsvegar lofthraði og hinsvegar hitamunur hafa á
 varmaskiptin.
 
-| 
-
-Tafla 2.1 Varmaflutningstala yfirborðs h W/(m\ :sup:`2`\ ·K)
-
-| 
-
-Þvingað streymi – vindhraði og stefna miðast við aðstæður í ótrufluðu
-streymi
-
-| 
-
-Vindur samsíða yfirborði
-
-h = 6+4·u u≤5 m/s
-
-h = 7,4·u\ :sup:`0,76`\  u>5 m/s
-
-| 
-
-Vindstefna þvert á yfirborð
-
-h = 5+4,5·u-0,14·u\ :sup:`2`\  áveðurs u<10 m/s
-
-h = 5+1,5·u hlémegin u<8 m/s
-
-| 
-
-Óþvingað streymi (eigið streymi)
-
-h = C·dT\ :sup:`0,25`\  C á bilinu 1,45 – 2,55
-
-dT er tölugildi mismunar á hitastigi yfirborðs og lofts
-
-| 
-
-| 
+.. figure:: ./myndir/kafli02/varmaflutningstala_yfirbords.png
+  :align: center
+  :width: 100%
 
 Í staðlinum DS 418 (og Evrópustöðlum) eru gefnar upp varmamótstöður R
 fyrir yfirborð (R=1/h), tafla 2.2 sýnir staðalgildin fyrir mismunandi
 aðstæður.
 
-| 
+.. figure:: ./myndir/kafli02/varmaflutningsmotstada.png
+  :align: center
+  :width: 100%
 
-+------------------------+-----------------------+--------+-------+
-| Tafla 2.2              |                       |        |       |
-| Varmaflutningsmótstaða |                       |        |       |
-| við yfirborð           |                       |        |       |
-| m\ :sup:`2`\ K/W       |                       |        |       |
-| (Heimild: ÍST EN ISO   |                       |        |       |
-| 6946:1996)             |                       |        |       |
-+------------------------+-----------------------+--------+-------+
-| |                      | Stefna varmaflutnings |        |       |
-+------------------------+-----------------------+--------+-------+
-| |                      | Upp                   | Lárétt | Niður |
-+------------------------+-----------------------+--------+-------+
-| Innri mótstaða         | 0,10                  | 0,13   | 0,17  |
-| R\ :sub:`si`           |                       |        |       |
-+------------------------+-----------------------+--------+-------+
-| Ytri mótstaða          | 0,04                  | 0,04   | 0,04  |
-| R\ :sub:`se`           |                       |        |       |
-+------------------------+-----------------------+--------+-------+
 
-| 
-
-| 
-
-2.4 Varmageislun
-----------------
+Varmageislun
+------------
 
 Varmageislun er af mjög margbreytilegri bylgjulengd, eins og ljóslega má
 sjá þegar geislaróf sólargeislunar er skoðað, mynd 2.6. Bylgjulengdin
 mun ráða miklu um eiginleika geislunarinnar, s.s. orku og lit.
 
-| 
+.. figure:: ./myndir/kafli02/geislun_solar.png
+  :align: center
+  :width: 100%
+Mynd 2.6 Dreifing orku í sólarinngeislun til jarðar (Heimild: British
+Standard, 1992)
 
 Varmageislun hluta er í hlutfalli við hitastig þeirra, ef hlutur geislar
 fullkomlega frá sér þá er talað um svartan kropp. Almenna jafnan 2.12
 fyrir geislun frá svörtum kropp er kennd við Stefan-Boltzmann,
 
-| 
+.. admonition:: Jafna 2.12
+    :class: jafna
 
-q=·T\ :sup:`4`\  (2.12)
+      :math:`q=\sigma \cdot T^4`
 
-| 
 
-þar sem q varmaþéttleiki W/m\ :sup:`2`
+þar sem 
 
--  Stefan-Boltzmann stuðullinn, =5,6697·10\ :sup:`-8`\ 
-   W/(m\ :sup:`2`\ ·K\ :sup:`4`\ )
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-T hitastig K
-
-| 
-
-.. image:: myndir/kafli02_html_a94cccb079dd267a.png
-   :name: Picture 27
-   :width: 576px
-   :height: 307px
-
-Mynd 2.6 Dreifing orku í sólarinngeislun til jarðar (Heimild: British
-Standard, 1992)
-
-| 
-
-| 
+  * - :math:`q`
+    - varmaflutningsþéttleiki
+    - :math:`W/m^2`
+  * - :math:`\sigma`
+    - Stefna-Boltzmann fastinn
+    - :math:`\sigma = 5,6697 \cdot 10^-8 W/(m^2 \cdot K^4)`
+  * - :math:`T`
+    - hitastig
+    - :math:`K`
 
 Fæstir hlutir uppfylla þó skilyrðið að teljast fullkomlega svartir, og
-geislunin er þá minni svo nemur áhrifum geislunarstuðulsins  (e:
+geislunin er þá minni svo nemur áhrifum geislunarstuðulsins :math:`\varepsilon` (e:
 emittance factor),
 
-| 
+.. admonition:: Jafna 2.13
+    :class: jafna
 
-q=··T\ :sup:`4`\  (2.13)
+      :math:`q= \varepsilon \sigma \cdot T^4`
 
-| 
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-þar sem  geislunarstuðull
-
-... önnur tákn sem fyrr
-
-| 
+  * - :math:`q`
+    - varmaflutningsþéttleiki
+    - :math:`W/m^2`
+  * - :math:`\varepsilon`
+    - geislunarstuðull
+    - :math:`-`
+  * - :math:`\sigma`
+    - Stefna-Boltzmann fastinn
+    - :math:`\sigma = 5,6697 \cdot 10^-8 W/(m^2 \cdot K^4)`
+  * - :math:`T`
+    - hitastig
+    - :math:`K`
 
 Fyrir geislun sem fellur á hlut gilda þrjú tilfelli; hluti geislunar
 endurkastast, hluti er tekinn upp af yfirborðinu (ísog) og loks getur
@@ -667,292 +606,170 @@ hluti geislunar komist í gegn (t.d. ljóshleypni).
 Hlutfallið af hverjum þætti fyrir sig er táknað með viðeigandi
 hlutfallstölu og jafnframt gildir jafna 2.14,
 
-| 
+.. admonition:: Jafna 2.14
+    :class: jafna
 
-r++ =1 (2.14)
+      :math:`\rho + \alpha + \tau = 1`
 
-| 
+þar sem 
 
-þar sem r endurgeislunarstuðull
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
- ísogsstuðull
-
- gegnumhleypnistuðull
-
-| 
+  * - :math:`\rho`
+    - endurgeislunarstuðull, stundum táknað r (e. reflection)
+    - :math:`-`
+  * - :math:`\alpha`
+    - ísogsstuðull, stundum táknað a (e. absorption)
+    - :math:`-`
+  * - :math:`\tau`
+    - gegnumhleypnistuðull, stundum táknað t (e. transmission)
+    - :math:`-`
 
 Almennt gildir að stuðlarnir eru breytilegir eftir bylgjulengd
 geislunarinnar, fyrir varmageislun í byggingum er þó iðulega litið svo á
-að = en þetta gildir alls ekki þegar skoðuð er varmaútgeislun
+að :math:`\varepsilon=\alpha` en þetta gildir alls ekki þegar skoðuð er varmaútgeislun
 byggingarefna annarsvegar og inngeislun frá sól hinsvegar. Dæmi um gildi
 á stuðlunum fyrir mismunandi efni og geislun eru sýnd í töflu 2.3. Í
 byggingum hafa flest efni, að málmum undanskildum, (og nánast óháð lit)
 útgeislunarstuðul á bilinu 0,85 – 0,95 fyrir hitastig undir 200 °C.
 
-| 
-
-| 
-
-| 
-
-| 
-
-+-------------------------+-----------------------+----------------+
-| Tafla 2.3               |                       |                |
-| Geislunarstuðlar        |                       |                |
-| yfirborða (Heimild:     |                       |                |
-| ASHRAE Fundamentals     |                       |                |
-| 1989)                   |                       |                |
-+-------------------------+-----------------------+----------------+
-| |                       | Útgeislun \ :sup:`a)` | Ísog vegna     |
-|                         |                       |                |
-|                         |                       | sólargeislunar |
-+-------------------------+-----------------------+----------------+
-| Svört, ómálmkennd       | 0,97 – 0,99           | 0,97 – 0,99    |
-| yfirborð                |                       |                |
-+-------------------------+-----------------------+----------------+
-| Rauður tígulsteinn,     | 0,85 – 0,95           | 0,65 – 0,80    |
-| steypa eða múr,         |                       |                |
-| ryðgaðir málmar, dökkar |                       |                |
-| málningar               |                       |                |
-+-------------------------+-----------------------+----------------+
-| Gulir og gulbrúnir      | 0,85 – 0,95           | 0,50 – 0,70    |
-| stein- eða múrfletir    |                       |                |
-+-------------------------+-----------------------+----------------+
-| Hvítir eða              | 0,85 – 0,95           | 0,30 – 0,50    |
-| ljóskremlitaðir stein-  |                       |                |
-| eða múrfletir og        |                       |                |
-| málningar               |                       |                |
-+-------------------------+-----------------------+----------------+
-| Gluggagler              | 0,90                  | b)             |
-+-------------------------+-----------------------+----------------+
-| Björt yfirborð ál- eða  | 0,40 – 0,60           | 0,30 – 0,50    |
-| bronsmálningar          |                       |                |
-+-------------------------+-----------------------+----------------+
-| Mattir málmfletir og    | 0,20 – 0,30           | 0,40 – 0,65    |
-| galvanhúð               |                       |                |
-+-------------------------+-----------------------+----------------+
-| Fægðir koparfletir      | 0,02 – 0,05           | 0,10 – 0,40    |
-+-------------------------+-----------------------+----------------+
-| Fægt ál                 | 0,02 – 0,04           | 0,10 – 0,40    |
-+-------------------------+-----------------------+----------------+
-
-a) Hitastig 10-40 °C
-
-b) 0,04 – 0,4 háð glergerð
-
-| 
-
-| 
+.. figure:: ./myndir/kafli02/geislunarstudlar_yfirborda.png
+  :align: center
+  :width: 100%
 
 Geislun milli yfirborða
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Nettó varmageislun frá einu yfirborði til annars ræðst af hitastigi,
 stærð og lögun yfirborða ásamt innbyrðis afstöðu þeirra og loks
 geislunartölum. Fyrir yfirborð, sem ekki eru lítil í samanburði við
 fjarlægðina milli þeirra, gildir jafna 2.15,
 
-| 
+.. admonition:: Jafna 2.15
+    :class: jafna
 
-\ :sub:`r12`\ =
-A\ :sub:`1`\ ·F\ :sub:`12`\ ·\ :sub:`12`\ ··[T\ :sub:`1`\ :sup:`4`\ -T\ :sub:`2`\ :sup:`4`\ ]
-(2.15)
+      :math:`\Phi_{12} = A_1F_{12}\varepsilon_{12}\sigma[T_1^4-T_2^4]`
 
-| 
+þar sem 
 
-þar sem \ :sub:`r12`\  nettó varmageislun frá yfirborði 1 til yfirborðs
-2, W
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-A yfirborðsflatarmál m\ :sup:`2`
+  * - :math:`\Phi_{12}`
+    - nettó varmageislun frá yfirborði 1 til yfirborðs 2
+    - :math:`W`
+  * - :math:`A`
+    - yfirborðsflatarmál
+    - :math:`m^2`
+  * - :math:`F_{12}`
+    - innbyrðis geislunarhorn flatanna
+    - :math:`-`
+  * - :math:`nettó \varepsilon_{12}`
+    - geislunarstuðull
+    - :math:`-`
+  * - :math:`\sigma`
+    - Stefna-Boltzmann fastinn
+    - :math:`\sigma = 5,6697 \cdot 10^-8 W/(m^2 \cdot K^4)`
+  * - :math:`T_1 og T_2`
+    - hitastig yfirborða 1 og 2
+    - :math:`K`
 
-\ :sub:`12`\  nettó geislunarstuðull
+Ákvörðun nettó-geislunarstuðulsins :math:`\varepsilon_{12}` fer eftir jöfnu 2.16.
 
-… önnur tákn sem fyrr
+.. admonition:: Jafna 2.16
+    :class: jafna
 
-| 
+      :math:`\varepsilon_{12} = \frac{1}{\frac{1}{\varepsilon_1}+\frac{1}{\varepsilon_2}-1}`
 
-Ákvörðun nettó-geislunarstuðulsins \ :sub:`12`\ fer eftir jöfnu2.16,
+þar sem 
 
-| 
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-|image26| (2.16)
+  * - :math:`\varepsilon_1`
+    - geislunarstuðull fyrir yfirborð 1
+    - :math:`-`
+  * - :math:`\varepsilon_2`
+    - geislunarstuðull fyrir yfirborð 2
+    - :math:`-`
 
-þar sem \ :sub:`1`\  geislunarstuðull fyrir yfirborð 1
-
-\ :sub:`2`\  geislunarstuðull fyrir yfirborð 2
-
-| 
-
-| 
-
-Stuðullinn F\ :sub:`12`\  er innbyrðis geislunarhorn (e: radiation angle
+Stuðullinn :math:`F_{12}` er innbyrðis geislunarhorn (e: radiation angle
 factor, radiation shape factor) flatanna fyrir geislun frá fleti 1 til
-flatar 2, og fæst samkvæmt jöfnu (2.17) og mynd 2.7
+flatar 2. Hann er hlutfall þeirrar orku sem faltarmál :math:`A_1` geislar frá sér 
+sem yfirborð :math:`A_2` tekur við og fæst samkvæmt jöfnu (2.17) og mynd 2.7.
 
-|image27| (2.17)
+.. admonition:: Jafna 2.17
+    :class: jafna
 
-| 
+      :math:`F_{12} = \frac{1}{\pi A_1}\int_{A_1}\int_{A_2}\frac{\cos(\varphi_1)cos(\varphi_2)}{r^2}dA_2dA_1`
 
-| |Shape11|
 
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-n\ :sub:`1`\ , n\ :sub:`2`\  eininga-normalvigrar
-
-\ :sub:`1`\ , \ :sub:`2`\  horn milli tengilínu og normalvigranna
-n\ :sub:`1`\ ,n\ :sub:`2`
-
-r lengd tengilínunnar
-
-| 
-
-| 
-
+.. figure:: ./myndir/kafli02/geislun_2_fletir.png
+  :align: center
+  :width: 50%
 Mynd 2.7 Geislunarhorn flata, skýringar fyrir jöfnu 2.17
-
-| 
 
 Jafnframt gildir jafna 2.18
 
-F\ :sub:`12`\ ·A\ :sub:`1`\ = F\ :sub:`21`\ ·A\ :sub:`2`\  (2.18)
+.. admonition:: Jafna 2.17
+    :class: jafna
 
-| 
+      :math:`F_{12}A_1 = F_{21}A_2`
 
-Ákvörðun stuðulsins F\ :sub:`12`\  er fræðilega (með
+
+Ákvörðun stuðulsins :math:`F_{12}` er fræðilega (með
 stærðfræðigreiningu) aðeins gerleg fyrir einföldustu tilvik, í öðrum
 tilfellum má nota mælingar (vélrænar aðferðir) eða reiknimódel sem
 byggja á tölulegri greiningu.
 
-| 
-
 Dæmi um stuðulgildi fyrir tvö algeng tilvik eru sýnd á mynd 2.8
 
-.. image:: myndir/kafli02_html_8bca75532615a04a.png
-   :name: Picture 30
-   :width: 575px
-   :height: 249px
+.. figure:: ./myndir/kafli02/shape_factor.png
+  :align: center
+  :width: 100%
 
-a) tveir fletir hornrétt hvor á annan b) tveir samsíða fletir með
-millibili D
-
-| 
-
-Mynd 2.8 Geislunarhorn milli tveggja flata (Heimild: ASHRAE Handbook of
+Mynd 2.8 Innbyrðis geislunarhorn (:math:`F_{12}`) milli tveggja flata (Heimild: ASHRAE Handbook of
 Fundamentals)
+a) tveir fletir hornrétt hvor á annan b) tveir samsíða fletir með millibili D
 
-| 
-
-| |Shape12|
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
+.. figure:: ./myndir/kafli02/afstada.png
+  :align: center
+  :width: 100%
 
 Mynd 2.9 Geislunarhorn til glugga
-
-| 
-
-Mynd 2.9 Geislunarhorn til glugga
-
-| 
 
 Til að fá mat á geislahornið þá má reyna að einfalda raunverulega
 afstöðu (þrívíða) í tvívíða (sniðmynd) og mæla síðan hornið sem hlutfall
-af heilum hring, mynd 2.9.
+af heilum hring, mynd 2.9. 
 
-| 
+.. admonition:: Dæmi 
+  :class: tip 
+  
+    Mynd 2.9 sýnir geislunarhorn til glugga fyrir mann sem er hugsaður
+    standa innan við glugga sem er (hxb) 120x200 sm og viðmiðunarpunktur
+    mannsins 150 sm inni í herberginu, og fyrir miðjum glugganum. Af
+    sniðmyndinni má sjá að lárétta hornið mun vega talsvert meira heldur en
+    það lóðrétta; mæling á lárétta horninu gefur hornhlutfallið = 0,18
+    (lóðrétta hornhlutfallið = 0,12). Útreiknað geislahorn flatarins (séð
+    frá viðmiðunarpunktinum) er :math:`F_{12}=0,24`. Einföldunin gefur
+    þannig talsvert frávik frá réttu gildi, en getur eigi að síður gefið
+    hugmynd um áhrif gluggans, sjá síðar.
 
-Dæmi: Mynd 2.9 sýnir geislunarhorn til glugga fyrir mann sem er hugsaður
-standa innan við glugga sem er (hxb) 120x200 sm og viðmiðunarpunktur
-mannsins 150 sm inni í herberginu, og fyrir miðjum glugganum. Af
-sniðmyndinni má sjá að lárétta hornið mun vega talsvert meira heldur en
-það lóðrétta; mæling á lárétta horninu gefur hornhlutfallið = 0,18
-(lóðrétta hornhlutfallið = 0,12). Útreiknað geislahorn flatarins (séð
-frá viðmiðunarpunktinum) er F\ :sub:`12`\ =0,24. Einföldunin gefur
-þannig talsvert frávik frá réttu gildi, en getur eigi að síður gefið
-hugmynd um áhrif gluggans, sjá síðar.
+.. figure:: ./myndir/kafli02/innraudmynd.png
+  :align: center
+  :width: 40%
 
-| 
+Mynd 2.10. Hitamynd. Hitamyndavél (e. infra red camera) nemur hitaútgeislun frá flötum, og fyrir gefna útgeislunartölu, :math:`\varepsilon`, er yfirborðshitastig reiknað út.
 
-+-----------------------+---------------------------------------------+
-| .. rubric:: |image30| | .. rubric::                                 |
-|    :name: section     |    :name: section-1                         |
-|    :class: western    |    :class: western                          |
-|                       |                                             |
-|                       | .. rubric::                                 |
-|                       |    :name: section-2                         |
-|                       |    :class: western                          |
-|                       |                                             |
-|                       | .. rubric::                                 |
-|                       |    :name: section-3                         |
-|                       |    :class: western                          |
-|                       |                                             |
-|                       | .. rubric::                                 |
-|                       |    :name: section-4                         |
-|                       |    :class: western                          |
-|                       |                                             |
-|                       | .. rubric::                                 |
-|                       |    :name: section-5                         |
-|                       |    :class: western                          |
-|                       |                                             |
-|                       | .. rubric:: *Mynd 2.10 Hitamynd*            |
-|                       |    :name: mynd-2.10-hitamynd                |
-|                       |    :class: western                          |
-|                       |                                             |
-|                       | Hitamyndavél (e. infra red camera) nemur    |
-|                       | hitaútgeislun frá flötum, og fyrir gefna    |
-|                       | útgeislunartölu () er yfirborðshitastig    |
-|                       | reiknað út                                  |
-+-----------------------+---------------------------------------------+
 
-.. _section-6:
+Varmaflutningsmótstöður í loftbilum og jarðvegi
+-----------------------------------------------
 
-| 
-
-2.5 Varmaflutningsmótstöður í loftbilum og jarðvegi
----------------------------------------------------
-
-Kyrrstætt loft er ágætur einangrari ( = 0,025 W/m·K) og loftbil því
+Kyrrstætt loft er ágætur einangrari (:math:`\lambda = 0,025 W/(m \cdot K)`) og loftbil því
 einangrandi, en varmaflutningsmótstaða bilsins er háð hitafalli yfir það
 (áhrif geislunar) og lofthreyfingu í bilinu. Alltaf er einhver hreyfing
 vegna hitamunar milli flata og lofts (eigið streymi), þó háð hitamun og
@@ -964,12 +781,10 @@ hreyfinguna. Í stöðlum er varmaflutningsmótstaða óloftræsts loftbils
 gefin upp fyrir mismunandi þykktir, tafla 2.4, og gildið síðan leiðrétt
 þegar taka þarf tillit til loftræsingar bilsins.
 
-| 
-
 Gildin í töflu 2.4 eiga við þegar;
 
 -  Loftbilið afmarkast af tveim flötum sem eru samsíða og hornrétt á
-   stefnu varmaflutnings. Varmageislunartala flatanna   0,8.
+   stefnu varmaflutnings. Varmageislunartala flatanna :math:`\varepsilon \geq 0,8`.
 
 -  Þykkt loftbilsins er minni en 1/10 af kantlengd afmarkandi flatar
    (breidd eða hæð) og mest 300 mm.
@@ -977,22 +792,16 @@ Gildin í töflu 2.4 eiga við þegar;
 -  Gildi í dálki “Upp” gilda fyrir loftbil sem hallar allt að 30° frá
    láréttu.
 
-| 
+Tafla 2.4 Varmaflutningsmótstöður óloftræsts loftbils :math:`m^2K/W`
 
 +------------------------+-----------------------+--------+-------+
-| Tafla 2.4              |                       |        |       |
-| V                      |                       |        |       |
-| armaflutningsmótstöður |                       |        |       |
-| óloftræsts loftbils    |                       |        |       |
-| m\ :sup:`2`\ K/W       |                       |        |       |
 |                        |                       |        |       |
-| |                      |                       |        |       |
 +------------------------+-----------------------+--------+-------+
 | Þykkt loftbils mm      | Stefna varmaflutnings |        |       |
 +------------------------+-----------------------+--------+-------+
 | |                      | Upp                   | Lárétt | Niður |
 |                        |                       |        |       |
-|                        |                       |        | |     |
+|                        |                       |        |       |
 +------------------------+-----------------------+--------+-------+
 | 0                      | 0,00                  | 0,00   | 0,00  |
 +------------------------+-----------------------+--------+-------+
@@ -1013,30 +822,22 @@ Gildin í töflu 2.4 eiga við þegar;
 | 300                    | 0,16                  | 0,18   | 0,23  |
 +------------------------+-----------------------+--------+-------+
 
-| 
-
 Leiðrétt er fyrir áhrifum loftunar á eftirfarandi hátt;
 
-| 
-
-Lítið loftræst loftbil:
+**Lítið loftræst loftbil:**
 
 Loftræsing telst lítil ef opflatarmál a inn í loftbilið eru
 
-500 mm\ :sup:`2`\  < a ≤ 1500 mm\ :sup:`2`\  á breiddarmetra lóðrétts
-loftbils
+500 mm\ :sup:`2`\  < a ≤ 1500 mm\ :sup:`2`\  á breiddarmetra lóðrétts loftbils
 
-500 mm\ :sup:`2`\  < a ≤ 1500 mm\ :sup:`2`\  á m\ :sup:`2`\  lárétts
-(lítið hallandi) loftbils
+500 mm\ :sup:`2`\  < a ≤ 1500 mm\ :sup:`2`\  á m\ :sup:`2`\  lárétts (lítið hallandi) loftbils
 
 Hönnunarmótstaða slíkra loftbila er 50 % af töflugildum í töflu 2.4. Ef
 varmaflutningsmótstaða efnislaga milli loftbils og útilofts er meiri en
 0,15 m\ :sup:`2`\ K/W þá skal sú mótstaða sett jöfn 0,15
 m\ :sup:`2`\ K/W.
 
-| 
-
-Vel loftræst loftbil:
+**Vel loftræst loftbil:**
 
 Loftræsing telst mikil ef opflatarmál a inn í loftbilið eru
 
@@ -1050,20 +851,12 @@ milli slíks loftbils og útilofts en í stað þess er
 varmaflutningsmótstöðu ytra yfirborðs sett jöfn og
 yfirborðsmótstöðugildinu fyrir innra yfirborð byggingarhlutans.
 
-| 
-
 Fyrir óeinangruð þakrými (einangrað á lárétt loft en þak byggt upp með
 halla) fæst fyrir venjubundið íslenskt þak af slíkri gerð;
 
-| 
-
 R= 0,2 m\ :sup:`2`\ K/W
 
-| 
-
-og er þá varmaflutningsmótstaða ytra yfirborðs ekki meðtalin.
-
-| 
+og er þá varmaflutningsmótstaða ytra yfirborðs ekki meðtalin. Þ.e. yfirborðsmótstaðan er ekki innifalin í 0,2.
 
 Í Evrópustöðlunum liggur fyrir tillaga að staðli, prEN
 1190\ \ `1 <#sdfootnote1sym>`__\  fyrir útreikninga á varmaflutningi til
@@ -1074,10 +867,6 @@ jörðu, svipað og hefur tíðkast um marga áratugi á Norðurlöndunum. Áhri
 jarðar eru þá tekin inn eins og hvert annað efnislag og mótstöðutölur
 gefnar upp fyrir mismunandi aðstæður, tafla 2.5, athuga skal að ytri
 yfirborðsmótstaða er innifalin í gildunum.
-
-| 
-
-| 
 
 +--------------------------------------------------+------------------+
 | Tafla 2.5 Varmaflutningsmótstaða fyrir jörð      | |                |
@@ -1104,51 +893,50 @@ yfirborðsmótstaða er innifalin í gildunum.
 Athugasemd: Ytri yfirborðsmótstaða er innifalin í uppgefnum gildum fyrir
 R\ :sub:`j`
 
-| 
-
-2.6 Varmaflutningsmótstaða byggingarhluta og hitastig í sniði
+Varmaflutningsmótstaða byggingarhluta og hitastig í sniði
 -------------------------------------------------------------
 
 Í nýjum Evrópustöðlum er nú almennt talað um varmaflutningsmótstöðutölur
-byggingarhlutaen hér hefur almennt til þessa verið talað um útreikning á
+byggingarhluta en hér hefur almennt til þessa verið talað um útreikning á
 kólnunartölu. Með mótstöðutölur einstakra efnislaga (yfirborðsmótstöður,
 holrými og jörð meðtalin) þekktar, þá má auðveldlega ákvarða
 heildarvarmaflutningsmótstöðu R\ :sub:`T`\ , jafna 2.19, og kólnunartölu
 (U-gildi), jafna 2.20.
 
-| 
+.. admonition:: Jafna 2.19
+    :class: jafna
 
-R\ :sub:`T`\ =R\ :sub:`si`\ +
-R\ :sub:`1`\ +R\ :sub:`2`\ +....+R\ :sub:`se`\  (m\ :sup:`2`\ K/W)
-(2.19)
+      :math:`R_T = R_{si} + R_1 + R_2 + ... + R_{se}`
 
-| 
+þar sem 
 
-þar sem R\ :sub:`T`\  heildar varmaflutningsmótstaða byggingarhluta
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
 
-R\ :sub:`si`\  varmaflutningsmótstaða innra yfirborðs
+  * - :math:`R_T`
+    - heildar varmaflutningsmótstaða byggingarhluta
+    - :math:`m^2K/W`
+  * - :math:`R_{si}`
+    - varmaflutningsmótstaða innra yfirborðs
+    - :math:`m^2K/W`
+  * - :math:`R_n = d_n/\lambda_n`
+    - varmaflutningsmótstaða einstakra efnislaga, reiknuð eða uppgefin
+    - :math:`m^2K/W`
+  * - :math:`R_{se}`
+    - varmaflutningsmótstaða ytra yfirborðs (ef hún er ekki innifalin í öðrum gildum)
+    - :math:`m^2K/W`
 
-R\ :sub:`n`\  varmaflutningsmótstaða einstakra efnislaga;
+.. admonition:: Jafna 2.20
+    :class: jafna
 
-R\ :sub:`n`\ =d\ :sub:`n`\ /\ :sub:`n`\  fyrir einstakt efnislag, eða
-uppgefin mótstaða efnislags
-
-R\ :sub:`se`\  varmaflutningsmótstaða ytra yfirborðs (ef hún er ekki
-innifalin í öðrum gildum)
-
-| 
-
-U’ = 1/R\ :sub:`T`\  (W/m\ :sup:`2`\ K) (2.20)
-
-| 
+      :math:`U^\prime = 1/R_T` [W/(m^2K)]
 
 Samkvæmt DS 418 (Annex A) er hönnunar U-gildi fundið útfrá reiknuðu
 U’-gildi og leiðréttingarstuðlum sem taka tillit til loflaga í
 einangrun, festinga sem ganga í gegnum einangrun og úrkomu á umsnúið
 þak. Verður hér látið nægja að vísa til staðalsins varðandi þessi
 atriði.
-
-| 
 
 Umfjöllun til þessa hefur einskorðast við tilvik þar sem varmaflutningur
 er fullkomlega reglulegur og ein-vítt ferli, þ.e. varmaflutningur er
@@ -1171,359 +959,104 @@ leiðnitölum efnanna;
 Þegar talið er að staðbundin breyting í U-gildi vegna áhrifa frá
 samsettum efnislögum sé hófleg þá er U-gildi fundið þannig:
 
-1. Efri mörk varmaflutningsmótstöðu, R\ :sub:`T`\ ’, ákvörðuð
+I. Efri mörk varmaflutningsmótstöðu, :math:`R_T^\prime`, ákvörðuð
 
-(i) Byggingarhluta skipt upp í einingar þvert á varmastreymi, þannig að
-hver hluti um sig sé (sem næst) einsleitur. Flatarvægi hvers hluta
-f\ :sub:`a`\ , f\ :sub:`b`\ ,.. er ákvarðað
+   a. Byggingarhluta skipt upp í einingar þvert á varmastreymi, þannig að hver hluti um sig sé (sem næst) einsleitur. Flatarvægi hvers hluta f\ :sub:`a`\ , f\ :sub:`b`\ ,.. er ákvarðað
+   b. Varmaflutningsmótstaða fyrir hvern hluta fyrir sig, R\ :sub:`Ta`\ , R\ :sub:`Tb`\ ,.., er reiknuð samkvæmt jöfnu 2.19
+   c. Varmaflutningsmótstaða :math:`R_T^\prime` fundin útfrá jöfnu 2.21
 
-(ii) Varmaflutningsmótstaða fyrir hvern hluta fyrir sig, R\ :sub:`Ta`\ ,
-R\ :sub:`Tb`\ ,.., er reiknuð samkvæmt jöfnu 2.19
+.. admonition:: Jafna 2.21
+    :class: jafna
 
-(iii) Varmaflutningsmótstaða R\ :sub:`T`\ ’ fundin útfrá jöfnu 2.21
+      :math:`\frac{1}{R_T^\prime} = \frac{f_a}{R_{Ta}}+\frac{f_b}{R_{Tb}}+...`
 
-| |Shape13|
+.. figure:: ./myndir/kafli02/R_einmerkt.png
+  :align: center
+  :width: 40%
 
-|image31| (2.21)
+II. Neðri mörk varmaflutningsmótstöðu :math:`R_T^{\prime \prime}`, ákvörðuð
 
-| 
+   a. Vegin leiðnitala efnislaga í samsettu efnislagi er reiknuð, útfrá flatarvægi efna, jafna 2.22.. 
+   b. Varmaflutningsmótstaðan :math:`R_T^{\prime \prime}` ákvörðuð eins og lögin væru nú einsleit sbr. jöfnu 2.19
 
-| 
+.. admonition:: Jafna 2.22
+    :class: jafna
 
-| 
+      :math:`\lambda^{\prime \prime} = \lambda_{1j}f_{1j}+\lambda_{2j}f_{2j}+...`
 
-| 
+.. figure:: ./myndir/kafli02/R_tvimerkt.png
+  :align: center
+  :width: 40%
 
-2. Neðri mörk varmaflutningsmótstöðu R\ :sub:`T`\ ’’, ákvörðuð
+III. Varmaflutningsmótstaða byggingarhlutans reiknuð sem einfalt meðaltal, jafna 2.23
 
-(i) Vegin leiðnitala efnislaga í samsettu efnislagi er reiknuð, útfrá
-flatarvægi efna, jafna 2.22.
+.. admonition:: Jafna 2.22
+    :class: jafna
 
-| |Shape14|
-
-\ :sub:`j`\ ’’=\ :sub:`1j`\ ·f\ :sub:`1j`\ +\ :sub:`2j`\ ·f\ :sub:`2j`\ +...
-(2.22)
-
-| 
-
-ii. Varmaflutningsmótstaðan R\ :sub:`T`\ ’’ ákvörðuð eins og
-
-lögin væru nú einsleit sbr. jöfnu 2.19
-
-| 
-
-.. _section-7:
-
-3. Varmaflutningsmótstaða byggingarhlutans reiknuð sem einfalt meðaltal, jafna 2.23
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-.. _section-8:
-
-|image32| (2.23)
-''''''''''''''''
-
-| 
+      :math:`R_T =\frac{R_T^\prime + R_T^{\prime \prime}}{2}`
 
 Loks er U-gildið fundið útfrá jöfnu 2.20 (og viðeigandi leiðréttingum),
 samkvæmt DS 418 skal gefa U-gildið upp með tveim marktækum tölustöfum.
 
-| 
-
-| 
-
-| 
-
-| 
-
 Útreikningur varmaflutningsmótstöðu, U-gildis og hitastigs í sniði
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Útfrá þekktum varmaflutningsmótstöðum efnislaga, og heildarmótstöðu
 byggingarhlutans, má auðveldlega reikna hitastig í sniði þegar
 umhverfisaðstæður eru þekktar (sjá kafla 2.2).
 
-| 
+.. admonition:: Dæmi
+  :class: tip 
+  
+    Steyptur veggur 180 mm, einangraður að innan með 100 mm frauðplasti.
+    Múrað innan á plast með 25 mm sementsmúr og utan á steypu með 20 mm
+    sementsmúr. Veggurinn er málaður beggja vegna, en málningarlögin hafa
+    ekki merkjanleg áhrif á varmaflutningsmótstöðu né hitastig í sniði.
 
-Dæmi 1:
+   a. Reikna varmaflutningsmótstöðu og U-gildi
+    Gildi fyrir varmaleiðni byggingarefna samkvæmt DS 418 og ÍST EN ISO 12524:2000 og fyrir einangrun uppl. framleiðanda.
 
-Steyptur veggur 180 mm, einangraður að innan með 100 mm frauðplasti.
-Múrað innan á plast með 25 mm sementsmúr og utan á steypu með 20 mm
-sementsmúr. Veggurinn er málaður beggja vegna, en málningarlögin hafa
-ekki merkjanleg áhrif á varmaflutningsmótstöðu né hitastig í sniði.
+  	.. figure:: ./myndir/kafli02/reiknud_gildi_fyrir_alid.png
 
-| 
+   b. Reikna hitastig í sniðinu fyrir :math:`T_i=20 ^\circ C` og :math:`T_e=-5 ^\circ C`
+    Reiknaðar mótstöður einstakra efnislaga, og heildarmótstaðan, er notað til útreikninga á hitastigi í samræmi við jöfnu 2.10 (hér er allt dæmið sýnt). 
+    Athugið að hitastig er alltaf reiknað á efnisskilum (og breytist línulega þar á milli).
 
-a. Reikna varmaflutningsmótstöðu og U-gildi
+    .. figure:: ./myndir/kafli02/reiknud_gildi_fyrir_blid.png
 
-| 
-
-Gildi fyrir varmaleiðni byggingarefna samkvæmt DS 418 og ÍST EN ISO
-12524:2000 og fyrir einangrun uppl. framleiðanda.
-
-| 
-
-Tafla 2.7-a Reiknað U-gildi fyrir a-lið í dæmi
-
-| 
-
-+-----------------+-----------+-----------------+-----------------+
-| |               | Þykkt     | Leiðni-         | Varma-          |
-+-----------------+-----------+-----------------+-----------------+
-| |               | efnislags | tala            | mótstaða        |
-+-----------------+-----------+-----------------+-----------------+
-| |               | d         |                | R\ :sub:`n`     |
-+-----------------+-----------+-----------------+-----------------+
-| |               | (m)       | (W/m·K)         | (m\             |
-|                 |           |                 | :sup:`2`\ ·K/W) |
-+-----------------+-----------+-----------------+-----------------+
-| |               | |         | |               | |               |
-+-----------------+-----------+-----------------+-----------------+
-| Innra yfirborð  | |         | |               | 0,13            |
-| R\ :sub:`si`    |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Múr; 1900       | 0,025     | 1,20            | 0,02            |
-| k               |           |                 |                 |
-| g/m\ :sup:`3`\  |           |                 |                 |
-| \*              |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Frauðplast 36   | 0,100     | 0,036           | 2,78            |
-+-----------------+-----------+-----------------+-----------------+
-| Steinsteypa     | 0,180     | 1,95            | 0,09            |
-| (járnbent) \*   |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Múr; 1900       | 0,020     | 1,40            | 0,01            |
-| k               |           |                 |                 |
-| g/m\ :sup:`3`\  |           |                 |                 |
-| \*              |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Ytra yfirborð   | |         | |               | 0,04            |
-| R\ :sub:`se`    |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| |               | |         | |               | |               |
-+-----------------+-----------+-----------------+-----------------+
-| |               | |         | R\ :sub:`T`     | 3,08            |
-|                 |           | \ =R\ :sub:`n` |                 |
-+-----------------+-----------+-----------------+-----------------+
-| |               | |         | U               | 0,33            |
-|                 |           | ’=1/R\ :sub:`T` |                 |
-+-----------------+-----------+-----------------+-----------------+
-
-| 
-
-| 
-
-| 
-
-| 
-
-b. Reikna hitastig í sniðinu fyrir T\ :sub:`i`\ =20 °C og
-   T\ :sub:`e`\ =-5 °C
-
-.. _section-9:
-
-Reiknaðar mótstöður einstakra efnislaga, og heildarmótstaðan, er notað til útreikninga á hitastigi í samræmi við jöfnu 2.10 (hér er allt dæmið sýnt). 
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-.. _section-10:
-
-Athugið að hitastig er alltaf reiknað á efnisskilum (og breytist línulega þar á milli).
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-Tafla 2.7-b Reiknað hitastig í sniði fyrir b-lið í dæmi
-
-| 
-
-+----------+----------+----------+----------+----------+-------+
-| |        | Þykkt    | Leiðni-  | Varma-   | Summa    | Hita- |
-+----------+----------+----------+----------+----------+-------+
-| |        | e        | tala     | mótstaða | m        | stig  |
-|          | fnislags |          |          | ótstaðna |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | d        |         | R\       | R\ :su  | |     |
-|          |          |          | :sub:`n` | b:`1..n` |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | (m)      | (W/m·K)  | (m\      | |        | (°C)  |
-|          |          |          |  :sup:`2 |          |       |
-|          |          |          | `\ ·K/W) |          |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | |        | |        | |        | |     |
-+----------+----------+----------+----------+----------+-------+
-| Inni     | |        | |        | |        | |        | 20    |
-+----------+----------+----------+----------+----------+-------+
-| Innra    | |        | |        | 0,13     | 0,13     | |     |
-| yfirborð |          |          |          |          |       |
-| R\ :     |          |          |          |          |       |
-| sub:`si` |          |          |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | |        | |        | |        | 18,9  |
-+----------+----------+----------+----------+----------+-------+
-| Múr;     | 0,025    | 1,20     | 0,02     | 0,15     | |     |
-| 1900     |          |          |          |          |       |
-| kg/m\ :s |          |          |          |          |       |
-| up:`3`\  |          |          |          |          |       |
-| \*       |          |          |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | |        | |        | |        | 18,8  |
-+----------+----------+----------+----------+----------+-------+
-| Fr       | 0,100    | 0,036    | 2,78     | 2,93     | |     |
-| auðplast |          |          |          |          |       |
-| 36       |          |          |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | |        | |        | |        | -3,8  |
-+----------+----------+----------+----------+----------+-------+
-| Ste      | 0,180    | 1,95     | 0,09     | 3,02     | |     |
-| insteypa |          |          |          |          |       |
-| (j       |          |          |          |          |       |
-| árnbent) |          |          |          |          |       |
-| \*       |          |          |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | |        | |        | |        | -4,6  |
-+----------+----------+----------+----------+----------+-------+
-| Múr;     | 0,020    | 1,40     | 0,01     | 3,03     | |     |
-| 1900     |          |          |          |          |       |
-| kg/m\ :s |          |          |          |          |       |
-| up:`3`\  |          |          |          |          |       |
-| \*       |          |          |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | |        | |        | |        | -4,7  |
-+----------+----------+----------+----------+----------+-------+
-| Ytra     | |        | |        | 0,04     | 3,07     | |     |
-| yfirborð |          |          |          |          |       |
-| R\ :     |          |          |          |          |       |
-| sub:`se` |          |          |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-| Úti      | |        | |        | |        | |        | -5    |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | |        | |        | |        | |     |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | R\       | 3,07     | |        | |     |
-|          |          |  :sub:`T |          |          |       |
-|          |          | `\ =R\  |          |          |       |
-|          |          | :sub:`n` |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-| |        | |        | U’=1/R\  | 0,33     | |        | |     |
-|          |          | :sub:`T` |          |          |       |
-+----------+----------+----------+----------+----------+-------+
-
-| 
-
-| 
-
-| 
-
-| 
 
 Kuldabrýr
-
-Þ
-
-.. image:: myndir/kafli02_html_2f203805be62d78b.png
-   :name: Picture 35
-   :width: 251px
-   :height: 241px
-
-Mynd 2.11 Steypt gólfplata gengur út í steyptan vegg - Hitastig í sniði
-(kuldabrú)
-
-egar efnislag með góða einangrunarhæfni er rofið af öðru efni sem hefur
+~~~~~~~~~
+Þegar efnislag með góða einangrunarhæfni er rofið af öðru efni sem hefur
 mun síðri einangrunareiginleika þá verður veruleg truflun á varmastreymi
 í sniðinu, varmaflutningurinn er þá ekki lengur einvíður heldur í tví-
 eða þrívíðu hnitakerfi. Mynd 2.11 sýnir dæmigerða kuldabrú í steyptum
 vegg sem einangraður er að innan.
 
-| 
+.. figure:: ./myndir/kafli02/kuldabru.png
+  :align: center
+  :width: 50%
+
+Mynd 2.11 Steypt gólfplata gengur út í steyptan vegg - Hitastig í sniði
+(kuldabrú)
 
 Reikniaðferðir sem hér hefur verið fjallað um að framan duga ekki til
 útreikninga á varmaflutningi í kuldabrú, heldur verður að nota
 reiknilíkön sem byggja á tölulegum aðferðum.
 
-| 
-
 Í töflu 2.8 eru sýnd reiknuð gildi fyrir nokkrar mismunandi tegundir
 kuldabrúa, og er handhægast að nota slík töflugildi í útreikningum á
 varmatapi og hitunarþörf húsa.
 
-.. _section-11:
 
-Tafla 2.8 Kuldabrýr - Línuþéttleiki varmataps  í steyptum útvegg \ `2 <#sdfootnote2sym>`__
-                                                                                           
-
- (Heimild: Björn Marteinsson, 2002)
+.. figure:: ./myndir/kafli02/kuldabryr.png
+  :align: center
+  :width: 100%
                                    
 
-.. image:: myndir/kafli02_html_1a36142d5655cae8.png
-   :name: Picture 34
-   :width: 128px
-   :height: 366px
 
-°  (W/mK)
-
-Útveggur - veggur milli stigaganga 0,550
-
-Lárétt snið
-
-| 
-
-Útveggur; úthorn 0,050
-
-| 
-
-| 
-
-Milligólf - útveggur- svalagólf;
-
-Innveggur - útveggur – svalaveggur (C) 0,642
-
-Lárétt og lóðrétt snið
-
-| 
-
-| 
-
-Milligólf - Útveggur - inndregið svalagólf (E) 0,950
-
-Lóðrétt snið
-
-| 
-
-Innveggur – útveggur; milligólf útveggur (B)
-
-Lárétt og lóðrétt snið t =16 sm \ :sup:`1)`\  0,626
-
-t= 18 sm \ :sup:`2)`\  0,681
-
-Neðsta gólfplata- sökkull – útveggur (A) \ :sup:`3)`\  0,619
-
-Lóðrétt snið
-
-| 
-
-Gluggar
-
-Karmhluti, kuldabrú í vegg og jaðaráhrif glers 0,265
-
-Póstar og jaðaráhrif glers (almennt fyrir glugga) 0,223
-
-| 
-
-Skýringar;
-
-1) Algeng þykkt milliveggja
-
-2) Algeng lágmarksþykkt milligólf, en einstaka milliveggir einnig
-
-3) Kuldabrúin skal reiknuð með gólfi samkvæmt staðli
-
-Heimildir og ítarefni:
+Heimildir og ítarefni
+---------------------
 
 ASHRAE Handbook Fundamentals 1989, American Society of Heating,
 Refrigerating, and Air Conditioning Engineers, Inc, Atlanta, USA
