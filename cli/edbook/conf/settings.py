@@ -421,7 +421,7 @@ epub_exclude_files = ["search.html"]
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {"http://docs.python.org/": None}
+intersphinx_mapping = {'python': ("http://docs.python.org/", None)}
 
 
 from docutils import nodes

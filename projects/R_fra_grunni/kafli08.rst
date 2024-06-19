@@ -41,6 +41,8 @@ var.test()
     
     **Helstu stillingar:** alternative, conf.level
 
+    **Forkröfur prófs:** Normaldreifing
+
 
 --------------
 
@@ -85,40 +87,39 @@ stillingunni ``alternative`` ráðum við gagntilgátunni.
 | alternative=“less”      | :math:`H_1: \sigma^2_1 < \sigma^2_2`    |
 +-------------------------+-----------------------------------------+
 
-Viljum við kanna hvort dreifni í púls sé mismunandi á milli kynjanna
-gerum við það með (takið eftir að gögnin eru á löngu sniði):
+Viljum við kanna hvort dreifni í ferðatíma sé mismunandi á milli þeirra sem koma gangandi í skólann
+og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):
 
 ::
 
-   var.test(puls$fyrriPuls~puls$kyn)
+   var.test(dat$ferdatimi_skoli~dat$ferdamati_skoli=="Gangandi / skokkandi")
    ##
    ##  F test to compare two variances
    ##
-   ## data:  puls$fyrriPuls by puls$kyn
-   ## F = 1.2512, num df = 293, denom df = 159, p-value = 0.1155
+   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == "Gangandi / skokkandi"
+   ## F = 5.4739, num df = 166, denom df = 33, p-value = 2.875e-07
    ## alternative hypothesis: true ratio of variances is not equal to 1
    ## 95 percent confidence interval:
-   ##  0.9461411 1.6360633
+   ##  3.053460 8.912866
    ## sample estimates:
-   ## ratio of variances
-   ##           1.251186
+   ## ratio of variances 
+   ##           5.473898
 
 Úr úttakinu má lesa m.a. eftirfarandi:
 
--  Gildið á prófstærðinni: :math:`f` = 1.2512
+-  Gildið á prófstærðinni: :math:`f` = 5.4739
 
--  p-gildið: 0.1155
+-  p-gildið: 2.875e-07
 
 -  Öryggisbilið: 95 percent confidence interval:
-   :math:`[0.9461411, 1.6360633]`
+   :math:`[3.053460, 8.912866]`
 
-Við sjáum að p-gildið er hátt svo við höfnum ekki núlltilgátunni (m.v.
-:math:`\alpha = 0.05`) og drögum því enga ályktun. Við sjáum líka að 95%
-öryggisbil fyrir hlutfallið á dreifninni er
-:math:`[0.9461411, 1.6360633]`. Hlutlausa ástandið er að hlutfallið sé 1
-(því þá er dreifnin jöfn í báðum hópum) og þar sem öryggisbilið
-inniheldur töluna 1 höfnum við ekki núlltilgátunni í samræmi við það sem
-p-gildið segir.
+Við sjáum að p-gildið er minna en 0.05 svo við höfnum núlltilgátunni
+og drögum þá ályktun að munur sé á dreifni ferðatíma eftir því hvort farið sé gangandi eða ekki. 
+Við sjáum líka að 95% öryggisbil fyrir hlutfallið á dreifninni er
+:math:`[3.053460, 8.912866]`. Hlutlausa ástandið er að hlutfallið sé 1
+(því þá er dreifnin jöfn í báðum hópum). Takið eftir að öryggisbilið
+inniheldur ekki töluna 1 í samræmi við að við höfnum núlltilgátunni.
 
 Dreifni í fleiri þýðum
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -131,6 +132,8 @@ bartlett.test()
     **Inntak:** nöfn á talnabreytu og flokkabreytu
     
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
+
+    **Forkröfur prófs:** Normaldreifing
 
 
 --------------
@@ -145,21 +148,21 @@ munur sé á dreifni hópanna. Við mötum aðferðina með
 
    bartlett.test(maeling ~ hopur)
 
-Viljum við kanna hvort dreifnin er ólík í púlsmælingum í
-líkamsræktarhópunum þremur gerum við það með:
+Viljum við kanna hvort dreifni ferðatíma sé ólík á milli 
+einhverra tveggja ferðamáta gerum við það með:
 
 ::
 
-   bartlett.test(puls$fyrriPuls ~ puls$likamsraektf)
+   bartlett.test(dat$ferdatimi_skoli~dat$ferdamati_skoli)
    ##
    ##  Bartlett test of homogeneity of variances
    ##
-   ## data:  puls$fyrriPuls by puls$likamsraektf
-   ## Bartlett's K-squared = 4.1246, df = 2, p-value = 0.1272
+   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli
+   ## Bartlett's K-squared = 31.33, df = 4, p-value = 2.622e-06
 
-Við sjáum að gildið á prófstærðinni er :math:`4.1246` og p-gildið er
-:math:`0.1272`. P-gildið er hærra en 0.05 og því getum við ekki ályktað
-að dreifnin sé misjöfn í hópunum.
+Við sjáum að gildið á prófstærðinni er :math:`31.33` og p-gildið er
+:math:`2.622e-06`. P-gildið er minna en 0.05 og því höfnum við núlltilgátunni
+og ályktum að dreifnin sé misjöfn í einhverjum tveimur hóp.
 
 Ályktanir um meðaltöl
 ---------------------
@@ -178,6 +181,8 @@ t.test()
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
     
     **Helstu stillingar:** paired, mu, alternative, conf.level
+
+    **Forkröfur prófs:** Meðaltöl normaldreifð, þ.e. mörg úrtök eða normaldreifð gögn
 
 
 --------------
@@ -211,38 +216,37 @@ framkvæmir hún t-próf fyrir eitt meðaltal. Aðrar stillingar eru:
    Sjálfgefið er að hafa öryggið :math:`1-\alpha` = 0.95.
 
 Sjálfgefið er að kanna núlltilgátuna: :math:`H_0: \mu=0`. Slíkur
-samanburður er óáhugaverður ef við viljum t.d. kanna fyrri púls nemenda
-því vonandi voru nemendurnir ekki dauðir úr öllum æðum á þeim
-mánudagsmorgnum sem tilraunin var framkvæmd. Könnum frekar hvort púlsinn
-sé frábrugðinn 70 og tilgreinum það með stillingunni ``mu``.
+samanburður er óáhugaverður ef við viljum t.d. kanna ferðatíma nemenda í skólann
+því líklega búa mjög fáir nemendur í háskólabíó. Könnum frekar hvort ferðatíminn
+sé frábrugðinn 20 og tilgreinum það með stillingunni ``mu``.
 
 ::
 
-   t.test(puls$fyrriPuls,mu=70)
+   t.test(dat$ferdatimi_skoli, mu=20)
    ##
    ##  One Sample t-test
    ##
-   ## data:  puls$fyrriPuls
-   ## t = 3.5612, df = 453, p-value = 0.0004082
-   ## alternative hypothesis: true mean is not equal to 70
+   ## data:  dat$ferdatimi_skoli
+   ## t = -0.57532, df = 200, p-value = 0.5657
+   ## alternative hypothesis: true mean is not equal to 20
    ## 95 percent confidence interval:
-   ##  70.88843 73.07633
+   ##  17.46685 21.38887
    ## sample estimates:
-   ## mean of x
-   ##  71.98238
+   ## mean of x 
+   ##  19.42786 
 
 Í úttakinu eru fólgnar gífurlegar upplýsingar. Við fáum:
 
--  Prófstærðina: t = 3.5612
+-  Prófstærðina: t = -0.57532
 
--  Fjölda frígráða: 453
+-  Fjölda frígráða: 200
 
--  p-gildið: :math:`4.0820624\times 10^{-4}`
+-  p-gildið: :math:`0.5657`
 
 -  Öryggisbilið, með örygginu tilgreindu: 95 percent confidence
-   interval: :math:`[70.8884,73.0763]`
+   interval: :math:`[17.46685, 21.38887]`
 
--  Úrtaksmeðaltalið: mean of x 71.9824
+-  Úrtaksmeðaltalið: mean of x 19.42786
 
 .. _s.tvomedaltol:
 
@@ -255,7 +259,7 @@ mælingar geta gögnin okkar verið á mismunandi formi. Annars vegar geta
 gögnin verið á löngu sniði, þar sem að ein breyta inniheldur mælingarnar
 á talnabreytunni og önnur breyta tilgreinir hvaða hópi hver og ein
 mæling tilheyrir. Algengast er að gögn séu geymd á slíku sniði og eru
-púlsgögnin dæmi. Hins vegar geta gögnin verið á víðu sniði þar sem búið
+gögnin um ferðatíma og máta dæmi. Hins vegar geta gögnin verið á víðu sniði þar sem búið
 er að skipta talnabreytunni upp í tvær breytur, eina fyrir hvorn hóp.
 
 Við mötum ``t.test()`` aðferðina á mismunandi vegu eftir því á hvaða
@@ -275,61 +279,65 @@ sniði gögnin eru. Enn fremur er hægt að gefa eftirfarandi stillingar
    tvíhliða gagntilgátu.
 
 Segjum sem svo að við viljum bera saman fyrri púls nemenda eftir kynjum.
-Þar sem púls gögnin eru á löngu sniði gefum við skipunina:
+Þar sem ferðatímagögnin eru á löngu sniði gefum við skipunina:
 
 ::
 
-   t.test(puls$fyrriPuls~puls$kyn)
+   t.test(dat$ferdatimi_skoli~dat$ferdamati_skoli=='Gangandi / skokkandi')
    ##
-   ##  Welch Two Sample t-test
-   ##
-   ## data:  puls$fyrriPuls by puls$kyn
-   ## t = 2.6808, df = 358.94, p-value = 0.007684
-   ## alternative hypothesis: true difference in means is not equal to 0
+   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == "Gangandi / skokkandi"
+   ## t = 9.5068, df = 118.32, p-value = 2.889e-16
+   ## alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
    ## 95 percent confidence interval:
-   ##  0.8000951 5.2065375
+   ##  11.28187 17.21830
    ## sample estimates:
-   ## mean in group kvk  mean in group kk
-   ##          73.04082          70.03750
+   ## mean in group FALSE  mean in group TRUE 
+   ##           21.838323            7.588235 
 
 Í úttakinu eru fólgnar gífurlegar upplýsingar. Við fáum:
 
--  Prófstærðina: t = 2.6808
+-  Prófstærðina: t = 9.5068
 
--  Fjölda frígráða: 358.9407899
+-  Fjölda frígráða: 118.32
 
--  p-gildið: 0.0076844
+-  p-gildið: 2.889e-16
 
 -  Öryggisbilið, með örygginu tilgreindu: 95 percent confidence
-   interval: :math:`[0.8001,5.2065]`
+   interval: :math:`[11.28187,17.21830]`
 
--  Úrtaksmeðaltölin: 73.0408, 70.0375
+-  Úrtaksmeðaltölin: 21.838323, 7.588235
 
 Séu gögnin á víðu sniði er ``t.test()`` mötuð með breytunum tveimur sem
-bera á saman. Í þessu tilviki komum við púlsgögnunum á vítt snið með
-aðstoð skipunarinnar ``spread()``, sem kynnt var í kassa
+bera á saman. Í þessu tilviki komum við ferðatímagögnunum á vítt snið með
+aðstoð skipunarinnar ``pivot_wider``, sem kynnt var í kassa
 :numref:`%s <rf.spread>`.
 
 ::
 
-   pulsvid <- spread(puls, kyn, fyrriPuls)
+   ferdirvitt <- dat %>% mutate(fotgangandi=(ferdamati_skoli=="Gangandi / skokkandi")) 
+                     %>% pivot_wider(names_from=fotgangandi, 
+                     values_from=ferdatimi_skoli, names_prefix="Gangandi_")
 
+
+Athugið að ef við hefðum ekki notað stillinguna ``names_prefix`` hefðum við fengið dálkanöfnin
+``TRUE`` og ``FALSE`` en það eru frátekin lykilorð í R. Við hefðum þó geta nálgast dálkana
+með því að nota gæsalappir eða úrfellingarmerki, t.d. ``"TRUE"``.
 Hérna framkvæmum við sama t-prófið með skipuninni:
 
 ::
 
-   t.test(pulsvid$kvk, pulsvid$kk)
+   t.test(ferdirvitt$Gangandi_FALSE, ferdirvitt$Gangandi_TRUE)
    ##
    ##  Welch Two Sample t-test
    ##
-   ## data:  pulsvid$kvk and pulsvid$kk
-   ## t = 2.6808, df = 358.94, p-value = 0.007684
+   ## data:  ferdirvitt$Gangandi_FALSE and ferdirvitt$Gangandi_TRUE
+   ## t = 9.5068, df = 118.32, p-value = 2.889e-16
    ## alternative hypothesis: true difference in means is not equal to 0
    ## 95 percent confidence interval:
-   ##  0.8000951 5.2065375
+   ##  11.28187 17.21830
    ## sample estimates:
-   ## mean of x mean of y
-   ##  73.04082  70.03750
+   ## mean of x mean of y 
+   ## 21.838323  7.588235 
 
 .. _s.fleirimedaltol:
 
@@ -483,6 +491,8 @@ wilcox.test()
     
     **Helstu stillingar:** paired, mu, alternative
 
+    **Forkröfur prófs:** Munur á dreifingu er hliðrun um fasta
+
 
 --------------
 
@@ -502,17 +512,18 @@ Hér fyrir neðan má sjá sömu dæmi og hér að ofan framkvæmd með
    ##
    ##  Wilcoxon signed rank test with continuity correction
    ##
-   ## data:  puls$fyrriPuls
-   ## V = 51812, p-value = 0.003055
-   ## alternative hypothesis: true location is not equal to 70
+   ## data:  dat$ferdatimi_skoli
+   ## V = 6159, p-value = 0.1073
+   ## alternative hypothesis: true location is not equal to 20
 
 ::
-
+   
+   wilcox.test(dat$ferdatimi_skoli~dat$ferdamati_skoli=='Gangandi / skokkandi')
    ##
    ##  Wilcoxon rank sum test with continuity correction
    ##
-   ## data:  puls$fyrriPuls by puls$kyn
-   ## W = 26878, p-value = 0.01187
+   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == "Gangandi / skokkandi"
+   ## W = 4847.5, p-value = 6.877e-11
    ## alternative hypothesis: true location shift is not equal to 0
 
 ::
