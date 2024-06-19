@@ -1553,7 +1553,7 @@ kaupverði gerum við það með:
 
 .. _rf.gather:
 
-pivot_longer
+pivot_longer()
 ^^^^^^^^
 
 .. attention::
