@@ -1,9 +1,8 @@
-Kafli
-==========
+Eigingildi og eiginvigrar
+==========================
 
 Eigingildi og eiginvigur
 ------------------------
-
 
 Skilgreining: Eigingildi og eiginvigur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -18,7 +17,7 @@ Skilgreining: Eigingildi og eiginvigur
     
     Þá segjum við að :math:`\lambda` sé **eigingildi** (e. eigenvalue) :math:`A`
     og :math:`x` **eiginvigur** (e. eiginvector). Ef að :math:`x` og :math:`\lambda` uppfylla
-    jöfnuna að ofan þá segjum viö að :math:`x` sé eiginvigur við eigingildi :math:`\lambda`.
+    jöfnuna að ofan þá segjum við að :math:`x` sé eiginvigur við eigingildi :math:`\lambda`.
     Við þessar aðstæður segjum við að eigingildið :math:`\lambda` og eiginvigurinn :math:`x` 
     tilheyri hvort öðru.
 
@@ -48,7 +47,7 @@ Setning
     :class: setning
 
     Látum :math:`A` vera :math:`n \times n` fylki. Tala :math:`\lambda` er 
-    eigingildi fylkis :math:`A` ef og aðeind ef :math:`\det(A-\lambda I)=0`.
+    eigingildi fylkis :math:`A` ef og aðeins ef :math:`\det(A-\lambda I)=0`.
 
 Sýnidæmi: Eigingild og eiginvigrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -104,7 +103,7 @@ Setning
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`A` vera :math:`n\times n` fulki og :math:`\lambda`
+    Látum :math:`A` vera :math:`n\times n` fylki og :math:`\lambda`
     eigingildi þess. Mengi allra eiginvigra tilheyrandi eigingildinu :math:`\lambda`
     að viðbættum núllvigrinum :math:`\textbf{0}` er hlutrúm í :math:`\mathbb{R}^n`. 
     Þetta hlutrúm er kallað **eiginrúm** (e. eigenspace) tilheyrandi eigingildinu :math:`\lambda`
@@ -760,4 +759,5 @@ Sýnidæmi: Hornalínugjörningur
         \end{bmatrix}
     
     Þá gildir að :math:`A=PDP^{-1}` og :math:`\mathcal{B} = \left\{\begin{bmatrix} 1 \\ 7 \end{bmatrix},\begin{bmatrix} -1 \\ 1 \end{bmatrix}\right\}`.
+
 

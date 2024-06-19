@@ -1,5 +1,5 @@
-Kafli
-=====
+Línuleg jöfnuhneppi
+====================
 
 Línuleg Algebra er sú grein innan stærðfræðinnar sem fæst við línuleg jöfnuhneppi,
 vigra, vigurrúm, línulegar varpanir og önnur tengd viðfangsefni. Í þessu námskeiði 
@@ -195,12 +195,12 @@ Setning
 
     Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
 
-Skilgreining: línujafngild
+Skilgreining: Línujafngild
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Tvö jöfnuhneppi (eða fylki) eru eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
+    Tvö jöfnuhneppi (eða fylki) eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
     með einföldum línuaðgerðum.
 
 Ef jöfnuhneppi eru línujafngild þá hafa þau sömu lausnir. Til eru dæmi 
@@ -428,7 +428,7 @@ Sýnidæmi: Efri stallagerð
 Gauss-eyðing
 ------------
 
-Línuleg jöfnuhneppi eru yfirleitt leyst með svokallaðri **Gauss-eyðingu** (e. Gauss-reduction)
+Línuleg jöfnuhneppi eru yfirleitt leyst með svokallaðri **Gauss-eyðingu** (e. Gauss-reduction).
 Gauess-eyðing er reiknirit sem umbreytir fylki í fylki af efri stallagerð.
 
 Reiknirit fyrir Gauss-eyðingu
@@ -578,7 +578,7 @@ Við köllum þá dálka **vendidálka** sem innhalda vendistuðla.
 .. admonition:: Athugasemd
     :class: athugasemd
     
-    Við finnum rudda efri stallagerð með sama algóriþma og við finnum efri stallagerð. 
+    Við finnum rudda efri stallagerð með sama reikniriti og við finnum efri stallagerð. 
     Nema að til viðbótar þá gerum við eftirfarandi:
 
         **1.** Skölum forustustuðla þar sem við á til að þeir verði 1.
@@ -749,6 +749,9 @@ Sýnidæmi: Frjálsar og háðar breytur
         0 & 1 & * & * \\    
         \end{bmatrix}
 
+Setning
+^^^^^^^^
+
 .. admonition:: Setning
   :class: setning
 
@@ -769,8 +772,8 @@ Sýnidæmi: Frjálsar og háðar breytur
 Vigrar
 ------
 
-Skilgrining: Vigur
-^^^^^^^^^^^^^^^^^^
+Skilgreining: Vigur
+^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -803,11 +806,11 @@ Sýnidæmi: Dálkvigrar
         \textbf{v}_4 = \begin{bmatrix}
         9
         \end{bmatrix}.
-
-  Þetta eru allt dæmi um dálkvigra, vigra sem eru fylki sem eru bara einn dálkur.
+        
+    Þetta eru allt dæmi um dálkvigra, vigra sem eru fylki sem eru bara einn dálkur.
   
-Við feitletrum gajrnan breytur sem tákna vigra til að aðgreina þá frá rauntalnabreytum.
-:math:`\textbf{u}, \textbf{v}, \textbf{v}_1, \textbf{v}_2, \textbf{b},` Önnur leið er að nota 
+Við feitletrum gjarnan breytur sem tákna vigra til að aðgreina þá frá rauntalnabreytum.
+:math:`\textbf{u}, \textbf{v}, \textbf{v}_1, \textbf{v}_2, \textbf{b},`. Önnur leið er að nota 
 örvar: :math:`\vec{u}, \vec{v}, \vec{v}_1, \vec{v}_2, \vec{b}` eða strik:
 :math:`\bar{u}, \bar{v}, \bar{v}_1, \bar{v}_2, \bar{b}`. 
 
@@ -1009,21 +1012,19 @@ Sýnidæmi: Línulegar samantektir
         0\\-1\\
         \end{bmatrix}
     
-    Svo vigurinn **y** er línuleg samanteky af :math:`\textbf{v}_1` og :math:`\textbf{v}_2` 
+    Svo vigurinn :math:`\ve y` er línuleg samanteky af :math:`\textbf{v}_1` og :math:`\textbf{v}_2` 
     með vogstuðlana 3 og 1.
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    **1.** Vigur **v** er línuleg samantekt af sjálfum sér því við getum skrifað :math:`\textbf{v}=1 \cdot \textbf{v}`.
+    **1.**  Vigur :math:`\ve v` er línuleg samantekt af sjálfum sér því við getum skrifað :math:`\textbf{v}=1 \cdot \textbf{v}`.
 
-    **2.** Núllvigurinn er línuleg samantekt af hvaða vigrum sem er því við 
-           getum skrifað 
+    **2.**  Núllvigurinn er línuleg samantekt af hvaða vigrum sem er því við getum skrifað 
 
     .. math:: \textbf{0}=0 \cdot \textbf{v}_1+0 \cdot \textbf{v}_2+\dots+0 \cdot \textbf{v}_p
 
-    **3.** Ef **m** er meðaltal vigranna :math:`\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p` þá er **m**
-           línuleg samantekt af :math:`\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p` því
+    **3.**  Ef :math:`\ve m` er meðaltal vigranna :math:`\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p` þá er :math:`\ve m` línuleg samantekt af :math:`\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p` því
 
     .. math:: \textbf{m}=\frac{1}{p} \textbf{v}_1 +\frac{1}{p} \textbf{v}_2 + \dots + \frac{1}{p} \textbf{v}_p
 
@@ -1211,15 +1212,15 @@ Skilgreining: Línuleg spönn
 Línuleg spönn í :math:`\mathbb{R}^2`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SETJA INN MYND !!!!
+.. figure:: myndir/linuleg.sponn.png
 
 Myndin sýnir vigrana :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
-Bleika svæðið (allt :math:`\mathbb{R}^2` rúmið) er línuleg spönn þessara vigra.
+Bleika svæðið (allt :math:`mathbb{R}^2` rúmið) er línuleg spönn þessara vigra.
 
-SETJA INN MYND !!!!
+.. figure:: myndir/linuleg.sponn2.png
 
-Á mynd má sjá vigurinn **v**. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni
-sem er framhald vigursins **v**, í báðar áttir.
+Á mynd má sjá vigurinn :math:`\ve v`. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni
+sem er framhald vigursins :math:`\ve v`, í báðar áttir.
 
 Línuleg spönn í :math:`\mathbb{R}^3`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1227,7 +1228,7 @@ Línuleg spönn í :math:`\mathbb{R}^3`
 Látum :math:`\textbf{v}_1` og :math:`\textbf{v}_2` vera tvo vigra í :math:`\mathbb{R}^3`. Í þessu dæmi myndar
 spönn þeirra sléttu sem fer í gegnum upphafspunkt hnitakerfisins.
 
-SETJA INN MYND !!!!
+.. figure:: myndir/linuleg.sponn3.png
 
 Línuleg spönn í :math:`\mathbb{R}^3` getur líka verið: bara núllpunkturinn, 
 lína í gegnum núllpunkt eða allt :math:`\mathbb{R}^3` rúmið.
@@ -1565,8 +1566,7 @@ Setning
 Óhliðruð jöfnuhneppi
 --------------------
 
-Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}`, 
-:math:`A` er :math:`m\times n` fylki, er sagt vera *óhliðrað* (e. homogeneous).
+Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}` er sagt *óhliðrað* (e. homogeneous).
 Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
 
 .. math:: A\left.\begin{bmatrix}
@@ -1702,7 +1702,7 @@ Sýnidæmi: Stikuð framsetning
     Getum því skrifað :math:`\textbf{x} = s\text{u} + t \textbf{v}` með 
     :math:`\textbf{u} =\begin{bmatrix} 2&1&0 \end{bmatrix}^T`  og 
     :math:`\textbf{v}= \begin{bmatrix} 3&0&1 \end{bmatrix}^T` og 
-    :math: `s,t\in \mathbb{R}`.
+    :math: `s,t \in \mathbb{R}`.
     Þetta er dæmi um **stikaða framsetningu** (e. parametric form) á lausn.
 
 
@@ -2116,8 +2116,8 @@ Setning
     svo  :math:`\textbf{v}_1,\textbf{v}_2` eru línulega háðir.
 
 
-Sýnidæmi: Setning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setning
+^^^^^^^^^
 
 .. admonition:: Setning
     :class: setning
@@ -2156,7 +2156,7 @@ Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \m
 Oft er hentugt að segja að vörpunin sé skilgreind sem :math:`\textbf{x} \rightarrow A\textbf{x}`.
 Ef vigur **x** varpast í :math:`T(\textbf{x})` þá segjum við að
 :math:`T(\textbf{x})` sé mynd vigursins :math:`x` með tillit til :math:`T`. 
-Mengi allra slíkra mynda kallast *myndmengi* T. 
+Mengi allra slíkra mynda kallast *myndmengi* T eða mynd T. 
 
 Skilgreining: Línuleg vörpun
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2172,6 +2172,8 @@ Skilgreining: Línuleg vörpun
         
         **2.** :math:`T(c\textbf{u}) = cT(\textbf{u})`.
 
+Setning
+^^^^^^^^
 
 .. admonition:: Setning
     :class: setning
@@ -2254,7 +2256,7 @@ Setning
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T` vera línulega vörpun :math:`\mathbb{R}^\rightarrow\mathbb{R}^m`.
+    Látum :math:`T` vera línulega vörpun :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`.
     Þá er til nákvæmlega eitt :math:`m \times n` fylki :math:`A` þannig að
     :math:`T(\textbf{x})=A\textbf{x}` fyrir öll :math:`\textbf{x} \in \mathbb{R}^n`.
     Jafnframt gildir að :math:`A=\begin{bmatrix} T(\textbf{e}_1) &\dots& T(\textbf{e}_n) \end{bmatrix}`
@@ -2268,13 +2270,13 @@ Dæmi um línulegar varpanir
 Speglanir
 ~~~~~~~~~
 
-Speglun um x-ás 
+Speglun um x-ás: :math:`\begin{bmatrix} 1 & 0 \\ 0 &-1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/speglunx.png
 
-Speglun um y-ás
+Speglun um y-ás: :math:`\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/spegluny.png
 
 Speglun um línuna x=y
 
