@@ -1214,7 +1214,7 @@ Línuleg spönn í :math:`\mathbb{R}^2`
 SETJA INN MYND !!!!
 
 Myndin sýnir vigrana :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
-Bleika svæðið (allt :math:`mathbb{R}^2` rúmið) er línuleg spönn þessara vigra.
+Bleika svæðið (allt :math:`\mathbb{R}^2` rúmið) er línuleg spönn þessara vigra.
 
 SETJA INN MYND !!!!
 
