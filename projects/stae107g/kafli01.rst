@@ -1212,12 +1212,12 @@ Skilgreining: Línuleg spönn
 Línuleg spönn í :math:`\mathbb{R}^2`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: myndir/linuleg.sponn.png
+.. figure:: myndir/linuleg_sponn.svg
 
-Myndin sýnir vigrana :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
-Bleika svæðið (allt :math:`mathbb{R}^2` rúmið) er línuleg spönn þessara vigra.
+Myndin sýnir vigrana :math:`\textbf{v}` og :math:`\textbf{u}`.
+Bleika svæðið, allt :math:`\mathbb{R}^2` rúmið er línuleg spönn þessara vigra.
 
-.. figure:: myndir/linuleg.sponn2.png
+.. figure:: myndir/linuleg_sponn_2.svg
 
 Á mynd má sjá vigurinn :math:`\ve v`. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni
 sem er framhald vigursins :math:`\ve v`, í báðar áttir.
@@ -2272,56 +2272,60 @@ Speglanir
 
 Speglun um x-ás: :math:`\begin{bmatrix} 1 & 0 \\ 0 &-1 \end{bmatrix}`
 
-.. figure:: myndir/speglunx.png
+.. figure:: myndir/speglunx.svg
 
 Speglun um y-ás: :math:`\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}`
 
-.. figure:: myndir/spegluny.png
+.. figure:: myndir/spegluny.svg
 
-Speglun um línuna x=y
+Speglun um línuna x=y :math:`\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/speglun_y=x.svg
 
-Speglun um línuna y=-x
+Speglun um línuna y=-x :math:`\begin{bmatrix} 0 & -1 \\ -1 & 0 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/speglun_y=-x.svg
 
-Speglun um núllpunkturinn
+Speglun um núllpunkturinn :math:`\begin{bmatrix} -1 & 0 \\ 0 &-1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/speglun_0.svg
 
 Stríkkanir
 ~~~~~~~~~~
 
-Lárétt stríkkun
+Lárétt stríkkun :math:`\begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/larett_strikkun.svg
 
-Lóðrétt stríkkun
+.. figure:: myndir/larett_strikkun_2.svg
 
-ATH. MYND
+Lóðrétt stríkkun :math:`\begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix}`
+
+.. figure:: myndir/lodrett_strikkun.svg
+
+.. figure:: myndir/lodrett_strikkun_2.svg
 
 Skekkingar
 ~~~~~~~~~~
 
-Lárétt skekking
+Lárétt skekking :math:`\begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/latrett_skekking.svg
 
-Lóðrétt skekking
+Lóðrétt skekking :math:`\begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/lodrett_skekking.svg
 
 Ofanvörp
 ~~~~~~~~~
 
-Ofanvarp á x-ás
+Ofanvarp á x-ás :math:`\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/ofanvarp_x.svg
 
-Ofanvarp á y-ás
+Ofanvarp á y-ás :math:`\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/ovanvarp_y.svg
 
 
 Eintækar og átækar varpanir
