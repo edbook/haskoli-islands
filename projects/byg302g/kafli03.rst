@@ -27,11 +27,11 @@ kornum, en rými milli korna ekki meðtalið.
 Orðið “density” var áður þýtt sem rúmþyngd, en nú sem þéttleiki (sem er réttara). Gamla
 hugtakið er þó enn til í heitinu kornarúmþyngd.
 
-Holrýmd (porøsitet)
-
 .. panopto:: 5ad66baa-2db4-4802-8bce-b04b00d2f1f9
     :width: 100%
     :height: 400
+
+Holrýmd (porøsitet)
 
 .. math::
   p = p_å = \frac{V_å}{V}
@@ -110,11 +110,23 @@ Fyrir efni sem innihalda skilgreind op eða göt, t.d. hleðslusteina er hægt a
   :align: center
   :width: 100%
 
+Pórótt efni eru sögð gleypin (e. hygroscopic). Rakahegðun gleypinna efna verður tekin ítarlega fyrir í kafla 5.
+
+.. youtube:: oBXgIEIbfIA
+    :width: 100%
+    :height: 400
+
 Pórudreifing og pórufjarlægð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Holrýmd segir til um heildar póruinnihald efnis, en ekkert um stærðardreifingu.
 Pórustærð og stærðardreifing er mjög mismunandi eftir efnum.
+
+Á myndinni er smásjármynd af þversniði úr efni notuð til þess að telja fjölda póra með ákveðna stærð.
+
+.. figure:: ./myndir/kafli03/porustaerdardreifing.png
+  :align: center
+  :width: 100%
 
 .. figure:: ./myndir/kafli03/porudreifing.png
   :align: center
