@@ -78,33 +78,33 @@ Sýnidæmi: Samlagning fylkja
 .. admonition:: Dæmi
   :class: daemi
     
-   Reiknið :math:`A+B` og :math:`A+C` ef 
-
-   .. math:: A=\begin{bmatrix}
-        2 & 4 & 6 \\
-        1 & 3 & 5
-        \end{bmatrix}\text{, } B=\begin{bmatrix}
-        7 & 9 & 11 \\
-        6 & 8 & 10
-        \end{bmatrix} \text{og } C=\begin{bmatrix}
-        13 & 15 \\
-        12 & 14
-        \end{bmatrix}.
+  Reiknið :math:`A+B` og :math:`A+C` ef 
+  
+  .. math:: A=\begin{bmatrix}
+    2 & 4 & 6 \\
+    1 & 3 & 5
+    \end{bmatrix}\text{, } B=\begin{bmatrix}
+    7 & 9 & 11 \\
+    6 & 8 & 10
+    \end{bmatrix} \text{og } C=\begin{bmatrix}
+    13 & 15 \\
+    12 & 14
+    \end{bmatrix}.
         
 .. admonition:: Lausn
   :class: daemi, dropdown
     
-    Höfum að
+  Höfum að
+  
+  .. math:: A+B=\begin{bmatrix}
+    2+7 & 4+9 & 6+11 \\
+    1+6 & 3+8 & 5+10 
+    \end{bmatrix}=\begin{bmatrix}
+    9 & 13 & 17 \\
+    7 & 11 & 15 
+    \end{bmatrix}
 
-    .. math:: A+B=\begin{bmatrix}
-        2+7 & 4+9 & 6+11 \\
-        1+6 & 3+8 & 5+10 
-        \end{bmatrix}=\begin{bmatrix}
-        9 & 13 & 17 \\
-        7 & 11 & 15 
-        \end{bmatrix}
-
-    en :math:`A+C` er ekki skilgreint því fylkin eru misstór.
+  en :math:`A+C` er ekki skilgreint því fylkin eru misstór.
 
 Til að margfalda fylki :math:`A` með rauntölu :math:`c` margföldum við öll stök :math:`A` með :math:`c`. 
 Til dæmis, ef :math:`A` er það sama og áður þá fæst:
@@ -129,30 +129,30 @@ Sýnidæmi: Margföldun með tölu
 .. admonition:: Dæmi
   :class: daemi
     
-    Reiknið :math:`3A` ef 
-
-    .. math:: A=\begin{bmatrix}
-            1 & 2 & 3 \\
-            4 & 5 & 6
-        \end{bmatrix}
+  Reiknið :math:`3A` ef 
+  
+  .. math:: A=\begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+    \end{bmatrix}
         
 .. admonition:: Lausn
   :class: daemi, dropdown
     
-    Höfum að
-
-        .. math:: 3A=  3\cdot\begin{bmatrix}
-            1 & 2 & 3 \\
-            4 & 5 & 6
-            \end{bmatrix}=
-            \begin{bmatrix}
-            3\cdot 1 &3\cdot  2 &3\cdot  3 \\
-            3\cdot 4 &3\cdot  5 &3\cdot  6 \\
-            \end{bmatrix}
-            = \begin{bmatrix}
-            3 &6 &9 \\
-            12 &15 &18 \\
-            \end{bmatrix}
+  Höfum að
+  
+  .. math:: 3A=  3\cdot\begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6
+        \end{bmatrix}=
+        \begin{bmatrix}
+        3\cdot 1 &3\cdot  2 &3\cdot  3 \\
+        3\cdot 4 &3\cdot  5 &3\cdot  6 \\
+        \end{bmatrix}
+        = \begin{bmatrix}
+        3 &6 &9 \\
+        12 &15 &18 \\
+        \end{bmatrix}
 
 
 Reglur um fylkjasamlagningu og margföldun með fasta
@@ -214,50 +214,50 @@ Sýnidæmi: Fylkjamargföldun
 .. admonition:: Dæmi
   :class: daemi
     
-    Reiknið :math:`AB` ef 
-
-    .. math:: A=\begin{bmatrix}
-            1 & 2 & 3 \\
-            4 & 5 & 6
+  Reiknið :math:`AB` ef 
+  
+  .. math:: A=\begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6
         \end{bmatrix} \text{ og } B=\begin{bmatrix}
-            -1 & 0 \\
-            0 & 1 \\
-            1 & -1
+        -1 & 0 \\
+        0 & 1 \\
+        1 & -1
         \end{bmatrix}
         
 .. admonition:: Lausn
   :class: daemi, dropdown
     
-    Höfum að
-
-        .. math:: A\textbf{b}_1=\begin{bmatrix} 
-            1 & 2 & 3 \\
-            4 & 5 & 6
-            \end{bmatrix}\cdot\begin{bmatrix}
-            -1 \\
-            0 \\
-            1
-            \end{bmatrix}=\begin{bmatrix}
-            2 \\
-            2
-            \end{bmatrix} \text{ og } A\textbf{b}_2=\begin{bmatrix} 
-            1 & 2 & 3 \\
-            4 & 5 & 6
-            \end{bmatrix}\cdot\begin{bmatrix}
-            0 \\
-            1 \\
-            -1
-            \end{bmatrix}=\begin{bmatrix}
-            -1 \\
-            -1
-            \end{bmatrix}
+  Höfum að
+  
+  .. math:: A\textbf{b}_1=\begin{bmatrix} 
+        1 & 2 & 3 \\
+        4 & 5 & 6
+        \end{bmatrix}\cdot\begin{bmatrix}
+        -1 \\
+        0 \\
+        1
+        \end{bmatrix}=\begin{bmatrix}
+        2 \\
+        2
+        \end{bmatrix} \text{ og } A\textbf{b}_2=\begin{bmatrix} 
+        1 & 2 & 3 \\
+        4 & 5 & 6
+        \end{bmatrix}\cdot\begin{bmatrix}
+        0 \\
+        1 \\
+        -1
+        \end{bmatrix}=\begin{bmatrix}
+        -1 \\
+        -1
+        \end{bmatrix}
         
-    svo að
-
-        .. math:: AB=[A\textbf{b}_1 \ A\textbf{b}_2]=\begin{bmatrix}
-            2 & -1 \\
-            2 & -1
-            \end{bmatrix}
+  svo að
+  
+  .. math:: AB=[A\textbf{b}_1 \ A\textbf{b}_2]=\begin{bmatrix}
+        2 & -1 \\
+        2 & -1
+        \end{bmatrix}
 
 Skilgreining: Veldi af fylkjum
 --------------------------------
@@ -308,46 +308,46 @@ Sýnidæmi: Fylkjamargföldun
 .. admonition:: Dæmi
   :class: daemi
     
-    Látum 
-
-    .. math:: A=\begin{bmatrix}
-            2 & 3 \\
-            1 & 4 \\
-        \end{bmatrix} \text{ , } B=\begin{bmatrix}
-            5 & 6 \\
-            7 & 8 \\
-        \end{bmatrix} \text{ , } C=\begin{bmatrix}
-            1 & 2 & 3 \\
-            4 & 5 & 6 \\
-            7 & 8 & 9  
-        \end{bmatrix} \text{ og } D= C=\begin{bmatrix}
-            12 & 11 \\
-            10 & 9 \\
-            8 & 7 
-        \end{bmatrix}
+  Látum 
+  
+  .. math:: A=\begin{bmatrix}
+    2 & 3 \\
+    1 & 4 \\
+    \end{bmatrix} \text{ , } B=\begin{bmatrix}
+    5 & 6 \\
+    7 & 8 \\
+    \end{bmatrix} \text{ , } C=\begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 9  
+    \end{bmatrix} \text{ og } D=\begin{bmatrix}
+    12 & 11 \\
+    10 & 9 \\
+    8 & 7 
+    \end{bmatrix}
     
-    Reiknið :math:`AB` og :math:`CD`
+  Reiknið :math:`AB` og :math:`CD`
         
 .. admonition:: Lausn
   :class: daemi, dropdown
     
-        .. math:: AB=\begin{bmatrix}
-                2 \cdot 5 + 3\cdot 7 & 2 \cdot 6 + 3\cdot 8 \\
-                1 \cdot 5 + 4\cdot 7 & 1 \cdot 6 + 4\cdot 8 \\
-            \end{bmatrix}=\begin{bmatrix}
-                31 & 36 \\
-                33 & 38 \\
-            \end{bmatrix}
+    .. math:: AB=\begin{bmatrix}
+        2 \cdot 5 + 3\cdot 7 & 2 \cdot 6 + 3\cdot 8 \\
+        1 \cdot 5 + 4\cdot 7 & 1 \cdot 6 + 4\cdot 8 \\
+        \end{bmatrix}=\begin{bmatrix}
+        31 & 36 \\
+        33 & 38 \\
+        \end{bmatrix}
         
-        .. math:: CD=\begin{bmatrix}
-                1 \cdot 12 + 2\cdot 10 +3\cdot 8 & 1\cdot 11 & 2 \cdot 9 + 3\cdot 7 \\
-                4 \cdot 12 + 5\cdot 10 +6\cdot 8 & 4\cdot 11 & 5 \cdot 9 + 6\cdot 7 \\
-                7 \cdot 12 + 8\cdot 10 +9\cdot 8 & 7\cdot 11 & 8 \cdot 9 + 9\cdot 7 \\
-            \end{bmatrix}=\begin{bmatrix}
-                56 & 50  \\
-                146 & 131 \\
-                236 & 212
-            \end{bmatrix}
+    .. math:: CD=\begin{bmatrix}
+        1 \cdot 12 + 2\cdot 10 +3\cdot 8 & 1\cdot 11 & 2 \cdot 9 + 3\cdot 7 \\
+        4 \cdot 12 + 5\cdot 10 +6\cdot 8 & 4\cdot 11 & 5 \cdot 9 + 6\cdot 7 \\
+        7 \cdot 12 + 8\cdot 10 +9\cdot 8 & 7\cdot 11 & 8 \cdot 9 + 9\cdot 7 \\
+        \end{bmatrix}=\begin{bmatrix}
+        56 & 50  \\
+        146 & 131 \\
+        236 & 212
+        \end{bmatrix}
         
 
 
@@ -395,39 +395,39 @@ Sýnidæmi: Bylt fylki
 .. admonition:: Dæmi
   :class: daemi
     
-    Byltið eftirfarandi fylkjum
-
-    .. math:: A=\begin{bmatrix}
-            2 & -1 \\
-            0 & 3 \\
-        \end{bmatrix} \text{ , } B=\begin{bmatrix}
-            1 & 2 & 3 \\
-            4 & 5 & 6 \\
-        \end{bmatrix} \text{ og } C=\begin{bmatrix}
-            1 & 2 & 3 & 4 \\
-            5 & 6 & 7 & 8 \\
-            9 & 10 & 11 & 12 \\
-            13 & 14 & 15 & 16 \\
-        \end{bmatrix}
+  Byltið eftirfarandi fylkjum
+  
+  .. math:: A=\begin{bmatrix}
+    2 & -1 \\
+    0 & 3 \\
+    \end{bmatrix} \text{ , } B=\begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    \end{bmatrix} \text{ og } C=\begin{bmatrix}
+    1 & 2 & 3 & 4 \\
+    5 & 6 & 7 & 8 \\
+    9 & 10 & 11 & 12 \\
+    13 & 14 & 15 & 16 \\
+    \end{bmatrix}
         
 .. admonition:: Lausn
   :class: daemi, dropdown
     
-    Höfum að
-
-        .. math:: A^T=\begin{bmatrix}
-                2 & 0 \\
-                -1 & 3 \\
-            \end{bmatrix}\text{ , } B^T=\begin{bmatrix}
-                1 & 4 \\
-                2 & 5 \\
-                3 & 6 \\
-            \end{bmatrix}\text{ og } C^T=\begin{bmatrix}
-                1 & 5 & 9 & 13 \\
-                2 & 6 & 10 & 14 \\
-                3 & 7 & 11 & 15 \\
-                4 & 8 & 12 & 16 \\
-            \end{bmatrix}
+  Höfum að
+  
+  .. math:: A^T=\begin{bmatrix}
+    2 & 0 \\
+    -1 & 3 \\
+    \end{bmatrix}\text{ , } B^T=\begin{bmatrix}
+    1 & 4 \\
+    2 & 5 \\
+    3 & 6 \\
+    \end{bmatrix}\text{ og } C^T=\begin{bmatrix}
+    1 & 5 & 9 & 13 \\
+    2 & 6 & 10 & 14 \\
+    3 & 7 & 11 & 15 \\
+    4 & 8 & 12 & 16 \\
+    \end{bmatrix}
 
 Reiknireglur fyrir bylt fylki
 -------------------------------
@@ -448,25 +448,25 @@ Reiknireglur fyrir bylt fylki
 Sýnidæmi: Hegðun byltra fylkja
 -------------------------------
 
-.. admonition:: Dæmi
+.. admonition:: Dæmi 
   :class: daemi
     
-    Reiknið :math:`\textbf{v}^T\textbf{v}` og :math:`\textbf{v}\textbf{v}^T` ef :math:`\textbf{v}=\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}`.
+  Reiknið :math:`\textbf{v}^T\textbf{v}` og :math:`\textbf{v}\textbf{v}^T` ef :math:`\textbf{v}=\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}`.
 
 .. admonition:: Lausn
-    :class: daemi, dropdown
+  :class: daemi, dropdown
     
-    Höfum að
+  Höfum að
+  
+  .. math:: \textbf{v}^T\textbf{v} = \begin{bmatrix} 1 & 2 & 3\end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} = 1^2+2^2+3^3 = 14
 
-    .. math:: \textbf{v}^T\textbf{v} = \begin{bmatrix} 1 & 2 & 3\end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} = 1^2+2^2+3^3 = 14
-
-    en hinsvegar er
-
-    .. math:: \textbf{v}\textbf{v}^T = \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} \begin{bmatrix} 1 & 2 & 3\end{bmatrix} = 
-        \begin{bmatrix}
-            1 & 2 & 3 \\
-            2 & 4 & 6 \\
-            3 & 6 & 9 \end{bmatrix}
+  en hinsvegar er
+  
+  .. math:: \textbf{v}\textbf{v}^T = \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} \begin{bmatrix} 1 & 2 & 3\end{bmatrix} = 
+    \begin{bmatrix}
+    1 & 2 & 3 \\
+    2 & 4 & 6 \\
+    3 & 6 & 9 \end{bmatrix}
 
                     
 Andhverfa fylkja
@@ -507,78 +507,78 @@ Sýnidæmi: Eru fylkin andhverfanleg?
 .. admonition:: Dæmi
   :class: daemi
     
-    Eru eftirfarandi fylki andhverfanleg?
-
-    .. math::  \begin{bmatrix}
-            0 & 0 \\
-            0 & 0 \\
-        \end{bmatrix} \text{ , } \begin{bmatrix}
-            1 & 0 \\
-            0 & 0 \\
-        \end{bmatrix} \text{ , } \begin{bmatrix}
-            1 & 0 \\
-            0 & 2 \\
-        \end{bmatrix}
+  Eru eftirfarandi fylki andhverfanleg?
+  
+  .. math::  \begin{bmatrix}
+    0 & 0 \\
+    0 & 0 \\
+    \end{bmatrix} \text{ , } \begin{bmatrix}
+    1 & 0 \\
+    0 & 0 \\
+    \end{bmatrix} \text{ , } \begin{bmatrix}
+    1 & 0 \\
+    0 & 2 \\
+    \end{bmatrix}
 
 .. admonition:: Lausn
-    :class: daemi, dropdown
+  :class: daemi, dropdown
     
-    Til að leita að andhverfum skulum við margfalda þessi fylki með almennu :math:`2\times 2` fylki og athuga
-    hvað þarf að gilda til að það sé andhverfa.
-
-    Höfum að
-
-    .. math:: \begin{bmatrix}
-            0 & 0 \\
-            0 & 0 \\
-        \end{bmatrix} \begin{bmatrix}
-            a & b \\
-            c & d \\
-        \end{bmatrix} = \begin{bmatrix}
-            0 & 0 \\
-            0 & 0 \\
-        \end{bmatrix} \neq I
+  Til að leita að andhverfum skulum við margfalda þessi fylki með almennu :math:`2\times 2` fylki og athuga
+  hvað þarf að gilda til að það sé andhverfa.
+  
+  Höfum að
+  
+  .. math:: \begin{bmatrix}
+    0 & 0 \\
+    0 & 0 \\
+    \end{bmatrix} \begin{bmatrix}
+    a & b \\
+    c & d \\
+    \end{bmatrix} = \begin{bmatrix}
+    0 & 0 \\
+    0 & 0 \\
+    \end{bmatrix} \neq I
 
     svo að núllfylkið getur ekki verið andhverfanlegt.
 
     .. math:: \begin{bmatrix}
-            1 & 0 \\
-            0 & 0 \\
-        \end{bmatrix} \begin{bmatrix}
-            a & b \\
-            c & d \\
-        \end{bmatrix} = \begin{bmatrix}
-            a & b \\
-            0 & 0 \\
-        \end{bmatrix} \neq I 
+    1 & 0 \\
+    0 & 0 \\
+    \end{bmatrix} \begin{bmatrix}
+    a & b \\
+    c & d \\
+    \end{bmatrix} = \begin{bmatrix}
+    a & b \\
+    0 & 0 \\
+    \end{bmatrix} \neq I 
 
-    svo þetta fylki getur heldur ekki verið andhverfanlegt. Loks höfum við að
+  svo þetta fylki getur heldur ekki verið andhverfanlegt. Loks höfum við að
+  
+  .. math:: \begin{bmatrix}
+    1 & 0 \\
+    0 & 2 \\
+    \end{bmatrix} \begin{bmatrix}
+    a & b \\
+    c & d \\
+    \end{bmatrix} = \begin{bmatrix}
+    a & b \\
+    2c & 2d \\
+    \end{bmatrix}
 
-    .. math:: \begin{bmatrix}
-            1 & 0 \\
-            0 & 2 \\
-        \end{bmatrix} \begin{bmatrix}
-            a & b \\
-            c & d \\
-        \end{bmatrix} = \begin{bmatrix}
-            a & b \\
-            2c & 2d \\
-        \end{bmatrix}
-
-    svo ef við veljum :math:`a=1, b=c=0` og :math:`d=\frac{1}{2}` fáum við einingarfylkið út úr margfölduninni. 
-    Því er fylkið
-
-    .. math:: \begin{bmatrix}
-            1 & 0 \\
-            0 & 2 \\
-        \end{bmatrix}
+  svo ef við veljum :math:`a=1, b=c=0` og :math:`d=\frac{1}{2}` fáum við einingarfylkið út úr margfölduninni. 
+  Því er fylkið
+  
+  .. math:: \begin{bmatrix}
+    1 & 0 \\
+    0 & 2 \\
+    \end{bmatrix}
     
-    andhverfanlegt og hefur andhverfu
-
-    .. math:: \begin{bmatrix}
-            1 & 0 \\
-            0 & \frac{1}{2} \\
-        \end{bmatrix}
+  andhverfanlegt og hefur andhverfu
+  
+  .. math:: \begin{bmatrix}
+    1 & 0 \\
+    0 & \frac{1}{2} \\
+    \end{bmatrix}
 
 
 Andhverfa :math:`2\times 2` fylkja
@@ -602,24 +602,24 @@ Sýnidæmi: Andhverfur út frá formúlu
 .. admonition:: Dæmi
   :class: daemi
     
-    Finnið andhverfu eftirfarandi fylkja ef til eru
-
-    .. math:: A=\begin{bmatrix}
-            -3 & 7 \\
-            2 & 5 \\
-        \end{bmatrix} \text{ , } B=\begin{bmatrix}
-            -2 & 3 \\
-            4 & -6 \\
-        \end{bmatrix} 
+  Finnið andhverfu eftirfarandi fylkja ef til eru
+  
+  .. math:: A=\begin{bmatrix}
+    -3 & 7 \\
+    2 & 5 \\
+    \end{bmatrix} \text{ , } B=\begin{bmatrix}
+    -2 & 3 \\
+    4 & -6 \\
+    \end{bmatrix} 
 
 .. admonition:: Lausn
-    :class: daemi, dropdown
+  :class: daemi, dropdown
     
-    Formúlan gefur okkur að :math:`\det(A)=-3\cdot5-2\cdot7=-15-14=-29` svo að :math:`A` á sér andhverfu og hún er
+  Formúlan gefur okkur að :math:`\det(A)=-3\cdot5-2\cdot7=-15-14=-29` svo að :math:`A` á sér andhverfu og hún er
+  
+  .. math:: -\frac{1}{29}\begin{bmatrix} 5 & -7 \\ -2 & -3 \end{bmatrix}
 
-    .. math:: -\frac{1}{29}\begin{bmatrix} 5 & -7 \\ -2 & -3 \end{bmatrix}
-
-    Svo höfum við að :math:`\det(B)=-2\cdot (-6)-4\cdot3=0` svo fylkið :math:`B` er óandhverfanlegt.
+  Svo höfum við að :math:`\det(B)=-2\cdot (-6)-4\cdot3=0` svo fylkið :math:`B` er óandhverfanlegt.
 
 Lausnir fylkjajafna
 --------------------
@@ -638,34 +638,34 @@ Sýnidæmi: Fylkjajafna leyst með andhverfu
 .. admonition:: Dæmi
   :class: daemi
     
-    Leysið jöfnuna
-
-    .. math:: \begin{bmatrix}
-            -3 & 7 \\
-            2 & 5 \\
-        \end{bmatrix} \begin{bmatrix}
-            x_1\\
-            x_2
-        \end{bmatrix} = \begin{bmatrix} 
-            10 \\
-            20
-        \end{bmatrix}
+  Leysið jöfnuna
+  
+  .. math:: \begin{bmatrix}
+    -3 & 7 \\
+    2 & 5 \\
+    \end{bmatrix} \begin{bmatrix}
+    x_1\\
+    x_2
+    \end{bmatrix} = \begin{bmatrix} 
+    10 \\
+    20
+    \end{bmatrix}
 
 .. admonition:: Lausn
-    :class: daemi, dropdown
+  :class: daemi, dropdown
     
-    Við reiknuðum út andhverfuna í sýnidæmi (TODO SETJA INN HYPERLINK). Fáum því að
-
-    .. math:: \textbf{x}=-\frac{1}{29}\begin{bmatrix} 
-        5 & -7 \\ 
-        -2 & -3 
-        \end{bmatrix}\begin{bmatrix}
-        10 \\
-        20 
-        \end{bmatrix} = -\frac{1}{29}\begin{bmatrix} 
-        50-140 \\
-        -20-60 
-        \end{bmatrix} = \frac{1}{29}\begin{bmatrix} 90 \\ 80 \end{bmatrix}
+  Við reiknuðum út andhverfuna í sýnidæmi (TODO SETJA INN HYPERLINK). Fáum því að
+  
+  .. math:: \textbf{x}=-\frac{1}{29}\begin{bmatrix} 
+    5 & -7 \\ 
+    -2 & -3 
+    \end{bmatrix}\begin{bmatrix}
+    10 \\
+    20 
+    \end{bmatrix} = -\frac{1}{29}\begin{bmatrix} 
+    50-140 \\
+    -20-60 
+    \end{bmatrix} = \frac{1}{29}\begin{bmatrix} 90 \\ 80 \end{bmatrix}
 
     **Athugasemd:** Setningin á undan er oftast ekki notuð beint þegar reikna á stórar fylkjajöfnur af 
     gerð :math:`A\textbf{x}=\textbf{b}`. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa 
@@ -714,58 +714,58 @@ Sýnidæmi: Andhverfa :math:`3\times3` fylkis
 .. admonition:: Dæmi
   :class: daemi
     
-    Reiknið andhverfu fylkisins
-
-    .. math:: A=\begin{bmatrix}
-            1 & 2 & 3\\
-    	    0 & 1 & 4 \\
-            5 & 6 & 0 
-        \end{bmatrix} 
+  Reiknið andhverfu fylkisins
+  
+  .. math:: A=\begin{bmatrix}
+    1 & 2 & 3\\
+    0 & 1 & 4 \\
+    5 & 6 & 0 
+    \end{bmatrix} 
 
 .. admonition:: Lausn
-    :class: daemi, dropdown
+  :class: daemi, dropdown
     
-    Búum til aukna fylkið og einföldum:
+  Búum til aukna fylkið og einföldum:
+  
+  .. math:: \begin{align*}
+    \begin{bmatrix}
+    1 & 2 & 3 & 1 & 0 & 0 \\
+    0 & 1 & 4 & 0 & 1 & 0 \\
+    5 & 6 & 0 & 0 & 0 & 1
+    \end{bmatrix}
+    &\sim
+    \begin{bmatrix}
+    1 & 2 & 3 & 1 & 0 & 0 \\
+    0 & 1 & 4 & 0 & 1 & 0 \\
+    0 &-4 &-15&-5 & 0 & 1
+    \end{bmatrix} 
+    \\&\sim
+    \begin{bmatrix}
+    1 & 2 & 3 & 1 & 0 & 0 \\
+    0 & 1 & 4 & 0 & 1 & 0 \\
+    0 & 0 & 1 &-5 & 4 & 1
+    \end{bmatrix}
+    \\&\sim
+    \begin{bmatrix}
+    1 & 0 &-5 & 1 &-2 & 0 \\
+    0 & 1 & 4 & 0 & 1 & 0 \\
+    0 & 0 & 1 &-5 & 4 & 1
+    \end{bmatrix}
+    \\&\sim
+    \begin{bmatrix}
+    1 & 0 & 0 & -24 &18 & 5 \\ 
+    0 & 1 & 0 & 20 & -15 & -4 \\
+    0 & 0 & 1 &-5 & 4 & 1
+    \end{bmatrix}
+    \end{align*} 
 
-    .. math:: \begin{align*}
-        \begin{bmatrix}
-        1 & 2 & 3 & 1 & 0 & 0 \\
-        0 & 1 & 4 & 0 & 1 & 0 \\
-        5 & 6 & 0 & 0 & 0 & 1
-        \end{bmatrix}
-        &\sim
-        \begin{bmatrix}
-        1 & 2 & 3 & 1 & 0 & 0 \\
-        0 & 1 & 4 & 0 & 1 & 0 \\
-        0 &-4 &-15&-5 & 0 & 1
-        \end{bmatrix} 
-        \\&\sim
-        \begin{bmatrix}
-        1 & 2 & 3 & 1 & 0 & 0 \\
-        0 & 1 & 4 & 0 & 1 & 0 \\
-        0 & 0 & 1 &-5 & 4 & 1
-        \end{bmatrix}
-        \\&\sim
-        \begin{bmatrix}
-        1 & 0 &-5 & 1 &-2 & 0 \\
-        0 & 1 & 4 & 0 & 1 & 0 \\
-        0 & 0 & 1 &-5 & 4 & 1
-        \end{bmatrix}
-        \\&\sim
-        \begin{bmatrix}
-        1 & 0 & 0 & -24 &18 & 5 \\ 
-        0 & 1 & 0 & 20 & -15 & -4 \\
-        0 & 0 & 1 &-5 & 4 & 1
-        \end{bmatrix}
-        \end{align*} 
-
-    svo
-
-    .. math:: A^{-1} = \begin{bmatrix}
-        -24 &18 & 5 \\
-          20 & -15 & -4 \\
-         -5 & 4 & 1
-        \end{bmatrix}
+  svo
+  
+  .. math:: A^{-1} = \begin{bmatrix}
+    -24 &18 & 5 \\
+    20 & -15 & -4 \\
+    -5 & 4 & 1
+    \end{bmatrix}
 
 
 Eintækni og átækni
@@ -905,23 +905,23 @@ Sýnidæmi: LU þáttun
 .. admonition:: Dæmi
   :class: daemi
     
-    LU-þáttið eftirfarandi fylki
-
-    .. math:: A=\begin{bmatrix}
-            2 & 1 & 3\\
-    	    4 & 2 & 8 
-        \end{bmatrix}, B=\begin{bmatrix}
-            3 & 1 & -2\\
-    	    -6 & 0 & 7 \\
-            9 & 5 & 1 
-        \end{bmatrix} 
+  LU-þáttið eftirfarandi fylki
+  
+  .. math:: A=\begin{bmatrix}
+    2 & 1 & 3\\
+    4 & 2 & 8 
+    \end{bmatrix}, B=\begin{bmatrix}
+    3 & 1 & -2\\
+    -6 & 0 & 7 \\
+    9 & 5 & 1 
+    \end{bmatrix} 
 
 .. admonition:: Lausn
-    :class: daemi, dropdown
-
-    Skoðum :math:`A`. Framkvæmum Gauss eyðingu til að koma :math:`A` á efri stallagerð
-
-    .. math:: \begin{bmatrix}
+  :class: daemi, dropdown
+  
+  Skoðum :math:`A`. Framkvæmum Gauss eyðingu til að koma :math:`A` á efri stallagerð
+  
+  .. math:: \begin{bmatrix}
         2 & 1 & 3\\
     	4 & 2 & 8 
         \end{bmatrix} \overset{R2-2R1}{\longrightarrow} 
@@ -930,16 +930,16 @@ Sýnidæmi: LU þáttun
         0 & 0 & 2
         \end{bmatrix}
     
-    Búum til :math:`L` fylki með því að skoða hvaða línuaðgerðum var beitt. (Ath. við snúum þeim við í :math:`L` fylkinu)
-
-    .. math:: L=\begin{bmatrix} 
+  Búum til :math:`L` fylki með því að skoða hvaða línuaðgerðum var beitt. (Ath. við snúum þeim við í :math:`L` fylkinu)
+  
+  .. math:: L=\begin{bmatrix} 
         1 & 0 \\
         2 & 1 \\
         \end{bmatrix}
 
-    Fáum 
-
-    .. math:: A=LU=\begin{bmatrix}
+  Fáum 
+  
+  .. math:: A=LU=\begin{bmatrix}
         1 & 0 \\
         2 & 1 
         \end{bmatrix}
@@ -948,9 +948,9 @@ Sýnidæmi: LU þáttun
         0 & 0 & 2
         \end{bmatrix} 
     
-    Skoðum :math:`B`. Framkvæmum Gauss-eyðingu til að breyta :math:`B` í efri stallagerð.
-
-    .. math:: \begin{bmatrix}
+  Skoðum :math:`B`. Framkvæmum Gauss-eyðingu til að breyta :math:`B` í efri stallagerð.
+  
+  .. math:: \begin{bmatrix}
         3 & 1 & -2 \\
         -6 & 0 & 7 \\
         9 & 5 & 1
@@ -972,7 +972,7 @@ Sýnidæmi: LU þáttun
         0 & 0 & 4
         \end{bmatrix}  
     
-    Finnum :math:`L` fylkið út frá aðgerðunum sem notaðar voru.
+  Finnum :math:`L` fylkið út frá aðgerðunum sem notaðar voru.
 
     .. math:: \begin{bmatrix}
         &\\\\
@@ -994,7 +994,7 @@ Sýnidæmi: LU þáttun
         3 & 1 & 1 \\
         \end{bmatrix}
     
-    LU-þáttun á :math:`B` er gefin með
+  LU-þáttun á :math:`B` er gefin með
 
     .. math:: B=LU=\begin{bmatrix}
         1 & 0 & 0 \\
