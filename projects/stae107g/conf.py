@@ -12,6 +12,6 @@ mathjax_config = {
             "col": '{\\text{Col}}',
             "ker": '{\\text{Ker}}',
             "range": '{\\text{Range}}',
-            }                       
+            }
         }                           
     }                               

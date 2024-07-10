@@ -34,7 +34,7 @@ Skilgreining: Línulegt jöfnuhneppi
     :class: skilgreining
 
     **Línulegt jöfnuhneppi** (e. system of linear equations, linear system)
-    er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á formin
+    er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á forminu
 
     .. math:: \begin{align}
         a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
@@ -112,7 +112,7 @@ Sýnidæmi: Jöfnuhneppi sem hefur eina lausn
   
   Þar sem jöfnuhneppið hefur lausn segjum við að jöfnuhneppið sé **samkvæmt** (e. consistent). 
   Þar sem jöfnuhneppið hefur aðeins eina lausn segjum við að lausnin sé 
-  **ótvírætt ákvörðuð** (e. unique). **Stuðlar** (e. coefficients) jöfnuhneppisins eru: 
+  **ótvírætt ákvörðuð** (e. unique). **Stuðlar** (e. coefficients) jöfnuhneppisins, á **fylkjaformi**, eru: 
 
     .. math:: \begin{bmatrix}
         1 & 2  \\
@@ -241,59 +241,58 @@ Sýnidæmi: Línuaðgerðir
   
    Skrifum þetta á fylkjaformi.
    
-  .. math:: \begin{aligned}\begin{bmatrix}
+  .. math:: \begin{alignat*}{2}
+    \begin{bmatrix}
     1 & -3 & 4 & -4\\
     3 & -7 & 7 & -8\\
     -4 & 6 & 2 & 4
-    \end{bmatrix} 
-    \stackrel{\begin{matrix}R_2-3R_1\\R_3+4R_1\end{matrix}}
-    {\sim}
-    \begin{bmatrix}
+    \end{bmatrix} \quad
+    &\overset{\substack{R_2-3R_1\\R_3+4R_1}}{\sim}
+    &\quad&\begin{bmatrix}
     1 & -3 & 4 &-4\\
     0 & 2 & -5 & 4 \\
     0 & -6 & 18 & -12
-    \end{bmatrix}
-    \stackrel{\displaystyle\frac{R_3}{-6}}{\sim}
-    \newline
-    \begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{-\frac{1}{6}R_3}}{\sim}
+    &&\begin{bmatrix}
     1 & -3 & 4 &-4\\
     0 & 2 & -5 & 4 \\
     0 & 1 & -3 & 2
-    \end{bmatrix}  
-    \stackrel{\displaystyle R_2\leftrightarrow R_3}{\sim}
-    \begin{bmatrix}
+    \end{bmatrix}  \\
+    &\overset{\substack{
+        R_2\leftrightarrow R_3}}{\sim}
+    &&\begin{bmatrix}
     1 & -3 & 4 &-4\\
     0 & 1 & -3 & 2 \\
     0 & 2 & -5 & 4
-    \end{bmatrix}
-    \stackrel{\begin{matrix}
-    R_1+3R_2\\ R_3-2R_2
-    \end{matrix}}{\sim}
-    \newline
-    \begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{R_1+3R_2\\ R_3-2R_2
+    }}
+    {\sim}
+    &&\begin{bmatrix}
     1 & 0 & -5 & 2\\
     0 & 1 & -3 & 2 \\
     0 & 0 & 1 & 0
-    \end{bmatrix}
-    \stackrel{\begin{matrix}
-    R_1+5R_3\\ R_2+3R_3
-    \end{matrix}}{\sim}
-    \begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{
+    R_1+5R_3\\ R_2+3R_3}}{\sim}
+    &&\begin{bmatrix}
     1 & 0 & 0 & 2\\
     0 & 1 & 0 & 2 \\
     0 & 0 & 1 & 0
     \end{bmatrix}
-    \end{aligned}
+    \end{alignat*}
+
 
   Svo við fáum
 
-  .. math:: \begin{aligned}
-    x_1&&&=2\\
-    &x_2&&=2\\
-    &&x_3&=0
-    \end{aligned}
+  .. math:: \begin{align*}
+    x_1\phantom{+x_2+x_3} &= 2 \\
+    \phantom{x_1+} x_2 \phantom{+x_3} &= 2 \\
+    \phantom{x_1+x_2+} x_3 &= 0
+    \end{align*}
   
-  og línulega jöfnuhneppið hefur því eina lausn :math:`(x_1,x_2,x_3)=(2,2,0)`. 
+  og línulega jöfnuhneppið hefur eina lausn; :math:`(x_1,x_2,x_3)=(2,2,0)`. 
 
 
 Stærð fylkis
@@ -302,9 +301,9 @@ Stærð fylkis
 Látum 
 
 .. math:: \begin{bmatrix}
-    a_{11} &\dots &a_{1n}\\
-    \vdots&&\vdots\\
-    a_{m1}&\dots &a_{mn}\\  
+    a_{11} &\dots  &a_{1n}\\
+    \vdots &&\vdots\\
+    a_{m1} &\dots  &a_{mn}\\  
     \end{bmatrix}
 
 vera fylki með :math:`m` jöfnum og :math:`n` óþekktum breytum. Við segjum að :math:`A` sé :math:`{m\times n}` fylki.
@@ -318,11 +317,11 @@ Skilgreining: Stuðlafylki og aukið fylki
 
         Látum 
 
-        .. math:: \begin{align*}
-            a_{11}x_{1}+\dots+a_{1n}x_n=b_1\\
-            \vdots&&\vdots\\
-            a_{m1}x_{1}+\dots+a_{mn}x_n=b_m\\    
-            \end{align*}
+        .. math:: \begin{alignat*}{2}
+            a_{11}x_{1}+&\dots+a_{1n}x_n &= b_1\\
+            &\hspace{6.143162275pt}\vdots & \\
+            a_{m1}x_{1}+&\dots+a_{mn}x_n &= b_m\\    
+            \end{alignat*}
         
         vera línulegt jöfnuhneppi. Við köllum fylkin
 
@@ -391,31 +390,26 @@ Sýnidæmi: Efri stallagerð
   
   Breytum eftirfarandi :math:`{3\times 4}` fylki í fylki af efri stallagerð:
 
-  .. math:: \begin{eqnarray*}
+  .. math:: \begin{alignat*}{2}
     \begin{bmatrix}
     1 & 2 & 3 & 4 \\
     5 & 6 & 7 & 8 \\
     9 & 10 & 11 & 12
     \end{bmatrix} 
-    &\sim 
-    &\begin{bmatrix}
+    &\overset{\substack{R_2 - 5R_1 \\
+    R_3 - 9R_1}}{\sim} 
+    &&\begin{bmatrix}
     1 & 2 & 3 & 4 \\
     0 & -4 & -8 & -12 \\
     0 & -8 & -16 & -24
-    \end{bmatrix}
-    \begin{matrix}\\
-    R_2 - 5R_1 \\
-    R_3 - 9R_1
-    \end{matrix}\\  &\sim
-    &\begin{bmatrix}
+    \end{bmatrix}\\  
+    &\overset{\substack{R_3 - 2R_2}}{\sim}
+    &&\begin{bmatrix}
     1 & 2 & 3 & 4 \\
     0 & -4 & -8 & -12 \\
     0 & 0 & 0 & 0
-    \end{bmatrix}\begin{matrix}
-    \\
-    \\R_3 - 2R_2
-    \end{matrix}
-    \end{eqnarray*}
+    \end{bmatrix}
+    \end{alignat*}
 
   Er þetta fylki af neðri stallagerð?
 
@@ -464,43 +458,31 @@ Reiknirit fyrir Gauss-eyðingu
 
   Beitum Gauss-eyðingu til að umbreyta fylkinu í fylki af efri stallagerð.
 
-  .. math:: \begin{eqnarray*}
+  .. math:: \begin{alignat*}{2}
     \begin{bmatrix}
     0 & 4 & 1 \\
     -1 & 3 & 2 \\
     5 & 6 & -3
     \end{bmatrix}
-    &\sim 
-    &\begin{bmatrix}
+    &\overset{\substack{R_1 \leftrightarrow R_2}}{\sim} 
+    &&\begin{bmatrix}
     -1 & 3 & 2 \\
     0 & 4 & 1 \\
     5 & 6 & -3
-    \end{bmatrix}
-    \begin{matrix}
-    \\
-    R_1 \leftrightarrow R_2 \\ 
-    \end{matrix}\\
-    &\sim 
-    &\begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{R_3 + 5R_1}}{\sim} 
+    &&\begin{bmatrix}
     -1 & 3 & 2 \\
     0 & 4 & 1 \\
     0 & 21 & 7
-    \end{bmatrix}\begin{matrix}
-    \\
-    \\
-    R_3 + 5R_1
-    \end{matrix}\\
-    &\sim  
-    &\begin{bmatrix}
+    \end{bmatrix}\\
+    &\overset{\substack{-R_3-\frac{21}{4}R_2}}{\sim}
+    &&\begin{bmatrix}
     -1 & 3 & 2 \\
     0 & 4 & 1 \\
     0 & 0 & \frac{7}{4}
-    \end{bmatrix}\begin{matrix}
-    \\
-    \\
-    -R_3-\frac{21}{4}R_2
-    \end{matrix}
-    \end{eqnarray*}
+    \end{bmatrix}
+    \end{alignat*}
 
 
 Skilgreining: Rudd efri stallagerð
@@ -672,7 +654,7 @@ Sýnidæmi: Frjálsar og háðar breytur
     9x_1+10x_2+11x_3=12
     \end{align*} 
   
-  Skv. Sýnidæmi að ofan má umbreyta aukna fylki þess í
+  Skv. sýnidæmi að ofan má umbreyta aukna fylki þess í
  
   .. math:: \begin{bmatrix}
     1 & 0 & -1 & -2 \\
@@ -694,7 +676,7 @@ Sýnidæmi: Frjálsar og háðar breytur
     x_2&+2x_3=3
     \end{align*}
 
-  jafngildir
+  sem er jafngilt
 
   .. math:: \begin{align*}
     x_1&=x_3-2\\
@@ -1867,14 +1849,14 @@ Sýnidæmi: Lausnir prófaðar
     Prófum lausnina
 
     .. math:: \begin{align*}
-        A\textbf{x} =&
+        A\textbf{x} &=
         A\left(t\begin{bmatrix}
         1\\-2\\1
         \end{bmatrix}+
         \begin{bmatrix}
         \frac{2}{3}\\-\frac{1}{3}\\0
-        \end{bmatrix} \right)
-        =
+        \end{bmatrix} \right) \\
+        &=
         tA
         \begin{bmatrix}
         1\\-2\\1
@@ -1899,7 +1881,7 @@ Sýnidæmi: Lausnir prófaðar
         \end{bmatrix}
         \begin{bmatrix}
         \frac{2}{3}\\-\frac{1}{3}\\0
-        \end{bmatrix}\\=&
+        \end{bmatrix}\\&=
         t     \begin{bmatrix}
         0\\0\\0
         \end{bmatrix}+
@@ -2339,7 +2321,7 @@ Skilgreining: Átæk vörpun
 
     Vörpun :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð 
     **átæk** (e. onto) ef öll :math:`\textbf{b} \in \mathbb{R}^m` 
-    liggji í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
+    liggja í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
 
 Skilgreining: Eintæk vörpun
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

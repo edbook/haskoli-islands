@@ -335,7 +335,7 @@ Grunnar og hnit
 ---------------
 
 Skilgreining: Grunnur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Skilgreining
     :class: skilgreining
