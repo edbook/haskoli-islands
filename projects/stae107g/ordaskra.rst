@@ -5,139 +5,134 @@ Orðaskrá
 
 
 Íslenska - enska 
-----------------
+---------------
 
-Línuleg jafna = linear quation
+Aðoka fylki = adj matrix
 
-Stuðlar = coefficients
+Andhverfa = inverse
 
-Línulegt jöfuhnepppi = system of linear equations / linear system
+Andhverfanlegt = invertible
 
-ósamkvæmt = inconsistent
+Aukið fylki = augmented matrix
 
-samkvæmy = consistent
-
-lausnmengi = solution set
-
-jafngild = equivilalent
-
-einfaldar línuaðgerðir = elementary row operations
-
-umskipting = replacement
-
-víxlun = interchange
-
-skölun = scaling
-
-línu jafngild = row equivalent
-
-stuðlafylki = coeffcient matrix
-
-fylki = matrix
-
-aukið fylki = augmented matrix
-
-línur = rows
-
-dálkar = columns
-
-núllína = zero row
-
-Forustustuðull = leading coeffcient
-
-efri stallagerð = echelon form
-
-Gauss-eyðing = Gauss-reduction
-
-redd efri stallagerð = reduced echelon form
-
-vendidálkur = ?????
-
-vendistak = ????????
-
-frjáls breyta = free variable
-
-háðar breytur = basic variable
-
-vigur = vector 
-
-spönn = span
-
-Fylkjajafnan = matrix equation
-
-augljósa lasunin = trivial solution
-
-óaugljósa lausnin = nontrivial solution
-
-hliðrað = non-homogeneus
-
-vörpun = map, mapping, transformation
-
-fromengi = ???
-
-bakmengi = ????
-
-myndmengi = ????
-
-venjulega fylkið = standard matrix
-
-speglun = ???
-
-stríkkun = ???
-
-skekking = ???
-
-ofanvarp = ???
-
-átækt = onto ??
-
-eintækt = one-to-one ??
-
-gagntækt = bijective
-
-Hornalínufylki = diagonal matrix
-
-einingarfylki = identity matrix
-
-núllfylki = zero matrix
-
-Frumfylki = elementary matrix
-
-þríhyrningsfylki = ???
-
-Bylt fylki = transpose
-
-andhverfanlegt = invertible
-
-andhverfa = inverse
-
-óandhverfanlegt = singular
-
-ákveða = determinant
-
-LU-þáttun = LU factorization
-
-hlutfylki = ????
-
-hjáþáttafylki = cofactor matrix
-
-aðoka fylki = adj matrix
-
-Samsíðungur = paralellogram
-
-Samhliðungur = parallelepiped
-
-Eigingildi = eigenvalue
-
-Eiginvigur = eigenvector
-
-eiginrúm = eigenspace
-
-kennijafna = characteristic equation
+Ákveða = determinant
 
 Ámóta = similar
 
-jafngildisvensl = equivalence
+Átækt = onto
 
-Hornalínugeranlegt = diagnoalizable
+Bakmengi = codomain
 
+Bylt fylki = transpose
+
+Dálkar = columns
+
+Efri stallagerð = echelon form
+
+Eigingildi = eigenvalue
+
+Eigingildisvensl = equivalence
+
+Eiginrúm = eigenspace
+
+Eiginvigur = eigenvector
+
+Einfaldar línuaðgerðir = elementary row operations
+
+Einingarfylki = identity matrix
+
+Formengi = domain
+
+Frjáls breyta = free variable
+
+Fylki = matrix
+
+Fylkjajafnan = matrix equation
+
+Frumfylki = elementary matrix
+
+Gagntækt = bijective
+
+Gauss-eyðing = Gauss-reduction
+
+Háðar breytur = basic variable
+
+Hlutfylki = partial matrix
+
+Hjáþáttafylki = cofactor matrix
+
+Hliðrað = non-homogeneus
+
+Hornalínufylki = diagonal matrix
+
+Hornalínugeranlegt = diagonalizable
+
+Jafngild = equivalent
+
+Jafngildisvensl = equivalence
+
+Kennijafna = characteristic equation
+
+Lausnmengi = solution set
+
+Línuleg jafna = linear equation
+
+Línu jafngild = row equivalent
+
+Línulegt jöfuhneppi = system of linear equations / linear system
+
+Línur = rows
+
+LU-þáttun = LU factorization
+
+Myndmengi = image, counterdomain, range
+
+Núllfylki = zero matrix
+
+Núlllína = zero row
+
+Óandhverfanlegt = singular
+
+Óaugljósa lausnin = nontrivial solution
+
+Ósamkvæmt = inconsistent
+
+Ofanvarp = projection
+
+Samkvæmt = consistent
+
+Samhliðungur = parallelepiped
+
+Samsíðungur = paralellogram
+
+Samkvæmy = consistent
+
+Skekking = ???
+
+Skölun = scaling
+
+Speglun = ???
+
+Spönn = span
+
+Stríkkun = ???
+
+Stuðlar = coefficients
+
+Stuðlafylki = coefficient matrix
+
+Umskipting = replacement
+
+Vendidálkur = pivotal column
+
+Vendistak = pivotal element
+
+Venjulega fylkið = standard matrix
+
+Vigur = vector
+
+Víxlun = interchange
+
+Vörpun = map, mapping, transformation
+
+Þríhyrningsfylki = triangular matrix
