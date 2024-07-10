@@ -5,7 +5,7 @@ Eigingildi og eiginvigur
 ------------------------
 
 Skilgreining: Eigingildi og eiginvigur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -16,7 +16,7 @@ Skilgreining: Eigingildi og eiginvigur
     .. math:: A\textbf{x}=\lambda\textbf{x}
     
     Þá segjum við að :math:`\lambda` sé **eigingildi** (e. eigenvalue) :math:`A`
-    og :math:`x` **eiginvigur** (e. eiginvector). Ef að :math:`x` og :math:`\lambda` uppfylla
+    og :math:`x` **eiginvigur** (e. eigenvector). Ef að :math:`x` og :math:`\lambda` uppfylla
     jöfnuna að ofan þá segjum við að :math:`x` sé eiginvigur við eigingildi :math:`\lambda`.
     Við þessar aðstæður segjum við að eigingildið :math:`\lambda` og eiginvigurinn :math:`x` 
     tilheyri hvort öðru.
@@ -41,7 +41,7 @@ Eigingildi fylkja fundin
 ------------------------
 
 Setning
-^^^^^^^
+~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -98,7 +98,7 @@ Eiginrúm
 --------
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -168,7 +168,7 @@ Sýnidæmi: Eiginrúm fylkis
 
 
 Setning
-^^^^^^^^^
+~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -177,7 +177,7 @@ Setning
     stökin á hornalínunni.
 
 Setning
-^^^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -192,7 +192,7 @@ Setning
     Einfaldar línuaðgerðir varðveita ekki eigingildi.
 
 Setning
-^^^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -201,6 +201,9 @@ Setning
 
 Kennijafnan
 -----------
+
+Setning
+~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning 
@@ -351,7 +354,7 @@ Sýnidæmi: Margfeldni eigingildis
 -----------
 
 Skilgreining: Ámóta
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -375,7 +378,7 @@ Skilgreining: Ámóta
     Þessi þrjú atriði segja að það að vera ámóta er dæmi um það sem er kallað *jafngildisvensl*.
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -418,7 +421,7 @@ Hornalínugjörningar
 -------------------
 
 Skilgreinig: Hornalínufylki
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
@@ -435,7 +438,7 @@ Skilgreinig: Hornalínufylki
 
 
 Skilgreinig: Hornalínugeranlegt
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
@@ -554,7 +557,7 @@ Að hornalínugera fylki
 
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -579,7 +582,7 @@ Sýnidæmi: Er fylkið hornalínugeranlegt
 
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -603,7 +606,7 @@ Eiginvigrar línulegra varpana
 -----------------------------
 
 Skilgreining 
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
@@ -691,7 +694,7 @@ Sýnidæmi: Fylki línulegra varpana í :math:`V`
 
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning

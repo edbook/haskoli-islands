@@ -2,8 +2,7 @@ Fylkjaaðgerðir
 ==============
 
 Nokkrar gerðir fylkja
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+----------------------
 
 .. admonition:: Skilgreining
   :class: skilgreining
@@ -67,13 +66,19 @@ Nokkrar gerðir fylkja
   
 
 Samlagning og skölun 
-~~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
-Tvö jafnstór fylki eru lögð saman með því að að leggja saman stuðlana í báðum fylkjunum.
-Ekki er hægt að leggja saman misstór fylki.
+Setning: Samlagning fylkja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+  
+  Tvö jafnstór fylki eru lögð saman með því að að leggja saman stuðlana í báðum fylkjunum.
+  Ekki er hægt að leggja saman misstór fylki.
 
 Sýnidæmi: Samlagning fylkja
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -124,7 +129,7 @@ Til dæmis, ef :math:`A` er það sama og áður þá fæst:
 
 
 Sýnidæmi: Margföldun með tölu
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -155,8 +160,8 @@ Sýnidæmi: Margföldun með tölu
         \end{bmatrix}
 
 
-Reglur um fylkjasamlagningu og margföldun með fasta
-----------------------------------------------------
+Setning: Reglur um fylkjasamlagningu og margföldun með fasta
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -183,7 +188,7 @@ Reglur um fylkjasamlagningu og margföldun með fasta
     Þar sem stuðlar :math:`A+B` og :math:`B+A` eru alls staðar þeir sömu fylkin þau sömu einnig.
 
 Fylkjamargföldun 
-~~~~~~~~~~~~~~~~~~~~~~
+----------------
 
 Lítum á tvær línulegar varpanir :math:`T\colon\mathbb{R}^n\to\mathbb{R}^p` og :math:`\mathbb{R}^p\to\mathbb{R}^m`. 
 Fyrst :math:`T` og :math:`S` eru línulegar má tákna þau með fylkjum þannig að 
@@ -192,7 +197,7 @@ höfum við einnig nýja samsetta línulega vörpun :math:`S\circ T\colon\mathbb
 :math:`S\circ T=S(T(\textbf{x}))=S(B\textbf{x})=AB\textbf{x}`. Fylki þessarar nýju vörpunar er því :math:`AB`.
 
 Skilgreining: Fylkjamargföldun
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -209,7 +214,7 @@ Skilgreining: Fylkjamargföldun
     fylki þá er margfeldið skilgreint og stærð þess er :math:`m \times k`.
 
 Sýnidæmi: Fylkjamargföldun
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -260,7 +265,7 @@ Sýnidæmi: Fylkjamargföldun
         \end{bmatrix}
 
 Skilgreining: Veldi af fylkjum
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -270,7 +275,7 @@ Skilgreining: Veldi af fylkjum
     :math:`A^3=A\cdot A\cdot A` og svo framvegis.
 
 Reikniaðferð fyrir fylkjamargföldun
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Aðferð
     :class: skilgreining
@@ -303,7 +308,7 @@ Reikniaðferð fyrir fylkjamargföldun
         \end{bmatrix}\textbf{[}\quad \downarrow \quad \textbf{]}.
     
 Sýnidæmi: Fylkjamargföldun
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -351,8 +356,8 @@ Sýnidæmi: Fylkjamargföldun
         
 
 
-Eiginleikar fylkjamargföldunar
---------------------------------
+Setning: Eiginleikar fylkjamargföldunar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -377,10 +382,10 @@ Eiginleikar fylkjamargföldunar
 
 
 Bylt fylki 
-~~~~~~~~~~~~~~~~~~~~~~
+-----------
 
 Skilgreining: Bylt fylki
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -390,7 +395,7 @@ Skilgreining: Bylt fylki
     Höfum því :math:`A^T_{ij}=A_{ji}`.
 
 Sýnidæmi: Bylt fylki
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -429,8 +434,8 @@ Sýnidæmi: Bylt fylki
     4 & 8 & 12 & 16 \\
     \end{bmatrix}
 
-Reiknireglur fyrir bylt fylki
--------------------------------
+Setning: Reiknireglur fyrir bylt fylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -446,7 +451,7 @@ Reiknireglur fyrir bylt fylki
         **4.** :math:`(AB)^T = B^TA^T`
 
 Sýnidæmi: Hegðun byltra fylkja
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi 
   :class: daemi
@@ -470,7 +475,7 @@ Sýnidæmi: Hegðun byltra fylkja
 
                     
 Andhverfa fylkja
-~~~~~~~~~~~~~~~~~~~~~~
+-----------------
 
 Látum :math:`T\colon \mathbb{R}^n\to\mathbb{R}^n` vera gagntæka línulega vörpun með samsvarandi fylki :math:`A`. Fyrst :math:`T` er gagntæk á hún sér andhverfu :math:`T^{-1}`.
 Hægt er að sýna að þessi andhverfa er líka línuleg og því má tákna hana með venjulegu fylki hennar sem við skulum kalla :math:`C`.
@@ -481,7 +486,7 @@ Við vitum að
 svo að :math:`(CA)` hlýtur að vera einingarfylkið. Það sama gildir um :math:`AC`. 
 
 Skilgreining: Andhverfanleiki
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -502,7 +507,7 @@ Skilgreining: Andhverfanleiki
     .. math:: A\cdot A^{-1} = A^{-1}\cdot A = I
     
 Sýnidæmi: Eru fylkin andhverfanleg?
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -539,9 +544,9 @@ Sýnidæmi: Eru fylkin andhverfanleg?
     0 & 0 \\
     \end{bmatrix} \neq I
 
-    svo að núllfylkið getur ekki verið andhverfanlegt.
-
-    .. math:: \begin{bmatrix}
+  svo að núllfylkið getur ekki verið andhverfanlegt.
+  
+  .. math:: \begin{bmatrix}
     1 & 0 \\
     0 & 0 \\
     \end{bmatrix} \begin{bmatrix}
@@ -581,8 +586,8 @@ Sýnidæmi: Eru fylkin andhverfanleg?
     \end{bmatrix}
 
 
-Andhverfa :math:`2\times 2` fylkja
------------------------------------
+Setning: Andhverfa :math:`2\times 2` fylkja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -597,7 +602,7 @@ Andhverfa :math:`2\times 2` fylkja
 
 
 Sýnidæmi: Andhverfur út frá formúlu
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -621,8 +626,8 @@ Sýnidæmi: Andhverfur út frá formúlu
 
   Svo höfum við að :math:`\det(B)=-2\cdot (-6)-4\cdot3=0` svo fylkið :math:`B` er óandhverfanlegt.
 
-Lausnir fylkjajafna
---------------------
+Setning: Lausnir fylkjajafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -633,7 +638,7 @@ Lausnir fylkjajafna
     .. math:: \textbf{x}=A^{-1}\textbf{b}.
 
 Sýnidæmi: Fylkjajafna leyst með andhverfu
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -667,13 +672,13 @@ Sýnidæmi: Fylkjajafna leyst með andhverfu
     -20-60 
     \end{bmatrix} = \frac{1}{29}\begin{bmatrix} 90 \\ 80 \end{bmatrix}
 
-    **Athugasemd:** Setningin á undan er oftast ekki notuð beint þegar reikna á stórar fylkjajöfnur af 
-    gerð :math:`A\textbf{x}=\textbf{b}`. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa 
-    jöfnuna beint með Gauss-eyðingu eða öðrum aðferðum.
+  **Athugasemd:** Setningin á undan er oftast ekki notuð beint þegar reikna á stórar fylkjajöfnur af 
+  gerð :math:`A\textbf{x}=\textbf{b}`. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa 
+  jöfnuna beint með Gauss-eyðingu eða öðrum aðferðum.
 
 
-Reiknireglur fyrir andhverfu fylkis
------------------------------------
+Setning: Reiknireglur fyrir andhverfu fylkis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -693,7 +698,7 @@ Reiknireglur fyrir andhverfu fylkis
     .. math:: (A^T)^{-1}=(A^{-1})^T
 
 Aðferð til að reikna andhverfu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Aðferð
     :class: skilgreining
@@ -709,7 +714,7 @@ Aðferð til að reikna andhverfu
     .. math:: [A I] \sim [I A^{-1}]
 
 Sýnidæmi: Andhverfa :math:`3\times3` fylkis
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -769,10 +774,10 @@ Sýnidæmi: Andhverfa :math:`3\times3` fylkis
 
 
 Eintækni og átækni
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------
 
-Setningin um eintækni og átækni
--------------------------------
+Setning: Um eintækni og átækni
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -793,8 +798,8 @@ Setningin um eintækni og átækni
 
     Athugið að leiðingarnar hér gilda í báðar áttir.
 
-Einkenni andhverfalegra fylkja
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Einkenni andhverfalegra fylkja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -828,7 +833,7 @@ Einkenni andhverfalegra fylkja
 
 
 Sýnidæmi: Er fylkið andhverfanlegt?
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -871,10 +876,10 @@ Sýnidæmi: Er fylkið andhverfanlegt?
     **3.** Ef :math:`A` og :math:`B` eru óandhverfanleg þá eru :math:`AB` og :math:`BA` það einnig.
 
 LU-þáttun
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------
 
 Skilgreining: Andhverfanleiki
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -900,7 +905,7 @@ Skilgreining: Andhverfanleiki
         \end{bmatrix}
 
 Sýnidæmi: LU þáttun
---------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -1010,7 +1015,7 @@ Sýnidæmi: LU þáttun
 
 
 Reikniaðferð vegna LU-þáttunar
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Aðferð
     :class: skilgreining
@@ -1049,7 +1054,7 @@ og svo :math:`U\textbf{x} = \textbf{y}` sem er líka auðvelt því :math:`U` er
 
 
 Sýnidæmi: LU-þáttun til að leysa :math:`A\textbf{x}=b`
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
