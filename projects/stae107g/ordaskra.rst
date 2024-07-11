@@ -5,7 +5,7 @@ Orðaskrá
 
 
 Íslenska - enska 
----------------
+------------------
 
 Aðoka fylki = adj matrix
 

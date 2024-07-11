@@ -181,11 +181,14 @@ Setning: Reglur um fylkjasamlagningu og margföldun með fasta
 
         **6.** :math:`r(sA)=(rs)A`
 
-    **Rökstuðningur:** Auðveldast er að sanna með skoða með því að skoða hvern stuðul fyrir sig. 
-    Tökum t.d. lið 1. Ef við skoðum stuðul í sæti :math:`(i,j)` fyrir fylkið :math:`A+B` fáum við :math:`a_{ij}+b_{ij}`. 
-    En við vitum að það er sama og :math:`b_{ij}+a_{ij}` þar sem samlagning er víxlin fyrir rauntölur. 
-    En :math:`b_{ij}+a_{ij}` er einmitt stuðull :math:`B+A` í sæti :math:`(j,i)`. 
-    Þar sem stuðlar :math:`A+B` og :math:`B+A` eru alls staðar þeir sömu fylkin þau sömu einnig.
+.. admonition:: Rökstuðningur 
+  :class: setning, dropdown
+  
+  Auðveldast er að sanna með skoða með því að skoða hvern stuðul fyrir sig. 
+  Tökum t.d. lið 1. Ef við skoðum stuðul í sæti :math:`(i,j)` fyrir fylkið :math:`A+B` fáum við :math:`a_{ij}+b_{ij}`. 
+  En við vitum að það er sama og :math:`b_{ij}+a_{ij}` þar sem samlagning er víxlin fyrir rauntölur. 
+  En :math:`b_{ij}+a_{ij}` er einmitt stuðull :math:`B+A` í sæti :math:`(j,i)`. 
+  Þar sem stuðlar :math:`A+B` og :math:`B+A` eru alls staðar þeir sömu fylkin þau sömu einnig.
 
 Fylkjamargföldun 
 ----------------
@@ -376,9 +379,11 @@ Setning: Eiginleikar fylkjamargföldunar
 
         **5.** :math:`I_m A = A = AI_m`
 
-
-    **Rökstuðningur:** Flesta liði má sanna með því að nota beint skilgreiningu á margfeldi fylkja. 
-    Liður 1. er afleiðing þessa að líta megi á fylkin sem varpanir og samsetning varpana er ávallt tengin.
+.. admonition:: Rökstuðningur 
+  :class: setning
+  
+  Flesta liði má sanna með því að nota beint skilgreiningu á margfeldi fylkja. 
+  Liður 1. er afleiðing þessa að líta megi á fylkin sem varpanir og samsetning varpana er ávallt tengin.
 
 
 Bylt fylki 
@@ -785,7 +790,10 @@ Setning: Um eintækni og átækni
     Látum :math:`T:\mathbb{R}^n \rightarrow \mathbb{R}^n` vera línulega vörpun. 
     Þá fæst að :math:`T` er eintæk þá og því aðeins að hún er átæk.
 
-    **Rökstuðningur:** Skrifum :math:`T(\textbf{x})=A\textbf{x}`. 
+.. admonition:: Rökstuðningur 
+    :class: setning, dropdown
+    
+    Skrifum :math:`T(\textbf{x})=A\textbf{x}`. 
     Gerum ráð fyrir að :math:`T` sé eintæk. Fáum að :math:`A\textbf{x}=\textbf{0}` hefur aðeins augljósu lausnina.
 
     Skoðum efri stallagerð :math:`A`. Fyrst jafnan hefur aðeins augljósu lausnina þá hefur 
