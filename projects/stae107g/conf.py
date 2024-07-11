@@ -10,6 +10,8 @@ mathjax_config = {
             "spn": '{\\text{span}}',
             "nul": '{\\text{Nul}}',
             "col": '{\\text{Col}}',
-            }                       
+            "ker": '{\\text{Ker}}',
+            "range": '{\\text{Range}}',
+            }
         }                           
     }                               
