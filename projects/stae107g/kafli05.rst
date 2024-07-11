@@ -157,7 +157,7 @@ Sýnidæmi: Eiginrúm fylkis
     
     svo eiginrúmið er
 
-    .. math:: Span \left\{\begin{bmatrix}
+    .. math:: \spn \left\{\begin{bmatrix}
         3\\
         2
         \end{bmatrix},
@@ -300,7 +300,7 @@ Sýnidæmi: Eigingildi og eiginvigrar
 
     Auðvelt að sjá að allar tölur :math:`x_1,x_2` 
     sem uppfylla :math:`x_1=x_2` 
-    eru lausnir svo eiginvigrar m.t.t. 12 eru allir af forminu:
+    eru lausnir svo eiginvigrar m.t.t. 12 eru allir á forminu:
 
     .. math:: 
         \begin{bmatrix}
@@ -309,9 +309,9 @@ Sýnidæmi: Eigingildi og eiginvigrar
         x_2\\x_2
         \end{bmatrix}=x_2\begin{bmatrix}
         1\\1
-        \end{bmatrix}=\left(t\begin{bmatrix}
+        \end{bmatrix}=t\begin{bmatrix}
         1\\1   
-        \end{bmatrix}\right)
+        \end{bmatrix}
 
 .. admonition:: Athugasemd
     :class: athugasemd
