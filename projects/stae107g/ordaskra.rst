@@ -136,3 +136,17 @@ Víxlun = interchange
 Vörpun = map, mapping, transformation
 
 Þríhyrningsfylki = triangular matrix
+
+
+Ný orð:
+------------------------------------------------------
+
+Vigurrúm = vector space
+
+Hlutrúm = subspace
+
+Vigursumma = vector sum
+
+Núllrúm = nullspace
+
+dálkrúm = column space
