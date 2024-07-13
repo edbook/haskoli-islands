@@ -49,9 +49,11 @@ Viðbótin `sphinxcontrib-custombutton <https://github.com/sphinxcontrib-customb
 er fyrir sérsniðna takka með hlekkjum. Skráin ``_static/button.css`` geymir stillingar
 fyrir útlit takkans. 
 
-.. button::
-  :text: Edbook home page
-  :link: http://edbook.hi.is
+.. only:: html
+
+   .. button::
+          :text: Edbook home page
+          :link: http://edbook.hi.is
 
 Panopto
 -------
@@ -69,12 +71,15 @@ Panopto-þjóninum. Til að finna það þá er best að fara inn á hi.cloud.pa
 finna myndbandið og smella á `Settings` og undir `Viewer Link` er auðkennið það sem
 stendur fyrir aftan `id=`. 
 
-.. panopto:: ab027f4b-88b9-4647-af20-afdf0092304d
-    :width: 100%
+.. only:: html
+
+    .. panopto:: ab027f4b-88b9-4647-af20-afdf0092304d
+        :width: 100%
 
 Youtube
 -------
 
+Youtube
 
 
 Math - Katex
@@ -95,56 +100,60 @@ Datacamp extensions
 Python
 ~~~~~~
 
-.. datacamp::
-    :lang: python
+.. only:: html
+   
+        .. datacamp::
+            :lang: python
 
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import matplotlib.animation as animation
+            import numpy as np
+            import matplotlib.pyplot as plt
+            import matplotlib.animation as animation
 
-    fig = plt.figure()
+            fig = plt.figure()
 
-    def f(x, y):
-        return np.sin(x) + np.cos(y)
+            def f(x, y):
+                return np.sin(x) + np.cos(y)
 
-    x = np.linspace(0, 2 * np.pi, 120)
-    y = np.linspace(0, 2 * np.pi, 100).reshape(-1, 1)
+            x = np.linspace(0, 2 * np.pi, 120)
+            y = np.linspace(0, 2 * np.pi, 100).reshape(-1, 1)
 
-    im = plt.imshow(f(x, y), animated=True)
+            im = plt.imshow(f(x, y), animated=True)
 
-    def updatefig(*args):
-        global x, y
-        x += np.pi / 15.
-        y += np.pi / 20.
-        im.set_array(f(x, y))
-        return im,
+            def updatefig(*args):
+                global x, y
+                x += np.pi / 15.
+                y += np.pi / 20.
+                im.set_array(f(x, y))
+            return im,
 
-    ani = animation.FuncAnimation(fig, updatefig, interval=50, blit=True)
-    plt.show()
+            ani = animation.FuncAnimation(fig, updatefig, interval=50, blit=True)
+            plt.show()
 
 R
 ~~~
 
-.. datacamp::
-    :lang: r
+.. only:: html
 
-    options(scipen=999)  # turn-off scientific notation like 1e+48
-    library(ggplot2)
-    theme_set(theme_bw())  # pre-set the bw theme.
-    data("midwest", package = "ggplot2")
+        .. datacamp::
+            :lang: r
 
-    gg <- ggplot(midwest, aes(x=area, y=poptotal)) +
-        geom_point(aes(col=state, size=popdensity)) +
-        geom_smooth(method="loess", se=F) +
-        xlim(c(0, 0.1)) +
-        ylim(c(0, 500000)) +
-        labs(subtitle="Area Vs Population",
-        y="Population",
-        x="Area",
-        title="Scatterplot",
-        caption = "Source: midwest")
+            options(scipen=999)  # turn-off scientific notation like 1e+48
+            library(ggplot2)
+            theme_set(theme_bw())  # pre-set the bw theme.
+            data("midwest", package = "ggplot2")
 
-    gg
+            gg <- ggplot(midwest, aes(x=area, y=poptotal)) +
+                geom_point(aes(col=state, size=popdensity)) +
+                geom_smooth(method="loess", se=F) +
+                xlim(c(0, 0.1)) +
+                ylim(c(0, 500000)) +
+                labs(subtitle="Area Vs Population",
+                y="Population",
+                x="Area",
+                title="Scatterplot",
+                caption = "Source: midwest")
+
+            gg
 
 Hoverrole Extension
 -------------------

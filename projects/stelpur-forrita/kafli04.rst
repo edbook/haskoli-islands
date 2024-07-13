@@ -11,7 +11,7 @@ Undir-undirkafli
 
 Display images (supports at least pdf, jpg, jpeg and svg):
 
-.. figure:: ./myndir/pallas.svg
+.. figure:: ./myndir/pallas.*
   :align: center
   :width: 70%
 
