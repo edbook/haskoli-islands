@@ -164,7 +164,8 @@ Skilgreining: Önnur aðferð til þess að reikna ákveðu :math:`3 \times 3` f
   :class: skilgreining
 
   Reikna má ákveðu :math:`3 \times 3` fylkist með því að endurtaka fyrstu tvo dálka hægra megin við fylkið og leggja saman og draga frá þær 6 hornalínur sem þannig myndast.
-  SETJA INN MYND
+
+.. figure:: myndir/3fylki.png
 
 Engin sambærileg regla gildir fyrir :math:`n \geq 4`.
 

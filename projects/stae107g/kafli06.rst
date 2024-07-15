@@ -1,5 +1,5 @@
-Kafli 6
-=========
+Innfeldi og hornrétt ofanvörp
+==============================
 
 Innfeldi
 --------
@@ -9,7 +9,8 @@ Skilgreining: Innfeldi
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`\textbf{u}=(u_1,u_2,\dots,u_n)` og :math:`\textbf{v}=(v_1,v_2,\dots,v_n)` vera vigra í :math:`\R^n`. *Innfeldi* (e. inner product) er vörpun :math:`\R^n \times \R^n\ \rightarrow \R` sem tekur inn tvo vigra :math:`\bf u` og :math:`\bf v` og skilar tölunni :math:`\bf u^T v`.
+    Látum :math:`\textbf{u}=(u_1,u_2,\dots,u_n)` og :math:`\textbf{v}=(v_1,v_2,\dots,v_n)` vera vigra í :math:`\R^n`. 
+    **Innfeldi** (e. inner product) er vörpun :math:`\R^n \times \R^n\ \rightarrow \R` sem tekur inn tvo vigra :math:`\bf u` og :math:`\bf v` og skilar tölunni :math:`\bf u^T v`.
     Oftast ritað
     
     .. math:: \textbf{u} \cdot \textbf{v}=\left(
@@ -29,6 +30,20 @@ Skilgreining: Innfeldi
         u_1 v_1 + u_2 v_2 + ... u_n v_n.
 
 Skilgreina má innfeldi fyrir almenn vigurrúm, ekki bara :math:`\R^n`. Stundum er innfeldið á :math:`\R^n` kallað *depilmargfeldi*.
+
+Sýnidæmi: Innfeldi
+^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Látum :math:`\textbf{u}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}` og
+  :math:`\textbf{v}=\begin{bmatrix} 3 \\ 4 \end{bmatrix}` reiknið innfeldið.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  .. math:: \textbf{u} \cdot \textbf{v} = 1 \cdot 3 + 2 \cdot 4 = 3+8=11
 
 
 Reiknireglur um innfeldi á :math:`\R^n`
@@ -54,9 +69,22 @@ Skilgreining: Lengd
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`\textbf{u}=(u_1,u_2,\dots,u_n)` vera vigur í :math:`\R^n`. *Lengd*, stundum kallað *staðall* eða *norm*, vigursins :math:`\bf u` er talan
+    Látum :math:`\textbf{u}=(u_1,u_2,\dots,u_n)` vera vigur í :math:`\R^n`. **Lengd**, stundum kallað *staðall* eða *norm*, vigursins :math:`\bf u` er talan
 
     .. math:: ||\ve u||:=\sqrt{\ve u \cdot \ve u}=\sqrt{u_1^2+u_2^2+\dots + u_n^2}
+
+Sýnidæmi: Lengd vigurs
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Reiknið lengd vigursins :math:`\textbf{u} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}`
+
+.. admonition:: Lausn
+  :class: daemi, dropdown 
+
+  .. math:: ||\textbf{u}|| = ||(1,2,3)||=\sqrt{1^2+2^2+3^2}=\sqrt{1+4+9}=\sqrt{14}
 
 
 Reiknireglur um lengd 
@@ -79,25 +107,38 @@ Skilgreining: Einingarvigur
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Vigur :math:`\ve u \in \R^n` sem hefur lengdina :math:`||\ve u||=1` kallast *einingarvigur* (e. unit vector). Stundum ritað :math:`\hat{\ve u}`.
+    Vigur :math:`\ve u \in \R^n` sem hefur lengdina :math:`||\ve u||=1` kallast **einingarvigur** (e. unit vector). Stundum ritað :math:`\hat{\ve u}`.
 
 Sérhvern vigur :math:`\ve u \in \R^n` (að undanskildum núllvigri) má *staðla*, þ.e. gera að einingarvigri, með því að deila með lengdinni, :math:`\hat{\ve u} = \ve u / || \ve u ||`.
 
 Fjarlægðir í :math:`\R^n`
-------------------------
+--------------------------
 
 Skilgreining: Fjarlægð milli punkta í :math:`\R^n`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`\ve u` og :math:`\ve v` vera vigra í :math:`\R^n`. *Fjarlægðin* milli :math:`\ve u` og :math:`\ve v` er skilgreind sem lengdin á vigrinum :math:`\ve u- \ve v`, þ.e.
+    Látum :math:`\ve u` og :math:`\ve v` vera vigra í :math:`\R^n`. **Fjarlægðin** milli :math:`\ve u` og :math:`\ve v` er skilgreind sem lengdin á vigrinum :math:`\ve u- \ve v`, þ.e.
 
-    .. math:: d(\ve u, \ve v):=||\ve u - \ve v || = \sqrt{(u_1-v_1)^2 + (u_2-v_2)^2 + \dots + (u_n-v_n)^2}.
+    .. math:: dist(\ve u, \ve v):=||\ve u - \ve v || = \sqrt{(u_1-v_1)^2 + (u_2-v_2)^2 + \dots + (u_n-v_n)^2}.
 
 Í skilgreiningunni hér að ofan hugsum við um :math:`\ve u` og :math:`\ve v` ýmist sem vigra eða punkt í :math:`\R^n`. Á eftirfarandi mynd má sjá fjarlægð milli tveggja vigra.
 
 MYND
+
+Sýnidæmi: Fjarlægð milli punkta
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Riknum fjarlæð milli :math:`\begin{bmatrix} 1 \\ 2 \end{bmatrix}` og  :math:`\begin{bmatrix} -3 \\ 4 \end{bmatrix}`
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  .. math:: \sqrt{(1-(-3))^2+(2-4)^2}=\sqrt{4^2+(-2)^2}=\sqrt{16+4}=\sqrt{20}
 
 Reiknireglur um fjarlægðir 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,4 +147,247 @@ Reiknireglur um fjarlægðir
 
     Látum :math:`\ve u, \ve v` og :math:`\ve w` vera puntka í :math:`\R^n`. Þá gildir
 
-    **1.** :math:`d(\ve u, \ve v) \geq 0` og :math:`d(\ve u, \ve v)=0` ef og aðeins ef :math:`\ve u= \ve v`
+    **1.** :math:`dist(\ve u, \ve v) \geq 0` og :math:`dist(\ve u, \ve v)=0` ef og aðeins ef :math:`\ve u= \ve v`
+
+    **2.** :math:`dist(\ve u, \ve v) = dist(\ve v, \ve u)`
+
+    **3.** :math:`dist(\ve u, \ve w) \leq dist(\ve u + \ve v)+dist(\ve v + \ve w)` 
+
+Hornréttir vigrar
+-----------------
+
+Skilgreining: Hornrétt
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`\ve u` og :math:`\ve v` vera vigra í :math:`\mathbb{R}^n`.
+  Vigrarnir :math:`\ve u` og :math:`\ve v` eru sagðir **hornréttir** (á hvorn annan) (e. orthogonal)  
+  ef :math:`\ve u \cdot \ve v=0`
+
+Skilgreinig: Hornið milli
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+  :class: skilgreining
+
+  Ef :math:`\ve u` og :math:`\ve v` eru vigrar í  :math:`\mathbb{R}^n`, sem er hvorugur núll, þá
+  skilgerinum við **hornið milli** (e. angle between) þeirra sem töluna 
+
+  .. math:: \theta = \arccos(\frac{\textbf{u}\cdot\textbf{v}}{||\textbf{u}|| ||\textbf{v}||})
+
+Regla Pýþagórasar
+~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Vigrarnir :math:`\ve u` og :math:`\ve v` eru hornréttir hvor á annan þá 
+  og því aðeins að
+
+  .. math:: ||\ve u||^2+||\ve v||^2=||\ve u + \ve v||^2
+
+Hornrétt fyllirúm 
+--------------------
+
+Skilgreining: Hornrétt fyllirúm 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Við segjum að mengi allra staka sem eru hornrétt á :math:`W` 
+  sé **hornrétt fyllirúm** (e. orthogonal complement) og táknum það með :math:`W^\perp`. 
+
+Hornrétt fyllirúm er hlutrúm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^2`. Fáum að:
+
+    **1.** Vigurinn :math:`\ve 0` er hornréttur á öll stök í :math:`W` svo :math:`\ve 0 \in W^\perp`.
+
+    **2.** Látum :math:`\ve u, \ve v \in W^\perp` og látum :math:`\ve w` vera hvaða vigur sem er í :math:`W`. 
+    Þá er 
+
+    .. math::(\ve u + \ve v)\cdot\ve w = \ve u \cdot \ve w + \ve v \ cdot \ve w=0+0=0
+    
+    svo :math:`(\ve u+\ve v)` er hornrétt á alla vigra :math:`W` og því er :math:`(\ve u + \ve v) \in W^\perp`.
+
+    **3.** Látum :math:`\ve u \in W^\perp`, :math:`\ve w` vera hvaða vigru sem er í :math:`W` og :math:`c` vera raunrölu. Þá er 
+
+    .. math:: (c\textbf{u})\cdot \textbf{w} = c\ve u \cdot \ve w = c \cdot 0 = 0 
+    
+    svo :math:`c\ve u` er hornréttu á alla vigra í :math:`W` og því er :math:`c\ve u\in W^\perp`.
+
+Þetta sýnir að :math:`W^\perp` er hlutrúm í :math:`\mathbb{R}^n`.
+
+Setning: ????
+~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`A` vera :math:`m \times n` fylki. Þá gildir 
+
+    **1.** :math:`(Row A)^\perp = Nul A`
+
+    **2.** :math:`(Col A)^\perp = Nul A^T` 
+
+Þverstæð mengi
+-----------------
+
+Skilgreining: Þverstætt
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`W` vera mengi vigra í :math:`\mathbb{R}^n`. Mengið er sagt 
+  **þverstætt** (e. orthogonal) ef sérhverjir tveir vigrar í menginu eru hornréttir hvor á annan.
+
+Sýnidæmi: Þverstætt mengi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Mynda eftirfarandi vigrar þverstætt mengi?
+
+  .. math:: \ve u=\begin{bmatrix} 1 \\ -2 \\ 0 \end{bmatrix}, 
+    \ve v=\begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}, 
+    \ve w=\begin{bmatrix} 1 \\ 1 \\ -1 \end{bmatrix}
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Skoðum hvort vigrarnir myndi þverstætt mengi
+
+  .. math:: \ve u \cdot \ve v = (1)(2)+(-2)(1)+(0)(3)=0
+
+  .. math:: \ve v \cdot \ve w = (2)(1)+(1)(1)+(3)(-1)=0
+    
+  .. math:: \ve u \cdot \ve w = (1)(1)+(-2)(1)+(0)(-1)=-1
+  
+  Þar sem innfeldið er ekki 0 í öllum tilfellum svo vigrarir mynda ekki þverstætt mengi.
+
+Sýnidæmi: Þverstætt mengi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Mynda eftirfarandi vigrar þverstætt mengi?
+
+  .. math:: \ve u=\begin{bmatrix} 1 \\ -2 \\ 0 \end{bmatrix}, 
+    \ve v=\begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}, 
+    \ve w=\begin{bmatrix} 0 \\ 0 \\ 3 \end{bmatrix}
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Skoðum hvort vigrarnir myndi þverstætt mengi
+
+  .. math:: \ve u \cdot \ve v = (1)(2)+(-2)(1)+(0)(3)=0
+    
+  .. math:: \ve v \cdot \ve w = (2)(0)+(1)(0)+(0)(3)=0
+    
+  .. math:: \ve u \cdot \ve w = (1)(0)+(-2)(0)+(0)(3)=0
+  
+  Þar sem innfeldið er 0 í öllum tilfellum mynda vigrarnir þverstætt mengi.
+
+
+MYND
+
+Skilgreining: Þverstaðlað
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`W` vera mengi vigra í :math:`\mathbb{R}^n`. Mengið er sagt **þverstaðlað** (e. orthonormal) ef 
+  það er þverstætt og allir vigrarnir í :math:`W` hafa lengdina 1.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Athugið að sérhvert þverstaðlað mengi er líka þverstætt en til eru þverstæð mengi sem eru ekki þverstöðluð.
+
+Setning: Þverstæð mengi
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Þverstætt mengi :math:`S={\ve u_1, \cdots \ve u_p}` af vigrum þar sem enginn vigur er núllvigur er línulega óháð.
+  Þannig myndar þverstærr mengi grunn fyrir hlutrúmið sem :math:`S` spannar.
+
+Þverstæður grunnur
+-------------------
+
+Skilgreining: Þverstæðir og þverstaðlaðir grunnar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n` og í :math:`{\ve u_1 \cdots \ve u_p}` grunn fyrir í :math:`W`.
+  
+  **1.** Grunnurinn er kallaður **Þverstæður grunnur** (e. orthogonal basis) ef sérhverjir tveir ólíkir vigrar í grunninum eru hornréttir hvorn á annan.
+
+  **2.** Grunnurinn er kallaður **þverstaðlaður grunnur** (e. orthonormal basis) ef sérhverjir tveir ólíkir vigrar í grunninum eru hornréttir hvor 
+  á annan og vigrarnir eru einingarvigrar.
+  
+Setning: Þverstæðir grunnar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Ef :math:`\mathbb{B}={\ve u_1 \cdot \ve u_p}` er þverstæður grunnur fyrir :math:`W` sem 
+  er hlutrúm í :math:`\mathbb{R}^n` þá eru vogstuðlarnir fyrir línulegu samantektina (með öðrum oðrum, hnit :math:`\ve y` m.t.t. :math:`\mathbb{B}`)
+
+  .. math:: \ve y = c_1\ve u_1+\cdots+c_p\ve u_p
+
+  gefnir með
+
+  .. math:: c_j=\frac{\ve y \cdot \ve u_j}{\ve u_j\cdot \ve u_j} \text{ fyrir } j=1,\cdots,p.
+
+.. admonition:: Fylgisetning
+  :class: setning
+
+  Ef grunnurinn í setningunni að ofan er þverstaðlaður verður formúlan fyrir stuðlunum einfaldlega
+
+  .. math:: c_j = \ve y \cdot \ve u_j \text{ fyrir } j=1,\cdots,p
+
+Sýnidæmi: Þverstæður grunnur
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Finnið hnit puktsins :math:`\ve y=(1,1,1)` með tilliti til þverstæða grunnsins
+
+  .. math:: \mathcal{B}=
+    \left\{
+    \begin{bmatrix} 1 \\ -2 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 3 \end{bmatrix}
+    \right\}
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Setning gefur
+
+  .. math:: c_1 = \frac{(1,1,1)\cdot (1,-2,0)}{(1,-2,0)\cdot (1,-2,0)}=
+    \frac{1-2+0}{1+(-2)^2+0^2}=-\frac{1}{5}
+
+  .. math:: c_2 = \frac{(1,1,1)\cdot (2,1,0)}{(2,1,0)\cdot (2,1,0)}=
+    \frac{2+1+0}{2^2+1^2+0^2}=\frac{3}{5}
+  
+  .. math:: c_3 = \frac{(1,1,1)\cdot (0,0,3)}{(0,0,3)\cdot(0,0,3)}=
+    \frac{0+0+3}{0^2+0^2+3^2}=\frac{3}{9}=\frac{1}{3}
+  
+  Svo
+
+  .. math:: [\ve y]_\mathcal{B}=\left(-\frac{1}{5}, \frac{3}{5}, \frac{1}{3}\right)
+
