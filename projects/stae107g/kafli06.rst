@@ -391,3 +391,121 @@ Sýnidæmi: Þverstæður grunnur
 
   .. math:: [\ve y]_\mathcal{B}=\left(-\frac{1}{5}, \frac{3}{5}, \frac{1}{3}\right)
 
+Hornrétt ofanvarp
+-------------------
+
+Skilgreining: Hornrétt ofanvarp
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`\ve u \neq \ve 0` vera vigur í :math:`\mathbb{R}^n`. Látum nú
+  :math:`\ve y` vera vigur í :math:`\mathbb{R}^n`. Vigurinn
+
+  .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}\cdot \ve u
+
+  er kallaður **hornrétt ofanvarp vigursins y á vigurinn u** (e. orthogonal projection og  :math:`\ve y` on  :math:`\ve u`).
+  Það að rita :math:`\ve y=\hat{\ve y}+\ve z` er kallað að liða vigurinn :math:`\ve y` upp í liði þannig að annar er samsíða
+  :math:`\ve u` og hinn er hornréttur á :math:`\ve u`.  
+
+
+Sýnidæmi: Hornrétt ofanvarp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Látum :math:`\ve u=(3,1)` og :math:`\ve y=(1,3)`. Reiknið hornrétt 
+  ofanvarp :math:`\ve u` á :math:`\ve y`
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}=\frac{(3,1)\cdot(1,3)}{(3,1)\cdot(3,1)}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\frac{6}{10}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\frac{3}{5}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}
+
+  og þverþátturinn er 
+
+  .. math:: \ve z = \ve y - \hat{\ve y}=\begin{bmatrix}1 \\3 \end{bmatrix}-\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}=\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}
+
+  Í kjölfari er stundum gagnlegt að finna fjarlægð :math:`\ve y` frá rúminu sem :math:`\ve u` spannar.
+  Það er :math:`||\ve z||`.
+
+  .. math:: \sqrt{(-\frac{4}{5})^2+(\frac{12}{5})^2}=\sqrt{\frac{16}{25}+\frac{144}{25}}=\sqrt{32}
+
+.. admonition:: Lausnir prófaðar
+  :class: daemi, dropdown
+
+  Fengum gefið :math:`\ve u=\begin{bmatrix} 3 \\1 \end{bmatrix}` og :math:`\ve y=\begin{bmatrix} 1 \\3 \end{bmatrix}`. Við fengum 
+  :math:`\hat{\ve y}=\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}` og 
+  :math:`\hat{\ve z}=\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}`. Prófum þessar lasunir 
+  
+    :math:`\ve y` er summan að  :math:`\hat{\ve y}` og  :math:`\ve z`
+    
+    .. math:: \hat{\ve y}+\ve z =\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}+\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}=\begin{bmatrix} 1 \\ 3 \end{bmatrix}
+    
+    :math:`\hat{\ve y}` er samsíða :math:`\ve u` því
+
+    .. math:: \hat{\ve y} = \begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix} = \frac{3}{5} \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \frac{3}{5} \ve u
+     
+    :math:`\ve z` er hornrétt á :math:`\ve u`
+
+    .. math:: \ve z \cdot \ve u = \begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix} \cdot \begin{bmatrix} 3 \\1 \end{bmatrix} = -\frac{12}{3}+\frac{12}{3}=0
+
+
+Skilgreining: Hornrétta ofanvarpið
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`. Skilgreinum vörpun :math:`proj_w:\mathbb{R}^n \rightarrow \mathbb{R}^n`
+  þannig að fyrir vigur :math:`\ve y \ in \mathbb{R}^n` er :math:`proj_w \ve y=\hat{\ve y}`. Þessi vörpun er kölluð **hornrétts ofanvarpið** á 
+  hlutrúmið :math:`W`.
+
+Eiginleikar ofanvarps
+~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`.
+
+    **1.** Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` þá er :math:`proj_w(\ve y) \in W`.
+
+    **2.** Ef :math:`\ve y \in W` þá er :math:`proj_w \ve y=\ve y`
+
+    **3.** Ef :math:`\ve y \in W^\perp` þá er :math:`proj_w \ve y=\ve 0`
+
+    **4.** Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` gildir að :math:`proj_w(proj_w \ve y)=proj_w \ve y` 
+    um vörpunina :math:`proj_w` gildir að :math:`proj_w \cdot  y=\ve y`
+
+
+Halda áfram hér með ofanvörp....... 
+
+Gram-Schmidt
+--------------
+
+Setning: Gram-Schmidt aðferð
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`\{x_1, \cdots, x_p\}` vera grunn fyrir hlutrúm :math:`W` ( og :math:`W \neq {\ve 0}`)
+  í :math:`\mathbb{R}^n`. setjum
+
+  .. math:: \ve v_1 = \ve x_1
+
+  .. math:: \ve v_2 = \ve x_2 - \frac{\ve x_2 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1
+
+  .. math:: \ve v_3 = \ve x_3 - \frac{\ve x_3 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1 - \frac{\ve x_3 \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2
+
+  .. math:: \vdots
+  
+  .. math:: \ve v_p = \ve x_p- \frac{\ve x_p \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1
+     - \frac{\ve x_p \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2 - 
+     \cdots - \frac{\ve x_p \cdot \ve v_{p-1}}{\ve v_{p-1} \cdot \ve v_{p-1}}\ve v_{p-1}
+
+  Þá er :math:`\{v_1, \cdots, v_p\}` þverstæður grunnur fyrir :math:`W` og 
+
+  .. math:: Span(\{\ve v_1, \cdots, \ve v_p\})=Span(\{\ve x_1, \cdots, \ve x_p\})
+  
+  fyrir :math:`k=1, \cdots, p`.
