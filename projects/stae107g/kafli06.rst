@@ -79,7 +79,7 @@ Skilgreining: Einingarvigur
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Vigur :math:`\ve u \in \R^n` sem hefur lengdina :math:`||\ve u||=1` kallast *einingarivigur* (e. unit vector). Stundum ritað :math:`\hat{\ve u}`.
+    Vigur :math:`\ve u \in \R^n` sem hefur lengdina :math:`||\ve u||=1` kallast *einingarvigur* (e. unit vector). Stundum ritað :math:`\hat{\ve u}`.
 
 Sérhvern vigur :math:`\ve u \in \R^n` (að undanskildum núllvigri) má *staðla*, þ.e. gera að einingarvigri, með því að deila með lengdinni, :math:`\hat{\ve u} = \ve u / || \ve u ||`.
 

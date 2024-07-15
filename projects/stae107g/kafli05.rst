@@ -317,8 +317,8 @@ Sýnidæmi: Eigingildi og eiginvigrar
     :class: athugasemd
 
     Kennijafnan getur í mesta lagi haft :math:`n` ólýkar núllstöðvar. 
-    Ef að margliðan þéttast þannig að einhver núllstöð :math:`r` kemur fyirr í s-ta veldi
-    þáttun hennar þá segjum við að eigingildið :math:`r` hafi algebru margfeldni s 
+    Ef að margliðan þéttast þannig að einhver núllstöð :math:`r` kemur fyirr í :math:`s`-ta veldi
+    þáttun hennar þá segjum við að eigingildið :math:`r` hafi algebrulega margfeldni :math:`s` 
     (e. algrebraic multiplicity).
 
 Sýnidæmi: Margfeldni eigingildis
@@ -640,8 +640,19 @@ Sýnidæmi: Eiginvigrar línulegra varpana
 Fylki línulegra varpana í :math:`V`
 ------------------------------------
 
+Setning
+~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^n` vera línulega vörpun með fylkið :math:`A`. Gerum ráð fyrir að 
+    :math:`A` sé hornalínugeranlegt. Látum :math:`\mathcal{B}` vera grunn sem myndaður er að eiginvigrum 
+    :math:`A` og :math:`P` vera fylkið sem hefur eiginvigra :math:`A` sem dálka. Hornalínufylkið 
+    :math:`D=P^{-1}AP` er þá fylki vörpunarinnar m.t.t. grunnsins :math:`\mathcal{B}`.
+
 Sýnidæmi: Fylki línulegra varpana í :math:`V`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -691,18 +702,6 @@ Sýnidæmi: Fylki línulegra varpana í :math:`V`
     Og þá fæst
 
     .. math:: [T(\textbf{x})]_\mathcal{B}=T_\mathcal{B}[\textbf{x}]_{\mathcal{B}}.
-
-
-Setning
-~~~~~~~~~
-
-.. admonition:: Setning
-    :class: setning
-
-    Látum :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^n` vera línulega vörpun með fylkið :math:`A`. Gerum ráð fyrir að 
-    :math:`A` sé hornalínugeranlegt. Látum :math:`\mathcal{B}` vera grunn sem myndaður er að eiginvigrum 
-    :math:`A` og :math:`P` vera fylkið sem hefur eiginvigra :math:`A` sem dálka. Hornalínufylkið 
-    :math:`D=P^{-1}AP` er þá fylki vörpunarinnar m.t.t. grunnsins :math:`\mathcal{B}`.
 
 
 Sýnidæmi: Hornalínugjörningur

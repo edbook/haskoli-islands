@@ -350,7 +350,7 @@ Efri stallagerð
 
 **Núllína** (e. zero row) er lína þar sem allir stuðlarnir eru núll.
 
-**Forustustuðull** (e. leading coeffcient) er fyrsti stuðull í hverrri línu sem er ekki núll.
+**Forystustuðull** (e. leading coeffcient) er fyrsti stuðull í hverrri línu sem er ekki núll.
 
 Skoðum jöfnuhneppi
 
@@ -1204,11 +1204,13 @@ Línuleg spönn í :math:`\mathbb{R}^2`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: myndir/linuleg_sponn.svg
+    :align: center
 
 Myndin sýnir vigrana :math:`\textbf{v}` og :math:`\textbf{u}`.
 Bleika svæðið, allt :math:`\mathbb{R}^2` rúmið er línuleg spönn þessara vigra.
 
 .. figure:: myndir/linuleg_sponn_2.svg
+    :align: center
 
 Á mynd má sjá vigurinn :math:`\ve v`. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni
 sem er framhald vigursins :math:`\ve v`, í báðar áttir.
@@ -1220,6 +1222,7 @@ Látum :math:`\textbf{v}_1` og :math:`\textbf{v}_2` vera tvo vigra í :math:`\ma
 spönn þeirra sléttu sem fer í gegnum upphafspunkt hnitakerfisins.
 
 .. figure:: myndir/linuleg.sponn3.png
+    :align: center
 
 Línuleg spönn í :math:`\mathbb{R}^3` getur líka verið: bara núllpunkturinn, 
 lína í gegnum núllpunkt eða allt :math:`\mathbb{R}^3` rúmið.
@@ -2270,22 +2273,27 @@ Speglanir
 Speglun um x-ás: :math:`\begin{bmatrix} 1 & 0 \\ 0 &-1 \end{bmatrix}`
 
 .. figure:: myndir/speglunx.svg
+    :align: center
 
 Speglun um y-ás: :math:`\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/spegluny.svg
+    :align: center
 
 Speglun um línuna x=y :math:`\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}`
 
 .. figure:: myndir/speglun_y=x.svg
+    :align: center
 
 Speglun um línuna y=-x :math:`\begin{bmatrix} 0 & -1 \\ -1 & 0 \end{bmatrix}`
 
 .. figure:: myndir/speglun_y=-x.svg
+    :align: center
 
 Speglun um núllpunkturinn :math:`\begin{bmatrix} -1 & 0 \\ 0 &-1 \end{bmatrix}`
 
 .. figure:: myndir/speglun_0.svg
+    :align: center
 
 Stríkkanir
 ~~~~~~~~~~
@@ -2293,14 +2301,18 @@ Stríkkanir
 Lárétt stríkkun :math:`\begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/larett_strikkun.svg
+    :align: center
 
 .. figure:: myndir/larett_strikkun_2.svg
+    :align: center
 
 Lóðrétt stríkkun :math:`\begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix}`
 
 .. figure:: myndir/lodrett_strikkun.svg
+    :align: center
 
 .. figure:: myndir/lodrett_strikkun_2.svg
+    :align: center
 
 Skekkingar
 ~~~~~~~~~~
@@ -2308,10 +2320,12 @@ Skekkingar
 Lárétt skekking :math:`\begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/latrett_skekking.svg
+    :align: center
 
 Lóðrétt skekking :math:`\begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix}`
 
 .. figure:: myndir/lodrett_skekking.svg
+    :align: center
 
 Ofanvörp
 ~~~~~~~~~
@@ -2319,10 +2333,12 @@ Ofanvörp
 Ofanvarp á x-ás :math:`\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}`
 
 .. figure:: myndir/ofanvarp_x.svg
+    :align: center
 
 Ofanvarp á y-ás :math:`\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/ovanvarp_y.svg
+    :align: center
 
 
 Eintækar og átækar varpanir

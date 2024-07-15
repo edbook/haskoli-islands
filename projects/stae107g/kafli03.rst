@@ -628,6 +628,7 @@ Sýnidæmi: Flatarmál samsíðungs
   Þar sem :math:`|\det A| = |-15|` er flatarmál samsíðungsins :math:`15`.
 
 .. figure:: myndir/kafli3mynd2.svg
+  :align: center
 
 
 
