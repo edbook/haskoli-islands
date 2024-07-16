@@ -319,7 +319,7 @@ Setning: Þverstæð mengi
 .. admonition:: Setning
   :class: setning
 
-  Þverstætt mengi :math:`S={\ve u_1, \cdots \ve u_p}` af vigrum þar sem enginn vigur er núllvigur er línulega óháð.
+  Þverstætt mengi :math:`S=\{\ve u_1, \cdots \ve u_p\}` af vigrum þar sem enginn vigur er núllvigur er línulega óháð.
   Þannig myndar þverstærr mengi grunn fyrir hlutrúmið sem :math:`S` spannar.
 
 Þverstæður grunnur
@@ -344,7 +344,7 @@ Setning: Þverstæðir grunnar
 .. admonition:: Setning
   :class: setning
 
-  Ef :math:`\mathbb{B}={\ve u_1 \cdot \ve u_p}` er þverstæður grunnur fyrir :math:`W` sem 
+  Ef :math:`\mathbb{B}=\{\ve u_1 \cdots \ve u_p\}` er þverstæður grunnur fyrir :math:`W` sem 
   er hlutrúm í :math:`\mathbb{R}^n` þá eru vogstuðlarnir fyrir línulegu samantektina (með öðrum oðrum, hnit :math:`\ve y` m.t.t. :math:`\mathbb{B}`)
 
   .. math:: \ve y = c_1\ve u_1+\cdots+c_p\ve u_p
@@ -478,10 +478,56 @@ Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`.
     um vörpunina :math:`proj_w` gildir að :math:`proj_w \cdot  y=\ve y`
 
 
-Halda áfram hér með ofanvörp....... 
+Rifjum upp að grunnur fyrir hlutrúm :math:`W` er sagður *þverstaðlaður* ef hann er *þverstæður* og sérhver
+vigur í grunninum er einingarvigur (hefur lengs 1). Ef :math:`\{\ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverst´'ur grunnur þá er 
+grunnurinn :math:`\{ \frac{\ve u_1}{||\ve u_1||}, \frac{\ve u_2}{||\ve u_2||}, \cdots, \frac{\ve u_p}{||\ve u_p||} \}` þverstaðlaður.
+Þar sem alltaf er til þverstæður grunnur fyrir hlutrúm fáum við nú að alltaf er til þverstaðlaður grunnur.
+
+Setning: Ofavarp og þverstaðlaðir grunnar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`. Ef :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverstaðlaður grunnur
+  fyrir :math:`W` þá er 
+
+  .. math:: proj_w \ve y=\hat{\ve y}=(\ve y \cdot \ve u_1)\ve u_1 + (\ve y \cdot \ve u_2)\ve u_2+ \cdots + (\ve y \cdot \ve u_p)\ve u_p
+
+Setning: Fylki fyrir ofanvarp
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n` og gerum ráð fyrir að 
+  :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` sé þverstaðlaður grunnur fyrir
+  :math:`W`. Skilgreinum :math:`n \times p` fylkið 
+
+  .. math:: U = \begin{bmatrix} \ve u_1 & \ve u_2 & \cdots & \ve u_p \end{bmatrix}
+
+  Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` er 
+
+  .. math:: proj_w \ve y = UU^T \ve y.
+
 
 Gram-Schmidt
 --------------
+
+Gram-Schmidt reikniritið
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Við setjum okkur að leysa eftirfarandi verkefni:
+
+Út frá tilteknum grunni :math:`\{\ve x_1, \cdots, \ve x_p \}` fyrir hlutrúm :math:`W` í :math:`\mathbb{R}^n` 
+viljum við búa til þverstæðan grunn :math:`\{ \ve v_1, \cdots, \ve v_p\}` fyrir :math:`W`.
+Þetta er gert með þeim hætti að fyrir sérhvert :math:`k=1, \cdots, n` ver'i :math:`\ve v_1, \cdots, \ve v_k`
+þverstæð upptalning og 
+
+.. math:: Span(\{\ve v_1, \cdots, \ve v_k\})=Span(\{\ve x_1, \cdots, \ve x_k\}).
+
+Reikniritið sem við notum er oftast nefnt **Gram-Schmidt-aðferð**
+
 
 Setning: Gram-Schmidt aðferð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -509,3 +555,84 @@ Setning: Gram-Schmidt aðferð
   .. math:: Span(\{\ve v_1, \cdots, \ve v_p\})=Span(\{\ve x_1, \cdots, \ve x_p\})
   
   fyrir :math:`k=1, \cdots, p`.
+
+Sýnidæmi: Gram-Schmidt
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Látum 
+  
+  .. math:: W=Span\left\{\begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix}, 
+    \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix}
+    -1 \\ 5 \\ 2 \\ 2 \end{bmatrix}\right\{ \in \mathbb{R}^4
+  
+  Finnið þverstæðan grunn fyrir :math:`V`.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Notum reikniaðferð Gram-Schmidt
+
+  **Skref 1:** Sjáum að vigrarnir :math:`\ve x_1=(1,3,1,1), \ve x_2=(1,1,1,1) \text{ og } \ve x_3=(-1,5,2,2)` 
+  eru línulega óháðir og mynda því þeir grunn fyrir :math:`W`.
+
+  **Skref 2:** Setjum :math:`\ve v_1=\ve x_1=(1,3,1,1)`. Svo setjum við
+
+  .. math:: \ve v_2 = \ve x_2 - \frac{\ve x_2 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1
+
+  .. math:: = (1,1,1,1)- 
+    \frac{(1,1,1,1) 
+    \cdot (1,3,1,1)}{(1,3,1,1)
+    \cdot (1,3,1,1)}
+    (1,3,1,1)
+
+  .. math:: (1,1,1,1) - \frac{6}{12}(1,3,1,1)
+    = (1/2, -1/2, 1/2, 1/2)
+    = \frac{1}{2}(1,-1,1,1).
+
+  Prófun sýnir að :math:`\ve v_2` er hornréttur á :math:`\ve v_1`. Að lokum setjum við
+
+  .. math:: \ve v_3 = \ve x_3 - \frac{\ve x_3 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1 - \frac{\ve x_3 \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2 
+
+  .. math:: = (-1,5,2,2)- 
+    \frac{(-1,5,2,2) \cdot (1,3,1,1)}
+    {(1,3,1,1) \cdot (1,3,1,1)}
+    (1,3,1,1)
+  
+  .. math:: - \frac{(-1,5,2,2) \cdot \frac{1}{2}(1,-1,1,1)}
+    {\frac{1}{2}(1,-1,1,1) \cdot \frac{1}{2}(1,-1,1,1)}
+    \frac{1}{2}(1,-1,1,1)
+
+  .. math:: = (-1,5,2,2)-(18/12(1,3,1,1)-\frac{1}{2}(1,-1,1,1))
+    
+  .. math:: =(-2,0,1,1)
+
+  **Skref 3:** Prófun sýnir að :math:`\ve v_3` er hornréttur á :math:`\ve v_1` og :math:`\ve v_2`.
+  
+  Vigrarnir :math:`\ve v_1, \ve v_2, \ve v_3` mynda þverstæðan grunn fyrir :math:`W`.
+
+  Höfum því sýnt að :math:`\{(1,3,1,1), \frac{1}{2}(1,-1,1,1), (-2,0,1,1)\}` er þverstæður
+  frunnur fyrir :math:`W=Span\{(1,3,1,1),(1,1,1,1),(-1,5,2,2)\} \in \mathbb{R}^4`.
+  Fáum þá þverstaðlaðan grunn fyrir :math:`W` sem er
+
+  .. math:: \left\{\frac{(1,3,1,1)}{||(1,3,1,1)||}, \frac{\frac{1}{2}(1,-1,1,1)}{||(1,-1,1,1)||}, \frac{-2,0,1,1}{||(-2,0,1,1)||}\right\}
+    
+  .. math:: = \left\{\frac{(1,3,1,1)}{s\sqrt{3}}, \frac{1}{2}(1,-1,1,1), \frac{-2,0,1,1}{\sqrt{6}}\right\}
+
+Hvernig finnum við þverstaðlaðan grunn?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Skref 1.** Byrjum á að finna einhvern grunn fyrir :math:`W`.
+
+**Skref 2.** Notum aðferð Gram-Schmidt til að finna þverstæðan grunn fyrir :math:`W`.
+
+**Skref 3.** Ef bið fengum þverstæðan grunninn :math:`\{\ve v_1, \ve v_2, \cdots, \ve v_p\}`
+í skrefi 2 þá búum við til þverstaðlaða grunninn
+
+.. math:: \left\{\frac{\ve v_1}{||\ve v_1||}, \frac{\ve v_2}{||\ve v_2||}, \cdots, \frac{\ve v_p}{||\ve v_p||}\right\}.
+
+
+Aðferð minnstu kvaðrat 
+-------------------------
