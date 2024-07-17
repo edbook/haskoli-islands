@@ -319,7 +319,7 @@ Setning: Þverstæð mengi
 .. admonition:: Setning
   :class: setning
 
-  Þverstætt mengi :math:`S={\ve u_1, \cdots \ve u_p}` af vigrum þar sem enginn vigur er núllvigur er línulega óháð.
+  Þverstætt mengi :math:`S=\{\ve u_1, \cdots \ve u_p\}` af vigrum þar sem enginn vigur er núllvigur er línulega óháð.
   Þannig myndar þverstærr mengi grunn fyrir hlutrúmið sem :math:`S` spannar.
 
 Þverstæður grunnur
@@ -344,7 +344,7 @@ Setning: Þverstæðir grunnar
 .. admonition:: Setning
   :class: setning
 
-  Ef :math:`\mathbb{B}={\ve u_1 \cdot \ve u_p}` er þverstæður grunnur fyrir :math:`W` sem 
+  Ef :math:`\mathbb{B}=\{\ve u_1 \cdots \ve u_p\}` er þverstæður grunnur fyrir :math:`W` sem 
   er hlutrúm í :math:`\mathbb{R}^n` þá eru vogstuðlarnir fyrir línulegu samantektina (með öðrum oðrum, hnit :math:`\ve y` m.t.t. :math:`\mathbb{B}`)
 
   .. math:: \ve y = c_1\ve u_1+\cdots+c_p\ve u_p
@@ -391,3 +391,248 @@ Sýnidæmi: Þverstæður grunnur
 
   .. math:: [\ve y]_\mathcal{B}=\left(-\frac{1}{5}, \frac{3}{5}, \frac{1}{3}\right)
 
+Hornrétt ofanvarp
+-------------------
+
+Skilgreining: Hornrétt ofanvarp
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`\ve u \neq \ve 0` vera vigur í :math:`\mathbb{R}^n`. Látum nú
+  :math:`\ve y` vera vigur í :math:`\mathbb{R}^n`. Vigurinn
+
+  .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}\cdot \ve u
+
+  er kallaður **hornrétt ofanvarp vigursins y á vigurinn u** (e. orthogonal projection og  :math:`\ve y` on  :math:`\ve u`).
+  Það að rita :math:`\ve y=\hat{\ve y}+\ve z` er kallað að liða vigurinn :math:`\ve y` upp í liði þannig að annar er samsíða
+  :math:`\ve u` og hinn er hornréttur á :math:`\ve u`.  
+
+
+Sýnidæmi: Hornrétt ofanvarp
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Látum :math:`\ve u=(3,1)` og :math:`\ve y=(1,3)`. Reiknið hornrétt 
+  ofanvarp :math:`\ve u` á :math:`\ve y`
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}=\frac{(3,1)\cdot(1,3)}{(3,1)\cdot(3,1)}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\frac{6}{10}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\frac{3}{5}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}
+
+  og þverþátturinn er 
+
+  .. math:: \ve z = \ve y - \hat{\ve y}=\begin{bmatrix}1 \\3 \end{bmatrix}-\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}=\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}
+
+  Í kjölfari er stundum gagnlegt að finna fjarlægð :math:`\ve y` frá rúminu sem :math:`\ve u` spannar.
+  Það er :math:`||\ve z||`.
+
+  .. math:: \sqrt{(-\frac{4}{5})^2+(\frac{12}{5})^2}=\sqrt{\frac{16}{25}+\frac{144}{25}}=\sqrt{32}
+
+.. admonition:: Lausnir prófaðar
+  :class: daemi, dropdown
+
+  Fengum gefið :math:`\ve u=\begin{bmatrix} 3 \\1 \end{bmatrix}` og :math:`\ve y=\begin{bmatrix} 1 \\3 \end{bmatrix}`. Við fengum 
+  :math:`\hat{\ve y}=\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}` og 
+  :math:`\hat{\ve z}=\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}`. Prófum þessar lasunir 
+  
+    :math:`\ve y` er summan að  :math:`\hat{\ve y}` og  :math:`\ve z`
+    
+    .. math:: \hat{\ve y}+\ve z =\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}+\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}=\begin{bmatrix} 1 \\ 3 \end{bmatrix}
+    
+    :math:`\hat{\ve y}` er samsíða :math:`\ve u` því
+
+    .. math:: \hat{\ve y} = \begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix} = \frac{3}{5} \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \frac{3}{5} \ve u
+     
+    :math:`\ve z` er hornrétt á :math:`\ve u`
+
+    .. math:: \ve z \cdot \ve u = \begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix} \cdot \begin{bmatrix} 3 \\1 \end{bmatrix} = -\frac{12}{3}+\frac{12}{3}=0
+
+
+Skilgreining: Hornrétta ofanvarpið
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+  :class: skilgreining
+
+  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`. Skilgreinum vörpun :math:`proj_w:\mathbb{R}^n \rightarrow \mathbb{R}^n`
+  þannig að fyrir vigur :math:`\ve y \ in \mathbb{R}^n` er :math:`proj_w \ve y=\hat{\ve y}`. Þessi vörpun er kölluð **hornrétts ofanvarpið** á 
+  hlutrúmið :math:`W`.
+
+Eiginleikar ofanvarps
+~~~~~~~~~~~~~~~~~~~~~~
+
+Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`.
+
+    **1.** Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` þá er :math:`proj_w(\ve y) \in W`.
+
+    **2.** Ef :math:`\ve y \in W` þá er :math:`proj_w \ve y=\ve y`
+
+    **3.** Ef :math:`\ve y \in W^\perp` þá er :math:`proj_w \ve y=\ve 0`
+
+    **4.** Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` gildir að :math:`proj_w(proj_w \ve y)=proj_w \ve y` 
+    um vörpunina :math:`proj_w` gildir að :math:`proj_w \cdot  y=\ve y`
+
+
+Rifjum upp að grunnur fyrir hlutrúm :math:`W` er sagður *þverstaðlaður* ef hann er *þverstæður* og sérhver
+vigur í grunninum er einingarvigur (hefur lengs 1). Ef :math:`\{\ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverst´'ur grunnur þá er 
+grunnurinn :math:`\{ \frac{\ve u_1}{||\ve u_1||}, \frac{\ve u_2}{||\ve u_2||}, \cdots, \frac{\ve u_p}{||\ve u_p||} \}` þverstaðlaður.
+Þar sem alltaf er til þverstæður grunnur fyrir hlutrúm fáum við nú að alltaf er til þverstaðlaður grunnur.
+
+Setning: Ofavarp og þverstaðlaðir grunnar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`. Ef :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverstaðlaður grunnur
+  fyrir :math:`W` þá er 
+
+  .. math:: proj_w \ve y=\hat{\ve y}=(\ve y \cdot \ve u_1)\ve u_1 + (\ve y \cdot \ve u_2)\ve u_2+ \cdots + (\ve y \cdot \ve u_p)\ve u_p
+
+Setning: Fylki fyrir ofanvarp
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n` og gerum ráð fyrir að 
+  :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` sé þverstaðlaður grunnur fyrir
+  :math:`W`. Skilgreinum :math:`n \times p` fylkið 
+
+  .. math:: U = \begin{bmatrix} \ve u_1 & \ve u_2 & \cdots & \ve u_p \end{bmatrix}
+
+  Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` er 
+
+  .. math:: proj_w \ve y = UU^T \ve y.
+
+
+Gram-Schmidt
+--------------
+
+Gram-Schmidt reikniritið
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Við setjum okkur að leysa eftirfarandi verkefni:
+
+Út frá tilteknum grunni :math:`\{\ve x_1, \cdots, \ve x_p \}` fyrir hlutrúm :math:`W` í :math:`\mathbb{R}^n` 
+viljum við búa til þverstæðan grunn :math:`\{ \ve v_1, \cdots, \ve v_p\}` fyrir :math:`W`.
+Þetta er gert með þeim hætti að fyrir sérhvert :math:`k=1, \cdots, n` ver'i :math:`\ve v_1, \cdots, \ve v_k`
+þverstæð upptalning og 
+
+.. math:: Span(\{\ve v_1, \cdots, \ve v_k\})=Span(\{\ve x_1, \cdots, \ve x_k\}).
+
+Reikniritið sem við notum er oftast nefnt **Gram-Schmidt-aðferð**
+
+
+Setning: Gram-Schmidt aðferð
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`\{x_1, \cdots, x_p\}` vera grunn fyrir hlutrúm :math:`W` ( og :math:`W \neq {\ve 0}`)
+  í :math:`\mathbb{R}^n`. setjum
+
+  .. math:: \ve v_1 = \ve x_1
+
+  .. math:: \ve v_2 = \ve x_2 - \frac{\ve x_2 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1
+
+  .. math:: \ve v_3 = \ve x_3 - \frac{\ve x_3 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1 - \frac{\ve x_3 \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2
+
+  .. math:: \vdots
+  
+  .. math:: \ve v_p = \ve x_p- \frac{\ve x_p \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1
+     - \frac{\ve x_p \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2 - 
+     \cdots - \frac{\ve x_p \cdot \ve v_{p-1}}{\ve v_{p-1} \cdot \ve v_{p-1}}\ve v_{p-1}
+
+  Þá er :math:`\{v_1, \cdots, v_p\}` þverstæður grunnur fyrir :math:`W` og 
+
+  .. math:: Span(\{\ve v_1, \cdots, \ve v_p\})=Span(\{\ve x_1, \cdots, \ve x_p\})
+  
+  fyrir :math:`k=1, \cdots, p`.
+
+Sýnidæmi: Gram-Schmidt
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Látum 
+  
+  .. math:: W=Span\left\{\begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix}, 
+    \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix}
+    -1 \\ 5 \\ 2 \\ 2 \end{bmatrix}\right\{ \in \mathbb{R}^4
+  
+  Finnið þverstæðan grunn fyrir :math:`V`.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Notum reikniaðferð Gram-Schmidt
+
+  **Skref 1:** Sjáum að vigrarnir :math:`\ve x_1=(1,3,1,1), \ve x_2=(1,1,1,1) \text{ og } \ve x_3=(-1,5,2,2)` 
+  eru línulega óháðir og mynda því þeir grunn fyrir :math:`W`.
+
+  **Skref 2:** Setjum :math:`\ve v_1=\ve x_1=(1,3,1,1)`. Svo setjum við
+
+  .. math:: \ve v_2 = \ve x_2 - \frac{\ve x_2 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1
+
+  .. math:: = (1,1,1,1)- 
+    \frac{(1,1,1,1) 
+    \cdot (1,3,1,1)}{(1,3,1,1)
+    \cdot (1,3,1,1)}
+    (1,3,1,1)
+
+  .. math:: (1,1,1,1) - \frac{6}{12}(1,3,1,1)
+    = (1/2, -1/2, 1/2, 1/2)
+    = \frac{1}{2}(1,-1,1,1).
+
+  Prófun sýnir að :math:`\ve v_2` er hornréttur á :math:`\ve v_1`. Að lokum setjum við
+
+  .. math:: \ve v_3 = \ve x_3 - \frac{\ve x_3 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1 - \frac{\ve x_3 \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2 
+
+  .. math:: = (-1,5,2,2)- 
+    \frac{(-1,5,2,2) \cdot (1,3,1,1)}
+    {(1,3,1,1) \cdot (1,3,1,1)}
+    (1,3,1,1)
+  
+  .. math:: - \frac{(-1,5,2,2) \cdot \frac{1}{2}(1,-1,1,1)}
+    {\frac{1}{2}(1,-1,1,1) \cdot \frac{1}{2}(1,-1,1,1)}
+    \frac{1}{2}(1,-1,1,1)
+
+  .. math:: = (-1,5,2,2)-(18/12(1,3,1,1)-\frac{1}{2}(1,-1,1,1))
+    
+  .. math:: =(-2,0,1,1)
+
+  **Skref 3:** Prófun sýnir að :math:`\ve v_3` er hornréttur á :math:`\ve v_1` og :math:`\ve v_2`.
+  
+  Vigrarnir :math:`\ve v_1, \ve v_2, \ve v_3` mynda þverstæðan grunn fyrir :math:`W`.
+
+  Höfum því sýnt að :math:`\{(1,3,1,1), \frac{1}{2}(1,-1,1,1), (-2,0,1,1)\}` er þverstæður
+  frunnur fyrir :math:`W=Span\{(1,3,1,1),(1,1,1,1),(-1,5,2,2)\} \in \mathbb{R}^4`.
+  Fáum þá þverstaðlaðan grunn fyrir :math:`W` sem er
+
+  .. math:: \left\{\frac{(1,3,1,1)}{||(1,3,1,1)||}, \frac{\frac{1}{2}(1,-1,1,1)}{||(1,-1,1,1)||}, \frac{-2,0,1,1}{||(-2,0,1,1)||}\right\}
+    
+  .. math:: = \left\{\frac{(1,3,1,1)}{s\sqrt{3}}, \frac{1}{2}(1,-1,1,1), \frac{-2,0,1,1}{\sqrt{6}}\right\}
+
+Hvernig finnum við þverstaðlaðan grunn?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Skref 1.** Byrjum á að finna einhvern grunn fyrir :math:`W`.
+
+**Skref 2.** Notum aðferð Gram-Schmidt til að finna þverstæðan grunn fyrir :math:`W`.
+
+**Skref 3.** Ef bið fengum þverstæðan grunninn :math:`\{\ve v_1, \ve v_2, \cdots, \ve v_p\}`
+í skrefi 2 þá búum við til þverstaðlaða grunninn
+
+.. math:: \left\{\frac{\ve v_1}{||\ve v_1||}, \frac{\ve v_2}{||\ve v_2||}, \cdots, \frac{\ve v_p}{||\ve v_p||}\right\}.
+
+
+Aðferð minnstu kvaðrat 
+-------------------------
