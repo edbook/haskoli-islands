@@ -121,7 +121,7 @@ Skilgreining: Fjarlægð milli punkta í :math:`\R^n`
 
     Látum :math:`\ve u` og :math:`\ve v` vera vigra í :math:`\R^n`. **Fjarlægðin** milli :math:`\ve u` og :math:`\ve v` er skilgreind sem lengdin á vigrinum :math:`\ve u- \ve v`, þ.e.
 
-    .. math:: dist(\ve u, \ve v):=||\ve u - \ve v || = \sqrt{(u_1-v_1)^2 + (u_2-v_2)^2 + \dots + (u_n-v_n)^2}.
+    .. math:: d(\ve u, \ve v):=||\ve u - \ve v || = \sqrt{(u_1-v_1)^2 + (u_2-v_2)^2 + \dots + (u_n-v_n)^2}.
 
 Í skilgreiningunni hér að ofan hugsum við um :math:`\ve u` og :math:`\ve v` ýmist sem vigra eða punkt í :math:`\R^n`. Á eftirfarandi mynd má sjá fjarlægð milli tveggja vigra.
 
@@ -146,11 +146,11 @@ Reiknireglur um fjarlægðir
     :class: setning
 
     Látum :math:`\ve u, \ve v` og :math:`\ve w` vera puntka í :math:`\R^n`. Þá gildir
-        **1.** :math:`dist(\ve u, \ve v) \geq 0` og :math:`dist(\ve u, \ve v)=0` ef og aðeins ef :math:`\ve u= \ve v`
+        **1.** :math:`d(\ve u, \ve v) \geq 0` og :math:`d(\ve u, \ve v)=0` ef og aðeins ef :math:`\ve u= \ve v`
 
-        **2.** :math:`dist(\ve u, \ve v) = dist(\ve v, \ve u)`
+        **2.** :math:`d(\ve u, \ve v) = d(\ve v, \ve u)`
 
-        **3.** :math:`dist(\ve u, \ve w) \leq dist(\ve u + \ve v)+dist(\ve v + \ve w)` 
+        **3.** :math:`d(\ve u, \ve w) \leq d(\ve u + \ve v) + d(\ve v + \ve w)` 
 
 Fall :math:`d: \R^n \times \R^n \rightarrow \R` sem uppfyllir þessi þrjú skilyrði kallast *firð* (e. metric).
 
@@ -465,11 +465,13 @@ Skilgreining: Hornrétt ofanvarp
 
   .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}\cdot \ve u
 
-  sem *hornrétt ofanvarp* (e. orthogonal projection) :math:`\ve y` á :math:`\ve u`. Stundum er ofanvarp táknað með Proj(:math:`\ve y`). 
+  sem *hornrétt ofanvarp* (e. orthogonal projection) :math:`\ve y` á :math:`\ve u`. Stundum er ofanvarp táknað með proj(:math:`\ve y`). 
 
 Liða má vigur :math:`\ve y \in \R` upp í samsíðan og hornréttan þátt, þ.e. :math:`\ve y=\hat{\ve y}+\ve z`, eins og sjá má á eftirfarandi mynd.
 
 .. figure:: myndir/ofanvarp.png
+
+Punkturinn :math:`\hat{\ve y}` er sá punktur á línunni í planinu sem er í minnstri fjarlægð frá punktinum :math:`\ve y`.
 
 Sýnidæmi: Hornrétt ofanvarp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -522,52 +524,70 @@ Sýnidæmi: Hornrétt ofanvarp
     Já.
 
 
-Skilgreining: Hornrétta ofanvarpið
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Hornrétt ofanvarp á hlutrúm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`. Skilgreinum vörpun :math:`proj_w:\mathbb{R}^n \rightarrow \mathbb{R}^n`
-  þannig að fyrir vigur :math:`\ve y \ in \mathbb{R}^n` er :math:`proj_w \ve y=\hat{\ve y}`. Þessi vörpun er kölluð **hornrétts ofanvarpið** á 
-  hlutrúmið :math:`W`.
+  Látum :math:`W` vera hlutrúm og :math:`\ve y` vera vigur í :math:`\R^n`. Við skilgreinum hornrétt ofanvarp á hlutrúm :math:`W` sem
+  :math:`\text{proj}_W: \R^n \rightarrow \R^n` þannig að :math:`\text{proj}_W \ve y = \hat{\ve y}\in W` er hornrétt ofanvarp vigurs :math:`\ve y` á :math:`W` og
+  :math:`\ve z=\ve y - \hat{\ve y} \in W^{\perp}`.
 
+  
 Eiginleikar ofanvarps
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`.
+.. admonition:: Setning
+  :class: setning
 
-    **1.** Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` þá er :math:`proj_w(\ve y) \in W`.
+  Látum :math:`W` vera hlutrúm í :math:`\R^n`.
 
-    **2.** Ef :math:`\ve y \in W` þá er :math:`proj_w \ve y=\ve y`
+    **1.** Fyrir sérhvern vigur :math:`\ve y \in \R^n` þá er :math:`\text{proj}_W(\ve y) \in W`.
 
-    **3.** Ef :math:`\ve y \in W^\perp` þá er :math:`proj_w \ve y=\ve 0`
+    **2.** Ef :math:`\ve y \in W` þá er :math:`\text{proj}_W \ve y=\ve y`.
 
-    **4.** Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` gildir að :math:`proj_w(proj_w \ve y)=proj_w \ve y` 
-    um vörpunina :math:`proj_w` gildir að :math:`proj_w \cdot  y=\ve y`
+    **3.** Ef :math:`\ve y \in W^\perp` þá er :math:`\text{proj}_W \ve y=\ve 0`
+    
+    **4.** Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` gildir að :math:`\text{proj}_W(\text{proj}_W \ve y)=\text{proj}_W \ve y` svo
+    um vörpunina :math:`\text{proj}_W` gildir því að :math:`\text{proj}_W \circ  \text{proj}_W = \text{proj}_W`
 
 
-Rifjum upp að grunnur fyrir hlutrúm :math:`W` er sagður *þverstaðlaður* ef hann er *þverstæður* og sérhver
-vigur í grunninum er einingarvigur (hefur lengs 1). Ef :math:`\{\ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverst´'ur grunnur þá er 
-grunnurinn :math:`\{ \frac{\ve u_1}{||\ve u_1||}, \frac{\ve u_2}{||\ve u_2||}, \cdots, \frac{\ve u_p}{||\ve u_p||} \}` þverstaðlaður.
-Þar sem alltaf er til þverstæður grunnur fyrir hlutrúm fáum við nú að alltaf er til þverstaðlaður grunnur.
-
-Setning: Ofavarp og þverstaðlaðir grunnar
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Hornréttir grunnar fyrir hlutrúm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
   :class: setning
 
-  Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n`. Ef :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverstaðlaður grunnur
-  fyrir :math:`W` þá er 
+  Látum :math:`W` vera hlutrúm í :math:`\R^n`. Ef :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverstæður grunnur fyrir :math:`W` þá er
 
-  .. math:: proj_w \ve y=\hat{\ve y}=(\ve y \cdot \ve u_1)\ve u_1 + (\ve y \cdot \ve u_2)\ve u_2+ \cdots + (\ve y \cdot \ve u_p)\ve u_p
+    **1.** :math:`W=\text{span}\{\ve u_1, \cdots \ve u_p\}`.
 
-Setning: Fylki fyrir ofanvarp
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    **2.** Mengið :math:`\{\ve u_1, \cdots \ve u_p\}` er línulega óháð.
+
+    **3.** Ef :math:`i \neq j` þá eru :math:`\ve u_i` og  :math:`\ve u_j` hornréttir horn á annan, m.ö.o.  :math:`\ve u_i \cdot \ve u_j =0`.
+
+Setning: Hornrétt liðun (e. orthognal decomposition)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
   :class: setning
+
+  Látum :math:`W` vera hlutrúm og :math:`\ve y` vera vigur í :math:`\R^n`. Þá er til ótvírætt ákvarðaður vigur :math:`\hat{\ve y}\in W` þannig að :math:`\ve z = \ve y - \hat{\ve y}\in W^{\perp}`.
+  Ef :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverstæður grunnur fyrir :math:`W` þá er
+
+  .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u_1}{\ve u_1 \cdot \ve u_1} \ve u_1 + \frac{\ve y \cdot \ve u_2}{\ve u_2 \cdot \ve u_2} \ve u_2 + \cdots + \frac{\ve y \cdot \ve u_p}{\ve u_p \cdot \ve u_p} \ve u_p.
+
+  Eins ef :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` er þverstaðlaður grunnur fyrir :math:`W` þá er
+
+  .. math:: \hat{\ve y} = (\ve y \cdot \ve u_1)\ve u_1 + (\ve y \cdot \ve u_2)\ve u_2 + \cdots + (\ve y \cdot \ve u_p)\ve u_p.
+
+
+Skilgreinig: Fylki fyrir ofanvarp
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+  :class: skilgreining
 
   Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n` og gerum ráð fyrir að 
   :math:`\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}` sé þverstaðlaður grunnur fyrir
@@ -577,35 +597,25 @@ Setning: Fylki fyrir ofanvarp
 
   Fyrir sérhvern vigur :math:`\ve y \in \mathbb{R}^n` er 
 
-  .. math:: proj_w \ve y = UU^T \ve y.
+  .. math:: \text{proj}_W \ve y = UU^T \ve y.
+
+  Fylkið :math:`P_W=UU^T` er af stærð :math:`n \times n` og er kallað *ofanvarpsfylkið* (e. projection matrix) á hlutrúmið :math:`W`.
 
 
 Gram-Schmidt
 --------------
 
-Gram-Schmidt reikniritið
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Við setjum okkur að leysa eftirfarandi verkefni:
-
-Út frá tilteknum grunni :math:`\{\ve x_1, \cdots, \ve x_p \}` fyrir hlutrúm :math:`W` í :math:`\mathbb{R}^n` 
-viljum við búa til þverstæðan grunn :math:`\{ \ve v_1, \cdots, \ve v_p\}` fyrir :math:`W`.
-Þetta er gert með þeim hætti að fyrir sérhvert :math:`k=1, \cdots, n` ver'i :math:`\ve v_1, \cdots, \ve v_k`
-þverstæð upptalning og 
-
-.. math:: Span(\{\ve v_1, \cdots, \ve v_k\})=Span(\{\ve x_1, \cdots, \ve x_k\}).
-
-Reikniritið sem við notum er oftast nefnt **Gram-Schmidt-aðferð**
+Aðferð Gram-Schmidt er reiknirit til þess að búa til þverstæðan eða þverstaðlaðan grunn fyrir hlutrúm, að undanskildu núllrúmi, í :math:`\R^n`.
 
 
-Setning: Gram-Schmidt aðferð
+Setning: Aðferð Gram-Schmidt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
   :class: setning
 
-  Látum :math:`\{x_1, \cdots, x_p\}` vera grunn fyrir hlutrúm :math:`W` ( og :math:`W \neq {\ve 0}`)
-  í :math:`\mathbb{R}^n`. setjum
+  Látum :math:`\{\ve x_1, \cdots, \ve x_p\}` vera grunn fyrir hlutrúm :math:`W` ( og :math:`W \neq {\ve 0}`)
+  í :math:`\mathbb{R}^n`. Setjum
 
   .. math:: \ve v_1 = \ve x_1
 
@@ -619,9 +629,9 @@ Setning: Gram-Schmidt aðferð
      - \frac{\ve x_p \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2 - 
      \cdots - \frac{\ve x_p \cdot \ve v_{p-1}}{\ve v_{p-1} \cdot \ve v_{p-1}}\ve v_{p-1}
 
-  Þá er :math:`\{v_1, \cdots, v_p\}` þverstæður grunnur fyrir :math:`W` og 
+  Þá er :math:`\{\ve v_1, \cdots, \ve v_p\}` þverstæður grunnur fyrir :math:`W` og 
 
-  .. math:: Span(\{\ve v_1, \cdots, \ve v_p\})=Span(\{\ve x_1, \cdots, \ve x_p\})
+  .. math:: \text{Span}(\{\ve v_1, \cdots, \ve v_p\})=\text{Span}(\{\ve x_1, \cdots, \ve x_p\})
   
   fyrir :math:`k=1, \cdots, p`.
 
@@ -631,21 +641,21 @@ Sýnidæmi: Gram-Schmidt
 .. admonition:: Dæmi
   :class: daemi
 
-  Látum 
+  Finna á þverstæðan og þverstaðlaðan grunn fyrir 
   
-  .. math:: W=Span\left\{\begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix}, 
+  .. math:: W=\text{Span}\left\{\begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix}, 
     \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix}
-    -1 \\ 5 \\ 2 \\ 2 \end{bmatrix}\right\{ \in \mathbb{R}^4
+    -1 \\ 5 \\ 2 \\ 2 \end{bmatrix}\right\} \subseteq \mathbb{R}^4.
   
-  Finnið þverstæðan grunn fyrir :math:`V`.
+
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-  Notum reikniaðferð Gram-Schmidt
+  Notum reiknirit Gram-Schmidt
 
-  **Skref 1:** Sjáum að vigrarnir :math:`\ve x_1=(1,3,1,1), \ve x_2=(1,1,1,1) \text{ og } \ve x_3=(-1,5,2,2)` 
-  eru línulega óháðir og mynda því þeir grunn fyrir :math:`W`.
+  **Skref 1:** Við sjáum að vigrarnir :math:`\ve x_1=(1,3,1,1), \ve x_2=(1,1,1,1) \text{ og } \ve x_3=(-1,5,2,2)` 
+  eru línulega óháðir og mynda því grunn fyrir :math:`W`.
 
   **Skref 2:** Setjum :math:`\ve v_1=\ve x_1=(1,3,1,1)`. Svo setjum við
 
@@ -678,30 +688,83 @@ Sýnidæmi: Gram-Schmidt
     
   .. math:: =(-2,0,1,1)
 
-  **Skref 3:** Prófun sýnir að :math:`\ve v_3` er hornréttur á :math:`\ve v_1` og :math:`\ve v_2`.
-  
-  Vigrarnir :math:`\ve v_1, \ve v_2, \ve v_3` mynda þverstæðan grunn fyrir :math:`W`.
+  Prófun sýnir að :math:`\ve v_3` er hornréttur á :math:`\ve v_1` og :math:`\ve v_2`. Vigrarnir :math:`\ve v_1, \ve v_2, \ve v_3` mynda þverstæðan grunn fyrir :math:`W`.
 
-  Höfum því sýnt að :math:`\{(1,3,1,1), \frac{1}{2}(1,-1,1,1), (-2,0,1,1)\}` er þverstæður
-  frunnur fyrir :math:`W=Span\{(1,3,1,1),(1,1,1,1),(-1,5,2,2)\} \in \mathbb{R}^4`.
-  Fáum þá þverstaðlaðan grunn fyrir :math:`W` sem er
+  
+  **Skref 3:** Þverstaðlaður grunnur fyrir :math:`W` fæst með
 
   .. math:: \left\{\frac{(1,3,1,1)}{||(1,3,1,1)||}, \frac{\frac{1}{2}(1,-1,1,1)}{||(1,-1,1,1)||}, \frac{-2,0,1,1}{||(-2,0,1,1)||}\right\}
     
-  .. math:: = \left\{\frac{(1,3,1,1)}{s\sqrt{3}}, \frac{1}{2}(1,-1,1,1), \frac{-2,0,1,1}{\sqrt{6}}\right\}
+  .. math:: = \left\{\frac{(1,3,1,1)}{2\sqrt{3}}, \frac{1}{2}(1,-1,1,1), \frac{-2,0,1,1}{\sqrt{6}}\right\}
 
-Hvernig finnum við þverstaðlaðan grunn?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Að finna þverstaðlaðan grunn fyrir hlutrúm :math:`W`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Skref 1.** Byrjum á að finna einhvern grunn fyrir :math:`W`.
+**Skref 1.** Byrjum á því að finna einhvern grunn fyrir :math:`W`.
 
 **Skref 2.** Notum aðferð Gram-Schmidt til að finna þverstæðan grunn fyrir :math:`W`.
 
-**Skref 3.** Ef bið fengum þverstæðan grunninn :math:`\{\ve v_1, \ve v_2, \cdots, \ve v_p\}`
-í skrefi 2 þá búum við til þverstaðlaða grunninn
+**Skref 3.** Staðla grunninn :math:`\{\ve v_1, \ve v_2, \cdots, \ve v_p\}` sem fékkst í skrefi 2, ef hann var ekki þverstaðlaður nú þegar, með því að deila með lengdinni
 
 .. math:: \left\{\frac{\ve v_1}{||\ve v_1||}, \frac{\ve v_2}{||\ve v_2||}, \cdots, \frac{\ve v_p}{||\ve v_p||}\right\}.
 
 
-Aðferð minnstu kvaðrat 
+Aðferð minnstu kvaðrata 
 -------------------------
+
+Aðferð minnstu kvarðrata (e. least squares) snýst um að finna nálgunarlausn á :math:`A \ve x = \ve b` þegar ekki er til nákvæm lausn. Heitið kemur frá því að ef við höfum
+:math:`\ve b = (\ve b_1, \cdots, \ve b_n)` og :math:`A \ve x = (\ve y_1, \cdots, \ve y_n)` og setjum :math:`\ve x = \hat{\ve x}` þá er summa minnstu kvarðatanna
+ 
+.. math:: ||\ve b - A \ve x ||^2=(\ve b_1 - \ve y_1)^2+ \cdots + (\ve b_n - \ve y_n)^2.
+
+eins lítil og mögulegt er.
+
+MYND
+
+
+Skilgreining: Aðferð minnstu kvaðrata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+  :class: skilgreining
+
+  Látum :math:`A` vera :math:`m \times n` fylki og :math:`\ve b\in \R^m`. *Minnstu kvaðrata lausn* (e. least squares solution) á :math:`A \ve x = \ve b` er vigur
+  :math:`\hat{\ve x}` þannig að
+
+  .. math:: ||\ve b - A \hat{\ve x} || \leq || \ve b - A \hat{\ve x}||
+  
+  fyrir alla vigra :math:`\ve x \in \R^n`.
+
+.. admonition:: Athugasemd
+  :class: athugasemd
+
+  Ef engin lasun er til á :math:`A \ve x = \ve b` þá er :math:`\ve b \notin \text{Col}(A)`. Aðferð minnstu kvaðrata er notuð til þess að finna hvaða punktur í dálkrúminu er næstur :math:`\ve b`. Það er punkturinn :math:`\hat{\ve b}` sem er hornrétta ofanvarpið af :math:`\ve b` á dálkrúm :math:`A`.
+
+
+Setning: Lausnarmengi aðferð minnstu kvaðrata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Þessi niðurstaða er mjög gagnleg í útreikningum!
+
+.. admonition:: Setning
+  :class: setning
+
+  Látum :math:`A` vera :math:`m \times n` fylki og :math:`\ve b \in \R^m`. Mengi minnstu kvaðrata lausna :math:`A\ve x = \ve b` er jafnt lausnarmengi :math:`A^T A \ve x = A^T \ve b` sem hefur alltaf lausn.
+
+
+.. admonition:: Fylgisetning
+  :class: setning
+
+  Látum :math:`A` vera :math:`m \times n` fylki og :math:`\ve b \in \R^m`. Ef dálkvigrar :math:`A` eru línulega óháðir þá er fylkið :math:`A^T A` andhverfanlegt og minnstu kvaðrata lausn :math:`A \ve x = \ve b` er
+
+  .. math:: \hat{\ve x} = \left(A^T A\right)^{-1} A^T \ve b.
+  
+Sýnidæmi: Aðferð minnstu kvaðrata
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Sýnidæmi
+  :class: daemi
+
+  Finna á nálgunarlausn á eftirfarandi jöfnuhneppi
+
+  .. math:: A=
