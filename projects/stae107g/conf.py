@@ -12,6 +12,9 @@ mathjax_config = {
             "col": '{\\text{Col}}',
             "ker": '{\\text{Ker}}',
             "range": '{\\text{Range}}',
+            "dim": '{\\text{dim}}',
+            "row": '{\\text{Row}}',
+            "rnk": '{\\text{Rank}}',
             }
         }                           
     }                               
