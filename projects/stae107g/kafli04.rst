@@ -271,3 +271,457 @@ Setning: Dálkrúm er hlutrúm
 
     Látum :math:`A` vera :math:`m\times n` fylki. Dálkrúm :math:`A`, :math:`\col{A}`, er hlutrúm í :math:`\R^m`.
 
+
+Samanburður á núllrúmum og dálkrúmum
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Samanburður
+    :class: daemi
+
+    Látum :math:`A` vera :math:`m\times n` fylki.
+
+    - Núllrúmið :math:`\nul{A}` er hlutrúm í :math:`\R^n` en dálkrúmið :math:`\col{A}` er hlutrúm í :math:`\R^m`.
+
+    - Við finnum núllrúmið með því að leysa jöfnuna :math:`A\ve x=\ve 0`.
+    - Við finnum dálkrúmið með því að skoða spann dálkvigranna.
+
+    - Vigur :math:`\ve v\in\R^n` er í :math:`\nul{A}` ef og aðeins ef :math:`A\ve v=\ve 0`.
+    - Vigur :math:`\ve b\in\R^m` er í :math:`\col{A}` ef og aðeins ef jafnan :math:`A\ve x=\ve b` hefur lausn. 
+
+
+Skilgreining: Kjarni og mynd 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    :math:`T\colon V\to W` vera línulega vörpun.
+
+    **a.** Kjarni (e. kernel, null space) vörpunarinnar T er mengi allra vigra :math:`\ve u\in V` þannig að
+    :math:`T(\ve u)=\ve 0`. Kjarninn er táknaður með :math:`\ker{T}` og
+
+    .. math:: \ker{T}=\{\ve u\in V\colon T(\ve u)=\ve 0\}.
+
+    **b.** Mynd (e. range) vörpunarinnar T er mengi allra vigra í :math:`W` sem rita má á forminu 
+    :math:`T(\ve x)` fyrir eitthvað :math:`\ve x\in V`. Myndin er oft táknuð :math:`\range{T}` og
+
+    .. math:: \range{T}=\{T(\ve x)\colon \ve x\in V\}.
+
+    Athugasemd: ef :math:`T(\ve x)=A\ve x` fyrir eitthvað fylki :math:`A` þá er :math:`\ker{T}=\nul{A}` og
+    :math:`\range{T}=\col{A}`.
+
+TODO: KANNSKI SKRIFA MEIRA UM KJARNA?? SKOÐA SETNINGU 14.2.4 HJÁ RÖGGA
+
+Setning: Um tengsl varpanna og núll- og dálkrúma 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`m\times n` fylki og :math:`T\colon \R^n\to\R^m` vera línulega vörpun 
+    þanning að :math:`T(\ve x)=A\ve x` fyrir alla vigra :math:`x\in\R^n`. Þá gildir
+    :
+
+    **1.** Vörpunin :math:`T` er eintæk þá og því aðeins að :math:`\nul{A}=\{\ve 0\}`.
+
+    **2.** Vörpunin :math:`T` er átæk þá og því aðeins að :math:`\col{A}=\R^m`.
+
+Við vitum núþegar að línuleg vörpun er eintæk ef og aðeins ef hún er átæk. Setningin segir okkur því líka að núllrúmið 
+innihaldi aðeins :math:`\ve 0` þá og því aðeins að dálkrúmið sé :math:`\R^m`. Þetta samband gildir raun almennar eins og við
+munum sjá í TODO: SETJA HYPERLINK Á RANKSETNINGARUMFJÖLLUN
+
+
+Grunnar og hnit
+---------------
+
+Skilgreining: Grunnur
+^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`H` vera hlutrúm í vigurrúmi :math:`V`. Upptalning :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`
+    á vigrum í :math:`V` kallast grunnur fyrir :math:`H` ef eftirfarandi skilyrði eru bæði uppfyllt
+    :
+
+    **(i)** Upptalningin :math:`\mathcal{B}` er línulega óháð.
+
+    **(ii)** :math:`H=\spn\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`.
+
+    Athugasemdir:
+
+    - Ef :math:`\{\ve b_1, \ve b_2, \ldots, \ve b_p\}` er grunnur fyrir hlutrúm :math:`H` þá liggja allir vigrarnir :math:`\ve b_1, \ve b_2, \ldots, \ve b_p` í :math:`H`.
+
+    - Öll vigurrúm eru hlutrúm í sjálfu sér. Grunnur fyrir vigurrúm :math:`V` er því línulega óháð upptalning :math:`\{\ve b_1, \ve b_2, \ldots, \ve b_p\}` á vigrum í :math:`V` sem spannar allt :math:`V`.
+
+    - Við munum alltaf gera ráð fyrir að það séu endanlega margir vigrar í grunni. Þegar haldið er áfram með línulega algebru getum við þurft að nota grunna með óendanlega mörgum vigrum. Dæmi um slíkt vigurrúm er vigurrúm allra margliðna af einni breytu, þar er :math:`\{1,x,x^2,\ldots\}` grunnur.
+
+
+
+TODO: SKRIFA UPP DÆMI UM GRUNNA 
+
+Setning: Um spann mengja 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`S=\{\ve v_1, \ve v_2, \ldots, \ve v_p\}` vera mengi vigra í :math:`V` sem spannar hlutrúmið :math:`H`. 
+
+    **a.** Gerum ráð fyrir að einn vigranna í :math:`S`, :math:`\ve v_k`, sé línuleg samantekt af hinum vigrunum í :math:`S`. Þá spannar
+    :math:`S^\prime=\{\ve v_1, \ve v_2, \ldots,\ve v_{k-1}, \ve v_{k+1}, \ldots, \ve v_p\}` líka hlutrúmið :math:`H`.+
+
+    **b.** Ef :math:`H\neq\{\ve 0\}` þá er eitthvað ekki tómt hlutmengi úr :math:`S` grunnur fyrir :math:`H`. 
+
+    Athugasemd: Ef :math:`H=\{\ve 0\}` þá er :math:`\emptyset` grunnur fyrir :math:`H`, og er í raun eini grunnurinn fyrir :math:`H`.
+
+
+TODO: dæmi um að finna grunna fyrir núll-og dálkrúm
+
+Setning: Að finna grunn fyrir dálkrúm 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera fylki og :math:`U` vera efra stallaform :math:`A`. Þeir dálkar í :math:`A` þar sem er forystustuðull 
+    í efra stallaforminu :math:`U` mynda grunn fyrir dálkrúm :math:`A`. 
+
+    Athugasemdir: 
+    - Mjög mikilvægt er að taka dálkana fyrir grunninn úr :math:`A`, ekki úr :math:`U`. Við notum :math:`U` bara til að ákveða 
+    hvaða dálka úr :math:`A` við tökum.
+    - Nóg er að finna efra stallaform. Það er enginn þörf fyrir að rutt efra stallaform. 
+
+TODO: dæmi
+
+
+Setning: Tveir eiginleikar grunna 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`V` vera vigurrúm og :math:`S` vera endanlegt mengi sem spannar :math:`V`.
+    Þá inniheldur :math:`S` grunn fyrir :math:`V`
+
+    Ef :math:`T` er línulega óháð hlutmengi í :math:`V` þá er :math:`T` innihaldið í einhverjum(ekki endilega þeim sama og :math:`S` inniheldur) 
+    grunni fyrir :math:`V`.
+
+    Þetta má orða sem svo: Grunnur er eins lítið spannmengi og eins stórt línulega óháð mengi í vigurrúmi og mögulegt er.
+
+Setning: Um tilvist hnita 
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúmið :math:`V`.
+    Þá gildir fyrir sérhvern vigur :math:`\ve v` í :math:`V` að til eru *ótvírætt* ákvarðaðar tölur :math:`c_1, c_2, \ldots, c_n`
+    þannig að
+
+    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n 
+
+    Athugasemdir:
+    - Þetta má orða á þann hátt að jafnan :math:`x_1\ve b_1 + x_2\ve b_2 + \ldots + x_n\ve b_n=\ve v` hafi nákvæmlega eina lausn.
+    - Þetta má einnig orða þannig að fyrir gefinn grunn þá er til nákvæmlega ein leið til að rita gefinn vigur sem línulega samantekt vigranna í grunninum.
+
+Skilgreining: Hnit
+^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúmið :math:`V`.
+    Tölurnar :math:`c_1, c_2, \ldots, c_n` þannig að 
+
+    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n 
+
+    kallast hnit vigursins :math:`\ve v` með tilliti til grunsins :math:`\mathcal{B}` (e. coordinates of :math:`v` relative to the basis :math:`\mathcal{B}`). 
+    Við tölum líka um :math:`\mathcal{B}`-hnit vigursins :math:`v` (e. :math:`\mathcal{B}`-coordinates of :math:`v`).
+
+Skilgreining: Hnitavigur
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Ef tölurnar :math:`c_1, c_2, \ldots, c_n` eru hnit vigursins :math:`\ve x` með tilliti til grunsins :math:`\mathcal{B}`
+    þá segjum við að vigurinn
+
+    .. math:: [\ve x]_{\mathcal{B}}=\begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}
+
+    sé hnitavigur :math:`\ve x` með tilliti til grunnsins :math:`\mathcal{B}` 
+    (e. coordinate vector of :math:`x` relative to :math:`\mathcal{B}`, or :math:`\mathcal{B}`-coordinate vector). 
+
+TODO: dæmi
+
+Skilgreining: Hnitavörpun
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúm :math:`V`. Vörpunin
+
+    .. math:: V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}
+
+    kallast hnitavörpunin með tilliti til :math:`\mathcal{B}` (e. coordiante mapping determined by :math:`\mathcal{B}`).
+
+
+Vídd og rankur
+--------------
+
+Setning: Línulegt hæði mengja stærri en grunns 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúm :math:`V`. 
+    Mengi (eða upptalning) með fleiri en :math:`n` vigrum er línulega háð.
+
+Setning: Um stærð grunna 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Ef vigurrúm :math:`V` hefur grunn með nákvæmlega :math:`n` vigrum þá hefur sérhver grunnur :math:`V` nákvæmlega :math:`n` vigra.
+
+Skilgreining: Vídd
+^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Ef til er endanlegt mengi vigra sem spanna vigurrúm :math:`V` þá segjum við að :math:`V` hafi endanlega vídd (e. finite-dimensional). 
+    Vídd vigurrúmsins :math:`V` er þá skilgreind sem fjöldi vigra í grunni fyrir :math:`V` og er táknuð með :math:`\dim{V}`.
+
+    Ef slíkt mengi er ekki til þá segjum við að :math:`V` hafi óendanlega vídd.
+
+    Athugasemdir:
+
+    - Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.
+
+    - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
+
+TODO: dæmi
+
+Setning: Vídd hlutrúms
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`H` vera hlutrúm í endanlega víðu vigurrúmi :math:`V`.
+
+    **a.** Ef við höfum línulega óháð mengi vigra í :math:`H` þá má bæta við það vigrum til að smíða grunn fyrir :math:`V`.
+
+    **b.** :math:`\dim{H}\leq\dim{V}`.
+
+Setning: Samsemd línulegs óhæðis og spanns
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`V` vera vigurrúm með vídd :math:`n`.
+
+    **a.** Sérhvert mengi af :math:`n` línulega óháðum vigrum í :math:`V` er grunnur fyrir :math:`V`.
+
+    **b.** Sérhvert mengi af :math:`n` af vigrum í :math:`V` sem spanna :math:`V` er grunnur fyrir :math:`V`.
+
+    Athugasemd: Grunnur fyrir vigurrúm þarf að uppfylla tvö skilyrði. Hann þarf að vera línulega óháður og spanna allt vigurrúmið.
+    Það nægir að tékka annað skilyrðið því hitt fylgir sjálfkrafa.
+
+Setning: Forystustuðlar og vídd
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`m\times n` fylki og :math:`U` (einhvert) efra stallaform :math:`A`. 
+
+    **a.** Vídd :math:`\nul{A}` er jöfn fjölda frjálsra breyta, það er að segja víddin er jöfn fjölda dálka í :math:`U` 
+    sem innihalda ekki forystustuðul.
+
+    **b.** Vídd :math:`\col{A}` er jöfn fjölda dálka í :math:`U` sem innihalda forystustuðul (Víddin er jöfn fjölda forystustuðla).
+
+Skilgreining: Línurúm 
+^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`A` vera :math:`m\times n` fylki. Línurúm (e. row space) fylkisins :math:`A` er hlutmengið í :math:`\R^n` sem línuvigrar
+    :math:`A` spanna. Línurúm :math:`A` er táknað með :math:`\row{A}`.
+
+    Athugasemdir: Ef :math:`A` er :math:`m\times n` fylki þá gildir að
+
+    -:math:`\col{A}` er hlutrúm í :math:`\R^m`.
+
+    -:math:`\row{A}` er hlutrúm í :math:`\R^n`.
+
+    -:math:`\nul{A}` er hlutrúm í :math:`\R^n`.
+
+
+Setning: Grunnur fyrir línurúm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    **a.** Ef tvö fylki :math:`A` og :math:`B` eru línujafngild (það er að fá má annað út frá hinu með einföldum línuaðgerðum) 
+    þá eru línurúm þeirra jöfn, það er :math:`\row{A}=\row{B}`.
+
+    **b.** Ef :math:`U` er efra stallaform fylkisins :math:`A` þá mynda þeir línuvigrar í :math:`U` sem eru ekki núll 
+    grunn fyrir línurúm :math:`A`.
+
+    Athugasemd: Það eru ekki-núll línuvigrarnir úr efra stallaforminu sem gefa grunninn, ekki línuvigrarnir úr :math:`A`.
+
+TODO: dæmi
+
+Skilgreining: Rankur 
+^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Látum :math:`A` vera :math:`m\times n` fylki. Rankur (e. rank), eða myndvídd, fylkisins :math:`A` er vídd dálkrúms :math:`A`.
+    Rankur fylkisins :math:`A` er táknaður með :math:`\rnk{A}`.
+
+TODO: dæmi?
+
+Setning: Ranksetningin
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`m\times n` fylki.
+
+    **a.** Rankur fylkisins :math:`A` er jafn fjölda forystustuðla í efra stallaformi :math:`A`.
+
+    **b.** Vídd dálkrúmsins og vídd línurúmsins eru jafnar. Rankur fylkisins er því einnig jafn vídd línurúmsins.
+
+    **c.** Summa víddar dálkrúmsins og víddar núllrúmsins er jöfn fjölda dálka fylkisins, eðA
+
+    .. math:: \rnk{A}+\dim{\nul{A}}=n.
+
+
+TODO: dæmi?
+
+TODO: tala um löngu andhverfusetninguna, hlekkur til baka
+
+Setning: Viðbót við löngu andhverfusetninguna
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`n\times n` fylki. Eftirfarandi 7 skilyrði eru öll jafngildi.
+
+    **1.** :math:`A` er andhverfanlegt.
+
+    **13.** Dálkvigrar :math:`A` mynda grunn fyrir :math:`\R^n`.
+
+    **14.** :math:`\col{A}=\R^n`.
+
+    **15.** :math:`\dim{\col{a}}=n`.
+
+    **16.** :math:`\rnk{A}=n`.
+
+    **17.** :math:`\nul{A}=\{\ve 0\}`.
+
+    **18.** :math:`\dim{\nul{A}}=0`.
+
+
+Hnitaskipti
+-----------
+
+TODO: texti
+
+Setning: Um línuleika hnitavarpanna
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Gerum ráð fyrir að :math:`V` sé endanlega vítt vigurrúm með grunn :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}`. 
+    Hnitavörpunin 
+
+    .. math:: V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}
+
+    er línuleg vörpun. Hún er einnig gagntæk.
+
+
+Setning: Tilvist gagntækra varpanna milli jafnstóra rúma
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`V` vera vigurrúm með vídd :math:`n`. Þá er til gagntæk línuleg vörpun milli :math:`V` og :math:`\R^n`.
+
+    Athugasemd: Ef til er gagntæk línuleg vörpun milli tveggja vigurrúma segjum við að þau séu einsmóta (e. isomorphic) og 
+    vörpunin sé einsmótun (e. isomorphism). Einsmóta vigurrúm eru "eins" og með einsmótunum má yfirfæra útreikninga frá öðru 
+    vigurrúminu í hitt.
+
+TODO: texti um hnitaskipti, sýnidæmi
+
+Setning: Um hnitaskiptafylki
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`V` vera vigurrúm af vídd :math:`n` og gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` 
+    og :math:`\mathcal{C}=\{\ve c_1, \ve c_2, \ldots, \ve c_n\}` séu grunnar fyrir :math:`V`.
+
+    **a.** Til er línuleg vörpun :math:`T\colon \R^n\to\R^n` þannig að :math:`T([x]_{\mathcal{B}})=[]_{\mathcal{C}}` fyrir 
+    alla vigra :math:`\ve x\in V`. Fylki þessrar vörpunar er 
+
+    .. math:: P_{\mathcal{C}\leftarrow\mathcal{B}}=[[\ve b_1]_{\mathcal{C}}\quad [\ve b_2]_{\mathcal{C}}\quad \ldots \quad [\ve b_n]_{\mathcal{C}}].
+
+    **b.** Fylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}` úr lið (a) er andhverfanlegt og andhverfa þess er 
+    hnitaskiptafylkið úr :math:`\mathcal{C}`-hnitum yfir í :math:`\mathcal{B}`-hnit. Það er að segja
+
+    .. math:: P_{\mathcal{B}\leftarrow\mathcal{C}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1}
+
+    og fyrir sérhvern vigur :math:`\ve x\in V` gildir að 
+
+    .. math:: [\ve x]_{\mathcal{B}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1}[\ve x]_{\mathcal{C}}.
+
+
+Oftast vinnum við með venjulega grunninn fyrir :math:`\R^n`, það er grunninn :math:`\mathcal{E}=\{\ve e_1, \ve e_2, \ldots, \ve e_n\}` 
+þar sem :math:`\ve e_i` hefur i-ta hnitið 1 en öll önnur hnit 0. Þegar við skrifum vigur sem :math:`\ve x=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}`
+erum við að segja að :math:`x_1, x_2, \ldots, x_n` séu hnit vigursins :math:`\ve x` með tilliti til grunsins :math:`\mathcal{E}`. 
+Við fáum því eftirfarandi fylgisetningu þegar við skoðum hnitaskipti í og úr venjulega grunninum.
+
+Setning: Hnitaskiptafylki yfir í venjulega grunninn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` vera grunn fyrir :math:`\R^n` og látum :math:`\mathcal{E}` vera 
+    venjulega grunninn fyrir :math:`\R^n`. Þá er hnitaskiptafylkið frá :math:`\mathcal{B}`-hnitum til :math:`\mathcal{E}`-hnita 
+    gefið með
+
+    .. math:: P_{\mathcal{E}\leftarrow\mathcal{B}}=[\ve b_1 \quad \ve b_2 \quad \ldots \quad \ve b_n]
+
+    og hnitaskiptafylkið frá :math:`\mathcal{E}`-hnitum til :math:`\mathcal{B}`-hnita gefið með
+
+    .. math:: P_{\mathcal{B}\leftarrow\mathcal{E}}=(P_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}
+
+TODO: dæmi
+
+TODO: formúla fyrir hnitaskiptifylki
+
+TODO: Reiknitit fyrir hnitaskiptafylki
+
+TODO: Dæmi
+
+TODO: fylki vörpunnar með tilliti til grunns
+
+

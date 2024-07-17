@@ -12,7 +12,7 @@ Línuleg jöfnuhneppi
 -------------------
 
 Skilgreining: Línuleg jafna
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -28,13 +28,13 @@ Skilgreining: Línuleg jafna
 
 
 Skilgreining: Línulegt jöfnuhneppi 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
     **Línulegt jöfnuhneppi** (e. system of linear equations, linear system)
-    er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á formin
+    er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á forminu
 
     .. math:: \begin{align}
         a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
@@ -44,8 +44,8 @@ Skilgreining: Línulegt jöfnuhneppi
         \end{align}
 
 
-Setning
-^^^^^^^
+Setning: Fjöldi lausna
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -112,7 +112,7 @@ Sýnidæmi: Jöfnuhneppi sem hefur eina lausn
   
   Þar sem jöfnuhneppið hefur lausn segjum við að jöfnuhneppið sé **samkvæmt** (e. consistent). 
   Þar sem jöfnuhneppið hefur aðeins eina lausn segjum við að lausnin sé 
-  **ótvírætt ákvörðuð** (e. unique). **Stuðlar** (e. coefficients) jöfnuhneppisins eru: 
+  **ótvírætt ákvörðuð** (e. unique). **Stuðlar** (e. coefficients) jöfnuhneppisins, á **fylkjaformi**, eru: 
 
     .. math:: \begin{bmatrix}
         1 & 2  \\
@@ -159,7 +159,8 @@ Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir
 
 
 Skilgreining: Lausnamengi
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Skilgreining
     :class: skilgreining
 
@@ -167,7 +168,8 @@ Skilgreining: Lausnamengi
 
 
 Skilgreining: Jafngild
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Skilgreining
     :class: skilgreining
 
@@ -179,13 +181,11 @@ Einfaldar línuaðgerðir
 Eftirfarandi aðgerðir kallast **einfaldar línuaðgerðir** (e. elementary row operations) og 
 þeim má beita á jöfnur  í línulegum jöfnuhneppum (eða línur í fylkjum):
 
-Setning
-^^^^^^^^
+Setning: Einfaldar línuaðgerðir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
-
-    Línuaðgerðir:
 
     **(1)** Umskipting (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
 
@@ -196,7 +196,8 @@ Setning
     Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
 
 Skilgreining: Línujafngild
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Skilgreining
     :class: skilgreining
 
@@ -241,88 +242,90 @@ Sýnidæmi: Línuaðgerðir
   
    Skrifum þetta á fylkjaformi.
    
-  .. math:: \begin{aligned}\begin{bmatrix}
+  .. math:: \begin{alignat*}{2}
+    \begin{bmatrix}
     1 & -3 & 4 & -4\\
     3 & -7 & 7 & -8\\
     -4 & 6 & 2 & 4
-    \end{bmatrix} 
-    \stackrel{\begin{matrix}R_2-3R_1\\R_3+4R_1\end{matrix}}
-    {\sim}
-    \begin{bmatrix}
+    \end{bmatrix} \quad
+    &\overset{\substack{R_2-3R_1\\R_3+4R_1}}{\sim}
+    &\quad&\begin{bmatrix}
     1 & -3 & 4 &-4\\
     0 & 2 & -5 & 4 \\
     0 & -6 & 18 & -12
-    \end{bmatrix}
-    \stackrel{\displaystyle\frac{R_3}{-6}}{\sim}
-    \newline
-    \begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{-\frac{1}{6}R_3}}{\sim}
+    &&\begin{bmatrix}
     1 & -3 & 4 &-4\\
     0 & 2 & -5 & 4 \\
     0 & 1 & -3 & 2
-    \end{bmatrix}  
-    \stackrel{\displaystyle R_2\leftrightarrow R_3}{\sim}
-    \begin{bmatrix}
+    \end{bmatrix}  \\
+    &\overset{\substack{
+        R_2\leftrightarrow R_3}}{\sim}
+    &&\begin{bmatrix}
     1 & -3 & 4 &-4\\
     0 & 1 & -3 & 2 \\
     0 & 2 & -5 & 4
-    \end{bmatrix}
-    \stackrel{\begin{matrix}
-    R_1+3R_2\\ R_3-2R_2
-    \end{matrix}}{\sim}
-    \newline
-    \begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{R_1+3R_2\\ R_3-2R_2
+    }}
+    {\sim}
+    &&\begin{bmatrix}
     1 & 0 & -5 & 2\\
     0 & 1 & -3 & 2 \\
     0 & 0 & 1 & 0
-    \end{bmatrix}
-    \stackrel{\begin{matrix}
-    R_1+5R_3\\ R_2+3R_3
-    \end{matrix}}{\sim}
-    \begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{
+    R_1+5R_3\\ R_2+3R_3}}{\sim}
+    &&\begin{bmatrix}
     1 & 0 & 0 & 2\\
     0 & 1 & 0 & 2 \\
     0 & 0 & 1 & 0
     \end{bmatrix}
-    \end{aligned}
+    \end{alignat*}
+
 
   Svo við fáum
 
-  .. math:: \begin{aligned}
-    x_1&&&=2\\
-    &x_2&&=2\\
-    &&x_3&=0
-    \end{aligned}
+  .. math:: \begin{align*}
+    x_1\phantom{+x_2+x_3} &= 2 \\
+    \phantom{x_1+} x_2 \phantom{+x_3} &= 2 \\
+    \phantom{x_1+x_2+} x_3 &= 0
+    \end{align*}
   
-  og línulega jöfnuhneppið hefur því eina lausn :math:`(x_1,x_2,x_3)=(2,2,0)`. 
+  og línulega jöfnuhneppið hefur eina lausn; :math:`(x_1,x_2,x_3)=(2,2,0)`. 
 
+
+Um fylki
+---------
 
 Stærð fylkis
-------------
+~~~~~~~~~~~~~
 
 Látum 
 
 .. math:: \begin{bmatrix}
-    a_{11} &\dots &a_{1n}\\
-    \vdots&&\vdots\\
-    a_{m1}&\dots &a_{mn}\\  
+    a_{11} &\dots  &a_{1n}\\
+    \vdots &&\vdots\\
+    a_{m1} &\dots  &a_{mn}\\  
     \end{bmatrix}
 
 vera fylki með :math:`m` jöfnum og :math:`n` óþekktum breytum. Við segjum að :math:`A` sé :math:`{m\times n}` fylki.
 Jafnframt er :math:`m\times n` kallað **stærð fylkisins** :math:`A`.
 
 Skilgreining: Stuðlafylki og aukið fylki
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
         Látum 
 
-        .. math:: \begin{align*}
-            a_{11}x_{1}+\dots+a_{1n}x_n=b_1\\
-            \vdots&&\vdots\\
-            a_{m1}x_{1}+\dots+a_{mn}x_n=b_m\\    
-            \end{align*}
+        .. math:: \begin{alignat*}{2}
+            a_{11}x_{1}+&\dots+a_{1n}x_n &= b_1\\
+            &\hspace{6.143162275pt}\vdots & \\
+            a_{m1}x_{1}+&\dots+a_{mn}x_n &= b_m\\    
+            \end{alignat*}
         
         vera línulegt jöfnuhneppi. Við köllum fylkin
 
@@ -341,13 +344,13 @@ Skilgreining: Stuðlafylki og aukið fylki
         **Stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix) jöfnuhneppisins.
 
 Efri stallagerð
----------------
+~~~~~~~~~~~~~~~~~~~
 
 **Línur** (e. rows) liggja lárétt og **dálkar** (e. columns) liggja lóðrétt.
 
 **Núllína** (e. zero row) er lína þar sem allir stuðlarnir eru núll.
 
-**Forustustuðull** (e. leading coeffcient) er fyrsti stuðull í hverrri línu sem er ekki núll.
+**Forystustuðull** (e. leading coeffcient) er fyrsti stuðull í hverrri línu sem er ekki núll.
 
 Skoðum jöfnuhneppi
 
@@ -368,7 +371,8 @@ sjáum strax að jöfnuhneppið hefur lausn.
 Aukna fylkið fyrir jöfnuhneppið er dæmi um fylki af *efri stallagerð* (e. echelon form).  
 
 Skilgreining: Efri stallagerð
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Skilgreining
     :class: skilgreining
 
@@ -391,31 +395,26 @@ Sýnidæmi: Efri stallagerð
   
   Breytum eftirfarandi :math:`{3\times 4}` fylki í fylki af efri stallagerð:
 
-  .. math:: \begin{eqnarray*}
+  .. math:: \begin{alignat*}{2}
     \begin{bmatrix}
     1 & 2 & 3 & 4 \\
     5 & 6 & 7 & 8 \\
     9 & 10 & 11 & 12
     \end{bmatrix} 
-    &\sim 
-    &\begin{bmatrix}
+    &\overset{\substack{R_2 - 5R_1 \\
+    R_3 - 9R_1}}{\sim} 
+    &&\begin{bmatrix}
     1 & 2 & 3 & 4 \\
     0 & -4 & -8 & -12 \\
     0 & -8 & -16 & -24
-    \end{bmatrix}
-    \begin{matrix}\\
-    R_2 - 5R_1 \\
-    R_3 - 9R_1
-    \end{matrix}\\  &\sim
-    &\begin{bmatrix}
+    \end{bmatrix}\\  
+    &\overset{\substack{R_3 - 2R_2}}{\sim}
+    &&\begin{bmatrix}
     1 & 2 & 3 & 4 \\
     0 & -4 & -8 & -12 \\
     0 & 0 & 0 & 0
-    \end{bmatrix}\begin{matrix}
-    \\
-    \\R_3 - 2R_2
-    \end{matrix}
-    \end{eqnarray*}
+    \end{bmatrix}
+    \end{alignat*}
 
   Er þetta fylki af neðri stallagerð?
 
@@ -432,6 +431,7 @@ Línuleg jöfnuhneppi eru yfirleitt leyst með svokallaðri **Gauss-eyðingu** (
 Gauess-eyðing er reiknirit sem umbreytir fylki í fylki af efri stallagerð.
 
 Reiknirit fyrir Gauss-eyðingu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     **1.** Finnum dálkinn lengst til vinstri sem inniheldur ekki bara 0. Köllum þennan dálk „fyrsta vendidálk".
 
@@ -446,6 +446,9 @@ Reiknirit fyrir Gauss-eyðingu
 
   Það er ekki bannað að deila/margfalda til að vendistuðullinn verði 1. Það er ekki nauðsynlegt en það má ef það 
   einfaldar útreikingana. Sama gildi um það að víxla á línum til að fá þægilegri tölur til að vinna með.
+
+Sýnidæmi: Gauss-eyðing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -464,47 +467,35 @@ Reiknirit fyrir Gauss-eyðingu
 
   Beitum Gauss-eyðingu til að umbreyta fylkinu í fylki af efri stallagerð.
 
-  .. math:: \begin{eqnarray*}
+  .. math:: \begin{alignat*}{2}
     \begin{bmatrix}
     0 & 4 & 1 \\
     -1 & 3 & 2 \\
     5 & 6 & -3
     \end{bmatrix}
-    &\sim 
-    &\begin{bmatrix}
+    &\overset{\substack{R_1 \leftrightarrow R_2}}{\sim} 
+    &&\begin{bmatrix}
     -1 & 3 & 2 \\
     0 & 4 & 1 \\
     5 & 6 & -3
-    \end{bmatrix}
-    \begin{matrix}
-    \\
-    R_1 \leftrightarrow R_2 \\ 
-    \end{matrix}\\
-    &\sim 
-    &\begin{bmatrix}
+    \end{bmatrix} \\
+    &\overset{\substack{R_3 + 5R_1}}{\sim} 
+    &&\begin{bmatrix}
     -1 & 3 & 2 \\
     0 & 4 & 1 \\
     0 & 21 & 7
-    \end{bmatrix}\begin{matrix}
-    \\
-    \\
-    R_3 + 5R_1
-    \end{matrix}\\
-    &\sim  
-    &\begin{bmatrix}
+    \end{bmatrix}\\
+    &\overset{\substack{-R_3-\frac{21}{4}R_2}}{\sim}
+    &&\begin{bmatrix}
     -1 & 3 & 2 \\
     0 & 4 & 1 \\
     0 & 0 & \frac{7}{4}
-    \end{bmatrix}\begin{matrix}
-    \\
-    \\
-    -R_3-\frac{21}{4}R_2
-    \end{matrix}
-    \end{eqnarray*}
+    \end{bmatrix}
+    \end{alignat*}
 
 
 Skilgreining: Rudd efri stallagerð
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -636,8 +627,8 @@ Sýnidæmi: Rudd efri stallagerð
   og við fáum fylki af ruddri efri stallagerð.
 
 
-Setning
-^^^^^^^
+Setning: Rudd efri stallagerð
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
   :class: setning
@@ -672,7 +663,7 @@ Sýnidæmi: Frjálsar og háðar breytur
     9x_1+10x_2+11x_3=12
     \end{align*} 
   
-  Skv. Sýnidæmi að ofan má umbreyta aukna fylki þess í
+  Skv. sýnidæmi að ofan má umbreyta aukna fylki þess í
  
   .. math:: \begin{bmatrix}
     1 & 0 & -1 & -2 \\
@@ -694,7 +685,7 @@ Sýnidæmi: Frjálsar og háðar breytur
     x_2&+2x_3=3
     \end{align*}
 
-  jafngildir
+  sem er jafngilt
 
   .. math:: \begin{align*}
     x_1&=x_3-2\\
@@ -749,8 +740,8 @@ Sýnidæmi: Frjálsar og háðar breytur
         0 & 1 & * & * \\    
         \end{bmatrix}
 
-Setning
-^^^^^^^^
+Setning: Fjöldi frjálsa breyta
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
   :class: setning
@@ -773,7 +764,7 @@ Vigrar
 ------
 
 Skilgreining: Vigur
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -832,7 +823,7 @@ Einnig má skrifa dálkvigra svona til að spara pláss:
     Tveir vigrar eru jafnir ef þeir eru að sömu vídd og öll hnit þeirra eru þau sömu.
 
 Samlagning vigra 
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 Ef **u** og **v** eru vigrar þannig að 
 
@@ -857,7 +848,7 @@ Ef **u** og **v** eru vigrar þannig að
     \end{bmatrix}.
 
 Stikamargöfldun vigra 
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Ef :math:`c` er rauntala og **v** er vigur þannig að
 
@@ -926,7 +917,7 @@ Sýnidæmi: Stikamargföldun vigra, frh.
         \end{bmatrix}.
 
 Reiknireglur fyrir vigra
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -962,7 +953,7 @@ Línuleg samantekt
 -----------------
 
 Skilgreining: Línuleg samantekt
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -1195,7 +1186,7 @@ Línuleg spönn
 -------------
 
 Skilgreining: Línuleg spönn
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -1210,25 +1201,28 @@ Skilgreining: Línuleg spönn
     Við köllum mengið :math:`\text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}` **línulega spönn** mengisins :math:`\{\textbf{v}_1,\dots,\textbf{v}_p\}`.
 
 Línuleg spönn í :math:`\mathbb{R}^2`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: myndir/linuleg.sponn.png
+.. figure:: myndir/linuleg_sponn.svg
+    :align: center
 
-Myndin sýnir vigrana :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
-Bleika svæðið (allt :math:`mathbb{R}^2` rúmið) er línuleg spönn þessara vigra.
+Myndin sýnir vigrana :math:`\textbf{v}` og :math:`\textbf{u}`.
+Bleika svæðið, allt :math:`\mathbb{R}^2` rúmið er línuleg spönn þessara vigra.
 
-.. figure:: myndir/linuleg.sponn2.png
+.. figure:: myndir/linuleg_sponn_2.svg
+    :align: center
 
 Á mynd má sjá vigurinn :math:`\ve v`. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni
 sem er framhald vigursins :math:`\ve v`, í báðar áttir.
 
 Línuleg spönn í :math:`\mathbb{R}^3`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Látum :math:`\textbf{v}_1` og :math:`\textbf{v}_2` vera tvo vigra í :math:`\mathbb{R}^3`. Í þessu dæmi myndar
 spönn þeirra sléttu sem fer í gegnum upphafspunkt hnitakerfisins.
 
 .. figure:: myndir/linuleg.sponn3.png
+    :align: center
 
 Línuleg spönn í :math:`\mathbb{R}^3` getur líka verið: bara núllpunkturinn, 
 lína í gegnum núllpunkt eða allt :math:`\mathbb{R}^3` rúmið.
@@ -1237,7 +1231,7 @@ Margfeldi fylkis og vigurs
 --------------------------
 
 Skilgreining: Fylkjajafnan
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -1410,6 +1404,9 @@ Sýnidæmi: Margfeldi fylkis og vigurs
 Fylkjajafnan
 ------------
 
+Setning: Fylkjajafnan
+~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Setning
     :class: setning
 
@@ -1534,8 +1531,8 @@ Sýnidæmi: Fylkjajafnan
     Jöfnuhneppið okkar hefur lausn þá og því aðeins að dálkurinn lengst til hægri sé ekki vendidálkur.
     Jöfnuhneppið því því lausn þá og því aðeins að :math:`b_1-2b_2+b_3=0`.
 
-Setning
-^^^^^^^
+Setning: Fullyrðingar um fylkjajöfnuna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1550,8 +1547,8 @@ Setning
 
         **4.** :math:`A` hefur vendistak í hverri línu.
 
-Setning
-^^^^^^^
+Setning: Um fylki og dálkvigur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1564,7 +1561,7 @@ Setning
         **2.** :math:`A(c\textbf{u}) = cA\textbf{u}`
 
 Óhliðruð jöfnuhneppi
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}` er sagt *óhliðrað* (e. homogeneous).
 Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
@@ -1575,11 +1572,11 @@ Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
     0 \\ \vdots \\ 0
     \end{bmatrix}\right\}m
 
-Þessi lausn er kölluð *augljóslega lausnin* (e. trivial solution). Ef aðrar launsir eru til eru 
+Þessi lausn er kölluð *augljósa lausnin* (e. trivial solution). Ef aðrar launsir eru til eru 
 þær kallaðar *óaugljósa lausninirnar* (e. nontrivial solutions).
 
 Sýnidæmi: Óhliðrað jöfnuhneppi
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -1661,7 +1658,7 @@ Sýnidæmi: Óhliðrað jöfnuhneppi
         **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hef óaugljósa lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
  
 Fólgin og stikuð framsetning
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sýnidæmi: Stikuð framsetning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1728,8 +1725,8 @@ Sýnidæmi: Stikuð framsetning
         1\\-2\\1
         \end{bmatrix}, t\in \mathbb{R}$. 
 
-Hliðruð jöfnuhneppi
---------------------
+Hliðrað jöfnuhneppi
+~~~~~~~~~~~~~~~~~~~~
 
 Jöfnuhneppi sem sett er fram á forminnu :math:`A \textbf{x}=\textbf{b}` 
 þar sem :math:`\textbf{b} \neq 0` kallast *hliðrað* (e. non-homogeneus).
@@ -1812,8 +1809,8 @@ Sýnidæmi: Hliðrað jöfnuhneppi
     Við getum því skrifað allar lausnir á forminu :math:`\textbf{x} = t\textbf{v} + \textbf{p}` þar sem er almenn lausn 
     á óhliðruðu jöfnunni og  **p** ein lausn á þeirri hliðruðu.
 
-Setning
-^^^^^^^
+Setning: Lausnamengi fylkjajöfnunnar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1867,14 +1864,14 @@ Sýnidæmi: Lausnir prófaðar
     Prófum lausnina
 
     .. math:: \begin{align*}
-        A\textbf{x} =&
+        A\textbf{x} &=
         A\left(t\begin{bmatrix}
         1\\-2\\1
         \end{bmatrix}+
         \begin{bmatrix}
         \frac{2}{3}\\-\frac{1}{3}\\0
-        \end{bmatrix} \right)
-        =
+        \end{bmatrix} \right) \\
+        &=
         tA
         \begin{bmatrix}
         1\\-2\\1
@@ -1899,7 +1896,7 @@ Sýnidæmi: Lausnir prófaðar
         \end{bmatrix}
         \begin{bmatrix}
         \frac{2}{3}\\-\frac{1}{3}\\0
-        \end{bmatrix}\\=&
+        \end{bmatrix}\\&=
         t     \begin{bmatrix}
         0\\0\\0
         \end{bmatrix}+
@@ -1912,6 +1909,9 @@ Sýnidæmi: Lausnir prófaðar
 
 Línulega óháð/háð mengi
 -----------------------
+
+Skilgreining: Línulega óháð/háð mengi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -2034,8 +2034,8 @@ Sýnidæmi: Línulega óháðir vigrara
     aðeins eina lausn, augljósu lausnina :math:`x_1=x_2=x_3=0` og vigrarnir 
     sem um ræðir eru línulega óháðir.
 
-Setning
-^^^^^^^^
+Setning: Línulega óháð
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2049,8 +2049,8 @@ Setning
     Þetta er almenna aðferðin sem við notum til að athuga hvort vigrar
     séu línulega háðir eða óháðir.
 
-Setning
-^^^^^^^^
+Setning: Núllvigurinn
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2067,8 +2067,8 @@ Setning
 
     sem sýnir að mengið er línulega háð.
 
-Setning
-^^^^^^^^
+Setning: Línulega háður vigur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2086,8 +2086,8 @@ Setning
     Jafnframt er mengið :math:`\{ \textbf{v}_1\}` línulega háð ef :math:`\textbf{v}_1` 
     er núllvigur samkvæmt síðustu setningu.
 
-Setning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setning: Línulega háðir vigrar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2116,8 +2116,8 @@ Setning
     svo  :math:`\textbf{v}_1,\textbf{v}_2` eru línulega háðir.
 
 
-Setning
-^^^^^^^^^
+Setning: Línuleg samantekt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2126,8 +2126,8 @@ Setning
     sem línulega samantekt af hinum vigrunum. 
 
 
-Setning
-^^^^^^^
+Setning: Línulega háð mengi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2159,7 +2159,7 @@ Ef vigur **x** varpast í :math:`T(\textbf{x})` þá segjum við að
 Mengi allra slíkra mynda kallast *myndmengi* T eða mynd T. 
 
 Skilgreining: Línuleg vörpun
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -2172,8 +2172,8 @@ Skilgreining: Línuleg vörpun
         
         **2.** :math:`T(c\textbf{u}) = cT(\textbf{u})`.
 
-Setning
-^^^^^^^^
+Setning: Línulegar varpanir 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2195,7 +2195,7 @@ Setning
 
 
 Línulegar varpanir :math:`\mathbb{R}^2\rightarrow \mathbb{R}^2` 
-----------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sýnidæmi: Eiginvigrar línulegra varpana
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2248,10 +2248,10 @@ Sýnidæmi: Eiginvigrar línulegra varpana
         \end{align*}
 
 Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
-------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Setning
-^^^^^^^^^^
+Setning: Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2272,73 +2272,90 @@ Speglanir
 
 Speglun um x-ás: :math:`\begin{bmatrix} 1 & 0 \\ 0 &-1 \end{bmatrix}`
 
-.. figure:: myndir/speglunx.png
+.. figure:: myndir/speglunx.svg
+    :align: center
 
 Speglun um y-ás: :math:`\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}`
 
-.. figure:: myndir/spegluny.png
+.. figure:: myndir/spegluny.svg
+    :align: center
 
-Speglun um línuna x=y
+Speglun um línuna x=y :math:`\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/speglun_y=x.svg
+    :align: center
 
-Speglun um línuna y=-x
+Speglun um línuna y=-x :math:`\begin{bmatrix} 0 & -1 \\ -1 & 0 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/speglun_y=-x.svg
+    :align: center
 
-Speglun um núllpunkturinn
+Speglun um núllpunkturinn :math:`\begin{bmatrix} -1 & 0 \\ 0 &-1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/speglun_0.svg
+    :align: center
 
 Stríkkanir
 ~~~~~~~~~~
 
-Lárétt stríkkun
+Lárétt stríkkun :math:`\begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/larett_strikkun.svg
+    :align: center
 
-Lóðrétt stríkkun
+.. figure:: myndir/larett_strikkun_2.svg
+    :align: center
 
-ATH. MYND
+Lóðrétt stríkkun :math:`\begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix}`
+
+.. figure:: myndir/lodrett_strikkun.svg
+    :align: center
+
+.. figure:: myndir/lodrett_strikkun_2.svg
+    :align: center
 
 Skekkingar
 ~~~~~~~~~~
 
-Lárétt skekking
+Lárétt skekking :math:`\begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/latrett_skekking.svg
+    :align: center
 
-Lóðrétt skekking
+Lóðrétt skekking :math:`\begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/lodrett_skekking.svg
+    :align: center
 
 Ofanvörp
 ~~~~~~~~~
 
-Ofanvarp á x-ás
+Ofanvarp á x-ás :math:`\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/ofanvarp_x.svg
+    :align: center
 
-Ofanvarp á y-ás
+Ofanvarp á y-ás :math:`\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}`
 
-ATH. MYND
+.. figure:: myndir/ovanvarp_y.svg
+    :align: center
 
 
 Eintækar og átækar varpanir
 ---------------------------
 
 Skilgreining: Átæk vörpun
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
 
     Vörpun :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð 
     **átæk** (e. onto) ef öll :math:`\textbf{b} \in \mathbb{R}^m` 
-    liggji í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
+    liggja í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
 
 Skilgreining: Eintæk vörpun
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -2353,8 +2370,8 @@ Skilgreining: Eintæk vörpun
 
     Varpanir sem eru bæði eintækar og átækar kallast *gagntækar* (e. bijective).
 
-Setning
-^^^^^^^^
+Setning: Eintæk línuleg vörpun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -2363,8 +2380,8 @@ Setning
     Þá er :math:`T` eintæk þá og því aðeins að :math:`T(\textbf{0}=\textbf{0})` hafi
     aðeins augljósu lausnina.
 
-Setning
-^^^^^^^^
+Setning: Átækar og eintækar línulegar varpanir 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning

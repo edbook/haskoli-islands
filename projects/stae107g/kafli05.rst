@@ -5,7 +5,7 @@ Eigingildi og eiginvigur
 ------------------------
 
 Skilgreining: Eigingildi og eiginvigur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -16,7 +16,7 @@ Skilgreining: Eigingildi og eiginvigur
     .. math:: A\textbf{x}=\lambda\textbf{x}
     
     Þá segjum við að :math:`\lambda` sé **eigingildi** (e. eigenvalue) :math:`A`
-    og :math:`x` **eiginvigur** (e. eiginvector). Ef að :math:`x` og :math:`\lambda` uppfylla
+    og :math:`x` **eiginvigur** (e. eigenvector). Ef að :math:`x` og :math:`\lambda` uppfylla
     jöfnuna að ofan þá segjum við að :math:`x` sé eiginvigur við eigingildi :math:`\lambda`.
     Við þessar aðstæður segjum við að eigingildið :math:`\lambda` og eiginvigurinn :math:`x` 
     tilheyri hvort öðru.
@@ -41,7 +41,7 @@ Eigingildi fylkja fundin
 ------------------------
 
 Setning
-^^^^^^^
+~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -98,7 +98,7 @@ Eiginrúm
 --------
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -157,7 +157,7 @@ Sýnidæmi: Eiginrúm fylkis
     
     svo eiginrúmið er
 
-    .. math:: Span \left\{\begin{bmatrix}
+    .. math:: \spn \left\{\begin{bmatrix}
         3\\
         2
         \end{bmatrix},
@@ -168,7 +168,7 @@ Sýnidæmi: Eiginrúm fylkis
 
 
 Setning
-^^^^^^^^^
+~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -177,7 +177,7 @@ Setning
     stökin á hornalínunni.
 
 Setning
-^^^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -192,7 +192,7 @@ Setning
     Einfaldar línuaðgerðir varðveita ekki eigingildi.
 
 Setning
-^^^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -201,6 +201,9 @@ Setning
 
 Kennijafnan
 -----------
+
+Setning
+~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning 
@@ -297,7 +300,7 @@ Sýnidæmi: Eigingildi og eiginvigrar
 
     Auðvelt að sjá að allar tölur :math:`x_1,x_2` 
     sem uppfylla :math:`x_1=x_2` 
-    eru lausnir svo eiginvigrar m.t.t. 12 eru allir af forminu:
+    eru lausnir svo eiginvigrar m.t.t. 12 eru allir á forminu:
 
     .. math:: 
         \begin{bmatrix}
@@ -306,16 +309,16 @@ Sýnidæmi: Eigingildi og eiginvigrar
         x_2\\x_2
         \end{bmatrix}=x_2\begin{bmatrix}
         1\\1
-        \end{bmatrix}=\left(t\begin{bmatrix}
+        \end{bmatrix}=t\begin{bmatrix}
         1\\1   
-        \end{bmatrix}\right)
+        \end{bmatrix}
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
     Kennijafnan getur í mesta lagi haft :math:`n` ólýkar núllstöðvar. 
-    Ef að margliðan þéttast þannig að einhver núllstöð :math:`r` kemur fyirr í s-ta veldi
-    þáttun hennar þá segjum við að eigingildið :math:`r` hafi algebru margfeldni s 
+    Ef að margliðan þéttast þannig að einhver núllstöð :math:`r` kemur fyirr í :math:`s`-ta veldi
+    þáttun hennar þá segjum við að eigingildið :math:`r` hafi algebrulega margfeldni :math:`s` 
     (e. algrebraic multiplicity).
 
 Sýnidæmi: Margfeldni eigingildis
@@ -351,7 +354,7 @@ Sýnidæmi: Margfeldni eigingildis
 -----------
 
 Skilgreining: Ámóta
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -375,7 +378,7 @@ Skilgreining: Ámóta
     Þessi þrjú atriði segja að það að vera ámóta er dæmi um það sem er kallað *jafngildisvensl*.
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -418,7 +421,7 @@ Hornalínugjörningar
 -------------------
 
 Skilgreinig: Hornalínufylki
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
@@ -435,7 +438,7 @@ Skilgreinig: Hornalínufylki
 
 
 Skilgreinig: Hornalínugeranlegt
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
@@ -554,7 +557,7 @@ Að hornalínugera fylki
 
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -579,7 +582,7 @@ Sýnidæmi: Er fylkið hornalínugeranlegt
 
 
 Setning
-^^^^^^^
+~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -603,7 +606,7 @@ Eiginvigrar línulegra varpana
 -----------------------------
 
 Skilgreining 
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
@@ -637,8 +640,19 @@ Sýnidæmi: Eiginvigrar línulegra varpana
 Fylki línulegra varpana í :math:`V`
 ------------------------------------
 
+Setning
+~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^n` vera línulega vörpun með fylkið :math:`A`. Gerum ráð fyrir að 
+    :math:`A` sé hornalínugeranlegt. Látum :math:`\mathcal{B}` vera grunn sem myndaður er að eiginvigrum 
+    :math:`A` og :math:`P` vera fylkið sem hefur eiginvigra :math:`A` sem dálka. Hornalínufylkið 
+    :math:`D=P^{-1}AP` er þá fylki vörpunarinnar m.t.t. grunnsins :math:`\mathcal{B}`.
+
 Sýnidæmi: Fylki línulegra varpana í :math:`V`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -688,18 +702,6 @@ Sýnidæmi: Fylki línulegra varpana í :math:`V`
     Og þá fæst
 
     .. math:: [T(\textbf{x})]_\mathcal{B}=T_\mathcal{B}[\textbf{x}]_{\mathcal{B}}.
-
-
-Setning
-^^^^^^^
-
-.. admonition:: Setning
-    :class: setning
-
-    Látum :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^n` vera línulega vörpun með fylkið :math:`A`. Gerum ráð fyrir að 
-    :math:`A` sé hornalínugeranlegt. Látum :math:`\mathcal{B}` vera grunn sem myndaður er að eiginvigrum 
-    :math:`A` og :math:`P` vera fylkið sem hefur eiginvigra :math:`A` sem dálka. Hornalínufylkið 
-    :math:`D=P^{-1}AP` er þá fylki vörpunarinnar m.t.t. grunnsins :math:`\mathcal{B}`.
 
 
 Sýnidæmi: Hornalínugjörningur

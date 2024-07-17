@@ -1,7 +1,7 @@
 Ákveður
 =====================
 Ákveða (e. determinant) er fall frá :math:`\mathbb{R}^{n \times n}\rightarrow \mathbb{R}` sem úthlutar :math:`n \times n` fylki :math:`A` tölu :math:`\det(A)`.
-Ákveða er einungis skilgreind fyrir ferningsfylki og hana má nota t.d. til þess að segja til um hvort fylki sé andhverfanlegt. Ef ákveða fylkis er :math:`0` er fylkið ekki andhverfanlegt.
+Ákveða er einungis skilgreind fyrir ferningsfylki. Hana má nota t.d. til þess að segja til um hvort fylki sé andhverfanlegt. Ef ákveða fylkis er :math:`0` er fylkið ekki andhverfanlegt.
 
 Ákveður :math:`2 \times 2` fylkja
 ---------------------------------
@@ -9,11 +9,11 @@
 Skilgreining: Ákveða :math:`2 \times 2` fylkis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Skilgreining
-    :class: skilgreining
+  :class: skilgreining
 
-        Ákveða :math:`2 \times 2` fylkis :math:`A=\begin{bmatrix}a & b\\ c & d \end{bmatrix}` er talan
-
-        .. math:: \det(A) =\begin{vmatrix}
+  **Ákveða** :math:`2 \times 2` fylkis :math:`A=\begin{bmatrix}a & b\\ c & d \end{bmatrix}` er talan
+  
+  .. math:: \det(A) =\begin{vmatrix}
             a & b \\
             c & d 
             \end{vmatrix} =ad-bc.
@@ -36,9 +36,10 @@ Skilgreining: Ákveða :math:`2 \times 2` fylkis
 Skilgreining: Hlutfylki
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Skilgreining
-    :class: skilgreining
+  :class: skilgreining
 
-        Látum :math:`A` vera :math:`n \times n` fylki. Fylkið sem fæst með því að fjarlægja :math:`i`-tu línu og :math:`j`-ta dálk :math:`A` kallast hlutfylki, :math:`A_{ij}`, og hefur stærð :math:`(n-1)\times (n-1)`.
+  Látum :math:`A` vera :math:`n \times n` fylki. Fylkið sem fæst með því að fjarlægja :math:`i`-tu línu og :math:`j`-ta dálk :math:`A` 
+  kallast **hlutfylki**, :math:`A_{ij}`, og hefur stærð :math:`(n-1)\times (n-1)`.
 
 Sýnidæmi: Hlutfylki
 ^^^^^^^^^^^^^^^^^^^
@@ -46,9 +47,9 @@ Sýnidæmi: Hlutfylki
 .. admonition:: Dæmi
   :class: daemi
     
-    Hver eru hlutfylki, :math:`A_{ij}`, fylkisins
-
-    .. math:: A =\begin{bmatrix}
+  Hver eru hlutfylki, :math:`A_{ij}`, fylkisins
+  
+  .. math:: A =\begin{bmatrix}
             3 & 6 & 1\\
             5 & 2 & 0\\
             1 & 9 & 4\\
@@ -57,9 +58,9 @@ Sýnidæmi: Hlutfylki
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-    :math:`A` hefur eftirfarandi hlutfylki
-    
-    .. math:: A_{11} =\begin{bmatrix}
+  :math:`A` hefur eftirfarandi hlutfylki
+  
+  .. math:: A_{11} =\begin{bmatrix}
         2 & 0\\
         9 & 4\\
         \end{bmatrix},\quad
@@ -90,11 +91,11 @@ Sýnidæmi: Hlutfylki
 Skilgreining: Ákveða :math:`n \times n` fylkis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Skilgreining
-    :class: skilgreining
+  :class: skilgreining
 
-        Ákveða :math:`n \times n` fylkis :math:`A` er skilgreind
-
-        .. math:: \det(A)=
+  **Ákveða** :math:`n \times n` fylkis :math:`A` er skilgreind
+  
+  .. math:: \det(A)=
             a_{11}\det(A_{11})-a_{12}\det(A_{12})+...+ (-1)^{1+n} a_{1n}\det(A_{1n})\\
             = \sum_{j=1}^{n}(-1)^{1+j}a_{1j}\det(A_{1j})
 
@@ -104,23 +105,23 @@ Sýnidæmi: Ákveða :math:`3 \times 3` fylkis
 .. admonition:: Dæmi
   :class: daemi
     
-    Finnum ákveðu :math:`3 \times 3` fylkis
-    
-    .. math:: A =\begin{bmatrix}
+  Finnum ákveðu :math:`3 \times 3` fylkis
+  
+  .. math:: A =\begin{bmatrix}
             1 & 2 & 3\\
             4 & 5 & 6\\
             7 & 8 & 9\\
             \end{bmatrix}.
     
-    með því að nota skilgreininguna.
+  með því að nota skilgreininguna.
 
         
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-    Fáum
-    
-    .. math:: \det(A)=\begin{vmatrix}
+  Fáum
+  
+  .. math:: \det(A)=\begin{vmatrix}
         1 & 2 & 3\\
         4 & 5 & 6\\
         7 & 8 & 9\\
@@ -141,7 +142,7 @@ Sýnidæmi: Ákveða :math:`3 \times 3` fylkis
         =1(45-48) -2(36-42)+3(32-35)
         =-3+12-9=0
 
-Þessi aðferð kallast að liða eftir línu eða dálk eftir því sem við á. Í dæminu hér að ofan var liðað eftir línu 1.
+Þessi aðferð kallast að *liða eftir línu eða dálk* eftir því sem við á. Í dæminu hér að ofan var liðað eftir línu 1.
 Athugið að velja má hvaða línu/dálk liðað er eftir og hentugast er að velja þá línu/dálk sem hefur flest :math:`0`.
 Við sjáum að ákveða fylkis sem hefur núllínu eða núlldálk er alltaf :math:`0`.
 
@@ -160,10 +161,11 @@ Við sjáum að ákveða fylkis sem hefur núllínu eða núlldálk er alltaf :m
 Skilgreining: Önnur aðferð til þess að reikna ákveðu :math:`3 \times 3` fylkis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Skilgreining
-    :class: skilgreining
+  :class: skilgreining
 
-        Reikna má ákveðu :math:`3 \times 3` fylkist með því að endurtaka fyrstu tvo dálka hægra megin við fylkið og leggja saman og draga frá þær 6 hornalínur sem þannig myndast.
-        SETJA INN MYND
+  Reikna má ákveðu :math:`3 \times 3` fylkist með því að endurtaka fyrstu tvo dálka hægra megin við fylkið og leggja saman og draga frá þær 6 hornalínur sem þannig myndast.
+
+.. figure:: myndir/3fylki.png
 
 Engin sambærileg regla gildir fyrir :math:`n \geq 4`.
 
@@ -171,8 +173,8 @@ Engin sambærileg regla gildir fyrir :math:`n \geq 4`.
 Ákveður hornalínufylkja
 -----------------------
 
-Setning 
-~~~~~~~
+Setning: Ákveða hornalínufylkja 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -185,9 +187,9 @@ Sýnidæmi: Ákveður hornalínufylkja
 .. admonition:: Dæmi
   :class: daemi
     
-    Finna á ákveður eftirfarandi
-    
-    .. math:: A =\begin{bmatrix}
+  Finna á ákveður eftirfarandi
+  
+  .. math:: A =\begin{bmatrix}
             2 & 2 & 3\\
             0 & -4 & 6\\
             0 & 0 & -1\\
@@ -207,9 +209,9 @@ Sýnidæmi: Ákveður hornalínufylkja
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-    Fáum með liðun eftir dálk 1
-    
-    .. math:: \det(A)=\begin{vmatrix}
+  Fáum með liðun eftir dálk 1
+  
+  .. math:: \det(A)=\begin{vmatrix}
             2 & 2 & 3\\
             0 & -4 & 6\\
             0 & 0 & -1\\
@@ -220,9 +222,9 @@ Sýnidæmi: Ákveður hornalínufylkja
             \end{vmatrix}= 2\cdot -4\cdot \begin{vmatrix}
             -1\end{vmatrix}=8.
     
-    Fáum með liðun eftir línu 1
-
-    .. math:: \det(B) =\begin{vmatrix}
+  Fáum með liðun eftir línu 1
+  
+  .. math:: \det(B) =\begin{vmatrix}
             1 & 0 & 0\\
             0 & -2 & 0\\
             6 & 0 & 5\\
@@ -232,10 +234,10 @@ Sýnidæmi: Ákveður hornalínufylkja
             0 & 5\\
             \end{vmatrix}
             =1\cdot -2\cdot\begin{vmatrix} 5 \end{vmatrix}=-10.
-    
-    Fáum beint
 
-    .. math:: \det(C)=\begin{vmatrix}
+  Fáum beint
+  
+  .. math:: \det(C)=\begin{vmatrix}
             2 & 0 & 0\\
             0 & 6 & 0\\
             0 & 0 & 7\\
@@ -245,7 +247,7 @@ Sýnidæmi: Ákveður hornalínufylkja
 
 Ákveður frumfylkja
 ------------------
-Frumfylki eru þau fylki sem fást þegar einni einfaldri línuaðgerð er beitt á þau.
+Frumfylki eru þau fylki sem fást þegar einni einfaldri línuaðgerð er beitt á einingarfylki.
 
 .. admonition:: Aðvörun
     :class: advorun
@@ -253,8 +255,8 @@ Frumfylki eru þau fylki sem fást þegar einni einfaldri línuaðgerð er beitt
     Línuaðgerðir varðveita almennt ekki ákveður, heldur breyta þeim með mjög reglulegum hætti.
  
 
-Setning 
-~~~~~~~
+Setning: Ákveða frumfylkja 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -272,10 +274,10 @@ Sýnidæmi: Ákveður frumfylkja
 .. admonition:: Dæmi
   :class: daemi
 
-    **1**. Umskipting. Látum :math:`E` vera frumfylkið sem fæst með því að leggja margfeldi af einni línu við aðra, þ.e.a.s umskipting.
-    Frumfylki af þessari gerð eru öll hornalínufylki, t.d.
-    
-    .. math:: \begin{bmatrix}
+  **1**. Umskipting. Látum :math:`E` vera frumfylkið sem fæst með því að leggja margfeldi af einni línu við aðra, þ.e.a.s umskipting.
+  Frumfylki af þessari gerð eru öll hornalínufylki, t.d.
+  
+  .. math:: \begin{bmatrix}
         1 & k\\
         0 & 1\\ 
         \end{bmatrix},\quad
@@ -291,11 +293,11 @@ Sýnidæmi: Ákveður frumfylkja
         0 & 0 & 0 & 1\\
         \end{bmatrix}.
 
-    Ákveðan er margföldun stakanna á hornalínunni, :math:`\det(E)=1`.
+  Ákveðan er margföldun stakanna á hornalínunni, :math:`\det(E)=1`.
 
-    **2**. Víxlun. Látum :math:`E` vera frumfylkið sem fæst með því að víxla á línu :math:`i` og :math:`j`, t.d.
-
-    .. math:: \begin{bmatrix}
+  **2**. Víxlun. Látum :math:`E` vera frumfylkið sem fæst með því að víxla á línu :math:`i` og :math:`j`, t.d.
+  
+  .. math:: \begin{bmatrix}
         0 & 1\\
         1 & 0\\ 
         \end{bmatrix},\quad
@@ -311,11 +313,11 @@ Sýnidæmi: Ákveður frumfylkja
         \end{bmatrix}.
         
     
-    Með einföldum útreiningum er auðvelt að sannfæra sig um að :math:`\det(E)=-1`.
+  Með einföldum útreiningum er auðvelt að sannfæra sig um að :math:`\det(E)=-1`.
 
-    **3**. Skölun. Látum :math:`E` vera frumfylkið sem fæst með því að margalda línu með tölu, t.d.
-    
-    .. math:: \begin{bmatrix}
+  **3**. Skölun. Látum :math:`E` vera frumfylkið sem fæst með því að margalda línu með tölu, t.d.
+  
+  .. math:: \begin{bmatrix}
         1 & 0\\
         0 & \pi
         \end{bmatrix},\quad
@@ -331,7 +333,7 @@ Sýnidæmi: Ákveður frumfylkja
         0 & 0 & 0 & 1
         \end{bmatrix}.
 
-    Við sjáum með því að margafalda hornalínuna að ákveðan er :math:`\det(E)=\pi`, :math:`\det(E)=k` og :math:`\det(E)=16` fyrir þessi þrjú fylki.
+  Við sjáum með því að margafalda hornalínuna að ákveðan er :math:`\det(E)=\pi`, :math:`\det(E)=k` og :math:`\det(E)=16` fyrir þessi þrjú fylki.
 
 Í mörgum dæmum koma fyrir nokkrar umskiptingar, víxlanir og/eða skalanir. Til dæmis er alltaf hægt að koma ferningsfylki yfir á efri stallagerð með því að nota einungis umskiptingar og víxlanir.
 Ef :math:`U` er efri stallagerð :math:`A`, sem fékkst með því að nota aðeins þessar tvær aðgerðir, gildir að :math:`\det(A)=\pm \det(U)`. Þetta má setja fram sem hjálparsetningu.
@@ -368,8 +370,8 @@ Hjálparsetning
 Eiginleikar ákveða
 -------------------
 
-Setning
-~~~~~~~
+Setning: Eiginleikar ákveða
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -378,34 +380,33 @@ Setning
 
         **1**. :math:`\det(A^T)=\det(A)`
 
-        **2**. :math:`\det(AB)=\det(A)\det(B)`
+        **2**. :math:`\det(AB)=\det(A)\cdot\det(B)`
 
-        **3**. :math:`\det(A^{-1})=1/\det(A)`
+        **3**. :math:`\det(A^{-1})=\frac{1}{\det(A)}`
 
 
 1 er sannað með þrepun. 2 fæst með því að nota að annað fylkið, sem er andhverfanlegt, er línu-jafngilt einingafylkinu.
 Jafnan helst einning ef annað fylkið er ekki andhverfanlegt, þá er ákveðan :math:`AB` einfaldlega :math:`0`. 3 leiðir beint af 2.
 
 .. admonition:: Athugasemd
-    :class: athugasemd
+  :class: athugasemd
 
-    Um tvö ferningsfylki :math:`A` og :math:`B` gildir almennt :math:`\textbf{ekki}` að :math:`\det(A+B)=\det(A)+\det(B)`.
+  Um tvö ferningsfylki :math:`A` og :math:`B` gildir almennt **ekki** að :math:`\det(A+B)=\det(A)+\det(B)`.
 
 
 
 Skilgreining: Hjáþáttafylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Skilgreining
-    :class: skilgreining
+  :class: skilgreining
 
-    Fyrir hlutfylki :math:`A_{ij}` skilgreinum við *hjáþátt* :math:`C_{ij}` í sæti :math:`(i,j)` með
-
-    .. math:: C_{ij}=(-1)^{i+j}\det A_{ij}
-
-    og *hjáþáttafylki* (e. cofactor matrix) :math:`A` með
-
-    .. math::
-
+  Fyrir hlutfylki :math:`A_{ij}` skilgreinum við **hjáþátt** :math:`C_{ij}` í sæti :math:`(i,j)` með
+  
+  .. math:: C_{ij}=(-1)^{i+j}\det A_{ij}
+    
+  og **hjáþáttafylki** (e. cofactor matrix) :math:`A` með
+  
+  .. math::
         C=\begin{bmatrix}
         C_{11} & C_{12} & \dots & C_{1n}\\
         C_{21} & C_{22} & \dots & C_{21}\\
@@ -413,18 +414,20 @@ Skilgreining: Hjáþáttafylki
         C_{n1} & C_{n2} & \dots & C_{nn}
         \end{bmatrix}
 
-Skilgreining: Aðokafylki
-~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Aðoka fylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Skilgreining
-    :class: skilgreining
+  :class: skilgreining
 
-    Látum :math:`C` vera hjáþáttafylki :math:`A`. Þá skilgreinum við *aðoka fylkið* :math:`\text{adj}A` (e. adjoint matrix) með
+  Látum :math:`C` vera hjáþáttafylki :math:`A`. Þá skilgreinum við **aðoka fylkið**
+  :math:`\text{adj}A` (e. adjoint matrix) með
+  
+  .. math:: \text{adj}A = C^T
 
-    .. math:: \text{adj}A = C^T
 
-
-Setning
-~~~~~~~
+Setning: Andhverfujafna
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -469,9 +472,9 @@ Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers
 .. admonition:: Dæmi
   :class: daemi
 
-    Leysið eftirfarandi jöfnuhneppi með því að nota reglu Cramers
-
-    .. math:: 
+  Leysið eftirfarandi jöfnuhneppi með því að nota reglu Cramers
+  
+  .. math:: 
         4x+2y-z=0,\\
         x+3y+7z=1,\\
         -3x-y+2z=1
@@ -479,9 +482,9 @@ Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-    Fylkjaframsetning jöfhnuhneppisins er
-
-    .. math:: A= \left(
+  Fylkjaframsetning jöfhnuhneppisins er
+  
+  .. math:: A= \left(
         \begin{array}{ccc}
         4 & 2 & -1 \\
         1 & 3 & 7 \\
@@ -495,9 +498,9 @@ Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers
         \end{array}
         \right),
 
-    með 
-
-    .. math::
+  með 
+  
+  .. math::
         A_1 (\textbf{b}) = \left(
         \begin{array}{ccc}
         0 & 2 & -1 \\
@@ -521,14 +524,14 @@ Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers
         \right)
 
 
-    Athugum að :math:`\det A=-2`, :math:`\det A_1(\textbf{b})=14`, :math:`\det A_2(\textbf{b})=-24` og :math:`\det A_3(\textbf{b})=8`. Með reglu Cramers fæst því
-
-    .. math::
+  Athugum að :math:`\det A=-2`, :math:`\det A_1(\textbf{b})=14`, :math:`\det A_2(\textbf{b})=-24` og :math:`\det A_3(\textbf{b})=8`. Með reglu Cramers fæst því
+  
+  .. math::
         x_1 = \frac{\det A_1(\textbf{b})}{\det A}=-7,\ \
         x_2 = \frac{\det A_2(\textbf{b})}{\det A}=12,\ \
         x_3 = \frac{\det A_3(\textbf{b})}{\det A}=-4.
         
-    Nú er um að gera að prófa lausnina með því að stinga inn fyrir :math:`\textbf{x}` í :math:`A \textbf{x}=\textbf{b}`.
+  Nú er um að gera að prófa lausnina með því að stinga inn fyrir :math:`\textbf{x}` í :math:`A \textbf{x}=\textbf{b}`.
 
 
 Ákveður og rúmfræði
@@ -539,7 +542,7 @@ Skilgreining: Samsíðungur
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`u=(u_1,u_2)` og :math:`v=(v_1,v_2)` vera tvo vigra í :math:`\mathbb{R}^2`.  *Samsíðungurinn* (e. paralellogram) sem vigrarnir ákvarða er ferhyrningurinn með hornpunkta :math:`(0,0), (u_1,u_2), (v_1,v_2),`
+    Látum :math:`u=(u_1,u_2)` og :math:`v=(v_1,v_2)` vera tvo vigra í :math:`\mathbb{R}^2`.  **Samsíðungurinn** (e. paralellogram) sem vigrarnir ákvarða er ferhyrningurinn með hornpunkta :math:`(0,0), (u_1,u_2), (v_1,v_2),`
     og :math:`(u_1+v_1,u_2+v_2)`.
 
 
@@ -549,7 +552,7 @@ Skilgreining: Samhliðungur
     :class: skilgreining
 
     Látum :math:`u=(u_1,u_2,u_3), v=(v_1,v_2,v_3)` og :math:`w=(w_1,w_2,w_3)` vera vigra í :math:`\mathbb{R}^3`.
-    *Samhliðungurinn* (e. parallelepiped) sem vigrarnir ákvarða er rúmmálið með hornpunkta
+    **Samhliðungurinn** (e. parallelepiped) sem vigrarnir ákvarða er rúmmálið með hornpunkta
 
     .. math:: (0,0,0), (u_1,u_2,u_3), (v_1,v_2,v_3), (w_1,w_2,w_3),
         (u_1+v_1,u_2+v_2,u_3+v_3),\\
@@ -558,8 +561,9 @@ Skilgreining: Samhliðungur
         (u_1+v_1+w_1,u_2+v_2+w_2,u_3+v_3+w_3)
 
 
-Setning
-~~~~~~~~
+Setning: Flatarmál og rúmmál
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Setning
     :class: setning
 
@@ -571,8 +575,9 @@ INSERT MYND
 
 Ryfjum upp að mynd mengis :math:`S \subseteq \R` er mengið :math:`T(S)=\{T(s) : s \in S\}`.
 
-Setning
-~~~~~~~~
+Setning: Mynd varpanna
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Setning
     :class: setning
 
@@ -583,8 +588,9 @@ Setning
     Þá er myndin :math:`T(S)` samhliðungurinn sem ákvarðast af vigrunum :math:`T(u), T(v)` og :math:`T(w)`.
 
 
-Setning
-~~~~~~~
+Setning: Flatarmál og rúmmál línulegra varpanna 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Setning
     :class: setning
 
@@ -603,26 +609,27 @@ Sýnidæmi: Flatarmál samsíðungs
 .. admonition:: Dæmi
   :class: daemi
 
-    Reikna á flatarmál samsíðungsins sem ákvarðaður er af hornpunktunum :math:`(-1,-2), (0,2), (3,-1)` og :math:`(4,3)`.
+  Reikna á flatarmál samsíðungsins sem ákvarðaður er af hornpunktunum :math:`(-1,-2), (0,2), (3,-1)` og :math:`(4,3)`.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-    Við byrjum á því að hliðra hornpunktunum þannig að einn þeirra sé í miðju hnitakerfisins :math:`(0,0)`.
-    Nýju hnitin sem fást eru :math:`(-1+1,-2+2)=(0,0), (0+1,2+2)=(1,4),` :math:`(3+1,-1+2)=(4,1)`
-    og :math:`(4+1,3+2)=(5,5)`.
+  Við byrjum á því að hliðra hornpunktunum þannig að einn þeirra sé í miðju hnitakerfisins :math:`(0,0)`.
+  Nýju hnitin sem fást eru :math:`(-1+1,-2+2)=(0,0), (0+1,2+2)=(1,4),` :math:`(3+1,-1+2)=(4,1)`
+  og :math:`(4+1,3+2)=(5,5)`.
         
-    Samsíðungurinn er ákvarðaður af dálkvigrum fylkisins
-    
-    .. math:: 
+  Samsíðungurinn er ákvarðaður af dálkvigrum fylkisins
+  
+  .. math:: 
         A= \begin{bmatrix}
         1 & 4\\
         4 & 1
         \end{bmatrix}
 
-    Þar sem :math:`|\det A| = |-15|` er flatarmál samsíðungsins :math:`15`.
+  Þar sem :math:`|\det A| = |-15|` er flatarmál samsíðungsins :math:`15`.
 
 .. figure:: myndir/kafli3mynd2.svg
+  :align: center
 
 
 
