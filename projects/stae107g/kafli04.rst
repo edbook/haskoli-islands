@@ -716,9 +716,33 @@ Setning: Hnitaskiptafylki yfir í venjulega grunninn
 
 TODO: dæmi
 
-TODO: formúla fyrir hnitaskiptifylki
+Setning: Formúla fyrir hnitaskiptifylki
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-TODO: Reiknitit fyrir hnitaskiptafylki
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`\mathcal{B}` og :math:`\mathcal{C}` vera grunna fyrir :math:`\R^n` og látum :math:`\mathcal{E}` tákna venjulega grunninn.
+    Þá er 
+
+    .. math:: P_{\mathcal{C}\leftarrow\mathcal{B}}=P_{\mathcal{C}\leftarrow\mathcal{E}}P_{\mathcal{E}\leftarrow\mathcal{B}}
+        =(P_{\mathcal{E}\leftarrow\mathcal{C}})^{-1} P_{\mathcal{E}\leftarrow\mathcal{B}}
+
+
+Reikniaðferð fyrir hnitaskiptafylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Aðferð
+    :class: skilgreining
+
+    Látum :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \dots, \ve b_n\}` og :math:`\mathcal{C}=\{\ve c_1, \ve c_2, \dots, \ve c_n\}` 
+    vera grunna fyrir :math:`\R^n`. Til þess að finna hnitaskiptafylkið frá :math:`\mathcal{B}`-hnitum yfir í :math:`\mathcal{C}`-hnit, 
+    :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}` gerum við eftirfarandi
+
+    **1.** Búum til aukna fylkið :math:`[\ve c_1 \ \ve c_2 \ \dots \ \ve c_n \ | \ \ve b_1 \ \ve b_2 \ \dots \ \ve b_n]`
+
+    **2.** Breytum vinstri hluta aukna fylkisins í einingarfylkið með einföldum línuaðgerðum. Það sem eftir stendur í 
+    hægri hluta aukna fylkisins er þá hnitaskiptafylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}`.
 
 TODO: Dæmi
 

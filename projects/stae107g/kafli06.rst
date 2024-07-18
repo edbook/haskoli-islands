@@ -470,6 +470,7 @@ Skilgreining: Hornrétt ofanvarp
 Liða má vigur :math:`\ve y \in \R` upp í samsíðan og hornréttan þátt, þ.e. :math:`\ve y=\hat{\ve y}+\ve z`, eins og sjá má á eftirfarandi mynd.
 
 .. figure:: myndir/ofanvarp.png
+  :align: center
 
 Punkturinn :math:`\hat{\ve y}` er sá punktur á línunni í planinu sem er í minnstri fjarlægð frá punktinum :math:`\ve y`.
 
@@ -567,7 +568,7 @@ Setning: Hornréttir grunnar fyrir hlutrúm
 
     **3.** Ef :math:`i \neq j` þá eru :math:`\ve u_i` og  :math:`\ve u_j` hornréttir horn á annan, m.ö.o.  :math:`\ve u_i \cdot \ve u_j =0`.
 
-Setning: Hornrétt liðun (e. orthognal decomposition)
+Setning: Hornrétt liðun (e. orthogonal decomposition)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
