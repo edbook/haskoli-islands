@@ -768,4 +768,49 @@ Sýnidæmi: Aðferð minnstu kvaðrata
 
   Finna á nálgunarlausn á eftirfarandi jöfnuhneppi
 
-  .. math:: A=
+  .. math:: A=\begin{bmatrix}
+            3 & 2 & 1 \\
+            1 & -4 & 3 \\
+            1 & 10 & -7 
+            \end{bmatrix},\ \ \
+            \mathbf{b} = \begin{bmatrix}
+            2 \\
+            -2 \\
+            1
+            \end{bmatrix}
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Ef við reynum að leysa :math:`A \ve x = \ve b` komumst við að því að það er engin lausn. Notum aðferð minnstu kvarðata til að finna nálgunarlausn. Reiknum
+
+  .. math:: A^T A = \begin{bmatrix}
+            11 & 12 & -7 \\
+            12 & 120 & -84 \\
+            -7 & -84 & 59
+            \end{bmatrix}, \ \ \
+            \text{og} \ \ \
+            A^T \ve b = \begin{bmatrix}
+            5 \\ 22 \\ -15
+            \end{bmatrix}
+  
+  Nú leysum við :math:`A^T A \ve x = A^T \ve b` og fáum að
+
+  .. math:: \hat{\ve x}= \begin{bmatrix}
+    2/7 - t/7 \\
+    13/84 + 5t/7 \\
+    t
+    \end{bmatrix} =
+    \begin{bmatrix}
+    2/7 \\ 13/84 \\ 0
+    \end{bmatrix}
+    + t \begin{bmatrix}
+    -1/7 \\ 5/7 \\ 1
+    \end{bmatrix}
+
+  þar sem :math:`t \in \R`.
+
+
+
+
+
+  
