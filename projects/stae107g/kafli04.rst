@@ -10,7 +10,7 @@ Skilgreining: Vigurrúm
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Vigurrúm (e. vector space) er ekki tómt mengi :math:`V` með stökum sem
+    **Vigurrúm** (e. vector space) er ekki tómt mengi :math:`V` með stökum sem
     nefnd eru vigrar (e. vectors) ásamt tveimur aðgerðum
     samlagningu og margföldun með rauntölu, sem fullnægja
     eftirfarandi frumsendum fyrir alla vigra :math:`u, v\in V` og allar tölur :math:`c` og :math:`d` 
@@ -210,7 +210,7 @@ Skilgreining: Vigursumma
 
     .. math:: U_1+U_2=\{\ve x+\ve y\colon \ve x\in U_1, \ve y\in U_1 \}
 
-    vigursumma(eða einfaldlega summa) (e. vector sum) þeirra.
+    **vigursumma** (eða einfaldlega summa) (e. vector sum) þeirra.
 
 Setning 
 ^^^^^^^
@@ -231,7 +231,7 @@ Skilgreining: Núllrúm fylkis
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`A` vera :math:`m\times n` fylki. Núllrúm :math:`A` (e. nullspace) er skilgreint sem
+    Látum :math:`A` vera :math:`m\times n` fylki. **Núllrúm** :math:`A` (e. nullspace) er skilgreint sem
     mengi allra vigra :math:`\ve x\in\R^n` þannig að :math:`A\ve x=\ve 0`. Núllrúmið er táknað með :math:`\nul{A}` og
 
     .. math:: \nul{A}=\{\ve x\in\R^n\colon A\ve x=\ve 0\}
@@ -258,7 +258,7 @@ Skilgreining: Dálkrúm fylkis
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`A` vera :math:`m\times n` fylki. Mengið sem dálkvigrar :math:`A` spanna kallast
+    Látum :math:`A` vera :math:`m\times n` fylki. Mengið sem **dálkvigrar** :math:`A` spanna kallast
     dálkrúm :math:`A` (e. column space) og er táknað með :math:`\col{A}`. Ef :math:`A=[a_1 a_2 \cdots a_n]` þá er
 
     .. math:: \col{A}=\spn\{a_1,a_2,\ldots,a_n\}
