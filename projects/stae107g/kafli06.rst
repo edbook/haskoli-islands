@@ -133,7 +133,7 @@ Sýnidæmi: Fjarlægð milli punkta
 .. admonition:: Dæmi
   :class: daemi
 
-  Reiknum fjarlæð milli :math:`\begin{bmatrix} 1 \\ 2 \end{bmatrix}` og  :math:`\begin{bmatrix} -3 \\ 4 \end{bmatrix}`
+  Reiknum fjarlægð milli :math:`\begin{bmatrix} 1 \\ 2 \end{bmatrix}` og  :math:`\begin{bmatrix} -3 \\ 4 \end{bmatrix}`
 
 .. admonition:: Lausn
   :class: daemi, dropdown
@@ -198,9 +198,9 @@ Skilgreining: Hornrétt fyllirúm
 .. admonition:: Skilgreining
   :class: skilgreining
 
-    Látum :math:`W` vera mengi vigra í :math:`\R^n`. *Hornrétt fyllirúm* (e. orthogonal complement) er mengi :math:`W^{\perp}` allra þeirra vigra í :math:`\R^n` sem eru hornréttir á sérhvern vigur í :math:`W`, þ.e.
+  Látum :math:`W` vera mengi vigra í :math:`\R^n`. **Hornrétt fyllirúm** (e. orthogonal complement) er mengi :math:`W^{\perp}` allra þeirra vigra í :math:`\R^n` sem eru hornréttir á sérhvern vigur í :math:`W`, þ.e.
 
-        .. math:: W^{\perp}=\{ z \in \R^n : z \cdot w =0\ \text{fyrir alla vigra}\ w \in W \}
+    .. math:: W^{\perp}=\{ z \in \R^n : z \cdot w =0\ \text{fyrir alla vigra}\ w \in W \}
 
 Setning: Hornrétt fyllirúm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -227,8 +227,8 @@ Sönnum **a.** í setningunni hér að ofan.
         **2.** Látum :math:`\ve u, \ve v \in W^\perp` og látum :math:`\ve w` vera hvaða vigur sem er í :math:`W`. 
         Þá er 
 
-        .. math::(\ve u + \ve v)\cdot\ve w = \ve u \cdot \ve w + \ve v \ cdot \ve w=0+0=0
-        
+        :math:`(\ve u + \ve v)\cdot\ve w = \ve u \cdot \ve w + \ve v \cdot \ve w =0+0=0`
+
         svo :math:`(\ve u+\ve v)` er hornrétt á alla vigra :math:`W` og því er :math:`(\ve u + \ve v) \in W^\perp`.
 
         **3.** Látum :math:`\ve u \in W^\perp`, :math:`\ve w` vera hvaða vigru sem er í :math:`W` og :math:`c` vera raunrölu. Þá er 
@@ -248,8 +248,8 @@ Skilgreining: Þverstæð og þverstöðluð mengi
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Mengi :math:`W` í :math:`\R^n` er *þverstætt* (e. orthogonal) ef sérhverjir tveir vigrar í menginu eru hornréttir hvor á annan.
-    Mengið er sagt *þverstaðlað* (e. orthonormal) ef það er þverstætt og allir vigrarnir í :math:`W` hafa lengdina 1.
+    Mengi :math:`W` í :math:`\R^n` er **þverstætt** (e. orthogonal) ef sérhverjir tveir vigrar í menginu eru hornréttir hvor á annan.
+    Mengið er sagt **þverstaðlað** (e. orthonormal) ef það er þverstætt og allir vigrarnir í :math:`W` hafa lengdina 1.
 
 
 Sýnidæmi: Þverstæð og þverstöðluð mengi
@@ -322,11 +322,11 @@ Skilgreining: Þverstæðir og þverstaðlaðir grunnar
 
     Látum :math:`W` vera hlutrúm í :math:`\R^n` og :math:`\{\ve u_1, \dots, \ve u_p \}` vera grunn fyrir :math:`W`.
     
-    **1.** Grunnurinn fyrir :math:`W` er *þverstæður* (e. orthogonal basis) ef sérhverjir tveir ólíkir vigrar í grunninum eru hornréttir hvor á annan, m.o.ö.
+    **1.** Grunnurinn fyrir :math:`W` er **þverstæður** (e. orthogonal basis) ef sérhverjir tveir ólíkir vigrar í grunninum eru hornréttir hvor á annan, m.o.ö.
 
         .. math:: u_i \cdot u_j =0\  \forall \ i \neq j.
     
-    **2.** Grunnurinn  fyrir :math:`W` er *þverstaðlaður* (e. orthonormal basis) ef sérhverjir tveir vigrar í grunninum eru hornréttir hvor og annan og allir vigrarnir eru einingarvigrar, m.ö.o.
+    **2.** Grunnurinn  fyrir :math:`W` er **þverstaðlaður** (e. orthonormal basis) ef sérhverjir tveir vigrar í grunninum eru hornréttir hvor og annan og allir vigrarnir eru einingarvigrar, m.ö.o.
 
         .. math:: u_i \cdot u_j = \begin{cases}
             0\ \forall \ i \neq j \\
@@ -465,12 +465,13 @@ Skilgreining: Hornrétt ofanvarp
 
   .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}\cdot \ve u
 
-  sem *hornrétt ofanvarp* (e. orthogonal projection) :math:`\ve y` á :math:`\ve u`. Stundum er ofanvarp táknað með proj(:math:`\ve y`). 
+  sem **hornrétt ofanvarp** (e. orthogonal projection) :math:`\ve y` á :math:`\ve u`. Stundum er ofanvarp táknað með proj(:math:`\ve y`). 
 
 Liða má vigur :math:`\ve y \in \R` upp í samsíðan og hornréttan þátt, þ.e. :math:`\ve y=\hat{\ve y}+\ve z`, eins og sjá má á eftirfarandi mynd.
 
 .. figure:: myndir/ofanvarp.png
   :align: center
+  :scale: 70%
 
 Punkturinn :math:`\hat{\ve y}` er sá punktur á línunni í planinu sem er í minnstri fjarlægð frá punktinum :math:`\ve y`.
 
@@ -531,7 +532,7 @@ Skilgreining: Hornrétt ofanvarp á hlutrúm
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Látum :math:`W` vera hlutrúm og :math:`\ve y` vera vigur í :math:`\R^n`. Við skilgreinum hornrétt ofanvarp á hlutrúm :math:`W` sem
+  Látum :math:`W` vera hlutrúm og :math:`\ve y` vera vigur í :math:`\R^n`. Við skilgreinum **hornrétt ofanvarp á hlutrúm** :math:`W` sem
   :math:`\text{proj}_W: \R^n \rightarrow \R^n` þannig að :math:`\text{proj}_W \ve y = \hat{\ve y}\in W` er hornrétt ofanvarp vigurs :math:`\ve y` á :math:`W` og
   :math:`\ve z=\ve y - \hat{\ve y} \in W^{\perp}`.
 
@@ -600,7 +601,7 @@ Skilgreinig: Fylki fyrir ofanvarp
 
   .. math:: \text{proj}_W \ve y = UU^T \ve y.
 
-  Fylkið :math:`P_W=UU^T` er af stærð :math:`n \times n` og er kallað *ofanvarpsfylkið* (e. projection matrix) á hlutrúmið :math:`W`.
+  Fylkið :math:`P_W=UU^T` er af stærð :math:`n \times n` og er kallað **ofanvarpsfylkið** (e. projection matrix) á hlutrúmið :math:`W`.
 
 
 Gram-Schmidt
@@ -729,7 +730,7 @@ Skilgreining: Aðferð minnstu kvaðrata
 .. admonition:: Skilgreinig
   :class: skilgreining
 
-  Látum :math:`A` vera :math:`m \times n` fylki og :math:`\ve b\in \R^m`. *Minnstu kvaðrata lausn* (e. least squares solution) á :math:`A \ve x = \ve b` er vigur
+  Látum :math:`A` vera :math:`m \times n` fylki og :math:`\ve b\in \R^m`. **Minnstu kvaðrata lausn** (e. least squares solution) á :math:`A \ve x = \ve b` er vigur
   :math:`\hat{\ve x}` þannig að
 
   .. math:: ||\ve b - A \hat{\ve x} || \leq || \ve b - A \hat{\ve x}||
