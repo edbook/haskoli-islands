@@ -24,7 +24,7 @@ Skilgreining: Línuleg jafna
     kallast **línuleg jafna** (e. linear equation).
 
     :math:`a_1,a_2,\dots,a_n` kallast **stuðlar** (e. coefficients) jöfnunnar.
-    :math:`x_1,x_2,\dots,x_n` eru óþekktar stærðir, breytur (e. variables).
+    :math:`x_1,x_2,\dots,x_n` eru óþekktar stærðir, **breytur** (e. variables).
 
 
 Skilgreining: Línulegt jöfnuhneppi 
@@ -56,7 +56,7 @@ Setning: Fjöldi lausna
 
         **(b)** Nákvæmlega eina lausn.
 
-        **(c)** óendanlega margar lausnir.
+        **(c)** Óendanlega margar lausnir.
     
     Segjum að jöfnuhneppi sé **ósamkvæmt** (e. inconsistent) ef það hefur enga lausn.
 
@@ -79,7 +79,7 @@ Sýnidæmi: Jöfnuhneppi sem hefur enga lausn
 .. admonition:: Lausn
   :class: daemi, dropdown
   
-   Margföldum efri jöfnuna með 2.
+  Margföldum efri jöfnuna með 2.
    
   .. math:: \begin{align*}
      2x-4y&=10 \\
@@ -150,7 +150,7 @@ Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir
        \end{align*}
     
    Lína :math:`0=0` kallast núllína. Athugum þá hvort jafnan 
-   :math:`x+y=2` einhveja lausn. Já, :math:`(x,y)=(1,1)` og 
+   :math:`x+y=2` hafi einhverja lausn. Já, :math:`(x,y)=(1,1)` og 
    :math:`(x,y)=(2,0)` eru dæmi um lausnir. Jöfnuhneppið er 
    samkvæmt en lausnin er ekki ótvírætt ákvörðuð. Ef við veljum 
    til dæmis :math:`y=t` fæst :math:`x=2-t`. Svo allar tvenndir af
@@ -293,7 +293,7 @@ Sýnidæmi: Línuaðgerðir
     \phantom{x_1+x_2+} x_3 &= 0
     \end{align*}
   
-  og línulega jöfnuhneppið hefur eina lausn; :math:`(x_1,x_2,x_3)=(2,2,0)`. 
+  og línulega jöfnuhneppið hefur eina lausn: :math:`(x_1,x_2,x_3)=(2,2,0)`. 
 
 
 Um fylki
@@ -311,7 +311,7 @@ Látum
     \end{bmatrix}
 
 vera fylki með :math:`m` jöfnum og :math:`n` óþekktum breytum. Við segjum að :math:`A` sé :math:`{m\times n}` fylki.
-Jafnframt er :math:`m\times n` kallað **stærð fylkisins** :math:`A`.
+Jafnframt er :math:`m\times n` kallað **stærð fylkisins**.
 
 Skilgreining: Stuðlafylki og aukið fylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -319,17 +319,17 @@ Skilgreining: Stuðlafylki og aukið fylki
 .. admonition:: Skilgreining
     :class: skilgreining
 
-        Látum 
+    Látum 
 
-        .. math:: \begin{alignat*}{2}
+    .. math:: \begin{alignat*}{2}
             a_{11}x_{1}+&\dots+a_{1n}x_n &= b_1\\
             &\hspace{6.143162275pt}\vdots & \\
             a_{m1}x_{1}+&\dots+a_{mn}x_n &= b_m\\    
             \end{alignat*}
         
-        vera línulegt jöfnuhneppi. Við köllum fylkin
+    vera línulegt jöfnuhneppi. Við köllum fylkin
 
-        .. math:: \begin{bmatrix}
+    .. math:: \begin{bmatrix}
             a_{11} &\dots &a_{1n}\\
             \vdots&&\vdots\\
             a_{m1}&\dots &a_{mn}\\  
@@ -341,7 +341,7 @@ Skilgreining: Stuðlafylki og aukið fylki
             a_{m1}&\dots &a_{mn} &b_m\\  
             \end{bmatrix}
         
-        **Stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix) jöfnuhneppisins.
+    **Stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix) jöfnuhneppisins.
 
 Efri stallagerð
 ~~~~~~~~~~~~~~~~~~~
@@ -385,7 +385,7 @@ Skilgreining: Efri stallagerð
 
         **3.** Allir stuðlar fyrir neðan forustustuðul eru núll.
     
-    Öllum fylkjum má breyta í fylki af efri stallagerð með einfölduum línuaðgerðum.
+    Öllum fylkjum má breyta í fylki af efri stallagerð með einföldum línuaðgerðum.
 
 Sýnidæmi: Efri stallagerð
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -428,7 +428,7 @@ Gauss-eyðing
 ------------
 
 Línuleg jöfnuhneppi eru yfirleitt leyst með svokallaðri **Gauss-eyðingu** (e. Gauss-reduction).
-Gauess-eyðing er reiknirit sem umbreytir fylki í fylki af efri stallagerð.
+Gauss-eyðing er reiknirit sem umbreytir fylki í fylki af efri stallagerð.
 
 Reiknirit fyrir Gauss-eyðingu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -635,7 +635,7 @@ Setning: Rudd efri stallagerð
 
   Gefið er fylki :math:`A`. Fylkinu :math:`A` má með einföldum línuaðgerðum 
   umbreyta í eitt og aðeins eitt fylki af ruddri efri stallagerð. Með öðrum 
-  orðum er rudd efri stallagerð fylkis er ótvírætt ákvörðuð. 
+  orðum er rudd efri stallagerð fylkis ótvírætt ákvörðuð. 
 
 
 Sýnidæmi: Frjálsar og háðar breytur
@@ -746,7 +746,7 @@ Setning: Fjöldi frjálsa breyta
 .. admonition:: Setning
   :class: setning
 
-  Jöfnuhneppi hefur lausn ef og aðeins dálkurinn lengst til hægri í efra stallaformi
+  Jöfnuhneppi hefur lausn ef og aðeins ef dálkurinn lengst til hægri í efra stallaformi
   inniheldur ekki forustustuðul, þ.e.a.s. ef efra stallaform aukna
   fylkisins inniheldur ekki línu á forminu 
 
@@ -1283,7 +1283,7 @@ Sýnidæmi: Margfeldi fylkis og vigurs
         2 & 3 & -1 \\
         -1 & 4 & 6
         \end{bmatrix}
-        \quad \text{, } \quad
+        \text{, } \quad
         \textbf{x} = \begin{bmatrix}
         5 \\
         -3 \\
@@ -1671,7 +1671,7 @@ Sýnidæmi: Stikuð framsetning
     .. math:: \begin{align*}
         x_1-2x_2-3x_3=0\end{align*}
     
-.. admonition:: Launs
+.. admonition:: Lausn
     :class: daemi, dropdown
 
     Fáum að :math:`x_1 = 2x_2 +3x_3` þar sem :math:`x_2` og :math:`x_3` eru frjálsar breytur. 
@@ -1699,7 +1699,7 @@ Sýnidæmi: Stikuð framsetning
     Getum því skrifað :math:`\textbf{x} = s\text{u} + t \textbf{v}` með 
     :math:`\textbf{u} =\begin{bmatrix} 2&1&0 \end{bmatrix}^T`  og 
     :math:`\textbf{v}= \begin{bmatrix} 3&0&1 \end{bmatrix}^T` og 
-    :math: `s,t \in \mathbb{R}`.
+    :math:`s,t \in \mathbb{R}`
     Þetta er dæmi um **stikaða framsetningu** (e. parametric form) á lausn.
 
 
@@ -2183,14 +2183,15 @@ Setning: Línulegar varpanir
         **1.** :math:`T(\textbf{0})=\textbf{0}`
 
         **2.** Ef :math:`\textbf{u},\textbf{v}` eru vigrar í :math:`\mathbb{R}^n` og :math:`c, d` eru
-               rauntölur þá er 
+        rauntölur þá er 
                
-               .. math:: T(c\textbf{u}+d\textbf{v})=cT(\textbf{u})+dt(\textbf{v}).
+            .. math:: T(c\textbf{u}+d\textbf{v})=cT(\textbf{u})+dt(\textbf{v}).
 
-        **3.** Ef :math:`\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p` er rupptalning á vigrum og :math:`c_1, c_2, \dots, c_p`
-               er upptalning á tölum þá er 
+        **3.** Ef :math:`\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p` 
+        er rupptalning á vigrum og :math:`c_1, c_2, \dots, c_p`
+        er upptalning á tölum þá er 
 
-               .. math:: T(c_1\textbf{u}_1+c_2\textbf{u}_2+\cdots+c_p\textbf{u}_p)=c_1T(\textbf{u}_1)+c_2T(\textbf{u}_2)+\cdots+c_pT(\textbf{u}_p). 
+        .. math:: T(c_1\textbf{u}_1+c_2\textbf{u}_2+\cdots+c_p\textbf{u}_p)=c_1T(\textbf{u}_1)+c_2T(\textbf{u}_2)+\cdots+c_pT(\textbf{u}_p). 
 
 
 
@@ -2274,26 +2275,31 @@ Speglun um x-ás: :math:`\begin{bmatrix} 1 & 0 \\ 0 &-1 \end{bmatrix}`
 
 .. figure:: myndir/speglunx.svg
     :align: center
+    :scale: 75%
 
 Speglun um y-ás: :math:`\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/spegluny.svg
     :align: center
+    :scale: 70%
 
 Speglun um línuna x=y :math:`\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}`
 
 .. figure:: myndir/speglun_y=x.svg
     :align: center
+    :scale: 75%
 
 Speglun um línuna y=-x :math:`\begin{bmatrix} 0 & -1 \\ -1 & 0 \end{bmatrix}`
 
 .. figure:: myndir/speglun_y=-x.svg
     :align: center
+    :scale: 75%
 
 Speglun um núllpunkturinn :math:`\begin{bmatrix} -1 & 0 \\ 0 &-1 \end{bmatrix}`
 
 .. figure:: myndir/speglun_0.svg
     :align: center
+    :scale: 75%
 
 Stríkkanir
 ~~~~~~~~~~
@@ -2302,17 +2308,25 @@ Lárétt stríkkun :math:`\begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/larett_strikkun.svg
     :align: center
+    :scale: 75%
+
+og
 
 .. figure:: myndir/larett_strikkun_2.svg
     :align: center
+    :scale: 75%
 
 Lóðrétt stríkkun :math:`\begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix}`
 
 .. figure:: myndir/lodrett_strikkun.svg
     :align: center
+    :scale: 75%
+
+og
 
 .. figure:: myndir/lodrett_strikkun_2.svg
     :align: center
+    :scale: 75%
 
 Skekkingar
 ~~~~~~~~~~
@@ -2321,11 +2335,13 @@ Lárétt skekking :math:`\begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/latrett_skekking.svg
     :align: center
+    :scale: 75%
 
 Lóðrétt skekking :math:`\begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix}`
 
 .. figure:: myndir/lodrett_skekking.svg
     :align: center
+    :scale: 75%
 
 Ofanvörp
 ~~~~~~~~~
@@ -2334,11 +2350,13 @@ Ofanvarp á x-ás :math:`\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}`
 
 .. figure:: myndir/ofanvarp_x.svg
     :align: center
+    :scale: 75%
 
 Ofanvarp á y-ás :math:`\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/ovanvarp_y.svg
     :align: center
+    :scale: 75%
 
 
 Eintækar og átækar varpanir

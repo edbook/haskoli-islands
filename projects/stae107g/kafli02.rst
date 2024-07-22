@@ -18,7 +18,7 @@ Nokkrar gerðir fylkja
         \end{bmatrix}
 
   **Einingarfylki** (e. identity matrix) *I*, er hornalínufylki þar sem 
-  öll stökin á hornlínu eru 1. 
+  öll stökin á hornalínu eru 1. 
 
   .. math:: I_3=I=\begin{bmatrix}
         1 & 0 & 0 \\
@@ -34,7 +34,7 @@ Nokkrar gerðir fylkja
         0 & 0 & 0
         \end{bmatrix}
     
-  **Frumfylki** (e. elementary matrix) er fylki sem er fengið með því að beita einfaldri línuaðgerð á einingarfylkið.
+  **Frumfylki** (e. elementary matrix) er fylki sem er fengið með því að beita einni einfaldri línuaðgerð á einingarfylkið.
   
   .. math:: \begin{bmatrix}
         1 & 0 & 0 \\

@@ -156,7 +156,7 @@ Við sjáum að ákveða fylkis sem hefur núllínu eða núlldálk er alltaf :m
             - & + & - & \dots\\
             + & - & + & \dots\\
             \vdots & \vdots & \vdots & \ddots
-            \end{bmatrix}.
+            \end{bmatrix}
 
 Skilgreining: Önnur aðferð til þess að reikna ákveðu :math:`3 \times 3` fylkis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,6 +166,7 @@ Skilgreining: Önnur aðferð til þess að reikna ákveðu :math:`3 \times 3` f
   Reikna má ákveðu :math:`3 \times 3` fylkist með því að endurtaka fyrstu tvo dálka hægra megin við fylkið og leggja saman og draga frá þær 6 hornalínur sem þannig myndast.
 
 .. figure:: myndir/3fylki.png
+  :align: center
 
 Engin sambærileg regla gildir fyrir :math:`n \geq 4`.
 
@@ -630,6 +631,7 @@ Sýnidæmi: Flatarmál samsíðungs
 
 .. figure:: myndir/kafli3mynd2.svg
   :align: center
+  :scale: 50 %
 
 
 
