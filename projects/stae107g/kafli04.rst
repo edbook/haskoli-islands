@@ -184,10 +184,10 @@ Fleiri dæmi um hlutrúm
 
     Efirfarandi eru upptalning á öllum hlutrúmum í nokkrum vigurrúmum:
 
-    **1.** Einu hlutrúmin í :math:`\R` eru :math:`\{0\}` og :math:`\R`
+    **1.** Einu hlutrúmin í :math:`\R` eru :math:`\{0\}` og :math:`\R`.
 
     **2.** Hlutrúmin í :math:`\R^2` eru :math:`\{\ve 0\}` og :math:`\R^2` ásamt öllum línum sem liggja um núllpunktinn.
-    Lína gegnum núllpunktinn með stefnuvigur :math:`\ve v` er jöfn :math:`\spn\{\ve v\}`
+    Lína gegnum núllpunktinn með stefnuvigur :math:`\ve v` er jöfn :math:`\spn\{\ve v\}`.
 
     **3.** Hlutrúmin í :math:`\R^3` eru :math:`\{\ve 0\}` og :math:`\R^3` ásamt öllum línum og öllum sléttum sem liggja um núllpunktinn.
     Ef :math:`\Gamma` er slétta í :math:`\R^3` sem inniheldur núllpunktinn og :math:`\ve u` og :math:`\ve v` eru vigrar sem liggja í planinu 
@@ -297,12 +297,12 @@ Skilgreining: Kjarni og mynd
 
     :math:`T\colon V\to W` vera línulega vörpun.
 
-    **a.** Kjarni (e. kernel, null space) vörpunarinnar T er mengi allra vigra :math:`\ve u\in V` þannig að
+    **a.** **Kjarni** (e. kernel, null space) vörpunarinnar T er mengi allra vigra :math:`\ve u\in V` þannig að
     :math:`T(\ve u)=\ve 0`. Kjarninn er táknaður með :math:`\ker{T}` og
 
     .. math:: \ker{T}=\{\ve u\in V\colon T(\ve u)=\ve 0\}.
 
-    **b.** Mynd (e. range) vörpunarinnar T er mengi allra vigra í :math:`W` sem rita má á forminu 
+    **b.** **Mynd** (e. range) vörpunarinnar T er mengi allra vigra í :math:`W` sem rita má á forminu 
     :math:`T(\ve x)` fyrir eitthvað :math:`\ve x\in V`. Myndin er oft táknuð :math:`\range{T}` og
 
     .. math:: \range{T}=\{T(\ve x)\colon \ve x\in V\}.
@@ -341,7 +341,7 @@ Skilgreining: Grunnur
     :class: skilgreining
 
     Látum :math:`H` vera hlutrúm í vigurrúmi :math:`V`. Upptalning :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`
-    á vigrum í :math:`V` kallast grunnur fyrir :math:`H` ef eftirfarandi skilyrði eru bæði uppfyllt
+    á vigrum í :math:`V` kallast **grunnur** fyrir :math:`H` ef eftirfarandi skilyrði eru bæði uppfyllt
     :
 
     **(i)** Upptalningin :math:`\mathcal{B}` er línulega óháð.

@@ -714,7 +714,7 @@ Að finna þverstaðlaðan grunn fyrir hlutrúm :math:`W`
 Aðferð minnstu kvaðrata 
 -------------------------
 
-Aðferð minnstu kvarðrata (e. least squares) snýst um að finna nálgunarlausn á :math:`A \ve x = \ve b` þegar ekki er til nákvæm lausn. Heitið kemur frá því að ef við höfum
+Aðferð minnstu kvaðrata (e. least squares) snýst um að finna nálgunarlausn á :math:`A \ve x = \ve b` þegar ekki er til nákvæm lausn. Heitið kemur frá því að ef við höfum
 :math:`\ve b = (\ve b_1, \cdots, \ve b_n)` og :math:`A \ve x = (\ve y_1, \cdots, \ve y_n)` og setjum :math:`\ve x = \hat{\ve x}` þá er summa minnstu kvarðatanna
  
 .. math:: ||\ve b - A \ve x ||^2=(\ve b_1 - \ve y_1)^2+ \cdots + (\ve b_n - \ve y_n)^2.
