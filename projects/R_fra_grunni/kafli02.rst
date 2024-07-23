@@ -447,7 +447,7 @@ names()
 
 ::
 
-   names(dat)
+   names(konnun)
    ##  [1] "is"              "ferdatimi_skoli"  "styrikerfi_simi" "ferdamati_skoli"   
    ##  [5] "systkini_fjoldi" "dyr"              "feministi"       "staerdfraedi_gaman"
    ##  [9] "smjor_kostar"    "napoleon_faeddur" "stefnumot"       "messi_staerd"      
@@ -476,7 +476,7 @@ væri útkoman:
 
 ::
 
-   head(dat)
+   head(konnun)
    ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
    ## 1  Jarðaberja  15                Android           Með einkabíl      
    ## 2  Vanilla     20                iOS               Með einkabíl     
@@ -518,7 +518,7 @@ mælingarnar liggja. Í okkar tilviki væri skipunin:
 
 ::
 
-   str(dat)
+   str(konnun)
    ## 'data.frame':	201 obs. of  13 variables:
    ##  $ is                : chr [1:201] "Jarðaberja" "Vanilla" "Súkkulaði" "Jarðaberja" ...
    ## $ ferdatimi_skoli   : num [1:201] 15 20 8 12 15 42 20 7 15 25 ...
@@ -556,11 +556,11 @@ tilteknum vigri. Í dæminu að ofan gefur skipunin
 
 ::
 
-   length(dat$ferdatimi_skoli)
+   length(konnun$ferdatimi_skoli)
    ## [1] 201
 
 útkomuna :math:`201`. Þ.e.a.s. það eru :math:`201` mælingar á ferðatíma í skóla
-geymdar í breytunni ``ferdatimi_skoli`` í gagnatöflunni ``dat``.
+geymdar í breytunni ``ferdatimi_skoli`` í gagnatöflunni ``konnun``.
 
 dim()
 ^^^^^
@@ -652,10 +652,10 @@ Skipunin
 
 ::
 
-   dat2 <-na.omit(dat)
+   konnun2 <-na.omit(konnun)
 
 
-smíðar gagnatöfluna ``dat2`` sem inniheldur aðeins einstaklinga sem
+smíðar gagnatöfluna ``konnun2`` sem inniheldur aðeins einstaklinga sem
 enga mælingu vantar hjá. Gætið ykkar að við viljum afar sjaldan eyða út
 öllum einstaklingum í gagnatöflu sem vantar *einhverja* mælingu hjá.
 Segjum sem sem dæmi að það vanti margar mælingar á breytunni ``smjor_kostar``
@@ -675,7 +675,7 @@ eftirfarandi skipun:
 
 ::
 
-   dat$napoleon_faeddur[dat$<1500|dat$napoleon_faeddur>1900]<-NA
+   konnun$napoleon_faeddur[konnun$<1500|konnun$napoleon_faeddur>1900]<-NA
 
 .. _s.gildivalin:
 
@@ -722,7 +722,7 @@ Berið útkomuvigurinn saman við vigurinn
 
 ::
 
-   dat$onothaefur_samningur
+   kaupskra$onothaefur_samningur
    ##  [1] 0 0 1 1 0 1 1 1 1 1 1 0
    ##  [13] 0 0 0 0 0 0 0 0 0 0 0 1
    ##  [25] 0 0 1 1 1 1 1 0 0 0 0 0
@@ -751,17 +751,17 @@ Líkt og við notum ``==`` getum við einnig notað aðra samanburðarvirkja:
 +--------+---------------------+
 
 Efstu virkjarnir fjórir skýra sig að mestu leyti sjálfir. Ef við viljum
-t.d. búa til nýja gagnatöflu ``datT`` sem inniheldur aðeins einstaklinga
+t.d. búa til nýja gagnatöflu ``konnunT`` sem inniheldur aðeins einstaklinga
 sem halda að Messi sé hærri en 170 cm gerum við það með:
 
 ::
 
-   datT <- dat[dat$messi_staerd > 170, ]
+   konnunT <- konnun[konnun$messi_staerd > 170, ]
 
 eða
 ::
 
-   datT <- filter(dat$messi_staerd > 170)
+   konnunT <- filter(konnun$messi_staerd > 170)
 
 Skoðum ``filter()`` skipunina betur í `%s <s.Ákveðin gildi valin úr gagnatöflu>`
 Hvað varðar neðri virkjana tvo, þá er virkinn :math:`\&` mataður með
@@ -776,7 +776,7 @@ skilar skipunin:
 
 ::
 
-   dat$systkini_fjoldi%in%c(0,3,7)
+   konnun$systkini_fjoldi%in%c(0,3,7)
    ## [1] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE
    ## [9] FALSE FALSE  TRUE FALSE TRUE FALSE FALSE FALSE
    ## [17]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
@@ -806,7 +806,7 @@ gagnatöflu getum við gert það með:
 
 ::
 
-   dat.first<-slice(dat,1:10)
+   konnun.first<-slice(konnun,1:10)
 
 filter()
 ^^^^^^^^
@@ -830,14 +830,14 @@ gagnatöflu sem inniheldur aðeins þá sem eiga engin systkini með:
 
 ::
 
-   engin_systkini<-filter(dat, systkini_fjoldi==0)
+   engin_systkini<-filter(konnun, systkini_fjoldi==0)
 
 Ef við viljum skoða gögn þeirra sem finnst jarðaberjaís bestur og kunna 
 betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný gagnatafla):
 
 ::
 
-   filter(dat, is=="Jarðaberja", dyr=="Hunda")
+   filter(konnun, is=="Jarðaberja", dyr=="Hunda")
 
 ::
 
@@ -862,11 +862,11 @@ velja. Við númerum viðfangsefni frá efsta viðfangsefninu til þess neðsta
 hægri (þ.e.a.s. breytan lengst til vinstri er númer eitt).
 
 Ef við viljum skoða hver mælingin á breytu 2 (``ferdatimi_skoli``) á viðfangsefni
-46 er í gagnatöflunni okkar ``dat`` gefum við skipunina:
+46 er í gagnatöflunni okkar ``konnun`` gefum við skipunina:
 
 ::
 
-   dat[46,2]
+   konnun[46,2]
    ## [1] 20
 
 Ef við sleppum fyrri vísavigrinum fáum við mælingar á öllum
@@ -875,7 +875,7 @@ viðfangsefnum fyrir breyturnar sem við tilgreinum í seinni vigrinum.
 
 ::
 
-   dat[,2]
+   konnun[,2]
 
 mælingarnar á ferðatíma í skóla fyrir öll viðfangsefnin. Ef við sleppum seinni
 vísavigrinum fáum við mælingar á öllum breytum fyrir viðfangsefnin sem
@@ -883,7 +883,7 @@ við tilgreinum í fyrri vigrinum. Þannig gefur skipunin
 
 ::
 
-   dat[c(46,52),]
+   konnun[c(46,52),]
    ##     is         ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
    ## 46  Vanilla    20                iOS               Með einkabíl      
    ## 52  Vanilla    13                iOS               Með einkabíl      
@@ -902,7 +902,7 @@ einhverjar tilteknar.
 
 ::
 
-   dat[-c(46,52), -2]
+   konnun[-c(46,52), -2]
 
 gefur mælingar fyrir öll viðfangsefni *nema* númer 46 og 52 og allar
 breytur *nema* þá aðra.
@@ -924,12 +924,12 @@ which()
 Að lokum viljum við nefna tvær aðferðir sem fylgja grunnpakka R.
 ``which()`` aðferðin er einstaklega gagnleg og gefur hún okkur vísa á
 gildi í vigri, gagnatöflu eða fylki sem uppfylla ákveðin skilyrði. Við
-getum t.d. kannað hvaða einstaklingar halda að Messi sé hærri en 180 cm í dat
+getum t.d. kannað hvaða einstaklingar halda að Messi sé hærri en 180 cm í konnun
 gögnunum okkar:
 
 ::
 
-   which(dat$messi_staerd>180)
+   which(konnun$messi_staerd>180)
    ##  [1]   29   64    77    130    136     142   168   195    
 
 Ef við mötum ``which()`` með tvívíðum hlut (fylki) og notum ``arr.ind``
@@ -959,7 +959,7 @@ innihalda textastrenginn ``skokkandi``.
 
 ::
 
-   grep("skokkandi", dat$ferdamati_skoli)
+   grep("skokkandi", konnun$ferdamati_skoli)
    ## [1]  4   8   12  13  24  25  57  59  67
    ## [10] 77  93  96  97  100 117 119 122 130
    ## [19] 131 132 133 136 139 142 147 148 158
@@ -971,7 +971,7 @@ við leitarskilyrðið en ekki bara vísa þeirra:
 
 ::
 
-   grep("skokkandi", dat$ferdamati_skoli, value=TRUE)
+   grep("skokkandi", konnun$ferdamati_skoli, value=TRUE)
    ##   [1] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi" 
    ##   [4] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
    ##   [7] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
@@ -1126,17 +1126,17 @@ aðferðina með 0,1,3 (neðri mörkin á flokkunum okkar) en þurfum svo að
 gefa efra mark á síðasta flokknum. Þetta þarf að vera gildi sem er
 a.m.k. einu gildi hærra en hæsta gildið sem talnabreytan tekur. Hér
 notum við gildið 15 (fallegra væri að nota
-``max(dat$systkini_fjoldi)+1``):
+``max(konnun$systkini_fjoldi)+1``):
 
 ::
 
-   dat$systkini_fjoldi_stig<-cut(dat$systkini_fjoldi,c(0,1,3,15),right=F)
+   konnun$systkini_fjoldi_stig<-cut(konnun$systkini_fjoldi,c(0,1,3,15),right=F)
 
 Hér sjáum við hversu margir verða í hverjum flokki:
 
 ::
 
-   table(dat$systkini_fjoldi_stig)
+   table(konnun$systkini_fjoldi_stig)
    ##
    ##   [0,1)   [1,3) [3,15)
    ##      3     123     75
@@ -1145,8 +1145,8 @@ Við getum svo notað ``levels()`` skipunina til að endurskýra flokkana:
 
 ::
 
-   levels(dat$systkini_fjoldi_stig)<-c("Engin","Nokkur","Mörg")
-   table(dat$systkini_fjoldi_stig)
+   levels(konnun$systkini_fjoldi_stig)<-c("Engin","Nokkur","Mörg")
+   table(konnun$systkini_fjoldi_stig)
    ##
    ##    Engin    Nokkur   Mörg
    ##    3        123      75
@@ -1169,8 +1169,8 @@ Búum fyrst til afrit af breytunni og sjáum í hvaða röð flokkarnir eru tald
 
 ::
 
-   dat$ferdamati_skoli_okutaeki <- dat$ferdatimi_skoli
-   levels(dat$ferdamati_skoli_okutaeki)
+   konnun$ferdamati_skoli_okutaeki <- konnun$ferdatimi_skoli
+   levels(konnun$ferdamati_skoli_okutaeki)
    ## [1] "Á annan hátt"  "Á hjóli/ rafhlaupahjóli"  "Gangandi/ skokkandi"
    ## [4] "Með einkabíl"  "Með strætó"
 
@@ -1180,14 +1180,14 @@ taldir upp. Því skrifum við ``ekki_med_okutaeki`` í fyrstu þrjú sætin en
 
 ::
 
-   levels(dat$ferdamati_skoli_okutaeki) <- 
+   levels(konnun$ferdamati_skoli_okutaeki) <- 
    c('ekki_med_okutaeki','ekki_med_okutaeki','ekki_med_okutaeki', 'med_okutaeki', 'med_okutaeki')
 
 Nýja sameinaða breytan hefur eingöngu tvo flokka:
 
 ::
 
-   str(dat$ferdamati_skoli_okutaeki)
+   str(konnun$ferdamati_skoli_okutaeki)
    ##  Factor w/ 2 levels "ekki_med_okutaeki","med_okutaeki
    ": 2 2 2 1 2 2 1 2 2 1 ...
 
@@ -1205,13 +1205,13 @@ Búum fyrst til nýjan flokk sem er afrit að ferdamati_skoli
 
 ::
 
-   dat$ferdamati_skoli_okutaeki <- dat$ferdatimi_skoli
+   konnun$ferdamati_skoli_okutaeki <- konnun$ferdatimi_skoli
 
 Búum svo til nýju flokkana
 
 ::
 
-   dat$ferdamati_skoli_okutaeki<- fct_recode(dat$ferdamati_skoli_okutaeki, 
+   konnun$ferdamati_skoli_okutaeki<- fct_recode(konnun$ferdamati_skoli_okutaeki, 
    "ekki_med_okutaeki" = "Á hjóli / rafhlaupahjóli","ekki_med_okutaeki"  
    = "Gangandi / skokkandi", "ekki_med_okutaeki" = "Á annan hátt", 
    "med_okutaeki" = "Með einkabíl", "med_okutaeki" = "Með strætó")
@@ -1344,14 +1344,14 @@ Hægt er, á auðveldan hátt, að endurskýra breytur í gagnatöflu með
 
 ::
 
-   dat<-rename(dat,uppahalds_is=is)
+   konnun<-rename(konnun,uppahalds_is=is)
 
 Til að valda ekki ruglingi hér breytum við nafninu aftur í ``is``
 með:
 
 ::
 
-   dat<-rename(dat,is=uppahalds_is)
+   konnun<-rename(konnun,is=uppahalds_is)
 
 G: Vörpunum beitt á talnabreytur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1439,7 +1439,7 @@ Skoðum með meðalferðtími fólks er í skóla eftir ferðamáta
 
 ::
 
-   hopar <- group_by(dat, ferdamati_skoli)
+   hopar <- group_by(konnun, ferdamati_skoli)
    summarise(hopar, mean(ferdatimi_skoli))
    ## ferdamati_skoli               mean(ferdatimi_skoli) 
    ## Gangandi / skokkandi	         7.588235
@@ -1454,7 +1454,7 @@ og uppáhaldsís.
 
 ::
 
-   hopar2 <- group_by(dat, ferdamati_skoli, is)
+   hopar2 <- group_by(konnun, ferdamati_skoli, is)
    summarise(hopar, max(ferdatimi_skoli))
    ## ferdamati_skoli         is             max(ferdamati_skoli)
    ## Gangandi / skokkandi	   Jarðaberja	   30

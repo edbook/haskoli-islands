@@ -64,12 +64,12 @@ svarbreyta en fjöldi áfengra drykkja er skýribreyta.
 inniheldur allt það sem hún skilar. Metum nú stuðla í líknai sem lýsir 
 því hvaða áhrif lengd á skotti hefur á heildarlengd pokarottu og vistum
 líknaið undir nafninu ``lm1``. Þar sem við metum áhrif lengd á skotti á 
-heildarlengd pokarottu. Hér er svarbreytan ``tail_l`` og ``total_l`` 
+heildarlengd pokarottu. Hér er svarbreytan ``lengd_skott`` og ``heildarlengd`` 
 skýribreytan.
 
 ::
 
-   lm1<-lm(tail_l~total_l,data=possum)
+   lm1<-lm(lengd_skott~heildarlengd,data=pokarotta)
    names(lm1)
    ##  [1] "coefficients"  "residuals"     "effects"       "rank"
    ##  [5] "fitted.values" "assign"        "qr"            "df.residual"
@@ -85,7 +85,7 @@ aðhvarfsgreiningarhlutnum ``lm1`` til að fá ýmsar upplýsingar:
    summary(lm1)
    ##
    ## Call:
-   ## lm(formula = tail_l ~ total_l, data = possum)
+   ## lm(formula = lengd_skott ~ heildarlengd, data = pokarotta)
    ##
    ## Residuals:
    ##     Min      1Q  Median      3Q     Max
@@ -178,13 +178,14 @@ normaldreifðar, með sömu dreifni. Leifarnar má nálgast með:
 
 Gott er að teikna normaldreifingarrit af leifunum. Takið eftir því að
 hér mötum við skipunina ``ggplot()`` með aðhvarfsgreiningarhlutnum
-``lm1``, en ekki gagnatöflunni ``puls``.
+``lm1``, en ekki gagnatöflunni ``pokarotta``.
 
 ::
 
    ggplot(data=lm1, aes(sample=.resid)) + stat_qq()
 
 .. figure:: myndir/mynd10_1.svg
+   :align: center
 
 .. _s.lmspa:
 
@@ -242,11 +243,11 @@ breytanna ``tail_l`` og ``total_l`` notum við skipunina:
 
 ::
 
-   cor.test(possum$tail_l,possum$total_l)
+   cor.test(pokarotta$lengd_skott,pokarotta$heildarlengd)
    ##
    ##  Pearson's product-moment correlation
    ##
-   ## data:  possum$tail_l and possum$total_l
+   ## data:  pokarotta$lengd_skott and pokarotta$heildarlengd
    ## t = 6.9275, df = 102, p-value = 3.935e-10
    ## alternative hypothesis: true correlation is not equal to 0
    ## 95 percent confidence interval:
@@ -292,19 +293,19 @@ hér að ofan fyrir línulegu aðhvarfsgreininguna. Skoðum aftur samband
 
 ::
 
-   lm.possum <- lm(total_l ~ sex, data = possum)
+   lm.pokarotta <- lm(heildarlengd ~ kyn, data = pokarotta)
 
 Við getum fengið fervikasummutöfluna á sama hátt og áður með ``anova()``
 aðferðinni:
 
 ::
 
-   anova(lm.possum)
+   anova(lm.pokarotta)
    ## Analysis of Variance Table
    ##
    ## Response: total_l
    ##               Df  Sum Sq  Mean Sq   F value   Pr(>F)
-   ## sex            1  49.12   49.116    2.6867    0.1043
+   ## kyn            1  49.12   49.116    2.6867    0.1043
    ## Residuals    102 1864.71  18.281
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -314,10 +315,10 @@ aðferðinni:
 
 ::
 
-   summary(lm.possum)
+   summary(lm.pokarotta)
    ##
    ## Call:
-   ## lm(formula = total_l ~ sex, data = possum)
+   ## lm(formula = heildarlengd ~ kyn, data = pokarotta)
    ##
    ## Residuals:
    ##     Min      1Q  Median      3Q     Max
@@ -326,7 +327,7 @@ aðferðinni:
    ## Coefficients:
    ##                      Estimate Std. Error   t value   Pr(>|t|)
    ## (Intercept)            87.9070     0.6520  134.819  <2e-16 ***
-   ## sexm                   -1.3955     0.8514  -1.639    0.104
+   ## kyn                    -1.3955     0.8514  -1.639    0.104
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
    ##

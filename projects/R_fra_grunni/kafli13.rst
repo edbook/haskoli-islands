@@ -46,21 +46,22 @@ Sýnidæmi
 ^^^^^^^^^^
 
 Skoðum hvernig við getum fundið öryggisbil fyrir meðaltal reiknað með endurvalsaðferð.
-Veljum breytunna ``ferdatimi_skoli`` úr ``dat`` gagnasafninu. 
+Veljum breytunna ``ferdatimi_skoli`` úr ``konnun`` gagnasafninu. 
 Byrjum að teikna viðeigandi mynd af breytunni.
 
 ::
 
-   ggplot(dat, aes(ferdatimi_skoli))+geom_histogram(binwidth=5)
+   ggplot(konnun, aes(ferdatimi_skoli))+geom_histogram(binwidth=5)
 
 
 .. figure:: myndir/endurvals1.svg
+   :align: center
 
 Næst skulum við herma endurvalsúrtök af breytunni ``ferdatimi_skoli`` fyrir meðaltalið 100.000 sinnum.
 
 ::
 
-   urtok <- replicate(100000, mean(sample(dat$ferdatimi_skoli, replace=T), na.rm=T))
+   urtok <- replicate(100000, mean(sample(konnun$ferdatimi_skoli, replace=T), na.rm=T))
 
 Teiknum mynd af urtokunum:
 
@@ -69,6 +70,7 @@ Teiknum mynd af urtokunum:
    qplot(urtok)+geom_histogram()
 
 .. figure:: myndir/endurvals2.svg
+   :align: center
 
 Sjáum að dreifingin lýkist normaldreifingu.... Lögmál mikils fjölda ... 
 
@@ -164,20 +166,21 @@ nemedur ferðist í skóla með ökutæki eða ekki. Byrjum að teikna graf:
 
 :: 
 
-   ggplot(dat, aes(x=ferdatimi_skoli)) + 
+   ggplot(konnun, aes(x=ferdatimi_skoli)) + 
    geom_histogram() + 
    facet_grid(~ferdamati_skoli_okutaeki)+
     xlab("Ferðatími í skóla")+
     ylab("Fjöldi")
 
 .. figure:: myndir/endurvals3.svg
+   :align: center
 
 Ætlum að skoða muninn á meðaltölum eftir því hvort nemendur
 ferðist með ökutæki í skóla eða ekki. Reiknum fyrst meðaltölin í hópunum.
 
 :: 
 
-   tapply(dat$ferdatimi_skoli, dat$ferdamati_skoli_okutaeki, mean, na.rm=T)
+   tapply(konnun$ferdatimi_skoli, konnun$ferdamati_skoli_okutaeki, mean, na.rm=T)
    ##
    ## Ekki með ökutæki     Með ökutæki
    ## 7.390244             22.512500
@@ -186,7 +189,7 @@ Reiknum mismuninn á meðaltölunum:
 
 :: 
 
-   diff(tapply(dat$ferdatimi_skoli, dat$ferdamati_skoli_okutaeki, mean, na.rm=T))
+   diff(tapply(konnun$ferdatimi_skoli, konnun$ferdamati_skoli_okutaeki, mean, na.rm=T))
    ## 
    ## Með ökutæki
    ## 15.12226
@@ -197,8 +200,8 @@ Framkvæmum loks umraðanapróf:
 
 ::
 
-   tmp <- replicate(100000, diff(tapply(dat$ferdatimi_skoli,
-   sample(dat$ferdamati_skoli_okutaeki, replace=T), mean, na.rm=T)))
+   tmp <- replicate(100000, diff(tapply(konnun$ferdatimi_skoli,
+   sample(konnun$ferdamati_skoli_okutaeki, replace=T), mean, na.rm=T)))
 
 Teiknum
 
@@ -207,6 +210,7 @@ Teiknum
    qplot(tmp)+geom_histogram()+xlab("Munur á meðaltölum")+ylab("Tíðni")
 
 .. figure:: myndir/endurvals4.svg
+   :align: center
 
 Loks reyknum við öryggisbil
 
