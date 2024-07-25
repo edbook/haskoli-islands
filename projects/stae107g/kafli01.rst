@@ -34,7 +34,7 @@ Skilgreining: Línulegt jöfnuhneppi
     :class: skilgreining
 
     **Línulegt jöfnuhneppi** (e. system of linear equations, linear system)
-    er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á forminu
+    er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á forminu:
 
     .. math:: \begin{align}
         a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &= b_1 \\
@@ -52,11 +52,11 @@ Setning: Fjöldi lausna
 
     Línulegt jöfnuhneppi getur haft:
 
-        **(a)** Enga lausn.
+        **a.** Enga lausn.
 
-        **(b)** Nákvæmlega eina lausn.
+        **b.** Nákvæmlega eina lausn.
 
-        **(c)** Óendanlega margar lausnir.
+        **c.** Óendanlega margar lausnir.
     
     Segjum að jöfnuhneppi sé **ósamkvæmt** (e. inconsistent) ef það hefur enga lausn.
 
@@ -445,7 +445,7 @@ Reiknirit fyrir Gauss-eyðingu
   :class: athugasemd
 
   Það er ekki bannað að deila/margfalda til að vendistuðullinn verði 1. Það er ekki nauðsynlegt en það má ef það 
-  einfaldar útreikingana. Sama gildi um það að víxla á línum til að fá þægilegri tölur til að vinna með.
+  einfaldar útreikningana. Sama gildi um það að víxla á línum til að fá þægilegri tölur til að vinna með.
 
 Sýnidæmi: Gauss-eyðing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1237,7 +1237,8 @@ Skilgreining: Fylkjajafnan
     :class: skilgreining
 
     Látum :math:`A` vera :math:`m\times n` fylki þar sem :math:`\textbf{a}_1, \dots, \textbf{a}_n` eru dálkar þess. 
-    Látum **x** vera dálkvigur í :math:`\mathbb{R}^n`. Við skilgreinum margfeldið :math:`A \textbf{x}` með eftirfarandi hætti:
+    Látum :math:`x` 
+    vera dálkvigur í :math:`\mathbb{R}^n`. Við skilgreinum margfeldið :math:`A \textbf{x}` með eftirfarandi hætti:
 
     .. math:: A\textbf{x} = \begin{bmatrix}\textbf{a}_1 \dots \textbf{a}_n\end{bmatrix}
         \begin{bmatrix}
@@ -1410,7 +1411,7 @@ Setning: Fylkjajafnan
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`A` vera :math:`m\times n` fylki með dálkvigrum :math:`\textbf{a}_1,\dots,\textbf{a}_n` og **b** vera dálkvigur í :math:`\mathbb{R}^n`. Táknum :math:`\textbf{x} = [x_1,\dots x_n]^T`. 
+    Látum :math:`A` vera :math:`m\times n` fylki með dálkvigrum :math:`\textbf{a}_1,\dots,\textbf{a}_n` og :math:`b` vera dálkvigur í :math:`\mathbb{R}^n`. Táknum :math:`\textbf{x} = [x_1,\dots x_n]^T`. 
     Fylkjajafnan
 
     .. math:: A\textbf{x} =  \textbf{b}
@@ -1573,7 +1574,7 @@ Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
     \end{bmatrix}\right\}m
 
 Þessi lausn er kölluð *augljósa lausnin* (e. trivial solution). Ef aðrar launsir eru til eru 
-þær kallaðar *óaugljósa lausninirnar* (e. nontrivial solutions).
+þær kallaðar *óaugljósu lausnirnar* (e. nontrivial solutions).
 
 Sýnidæmi: Óhliðrað jöfnuhneppi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1653,9 +1654,9 @@ Sýnidæmi: Óhliðrað jöfnuhneppi
 .. admonition:: Athugasemd
     :class: athugasemd
 
-        **1.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur alltaf lausn.
+    **1.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur alltaf lausn.
 
-        **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hef óaugljósa lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
+    **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hef óaugljósa lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
  
 Fólgin og stikuð framsetning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1699,7 +1700,7 @@ Sýnidæmi: Stikuð framsetning
     Getum því skrifað :math:`\textbf{x} = s\text{u} + t \textbf{v}` með 
     :math:`\textbf{u} =\begin{bmatrix} 2&1&0 \end{bmatrix}^T`  og 
     :math:`\textbf{v}= \begin{bmatrix} 3&0&1 \end{bmatrix}^T` og 
-    :math:`s,t \in \mathbb{R}`
+    :math:`s,t \in \mathbb{R}`.
     Þetta er dæmi um **stikaða framsetningu** (e. parametric form) á lausn.
 
 
@@ -1816,7 +1817,7 @@ Setning: Lausnamengi fylkjajöfnunnar
     :class: setning
 
     Gerum ráð fyrir að fylkjajafnan :math:`A\textbf{x} = \textbf{b}` 
-    hafi lausn fyrir gefið **b** og látum **p** vera slíka lausn. 
+    hafi lausn fyrir gefið :math:`b` og látum :math:`p` vera slíka lausn. 
     Þá gildir að öll stök í lausnamengi :math:`A\textbf{x} = \textbf{b}` 
     má rita á forminu :math:`\textbf{w} = \textbf{p} + \textbf{v}_h` þar sem :math:`\textbf{v}_h` 
     er lausn óhliðruðu jöfnunnar :math:`A\textbf{x} = \textbf{0}`.
@@ -2144,7 +2145,7 @@ Línulegar varpanir
 Við segjum að *vörpun* (e. map, mapping, transformation) frá :math:`A` yfir í :math:`B` er „regla" 
 sem úthlutar sérhverju staki úr A nákvmlega einu staki úr B.
 Vörpun frá :math:`A` yfir í :math:`B` er yfirleitt táknuð :math:`f: A \rightarrow  B`. 
-Mengið A köllum við **formengi** og B **bakmengi** vörpunarinnar f.
+Mengið :math:`A` köllum við **formengi** og :math:`B` **bakmengi** vörpunarinnar :math:`f`.
 
 
 Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \mathbb{R}^n \rightarrow \mathbb{R}^m`
@@ -2156,7 +2157,7 @@ Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \m
 Oft er hentugt að segja að vörpunin sé skilgreind sem :math:`\textbf{x} \rightarrow A\textbf{x}`.
 Ef vigur **x** varpast í :math:`T(\textbf{x})` þá segjum við að
 :math:`T(\textbf{x})` sé mynd vigursins :math:`x` með tillit til :math:`T`. 
-Mengi allra slíkra mynda kallast *myndmengi* T eða mynd T. 
+Mengi allra slíkra mynda kallast *myndmengi* :math:`T` eða mynd :math:`T`. 
 
 Skilgreining: Línuleg vörpun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
