@@ -249,7 +249,11 @@ Setning: Núllrúm er hlutrúm
     Þetta má líka orða sem að lausnarúm óhliðraðar jöfnu :math:`A\ve x=\ve 0` með :math:`n` óþekktum er
     hlutrúm í :math:`\R^n`.
 
-    Athugasemd: Lausnarmengi hliðraðar jöfnu :math:`A\ve x=\ve b` með :math:`b\neq\ve 0` er **ekki** hlutrúm í :math:`\R^n`.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Lausnarmengi hliðraðar jöfnu :math:`A\ve x=\ve b` með :math:`b\neq\ve 0` er **ekki** hlutrúm í :math:`\R^n`.
     Það sést til dæmis af því að :math:`\ve 0` er ekki í lausnarmenginu.
 
 Skilgreining: Dálkrúm fylkis 
@@ -289,13 +293,88 @@ Samanburður á núllrúmum og dálkrúmum
     - Vigur :math:`\ve b\in\R^m` er í :math:`\col{A}` ef og aðeins ef jafnan :math:`A\ve x=\ve b` hefur lausn. 
 
 
+
+Sýnidæmi: Núllrúm
+~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Sýnidæmi
+    :class: daemi
+
+    Finnið nákvæma lýsingu á núllrúmi fylkisins 
+
+    .. math:: A=\begin{bmatrix} 1 & 2 & 3 & 4 \\
+        5 & 6 & 7 & 8 \\
+        9 & 10 & 11 & 12
+        \end{bmatrix}
+    
+    með stikaðri framsetningu
+
+.. admonition:: Lausn
+    :class: daemi, dropdown 
+
+    Fáum, með einföldum línuaðgerðum að:
+
+    .. math:: \begin{align*} \begin{bmatrix}
+        1&2&3&4\\
+        5&6&7&8\\
+        9&10&11&12\\
+        \end{bmatrix}&\sim
+        \begin{bmatrix}
+        1&2&3&4\\
+        0&-4&-8&-12\\
+        0&-8&-16&-24\\
+        \end{bmatrix}\\&\sim
+        \begin{bmatrix}
+        1&2&3&4\\
+        0&1&-2&-3\\
+        0& 0& 0&0\\
+        \end{bmatrix}\\
+        &\sim
+        \begin{bmatrix}
+        1&0&-1&-2\\
+        0&1&2&3\\
+        0&0&0&0\\
+        \end{bmatrix}\end{align*}
+    
+    Höfum því að 
+
+    .. math:: A \sim \begin{bmatrix}
+        1&0&-1&-2\\
+        0&1&2&3\\
+        0&0&0&0\\
+        \end{bmatrix}
+    
+    Vitum að :math:`\nul{A}` er lausnamengi math:`A\ve x=\ve 0`. Það er stikað með
+
+    .. math:: \begin{bmatrix}
+        x_1\\x_2\\x_3\\x_4
+        \end{bmatrix}=\begin{bmatrix}
+        x_3+2x_4\\-2x_3-3x_4\\x_3\\x_4
+        \end{bmatrix}=x_3\begin{bmatrix}
+        1\\-2\\1\\0
+        \end{bmatrix}+
+        x_4\begin{bmatrix}
+        2\\-3\\0\\1
+        \end{bmatrix}
+    
+    Við fáum því
+
+    .. math:: \nul A = \spn\left\{\begin{bmatrix}
+        1\\-2\\1\\0
+        \end{bmatrix},\begin{bmatrix}
+        2\\-3\\0\\1
+        \end{bmatrix}\right\}
+    
+    *Til að finna nákvæma lýsingu núllrúms þarf því að leysa línulegt jöfnuhneppi.*
+
+    
 Skilgreining: Kjarni og mynd 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    :math:`T\colon V\to W` vera línulega vörpun.
+    Látum :math:`T\colon V\to W` vera línulega vörpun.
 
     **a.** **Kjarni** (e. kernel, null space) vörpunarinnar T er mengi allra vigra :math:`\ve u\in V` þannig að
     :math:`T(\ve u)=\ve 0`. Kjarninn er táknaður með :math:`\ker{T}` og
@@ -307,10 +386,23 @@ Skilgreining: Kjarni og mynd
 
     .. math:: \range{T}=\{T(\ve x)\colon \ve x\in V\}.
 
-    Athugasemd: ef :math:`T(\ve x)=A\ve x` fyrir eitthvað fylki :math:`A` þá er :math:`\ker{T}=\nul{A}` og
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+    
+    Ef :math:`T(\ve x)=A\ve x` fyrir eitthvað fylki :math:`A` þá er :math:`\ker{T}=\nul{A}` og
     :math:`\range{T}=\col{A}`.
 
-TODO: KANNSKI SKRIFA MEIRA UM KJARNA?? SKOÐA SETNINGU 14.2.4 HJÁ RÖGGA
+TODO: KANNSKI SKRIFA MEIRA UM KJARNA??
+
+.. admonition:: Setning
+    :class: setning 
+
+    Látum :math:`T\colon V\to W` vera línulega vörpun.
+
+    **a.** Vörpunin Látum :math:`T` er eintæk ef og aðeins ef :math:`\ker{T}=\{0\}`.
+
+    **b.** Vörpunin Látum :math:`T` er átæk ef og aðeins ef :math:`\range{T}=W`.
 
 Setning: Um tengsl varpanna og núll- og dálkrúma 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -387,12 +479,49 @@ Setning: Að finna grunn fyrir dálkrúm
     Látum :math:`A` vera fylki og :math:`U` vera efra stallaform :math:`A`. Þeir dálkar í :math:`A` þar sem er forystustuðull 
     í efra stallaforminu :math:`U` mynda grunn fyrir dálkrúm :math:`A`. 
 
-    Athugasemdir: 
-    - Mjög mikilvægt er að taka dálkana fyrir grunninn úr :math:`A`, ekki úr :math:`U`. Við notum :math:`U` bara til að ákveða 
-    hvaða dálka úr :math:`A` við tökum.
-    - Nóg er að finna efra stallaform. Það er enginn þörf fyrir að rutt efra stallaform. 
 
-TODO: dæmi
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Mjög mikilvægt er að taka dálkana fyrir grunninn úr :math:`A`, ekki úr :math:`U`. Við notum :math:`U` bara til að ákveða 
+    hvaða dálka úr :math:`A` við tökum. Nóg er að finna efra stallaform. Það er enginn þörf fyrir að rutt efra stallaform. 
+
+Sýnidæmi: Dálkrúm
+~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Sýnidæmi
+    :class: daemi
+
+    Látum 
+
+    .. math:: A=\begin{bmatrix} 1 & -10 & -24 & -42 \\
+        1 & -8 & -18 & -32 \\
+        -2 & 20 & 51 & 87
+        \end{bmatrix}
+    
+    Finnið nákvæma lýsingu á dálkrúmi A.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum með einföldum línuaðgerðum að:
+
+    .. math:: \begin{bmatrix} 1 & -10 & -24 & -42 \\
+        1 & -8 & -18 & -32 \\
+        -2 & 20 & 51 & 87 \\
+        \end{bmatrix} 
+        \sim \cdots \sim 
+        \begin{bmatrix} 1 & -10 & -24 & -42 \\
+        0 & 2 & 6 & 10 \\
+        0 & 0 & 3 & 3 \\
+        \end{bmatrix}
+
+    Sjáum að fyrstu 3 dálkar fylkisins eru vendidálkar. Þá er 
+    :math:`\col{A}` fyrstu 3 dálkarnir úr upprunalega :math:`A` fylkinu.
+
+    .. math:: \col{A}=\left\{\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix} 
+        \begin{bmatrix} -10 \\ -8 \\ 20 \end{bmatrix}
+        \begin{bmatrix} -24 \\ -18 \\ 51 \end{bmatrix} \right\}
 
 
 Setning: Tveir eiginleikar grunna 
@@ -499,11 +628,13 @@ Skilgreining: Vídd
 
     Ef slíkt mengi er ekki til þá segjum við að :math:`V` hafi óendanlega vídd.
 
-    Athugasemdir:
 
-    - Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.
+.. admonition:: Athugasemd
+    :class: athugsemd
 
-    - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
+        - Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.
+
+        - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
 
 TODO: dæmi
 
@@ -744,7 +875,97 @@ Reikniaðferð fyrir hnitaskiptafylki
     **2.** Breytum vinstri hluta aukna fylkisins í einingarfylkið með einföldum línuaðgerðum. Það sem eftir stendur í 
     hægri hluta aukna fylkisins er þá hnitaskiptafylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}`.
 
-TODO: Dæmi
+
+Sýnidæmi: Hnitaskiptafylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+    :class: daemi
+
+     Viljum finna :math:`\mathcal{P}_{\mathcal{C}\leftarrow\mathcal{B}}` ef :math:`\mathcal{B}` og :math:`\mathcal{C}` eru
+
+    .. math:: \begin{align*}
+        \mathcal{B} &= \left\{
+        \begin{bmatrix}
+        1 \\
+        2 \\
+        0
+        \end{bmatrix},
+        \begin{bmatrix}
+        -1 \\
+        1 \\
+        2
+        \end{bmatrix},
+        \begin{bmatrix}
+        0 \\
+        1 \\
+        3
+        \end{bmatrix}
+        \right\} \quad
+        \mathcal{C} = \left\{
+        \begin{bmatrix}
+        1 \\
+        0 \\
+        1
+        \end{bmatrix},
+        \begin{bmatrix}
+        0 \\
+        2 \\
+        1
+        \end{bmatrix},
+        \begin{bmatrix}
+        1 \\
+        1 \\
+        -1
+        \end{bmatrix}
+        \right\}
+        \end{align*}
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Við myndum fylkið :math:`[C \ | \ B]` 
+    og framkvæmum einfaldar línuaðgerðir til að umbreyta :math:`[C \ | \ B]` í :math:`[I \ | \ X]`:
+
+    .. math:: [C \ | \ B] &= \begin{bmatrix}
+        1 & 0 & 1 & | & 1 & -1 & 0 \\
+        0 & 2 & 1 & | & 2 & 1 & 1 \\
+        1 & 1 & -1 & | & 0 & 2 & 3
+        \end{bmatrix} \\&\sim
+        \begin{bmatrix}
+        1 & 0 & 1 & | & 1 & -1 & 0 \\
+        0 & 1 & \frac{1}{2} & | & 1 & \frac{1}{2} & \frac{1}{2} \\
+        0 & 1 & -2 & | & -1 & 3 & 3
+        \end{bmatrix} \\
+        &\sim
+        \begin{bmatrix}
+        1 & 0 & 1 & | & 1 & -1 & 0 \\
+        0 & 1 & \frac{1}{2} & | & 1 & \frac{1}{2} & \frac{1}{2} \\
+        0 & 0 & -\frac{5}{2} & | & -2 & \frac{5}{2} & \frac{5}{2}
+        \end{bmatrix} 
+        \\&\sim
+        \begin{bmatrix}
+        1 & 0 & 1 & | & 1 & -1 & 0 \\
+        0 & 1 & \frac{1}{2} & | & 1 & \frac{1}{2} & \frac{1}{2} \\
+        0 & 0 & 1 & | & \frac{4}{5} & -1 & -1
+        \end{bmatrix}\\&\sim
+        \begin{bmatrix}
+        1 & 0 & 0 & | & \frac{1}{5} & 0 & 1 \\
+        0 & 1 & 0 & | & \frac{3}{5} & 1 & 1 \\
+        0 & 0 & 1 & | & \frac{4}{5} & -1 & -1
+        \end{bmatrix} 
+        
+
+    Það með er
+
+    .. math:: \mathcal{P}_{\mathcal{C}\leftarrow\mathcal{B}}=
+        \begin{bmatrix}
+        \frac{1}{5} & 0 & 1 \\
+        \frac{3}{5} & 1 & 1 \\
+        \frac{4}{5} & -1 & -1
+        \end{bmatrix} 
+
+    
 
 TODO: fylki vörpunnar með tilliti til grunns
 
