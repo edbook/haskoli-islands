@@ -605,16 +605,16 @@ Setning
 Eiginvigrar línulegra varpana
 -----------------------------
 
-Skilgreining 
-~~~~~~~~~~~~~~~~~~
+Skilgreining: Eigingildi og eiginvigrar línulegra varpana 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`V` vera vigurrúm og :math:`T\text{:}V \rightarrow V` vera
-    læinulega vörpun. Ef til eru vigur :math:`\textbf{x} \neq \textbf{0}`
+    línulega vörpun. Ef til er vigur :math:`\textbf{x} \neq \textbf{0}`
     í :math:`V` og tala :math:`\lambda` þannig að :math:`T(x)=\lambda\textbf{x}`
-    þá kallast :math:`\lambda` eigingildi :math:`T` og :math:`textbf{x}` kallast
+    þá kallast :math:`\lambda` eigingildi :math:`T` og :math:`\textbf{x}` kallast
     eiginvigur :math:`T` sem svara til :math:`\lambda`.
 
 
@@ -663,9 +663,7 @@ Sýnidæmi: Fylki línulegra varpana í :math:`V`
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Við færum okkur yfir í :math:`\mathbb{R}^n`
-
-    Látum :math:`\mathcal{B}=\{\textbf{b}_1, \dots, \textbf{b}_n\}` vera einhvern grunn
+    Við færum okkur yfir í :math:`\mathbb{R}^n`. Látum :math:`\mathcal{B}=\{\textbf{b}_1, \dots, \textbf{b}_n\}` vera einhvern grunn
     fyrir :math:`V`. Tökum :math:`\textbf{x} \in V`. Þá má skrifa
 
     .. math:: \textbf{x}=r_1\textbf{b}_1+\dots+r_n\textbf{b}_n
@@ -699,7 +697,7 @@ Sýnidæmi: Fylki línulegra varpana í :math:`V`
         [T(\textbf{b}_1)]& \dots &[T(\textbf{b}_n)]_\mathcal{B}
         \end{bmatrix}
     
-    Og þá fæst
+    og þá fæst
 
     .. math:: [T(\textbf{x})]_\mathcal{B}=T_\mathcal{B}[\textbf{x}]_{\mathcal{B}}.
 
@@ -727,7 +725,7 @@ Sýnidæmi: Hornalínugjörningur
     
     Þetta gefur :math:`(\lambda-7)(\lambda+1)=0` 
     og við fáum eigingildin: :math:`\lambda_1=7` og :math:`\lambda_2=-1`.
-    Finnum eiginvigra fyrir :math:`\lambda_1=5` 
+    Finnum eiginvigra fyrir :math:`\lambda_1=7` 
 
     .. math:: A-7I=\begin{bmatrix}
         -7 & 1 \\

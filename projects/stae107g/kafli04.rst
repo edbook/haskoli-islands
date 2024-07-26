@@ -123,7 +123,8 @@ Skilgreining: Hlutrúm
 
     **3.** Ef :math:`\ve u` er vigur í :math:`H` og :math:`c` er rauntala þá er vigurinn :math:`c\ve u` í :math:`H`.(Stundum sagt að mengi :math:`H` sé lokað undir margföldun með tölu.)
 
-    Athugasemdir:
+.. admonition:: Athugasemd
+    :class: athugasemd
 
     **(i)** Í stað skilyrðis **1.** er oft sett skilyrðið að mengið :math:`H` sé ekki tómt. 
     Þá má svo nota skilyrði **3.** til að sýna að :math:`\ve 0\in H`.
@@ -157,6 +158,7 @@ Dæmi um hlutrúm
     að :math:`\mathcal{D}(a,b)` sé hlutrúm í :math:`\mathcal{V}(a,b)`.
 
 
+Rifjum upp skilgreininguna á línulegri samantekt (linkur) og spann vigra (linkur) áður en lengra er haldið.
 TODO HYPERLINK Á SKILGREININGAR UM LÍNULEGAR SAMANTEKTIR OG SPAN 
 
 Setningar um vigra og hlutrúm
@@ -367,6 +369,43 @@ Sýnidæmi: Núllrúm
     
     *Til að finna nákvæma lýsingu núllrúms þarf því að leysa línulegt jöfnuhneppi.*
 
+Sýnidæmi: Dálkrúm
+~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Sýnidæmi
+    :class: daemi
+
+    Látum 
+
+    .. math:: A=\begin{bmatrix} 1 & -10 & -24 & -42 \\
+        1 & -8 & -18 & -32 \\
+        -2 & 20 & 51 & 87
+        \end{bmatrix}
+    
+    Finnið nákvæma lýsingu á dálkrúmi A.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum með einföldum línuaðgerðum að:
+
+    .. math:: \begin{bmatrix} 1 & -10 & -24 & -42 \\
+        1 & -8 & -18 & -32 \\
+        -2 & 20 & 51 & 87 \\
+        \end{bmatrix} 
+        \sim \cdots \sim 
+        \begin{bmatrix} 1 & -10 & -24 & -42 \\
+        0 & 2 & 6 & 10 \\
+        0 & 0 & 3 & 3 \\
+        \end{bmatrix}
+
+    Sjáum að fyrstu 3 dálkar fylkisins eru vendidálkar. Þá er 
+    :math:`\col{A}` fyrstu 3 dálkarnir úr upprunalega :math:`A` fylkinu.
+
+    .. math:: \col{A}=\left\{\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix} 
+        \begin{bmatrix} -10 \\ -8 \\ 20 \end{bmatrix}
+        \begin{bmatrix} -24 \\ -18 \\ 51 \end{bmatrix} \right\}
+
     
 Skilgreining: Kjarni og mynd 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -418,7 +457,7 @@ Setning: Um tengsl varpanna og núll- og dálkrúma
 
     **2.** Vörpunin :math:`T` er átæk þá og því aðeins að :math:`\col{A}=\R^m`.
 
-Við vitum núþegar að línuleg vörpun er eintæk ef og aðeins ef hún er átæk. Setningin segir okkur því líka að núllrúmið 
+Við vitum nú þegar að línuleg vörpun er eintæk ef og aðeins ef hún er átæk. Setningin segir okkur því líka að núllrúmið 
 innihaldi aðeins :math:`\ve 0` þá og því aðeins að dálkrúmið sé :math:`\R^m`. Þetta samband gildir raun almennar eins og við
 munum sjá í TODO: SETJA HYPERLINK Á RANKSETNINGARUMFJÖLLUN
 
@@ -440,7 +479,8 @@ Skilgreining: Grunnur
 
     **(ii)** :math:`H=\spn\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`.
 
-    Athugasemdir:
+.. admonition:: Athugasemd
+    :class: athugasemd
 
     - Ef :math:`\{\ve b_1, \ve b_2, \ldots, \ve b_p\}` er grunnur fyrir hlutrúm :math:`H` þá liggja allir vigrarnir :math:`\ve b_1, \ve b_2, \ldots, \ve b_p` í :math:`H`.
 
@@ -449,8 +489,45 @@ Skilgreining: Grunnur
     - Við munum alltaf gera ráð fyrir að það séu endanlega margir vigrar í grunni. Þegar haldið er áfram með línulega algebru getum við þurft að nota grunna með óendanlega mörgum vigrum. Dæmi um slíkt vigurrúm er vigurrúm allra margliðna af einni breytu, þar er :math:`\{1,x,x^2,\ldots\}` grunnur.
 
 
+Sýnidæmi: Grunnar
+~~~~~~~~~~~~~~~~~~
 
-TODO: SKRIFA UPP DÆMI UM GRUNNA 
+.. admonition:: Dæmi
+    :class: daemi
+
+    Er 
+    
+    .. math:: \left\{\begin{bmatrix} 3 \\ 0 \\ 0 \end{bmatrix}, 
+        \begin{bmatrix} 4958 \\ 968 \\ 0 \end{bmatrix}, 
+        \begin{bmatrix} -34 \\ 102 \\ -66 \end{bmatrix} \right\}
+    
+    grunnur fyrir :math:`\mathbb{R} ^3`?
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Sjáum að 
+
+    .. math:: \begin{bmatrix} 3 & 4958 & -34 \\
+        0 & 968 & 102 \\
+        0 & 0 & -66 \\
+        \end{bmatrix}
+    
+    er andhverfanlegt fylki. Svo mengið er grunnur fyrir :math:`\mathbb{R} ^3`.
+
+.. admonition:: Dæmi
+    :class: daemi
+    
+    .. math:: \left\{\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, 
+        \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}\right\}
+    
+    grunnur fyrir :math:`\mathbb{R} ^3`?
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    við erum með tvo vigra í :math:`\mathbb{R} ^3` svo þeir spanna í mesta lagi sléttu í
+    :math:`\mathbb{R} ^3` en ekki allt rúmið. Mengið er því ekki grunnur í :math:`\mathbb{R} ^3`. 
 
 Setning: Um spann mengja 
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -468,7 +545,84 @@ Setning: Um spann mengja
     Athugasemd: Ef :math:`H=\{\ve 0\}` þá er :math:`\emptyset` grunnur fyrir :math:`H`, og er í raun eini grunnurinn fyrir :math:`H`.
 
 
-TODO: dæmi um að finna grunna fyrir núll-og dálkrúm
+Sýnidæmi: Grunnur fyrir núllrúm 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Finnum grunn fyrir núllrúm eftirfarandi fylkis:
+
+    .. math:: A=\begin{bmatrix} 1 & 2 & 3 & 4 & 5 \\
+        6 & 7 & 8 & 9 & 10\\
+        11 & 12 & 13 & 14 & 15
+        \end{bmatrix}
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Með einföldum línuaðgerðum má fá að 
+
+    .. math:: \begin{bmatrix}
+        1  & 2 & 3 & 4 & 5\\
+        6 & 7 & 8 & 9 &10\\
+        11 & 12 & 13 & 14 & 15
+        \end{bmatrix}\sim\dots\sim
+        \begin{bmatrix}
+        1  & 0 & -1 & -2 & -3\\
+        0 & 1 & 2 & 3 &4\\
+        0 & 0 & 0 & 0 & 0
+        \end{bmatrix}
+
+    sem gefur okkur jöfnuhneppið
+
+    .. math:: \begin{eqnarray*}
+        x_1-x_3-2x_4-3x_5&=&0\\
+        x_2+2x_3+3x_4+4x_5&=&0
+        \end{eqnarray*}
+    
+    Þetta má umrita sem 
+
+    .. math:: \begin{eqnarray*}
+        x_1&=&x_3+2x_4+3x_5\\
+        x_2&=&-2x_3-3x_4-4x_5
+        \end{eqnarray*}
+    
+    sem gefur 
+
+    .. math:: \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}
+        = \begin{bmatrix} x_3+2x_4+3x_5 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}
+        = x_3 \begin{bmatrix} 1 \\ -2 \\ 1 \\ 0 \\ 0 \end{bmatrix} 
+        + x_4 \begin{bmatrix} 2 \\ -3 \\ 0 \\ 1 \\ 0 \end{bmatrix}
+        + x_5 \begin{bmatrix} 3 \\ -4 \\ 0  \\ 0 \\ 1 \end{bmatrix}
+    
+    Ljóst að vigrarnir þrír spanna :math:`\nul{A}`. Með því að skoða stuðla þeirra má
+    sjá að þeir eru línulega óháðir. Því er
+
+    .. math:: \left\{
+        \begin{bmatrix}
+        1\\
+        -2\\
+        1\\
+        0\\
+        0\\
+        \end{bmatrix}
+        ,\begin{bmatrix}
+        2\\
+        -3\\
+        0\\
+        1\\
+        0
+        \end{bmatrix}
+        ,\begin{bmatrix}
+        3\\
+        -4\\
+        0\\
+        0\\
+        1
+        \end{bmatrix}\right\}
+    
+    grunnur fyrir :math:`\nul{A}`.
 
 Setning: Að finna grunn fyrir dálkrúm 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -486,43 +640,44 @@ Setning: Að finna grunn fyrir dálkrúm
     Mjög mikilvægt er að taka dálkana fyrir grunninn úr :math:`A`, ekki úr :math:`U`. Við notum :math:`U` bara til að ákveða 
     hvaða dálka úr :math:`A` við tökum. Nóg er að finna efra stallaform. Það er enginn þörf fyrir að rutt efra stallaform. 
 
-Sýnidæmi: Dálkrúm
-~~~~~~~~~~~~~~~~~~
+Sýnidæmi: Grunnur fyrir dálkrúm 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Sýnidæmi
+.. admonition:: Dæmi
     :class: daemi
 
-    Látum 
+    Finnum grunn fyrir dálkrúm
 
-    .. math:: A=\begin{bmatrix} 1 & -10 & -24 & -42 \\
-        1 & -8 & -18 & -32 \\
-        -2 & 20 & 51 & 87
+    .. math:: A=\begin{bmatrix} 1 & 2 & 3 & 4 & 5 \\
+        6 & 7 & 8 & 9 & 10\\
+        11 & 12 & 13 & 14 & 15
         \end{bmatrix}
-    
-    Finnið nákvæma lýsingu á dálkrúmi A.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Fáum með einföldum línuaðgerðum að:
+    Einfaldar línuaðgerðir gefa
 
-    .. math:: \begin{bmatrix} 1 & -10 & -24 & -42 \\
-        1 & -8 & -18 & -32 \\
-        -2 & 20 & 51 & 87 \\
-        \end{bmatrix} 
-        \sim \cdots \sim 
-        \begin{bmatrix} 1 & -10 & -24 & -42 \\
-        0 & 2 & 6 & 10 \\
-        0 & 0 & 3 & 3 \\
+    .. math:: \begin{bmatrix}
+        1  & 2 & 3 & 4 & 5\\
+        6 & 7 & 8 & 9 &10\\
+        11 & 12 & 13 & 14 & 15
+        \end{bmatrix}\sim\dots\sim
+        \begin{bmatrix}
+        1  & 0 & -1 & -2 & -3\\
+        0 & 1 & 2 & 3 &4\\
+        0 & 0 & 0 & 0 & 0
         \end{bmatrix}
+    
+    Köllum síðara fylkið :math:`U`. Með því að skoða 
+    :math:`U` má sjá að dálkvigrarnir eru ekki línulega óháðir. 
+    Sjáum að :math:`\ve u_3, \ve u_4` og :math:`\ve u_5` eru línuleg samantekt 
+    af :math:`\ve u_1` og :math:`\ve u_2`. Því er :math:`\col{A}=span\{\ve a_1, \ve a_2\}`.
+    Við fáum því að 
+    
+    .. math:: \left\{ \begin{bmatrix} 1 \\ 6\\ 11 \end{bmatrix}, \begin{bmatrix} 2 \\ 7 \\ 1 \end{bmatrix} \right\}
 
-    Sjáum að fyrstu 3 dálkar fylkisins eru vendidálkar. Þá er 
-    :math:`\col{A}` fyrstu 3 dálkarnir úr upprunalega :math:`A` fylkinu.
-
-    .. math:: \col{A}=\left\{\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix} 
-        \begin{bmatrix} -10 \\ -8 \\ 20 \end{bmatrix}
-        \begin{bmatrix} -24 \\ -18 \\ 51 \end{bmatrix} \right\}
-
+    er grunnur fyrir :math:`\col{A}`.
 
 Setning: Tveir eiginleikar grunna 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -582,7 +737,36 @@ Skilgreining: Hnitavigur
     sé hnitavigur :math:`\ve x` með tilliti til grunnsins :math:`\mathcal{B}` 
     (e. coordinate vector of :math:`x` relative to :math:`\mathcal{B}`, or :math:`\mathcal{B}`-coordinate vector). 
 
-TODO: dæmi
+
+Sýnidæmi: Að skipta úr :math:`\mathcal{B}` í :math:`\mathcal{S}`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Gefinn er grunnurinn
+
+    .. math:: \mathcal{B} = \{\ve b_1, \ve b_2\}= \left\{\begin{bmatrix} -1 \\ 3 \end{bmatrix},
+        \begin{bmatrix} 2 \\ 2 \end{bmatrix}\right\}
+    
+    Gefið er að :math:`\ve x` hefur hnitin :math:`\begin{bmatrix} 1 \\ 2 \end{bmatrix}`
+    með tillit til :math:`\mathcal{B}`. Finnið hnit :math:`\ve x` með tillit til venjulega grunnsins :math:`\mathcal{S}`.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum
+
+    .. math:: [\ve x]_{\mathcal{S}} = \ve x = 1\begin{bmatrix}
+        -1\\3
+        \end{bmatrix}+2\begin{bmatrix}
+        2\\2
+        \end{bmatrix}= \begin{bmatrix}
+        -1+4\\3+4
+        \end{bmatrix}=
+        \begin{bmatrix}
+        3\\7
+        \end{bmatrix}
 
 Skilgreining: Hnitavörpun
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -636,7 +820,17 @@ Skilgreining: Vídd
 
         - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
 
-TODO: dæmi
+Sýnidæmi: Vídd
+~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    - Vigurrúmið :math:`\mathbb{R}^1` hefur víddina 1.
+    
+    - Vigurrúmið :math:`\mathbb{R}^3` hefur víddina 3.
+
+    - Vigurrúmið :math:`\mathbb{R}^n` hefur víddina :math:`n`.
 
 Setning: Vídd hlutrúms
 ^^^^^^^^^^^^^^^^^^^^^^
