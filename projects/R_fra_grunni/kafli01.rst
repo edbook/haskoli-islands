@@ -783,13 +783,13 @@ Skráin inniheldur eftirfarandi breytur:
 +-------------------+--------------------+
 | aldur             | ár                 |
 +-------------------+--------------------+
-| hofud_lengd       | í cm               |
+| hofud_lengd       | í mm               |
 +-------------------+--------------------+
-| hofud_breidd      | í cm               |
+| hofud_breidd      | í mm               |
 +-------------------+--------------------+
-| heildarlengd      | í cm               |
+| heildarlengd      | í mm               |
 +-------------------+--------------------+
-| lengd_skott       | í cm               |
+| lengd_skott       | í mm               |
 +-------------------+--------------------+
 
 
