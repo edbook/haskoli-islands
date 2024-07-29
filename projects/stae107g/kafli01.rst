@@ -445,7 +445,7 @@ Reiknirit fyrir Gauss-eyðingu
   :class: athugasemd
 
   Það er ekki bannað að deila/margfalda til að vendistuðullinn verði 1. Það er ekki nauðsynlegt en það má ef það 
-  einfaldar útreikningana. Sama gildi um það að víxla á línum til að fá þægilegri tölur til að vinna með.
+  einfaldar útreikninganna. Sama gildi um það að víxla á línum til að fá þægilegri tölur til að vinna með.
 
 Sýnidæmi: Gauss-eyðing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1237,8 +1237,8 @@ Skilgreining: Fylkjajafnan
     :class: skilgreining
 
     Látum :math:`A` vera :math:`m\times n` fylki þar sem :math:`\textbf{a}_1, \dots, \textbf{a}_n` eru dálkar þess. 
-    Látum :math:`x` 
-    vera dálkvigur í :math:`\mathbb{R}^n`. Við skilgreinum margfeldið :math:`A \textbf{x}` með eftirfarandi hætti:
+    Látum :math:`\ve{x}` vera dálkvigur í :math:`\R`. 
+    Við skilgreinum margfeldið :math:`A \textbf{x}` með eftirfarandi hætti:
 
     .. math:: A\textbf{x} = \begin{bmatrix}\textbf{a}_1 \dots \textbf{a}_n\end{bmatrix}
         \begin{bmatrix}
@@ -1411,7 +1411,7 @@ Setning: Fylkjajafnan
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`A` vera :math:`m\times n` fylki með dálkvigrum :math:`\textbf{a}_1,\dots,\textbf{a}_n` og :math:`b` vera dálkvigur í :math:`\mathbb{R}^n`. Táknum :math:`\textbf{x} = [x_1,\dots x_n]^T`. 
+    Látum :math:`A` vera :math:`m\times n` fylki með dálkvigrum :math:`\textbf{a}_1,\dots,\textbf{a}_n` og :math:`\ve{b}` vera dálkvigur í :math:`\mathbb{R}^n`. Táknum :math:`\textbf{x} = [x_1,\dots x_n]^T`. 
     Fylkjajafnan
 
     .. math:: A\textbf{x} =  \textbf{b}
@@ -1656,7 +1656,7 @@ Sýnidæmi: Óhliðrað jöfnuhneppi
 
     **1.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur alltaf lausn.
 
-    **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hef óaugljósa lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
+    **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur óaugljósa lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
  
 Fólgin og stikuð framsetning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1817,7 +1817,7 @@ Setning: Lausnamengi fylkjajöfnunnar
     :class: setning
 
     Gerum ráð fyrir að fylkjajafnan :math:`A\textbf{x} = \textbf{b}` 
-    hafi lausn fyrir gefið :math:`b` og látum :math:`p` vera slíka lausn. 
+    hafi lausn fyrir gefið :math:`\ve{b}` og látum :math:`\ve{p}` vera slíka lausn. 
     Þá gildir að öll stök í lausnamengi :math:`A\textbf{x} = \textbf{b}` 
     má rita á forminu :math:`\textbf{w} = \textbf{p} + \textbf{v}_h` þar sem :math:`\textbf{v}_h` 
     er lausn óhliðruðu jöfnunnar :math:`A\textbf{x} = \textbf{0}`.
