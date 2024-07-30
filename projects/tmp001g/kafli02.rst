@@ -91,8 +91,12 @@ Conda-umhverfi sett upp
 -----------------------
 
 Næst er að setja upp Conda-umhverfið sem inniheldur allt sem þarf til að 
-þýða (compile) nóturnar. Í VSCode er smellt á *Terminal* og svo
-*New Terminal*. Þá birtist skjáhermir niðri þar sem við keyrum
+þýða (compile) nóturnar. Til að fá Conda-umhverfið í VSCode á Windows þurfum við fyrst að stilla 
+Python Interpreter á Anaconda/Miniconda. Það er gerð með því að ýta á **Ctrl** + **Shift** + **P**, skrifa *Python: Select Interpreter*
+og velja viðeigandi túlk. Svo opnum við command prompt í VSCode með smella á *Terminal* og svo
+*New Terminal*, athugið að sjálfgefinn skjáhermir gæti verið Powershell en ekki command prompt. 
+Þá birtist skjáhermir niðri og ef allt var gert rétt stendur *(base)* fremst í skipanalínunni.
+Nú keyrum við
 
 .. code-block:: 
 
