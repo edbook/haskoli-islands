@@ -4,6 +4,8 @@ Vigurrúm
 Vigurrúm og hlutrúm 
 -------------------
 
+.. _skilgreining.vigurrum:
+
 Skilgreining: Vigurrúm
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -431,8 +433,6 @@ Skilgreining: Kjarni og mynd
     
     Ef :math:`T(\ve x)=A\ve x` fyrir eitthvað fylki :math:`A` þá er :math:`\ker{T}=\nul{A}` og
     :math:`\range{T}=\col{A}`.
-
-TODO: KANNSKI SKRIFA MEIRA UM KJARNA??
 
 .. admonition:: Setning
     :class: setning 
@@ -904,7 +904,41 @@ Setning: Grunnur fyrir línurúm
 
     Athugasemd: Það eru ekki-núll línuvigrarnir úr efra stallaforminu sem gefa grunninn, ekki línuvigrarnir úr :math:`A`.
 
-TODO: dæmi
+Sýnidæmi: Grunnur fyrir línurúm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Finnum línurúm fyklkisins
+
+    .. math:: A= \begin{bmatrix} 
+        1 & 2 & 3 & 4 \\
+        5 & 6 & 7 & 8 \\
+        9 & 10 & 11 & 12 \\
+        \end{bmatrix}
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum að 
+
+    .. math:: A = \begin{bmatrix} 
+        1 & 2 & 3 & 4 \\
+        5 & 6 & 7 & 8 \\
+        9 & 10 & 11 & 12 \\
+        \end{bmatrix} \sim
+        \begin{bmatrix} 
+        1 & 2 & 3 & 4 \\
+        0 & -4 & -8 & -12 \\
+        0 & 0 & 0 & 0 \\
+        \end{bmatrix}
+    
+    Við erum komin með efri stallagerð og því er 
+
+    .. math:: \{\begin{bmatrix} 1 & 2 & 3 & 4 \end{bmatrix}, \begin{bmatrix} 0 & -4 & -8 & -12 \end{bmatrix} \}
+
+    grunnur fyrir :math:`\row{A}`. 
 
 Skilgreining: Rankur 
 ^^^^^^^^^^^^^^^^^^^^^
@@ -914,8 +948,6 @@ Skilgreining: Rankur
 
     Látum :math:`A` vera :math:`m\times n` fylki. Rankur (e. rank), eða myndvídd, fylkisins :math:`A` er vídd dálkrúms :math:`A`.
     Rankur fylkisins :math:`A` er táknaður með :math:`\rnk{A}`.
-
-TODO: dæmi?
 
 Setning: Ranksetningin
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -934,9 +966,43 @@ Setning: Ranksetningin
     .. math:: \rnk{A}+\dim{\nul{A}}=n.
 
 
-TODO: dæmi?
+Sýnidæmi: Rankur og vídd
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO: tala um löngu andhverfusetninguna, hlekkur til baka
+.. admonition:: Dæmi
+    :class: daemi
+
+    Reiknum rank og vídd núllrúms fyrir 
+
+    .. math:: A=\begin{bmatrix} 
+        1 & 2 & 3 & 4 \\
+        5 & 6 & 7 & 8 \\
+        9 & 10 & 11 & 12 \\
+        \end{bmatrix}
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Komum fylkinu á efri stallagerð
+
+    .. math:: \begin{bmatrix} 
+        1 & 2 & 3 & 4 \\
+        5 & 6 & 7 & 8 \\
+        9 & 10 & 11 & 12 \\
+        \end{bmatrix}\sim
+        \begin{bmatrix} 
+        1 & 0 & -1 & -2 \\
+        0 & 1 & 2 & 3 \\
+        0 & 0 & 0 & 0 \\
+        \end{bmatrix}
+    
+    Rankur fylkisins er vídd dálkrúms sem er fjöldi vendidálka.
+    Svo :math:`rank{A}=2`. Vídd núllrúms er fjöldi frjálsra breyta
+    svo :math:`nullity{A}=2`.
+
+Langa setningin um andhverfanleg fylki (linkur) gefur 11 skilyrði sem eru öll jafngild því að fylki sæe andhverfanlegt. 
+Nú höfum við lært fullt af nýjum hugtökum og getum bætt við 
+fleiri skilyrðum. TODO linkur að löngu setningunni.
 
 Setning: Viðbót við löngu andhverfusetninguna
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -964,35 +1030,18 @@ Setning: Viðbót við löngu andhverfusetninguna
 Hnitaskipti
 -----------
 
-TODO: texti
+Við höfum áður framkvæmt hnitaskipti. Sáum að :math:`\mathcal{P}_\mathcal{B}[\ve x]_\mathcal{B}=\ve x`
+þar sem :math:`\mathcal{P}_\mathcal{B}` er hnitaskiptafylki sem breytir úr hnitum með tillit til :math:`\mathcal{B}`
+yfir í hnit með tilliti til venjulega grunnarins. 
 
-Setning: Um línuleika hnitavarpanna
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Til dæmis ef :math:`\mathcal{B}=\{\ve b_1, \ve b_2\}=\left\{\begin{bmatrix} 1 \\ 2 \end{bmatrix}, \begin{bmatrix} 5 \\ -1 \end{bmatrix}\right\}` þá er
+    :math:`\mathcal{P}_\mathcal{B}=\begin{bmatrix} 1 & 5 \\ 2 & -1 \end{bmatrix}`. 
 
-.. admonition:: Setning
-    :class: setning
+Önnur leið til að rita :math:`\mathcal{P}_\mathcal{B}` er :math:`\mathcal{P}_\mathcal{B}=\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}` 
+af því að við erum að skipta úr  :math:`\mathcal{B}`-hnitum yfir í  :math:`\mathcal{E}`-hnit (venjulegt hnit). 
+Okkur langar að finna hnitskiptafylki :math:`\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}` hugmyndin er að 
+:math:`\mathcal{P}_{\mathcal{B}\leftarrow\mathcal{C}}=\mathcal{P}_{\mathcal{B}\leftarrow\mathcal{E}}\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{C}}`.
 
-    Gerum ráð fyrir að :math:`V` sé endanlega vítt vigurrúm með grunn :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}`. 
-    Hnitavörpunin 
-
-    .. math:: V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}
-
-    er línuleg vörpun. Hún er einnig gagntæk.
-
-
-Setning: Tilvist gagntækra varpanna milli jafnstóra rúma
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Setning
-    :class: setning
-
-    Látum :math:`V` vera vigurrúm með vídd :math:`n`. Þá er til gagntæk línuleg vörpun milli :math:`V` og :math:`\R^n`.
-
-    Athugasemd: Ef til er gagntæk línuleg vörpun milli tveggja vigurrúma segjum við að þau séu einsmóta (e. isomorphic) og 
-    vörpunin sé einsmótun (e. isomorphism). Einsmóta vigurrúm eru "eins" og með einsmótunum má yfirfæra útreikninga frá öðru 
-    vigurrúminu í hitt.
-
-TODO: texti um hnitaskipti, sýnidæmi
 
 Setning: Um hnitaskiptafylki
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1003,7 +1052,7 @@ Setning: Um hnitaskiptafylki
     Látum :math:`V` vera vigurrúm af vídd :math:`n` og gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` 
     og :math:`\mathcal{C}=\{\ve c_1, \ve c_2, \ldots, \ve c_n\}` séu grunnar fyrir :math:`V`.
 
-    **a.** Til er línuleg vörpun :math:`T\colon \R^n\to\R^n` þannig að :math:`T([x]_{\mathcal{B}})=[]_{\mathcal{C}}` fyrir 
+    **a.** Til er línuleg vörpun :math:`T\colon \R^n\to\R^n` þannig að :math:`T([x]_{\mathcal{B}})=[\ve x]_{\mathcal{C}}` fyrir 
     alla vigra :math:`\ve x\in V`. Fylki þessrar vörpunar er 
 
     .. math:: P_{\mathcal{C}\leftarrow\mathcal{B}}=[[\ve b_1]_{\mathcal{C}}\quad [\ve b_2]_{\mathcal{C}}\quad \ldots \quad [\ve b_n]_{\mathcal{C}}].
@@ -1039,7 +1088,23 @@ Setning: Hnitaskiptafylki yfir í venjulega grunninn
 
     .. math:: P_{\mathcal{B}\leftarrow\mathcal{E}}=(P_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}
 
-TODO: dæmi
+Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Látum :math:`\mathcal{B}={(1,2),(3,1)}` vera grunn fyrir :math:`\R^2` og :math:`\mathcal{E}` vera venjulega grunninn
+    fyrir :math:`\R^2`. Þá er 
+
+    .. math:: \mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}
+        =\begin{bmatrix} \ve b_1 & \ve b_2 & \cdots & \ve b_n \end{bmatrix}
+        =\begin{bmatrix} 1 & 3 \\ 2 & 1 \end{bmatrix}
+
+    og 
+
+    .. math:: \mathcal{P}_{\mathcal{B}\leftarrow\mathcal{E}}=(\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}=\frac{1}{-5}
+        \begin{bmatrix} 1 & -3 \\ -2 & 1 \end{bmatrix}
 
 Setning: Formúla fyrir hnitaskiptifylki
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1158,9 +1223,5 @@ Sýnidæmi: Hnitaskiptafylki
         \frac{3}{5} & 1 & 1 \\
         \frac{4}{5} & -1 & -1
         \end{bmatrix} 
-
-    
-
-TODO: fylki vörpunnar með tilliti til grunns
 
 
