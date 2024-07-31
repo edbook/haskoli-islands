@@ -43,20 +43,6 @@ Skilgreining: Línulegt jöfnuhneppi
         a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
         \end{align}
 
-    Línuleg jöfnuhneppi eru gjarnan sett upp á **fylkjaformi**
-
-    .. math:: \begin{bmatrix}
-        a_{11} & a_{12} & \cdots & a_{1n}\\
-        a_{21} & a_{22} & \cdots & a_{2n}\\
-        \vdots & \vdots & \ddots &\vdots \\
-        a_{m1} & a_{m2} & \cdots & a_{mn}
-        \end{bmatrix}
-        \begin{bmatrix}
-        x_1 \\ x_2 \\ \vdots \\ x_n
-        \end{bmatrix}=
-        \begin{bmatrix}
-        b_1 \\ b_2 \\ \vdots \\ b_n
-        \end{bmatrix}
 
 
 Setning: Fjöldi lausna
@@ -183,30 +169,35 @@ Skilgreining: Jafngild
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Tvö línuleg jöfnuhneppi kallast **jafngild** (e. equivalent) ef þau hafa sömu lausnir.
+    Línuleg jöfnuhneppi sem hafa sama lausnamengið eru **jafngild** (e. equivalent).
 
-Einfaldar línuaðgerðir
-----------------------
-      
-Eftirfarandi aðgerðir kallast **einfaldar línuaðgerðir** (e. elementary row operations) og 
-þeim má beita á línuleg jöfnuhneppi án þess að lausnamengi jöfnuhneppisins breytist.
 
-Um fylki
+Fylki
 ---------
 
-Stærð fylkis
-~~~~~~~~~~~~~
 
-Látum 
+Skilgreining: Stærð fylkis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: \begin{bmatrix}
-    a_{11} &\dots  &a_{1n}\\
-    \vdots &&\vdots\\
-    a_{m1} &\dots  &a_{mn}\\  
-    \end{bmatrix}
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-vera fylki með :math:`m` jöfnum og :math:`n` óþekktum breytum. Við segjum að :math:`A` sé :math:`{m\times n}` fylki.
-Jafnframt er :math:`m\times n` kallað **stærð fylkisins**.
+    Látum :math:`A` vera :math:`m\times n` fylki,
+
+    .. math:: A = \begin{bmatrix}
+        a_{11}  & \cdots & a_{1n}\\
+        a_{21}  & \cdots & a_{2n}\\
+        \vdots &  \ddots &\vdots \\
+        a_{m1} & \cdots & a_{mn}
+        \end{bmatrix}.
+
+    Fylkið :math:`A` hefur :math:`m` **línur** (e. rows), sem liggja lárétt, og :math:`n` **dálka** (e. columns), sem liggja lóðrétt.
+    Við segjum að **stærð fylkis** :math:`A` sé :math:`m\times n`.
+
+.. admonition:: Minnisregla fyrir :math:`m \times n`
+    :class: athugasemd
+
+    LSD = Lína Sinnum Dálkur.
 
 Skilgreining: Stuðlafylki og aukið fylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -214,30 +205,53 @@ Skilgreining: Stuðlafylki og aukið fylki
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum 
-
+    Rita má sérhvert línulegt jöfnuhneppi
+    
     .. math:: \begin{alignat*}{2}
             a_{11}x_{1}+&\dots+a_{1n}x_n &= b_1\\
             &\hspace{6.143162275pt}\vdots & \\
             a_{m1}x_{1}+&\dots+a_{mn}x_n &= b_m\\    
             \end{alignat*}
         
-    vera línulegt jöfnuhneppi. Við köllum fylkin
+    á **fylkjaformi**
+    
+    .. math:: \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots & \ddots &\vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+        \begin{bmatrix}
+        x_1 \\ x_2 \\ \vdots \\ x_n
+        \end{bmatrix}=
+        \begin{bmatrix}
+        b_1 \\ b_2 \\ \vdots \\ b_n
+        \end{bmatrix}.
+
+    Fylkin
 
     .. math:: \begin{bmatrix}
-            a_{11} &\dots &a_{1n}\\
-            \vdots&&\vdots\\
-            a_{m1}&\dots &a_{mn}\\  
-            \end{bmatrix}
-            \text{ og }
-            \begin{bmatrix}
-            a_{11} &\dots &a_{1n} &b_1\\
-            \vdots&&\vdots&\vdots\\
-            a_{m1}&\dots &a_{mn} &b_m\\  
-            \end{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots & \ddots &\vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+        \text{ og }
+        \left[\begin{array}{@{}cccc|c@{}}
+        a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+        a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+        \vdots & \vdots & \ddots &\vdots & \vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn} & b_m
+        \end{array}\right]
         
-    **Stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix) jöfnuhneppisins.
+    kallast **stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix).
+    
 
+Einfaldar línuaðgerðir
+----------------------
+      
+Eftirfarandi aðgerðir kallast **einfaldar línuaðgerðir** (e. elementary row operations) og 
+þeim má beita á línuleg jöfnuhneppi án þess að lausnamengi jöfnuhneppisins breytist.
 
 
 Setning: Einfaldar línuaðgerðir
@@ -246,11 +260,11 @@ Setning: Einfaldar línuaðgerðir
 .. admonition:: Setning
     :class: setning
 
-    **1.** Umskipting (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
+    **1.** **Umskipting** (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
 
-    **2.** Víxlun (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
+    **2.** **Víxlun** (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
 
-    **3.** Skölun (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
+    **3.** **Skölun** (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
 
     Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
 
@@ -260,17 +274,15 @@ Skilgreining: Línujafngild
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Tvö jöfnuhneppi (eða fylki) eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
+    Tvö jöfnuhneppi eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
     með einföldum línuaðgerðum.
-
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Ef jöfnuhneppi eru línujafngild þá hafa þau sama lausnamengið. Hinsvegar, eru til dæmi 
-    um jöfnuhneppi sem hafa sama lausnamengið en eru ekki línujafngild. 
-
-    Línulegu jöfnuhneppin 
+    Línujafngild jöfnuhneppi eru jafngild, en jafngild jöfnuhneppi eru ekki endilega línujafngild.
+    
+    Til dæmis eru eftirfarandi jöfnuhneppi jafngild
 
     .. math:: \left[\begin{array}{@{}cc|c@{}}
         1& 1 & 0\\ 
@@ -282,113 +294,31 @@ Skilgreining: Línujafngild
         0&0 & 1
         \end{array}\right]
 
-    hafa sömu (engar) launsir en eru ekki línujafngild.
-
-Sýnidæmi: Línuaðgerðir 
-^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  Leysum jöfnuhneppið
-
-  .. math:: 
-    \begin{aligned}
-     x_1 -3x_2 + 4x_3 =-4\\
-     3x_1-7x_2+7x_3 =-8\\
-    -4x_1+6x_2+2x_3=4
-    \end{aligned}
-    
-
-.. admonition:: Lausn
-  :class: daemi, dropdown
-  
-   Skrifum þetta á fylkjaformi.
-   
-  .. math:: \begin{alignat*}{2}
-    \left[\begin{array}{@{}ccc|c@{}}
-    1 & -3 & 4 & -4\\
-    3 & -7 & 7 & -8\\
-    -4 & 6 & 2 & 4
-    \end{array}\right] \quad
-    &\overset{\substack{R_2-3R_1\\R_3+4R_1}}{\sim}
-    &\quad&\left[\begin{array}{@{}ccc|c@{}}
-    1 & -3 & 4 &-4\\
-    0 & 2 & -5 & 4 \\
-    0 & -6 & 18 & -12
-    \end{array}\right] \\
-    &\overset{\substack{-\frac{1}{6}R_3}}{\sim}
-    &&\left[\begin{array}{@{}ccc|c@{}}
-    1 & -3 & 4 &-4\\
-    0 & 2 & -5 & 4 \\
-    0 & 1 & -3 & 2
-    \end{array}\right]  \\
-    &\overset{\substack{
-        R_2\leftrightarrow R_3}}{\sim}
-    &&\left[\begin{array}{@{}ccc|c@{}}
-    1 & -3 & 4 &-4\\
-    0 & 1 & -3 & 2 \\
-    0 & 2 & -5 & 4
-    \end{array}\right] \\
-    &\overset{\substack{R_1+3R_2\\ R_3-2R_2
-    }}
-    {\sim}
-    &&\left[\begin{array}{@{}ccc|c@{}}
-    1 & 0 & -5 & 2\\
-    0 & 1 & -3 & 2 \\
-    0 & 0 & 1 & 0
-    \end{array}\right] \\
-    &\overset{\substack{
-    R_1+5R_3\\ R_2+3R_3}}{\sim}
-    &&\left[\begin{array}{@{}ccc|c@{}}
-    1 & 0 & 0 & 2\\
-    0 & 1 & 0 & 2 \\
-    0 & 0 & 1 & 0
-    \end{array}\right]
-    \end{alignat*}
+    því þau hafa sömu (engar) lausnir. Hinsvegar eru þau ekki línujafngild, því ekki er hægt að breyta öðru þeirra í hitt með einföldum línuaðgerðum.
 
 
-  Svo við fáum
+(Rudd) Efri stallagerð
+----------------------
 
-  .. math:: \begin{align*}
-    x_1\phantom{+x_2+x_3} &= 2 \\
-    \phantom{x_1+} x_2 \phantom{+x_3} &= 2 \\
-    \phantom{x_1+x_2+} x_3 &= 0
-    \end{align*}
-  
-  og línulega jöfnuhneppið hefur eina lausn: :math:`(x_1,x_2,x_3)=(2,2,0)`. 
+Öllum fylkjum má breyta í fylki af efri stallagerð með einföldum línuaðgerðum.
 
 
+Skilgreining: Núllínur og forystustuðlar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. admonition:: Skilgreining
+    :class: skilgreining
 
+    **Núllína** (e. zero row) er lína þar sem allir stuðlarnir eru núll,
 
+    .. math:: \begin{bmatrix}
+        0 & 0 & \cdots & 0 \end{bmatrix}.
 
-Efri stallagerð
-~~~~~~~~~~~~~~~~~~~
+    **Forystustuðull** (e. leading coeffcient) er fyrsti stuðull í hverri línu sem er ekki núll,
 
-**Línur** (e. rows) liggja lárétt og **dálkar** (e. columns) liggja lóðrétt.
+    .. math:: \begin{bmatrix}
+        0 & \cdots & 0 & * & \cdots \end{bmatrix}.
 
-**Núllína** (e. zero row) er lína þar sem allir stuðlarnir eru núll.
-
-**Forystustuðull** (e. leading coeffcient) er fyrsti stuðull í hverrri línu sem er ekki núll.
-
-Skoðum jöfnuhneppi
-
-.. math:: \begin{array}{cccc}
-        3x_1 &+ 7x_2 &- 2x_3 &= 9 \\
-             & -5x_2 &+ 4x_3 &= 2 \\
-             &        & 6x_3 &=-3 \\
-      \end{array}
-
-sjáum strax að jöfnuhneppið hefur lausn. 
-
-.. math:: \begin{bmatrix}
-    3 & 7 & -2 & 9 \\
-    0 & -5 & 4 & 2 \\
-    0 & 0 & 6 & -3 
-    \end{bmatrix}
-
-Aukna fylkið fyrir jöfnuhneppið er dæmi um fylki af *efri stallagerð* (e. echelon form).  
 
 Skilgreining: Efri stallagerð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -396,7 +326,7 @@ Skilgreining: Efri stallagerð
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Fylki er sagt vera af **efri stallagerð** (e. echelon form) ef það uppfyllir
+    Fylki er sagt vera af **efri stallagerð**, eða **efra stallaformi**, (e. echelon form) ef það uppfyllir
     eftirfarandi skilyrði.
 
         **1.** Núllínur liggja fyrir neðan aðrar línur.
@@ -405,7 +335,6 @@ Skilgreining: Efri stallagerð
 
         **3.** Allir stuðlar fyrir neðan forustustuðul eru núll.
     
-    Öllum fylkjum má breyta í fylki af efri stallagerð með einföldum línuaðgerðum.
 
 Sýnidæmi: Efri stallagerð
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -413,7 +342,20 @@ Sýnidæmi: Efri stallagerð
 .. admonition:: Dæmi
   :class: daemi
   
-  Breytum eftirfarandi :math:`{3\times 4}` fylki í fylki af efri stallagerð:
+  Breytum eftirfarandi :math:`{3\times 4}` fylki
+
+    .. math:: \begin{bmatrix}
+        1 & 2 & 3 & 4 \\
+        5 & 6 & 7 & 8 \\
+        9 & 10 & 11 & 12
+        \end{bmatrix} 
+
+  í fylki af efri stallagerð.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Fáum
 
   .. math:: \begin{alignat*}{2}
     \begin{bmatrix}
@@ -435,14 +377,14 @@ Sýnidæmi: Efri stallagerð
     0 & 0 & 0 & 0
     \end{bmatrix}
     \end{alignat*}
+  
+  Athugum nú skilyrðin:
 
-  Er þetta fylki af neðri stallagerð?
+  **1.** Núlllínur eru neðst. JÁ.
 
-  **1.** Núlllínur eru neðast. OK
+  **2.** Forustustuðull hverrar línu er hægra megin við forustustuðul línunnar fyrir ofan. JÁ.
 
-  **2.** Forustustuðull hverrar línu er hægra megin við forustustuðul línunnar fyrir ofan. OK
-
-  **3.** Allir stuðlar fyrir neðan forustustuðul eru núll. OK
+  **3.** Allir stuðlar fyrir neðan forustustuðul eru núll. JÁ.
 
 Gauss-eyðing
 ------------
@@ -512,6 +454,83 @@ Sýnidæmi: Gauss-eyðing
     0 & 0 & \frac{7}{4}
     \end{bmatrix}
     \end{alignat*}
+
+
+Sýnidæmi: Einfaldar línuaðgerðir 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Leysið jöfnuhneppið með því að nota einfaldar línuaðgerðir
+
+  .. math:: 
+    \begin{aligned}
+     x_1 -3x_2 + 4x_3 =-4\\
+     3x_1-7x_2+7x_3 =-8\\
+    -4x_1+6x_2+2x_3=4
+    \end{aligned}
+    
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+  
+   Skrifum þetta á fylkjaformi.
+   
+  .. math:: \begin{alignat*}{2}
+    \left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 & -4\\
+    3 & -7 & 7 & -8\\
+    -4 & 6 & 2 & 4
+    \end{array}\right] \quad
+    &\overset{\substack{R_2-3R_1\\R_3+4R_1}}{\sim}
+    &\quad&\left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 &-4\\
+    0 & 2 & -5 & 4 \\
+    0 & -6 & 18 & -12
+    \end{array}\right] \\
+    &\overset{\substack{-\frac{1}{6}R_3}}{\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 &-4\\
+    0 & 2 & -5 & 4 \\
+    0 & 1 & -3 & 2
+    \end{array}\right]  \\
+    &\overset{\substack{
+        R_2\leftrightarrow R_3}}{\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 &-4\\
+    0 & 1 & -3 & 2 \\
+    0 & 2 & -5 & 4
+    \end{array}\right] \\
+    &\overset{\substack{R_1+3R_2\\ R_3-2R_2
+    }}
+    {\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & 0 & -5 & 2\\
+    0 & 1 & -3 & 2 \\
+    0 & 0 & 1 & 0
+    \end{array}\right] \\
+    &\overset{\substack{
+    R_1+5R_3\\ R_2+3R_3}}{\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & 0 & 0 & 2\\
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 1 & 0
+    \end{array}\right]
+    \end{alignat*}
+
+
+  Svo við fáum
+
+  .. math:: \begin{align*}
+    x_1\phantom{+x_2+x_3} &= 2 \\
+    \phantom{x_1+} x_2 \phantom{+x_3} &= 2 \\
+    \phantom{x_1+x_2+} x_3 &= 0
+    \end{align*}
+  
+  og línulega jöfnuhneppið hefur eina lausn: :math:`(x_1,x_2,x_3)=(2,2,0)`. 
+
+
 
 
 Skilgreining: Rudd efri stallagerð
