@@ -24,7 +24,7 @@ Skilgreining: Línuleg jafna
     kallast **línuleg jafna** (e. linear equation).
 
     :math:`a_1,a_2,\dots,a_n` kallast **stuðlar** (e. coefficients) jöfnunnar.
-    :math:`x_1,x_2,\dots,x_n` eru óþekktar stærðir, **breytur** (e. variables).
+    :math:`x_1,x_2,\dots,x_n` eru óþekktar stærðir sem kallast **breytur** (e. variables).
 
 
 Skilgreining: Línulegt jöfnuhneppi 
@@ -33,7 +33,7 @@ Skilgreining: Línulegt jöfnuhneppi
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    **Línulegt jöfnuhneppi** (e. system of linear equations, linear system)
+    **Línulegt jöfnuhneppi** (e. system of linear equations)
     er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á forminu:
 
     .. math:: \begin{align}
@@ -42,6 +42,21 @@ Skilgreining: Línulegt jöfnuhneppi
         &\vdots \\
         a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
         \end{align}
+
+    Línuleg jöfnuhneppi eru gjarnan sett upp á **fylkjaformi**
+
+    .. math:: \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots & \ddots &\vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+        \begin{bmatrix}
+        x_1 \\ x_2 \\ \vdots \\ x_n
+        \end{bmatrix}=
+        \begin{bmatrix}
+        b_1 \\ b_2 \\ \vdots \\ b_n
+        \end{bmatrix}
 
 
 Setning: Fjöldi lausna
@@ -58,9 +73,10 @@ Setning: Fjöldi lausna
 
         **c.** Óendanlega margar lausnir.
     
-    Segjum að jöfnuhneppi sé **ósamkvæmt** (e. inconsistent) ef það hefur enga lausn.
+    Jöfnuhneppi er sagt **ósamkvæmt** (e. inconsistent) ef það hefur enga lausn.
 
     Jöfnuhneppi er sagt **samkvæmt** (e. consistent) ef það hefur að minnsta kosti eina lausn.
+    Jöfnuhneppi sem hefur nákvæmlega eina lausn er sagt hafa **ótvírætt ákvarðaða** lausn (e. unique solution).
 
 
 Sýnidæmi: Jöfnuhneppi sem hefur enga lausn
@@ -79,7 +95,7 @@ Sýnidæmi: Jöfnuhneppi sem hefur enga lausn
 .. admonition:: Lausn
   :class: daemi, dropdown
   
-  Margföldum efri jöfnuna með 2.
+  Margföldum efri jöfnuna með tveimur. Fáum
    
   .. math:: \begin{align*}
      2x-4y&=10 \\
@@ -87,7 +103,7 @@ Sýnidæmi: Jöfnuhneppi sem hefur enga lausn
      \end{align*}
 
   Leggjum saman jöfnurnar og fáum :math:`0=16` svo jöfnuhneppið 
-  hefur enga lausn. Við segjum því að jöfnuhneppið sé ósamkvæmt (e. inconsistent).
+  hefur enga lausn, þ.e. ósamkvæmt.
 
 
 Sýnidæmi: Jöfnuhneppi sem hefur eina lausn
@@ -96,7 +112,7 @@ Sýnidæmi: Jöfnuhneppi sem hefur eina lausn
 .. admonition:: Dæmi
   :class: daemi
   
-  Leysið jöfuhneppið:  
+  Leysið jöfuhneppið
 
     .. math:: \begin{aligned}
         x + 2y &= -3 \\
@@ -110,14 +126,8 @@ Sýnidæmi: Jöfnuhneppi sem hefur eina lausn
   :math:`y=-3`. Stingum inn í neðri jöfnuna og gefur :math:`x=3`. Þar 
   með er :math:`(x,y)=(3,-3)` lausn jöfnuhneppisins. 
   
-  Þar sem jöfnuhneppið hefur lausn segjum við að jöfnuhneppið sé **samkvæmt** (e. consistent). 
-  Þar sem jöfnuhneppið hefur aðeins eina lausn segjum við að lausnin sé 
-  **ótvírætt ákvörðuð** (e. unique). **Stuðlar** (e. coefficients) jöfnuhneppisins, á **fylkjaformi**, eru: 
-
-    .. math:: \begin{bmatrix}
-        1 & 2  \\
-        1 & -1 \\
-        \end{bmatrix}
+  Jöfnuhneppið er samkvæmt og þar að auki hefur jöfnuhneppið aðeins eina lausn, m.ö.o.
+  lausnin er ótvírætt ákvörðuð.
 
 Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -135,21 +145,21 @@ Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-   Deilum í neðri jöfnuna með 2.
+   Deilum í neðri jöfnuna með tveimur. Fáum
    
    .. math:: \begin{align*}
       x+y&=2 \\
       x+y&=2 
       \end{align*}
 
-   Ef við drögum efri jöfnuna frá neðri jöfnunni fæst:
+   Ef við drögum efri jöfnuna frá þeiri neðri fæst:
 
     .. math:: \begin{align*}
        x+y&=2 \\
        0 &= 0
        \end{align*}
     
-   Lína :math:`0=0` kallast núllína. Athugum þá hvort jafnan 
+   Athugum þá hvort jafnan 
    :math:`x+y=2` hafi einhverja lausn. Já, :math:`(x,y)=(1,1)` og 
    :math:`(x,y)=(2,0)` eru dæmi um lausnir. Jöfnuhneppið er 
    samkvæmt en lausnin er ekki ótvírætt ákvörðuð. Ef við veljum 
@@ -164,7 +174,7 @@ Skilgreining: Lausnamengi
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Mengi allra launsa jöfnuhneppis kallast **lausnamengi** þess (e. solution set).
+    Mengi allra lausna jöfnuhneppis kallast **lausnamengi** þess (e. solution set).
 
 
 Skilgreining: Jafngild
@@ -179,122 +189,7 @@ Einfaldar línuaðgerðir
 ----------------------
       
 Eftirfarandi aðgerðir kallast **einfaldar línuaðgerðir** (e. elementary row operations) og 
-þeim má beita á jöfnur  í línulegum jöfnuhneppum (eða línur í fylkjum):
-
-Setning: Einfaldar línuaðgerðir
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning
-    :class: setning
-
-    **(1)** Umskipting (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
-
-    **(2)** Víxlun (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
-
-    **(3)** Skölun (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
-
-    Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
-
-Skilgreining: Línujafngild
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-    :class: skilgreining
-
-    Tvö jöfnuhneppi (eða fylki) eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
-    með einföldum línuaðgerðum.
-
-Ef jöfnuhneppi eru línujafngild þá hafa þau sömu lausnir. Til eru dæmi 
-um jöfnuhneppi sem hafa sömu lausnir en eru ekki línujafngild. 
-
-Línulegu jöfnuhneppin 
-
-.. math:: \begin{bmatrix} 
-    x+y&=0\\ 
-    0&=1
-    \end{bmatrix} 
-    \text{ og }
-    \begin{bmatrix} 
-    x-y&=0\\ 
-    0&=1
-    \end{bmatrix}
-
-hafa sömu (engar) launsir en eru ekki línujafngild.
-
-Sýnidæmi: Línuaðgerðir 
-^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  Leysum jöfnuhneppið
-
-  .. math:: 
-    \begin{aligned}
-     x_1 -3x_2 + 4x_3 =-4\\
-     3x_1-7x_2+7x_3 =-8\\
-    -4x_1+6x_2+2x_3=4
-    \end{aligned}
-    
-
-.. admonition:: Lausn
-  :class: daemi, dropdown
-  
-   Skrifum þetta á fylkjaformi.
-   
-  .. math:: \begin{alignat*}{2}
-    \begin{bmatrix}
-    1 & -3 & 4 & -4\\
-    3 & -7 & 7 & -8\\
-    -4 & 6 & 2 & 4
-    \end{bmatrix} \quad
-    &\overset{\substack{R_2-3R_1\\R_3+4R_1}}{\sim}
-    &\quad&\begin{bmatrix}
-    1 & -3 & 4 &-4\\
-    0 & 2 & -5 & 4 \\
-    0 & -6 & 18 & -12
-    \end{bmatrix} \\
-    &\overset{\substack{-\frac{1}{6}R_3}}{\sim}
-    &&\begin{bmatrix}
-    1 & -3 & 4 &-4\\
-    0 & 2 & -5 & 4 \\
-    0 & 1 & -3 & 2
-    \end{bmatrix}  \\
-    &\overset{\substack{
-        R_2\leftrightarrow R_3}}{\sim}
-    &&\begin{bmatrix}
-    1 & -3 & 4 &-4\\
-    0 & 1 & -3 & 2 \\
-    0 & 2 & -5 & 4
-    \end{bmatrix} \\
-    &\overset{\substack{R_1+3R_2\\ R_3-2R_2
-    }}
-    {\sim}
-    &&\begin{bmatrix}
-    1 & 0 & -5 & 2\\
-    0 & 1 & -3 & 2 \\
-    0 & 0 & 1 & 0
-    \end{bmatrix} \\
-    &\overset{\substack{
-    R_1+5R_3\\ R_2+3R_3}}{\sim}
-    &&\begin{bmatrix}
-    1 & 0 & 0 & 2\\
-    0 & 1 & 0 & 2 \\
-    0 & 0 & 1 & 0
-    \end{bmatrix}
-    \end{alignat*}
-
-
-  Svo við fáum
-
-  .. math:: \begin{align*}
-    x_1\phantom{+x_2+x_3} &= 2 \\
-    \phantom{x_1+} x_2 \phantom{+x_3} &= 2 \\
-    \phantom{x_1+x_2+} x_3 &= 0
-    \end{align*}
-  
-  og línulega jöfnuhneppið hefur eina lausn: :math:`(x_1,x_2,x_3)=(2,2,0)`. 
-
+þeim má beita á línuleg jöfnuhneppi án þess að lausnamengi jöfnuhneppisins breytist.
 
 Um fylki
 ---------
@@ -342,6 +237,131 @@ Skilgreining: Stuðlafylki og aukið fylki
             \end{bmatrix}
         
     **Stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix) jöfnuhneppisins.
+
+
+
+Setning: Einfaldar línuaðgerðir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    **1.** Umskipting (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
+
+    **2.** Víxlun (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
+
+    **3.** Skölun (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
+
+    Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
+
+Skilgreining: Línujafngild
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Tvö jöfnuhneppi (eða fylki) eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
+    með einföldum línuaðgerðum.
+
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Ef jöfnuhneppi eru línujafngild þá hafa þau sama lausnamengið. Hinsvegar, eru til dæmi 
+    um jöfnuhneppi sem hafa sama lausnamengið en eru ekki línujafngild. 
+
+    Línulegu jöfnuhneppin 
+
+    .. math:: \left[\begin{array}{@{}cc|c@{}}
+        1& 1 & 0\\ 
+        0& 0 & 1
+        \end{array}\right]
+        \text{ og }
+        \left[\begin{array}{@{}cc|c@{}} 
+        1 &-1&0\\ 
+        0&0 & 1
+        \end{array}\right]
+
+    hafa sömu (engar) launsir en eru ekki línujafngild.
+
+Sýnidæmi: Línuaðgerðir 
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Leysum jöfnuhneppið
+
+  .. math:: 
+    \begin{aligned}
+     x_1 -3x_2 + 4x_3 =-4\\
+     3x_1-7x_2+7x_3 =-8\\
+    -4x_1+6x_2+2x_3=4
+    \end{aligned}
+    
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+  
+   Skrifum þetta á fylkjaformi.
+   
+  .. math:: \begin{alignat*}{2}
+    \left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 & -4\\
+    3 & -7 & 7 & -8\\
+    -4 & 6 & 2 & 4
+    \end{array}\right] \quad
+    &\overset{\substack{R_2-3R_1\\R_3+4R_1}}{\sim}
+    &\quad&\left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 &-4\\
+    0 & 2 & -5 & 4 \\
+    0 & -6 & 18 & -12
+    \end{array}\right] \\
+    &\overset{\substack{-\frac{1}{6}R_3}}{\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 &-4\\
+    0 & 2 & -5 & 4 \\
+    0 & 1 & -3 & 2
+    \end{array}\right]  \\
+    &\overset{\substack{
+        R_2\leftrightarrow R_3}}{\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & -3 & 4 &-4\\
+    0 & 1 & -3 & 2 \\
+    0 & 2 & -5 & 4
+    \end{array}\right] \\
+    &\overset{\substack{R_1+3R_2\\ R_3-2R_2
+    }}
+    {\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & 0 & -5 & 2\\
+    0 & 1 & -3 & 2 \\
+    0 & 0 & 1 & 0
+    \end{array}\right] \\
+    &\overset{\substack{
+    R_1+5R_3\\ R_2+3R_3}}{\sim}
+    &&\left[\begin{array}{@{}ccc|c@{}}
+    1 & 0 & 0 & 2\\
+    0 & 1 & 0 & 2 \\
+    0 & 0 & 1 & 0
+    \end{array}\right]
+    \end{alignat*}
+
+
+  Svo við fáum
+
+  .. math:: \begin{align*}
+    x_1\phantom{+x_2+x_3} &= 2 \\
+    \phantom{x_1+} x_2 \phantom{+x_3} &= 2 \\
+    \phantom{x_1+x_2+} x_3 &= 0
+    \end{align*}
+  
+  og línulega jöfnuhneppið hefur eina lausn: :math:`(x_1,x_2,x_3)=(2,2,0)`. 
+
+
+
+
+
 
 Efri stallagerð
 ~~~~~~~~~~~~~~~~~~~
