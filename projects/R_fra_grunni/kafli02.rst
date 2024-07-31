@@ -185,25 +185,26 @@ read.table()
 
 --------------
 
-Á síðu bókarinnar má finna gagnaskrána ``pulsAll.csv``. Byrjið á því að
-vista hana í vinnumöppunni ykkar, þ.e.a.s. sömu möppu og þið geymið
+Á síðu bókarinnar má finna gagnaskránar ``konnun.csv``, ``nyrripuls.tsv``,
+``kaupskra.csv`` og ``pokarotta.csv``. Byrjið á því að
+vista þær í vinnumöppunni ykkar, þ.e.a.s. sömu möppu og þið geymið
 skipanaskrána ykkar. Þá má lesa þau inn í R með skipuninni:
 
 ::
 
-   puls <- read.table("pulsAll.csv", header=TRUE, sep=";")
+   konnun <- read.table("konnun.csv", header=TRUE, sep=",")
 
-Fyrst tilgreinum við nafnið á skránni: ``pulsAll.csv``. Þar á eftir
+Fyrst tilgreinum við nafnið á skránni: ``konnun.csv``. Þar á eftir
 gefum við ýmis konar stillingar, aðgreindar með kommum.
 
 Þær stillingar sem við komum oft til með að nota eru:
 
 -  ``header=TRUE``: Að breytuheiti séu í efstu línu gagnaskráarinnar.
 
--  ``sep=”;”``: Dálkar/breytur eru aðgreindir með semikommu.
+-  ``sep=”,”``: Dálkar/breytur eru aðgreindir með kommu.
 
-   Séu dálkar t.d. aðgreindir með ``tab`` skiptum við ``sep=”;”`` út
-   fyrir ``sep=”\t”``.
+   Séu dálkar t.d. aðgreindir með ``tab`` eða ``;`` skiptum við ``sep=”,”`` út
+   fyrir ``sep=”\t”`` eða ``sep=";"``
 
 -  ``dec=”,”``: Ef tugabrot og heiltöluhlutar eru aðgreind með kommu í
    stað punkts þarf að nota þessa stillingu.
@@ -214,18 +215,58 @@ gefum við ýmis konar stillingar, aðgreindar með kommum.
 -  ``stringsAsFActors``: Tilgreinir að strengjabreytur eigi ekki að
    vista sem flokkabreytur.
 
+``puls`` gögninn innihalda ``tab`` í stað kommu eða semíkommu og eru lesinn inn í R með:
+
+::
+
+   puls <- read.table("nyrripuls.tsv", header=TRUE, sep="\t")
+
+
+Það getur stundum verið auðveldara að nota:
+
+read.csv()
+^^^^^^^^^^^^
+
+.. attention::
+
+    **Inntak:** nafn á gagnaskrá
+    
+    **Úttak:** gagnatafla
+    
+    **Helstu stillingar:** header, sep, dec, na.strings, stringsAsFactors, encoding
+
+::
+
+   konnun <- read.csv("konnun.csv")
+   pokarotta <- read.csv("pokarotta.csv")
+
+
+Við notum ``read.csv()`` þegar  ``sep=","`` og notum ``read.csv2()`` þegar ``sep=";"``. 
+
 Um leið og við gefum skipunina höfum við lesið inn gögnin okkar og
-vistað sem gagnatöflu undir heitinu ``puls``. Við hefðum getað gefið
+vistað sem gagnatöflu undir heitinu ``konnun``. Við hefðum getað gefið
 töflunni hvaða heiti sem við viljum, hún hefði allt eins geta heitið
 ``gogn``, ``tilraun1`` eða hvað annað sem okkur dettur í hug . Það eina
 sem ekki má er að láta nöfn byrja á tölustaf. Það væri því ekki í lagi
 að gefa töflunni heitið ``1tilraun``.
 
+``kaupskra`` gagnasettið er að finna á https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/. Hlaðið
+skránni niður og opnið með ``read_csv()`` eða notið
+
+::
+
+   kaupskra <- read_csv2("https://www.skra.is/library/Skrar/kaupskra/kaupskra.csv", 
+
+::
+   
+   locale = locale(encoding = "ISO8859-1"))
+
+
 Ef við sláum
 
 ::
 
-   puls
+   konnun
 
 inn í keyrslugluggann birtist svo öll taflan. Gætið ykkar að ef
 gagnataflan er mjög stór fyllir hún fljótt marga skjái svo þetta er ekki
@@ -234,12 +275,12 @@ s.s. ``head()`` og ``str()`` sem við fjöllum um hér fyrir neðan.
 
 Þegar við höfum lesið gögn inn sem töflu getum við hæglega "dregið"
 eina og eina breytu út úr töflunni, skoðað nánar og jafnvel breytt.
-Viljum við t.d. ná í breytuna ``haed`` úr gagnatöflunni ``puls`` gerum
+Viljum við t.d. ná í breytuna ``haed`` úr gagnatöflunni ``konnun`` gerum
 við það með:
 
 ::
 
-   puls$haed
+   konnun$haed
 
 c()
 ^^^
@@ -801,7 +842,7 @@ slice()
 
 Fyrsta aðferðin sem við kynnumst úr ``dplyr`` er ``slice()``. Hana notum
 við til að velja ákveðnar línur út gagnatöflu. Ef við viljum t.d. geyma
-mælingar á fyrstu 10 viðfangsefnunum í ``puls`` gagnatöflunni í nýrri
+mælingar á fyrstu 10 viðfangsefnunum í ``konnun`` gagnatöflunni í nýrri
 gagnatöflu getum við gert það með:
 
 ::
@@ -1554,7 +1595,7 @@ kaupverði gerum við það með:
 .. _rf.gather:
 
 pivot_longer()
-^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 .. attention::
 
@@ -1603,7 +1644,7 @@ Eftir skipunina lítur gagnataflan svona út:
 .. _rf.spread:
 
 pivot_wider()
-^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 .. attention::
 
