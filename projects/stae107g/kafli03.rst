@@ -171,19 +171,19 @@ Skilgreining: Önnur aðferð til þess að reikna ákveðu :math:`3 \times 3` f
 Engin sambærileg regla gildir fyrir :math:`n \geq 4`.
 
 
-Ákveður hornalínufylkja
------------------------
+Ákveður þríhyrningsfylkja
+-------------------------
 
-Setning: Ákveða hornalínufylkja 
+Setning: Ákveða þríhyrningsfylkja 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Ef :math:`A` er hornalínufylki þá er ákveða þess margfeldi stakanna á hornalínunni.
+    Ef :math:`A` er þríhyrningsfylki þá er ákveða þess margfeldi stakanna á hornalínunni.
 
-Sýnidæmi: Ákveður hornalínufylkja
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sýnidæmi: Ákveður þríhyrningsfylkja
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -265,9 +265,9 @@ Setning: Ákveða frumfylkja
     Látum :math:`E` vera frumfylki. Ákveða frumfylkis er
 
     .. math:: \det(E)= \begin{cases}
-        1 \quad \text{ef}\ E\ \text{er umskipting},\\
-        -1 \quad \text{ef}\ E\ \text{er víxlun},\\
-        k \quad \text{ef}\ E\ \text{er skölun með tölu}\ k.
+        \phantom{-}1 \quad &\text{ef}\ E\ \text{er umskipting},\\
+        -1 \quad &\text{ef}\ E\ \text{er víxlun},\\
+        \phantom{-}k \quad &\text{ef}\ E\ \text{er skölun með tölu}\ k.
         \end{cases}
 
 Sýnidæmi: Ákveður frumfylkja
@@ -574,7 +574,7 @@ Setning: Flatarmál og rúmmál
 
 INSERT MYND
 
-Ryfjum upp að mynd mengis :math:`S \subseteq \R` er mengið :math:`T(S)=\{T(s) : s \in S\}`.
+Rifjum upp að mynd mengis :math:`S \subseteq \R` er mengið :math:`T(S)=\{T(s) : s \in S\}`.
 
 Setning: Mynd varpanna
 ~~~~~~~~~~~~~~~~~~~~~~~~~
