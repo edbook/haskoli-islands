@@ -2,7 +2,7 @@
 
 Slembitölur
 ===========
-**Slembitölur** (*random numbers*) koma oft við sögu í forritun. Til dæmis eru þær nauðsynlegur hluti af hermun (*simulation*) þar sem líkt er eftir raunverulegu ferli eða atburðarás í tölvu, þær eru notaðar til að forrita slembin spil, m.a. teningaspil og spil fyrir venjulegan 52 spila stokk, þær eru mikið notaðar í tölfræðilegri greiningu, og þær nýtast til að búa til gervigögn. Flestöll nútíma-forritunarmál geta búið til slembitölur, og er Python þar engin undantekning. Við höfum þegar kynnst þeim lauslega í köflum :numref:`sulurit`, :numref:`dæmi-um-legend` og :numref:`dæmi-um-hist` (kíkið gjarnan á þessa kafla).
+**Slembitölur** (*random numbers*) koma oft við sögu í forritun. Til dæmis eru þær nauðsynlegur hluti af hermun (*simulation*) þar sem líkt er eftir raunverulegu ferli eða atburðarás í tölvu, þær eru notaðar til að forrita slembin spil, m.a. teningaspil og spil fyrir venjulegan 52 spila stokk, þær eru mikið notaðar í tölfræðilegri greiningu, og þær nýtast til að búa til gervigögn. Flestöll nútíma-forritunarmál geta búið til slembitölur, og er Python þar engin undantekning. Við höfum þegar kynnst þeim lauslega í köflum :numref:`súlurit`, :numref:`dæmi um legend` og :numref:`dæmi um hist` (kíkið gjarnan á þessa kafla).
 
 Random-einingin
 ---------------
@@ -58,29 +58,6 @@ stærðfræðingnum merka `Carl Gauss <https://en.wikipedia.org/wiki/Carl_Friedr
       að fá tvær tvennur með hermun (þá eru dregnar margar hendur og athugað hve
       stórt hlutfall þeirra er hönd með tveim tvennum).
 
-.. _innskot:
-      
-Innskot: Fjöldi aukastafa í NumPy prentun
------------------------------------------
-Til að prenta slembivigra og -fylki er hentugt að geta takmarkað fjölda
-aukastafa. Það er hægt með fallinu ``np.set_printoptions``. Þetta fall hefur
-ýmsa stika en hér látum við duga að segja frá þremur: ``precision = n`` og
-``floatmode = "fixed"`` gefur alltaf *n* aukastafi (án floatmode koma ≤ n
-stafir), og ``suppress = True`` þýðir að engar tölur eru prentaðar með
-tugveldistáknun (t.d. -6.33e08 eða 5.22e-12). Til að vigurinn sem kemur við sögu
-í :numref:`verkefni %s<töluleg diffrun>` prentist líkt og þar er sýnt má nota:
-
-   ``np.set_printoptions(suppress=True, floatmode="fixed", precision=3)``
-
-Sama snið er alltaf notað fyrir öll stök í vigri eða fylki, og ef vigur er með eitt
-lítið stak hefur það sem sé áhrif á prentun allra stakanna. Hér er dæmi til skýringar:
-
-.. code:: text
-   
-   Lát x = np.array([0.000002, 1.25, 12.345]). Þá prentar print(x) út:
-   - með suppress=False: [2.000e-06 1.250e+00 1.235e+01]
-   - með suppress=True:  [ 0.000  1.250 12.345]
-      
 Slembitölur með NumPy
 ---------------------
 Með NumPy er hægt að búa til slembivigra og slembifylki. Nýjustu útgáfur mæla með
@@ -93,9 +70,8 @@ má svo nota föllin ``rng.random``, ``rng.normal`` og ``rng.integers`` til að 
 til slembivigra og -fylki, og reyndar er gott að þekkja líka fallið
 ``rng.uniform`` sem býr til jafnt dreifðar slembitölur á almennu bili :math:`[a,b]`.
 
-Hér er svo dæmi sem sýnir hvernig þessi NumPy slembiföll eru notuð. Takið eftir
-hvernig þeirri reglu er fylgt að rita ``size=`` fyrir framan stærðarviðföng en
-ekki önnur.
+Til að skoða slembivigra og -fylki er hentugt að takmarka fjölda aukastafa með
+``np.set_printoptions`` sbr. kafla :numref:`stjórn útprentunar`.
 
 .. code:: python
 
@@ -121,7 +97,9 @@ ekki önnur.
     [0.355 0.971 0.893]]
    [5.230 6.008 6.918 6.901 6.270 5.640 5.465 5.651 6.614 6.931]
 
-Normaldreifðu tölurnar hafa meðaltal 5 og staðalfrávik 2. Svo sjáum við að stiki númer 2 í ``rng.integers`` er einum stærri en stærsta heiltala sem fæst (öfugt við ``randint`` í kafla :numref:`random-einingin`).
+Normaldreifðu tölurnar hafa meðaltal 5 og staðalfrávik 2. Svo sjáum við að stiki
+númer 2 í ``rng.integers`` er einum stærri en stærsta heiltala sem fæst (öfugt
+við ``randint`` í kafla :numref:`random-einingin`).
 
 .. admonition:: Æfing: 
    :class: aefing
@@ -181,7 +159,7 @@ stokkuð (*shuffled*). Þriðja aðgerðin sem stundum þarf er að skila tölun
 
 .. code:: python
 
-   import NumPy as np
+   import numpy as np
    from random import sample, shuffle
    rng = np.random.default_rng()
    
@@ -209,23 +187,24 @@ stokkuð (*shuffled*). Þriðja aðgerðin sem stundum þarf er að skila tölun
          spurning = ["Litur himinsins?", "2+2?", "Hver vann?", "Er sól?"]
          svar = ["blár", "4", "Jói", "nei"]
 
-Gervigögn
----------
-Eins og sagt var fremst í þessum :numref:`slembitölur`. kafla er ein af
+Gervigögn og aðhvarf
+--------------------
+Eins og sagt var fremst í þessum :numref:`%s. kafla <slembitölur>` er ein af
 hagnýtingum slembitalna sú að búa til gervigögn. Við sáum dæmi um það þegar búin
-voru til súlurit af normaldreifðum gögnum í :numref:`teikning-með-matplotlib`.
-kafla. Hér verður skoðað hvernig hægt er að búa til gervigögn til að útskýra
+voru til súlurit af normaldreifðum gögnum í :numref:`%s. kafla <teikning með matplotlib>`.
+Hér verður skoðað hvernig hægt er að búa til gervigögn til að útskýra
 jöfnur bestu línu og bestu parabólu, sem unnið er með í :numref:`verkefni
 %s<jafna bestu línu>`, og auk þess jöfnu besta plans. Lesendur ættu að byrja á
 að skoða :numref:`verkefni %s<jafna bestu línu>`
 
 .. rubric:: Besta parabóla
 
-Eftirfarandi forritsbútur býr til 100 punkta gervigögn sem mætti lýsa með parabólu sem
-hefur hágildi nálægt x = 10. Þau eru búin til með því að byrja með nákvæm gildi
-parabólunnar :math:`y = 100 - (x - 10)^2` í x-gildum sem valin eru af handahófi á bilinu
-:math:`[2,18]`, en svo er bætt við þau normaldreifðri slembiviðbót með meðaltal
-0 og staðalfrávik 10, :math:`\Delta \sim N(0,10)`.
+Eftirfarandi forritsbútur býr til 100 punkta gervigögn sem mætti lýsa með
+parabólu sem hefur hágildi nálægt x = 10. Þau eru búin til með því að byrja með
+nákvæm gildi parabólunnar :math:`y = 100 - (x - 10)^2` í x-gildum sem valin eru
+af handahófi á bilinu :math:`[2,18]`, en svo er bætt við þau normaldreifðri
+slembiviðbót :math:`\Delta` með meðaltal 0 og staðalfrávik 10 (sem rita má
+:math:`\Delta \sim N(0,10)`).
 
 .. code:: python
           
@@ -238,7 +217,7 @@ parabólunnar :math:`y = 100 - (x - 10)^2` í x-gildum sem valin eru af handahó
 Hér er svo forrit til að ákvarða bestu parabólu og teikna hana ásamt punktunum.
 Import- og teiknistillingarskipunum hefur verið sleppt. Myndin sem teiknast
 fylgir í kjölfarið. Dæmið sýnir hvernig hægt er að fá tvær hlutmyndir hlið við
-hlið, en á það var lauslega minnst í :numref:`verkefni %s<körfuboltamenn>`.
+hlið, en á það er líka minnst í :numref:`verkefni %s<körfuboltamenn>`.
 Hágildispunkturinn sem prentaður er út fæst auðveldlega með því að diffra jöfnu
 parabólunnar og setja sama sem núll.
 
@@ -320,6 +299,8 @@ sem ekki hefur sést áður og stillir efri og neðri mörk á litaskalanum:
 
 .. code:: python
 
+   import matplotlib.pyplot as plt
+   rng = np.random.default_rng(seed=42)
    aldur = rng.uniform(5, 15, size=50)
    hys = rng.uniform(0, 400, size=50)
    eps = rng.normal(0, 1, size=50)
@@ -351,15 +332,24 @@ polyfit heldur þarf annan pakka sem nefnist ``statsmodels``, eins og hér er s�
    (a,b,c) = result.params
    print(f"a={a:.3f}, b={b:.3f}, c={c:.4f}")
 
-   # prentar út: a=0.579, b=0.986, c=-0.0096
+   # prentar út: a=0.232, b=0.1.020, c=-0.0101
+
+.. admonition:: Athugasemd
+   :class: athugid
+
+   Ég fékk villumeldingu á ``import statsmodels.api`` og þurfti að fara á
+   skipanalínu og skrifa þar ``conda install statsmodels`` (sbr. kafla
+   :numref:`uppsetning jupyterlab á eigin tölvu` – reyndar bætti ég statsmodels
+   við upptalninguna í ``conda install`` þar þegar ég lenti í þessu).
 
 .. admonition:: Æfing: Hæð körfuboltamanna
    :class: aefing
 
    Búið til línulegt líkan (besta plan) sem lýsir hæð körfuboltamanna í skránni
-   `https://cs.hi.is/python/karfa.txt <https://cs.hi.is/python/karfa.txt>`_ sem fall af aldri og þyngd (skráin er með þrjá
-   talnadálka með aldri, hæð og þyngd, og án hauslínu, og hana má lesa með
-   ``np.loadtxt``). Prentið niðurstöðu með eftirfarandi sniði:
+   `https://cs.hi.is/python/karfa.txt <https://cs.hi.is/python/karfa.txt>`_ sem
+   fall af aldri og þyngd (skráin er með þrjá talnadálka með aldri, hæð og
+   þyngd, og án hauslínu, og hana má lesa með ``np.loadtxt``). Prentið
+   niðurstöðu með eftirfarandi sniði:
 
       ``Módelið er: hæð = 160.x – x.xx*aldur + x.xx*þyngd``
 

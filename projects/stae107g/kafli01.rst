@@ -43,20 +43,6 @@ Skilgreining: Línulegt jöfnuhneppi
         a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &= b_m
         \end{align}
 
-    Línuleg jöfnuhneppi eru gjarnan sett upp á **fylkjaformi**
-
-    .. math:: \begin{bmatrix}
-        a_{11} & a_{12} & \cdots & a_{1n}\\
-        a_{21} & a_{22} & \cdots & a_{2n}\\
-        \vdots & \vdots & \ddots &\vdots \\
-        a_{m1} & a_{m2} & \cdots & a_{mn}
-        \end{bmatrix}
-        \begin{bmatrix}
-        x_1 \\ x_2 \\ \vdots \\ x_n
-        \end{bmatrix}=
-        \begin{bmatrix}
-        b_1 \\ b_2 \\ \vdots \\ b_n
-        \end{bmatrix}
 
 
 Setning: Fjöldi lausna
@@ -183,30 +169,35 @@ Skilgreining: Jafngild
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Tvö línuleg jöfnuhneppi kallast **jafngild** (e. equivalent) ef þau hafa sömu lausnir.
+    Línuleg jöfnuhneppi sem hafa sama lausnamengið eru **jafngild** (e. equivalent).
 
-Einfaldar línuaðgerðir
-----------------------
-      
-Eftirfarandi aðgerðir kallast **einfaldar línuaðgerðir** (e. elementary row operations) og 
-þeim má beita á línuleg jöfnuhneppi án þess að lausnamengi jöfnuhneppisins breytist.
 
-Um fylki
+Fylki
 ---------
 
-Stærð fylkis
-~~~~~~~~~~~~~
 
-Látum 
+Skilgreining: Stærð fylkis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. math:: \begin{bmatrix}
-    a_{11} &\dots  &a_{1n}\\
-    \vdots &&\vdots\\
-    a_{m1} &\dots  &a_{mn}\\  
-    \end{bmatrix}
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-vera fylki með :math:`m` jöfnum og :math:`n` óþekktum breytum. Við segjum að :math:`A` sé :math:`{m\times n}` fylki.
-Jafnframt er :math:`m\times n` kallað **stærð fylkisins**.
+    Látum :math:`A` vera :math:`m\times n` fylki,
+
+    .. math:: A = \begin{bmatrix}
+        a_{11}  & \cdots & a_{1n}\\
+        a_{21}  & \cdots & a_{2n}\\
+        \vdots &  \ddots &\vdots \\
+        a_{m1} & \cdots & a_{mn}
+        \end{bmatrix}.
+
+    Fylkið :math:`A` hefur :math:`m` **línur** (e. rows), sem liggja lárétt, og :math:`n` **dálka** (e. columns), sem liggja lóðrétt.
+    Við segjum að **stærð fylkis** :math:`A` sé :math:`m\times n`.
+
+.. admonition:: Minnisregla fyrir :math:`m \times n`
+    :class: athugasemd
+
+    LSD = Lína Sinnum Dálkur.
 
 Skilgreining: Stuðlafylki og aukið fylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -214,30 +205,53 @@ Skilgreining: Stuðlafylki og aukið fylki
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum 
-
+    Rita má sérhvert línulegt jöfnuhneppi
+    
     .. math:: \begin{alignat*}{2}
             a_{11}x_{1}+&\dots+a_{1n}x_n &= b_1\\
             &\hspace{6.143162275pt}\vdots & \\
             a_{m1}x_{1}+&\dots+a_{mn}x_n &= b_m\\    
             \end{alignat*}
         
-    vera línulegt jöfnuhneppi. Við köllum fylkin
+    á **fylkjaformi**
+    
+    .. math:: \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots & \ddots &\vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+        \begin{bmatrix}
+        x_1 \\ x_2 \\ \vdots \\ x_n
+        \end{bmatrix}=
+        \begin{bmatrix}
+        b_1 \\ b_2 \\ \vdots \\ b_n
+        \end{bmatrix}.
+
+    Fylkin
 
     .. math:: \begin{bmatrix}
-            a_{11} &\dots &a_{1n}\\
-            \vdots&&\vdots\\
-            a_{m1}&\dots &a_{mn}\\  
-            \end{bmatrix}
-            \text{ og }
-            \begin{bmatrix}
-            a_{11} &\dots &a_{1n} &b_1\\
-            \vdots&&\vdots&\vdots\\
-            a_{m1}&\dots &a_{mn} &b_m\\  
-            \end{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n}\\
+        a_{21} & a_{22} & \cdots & a_{2n}\\
+        \vdots & \vdots & \ddots &\vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}
+        \text{ og }
+        \left[\begin{array}{@{}cccc|c@{}}
+        a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+        a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+        \vdots & \vdots & \ddots &\vdots & \vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn} & b_m
+        \end{array}\right]
         
-    **Stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix) jöfnuhneppisins.
+    kallast **stuðlafylki** (e. coefficient matrix) og **aukið fylki** (e. augmented matrix).
+    
 
+Einfaldar línuaðgerðir
+----------------------
+      
+Eftirfarandi aðgerðir kallast **einfaldar línuaðgerðir** (e. elementary row operations) og 
+þeim má beita á línuleg jöfnuhneppi án þess að lausnamengi jöfnuhneppisins breytist.
 
 
 Setning: Einfaldar línuaðgerðir
@@ -246,13 +260,63 @@ Setning: Einfaldar línuaðgerðir
 .. admonition:: Setning
     :class: setning
 
-    **1.** Umskipting (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
+        **1.** **Umskipting** (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
 
-    **2.** Víxlun (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
+        **2.** **Víxlun** (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
 
-    **3.** Skölun (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
+        **3.** **Skölun** (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
 
     Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppsins.
+
+Sýnidæmi: Einfaldar línuaðgerðir 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Beitið eftirfarandi línuaðgerðum :math:`\substack{R_1 \leftrightarrow R_2}, \substack{R_3 + 5R_1}` og :math:`\substack{-R_3-\frac{21}{4}R_2}`   á fylkið
+
+  .. math:: 
+    \begin{bmatrix}
+    0 & 4 & 1 \\
+    -1 & 3 & 2 \\
+    5 & 6 & -3
+    \end{bmatrix}
+
+  
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Fáum
+
+  .. math:: \begin{alignat*}{2}
+    \begin{bmatrix}
+    0 & 4 & 1 \\
+    -1 & 3 & 2 \\
+    5 & 6 & -3
+    \end{bmatrix}
+    &\overset{\substack{R_1 \leftrightarrow R_2}}{\sim} 
+    &&\begin{bmatrix}
+    -1 & 3 & 2 \\
+    0 & 4 & 1 \\
+    5 & 6 & -3
+    \end{bmatrix} \\
+    &\overset{\substack{R_3 + 5R_1}}{\sim} 
+    &&\begin{bmatrix}
+    -1 & 3 & 2 \\
+    0 & 4 & 1 \\
+    0 & 21 & 7
+    \end{bmatrix}\\
+    &\overset{\substack{-R_3-\frac{21}{4}R_2}}{\sim}
+    &&\begin{bmatrix}
+    -1 & 3 & 2 \\
+    0 & 4 & 1 \\
+    0 & 0 & \frac{7}{4}
+    \end{bmatrix}
+    \end{alignat*}
+
+
 
 Skilgreining: Línujafngild
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -260,17 +324,15 @@ Skilgreining: Línujafngild
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Tvö jöfnuhneppi (eða fylki) eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
+    Tvö jöfnuhneppi eru **línujafngild** (e. row equivalent) ef öðru má breyta í hitt
     með einföldum línuaðgerðum.
-
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Ef jöfnuhneppi eru línujafngild þá hafa þau sama lausnamengið. Hinsvegar, eru til dæmi 
-    um jöfnuhneppi sem hafa sama lausnamengið en eru ekki línujafngild. 
-
-    Línulegu jöfnuhneppin 
+    Línujafngild jöfnuhneppi eru jafngild, en jafngild jöfnuhneppi eru ekki endilega línujafngild.
+    
+    Til dæmis eru eftirfarandi jöfnuhneppi jafngild
 
     .. math:: \left[\begin{array}{@{}cc|c@{}}
         1& 1 & 0\\ 
@@ -282,28 +344,339 @@ Skilgreining: Línujafngild
         0&0 & 1
         \end{array}\right]
 
-    hafa sömu (engar) launsir en eru ekki línujafngild.
+    því þau hafa sömu (engar) lausnir. Hinsvegar eru þau ekki línujafngild, því ekki er hægt að breyta öðru þeirra í hitt með einföldum línuaðgerðum.
 
-Sýnidæmi: Línuaðgerðir 
-^^^^^^^^^^^^^^^^^^^^^^
+
+(Rudd) efra stallaform
+----------------------
+
+Öllum fylkjum má breyta í fylki af efri stallagerð með einföldum línuaðgerðum.
+
+
+Skilgreining: Núllínur og forystustuðlar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    **Núllína** (e. zero row) er lína þar sem allir stuðlarnir eru núll,
+
+    .. math:: \begin{bmatrix}
+        0 & 0 & \cdots & 0 \end{bmatrix}.
+
+    **Forystustuðull** (e. leading coeffcient) er fyrsti stuðull í hverri línu sem er ekki núll,
+
+    .. math:: \begin{bmatrix}
+        0 & \cdots & 0 & * & \cdots \end{bmatrix}.
+
+    :math:`(*)` táknar hvaða tölu sem er
+
+Skilgreining: Efri stallagerð
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Fylki er sagt vera af **efri stallagerð**, eða **efra stallaformi**, (e. echelon form) ef það uppfyllir
+    eftirfarandi skilyrði.
+
+        **1.** Núllínur liggja fyrir neðan aðrar línur.
+
+        **2.** Forystustuðull hverrar línu er hægra megin við forystustuðul línunnar fyrir ofan.
+
+        **3.** Allir stuðlar fyrir neðan forystustuðul eru núll.
+    
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Efri stallagerð fylkis :math:`A` er oft táknuð með :math:`U`.    
+
+Sýnidæmi: Efri stallagerð
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+  
+  Breytum eftirfarandi :math:`{3\times 4}` fylki
+
+    .. math:: A= \begin{bmatrix}
+        1 & 2 & 3 & 4 \\
+        5 & 6 & 7 & 8 \\
+        9 & 10 & 11 & 12
+        \end{bmatrix} 
+
+  í fylki af efri stallagerð með einföldum línuaðgerðum.
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Fáum
+
+  .. math:: \begin{alignat*}{2}
+    A= \begin{bmatrix}
+    1 & 2 & 3 & 4 \\
+    5 & 6 & 7 & 8 \\
+    9 & 10 & 11 & 12
+    \end{bmatrix} 
+    &\overset{\substack{R_2 - 5R_1 \\
+    R_3 - 9R_1}}{\sim} 
+    &&\begin{bmatrix}
+    1 & 2 & 3 & 4 \\
+    0 & -4 & -8 & -12 \\
+    0 & -8 & -16 & -24
+    \end{bmatrix}\\  
+    &\overset{\substack{R_3 - 2R_2}}{\sim}
+    &&\begin{bmatrix}
+    1 & 2 & 3 & 4 \\
+    0 & -4 & -8 & -12 \\
+    0 & 0 & 0 & 0
+    \end{bmatrix}:= U
+    \end{alignat*}
+  
+  Athugum nú skilyrðin:
+
+  **1.** Núlllínur eru neðst. JÁ.
+
+  **2.** Forystustuðull hverrar línu er hægra megin við forystustuðul línunnar fyrir ofan. JÁ.
+
+  **3.** Allir stuðlar fyrir neðan forystustuðul eru núll. JÁ.
+
+Skilgreining: Rudd efri stallagerð
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Fylki er sagt vera af **ruddri efri stallagerð**  (e. reduced echeolon form) ef það er af efri 
+    stallagerð og uppfyllir að auki eftirfarandi skilyrði:
+    
+        **1.** Forystustuðlar eru allir 1.
+
+        **2.** Allir stuðlar fyrir ofan forystustuðul eru núll.
+
+    Stundum eru forystustuðular í fylki af ruddri efri stallagerð kallaðir **vendistuðular**, og þeir dálkar sem innihalda slíka forystustuðla kallaðir **vendidálkar**.
+
+
+
+Sýnidæmi: Rudd efri stallagerð
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
 
-  Leysum jöfnuhneppið
+  Nokkur dæmi um fylki af ruddri efri stallagerð
+
+  .. math:: \begin{bmatrix}
+    1 & 0 \\
+    0 & 1 \\
+    \end{bmatrix}, \quad
+    \begin{bmatrix}
+      1 & 4 & 0 \\
+      0 & 0 & 1 \\
+      0 & 0 & 0 \\
+    \end{bmatrix}, \quad
+    \begin{bmatrix}
+      1 & 0 & * & 0 \\
+      0 & 1 & * & 0 \\
+      0 & 0 & 0 & 1 \\
+    \end{bmatrix}, \quad
+    \begin{bmatrix}
+      1 & 0 & * & 0 & 1 \\
+      0 & 1 & * & 0 & 2 \\
+      0 & 0 & 0 & 1 & 3 \\
+    \end{bmatrix}.    
+
+  :math:`(*)` táknar hvaða tölu sem er.
+
+
+Setning: Rutt efra stallaform er ótvírætt ákvarðað
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Sérhvert fylki er jafngilt einu og aðeins einu fylki á ruddu efra stallaformi.
+
+
+Fjöldi lausna og frjálsar breytur
+------------------------------------
+
+Skilgreining: Frjálsar breytur og grunnbreytur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreinig
+  :class: skilgreining
+
+  Þær breytur línulegs jöfnuhneppis á efri stallagerð sem ekki eru forystubreytur kallast **frjálsar breytur** (e. free variables). Breytur sem ekki eru frjálsar eru kallaðar **grunnbreytur** (e. leading variables).
+
+Best er að lýsa stikaframsetningu með dæmi.
+
+Sýnidæmi: Stikaframsetning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+  :class: daemi
+
+  Leysið jöfnuhneppið og setjið lausnina fram með stikaframsetningu.
+
+  .. math:: \begin{align*}
+    x_1+x_2+x_3 + x_4 + 2 x_5 =0\\
+    x_2 + x_3 + 3 x_4 + x_5 = 4 \\
+    -2 x_4 \qquad \ = 4
+    \end{align*}
+
+.. admonition:: Lausn
+  :class: daemi, dropdown
+
+  Ritum sem aukið fylki
+
+  .. math:: \left[\begin{array}{@{}ccccc|c@{}}
+    1 & 1 & 1  & 1 & 2  & 0\\
+    0 & 1 & 1 & 3 & 1 & 4 \\
+    0 & 0 & 0 & -2 & 0  & 4
+    \end{array}\right].
+
+  Við sjáum að :math:`x_1, x_2` og :math:`x_4`
+  eru grunnbreytur, en :math:`x_3` og :math:`x_5` eru frjálsar því þar sitja aldrei forystustuðlar.
+  Venja er að rita frjálsar breytur með öðrum bókstöfum, t.d. :math:`s := x_3` og :math:`t := x_5`.
+
+  Neðsta jafnan í aukna fylkinu gefur :math:`-2 x_4 = 4`, þ.e. :math:`x_4 = -2`. Setjum svo inn í næst neðstu jöfnuna
+
+  .. math:: x_2= 4 - x_3 - 3 x_4 - x_5 = 10 - s - t.
+
+  Með þessum upplýsingum verður efsta jafnan
+
+  .. math:: x_1 = - x_2 - x_3 - x_4 - 2 x_5 = -8 -t.
+
+  Lausn jöfnuhneppisins á stikaframsetningu er því
+
+  .. math:: \begin{bmatrix}
+    x_2 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
+    \begin{bmatrix}
+    -8 - t\\
+    10-s-t\\
+    s\\
+    -2\\
+    t
+    \end{bmatrix}=
+    \begin{bmatrix}
+    -8 \\ 10 \\ 0 \\ -2 \\ 0 \end{bmatrix} + 
+    s \begin{bmatrix}
+    0 \\ -1 \\ 1 \\ 0 \\ 0
+    \end{bmatrix} + t \begin{bmatrix}
+    -1 \\ -1 \\ 0 \\ 0 \\ 1 \end{bmatrix}
+
+  þar sem :math:`s` og :math:`t` eru hvaða tölur sem er. 
+
+Setning: Tilvist og fjöldi lausna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+  :class: setning
+
+  Jöfnuhneppi hefur lausn ef og aðeins ef dálkurinn lengst til hægri í efra stallaformi
+  inniheldur ekki forystustuðul, þ.e.a.s. ef efra stallaform aukna
+  fylkisins inniheldur ekki línu á forminu 
+
+  .. math:: [0\ \dots \ 0 | \ b]
+
+  þar sem :math:`b\neq 0`. 
+
+  Ef jöfnuhneppið hefur lausn þá er annaðhvort
+
+    **1.** Nákvæmlega eina lausn, ef það er engin frjáls breyta.
+
+    **2.** Óendanlega margar lausnir, ef það eru ein eða fleiri frjálsar breytur.
+
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Ef við umbreytum aukna fylki jöfnuhneppis yfir á (rudda) efri stallagerð getur eftirfarandi gerst:
+
+    **1.** Engin lausn
+
+    .. math:: \left[\begin{array}{@{}cc|c@{}}
+        1 & * & 0 \\
+        0 & 0 & 1 \\
+        \end{array}\right].
+
+    **2.** Nákvæmlega ein lausn 
+
+    .. math:: \left[\begin{array}{@{}cc|c@{}}
+        1 & 0 & * \\
+        0 & 1 & * \\
+        \end{array}\right].
+
+    **3.** Óendanlega margar lausnir
+    
+    .. math:: \left[\begin{array}{@{}ccc|c@{}}
+        1 & 0 & * & * \\
+        0 & 1 & * & * \\    
+        \end{array}\right].
+
+
+Gauss-eyðing
+------------
+
+Línuleg jöfnuhneppi eru yfirleitt leyst með svokallaðri **Gauss-eyðingu** (e. Gauss-reduction), sem felst í því að beita línuaðgerðum á jöfnuhneppið
+þar til fram kemur hneppi af efri stallagerð. Lausnamengi efri stallagerðar er hið sama og upphaflega fylkisins, og auðvelt er að leysa fylki af efri stallagerð með
+**aftur-á-bak innsetningu** (e. back-substitution).
+Einnig er hægt að koma fylkinu yfir á rudd eftra stallaform og lesa lausnina beint út, þá er talað um **Gauss-Jordan eyðingu**.
+
+Gauss-(Jordan) eyðing er undirstöðu atriði í þessu námskeiði og því **mikilvægt að tileinka sér vel**.
+
+Aftur-á-bak innsetning
+~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreinig
+  :class: skilgreining
+
+  Línulegt jöfnuhneppi af efra stallaformi má leysa með aftur-á-bak innsetningu með því að byrja á neðstu jöfnu (sem ekki er núlllína)
+  og lesa út formúlu fyrir forystubreytu hennar út frá frjálsu breytunum. Síðan er næsta lína fyrir ofan skoðuð og formúlan fyrir neðstu breytunni notuð. Þannig er haldið áfram "aftur á bak" þar til lausn
+  fæst á jöfnuhneppinu.
+
+
+Gauss-eyðing reiknirit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+  :class: skilgreining
+
+  **Gauss-eyðing**:
+
+    **1.** Finnum dálkinn lengst til vinstri sem inniheldur ekki bara 0, og víxlum á línum þannig að þessi tala verði í efstu línu. 
+
+    **2.** Eyðum stökunum fyrir neðan forystustuðulinn með því að draga margfeldi efstu línu frá línum fyrir neðan.
+
+    **3.** Endurtökum skrefin hér að ofan fyrir línuna næst lengst til vinstri og svo koll af kolli.
+
+  Nú höfum við umbreytt fylkinu yfir í fylki af efra stallaformi og getum notað aftur-á-bak innsetningu til þess að leysa jöfnuhneppið.
+
+  **Gauss-Jordan eyðing** (áframhald)
+
+    **4.** Eyðum stökunum fyrir ofan forystustuðalna þar til fylkinu er komið yfir á efra stallaform.
+  
+  Lausnin lesin beint.
+
+
+Sýnidæmi: Gauss-eyðing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. admonition:: Dæmi
+  :class: daemi
+
+  Leysið jöfnuhneppið með Gauss-eyðingu
 
   .. math:: 
     \begin{aligned}
-     x_1 -3x_2 + 4x_3 =-4\\
-     3x_1-7x_2+7x_3 =-8\\
-    -4x_1+6x_2+2x_3=4
+     x_1 -3x_2 + 4x_3 =-4,\\
+     3x_1-7x_2+7x_3 =-8,\\
+    -4x_1+6x_2+2x_3=4.
     \end{aligned}
-    
+
 
 .. admonition:: Lausn
   :class: daemi, dropdown
   
-   Skrifum þetta á fylkjaformi.
+   Fáum
    
   .. math:: \begin{alignat*}{2}
     \left[\begin{array}{@{}ccc|c@{}}
@@ -358,427 +731,19 @@ Sýnidæmi: Línuaðgerðir
   
   og línulega jöfnuhneppið hefur eina lausn: :math:`(x_1,x_2,x_3)=(2,2,0)`. 
 
+  Hér hefði verið hægt að sleppa síðasta skrefinu, :math:`R_1+5R_3, R_2+3R_3`, og leysa með aftur-á-bak innsetningu í stað þess að lesa svarið beint með Gauss-Jordan.
+  Nú skulum við nota þessa aðferð. Við höfum
+
+  .. math:: \left[\begin{array}{@{}ccc|c@{}}
+    1 & 0 & -5 & 2\\
+    0 & 1 & -3 & 2 \\
+    0 & 0 & 1 & 0
+    \end{array}\right]
+
+  Neðsta lína sem ekki er núll gefur lausn :math:`x_3 = 0`. Næst neðsta línan er því
+  :math:`x_2 -3 x_3 = 2` svo :math:`x_2 = 2`. Að lokum er :math:`x_1 - 5 x_3 = 2` þ.e. :math:`x_1 = 2`. Sama niðurstaða fæst því með Gauss-eyðingu (viðbúið),
+  :math:`(x_1,x_2,x_3)=(2,2,0)`.
 
-
-
-
-
-Efri stallagerð
-~~~~~~~~~~~~~~~~~~~
-
-**Línur** (e. rows) liggja lárétt og **dálkar** (e. columns) liggja lóðrétt.
-
-**Núllína** (e. zero row) er lína þar sem allir stuðlarnir eru núll.
-
-**Forystustuðull** (e. leading coeffcient) er fyrsti stuðull í hverrri línu sem er ekki núll.
-
-Skoðum jöfnuhneppi
-
-.. math:: \begin{array}{cccc}
-        3x_1 &+ 7x_2 &- 2x_3 &= 9 \\
-             & -5x_2 &+ 4x_3 &= 2 \\
-             &        & 6x_3 &=-3 \\
-      \end{array}
-
-sjáum strax að jöfnuhneppið hefur lausn. 
-
-.. math:: \begin{bmatrix}
-    3 & 7 & -2 & 9 \\
-    0 & -5 & 4 & 2 \\
-    0 & 0 & 6 & -3 
-    \end{bmatrix}
-
-Aukna fylkið fyrir jöfnuhneppið er dæmi um fylki af *efri stallagerð* (e. echelon form).  
-
-Skilgreining: Efri stallagerð
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-    :class: skilgreining
-
-    Fylki er sagt vera af **efri stallagerð** (e. echelon form) ef það uppfyllir
-    eftirfarandi skilyrði.
-
-        **1.** Núllínur liggja fyrir neðan aðrar línur.
-
-        **2.** Forustustuðull hverrar línu er hægra megin við forustustuðul línunnar fyrir ofan.
-
-        **3.** Allir stuðlar fyrir neðan forustustuðul eru núll.
-    
-    Öllum fylkjum má breyta í fylki af efri stallagerð með einföldum línuaðgerðum.
-
-Sýnidæmi: Efri stallagerð
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-  
-  Breytum eftirfarandi :math:`{3\times 4}` fylki í fylki af efri stallagerð:
-
-  .. math:: \begin{alignat*}{2}
-    \begin{bmatrix}
-    1 & 2 & 3 & 4 \\
-    5 & 6 & 7 & 8 \\
-    9 & 10 & 11 & 12
-    \end{bmatrix} 
-    &\overset{\substack{R_2 - 5R_1 \\
-    R_3 - 9R_1}}{\sim} 
-    &&\begin{bmatrix}
-    1 & 2 & 3 & 4 \\
-    0 & -4 & -8 & -12 \\
-    0 & -8 & -16 & -24
-    \end{bmatrix}\\  
-    &\overset{\substack{R_3 - 2R_2}}{\sim}
-    &&\begin{bmatrix}
-    1 & 2 & 3 & 4 \\
-    0 & -4 & -8 & -12 \\
-    0 & 0 & 0 & 0
-    \end{bmatrix}
-    \end{alignat*}
-
-  Er þetta fylki af neðri stallagerð?
-
-  **1.** Núlllínur eru neðast. OK
-
-  **2.** Forustustuðull hverrar línu er hægra megin við forustustuðul línunnar fyrir ofan. OK
-
-  **3.** Allir stuðlar fyrir neðan forustustuðul eru núll. OK
-
-Gauss-eyðing
-------------
-
-Línuleg jöfnuhneppi eru yfirleitt leyst með svokallaðri **Gauss-eyðingu** (e. Gauss-reduction).
-Gauss-eyðing er reiknirit sem umbreytir fylki í fylki af efri stallagerð.
-
-Reiknirit fyrir Gauss-eyðingu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    **1.** Finnum dálkinn lengst til vinstri sem inniheldur ekki bara 0. Köllum þennan dálk „fyrsta vendidálk".
-
-    **2.** Víxlum, ef þarf, á línum svo að efsta stak fyrsta vendidálks (vendistak) sé ekki núll.
-
-    **3.** Núllum út stökin fyrir neðan vendistakið með því að draga margfeldi efstu línu frá línum fyrir neðan.
-
-    **4.** Lítum nú framhjá efstu línu í fylkinu og endurtökum skref 1-4 á línurnar fyrir neðan.
-
-.. admonition:: Athugasemd
-  :class: athugasemd
-
-  Það er ekki bannað að deila/margfalda til að vendistuðullinn verði 1. Það er ekki nauðsynlegt en það má ef það 
-  einfaldar útreikninganna. Sama gildi um það að víxla á línum til að fá þægilegri tölur til að vinna með.
-
-Sýnidæmi: Gauss-eyðing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  Notið Gauss-eyðingu til að koma fylkinu yfir á efri stallagerð
-
-  .. math:: 
-    \begin{bmatrix}
-    0 & 4 & 1 \\
-    -1 & 3 & 2 \\
-    5 & 6 & -3
-    \end{bmatrix}
-
-.. admonition:: Lausn
-  :class: daemi, dropdown
-
-  Beitum Gauss-eyðingu til að umbreyta fylkinu í fylki af efri stallagerð.
-
-  .. math:: \begin{alignat*}{2}
-    \begin{bmatrix}
-    0 & 4 & 1 \\
-    -1 & 3 & 2 \\
-    5 & 6 & -3
-    \end{bmatrix}
-    &\overset{\substack{R_1 \leftrightarrow R_2}}{\sim} 
-    &&\begin{bmatrix}
-    -1 & 3 & 2 \\
-    0 & 4 & 1 \\
-    5 & 6 & -3
-    \end{bmatrix} \\
-    &\overset{\substack{R_3 + 5R_1}}{\sim} 
-    &&\begin{bmatrix}
-    -1 & 3 & 2 \\
-    0 & 4 & 1 \\
-    0 & 21 & 7
-    \end{bmatrix}\\
-    &\overset{\substack{-R_3-\frac{21}{4}R_2}}{\sim}
-    &&\begin{bmatrix}
-    -1 & 3 & 2 \\
-    0 & 4 & 1 \\
-    0 & 0 & \frac{7}{4}
-    \end{bmatrix}
-    \end{alignat*}
-
-
-Skilgreining: Rudd efri stallagerð
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-    :class: skilgreining
-
-    Fylki er sagt vera af **ruddri efri stallagerð**  (e. reduced echeolon form) ef það er af efri 
-    stallagerð og uppfyllir að auki eftirfarandi skilyrði:
-    
-    **1.** Forustustuðlar eru allir 1.
-
-    **2.** Allir stuðlar fyrir ofan forustustuðul eru núll.
-
-
-Sýnidæmi: Rudd efri stallagerð
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  .. math:: \begin{align*}
-    \begin{bmatrix}
-      1 & 0 \\
-      0 & 1 \\
-    \end{bmatrix}
-    &
-    \begin{bmatrix}
-      1 & 4 & 0 \\
-      0 & 0 & 1 \\
-      0 & 0 & 0 \\
-    \end{bmatrix}
-    &
-    \begin{bmatrix}
-      1 & 0 & 3 & 0 \\
-      0 & 1 & 4 & 0 \\
-      0 & 0 & 0 & 1 \\
-    \end{bmatrix}
-    &
-    \begin{bmatrix}
-      1 & 0 & 2 & 0 & 1 \\
-      0 & 1 & 3 & 0 & 2 \\
-      0 & 0 & 0 & 1 & 3 \\
-    \end{bmatrix}
-    &
-    \\
-    \begin{bmatrix}
-      1 & 0 \\
-      0 & 1 \\
-    \end{bmatrix}
-    &
-    \begin{bmatrix}
-      1 & * & 0 \\
-      0 & 0 & 1 \\
-      0 & 0 & 0 \\
-    \end{bmatrix}
-    &
-    \begin{bmatrix}
-      1 & 0 & * & 0 \\
-      0 & 1 & * & 0 \\
-      0 & 0 & 0 & 1 \\
-    \end{bmatrix}
-    &
-    \begin{bmatrix}
-      1 & 0 & * & 0 & * \\
-      0 & 1 & * & 0 & * \\
-      0 & 0 & 0 & 1 & * \\
-    \end{bmatrix}
-    \end{align*}
-
-Við köllum forustustuðul í fylki af ruddri efri stallagerð **vendistuðul**. 
-Við köllum þá dálka **vendidálka** sem innhalda vendistuðla.
-
-.. admonition:: Athugasemd
-    :class: athugasemd
-    
-    Við finnum rudda efri stallagerð með sama reikniriti og við finnum efri stallagerð. 
-    Nema að til viðbótar þá gerum við eftirfarandi:
-
-        **1.** Skölum forustustuðla þar sem við á til að þeir verði 1.
- 
-        **2.** Eyðum út stuðlum fyrir ofan forustustuðla.
-
-Sýnidæmi: Rudd efri stallagerð
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  Beitið reikniritinu til að koma fylkinu yfir á rudda efri stallagerð.
-
-  .. math:: \begin{bmatrix}
-    0 & 4 & 1 \\
-    -1 & 3 & 2 \\
-    5 & 6 & -3
-    \end{bmatrix}
-
-.. admonition:: Lausn
-  :class: daemi, dropdown
-
-  .. math:: \begin{eqnarray*}
-    \begin{bmatrix}
-    0 & 4 & 1 \\
-    -1 & 3 & 2 \\
-    5 & 6 & -3
-    \end{bmatrix}
-    &\sim
-    \begin{bmatrix}
-    -1 & 3 & 2 \\
-    0 & 4 & 1 \\
-    0 & 0 & \frac{7}{4}
-    \end{bmatrix} \\
-    &\sim
-    \begin{bmatrix}
-    1 & -3 & -2 \\
-    0 & 1 & \frac{1}{4} \\
-    0 & 0 & 1
-    \end{bmatrix}\\ 
-    &\sim
-    \begin{bmatrix}
-    1 & -3 & 0 \\
-    0 & 1 & 0 \\
-    0 & 0 & 1
-    \end{bmatrix}
-    \\&\sim\begin{bmatrix}
-    1 & 0 & 0 \\
-    0 & 1 & 0 \\
-    0 & 0 & 1
-    \end{bmatrix}
-    \end{eqnarray*}
-  
-  og við fáum fylki af ruddri efri stallagerð.
-
-
-Setning: Rudd efri stallagerð
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning
-  :class: setning
-
-  Gefið er fylki :math:`A`. Fylkinu :math:`A` má með einföldum línuaðgerðum 
-  umbreyta í eitt og aðeins eitt fylki af ruddri efri stallagerð. Með öðrum 
-  orðum er rudd efri stallagerð fylkis ótvírætt ákvörðuð. 
-
-
-Sýnidæmi: Frjálsar og háðar breytur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-  :class: daemi
-
-  Leysið línulega jöfnuhneppið
-
-  .. math:: \begin{align*}
-    x_1+2x_2+3x_3=4\\
-    5x_1+6x_2+7x_3=8\\    
-    9x_1+10x_2+11x_3=12
-    \end{align*}
-
-.. admonition:: Lausn
-  :class: daemi, dropdown
-
-  Skoðum línulega jöfnuhneppið
-  
-  .. math:: \begin{align*}
-    x_1+2x_2+3x_3=4\\
-    5x_1+6x_2+7x_3=8\\    
-    9x_1+10x_2+11x_3=12
-    \end{align*} 
-  
-  Skv. sýnidæmi að ofan má umbreyta aukna fylki þess í
- 
-  .. math:: \begin{bmatrix}
-    1 & 0 & -1 & -2 \\
-    0 & 1 & 2 & 3 \\
-    0 & 0 & 0 & 0
-    \end{bmatrix} 
-  
-  sem jafngildir jöfnuhneppinu
-
-  .. math::\begin{align*}
-    x_1&-x_3=-2\\
-    x_2&+2x_3=3
-    \end{align*}
-
-  Fáum að
-
-  .. math:: \begin{align*}
-    x_1&-x_3=-2\\
-    x_2&+2x_3=3
-    \end{align*}
-
-  sem er jafngilt
-
-  .. math:: \begin{align*}
-    x_1&=x_3-2\\
-    x_2&=-2x_3+3
-    \end{align*}
-  
-  svo
-
-  .. math:: \begin{align*}
-    \begin{pmatrix}
-    x_1\\
-    x_2\\
-    x_3
-    \end{pmatrix}=
-    \begin{pmatrix}
-    x_3-2\\
-    -2x_3+3\\
-    x_3
-    \end{pmatrix}
-    \end{align*}
-
-  þar sem :math:`x_3` er **frjáls breyta** (e. free variable) .
-
-  Jöfnuhneppið er samkvæmt en lausnin ekki ótvírætt ákvörðuð.
-  Breyturnar :math:`x_1`, :math:`x_2` eru hér kallaðar **háðar breytur** (e. basic variable). 
-
-
-.. admonition:: Athugasemd
-    :class: athugasemd
-
-    Ef við umbreytum aukna fylki jöfnuhneppis yfir á (rudda) efri stallagerð getur eftirfarandi gerst:
-
-    **1.** Dálkurinn lengst til hægri er vendidálkur. Í þeim tilfellum hefur jöfnuhneppið enga lausn. **Dæmi:**
-
-    .. math:: \begin{bmatrix}
-        1 & * & 0 \\
-        0 & 0 & 1 \\
-        \end{bmatrix}
-
-    **2.** Allir dálkar nema dálkurinn lengst til hægri eru vendidálkar. Í þeim tilfellum hefur jöfnuhneppið nákvæmlega eina lausn. **Dæmi:**
-    
-    .. math:: \begin{bmatrix}
-        1 & 0 & * \\
-        0 & 1 & * \\
-        \end{bmatrix}
-
-    **3.** Dálkurinn lengst til hægri er ekki vendidálkur auk minnst eins annars til viðbótar. 
-    Í þeim tilfellum hefur jöfnuhneppið óendanlega margar lausnir. **Dæmi:**
-    
-    .. math:: \begin{bmatrix}
-        1 & 0 & * & * \\
-        0 & 1 & * & * \\    
-        \end{bmatrix}
-
-Setning: Fjöldi frjálsa breyta
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning
-  :class: setning
-
-  Jöfnuhneppi hefur lausn ef og aðeins ef dálkurinn lengst til hægri í efra stallaformi
-  inniheldur ekki forustustuðul, þ.e.a.s. ef efra stallaform aukna
-  fylkisins inniheldur ekki línu á forminu 
-
-  .. math:: [0\ \dots \ 0 \ b]
-
-  þar sem :math:`b\neq 0`. 
-
-  Ef jöfnuhneppið hefur lausn þá er annaðhvort
-
-    **1.** nákvæmlega eina lausn, ef það er engin frjáls breyta.
-
-    **2.** óendanlega margar lausnir, ef það eru ein eða fleiri frjálsar breytur.
 
 Vigrar
 ------
@@ -820,78 +785,90 @@ Sýnidæmi: Dálkvigrar
         
     Þetta eru allt dæmi um dálkvigra, vigra sem eru fylki sem eru bara einn dálkur.
   
-Við feitletrum gjarnan breytur sem tákna vigra til að aðgreina þá frá rauntalnabreytum.
-:math:`\textbf{u}, \textbf{v}, \textbf{v}_1, \textbf{v}_2, \textbf{b},`. Önnur leið er að nota 
-örvar: :math:`\vec{u}, \vec{v}, \vec{v}_1, \vec{v}_2, \vec{b}` eða strik:
-:math:`\bar{u}, \bar{v}, \bar{v}_1, \bar{v}_2, \bar{b}`. 
-
-Einnig má skrifa dálkvigra svona til að spara pláss: 
-
-.. math:: \begin{bmatrix}
-    1 & 2 & 3 & 4 & 5
-    \end{bmatrix}^T 
-    \text{ eða } 
-    (1,2,3,4,5) 
-    \text{ í staðinn fyrir }
-    \begin{bmatrix}
-    1 \\ 2 \\ 3 \\ 4 \\ 5
-    \end{bmatrix}.
-
-.. admonition:: Athugasemd
+.. admonition:: Ritháttur
     :class: athugasemd
 
-    Tveir vigrar eru jafnir ef þeir eru að sömu vídd og öll hnit þeirra eru þau sömu.
+        Við feitletrum gjarnan breytur sem tákna vigra til að aðgreina þá frá rauntalnabreytum.
+        :math:`\textbf{u}, \textbf{v}, \textbf{v}_1, \textbf{v}_2, \textbf{b},`. Önnur leið er að nota 
+        örvar: :math:`\vec{u}, \vec{v}, \vec{v}_1, \vec{v}_2, \vec{b}` eða strik:
+        :math:`\bar{u}, \bar{v}, \bar{v}_1, \bar{v}_2, \bar{b}`. 
 
-Samlagning vigra 
-~~~~~~~~~~~~~~~~~
+        Einnig má skrifa dálkvigra svona til að spara pláss: 
 
-Ef **u** og **v** eru vigrar þannig að 
+        .. math:: \begin{bmatrix}
+            1 & 2 & 3 & 4 & 5
+            \end{bmatrix}^T 
+            \text{ eða } 
+            (1,2,3,4,5) 
+            \text{ í stað }
+            \begin{bmatrix}
+            1 \\ 2 \\ 3 \\ 4 \\ 5
+            \end{bmatrix}.
 
-.. math:: \textbf{u} = \begin{bmatrix}
-    u_{1}\\
-    \vdots\\
-    u_{n}\\    
-    \end{bmatrix}\quad
-    \textbf{v} = \begin{bmatrix}
-    v_{1}\\
-    \vdots\\
-    v_{n}\\    
-    \end{bmatrix}
+.. admonition:: Setning
+    :class: setning
 
-þá er skilgreinum við vigurinn :math:`\textbf{u} + \textbf{v}` sem 
+    Tveir vigrar eru jafnir ef þeir hafa sömu vídd og öll hnit þeirra eru þau sömu.
 
-.. math:: \textbf{u} + \textbf{v} =
-    \begin{bmatrix}
-    u_{1}+v_{1}\\
-    \vdots\\
-    u_{n}+v_{n}\\    
-    \end{bmatrix}.
+Skilgreining: Samlagning vigra 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Stikamargöfldun vigra 
-~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Skilgreining
+    :class: skilgreining
 
-Ef :math:`c` er rauntala og **v** er vigur þannig að
+    Ef **u** og **v** eru vigrar þannig að 
 
-.. math:: \textbf{v} = \begin{bmatrix}
-    v_{1}\\
-    \cdots\\
-    v_{n}\\    
-    \end{bmatrix}
+    .. math:: \textbf{u} = \begin{bmatrix}
+        u_{1}\\
+        \vdots\\
+        u_{n}\\    
+        \end{bmatrix}\quad
+        \textbf{v} = \begin{bmatrix}
+        v_{1}\\
+        \vdots\\
+        v_{n}\\    
+        \end{bmatrix}
 
-þá skilgreinum við vigurinn :math:`c\textbf{v}` með
+    þá er skilgreinum við vigurinn :math:`\textbf{u} + \textbf{v}` sem 
 
-.. math:: c\textbf{v}=
-    \begin{bmatrix}
-    cv_{1}\\
-    \cdots\\
-    cv_{n}\\    
-    \end{bmatrix}.
+    .. math:: \textbf{u} + \textbf{v} =
+        \begin{bmatrix}
+        u_{1}+v_{1}\\
+        \vdots\\
+        u_{n}+v_{n}\\    
+        \end{bmatrix}.
 
-Sýnidæmi: Stikamargföldun vigra
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Skilgreining: Margföldun vigurs með tölu 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Ef :math:`c` er rauntala og **v** er vigur þannig að
+
+    .. math:: \textbf{v} = \begin{bmatrix}
+        v_{1}\\
+        \cdots\\
+        v_{n}\\    
+        \end{bmatrix}
+
+    þá skilgreinum við vigurinn :math:`c\textbf{v}` með
+
+    .. math:: c\textbf{v}=
+        \begin{bmatrix}
+        cv_{1}\\
+        \cdots\\
+        cv_{n}\\    
+        \end{bmatrix}.
+
+Sýnidæmi: Samlagning vigra og margföldun vigurs með tölu
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
+
+    Margföldun vigurs með tölu:
 
     .. math:: 2\cdot\begin{bmatrix}
         -1\\3
@@ -902,15 +879,22 @@ Sýnidæmi: Stikamargföldun vigra
         \end{bmatrix}=
         \begin{bmatrix}
         -2\\6
+        \end{bmatrix}.
+
+    Samlagning tveggja vigra:
+
+    .. math:: \begin{bmatrix}
+        1 \\ 2
+        \end{bmatrix} +
+        \begin{bmatrix} 
+        -1 \\ 3
         \end{bmatrix}
+        = \begin{bmatrix} 
+        0 \\ 5
+        \end{bmatrix}.
 
-Sýnidæmi: Stikamargföldun vigra, frh.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. admonition:: Dæmi
-    :class: daemi
-
-    Ef við margföldum vigur með 1 fáum við alltaf sama vigurinn aftur:
+    Ef við margföldum vigur með 1, eða leggjum vigurinn saman með núllvigrinum, fáum við alltaf sama vigurinn aftur.
 
     .. math:: 1\cdot\begin{bmatrix}
         3\\0
@@ -921,9 +905,16 @@ Sýnidæmi: Stikamargföldun vigra, frh.
         \end{bmatrix}=
         \begin{bmatrix}
         3\\ 0
-        \end{bmatrix}
+        \end{bmatrix}, \quad
+        \begin{bmatrix}
+        3\\0
+        \end{bmatrix}+\begin{bmatrix}
+        0\\0
+        \end{bmatrix} = \begin{bmatrix}
+        3\\0
+        \end{bmatrix}.
 
-    EF við margöfldum með 0 fáum við núllvigruinn:
+    Ef við margöfldum vigur með tölunni 0, eða leggjum saman sama vigurinn með öfugu formerki, fáum við núllvigurinn:
 
     .. math:: 0\cdot\begin{bmatrix}
         2\\-7
@@ -934,7 +925,15 @@ Sýnidæmi: Stikamargföldun vigra, frh.
         \end{bmatrix}=
         \begin{bmatrix}
         0\\ 0
+        \end{bmatrix}, \quad
+        \begin{bmatrix}
+        2\\-7
+        \end{bmatrix} + \begin{bmatrix}
+        -2\\7
+        \end{bmatrix}=\begin{bmatrix}
+        0\\ 0
         \end{bmatrix}.
+
 
 Reiknireglur fyrir vigra
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -965,25 +964,25 @@ Reiknireglur fyrir vigra
     :class: advorun
 
     Almennt getum við ekki margfaldað saman tvo vigra og fengið nýjan vigur.
-    Við getum heldur ekki deilt einum við vigri upp í annan. Stærðirnar 
+    Við getum heldur ekki deilt einum vigri upp í annan. Stærðirnar 
     :math:`\textbf{v}_1\textbf{v}_2` og :math:`\frac{\textbf{v}_1}{\textbf{v}_2}`
     eru því almennt ekki skilgreindar.
 
-Línuleg samantekt
------------------
+Línulegar samantektir
+---------------------
 
-Skilgreining: Línuleg samantekt
+Skilgreining: Línulegar samantektir
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p` vera vigra í :math:`\mathbb{R}^n` og :math:`c_1, c_2, \dots, c_p` vera rauntölur. 
-    Við segjum að vigurinn 
+    Vigurinn 
 
     .. math:: \textbf{y}=c_1\textbf{v}_1 +c_2\textbf{v}_2+ \dots+ c_p\textbf{v}_p
     
-    sé **línuleg samantekt** af vigrunum :math:`\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p` með **vogstuðla** :math:`c_1, c_2, \dots, c_p`.
+    kallast **línuleg samantekt** (e. linear combination) vigranna :math:`\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p` með **stuðla/vogstuðla** (e. coefficients, weights) :math:`c_1, c_2, \dots, c_p`.
 
 Sýnidæmi: Línulegar samantektir
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1202,7 +1201,7 @@ Sýnidæmi: Línulegar samantektir
     Aukna fylkið hefur vendidálk lengst til hægri svo jafnan hefur enga lausn.
     Vigurinn **y** er ekki línuleg samantekt af :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
 
-Línuleg spönn
+Spann vigra
 -------------
 
 Skilgreining: Línuleg spönn
