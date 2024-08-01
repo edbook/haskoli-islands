@@ -11,7 +11,7 @@ Breytur og tög
 
 .. rubric:: Breytur
 
-**Breyta** (*variable*) er nafn á minnishólfi í tölvu, þar sem geyma má **gildi** (*value*). Gildin geta svo verið af ýmsu tagi, eða haft ýmis **tög** (*types*), og eins og fyrr segir eru þessi tög tengd gildunum en ekki breytunum sjálfum. Fyrir utan gildi sem geymd eru í breytum er líka talað um gildi sem útkomu úr **útreikningi** (*computation*) eða **segð** (*expression*), t.d. hefur segðin :math:`2 + 2` gildið :math:`4`. Ósamsett gildi, t.d. 2, heitir **fasti** (*constant*).
+**Breyta** (*variable*) er nafn á minnishólfi í tölvu, þar sem geyma má **gildi** (*value*). Gildin geta svo verið af ýmsu tagi, eða haft ýmis **tög** (*types*), og eins og fyrr segir eru þessi tög tengd gildunum en ekki breytunum sjálfum. Fyrir utan gildi sem geymd eru í breytum er líka talað um gildi sem útkomu úr **útreikningi** (*computation*) eða **segð** (*expression*), t.d. hefur segðin :math:`2 + 2` gildið :math:`4`. Ósamsett gildi, t.d. 2, heitir **fasti** (*constant*)..
 
 .. rubric:: Grunntög
 
@@ -50,17 +50,11 @@ Sú regla gildir að nafn breytu skal vera runa af bókstöfum, tölustöfum, og
    1. Hverjir eftirfarandi strengja eru ekki lögleg breytunöfn?
 
       a. 01rst
-
       b. rst01
-      
-      c. rst-01
-      
-      e. ρστ01 
-      
-      d. Sérdeilis_afskaplega_langt_breytunafn_sem_ætti_að_reyna_að_stytta
-      
+      c. rst\-01
+      d. ρστ01
+      e. Sérdeilis_afskaplega_langt_breytunafn_sem_ætti_að_reyna_að_stytta
       f. abc
-      
       g. def
          
    2. Googlið "python reserved words". Hvaða lykilorð í málinu byrja á a eða b (og eru þar
@@ -112,7 +106,9 @@ Hér er yfirlit yfir helstu virkja fyrir grunntögin í Python:
 
 Grunnreglan um útkomu úr aðgerð með tveimur tölum er að ef önnur eða báðar eru kommutala þá er niðurstaðan kommutala, en ef báðar eru heiltölur kemur út heiltala. Aðalundantekningin er deiling, en deiling tveggja heiltalna með /-virkja gefur kommutölu.
 
-Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðilegri merkingu, sem sé að viðkomandi gildi séu af heiltölu- eða kommutölutagi. Tölvur greina nefnilega á milli heiltölunnar 2 og kommutölunnar 2.0, þær eru af mismunandi tagi og geymdar með mismunandi bitarunum í minni tölvunnar.
+Bent skal á að hér eru orðin heiltala og kommutala notuð í tölvufræðilegri merkingu, sem sé að viðkomandi gildi séu af 
+heiltölu- eða kommutölutagi. Tölvur greina nefnilega á milli heiltölunnar 2 og kommutölunnar 2.0, þær eru af mismunandi 
+tagi og geymdar með mismunandi bitarunum í minni tölvunnar.
 
 .. rubric:: Forgangsröð aðgerða
 
@@ -229,9 +225,12 @@ innan slaufusviga og þeim getur líka fylgt snið á eftir tvípunkti, sem sé:
 
        f'texti {segð} texti {segð:snið} texti {segð:snið} ...'
 
-Hér getur hver segð (*expression*) verið breyta eða útreiknuð stærð, og snið (sem
-má sem sé sleppa) gefur oftast heildarfjölda stafa og/eða fjölda aukastafa.
-Hér er tafla yfir nokkur möguleg snið:
+Hér getur hver segð (*expression*) verið breyta eða útreiknuð stærð.
+
+.. rubric:: Snið
+            
+Sniðin sem geta fylgt segðum í f-strengjum gefa oftast heildarfjölda stafa
+og/eða fjölda aukastafa. Hér er tafla yfir nokkur möguleg snið:
 
 .. list-table:: Nokkur möguleg snið í f-strengjum
    :widths: auto
@@ -296,13 +295,34 @@ kommutölubreytur og nafn sé strengjabreyta. Forritið gæti t.d. skrifað út:
       hæð = 10, breidd = 28
       A = 6.281, B = 11.37
       Halló Kristján og vertu velkomin(n)
-       
+
+.. rubric:: Aflúsun með =-merki
+
+Of nota menn (tímabundnar) útskriftarskipanir til að sýna gildi á breytum
+þegar verið er að aflúsa forrit, og þá er gott að hafa nafn breytunnar með,
+til dæmis:
+
+    :code:`print(f"fjöldi_staka = {fjöldi_staka}")`.
+
+Til þæginda var í Python 3.8 bætt við þeim möguleika að stytta slíkar útskriftir
+svona:
+
+    :code:`print(f"{fjöldi_staka = }"`
+
+Ef segðin innan slaufusviganna endar á :code:`=` er hún sjálf prentuð út áður en
+gildi hennar er prentað. Það má líka tilgreina fjölda aukastafa, t.d. mætti prenta
+A og B með :code:`print(f"{A = :.3f}, {B = :.2f}")`.
+         
 .. danger::
    F-strengir eru nýleg viðbót við Python, þeir komu í Python 3.6 í desember
    2016. Í eldri Python-útgáfum er hægt að nota %-virkja. Forritið í sýnidæminu
-   í grein :numref:`for-lykkjur` gæti t.d. haft: |br|
+   í grein :numref:`for-lykkjur` skrifar út |br|
+   |sp3| |sp3| :code:`print(f'{x}   {math.sqrt(x):.4f}   {x**2:2}')` |br|
+   en í staðinn gæti það haft: |br|
    |sp3| |sp3| :code:`print('%d   %.4f   %2d' % (x, math.sqrt(x), x**2))` |br|
-   í öftustu línunni.
+   í öftustu línunni. Annar möguleiki í eldra Python er format-fallið.
+   Sýnidæmisforritið mætti líka skrifa með |br|
+   |sp3| |sp3| :code:`print("{}   {:.4f}   {:2}".format(x, math.sqrt(x), x**2)`.
    
 .. _ny-foll:
    
@@ -333,31 +353,45 @@ föll, en þær mikilvægustu eru:
 4. Að geta endurnýtt forritsbúta seinna. Þessi ástæða birtist þannig að kallað
    er á sama fall í mismunandi forritum.
 
-Föllin í Collatz-forritinu falla í flokka 1 og 2. Til að láta þau falla vel
-í flokk 1 ættum við reyndar að skíra þau lengri nöfnum, t.d.
-:code:`finna_næstu_tölu_á_eftir` og :code:`finna_collatz_runu_sem_byrjar_á`.
-Ef það er gert mætti sem best sleppa dokk-strengjunum. 
+Föllin í Collatz-forritinu falla í flokka 1 og 2. Til að láta þau falla vel í
+flokk 1 ættum við reyndar að skíra þau lengri nöfnum, t.d.
+:code:`finna_næstu_tölu_á_eftir` og :code:`finna_collatz_runu_sem_byrjar_á`. Ef
+það er gert mætti sem best sleppa athugasemdunum (skjölunarstrengjunum) fremst í
+þeim.
 
 .. rubric:: Skilgreining falls
+
+Ný föll þarf að skilgreina áður en þau eru notuð, en annars eru engar skorður
+á hvar í forritinu það er gert. Svona lítur slík skilgreining út:
 
 .. code:: python3
 
    def fall(stiki, stiki...):
-       '''skjölunarstrengur'''
+       # Lýsing falls (skjölunarstrengur)
        skipanir
        return g
 
-   # Skjölunarstrengurinn er valkvæður en góð regla að hafa hann með
-   # Ef fallið skilar mörgum gildum endar það á: return (g1,g2...)
-   # Ef það skilar engu er return-skipun sleppt
+Ef fallið skilar mörgum gildum endar það á: ``return (g1,g2...)`` Ef það skilar
+engu er return-skipun sleppt.
+
+.. rubric:: Skjölunarstrengir
+
+Skjölunarstrengurinn er valkvæður en góð regla að hafa hann með. Annar möguleiki
+á að skrifa hann er að hafa hann innan þrefaldra gæsalappa eins og sýnt var í
+kafla :numref:`Python atriði sem koma fyrir í forritinu Collatz`. Slíkir
+skjölunarstrengir hafa kosti ef fallið er hluti af stærra fallasafni sem ætlað
+er til almennrar dreifingar og notkunar, því þeir gefa möguleika á að búa til
+skjölun um allt safnið sjálfkrafa.
            
 .. rubric:: Kallað á fall
 
-:code:`g = fall(viðfang, viðfang...)` |br|
-Má líka nota í segð: :code:`h = 2*fall(viðföng) + 1` |br|
-Ef fallið skilar engu: :code:`fall(viðföng)` |br|
-Ef fallið skilar mörgum gildum: :code:`(g1,g2...) = fall(viðföng)` |br|
-Líka má sleppa svigunum: :code:`g1,g2... = fall(viðföng)` |br|
+.. code::
+            
+   g = fall(viðfang, viðfang...)  # á sér línu
+   h = 2*fall(viðföng) + 1        # má líka nota í segð
+   fall(viðföng)                  # ef fallið skilar engu
+   (g1,g2...) = fall(viðföng)     # ef fallið skilar mörgum gildum
+   g1,g2... = fall(viðföng)       # það má sleppa svigunum
 
 .. admonition:: Sýnidæmi: Rúmmál keilu
    :class: synidaemi

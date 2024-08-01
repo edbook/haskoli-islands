@@ -137,3 +137,13 @@ honum er hægt að teikna gröf falla, súlurit, *scatter*-myndir, hæðarlínum
 þrívíðar *mesh*-myndir og upplýstar myndir af (margvíðum) föllum, o.s.frv. Að
 lokum má nefna **SymPy** pakkann fyrir *symbólska* reikninga, t.d. einföldun á
 stærðfræðiformúlum og sjálfvirka diffrun.
+
+.. admonition:: Athugasemd: 
+   :class: athugid
+
+   Um ýmsar af þeim undirgreinum reiknifræði og gagnavísinda sem hér hafa verið
+   taldar upp, og líka ýmsa af Python-pökkunum, er fjallað í þessum
+   fyrirlestrarnótum, en auk þess má finna ítarlegri umfjöllun um sumt í
+   *Edbook*-fyrirlestrarnótunum `Valin efni í stærðfræði og reiknifræði
+   <https://cs.hi.is/strei>`_ sem er námsefni fyrir námskeiðið *Stærðfræði og
+   reiknifræði* við HÍ.
