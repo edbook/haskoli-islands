@@ -7,6 +7,15 @@ Varmaflutningur getur verið eftir þrem leiðum;
 * Streymi
 * Leiðni
 
+Á myndinni er vatnið táknmynd fyrir varma. Við leiðni (efst) flyst varminn frá sameind til sameindar við árekstur sameindanna. Efnið sjálft (fólkið á myndinni) flyst ekki úr stað. 
+Í streymi (í miðjunni) flyst efnið (fólkið á myndinni) og tekur varmann (vatnið í fötunum) með sér. Varmi sem flyst með geislun (neðst) þarf ekki að flytjast um eða með efni. Geislun milli flata er háð lit og hitamun flatanna.
+
+.. figure:: ./myndir/kafli04/varmaflutningsleidir.png
+  :align: center
+  :width: 100%
+Mynd fengin úr :cite:`1978:Halldorsson`
+
+
 Varmaflutningsþéttleiki, q er ákvarðaður fyrir hverja flutningsleið (eða sambland af
 leiðum). Fyrir þekktan varmaflutningsþéttleika má auðveldlega reikna orkuna Q yfir
 ákveðið tímabil (og öfugt) útfrá jöfnu 4.1;
@@ -467,3 +476,6 @@ Uppgefnar leiðnitölur algengra einangrunarefna
 
 
 
+Heimildir
+---------
+.. bibliography::
