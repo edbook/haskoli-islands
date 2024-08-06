@@ -1,5 +1,10 @@
-# TMP001G - Sniðmát fyrir Edbook
+# STÆ107G - Línuleg algebra
 
-Sniðmát fyrir nýtt námskeið/nótur, https://edbook.hi.is/tmp001g
+Fyrirlestranótur í línulegri algebru við Háskóla Íslands, https://edbook.hi.is/stae107g
 
-Ábyrgðarmaður: Benedikt Magnússon <bsm@hi.is>
+Höfundar: Agla Þórarinsdóttir, Matthías Andri Hrafnkelsson og Sigurbjörg Rannveig Stefánsdóttir.
+Höfundar voru sumarstarfsmenn.
+
+Ábyrgðarmaður efnis er Sigrún Helga Lund.
+
+Efnið var unnið upp úr fyrirlestarglærum frá Sigrúnu Helgu Lund og Pawel Bartoszek og frá Rögnvaldi Möller.

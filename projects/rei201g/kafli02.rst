@@ -193,7 +193,7 @@ Hér er dæmi um reglu sem sýnir hvernig nýta má innfeldi.
 .. admonition:: Regla: Innfeldi og horn milli rúmvigra
    :class: regla
 
-   Ef :math:`x` og :math:`y` eru 2 eða 3-víðir rúmvigrar þá gildir:
+   Ef :math:`x` og :math:`y` eru 2 eða 3-víðir rúmvigrar, hvorugur núll, þá gildir:
 
     .. math::
        &x \cdot y = 0 \text{ þá og því aðeins að } x \text{ sé hornréttur á } y\\
@@ -440,7 +440,9 @@ er ákveðin tegund af vörpun sem varðveitir samlagningu og margföldun með t
 og við munum komast að því að slíkar varpanir eru nátengdar fylkjum og margföldun með þeim.
 
 Til að einfalda málið einskorðum við okkur til að byrja með við línuleg föll,
-sem varpa vigrum í tölur. Þessari skorðu verður svo aflétt í grein um *línulegar varpanir* síðar í þessum kafla.
+sem varpa vigrum í tölur. Þessari skorðu verður svo aflétt í grein um
+:ref:`línulegar varpanir <línulegar varpanir og fylkjamargföldun>` síðar í þessum
+kafla.
 
 .. admonition:: Skilgreining: Línulegt fall
    :class: regla
@@ -723,12 +725,12 @@ táknar graf fallsins í :math:`(a,f(a))` (:numref:`snertiplan`).
       &=
       \begin{pmatrix} 1 - \exp(2-1)\\ \exp(2-1) \end{pmatrix}\\
       &= (1 - \exp(1), \exp(1)) \\
-      &= (-1.718, 2,718)
+      &= (-1.718, 2.718)
 
    Ef þetta er sett inn í margvíðu Taylor-setninguna fæst:
 
    .. math::
-      \hat{f}(x) &= f(a) + \nabla f(a) \cdot (x - 1. \\
+      \hat{f}(x) &= f(a) + \nabla f(a) \cdot (x - a) \\
                  &= 3.718 + (-1.718, 2.718) \cdot (x_1 - 1, x_2 - 2) \\
                  &= 3.718 - 1.718(x_1 - 1) + 2.718(x_2 - 2) \\
                  &= -1.718x_1 + 2.718x_2
@@ -876,7 +878,7 @@ frá :math:`a` til :math:`b` gefinn með :math:`b - a`:
    :figwidth: 5cm
    :align: center
 
-og þessvegna er fjarlægðin milli :math:`a` og :math:`b` gefin með
+og þess vegna er fjarlægðin milli :math:`a` og :math:`b` gefin með
 :math:`\|b-a\|`, eða :math:`\|a-b\|` sem er jafngilt. Því liggur beint við
 að skilgreina fjarlægð milli almennra vigra á sama hátt.
 
@@ -891,8 +893,8 @@ að skilgreina fjarlægð milli almennra vigra á sama hátt.
 Ekki er erfitt að sjá að ef lítill munur er á tilsvarandi stökum tveggja vigra
 þá verður fjarlægðin á milli þeirra lítil tala.
 
-.. admonition:: Skilgreining: Fjarlægð milli vigra
-   :class: regla
+.. admonition:: Sýnidæmi: Fjarlægð milli vigra
+   :class: synidaemi
 
    Fjarlægðin á milli vigranna :math:`x = (2,3,5,5)` og :math:`y = (1,1,1,-5)` er  
 
@@ -965,8 +967,8 @@ eins og í aftasta dálkinum í töflunni að ofan. Tvö skjöl sem fjalla um sa
 svipuð efni eru líklegri til að hafa stutt á milli orðtíðnivigra sinna heldur en
 skjöl um ólík efni.
 
-.. admonition:: Skilgreining: Fjarlægðir milli Wikipedíugreina
-   :class: regla
+.. admonition:: Sýnidæmi: Fjarlægðir milli Wikipedíugreina
+   :class: synidaemi
 
    Búnir voru til orðtíðnivigrar fyrir þrjár greinar á Wikipediu, um
    Óskarsverðlaunin, Golden-globe-verðlaunin, og ofurskálina, og fjarlægðirnar
@@ -1035,9 +1037,9 @@ að skilgreina hvenær almennir n-vigrar teljast hornréttir hvor á annan svo:
 .. admonition:: Skilgreining: Hornréttir vigrar
    :class: regla
 
-   Vigrarnir :math:`x` og :math:`y` eru sagðir **hornréttir** (*perpendicular*)
-   hvor á annan, ritað :math:`x \perp y`, ef hornið á milli þeirra er 90°,
-   þ.e.a.s. ef :math:`x \cdot y` = 0.
+   Vigrarnir :math:`x` og :math:`y`, hvorugur núllvigur, eru sagðir
+   **hornréttir** (*perpendicular*) hvor á annan, ritað :math:`x \perp y`, ef
+   hornið á milli þeirra er 90°, þ.e.a.s. ef :math:`x \cdot y` = 0.
 
 .. rubric:: **Horn og líkindi með vigrum**.
 
@@ -1088,7 +1090,7 @@ milli þeirra til að meta líkindi með tveimur skjölum eða vefsíðum.
    2. Notið regluna um kósínus af mismun,
 
       .. math::
-         \cos(a - 2. = \cos a\cos b + \sin a \sin b
+         \cos(a - b) = \cos a\cos b + \sin a \sin b
 
       til að sýna að skilgreiningin á horni milli :math:`x` og :math:`y` að framan
       gefur rúmfræðilega hornið þegar vigrarnir eru tvívíðir.
@@ -1203,6 +1205,10 @@ greindarvísitala sem skv. skilgreiningu hefur meðaltal 100 og staðalfrávik 1
    
    3. Notið lið 1 og reglur um staðalfrávik til að reikna staðalfrávik vigranna
       :math:`y = (2,4,5,6,8)` og :math:`z = -3x`
+
+   4. Skoðið ensku Wikipedíugreinina `um greindarvísitölur
+      <https://en.wikipedia.org/wiki/Intelligence_quotient>`_, sér í lagi
+      línurit og töflur í henni.
 
 Fylgnistuðull eða fylgni (*correlation (coefficient)*) er líka tölfræðilegt
 hugtak tengt línulegri algebru og vigrum. Reyndar eru til nokkrar leiðir til að
@@ -1319,8 +1325,8 @@ Rauðu vigrarnir þrír á myndinni í sýnidæminu hér á undan eru sem sé l�
 háðir, því :math:`3u + 2v` er línuleg samantekt af :math:`u` og :math:`v`. Það
 er ekki mjög erfitt að sjá að þrír vigrar í þrívíðu rúmi sem allir liggja í sama
 plani hljóta að vera línulega háðir. Um tvo samsíða vigra (sem liggja þar með á
-sömu línu), hvort sem er í tvívíðu eða þrívíðu rúmi, gildir að þeir eru línulega
-háðir.
+sömu línu), hvort sem er í tvívíðu eða þrívíðu rúmi, gildir líka að þeir eru
+línulega háðir.
 
 Ef :math:`A` er mengi af vigrum er talað um að það sé línulega háð ef vigrarnir
 í því eru línulega háðir. Stundum er skilyrðið í skilgreiningunni orðað
@@ -1394,7 +1400,9 @@ línulega háðum vigrum).
    :class: aefing
 
    1. Skrifið vigurinn :math:`(8,3)` sem línulega samantekt af :math:`(4,1)` og
-      :math:`(0,1)`.
+      :math:`(0,1)` (*Leiðbeining: Notið skilgreiningu á línulegri samantekt og
+      leysið jöfnurnar sem hún gefur*).
+            
    2. Eru eftirfarandi pör vigra línulega óháð?
       
       .. math::
@@ -1478,7 +1486,7 @@ eru þeir framlengdir þar til þeir skerast. Það gildir greinilega að :math:
 y + bz` svo :math:`y = ax - bz`. Ef einhverjir tveir vigranna væru samsíða þá
 væru þeir, og þar með allir þrír, línulega háðir.
 
-Snúum okkur á aftur að grunnum, og einni aðalsetningunni um þá, sem segir að
+Snúum okkur þá aftur að grunnum, og einni aðalsetningunni um þá, sem segir að
 hægt sé að skrifa hvern vektor á einkvæman hátt sem línulega
 samantekt af grunnvigrum. Sönnunin er auðveld og við látum hana fylgja.
 
@@ -1515,8 +1523,8 @@ samantekt af grunnvigrum. Sönnunin er auðveld og við látum hana fylgja.
 .. math::
    b = c_1 a_1 + \ldots + c_n a_n
 
-er talað um **liðun** :math:`b` eða að :math:`b` hafi verið **liðaður**
-með grunnvigrunum.
+er talað um **liðun** (*expansion*) :math:`b` eða að :math:`b` hafi verið
+**liðaður** (*expanded*) með grunnvigrunum.
 
 .. admonition:: Sýnidæmi: Sönnun á að vigramengi sé grunnur
    :class: synidaemi
@@ -1752,7 +1760,7 @@ stök vigursins. Hér er talnadæmi, en reglan gildir greinilega almennt:
    \begin{pmatrix} 28 \\ 14 \end{pmatrix} =
    \begin{pmatrix} 56 \\ 19 \end{pmatrix}
 
-Af þessu leiðir er það að leysa jöfnuhneppið :math:`Ax = b` jafngildir því að
+Af þessu leiðir að það að leysa jöfnuhneppið :math:`Ax = b` jafngildir því að
 finna stuðla þar sem :math:`b` er skrifað sem línuleg samantekt af dálkum
 :math:`A`. Við höfum séð að þetta er hægt á nákvæmlega einn veg ef dálkar
 fylkisins eru línulega óháðir og mynda grunn fyrir :math:`\Bbb{R}^n`. Ef
@@ -2077,6 +2085,15 @@ línulega algebru og tengd fræði munu rekast á notkun þeirra aftur og aftur.
    
    Sannreynið þessar reglur með NumPy (bylt fylki :code:`A` fæst
    með :code:`A.T`).
+
+Í kafla :numref:`Annars stigs hlutafleiður Hesse-fylki og tvívíðar ákveður` var
+rætt um ákveður (*determinants*) fylkja og hér er að lokum setning sem tengir
+þær við andhverfanleika.
+
+.. admonition:: Setning: Sérstæð fylki og ákveður
+   :class: regla
+
+   Fylki er sérstættt þá og því aðeins að ákveða þess sé núll.
 
 .. _línulegar-varpanir:
    

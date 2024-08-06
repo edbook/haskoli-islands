@@ -797,9 +797,9 @@ Setning: Um eintækni og átækni
     Gerum ráð fyrir að :math:`T` sé eintæk. Fáum að :math:`A\textbf{x}=\textbf{0}` hefur aðeins augljósu lausnina.
 
     Skoðum efri stallagerð :math:`A`. Fyrst jafnan hefur aðeins augljósu lausnina þá hefur 
-    efri stallagerðin forustustuðul í hverjum dálki (og engar frjálsar breytur) og samtals :manth:`` forustustuðla.
+    efri stallagerðin forystustuðul í hverjum dálki (og engar frjálsar breytur) og samtals :manth:`` forystustuðla.
 
-    Þar með hefur stallagerðin líka forustustuðul í hverri línu (því fylkið er :math:`n\times n` fylki).
+    Þar með hefur stallagerðin líka forystustuðul í hverri línu (því fylkið er :math:`n\times n` fylki).
 
     Þar með hefur jafnan :math:`A \textbf{x} = \textbf{b}` lausn fyrir alla vigra :math:`\textbf{b}\in\mathbb{R}^n` og
     því er vörpunin :math:`T(\textbf{x})=A\textbf{x}` átæk.

@@ -1,10 +1,4 @@
-# Python
-
-Author: Kristján Jónasson
-
-https://cs.hi.is/python/
-
-## Litir í admonition-reitum
+Litir í admonition-reitum:
 
 Æfing (græn) = hint
 dbfaf4

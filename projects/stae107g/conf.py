@@ -16,5 +16,5 @@ mathjax_config = {
             "row": '{\\text{Row}}',
             "rnk": '{\\text{Rank}}',
             }
-        }                           
+        }                               
     }                               

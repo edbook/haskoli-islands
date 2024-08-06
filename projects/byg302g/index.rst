@@ -21,5 +21,6 @@
    gler
    fjollidur
    lim 
+   heimildir
 
 * :ref:`genindex`

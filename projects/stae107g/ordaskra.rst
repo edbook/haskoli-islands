@@ -4,7 +4,7 @@ Orðaskrá
 +--------------------------+----------------------------------------------+
 | Aðferð minnstu kvarðrata | Method of least squares                      |
 +--------------------------+----------------------------------------------+
-| Algebruleg margfeldni    | Algrebraic multiplicity                      |
+| Algebruleg margfeldni    | Algebraic multiplicity                       |
 +--------------------------+----------------------------------------------+
 | Andhverfa                | Inverse                                      |
 +--------------------------+----------------------------------------------+
