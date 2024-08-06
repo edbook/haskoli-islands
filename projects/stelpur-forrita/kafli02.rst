@@ -1,5 +1,5 @@
-Undirbúningur
-=============
+Day 1 - Git
+===========
 
 Anaconda
 --------
