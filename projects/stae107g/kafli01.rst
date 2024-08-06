@@ -1170,8 +1170,9 @@ Spann tveggja vigra í :math:`\mathbb{R}^3`
 Látum :math:`\textbf{v}_1` og :math:`\textbf{v}_2` vera tvo vigra í :math:`\mathbb{R}^3`. Í þessu dæmi myndar
 spönn þeirra sléttu sem fer í gegnum upphafspunkt hnitakerfisins.
 
-.. figure:: myndir/linuleg.spann3.png
+.. figure:: myndir/nysponn.png
     :align: center
+    :scale: 55 %
 
 Línuleg spönn í :math:`\mathbb{R}^3` getur líka verið: bara núllpunkturinn, 
 lína í gegnum núllpunkt eða allt :math:`\mathbb{R}^3` rúmið.
