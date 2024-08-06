@@ -7,4 +7,4 @@ Höfundar voru sumarstarfsmenn.
 
 Ábyrgðarmaður efnis er Sigrún Helga Lund.
 
-Efnið var unnið upp úr fyrirlestarglærum frá Sigrúnu Helgu Lund og Pawel Bartoszek og frá Rögnvald Möller.
+Efnið var unnið upp úr fyrirlestarglærum frá Sigrúnu Helgu Lund og Pawel Bartoszek og frá Rögnvaldi Möller.
