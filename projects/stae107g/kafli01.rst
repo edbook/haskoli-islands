@@ -1529,17 +1529,24 @@ Setning: Um fylki og dálkvigur
 Óhliðruð jöfnuhneppi
 ~~~~~~~~~~~~~~~~~~~~
 
-Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}` er sagt *óhliðrað* (e. homogeneous).
-Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
 
-.. math:: A\left.\begin{bmatrix}
-    0 \\ 0\\ \vdots \\ 0
-    \end{bmatrix}\right\}n =\left. \begin{bmatrix}
-    0 \\ \vdots \\ 0
-    \end{bmatrix}\right\}m
+Skilgreinig: Óhliðruð jöfnuhneppi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Þessi lausn er kölluð *augljósa lausnin* (e. trivial solution). Ef aðrar launsir eru til eru 
-þær kallaðar *óaugljósu lausnirnar* (e. nontrivial solutions).
+.. admonition:: Skilgreinig
+    :class: skilgreining
+
+    Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}` er sagt *óhliðrað* (e. homogeneous).
+    Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
+
+    .. math:: A\left.\begin{bmatrix}
+        0 \\ 0\\ \vdots \\ 0
+        \end{bmatrix}\right\}n =\left. \begin{bmatrix}
+        0 \\ \vdots \\ 0
+        \end{bmatrix}\right\}m
+
+    Þessi lausn er kölluð *fáfengilega lausnin* (e. trivial solution). Ef aðrar launsir eru til eru 
+    þær kallaðar *óaugljósu lausnirnar* (e. nontrivial solutions).
 
 Sýnidæmi: Óhliðrað jöfnuhneppi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
