@@ -8,7 +8,7 @@ Nokkrar gerðir fylkja
   :class: skilgreining
 
   **Hornalínufylki** (e. diagonal matrix) er :math:`n \times n` fylki þar sem öll stök utan aðalhornalínu eru 
-  núll kallast hornalínufylki.
+  núll.
 
   .. math:: \begin{bmatrix}
         a_{11} & 0 & \cdots & 0 \\
@@ -111,22 +111,6 @@ Sýnidæmi: Samlagning fylkja
 
   en :math:`A+C` er ekki skilgreint því fylkin eru misstór.
 
-Til að margfalda fylki :math:`A` með rauntölu :math:`c` margföldum við öll stök :math:`A` með :math:`c`. 
-Til dæmis, ef :math:`A` er það sama og áður þá fæst:
-
-.. math:: 3A=  3\cdot\begin{bmatrix}
-        2 & 4 & 6 \\
-        1 & 3 & 5 \\
-      \end{bmatrix}=
-    \begin{bmatrix}
-        3\cdot 2 &3\cdot  4 &3\cdot  6 \\
-        3\cdot 1 &3\cdot  3 &3\cdot  5 \\
-      \end{bmatrix}
-     = \begin{bmatrix}
-        6&12&18 \\
-       3 &9 &15 \\
-      \end{bmatrix}
-
 
 Sýnidæmi: Margföldun með tölu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -205,7 +189,7 @@ Skilgreining: Fylkjamargföldun
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Gefið A sem er :math:`m\times p` fylki og :math:`B` sem :math:`p\times n` fylki. Ef dálkvigrar :math:`B` eru 
+    Gefið  :math:`A` sem er :math:`m\times p` fylki og :math:`B` sem :math:`p\times n` fylki. Ef dálkvigrar :math:`B` eru 
     :math:`\textbf{b}_1,\ldots, \textbf{b}_n` þannig að :math:`B=[\textbf{b}_1 \ldots \textbf{b}_n]` þá 
     skilgreinum við :math:`AB=[A\textbf{b}_1 \ldots A\textbf{b}_n]`.
 
@@ -378,12 +362,6 @@ Setning: Eiginleikar fylkjamargföldunar
         **4.** :math:`r(AB) = (rA)B = A(rB)`, þar sem :math:`r` er fasti.
 
         **5.** :math:`I_m A = A = AI_m`
-
-.. admonition:: Rökstuðningur 
-  :class: setning
-  
-  Flesta liði má sanna með því að nota beint skilgreiningu á margfeldi fylkja. 
-  Liður 1. er afleiðing þessa að líta megi á fylkin sem varpanir og samsetning varpana er ávallt tengin.
 
 
 Bylt fylki 
@@ -710,13 +688,13 @@ Aðferð til að reikna andhverfu
 
     Til að finna andhverfu fylkis :math:`A` búum við til aukna fylkið
 
-    .. math:: [A I]
+    .. math:: [A | I]
 
     og beitum línuaðgerðum til að koma því að efri rudda stallagerð. Ef fylkið :math:`A` er andhverfanlegt
     fáum við jafngilt fylki með einingarfylkinu :math:`I` í vinstri hlut og :math:`A^{-1}` í hægri hlut.
     Með öðrum orðum:
 
-    .. math:: [A I] \sim [I A^{-1}]
+    .. math:: [A | I] \sim [I | A^{-1}]
 
 Sýnidæmi: Andhverfa :math:`3\times3` fylkis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -736,38 +714,38 @@ Sýnidæmi: Andhverfa :math:`3\times3` fylkis
   :class: daemi, dropdown
     
   Búum til aukna fylkið og einföldum:
-  
-  .. math:: \begin{align*}
-    \begin{bmatrix}
+
+  .. math:: \begin{align}
+    \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 2 & 3 & 1 & 0 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
-    5 & 6 & 0 & 0 & 0 & 1
-    \end{bmatrix}
-    &\sim
-    \begin{bmatrix}
+    5 & 6 & 0 & 0 & 0 & 1 \\
+    \end{array}\right]
+    & \sim
+    \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 2 & 3 & 1 & 0 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
-    0 &-4 &-15&-5 & 0 & 1
-    \end{bmatrix} 
-    \\&\sim
-    \begin{bmatrix}
+    0 &-4 &-15&-5 & 0 & 1 \\
+    \end{array}\right] \\ 
+    & \sim
+    \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 2 & 3 & 1 & 0 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
-    0 & 0 & 1 &-5 & 4 & 1
-    \end{bmatrix}
-    \\&\sim
-    \begin{bmatrix}
+    0 & 0 & 1 &-5 & 4 & 1 \\
+    \end{array}\right]  \\ 
+    & \sim
+    \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 0 &-5 & 1 &-2 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
-    0 & 0 & 1 &-5 & 4 & 1
-    \end{bmatrix}
-    \\&\sim
-    \begin{bmatrix}
+    0 & 0 & 1 &-5 & 4 & 1 \\
+    \end{array}\right] \\ 
+    & \sim
+    \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 0 & 0 & -24 &18 & 5 \\ 
     0 & 1 & 0 & 20 & -15 & -4 \\
-    0 & 0 & 1 &-5 & 4 & 1
-    \end{bmatrix}
-    \end{align*} 
+    0 & 0 & 1 &-5 & 4 & 1 \\
+    \end{array}\right]
+    \end{align}
 
   svo
   
@@ -1033,7 +1011,7 @@ Reikniaðferð vegna LU-þáttunar
     **1.** Breyta :math:`A` í efri stallagerð með útskiptingum á borð við :math:`R_j\rightarrow R_j+cR_i` þar sem :math:`i<j`.
 
     **2.** Búa til :math:`L` með því að skoða hvað línuaðgerðum var beitt og 
-    fylla í fylkið með $c$-föstunum, með víxluðum formerkjum.
+    fylla í fylkið með  :math:`c`-föstunum, með víxluðum formerkjum.
 
 
     Athugasemdir:
