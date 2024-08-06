@@ -1170,7 +1170,7 @@ Spann tveggja vigra í :math:`\mathbb{R}^3`
 Látum :math:`\textbf{v}_1` og :math:`\textbf{v}_2` vera tvo vigra í :math:`\mathbb{R}^3`. Í þessu dæmi myndar
 spönn þeirra sléttu sem fer í gegnum upphafspunkt hnitakerfisins.
 
-.. figure:: myndir/linuleg.sponn3.png
+.. figure:: myndir/linuleg.spann3.png
     :align: center
 
 Línuleg spönn í :math:`\mathbb{R}^3` getur líka verið: bara núllpunkturinn, 
@@ -1179,8 +1179,8 @@ lína í gegnum núllpunkt eða allt :math:`\mathbb{R}^3` rúmið.
 Margfeldi fylkis og vigurs 
 --------------------------
 
-Skilgreining: Fylkjajafnan
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Margfeldi fylkis og vigurs 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -1195,29 +1195,29 @@ Skilgreining: Fylkjajafnan
         \end{bmatrix}
         =x_1\textbf{a}_1 +\dots x_n\textbf{a}_n.
 
-Til að margföldunin :math:`A\textbf{x}` sé framkvæmaleg þarf fjöldi dálka :math:`A` að vera jafn fjöldi lína **x**,
+    Til að margföldunin :math:`A\textbf{x}` sé framkvæmaleg þarf fjöldi dálka :math:`A` að vera jafn fjöldi lína **x**,
 
-.. math:: \underbrace{\begin{bmatrix}
-    a_{11} & a_{12} & \cdots & a_{1n} \\
-    a_{21} & a_{22} & \cdots & a_{2n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    a_{m1} & a_{m2} & \cdots & a_{mn}
-    \end{bmatrix}}_{n \text{ dálkar}}
-    \left.\begin{bmatrix}
-    x_1 \\
-    x_2 \\
-    \vdots \\
-    x_n
-    \end{bmatrix}\right\}\small{n\text{ línur}}
+    .. math:: \underbrace{\begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        a_{21} & a_{22} & \cdots & a_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        a_{m1} & a_{m2} & \cdots & a_{mn}
+        \end{bmatrix}}_{n \text{ dálkar}}
+        \left.\begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+        \end{bmatrix}\right\}\small{n\text{ línur}}
 
-Margfeldið er þá
+    Margfeldið er þá
 
-.. math:: \begin{bmatrix}
-        a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \\
-        a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \\
-        \vdots    \\
-        a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n
-        \end{bmatrix}\\
+    .. math:: \begin{bmatrix}
+            a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \\
+            a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \\
+            \vdots    \\
+            a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n
+            \end{bmatrix}\\
 
 
 
