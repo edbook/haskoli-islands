@@ -972,7 +972,7 @@ Línulegar samantektir
 ---------------------
 
 Skilgreining: Línulegar samantektir
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -1058,9 +1058,9 @@ Sýnidæmi: Línulegar samantektir
         \text{ og }
         \textbf{y}=\begin{bmatrix}
         3\\7\\9\\
-        \end{bmatrix}
+        \end{bmatrix}.
     
-    Er vigurinn **y** línuleg samantekt af :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
+    Er vigurinn **y** línuleg samantekt af :math:`\textbf{v}_1` og :math:`\textbf{v}_2`?
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -1075,51 +1075,48 @@ Sýnidæmi: Línulegar samantektir
         0\\2\\3\\
         \end{bmatrix}=\begin{bmatrix}
         3\\7\\9\\
-        \end{bmatrix}
+        \end{bmatrix},
     
     sem jafngildir jöfnuhneppinu
 
     .. math:: \begin{eqnarray*}
-        x_1 &=&3\\
-        x_1 +2x_2&=&7\\
-        x_1+3x_2&=&9
+        x_1 &=&3,\\
+        x_1 +2x_2&=&7,\\
+        x_1+3x_2&=&9.
         \end{eqnarray*}
     
     Skrifum út aukna fylkið og leysum
 
     .. math:: \begin{align*}
-        \begin{bmatrix}
+         \left[\begin{array}{@{}cc|c@{}}
             1 & 0 & 3\\
             1 & 2 & 7\\
-            1 & 3 & 9
-        \end{bmatrix}
-        \sim
-        \begin{bmatrix}
+            1 & 3 & 9\\
+        \end{array}\right]
+        &\overset{\substack{
+        R_2-R_1\\ R_3-R_1}}{\sim}
+        \left[\begin{array}{@{}cc|c@{}}
             1 & 0 & 3\\
             0 & 2 & 4\\
             0 & 3 & 6
-        \end{bmatrix} \sim
-        \begin{bmatrix}
+        \end{array}\right]
+        \overset{\substack{
+        R_2/2\\ R_3/3}}{\sim}
+        \left[\begin{array}{@{}cc|c@{}}
             1 & 0 & 3\\
             0 & 1 & 2\\
             0 & 1 & 2
-        \end{bmatrix} 
-        \sim
-        \begin{bmatrix}
+        \end{array}\right] 
+        \overset{\substack{
+        R_2-R_3}}{\sim}
+        \left[\begin{array}{@{}cc|c@{}}
             1 & 0 & 3\\
             0 & 1 & 2\\
             0 & 0 & 0
-        \end{bmatrix}
+       \end{array}\right].
         \end{align*}
 
-    er jafngild
-
-    .. math::\begin{eqnarray*}
-        x_1=3\\
-        x_2=2\\
-        \end{eqnarray*}
-    
-    svo 
+    Fáum :math:`x_1=3` og :math:`x_2=2`, svo 
 
     .. math:: \textbf{y}=
         \begin{bmatrix}
@@ -1132,110 +1129,43 @@ Sýnidæmi: Línulegar samantektir
         0\\2\\3\\
         \end{bmatrix}=3\textbf{v}_1+2\textbf{v}_2
     
-    og **y** er línuleg samantekt af :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
+    svo **y** er línuleg samantekt af :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
 
-Sýnidæmi: Línulegar samantektir
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-    :class: daemi
-
-    Er vigurinn **y** línuleg samantekt af :math:`\textbf{v}_1` og :math:`\textbf{v}_2` þegar
-
-    .. math::  \textbf{v}_1=
-        \begin{bmatrix}
-        1\\1\\1\\
-        \end{bmatrix}
-        \text{ , }
-        \textbf{v}_2 =
-        \begin{bmatrix}
-        0\\2\\3\\
-        \end{bmatrix}
-        \text{ og }
-        \textbf{y}=\begin{bmatrix}
-        5\\10\\5\\
-        \end{bmatrix}?
-
-.. admonition:: Lausn
-    :class: daemi, dropdown
-
-    Leysum jöfnuna
-
-    .. math:: x_1\begin{bmatrix}
-        1\\1\\1\\
-        \end{bmatrix}
-        +x_2
-        \begin{bmatrix}
-        0\\2\\3\\
-        \end{bmatrix}=\begin{bmatrix}
-        5\\10\\5\\
-        \end{bmatrix}
-
-    Skrifum þetta sem aukið fylki
-        
-    .. math:: \begin{align*}
-        \begin{bmatrix}
-        1 & 0 & 5\\
-        1 & 2 & 10\\
-        1 & 3 & 5
-        \end{bmatrix}
-        \sim
-        \begin{bmatrix}
-        1 & 0 & 5\\
-        0 & 2 & 5\\
-        0 & 3 & 0
-        \end{bmatrix} \sim
-        \begin{bmatrix}
-        1 & 0 & 3\\
-        0 & 1 & 2\\
-        0 & 1 & 0
-        \end{bmatrix} 
-        \sim
-        \begin{bmatrix}
-        1 & 0 & 3\\
-        0 & 1 & 2\\
-        0 & 0 & -2
-        \end{bmatrix}
-        \end{align*}
-
-    Aukna fylkið hefur vendidálk lengst til hægri svo jafnan hefur enga lausn.
-    Vigurinn **y** er ekki línuleg samantekt af :math:`\textbf{v}_1` og :math:`\textbf{v}_2`.
 
 Spann vigra
 -------------
 
-Skilgreining: Línuleg spönn
+Skilgreining: Spann vigra
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Ef :math:`\textbf{v}_1,\dots,\textbf{v}_p` eru vigrar í :math:`\mathbb{R}^n` þá skilgreinum við :math:`\text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}` sem mengi allra vigra í 
-    :math:`\mathbb{R}^n` sem eru línuleg samantekt af :math:`\textbf{v}_1,\dots,\textbf{v}_p`. Með öðrum orðum er :math:`\text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}` mengi 
-    allra vigra sem skrifa má á forminu
+    Látu :math:`\textbf{v}_1,\dots,\textbf{v}_p` vera vigra í :math:`\mathbb{R}^n`. Mengi allra línulegra samantekta vigranna
+    :math:`\textbf{v}_1,\dots,\textbf{v}_p` kallast **spann** (e. span) vigranna, og er táknað
+    
+    .. math:: \text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}\subseteq \R^n.
+    
+    Rita má :math:`\text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}=\{c_1 \ve v_1 + \cdots + c_p \ve v_p \ | \ c_1,\cdots, c_p \in \R \}`. 
 
-    .. math:: c_1\textbf{v}_1+\dots+c_p\textbf{v}_p
 
-    þar sem :math:`c_1, \dots, c_p` eru einhverjar rauntölur.
-    Við köllum mengið :math:`\text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}` **línulega spönn** mengisins :math:`\{\textbf{v}_1,\dots,\textbf{v}_p\}`.
-
-Línuleg spönn í :math:`\mathbb{R}^2`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Spann tveggja vigra í :math:`\mathbb{R}^2`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: myndir/linuleg_sponn.svg
     :align: center
 
 Myndin sýnir vigrana :math:`\textbf{v}` og :math:`\textbf{u}`.
-Bleika svæðið, allt :math:`\mathbb{R}^2` rúmið er línuleg spönn þessara vigra.
+Bleika planið, allt :math:`\mathbb{R}^2` rúmið, er línuleg spönn þessa vigra.
 
 .. figure:: myndir/linuleg_sponn_2.svg
     :align: center
 
-Á mynd má sjá vigurinn :math:`\ve v`. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni
-sem er framhald vigursins :math:`\ve v`, í báðar áttir.
+Á mynd má sjá vigurinn :math:`\ve v`. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni,
+sem er framhald vigursins :math:`\ve v` í báðar áttir.
 
-Línuleg spönn í :math:`\mathbb{R}^3`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Spann tveggja vigra í :math:`\mathbb{R}^3`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Látum :math:`\textbf{v}_1` og :math:`\textbf{v}_2` vera tvo vigra í :math:`\mathbb{R}^3`. Í þessu dæmi myndar
 spönn þeirra sléttu sem fer í gegnum upphafspunkt hnitakerfisins.
@@ -1265,20 +1195,20 @@ Skilgreining: Fylkjajafnan
         \end{bmatrix}
         =x_1\textbf{a}_1 +\dots x_n\textbf{a}_n.
 
-Til að margföldunin :math:`A\textbf{x}` sé framkvæmaleg þar fjöldi dálka :math:`A` vera jafn fjöldi lína **x**.
+Til að margföldunin :math:`A\textbf{x}` sé framkvæmaleg þarf fjöldi dálka :math:`A` að vera jafn fjöldi lína **x**,
 
 .. math:: \underbrace{\begin{bmatrix}
-        a_{11} & a_{12} & \cdots & a_{1n} \\
-        a_{21} & a_{22} & \cdots & a_{2n} \\
-        \vdots & \vdots & \ddots & \vdots \\
-        a_{m1} & a_{m2} & \cdots & a_{mn}
-        \end{bmatrix}}_{n \text{ dálkar}}
-        \left.\begin{bmatrix}
-        x_1 \\
-        x_2 \\
-        \vdots \\
-        x_n
-        \end{bmatrix}\right\}n\text{ línur}
+    a_{11} & a_{12} & \cdots & a_{1n} \\
+    a_{21} & a_{22} & \cdots & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & \cdots & a_{mn}
+    \end{bmatrix}}_{n \text{ dálkar}}
+    \left.\begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    \vdots \\
+    x_n
+    \end{bmatrix}\right\}\small{n\text{ línur}}
 
 Margfeldið er þá
 
@@ -1287,9 +1217,25 @@ Margfeldið er þá
         a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \\
         \vdots    \\
         a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n
-        \end{bmatrix}\quad \begin{bmatrix}
-        \rightarrow\\\\
-        \end{bmatrix}[\downarrow]
+        \end{bmatrix}\\
+
+
+
+.. admonition:: Minnisregla
+    :class: athugasemd
+
+    Hugsa má margfeldi fylkis :math:`A` með vigri :math:`\ve x` sem margfeldi sérhverrar  línu í :math:`A` með dálkvigrinum :math:`\ve x`.
+
+    .. math:: \begin{bmatrix}
+        \rightarrow\\
+        \vdots\\
+        \rightarrow\\
+        \end{bmatrix}\begin{bmatrix}
+        \vdots\\
+        \downarrow\\
+        \vdots
+        \end{bmatrix}
+
 
 Sýnidæmi: Margfeldi fylkis og vigurs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1430,26 +1376,26 @@ Setning: Fylkjajafnan
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`A` vera :math:`m\times n` fylki með dálkvigrum :math:`\textbf{a}_1,\dots,\textbf{a}_n` og :math:`\ve{b}` vera dálkvigur í :math:`\mathbb{R}^n`. Táknum :math:`\textbf{x} = [x_1,\dots x_n]^T`. 
-    Fylkjajafnan
+    Látum :math:`A` vera :math:`m\times n` fylki með dálkvigrum :math:`\textbf{a}_1,\dots,\textbf{a}_n`, :math:`\ve{b}` vera vigur í :math:`\mathbb{R}^m`
+    og :math:`\textbf{x}` vera vigur í :math:`\R^n`.
+    Jafnan
 
     .. math:: A\textbf{x} =  \textbf{b}
 
-    hefur sömu lausnir og jafnan
+    þ.e.
 
-    .. math:: x_1\textbf{a}_1 +\dots + x_n \textbf{a}_n = \textbf{b}
+    .. math:: x_1\textbf{a}_1 +\dots + x_n \textbf{a}_n = \textbf{b}.
 
-    sem hefur sömu lausnir og fást með því að leysa jöfnhneppið sem svarar til aukna fylkisins
-
-    .. math:: \begin{bmatrix}
-        \textbf{a}_1 &\dots &\textbf{a}_n &\textbf b 
-        \end{bmatrix}
+    hefur lausn ef og aðeins ef :math:`\ve b` er í spanni dálkvigra :math:`A`.
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Fylkjajafnan :math:`A\textbf{x} = \textbf{b}` hefur lausn þá og því aðeins að 
-    :math:`\textbf{b}` er línuleg samantekt af dálkum fylkis :math:`A`.
+    Það er alltaf hægt að gá hvort víddirnar passi. Látum :math:`A` :math:`m\times n` fylki, :math:`\ve x` vera :math:`n \times 1` vigur og :math:`\ve b` vera :math:`m \times 1`
+
+    .. math:: (m\times n) \cdot (n \times 1) = m \times 1.
+
+
 
 Sýnidæmi: Fylkjajafnan
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1469,23 +1415,23 @@ Sýnidæmi: Fylkjajafnan
 
     Lítum á aukna fylkið og einföldum það með línuaðgerðum. Fáum
 
-    .. math:: \begin{bmatrix}
+    .. math:: \left[\begin{array}{@{}cc|c@{}}
         1 & 1 & b_1\\
         1& -1 & b_2
-        \end{bmatrix}\sim 
-        \begin{bmatrix}
+        \end{array}\right]\sim 
+        \left[\begin{array}{@{}cc|c@{}}
         1 & 1 & b_1\\
         0& -2 & b_2-b_1
-        \end{bmatrix}
+        \end{array}\right]
     
-    Með því að líta á vendistökin
+    Með því að líta á forystustuðlana, :math:`\blacksquare`, 
 
-    .. math:: \begin{bmatrix}
+    .. math:: \left[\begin{array}{@{}cc|c@{}}
         \blacksquare & * & *\\
         0& \blacksquare & *
-        \end{bmatrix}
+        \end{array}\right]
     
-    Má sjá að dálkurinn lengst til hægri er ekki vendidálkur svo jöfnuhneppið hefur alltaf lausn.
+    Hér má sjá að dálkurinn lengst til hægri er ekki vendidálkur svo jöfnuhneppið hefur alltaf lausn.
 
 Sýnidæmi: Fylkjajafnan
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1507,45 +1453,45 @@ Sýnidæmi: Fylkjajafnan
     Skoðum aukna fylkið og fáum
 
     .. math:: \begin{align*}
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3 &b_1\\
         4 & 5 & 6 &b_2\\
         7 & 8 & 9 &b_3\\
-        \end{bmatrix}&\sim
-        \begin{bmatrix}
+        \end{array}\right]&\sim
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& b_1\\
         0 & -3 & -6 &b_2 -4b_1\\
         0 & -6 & -12 &b_3-7b_1\\
-        \end{bmatrix}\\&\sim
-        \begin{bmatrix}
+        \end{array}\right]\\&\sim
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& b_1\\
         0 & -3 & -6 &b_2 -4b_1\\
         0 & 0 & 0 &b_3-7b_1-2(b_2-4b_1)\\
-        \end{bmatrix}
+        \end{array}\right]
         \end{align*}
 
     Einföldum stakið neðst til hægri og fáum :math:`b_3-7b_1-2(b_2-4b_1) = b_1-2b_2+b_3`.
     Við erum því með aukna fylkið
 
-    .. math:: \begin{bmatrix}
+    .. math:: \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& b_1\\
         0 & -3 & -6 &b_2 -4b_1\\
         0 & 0 & 0 &b_1-2b_2+b_3\\
-        \end{bmatrix}
+        \end{array}\right]
 
     Aukna fylkið á efri ruddri stallagerð hefur því formin
 
-    .. math:: \begin{bmatrix}
+    .. math:: \left[\begin{array}{@{}ccc|c@{}}
         \blacksquare & * & *&*\\
         0& \blacksquare & * &*\\
         0& 0& 0& \blacksquare
-        \end{bmatrix}
+        \end{array}\right]
         \text{ eða }
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         \blacksquare & * & *&*\\
         0& \blacksquare & * &*\\
         0& 0& 0& 0
-        \end{bmatrix}  
+        \end{array}\right] 
 
     allt eftir því hvort stærðin :math:`b_1-2b_2+b_3` sé núll eða ekki. 
     Jöfnuhneppið okkar hefur lausn þá og því aðeins að dálkurinn lengst til hægri sé ekki vendidálkur.
@@ -2224,7 +2170,7 @@ Sýnidæmi: Eiginvigrar línulegra varpana
 .. admonition:: Dæmi
     :class: daemi
 
-    Segjum að við höfum línulega vörpun  :math:`T \text{:} \mathbb{R}^2 \rightarrow \mathbb{R}^2`
+    Segjum að við höfum línulega vörpun  :math:`T \colon \mathbb{R}^2 \rightarrow \mathbb{R}^2`
     þannig að 
 
     .. math:: T(\textbf{e}_1)=T\left(\begin{bmatrix}
@@ -2388,7 +2334,7 @@ Skilgreining: Átæk vörpun
 .. admonition:: Skilgreinig
     :class: skilgreining
 
-    Vörpun :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð 
+    Vörpun :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð 
     **átæk** (e. onto) ef öll :math:`\textbf{b} \in \mathbb{R}^m` 
     liggja í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
 
@@ -2398,7 +2344,7 @@ Skilgreining: Eintæk vörpun
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Vörpun :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð
+    Vörpun :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð
     **eintæk** (e. one-to-one) ef sérhvert :math:`\textbf{b} \in \mathbb{R}^m`
     er mynd í mesta lagi eins staks í :math:`\mathbb{R}^n` með tillit til :math:`T`.
     Með öðrum orðum varpa eintækar varpanir ólíkum stökum í ólík stök.
@@ -2414,7 +2360,7 @@ Setning: Eintæk línuleg vörpun
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun.
+    Látum :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun.
     Þá er :math:`T` eintæk þá og því aðeins að :math:`T(\textbf{0}=\textbf{0})` hafi
     aðeins augljósu lausnina.
 
@@ -2424,7 +2370,7 @@ Setning: Átækar og eintækar línulegar varpanir
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T\text{:}\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun og
+    Látum :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun og
     :math:`A` vera venjulega fylkið fyrir :math:`T`. Þá gildir
 
         **1.** :math:`T` er átæk þá og því aðeins að dálkar :math:`A` spanni allt :math:`\mathbb{R}^m`.
