@@ -125,7 +125,9 @@ Skilgreining: Fjarlægð milli punkta í :math:`\R^n`
 
 Í skilgreiningunni hér að ofan hugsum við um :math:`\ve u` og :math:`\ve v` ýmist sem vigra eða punkt í :math:`\R^n`. Á eftirfarandi mynd má sjá fjarlægð milli tveggja vigra.
 
-MYND
+.. figure:: myndir/lengd.png
+  :align: center
+  :scale: 10%
 
 Sýnidæmi: Fjarlægð milli punkta
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -302,7 +304,9 @@ Sýnidæmi: Þverstæð mengi
   Þar sem innfeldið er 0 í öllum tilfellum mynda vigrarnir þverstætt mengi.
 
 
-MYND
+.. figure:: myndir/thverstaed.png
+  :align: center
+  :scale: 70%
 
 
 Setning: Þverstæð mengi eru línulega óháð
@@ -471,7 +475,7 @@ Liða má vigur :math:`\ve y \in \R` upp í samsíðan og hornréttan þátt, þ
 
 .. figure:: myndir/ofanvarp.png
   :align: center
-  :scale: 70%
+  :scale: 60%
 
 Punkturinn :math:`\hat{\ve y}` er sá punktur á línunni í planinu sem er í minnstri fjarlægð frá punktinum :math:`\ve y`.
 

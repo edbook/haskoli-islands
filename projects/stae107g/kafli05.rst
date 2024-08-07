@@ -22,14 +22,19 @@ Skilgreining: Eigingildi og eiginvigur
     tilheyri hvort öðru.
 
 
-Sýnidæmi: Eigingildi og eiginvigur
+Sýnidæmi: Eigingildi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
     
     Látum :math:`A=\begin{bmatrix} 2&0\\0&1 \end{bmatrix}` og 
-    :math:`\textbf{x} = \begin{bmatrix}1\\0\end{bmatrix}` þá er
+    :math:`\textbf{x} = \begin{bmatrix}1\\0\end{bmatrix}` finnum eigingildi.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum
     
     .. math:: A\textbf{x} = \begin{bmatrix}
         2\\0\end{bmatrix} = 2 \begin{bmatrix}
@@ -37,11 +42,9 @@ Sýnidæmi: Eigingildi og eiginvigur
     
     svo 2 er eigingildi :math:`A` og :math:`\textbf{x}` er tilsvarandi eiginvigur.
 
-Eigingildi fylkja fundin
-------------------------
 
-Setning
-~~~~~~~~
+Setning: Eigingildi
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -97,8 +100,8 @@ Sýnidæmi: Eigingild og eiginvigrar
 Eiginrúm 
 --------
 
-Setning
-~~~~~~~~~
+Setning: Eiginrúm
+~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -167,8 +170,8 @@ Sýnidæmi: Eiginrúm fylkis
         \end{bmatrix}\right\}
 
 
-Setning
-~~~~~~~~~~
+Setning: Eigingildi þríhyrningsfylkja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -176,8 +179,8 @@ Setning
     Ef :math:`A` er :math:`n \times n` þríhyrningsfylki þá eru eigingildi :math:`A`
     stökin á hornalínunni.
 
-Setning
-~~~~~~~~~
+Setning: Eiginvigrar línulega óháðir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -191,8 +194,8 @@ Setning
 
     Einfaldar línuaðgerðir varðveita ekki eigingildi.
 
-Setning
-~~~~~~~~~
+Setning: 0 sem eigingildi 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -202,15 +205,15 @@ Setning
 Kennijafnan
 -----------
 
-Setning
-~~~~~~~~~
+Setning: Kennijafnan
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning 
     
     Jafna :math:`\det(A-\lambda I)=0` kallast **kennijafna** (e. characteristic equation) fylkisins A. 
 
-Sýnidæmi: Eigingildi og eiginvigrar 
+Sýnidæmi: Kennijafnan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
@@ -377,8 +380,8 @@ Skilgreining: Ámóta
 
     Þessi þrjú atriði segja að það að vera ámóta er dæmi um það sem er kallað *jafngildisvensl*.
 
-Setning
-~~~~~~~~~
+Setning: Kennijafna ámóta fylkja 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -459,6 +462,9 @@ Að hornalínugera fylki
 
     **4.** Smiðum fylkið :math:`D` úr eigingildum í skrefi 1. 
 
+
+Sýnidæmi: Hornalínugjörningar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -556,8 +562,8 @@ Að hornalínugera fylki
     og :math:`A` er hornalínugeranlegt með :math:`A=PDP^{-1}`.
 
 
-Setning
-~~~~~~~~~
+Setning: Hornalínugeranleg fylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -571,7 +577,7 @@ Sýnidæmi: Er fylkið hornalínugeranlegt
 .. admonition:: Dæmi
     :class: daemi
 
-    Er fylkið :math:`\begin{bmatrix} 1 & 2 & 3\\ 0 & 4 & 5 \\ 0 & 0 & 6\end{bmatrix}` hornalínugeranlegt?
+    Er fylkið :math: A=`\begin{bmatrix} 1 & 2 & 3\\ 0 & 4 & 5 \\ 0 & 0 & 6\end{bmatrix}` hornalínugeranlegt?
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -581,8 +587,8 @@ Sýnidæmi: Er fylkið hornalínugeranlegt
     fylki með 3 ólík eigingildi. Fylkið er því hornalínugeranlegt.
 
 
-Setning
-~~~~~~~~~
+Setning: Vídd eiginrúms
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -637,11 +643,8 @@ Sýnidæmi: Eiginvigrar línulegra varpana
     
     svo :math:`p(x)=1` er líka eiginvigur :math:`T`, líka eigingildi :math:`\lambda=2`.
 
-Fylki línulegra varpana í :math:`V`
-------------------------------------
-
-Setning
-~~~~~~~~~
+Setning: Fylki línulegra varpana í :math:`V`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning

@@ -474,12 +474,12 @@ Skilgreining: Andhverfanleiki
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Almennt tölum við um að :math:`n\times n` fylki :math:`A` sé *andhverfanlegt* (e. invertible) ef til er fylki :math:`C` þannig að
+    Almennt tölum við um að :math:`n\times n` fylki :math:`A` sé **andhverfanlegt** (e. invertible) ef til er fylki :math:`C` þannig að
 
     .. math:: AC = CA = I
 
-    Fylkið :math:`C` kallast þá *andhverfa* :math:`A` (e. inverse). 
-    Ef :math:`A` er ekki andhverfanlegt á segjum við það sé *óandhverfanlegt* (e. singular).
+    Fylkið :math:`C` kallast þá **andhverfa** :math:`A` (e. inverse). 
+    Ef :math:`A` er ekki andhverfanlegt á segjum við það sé **óandhverfanlegt** (e. singular).
 
     Hvert fylki hefur aðeins eina andhverfu. Ef :math:`B` og :math:`C` er bæði andhverfur :math:`A` fæst: 
 
@@ -864,13 +864,13 @@ Sýnidæmi: Er fylkið andhverfanlegt?
 LU-þáttun
 ----------
 
-Skilgreining: Andhverfanleiki
+Skilgreining: LU-þáttun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Ef :math:`A` er :math:`m\times n` fylki þá segjum við að LU-þáttun A sé framsetning af gerðinni
+    Ef :math:`A` er :math:`m\times n` fylki þá segjum við að **LU-þáttun** A sé framsetning af gerðinni
 
     .. math:: A=LU
 
@@ -1088,7 +1088,7 @@ Sýnidæmi: LU-þáttun til að leysa :math:`A\textbf{x}=b`
         -2
         \end{bmatrix}
     
-    Leysum fyrir :math:`\textbf{x}` í jöfnunni :math:`U\textbf{x}=\textbf{y}`. Fáumbreyta
+    Leysum fyrir :math:`\textbf{x}` í jöfnunni :math:`U\textbf{x}=\textbf{y}`. Fáum
 
     .. math:: \begin{bmatrix} 
         2 & 1 & 3 \\

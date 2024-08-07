@@ -2060,10 +2060,8 @@ Setning: Línuleg samantekt og línulegt hæði
 Línulegar varpanir
 ------------------
 
-Við segjum að **vörpun** (e. map, mapping, transformation) frá :math:`A` yfir í :math:`B` er „regla" 
-sem úthlutar sérhverju staki úr A nákvmlega einu staki úr B.
-Vörpun frá :math:`A` yfir í :math:`B` er yfirleitt táknuð :math:`f: A \rightarrow  B`. 
-Mengið :math:`A` köllum við **formengi** og :math:`B` **bakmengi** vörpunarinnar :math:`f`.
+**Vörpun** (e. map, mapping, transformation) frá mengi :math:`A` yfir í mengi :math:`B` er „regla" 
+sem úthlutar sérhverju staki úr :math:`A` nákvmlega einu staki úr :math:`B`, yfirleitt táknað :math:`f: A \rightarrow  B`. Mengið :math:`A` kallast **skilgreiningarmengi/formengi** (e. domain) og :math:`B` **ráðstöfunarmengi/bakmengi** (e. codomain) vörpunarinnar :math:`f`.
 
 
 Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \mathbb{R}^n \rightarrow \mathbb{R}^m`
@@ -2071,11 +2069,10 @@ Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \m
 
 .. math:: T(x)=A\textbf{x}.
 
-formengið er :math:`\mathbb{R}^n` og bakmengið er :math:`\mathbb{R}^m`.
 Oft er hentugt að segja að vörpunin sé skilgreind sem :math:`\textbf{x} \mapsto A\textbf{x}`.
 Ef vigur **x** varpast í :math:`T(\textbf{x})` þá segjum við að
-:math:`T(\textbf{x})` sé mynd vigursins :math:`x` með tillit til :math:`T`. 
-Mengi allra slíkra mynda kallast **myndmengi** :math:`T` eða mynd :math:`T`. 
+:math:`T(\textbf{x})` sé **mynd** vigursins :math:`x` með tillit til :math:`T`. 
+Mengi allra slíkra mynda kallast **myndmengi** :math:`T` (e. image). 
 
 Skilgreining: Línulegar varpanir 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2083,13 +2080,22 @@ Skilgreining: Línulegar varpanir
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Vörpun :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^m` 
-    er sögð **línuleg** ef um öll :math:`\textbf{u}, \textbf{v} \in \mathbb{R}^n` og
+    Vörpun :math:`T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m` 
+    er **línuleg vörpun** ef um öll :math:`\textbf{u}, \textbf{v} \in \mathbb{R}^n` og
     allar rauntölur :math:`c` gildir:
     
         **1.** :math:`T(\textbf{u} + \textbf{v})= T(\textbf{u}) + T(\textbf{v})`
         
         **2.** :math:`T(c\textbf{u}) = cT(\textbf{u})`.
+
+Setning: Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`A` vera :math:`m \times n` fylki. Vörpunin :math:`T \colon \R^n \rightarrow \R^m` skilgreind með :math:`T(\ve x)= A \ve x` er línuleg.
+
 
 
 Skilgreining: Eiginleikar línulegra varpana 
@@ -2098,12 +2104,11 @@ Skilgreining: Eiginleikar línulegra varpana
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línuleg vörpun. Þá gildir:
+    Látum :math:`T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun. Þá gildir
 
         **1.** :math:`T(\textbf{0})=\textbf{0}`
 
-        **2.** Ef :math:`\textbf{u},\textbf{v}` eru vigrar í :math:`\mathbb{R}^n` og :math:`c, d` eru
-        rauntölur þá er 
+        **2.** Ef :math:`\textbf{u},\textbf{v}` eru vigrar í :math:`\mathbb{R}^n` og :math:`c, d \in \R` þá er 
                
             .. math:: T(c\textbf{u}+d\textbf{v})=cT(\textbf{u})+dT(\textbf{v}).
 
@@ -2113,13 +2118,30 @@ Skilgreining: Eiginleikar línulegra varpana
 
         .. math:: T(c_1\textbf{u}_1+c_2\textbf{u}_2+\cdots+c_p\textbf{u}_p)=c_1T(\textbf{u}_1)+c_2T(\textbf{u}_2)+\cdots+c_pT(\textbf{u}_p). 
 
+Skilgreining: Venjulegi grunnurinn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+    :class: skilgreining
+
+    Upptalningin
+
+    .. math:: \ve e_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix},
+        \quad \ve e_2 = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix},
+        \quad, \dots, \quad \ve e_n = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix},
+
+    mynda svokallaðan **venjulega grunn** (e. standard basis) fyrir :math:`\R^n`. Sérhvern vigur í :math:`\R^n` má skirfa sem línulega samantekt af vigrum venjulega grunnsins á nákvæmlega einn hátt
+
+    .. math:: \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} = 
+        x_1 \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} + 
+        x_2 \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix} + 
+        \dots +
+        x_n \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}. 
+         
 
 
-Línulegar varpanir :math:`\mathbb{R}^2\rightarrow \mathbb{R}^2` 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sýnidæmi: Eiginvigrar línulegra varpana
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sýnidæmi Línuleg vörpun :math:`\mathbb{R}^2\rightarrow \mathbb{R}^2` 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -2165,28 +2187,21 @@ Sýnidæmi: Eiginvigrar línulegra varpana
         4(-2)+5\cdot 3\\ 4(-1) + 5\cdot 0
         \end{bmatrix}=\begin{bmatrix}
         7\\ -4
-        \end{bmatrix}
+        \end{bmatrix}.
         \end{align*}
 
-Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Setning: Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+Setning: Venjulegi grunnurinn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T` vera línulega vörpun :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`.
-    Þá er til nákvæmlega eitt :math:`m \times n` fylki :math:`A` þannig að
-    :math:`T(\textbf{x})=A\textbf{x}` fyrir öll :math:`\textbf{x} \in \mathbb{R}^n`.
-    Jafnframt gildir að :math:`A=\begin{bmatrix} T(\textbf{e}_1) &\dots& T(\textbf{e}_n) \end{bmatrix}`
-    Við köllum fylkið :math:`A` gjarnan **venjulega** fylkið (e. standard matrix) fyrir :math:`T`
+    Látum :math:`T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun, og 
+    :math:`A` vera :math:`m \times n` fylki með :math:`A=\begin{bmatrix} T(\textbf{e}_1) &\dots& T(\textbf{e}_n) \end{bmatrix}`.
+    Þá gildir um öll :math:`\textbf{x} \in \mathbb{R}^n` að :math:`T(\textbf{x})=A\textbf{x}` og :math:`A` er eina fylkið með þennan eiginleika.
+    Við köllum fylkið :math:`A` gjarnan **venjulega fylkið** (e. standard matrix) fyrir :math:`T`,
     og segjum að línulega vörpunin :math:`T` sé gefin með fylkinu :math:`A`.
 
-
-Dæmi um línulegar varpanir  
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Skoðum nú nokkrar varpanir og fylki þeirra myndrænt.
 
 Speglanir
 ~~~~~~~~~
@@ -2201,7 +2216,7 @@ Speglun um y-ás: :math:`\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/spegluny.svg
     :align: center
-    :scale: 70%
+    :scale: 60%
 
 Speglun um línuna x=y :math:`\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}`
 
@@ -2282,31 +2297,55 @@ Ofanvarp á y-ás :math:`\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}`
 Eintækar og átækar varpanir
 ---------------------------
 
-Skilgreining: Átæk vörpun
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Eintækar og átækar varpanir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
 
-    Vörpun :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð 
-    **átæk** (e. onto) ef öll :math:`\textbf{b} \in \mathbb{R}^m` 
-    liggja í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
+    Vörpun :math:`f: A \rightarrow B` er
 
-Skilgreining: Eintæk vörpun
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        **(i)** **eintæk** (e. injective, one-to-one) ef hún varpar ólíkum stökum í ólík stök. Þ.e. ef :math:`x_1, x_2 \in A` og
+        :math:`x_1 \neq x_2` þá er :math:`f(x_1) \neq f(x_2)`.
 
-.. admonition:: Skilgreining
-    :class: skilgreining
+        **(ii)** **átæk** (e. surjective, onto) ef um sérhvert :math:`y \in B` gildir að til er :math:`x \in A` þannig að :math:`y=f(x)`.
 
-    Vörpun :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð
-    **eintæk** (e. one-to-one) ef sérhvert :math:`\textbf{b} \in \mathbb{R}^m`
-    er mynd í mesta lagi eins staks í :math:`\mathbb{R}^n` með tillit til :math:`T`.
-    Með öðrum orðum varpa eintækar varpanir ólíkum stökum í ólík stök.
+        **(iii)** **gagntæk** (e. bijective) ef hún er bæði eintæk og átæk.
+
+INSERT MYND VÆRI GEGGJAÐ
+
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Varpanir sem eru bæði eintækar og átækar kallast **gagntækar** (e. bijective).
+    Við getum líka skilið eintækni og átækni út frá fjölda lausna. Vörpun :math:`f \colon A \rightarrow B` er
+
+        **(i)** eintæk ef of aðeins ef jafnan :math:`y = f(x)` hefur í *mesta lagi eina lausn* :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+
+        **(ii)** átæk ef og aðeins ef :math:`y = f(x)` hefur að *minnsta kosti eina lausn*  :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+
+        **(iii)** gagntæk ef og aðeins ef :math:`y = f(x)` hefur *nákvæmlega eina lausn* :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+
+
+Sýnidæmi: Eintækar og átækar varpanir
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+        **1.** Dæmi um eintæka vörpun: :math:`f \colon \R \rightarrow \R`, :math:`x \mapsto e^x`.
+
+        **2.** Dæmi um átæka vörpun: :math:`f \colon \R \rightarrow\R`, :math:`x \mapsto x (x^2 -3)`.
+
+        **3.** Dæmi um gagntæka vörpun: :math:`f \colon \R \rightarrow \R`, :math:`x \mapsto 2x +1`.
+
+
+        **4.** Dæmi um vörpun sem er hvorki eintæk, átæk né gagntæk: :math:`f \colon \R \rightarrow \R`, :math:`x \mapsto x^2`. Hinsvegar ef við breytum skilgreiningar- og bakmenginu í :math:`[0,\infty)` þá væri fallið gagntækt.
+
+
+
+
+
 
 Setning: Eintæk línuleg vörpun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
