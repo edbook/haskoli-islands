@@ -1088,7 +1088,7 @@ Sýnidæmi: LU-þáttun til að leysa :math:`A\textbf{x}=b`
         -2
         \end{bmatrix}
     
-    Leysum fyrir :math:`\textbf{x}` í jöfnunni :math:`U\textbf{x}=\textbf{y}`. Fáumbreyta
+    Leysum fyrir :math:`\textbf{x}` í jöfnunni :math:`U\textbf{x}=\textbf{y}`. Fáum
 
     .. math:: \begin{bmatrix} 
         2 & 1 & 3 \\
