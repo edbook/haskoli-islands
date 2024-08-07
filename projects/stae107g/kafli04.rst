@@ -348,7 +348,7 @@ Sýnidæmi: Núllrúm
         0&0&0&0\\
         \end{bmatrix}
     
-    Vitum að :math:`\nul{A}` er lausnamengi math:`A\ve x=\ve 0`. Það er stikað með
+    Vitum að :math:`\nul{A}` er lausnamengi :math:`A\ve x=\ve 0`. Það er stikað með
 
     .. math:: \begin{bmatrix}
         x_1\\x_2\\x_3\\x_4
@@ -526,7 +526,7 @@ Sýnidæmi: Grunnar
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    við erum með tvo vigra í :math:`\mathbb{R} ^3` svo þeir spanna í mesta lagi sléttu í
+    Við erum með tvo vigra í :math:`\mathbb{R} ^3` svo þeir spanna í mesta lagi sléttu í
     :math:`\mathbb{R} ^3` en ekki allt rúmið. Mengið er því ekki grunnur í :math:`\mathbb{R} ^3`. 
 
 Setning: Um spann mengja 
@@ -997,10 +997,10 @@ Sýnidæmi: Rankur og vídd
         \end{bmatrix}
     
     Rankur fylkisins er vídd dálkrúms sem er fjöldi vendidálka.
-    Svo :math:`\rank{A}=2`. Vídd núllrúms er fjöldi frjálsra breyta
-    svo :math:`\nullity{A}=2`.
+    Svo :math:`\rnk{A}=2`. Vídd núllrúms er fjöldi frjálsra breyta
+    svo :math:`\nul{A}=2`.
 
-Langa setningin um andhverfanleg fylki (linkur) gefur 11 skilyrði sem eru öll jafngild því að fylki sæe andhverfanlegt. 
+Langa setningin um andhverfanleg fylki (linkur) gefur 11 skilyrði sem eru öll jafngild því að fylki sé   andhverfanlegt. 
 Nú höfum við lært fullt af nýjum hugtökum og getum bætt við 
 fleiri skilyrðum. TODO linkur að löngu setningunni.
 
@@ -1186,33 +1186,33 @@ Sýnidæmi: Hnitaskiptafylki
     Við myndum fylkið :math:`[C \ | \ B]` 
     og framkvæmum einfaldar línuaðgerðir til að umbreyta :math:`[C \ | \ B]` í :math:`[I \ | \ X]`:
 
-    .. math:: [C \ | \ B] &= \begin{bmatrix}
-        1 & 0 & 1 & | & 1 & -1 & 0 \\
-        0 & 2 & 1 & | & 2 & 1 & 1 \\
-        1 & 1 & -1 & | & 0 & 2 & 3
-        \end{bmatrix} \\&\sim
-        \begin{bmatrix}
-        1 & 0 & 1 & | & 1 & -1 & 0 \\
-        0 & 1 & \frac{1}{2} & | & 1 & \frac{1}{2} & \frac{1}{2} \\
-        0 & 1 & -2 & | & -1 & 3 & 3
-        \end{bmatrix} \\
+    .. math:: [C \ | \ B] &= \left[\begin{array}{@{}ccc|ccc@{}}
+        1 & 0 & 1 & 1 & -1 & 0 \\
+        0 & 2 & 1 & 2 & 1 & 1 \\
+        1 & 1 & -1 &  0 & 2 & 3
+        \end{array}\right] \\&\sim
+        \left[\begin{array}{@{}ccc|ccc@{}}
+        1 & 0 & 1 & 1 & -1 & 0 \\
+        0 & 1 & \frac{1}{2} & 1 & \frac{1}{2} & \frac{1}{2} \\
+        0 & 1 & -2 & -1 & 3 & 3
+        \end{array}\right] \\
         &\sim
-        \begin{bmatrix}
-        1 & 0 & 1 & | & 1 & -1 & 0 \\
-        0 & 1 & \frac{1}{2} & | & 1 & \frac{1}{2} & \frac{1}{2} \\
-        0 & 0 & -\frac{5}{2} & | & -2 & \frac{5}{2} & \frac{5}{2}
-        \end{bmatrix} 
+        \left[\begin{array}{@{}ccc|ccc@{}}
+        1 & 0 & 1 & 1 & -1 & 0 \\
+        0 & 1 & \frac{1}{2} & 1 & \frac{1}{2} & \frac{1}{2} \\
+        0 & 0 & -\frac{5}{2} & -2 & \frac{5}{2} & \frac{5}{2}
+        \end{array}\right] 
         \\&\sim
-        \begin{bmatrix}
-        1 & 0 & 1 & | & 1 & -1 & 0 \\
-        0 & 1 & \frac{1}{2} & | & 1 & \frac{1}{2} & \frac{1}{2} \\
-        0 & 0 & 1 & | & \frac{4}{5} & -1 & -1
-        \end{bmatrix}\\&\sim
-        \begin{bmatrix}
-        1 & 0 & 0 & | & \frac{1}{5} & 0 & 1 \\
-        0 & 1 & 0 & | & \frac{3}{5} & 1 & 1 \\
-        0 & 0 & 1 & | & \frac{4}{5} & -1 & -1
-        \end{bmatrix} 
+        \left[\begin{array}{@{}ccc|ccc@{}}
+        1 & 0 & 1 & 1 & -1 & 0 \\
+        0 & 1 & \frac{1}{2} & 1 & \frac{1}{2} & \frac{1}{2} \\
+        0 & 0 & 1 & \frac{4}{5} & -1 & -1
+        \end{array}\right]\\&\sim
+        \left[\begin{array}{@{}ccc|ccc@{}}
+        1 & 0 & 0 & \frac{1}{5} & 0 & 1 \\
+        0 & 1 & 0 & \frac{3}{5} & 1 & 1 \\
+        0 & 0 & 1 & \frac{4}{5} & -1 & -1
+        \end{array}\right] 
         
 
     Það með er
