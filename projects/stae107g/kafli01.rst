@@ -508,10 +508,9 @@ Skilgreining: Frjálsar breytur og grunnbreytur
 
   Þær breytur línulegs jöfnuhneppis á efri stallagerð sem ekki eru forystubreytur kallast **frjálsar breytur** (e. free variables). Breytur sem ekki eru frjálsar eru kallaðar **grunnbreytur** (e. leading variables).
 
-Best er að lýsa stikaframsetningu með dæmi.
 
-Sýnidæmi: Stikaframsetning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
   :class: daemi
@@ -547,7 +546,7 @@ Sýnidæmi: Stikaframsetning
 
   .. math:: x_1 = - x_2 - x_3 - x_4 - 2 x_5 = -8 -t.
 
-  Lausn jöfnuhneppisins á stikaframsetningu er því
+  Lausn jöfnuhneppisins á **stikaframsetningu** er því
 
   .. math:: \begin{bmatrix}
     x_2 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
@@ -565,7 +564,7 @@ Sýnidæmi: Stikaframsetning
     \end{bmatrix} + t \begin{bmatrix}
     -1 \\ -1 \\ 0 \\ 0 \\ 1 \end{bmatrix}
 
-  þar sem :math:`s` og :math:`t` eru hvaða tölur sem er. 
+  þar sem :math:`s` og :math:`t` eru hvaða tölur sem er. Við sjáum meir um stikaframsetningu síðar.
 
 Setning: Tilvist og fjöldi lausna
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1527,9 +1526,6 @@ Setning: Um fylki og dálkvigur
 
         **2.** :math:`A(c\textbf{u}) = cA\textbf{u}`
 
-Óhliðruð jöfnuhneppi
-~~~~~~~~~~~~~~~~~~~~
-
 
 Skilgreinig: Óhliðruð jöfnuhneppi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1537,17 +1533,17 @@ Skilgreinig: Óhliðruð jöfnuhneppi
 .. admonition:: Skilgreinig
     :class: skilgreining
 
-    Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}` er sagt *óhliðrað* (e. homogeneous).
+    Línulegt jöfnuhneppi sem skrifa má á forminu :math:`A\textbf{x}=\textbf{0}` er sagt **óhliðrað** (e. homogeneous).
     Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því
 
     .. math:: A\left.\begin{bmatrix}
         0 \\ 0\\ \vdots \\ 0
         \end{bmatrix}\right\}n =\left. \begin{bmatrix}
         0 \\ \vdots \\ 0
-        \end{bmatrix}\right\}m
+        \end{bmatrix}\right\}m.
 
-    Þessi lausn er kölluð *fáfengilega lausnin* (e. trivial solution). Ef aðrar launsir eru til eru 
-    þær kallaðar *óaugljósu lausnirnar* (e. nontrivial solutions).
+    Þessi lausn er kölluð **fáfengilega lausnin** (e. trivial solution). Ef aðrar launsir eru til eru 
+    þær kallaðar **ófáfengilegar** (e. nontrivial solutions).
 
 Sýnidæmi: Óhliðrað jöfnuhneppi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1555,7 +1551,7 @@ Sýnidæmi: Óhliðrað jöfnuhneppi
 .. admonition:: Dæmi
     :class: daemi
 
-    Leysið
+    Leysum
 
     .. math:: \begin{eqnarray*}
         x_1+2x_2+3x_3 = 0\\
@@ -1566,75 +1562,110 @@ Sýnidæmi: Óhliðrað jöfnuhneppi
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Fáum að 
+    Fáum
 
-    .. math:: \begin{bmatrix}
+    .. math:: \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3 &0\\
         4 & 5 & 6 &0\\
         7 & 8 & 9 &0\\
-        \end{bmatrix} 
+        \end{array}\right]
         \sim
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& 0\\
         0 & -3 & -6 &0\\
         0 & 0 & 0 &0\\
-        \end{bmatrix}
+        \end{array}\right]
         \sim
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& 0\\
         0 & 1 & 2 &0\\
         0 & 0 & 0 &0\\
-        \end{bmatrix} \\
+        \end{array}\right]\\
         \sim
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 0 & -1& 0\\
         0 & 1 & 2 &0\\
         0 & 0 & 0 &0\\
-        \end{bmatrix}
+        \end{array}\right]
     
     Sem jafngildir
 
     .. math:: \begin{aligned}
-        x_1 -x_3 =0\\
-        x_2+2x_3=0
+        x_1 -x_3 =0,\\
+        x_2+2x_3=0,
         \end{aligned}
     
-    Þetta má umrita sem 
+    þ.e.
 
     .. math:: \begin{aligned}
-        x_1 =x_3\\
-        x_2=-2x_3
+        x_1 =x_3,\\
+        x_2=-2x_3,
         \end{aligned}
 
     
-    Eða
+    sem skrifa má
 
     .. math:: \textbf{x} =\begin{bmatrix}
         x_1\\x_2\\x_3
         \end{bmatrix}=\mathop{\begin{bmatrix}
         x_3\\-2x_3\\x_3
-        \end{bmatrix}}_{\textstyle x_3 \text{ er frjáls}} =
+        \end{bmatrix}} =
         x_3\begin{bmatrix}
         1\\-2\\1
-        \end{bmatrix}
+        \end{bmatrix}.
     
     Með því að setja :math:`x_3=t` má rita allar lausnir á forminu
     :math:`\textbf{x} = t \textbf{v}` þar sem 
     :math:`\textbf{v} = \begin{bmatrix} 1\\-2\\1 \end{bmatrix}\text{ og } t\in \mathbb{R}`.
-    Ef við setjum :math:`t=1` fæst að :math:`\textbf{x} = \begin{bmatrix} 1\\-2\\1\end{bmatrix}` 
-    er lausn á jöfnuhneppinu svo jöfnuhneppið hefur óaugljósa lausn.
+    
+    T.d. :math:`t=1` gefur lausnina :math:`\textbf{x} = \begin{bmatrix} 1\\-2\\1\end{bmatrix}`. Jöfnuhneppið hefur ófáfengilega lausn.
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
     **1.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur alltaf lausn.
 
-    **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur óaugljósa lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
+    **2.** Óhliðraða jöfnuhneppið :math:`A\textbf{x} = \textbf{0}` hefur ófáfengilega lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.
  
-Fólgin og stikuð framsetning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fólgin og stikaframsetning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Almenn leið til þess að rita lausnir á stikaframsetningu er að
 
-Sýnidæmi: Stikuð framsetning
+    **1.** Koma aukna fylkinu á  (rudda) efri stallagerð.
+
+    **2.** Rita háðu breyturnar með hinum frjálsum.
+
+    **3.** Umrita lausnavigurinn og sýna hann sem samantekt af einhverjum vigrum, með frjálsu breytunum sem stika. 
+
+Best er að lýsa þessum tveimur framsetningum með dæmum. 
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    **Fólgin framsetning** (e. implicit form)
+        :math:`\qquad`    Slétta   :math:`\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1-2x_2-3x_3=0\end{aligned}`
+        
+        :math:`\qquad`    Lína     :math:`\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1+2x_2+3x_3 = 0\\ 4x_1+5x_2+6x_3 =0\\\end{aligned}`
+
+
+    **Stikaframsetning** (e. parametric form)
+        :math:`\qquad` Slétta
+        
+        .. math:: \textbf{x} = s\begin{bmatrix}
+            2\\1\\0 
+            \end{bmatrix} + t\begin{bmatrix}
+            3\\0\\1 
+            \end{bmatrix}, s,t\in \R.
+        
+   
+        :math:`\qquad` Lína
+
+        .. math:: \textbf{x} = t \begin{bmatrix}
+            1\\-2\\1
+            \end{bmatrix}, t\in \R. 
+ 
+
+Sýnidæmi: Stikaframsetning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
@@ -1674,36 +1705,18 @@ Sýnidæmi: Stikuð framsetning
     :math:`\textbf{u} =\begin{bmatrix} 2&1&0 \end{bmatrix}^T`  og 
     :math:`\textbf{v}= \begin{bmatrix} 3&0&1 \end{bmatrix}^T` og 
     :math:`s,t \in \mathbb{R}`.
-    Þetta er dæmi um **stikaða framsetningu** (e. parametric form) á lausn.
+    Þetta er dæmi um stikaframsetningu á lausn.
 
 
-**Fólgin framsetning** (e. implicit form)
-    **Slétta**   :math:`\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1-2x_2-3x_3=0\end{aligned}`
-    
-    **Lína**     :math:`\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1+2x_2+3x_3 = 0\\ 4x_1+5x_2+6x_3 =0\\\end{aligned}`
 
+Skilgreining: Hliðruð jöfnuhneppi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Stikuð framsetning** (e. parametric form)
-    **Slétta** 
-    
-    .. math:: \textbf{x} = s\begin{bmatrix}
-        2\\1\\0 
-        \end{bmatrix} + t\begin{bmatrix}
-        3\\0\\1 
-        \end{bmatrix}, s,t\in \mathbb{R}$.
-    
-   
-    **Lína**
+.. admonition:: Skilgreinig
+    :class: skilgreining
 
-    .. math:: \textbf{x} = t \begin{bmatrix}
-        1\\-2\\1
-        \end{bmatrix}, t\in \mathbb{R}$. 
-
-Hliðrað jöfnuhneppi
-~~~~~~~~~~~~~~~~~~~~
-
-Jöfnuhneppi sem sett er fram á forminnu :math:`A \textbf{x}=\textbf{b}` 
-þar sem :math:`\textbf{b} \neq 0` kallast *hliðrað* (e. non-homogeneus).
+    Jöfnuhneppi sem sett er fram á forminnu :math:`A \textbf{x}=\textbf{b}` 
+    þar sem :math:`\textbf{b} \neq 0` kallast **hliðrað** (e. non-homogeneus).
 
 Sýnidæmi: Hliðrað jöfnuhneppi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1725,45 +1738,37 @@ Sýnidæmi: Hliðrað jöfnuhneppi
     Fáum
 
     .. math:: \begin{align*}
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3 &0\\
         4 & 5 & 6 &1\\
         7 & 8 & 9 &2\\
-        \end{bmatrix} &\sim
-        \begin{bmatrix}
+        \end{array}\right] &\sim
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& 0\\
         0 & -3 & -6 &1\\
         0 & -6 & -12 &2\\
-        \end{bmatrix}
+        \end{array}\right]
         \sim 
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& 0\\
         0 & -3 & -6 &1\\
         0 & 0 & 0 &0\\
-        \end{bmatrix}
+        \end{array}\right]
         \\&\sim 
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 2 & 3& 0\\
         0 & 1 & 2 &-\frac{1}{3}\\
         0 & 0 & 0 &0\\
-        \end{bmatrix}
+        \end{array}\right]
         \sim 
-        \begin{bmatrix}
+        \left[\begin{array}{@{}ccc|c@{}}
         1 & 0 & -1& \frac{2}{3}\\
         0 & 1 & 2 &-\frac{1}{3}\\
         0 & 0 & 0 &0\\
-        \end{bmatrix} 
-        \end{align*}
-
-    Úr 
-
-    .. math:: \begin{bmatrix}
-        1 & 0 & -1& \frac{2}{3}\\
-        0 & 1 & 2 &-\frac{1}{3}\\
-        0 & 0 & 0 &0\\
-        \end{bmatrix} 
+        \end{array}\right]
+        \end{align*} 
     
-    fæst 
+    svo 
 
     .. math:: \textbf{x} = \begin{bmatrix}
         x_1\\x_2\\x_3
@@ -1794,15 +1799,6 @@ Setning: Lausnamengi fylkjajöfnunnar
     Þá gildir að öll stök í lausnamengi :math:`A\textbf{x} = \textbf{b}` 
     má rita á forminu :math:`\textbf{w} = \textbf{p} + \textbf{v}_h` þar sem :math:`\textbf{v}_h` 
     er lausn óhliðruðu jöfnunnar :math:`A\textbf{x} = \textbf{0}`.
-
-
-Til að finna stikaða framsetningu á lausnum línulegs jöfnuhneppis þarf að:
-
-    **1.** Koma aukna fylkinu á  (rudda) efri stallagerð.
-
-    **2.** Rita háðu breyturnar með hinum frjálsum.
-
-    **3.** Umrita lausnavigurinn og sýna hann sem samantekt af einhverjum vigrum, með frjálsu breytunum sem stika. 
 
 
 Sýnidæmi: Lausnir prófaðar
@@ -1881,26 +1877,40 @@ Sýnidæmi: Lausnir prófaðar
 
 
 
-Línulega óháð/háð mengi
------------------------
+Línulega óháðar upptalningar vigra
+----------------------------------------
 
-Skilgreining: Línulega óháð/háð mengi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Línulega óháðar upptalningar vigra
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Mengi af vigrum :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` er sagt vera **línulega óháð** ef jafnan
+    **(i)** Upptalning af vigrum :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` í :math:`\R^n` er sögð **línulega óháð** (e. linearly independent) ef jafnan
     
-    .. math:: x_1\text{v}_1 + \dots + x_p\textbf{v}_p = \textbf{0}
+    .. math:: x_1\text{v}_1 +  x_2\text{v}_2+ \dots + x_p\textbf{v}_p = \textbf{0}
 
-    hefur einungis augljósu lausnina. Að sama skapi er mengið :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` sagt vera **línulega háð** ef það er ekki línulega óháð.
-    Þar með vitum við að  :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` er línulega háð ef og aðeins ef til eru :math:`c_1,\dots,c_p`, ekki öll jöfn 0, þannig að 
+    hefur einungis fáfengilegu lausnina :math:`x_1 = x_2 = \dots = x_p =0`.
+
+
+    **(ii)** Upptalning af vigrum :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` í :math:`\R^n` er sögð **línulega háð** (e. linearly dependent)
+    ef til eru tölur :math:`c_1,\dots,c_p`, ekki allar jafnar 0, þannig að 
 
     .. math:: c_1\textbf{v}_1 + \dots+ c_p\textbf{v}_p = \textbf{0}.
 
-    Ef mengið :math:`\{\textbf{v}_1, \dots ,\textbf{v}_p\}` er línulega óháð/háð þá tölum 
-    við líka um að vigrarnir :math:`\textbf{v}_1, \dots ,\textbf{v}_p` séu línulega óháðir/háðir. 
+    Við segjum oft að vigrarnir :math:`\ve v_1, \dots, \ve v_2` séu línulega óháðir ef upptalningin :math:`\{\ve v_1, \dots, \ve v_p\}` er línulega óháð.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    **1.** Upptalning þar sem :math:`\ve 0`-vigurinn kemur fyrir er alltaf línulega háð.
+
+    **2.** Upptalning þar sem sami vigurinn kemur fyrir oftar en einu sinni er línulega háð.
+
+    **3.** Upptalning með einum vigri :math:`\ve v` er línulega óháð ef og aðeins ef :math:`\ve v \neq \ve 0`.
+
+    **4.** Upptalning :math:`\{\ve v_1, \ve v_2 \}` er línulega háð ef og aðeins ef annar vigurinn er margfeldi af hinum. Slík upptalning er línulega óháð ef hvorugur vigurinn er margfeldi af hinum.
+
 
 Sýnidæmi: Línulega óháðir vigrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1908,7 +1918,7 @@ Sýnidæmi: Línulega óháðir vigrar
 .. admonition:: Dæmi
     :class: daemi
 
-    Skoðum vigrana
+    Eru eftirfarandi vigrar línulega óháðir?
 
     .. math:: \textbf{v}_1 = \begin{bmatrix}
         1\\1
@@ -1918,10 +1928,9 @@ Sýnidæmi: Línulega óháðir vigrar
         \end{bmatrix},
         \textbf{v}_3 = \begin{bmatrix}
         2\\1
-        \end{bmatrix},
+        \end{bmatrix}.
     
-    Er mengið :math:`\{\textbf{v}_1 ,\textbf{v}_2,\textbf{v}_3\}` línulega óháð?
-
+    
 .. admonition:: Launs
     :class: daemi, dropdown
 
@@ -1963,7 +1972,7 @@ Sýnidæmi: Línulega óháðir vigrara
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Skoðum hvort 
+    Athugum hvort 
 
     .. math:: x_1 \begin{bmatrix}
         1\\0\\0
@@ -1977,7 +1986,7 @@ Sýnidæmi: Línulega óháðir vigrara
         0\\0\\0
         \end{bmatrix}
     
-    Hefur lausn sem er ekki augljós. Þetta jafngildir
+    hefur aðeins fáfengilegu lausnina. Fáum
 
     .. math:: \begin{bmatrix}
         1&0&2\\
@@ -1992,133 +2001,67 @@ Sýnidæmi: Línulega óháðir vigrara
     
     Fáum nú
 
-    .. math:: \begin{bmatrix}
+    .. math:: \left[\begin{array}{@{}ccc|c@{}}
         1&0&2&0\\
         0&1&2&0\\
         0&1&1&0
-        \end{bmatrix}\sim
-        \begin{bmatrix}
+        \end{array}\right]\sim
+        \left[\begin{array}{@{}ccc|c@{}}
         1&0&2&0\\
         0&1&2&0\\
         0&0&-1&0
-        \end{bmatrix}.
+        \end{array}\right].
 
     Síðasta aukna fylkið er af efri stallagerð og hefur vendistak 
     í hverjum dálki nema þeim lengst til hægri. Því hefur þetta jöfnuhneppi
-    aðeins eina lausn, augljósu lausnina :math:`x_1=x_2=x_3=0` og vigrarnir 
+    aðeins eina lausn, fáfengilegu lausnina :math:`x_1=x_2=x_3=0` og vigrarnir 
     sem um ræðir eru línulega óháðir.
 
-Setning: Línulega óháð
-~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Setning: Dálkvigrar fylkis og línulegt óhæði
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Dálkar í fylki :math:`A` eru línulega óháðir þá og því aðeins að jafnan 
-    :math:`A\textbf{x} = \textbf{0}` hafi einungis augljósu lausnina (núllausnina) sem lausn.
+    Dálkvigrar fylkis :math:`A` eru línulega óháðir ef og aðeins ef jöfnuhneppið 
+    :math:`A\textbf{x} = \textbf{0}` hafur einungis fáfengilegu lausnina, :math:`\ve x= \ve 0`.
 
-.. admonition:: Athugasemd
-    :class: athugasemd
 
-    Þetta er almenna aðferðin sem við notum til að athuga hvort vigrar
-    séu línulega háðir eða óháðir.
-
-Setning: Núllvigurinn
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Of margir vigrar = línulega háð
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Ef núllvigurinn **0** liggur í mengi þá er mengið línulega háð.
+    Látum :math:`\textbf{v}_1, \dots, \textbf{v}_p` vera upptalningu vigra í :math:`\mathbb{R}^n`. 
+    Ef :math:`p>n` þá er upptalningin línulega háð.
 
-.. admonition:: Rökstuðningur
-    :class: setning, dropdown
+Setningin segir að ef við höfum fleiri vigra en eru hnit í hverjum
+vigri þá eru vigrarnir línulega háðir.
 
-    Látum mengið vera :math:`\{\textbf{0}, \textbf{v}_2, \dots, \text{v}_p\}`.
-    Skrifum:
-
-    .. math:: 1\cdot \text{0} + 0\cdot \textbf{v}_2 + \dots+0\cdot \text{v}_p=\textbf{0}
-
-    sem sýnir að mengið er línulega háð.
-
-Setning: Línulega háður vigur
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Línuleg samantekt og línulegt hæði
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Ef mengi inniheldur aðeins einn vigur :math:`\textbf{v}_1` er það línulega 
-    óháð þá og því aðeins að :math:`\textbf{v}_1 \neq \textbf{0}`.
+    Upptalning :math:`S=\{ \ve v_1, \dots, \ve v_p\}` af vigrum í :math:`\R^n` með :math:`\ve v_1  \neq \ve 0` er línulega háð ef og aðeins ef hægt er að rita einhvern vigranna
+    :math:`\ve v_1, \dots, \ve v_p` sem línulega samantekt hinna vigranna.
 
-.. admonition:: Rökstuðningur
-    :class: setning, dropdown
+    Hægt er að sýna að ef upptalningin er línulega háð og :math:`\ve v_1 \neq \ve 0` þá er til vigur :math:`\ve v_j` sem má rita sem línulega samantekt vigranna sem eru á
+    undan honum í upptalningunni, þ.e.a.s. til eru tölur :math:`c_1, \dots, c_{j-1}` þannig að
 
-    Út frá skilgreiningunni þurfum við að athuga hvenær jafnan 
-    :math:`x_1 \textbf{v}_1= \textbf{0}` hefur aðeins augljósu lausnina.
-    Það er ljóst að ef :math:`x_1 \textbf{v}_1= \textbf{0}` 
-    og :math:`\textbf{v}_1 \neq \textbf{0}` verður :math:`x_1` að vera núll.
-    Jafnframt er mengið :math:`\{ \textbf{v}_1\}` línulega háð ef :math:`\textbf{v}_1` 
-    er núllvigur samkvæmt síðustu setningu.
-
-Setning: Línulega háðir vigrar
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning
-    :class: setning
-
-    Ef mengi inniheldur nákvæmlega tvo vigra :math:`\textbf{v}_1` og
-    :math:`\textbf{v}_2` er það línulega háð þá og því aðeins að einn
-    vigurinn sé margfeldi af hinum.
-
-.. admonition:: Rökstuðningur
-    :class: setning, dropdown
-
-    Ef :math:`\textbf{v}_1,\textbf{v}_2` eru línulega háðir eru til rauntölur :math:`x_1,x_2` ekki báðar núll, þannig að
-
-    .. math:: x_1 \textbf{v}_1 + x_2 \textbf{v}_2 =0
-
-    Megum gera ráð fyrir að :math:`x_1\neq 0`. Fáum
-
-    .. math:: \textbf{v}_1= -\frac{x_2}{x_1}\textbf{v}_2
-
-    sem sýnir það sem átti að sanna. Ef annar vigurinn er margfeldi af 
-    hinum getum við t.d. skrifað :math:`\textbf{v}_1 = c\textbf{v}_2` 
-    þar sem c er einhver rauntala. Þá er:
-
-    .. math:: 1\cdot \textbf{v}_1+(-c)\cdot \textbf{v}_2=0
-
-    svo  :math:`\textbf{v}_1,\textbf{v}_2` eru línulega háðir.
+    .. math:: \ve v_j = c_1 \ve v_1 + \dots + c_{j-1} \ve v_{j-1}.
 
 
-Setning: Línuleg samantekt
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Setning
-    :class: setning
-
-    Mengi af vigrum er línulega háð þá og því aðeins að til er vigur í menginu sem má skrifa 
-    sem línulega samantekt af hinum vigrunum. 
-
-
-Setning: Línulega háð mengi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning
-    :class: setning
-
-    Látum :math:`\textbf{v}_1, \dots, \textbf{v}_p` vera vigra í :math:`\mathbb{R}^n`. 
-    Ef :math:`p>n` er mengið :math:`\textbf{v}_1, \dots, \textbf{v}_p` línulega háð.
-
-Setningin segir að ef við höfum fleiri vigra en eru hnit í hverjum vigri eru
-vigrarnir línulega háðir.
 
 Línulegar varpanir
 ------------------
 
-Við segjum að *vörpun* (e. map, mapping, transformation) frá :math:`A` yfir í :math:`B` er „regla" 
-sem úthlutar sérhverju staki úr A nákvmlega einu staki úr B.
-Vörpun frá :math:`A` yfir í :math:`B` er yfirleitt táknuð :math:`f: A \rightarrow  B`. 
-Mengið :math:`A` köllum við **formengi** og :math:`B` **bakmengi** vörpunarinnar :math:`f`.
+**Vörpun** (e. map, mapping, transformation) frá mengi :math:`A` yfir í mengi :math:`B` er „regla" 
+sem úthlutar sérhverju staki úr :math:`A` nákvmlega einu staki úr :math:`B`, yfirleitt táknað :math:`f: A \rightarrow  B`. Mengið :math:`A` kallast **skilgreiningarmengi/formengi** (e. domain) og :math:`B` **ráðstöfunarmengi/bakmengi** (e. codomain) vörpunarinnar :math:`f`.
 
 
 Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \mathbb{R}^n \rightarrow \mathbb{R}^m`
@@ -2126,40 +2069,48 @@ Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \m
 
 .. math:: T(x)=A\textbf{x}.
 
-(formengið er :math:`\mathbb{R}^n` og bakmengið er :math:`\mathbb{R}^m`)
-Oft er hentugt að segja að vörpunin sé skilgreind sem :math:`\textbf{x} \rightarrow A\textbf{x}`.
+Oft er hentugt að segja að vörpunin sé skilgreind sem :math:`\textbf{x} \mapsto A\textbf{x}`.
 Ef vigur **x** varpast í :math:`T(\textbf{x})` þá segjum við að
-:math:`T(\textbf{x})` sé mynd vigursins :math:`x` með tillit til :math:`T`. 
-Mengi allra slíkra mynda kallast *myndmengi* :math:`T` eða mynd :math:`T`. 
+:math:`T(\textbf{x})` sé **mynd** vigursins :math:`x` með tillit til :math:`T`. 
+Mengi allra slíkra mynda kallast **myndmengi** :math:`T` (e. image). 
 
-Skilgreining: Línuleg vörpun
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Línulegar varpanir 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Vörpun :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^m` 
-    er sögð **línuleg** ef um öll :math:`\textbf{u}, \textbf{v} \in \mathbb{R}^n` og
+    Vörpun :math:`T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m` 
+    er **línuleg vörpun** ef um öll :math:`\textbf{u}, \textbf{v} \in \mathbb{R}^n` og
     allar rauntölur :math:`c` gildir:
     
         **1.** :math:`T(\textbf{u} + \textbf{v})= T(\textbf{u}) + T(\textbf{v})`
         
         **2.** :math:`T(c\textbf{u}) = cT(\textbf{u})`.
 
-Setning: Línulegar varpanir 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T:\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línuleg vörpun. Þá gildir:
+    Látum :math:`A` vera :math:`m \times n` fylki. Vörpunin :math:`T \colon \R^n \rightarrow \R^m` skilgreind með :math:`T(\ve x)= A \ve x` er línuleg.
+
+
+
+Skilgreining: Eiginleikar línulegra varpana 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun. Þá gildir
 
         **1.** :math:`T(\textbf{0})=\textbf{0}`
 
-        **2.** Ef :math:`\textbf{u},\textbf{v}` eru vigrar í :math:`\mathbb{R}^n` og :math:`c, d` eru
-        rauntölur þá er 
+        **2.** Ef :math:`\textbf{u},\textbf{v}` eru vigrar í :math:`\mathbb{R}^n` og :math:`c, d \in \R` þá er 
                
-            .. math:: T(c\textbf{u}+d\textbf{v})=cT(\textbf{u})+dt(\textbf{v}).
+            .. math:: T(c\textbf{u}+d\textbf{v})=cT(\textbf{u})+dT(\textbf{v}).
 
         **3.** Ef :math:`\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p` 
         er rupptalning á vigrum og :math:`c_1, c_2, \dots, c_p`
@@ -2167,13 +2118,30 @@ Setning: Línulegar varpanir
 
         .. math:: T(c_1\textbf{u}_1+c_2\textbf{u}_2+\cdots+c_p\textbf{u}_p)=c_1T(\textbf{u}_1)+c_2T(\textbf{u}_2)+\cdots+c_pT(\textbf{u}_p). 
 
+Skilgreining: Venjulegi grunnurinn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+    :class: skilgreining
+
+    Upptalningin
+
+    .. math:: \ve e_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix},
+        \quad \ve e_2 = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix},
+        \quad, \dots, \quad \ve e_n = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix},
+
+    mynda svokallaðan **venjulega grunn** (e. standard basis) fyrir :math:`\R^n`. Sérhvern vigur í :math:`\R^n` má skirfa sem línulega samantekt af vigrum venjulega grunnsins á nákvæmlega einn hátt
+
+    .. math:: \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} = 
+        x_1 \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} + 
+        x_2 \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix} + 
+        \dots +
+        x_n \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}. 
+         
 
 
-Línulegar varpanir :math:`\mathbb{R}^2\rightarrow \mathbb{R}^2` 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sýnidæmi: Eiginvigrar línulegra varpana
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sýnidæmi Línuleg vörpun :math:`\mathbb{R}^2\rightarrow \mathbb{R}^2` 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -2219,28 +2187,21 @@ Sýnidæmi: Eiginvigrar línulegra varpana
         4(-2)+5\cdot 3\\ 4(-1) + 5\cdot 0
         \end{bmatrix}=\begin{bmatrix}
         7\\ -4
-        \end{bmatrix}
+        \end{bmatrix}.
         \end{align*}
 
-Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Setning: Línulegar varpanir :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+Setning: Venjulegi grunnurinn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T` vera línulega vörpun :math:`\mathbb{R}^n\rightarrow\mathbb{R}^m`.
-    Þá er til nákvæmlega eitt :math:`m \times n` fylki :math:`A` þannig að
-    :math:`T(\textbf{x})=A\textbf{x}` fyrir öll :math:`\textbf{x} \in \mathbb{R}^n`.
-    Jafnframt gildir að :math:`A=\begin{bmatrix} T(\textbf{e}_1) &\dots& T(\textbf{e}_n) \end{bmatrix}`
-    Við köllum fylkið :math:`A` gjarnan *venjulega* fylkið (e. standard matrix) fyrir :math:`T`
+    Látum :math:`T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun, og 
+    :math:`A` vera :math:`m \times n` fylki með :math:`A=\begin{bmatrix} T(\textbf{e}_1) &\dots& T(\textbf{e}_n) \end{bmatrix}`.
+    Þá gildir um öll :math:`\textbf{x} \in \mathbb{R}^n` að :math:`T(\textbf{x})=A\textbf{x}` og :math:`A` er eina fylkið með þennan eiginleika.
+    Við köllum fylkið :math:`A` gjarnan **venjulega fylkið** (e. standard matrix) fyrir :math:`T`,
     og segjum að línulega vörpunin :math:`T` sé gefin með fylkinu :math:`A`.
 
-
-Dæmi um línulegar varpanir  
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Skoðum nú nokkrar varpanir og fylki þeirra myndrænt.
 
 Speglanir
 ~~~~~~~~~
@@ -2255,7 +2216,7 @@ Speglun um y-ás: :math:`\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}`
 
 .. figure:: myndir/spegluny.svg
     :align: center
-    :scale: 70%
+    :scale: 60%
 
 Speglun um línuna x=y :math:`\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}`
 
@@ -2336,31 +2297,55 @@ Ofanvarp á y-ás :math:`\begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}`
 Eintækar og átækar varpanir
 ---------------------------
 
-Skilgreining: Átæk vörpun
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Eintækar og átækar varpanir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreinig
     :class: skilgreining
 
-    Vörpun :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð 
-    **átæk** (e. onto) ef öll :math:`\textbf{b} \in \mathbb{R}^m` 
-    liggja í myndmengi :math:`T`. Með öðrum orðum er vörpun átæk ef bakmengi hennar er jafnt myndmenginu.
+    Vörpun :math:`f: A \rightarrow B` er
 
-Skilgreining: Eintæk vörpun
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        **(i)** **eintæk** (e. injective, one-to-one) ef hún varpar ólíkum stökum í ólík stök. Þ.e. ef :math:`x_1, x_2 \in A` og
+        :math:`x_1 \neq x_2` þá er :math:`f(x_1) \neq f(x_2)`.
 
-.. admonition:: Skilgreining
-    :class: skilgreining
+        **(ii)** **átæk** (e. surjective, onto) ef um sérhvert :math:`y \in B` gildir að til er :math:`x \in A` þannig að :math:`y=f(x)`.
 
-    Vörpun :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` er sögð
-    **eintæk** (e. one-to-one) ef sérhvert :math:`\textbf{b} \in \mathbb{R}^m`
-    er mynd í mesta lagi eins staks í :math:`\mathbb{R}^n` með tillit til :math:`T`.
-    Með öðrum orðum varpa eintækar varpanir ólíkum stökum í ólík stök.
+        **(iii)** **gagntæk** (e. bijective) ef hún er bæði eintæk og átæk.
+
+INSERT MYND VÆRI GEGGJAÐ
+
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Varpanir sem eru bæði eintækar og átækar kallast *gagntækar* (e. bijective).
+    Við getum líka skilið eintækni og átækni út frá fjölda lausna. Vörpun :math:`f \colon A \rightarrow B` er
+
+        **(i)** eintæk ef of aðeins ef jafnan :math:`y = f(x)` hefur í *mesta lagi eina lausn* :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+
+        **(ii)** átæk ef og aðeins ef :math:`y = f(x)` hefur að *minnsta kosti eina lausn*  :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+
+        **(iii)** gagntæk ef og aðeins ef :math:`y = f(x)` hefur *nákvæmlega eina lausn* :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+
+
+Sýnidæmi: Eintækar og átækar varpanir
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+        **1.** Dæmi um eintæka vörpun: :math:`f \colon \R \rightarrow \R`, :math:`x \mapsto e^x`.
+
+        **2.** Dæmi um átæka vörpun: :math:`f \colon \R \rightarrow\R`, :math:`x \mapsto x (x^2 -3)`.
+
+        **3.** Dæmi um gagntæka vörpun: :math:`f \colon \R \rightarrow \R`, :math:`x \mapsto 2x +1`.
+
+
+        **4.** Dæmi um vörpun sem er hvorki eintæk, átæk né gagntæk: :math:`f \colon \R \rightarrow \R`, :math:`x \mapsto x^2`. Hinsvegar ef við breytum skilgreiningar- og bakmenginu í :math:`[0,\infty)` þá væri fallið gagntækt.
+
+
+
+
+
 
 Setning: Eintæk línuleg vörpun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2370,7 +2355,7 @@ Setning: Eintæk línuleg vörpun
 
     Látum :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun.
     Þá er :math:`T` eintæk þá og því aðeins að :math:`T(\textbf{0}=\textbf{0})` hafi
-    aðeins augljósu lausnina.
+    aðeins fáfengilegu lausnina.
 
 Setning: Átækar og eintækar línulegar varpanir 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
