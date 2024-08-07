@@ -7,7 +7,7 @@ Vigurrúm og hlutrúm
 .. _skilgreining.vigurrum:
 
 Skilgreining: Vigurrúm
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -111,7 +111,7 @@ Dæmi um vigurrúm
 
 
 Skilgreining: Hlutrúm
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -163,8 +163,8 @@ Dæmi um hlutrúm
 Rifjum upp skilgreininguna á línulegri samantekt (linkur) og spann vigra (linkur) áður en lengra er haldið.
 TODO HYPERLINK Á SKILGREININGAR UM LÍNULEGAR SAMANTEKTIR OG SPAN 
 
-Setningar um vigra og hlutrúm
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setning: Um vigra og hlutrúm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -205,7 +205,7 @@ Fleiri dæmi um hlutrúm
 
 
 Skilgreining: Vigursumma 
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -217,7 +217,7 @@ Skilgreining: Vigursumma
     **vigursumma** (eða einfaldlega summa) (e. vector sum) þeirra.
 
 Setning 
-^^^^^^^
+~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -230,7 +230,7 @@ Meira um hlutrúm: núllrúm og dálkrúm
 ------------------------------------
 
 Skilgreining: Núllrúm fylkis 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -244,7 +244,7 @@ Skilgreining: Núllrúm fylkis
 
 
 Setning: Núllrúm er hlutrúm 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -261,7 +261,7 @@ Setning: Núllrúm er hlutrúm
     Það sést til dæmis af því að :math:`\ve 0` er ekki í lausnarmenginu.
 
 Skilgreining: Dálkrúm fylkis 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -272,7 +272,7 @@ Skilgreining: Dálkrúm fylkis
     .. math:: \col{A}=\spn\{a_1,a_2,\ldots,a_n\}
 
 Setning: Dálkrúm er hlutrúm 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -299,7 +299,7 @@ Samanburður á núllrúmum og dálkrúmum
 
 
 Sýnidæmi: Núllrúm
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 .. admonition:: Sýnidæmi
     :class: daemi
@@ -372,7 +372,7 @@ Sýnidæmi: Núllrúm
     *Til að finna nákvæma lýsingu núllrúms þarf því að leysa línulegt jöfnuhneppi.*
 
 Sýnidæmi: Dálkrúm
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 .. admonition:: Sýnidæmi
     :class: daemi
@@ -410,7 +410,7 @@ Sýnidæmi: Dálkrúm
 
     
 Skilgreining: Kjarni og mynd 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -439,12 +439,12 @@ Skilgreining: Kjarni og mynd
 
     Látum :math:`T\colon V\to W` vera línulega vörpun.
 
-    **a.** Vörpunin Látum :math:`T` er eintæk ef og aðeins ef :math:`\ker{T}=\{0\}`.
+    **a.** Vörpunin :math:`T` er eintæk ef og aðeins ef :math:`\ker{T}=\{\ve{0}\}`.
 
-    **b.** Vörpunin Látum :math:`T` er átæk ef og aðeins ef :math:`\range{T}=W`.
+    **b.** Vörpunin :math:`T` er átæk ef og aðeins ef :math:`\range{T}=W`.
 
 Setning: Um tengsl varpanna og núll- og dálkrúma 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -466,7 +466,7 @@ Grunnar og hnit
 ---------------
 
 Skilgreining: Grunnur
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -490,7 +490,7 @@ Skilgreining: Grunnur
 
 
 Sýnidæmi: Grunnar
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -530,7 +530,7 @@ Sýnidæmi: Grunnar
     :math:`\mathbb{R} ^3` en ekki allt rúmið. Mengið er því ekki grunnur í :math:`\mathbb{R} ^3`. 
 
 Setning: Um spann mengja 
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -546,7 +546,7 @@ Setning: Um spann mengja
 
 
 Sýnidæmi: Grunnur fyrir núllrúm 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -625,7 +625,7 @@ Sýnidæmi: Grunnur fyrir núllrúm
     grunnur fyrir :math:`\nul{A}`.
 
 Setning: Að finna grunn fyrir dálkrúm 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -641,7 +641,7 @@ Setning: Að finna grunn fyrir dálkrúm
     hvaða dálka úr :math:`A` við tökum. Nóg er að finna efra stallaform. Það er enginn þörf fyrir að rutt efra stallaform. 
 
 Sýnidæmi: Grunnur fyrir dálkrúm 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -680,7 +680,7 @@ Sýnidæmi: Grunnur fyrir dálkrúm
     er grunnur fyrir :math:`\col{A}`.
 
 Setning: Tveir eiginleikar grunna 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -694,7 +694,7 @@ Setning: Tveir eiginleikar grunna
     Þetta má orða sem svo: Grunnur er eins lítið spannmengi og eins stórt línulega óháð mengi í vigurrúmi og mögulegt er.
 
 Setning: Um tilvist hnita 
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -710,7 +710,7 @@ Setning: Um tilvist hnita
     - Þetta má einnig orða þannig að fyrir gefinn grunn þá er til nákvæmlega ein leið til að rita gefinn vigur sem línulega samantekt vigranna í grunninum.
 
 Skilgreining: Hnit
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -724,7 +724,7 @@ Skilgreining: Hnit
     Við tölum líka um :math:`\mathcal{B}`-hnit vigursins :math:`v` (e. :math:`\mathcal{B}`-coordinates of :math:`v`).
 
 Skilgreining: Hnitavigur
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -739,7 +739,7 @@ Skilgreining: Hnitavigur
 
 
 Sýnidæmi: Að skipta úr :math:`\mathcal{B}` í :math:`\mathcal{S}`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -769,7 +769,7 @@ Sýnidæmi: Að skipta úr :math:`\mathcal{B}` í :math:`\mathcal{S}`
         \end{bmatrix}
 
 Skilgreining: Hnitavörpun
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -785,7 +785,7 @@ Vídd og rankur
 --------------
 
 Setning: Línulegt hæði mengja stærri en grunns 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -794,7 +794,7 @@ Setning: Línulegt hæði mengja stærri en grunns
     Mengi (eða upptalning) með fleiri en :math:`n` vigrum er línulega háð.
 
 Setning: Um stærð grunna 
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -802,7 +802,7 @@ Setning: Um stærð grunna
     Ef vigurrúm :math:`V` hefur grunn með nákvæmlega :math:`n` vigrum þá hefur sérhver grunnur :math:`V` nákvæmlega :math:`n` vigra.
 
 Skilgreining: Vídd
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -821,7 +821,7 @@ Skilgreining: Vídd
         - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
 
 Sýnidæmi: Vídd
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -833,7 +833,7 @@ Sýnidæmi: Vídd
     - Vigurrúmið :math:`\mathbb{R}^n` hefur víddina :math:`n`.
 
 Setning: Vídd hlutrúms
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -845,7 +845,7 @@ Setning: Vídd hlutrúms
     **b.** :math:`\dim{H}\leq\dim{V}`.
 
 Setning: Samsemd línulegs óhæðis og spanns
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -860,7 +860,7 @@ Setning: Samsemd línulegs óhæðis og spanns
     Það nægir að tékka annað skilyrðið því hitt fylgir sjálfkrafa.
 
 Setning: Forystustuðlar og vídd
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -873,7 +873,7 @@ Setning: Forystustuðlar og vídd
     **b.** Vídd :math:`\col{A}` er jöfn fjölda dálka í :math:`U` sem innihalda forystustuðul (Víddin er jöfn fjölda forystustuðla).
 
 Skilgreining: Línurúm 
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -891,7 +891,7 @@ Skilgreining: Línurúm
 
 
 Setning: Grunnur fyrir línurúm
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -905,7 +905,7 @@ Setning: Grunnur fyrir línurúm
     Athugasemd: Það eru ekki-núll línuvigrarnir úr efra stallaforminu sem gefa grunninn, ekki línuvigrarnir úr :math:`A`.
 
 Sýnidæmi: Grunnur fyrir línurúm
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -941,7 +941,7 @@ Sýnidæmi: Grunnur fyrir línurúm
     grunnur fyrir :math:`\row{A}`. 
 
 Skilgreining: Rankur 
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -950,7 +950,7 @@ Skilgreining: Rankur
     Rankur fylkisins :math:`A` er táknaður með :math:`\rnk{A}`.
 
 Setning: Ranksetningin
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -967,7 +967,7 @@ Setning: Ranksetningin
 
 
 Sýnidæmi: Rankur og vídd
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -997,15 +997,15 @@ Sýnidæmi: Rankur og vídd
         \end{bmatrix}
     
     Rankur fylkisins er vídd dálkrúms sem er fjöldi vendidálka.
-    Svo :math:`rank{A}=2`. Vídd núllrúms er fjöldi frjálsra breyta
-    svo :math:`nullity{A}=2`.
+    Svo :math:`\rank{A}=2`. Vídd núllrúms er fjöldi frjálsra breyta
+    svo :math:`\nullity{A}=2`.
 
 Langa setningin um andhverfanleg fylki (linkur) gefur 11 skilyrði sem eru öll jafngild því að fylki sæe andhverfanlegt. 
 Nú höfum við lært fullt af nýjum hugtökum og getum bætt við 
 fleiri skilyrðum. TODO linkur að löngu setningunni.
 
 Setning: Viðbót við löngu andhverfusetninguna
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1018,7 +1018,7 @@ Setning: Viðbót við löngu andhverfusetninguna
 
     **14.** :math:`\col{A}=\R^n`.
 
-    **15.** :math:`\dim{\col{a}}=n`.
+    **15.** :math:`\dim{\col{A}}=n`.
 
     **16.** :math:`\rnk{A}=n`.
 
@@ -1044,7 +1044,7 @@ Okkur langar að finna hnitskiptafylki :math:`\mathcal{P}_{\mathcal{E}\leftarrow
 
 
 Setning: Um hnitaskiptafylki
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1073,7 +1073,7 @@ erum við að segja að :math:`x_1, x_2, \ldots, x_n` séu hnit vigursins :math:
 Við fáum því eftirfarandi fylgisetningu þegar við skoðum hnitaskipti í og úr venjulega grunninum.
 
 Setning: Hnitaskiptafylki yfir í venjulega grunninn
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1089,7 +1089,7 @@ Setning: Hnitaskiptafylki yfir í venjulega grunninn
     .. math:: P_{\mathcal{B}\leftarrow\mathcal{E}}=(P_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}
 
 Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
@@ -1107,7 +1107,7 @@ Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn
         \begin{bmatrix} 1 & -3 \\ -2 & 1 \end{bmatrix}
 
 Setning: Formúla fyrir hnitaskiptifylki
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1136,7 +1136,7 @@ Reikniaðferð fyrir hnitaskiptafylki
 
 
 Sýnidæmi: Hnitaskiptafylki
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
