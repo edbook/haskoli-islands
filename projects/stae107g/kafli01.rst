@@ -2303,28 +2303,38 @@ Skilgreining: Eintækar og átækar varpanir
 .. admonition:: Skilgreinig
     :class: skilgreining
 
-    Vörpun :math:`f: A \rightarrow B` er
+    Vörpun :math:`f: X \rightarrow Y` er
 
-        **(i)** **eintæk** (e. injective, one-to-one) ef hún varpar ólíkum stökum í ólík stök. Þ.e. ef :math:`x_1, x_2 \in A` og
+        **(i)** **eintæk** (e. injective, one-to-one) ef hún varpar ólíkum stökum í ólík stök. Þ.e. ef :math:`x_1, x_2 \in X` og
         :math:`x_1 \neq x_2` þá er :math:`f(x_1) \neq f(x_2)`.
 
-        **(ii)** **átæk** (e. surjective, onto) ef um sérhvert :math:`y \in B` gildir að til er :math:`x \in A` þannig að :math:`y=f(x)`.
+        **(ii)** **átæk** (e. surjective, onto) ef um sérhvert :math:`y \in Y` gildir að til er :math:`x \in X` þannig að :math:`y=f(x)`.
 
         **(iii)** **gagntæk** (e. bijective) ef hún er bæði eintæk og átæk.
 
-INSERT MYND VÆRI GEGGJAÐ
+Eintæk vörpun:
+
+.. figure:: myndir/eintaek.svg
+    :align: center
+    :scale: 10%
+
+Átæk vörpun:
+
+.. figure:: myndir/ataek.svg
+    :align: center
+    :scale: 10%
 
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Við getum líka skilið eintækni og átækni út frá fjölda lausna. Vörpun :math:`f \colon A \rightarrow B` er
+    Við getum líka skilið eintækni og átækni út frá fjölda lausna. Vörpun :math:`f \colon X \rightarrow Y` er
 
-        **(i)** eintæk ef of aðeins ef jafnan :math:`y = f(x)` hefur í *mesta lagi eina lausn* :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+        **(i)** eintæk ef of aðeins ef jafnan :math:`y = f(x)` hefur í *mesta lagi eina lausn* :math:`x \in X` fyrir sérhvert :math:`y \in Y`.
 
-        **(ii)** átæk ef og aðeins ef :math:`y = f(x)` hefur að *minnsta kosti eina lausn*  :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+        **(ii)** átæk ef og aðeins ef :math:`y = f(x)` hefur að *minnsta kosti eina lausn*  :math:`x \in X` fyrir sérhvert :math:`y \in Y`.
 
-        **(iii)** gagntæk ef og aðeins ef :math:`y = f(x)` hefur *nákvæmlega eina lausn* :math:`x \in A` fyrir sérhvert :math:`y \in B`.
+        **(iii)** gagntæk ef og aðeins ef :math:`y = f(x)` hefur *nákvæmlega eina lausn* :math:`x \in X` fyrir sérhvert :math:`y \in Y`.
 
 
 Sýnidæmi: Eintækar og átækar varpanir
@@ -2343,29 +2353,35 @@ Sýnidæmi: Eintækar og átækar varpanir
         **4.** Dæmi um vörpun sem er hvorki eintæk, átæk né gagntæk: :math:`f \colon \R \rightarrow \R`, :math:`x \mapsto x^2`. Hinsvegar ef við breytum skilgreiningar- og bakmenginu í :math:`[0,\infty)` þá væri fallið gagntækt.
 
 
-
-
-
-
 Setning: Eintæk línuleg vörpun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun.
-    Þá er :math:`T` eintæk þá og því aðeins að :math:`T(\textbf{0}=\textbf{0})` hafi
-    aðeins fáfengilegu lausnina.
+    Látum :math:`A` vera :math:`m \times n` fylki og :math:`U` efra stallaform :math:`A`. Eftirfarandi skilyrði eru jafngild
 
-Setning: Átækar og eintækar línulegar varpanir 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        **1.** Það er forystustuðull í sérhverjum dálki :math:`U`.
+
+        **2.** Jafnan :math:`A \ve x = \ve 0` hefur einungis fáfengilegu lausnina, :math:`\ve x = \ve 0`.
+
+        **3.** Dálkvigrar fylkisins :math:`A` eru línulega óháðir.
+
+        **4.** Vörpunin :math:`T \colon \R^n \rightarrow \R^n`, :math:`\ve x \mapsto A \ve x` er eintæk.
+
+
+Setning: Átæk línuleg vörpun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`T\colon\mathbb{R}^n\rightarrow\mathbb{R}^m` vera línulega vörpun og
-    :math:`A` vera venjulega fylkið fyrir :math:`T`. Þá gildir
+    Látum :math:`A` vera :math:`m \times n` fylki og :math:`U` efra stallaform :math:`A`. Eftirfarandi skilyrði eru jafngild
 
-        **1.** :math:`T` er átæk þá og því aðeins að dálkar :math:`A` spanni allt :math:`\mathbb{R}^m`.
+        **1.** Það er forystustuðull í sérhverri línu :math:`U`.
 
-        **2.** :math:`T` er eintækt þá og því aðeins að dálkar :math:`A` séu línulega óháðir.
+        **2.** Fyrir sérhvert :math:`\ve b \in \R^m` þá hefur jafnan :math:`A \ve x = \ve b` lausn.
+
+        **3.** Dálkvigrar fylkisins :math:`A` spanna allt :math:`\R^m`.
+
+        **4.** Vörpunin :math:`T \colon \R^n \rightarrow \R^n`, :math:`\ve x \mapsto A \ve x` er átæk.
