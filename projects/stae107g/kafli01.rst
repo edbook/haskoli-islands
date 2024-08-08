@@ -194,6 +194,8 @@ Skilgreining: Stærð fylkis
     Fylkið :math:`A` hefur :math:`m` **línur** (e. rows), sem liggja lárétt, og :math:`n` **dálka** (e. columns), sem liggja lóðrétt.
     Við segjum að **stærð fylkis** :math:`A` sé :math:`m\times n`.
 
+    Fylki sem hefur jafn margar línur og dálka, :math:`n \times n`, kallast **ferningsfylki** (e. square matrix).
+
 .. admonition:: Minnisregla fyrir :math:`m \times n`
     :class: athugasemd
 
@@ -1543,7 +1545,7 @@ Skilgreinig: Óhliðruð jöfnuhneppi
         \end{bmatrix}\right\}m.
 
     Þessi lausn er kölluð **fáfengilega lausnin** (e. trivial solution). Ef aðrar launsir eru til eru 
-    þær kallaðar **ófáfengilegar** (e. nontrivial solutions).
+    þær kallaðar **ófáfengilegar** (e. nontrivial solutions). Stundum er fáfengilega lausnin kölluð **augljósa lausnin**.
 
 Sýnidæmi: Óhliðrað jöfnuhneppi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
