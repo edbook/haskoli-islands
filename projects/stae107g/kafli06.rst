@@ -176,7 +176,7 @@ Skilgreinig: Hornið milli
   :class: skilgreining
 
   Ef :math:`\ve u` og :math:`\ve v` eru vigrar í  :math:`\mathbb{R}^n`, sem er hvorugur núll, þá
-  skilgerinum við **hornið milli** (e. angle between) þeirra sem töluna 
+  skilgreinum við **hornið milli** (e. angle between) þeirra sem töluna 
 
   .. math:: \theta = \arccos\big(\frac{\textbf{u}\cdot\textbf{v}}{||\textbf{u}|| ||\textbf{v}||}\big)
 
@@ -202,7 +202,7 @@ Skilgreining: Hornrétt fyllirúm
 
   Látum :math:`W` vera mengi vigra í :math:`\R^n`. **Hornrétt fyllirúm** (e. orthogonal complement) er mengi :math:`W^{\perp}` allra þeirra vigra í :math:`\R^n` sem eru hornréttir á sérhvern vigur í :math:`W`, þ.e.
 
-    .. math:: W^{\perp}=\{ z \in \R^n : z \cdot w =0\ \text{fyrir alla vigra}\ w \in W \}
+    .. math:: W^{\perp}=\{ z \in \R^n : z \cdot w =0, \forall w \in W \}
 
 Setning: Hornrétt fyllirúm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -314,7 +314,8 @@ Setning: Þverstæð mengi eru línulega óháð
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`S=\{\ve u_1, \dots, \ve u_p\}` vera þverstætt hlutmengi í :math:`\R^n` sem inniheldur engan núllvigur. Þá er :math:`S` línulega óháð og er því grunnur fyrir hlutmengið spannað af :math:`S`.
+    Látum :math:`S=\{\ve u_1, \dots, \ve u_p\}` vera þverstætt hlutmengi í :math:`\R^n` sem inniheldur engan núllvigur. 
+    Þá er :math:`S` línulega óháð og er því grunnur fyrir hlutmengið spannað af :math:`S`.
 
 Þverstæðir og þverstaðlaðir grunnar
 -----------------------------------
@@ -328,13 +329,13 @@ Skilgreining: Þverstæðir og þverstaðlaðir grunnar
     
     **1.** Grunnurinn fyrir :math:`W` er **þverstæður** (e. orthogonal basis) ef sérhverjir tveir ólíkir vigrar í grunninum eru hornréttir hvor á annan, m.o.ö.
 
-        .. math:: u_i \cdot u_j =0\  \forall \ i \neq j.
+        .. math:: u_i \cdot u_j =0\  \text{ ef } \ i \neq j.
     
     **2.** Grunnurinn  fyrir :math:`W` er **þverstaðlaður** (e. orthonormal basis) ef sérhverjir tveir vigrar í grunninum eru hornréttir hvor og annan og allir vigrarnir eru einingarvigrar, m.ö.o.
 
         .. math:: u_i \cdot u_j = \begin{cases}
-            0\ \forall \ i \neq j \\
-            1\ \forall \ i = j
+            1\ \text{ ef } \ i = j \\
+            0\ \text{ ef } \ i \neq j
             \end{cases}
 
 Sýnidæmi :math:`\bf 6.6.1.1.` um þverstæð og þverstöðluð mengi er einnig dæmi um þverstæða og þverstaðlaða grunna.
@@ -465,11 +466,11 @@ Skilgreining: Hornrétt ofanvarp
   :class: skilgreining
 
   Látum :math:`\ve u \neq \ve 0` og :math:`\ve y` vera vigra í :math:`\mathbb{R}^n`.
-  Við skilgreium 
+  Við skilgreinum 
 
   .. math:: \hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}\cdot \ve u
 
-  sem **hornrétt ofanvarp** (e. orthogonal projection) :math:`\ve y` á :math:`\ve u`. Stundum er ofanvarp táknað með proj(:math:`\ve y`). 
+  sem **hornrétt ofanvarp** (e. orthogonal projection) :math:`\ve y` á :math:`\ve u`. Stundum er ofanvarp táknað með :math:`\text{proj}(\ve y)`. 
 
 Liða má vigur :math:`\ve y \in \R` upp í samsíðan og hornréttan þátt, þ.e. :math:`\ve y=\hat{\ve y}+\ve z`, eins og sjá má á eftirfarandi mynd.
 
