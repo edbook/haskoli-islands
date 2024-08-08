@@ -27,6 +27,7 @@ We can go further down the directory with ``cd``.
    :width: 600
 
 4. Run the following code
+
 .. code-block::
 
     git clone <weburl>
