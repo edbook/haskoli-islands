@@ -8,41 +8,44 @@ Nokkrar gerðir fylkja
   :class: skilgreining
 
   **Hornalínufylki** (e. diagonal matrix) er :math:`n \times n` fylki þar sem öll stök utan aðalhornalínu eru 
-  núll.
+  núll,
 
   .. math:: \begin{bmatrix}
         a_{11} & 0 & \cdots & 0 \\
         0 & a_{22} & \cdots & 0 \\
         \vdots & \vdots & \ddots & \vdots \\
         0 & 0 & \cdots & a_{nn}
-        \end{bmatrix}
+        \end{bmatrix}.
 
   **Einingarfylki** (e. identity matrix) *I*, er hornalínufylki þar sem 
-  öll stökin á hornalínu eru 1. 
+  öll stökin á hornalínu eru 1,
 
-  .. math:: I_3=I=\begin{bmatrix}
+  .. math:: I=\begin{bmatrix}
         1 & 0 & 0 \\
         0 & 1 & 0 \\
         0 & 0 & 1
-        \end{bmatrix}
+        \end{bmatrix}.
 
-  **Núllfylki** (e. zero matrix) er fylki þar sem öll stökin eru núll.
+  stundum er stærð núllfylkisins merkt með vísi, t.d. hér :math:`I_3`.
+
+  **Núllfylki** (e. zero matrix) er fylki þar sem öll stökin eru núll,
 
   .. math:: 0=\begin{bmatrix}
         0 & 0 & 0 \\
         0 & 0 & 0 \\
         0 & 0 & 0
-        \end{bmatrix}
+        \end{bmatrix}.
     
-  **Frumfylki** (e. elementary matrix) er fylki sem er fengið með því að beita einni einfaldri línuaðgerð á einingarfylkið.
+  **Frumfylki** (e. elementary matrix) er fylki sem er fengið með því að beita einni einfaldri línuaðgerð á einingarfylkið,
   
   .. math:: \begin{bmatrix}
         1 & 0 & 0 \\
         0 & 0 & 1 \\
         0 & 1 & 0
-        \end{bmatrix}
+        \end{bmatrix}.
     
-  **Þríhyrningsfylki** :math:`n \times n` fylki á forminu
+  **Þríhyrningsfylki** eru fylki sem innihalda stök ólík núll öðru hvoru megin við hornalínuna. *Efra þríhyrningsfylki* en fylki á forminu, 
+
   
   .. math:: \begin{bmatrix}
     a_{11} & a_{12} & a_{13} & \dots & a_{1n} \\
@@ -50,9 +53,9 @@ Nokkrar gerðir fylkja
     0 & 0 & a_{33} & \dots & a_{3n} \\
     \vdots & \vdots & \vdots & \ddots & \vdots \\
     0 & 0 & 0 & \dots & a_{nn} \\
-    \end{bmatrix}
+    \end{bmatrix},
   
-  kallast *efra þríhyrningsfylki* en fylki á forminu 
+  og *neðra þríhyrningsfylki*,
 
   .. math:: \begin{bmatrix}
     a_{11} & 0 & 0 & \dots & 0 \\
@@ -60,9 +63,8 @@ Nokkrar gerðir fylkja
     a_{31} & a_{32} & a_{33} & \dots & 0 \\
     \vdots & \vdots & \vdots & \ddots & \vdots \\
     a_{n1} & a_{n2} & a_{n3} & \dots & a_{nn} \\
-    \end{bmatrix}
+    \end{bmatrix}.
     
-  kallast *neðra þríhyrningsfylki*.
   
 
 Samlagning og skölun 
@@ -76,6 +78,39 @@ Setning: Samlagning fylkja
   
   Tvö jafnstór fylki eru lögð saman með því að að leggja saman stuðlana í báðum fylkjunum.
   Ekki er hægt að leggja saman misstór fylki.
+
+
+
+Setning: Reglur um fylkjasamlagningu og margföldun með tölu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning 
+    :class: setning
+
+    Látum :math:`A`, :math:`B` og :math:`C` vera :math:`m\times n` fylki og :math:`r` og :math:`s` vera rauntölur. 
+    Þá gildir:
+
+        **1.** :math:`A+B=B+A`
+
+        **2.** :math:`(A+B)+C = A+(B+C)`
+
+        **3.** :math:`A+ 0 = A`, þar sem :math:`0` er núllfylkið
+
+        **4.** :math:`r(A+B)=rA+rB`
+
+        **5.** :math:`(r+s)A= rA+sA`
+
+        **6.** :math:`r(sA)=(rs)A`
+
+.. admonition:: Rökstuðningur 
+  :class: setning, dropdown
+  
+  Auðveldast er að sanna með skoða með því að skoða hvern stuðul fyrir sig. 
+  Tökum t.d. lið 1. Ef við skoðum stuðul í sæti :math:`(i,j)` fyrir fylkið :math:`A+B` fáum við :math:`a_{ij}+b_{ij}`. 
+  En við vitum að það er sama og :math:`b_{ij}+a_{ij}` þar sem samlagning er víxlin fyrir rauntölur. 
+  En :math:`b_{ij}+a_{ij}` er einmitt stuðull :math:`B+A` í sæti :math:`(j,i)`. 
+  Þar sem stuðlar :math:`A+B` og :math:`B+A` eru alls staðar þeir sömu fylkin þau sömu einnig.
+
 
 Sýnidæmi: Samlagning fylkja
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -141,38 +176,7 @@ Sýnidæmi: Margföldun með tölu
         = \begin{bmatrix}
         3 &6 &9 \\
         12 &15 &18 \\
-        \end{bmatrix}
-
-
-Setning: Reglur um fylkjasamlagningu og margföldun með fasta
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning 
-    :class: setning
-
-    Látum :math:`A`, :math:`B` og :math:`C` vera :math:`m\times n` fylki og :math:`r` og :math:`s` vera rauntölur. 
-    Þá gildir:
-
-        **1.** :math:`A+B=B+A`
-
-        **2.** :math:`(A+B)+C = A+(B+C)`
-
-        **3.** :math:`A+ 0 = A`, þar sem :math:`0` er núllfylkið
-
-        **4.** :math:`r(A+B)=rA+rB`
-
-        **5.** :math:`(r+s)A= rA+sA`
-
-        **6.** :math:`r(sA)=(rs)A`
-
-.. admonition:: Rökstuðningur 
-  :class: setning, dropdown
-  
-  Auðveldast er að sanna með skoða með því að skoða hvern stuðul fyrir sig. 
-  Tökum t.d. lið 1. Ef við skoðum stuðul í sæti :math:`(i,j)` fyrir fylkið :math:`A+B` fáum við :math:`a_{ij}+b_{ij}`. 
-  En við vitum að það er sama og :math:`b_{ij}+a_{ij}` þar sem samlagning er víxlin fyrir rauntölur. 
-  En :math:`b_{ij}+a_{ij}` er einmitt stuðull :math:`B+A` í sæti :math:`(j,i)`. 
-  Þar sem stuðlar :math:`A+B` og :math:`B+A` eru alls staðar þeir sömu fylkin þau sömu einnig.
+        \end{bmatrix}.
 
 Fylkjamargföldun 
 ----------------
@@ -189,9 +193,8 @@ Skilgreining: Fylkjamargföldun
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Gefið  :math:`A` sem er :math:`m\times p` fylki og :math:`B` sem :math:`p\times n` fylki. Ef dálkvigrar :math:`B` eru 
-    :math:`\textbf{b}_1,\ldots, \textbf{b}_n` þannig að :math:`B=[\textbf{b}_1 \ldots \textbf{b}_n]` þá 
-    skilgreinum við :math:`AB=[A\textbf{b}_1 \ldots A\textbf{b}_n]`.
+    Látum  :math:`A` vera :math:`m\times p` fylki og :math:`B=[\textbf{b}_1 \ldots \textbf{b}_n]` vera :math:`p \times n` fylki. 
+    Fylkjamargföldun þeirra er skilgreind :math:`AB=[A\textbf{b}_1 \ldots A\textbf{b}_n]`.
 
 .. admonition:: Aðvörun
     :class: advorun
@@ -373,8 +376,8 @@ Skilgreining: Bylt fylki
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Ef :math:`A` er :math:`m\times n` fylki þá látum við *bylta fylkið* :math:`A^T`  (e. transpose) vera :math:`n\times m` fylkið 
-    sem fæst með því að láta línur :math:`A` mynda dálka :math:`A^T`, í sömu röð og í upprunarlega fylkinu. 
+    Ef :math:`A` er :math:`m\times n` fylki þá skilgreinum við *bylta fylkið* :math:`A^T`  (e. transpose) sem :math:`n\times m` fylkið 
+    sem fæst með því að mynda dálvigra úr línuvigrum :math:`A` og öfugt. 
     Höfum því :math:`A^T_{ij}=A_{ji}`.
 
 Sýnidæmi: Bylt fylki
@@ -433,6 +436,12 @@ Setning: Reiknireglur fyrir bylt fylki
 
         **4.** :math:`(AB)^T = B^TA^T`
 
+.. admonition:: Aðvörun 
+  :class: advorun
+
+  Fylkjamargföldun er almennt ekki víxlin, þ.e. :math:`AB \neq BA`. Röðin á byltingu margföldunar skiptir máli!
+
+
 Sýnidæmi: Hegðun byltra fylkja
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -457,37 +466,45 @@ Sýnidæmi: Hegðun byltra fylkja
     3 & 6 & 9 \end{bmatrix}
 
                     
-Andhverfa fylkja
+Andhverfur fylkja
 -----------------
 
 Látum :math:`T\colon \mathbb{R}^n\to\mathbb{R}^n` vera gagntæka línulega vörpun með samsvarandi fylki :math:`A`. Fyrst :math:`T` er gagntæk á hún sér andhverfu :math:`T^{-1}`.
 Hægt er að sýna að þessi andhverfa er líka línuleg og því má tákna hana með venjulegu fylki hennar sem við skulum kalla :math:`C`.
 Við vitum að
 
-.. math:: (CA)\textbf{x}=T(T^{-1}(\textbf{x}))=\textbf{x} \text{, fyrir öll } \textbf{x}
+.. math:: (CA)\textbf{x}=T(T^{-1}(\textbf{x}))=\textbf{x}
 
-svo að :math:`(CA)` hlýtur að vera einingarfylkið. Það sama gildir um :math:`AC`. 
+fyrir öll :math:`x`, svo að :math:`(CA)` hlýtur að vera einingarfylkið. Það sama gildir um :math:`AC`. 
 
-Skilgreining: Andhverfanleiki
+Skilgreining: Andhverfur fylkja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreining
+.. admonition:: Skilgreinig
     :class: skilgreining
 
-    Almennt tölum við um að :math:`n\times n` fylki :math:`A` sé **andhverfanlegt** (e. invertible) ef til er fylki :math:`C` þannig að
+    :math:`n\times n` fylki :math:`A` er **andhverfanlegt** (e. invertible) ef til er fylki :math:`C` þannig að
 
-    .. math:: AC = CA = I
+    .. math:: AC = CA = I.
 
-    Fylkið :math:`C` kallast þá **andhverfa** :math:`A` (e. inverse). 
+    Fylkið :math:`C` kallast þá **andhverfa** :math:`A` (e. inverse), og er táknað með :math:`A^{-1}`. 
     Ef :math:`A` er ekki andhverfanlegt á segjum við það sé **óandhverfanlegt** (e. singular).
 
-    Hvert fylki hefur aðeins eina andhverfu. Ef :math:`B` og :math:`C` er bæði andhverfur :math:`A` fæst: 
+Setning: Andhverfa er ótvírætt ákvörðuð
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    .. math:: B = IB = (CA)B = CAB = C(AB) = CI = C 
+.. admonition:: Setning
+    :class: setning
 
-    Við táknum því andhverfu :math:`A` með :math:`A^{-1}`. Þá er 
+    Sérhvert fylki hefur aðeins eina andhverfu. Hugsum okkur að :math:`B` og :math:`C` séu tvær mismunandi andhverfur :math:`A`. Við fáum að 
 
-    .. math:: A\cdot A^{-1} = A^{-1}\cdot A = I
+    .. math:: B = IB = (CA)B = CAB = C(AB) = CI = C.
+
+    Táknum andhverfu :math:`A` með :math:`A^{-1}`, þ.e.
+
+    .. math:: A\cdot A^{-1} = A^{-1}\cdot A = I.
+    
+    Við sjáum að andhverfa fylkis er ótvírætt ákvörðuð.
     
 Sýnidæmi: Eru fylkin andhverfanleg?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -497,24 +514,22 @@ Sýnidæmi: Eru fylkin andhverfanleg?
     
   Eru eftirfarandi fylki andhverfanleg?
   
-  .. math::  \begin{bmatrix}
+  .. math::  A =\begin{bmatrix}
     0 & 0 \\
     0 & 0 \\
-    \end{bmatrix} \text{ , } \begin{bmatrix}
+    \end{bmatrix}, \quad B= \begin{bmatrix}
     1 & 0 \\
     0 & 0 \\
-    \end{bmatrix} \text{ , } \begin{bmatrix}
+    \end{bmatrix}, \quad C= \begin{bmatrix}
     1 & 0 \\
     0 & 2 \\
-    \end{bmatrix}
+    \end{bmatrix}.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
     
   Til að leita að andhverfum skulum við margfalda þessi fylki með almennu :math:`2\times 2` fylki og athuga
-  hvað þarf að gilda til að það sé andhverfa.
-  
-  Höfum að
+  hvort mögulegt sé að finna andhverfu þeirra. Fáum
   
   .. math:: \begin{bmatrix}
     0 & 0 \\
@@ -525,9 +540,9 @@ Sýnidæmi: Eru fylkin andhverfanleg?
     \end{bmatrix} = \begin{bmatrix}
     0 & 0 \\
     0 & 0 \\
-    \end{bmatrix} \neq I
+    \end{bmatrix} \neq I,
 
-  svo að núllfylkið getur ekki verið andhverfanlegt.
+  svo að núllfylkið :math:`A` á sér ekki andhverfu. Því næst,
   
   .. math:: \begin{bmatrix}
     1 & 0 \\
@@ -538,9 +553,9 @@ Sýnidæmi: Eru fylkin andhverfanleg?
     \end{bmatrix} = \begin{bmatrix}
     a & b \\
     0 & 0 \\
-    \end{bmatrix} \neq I 
+    \end{bmatrix} \neq I, 
 
-  svo þetta fylki getur heldur ekki verið andhverfanlegt. Loks höfum við að
+  svo fylkið :math:`B` getur heldur ekki verið andhverfanlegt. Loks höfum við að
   
   .. math:: \begin{bmatrix}
     1 & 0 \\
@@ -551,22 +566,15 @@ Sýnidæmi: Eru fylkin andhverfanleg?
     \end{bmatrix} = \begin{bmatrix}
     a & b \\
     2c & 2d \\
-    \end{bmatrix}
+    \end{bmatrix},
 
   svo ef við veljum :math:`a=1, b=c=0` og :math:`d=\frac{1}{2}` fáum við einingarfylkið út úr margfölduninni. 
-  Því er fylkið
-  
-  .. math:: \begin{bmatrix}
-    1 & 0 \\
-    0 & 2 \\
-    \end{bmatrix}
-    
-  andhverfanlegt og hefur andhverfu
+  Því er fylki :math:`C` andhverfanlegt og er andhverfa þess
   
   .. math:: \begin{bmatrix}
     1 & 0 \\
     0 & \frac{1}{2} \\
-    \end{bmatrix}
+    \end{bmatrix}.
 
 
 Setning: Andhverfa :math:`2\times 2` fylkja
