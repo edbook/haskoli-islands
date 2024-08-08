@@ -38,7 +38,7 @@ Sýnidæmi: Eigingildi
     
     .. math:: A\textbf{x} = \begin{bmatrix}
         2\\0\end{bmatrix} = 2 \begin{bmatrix}
-        1\\0\end{bmatrix} = \textbf{x}
+        1\\0\end{bmatrix} = 2 \textbf{x}
     
     svo 2 er eigingildi :math:`A` og :math:`\textbf{x}` er tilsvarandi eiginvigur.
 
@@ -69,23 +69,24 @@ Sýnidæmi: Eigingild og eiginvigrar
 
     .. math:: A-\lambda I = \begin{bmatrix}2-\lambda & 1 \\ 9 & 2-\lambda\end{bmatrix} (*)
 
-    að vera óandhverfanlegt og hafa þannig ákveðuna 0. Þá er
+    að vera óandhverfanlegt og hafa þannig ákveðuna 0. Höfum að
 
     .. math:: \begin{align*}
         \begin{vmatrix}
         2-\lambda & 1 \\ 9 & 2-\lambda
         \end{vmatrix}
         &= (2-\lambda)^2-9\\&= \lambda^2-4\lambda+4-9\\&=\lambda^2-4\lambda-5\\& =
-        (\lambda-5)(\lambda+1)=0  
+        (\lambda-5)(\lambda+1)  
         \end{align*}
 
+    svo ef :math:`A-\lambda I` er óandhverfanlegt þá er :math:`(\lambda-5)(\lambda+1)=0` 
     sem gefur að :math:`\lambda = 5` eða :math:`\lambda =-1`.
 
     Tökum :math:`\lambda=5` og þá fæst að við erum að reyna að leysa jöfnuhneppið (*) sem er þá
 
     .. math:: \begin{bmatrix}
         -3 & 1\\
-        9&-3
+        9 & -3
         \end{bmatrix} \sim \begin{bmatrix}
         1 & -1/3\\
         0 & 0
@@ -119,55 +120,49 @@ Sýnidæmi: Eiginrúm fylkis
     :class: daemi
 
     Gefið er að 3 og 4 eru eigingildi fylkisins :math:`A`. Finnið 
-    eiginrúm :math:`A` m.t.t. eigingildisins 3 og 4.
+    eiginrúm :math:`A` með tilliti til eigingildanna.
 
     .. math:: A=\begin{bmatrix} 1 & 3 \\ -2 & 6 \end{bmatrix}
     
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Við viljum þá leysa :math:`(A-3I)\textbf{x}=0`. Fáum
+    Við byrjum á að finna eiginrúmið sem tilheyrir eigingildinu :math:`\lambda=3`. 
+    Til þess leysum við jöfnuna :math:`(A-3I)\textbf{x}=0`. Fáum
 
     .. math:: A-3I=
         \begin{bmatrix}
         -2 & 3\\
         -2 & 3
         \end{bmatrix}
-        \sim \dots \sim \begin{bmatrix}
+        \sim \begin{bmatrix}
         -2 & 3\\
         0 & 0 
         \end{bmatrix}
     
-    og viljum leysa :math:`(A-4I)\textbf{x}=0`.
-
-    sem gefur :math:`x_2+x_3=0` og :math:`x_1` er frjáls breyta. 
-    Fáum að almenn lausn er 
+    svo að :math:`\ve{x}=\begin{bmatrix}x_1\\x_2\end{bmatrix}=x_2\begin{bmatrix}3\\2\end{bmatrix}` er lausn á jöfnunni.
+    Við getum því séð að :math:`\begin{bmatrix}3\\2\end{bmatrix}` er eiginvigur með eigingildi :math:`\lambda=3` og því er
+    :math:`E(3)=\spn{\begin{bmatrix}3\\2\end{bmatrix}}`.
+    
+    Gerum nú það sama fyrir eigingildið :math:`\lambda=4`. Þá þurfum við að leysa :math:`(A-4I)\textbf{x}=0`.
+    Fáum að
 
     .. math:: A-4I=
         \begin{bmatrix}
         -3 & 3\\
         -2 & 2
         \end{bmatrix}
-        \sim \dots \sim \begin{bmatrix}
+        \sim \begin{bmatrix}
         1 & -1\\
         -2 & 2 \\
         \end{bmatrix}
-        \sim \dots \sim \begin{bmatrix}
+        \sim \begin{bmatrix}
         1 & -1\\
         0 & 0 \\
         \end{bmatrix}
     
-    
-    svo eiginrúmið er
-
-    .. math:: \spn \left\{\begin{bmatrix}
-        3\\
-        2
-        \end{bmatrix},
-        \begin{bmatrix}
-        1\\
-        1
-        \end{bmatrix}\right\}
+    svo að með sömu rökum er :math:`\begin{bmatrix}1\\1\end{bmatrix}` eiginvigur með eigingildi :math:`\lambda=4`
+    og því er :math:`E(4)=\spn{\begin{bmatrix}1\\1\end{bmatrix}}`.
 
 
 Setning: Eigingildi þríhyrningsfylkja
@@ -211,7 +206,7 @@ Setning: Kennijafnan
 .. admonition:: Setning 
     :class: setning 
     
-    Jafna :math:`\det(A-\lambda I)=0` kallast **kennijafna** (e. characteristic equation) fylkisins A. 
+    Jafnan :math:`\det(A-\lambda I)=0` kallast **kennijafna** (e. characteristic equation) fylkisins A. 
 
 Sýnidæmi: Kennijafnan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -230,7 +225,7 @@ Sýnidæmi: Kennijafnan
     :class: daemi, dropdown
 
     Til að finna eiginvigra þarf að finna ekki-augljósa lausn á jöfnunni :math:`(A-\lambda I)\textbf{x} = \textbf{0}`. Til þess þarf að gilda 
-    :math:`\text{det}(A - \lambda I) = 0`.
+    :math:`\det(A - \lambda I) = 0`.
     
     Reiknum
 
@@ -239,10 +234,10 @@ Sýnidæmi: Kennijafnan
         10-\lambda & 2 \\
         9 & 3-\lambda
         \end{vmatrix} 
-        &= (10-\lambda)(3-\lambda) - (2 \cdot 9) = \lambda^2 - 13\lambda + 12 = \\&= (\lambda-12)(\lambda -1) = 0
+        &= (10-\lambda)(3-\lambda) - (2 \cdot 9) = \lambda^2 - 13\lambda + 12 = \\&= (\lambda-12)(\lambda -1).
         \end{align*}
     
-    svo við fáum tvö eigingildi :math:`\lambda = 1` og :math:`\lambda=12`.
+    Þessi ákveða er jöfn :math:`0` þegar :math:`(\lambda-12)(\lambda -1)=0` við fáum því tvö eigingildi, :math:`\lambda = 1` og :math:`\lambda=12`.
     Skoðum fyrst eigingildið :math:`\lambda = 1`
 
     .. math:: (A - \lambda I)\textbf{x}= \begin{bmatrix}
@@ -577,7 +572,7 @@ Sýnidæmi: Er fylkið hornalínugeranlegt
 .. admonition:: Dæmi
     :class: daemi
 
-    Er fylkið :math: A=`\begin{bmatrix} 1 & 2 & 3\\ 0 & 4 & 5 \\ 0 & 0 & 6\end{bmatrix}` hornalínugeranlegt?
+    Er fylkið :math:`A=\begin{bmatrix} 1 & 2 & 3\\ 0 & 4 & 5 \\ 0 & 0 & 6\end{bmatrix}` hornalínugeranlegt?
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -641,7 +636,7 @@ Sýnidæmi: Eiginvigrar línulegra varpana
 
     .. math:: T(p(x))=T(1)=2=2\cdot 1=2p(x)
     
-    svo :math:`p(x)=1` er líka eiginvigur :math:`T`, líka eigingildi :math:`\lambda=2`.
+    svo :math:`p(x)=1` er líka eiginvigur :math:`T` og hefur einnig eigingildið :math:`\lambda=2`.
 
 Setning: Fylki línulegra varpana í :math:`V`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
