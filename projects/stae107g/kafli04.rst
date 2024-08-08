@@ -816,9 +816,9 @@ Skilgreining: Vídd
 .. admonition:: Athugasemd
     :class: athugsemd
 
-        - Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.
+    - Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.
 
-        - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
+    - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
 
 Sýnidæmi: Vídd
 ^^^^^^^^^^^^^^
