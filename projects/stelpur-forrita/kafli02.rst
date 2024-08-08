@@ -19,9 +19,10 @@ On Windows, it is called the Command Prompt (shortcut: `Windows+r` key then type
 On Mac or Linux systems, it is called the Terminal (shortcut: `Command+r` key).
 
 2. Navigate to the correct directory ``C:\Users\username\Documents``.
-We can further down the directory with ``cd``.
+We can go further down the directory with ``cd``.
 
-3. Get the repository web url 
+3. Get the repository web url, this is usually the url of the repository ending with ``.git``.
+
 .. image:: myndir/weburl.png
    :width: 600
 
@@ -30,4 +31,4 @@ We can further down the directory with ``cd``.
 
     git clone <weburl>
 
-5. Success metric: ``C:\Users\username\Documents\example-repo`` exists.
+5. Success metric: The project folder for ``example-repo`` exists at ``C:\Users\username\Documents\example-repo``.
