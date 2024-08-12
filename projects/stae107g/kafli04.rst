@@ -49,7 +49,7 @@ Nokkrar afleiðingar af þessari skilgreiningu eru að:
 
     - Fyrir sérhvern vigur :math:`\ve u\in V` gildir að :math:`0\ve u = \ve 0`.
     - Fyrir sérhverja tölu :math:`c` gildir að :math:`c\ve 0 = \ve 0`.
-    - Fyrir serhvern vigur :math:`\ve u\in V` er vigurinn :math:`-\ve u` ótvírætt ákvarðaður.
+    - Fyrir sérhvern vigur :math:`\ve u\in V` er vigurinn :math:`-\ve u` ótvírætt ákvarðaður.
     - Fyrir sérhvern vigur :math:`\ve u\in V` gildir að :math:`-\ve u=(-1)\ve u`.
     - Núllvigurinn er ótvírætt ákvarðaður.
 
@@ -245,7 +245,7 @@ Skilgreining: Núllrúm fylkis
 
     .. math:: \nul{A}=\{\ve x\in\R^n\colon A\ve x=\ve 0\}
 
-    Núllrúmið er semsagt mengi allra lausna jöfnunar :math:`A\ve x=\ve 0`.
+    Núllrúmið er sem sagt mengi allra lausna jöfnunar :math:`A\ve x=\ve 0`.
 
 
 Setning: Núllrúm er hlutrúm 
