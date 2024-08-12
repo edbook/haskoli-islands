@@ -71,7 +71,7 @@ After working on your local repository, it is good practice to check which branc
 To do this we type in the command ``git status`` on the CLI on the local repository folder, for example ``C:\Users\username\Documents\example-repo``.
 
 Then, we put the new/modified files to the staging area by using the command ``git add <file name>``.
-If you want to commit the changes to all files, we can use the command ``git add .``.
+We can use the command ``git add .`` if you want to commit the changes to all files.
 
 When we are happy with the collection of files we have, we can commit the changes to the project.
 For this we use the command ``git commit -m "<commit message>"``.
