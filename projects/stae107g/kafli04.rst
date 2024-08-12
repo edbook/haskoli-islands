@@ -662,9 +662,7 @@ Setning: Að finna grunn fyrir dálkrúm
     :class: setning
 
     Látum :math:`A` vera fylki og :math:`U` vera efra stallaform þess.
-    
-    Dálkar :math:`A` sem hafa forystustuðull 
-    í efra stallaforminu :math:`U` mynda grunn fyrir dálkrúm :math:`A`. 
+    Dálkar :math:`A` sem hafa forystustuðull í :math:`U` mynda grunn fyrir dálkrúm :math:`A`. 
 
 
 .. admonition:: Athugasemd
@@ -684,12 +682,12 @@ Sýnidæmi: Grunnur fyrir dálkrúm
     .. math:: A=\begin{bmatrix} 1 & 2 & 3 & 4 & 5 \\
         6 & 7 & 8 & 9 & 10\\
         11 & 12 & 13 & 14 & 15
-        \end{bmatrix}
+        \end{bmatrix}.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Einfaldar línuaðgerðir gefa
+    Beitum einföldum línuaðgerðum þar til efra stallaform fæst
 
     .. math:: \begin{bmatrix}
         1  & 2 & 3 & 4 & 5\\
@@ -700,12 +698,12 @@ Sýnidæmi: Grunnur fyrir dálkrúm
         1  & 0 & -1 & -2 & -3\\
         0 & 1 & 2 & 3 &4\\
         0 & 0 & 0 & 0 & 0
-        \end{bmatrix}
+        \end{bmatrix}.
     
-    Köllum síðara fylkið :math:`U`. Með því að skoða 
+    Köllum síðara fylkið :math:`U= [\bf u_1 \dots u_5]`. Með því að skoða 
     :math:`U` má sjá að dálkvigrarnir eru ekki línulega óháðir. 
     Sjáum að :math:`\ve u_3, \ve u_4` og :math:`\ve u_5` eru línuleg samantekt 
-    af :math:`\ve u_1` og :math:`\ve u_2`. Því er :math:`\col{A}=span\{\ve a_1, \ve a_2\}`.
+    af :math:`\ve u_1` og :math:`\ve u_2`. Því er :math:`\col{A} = \text{Span}\{\ve a_1, \ve a_2 \}`.
     Við fáum því að 
     
     .. math:: \left\{ \begin{bmatrix} 1 \\ 6\\ 11 \end{bmatrix}, \begin{bmatrix} 2 \\ 7 \\ 1 \end{bmatrix} \right\}
@@ -719,12 +717,12 @@ Setning: Tveir eiginleikar grunna
     :class: setning
 
     Látum :math:`V` vera vigurrúm og :math:`S` vera endanlegt mengi sem spannar :math:`V`.
-    Þá inniheldur :math:`S` grunn fyrir :math:`V`
+    Þá inniheldur :math:`S` grunn fyrir :math:`V`.
 
-    Ef :math:`T` er línulega óháð hlutmengi í :math:`V` þá er :math:`T` innihaldið í einhverjum(ekki endilega þeim sama og :math:`S` inniheldur) 
+    Ef :math:`R` er línulega óháð hlutmengi í :math:`V` þá er :math:`R` innihaldið í einhverjum (ekki endilega þeim sama og :math:`S` inniheldur) 
     grunni fyrir :math:`V`.
 
-    Þetta má orða sem svo: Grunnur er eins lítið spannmengi og eins stórt línulega óháð mengi í vigurrúmi og mögulegt er.
+    Þetta má orða sem svo: *Grunnur er eins lítið spannmengi og eins stórt línulega óháð mengi í vigurrúmi og mögulegt er*.
 
 Setning: Um tilvist hnita 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -732,32 +730,30 @@ Setning: Um tilvist hnita
 .. admonition:: Setning
     :class: setning
 
-    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúmið :math:`V`.
-    Þá gildir fyrir sérhvern vigur :math:`\ve v` í :math:`V` að til eru *ótvírætt* ákvarðaðar tölur :math:`c_1, c_2, \ldots, c_n`
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir :math:`V`.
+    Þá gildir fyrir sérhvern vigur :math:`\ve v\in V` að til eru *ótvírætt* ákvarðaðar tölur :math:`c_1, c_2, \ldots, c_n`
     þannig að
 
-    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n 
+    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n.
 
-    Athugasemdir:
-    - Þetta má orða á þann hátt að jafnan :math:`x_1\ve b_1 + x_2\ve b_2 + \ldots + x_n\ve b_n=\ve v` hafi nákvæmlega eina lausn.
-    - Þetta má einnig orða þannig að fyrir gefinn grunn þá er til nákvæmlega ein leið til að rita gefinn vigur sem línulega samantekt vigranna í grunninum.
+    Þetta má orða á þann hátt að jafnan :math:`x_1\ve b_1 + x_2\ve b_2 + \ldots + x_n\ve b_n=\ve v` hafi nákvæmlega eina lausn, þ.e. fyrir gefinn grunn þá er til nákvæmlega ein leið til að rita gefinn vigur sem línulega samantekt vigranna í grunninum.
 
-Skilgreining: Hnit
-~~~~~~~~~~~~~~~~~~
+Skilgreining: :math:`\mathcal{B}`-hnit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúmið :math:`V`.
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir :math:`V`.
     Tölurnar :math:`c_1, c_2, \ldots, c_n` þannig að 
 
-    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n 
+    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n,
 
-    kallast hnit vigursins :math:`\ve v` með tilliti til grunsins :math:`\mathcal{B}` (e. coordinates of :math:`v` relative to the basis :math:`\mathcal{B}`). 
-    Við tölum líka um :math:`\mathcal{B}`-hnit vigursins :math:`v` (e. :math:`\mathcal{B}`-coordinates of :math:`v`).
+    kallast **hnit vigursins** :math:`\ve v` **með tilliti til grunsins** :math:`\mathcal{B}` (e. coordinates of :math:`\ve v` relative to the basis :math:`\mathcal{B}`). 
+    Við tölum líka um :math:`\mathcal{B}`-hnit vigursins :math:`\ve v` (e. :math:`\mathcal{B}`-coordinates of :math:`\ve v`).
 
-Skilgreining: Hnitavigur
-~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Hnitavigur :math:`[\ve x]_{\mathcal{B}}`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -767,11 +763,11 @@ Skilgreining: Hnitavigur
 
     .. math:: [\ve x]_{\mathcal{B}}=\begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}
 
-    sé hnitavigur :math:`\ve x` með tilliti til grunnsins :math:`\mathcal{B}` 
+    sé **hnitavigur** :math:`\ve x` **með tilliti til grunnsins** :math:`\mathcal{B}` 
     (e. coordinate vector of :math:`x` relative to :math:`\mathcal{B}`, or :math:`\mathcal{B}`-coordinate vector). 
 
 
-Sýnidæmi: Að skipta úr :math:`\mathcal{B}` í :math:`\mathcal{S}`
+Sýnidæmi: Að skipta um grunn
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
@@ -782,8 +778,7 @@ Sýnidæmi: Að skipta úr :math:`\mathcal{B}` í :math:`\mathcal{S}`
     .. math:: \mathcal{B} = \{\ve b_1, \ve b_2\}= \left\{\begin{bmatrix} -1 \\ 3 \end{bmatrix},
         \begin{bmatrix} 2 \\ 2 \end{bmatrix}\right\}
     
-    Gefið er að :math:`\ve x` hefur hnitin :math:`\begin{bmatrix} 1 \\ 2 \end{bmatrix}`
-    með tillit til :math:`\mathcal{B}`. Finnið hnit :math:`\ve x` með tillit til venjulega grunnsins :math:`\mathcal{S}`.
+    Vigurinn :math:`\ve x` með tillit til :math:`\mathcal{B}` hefur hnitin  :math:`[\ve x]_{\mathcal{B}}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}`. Finnið hnit :math:`\ve x` með tillit til venjulega grunnsins :math:`\mathcal{S}=\{\ve e_1, \ve e_2 \}`, þ.e. finnið :math:`[\ve x]_{\mathcal{S}}`.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -799,7 +794,7 @@ Sýnidæmi: Að skipta úr :math:`\mathcal{B}` í :math:`\mathcal{S}`
         \end{bmatrix}=
         \begin{bmatrix}
         3\\7
-        \end{bmatrix}
+        \end{bmatrix}.
 
 Skilgreining: Hnitavörpun
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -811,7 +806,7 @@ Skilgreining: Hnitavörpun
 
     .. math:: V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}
 
-    kallast hnitavörpunin með tilliti til :math:`\mathcal{B}` (e. coordiante mapping determined by :math:`\mathcal{B}`).
+    kallast **hnitavörpunin með tilliti til** :math:`\mathcal{B}` (e. coordiante mapping determined by :math:`\mathcal{B}`).
 
 
 Vídd og rankur
@@ -823,7 +818,7 @@ Setning: Línulegt hæði mengja stærri en grunns
 .. admonition:: Setning
     :class: setning
 
-    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúm :math:`V`. 
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir :math:`V`. 
     Mengi (eða upptalning) með fleiri en :math:`n` vigrum er línulega háð.
 
 Setning: Um stærð grunna 
@@ -840,10 +835,9 @@ Skilgreining: Vídd
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Ef til er endanlegt mengi vigra sem spanna vigurrúm :math:`V` þá segjum við að :math:`V` hafi endanlega vídd (e. finite-dimensional). 
-    Vídd vigurrúmsins :math:`V` er þá skilgreind sem fjöldi vigra í grunni fyrir :math:`V` og er táknuð með :math:`\dim{V}`.
-
-    Ef slíkt mengi er ekki til þá segjum við að :math:`V` hafi óendanlega vídd.
+    **Vídd** (e. dimension) vigurrúms :math:`V` er skilgreind sem fjöldi vigra í grunni :math:`V` og er táknuð með :math:`\dim{V}`.
+    Ef til er endanlegt mengi vigra sem spannar vigurrúm :math:`V` þá segjum við að :math:`V` hafi **endanlega vídd** (e. finite-dimensional). 
+    Ef slíkt mengi er ekki til þá segjum við að :math:`V` hafi **óendanlega vídd**.
 
 
 .. admonition:: Athugasemd
@@ -851,7 +845,7 @@ Skilgreining: Vídd
 
     - Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.
 
-    - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern einn grunn til að segja til um víddina.
+    - Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern grunn til að segja til um víddina.
 
 Sýnidæmi: Vídd
 ^^^^^^^^^^^^^^
@@ -859,11 +853,11 @@ Sýnidæmi: Vídd
 .. admonition:: Dæmi
     :class: daemi
 
-    - Vigurrúmið :math:`\mathbb{R}^1` hefur víddina 1.
+    **1.** Vigurrúmið :math:`\mathbb{R}^1` hefur víddina 1.
     
-    - Vigurrúmið :math:`\mathbb{R}^3` hefur víddina 3.
+    **2.** Vigurrúmið :math:`\mathbb{R}^3` hefur víddina 3.
 
-    - Vigurrúmið :math:`\mathbb{R}^n` hefur víddina :math:`n`.
+    **3.** Vigurrúmið :math:`\mathbb{R}^n` hefur víddina :math:`n`.
 
 Setning: Vídd hlutrúms
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -873,9 +867,9 @@ Setning: Vídd hlutrúms
 
     Látum :math:`H` vera hlutrúm í endanlega víðu vigurrúmi :math:`V`.
 
-    **a.** Ef við höfum línulega óháð mengi vigra í :math:`H` þá má bæta við það vigrum til að smíða grunn fyrir :math:`V`.
+        **a.** Ef við höfum línulega óháð mengi vigra í :math:`H` þá má bæta við það vigrum til að smíða grunn fyrir :math:`V`.
 
-    **b.** :math:`\dim{H}\leq\dim{V}`.
+        **b.** :math:`\dim{H}\leq\dim{V}`.
 
 Setning: Samsemd línulegs óhæðis og spanns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -885,11 +879,14 @@ Setning: Samsemd línulegs óhæðis og spanns
 
     Látum :math:`V` vera vigurrúm með vídd :math:`n`.
 
-    **a.** Sérhvert mengi af :math:`n` línulega óháðum vigrum í :math:`V` er grunnur fyrir :math:`V`.
+        **a.** Sérhvert mengi af :math:`n` línulega óháðum vigrum í :math:`V` er grunnur fyrir :math:`V`.
 
-    **b.** Sérhvert mengi af :math:`n` af vigrum í :math:`V` sem spanna :math:`V` er grunnur fyrir :math:`V`.
+        **b.** Sérhvert mengi af :math:`n` af vigrum í :math:`V` sem spanna :math:`V` er grunnur fyrir :math:`V`.
 
-    Athugasemd: Grunnur fyrir vigurrúm þarf að uppfylla tvö skilyrði. Hann þarf að vera línulega óháður og spanna allt vigurrúmið.
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Grunnur fyrir vigurrúm þarf að uppfylla tvö skilyrði. Hann þarf að vera línulega óháður og spanna allt vigurrúmið.
     Það nægir að tékka annað skilyrðið því hitt fylgir sjálfkrafa.
 
 Setning: Forystustuðlar og vídd
@@ -900,10 +897,10 @@ Setning: Forystustuðlar og vídd
 
     Látum :math:`A` vera :math:`m\times n` fylki og :math:`U` (einhvert) efra stallaform :math:`A`. 
 
-    **a.** Vídd :math:`\nul{A}` er jöfn fjölda frjálsra breyta, það er að segja víddin er jöfn fjölda dálka í :math:`U` 
-    sem innihalda ekki forystustuðul.
+        **a.** Vídd :math:`\nul{A}` er jöfn fjölda frjálsra breyta, það er að segja víddin er jöfn fjölda dálka í :math:`U` 
+        sem innihalda ekki forystustuðul.
 
-    **b.** Vídd :math:`\col{A}` er jöfn fjölda dálka í :math:`U` sem innihalda forystustuðul (Víddin er jöfn fjölda forystustuðla).
+        **b.** Vídd :math:`\col{A}` er jöfn fjölda dálka í :math:`U` sem innihalda forystustuðul (Víddin er jöfn fjölda forystustuðla).
 
 Skilgreining: Línurúm 
 ~~~~~~~~~~~~~~~~~~~~~
