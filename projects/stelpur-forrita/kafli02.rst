@@ -80,7 +80,7 @@ Committing a change will involve a commit message which acts as documentation on
 Documentation is important as it will help future you trace any mistakes that happened in the past so that you can fix it.
 Employers also often check your GitHub public repositories to see the quality of your work and documentation as it is an important skill to have when working in teams.
 
-**Further reading**: `How to make quality commit messages <https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60>`auth_title 
+**Further reading**: `How to make quality commit messages <https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60>`_ 
 
 After committing the changes, we can push the change to the remote repository.
 To do this, the command is ``git push``.
