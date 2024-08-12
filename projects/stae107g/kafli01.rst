@@ -1226,7 +1226,7 @@ Skilgreining: Margfeldi fylkis og vigurs
 .. admonition:: Minnisregla
     :class: athugasemd
 
-    Hugsa má margfeldi fylkis :math:`A` með vigri :math:`\ve x` sem margfeldi sérhverrar  línu í :math:`A` með dálkvigrinum :math:`\ve x`.
+    Hugsa má margfeldi fylkis :math:`A` með vigri :math:`\ve x` sem margfeldi sérhverrar línu í :math:`A` með dálkvigrinum :math:`\ve x`.
 
     .. math:: \begin{bmatrix}
         \rightarrow\\
@@ -2063,7 +2063,7 @@ Línulegar varpanir
 ------------------
 
 **Vörpun** (e. map, mapping, transformation) frá mengi :math:`A` yfir í mengi :math:`B` er „regla" 
-sem úthlutar sérhverju staki úr :math:`A` nákvmlega einu staki úr :math:`B`, yfirleitt táknað :math:`f: A \rightarrow  B`. Mengið :math:`A` kallast **skilgreiningarmengi/formengi** (e. domain) og :math:`B` **ráðstöfunarmengi/bakmengi** (e. codomain) vörpunarinnar :math:`f`.
+sem úthlutar sérhverju staki úr :math:`A` nákvmlega einu staki úr :math:`B`, yfirleitt táknað :math:`f: A \rightarrow B`. Mengið :math:`A` kallast **skilgreiningarmengi/formengi** (e. domain) og :math:`B` **ráðstöfunarmengi/bakmengi** (e. codomain) vörpunarinnar :math:`f`.
 
 
 Látum :math:`A` vera :math:`m \times n` fylki. Skilgreinum vörpun :math:`T: \mathbb{R}^n \rightarrow \mathbb{R}^m`
