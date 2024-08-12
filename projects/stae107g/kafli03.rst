@@ -144,7 +144,7 @@ Sýnidæmi: Ákveða :math:`3 \times 3` fylkis
 
 Þessi aðferð kallast að *liða eftir línu eða dálk* eftir því sem við á. Í dæminu hér að ofan var liðað eftir línu 1.
 Athugið að velja má hvaða línu/dálk liðað er eftir og hentugast er að velja þá línu/dálk sem hefur flest :math:`0`.
-Við sjáum að ákveða fylkis sem hefur núllínu eða núlldálk er alltaf :math:`0`.
+Við sjáum að ákveða fylkis sem hefur núlllínu eða núlldálk er alltaf :math:`0`.
 
 .. admonition:: Athugasemd
     :class: athugasemd
@@ -315,9 +315,9 @@ Sýnidæmi: Ákveður frumfylkja
         \end{bmatrix}.
         
     
-  Með einföldum útreiningum er auðvelt að sannfæra sig um að :math:`\det(E)=-1`.
+  Með einföldum útreikningum er auðvelt að sannfæra sig um að :math:`\det(E)=-1`.
 
-  **3**. Skölun. Látum :math:`E` vera frumfylkið sem fæst með því að margalda línu með tölu, t.d.
+  **3**. Skölun. Látum :math:`E` vera frumfylkið sem fæst með því að margfalda línu með tölu, t.d.
   
   .. math:: \begin{bmatrix}
         1 & 0\\
@@ -335,7 +335,7 @@ Sýnidæmi: Ákveður frumfylkja
         0 & 0 & 0 & 1
         \end{bmatrix}.
 
-  Við sjáum með því að margafalda hornalínuna að ákveðan er :math:`\det(E)=\pi`, :math:`\det(E)=k` og :math:`\det(E)=16` fyrir þessi þrjú fylki.
+  Við sjáum með því að margfalda hornalínuna að ákveðan er :math:`\det(E)=\pi`, :math:`\det(E)=k` og :math:`\det(E)=16` fyrir þessi þrjú fylki.
 
 Í mörgum dæmum koma fyrir nokkrar umskiptingar, víxlanir og/eða skalanir. Til dæmis er alltaf hægt að koma ferningsfylki yfir á efri stallagerð með því að nota einungis umskiptingar og víxlanir.
 Ef :math:`U` er efri stallagerð :math:`A`, sem fékkst með því að nota aðeins þessar tvær aðgerðir, gildir að :math:`\det(A)=\pm \det(U)`. Þetta má setja fram sem hjálparsetningu.
@@ -366,7 +366,7 @@ Hjálparsetning
     :class: setning
 
     Ef ferningsfylki :math:`A` hefur tvær eins línur :math:`i=j` þá er :math:`\det(A)=0`.
-    Ennfremur, ef ein lína í :math:`A` er margfeldi af annarri þá er :math:`\det(A)=0`.
+    Enn fremur, ef ein lína í :math:`A` er margfeldi af annarri þá er :math:`\det(A)=0`.
 
 
 Eiginleikar ákveða
@@ -378,7 +378,7 @@ Setning: Eiginleikar ákveða
 .. admonition:: Setning
     :class: setning
 
-    Látum A og B vera :math:`n \times n` fylki. Þá gildir
+    Látum :math:`A` og :math:`B` vera :math:`n \times n` fylki. Þá gildir
 
         **1**. :math:`\det(A^T)=\det(A)`
 
@@ -388,13 +388,12 @@ Setning: Eiginleikar ákveða
 
 
 1 er sannað með þrepun. 2 fæst með því að nota að annað fylkið, sem er andhverfanlegt, er línu-jafngilt einingafylkinu.
-Jafnan helst einning ef annað fylkið er ekki andhverfanlegt, þá er ákveðan :math:`AB` einfaldlega :math:`0`. 3 leiðir beint af 2.
+Jafnan helst einnig ef annað fylkið er ekki andhverfanlegt, þá er ákveðan :math:`AB` einfaldlega :math:`0`. 3 leiðir beint af 2.
 
 .. admonition:: Athugasemd
   :class: athugasemd
 
   Um tvö ferningsfylki :math:`A` og :math:`B` gildir almennt **ekki** að :math:`\det(A+B)=\det(A)+\det(B)`.
-
 
 
 Skilgreining: Hjáþáttafylki
@@ -484,7 +483,7 @@ Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-  Fylkjaframsetning jöfhnuhneppisins er
+  Fylkjaframsetning jöfnuhneppisins er
   
   .. math:: A= \left(
         \begin{array}{ccc}
@@ -596,12 +595,12 @@ Setning: Flatarmál og rúmmál línulegra varpanna
 .. admonition:: Setning
     :class: setning
 
-    **1.** Gerum ráð fyrir að :math:`T: \R^2 \rightarrow \R^2` sé línuleg vörpun með fylki :math:`A`, og :math:`S` vera samsíðunginn sem ákvarðast af :math:`u` og :math:`v` í :math:`\R^2`.
+    **1.** Gerum ráð fyrir að :math:`T\colon \R^2 \rightarrow \R^2` sé línuleg vörpun með fylki :math:`A`, og :math:`S` vera samsíðunginn sem ákvarðast af :math:`u` og :math:`v` í :math:`\R^2`.
     Þá er
 
     .. math:: \{ \text{flatarmál} \ T(S) \} = |\det A | \cdot \{ \text{flatarmál} \ S \}
 
-    **2.** Gerum ráð fyrir að :math:`T: \R^3 \rightarrow \R^3` sé línuleg vörpun með fylki :math:`A`, og :math:`S` vera samhliðungurinn sem ákvarðast af :math:`u, v` og :math:`w` í :math:`\R^3`.
+    **2.** Gerum ráð fyrir að :math:`T\colon \R^3 \rightarrow \R^3` sé línuleg vörpun með fylki :math:`A`, og :math:`S` vera samhliðungurinn sem ákvarðast af :math:`u, v` og :math:`w` í :math:`\R^3`.
     Þá er
 
     .. math:: \{ \text{rúmmál} \ T(S)\} = |\det A | \cdot \{ \text{rúmmál} \ S \}
@@ -633,8 +632,3 @@ Sýnidæmi: Flatarmál samsíðungs
 .. figure:: myndir/kafli3mynd2.svg
   :align: center
   :scale: 50 %
-
-
-
-
-
