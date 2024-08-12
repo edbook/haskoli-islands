@@ -7,7 +7,7 @@ Nokkrar gerðir fylkja
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  **Hornalínufylki** (e. diagonal matrix) er :math:`n \times n` fylki þar sem öll stök utan aðalhornalínu eru 
+  **Hornalínufylki** (e. diagonal matrix) er :math:`n \times n` fylki þar sem öll stök utan hornalínu eru 
   núll,
 
   .. math:: \begin{bmatrix}
@@ -16,8 +16,11 @@ Nokkrar gerðir fylkja
         \vdots & \vdots & \ddots & \vdots \\
         0 & 0 & \cdots & a_{nn}
         \end{bmatrix}.
+  
+  m.ö.o. :math:`D = [d_{ij}]` er hornalínyflki ef :math:`d_{ij}=0` fyrir öll :math:`i` og :math:`j` þannig að :math:`i \neq j`.
 
-  **Einingarfylki** (e. identity matrix) *I*, er hornalínufylki þar sem 
+
+  **Einingarfylki** (e. identity matrix) :math:`I`, er hornalínufylki þar sem 
   öll stökin á hornalínu eru 1,
 
   .. math:: I=\begin{bmatrix}
@@ -26,7 +29,7 @@ Nokkrar gerðir fylkja
         0 & 0 & 1
         \end{bmatrix}.
 
-  stundum er stærð núllfylkisins merkt með vísi, t.d. hér :math:`I_3`.
+  stundum er einingarfylki merkt stærð sinni með vísi, t.d. hér :math:`I_3`.
 
   **Núllfylki** (e. zero matrix) er fylki þar sem öll stökin eru núll,
 
@@ -44,7 +47,7 @@ Nokkrar gerðir fylkja
         0 & 1 & 0
         \end{bmatrix}.
     
-  **Þríhyrningsfylki** eru fylki sem innihalda stök ólík núll öðru hvoru megin við hornalínuna. *Efra þríhyrningsfylki* en fylki á forminu, 
+  **Þríhyrningsfylki** (e. triangular matrix) eru fylki þar sem öll stökin eru núll öðru hvoru megin við hornalínuna. *Efra þríhyrningsfylki* en fylki þar sem öll stökin fyrir neðan hornalínu eru 0, 
 
   
   .. math:: \begin{bmatrix}
@@ -55,7 +58,7 @@ Nokkrar gerðir fylkja
     0 & 0 & 0 & \dots & a_{nn} \\
     \end{bmatrix},
   
-  og *neðra þríhyrningsfylki*,
+  og *neðra þríhyrningsfylki* er fylki þar sem öll stök fyrir ofan hornalínuna eru 0,
 
   .. math:: \begin{bmatrix}
     a_{11} & 0 & 0 & \dots & 0 \\
@@ -308,10 +311,10 @@ Sýnidæmi: Fylkjamargföldun
   .. math:: A=\begin{bmatrix}
     2 & 3 \\
     1 & 4 \\
-    \end{bmatrix} \text{ , } B=\begin{bmatrix}
+    \end{bmatrix} \text, \quad B=\begin{bmatrix}
     5 & 6 \\
     7 & 8 \\
-    \end{bmatrix} \text{ , } C=\begin{bmatrix}
+    \end{bmatrix} \text, \quad C=\begin{bmatrix}
     1 & 2 & 3 \\
     4 & 5 & 6 \\
     7 & 8 & 9  
@@ -391,7 +394,7 @@ Sýnidæmi: Bylt fylki
   .. math:: A=\begin{bmatrix}
     2 & -1 \\
     0 & 3 \\
-    \end{bmatrix} \text{ , } B=\begin{bmatrix}
+    \end{bmatrix} \text, \quad B=\begin{bmatrix}
     1 & 2 & 3 \\
     4 & 5 & 6 \\
     \end{bmatrix} \text{ og } C=\begin{bmatrix}
@@ -409,7 +412,7 @@ Sýnidæmi: Bylt fylki
   .. math:: A^T=\begin{bmatrix}
     2 & 0 \\
     -1 & 3 \\
-    \end{bmatrix}\text{ , } B^T=\begin{bmatrix}
+    \end{bmatrix}\text, \quad B^T=\begin{bmatrix}
     1 & 4 \\
     2 & 5 \\
     3 & 6 \\
@@ -490,6 +493,14 @@ Skilgreining: Andhverfur fylkja
     Fylkið :math:`C` kallast þá **andhverfa** :math:`A` (e. inverse), og er táknað með :math:`A^{-1}`. 
     Ef :math:`A` er ekki andhverfanlegt á segjum við það sé **óandhverfanlegt** (e. singular).
 
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Einungis ferningsfylki, :math:`n \times n`, geta verið andhverfanleg. Þó eru ekki öll ferningsfylki andhverfanleg.
+
+
+
 Setning: Andhverfa er ótvírætt ákvörðuð
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -505,7 +516,8 @@ Setning: Andhverfa er ótvírætt ákvörðuð
     .. math:: A\cdot A^{-1} = A^{-1}\cdot A = I.
     
     Við sjáum að andhverfa fylkis er ótvírætt ákvörðuð.
-    
+
+
 Sýnidæmi: Eru fylkin andhverfanleg?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -584,15 +596,14 @@ Setning: Andhverfa :math:`2\times 2` fylkja
     :class: setning
 
     Látum :math:`A=\begin{bmatrix} a & b \\ c & d \end{bmatrix}` vera :math:`2\times 2` fylki. Fylkið :math:`A` er 
-    andhverfanlegt þá og því aðeins að :math:`ad-bc\neq 0` og í þeim tilfellum er andhverfan gefin með 
+    andhverfanlegt ef og aðeins ef :math:`ad-bc\neq 0` og í þeim tilfellum er andhverfan gefin með 
 
-    .. math:: A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}
+    .. math:: A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}.
 
-    **Athugasemd:** Ef :math:`A=\begin{bmatrix} a & b \\ c & d \end{bmatrix}` kallast stærðin :math:`ad-bc` *ákveða* (e. determinant) fylkisins 
-    :math:`A` og er táknuð :math:`\det(A)`. TODO setja hyperlink í þriðja kafla
+    Stærðin :math:`ad-bc` kallast *ákveða* (e. determinant) fylkisins :math:`A` og er táknuð :math:`\text{det}(A)`. Meir um ákveður í kafla 3.
 
 
-Sýnidæmi: Andhverfur út frá formúlu
+Sýnidæmi: Andhverfa :math:`2\times 2` fylkja
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
@@ -603,19 +614,19 @@ Sýnidæmi: Andhverfur út frá formúlu
   .. math:: A=\begin{bmatrix}
     -3 & 7 \\
     2 & 5 \\
-    \end{bmatrix} \text{ , } B=\begin{bmatrix}
+    \end{bmatrix}, \quad B=\begin{bmatrix}
     -2 & 3 \\
     4 & -6 \\
-    \end{bmatrix} 
+    \end{bmatrix}. 
 
 .. admonition:: Lausn
   :class: daemi, dropdown
     
   Formúlan gefur okkur að :math:`\det(A)=-3\cdot5-2\cdot7=-15-14=-29` svo að :math:`A` á sér andhverfu og hún er
   
-  .. math:: -\frac{1}{29}\begin{bmatrix} 5 & -7 \\ -2 & -3 \end{bmatrix}
+  .. math:: -\frac{1}{29}\begin{bmatrix} 5 & -7 \\ -2 & -3 \end{bmatrix}.
 
-  Svo höfum við að :math:`\det(B)=-2\cdot (-6)-4\cdot3=0` svo fylkið :math:`B` er óandhverfanlegt.
+  Fáum að :math:`\det(B)=-2\cdot (-6)-4\cdot3=0` svo fylkið :math:`B` er á sér ekki andhverfu.
 
 Setning: Lausnir fylkjajafna
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -645,12 +656,12 @@ Sýnidæmi: Fylkjajafna leyst með andhverfu
     \end{bmatrix} = \begin{bmatrix} 
     10 \\
     20
-    \end{bmatrix}
+    \end{bmatrix}.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
     
-  Við reiknuðum út andhverfuna í sýnidæmi (TODO SETJA INN HYPERLINK). Fáum því að
+  Andhverfa fylkisins var reiknuð í sýnidæmi :math:`2.5.3.1` hér að ofan. Fáum
   
   .. math:: \textbf{x}=-\frac{1}{29}\begin{bmatrix} 
     5 & -7 \\ 
@@ -661,15 +672,19 @@ Sýnidæmi: Fylkjajafna leyst með andhverfu
     \end{bmatrix} = -\frac{1}{29}\begin{bmatrix} 
     50-140 \\
     -20-60 
-    \end{bmatrix} = \frac{1}{29}\begin{bmatrix} 90 \\ 80 \end{bmatrix}
-
-  **Athugasemd:** Setningin á undan er oftast ekki notuð beint þegar reikna á stórar fylkjajöfnur af 
-  gerð :math:`A\textbf{x}=\textbf{b}`. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa 
-  jöfnuna beint með Gauss-eyðingu eða öðrum aðferðum.
+    \end{bmatrix} = \frac{1}{29}\begin{bmatrix} 90 \\ 80 \end{bmatrix}.
 
 
-Setning: Reiknireglur fyrir andhverfu fylkis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Athugasemd 
+    :class: athugasemd
+
+    Setningin á undan er oftast ekki notuð beint þegar reikna á stórar fylkjajöfnur af 
+    gerð :math:`A\textbf{x}=\textbf{b}`. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa 
+    jöfnuna beint með Gauss-eyðingu eða öðrum aðferðum.
+
+
+Setning: Reiknireglur andhverfa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -678,31 +693,30 @@ Setning: Reiknireglur fyrir andhverfu fylkis
 
     **1.** :math:`A^{-1}` er andhverfanlegt fylki og 
 
-    .. math:: (A^{-1})^{-1}=A
+    .. math:: (A^{-1})^{-1}=A.
 
     **2.** :math:`AB` er andhverfanlegt fylki og 
 
-    .. math:: (AB)^{-1}=B^{-1}A^{-1}
+    .. math:: (AB)^{-1}=B^{-1}A^{-1}.
 
     **3.** :math:`A^T` er andhverfanlegt fylki og 
 
-    .. math:: (A^T)^{-1}=(A^{-1})^T
+    .. math:: (A^T)^{-1}=(A^{-1})^T.
 
-Aðferð til að reikna andhverfu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Reiknirit andhverfa :math:`n \times n` fylkja
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Aðferð
     :class: skilgreining
 
-    Til að finna andhverfu fylkis :math:`A` búum við til aukna fylkið
+    Látum :math:`A` vera :math:`n \times n` fylki og :math:`I_n` vera :math:`n \times n` einingarfylki. Setjum upp aukna fylkið
 
-    .. math:: [A | I]
+    .. math:: [A \ | \ I]
 
-    og beitum línuaðgerðum til að koma því að efri rudda stallagerð. Ef fylkið :math:`A` er andhverfanlegt
-    fáum við jafngilt fylki með einingarfylkinu :math:`I` í vinstri hlut og :math:`A^{-1}` í hægri hlut.
-    Með öðrum orðum:
+    og beitum Gauss-Jordan eyðingu til að breyta fylkinu :math:`A` yfir í einingarfylkið :math:`I_n`. Ef núlllína kemur upp á einhverjum tímapunkti í vinstri hliðinna þá 
+    er fylkið :math:`A` ekki andhverfanleg. Ef tekst að breyta :math:`A` í einingarfylkið þá situr andhverfan eftir í hægri hliðinni,
 
-    .. math:: [A | I] \sim [I | A^{-1}]
+    .. math:: [A  \ | \  I] \sim [I  \ | \  A^{-1}].
 
 Sýnidæmi: Andhverfa :math:`3\times3` fylkis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -716,38 +730,38 @@ Sýnidæmi: Andhverfa :math:`3\times3` fylkis
     1 & 2 & 3\\
     0 & 1 & 4 \\
     5 & 6 & 0 
-    \end{bmatrix} 
+    \end{bmatrix}. 
 
 .. admonition:: Lausn
   :class: daemi, dropdown
     
-  Búum til aukna fylkið og einföldum:
+  Búum til aukna fylkið og beitum einföldum línuaðgerðum:
 
-  .. math:: \begin{align}
+  .. math:: \begin{align} [A  \ | \  I_3] =
     \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 2 & 3 & 1 & 0 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
     5 & 6 & 0 & 0 & 0 & 1 \\
     \end{array}\right]
-    & \sim
+    &\overset{\substack{R_3-5R_1}}{\sim}
     \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 2 & 3 & 1 & 0 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
     0 &-4 &-15&-5 & 0 & 1 \\
     \end{array}\right] \\ 
-    & \sim
+    &\overset{\substack{R_3+4R_2}} \sim
     \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 2 & 3 & 1 & 0 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
     0 & 0 & 1 &-5 & 4 & 1 \\
     \end{array}\right]  \\ 
-    & \sim
+    &\overset{\substack{R_1-2R_2}} \sim
     \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 0 &-5 & 1 &-2 & 0 \\
     0 & 1 & 4 & 0 & 1 & 0 \\
     0 & 0 & 1 &-5 & 4 & 1 \\
     \end{array}\right] \\ 
-    & \sim
+    &\overset{\substack{R_1+5R_3\\R_2-4R_3}}  \sim
     \left[\begin{array}{@{}ccc|ccc@{}}
     1 & 0 & 0 & -24 &18 & 5 \\ 
     0 & 1 & 0 & 20 & -15 & -4 \\
@@ -761,20 +775,50 @@ Sýnidæmi: Andhverfa :math:`3\times3` fylkis
     -24 &18 & 5 \\
     20 & -15 & -4 \\
     -5 & 4 & 1
-    \end{bmatrix}
+    \end{bmatrix}.
 
 
-Eintækni og átækni
---------------------
+Andhverfanlegar varpanir
+---------------------------------
 
-Setning: Um eintækni og átækni
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Andhverfanlegar varpanir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig 
+    :class: skilgreining
+
+    Vörpun :math:`f: X \rightarrow Y` er andhverfanleg ef til er vörpun :math:`f^{-1}: Y \rightarrow X` þannig að
+
+    .. math:: f(f^{-1}(y))=y \quad \text{og}\quad f^{-1}(f(x))=x
+
+    fyrir öll :math:`y \in Y` og :math:`x \in X`. Þá kallast :math:`f^{-1}` andhverfa vörpunarinnar :math:`f`.
+
+.. admonition:: Fylgisetning 
+    :class: setning
+
+    Vörpun :math:`f: X \rightarrow Y` er andhverfanleg ef og aðeins ef hún er gagntæk.
+
+
+Setning: Andhverfanlegar línulegar varpanir
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
 
-    Látum :math:`T:\mathbb{R}^n \rightarrow \mathbb{R}^n` vera línulega vörpun. 
-    Þá fæst að :math:`T` er eintæk þá og því aðeins að hún er átæk.
+    Látum :math:`T:\mathbb{R}^n \rightarrow \mathbb{R}^n` vera línulega vörpun með :math:`n \times n` fylki :math:`A`. 
+    Ef fylkið :math:`A` er andhverfanlegt þá er vörpunin
+
+    .. math:: \R^n \rightarrow \R^n, \ \ve x\mapsto A^{-1} \ve x
+
+    andhverfa vörpunarinnar :math:`T`. Andhverfan er einnig línuleg vörpun. Vörpunin :math:`T` er andhverfanleg ef og aðeins ef :math:`A` er andhverfanlegt fylki.
+
+Setning: Eintækni og átækni línulegra varpana
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning 
+    :class: setning
+
+    Látum :math:`T \colon \R^n \rightarrow \R^n` vera línulega vörpun. Vörpunin :math:`T` er eintæk þá og því aðeins að hún er átæk.
 
 .. admonition:: Rökstuðningur 
     :class: setning, dropdown
@@ -783,17 +827,24 @@ Setning: Um eintækni og átækni
     Gerum ráð fyrir að :math:`T` sé eintæk. Fáum að :math:`A\textbf{x}=\textbf{0}` hefur aðeins augljósu lausnina.
 
     Skoðum efri stallagerð :math:`A`. Fyrst jafnan hefur aðeins augljósu lausnina þá hefur 
-    efri stallagerðin forystustuðul í hverjum dálki (og engar frjálsar breytur) og samtals :manth:`` forystustuðla.
+    efri stallagerðin forystustuðul í hverjum dálki (og engar frjálsar breytur), þ.e. :math:`n` forystustuðla.
 
     Þar með hefur stallagerðin líka forystustuðul í hverri línu (því fylkið er :math:`n\times n` fylki).
 
-    Þar með hefur jafnan :math:`A \textbf{x} = \textbf{b}` lausn fyrir alla vigra :math:`\textbf{b}\in\mathbb{R}^n` og
+    Jafnan :math:`A \textbf{x} = \textbf{b}` hefur lausn fyrir alla vigra :math:`\textbf{b}\in\mathbb{R}^n` og
     því er vörpunin :math:`T(\textbf{x})=A\textbf{x}` átæk.
 
     Athugið að leiðingarnar hér gilda í báðar áttir.
 
-Setning: Einkenni andhverfalegra fylkja
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. admonition:: Aðvörun 
+    :class: advorun
+
+    Þessi setning gildir aðeins um **línulegar varpanir** :math:`\R^n \rightarrow \R^n`. Hún gildir ekki um varpanir sem eru ólínulegar né varpanir þar sem :math:`\R^n \rightarrow \R^m`, :math:`n \neq m`.
+
+Eftirfarandi setning inniheldur jafngild skilyrði þess að ferningsfylki sé andhverfanlegt.
+
+Setning: Langa setningin um andhverfanleg fylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning 
     :class: setning
@@ -803,27 +854,27 @@ Setning: Einkenni andhverfalegra fylkja
 
     **1.** :math:`A` er andhverfanlegt.
 
-    **2.** :math:`A` er línu-jafngilt (og þar með jafngilt) :math:`n\times n` einingarfylkinu.
+    **2.** :math:`A` er línu-jafngilt (og þar með jafngilt) :math:`n\times n` einingarfylkinu :math:`I_n`.
 
-    **3.** :math:`A` hefur :math:`n` vendistök.
+    **3.** :math:`A` hefur :math:`n` forystustuðla (þ.e. efra stallaform :math:`A`).
 
-    **4.** Jafnan :math:`A\textbf{x}=\textbf{0}` hefur aðeins augljósu lausnina.
+    **4.** Jafnan :math:`A\textbf{x}=\textbf{0}` hefur aðeins augljósu lausnina :math:`\ve x = \ve 0`.
 
-    **5.** Dálkar :math:`A` eru línulega óháðir.
+    **5.** Dálkvigrar :math:`A` eru línulega óháðir.
 
     **6.** Línulega vörpunin :math:`\textbf{x}\mapsto A\textbf{x}` er eintæk.
 
-    **7.** Jafnan :math:`A\textbf{x}=\textbf{b}` hefur lausn fyrir öll :math:`\textbf{b} \in \mathbb{R}^n`.
+    **7.** Jafnan :math:`A\textbf{x}=\textbf{b}` hefur a.m.k eina lausn fyrir sérhvert :math:`\textbf{b} \in \mathbb{R}^n`.
 
-    **8.** Dálkar :math:`A` spanna :math:`\mathbb{R}^n`.
+    **8.** Dálkvigrar :math:`A` spanna allt :math:`\mathbb{R}^n`.
 
     **9.** Línulega vörpunin :math:`\textbf{x}\mapsto A\textbf{x}` er átæk.
 
-    **10.** Til er :math:`n\times n` fylki :math:`C` þannig að :math:`CA=I`.
+    **10.** Til er :math:`n\times n` fylki :math:`C` þannig að :math:`CA=I_n`.
 
-    **11.** Til er :math:`n\times n` fylki :math:`D` þannig að :math:`AD=I`.
+    **11.** Til er :math:`n\times n` fylki :math:`D` þannig að :math:`AD=I_n`.
 
-    **12.** :math:`A^T` er andhverfanlegt.
+    **12.** Bylta fylkið :math:`A^T` er andhverfanlegt.
 
 
 Sýnidæmi: Er fylkið andhverfanlegt?
@@ -832,15 +883,13 @@ Sýnidæmi: Er fylkið andhverfanlegt?
 .. admonition:: Dæmi
     :class: daemi
 
-    Er fylkið 
+    Er gefið fylkið :math:`A` andhverfanlegt? 
     
     .. math:: A=\begin{bmatrix} 
         2 & 3 & 5 \\
         0 & -1 & 4 \\
         0 & 1 & 2 \\
-        \end{bmatrix}
-
-    andhverfanlegt?
+        \end{bmatrix}.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -851,14 +900,14 @@ Sýnidæmi: Er fylkið andhverfanlegt?
         2 & 3 & 5 \\
         0 & -1 & 4 \\
         0 & 1 & 2 \\
-        \end{bmatrix} \sim 
+        \end{bmatrix}&\overset{\substack{ R_3+R_2}} \sim 
         \begin{bmatrix} 
         2 & 3 & 5 \\
         0 & -1 & 4 \\
         0 & 0 & 5 \\
-        \end{bmatrix} R_3+R_2
+        \end{bmatrix}
     
-    svo fylkið hefur 3 vendistök. Þar með er fylkið andhverfanlegt.
+    svo fylkið hefur þrjá forystustuðla. Þar með er fylkið andhverfanlegt.
 
 .. admonition:: Athugasemd
     :class: athugasemd
@@ -872,20 +921,26 @@ Sýnidæmi: Er fylkið andhverfanlegt?
 LU-þáttun
 ----------
 
+LU-þáttun er gagnleg þegar leysa á stór línuleg jöfnuhneppi, t.a.m. fyrir marga ólíka vigra :math:`\ve b`,
+
+.. math:: A\textbf{x} = \textbf{b}_1, A\textbf{x} = \textbf{b}_2, \dots, A\textbf{x} = \textbf{b}_k.
+
+Þessi aðferð t.a.m. sparar útreikninga í tölvu. Meir um LU-þáttun í áfanganum Töluleg Greining.
+
 Skilgreining: LU-þáttun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Ef :math:`A` er :math:`m\times n` fylki þá segjum við að **LU-þáttun** A sé framsetning af gerðinni
+    Látum :math:`A` vera :math:`m \times n` fylki sem hægt er að koma á efra stallaform með því að nota einungis umskiptingar þar sem margfeldi af einni línu er lagt við línu neðar í fylkinu. Þá má þátta :math:`A` í margfeldi tveggja fylkja
 
     .. math:: A=LU
 
     þar sem :math:`L` er :math:`m\times m` neðra þríhyrningsfylki með :math:`1` á hornalínunni og
-    U er :math:`m\times n` fylki af efri stallagerð.
+    U er :math:`m\times n` fylki af efri stallagerð. Þessi þáttun nefnist **LU-þáttun** (e. LU-factorization).
 
-    **Dæmi:** 
+    Við sjáum þetta fyrir okkur svona
     
     .. math:: A= \begin{bmatrix}
         1 & 0 & 0 \\
@@ -896,9 +951,39 @@ Skilgreining: LU-þáttun
         \blacksquare & * & * & * \\
         0 & \blacksquare & * & * \\
         0 & 0 & 0 & \blacksquare
-        \end{bmatrix}
+        \end{bmatrix} = LU.
 
-Sýnidæmi: LU þáttun
+
+Reiknirit LU-þáttunar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Reiknirit
+    :class: setning
+
+    Aðferð til þess að finna LU-þáttun fylks :math:`A` og nota til þess að leysa fylkjajöfnu :math:`A \ve x = \ve b`.
+
+      **1.** Finna :math:`U`: koma :math:`A` yfir á efri stallagerð með umskiptingum á borð við :math:`R_j\rightarrow R_j+cR_i` þar sem :math:`i<j`.
+
+      **2.** Finna :math:`L`: búa til neðra þríhyrningsfylki með 1 á hornalínunni og fylla í það með föstunum :math:`c` sem notaðir voru í línuaðgerðunum í skrefinu á undan.
+
+    Til að skoða hvort rétt sé reiknað er auðvelt að margfalda fylkin saman og athuga hvort :math:`A = LU`. Ef leysa á fylkjajöfnu höldum við áfram
+
+      **3.** Skrifum :math:`A \ve x = \ve b` sem :math:`L (U \ve x) = \ve b` og látum :math:`\ve y = U \ve x`. Síðan leysum við :math:`L \ve y = \ve b` og köllum lausnina :math:`\ve z`.
+
+      **4.** Leysum :math:`U \ve x = \ve z` með aftur-á-bak innsetningu.
+    
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    Ekki má nota hinar tvær línuaðgerðirnar í Skrefi 1, þ.e.
+    margfalda línur með fasta (:math:`R_i \rightarrow c R_i`) eða víxla á línum (:math:`R_i\leftrightarrow R_j`). Oft verður ekki hjá því komist að víxla á línum. Í þeim tilfellum virkar reikniaðferðin ekki. 
+    Til eru leiðir til að vinna sig fram hjá þessu en það verður ekki farið í þær nú.
+
+
+
+
+
+Sýnidæmi: LU-þáttun
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
@@ -909,34 +994,34 @@ Sýnidæmi: LU þáttun
   .. math:: A=\begin{bmatrix}
     2 & 1 & 3\\
     4 & 2 & 8 
-    \end{bmatrix}, B=\begin{bmatrix}
+    \end{bmatrix}, \quad B=\begin{bmatrix}
     3 & 1 & -2\\
     -6 & 0 & 7 \\
     9 & 5 & 1 
-    \end{bmatrix} 
+    \end{bmatrix}.
 
 .. admonition:: Lausn
   :class: daemi, dropdown
   
-  Skoðum :math:`A`. Framkvæmum Gauss eyðingu til að koma :math:`A` á efri stallagerð
+  Komum :math:`A` yfir á efri stallagerð með Gauss eyðingu
   
   .. math:: \begin{bmatrix}
         2 & 1 & 3\\
-    	4 & 2 & 8 
-        \end{bmatrix} \overset{R2-2R1}{\longrightarrow} 
+    	  4 & 2 & 8 
+        \end{bmatrix} \overset{R_2-2R_1}{\longrightarrow} 
         \begin{bmatrix} 
         2 & 1 & 3 \\
         0 & 0 & 2
-        \end{bmatrix}
+        \end{bmatrix}.
     
-  Búum til :math:`L` fylki með því að skoða hvaða línuaðgerðum var beitt. (Ath. við snúum þeim við í :math:`L` fylkinu)
+  Búum til fylki :math:`L` fylki með því að skoða hvaða línuaðgerðum var beitt (ath. við snúum þeim við í :math:`L` fylkinu),
   
   .. math:: L=\begin{bmatrix} 
         1 & 0 \\
         2 & 1 \\
-        \end{bmatrix}
+        \end{bmatrix}.
 
-  Fáum 
+  LU-þáttun á :math:`A` er gefin með
   
   .. math:: A=LU=\begin{bmatrix}
         1 & 0 \\
@@ -945,53 +1030,55 @@ Sýnidæmi: LU þáttun
         \begin{bmatrix}
         2 & 1 & 3 \\
         0 & 0 & 2
-        \end{bmatrix} 
+        \end{bmatrix}.
     
-  Skoðum :math:`B`. Framkvæmum Gauss-eyðingu til að breyta :math:`B` í efri stallagerð.
+  Framkvæmum nú Gauss eyðingu á fylki :math:`B` til að koma því á efri stallagerð
   
   .. math:: \begin{bmatrix}
         3 & 1 & -2 \\
         -6 & 0 & 7 \\
         9 & 5 & 1
-        \end{bmatrix} \overset{R2+2R1}{\longrightarrow}
+        \end{bmatrix} \overset{R_2+2R_1}{\longrightarrow}
         \begin{bmatrix}
         3 & 1 & -2 \\
         0 & 2 & 3 \\
         9 & 5 & 1
-        \end{bmatrix} \overset{R3-3R1}{\longrightarrow}
+        \end{bmatrix} \overset{R_3-3R_1}{\longrightarrow}
         \begin{bmatrix}
         3 & 1 & -2 \\
         0 & 2 & 3 \\
         0 & 2 & 7
         \end{bmatrix}\\
-        \overset{R3-R2}{\longrightarrow}
+        \overset{R_3-R_2}{\longrightarrow}
         \begin{bmatrix}
         3 & 1 & -2 \\
         0 & 2 & 3 \\
         0 & 0 & 4
-        \end{bmatrix}  
+        \end{bmatrix}.
     
   Finnum :math:`L` fylkið út frá aðgerðunum sem notaðar voru.
 
     .. math:: \begin{bmatrix}
         &\\\\
-        \end{bmatrix} \overset{R2+2R1}{\longrightarrow}
+        \end{bmatrix} \overset{R_2+2R_1}{\longrightarrow}
         \begin{bmatrix}
         &\\\\
-        \end{bmatrix} \overset{R3-3R1}{\longrightarrow}
+        \end{bmatrix} \overset{R_3-3R_1}{\longrightarrow}
         \begin{bmatrix}
         &\\\\
         \end{bmatrix} 
-        \overset{R3-R2}{\longrightarrow}
+        \overset{R_3-R_2}{\longrightarrow}
         \begin{bmatrix}
         &\\\\
-        \end{bmatrix}
+        \end{bmatrix},
     
+  sjáum að
+
     .. math:: L=\begin{bmatrix}
         1 & 0 & 0 \\
         -2 & 1 & 0 \\
         3 & 1 & 1 \\
-        \end{bmatrix}
+        \end{bmatrix}.
     
   LU-þáttun á :math:`B` er gefin með
 
@@ -1004,56 +1091,18 @@ Sýnidæmi: LU þáttun
         3 & 1 & -2 \\
         0 & 2 & 3 \\
         0 & 0 & 4 \\
-        \end{bmatrix}
+        \end{bmatrix}.
         
 
 
-Reikniaðferð vegna LU-þáttunar
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Aðferð
-    :class: skilgreining
-
-    Til að finna LU þáttun fylks með aðferðum sýnidæmanna að ofan þarf að
-
-    **1.** Breyta :math:`A` í efri stallagerð með útskiptingum á borð við :math:`R_j\rightarrow R_j+cR_i` þar sem :math:`i<j`.
-
-    **2.** Búa til :math:`L` með því að skoða hvað línuaðgerðum var beitt og 
-    fylla í fylkið með  :math:`c`-föstunum, með víxluðum formerkjum.
-
-
-    Athugasemdir:
-
-    **1.**  Við megum ekki nota hinar tvær línuaðgerðirnar í Skrefi 1.  
-    Við megum ekki margfalda línur með fasta (:math:`R_i \rightarrow c R_i`) eða víxla á línum (:math:`R_i\leftrightarrow R_j`).
-
-    **2.** Að sleppa línumargföldun er alltaf hægt.
-
-    **3.** Oft verður hjá því ekki komist að víxla á línum. Í þeim tilfellum virkar reikniaðferðin ekki. 
-    Til eru leiðir til að vinna sig fram hjá þessu en það verður ekki farið í þær nú.
-
-
-LU-þáttun er gagnleg þegar leysa á jöfnur á borð við
-
-.. math:: A\textbf{x} = \textbf{b}_1, A\textbf{x} = \textbf{b}_2, \dots, A\textbf{x} = \textbf{b}_k
-
-þ.e.a.s. margar fylkjajöfnur þar sem vinstri hliðin er sú saman. Þá nýtist þáttunin til að spara útreikninga.
-
-Við skrifum þá
-
-.. math:: A\textbf{x} = \textbf{b} \iff L\cdot(U\textbf{x}) = \textbf{b}
-
-og leysum fyrst :math:`L\textbf{y} = \textbf{x}`, (sem er auvelt því :math:`L` er þríhyrningsfylki) 
-og svo :math:`U\textbf{x} = \textbf{y}` sem er líka auðvelt því :math:`U` er af efri stallagerð.
-
-
-Sýnidæmi: LU-þáttun til að leysa :math:`A\textbf{x}=b`
+Sýnidæmi: LU-þáttun til þess að leysa fylkjajöfnu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. admonition:: Dæmi
     :class: daemi
 
-    Vitum að 
+    Skoðum fylki :math:`A` í sýnidæminu að ofan, 
 
     .. math:: A=LU=\begin{bmatrix}
         1 & 0 \\
@@ -1062,15 +1111,15 @@ Sýnidæmi: LU-þáttun til að leysa :math:`A\textbf{x}=b`
         \begin{bmatrix}
         2 & 1 & 3 \\
         0 & 0 & 2 \\
-        \end{bmatrix}
+        \end{bmatrix}.
     
-    Notum þetta til að leysa :math:`A\textbf{x}=b` þegar :math:`\textbf{b}=\begin{bmatrix} 4 \\ 6 \end{bmatrix}`
+    Nota á LU-þáttun :math:`A` til þess að leysa :math:`A\textbf{x}=\ve b` þegar :math:`\textbf{b}=\begin{bmatrix} 4 \\ 6 \end{bmatrix}`
 
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Leysum fyrir :math:`\textbf{y}=\begin{bmatrix} y_1 & y_2 \end{bmatrix}^T` í jöfnunni
-
+    Leysum fyrir :math:`\ve y=(y_1,y_2)` í :math:`L \ve y = \ve b`
+  
     .. math:: \begin{bmatrix}
         1 & 0 \\
         2 & 1 \\
@@ -1082,21 +1131,16 @@ Sýnidæmi: LU-þáttun til að leysa :math:`A\textbf{x}=b`
         \begin{bmatrix}
         4 \\
         6 \\
-        \end{bmatrix}
+        \end{bmatrix}.
     
-    Við fáum
-
-    .. math:: y_1 = 4 \\
-        2y_1+ y_2 = 6
-    
-    Sem gefur 
+    Fáum :math:`y_1 = 4` og :math:`2y_1+ y_2 = 6` sem gefur 
 
     .. math:: \textbf{y}=\begin{bmatrix}
         4 \\
         -2
-        \end{bmatrix}
+        \end{bmatrix},
     
-    Leysum fyrir :math:`\textbf{x}` í jöfnunni :math:`U\textbf{x}=\textbf{y}`. Fáum
+    við skulum kalla þessa lausn :math:`\ve z`. Leysum nú fyrir :math:`\textbf{x}` í jöfnunni :math:`U\textbf{x}=\textbf{z}`. Fáum
 
     .. math:: \begin{bmatrix} 
         2 & 1 & 3 \\
@@ -1117,7 +1161,7 @@ Sýnidæmi: LU-þáttun til að leysa :math:`A\textbf{x}=b`
     .. math:: 2x_1+x_2+3x_3=4 \\
         2x_3=-2
     
-    sem þýðir að :math:`x_3=-1` og því líka :math:`2x_1+x_2=7` og þar með 
+    svo :math:`x_3=-1` og :math:`2x_1+x_2=7`, þar með 
     :math:`x_1=-(\frac{1}{2})x_2+\frac{7}{2}`
     . Fáum því:
 

@@ -1,6 +1,13 @@
 Vigurrúm
 ========
 
+Markmið þessa kafla er að alhæfa hugtakið vigur.
+Við höfum séð hvernig það má leggja saman vigra, margfalda þá með tölu og hvernig þessar tvær aðgerðir tengjast með dreifireglu.
+Nú viljum við telja til alla eiginleika vigra og skilgreina mismunandi "heimili" þeirra.  
+Í stað vigurrúms með margföldun með rauntölu gætum við t.d. skilgreint vigurrúm með margföldun með tvinntölu. Við viljum einnig alhæfa hugtök sem við höfum áður séð eins og
+*spann*, *línuleg vörpun* o.fl. fyrir almenn vigurrúm. 
+
+
 Vigurrúm og hlutrúm 
 -------------------
 
@@ -15,30 +22,30 @@ Skilgreining: Vigurrúm
     **Vigurrúm** (e. vector space) er ekki tómt mengi :math:`V` með stökum sem
     nefnd eru vigrar (e. vectors) ásamt tveimur aðgerðum
     samlagningu og margföldun með rauntölu, sem fullnægja
-    eftirfarandi frumsendum fyrir alla vigra :math:`u, v\in V` og allar tölur :math:`c` og :math:`d` 
+    eftirfarandi frumsendum fyrir alla vigra :math:`\ve u, \ve v\in V` og allar tölur :math:`c` og :math:`d` 
     :
 
-     **1.** Ef :math:`\ve u,\ve v\in V` þá er :math:`\ve u+\ve v\in V`.
+     **1.** Ef :math:`\ve u,\ve v\in V` þá er :math:`\ve u+\ve v\in V`. \ *lokun við samlagningu*
     
-     **2.** :math:`\ve u + \ve v = \ve v + \ve u`.
+     **2.** :math:`\ve u + \ve v = \ve v + \ve u`. \ *víxlregla samlagningar*
     
-     **3.** :math:`(\ve u + \ve v) +\ve w =\ve u + (\ve v +\ve w)`.
+     **3.** :math:`(\ve u + \ve v) +\ve w =\ve u + (\ve v +\ve w)`. \ *tengiregla samlagningar*
     
-     **4.** Til er stak :math:`\ve{0}` í :math:`V` kallað núll eða núllvigur þannig að :math:`0 + u = u`.
+     **4.** Til er stak :math:`\ve{0}` í :math:`V` kallað núll eða núllvigur þannig að :math:`\ve 0 + \ve u = \ve u`. \ *samlagningarhlutleysa*
     
-     **5.** Fyrir sérhvert :math:`\ve u \in V` er til stak :math:`-\ve u \in V` þannig að :math:`\ve u +(-\ve u) =\ve 0` .
+     **5.** Fyrir sérhvert :math:`\ve u \in V` er til stak :math:`-\ve u \in V` þannig að :math:`\ve u +(-\ve u) =\ve 0` . \ *samlagningarandhverfa*
     
-     **6.** Ef :math:`\ve u\in V` þá er :math:`c\ve u\in V`.
+     **6.** Ef :math:`\ve u\in V` þá er :math:`c\ve u\in V`. \ *lokun við margföldun með tölu*
     
-     **7.** :math:`c(\ve u+\ve v) = c\ve u +c\ve v`.
+     **7.** :math:`c(d\ve u) = (cd)\ve u`. \ *tengiregla margföldunar*
     
-     **8.** :math:`(c+d)\ve u = c\ve u + d\ve u`.
-    
-     **9.** :math:`c(d\ve u) = (cd)\ve u`.
-    
-     **10.** :math:`1\ve u = \ve u`.
+     **8.** :math:`1\ve u = \ve u`. \ *margföldunarhlutleysa*
 
-Nokkrar einfaldar afleiðingar af þessari skilgreiningu eru að:
+     **9.** :math:`c(\ve u+\ve v) = c\ve u +c\ve v`. \ *dreifiregla*
+    
+     **10.** :math:`(c+d)\ve u = c\ve u + d\ve u`. \ *dreifiregla*
+
+Nokkrar afleiðingar af þessari skilgreiningu eru að:
 
     - Fyrir sérhvern vigur :math:`\ve u\in V` gildir að :math:`0\ve u = \ve 0`.
     - Fyrir sérhverja tölu :math:`c` gildir að :math:`c\ve 0 = \ve 0`.
@@ -47,63 +54,46 @@ Nokkrar einfaldar afleiðingar af þessari skilgreiningu eru að:
     - Núllvigurinn er ótvírætt ákvarðaður.
 
 
-En af hverju að spá í vigurrúmum? Reiknireglurnar í vigurrúmi um samlagningu og margföldun með
-tölu eru nákvæmlega sömu reiknireglur og gilda fyrir vigra í :math:`\R^n`.
-Það sem við höfum gert í námskeiðinu þar sem ekki er beinlínis
-verið að tala um hnit í vigri og fylki gildir almennt fyrir vigurrúm.
-Hugtök eins og „línulega óháð“, „spann“ og „línuleg vörpun“ er hægt
-að skilgreina í þessu almennara samhengi.
-Það sem við græðum er að við getum nýtt það sem við gerum í
-mun almennara samhengi. Við finnum almennt munstur sem hægt
-er að nýta til að leysa mörg ólík verkefni.
-Hægt að gera þetta enn almennara, t.d. með því að í stað
-margföldun með rauntölu komi margföldun með tvinntölu. Það sem
-er skilgreint hér að ofan myndum við þá kalla **vigurrúm yfir
-rauntölur** og hitt væri **vigurrúm yfir tvinntölur**.
+Sýnidæmi: Vigurrúm
+^^^^^^^^^^^^^^^^^^^^^
 
-
-Dæmi um vigurrúm
-^^^^^^^^^^^^^^^^
-
-.. admonition:: Upptalning
+.. admonition:: Dæmi
     :class: daemi
 
-    Efirfarandi eru dæmi um vigurrúm:
-
-    **1.** :math:`\R^n` ásamt venjulegri samlagningu og margföldun með tölu er vigurrúm.
+    **1.** :math:`\R^n` ásamt venjulegri samlagningu og margföldun með rauntölu er vigurrúm.
 
     **2.** :math:`\R^{m\times n}`, mengi allra :math:`m\times n` fylkja, er vigurrúm þar sem aðgerðirnar eru venjuleg samlagning fylkja og margföldun fylkis með tölu.
 
-    **3.** Látum :math:`\mathbb{S}` vera mengi allra runa :math:`{y_k} = (\ldots, y_{-1}, y_0, y_1, y_2, \ldots)` af rauntölum. Rúmið :math:`\mathbb{S}`, sem er óendanlegt í báðar áttir, 
-    kallast merkjarúm og stök þess kallast merki. Samlagning og margföldun með tölu á :math:`\mathbb{S}` eru skilgreind þannig að
-    
+    **3.** Mengi allra runa :math:`{y_k} = (\ldots, y_{-1}, y_0, y_1, y_2, \ldots)` af rauntölum.
+    Samlagning og margföldun með tölu eru skilgreind þannig að 
+
     .. math:: {y_k } + {z_k } =(\ldots, y_{-1}+z_{-1}, y_0+z_0, y_1+z_1, y_2+z_2, \ldots)={y_k+z_k},
 
         r{y_k}= (\ldots, ry_{-1}, ry_0, ry_1, ry_2, \ldots)={ry_k}
 
-    Mengið :math:`\mathbb{S}` ásamt þessum tveimur aðgerðum er vigurrúm.
+    Mengið ásamt þessum tveimur aðgerðum er vigurrúm.
 
     **4.** Látum :math:`\mathbb{P}_n` vera mengi allra margliða af stigi minna en eða jafnt :math:`n`. Stökin í :math:`\mathbb{P}_n` 
     eru margliður af taginu
 
     .. math:: \ve p(t)=a_0+a_1 t+a_2 t^2+\cdots +a_n t^n 
 
-    Samlagning og margföldun með tölu eru skilgreind á venjulegan hátt. Með þessum tveimur aðgerðum er :math:`\mathbb{P}_n` vigurrúm.
+    Samlagning og margföldun með tölu eru skilgreind á venjulegan mátan. Með þessum tveimur aðgerðum er :math:`\mathbb{P}_n` vigurrúm.
 
-    **5.** Látum :math:`\mathbb{P}` vera mengi allra margliða (af öllum stigum). Þá er :math:`\mathbb{P}` vigurrúm.
+    **5.** Mengi allra margliða (af öllum stigum):math:`\mathbb{P_n}` er vigurrúm.
 
     Tökum einhverjar rauntölur :math:`a<b` og látum :math:`(a,b)` tákna opna bilið :math:`\{x \in \R\colon a < x < b\}\subset R`.
 
-    **6.** Látum :math:`\mathcal{V}(a,b)` vera mengi allra falla :math:`f\colon (a,b)\to\R`. Samlagning og margföldun með tölu eru skilgreind á venjulegan hátt. 
+    **6.** Látum :math:`\mathcal{V}(a,b)` vera mengi allra falla :math:`f\colon (a,b)\to\R`. Samlagning og margföldun með tölu eru skilgreind á venjulega mátann. 
     Með þessum tveimur aðgerðum er :math:`\mathcal{V}(a,b)` vigurrúm. Athugið að núllvigurinn í :math:`\mathcal{V}(a,b)` er fastafallið sem tekur gildið 0 í öllum punktum.
 
     **7.** Látum :math:`\mathcal{C}(a,b)` vera mengi allra samfelldra falla :math:`f\colon (a,b)\to\R`. 
-    Samlagning og margföldun með tölu eru skilgreind á venjulegan hátt. 
+    Samlagning og margföldun með tölu eru skilgreind á venjulega mátann. 
     Athugið að þegar við leggjum saman tvö samfelld föll er útkoman samfellt fall og þegar við margföldum samfellt fall með tölu þá er útkoman samfellt fall.
     Með þessum tveimur aðgerðum er :math:`\mathcal{C}(a,b)` vigurrúm.
 
     **8.** Látum :math:`\mathcal{D}(a,b)` vera mengi allra diffranlegra falla :math:`f\colon (a,b)\to\R`. 
-    Samlagning og margföldun með tölu eru skilgreind á venjulegan hátt. 
+    Samlagning og margföldun með tölu eru skilgreind á venjulega mátann. 
     Athugið að þegar við leggjum saman tvö diffranleg föll er útkoman diffranlegt fall og þegar við margföldum diffranlegt fall með tölu þá er útkoman diffranlegt fall. 
     Með þessum tveimur aðgerðum er :math:`\mathcal{D}(a,b)` vigurrúm.
 
@@ -121,14 +111,14 @@ Skilgreining: Hlutrúm
 
     **1.**  Núllvigurinn er stak í :math:`H`.
 
-    **2.** Ef :math:`\ve u` og :math:`\ve v` eru vigrar í :math:`H` þá er vigurinn :math:`\ve u + \ve v` í :math:`H`. (Stundum sagt að mengi :math:`H` sé lokað undir samlagningu.)
+    **2.** Ef :math:`\ve u` og :math:`\ve v` eru vigrar í :math:`H` þá er vigurinn :math:`\ve u + \ve v` í :math:`H`. Við segjum að mengi :math:`H` sé *lokað undir samlagningu.*
 
-    **3.** Ef :math:`\ve u` er vigur í :math:`H` og :math:`c` er rauntala þá er vigurinn :math:`c\ve u` í :math:`H`. (Stundum sagt að mengi :math:`H` sé lokað undir margföldun með tölu.)
+    **3.** Ef :math:`\ve u` er vigur í :math:`H` og :math:`c` er rauntala þá er vigurinn :math:`c\ve u` í :math:`H`. Við segjum að mengi :math:`H` sé *lokað undir margföldun með tölu.*
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    **(i)** Í stað skilyrðis **1.** er oft sett skilyrðið að mengið :math:`H` sé ekki tómt. 
+    **(i)** Í stað skilyrðis **1.** er stundum sagt að mengið :math:`H` sé ekki tómt. 
     Þá má svo nota skilyrði **3.** til að sýna að :math:`\ve 0\in H`.
 
     **(ii)** Ef :math:`U` er hlutrúm í vigurrúminu :math:`V`, þá er :math:`U` vigurrúm með reikningsaðgerðunum sem það „erfir“ frá :math:`V`.
@@ -136,23 +126,21 @@ Skilgreining: Hlutrúm
     **(iii)** :math:`\{\ve 0\}` og :math:`V` eru hlutrúm í :math:`V`.
 
 
-Dæmi um hlutrúm
-^^^^^^^^^^^^^^^
+Sýnidæmi: Hlutrúm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. admonition:: Upptalning
+.. admonition:: Dæmi
     :class: daemi
 
-    Eftirfarandi  eru dæmi um hlutrúm:
-
-    **1.** Ef við látum :math:`V` vera vigurrúmið :math:`\R^3` þá eru mengin 
+    **1.** Höfum vigurrúmið :math:`V=\R^3`. Mengin
 
     .. math:: H_1=\{(x,0,0)^T\colon x\in\R\}, H_2=\{(x,y,0)^T\colon x,y\in\R\}, H_3=\{(x,x,x)^T\colon x\in\R\}
 
-    allt dæmi um vigurrúm.
+    eru allt dæmi um hlutrúm.
 
     **2.**  Mengi allra efri þríhyrningsfylkja í vigurrúminu :math:`\R^{n\times n}` er hlutrúm í :math:`\R^{n\times n}`.
 
-    **3.** Mengið :math:`\mathbb{P}_n` af öllum margliðum af stigi :math:`n` eða lægra er hlutrúm í :math:`\mathbb{P}`, mengi allra margliðna.
+    **3.** Mengið :math:`\mathbb{P}_n` af öllum margliðum af stigi :math:`n` eða lægra er hlutrúm í :math:`\mathbb{P}` mengi allra margliðna.
 
     **4.** Mengið :math:`\mathcal{D}(a,b)` af öllum diffranlegum föllum á opna bilinu :math:`(a,b)` er hlutrúm í
     :math:`\mathcal{C}(a,b)`, mengi allra samfelldra falla á opna bilinu :math:`(a,b)`. Svo er :math:`\mathcal{C}(a,b)`
@@ -160,42 +148,59 @@ Dæmi um hlutrúm
     að :math:`\mathcal{D}(a,b)` sé hlutrúm í :math:`\mathcal{V}(a,b)`.
 
 
-Rifjum upp skilgreininguna á línulegri samantekt (linkur) og spann vigra (linkur) áður en lengra er haldið.
-TODO HYPERLINK Á SKILGREININGAR UM LÍNULEGAR SAMANTEKTIR OG SPAN 
+Skilgreinig: Alhæfing línuleg samantekt og spann
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Setning: Um vigra og hlutrúm
+.. admonition:: Skilgreinig
+    :class: skilgreining
+
+    Látum :math:`V` vera vigurrúm, :math:`\ve v_1, \dots, \ve v_p \in V` og :math:`c_1, \dots, c_p \in \R`. Vigurinn
+
+    .. math:: c_1 \ve v_1 + \dots + c_p \ve v_p \in V
+    
+    kallast **línuleg samantekt** vigranna. Mengi allra línulegra samantekta :math:`\ve v_1, \dots, \ve v_p` kallast **spann** vigranna,
+
+    .. math:: \text{Span}\{\ve v_1, \dots, \ve v_p\} \subseteq V.
+    
+Áður skilgreindum við línulega samantekt og spann fyrir :math:`\R^n`. Nú höfum við almennari skilgreiningu fyrir hverskyns vigurrúm.
+
+
+Setning: Spann er hlutrúm
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`\ve v_1, \ve v_2, \ldots, \ve v_p` vera vigra í vigurrúmi :math:`V`. Þá er 
-    :math:`\spn\{ \ve v_1, \ve v_2, \ldots, \ve v_p\}` hlutrúm í :math:`V`. 
-
-.. admonition:: Setning
-    :class: setning
+    Látum :math:`\ve v_1, \dots, \ve v_p \in V`. Þá er :math:`\text{Span}\{\ve v_1, \dots, \ve v_p\}` hlutrúm í :math:`V`.
 
     Látum :math:`U` vera hlutrúm í vigurrúmi :math:`V`. Ef :math:`\ve u_1, \ve u_2, \ldots, \ve u_p` eru vigrar í :math:`U` þá er 
-    :math:`\spn\{ \ve u_1, \ve u_2, \ldots, \ve u_p\}\subseteq U`. 
+    :math:`\text{Span}\{\ve u_1, \ve u_2, \ldots, \ve u_p\}\subseteq U`. 
 
 
 
-Fleiri dæmi um hlutrúm
-^^^^^^^^^^^^^^^^^^^^^^
+Sýnidæmi: Fleiri hlutrúm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. admonition:: Upptalning
+.. admonition:: Dæmi
     :class: daemi
 
-    Eftirfarandi eru upptalning á öllum hlutrúmum í nokkrum vigurrúmum:
+    Skoðum upptalningu á öllu hlutrúmum eftirfarandi vigurrúma: :math:`\R`, :math:`\R^2` og :math:`\R^3`
+
+.. admonition:: Lausn
+    :class: daemi, dropdown 
+
 
     **1.** Einu hlutrúmin í :math:`\R` eru :math:`\{0\}` og :math:`\R`.
 
     **2.** Hlutrúmin í :math:`\R^2` eru :math:`\{\ve 0\}` og :math:`\R^2` ásamt öllum línum sem liggja um núllpunktinn.
-    Lína gegnum núllpunktinn með stefnuvigur :math:`\ve v` er jöfn :math:`\spn\{\ve v\}`.
+    Lína gegnum núllpunktinn með stefnuvigur :math:`\ve v` er jöfn :math:`\text{Span}\{\ve v\}`.
 
     **3.** Hlutrúmin í :math:`\R^3` eru :math:`\{\ve 0\}` og :math:`\R^3` ásamt öllum línum og öllum sléttum sem liggja um núllpunktinn.
     Ef :math:`\Gamma` er slétta í :math:`\R^3` sem inniheldur núllpunktinn og :math:`\ve u` og :math:`\ve v` eru vigrar sem liggja í planinu 
-    þannig að hvorugur sé margfeldi af hinum þá er :math:`\Gamma=\spn\{\ve u, \ve v\}`.
+    þannig að hvorugur sé margfeldi af hinum þá er :math:`\Gamma=\text{Span}\{\ve u, \ve v\}`.
+
+.. admonition:: Athugasemd
+    :class: athugasemd
 
     Athugið að eftirfarandi eru **ekki** hlutrúm:
 
@@ -214,7 +219,7 @@ Skilgreining: Vigursumma
 
     .. math:: U_1+U_2=\{\ve x+\ve y\colon \ve x\in U_1, \ve y\in U_1 \}
 
-    **vigursumma** (eða einfaldlega summa) (e. vector sum) þeirra.
+    **vigursumma** (e. vector sum), eða einfaldlega summa, þeirra.
 
 Setning 
 ~~~~~~~
@@ -226,7 +231,7 @@ Setning
     Þá eru bæði :math:`U_1\cap U_2` og :math:`U_1+U_2` hlutrúm í :math:`V`.
 
 
-Meira um hlutrúm: núllrúm og dálkrúm
+Núllrúm og dálkrúm
 ------------------------------------
 
 Skilgreining: Núllrúm fylkis 
@@ -249,15 +254,15 @@ Setning: Núllrúm er hlutrúm
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`A` vera :math:`m\times n` fylki. Núllrúm :math:`A`, :math:`\nul{A}`, er hlutrúm í :math:`\R^n`. 
-    Þetta má líka orða sem að lausnarúm óhliðraðar jöfnu :math:`A\ve x=\ve 0` með :math:`n` óþekktum er
+    Látum :math:`A` vera :math:`m\times n` fylki. Núllrúm :math:`A` er hlutrúm í :math:`\R^n`, táknað :math:`\nul{A}`,
+    m.ö.o. lausnarúm óhliðraðar jöfnu :math:`A\ve x=\ve 0` með :math:`n` óþekktum stærðum er
     hlutrúm í :math:`\R^n`.
 
 
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Lausnarmengi hliðraðar jöfnu :math:`A\ve x=\ve b` með :math:`b\neq\ve 0` er **ekki** hlutrúm í :math:`\R^n`.
+    Lausnarmengi hliðraðar jöfnu :math:`A\ve x=\ve b` þar sem :math:`b\neq\ve 0` er **ekki** hlutrúm í :math:`\R^n`.
     Það sést til dæmis af því að :math:`\ve 0` er ekki í lausnarmenginu.
 
 Skilgreining: Dálkrúm fylkis 
@@ -266,10 +271,10 @@ Skilgreining: Dálkrúm fylkis
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`A` vera :math:`m\times n` fylki. Mengið sem **dálkvigrar** :math:`A` spanna kallast
-    dálkrúm :math:`A` (e. column space) og er táknað með :math:`\col{A}`. Ef :math:`A=[a_1 a_2 \cdots a_n]` þá er
+    Látum :math:`A` vera :math:`m\times n` fylki. Mengið sem dálkvigrar :math:`A` spanna kallast
+    **dálkrúm** :math:`A` (e. column space) og er táknað með :math:`\col{A}`. Ef :math:`A=[a_1 a_2 \cdots a_n]` þá er
 
-    .. math:: \col{A}=\spn\{a_1,a_2,\ldots,a_n\}
+    .. math:: \col{A}=\text{Span}\{a_1,a_2,\ldots,a_n\}.
 
 Setning: Dálkrúm er hlutrúm 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -281,17 +286,17 @@ Setning: Dálkrúm er hlutrúm
 
 
 Samanburður á núllrúmum og dálkrúmum
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Samanburður
-    :class: daemi
+.. admonition:: Setning
+    :class: setning
 
     Látum :math:`A` vera :math:`m\times n` fylki.
 
     - Núllrúmið :math:`\nul{A}` er hlutrúm í :math:`\R^n` en dálkrúmið :math:`\col{A}` er hlutrúm í :math:`\R^m`.
 
-    - Við finnum núllrúmið með því að leysa jöfnuna :math:`A\ve x=\ve 0`.
-    - Við finnum dálkrúmið með því að skoða spann dálkvigranna.
+    - Við finnum :math:`\nul{A}` með því að leysa jöfnuna :math:`A\ve x=\ve 0`.
+    - Við finnum :math:`\col{A}` með því að skoða spann dálkvigra :math:`A`.
 
     - Vigur :math:`\ve v\in\R^n` er í :math:`\nul{A}` ef og aðeins ef :math:`A\ve v=\ve 0`.
     - Vigur :math:`\ve b\in\R^m` er í :math:`\col{A}` ef og aðeins ef jafnan :math:`A\ve x=\ve b` hefur lausn. 
@@ -311,7 +316,7 @@ Sýnidæmi: Núllrúm
         9 & 10 & 11 & 12
         \end{bmatrix}
     
-    með stikaðri framsetningu
+    með stikaðri framsetningu.
 
 .. admonition:: Lausn
     :class: daemi, dropdown 
@@ -322,23 +327,27 @@ Sýnidæmi: Núllrúm
         1&2&3&4\\
         5&6&7&8\\
         9&10&11&12\\
-        \end{bmatrix}&\sim
+        \end{bmatrix}
+        &\overset{\substack{R_2 - 5 R_1 \\
+        R_3 - 9 R_1}}\sim
         \begin{bmatrix}
         1&2&3&4\\
         0&-4&-8&-12\\
         0&-8&-16&-24\\
-        \end{bmatrix}\\&\sim
+        \end{bmatrix}\\
+        &\overset{\substack{R_2 + 5 R_1/2\\
+        R_3 + 4 R_1}}\sim
         \begin{bmatrix}
         1&2&3&4\\
         0&1&-2&-3\\
         0& 0& 0&0\\
         \end{bmatrix}\\
-        &\sim
+        &\overset{\substack{R_1 - 2 R_2}}\sim
         \begin{bmatrix}
         1&0&-1&-2\\
         0&1&2&3\\
         0&0&0&0\\
-        \end{bmatrix}\end{align*}
+        \end{bmatrix}.\end{align*}
     
     Höfum því að 
 
@@ -346,7 +355,7 @@ Sýnidæmi: Núllrúm
         1&0&-1&-2\\
         0&1&2&3\\
         0&0&0&0\\
-        \end{bmatrix}
+        \end{bmatrix}.
     
     Vitum að :math:`\nul{A}` er lausnamengi :math:`A\ve x=\ve 0`. Það er stikað með
 
@@ -359,17 +368,17 @@ Sýnidæmi: Núllrúm
         \end{bmatrix}+
         x_4\begin{bmatrix}
         2\\-3\\0\\1
-        \end{bmatrix}
+        \end{bmatrix}.
     
     Við fáum því
 
-    .. math:: \nul A = \spn\left\{\begin{bmatrix}
+    .. math:: \nul A = \text{Span}\left\{\begin{bmatrix}
         1\\-2\\1\\0
         \end{bmatrix},\begin{bmatrix}
         2\\-3\\0\\1
-        \end{bmatrix}\right\}
+        \end{bmatrix}\right\}.
     
-    *Til að finna nákvæma lýsingu núllrúms þarf því að leysa línulegt jöfnuhneppi.*
+    Til að finna nákvæma lýsingu núllrúms þarf því að leysa línulegt jöfnuhneppi.
 
 Sýnidæmi: Dálkrúm
 ^^^^^^^^^^^^^^^^^
@@ -382,7 +391,7 @@ Sýnidæmi: Dálkrúm
     .. math:: A=\begin{bmatrix} 1 & -10 & -24 & -42 \\
         1 & -8 & -18 & -32 \\
         -2 & 20 & 51 & 87
-        \end{bmatrix}
+        \end{bmatrix}.
     
     Finnið nákvæma lýsingu á dálkrúmi A.
 
@@ -399,14 +408,14 @@ Sýnidæmi: Dálkrúm
         \begin{bmatrix} 1 & -10 & -24 & -42 \\
         0 & 2 & 6 & 10 \\
         0 & 0 & 3 & 3 \\
-        \end{bmatrix}
+        \end{bmatrix}.
 
     Sjáum að fyrstu 3 dálkar fylkisins eru vendidálkar. Þá er 
-    :math:`\col{A}` fyrstu 3 dálkarnir úr upprunalega :math:`A` fylkinu.
+    :math:`\col{A}` fyrstu 3 dálkarnir úr upprunalega :math:`A` fylkinu,
 
     .. math:: \col{A}=\left\{\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix} 
         \begin{bmatrix} -10 \\ -8 \\ 20 \end{bmatrix}
-        \begin{bmatrix} -24 \\ -18 \\ 51 \end{bmatrix} \right\}
+        \begin{bmatrix} -24 \\ -18 \\ 51 \end{bmatrix} \right\}.
 
     
 Skilgreining: Kjarni og mynd 
@@ -477,7 +486,7 @@ Skilgreining: Grunnur
 
     **(i)** Upptalningin :math:`\mathcal{B}` er línulega óháð.
 
-    **(ii)** :math:`H=\spn\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`.
+    **(ii)** :math:`H=\text{Span}\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`.
 
 .. admonition:: Athugasemd
     :class: athugasemd
