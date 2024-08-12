@@ -65,6 +65,34 @@ We can go further down the directory with ``cd <next folder name>``.
 .. note:: 
     **Success metric:** The project folder for ``example-repo`` exists at ``C:\Users\username\Documents\example-repo``.
 
+Making a new branch
+~~~~~~~~~~~~~~~~~~~
+When working in a team, we often divide the project into parallel branches to allow multiple members to work on separate aspects of the project.
+The branches can be created for each team member, each feature, or even for a specific workflow such as a development branch, testing branch, and a production branch.
+
+An empty repository usually only has 1 branch which is the ``main`` branch.
+To create a new branch on a git repository, for example a branch called ``dev`` we can run ::
+
+    git branch dev
+
+To check whether the branch has been created, we can list all available branches with the following command ::
+
+    git branch
+
+or ::
+
+    git branch -al
+
+You should now be able to see 2 branches, one in green with an asterisk (*) on its left side which indicates the current branch and another one in white.
+
+If the current branch is the ``main`` branch, we can move to the ``dev`` branch by running the following command ::
+
+    git checkout dev
+
+If the current branch is the ``dev`` branch, we can move to the ``main`` branch by running the following command ::
+
+    git checkout main
+
 Push your changes to the remote repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After working on your local repository, it is good practice to check which branch we are working on and what files have been added/modified.
