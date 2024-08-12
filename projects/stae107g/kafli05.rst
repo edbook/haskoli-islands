@@ -314,8 +314,8 @@ Sýnidæmi: Kennijafnan
 .. admonition:: Athugasemd
     :class: athugasemd
 
-    Kennijafnan getur í mesta lagi haft :math:`n` ólýkar núllstöðvar. 
-    Ef að margliðan þéttast þannig að einhver núllstöð :math:`r` kemur fyirr í :math:`s`-ta veldi
+    Kennijafnan getur í mesta lagi haft :math:`n` ólíkar núllstöðvar. 
+    Ef að margliðan þéttast þannig að einhver núllstöð :math:`r` kemur fyrir í :math:`s`-ta veldi
     þáttun hennar þá segjum við að eigingildið :math:`r` hafi algebrulega margfeldni :math:`s` 
     (e. algrebraic multiplicity).
 
@@ -418,10 +418,10 @@ Setning: Kennijafna ámóta fylkja
 Hornalínugjörningar
 -------------------
 
-Skilgreinig: Hornalínufylki
+Skilgreining: Hornalínufylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Við segjum að :math:`n \times n` fylki :math:`D` sé **hornalínufylki**
@@ -435,13 +435,13 @@ Skilgreinig: Hornalínufylki
         \end{bmatrix}
 
 
-Skilgreinig: Hornalínugeranlegt
+Skilgreining: Hornalínugeranlegt
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
     :class: skilgreining
 
-    Ferningsfylki :math:`A` sem er ámóta hornalínufylki er sagt **hornalínugeranlegt** (e. diagnoalizable). 
+    Ferningsfylki :math:`A` sem er ámóta hornalínufylki er sagt **hornalínugeranlegt** (e. diagonalizable). 
     Það er að segja, fylki :math:`A` er hornalínugeranlegt ef til er andhverfanlegt
     fylki :math:`P` þannig að :math:`A=PDP^{-1}` þar sem :math:`D` er hornlínufylki.
  
@@ -476,7 +476,7 @@ Sýnidæmi: Hornalínugjörningar
     :class: daemi, dropdown
 
     Þar sem :math:`A` er hornalínufylki eru eigingildi þess stökin
-    á honralínunni, sem sagt :math:`\lambda = 3` og :math:`\lambda = 1`.
+    á hornalínunni, sem sagt :math:`\lambda = 3` og :math:`\lambda = 1`.
     Fyrir :math:`\lambda = 3` fæst
 
     .. math:: \begin{bmatrix}
@@ -520,7 +520,7 @@ Sýnidæmi: Hornalínugjörningar
         0& 0& 0
         \end{bmatrix}
 
-    sem svarar til jöfnuhneppisins :math:`x_1+x_2+1/2x_3=0` sem hefur lausninirnar
+    sem svarar til jöfnuhneppisins :math:`x_1+x_2+1/2x_3=0` sem hefur lausnirnar
 
     .. math:: \begin{bmatrix}
         x_1\\
@@ -540,7 +540,7 @@ Sýnidæmi: Hornalínugjörningar
         1
         \end{bmatrix} 
 
-    Fylkið hefur því þrjá línulega áháða eiginvigra sem mynda fylkið 
+    Fylkið hefur því þrjá línulega óháða eiginvigra sem mynda fylkið 
     :math:`P`. Auk þess fáum við :math:`D`
 
     .. math:: P= \begin{bmatrix}
@@ -757,5 +757,3 @@ Sýnidæmi: Hornalínugjörningur
         \end{bmatrix}
     
     Þá gildir að :math:`A=PDP^{-1}` og :math:`\mathcal{B} = \left\{\begin{bmatrix} 1 \\ 7 \end{bmatrix},\begin{bmatrix} -1 \\ 1 \end{bmatrix}\right\}`.
-
-

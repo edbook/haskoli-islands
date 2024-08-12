@@ -147,7 +147,7 @@ Reiknireglur um fjarlægðir
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`\ve u, \ve v` og :math:`\ve w` vera puntka í :math:`\R^n`. Þá gildir
+    Látum :math:`\ve u, \ve v` og :math:`\ve w` vera punkta í :math:`\R^n`. Þá gildir
         **1.** :math:`d(\ve u, \ve v) \geq 0` og :math:`d(\ve u, \ve v)=0` ef og aðeins ef :math:`\ve u= \ve v`
 
         **2.** :math:`d(\ve u, \ve v) = d(\ve v, \ve u)`
@@ -169,10 +169,10 @@ Skilgreining: Hornrétt
   Vigrarnir :math:`\ve u` og :math:`\ve v` eru sagðir **hornréttir** (á hvorn annan) (e. orthogonal)  
   ef :math:`\ve u \cdot \ve v=0`
 
-Skilgreinig: Hornið milli
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Horn milli vigra
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
   :class: skilgreining
 
   Ef :math:`\ve u` og :math:`\ve v` eru vigrar í  :math:`\mathbb{R}^n`, sem er hvorugur núll, þá
@@ -233,7 +233,7 @@ Sönnum **a.** í setningunni hér að ofan.
 
         svo :math:`(\ve u+\ve v)` er hornrétt á alla vigra :math:`W` og því er :math:`(\ve u + \ve v) \in W^\perp`.
 
-        **3.** Látum :math:`\ve u \in W^\perp`, :math:`\ve w` vera hvaða vigru sem er í :math:`W` og :math:`c` vera raunrölu. Þá er 
+        **3.** Látum :math:`\ve u \in W^\perp`, :math:`\ve w` vera hvaða vigru sem er í :math:`W` og :math:`c` vera rauntölu. Þá er 
 
         .. math:: (c\textbf{u})\cdot \textbf{w} = c\ve u \cdot \ve w = c \cdot 0 = 0 
         
@@ -261,7 +261,7 @@ Sýnidæmi: Þverstæð og þverstöðluð mengi
   
   **1.** Venjulegi grunnurinn :math:`\{\ve e_1, \dots, \ve e_n \}` í :math:`\R^n` er þverstaðlað mengi. Þeir hafa allir lengdina einn þar sem þeir eru einingarvigrar og þeir eru hornréttir samkvæmt skilgreiningu.
 
-  **2.** :math:`\{v_1, v_2, v_3 \}` þar sem :math:`v_1=(3,1,1), v_2=(-1,2,1)` og :math:`v_3=(-1/2,-2,7/2)` er þverstætt mengi. Það má auðveldlega sannfæra sig að svo sé með því að sýna fram á að öll infeldin :math:`v_1 \cdot v_2, v_1 \cdot v_3` og :math:`v_2 \cdot v_3` séu núll, og lengdir vigranna eru ekki 1.
+  **2.** :math:`\{v_1, v_2, v_3 \}` þar sem :math:`v_1=(3,1,1), v_2=(-1,2,1)` og :math:`v_3=(-1/2,-2,7/2)` er þverstætt mengi. Það má auðveldlega sannfæra sig að svo sé með því að sýna fram á að öll innfeldin :math:`v_1 \cdot v_2, v_1 \cdot v_3` og :math:`v_2 \cdot v_3` séu núll, og lengdir vigranna eru ekki 1.
 
 
 
@@ -271,7 +271,7 @@ Sýnidæmi: Þverstæð mengi
 .. admonition:: Dæmi
   :class: daemi
 
-  Finnið dæmi um þrjá vigra sem mynda þverstætt mengi og þrjá vigra sem gera það ekki, af eftirfarandi vigurm.
+  Finnið dæmi um þrjá vigra sem mynda þverstætt mengi og þrjá vigra sem gera það ekki, af eftirfarandi vigrum.
 
     
     .. math:: \ve u=\begin{bmatrix} 1 \\ -2 \\ 0 \end{bmatrix}, 
@@ -291,7 +291,7 @@ Sýnidæmi: Þverstæð mengi
         
     .. math:: \ve u \cdot \ve w = (1)(1)+(-2)(1)+(0)(-1)=-1
     
-  Þar sem innfeldið er ekki 0 í öllum tilfellum svo vigrarir mynda ekki þverstætt mengi.
+  Þar sem innfeldið er ekki 0 í öllum tilfellum svo vigrarnir mynda ekki þverstætt mengi.
 
   Athugum því næst :math:`\ve u, \ve v` og :math:`\ve q`.
     
@@ -331,7 +331,7 @@ Skilgreining: Þverstæðir og þverstaðlaðir grunnar
 
         .. math:: u_i \cdot u_j =0\  \text{ ef } \ i \neq j.
     
-    **2.** Grunnurinn  fyrir :math:`W` er **þverstaðlaður** (e. orthonormal basis) ef sérhverjir tveir vigrar í grunninum eru hornréttir hvor og annan og allir vigrarnir eru einingarvigrar, m.ö.o.
+    **2.** Grunnurinn fyrir :math:`W` er **þverstaðlaður** (e. orthonormal basis) ef sérhverjir tveir vigrar í grunninum eru hornréttir hvor og annan og allir vigrarnir eru einingarvigrar, m.ö.o.
 
         .. math:: u_i \cdot u_j = \begin{cases}
             1\ \text{ ef } \ i = j \\
@@ -358,7 +358,7 @@ Skilgreining: Hnit m.t.t. þverstæðra og þverstaðlaða grunna
 
     Látum :math:`W` vera hlutrúm í :math:`\R^n` og :math:`\mathcal{B}=\{\ve u_1, \dots, \ve u_p \}` vera grunn fyrir :math:`W`.
 
-    **1.** Ef :math:`\ve y \in W` og :math:`\mathcal{B}` er þverstaæður þá er 
+    **1.** Ef :math:`\ve y \in W` og :math:`\mathcal{B}` er þverstæður þá er 
 
     .. math:: \ve y = c_1 \ve u_1 + \dots + c_p \ve u_p
 
@@ -428,7 +428,7 @@ Sýnidæmi: Annað dæmi um hnit vigurs m.t.t. grunns
 .. admonition:: Dæmi
   :class: daemi
 
-  Finnið hnit puktsins :math:`\ve y=(1,1,1)` með tilliti til þverstæða grunnsins
+  Finnið hnit punktsins :math:`\ve y=(1,1,1)` með tilliti til þverstæða grunnsins
 
   .. math:: \mathcal{B}=
     \left\{
@@ -472,7 +472,7 @@ Skilgreining: Hornrétt ofanvarp
 
   sem **hornrétt ofanvarp** (e. orthogonal projection) :math:`\ve y` á :math:`\ve u`. Stundum er ofanvarp táknað með :math:`\text{proj}(\ve y)`. 
 
-Liða má vigur :math:`\ve y \in \R` upp í samsíðan og hornréttan þátt, þ.e. :math:`\ve y=\hat{\ve y}+\ve z`, eins og sjá má á eftirfarandi mynd.
+Liða má vigur :math:`\ve y \in \R` upp í samsíða og hornréttan þátt, þ.e. :math:`\ve y=\hat{\ve y}+\ve z`, eins og sjá má á eftirfarandi mynd.
 
 .. figure:: myndir/ofanvarp.png
   :align: center
@@ -590,10 +590,10 @@ Setning: Hornrétt liðun (e. orthogonal decomposition)
   .. math:: \hat{\ve y} = (\ve y \cdot \ve u_1)\ve u_1 + (\ve y \cdot \ve u_2)\ve u_2 + \cdots + (\ve y \cdot \ve u_p)\ve u_p.
 
 
-Skilgreinig: Fylki fyrir ofanvarp
+Skilgreining: Fylki fyrir ofanvarp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
   :class: skilgreining
 
   Látum :math:`W` vera hlutrúm í :math:`\mathbb{R}^n` og gerum ráð fyrir að 
@@ -720,9 +720,9 @@ Aðferð minnstu kvaðrata
 -------------------------
 
 Aðferð minnstu kvaðrata (e. least squares) snýst um að finna nálgunarlausn á :math:`A \ve x = \ve b` þegar ekki er til nákvæm lausn. Heitið kemur frá því að ef við höfum
-:math:`\ve b = (\ve b_1, \cdots, \ve b_n)` og :math:`A \ve x = (\ve y_1, \cdots, \ve y_n)` og setjum :math:`\ve x = \hat{\ve x}` þá er summa minnstu kvarðatanna
+:math:`\ve b = (\ve b_1, \cdots, \ve b_n)` og :math:`A \ve x = (\ve y_1, \cdots, \ve y_n)` og setjum :math:`\ve x = \hat{\ve x}` þá er summa minnstu kvaðratanna,
  
-.. math:: ||\ve b - A \ve x ||^2=(\ve b_1 - \ve y_1)^2+ \cdots + (\ve b_n - \ve y_n)^2.
+.. math:: ||\ve b - A \ve x ||^2=(\ve b_1 - \ve y_1)^2+ \cdots + (\ve b_n - \ve y_n)^2,
 
 eins lítil og mögulegt er.
 
@@ -732,7 +732,7 @@ MYND
 Skilgreining: Aðferð minnstu kvaðrata
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
   :class: skilgreining
 
   Látum :math:`A` vera :math:`m \times n` fylki og :math:`\ve b\in \R^m`. **Minnstu kvaðrata lausn** (e. least squares solution) á :math:`A \ve x = \ve b` er vigur
@@ -787,7 +787,7 @@ Sýnidæmi: Aðferð minnstu kvaðrata
 .. admonition:: Lausn
   :class: daemi, dropdown
 
-  Ef við reynum að leysa :math:`A \ve x = \ve b` komumst við að því að það er engin lausn. Notum aðferð minnstu kvarðata til að finna nálgunarlausn. Reiknum
+  Ef við reynum að leysa :math:`A \ve x = \ve b` komumst við að því að það er engin lausn. Notum aðferð minnstu kvaðrata til að finna nálgunarlausn. Reiknum
 
   .. math:: A^T A = \begin{bmatrix}
             11 & 12 & -7 \\
@@ -814,9 +814,3 @@ Sýnidæmi: Aðferð minnstu kvaðrata
     \end{bmatrix}
 
   þar sem :math:`t \in \R`.
-
-
-
-
-
-  
