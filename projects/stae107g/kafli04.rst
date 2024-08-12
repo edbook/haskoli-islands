@@ -42,7 +42,7 @@ Nokkrar einfaldar afleiðingar af þessari skilgreiningu eru að:
 
     - Fyrir sérhvern vigur :math:`\ve u\in V` gildir að :math:`0\ve u = \ve 0`.
     - Fyrir sérhverja tölu :math:`c` gildir að :math:`c\ve 0 = \ve 0`.
-    - Fyrir serhvern vigur :math:`\ve u\in V` er vigurinn :math:`-\ve u` ótvírætt ákvarðaður.
+    - Fyrir sérhvern vigur :math:`\ve u\in V` er vigurinn :math:`-\ve u` ótvírætt ákvarðaður.
     - Fyrir sérhvern vigur :math:`\ve u\in V` gildir að :math:`-\ve u=(-1)\ve u`.
     - Núllvigurinn er ótvírætt ákvarðaður.
 
@@ -104,7 +104,7 @@ Dæmi um vigurrúm
 
     **8.** Látum :math:`\mathcal{D}(a,b)` vera mengi allra diffranlegra falla :math:`f\colon (a,b)\to\R`. 
     Samlagning og margföldun með tölu eru skilgreind á venjulegan hátt. 
-    Athugið að þegar við leggjum saman tvö diffranleg föll er útkoman diffranlegt fall og þegarvið margföldum diffranlegt fall með tölu þá er útkoman diffranlegt fall. 
+    Athugið að þegar við leggjum saman tvö diffranleg föll er útkoman diffranlegt fall og þegar við margföldum diffranlegt fall með tölu þá er útkoman diffranlegt fall. 
     Með þessum tveimur aðgerðum er :math:`\mathcal{D}(a,b)` vigurrúm.
 
     Athugum að hér höfum við að :math:`\mathcal{D}(a,b)\subseteq\mathcal{C}(a,b)\subseteq\mathcal{V}(a,b)` svo hér er dæmi um að eitt vigurrúm er hlutmengi í öðru.
@@ -123,7 +123,7 @@ Skilgreining: Hlutrúm
 
     **2.** Ef :math:`\ve u` og :math:`\ve v` eru vigrar í :math:`H` þá er vigurinn :math:`\ve u + \ve v` í :math:`H`. (Stundum sagt að mengi :math:`H` sé lokað undir samlagningu.)
 
-    **3.** Ef :math:`\ve u` er vigur í :math:`H` og :math:`c` er rauntala þá er vigurinn :math:`c\ve u` í :math:`H`.(Stundum sagt að mengi :math:`H` sé lokað undir margföldun með tölu.)
+    **3.** Ef :math:`\ve u` er vigur í :math:`H` og :math:`c` er rauntala þá er vigurinn :math:`c\ve u` í :math:`H`. (Stundum sagt að mengi :math:`H` sé lokað undir margföldun með tölu.)
 
 .. admonition:: Athugasemd
     :class: athugasemd
@@ -142,7 +142,7 @@ Dæmi um hlutrúm
 .. admonition:: Upptalning
     :class: daemi
 
-    Efirfarandi eru dæmi um hlutrúm:
+    Eftirfarandi  eru dæmi um hlutrúm:
 
     **1.** Ef við látum :math:`V` vera vigurrúmið :math:`\R^3` þá eru mengin 
 
@@ -169,7 +169,7 @@ Setning: Um vigra og hlutrúm
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`\ve v_1, \ve v_2, \ldots, \ve v_p` vera vigra í vigurúmi :math:`V`. Þá er 
+    Látum :math:`\ve v_1, \ve v_2, \ldots, \ve v_p` vera vigra í vigurrúmi :math:`V`. Þá er 
     :math:`\spn\{ \ve v_1, \ve v_2, \ldots, \ve v_p\}` hlutrúm í :math:`V`. 
 
 .. admonition:: Setning
@@ -186,7 +186,7 @@ Fleiri dæmi um hlutrúm
 .. admonition:: Upptalning
     :class: daemi
 
-    Efirfarandi eru upptalning á öllum hlutrúmum í nokkrum vigurrúmum:
+    Eftirfarandi eru upptalning á öllum hlutrúmum í nokkrum vigurrúmum:
 
     **1.** Einu hlutrúmin í :math:`\R` eru :math:`\{0\}` og :math:`\R`.
 
@@ -240,7 +240,7 @@ Skilgreining: Núllrúm fylkis
 
     .. math:: \nul{A}=\{\ve x\in\R^n\colon A\ve x=\ve 0\}
 
-    Núllrúmið er semsagt mengi allra lausna jöfnunar :math:`A\ve x=\ve 0`.
+    Núllrúmið er sem sagt mengi allra lausna jöfnunar :math:`A\ve x=\ve 0`.
 
 
 Setning: Núllrúm er hlutrúm 

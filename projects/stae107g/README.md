@@ -2,8 +2,7 @@
 
 Fyrirlestranótur í línulegri algebru við Háskóla Íslands, https://edbook.hi.is/stae107g
 
-Höfundar: Agla Þórarinsdóttir, Matthías Andri Hrafnkelsson og Sigurbjörg Rannveig Stefánsdóttir.
-Höfundar voru sumarstarfsmenn.
+Eftirfarandi tóku efnið saman: Agla Þórarinsdóttir, Matthías Andri Hrafnkelsson og Sigurbjörg Rannveig Stefánsdóttir.
 
 Ábyrgðarmaður efnis er Sigrún Helga Lund.
 
