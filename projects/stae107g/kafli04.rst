@@ -247,7 +247,6 @@ Skilgreining: Núllrúm fylkis
 
     Núllrúmið er sem sagt mengi allra lausna jöfnunar :math:`A\ve x=\ve 0`.
 
-
 Setning: Núllrúm er hlutrúm 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -418,8 +417,8 @@ Sýnidæmi: Dálkrúm
         \begin{bmatrix} -24 \\ -18 \\ 51 \end{bmatrix} \right\}.
 
     
-Skilgreining: Kjarni og mynd 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreining: Kjarni og mynd vörpunar 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Skilgreining
     :class: skilgreining
@@ -491,12 +490,11 @@ Skilgreining: Grunnur
     :class: skilgreining
 
     Látum :math:`H` vera hlutrúm í vigurrúmi :math:`V`. Upptalning :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`
-    á vigrum í :math:`V` kallast **grunnur** fyrir :math:`H` ef eftirfarandi skilyrði eru bæði uppfyllt
-    :
+    á vigrum í :math:`V` kallast **grunnur** (e. basis) fyrir :math:`H` ef eftirfarandi skilyrði eru bæði uppfyllt
 
-    **(i)** Upptalningin :math:`\mathcal{B}` er línulega óháð.
+        **(i)** Upptalningin :math:`\mathcal{B}` er línulega óháð.
 
-    **(ii)** :math:`H=\text{Span}\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`.
+        **(ii)** :math:`H=\text{Span}\{\ve b_1, \ve b_2, \ldots, \ve b_p\}`.
 
 .. admonition:: Athugasemd
     :class: athugasemd
@@ -507,6 +505,29 @@ Skilgreining: Grunnur
 
     - Við munum alltaf gera ráð fyrir að það séu endanlega margir vigrar í grunni. Þegar haldið er áfram með línulega algebru getum við þurft að nota grunna með óendanlega mörgum vigrum. Dæmi um slíkt vigurrúm er vigurrúm allra margliðna af einni breytu, þar er :math:`\{1,x,x^2,\ldots\}` grunnur.
 
+Sýnidæmi: Venjulegi grunnurinn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Rifjum upp að vigrarnir
+
+    .. math:: \ve e_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix},
+        \quad \ve e_2 = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix},
+        \quad, \dots, \quad \ve e_n = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix},
+
+    mynda venjulega grunninn fyrir :math:`\R^n`. Venjulegi grunninn fyrir :math:`\R^n` er *grunnur* fyrir :math:`\R^n` eins og nafnið gefur til kynna.
+
+Sýnidæmi: Línulega óháðir dálkvigrar mynda grunn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Látum :math:`A` vera andhverfanlegt :math:`n\times n` fylki. Þá eru dálkvigrar :math:`A` línulega óháðir og þeir spanna allt :math:`\R^n`. Dálkvigrarnir mynda því grunn fyrir :math:`\R^n`.
+
+
 
 Sýnidæmi: Grunnar
 ^^^^^^^^^^^^^^^^^
@@ -514,18 +535,20 @@ Sýnidæmi: Grunnar
 .. admonition:: Dæmi
     :class: daemi
 
-    Er 
+    Eru eftirfarandi grunnar fyrir :math:`\mathbb{R} ^3`?
     
-    .. math:: \left\{\begin{bmatrix} 3 \\ 0 \\ 0 \end{bmatrix}, 
+    .. math:: a)\  \left\{\begin{bmatrix} 3 \\ 0 \\ 0 \end{bmatrix}, 
         \begin{bmatrix} 4958 \\ 968 \\ 0 \end{bmatrix}, 
-        \begin{bmatrix} -34 \\ 102 \\ -66 \end{bmatrix} \right\}
+        \begin{bmatrix} -34 \\ 102 \\ -66 \end{bmatrix} \right\},
+        \quad b)\  \left\{\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, 
+        \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}\right\}.
     
-    grunnur fyrir :math:`\mathbb{R} ^3`?
+    
 
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Sjáum að 
+    *a)* Sjáum að 
 
     .. math:: \begin{bmatrix} 3 & 4958 & -34 \\
         0 & 968 & 102 \\
@@ -534,34 +557,23 @@ Sýnidæmi: Grunnar
     
     er andhverfanlegt fylki. Svo mengið er grunnur fyrir :math:`\mathbb{R} ^3`.
 
-.. admonition:: Dæmi
-    :class: daemi
-    
-    .. math:: \left\{\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, 
-        \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}\right\}
-    
-    grunnur fyrir :math:`\mathbb{R} ^3`?
+    *b)* Við erum með tvo vigra í :math:`\mathbb{R} ^3` svo þeir spanna í mesta lagi sléttu í
+    :math:`\mathbb{R} ^3` en ekki allt rúmið. Mengið er því ekki grunnur fyrir :math:`\mathbb{R} ^3`. 
 
-.. admonition:: Lausn
-    :class: daemi, dropdown
 
-    Við erum með tvo vigra í :math:`\mathbb{R} ^3` svo þeir spanna í mesta lagi sléttu í
-    :math:`\mathbb{R} ^3` en ekki allt rúmið. Mengið er því ekki grunnur í :math:`\mathbb{R} ^3`. 
-
+  
 Setning: Um spann mengja 
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`S=\{\ve v_1, \ve v_2, \ldots, \ve v_p\}` vera mengi vigra í :math:`V` sem spannar hlutrúmið :math:`H`. 
+    Látum :math:`S=\{\ve v_1, \ve v_2, \ldots, \ve v_p\}` vera upptalningu (eða mengi) vigra í :math:`V` sem spannar hlutrúm :math:`H`. 
 
-    **a.** Gerum ráð fyrir að einn vigranna í :math:`S`, :math:`\ve v_k`, sé línuleg samantekt af hinum vigrunum í :math:`S`. Þá spannar
-    :math:`S^\prime=\{\ve v_1, \ve v_2, \ldots,\ve v_{k-1}, \ve v_{k+1}, \ldots, \ve v_p\}` líka hlutrúmið :math:`H`.+
+        **a.** Gerum ráð fyrir að einn vigranna í :math:`S`, :math:`\ve v_k`, sé línuleg samantekt af hinum vigrunum í :math:`S`. Þá spannar
+        :math:`S^\prime=\{\ve v_1, \ve v_2, \ldots,\ve v_{k-1}, \ve v_{k+1}, \ldots, \ve v_p\}` líka hlutrúmið :math:`H`.
 
-    **b.** Ef :math:`H\neq\{\ve 0\}` þá er eitthvað ekki tómt hlutmengi úr :math:`S` grunnur fyrir :math:`H`. 
-
-    Athugasemd: Ef :math:`H=\{\ve 0\}` þá er :math:`\emptyset` grunnur fyrir :math:`H`, og er í raun eini grunnurinn fyrir :math:`H`.
+        **b.** Ef :math:`H\neq\{\ve 0\}` þá er eitthvað ekki tómt hlutmengi úr :math:`S` grunnur fyrir :math:`H`. Ef :math:`H=\{\ve 0\}` þá er :math:`\emptyset` grunnur fyrir :math:`H`, og er í raun eini grunnurinn fyrir :math:`H`.
 
 
 Sýnidæmi: Grunnur fyrir núllrúm 
@@ -570,17 +582,17 @@ Sýnidæmi: Grunnur fyrir núllrúm
 .. admonition:: Dæmi
     :class: daemi
 
-    Finnum grunn fyrir núllrúm eftirfarandi fylkis:
+    Finnum grunn fyrir núllrúm eftirfarandi fylkis
 
     .. math:: A=\begin{bmatrix} 1 & 2 & 3 & 4 & 5 \\
         6 & 7 & 8 & 9 & 10\\
         11 & 12 & 13 & 14 & 15
-        \end{bmatrix}
+        \end{bmatrix}.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
 
-    Með einföldum línuaðgerðum má fá að 
+    Með einföldum línuaðgerðum fáum við
 
     .. math:: \begin{bmatrix}
         1  & 2 & 3 & 4 & 5\\
@@ -649,7 +661,9 @@ Setning: Að finna grunn fyrir dálkrúm
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`A` vera fylki og :math:`U` vera efra stallaform :math:`A`. Þeir dálkar í :math:`A` þar sem er forystustuðull 
+    Látum :math:`A` vera fylki og :math:`U` vera efra stallaform þess.
+    
+    Dálkar :math:`A` sem hafa forystustuðull 
     í efra stallaforminu :math:`U` mynda grunn fyrir dálkrúm :math:`A`. 
 
 
