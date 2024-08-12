@@ -665,8 +665,8 @@ Setning: Að finna grunn fyrir dálkrúm
     Dálkar :math:`A` sem hafa forystustuðull í :math:`U` mynda grunn fyrir dálkrúm :math:`A`. 
 
 
-.. admonition:: Athugasemd
-    :class: athugasemd
+.. admonition:: Aðvörun
+    :class: advorun
 
     Mjög mikilvægt er að taka dálkana fyrir grunninn úr :math:`A`, ekki úr :math:`U`. Við notum :math:`U` bara til að ákveða 
     hvaða dálka úr :math:`A` við tökum. Nóg er að finna efra stallaform. Það er enginn þörf fyrir að rutt efra stallaform. 
@@ -778,14 +778,14 @@ Sýnidæmi: Að skipta um grunn
     .. math:: \mathcal{B} = \{\ve b_1, \ve b_2\}= \left\{\begin{bmatrix} -1 \\ 3 \end{bmatrix},
         \begin{bmatrix} 2 \\ 2 \end{bmatrix}\right\}
     
-    Vigurinn :math:`\ve x` með tillit til :math:`\mathcal{B}` hefur hnitin  :math:`[\ve x]_{\mathcal{B}}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}`. Finnið hnit :math:`\ve x` með tillit til venjulega grunnsins :math:`\mathcal{S}=\{\ve e_1, \ve e_2 \}`, þ.e. finnið :math:`[\ve x]_{\mathcal{S}}`.
+    Vigurinn :math:`\ve x` með tillit til :math:`\mathcal{B}` hefur hnitin  :math:`[\ve x]_{\mathcal{B}}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}`. Finnið hnit :math:`\ve x` með tillit til venjulega grunnsins :math:`\mathcal{E}=\{\ve e_1, \ve e_2 \}`, þ.e. finnið :math:`[\ve x]_{\mathcal{E}}`.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
 
     Fáum
 
-    .. math:: [\ve x]_{\mathcal{S}} = \ve x = 1\begin{bmatrix}
+    .. math:: [\ve x]_{\mathcal{E}} = \ve x = 1\begin{bmatrix}
         -1\\3
         \end{bmatrix}+2\begin{bmatrix}
         2\\2
@@ -807,6 +807,26 @@ Skilgreining: Hnitavörpun
     .. math:: V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}
 
     kallast **hnitavörpunin með tilliti til** :math:`\mathcal{B}` (e. coordiante mapping determined by :math:`\mathcal{B}`).
+
+
+Setning: hnitavörpun er línuleg
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`V` vera endanlega vítt vigurrúm með grunn :math:`\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}`. Hnitavörpunin
+
+    .. math:: V \rightarrow \R^n, \ \ve x \mapsto [\ve x]_{\mathcal{B}}
+
+    er línuleg vörpun. Hnitavörpunin er einnig gagntæk
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    - Hnitavörpun :math:`V \rightarrow W` er mikilvægt dæmi um svokallaða *einsmótun* (e. isomorphism), þ.e. gagntæk línuleg vörpun, á milli vigurrúma.
+
+    - Um endanlega víð vigurrúm :math:`V` með vídd :math:`n` gildir að :math:`V` er einsmóta :math:`\R^n`.
 
 
 Vídd og rankur
@@ -841,7 +861,7 @@ Skilgreining: Vídd
 
 
 .. admonition:: Athugasemd
-    :class: athugsemd
+    :class: athugasemd
 
     - Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.
 
@@ -853,11 +873,11 @@ Sýnidæmi: Vídd
 .. admonition:: Dæmi
     :class: daemi
 
-    **1.** Vigurrúmið :math:`\mathbb{R}^1` hefur víddina 1.
-    
-    **2.** Vigurrúmið :math:`\mathbb{R}^3` hefur víddina 3.
+        **1.** Vigurrúmið :math:`\mathbb{R}^1` hefur víddina 1.
+        
+        **2.** Vigurrúmið :math:`\mathbb{R}^3` hefur víddina 3.
 
-    **3.** Vigurrúmið :math:`\mathbb{R}^n` hefur víddina :math:`n`.
+        **3.** Vigurrúmið :math:`\mathbb{R}^n` hefur víddina :math:`n`.
 
 Setning: Vídd hlutrúms
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -900,7 +920,7 @@ Setning: Forystustuðlar og vídd
         **a.** Vídd :math:`\nul{A}` er jöfn fjölda frjálsra breyta, það er að segja víddin er jöfn fjölda dálka í :math:`U` 
         sem innihalda ekki forystustuðul.
 
-        **b.** Vídd :math:`\col{A}` er jöfn fjölda dálka í :math:`U` sem innihalda forystustuðul (Víddin er jöfn fjölda forystustuðla).
+        **b.** Vídd :math:`\col{A}` er jöfn fjölda dálka í :math:`U` sem innihalda forystustuðul, þ.e. víddin er jöfn fjölda forystustuðla.
 
 Skilgreining: Línurúm 
 ~~~~~~~~~~~~~~~~~~~~~
@@ -908,16 +928,30 @@ Skilgreining: Línurúm
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`A` vera :math:`m\times n` fylki. Línurúm (e. row space) fylkisins :math:`A` er hlutmengið í :math:`\R^n` sem línuvigrar
+    Látum :math:`A` vera :math:`m\times n` fylki. **Línurúm** (e. row space) fylkisins :math:`A` er hlutmengið í :math:`\R^n` sem línuvigrar
     :math:`A` spanna. Línurúm :math:`A` er táknað með :math:`\row{A}`.
 
-    Athugasemdir: Ef :math:`A` er :math:`m\times n` fylki þá gildir að
 
-    -:math:`\col{A}` er hlutrúm í :math:`\R^m`.
+.. admonition:: Athugasemd
+    :class: athugasemd
+    
+    Ef :math:`A` er :math:`m\times n` fylki þá gildir
+    
+    - :math:`\col{A}` er hlutrúm í :math:`\R^m`.
 
-    -:math:`\row{A}` er hlutrúm í :math:`\R^n`.
+    - :math:`\row{A}` er hlutrúm í :math:`\R^n`.
 
-    -:math:`\nul{A}` er hlutrúm í :math:`\R^n`.
+    - :math:`\nul{A}` er hlutrúm í :math:`\R^n`.
+
+Setning: Línujafngild fylki hafa sama línurúm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Ef tvö fylki :math:`A` og :math:`B` eru línujafngild (það er að fá má annað út frá hinu með einföldum línuaðgerðum) 
+    þá eru línurúm þeirra jöfn, það er :math:`\row{A}=\row{B}`.
+
 
 
 Setning: Grunnur fyrir línurúm
@@ -926,13 +960,13 @@ Setning: Grunnur fyrir línurúm
 .. admonition:: Setning
     :class: setning
 
-    **a.** Ef tvö fylki :math:`A` og :math:`B` eru línujafngild (það er að fá má annað út frá hinu með einföldum línuaðgerðum) 
-    þá eru línurúm þeirra jöfn, það er :math:`\row{A}=\row{B}`.
-
-    **b.** Ef :math:`U` er efra stallaform fylkisins :math:`A` þá mynda þeir línuvigrar í :math:`U` sem eru ekki núll 
+    Ef :math:`U` er efra stallaform fylkisins :math:`A` þá mynda þeir línuvigrar í :math:`U` sem eru ekki núll 
     grunn fyrir línurúm :math:`A`.
 
-    Athugasemd: Það eru ekki-núll línuvigrarnir úr efra stallaforminu sem gefa grunninn, ekki línuvigrarnir úr :math:`A`.
+.. admonition:: Aðvörun
+    :class: advorun
+
+    Það eru ekki-núll línuvigrarnir úr :math:`U` sem gefa grunninn, ekki línuvigrarnir úr :math:`A`. Öfugt við það sem gildir um grunn dálkrúma!
 
 Sýnidæmi: Grunnur fyrir línurúm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -940,13 +974,13 @@ Sýnidæmi: Grunnur fyrir línurúm
 .. admonition:: Dæmi
     :class: daemi
 
-    Finnum línurúm fyklkisins
+    Finnum grunn fyrir línurúm fylkisins
 
     .. math:: A= \begin{bmatrix} 
         1 & 2 & 3 & 4 \\
         5 & 6 & 7 & 8 \\
         9 & 10 & 11 & 12 \\
-        \end{bmatrix}
+        \end{bmatrix}.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -976,7 +1010,7 @@ Skilgreining: Rankur
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    Látum :math:`A` vera :math:`m\times n` fylki. Rankur (e. rank), eða myndvídd, fylkisins :math:`A` er vídd dálkrúms :math:`A`.
+    Látum :math:`A` vera :math:`m\times n` fylki. **Rankur** (e. rank), eða myndvídd, fylkisins :math:`A` er vídd dálkrúms :math:`A`.
     Rankur fylkisins :math:`A` er táknaður með :math:`\rnk{A}`.
 
 Setning: Ranksetningin
@@ -987,11 +1021,11 @@ Setning: Ranksetningin
 
     Látum :math:`A` vera :math:`m\times n` fylki.
 
-    **a.** Rankur fylkisins :math:`A` er jafn fjölda forystustuðla í efra stallaformi :math:`A`.
+        **a.** Rankur fylkisins :math:`A` er jafn fjölda forystustuðla í efra stallaformi :math:`A`.
 
-    **b.** Vídd dálkrúmsins og vídd línurúmsins eru jafnar. Rankur fylkisins er því einnig jafn vídd línurúmsins.
+        **b.** Vídd dálkrúmsins og vídd línurúmsins eru jafnar. Rankur fylkisins er því einnig jafn vídd línurúmsins.
 
-    **c.** Summa víddar dálkrúmsins og víddar núllrúmsins er jöfn fjölda dálka fylkisins, eðA
+        **c.** Summa víddar dálkrúmsins og víddar núllrúmsins er jöfn fjölda dálka fylkisins, þ.e.
 
     .. math:: \rnk{A}+\dim{\nul{A}}=n.
 
@@ -1008,7 +1042,7 @@ Sýnidæmi: Rankur og vídd
         1 & 2 & 3 & 4 \\
         5 & 6 & 7 & 8 \\
         9 & 10 & 11 & 12 \\
-        \end{bmatrix}
+        \end{bmatrix}.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -1024,18 +1058,17 @@ Sýnidæmi: Rankur og vídd
         1 & 0 & -1 & -2 \\
         0 & 1 & 2 & 3 \\
         0 & 0 & 0 & 0 \\
-        \end{bmatrix}
+        \end{bmatrix}.
     
-    Rankur fylkisins er vídd dálkrúms sem er fjöldi vendidálka.
-    Svo :math:`\rnk{A}=2`. Vídd núllrúms er fjöldi frjálsra breyta
+    Rankur fylkisins er vídd dálkrúms, sem er fjöldi dálka með forystustuðlum, svo :math:`\rnk{A}=2`. Vídd núllrúms er fjöldi frjálsra breyta
     svo :math:`\nul{A}=2`.
 
-Langa setningin um andhverfanleg fylki (linkur) gefur 11 skilyrði sem eru öll jafngild því að fylki sé   andhverfanlegt. 
-Nú höfum við lært fullt af nýjum hugtökum og getum bætt við 
-fleiri skilyrðum. TODO linkur að löngu setningunni.
+Rifum upp löngu setninguna, :math:`2.6.4.` úr kafla 2, með jafngildum skilyrðum þess að fylki sé andhverfanlegt.
+Nú höfum við lært nokkur ný hugtök og getum bætt við 
+fleiri skilyrðum í þessa setningu.
 
-Setning: Viðbót við löngu andhverfusetninguna
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setning: Viðbót við löngu setninguna um andhverfur
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
@@ -1048,60 +1081,73 @@ Setning: Viðbót við löngu andhverfusetninguna
 
     **14.** :math:`\col{A}=\R^n`.
 
-    **15.** :math:`\dim{\col{A}}=n`.
+    **15.** :math:`\dim{(\col{A})}=n`.
 
     **16.** :math:`\rnk{A}=n`.
 
     **17.** :math:`\nul{A}=\{\ve 0\}`.
 
-    **18.** :math:`\dim{\nul{A}}=0`.
+    **18.** :math:`\dim{(\nul{A})}=0`.
 
 
 Hnitaskipti
 -----------
 
-Við höfum áður framkvæmt hnitaskipti. Sáum að :math:`\mathcal{P}_\mathcal{B}[\ve x]_\mathcal{B}=\ve x`
-þar sem :math:`\mathcal{P}_\mathcal{B}` er hnitaskiptafylki sem breytir úr hnitum með tillit til :math:`\mathcal{B}`
-yfir í hnit með tilliti til venjulega grunnarins. 
-
-    Til dæmis ef :math:`\mathcal{B}=\{\ve b_1, \ve b_2\}=\left\{\begin{bmatrix} 1 \\ 2 \end{bmatrix}, \begin{bmatrix} 5 \\ -1 \end{bmatrix}\right\}` þá er
-    :math:`\mathcal{P}_\mathcal{B}=\begin{bmatrix} 1 & 5 \\ 2 & -1 \end{bmatrix}`. 
-
-Önnur leið til að rita :math:`\mathcal{P}_\mathcal{B}` er :math:`\mathcal{P}_\mathcal{B}=\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}` 
-af því að við erum að skipta úr  :math:`\mathcal{B}`-hnitum yfir í  :math:`\mathcal{E}`-hnit (venjulegt hnit). 
-Okkur langar að finna hnitskiptafylki :math:`\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}` hugmyndin er að 
-:math:`\mathcal{P}_{\mathcal{B}\leftarrow\mathcal{C}}=\mathcal{P}_{\mathcal{B}\leftarrow\mathcal{E}}\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{C}}`.
+Við höfum áður séð hnitaskiptafylkið :math:`\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}` í sýnidæmi :math:`4.3.7.1.`, þegar :math:`\mathcal{P}_\mathcal{E \leftarrow B}[\ve x]_\mathcal{B}=\ve x`. Nú ætlum við að skoða almennari skilgreiningu fyrir hnitaskipti.
 
 
-Setning: Um hnitaskiptafylki
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Skilgreinig: Hnitaskiptafylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+    :class: skilgreining
+
+    Látum :math:`V` vera vigurrúm af vídd :math:`n` og gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` 
+    og :math:`\mathcal{C}=\{\ve c_1, \ve c_2, \ldots, \ve c_n\}` séu grunnar fyrir :math:`V`. Við búum til :math:`n \times n` fylki
+
+    .. math:: P_{\mathcal{C \leftarrow B}} = [[\ve b_1]_{\mathcal{C}} \ \ [\ve b_2]_{\mathcal{C}}\ \ \dots \ \ [\ve b_n]_{\mathcal{C}}],
+
+    með því að finna :math:`\mathcal{C}`-hnit sérhvers vigurs :math:`\mathcal{B}`. Fylkið :math:`P_{\mathcal{C \leftarrow B}}` kallast
+    **hnitaskiptafylki** frá :math:`\mathcal{B}`-hnitum yfir í :math:`\mathcal{C}`-hnit
+    (e. change-of-coordinates matrix).
+
+
+Setning: Hnitaskiptafylki
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`V` vera vigurrúm af vídd :math:`n` og gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` 
-    og :math:`\mathcal{C}=\{\ve c_1, \ve c_2, \ldots, \ve c_n\}` séu grunnar fyrir :math:`V`.
+    Látum :math:`V` vera vigurrúm af vídd :math:`n`, :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` 
+    og :math:`\mathcal{C}=\{\ve c_1, \ve c_2, \ldots, \ve c_n\}` vera grunna fyrir :math:`V`.
 
-    **a.** Til er línuleg vörpun :math:`T\colon \R^n\to\R^n` þannig að :math:`T([x]_{\mathcal{B}})=[\ve x]_{\mathcal{C}}` fyrir 
+    **(i)** Til er línuleg vörpun :math:`T\colon \R^n\to\R^n` þannig að :math:`T([x]_{\mathcal{B}})=[\ve x]_{\mathcal{C}}` fyrir 
     alla vigra :math:`\ve x\in V`. Fylki þessrar vörpunar er 
 
-    .. math:: P_{\mathcal{C}\leftarrow\mathcal{B}}=[[\ve b_1]_{\mathcal{C}}\quad [\ve b_2]_{\mathcal{C}}\quad \ldots \quad [\ve b_n]_{\mathcal{C}}].
+        .. math:: P_{\mathcal{C}\leftarrow\mathcal{B}}=[[\ve b_1]_{\mathcal{C}}\quad [\ve b_2]_{\mathcal{C}}\quad \ldots \quad [\ve b_n]_{\mathcal{C}}].
 
-    **b.** Fylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}` úr lið (a) er andhverfanlegt og andhverfa þess er 
+    **(ii)** Fylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}` úr lið (a) er andhverfanlegt og andhverfa þess er 
     hnitaskiptafylkið úr :math:`\mathcal{C}`-hnitum yfir í :math:`\mathcal{B}`-hnit. Það er að segja
 
-    .. math:: P_{\mathcal{B}\leftarrow\mathcal{C}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1}
+        .. math:: P_{\mathcal{B}\leftarrow\mathcal{C}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1},
 
     og fyrir sérhvern vigur :math:`\ve x\in V` gildir að 
 
-    .. math:: [\ve x]_{\mathcal{B}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1}[\ve x]_{\mathcal{C}}.
+        .. math:: [\ve x]_{\mathcal{B}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1}[\ve x]_{\mathcal{C}}.
 
 
-Oftast vinnum við með venjulega grunninn fyrir :math:`\R^n`, það er grunninn :math:`\mathcal{E}=\{\ve e_1, \ve e_2, \ldots, \ve e_n\}` 
-þar sem :math:`\ve e_i` hefur i-ta hnitið 1 en öll önnur hnit 0. Þegar við skrifum vigur sem :math:`\ve x=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}`
-erum við að segja að :math:`x_1, x_2, \ldots, x_n` séu hnit vigursins :math:`\ve x` með tilliti til grunsins :math:`\mathcal{E}`. 
-Við fáum því eftirfarandi fylgisetningu þegar við skoðum hnitaskipti í og úr venjulega grunninum.
 
+
+.. admonition:: Ritháttur
+    :class: athugasemd
+
+    Oft vinnum við með venjulega grunninn fyrir :math:`\R^n`, það er grunninn :math:`\mathcal{E}=\{\ve e_1, \ve e_2, \ldots, \ve e_n\}` 
+    þar sem :math:`\ve e_i` hefur i-ta hnitið 1 en öll önnur hnit 0. Þegar við skrifum vigur sem
+    
+    .. math:: \ve x=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
+    
+    erum við að segja að :math:`x_1, x_2, \ldots, x_n` séu hnit vigursins :math:`\ve x` með tilliti til grunsins :math:`\mathcal{E}`. 
+    
 Setning: Hnitaskiptafylki yfir í venjulega grunninn
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1112,11 +1158,11 @@ Setning: Hnitaskiptafylki yfir í venjulega grunninn
     venjulega grunninn fyrir :math:`\R^n`. Þá er hnitaskiptafylkið frá :math:`\mathcal{B}`-hnitum til :math:`\mathcal{E}`-hnita 
     gefið með
 
-    .. math:: P_{\mathcal{E}\leftarrow\mathcal{B}}=[\ve b_1 \quad \ve b_2 \quad \ldots \quad \ve b_n]
+    .. math:: P_{\mathcal{E}\leftarrow\mathcal{B}}=[\ve b_1 \quad \ve b_2 \quad \ldots \quad \ve b_n],
 
     og hnitaskiptafylkið frá :math:`\mathcal{E}`-hnitum til :math:`\mathcal{B}`-hnita gefið með
 
-    .. math:: P_{\mathcal{B}\leftarrow\mathcal{E}}=(P_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}
+    .. math:: P_{\mathcal{B}\leftarrow\mathcal{E}}=(P_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}.
 
 Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1124,17 +1170,17 @@ Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn
 .. admonition:: Dæmi
     :class: daemi
 
-    Látum :math:`\mathcal{B}={(1,2),(3,1)}` vera grunn fyrir :math:`\R^2` og :math:`\mathcal{E}` vera venjulega grunninn
+    Látum :math:`\mathcal{B}=\{(1,2),(3,1)\}` vera grunn fyrir :math:`\R^2` og :math:`\mathcal{E}` vera venjulega grunninn
     fyrir :math:`\R^2`. Þá er 
 
     .. math:: \mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}
         =\begin{bmatrix} \ve b_1 & \ve b_2 & \cdots & \ve b_n \end{bmatrix}
-        =\begin{bmatrix} 1 & 3 \\ 2 & 1 \end{bmatrix}
+        =\begin{bmatrix} 1 & 3 \\ 2 & 1 \end{bmatrix},
 
     og 
 
     .. math:: \mathcal{P}_{\mathcal{B}\leftarrow\mathcal{E}}=(\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}=\frac{1}{-5}
-        \begin{bmatrix} 1 & -3 \\ -2 & 1 \end{bmatrix}
+        \begin{bmatrix} 1 & -3 \\ -2 & 1 \end{bmatrix}.
 
 Setning: Formúla fyrir hnitaskiptifylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1142,14 +1188,14 @@ Setning: Formúla fyrir hnitaskiptifylki
 .. admonition:: Setning
     :class: setning
 
-    Látum :math:`\mathcal{B}` og :math:`\mathcal{C}` vera grunna fyrir :math:`\R^n` og látum :math:`\mathcal{E}` tákna venjulega grunninn.
+    Látum :math:`\mathcal{B}` og :math:`\mathcal{C}` vera grunna fyrir :math:`\R^n` og :math:`\mathcal{E}` vera venjulega grunninn.
     Þá er 
 
     .. math:: P_{\mathcal{C}\leftarrow\mathcal{B}}=P_{\mathcal{C}\leftarrow\mathcal{E}}P_{\mathcal{E}\leftarrow\mathcal{B}}
-        =(P_{\mathcal{E}\leftarrow\mathcal{C}})^{-1} P_{\mathcal{E}\leftarrow\mathcal{B}}
+        =(P_{\mathcal{E}\leftarrow\mathcal{C}})^{-1} P_{\mathcal{E}\leftarrow\mathcal{B}}.
 
 
-Reikniaðferð fyrir hnitaskiptafylki
+Reiknirit fyrir hnitaskiptafylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. admonition:: Aðferð
@@ -1157,12 +1203,14 @@ Reikniaðferð fyrir hnitaskiptafylki
 
     Látum :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \dots, \ve b_n\}` og :math:`\mathcal{C}=\{\ve c_1, \ve c_2, \dots, \ve c_n\}` 
     vera grunna fyrir :math:`\R^n`. Til þess að finna hnitaskiptafylkið frá :math:`\mathcal{B}`-hnitum yfir í :math:`\mathcal{C}`-hnit, 
-    :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}` gerum við eftirfarandi
+    :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}`, gerum við eftirfarandi
 
-    **1.** Búum til aukna fylkið :math:`[\ve c_1 \ \ve c_2 \ \dots \ \ve c_n \ | \ \ve b_1 \ \ve b_2 \ \dots \ \ve b_n]`
+        **1.** Búum til aukna fylkið :math:`[\ve c_1 \ \ve c_2 \ \dots \ \ve c_n \ | \ \ve b_1 \ \ve b_2 \ \dots \ \ve b_n]`.
 
-    **2.** Breytum vinstri hluta aukna fylkisins í einingarfylkið með einföldum línuaðgerðum. Það sem eftir stendur í 
-    hægri hluta aukna fylkisins er þá hnitaskiptafylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}`.
+        **2.** Breytum vinstri hluta aukna fylkisins í einingarfylkið með einföldum línuaðgerðum. Það sem eftir stendur í 
+        hægri hluta aukna fylkisins er þá hnitaskiptafylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}`.
+
+    Þetta reiknirit er svipað því að finna andhverfu fylkis. 
 
 
 Sýnidæmi: Hnitaskiptafylki
@@ -1190,7 +1238,7 @@ Sýnidæmi: Hnitaskiptafylki
         1 \\
         3
         \end{bmatrix}
-        \right\} \quad
+        \right\}, \quad
         \mathcal{C} = \left\{
         \begin{bmatrix}
         1 \\
@@ -1207,7 +1255,7 @@ Sýnidæmi: Hnitaskiptafylki
         1 \\
         -1
         \end{bmatrix}
-        \right\}
+        \right\}.
         \end{align*}
 
 .. admonition:: Lausn
@@ -1242,7 +1290,7 @@ Sýnidæmi: Hnitaskiptafylki
         1 & 0 & 0 & \frac{1}{5} & 0 & 1 \\
         0 & 1 & 0 & \frac{3}{5} & 1 & 1 \\
         0 & 0 & 1 & \frac{4}{5} & -1 & -1
-        \end{array}\right] 
+        \end{array}\right].
         
 
     Það með er
@@ -1252,6 +1300,78 @@ Sýnidæmi: Hnitaskiptafylki
         \frac{1}{5} & 0 & 1 \\
         \frac{3}{5} & 1 & 1 \\
         \frac{4}{5} & -1 & -1
-        \end{bmatrix} 
+        \end{bmatrix}.
+
+
+
+
+
+Skilgreinig: Fylki vörpunar með tilliti til grunns
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreinig
+    :class: skilgreining
+
+    Látum :math:`T \colon \R^n \rightarrow \R^n` vera línulega vörpun og :math:`\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}` vera grunn fyrir :math:`\R^n`.
+    Um fylkið
+
+    .. math:: A_{\mathcal{B}}= [[T(\ve b_1)]_{\mathcal{B}} \ \ [T(\ve b_2)]_{\mathcal{B}} \ \ \dots \ \ [T(\ve b_n)]_{\mathcal{B}} ],
+
+    gildir að fyrir sérhvern :math:`\ve x \in \R^n` er
+
+    .. math:: [T(\ve x)]_{\mathcal{B}}= A_{\mathcal{B}} [\ve x]_{\mathcal{B}},
+
+    og :math:`A_{\mathcal{B}}` kallast **fylki** :math:`T` **með tilliti til grunnsins** :math:`\mathcal{B}`.
+
+
+Setning: Fylki fyrir mismunandi grunna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`T \colon \R^n \rightarrow \R^n` vera línulega vörpun, :math:`\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}`
+    og :math:`\mathcal{C}=\{\ve c_1, \dots, \ve c_n \}` vera grunna fyrir :math:`\R^n`. Látum :math:`A_{\mathcal{B}}` og
+    :math:`A_{\mathcal{C}}` tákna fylki vörpunarinnar m.t.t. :math:`\mathcal{B}` og :math:`\mathcal{C}`. Þá er 
+
+    .. math:: A_{\mathcal{C}}= P_{\mathcal{C}\leftarrow\mathcal{B}}A_{\mathcal{B}}P_{\mathcal{B}\leftarrow\mathcal{C}}.
+
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Látum :math:`T \colon \R^2 \rightarrow \R^2` vera speglun í línunni y = x. Hvert er fylki :math:`T` m.t.t. venjulega grunnsins :math:`\mathcal{E}` fyrir :math:`\R^2`.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Þar sem :math:`T` er speglun í línunni :math:`y = x` gildir að
+
+    .. math:: T \left(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad T\left(\begin{bmatrix} -1 \\ 1 \end{bmatrix}\right) = - \begin{bmatrix} -1 \\ 1 \end{bmatrix}.
+
+    Skoðum grunninn :math:`\mathcal{B}= \left\{\begin{bmatrix} 1 \\ 1 \end{bmatrix}, \begin{bmatrix} -1 \\ 1 \end{bmatrix} \right\}` fyrir :math:`\R^2`.
+    Athugum að
+
+    .. math:: [T(\ve b_1)]_{\mathcal{B}} = \left[ \begin{bmatrix} 1 \\ 1 \end{bmatrix}\right]_{\mathcal{B}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad [T(\ve b_2)]_{\mathcal{B}} = \left[- \begin{bmatrix} -1 \\ 1 \end{bmatrix}\right]_{\mathcal{B}} = \begin{bmatrix} 0 \\ -1 \end{bmatrix}.
+
+    Því er
+    
+    .. math:: A_{\mathcal{B}}= \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}.
+
+    Vitum einnig að
+
+    .. math:: P_{\mathcal{E}\leftarrow \mathcal{B}}= \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix},
+    
+    og 
+
+    .. math:: P_{\mathcal{B}\leftarrow \mathcal{E}}= (P_{\mathcal{E}\leftarrow \mathcal{B}})^{-1}= \frac{1}{2} \begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix}.
+    
+    Þá er 
+
+    .. math:: A_{\mathcal{E}}=P_{\mathcal{E}\leftarrow \mathcal{B}}A_{\mathcal{B}}P_{\mathcal{B}\leftarrow \mathcal{E}}=
+        \begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}
+        \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
+        \left(\frac{1}{2}\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix} \right)=
+        \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}.
 
 
