@@ -17,7 +17,7 @@ Nokkrar gerðir fylkja
         0 & 0 & \cdots & a_{nn}
         \end{bmatrix}.
   
-  m.ö.o. :math:`D = [d_{ij}]` er hornalínyflki ef :math:`d_{ij}=0` fyrir öll :math:`i` og :math:`j` þannig að :math:`i \neq j`.
+  m.ö.o. :math:`D = [d_{ij}]` er hornalínufylki ef :math:`d_{ij}=0` fyrir öll :math:`i` og :math:`j` þannig að :math:`i \neq j`.
 
 
   **Einingarfylki** (e. identity matrix) :math:`I`, er hornalínufylki þar sem 
@@ -264,7 +264,7 @@ Skilgreining: Veldi af fylkjum
     :class: skilgreining
 
     Ef :math:`A` er :math:`n\times n` ferningsfylki þá skilgreinum við :math:`A^0=I_n` 
-    og svo :math:`A^n=A\cdot A^{n-1}` fyrir :math:`n>1`. Semsagt :math:`A^2=A\cdot A`,
+    og svo :math:`A^n=A\cdot A^{n-1}` fyrir :math:`n>1`. Sem sagt :math:`A^2=A\cdot A`,
     :math:`A^3=A\cdot A\cdot A` og svo framvegis.
 
 Reikniaðferð fyrir fylkjamargföldun
@@ -380,7 +380,7 @@ Skilgreining: Bylt fylki
     :class: skilgreining
 
     Ef :math:`A` er :math:`m\times n` fylki þá skilgreinum við *bylta fylkið* :math:`A^T`  (e. transpose) sem :math:`n\times m` fylkið 
-    sem fæst með því að mynda dálvigra úr línuvigrum :math:`A` og öfugt. 
+    sem fæst með því að mynda dálkvigra úr línuvigrum :math:`A` og öfugt. 
     Höfum því :math:`A^T_{ij}=A_{ji}`.
 
 Sýnidæmi: Bylt fylki
@@ -460,7 +460,7 @@ Sýnidæmi: Hegðun byltra fylkja
   
   .. math:: \textbf{v}^T\textbf{v} = \begin{bmatrix} 1 & 2 & 3\end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} = 1^2+2^2+3^3 = 14
 
-  en hinsvegar er
+  en hins vegar er
   
   .. math:: \textbf{v}\textbf{v}^T = \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} \begin{bmatrix} 1 & 2 & 3\end{bmatrix} = 
     \begin{bmatrix}
@@ -468,7 +468,7 @@ Sýnidæmi: Hegðun byltra fylkja
     2 & 4 & 6 \\
     3 & 6 & 9 \end{bmatrix}
 
-                    
+
 Andhverfur fylkja
 -----------------
 
@@ -483,7 +483,7 @@ fyrir öll :math:`x`, svo að :math:`(CA)` hlýtur að vera einingarfylkið. Þa
 Skilgreining: Andhverfur fylkja
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
     :class: skilgreining
 
     :math:`n\times n` fylki :math:`A` er **andhverfanlegt** (e. invertible) ef til er fylki :math:`C` þannig að
@@ -679,7 +679,7 @@ Sýnidæmi: Fylkjajafna leyst með andhverfu
     :class: athugasemd
 
     Setningin á undan er oftast ekki notuð beint þegar reikna á stórar fylkjajöfnur af 
-    gerð :math:`A\textbf{x}=\textbf{b}`. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa 
+    gerðinni :math:`A\textbf{x}=\textbf{b}`. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa 
     jöfnuna beint með Gauss-eyðingu eða öðrum aðferðum.
 
 
@@ -713,7 +713,7 @@ Reiknirit andhverfa :math:`n \times n` fylkja
 
     .. math:: [A \ | \ I]
 
-    og beitum Gauss-Jordan eyðingu til að breyta fylkinu :math:`A` yfir í einingarfylkið :math:`I_n`. Ef núlllína kemur upp á einhverjum tímapunkti í vinstri hliðinna þá 
+    og beitum Gauss-Jordan eyðingu til að breyta fylkinu :math:`A` yfir í einingarfylkið :math:`I_n`. Ef núlllína kemur upp á einhverjum tímapunkti í vinstri hliðina þá 
     er fylkið :math:`A` ekki andhverfanleg. Ef tekst að breyta :math:`A` í einingarfylkið þá situr andhverfan eftir í hægri hliðinni,
 
     .. math:: [A  \ | \  I] \sim [I  \ | \  A^{-1}].
@@ -784,10 +784,10 @@ Andhverfanlegar varpanir
 Skilgreining: Andhverfanlegar varpanir
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig 
+.. admonition:: Skilgreining 
     :class: skilgreining
 
-    Vörpun :math:`f: X \rightarrow Y` er andhverfanleg ef til er vörpun :math:`f^{-1}: Y \rightarrow X` þannig að
+    Vörpun :math:`f\colon X \rightarrow Y` er andhverfanleg ef til er vörpun :math:`f^{-1}\colon Y \rightarrow X` þannig að
 
     .. math:: f(f^{-1}(y))=y \quad \text{og}\quad f^{-1}(f(x))=x
 
@@ -796,7 +796,7 @@ Skilgreining: Andhverfanlegar varpanir
 .. admonition:: Fylgisetning 
     :class: setning
 
-    Vörpun :math:`f: X \rightarrow Y` er andhverfanleg ef og aðeins ef hún er gagntæk.
+    Vörpun :math:`f\colon X \rightarrow Y` er andhverfanleg ef og aðeins ef hún er gagntæk.
 
 
 Setning: Andhverfanlegar línulegar varpanir
@@ -925,7 +925,7 @@ LU-þáttun er gagnleg þegar leysa á stór línuleg jöfnuhneppi, t.a.m. fyrir
 
 .. math:: A\textbf{x} = \textbf{b}_1, A\textbf{x} = \textbf{b}_2, \dots, A\textbf{x} = \textbf{b}_k.
 
-Þessi aðferð t.a.m. sparar útreikninga í tölvu. Meir um LU-þáttun í áfanganum Töluleg Greining.
+Þessi aðferð t.d. sparar útreikninga í tölvu. Meir um LU-þáttun í áfanganum Töluleg Greining.
 
 Skilgreining: LU-þáttun
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1172,7 +1172,3 @@ Sýnidæmi: LU-þáttun til þess að leysa fylkjajöfnu
         \end{bmatrix}
     
     þar sem :math:`x_2` er frjáls breyta.
-
-
-
-    
