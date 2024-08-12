@@ -231,8 +231,8 @@ Setning
     Þá eru bæði :math:`U_1\cap U_2` og :math:`U_1+U_2` hlutrúm í :math:`V`.
 
 
-Núllrúm og dálkrúm
-------------------------------------
+Null, Col, Ker og Range
+----------------------------------------------
 
 Skilgreining: Núllrúm fylkis 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -426,16 +426,15 @@ Skilgreining: Kjarni og mynd
 
     Látum :math:`T\colon V\to W` vera línulega vörpun.
 
-    **a.** **Kjarni** (e. kernel, null space) vörpunarinnar T er mengi allra vigra :math:`\ve u\in V` þannig að
+    **Kjarni** (e. kernel, null space) vörpunarinnar T er mengi allra vigra :math:`\ve u\in V` þannig að
     :math:`T(\ve u)=\ve 0`. Kjarninn er táknaður með :math:`\ker{T}` og
 
-    .. math:: \ker{T}=\{\ve u\in V\colon T(\ve u)=\ve 0\}.
+    .. math:: \ker{T}=\{\ve u\in V \ \colon \ T(\ve u)=\ve 0\}.
 
-    **b.** **Mynd** (e. range) vörpunarinnar T er mengi allra vigra í :math:`W` sem rita má á forminu 
+    **Mynd** (e. range) vörpunarinnar T er mengi allra vigra í :math:`W` sem rita má á forminu 
     :math:`T(\ve x)` fyrir eitthvað :math:`\ve x\in V`. Myndin er oft táknuð :math:`\range{T}` og
 
-    .. math:: \range{T}=\{T(\ve x)\colon \ve x\in V\}.
-
+    .. math:: \range{T}=\{T(\ve x) \ \colon \ \ve x\in V\}.
 
 .. admonition:: Athugasemd
     :class: athugasemd
@@ -443,32 +442,43 @@ Skilgreining: Kjarni og mynd
     Ef :math:`T(\ve x)=A\ve x` fyrir eitthvað fylki :math:`A` þá er :math:`\ker{T}=\nul{A}` og
     :math:`\range{T}=\col{A}`.
 
+
+Setning: Kjarni og mynd eru hlutrúm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning 
+
+    Látum :math:`T \colon V \rightarrow W` vera línulega vörpun.
+    
+        Kjarni vörpunarinnar :math:`T` er hlutrúm í :math:`V`.
+        
+        Mynd vörpunarinnar :math:`T` er hlutrúm í :math:`W`.
+
+Setning: Eintækni og átækni varpana
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. admonition:: Setning
     :class: setning 
 
     Látum :math:`T\colon V\to W` vera línulega vörpun.
 
-    **a.** Vörpunin :math:`T` er eintæk ef og aðeins ef :math:`\ker{T}=\{\ve{0}\}`.
+        Vörpunin :math:`T` er eintæk ef og aðeins ef :math:`\ker{T}=\{\ve{0}\}`.
 
-    **b.** Vörpunin :math:`T` er átæk ef og aðeins ef :math:`\range{T}=W`.
-
-Setning: Um tengsl varpanna og núll- og dálkrúma 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Vörpunin :math:`T` er átæk ef og aðeins ef :math:`\range{T}=W`.
 
 .. admonition:: Setning
     :class: setning
 
     Látum :math:`A` vera :math:`m\times n` fylki og :math:`T\colon \R^n\to\R^m` vera línulega vörpun 
     þanning að :math:`T(\ve x)=A\ve x` fyrir alla vigra :math:`x\in\R^n`. Þá gildir
-    :
 
-    **1.** Vörpunin :math:`T` er eintæk þá og því aðeins að :math:`\nul{A}=\{\ve 0\}`.
+        Vörpunin :math:`T` er eintæk þá og því aðeins að :math:`\nul{A}=\{\ve 0\}`.
 
-    **2.** Vörpunin :math:`T` er átæk þá og því aðeins að :math:`\col{A}=\R^m`.
+        Vörpunin :math:`T` er átæk þá og því aðeins að :math:`\col{A}=\R^m`.
 
 Við vitum nú þegar að línuleg vörpun er eintæk ef og aðeins ef hún er átæk. Setningin segir okkur því líka að núllrúmið 
-innihaldi aðeins :math:`\ve 0` þá og því aðeins að dálkrúmið sé :math:`\R^m`. Þetta samband gildir raun almennar eins og við
-munum sjá í TODO: SETJA HYPERLINK Á RANKSETNINGARUMFJÖLLUN
+innihaldi aðeins :math:`\ve 0` þá og því aðeins að dálkrúmið sé :math:`\R^m`.
 
 
 Grunnar og hnit
