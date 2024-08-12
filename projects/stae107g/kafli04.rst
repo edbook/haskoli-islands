@@ -78,7 +78,7 @@ Sýnidæmi: Vigurrúm
 
     .. math:: \ve p(t)=a_0+a_1 t+a_2 t^2+\cdots +a_n t^n 
 
-    Samlagning og margföldun með tölu eru skilgreind á venjulegan mátan. Með þessum tveimur aðgerðum er :math:`\mathbb{P}_n` vigurrúm.
+    Samlagning og margföldun með tölu eru skilgreind á venjulegan mátann. Með þessum tveimur aðgerðum er :math:`\mathbb{P}_n` vigurrúm.
 
     **5.** Mengi allra margliða (af öllum stigum):math:`\mathbb{P_n}` er vigurrúm.
 
@@ -148,10 +148,10 @@ Sýnidæmi: Hlutrúm
     að :math:`\mathcal{D}(a,b)` sé hlutrúm í :math:`\mathcal{V}(a,b)`.
 
 
-Skilgreinig: Alhæfing línuleg samantekt og spann
+Skilgreining: Alhæfing línuleg samantekt og spann
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`V` vera vigurrúm, :math:`\ve v_1, \dots, \ve v_p \in V` og :math:`c_1, \dots, c_p \in \R`. Vigurinn
@@ -425,12 +425,12 @@ Skilgreining: Kjarni og mynd vörpunar
 
     Látum :math:`T\colon V\to W` vera línulega vörpun.
 
-    **Kjarni** (e. kernel, null space) vörpunarinnar T er mengi allra vigra :math:`\ve u\in V` þannig að
+    **Kjarni** (e. kernel, null space) vörpunarinnar :math:`T` er mengi allra vigra :math:`\ve u\in V` þannig að
     :math:`T(\ve u)=\ve 0`. Kjarninn er táknaður með :math:`\ker{T}` og
 
     .. math:: \ker{T}=\{\ve u\in V \ \colon \ T(\ve u)=\ve 0\}.
 
-    **Mynd** (e. range) vörpunarinnar T er mengi allra vigra í :math:`W` sem rita má á forminu 
+    **Mynd** (e. range) vörpunarinnar :math:`T` er mengi allra vigra í :math:`W` sem rita má á forminu 
     :math:`T(\ve x)` fyrir eitthvað :math:`\ve x\in V`. Myndin er oft táknuð :math:`\range{T}` og
 
     .. math:: \range{T}=\{T(\ve x) \ \colon \ \ve x\in V\}.
@@ -1096,10 +1096,10 @@ Hnitaskipti
 Við höfum áður séð hnitaskiptafylkið :math:`\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}` í sýnidæmi :math:`4.3.7.1.`, þegar :math:`\mathcal{P}_\mathcal{E \leftarrow B}[\ve x]_\mathcal{B}=\ve x`. Nú ætlum við að skoða almennari skilgreiningu fyrir hnitaskipti.
 
 
-Skilgreinig: Hnitaskiptafylki
+Skilgreining: Hnitaskiptafylki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`V` vera vigurrúm af vídd :math:`n` og gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` 
@@ -1126,7 +1126,7 @@ Setning: Hnitaskiptafylki
 
         .. math:: P_{\mathcal{C}\leftarrow\mathcal{B}}=[[\ve b_1]_{\mathcal{C}}\quad [\ve b_2]_{\mathcal{C}}\quad \ldots \quad [\ve b_n]_{\mathcal{C}}].
 
-    **(ii)** Fylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}` úr lið (a) er andhverfanlegt og andhverfa þess er 
+    **(ii)** Fylkið :math:`P_{\mathcal{C}\leftarrow\mathcal{B}}` úr lið **(i)** er andhverfanlegt og andhverfa þess er 
     hnitaskiptafylkið úr :math:`\mathcal{C}`-hnitum yfir í :math:`\mathcal{B}`-hnit. Það er að segja
 
         .. math:: P_{\mathcal{B}\leftarrow\mathcal{C}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1},
@@ -1142,7 +1142,7 @@ Setning: Hnitaskiptafylki
     :class: athugasemd
 
     Oft vinnum við með venjulega grunninn fyrir :math:`\R^n`, það er grunninn :math:`\mathcal{E}=\{\ve e_1, \ve e_2, \ldots, \ve e_n\}` 
-    þar sem :math:`\ve e_i` hefur i-ta hnitið 1 en öll önnur hnit 0. Þegar við skrifum vigur sem
+    þar sem :math:`\ve e_i` hefur :math:`i`-ta hnitið 1 en öll önnur hnit 0. Þegar við skrifum vigur sem
     
     .. math:: \ve x=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
     
@@ -1306,10 +1306,10 @@ Sýnidæmi: Hnitaskiptafylki
 
 
 
-Skilgreinig: Fylki vörpunar með tilliti til grunns
+Skilgreining: Fylki vörpunar með tilliti til grunns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. admonition:: Skilgreinig
+.. admonition:: Skilgreining
     :class: skilgreining
 
     Látum :math:`T \colon \R^n \rightarrow \R^n` vera línulega vörpun og :math:`\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}` vera grunn fyrir :math:`\R^n`.
@@ -1340,7 +1340,7 @@ Setning: Fylki fyrir mismunandi grunna
 .. admonition:: Dæmi
     :class: daemi
 
-    Látum :math:`T \colon \R^2 \rightarrow \R^2` vera speglun í línunni y = x. Hvert er fylki :math:`T` m.t.t. venjulega grunnsins :math:`\mathcal{E}` fyrir :math:`\R^2`.
+    Látum :math:`T \colon \R^2 \rightarrow \R^2` vera speglun í línunni :math:`y=x`. Hvert er fylki :math:`T` m.t.t. venjulega grunnsins :math:`\mathcal{E}` fyrir :math:`\R^2`.
 
 .. admonition:: Lausn
     :class: daemi, dropdown
@@ -1373,5 +1373,3 @@ Setning: Fylki fyrir mismunandi grunna
         \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
         \left(\frac{1}{2}\begin{bmatrix} 1 & 1 \\ -1 & 1 \end{bmatrix} \right)=
         \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}.
-
-

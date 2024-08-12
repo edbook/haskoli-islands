@@ -726,9 +726,6 @@ Aðferð minnstu kvaðrata (e. least squares) snýst um að finna nálgunarlausn
 
 eins lítil og mögulegt er.
 
-MYND
-
-
 Skilgreining: Aðferð minnstu kvaðrata
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

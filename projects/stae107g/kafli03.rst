@@ -572,7 +572,6 @@ Setning: Flatarmál og rúmmál
     
     **2.** Látum :math:`A` vera :math:`3 \times 3` fylki. Rúmmál samhliðungsins sem dálkvigrar :math:`A` ákvarða er :math:`\det A`.
 
-INSERT MYND
 
 Rifjum upp að mynd mengis :math:`S \subseteq \R` er mengið :math:`T(S)=\{T(s) : s \in S\}`.
 
