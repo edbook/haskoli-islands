@@ -185,25 +185,26 @@ read.table()
 
 --------------
 
-Á síðu bókarinnar má finna gagnaskrána ``pulsAll.csv``. Byrjið á því að
-vista hana í vinnumöppunni ykkar, þ.e.a.s. sömu möppu og þið geymið
+Á síðu bókarinnar má finna gagnaskránar ``konnun.csv``, ``nyrripuls.tsv``,
+``kaupskra.csv`` og ``pokarotta.csv``. Byrjið á því að
+vista þær í vinnumöppunni ykkar, þ.e.a.s. sömu möppu og þið geymið
 skipanaskrána ykkar. Þá má lesa þau inn í R með skipuninni:
 
 ::
 
-   puls <- read.table("pulsAll.csv", header=TRUE, sep=";")
+   konnun <- read.table("konnun.csv", header=TRUE, sep=",")
 
-Fyrst tilgreinum við nafnið á skránni: ``pulsAll.csv``. Þar á eftir
+Fyrst tilgreinum við nafnið á skránni: ``konnun.csv``. Þar á eftir
 gefum við ýmis konar stillingar, aðgreindar með kommum.
 
 Þær stillingar sem við komum oft til með að nota eru:
 
 -  ``header=TRUE``: Að breytuheiti séu í efstu línu gagnaskráarinnar.
 
--  ``sep=”;”``: Dálkar/breytur eru aðgreindir með semikommu.
+-  ``sep=”,”``: Dálkar/breytur eru aðgreindir með kommu.
 
-   Séu dálkar t.d. aðgreindir með ``tab`` skiptum við ``sep=”;”`` út
-   fyrir ``sep=”\t”``.
+   Séu dálkar t.d. aðgreindir með ``tab`` eða ``;`` skiptum við ``sep=”,”`` út
+   fyrir ``sep=”\t”`` eða ``sep=";"``
 
 -  ``dec=”,”``: Ef tugabrot og heiltöluhlutar eru aðgreind með kommu í
    stað punkts þarf að nota þessa stillingu.
@@ -214,18 +215,58 @@ gefum við ýmis konar stillingar, aðgreindar með kommum.
 -  ``stringsAsFActors``: Tilgreinir að strengjabreytur eigi ekki að
    vista sem flokkabreytur.
 
+``puls`` gögninn innihalda ``tab`` í stað kommu eða semíkommu og eru lesinn inn í R með:
+
+::
+
+   puls <- read.table("nyrripuls.tsv", header=TRUE, sep="\t")
+
+
+Það getur stundum verið auðveldara að nota:
+
+read.csv()
+^^^^^^^^^^^^
+
+.. attention::
+
+    **Inntak:** nafn á gagnaskrá
+    
+    **Úttak:** gagnatafla
+    
+    **Helstu stillingar:** header, sep, dec, na.strings, stringsAsFactors, encoding
+
+::
+
+   konnun <- read.csv("konnun.csv")
+   pokarotta <- read.csv("pokarotta.csv")
+
+
+Við notum ``read.csv()`` þegar  ``sep=","`` og notum ``read.csv2()`` þegar ``sep=";"``. 
+
 Um leið og við gefum skipunina höfum við lesið inn gögnin okkar og
-vistað sem gagnatöflu undir heitinu ``puls``. Við hefðum getað gefið
+vistað sem gagnatöflu undir heitinu ``konnun``. Við hefðum getað gefið
 töflunni hvaða heiti sem við viljum, hún hefði allt eins geta heitið
 ``gogn``, ``tilraun1`` eða hvað annað sem okkur dettur í hug . Það eina
 sem ekki má er að láta nöfn byrja á tölustaf. Það væri því ekki í lagi
 að gefa töflunni heitið ``1tilraun``.
 
+``kaupskra`` gagnasettið er að finna á https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/. Hlaðið
+skránni niður og opnið með ``read_csv()`` eða notið
+
+::
+
+   kaupskra <- read_csv2("https://www.skra.is/library/Skrar/kaupskra/kaupskra.csv", 
+
+::
+   
+   locale = locale(encoding = "ISO8859-1"))
+
+
 Ef við sláum
 
 ::
 
-   puls
+   konnun
 
 inn í keyrslugluggann birtist svo öll taflan. Gætið ykkar að ef
 gagnataflan er mjög stór fyllir hún fljótt marga skjái svo þetta er ekki
@@ -234,12 +275,12 @@ s.s. ``head()`` og ``str()`` sem við fjöllum um hér fyrir neðan.
 
 Þegar við höfum lesið gögn inn sem töflu getum við hæglega "dregið"
 eina og eina breytu út úr töflunni, skoðað nánar og jafnvel breytt.
-Viljum við t.d. ná í breytuna ``haed`` úr gagnatöflunni ``puls`` gerum
+Viljum við t.d. ná í breytuna ``haed`` úr gagnatöflunni ``konnun`` gerum
 við það með:
 
 ::
 
-   puls$haed
+   konnun$haed
 
 c()
 ^^^
@@ -447,7 +488,7 @@ names()
 
 ::
 
-   names(dat)
+   names(konnun)
    ##  [1] "is"              "ferdatimi_skoli"  "styrikerfi_simi" "ferdamati_skoli"   
    ##  [5] "systkini_fjoldi" "dyr"              "feministi"       "staerdfraedi_gaman"
    ##  [9] "smjor_kostar"    "napoleon_faeddur" "stefnumot"       "messi_staerd"      
@@ -476,7 +517,7 @@ væri útkoman:
 
 ::
 
-   head(dat)
+   head(konnun)
    ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
    ## 1  Jarðaberja  15                Android           Með einkabíl      
    ## 2  Vanilla     20                iOS               Með einkabíl     
@@ -518,7 +559,7 @@ mælingarnar liggja. Í okkar tilviki væri skipunin:
 
 ::
 
-   str(dat)
+   str(konnun)
    ## 'data.frame':	201 obs. of  13 variables:
    ##  $ is                : chr [1:201] "Jarðaberja" "Vanilla" "Súkkulaði" "Jarðaberja" ...
    ## $ ferdatimi_skoli   : num [1:201] 15 20 8 12 15 42 20 7 15 25 ...
@@ -556,11 +597,11 @@ tilteknum vigri. Í dæminu að ofan gefur skipunin
 
 ::
 
-   length(dat$ferdatimi_skoli)
+   length(konnun$ferdatimi_skoli)
    ## [1] 201
 
 útkomuna :math:`201`. Þ.e.a.s. það eru :math:`201` mælingar á ferðatíma í skóla
-geymdar í breytunni ``ferdatimi_skoli`` í gagnatöflunni ``dat``.
+geymdar í breytunni ``ferdatimi_skoli`` í gagnatöflunni ``konnun``.
 
 dim()
 ^^^^^
@@ -652,10 +693,10 @@ Skipunin
 
 ::
 
-   dat2 <-na.omit(dat)
+   konnun2 <-na.omit(konnun)
 
 
-smíðar gagnatöfluna ``dat2`` sem inniheldur aðeins einstaklinga sem
+smíðar gagnatöfluna ``konnun2`` sem inniheldur aðeins einstaklinga sem
 enga mælingu vantar hjá. Gætið ykkar að við viljum afar sjaldan eyða út
 öllum einstaklingum í gagnatöflu sem vantar *einhverja* mælingu hjá.
 Segjum sem sem dæmi að það vanti margar mælingar á breytunni ``smjor_kostar``
@@ -675,7 +716,7 @@ eftirfarandi skipun:
 
 ::
 
-   dat$napoleon_faeddur[dat$<1500|dat$napoleon_faeddur>1900]<-NA
+   konnun$napoleon_faeddur[konnun$<1500|konnun$napoleon_faeddur>1900]<-NA
 
 .. _s.gildivalin:
 
@@ -722,7 +763,7 @@ Berið útkomuvigurinn saman við vigurinn
 
 ::
 
-   dat$onothaefur_samningur
+   kaupskra$onothaefur_samningur
    ##  [1] 0 0 1 1 0 1 1 1 1 1 1 0
    ##  [13] 0 0 0 0 0 0 0 0 0 0 0 1
    ##  [25] 0 0 1 1 1 1 1 0 0 0 0 0
@@ -751,17 +792,17 @@ Líkt og við notum ``==`` getum við einnig notað aðra samanburðarvirkja:
 +--------+---------------------+
 
 Efstu virkjarnir fjórir skýra sig að mestu leyti sjálfir. Ef við viljum
-t.d. búa til nýja gagnatöflu ``datT`` sem inniheldur aðeins einstaklinga
+t.d. búa til nýja gagnatöflu ``konnunT`` sem inniheldur aðeins einstaklinga
 sem halda að Messi sé hærri en 170 cm gerum við það með:
 
 ::
 
-   datT <- dat[dat$messi_staerd > 170, ]
+   konnunT <- konnun[konnun$messi_staerd > 170, ]
 
 eða
 ::
 
-   datT <- filter(dat$messi_staerd > 170)
+   konnunT <- filter(konnun$messi_staerd > 170)
 
 Skoðum ``filter()`` skipunina betur í `%s <s.Ákveðin gildi valin úr gagnatöflu>`
 Hvað varðar neðri virkjana tvo, þá er virkinn :math:`\&` mataður með
@@ -776,7 +817,7 @@ skilar skipunin:
 
 ::
 
-   dat$systkini_fjoldi%in%c(0,3,7)
+   konnun$systkini_fjoldi%in%c(0,3,7)
    ## [1] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE
    ## [9] FALSE FALSE  TRUE FALSE TRUE FALSE FALSE FALSE
    ## [17]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
@@ -801,12 +842,12 @@ slice()
 
 Fyrsta aðferðin sem við kynnumst úr ``dplyr`` er ``slice()``. Hana notum
 við til að velja ákveðnar línur út gagnatöflu. Ef við viljum t.d. geyma
-mælingar á fyrstu 10 viðfangsefnunum í ``puls`` gagnatöflunni í nýrri
+mælingar á fyrstu 10 viðfangsefnunum í ``konnun`` gagnatöflunni í nýrri
 gagnatöflu getum við gert það með:
 
 ::
 
-   dat.first<-slice(dat,1:10)
+   konnun.first<-slice(konnun,1:10)
 
 filter()
 ^^^^^^^^
@@ -830,14 +871,14 @@ gagnatöflu sem inniheldur aðeins þá sem eiga engin systkini með:
 
 ::
 
-   engin_systkini<-filter(dat, systkini_fjoldi==0)
+   engin_systkini<-filter(konnun, systkini_fjoldi==0)
 
 Ef við viljum skoða gögn þeirra sem finnst jarðaberjaís bestur og kunna 
 betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný gagnatafla):
 
 ::
 
-   filter(dat, is=="Jarðaberja", dyr=="Hunda")
+   filter(konnun, is=="Jarðaberja", dyr=="Hunda")
 
 ::
 
@@ -862,11 +903,11 @@ velja. Við númerum viðfangsefni frá efsta viðfangsefninu til þess neðsta
 hægri (þ.e.a.s. breytan lengst til vinstri er númer eitt).
 
 Ef við viljum skoða hver mælingin á breytu 2 (``ferdatimi_skoli``) á viðfangsefni
-46 er í gagnatöflunni okkar ``dat`` gefum við skipunina:
+46 er í gagnatöflunni okkar ``konnun`` gefum við skipunina:
 
 ::
 
-   dat[46,2]
+   konnun[46,2]
    ## [1] 20
 
 Ef við sleppum fyrri vísavigrinum fáum við mælingar á öllum
@@ -875,7 +916,7 @@ viðfangsefnum fyrir breyturnar sem við tilgreinum í seinni vigrinum.
 
 ::
 
-   dat[,2]
+   konnun[,2]
 
 mælingarnar á ferðatíma í skóla fyrir öll viðfangsefnin. Ef við sleppum seinni
 vísavigrinum fáum við mælingar á öllum breytum fyrir viðfangsefnin sem
@@ -883,7 +924,7 @@ við tilgreinum í fyrri vigrinum. Þannig gefur skipunin
 
 ::
 
-   dat[c(46,52),]
+   konnun[c(46,52),]
    ##     is         ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli   
    ## 46  Vanilla    20                iOS               Með einkabíl      
    ## 52  Vanilla    13                iOS               Með einkabíl      
@@ -902,7 +943,7 @@ einhverjar tilteknar.
 
 ::
 
-   dat[-c(46,52), -2]
+   konnun[-c(46,52), -2]
 
 gefur mælingar fyrir öll viðfangsefni *nema* númer 46 og 52 og allar
 breytur *nema* þá aðra.
@@ -924,12 +965,12 @@ which()
 Að lokum viljum við nefna tvær aðferðir sem fylgja grunnpakka R.
 ``which()`` aðferðin er einstaklega gagnleg og gefur hún okkur vísa á
 gildi í vigri, gagnatöflu eða fylki sem uppfylla ákveðin skilyrði. Við
-getum t.d. kannað hvaða einstaklingar halda að Messi sé hærri en 180 cm í dat
+getum t.d. kannað hvaða einstaklingar halda að Messi sé hærri en 180 cm í konnun
 gögnunum okkar:
 
 ::
 
-   which(dat$messi_staerd>180)
+   which(konnun$messi_staerd>180)
    ##  [1]   29   64    77    130    136     142   168   195    
 
 Ef við mötum ``which()`` með tvívíðum hlut (fylki) og notum ``arr.ind``
@@ -959,7 +1000,7 @@ innihalda textastrenginn ``skokkandi``.
 
 ::
 
-   grep("skokkandi", dat$ferdamati_skoli)
+   grep("skokkandi", konnun$ferdamati_skoli)
    ## [1]  4   8   12  13  24  25  57  59  67
    ## [10] 77  93  96  97  100 117 119 122 130
    ## [19] 131 132 133 136 139 142 147 148 158
@@ -971,7 +1012,7 @@ við leitarskilyrðið en ekki bara vísa þeirra:
 
 ::
 
-   grep("skokkandi", dat$ferdamati_skoli, value=TRUE)
+   grep("skokkandi", konnun$ferdamati_skoli, value=TRUE)
    ##   [1] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi" 
    ##   [4] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
    ##   [7] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
@@ -1126,17 +1167,17 @@ aðferðina með 0,1,3 (neðri mörkin á flokkunum okkar) en þurfum svo að
 gefa efra mark á síðasta flokknum. Þetta þarf að vera gildi sem er
 a.m.k. einu gildi hærra en hæsta gildið sem talnabreytan tekur. Hér
 notum við gildið 15 (fallegra væri að nota
-``max(dat$systkini_fjoldi)+1``):
+``max(konnun$systkini_fjoldi)+1``):
 
 ::
 
-   dat$systkini_fjoldi_stig<-cut(dat$systkini_fjoldi,c(0,1,3,15),right=F)
+   konnun$systkini_fjoldi_stig<-cut(konnun$systkini_fjoldi,c(0,1,3,15),right=F)
 
 Hér sjáum við hversu margir verða í hverjum flokki:
 
 ::
 
-   table(dat$systkini_fjoldi_stig)
+   table(konnun$systkini_fjoldi_stig)
    ##
    ##   [0,1)   [1,3) [3,15)
    ##      3     123     75
@@ -1145,8 +1186,8 @@ Við getum svo notað ``levels()`` skipunina til að endurskýra flokkana:
 
 ::
 
-   levels(dat$systkini_fjoldi_stig)<-c("Engin","Nokkur","Mörg")
-   table(dat$systkini_fjoldi_stig)
+   levels(konnun$systkini_fjoldi_stig)<-c("Engin","Nokkur","Mörg")
+   table(konnun$systkini_fjoldi_stig)
    ##
    ##    Engin    Nokkur   Mörg
    ##    3        123      75
@@ -1169,8 +1210,8 @@ Búum fyrst til afrit af breytunni og sjáum í hvaða röð flokkarnir eru tald
 
 ::
 
-   dat$ferdamati_skoli_okutaeki <- dat$ferdatimi_skoli
-   levels(dat$ferdamati_skoli_okutaeki)
+   konnun$ferdamati_skoli_okutaeki <- konnun$ferdatimi_skoli
+   levels(konnun$ferdamati_skoli_okutaeki)
    ## [1] "Á annan hátt"  "Á hjóli/ rafhlaupahjóli"  "Gangandi/ skokkandi"
    ## [4] "Með einkabíl"  "Með strætó"
 
@@ -1180,14 +1221,14 @@ taldir upp. Því skrifum við ``ekki_med_okutaeki`` í fyrstu þrjú sætin en
 
 ::
 
-   levels(dat$ferdamati_skoli_okutaeki) <- 
+   levels(konnun$ferdamati_skoli_okutaeki) <- 
    c('ekki_med_okutaeki','ekki_med_okutaeki','ekki_med_okutaeki', 'med_okutaeki', 'med_okutaeki')
 
 Nýja sameinaða breytan hefur eingöngu tvo flokka:
 
 ::
 
-   str(dat$ferdamati_skoli_okutaeki)
+   str(konnun$ferdamati_skoli_okutaeki)
    ##  Factor w/ 2 levels "ekki_med_okutaeki","med_okutaeki
    ": 2 2 2 1 2 2 1 2 2 1 ...
 
@@ -1198,18 +1239,20 @@ Hana má nota svona:
 byrjum að sækja forcats pakkann
 
 ::
+
    library(forcats)
 
 Búum fyrst til nýjan flokk sem er afrit að ferdamati_skoli
 
 ::
 
-   dat$ferdamati_skoli_okutaeki <- dat$ferdatimi_skoli
+   konnun$ferdamati_skoli_okutaeki <- konnun$ferdatimi_skoli
 
 Búum svo til nýju flokkana
 
 ::
-   dat$ferdamati_skoli_okutaeki<- fct_recode(dat$ferdamati_skoli_okutaeki, 
+
+   konnun$ferdamati_skoli_okutaeki<- fct_recode(konnun$ferdamati_skoli_okutaeki, 
    "ekki_med_okutaeki" = "Á hjóli / rafhlaupahjóli","ekki_med_okutaeki"  
    = "Gangandi / skokkandi", "ekki_med_okutaeki" = "Á annan hátt", 
    "med_okutaeki" = "Með einkabíl", "med_okutaeki" = "Með strætó")
@@ -1244,28 +1287,28 @@ auðveldum hætti og má sjá öll möguleg snið með því að skoða:
 
    help("lubridate")
 
-Ef við erum til dæmis með lista af fæðingardögum þar sem fyrst kemur dagur, svo mánuður og loks fjögra stafa ártal,
-allt aðskilið með punkti þá notum við stillinguna ``format=’%d.%m.%Y’``.
+Segjum að við séum að vinna með gagnasettið ``afmaeli``  sem samanstendur af nöfnum og afmælisdögum. 
+Í gagnasafninu kemur fyrst dagur, svo mánuður og þá fjögurra bókstafa
+ár, allt aðskilið með punkti. Því gefum við stillinguna
+``format=’%d.%m.%Y’``. Einnig vistaðist dagsetningin sem flokkabreyta
+við innlestur (þar sem hún inniheldur ekki bara tölur, heldur líka
+punkta). Því þarf að mata ``as.Date()`` með
+``as.character(afmaeli$dagsetning)``, skipun sem breytir flokkabreytu í
+orðabreytu.
 
 ::
 
-   afmaeli <- c("28.1.2004", "28.1.2004", "31.3.2004", "18.8.2004", "8.11.2004", "4.12.2004", "27.3.2005", "18.6.2005")
-
-   afmaeli <- as_date(afmaeli, format='%d.%m.%Y')
+   afmaeli$dagsetning <- as.Date(as.character(afmaeli$dagsetning), format='%d.%m.%Y' )
 
 Nú eru dagsetningarnar komnar á rétt form:
 
 ::
 
    str(afmaeli)
-   ##  Date[1:8], format: "2004-01-28" "2004-01-28" "2004-03-31" "2004-08-18" "2004-11-08" "2004-12-04" ...
-
-Ef dagsetningarnar okkar hefðu verið vistaðar sem flokkabreytur
-við innlestur þyrftum við að breyta henni fyrst í orðabreytu með skipun eins og
-``as.character()``. Við hefðum einnig getað notað skipunina ``dmy()`` úr ``lubridate`` pakkanum, í honum eru margar
-sniðugar skipanir sem gera vinnslu með dagsetningar margfalt þægilegri en ella.
-
-
+   ## 'data.frame':    37 obs. of  2 variables:
+   ##  $ nafn    : Factor  "Margrét","Dagur" ...
+   ##  $ dagsetning  : Date, format: "2003-01-11" "2005-10-05" ...
+   
 E: Leitað eftir textastrengjum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1330,14 +1373,14 @@ Hægt er, á auðveldan hátt, að endurskýra breytur í gagnatöflu með
 
 ::
 
-   dat<-rename(dat,uppahalds_is=is)
+   konnun<-rename(konnun,uppahalds_is=is)
 
 Til að valda ekki ruglingi hér breytum við nafninu aftur í ``is``
 með:
 
 ::
 
-   dat<-rename(dat,is=uppahalds_is)
+   konnun<-rename(konnun,is=uppahalds_is)
 
 G: Vörpunum beitt á talnabreytur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1392,6 +1435,7 @@ Getum búið til nýtt gagnasett sem inniheldur einungis breyturnar
 kaupverd og einflm með:
 
 ::
+
    kaupskra2 <-select(kaupskra, einflm, kaupverd)
 
 
@@ -1412,8 +1456,6 @@ group_by()
 
     **Inntak:** nafn á gagnatöflu og nafn á flokkabreytum
     
-    **Úttak:** gagnatafla
-    
     **Helstu stillingar:** .drop1
 
 
@@ -1426,14 +1468,14 @@ Skoðum með meðalferðtími fólks er í skóla eftir ferðamáta
 
 ::
 
-   hopar <- group_by(dat, ferdamati_skoli)
+   hopar <- group_by(konnun, ferdamati_skoli)
    summarise(hopar, mean(ferdatimi_skoli))
-   ## ferdamati_skoli            mean(ferdatimi_skoli) 
-   ## Gangandi / skokkandi	      7.588235
-   ## Með einkabíl	            19.923077
-   ## Með strætó	               33.733333
-   ## Á annan hátt	            2.500000
-   ## Á hjóli / rafhlaupahjóli   11.666667
+   ## ferdamati_skoli               mean(ferdatimi_skoli) 
+   ## Gangandi / skokkandi	         7.588235
+   ## Með einkabíl	               19.923077
+   ## Með strætó	                  33.733333
+   ## Á annan hátt	               2.500000
+   ## Á hjóli / rafhlaupahjóli      11.666667
 
 
 Skoðum svo hver lengst ferðatími í skóla eftir bæði ferðamáta 
@@ -1441,7 +1483,7 @@ og uppáhaldsís.
 
 ::
 
-   hopar2 <- group_by(dat, ferdamati_skoli, is)
+   hopar2 <- group_by(konnun, ferdamati_skoli, is)
    summarise(hopar, max(ferdatimi_skoli))
    ## ferdamati_skoli         is             max(ferdamati_skoli)
    ## Gangandi / skokkandi	   Jarðaberja	   30
@@ -1541,7 +1583,7 @@ kaupverði gerum við það með:
 .. _rf.gather:
 
 pivot_longer()
-^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 .. attention::
 
@@ -1590,7 +1632,7 @@ Eftir skipunina lítur gagnataflan svona út:
 .. _rf.spread:
 
 pivot_wider()
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 .. attention::
 

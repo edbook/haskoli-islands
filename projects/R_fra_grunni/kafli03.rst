@@ -58,14 +58,15 @@ Punktarit
 Punktarit eru einföld og skýr leið til að setja fram gögn. Þau eru
 smíðuð með viðbótinni ``+ geom_point()``. Eftirfarandi skipun gefur
 okkur punktarit sem lýsir sambandi heildarlengdar og lengdar höfuðs pokarotta
-í gagnatöflunni ``possum``. Skýribreytan ``total_l`` er á x-ás og 
+í gagnatöflunni ``pokarotta``. Skýribreytan ``total_l`` er á x-ás og 
 svarbreytan ``head_l`` á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni ``aes()``.
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l)) + geom_point()
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point()
 
-.. figure:: myndir/pokaPunkt.svg
+.. figure:: myndir/punktarit1.svg
+   :align: center
 
 Stöplarit
 ~~~~~~~~~
@@ -76,9 +77,10 @@ tilgreind inní ``aes()``.
 
 ::
 
-   ggplot(data=dat, aes(x=is)) + geom_bar()
+   ggplot(data=konnun, aes(x=is)) + geom_bar()
 
 .. figure:: myndir/isBar.svg
+   :align: center
 
 Stuðlarit
 ~~~~~~~~~
@@ -88,17 +90,19 @@ stuðlarit af breytunni ``ferdatimi_skoli`` gerum við það með skipuninni:
 
 ::
 
-   ggplot(data=dat, aes(x=ferdatimi_skoli)) + geom_histogram()
+   ggplot(data=konnun, aes(x=ferdatimi_skoli)) + geom_histogram()
 
 .. figure:: myndir/ferdatimiHist.svg
+   :align: center
 
 Stilla má breidd súlnanna með ``binwidth`` stillingunni:
 
 ::
 
-   ggplot(data=dat, aes(x=ferdatimi_skoli)) + geom_histogram(binwidth=10)
+   ggplot(data=konnun, aes(x=ferdatimi_skoli)) + geom_histogram(binwidth=10)
 
 .. figure:: myndir/ferdatimiHist10.svg
+   :align: center
 
 Kassarit
 ~~~~~~~~
@@ -110,9 +114,10 @@ við það með:
 
 ::
 
-   ggplot(data=dat, aes(x=is, y=systkini_fjoldi)) + geom_boxplot()
+   ggplot(data=konnun, aes(x=is, y=systkini_fjoldi)) + geom_boxplot()
 
 .. figure:: myndir/systkiniIs.svg
+   :align: center
 
 Hægt er að teikna kassarit af einni breytu án lagskiptingar með því að
 setja ``factor(0)`` inn sem eins konar gervibreytu. Neðangreind skipun
@@ -120,21 +125,23 @@ teiknar kassarit af breytunni ``ferdatimi_skoli`` án lagskiptingar:
 
 ::
 
-   ggplot(data=dat, aes(x=factor(0), y=ferdatimi_skoli)) + geom_boxplot()
+   ggplot(data=konnun, aes(x=factor(0), y=ferdatimi_skoli)) + geom_boxplot()
 
 .. figure:: myndir/gerviIs.svg
+   :align: center
 
 Normaldreifingarrit
 ~~~~~~~~~~~~~~~~~~~
 
 Normaldreifingarrit eru gerð með viðbótinni ``stat_qq()``.
-Normaldreifingarrit fyrir breytuna ``head_l`` fæst með:
+Normaldreifingarrit fyrir breytuna ``hofud_lengd`` fæst með:
 
 ::
 
-   ggplot(data=possum, aes(sample=head_l)) + stat_qq()
+   ggplot(data=pokarotta, aes(sample=hofud_lengd)) + stat_qq()
 
 .. figure:: myndir/normalPossum.svg
+   :align: center
 
 Takið eftir að nú stendur ``sample=`` í stað ``x=`` í ``aes()``
 stillingunni.
@@ -150,9 +157,10 @@ tilgreinir merkingu ása.
 
 ::
 
-   ggplot(data=dat, aes(x=is)) + geom_bar()+labs(x="Uppáhalds ís", y="Fjöldi")
+   ggplot(data=konnun, aes(x=is)) + geom_bar()+labs(x="Uppáhalds ís", y="Fjöldi")
 
 .. figure:: myndir/isBarAsar.svg
+   :align: center
 
 Við getum enn fremur merkt og stillt kvarðana á hvorum ás fyrir sig að
 vild. Séum við að merkja samfellda breytu á x-ás notum við viðbótina
@@ -169,10 +177,11 @@ stöplaritinu hér að ofan með viðbótinni:
 
 ::
 
-   ggplot(data=dat, aes(x=is)) + geom_bar()+labs(x="Uppáhalds ís", y="Fjöldi") +
+   ggplot(data=konnun, aes(x=is)) + geom_bar()+labs(x="Uppáhalds ís", y="Fjöldi") +
    scale_x_discrete(labels = c("Jarðaberjaís","Súkkulaðiís", "Vanilluís"))
 
 .. figure:: myndir/isBarAsarOgHok.svg
+   :align: center
 
 Takið eftir einu til viðbótar. Hér skiptum við skipuninni upp í tvær
 línur til að gera kóðann læsilegri. Þá þurfum við að passa okkur að hafa
@@ -181,7 +190,7 @@ lína hunsuð og við fáum jafnvel villu:
 
 ::
 
-   ggplot(data = dat, aes(is)) + geom_bar() + xlab('Uppáhalds ís') + ylab('Fjöldi')
+   ggplot(data = konnun, aes(is)) + geom_bar() + xlab('Uppáhalds ís') + ylab('Fjöldi')
    + scale_x_discrete(labels = c("Jarðaberjaís","Súkkulaðiís","Vanilluís"))
    ## Error in `+.gg`:
    ## ! Cannot use `+` with a single argument.
@@ -197,10 +206,11 @@ gerum við það með skipuninni:
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l)) + 
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) +
    geom_point()+scale_y_continuous(breaks = seq(80,120,10))
 
-.. figure:: myndir/possumPunktHok.svg
+.. figure:: myndir/hokkvarda.svg
+   :align: center
 
 Mörk kvarða
 ~~~~~~~~~~~
@@ -210,10 +220,11 @@ mataðar með endamörkum kvarðanna.
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l)) + 
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) +
    geom_point()+ylim(50,120)+xlim(70,100)
 
-.. figure:: myndir/possumPunkstrech.svg
+.. figure:: myndir/lim.svg
+   :align: center
 
 Litir og tákn
 -------------
@@ -230,9 +241,10 @@ tilheyrir. Það er því gert með stillingunni ``color``.
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l, color = sex)) + geom_point()
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd, color = kyn)) + geom_point()
 
-.. figure:: myndir/possumPunktKyn.svg
+.. figure:: myndir/kynlitur.svg
+   :align: center
 
 Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
 eftir því hvort þeir nota iOS eða Android gerum við það með
@@ -240,18 +252,20 @@ stillingunni ``fill``, því þá viljum við lita fleti grafsins ólíkt.
 
 ::
 
-   ggplot(data=dat, aes(x=is, fill=styrikerfi_simi)) + geom_bar()
+   ggplot(data=konnun, aes(x=is, fill=styrikerfi_simi)) + geom_bar()
 
 .. figure:: myndir/isBarStyrikerfi.svg
+   :align: center
 
 Ef við bætum stillingunni ``position=’dodge’`` inní viðbótina
 ``geom_bar()`` koma stöplar grafsins hvor við hliðina á öðrum:
 
 ::
 
-   ggplot(data=dat, aes(x=is, fill=styrikerfi_simi)) + geom_bar(position="dodge")
+   ggplot(data=konnun, aes(x=is, fill=styrikerfi_simi)) + geom_bar(position="dodge")
 
 .. figure:: myndir/isBarStyrikerfiDodge.svg
+   :align: center
 
 Oft eru tákn heppilegri en litir til að lagskipta gröfum. Til dæmis geta
 litmyndir verið dýrar í tímaritum og svart-hvítar lausnir því heppilegri
@@ -260,9 +274,10 @@ kostur. Tilgreina má að skipta gröfum upp með því að nota ólík tákn me
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l, shape = sex)) + geom_point()
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd, shape = kyn)) + geom_point()
 
-.. figure:: myndir/possumPunktKynShape.svg
+.. figure:: myndir/kynform.svg
+   :align: center 
 
 Gröfum skipt upp í reiti
 ------------------------
@@ -276,20 +291,22 @@ upp eftir því hvaðan þær eru gerum við það með skipuninni:
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l)) + geom_point() + 
-   facet_grid(~pop)
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() + 
+   facet_grid(~tegund)
 
-.. figure:: myndir/possumPunkSvaedi.svg
+.. figure:: myndir/tegundfacet.svg
+   :align: center 
 
 Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
 og hvaðan þær eru gerum við það með:
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l)) + geom_point() + 
-   facet_grid(sex~pop)
+   kyntegund<-ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() +
+   facet_grid(kyn~tegund)
 
-.. figure:: myndir/possumPunktSvaediKyn.svg
+.. figure:: myndir/kyntegund.svg
+   :align: center
 
 Svo mætti hæglega halda áfram og lagskipta með bæði reitaskiptingu og táknum í sama
 grafinu.
@@ -304,18 +321,21 @@ tvær þægilegar stillingar til að breyta um bakgrunn. Sú fyrri er
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l)) + geom_point() + theme_bw()
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() 
+   + theme_bw()
 
-.. figure:: myndir/possumPunktBW.svg
+.. figure:: myndir/pokarottamynd.svg
+   :align: center
 
 sú seinni er ``theme_classic()`` og gefur þessa niðurstöðu:
 
 ::
 
-   ggplot(data=possum, aes(x=total_l,y=head_l)) + geom_point() + 
-   theme_classic()
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() 
+   + theme_classic()
 
-.. figure:: myndir/possumPunktClassic.svg
+.. figure:: myndir/classic.svg
+   :align: center
 
 Myndir vistaðar
 ---------------

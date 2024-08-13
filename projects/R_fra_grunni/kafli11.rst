@@ -20,11 +20,13 @@ glm()
 
 .. attention::
 
-    **Inntak:** formúla, gögn
+    **Inntak:** formúla, gögn (tvíkosta breyta~breyta, gögn)
     
     **Úttak:** tvíkosta aðhvarfsgreining á gögnunum byggt á formúlunni
     
     **Helstu stillingar:** family
+
+    **Forkröfur prófs:** ??
 
 
 --------------
@@ -44,14 +46,14 @@ fyrir þá og reikna öryggisbil.
 Tvíkosta aðhvarfsgreining með samfellda skýribreytu
 ---------------------------------------------------
 
-Tvíkosta aðhvarfsgreiningu má nota til að meta hvort nemendur sem stunda
-mikla líkamsrækt séu ólíklegri til að reykja heldur en þá sem stunda
-litla líkamsrækt. Líkanið metum við með neðangreindri skipun og það
-borgar sig að vista líkanið sem hlut.
+Tvíkosta aðhvarfsgreiningu má nota til að meta hvort nemendur sem koma 
+gangandi eða skokkandi í skólann séu ólíklegri til að vera lengi á leiðinni 
+í skólann heldur en þeir sem ferðast á skólann á annan máta. Líkanið metum
+við með neðangreindri skipun og það borgar sig að vista líkanið sem hlut.
 
 ::
 
-   glm1<-glm(ferdamati_skoli=='Gangandi / skokkandi'~ferdatimi_skoli, data=dat, family='binomial')
+   glm1<-glm(ferdamati_skoli=='Gangandi / skokkandi'~ferdatimi_skoli, data=konnun, family='binomial')
 
 Fyrsta inntakið í skipunina er formúla. Á vinstri hönd hennar verður að
 vera breyta sem tekur gildin 0 og 1, eða þá TRUE og FALSE. Í þessu dæmi
@@ -61,7 +63,7 @@ meta gagnlíkindin á því að koma gangandi. Á hægri hönd formúlunnar er
 skýribreytan, sem í þessu tilviki er ``ferdatimi_skoli``.
 
 Næstu tvö inntök skipunarinnar er nafnið á gagnatöflunni sem geymir
-gögnin (``dat``) og af hvaða gerð aðhvarfsgreiningarlíkanið er. Með
+gögnin (``konnun``) og af hvaða gerð aðhvarfsgreiningarlíkanið er. Með
 stillingunni ``family=’binomial’`` tilgreinum við að tvíkosta
 aðhvarfsgreining skuli framkvæmd með logistic tengifallinu.
 
@@ -74,7 +76,7 @@ aðhvarfsgreiningarinnar:
    ##
    ## Call:
    ## glm(formula = ferdamati_skoli == "Gangandi / skokkandi" ~ ferdatimi_skoli, 
-   ##     family = "binomial", data = dat)
+   ##     family = "binomial", data = konnun)
    ## 
    ## Coefficients:
    ##                 Estimate Std. Error z value Pr(>|z|)    
@@ -154,7 +156,7 @@ neðangreindri skipun:
 
 ::
 
-   glm2<-glm(feministi=='Rétt'~dyr, data=dat, family='binomial')
+   glm2<-glm(feministi=='Rétt'~dyr, data=konnun, family='binomial')
 
 Skipunin lítur á nákvæmlega sama hátt út og í kafla
 :numref:`%s <s.tvikostasamfelld>` nema að nú hefur ``feministi=='Rétt'`` komið í stað 
@@ -168,7 +170,7 @@ aðhvarfsgreiningarinnar:
    ##
    ## Call:
    ## glm(formula = feministi == "Rétt" ~ dyr, family = "binomial", 
-   ##     data = dat)
+   ##     data = konnun)
    ## 
    ## Coefficients:
    ##             Estimate Std. Error z value Pr(>|z|)    
