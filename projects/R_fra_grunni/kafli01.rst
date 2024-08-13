@@ -775,7 +775,7 @@ Skráin inniheldur eftirfarandi breytur:
 +-------------------+--------------------+
 | Breyta            | Útskýring/gildi    |
 +===================+====================+
-| stadsetning      | 1 eða 2             |
+| stadsetning       | 1 eða 2            |
 +-------------------+--------------------+
 | tegund            | Vic eða other      |
 +-------------------+--------------------+
