@@ -264,6 +264,9 @@ Reikna má fylgni milli tveggja breyta í R með ``cor()`` aðferðinni. Við
 reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
 höfuðlengdar pokarotta, semsagt breytanna ``total_l`` og ``head_l``,
 notum við skipunina:
+reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
+höfuðlengdar pokarotta, semsagt breytanna ``total_l`` og ``head_l``,
+notum við skipunina:
 
 ::
 
@@ -311,6 +314,9 @@ STÆ209 í gagnasafninu okkar gerum við það með:
    ## Jarðaberja  Súkkulaði    Vanilla 
    ##         39        91         71 
 
+   ## Jarðaberja  Súkkulaði    Vanilla 
+   ##         39        91         71 
+
 
 Við getum líka matað ``table()`` með tveimur flokkabreytum og þá telur
 hún hversu oft hversu mörg viðfangsefni hljóta hverja og eina af
@@ -321,6 +327,10 @@ neðan.
 
    table(konnun$is, konnun$dyr)
    ##
+   ##               Hunda Ketti
+   ## Jarðaberja    23    16
+   ## Súkkulaði     61    30
+   ## Vanilla       43    28
    ##               Hunda Ketti
    ## Jarðaberja    23    16
    ## Súkkulaði     61    30
@@ -352,6 +362,8 @@ hlutföll getum við notað ``prop.table()`` aðferðina. Við mötum hana með
    ##
    ## Jarðaberja  Súkkulaði    Vanilla 
    ##  0.1940299  0.4527363  0.3532338 
+   ## Jarðaberja  Súkkulaði    Vanilla 
+   ##  0.1940299  0.4527363  0.3532338 
 
 Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
 þrennan hátt. Viljum við fá heildarhlutföllin gerum við það með:
@@ -364,7 +376,14 @@ Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
    ##  Jarðaberja 0.11442786 0.07960199
    ##  Súkkulaði  0.30348259 0.14925373
    ##  Vanilla    0.21393035 0.13930348
+   ##                  Hunda      Ketti
+   ##  Jarðaberja 0.11442786 0.07960199
+   ##  Súkkulaði  0.30348259 0.14925373
+   ##  Vanilla    0.21393035 0.13930348
 
+Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við 
+hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti 
+skoða hlutföllin eftir línum í töflunni gerum við það með:
 Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við 
 hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti 
 skoða hlutföllin eftir línum í töflunni gerum við það með:
@@ -377,7 +396,14 @@ skoða hlutföllin eftir línum í töflunni gerum við það með:
    ##  Jarðaberja 0.5897436 0.4102564
    ##  Súkkulaði  0.6703297 0.3296703
    ##  Vanilla    0.6056338 0.3943662
+   ##                 Hunda     Ketti
+   ##  Jarðaberja 0.5897436 0.4102564
+   ##  Súkkulaði  0.6703297 0.3296703
+   ##  Vanilla    0.6056338 0.3943662
 
+Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur 
+eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir 
+dálkum í töflunni gerum við það með:
 Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur 
 eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir 
 dálkum í töflunni gerum við það með:
@@ -390,7 +416,12 @@ dálkum í töflunni gerum við það með:
    ##  Jarðaberja 0.1811024 0.2162162
    ##  Súkkulaði  0.4803150 0.4054054
    ##  Vanilla    0.3385827 0.3783784
+   ##                 Hunda     Ketti
+   ##  Jarðaberja 0.1811024 0.2162162
+   ##  Súkkulaði  0.4803150 0.4054054
+   ##  Vanilla    0.3385827 0.3783784
 
+Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
 Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
 
 Takið eftir að nota má ``prop.table()`` til að reikna lýsistærðirnar
@@ -428,6 +459,10 @@ aukastöfum sé skilað gerum við það með:
 
    round(prop.table(table(konnun$is, konnun$dyr),2),3)
    ##
+   ##             Hunda Ketti
+   ##  Jarðaberja 0.181 0.216
+   ##  Súkkulaði  0.480 0.405
+   ##  Vanilla    0.339 0.378
    ##             Hunda Ketti
    ##  Jarðaberja 0.181 0.216
    ##  Súkkulaði  0.480 0.405

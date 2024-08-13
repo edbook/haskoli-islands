@@ -1,7 +1,5 @@
 .. include:: rst-include
 
-.. _teikning-með-matplotlib:             
-
 Teikning með Matplotlib
 =======================
 
@@ -9,16 +7,22 @@ Inngangur
 ~~~~~~~~~
 Matplotlib er teiknipakki fyrir Python sem er byggður á tölvugrafík í
 Matlab-kerfinu. Með Matplotlib er hægt að teikna (eða birta, sýna) myndir
-(*images*), hæðarlínur (*countours*), *skatterplott*, línurit og gröf (*line
-plots*) og þrívíðar *upplýstar* myndir. Pakkinn er þannig að framendinn
-(*frontend*) eða skilgreining teikningarinnar er aðskilinn frá bakendanum
-(*backend*) sem birtir hana. Þannig er hægt að skrifa forrit sem býr til
-teikningu, og svo er hægt að sýna teikninguna inni í Jupyter-bók, sem sjálfstæðan
-glugga á skjá, á vef, í pdf-skjali, í Latex-skjali, á prentara o.s.frv. án þess
-að breyta teikniforritinu sjálfu. Auk þess er hægt að fá alls kyns viðbætur við
-Matlplotlib, t.d. fyrir kortagerð, þrívíða teikningu, og samskipti við Excel,
-svo fáeinar séu nefndar. Eftirfarandi mynd sýnir dæmi um myndir teiknaðar
-með Matplotlib.
+(*images*), hæðarlínur (*countours*), punktarit (*scatter plot*), línurit og
+gröf (*line plots*) og þrívíðar *upplýstar* myndir. Pakkinn er þannig að
+framendinn (*frontend*) eða skilgreining teikningarinnar er aðskilinn frá
+bakendanum (*backend*) sem birtir hana. Þannig er hægt að skrifa forrit sem býr
+til teikningu, og svo er hægt að sýna teikninguna inni í Jupyter-bók, sem
+sjálfstæðan glugga á skjá, á vef, í pdf-skjali, í Latex-skjali, á prentara
+o.s.frv. án þess að breyta teikniforritinu sjálfu. Auk þess er hægt að fá alls
+kyns viðbætur við Matlplotlib, t.d. fyrir kortagerð, þrívíða teikningu,
+samskipti við Pandas og samskipti við Excel, svo fáeinar séu nefndar. Af þessum
+viðbótum er er líklega helstan að telja pakkann `Seaborn
+<https://seaborn.pydata.org/>`_, sem tengist Pandas nánum böndum. Markmið
+höfunda Seaborn er að teikna sem "nútímalegust" tölfræðileg gröf á sem
+sjálfvirkastan máta.
+
+Eftirfarandi mynd sýnir dæmi um
+myndir teiknaðar með Matplotlib.
 
 .. figure:: myndir/matplotlib-dæmi.jpeg
    :align: center
@@ -26,126 +30,136 @@ með Matplotlib.
 
    Matplotlib myndir
 
-.. attention::
+.. admonition:: Athugasemd: Skipun eða fall
+   :class: athugid
+
    Hér verður talað um teikniskipanir þegar strangt tiltekið ætti kannski frekar
    að tala um teikniföll: scatter-fallið, plot-fallið o.s.frv. Einn kostur við
    að segja frekar *skipun* er að það veldur síður ruglingi þegar verið er að
    teikna föll.
 
-.. _einfaldar-myndir:
-   
 Einfaldar myndir
 ~~~~~~~~~~~~~~~~
 
 Undirbúningur teikningar
 ------------------------
-   Venjulegasta notkun Matplotlib er að nota undirpakkann *pyplot* og í
-   Matplotlib notendahandbókinni er mælt með að flytja hann inn sem *plt*, svo
-   það er fyrir vikið alsiða. Teiknaðar myndir birtast sjálfkrafa inni í
-   bókinni, neðan við forritsreitinn. Hér er kafli sem hægt er að setja fremst í
-   vinnubók sem teiknar, þar sem bætt hefur verið við skipunum sem láta rúðunet
-   teiknast undir öðrum teiknuðum hlutum, breyta sjálfgefinni stærð myndar, og
-   laga galla á *savefig*.
+Venjulegasta notkun Matplotlib er að nota undirpakkann *pyplot* og í
+Matplotlib notendahandbókinni er mælt með að flytja hann inn sem *plt*, svo
+það er fyrir vikið alsiða. Teiknaðar myndir birtast sjálfkrafa inni í
+bókinni, neðan við forritsreitinn. Hér er kafli sem hægt er að setja fremst í
+vinnubók sem teiknar, þar sem bætt hefur verið við skipunum sem láta rúðunet
+teiknast undir öðrum teiknuðum hlutum, breyta sjálfgefinni stærð myndar, og
+laga galla á *savefig*.
 
-   .. code:: python
+.. code:: python
 
-      # Frumstilling teikningar
-      import matplotlib.pyplot as plt
-      plt.rc('axes', axisbelow=True)
-      plt.rc('figure', figsize=(8,4)) # (6,4) er sjálfgefið
-      plt.rc('savefig',bbox='tight')  # laga galla á savefig
+   # Frumstilling teikningar
+   import matplotlib.pyplot as plt
+   plt.rc('axes', axisbelow=True)
+   plt.rc('figure', figsize=(8,4)) # (6,4) er sjálfgefið
+   plt.rc('savefig',bbox='tight')  # laga galla á savefig
 
-.. _skatter-plott-og-línurit:
-      
-Punktarit (*scatter-plot*) og línurit
--------------------------------------
-   Ein mikilvægasta notkunin á Matplotlib er teikna myndir af talnalistum, sem
-   geta hvort sem er verið venjulegir Python listar eða NumPy vigrar eins og við
-   kynnumst í :numref:`numpy`. kafla.
+Punktarit og línurit
+--------------------
+Ein mikilvægasta notkunin á Matplotlib er að teikna myndir af talnalistum, sem
+geta hvort sem er verið venjulegir Python listar eða NumPy vigrar eins og við
+kynnumst í :numref:`numpy`. kafla.
 
-   Hér er forrit sem teiknar punktana :math:`(x,y)` þar sem :math:`y = \sqrt x`
-   fyrir :math:`x = 0, 1, 2, 3, 4, 5` og tengir þá með beinum línustrikum.
-   Skipunin ``plt.figure`` býr til nýja mynd og tilgreinir breidd hennar og hæð,
-   scatter-skipunin teiknar punktana sjálfa með flatarmál u.þ.b. 40 ferpunkta
-   (punktur ≈ 1/3 mm) og plot-skipunin teiknar strikin á milli þeirra. Að lokum
-   teiknar grid rúðunet. Í ``skipuninni`` er hægt að tilgreina lit punkta, sbr.
-   fyrra sýnidæmið í kafla :numref:`dæmi um teikningu talnagagna` og þeir geta
-   líka verið hver með sínum lit sbr. dæmið um besta plan í kafla :numref:`gervigögn`.
-   
-   .. code:: python
+Hér er forrit sem teiknar punktana :math:`(x,y)` þar sem :math:`y = \sqrt x`
+fyrir :math:`x = 0, 1, 2, 3, 4, 5` og tengir þá með beinum línustrikum.
+Skipunin ``plt.figure`` býr til nýja mynd og tilgreinir breidd hennar og hæð,
+scatter-skipunin teiknar punktana sjálfa með flatarmál u.þ.b. 40 ferpunkta
+(punktur ≈ 1/3 mm) og plot-skipunin teiknar strikin á milli þeirra. Að lokum
+teiknar grid rúðunet. Í ``skipuninni`` er hægt að tilgreina lit punkta, sbr.
+fyrra sýnidæmið í kafla :numref:`dæmi um teikningu talnagagna` og þeir geta
+líka verið hver með sínum lit sbr. dæmið um besta plan í kafla
+:numref:`gervigögn og aðhvarf`.
 
-      from math import sqrt
-      x = list(range(6))
-      y = [sqrt(xi) for xi in x]
-      plt.figure(figsize=(7,3))
-      plt.scatter(x,y,s=50)
-      plt.plot(x,y)
-      plt.grid(True)
+.. code:: python
 
-   .. figure:: myndir/matplotlib-kynning.png
-      :align: center
-      :figwidth: 11cm
+   from math import sqrt
+   x = list(range(6))
+   y = [sqrt(xi) for xi in x]
+   plt.figure(figsize=(7,3))
+   plt.scatter(x,y,s=50)
+   plt.plot(x,y)
+   plt.grid(True)
 
-   .. attention::
-      Stærð myndarinnar er gefin í tommum og (6,4) er sjálfgefið. Myndin er sköluð
-      niður í ca. 2/3 þegar hún birtist á venjulegum fartölvuskjá, en er (a.m.k.
-      nokkurnvegin) ósköluð ef bókin er prentuð sem pdf.
-      
-   .. admonition:: Æfing: 
-      :class: aefing
+.. figure:: myndir/matplotlib-kynning.png
+   :align: center
+   :figwidth: 11cm
+              
+.. admonition:: Athugasemd: Einingar í *figsize*
+   :class: athugid
 
-      Afritið skipanirnar að ofan inn í vinnubók og keyrið. Prófið að breyta:
+   Stærð myndarinnar er gefin í tommum og (6,4) er sjálfgefið. Myndin er
+   sköluð niður í ca. 2/3 þegar hún birtist á venjulegum fartölvuskjá, en er
+   (a.m.k. nokkurnvegin) ósköluð ef bókin er prentuð sem pdf.
 
-      - fjölda punkta
-      - stærð myndarinnar
-      - stærð punktanna (aftasti stikinn í ``scatter``)
-      - sleppa rúðunetinu
+.. admonition:: Æfing: 
+   :class: aefing
 
-.. _sulurit:
-        
+   Afritið skipanirnar að ofan inn í vinnubók og keyrið. Prófið að breyta:
+
+   - fjölda punkta
+   - stærð myndarinnar
+   - stærð punktanna (aftasti stikinn í ``scatter``)
+   - sleppa rúðunetinu
+
 Súlurit
 -------
-   Hér er búið til súlurit (*histogram*) af normaldreifðum slembigögnum. Stikinn
-   ``bins`` gefur fjölda súlna og ``range`` gefur svæðið á x-ás sem súluritið
-   nær yfir. Kallið ``gauss(mu,sigma)`` skilar slemitölu úr normaldreifingu með
-   meðaltal mu og staðalfrávik sigma (Gauss-dreifing er annað nafn á normaldreifingu)
 
-   .. code:: python
+Hér er búið til súlurit (*histogram*) af normaldreifðum slembigögnum. Stikinn
+``bins`` gefur fjölda súlna og ``range`` gefur svæðið á x-ás sem súluritið nær
+yfir. Góð regla er að láta súlurnar mætast í rúnnuðum (*round*) tölum t.d.
+heilum eða hálfum (hér mætast þær í hálfum tölum). Kallið ``gauss(mu,sigma)``
+skilar slemitölu úr normaldreifingu með meðaltal mu og staðalfrávik sigma
+(Gauss-dreifing er annað nafn á normaldreifingu)
 
-         import matplotlib.pyplot as plt
-         from random import gauss
-         x = [gauss(0,1) for i in range(500)]
-         plt.hist(x, bins=12, range=(-3,3))
-         plt.xlabel('x')
-         plt.ylabel('fjöldi gilda á hverju bili (af 500)')
-         plt.show()
+.. code:: python
 
-   .. figure:: myndir/sulurit.png
-      :align: center
-      :figwidth: 11cm
+   import matplotlib.pyplot as plt
+   from random import gauss
+   x = [gauss(0,1) for i in range(500)]
+   plt.hist(x, bins=12, range=(-3,3))
+   plt.xlabel('x')
+   plt.ylabel('fjöldi gilda á hverju bili (af 500)')
+   plt.show()
 
-   .. admonition:: Æfing: 
-      :class: aefing
+.. figure:: myndir/sulurit.png
+   :align: center
+   :figwidth: 11cm
 
-      Prófið skipanirnar að ofan. Prófið að fækka og fjölga punktum. Prófið líka að
-      nota 6 súlur (það þarf að breyta bæði bins og range).
-   
-   .. attention::
-      Skipunin ``plt.show()`` er valkvæð þegar teiknað er beint í úttaksglugga í
-      vinnubók, en það er hægt að opna sérstakan glugga með myndinni og þá þarf
-      þessa skipun. Notkun hennar hefur þann viðbótarkost að losna við aukaupplýsingar
-      sem sumar teikniskipanir skrifa ef þær eru aftast í vinnubók.
+Skipunin ``hist`` reiknar sjálf hæð hverrar súlu en það er líka hægt að láta
+hæð súlnanna koma úr lista eða vigri með því að nota skipunina ``bar``. Um það
+er sýnt dæmi í næsta kafla.
 
-   Skipunin ``hist`` reiknar sjálf hæð hverrar súlu en það er líka hægt að láta
-   hæð súlnanna koma úr lista eða vigri með því að nota skipunina ``bar``. Um það
-   er sýnt dæmi í næsta kafla.
+.. admonition:: Æfing: 
+   :class: aefing
 
-.. _teikningar-af-gögnum-í-skrám:
-                    
+   Prófið skipanirnar að ofan. Prófið að fækka og fjölga punktum. Prófið líka að
+   nota 6 súlur (það þarf að breyta bæði bins og range).
+
+.. admonition:: Athugasemd: Kyrrstæðar og lifandi myndir
+   :class: athugid
+
+   Myndirnar í þessum :numref:`teikning með matplotlib`. kafla eru kyrrstæðar
+   (*static*) en Matplotlib getur líka búið til bæði hreyfimyndir (*animated*)
+   og lifandi (*interactive*) myndir með stýrihlutum (`widgets
+   <https://en.wikipedia.org/wiki/Graphical_widget>`_), t.d. hnöppum og sleðum,
+   hvort sem er í úttaksglugga í vinnubók eða í sérstökum sjálfstæðum
+   myndaglugga (amk. með JupyterLab). Þá má láta myndina hreyfast eins og í
+   teiknimynd eða breytast með músastýringu. Lítið dæmi um lifandi mynd með
+   stýrisleða er í kafla :numref:`lifandi matplotlib mynd` og dæmi um
+   hreyfimynd er í kafla :numref:`rétthyrningur sem snýst`.
+
+   Skipunin ``plt.show()`` er valkvæð þegar teiknað er beint í vinnubók, en hana
+   þarf ef sérstakur gluggi er opnaður. Notkun hennar hefur þann viðbótarkost að
+   losna við aukaupplýsingar sem sumar teikniskipanir skrifa ef þær eru aftast í
+   vinnubók.
+
 Teikningar af gögnum í skrám
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. _innlestur-talnagagna:
 
 Innlestur talnagagna í dálkum
 -----------------------------
@@ -165,8 +179,6 @@ Algengt er að maður vilji teikna upplýsingar sem eru geymdar í skrám, og of
 
 Ef skráin er á vefnum þarf í fyrsta lagi að nota ``urlopen`` í stað ``open`` og svo þarf líka að nota ``decode()`` á línuna, eins og gert var í kafla :numref:`innlestur textaskrár af vefnum`. Annar möguleiki er svo að nota NumPy sem er á dagskrá í :numref:`%s. kafla<NumPy pakkinn>`.
 
-.. _dæmi-um-teikningu-talnagagna:
-   
 Dæmi um teikningu talnagagna
 ----------------------------
 Hér eru tvö sýnidæmi um teikningu gagna sem eru fengin úr gagnaskrám. Það fyrra teiknar punktarit (*scatter plot*) og það síðara súlurit.
@@ -270,28 +282,28 @@ hægt er að setja texta inn á myndir með *text*-skipuninni.
    :align: center
            
    * - ``figure``
-     - Býr til mynd (kafli :numref:`skatter-plott-og-línurit` og :numref:`fínna-graf`)
+     - Býr til mynd (kafli :numref:`punktarit og línurit` og :numref:`fínna graf`)
    * - ``scatter``
-     - Teiknar punkta í tilgreindum x- og y-hnitum (:numref:`skatter-plott-og-línurit`)
+     - Teiknar punkta í tilgreindum x- og y-hnitum (:numref:`punktarit og línurit`)
        
        ..
           og :numref:`teikning-punktasafns`)
           
    * - ``plot``
      - Teiknar línustrik sem tengja saman punkta
-       :numref:`dæmi-um-plot` og :numref:`einfalt-graf`)
+       :numref:`dæmi um plot` og :numref:`einfalt graf`)
    * - ``hist``
      - Teiknar súlurit yfir tíðni – hæð súlna fæst með talningu
-       (:numref:`sulurit` og :numref:`dæmi-um-hist`)
+       (:numref:`súlurit` og :numref:`dæmi um hist`)
    * - ``bar``
-     - Teiknar súlurit með gefinni súluhæð (:numref:`dæmi-um-teikningu-talnagagna`)
+     - Teiknar súlurit með gefinni súluhæð (:numref:`dæmi um teikningu talnagagna`)
    * - ``savefig``
      - Vistar teikningu í png-skrá (``savefig("skrá.png")``)
    * - ``text``
      - Skrifar texta inn á mynd (sjá töflu ref:`%s<text-fallið>`)
-       (:numref:`innlestur-talnagagna`)
+       (:numref:`innlestur talnagagna í dálkum`)
    * - ``show``
-     - Birtir mynd (þarf ekki ef teiknað er í glugga í vinnubók (:numref:`sulurit`)
+     - Birtir mynd (þarf ekki ef teiknað er í glugga í vinnubók (:numref:`súlurit`)
 
 .. csv-table:: Texti settur inn á mynd
    :widths: auto
@@ -300,8 +312,8 @@ hægt er að setja texta inn á myndir með *text*-skipuninni.
    :align: center
 
     ``text(x,y,"texti")``     ; skrifar texta aftan við punkt (x,y)
-    ``text(..., fontsize=n)`` ; – með n punkta letri (:numref:`innlestur-talnagagna`)
-    ``text(...,va="top")``    ; – neðan við punkt (*vertical alignment*) (:numref:`innlestur-talnagagna`)
+    ``text(..., fontsize=n)`` ; – með n punkta letri (:numref:`innlestur talnagagna í dálkum`)
+    ``text(...,va="top")``    ; – neðan við punkt (*vertical alignment*) (:numref:`innlestur talnagagna í dálkum`)
     ``text(...,va="bottom")`` ; – ofan við punkt (eða center/baseline)
     ``text(...,ha="left")``   ; – aftan við punkt (*horizontal algn*)
     ``text(...,ha="center")`` ; – með punkt í miðjum texta (eða right)
@@ -322,45 +334,45 @@ helstu stýristika og stýriskipanir.
        (black), c (cyan), m (magenta) eða nota streng með `litanafni;
        <https://en.wikipedia.org/wiki/Web_colors#Extended_colors>`_ |br|
        ``color`` má skammstafa ``c`` í plot en ekki í hist og bar
-       (:numref:`dæmi-um-teikningu-talnagagna` og :numref:`dæmi-um-plot`).
+       (:numref:`dæmi um teikningu talnagagna` og :numref:`dæmi um plot`).
 
    * - ``alpha``
      - gagnsæi, 0 alveg gagnsætt, 1 alveg ógagnsætt (sjálfgefið)
 
    * - ``linewidth`` eða ``lw``
      - Breidd línu í línuriti eða súluramma í súluriti. Eining punktar |br|
-       (~1/3 mm), sjálfgefið lw=1.5 (:numref:`dæmi-um-plot`)
+       (~1/3 mm), sjálfgefið lw=1.5 (:numref:`dæmi um plot`)
 
    * - ``linestyle`` eða ``ls``
      - Línutegund, getur t.d. verið ``''`` (engin lína) ``':'`` |br|
-       (punktalína), ``'-'`` (heil lína, sjálfgefið) (:numref:`dæmi-um-plot`)
+       (punktalína), ``'-'`` (heil lína, sjálfgefið) (:numref:`dæmi um plot`)
 
    * - ``marker``
      - Merki fyrir punkta í plot. Algengur marker er ``'o'`` (en líka má nota |br|
        ``'.' '+' 'x'`` og fleiri); plot-skipun með ``marker = 'o', ls=''`` |br|
-       gefur svipaða niðurstöðu og ``scatter`` með sjálfgefnum stikum (:numref:`dæmi-um-plot`)
+       gefur svipaða niðurstöðu og ``scatter`` með sjálfgefnum stikum (:numref:`dæmi um plot`)
 
    * - ``markersize`` eða ``ms``
      - Stærð *markers* í ``plot``, sjálfgefið 6 punktar (~2 mm) (k.
-       :numref:`dæmi-um-plot`)
+       :numref:`dæmi um plot`)
 
    * - ``edgecolor`` eða ``ec``
      - Litur á rönd súlna eða merkja. Ein tegund súlurita notar |br|
-       ``color='w', ec='k'`` (:numref:`dæmi-um-hist`)
+       ``color='w', ec='k'`` (:numref:`dæmi um hist`)
 
    * - ``label``
      - notað með ``legend``-skipun,
-       (sjá töflu :numref:`%s<plothjálparskip>`) (:numref:`dæmi-um-legend`)
+       (sjá töflu :numref:`%s<plothjálparskip>`) (:numref:`dæmi um legend`)
 
    * - ``bins``
-     - fjöldi súlna (:numref:`sulurit` og :numref:`dæmi-um-hist`)
+     - fjöldi súlna (:numref:`súlurit` og :numref:`dæmi um hist`)
 
    * - ``range``
      - ytri mörk súlurits (gott að velja bins í samræmi við range) (k.
-       :numref:`sulurit` og :numref:`dæmi-um-hist`)
+       :numref:`súlurit` og :numref:`dæmi um hist`)
 
    * - ``rwidth``
-     - "relative width" (sjálfgefið 1.0) (:numref:`dæmi-um-hist`)
+     - "relative width" (sjálfgefið 1.0) (:numref:`dæmi um hist`)
 
 .. list-table:: Helstu stikar í **scatter**
    :widths: auto
@@ -372,7 +384,7 @@ helstu stýristika og stýriskipanir.
 
    * - ``s``
      - stærð punkta, flatarmál í *ferpunktum* (punktur ≈ 1/3 mm). Má vera vigur og |br|
-       þá fær hver punktur sína stærð (:numref:`dæmi-um-plot`)
+       þá fær hver punktur sína stærð (:numref:`dæmi um plot`)
 
    * - ``color``
      - litur (allir punktar í sama lit), sjá *color* í töflunni að ofan
@@ -381,7 +393,7 @@ helstu stýristika og stýriskipanir.
    * - ``c``
      - vigur af litum (hver punktur í sínum lit). Má vera vigur af
        tölum og þá litast |br| punktarnir með **litaskala** (*color map*;
-       sjá athugasemd hér fyrir neðan) (:numref:`gervigögn`)
+       sjá athugasemd hér fyrir neðan) (:numref:`gervigögn og aðhvarf`)
 
    * - ``alpha``
      - gagnsæi, sjá töfluna að ofan
@@ -401,8 +413,8 @@ helstu stýristika og stýriskipanir.
    
    Þessar fyrirlestrarnótur skauta framhjá umfjöllun um **litaskala**, en um þá
    er fjallað allítarlega í `Viðauka A4
-   <https://cs.hi.is/strei/vi%C3%B0auki-A/#a4-litaskalar>`_ í *Fyrirlestrarnótum
-   í stærðfræði og reiknifræði*. Um litaskala er líka fjallað í 4. kafla í
+   <https://cs.hi.is/strei/vi%C3%B0auki-A/#a4-litaskalar>`_ í *Valin efni í
+  stærðfræði og reiknifræði*. Um litaskala er líka fjallað í 4. kafla í
    `Python Data Science Handbook
    <https://jakevdp.github.io/PythonDataScienceHandbook>`_.
        
@@ -412,30 +424,30 @@ helstu stýristika og stýriskipanir.
    :align: center
 
    * - ``plt.xlim(min,max)``
-     - stillir neðri og efri mörk x-áss (kafli :numref:`þrjú-dæmi`)
+     - stillir neðri og efri mörk x-áss (kafli :numref:`þrjú dæmi um teikningar`)
 
    * - ``plt.ylim(min,max)``
-     - Stillir neðri og efri mörk y-áss (:numref:`þrjú-dæmi`)
+     - Stillir neðri og efri mörk y-áss (:numref:`þrjú dæmi um teikningar`)
 
    * - ``plt.clim(cmin, cmax)``
      - Stillir neðri og efri mörk \"litaáss\" innan **litaskala** sem er |br|
-       í notkun – sjá athugasemd hér næst á undan (:numref:`gervigögn`)
+       í notkun – sjá athugasemd hér næst á undan (:numref:`gervigögn og aðhvarf`)
 
    * - ``plt.title(strengur)``
-     - setur fyrirsögn á teikningu (:numref:`dæmi-um-teikningu-talnagagna`)
+     - setur fyrirsögn á teikningu (:numref:`dæmi um teikningu talnagagna`)
 
    * - ``plt.xlabel(strengur)``
-     - setur textaskýringu við x-ás (:numref:`sulurit`, :numref:`dæmi-um-plot`
-       og :numref:`dæmi-um-hist`)
+     - setur textaskýringu við x-ás (:numref:`súlurit`, :numref:`dæmi um plot`
+       og :numref:`dæmi um hist`)
 
    * - ``plt.ylabel(strengur)``
-     - setur textaskýringu við y-ás (:numref:`sulurit`, :numref:`dæmi-um-plot`
-       og :numref:`dæmi-um-hist`)
+     - setur textaskýringu við y-ás (:numref:`súlurit`, :numref:`dæmi um plot`
+       og :numref:`dæmi um hist`)
 
    * - ``plt.xticks(listi)``
      - setur merkingar á tilgreindar staðsetningar á x-ás |br|
        (``listi`` gæti t.d. verið ``range(0,6)``)
-       (:numref:`dæmi-um-teikningu-talnagagna`)
+       (:numref:`dæmi um teikningu talnagagna`)
        
    * - ``plt.yticks(listi)``
      - setur merkingar á tilgreindar staðsetningar á y-ás
@@ -454,34 +466,30 @@ helstu stýristika og stýriskipanir.
 
    * - ``plt.grid(True)``
      - teiknar rúðunet (nota má ``grid(True, axis='y')`` fyrir |br|
-       bara láréttar línur) (:numref:`skatter-plott-og-línurit`,
-       :numref:`dæmi-um-legend` og :numref:`dæmi-um-hist`)
+       bara láréttar línur) (:numref:`punktarit og línurit`,
+       :numref:`dæmi um legend` og :numref:`dæmi um hist`)
 
    * - ``plt.box(False)``
-     - fjarlægir ramma utanum teikningu (:numref:`fínna-graf`)
+     - fjarlægir ramma utanum teikningu (:numref:`fínna graf`)
 
    * - ``plt.axvline(x)``
-     - bætir við lóðréttri línu (sjálfgefið er x = 0) (:numref:`fínna-graf` og
-       :numref:`graf-vísisfallsins`)
+     - bætir við lóðréttri línu (sjálfgefið er x = 0) (:numref:`fínna graf` og
+       :numref:`graf vísisfallsins exp(x)`)
 
    * - ``plt.axhline(y)``
-     - bætir við láréttri línu (sjálfgefið er y = 0) (:numref:`fínna-graf` og
-       :numref:`graf-vísisfallsins`)
+     - bætir við láréttri línu (sjálfgefið er y = 0) (:numref:`fínna graf` og
+       :numref:`graf vísisfallsins exp(x)`)
 
    * - ``plt.legend()``
      - bætir við kassa með skýringum á línum/skatter-punktum |br|
        / súlum sem búnar voru til með ``label``; sjá töflu
-       :numref:`%s<plothiststýring>` (:numref:`dæmi-um-legend`)
+       :numref:`%s<plothiststýring>` (:numref:`dæmi um legend`)
 
 Loks er hér `hlekkur <https://matplotlib.org/api/pyplot_summary.html>`_  á yfirlit yfir allar Matplotlib-skipanir.
-
-.. _þrjú-dæmi:
 
 Þrjú dæmi um teikningar
 ~~~~~~~~~~~~~~~~~~~~~~~
 Til frekari glöggvunar eru hér þrjú viðbótardæmi og nokkrar æfingar.
-
-.. _dæmi-um-plot:
 
 Dæmi um plot
 ------------
@@ -511,8 +519,6 @@ Dæmi um plot
       - marker (prófið ``'+'`` og ``'x'``)
       - ms (*marker size*)
 
-.. _dæmi-um-legend:
-        
 Dæmi um legend
 --------------
    .. code:: python
@@ -539,8 +545,6 @@ Dæmi um legend
       label. Prófið líka að fjölga punktunum (það þarf að breyta bæði 20 og 21 í
       stærri tölur).
       
-.. _dæmi-um-hist:
-      
 Dæmi um hist
 ------------
    .. code:: python
@@ -562,9 +566,6 @@ Dæmi um hist
 
       Prófið skipanirnar og einhverjar breytingar á þeim. Stikunum er lýst í töflu
       :numref:`%s <plothiststýring>`
-
-                 
-.. _groffalla:                 
                  
 Teikning af gröfum falla
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -594,8 +595,6 @@ Með ``linspace(a,b)`` fæst listi með 200 jafnt dreifðum þétt liggjandi
 f(x)` í öllum þessum :math:`x`-um og nálgum graf fallsins með því að teikna
 línustrik sem tengja alla punktana.
 
-.. _einfalt-graf:
-
 Einfalt graf
 ------------
 Við getum teiknað graf sínus-fallsins á bilinu :math:`[0, 4\pi]` með:
@@ -613,11 +612,9 @@ Við getum teiknað graf sínus-fallsins á bilinu :math:`[0, 4\pi]` með:
          :align: center
          :figwidth: 9cm
 
-.. _fínna-graf:                    
-                    
 Fínna graf
 ----------
-Hægt er að bæta ýmsu við forritsbúinn í kafla :numref:`einfalt-graf`. Byrjum á að afrita hann og endurbætum hann svo:
+Hægt er að bæta ýmsu við forritsbúinn í kafla :numref:`einfalt graf`. Byrjum á að afrita hann og endurbætum hann svo:
 
    -  teygjum á grafinu (breikkum myndina) með skipuninni
       ``plt.figure(figsize=(12,4))`` (á undan plot).
@@ -648,8 +645,6 @@ Hægt er að bæta ýmsu við forritsbúinn í kafla :numref:`einfalt-graf`. Byr
          plt.xlim([-0.2, 4*pi])
          plt.tick_params(length=0);
 
-.. _kósínus-bætt-við:
-         
 Kósínus bætt við
 ----------------
 Teiknum í framhaldi :math:`y = \cos x` inn á sömu mynd.
@@ -660,13 +655,11 @@ Teiknum í framhaldi :math:`y = \cos x` inn á sömu mynd.
          yc = [cos(xi) for xi in x]
          plt.plot(x, yc)
 
-   Úttak (úr :numref:`fínna-graf` og :numref:`kósínus-bætt-við`):
+   Úttak (úr :numref:`fínna graf` og :numref:`kósínus bætt við`):
       .. figure:: myndir/output_6_0.png
          :align: center
          :figwidth: 16cm
 
-.. _graf-vísisfallsins:
-                    
 Graf vísisfallsins exp(x)
 -------------------------
 Teiknum nú nýja mynd með :math:`y = e^x` á bilinu :math:`[-5, 2]`.

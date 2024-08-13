@@ -114,6 +114,8 @@ til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.
 Við getum að sjálfsögðu matað sample með nafni á breytu sem tilheyrir
 gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
 Hvenær fæddist Napóleon? Gerum við það með:
+gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
+Hvenær fæddist Napóleon? Gerum við það með:
 
 ::
 
@@ -149,6 +151,8 @@ meðaltalið byggir á nægjanlega mörgum mælingum, óháð því hver upphafl
 dreifing slembistærðarinnar var. Gott dæmi um hana má sjá með því að
 skoða breytuna ``ferdatimi_skoli`` sem lýsir því hve lengi nemendur eru á
 leið í skóla. Byrjum á því að skoða stuðlarit af
+skoða breytuna ``ferdatimi_skoli`` sem lýsir því hve lengi nemendur eru á
+leið í skóla. Byrjum á því að skoða stuðlarit af
 breytunni.
 
 ::
@@ -159,7 +163,9 @@ breytunni.
    :align: center
 
 Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
+Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
+útlaga til hægri að auki. Hins vegar er *meðaltal* ferdatimi_skoli
 útlaga til hægri að auki. Hins vegar er *meðaltal* ferdatimi_skoli
 normaldreift, sé tekið meðaltal af nægjanlega mörgum mælingum. Með
 skipuninni ``replicate()`` getum við framkvæmt 1000 "gervitilraunir"
@@ -221,6 +227,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
 
 Gerviúrtökin sem fengust með skipuninni ``replicate()`` má einnig nota
 til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
+til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 smíðað þannig að það innihaldi sanna gildið á stikanum í 95% tilvika ef
 tilraunin er endurtekin nægjanlega oft. Við getum notað metnu meðaltölin
 úr gervitilraununum 1000 til að áætla hvaða útkomur væru mögulegar ef að
@@ -232,7 +239,9 @@ reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.
    quantile(medaltol, c(0.025, 0.975))
    ##     2.5%    97.5%
    ##    16.81950 22.01025 
+   ##    16.81950 22.01025 
 
+95% öryggisbilið er því :math:`[16.81950, 22.01025 ]`.
 95% öryggisbilið er því :math:`[16.81950, 22.01025 ]`.
 
 

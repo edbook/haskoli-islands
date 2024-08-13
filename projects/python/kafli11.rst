@@ -6,7 +6,7 @@ Reiknað með fylkjum
 **Línuleg algebra** (*linear algebra*) er undirgrein stærðfræði sem fjallar meðal annars um vigra og fylki, vigurrúm (*vector spaces*), línuleg jöfnuhneppi (*systems of linear equations*) og línuleg föll. Hægt er að beita línulegri algebru bæði fræðilega og tölulega, og þegar það er gert tölulega koma fylkjareikningar oftar en ekki við sögu, og þá er NumPy ómissandi. Oft tengjast reikningarnir því að vigrar og fylki eru notuð til að vinna með talnagögn (*data*).
 
 Í nýlegri kennslubók um línulega algebru eru talin upp fjölbreytt
-notkunarsvið hennar, svo sem leikjafræði, skógrækt, tölvugrafík, sneiðmyndatöku,
+notkunarsvið hennar, svo sem leikjafræði, skógrækt, tölvugrafík, sneiðmyndataka,
 dulmálsfræði, erfðafræði, stofnstærðarspár, líkön af heyrn, netleit og andlitskennsl.
 
 Í :numref:`%s. kafla<Dæmi um hagnýtingu fylkjareikninga>` verður fjallað um nokkur notkunarsvið fylkjareikninga, en í þessum kafla höldum við okkur að mestu við útskýringar á NumPy vigur- og fylkjaaðgerðum, og hvernig hægt er að leysa jöfnuhneppi með NumPy.
@@ -15,7 +15,10 @@ dulmálsfræði, erfðafræði, stofnstærðarspár, líkön af heyrn, netleit o
 
 Grunnreikniaðgerðir
 -------------------
-Í grein :numref:`reiknað-með-vigrum` var rætt hverning hægt er að leggja saman tvo vigra, draga annan frá hinum og margfalda vigur með tölu. Þessum aðgerðum má líka beita á fylki, og þá verka þær á tilsvarandi stök, eins og fyrir vigrana. Þannig gildir:
+Í grein :numref:`reiknað með vigrum í stærðfræði` var rætt hverning hægt er að
+leggja saman tvo vigra, draga annan frá hinum og margfalda vigur með tölu.
+Þessum aðgerðum má líka beita á fylki, og þá verka þær á tilsvarandi stök, eins
+og fyrir vigrana. Þannig gildir:
 
 .. math::
    \begin{pmatrix}1 & 2\\3 & 4\end{pmatrix} +
@@ -214,7 +217,7 @@ er :math:`A \cdot A = AA`, :math:`A^3 = AAA` o.s.frv. Í kafla
       A = [[2 2]     og   B = [[4 4]
            [2 2]]              [4 4]]
 
-      þá skilar :code:`np.array_equal(A + A, B)` gildinu ``True``.        
+      þá skilar np.array_equal(A + A, B) gildinu True.        
 
 Núllfylki og einingafylki
 -------------------------
@@ -250,7 +253,7 @@ A` og :math:`I\cdot A = A\cdot I = A` fyrir öll A
 .. admonition:: Æfing: Hlutleysur
    :class: aefing
            
-   Búið til fylkið: :math:`A = \begin{pmatrix}1.2 & 3.4 \\ 5.6 & 7.8
+   Notið NumPy til að búa til fylkið: :math:`A = \begin{pmatrix}1.2 & 3.4 \\ 5.6 & 7.8
    \end{pmatrix}` |br|
    og auk þess :math:`2 \times 2` núllfylki og einingarfylki. Notið fallið
    ``np.array_equal`` til að sannreyna það sem sagt er um hlutleysur að ofan.
@@ -448,7 +451,7 @@ tilfellinu :math:`n = 5` hér:
 
       .. math:: - a\sum_{j=1}^{i-1}x_j + x_i = 1\quad(i=1,...,n)
       
-      Prófið með ``leysa(2,4)`` sem ætti að gefa :math:`(1,3,9,27)`.
+      Prófið með ``lausn(2,4)`` sem ætti að gefa :math:`(1,3,9,27)`.
 
 Andhverfur og ákveður
 ---------------------

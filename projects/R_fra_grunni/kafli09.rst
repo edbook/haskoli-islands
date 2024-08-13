@@ -63,6 +63,8 @@ anova()
 
     **Forkröfur prófs:** Dreifni sú sama
 
+    **Forkröfur prófs:** Dreifni sú sama
+
 
 --------------
 
@@ -102,6 +104,7 @@ Eins og sjá má myndinni virðist dreifni í hópunum vera nokkuð jöfn.
    ## Bartlett's K-squared = 0.06666, df = 1, p-value = 0.7963
 
 Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
+Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
 núlltilgátunni um að dreifnin sé sú sama. Við verðum þó að gæta okkur á
 að hátt p-gildi þýðir ekki að við höfum sýnt fram á að dreifnin sé sú
 sama til þess þyrfti að kanna styrk prófsins (við samþykkjum jú ekki
@@ -133,10 +136,15 @@ aðferðina.
 
 Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
 og 102).
+Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
+og 102).
 
 Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
 finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
+Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
+finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
 fyrir tilgátuprófið er svo lengst til hægri
+(:math:`0.1043`). Eins og sjá má er ýmislegt annað að finna
 (:math:`0.1043`). Eins og sjá má er ýmislegt annað að finna
 í ``aov()`` úttakinu:
 
@@ -192,6 +200,9 @@ hana með fervikagreiningarhlut.
    ## $sex
    ##                     diff         lwr        upr     p adj
    ## m-f            -1.395501   -3.084208   0.2932054   0.104272
+   ## $sex
+   ##                     diff         lwr        upr     p adj
+   ## m-f            -1.395501   -3.084208   0.2932054   0.104272
 
 Það má líka skoð niðurstöðuna myndrænt með:
 
@@ -242,7 +253,14 @@ væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
 verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu 
 tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja 
 þátta fervikagreiningu til að kanna tengslin.
+Skoðum aftur dæmið hér að ofan þar sem kannað var hvort lengd pokarotta 
+væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
+verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu 
+tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja 
+þátta fervikagreiningu til að kanna tengslin.
 
+Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna 
+þurfum við að kanna hvort *víxlhrif* (e. interactions) séu til staðar á 
 Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna 
 þurfum við að kanna hvort *víxlhrif* (e. interactions) séu til staðar á 
 milli breytanna tveggja. Gott er að byrja á því að skoða gögnin myndrænt
@@ -261,6 +279,10 @@ mælingar.
 .. figure:: myndir/popmynd.svg
    :align: center
 
+Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns 
+pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.). 
+Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur, 
+óháð því hvaðan dýrin koma.
 Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns 
 pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.). 
 Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur, 
@@ -289,6 +311,8 @@ prófum hina þættina tvo.
 Við notum svo ``anova()`` aðferðina til að fá fervikasummurnar, p-gildi
 og prófstærð.
 
+Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
+því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
 Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
 því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
 fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.
@@ -327,6 +351,9 @@ með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
+Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki 
+sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið 
+er að leiðrétta fyrir breytunni ``pop``.
 Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki 
 sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið 
 er að leiðrétta fyrir breytunni ``pop``.
