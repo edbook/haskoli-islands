@@ -421,7 +421,7 @@ epub_exclude_files = ["search.html"]
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {"http://docs.python.org/": None}
+intersphinx_mapping = {'python': ("http://docs.python.org/", None)}
 
 
 from docutils import nodes
@@ -493,19 +493,29 @@ def get_authors(config: EdbookConfig):
     # auth_title is the line with authors used in index.rst
     if auth[0]["name"] == None:  # No listed authors
         auth_title = "--"
-    elif len(auth) == 1:
+    elif len(auth) == 1 and auth[0]["email"] != None:
         auth_title = (
             "Höfundur efnis: " + auth[0]["name"] + " <" + auth[0]["email"] + ">."
+        )
+    elif len(auth) == 1:
+        auth_title = (
+            "Höfundur efnis: " + auth[0]["name"] + "."
         )
     else:
         auth_title = "Höfundar efnis: "
         for a in auth:
             if a == auth[0]:  # First author
-                auth_title += a["name"] + " <" + a["email"] + ">"
+                auth_title += a["name"]
+                if a["email"] != None:
+                    auth_title += " <" + a["email"] + ">"
             elif a == auth[-1]:  # Last author
-                auth_title += " og " + a["name"] + " <" + a["email"] + ">."
+                auth_title += " og " + a["name"]
+                if a["email"] != None:
+                    auth_title += " <" + a["email"] + ">."
             else:  # All other
-                auth_title += ", " + a["name"] + " <" + a["email"] + ">"
+                auth_title += ", " + a["name"]
+                if a["email"] != None:
+                    auth_title += " <" + a["email"] + ">"
     copyright = f"{year}, {config['description']}"
     year = str(year)
     version = year  # The short X.Y version.

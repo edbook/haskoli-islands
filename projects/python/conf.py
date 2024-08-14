@@ -37,7 +37,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
-    "sphinx.ext.autosectionlabel",
+    'sphinx.ext.autosectionlabel',
     # Katex is a substitute for mathjax, renders math much faster
     # Note: katex extension must come before sagecell to work properly
     #    'katex.katex',
@@ -45,10 +45,10 @@ extensions = [
     # see https://github.com/nyergler/hieroglyph
     #'hieroglyph',
     # Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "sphinxcontrib.geogebra",
+    "ggbextension.ggb",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "sphinxcontrib.toggleblock",
+    "toggleblock.toggleBlock",
     "sphinx_togglebutton",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
@@ -74,7 +74,7 @@ extensions = [
     # 'Sphinx_ext.button'
 ]
 html_secnumber_suffix = "\u00a0\u00a0"
-suppress_warnings = ["autosectionlabel.*"]
+suppress_warnings=['autosectionlabel.*']
 # For self-numbering of figures/tables, etc.
 numfig = True
 numfig_format = {}
@@ -490,7 +490,6 @@ from docutils.nodes import Element
 # Hulda bætti mér við. Opna linka í öðrum gluggan.
 from sphinx.writers.html import HTMLTranslator
 
-
 class PatchedHTMLTranslator(HTMLTranslator):
     def visit_reference(self, node: Element) -> None:
         atts = {"class": "reference"}
@@ -520,6 +519,5 @@ class PatchedHTMLTranslator(HTMLTranslator):
             atts["target"] = node["target"]
         self.body.append(self.starttag(node, "a", "", **atts))
 
-
 def setup(app):
-    app.set_translator("html", PatchedHTMLTranslator)
+    app.set_translator('html', PatchedHTMLTranslator)

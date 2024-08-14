@@ -64,6 +64,10 @@ Námskeið við HÍ
   :link: stae401g/index.html
 
 .. button::
+  :text: STÆ107G: Línuleg algebra
+  :link: stae107g/index.html
+
+.. button::
   :text: STÆ405G: Töluleg greining
   :link: stae405g/index.html
 
@@ -105,6 +109,7 @@ Námskeið við HÍ
 Eftirfarandi einstaklingar hafa komið að verkefninu
 með einum eða öðrum hætti og fá kærar þakkir fyrir:
 
+- Agla Þórarinsdóttir
 - Alexander Berg Garðarsson
 - Arnór Pétur Marteinsson
 - Áshildur Jónsdóttir
@@ -114,7 +119,9 @@ með einum eða öðrum hætti og fá kærar þakkir fyrir:
 - Hulda Hvönn Kristinsdóttir
 - Júlía Þóra Oddsdóttir
 - Kristján Jónasson
+- Matthías Andri Hrafnkelsson
 - Rakel María Brynjólfsdóttir
+- Sigurbjörg Rannveig Stefánsdóttir
 - Símon Böðvarsson
 - Sólrún Halla Einarsdóttir
 - Tryggvi Kalman Jónsson

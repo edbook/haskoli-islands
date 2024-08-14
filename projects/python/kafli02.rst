@@ -56,7 +56,7 @@ Eftirfarandi Python forrit finnur og prentar út Collatz-runur sem byrja á 2, 3
 
    # COLLATZ ÆFING
    def næsta(x):
-       '''skilar næstu tölu á eftir x í Collatz-runu'''
+       # skilar næstu tölu á eftir x í Collatz-runu
        if x % 2 == 0:
            f = x//2
        else:
@@ -64,7 +64,7 @@ Eftirfarandi Python forrit finnur og prentar út Collatz-runur sem byrja á 2, 3
        return f
 
    def collatz_runa(n):
-       '''finnur og skrifar út Collatz-runu sem byrjar á n'''
+       # finnur og skrifar út Collatz-runu sem byrjar á n
        print('runa: ', end='')
        while n > 1:
            print(n, end=', ')
@@ -83,8 +83,8 @@ Python atriði sem koma fyrir í forritinu Collatz
 - Ný föll má skilgreina með því að byrja á **def** og nöfn þeirra mega hafa
   íslenska stafi (og líka gríska). Á eftir *def*-línunni er hefð fyrir að setja
   annaðhvort **athugasemd** (*comment*) sem byrjar á :code:`#` eða
-  **skjölunarstreng** (*doc-string*) innan þrefaldra gæsalappa,
-  sem lýsir því hvað fallið gerir. Nánar tiltekið er ritað:
+  **skjölunarstreng** (*doc-string*) innan þrefaldra gæsalappa, sem lýsir því
+  hvað fallið gerir. Nánar tiltekið er ritað:
 
     .. code:: python3
 
