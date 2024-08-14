@@ -138,16 +138,21 @@ Frágangur skiladæma
 
 -Douglas Adams, The Salmon of Doubt
 
--  Skrifið upp **fyrirmælin** og lausnina snyrtilega. Gott er að skrifa fyrirmælin
-   með penna og lausnina með blýanti.
+-  Það er eðlilegt að gera uppkast meðan þið vinnið að dæmunum en svo þarf að hreinrita lausnirnar.
 
--  Heftið blöðin saman með einu hefti í efra vinstra hornið. Ekki skila í plastvösum.
+-  Skrifið upp **fyrirmælin** og lausnina snyrtilega. Ef þið skrifið á pappír er gott að skrifa fyrirmælin
+   með penna og lausnina með blýanti. Ef þið skrifið á stafrænt spjald er gott að skrifa fyrirmælin með öðrum lit.
+   ef þið notið LaTeX er gott að nota annað eða stærra letur fyrir fyrirmælin.
+
+-  Nýtið ykkur smáforrit á borð við Adobe Scan til að skanna inn lausnir sem skrifaðar eru á pappír.
+
+-  PDF skjalið sem þið skilið þarf að vera læsilegt fyrir kennarana sem sjá um yfirferð.
 
 -  Vísið í setningar (reglur) sem þið notið.
 
 -  Notið ekki rökfræðitákn eins og :math:`\Leftarrow`,
    :math:`\Rightarrow`, :math:`\Leftrightarrow`, :math:`\wedge`,
-   :math:`\vee`.
+   :math:`\vee` heldur skrifið með orðum (t.d. þá fæst / af því leiðir / sem gefur...)
 
 -  Gætið þess að textinn sé samfelldur og læsilegur (lesið hann sjálf yfir).
 
