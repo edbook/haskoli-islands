@@ -17,10 +17,10 @@
    kafli07
    kafli08
    kafli09
-   stal
-   gler
-   fjollidur
-   lim 
+   kafli10 
+   kafli11
+   kafli12
+   kafli13
    heimildir
 
 * :ref:`genindex`
