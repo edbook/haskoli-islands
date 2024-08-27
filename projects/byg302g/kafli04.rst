@@ -3,9 +3,9 @@ Kafli - Varmi og einangrun
 
 Varmaflutningur getur verið eftir þrem leiðum;
 
-* Geislun
-* Streymi
-* Leiðni
+* Geislun (e. radiation)
+* Streymi (e. convection)
+* Leiðni (e. conduction)
 
 Á mynd 4.1 er vatnið táknmynd fyrir varma. Við leiðni (efst) flyst varminn frá sameind til sameindar við árekstur sameindanna. Efnið sjálft (fólkið á myndinni) flyst ekki úr stað. 
 Í streymi (í miðjunni) flyst efnið (fólkið á myndinni) og tekur varmann (vatnið í fötunum) með sér. Varmi sem flyst með geislun (neðst) þarf ekki að flytjast um eða með efni. Geislun milli flata er háð lit og hitamun flatanna.
@@ -14,6 +14,25 @@ Varmaflutningur getur verið eftir þrem leiðum;
   :align: center
   :width: 100%
 Mynd 4.1. Mynd fengin úr :cite:`1978:Halldorsson`
+
+.. youtube:: Eizsm5V8c_c
+    :width: 100%
+    :height: 400
+
+.. admonition:: Hugtök í myndbandi
+    :class: tip
+
+      **conduction** : leiðni
+
+      **thermal conductivity** : varmaleiðni
+
+      **convection** : streymi
+
+      **convection current** : óþvingað streymi
+
+      **radiation** : geislun
+
+
 
 Varmaflutningsþéttleiki, q er ákvarðaður fyrir hverja flutningsleið (eða sambland af
 leiðum). Fyrir þekktan varmaflutningsþéttleika má auðveldlega reikna orkuna Q yfir
@@ -25,8 +44,6 @@ leiðum). Fyrir þekktan varmaflutningsþéttleika má auðveldlega reikna orkun
       .. math:: 
         Q = \Phi \cdot \Delta t = q\cdot A \cdot \Delta t
           
-
-
 þar sem 
 
 .. list-table:: 
@@ -195,7 +212,7 @@ orsakir;
   * - :math:`t`
     - tími
     - :math:`s`   
-    
+
 Leiðni
 ~~~~~~
 Efnishiti er til marks um óreglulega hreyfingu efniseinda, orkuflutningur á sér stað þegar
