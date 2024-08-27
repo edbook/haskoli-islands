@@ -3,17 +3,35 @@ Kafli - Varmi og einangrun
 
 Varmaflutningur getur verið eftir þrem leiðum;
 
-* Geislun
-* Streymi
-* Leiðni
+* Geislun (e. radiation)
+* Streymi (e. convection)
+* Leiðni (e. conduction)
 
-Á myndinni er vatnið táknmynd fyrir varma. Við leiðni (efst) flyst varminn frá sameind til sameindar við árekstur sameindanna. Efnið sjálft (fólkið á myndinni) flyst ekki úr stað. 
+Á mynd 4.1 er vatnið táknmynd fyrir varma. Við leiðni (efst) flyst varminn frá sameind til sameindar við árekstur sameindanna. Efnið sjálft (fólkið á myndinni) flyst ekki úr stað. 
 Í streymi (í miðjunni) flyst efnið (fólkið á myndinni) og tekur varmann (vatnið í fötunum) með sér. Varmi sem flyst með geislun (neðst) þarf ekki að flytjast um eða með efni. Geislun milli flata er háð lit og hitamun flatanna.
 
 .. figure:: ./myndir/kafli04/varmaflutningsleidir.png
   :align: center
   :width: 100%
-Mynd fengin úr :cite:`1978:Halldorsson`
+Mynd 4.1. Mynd fengin úr :cite:`1978:Halldorsson`
+
+.. youtube:: Eizsm5V8c_c
+    :width: 100%
+    :height: 400
+
+.. admonition:: Hugtök í myndbandi
+    :class: tip
+
+      **conduction** : leiðni
+
+      **thermal conductivity** : varmaleiðni
+
+      **convection** : streymi
+
+      **convection current** : óþvingað streymi
+
+      **radiation** : geislun
+
 
 
 Varmaflutningsþéttleiki, q er ákvarðaður fyrir hverja flutningsleið (eða sambland af
@@ -25,8 +43,7 @@ leiðum). Fyrir þekktan varmaflutningsþéttleika má auðveldlega reikna orkun
 
       .. math:: 
         Q = \Phi \cdot \Delta t = q\cdot A \cdot \Delta t
-
-
+          
 þar sem 
 
 .. list-table:: 
@@ -96,9 +113,9 @@ Varmaflutningsþéttleiki vegna geislunar, :math:`q_s`, frá yfirborði er gefin
 Orkugeislun sem fellur á yfirborð, skiptist í þrennt;
 
 .. line-block::
-  :math:`\alpha` tekin upp sem varmi (d: absorberet)
-  :math:`\rho` endurkastast (d: reflekteret)
-  :math:`\tau` hleypt í gegn (d: transmitteret)
+  :math:`\alpha` tekin upp sem varmi (e. absorbed)
+  :math:`\rho` endurkastast (e. reflected)
+  :math:`\tau` hleypt í gegn (e. transmitted)
 
 og þá gildir vitaskuld að
 
@@ -109,8 +126,8 @@ og þá gildir vitaskuld að
         \alpha + \rho + \tau = 1
 
 Þegar varmi flyst með geislun milli yfirborða þá hafa yfirborðseiginleikar beggja efna
-áhrif á hverju þetta nemur, jafna 4.2 er þá iðulega umskrifuð þannig fyrir nettó
-varmaflutnings-þéttleika frá fleti 1 til flatar 2, jafna 4.4;
+áhrif á hversu mikil geislunin er, jafna 4.2 er þá iðulega umskrifuð þannig fyrir nettó
+varmaflutningsþéttleika frá fleti 1 til flatar 2, jafna 4.4;
 
 .. admonition:: Jafna 4.4
     :class: jafna
@@ -140,7 +157,7 @@ varmaflutnings-þéttleika frá fleti 1 til flatar 2, jafna 4.4;
 .. admonition:: Vísbending
     :class: hint
 
-      :math:`C = F_{12}\cdot \sigma \cdot \varepsilon` fjallað verður um :math:`F_{12}` stuðulinn í „Húsagerð“
+      :math:`C = F_{12}\cdot \sigma \cdot \varepsilon` fjallað verður um :math:`F_{12}` stuðulinn í námskeiðinu „Húsagerð“.
 
 
 Streymi
@@ -151,12 +168,50 @@ milli staða; streymið er alltaf orsakað af þrýstingsmun, sem getur átt sé
 orsakir;
 
 .. line-block::
-  *Óþvingað streymi* (d: naturlig konvektion, e: natural convection)
+  *Óþvingað streymi* (d. naturlig konvektion, e. natural convection)
   Streymið orsakast af hitamun, heitt efni (lofttegundir og vökvi) léttara en kalt.
 
 .. line-block::
-  *Þvingað streymi* (d: tvungen konvektion, e: forced convection).
-  Ytri þrýstingsmunur, t.d. vindur
+  *Þvingað streymi* (d. tvungen konvektion, e. forced convection).
+  Ytri þrýstingsmunur, t.d. vindur eða vifta.
+
+
+.. admonition:: Jafna
+    :class: jafna
+
+      .. math:: 
+        q_{streymi} = \rho A v \Delta T c_p = \rho \frac{dV}{dt} \Delta T c_p
+
+þar sem 
+
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 0
+
+  * - :math:`q_{streymi}`
+    - varmaflutningsþéttleiki vegna streymis lofts eða vökva
+    - :math:`W/m^2`
+  * - :math:`\rho`
+    - eðlisþéttleiki loftsins eða vökvans
+    - :math:`kg/m^3`
+  * - :math:`A`
+    - þverskurðarflatarmál lagnarinnar sem efnið flyst um
+    - :math:`m^2`
+  * - :math:`v`
+    - hraði efnisins
+    - :math:`m/s`
+  * - :math:`\Delta T`
+    - hitamismunurinn sem drífur hreyfinguna
+    - :math:`K`
+  * - :math:`c_p`
+    - eðlisvarmi loftsins eða vökvans
+    - :math:`J/(kg K)`
+  * - :math:`V`
+    - rúmmál 
+    - :math:`m^3`   
+  * - :math:`t`
+    - tími
+    - :math:`s`   
 
 Leiðni
 ~~~~~~
@@ -191,9 +246,9 @@ Varmaleiðniþéttleika í gegnum efnislag má ákvarða samkvæmt jöfnu 4.5;
     - hitastig yfirborðanna 1 og 2
     - K eða :math:`^{\circ}C`
 
-*Eðlisvarmi* (d: varmekapacitet) og varmadreifð (d: varmediffusivitet)
+*Eðlisvarmi* (e. specific heat, d. specifik varmekapacitet) og varmadreifð (e. thermal diffusivity, d. varmediffusivitet)
 
-Eðlisvarminn (d: specifikk varmekapacitet, varmefylde), :math:`c_p`, segir til um orkuþörf sem
+Eðlisvarminn (d: specifik varmekapacitet, varmefylde), :math:`c_p`, segir til um orkuþörf sem
 þarf til að hækka hitastig af 1 kg efnis um eina gráðu Celsíus (eða Kelvin), einingin er
 J/(kg·K)
 
@@ -236,10 +291,12 @@ heldur en efni með lága varmadreifð. Dæmi um varmadreifð nokkurra efna;
 *Varmaflutningur í samsettu efnislagi* (gildir ekki bara fyrir pórótt efnslög)
 
 Fæst efni eru alveg einsleit, og að auki eru efnislög (byggingarhlutar) iðulega samsettir úr
-tveim eða fleiri efnum. Í umfjöllun kennslubókar eru byggt á hlutfallskiptingu rúmmáls
-eftir mismunandi efnafösum (þar sem aðallega er verið að tala um áhrif holrýmdar), en í
-útreikningum þarf þverskurðarflatarmál varmaflutnings, og lengd að vera þekkt, jafna
-4.1.
+tveim eða fleiri efnum. 
+
+.. Í umfjöllun kennslubókar eru byggt á hlutfallskiptingu rúmmáls
+.. eftir mismunandi efnafösum (þar sem aðallega er verið að tala um áhrif holrýmdar), en í
+.. útreikningum þarf þverskurðarflatarmál varmaflutnings, og lengd að vera þekkt, jafna
+.. 4.1.
 
 Hægt er að líta á samsett efnislag sem **samsíðatengt/hliðtengt** eða **raðtengt**, en í reynd er það
 eitthvað sambland af þessu tvennu.
@@ -319,7 +376,7 @@ stærðir R) þannig;
 
 Þannig hafa verið skilgreindar nýjar stærðir, mótstöðutölur :math:`R_i`, fyrir hvort efnislag, og
 heildarmótstaða fyrir samsetta efnislagið (samsvörun við samlagningaraðferð fyrir
-raðtengdar mótstöður í rafmagnsfræði er augljós!)- aðferðin hefur almennt gildi, óháð
+raðtengdar mótstöður í rafmagnsfræði eða raðtengda gorma í aflfræði er augljós)- aðferðin hefur almennt gildi, óháð
 fjölda eða tegund efnislaganna.
 
 Til samræmis við jöfnu 4.6 má útfrá jöfnu 4.8 skilgreina :math:`\lambda_{vegið}` fyrir raðtengt líkan, jafna
@@ -341,29 +398,28 @@ endurskrifuð sem 4.10;
       q = \frac{1}{R} \cdot \left( T_1-T_2 \right) = U \cdot \left( T_1-T_2 \right)
 
 Í reynd gefur samsíðatengda líkanið efri mörk fyrir heildarleiðnitölu samsetta
-efnislagsins, raungildi, en raðtengda líkanið gefur neðri mörk;
+efnislagsins, :math:`\lambda_{raungildi}`, en raðtengda líkanið gefur neðri mörk;
 
 .. math::
   \lambda_{vegið-rað} < \lambda_{raungildi} < \lambda_{vegið-samsíða}
 
 
 Leiðnitala efnis er augljóslega mjög háð holrýmd efnisins, en einnig efnisþéttleika;
-Varmaflutningur
 
 .. figure:: ./myndir/kafli04/Leidnitala.png
   :align: center
   :width: 70%
 
 Varmaflutningur er háður geislun, streymi og leiðni, en iðulega eru þessir liðir sameinaðir
-í leiðnitölu efnisins, sem þá er breytileg eftir m.a. efnisþéttleika og rakastigi.Dæmigerð
+í leiðnitölu efnisins, sem þá er breytileg eftir m.a. efnisþéttleika og rakastigi. Dæmigerð
 áhrif þessara leiða fyrir trefjakennt einangrunarefni, háð efnisþéttleika, eru sýnd á mynd
-4.1
+4.2.
 
 .. figure:: ./myndir/kafli04/Leidnivsthettleiki.png
   :align: center
   :width: 70%
 
-Mynd 4.1. Áhrif leiðni og geislunnar á leiðnitölu trefjakennds einangrunarefnis.
+Mynd 4.2. Áhrif leiðni og geislunnar á leiðnitölu trefjakennds einangrunarefnis.
 
 .. figure:: ./myndir/kafli04/Leidnivshitastig.png
   :align: center
@@ -394,27 +450,29 @@ uppgufunarvarmans sem er margfalt hærri heldur en eðlisvarminn;
 Mæling leiðnitölu
 ~~~~~~~~~~~~~~~~~
 Leiðnitala efnis er mæld með þrennu móti;
-a) Orkuþörf mæld
-Tvö sýni mæld samtímis til að fá samhverfu í mæliuppsetninguna, tekið meðaltal
-mælinganna. Uppbyggingin er :
 
-.. figure:: ./myndir/kafli04/Uppbygging1.png
-  :align: center
-  :width: 100%
+1. Orkuþörf mæld
 
-b) Hitafall yfir mælisýni og þekkt viðmiðunarsýni mælt
-Eitt sýni mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
+  Tvö sýni mæld samtímis til að fá samhverfu í mæliuppsetninguna, meðaltal
+  mælinganna tekið. Uppbyggingin er:
 
-.. figure:: ./myndir/kafli04/Uppbygging2.png
-  :align: center
-  :width: 100%
+  .. figure:: ./myndir/kafli04/Uppbygging1.png
+    :align: center
+    :width: 85%
 
-c) Varmaflutningur í gegnum sýnið mældur (þetta er keimlíkt og í lið b). Eitt sýni
-mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
+2. Hitafall yfir mælisýni og þekkt viðmiðunarsýni mælt
+  Eitt sýni mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
 
-.. figure:: ./myndir/kafli04/Uppbygging3.png
-  :align: center
-  :width: 100%
+  .. figure:: ./myndir/kafli04/Uppbygging2.png
+    :align: center
+    :width: 100%
+
+3. Varmaflutningur í gegnum sýnið mældur (þetta er keimlíkt og í lið b). Eitt sýni
+  mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
+
+  .. figure:: ./myndir/kafli04/Uppbygging3.png
+    :align: center
+    :width: 100%
 
 Óháð aðferð þá er varmaleiðnitala einangrunarefna almennt mæld við :math:`10^{\circ}C` meðalhita í
 sýninu, og mæligildið nefnt :math:`\lambda_{10}`.
@@ -426,7 +484,7 @@ Mælda gildið er leiðrétt fyrir eftirfarandi áhrifsþáttum;
 * Öðrum meðalhita í reynd heldur en :math:`10^{\circ}C`
 * Frágangi efnislags í byggingarhluta
 
-og leiðrétta gildið nefnt “uppgefin leiðnitala” (deklareret værdi, e: declared value).
+og leiðrétta gildið nefnt “uppgefin leiðnitala” (e. deklareret værdi, e: declared value).
 
 Einangrunarefni – tegundir og framleiðsluaðferðir
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
