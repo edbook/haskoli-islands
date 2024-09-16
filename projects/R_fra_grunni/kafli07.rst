@@ -28,7 +28,7 @@ Við notum aðferðina ``binom.test()`` til að kanna tilgátur og smíða
 hvorri gerð sem fá má með skipuninni ``table()`` sem var sýnd í kassa
 :numref:`%s <rf.table>`. Hér er dæmi þar sem aðferðin er notuð til að kanna
 hvort hlutfall þeirra sem eru hrifinn af hundum og þeirra sem eru hrifinn af köttum
-sé jafnt í nemendahópnum sem dat gögnin byggja á.
+sé jafnt í nemendahópnum sem konnun gögnin byggja á.
 
 binom.test()
 ^^^^^^^^^^^^
@@ -51,7 +51,7 @@ Byrjum á því að nota ``prop.table()`` skipunina, (kassa
 
 ::
 
-   prop.table(table(dat$dyr))
+   prop.table(table(konnun$dyr))
    ##
    ##     Hunda     Ketti 
    ## 0.6318408 0.3681592
@@ -61,11 +61,11 @@ einu með einni skipun:
 
 ::
 
-   binom.test(table(dat$dyr))
+   binom.test(table(konnun$dyr))
    ##
    ##  Exact binomial test
    ## 
-   ## data:  table(dat$dyr)
+   ## data:  table(konnun$dyr)
    ## number of successes = 127, number of trials = 201, p-value = 0.0002267
    ## alternative hypothesis: true probability of success is not equal to 0.5
    ## 95 percent confidence interval:
@@ -121,7 +121,7 @@ Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan st
 
 ::
 
-   prop.table(table(dat$dyr, dat$styrikerfi_simi), margin=2)
+   prop.table(table(konnun$dyr, konnun$styrikerfi_simi), margin=2)
    ##
    ##          Android       iOS
    ##  Hunda 0.5957447 0.6428571
@@ -132,12 +132,12 @@ einu með einni skipun:
 
 ::
 
-   prop.test(table(dat$dyr, dat$styrikerfi_simi))
+   prop.test(table(konnun$dyr, konnun$styrikerfi_simi))
    ##
    ##  2-sample test for equality of proportions with continuity
    ##  correction
    ##
-   ## data:  table(dat$styrikerfi_simi, dat$dyr)
+   ## data:  table(konnun$styrikerfi_simi, konnun$dyr)
    ## X-squared = 0.17091, df = 1, p-value = 0.6793
    ## alternative hypothesis: two.sided
    ## 95 percent confidence interval:
@@ -164,12 +164,12 @@ felst að flokkabreytan með fleiri en tvo flokka sé tilgreind á undan
 
 ::
 
-   prop.test(table(dat$is, dat$dyr))
+   prop.test(table(konnun$is, konnun$dyr))
    ##
    ##  3-sample test for equality of proportions without continuity
    ##  correction
    ##
-   ## data:  table(dat$is, dat$dyr)
+   ## data:  table(konnun$is, konnun$dyr)
    ## X-squared = 1.0863, df = 2, p-value = 0.5809
    ## alternative hypothesis: two.sided
    ## sample estimates:
@@ -180,8 +180,8 @@ Sé þessu snúið öfugt fæst villa og ekki er hægt að meta tilgátuprófið
 
 ::
 
-   prop.test(table(dat$dyr, dat$is))
-   ## Error in prop.test(table(dat$dyr, dat$is)) : 'x' must have 2 columns
+   prop.test(table(konnun$dyr, konnun$is))
+   ## Error in prop.test(table(konnun$dyr, konnun$is)) : 'x' must have 2 columns
 
 .. _s.tengslatoflur:
 
@@ -217,11 +217,11 @@ Við byrjum á að búa til töflu mældrar tíðni:
 
 ::
 
-   chisq.test(table(dat$is,dat$kosid))
+   chisq.test(table(konnun$is,konnun$kosid))
    ##
    ##  Pearson's Chi-squared test
    ##
-   ## data:  table(dat$is, dat$kosid)
+   ## data:  table(konnun$is, konnun$kosid)
    ## X-squared = 0.41817, df = 2, p-value = 0.8113
 
 Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
@@ -248,15 +248,15 @@ hvert nemendur vilja helst fara á stefnumót:
 
 ::
 
-   chisq.test(table(dat$dyr,dat$stefnumot))
+   chisq.test(table(konnun$dyr,konnun$stefnumot))
    ##
    ##  Pearson's Chi-squared test
    ##
-   ## data:  table(dat$dyr, dat$stefnumot)
+   ## data:  table(dkonnunat$dyr, konnun$stefnumot)
    ## X-squared = 6.8392, df = 3, p-value = 0.0772 
    ##
    ## Warning message:
-   ## In chisq.test(table(dat$dyr, dat$stefnumot)) :
+   ## In chisq.test(table(konnun$dyr, konnun$stefnumot)) :
    ##   Chi-squared approximation may be incorrect
 
 Þá getum við annað hvort reiknað prófstærðina með endurvalsaðferðum, sem
@@ -264,12 +264,12 @@ er tilgreint með stillingunni ``simulate.p.value``:
 
 ::
 
-   chisq.test(table(dat$dyr,dat$stefnumot), simulate.p.value=T)
+   chisq.test(table(konnun$dyr,konnun$stefnumot), simulate.p.value=T)
    ##
    ##  Pearson's Chi-squared test with simulated p-value (based on 2000
    ##  replicates)
    ##
-   ## data:  table(dat$dyr, dat$stefnumot)
+   ## data:  table(konnun$dyr, konnun$stefnumot)
    ## X-squared = 6.8392, df = NA, p-value = 0.07146 
 
 eða þá framkvæmt annað tilgátupróf sem kallast Fisher próf. Það er gert
@@ -277,11 +277,11 @@ með skipuninni ``fisher.test()``:
 
 ::
 
-   fisher.test(table(dat$dyr, dat$stefnumot))
+   fisher.test(table(konnun$dyr, konnun$stefnumot))
    ##
    ##  Fisher's Exact Test for Count Data
    ##
-   ## data:  table(dat$dyr, dat$stefnumot)
+   ## data:  table(konnun$dyr, konnun$stefnumot)
    ## p-value = 0.07907
    ## alternative hypothesis: two.sided
 
