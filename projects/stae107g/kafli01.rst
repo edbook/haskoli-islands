@@ -1512,7 +1512,7 @@ Setning: Fullyrðingar um fylkjajöfnuna
 
         **3.** Dálkar fylkisins :math:`A` spanna :math:`\mathbb{R}^m`.
 
-        **4.** :math:`A` hefur vendistak í hverri línu.
+        **4.** Í efra stallaformi :math:`A` er vendistak í hverri línu.
 
 Setning: Um fylki og dálkvigur
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2385,4 +2385,4 @@ Setning: Átæk línuleg vörpun
 
         **3.** Dálkvigrar fylkisins :math:`A` spanna allt :math:`\R^m`.
 
-        **4.** Vörpunin :math:`T \colon \R^n \rightarrow \R^n`, :math:`\ve x \mapsto A \ve x` er átæk.
+        **4.** Vörpunin :math:`T \colon \R^n \rightarrow \R^m`, :math:`\ve x \mapsto A \ve x` er átæk.
