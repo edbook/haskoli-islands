@@ -63,6 +63,8 @@ anova()
 
     **Forkröfur prófs:** Dreifni sú sama
 
+    **Forkröfur prófs:** Dreifni sú sama
+
 
 --------------
 
@@ -73,7 +75,7 @@ fervikagreiningarhlut:
 
    anova(fervik)
 
-Snúum okkut nú að gagnasafninu possum. Sem inniheldur allskyns mælingar á pokarottum.
+Snúum okkut nú að gagnasafninu ``pokarotta``. Sem inniheldur allskyns mælingar á pokarottum.
 Í gagnasettinu eru meðal annars breyturnar: aldur, kyn, lengd dýrs og hvaðan dýrið kemur.
 Könnum hvort munur sé á stærð pokarotta eftir kyni. Við reiknum meðallengd pokadýra
 eftir kyni eins og gert í kafla :numref:`%s <s.adrargagnlegar>`. Nú getum við kannað með 
@@ -82,24 +84,26 @@ kassarit af lengdarmælingum eftir kyni:
 
 ::
 
-   gogn <- na.omit(possum) # sleppum NA gildum
-   ggplot(data=gogn,aes(sex, total_l))+geom_boxplot() +
+   gogn <- na.omit(pokarotta) # sleppum NA gildum
+   ggplot(data=gogn,aes(kyn, heildarlengd))+geom_boxplot() +
    xlab("kyn") + ylab("Lengd pokarotta (cm)")
 
 .. figure:: myndir/mynd9_1.svg
+   :align: center
 
 Eins og sjá má myndinni virðist dreifni í hópunum vera nokkuð jöfn.
 Því næst framkvæmum við Bartlett prófið fyrir dreifnina:
 
 ::
 
-   bartlett.test(total_l ~ sex, data = possum)
+   bartlett.test(heildarlengd ~ kyn, data = pokarotta)
    ##
    ##  Bartlett test of homogeneity of variances
    ##
-   ## data:  total_l by sex
+   ## data:  total_l by kyn
    ## Bartlett's K-squared = 0.06666, df = 1, p-value = 0.7963
 
+Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
 Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
 núlltilgátunni um að dreifnin sé sú sama. Við verðum þó að gæta okkur á
 að hátt p-gildi þýðir ekki að við höfum sýnt fram á að dreifnin sé sú
@@ -112,7 +116,7 @@ Við framkvæmum fervikagreiningu með eftirfarandi skipunum:
 
 ::
 
-   fervik <- aov(total_l ~ sex, data = possum)
+   fervik <- aov(heildarlengd ~ kyn, data = pokarotta)
 
 Takið eftir að við tilgreinum fyrst nöfnin á breytunum og svo nafnið á
 gagnatöflunni. Til að fá fervikasummutöfluna notum við ``anova()``
@@ -123,7 +127,7 @@ aðferðina.
    anova(fervik)
    ## Analysis of Variance Table
    ##
-   ## Response: total_l
+   ## Response: heildarlengd
    ##               Df  Sum Sq   Mean Sq  F value    Pr(>F)
    ## likamsraektf   1  49.12    49.116    2.6867     0.1043 ***
    ## Residuals    102  1864.71  18.281
@@ -132,10 +136,15 @@ aðferðina.
 
 Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
 og 102).
+Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
+og 102).
 
 Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
 finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
+Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
+finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
 fyrir tilgátuprófið er svo lengst til hægri
+(:math:`0.1043`). Eins og sjá má er ýmislegt annað að finna
 (:math:`0.1043`). Eins og sjá má er ýmislegt annað að finna
 í ``aov()`` úttakinu:
 
@@ -186,8 +195,11 @@ hana með fervikagreiningarhlut.
    ##   Tukey multiple comparisons of means
    ##     95% family-wise confidence level
    ##
-   ## Fit: aov(formula = total_l ~ sex, data = possum)
+   ## Fit: aov(formula = heildarlengd ~ kyn, data = pokarotta)
    ##
+   ## $sex
+   ##                     diff         lwr        upr     p adj
+   ## m-f            -1.395501   -3.084208   0.2932054   0.104272
    ## $sex
    ##                     diff         lwr        upr     p adj
    ## m-f            -1.395501   -3.084208   0.2932054   0.104272
@@ -198,7 +210,7 @@ hana með fervikagreiningarhlut.
 
    plot(TukeyHSD(fervik))
 
-.. figure:: myndir/nymyplot..png
+.. figure:: myndir/mynd9_2.svg
 
 Stikalaus próf\ :math:`^\ast`
 -----------------------------
@@ -241,7 +253,14 @@ væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
 verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu 
 tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja 
 þátta fervikagreiningu til að kanna tengslin.
+Skoðum aftur dæmið hér að ofan þar sem kannað var hvort lengd pokarotta 
+væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
+verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu 
+tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja 
+þátta fervikagreiningu til að kanna tengslin.
 
+Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna 
+þurfum við að kanna hvort *víxlhrif* (e. interactions) séu til staðar á 
 Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna 
 þurfum við að kanna hvort *víxlhrif* (e. interactions) séu til staðar á 
 milli breytanna tveggja. Gott er að byrja á því að skoða gögnin myndrænt
@@ -253,12 +272,17 @@ mælingar.
 
 ::
 
-   puls.na<-na.omit(possum)
-   ggplot(puls.na,aes(sex,total_l,lty=pop)) +
-   stat_summary(aes(group=pop),fun.y=mean,geom='line')
+   puls.na<-na.omit(pokarotta)
+   ggplot(puls.na,aes(kyn, heildarlengd, lty=tegund))+
+   stat_summary(aes(group=tegund),fun.y=mean,geo='line')
 
-.. figure:: myndir/mynd9_3.svg
+.. figure:: myndir/popmynd.svg
+   :align: center
 
+Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns 
+pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.). 
+Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur, 
+óháð því hvaðan dýrin koma.
 Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns 
 pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.). 
 Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur, 
@@ -271,16 +295,16 @@ prófum hina þættina tvo.
 
 ::
 
-   fervik.2<-aov(total_l~sex + pop + sex:pop, data=possum)
+   fervik.2<-aov(heildarlengd~kyn + tegund + kyn:tegund, data=pokarotta)
    anova(fervik.2)
    ## Analysis of Variance Table
    ##
    ## Response: total_l
-   ##           Df Sum Sq  Mean Sq  F value  Pr(>F)
-   ## sex       1   49.12  49.116   2.6480   0.1068 ***
-   ## pop       1   4.45   4.452    0.2400   0.62535 *
-   ## sex:pop   1   5.43   5.426    0.2925   0.5898
-   ## Residuals    100   1854.4  18.648  
+   ##             Df    Sum Sq  Mean Sq  F value  Pr(>F)
+   ## kyn          1    49.12   49.116   2.6480   0.1068 ***
+   ## tegund       1    4.45    4.452    0.2400   0.62535 *
+   ## kyn:tegund   1    5.43    5.426    0.2925   0.5898
+   ## Residuals    100  1854.4  18.648  
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -289,18 +313,20 @@ og prófstærð.
 
 Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
 því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
+Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
+því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
 fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.
 
 ::
 
-   fervik.3<-aov(total_l~sex + pop, data=possum)
+   fervik.3<-aov(heildarlengd~kyn + tegund, data=pokarotta)
    anova(fervik.3)
    ## Analysis of Variance Table
    ##
-   ## Response: total_l
+   ## Response: heildarlengd
    ##               Df  Sum Sq   Mean Sq  F value    Pr(>F)
-   ## sex            1  49.12    49.116   2.6667     0.1056
-   ## pop            1  4.45     4.452    0.2417     0.6240 
+   ## kyn            1  49.12    49.116   2.6667     0.1056
+   ## tegund         1  4.45     4.452    0.2417     0.6240 
    ## Residuals    101  1860.26  18.418
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -317,14 +343,17 @@ með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
    ## Single term deletions
    ##
    ## Model:
-   ## total_l ~ sex + pop
-   ##              Df  Sum of Sq    RSS     AIC   F value    Pr(>F)
-   ## <none>                     1860.3  305.94
-   ## likamsraektf  1  41.725    1902.0  306.25   2.2654   0.1354 
-   ## kyn           1  4.452     1864.7  304.19   0.2417   0.6340 
+   ## heildarlengd ~ kyn + tegund
+   ##              Df  Sum of Sq   RSS     AIC      F value  Pr(>F)
+   ## <none>                       1860.3  305.94
+   ## kyn          1   41.725      1902.0  306.25   2.2654   0.1354 
+   ## tegund       1   4.452       1864.7  304.19   0.2417   0.6340 
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
+Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki 
+sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið 
+er að leiðrétta fyrir breytunni ``pop``.
 Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki 
 sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið 
 er að leiðrétta fyrir breytunni ``pop``.

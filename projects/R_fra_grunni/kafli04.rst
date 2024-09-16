@@ -57,7 +57,7 @@ mata aðferðina með nafni breytunnar.
 
 ::
 
-   max(dat$ferdatimi_skoli, na.rm=T)
+   max(konnun$ferdatimi_skoli, na.rm=T)
    ## [1] 75
 
 min()
@@ -87,7 +87,7 @@ mata aðferðina með nafni breytunnar.
 
 ::
 
-   min(dat$ferdatimi_skoli, na.rm=T)
+   min(konnun$ferdatimi_skoli, na.rm=T)
    ## [1] 0
 
 Miðja
@@ -120,7 +120,7 @@ aðferðina með nafni breytunnar.
 
 ::
 
-   mean(dat$ferdatimi_skoli, na.rm=T)
+   mean(konnun$ferdatimi_skoli, na.rm=T)
    ## [1] 19.42786
 
 median()
@@ -150,7 +150,7 @@ mata aðferðina með nafni breytunnar:
 
 ::
 
-   median(dat$ferdatimi_skoli, na.rm=T)
+   median(konnun$ferdatimi_skoli, na.rm=T)
    ## [1] 16
 
 Breytileiki
@@ -182,7 +182,7 @@ aðferðina með nafni breytunnar:
 
 ::
 
-   var(dat$ferdatimi_skoli, na.rm=T)
+   var(konnun$ferdatimi_skoli, na.rm=T)
    ## [1] 198.786
 
 sd()
@@ -212,7 +212,7 @@ mata aðferðina með nafni breytunnar:
 
 ::
 
-   sd(dat$ferdatimi_skoli, na.rm=T)
+   sd(konnun$ferdatimi_skoli, na.rm=T)
    ## [1] 14.09915
 
 quantile()
@@ -235,7 +235,7 @@ nafninu á breytunni:
 
 ::
 
-   quantile(dat$ferdatimi_skoli, na.rm=T)
+   quantile(konnun$ferdatimi_skoli, na.rm=T)
    ## 0%  25%  50%  75% 100% 
    ## 0   8   16   25   75
 
@@ -264,10 +264,13 @@ Reikna má fylgni milli tveggja breyta í R með ``cor()`` aðferðinni. Við
 reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
 höfuðlengdar pokarotta, semsagt breytanna ``total_l`` og ``head_l``,
 notum við skipunina:
+reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
+höfuðlengdar pokarotta, semsagt breytanna ``total_l`` og ``head_l``,
+notum við skipunina:
 
 ::
 
-   cor(possum$total_l, possum$head_l)
+   cor(pokarotta$heildarlengd, pokarotta$hofud_lengd)
    ## [1] 0.6910937
 
 Stillinguna ``use="complete.obs"`` notum við vanti einhverjar mælingar.
@@ -306,8 +309,11 @@ STÆ209 í gagnasafninu okkar gerum við það með:
 
 ::
 
-   table(dat$is)
+   table(konnun$is)
    ##
+   ## Jarðaberja  Súkkulaði    Vanilla 
+   ##         39        91         71 
+
    ## Jarðaberja  Súkkulaði    Vanilla 
    ##         39        91         71 
 
@@ -319,8 +325,12 @@ neðan.
 
 ::
 
-   table(dat$is, dat$dyr)
+   table(konnun$is, konnun$dyr)
    ##
+   ##               Hunda Ketti
+   ## Jarðaberja    23    16
+   ## Súkkulaði     61    30
+   ## Vanilla       43    28
    ##               Hunda Ketti
    ## Jarðaberja    23    16
    ## Súkkulaði     61    30
@@ -348,8 +358,10 @@ hlutföll getum við notað ``prop.table()`` aðferðina. Við mötum hana með
 
 ::
 
-   prop.table(table(dat$is))
+   prop.table(table(konnun$is))
    ##
+   ## Jarðaberja  Súkkulaði    Vanilla 
+   ##  0.1940299  0.4527363  0.3532338 
    ## Jarðaberja  Súkkulaði    Vanilla 
    ##  0.1940299  0.4527363  0.3532338 
 
@@ -358,8 +370,12 @@ Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
 
 ::
 
-   prop.table(table(dat$is, dat$dyr))
+   prop.table(table(konnun$is, konnun$dyr))
    ##
+   ##                  Hunda      Ketti
+   ##  Jarðaberja 0.11442786 0.07960199
+   ##  Súkkulaði  0.30348259 0.14925373
+   ##  Vanilla    0.21393035 0.13930348
    ##                  Hunda      Ketti
    ##  Jarðaberja 0.11442786 0.07960199
    ##  Súkkulaði  0.30348259 0.14925373
@@ -368,11 +384,18 @@ Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
 Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við 
 hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti 
 skoða hlutföllin eftir línum í töflunni gerum við það með:
+Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við 
+hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti 
+skoða hlutföllin eftir línum í töflunni gerum við það með:
 
 ::
 
-   prop.table(table(dat$is, dat$dyr), margin=1)
+   prop.table(table(konnun$is, konnun$dyr), margin=1)
    ##
+   ##                 Hunda     Ketti
+   ##  Jarðaberja 0.5897436 0.4102564
+   ##  Súkkulaði  0.6703297 0.3296703
+   ##  Vanilla    0.6056338 0.3943662
    ##                 Hunda     Ketti
    ##  Jarðaberja 0.5897436 0.4102564
    ##  Súkkulaði  0.6703297 0.3296703
@@ -381,16 +404,24 @@ skoða hlutföllin eftir línum í töflunni gerum við það með:
 Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur 
 eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir 
 dálkum í töflunni gerum við það með:
+Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur 
+eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir 
+dálkum í töflunni gerum við það með:
 
 ::
 
-   prop.table(table(dat$is, dat$dyr), margin=2)
+   prop.table(table(konnun$is, konnun$dyr), margin=2)
    ##
    ##                 Hunda     Ketti
    ##  Jarðaberja 0.1811024 0.2162162
    ##  Súkkulaði  0.4803150 0.4054054
    ##  Vanilla    0.3385827 0.3783784
+   ##                 Hunda     Ketti
+   ##  Jarðaberja 0.1811024 0.2162162
+   ##  Súkkulaði  0.4803150 0.4054054
+   ##  Vanilla    0.3385827 0.3783784
 
+Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
 Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
 
 Takið eftir að nota má ``prop.table()`` til að reikna lýsistærðirnar
@@ -426,8 +457,12 @@ aukastöfum sé skilað gerum við það með:
 
 ::
 
-   round(prop.table(table(dat$is, dat$dyr),2),3)
+   round(prop.table(table(konnun$is, konnun$dyr),2),3)
    ##
+   ##             Hunda Ketti
+   ##  Jarðaberja 0.181 0.216
+   ##  Súkkulaði  0.480 0.405
+   ##  Vanilla    0.339 0.378
    ##             Hunda Ketti
    ##  Jarðaberja 0.181 0.216
    ##  Súkkulaði  0.480 0.405
@@ -460,7 +495,7 @@ og með nafni breytu:
 
 ::
 
-   summary(dat$ferdatimi_skoli)
+   summary(konnun$ferdatimi_skoli)
    ##   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
    ##   0.00    8.00   16.00   19.43   25.00   75.00 
 
@@ -473,7 +508,7 @@ gagnatöflu og fáum við þá upplýsingar um allar breyturnar í töflunni.
 
 ::
 
-   summary(dat)
+   summary(konnun)
    ##       X            is            ferdatimi_skoli styrikerfi_simi   
    ## Min.   :  1   Length:201         Min.   : 0.00   Length:201        
    ## 1st Qu.: 51   Class :character   1st Qu.: 8.00   Class :character  
@@ -529,7 +564,7 @@ ferðatíma í skóla eftir ferðamáta gerum við það með:
 
 ::
 
-   tapply(dat$ferdatimi_skoli, dat$ferdamati_skoli, mean, na.rm=T)
+   tapply(konnunat$ferdatimi_skoli, konnun$ferdamati_skoli, mean, na.rm=T)
    ##            Á annan hátt Á hjóli / rafhlaupahjóli     Gangandi / skokkandi 
    ##                2.500000                11.666667                 7.588235 
    ##            Með einkabíl               Með strætó 
@@ -549,16 +584,19 @@ Ef við viljum t.d. finna meðaltalið á tölunum 1-101, taka svo kvaðratróti
 af meðaltalinu og skila með tveimur aukastöfum. Án pípunar er það gert svona:
 
 ::
+   
    round(sqrt(mean(1:101)),2)
    ## 7.14
 
 Með pípun:
 
 ::
+
    1:101 %>%
       mean() %>%
       sqrt() %>%
       round(2)
+
    ## 7.14
 
 Þessa skipun er auðveldara að lesa.
@@ -567,12 +605,13 @@ Ef við viljum skoða meðalferðatíma í skóla hjá þeim sem ferðast með s
 eftir því hvaða ís þeim finnst bestur. Byrjum að gera þetta án pípunar.
 
 ::
-   dat1 <- dat 
-   dat1 <- filter(dat1, ferdamati_skoli=="Með strætó")
-   dat1 <- select(dat1, ferdatimi_skoli, is)
-   dat1 <- group_by(dat1, is)
-   dat1 <- summarize(dat1, Meðalferðatími=mean(ferdatimi_skoli))
-   dat1
+
+   konnun1 <- konnun 
+   konnun1 <- filter(konnun1, ferdamati_skoli=="Með strætó")
+   konnun1 <- select(konnun1, ferdatimi_skoli, is)
+   konnun1 <- group_by(konnun1, is)
+   konnun1 <- summarize(konnun1, Meðalferðatími=mean(ferdatimi_skoli))
+   konnun1
    ## is             Meðalferðatími
    ## Jarðaberja     48.60000
    ## SúkkulaðI      25.07692
@@ -582,11 +621,13 @@ Hér þurftum við að búa til nýtt gagnasett og yfirskrifa það. Mun einfald
 er að gera þetta með pípurithætti.
 
 ::
-   dat %>% 
+
+   konnun %>% 
       filter(ferdamati_skoli=="Með strætó") %>% 
       select(ferdatimi_skoli, is) %>% 
       group_by(is) %>% 
       summarise(mean(ferdatimi_skoli))
+
    ## is             Meðalferðatími
    ## Jarðaberja     48.60000
    ## SúkkulaðI      25.07692
@@ -595,15 +636,18 @@ er að gera þetta með pípurithætti.
 Það má líka nota pípurithátt við að teikna myndir.
 
 ::
-   dat %>% ggplot(aes(x=is, y=ferdatimi_skoli))+
+
+   konnun %>% ggplot(aes(x=is, y=ferdatimi_skoli))+
    geom_boxplot()
 
-.. figure:: myndir/mynd_pipu_4.svg  
+.. figure:: myndir/mynd_pipu_4.svg 
+   :align: center 
 
 Skoðum fleiri dæmi:
 
 ::
-   dat %>% select(ferdatimi_skoli) %>% summary()
+
+   konnun %>% select(ferdatimi_skoli) %>% summary()
    ## ferdamati_skoli
    ## Min.     :0.00
    ## 1at Qu.  :8.00 
@@ -615,7 +659,8 @@ Skoðum fleiri dæmi:
 Einnig má nota ``kable()`` skipunina sem útbýr fína töflu.
 
 ::
-   table(dat$stefnumot) %>% kable()
+
+   table(konnun$stefnumot) %>% kable()
    ## Var1           Freq
    ## Á ísrúnt       93
    ## Á kaffihús     74
@@ -626,12 +671,14 @@ Reiknum allskyns lýsistærðir fyrir breytuna ``smjor_kostar``
 eftir breytunni ``is``.
 
 ::
-   dat %>%
+
+   konnun %>%
       filter(!is.na(smjor_kostar)) %>%
       group_by(stefnumot) %>%
       summarise("Miðgildi"=median(smjor_kostar), 
       "Meðaltal" = mean(smjor_kostar),
       "Staðalfrávik" = sd(smjor_kostar)) %>% kable()
+      
    ## stefnumot      Miðgildi    Meðaltal    Staðalfrávik
    ## Á kaffihús	   500.0	      577.5676	   209.5798
    ## Á ísrúnt	      618.0	      621.6667	   229.0420

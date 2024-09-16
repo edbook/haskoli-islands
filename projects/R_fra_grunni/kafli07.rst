@@ -28,7 +28,7 @@ Við notum aðferðina ``binom.test()`` til að kanna tilgátur og smíða
 hvorri gerð sem fá má með skipuninni ``table()`` sem var sýnd í kassa
 :numref:`%s <rf.table>`. Hér er dæmi þar sem aðferðin er notuð til að kanna
 hvort hlutfall þeirra sem eru hrifinn af hundum og þeirra sem eru hrifinn af köttum
-sé jafnt í nemendahópnum sem dat gögnin byggja á.
+sé jafnt í nemendahópnum sem konnun gögnin byggja á.
 
 binom.test()
 ^^^^^^^^^^^^
@@ -43,16 +43,21 @@ binom.test()
 
     **Forkröfur prófs:** Engar
 
+    **Forkröfur prófs:** Engar
+
 
 --------------
 
 Byrjum á því að nota ``prop.table()`` skipunina, (kassa
 :numref:`%s <rf.prop.table>`) til að sjá hvert uppáhalds dýr fólks er:
+:numref:`%s <rf.prop.table>`) til að sjá hvert uppáhalds dýr fólks er:
 
 ::
 
-   prop.table(table(dat$dyr))
+   prop.table(table(konnun$dyr))
    ##
+   ##     Hunda     Ketti 
+   ## 0.6318408 0.3681592
    ##     Hunda     Ketti 
    ## 0.6318408 0.3681592
 
@@ -61,16 +66,20 @@ einu með einni skipun:
 
 ::
 
-   binom.test(table(dat$dyr))
+   binom.test(table(konnun$dyr))
    ##
    ##  Exact binomial test
    ## 
-   ## data:  table(dat$dyr)
+   ## data:  table(konnun$dyr)
    ## number of successes = 127, number of trials = 201, p-value = 0.0002267
    ## alternative hypothesis: true probability of success is not equal to 0.5
    ## 95 percent confidence interval:
    ##  0.5611205 0.6986092
+   ##  0.5611205 0.6986092
    ## sample estimates:
+   ## probability of success 
+   ##              0.6318408 
+
    ## probability of success 
    ##              0.6318408 
 
@@ -79,8 +88,14 @@ Lesa má geysimiklar upplýsingar úr úttakinu. Fyrst sjáum við að fjöldi
 heppnaðra tilrauna (sem í þessu tilviki er fjöldi þeirra sem er hrifinn af hundum) er 127,
 heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
 :math:`0.0002267`.
+heppnaðra tilrauna (sem í þessu tilviki er fjöldi þeirra sem er hrifinn af hundum) er 127,
+heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
+:math:`0.0002267`.
 
 Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
+öryggisbil fyrir hlutfallið, sem reynist
+:math:`[0.5611205, 0.6986092]`. Að lokum sjáum við sjálft matið á
+hlutfalli þeirra sem eru hrifinn af hundum í námskeiðinu, :math:`\hat{p} = 0.6318408`.
 öryggisbil fyrir hlutfallið, sem reynist
 :math:`[0.5611205, 0.6986092]`. Að lokum sjáum við sjálft matið á
 hlutfalli þeirra sem eru hrifinn af hundum í námskeiðinu, :math:`\hat{p} = 0.6318408`.
@@ -112,17 +127,24 @@ prop.test()
 
     **Forkröfur prófs:** Normalnálgun
 
+    **Forkröfur prófs:** Normalnálgun
+
 
 --------------
 
+Skoðum nú hvort hlutfall þeirra sem er hrifið af hundum og þeirra sem er hrifið af köttum sé það sama hjá iOS og
+Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
 Skoðum nú hvort hlutfall þeirra sem er hrifið af hundum og þeirra sem er hrifið af köttum sé það sama hjá iOS og
 Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
 ``prop.table()`` (kassi :numref:`%s <rf.prop.table>`).
 
 ::
 
-   prop.table(table(dat$dyr, dat$styrikerfi_simi), margin=2)
+   prop.table(table(konnun$dyr, konnun$styrikerfi_simi), margin=2)
    ##
+   ##          Android       iOS
+   ##  Hunda 0.5957447 0.6428571
+   ##  Ketti 0.4042553 0.3571429
    ##          Android       iOS
    ##  Hunda 0.5957447 0.6428571
    ##  Ketti 0.4042553 0.3571429
@@ -132,27 +154,35 @@ einu með einni skipun:
 
 ::
 
-   prop.test(table(dat$dyr, dat$styrikerfi_simi))
+   prop.test(table(konnun$dyr, konnun$styrikerfi_simi))
    ##
    ##  2-sample test for equality of proportions with continuity
    ##  correction
    ##
-   ## data:  table(dat$styrikerfi_simi, dat$dyr)
+   ## data:  table(konnun$styrikerfi_simi, konnun$dyr)
    ## X-squared = 0.17091, df = 1, p-value = 0.6793
    ## alternative hypothesis: two.sided
    ## 95 percent confidence interval:
    ##  -0.2204061  0.1261812
+   ##  -0.2204061  0.1261812
    ## sample estimates:
    ##    prop 1    prop 2 
    ## 0.5957447 0.6428571 
+   ##    prop 1    prop 2 
+   ## 0.5957447 0.6428571 
 
+Fyrst sjáum við að prófstærðin er 0.17091, sem fylgir kí-kvaðrat prófi
+með 1 frígráðu og p-gildi tilgátuprófsins er 0.6793.
 Fyrst sjáum við að prófstærðin er 0.17091, sem fylgir kí-kvaðrat prófi
 með 1 frígráðu og p-gildi tilgátuprófsins er 0.6793.
 
 Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir mismun hlutfallanna, sem reyndist
 :math:`[-0.2204061, 0.1261812]`.
+:math:`[-0.2204061, 0.1261812]`.
 
+Að lokum sjáum við sjálf mötin á hlutfalli þeirra sem eru hrifinn af hundum eftir stýrikerfi,
+0.5957447 hjá Android notendum og 0.6428571 hjá iOS notendum.
 Að lokum sjáum við sjálf mötin á hlutfalli þeirra sem eru hrifinn af hundum eftir stýrikerfi,
 0.5957447 hjá Android notendum og 0.6428571 hjá iOS notendum.
 
@@ -164,15 +194,17 @@ felst að flokkabreytan með fleiri en tvo flokka sé tilgreind á undan
 
 ::
 
-   prop.test(table(dat$is, dat$dyr))
+   prop.test(table(konnun$is, konnun$dyr))
    ##
    ##  3-sample test for equality of proportions without continuity
    ##  correction
    ##
-   ## data:  table(dat$is, dat$dyr)
+   ## data:  table(konnun$is, konnun$dyr)
    ## X-squared = 1.0863, df = 2, p-value = 0.5809
    ## alternative hypothesis: two.sided
    ## sample estimates:
+   ##    prop 1    prop 2    prop 3 
+   ## 0.5897436 0.6703297 0.6056338
    ##    prop 1    prop 2    prop 3 
    ## 0.5897436 0.6703297 0.6056338
 
@@ -180,8 +212,8 @@ Sé þessu snúið öfugt fæst villa og ekki er hægt að meta tilgátuprófið
 
 ::
 
-   prop.test(table(dat$dyr, dat$is))
-   ## Error in prop.test(table(dat$dyr, dat$is)) : 'x' must have 2 columns
+   prop.test(table(konnun$dyr, konnun$is))
+   ## Error in prop.test(table(konnun$dyr, konnun$is)) : 'x' must have 2 columns
 
 .. _s.tengslatoflur:
 
@@ -209,21 +241,26 @@ chisq.test()
 
     **Forkröfur prófs:** Normalnálgun, allar töflur í væntitöflu >5
 
+    **Forkröfur prófs:** Normalnálgun, allar töflur í væntitöflu >5
+
 
 --------------
 
+Könnum nú hvort samband sé á milli hvaða ís nemendur velja og hvort þau hafi kosið.
 Könnum nú hvort samband sé á milli hvaða ís nemendur velja og hvort þau hafi kosið.
 Við byrjum á að búa til töflu mældrar tíðni:
 
 ::
 
-   chisq.test(table(dat$is,dat$kosid))
+   chisq.test(table(konnun$is,konnun$kosid))
    ##
    ##  Pearson's Chi-squared test
    ##
-   ## data:  table(dat$is, dat$kosid)
+   ## data:  table(konnun$is, konnun$kosid)
    ## X-squared = 0.41817, df = 2, p-value = 0.8113
 
+Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
+frígráðum og p-gildi tilgátuprófsins er 0.8113.
 Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
 frígráðum og p-gildi tilgátuprófsins er 0.8113.
 
@@ -241,6 +278,10 @@ væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnit�
    ##   Jarðaberja 11.05970 27.94030
    ##   Súkkulaði  25.80597 65.19403
    ##   Vanilla    20.13433 50.86567
+   ##                 Rangt     Rétt
+   ##   Jarðaberja 11.05970 27.94030
+   ##   Súkkulaði  25.80597 65.19403
+   ##   Vanilla    20.13433 50.86567
 
 Ef einhverjar tölur eru minni en fimm í væntitíðnitöflunni varar R okkur
 við. Sjáum til dæmis hvað gerist ef við viljum skoða samband þess að vera vera hrifinn af hundum eða köttum og
@@ -248,15 +289,15 @@ hvert nemendur vilja helst fara á stefnumót:
 
 ::
 
-   chisq.test(table(dat$dyr,dat$stefnumot))
+   chisq.test(table(konnun$dyr,konnun$stefnumot))
    ##
    ##  Pearson's Chi-squared test
    ##
-   ## data:  table(dat$dyr, dat$stefnumot)
+   ## data:  table(dkonnunat$dyr, konnun$stefnumot)
    ## X-squared = 6.8392, df = 3, p-value = 0.0772 
    ##
    ## Warning message:
-   ## In chisq.test(table(dat$dyr, dat$stefnumot)) :
+   ## In chisq.test(table(konnun$dyr, konnun$stefnumot)) :
    ##   Chi-squared approximation may be incorrect
 
 Þá getum við annað hvort reiknað prófstærðina með endurvalsaðferðum, sem
@@ -264,12 +305,12 @@ er tilgreint með stillingunni ``simulate.p.value``:
 
 ::
 
-   chisq.test(table(dat$dyr,dat$stefnumot), simulate.p.value=T)
+   chisq.test(table(konnun$dyr,konnun$stefnumot), simulate.p.value=T)
    ##
    ##  Pearson's Chi-squared test with simulated p-value (based on 2000
    ##  replicates)
    ##
-   ## data:  table(dat$dyr, dat$stefnumot)
+   ## data:  table(konnun$dyr, konnun$stefnumot)
    ## X-squared = 6.8392, df = NA, p-value = 0.07146 
 
 eða þá framkvæmt annað tilgátupróf sem kallast Fisher próf. Það er gert
@@ -277,11 +318,11 @@ með skipuninni ``fisher.test()``:
 
 ::
 
-   fisher.test(table(dat$dyr, dat$stefnumot))
+   fisher.test(table(konnun$dyr, konnun$stefnumot))
    ##
    ##  Fisher's Exact Test for Count Data
    ##
-   ## data:  table(dat$dyr, dat$stefnumot)
+   ## data:  table(konnun$dyr, konnun$stefnumot)
    ## p-value = 0.07907
    ## alternative hypothesis: two.sided
 
@@ -295,6 +336,8 @@ fisher.test()
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil ofl.
     
     **Helstu stillingar:** conf.level, p
+
+    **Forkröfur prófs:** Engar
 
     **Forkröfur prófs:** Engar
 

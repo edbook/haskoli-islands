@@ -8,6 +8,7 @@ mælingum. Gróflega skiptist tölfræðin í tvo anga: að lýsa sem best þeim
 gögnum sem fyrirliggjandi eru og að draga ályktanir um almenna hópa eða
 þýði út frá mælingum á úrtaki. Í flestum tilfellum er unnið með mikið
 magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
+magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
 með aðstoð tölva. Sérhæfð tölfræðiforrit komu snemma fram á sjónarsviðið
 og eftir því sem að möguleikar þeirra, sem og reiknigeta tölva, jukust,
 varð beiting tölfræði víðfeðmari. Mikill fjöldi forrita eru sérsniðin
@@ -28,6 +29,8 @@ tilraunaverkefnis tveggja prófessora í tölfræði rétt fyrir aldamót.
 Prófessoranir tveir, Ross Ihaka og Robert Gentleman við háskólann í
 Auckland Nýja Sjálandi, þróuðu hugbúnaðinn fyrst til kennslu. Síðar vatt
 þróunin uppá sig, ekki síst vegna þess að hún var opin og í mikilli
+samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
+alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
 alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 önnur tölfræðiforrit er sveigjanleiki og fjöldi viðbóta, svonefndra
@@ -703,7 +706,7 @@ og endurræsa svo Rstudio. Þá ættu íslensku stafirnir að birtast rétt.
 Gögn
 ----
 Í þessari bók munum við notast við nokkur gagnasett. 
-Gagnasettið sem við köllum dat má finna í skránni ``skra`` sem hlaða
+Gagnasettið sem við köllum *konnun* má finna í skránni ``skra`` sem hlaða
 niður hér: 
 
 ``linkur``
@@ -715,15 +718,15 @@ Skráin inniheldur eftirfarandi breytur:
 +===================+==========================================+
 | is                | Vannilla, Jarðaberja, Súkkulaði          |
 +-------------------+------------------------------------------+
-| ferdatimi_skoli   | tími í mínútum                           |
+| ferdatimi_skoli   | Tími í mínútum                           |
 +-------------------+------------------------------------------+
 | styrikerfi_simi   | Android eða iOS                          |
 +-------------------+------------------------------------------+
-| ferdatmati_skoli  | Með einkabíl, Gangandi/skokkandi,        |
+| ferdamati_skoli   | Með einkabíl, Gangandi/skokkandi,        |
 |                   | Með strætó, Hjólandi/rafhlaupahjól,      |
 |                   | Á annan hátt                             |
 +-------------------+------------------------------------------+
-| systkini_fjoldi   | fjöldi systkina                          |
+| systkini_fjoldi   | Fjöldi systkina                          |
 +-------------------+------------------------------------------+
 | dyr               | Ertu meira fyrir hunda eða ketti?        |
 +-------------------+------------------------------------------+
@@ -746,7 +749,54 @@ Skráin inniheldur eftirfarandi breytur:
 Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
 Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.
 
-Vistið skrána í vinnumöppunni á vélinni ykkar en forðist að opna hana í
+Í þessari bók verður einnig notað gagnasett sem heitir puls, puls 
+gaganasettið má hlaða niður hér:
+
+``linkur``
+
+Skráin inniheldur eftirfarandi breytur:
+
++-------------------+------------------------------------------+
+| Breyta            | Útskýring/gildi                          |
++===================+==========================================+
+| likamsraekt       | Fjöldi klst. í líkamsræktar á viku       |
++-------------------+------------------------------------------+
+| fyrriPuls         | Fyrri púls, slög á mínútu                |
++-------------------+------------------------------------------+
+| inngrip           | sat_kyrr eða hljop                       |
++-------------------+------------------------------------------+
+| seinniPuls        | Seinni púls, slög á mínútu               |
++-------------------+------------------------------------------+
+
+Í þessari bók verður einnig notað gagnasett sem heitir pokarotta, pokarotta 
+gaganasettið má hlaða niður hér:
+
+``linkur``
+
+Skráin inniheldur eftirfarandi breytur:
+
++-------------------+--------------------+
+| Breyta            | Útskýring/gildi    |
++===================+====================+
+| stadsetning       | 1 eða 2            |
++-------------------+--------------------+
+| tegund            | Vic eða other      |
++-------------------+--------------------+
+| kyn               | m eða f            |
++-------------------+--------------------+
+| aldur             | ár                 |
++-------------------+--------------------+
+| hofud_lengd       | í mm               |
++-------------------+--------------------+
+| hofud_breidd      | í mm               |
++-------------------+--------------------+
+| heildarlengd      | í mm               |
++-------------------+--------------------+
+| lengd_skott       | í mm               |
++-------------------+--------------------+
+
+
+Vistið skránar í vinnumöppunni á vélinni ykkar en forðist að opna hana í
 töflureikni, sér í lagi Excel, undarlegustu hlutir geta gerst! Ef þið
 viljið skoða skrána opnið hana frekar í ritl, t.d. Notepad eða TextEdit.
 
@@ -758,7 +808,7 @@ draga hinar ýmsu ályktanir um þýði nemenda.
 Í þessari bók er einnig unnið mikið með gagnasettið ``kaupskra`` sem inniheldur 
 upplýsingar kaupverð, dagsetningu kaupsamnings og staðsetningu fasteignar.  
 
-Kaupskrá má nálgast á: https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/
+Kaupskrá má nálgast á: https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/.
 Þar er einnig hægt að nálgast upplýsingar um allar breytur í kaupskra.
 
 Leiksvæði fyrir R kóða

@@ -12,6 +12,7 @@ skýribreytu sem og fleiri en einni skýribreytu eru ræddar undir lok
 hans.
 
 Í kafla :numref:`%s <s.likanmetid>` kynnum við skipunina ``lm()`` sem metur
+Í kafla :numref:`%s <s.likanmetid>` kynnum við skipunina ``lm()`` sem metur
 einfalt línulegt aðhvarf og skoðum úttak hennar með ``summary()``. Þar
 næst, í kafla :numref:`%s <s.lmoryggis>`, skoðum við hvernig skipunin
 ``confint()`` gefur okkur öryggisbil fyrir stuðla líkansins. Í kafla
@@ -39,6 +40,8 @@ lm()
 
     **Forkröfur prófs:** Leifar normaldreifðar og handahófskenndar
 
+    **Forkröfur prófs:** Leifar normaldreifðar og handahófskenndar
+
 
 --------------
 
@@ -55,16 +58,21 @@ Aðferðin ``lm()`` metur gildi stikanna :math:`\beta_0` og
 
 -  Gagnatöflunni sem geymir gögnin.
 
+Munum að gildi á skýribreytu hefur áhrif á hvaða gildi svarbreyta mun taka, 
+þ.e. svarbreytan er alltaf háða breytan og skýribreytan sú óháða.  Eins og 
+til dæmis er hæð skýribreyta og þyngd svarbreyta. Magn áfengis í blóði er 
+svarbreyta en fjöldi áfengra drykkja er skýribreyta.  
+
 Þegar aðhvarfsgreining er framkvæmd margborgar sig að búa til hlut sem
 inniheldur allt það sem hún skilar. Metum nú stuðla í líknai sem lýsir 
 því hvaða áhrif lengd á skotti hefur á heildarlengd pokarottu og vistum
 líknaið undir nafninu ``lm1``. Þar sem við metum áhrif lengd á skotti á 
-heildarlengd pokarottu. Hér er svarbreytan ``tail_l`` og ``total_l`` 
+heildarlengd pokarottu. Hér er svarbreytan ``lengd_skott`` og ``heildarlengd`` 
 skýribreytan.
 
 ::
 
-   lm1<-lm(tail_l~total_l,data=possum)
+   lm1<-lm(lengd_skott~heildarlengd,data=pokarotta)
    names(lm1)
    ##  [1] "coefficients"  "residuals"     "effects"       "rank"
    ##  [5] "fitted.values" "assign"        "qr"            "df.residual"
@@ -80,14 +88,17 @@ aðhvarfsgreiningarhlutnum ``lm1`` til að fá ýmsar upplýsingar:
    summary(lm1)
    ##
    ## Call:
-   ## lm(formula = tail_l ~ total_l, data = possum)
+   ## lm(formula = lengd_skott ~ heildarlengd, data = pokarotta)
    ##
    ## Residuals:
    ##     Min      1Q  Median      3Q     Max
    ## -3.4441  -1.2476  0.1131   1.0238  4.8560
+   ## -3.4441  -1.2476  0.1131   1.0238  4.8560
    ##
    ## Coefficients:
    ##               Estimate Std. Error t value Pr(>|t|)
+   ## (Intercept)    14.61613    3.23648  4.516   1.7e-05 ***
+   ## haed           0.25713    0.03712   6.927   3.94e-10 ***
    ## (Intercept)    14.61613    3.23648  4.516   1.7e-05 ***
    ## haed           0.25713    0.03712   6.927   3.94e-10 ***
    ## ---
@@ -96,19 +107,28 @@ aðhvarfsgreiningarhlutnum ``lm1`` til að fá ýmsar upplýsingar:
    ## Residual standard error: 1.624 on 102 degrees of freedom
    ## Multiple R-squared:  0.32, Adjusted R-squared:  0.3133
    ## F-statistic: 47.99 on 1 and 102 DF,  p-value:  3.935e-10
+   ## Residual standard error: 1.624 on 102 degrees of freedom
+   ## Multiple R-squared:  0.32, Adjusted R-squared:  0.3133
+   ## F-statistic: 47.99 on 1 and 102 DF,  p-value:  3.935e-10
 
 Ýmislegt má lesa út úr úttakinu. Þar ber helst að:
 
 -  Matið á skurðpunktinum (:math:`b_0`) er 14.61613
+-  Matið á skurðpunktinum (:math:`b_0`) er 14.61613
 
+-  Matið á hallatölunni (:math:`b_1`) er 0.25713.
 -  Matið á hallatölunni (:math:`b_1`) er 0.25713.
 
 -  Prófstærðin t = 4.516 kannar tilgátuprófið hvort :math:`\beta_0 = 0`.
+-  Prófstærðin t = 4.516 kannar tilgátuprófið hvort :math:`\beta_0 = 0`.
 
+-  Prófstærðin t = 6.927 kannar tilgátuprófið hvort :math:`\beta_1 = 0`.
 -  Prófstærðin t = 6.927 kannar tilgátuprófið hvort :math:`\beta_1 = 0`.
 
 -  Skýringarhlutfallið er :math:`R^2` = 0.3133.
+-  Skýringarhlutfallið er :math:`R^2` = 0.3133.
 
+-  Matið á :math:`\sigma` er :math:`s_e =` 1.624.
 -  Matið á :math:`\sigma` er :math:`s_e =` 1.624.
 
 .. _s.lmoryggis:
@@ -145,11 +165,16 @@ er að það sé 95%.
    ##                    2.5 %      97.5 %
    ## (Intercept)       8.1965963   21.0356650
    ## total_l           0.1835114   0.3307585
+   ##                    2.5 %      97.5 %
+   ## (Intercept)       8.1965963   21.0356650
+   ## total_l           0.1835114   0.3307585
 
 Hér sést að:
 
 -  Öryggisbil fyrir :math:`\beta_0` er :math:`[8.1965963, 21.0356650]`.
+-  Öryggisbil fyrir :math:`\beta_0` er :math:`[8.1965963, 21.0356650]`.
 
+-  Öryggisbil fyrir :math:`\beta_1` er :math:`[0.1835114, 0.3307585]`.
 -  Öryggisbil fyrir :math:`\beta_1` er :math:`[0.1835114, 0.3307585]`.
 
 .. _s.lmleifar:
@@ -169,17 +194,24 @@ normaldreifðar, með sömu dreifni. Leifarnar má nálgast með:
    ##  -2.386841060  -1.629706138  -1.015408521   -1.143975982
    ##            10            11            12             13  
    ##  -0.129706138   1.370293862  -2.772543443   -1.629706138
+   ##             1             2             4              5     
+   ##  -1.501138677  -1.643975982  -0.172515669   -0.272543443   
+   ##             6             7             8              9
+   ##  -2.386841060  -1.629706138  -1.015408521   -1.143975982
+   ##            10            11            12             13  
+   ##  -0.129706138   1.370293862  -2.772543443   -1.629706138
    ....
 
 Gott er að teikna normaldreifingarrit af leifunum. Takið eftir því að
 hér mötum við skipunina ``ggplot()`` með aðhvarfsgreiningarhlutnum
-``lm1``, en ekki gagnatöflunni ``puls``.
+``lm1``, en ekki gagnatöflunni ``pokarotta``.
 
 ::
 
    ggplot(data=lm1, aes(sample=.resid)) + stat_qq()
 
 .. figure:: myndir/mynd10_1.svg
+   :align: center
 
 .. _s.lmspa:
 
@@ -210,17 +242,24 @@ nafninu á aðhvarfsgreiningarhlutnum, nafninu á skýribreytunni og
 gagnatöflu sem inniheldur þau gildi á skýribreytunni sem við viljum fá
 spá fyrir. Hér fyrir neðan reiknum við spá fyrir leng skotts á 90 cm 
 langri pokarottu:
+spá fyrir. Hér fyrir neðan reiknum við spá fyrir leng skotts á 90 cm 
+langri pokarottu:
 
 ::
 
    predict(lm1,newdata=data.frame(total_l=90))
+   predict(lm1,newdata=data.frame(total_l=90))
    ##        1
+   ## 37.75827
    ## 37.75827
 
 Aðferðina má einnig nota til að fá spábil:
 
 ::
 
+   predict(lm1,interval="prediction",newdata=data.frame(total_l=90))
+   ##        fit      lwr         upr
+   ## 1 37.75827  34.5149   41.00164
    predict(lm1,interval="prediction",newdata=data.frame(total_l=90))
    ##        fit      lwr         upr
    ## 1 37.75827  34.5149   41.00164
@@ -234,22 +273,26 @@ Tilgátupróf fyrir :math:`\rho` má framkvæma með ``cor.test()``
 aðferðinni. Við þurfum að mata aðferðina með heitunum á breytunum sem
 við ætlum að kanna fylgnina á milli. Viljum við kanna fylgnina á milli
 breytanna ``tail_l`` og ``total_l`` notum við skipunina:
+breytanna ``tail_l`` og ``total_l`` notum við skipunina:
 
 ::
 
-   cor.test(possum$tail_l,possum$total_l)
+   cor.test(pokarotta$lengd_skott,pokarotta$heildarlengd)
    ##
    ##  Pearson's product-moment correlation
    ##
-   ## data:  possum$tail_l and possum$total_l
+   ## data:  pokarotta$lengd_skott and pokarotta$heildarlengd
    ## t = 6.9275, df = 102, p-value = 3.935e-10
    ## alternative hypothesis: true correlation is not equal to 0
    ## 95 percent confidence interval:
    ##   0.4186653 0.6837485
+   ##   0.4186653 0.6837485
    ## sample estimates:
    ##       cor
    ## 0.5656455 
+   ## 0.5656455 
 
+Takið eftir að prófstærðin er t = 6.9275 sem er nákvæmlega það sama og
 Takið eftir að prófstærðin er t = 6.9275 sem er nákvæmlega það sama og
 þegar við prófuðum núlltilgátuna :math:`H_0: \beta_1=0`.
 
@@ -284,22 +327,23 @@ og ``anova()`` aðferðirnar til að fá fervikagreiningartöfluna. Í stað
 ``aov()`` aðferðarinnar má nota ``lm()`` aðferðina líkt og við gerðum
 hér að ofan fyrir línulegu aðhvarfsgreininguna. Skoðum aftur samband
 ``total_l`` og ``sex`` en notum nú ``lm()`` aðferðina:
+``total_l`` og ``sex`` en notum nú ``lm()`` aðferðina:
 
 ::
 
-   lm.possum <- lm(total_l ~ sex, data = possum)
+   lm.pokarotta <- lm(heildarlengd ~ kyn, data = pokarotta)
 
 Við getum fengið fervikasummutöfluna á sama hátt og áður með ``anova()``
 aðferðinni:
 
 ::
 
-   anova(lm.possum)
+   anova(lm.pokarotta)
    ## Analysis of Variance Table
    ##
    ## Response: total_l
    ##               Df  Sum Sq  Mean Sq   F value   Pr(>F)
-   ## sex            1  49.12   49.116    2.6867    0.1043
+   ## kyn            1  49.12   49.116    2.6867    0.1043
    ## Residuals    102 1864.71  18.281
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
@@ -309,24 +353,28 @@ aðferðinni:
 
 ::
 
-   summary(lm.possum)
+   summary(lm.pokarotta)
    ##
    ## Call:
-   ## lm(formula = total_l ~ sex, data = possum)
+   ## lm(formula = heildarlengd ~ kyn, data = pokarotta)
    ##
    ## Residuals:
    ##     Min      1Q  Median      3Q     Max
+   ## -12.907  -2.511   0.093   2.989   9.489 
    ## -12.907  -2.511   0.093   2.989   9.489 
    ##
    ## Coefficients:
    ##                      Estimate Std. Error   t value   Pr(>|t|)
    ## (Intercept)            87.9070     0.6520  134.819  <2e-16 ***
-   ## sexm                   -1.3955     0.8514  -1.639    0.104
+   ## kyn                    -1.3955     0.8514  -1.639    0.104
    ## ---
    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
    ##
    ## Residual standard error: 4.276 on 102 degrees of freedom
+   ## Residual standard error: 4.276 on 102 degrees of freedom
    ##   (22 observations deleted due to missingness)
+   ## Multiple R-squared:  0.02566,    Adjusted R-squared:  0.01611
+   ## F-statistic: 2.687 on 1 and 102 DF,  p-value: 0.1043
    ## Multiple R-squared:  0.02566,    Adjusted R-squared:  0.01611
    ## F-statistic: 2.687 on 1 and 102 DF,  p-value: 0.1043
 
@@ -340,7 +388,9 @@ leggja gildið á viðkomandi stika við matið fyrir viðmiðunarflokkinn.
 Í dæminu hér að ofan má því lesa eftirfarandi:
 
 - Matið á lengd kvenkyns pokarottu er 87.9070.
+- Matið á lengd kvenkyns pokarottu er 87.9070.
 
+- Matið á lengd karlkyns pokarottu er 87.9070 + (-1.3955) = 86.5115.
 - Matið á lengd karlkyns pokarottu er 87.9070 + (-1.3955) = 86.5115.
 
 .. _s.lmfleiribreytur:

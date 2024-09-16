@@ -114,10 +114,12 @@ til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.
 Við getum að sjálfsögðu matað sample með nafni á breytu sem tilheyrir
 gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
 Hvenær fæddist Napóleon? Gerum við það með:
+gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
+Hvenær fæddist Napóleon? Gerum við það með:
 
 ::
 
-   sample(dat$napoleon_faeddur,10)
+   sample(konnun$napoleon_faeddur,10)
    ##  [1] 1769 1770 1750 1874 1700 1498 1769 1560 1690 1800
 
 .. _s.urtaksdreifing:
@@ -149,16 +151,21 @@ meðaltalið byggir á nægjanlega mörgum mælingum, óháð því hver upphafl
 dreifing slembistærðarinnar var. Gott dæmi um hana má sjá með því að
 skoða breytuna ``ferdatimi_skoli`` sem lýsir því hve lengi nemendur eru á
 leið í skóla. Byrjum á því að skoða stuðlarit af
+skoða breytuna ``ferdatimi_skoli`` sem lýsir því hve lengi nemendur eru á
+leið í skóla. Byrjum á því að skoða stuðlarit af
 breytunni.
 
 ::
 
-   ggplot(data = dat, aes(ferdatimi_skoli)) + geom_histogram()
+   ggplot(data = konnun, aes(ferdatimi_skoli)) + geom_histogram()
 
 .. figure:: myndir/mynd6_1.svg   
+   :align: center
 
 Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
+Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
+útlaga til hægri að auki. Hins vegar er *meðaltal* ferdatimi_skoli
 útlaga til hægri að auki. Hins vegar er *meðaltal* ferdatimi_skoli
 normaldreift, sé tekið meðaltal af nægjanlega mörgum mælingum. Með
 skipuninni ``replicate()`` getum við framkvæmt 1000 "gervitilraunir"
@@ -167,7 +174,7 @@ mælinganna okkar:
 
 ::
 
-   endurvalsurtak <- replicate(1000, sample(dat$ferdatimi_skoli, 100,replace=T))
+   endurvalsurtak <- replicate(1000, sample(konnun$ferdatimi_skoli, 100,replace=T))
 
 Útkoman er fylki með 1000 dálka, einn fyrir hverja gervitilraun og 100
 línur, eina fyrir hverja útkomu í hverri gervitilraun.
@@ -192,6 +199,7 @@ vera normaldreifð:
    ggplot(data = data.frame(medaltol), aes(medaltol)) + geom_histogram()
 
 .. figure:: myndir/mynd6_2.svg
+   :align: center
 
 Athugið að hér er lykilatriði að nægjanlega mörg viðfangsefni séu valin
 í hverju og einu gerviúrtaki. Sé eingöngu valið gerviúrtak af stærð 3 í
@@ -201,7 +209,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
 ::
 
    litid.endurvalsurtak <-
-   replicate(1000, sample(dat$ferdatimi_skoli, 3,replace=T))
+   replicate(1000, sample(konnun$ferdatimi_skoli, 3,replace=T))
 
    ny.medaltol <-
    apply(litid.endurvalsurtak,2,mean, na.rm=T)
@@ -210,6 +218,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
    geom_histogram()
 
 .. figure:: myndir/mynd6_3.svg
+   :align: center
 
 .. _s.oryggisbil:
 
@@ -217,6 +226,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
 --------------------------------------
 
 Gerviúrtökin sem fengust með skipuninni ``replicate()`` má einnig nota
+til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 smíðað þannig að það innihaldi sanna gildið á stikanum í 95% tilvika ef
 tilraunin er endurtekin nægjanlega oft. Við getum notað metnu meðaltölin
@@ -229,7 +239,9 @@ reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.
    quantile(medaltol, c(0.025, 0.975))
    ##     2.5%    97.5%
    ##    16.81950 22.01025 
+   ##    16.81950 22.01025 
 
+95% öryggisbilið er því :math:`[16.81950, 22.01025 ]`.
 95% öryggisbilið er því :math:`[16.81950, 22.01025 ]`.
 
 
