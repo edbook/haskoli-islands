@@ -2368,7 +2368,7 @@ Setning: Eintæk línuleg vörpun
 
         **3.** Dálkvigrar fylkisins :math:`A` eru línulega óháðir.
 
-        **4.** Vörpunin :math:`T \colon \R^n \rightarrow \R^n`, :math:`\ve x \mapsto A \ve x` er eintæk.
+        **4.** Vörpunin :math:`T \colon \R^n \rightarrow \R^m`, :math:`\ve x \mapsto A \ve x` er eintæk.
 
 
 Setning: Átæk línuleg vörpun
