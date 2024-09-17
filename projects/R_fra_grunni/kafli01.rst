@@ -8,7 +8,6 @@ mælingum. Gróflega skiptist tölfræðin í tvo anga: að lýsa sem best þeim
 gögnum sem fyrirliggjandi eru og að draga ályktanir um almenna hópa eða
 þýði út frá mælingum á úrtaki. Í flestum tilfellum er unnið með mikið
 magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
-magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
 með aðstoð tölva. Sérhæfð tölfræðiforrit komu snemma fram á sjónarsviðið
 og eftir því sem að möguleikar þeirra, sem og reiknigeta tölva, jukust,
 varð beiting tölfræði víðfeðmari. Mikill fjöldi forrita eru sérsniðin
@@ -29,8 +28,6 @@ tilraunaverkefnis tveggja prófessora í tölfræði rétt fyrir aldamót.
 Prófessoranir tveir, Ross Ihaka og Robert Gentleman við háskólann í
 Auckland Nýja Sjálandi, þróuðu hugbúnaðinn fyrst til kennslu. Síðar vatt
 þróunin uppá sig, ekki síst vegna þess að hún var opin og í mikilli
-samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
-alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
 alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 önnur tölfræðiforrit er sveigjanleiki og fjöldi viðbóta, svonefndra
@@ -795,6 +792,8 @@ Skráin inniheldur eftirfarandi breytur:
 | lengd_skott       | í mm               |
 +-------------------+--------------------+
 
+Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
+Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.
 
 Vistið skránar í vinnumöppunni á vélinni ykkar en forðist að opna hana í
 töflureikni, sér í lagi Excel, undarlegustu hlutir geta gerst! Ef þið
@@ -808,7 +807,7 @@ draga hinar ýmsu ályktanir um þýði nemenda.
 Í þessari bók er einnig unnið mikið með gagnasettið ``kaupskra`` sem inniheldur 
 upplýsingar kaupverð, dagsetningu kaupsamnings og staðsetningu fasteignar.  
 
-Kaupskrá má nálgast á: https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/.
+Kaupskrá má nálgast á: https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/
 Þar er einnig hægt að nálgast upplýsingar um allar breytur í kaupskra.
 
 Leiksvæði fyrir R kóða

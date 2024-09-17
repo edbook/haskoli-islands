@@ -43,21 +43,16 @@ binom.test()
 
     **Forkröfur prófs:** Engar
 
-    **Forkröfur prófs:** Engar
-
 
 --------------
 
 Byrjum á því að nota ``prop.table()`` skipunina, (kassa
-:numref:`%s <rf.prop.table>`) til að sjá hvert uppáhalds dýr fólks er:
 :numref:`%s <rf.prop.table>`) til að sjá hvert uppáhalds dýr fólks er:
 
 ::
 
    prop.table(table(konnun$dyr))
    ##
-   ##     Hunda     Ketti 
-   ## 0.6318408 0.3681592
    ##     Hunda     Ketti 
    ## 0.6318408 0.3681592
 
@@ -75,11 +70,7 @@ einu með einni skipun:
    ## alternative hypothesis: true probability of success is not equal to 0.5
    ## 95 percent confidence interval:
    ##  0.5611205 0.6986092
-   ##  0.5611205 0.6986092
    ## sample estimates:
-   ## probability of success 
-   ##              0.6318408 
-
    ## probability of success 
    ##              0.6318408 
 
@@ -88,14 +79,8 @@ Lesa má geysimiklar upplýsingar úr úttakinu. Fyrst sjáum við að fjöldi
 heppnaðra tilrauna (sem í þessu tilviki er fjöldi þeirra sem er hrifinn af hundum) er 127,
 heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
 :math:`0.0002267`.
-heppnaðra tilrauna (sem í þessu tilviki er fjöldi þeirra sem er hrifinn af hundum) er 127,
-heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
-:math:`0.0002267`.
 
 Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
-öryggisbil fyrir hlutfallið, sem reynist
-:math:`[0.5611205, 0.6986092]`. Að lokum sjáum við sjálft matið á
-hlutfalli þeirra sem eru hrifinn af hundum í námskeiðinu, :math:`\hat{p} = 0.6318408`.
 öryggisbil fyrir hlutfallið, sem reynist
 :math:`[0.5611205, 0.6986092]`. Að lokum sjáum við sjálft matið á
 hlutfalli þeirra sem eru hrifinn af hundum í námskeiðinu, :math:`\hat{p} = 0.6318408`.
@@ -127,13 +112,9 @@ prop.test()
 
     **Forkröfur prófs:** Normalnálgun
 
-    **Forkröfur prófs:** Normalnálgun
-
 
 --------------
 
-Skoðum nú hvort hlutfall þeirra sem er hrifið af hundum og þeirra sem er hrifið af köttum sé það sama hjá iOS og
-Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
 Skoðum nú hvort hlutfall þeirra sem er hrifið af hundum og þeirra sem er hrifið af köttum sé það sama hjá iOS og
 Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
 ``prop.table()`` (kassi :numref:`%s <rf.prop.table>`).
@@ -142,9 +123,6 @@ Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan st
 
    prop.table(table(konnun$dyr, konnun$styrikerfi_simi), margin=2)
    ##
-   ##          Android       iOS
-   ##  Hunda 0.5957447 0.6428571
-   ##  Ketti 0.4042553 0.3571429
    ##          Android       iOS
    ##  Hunda 0.5957447 0.6428571
    ##  Ketti 0.4042553 0.3571429
@@ -164,25 +142,17 @@ einu með einni skipun:
    ## alternative hypothesis: two.sided
    ## 95 percent confidence interval:
    ##  -0.2204061  0.1261812
-   ##  -0.2204061  0.1261812
    ## sample estimates:
    ##    prop 1    prop 2 
    ## 0.5957447 0.6428571 
-   ##    prop 1    prop 2 
-   ## 0.5957447 0.6428571 
 
-Fyrst sjáum við að prófstærðin er 0.17091, sem fylgir kí-kvaðrat prófi
-með 1 frígráðu og p-gildi tilgátuprófsins er 0.6793.
 Fyrst sjáum við að prófstærðin er 0.17091, sem fylgir kí-kvaðrat prófi
 með 1 frígráðu og p-gildi tilgátuprófsins er 0.6793.
 
 Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir mismun hlutfallanna, sem reyndist
 :math:`[-0.2204061, 0.1261812]`.
-:math:`[-0.2204061, 0.1261812]`.
 
-Að lokum sjáum við sjálf mötin á hlutfalli þeirra sem eru hrifinn af hundum eftir stýrikerfi,
-0.5957447 hjá Android notendum og 0.6428571 hjá iOS notendum.
 Að lokum sjáum við sjálf mötin á hlutfalli þeirra sem eru hrifinn af hundum eftir stýrikerfi,
 0.5957447 hjá Android notendum og 0.6428571 hjá iOS notendum.
 
@@ -203,8 +173,6 @@ felst að flokkabreytan með fleiri en tvo flokka sé tilgreind á undan
    ## X-squared = 1.0863, df = 2, p-value = 0.5809
    ## alternative hypothesis: two.sided
    ## sample estimates:
-   ##    prop 1    prop 2    prop 3 
-   ## 0.5897436 0.6703297 0.6056338
    ##    prop 1    prop 2    prop 3 
    ## 0.5897436 0.6703297 0.6056338
 
@@ -241,12 +209,9 @@ chisq.test()
 
     **Forkröfur prófs:** Normalnálgun, allar töflur í væntitöflu >5
 
-    **Forkröfur prófs:** Normalnálgun, allar töflur í væntitöflu >5
-
 
 --------------
 
-Könnum nú hvort samband sé á milli hvaða ís nemendur velja og hvort þau hafi kosið.
 Könnum nú hvort samband sé á milli hvaða ís nemendur velja og hvort þau hafi kosið.
 Við byrjum á að búa til töflu mældrar tíðni:
 
@@ -261,8 +226,6 @@ Við byrjum á að búa til töflu mældrar tíðni:
 
 Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
 frígráðum og p-gildi tilgátuprófsins er 0.8113.
-Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
-frígráðum og p-gildi tilgátuprófsins er 0.8113.
 
 Munið að til þess að geta notað kí-kvaðrat prófið þurfa allar tölurnar í
 væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnitöflu
@@ -274,10 +237,6 @@ væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnit�
    kikv1<-chisq.test(table(puls$namskeid,puls$likamsraektf))
    kikv1$expected
    ##
-   ##                 Rangt     Rétt
-   ##   Jarðaberja 11.05970 27.94030
-   ##   Súkkulaði  25.80597 65.19403
-   ##   Vanilla    20.13433 50.86567
    ##                 Rangt     Rétt
    ##   Jarðaberja 11.05970 27.94030
    ##   Súkkulaði  25.80597 65.19403
@@ -336,8 +295,6 @@ fisher.test()
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil ofl.
     
     **Helstu stillingar:** conf.level, p
-
-    **Forkröfur prófs:** Engar
 
     **Forkröfur prófs:** Engar
 

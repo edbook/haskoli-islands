@@ -43,8 +43,6 @@ var.test()
 
     **Forkröfur prófs:** Normaldreifing
 
-    **Forkröfur prófs:** Normaldreifing
-
 
 --------------
 
@@ -91,8 +89,6 @@ stillingunni ``alternative`` ráðum við gagntilgátunni.
 
 Viljum við kanna hvort dreifni í ferðatíma sé mismunandi á milli þeirra sem koma gangandi í skólann
 og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):
-Viljum við kanna hvort dreifni í ferðatíma sé mismunandi á milli þeirra sem koma gangandi í skólann
-og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):
 
 ::
 
@@ -105,31 +101,19 @@ og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):
    ## alternative hypothesis: true ratio of variances is not equal to 1
    ## 95 percent confidence interval:
    ##  3.053460 8.912866
-   ##  3.053460 8.912866
    ## sample estimates:
-   ## ratio of variances 
-   ##           5.473898
    ## ratio of variances 
    ##           5.473898
 
 Úr úttakinu má lesa m.a. eftirfarandi:
 
 -  Gildið á prófstærðinni: :math:`f` = 5.4739
--  Gildið á prófstærðinni: :math:`f` = 5.4739
 
--  p-gildið: 2.875e-07
 -  p-gildið: 2.875e-07
 
 -  Öryggisbilið: 95 percent confidence interval:
    :math:`[3.053460, 8.912866]`
-   :math:`[3.053460, 8.912866]`
 
-Við sjáum að p-gildið er minna en 0.05 svo við höfnum núlltilgátunni
-og drögum þá ályktun að munur sé á dreifni ferðatíma eftir því hvort farið sé gangandi eða ekki. 
-Við sjáum líka að 95% öryggisbil fyrir hlutfallið á dreifninni er
-:math:`[3.053460, 8.912866]`. Hlutlausa ástandið er að hlutfallið sé 1
-(því þá er dreifnin jöfn í báðum hópum). Takið eftir að öryggisbilið
-inniheldur ekki töluna 1 í samræmi við að við höfnum núlltilgátunni.
 Við sjáum að p-gildið er minna en 0.05 svo við höfnum núlltilgátunni
 og drögum þá ályktun að munur sé á dreifni ferðatíma eftir því hvort farið sé gangandi eða ekki. 
 Við sjáum líka að 95% öryggisbil fyrir hlutfallið á dreifninni er
@@ -151,8 +135,6 @@ bartlett.test()
 
     **Forkröfur prófs:** Normaldreifing
 
-    **Forkröfur prófs:** Normaldreifing
-
 
 --------------
 
@@ -168,8 +150,6 @@ munur sé á dreifni hópanna. Við mötum aðferðina með
 
 Viljum við kanna hvort dreifni ferðatíma sé ólík á milli 
 einhverra tveggja ferðamáta gerum við það með:
-Viljum við kanna hvort dreifni ferðatíma sé ólík á milli 
-einhverra tveggja ferðamáta gerum við það með:
 
 ::
 
@@ -180,9 +160,6 @@ einhverra tveggja ferðamáta gerum við það með:
    ## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli
    ## Bartlett's K-squared = 31.33, df = 4, p-value = 2.622e-06
 
-Við sjáum að gildið á prófstærðinni er :math:`31.33` og p-gildið er
-:math:`2.622e-06`. P-gildið er minna en 0.05 og því höfnum við núlltilgátunni
-og ályktum að dreifnin sé misjöfn í einhverjum tveimur hóp.
 Við sjáum að gildið á prófstærðinni er :math:`31.33` og p-gildið er
 :math:`2.622e-06`. P-gildið er minna en 0.05 og því höfnum við núlltilgátunni
 og ályktum að dreifnin sé misjöfn í einhverjum tveimur hóp.
@@ -204,8 +181,6 @@ t.test()
     **Úttak:** gildi á prófstærð, p-gildi, öryggisbil og fleira
     
     **Helstu stillingar:** paired, mu, alternative, conf.level
-
-    **Forkröfur prófs:** Meðaltöl normaldreifð, þ.e. mörg úrtök eða normaldreifð gögn
 
     **Forkröfur prófs:** Meðaltöl normaldreifð, þ.e. mörg úrtök eða normaldreifð gögn
 
@@ -244,9 +219,6 @@ Sjálfgefið er að kanna núlltilgátuna: :math:`H_0: \mu=0`. Slíkur
 samanburður er óáhugaverður ef við viljum t.d. kanna ferðatíma nemenda í skólann
 því líklega búa mjög fáir nemendur í háskólabíó. Könnum frekar hvort ferðatíminn
 sé frábrugðinn 20 og tilgreinum það með stillingunni ``mu``.
-samanburður er óáhugaverður ef við viljum t.d. kanna ferðatíma nemenda í skólann
-því líklega búa mjög fáir nemendur í háskólabíó. Könnum frekar hvort ferðatíminn
-sé frábrugðinn 20 og tilgreinum það með stillingunni ``mu``.
 
 ::
 
@@ -259,29 +231,21 @@ sé frábrugðinn 20 og tilgreinum það með stillingunni ``mu``.
    ## alternative hypothesis: true mean is not equal to 20
    ## 95 percent confidence interval:
    ##  17.46685 21.38887
-   ##  17.46685 21.38887
    ## sample estimates:
-   ## mean of x 
-   ##  19.42786 
    ## mean of x 
    ##  19.42786 
 
 Í úttakinu eru fólgnar gífurlegar upplýsingar. Við fáum:
 
 -  Prófstærðina: t = -0.57532
--  Prófstærðina: t = -0.57532
 
 -  Fjölda frígráða: 200
--  Fjölda frígráða: 200
 
--  p-gildið: :math:`0.5657`
 -  p-gildið: :math:`0.5657`
 
 -  Öryggisbilið, með örygginu tilgreindu: 95 percent confidence
    interval: :math:`[17.46685, 21.38887]`
-   interval: :math:`[17.46685, 21.38887]`
 
--  Úrtaksmeðaltalið: mean of x 19.42786
 -  Úrtaksmeðaltalið: mean of x 19.42786
 
 .. _s.tvomedaltol:
@@ -295,7 +259,6 @@ mælingar geta gögnin okkar verið á mismunandi formi. Annars vegar geta
 gögnin verið á löngu sniði, þar sem að ein breyta inniheldur mælingarnar
 á talnabreytunni og önnur breyta tilgreinir hvaða hópi hver og ein
 mæling tilheyrir. Algengast er að gögn séu geymd á slíku sniði og eru
-gögnin um ferðatíma og máta dæmi. Hins vegar geta gögnin verið á víðu sniði þar sem búið
 gögnin um ferðatíma og máta dæmi. Hins vegar geta gögnin verið á víðu sniði þar sem búið
 er að skipta talnabreytunni upp í tvær breytur, eina fyrir hvorn hóp.
 
@@ -317,7 +280,6 @@ sniði gögnin eru. Enn fremur er hægt að gefa eftirfarandi stillingar
 
 Segjum sem svo að við viljum bera saman fyrri púls nemenda eftir kynjum.
 Þar sem ferðatímagögnin eru á löngu sniði gefum við skipunina:
-Þar sem ferðatímagögnin eru á löngu sniði gefum við skipunina:
 
 ::
 
@@ -328,34 +290,24 @@ Segjum sem svo að við viljum bera saman fyrri púls nemenda eftir kynjum.
    ## alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
    ## 95 percent confidence interval:
    ##  11.28187 17.21830
-   ##  11.28187 17.21830
    ## sample estimates:
-   ## mean in group FALSE  mean in group TRUE 
-   ##           21.838323            7.588235 
    ## mean in group FALSE  mean in group TRUE 
    ##           21.838323            7.588235 
 
 Í úttakinu eru fólgnar gífurlegar upplýsingar. Við fáum:
 
 -  Prófstærðina: t = 9.5068
--  Prófstærðina: t = 9.5068
 
 -  Fjölda frígráða: 118.32
--  Fjölda frígráða: 118.32
 
--  p-gildið: 2.889e-16
 -  p-gildið: 2.889e-16
 
 -  Öryggisbilið, með örygginu tilgreindu: 95 percent confidence
    interval: :math:`[11.28187,17.21830]`
-   interval: :math:`[11.28187,17.21830]`
 
--  Úrtaksmeðaltölin: 21.838323, 7.588235
 -  Úrtaksmeðaltölin: 21.838323, 7.588235
 
 Séu gögnin á víðu sniði er ``t.test()`` mötuð með breytunum tveimur sem
-bera á saman. Í þessu tilviki komum við ferðatímagögnunum á vítt snið með
-aðstoð skipunarinnar ``pivot_wider``, sem kynnt var í kassa
 bera á saman. Í þessu tilviki komum við ferðatímagögnunum á vítt snið með
 aðstoð skipunarinnar ``pivot_wider``, sem kynnt var í kassa
 :numref:`%s <rf.spread>`.
@@ -370,29 +322,20 @@ aðstoð skipunarinnar ``pivot_wider``, sem kynnt var í kassa
 Athugið að ef við hefðum ekki notað stillinguna ``names_prefix`` hefðum við fengið dálkanöfnin
 ``TRUE`` og ``FALSE`` en það eru frátekin lykilorð í R. Við hefðum þó geta nálgast dálkana
 með því að nota gæsalappir eða úrfellingarmerki, t.d. ``"TRUE"``.
-Athugið að ef við hefðum ekki notað stillinguna ``names_prefix`` hefðum við fengið dálkanöfnin
-``TRUE`` og ``FALSE`` en það eru frátekin lykilorð í R. Við hefðum þó geta nálgast dálkana
-með því að nota gæsalappir eða úrfellingarmerki, t.d. ``"TRUE"``.
 Hérna framkvæmum við sama t-prófið með skipuninni:
 
 ::
 
-   t.test(ferdirvitt$Gangandi_FALSE, ferdirvitt$Gangandi_TRUE)
    t.test(ferdirvitt$Gangandi_FALSE, ferdirvitt$Gangandi_TRUE)
    ##
    ##  Welch Two Sample t-test
    ##
    ## data:  ferdirvitt$Gangandi_FALSE and ferdirvitt$Gangandi_TRUE
    ## t = 9.5068, df = 118.32, p-value = 2.889e-16
-   ## data:  ferdirvitt$Gangandi_FALSE and ferdirvitt$Gangandi_TRUE
-   ## t = 9.5068, df = 118.32, p-value = 2.889e-16
    ## alternative hypothesis: true difference in means is not equal to 0
    ## 95 percent confidence interval:
    ##  11.28187 17.21830
-   ##  11.28187 17.21830
    ## sample estimates:
-   ## mean of x mean of y 
-   ## 21.838323  7.588235 
    ## mean of x mean of y 
    ## 21.838323  7.588235 
 
@@ -547,8 +490,6 @@ wilcox.test()
     **Úttak:** gildi á prófstærð, p-gildi
     
     **Helstu stillingar:** paired, mu, alternative
-
-    **Forkröfur prófs:** Munur á dreifingu er hliðrun um fasta
 
     **Forkröfur prófs:** Munur á dreifingu er hliðrun um fasta
 

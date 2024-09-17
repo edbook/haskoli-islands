@@ -455,15 +455,6 @@ að talnabreytur séu ranglega vistaðar sem flokkabreytur og getur það t.d.
 gerst þegar einhverjar mælingar á breytunni innihalda bókstafi eða þegar ekki 
 er rétt tilgreint hvernig tugabrot eru aðskilin. Þetta þarf allt að laga 
 áður en úrvinnsla hefst.
-um þetta er að nota gildið 1 ef samningur er ónothæfur og 0 ef samningurinn
-er nothæfur í kaupskrá í breytunni ``onothaefur_samningur``. Þar sem breytan 
-inniheldur eingöngu tölur er ``onothaefur_samningur`` skilgreind sem talnabreyta 
-eftir innlestur í R. Áður en úrvinnsla hefst þarf að breyta talnabreytunni 
-í flokkabreytu (sjá kafla :numref:`%s <s.kodun>` ). Það getur einnig gerst 
-að talnabreytur séu ranglega vistaðar sem flokkabreytur og getur það t.d. 
-gerst þegar einhverjar mælingar á breytunni innihalda bókstafi eða þegar ekki 
-er rétt tilgreint hvernig tugabrot eru aðskilin. Þetta þarf allt að laga 
-áður en úrvinnsla hefst.
 
 View()
 ^^^^^^
@@ -710,7 +701,6 @@ smíðar gagnatöfluna ``konnun2`` sem inniheldur aðeins einstaklinga sem
 enga mælingu vantar hjá. Gætið ykkar að við viljum afar sjaldan eyða út
 öllum einstaklingum í gagnatöflu sem vantar *einhverja* mælingu hjá.
 Segjum sem sem dæmi að það vanti margar mælingar á breytunni ``smjor_kostar``
-Segjum sem sem dæmi að það vanti margar mælingar á breytunni ``smjor_kostar``
 í gagnasafninu okkar en í raun höfum við mestan áhuga á að rannsaka
 breytuna ``messi_staerd``. Með því að henda út öllum einstaklingum sem vantar
 mælingar á breytunni ``smjor_kostar`` erum við búin að henda út mælingum sem
@@ -757,16 +747,9 @@ vigursins inniheldur útkomuvigurinn TRUE í tilsvarandi sæti, en FALSE
 annars. Í skipuninni hér að neðan skoðum við vigurinn 
 ``kaupskra$onothaefur_samningur`` sem inniheldur hvort samningur sé nothæfur 
 eða ekki.
-annars. Í skipuninni hér að neðan skoðum við vigurinn 
-``kaupskra$onothaefur_samningur`` sem inniheldur hvort samningur sé nothæfur 
-eða ekki.
 
 ::
 
-   kaupskra$onothaefur_samningur == 0
-   ##   [1] TRUE TRUE  FALSE  FALSE  TRUE  FALSE  FALSE FALSE  FALSE FALSE FALSE
-   ##  [12] FALSE  TRUE TRUE  TRUE  TRUE TRUE TRUE  TRUE TRUE  TRUE  TRUE
-   ##  [23] TRUE  FALSE  TRUE  TRUE FALSE  FALSE FALSE  FALSE FALSE  TRUE FALSE
    kaupskra$onothaefur_samningur == 0
    ##   [1] TRUE TRUE  FALSE  FALSE  TRUE  FALSE  FALSE FALSE  FALSE FALSE FALSE
    ##  [12] FALSE  TRUE TRUE  TRUE  TRUE TRUE TRUE  TRUE TRUE  TRUE  TRUE
@@ -788,7 +771,6 @@ Berið útkomuvigurinn saman við vigurinn
    ....
 
 þannig sjáið þið að útkomuvigurinn inniheldur ``FALSE`` alls staðar þar
-sem ``kaupskra$onothaefur_samningur`` hefur gildið ``1`` en ``TRUE`` annars.
 sem ``kaupskra$onothaefur_samningur`` hefur gildið ``1`` en ``TRUE`` annars.
 Samanburðarvirkinn er mikið notaður við lagskiptingu gagna.
 
@@ -844,8 +826,6 @@ skilar skipunin:
 
 gildinu ``TRUE`` ef breytan ``systkini_fjoldi`` tekur eitthvert gildanna 0,
 3 eða 7, en ``FALSE`` annars.
-gildinu ``TRUE`` ef breytan ``systkini_fjoldi`` tekur eitthvert gildanna 0,
-3 eða 7, en ``FALSE`` annars.
 
 slice()
 ^^^^^^^
@@ -889,14 +869,11 @@ eða *lag* af gagnatöflunni okkar. Við mötum hana með nafninu á
 gagnatöflunni sem við viljum lagskipta ásamt skilyrðum sem það lag sem
 við ætlum að draga út þarf að uppfylla. Við getum t.d. búið til nýja
 gagnatöflu sem inniheldur aðeins þá sem eiga engin systkini með:
-gagnatöflu sem inniheldur aðeins þá sem eiga engin systkini með:
 
 ::
 
    engin_systkini<-filter(konnun, systkini_fjoldi==0)
 
-Ef við viljum skoða gögn þeirra sem finnst jarðaberjaís bestur og kunna 
-betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný gagnatafla):
 Ef við viljum skoða gögn þeirra sem finnst jarðaberjaís bestur og kunna 
 betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný gagnatafla):
 
@@ -906,15 +883,6 @@ betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný ga
 
 ::
 
-   ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli 
-   ## 1  Jarðaberja  15                Android           Með einkabíl    
-   ## 2  Jarðaberja  7                 Android           Gangandi/ skokkandi
-   ##    systkini_fjoldi   dyr      feministi   staerdfraedi_gaman   smjor_kostar
-   ## 1  1                 Hunda    Rétt        9                    750
-   ## 2  3                 Hunda    Rétt        7                    279
-   ##    napoleon_faeddur  stefnumot      messi_staerd   kosid
-   ## 1  1750              Á kaffihús     170            Rétt
-   ## 2  1551              Á ísrúnt       179            Rétt
    ##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli 
    ## 1  Jarðaberja  15                Android           Með einkabíl    
    ## 2  Jarðaberja  7                 Android           Gangandi/ skokkandi
@@ -952,7 +920,6 @@ viðfangsefnum fyrir breyturnar sem við tilgreinum í seinni vigrinum.
    konnun[,2]
 
 mælingarnar á ferðatíma í skóla fyrir öll viðfangsefnin. Ef við sleppum seinni
-mælingarnar á ferðatíma í skóla fyrir öll viðfangsefnin. Ef við sleppum seinni
 vísavigrinum fáum við mælingar á öllum breytum fyrir viðfangsefnin sem
 við tilgreinum í fyrri vigrinum. Þannig gefur skipunin
 
@@ -970,7 +937,6 @@ við tilgreinum í fyrri vigrinum. Þannig gefur skipunin
    ## 52  359             1120              Í fjallgöngu    171            Rétt
 
 allar mælingar fyrir viðfangsefni númer 46 og 52.
-allar mælingar fyrir viðfangsefni númer 46 og 52.
 
 Að lokum getum við notað mínus til að skoða mælingar í gagnatöflu fyrir
 öll viðfangsefni *nema* einhver tiltekin, eða allar breytur *nema*
@@ -980,7 +946,6 @@ einhverjar tilteknar.
 
    konnun[-c(46,52), -2]
 
-gefur mælingar fyrir öll viðfangsefni *nema* númer 46 og 52 og allar
 gefur mælingar fyrir öll viðfangsefni *nema* númer 46 og 52 og allar
 breytur *nema* þá aðra.
 
@@ -1031,8 +996,6 @@ grep()
 
 Seinni skipunin er ``grep()``. Hún getur verið einstaklega handhæg ef
 við viljum sem dæmi búa til flokkabreytur út frá textastrengjum.
-Eftirfarandi skipun finnur til dæmis vísi allra þeirra ferdamati_skoli sem
-innihalda textastrenginn ``skokkandi``.
 Eftirfarandi skipun finnur til dæmis vísi allra þeirra ferdamati_skoli sem
 innihalda textastrenginn ``skokkandi``.
 
@@ -1110,14 +1073,10 @@ talnabreytur þegar gögnin eru lesin inn. Slíkt á t.d. við breytuna
 ``onothaefur_samningur`` í gagnatöflunni ``kaupskra``. Við notum skipunina 
 ``factor()`` til að gefa R til kynna að breyta sé flokkabreyta. Ef við viljum leiðrétta
 hvernig breytan ``onothaefur_samningur`` er vistuð í gagnatöflunni sjálfri notum við
-``onothaefur_samningur`` í gagnatöflunni ``kaupskra``. Við notum skipunina 
-``factor()`` til að gefa R til kynna að breyta sé flokkabreyta. Ef við viljum leiðrétta
-hvernig breytan ``onothaefur_samningur`` er vistuð í gagnatöflunni sjálfri notum við
 skipunina:
 
 ::
 
-   kaupskra$onothaefur_samningur <- factor(kaupskra$onothaefur_samningur)
    kaupskra$onothaefur_samningur <- factor(kaupskra$onothaefur_samningur)
 
 Takið eftir því að hér að ofan yfirskrifum við gömlu talnabreytuna
@@ -1125,24 +1084,15 @@ Takið eftir því að hér að ofan yfirskrifum við gömlu talnabreytuna
 Í þessu tilviki er það einmitt það sem við viljum gera. Það gæti þó komið 
 fyrir að við viljum halda í gömlu talnabreytuna en þá þurfum við að búa 
 til nýja breytu í stað þess að skrifa yfir þá gömlu. Til að gera það þurfum við
-``onothaefur_samningur`` með nýju flokkabreytunni (þær bera sama nafn). 
-Í þessu tilviki er það einmitt það sem við viljum gera. Það gæti þó komið 
-fyrir að við viljum halda í gömlu talnabreytuna en þá þurfum við að búa 
-til nýja breytu í stað þess að skrifa yfir þá gömlu. Til að gera það þurfum við
 að gæta að nota annað nafn en á upphaflegu talnabreytunni. Með
-eftirfarandi skipun búum við til nýja breytu ``onothaefur_samningur2`` 
-í gagnatöflunni ``kaupskra``.
 eftirfarandi skipun búum við til nýja breytu ``onothaefur_samningur2`` 
 í gagnatöflunni ``kaupskra``.
 
 ::
 
    kaupskra$onothaefur_samningur2 <- factor(kaupskra$onothaefur_samningur)
-   kaupskra$onothaefur_samningur2 <- factor(kaupskra$onothaefur_samningur)
 
 Hefðum við aðeins keyrt seinni ``factor()`` skipunina ættum við til
-talnabreytuna ``onothaefur_samningur`` í gagnatöflunni ásamt flokkabreytunni 
-``onothaefur_samningur2``.
 talnabreytuna ``onothaefur_samningur`` í gagnatöflunni ásamt flokkabreytunni 
 ``onothaefur_samningur2``.
 
@@ -1165,28 +1115,21 @@ levels()
 Hægt er að nota ``levels()`` skipunina til að endurskýra nöfn á flokkum
 í flokkabreytu. Viljum við endurskýra nöfnin á flokkunum í breytunni
 ``onothaefur_samningur`` er ágætt að byrja á að keyra skipunina
-``onothaefur_samningur`` er ágætt að byrja á að keyra skipunina
 
 ::
 
-   levels(kaupskra$onothaefur_samningur)
-   ## [1] "0" "1"
    levels(kaupskra$onothaefur_samningur)
    ## [1] "0" "1"
 
 því hún skilar okkur núverandi nöfnum. Viljum við breyta nöfnunum á
 flokkunum í ``Nothæfur samningur`` og ``Ónothæfur samningur`` gerum 
 við það með:
-flokkunum í ``Nothæfur samningur`` og ``Ónothæfur samningur`` gerum 
-við það með:
 
 ::
 
    levels(kaupskra$onothaefur_samningur)<-c("Nothæfur samningur","Ónothæfur samningur")
-   levels(kaupskra$onothaefur_samningur)<-c("Nothæfur samningur","Ónothæfur samningur")
 
 Hér þarf að passa að röðunin sé rétt miðað við gömlu heitin, annars
-breytum við öllum nothæfu samningunum í ónothæfa og öfugt.
 breytum við öllum nothæfu samningunum í ónothæfa og öfugt.
 
 B: Talnabreytum skipt upp í bil
@@ -1219,15 +1162,8 @@ að skipta viðfangsefnunum upp í þrjá flokka, þau sem eiga engin systkini,
 Gætið þess að skýra nýju breytuna eitthvað annað en ``systkini_fjoldi`` svo við 
 yfirskrifum ekki talnabreytuna heldur búum þess í stað til nýja breytu. Við mötum
 aðferðina með nafninu á talnabreytunni ``systkini_fjoldi`` og mörkunum á
-Búum nú til flokkabreytu úr talnabreytunni ``systkini_fjoldi``. Við ætlum
-að skipta viðfangsefnunum upp í þrjá flokka, þau sem eiga engin systkini,
-þau sem eiga nokkur systkini (1-2) og þau sem eiga mörg systkini (:math:`>` 3 ). 
-Gætið þess að skýra nýju breytuna eitthvað annað en ``systkini_fjoldi`` svo við 
-yfirskrifum ekki talnabreytuna heldur búum þess í stað til nýja breytu. Við mötum
-aðferðina með nafninu á talnabreytunni ``systkini_fjoldi`` og mörkunum á
 flokkunum. Ætlum við að tilgreina vinstri mörkin á flokkunum okkar
 (lægri mörkin) notum við ``right=F`` stillinguna. Við mötum því
-aðferðina með 0,1,3 (neðri mörkin á flokkunum okkar) en þurfum svo að
 aðferðina með 0,1,3 (neðri mörkin á flokkunum okkar) en þurfum svo að
 gefa efra mark á síðasta flokknum. Þetta þarf að vera gildi sem er
 a.m.k. einu gildi hærra en hæsta gildið sem talnabreytan tekur. Hér
@@ -1246,8 +1182,6 @@ Hér sjáum við hversu margir verða í hverjum flokki:
    ##
    ##   [0,1)   [1,3) [3,15)
    ##      3     123     75
-   ##   [0,1)   [1,3) [3,15)
-   ##      3     123     75
 
 Við getum svo notað ``levels()`` skipunina til að endurskýra flokkana:
 
@@ -1256,8 +1190,6 @@ Við getum svo notað ``levels()`` skipunina til að endurskýra flokkana:
    levels(konnun$systkini_fjoldi_stig)<-c("Engin","Nokkur","Mörg")
    table(konnun$systkini_fjoldi_stig)
    ##
-   ##    Engin    Nokkur   Mörg
-   ##    3        123      75
    ##    Engin    Nokkur   Mörg
    ##    3        123      75
 
@@ -1271,16 +1203,7 @@ sérstaklega kanna mun á þeim nemendum sem koma í skólann með ökutæki í
 samanburði við alla aðra nemendur. Þá væri sniðugt að hafa nýja breytu
 ``ferdamati_skoli_okutaeki`` sem tekur bara tvö gildi: ``med_okutaeki`` 
 og ``ekki_med_okutaeki``.
-heitið með skipuninni ``levels()``. Segjum að við viljum
-sérstaklega kanna mun á þeim nemendum sem koma í skólann með ökutæki í
-samanburði við alla aðra nemendur. Þá væri sniðugt að hafa nýja breytu
-``ferdamati_skoli_okutaeki`` sem tekur bara tvö gildi: ``med_okutaeki`` 
-og ``ekki_med_okutaeki``.
 
-Þegar við búum til breytuna ætlum við að sameina flokkana ``Með einkabíl`` og
-``Með strætó`` undir nafninu ``med_okutaeki`` og sameinum flokkana 
-``Á hjóli/ rafhlaupahjóli``, ``Gangandi/ skokkandi`` og ``Á annan hátt``. 
-Búum fyrst til afrit af breytunni og sjáum í hvaða röð flokkarnir eru taldir upp:
 Þegar við búum til breytuna ætlum við að sameina flokkana ``Með einkabíl`` og
 ``Með strætó`` undir nafninu ``med_okutaeki`` og sameinum flokkana 
 ``Á hjóli/ rafhlaupahjóli``, ``Gangandi/ skokkandi`` og ``Á annan hátt``. 
@@ -1293,9 +1216,6 @@ Búum fyrst til afrit af breytunni og sjáum í hvaða röð flokkarnir eru tald
    ## [1] "Á annan hátt"  "Á hjóli/ rafhlaupahjóli"  "Gangandi/ skokkandi"
    ## [4] "Með einkabíl"  "Með strætó"
 
-Flokkarnir sem við ætlum að sameina eru fyrstu þrír flokkarnir sem eru
-taldir upp. Því skrifum við ``ekki_med_okutaeki`` í fyrstu þrjú sætin en
-``með_okutakei`` í síðustu tv- sætin.
 Flokkarnir sem við ætlum að sameina eru fyrstu þrír flokkarnir sem eru
 taldir upp. Því skrifum við ``ekki_med_okutaeki`` í fyrstu þrjú sætin en
 ``með_okutakei`` í síðustu tv- sætin.
@@ -1399,14 +1319,9 @@ og nota til að búa til breytur. Þá kemur skipunin ``grep()``, sem við
 sáum í kassa :numref:`%s <rf.grep>`, að góðum notum. Ef við viljum sem dæmi búa
 til nýja breytu, ``ibud`` sem geymir hvort hús sé íbúðarhúsnæði 
 þá má útbúa hana með:
-til nýja breytu, ``ibud`` sem geymir hvort hús sé íbúðarhúsnæði 
-þá má útbúa hana með:
 
 ::
 
-   kaupskra$ibud <- NA
-   kaupskra$ibud[grep("Fjolbyli|Serbyli", kaupskra$tegund)] <- "Íbúðarhúsnæði"
-   kaupskra$ibud[grep("Atvinnuhusnaedi|Annað|Bilskur/skur|Sumarhus", kaupskra$tegund)] <- "Ekki íbúðarhúsnæði"
    kaupskra$ibud <- NA
    kaupskra$ibud[grep("Fjolbyli|Serbyli", kaupskra$tegund)] <- "Íbúðarhúsnæði"
    kaupskra$ibud[grep("Atvinnuhusnaedi|Annað|Bilskur/skur|Sumarhus", kaupskra$tegund)] <- "Ekki íbúðarhúsnæði"
@@ -1477,13 +1392,11 @@ rename()
 Hægt er, á auðveldan hátt, að endurskýra breytur í gagnatöflu með
 ``rename()`` aðferðinni. Viljum við t.d. breyta nafninu á breytunni
 ``is`` í ``uppahalds_is`` gerum við það með:
-``is`` í ``uppahalds_is`` gerum við það með:
 
 ::
 
    konnun<-rename(konnun,uppahalds_is=is)
 
-Til að valda ekki ruglingi hér breytum við nafninu aftur í ``is``
 Til að valda ekki ruglingi hér breytum við nafninu aftur í ``is``
 með:
 
@@ -1497,20 +1410,9 @@ G: Vörpunum beitt á talnabreytur
 Að lokum viljum við oft búa til nýjar, afleiddar breytur út frá öðrum
 flokkabreytum. Þannig getum við t.d. búið til breytuna fermetraverð út 
 frá kaupverði og einingarflatarmál eignar:
-flokkabreytum. Þannig getum við t.d. búið til breytuna fermetraverð út 
-frá kaupverði og einingarflatarmál eignar:
 
 ::
 
-   kaupskra$fermetraverd <- kaupskra$kaupverd*1000/kaupskra$einflm
-
-Athugið að hér þarf að margfalda kaupverð með 1000, þar sem í kaupskra 
-er kaupverd ekki gefið í milljónum.
-
-Hér má einnig nota ``mutate()`` fallið sem er oft þægilegra.
-::
-   
-   kaupskra <- mutate(kaupskra, fermetraverd=kaupverd*1000/einflm)
    kaupskra$fermetraverd <- kaupskra$kaupverd*1000/kaupskra$einflm
 
 Athugið að hér þarf að margfalda kaupverð með 1000, þar sem í kaupskra 
@@ -1533,23 +1435,11 @@ Ef gagnatöflurnar sem verið er að vinna með innihalda margar breytur
 getur verið gott að geta valið þær breytur sem við ætlum að vinna með á
 auðveldan hátt. Við getum t.d. búið til nýja gagnatöflu sem inniheldur
 aðeins breyturnar ``keupverd`` og ``einflm`` (takið eftir að nýja
-aðeins breyturnar ``keupverd`` og ``einflm`` (takið eftir að nýja
 gagnataflan er ekki geymd í nýjum hlut hér, ætlum við að nota hana
 þurfum við að búa til nýja töflu eins og hér að neðan).
 
 ::
 
-   select(kaupskra,einflm,kaupverd)
-   ##     einflm  kaupverd
-   ## 1   780.4   87000
-   ## 2   400.0   36000
-   ## 3   310.2   31000
-   ## 4   310.2   31000
-   ## 5   71.4    23500
-   ## 6   325.0   33500
-   ## 7   310.2   31000
-   ## 8   310.2   31000
-   ## 9   307.2   37000
    select(kaupskra,einflm,kaupverd)
    ##     einflm  kaupverd
    ## 1   780.4   87000
@@ -1567,15 +1457,12 @@ Getum búið til nýtt gagnasett sem inniheldur einungis breyturnar
 kaupverd og einflm með:
 
 ::
-
    kaupskra2 <-select(kaupskra, einflm, kaupverd)
 
 
 Við getum einnig notað ``select()`` aðferðina til að búa til nýja
 gagnatöflu sem inniheldur alla dálka upphaflegu töflunnar að
 undanskildum nokkrum. Viljum við t.d. búa til nýja gagnatöflu sem
-inniheldur allar breytur upphaflegu töflunnar nema ``postnr`` og
-``sveitarfelag`` gerum við það með:
 inniheldur allar breytur upphaflegu töflunnar nema ``postnr`` og
 ``sveitarfelag`` gerum við það með:
 
@@ -1648,18 +1535,10 @@ sort()
 Oft getur verið þægilegt að raða mælingunum okkar eftir stærðarröð.
 Viljum við raða gildunum á einni breytu/vigri í stærðarröð gerum við það
 með ``sort()`` aðferðinni. Viljum við t.d. skoða mælingarnar á kaupverði í
-með ``sort()`` aðferðinni. Viljum við t.d. skoða mælingarnar á kaupverði í
 stærðarröð gerum við það með:
 
 ::
 
-   sort(kaupskra$kaupverd)
-   ##   [1]    1    1    1    1    1   1    1    1    1    1
-   ##   [11]   1    1    1    1    1   1    1    1    1    2
-   ##   [21]   10   19   20   30   30  30   40   50   50   50
-   ##   [31]   50   60   66   66  100  100  100  100  100  100
-   ##   [41]  100  100  100  100  100  100  100  100  130  150
-   ##   [51]  150  150  164  164  167  170  194  200  200  200
    sort(kaupskra$kaupverd)
    ##   [1]    1    1    1    1    1   1    1    1    1    1
    ##   [11]   1    1    1    1    1   1    1    1    1    2
@@ -1688,21 +1567,9 @@ gagnatöflu eftir ákveðinni röð. ``arrange()`` aðferðin gerir okkur það
 kleift á auðveldan hátt. Við mötum aðferðina með nafninu á gagnatöflunni
 og breytunum sem við viljum raða eftir. Viljum við t.d. raða
 viðfangsefnunum í kaupskra gagnasafninu eftir kaupverði gerum við það með:
-viðfangsefnunum í kaupskra gagnasafninu eftir kaupverði gerum við það með:
 
 ::
 
-   arrange(kaupskra,kaupverd)
-   ##     kaupverd   utgdag      postnr   sveitarfelag      byggar   tegund 
-   ## 1   1          2006-09-05	580      Fjallabyggð       1937     Atvinnuhusnaedi
-   ## 2   1          2018-06-08  760      Fjallabyggð       1973     Atvinnuhusnaedi
-   ## 3   1          2015-10-13  750      Fjallabyggð       NA       Serbyli
-   ## 4   1          2006-09-05  580      Fjallabyggð       1947     Atvinnuhusnaedi
-   ## 5   1          2015-10-13	750      Fjallabyggð       NA       Serbyli
-   ## 6   1          2015-10-13  750      Fjallabyggð       NA       Serbyli
-   ## 7   1          2015-10-13  750      Fjallabyggð       NA       Serbyli
-   ## 8   1          2008-12-22  104      Reykjarvíkurborg  1967     Fjolbyli
-   ## 9   1          2016-06-02  640      Norðurþing        1995     Fjolbyli
    arrange(kaupskra,kaupverd)
    ##     kaupverd   utgdag      postnr   sveitarfelag      byggar   tegund 
    ## 1   1          2006-09-05	580      Fjallabyggð       1937     Atvinnuhusnaedi
@@ -1718,22 +1585,9 @@ viðfangsefnunum í kaupskra gagnasafninu eftir kaupverði gerum við það með
 
 Viljum við hins vegar raða fyrst eftir dagsetning undirskriftar kaupsamnings og svo eftir 
 kaupverði gerum við það með:
-Viljum við hins vegar raða fyrst eftir dagsetning undirskriftar kaupsamnings og svo eftir 
-kaupverði gerum við það með:
 
 ::
 
-   arrange(kaupskra,utgdag,kaupverd)
-   ##     kaupverd   utgdag      postnr   sveitarfelag      byggar    tegund 
-   ## 1   14800      2006-01-20	810      Hveragerðisbær    1930      Serbyli
-   ## 2   17411      2006-01-31  103      Reykjarvíkurborg  2007      Fjolbyli
-   ## 3   396000     2006-02-02  700      Múlaþing          1977      Atvinnuhusnaedi
-   ## 4   396000     2006-02-02  700      Múlaþing          1977      Atvinnuhusnaedi
-   ## 5   396000     2006-02-02	700      Múlaþing          1977      Atvinnuhusnaedi
-   ## 6   396000     2006-02-02  700      Múlaþing          1966      Atvinnuhusnaedi
-   ## 7   396000     2006-02-02  700      Múlaþing          1966      Atvinnuhusnaedi
-   ## 8   396000     2006-02-02  700      Múlaþing          1924      Atvinnuhusnaedi
-   ## 9   4000       2006-02-11  425      Ísafjarðarbær     1958      Serbyli
    arrange(kaupskra,utgdag,kaupverd)
    ##     kaupverd   utgdag      postnr   sveitarfelag      byggar    tegund 
    ## 1   14800      2006-01-20	810      Hveragerðisbær    1930      Serbyli
@@ -1755,7 +1609,6 @@ pivot_longer()
 .. attention::
 
     **Inntak:** gagnatafla og tveir eða fleiri vigrar
-    **Inntak:** gagnatafla og tveir eða fleiri vigrar
     
     **Úttak:** gagnatafla
     
@@ -1764,7 +1617,6 @@ pivot_longer()
 
 --------------
 
-Skipunin ``pivot_longer()`` varpar gögnum úr víðu sniði í langt á handhægan
 Skipunin ``pivot_longer()`` varpar gögnum úr víðu sniði í langt á handhægan
 hátt. Sem dæmi eru upplýsingarnar um púls núna geymdar í tveimur
 breytum, ``fyrriPuls`` og ``seinniPuls``. Við gætum þess í stað haft
@@ -1775,11 +1627,7 @@ púlsmælinguna. Þetta er framkvæmt með skipuninni:
 ::
 
    pulslangt <- puls %>% pivot_longer(c(fyrriPuls,seinniPuls), names_to="nr.maelingar", values_to="pulsmaeling")
-   pulslangt <- puls %>% pivot_longer(c(fyrriPuls,seinniPuls), names_to="nr.maelingar", values_to="pulsmaeling")
 
-Fyrst tökum við fram hvaða gagnatöflu við erum að vinna með og pípum henni í skipunina,
-við tilgreinum svo ``fyrriPuls`` og ``seinniPuls`` sem breyturnar sem við viljum varpa
-á langt snið. Næst kemur hvað breytan sem greinir að hvort að mælingin er fyrr eða
 Fyrst tökum við fram hvaða gagnatöflu við erum að vinna með og pípum henni í skipunina,
 við tilgreinum svo ``fyrriPuls`` og ``seinniPuls`` sem breyturnar sem við viljum varpa
 á langt snið. Næst kemur hvað breytan sem greinir að hvort að mælingin er fyrr eða
@@ -1788,22 +1636,10 @@ næst kemur hvað breytan sem tilgreinir hver mældi púlsinn er heitir, við
 gefum henni nafnið ``pulsmaeling`` 
 
 Eftir skipunina lítur gagnataflan svona út:
-gefum henni nafnið ``pulsmaeling`` 
-
-Eftir skipunina lítur gagnataflan svona út:
 
 ::
 
    head(pulslangt)
-   ##    # A tibble: 6 × 5
-   ##      id likamsraekt inngrip  nr.maelingar pulsmaeling
-   ##   <int>       <dbl> <chr>    <chr>              <int>
-   ## 1     1         2   hljop    fyrriPuls             80
-   ## 2     1         2   hljop    seinniPuls           103
-   ## 3     2         1   sat_kyrr fyrriPuls             90
-   ## 4     2         1   sat_kyrr seinniPuls            91
-   ## 5     3         3.5 sat_kyrr fyrriPuls             83
-   ## 6     3         3.5 sat_kyrr seinniPuls            84
    ##    # A tibble: 6 × 5
    ##      id likamsraekt inngrip  nr.maelingar pulsmaeling
    ##   <int>       <dbl> <chr>    <chr>              <int>
@@ -1831,13 +1667,11 @@ pivot_wider()
 --------------
 
 Skipunin ``pivot_wider()`` er andhverfa ``pivot_longer()``, þ.e.a.s. hún varpar
-Skipunin ``pivot_wider()`` er andhverfa ``pivot_longer()``, þ.e.a.s. hún varpar
 gögnum úr löngu sniði í vítt. Þannig vörpum við löngu ``pulslangt``
 gögnunum sem við bjuggum til að ofan yfir í langt snið með skipuninni:
 
 ::
 
-   pulsvitt <- pulslangt %>% pivot_wider(names_from=nr.maelingar, values_from=pulsmaeling)
    pulsvitt <- pulslangt %>% pivot_wider(names_from=nr.maelingar, values_from=pulsmaeling)
 
 Hér þarf eingöngu að tilgreina breyturnar tvær sem á að skilja í sundur.
@@ -1846,15 +1680,6 @@ R sér um rest, eins og sjá má:
 ::
 
    head(pulsvitt)
-   ## # A tibble: 6 × 5
-   ##      id likamsraekt inngrip  fyrriPuls seinniPuls
-   ##   <int>       <dbl> <chr>        <int>      <int>
-   ## 1     1         2   hljop           80        103
-   ## 2     2         1   sat_kyrr        90         91
-   ## 3     3         3.5 sat_kyrr        83         84
-   ## 4     4         0   hljop           80        103
-   ## 5     5         2   sat_kyrr        43         52
-   ## 6     6         1   hljop           76        105
    ## # A tibble: 6 × 5
    ##      id likamsraekt inngrip  fyrriPuls seinniPuls
    ##   <int>       <dbl> <chr>        <int>      <int>
@@ -1997,15 +1822,10 @@ paste()
 Skipunin ``paste()`` býr til einn vigur með því að skella saman gildunum
 í tveimur vigrum. Stillingin ``sep`` tilgreinir hvaða tákna skal notað
 til að sameina vigrana. Þannig getum við búið til nýja breytur sem
-tilgreinir í hvaða sveitarfélago og hvaða póstnúmer ein er í.
-tilgreinir í hvaða sveitarfélago og hvaða póstnúmer ein er í.
+tilgreinir í hvaða sveitarfélag og hvaða póstnúmer ein er í.
 
 ::
 
-   kaupskra$sveitarf_post <- paste(kaupskra$sveitarfelag, kaupskra$postnr)
-   str(kaupskra$sveitarf_post)
-   ##  chr [1:169636] "Kópavogsbær 200" "Hafnarfjarðarkaupstaður 220" 
-   ##  "Reykjavíkurborg 104" ...
    kaupskra$sveitarf_post <- paste(kaupskra$sveitarfelag, kaupskra$postnr)
    str(kaupskra$sveitarf_post)
    ##  chr [1:169636] "Kópavogsbær 200" "Hafnarfjarðarkaupstaður 220" 
@@ -2030,8 +1850,6 @@ er það hægt með:
 
 ::
 
-   sprintf('Dagurinn í dag er %s', Sys.Date())
-   ## [1] "Dagurinn í dag er 2024-16-05"
    sprintf('Dagurinn í dag er %s', Sys.Date())
    ## [1] "Dagurinn í dag er 2024-16-05"
 
@@ -2059,21 +1877,11 @@ dag, mánuð og ár með skipuninni:
 ::
 
    kaupskra_nytt <- separate(kaupskra, utgdag, into=c('ar','manudur','dagur'), sep='-')
-   kaupskra_nytt <- separate(kaupskra, utgdag, into=c('ar','manudur','dagur'), sep='-')
 
 Hér má sjá nýju gagnatöfluna, með þremur nýjum breytum:
 
 ::
 
-   head(kaupskra_nytt)
-   ##     kaupverd  ar    manudur   dagur    postnr   sveitarfelag    
-   ## 1   87000     2012  07        30	      200      Kópavogsbær       
-   ## 2   36000     2011  02        28       220      Hafnarfjarðarkaupstaður  
-   ## 3   31000     2012  04        16       104      Reykjarvíkurborg        
-   ## 4   31000     2012  04        16       104      Reykjarvíkurborg         
-   ## 5   23500     2018  02        20	      104      Reykjarvíkurborg          
-   ## 6   33500     2013  10        25       104      Reykjarvíkurborg          
-   ...
    head(kaupskra_nytt)
    ##     kaupverd  ar    manudur   dagur    postnr   sveitarfelag    
    ## 1   87000     2012  07        30	      200      Kópavogsbær       
@@ -2102,10 +1910,6 @@ fyrstu þrjá stafina í nöfnunum á námskeiðunum, þá gerum við það með
 
 ::
 
-   substr(kaupskra$tegund, 1,3)
-   ##   [1] "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Fjo" 
-   ##   [11] "Atv" "Atv" "Fjo" "Fjo" "Fjo" "Fjo" "Atv" "Atv" "Fjo" "Fjo" 
-   ##   [21] "Fjo" "Fjo" "Atv" "Fjo" "Fjo" "Atv" "Atv" "Atv" "Atv" "Atv"
    substr(kaupskra$tegund, 1,3)
    ##   [1] "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Fjo" 
    ##   [11] "Atv" "Atv" "Fjo" "Fjo" "Fjo" "Fjo" "Atv" "Atv" "Fjo" "Fjo" 

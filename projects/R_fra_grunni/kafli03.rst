@@ -58,8 +58,8 @@ Punktarit
 Punktarit eru einföld og skýr leið til að setja fram gögn. Þau eru
 smíðuð með viðbótinni ``+ geom_point()``. Eftirfarandi skipun gefur
 okkur punktarit sem lýsir sambandi heildarlengdar og lengdar höfuðs pokarotta
-í gagnatöflunni ``pokarotta``. Skýribreytan ``total_l`` er á x-ás og 
-svarbreytan ``head_l`` á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni ``aes()``.
+í gagnatöflunni ``pokarotta``. Skýribreytan ``heildarlengd`` er á x-ás og 
+svarbreytan ``hofud_lengd`` á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni ``aes()``.
 
 ::
 
@@ -87,7 +87,6 @@ Stuðlarit
 
 Viðbótin ``geom_histogram()`` teiknar stuðlarit. Viljum við teikna
 stuðlarit af breytunni ``ferdatimi_skoli`` gerum við það með skipuninni:
-stuðlarit af breytunni ``ferdatimi_skoli`` gerum við það með skipuninni:
 
 ::
 
@@ -111,7 +110,6 @@ Kassarit
 Kassarit eru mjög hentug til að bera saman dreifingu tveggja breyta. Þau
 eru tilgreind með viðbótinni ``geom_boxplot()``. Viljum við teikna
 kassarit af breytunni ``systkini_fjoldi`` lagskipt eftir breytunni ``is`` gerum
-kassarit af breytunni ``systkini_fjoldi`` lagskipt eftir breytunni ``is`` gerum
 við það með:
 
 ::
@@ -123,7 +121,6 @@ við það með:
 
 Hægt er að teikna kassarit af einni breytu án lagskiptingar með því að
 setja ``factor(0)`` inn sem eins konar gervibreytu. Neðangreind skipun
-teiknar kassarit af breytunni ``ferdatimi_skoli`` án lagskiptingar:
 teiknar kassarit af breytunni ``ferdatimi_skoli`` án lagskiptingar:
 
 ::
@@ -155,8 +152,6 @@ stillingunni.
 Nöfn ása
 ~~~~~~~~
 
-Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin ``labs()``
-tilgreinir merkingu ása.
 Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin ``labs()``
 tilgreinir merkingu ása.
 
@@ -207,7 +202,6 @@ Hök kvarða
 Að sama skapi má auðveldlega stilla hvar hök kvarðanna á x- og y-ás eru
 með stillingunni ``breaks()``. Viljum við sem dæmi láta merkingarnar á
 y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
-y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
 gerum við það með skipuninni:
 
 ::
@@ -243,7 +237,6 @@ Stillingarnar eru tilgreindar inní útlitsstillingunni ``aes()``.
 
 Við getum lagskipt punktaritinu yfir hæð og þyngd nemenda eftir kynjum
 pokarotta með því að lita punktana ólíkt eftir því hvoru kyninu pokarotta
-pokarotta með því að lita punktana ólíkt eftir því hvoru kyninu pokarotta
 tilheyrir. Það er því gert með stillingunni ``color``.
 
 ::
@@ -253,8 +246,6 @@ tilheyrir. Það er því gert með stillingunni ``color``.
 .. figure:: myndir/kynlitur.svg
    :align: center
 
-Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
-eftir því hvort þeir nota iOS eða Android gerum við það með
 Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
 eftir því hvort þeir nota iOS eða Android gerum við það með
 stillingunni ``fill``, því þá viljum við lita fleti grafsins ólíkt.
@@ -295,8 +286,6 @@ Gröfum skipt upp í reiti
 reiti. Það er gert með skipuninni ``facet_grid()``. Hægt er að skipta
 gröfunum hvort sem heldur eftir x-ás eða y-ás eða jafnvel báðum.
 
-Viljum við skipta punktaritinu yfir lengd pokarotta og lengd hala þeirra 
-upp eftir því hvaðan þær eru gerum við það með skipuninni:
 Viljum við skipta punktaritinu yfir lengd pokarotta og lengd hala þeirra 
 upp eftir því hvaðan þær eru gerum við það með skipuninni:
 
