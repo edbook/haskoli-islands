@@ -2,9 +2,9 @@ Kafli - Niðurbrot efna og ending
 ================================
 
 Öll efni verða fyrir áraun á notkunartímanum sem veldur niðurbroti efnanna, hæfileiki
-efnis til að standast niðurbrotsáraunina nefnist ending (holdbarhed, e:durability).
-Tæknilegur nottími (levetid) efnis eða mannvirkis er sá tími sem efnið heldur
-nægjanlegum gæðum..
+efnis til að standast niðurbrotsáraunina nefnist ending (d. holdbarhed, e. durability).
+Tæknilegur nottími (d. levetid) efnis eða mannvirkis er sá tími sem efnið heldur
+nægjanlegum gæðum.
 Áraunin sem veldur niðurbroti má skipta upp í flokka eftir tegund; 
 
 .. figure:: ./myndir/kafli08/nidurbrotsflokkar.png
@@ -27,7 +27,7 @@ Algeng áraun er t.d.:
 
         Málmurinn oxast frá yfirborði (aðgengi að súrefni) og í þeim tilfellum sem oxuð
         málmfilman hindrar áframhald oxunar(súrefni kemst ekki í gegnum filmuna) þá
-        er sagt að málmurinn sé orðinn “passífur” – þetta gerist t.d. á áli og riðfríu
+        er sagt að málmurinn sé orðinn “passífur” – þetta gerist t.d. á áli og ryðfríu
         stáli, annars nefnist ástandið “aktíft”
       
       - Alkalí-kísil efnahvörf;
@@ -49,6 +49,10 @@ Hraði breytingarinnar (niðurbrots) er háður;
 
 Raf-efnafræðilegt ferli
 ~~~~~~~~~~~~~~~~~~~~~~~
+
+.. youtube:: q0CAfXV-YdY
+    :width: 100%
+    :height: 400
 
 Flestir málmar finnast í náttúrunni í einhverjum efnasamböndum; súlföt, oxíð, klóríð,
 karbónöt,... og eru hreinsaðir í einhverju orkukræfu framleiðsluferli. Hreinir málmarnir
@@ -181,10 +185,10 @@ Nauðsynlegar forsendur eðlisfræðilegs niðurbrotsferlis;
 Líffræðilegt ferli
 ~~~~~~~~~~~~~~~~~~
 Hér er átt við lífverur sem valda niðurbroti; þ.e. skordýr, veirur og sveppir (einnig
-smádýr, trjárætur..)
+smádýr, trjárætur.)
 
-Sveppir brjóta niður timbur, niðurbrotið (og nauðsynleg mörk) eru raka- og hitaháð..
-jafnframt sýnir sig að þau eru “kúmúlatíf”.. 
+Sveppir brjóta niður timbur, niðurbrotið (og nauðsynleg mörk) eru raka- og hitaháð.
+Jafnframt sýnir sig að þau eru “kúmúlatíf”.
 
 .. figure:: ./myndir/kafli08/nidurbrottimburs.png
   :align: center
@@ -197,15 +201,19 @@ Niðurbrot timburs (fúasveppir); tími sem þarf svo þyngdartap nemi 5 % (Viit
   :width: 70%
 
 Steypa í frárennslisrörum getur grotnað vegna veira sem gefa frá sér :math:`H_2S` og aðrar veirur
-sem umbreyta :math:`H_2S` í :math:`H_2SO_4` (sjá dæmið í bókinni)
+sem umbreyta :math:`H_2S` í :math:`H_2SO_4`.
+
+.. (sjá dæmið í bókinni)
 
 Geislun
 ~~~~~~~
 
 Rafsegulbylgjur: ljós, varmageislun, útvarpsbylgjur, :math:`\gamma`- og röntgengeislun
-Eindir: róteindir, nifteindir, rafeindir (:math:`\beta`) ..
 
-UV geislun brýtur niður fjölliður (og þar með lignin í timbri)
+Eindir: róteindir, nifteindir, rafeindir (:math:`\beta`)
+
+UV geislun brýtur niður fjölliður (og þar með lignin í timbri og plast)
+
 Varmageislun; Hækkar hitastig -> efnafræðilegir- og eðlisfræðilegir ferlar byrja
 
 Samantekt

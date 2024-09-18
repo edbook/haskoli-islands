@@ -66,7 +66,7 @@ vegna hitabreytingar sem
 .. math::
     \sigma = E \cdot \varepsilon = E \cdot \alpha \cdot \Delta T
 
-Tafla 10 í bókinni gefur gildi á hitaþanstuðlinum :math:`\alpha` fyrir nokkur algeng efni. 
+.. Tafla 10 í bókinni gefur gildi á hitaþanstuðlinum :math:`\alpha` fyrir nokkur algeng efni. 
 
 Vert er að athuga að;
 
@@ -77,7 +77,6 @@ Vert er að athuga að;
   :align: center
   :width: 100%
 
-
 Dæmi:
 
 Hitaþanstuðull fyrir stál er :math:`\alpha = 12 \cdot 10^{-6} 1/^{\circ}C`, hvað þenst stálstöng á hvern
@@ -87,6 +86,8 @@ Svar:
 
 .. math::
     \Delta l = \alpha \cdot \Delta T \cdot l_0 = 12 \cdot 10^{-6} \cdot 50 \cdot 1 = 6 \cdot 10^{-4} \textrm{m}
+
+.. ggb:: tdcu8tvq
 
 Rakaháðar stærðarbreytingar 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,12 +136,17 @@ Rakaþenslustuðull efna er alltaf gefinn upp fyrir einhverja breytingu í efnis
 breyting getur verið af mismunandi stærð. Fyrir timbur sjást iðulega gildi fyrir
 rakabreytingu úr “blautu” ástandi í þurrt (þ.e. :math:`\Delta u \approx 30 \%`).
 
-Í töflu 11 í kennslubókinni eru gefin gildi fyrir nokkur efni, og mismunandi
-rakabreytingu. 
+.. Í töflu 11 í kennslubókinni eru gefin gildi fyrir nokkur efni, og mismunandi
+.. rakabreytingu. 
 
 .. figure:: ./myndir/kafli07/Taflarakathenslustudull.png
   :align: center
   :width: 100%
+
+.. figure:: ./myndir/kafli07/rakabreytingfura.png
+  :align: center
+  :width: 50%
+Myndin fengin úr Rb-blaði :cite:`2016:Sigurjonsson`
 
 .. figure:: ./myndir/kafli07/rakabreytingsteypa.png
   :align: center
@@ -154,3 +160,7 @@ rakaþensla sé svipuð og rýrnunin á línuritinu 7.4
   :width: 70%
 
 Plast hefur miklar rakahreyfingar.. og einnig miklar hitahreyfingar eins og áður getur.
+
+Heimildir
+---------
+.. bibliography::
