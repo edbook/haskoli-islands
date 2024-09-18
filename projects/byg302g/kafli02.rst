@@ -232,6 +232,10 @@ Kóvalentbindingar
   :align: center
   :width: 70%
 
+.. youtube:: 5I_1jRGSR9E
+    :width: 100%
+    :height: 400
+
 Málmbindingar
 ~~~~~~~~~~~~~
 
