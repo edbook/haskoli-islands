@@ -81,6 +81,10 @@ Forsendur tæringar eru;
     :width: 100%
     :height: 400
 
+.. youtube:: q0CAfXV-YdY
+    :width: 100%
+    :height: 400
+
 Flestir málmar finnast í náttúrunni í einhverjum efnasamböndum; súlföt, oxíð, klóríð,
 karbónöt, ofl. og eru hreinsaðir í einhverju orkukræfu framleiðsluferli. Hreinir málmarnir
 hafa tilhneigingu til að hvarfast til að ná orkurýrara ástandi á ný.
@@ -214,7 +218,7 @@ Hér er átt við lífverur sem valda niðurbroti; þ.e. skordýr, veirur og sve
 smádýr, trjárætur.)
 
 Sveppir brjóta niður timbur, niðurbrotið (og nauðsynleg mörk) eru raka- og hitaháð. Sveppir gróa ef ákveðnar raka- og hitaaðstæður skapast samtímis.
-Jafnframt sýnir sig að þau eru hafa samverkun (e. cumulative).
+Jafnframt sýnir sig að þau hafa samverkun (e. cumulative).
 
 .. figure:: ./myndir/kafli08/nidurbrottimburs.png
   :align: center
