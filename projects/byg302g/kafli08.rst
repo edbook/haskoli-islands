@@ -7,9 +7,30 @@ Tæknilegur nottími (d. levetid) efnis eða mannvirkis er sá tími sem efnið 
 nægjanlegum gæðum.
 Áraunin sem veldur niðurbroti má skipta upp í flokka eftir tegund; 
 
-.. figure:: ./myndir/kafli08/nidurbrotsflokkar.png
-  :align: center
-  :width: 100%
+.. list-table:: 
+  :widths: 5 5 5
+  :header-rows: 1
+
+  * - Niðurbrotsferli
+    - Efnishópar
+    - Forsendur
+  * - Efnafræðilegt
+    - Allir
+    - vatn / raki, hiti, pH
+  * - Raf-efnafræðilegt
+    - Málmar
+    - rafleiðari (vatn/raki), :math:`O_2`, vetnisjónir (pH), hiti
+  * - Eðlisfræðilegt
+    - Allir
+    - kraftáraun, hiti, raki
+  * - Lífrænt
+    - Lífrænir
+    - hiti, raki
+  * - Geislun 
+    - Allir
+    - UV
+
+[hér verður öldrun (d. ældning) ekki tekin sem sérstakt niðurbrotsferli]
 
 Efnafræðilegt ferli
 ~~~~~~~~~~~~~~~~~~~
@@ -37,8 +58,8 @@ Algeng áraun er t.d.:
         :class: hint
 
         Kolsýring eykur styrk steypunnar (þetta er helsta ástæðan fyrir því að steypa
-        eykur styrk sinn með tímanum) – en breytir jafnframt sýrustigi hennar, sjá
-        síðar!
+        eykur styrk sinn með tímanum) – en breytir jafnframt sýrustigi hennar. Sýrustigið nálgast pH7, 
+        steypan verður neutral en ekki basísk og veitir því verri vörn fyrir járnin í steypunni.
 
 Hraði breytingarinnar (niðurbrots) er háður;
 
@@ -49,18 +70,28 @@ Hraði breytingarinnar (niðurbrots) er háður;
 
 Raf-efnafræðilegt ferli
 ~~~~~~~~~~~~~~~~~~~~~~~
+Forsendur tæringar eru;
+
+- rafleiðara (d. elektrolyt), oftast vatn, sem tengir anóðu og katóðu
+- spennumunur milli anóðu og katóðu (annars er engin anóða né katóða!). Rafstraumur í málmi getur verið tilkominn vegna (i) ytri áhrifa (t.d. spennu), eða (ii) snertingar mismunandi málma
+- rafeindaþiggjandi ferli
+
+
+.. youtube:: q0CAfXV-YdY
+    :width: 100%
+    :height: 400
 
 .. youtube:: q0CAfXV-YdY
     :width: 100%
     :height: 400
 
 Flestir málmar finnast í náttúrunni í einhverjum efnasamböndum; súlföt, oxíð, klóríð,
-karbónöt,... og eru hreinsaðir í einhverju orkukræfu framleiðsluferli. Hreinir málmarnir
-hafa tilhneigingu til að hvarfast til að ná orkurýrara ástandi á ný...
+karbónöt, ofl. og eru hreinsaðir í einhverju orkukræfu framleiðsluferli. Hreinir málmarnir
+hafa tilhneigingu til að hvarfast til að ná orkurýrara ástandi á ný.
 Tæring málma er raf-efnafræðilegt ferli sem getur verið tvenns konar;
 
-- Gastæring (þurr, krefst almennt að hitastig sé hátt)
-- Vökvatæring (elektrolyt)
+- Gastæring (þurr, krefst almennt að hitastig sé hátt, sést sjaldan í mannvirkjum)
+- Vökvatæring (rafstraumur veldur tæringu)
 
 Vökva-raftæring járns
 
@@ -70,7 +101,7 @@ Vökva-raftæring járns
 
 Dæmi:
 
-Rafeindir eru teknar upp af rafleiðandi vökva sem rafeindaþyggjanda (elektronacceptor)
+Rafeindir eru teknar upp af rafleiðandi vökva sem rafeindaþiggjanda (elektronacceptor)
 sem inniheldur súrefni og eða vetni, hvort um ræðir ræðst m.a. af súrleika lausnarinnar;
 
 .. math::
@@ -79,7 +110,7 @@ sem inniheldur súrefni og eða vetni, hvort um ræðir ræðst m.a. af súrleik
 .. math::
   \textrm{Vetni} (H^+); \qquad 2H^+ + 2e^- \rightarrow H_2(g)
 
-Fyrir járn, og súrefni sem rafeindaþyggjanda
+Fyrir járn, og súrefni sem rafeindaþiggjanda
 
 .. math::
   \textrm{Anóða}; \qquad Fe \rightarrow Fe^{2+} + 2e^-
@@ -90,7 +121,7 @@ Fyrir járn, og súrefni sem rafeindaþyggjanda
 .. math::
   Fe^{2+} + 2OH^- \rightarrow Fe(OH)_2
 
-Járn, og vetnisjónir sem rafeindaþyggjanda;
+Járn, og vetnisjónir sem rafeindaþiggjanda;
 
 .. math::
   FeCO_3, FeCl_2, FeSO_4, FeS_2, Fe_4N
@@ -100,26 +131,26 @@ Járn, og vetnisjónir sem rafeindaþyggjanda;
 
       Katóðan tærist ekki
 
-Forsendur tæringar eru;
-
-- rafleiðara (elektrolyt), oftast vatn, sem tengir anóðu og katóðu
-- spennumunur milli anóðu og katóðu (annars er engin anóða né katóða!)
-- rafeindaþyggjandi ferli
-
-Rafstraumur í málmi getur verið tilkominn vegna (i) ytri áhrifa (t.d. spennu), eða (ii)
-snertingar mismunandi málma
-
 Tæringarvörn og spennuröðin
+---------------------------
+
+Myndband sem útskýrir spennuröðina (ath. spennuröðin í myndbandinu er frá anóðu til katóðu en í töflunni hér að neðan er hún frá katóðu til anóðu):
+
+.. youtube:: UqxIsiN8do0
+    :width: 100%
+    :height: 400
 
 .. figure:: ./myndir/kafli08/spennurod.png
   :align: center
   :width: 100%
 
+Spennuröðin hjálpar okkur að velja efni. Helst eiga mismunandi málmar ekki að snertast, ef þeir snertast ætti eðlari málmurinn að hafa minnst flatarmál.
+
 Rafleiðandi vökvi getur verið svo þunnt lag á yfirborði málma að málmurinn virðist þurr,
-tæring stáls verður t.d. merkjanleg þegar loftraki fer yfir :math:`60%HR`..
+tæring stáls verður t.d. merkjanleg þegar loftraki fer yfir :math:`60%HR`.
 
 Almennt þarf að verja málma fyrir tæringu; þetta er gert með fórnarvörn (t.d.
-galvanhúðun) og yfirborðsmeðhöndlun (t.d. málun).
+galvanhúðun (zink)) og yfirborðsmeðhöndlun (t.d. málun).
 
 .. admonition:: Vísbending
   :class: hint
@@ -134,10 +165,11 @@ Tæring málma í andrúmslofti er mjög mismunandi eftir tegund málms og ytri 
   :align: center
   :width: 100%
 
+
 Eðlisfræðilegt ferli
 ~~~~~~~~~~~~~~~~~~~~
 
-Innri, tímaháðar, spennur eða spennubreyting sem skemmir efni...
+Innri, tímaháðar, spennur eða spennubreyting sem skemmir efni.
 Osök spennu getur verið;
 
 * Bein áraun (kraftur)
@@ -148,12 +180,12 @@ Dæmi um eðlisfræðilegt niðurbrot;
 
 * Núningur
 * Þreyta undir breytilegu álagi (málmar) eða rakabreytingu (timbur)
-* “Þreyta” timburs undir langtímaálagi
+.. * "Þreyta" timburs undir langtímaálagi
 * Yfirborðsflögnun stökkra efna (vegna hitaáraunar)
 * Hita- eða rakahreyfingar geta valdið sprungum í efni; sem opnar leið fyrir raka
   inn í efnið, og orsakar raf-efnafræðilegt niðurbrot (t.d. ryðmyndun) og loks
   eðlisfræðilega áraun á efnið (vegna þenslu)
-* Frostþol steypu
+* Frostþol steypu; vatn eykur rúmmál sitt um 9% þegar það frýs. Miklar spennur byggjast upp í póróttu efni þar sem pórurnar eru vatnsfylltar og efnið springur.
 
 Frostþol steypu
 
@@ -177,18 +209,16 @@ verður að fá að þenjast út sem nemur rúmmálsbreytingu vatn-> ís:
   S_{crit}^{teor} = \frac{\textrm{uppgufanlegt vatn}}{\textrm{heildar rúmmál}} = \frac{V_{frost}}{V_{frost} + 0,09V_{frost}} = 0,917 
 
 í reynd liggja mörkin neðar þar sem jafnan að ofan gerir ráð fyrir að allt loftrúmmálið
-nýtist, en svo er ekki í reynd, sbr. tilgátu Fagerlund um áhrif **vatnsþrýstings** í pórunum..
+nýtist, en svo er ekki í reynd, sbr. tilgátu Fagerlund um áhrif **vatnsþrýstings** í pórunum.
 
-Nauðsynlegar forsendur eðlisfræðilegs niðurbrotsferlis;
-*Kraftáraun, hiti, raki*
 
 Líffræðilegt ferli
 ~~~~~~~~~~~~~~~~~~
 Hér er átt við lífverur sem valda niðurbroti; þ.e. skordýr, veirur og sveppir (einnig
 smádýr, trjárætur.)
 
-Sveppir brjóta niður timbur, niðurbrotið (og nauðsynleg mörk) eru raka- og hitaháð.
-Jafnframt sýnir sig að þau eru “kúmúlatíf”.
+Sveppir brjóta niður timbur, niðurbrotið (og nauðsynleg mörk) eru raka- og hitaháð. Sveppir gróa ef ákveðnar raka- og hitaaðstæður skapast samtímis.
+Jafnframt sýnir sig að þau hafa samverkun (e. cumulative).
 
 .. figure:: ./myndir/kafli08/nidurbrottimburs.png
   :align: center
@@ -208,13 +238,13 @@ sem umbreyta :math:`H_2S` í :math:`H_2SO_4`.
 Geislun
 ~~~~~~~
 
-Rafsegulbylgjur: ljós, varmageislun, útvarpsbylgjur, :math:`\gamma`- og röntgengeislun
+Forsendur: ljós (UV), varmageislun, útvarpsbylgjur, :math:`\gamma`- og röntgengeislun.
 
-Eindir: róteindir, nifteindir, rafeindir (:math:`\beta`)
+.. Eindir: róteindir, nifteindir, rafeindir (:math:`\beta`)
 
 UV geislun brýtur niður fjölliður (og þar með lignin í timbri og plast)
 
-Varmageislun; Hækkar hitastig -> efnafræðilegir- og eðlisfræðilegir ferlar byrja
+Varmageislun; Hækkar hitastig -> efnafræðilegir- og eðlisfræðilegir ferlar byrja.
 
 Samantekt
 ~~~~~~~~~
@@ -222,30 +252,37 @@ Samantekt
 Niðurbrotsferlar og mikilvægar forsendur:
 
 .. list-table:: 
-  :widths: 5 5
-  :header-rows: 0
+  :widths: 5 5 5
+  :header-rows: 1
 
-  * - Efnafræðilegir
+  * - Niðurbrotsferli
+    - Efnishópar
+    - Forsendur
+  * - Efnafræðilegt
+    - Allir
     - vatn / raki, hiti, pH
-  * - Raf-efnafræðilegir
+  * - Raf-efnafræðilegt
+    - Málmar
     - rafleiðari (vatn/raki), :math:`O_2`, vetnisjónir (pH), hiti
-  * - Eðlisfræðilegir
+  * - Eðlisfræðilegt
+    - Allir
     - kraftáraun, hiti, raki
-  * - Lífrænir
+  * - Lífrænt
+    - Lífrænir
     - hiti, raki
   * - Geislun 
+    - Allir
     - UV
 
 .. admonition:: Mikilvægt
   :class: important
 
-    **Samlagningaráhrif (superposition)**
-      Almennt er gengið út frá því að samlagningarreglan gildi; þ.e. heildaráhrif jöfn summu
-      hlutáhrifa
+    **Samlagningaráhrif (e. superposition)**
+      Heildaráhrif jöfn summu hlutáhrifa.
+      Almennt er gengið út frá því að samlagningarreglan gildi.
     
-    **Samlegðaráhrif (synergi)**
-      Samanlögð áhrif tveggja eða fleiri ferla stærri heldur en summa einstakra þátta; t.d.
-      tæring vegna áhrifa :math:`O_3 + NO_2` fyrir suma málma og áhrifin vaxa hratt með hækkandi
-      loftraka..
-      Fjölliður brotna almennt hraðar niður í UV ef þau eru rök..(hraðar en sem nemur summu
-      áhrifaþáttanna hvors í sínu lagi)..
+    **Samlegðaráhrif (e. synergi)**
+      Samanlögð áhrif tveggja eða fleiri ferla stærri heldur en summa einstakra þátta.
+      T.d. tæring vegna áhrifa :math:`O_3 + NO_2` fyrir suma málma og áhrifin vaxa hratt með hækkandi
+      loftraka. Fjölliður brotna almennt hraðar niður í UV ef þau eru rök, (hraðar en sem nemur summu
+      áhrifaþáttanna hvors í sínu lagi).
