@@ -31,7 +31,7 @@ um 30 metrar og hitastig á
 mismunandi stöðum í
 ofninum.
 
-.. figure:: ./myndir/stal/haofn.png
+.. figure:: ./myndir/kafli10/haofn.png
   :align: center
   :width: 70%
 
@@ -48,7 +48,7 @@ að binda fleiri gerðir af óæskilegum efnum, þessi aðferð er nefnd eftir T
 Venjulegt byggingarstál inniheldur auk járns, kolefni, kísil, mangan, fosfór og
 brennistein. 
 
-.. figure:: ./myndir/stal/blastursofn.png
+.. figure:: ./myndir/kafli10/blastursofn.png
   :align: center
   :width: 100%
 
@@ -62,7 +62,7 @@ eiginleikar eru jafnframt mjög breytilegir
 eftir kolefnisinnihaldi og því hvaða fasi er
 ráðandi – sjá línurit.
 
-.. figure:: ./myndir/stal/eiginleikarkolefnisinnihald.png
+.. figure:: ./myndir/kafli10/eiginleikarkolefnisinnihald.png
   :align: center
   :width: 70%
 
@@ -99,7 +99,7 @@ Línuritið sýnir fjóra fasa;
 3) saltpækill með saltkristöllum
 4) salt og ískristallar
 
-.. figure:: ./myndir/stal/saltpaekill.png
+.. figure:: ./myndir/kafli10/saltpaekill.png
   :align: center
   :width: 100%
 
@@ -128,9 +128,12 @@ b) Notum jafnvægisregluna; :math:`n_1` = hlutfall ískristalla, :math:`n_2` hlu
 Almennt dæmi um samsetningu með tveim hlutefnum; A og B – sjá línurit fyrir þriggja
 fasa ástand
 
-.. figure:: ./myndir/stal/fasalinurit.png
+.. figure:: ./myndir/kafli10/fasalinurit.png
   :align: center
   :width: 100%
+
+.. ggb:: nsnW4Qvk
+
 
 Kolefnisinnihalds stáls og fasalínurit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,13 +141,13 @@ Kolefnisinnihalds stáls og fasalínurit
 kolefnisinnihald), iðulega er öðrum málmum blandað í stálið; nickel, króm (e:
 chromium), molybdenum og mangan en til samans er þessi íblöndun almennt undir 8%. 
 
-.. figure:: ./myndir/stal/fasalinuritstals.png
+.. figure:: ./myndir/kafli10/fasalinuritstals.png
   :align: center
   :width: 100%
 
 Fasalínurit fyrir :math:`Fe-Fe_3C` – sjá einnig næstu mynd
 
-.. figure:: ./myndir/stal/fasalinuritstalslitidC.png
+.. figure:: ./myndir/kafli10/fasalinuritstalslitidC.png
   :align: center
   :width: 100%
 
@@ -182,10 +185,59 @@ Fasar og eiginleikar – samantekt (byggt á Callister, ..)
 
 Hersla með teygju
 ~~~~~~~~~~~~~~~~~
-Sbr. almennan kafla um styrk og stífleika... 
+Sbr. almennan kafla um styrk og stífleika.
 
-Hitameðhöndlun
-~~~~~~~~~~~~~~
+Hitameðhöndlun og kæling stáls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  * Hitameðhöndlun hefur áhrif á míkróstrúktúr stáls
+  * Hitameðhöndlun er notuð til þess að hafa áhrif á eiginleika stáls 
+  * Eiginleikum stálsins er stýrt með því hvernig efnið er kælt niður eftir upphitun
+  * Gerðir hitameðhöndlunar og kælingar:
+
+    + Kaldhert (e. coldworked)
+    + Glætt (e. annealed)
+    + Normalíserað (e. normalized)
+    + Normalíserað-valsað (e. normalized-rolled)
+    + Varmaaflfræðilega valsað (e. thermomechanically rolled TMR)
+    + Snöggkælt og seighert (e. quenched and tempered Q&R)
+
+.. figure:: ./myndir/kafli10/hitamedhondlun_samanburdur.png
+  :align: center
+  :width: 80%
+
+Kaldherðing (e. cold working)
+-----------------------------
+  * Kornastærð og gerð breytist
+
+    + Lengri korn
+    + Mjórri korn
+
+  * Kaldherðing gerir stálið
+    
+    + Harðara
+    + Sterkara
+    + Stökkara
+
+.. figure:: ./myndir/kafli10/kaldherding.png
+  :align: center
+  :width: 30%
+
+Glæðing (e. annealing)
+----------------------
+  * Stálið hitað
+  * Glæðing
+    + Eykur seigju
+    + Minnkar styrk
+    + Stálið verður mýkra
+    + Endurkristöllun
+  * Eftir hitun er stálið kælt hægt
+
+  .. figure:: ./myndir/kafli10/glaeding.png
+    :align: center
+    :width: 70%
+
+
 Efnabreytingin sem á sér stað við eutectoid hitastigið þegar austenít (:math:`\gamma`) umbreytist í ferrit
 (:math:`\alpha`) og sementít (:math:`Fe_3C`) er hæg og hitastigið getur verið komið niður fyrir eutectoid
 hitastigið áður en öll breytingin er um garð gengin. Þegar þetta gerist þá er efnið ekki
@@ -194,7 +246,7 @@ TTT línuriti (time- temperature-transformation diagram), línuritið sýnir hva
 efnabreytingin krefst við stöðugt hitastig undir eutectoid hitanum.... og jafnframt hvaða
 innri uppbyggingu stálið fær (pearlite, bainite, martinsite), háð hitastigi.
 
-.. figure:: ./myndir/stal/hitamedhondlun.png
+.. figure:: ./myndir/kafli10/hitamedhondlun.png
   :align: center
   :width: 80%
 
@@ -239,7 +291,7 @@ halda hitastigi þess stöðugu sbr. TTT línuritið) – sjá línurit hér að
 (Í reynd eru línuritin nátengd eins og sést á strikuðu línunum hér að neðan og samanburði
 við TTT línuritið).
 
-.. figure:: ./myndir/stal/hitunarhradi.png
+.. figure:: ./myndir/kafli10/hitunarhradi.png
   :align: center
   :width: 80%
 
@@ -255,7 +307,7 @@ lítil áhrif.. Hert stál er hægt að gera seigara með því að hita það u
 kælt niður á ný, þá er talað um seigherslu og er þetta nú algeng framleiðsluaðferð á
 bendistáli.
 
-.. figure:: ./myndir/stal/hersla.png
+.. figure:: ./myndir/kafli10/hersla.png
   :align: center
   :width: 70%
 
@@ -308,7 +360,7 @@ Stórt T aftarlega í heitinu táknar að stálið er seighert (sjá að framan)
 
 Dæmi um stálflokka (Burström, 2001)
 
-.. figure:: ./myndir/stal/bendistal.png
+.. figure:: ./myndir/kafli10/bendistal.png
   :align: center
   :width: 70%
 
@@ -318,7 +370,7 @@ Dæmi um stálflokka (Burström, 2001)
       stálið heitir ekki Ps500/700, Burström notar sömu mynd fyrir tvo gæðaflokka, þ.e. Ps500 og Ps700.
 
 
-.. figure:: ./myndir/stal/Taflabendistal.png
+.. figure:: ./myndir/kafli10/Taflabendistal.png
   :align: center
   :width: 100%
 
@@ -326,7 +378,7 @@ Dæmi um stálflokka (Burström, 2001)
 ) í
 kerfinu hér að ofan heitir slíkt stál þá væntanlega Ss370S.
 
-.. figure:: ./myndir/stal/vinnulinur.png
+.. figure:: ./myndir/kafli10/vinnulinur.png
   :align: center
   :width: 70%
 
