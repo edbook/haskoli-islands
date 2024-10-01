@@ -443,7 +443,7 @@ Markmiðið
 
 Útgildisverkefni snúast um það að hámarka eða lágmarka tiltekna stærð, t.d.
 verð, rúmmál, lengd, ... . Þá þarf að finna (helst diffranlegt) fall fyrir stærðina
-sem við höfum áhuga á hámarka/lágmarka en þó með þeim skorðum sem vandamálið setur okkur.
+sem við höfum áhuga á hámarka/lágmarka en þó með þeim skorðum sem verkefnið setur okkur.
 
 Til þess að þetta sé mögulegt má fallið bara vera háð einni breytu og
 það þarf helst að vera diffranlegt.
@@ -451,10 +451,10 @@ Til þess að þetta sé mögulegt má fallið bara vera háð einni breytu og
 Þá getum við fundið útgildi með þeim aðferðum sem við erum búin að koma
 okkur upp.
 
-Að leysa útgildisvandamál
+Að leysa útgildisverkefni
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(i)    Lesið vandamálið vandlega og áttið ykkur á því hvert það er og
+(i)    Lesið verkefnið vandlega og áttið ykkur á því hvert það er og
        hvað á að finna.
 
 (ii)   Teiknið mynd ef mögulegt er, hún gefur oft upplýsingar um skorður
