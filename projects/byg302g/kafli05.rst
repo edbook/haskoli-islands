@@ -18,7 +18,7 @@ Rakaálag stafar frá;
 Áhrif raka á byggingarefni, **með hækkandi efnisraka**;
 
 * Vex rakur efnisþéttleiki (og þar með eigið álag byggingarefna)
-* Breytast stærðir breytast (efni þrútna eða lengjast)
+* Stærðir breytast (efni þrútna eða lengjast)
 * Minnkar styrkur og stífleiki
 * Vex skrið (d: krybning, þ.e. tímaháð formbreyting)
 * Hækkar varmaleiðni efna (leiðnitalan vex)
@@ -311,9 +311,9 @@ hitastigi.
 við upphitun í :math:`105^{\circ}` (þá er efnafræðilega bundna vatnið eftir- og hugsanlega eitthvað af
 því eðlisfræðilega bundna).
 
-Vatn í efnum .. jöfnur 5.11 og 5.12, gerður greinarmunur á því hvort efnið er algerlega
-vatnsmettað eða mettað með hárpípukröftum einungis (sbr. það sem áður var rætt í kafla
-um holrýmd).
+.. Vatn í efnum .. jöfnur 5.11 og 5.12, gerður greinarmunur á því hvort efnið er algerlega
+.. vatnsmettað eða mettað með hárpípukröftum einungis (sbr. það sem áður var rætt í kafla
+.. um holrýmd).
 
 
 Rakaupptaka efna

@@ -92,11 +92,11 @@ og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):
 
 ::
 
-   var.test(dat$ferdatimi_skoli~dat$ferdamati_skoli=="Gangandi / skokkandi")
+   var.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli=="Gangandi / skokkandi")
    ##
    ##  F test to compare two variances
    ##
-   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == "Gangandi / skokkandi"
+   ## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == "Gangandi / skokkandi"
    ## F = 5.4739, num df = 166, denom df = 33, p-value = 2.875e-07
    ## alternative hypothesis: true ratio of variances is not equal to 1
    ## 95 percent confidence interval:
@@ -153,11 +153,11 @@ einhverra tveggja ferðamáta gerum við það með:
 
 ::
 
-   bartlett.test(dat$ferdatimi_skoli~dat$ferdamati_skoli)
+   bartlett.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli)
    ##
    ##  Bartlett test of homogeneity of variances
    ##
-   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli
+   ## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli
    ## Bartlett's K-squared = 31.33, df = 4, p-value = 2.622e-06
 
 Við sjáum að gildið á prófstærðinni er :math:`31.33` og p-gildið er
@@ -222,11 +222,11 @@ sé frábrugðinn 20 og tilgreinum það með stillingunni ``mu``.
 
 ::
 
-   t.test(dat$ferdatimi_skoli, mu=20)
+   t.test(konnun$ferdatimi_skoli, mu=20)
    ##
    ##  One Sample t-test
    ##
-   ## data:  dat$ferdatimi_skoli
+   ## data:  konnun$ferdatimi_skoli
    ## t = -0.57532, df = 200, p-value = 0.5657
    ## alternative hypothesis: true mean is not equal to 20
    ## 95 percent confidence interval:
@@ -283,9 +283,9 @@ Segjum sem svo að við viljum bera saman fyrri púls nemenda eftir kynjum.
 
 ::
 
-   t.test(dat$ferdatimi_skoli~dat$ferdamati_skoli=='Gangandi / skokkandi')
+   t.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli=='Gangandi / skokkandi')
    ##
-   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == "Gangandi / skokkandi"
+   ## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == "Gangandi / skokkandi"
    ## t = 9.5068, df = 118.32, p-value = 2.889e-16
    ## alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
    ## 95 percent confidence interval:
@@ -314,7 +314,7 @@ aðstoð skipunarinnar ``pivot_wider``, sem kynnt var í kassa
 
 ::
 
-   ferdirvitt <- dat %>% mutate(fotgangandi=(ferdamati_skoli=="Gangandi / skokkandi")) 
+   ferdirvitt <- konnun %>% mutate(fotgangandi=(ferdamati_skoli=="Gangandi / skokkandi")) 
                      %>% pivot_wider(names_from=fotgangandi, 
                      values_from=ferdatimi_skoli, names_prefix="Gangandi_")
 
@@ -512,17 +512,17 @@ Hér fyrir neðan má sjá sömu dæmi og hér að ofan framkvæmd með
    ##
    ##  Wilcoxon signed rank test with continuity correction
    ##
-   ## data:  dat$ferdatimi_skoli
+   ## data:  konnun$ferdatimi_skoli
    ## V = 6159, p-value = 0.1073
    ## alternative hypothesis: true location is not equal to 20
 
 ::
    
-   wilcox.test(dat$ferdatimi_skoli~dat$ferdamati_skoli=='Gangandi / skokkandi')
+   wilcox.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli=='Gangandi / skokkandi')
    ##
    ##  Wilcoxon rank sum test with continuity correction
    ##
-   ## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == "Gangandi / skokkandi"
+   ## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == "Gangandi / skokkandi"
    ## W = 4847.5, p-value = 6.877e-11
    ## alternative hypothesis: true location shift is not equal to 0
 
