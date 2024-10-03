@@ -8,19 +8,7 @@
    :numbered:
    :glob:
 
-   kafli01
-   kafli02
-   kafli03
-   kafli04
-   kafli05
-   kafli06
-   kafli07
-   kafli08
-   kafli09
-   kafli10 
-   kafli11
-   kafli12
-   kafli13
+   kafli*
    heimildir
 
 * :ref:`genindex`
