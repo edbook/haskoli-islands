@@ -46,7 +46,7 @@ jobs:
           channels: conda-forge,defaults
           mamba-version: "*"
           channel-priority: true
-          use-mamba: true
+          use-mamba: false
           environment-file: environment.yml
           activate-environment: edbook
       # TODO: needs work
