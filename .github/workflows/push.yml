@@ -38,9 +38,9 @@ jobs:
           auto-update-conda: true
           python-version: 3.10.10
           channels: conda-forge,defaults
-          mamba-version: "*"
+      #    mamba-version: "*"
           channel-priority: true
-          use-mamba: true
+      #    use-mamba: true
           environment-file: environment.yml
           activate-environment: edbook
       # TODO: needs work
