@@ -30,7 +30,7 @@ jobs:
         shell: bash -el {0}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Extract branch name
         id: extract_branch
         shell: bash
