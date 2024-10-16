@@ -706,7 +706,7 @@ Sýnidæmi: Grunnur fyrir dálkrúm
     af :math:`\ve u_1` og :math:`\ve u_2`. Því er :math:`\col{A} = \text{Span}\{\ve a_1, \ve a_2 \}`.
     Við fáum því að 
     
-    .. math:: \left\{ \begin{bmatrix} 1 \\ 6\\ 11 \end{bmatrix}, \begin{bmatrix} 2 \\ 7 \\ 1 \end{bmatrix} \right\}
+    .. math:: \left\{ \begin{bmatrix} 1 \\ 6\\ 11 \end{bmatrix}, \begin{bmatrix} 2 \\ 7 \\ 12 \end{bmatrix} \right\}
 
     er grunnur fyrir :math:`\col{A}`.
 
