@@ -13,12 +13,17 @@ nokkrum mismunandi löndum.
 
 Framleiðsla stáls
 ~~~~~~~~~~~~~~~~~~~
+
+.. figure:: ./myndir/kafli10/stalframleidsla.png
+  :align: center
+  :width: 100%
+
 Járn er um 4,5% jarðskorpunnar, en finnst aðeins í mjög litlum mæli sem hreint efni
-(einungis í loftseinum sem náð hafa til jarðar). Efnasambönd sem innihalda málm eru
-margvísleg, en t.d. í Svíþjóð er stál nú eingöngu unnið úr samböndunum Fe2O3 og Fe3O4.
-Málmgrýtið er malað og sett í háofna (s: masugn), um 30 m á hæð, ásamt slaggmyndandi
-efni, oftast kalksteini, og koksi (kol sem hafa verið hituð þannig að rokgjörn efni eru
-fjarlægð og eftir stendur létt efni með mjög hátt brunagildi, umbreyting kola í koks, og
+(einungis í loftsteinum sem náð hafa til jarðar). Efnasambönd sem innihalda málm eru
+margvísleg, en t.d. í Svíþjóð er stál nú eingöngu unnið úr samböndunum :math:`Fe_2O_3` og :math:`Fe_3O_4`.
+Málmgrýtið (e. iron ore) er malað og sett í háofna (e. blast furnace, s. masugn), um 30 m á hæð, ásamt slaggmyndandi
+efni, oftast kalksteini (e. limestone), og koksi (kol sem hafa verið hituð þannig að rokgjörn efni eru
+fjarlægð og eftir stendur létt efni með mjög hátt brunagildi. Umbreyting kola í koks, og
 annarra hliðstæðra ferla, er á ensku nefnd pyrolysis). Ofninn er mataður ofanfrá en heitu
 lofti blásið inn í hann neðanfrá undir miklum þrýstingi, súrefni binst kalki og rýkur upp
 sem gas, slaggið sem myndast er nauðsynlegt sem efnahvati og flýtur ofan á járnbráðinni
@@ -31,7 +36,7 @@ um 30 metrar og hitastig á
 mismunandi stöðum í
 ofninum.
 
-.. figure:: ./myndir/stal/haofn.png
+.. figure:: ./myndir/kafli10/haofn.png
   :align: center
   :width: 70%
 
@@ -44,29 +49,27 @@ lofti (í Kaldo-aðferðinni súrefni) er blásið í gegnum bráðina. Ofnarnir
 tonn í hvern blástur, sem stendur yfir í um 30 mínútur. Ofnarnir eru fóðraðir, áður
 einungis með súrri fóðringu (kvarts) og nefndist aðferðin þá Bessemer. Með súrri
 fóðringu næst að binda kolefni, kísil og mangan. Síðar var þróuð basísk fóðring, þar næst
-að binda fleiri gerðir af óæskilegum efnum, þessi aðferð er nefnd eftir Thomas.
-Venjulegt byggingarstál inniheldur auk járns, kolefni, kísil, mangan, fosfór og
-brennistein. 
+að binda fleiri gerðir af óæskilegum efnum, þessi aðferð er nefnd eftir Thomas. 
 
-.. figure:: ./myndir/stal/blastursofn.png
+.. figure:: ./myndir/kafli10/blastursofn.png
   :align: center
   :width: 100%
 
+Venjulegt byggingarstál inniheldur auk járns, kolefni, kísil, mangan, fosfór og
+brennistein.
 Kolefni er langmikilvægasta hlutefnið.
 Kolefni í járni er á þrennu formi; laust,
-cementit (:math:`Fe_3C`) eða sem grafít, megnið af
-kolefni í stáli er bundið sem sementit.
+sementít (:math:`Fe_3C`) eða sem grafít, megnið af
+kolefni í stáli er bundið sem sementít.
 Járn hefur nokkra mismunandi fasa og
 leysni kols er mismunandi eftir þeim,
 eiginleikar eru jafnframt mjög breytilegir
 eftir kolefnisinnihaldi og því hvaða fasi er
 ráðandi – sjá línurit.
 
-.. figure:: ./myndir/stal/eiginleikarkolefnisinnihald.png
+.. figure:: ./myndir/kafli10/eiginleikarkolefnisinnihald.png
   :align: center
   :width: 70%
-
-
 
 .. youtube:: 7E__zqy6xcw
 
@@ -80,9 +83,6 @@ ráðandi – sjá línurit.
       **iron ore** : járngrýti
 
       **blast furnace** : háofn 
-
-    
-
 
 Fasalínurit
 ~~~~~~~~~~~
@@ -99,56 +99,72 @@ Línuritið sýnir fjóra fasa;
 3) saltpækill með saltkristöllum
 4) salt og ískristallar
 
-.. figure:: ./myndir/stal/saltpaekill.png
+.. figure:: ./myndir/kafli10/saltpaekill.png
   :align: center
   :width: 100%
 
-Dæmi:
+.. admonition:: Dæmi 
+  :class: tip 
 
-Blanda sem samanstendur af (þyngdarhlutföll); 10 % :math:`NaCl` og 90 % vatn.
 
-a) Hvaða fasar eru til staðar við :math:`-10^{\circ}C`
-b) Hve stórt er hlutfall ískristalla við :math:`-10^{\circ}C`
+    Blanda sem samanstendur af (þyngdarhlutföll); 10 % :math:`NaCl` og 90 % vatn.
 
-Svar:
+    a) Hvaða fasar eru til staðar við :math:`-10^{\circ}C`
+    b) Hve stórt er hlutfall ískristalla við :math:`-10^{\circ}C`
 
-a) lárétt lína dregin við :math:`-10^{\circ}C` og lóðrétt við 10 % :math:`NaCl`—skurðpunktur í fasa “saltlake + iskristaller” (saltpækill með ískristöllum).
+    Svar:
 
-b) Notum jafnvægisregluna; :math:`n_1` = hlutfall ískristalla, :math:`n_2` hlutfall saltpækils; almennt gildir þá fyrir hlutföll eftir láréttu línunni;
+    a) lárétt lína dregin við :math:`-10^{\circ}C` og lóðrétt við 10 % :math:`NaCl`—skurðpunktur í fasa “saltlake + iskristaller” (saltpækill með ískristöllum).
 
-    .. math::
-      n_1 \cdot l_1 = n_2 \cdot l_2  \qquad \textrm{ásamt} \qquad n_1 + n_2 = 1
+    b) Notum jafnvægisregluna; :math:`n_1` = hlutfall ískristalla, :math:`n_2` hlutfall saltpækils; almennt gildir þá fyrir hlutföll eftir láréttu línunni;
 
-    .. math::
-      \Rightarrow n_1 \cdot (10-0) = n_2 \cdot (14-10) = (1- n_1) \cdot (14-10)
+        .. math::
+          n_1 \cdot l_1 = n_2 \cdot l_2  \qquad \textrm{ásamt} \qquad n_1 + n_2 = 1
+
+        .. math::
+          \Rightarrow n_1 \cdot (10-0) = n_2 \cdot (14-10) = (1- n_1) \cdot (14-10)
     
-    .. math::
-      n_1 = 4/14=0,286 \qquad \textrm{eða} \qquad n_1 = 28,6\%
+        .. math::
+          n_1 = 4/14=0,286 \qquad \textrm{eða} \qquad n_1 = 28,6\%
+
 
 Almennt dæmi um samsetningu með tveim hlutefnum; A og B – sjá línurit fyrir þriggja
 fasa ástand
 
-.. figure:: ./myndir/stal/fasalinurit.png
+.. figure:: ./myndir/kafli10/fasalinurit.png
   :align: center
   :width: 100%
+
+.. .. ggb:: nsnW4Qvk
+
+.. admonition:: Hugtök á mynd
+    :class: tip
+
+      **fast fas** : fastur fasi
+
+      **smält fas** : bráðinn fasi
+
+      **smälta** : bráð
+
 
 Kolefnisinnihalds stáls og fasalínurit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Í byggingarstáli er kolefnisinnihaldið almennt lægra en 0,30% (verkfærastál hefur hærra
-kolefnisinnihald), iðulega er öðrum málmum blandað í stálið; nickel, króm (e:
-chromium), molybdenum og mangan en til samans er þessi íblöndun almennt undir 8%. 
+kolefnisinnihald), iðulega er öðrum málmum blandað í stálið; nickel, króm (e.
+chromium), molybdenum og mangan en til samans er þessi íblöndun almennt undir 8%. Kolefni eykur styrk og hörku (e. strength and hardness), 
+það gerir stálið stökkara (e. brittle) og gerir það erfiðara að sjóða stálið.
 
-.. figure:: ./myndir/stal/fasalinuritstals.png
+.. figure:: ./myndir/kafli10/fasalinuritstals.png
   :align: center
   :width: 100%
 
 Fasalínurit fyrir :math:`Fe-Fe_3C` – sjá einnig næstu mynd
 
-.. figure:: ./myndir/stal/fasalinuritstalslitidC.png
+.. figure:: ./myndir/kafli10/fasalinuritstalslitidC.png
   :align: center
   :width: 100%
 
-Fasar og eiginleikar – samantekt (byggt á Callister, ..)
+Fasar og eiginleikar – samantekt (byggt á Callister)
 --------------------------------------------------------
 
 .. list-table:: 
@@ -182,23 +198,95 @@ Fasar og eiginleikar – samantekt (byggt á Callister, ..)
 
 Hersla með teygju
 ~~~~~~~~~~~~~~~~~
-Sbr. almennan kafla um styrk og stífleika... 
+Sbr. almennan kafla um styrk og stífleika.
 
-Hitameðhöndlun
-~~~~~~~~~~~~~~
-Efnabreytingin sem á sér stað við eutectoid hitastigið þegar austenít (:math:`\gamma`) umbreytist í ferrit
-(:math:`\alpha`) og sementít (:math:`Fe_3C`) er hæg og hitastigið getur verið komið niður fyrir eutectoid
-hitastigið áður en öll breytingin er um garð gengin. Þegar þetta gerist þá er efnið ekki
-stöðugt (ekki í jafnvægi, e: equilibrium). Slíku ferli er almennt lýst með svo kölluðu
-TTT línuriti (time- temperature-transformation diagram), línuritið sýnir hvaða tíma
-efnabreytingin krefst við stöðugt hitastig undir eutectoid hitanum.... og jafnframt hvaða
-innri uppbyggingu stálið fær (pearlite, bainite, martinsite), háð hitastigi.
+Hitameðhöndlun og kæling stáls
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: ./myndir/stal/hitamedhondlun.png
+  * Hitameðhöndlun hefur áhrif á míkróstrúktúr stáls
+  * Hitameðhöndlun er notuð til þess að hafa áhrif á eiginleika stáls 
+  * Eiginleikum stálsins er stýrt með því hvernig efnið er kælt niður eftir upphitun
+  * Gerðir hitameðhöndlunar og kælingar:
+
+    + Kaldhert (e. coldworked)
+    + Glætt (e. annealed)
+    + Normalíserað (e. normalized)
+    + Normalíserað-valsað (e. normalized-rolled)
+    + Varmaaflfræðilega valsað (e. thermomechanically rolled TMR)
+    + Snöggkælt og seighert (e. quenched and tempered Q&R)
+
+.. figure:: ./myndir/kafli10/hitamedhondlun_samanburdur.png
   :align: center
   :width: 80%
 
-Uppbyggingin..
+Kaldherðing (e. cold working)
+-----------------------------
+  * Kornastærð og gerð breytist
+
+    + Lengri korn
+    + Mjórri korn
+
+  * Kaldherðing gerir stálið
+    
+    + Harðara
+    + Sterkara
+    + Stökkara
+
+.. figure:: ./myndir/kafli10/kaldherding.png
+  :align: center
+  :width: 30%
+
+Glæðing (e. annealing)
+----------------------
+  * Stálið hitað
+  * Glæðing
+
+    + Eykur seigju
+    + Minnkar styrk
+    + Stálið verður mýkra
+    + Endurkristöllun
+
+  * Eftir hitun er stálið kælt hægt
+
+  .. figure:: ./myndir/kafli10/glaeding.png
+    :align: center
+    :width: 100%
+
+Normalísering (e. normalizing)
+------------------------------
+Normalísering er svipuð glæðingu en tekur styttri tíma. Eftir upphitun er stálið kælt, hraðar en við glæðingu en þó ekki snöggkælt.
+
+Normalísering:
+
+* Eykur seigju
+* Minnkar styrk
+* Stálið verður mýkra
+* Endurkristöllun
+
+  .. figure:: ./myndir/kafli10/normalisering.png
+    :align: center
+    :width: 100%
+
+Snöggkæling (e. quenching)
+--------------------------
+Snöggkæling getur viðhaldið fösum í efninu sem myndu hvarfast burt ef kælingin gerðist hægar, t.d. austinite verður að martensite.
+
+Efnabreytingin sem á sér stað við jafnstorkumarkið (e. eutectoid temperature) þegar austenít (:math:`\gamma`) umbreytist í ferrit
+(:math:`\alpha`) og sementít (:math:`Fe_3C`) er hæg og hitastigið getur verið komið niður fyrir jarfnstorkumarkið áður en öll breytingin er um garð gengin. Þegar þetta gerist þá er efnið ekki
+stöðugt (ekki í jafnvægi, e. equilibrium). Slíku ferli er almennt lýst með svo kölluðu
+TTT línuriti (e. time- temperature-transformation diagram), línuritið sýnir hvaða tíma
+efnabreytingin krefst við stöðugt hitastig undir eutectoid hitanum og jafnframt hvaða
+innri uppbyggingu stálið fær (pearlite, bainite, martinsite), háð hitastigi og tíma.
+
+.. figure:: ./myndir/kafli10/TTT.png
+ :align: center
+ :width: 80%
+
+.. figure:: ./myndir/kafli10/hitamedhondlun.png
+  :align: center
+  :width: 80%
+
+Uppbygging ...
 
 .. list-table:: 
   :widths: 5 5
@@ -215,7 +303,7 @@ Uppbyggingin..
   * - Martinsite
     - fengið með hraðri kælingu á austenite niður í fremur lágan hita
 
-... og eiginleikarnir
+... og eiginleikar
 
 .. list-table:: 
   :widths: 5 5
@@ -239,7 +327,7 @@ halda hitastigi þess stöðugu sbr. TTT línuritið) – sjá línurit hér að
 (Í reynd eru línuritin nátengd eins og sést á strikuðu línunum hér að neðan og samanburði
 við TTT línuritið).
 
-.. figure:: ./myndir/stal/hitunarhradi.png
+.. figure:: ./myndir/kafli10/hitunarhradi.png
   :align: center
   :width: 80%
 
@@ -248,33 +336,85 @@ Y-ásinn nær niður í 0 :math:`^{\circ}\textrm{C}`, það vantar tölurnar 100
 Enska orðið “quenching” táknar að heitu stálinu er dýft í vökva; hraðasta kælingin fæst ef
 vökvinn er vatn (e: water quenching) en oftar er þó notuð olía.
 
+Seighersla (e. tempering)
+-------------------------
+Stýra eiginleikum enn frekar með endurupphitun (lægri hiti en við glæðingu) og hægri kælingu (þó hraðar en við glæðingu)
+Hefur áhrif á hörku og seigju.
+
+.. figure:: ./myndir/kafli10/Seighersla.png
+  :align: center
+  :width: 80%
+
+
 Áhrif mismunandi hitaherslu á stál eru sýnd á línuriti (Burström, 2001). Sænska hugtakið
 “anlöpt vid 400 :math:`^{\circ}\textrm{C}`” táknar að stálið var hitað upp í 400 :math:`^{\circ}\textrm{C}` áður en það var kælt.
 Hitastig í upphituninni skiptir miklu máli fyrir endanlega eiginleika, lágt hitastig hefur
-lítil áhrif.. Hert stál er hægt að gera seigara með því að hita það upp í 400 :math:`^{\circ}\textrm{C}` og svo
+lítil áhrif. Hert stál er hægt að gera seigara með því að hita það upp í 400 :math:`^{\circ}\textrm{C}` og svo
 kælt niður á ný, þá er talað um seigherslu og er þetta nú algeng framleiðsluaðferð á
 bendistáli.
 
-.. figure:: ./myndir/stal/hersla.png
+.. figure:: ./myndir/kafli10/hersla.png
   :align: center
   :width: 70%
 
+Samantekt 
+---------
 
 .. youtube:: 6jQ4y0LK1kY
 
+.. figure:: ./myndir/kafli10/yfirlithitamedhondlun.png
+  :align: center
+  :width: 100%
+
+Stálgerðir og einkenni
+~~~~~~~~~~~~~~~~~~~~~~
+
 Suðuhæft stál
-~~~~~~~~~~~~~
-Rafsuða er algeng samsetning á t.d. bendistáli, og óhjákvæmilega hitnar stálið, amk.
+-------------
+
+Rafsuða er algeng samsetning á stáli, og óhjákvæmilega hitnar stálið, amk.
 staðbundið við suðuna. Hitunin getur augljóslega haft neikvæð áhrif á efniseiginleikana,
 og með hugtakinu “suðuhæft stál” er því átt við stál sem má sjóða án þess að gripið sé til
 sérstakra ráðstafana. 
 
-Stálgerðir og einkenni - Bendistál
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. figure:: ./myndir/kafli10/suda1.png
+  :align: center
+  :width: 100%
+
+.. figure:: ./myndir/kafli10/suda2.png
+  :align: center
+  :width: 80%
+
+Byggingastál
+------------
+
+Helstu staðlar sem lýsa suðuhæfu byggingastáli
+
+.. figure:: ./myndir/kafli10/byggingastal.png
+  :align: center
+  :width: 100%
+
+S fremst þýðir byggingastál (e. structural steel)
+Talan á eftir táknar flotspennuna, fy
+Stafir fyrir aftan:
+N : normalíseruð völsun
+L : höggþolseiginleikar við -50°C
+H : hol þversnið
+
+.. figure:: ./myndir/kafli10/stalgerdir.png
+  :align: center
+  :width: 100%
+
+Bendistál
+---------
 Þegar stál er steypt inn í steypu þá eru í upphafi aðallega um efnafræðilega bindinga að
-ræða, en þessir bindingar eru sjaldnast sterkir. Til að bæta tengingu stáls og steypu eru
+ræða, en þessir bindingar eru sjaldnast sterkar. Til að bæta tengingu stáls og steypu eru
 stangirnar því “prófíleraðar”, t.d. valsaðir kambar í járnið. Því sterkara sem stálið er, því
 þéttara er á milli kambanna.
+
+
+
+
 
 Í Evrópu er nú samkomulag um eftirfarandi merkingar;
 
@@ -308,7 +448,7 @@ Stórt T aftarlega í heitinu táknar að stálið er seighert (sjá að framan)
 
 Dæmi um stálflokka (Burström, 2001)
 
-.. figure:: ./myndir/stal/bendistal.png
+.. figure:: ./myndir/kafli10/bendistal.png
   :align: center
   :width: 70%
 
@@ -317,8 +457,7 @@ Dæmi um stálflokka (Burström, 2001)
 
       stálið heitir ekki Ps500/700, Burström notar sömu mynd fyrir tvo gæðaflokka, þ.e. Ps500 og Ps700.
 
-
-.. figure:: ./myndir/stal/Taflabendistal.png
+.. figure:: ./myndir/kafli10/Taflabendistal.png
   :align: center
   :width: 100%
 
@@ -326,7 +465,7 @@ Dæmi um stálflokka (Burström, 2001)
 ) í
 kerfinu hér að ofan heitir slíkt stál þá væntanlega Ss370S.
 
-.. figure:: ./myndir/stal/vinnulinur.png
+.. figure:: ./myndir/kafli10/vinnulinur.png
   :align: center
   :width: 70%
 
@@ -347,3 +486,7 @@ FS ENV 120080:1995 Steel for reinforcement of concrete weldable ribbed reinforci
 
 W.D. Callister,Jr (2003) Materials Science and Engineering – an introduction, Wiley
 International edition, John Wiley & Sons, Inc
+
+
+
+
