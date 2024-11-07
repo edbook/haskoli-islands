@@ -1,0 +1,1147 @@
+%!TEX root = forallxcam.tex
+\part{Umsagnarökfræði}
+\label{ch.FOL}
+
+\chapter{Grunneiningar umsagnarökfræði}\label{s:FOLBuildingBlocks}
+\section{Þörfin fyrir umsagnarökfræði}
+Skoðum eftirfarandi rökfærslu, sem augljóslega er gild:
+\begin{earg}
+\item[] Júlía er rökfræðingur. 
+\item[] Allir rökfræðingar ganga um í furðufötum. 
+\item[$\therefore$] Júlía gengur um í furðufötum.
+\end{earg}
+Við gætum ef til vill þýtt hana yfir á mál setningarökfræði með eftirfarandi þýðingarlykli:
+\begin{ekey}
+\item[R] Júlía er rökfræðingur.
+\item[F] Allir rökfræðingar ganga um í furðufötum.
+\item[J] Júlía gengur um í furðufötum.
+\end{ekey}
+Rökfærslan yrði þá svona á máli setningarökfræðinnar:
+$$R, F \therefore J$$
+En við getum gengið úr skugga um það með sanntöflum að $J$ leiðir ekki rökfræðilega af $R$ og $F$ og því myndum við kannski vilja segja að þessi prýðilega rökfærsla sé eftir allt saman \emph{ógild}. Hvað hefur farið úrskeiðis?
+
+Við höfum ekki gert nein mistök við þýðingu yfir mál setningarökfræðinnar, enda er engin betri þýðing í boði. Vandinn snýr að takmörkunum setningarökfræðinnar. Setningin „Allir rökfræðingar ganga um í furðufötum“ snýr að rökfræðingum og fötunum sem þeir ganga í---setningin fullyrðir eitthvað um tengsl þess að vera rökfræðingur og að ganga um í furðufötum. Þegar við höfum þýtt rökfærsluna yfir á mál setningarökfræði eru tengslin milli þess að Júlía sé rökfræðingur og að hún gangi um í furðufötum horfin.
+
+Smæstu einingar setningarökfræðinnar eru grunnsetningar og þær segja okkur ekkert um \emph{innri} gerð setningana sem þær tákna. Til þess að geta það þurfum við að bæta einhverju við formlega málið sem við notum til að greina rökfærslur. Það er efni þessa kafla og þeirra næstu. Við munum kalla þetta mál \emph{umsagnarökfræði}.\footnote{„Umsagnarökfræði“ er þýðing á því sem á ensku er kallað „predicate logic“. Á ensku er algengara að talað sé um „first-order logic“, sem myndi útleggjast á íslensku sem „rökfræði fyrstu stéttar“. Það er hins vegar óþjált og alls ekki nákvæmara. Við munum því forðast þetta hugtak. 
+
+En þá vakna auðvitað spurningarnar, „ hvað er þetta `fyrstu stéttar'?“ og eru þær fleiri en ein? Svarið við seinni spurningunni er já og við munum aðeins fjalla um hvað þetta merkir í kafla \ref{}.}
+
+Áður en lengra er haldið, og við fjöllum ítarlega um hvernig umsagnarökfræðin er byggð upp, er hér stutt yfirlit yfir hvernig hún er hugsuð og úr hverju mál hennar samanstendur.
+
+Fyrst ber að nefna \emph{nöfn}. Í umsagnarökfræði notum við nöfn til að standa fyrir ákveðið fólk eða tiltekna hluti. Við táknum nöfnin með skáletruðum lágstöfum. Til dæmis gætum við látið bókstafinn „$j$“ standa fyrir Júlíu hér að ofan, eða látið „$a$“ standa fyrir Aragötu.
+
+Því næst höfum við umsagnir. Þær eru setningabrot á borði við „\blank\ er rökfræðingur“ eða „\blank\ er stór“. Umsagnir tjá ekki heila hugsun fyrr en við höfum fyllt upp í götin með því að búa til heilar setningar, t.d.\ „Júlía er rökfræðingur“ og „Felix er stór“. Í umsagnarökfræði notum við skáletraða hástafi til að tákna umsagnir. Til dæmis getum við látið setningastafinn „$S$“ standa fyrir „\blank\ er stór“. Við setjum saman svo umsögn og nafn til að tjá einhverja tiltekna setningu. Ef „$f$“ stæði fyrir Felix, þá getum við látið táknrununa „$Sf$“ standa fyrir setninguna „Felix er stór“. Eins myndi „$Rj$“ þá standa fyrir setninguna „Júlía er rökfræðingur“, ef „$R$“ stæði fyrir „\blank\ er rökfræðingur“ og „$j$“ stæði fyrir Júlíu.
+
+Loks höfum við svokallaða magnara. Til dæmis, þá mun táknið „$\exists$“ standa fyrir eitthvað á borð við „Til er að minnsta kosti eitt \ldots“ eða „Til er \emph{x} sem er þannig að \ldots“. Setningin „Álfar eru til“ væri því táknuð sem $„\exists x Ex“$ á máli umsagnarökfræði (ef „$E$“ stæði fyrir umsögnina „\blank\ er álfur“). Seinna í kaflanum munum við fara nánar yfir það hvað þetta „$x$“ er að gera þarna.
+
+Þetta er ekki nema yfirlit. Umsagnarökfræðin er mun margslungnari en setningarökfræðin og því munum við fara okkur hægt. Við munum ekki minnast á það sérstaklega, annars staðar en hér, en umsagnarökfræðin inniheldur öll setningatengin úr setningarökfræðinni og er enginn munur á því hvernig þau virka þar.
+
+\section{Nöfn} % TODO: Skoða hvernig þetta er í upprunlegu útgáfunni og nota „einnefni“ ef þörf er á.
+
+\emph{Einnefni} köllum við orð sem vísa til \emph{tiltekinnar} manneskju, staðar eða hlutar. Orðið „hundur“ er ekki einnefni, því það eru til fleiri en einn hundur. Nafnið „Vaskur“ er einnefni, því það vísar til tiltekins hunds, Vasks. Við getum líka litið á sum orðasambönd sem einnefni, til dæmis orðasambandið „hundurinn hennar Siggu“, því þau gegna sama hlutverki, í þessu tilfelli að vísa til tiltekins hunds.
+
+Sérnöfn eru sérstaklega mikilvægur flokkur einnefna. Þau vísa til einstaklinga án þess að lýsa þeim. Í umsagnarökfræði gegna \define{nöfn} sama hlutverki og sérnöfn í mæltu máli. Á táknmáli umsagnarökfræði eru nöfn skáletraðir lágstafir \emph{fremst} í stafrófinu, „$a$“ til „$r$“ (en eins og við munum sjá, er oft þægilegt að nota aðra stafi ef það sem vísað er til er nátengt stafnum. Það er þó bara þægileg venja). Ef þörf krefur, getum við líka notað lágvísa. Hér eru nokkur nöfn í umsagnarökfræði:
+	$$a,b,c,\ldots, r, a_1, f_{32}, j_{390}, m_{12}$$
+En það er einn mikilvægur munur á sérnöfnum í mæltu máli og nöfnum í umsagnarökfræði. „Jón“ er sérnafn en þó heita mjög margir Jón. Oftast skiptir það okkur litlu máli, því samhengið sker úr um hvern þeirra við erum að tala um, jafnvel þó að við þekkjum marga Jóna. Í umsagnarökfræði gegnir öðru máli. Þar vísar hvert nafn til \emph{nákvæmlega} eins hlutar (en þó geta tvö nöfn vísað til sama hlutarins, það er í góðu lagi). Ef við þurfum að tala um marga hluti sem bera sama nafn í mæltu máli, þá getum við notað lágvísa til að aðgreina þá.
+
+Rétt eins og í setningarökfræði notum við þýðingarlykla. Þeir segja okkur hvernig við notum ákveðin nöfn í það og það skiptið. Til dæmis:
+	
+	\begin{ekey}
+		\item[a] Anna
+		\item[j] Jón
+		\item[v] Vaskur
+		\item[s] Reykjavík
+	\end{ekey}
+	
+Glöggir lesendur gætu þó hafa tekið eftir því að hér höfum við notað táknið „v“ til að standa fyrir Vask, þó að nöfn eigi formlega séð að vera stafir fremst úr stafrófinu, nefnilega a--r. Hér er aftur um að ræða \emph{venju} þar sem við myndum nota annað tákn ef við ætluðum að fylgja reglunum til hins ítrasta. 
+
+Oft er hins vegar einfaldlega of freistandi að nota einfaldlega fremsta stafinn í nafni þess sem verið er að tákna og ef það veldur ekki ruglingi er það oftast hættulaust. Það verður þó að hafa í huga að \emph{x}, \emph{y} og \emph{z} eru svo algeng breytunöfn að ef þessi tákn væru notuð sem nöfn, þá myndi það örugglega alltaf valda misskilningi. Það ber því að forðast.
+
+\section{Umsagnir}
+
+\emph{Umsagnir} segja eitthvað um tiltekinn hlut, til dæmis að hann hafi ákveðna eiginleika. Hér eru dæmi um nokkrar umsagnir á mæltu máli:
+
+	\begin{quote}
+		\blank\ er hundur\\
+		\blank\ er meðlimur í Wu Tang Clan\\
+		Snjóflóð féll á \blank
+	\end{quote}
+Almennt getum við hugsað um umsagnir sem eitthvað sem við skeytum saman við nöfn til að mynda setningar. Við getum líka byrjað með setningar og búið til umsagnir úr þeim með því að fjarlæga nöfnin. Tökum sem dæmi setninguna „Anna fékk lánaðan bílinn hjá Jóni“. Með því að fjarlægja nöfn getum við búið til þrjár mismunandi umsagnir (og takið eftir að við notum „bíllinn“ sem nafn):
+	\begin{quote}
+		\blank\ fékk lánaðan bílinn hjá Jóni\\
+		Anna fékk lánaðan \blank\ hjá Jóni\\
+		Anna fékk lánaðan bílinn hjá \blank
+	\end{quote}
+	
+Í táknmáli umsagnarökfræði eru umsagnir táknaðar með skáletruðum hástöfum, með eða án lágvísa. Við gætum til dæmis búið til eftirfarandi þýðingarlykil:
+		\begin{ekey}
+		\item[G] \gap{1} er glaður
+		\item[H] \gap{1} er hundur
+%		\item[T_1xy] \gap{x} is as tall or taller than \gap{y}
+%		\item[T_2xy] \gap{x} is as tough or tougher than \gap{y}
+%		\item[Bxyz] \gap{y} is between \gap{x} and \gap{z}
+	\end{ekey}
+(Af hverju notum við lágvísa á götin í umsögnunum? Við komum betur að þessu í \S\ref{s:MultipleGenerality}.)	
+
+Með því að blanda saman þýðingarlyklunum okkar fyrir umsagnir og nöfn, þá getum við farið að þýða setningar af mæltu máli yfir á táknmál umsagnarökfræði. Skoðum til dæmis eftirfarandi setningar:
+	\begin{earg}
+		\item[\ex{terms1}] Vaskur er hundur.
+		\item[\ex{terms2a}] Anna og Jón eru glöð.
+		\item[\ex{terms2}] Ef Anna og Jón eru glöð, þá er Vaskur það líka.
+	\end{earg}
+Setning \ref{terms1} er tiltölulega einföld. Við táknum hana sem $Hv$. \emph{Við táknum það sem samsvarar heilli grunnsetningu með því að skrifa nafn beint á eftir umsögn.} Við förum betur í þetta að neðan.
+
+Setning \ref{terms2a} er samtenging tveggja setninga. Þær er hægt að tákna hvora um sig sem $Ga$ og $Gj$. Við getum svo notað setningatengin úr setningarökfræðinni og táknað alla setninguna sem $Ga \eand Gj$.
+
+Setning \ref{terms2} er skilyrðistengi, þar sem forliðurinn er \ref{terms2a} og bakliðurinn $Gv$. Við getum því þýtt þessa setningu yfir á táknmál umsagnarökfræði svona: $(Ga \eand Gj) \eif Gv$.
+
+\section{Magnarar}
+Við getum núna kynnt magnara til sögunnar. Tökum eftirfarandi setningar sem dæmi:
+
+	\begin{earg}
+		\item[\ex{q.a}] Allir eru glaðir.
+%		\item[\ex{q.ac}] Everyone is at least as tough as Elsa.
+		\item[\ex{q.e}] Einhver er glaður.
+	\end{earg}
+Það væri freistandi að reyna að þýða \ref{q.a} sem $Ga \eand Gj \eand Gv$. En þessi setning segir bara að Anna, Jón og Vaskur séu glöð. Við viljum segja að \emph{allir} séu glaðir, líka þeir sem við höfum ekki nefnt í þýðingarlyklinum okkar. Til að gera það notum við táknið „$\forall$“. Það er kallað \define{almagnari}. 
+	
+Á eftir mögnurum koma alltaf \define{breytur}. Á táknmáli umsagnarökfræði eru breytur táknaðar með skáletruðum lágstöfum, með eða án lágvísa, aftast úr stafrófinu, „$s$“ til „$z$“. Langalgengast er þó að nota bara $x$, $y$ og $z$. Við þýðum setningu \ref{q.a} svona: „$\forall x Gx$“ og lesum það sem „fyrir öll $x$, $x$ er glatt“.
+
+En hvað þýðir þetta? Við getum litið á táknrununa „$\forall xGx$“ þannig að hún segi: „veldu einhvern hlut og kallaðu hann $x$. Það skiptir ekki máli hvað þú velur, $x$ er glatt“ eða „sama hvaða $x$ þú velur, $x$ er glatt“. Breytur virka því á svipaðan hátt og fornöfn í mæltu máli: það skiptir ekki máli hvað þú velur, \emph{það} er glatt. 
+
+Það er engin sérstök ástæða til að nota $x$ frekar en aðrar breytur. Setningarnar „$\forall x Gx$“, „$\forall y Hy$“, „$\forall z Hz$“ og „$\forall x_5 Hx_5$“ nota allar mismunandi breytur, en þær segja allar það sama og eru rökfræðilega jafngildar.
+
+Til að þýða setningu \ref{q.e} yfir á táknmál umsagnarökfræði kynnum við nýtt tákn til sögunnar: „$\exists$“. Það er kallað \define{tilvistarmagnari} og stundum \emph{summagnari}. Rétt eins og almagnarinn, þá þarf tilvistarmagnarinn að taka með sér breytu. Við þýðum setningu \ref{q.e} sem „$\exists x Gx$“. Þessi setning er lesin sem „til er $x$ sem er þannig að $x$ er glatt“. Rétt eins og áður, þá skiptir ekki máli hvaða breytu við notum, setningarnar „$\exists x Gx$“, „$\exists z Gz$“ og „$\exists w_{256} Gw_{256}$“ merkja allar það sama.
+
+Hér eru nokkur fleiri dæmi:
+	\begin{earg}
+		\item[\ex{q.ne}] Enginn er glaður.
+		\item[\ex{q.en}] Einhver er ekki glaður.
+		\item[\ex{q.na}] Það eru ekki allir glaðir.
+	\end{earg}
+Setningu \ref{q.ne} er hægt að umorða sem „Það er ekki satt að einhver sé glaður“. Við getum þýtt þessa setningu yfir á táknmál setningarökfræði með því að nota neitun og tilvistarmagnara: „$\enot \exists xGx$“: ekki er til $x$ sem er þannig að $x$ er glatt. En \ref{q.ne} má líka umorða þannig, heldur kauðalega: „Allir eru ekki glaðir“. Með þetta í huga, þá getum við þýtt með neitun og almagnara: $\forall x \enot Gx$. Þessar þýðingar eru báðar jafngildar. Raunar mun koma í ljós síðar að það gildir almennt að allar setningar á forminu $\forall x \enot \meta{A}$ og $\enot \exists x \meta{A}$ eru jafngildar (hér notum við $\meta{A}$ sem metabreytu sem stendur fyrir hvaða formúlu sem er í umsagnarökfræði, sjá \S\ref{s:UseMention} og \S\ref{formula}). Stundum er eðlilegra að fylgja annarri þýðingu, frekar en hinni, en almennt er þetta bara smekksatriði.
+
+Setningu \ref{q.en} má umorða sem „Til er $x$ sem er þannig að $x$ er ekki glatt“. Við myndum þýða það yfir á táknmál umsagnarökfræði sem „$\exists x \enot Gx$“. Við hefðum líka getað þýtt þessa setningu sem $\enot \forall x Gx$, sem væri lesin sem „ekki er satt að: fyrir öll $x$, $x$ er glatt“. Það er svo ágæt þýðing á \ref{q.na}. Setningar \ref{q.en} og \ref{q.na} eru því jafngildar.
+
+\emph{Það er mikilvægt að gleyma ekki breytunum þegar við þýðum setningar yfir á táknmál umsagnarökfræði.} Táknrunur á borð við „$\exists Gx$“ eða „$\forall Gx$“ eru \emph{ekki} gildar. Breytan tengir saman magnarann og umsögnina og án breytunnar við magnarann rofna þessi tengsl. Þegar við kynnumst flóknari setningum, þá sjáum við betur af hverju þetta er nauðsynlegt.
+
+\section{Yfirgrip} \label{yfirgrip}
+Samkvæmt þýðingarlyklinum sem við höfum verið að nota er setningin $\forall x Gx$ þýðing á „Allir eru glaðir“ En hverjir eru „allir“? Þegar við notum svona setningar á mæltu máli, þá meinum við ekki að allir á jörðinni séu glaðir, því síður að \emph{allt í alheiminum} sé glatt. Við eigum oftast við alla í einhverju tilteknu samhengi: alla í bekknum, alla í veislunni, o.s.frv.
+
+Í umsagnarökfræðinni leysum við úr þessari margræðni með því að skilgreina \define{yfirgrip}. Yfirgripið er mengi allra þeirra hluta sem við erum að tala um. Ef við viljum tala um alla á Akureyri, þá skilgreinum við yfirgripið þannig að það sé mengi allra á Akureyri. Við skrifum þetta í upphafi þýðingarlykilsins, svona:
+	\begin{ekey}
+		\item[\text{yfirgrip}] Fólk á Akureyri
+	\end{ekey}
+Við segjum að magnararnir \emph{nái yfir} yfirgripið. Að þessu yfirgripi gefnu, þá myndum við lesa „$\forall x$“ sem „Allir á Akureyri eru þannig að...“ og „$\exists x$“ sem „Einhver á Akureyri er þannig að...“
+	
+Í umsagnarökfræði verður yfirgripið að innihalda að minnsta kosti einn hlut; það má ekki vera tómt. Þegar við komum að reglunum fyrir náttúrulega afleiðslu í umsagnarökfræði í \S\ref{tomtyfirgrip}, þá munum við sjá af hverju.
+
+Við getum ennfremur dregið þá ályktun í mæltu máli að einhver sé glaður ef við vitum að Jón sé glaður, Jón er jú einhver. Við viljum því geta dregið þá ályktun af „$Gj$“ að „$\exists x Gx$“. Hvert nafn verður því að standa fyrir nákvæmlega einn hlut í yfirgripinu (ekki engan og ekki fleiri en einn). Við getum ekki talað um fleira en það sem er í yfirgripinu, svo ef við viljum segja eitthvað um annað fólk en það sem býr á Akureyri, þá verðum við að skilgreina yfirgripið þannig.
+	\factoidbox{
+Yfirgrip er mengi allra þeirra hluta sem við erum að tala um í það og það skiptið. Yfirgrip verður að innihalda \emph{að minnsta kosti} einn hlut. Hvert nafn verður að vísa til \emph{nákvæmlega} eins hlutar. En hlutur í yfirgripinu má hafa fleiri en eitt nafn, eða ekkert.}
+
+Magnarar ná yfir alla hluti í yfirgripinu, en þeir eru óháðir hverjum öðrum. Hvað við eigum við með því sést ef til vill best með dæmi. Segjum sem svo að yfirgripið sé krukka með bláum, gulum og rauðum marmarakúlum, þar sem \emph{B} stendur fyrir „\blank er blá kúla“, \emph{G} fyrir er „\blank er gul kúla“ og \emph{R} fyrir „\blank er rauð kúla“. Setningin $\exists x Bx$ er því sönn eff að minnsta kosti ein kúla í krukkunni er blá.
+
+En setningin $\exists x \exists y (Bx \eand By$) segir \emph{ekki} að til séu að minnsta kosti tvær bláar kúlur í krukkunni, heldur það sama og $\exists x Bx$. Ástæðan er sú að \emph{báðir} magnararnir ná yfir allt yfirgripið og segja, hvor um sig, að til sé að minnsta kosti ein blá kúla. \emph{x} og \emph{y} geta því vísað til sömu kúlunnar. Við getum hugsað um þetta svona: Fyrst gáum við hvort að við getum fundið einhverja kúlu sem er blá. Ef það tekst, þá er setningin sönn. Þetta samsvarar fyrri magnaranum. Svo setjum við kúluna \emph{aftur ofan í krukkuna} og endurtökum leikinn fyrir seinni magnarann. Af því að kúlan er komin aftur ofan í krukkuna, þá getur seinni magnarinn fundið hana.
+
+Í \S \ref{sec.identity} munum við svo fara yfir það hvernig við getum þýtt setningar af þessu tagi.
+
+\chapter{Setningar með einum magnara}\label{s:MoreMonadic}
+Nú höfum við kynnst öllum einingum setningarökfræðinnar. Til að þýða setningar yfir á mál hennar þarf þó að kunna að blanda saman umsögnum, nöfnum, mögnurum, breytum og setningatengjum. Þetta þarf að æfa sérstaklega og við munum skoða mörg dæmi í því sem eftir er af þessum kafla.
+
+\section{Að þýða hliðstæð lýsingarorð}
+
+Stundum standa lýsingarorð með fallorði (t.d.\ gult blóm) og þá þarf að sýna sérstaka aðgát við þýðingu. Hér er dæmi sem liggur nokkuð beint við:
+	\begin{earg}
+		\item[\ex{syn1}] Skjóni er grár hestur.
+	\end{earg}
+Þessa setningu má umorða sem „Skjóni er grár og Skjóni er hestur“. Notum eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[G] \gap{1} er grár
+		\item[H] \gap{1} er hestur
+		\item[s] Skjóni
+	\end{ekey}
+Nú getum við þýtt setningu \ref{syn1} sem $Gs \eand Hs$. Þetta er, eins og áður sagði, engum sérstökum vandkvæðum bundið. 
+
+En skoðum núna eftirfarandi setningar:
+	\begin{earg}
+		\item[\ex{syn2}] Dúmbó er lítill fíll. 
+		\item[\ex{syn3}] Dúmbó er spendýr.
+		\item[\ex{syn4}] Dúmbó er lítið spendýr.
+	\end{earg}
+Ef við ætluðum að fylgja dæminu um Skjóna hér að ofan, þá gætum við reynt eftirfarandi þýðingarlykil:	
+	\begin{ekey}
+		\item[L] \gap{1} er lítill
+		\item[F] \gap{1} er fíll
+		\item[S] \gap{1} er spendýr
+		\item[d] Dúmbó
+	\end{ekey}
+Þá myndum við þýða setningu \ref{syn2} sem $Ld \eand Fd$, setningu \ref{syn3} sem $Sd$ og setningu \ref{syn4} sem $Ld \eand Sd$. En þá lendum við í vandræðum! Það myndi þýða að setningu \ref{syn4} leiddi af setningum \ref{syn2} og \ref{syn3}. En svo er ekki. Dúmbó er kannski lítill fíll, en hann er alveg ábyggilega stórt spendýr. Setning \ref{syn2} segir nefnilega að Dúmbó sé lítill \emph{af fíl að vera} þó að hann sé stór miðað við önnur spendýr. Við þurfum því að finna aðrar umsagnir til að þýða „ \blank er lítill fíll“ og „\blank er lítið spendýr“.
+
+Það er hægt að finna mörg svipuð dæmi. Allir skíðagarpar eru manneskjur, en sumir góðir skíðagarpar eru ekki góðar manneskjur. Ég er kannski afleitur skákmaður, en það er þó ekki þar með sagt að ég sé afleitur að öllu leyti eða yfirleitt. Þetta þýðir að þegar við þýðum setningar þar sem lýsingarorð standa með einhverju öðru orði (lítill fíll, stór bíll, góð manneskja, rautt hús) þá þurfum við að athuga vel hvort hægt sé að þýða þau saman sem samtengingu eða ekki.
+
+\section{Algengar setningar með mögnurum}
+Skoðum eftirfarandi setningar:
+	\begin{earg}
+		\item[\ex{quan1}] Allir smápeningarnir sem ég er með í vasanum eru fimmtíukallar.
+		\item[\ex{quan2}] Einhver af smápeningunum á borðinu er tíkall.
+		\item[\ex{quan3}] Ekki allir smápeningarnir á borðinu eru tíkallar.
+		\item[\ex{quan4}] Enginn af smápeningunum sem ég er með í vasanum er tíkall.
+	\end{earg}
+Þegar við skilgreinum þýðingarlykil í umsagnarökfræði, þá þurfum við að tilgreina yfirgrip. Hér erum við að tala um smápeninga sem ég er með í vasanum, svo yfirgripið verður að minnsta kosti að innihalda þá. Við erum ekki að tala um neitt annað en smápeninga heldur, svo við getum látið yfirgripið ná yfir alla smápeninga. Við þurfum ekki að tilgreina nein nöfn, því við minnumst ekki á neina einstaka peninga. Hér er þá þýðingarlykillinn:
+
+	\begin{ekey}
+		\item[\text{yfirgrip}] allir smápeningar
+		\item[P] \gap{1} er í vasanum á buxunum sem ég er í
+		\item[T] \gap{1} er á borðinu
+		\item[Q] \gap{1} er fimmtíukall
+		\item[D] \gap{1} er tíkall
+	\end{ekey}
+Setningu \ref{quan1} er eðlilegast að þýða með almagnara. En fyrst þurfum við að gæta að því að almagnarinn segir eitthvað um \emph{allt} í yfirgripinu---alla smápeninga---ekki bara þá sem smápeninga sem ég er með í vasanum. Við leysum þetta með að segja sem svo að \emph{ef} ég er með eitthvað í vasanum, \emph{þá} er það fimmtíukall. Við munum sjá skilyrðissetningar notaðar svona með almögnurum aftur og aftur. 
+
+Við getum því þýtt setninguna yfir á táknmál umsagnarökfræði svona: $\forall x(Px \eif Qx)$ og lesum hana sem „fyrir öll \emph{x}, ef \emph{Px}, þá \emph{Qx}“. Við getum líka hugsað um merkingu hennar svona, og hugsanlega er það hjálplegt fyrir marga: „veldu hvað sem er úr yfirgripinu, ef \emph{það} er í vasanum á buxunum sem ég er í, þá er það fimmtíukall“. Ef það er satt, þá hlýtur það að vera að allir smápeningar sem ég er með í vasanum séu fimmtíukallar.
+
+Setning \ref{quan1} fjallar um smápeninga sem bæði eru í vasa mínum og eru fimmtíukallar, og því gæti verið freistandi að reyna að þýða hana sem samtengingu. En setningin $\forall x(Px \eand Qx)$ hefur í raun gjörólíka merkingu. Hún segir um allt í yfirgripinu að það séu bæði fimmtíukallar og í vasanum hjá mér, og þar sem yfirgripið er allir fimmtíukallar, þá væri það jafngilt því að segja „allir smápeningar eru fimmtíukallar sem ég er með í vasanum.“ Það er allt annað---og alveg greinilega ósatt. Þess vegna höfum við: \factoidbox{
+
+		Við getum þýtt setningu sem $\forall x (\script{F}x \eif \script{G}x)$ ef hægt er að umorða hana á íslensku sem „öll F eru G“.
+	}
+Hér er þörf á stuttri athugasemd. Þegar við fjölluðum um setningarökfræðina notuðum við feitletraða stafi sem stóðu fyrir hvaða setningu sem er á máli setningarökfræði. Hér þurfum við hins vegar á einhverjum rithætti að halda sem leyfir okkur að tala um hvaða \emph{umsögn} sem er. Hér notum við sömu aðferð og látum samhengið skera úr um hvort átt er við setningar eða umsagnir.
+
+Setningu \ref{quan2} er eðlilegast að þýða með tilvistarmagnara. Hægt er að umorða hana sem „til er einhver smápeningur sem er á borðinu og er tíkall“. Hana þýðum við því sem $\exists x(Tx \eand Dx)$.
+
+Takið eftir því að við þurftum að nota skilyrðissetningu þegar við þýddum setninguna með almagnaranum, en samtengingu með tilvistarmagnaranum. Hvað ef við hefðum skrifað í staðinn „$\exists x(Tx \eif Dx)$“? Það hefði merkt að til væri einhver hlutur \emph{x} í yfirgripinu sem er þannig að $(Tx \eif Dx)$ er satt um \emph{x}. Með öðrum orðum, það er til einhver smápeningur sem er þannig að ef \emph{hann} er á borðinu, þá er hann tíkall. Munum að í setningarökfræðinni, þá er $\meta{A} \eif \meta{B}$ rökfræðilega jafngilt $\enot\meta{A} \eor \meta{B}$. Þetta jafngildi er líka til staðar í umsagnarökfræði. Það þýðir að $\exists x (Tx \eif Dx)$ er satt ef til er einhver hlutur \emph{x} í yfirgripinu sem er þannig að $(\enot Tx \eor Dx)$ er satt um \emph{x}. Með öðrum orðum, $\exists x (Tx \eif Dx)$ er satt ef einhver smápeningur er \emph{annað hvort} ekki á borðinu eða er tíkall. Það er mjög auðvelt fyrir þessa setningu að vera sanna, enda eru margir smápeningar ekki á borðinu---þeir eru raunar út um allt. Skilyrðissetningar sem eru innan sviðs tilvistarmagnara er því í raun ekki mjög gagnlegar og best að forðast þær, nema við séum viss um hvað við erum að gera.
+
+	\factoidbox{
+		Við getum þýtt setningu sem $\exists x (\script{F}x \eand \script{G}x)$ ef hægt er að umorða hana á íslensku sem „sum F eru G“.
+	}
+
+Við getum umorðað setningu \ref{quan3} sem „það er ekki satt að allir smápeningar á borðinu séu tíkallar“. Ef við höfum í huga þýðingu okkar á \ref{quan1}, þá liggur beint við að þýða \ref{quan3} sem $\enot \forall x(Tx \eif Dx)$. En við gætum litið svo á að eðlilegast væri að umorða \ref{quan3} sem „einhver smápeningur á borðinu er ekki tíkall“ (ef það er ekki satt að þeir séu allir tíkallar, þá hlýtur jú að minnsta kosti einn að vera ekki tíkall). Við myndum þá þýða það yfir á táknmál umsagnarökfræði sem $\exists x(Tx \eand \enot Dx)$.
+
+Það er ekki augljóst á þessu stigi málsins, en þessar setningar eru rökfræðilega jafngildar. Það er vegna þess að $\enot\forall x\meta{A}$ and $\exists x\enot\meta{A}$ eru rökfræðilega jafngildar, sem og setningarnar $\enot(\meta{A}\eif\meta{B})$ og $\meta{A}\eand\enot\meta{B}$.\footnote{Glöggir lesendur taka kannski eftir því að við skilgreindum „rökfræðilegt jafngildi“ á tæknilegan hátt fyrir setningar í setningarökfræði, nefnilega þannig að tvær setningar eru rökfræðilega jafngildar ef þær eru sannar og ósannar fyrir sömu sanngildadreifingar. En við höfum ekki skilgreint neitt svipað fyrir umsagnarökfræði. Það munum við gera seinna.}
+
+Hægt er að umorða setningu \ref{quan4} sem „það er ekki satt að ég sé með tíkall í vasanum“. Við getum þýtt þetta yfir á mál umsagnarökfræði sem $\enot\exists x(Px \eand Dx)$. Við gætum líka gripið til orðalags sem passar illa við mælt mál og sagt „Allt sem ég er með í vasanum er ekki-tíkall“ og því þýtt setninguna sem $\forall x(Px \eif \enot Dx)$. Þessar tvær setningar eru rökfræðilega jafngildar og þær eru báðar jafn góðar sem þýðingar á setningu \ref{quan4}.
+
+\section{Tómar umsagnir}\label{tomarumsagnir}
+
+Í \S\ref{s:FOLBuildingBlocks} lögðum við áherslu á að hvert nafn nefnir nákvæmlega einn hlut í yfirgripinu; aldrei fleiri en einn og alltaf að minnsta kosti einn. Öðru máli gegnir um umsagnir, við gerum enga kröfu um að þær eigi við eitthvað í yfirgripinu . Þá segjum við að þær séu \define{tómar}. Skoðum þetta aðeins betur.
+
+Segjum að við viljum þýða eftirfarandi tvær setningar yfir á táknmál umsagnarökfræði:
+
+	\begin{earg}
+		\item[\ex{monkey1}] Allir apar kunna að tefla.
+		\item[\ex{monkey2}] Sumir apar kunna að tefla.
+	\end{earg}
+Við getum notað eftirfarandi þýðingarlykil:	
+	\begin{ekey}
+		\item[\text{yfirgrip}] dýr
+		\item[A] \gap{1} er api.
+		\item[T] \gap{1} kann að tefla.
+	\end{ekey}
+Setningu \ref{monkey1} er þá hægt að þýða sem $\forall x(Ax \eif Tx)$ og setningu \ref{monkey2} sem $\exists x(Ax \eand Tx)$.
+	
+Það er óneitanlega freistandi að segja að setningu \ref{monkey2} leiði af setningu \ref{monkey1}. Það er að segja, við gætum haldið að það væri ómögulegt að allir apar kunni að tefla, nema sumir apar kunni að tefla. En þetta væru mistök, að minnsta kosti í rökfræði, ef ekki í mæltu máli. Það er nefnilega mögulegt að setningin $\forall x(Ax \eif Tx)$ sé sönn, jafnvel þó að setningin $\exists x(Ax \eand Tx)$ sé ósönn.
+
+Hvernig má það vera? Svarið er fólgið í því hvað myndi gerast ef \emph{það væru engir apar}. Ef það eru engir apar í yfirgripinu, þá væri setningin $\forall x(Ax \eif Tx)$ sönn, en þó þannig að það er ekkert sérstakt sem gerir hana sanna: það skiptir engu máli hvaða apa þú velur, hann kann að tefla! En hið sama gildir ekki um $\exists x(Mx \eand Sx)$, enda væri hún ósönn ef engir apar eru í yfirgripinu. 
+
+En af hverju ekki að segja bara að setning eins og $\forall x(Ax \eif Tx)$ sé ósönn ef umsögnin í forliðnum er tóm? Þetta tengist að sjálfsögðu skilyrðissetningum og hversu furðulegar þær eru. Ef enginn api er í yfirgripinu, þá er umsögnin „\gap{1} er api“ ekki sönn um neinn hlut í yfirgripinu. Forliðurinn í skilyrðissetningunni er því alltaf ósannur, og skv.\ skilgreiningarsanntöflunni fyrir skilyrðisstengi eru skilyrðissetningar með ósönnum forlið alltaf sannar. Slík setning hlýtur því alltaf að vera sönn.
+
+Önnur, og skyld ástæða, er sú að við höfum sömu ályktunarreglur og við höfðum í setningarökfræði í umsagnarökfræði. Við getum sannað í setningarökfræði að $\forall x(Ax \eif Tx)$ og $\forall x(\enot Tx \eif \enot Ax)$ séu sannanlega jafngildar setningar. Sú seinni segir að fyrir öll dýr \emph{x}, gildi að ef \emph{x} kann ekki að tefla, þá er \emph{x} ekki api---og er sjálf jafngild $\enot \exists x (\enot Tx \eand Ax)$ eins og við munum geta sannað í næsta kafla.
+
+Þar sem þessar þrjár setningar eru sannanlega jafngildar, þá viljum við að þær séu sannar (og ósannar) undir sömu kringumstæðum. Hvenær eru þessar setningin svo ósannar? Jú, ef til er eitthvað dýr sem kann ekki að tefla og er api. En það eru engir apar---setningarnar geta því ekki verið ósannar, og hljóta því allar að vera sannar. Það leiðir því einfaldlega til mótsagnar að gefa sér að setning á borð við $\forall x(Ax \eif Tx)$ sé ósönn, ef \emph{A} er tóm umsögn.
+
+ 	\factoidbox{
+		Ef $\meta{F}$ er tóm umsögn, þ.e.\ ef ekkert í yfirgripinu uppfyllir $\meta{F}$, þá eru setningar á forminu $\forall x (\meta{F}x \eif \ldots)$ sannar.
+	}
+
+%Þriðja ástæðan hefur að gera með lögmálið um annað tveggja, það er að segja þá forsendu okkar að allar setningar hafi eitt af tveimur sanngildum, satt eða ósatt. .
+
+\section{Hvernig á að velja yfirgrip?}
+
+Þegar við þýðum setningu af mæltu máli yfir á táknmál umsagnarökfræði, þá er þýðingarlykillinn óaðskiljanlegur hluti þýðingarinnar og oft getur verið vandasamt að velja réttan lykil. Segjum til dæmis að við viljum þýða eftirfarandi setningu: 
+	\begin{earg}
+		\item[\ex{pickyfirgriprose}] Engin er rós án þyrna.
+	\end{earg}
+Við gætum prófað eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[R] \gap{1} er rós
+		\item[T] \gap{1} hefur þyrna
+	\end{ekey}
+„Enginn er rós án þyrna“ merkir það sama og „allar rósir hafa þyrna“. Það væri þá freistandi að reyna að þýða \ref{pickyfirgriprose} sem $\forall x(Rx \eif Tx)$. En við höfum ekki enn tilgreint yfirgrip. Ef yfirgripið innihéldi allar rósir, þá væri þetta góð þýðing. En ef yfirgripið væri, til dæmis, \emph{allir hlutir á skrifborðinu mínu}, þá myndi $\forall x(Rx \eif Tx)$ segja að allar rósir sem eru á skrifborðinu mínu hafi þyrna og það er ekki alveg það sem við erum að reyna að tjá með upprunalegu setningunni. Ef það væru svo engar rósir á skrifborðinu mínu, sem raunar eru tilfellið þegar þessi orð eru skrifuð, þá væri setningin sönn, af engri ástæðu annarri en að yfirgripið er tómt. Það er ekki það sem við erum á höttunum eftir. Til að þýða setninguna sómasamlega þurfum við því að gæta að því að yfirgripið innihaldi allar rósir.
+
+En hér höfum við tvo möguleika. Í fyrsta lagi gætum við reynt að takmarka yfirgripið við allar rósir, en \emph{bara} rósir. Þá gætum við þýtt \ref{pickyfirgriprose} einfaldlega sem $\forall x Tx$. Þetta er satt eff (takið eftir því að hér eru tvö eff!) allt í yfirgripinu hefur þyrna, og fyrst yfirgripið inniheldur bara rósir, þá er þessi setning sönn eff allar rósir hafa þyrna, þ.e.\ eff engin er rós án þyrna. Með því að takmarka yfirgripið með þessum hætti, þá getum við því einfaldað þýðinguna töluvert, en þó bara ef allar setningar sem við viljum þýða yfir á táknmál umsagnarökfræði í þetta skiptið eru um rósir og ekkert annað en rósir.
+
+Í öðru lagi gætum við látið yfirgripið ná yfir fleiri hluti: fífla, fiðrildi, Framsóknarmenn, hvað sem er. Í það minnsta verður yfirgripið að vera stærra ef við viljum til dæmis þýða eftirfarandi setningu á sama tíma og \ref{pickyfirgriprose}:
+
+	\begin{earg}
+		\item[\ex{pickyfirgripcowboy}] Allar kisur dansa tangó.
+	\end{earg}
+Nú verður yfirgripið að innihalda bæði allar rósir (svo við getum þýtt setninguna \ref{pickyfirgriprose}) og allar kisur (svo við getum þýtt \ref{pickyfirgripcowboy}). Við gætum þá reynt að nota eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[\text{yfirgrip}] dýr og plöntur
+		\item[K] \gap{1} er kisa
+		\item[D] \gap{1} dansar tangó
+		\item[R] \gap{1} er rós
+		\item[T] \gap{1} hefur þyrna
+	\end{ekey}
+Nú verðum við að þýða \ref{pickyfirgriprose} sem $\forall x (Rx \eif Tx)$, þar sem $\forall x Tx$ myndi merkja „öll dýr og allar plöntur hafa þyrna“. Það sama gildir um \ref{pickyfirgripcowboy}; hún er best þýdd sem $\forall x (Kx \eif Dx)$. Lexían er: yfirgripið ákvarðar hvernig við getum þýtt setningar yfir á táknmál setningarökfræði.
+
+\section{Gagnsemi umorðunar}
+
+Þegar við þýðum setningar yfir á mál umsagnarökfræði er mikilvægt að átta sig vel á uppbyggingu setninganna sem við viljum þýða. Stundum getum við farið beint úr upprunalegu setningunni yfir í einhverja setningu á máli umsagnarökfræði, en stundum er gagnlegt að umorða setninguna, einu sinni eða oftar, þannig að við eigum hægara með að þýða hana yfir á táknmál umsagnarökfræði. Stundum er best að gera þetta í skrefum þannig að hver umorðun færi okkur nær og nær einhverju sem við 
+getum svo þýtt.
+
+Í næstu dæmum munum við nota þennan þýðingarlykil:
+	\begin{ekey}
+		\item[\text{yfirgrip}] fólk
+		\item[B] \gap{1} er bassaleikari
+		\item[R] \gap{1} er rokkstjarna
+		\item[a] Anna
+	\end{ekey}
+Skoðum nú þessar setningar:
+	\begin{earg}
+		\item[\ex{pronoun1}] Ef Anna er bassaleikari, þá er hún rokkstjarna.
+		\item[\ex{pronoun2}] Ef manneskja er bassaleikari, þá er hún rokkstjarna.
+	\end{earg}
+Hérna eru bakliðirnir báðir eins í setningum \ref{pronoun1} og \ref{pronoun2} („$\ldots$ hún er rokkstjarna“) en þeir hafa mjög ólíka merkingu. Við getum dregið þetta fram með að umorða upprunalegu setningarnar þannig að engin fornöfn komi lengur fyrir í þeim. 
+
+Við getum þá til dæmis umorðað setningu \ref{pronoun1} sem „Ef Anna er bassaleikari, þá er Anna rokkstjarna“. Við getum þýtt hana sem $Ba \eif Ra$.
+
+Við verðum að umorða setningu \ref{pronoun2} á annan hátt, nefnilega sem „Ef manneskja er bassaleikari, þá er \emph{sú manneskja} rokkstjarna“. Þessi setning er ekki um neina tiltekna manneskju, svo við vitum að við þurfum að nota breytu einhvers staðar. Til bráðabirgða getum við því umorðað hana sem „fyrir hvaða manneskju \emph{x}, ef \emph{x} er manneskja, þá er \emph{x} rokkstjarna“. Orðalagið „fyrir allar manneskjur \emph{x}“ merkir hér bara það að það skiptir ekki máli hvaða manneskju úr yfirgripinu við veljum, það sem á eftir kemur á við hana, og við notum breytuna \emph{x} hér í staðinn fyrir fornafn. Nú getum við loks þýtt þessa setningu sem $\forall x (Bx \eif Rx)$. Þetta er sama setning og við myndum hafa notað til að þýða „Allir sem eru bassaleikarar eru rokkstjörnur“ og er greinilega sönn eff setning \ref{pronoun2} er sönn.
+
+Skoðum nú þessar setningar:
+
+	\begin{earg}
+		\item[\ex{anyone1}] Ef einhver er bassaleikari, þá er Anna rokkstjarna.
+		\item[\ex{anyone2}] Ef einhver er bassaleikari, þá er hún rokkstjarna.
+	\end{earg}
+Hér eru forliðirnir eins („Ef einhver er bassaleikari$\ldots$“). En það getur verið ansi snúið að finna út úr því hvernig best er að þýða þessar setningar. Hér kemur umorðun aftur að gagni.
+
+Við getum umorðað setningu \ref{anyone1} sem „Ef það er til að minnsta kosti einn bassaleikari, þá er Anna rokkstjarna“. Við sjáum því að þetta er skilyrðissetning þar sem forliðurinn er setning með magnara. Við getum því þýtt hana svona, þar sem skilyrðistengið er aðaltengið: $\exists x Bx \eif Ra$. Takið eftir því að hér er svið magnarans \emph{ekki} öll setningin, heldur bara forliðurinn. Við munum tala betur um svið magnara í \S\ref{s:quantscope} hér fyrir neðan.
+
+Setningu \ref{anyone2} er svo hægt að umorða sem „fyrir allt fólk \emph{x}, ef \emph{x} er bassaleikari, þá er \emph{x} rokkstjarna“. „Hún“ í bakliðnum vísar til „einhvers“, hver sem það er, og umorðunin dregur þetta fram. Þessa setningu mætti svo umorða frekar á eðlilegra mál sem „Allir bassaleikarar eru rokkstjörnur“ og hana má greiðlega þýða sem $\forall x(Bx \eif Rx)$, rétt eins \ref{pronoun2}.
+
+Lexían hér er að ef við reynum að þýða setningar af mæltu máli sem innihalda orð eins og „einhver“, „sérhver“ og fleiri í þessum dúr, þá þurfum við að nota magnara. En það getur stundum verið erfitt að sjá hvort nota á tilvistar- eða almagnara og þá er gott að umorða setninguna þannig að slík orð komi ekki fyrir. 
+
+\section{Svið magnara}\label{s:quantscope}
+
+Notum nú sama þýðingarlykil og skoðum eftirfarandi setningar:
+
+	\begin{earg}
+		\item[\ex{qscope1}] Ef allir eru bassaleikarar, þá er Felix bassaleikari.
+		\item[\ex{qscope2}] Um alla gildir að ef þeir eru bassaleikarar, þá er Felix bassaleikari.
+	\end{earg}
+Felix hefur ekki verið í þýðingarlyklinum okkar til þessa, svo við bætum við nýju nafni í þýðingarlykilinn:	
+	\begin{ekey}
+		\item[b] Felix
+	\end{ekey}
+	
+Setning	\ref{qscope1} er skilyrðissetning með bakliðinn „allir eru bassaleikarar“. Þá þýðum við hana sem $\forall x Bx \eif Bb$. Þessi setning er \emph{nauðsynlega} sönn: ef \emph{allir} eru bassaleikarar, þá hlýtur Felix að vera það líka. Ef hann væri ekki bassaleikari, þá væri það jú ósatt að allir séu bassaleikarar.
+
+Setningu \ref{qscope2} mætti hins vegar best umorða sem „allar manneskjur \emph{x} eru þannig að ef \emph{x} er bassaleikari, þá er Felix bassaleikari“. Það er að segja, skilyrðissetning á forminu $Bx \eif Bb$ er sönn, sama hvað við setjum inn fyrir \emph{x}. Þetta getum við táknað á máli umsagnarökfræði sem $\forall x (Bx \eif Bb)$. Þessi setning er ósönn, ef Felix er ekki bassaleikari. Til dæmis er Anna bassaleikari, svo $Ba$ er sönn. En Felix er ekki bassaleikari, svo $Bb$ er ósönn. Þá er setningin $Ba \eif Bb$ ósönn, og því til að minnsta kosti ein manneskja í yfirgripinu sem hún er ósönn um, nefnilega Önnu. $\forall x (Bx \eif Bb)$ er því ósönn líka.
+
+Þetta dæmi er dálítið erfitt, svo það er hugsanlega þess virði að skoða það aðeins betur. Setningin $\forall x (Bx \eif Bb)$ segir að skilyrðissetningin sem er innan sviga sé sönn fyrir öll \emph{x}. Skilyrðissetning er ósönn ef forliðurinn er sannur og bakliðurinn ósannur. Til að sýna að þessi setning sé ósönn, þá þurfum við því að finna slíkt dæmi, þar sem forliðurinn er sannur, en bakliðurinn ósannur. Við fundum slíkt dæmi, þar sem Felix er ekki bassaleikari, en Anna er bassaleikari. Þetta hefur auðvitað þær skrýtnu afleiðingar að ef Felix \emph{er} bassaleikari, þá gildir það um allar manneskjur \emph{x} að ef \emph{x} er bassaleikari, þá er Felix bassaleikari, því eins og við vitum með að skoða skilgreiningarsanntöfluna fyrir skilyrðistengið, þá er skilyrðisetning alltaf sönn ef bakliðurinn er sannur. 
+
+Það sem þessi tvö dæmi eiga að sýna er að $\forall x Bx \eif Bb$ og $\forall x (Bx \eif Bb)$ eru mjög ólíkar setningar. Munurinn hefur að gera með \emph{svið} magnarans í hvorri setningu. Svið magnara er mjög líkt sviði neitunar sem við skoðuðum þegar setningarökfræðin var til umfjöllunar og það er gagnlegt að skoða magnarana á svipaðan hátt. 
+
+Í setningunni $\enot Ba \eif Bb$ er svið „$\enot$“ bara forliður skilyrðissetningarinnar. Hún merkir því eitthvað á borð við: ef $Ba$ er ósönn, þá er $Bb$ sönn.  Á sama hátt er svið „$\forall x$“ í setningunni $\forall x Bx \eif Bb$ bara forliður skilyrðissetningarinnar. Hún merkir eitthvað á borð við ef $Bx$ er satt um \emph{allt}, þá er $Bb$ líka satt.
+
+Í setningunni $\enot(Bk \eif Bb)$ er svið „$\enot$“ hins vegar öll setningin. Hún segir að \emph{öll} setningin $(Bk \eif Bb)$ sé ósönn. Það sama gildir um magnarann í $\forall x (Bx \eif Bb)$, svið hans er öll setningin. Hún segir því að skilyrðissetningin $(Bx \eif Bb)$ sé sönn um \emph{allt}.
+
+Við þurfum því að sýna töluverða varkárni þegar kemur að því að þýða skilyrðissetningar og við þurfum að passa að við höfum skilið svið magnarans rétt.
+
+\practiceproblems
+\problempart
+\label{pr.BarbaraEtc}
+Hér eru allar þær rökhendur sem Aristóteles og eftirmenn hans uppgötvuðu, ásamt þeim nöfnum sem þær gengu undir á miðöldum:
+\begin{ebullet}
+	\item \textbf{Barbara.} Öll G eru F. Öll H er G. Þar af leiðandi:  Öll H eru F.
+	\item \textbf{Celarent.} Engin G eru F. Öll H eru G. Þar af leiðandi: Engin H eru F.
+	\item \textbf{Ferio.} Engin G eru F. Sum H eru G. Þar af leiðandi: Sum H eru ekki F.
+	\item \textbf{Darii.} Öll G eru F. Sum H eru G. Þar af leiðandi: Sum H er F.
+	\item \textbf{Camestres.} Öll F eru G. Engin H eru G. Þar af leiðandi: Engin H eru F.
+	\item \textbf{Cesare.} Engin F eru G. Öll H eru G. Þar af leiðandi: Engin H eru F.
+	\item \textbf{Baroko.} Öll F eru G. Sum H eru ekki G. Þar af leiðandi: Sum H eru ekki F.
+	\item \textbf{Festino.} Engin F eru G. Sum H eru G. Þar af leiðandi: Sum H eru ekki F.
+	\item \textbf{Datisi.} Öll G eru F. Sum G eru H. Þar af leiðandi: Sum H eru F.
+	\item \textbf{Disamis.} Sum G eru F. Öll G eru H. Þar af leiðandi: Sum H eru F.
+	\item \textbf{Ferison.} Engin G eru F. Sum G eru H. Þar af leiðandi: Sum H eru ekki F.
+	\item \textbf{Bokardo.} Sum G eru ekki F. Öll G eru H. Þar af leiðandi:  Sum H eru ekki F.
+	\item \textbf{Camenes.} Öll F eru G. Engin G eru H Þar af leiðandi: Engin H eru F.
+	\item \textbf{Dimaris.} Sum F eru G. Öll G eru H. Þar af leiðandi: Sum H eru F.
+	\item \textbf{Fresison.} Engin F eru G. Sum G eru H. Þar af leiðandi: Sum H eru ekki F.
+\end{ebullet}
+Þýðið þessar rökfærslur yfir á táknmál umsagnarökfræði.
+\\
+
+\problempart
+\label{pr.FOLvegetarians}
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] fólk
+\item[K] \gap{1} kann talnalykilinn sem gengur að peningaskápnum
+\item[S] \gap{1} er njósnari
+\item[V] \gap{1} er grænmetisæta
+%\item[Txy] \gap{x} trusts \gap{y}.
+\item[h] Hafþór
+\item[i] Ingimar
+\end{ekey}
+\begin{earg}
+\item Hvorki Hafþór né Ingimar eru grænmetisætur.
+\item Enginn njósnari kann talnalykilinn em gengur að peningaskápnum
+\item Enginn kann talnalykilinn að peningaskápnum nema Ingimar kunni hann.
+\item Hafþór er njósnari, en enginn grænmetisæta er njósnari.
+\end{earg}
+\problempart\label{pr.FOLalligators}
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] öll dýr
+\item[K] \gap{1} er krókódíll.
+\item[A] \gap{1} er api.
+\item[S] \gap{1} er skriðdýr.
+\item[H] \gap{1} býr í Húsdýragarðinum.
+\item[a] Alli
+\item[b] Bibbi
+\item[d] Dísa
+\end{ekey}
+\begin{earg}
+\item Alli, Bibbi og Dísa búa öll í Húsdýragarðinum. 
+\item Bibbi er skriðdýr, en ekki krókódíll.
+%\item If Cleo loves Bouncer, then Bouncer is a monkey. 
+%\item If both Bouncer and Cleo are alligators, then Amos loves them both.
+\item Sum skriðdýr búa í Húsdýragarðinum. 
+\item Allir krókódílar eru skriðdýr.
+\item Öll dýr sem búa í Húsdýragarðinum eru annað hvort apar eða krókódílar 
+\item Til eru skriðdýr sem eru ekki krókódílar.
+%\item Cleo loves a reptile.
+%\item Bouncer loves all the monkeys that live at the zoo.
+%\item All the monkeys that Amos loves love him back.
+\item Ef eitthvað dýr er api, þá er það Alli.
+\item Ef eitthvað dýr er krókódíll, þá er það skriðdýr.
+%\item Every monkey that Cleo loves is also loved by Amos.
+%\item There is a monkey that loves Bouncer, but sadly Bouncer does not reciprocate this love.
+\end{earg}
+
+
+\problempart
+\label{pr.FOLarguments}
+Búið til þýðingarlykil fyrir hverja rökfærslu hér að neðan og þýðið svo yfir á táknmál umsagnarökfræði. Hugleiðið hvort rökfærslurnar séu gildar.
+\begin{earg}
+\item Júlía er rökfræðingur. Allir rökfræðingar ganga um í furðufötum. Þar af leiðandi gengur Júlía um í furðufötum.
+\item Ég tek eftir öllu á skrifborðinu mínu. Það er rós á skrifborðinu mínu. Það er því til rós sem ég tek eftir.
+\item Allt sem mig dreymir er í svart-hvítu. Gamlir sjónvarpsþættir eru í svart-hvítu. Þar af leiðandi er sumt sem mig dreymir gamlir sjónvarpsþættir.
+\item Hvorki Bjarni né Katrín hafa komið til Ástralíu. Enginn gæti séð kengúru nema hann hafi komið til Ástralíu eða í dýragarð. Þó að Bjarni hafi aldrei séð kengúru, þá hefur Katrín gert það. Þar af leiðandi hefur Katrín komið í dýragarð.
+\item Enginn verður óbarinn biskup. Enginn veit sína ævina fyrr en öll er. Þar af leiðandi, sá sem veit sína ævina fyrr en öll er verður barinn biskup.
+\item Öll smábörn eru óvitar. Enginn sem er óviti kann að stýra skipi. Tómas er smábarn. Þar af leiðandi kann Tómas ekki að stýra skipi.
+\end{earg}
+
+
+\chapter{Setningar með fleiri en einum magnara}\label{s:MultipleGenerality}
+
+Fram að þessu höfum við bara skoðað setningar með einum magnara og einsæta umsögnum. Umsagnarökfræðin nær þó ekki fullum mætti fyrr en við kynnum margsæta umsagnir til sögunnar og setningar sem nota fleiri en einn magnara.
+
+\section{Margsæta umsagnir}
+
+Allar þær umsagnir sem skoðuðum í fyrri kafla höfðu að gera með eiginleika hluta. Umsagnirnar höfðu því eina eyðu og til að búa til setningu þurftum við bara að fylla eyðuna með einu nafni. Þetta voru svokallaðar \define{einsæta} umsagnir, því þær hafa eina eyðu, eða „sæti“.
+
+En við getum líka skilgreint umsagnir sem hafa að gera með \emph{tengsl} milli tveggja hluta. Hér eru nokkur dæmi um slíkar umsagnir í setningum á mæltu máli:
+	\begin{quote}
+		\blank\ elskar \blank\\
+		\blank\ er til vinstri við \blank\\
+		\blank\ skuldar \blank\ peninga
+	\end{quote}
+Þetta eru \define{tvísæta} umsagnir. Við þurfum að fylla eyðurnar í þeim með tveimur nöfnum til að búa til setningar. Við getum búið til slíkar umsagnir með því að taka venjulegar íslenskar setningar sem innihalda mörg nöfn og fjarlægt nöfnin eitt af öðru til að búa til tvísæta umsagnir. Tökum sem dæmi setninguna sem við skoðuðum hér að ofan, „Anna fékk lánaðan bílinn hjá Jóni“. Með því að fjarlægja tvö nöfn úr þessari setningu (og munið að við lítum á orð eða orðasambönd sem vísa til eins hlutar, eins og „bíllinn“ sem nöfn) getum við búið til þrjár tvísæta umsagnir.
+	\begin{quote}
+		Anna fékk lánaðan \blank\ hjá \blank\\
+		\blank\ fékk lánaðan bílinn hjá \blank\\
+		\blank\ fékk lánaðan \blank\ hjá Jóni
+	\end{quote}
+Og ef við fjarlægjum öll þrjú nöfnin í einu, þá fáum við \define{þrísæta} umsögn:
+	\begin{quote}
+		\blank\ fékk lánaðan \blank\ hjá \blank
+	\end{quote}
+Það eru engin mörk á hversu mörg sæti umsögn getur haft og við segjum að umsögn sem hefur fleiri en eitt sæti sé \define{margsæta}.	
+
+\section{Vandinn við eyður}
+
+Hér að ofan notuðum við sama táknið, „\blank“, til að tákna eyður í setningum sem urðu til við að nöfn voru fjarlægð úr þeim. En eins og Frege kenndi okkur, þá eru ekki allar eyður sama eyðan. Við getum fyllt tvær eyður með sama nafninu, en við getum líka sett inn mismunandi nöfn í mismunandi röð. Hér fyrir neðan eru þrjár setningar sem hafa verið fylltar með nöfnum á mismunandi hátt, og hafa allar mismunandi merkingu:
+	\begin{earg}
+	\item[\ex{terms3}] Karl elskar Imre.
+	\item[\ex{terms3b}] Imre elskar Karl.
+	\item[\ex{terms3a}] Karl elskar Karl.
+\end{earg}
+Við þurfum sem sagt einhvern veginn að henda reiður á því hvaða eyða er hvað svo við getum vitað hvernig við fyllum þær af nöfnum. Við gerum það einfaldlega með því að númera eyðurnar. Segjum til dæmis að við viljum þýða setningarnar hér að ofan yfir á táknmál umsagnarökfræði. Við gætum þá notað eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[\text{yfirgrip}] fólk
+		\item[i] Imre
+		\item[k] Karl
+		\item[L] \gap{1} elskar \gap{2}
+	\end{ekey}
+Þegar við þýðum setningar með fleiri en einni umsögn, þá setjum við nöfnin öll í röð eftir umsögninni, í þeirri röð sem við viljum að þau fari í eyðurnar. Setning \ref{terms3} væri þá þýtt sem $Lki$, því $k$ á að fara í fyrstu eyðuna og $i$ í þá seinni. Setning \ref{terms3b} væri þá þýdd sem $Lik$ og setning \ref{terms3a} sem $Lkk$. Hér eru nokkrar aðrar setningar sem við getum þýtt með sama þýðingarlykli:
+
+\begin{earg}
+	\item[\ex{terms4}] Imre elskar sjálfan sig.
+	\item[\ex{terms5}] Karl elskar Imre, en það er ekki gagnkvæmt.
+	\item[\ex{terms6}] Karl er elskaður af Imre.
+\end{earg}
+Við getum umorðað \ref{terms4} sem „Imre elskar Imre“ og því þýtt hana sem $Lii$. Setning \ref{terms5} er samtenging. Við getum umorðað hana sem „Karl elskar Imre, en Imre elskar ekki Karl“ og því þýtt hana sem $Lki \eand \enot Lik$. Setningu \ref{terms6} má umorða sem „Imre elskar Karl“, og því getum við þýtt hana sem $Lik$. Við að þýða síðustu setninguna höfum við tapað einhverjum af þeim blæbrigðum sem þolmyndin tjáir, en engu að síður höfum við náð merkingunni réttri.
+
+En þessar tvær setningar, „Imre elskar Karl“ og „Karl er elskaður af Imre“, draga fram nokkuð mikilvægt. Prófum að bæta eftirfarandi umsögn við þýðingarlykilinn okkar:
+	\begin{ekey}
+		\item[M] \gap{2} elskar \gap{1}
+	\end{ekey}
+$M$ notar nákvæmlega sömu orð og $L$ hér að ofan. \emph{En við höfum víxlað eyðunum!} (Skoðið bara lágvísana gaumgæfilega.) Þetta skiptir máli.	
+
+Af hverju? Af því að þegar við sjáum setningu á borð við $Lki$, þá eigum við að taka \emph{fyrsta} nafnið (þ.e.\ $k$) og tengja það sem það vísar til (þ.e.\ Karl) við eyðuna sem \emph{merkt} er $1$, taka \emph{annað} nafnið (þ.e.\ $i$) og tengja það sem það vísar til (þ.e.\ Imre) við eyðuna sem er merkt með $2$. Þá fáum við setninguna „Karl elskar Imre“. Ef við gerum þetta sama fyrir umsögnina $M$, þá fáum við setningina „Imre elskar Karl“ (af því að við höfum víxlað eyðunum).
+
+Þar af leiðir að $Lik$ og $Mki$ eru \emph{báðar} þýðingar á setningunni „Imre elskar Karl“, en $Lki$ og $Mik$ eru báðar þýðingar á „Karl elskar Imre“. 
+
+Hér er annað dæmi. Segjum að við bætum eftirfarandi umsögn við þýðingarlykilinn okkar:
+
+\begin{ekey}
+	\item[N] \gap{1} líkar betur við \gap{1} en \gap{2}
+\end{ekey}
+Þá er setningin $Nik$ þýðing á „Imre líkar betur við Imre en Karl“ og $Nki$ er þýðing á „Karli líkar betur við Karl en Imre“. Af hverju? Af því að fyrstu tvær eyðurnar eru sama eyðan! Við hefðum getað einfaldað þetta með að skilgreina $N$ sem 
+\begin{ekey}
+	\item[P] \gap{1} líkar betur við sjálfan sig en \gap{2}
+\end{ekey}
+Lexían hér er einföld: \emph{Þegar við vinnum með margsæta umsagnir verðum við að gæta að röð eyðanna!}
+
+\section{Röð magnara}
+
+Skoðum setningana „allir elska einhvern“. Þessi setning er tvíræð. Hún gæti merkt annað af tvennu:
+	\begin{earg}
+		\item[\ex{lovecycle}] Sérhver manneskja er þannig að til er einhver sem viðkomandi elskar. 
+		\item[\ex{loveconverge}] Það er til einhver tiltekin manneskja sem er þannig að allir elska þá manneskju.
+	\end{earg}
+Fyrri setningin segir sem sagt að það skiptir engu máli hvaða manneskju við veljum, það er til einhver önnur manneskja sem hún elskar. Sú seinni segir að það sé til einhver ein manneskja sem allir elska, þar með talið hún sjálf. Við getum þýtt \ref{lovecycle} sem $\forall x \exists y Lxy$. Hún væri til dæmis sönn ef yfirgripið okkar innihéldi þrjár manneskjur, Imre, Ludwig og Karl og staða ástamála milli þeirra væri þannig að Karl elskaði Imre, en ekki Ludwig, að Imre elskaði Ludwig, en ekki Karl, og að Ludwig elskaði Karl, en ekki Imre. 
+
+Við getum þýtt \ref{loveconverge} með setningunni $\exists y \forall x Lxy$. Hún er \emph{ekki} sönn, ef ástandið er eins og lýst er að ofan. Til þess þyrftu allir í yfirgripinu, Imre, Ludwig og Karl, að elska einhvern einn þeirra. 
+
+Það sem þetta dæmi sýnir er að röð magnara skiptir mjög miklu máli: þessar tvær setningar eru eins að öllu leyti, nema að magnararnir koma fyrir í mismunandi röð, og þó er merking þeirra gerólík. Í raun er það eitt helsta gagnið sem hægt er að hafa af formlegri rökfræði að skýra merkingu setninga á mæltu máli sem eru best þýddar með mörgum mögnurum. Slíkar setningar eru oft mjög óskýrar og uppspretta ýmissa rökvillna. Hér er dæmi sem finnst til að mynda í heimspekisögunni:
+
+	\begin{earg}
+		\item[] Hver og einn er þannig að það er einhver sannleikur sem hann veit ekki. \hfill ($\forall \exists$)
+		\item[Þar af leiðandi:] Það er til einhver sannleikur sem enginn getur vitað. \hfill ($\exists \forall$)
+	\end{earg}
+Þetta er alveg greinilega ógild rökfærsla. Hún er á pari við:
+	\begin{earg}
+		\item[] Allir eiga pabba. \hfill ($\forall \exists$)
+		\item[Þar af leiðandi:] Það er einhver sem er pabbi allra. \hfill ($\exists \forall$)
+	\end{earg}
+Við þurfum því að sýna aðgát í meðferð magnara!	
+
+%The fallacies, though, arise only when we swap around universal with existential quantifiers.  does not much matter within a single block of quantifiers. Using the same scheme, compare `$\exists x \exists y Lxy$' and `$\exists y \exists x Lxy$'. These would naturally symbolise the English sentences `there is someone who loves someone' and `there is someone whom is loved by someone', respectively. But, though these differ in nuance, they are true in exactly the same situations. (Similar comments apply to the universal quantifier.)
+
+
+\section{Að þýða í skrefum}
+
+Eins og ætti að vera orðið ljóst, getur það verið ansi snúið að þýða setningar yfir á táknmál umsagnarökfræði. Það er ekki til nein pottþétt aðferð til þess, en það hjálpar oft að umorða setningina í skrefum og brjóta hana niður í smærri einingar sem við setjum svo saman aftur. Hér kemur ekkert í stað þess að skoða dæmi og gera æfingar. Með tímanum öðlast maður svo tilfinningu fyrir rökfræðilegri uppbyggingu setninganna og hvernig er best að umorða þær svo út komi rétt þýðing.
+
+Skoðum fyrst dæmin úr síðasta hluta:
+	\begin{earg}
+		\item[\ex{lovecycle}] Sérhver manneskja er þannig að til er einhver sem viðkomandi elskar. 
+		\item[\ex{loveconverge}] Það er til einhver tiltekin manneskja sem er þannig að allir elska þá manneskju.
+	\end{earg}
+Við getum byrjað á því að umorða setningarnar yfir í orðalag sem líkist táknmáli setningarökfræði betur. Byrjum á \ref{lovecycle}. Hana getum við umorðað svona: „Um hverja manneskju \emph{x} gildir að til er einhver manneskja \emph{y} sem \emph{x} elskar“. Við vitum að „\emph{x} elskar \emph{y}“ væri þýtt sem $Lxy$. Þá sjáum við að best væri að þýða þessa setningu sem $\forall x \exists yLxy$.
+
+Setningu \ref{loveconverge} mætti svo umorða sem „Til er \emph{y} sem er þannig að öll \emph{x} eru þannig að \emph{x} elskar \emph{y}“. Þá sjáum við að besta þýðingin er $\exists y \forall x Lxy$.
+
+En það getur verið erfitt að hafa góða tilfinningu fyrir hvernig er best að umorða setningar, og því er önnur leið sem má prófa að setja inn nöfn í staðinn fyrir breyturnar og fylla svo inn magnaranna einn af öðrum með því að gera setninguna sífellt almennari. Ef við látum $a$ og $b$ vera einhvern nöfn, þá segir $Lab$ að „a“ elski „b“. Setningin $\exists y Lay$ segir þá að til sé eitthvað $y$ sem $a$ elskar. Ef við hugsum svo sem svo að „a“ sé bara einhver, og að það sem gildi um „a“, geti allt eins gilt um alla, þá fáum við $\forall x \exists Lxy$.
+
+Við byrjum á sama hátt fyrir \ref{loveconverge}. Við höfum $Lab$ sem segir að „a“ elski „b“. Ef „b“ er sá sem allir elska, þá höfum við $\forall x Lxb$. Þá er lítið mál að skipta út $b$ fyrir tilvistarmagnara og við fáum $\exists y \forall x Lxy$.
+
+Skoðum fleiri dæmi og notum eftirfarandi þýðingarlykil:
+
+\begin{ekey}
+\item[\text{yfirgrip}] fólk og hundar
+\item[H] \gap{1} er hundur
+\item[V] \gap{1} er vinur \gap{2}
+\item[E] \gap{1} er eigandi \gap{2}
+\item[g] Guðbjörg
+\end{ekey}
+Þýðum nú eftirfarandi setningar:
+\begin{earg}
+\item[\ex{dog2}] Guðbjörg er hundaeigandi.
+\item[\ex{dog3}] Einhver er hundaeigandi.
+\item[\ex{dog4}] Allir vinir Guðbjargar eru hundaeigendur.
+\item[\ex{dog5}] Allir hundaeigendur eiga vin sem er hundaeigandi.
+\end{earg}
+Við getum umorðað setningu \ref{dog2} sem „Til er hundur sem Guðbjörg á“. Það er engum sérstökum vandkvæðum bundið að þýða að einfaldlega sem $\exists x(Hx \eand Egx)$
+
+Við getum umorðað setningu \ref{dog3} sem „Til er \emph{y} sem er þannig að \emph{y} er hundaeigandi“. Hér væri skynsamlegt að umorða í styttri skrefum. Við getum til dæmis umorðað setninguna yfir á blöndu af íslensku og máli setningarökfræði sem: $\exists y(y\text{ er hundaeigandi})$. Setningarbrotið sem er eftir, það er að segja „\emph{y} er hundaeigandi“, er mjög líkt \ref{dog2}, nema það fjallar ekki sérstaklega um Guðbjörgu, heldur \emph{y}, sama hvað það er. Við getum því þýtt setningu \ref{dog3} í heild sem $$\exists y \exists x(Hx \eand Eyx)$$ Ef við myndum þýða hana aftur yfir á mælt mál, eins beint og við getum, þá myndi hún segja: „til er \emph{x} og til er \emph{y} þannig að \emph{x} er hundur og \emph{y} er eigandi \emph{x}.“ Að þessum þýðingarlykli gefnum, þá er þetta það næsta sem við komumst merkingu \ref{dog3}.
+
+Við getum umorðað setningu \ref{dog4} sem „Hver sá sem er vinur Guðbjargar er hundaeigandi“. Ef við notum svo sömu aðferð og að ofan, að þýða yfir á blöndu af íslensku og máli setningarökfræði, þá getum við umorðað hana svona: $$\forall x \bigl[Vxg \eif x \text{ er hundaeigandi}\bigr]$$ Það sem er eftir er, rétt eins og síðast, er eins og setning \ref{dog2}. En hér þurfum við að passa okkur. Ef við myndum skrifa, rétt eins og að ofan, einfaldlega: 
+$$\forall x \bigl[Vxg \eif \exists x(Hx \eand Exx)\bigr]$$ þá lendum við í vandræðum, því breyturnar lenda í árekstri: svið almagnarans, $\forall x$, er öll setningin, svo \emph{x}-ið í $Hx$ myndi stjórnast af því. En $Hx$ fellur \emph{líka} undir svið tilvistarmagnarans $\exists x$ og ætti því líka að stjórnast af honum. Hvort er rétt? Setningin er allt í einu orðin tvíræð, ef hún hefur þá nokkra merkingu yfirleitt, og rökfræðingar hata tvíræðni. Við verðum því að hafa í huga að engin breyta getur látið stjórnast af tveimur herrum og slíkt tvíræðni má ekki líðast.
+
+En hvað gerum við þá? Lausnin er einföld, við veljum bara nýja breytu og þýðum setninguna sem: $$\forall x\bigl[Vxg \eif\exists z(Hz \eand Exz)\bigr]$$ 
+
+Við getum umorðað setningu \ref{dog5} sem „Fyrir öll \emph{x} sem eru hundaeigendur, er til hundaeigandi sem er vinur \emph{x}“. Ef við notum aftur sömu aðferð, að umorða í skrefum, þá getum við umorðað þessa setningu sem $$\forall x\bigl[\mbox{$x$ er hundaeigandi}\eif\exists y(\mbox{$y$ er hundaeigandi}\eand Vyx)\bigr]$$
+Við getum svo lokið þýðingunni (og pössum okkur á að engar breytur rekist á) með því að skrifa: 
+$$\forall x\bigl[\exists z(Hz \eand Exz)\eif\exists y\bigl(\exists z(Hz \eand Eyz)\eand Vyx\bigr)\bigr]$$
+
+Glöggir lesendur taka kannski eftir því að hér kemur sama breyta, $z$, fyrir í forlið og baklið skilyrðissetningarinnar. Var það ekki tvírætt og bar að varast? Ef við skoðum svið magnaranna tveggja, þá sjáum við að svo er ekki. Svið magnarans sem stjórnar fyrstu $z$-breytunni er lokið áður en svið næsta magnara sem stjórnar $z$-breytu hefst. Það er því enginn árekstur og alveg ljóst hvað er hvað. Við gætum sýnt þetta myndrænt svona:$$\overbrace{\forall x\bigl[\overbrace{\exists z(Hz \eand Exz)}^{\text{svið fyrsta `}\exists z\text{'}}\eif \overbrace{\exists y(\overbrace{\exists z(Hz \eand Eyz)}^{\text{svið annars `}\exists z\text{'}}\eand Vyx)\bigr]}^{\text{svið `}\exists y\text{'}}}^{\text{svið `}\forall x\text{'}}$$
+Þetta sýnir að enginn breyta er hér látin þjóna tveimur herrum samtímis.
+
+\practiceproblems
+\problempart
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] öll dýr
+\item[A] \gap{1} er krókódíll
+\item[M] \gap{1} er api
+\item[R] \gap{1} er skriðdýr
+\item[Z] \gap{1} býr í Húsdýragarðinum
+\item[L] \gap{1} elskar \gap{2}
+\item[a] Alli
+\item[b] Bibbi
+\item[c] Dísa
+\end{ekey}
+
+\begin{earg}
+%\item Amos, Bouncer, and Cleo all live at the zoo. 
+%\item Bouncer is a reptile, but not an alligator. 
+\item Ef Dísa elskar Bibba, þá er Bibbi api. 
+\item Ef Bibbi og Dísa eru bæði krókódílar, þá elskar Alli þau bæði.
+%\item Some reptile lives at the zoo. 
+%\item Every alligator is a reptile. 
+%\item Any animal that lives at the zoo is either a monkey or an alligator. 
+%\item There are reptiles which are not alligators.
+\item Dísa elskar skriðdýr. [Ath.: Þessi setning er tvíræð. Hvaða tvær þýðingar eru mögulegar?]
+\item Bibbi elskar alla apana í Húsdýragarðinum.
+\item Allir aparnir sem Alli elskar elska hann líka.
+%\item If any animal is an reptile, then Amos is.
+%\item If any animal is an alligator, then it is a reptile.
+\item Allir apar sem Dísa elska eru líka elskaðir af Alla.
+\item Það er api sem elskar Bibba, en því miður elskar Bibbi hann ekki.
+\end{earg}
+
+\problempart 
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] öll dýr
+\item[D] \gap{1} er hundur
+\item[S] \gap{1} elskar glæpamyndir
+\item[L] \gap{1} er stærri en \gap{2}
+\item[v] Vaskur
+\item[s] Snotra
+\item[r] Rökkvi
+\end{ekey}
+\begin{earg}
+\item Vaskur er hundur sem elskar glæpamyndir.
+\item Vaskur, Snotra og Rökkvi eru öll hundar.
+\item Vaskur er stærri en Rökkvi, og Snotra er stærri en Vaskur.
+\item Allir hundar elska glæpamyndir.
+\item Bara hundar elska glæpamyndir.
+\item Það er hundur sem er stærri en Rökkvi.
+\item Ef það er hundur sem er stærri en Snotra, þá er hundur sem er stærri en Vaskur.
+\item Ekkert dýr sem elskar glæpamyndir er stærri en Rökkvi.
+\item Engin hundur er stærri en Snotra.
+\item Sérhvert dýr sem elskar ekki glæpamyndir er stærra en Snotra.
+\item Það er til dýr sem er á milli Snotru og Vasks að stærð.
+\item Það er enginn hundur sem er á milli Snotru  og Rökkva að stærð.
+\item Enginn hundur er stærri en hann sjálfur.
+\item Allir hundar eru stærri en einhver hundur.
+\item Það er til dýr sem er minna en allir hundar.
+\item Ef það er til dýr sem er stærra en allir hundar, þá elskar það dýr ekki við glæpamyndir.
+\end{earg}
+
+\problempart
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] fólk og réttir í matarboði
+\item[R] \gap{1} er búinn.
+\item[T] \gap{1} er á borðinu.
+\item[F] \gap{1} er matarkyns.
+\item[P] \gap{1} er manneskja.
+\item[L] \gap{1} elskar \gap{2}.
+\item[a] Arngrímur
+\item[f] Friðrika
+\item[s] sviðasultan
+\end{ekey}
+\begin{earg}
+\item Allur matur er kominn á borðið.
+\item Ef sviðasultan er ekki búin, þá er hún komin á borð.
+\item Allir elska sviðasultu.
+\item Ef einhver elskar sviðasultu, þá er það Arngrímur.
+\item Friðrika elskar bara réttina sem eru búnir.
+\item Friðika elskar engan, og enginn elskar Friðriku.
+\item Arngrímur elskar alla sem elska sviðasultu.
+\item Arngrímur elskar alla sem elska fólkið sem hann elskar.
+\item Ef einhver manneskja er uppi á borði, þá hlýtur allur maturinn að vera búinn.
+\end{earg}
+
+\problempart
+\label{pr.FOLballet}
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] fólk
+\item[V] \gap{1} er ballettdansari.
+\item[F] \gap{1} er kvenkyns.
+\item[M] \gap{1} er karlkyns.
+\item[B] \gap{1} er barn \gap{2}.
+\item[S] \gap{1} er systkini \gap{2}.
+\item[l] Leifur
+\item[f] Freydís
+\item[e] Eiríkur
+\end{ekey}
+\begin{earg}
+\item Öll börnin hennar Freydísar eru ballettdansarar.
+\item Freydís er dóttir Leifs.
+\item Leifur á dóttur.
+\item Freydís er einkabarn.
+\item Allir synir Eiríks dansa ballett.
+\item Leifur á enga syni.
+\item Eiríkur er bróðir Leifs.
+\item Freydís er bróðurdóttir Eiríks.
+\item Bræður Leifs eiga engin börn.
+\item Freydís er föðursystir. 
+\item Allir sem dansa ballett eiga bróður sem dansar líka ballett.
+\item Allar konur sem dansa ballett eru börn einhvers sem dansar ballett.
+\end{earg}
+
+\chapter{Samsemd}
+\label{sec.identity}
+
+Skoðum eftirfarandi setningu: 
+\begin{earg}
+\item[\ex{else1}] Andrés skuldar öllum peninga.
+\end{earg}
+Andrés, er eins og frægt er, íbúi í Andabæ. Ef við látum yfirgripið okkar vera alla íbúa Andabæjar, þá getum við þýtt „allir“ með einföldum almagnara þegar við viljum tala um þá. Notum þá þennan þýðingarlykil:
+	\begin{ekey}
+		\item[S] \gap{1} skuldar \gap{2} peninga
+		\item[a] Andrés
+	\end{ekey}
+Nú getum við þýtt setningu \ref{else1} sem $\forall x Sax$.\footnote{Ef fleira en fólk væri í yfirgripinu, þá yrðum við að bæta við umsögninni „M: \gap{1} er manneskja við þýðingarlykilinn okkar og þýða setninguna sem $\forall x (Mx \eif Sax)$. Með því að einskorða yfirgripið við fólk, þá þurfum við ekki að þrengja umfjöllunarefnið með þessum hætti með skilyrðissetningu.} Þetta er þó kannski ekki það sem við meinum þegar við segjum að Andrés skuldi öllum peninga. $\forall x Sax$ segir nefnilega að fyrir hvaða \emph{x} sem er í yfirgripinu, þá skuldar Andrés \emph{x} peninga. En Andrés er sjálfur í yfirgripinu, enda sjálfur búsettur í Andabæ, og því leiðir af þýðingunni okkar að Andrés skuldar sjálfum sér peninga. Það er líklega ekki það sem við vildum sagt hafa með setningu \ref{else1}. Kannski vildum við frekar segja eitthvað af eftirfarandi:
+	\begin{earg}
+		\item[\ex{else1b}] Andrés skuldar öllum \emph{öðrum} peninga.
+		\item[\ex{else1c}] Andrés skuldar öllum \emph{öðrum en Andrési} peninga
+		\item[\ex{else1d}] Andrés skuldar öllum peninga, \emph{nema Andrési sjálfum}.
+	\end{earg}
+Enn sem komið er höfum við enga leið til að tjá skáletruðu hluta þessa setninga. Lausnin er að bæta nýju tákni við táknmál umsagnarökfræði.
+
+\section{Samsemdarmerkinu bætt við}
+
+Til þess að geta þýtt setningar eins og þær hér að ofan, þá bætum við eins og áður sagði nýju tákni við táknmál umsagnarökfræði. Það er táknið $=$„“. 
+
+Við látum þetta tákn standa fyrir sérstaka tvísæta umsögn og af því að þessi umsögn mun hafa sérstaka merkingu, þá munum við bregða út af vananum og skrifa táknið fyrir hana á milli tveggja einnefna, en ekki fyrir framan, eins og venja er (þetta er ekkert sérstaklega óvenjulegt í raun, enda fyndist okkur fullkomlega eðlilegt að skrifa $\frac{1}{2} = 0.5$). Merking þessarar umsagnar er sú sama og ef við myndum \emph{alltaf} bæta eftirfarandi línu við hvern þann þýðingarlykil sem við notum í það og það skiptið:
+	\begin{ekey}
+		\item[=] \gap{1} er það sama og \gap{2}
+	\end{ekey}
+Þetta merkir ekki \emph{bara} að það sem talað er um sitthvorum megin við $=$-merkið sé ógreinanlegt frá hverju öðru, eða að allt sem er satt um annað sé líka satt um hitt, heldur merkir þetta að það sé \emph{sami hluturinn}.
+
+Hér er dæmi. Segjum að við viljum þýða eftirfarandi setningu yfir á táknmál umsagnarökfræði:
+\begin{earg}
+\item[\ex{else2}] Andrés er Stálöndin.
+\end{earg}
+Bætum eftirfarandi nafni við þýðingarlykilinn:
+	\begin{ekey}
+		\item[s] Stálöndin
+	\end{ekey}
+Nú getum við þýtt \ref{else2} sem $a = s$. Þessi setning segir okkur að nöfnin $a$ og $s$ vísi bæði til sama hlutarins í yfirgripinu. Ef við viljum segja að tvö nöfn vísi \emph{ekki} til sama hlutarins, til dæmis $a$ og $s$, þá neitum við einfaldlega þessari setningu: $\enot (a = s)$.
+
+Nú getum við loks þýtt setningar \ref{else1b}--\ref{else1d}. Við getum umorðað þær allar sem „Andrés skuldar öllum peninga sem ekki eru Andrés“. Frekari umorðun gefur okkur svo: „Fyrir öll \emph{x}, ef \emph{x} er ekki Andrés, þá skuldar Andrés \emph{x} peninga“. Með því að nota neitun samsemdar, þá getum við nú þýtt þessa setningu sem $\forall x (\enot(x = a) \eif Sax)$.
+
+Það er hins vegar oft dálítið óþjált að skrifa sífellt neitunarmerki fyrir framan sviga þegar maður vill neita samsemdarsetningu, og því munum við nota annan rithátt fyrir setningar á forminu „$\enot(a = b)$“.\footnote{Það er raunar líka hættulaust að sleppa bara svigunum og skrifa „$\enot a = b$“, en slíkt er erfitt í lestri og oft ruglandi.} Við munum framvegis nota þá venju að draga einfaldlega strik í gegnum samsemdarmerkið þegar við viljum neita því, svona: $a \neq b$. Við getum því einfaldað setninguna hér að ofan sem: $\forall x (x \neq a \eif Sax)$.
+
+Við getum líka notað samsemd við að þýða annars konar setningar. Tökum sem dæmi:
+
+\begin{earg}
+\item[\ex{else3}] Enginn nema Andrés skuldar Jóakim peninga.
+\item[\ex{else4}] Bara Andrés skuldar Jóakim peninga.
+\end{earg}
+Ef við látum $j$ standa fyrir Jóakim, þá getum við umorðað \ref{else3} sem „Enginn sem er ekki Andrés skuldar Jóakim peninga“. Það getum við svo þýtt yfir á táknmál umsagnarökfræði sem $$\enot\exists x(x \neq a \eand Sxj)$$ Við getum svo umorðað \ref{else4} sem „fyrir öll \emph{x}, ef \emph{x} skuldar Jóakim peninga, þá er \emph{x} Andrés.“ Við getum þýtt þessa setningu yfir á táknmál umsagnarökfræði sem $$\forall x (Sxj \eif x = a)$$ Í kafla \ref{s:CQ} munum við geta sýnt að þessar tvær setningar séu rökfræðilega jafngildar.
+
+Hér er þó einn hængur á. Ef einhver myndi heyra setningar \ref{else3} og \ref{else4} á mæltu máli, þá myndi viðkomandi líklega skilja það sem svo að Andrés skuldi Jóakim peninga. En þýðingarnar okkar yfir á táknmál umsagnarökfræði segja það ekki. Þær segja bara að \emph{enginn annar} en Andrés skuldi honum peninga, en ekkert um Andrés sjálfan. Ef við viljum þýða setningarnar eins og eðlilegt er að skilja þær á mæltu máli, þá þurfum við að bæta við lið sem segir að Andrés skuldi Jóakim peninga: $\enot\exists x(x \neq a \eand Sxj) \eand Saj$ og $\forall x (Sxj \eif x = a) \eand Saj$.
+
+\section{Til eru að minnsta kosti\ldots}
+Við getum líka notað samsemd til að segja hversu margir hlutir eru til sem falla undir ákveðna umsögn (eða umsagnir). Tökum sem dæmi eftirfarandi setningar:
+
+\begin{earg}
+\item[\ex{atleast1}] Til er að minnsta kosti eitt epli.
+\item[\ex{atleast2}] Til eru að minnsta kosti tvö epli.
+\item[\ex{atleast3}] Til eru að minnsta kosti þrjú epli.
+\end{earg}
+Notum eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[E] \gap{1} er epli.
+	\end{ekey}
+Setning \ref{atleast1} er einföld og við kunnum að þýða hana nú þegar: $\exists x Ex$. Hún segir að til séu epli í yfirgripinu, kannski mörg, en að minnsta kosti eitt.
+
+Það væri freistandi að reyna að þýða \ref{atleast2} með því að nota einfaldlega tvo magnara: $\exists x \exists y(Ax \eand Ay)$. Þessi setning segir að til sé eitthvað epli \emph{x} í yfirgripinu og að til sé eitthvað epli \emph{y} í yfirgripinu, og eins og við sögðum að ofan í \S\ref{yfirgrip}, þá er ekkert sem kemur í veg fyrir að \emph{x} og \emph{y} vísi til sama eplis. Þessi setning er því sönn ef einungis eitt epli er í yfirgripinu. Til þess að tryggja að hún sé sönn ef að minnsta kosti tvö epli eru í yfirgripinu, þá getum við notað samsemd. Það sem okkur vantar er einfaldlega að taka fram að \emph{x} og \emph{y} séu ekki sama eplið, og það kunnum við. Við getum því þýtt setninguna sem $$\exists x \exists y(Ex \eand Ey \eand x \neq y)$$ Þessi setning segir að til sé epli \emph{x} og til sé epli \emph{y} og að \emph{x} og \emph{y} sé ekki sama eplið. Þessi setning er einungis sönn ef \emph{að minnsta kosti} tvö epli eru í yfirgripinu (en kannski fleiri).
+
+Setning \ref{atleast3} segir að til séu að minnsta kosti þrjú epli. Hér er ekkert nýtt á ferðinni, nema við þurfum þrjá tilvistarmagnara og að segja að enginn þeirra sé sá sami og einn af hinum. Við þýðum því setninguna svona: $$\exists x \exists y\exists z(Ex \eand Ey \eand Ez \eand x \neq y \eand y \neq z \eand x \neq z)$$ Við sjáum að eftir því sem hlutunum fjölgar, þá lengjast setningarnar mjög hratt!
+
+\section{Til eru í mesta lagi\ldots}
+Skoðum nú eftirfarandi setningar:
+\begin{earg}
+	\item[\ex{atmost1}] Til er í mesta lagi eitt epli.
+	\item[\ex{atmost2}] Til eru í mesta lagi tvö epli.
+\end{earg}
+Ef \ref{atmost1} er sönn, þá vitum við að ekki eru til tvö epli. Við getum því umorðað \ref{atmost1} sem „Það er ekki satt að það séu að minnsta kosti \emph{tvö} epli“ og það er bara neitun \ref{atleast2}: $$\enot \exists x \exists y(Ex \eand Ey \eand x \neq y)$$ En við getum líka hugsað um \ref{atmost1} á annan hátt. Hún segir nefnilega að ef við tökum einhvern hlut úr yfirgripinu og hann er epli, og svo gerum við það sama aftur, þá hljótum við að hafa tekið sama eplið tvisvar. Ef það er jú bara eitt epli, þá getum við ekki tekið upp tvö epli! Við getum því þýtt setninguna sem $$\forall x\forall y\bigl[(Ex \eand Ey) \eif x=y\bigr]$$ Við munum sjá seinna að þessar tvær setningar eru röklega jafngildar.
+
+Við getum líka þýtt \ref{atmost2} á tvo ólíka vegu. Við getum umorðað hana sem „Það er ekki satt að til séu \emph{þrjú} epli“ og þýtt hana sem $$\enot \exists x \exists y\exists z(Ex \eand Ey \eand Ez \eand x \neq y \eand y \neq z \eand x \neq z)$$ Við getum líka skilið hana sem svo að ef við finnum epli í yfirgripinu, og svo epli og svo epli, þá hljótum við að hafa fundið sama eplið oftar en einu sinni. Þá getum við þýtt hana sem $$\forall x\forall y\forall z\bigl[(Ex \eand Ey \eand Ez) \eif (x=y \eor x=z \eor y=z)\bigr]$$Takið sérstaklega eftir því að í bakliðnum eru \emph{eða-tengi}. Þessi setning segir að fyrir öll \emph{x}, öll \emph{y} og öll \emph{z}, ef \emph{x}, \emph{y} og \emph{z} eru epli, þá er \emph{x} sama og \emph{y}, \emph{eða} \emph{x} sama og \emph{z}, \emph{eða} \emph{z} sama og \emph{y}. 
+
+\section{Til eru nákvæmlega\ldots}
+Núna getum við þýtt setningar sem segja nákvæmlega hversu mikið af einhverju er til, til dæmis:
+\begin{earg}
+\item[\ex{exactly1}] Til er nákvæmlega eitt epli.
+\item[\ex{exactly2}] Til eru nákvæmlega tvö epli.
+\item[\ex{exactly3}] Til eru nákvæmlega þrjú epli.
+\end{earg}
+Við getum umorðað \ref{exactly1} sem „Til er \emph{að minnsta kosti} eitt epli og til er \emph{í mesta lagi} eitt epli“. Þetta er bara samtenging setninga \ref{atleast1} og \ref{atmost1}. Setningin í heild lítur því svona út: $$\exists x Ex \eand \forall x\forall y\bigl[(Ex \eand Ey) \eif x=y\bigr]$$En þetta er kannski ekkert alltof fallegt og heldur langt. Við getum umorðað setninguna á annan, og kannski einfaldari hátt, með að segja: „Til er \emph{x} sem er epli og allt sem er epli er \emph{x}“. Þá getum við þýtt setninguna sem:$$\exists x\bigl[Ex \eand \forall y(Ey \eif x= y)\bigr]$$
+
+Setning \ref{exactly2} getur verið umorðuð á sama hátt sem „Til eru \emph{að minnsta kosti} tvö epli og til eru \emph{í mesta lagi} tvö epli.“ Hún er samtenging \ref{atleast2} og\ref{atmost2}: $$\exists x \exists y(Ex \eand Ey \eand x \neq y) \eand \forall x\forall y\forall z\bigl[(Ex \eand Ey \eand Ez) \eif (x=y \eor x=z \eor y=z)\bigr]$$En við gætum líka umorðað hana sem „Til eru að minnsta kosti tvö mismunandi epli og öll epli eru annað af þessum tveimur eplum“. Þá fáum við: $$\exists x\exists y\bigl[Ex \eand Ey \eand x \neq y \eand \forall z(Ez \eif ( x= z \eor y = z)\bigr]$$ Setning \ref{exactly3} fengi svo sömu meðferð. Skoðum að lokum þessa setningu:
+\begin{earg}
+\item[\ex{exactly2things}] Til eru nákvæmlega tveir hlutir.
+\end{earg}
+Hér væri kannski freistandi að bæta við umsögn í þýðingarlykilinn okkar sem segir „\blank\ er hlutur“. En þetta er óþarfi. Slík umsögn myndi eiga við allt í yfirgripinu og bætti því engu við. Við getum því þýtt þessa setningu með eftirfarandi jafngildum þýðingum:
+		$$\exists x \exists y (x \neq y) \eand \enot \exists x \exists y \exists z (x \neq y \eand y \neq z \eand x \neq z)$$eða
+		$$\exists x \exists y \bigl[x \neq y \eand \forall z(x=z \eor y = z)\bigr]$$
+
+\practiceproblems
+
+\problempart Útskýrið af hverju:
+	\begin{ebullet}
+		\item $\exists x \forall y(Ay \eiff x= y)$ er góð þýðing á „Til er nákvæmlega eitt epli“.
+		\item $\exists x \exists y \bigl[\enot x = y \eand \forall z(Az \eiff (x= z \eor y = z)\bigr]$ er góð þýðing á „Til eru nákvæmlega tvö epli“.
+	\end{ebullet}		
+
+
+\chapter{Ákveðnar lýsingar}\label{subsec.defdesc}
+Skoðum eftirfarandi setningar:
+	\begin{earg}
+		\item[\ex{traitor1}] Sæmundur er skrýtni heimspekingurinn.
+		\item[\ex{traitor2}] Skrýtni heimspekingurinn lærði við Svartaskóla.
+		\item[\ex{traitor3}] Presturinn er skrýtni heimspekingurinn.
+	\end{earg}
+Þetta eru ákveðnar lýsingar: þær vísa til \emph{nákvæmlega eins} ákveðins hlutar. Þær eru ólíkar bæði \emph{óákveðnum lýsingum}, svo sem „Sæmundur er prestur“ og almennum lýsingum sem á yfirborðinu virðast hafa svipað form, t.d.\ „Hvalurinn er spendýr“ (en hér er átt við alla hvali, \emph{hvalinn} sem tegund). Þá vaknar spurningin: Hvernig getum við þýtt ákveðnar lýsingar yfir á táknmál umsagnarökfræði?
+
+\section{Ákveðnar lýsingar sem einnefni} %term = einnefni
+
+Ein leið væri að kynna alltaf til sögunnar nýtt nafn í staðinn fyrir ákveðna lýsingu. Til dæmis gætum við ákveðið að $h$ stæði fyrir skrýtna heimspekinginn og þýtt setningu \ref{traitor1} sem $s = h$ (þar sem „$s$“ stæði fyrir Sæmund) og setningu \ref{traitor2} sem $Ss$ (með S sem „\blank\ lærði við Svartaskóla“). En þessi leið hefur ákveðinn galla: Við viljum geta dregið þá ályktun að skrýtni heimspekingurinn sé skrýtinn heimspekingur. En enga slíka ályktun er hægt að draga af nafninu „$s$“. 
+
+Önnur leið væri að bæta við nýju tákni við táknmál umsagnarökfræði sem hegðar sér svipað og magnari, nema það breytir umsögnum í ákveðnar lýsingar. Ef við látum þetta tákn vera „$\maththe$“, þá gætum við lesið til dæmis $\maththe x Fx$ sem „það sem er F“ eða „F-ið“. Táknrunur á forminu $\maththe \meta{x} \meta{A}\meta{x}$ myndu þá hegða sér eins og nöfn. Þau væru \emph{einnefni}.\footnote{Hér er \meta{x} einfaldlega metabreyta sem á við allar breytur. }
+
+Notum þá eftirfarandi þýðingarlykil til að þýða setningarnar hér að ofan:
+	\begin{ekey}
+		\item[\text{yfirgrip}] fólk
+		\item[H] \gap{1} er skrýtinn heimspekingur
+		\item[P] \gap{1} er prestur
+		\item[S] \gap{1} lærði við Svartaskóla
+		\item[s] Sæmundur
+	\end{ekey}
+Nú getum við þýtt setningu \ref{traitor1} sem $\maththe x Hx = s$, setningu \ref{traitor2} sem $S\maththe xTx$ og setningu \ref{traitor3} sem $\maththe x Px = \maththe x Hx$.
+
+Það væri hins vegar gott ef við gætum meðhöndlað ákveðnar lýsingar \emph{án þess} að bæta nýju tákni við táknmál umsagnarökfræði. 
+
+\section{Lýsingakenning Russells}
+Breski heimspekingurinn Bertrand Russell setti fram fræga kenningu um ákveðnar lýsingar í upphafi síðustu aldar. Í stuttu máli, þá benti Russell á að þegar við notum orðasambönd á forminu „\emph{G}-ið sem er \emph{F}“, þá er \emph{F} lýsing sem ætlunin er aðeins einn hlutur í yfirgripinu uppfylli. Russell greinir því ákveðnar lýsingar sem lýsingar sum uppfylla eftirfarandi skilyrði:\footnote{Bertrand Russell, „On Denoting“, 1905, \emph{Mind 14}, bls.\ 479--93.}
+	\begin{align*}
+		\text{F-ið er G \textbf{eff} }&\text{til er að minnsta kosti eitt F, \emph{og}}\\
+	&\text{til er í mesta lagi eitt F, \emph{og}}\\	
+	&\text{öll F eru G}
+\end{align*}
+Takið eftir því að ákveðin greinir kemur ekki fyrir í skilgreiningunni, enda er það ætlun Russells að skilgreina hvað ákveðin lýsing er, án þess að ákveðnar lýsingar komi fyrir í skilgreiningunni. Hann \emph{smættar} þær niður í aðrar setningar sem ekki eru ákveðnar lýsingar.
+
+Með þessa greiningu á ákveðnum lýsingum í huga, þá getum við þýtt setningar sem hafa formið „\emph{F}-ið er \emph{G}“ yfir á táknmál umsagnarökfræði með því að nota þær aðferðir sem við lærðum hér að ofan við talningu, þar sem skilyrði Russells segja að til sé að minnsta kosti eitt \emph{F} og í mesta lagi eitt \emph{F}. 
+
+Fyrsta skilyrði Russells væri þá þýtt einfaldlega sem $\exists x Fx$, annað skilyrðið sem $\forall x \forall y ((Fx \eand Fy) \eif x = y)$ og það síðasta sem $\forall x (Fx \eif Gx)$. Sú fullyrðing að \emph{F}-ið sé \emph{G} yrði því á máli umsagnarökfræði samtenging þessara þrigga setninga, eða $$\exists x Fx \eand \forall x \forall y ((Fx \eand Fy) \eif x = y) \eand \forall x (Fx \eif Gx)$$
+Glöggir lesendur muna það kannski að sú fullyrðing að til sé að minnsta kosti eitt \emph{F} og í mesta lagi eitt \emph{F} er sú sama og að fullyrða að til sé nákvæmlega eitt \emph{F}, og að við kunnum einfaldari leiðir til að tjá það. Við getum því einfaldað þýðingu okkar töluvert með að þýða „F-ið er G“ með því að segja frekar: $$\exists x \bigl[Fx \eand \forall y (Fy \eif x = y) \eand Gx\bigr]$$
+
+Nú getum við þýtt setningar \ref{traitor1}--\ref{traitor3} yfir á táknmál umsagnarökfræði \emph{án þess} að nota neitt nýtt tákn eins og „$\maththe$“. 
+
+Setning \ref{traitor1} er keimlík þessum dæmum sem við vorum að skoða. Við getum þess vegna þýtt hana sem $$\exists x (Hx \eand \forall y(Hy \eif x = y) \eand x = s)$$ Setning \ref{traitor2} er heldur ekkert vandamál. Við þýðum hana á svipaðan hátt sem $\exists x (Hx \eand \forall y(Hy \eif x = y) \eand Sx)$.
+
+Setning \ref{traitor3} er pínulítið meira vesen, því hún tengir saman tvær ákveðnar lýsingar. En með því að fylgja greiningu Russells, þá getum við umorðað hana sem  „það er til nákvæmlega einn skrýtinn heimspekingur \emph{x}, nákvæmlega einn prestur \emph{y} og \emph{x} er sama og \emph{y}“. Við getum því þýtt hana yfir á táknmál umsagnarökfræði sem: 
+$$\exists x \exists y \bigl(\bigl[Hx \eand \forall z(Hz \eif x = z)\bigr] \eand \bigl[Py \eand \forall z(Pz \eif y = z)\bigr] \eand x = y\bigr)$$
+Takið eftir því að táknrunan $x = y$ (eða formúlan, eins og við munum kalla það síðar) verður að vera innan sviðs beggja magnaranna.
+
+\section{Tómar ákveðnar lýsingar}
+
+Einn af kostunum við lýsingakenningu Russells er að hún leyfir okkur að meðhöndla \emph{tómar} ákveðnar lýsingar á snyrtilegan hátt.
+
+Í Frakklandi er enginn konungur og hefur ekki verið um hríð. Ef við myndum láta eitthvert nafn, til dæmis $k$, standa fyrir núverandi konung Frakklands, myndi allt ganga á afturfótunum hjá okkur. Við munum úr \S\ref{s:FOLBuildingBlocks} að nafn verður alltaf að vísa til einhvers hlutar í yfirgripinu og það skiptir engu máli hvaða yfirgrip við veljum, það mun aldrei innihalda konung Frakklands, sem er ekki til. Við gætum því ekki einu sinni þýtt setninguna „Núverandi konungur Frakklands er ekki til“ yfir á táknmál umsagnarökfræði.
+
+Við gætum reynt að kynna til sögunnar umsögn, K: „\blank\ er núverandi konungur Frakklands“ og greint „Núverandi konungur Frakklands er ekki til“ sem $\forall x\enot Kx$. Það væri kannski ásættanlegt, en hvað með setninguna „Núverandi konungur Frakklands er sköllóttur“? Við gætum prófað að láta \emph{S} standa fyrir umsögnina „\blank\ er sköllóttur“ og reynt: $\forall x (Kx \eif Sx)$. En þessi setning væri sönn (því eins og við munum, þá eru allar skilyrðissetningar með tómum umsögnum sannar), og það er eitthvað skrýtið við að segja að setningin „Núverandi konungur Frakklands er sköllóttur“ sé sönn, því hann er jú ekki til.
+
+Á hinn bóginn væri líka skrýtið að segja að hún sé ósönn, því það myndi þýða að neitun hennar væri sönn---og ættum við þá að halda að núverandi konungur Frakklands sé með hár? Og hvernig ættum við þá að þýða þá setningu? 
+
+Lýsingakenning Russells leyfir okkur að komast hjá öllum þessum vandkvæðum með að greina setningar með tómum umsögnum þannig að þær verða ósannar. Hún greinir setninguna „Núverandi konungur Frakklands er sköllóttur“, eins og áður sagði, sem  $$\exists x \bigl[Kx \eand \forall y (Ky \eif x = y) \eand Sx\bigr]$$ og þessi setning segir jú meðal annars að til sé að minnsta kosti eitt \emph{x} sem er núverandi konungur Frakklands, og það er ekki satt. Raunar dregur lýsingakenning Russells fram hvernig slík setning getur verið ósönn á tvo mismunandi vegu. Þegar við neitum setningunni „Núverandi konungur Frakklands er skóllóttur“ þá gætum við meint annað af eftirfarandi:
+
+	\begin{earg}
+		\item[\ex{outernegation}] Það er enginn sem er hvort tveggja, konungur Frakklands og skóllóttur.
+		\item[\ex{innernegation}] Það er einhver sem er núverandi konungur Frakklands, en hann er ekki skóllóttur.
+	\end{earg}
+Setningu \ref{outernegation} má þýða sem $$\enot \exists x\bigl[Kx \eand \forall y(Ky \eif  x = y) \eand Sx \bigr]$$ og því getum við kallað hana \emph{ytri neitun} setningarinnar, því svið neitunarinnar er öll setningin. Þessi setning er sönn ef það er enginn konungur í Frakklandi.
+
+Setningu \ref{innernegation} væri hins vegar best að þýða sem $$\exists x (Kx \eand \forall y(Ky \eif x = y) \eand \enot Sx)$$ og hana getum við kalla \emph{innri neitun} setningarinnar, því svið neitunarinnar er innan ákveðnu lýsingarinnar sjálfrar. Þessi setning er einungis sönn ef konungur Frakklands er til---og það gildir um þann mann að hann er ekki sköllóttur.
+
+\section{Er lýsingakenning Russells nógu góð?}
+
+Fram að þessu höfum við lofað lýsingakenningu Russells í hástert. En er hún nógu góð? Þessi spurning hefur verið tilefni mikilla deilna innan heimspekinnar allar götur síðan, en hér ætla ég þó bara að tæpa á nokkrum hlutum sem nefndir hafa verið kenningunni til hnjóðs.
+
+Hið fyrsta snýr að ákveðnum lýsingum sem eiga ekki við neitt, sem við kölluðum \emph{tómar} hér að ofan. Ef ekkert í yfirgripinu er \emph{F}, þá leiðir það af kenningu Russells að setningarnar „\emph{F}-ið er \emph{G}“ og „\emph{F}-ið er ekki \emph{G}“ eru báðar ósannar. Breski heimspekingurinn P.F.\ Strawson taldi að slíkar setningar ættu ekki að teljast ósannar, heldur að sanngildi slíkra setninga gerir ráð fyrir að eitthvað sé \emph{F}, og því ættu þær að teljast hvorki sannar né ósannar.\footnote{P.F.\ Strawson, „On Referring“, 1950, \emph{Mind 59}, bls.\ 320--34.} 
+
+Ef við tökum undir með Strawson, þá þurfum við að breyta rökfræðinni okkar. Í þessari bók höfum við gert ráð fyrir að allar setningar séu annað hvort sannar eða ósannar. Margar tillögur hafa verið gerðar í þessa átt, en engin hefur náð neinni sérstakri hylli heimspekilegra rökfræðinga.
+
+En við þurfum ekki endilega að taka undir með Strawson. Það sem hann segir hljómar sennilega í sumum tilfellum, en ekki endilega öðrum. Til dæmis myndi maður halda að ég væri bara beinlínis að segja ósatt ef ég héldi því fram að ég sé giftur núverandi konungi Frakklands, frekar en að sú fullyrðing hafi ótilgreint sanngildi.
+
+Keith Donnellan, bandarískur heimspekingur, færði fram annars konar mótbárur. Þær hafa að gera með tilfelli þar sem mælandi tekur einhvern í misgripum fyrir annan---hann heldur að hann sé að tala um eina manneskju, en orð hans vísa í raun til annarrar.\footnote{Keith Donnellan,  „Reference and Definite Descriptions“, 1966, \emph{Philosophical Review 77}, bls.\ 281--304.} Eitt af dæmum Donnellans er svohljóðandi: Tveir menn standa úti í horni í samkvæmi. Annar þeirra er mjög hávaxinn og er að drekka, að því er virðist, gin úr martiniglasi. Hinn er mjög lágvaxinn og drekkur, að því að okkur sýnist, vatn úr vatnsglasi. Anna sér þá standa þarna og segir: 
+	\begin{earg}
+		\item[\ex{gindrinker}] Maðurinn með ginið er mjög hávaxinn!
+	\end{earg}
+Samkvæmt Russell, þá ættum við að greina það sem Anna sagði svona: 
+	\begin{earg}
+		\item[\ref{gindrinker}$'$.] Það er nákvæmlega einn maður [úti í horni] sem drekkur gin, og hver sá sem drekkur gin [úti í horni] er mjög hávaxinn.
+	\end{earg}
+En segjum svo sem svo að fyrir algjöra tilviljun sé vatn í martiniglasinu, ekki gin, og gin í vatnsglasinu. Við Anna höfðum rangt fyrir okkur um hvaða drykkur var í hvaða glasi. Ef greining Russells er rétt, þá hefur Anna sagt \emph{ósatt}. En myndum við ekki frekar vilja segja að hún hafi sagt \emph{satt}, þrátt fyrir ruglinginn?
+
+Það er ekki alveg ljóst hvað er best að segja um svona dæmi. Við getum öll verið sammála um að Anna ætlaði að vísa til tiltekins manns og segja eitthvað satt \emph{um hann} (nefnilega að hann sé hávaxinn). Samkvæmt Russell, þá vísaði hún raun til annars manns (þess lágvaxna) með orðum sínum og sagði eitthvað ósatt um hann. Hugsanlega er nóg fyrir verjendur kenningar Russells að útskýra \emph{af hverju} ætlun Önnu gekk ekki upp og þar með af hverju hún sagði eitthvað ósatt. Það er ekki mikið mál: Hún sagði ósatt af því að hún hafði ósannar skoðanir um innihald drykkjanna sem mennirnir tveir drukku; ef hún hefði haft sannar skoðanir, þá hefði hún sagt satt.\footnote{Sjá til dæmis Saul Kripke, „Speaker Reference and Semantic Reference'“, 1977.}
+
+Við látum staðar numið hér, enda væri hægt að dvelja við slík heimspekileg úrlausnarefni langtímum saman. Það væri nú ekki nema af hinu góða, en markmið okkar hér er hins vegar að læra formlega rökfræði. Við munum því halda okkur við lýsingakenningu Russells þegar við þurfum að þýða ákveðnar lýsingar yfir á táknmál umsagnarökfræði. Það er líklega það besta sem er í boði, án þess að endurskoða þurfi rökfræðina sjálfa.
+
+\practiceproblems
+
+\problempart
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] fólk
+\item[K] \gap{1} kann talnalykilinn sem gengur að peningaskápnum
+\item[S] \gap{1} er njósnari
+\item[V] \gap{1} er grænmetisæta
+\item[T] \gap{1} treystir \gap{2}.
+%\item[Txy] \gap{x} trusts \gap{y}.
+\item[h] Hafþór
+\item[i] Ingimar
+\end{ekey}
+\begin{earg}
+\item Hafþór treystir grænmetisætu.
+\item Allir sem treysta Ingimari treysta grænmetisætu.
+\item Allir sem treysta Ingimari treysta einhverjum sem treystir grænmætisætu.
+\item Bara Ingimar kann talnalykilinn sem gengur að peningaskápnum.
+\item Ingimar treystir Hafþóri, en engum öðrum.
+\item Manneskjan talnalykilinn sem gengur að peningaskápnum er grænmetisæta.
+\item Manneskjan talnalykilinn sem gengur að peningaskápnum er ekki njósnari.
+\end{earg}
+
+\problempart
+\label{pr.FOLcards}
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] spilin í spilastokki
+\item[B] \gap{1} er svart.
+\item[C] \gap{1} er spaði.
+\item[D] \gap{1} er tvistur.
+\item[J] \gap{1} er gosi.
+\item[M] \gap{1} mannspil.
+\item[O] \gap{1} er eineygður.
+\item[W] \gap{1} er tromp.
+\end{ekey}
+
+\begin{earg}
+\item Allir spaðar eru svört spil.
+\item Það eru engin tromp.
+\item Það eru að minnsta kosti tveir spaðar.
+\item Það eru fleiri en einn eineygður gosi.
+\item Það eru í mesta lagi tveir eineygðir gosar.
+\item Það eru tveir svartir gosar.
+\item Það eru fjórir tvistar.
+\item Spaðatvisturinn er svartur.
+\item Ef spaðatvisturinn er tromp, þá er nákvæmlega eitt tromp.
+\item Eineygða mannspilið er ekki tromp.
+\item Spaðatvisturinn er ekki mannspil.
+\end{earg}
+
+\
+
+\problempart 
+Notið þennan þýðingarlykil til að þýða setningarnar hér að neðan yfir á táknmál umsagnarökfræði:
+\begin{ekey}
+\item[\text{yfirgrip}] dýr
+\item[B] \gap{1} er í haganum.
+\item[H] \gap{1} er hestur.
+\item[P] \gap{1} er Sleipnir.
+\item[W] \gap{1} er áttfættur.
+\end{ekey}
+\begin{earg}
+\item Það eru að minnsta kosti þrír hestar í heiminum.
+\item Það eru að minnsta kosti þrjú dýr í heiminum.
+\item Það eru fleiri en einn hestur í haganum.
+\item Það eru þrír hestar í haganum.
+\item Það er einn áttfættur hestur í haganum; öll önnur dýr hljóta að vera ekki áttfætt.
+\item Sleipnir er áttfættur hestur.
+\item Dýrið í haganum er ekki hestur.
+\item Hesturinn í haganum er ekki áttfættur.
+
+\end{earg}
+
+\problempart
+Í þessum hluta þýddum við „Sæmundur er skrýtni heimspekingurinn“ sem $\exists x (Hx \eand \forall y(Hy \eif x = y) \eand x = s)$. Útskýrið af hverju eftirfarandi þýðingar eru jafngóðar.
+	\begin{ebullet}
+		\item $Hs \eand \forall y(Hy \eif s = y)$
+		\item $\forall y(Hy \eiff y = s)$
+	\end{ebullet}
+
+
+\chapter{Setningar í umsagnarökfræði}\label{s:FOLSentences}
+
+Nú þegar við kunnum að þýða setningar af mæltu máli yfir á táknmál umsagnarökfræði er kominn tími til að skilgreina nákvæmlega hvað það er fyrir einhverja táknrunu að vera setning í umsagnarökfræði, rétt eins og við gerðum fyrir táknrunur í setningarökfræði í kafla \S \ref{tfl:SentencesDefined}.
+
+
+\section{Táknrunur}
+Það eru sex mismunandi gerðir af táknum í umsagnarökfræði:
+
+\begin{center}
+\begin{tabular}{l l}
+Umsagnir & $A,B,C,\ldots,Z$\\
+með lágvísum eftir þörfum & $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$\\
+\\
+Nöfn & $a,b,c,\ldots, r$\\
+með lágvísum eftir þörfum & $a_1, b_{224}, h_7, m_{32},\ldots$\\
+\\
+Breytur & $s, t, u, v, w, x,y,z$\\
+eftir þörfum & $x_1, y_1, z_1, x_2,\ldots$\\
+\\
+Setningatengi & $\enot,\eand,\eor,\eif,\eiff$\\
+\\
+Svigar &( , )\\
+\\
+Magnarar & $\forall, \exists$\\
+\end{tabular}
+\end{center}
+
+Við skilgreinun \define{táknrunu í umsagnarökfræði} sem hvaða streng sem er af táknum umsagnarökfræði. Hvaða tákn sem er, sem fengin eru úr listanum hér að ofan, í hvaða röð sem er, telst vera táknruna í umsagnarökfræði.
+
+\section{Einnefni og formúlur} \label{formula}
+
+Í \S\ref{s:TFLSentences} skilgreindum við hvað \emph{setning} er með því að nota það sem við kölluðum þrepunarskilgreiningu: Við skilgreindum grunnsetningar og smíðuðum svo fleiri og fleiri setningar úr þeim með því að nota ákveðnar reglur. Vegna þesss hvernig setningar í umsagnarökfræði eru byggðar upp, þá getum við ekki alltaf tryggt að hægt sé að smíða setningar úr öðrum setningum á sama hátt og áður. Til dæmis, þá þurfum við einhverja leið til að tengja saman magnara og breytu annars vegar, t.d.\ $\forall x$, og einhverja aðra táknrunu, hinsvegar, t.d.\ $(x = x)$. Ef við fylgjum þeirri venju að kalla setningar allt það sem getur verið satt eða ósatt, þá sjáum við að þessar tvær táknrunur sem saman mynda setninguna $\forall x(x = x)$ eru ekki sjálfar setningar.
+
+Við munum því skilgreina nýtt hugtak, \emph{formúlur}. Formúla er táknruna sem er annað hvort setning eða hægt er að breyta í setningu með að bæta magnara og breytu fyrir framan. Þegar við skilgreinum formúlur, þá munum við nota rakta skilgreiningu, rétt eins og í setningarökfræðinni, svo í raun er fátt nýtt á ferðinni.
+
+Við byrjum á að skilgreina hvað einnefni er.
+	\factoidbox{\define{Einnefni} eru nöfn og breytur; og vísa til ákveðins eða óákveðins hlutar í yfirgripinu.}
+Hér eru nokkur einnefni:
+	$$a, b, x, x_1 x_2, y, y_{254}, z$$
+Næst skilgreinum við \emph{grunnformúlur}.
+	\factoidbox{
+		\begin{enumerate}
+		\item Ef $\meta{R}$ er $n$-sæta umsögn og $\meta{t}_1, \meta{t}_2, \ldots, \meta{t}_n$ eru einnefni, þá er $\meta{Rt}_1 \meta{t}_2 \ldots \meta{t}_n$ grunnformúla.
+		\item Ef $\meta{t}_1$ og $\meta{t}_2$ eru einnefni, þá er $\meta{t}_1 = \meta{t}_2$ grunnformúla.
+		\item Ekkert annað er grunnformúla.
+		\end{enumerate}}
+Hér notum við feitletraða stafi sem metabreytur, rétt eins og við notuðum feitletraða stafi fyrir setningar í setningarökfræði. $\meta{R}$ er því ekki sjálf umsögn, heldur er hluti af framsetningarmálinu og talar um allar umsagnir í umsagnarökfræði. Á sama hátt er $\meta{t}_1$ ekki einnefni, heldur tákn í framsetningarmálinu sem við notum til að tala um öll einnefni. Hér munum við nota feitletraða stafi til að tákna formúlur \emph{eða} setningar, allt eftir samhengi.
+		
+Fyrsta klausan hér að ofan segir því bara að ef við fyllum einhverja umsögn með eins mörgum einnefnum og við getum, það er að segja, í samræmi við hversu mörg sæti eru í umsögninni, þá verði niðurstaðan formúla.
+
+Segum til dæmis að $F$ sé einsæta umsögn, $G$ þriggja sæta umsögn og $S$ sex sæta umsögn. Þá eru hér nokkrar grunnformúlur:
+	\begin{center}
+		$x = a$\\
+		$a = b$\\
+		$Fx$\\
+		$Fa$\\
+		$Gxay$\\
+		$Gaaa$\\
+		$Sx_1 x_2 a b y x_1$\\
+		$Sby_{254} z a a z$
+	\end{center}
+$Fxy$ væri hins vegar ekki formúla, því hér hefðum við reynt að setja tvær breytur á einsæta umsögn. $Gxa$ væri heldur ekki formúla, því hún er þriggja sæta umsögn og hér hefur hún bara verið fyllt af tveimur einnefnum. Reglan er einföld: Umsagnir fá jafnmörg einnefni og fjöldi sæta segir til um.
+
+Nú þegar við vitum hvað grunnformúlur eru, þá getum við notað rakta skilgreiningu og búið til eins margar formúlur og við viljum. Fyrstu klausurnar eru þær sömu og í setningarökfræðinni, nema við skilgreinum formúlur, en ekki setningar:
+	\factoidbox{
+	\begin{enumerate}
+		\item Allar grunnformúlur eru formúlur. 
+		\item Ef $\meta{A}$ er formúla, þá er $\enot\meta{A}$ formúla.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru formúlur, þá er $(\meta{A}\eand\meta{B})$ formúla.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru formúlur, þá er $(\meta{A}\eor\meta{B})$ formúla.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru formúlur, þá er $(\meta{A}\eif\meta{B})$ formúla.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru formúlur, þá er $(\meta{A}\eiff\meta{B})$ formúla.
+		\item Ef $\meta{A}$ er formúla, $\meta{x}$ er breyta, $\meta{A}$ inniheldur minnst eitt $\meta{x}$, og $\meta{A}$ inniheldur hvorki $\forall \meta{x}$ né $\exists \meta{x}$, þá er $\forall \meta{x} \meta{A}$ formúla.
+		\item Ef $\meta{A}$ er formúla, $\meta{x}$ er breyta, $\meta{A}$ inniheldur minnst eitt $\meta{x}$, og $\meta{A}$ inniheldur hvorki $\forall \meta{x}$ né $\exists \meta{x}$, þá er $\exists \meta{x} \meta{A}$ formúla.
+		\item Ekkert annað er formúla.
+	\end {enumerate}
+	}
+	
+Ef við gerum aftur ráð fyrir að $F$ sé einsæta umsögn, $G$ þriggja sæta umsögn og $S$ sex sæta umsögn, þá eru hér nokkrar formúlur:
+	\begin{center}
+		$Fx$\\
+		$Gayz$\\
+		$Syzyayx$\\
+		$(Gayz \eif Syzyayx)$\\
+		$\forall z (Gayz \eif Syzyayx)$\\
+		$Fx \eiff \forall z (Gayz \eif Syzyayx)$\\
+		$\exists y (Fx \eiff \forall z (Gayz \eif Syzyayx))$\\
+		$\forall x \exists y (Fx \eiff \forall z (Gayz \eif Syzyayx))$		\end{center}
+En þetta er \emph{ekki} formúla samkvæmt skilgreiningunni okkar:		
+	\begin{center}
+		$\forall x \exists x Gxxx$
+	\end{center}
+$Gxxx$ er vissulega formúla. Og $\exists x Gxxx$ er því vissulega líka formúla. En við getum ekki búið til nýja formúlu með því að setja $\forall x$ fyrir framan hana. Það myndi ganga í berhögg við klausu 7 í skilgreiningunni okkar að ofan: Formúlan $\exists x Gxxx$ inniheldur nú þegar minnst eitt $x$, en líka $\exists x$.
+	
+Ástæðan fyrir því að við viljum takmarka hvaða formúlur við getum smíðað með þessum hætti er sú að þannig getum við tryggt að hver breyta lúti einungis stjórn eins magnara í einu (sjá \S\ref{s:MultipleGenerality}). Við getum raunar núna gefið formlega skilgreiningu á sviði, þar með talið sviði magnara. Þessi skilgreining er svipuð og í setningarökfræðinni, nema við notum hugtakið \define{virki} til að tákna setningatengi eða magnara:
+
+	\factoidbox{
+		\define{Aðalvirki} er það tengi eða sá magnari sem var síðast kynntur til sögunnar þegar formúla hefur verið smíðuð úr grunnformúlum.
+		
+		\
+
+		\define{Svið virkja} er sú hlutformúla (formúla í myndunarsögunni) þar sem viðkomandi virki er aðalvirkinn.
+	}
+Við getum núna sýnt svið virkjanna í síðasta dæminu hér að ofan myndrænt:
+	$$\overbrace{\forall x \overbrace{\exists y (Fx \eiff \overbrace{\forall z (Gayz \eif Syzyayx)}^{\text{svið `}\forall z\text{'}}}^{\text{svið `}\exists y\text{'}})}^{\text{svið `}\forall x\text{'}}$$
+
+\section{Setningar í umsagnarökfræði}
+Í rökfræði veltum við nær eingöngu fyrir okkur setningum sem geta verið annað hvort sannar eða ósannar. En ekki eru allar formúlur setningar. Notum til dæmis eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[\text{yfirgrip}] fólk
+		\item[L] \gap{1} elskar \gap{2}
+		\item[o] Ólafur
+	\end{ekey}
+Allar grunnformúlur eru formúlur, og því er grunnformúlan $Lzz$ formúla. En er hún sönn eða ósönn? Maður gæti haldið að hún væri ósönn eff sá sem vísað er til með „$z$“ elskar sjálfan sig, rétt eins og formúlan $Loo$ er sönn ef og aðeins ef Ólafur (sá sem nafnið „$o$“ vísar til) elskar sjálfan sig. \emph{En „$z$“ er breyta, og vísar því ekki til neins ákveðins hlutar í yfirgripinu}. Breytur eru einfaldlega ekki þannig tákn að þær vísi til hluta einar og sér.
+	
+Ef við myndum hins vegar, til dæmis, setja tilvistarmagnara fyrir framan setninguna þannig að hún yrði $\exists x L zz$, þá væri setningin sönn ef og aðeins ef einhver elskar sjálfan sig. Á sama hátt væri setningin $\forall z Lzz$ sönn eff allir elska sjálfan sig. Við notum sem sagt magnara til að segja okkur hvernig breyturnar í setningunni skuli túlkaðar.
+
+Við getum tjáð þessa hugmynd á nákvæmari hátt:
+
+	\factoidbox{
+		Breytan $\meta{x}$ er sögð bundin eff hún er innan sviðs tilheyrandi magnara, þ.e. $\forall \meta{x}$ eða $\exists \meta{x}$; annars er hún sögð frjáls.}
+Skoðum nú sem dæmi formúluna $$(\forall x(Ex \eor Dy) \eif \exists z(Ex \eif Lzx))$$ Svið almagnarans „$\forall x$“ er 	$\forall x (Ex \eor Dy)$, svo fyrsta $x$-ið er bundið af almagnaranum. En annað og þriðja $x$-ið eru ekki innan sviðs neins magnara, og eru því frjáls. Hið sama gildir um fyrsta $y$-ið.  Svið tilvistarmagnarans er svo $(Ex \eif Lzx)$ og því er $z$ bundin.
+		
+Nú getum við loksins skilgreint:		
+	\factoidbox{	
+		\define{Setning} í umsagnarökfræði er formúla í umsagnarökfræði sem inniheldur engar frjálsar breytur.
+	}
+Með öðrum orðum, setning í umsagnarökfræði er formúla þar sem allar breytur eru bundnar---falla innan sviðs einhvers magnara sem bindur viðeigandi breytu.
+\section{Svigavenjur}
+
+Í umsagnarökfræðinni munum við nota sömu svigavenjur og í setningaörkfræðinni (sjá \S\ref{s:TFLSentences} og \S\ref{s:MoreBracketingConventions}). Þær voru í stuttu máli þessar:
+
+\begin{itemize}
+	\item Við leyfum okkur að sleppa ystu svigum í formúlu.
+	\item Við megum nota hornklofa, „[“ og „]“ í stað venjulegra sviga til að auðvelda lestur á formúlum, þó að þeir séu tæknilega séð ekki hluti af táknmáli umsagnarökfræði.
+	\item Við megum sleppa svigum milli samtenginga, þegar við skrifum langa runu af samteningum.
+	\item Hið sama gildir um langar runur af mistengingum, setningum sem eru tengdar saman með eða-tengjum: við megum sleppa svigum á milli þeirra í slíkri runu.
+\end{itemize}
+
+
+\section{Hávísar á umsögnum}
+
+Við sögðum hér að ofan að $n$ einnefni á eftir $n$-sæta umsögn sé grunnformúla. En það er ákveðinn galli við þessa skilgreiningu: táknin sem við notum fyrir umsagnirnar bera það ekki utan á sér hversu mörg sæti þau hafa. Stundum höfum við notað $G$ sem einsæta umsögn, stundum sem þriggja sæta umsögn, og svo framvegis. Svo ef það er ekki beinlínis tekið fram í það og það skiptið hversu mörg sæti $G$ hefur, þá er \emph{óákvarðað} hvort $Ga$, svo við tökum dæmi, sé grunnformúla eða ekki.
+
+Það er til einföld leið út úr þessum vanda, sem er oft farin í kennslubókum í rökfræði: Í stað þess að segja að táknin fyrir umsagnir séu hástafir (með lágvísum eftir þörfum), þá er sagt að þær sú hástafir með \emph{hávísum} (og svo lágvísum eftir þörfum). Tilgangur hávísanna er þá að segja til um hversu mörg sæti hver umsögn er. Þannig væri $G^1$ einsæta umsögn og $G^3$ þriggja sæta umsögn. Þetta væru tvær mismunandi umsagnir og þyrftu hver sína línu í þýðingarlykli. $G^1a$ væri þá grunnformúla, en ekki $G^3a$, rétt eins og $G^3abc$ væri grunnformúla, en ekki $G^1abc$.
+
+Við \emph{gætum} farið þessa leið. Þetta myndi hafa þann kost í för með sér að það væri alltaf fullkomlega ljóst hvort réttur fjöldi einnefna fylgi hverri umsögn. En það hefði líka þann ókost að formúlurnar sem yrðu til með slíkum umsögnum yrðu mun þyngri í lestri, ekki síst ef lágvísar fylgdu með líka, til dæmis: $G^3_5xae$. Við munum því ekki fara þessa leið. Umsagnirnar okkar munu vera án hávísa (enda taka langflestar kennslubækur sem nota þá strax upp þá venju að sleppa þeim). 
+
+Þetta þýðir þó að ákveðin tvíræðni er möguleg. En í raun er þetta sjaldan vandamál, og ef einhver hætta er á misskilningi, þá tökum við bara fram hversu mörg sæti hver umsögn hefur.
+
+
+\practiceproblems
+\problempart
+\label{pr.freeFOL}
+Tilgreinið hvaða breytur eru frjálsar og hverjar eru bundnar.
+\begin{earg}
+\item $\exists x Lxy \eand \forall y Lyx$
+\item $\forall x Ax \eand Bx$
+\item $\forall x (Ax \eand Bx) \eand \forall y(Cx \eand Dy)$
+\item $\forall x\exists y[Rxy \eif (Jz \eand Kx)] \eor Ryx$
+\item $\forall x_1(Mx_2 \eiff Lx_2x_1) \eand \exists x_2 Lx_3x_2$
+\end{earg}
