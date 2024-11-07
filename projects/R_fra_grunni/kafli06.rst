@@ -112,13 +112,13 @@ dæmis má gefa skipanirnar
 til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.
 
 Við getum að sjálfsögðu matað sample með nafni á breytu sem tilheyrir
-gagnafölu. Viljum við t.d. velja handahófskennt 10 hæðarmælingar úr puls
-gögnunum okkar gerum við það með
+gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
+Hvenær fæddist Napóleon? Gerum við það með:
 
 ::
 
-   sample(puls$haed,10)
-   ##  [1] 160 188 180 160 162 164 174 170 180 165
+   sample(konnun$napoleon_faeddur,10)
+   ##  [1] 1769 1770 1750 1874 1700 1498 1769 1560 1690 1800
 
 .. _s.urtaksdreifing:
 
@@ -147,19 +147,20 @@ oft og við biðjum hana um.
 úrtaksdreifing meðaltals slembistærðar fylgi normaldreifingu ef
 meðaltalið byggir á nægjanlega mörgum mælingum, óháð því hver upphaflega
 dreifing slembistærðarinnar var. Gott dæmi um hana má sjá með því að
-skoða breytuna ``likamsraekt`` sem lýsir hversu marga klukkutíma í viku
-nemendur stunda líkamsrækt. Byrjum á því að skoða stuðlarit af
+skoða breytuna ``ferdatimi_skoli`` sem lýsir því hve lengi nemendur eru á
+leið í skóla. Byrjum á því að skoða stuðlarit af
 breytunni.
 
 ::
 
-   ggplot(data = puls, aes(likamsraekt)) + geom_histogram(binwidth=1)
+   ggplot(data = konnun, aes(ferdatimi_skoli)) + geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-171-1.svg
+.. figure:: myndir/mynd6_1.svg   
+   :align: center
 
-Á stuðlaritinu sést að líkindadreifing breytunnar ``likamsraekt`` er
+Á stuðlaritinu sést að líkindadreifing breytunnar ``ferdatimi_skoli`` er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
-útlaga til hægri að auki. Hins vegar er *meðaltal* líkamsræktar
+útlaga til hægri að auki. Hins vegar er *meðaltal* ``ferdatimi_skoli``
 normaldreift, sé tekið meðaltal af nægjanlega mörgum mælingum. Með
 skipuninni ``replicate()`` getum við framkvæmt 1000 "gervitilraunir"
 þar sem við veljum slembiúrtak af stærð 100 úr þýði upprunalegu
@@ -167,7 +168,7 @@ mælinganna okkar:
 
 ::
 
-   endurvalsurtak <- replicate(1000, sample(puls$likamsraekt, 100,replace=T))
+   endurvalsurtak <- replicate(1000, sample(konnun$ferdatimi_skoli, 100,replace=T))
 
 Útkoman er fylki með 1000 dálka, einn fyrir hverja gervitilraun og 100
 línur, eina fyrir hverja útkomu í hverri gervitilraun.
@@ -191,7 +192,8 @@ vera normaldreifð:
 
    ggplot(data = data.frame(medaltol), aes(medaltol)) + geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-175-1.svg
+.. figure:: myndir/mynd6_2.svg
+   :align: center
 
 Athugið að hér er lykilatriði að nægjanlega mörg viðfangsefni séu valin
 í hverju og einu gerviúrtaki. Sé eingöngu valið gerviúrtak af stærð 3 í
@@ -201,7 +203,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
 ::
 
    litid.endurvalsurtak <-
-   replicate(1000, sample(puls$likamsraekt, 3,replace=T))
+   replicate(1000, sample(konnun$ferdatimi_skoli, 3,replace=T))
 
    ny.medaltol <-
    apply(litid.endurvalsurtak,2,mean, na.rm=T)
@@ -209,7 +211,8 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
    ggplot(data = data.frame(ny.medaltol), aes(ny.medaltol)) +
    geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-176-1.svg
+.. figure:: myndir/mynd6_3.svg
+   :align: center
 
 .. _s.oryggisbil:
 
@@ -217,7 +220,7 @@ má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.
 --------------------------------------
 
 Gerviúrtökin sem fengust með skipuninni ``replicate()`` má einnig nota
-til að reikna öryggisbil fyrir meðaltal líkamsræktar. 95% öryggisbil er
+til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 smíðað þannig að það innihaldi sanna gildið á stikanum í 95% tilvika ef
 tilraunin er endurtekin nægjanlega oft. Við getum notað metnu meðaltölin
 úr gervitilraununum 1000 til að áætla hvaða útkomur væru mögulegar ef að
@@ -228,9 +231,9 @@ reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.
 
    quantile(medaltol, c(0.025, 0.975))
    ##     2.5%    97.5%
-   ## 3.825000 5.255003
+   ##    16.81950 22.01025 
 
-95% öryggisbilið er því :math:`[3.825, 5.2550026 ]`.
+95% öryggisbilið er því :math:`[16.81950, 22.01025 ]`.
 
 
 Leiksvæði fyrir R kóða

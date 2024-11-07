@@ -1438,7 +1438,7 @@ Lograr
 
 Andhverfur vísisfalla eru lograr og fastinn :math:`b` í stofni vísisfallsins
 skilgreinir stofn lograns :math:`\log_b(x)`. Almennt gildir fyrir
-:math:`a,b,c \in \mathbb{R}` að ef :math:`a^b = c` þá er :math:`\log_b(c)=a`.
+:math:`a,b,c \in \mathbb{R}` að ef :math:`a^b = c` þá er :math:`\log_a(c)=b`.
 
 .. admonition:: Dæmi
   :class: daemi

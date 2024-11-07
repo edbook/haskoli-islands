@@ -30,7 +30,7 @@ jobs:
         shell: bash -el {0}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Extract branch name
         id: extract_branch
         shell: bash
@@ -39,14 +39,14 @@ jobs:
           slug=$(./.github/slugify.sh ${{ github.head_ref || github.ref_name }})
           echo "BRANCH_SLUG=$slug" >> $GITHUB_ENV
       - name: Setup Conda
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: false
           python-version: 3.10.10
           channels: conda-forge,defaults
-          mamba-version: "*"
+   #       mamba-version: "*"
           channel-priority: true
-          use-mamba: true
+   #       use-mamba: false
           environment-file: environment.yml
           activate-environment: edbook
       # TODO: needs work

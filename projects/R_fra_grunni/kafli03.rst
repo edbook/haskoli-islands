@@ -57,15 +57,16 @@ Punktarit
 
 Punktarit eru einföld og skýr leið til að setja fram gögn. Þau eru
 smíðuð með viðbótinni ``+ geom_point()``. Eftirfarandi skipun gefur
-okkur punktarit sem lýsir sambandi hæðar og þyngdar í gagnatöflunni
-``puls``. Skýribreytan ``haed`` er á x-ás og svarbreytan ``thyngd`` á
-y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni ``aes()``.
+okkur punktarit sem lýsir sambandi heildarlengdar og lengdar höfuðs pokarotta
+í gagnatöflunni ``pokarotta``. Skýribreytan ``heildarlengd`` er á x-ás og 
+svarbreytan ``hofud_lengd`` á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni ``aes()``.
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd)) + geom_point()
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point()
 
-.. figure:: myndir/unnamed-chunk-88-1.svg
+.. figure:: myndir/punktarit1.svg
+   :align: center
 
 Stöplarit
 ~~~~~~~~~
@@ -76,65 +77,71 @@ tilgreind inní ``aes()``.
 
 ::
 
-   ggplot(data = puls, aes(kyn)) + geom_bar()
+   ggplot(data=konnun, aes(x=is)) + geom_bar()
 
-.. figure:: myndir/unnamed-chunk-89-1.svg
+.. figure:: myndir/isBar.svg
+   :align: center
 
 Stuðlarit
 ~~~~~~~~~
 
 Viðbótin ``geom_histogram()`` teiknar stuðlarit. Viljum við teikna
-stuðlarit af breytunni ``thyngd`` gerum við það með skipuninni:
+stuðlarit af breytunni ``ferdatimi_skoli`` gerum við það með skipuninni:
 
 ::
 
-   ggplot(data=puls, aes(thyngd)) + geom_histogram()
+   ggplot(data=konnun, aes(x=ferdatimi_skoli)) + geom_histogram()
 
-.. figure:: myndir/unnamed-chunk-90-1.svg
+.. figure:: myndir/ferdatimiHist.svg
+   :align: center
 
 Stilla má breidd súlnanna með ``binwidth`` stillingunni:
 
 ::
 
-   ggplot(data=puls, aes(thyngd)) + geom_histogram(binwidth=10)
+   ggplot(data=konnun, aes(x=ferdatimi_skoli)) + geom_histogram(binwidth=10)
 
-.. figure:: myndir/unnamed-chunk-91-1.svg
+.. figure:: myndir/ferdatimiHist10.svg
+   :align: center
 
 Kassarit
 ~~~~~~~~
 
 Kassarit eru mjög hentug til að bera saman dreifingu tveggja breyta. Þau
 eru tilgreind með viðbótinni ``geom_boxplot()``. Viljum við teikna
-kassarit af breytunni ``thyngd`` lagskipt eftir breytunni ``kyn`` gerum
+kassarit af breytunni ``systkini_fjoldi`` lagskipt eftir breytunni ``is`` gerum
 við það með:
 
 ::
 
-   ggplot(data=puls,aes(x=kyn,y=thyngd)) + geom_boxplot()
+   ggplot(data=konnun, aes(x=is, y=systkini_fjoldi)) + geom_boxplot()
 
-.. figure:: myndir/unnamed-chunk-92-1.svg
+.. figure:: myndir/systkiniIs.svg
+   :align: center
 
 Hægt er að teikna kassarit af einni breytu án lagskiptingar með því að
 setja ``factor(0)`` inn sem eins konar gervibreytu. Neðangreind skipun
-teiknar kassarit af breytunni ``thyngd`` án lagskiptingar:
+teiknar kassarit af breytunni ``ferdatimi_skoli`` án lagskiptingar:
 
 ::
 
-   ggplot(data=puls,aes(x=factor(0),y=thyngd)) + geom_boxplot()
+   ggplot(data=konnun, aes(x=factor(0), y=ferdatimi_skoli)) + geom_boxplot()
 
-.. figure:: myndir/unnamed-chunk-93-1.svg
+.. figure:: myndir/gerviIs.svg
+   :align: center
 
 Normaldreifingarrit
 ~~~~~~~~~~~~~~~~~~~
 
 Normaldreifingarrit eru gerð með viðbótinni ``stat_qq()``.
-Normaldreifingarrit fyrir breytuna ``haed`` fæst með:
+Normaldreifingarrit fyrir breytuna ``hofud_lengd`` fæst með:
 
 ::
 
-   ggplot(data=puls, aes(sample=haed)) + stat_qq()
+   ggplot(data=pokarotta, aes(sample=hofud_lengd)) + stat_qq()
 
-.. figure:: myndir/unnamed-chunk-94-1.svg
+.. figure:: myndir/normalPossum.svg
+   :align: center
 
 Takið eftir að nú stendur ``sample=`` í stað ``x=`` í ``aes()``
 stillingunni.
@@ -145,15 +152,15 @@ stillingunni.
 Nöfn ása
 ~~~~~~~~
 
-Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin ``xlab()``
-tilgreinir merkingu á x-ás á meðan viðbótin ``ylab()`` tilgreinir
-merkingu á y-ás.
+Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin ``labs()``
+tilgreinir merkingu ása.
 
 ::
 
-   ggplot(data = puls, aes(kyn)) + geom_bar() + xlab('Kyn') + ylab('Fjöldi')
+   ggplot(data=konnun, aes(x=is)) + geom_bar()+labs(x="Uppáhalds ís", y="Fjöldi")
 
-.. figure:: myndir/unnamed-chunk-95-1.svg
+.. figure:: myndir/isBarAsar.svg
+   :align: center
 
 Við getum enn fremur merkt og stillt kvarðana á hvorum ás fyrir sig að
 vild. Séum við að merkja samfellda breytu á x-ás notum við viðbótina
@@ -170,10 +177,11 @@ stöplaritinu hér að ofan með viðbótinni:
 
 ::
 
-   ggplot(data = puls, aes(kyn)) + geom_bar() + xlab('Kyn') + ylab('Fjöldi') +
-   scale_x_discrete(labels = c("Konur","Karlar"))
+   ggplot(data=konnun, aes(x=is)) + geom_bar()+labs(x="Uppáhalds ís", y="Fjöldi") +
+   scale_x_discrete(labels = c("Jarðaberjaís","Súkkulaðiís", "Vanilluís"))
 
-.. figure:: myndir/unnamed-chunk-96-1.svg
+.. figure:: myndir/isBarAsarOgHok.svg
+   :align: center
 
 Takið eftir einu til viðbótar. Hér skiptum við skipuninni upp í tvær
 línur til að gera kóðann læsilegri. Þá þurfum við að passa okkur að hafa
@@ -182,31 +190,27 @@ lína hunsuð og við fáum jafnvel villu:
 
 ::
 
-   ggplot(data = puls, aes(kyn)) + geom_bar() + xlab('Kyn') + ylab('Fjöldi')
-
-.. figure:: myndir/unnamed-chunk-97-1.svg
-
-::
-
-   + scale_x_discrete(labels = c("Konur","Karlar"))
-   ## Error in +scale_x_discrete(labels = c("Konur", "Karlar")): invalid argument to
-   ## unary operator
+   ggplot(data = konnun, aes(is)) + geom_bar() + xlab('Uppáhalds ís') + ylab('Fjöldi')
+   + scale_x_discrete(labels = c("Jarðaberjaís","Súkkulaðiís","Vanilluís"))
+   ## Error in `+.gg`:
+   ## ! Cannot use `+` with a single argument.
+   ## ℹ Did you accidentally put `+` on a new line?
 
 Hök kvarða
 ~~~~~~~~~~
 
 Að sama skapi má auðveldlega stilla hvar hök kvarðanna á x- og y-ás eru
 með stillingunni ``breaks()``. Viljum við sem dæmi láta merkingarnar á
-y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 kílóum í stað 20
+y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
 gerum við það með skipuninni:
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd)) + geom_point() +
-   xlab("Hæð") + ylab("Þyngd")+
-   scale_y_continuous(breaks = seq(40,120,10))
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) +
+   geom_point()+scale_y_continuous(breaks = seq(80,120,10))
 
-.. figure:: myndir/unnamed-chunk-98-1.svg
+.. figure:: myndir/hokkvarda.svg
+   :align: center
 
 Mörk kvarða
 ~~~~~~~~~~~
@@ -216,10 +220,11 @@ mataðar með endamörkum kvarðanna.
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd)) + geom_point() +
-   xlab("Hæð") + ylab("Þyngd") + ylim(0,130) + xlim(0,200)
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) +
+   geom_point()+ylim(50,120)+xlim(70,100)
 
-.. figure:: myndir/unnamed-chunk-99-1.svg
+.. figure:: myndir/lim.svg
+   :align: center
 
 Litir og tákn
 -------------
@@ -231,39 +236,36 @@ vegar má fylla upp í fleti á grafinu með stillingunni ``fill``.
 Stillingarnar eru tilgreindar inní útlitsstillingunni ``aes()``.
 
 Við getum lagskipt punktaritinu yfir hæð og þyngd nemenda eftir kynjum
-nemendanna með því að lita punktana ólíkt eftir því hvoru kyninu nemandi
+pokarotta með því að lita punktana ólíkt eftir því hvoru kyninu pokarotta
 tilheyrir. Það er því gert með stillingunni ``color``.
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd, color=kyn)) + geom_point() +
-   xlab("Hæð") + ylab("Þyngd")
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd, color = kyn)) + geom_point()
 
-.. figure:: myndir/unnamed-chunk-100-1.svg
+.. figure:: myndir/kynlitur.svg
+   :align: center
 
-Viljum við hins vegar lagskipta stöplaritinu yfir fjölda nemenda af
-hvoru kyni eftir því hvort þeir reykja eða ekki gerum við það með
+Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
+eftir því hvort þeir nota iOS eða Android gerum við það með
 stillingunni ``fill``, því þá viljum við lita fleti grafsins ólíkt.
 
 ::
 
-   ggplot(data = puls, aes(kyn, fill=reykir)) + geom_bar() +
-   xlab("Kyn") + ylab("Fjöldi")
+   ggplot(data=konnun, aes(x=is, fill=styrikerfi_simi)) + geom_bar()
 
-.. figure:: myndir/unnamed-chunk-101-1.svg
+.. figure:: myndir/isBarStyrikerfi.svg
+   :align: center
 
 Ef við bætum stillingunni ``position=’dodge’`` inní viðbótina
 ``geom_bar()`` koma stöplar grafsins hvor við hliðina á öðrum:
 
 ::
 
-   ggplot(data = puls, aes(kyn, fill=reykir)) + geom_bar(position='dodge') +
-   xlab("Kyn") + ylab("Fjöldi")
+   ggplot(data=konnun, aes(x=is, fill=styrikerfi_simi)) + geom_bar(position="dodge")
 
-.. figure:: myndir/unnamed-chunk-102-1.svg
-
-Gráu fletirnir eru þeir nemendur sem ekki gáfu upp hvort þeir reyktu eða
-ekki, þ.e. mælingar sem vantar.
+.. figure:: myndir/isBarStyrikerfiDodge.svg
+   :align: center
 
 Oft eru tákn heppilegri en litir til að lagskipta gröfum. Til dæmis geta
 litmyndir verið dýrar í tímaritum og svart-hvítar lausnir því heppilegri
@@ -272,10 +274,10 @@ kostur. Tilgreina má að skipta gröfum upp með því að nota ólík tákn me
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd, shape=kyn)) + geom_point()+
-   xlab("Hæð") + ylab("Þyngd")
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd, shape = kyn)) + geom_point()
 
-.. figure:: myndir/unnamed-chunk-103-1.svg
+.. figure:: myndir/kynform.svg
+   :align: center 
 
 Gröfum skipt upp í reiti
 ------------------------
@@ -284,39 +286,32 @@ Gröfum skipt upp í reiti
 reiti. Það er gert með skipuninni ``facet_grid()``. Hægt er að skipta
 gröfunum hvort sem heldur eftir x-ás eða y-ás eða jafnvel báðum.
 
-Viljum við skipta punktaritinu yfir hæð og þyngd nemenda upp eftir því
-hvaða námskeiði þeir tilheyra gerum við það með skipuninni:
+Viljum við skipta punktaritinu yfir lengd pokarotta og lengd hala þeirra 
+upp eftir því hvaðan þær eru gerum við það með skipuninni:
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd)) + geom_point() +
-   facet_grid(~namskeid) + xlab("Hæð") + ylab("Þyngd")
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() + 
+   facet_grid(~tegund)
 
-.. figure:: myndir/unnamed-chunk-104-1.svg
+.. figure:: myndir/tegundfacet.svg
+   :align: center 
 
-Viljum við skipta grafinu í reiti eftir því bæði hvaða námskeiði þeir
-tilheyra og hvaða ár þeir sátu námskeiðið gerum við það með:
-
-::
-
-   ggplot(data=puls, aes(x=haed,y=thyngd)) + geom_point() +
-   facet_grid(ar~namskeid) + xlab("Hæð") + ylab("Þyngd")
-
-.. figure:: myndir/unnamed-chunk-105-1.svg
-
-Það má hæglega lagskipta með bæði reitaskiptingu og táknum í sama
-grafinu. Þannig er hægt að tákna punktana í grafinu að ofan eftir því
-hvoru kyni nemendurnir tilheyra:
-
-Viljum við skipta grafinu í reiti eftir því bæði hvaða námskeiði þeir
-tilheyra og hvaða ár þeir sátu námskeiðið gerum við það með:
+Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
+og hvaðan þær eru gerum við það með:
+Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
+og hvaðan þær eru gerum við það með:
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd, shape=kyn)) + geom_point() +
-   facet_grid(ar~namskeid) + xlab("Hæð") + ylab("Þyngd")
+   kyntegund<-ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() +
+   facet_grid(kyn~tegund)
 
-.. figure:: myndir/unnamed-chunk-106-1.svg
+.. figure:: myndir/kyntegund.svg
+   :align: center
+
+Svo mætti hæglega halda áfram og lagskipta með bæði reitaskiptingu og táknum í sama
+grafinu.
 
 Skipt um bakgrunn
 -----------------
@@ -328,19 +323,21 @@ tvær þægilegar stillingar til að breyta um bakgrunn. Sú fyrri er
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd)) + geom_point() +
-   theme_bw() + xlab("Hæð") + ylab("Þyngd")
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() 
+   + theme_bw()
 
-.. figure:: myndir/unnamed-chunk-107-1.svg
+.. figure:: myndir/pokarottamynd.svg
+   :align: center
 
 sú seinni er ``theme_classic()`` og gefur þessa niðurstöðu:
 
 ::
 
-   ggplot(data=puls, aes(x=haed,y=thyngd)) + geom_point() +
-   theme_classic() + xlab("Hæð") + ylab("Þyngd")
+   ggplot(data=pokarotta, aes(x=heildarlengd,y=hofud_lengd)) + geom_point() 
+   + theme_classic()
 
-.. figure:: myndir/unnamed-chunk-108-1.svg
+.. figure:: myndir/classic.svg
+   :align: center
 
 Myndir vistaðar
 ---------------

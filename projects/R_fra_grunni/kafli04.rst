@@ -57,8 +57,8 @@ mata aðferðina með nafni breytunnar.
 
 ::
 
-   max(puls$haed, na.rm=T)
-   ## [1] 198
+   max(konnun$ferdatimi_skoli, na.rm=T)
+   ## [1] 75
 
 min()
 ^^^^^
@@ -87,8 +87,8 @@ mata aðferðina með nafni breytunnar.
 
 ::
 
-   min(puls$haed, na.rm=T)
-   ## [1] 150
+   min(konnun$ferdatimi_skoli, na.rm=T)
+   ## [1] 0
 
 Miðja
 ~~~~~
@@ -120,8 +120,8 @@ aðferðina með nafni breytunnar.
 
 ::
 
-   mean(puls$haed, na.rm=T)
-   ## [1] 173.2532
+   mean(konnun$ferdatimi_skoli, na.rm=T)
+   ## [1] 19.42786
 
 median()
 ^^^^^^^^
@@ -150,8 +150,8 @@ mata aðferðina með nafni breytunnar:
 
 ::
 
-   median(puls$haed, na.rm=T)
-   ## [1] 172
+   median(konnun$ferdatimi_skoli, na.rm=T)
+   ## [1] 16
 
 Breytileiki
 ~~~~~~~~~~~
@@ -182,7 +182,8 @@ aðferðina með nafni breytunnar:
 
 ::
 
-   var(puls$haed, na.rm=T)
+   var(konnun$ferdatimi_skoli, na.rm=T)
+   ## [1] 198.786
 
 sd()
 ^^^^
@@ -211,8 +212,8 @@ mata aðferðina með nafni breytunnar:
 
 ::
 
-   sd(puls$haed, na.rm=T)
-   ## [1] 9.774032
+   sd(konnun$ferdatimi_skoli, na.rm=T)
+   ## [1] 14.09915
 
 quantile()
 ^^^^^^^^^^
@@ -234,9 +235,9 @@ nafninu á breytunni:
 
 ::
 
-   quantile(puls$haed, na.rm=T)
-   ##   0%  25%  50%  75% 100%
-   ##  150  166  172  181  198
+   quantile(konnun$ferdatimi_skoli, na.rm=T)
+   ## 0%  25%  50%  75% 100% 
+   ## 0   8   16   25   75
 
 Við getum notað ``probs`` stillinguna til að reikna hvaða hlutfallsmörk
 sem er.
@@ -260,13 +261,14 @@ cor()
 
 Reikna má fylgni milli tveggja breyta í R með ``cor()`` aðferðinni. Við
 þurfum að mata aðferðina með heitunum á breytunum sem við ætlum að
-reikna fylgnina á milli. Viljum við reikna fylgnina á milli breytanna
-``haed`` og ``thyngd`` notum við skipunina:
+reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
+höfuðlengdar pokarotta, semsagt breytanna ``heildarlengd`` og ``hofud_lengd``,
+notum við skipunina:
 
 ::
 
-   cor(puls$haed,puls$thyngd,use="complete.obs")
-   ## [1] 0.6765718
+   cor(pokarotta$heildarlengd, pokarotta$hofud_lengd)
+   ## [1] 0.6910937
 
 Stillinguna ``use="complete.obs"`` notum við vanti einhverjar mælingar.
 Munið að við reiknum aðeins út fylgnistuðul sé línulegt samband á milli
@@ -304,10 +306,11 @@ STÆ209 í gagnasafninu okkar gerum við það með:
 
 ::
 
-   table(puls$namskeid)
+   table(konnun$is)
    ##
-   ##  LAN203 STAE209
-   ##     172     299
+   ## Jarðaberja  Súkkulaði    Vanilla 
+   ##         39        91         71 
+
 
 Við getum líka matað ``table()`` með tveimur flokkabreytum og þá telur
 hún hversu oft hversu mörg viðfangsefni hljóta hverja og eina af
@@ -316,11 +319,12 @@ neðan.
 
 ::
 
-   table(puls$namskeid,puls$kyn)
+   table(konnun$is, konnun$dyr)
    ##
-   ##           kvk  kk
-   ##   LAN203  111  61
-   ##   STAE209 196 103
+   ##               Hunda Ketti
+   ## Jarðaberja    23    16
+   ## Súkkulaði     61    30
+   ## Vanilla       43    28
 
 .. _rf.prop.table:
 
@@ -344,47 +348,50 @@ hlutföll getum við notað ``prop.table()`` aðferðina. Við mötum hana með
 
 ::
 
-   prop.table(table(puls$namskeid))
+   prop.table(table(konnun$is))
    ##
-   ##    LAN203   STAE209
-   ## 0.3651805 0.6348195
+   ## Jarðaberja  Súkkulaði    Vanilla 
+   ##  0.1940299  0.4527363  0.3532338 
 
 Séum við að vinna með tvær breytur má mata ``prop.table()`` aðferðina á
 þrennan hátt. Viljum við fá heildarhlutföllin gerum við það með:
 
 ::
 
-   prop.table(table(puls$namskeid,puls$kyn))
+   prop.table(table(konnun$is, konnun$dyr))
    ##
-   ##                 kvk        kk
-   ##   LAN203  0.2356688 0.1295117
-   ##   STAE209 0.4161359 0.2186837
+   ##                  Hunda      Ketti
+   ##  Jarðaberja 0.11442786 0.07960199
+   ##  Súkkulaði  0.30348259 0.14925373
+   ##  Vanilla    0.21393035 0.13930348
 
-Í töflunni má t.d. sjá að um 23.6% nemenda í gagnasafninu eru kvenkyns
-nemendur í LAN203. Viljum við aftur á máti skoða hlutföllin eftir línum
-í töflunni gerum við það með:
+Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við 
+hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti 
+skoða hlutföllin eftir línum í töflunni gerum við það með:
 
 ::
 
-   prop.table(table(puls$namskeid,puls$kyn),margin=1)
+   prop.table(table(konnun$is, konnun$dyr), margin=1)
    ##
-   ##                 kvk        kk
-   ##   LAN203  0.6453488 0.3546512
-   ##   STAE209 0.6555184 0.3444816
+   ##                 Hunda     Ketti
+   ##  Jarðaberja 0.5897436 0.4102564
+   ##  Súkkulaði  0.6703297 0.3296703
+   ##  Vanilla    0.6056338 0.3943662
 
-Í töflunni má t.d. sjá að um 64.5% nemenda í LAN203 eru kvenkyns. Viljum
-við hins vegar skoða hlutföllin eftir dálkum í töflunni gerum við það
-með:
+Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur 
+eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir 
+dálkum í töflunni gerum við það með:
 
 ::
 
-   prop.table(table(puls$namskeid,puls$kyn),margin=2)
+   prop.table(table(konnun$is, konnun$dyr), margin=2)
    ##
-   ##                 kvk        kk
-   ##   LAN203  0.3615635 0.3719512
-   ##   STAE209 0.6384365 0.6280488
+   ##                 Hunda     Ketti
+   ##  Jarðaberja 0.1811024 0.2162162
+   ##  Súkkulaði  0.4803150 0.4054054
+   ##  Vanilla    0.3385827 0.3783784
 
-Í töflunni má t.d. sjá að um 36.2% kvenkyns nemenda er í LAN203.
+Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
 
 Takið eftir að nota má ``prop.table()`` til að reikna lýsistærðirnar
 næmi (e. sensitivity) og sértæki (e. specificity).
@@ -419,11 +426,12 @@ aukastöfum sé skilað gerum við það með:
 
 ::
 
-   round(prop.table(table(puls$namskeid,puls$kyn),2),3)
+   round(prop.table(table(konnun$is, konnun$dyr),2),3)
    ##
-   ##             kvk    kk
-   ##   LAN203  0.362 0.372
-   ##   STAE209 0.638 0.628
+   ##             Hunda Ketti
+   ##  Jarðaberja 0.181 0.216
+   ##  Súkkulaði  0.480 0.405
+   ##  Vanilla    0.339 0.378
 
 summary()
 ^^^^^^^^^
@@ -452,9 +460,9 @@ og með nafni breytu:
 
 ::
 
-   summary(puls$haed)
-   ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
-   ##   150.0   166.0   172.0   173.3   181.0   198.0       1
+   summary(konnun$ferdatimi_skoli)
+   ##   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   ##   0.00    8.00   16.00   19.43   25.00   75.00 
 
 Ef breytan sem við erum að skoða er flokkabreyta gefur ``summary()``
 aðferðin okkur nafnið á flokkunum og fjölda viðfangsefna í hverjum
@@ -465,39 +473,35 @@ gagnatöflu og fáum við þá upplýsingar um allar breyturnar í töflunni.
 
 ::
 
-   summary(puls)
-   ##        id           namskeid        haed           thyngd
-   ##  Min.   :  1.0   LAN203 :172   Min.   :150.0   Min.   : 40.00
-   ##  1st Qu.:118.5   STAE209:299   1st Qu.:166.0   1st Qu.: 60.00
-   ##  Median :236.0                 Median :172.0   Median : 70.00
-   ##  Mean   :236.0                 Mean   :173.3   Mean   : 71.46
-   ##  3rd Qu.:353.5                 3rd Qu.:181.0   3rd Qu.: 80.00
-   ##  Max.   :471.0                 Max.   :198.0   Max.   :121.00
-   ##                                NA's   :1       NA's   :10
-   ##      aldur        kyn       reykir    drekkur     likamsraekt
-   ##  Min.   :19.00   kvk:307   ja  : 46   ja  :389   Min.   : 0.000
-   ##  1st Qu.:20.00   kk :164   nei :412   nei : 76   1st Qu.: 2.000
-   ##  Median :22.00             NA's: 13   NA's:  6   Median : 4.000
-   ##  Mean   :24.24                                   Mean   : 4.492
-   ##  3rd Qu.:25.00                                   3rd Qu.: 6.000
-   ##  Max.   :70.00                                   Max.   :25.000
-   ##                                                  NA's   :5
-   ##    likamsraektf       kronukast     fyrriPuls        seinniPuls
-   ##  Lítil   : 85   landvaettir:263   Min.   : 42.00   Min.   : 42.00
-   ##  Miðlungs:191   thorskur   :208   1st Qu.: 64.00   1st Qu.: 68.00
-   ##  Mikil   :190                     Median : 71.50   Median : 77.00
-   ##  NA's    :  5                     Mean   : 71.98   Mean   : 82.21
-   ##                                   3rd Qu.: 80.00   3rd Qu.: 93.00
-   ##                                   Max.   :120.00   Max.   :162.00
-   ##                                   NA's   :17       NA's   :14
-   ##      inngrip      dagsetning               ar        namskeidar
-   ##  hljop   :183   Min.   :2013-01-07   Min.   :2013   Length:471
-   ##  sat_kyrr:286   1st Qu.:2013-01-07   1st Qu.:2013   Class :character
-   ##  NA's    :  2   Median :2014-01-06   Median :2014   Mode  :character
-   ##                 Mean   :2014-01-07   Mean   :2014
-   ##                 3rd Qu.:2015-01-05   3rd Qu.:2015
-   ##                 Max.   :2015-01-05   Max.   :2015
-   ##
+   summary(konnun)
+   ##       X            is            ferdatimi_skoli styrikerfi_simi   
+   ## Min.   :  1   Length:201         Min.   : 0.00   Length:201        
+   ## 1st Qu.: 51   Class :character   1st Qu.: 8.00   Class :character  
+   ## Median :101   Mode  :character   Median :16.00   Mode  :character  
+   ## Mean   :101                      Mean   :19.43                     
+   ## 3rd Qu.:151                      3rd Qu.:25.00                     
+   ## Max.   :201                      Max.   :75.00                     
+   ## ferdamati_skoli    systkini_fjoldi      dyr             feministi        
+   ## Length:201         Min.   : 0.000   Length:201         Length:201        
+   ## Class :character   1st Qu.: 2.000   Class :character   Class :character  
+   ## Mode  :character   Median : 2.000   Mode  :character   Mode  :character  
+   ##                    Mean   : 2.541                                        
+   ##                    3rd Qu.: 3.000                                        
+   ##                    Max.   :10.000                                        
+   ## staerdfraedi_gaman  smjor_kostar    napoleon_faeddur  stefnumot        
+   ## Min.   :2          Min.   : 144.0   Min.   :  46     Length:201        
+   ## 1st Qu.:6          1st Qu.: 450.0   1st Qu.:1740     Class :character  
+   ## Median :7          Median : 595.0   Median :1769     Mode  :character  
+   ## Mean   :7          Mean   : 593.8   Mean   :1733                       
+   ## 3rd Qu.:8          3rd Qu.: 745.0   3rd Qu.:1800                       
+   ## Max.   :9          Max.   :1490.0   Max.   :3142                       
+   ##  messi_staerd       kosid          
+   ## Min.   :  1.65   Length:201        
+   ## 1st Qu.:163.00   Class :character  
+   ## Median :169.00   Mode  :character  
+   ## Mean   :163.58                     
+   ## 3rd Qu.:172.00                     
+   ## Max.   :191.00  
 
 .. _rf.tapply:
 
@@ -521,15 +525,131 @@ sömu gagnatöflu og talnabreytan. Við mötum ``tapply()`` aðferðina með
 nafninu á talnabreytunni, nafninu á flokkabreytunni og nafninu á
 aðferðinni sem við viljum beita. Ef það vantar einhver gildi þurfum við
 að nota ``na.rm=TRUE`` líkt og áður. Viljum við t.d. reikna út meðaltal
-fyrri púlsmælinganna í líkamsræktarhópunum þremur sem við mynduðum hér að
-ofan gerum við það með:
+ferðatíma í skóla eftir ferðamáta gerum við það með:
 
 ::
 
-   tapply(puls$fyrriPuls,puls$likamsraektf,mean,na.rm=TRUE)
-   ##    Lítil Miðlungs    Mikil
-   ## 75.14815 73.21739 69.13587
+   tapply(konnunat$ferdatimi_skoli, konnun$ferdamati_skoli, mean, na.rm=T)
+   ##            Á annan hátt Á hjóli / rafhlaupahjóli     Gangandi / skokkandi 
+   ##                2.500000                11.666667                 7.588235 
+   ##            Með einkabíl               Með strætó 
+   ##               19.923077                33.733333
 
+Pípurtiháttur
+^^^^^^^^^^^^^
+
+Hingað til hafið þið kynnst allskyns skipunum í R og ættuð að vera
+orðin nokkuð kunnug R umhverfinu. Þegar skipanir eru orðanr langar
+og flóknar getur verið gott að nota pípurithátt. Táknið ``%>%`` 
+lesið "og þá". Pípur eru notaðar til að "pípa" lausn úr einni skipun
+yfir í aðra. Með því að nota pípurihátt verða skipanirnar einfaldari
+og auðskiljanlegar. Skoðum nokkur dæmi um pípurithátt:
+
+Ef við viljum t.d. finna meðaltalið á tölunum 1-101, taka svo kvaðratrótina
+af meðaltalinu og skila með tveimur aukastöfum. Án pípunar er það gert svona:
+
+::
+   
+   round(sqrt(mean(1:101)),2)
+   ## 7.14
+
+Með pípun:
+
+::
+
+   1:101 %>%
+      mean() %>%
+      sqrt() %>%
+      round(2)
+
+   ## 7.14
+
+Þessa skipun er auðveldara að lesa.
+
+Ef við viljum skoða meðalferðatíma í skóla hjá þeim sem ferðast með strætó
+eftir því hvaða ís þeim finnst bestur. Byrjum að gera þetta án pípunar.
+
+::
+
+   konnun1 <- konnun 
+   konnun1 <- filter(konnun1, ferdamati_skoli=="Með strætó")
+   konnun1 <- select(konnun1, ferdatimi_skoli, is)
+   konnun1 <- group_by(konnun1, is)
+   konnun1 <- summarize(konnun1, Meðalferðatími=mean(ferdatimi_skoli))
+   konnun1
+   ## is             Meðalferðatími
+   ## Jarðaberja     48.60000
+   ## SúkkulaðI      25.07692
+   ## Vanilla        36.91667
+
+Hér þurftum við að búa til nýtt gagnasett og yfirskrifa það. Mun einfaldara
+er að gera þetta með pípurithætti.
+
+::
+
+   konnun %>% 
+      filter(ferdamati_skoli=="Með strætó") %>% 
+      select(ferdatimi_skoli, is) %>% 
+      group_by(is) %>% 
+      summarise(mean(ferdatimi_skoli))
+
+   ## is             Meðalferðatími
+   ## Jarðaberja     48.60000
+   ## SúkkulaðI      25.07692
+   ## Vanilla        36.91667
+
+Það má líka nota pípurithátt við að teikna myndir.
+
+::
+
+   konnun %>% ggplot(aes(x=is, y=ferdatimi_skoli))+
+   geom_boxplot()
+
+.. figure:: myndir/mynd_pipu_4.svg 
+   :align: center 
+
+Skoðum fleiri dæmi:
+
+::
+
+   konnun %>% select(ferdatimi_skoli) %>% summary()
+   ## ferdamati_skoli
+   ## Min.     :0.00
+   ## 1at Qu.  :8.00 
+   ## Median   :16.00
+   ## Mean     :19.43
+   ## 3rd Qu   :25.00
+   ## Max.     :75.00
+
+Einnig má nota ``kable()`` skipunina sem útbýr fína töflu.
+
+::
+
+   table(konnun$stefnumot) %>% kable()
+   ## Var1           Freq
+   ## Á ísrúnt       93
+   ## Á kaffihús     74
+   ## Í bíó          12
+   ## Í fjallgöngu   22
+
+Reiknum allskyns lýsistærðir fyrir breytuna ``smjor_kostar`` 
+eftir breytunni ``is``.
+
+::
+
+   konnun %>%
+      filter(!is.na(smjor_kostar)) %>%
+      group_by(stefnumot) %>%
+      summarise("Miðgildi"=median(smjor_kostar), 
+      "Meðaltal" = mean(smjor_kostar),
+      "Staðalfrávik" = sd(smjor_kostar)) %>% kable()
+      
+   ## stefnumot      Miðgildi    Meðaltal    Staðalfrávik
+   ## Á kaffihús	   500.0	      577.5676	   209.5798
+   ## Á ísrúnt	      618.0	      621.6667	   229.0420
+   ## Í bíó	         589.5	      576.0000	   184.0198
+   ## Í fjallgöngu	513.5	      540.5909	   153.5586 
+   
 
 Leiksvæði fyrir R kóða
 ----------------------

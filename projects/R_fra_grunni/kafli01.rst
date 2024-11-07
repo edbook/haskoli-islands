@@ -7,7 +7,7 @@ Tölfræði sem fræðigrein snýst um að vinna upplýsingar út frá tölulegu
 mælingum. Gróflega skiptist tölfræðin í tvo anga: að lýsa sem best þeim
 gögnum sem fyrirliggjandi eru og að draga ályktanir um almenna hópa eða
 þýði út frá mælingum á úrtaki. Í flestum tilfellum er unnið með mikið
-magn mælinga og því fer almenn tölfræði- og gagnavinnsla að mestu fram
+magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
 með aðstoð tölva. Sérhæfð tölfræðiforrit komu snemma fram á sjónarsviðið
 og eftir því sem að möguleikar þeirra, sem og reiknigeta tölva, jukust,
 varð beiting tölfræði víðfeðmari. Mikill fjöldi forrita eru sérsniðin
@@ -28,8 +28,8 @@ tilraunaverkefnis tveggja prófessora í tölfræði rétt fyrir aldamót.
 Prófessoranir tveir, Ross Ihaka og Robert Gentleman við háskólann í
 Auckland Nýja Sjálandi, þróuðu hugbúnaðinn fyrst til kennslu. Síðar vatt
 þróunin uppá sig, ekki síst vegna þess að hún var opin og í mikilli
-samvinnu við notendur. Í dag er R bæði forritunarmál og -umhverfi fyrir
-alla almenna tölfræði- og gagnavinnslu. Stór þáttur í vinsældum R umfram
+samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
+alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 önnur tölfræðiforrit er sveigjanleiki og fjöldi viðbóta, svonefndra
 pakka, sem bæta og auka möguleika forritsins. R hefur því orðið á
 seinustu árum eitt helsta verkfæri tölfræðinga og nú orðið eru flestar
@@ -702,53 +702,100 @@ og endurræsa svo Rstudio. Þá ættu íslensku stafirnir að birtast rétt.
 
 Gögn
 ----
+Í þessari bók munum við notast við nokkur gagnasett. 
+Gagnasettið sem við köllum *konnun* má finna í skránni ``skra`` sem hlaða
+niður hér: 
 
-Í þessari bók munum við aðallega notast við eitt gagnasafn en það má
-finna í skránni ``pulsAll.csv`` sem hlaða má niður hér:
-
-http://edbook.hi.is/gogn/pulsAll.csv.
+``linkur``
 
 Skráin inniheldur eftirfarandi breytur:
 
-+-------------+-----------------------------------------------+
-| Breyta      | Útskýring/gildi                               |
-+=============+===============================================+
-| namskeid    | LAN203, STAE209                               |
-+-------------+-----------------------------------------------+
-| kronukast   | thorskur, landvaettir                         |
-+-------------+-----------------------------------------------+
-| haed        | hæð í sentimetrum                             |
-+-------------+-----------------------------------------------+
-| thyngd      | þyngd í kílógrömmum                           |
-+-------------+-----------------------------------------------+
-| aldur       | aldur í árum                                  |
-+-------------+-----------------------------------------------+
-| kyn         | 1 = kona, 2 = karl                            |
-+-------------+-----------------------------------------------+
-| reykir      | ja, nei                                       |
-+-------------+-----------------------------------------------+
-| drekkur     | ja, nei                                       |
-+-------------+-----------------------------------------------+
-| likamsraekt | líkamsrækt í klst/viku                        |
-+-------------+-----------------------------------------------+
-| fyrriPuls   | fyrri púlsmæling slög/mín                     |
-+-------------+-----------------------------------------------+
-| seinniPuls  | seinni púlsmæling slög/mín                    |
-+-------------+-----------------------------------------------+
-| inngrip     | hljop, sat_kyrr                               |
-+-------------+-----------------------------------------------+
-| dagsetning  | hvaða dag tilraunin fór fram dagur.manudur.ar |
-+-------------+-----------------------------------------------+
++-------------------+------------------------------------------+
+| Breyta            | Útskýring/gildi                          |
++===================+==========================================+
+| is                | Vannilla, Jarðaberja, Súkkulaði          |
++-------------------+------------------------------------------+
+| ferdatimi_skoli   | Tími í mínútum                           |
++-------------------+------------------------------------------+
+| styrikerfi_simi   | Android eða iOS                          |
++-------------------+------------------------------------------+
+| ferdamati_skoli   | Með einkabíl, Gangandi/skokkandi,        |
+|                   | Með strætó, Hjólandi/rafhlaupahjól,      |
+|                   | Á annan hátt                             |
++-------------------+------------------------------------------+
+| systkini_fjoldi   | Fjöldi systkina                          |
++-------------------+------------------------------------------+
+| dyr               | Ertu meira fyrir hunda eða ketti?        |
++-------------------+------------------------------------------+
+| feministi         | Ég er feministi: Rétt eða Rangt          |
++-------------------+------------------------------------------+
+| staerdfraedi_gaman| Einkunn: 1-10                            | 
++-------------------+------------------------------------------+
+| smjor_kostar      | Hvað smjör kostar í bónus?  kr.          |
++-------------------+------------------------------------------+
+| napoleon_faeddur  | Hvenær var Napóleon fæddur? ár           |
++-------------------+------------------------------------------+
+| stefnumot         | Á kaffihús, Á ísrúnt, Í fjallgöngu, í bíó|
++-------------------+------------------------------------------+
+| messi_staerd      | Hvað er Messi stór?                      |
++-------------------+------------------------------------------+
+| kosid             | Ég hef kosið: Rétt eða Rangt             |
++-------------------+------------------------------------------+
 
-Þessum gögnum var safnað saman í tveimur námskeiðum við Háskóla Íslands
-á árunum 2013 - 2015. Nemendur voru beðnir um að skrá niður ýmsar
-bakgrunnsupplýsingar (hæð, aldur, kyn, ...) og mæla svo púlsinn sinn.
-Því næst voru nemendurnir beðnir um að kasta krónu og þeir sem fengu upp
-þorsk voru beðnir um að hlaupa um stofuna í tvær mínútur en hinir beðnir
-um að sitja í sætunum sínum á meðan. Að þessu loknu mældu nemendur
-púlsinn sinn á ný.
 
-Vistið skrána í vinnumöppunni á vélinni ykkar en forðist að opna hana í
+Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
+Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.
+
+Í þessari bók verður einnig notað gagnasett sem heitir puls, puls 
+gaganasettið má hlaða niður hér:
+
+``linkur``
+
+Skráin inniheldur eftirfarandi breytur:
+
++-------------------+------------------------------------------+
+| Breyta            | Útskýring/gildi                          |
++===================+==========================================+
+| likamsraekt       | Fjöldi klst. í líkamsræktar á viku       |
++-------------------+------------------------------------------+
+| fyrriPuls         | Fyrri púls, slög á mínútu                |
++-------------------+------------------------------------------+
+| inngrip           | sat_kyrr eða hljop                       |
++-------------------+------------------------------------------+
+| seinniPuls        | Seinni púls, slög á mínútu               |
++-------------------+------------------------------------------+
+
+Í þessari bók verður einnig notað gagnasett sem heitir pokarotta, pokarotta 
+gaganasettið má hlaða niður hér:
+
+``linkur``
+
+Skráin inniheldur eftirfarandi breytur:
+
++-------------------+--------------------+
+| Breyta            | Útskýring/gildi    |
++===================+====================+
+| stadsetning       | 1 eða 2            |
++-------------------+--------------------+
+| tegund            | Vic eða other      |
++-------------------+--------------------+
+| kyn               | m eða f            |
++-------------------+--------------------+
+| aldur             | ár                 |
++-------------------+--------------------+
+| hofud_lengd       | í mm               |
++-------------------+--------------------+
+| hofud_breidd      | í mm               |
++-------------------+--------------------+
+| heildarlengd      | í mm               |
++-------------------+--------------------+
+| lengd_skott       | í mm               |
++-------------------+--------------------+
+
+Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
+Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.
+
+Vistið skránar í vinnumöppunni á vélinni ykkar en forðist að opna hana í
 töflureikni, sér í lagi Excel, undarlegustu hlutir geta gerst! Ef þið
 viljið skoða skrána opnið hana frekar í ritl, t.d. Notepad eða TextEdit.
 
@@ -757,6 +804,11 @@ Við munum þá gera ráð fyrir að einstaklingarnir í gagnaskránni séu
 slembiúrtak úr stóru þýði nemenda og því getum við notað gögnin til að
 draga hinar ýmsu ályktanir um þýði nemenda.
 
+Í þessari bók er einnig unnið mikið með gagnasettið ``kaupskra`` sem inniheldur 
+upplýsingar kaupverð, dagsetningu kaupsamnings og staðsetningu fasteignar.  
+
+Kaupskrá má nálgast á: https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/
+Þar er einnig hægt að nálgast upplýsingar um allar breytur í kaupskra.
 
 Leiksvæði fyrir R kóða
 ----------------------
