@@ -1,0 +1,54 @@
+\documentclass[oneside, 11pt, a4paper]{memoir}
+\usepackage{fyrirollx}
+% NB: the package forallxcam-fancy requires both XeLaTeX and Libertinus fonts. 
+% Libertinus fonts are open source, available freely online
+% To use just LaTeX and standard fonts (computer modern), usepackage forallxcam-basic instead. 
+% In that case, you will likely also want to reduce the font to 10pt
+\usepackage{fyrirollx-fancy}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[icelandic]{babel}
+
+
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{marginnote}
+
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+\newcommand{\note}[1]{{\marginnote{\color{red}{#1}}}}
+
+
+
+
+%\def\proves{\ensuremath{\vdash}}
+
+\begin{document}\midsloppy
+	
+\pagestyle{forallxpage}
+
+\frontmatter
+\include{fyrirollx-frontmatter}
+
+\newpage
+\tableofcontents*
+
+\mainmatter
+\include{fyrirollx-grunnatridi}
+\include{fyrirollx-setningarokfraedi}
+\include{fyrirollx-sanntoflur}
+\include{fyrirollx-setningarokfraedi-sannanir}
+
+\include{fyrirollx-umsagnarokfraedi}
+\include{fyrirollx-tulkanir}
+\include{fyrirollx-umsagnarokfraedi-sannanir}
+
+\include{fyrirollx-ordasafn}
+%\include{forallx-cam-alternatives}
+\include{fyrirollx-yfirlit}
+\include{fyrirollx-backmatter}
+
+
+\end{document}
