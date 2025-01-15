@@ -4,6 +4,9 @@
 |auth_title|
 
 .. toctree::
+   formali
+
+.. toctree::
    :maxdepth: 4
    :numbered:
    :glob:
