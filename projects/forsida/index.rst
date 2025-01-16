@@ -122,6 +122,7 @@ með einum eða öðrum hætti og fá kærar þakkir fyrir:
 - Matthías Andri Hrafnkelsson
 - Rakel María Brynjólfsdóttir
 - Sigurbjörg Rannveig Stefánsdóttir
+- Sigurður Örn Stefánsson
 - Símon Böðvarsson
 - Sólrún Halla Einarsdóttir
 - Tryggvi Kalman Jónsson
