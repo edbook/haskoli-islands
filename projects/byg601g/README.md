@@ -1,5 +1,5 @@
-# TMP001G - Sniðmát fyrir Edbook
+# BYG601G - Húsagerð
 
-Sniðmát fyrir nýtt námskeið/nótur, https://edbook.hi.is/tmp001g
+Sniðmát fyrir nýtt námskeið/nótur, https://edbook.hi.is/byg601g
 
-Ábyrgðarmaður: Benedikt Magnússon <bsm@hi.is>
+Ábyrgðarmaður: 
