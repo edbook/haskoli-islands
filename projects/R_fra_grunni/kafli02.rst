@@ -185,8 +185,13 @@ read.table()
 
 --------------
 
-Á síðu bókarinnar má finna gagnaskránar ``konnun.csv``, ``nyrripuls.tsv``,
-``kaupskra.csv`` og ``pokarotta.csv``. Byrjið á því að
+Hér má finna gagnaskránar 
+:download:`konnun.csv </_downloads/konnun.csv>`, 
+:download:`nyrripuls.tsv </_downloads/nyrripuls.tsv>`,
+:download:`kaupskra.csv </_downloads/kaupskra.csv>`,
+:download:`pokarotta.csv </_downloads/pokarotta.csv>` og 
+:download:`pulsAll.csv </_downloads/pulsAll.csv>`. 
+Byrjið á því að
 vista þær í vinnumöppunni ykkar, þ.e.a.s. sömu möppu og þið geymið
 skipanaskrána ykkar. Þá má lesa þau inn í R með skipuninni:
 
