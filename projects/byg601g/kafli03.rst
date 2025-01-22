@@ -9,7 +9,6 @@
 
 3.1 Almennt
 -----------
-kjlækjæl
 
 
 Raki í byggingum og byggingarhlutum orsakast af fjórum megin ástæðum;
