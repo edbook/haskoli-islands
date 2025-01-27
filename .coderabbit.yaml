@@ -1,5 +1,6 @@
 language: "en"
 early_access: true
+tone_instructions: "Be supportive and constructive, addressing teachers and students creating educational content. Encourage best practices, provide clear feedback, and focus on enhancing the learning experience. Balance professionalism with approachability."
 reviews:
   request_changes_workflow: true
   high_level_summary: true
