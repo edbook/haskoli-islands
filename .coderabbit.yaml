@@ -1,0 +1,59 @@
+language: "en"
+early_access: true
+tone_instructions: "Be supportive and constructive, addressing teachers and students creating educational content. Encourage best practices, provide clear feedback, and focus on enhancing the learning experience. Balance professionalism with approachability."
+reviews:
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_title_instructions: "A conventional commit compliant PR title with subject (fix,feat,ci, et.c.) that is descriptive for a generated changelog"
+  path_instructions:
+    - path: "projects/**/*"
+      instructions: |
+        "Confirm that the code adheres to the following:
+        - The content is written in reStructuredText (RST) format, which is the standard for Sphinx documentation.
+        - All image files are properly referenced and exist in the correct directory.
+        - Mathematical equations are correctly formatted using LaTeX syntax within the appropriate Sphinx directives.
+        - Any new dependencies are added to the conda environment file (environment.yml) if necessary.
+        - Custom Sphinx extensions (like sphinxcontrib-datacamp, sphinxcontrib-geogebra, etc.) are used appropriately and consistently.
+        - The content is free of spelling and grammatical errors.
+        - Code examples (if any) are properly formatted and use syntax highlighting where appropriate.
+        - Any references or citations use the correct sphinxcontrib-bibtex format.
+        - The content is accessible and follows web accessibility guidelines (e.g., proper heading structure, alt text for images).
+        - If new sections are added, they are properly included in the table of contents (index.rst or equivalent).
+        - Any interactive elements (GeoGebra applets, SageMath cells, etc.) are correctly implemented using the appropriate Sphinx extensions.
+        - The content is academically appropriate and aligns with the educational goals of the project.
+        - Any changes to the Sphinx configuration (conf.py) are necessary and do not break the build process.
+        - If new Sphinx extensions are added, they are properly documented and their usage is consistent with the project's standards.
+        - Any changes to the project structure respect the existing organization and naming conventions."
+    - path: "cli/**/*"
+      instructions: |
+        "For changes to the CLI tool, ensure:
+        - The code follows Python best practices and PEP 8 style guidelines.
+        - Any new CLI commands are properly documented with clear usage instructions.
+        - Error handling is implemented for user inputs and file operations.
+        - The changes maintain compatibility with the existing Sphinx setup and build process.
+        - Any new dependencies are added to the setup.py or requirements.txt file as appropriate.
+        - Unit tests are included for new functionality where applicable."
+    - path: "**/*.py"
+      instructions: |
+        "For Python files:
+        - Ensure the code is compatible with Python 3.10 as specified in the conda environment.
+        - Check for proper use of type hints and docstrings.
+        - Verify that any new third-party library usage is reflected in the conda environment file.
+        - Look for efficient and idiomatic Python code."
+    - path: "**/*.rst"
+      instructions: |
+        "For reStructuredText files:
+        - Check for proper use of RST syntax and Sphinx directives.
+        - Ensure consistency in formatting and style across documents.
+        - Verify that links to other documents or external resources are valid.
+        - Check for proper use of admonitions (note, warning, etc.) where appropriate."
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - "main"
+chat:
+  auto_reply: true
