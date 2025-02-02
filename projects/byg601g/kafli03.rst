@@ -10,6 +10,7 @@
 3.1 Almennt
 -----------
 
+
 Raki í byggingum og byggingarhlutum orsakast af fjórum megin ástæðum;
 
 -  Byggingarraki
