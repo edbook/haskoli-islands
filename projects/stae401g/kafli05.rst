@@ -671,7 +671,7 @@ Setjum :math:`M = M_1 \times M_2`, og
 
 - Allir hnútpunktar eru :math:`(x_j, y_j)` þar sem :math:`j=1, \dots, M`,
 
-- Hnútpunktar :math:`(x_j, y_j)` fyrir  :math:`j=1,+dots, N\leq M` eru í  :math:`D\cup \partial D_2`,
+- Hnútpunktar :math:`(x_j, y_j)` fyrir  :math:`j=1,\dots, N\leq M` eru í  :math:`D\cup \partial D_2`,
 
 - Hnútpunktar :math:`(x_j, y_j)` fyrir :math:`j=N+1, \dots, M` eru í  :math:`\partial D_1`.
 
@@ -1093,7 +1093,7 @@ Hér setjum við :math:`1\le j \le N+1` og :math:`1 \le k \le M+1`, og við töl
 
 2. **Einföld tölusetning netpunkta**
 
-Hér  tölusetjum við netpunktana með :math:`(x_i, y_i)` þar sem :math:`i= j+(k-1)(N+1)`. Til dæmis setjum við  :math:`k=1` og skoðum punkta með :math:`i= j+(k-1)(N+1)=j`, þar sem :math:`j=1, \dots, N+1`. Síðan veljum við :math:`k=2` og skoðum punkta með :math:`i= j+(k-1)(N+1)=j+(N+1)`, þar sem :math:`j=1, \dots, N+1`, og svo framvegis.
+Hér  tölusetjum við netpunktana með :math:`(\hat{x}_i, \hat{y}_i) = (x_j,y_k)` þar sem :math:`i= j+(k-1)(N+1)`. Til dæmis setjum við  :math:`k=1` og skoðum punkta :math:`(\hat{x}_i, \hat{y}_i) = (x_j,y_1)` með :math:`i= j+(k-1)(N+1)=j`, þar sem :math:`j=1, \dots, N+1`. Síðan veljum við :math:`k=2` og skoðum punkta  :math:`(\hat{x}_i, \hat{y}_i) = (x_j,y_2)` með :math:`i= j+(k-1)(N+1)=j+(N+1)`, þar sem :math:`j=1, \dots, N+1`, og svo framvegis.
 
 
 **Uppbygging forrits**
