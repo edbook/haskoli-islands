@@ -785,8 +785,8 @@ Yfirborðsflatarmál
 Regla 
 ~~~~~~
 
-Látum :math:`D` vera svæði í plani og :math:`f(x,y)` diffranlegt fall
-skilgreint á :math:`D`. Flatarmál grafsins :math:`z=f(x,y)` þar sem
+Látum :math:`D` vera svæði í plani og :math:`f(x,y)` fall
+skilgreint á :math:`D` með samfelldar hlutafleiður. Flatarmál grafsins :math:`z=f(x,y)` þar sem
 :math:`(x,y)\in D` er gefið með formúlunni
 
 .. math:: \displaystyle S=\int\!\!\!\int_D \sqrt{1+f_1(x,y)^2+f_2(x,y)^2}\,dA.
