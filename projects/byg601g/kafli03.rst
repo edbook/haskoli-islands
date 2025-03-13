@@ -7,8 +7,9 @@
 3. Raki, rakaflutningur og rakaþétting
 ======================================
 
-3.1 Almennt
+3.1 Test 
 -----------
+
 
 Raki í byggingum og byggingarhlutum orsakast af fjórum megin ástæðum;
 
@@ -33,7 +34,7 @@ Almenni gasfastinn; R=8314,3 J/(kmol∙K)
 
 | 
 
-Yfirborðsspenna vatns; 78∙(1-0,0032∙)∙10\ :sup:`-3`\  N/m
+Yfirborðsspenna vatns; `\sigma` `\cong` 78∙(1-0,0032∙)∙10\ :sup:`-3`\  N/m
 
 Gufuhleypni í lofti (DIN 52615); \ |image1| kg/(mPas)
 
@@ -174,6 +175,7 @@ n fjöldi loftskipta, 1/klst
 V loftræst rými, m\ :sup:`3`
 
 t tími, h
+
 
 | 
 
