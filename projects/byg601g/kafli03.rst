@@ -4,10 +4,10 @@
 
    Björn Marteinsson
 
-3. Raki, rakaflutningur og rakaþétting
+Raki, rakaflutningur og rakaþétting
 ======================================
 
-3.1 Test 
+Almennt
 -----------
 
 
@@ -28,22 +28,19 @@ að hafa þekkingu til að geta metið rakaálag á byggingarhluta og
 byggingar, og geta kannað hvort rakaástand verði efnum og mannvirki
 óhagstætt.
 
-Almennar líkingar og gildi;
+**Almennar líkingar og gildi;**
 
-Almenni gasfastinn; R=8314,3 J/(kmol∙K)
+Almenni gasfastinn;        R=8314,3 J/(kmol∙K)
 
-| 
+Yfirborðsspenna vatns;     :math:`\sigma \cong 78 \cdot (1-0,0032\cdot\theta) \cdot 10^{-3}  N/m`
 
-Yfirborðsspenna vatns; `\sigma` `\cong` 78∙(1-0,0032∙)∙10\ :sup:`-3`\  N/m
+Gufuhleypni í lofti (DIN 52615); :math:`\delta_0(T)=2.0 \cdot 10^{-7} \frac{T^{0.81}}{P_a} kg/(m \cdot Pa \cdot s)`
 
-Gufuhleypni í lofti (DIN 52615); \ |image1| kg/(mPas)
-
-| 
-
-3.2 Raki í byggingarefnum og byggingum
+Raki í byggingarefnum og byggingum
 --------------------------------------
 
 Byggingarraki
+?????????????
 
 Af náttúrulegum ástæðum, eða tengt framleiðsluferli sumra efna, þá
 innihalda efnin rakamagn sem getur verið hærra heldur en sem nemur
@@ -61,89 +58,150 @@ byggingartíma, og síðan gert ráð fyrir að byggingarefnin nái að losi sig
 við byggingarraka á notkunartíma þar til einhverju jafnvægi er náð, sem
 stjórnast af umhverfisáraun hverju sinni.
 
-| 
-
 Loftraki
+????????
 
 Mettunarraki lofts er ýmist gefinn upp sem gufuinnihald, kg/kg (eða
 kg/m\ :sup:`3`\ ), eða rakaþrýstingur, Pa. Upplýsingar um mettunarraka
 má finna t.d. í Mollier-línuriti eða í töflum (sjá aftast í kaflanum).
 Mettunarrakaþrýsting lofts má einnig nálga samkvæmt jöfnu 3.1 sem er
-gefin upp í DIN 4108 TEIL 5 og sögð gilda á hitasviðinu –20 til 30 C.
+gefin upp í DIN 4108 TEIL 5 og sögð gilda á hitasviðinu –20 til 30 °C.
 
-| 
+.. admonition:: Jafna 3.1
+   :class: jafna
 
-\ |image2| , (Pa) (3.1)
+   .. math::
+      p_{v,sat}(\theta) = a \cdot (b+ \frac{\theta}{100})^n , (Pa)    
 
-| 
+þar sem 
 
-þar sem  a b n
+.. list-table:: 
+  :widths: 5 5 5 5
+  :header-rows: 0 
 
-0    30; 288,68 1,098 8,02
+  * - :math:`\theta`
+    - a 
+    - b 
+    - n 
+  * - :math:`0 \leq \theta \leq 30`
+    - 288,68
+    - 1,098
+    - 8,02
+  * - :math:`-20 \leq \theta \leq 0`
+    - 4,689
+    - 1,486
+    - 12,3
 
--20   0; 4,689 1,486 12,3
-
-| 
-
-Hlutfallsraki innilofts (% HR) er háður rakamagni lofts (t.d.
-g/m\ :sup:`3`\ ), eða hlutfallsþrýstingi vatnsgufu, og lofthita.
+Hlutfallsraki innilofts (% HR) er háður rakamagni lofts (t.d. :math:`g/m^3` ), eða hlutfallsþrýstingi vatnsgufu, og lofthita.
 Loftrakinn reiknast ætíð sem hlutfallstala af mettunarraka loftsins (sem
 er háður lofthita). Milli mettunarþrýstings (Pa) og mettunarraka
-(kg/m\ :sup:`3`\ ) er beint samband eins og augljóst er af almenna
+(:math:`kg/m^3` ) er beint samband eins og augljóst er af almenna
 gaslögmálinu, jafna 3.2
 
-|image3| (3.2)
+.. admonition:: Jafna 3.2
+ :class: jafna
 
-þar sem w\ :sub:`sat`\  mettunarraki, kg/m\ :sup:`3`
+   .. math::
+      w_{sat} = p_{sat} \cdot \frac{M_{H_{2}O}}{R \cdot T} 
 
-p\ :sub:`sat`\  mettunarþrýstingur, Pa
+þar sem 
 
-M\ :sub:`H2O`\  mólmassi vatns, kg/kmol
+.. list-table::
+   :widths: 5 5 5
+   :header-rows: 0
 
-R almenni gasfastinn, J/(kmol·K)
-
-T hitastig, K
-
-| 
+   * - :math:`w_{sat}`
+     - Mettunarraki
+     - :math:`{kg/m^3}`
+   * - :math:`p_{sat}`
+     - Mettunarþrýstingur
+     - Pa
+   * - :math:`M_{H_{2}O}`
+     - mólmassi vatns
+     - :math:`\frac{kg}{kmol}`
+   * - :math:`R`
+     - almenni gasfastinn
+     - :math:`\frac{J}{kmol \cdot K}`
+   * - :math:`T`
+     - hitastig
+     - K
 
 Hlutfallsraki lofts er skilgreindur eins og sýnt er í jöfnu 3.3 (nákvæm
 hliðstæða gildir ef í stað rakaþrýstings er notað samsvarandi rakamagn).
 
-|image4| (3.3)
+ .. admonition:: Jafna 3.3
+   :class: jafna
+   
+      .. math::
+         \phi = \frac{p_v}{p_{v,sat}(T)} 
 
-þar sem  hlutfallsraki (hlutfallstala eða %)
+þar sem 
 
-p\ :sub:`v`\  rakaþrýstingur lofts, Pa
+.. list-table::
+   :widths: 5 5 5
+   :header-rows: 0
 
-p\ :sub:`v,sat`\  mettunarþrýstingur vatnsgufu í lofti, Pa
+   * - :math:`\phi`
+     - Hlutfallsraki 
+     - Hlutfallstala eða %
+   * - :math:`p_v`
+     - Rakaþrýstingur lofts
+     - Pa
+   * - :math:`P_{w,sat}`
+     - Mettunarþrýstingur vatnsgufu í lofti
+     - Pa
+   * - T 
+     - Aflfræðilegt hitastig
+     - K
 
-T aflfræðilegt hitastig, K
+.. list-table:: *Tafla 3.1 Rakaframleiðsla í íbúðarhúsnæði*
+   :header-rows: 1
+   :widths: 40 15 15
 
-| 
-
-============================================= ============ =======
-Tafla 3.1 Rakaframleiðsla í íbúðarhúsnæði                  
-Lýsing                                        Rakamagn     Heimild
-                                                           
-                                              kg /sólarhr. 
-Íbúð (danskar tölur) :                        |            /1/
-Matargerð, þvottar og frá íbúum               15           | 
-|                                             |            | 
-Fjögurra manna fjölskylda (amerískar tölur) : |            /2/
-Eldun (3 máltíðir á dag)                      0,9          | 
-Uppþvottur (3 x dag ??)                       0,45         | 
-Bað - sturta                                  0,2          | 
-- kar                                         0,05         | 
-Þvottur (1 x viku)                            1,8          | 
-Þurrka þvott inni eða barkalaus þurrkari      11,7         | 
-Þvo gólf (pr. 10 m2)                          1,3          | 
-Íbúar                                         5,4          | 
-============================================= ============ =======
+   * - **Lýsing**
+     - **Rakamagn**  
+     - **Heimild**
+   * - 
+     - *kg / sólarhr.*
+     - 
+   * - **Íbúð (danskar tölur):**
+     - 
+     - /1/
+   * - Matargerð, þvottar og frá íbúum
+     - 15
+     - 
+   * - **Fjögurra manna fjölskylda (amerískar tölur):**
+     - 
+     - /2/
+   * - Eldun (3 máltíðir á dag)
+     - 0,9
+     - 
+   * - Uppþvottur (3 x dag ??)
+     - 0,45
+     - 
+   * - Sturta
+     - 0,2
+     - 
+   * - Bað
+     - 0,05
+     - 
+   * - Þvottur (1 x viku)
+     - 1,8
+     - 
+   * - Þurrka þvott inni eða barkalaus þurrkari
+     - 11,7
+     - 
+   * - Þvo gólf (pr. 10 m²)
+     - 1,3
+     - 
+   * - Íbúar
+     - 5,4
+     - 
 
 /1/ SBI Anvisning 76
 
-/2/ Laaly, H.O. (1992) The Science and Technology of Traditional and
-Modern Roofing Systems, Laaly Scientific Publishing, Los Angeles, CA
+/2/ Laaly, H.O. (1992) The Science and Technology of Traditional and Modern Roofing Systems,
+Laaly Scientific Publishing, Los Angeles, CA
 
 Raki í innilofti er alltaf háður útiloftraka og rakagjöf til innilofts,
 en getur einnig tímabundið verið háður öðrum orsökum s.s. byggingarraka,
@@ -154,37 +212,49 @@ inniheldur það rakamagn sem loftið hafði sem útiloft, auk þess raka sem
 loftið tekur í sig þann tíma sem það er inni. Rakaviðbótin (fyrir hvern
 m\ :sup:`3`\  innilofts) er því háð tveim atriðum þ.e. loftskiptum í
 húsinu (loftræsingu) og rakagjöf innanhúss, sjá töflu 3.1.
-
-| 
-
+ 
 Rakamagn í innilofti má almennt reikna eins og jafna 3.4 sýnir, þar sem
 miðað er við að rakagjöf hefjist á tíma t=0;
 
-| 
+.. admonition:: Jafna 3.4
+   :class: jafna
 
-|image5| (3.4)
+   .. math::
+      w_{i} = w_e + \frac{G}{n \cdot V} \cdot (1 - e^{-nt}) 
 
-þar sem w\ :sub:`i`\  rakamagn í innilofti, kg/m\ :sup:`3`
+þar sem 
 
-w\ :sub:`e`\  rakamagn í útilofti, kg/m\ :sup:`3`
-
-G rakabæting, kg/klst
-
-n fjöldi loftskipta, 1/klst
-
-V loftræst rými, m\ :sup:`3`
-
-t tími, h
-
-
-| 
-
+.. list-table::
+   :width: 5 5 5 
+   :header-rows: 0
+   
+   * - :math:`w_i`
+     - Rakamagn í innilofti
+     - :math:`kg/m^3`
+   * - :math:`w_e`  
+     - Rakamagn í útilofti 
+     - :math:`kg/m^3`
+   * - G 
+     - Rakabæting
+     - kg/klst
+   * - n 
+     - Fjöldi loftskipta
+     - 1/klst
+   * - V
+     - Loftræst rými
+     - m\ :sup:`3`
+   * - t
+     - tími
+     - h
+ 
 Af jöfnu 3.4 má sjá að með vaxandi tíma þá nálgast lausnin að verða
-stöðug; jafna 3.5
+stöðug; Jafna 3.5
 
-| 
+.. admonition:: Jafna 3.5
+   :class: jafna
 
-|image6| (3.5)
+   .. math::
+      w_i = w_e + \frac{G}{n \cdot V}
 
 Til þess að taka samtímis tillit til áhrifa rakagjafar og loftskipta á
 inniloftraka þá er rakagjöfin iðulega gefin upp sem rakamagn á hvern
@@ -198,13 +268,9 @@ fyrir 1 loftskipti á klukkustund um 2 g/m\ :sup:`3`\  fyrir
 er hugsanlega minni hér á Reykjavíkur-svæðinu vegna ódýrrar hitunarorku
 og því hugsanlega mikillar loftræstingar.
 
-| 
-
 Í staðlinum ÍST EN ISO 13788:2012 er sett fram tillaga að reiknislegri
 rakabætingu í húsum, reiknað á hvern rúmmetra í loftskiptum og háð
 útihita, sjá línurit 3.1.
-
-| 
 
 Útfrá upplýsingum um lofthita og raka í útilofti, gefinn innihita og
 rakagjöf þá má reikna hvernig loftraki innilofts breytist eftir
@@ -214,38 +280,23 @@ búast við að tímabundið geti loftraki orðið mjög hár í baðherbergjum 
 loftraki í svefnherbergjum getur einnig orðið allhár að næturlagi ef
 lítið er loftræst.
 
-| 
-
-.. image:: myndir/kafli03_html_9dfa1c42a695b480.png
+.. image:: myndir/kafli03/linurit1.png
    :name: Picture 8
    :width: 362px
    :height: 226px
 
-| 
+*Línurit 3.1: Reiknisleg rakabæting í inniloft*; (:math:`0-8 g/m^3` *á
+rúmmetra í loftskiptum)* 
+*(Heimild: ÍST EN ISO 13788:2012)*
 
-Línurit 3.1: Reiknisleg rakabæting í inniloft; (0-8 g/m\ :sup:`3`\ á
-rúmmetra í loftskiptum) (Heimild: ÍST EN ISO 13788:2012)
-
-| 
-
-| 
-
-.. image:: myndir/kafli03_html_3cb60cec810cc415.png
+.. image:: myndir/kafli03/linurit2.png
    :name: Picture 9
    :width: 363px
    :height: 260px
 
-| 
-
-| 
-
-Línurit 3.2: Hlutfallsraki lofts innanhúss í Reykjavík fyrir mismunandi
+*Línurit 3.2: Hlutfallsraki lofts innanhúss í Reykjavík fyrir mismunandi
 rakabætingu (0-8 g/m\ :sup:`3`\ ) og innihita 20°C. Útiaðstæður meðaltal
-áranna 1996-2004.
-
-| 
-
-| 
+áranna 1996-2004.*
 
 Almennt má þó miða við (og stutt af mælingum í húsum) að algengur
 loftraki í íbúðarhúsum hérlendis sé á bilinu 25-40 %HR að vetrarlagi,
@@ -255,15 +306,8 @@ ef rakinn fer yfir 40-45 % þegar kalt er úti þá verður rakaþétting innan
 að skaðlausu, eða upp í 50-60 %HR; þ.e. samsvarar rakabætingu í inniloft
 svo nemur allt að tæpum 4 g/m\ :sup:`3`\ .
 
-| 
-
-| 
-
-| 
-
-| 
-
-Úrkoma og slagregn:
+Úrkoma og slagregn
+??????????????????
 
 Úrkoma og slagregn eru oft beinn áhrifavaldur á efnisraka, jafnvel í
 veggjum, þar sem vatnsfilma á vatnsdrægu yfirborði mun ætið hafa áhrif á
@@ -271,50 +315,45 @@ rakaástand efnisins.
 
 Ótruflað slagregn á vegg er reiknað samkvæmt jöfnu 3.6.
 
-|Shape1|
+.. admonition:: Jafna 3.6
+   :class: jafna
 
-Mynd 3.1 Slagregn
+   .. math::
+      S = N \cdot u_v / u_r
 
-u\ :sub:`r`
+.. figure:: ./myndir/kafli03/Slagregn.png
+  :align: center
+  :width: 50%
 
-u\ :sub:`v`
+.. centered:: Mynd 3.1 Slagregn
 
-| 
+þar sem 
 
-S=N*u\ :sub:`v`\ /u\ :sub:`r`\  (3.6)
+.. list-table::
+   :width: 5 5 5
+   :header-rows: 0
 
-| 
-
-þar sem S slagregnsmagn á lóðréttan flöt, kg/m\ :sup:`2`
-
-N mæld úrkoma á láréttan flöt, kg/m\ :sup:`2`
-
-u\ :sub:`v`\  vindhraði, m/s
-
-u\ :sub:`r`\  fallhraði regndropa, m/s
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
+   * - S 
+     - Slagregnsmagn á lóðréttan flöt
+     - :math:`kg/m^2`
+   * - N 
+     - Mæld úrkoma á láréttan flöt 
+     - :math:`kg/m^2`
+   * - :math:`u_v` 
+     - Vindhraði
+     - m/s
+   * - :math:`u_r`  
+     - Fallhraði regndropa
+     - m/s
 
 Vitaskuld þarf að taka tillit til stefnu normals á veggyfirborð og
 vindáttar við ákvörðun slagregnmagns, þó svo þessi atriði komi ekki fram
 í jöfnu 3.6.
 
-| 
-
 Fallhraði regndropa er háður stærð þeirra og er fyrir stærstu dropana
 gjarnan á bilinu 7-10 m/s. Í útreikningi á slagregnsmagni er oft miðað
-við u\ :sub:`r`\ =7 m/s.
-
-| 
-
+við :math:`u_r = 7 m/s`.
+ 
 Þegar vindur nálgast byggingu þá sveigir hann framhjá fyrirstöðunni (sjá
 umfjöllun um lofhreyfingar við byggingar) og regndroparnir fylgja
 loftinu í þessari hreyfingu að einhverju leyti, en hluti þeirra
@@ -331,14 +370,14 @@ staðaluppkastinu er tekið tillit til stefnuhorns, umhverfis o.f.l.).
 efst á veggjum og síðan niður með úthornum, þessa mun gæta í
 rakainnihaldi veggjarins og viðhaldsþörf.
 
-.. image:: myndir/kafli03_html_bb28a8561cdd2560.png
-   :name: Picture 10
-   :width: 578px
-   :height: 829px
+.. figure:: ./myndir/kafli03/Slagregn_dreifing.png
+  :align: center
+  :width: 90%
 
-Mynd 3.2 Slagregnsdreifing á veggi (heimild: prEN 13013-3:1997)
+.. centered:: Mynd 3.2 Slagregnsdreifing á veggi (heimild: prEN 13013-3:1997)
 
 Jarðraki
+????????
 
 Raki frá jarðvegi getur verið tilkominn vegna yfirborðsvatns (úrkomu)
 sem leitar að byggingu og hinsvegar raka frá grunnvatni. Háð tegund
@@ -348,28 +387,20 @@ vatnsþrýstingi á yfirborði, (ii) rennur niður yfirborð, eða í formi raks
 jarðvegs sem liggur að yfirborði. Byggingarhlutar sem standa dýpra
 heldur en grunnvatnsyfirborð munu ávallt verða fyrir vatnsþrýstingi.
 
-| 
-
 Jarðraki gerir að verkum að hlutfallsraki lofts í jarðvegi getur
 auðveldlega verið 100 %.
-
-| 
 
 Til að draga úr jarðraka þarf að leiða frárennsli frá þaki, og almennt
 vatnsfráhrindandi yfirborðum, í fráveitu, halla jarðvegsyfirborði frá
 húsi og loks draga eftir mætti úr vatnsdrægni yfirborða í jörðu og ásamt
 því að tryggja dren frá byggingarhlutum í jörðu.
 
-| 
-
-3.3 Rakaflutningur
+Rakaflutningur
 ------------------
 
 Drifkraftur sem knýr rakaflutning getur verið margskonar s.s.
 rakainnihald, rakaþrýstingur, hiti, póruþrýstingur, vindþrýstingur,
 þyngdarkraftur ofl.
-
-| 
 
 Meginleiðir rakaflutningur eru eftirfarandi;
 
@@ -381,11 +412,7 @@ Meginleiðir rakaflutningur eru eftirfarandi;
 
 -  Útsveim og varmasveim
 
-| 
-
 og verður hér fjallað lauslega um hverja þessara leiða.
-
-| 
 
 Rakaflæði
 
@@ -1369,3 +1396,5 @@ Norge
    :name: Object22
 .. |image23| image:: myndir/kafli03_html_71cbbfb4e5447db9.png
    :name: Object23
+
+
