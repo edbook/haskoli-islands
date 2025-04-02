@@ -415,25 +415,40 @@ Meginleiðir rakaflutningur eru eftirfarandi;
 og verður hér fjallað lauslega um hverja þessara leiða.
 
 Rakaflæði
+?????????
 
 Rakaflæði á sér stað ef stigull í rakaþrýstingi eða rakainnihaldi er til
 staðar, jafna 3.7.
 
-| 
+.. admonition:: Jafna 3.7
+   :class: jafna
 
-|image7| (3.7)
+   .. math::
+      g = - D \cdot \nabla \Psi
 
-þar sem g þéttleiki rakaflutnings kg/m\ :sup:`2`\ s
+Þar sem
 
-D rakaflutningsstuðull
+.. list-table::
+   :widths: 5 20 10
+   :header-rows: 0
 
-grad stigull drifkrafts rakaflutnings
+   * - g
+     - Þéttleiki rakaflutnings
+     - :math:`kg / (m^2 \cdot s)`
+   * - D
+     - Rakaflutningsstuðull 
+     - 
+   * - :math:`\nabla \Psi`
+     - Stigull drifkrafts rakaflutnings
+     -
 
 Rakaflutningur í einni vídd er þá;
 
-|image8| (3.8)
+.. admonition:: Jafna 3.8
+   :class: jafna
 
-| 
+   .. math::
+      g = - D \frac{\partial \Psi}{\partial x}
 
 Augljós líkindi eru með jöfnu 3.7 og jöfnu Fourier’s fyrir varmaflutning
 (jafna 2. 1), rakaflutningur vegna flæðis er enda reiknaður á hliðstæðan
@@ -443,16 +458,13 @@ Jafna 3.7 gildir sérstaklega um rakaflutning í lofti, en getur einnig
 gilt fyrir rakaflutning í lofthluta efnis-loftblöndu (pórótt efni) en þá
 þarf að leiðrétta fyrir breyttu flutningsþversniði (og breyttri lengd
 flutningsleiðar). Slík leiðrétting er gerð með því að innfæra sérstakan
-efnisstuðul, , sjá síðar (jafna 3.16).
-
-| 
+efnisstuðul, :math:`\mu`, sjá síðar (jafna 3.16).
 
 Drifkraftur fyrir rakaflæði er í eldri bókum gjarnan rakainnihald en í
 nýrri ritum, og uppkasti að staðli, er notaður rakaþrýstingur.
 
-| 
-
 Rakastreymi í lofti
+???????????????????
 
 Þegar þrýstimunar gætir í lofti þá á sér stað lofstreymi, streymið getur
 átt upptök sín í þvinguðu streymi eða óþvinguðu sbr. umfjöllun um
@@ -463,55 +475,55 @@ hitnar upp eða kólnar á leið sinni í gegn þá geta áhrifin verið til
 útþornunar byggingarhlutans eða rakasöfnunar í byggingarhluta vegna
 rakaþéttingar. Nánar verður fjallað um þennan lið í kafla 4.
 
-|Shape2|
-
-
-
-
-
-.. image:: myndir/kafli03_html_f626be96731ea090.png
-   :name: Picture 13
-   :width: 237px
-   :height: 189px
-
-| 
-
-Mynd 3.3 Hárpípa
-
-| 
-
-| 
-
 Hárpípuflutningur
+?????????????????
 
 Kraftajafnvægi fyrir hárpípu (mynd 3.3), sem er í snertingu við
 vatnsyfirborð, gefur jöfnu 3.9;
 
-| 
+.. math::
+   \pi \cdot r^2 \cdot \rho \cdot H = 2 \cdot \pi \cdot r \cdot \sigma \cdot cos(\phi)
 
-·r\ :sup:`2`\ ··g·H=2··r··cos
+.. admonition:: Jafna 3.9
+   :class: jafna
 
-|image9| (3.9)
+   .. math::
+      H = \frac{2 \cdot \sigma}{r \cdot \rho \cdot g} cos(\phi)
 
-| 
 
-þar sem r radíus hárpípu, m
+.. image:: myndir/kafli03/Hárpípa.png
+   :name: Picture 13
+   :width: 237px
+   :height: 189px
+   :align: center
 
--  eðlisþéttleiki vökvans, kg/m\ :sup:`3`
+.. centered:: Mynd 3.3 Hárpípa
+ 
+þar sem
 
-H vökvahæð í pípunni, m
+.. list-table::
+   :widths: 5 20 10
+   :header-rows: 0
 
--  yfirborðspenna vökva, N/m
-
- snertihorn vökva við pípu
-
-| 
-
+   * - r
+     - Radíus hárpípu
+     - m
+   * - :math:`\rho`
+     - Eðlisþéttleiki vökvans
+     - :math:`kg/m^3`
+   * - H 
+     - Vökvahæð í pípunni
+     - m 
+   * - :math:`\sigma`
+     - Yfirborðsspenna vökva
+     - N/m
+   * - :math:`\phi`
+     - Snertihorn vökva við pípu
+     -  
+   
 Fyrir vatn og venjuleg byggingarefni er snertihornið almennt sett jafnt
 0, en með vatnsverjandi efnum má auka snertihornið verulega og þannig
 lágmarka hárpípukrafta.
-
-| 
 
 Í reynd eru hárpípur í efni af mismunandi vídd en ekki með eitt ákveðið
 þversnið hver um sig, því er einungis í undantekningartilvikum hægt að
@@ -521,157 +533,192 @@ geta lagt mat á hraða ísogsins og magn vökva sem efnið tekur upp. Það er
 sem skilgreina má fyrir slík tilvik. Jafna 3.10 gefur vatnsísog frá fríu
 vatnsyfirborði;
 
-| 
+.. admonition:: Jafna 3.10
+   :class: jafna
 
-|image10| (3.10)
+   .. math::
+      G = A \cdot \sqrt{t}
+ 
 
-þar sem G vatnsmagn, kg/m\ :sup:`2`
+þar sem 
 
-A ísogsstuðull vatnsmagns, kg/(m\ :sup:`2`\ ·s)
+.. list-table::
+   :widths: 5 20 10
+   :header-rows: 0
 
-t tími, s
-
-| 
+   * - G
+     - Vatnsmagn 
+     - :math:`kg/m^2`
+   * - A 
+     - Ísogsstuðull
+     - :math:`kg/(m^2 \cdot \sqrt{t})`
+   * - t 
+     - Tími 
+     - s
 
 Jafna 3.11 gefur vatnsdýpi í efninu;
 
-| 
+.. admonition:: Jafna 3.11
+   :class: jafna
 
-|image11| (3.11)
+   .. math::
+      x = B \cdot \sqrt{t}
 
-þar sem x vatnshæð (eða dýpi), m
+þar sem 
 
-B ísogsstuðull vatnsdýpis, m/s
+.. list-table::
+   :widths: 5 20 10
+   :header-rows: 0
 
-t tími, s
+   * - x
+     - Vatnshæð (eða dýpi) 
+     - m
+   * - B 
+     - Ísogsstuðull vatnsdýpis
+     - :math:`m/\sqrt{s}`
+   * - t 
+     - Tími 
+     - s
 
 Vatnsdýpi vex stöðugt með tíma fyrir láréttar pórur, en í lóðréttum
 pórum gildir að vatnshæðin verður mest eins og jafna 3.9 sýnir.
 
-| 
-
 Dæmi um gildi á stuðlunum A og B eru sýnd í töflu 3.2 fyrir nokkur efni.
 
-| 
+.. list-table:: *Tafla 3.2 Ísogsstuðlar efna* (heimild: Newander og Elmarsson, 1994)
+   :header-rows: 2
+   :widths: 30 10 20 20
 
-+-----------------+-----------+-----------------+-----------------+
-| Tafla 3.2       |           |                 |                 |
-| Ísogsstuðlar    |           |                 |                 |
-| efna (heimild;  |           |                 |                 |
-| Nevander og     |           |                 |                 |
-| Elmarsson,      |           |                 |                 |
-| 1994)           |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Efni            | Þéttleiki | Stuðull fyrir   | Stuðull fyrir   |
-|                 |           | ísogsmagn, A    | ísogsdýpi, B    |
-|                 | |         |                 |                 |
-|                 |           | kg/(m\          | x               |
-|                 | kg/m3     |  :sup:`2`\ ·s) | 10\ :sup:`-3`\  |
-|                 |           |                 | m/s            |
-+-----------------+-----------+-----------------+-----------------+
-| Tígulsteinn     | 1700      | 0,37            | 1,4             |
-+-----------------+-----------+-----------------+-----------------+
-| Léttsteypa      | 1900      | 0,08            | 0,4             |
-| (sænsk)         |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Sementsmúr      | 1900      | 0,03            | 0,5             |
-| (sænskur)       |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Steypa v/s 0,3  | |         | 0,010           | 0,14            |
-| (sænsk)         |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Steypa v/s 0,5  | |         | 0,020           | 0,17            |
-| (sænsk)         |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Steypa v/s 0,7  | |         | 0,028           | 0,25            |
-| (sænsk)         |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Timbur \|\|     | 450       | 0,016           | -               |
-| trefjum         |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
-| Timbur         | 450       | 0,004           | -               |
-| trefjar         |           |                 |                 |
-+-----------------+-----------+-----------------+-----------------+
+   * - **Efni**
+     - **Þéttleiki**
+     - **Stuðull fyrir ísogsmagn, A**
+     - **Stuðull fyrir ísogsdýpi, B**
+   * -
+     - :math:`kg/m^3`
+     - :math:`kg/(m^2·\sqrt{s})`
+     - :math:`×10^{-3} m/\sqrt{s}`
+   * - Tígulsteinn
+     - 1700
+     - 0,37
+     - 1,4
+   * - Léttsteypa (sænsk)
+     - 1900
+     - 0,08
+     - 0,4
+   * - Sementsmúr (sænskur)
+     - 1900
+     - 0,03
+     - 0,5
+   * - Steypa v/s 0,3 (sænsk)
+     - 
+     - 0,010
+     - 0,14
+   * - Steypa v/s 0,5 (sænsk)
+     - 
+     - 0,020
+     - 0,17
+   * - Steypa v/s 0,7 (sænsk)
+     - 
+     - 0,028
+     - 0,25
+   * - Timbur ∥ trefjum
+     - 450
+     - 0,016
+     - -
+   * - Timbur ⊥ trefjar
+     - 450
+     - 0,004
+     - -
 
 Rakþrýstingur verður lægri yfir sveigðu vatnsyfirborði heldur en flötu,
 þar sem yfirborðskraftar sem verka á vatnssameindirnar eru hærri í
-fyrrnefnda tilvikinu.
-
-Jafna Kelvins segir til um samband pórustærðar og hlutfallsraka lofts
+fyrrnefnda tilvikinu. Jafna Kelvins segir til um samband pórustærðar og hlutfallsraka lofts
 yfir vatnsborði í slíkri póru (sem hlutfall af mettunarraka yfir sléttu
 yfirborði) , jafna 3.12;
 
-| 
+.. admonition:: Jafna 3.12
+   :class: jafna
 
-|image12| (3.12)
+   .. math::
+      \varphi = e^{\frac{2 \cdot \sigma \cdot M_w}{r \cdot \rho_w \cdot R \cdot T}}
+ 
+Thompson jafnan er:
 
-| 
+.. math::
+   p=p_s \cdot e^{\frac{2 \cdot \sigma \cdot M_w}{r \cdot \rho_w \cdot R \cdot T}}
 
-(Thompson jafnan er |image13| )
+þar sem
 
-| 
+.. list-table:: 
+   :widths: 5 5 5 
+   :header-rows: 0
 
-| 
-
-þar sem  hlutfallsraki lofts (hlutfallstala 0 – 1) =p/p\ :sub:`s`
-
-p mettunarrakaþrýstingur í póru
-
-p\ :sub:`s`\  mettunarrakaþrýstingur yfir sléttu yfirborði
-
- yfirborðsspenna (hitastigsháð), N/m
-
-M\ :sub:`w`\  mólmassi vatns, kg/mól
-
-r radíus póru, m
-
-\ :sub:`w`\  eðlisþéttleiki vatns, kg/m\ :sup:`3`
-
-R almenni gasfastinn R=8314,3 J/(kmol∙K)
-
-T hitastig, K
-
-| 
+   * - :math:`\phi`
+     - hlutfallsraki lofts (hlutfallstala 0 - 1)
+     - :math:`\phi = \frac{p}{p_s}`
+   * - :math:`p`
+     - mettunarrakaprýstingur í pípu
+     - :math:`Pa`
+   * - :math:`p_s`
+     - mettunarrakaprýstingur yfir sléttu yfirborði
+     - :math:`Pa`
+   * - :math:`\sigma`
+     - yfirborðsspenna (hitastigsháð)
+     - :math:`N/m`
+   * - :math:`M_w`
+     - mólmassi vatns
+     - :math:`kg/mol`
+   * - :math:`r`
+     - radíus pórunnar
+     - :math:`m`
+   * - :math:`\rho_w`
+     - eðlisþéttleiki vatns
+     - :math:`kg/m^3`
+   * - :math:`R`
+     - almenni gasfastinn
+     - :math:`8314.3,  [J/(kmol \cdot K)]`
+   * - :math:`T`
+     - hitastig
+     - :math:`K`
 
 Undirþrýstingur í póru er iðulega settur sem (jafna 3.13);
 
-| 
+.. admonition:: Jafna 3.13
+   :class: jafna
 
-\ |image14| (3.13)
+   .. math::
+      p_w = \frac{2 \cdot \sigma}{r}
 
 Jafna 3.13 ásamt 3.12 gefur (jafna 3.14);
 
-| 
+.. admonition:: Jafna 3.14
+   :class: jafna
 
-\ |image15| (3.14)
+   .. math::
+      p_w= - \frac{\rho_w \cdot R \cdot T}{M_w} ln(\varphi)
 
 Jafna 3.14 gefur samband milli undirþrýstings í póru og rakaþrýstings,
-en undirþrýstingur í póru (e: suction) hentar vel sem mat á drifkrafti
+en undirþrýstingur í póru (e. suction) hentar vel sem mat á drifkrafti
 rakaflutnings vegna hárpípukrafta.
 
-| 
-
 Útsveim og varmasveim
+?????????????????????
 
 Í þeim tilvikum sem pórustærð í efni er svipuð eða minni heldur en “frí”
 fjarlægð milli vatnssameinda, þá ákvarðast hreyfing sameinda ekki af
 innbyrðis áhrifum þeirra heldur áhrifum frá yfirborðum póranna.
 Sameindirnar hreyfast innbyrðis óháð, slíkur rakaflutningur nefnist
-útsveim (e: effusion).
-
-| 
+útsveim (e. effusion).
 
 Rakaflutningur á gufuformi í efni getur einnig orðið vegna áhrifa
 hitastiguls. Hitamunur í gasblöndu veldur aðskilnaði vegna mismunandi
 mólmassa gastegunda. Í röku lofti er sameindamassi vatnsgufu lægri
 heldur en mólmassi súrefnis og köfnunarefnis, vatnsgufan leitar því til
 heitari hlutans en súrefni og köfnunarefni til þess kaldari. Áhrif
-varmasveims (e: termodiffusion) verða helst merkjanleg í mjög póróttum
+varmasveims (e. termodiffusion) verða helst merkjanleg í mjög póróttum
 efnum og við mikinn hitastigul.
 
-| 
-
-3.4 Útreikningur á rakaflutningi
+Útreikningur á rakaflutningi
 --------------------------------
 
 Rakaflutningur verður helst eftir þrem leiðum eins og þegar hefur verið
@@ -679,288 +726,305 @@ nefnt; flæði, streymi í lofti og hárpípukröftum. Iðulega er erfitt að
 skilja á milli flutnings annarsvegar sem flæði og hinsvegar streymi í
 lofti (hliðstætt vandamál og varðar varmaflutning), en þó er vitað að
 áhrifa vegna streymis í lofti verður fyrst merkjanlegt við háan loftraka
-(oft  > 80 – 85 %).
+(oft :math:`\varphi` >  80 – 85 %).
 
 Rakaflutningur í hárpípum á sér aðeins stað frá efni með lágan
 flutningsstuðul til efnis með háan flutningsstuðul (frá grófpóróttu efni
 til fínpóróttara).
 
-| 
-
 Rakaflutningur verður hér reiknaður samkvæmt staðaluppkastinu TC 89 WI
 29.3:2003. Tilvísanir í staðalinn verða hér styttar í TC89.
 
-| 
-
-Í efni reiknast þéttleiki rakaflutnings, kg/(m\ :sup:`2`\ ·s) eins og
+Í efni reiknast þéttleiki rakaflutnings, :math:`kg/(m^2 \cdot s)` eins og
 jafna 3.15 sýnir;
 
-| 
+.. admonition:: Jafna 3.15
+   :class: jafna
 
-g=g\ :sub:`v`\ +g\ :sub:`l`\  (3.15)
+   .. math::
+      g = g_v + g_l
 
-þar sem g\ :sub:`v`\  rakaflutningur vegna flæðis (g\ :sub:`p`\ ) og
-streymis í lofti (g\ :sub:`c`\ )
+þar sem 
 
-g\ :sub:`l`\  hárpípuflutningur
+.. list-table::
+   :header-rows: 0
+   :widths: 5 20
 
-| 
+   * - :math:`g_v`
+     - Rakaflutningur vegna flæðis (:math:`g_p`) og streymis í lofti (:math:`g_c`)
+   * - :math:`g_l`
+     - Hárpípuflutningur
 
-rakaflutningur vegna flæðis og streymis í lofti, g\ :sub:`v`\ , er
+Rakaflutningur vegna flæðis og streymis í lofti, :math:`g_v`, er
 skilgreint eins og jafna 3.16 sýnir;
 
-|image16| (3.16)
+.. admonition:: Jafna 3.16
+   :class: jafna
 
-| 
+   .. math::
+      g_v = - \frac{1}{\mu (\varphi)} \delta_0(T) \frac{\partial p_v}{\partial x} + \frac{g_a}{\rho_a} \frac{p_v}{R_{H_{2}O} \cdot T}
 
-þar sem () mótstöðutala vatnsgufuflæðis við rakainnihald , -
+þar sem 
 
-\ :sub:`0`\ (T) gufuhleypni í lofti með hitastig T, kg/(m·Pa·s)
+.. list-table:: *Tákn og skýringar – Vatnsgufuflæði*
+   :header-rows: 0
+   :widths: 10 60 30
 
-p\ :sub:`v`\ /x stigull gufuþrýstings í lofti, Pa
+   * - :math:`\mu(\varphi)`
+     - mótstöðutala vatnsgufuflæðis við rakainnihald :math:`\varphi`
+     - 
+   * - :math:`\delta_0(T)`
+     - gufuheypni í lofti með hitastig :math:`T`
+     - :math:`kg/(m \cdot Pa \cdot s)`
+   * - :math:`\delta p_v / \delta x`
+     - stigull gufþrýstings í lofti
+     - :math:`Pa`
+   * - :math:`g_a`
+     - þéttleiki loftflutnings
+     - :math:`kg/(m^2 \cdot s)`
+   * - :math:`\rho_a`
+     - þéttleiki lofts
+     - :math:`kg/m^3`
+   * - :math:`p_v`
+     - hlutfallsþrýstingur vatnsgufu
+     - :math:`Pa`
 
-g\ :sub:`a`\  þéttleiki loftflutnings, kg/(m\ :sup:`2`\ ,s)
-
-\ :sub:`a`\  þéttleiki lofts, kg/m\ :sup:`3`
-
-p\ :sub:`v`\  hlutfallsþrýstingur vatnsgufu, Pa
-
-\ |image17|
-
-| 
-
-| 
+.. math::
+   R_{H_{2}O} = \frac{R}{M_w} = \frac{8.314}{0.018}  = 461.889
 
 Gufuhleypni í lofti, er eins og jafna 3.17 sýnir (DIN 52615);
 
-\ |image18| kg/(mPas) (3.17)
+.. admonition:: Jafna 3.17
+   :class: jafna
+
+   .. math::
+      \delta_0 = 2.0 \cdot 10^{-7} \cdot \frac{T^{0.81}}{P_a}, kg/(m \cdot Pa \cdot s)
 
 Í fræðiritum (þetta var og er jafnvel víða venja enn) eru stuðlarnir við
 drifkraft rakaflæðis teknir saman í eina stærð, sbr. jöfnu 3.7.
-Stuðullinn er oft nefndur D\ :sub:`x`\  þar sem lágmerkið skýrir hvaða
+Stuðullinn er oft nefndur :math:`D_x` þar sem lágmerkið skýrir hvaða
 drifkraftur er notaður; oft w fyrir rakainnihald og p fyrir
-rakaþrýsting, sem dæmi um þetta má nefna gildið \ :sub:`p`\ ;
-\ :sub:`p`\ =\ :sub:`0`\ /. Ókostur aðferðarinnar er sá að
+rakaþrýsting, sem dæmi um þetta má nefna gildið :math:`\delta_p; \delta_p=\delta_0/\mu`. Ókostur aðferðarinnar er sá að
 rakaflæðistuðullinn D er augljóslega háður drifkraftinum. Til er
 fjöldinn allur af mismunandi efnisgildum fyrir útreikning á
 rakaflutningi, umreiknistuðla fyrir öll algengustu gildi er t.d. að
 finna í Rb-blaðinu Rb (I3).001 ”Vindþéttilög í
 húsbyggingum-efniseiginleikar og frágangur”. Kosturinn við framsetningu
-staðaluppkastsins er að stuðullinn  er hrein hlutfallstala sem er
-efnisháð, og einungis þarf að velja  stuðulinn þannig að hann passi
+staðaluppkastsins er að stuðullinn :math:`\mu` er hrein hlutfallstala sem er
+efnisháð, og einungis þarf að velja :math:`\delta` stuðulinn þannig að hann passi
 fyrir valinn drifkraft.
-
-| 
 
 Fyrir yfirborðslög (yfirborðsmótstöður, málningar o.f.l.) þá er
 jafngilda formið fyrir jöfnu 3.16 , eins og jafna 3.18 sýnir;
 
-| 
+.. admonition:: Jafna 3.18
+   :class: jafna
 
-|image19| (3.18)
-
-| 
+   .. math::
+      g_v = - \frac{1}{s_{d,s}} \delta_0 \cdot (p_{v,a} - p_{v,s}) + \frac{g_a}{\rho_a} \cdot \frac{p_{v,a}}{R_{H_{2}O} \cdot T_a}
 
 Af samanburði milli jafnanna 3.16 og 3.18 sést að jafngildisþykkt
-loftlags, s\ :sub:`d`\ , fæst sem ; s\ :sub:`d`\ =·d, þar sem d er
+loftlags, :math:`s_d`, fæst sem; :math:`s_d= \mu \cdot d`, þar sem d er
 þykkt efnislags. Þá gildir almennt að mótstaða efnislags, eða yfirborðs,
 fæst sem (jafna 3.19);
 
-| 
+.. admonition:: Jafna 3.19
+   :class: jafna
 
-Z\ :sub:`p`\ =s\ :sub:`d`\ /\ :sub:`0`\ =d·/\ :sub:`0`\  (3.19)
-
-| 
+   .. math::
+      Z_p = \frac{s_d}{\delta_0} = \frac{d \cdot \mu}{\delta_0}
 
 Efnisgildi til útreikninga á rakaflutningi má finna t.d. í staðlinum ÍST
 EN 12524:2000, tækniblaðinu NBI 573.430 og handbókum eftir S. Geving og
 J. V. Thue (2002), Nevander og Elmarsson (1994). Rakaflæðimótstaða efna
-er alltaf háð hitastigi (sem leiðrétt er fyrir með \ :sub:`0`\ 
+er alltaf háð hitastigi (sem leiðrétt er fyrir með :math:`\delta_0` 
 stuðlinum í jöfnum 3.14 og 3.16) og iðulega einnig rakainnihaldi efna,
 þar sem rakaflæðimótstaðan fellur almennt með hækkandi efnisraka.
 
-| 
-
 Efnisframleiðendur og efnissalar, og einnig eldri rit, gefa stundum upp
-rakaflutningsmótstöðuna Z í stað s\ :sub:`d`\  gildis eins og nú
+rakaflutningsmótstöðuna Z í stað :math:`s_d`  gildis eins og nú
 tíðkast. Þá þarf þó að skoða vandlega hvaða eining er á uppgefnu
-Z-gildinu (oft GPasm\ :sup:`2`\ /kg) og taka tillit til þess í
+Z-gildinu (oft :math:`GPa \cdot s \cdot m^2 /kg`) og taka tillit til þess í
 útreikningunum.
 
-| 
-
 Jafngildisþykkt yfirborðsloftlags (mótstaða við yfirborð),
-s\ :sub:`d,s`\ , er sýnd í töflu 3.3.
+:math:`s_{d,s}`, er sýnd í töflu 3.3.
 
-| 
+.. list-table:: *Tafla 3.3 Jafngildisþykkt yfirborðsloftlags* *(e: boundary layer)* (heimild: TC 89)
+   :header-rows: 1
+   :widths: 40 20
 
-| 
-
-| 
-
-| 
-
-| 
-
-Tafla 3.3 Jafngildisþykkt yfirborðsloftlags (e: boundary layer)
-(heimild: TC 89 )
-
-| |Shape3|
-
-Yfirborð inni s\ :sub:`d,si`\  (m)
-
-Stefna varmaflutnings
-
--  Lárétt 0,008
-
--  Upp 0,004
-
--  Niður 0,03
-
-| 
-
-| 
-
-Yfirborð úti (háð vindhraða v) s\ :sub:`d,se`\  (m)
-
-\ |image20|
-
-| |Shape4|
-
-| 
+   * - **Yfirborð inni – Stefna varmaflutnings**
+     - :math:`s_{d,si}` (m)
+   * - Lárétt
+     - 0,008
+   * - Upp
+     - 0,004
+   * - Niður
+     - 0,03
+   * - **Yfirborð úti** (háð vindhraða :math:`v`)
+     - :math:`s_{d,se}` (m)
+   * - 
+     - :math:`\frac{1}{67 + 90 \cdot v}`
 
 Samantekt fyrir nokkur algeng byggingarefni er í töflu 3. 4 og fyrir
 algeng efnislög í töflu 3.5.
 
-| 
+.. list-table:: *Tafla 3.4 Rakaflæði­mótstaða efna,* :math:`\mu` *(heimild: NBI 573.430, o.fl.)*
+   :header-rows: 2
+   :widths: 25 10 13 13 13 13
 
-+-----------+-----------+-----------+---------+---------+---------+
-| Tafla 3.4 |           |           |         |         |         |
-| Rakaflæð  |           |           |         |         |         |
-| imótstaða |           |           |         |         |         |
-| efna,    |           |           |         |         |         |
-| (heimild: |           |           |         |         |         |
-| NBI       |           |           |         |         |         |
-| 573.430,  |           |           |         |         |         |
-| o.fl.)    |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| Efni      | Þéttleiki | Rakaflæði |         |         |         |
-|           |           | mótstaða, |         |         |         |
-|           | (kg/m\ :s |  fyrir   |         |         |         |
-|           | up:`3`\ ) | m         |         |         |         |
-|           |           | ismunandi |         |         |         |
-|           |           | hlut      |         |         |         |
-|           |           | fallsraka |         |         |         |
-|           |           | (% HR)    |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| |         | |         | 35 - 70   | 70 - 80 | 80 - 90 | 90 - 95 |
-+-----------+-----------+-----------+---------+---------+---------+
-| Steinull  | 15        | 1,2 – 1,8 | |       | |       | |       |
-+-----------+-----------+-----------+---------+---------+---------+
-| Steinull  | 200       | 2,2 – 3,3 | |       | |       | |       |
-+-----------+-----------+-----------+---------+---------+---------+
-| Fr        | 20        | 19-29     | 19-29   | 19-29   | 19-29   |
-| auðplast, |           |           |         |         |         |
-| þanið     |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| Fr        | 30        | 98        | |       | |       | |       |
-| auðplast, |           |           |         |         |         |
-| þanið     |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| Fr        | 20-60     | 150       | |       | |       | |       |
-| auðplast, |           |           |         |         |         |
-| sprautað  |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| Steypa    | |         | 131-195   | 82-131  | 27-82   | 9-27    |
-| v/s 0,5   |           |           |         |         |         |
-| (norsk)   |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| Fura –    | |         | 29-130    | 13-51   | 7,4-26  | |       |
-| þvert á   |           |           |         |         |         |
-| tre       |           |           |         |         |         |
-| fjastefnu |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| K         | |         | 29-130    | 14-51   | 8-25    | |       |
-| rossviður |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| OSB plata | 650       | 49        | |       | |       | |       |
-+-----------+-----------+-----------+---------+---------+---------+
-| S         | 635       | 37        | |       | |       | 16      |
-| pónaplata |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| Trétr     | 900       | 102       | |       | |       | |       |
-| efjaplata |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| |         | |         | |         | |       | |       | |       |
-|           |           |           |         |         |         |
-| EPDM      |           | ..        | 60000   | ..      | ..      |
-| dúkefni   |           |           |         |         |         |
-+-----------+-----------+-----------+---------+---------+---------+
-| PVC       | |         | ..        | 40000   | ..      | ..      |
-+-----------+-----------+-----------+---------+---------+---------+
+   * - **Efni**
+     - **Þéttleiki**  
+     - :math:`\mu` **við 35–70 % HR**
+     - :math:`\mu` **við 70–80 % HR**
+     - :math:`\mu` **við 80–90 % HR**
+     - :math:`\mu` **við 90–95 % HR**
+   * - 
+     - *(kg/m³)*
+     - 
+     - 
+     - 
+     - 
+   * - Steinull
+     - 
+     - 35–70
+     - 
+     - 
+     - 
+   * - Steinull
+     - 15
+     - 1,2–1,8
+     - 
+     - 
+     - 
+   * - Frauðplast, þanið
+     - 200
+     - 2,2–3,3
+     - 
+     - 
+     - 
+   * - Frauðplast, þanið
+     - 20
+     - 19–29
+     - 19–29
+     - 19–29
+     - 19–29
+   * - Frauðplast, sprautað
+     - 30
+     - 98
+     - 
+     - 
+     - 
+   * - Frauðplast, sprautað
+     - 20–60
+     - 150
+     - 
+     - 
+     - 
+   * - Steypa v/s 0,5 (norsk)
+     - 
+     - 131–195
+     - 82–131
+     - 27–82
+     - 9–27
+   * - Fura – þvert á trefjastefnu
+     - 
+     - 29–130
+     - 13–51
+     - 7,4–26
+     - 
+   * - Krossviður
+     - 
+     - 29–130
+     - 14–51
+     - 8–25
+     - 
+   * - OSB plata
+     - 650
+     - 49
+     - 
+     - 
+     - 
+   * - Spónaplata
+     - 635
+     - 37
+     - 
+     - 
+     - 
+   * - Trétrefjaplata
+     - 900
+     - 102
+     - 
+     - 
+     - 
+   * - EPDM dúkefni
+     - 
+     - ..
+     - 60000
+     - ..
+     - 
+   * - PVC
+     - 
+     - ..
+     - 40000
+     - ..
+     - 
 
-| 
+.. list-table:: *Tafla 3.5 Rakaflæðimótstaða efnislaga,* :math:`s_d` *(heimild: NBI 573.430)*
+   :header-rows: 2
+   :widths: 50 10 20
 
-| 
-
-+-----------------------------+--------+-----------------------------+
-| Tafla 3.5 Rakaflæðimótstaða | |      | |                           |
-| efnislaga,                  |        |                             |
-| s\ :sub:`d`\ (heimild: NBI  |        |                             |
-| 573.430)                    |        |                             |
-+-----------------------------+--------+-----------------------------+
-| Efni                        | Þykkt  | Jafngildisþykkt loftlags,   |
-|                             |        | s\ :sub:`d`\  (m)           |
-|                             | (mm)   |                             |
-+-----------------------------+--------+-----------------------------+
-| Textil teppi- með latex     | |      | 3,3-4,1                     |
-| bakhlið                     |        |                             |
-+-----------------------------+--------+-----------------------------+
-| Linoleum, HR 35-70%         | 2,5    | 10                          |
-+-----------------------------+--------+-----------------------------+
-| Linoleum, HR 70-80%         | 2,5    | 5,3                         |
-+-----------------------------+--------+-----------------------------+
-| Vinyl gólfdúkur, mjög       | |      | 254                         |
-| lokaður                     |        |                             |
-+-----------------------------+--------+-----------------------------+
-| Akryllatex málning          | 0,05   | 0,14-0,53                   |
-+-----------------------------+--------+-----------------------------+
-| Alkydmálning, 2umf., mött   | |      | 2,5-5                       |
-| vegg- og loftamálning       |        |                             |
-+-----------------------------+--------+-----------------------------+
-| Epoxy gólfmálning-tveggja   | |      | 7,6-14                      |
-| þátta, 2umf.                |        |                             |
-+-----------------------------+--------+-----------------------------+
-| |                           | |      | |                           |
-+-----------------------------+--------+-----------------------------+
-| Polyethylen (PE)            | 0,15   | 70                          |
-| rakavarnarlag               |        |                             |
-+-----------------------------+--------+-----------------------------+
-| .. do                       | 0,20   | 90                          |
-+-----------------------------+--------+-----------------------------+
-| Tjörupappi (polyester       | -      | 100                         |
-| vefur)                      |        |                             |
-+-----------------------------+--------+-----------------------------+
-| PVC þakdúkur                | 1,4    | 19                          |
-+-----------------------------+--------+-----------------------------+
-| Polyisobutylen (PIB)        | 1,5    | 390                         |
-| þakdúkur                    |        |                             |
-+-----------------------------+--------+-----------------------------+
-
-| 
-
-| 
-
+   * - **Efni**
+     - **Þykkt**
+     - **Jafngildisþykkt loftlags,** :math:`s_d`
+   * -
+     - *(mm)*
+     - *(m)*
+   * - Textíl teppi – með latex bakhlið
+     - 
+     - 3,3–4,1
+   * - Linoleum, HR 35–70%
+     - 2,5
+     - 10
+   * - Linoleum, HR 70–80%
+     - 2,5
+     - 5,3
+   * - Vinyl gólfdúkur, mjög lokaður
+     - 
+     - 254
+   * - Akrýllatex málning
+     - 0,05
+     - 0,14–0,53
+   * - Alkýdmálning, 2umf., mött vegg- og loftamálning
+     - 
+     - 2,5–5
+   * - Epoxy gólfmálning – tveggja þátta, 2umf.
+     - 
+     - 7,6–14
+   * - Polyethylen (PE) rakavarnarlag
+     - 0,15
+     - 70
+   * - .. do
+     - 0,20
+     - 90
+   * - Tjörupappi (polyester vefur)
+     - 
+     - 100
+   * - PVC þakdúkur
+     - 1,4
+     - 19
+   * - Polyisobutylen (PIB) þakdúkur
+     - 1,5
+     - 390
+ 
 Í eftirfarandi verður litið framhjá áhrifum loftflutnings í efni og
 hárpípuflutnings á rakaflutning (nema að því leyti sem þessi áhrif eru
 innifalinn í viðeigandi efnisgildum). Útreikningar taka hér einvörðu
 tillit til rakaflæðis.
 
-| 
-
-| 
-
 Rakaflutningur, rakaástand og rakaþétting
+?????????????????????????????????????????
 
 Við stöðug hita- og rakaskilyrði í umhverfi byggingarhluta þá næst
 rakajafnvægi í byggingarhluta þegar rakaástandið ákvarðast af rakaflæði,
@@ -973,14 +1037,10 @@ rakaflæðimótstaðan Z (jafna 3.19) sé óháð hitastigi og efnisraka,
 mettunarrakaaferillinn verður hinsvegar alltaf aðeins sveigður þar sem
 samband mettunarraka og hitastigs er ekki línulegt.
 
-| 
-
 Þrátt fyrir að rakaflæðimótstaðan sé nánast alltaf hita- og rakaháð þá
 er venja í útreikningum við stöðug skilyrði að líta framhjá þessu, til
 einföldunar er gert ráð fyrir að bæði rakaþrýstingur og
 mettunarrakaþrýstingur í einsleitu efnislagi breytist línulega.
-
-| 
 
 Mettunarrakaþrýstingur í efnislagi er því ákvarðaður útfrá hitastigi á
 yfirborðum efnislags og rakaþrýstingur í efninu útfrá rakaþrýstingi á
@@ -992,66 +1052,72 @@ umhverfisaðstæðum. Í þeim tilvikum sem reiknaður rakaþrýstingur er hærr
 heldur en mettunarþrýstingur í sniði þá á sér stað rakaþétting, annars
 ekki. Skoða þarf tvö tilvik (mynd 3.3);
 
-| 
+.. figure:: ./myndir/kafli03/Raka_og_mettunarþrýstingur.png
+  :align: center
+  :width: 90%
 
-.. image:: myndir/kafli03_html_27d4066b35443648.png
-   :alt: Shape5
-   :name: Shape5
-   :width: 540px
-   :height: 384px
+.. centered:: 
+   Mynd 3.3 Raka- og mettunarrakaþrýstingur í sniði
 
-| 
-
-Mynd 3.3 Raka- og mettunarrakaþrýstingur í sniði
-
-| 
-
-I. Engin rakaþétting
+**I. Engin rakapétting**
 
 Rakaflutning, á flatar- og tímaeiningu, í gegnum byggingarhluta má
 ákvarða í samræmi við (fyrri hluta) jöfnu 3.16, sem nú er umskrifuð eins
 og jafna 3.20 sýnir;
 
-| 
+.. admonition:: Jafna 3.20
+   :class: jafna
 
-|image21| (3.20)
+   .. math::
+      g = \frac{1}{Z_T} \cdot (P-1 - p_2)
 
-þar sem g rakaflutningur frá 1 til 2, kg/(m\ :sup:`2`\ ·s)
+Þar sem
 
-Z\ :sub:`T`\  heildarmótstaða gegn rakaflæði, m\ :sup:`2`\ ·s·Pa/kg
+.. list-table:: 
+   :header-rows: 0
+   :widths: 10 70 20
 
-p\ :sub:`1`\ , p\ :sub:`2`\  rakaþrýstingur beggja vegna við
-byggingarhluta, Pa
+   * - :math:`g`
+     - rakaflutningur frá 1 til 2
+     - :math:`kg/(m^2 \cdot s)`
+   * - :math:`Z_T`
+     - heildarmótstaða gegn rakaflæði
+     - :math:`m^2 \cdot s \cdot Pa / kg`
+   * - :math:`p_1, p_2`
+     - rakaþrýstingur beggja vegna við byggingarhluta
+     - :math:`Pa`
 
-| 
-
-II. Rakaþétting
+**II. Rakaþétting**
 
 Rakaþéttingin er til einföldunar öll reiknuð í “fyrsta kalda sniði” í
 byggingarhluta (á mynd 3.3 er það snið n+2, þegar rakaflutningur er frá
-1 til 2, og mettunarraki þar er p\ :sub:`cond`\ ). Í því tilviki að
+1 til 2, og mettunarraki þar er :math:`p_cond` ). Í því tilviki að
 rakaþétting reiknast verða í tveim eða fleiri sniðum, þá þarf að setja
 rakaþrýsting í innsta sniðinu jafnt og mettunarrakaþrýsting, og
 endurreikna dæmið frá þeim punkti og svo koll af kolli fyrir hvert snið
 utar þar sem rakþrýstingur fer yfir mettunarraka.
 
-| 
-
 Reiknaðar eru mótstöður innan- og utan við þéttingarsniðið,
-Z\ :sub:`inn`\  og Z\ :sub:`ut`\ , og samsvarandi rakaflutningur, sjá
+:math:`Z_{inn}` og :math:`Z_{út}`, og samsvarandi rakaflutningur, sjá
 mynd 3.3;
 
-|image22| (3.21)
+.. admonition:: Jafna 3.21
+   :class: jafna
 
-| 
+   .. math::
+      g_{inn} = \frac{1}{Z_{inn}} \cdot (p_1 - p_{cond})
 
-|image23| (3.22)
+.. admonition:: Jafna 3.22
+   :class: jafna
 
-| 
+   .. math::
+      g_{út} = \frac{1}{Z_{út}} \cdot (p_{cond} - p_{2})
 
-g\ :sub:`uppsafnað`\ = g\ :sub:`inn`\  - g\ :sub:`út`\  (3.23)
+.. admonition:: Jafna 3.23
+   :class: jafna
 
-| 
+   .. math::
+      g_{uppsafnað} = g_{inn} - g_{út}
 
 Þegar útreikningar sýna að rakaþétting eigi sér stað þá þarf að meta
 yfir hversu langan tíma þetta ástand varir og athuga svo hvort
@@ -1067,34 +1133,22 @@ tími þegar hár loftraki helst í einstökum sniðum byggingarhluta. Hætta á
 mygluvexti er metin útfrá rakaástandi og á sama tíma hitaástandi yfir
 skilgreindum mörkum, og talinn saman tími sem skilyrðin eru uppfyllt.
 
-| 
+|
 
 Í Byggingarreglugerð, kafla 10.5, er fjallað almennt um raka (m.a. grein
 10.5.1);
 
-10.5.1. gr.
+.. figure:: ./myndir/kafli03/grein10_5_1.png
+  :align: center
+  :width: 90%
 
-Markmið.
-
-Mannvirki skulu þannig hönnuð og byggð að vatn eða raki geti ekki valdið
-skaða á mannvirki í heild eða einstökum hlutum þess eða skapað aðstæður
-sem valdið geta óþægindum, slysum eða verið hættulegar heilsu manna,
-s.s. vegna myndunar myglu eða varasamra örvera.
-
-Tryggja skal að grunnvatn, yfirborðsvatn, úrkoma, s.s. regn, slagregn,
-snjór eða krapi, raki í jarðvegi, neysluvatn, loftraki, byggingarraki
-eða þéttivatn geti hvorki skaðað mannvirki eða einstaka hluta þess, né
-rýrt eðlileg hollustuskilyrði innandyra.
-
-| 
+|
 
 Orðalagið “skaða á mannvirki” er ekki skilgreint sérstaklega, og er því
 á verksviði hönnuðar hverju sinni að meta hvort t.d. rakauppsöfnun,
 tímabundin eða varanleg, sé skaðleg. Í þessu sambandi er nauðsynlegt að
 leggja mat á áreiðanleika þeirra aðferða sem beitt er til að meta
 rakaástand í byggingarhluta á hönnunarstigi bygginga.
-
-| 
 
 Í hefðbundnum útreikningum, eins og hér er fjallað um þarf að hafa
 eftirfarandi í huga;
@@ -1109,23 +1163,16 @@ eftirfarandi í huga;
 #. Hæfni efna til að taka upp raka (tímabundið) án þess að skemmdir
    hljótist af.
 
-| 
-
 Það er því ástæða að hafa í huga að reiknislegt mat á rakaástandi er
 fremur gæðamat heldur en fræðilegt mat og því eðlilegt að halda sig
 frekar öruggu megin þegar niðurstöður eru metnar. Í þessu sambandi er
 eðlilegt að miða við að öryggi valinnar uppbyggingar sé nægjanlegt, t.d.
 að reiknuð útþornun sé umtalsvert meiri heldur en reiknuð rakauppsöfnun.
 
-| 
 
-| 
-
-| 
-
-| 
 
 Reiknaður rakaflutningur í byggingarhluta og metin hætta á rakaþéttingu
+-----------------------------------------------------------------------
 
 Dæmi:
 
@@ -1138,21 +1185,16 @@ einangrunargildi samsvarandi og í kafla 2.
 Reiknað er hitastig og rakaástand í sniði fyrir aðstæður; inni 22 °C /
 45 %HR, úti -2 °C / 80 %HR (undir meðallagi fyrir janúar í Reykjavík).
 
-| 
-
 Útreikningar og niðurstöður í töflu;
 
-| 
+.. figure:: ./myndir/kafli03/útreikningur.png
+  :align: center
+  :width: 90%
 
-.. image:: myndir/kafli03_html_9c541ecee96c9f07.png
-   :name: Picture 29
-   :width: 576px
-   :height: 323px
-
-| 
+|
 
 Niðurstöður sýna að við framangreindar aðstæður verður rakaþétting í
-veggnum svo nemur 0,0070 g/(m\ :sup:`2`\ ,h), eða 5 g/m\ :sup:`2`\ ,
+veggnum svo nemur :math:`0,0070 g/(m^2,h)`, eða :math:`5 g/m^2`,
 mánuð – rakaþéttingin er óveruleg þegar tekið er tillit til mögulegrar
 rakaupptöku veggjarins, en athuga ber að hitastig innra byrðis
 steypunnar er undir frostmarki og þéttingin mun því byggjast upp sem
@@ -1160,115 +1202,22 @@ klakabrynja. Aðstæðurnar sem um ræðir munu þó sjaldan standa nema
 stuttan tíma í senn og þegar veggyfirborðið þiðnar þá getur steypan
 sennilega tekið við rakanum án vandkvæða.
 
-| 
+.. figure:: ./myndir/kafli03/Mollier.png
+  :align: center
+  :width: 90%
 
-.. image:: myndir/kafli03_html_6808a09e3c34c867.png
-   :name: Picture 30
-   :width: 520px
-   :height: 690px
+.. centered::
+   Línurit 3.3 Mollier línurit fyrir rakt loft
 
-| 
+|
 
-Línurit 3.3 Mollier línurit fyrir rakt loft
+.. centered::
+   Tafla 3.6 Mettunarraki; þrýstingur og rakamagn í lofti, háð hitastigi. Fyrir hitastig undir frostmarki
+   er miðað við aðstæður yfir ís.
 
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-| 
-
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| Tafla  |        |        |    |      |        |        |    |      |        |        |
-| 3.6    |        |        |    |      |        |        |    |      |        |        |
-| M      |        |        |    |      |        |        |    |      |        |        |
-| ettuna |        |        |    |      |        |        |    |      |        |        |
-| rraki; |        |        |    |      |        |        |    |      |        |        |
-| þrýs   |        |        |    |      |        |        |    |      |        |        |
-| tingur |        |        |    |      |        |        |    |      |        |        |
-| og     |        |        |    |      |        |        |    |      |        |        |
-| ra     |        |        |    |      |        |        |    |      |        |        |
-| kamagn |        |        |    |      |        |        |    |      |        |        |
-| í      |        |        |    |      |        |        |    |      |        |        |
-| lofti, |        |        |    |      |        |        |    |      |        |        |
-| háð    |        |        |    |      |        |        |    |      |        |        |
-| hita   |        |        |    |      |        |        |    |      |        |        |
-| stigi. |        |        |    |      |        |        |    |      |        |        |
-| Fyrir  |        |        |    |      |        |        |    |      |        |        |
-| hi     |        |        |    |      |        |        |    |      |        |        |
-| tastig |        |        |    |      |        |        |    |      |        |        |
-| undir  |        |        |    |      |        |        |    |      |        |        |
-| fros   |        |        |    |      |        |        |    |      |        |        |
-| tmarki |        |        |    |      |        |        |    |      |        |        |
-| er     |        |        |    |      |        |        |    |      |        |        |
-| miðað  |        |        |    |      |        |        |    |      |        |        |
-| við    |        |        |    |      |        |        |    |      |        |        |
-| að     |        |        |    |      |        |        |    |      |        |        |
-| stæður |        |        |    |      |        |        |    |      |        |        |
-| yfir   |        |        |    |      |        |        |    |      |        |        |
-| ís.    |        |        |    |      |        |        |    |      |        |        |
-|        |        |        |    |      |        |        |    |      |        |        |
-| |      |        |        |    |      |        |        |    |      |        |        |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| Hiti   | Þrýst. | Raki   | |  | Hiti | Þrýst. | Raki   | |  | Hiti | Þrýst. | Raki   |
-|        |        |        |    |      |        |        |    |      |        |        |
-| (°C)   | (Pa)   | (g/m\  |    | (°C) | (Pa)   | (g/m\  |    | (°C) | (Pa)   | (g/m\  |
-|        |        |  :sup: |    |      |        |  :sup: |    |      |        |  :sup: |
-|        |        | `3`\ ) |    |      |        | `3`\ ) |    |      |        | `3`\ ) |
-|        |        |        |    |      |        |        |    |      |        |        |
-|        |        |        |    |      |        |        |    |      |        | |      |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 30     | 4245   | 30,36  | |  | 10   | 1228   | 9,40   | |  | -10  | 260    | 2,14   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 29     | 4005   | 28,78  | |  | 9    | 1147   | 8,83   | |  | -11  | 238    | 1,97   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 28     | 3780   | 27,24  | |  | 8    | 1072   | 8,28   | |  | -12  | 225    | 1,81   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 27     | 3565   | 25,80  | |  | 7    | 1001   | 7,76   | |  | -13  | 199    | 1,66   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 26     | 3360   | 24,40  | |  | 6    | 935    | 7,27   | |  | -14  | 181    | 1,52   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 25     | 3170   | 23,04  | |  | 5    | 872    | 6,80   | |  | -15  | 166    | 1,39   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 24     | 2985   | 21,80  | |  | 4    | 813    | 6,37   | |  | -16  | 151    | 1,27   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 23     | 2815   | 20,60  | |  | 3    | 757    | 5,96   | |  | -17  | 137    | 1,16   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 22     | 2640   | 19,45  | |  | 2    | 705    | 5,57   | |  | -18  | 125    | 1,06   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 21     | 2485   | 18,35  | |  | 1    | 656    | 5,20   | |  | -19  | 114    | 0,97   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 20     | 2335   | 17,29  | |  | 0    | 611    | 4,84   | |  | -20  | 104    | 0,88   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 19     | 2195   | 16,33  | |  | -1   | 563    | 4,48   | |  | -21  | 94     | 0,80   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 18     | 2060   | 15,40  | |  | -2   | 517    | 4,13   | |  | -22  | 85     | 0,73   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 17     | 1935   | 14,50  | |  | -3   | 475    | 3,82   | |  | -23  | 78     | 0,67   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 16     | 1818   | 13,65  | |  | -4   | 437    | 3,52   | |  | -24  | 71     | 0,61   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 15     | 1703   | 12,82  | |  | -5   | 402    | 3,24   | |  | -25  | 64     | 0,55   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 14     | 1596   | 12,09  | |  | -6   | 368    | 2,99   | |  | -26  | 58     | 0,50   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 13     | 1496   | 11,37  | |  | -7   | 338    | 2,75   | |  | -27  | 52     | 0,46   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 12     | 1400   | 10,68  | |  | -8   | 310    | 2,53   | |  | -28  | 47     | 0,41   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| 11     | 1311   | 10,03  | |  | -9   | 284    | 2,33   | |  | -29  | 42     | 0,38   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-| |      | |      | |      | |  | |    | |      | |      | |  | -30  | 37     | 0,34   |
-+--------+--------+--------+----+------+--------+--------+----+------+--------+--------+
-
-| 
+.. figure:: ./myndir/kafli03/Tafla3_6.png
+  :align: center
+  :width: 90%
 
 Heimildir og ítarefni
 ---------------------
@@ -1326,13 +1275,7 @@ Norge
 
 | 
 
-| 
-
 .. container::
-
-   3.19
-
-   | 
 
 .. |image1| image:: myndir/kafli03_html_a7d8479859b54b1d.png
    :name: Object1
