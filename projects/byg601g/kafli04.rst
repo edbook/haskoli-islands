@@ -4,10 +4,10 @@
 
    Björn Marteinsson
 
-4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti
+Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti
 ======================================================================
 
-4.1 Almennt
+Almennt
 -----------
 
 Lofthreyfing og loftþrýstingur við byggingar hefur áhrif á þá áraun sem
@@ -16,39 +16,46 @@ loftleka í gegnum byggingarhluta og jafnvel vatnsleka. Hér verður
 fjallað um lofthreyfinguna almennt og það þrýstifall sem hún veldur yfir
 byggingu í heild og einstaka byggingarhluta.
 
-| 
-
 Lofthreyfing í og við byggingu orsakast af þrýstimun sem á uppruna sinn
 í vindáhrifum, áhrifum hitamunar og vélrænni loftræsingu.
+ 
+.. admonition:: Almennar líkingar og gildi
+   :class: jafna
 
-| 
+   .. math::
+      \rho_a = \frac{p_a \cdot M_a}{R \cdot T} + \frac{p_w \cdot M_w}{R \cdot T} = \frac{p_a}{287.05 \cdot T} + \frac{p_w}{461.495 \cdot T}
 
-| 
+þar sem:
 
-**Almennar líkingar og gildi;**
+.. list-table:: *Skýringar á táknum – lofteiginleikar*
+   :header-rows: 0
+   :widths: 10 60 30
 
-.. image:: myndir/kafli04_html_2069df32f0bc19d5.png
-   :name: Object1
-   :width: 304px
-   :height: 41px
+   * - :math:`\rho_a`
+     - eðlisþéttleiki lofts
+     - :math:`kg/m^3`
+   * - :math:`p_a`
+     - loftþrýstingur (þurrt loft)
+     - :math:`Pa`
+   * - :math:`p_w`
+     - rakþrýstingur
+     - :math:`Pa`
+   * - :math:`T`
+     - hitastig
+     - :math:`K`
 
-þar sem \ :sub:`a`\  eðlisþéttleiki lofts, kg/m\ :sup:`3`
+Kvik seigja lofts:
 
-p\ :sub:`a`\  loftþrýstingur (þurrt loft), Pa
+.. math::
 
-p\ :sub:`w`\  rakaþrýstingur, Pa
+   \eta_a = (17.1 + 0.049 \cdot \theta) \cdot 10^{-6} \quad \text{N·s/m}^2
 
-T hitastig, K
 
-Kvik seigja lofts; \ :sub:`a`\ =(17.1+0.049)10\ :sup:`-6`\ 
-N·s/m\ :sup:`2`
-
-| 
-
-4.2 Lofthreyfing við byggingu og loftþrýstingur
+Lofthreyfing við byggingu og loftþrýstingur
 -----------------------------------------------
 
-**Áhrif vinds**
+Áhrif vinds
+???????????
 
 Hérlendis er vindur almennt langmikilvægasta orsök lofthreyfinga í og
 við byggingu. Þegar loftið lendir á fyrirstöðu þá breytir það um stefnu
@@ -57,68 +64,84 @@ Bernoulli’s þá er summan af hreyfiorku, þrýstiorku og stöðuorku fasti,
 en varðandi vindálag á byggingar má líta svo á að stöðuorkan breytist
 lítið.
 
-| 
+.. admonition:: Jafna 4.1
+   :class: jafna
 
-½∙∙v\ :sup:`2`\ +p\ :sub:`a`\ +g∙h∙=fasti (4.1)
+   .. math::
+      1/2 \cdot \rho \cdot v^2 + p_a + g \cdot h \cdot \rho = fasti
 
-| 
+þar sem 
 
-þar sem  eðlisþéttleiki lofts, kg/m\ :sup:`3`\  (1,25
-kg/m\ :sup:`3`\  við 10 °C og 101300 Pa)
+.. list-table::
+   :header-rows: 0
+   :widths: 10 60 30
 
-v vindhraði, m/s
-
-p\ :sub:`a`\  loftþrýstingur í ótrufluðu streymi, Pa
-
-g fallhröðun jarðar, m/s\ :sup:`2`
-
-h hæð (yfir viðmiðunarplani), m
-
-| 
+   * - :math:`\rho`
+     - eðlisþéttleiki lofts (:math:`\rho \approx 1{,}25 \ kg/m^3` við 10 °C og 101300 Pa)
+     - :math:`kg/m^3`
+   * - :math:`v`
+     - vindhraði
+     - :math:`m/s`
+   * - :math:`p_a`
+     - loftþrýstingur í ótrufluðu streymi
+     - :math:`Pa`
+   * - :math:`g`
+     - fallhröðun jarðar
+     - :math:`m/s^2`
+   * - :math:`h`
+     - hæð (yfir viðmiðunarplani)
+     - :math:`m`
 
 Venja er að gefa upp vindþrýsting á flatareiningu, p, sem (jafna 4.2);
 
-| 
+.. admonition:: Jafna 4.2
+   :class: jafna
 
-p=∙q (4.2)
+   .. math::
+      p = \mu \cdot q
 
-| 
+þar sem 
 
-þar sem p þrýstingur, Pa
+.. list-table:: 
+   :header-rows: 0
+   :widths: 10 60 30
 
- formstuðull, -
-
-q grunnálag vinds, Pa
+   * - :math:`p`
+     - þrýstingur
+     - :math:`Pa`
+   * - :math:`\mu`
+     - formstuðull
+     - :math:`-`
+   * - :math:`q`
+     - grunnálag vinds
+     - :math:`Pa`
 
 og
 
-q=½∙∙v\ :sup:`2`\  (4.3)
+.. admonition:: Jafna 4.3
+   :class: jafna
 
-| 
-
+   .. math::
+      q = 1/2 \cdot \rho v^2
+ 
 Athuga skal að þrátt fyrir beina samsvörun milli jöfnu 4.3 og fyrsta lið
 í Bernoulli jöfnunni (4.1) þá er í ákvörðun vindálagsins ekki endilega
 gengið útfrá því að öll hreyfiorkan breytist í þrýsting, heldur er
 formstuðullinn ákvarðaður (með mælingum) þannig að jafna 4.2 gildir
 þegar grunnálagið er reiknað samkvæmt jöfnu 4.3.
 
-| 
-
-Formstuðla yfirborðs, , má t.d. fá úr álagsstöðlum fyrir vindálag, mynd
+Formstuðla yfirborðs, :math:`\mu`, má t.d. fá úr álagsstöðlum fyrir vindálag, mynd
 4.1.
 
-| 
+.. figure:: ./myndir/kafli04/formstudlar.png
+  :align: center
+  :width: 90%
 
-.. image:: myndir/kafli04_html_f1d7037b3e8b0917.png
-   :name: Image2
-   :width: 576px
-   :height: 450px
-
-Mynd 4.1 Formstuðlar vindálags á byggingu (heimild: staðallinn DS 410,
-gömul útgáfa)
+.. centered:: 
+   Mynd 4.1 Formstuðlar vindálags á byggingu (heimild: staðallinn DS 410,
+   gömul útgáfa)
 
 | 
-
 Í stöðlum er almennt miðað við að þrýstingur innanhúss geti verið ýmist
 undir- eða yfirþrýstingur miðað við þrýsting í ótrufluðu streymi
 utandyra. Formstuðull innri þrýstings er háður dreifingu lekastaða í
@@ -129,110 +152,126 @@ hvort sem er 0,2 (yfirþrýstingur) eða -0,3 (undirþrýstingur) þegar gert
 er ráð fyrir að loftlekastaðir séu jafndreifðir á hjúpveggjum og engir
 skilveggir.
 
-| 
-
 Útfrá jöfnu 4.2 má þá reikna ástreymisþrýsting, og mismunaþrýsting fyrir
 byggingarhluta að einhverjum formstuðlum og vindhraða gefnum. Athuga
 skal að þrýstimunurinn er drifkraftur loftunar í rásinni, en þrýstimunur
 milli hitaðs rýmis og loftrásar getur einnig valdið loftskiptum milli
 rýmis og rásar, mynd 4.2.
 
-| 
+Dæmi 4.1. 
+?????????
 
-| 
-
-Dæmi 4.1. Reiknað þrýstifall yfir vegg vegna vinds sem stendur þvert á
+Reiknað þrýstifall yfir vegg vegna vinds sem stendur þvert á
 flötinn. Gert er ráð fyrir að loftlekastaðir dreifist jafnt á alla
 veggfleti (og því undirþrýstingur í húsinu).
 
 Vindhraði í ótrufluðu streymi v=5 m/s (algengur meðalvindhraði í
 Reykjavík).
 
-Formstuðull úti áveðurs \ :sub:`e`\ =0,7, formstuðull inni
-\ :sub:`e`\ =-0,3, eðlisþéttleiki lofts \ :sub:`a`\ =1,25
-kg/m\ :sup:`3`
+Formstuðull úti áveðurs :math:`\mu_e = 0.7`, formstuðull inni
+:math:`\mu_e= -0.3`, eðlisþéttleiki lofts :math:`\rho_a = 1.25 kg/m^3` 
 
-Grunnálag vinds (jafna 4.3); q= ½∙\ :sub:`a`\ ∙v\ :sup:`2`\ =
-½∙1,25∙5\ :sup:`2`\ = 15,6 Pa
+Grunnálag vinds (jafna 4.3); :math:`q= 1/2 \cdot \rho_a \cdot v^2`
+= :math:`1/2 \cdot 1.25 \cdot 5^2 = 15.6 Pa`
 
-Þrýstifall yfir vegginn (jafna 4.2); p=∙q=(0,7-(-0,3))∙15,6 Pa= 15,6
-Pa
+Þrýstifall yfir vegginn (jafna 4.2); :math:`\Delta p = \mu \cdot q = (0,7-(-0,3)) \cdot 15,6 Pa = 18.7 Pa`
 
-Dæmi 4.2 Reiknað þrýstifall yfir loftrás í þaki vegna vinds beint á
+Dæmi 4.2 
+?????????
+
+Reiknað þrýstifall yfir loftrás í þaki vegna vinds beint á
 rásina áveðurs.
 
 Vindhraði í ótrufluðu streymi v=5 m/s (algengur meðalvindhraði í
 Reykjavík).
 
 Formstuðull (formstuðlar við op inn í rásina verða þeir sömu og á
-veggfletina hvoru megin) áveðurs \ :sub:`1`\ =0,7, hlémegin
-\ :sub:`2`\ =-0,5, þéttleiki lofts \ :sub:`a`\ =1,25 kg/m\ :sup:`3`
+veggfletina hvoru megin) áveðurs :math:`\mu_1 = 0.7`, hlémegin
+:math:`\mu_2 = -0.5` , þéttleiki lofts :math:`\rho_a = 1.25 kg/m^3`
 
-Grunnálag vinds (jafna 4.3); q= ½∙\ :sub:`a`\ ∙v\ :sup:`2`\ =
-½∙1,25∙5\ :sup:`2`\ = 15,6 Pa
+Grunnálag vinds (jafna 4.3); :math:`q = 1/2 \cdot \rho_a \cdot v^2`
+:math:`1/2 \cdot 1.25 kg/m^3 \cdot (5 m/s)^2 = 15,6 Pa`
 
-Þrýstifall yfir rásina (jafna 4.2); p=∙q=(0,7-(-0,5))∙15,6 Pa= 18,7 Pa
+Þrýstifall yfir rásina (jafna 4.2); :math:`\Delta p = \mu \cdot q = (0.7 - (-0.5)) \cdot 15.6 Pa = 18.7 Pa` 
 
-.. image:: myndir/kafli04_html_c7f3134a43eb8a9d.png
-   :alt: DrawObject1
-   :name: DrawObject1
-   :width: 641px
-   :height: 360px
 
-| 
+.. figure:: ./myndir/kafli04/mismunaþrýstingur.png
+  :align: center
+  :width: 90%
 
 Þrýstibreyting vegna hitamunar (skorsteinsáhrif)
+?????????????????????????????????????????????????
 
-Loftsúla af hæð h mun valda loftþrýstingi p\ :sub:`1`\  við neðri enda
+Loftsúla af hæð h mun valda loftþrýstingi :math:`p_1` við neðri enda
 súlunnar, jafna 4.4;
 
-| 
+.. admonition:: Jafna 4.4
+   :class: jafna
 
-p\ :sub:`1`\ =\ :sub:`1`\ ∙g\ :sub:`0`\ ∙h+p\ :sub:`0`\  (4.4)
+   .. math::
+      p_1 = \rho_1 \cdot g_0 \cdot h + p_0
 
-| 
+.. list-table:: *Skýringar á táknum – súlujöfnur*
+   :header-rows: 0
+   :widths: 10 60 30
 
-þar sem p\ :sub:`1`\  loftþrýstingur við botn súlu, Pa
-
-\ :sub:`1`\  eðlisþéttleiki lofts, kg/m\ :sup:`3`
-
-g\ :sub:`0`\  fallhröðun til jarðar, m/s\ :sup:`2`
-
-h hæð súlu, m
-
-p\ :sub:`0`\  loftþrýstingur við topp súlu, Pa
-
-| 
-
-| 
+   * - :math:`p_1`
+     - loftþrýstingur við botn súlu
+     - :math:`Pa`
+   * - :math:`\rho_1`
+     - eðlisþéttleiki lofts
+     - :math:`kg/m^3`
+   * - :math:`g_0`
+     - fallhröðun til jarðar
+     - :math:`m/s^2`
+   * - :math:`h`
+     - hæð súlu
+     - :math:`m`
+   * - :math:`p_0`
+     - loftþrýstingur við topp súlu
+     - :math:`Pa`
 
 Eðlisþéttleiki lofts má finna útfrá almenna gaslögmálinu og samlagningu
 hlutþrýstings á þurru lofti og rakaþrýstingi, jafna 4.5;
 
-| 
+.. admonition:: Jafna 4.5
+   :class: jafna
 
-|image1| (4.5)
+   .. math::
+      \rho_a = \frac{p_a \cdot M_a}{R \cdot T} + \frac{p_w \cdot M_w}{R \cdot T} = \frac{p_a}{287.05 \cdot T} + \frac{p_w}{461.495 \cdot T}
 
-þar sem \ :sub:`a`\  eðlisþéttleiki lofts, kg/m\ :sup:`3`
+þar sem 
 
-p\ :sub:`a`\  loftþrýstingur (þurrt loft), Pa
+.. list-table:: 
+   :header-rows: 0
+   :widths: 10 60 30
 
-p\ :sub:`w`\  rakaþrýstingur, Pa
-
-M\ :sub:`a`\  mólmassi þurrs lofts, kg/kmól
-
-M\ :sub:`w`\  mólmassi vatns, kg/kmól
-
-T hitastig, K
-
-R almenni gasfastinn, J/(kmól∙K)
+   * - :math:`\rho_a`
+     - eðlisþéttleiki lofts
+     - :math:`kg/m^3`
+   * - :math:`p_a`
+     - loftþrýstingur (þurrt loft)
+     - :math:`Pa`
+   * - :math:`p_w`
+     - rakþrýstingur
+     - :math:`Pa`
+   * - :math:`M_a`
+     - mólmassi þurrs lofts
+     - :math:`kg/kmol`
+   * - :math:`M_w`
+     - mólmassi vatns
+     - :math:`kg/kmol`
+   * - :math:`T`
+     - hitastig
+     - :math:`K`
+   * - :math:`R`
+     - almenni gasfastinn
+     - :math:`J/(kmol \cdot K)`
 
 | 
 
 Þéttleiki lofts breytist línulega í öfugu hlutfalli við breytingu á
-hitastigi, í jöfnu 4.4 má því nota gildi fyrir meðalþéttleika loftsins.
-
-| 
+hitastigi, í jöfnu 4.4 má því nota gildi fyrir meðalþéttleika loftsins. 
 
 Inniloft er hérlendis nánast alltaf hlýrra heldur en útiloft og af þessu
 hlýst þrýstimunur milli inni- og útilofts, hversu mikill þrýstimunurinn
@@ -240,121 +279,127 @@ er fer eftir hitamun í lofti og hæð byggingar (eða loftrásar). Ef
 inniaðstæður eru táknaðar með lágmerki i og útiaðstæður með e, þá fæst
 heildarþrýstimunurinn sem, jafna 4.6;
 
-| 
+.. admonition:: Jafna 4.6
+   :class: jafna
 
-p=p\ :sub:`i`\ -p\ :sub:`e`\ =
-g\ :sub:`0`\ ∙h∙(\ :sub:`i-`\ \ :sub:`e`\ )=
-g\ :sub:`0`\ ∙h∙\ :sub:`i`\ ∙(1-\ :sub:`e/`\ \ :sub:`i`\ )~
-g\ :sub:`0`\ ∙h∙\ :sub:`i`\ ∙(1-T\ :sub:`i`\ /T\ :sub:`e`\ ) (4.6)
-
-| 
-
-| 
+   .. math::
+      \Delta p = p_i - p_e = g_0 \cdot h \cdot (\rho_i - \rho_e) ~ g_0 \cdot h \cdot \rho_i \cdot (1- \frac{T_i}{T_e})
 
 Þrýstimunur milli úti- og inniaðstæða fer eftir staðsetningu tenginga
 (opa) milli rýmanna. Þessu má lýsa eins og sýnt er í mynd 4.3.
 
-|image2| |DrawObject2|
+.. figure:: ./myndir/kafli04/skorsteinsloftun1.png
+  :align: center
+  :width: 90%
 
 | 
 
-Mynd 4.3 Þrýstimunur vegna hitastigsmunar
+**Dæmi 4.3:** 
+   Reiknaður þrýstimunur inni og úti við gólf einnar hæðar húss
+   þar sem 0-lína þrýstifalls (opnir gluggar) liggur í hæðinni 1,5 m yfir
+   gólfi. :math:`\theta_i = 22°C`, :math:`\theta_e = -2°C`, :math:`\rho_m = 1.25 kg/m^3`
 
-#. Op einungis efst
-
-#. Op dreifð um allan hjúpinn (eða aðalop um miðja vegghæð)
-
-#. Op einungis neðst
-
-| 
-
-Dæmi 4.3: Reiknaður þrýstimunur inni og úti við gólf einnar hæðar húss
-þar sem 0-lína þrýstifalls (opnir gluggar) liggur í hæðinni 1,5 m yfir
-gólfi. \ :sub:`i`\ = 22 °C, \ :sub:`e`\ = -2 °C, \ :sub:`m`\ ~1,25
-kg/m\ :sup:`3`
-
-p=p\ :sub:`i`\ -p\ :sub:`e`\ ~
-g\ :sub:`0`\ ∙h∙\ :sub:`m`\ ∙(1\ :sub:`-`\ T\ :sub:`i`\ /T\ :sub:`e`\ )=9,81∙1,5∙1,25∙
-(1-(273+22)/(273-2))= -1,5 Pa
+.. math::
+   \Delta p = p_i - p_e ~ g_o \cdot h \cdot \rho_m \cdot (1 - \frac{T_i}{T_e})
+   
+   = 9.81 m/s^2 \cdot 1.5 m \cdot 1.25 kg/m^3 \cdot (1- \frac{(22+273)}{(-2+273)}) = -1.5 Pa
 
 | 
 
-Dæmi 4.4: Reiknaður þrýstimunur inni og úti við gólf 5 hæða stigahúss
-sem loftræst er upp úr þaki, \ :sub:`i`\ = 22 °C, \ :sub:`e`\ = -2 °C,
-\ :sub:`m`\ ~1,25 kg/m\ :sup:`3`\ , hver hæð er 2,7 m.
+**Dæmi 4.4:**
+Reiknaður þrýstimunur inni og úti við gólf 5 hæða stigahúss
+sem loftræst er upp úr þaki, :math:`\theta_i = 22°C`, :math:`\theta_e = -2°C` :math:`\rho_m = 1.25 kg/m^3`, hver hæð er 2,7 m.
 
-p=p\ :sub:`i`\ -p\ :sub:`e`\ ~
-g\ :sub:`0`\ ∙h∙\ :sub:`m`\ ∙(1\ :sub:`-`\ T\ :sub:`i`\ /T\ :sub:`e`\ )=9,81∙(4∙2,7)∙1,25∙
-(1-(273+22)/(273-2))= -10,8 Pa
-
-| 
+.. math::
+   \Delta p = p_i - p_e ~ g_o \cdot h \cdot \rho_m \cdot (1 - \frac{T_i}{T_e})
+   
+   = 9.81 m/s^2 \cdot (4 \cdot 2.7 m)  \cdot 1.25 kg/m^3 \cdot (1- \frac{(22+273)}{(-2+273)}) = -10.8 Pa
 
 Þrýstimunur vegna mismunahita er almennt lítill, og oftast mun minni
 heldur en þrýstimunur vegna vinds. Í einstaka tilvikum getur hitamunur
 þó haft umtalsverð áhrif, t.d. eru þekkt dæmi um að loftpoki í mæni á
 bröttum, loftræstum þökum hafi teppt loftun þakanna.
 
-| 
-
-4.3 Rakaflutningur vegna loftstreymis
+Rakaflutningur vegna loftstreymis
 -------------------------------------
 
 Rakaflutningur vegna loftstreymis verður í samræmi við jöfnu 4.7;
 
-| 
+.. admonition:: Jafna 4.7
+   :class: jafna
 
-G=w∙V\ :sub:`a`\  (4.7)
+   .. math::
+      G = w \cdot V_a
 
-| 
+Þar sem
 
-þar sem G rakaflutningur, kg/s
+.. list-table:: 
+   :header-rows: 0
+   :widths: 10 60 30
 
-w loftraki, kg/m\ :sup:`3`
-
-V\ :sub:`a`\  loftstreymi, m\ :sup:`3`\ /s
-
-| 
-
-| 
-
+   * - :math:`G`
+     - rakaflutningur
+     - :math:`kg/s`
+   * - :math:`w`
+     - loftraki
+     - :math:`kg/m^3`
+   * - :math:`V_a`
+     - loftstreymi
+     - :math:`m^3/s`
+ 
 Streymi í vökva eða póróttu efni má skrifa eins og jafna 4.8 sýnir,
 jafnan er kennd við Darcy;
 
-|image3| (4.8)
+.. admonition:: Jafna 4.8
+   :class: jafna
 
-| 
+   .. math::
+      V_a = A \cdot \frac{B_0}{\eta} \cdot \frac{\partial p}{\partial x}
 
-þar sem V\ :sub:`a`\  streymi, m\ :sup:`3`\ /s
+Þar sem
 
-B\ :sub:`0`\  lofthleypni efnis (e: air permeability), m\ :sup:`2`
+.. list-table:: 
+   :header-rows: 0
+   :widths: 10 60 30
 
- kvik seigja, N·s/m\ :sup:`2`
-
-dp/dx stigull þrýstings (t.d. loft-), Pa
-
-| 
+   * - :math:`V_a`
+     - streymi
+     - :math:`m^3/s`
+   * - :math:`B_0`
+     - loftheypni efnis (*e: air permeability*)
+     - :math:`m^2`
+   * - :math:`\eta`
+     - kvik seigja
+     - :math:`N \cdot s/m^2`
+   * - :math:`dp/dx`
+     - stigull þrýstings (t.d. loft-)
+     - :math:`Pa`
 
 Jafna 4.8 er umskrifað fyrir einsleitt efnislag þannig (jafna 4.9)
 
-| 
+.. admonition:: Jafna 4.9
+   :class: jafna
 
-|image4| (4.9)
+   .. math:: 
+      V_a = A \cdot \frac{B_0}{\eta} \cdot \frac{\Delta p}{\Delta L}
 
-| 
-
-þar sem L lengd streymisrásar (þykkt efnislags), m
+þar sem :math:`\Delta L` lengd streymisrásar (þykkt efnislags), m
 
 ... aðrar stærðir sem fyrr
 
-| 
+|
 
 Iðulega eru efnisstuðlar og þykkt í jöfnu 4.9 teknar saman í eina stærð
 til einföldunar, jafna 4.10;
 
-|image5| (4.10)
+.. admonition:: Jafna 4.10
+   :class: jafna
 
-þar sem R\ :sub:`l`\  lofthleypnimótstaða efnislags, m\ :sup:`2`\ ∙s∙Pa/
-m\ :sup:`3`
+   .. math::
+      R_l = \frac{\eta \cdot L}{B_0}
+
+
+þar sem :math:`R_l` lofthleypnimótstaða efnislags, :math:`m^2 \cdot s \cdot Pa / m^3`
 
 ... aðrar stærðir sem fyrr
 
