@@ -341,7 +341,7 @@ Seighersla (e. tempering)
 Stýra eiginleikum enn frekar með endurupphitun (lægri hiti en við glæðingu) og hægri kælingu (þó hraðar en við glæðingu)
 Hefur áhrif á hörku og seigju.
 
-.. figure:: ./myndir/kafli10/Seighersla.png
+.. figure:: ./myndir/kafli10/seighersla.png
   :align: center
   :width: 80%
 
