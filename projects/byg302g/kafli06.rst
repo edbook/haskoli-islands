@@ -415,7 +415,7 @@ Aðrar línur fyrir prófun í tiltekinn dagafjölda og loks skriðmörkin við
 4- fjórðungur sýnir tímaháð skrið fyrir gefna (sömu) spennu í efni
 
 Þreyta (e. fatigue, d. udmattelse)
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Þegar efni verður fyrir síendurteknu álagi (álagshrinum) þá getur slíkt framkallað
 þreytubrot (þetta er almennt skýrt þannig að örsprungur (e. microcracks) séu til staðar í
@@ -530,6 +530,3 @@ Atriði sem hafa áhrif á mat á prófunarniðurstöðum
   Raki skiptir alltaf verulegu máli þegar rakadræg efni eiga í hlut; efnisstyrkur og
   stífleiki t.d. timburs er mjög háður efnisraka (sbr. umfjöllun um timbur síðar!).
 
-Heimildir
----------
-.. bibliography::

@@ -84,6 +84,8 @@ pússningu og fylliefni en þessi efni eru alls 3322 kg/m2 íbúðarrýmis.
 Gagnlegur orðskýringalisti: https://www.princeton.edu/~maelabs/mae324/glos324/index.htm
 
 
-Heimildir
----------
-.. bibliography::
+
+.. 
+   Heimildir
+   .. bibliography::
+

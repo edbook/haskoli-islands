@@ -13,6 +13,7 @@ Varmaflutningur getur verið eftir þrem leiðum;
 .. figure:: ./myndir/kafli04/varmaflutningsleidir.png
   :align: center
   :width: 100%
+
 Mynd 4.1. Mynd fengin úr :cite:`1978:Halldorsson`
 
 .. youtube:: Eizsm5V8c_c
@@ -460,15 +461,15 @@ Leiðnitala efnis er mæld með þrennu móti;
     :align: center
     :width: 85%
 
-2. Hitafall yfir mælisýni og þekkt viðmiðunarsýni mælt
+2. Hitafall yfir mælisýni og þekkt viðmiðunarsýni mælt.
+
   Eitt sýni mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
 
   .. figure:: ./myndir/kafli04/Uppbygging2.png
     :align: center
     :width: 100%
 
-3. Varmaflutningur í gegnum sýnið mældur (þetta er keimlíkt og í lið b). Eitt sýni
-  mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
+3. Varmaflutningur í gegnum sýnið mældur (þetta er keimlíkt og í lið b). Eitt sýni mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
 
   .. figure:: ./myndir/kafli04/Uppbygging3.png
     :align: center
@@ -533,7 +534,3 @@ Uppgefnar leiðnitölur algengra einangrunarefna
   :width: 100%
 
 
-
-Heimildir
----------
-.. bibliography::
