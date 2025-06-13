@@ -12,7 +12,7 @@ Talnakerfi
 Náttúrulegu tölurnar  :math:`\mathbb{N}`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tölurnar :math:`0,1,2,3, \dots` köllum við :hover:`náttúrulegu tölurnar, náttúruleg tala`. :hover:`Mengi, mengi, 5` náttúrulegu talnanna er táknað með :math:`\mathbb{N}.`
+Tölurnar :math:`0,1,2,3, \dots` köllum við :hover:`náttúrulegu tölurnar, náttúruleg tala, RAFT`. :hover:`Mengi, mengi, 1` náttúrulegu talnanna er táknað með :math:`\mathbb{N}.`
 
 Heiltölurnar :math:`\mathbb{Z}`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,7 +28,7 @@ Mengi heiltalna er táknað með :math:`\mathbb{Z}`.
 
 Ræðu tölurnar :math:`\mathbb{Q}`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:hover:`Ræðar tölur, ræð tala` samanstanda af öllum brotum :math:`\frac{p}{q}` þar sem :math:`p` og :math:`q` eru heilar tölur og :math:`q \neq 0`. Talan :math:`p` nefnist :hover:`teljari` brotsins og talan :math:`q` :hover:`nefnari` þess.
+:hover:`Ræðar tölur, ræð tala` samanstanda af öllum brotum :math:`\frac{p}{q}` þar sem :math:`p` og :math:`q` eru heilar tölur og :math:`q \neq 0`. Talan :math:`p` nefnist :hover:`teljari, teljari, 1` brotsins og talan :math:`q` :hover:`nefnari` þess.
 
 Mengi ræðra talna er táknað með :math:`\mathbb{Q}`.
 
