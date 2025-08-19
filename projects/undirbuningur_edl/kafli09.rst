@@ -60,7 +60,7 @@ Helstu efnisatriði vinnubókar fyrir hverja tilraun eru:
 
 Ef skrifa á skýrslu síðar um tilraunina er mikilvægt að vinnubókin sé vel unnin og skýr.
 
-`Meira um verkbækur <https://notendur.hi.is/~martin/e0/verkbok/>`_ af síðu Martins.
+`Meira um verkbækur <https://martin.hi.is/e0/verkbok/>`_ af síðu Martins.
 
 Óvissureikningar
 ----------------
@@ -136,8 +136,8 @@ Gerum loks ráð fyrir að við höfum stærð :math:`x \pm \Delta x` og fall :m
 
 `Skjal um meðferð gagna <https://notendur.hi.is/ario/e1/e1lec.pdf>`_ af síðu Ara Ólafssonar
 
-`Almennt um óvissur <https://notendur.hi.is/~martin/e0/ovissur_maelistaerda/>`_ af síðu Martins Swifts.
+`Almennt um óvissur <https://martin.hi.is/e0/ovissur_maelistaerda/>`_ af síðu Martins Swifts.
 
-`Afleiddar óvissur <https://notendur.hi.is/~martin/e0/ovissur_afleiddra_staerda/>`_ af síðu Martins Swifts.
+`Afleiddar óvissur <https://martin.hi.is/e0/ovissur_afleiddra_staerda/>`_ af síðu Martins Swifts.
 
-`Óvissa hallatölu <https://notendur.hi.is/ario/e1/vidauk/hallatala.pdf>`_ af síðu Ara Ólafssonar.
+`Óvissa hallatölu <https://ario.hi.is/e1/vidauk/hallatala.pdf>`_ af síðu Ara Ólafssonar.
