@@ -38,10 +38,10 @@ Verklegar æfingar
 -----------------
 Í námskeiðunum *Eðlisfræði 1V*, *Verklegri eðlisfræði 1R* og *Eðlisfræði B* verða framkvæmdar nokkrar tilraunir.
 Miklu máli skiptir að lesa verkseðilinn fyrirfram, mæta vel undirbúin/n og á réttum tíma. Í kennslustofum ætluðum verklegum tilraunum eru strangari reglur um umgengni, t.d. um neyslu matar og drykkja, sem öllum ber að kynna sér og fylgja.
-Verkseðlar og upplýsingar um röðun nemenda í hópa munu birtast á heimasvæði Ara Ólafsonar í upphafi kennslumisseris ( `Eðlisfræði 1 <https://notendur.hi.is/ario/e1.html>`_ , `Eðlisfræði B <https://notendur.hi.is/ario/eb.html>`_ ). Yfirleitt er unnið í 3-4 manna hópum og framkvæmd tilraunanna tekur 3-4 klukkustundir. Að tilrauninni lokinni þarf hópurinn að klára vinnubókina áður en henni er síðan skilað til yfirferðar hjá kennara.
+Verkseðlar og upplýsingar um röðun nemenda í hópa munu birtast á heimasvæði Ara Ólafsonar í upphafi kennslumisseris ( `Eðlisfræði 1 <https://ario.hi.is/e1.html>`_ , `Eðlisfræði B <https://ario.hi.is/eb.html>`_ ). Yfirleitt er unnið í 3-4 manna hópum og framkvæmd tilraunanna tekur 3-4 klukkustundir. Að tilrauninni lokinni þarf hópurinn að klára vinnubókina áður en henni er síðan skilað til yfirferðar hjá kennara.
 
-`Þetta skjal <https://notendur.hi.is/ario/e1/e1lec.pdf>`_ fjallar um meðferð og úrvinnslu gagna og er þess virði að lesa.
-Á heimasvæði `Martins Swift <https://notendur.hi.is/~martin/e0/>`_ má nálgast allskonar ítarefni um verklegar tilraunir.
+`Þetta skjal <https://ario.hi.is/e1/e1lec.pdf>`_ fjallar um meðferð og úrvinnslu gagna og er þess virði að lesa.
+Á heimasvæði `Martins Swift <https://martin.hi.is/e0/>`_ má nálgast allskonar ítarefni um verklegar tilraunir.
 
 Verkbækur
 ---------
@@ -60,7 +60,7 @@ Helstu efnisatriði vinnubókar fyrir hverja tilraun eru:
 
 Ef skrifa á skýrslu síðar um tilraunina er mikilvægt að vinnubókin sé vel unnin og skýr.
 
-`Meira um verkbækur <https://notendur.hi.is/~martin/e0/verkbok/>`_ af síðu Martins.
+`Meira um verkbækur <https://martin.hi.is/e0/verkbok/>`_ af síðu Martins.
 
 Óvissureikningar
 ----------------
@@ -136,8 +136,8 @@ Gerum loks ráð fyrir að við höfum stærð :math:`x \pm \Delta x` og fall :m
 
 `Skjal um meðferð gagna <https://notendur.hi.is/ario/e1/e1lec.pdf>`_ af síðu Ara Ólafssonar
 
-`Almennt um óvissur <https://notendur.hi.is/~martin/e0/ovissur_maelistaerda/>`_ af síðu Martins Swifts.
+`Almennt um óvissur <https://martin.hi.is/e0/ovissur_maelistaerda/>`_ af síðu Martins Swifts.
 
-`Afleiddar óvissur <https://notendur.hi.is/~martin/e0/ovissur_afleiddra_staerda/>`_ af síðu Martins Swifts.
+`Afleiddar óvissur <https://martin.hi.is/e0/ovissur_afleiddra_staerda/>`_ af síðu Martins Swifts.
 
-`Óvissa hallatölu <https://notendur.hi.is/ario/e1/vidauk/hallatala.pdf>`_ af síðu Ara Ólafssonar.
+`Óvissa hallatölu <https://ario.hi.is/e1/vidauk/hallatala.pdf>`_ af síðu Ara Ólafssonar.
