@@ -180,14 +180,14 @@ Dæmi um eðlisfræðilegt niðurbrot;
 
 * Núningur
 * Þreyta undir breytilegu álagi (málmar) eða rakabreytingu (timbur)
-.. * "Þreyta" timburs undir langtímaálagi
+* "Þreyta" timburs undir langtímaálagi
 * Yfirborðsflögnun stökkra efna (vegna hitaáraunar)
 * Hita- eða rakahreyfingar geta valdið sprungum í efni; sem opnar leið fyrir raka
   inn í efnið, og orsakar raf-efnafræðilegt niðurbrot (t.d. ryðmyndun) og loks
   eðlisfræðilega áraun á efnið (vegna þenslu)
 * Frostþol steypu; vatn eykur rúmmál sitt um 9% þegar það frýs. Miklar spennur byggjast upp í póróttu efni þar sem pórurnar eru vatnsfylltar og efnið springur.
 
-Frostþol steypu
+*Frostþol steypu*
 
 Vatn, a.m.k. hluti þess, í steypu getur frosið, umfang þessa hluta vatnsins fer eftir
 pórudreifingu og hitastigi (sjá línurit)

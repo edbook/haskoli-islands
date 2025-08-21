@@ -235,7 +235,7 @@ Setning
 
 .. index::
     stikaferill;samfellt diffranlegur
-    stikaferill;þjáll
+    stikaferill;reglulegur
 
 Skilgreining 
 ~~~~~~~~~~~~~
@@ -249,14 +249,14 @@ Skilgreining
 
     Stikaferillinn er sagður :hover:`samfellt diffranlegur` ef föllin
     :math:`r_1(t),\ldots,r_n(t)` eru öll diffranleg og afleiður þeirra eru
-    samfelldar. Samfellt diffranlegur stikaferill er sagður :hover:`þjáll`
+    samfelldar. Samfellt diffranlegur stikaferill er sagður :hover:`reglulegur`
     ef :math:`\mbox{${\bf r}$}'(t)\neq\mbox{${\bf 0}$}` fyrir
     öll :math:`t`.
 
     Stikaferillinn er sagður *samfellt diffranlegur á köflum* ef til eru
     tölur :math:`b_0,\ldots,b_k` þannig að :math:`a=b_0<b_1<\cdots<b_k=b` og
     stikaferillinn er samfellt diffranlegur á hverju bili
-    :math:`[b_{i-1}, b_i]`. Það að stikaferill sé :hover:`þjáll á köflum` er skilgreint á sambærilegan hátt.
+    :math:`[b_{i-1}, b_i]`. Það að stikaferill sé reglulegur á köflum er skilgreint á sambærilegan hátt.
 
 .. index::
     stikaferill;snertilína
@@ -581,7 +581,7 @@ Skilgreining
 
     Látum :math:`\cal C` vera feril í plani eða rúmi. Látum
     :math:`\mbox{${\bf r}$}` vera stikun á :math:`\cal C` og gerum ráð fyrir
-    að :math:`\mbox{${\bf r}$}` sé þjáll stikaferill
+    að :math:`\mbox{${\bf r}$}` sé reglulegur stikaferill
     (þ.e.a.s. :math:`\mbox{${\bf r}$}` er samfellt diffranlegur stikaferill
     og :math:`\mbox{${\bf r}$}'(t)\neq \mbox{${\bf 0}$}` fyrir öll
     :math:`t`). *Einingarsnertivigurinn* :math:`\mbox{${\bf T}$}` við
@@ -755,7 +755,7 @@ Setning
     :class: setning
 
     Látum :math:`\cal C` vera feril í plani eða rúmi. Gerum ráð fyrir að
-    :math:`\mbox{${\bf r}$}` sé þjáll stikaferill sem stikar :math:`\cal C`.
+    :math:`\mbox{${\bf r}$}` sé reglulegur stikaferill sem stikar :math:`\cal C`.
     Ritum :math:`\mbox{${\bf v}$}=\mbox{${\bf r}$}'(t)` og
     :math:`\mbox{${\bf a}$}=\mbox{${\bf r}$}''(t)`. Þá gildir í punktinum
     :math:`\mbox{${\bf r}$}(t)` að
