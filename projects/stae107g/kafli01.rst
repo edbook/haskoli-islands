@@ -261,11 +261,12 @@ Setning: Einfaldar línuaðgerðir
 .. admonition:: Setning
     :class: setning
 
-        **1.** **Umskipting** (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
+        **1.** **Víxlun** (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
 
-        **2.** **Víxlun** (e. interchange): að víxla á línum :math:`R_i` og :math:`R_j`.
+        **2.** **Skölun** (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
 
-        **3.** **Skölun** (e. scaling): að margfalda línu :math:`R_i` með fasta :math:`c\neq 0`
+        **3.** **Umskipting** (e. replacement): að skipta út línu :math:`R_i` fyrir :math:`R_i+cR_j` þar sem :math:`R_j` er önnur lína og :math:`c` er fasti.
+
 
     Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppisins.
 
@@ -507,7 +508,7 @@ Skilgreining: Frjálsar breytur og grunnbreytur
 .. admonition:: Skilgreining
   :class: skilgreining
 
-  Þær breytur línulegs jöfnuhneppis á efri stallagerð sem ekki eru forystubreytur kallast **frjálsar breytur** (e. free variables). Breytur sem ekki eru frjálsar eru kallaðar **grunnbreytur** (e. leading variables).
+  Þær breytur línulegs jöfnuhneppis á efri stallagerð sem svara til dálka með forystustuðla kallast **grunnbreytur** (e. leading variables). Breytur sem eru ekki grunnbreytur kallast **frjálsar breytur** (e. free variables). 
 
 
 Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning
@@ -536,21 +537,41 @@ Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning
     \end{array}\right].
 
   Við sjáum að :math:`x_1, x_2` og :math:`x_4`
-  eru grunnbreytur, en :math:`x_3` og :math:`x_5` eru frjálsar því þar sitja aldrei forystustuðlar.
+  eru grunnbreytur, því þar sitja forystustuðlar. Breyturnar :math:`x_3` og :math:`x_5` eru frjálsar því þar sitja ekki forystustuðlar.
   Venja er að rita frjálsar breytur með öðrum bókstöfum, t.d. :math:`s := x_3` og :math:`t := x_5`.
 
-  Neðsta jafnan í aukna fylkinu gefur :math:`-2 x_4 = 4`, þ.e. :math:`x_4 = -2`. Setjum svo inn í næst neðstu jöfnuna
+  Lesum svo út úr jöfnunum neðan frá og upp. Neðsta jafnan í aukna fylkinu gefur :math:`-2 x_4 = 4` svo :math:`x_4 = -2`. 
 
-  .. math:: x_2= 4 - x_3 - 3 x_4 - x_5 = 10 - s - t.
+  Setjum svo inn fyrir :math:`x_3`, :math:`x_4` og :math:`x_5` í næst neðstu jöfnuna:
 
-  Með þessum upplýsingum verður efsta jafnan
+  .. math:: \begin{align*}
+        x_2 &= 4 - x_3 - 3 x_4 - x_5 \\
+            &= 4 - s - 3(-2) - t \\
+            & 10 - s - t
+    \end{align*}
 
-  .. math:: x_1 = - x_2 - x_3 - x_4 - 2 x_5 = -8 -t.
+Setjum að lokum inn fyrir :math:`x_2`, :math:`x_3`, :math:`x_4` og :math:`x_5` í efstu jöfnuna:
 
-  Lausn jöfnuhneppisins á **stikaframsetningu** er því
+  .. math:: \begin{align*}
+        x_1 &= - x_2 - x_3 - x_4 - 2 x_5 \\
+            &=  - (10 - s - t) - x -(-2) - 2t \\
+            & -8 - t
+    \end{align*}
+
+Við fáum því  .. math:: \begin{bmatrix}
+    x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
+    \begin{bmatrix}
+    -8 - t\\
+    10-s-t\\
+    s\\
+    -2\\
+    t
+    \end{bmatrix}
+
+Þetta má skrifa á  **stikaframsetningu** sem
 
   .. math:: \begin{bmatrix}
-    x_2 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
+    x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
     \begin{bmatrix}
     -8 - t\\
     10-s-t\\
@@ -631,7 +652,7 @@ Aftur-á-bak innsetning
   :class: skilgreining
 
   Línulegt jöfnuhneppi af efra stallaformi má leysa með aftur-á-bak innsetningu með því að byrja á neðstu jöfnu (sem ekki er núlllína)
-  og lesa út formúlu fyrir forystubreytu hennar út frá frjálsu breytunum. Síðan er næsta lína fyrir ofan skoðuð og formúlan fyrir neðstu breytunni notuð. Þannig er haldið áfram "aftur á bak" þar til lausn
+  og lesa út formúlu fyrir grunnbreytu hennar út frá frjálsu breytunum. Síðan er næsta lína fyrir ofan skoðuð og formúlan fyrir neðstu breytunni notuð. Þannig er haldið áfram "aftur á bak" þar til lausn
   fæst á jöfnuhneppinu.
 
 
