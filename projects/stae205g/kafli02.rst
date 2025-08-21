@@ -337,11 +337,11 @@ Skilgreining
     Látum :math:`f(x,y)` vera fall af tveimur breytum :math:`x` og :math:`y`
     sem er skilgreint á opinni skífu með miðju í punktinum :math:`(a,b)`.
 
-    Skilgreinum :hover:`hlutafleiðu,hlutafleiða` m.t.t. :math:`x` í :math:`(a,b)` með
+    Skilgreinum hlutafleiðu m.t.t. :math:`x` í :math:`(a,b)` með
 
     .. math:: \displaystyle f_1(a,b)=\lim_{h\rightarrow 0}\frac{f(a+h,b)-f(a,b)}{h}
 
-    og :hover:`hlutafleiðu,hlutafleiða` m.t.t. :math:`y` í :math:`(a,b)` með
+    og hlutafleiðu m.t.t. :math:`y` í :math:`(a,b)` með
 
     .. math:: \displaystyle f_2(a,b)=\lim_{k\rightarrow 0}\frac{f(a,b+k)-f(a,b)}{k}
 
@@ -1213,7 +1213,7 @@ Skilgreining
     :class: skilgreining
 
     Látum :math:`\mbox{${\bf u}$}=u\mbox{${\bf i}$}+v\mbox{${\bf j}$}` vera
-    einingarvigur. :hover:`Stefnuafleiða,stefnuafleiða` :math:`f` í punktinum :math:`(a,b)` í
+    einingarvigur. Stefnuafleiða :math:`f` í punktinum :math:`(a,b)` í
     stefnu :math:`\mbox{${\bf u}$}` er skilgreind sem
 
     .. math:: \displaystyle D_{\mbox{${\bf u}$}}f(a,b)=\lim_{h\rightarrow 0^+}\frac{f(a+hu, b+hv)-f(a,b)}{h}
@@ -1391,7 +1391,7 @@ Skilgreining
 .. admonition:: Skilgreining
     :class: skilgreining
 
-    :hover:`Jacobi-ákveða,Jacobi-ákveða` tveggja falla :math:`u=u(x,y)` og :math:`v=v(x,y)` með
+    Jacobi-ákveða,Jacobi-ákveða tveggja falla :math:`u=u(x,y)` og :math:`v=v(x,y)` með
     tilliti til breytanna :math:`x` og :math:`y` er skilgreind sem
 
     .. math:: \displaystyle

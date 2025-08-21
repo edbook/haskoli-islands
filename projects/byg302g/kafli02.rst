@@ -226,7 +226,7 @@ Jónabindingar
     :height: 400
 
 Kóvalentbindingar
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 .. figure:: ./myndir/kafli02/kovalentbinding.png
   :align: center

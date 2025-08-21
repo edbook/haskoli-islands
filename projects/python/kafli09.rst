@@ -411,12 +411,7 @@ helstu stýristika og stýriskipanir.
 .. admonition:: Athugasemd: Um litaskala
    :class: athugid
    
-   Þessar fyrirlestrarnótur skauta framhjá umfjöllun um **litaskala**, en um þá
-   er fjallað allítarlega í `Viðauka A4
-   <https://cs.hi.is/strei/vi%C3%B0auki-A/#a4-litaskalar>`_ í *Valin efni í
-  stærðfræði og reiknifræði*. Um litaskala er líka fjallað í 4. kafla í
-   `Python Data Science Handbook
-   <https://jakevdp.github.io/PythonDataScienceHandbook>`_.
+   Þessar fyrirlestrarnótur skauta framhjá umfjöllun um **litaskala**, en um þá er fjallað allítarlega í `Viðauka A4 <https://cs.hi.is/strei/vi%C3%B0auki-A/#a4-litaskalar>`_ í *Valin efni í stærðfræði og reiknifræði*. Um litaskala er líka fjallað í 4. kafla í `Python Data Science Handbook <https://jakevdp.github.io/PythonDataScienceHandbook>`_.
        
 .. list-table:: Helstu hjálparskipanir fyrir teikningar
    :widths: auto
