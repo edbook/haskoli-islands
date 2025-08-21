@@ -14,8 +14,6 @@
    kafli*
 
 .. toctree::
-   vidauki
-   umnamskeidid
    ordaskra
 
 * :ref:`genindex`

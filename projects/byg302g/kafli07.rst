@@ -146,6 +146,7 @@ rakabreytingu úr “blautu” ástandi í þurrt (þ.e. :math:`\Delta u \approx
 .. figure:: ./myndir/kafli07/rakabreytingfura.png
   :align: center
   :width: 50%
+
 Myndin fengin úr Rb-blaði :cite:`2016:Sigurjonsson`
 
 .. figure:: ./myndir/kafli07/rakabreytingsteypa.png

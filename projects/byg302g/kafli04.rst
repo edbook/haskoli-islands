@@ -13,6 +13,7 @@ Varmaflutningur getur verið eftir þrem leiðum;
 .. figure:: ./myndir/kafli04/varmaflutningsleidir.png
   :align: center
   :width: 100%
+
 Mynd 4.1. Mynd fengin úr :cite:`1978:Halldorsson`
 
 .. youtube:: Eizsm5V8c_c
@@ -20,7 +21,7 @@ Mynd 4.1. Mynd fengin úr :cite:`1978:Halldorsson`
     :height: 400
 
 .. admonition:: Hugtök í myndbandi
-    :class: tip
+   :class: tip
 
       **conduction** : leiðni
 
@@ -451,7 +452,7 @@ Mæling leiðnitölu
 ~~~~~~~~~~~~~~~~~
 Leiðnitala efnis er mæld með þrennu móti;
 
-1. Orkuþörf mæld
+1. Orkuþörf mæld.
 
   Tvö sýni mæld samtímis til að fá samhverfu í mæliuppsetninguna, meðaltal
   mælinganna tekið. Uppbyggingin er:
@@ -460,15 +461,17 @@ Leiðnitala efnis er mæld með þrennu móti;
     :align: center
     :width: 85%
 
-2. Hitafall yfir mælisýni og þekkt viðmiðunarsýni mælt
+2. Hitafall yfir mælisýni og þekkt viðmiðunarsýni mælt.
+
   Eitt sýni mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
 
   .. figure:: ./myndir/kafli04/Uppbygging2.png
     :align: center
     :width: 100%
 
-3. Varmaflutningur í gegnum sýnið mældur (þetta er keimlíkt og í lið b). Eitt sýni
-  mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
+3. Varmaflutningur í gegnum sýnið mældur (þetta er keimlíkt og í lið b). 
+   
+  Eitt sýni mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:
 
   .. figure:: ./myndir/kafli04/Uppbygging3.png
     :align: center

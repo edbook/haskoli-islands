@@ -45,7 +45,7 @@ extensions = [
     # see https://github.com/nyergler/hieroglyph
     #'hieroglyph',
     # Extension for embedding geogebra applets, see README.txt in ggbextension folder
-    "ggbextension.ggb",
+#    "ggbextension.ggb",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
     "toggleblock.toggleBlock",

@@ -415,7 +415,7 @@ Aðrar línur fyrir prófun í tiltekinn dagafjölda og loks skriðmörkin við
 4- fjórðungur sýnir tímaháð skrið fyrir gefna (sömu) spennu í efni
 
 Þreyta (e. fatigue, d. udmattelse)
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Þegar efni verður fyrir síendurteknu álagi (álagshrinum) þá getur slíkt framkallað
 þreytubrot (þetta er almennt skýrt þannig að örsprungur (e. microcracks) séu til staðar í
