@@ -256,7 +256,7 @@ Skilgreining
     Stikaferillinn er sagður *samfellt diffranlegur á köflum* ef til eru
     tölur :math:`b_0,\ldots,b_k` þannig að :math:`a=b_0<b_1<\cdots<b_k=b` og
     stikaferillinn er samfellt diffranlegur á hverju bili
-    :math:`[b_{i-1}, b_i]`. Það að stikaferill sé :hover:`reglulegur á köflum` er skilgreint á sambærilegan hátt.
+    :math:`[b_{i-1}, b_i]`. Það að stikaferill sé reglulegur á köflum er skilgreint á sambærilegan hátt.
 
 .. index::
     stikaferill;snertilína

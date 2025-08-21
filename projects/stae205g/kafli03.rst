@@ -325,7 +325,7 @@ Regla
 
     #. Ef :math:`D_i > 0` fyrir slétt :math:`i` í :math:`\{1,2,\ldots,n\}` og :math:`D_i < 0` fyrir oddatölu :math:`i` í :math:`\{1,2,\ldots,n\}` þá er :math:`A` :hover:`neikvætt ákvarðað,neikvætt ákveðinn`.
 
-    #. Ef :math:`\det(A) = D_n \neq 0` en hvorki :math:`1` né :math:`2` gilda þá er :math:`A` :hover:`óákvarðað`.
+    #. Ef :math:`\det(A) = D_n \neq 0` en hvorki :math:`1` né :math:`2` gilda þá er :math:`A` óákvarðað.
 
     #. Ef :math:`\det(A) = 0` þá er :math:`A` hvorki jákvætt né neikvætt ákvarðað en getur verið :hover:`óákvarðað,óákvarðaður`.
 
@@ -425,7 +425,7 @@ Regla
 .. admonition:: Setning
     :class: setning
 
-    Finna skal :hover:`útgildi` falls :math:`f(x,y)` þegar skilgreiningarsvæði
+    Finna skal útgildi falls :math:`f(x,y)` þegar skilgreiningarsvæði
     :math:`f` er mengi þeirra punkta :math:`(x,y)` sem uppfylla jöfnu
     :math:`g(x,y)=0`.
 
@@ -442,7 +442,7 @@ Regla
 Reikniaðferð 
 ~~~~~~~~~~~~~
 
-Finna skal  :hover:`útgildi` falls :math:`f(x,y,z)` þegar skilgreiningarsvæði
+Finna skal útgildi falls :math:`f(x,y,z)` þegar skilgreiningarsvæði
 :math:`f` er mengi þeirra punkta :math:`(x,y,z)` sem uppfylla jöfnurnar
 :math:`g(x,y,z)=0` og :math:`h(x,y,z)=0`.
 
@@ -453,7 +453,7 @@ Búum til Lagrange-fallið
 :hover:`Stöðupunktar,stöðupunktur` :math:`L`, þ.e.a.s. punktar
 :math:`(x_0,y_0,z_0,\lambda_0,\mu_0)` þar sem
 :math:`\nabla L(x_0,y_0,z_0,\lambda_0,\mu_0)=\mbox{${\bf 0}$}` gefa
-mögulega punkta :math:`(x_0,y_0,z_0)` þar sem :math:`f` tekur  :hover:`útgildi`.
+mögulega punkta :math:`(x_0,y_0,z_0)` þar sem :math:`f` tekur útgildi.
 
 Þessir punktar finnast með því að leysa jöfnuhneppið
 
