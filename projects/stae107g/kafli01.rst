@@ -553,10 +553,12 @@ Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning
 Setjum að lokum inn fyrir :math:`x_2`, :math:`x_3`, :math:`x_4` og :math:`x_5` í efstu jöfnuna:
 
   .. math:: \begin{align*}
-        x_1 &= - x_2 - x_3 - x_4 - 2 x_5 \\
-            &=  - (10 - s - t) - x -(-2) - 2t \\
-            & -8 - t
-    \end{align*}
+   .. math:: \begin{align*}
+         x_1 &= - x_2 - x_3 - x_4 - 2 x_5 \\
+         &= - (10 - s - t) - s - (-2) - 2t \\
+         &= (-10 + s + t) - s + 2 - 2t \\
+         &= -8 - t
+   \end{align*}
 
 Við fáum því  .. math:: \begin{bmatrix}
     x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
