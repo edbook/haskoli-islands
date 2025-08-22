@@ -158,78 +158,67 @@ jobs:
             
       - name: 📂 Prepare versioned pages for deployment
         run: |
-          # For PR deployments, we want the branch content at the root
-          # Copy the branch-specific content to the root level
-          cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/
+          # For PR deployments, use the forsida project as the main landing page
+          # This matches the structure of the main edbook.github.io site
           
-          # Also copy the version selector page as a fallback
-          cp versioned-docs/index.html versioned-docs/versions.html || true
+          # Check if forsida project was built successfully
+          if [ -d "versioned-docs/${{ env.BRANCH_SLUG }}/forsida" ]; then
+            echo "Using forsida project as main landing page"
+            # Copy forsida content to root (this becomes the main index)
+            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/forsida/* versioned-docs/
+            
+            # Copy all other projects to root level for easy access
+            for project_dir in versioned-docs/${{ env.BRANCH_SLUG }}/*/; do
+              project_name=$(basename "$project_dir")
+              if [ "$project_name" != "forsida" ] && [ -d "$project_dir" ]; then
+                echo "Copying project: $project_name"
+                cp -r "$project_dir" "versioned-docs/$project_name"
+              fi
+            done
+          else
+            echo "Forsida project not found, using fallback structure"
+            # Fallback: copy all branch-specific content to root
+            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/
+          fi
           
-          # Create a dynamic project listing page at root
-          # Start building the HTML
-          cat > versioned-docs/index.html << 'EOF'
+          # Create a simple version comparison page
+          cat > versioned-docs/versions.html << 'EOF'
           <!DOCTYPE html>
           <html lang="is">
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Edbook Documentation - CI Improvements Branch</title>
+              <title>Edbook Documentation - Version Comparison</title>
               <style>
                   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
                   .header { text-align: center; margin-bottom: 3rem; }
-                  .project-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem; }
-                  .project-link { display: block; padding: 1rem; background: #f6f8fa; border-radius: 6px; text-decoration: none; color: #24292e; border: 1px solid #e1e4e8; }
-                  .project-link:hover { background: #e1e4e8; text-decoration: none; }
-                  .branch-badge { display: inline-block; padding: 0.25rem 0.5rem; background: #28a745; color: white; border-radius: 3px; font-size: 0.75rem; margin-bottom: 1rem; }
+                  .version-section { margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e1e4e8; border-radius: 6px; }
+                  .version-title { color: #0366d6; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+                  .branch-badge { display: inline-block; padding: 0.25rem 0.5rem; background: #28a745; color: white; border-radius: 3px; font-size: 0.75rem; margin-left: 0.5rem; }
+                  .back-link { display: inline-block; margin-bottom: 1rem; color: #0366d6; text-decoration: none; }
+                  .back-link:hover { text-decoration: underline; }
               </style>
           </head>
           <body>
               <div class="header">
-                  <h1>📚 Edbook Documentation</h1>
-                  <div class="branch-badge">🚀 Development Branch: ${{ env.BRANCH_SLUG }}</div>
-                  <p>Preview of documentation changes</p>
+                  <a href="./" class="back-link">← Back to Documentation</a>
+                  <h1>📚 Edbook Documentation Versions</h1>
+                  <p>Compare different versions of the documentation</p>
               </div>
               
-              <div class="project-links">
-          EOF
-          
-          # Dynamically add project links based on built directories
-          for project_dir in versioned-docs/*/; do
-            if [ -d "$project_dir" ] && [[ "$project_dir" != "versioned-docs/main/" ]] && [[ "$project_dir" != "versioned-docs/${{ env.BRANCH_SLUG }}/" ]]; then
-              project_name=$(basename "$project_dir")
-              project_title="$project_name"
+              <div class="version-section">
+                  <div class="version-title">
+                      🚀 Current Branch 
+                      <span class="branch-badge">${{ env.BRANCH_SLUG }}</span>
+                  </div>
+                  <p>You are currently viewing this branch. This contains the latest changes from the pull request.</p>
+                  <p><a href="./">← View this version</a></p>
+              </div>
               
-              # Try to get project title from project.yml if it exists
-              if [ -f "projects/$project_name/project.yml" ]; then
-                # Simple grep-based extraction to avoid complex Python in YAML
-                name_line=$(grep "^name:" "projects/$project_name/project.yml" 2>/dev/null || echo "")
-                desc_line=$(grep "^description:" "projects/$project_name/project.yml" 2>/dev/null || echo "")
-                
-                if [ -n "$name_line" ]; then
-                  project_name_clean=$(echo "$name_line" | sed 's/^name: *//; s/^["'\'']*//; s/["'\'']*$//')
-                  if [ -n "$desc_line" ]; then
-                    project_desc_clean=$(echo "$desc_line" | sed 's/^description: *//; s/^["'\'']*//; s/["'\'']*$//')
-                    project_title="$project_name_clean<br>$project_desc_clean"
-                  else
-                    project_title="$project_name_clean"
-                  fi
-                fi
-              fi
-              
-              cat >> versioned-docs/index.html << EOF
-                  <a href="$project_name/" class="project-link">
-                      <strong>$project_title</strong>
-                  </a>
-          EOF
-            fi
-          done
-          
-          # Add version selector link and close HTML
-          cat >> versioned-docs/index.html << 'EOF'
-                  <a href="versions.html" class="project-link" style="background: #e3f2fd; border-color: #2196f3;">
-                      <strong>📋 Version Selector</strong><br>
-                      Compare with other versions
-                  </a>
+              <div class="version-section">
+                  <div class="version-title">📖 Main Branch (Production)</div>
+                  <p>View the current production version of the documentation.</p>
+                  <p><a href="https://edbook.github.io/" target="_blank">View main version →</a></p>
               </div>
           </body>
           </html>
