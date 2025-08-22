@@ -80,15 +80,8 @@ jobs:
         id: build-versioned
         run: |
           # Build versioned docs with sphinx-versioned-docs
-          sphinx-versioned \
-            --output ./versioned-docs \
-            --git-root . \
-            --source-dir projects \
-            --branches main,${{ env.BRANCH_SLUG }} \
-            --show-banner \
-            --banner-main-ref main \
-            --banner-newest-tag \
-            --verbose
+          # First check what arguments are available
+          sphinx-versioned --help
             
       - name: 📂 Prepare versioned pages for deployment
         run: |
