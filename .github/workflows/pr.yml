@@ -31,6 +31,24 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Generate PR Calver version
+        id: calver
+        run: |
+          # Generate Calver in YY.M.DD.increment-[git short sha] format for PRs
+          today=$(date +'%y.%-m.%-d')
+          short_sha=$(git rev-parse --short HEAD)
+          
+          # For PRs, we use a build number based on the current hour/minute to ensure uniqueness
+          build_num=$(date +'%H%M')
+          
+          version="${today}.${build_num}-${short_sha}"
+          
+          echo "Generated PR version: $version"
+          echo "version=$version" >> $GITHUB_OUTPUT
+          
+          # Update setup.py with the PR version
+          sed -i.bak "s/version=\"[^\"]*\"/version=\"$version\"/" cli/setup.py
+          echo "Updated setup.py with version: $version"
       - name: Extract branch name
         id: extract_branch
         shell: bash
@@ -91,6 +109,7 @@ jobs:
                   <h1>📚 Edbook - Feature Preview</h1>
                   <div class="branch-info">
                       <strong>Branch:</strong> ${{ env.BRANCH_SLUG }}<br>
+                      <strong>Version:</strong> ${{ steps.calver.outputs.version }}<br>
                       <strong>Commit:</strong> ${{ github.sha }}<br>
                       <strong>Built:</strong> $(date)
                   </div>
