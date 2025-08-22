@@ -165,7 +165,8 @@ jobs:
           # Also copy the version selector page as a fallback
           cp versioned-docs/index.html versioned-docs/versions.html || true
           
-          # Create a simple project listing page at root for better UX
+          # Create a dynamic project listing page at root
+          # Start building the HTML
           cat > versioned-docs/index.html << 'EOF'
           <!DOCTYPE html>
           <html lang="is">
@@ -185,31 +186,47 @@ jobs:
           <body>
               <div class="header">
                   <h1>📚 Edbook Documentation</h1>
-                  <div class="branch-badge">🚀 Development Branch: ci-improvements</div>
+                  <div class="branch-badge">🚀 Development Branch: ${{ env.BRANCH_SLUG }}</div>
                   <p>Preview of documentation changes</p>
               </div>
               
               <div class="project-links">
-                  <a href="stae205g/" class="project-link">
-                      <strong>STÆ205G</strong><br>
-                      Tölfræðileg gagnavinnsla og líkanagerð
+          EOF
+          
+          # Dynamically add project links based on built directories
+          for project_dir in versioned-docs/*/; do
+            if [ -d "$project_dir" ] && [[ "$project_dir" != "versioned-docs/main/" ]] && [[ "$project_dir" != "versioned-docs/${{ env.BRANCH_SLUG }}/" ]]; then
+              project_name=$(basename "$project_dir")
+              # Get project title from project.yml if it exists
+              if [ -f "projects/$project_name/project.yml" ]; then
+                project_title=$(python3 -c "
+import yaml
+try:
+    with open('projects/$project_name/project.yml', 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+        name = data.get('name', '$project_name')
+        desc = data.get('description', '')
+        if desc:
+            print(f'{name}<br>{desc}')
+        else:
+            print(name)
+except:
+    print('$project_name')
+" 2>/dev/null || echo "$project_name")
+              else
+                project_title="$project_name"
+              fi
+              
+              cat >> versioned-docs/index.html << EOF
+                  <a href="$project_name/" class="project-link">
+                      <strong>$project_title</strong>
                   </a>
-                  <a href="R_fra_grunni/" class="project-link">
-                      <strong>R frá grunni</strong><br>
-                      Kennslubók um R forritunarmálið
-                  </a>
-                  <a href="byg302g/" class="project-link">
-                      <strong>BYG302G</strong><br>
-                      Efnisfræði
-                  </a>
-                  <a href="byg601g/" class="project-link">
-                      <strong>BYG601G</strong><br>
-                      Húsagerð
-                  </a>
-                  <a href="eik204g/" class="project-link">
-                      <strong>EIK204G</strong><br>
-                      Eðlisfræði 2
-                  </a>
+          EOF
+            fi
+          done
+          
+          # Add version selector link and close HTML
+          cat >> versioned-docs/index.html << 'EOF'
                   <a href="versions.html" class="project-link" style="background: #e3f2fd; border-color: #2196f3;">
                       <strong>📋 Version Selector</strong><br>
                       Compare with other versions
