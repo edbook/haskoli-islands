@@ -158,34 +158,66 @@ jobs:
             
       - name: 📂 Prepare versioned pages for deployment
         run: |
-          # Create main redirect if it doesn't exist
-          if [[ ! -f versioned-docs/index.html ]]; then
-            cat > versioned-docs/index.html << 'EOF'
+          # For PR deployments, we want the branch content at the root
+          # Copy the branch-specific content to the root level
+          cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/
+          
+          # Also copy the version selector page as a fallback
+          cp versioned-docs/index.html versioned-docs/versions.html || true
+          
+          # Create a simple project listing page at root for better UX
+          cat > versioned-docs/index.html << 'EOF'
           <!DOCTYPE html>
           <html lang="is">
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Edbook Documentation</title>
-              <meta http-equiv="refresh" content="0; url=main/">
+              <title>Edbook Documentation - CI Improvements Branch</title>
               <style>
-                  body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
-                  .loading { color: #666; }
-                  a { color: #0066cc; text-decoration: none; }
-                  a:hover { text-decoration: underline; }
+                  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+                  .header { text-align: center; margin-bottom: 3rem; }
+                  .project-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem; }
+                  .project-link { display: block; padding: 1rem; background: #f6f8fa; border-radius: 6px; text-decoration: none; color: #24292e; border: 1px solid #e1e4e8; }
+                  .project-link:hover { background: #e1e4e8; text-decoration: none; }
+                  .branch-badge { display: inline-block; padding: 0.25rem 0.5rem; background: #28a745; color: white; border-radius: 3px; font-size: 0.75rem; margin-bottom: 1rem; }
               </style>
           </head>
           <body>
-              <h1>📚 Edbook Documentation</h1>
-              <p class="loading">Redirecting to <a href="main/">latest documentation</a>...</p>
-              <p><small>If you're not redirected automatically, <a href="main/">click here</a>.</small></p>
+              <div class="header">
+                  <h1>📚 Edbook Documentation</h1>
+                  <div class="branch-badge">🚀 Development Branch: ci-improvements</div>
+                  <p>Preview of documentation changes</p>
+              </div>
+              
+              <div class="project-links">
+                  <a href="stae205g/" class="project-link">
+                      <strong>STÆ205G</strong><br>
+                      Tölfræðileg gagnavinnsla og líkanagerð
+                  </a>
+                  <a href="R_fra_grunni/" class="project-link">
+                      <strong>R frá grunni</strong><br>
+                      Kennslubók um R forritunarmálið
+                  </a>
+                  <a href="byg302g/" class="project-link">
+                      <strong>BYG302G</strong><br>
+                      Efnisfræði
+                  </a>
+                  <a href="byg601g/" class="project-link">
+                      <strong>BYG601G</strong><br>
+                      Húsagerð
+                  </a>
+                  <a href="eik204g/" class="project-link">
+                      <strong>EIK204G</strong><br>
+                      Eðlisfræði 2
+                  </a>
+                  <a href="versions.html" class="project-link" style="background: #e3f2fd; border-color: #2196f3;">
+                      <strong>📋 Version Selector</strong><br>
+                      Compare with other versions
+                  </a>
+              </div>
           </body>
           </html>
           EOF
-          fi
-          
-          # Copy versioned docs to dist directory
-          cp -r versioned-docs dist
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
