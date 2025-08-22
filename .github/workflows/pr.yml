@@ -25,7 +25,7 @@ jobs:
       version: ${{ steps.calver.outputs.version }}
     environment:
       name: ${{ github.head_ref }}
-      url: ${{ steps.deployment.outputs.page_url }}${{ env.BRANCH_SLUG }}
+      url: ${{ steps.deployment.outputs.page_url }}
     defaults:
       run:
         shell: bash -el {0}
@@ -272,8 +272,8 @@ jobs:
             
             Your PR documentation is available with version selector:
             
-            **🔗 Feature Branch:** ${{needs.setup.outputs.deploy-url}}${{ env.BRANCH_SLUG }}/
-            **🔗 Main Branch:** ${{needs.setup.outputs.deploy-url}}main/
+            **🔗 PR Documentation:** ${{needs.setup.outputs.deploy-url}}
+            **🔗 Individual Projects:** Available at ${{needs.setup.outputs.deploy-url}}[project-name]/
             
             **✨ New Features:**
             - Version selector dropdown on every page
