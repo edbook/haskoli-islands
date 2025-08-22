@@ -182,39 +182,33 @@ jobs:
             cp -r versioned-docs/${{ env.BRANCH_SLUG }}/forsida/* versioned-docs/${{ env.BRANCH_SLUG }}/
             
             # Create root index that redirects to branch
-            cat > versioned-docs/index.html << EOF
-<!DOCTYPE html>
-<html lang="is">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edbook PR Preview - ${{ env.BRANCH_SLUG }}</title>
-    <meta http-equiv="refresh" content="0; url=${{ env.BRANCH_SLUG }}/">
-</head>
-<body>
-    <p>Redirecting to <a href="${{ env.BRANCH_SLUG }}/">PR preview for ${{ env.BRANCH_SLUG }}</a>...</p>
-</body>
-</html>
-EOF
+            echo '<!DOCTYPE html>' > versioned-docs/index.html
+            echo '<html lang="is">' >> versioned-docs/index.html
+            echo '<head>' >> versioned-docs/index.html
+            echo '    <meta charset="UTF-8">' >> versioned-docs/index.html
+            echo '    <meta name="viewport" content="width=device-width, initial-scale=1.0">' >> versioned-docs/index.html
+            echo '    <title>Edbook PR Preview</title>' >> versioned-docs/index.html
+            echo '    <meta http-equiv="refresh" content="0; url=ci-improvements/">' >> versioned-docs/index.html
+            echo '</head>' >> versioned-docs/index.html
+            echo '<body>' >> versioned-docs/index.html
+            echo '    <p>Redirecting to <a href="ci-improvements/">PR preview</a>...</p>' >> versioned-docs/index.html
+            echo '</body>' >> versioned-docs/index.html
+            echo '</html>' >> versioned-docs/index.html
           else
             echo "Forsida project not found, using fallback structure"
             # Create a simple index for the branch
-            cat > versioned-docs/${{ env.BRANCH_SLUG }}/index.html << 'EOF'
-<!DOCTYPE html>
-<html lang="is">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edbook PR Preview</title>
-</head>
-<body>
-    <h1>📚 Edbook PR Preview</h1>
-    <p>This branch contains updated documentation projects.</p>
-    <h2>Available Projects:</h2>
-    <p>Individual projects are available at their respective paths.</p>
-</body>
-</html>
-EOF
+            echo '<!DOCTYPE html>' > versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '<html lang="is">' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '<head>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '    <meta charset="UTF-8">' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '    <meta name="viewport" content="width=device-width, initial-scale=1.0">' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '    <title>Edbook PR Preview</title>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '</head>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '<body>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '    <h1>📚 Edbook PR Preview</h1>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '    <p>This branch contains updated documentation projects.</p>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '</body>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
+            echo '</html>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
           fi
           
           # Create a simple version comparison page
