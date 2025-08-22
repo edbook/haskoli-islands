@@ -197,24 +197,23 @@ jobs:
           for project_dir in versioned-docs/*/; do
             if [ -d "$project_dir" ] && [[ "$project_dir" != "versioned-docs/main/" ]] && [[ "$project_dir" != "versioned-docs/${{ env.BRANCH_SLUG }}/" ]]; then
               project_name=$(basename "$project_dir")
-              # Get project title from project.yml if it exists
+              project_title="$project_name"
+              
+              # Try to get project title from project.yml if it exists
               if [ -f "projects/$project_name/project.yml" ]; then
-                project_title=$(python3 -c "
-import yaml
-try:
-    with open('projects/$project_name/project.yml', 'r', encoding='utf-8') as f:
-        data = yaml.safe_load(f)
-        name = data.get('name', '$project_name')
-        desc = data.get('description', '')
-        if desc:
-            print(f'{name}<br>{desc}')
-        else:
-            print(name)
-except:
-    print('$project_name')
-" 2>/dev/null || echo "$project_name")
-              else
-                project_title="$project_name"
+                # Simple grep-based extraction to avoid complex Python in YAML
+                name_line=$(grep "^name:" "projects/$project_name/project.yml" 2>/dev/null || echo "")
+                desc_line=$(grep "^description:" "projects/$project_name/project.yml" 2>/dev/null || echo "")
+                
+                if [ -n "$name_line" ]; then
+                  project_name_clean=$(echo "$name_line" | sed 's/^name: *//; s/^["'\'']*//; s/["'\'']*$//')
+                  if [ -n "$desc_line" ]; then
+                    project_desc_clean=$(echo "$desc_line" | sed 's/^description: *//; s/^["'\'']*//; s/["'\'']*$//')
+                    project_title="$project_name_clean<br>$project_desc_clean"
+                  else
+                    project_title="$project_name_clean"
+                  fi
+                fi
               fi
               
               cat >> versioned-docs/index.html << EOF
