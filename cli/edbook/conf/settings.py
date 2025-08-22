@@ -175,6 +175,7 @@ html_context = {
     "github_repo": "haskoli-islands",
     "github_version": str("master/projects/" + os.path.split(os.getcwd())[1] + "/"),
     "conf_py_path": "/projects/" + os.path.split(os.getcwd())[1] + "/",
+    "show_copyright": True,
 }
 
 # Control version display behavior
@@ -590,10 +591,11 @@ if edbook_version:
     # Update copyright to include version info for better footer display
     copyright = f"{copyright} | Version {version}"
     
-    # Add version warning for development/PR builds (contains + indicating local version)
+    # Add version notice for development/PR builds (contains + indicating local version)
     if '+' in version:
-        version_warning = f"You are viewing a development version ({version}). This may contain incomplete or experimental features."
-        html_theme_options['version_selector'] = True
+        # Add development version notice to HTML templates
+        html_context["version_warning"] = f"You are viewing a development version ({version}). This may contain incomplete or experimental features."
+        html_context["is_development"] = True
 
 ######################################################################
 
