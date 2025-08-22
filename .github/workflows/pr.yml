@@ -107,15 +107,19 @@ jobs:
               
               # Build for main version (current PR content) with error handling
               echo "Building $project for branch ${{ env.BRANCH_SLUG }}..."
-              if ! sphinx-build -b html "$project" "../versioned-docs/${{ env.BRANCH_SLUG }}/$project" --keep-going; then
+              cd "$project"
+              if ! sphinx-build -b html . "../../versioned-docs/${{ env.BRANCH_SLUG }}/$project" --keep-going; then
                 echo "Warning: Build failed for $project on branch ${{ env.BRANCH_SLUG }}, continuing..."
               fi
+              cd ..
               
               # For now, also copy to main (we'll improve this later)
               echo "Building $project for main branch..."
-              if ! sphinx-build -b html "$project" "../versioned-docs/main/$project" --keep-going; then
+              cd "$project"
+              if ! sphinx-build -b html . "../../versioned-docs/main/$project" --keep-going; then
                 echo "Warning: Build failed for $project on main branch, continuing..."
               fi
+              cd ..
             fi
           done
           
