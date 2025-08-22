@@ -80,8 +80,18 @@ jobs:
         id: build-versioned
         run: |
           # Build versioned docs with sphinx-versioned-docs
-          # First check what arguments are available
-          sphinx-versioned --help
+          # Check what's installed and available
+          python -c "import sphinx_versioned_docs; print(sphinx_versioned_docs.__version__)"
+          which sphinx-versioned || echo "sphinx-versioned not found"
+          
+          # Try different approaches
+          cd projects
+          for project in */; do
+            if [ -d "$project" ] && [ -f "$project/conf.py" ]; then
+              echo "Building project: $project"
+              sphinx-build -b html "$project" "../versioned-docs/main/$project"
+            fi
+          done
             
       - name: 📂 Prepare versioned pages for deployment
         run: |
