@@ -3,10 +3,11 @@ name: Build Versioned Documentation
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
   release:
     types: [published]
+  # Temporarily disabled for PR events while implementing in pr.yml
+  # pull_request:
+  #   branches: [main]
 
 permissions:
   contents: read
