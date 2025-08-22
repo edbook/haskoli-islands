@@ -34,14 +34,15 @@ jobs:
       - name: Generate PR Calver version
         id: calver
         run: |
-          # Generate Calver in YY.M.DD.increment-[git short sha] format for PRs
+          # Generate Calver in YY.M.DD.increment+[git short sha] format for PRs (PEP 440 compliant)
           today=$(date +'%y.%-m.%-d')
           short_sha=$(git rev-parse --short HEAD)
           
           # For PRs, we use a build number based on the current hour/minute to ensure uniqueness
           build_num=$(date +'%H%M')
           
-          version="${today}.${build_num}-${short_sha}"
+          # Use PEP 440 compliant format: YY.M.DD.increment+gitSHA (local version identifier)
+          version="${today}.${build_num}+${short_sha}"
           
           echo "Generated PR version: $version"
           echo "version=$version" >> $GITHUB_OUTPUT
