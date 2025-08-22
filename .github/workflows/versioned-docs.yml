@@ -1,0 +1,132 @@
+name: Build Versioned Documentation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-versioned-docs:
+    name: Build versioned documentation
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        shell: bash -el {0}
+        
+    steps:
+      - name: Check out repository with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history needed for versioning
+          
+      - name: Setup Conda Environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: edbook
+          
+      - name: Install sphinx-versioned-docs
+        run: |
+          pip install sphinx-versioned-docs
+          
+      - name: Generate versioned documentation
+        run: |
+          # Build versioned docs with branch and tag support
+          sphinx-versioned \
+            --output ./versioned-docs \
+            --git-root . \
+            --source-dir projects \
+            --target-branch main \
+            --branches main,ci-improvements \
+            --tags-regex '^v[0-9]+\.[0-9]+\.[0-9]+.*' \
+            --greatest-tag \
+            --show-banner \
+            --banner-greatest-tag \
+            --sphinx-args="-D html_theme=sphinx_rtd_theme"
+            
+      - name: Create main index page
+        run: |
+          cat > versioned-docs/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Edbook Documentation</title>
+              <meta http-equiv="refresh" content="0; url=main/">
+          </head>
+          <body>
+              <p>Redirecting to <a href="main/">main documentation</a>...</p>
+          </body>
+          </html>
+          EOF
+          
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Upload versioned docs artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: versioned-docs
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
+  notify-discord:
+    needs: [build-versioned-docs]
+    name: Notify Discord
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        
+      - name: Notify deployment
+        run: |
+          if [[ "${{ needs.build-versioned-docs.result }}" == "success" ]]; then
+            status="✅ Versioned documentation deployed successfully"
+            color=65280
+          else
+            status="❌ Documentation deployment failed"  
+            color=16711680
+          fi
+          
+          version="${{ github.ref_name }}"
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            version="PR #${{ github.event.number }}: ${{ github.head_ref }}"
+          fi
+          
+          payload=$(cat <<EOF
+          {
+            "content": "📚 Edbook Documentation Update",
+            "embeds": [
+              {
+                "title": "$status",
+                "description": "Branch/Version: $version",
+                "url": "https://edbook.github.io/haskoli-islands/",
+                "color": $color,
+                "fields": [
+                  {
+                    "name": "View Documentation",
+                    "value": "[Browse versioned docs](https://edbook.github.io/haskoli-islands/)"
+                  }
+                ]
+              }
+            ]
+          }
+          EOF
+          )
+          
+          if [[ -n "${{ secrets.DISCORD_WEBHOOK }}" ]]; then
+            ./.github/discord.sh -w "${{ secrets.DISCORD_WEBHOOK }}" -c "$payload"
+          fi

@@ -81,14 +81,13 @@ jobs:
         run: |
           # Build versioned docs with sphinx-versioned-docs
           sphinx-versioned \
-            --output-dir ./versioned-docs \
+            --output ./versioned-docs \
             --git-root . \
             --source-dir projects \
             --branches main,${{ env.BRANCH_SLUG }} \
             --show-banner \
             --banner-main-ref main \
             --banner-newest-tag \
-            --invert \
             --verbose
             
       - name: 📂 Prepare versioned pages for deployment
