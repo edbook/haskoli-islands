@@ -154,14 +154,36 @@ numfig = True
 html_theme = "sphinx_rtd_theme"
 # html_theme_path = ["_themes"]
 
+# RTD theme options
+html_theme_options = {
+    'display_version': False,  # Disable sidebar version display under logo
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    'vcs_pageview_mode': '',
+    # Collapse navigation
+    'collapse_navigation': False,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
+
 html_context = {
     "display_github": True,
     "github_user": "edbook",
     "github_repo": "haskoli-islands",
     "github_version": str("master/projects/" + os.path.split(os.getcwd())[1] + "/"),
+    "conf_py_path": "/projects/" + os.path.split(os.getcwd())[1] + "/",
+    "show_copyright": True,
 }
 
+# Control version display behavior
+html_show_sphinx = True
+html_show_copyright = True
 html_permalinks = True
+
+# Custom footer with version information
+html_last_updated_fmt = '%Y-%m-%d %H:%M'
 ## CLOUD
 # import cloud_sptheme as csp
 # html_theme = "cloud"
@@ -520,7 +542,7 @@ def get_authors(config: EdbookConfig):
     year = str(year)
     version = year  # The short X.Y version.
     release = year  # The full version, including alpha/beta/rc tags.
-    return project, projectid, auth_title
+    return project, projectid, auth_title, version, release, copyright
 
 
 def get_caller_path():
@@ -531,10 +553,48 @@ def get_caller_path():
     raise Exception("This should not happen, call the ambulance")
 
 
+# Get version from setup.py 
+def get_edbook_version():
+    try:
+        import re
+        # Try multiple possible paths for setup.py
+        possible_paths = [
+            # From GitHub Actions: /project-root/cli/edbook/conf/settings.py -> /project-root/cli/setup.py
+            Path(__file__).parent.parent.parent.parent / "cli/setup.py",
+            # From local dev: /project-root/cli/edbook/conf/settings.py -> /project-root/cli/setup.py
+            Path(__file__).parent.parent.parent / "setup.py",
+        ]
+        
+        for setup_path in possible_paths:
+            if setup_path.exists():
+                with open(setup_path, 'r') as f:
+                    content = f.read()
+                    match = re.search(r'version="([^"]*)"', content)
+                    if match:
+                        return match.group(1)
+                        
+    except Exception as e:
+        print(f"Warning: Could not read version from setup.py: {e}")
+    return None  # fallback to None if version can't be read
+
 with open(Path.joinpath(get_caller_path() / "config.yml"), "r") as f:
     config: EdbookConfig = yaml.safe_load(f)
 print(config)
-project, projectid, auth_title = get_authors(config)
+project, projectid, auth_title, version, release, copyright = get_authors(config)
+
+# Try to get actual version from setup.py, otherwise use year
+edbook_version = get_edbook_version()
+if edbook_version:
+    version = edbook_version
+    release = edbook_version
+    # Update copyright to include version info for better footer display
+    copyright = f"{copyright} | Version {version}"
+    
+    # Add version notice for development/PR builds (contains + indicating local version)
+    if '+' in version:
+        # Add development version notice to HTML templates
+        html_context["version_warning"] = f"You are viewing a development version ({version}). This may contain incomplete or experimental features."
+        html_context["is_development"] = True
 
 ######################################################################
 
@@ -553,6 +613,9 @@ rst_epilog = """
 .. |auth_title| replace:: {auth_title}
 .. |project| replace:: {project}
 .. |projectid| replace:: {projectid}
+.. |version| replace:: {version}
+.. |release| replace:: {release}
 """.format(
-    auth_title=auth_title, project=project, projectid=projectid.upper()
+    auth_title=auth_title, project=project, projectid=projectid.upper(),
+    version=version, release=release
 )

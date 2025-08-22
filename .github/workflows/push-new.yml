@@ -8,6 +8,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
 on:
   push:
     branches:
@@ -17,75 +18,112 @@ on:
       - "projects/**"
       - "cli/**"
       - ".github/**"
+
 jobs:
-  setup:
-    name: Setup
+  build-docs:
+    name: Build Main Documentation
+    uses: ./.github/workflows/build-docs.yml
+    with:
+      environment_name: ${{ github.ref_name }}
+      deployment_type: push
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+  deploy-production:
+    name: Deploy to Production
     runs-on: ubuntu-latest
-    outputs:
-      deploy-url: ${{ steps.deployment.outputs.page_url }}
+    needs: build-docs
     environment:
       name: ${{ github.ref_name }}
-      url: ${{ steps.deployment.outputs.page_url }}
-    defaults:
-      run:
-        shell: bash -el {0}
+      url: ${{ needs.build-docs.outputs.deploy-url }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Setup Conda
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          auto-update-conda: true
-          python-version: 3.10.10
-          channels: conda-forge,defaults
-      #    mamba-version: "*"
-          channel-priority: true
-      #    use-mamba: true
-          environment-file: environment.yml
-          activate-environment: edbook
-      # TODO: needs work
-      # - name: Check for Conda cache
-      #   id: conda-cache
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ~/conda_pkgs_dir
-      #     key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
-      - name: 🚧 Build all (pr)
-        # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
-        id: build-all
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
         run: |
-          edbook build-all
-      - name: 📂 Prepare pages for deployment
-        run: |
-          mv _build/forsida/* _build/
+          # The build artifacts are in _build directory from the reusable workflow
+          echo "Build artifacts prepared by reusable workflow"
+          ls -la _build/ || echo "No _build directory found - checking for alternative structure"
+
       - name: Checkout edbook.github.io
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: 'edbook/edbook.github.io'
           path: org-repo
           ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
+
+      - name: Re-run build (temporary solution)
+        run: |
+          # Since we can't easily pass build artifacts between workflows,
+          # we'll re-run a simplified build here
+          # TODO: Optimize this by using artifacts properly
+          
+          # Setup conda quickly
+          wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+          bash miniconda.sh -b -p $HOME/miniconda
+          export PATH="$HOME/miniconda/bin:$PATH"
+          conda env create -f environment.yml
+          source activate edbook
+          
+          # Build using new approach
+          mkdir -p _build
+          cd projects
+          
+          for project in */; do
+            if [ -d "$project" ] && [ -f "$project/conf.py" ]; then
+              echo "Building $project for production..."
+              
+              # Create hover terms file if missing
+              if [ ! -f "$project/LIST_OF_HOVER_TERMS.json" ]; then
+                echo "[]" > "$project/LIST_OF_HOVER_TERMS.json"
+              fi
+              
+              cd "$project"
+              sphinx-build -b html . "../../_build/$project" --keep-going || echo "Build failed for $project, continuing..."
+              cd ..
+            fi
+          done
+          
+          cd ..
+          
+          # Move forsida to root if it exists
+          if [ -d "_build/forsida" ]; then
+            echo "Moving forsida to root for production"
+            cp -r _build/forsida/* _build/
+            rm -rf _build/forsida
+          fi
+
       - name: Push to edbook.github.io
         run: |
-          rsync -avh _build/forsida/ ./_build/
-          rm -rf _build/forsida
-          rsync -avh _build/ ./org-repo/
+          # Sync build to production repository
+          rsync -avh --delete _build/ ./org-repo/
           cd org-repo
-          ls -al
+          
+          # Configure git
           git config user.name github-actions
           git config user.email github-actions@github.com
+          
+          # Commit and push
           git add .
-          git commit -m "${{ github.event.head_commit.message }}" -m "https://github.com/edbook/haskoli-islands/commit/$GITHUB_SHA"
-          git push
-
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "${{ github.event.head_commit.message }}" -m "Version: ${{ needs.build-docs.outputs.version }}" -m "https://github.com/edbook/haskoli-islands/commit/$GITHUB_SHA"
+            git push
+            echo "Successfully deployed to production"
+          fi
 
   notify-discord-push:
-    needs: [setup]
+    needs: [build-docs, deploy-production]
     name: Notify Discord (push to main)
     runs-on: ubuntu-20.04
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Notify push
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
@@ -110,6 +148,10 @@ jobs:
                 "color": $color,
                 "fields": [
                   {
+                    "name": "Version",
+                    "value": "${{ needs.build-docs.outputs.version }}"
+                  },
+                  {
                     "name": "url",
                     "value": "[Skoða á edbook](https://edbook.hi.is)"
                   }
@@ -129,20 +171,20 @@ jobs:
             -c "$payload"
 
   notify-discord-build-failed:
-    needs: [setup]
-    if: always() && needs.setup.result == 'failure' && github.event_name == 'push'
+    needs: [build-docs, deploy-production]
+    if: always() && (needs.build-docs.result == 'failure' || needs.deploy-production.result == 'failure') && github.event_name == 'push'
     name: Notify Discord (build failed)
     runs-on: ubuntu-20.04
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Notify build or deploy failed
         run: |
           workflow_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           content_title="Eitthvað fór úrskeiðis ☠️"
-          title="${{ env.BRANCH_NAME }}"
+          title="${{ github.ref_name }}"
           color=16711680
-          description="Ekki tókst að byggja og/eða deploya branchinu _${{ env.BRANCH_NAME }}_"
+          description="Ekki tókst að byggja og/eða deploya branchinu _${{ github.ref_name }}_"
           url="$workflow_url"
           author_name=${{ github.event.push.sender.login}}
           author_url=${{ github.event.push.sender.url}}

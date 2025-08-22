@@ -1,0 +1,161 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump_type:
+        description: 'Type of release'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+        - patch
+        - major
+  push:
+    branches: [main]
+    tags: ['v*']
+
+permissions:
+  contents: write
+  
+jobs:
+  create-release:
+    name: Create Calver Release
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.calver.outputs.version }}
+      tag: ${{ steps.calver.outputs.tag }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Generate Calver version
+        id: calver
+        run: |
+          # Generate Calver in YY.M.DD.increment format
+          today=$(date +'%y.%-m.%-d')
+          echo "Base date: $today"
+          
+          # Get existing tags for today
+          existing_tags=$(git tag -l "v${today}*" | sort -V)
+          echo "Existing tags for today: $existing_tags"
+          
+          if [ -z "$existing_tags" ]; then
+            # First release today
+            increment=1
+          else
+            # Find the highest increment for today
+            last_tag=$(echo "$existing_tags" | tail -n 1)
+            if [[ "$last_tag" =~ v${today}\.([0-9]+)$ ]]; then
+              last_increment=${BASH_REMATCH[1]}
+              increment=$((last_increment + 1))
+            else
+              increment=1
+            fi
+          fi
+          
+          version="${today}.${increment}"
+          tag="v${version}"
+          
+          echo "Generated version: $version"
+          echo "Generated tag: $tag"
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+          
+      - name: Update version in setup.py
+        run: |
+          sed -i 's/version="[^"]*"/version="${{ steps.calver.outputs.version }}"/' cli/setup.py
+          
+      - name: Commit version update
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add cli/setup.py
+          git commit -m "chore: bump version to ${{ steps.calver.outputs.version }}" || echo "No changes to commit"
+          
+      - name: Create and push tag
+        run: |
+          git tag ${{ steps.calver.outputs.tag }}
+          git push origin ${{ steps.calver.outputs.tag }}
+          git push origin main
+          
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          # Get the previous tag
+          prev_tag=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
+          
+          if [ -n "$prev_tag" ]; then
+            echo "## Changes since $prev_tag" >> release_notes.md
+            echo "" >> release_notes.md
+            git log ${prev_tag}..HEAD --pretty=format:"* %s (%h)" >> release_notes.md
+          else
+            echo "## Initial Release" >> release_notes.md
+            echo "" >> release_notes.md
+            echo "* First release of edbook" >> release_notes.md
+          fi
+          
+          echo "" >> release_notes.md
+          echo "📅 **Release Date:** $(date +'%Y-%m-%d')" >> release_notes.md
+          echo "🏷️ **Version:** ${{ steps.calver.outputs.version }}" >> release_notes.md
+          
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.calver.outputs.tag }}
+          release_name: Release ${{ steps.calver.outputs.version }}
+          body_path: release_notes.md
+          draft: false
+          prerelease: false
+          
+  notify-discord-release:
+    needs: [create-release]
+    name: Notify Discord (new release)
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Notify release
+        run: |
+          content_title="🎉 Ný útgáfa! ${{ needs.create-release.outputs.version }}"
+          title="Release ${{ needs.create-release.outputs.version }}"
+          color=65280
+          description="Ný útgáfa af edbook er tilbúin"
+          url="https://github.com/${{ github.repository }}/releases/tag/${{ needs.create-release.outputs.tag }}"
+          author_name="GitHub Actions"
+          author_url="https://github.com/apps/github-actions"
+          author_avatar="https://github.com/apps/github-actions.png"
+
+          payload=$(cat <<EOF
+          {
+            "content": "$content_title",
+            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+            "embeds": [
+              {
+                "title": "$title",
+                "description": "$description",
+                "url": "$url",
+                "color": $color,
+                "fields": [
+                  {
+                    "name": "Download",
+                    "value": "[Sækja útgáfu](https://github.com/${{ github.repository }}/releases/latest)"
+                  }
+                ],
+                "author": {
+                  "name": "$author_name",
+                  "url": "$author_url",
+                  "icon_url": "$author_avatar"
+                }
+              }
+            ]
+          }
+          EOF
+          )
+          ./.github/discord.sh  \
+            -w ${{ secrets.DISCORD_WEBHOOK }} \
+            -c "$payload"
