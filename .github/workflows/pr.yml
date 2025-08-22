@@ -79,19 +79,68 @@ jobs:
       - name: 🚧 Build versioned documentation
         id: build-versioned
         run: |
-          # Build versioned docs with sphinx-versioned-docs
-          # Check what's installed and available
-          python -c "import sphinx_versioned_docs; print(sphinx_versioned_docs.__version__)"
-          which sphinx-versioned || echo "sphinx-versioned not found"
+          # Build documentation with version structure
+          # Create versioned docs directory structure
+          mkdir -p versioned-docs/main versioned-docs/${{ env.BRANCH_SLUG }}
           
-          # Try different approaches
+          # Build each project into the main branch directory
           cd projects
           for project in */; do
             if [ -d "$project" ] && [ -f "$project/conf.py" ]; then
               echo "Building project: $project"
+              mkdir -p "../versioned-docs/main/$project"
+              mkdir -p "../versioned-docs/${{ env.BRANCH_SLUG }}/$project"
+              
+              # Build for main version (current PR content)
+              sphinx-build -b html "$project" "../versioned-docs/${{ env.BRANCH_SLUG }}/$project"
+              
+              # For now, also copy to main (we'll improve this later)
               sphinx-build -b html "$project" "../versioned-docs/main/$project"
             fi
           done
+          
+          # Create a simple version selector page
+          cat > versioned-docs/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="is">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Edbook Documentation - Version Selector</title>
+              <style>
+                  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+                  .header { text-align: center; margin-bottom: 3rem; }
+                  .version-section { margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e1e4e8; border-radius: 6px; }
+                  .version-title { color: #0366d6; font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+                  .project-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+                  .project-link { display: block; padding: 0.75rem 1rem; background: #f6f8fa; border-radius: 4px; text-decoration: none; color: #24292e; border: 1px solid #e1e4e8; }
+                  .project-link:hover { background: #e1e4e8; text-decoration: none; }
+              </style>
+          </head>
+          <body>
+              <div class="header">
+                  <h1>📚 Edbook Documentation</h1>
+                  <p>Select a version and project to view the documentation</p>
+              </div>
+              
+              <div class="version-section">
+                  <div class="version-title">🚀 Development Branch (ci-improvements)</div>
+                  <div class="project-links">
+                      <a href="ci-improvements/stae205g/" class="project-link">STÆ205G - Tölfræðileg gagnavinnsla og líkanagerð</a>
+                      <a href="ci-improvements/R_fra_grunni/" class="project-link">R frá grunni</a>
+                  </div>
+              </div>
+              
+              <div class="version-section">
+                  <div class="version-title">📖 Main Branch (stable)</div>
+                  <div class="project-links">
+                      <a href="main/stae205g/" class="project-link">STÆ205G - Tölfræðileg gagnavinnsla og líkanagerð</a>
+                      <a href="main/R_fra_grunni/" class="project-link">R frá grunni</a>
+                  </div>
+              </div>
+          </body>
+          </html>
+          EOF
             
       - name: 📂 Prepare versioned pages for deployment
         run: |
