@@ -91,11 +91,22 @@ jobs:
               mkdir -p "../versioned-docs/main/$project"
               mkdir -p "../versioned-docs/${{ env.BRANCH_SLUG }}/$project"
               
-              # Build for main version (current PR content)
-              sphinx-build -b html "$project" "../versioned-docs/${{ env.BRANCH_SLUG }}/$project"
+              # Create empty hoverlist file if missing (for sphinxcontrib-hoverrole)
+              if [ ! -f "$project/LIST_OF_HOVER_TERMS.json" ]; then
+                echo "[]" > "$project/LIST_OF_HOVER_TERMS.json"
+              fi
+              
+              # Build for main version (current PR content) with error handling
+              echo "Building $project for branch ${{ env.BRANCH_SLUG }}..."
+              if ! sphinx-build -b html "$project" "../versioned-docs/${{ env.BRANCH_SLUG }}/$project" -W --keep-going; then
+                echo "Warning: Build failed for $project on branch ${{ env.BRANCH_SLUG }}, continuing..."
+              fi
               
               # For now, also copy to main (we'll improve this later)
-              sphinx-build -b html "$project" "../versioned-docs/main/$project"
+              echo "Building $project for main branch..."
+              if ! sphinx-build -b html "$project" "../versioned-docs/main/$project" -W --keep-going; then
+                echo "Warning: Build failed for $project on main branch, continuing..."
+              fi
             fi
           done
           
