@@ -518,8 +518,25 @@ def get_authors(config: EdbookConfig):
                     auth_title += " <" + a["email"] + ">"
     copyright = f"{year}, {config['description']}"
     year = str(year)
-    version = year  # The short X.Y version.
-    release = year  # The full version, including alpha/beta/rc tags.
+    
+    # Get version from setup.py
+    def get_edbook_version():
+        try:
+            import re
+            # Path to setup.py is at the same level as the edbook directory
+            setup_path = Path(__file__).parent.parent / "setup.py"
+            with open(setup_path, 'r') as f:
+                content = f.read()
+                match = re.search(r'version="([^"]*)"', content)
+                if match:
+                    return match.group(1)
+        except Exception as e:
+            print(f"Warning: Could not read version from setup.py: {e}")
+        return year  # fallback to year if version can't be read
+    
+    edbook_version = get_edbook_version()
+    version = edbook_version  # The short X.Y version.
+    release = edbook_version  # The full version, including alpha/beta/rc tags.
     return project, projectid, auth_title
 
 
@@ -553,6 +570,9 @@ rst_epilog = """
 .. |auth_title| replace:: {auth_title}
 .. |project| replace:: {project}
 .. |projectid| replace:: {projectid}
+.. |version| replace:: {version}
+.. |release| replace:: {release}
 """.format(
-    auth_title=auth_title, project=project, projectid=projectid.upper()
+    auth_title=auth_title, project=project, projectid=projectid.upper(),
+    version=version, release=release
 )

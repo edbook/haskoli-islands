@@ -78,25 +78,25 @@ jobs:
           git push
 
 
-  notify-discord-merge:
+  notify-discord-push:
     needs: [setup]
-    name: Notify Discord (merged to main)
+    name: Notify Discord (push to main)
     runs-on: ubuntu-20.04
-    if: github.event.action == 'closed' && github.event.pull_request.merged == true
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Notify merge
+      - name: Notify push
         run: |
           content_title="Ný útgáfa er kominn í loftið 🎉"
-          title="${{ github.base_ref }} ↩️ ${{ github.head_ref }}"
+          title="Push to ${{ github.ref_name }}"
           color=32768
-          description="${{ github.event.pull_request.body }}"
-          url=${{ github.event.pull_request.html_url }}
-          author_name=${{ github.event.pull_request.user.login}}
-          author_url=${{ github.event.pull_request.user.url}}
-          author_avatar=${{ github.event.pull_request.user.avatar_url}}
-          branch=${{ github.head_ref }}
+          description="${{ github.event.head_commit.message }}"
+          url="https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+          author_name="${{ github.event.head_commit.author.name }}"
+          author_url="https://github.com/${{ github.event.head_commit.author.username }}"
+          author_avatar="https://github.com/${{ github.event.head_commit.author.username }}.png"
+          branch=${{ github.ref_name }}
 
           payload=$(cat <<EOF
           {
@@ -109,9 +109,11 @@ jobs:
                 "url": "$url",
                 "color": $color,
                 "fields": [
-                  "name": "url",
-                  "value": "[Skoða á edbook](https://edbook.hi.is)"
-                ]
+                  {
+                    "name": "url",
+                    "value": "[Skoða á edbook](https://edbook.hi.is)"
+                  }
+                ],
                 "author": {
                   "name": "$author_name",
                   "url": "$author_url",

@@ -139,11 +139,13 @@ jobs:
                 "title": "$title",
                 "description": "$description",
                 "url": "$url",
-                "color": "$color",
+                "color": $color,
                 "fields": [
-                  "name": "url",
-                  "value": "[Skoða á edbook](https://edbook.hi.is/staging/edbook/${branch})"
-                ]
+                  {
+                    "name": "url",
+                    "value": "[Skoða á edbook](https://edbook.hi.is/staging/edbook/${branch})"
+                  }
+                ],
                 "author": {
                   "name": "$author_name",
                   "url": "$author_url",
