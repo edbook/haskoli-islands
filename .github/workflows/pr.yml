@@ -94,6 +94,15 @@ jobs:
               # Create empty hoverlist file if missing (for sphinxcontrib-hoverrole)
               if [ ! -f "$project/LIST_OF_HOVER_TERMS.json" ]; then
                 echo "[]" > "$project/LIST_OF_HOVER_TERMS.json"
+                echo "Created empty LIST_OF_HOVER_TERMS.json for $project"
+              fi
+              
+              # Verify the file was created and has valid JSON
+              if [ -f "$project/LIST_OF_HOVER_TERMS.json" ]; then
+                if ! python3 -m json.tool "$project/LIST_OF_HOVER_TERMS.json" > /dev/null 2>&1; then
+                  echo "Invalid JSON in LIST_OF_HOVER_TERMS.json for $project, recreating..."
+                  echo "[]" > "$project/LIST_OF_HOVER_TERMS.json"
+                fi
               fi
               
               # Build for main version (current PR content) with error handling
@@ -161,8 +170,8 @@ jobs:
           # For PR deployments, use the forsida project as the main landing page
           # This matches the structure of the main edbook.github.io site
           
-          # Check if forsida project was built successfully
-          if [ -d "versioned-docs/${{ env.BRANCH_SLUG }}/forsida" ]; then
+          # Check if forsida project was built successfully and has content
+          if [ -d "versioned-docs/${{ env.BRANCH_SLUG }}/forsida" ] && [ -f "versioned-docs/${{ env.BRANCH_SLUG }}/forsida/index.html" ]; then
             echo "Using forsida project as main landing page"
             # Copy forsida content to root (this becomes the main index)
             cp -r versioned-docs/${{ env.BRANCH_SLUG }}/forsida/* versioned-docs/
