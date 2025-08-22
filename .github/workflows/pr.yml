@@ -25,7 +25,7 @@ jobs:
       version: ${{ steps.calver.outputs.version }}
     environment:
       name: ${{ github.head_ref }}
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}${{ env.BRANCH_SLUG }}
     defaults:
       run:
         shell: bash -el {0}
@@ -174,24 +174,54 @@ jobs:
           # For PR deployments, use the forsida project as the main landing page
           # This matches the structure of the main edbook.github.io site
           
+          # For PR deployments, create a branch-specific landing page
           # Check if forsida project was built successfully and has content
           if [ -d "versioned-docs/${{ env.BRANCH_SLUG }}/forsida" ] && [ -f "versioned-docs/${{ env.BRANCH_SLUG }}/forsida/index.html" ]; then
-            echo "Using forsida project as main landing page"
-            # Copy forsida content to root (this becomes the main index)
-            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/forsida/* versioned-docs/
+            echo "Using forsida project as branch landing page"
+            # Copy forsida content to branch root for PR-specific access
+            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/forsida/* versioned-docs/${{ env.BRANCH_SLUG }}/
             
-            # Copy all other projects to root level for easy access
-            for project_dir in versioned-docs/${{ env.BRANCH_SLUG }}/*/; do
-              project_name=$(basename "$project_dir")
-              if [ "$project_name" != "forsida" ] && [ -d "$project_dir" ]; then
-                echo "Copying project: $project_name"
-                cp -r "$project_dir" "versioned-docs/$project_name"
-              fi
-            done
+            # Create root index that redirects to branch
+            cat > versioned-docs/index.html << EOF
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edbook PR Preview - ${{ env.BRANCH_SLUG }}</title>
+    <meta http-equiv="refresh" content="0; url=${{ env.BRANCH_SLUG }}/">
+</head>
+<body>
+    <p>Redirecting to <a href="${{ env.BRANCH_SLUG }}/">PR preview for ${{ env.BRANCH_SLUG }}</a>...</p>
+</body>
+</html>
+EOF
           else
             echo "Forsida project not found, using fallback structure"
-            # Fallback: copy all branch-specific content to root
-            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/
+            # Create a simple index for the branch
+            cat > versioned-docs/${{ env.BRANCH_SLUG }}/index.html << EOF
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edbook PR Preview - ${{ env.BRANCH_SLUG }}</title>
+</head>
+<body>
+    <h1>📚 Edbook PR Preview</h1>
+    <p>Branch: <strong>${{ env.BRANCH_SLUG }}</strong></p>
+    <h2>Available Projects:</h2>
+    <ul>
+$(for project_dir in versioned-docs/${{ env.BRANCH_SLUG }}/*/; do
+  project_name=$(basename "$project_dir")
+  if [ -d "$project_dir" ]; then
+    echo "        <li><a href=\"$project_name/\">$project_name</a></li>"
+  fi
+done)
+    </ul>
+</body>
+</html>
+EOF
           fi
           
           # Create a simple version comparison page
@@ -272,8 +302,8 @@ jobs:
             
             Your PR documentation is available with version selector:
             
-            **🔗 PR Documentation:** ${{needs.setup.outputs.deploy-url}}
-            **🔗 Individual Projects:** Available at ${{needs.setup.outputs.deploy-url}}[project-name]/
+            **🔗 PR Documentation:** ${{needs.setup.outputs.deploy-url}}${{ env.BRANCH_SLUG }}/
+            **🔗 Individual Projects:** Available at ${{needs.setup.outputs.deploy-url}}${{ env.BRANCH_SLUG }}/[project-name]/
             
             **✨ New Features:**
             - Version selector dropdown on every page
