@@ -154,14 +154,36 @@ numfig = True
 html_theme = "sphinx_rtd_theme"
 # html_theme_path = ["_themes"]
 
+# RTD theme options
+html_theme_options = {
+    'display_version': False,  # Disable sidebar version display under logo
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    'vcs_pageview_mode': '',
+    'style_nav_header_background': 'white',
+    # Collapse navigation
+    'collapse_navigation': False,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
+
 html_context = {
     "display_github": True,
     "github_user": "edbook",
     "github_repo": "haskoli-islands",
     "github_version": str("master/projects/" + os.path.split(os.getcwd())[1] + "/"),
+    "conf_py_path": "/projects/" + os.path.split(os.getcwd())[1] + "/",
 }
 
+# Control version display behavior
+html_show_sphinx = True
+html_show_copyright = True
 html_permalinks = True
+
+# Custom footer with version information
+html_last_updated_fmt = '%Y-%m-%d %H:%M'
 ## CLOUD
 # import cloud_sptheme as csp
 # html_theme = "cloud"
@@ -520,7 +542,7 @@ def get_authors(config: EdbookConfig):
     year = str(year)
     version = year  # The short X.Y version.
     release = year  # The full version, including alpha/beta/rc tags.
-    return project, projectid, auth_title, version, release
+    return project, projectid, auth_title, version, release, copyright
 
 
 def get_caller_path():
@@ -558,13 +580,20 @@ def get_edbook_version():
 with open(Path.joinpath(get_caller_path() / "config.yml"), "r") as f:
     config: EdbookConfig = yaml.safe_load(f)
 print(config)
-project, projectid, auth_title, version, release = get_authors(config)
+project, projectid, auth_title, version, release, copyright = get_authors(config)
 
 # Try to get actual version from setup.py, otherwise use year
 edbook_version = get_edbook_version()
 if edbook_version:
     version = edbook_version
     release = edbook_version
+    # Update copyright to include version info for better footer display
+    copyright = f"{copyright} | Version {version}"
+    
+    # Add version warning for development/PR builds (contains + indicating local version)
+    if '+' in version:
+        version_warning = f"You are viewing a development version ({version}). This may contain incomplete or experimental features."
+        html_theme_options['version_selector'] = True
 
 ######################################################################
 
