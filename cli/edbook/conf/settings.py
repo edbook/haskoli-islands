@@ -518,26 +518,9 @@ def get_authors(config: EdbookConfig):
                     auth_title += " <" + a["email"] + ">"
     copyright = f"{year}, {config['description']}"
     year = str(year)
-    
-    # Get version from setup.py
-    def get_edbook_version():
-        try:
-            import re
-            # Path to setup.py is at the same level as the edbook directory
-            setup_path = Path(__file__).parent.parent / "setup.py"
-            with open(setup_path, 'r') as f:
-                content = f.read()
-                match = re.search(r'version="([^"]*)"', content)
-                if match:
-                    return match.group(1)
-        except Exception as e:
-            print(f"Warning: Could not read version from setup.py: {e}")
-        return year  # fallback to year if version can't be read
-    
-    edbook_version = get_edbook_version()
-    version = edbook_version  # The short X.Y version.
-    release = edbook_version  # The full version, including alpha/beta/rc tags.
-    return project, projectid, auth_title
+    version = year  # The short X.Y version.
+    release = year  # The full version, including alpha/beta/rc tags.
+    return project, projectid, auth_title, version, release
 
 
 def get_caller_path():
@@ -548,10 +531,40 @@ def get_caller_path():
     raise Exception("This should not happen, call the ambulance")
 
 
+# Get version from setup.py 
+def get_edbook_version():
+    try:
+        import re
+        # Try multiple possible paths for setup.py
+        possible_paths = [
+            # From GitHub Actions: /project-root/cli/edbook/conf/settings.py -> /project-root/cli/setup.py
+            Path(__file__).parent.parent.parent.parent / "cli/setup.py",
+            # From local dev: /project-root/cli/edbook/conf/settings.py -> /project-root/cli/setup.py
+            Path(__file__).parent.parent.parent / "setup.py",
+        ]
+        
+        for setup_path in possible_paths:
+            if setup_path.exists():
+                with open(setup_path, 'r') as f:
+                    content = f.read()
+                    match = re.search(r'version="([^"]*)"', content)
+                    if match:
+                        return match.group(1)
+                        
+    except Exception as e:
+        print(f"Warning: Could not read version from setup.py: {e}")
+    return None  # fallback to None if version can't be read
+
 with open(Path.joinpath(get_caller_path() / "config.yml"), "r") as f:
     config: EdbookConfig = yaml.safe_load(f)
 print(config)
-project, projectid, auth_title = get_authors(config)
+project, projectid, auth_title, version, release = get_authors(config)
+
+# Try to get actual version from setup.py, otherwise use year
+edbook_version = get_edbook_version()
+if edbook_version:
+    version = edbook_version
+    release = edbook_version
 
 ######################################################################
 
