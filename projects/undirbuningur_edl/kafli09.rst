@@ -134,7 +134,7 @@ Gerum loks ráð fyrir að við höfum stærð :math:`x \pm \Delta x` og fall :m
 
 .. Goodshit Guðný - þetta er haxbert
 
-`Skjal um meðferð gagna <https://notendur.hi.is/ario/e1/e1lec.pdf>`_ af síðu Ara Ólafssonar
+`Skjal um meðferð gagna <https://ario.hi.is/e1/e1lec.pdf>`_ af síðu Ara Ólafssonar
 
 `Almennt um óvissur <https://martin.hi.is/e0/ovissur_maelistaerda/>`_ af síðu Martins Swifts.
 
