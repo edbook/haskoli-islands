@@ -1,4 +1,4 @@
-name: Pull Request (Optimized)
+name: Pull request
 
 permissions:
   contents: read
@@ -22,8 +22,8 @@ on:
 
 jobs:
   build-docs:
-    name: Build PR Documentation (Optimized)
-    uses: ./.github/workflows/build-docs-optimized.yml
+    name: Build PR Documentation
+    uses: ./.github/workflows/build-docs.yml
     with:
       environment_name: ${{ github.head_ref }}
       deployment_type: pr
@@ -51,18 +51,17 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ## 🚀 Optimized Documentation Deployed
+            ## 📚 Versioned Documentation Deployed
             
-            Your PR documentation is available with enhanced build performance:
+            Your PR documentation is available with version selector:
             
             **🔗 PR Documentation:** ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/
             **🔗 Individual Projects:** Available at ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/[project-name]/
             
-            **✨ Performance Improvements:**
-            - ⚡ Parallel builds (4x faster)
-            - 💾 Intelligent caching
-            - 🏗️ Optimized Sphinx configuration
-            - 📊 Build statistics included
+            **✨ New Features:**
+            - Version selector dropdown on every page
+            - Easy switching between main and PR versions
+            - Professional ReadTheDocs-style navigation
             
             **Version:** `${{ needs.build-docs.outputs.version }}`
           reactions: rocket
@@ -77,7 +76,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Notify open PR
         run: |
-          content_title="Nýtt PR opnað (Optimized Build)"
+          content_title="Nýtt PR opnað"
           title="${{ github.event.pull_request.title }}"
           color=2061822
           description="${{ github.event.pull_request.body }}"
@@ -98,10 +97,6 @@ jobs:
                 "url": "$url",
                 "color": $color,
                 "fields": [
-                  {
-                    "name": "Build Performance",
-                    "value": "⚡ Parallel builds enabled"
-                  },
                   {
                     "name": "url",
                     "value": "[Skoða á edbook](${{ needs.build-docs.outputs.deploy-url }}${branch})"

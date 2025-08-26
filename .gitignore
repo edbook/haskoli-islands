@@ -28,3 +28,5 @@ html
 .tmp.*
 .github/act
 LIST_OF_HOVER_TERMS*
+.hive-mind/
+.claude-flow/
