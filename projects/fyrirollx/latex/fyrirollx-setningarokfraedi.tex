@@ -1,0 +1,734 @@
+%!TEX root = fyrirollx.tex
+\part{Setningarökfræði}
+\label{ch.TFL}
+
+\chapter{Fyrstu skrefin í átt að formlegu máli}
+
+\section{Gildi í krafti rökforms}\label{s:ValidityInVirtueOfForm}
+Skoðum eftirfarandi rökfærslu:
+	\begin{earg}
+		\item[] Það er rigning úti.
+		\item[] Ef það er rigning úti, þá er Sigga í vondu skapi.
+		\item[Þar af leiðandi:] Sigga er í vondu skapi.
+	\end{earg}
+og svo þessa:
+	\begin{earg}
+		\item[] Jón er Framsóknarmaður.
+		\item[] Ef Jón er Framsóknarmaður, þá er Anna er mikill aðdáandi Tolstojs.
+		\item[Þar af leiðandi:] Anna er mikill aðdáandi Tolstojs.
+	\end{earg}
+Þessar rökfærslur er báðar gildar, og ef við skoðum þær gaumgæfilega, þá sjáum við að þær eiga meira en það sameiginlegt. Þær hafa sama \emph{rökform}. Þær segja báðar að eitthvað sé satt, að ef það er satt, þá sé eitthvað annað satt og enda svo á þeirri niðurstöðu að þetta eitthvað annað sé líka satt. En þessi lýsing á forminu er mjög klaufaleg og ef við ætluðum að tala með þessum hætti um rökfærslur almennt, þá gæti orðið mjög erfitt að átta sig á hvert rökform þeirra er. Þess vegna notum við \emph{bókstafi} til að standa fyrir hverja setningu í rökfærslum og þá verður rökform þeirra strax skýrara. Með þeirri aðferð, þá getum við tjáð rökform þessara tveggja rökfærsla svona: 
+	\begin{earg}
+		\item[] \emph{P}
+		\item[] Ef \emph{P}, þá \emph{Q}
+		\item[Þar af leiðandi:] \emph{Q}
+	\end{earg}
+Þetta rökform er gilt, og allar rökfærslur sem hafa þetta form eru gildar. En þetta er ekki eina rökformið sem hefur þennan góða eiginleika.  Skoðum til dæmis eftirfarandi rökfærslu:
+	\begin{earg}
+		\item[] Sigga er annað hvort í sundi eða í bíó.
+		\item[] Sigga er ekki í bíó.
+		\item[Þar af leiðandi:] Sigga er í sundi.
+	\end{earg}
+Þetta er líka gild rökfærsla. Hún hefur eftirfarandi rökform:
+	\begin{earg}
+		\item[] \emph{P} eða \emph{Q}
+		\item[] ekki-\emph{Q}
+		\item[Þar af leiðandi:] \emph{P}
+	\end{earg}
+Þetta rökform er líka gilt. Hér er enn annað dæmi:
+	\begin{earg}
+		\item[] Það er ekki satt að Jón hafi lært heima í gær og farið í bíó.		
+		\item[] Jón lærði heima í gær.
+		\item[Þar af leiðandi:] Jón fór ekki í bíó.
+	\end{earg}
+Þetta er gilt rökform sem við gætum sett fram svona:
+
+	\begin{earg}
+		\item[] ekki-(\emph{P} og \emph{Q})
+		\item[] \emph{P}
+		\item[Þar af leiðandi:] ekki-\emph{Q}
+	\end{earg}
+	
+Þessi dæmi draga fram eina af mikilvægustu hugmyndum rökfræðinnar: gildi í krafti rökforms. Gildi þessara rökfærsla hefur ekkert að gera með merkingu orðanna sem koma fyrir í þeim, né setninganna í heild, heldur er það formið sjálft sem tryggir að rökfærslurnar eru gildar. Ef merking kemur eitthvað við sögu, þá er það merking þeirra orða sem heimspekingar kalla stundum \emph{rökfasta}: „og“, „ekki-“, „ef\ldots, þá \ldots“. Eftirfarandi rökfærsla er dæmi um þetta:
+
+	\begin{earg}
+		\item[] Spindilkúlan er skottuð.
+		\item[] Ef spindilkúlan er skottuð, þá er spliffið líka farið.
+		\item[Þar af leiðandi:] Spliffið er farið.
+	\end{earg}	
+Ég veit ekki hvað „spindilkúla“ er, né yfirleitt hvað nokkuð af orðunum í þessari rökfærslu merkja, ef ég bjó þau ekki bara til. En af því að ég veit að hún hefur sama rökform og fyrstu tvær rökfærslurnar í þessum kafla, þá veit ég að \emph{ef} forsendurnar eru báðar sannar, \emph{þá} er niðurstaðan líka sönn. Þessi rökfærsla er gild í krafti rökforms síns.
+
+Í þessum kafla munum við smíða \emph{formlegt mál} sem mun gera okkur kleift að greina margar rökfærslur með þessum hætti og sýna fram á hvort þær séu gildar í krafti rökforms eða ekki. Við munum kalla þetta mál \define{setningarökfræði}. 
+
+\section{Annars konar gildi}
+Gildi í krafti rökforms er mikilvægt, en rökfærslur geta þó verið gildar af öðrum ástæðum. Skoðum til dæmis eftirfarandi rökfærslu:
+
+	\begin{earg}
+		\item[] Snati er hvolpur. 
+		\item[Þar af leiðandi:] Snati er hundur.
+	\end{earg}
+Niðurstaða þessarar rökfærslu getur ekki verið ósönn, ef forsendan er sönn. Hún er því gild. En gildið hefur ekkert að gera með form rökfærslunnar. Hér er rökfærsla sem hefur sama form, en er bersýnilega ógild:	
+	:
+	\begin{earg}
+		\item[] Snati er hvolpur.
+		\item[Þar af leiðandi:] Snati er dómkirkja.
+	\end{earg}
+Eftir að hafa skoðað þessi dæmi, þá gæti maður haldið að gildi fyrstu rökfærslurnar hafi eitthvað að gera með merkingu orðanna „hvolpur“ og „hundur“. Það má teljast líklegt, en það sem skiptir okkur mestu máli hér að það er ekki rökformið sem tryggir að rökfærslan er gild. Sama gildir um þessa rökfærslu:
+	\begin{earg}
+		\item[] Veggurinn er allur grænmálaður.
+		\item[Þar af leiðandi:] Veggurinn er ekki allur rauðmálaður. 
+	\end{earg}
+Aftur virðist það alveg ómögulegt fyrir forsenduna að vera sanna, en niðurstöðuna ósanna. Veggur getur jú ekki verið allur grænmálaður og allur rauðmálaður. Rökfærslan er því gild. En hér er ógild rökfærsla sem hefur sama form:
+	\begin{earg}
+		\item[] Veggurinn er allur grænmálaður.
+		\item[Þar af leiðandi:] Veggurinn er ekki allur gláfægður.
+	\end{earg}
+Þessi rökfærsla \emph{er} ógild, því veggur getur augljóslega verið bæði grænmálaður og gláandi. Hann gæti til dæmis hafa verið málaður grænn og svo lakkaður. Það virðist líklegt að fyrsta rökfærslan sé gild vegna þess hvernig litir virka, eða í það minnsta hvernig merking orða sem vísa til lita virka. Við getum að minnsta kosti sagt að það er ekki rökform rökfærslunnar sem tryggir að hún sé gild.	
+	
+Boðskapurinn er þessi: Setningarökfræðin getur í besta falli hjálpað okkur að greina rökfærslur sem eru gildar vegna rökforms síns. Hún getur ekkert sagt okkur um aðrar rökfærslur og hugsanlega mun hún greina gildar rökfærslur sem ógildar. Það er þó bót í máli að setningarökfræðin mun aldrei segja okkur að ógildar rökfærslur séu gildar.
+
+\section{Grunnsetningar}
+
+Þegar við fórum fyrst að skoða dæmi um rökform í \S\ref{s:ValidityInVirtueOfForm} hér að ofan, gerðum við það með að skipta setningum eða hlutum úr setningu út fyrir bókstafi. Til dæmis, í fyrsta dæminu hér að ofan, þá skiptum við út setningarhlutanum „það er rigning úti“ í setningunni „Ef það er rigning úti, þá er Sigga í vondu skapi“ út fyrir bókstafinn „\emph{P}“.
+
+Með því að gera þetta, þá gátum við séð á augabragði hvert rökform rökfærslanna sem við skoðuðum var. Markmið okkar núna er að smíða formlegt mál þar sem þessari hugmynd er fylgt út í ystu æsar. Við munum byrja á því að skilgreina \define{grunnsetningar}. Þær munum við svo nota til að smíða sífellt flóknari og flóknari setningar eftir ákveðnum reglum. Við munum nota stóra bókstafi til að tjá grunnsetningarnar og ef okkur vantar fleiri stafi, þá bætum við lágvísum við stafina. Hér eru nokkur dæmi um grunnsetningar í setningarökfræði, sumar þeirra með lágvísum:
+	$$P, Q, R, P_2, P_{234}, Q_{32}$$
+Við munum nota grunnsetningar til að standa fyrir eða tákna setningar í mæltu máli. Til að gera þetta þurfum við \define{þýðingarlykil} sem segir okkur fyrir hvað setningarnar standa. Til dæmis:	
+	
+	\begin{ekey}
+		\item[P] það er rigning úti.
+		\item[Q] Sigga er í vondu skapi.
+	\end{ekey}
+Þessi þýðingarlykill segir okkur að við ætlum að láta setningastafinn \emph{P} standa fyrir „það er rigning úti“ og setningastafinn \emph{Q} standa fyrir „Sigga er í vondu skapi“. Við gerum þetta þó ekki í eitt skipti fyrir öll. Næst þegar við viljum greina \emph{aðra} rökfærslu, þá getum við notað sömu setningastafi aftur til að standa fyrir aðrar setningar. Til dæmis:
+	\begin{ekey}
+		\item[P] Jón er Framsóknarmaður.
+		\item[Q] Anna er mikill aðdáandi Tolstojs.
+	\end{ekey}
+Ýmislegt getur glatast við þetta. Setningin „Anna er mikill aðdáandi Tolstojs“ hefur málfræðilega (og eins og við munum sjá seinna í bókinni, rökfræðilega) byggingu sem ekki endurspeglast í bókstafnum sem við látum standa fyrir hana. Frá sjónarhóli setningarökfræðinnar er grunnsetning hins vegar bara bókstafur. Við getum notað hana til að smíða flóknari setningar, en við getum ekki greint hana frekar.
+	
+\chapter{Setningatengi}\label{s:TFLConnectives}
+Í síðasta undirkafla skoðuðum við hvernig hægt er að greina rökform rökfærsla með því að láta grunnsetningar setningarökfræðinnar standa fyrir ákveðnar setningar eða setningahluta úr mæltu máli. Við undanskildum ákveðin orð sem við kölluðum rökfasta, orð eins og „og“, „eða“, „ekki“ og „ef\ldots, þá\ldots“. Við viljum líka nota sérstök tákn fyrir þessi orð og nota þau til að tengja saman grunnsetningar til þess að smíða flóknari setningar. Við köllum þessi tákn \define{setningatengi}. Í setningarökfræði eins og við skilgreinum hana eru fimm setningatengi. Í töflunni hér fyrir neðan er yfirlit yfir þessi tengi og verða þau útskýrð nánar í kaflanum hér fyrir neðan.
+
+Við munum byrja á því að kynnast þeim óformlega, en seinna munum við skilgreina merkingu þeirra formlega.
+	\begin{table}[h]
+	\center
+	\begin{tabular}{l l l}
+	
+	\textbf{tákn}&\textbf{heiti}&\textbf{merking}\\
+	\hline
+	\enot&neitun&„það er ekki satt að $\ldots$“\\
+	\eand&og-tengi&„bæði $\ldots$\ og $\ldots$“\\
+	\eor&eða-tengi&„Annað hvort $\ldots$\ eða $\ldots$“\\
+	\eif&skilyrðistengi&„Ef $\ldots$\ þá $\ldots$“\\
+	\eiff&jafngildistengi&„$\ldots$ ef og aðeins ef $\ldots$“\\
+	
+	\end{tabular}
+	\end{table}
+
+\section{Neitun}
+Skoðum hvernig við gætum táknað eftirfarandi setningar á táknmáli setningarökfræði:
+	\begin{earg}
+	\item[\ex{not1}] Anna er á Reyðarfirði.
+	\item[\ex{not2}] Það er ekki satt að Anna sé á Reyðarfirði.
+	\item[\ex{not3}] Anna er ekki á Reyðarfirði.
+	\end{earg}
+Til þess að tákna setningu \ref{not1} þurfum við bara grunnsetningu. Við gætum til dæmis notað þennan þýðingarlykil:
+	\begin{ekey}
+		\item[R] Anna er á Reyðarfirði.
+	\end{ekey}
+Setning \ref{not2} er svo \define{neitun} á setningu \ref{not1} og því væri óeðlilegt að nota nýjan setningastaf til að tákna þá setningu. Nánar tiltekið, þá merkir hún það sama og „það er ekki satt að \emph{R}“. Til þess að tákna þessa setningu þurfum við sérstakt tákn fyrir neitun. Við munum nota táknið „\enot“. Þegar við höfum kynnt það til sögunnar, þá getum við táknað \ref{not2} sem $\enot R$.
+
+Setning \ref{not3} inniheldur líka orðið „ekki“ og er greinilega jafngild setningu \ref{not2}---setning \ref{not2} og \ref{not3} merkja það sama. Við getum því líka táknað hana sem $\enot R$.
+
+\factoidbox{Hægt er að tákna setningu með $\enot \meta{A}$ ef hægt er að orða hana á mæltu máli sem „Það er ekki satt að\ldots“.} Takið eftir því að hér notum við feitletraðan bókstaf. Það er vegna þess að grunnsetningarnar í setningarökfræði standa fyrir eina setningu eða setningahluta en við þurfum samt einhverja leið til þess að tala um \emph{allar} setningar af einhverju formi og við notum feitletraða bókstafi til þess. Við munum fjalla betur um þetta að neðan og um stund er best að hugsa bara um feitletraða bókstafi þannig að þeir standi fyrir hvaða setningu í umsagnarökfræði sem er. $\enot\meta{A}$ stendur því fyrir allar setningar hafa neitun sem aðaltengi.
+
+Hér eru fleiri dæmi:
+	\begin{earg}
+		\item[\ex{not4}] Það er hægt að brjóta glerið.
+		\item[\ex{not5}] Glerið er óbrjótanlegt.
+		\item[\ex{not5b}] Glerið er ekki óbrjótanlegt.
+	\end{earg}
+Notum eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[P] Það er hægt að brjóta glerið.
+	\end{ekey}
+Við getum táknað setningu \ref{not4} sem „\emph{P}“. Ef við skoðum svo setningu \ref{not5}, þá sjáum við að hún merkir það sama og að það sé ekki hægt að brjóta glerið. Það væri því gott að tákna hana með $\enot P$, þó að hún innihaldi ekki orðið „ekki“. 
+
+Setningu \ref{not5b} getum við þá endurorðað sem „það er ekki satt að glerið sé óbrjótanlegt“ og miðað við það sem við sögðum að ofan, þá gætum við endurorðað þá setningu sem „það er ekki satt að það sé ekki satt að það sé hægt að brjóta glerið“. Við getum því táknað hana í táknmáli setningarökfræði sem „$\enot \enot P$“. 
+
+Þessu má þó ekki beita hugsunarlaust. Skoðum til dæmis eftirfarandi tvær setningar:
+	\begin{earg}
+		\item[\ex{not6}] Brynjar er hamingjusamur.
+		\item[\ex{not7}] Brynjar er óhamingjusamur.
+	\end{earg}
+Það liggur beint við að nota einn setningarstaf til að tákna setningu \ref{not6}: $P$. En það væri ekki rétt að ætla svo að tákna \ref{not7} svona: $\enot P$. Það er af því að þó að það sé satt að ef Brynjar sé óhamingjusamur, þá sé hann ekki hamingjusamur, þá merkir \ref{not7} ekki það sama og „það er ekki satt að Brynjar sé hamingjusamur“. Það gæti til dæmis verið að Brynjar sé hvorki hamingjusamur né óhamingjusamur. Hann gæti til dæmis verið ágætlega sáttur við lífið, án þess þó að kallast beinlínis hamingjusamur. Til þess að tákna setningu \ref{not7} þurfum við því nýja grunnsetningu í umsagnarökfræði, t.d.\ $Q$.
+
+Fram að þessu höfum við sett gæsalappir utan um táknrunur sem mynda setningar í setningarökfræði, til að mynda $\enot P$, og eru fyrir því góðar ástæður sem fjallað verður um í \S\ref{s:UseMention}. Það myndi hins vegar fylla bókina af gæsalöppum að halda þessu til streitu og munum við þess vegna sleppa þeim þegar því verður við komið.
+	
+\section{Og-tengi}\label{s:ConnectiveConjunction}
+Skoðum eftirfarandi setningar:
+	\begin{earg}
+		\item[\ex{and1}]Anna býr á Aragötu.
+		\item[\ex{and2}]Jón býr á Aragötu.
+		\item[\ex{and3}]Anna býr á Aragötu, og Jón býr líka á Aragötu.
+	\end{earg}
+\ref{and1} og \ref{and2} merkja ekki það sama, svo við þurfum tvær grunnsetningar úr máli umsagnarökfræði til að tákna þessar tvær setningar, til dæmis:
+	\begin{ekey}
+		\item[P] Anna býr á Aragötu.
+		\item[Q] Jón býr á Aragötu.
+	\end{ekey}
+$P$ stendur því fyrir „Anna býr á Aragötu“ og $Q$ fyrir „Jón býr á Aragötu“. Setning \ref{and3} merkir nokkurn veginn það sama og „\emph{P} og \emph{Q}“. Til þess að tákna „og“ kynnum við því til sögunnar nýtt tákn, „$\eand$“. Þá getum við táknað \ref{and3} sem $(P \eand Q)$. Þetta setningatengi köllum við \define{og-tengi} og setninguna sem verður til þegar það tengir saman tvær grunnsetningar köllum við \define{samtengingu}.  
+
+Takið eftir því að við gerum enga tilraun til þess að reyna að þýða „líka“ yfir á táknmál setningarökfræði. Orð af þessu tagi gegna mikilvægu hlutverki í mæltu máli, en breyta í raun engu um sanngildi setninganna og þess vegna hunsum við þau þegar við stundum rökfræði.
+
+Hér eru frekari dæmi:
+	\begin{earg}
+		\item[\ex{and4}]Anna er stór og sterk.
+		\item[\ex{and5}]Anna og Jón eru bæði sterk.
+		\item[\ex{and6}]Þó að Anna sé sterk, þá er hún ekki stór.
+	\item[\ex{and7}]Jón er sterkur, en Anna er sterkari.
+	\end{earg}
+Setning \ref{and4} er greinilega samtenging. Hún segir tvennt um Önnu, að hún sé stór og að hún sé sterk. Í mæltu máli styttum við okkur leið og vísum bara til Önnu einu sinni og látum samtenginguna tengja saman lýsingarorðin. Það væri því freistandi að reyna eitthvað svipað þegar við þýðum setninguna yfir á táknmál setningarökfræði. Við gætum þá haldið að eitthvað á borð við „$P$ og sterk“ væri skref í rétta átt. Það væri misráðið. 
+
+Þegar við höfum þýtt hluta af setningunni sem $P$ er öll innri bygging hennar þar með glötuð. $P$ er grunnsetning í setningarökfræði. Á sama hátt er „sterk“ ekki einu sinni heil setning---en það er „Anna er sterk“ hins vegar. Við erum því á höttunum eftir einhverju á borð við „\emph{P} og Anna er sterk“. Til þess að klára þýðinguna þurfum við því að kynna til sögunnar nýja grunnsetningu og bæta henni við þýðingarlykilinn, t.d.\ $Q$. Ef við látum $Q$ standa fyrir „Anna er sterk“, þá getum við klárað þýðinguna sem $(P \eand Q)$. \emph{Þegar við þýðum yfir á táknmál setningarökfræði, þá stendur hver bókstafur alltaf fyrir heila setningu}.
+
+Setning \ref{and5} segir það sama um tvær manneskjur, að Anna sé sterk og að Jón sé sterkur. Rétt eins og að ofan, þá þurfum við að þýða þessa setningu rétt eins og staðið hefði „Anna er sterk og Jón er sterkur“, jafnvel þó að við notum orðið „sterkur“ bara einu sinni. Rétt væri þá að þýða setninguna sem t.d.\ $(P \eand R)$ með því að láta $R$ standa fyrir „Jón er sterkur“ í þýðingarlyklinum.
+
+Setning \ref{and6} er örlítið flóknari. Orðin „þó að“ og „þá“ gefa til kynna einhvers konar samanburð eða mótsetningu milli fyrri hluta setningarinnar og þeirrar seinni. Þrátt fyrir það er \emph{innihald} setningarinnar fyrst og fremst það að Anna sé sterk og að hún sé ekki stór. Til þess að geta gert hvorn lið að grunnsetningu þurfum við bara að skipta út orðinu „hún“ fyrir „Anna“ og þá getum við umorðað setninguna sem „Anna er sterk og Anna er ekki stór“. Seinni liðurinn inniheldur neitun, og þá getum við umorðað aftur í samræmi við það sem við sögðum að ofan í kaflanum um neitun, og þá fáum við „Anna er sterk og það er ekki satt að Anna sé stór“. Þá liggur beint við að tákna setningu \ref{and6} sem t.d. $P \eand \enot Q$. Við höfum auðvitað glatað ýmsum blæbrigðum sem finnast í upprunalegu setningunni, en þær getum við ekki varðveitt á táknmáli setningarökfræðinnar.
+
+Sama máli gegnir um \ref{and7}. Uppsetningin bendir til einhvers konar mótsetningar eða áherslu sem setningarökfræðin getur ekki fangað. Við þurfum því að umorða þessa setningu sem „Jón er sterkur og Anna er sterkari en Jón“ (en aftur þurfum við að fylla upp í seinni setninguna til að hún tjái heilstæða setningu, rétt eins og að ofan). Hvernig getum við þá þýtt seinni setninguna? Við höfum notað $Q$ til að þýða „Anna er sterk“ og „$R$“ til að þýða „Jón er sterkur“ en þessar setningar segja ekkert um innbyrðis styrk þeirra tveggja. Í raun hefur setningarökræðin engin tæki til að eiga við slíkt, og því erum við nauðbeygð til þess að kynna til sögunnar aðra grunnsetningu, t.d.\ $T$ og þýða setninguna sem $(P \eand T)$.
+	\factoidbox{
+		Hægt er að þýða setningu yfir á táknmál setningarökfræðinnar sem $\meta{A} \eand \meta{B}$ ef og aðeins ef hægt er að umorða hana sem „bæði \ldots, og \ldots“, eða sem „\ldots en \ldots“ eða „þó að \ldots, þá \ldots“.}
+Einhver gæti velt fyrir sér hvers vegna ég hef sett \emph{sviga} utan um allar samtengingarnar hér að ofan. Það hefur að gera með samspil neitunar og samtenginga. Athugum sem dæmi eftirfarandi setningar:	
+	\begin{earg}
+		\item[\ex{negcon1}] Það er ekki satt að þú fáir hvort tveggja, súpu og salat.
+		\item[\ex{negcon2}] Þú færð ekki súpu, en þú færð salat.
+	\end{earg}
+Við getum umorðað \ref{negcon1} sem „Það er ekki satt að: þú færð bæði súpu og salat“. Með því að nota þýðingarlykilinn	
+	\begin{ekey}
+		\item[S_1] Þú færð súpu.
+		\item[S_2] Þú færð salat.
+	\end{ekey}
+getum við táknað þá táknað setninguna „þú færð bæði súpu og salat“ sem $(S_1 \eand S_2)$. Þá er ekkert eftir nema að setja neitun fyrir framan alla setninguna, og þá fáum við $\enot(S_1 \eand S_2)$. Hérna sést vel hvernig við getum smíðað sífellt flóknari setningar í setningarökfræði með því að tengja saman setningar sem við höfum þegar smíðað. Fyrst smíðuðum við setninguna $(S_1 \eand S_2)$ úr $S_1$ og $S_2$ og svo smíðuðum við $\enot(S_1 \eand S_2)$ úr henni.
+
+Setning \ref{negcon2} segir á hinn bóginn að þú fáir \emph{ekki} súpu og að þú fáir salat. Setningin „Þú færð ekki súpu“ er táknuð, samkvæmt þýðingarlyklinum okkar, sem $\enot S_1$ og því getum við þýtt \ref{negcon2} sem $(\enot S_1 \eand S_2)$. Ef við hefðum ekki sviga, þá gætum við ekki gert greinarmun á þessum setningum. Við munum fara nánar í þetta atriði seinna í bókinni.
+
+\section{Eða-tengi}
+Skoðum tvö dæmi:
+	\begin{earg}
+		\item[\ex{or1}]Annaðhvort fer Jón í sund með mér eða hann fer í bíó.
+		\item[\ex{or2}]Annaðhvort fer Jón í bíó með mér eða Anna. 
+	\end{earg}
+Við getum notað eftirfarandi þýðingarlykil fyrir þessi tvö dæmi:
+	\begin{ekey}
+		\item[S_1] Jón fer í sund með mér.
+		\item[S_2] Anna fer í sund með mér.
+		\item[B] Jón fer í bíó.
+	\end{ekey}	
+Hér þurfum við aftur að kynna til sögunnar nýtt tákn. Táknið sem við notum til að tákna „eða“ er „$\eor$“ og kallast \define{eða-tengi}. Setningin sem verður til við notkun eða-tengisins kallast \define{mistenging} eða \define{eðun}. Við getum þá þýtt \ref{or1} yfir á táknmál setningarökfræði sem $(S_1 \eor B)$.
+
+Setning \ref{or2} er örlítið flóknari. Hér höfum við aftur tvö frumlög, Önnu og Jón, en setningin hefur bara eina sögn þar sem vísað er til þeirra beggja. Við getum umorðað hana þannig að hún segi að „Annaðhvort fer Jón í sund með mér eða Anna fer í sund með mér“. Þá getum við þýtt hana yfir á táknmál setningarökfræði sem $(S_1 \eor S_2)$.
+	\factoidbox{
+		Hægt er að þýða setningu yfir á táknmál setningarökfræði sem $(\meta{A} \eor \meta{B})$ ef hægt er að umorða hana í mæltu máli sem „Annaðhvort \ldots eða \ldots“
+	}
+Á mæltu máli er „eða“ oft tvírætt. Stundum gefur það nefnilega til kynna að einungis einn möguleiki í einu standi til boða, en ekki báðir samtímis. Þetta kallast \define{óskarað eða}. Þetta er augljóslega það sem við er átt með setningu eins og „Brauðstangir eða hvítlauksbrauð fylgir með hverju tilboði“: ef þú kaupir tilboð, þá máttu annað hvort fá brauðstangir eða þú mátt fá hvítlauksbrauð, en ekki hvort tveggja. 	
+
+Stundum leyfir orðið „eða“ að báðar setningarnar sem það tengir séu sannar. Þá verður að minnsta kosti annar liðurinn verður að vera sannur en þeir gætu líka báðir verið sannir. Þetta kallast \define{skarað eða}. Þetta er líklega ekki algengt í mæltu máli en mögulegt dæmi væri: „Má bjóða þér mjólk eða sykur í kaffið? ---Hvort tveggja, takk“. Hér myndi þjóninn líklega ekki taka það óstinnt upp að gesturinn hafi beðið um mjólk og sykur, ólíkt dæminu að ofan þar sem fáir kæmust upp með að fá hvort tveggja, brauðstangir og hvítlauksbrauð. 
+
+Það er mikilvægt að hafa muninn á sköruðu og ósköruðu eða í huga þegar við þýðum setningar á mæltu máli yfir á táknmál setningarökfræði. Við getum hins vegar ekki notað sama táknið yfir hvort tveggja, og þess vegna þurfum við að velja. Í setningarökfræði er auðveldara að fást við skarað eða, og þess vegna notum við táknið „$\eor$“ \emph{alltaf} til að tákna það. 
+
+Skoðum nú samspil neitunar og mistengingar. Hér eru nokkur dæmi:
+	\begin{earg}
+		\item[\ex{or3}] Annaðhvort færðu ekki súpu eða þú færð ekki salat.
+		\item[\ex{or4}] Þú færð hvorki súpu né salat.
+		\item[\ex{or.xor}] Þú færð annaðhvort súpu eða salat, en ekki hvort tveggja.
+	\end{earg}
+
+Notum eftirfarandi þýðingarlykil:	
+	\begin{ekey}
+		\item[S_1] Þú færð súpu.
+		\item[S_2] Þú færð salat.
+	\end{ekey}
+Hægt er er að umorða setningu \ref{or3} svona: „Annað hvort er það ekki satt að þú fáir súpu eða það er ekki satt að þú fáir salat“. Til þess að þýða þessa setningu yfir á táknmál setningarökfræði þurfum við því bæði „$\eor$“ og „$\enot$“. „Það er ekki satt að þú fáir súpu“ væri þá táknuð sem $\enot S_1$ og „Það er ekki satt að þú fáir salat“ sem $\enot S_2$. Setning \ref{or3} er þá best þýdd sem $(\enot S_1 \eor \enot S_2)$.
+	
+Setning \ref{or4} þarfnast líka neitunar. Hægt væri að umorða hana sem „Það er ekki satt að: Annaðhvort færðu súpu eða þú færð salat“. Neitunin neitar því allri mistengingunni og við fáum $\enot (S_1 \eor S_2)$.
+
+Setning \ref{or.xor} notar \emph{óskarað eða}. Með það í huga að „$\eor$“ táknar alltaf skarað eða, þá getum við skipt setningunni í tvennt. Fyrsti hlutinn segir að þú fáir súpu eða salat. Við getum táknað hann svona: $(S_1 \eor S_2)$. Seinni hlutinn segir að þú getir ekki fengið hvort tveggja. Við getum umorðað það svona: það er ekki satt að þú fáir bæði súpu og salat. Þá liggur beint við að þýða það yfir á táknmál setningarökfræði sem $\enot(S_1 \eand S_2)$. Nú er bara eftir að setja þessa tvo hluta saman, og eins og við sáum að ofan, þá er „en“ oftast vel þýtt með „$\eand$“. Þá fáum við: $((S_1 \eor S_2) \eand \enot(S_1 \eand S_2))$.
+	
+Þetta síðasta dæmi sýnir að þó að táknið „$\eor$“ sé alltaf notað til að tákna \emph{skarað eða}, þá getum við líka þýtt setningar á mæltu máli þar sem \emph{óskarað eða} er notað yfir á táknmál setningarökfræði. Við þurfum bara aðeins fleiri tákn.
+
+\section{Skilyrðistengi}
+Skoðum eftirfarandi tvær setningar:
+	\begin{earg}
+		\item[\ex{if1}] Ef Jón er á Öldugötu, þá er Jón í Vesturbænum.
+		\item[\ex{if2}] Jón er í Vesturbænum, bara ef Jón er á Öldugötu.
+	\end{earg}
+Notum svo eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[O] Jón er á Öldugötu.
+		\item[V] Jón er í Vesturbænum.
+	\end{ekey}
+Setning \ref{if1} hefur rökformið: „ef \emph{O}, þá \emph{V}“. Við notum táknið $\eif$ til að þýða setningar á forminu „ef\ldots, þá \ldots“. Setning \ref{if1} útleggst þá á táknmáli setningarökfræði sem $(O \eif V)$. Þetta setningartengi kallast \define{skilyrðistengi}. Við köllum fyrri setninguna \define{forlið} og þá seinni \define{baklið}. Í setningunni hér að ofan er $O$ forliður og $V$ bakliður. Setningar af þessu tagi kallast \define{skilyrðissetningar}.
+	
+Setning \ref{if2} er líka skilyrðissetning, nema í þetta skiptið er röð setninganna öfug og „ef“ kemur fyrir í seinni hluta setningarinnar. Það væri því freistandi að þýða \ref{if2} á sama hátt og \ref{if1}. Það væri þó ekki rétt. Öldugata er í Vesturbænum, og því er ljóst að setning \ref{if1} er sönn. Ef Jón er á Öldugötu, þá er hann vissulega í Vesturbænum. En setning \ref{if2} er ekki alveg svona einföld: ef Jón væri á Hringbraut, Hrannarstíg, Hofsvallagötu eða á Nýlendugötu, þá væri hann líka í Vesturbænum. Setning \ref{if1} er því sönn, en setning \ref{if2} ósönn (nema að við vitum eitthvað frekar um ferðir Jóns), og þá geta þær ekki haft sömu merkingu---og því þarf að þýða þær á ólíkan hátt yfir á táknmál setningarökfræði.
+	
+Við getum hins vegar umorðað \ref{if2} þannig að hún segi „ef Jón er í Vesturbænum, þá er hann á Öldugötu“. Við getum því þýtt hana yfir á táknmál setningarökfræði sem $(V \eif O)$.
+	\factoidbox{
+		Hægt er að þýða setningu yfir á táknmál setningarökfræði sem $(\meta{A} \eif \meta{B})$ ef hægt er að umorða hana sem „Ef A, þá B eða „B bara ef A. $\meta{A}$ kallast \emph{forliður} og $\meta{B}$ kallast \emph{bakliður}.
+	}
+\noindent Ýmsar gerðir setninga á mæltu máli eru skilyrðissetningar, sumar eðlilegra mál en aðrar. Til dæmis:
+	\begin{earg}
+		%\item[\ex{ifnec1}] Svo Jón sé á Öldugötu, er nauðsynlegt að hann sé í Vesturbænum.
+		\item[\ex{ifnec2}] Það er nauðsynlegt skilyrði fyrir veru Jóns á Öldugötu, að hann sé í Vesturbænum.
+		%\item[\ex{ifsuf1}] For Jean to be in France, it is sufficient that Jean be in Paris.
+		\item[\ex{ifsuf2}] Það er nægjanlegt skilyrði fyrir veru Jóns í Vesturbænum, að hann sé á Öldugötu.
+	\end{earg}
+Þessar setningar merkja það sama og „Ef Jón er á Öldugötu, þá er hann í Vesturbænum“. Við getum því þýtt þær yfir á táknmál setningarökfræði sem $(O \eif V)$.
+
+Það er mikilvægt að hafa í huga að setningartengið „$\eif$“ segir okkur bara að ef forliðurinn er sannur, þá sé bakliðurinn það líka. Þessi tengsl hafa bara með sanngildi setningana að gera, en segja okkur til dæmis ekkert um orsakasamband milli tveggja atburða. Það er því ýmislegt sem glatast þegar við notum „$\eif$“ til að þýða skilyrðissetningar úr mæltu máli yfir á táknmál setningarökfræði. Við munum fjalla betur um þetta í \S\ref{s:IndicativeSubjunctive} og \S\ref{s:ParadoxesOfMaterialConditional}.
+
+\section{Jafngildistengi}
+Skoðum eftirfarandi þrjár setningar:
+	\begin{earg}
+		\item[\ex{iff1}] Snati er hvolpur aðeins ef hann er hundur.
+		\item[\ex{iff2}] Snati er hvolpur ef hann er hundur.
+		\item[\ex{iff3}] Snati er hvolpur ef og aðeins ef hann er hundur.
+	\end{earg}
+Við notum þennan þýðingarlykil:
+	\begin{ekey}
+		\item[H_1] Snati er hvolpur.
+		\item[H_2] Snati er hundur.
+	\end{ekey}
+
+Af þeim ástæðum sem við tiltókum hér að ofan í umfjöllunninni um skilyrðistengingar, þá er hægt að þýða \ref{iff1} yfir á táknmál setningarökfræði sem $(H_1 \eif H_2)$.
+
+Um setningu \ref{iff2} gegnir öðru máli. Það er hægt að umorða hana sem „Ef Snati er hundur, þá er hann hvolpur“. Þá getum við táknað hana sem $(H_2 \eif H_1)$. Merking \ref{iff3} er svo sú sama og samtengingar setninganna \ref{iff1} og \ref{iff2}. Við getum umorðað hana sem „Snati er hvolpur aðeins ef hann er hundur og Snati er hvolpur ef hann er hundur“. Við getum því táknað þessa setningu sem $((H_1 \eif H_2) \eand (H_2 \eif H_1))$. 
+
+Það sem er rökfræðilega áhugavert við setningar af þessu tagi er að þær eru sannar ef báðar setningarnar sem mynda samtenginguna hafa sama sanngildi, það er að segja, ef báðar eru sannar eða ef báðar eru ósannar. Í stað þess að skrifa svona langa táknrunu í hvert sinn sem við viljum tákna þetta, þá kynnum við til sögunnar nýtt setningatengi: „$\eiff$“. Við köllum það \define{jafngildistengi} og köllum setningar sem það myndar \define{jafngildissetningar}.
+
+Við gætum umorðað allar jafngildissetningar þannig að þær séu samtenging tveggja skilyrðissetninga. Við þyrftum því strangt til tekið ekki sérstakt tákn fyrir þær, rétt eins og við þurfum ekki sérstakt tákn fyrir \emph{óskarað eða}. Það er hins vegar þægilegt að hafa tákn fyrir slíkar setningar og því notum við táknið $„\eiff“$ fyrir það. Við getum því þýtt setningu \ref{iff3} yfir á táknmál setningarökfræði sem $(H_1 \eiff H_2)$.
+
+Orðasambandið „ef og aðeins ef“ er mikið notað í heimspeki og rökfræði. Af þeim ástæðum er styttingin „eff“, „ef“ með auka „f-i“, oft notuð til hægðarauka. Ég mun stundum fylgja þeirri notkun. Það er því mikilvægt að ruglast ekki á „ef“, með einu f-i, og „eff“, með tveimur f-um.
+
+	\factoidbox{
+		Hægt er að þýða setningu yfir á táknmál setningarökfræði sem $(\meta{A} \eiff \meta{B})$ ef hægt er að umorða hana sem „A eff B“ eða „A ef og aðeins B“.
+	}
+Hver er þá munurinn á skilyrðistengingunni $H_1 \eif H_2$ og jafngildistengingunni $H_1 \eiff H_2$? Sú fyrri segir okkur að \emph{ef} $H_1$ er sönn, þá er $H_2$ líka sönn, en ekkert um það hvort $H_1$ sé sönn ef $H_2$ er það. Hún segir okkur heldur ekkert um það hvort $H_2$ sé ósönn ef $H_1$ er ósönn. Til dæmis er setningin „Ef Snati er hvolpur, þá er hann hundur“ sönn, þó að Snati sé gamall hundur. Jafngildissetning hegðar sér ekki svona. Ef jafngildissetningin „Snati er hvolpur ef og aðeins ef Snati er hundur“ er sönn, þá vitum við að Snati er ekki hundur, ef hann er ekki hvolpur.
+	
+Það er því mikilvægt að hafa í huga að í mæltu máli er munurinn á skilyrðissetningum og jafngildissetningum ekki mjög skýr. Fólk segir oft eitthvað á forminu „ef\ldots, þá \ldots“ þegar það meinar „\ldots ef og aðeins ef \ldots“. Segjum til dæmis að ég segði við vin minn: „ef þú stendur þig ekki vel í rökfræðinni, þá fer ég ekki með þér í bíó“. Segjum svo að hann standi sig vel en ég segði við hann: „Ég fer ekki með þér í bíó, þó að þú hafir staðið þig vel. Ég sagði jú bara hvað myndi gerast ef þú stæðir þig \emph{ekki} vel, ekki hvað myndi gerast ef þú stæðir þig vel“. Ég hugsa að vinur minn hefði góða ástæðu til að vera ósáttur við mig, ef ég segði þetta, jafnvel þó að hann hafi staðið sig vel í rökfræði og þekkti því vel muninn á skilyrðissetningum og jafngildissetningum. 
+	
+
+\section{Nema}
+
+Við höfum núna kynnst öllum setningartengjum setningarökfræðinnar. Með því að blanda þeim saman getum við þýtt margar setningar af mæltu máli yfir á táknmál umsagnarökfræði, sumar býsna flóknar. En sumar eru erfiðari en aðrar og meðal þeirra eru setningar þar sem „nema“ kemur fyrir. Tökum dæmi:
+
+\begin{earg}
+\item[\ex{unless2}] Anna fær kvef nema hún klæði sig vel. 
+\end{earg}
+Notum eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[V] Anna klæðir sig vel.
+		\item[K] Anna fær kvef.
+	\end{ekey}
+Þessi setning merkir að ef Anna klæðir sig ekki vel, þá fær hún kvef. Með þetta í huga, þá getum við þýtt \ref{unless2} yfir á táknmál setningarökfræði svona: $(\enot V \eif K$).	
+
+En hún gæti líka merkt að ef Anna fær ekki kvef, þá hlýtur hún að hafa verið vel klædd. En þá getum við líka þýtt \ref{unless2} sem $(\enot K \eif V)$.
+
+Setningin gæti líka þýtt að annað hvort sé Anna vel klædd eða hún fái kvef---og ef svo er, þá gætum við þýtt setninguna sem $(K \eor V)$. 
+
+Þessar þrjár þýðingar eru allar jafngildar. Í kafla \ref{ch.TruthTables} munum við sanna að svo sé. En í millitíðinni veljum við einfaldasta þýðingarmöguleikann:
+	\factoidbox{
+		Ef hægt er að umorða setningu á mæltu máli sem „B, nema A“, þá er hægt að þýða hana yfir á táknmál setningarökfræði sem $(\meta{A} \eor \meta{B})$
+	}
+Þetta er þó oft ekki svona einfalt í mæltu máli, rétt eins og í tilfelli skilyrðistengingar. Þó að hægt sé að þýða setningar þar sem „nema“ kemur fyrir með því að nota „$\eor$“ eru til dæmi þar sem slíkar yrðingar hegða sér frekar eins og jafngildistengingar eða óskarað eða. Til dæmis væri ólíklegt að ég gerði hvort tveggja ef ég segði: „Ég fer út að hlaupa í kvöld, nema það rigni“. Hér er líklegri merking „Ég fer út að hlaupa í kvöld ef og aðeins ef það rignir ekki“. 	
+	
+\practiceproblems
+\problempart Notið þýðingalykilinn hér að neðan til að þýða setningarnar yfir á táknmál setningarökfræði.\label{pr.monkeysuits}
+	\begin{ekey}
+		\item[B] Þessar verur þarna eru menn í grímubúningum. 
+		\item[S] Þessar verur þarna eru simpansar. 
+		\item[G] Þessar verur þarna eru górillur.
+	\end{ekey}
+\begin{earg}
+\item Þessar verur þarna eru ekki menn í grímubúningum.
+\item Þessar verur þarna eru menn í grímubúningum eða ekki.
+\item Þessar verur þarna eru annað hvort simpansar eða górillur.
+\item Þessar verur þarna eru hvorki górillur né simpansar.
+\item Ef þessar verur þarna eru simpansar, þá eru þær hvorki górillur né menn í grímubúningum.
+\item Þessar verur þarna eru annað hvort simpansar eða górillur, nema þær séu menn í grímubúningum.
+\end{earg}
+
+\problempart Notið þýðingalykilinn hér að neðan til að þýða setningarnar yfir á táknmál setningarökfræði.
+\begin{ekey}
+\item[A] Alfreð var myrtur.
+\item[B] Ráðsmaðurinn er sá seki.
+\item[C] Kokkurinn er sá seki.
+\item[D] Biskupinn lýgur.
+\item[E] Elvar var myrtur.
+\item[F] Morðvopnið var steikarpanna.
+\end{ekey}
+\begin{earg}
+\item Annað hvort var Alfreð myrtur eða Elvar.
+\item Ef Alfreð var myrtur, þá er kokkurinn sá seki.
+\item Ef Elvar var myrtur, þá er kokkurinn ekki sá seki.
+\item Annað hvort er ráðsmaðurinn sá seki, eða biskupinn lýgur.
+\item Kokkurinn er sá seki, aðeins ef biskupinn lýgur.
+\item Ef morðvopnið var steikarpanna, þá er kokkurinn sá seki.
+\item Ef morðvopnið var ekki steikarpanna, þá er sá seki annað hvort kokkurinn eða ráðsmaðurinn.
+\item Alfreð var myrtur ef og aðeins ef Elvar var ekki myrtur.
+\item Biskupinn lýgur, nema Elvar hafi verið myrtur.
+\item Ef Alfreð var myrtur, þá var það gert með steikarpönnu.
+\item Fyrst kokkurinn er sá seki, þá er það ekki ráðsmaðurinn.
+\item Auðvitað er biskupinn að ljúga!
+
+\end{earg}
+\problempart Notið þýðingalykilinn hér að neðan til að þýða setningarnar yfir á táknmál setningarökfræði.\label{pr.avacareer}
+	\begin{ekey}
+		\item[R_1] Anna er rafvirki
+		\item[R_2] Jón er rafvirki.
+		\item[S_1] Anna er slökkviliðsmaður.
+		\item[S_2] Jón er er slökkviliðsmaður..
+		\item[V_1] Anna er ánægð í vinnunni.
+		\item[V_2] Jón er ánægður í vinnunni.
+	\end{ekey}
+\begin{earg}
+\item Anna og Jón eru bæði rafvirkjar.
+\item Ef Anna er slökkviliðsmaður, þá er hún ánægð í vinnunni.
+\item Anna er slökkviliðsmaður, nema hún sé rafvirki.
+\item Jón er rafvirki sem er óánægður í vinnunni.
+\item Hvorki Anna né Jón eru rafvirkjar.
+\item Bæði Anna og Jón eru rafvirkjar, en hvorugt þeirra er ánægt í vinnunni.
+\item Jón er ánægður í vinnunni aðeins ef hann er rafvirki.
+\item Ef Anna er ekki rafvirki, þá er Jón það ekki heldur, en ef hún er ravirki, þá er Jón það líka.
+\item Anna er ánægð í vinnunni ef og aðeins ef Jón er ekki ánægður í sinni.
+\item Ef Jón er bæði rafvirki og slökkviliðsmaður, þá hlýtur hann að vera ánægður í vinnunni.
+\item Það getur ekki verið að Jón sé bæði slökkviliðsmaður og rafvirki.
+\item Anna og Jón eru bæði slökkviliðsmenn ef og aðeins ef hvorugt þeirra eru rafvirkjar.
+\end{earg}
+
+\problempart
+\label{pr.spies}
+Útbúið þýðingarlykil og þýðið eftirfarandi setningar yfir á táknmál setningarökfræði.
+\begin{earg}
+\item Arngrímur og Brynjar eru báðir njósnarar.
+\item Ef annað hvort Arngrímur og Brynjar eru njósnarar, þá hefur dulmálið verið ráðið.
+\item Ef hvorki Arngrímur né Brynjar eru njósnarar, þá hefur dulmálið ekki verið ráðið.
+\item Dagný verður ekki á flótta, nema dulmálið hafi verið ráðið.
+\item Annað hvort hefur dulmálið verið ráðið eða ekki, en Dagný verður á flótta hvort heldur sem er.
+\item Annað hvort er Arngrímur njósnari eða Brynjar, en ekki báðir.
+\end{earg}
+
+\problempart Útbúið þýðingarlykil og þýðið eftirfarandi setningar yfir á táknmál setningarökfræði.
+\begin{earg}
+\item Ef mýsnar eru komnar, þá mun Ólíver tala um að fljúga.
+\item Ólíver mun tala um að fljúga, nema Hroði sé kominn á kreik.
+\item Ólíver mun tala um að fljúga eða ekki, en mýsnar eru komnar hvort heldur sem er.
+\item Ingólfur er með hatt ef og aðeins ef mýsnar eru komnar.
+\item Ef Hroði er kominn á kreik, þá eru mýsnar ekki komnar.
+\end{earg}
+
+\problempart
+Útbúið þýðingarlykil fyrir hverja rökfærslu fyrir sig og þýðið yfir á táknmál setningarökfræði.
+
+\begin{earg}
+\item Ef Anna leikur á píanó á morgnanna, þá vaknar Jón í vondu skapi. Anna leikur á píanó á morgnanna nema hún fari snemma í vinnuna. Svo ef Jón vaknar ekki í vondu skapi, þá fór Anna snemma í vinnuna.
+\item Það mun annað hvort rigna eða snjóa á þriðjudaginn. Ef það rignir, þá verður Tómas leiður. Ef það snjóar, þá verður Tómasi kalt. Þar af leiðandi verður Tómas annað hvort leiður eða honum verður kalt.
+\item Ef Sigga mundi eftir að læra heima, þá er hún glöð, en þreytt. En ef hún gleymdi því, þá er hún ekki þreytt og ekki glöð. Þar af leiðandi er Sigga annað hvort ekki þreytt eða glöð, en ekki hvort tveggja.
+\end{earg}
+
+\problempart
+Táknið „$\eor$“ í setningarökfræði merkir alltaf \emph{skarað eða}. Hér að ofan táknuðum við \emph{óskarað eða} með því að nota táknin „$\eor$“, „$\eand$“ og „$\enot$“. Er einhver leið að tákna \emph{óskarað eða} með því að nota einungis tvö af setningatengjunum sem við höfum skilgreint? En eitt?
+
+\chapter{Setningar í setningarökfræði}\label{s:TFLSentences}
+Setningin „Annað hvort eru jarðarber rauð eða bláber blá“ er setning á mæltu máli, íslensku. Setningin „$(A \eor B) \eif A$“ er setning á táknmáli setningarökfræði. Þau okkar sem kunna íslensku eiga ekki í vandræðum með að þekkja íslenskar setningar þegar við sjáum þær, til dæmis fyrstu setninguna hér að ofan. Þó er ekki til nein formleg skilgreining á því hvað telst vera íslensk setning og hvað ekki---og að öllum líkindum er engin slík skilgreining möguleg. 
+
+Öðru máli gegnir um setningarökfræði. Í þessum kafla munum við skilgreina \emph{nákvæmlega} hvað telst vera setning í setningarökfræði og hvað ekki. Þetta er eitt af mörgum sérkennum sem aðgreina formleg mál, eins og setningarökfræði, frá mæltu máli, að hægt sé að gefa slíka skilgreiningu.
+
+\section{Táknrunur}
+Við byrjum á að tilgreina nákvæmlega hvaða tákn eru leyfileg í setningum í setningarökfræði. Það eru þrjár tegundir af táknum sem við notum í setningarökfræði og við kynntumst þeim öllum hér að ofan:
+\begin{center}
+\begin{tabular}{l l}
+Grunnsetningar & $A,B,C,\ldots,Z$\\
+með lágvísum eftir þörfum & $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$\\
+\\
+Setningatengi & $\enot,\eand,\eor,\eif,\eiff$\\
+\\
+Svigar &( , )\\
+\end{tabular}
+\end{center}
+
+Við skilgreinum \define{táknrunu í setningarökfræði} sem hvaða streng sem er af táknum setningarökfræði. Það þýðir að við getum skrifað niður hvaða tákn sem er hér að ofan, í hvaða röð sem er, og þá höfum við táknrunu í setningarökfræði. Takið eftir því að við leyfum ekki íslenska stafi sem tákn í setningarökfræði.
+
+\section{Setningar}\label{tfl:SentencesDefined}
+
+Í ljósi þessa er „$(A \eand B)$“ táknruna í setningarökfræði, sem og „$\lnot)(\eor()A\eand(\enot\enot())((B$“. En fyrri táknrunan er \emph{setning} og sú seinni bara handahófskennt rugl. Við þurfum einhverjar reglur sem segja okkur nákvæmlega hvaða táknrunur eru setningar. Við köllum þessar reglur \emph{myndunarreglur}.
+
+Það liggur beint við að grunnsetningar, til að mynda „$A$“ eða „$G_{13}$“ ættu að teljast setningar. Við getum myndað fleiri setningar úr þessum með því að nota setningatengin. Með því að nota neitun getum við smíðað „$\enot A$“ og „$\enot G_{13}$“. Með því að nota og-tengið getum við smíðað, til dæmis, „$(A \eand G_{13})$“, „$(G_{13} \eand A)$“, „$(A \eand A)$“ og „$(G_{13} \eand G_{13})$“. Við getum líka beitt neitun aftur og aftur og fengið „$\enot \enot A$“ og „$\enot \enot \enot A$“. Við getum líka notað tengin sitt á hvað og fengið til dæmis „$\enot(A \eand G_{13})$“ og „$\enot(G_{13} \eand \enot G_{13})$“. Möguleikarnir eru bókstaflega óendanlega margir, og það bara þó að við notum þessi tvö setningatengi. Raunar höfum við óendanlega margar grunnsetningar, því lágvísarnir sem við notum eru jafn margir og náttúrulegu tölurnar.
+
+Það er því engin leið að ætla að telja upp allar setningar sem fyrirfinnast í setningarökfræði. Í staðinn munum við lýsa þeim reglum sem gera okkur kleift að smíða nýjar setningar úr gömlum. Svo segjum við að allar táknrunur sem hægt er að smíða með þessum hætti séu setningar og aðeins þær. Tökum neitun sem dæmi: Að því gefnu að $\meta{A}$ sé setning í setningarökfræði, þá er $\enot \meta{A}$ líka setning í setningarökfræði. Hér höfum við búið til nýja setningu úr $\meta{A}$, nefnilega setninguna $\enot \meta{A}$.
+
+(Af hverju notum við feitletraða stafi? Við förum ítarlega yfir það hér að neðan í \S\ref{s:UseMention}. Í stuttu máli standa þeir fyrir hvaða setningu \emph{sem er} í setningarökfræði. Það má því lesa þetta svona: Tökum hvaða setningu sem er í setningarökfræði. Sú táknruna sem verður til með að setja neitunartáknið fyrir framan þá setningu er líka setning. Feitletruðu bókstafirnir gera setningar af þessu tagi læsilegri.)
+
+Svipuðu máli gegnir um hin setningatengin. Til dæmis getum við sagt að ef $\meta{A}$ og $\meta{B}$ eru setningar í setningarökfræði, þá er $(\meta{A} \eand \meta{B})$ líka setning í setningarökfræði. Með því að búa til svona klausur fyrir öll setningatengin, þá getum við búið til formlega skilgreiningu á því hvað telst vera \define{setning í setningarökfræði} svona:
+	\factoidbox{
+	\begin{enumerate}
+		\item Allar grunnsetningar eru setningar.
+		\item Ef $\meta{A}$ er setning, þá er $\enot\meta{A}$ líka setning.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru setningar, þá er $(\meta{A} \eand \meta{B})$ líka setning.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru setningar, þá er $(\meta{A}\eor\meta{B})$ líka setning.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru setningar, þá er $(\meta{A} \eif \meta{B})$ líka setning.
+		\item Ef $\meta{A}$ og $\meta{B}$ eru setningar, þá er $(\meta{A} \eiff \meta{B})$ líka setning.
+		\item Ekkert annað er setning.
+	\end{enumerate} 
+	}
+Skilgreiningar á borð við þessa eru kallaðar \emph{raktar} (og stundum \emph{þrepunarskilgreiningar}). Rakin skilgreining byrjar á því að skilgreina einhver grunnþrep, í þessu tilfelli grunnsetningar, og notar svo ákveðnar reglur til þess að smíða fleiri og fleiri dæmi úr þeim sem þegar hafa verið búin til. 
+
+Við getum kannski fengið betri hugmynd um það hvernig þetta virkar með að skoða dæmi, rakta skilgreiningu á því hvað það er að vera \emph{formóðir mín}. Fyrst skilgreinum við grunnþrep: 
+	\begin{ebullet}
+		\item Mamma mín telst vera formóðir mín.
+	\end{ebullet}
+svo bætum við við fleiri klausum:
+	\begin{ebullet}
+		\item Ef einhver er formóðir mín, þá er móðir hennar formóðir mín.
+		\item Ekkert annað telst vera formóðir mín.
+	\end{ebullet}
+Með því að nota þessa skilgreiningu, þá getum við auðveldlega athugað hvort einhver sé formóðir mín: Við þurfum bara að athuga hvort viðkomandi sé annað hvort mamma mín eða móðir einhverra af formæðrum mínum (og ef ykkur finnst skrýtið að segja að mamma mín sé formóðir mín, þá getum við vel breytt grunnþrepinu: það eina sem skiptir máli er að það sé enginn vafi að grunnþrepið uppfylli skilgreininguna, sama hver hún er. Kannski viljum við frekar segja að langamma mín sé fyrsta formóðir mín?) 
+
+Það sama gildir um skilgreininguna okkar á því hvað telst vera setning í setningarökfræði. Hún byggir nefnilega ekki bara upp nýjar og nýjar setningar, hún leyfir okkur líka að athuga hvort einhver táknruna sé setning með því að brjóta hana niður í einfaldari og einfaldari táknrunur---og ef allar táknrunur sem við endum með að lokum eru grunnsetningar, þá vitum við að upprunalega táknrunan var setning, annars ekki. Skoðum nokkur dæmi.
+
+Segjum að við viljum vita hvort $\enot \enot \enot D$ sé setning í setningarökfræði. Ef við skoðum klausu tvö í skilgreiningunni okkar að ofan, þá sjáum við að $\enot \enot \enot D$ er setning í setningarökfræði, \emph{ef} $\enot \enot D$ er setning í setningarökfræði. Þá þurfum við að athuga hvort svo sé. Ef við lítum aftur á klausu tvö, þá sjáum við að $\enot \enot D$ er setning, ef $\enot D$ er setning. Á sama hátt er $\enot D$ setning ef $D$ er setning. Með því að skoða klausu eitt í skilgreiningunni, þá vitum við að $D$ er setning, því hún er grunnsetning. Til þess að sjá hvort flókin eða samsett setning eins og $\enot \enot \enot D$ sé grunnsetning verður við sem sagt að beita skilgreiningunni aftur og aftur þangað til við sitjum uppi með grunnsetningarnar sem hún er smíðuð úr.
+
+Skoðum öllu flóknara dæmi: $\enot (P \eand \enot (\enot Q \eor R))$. Ef við skoðum klausu númer tvö í skilgreiningunni okkar, þá vitum við að þetta er setning ef $(P \eand \enot (\enot Q \eor R))$ er setning. Hún er svo setning ef $P$ \emph{og} $\enot (\enot Q \eor R)$ eru \emph{báðar} setningar. Sú fyrri er grunnsetning, og því setning, og sú seinni er setning ef $(\enot Q \eor R)$ er setning. Við sjáum að svo er, því hún er setning ef $\enot Q$  og $R$ eru báðar setningar. Það eru þær, því $\enot Q$ er setning ef $Q$ er setning, og $Q$ og $R$ eru báðar grunnsetningar, og því setningar.
+
+Lærdómurinn er að þegar öllu er á botninn hvolft, þá er hver einasta setning í setningarökfræði smíðuð úr grunnsetningum með reglunum hér að ofan. Þegar um er að ræða setningu \emph{aðra} en grunnsetningar, þá sjáum við að það hlýtur að vera eitthvað setningatengi sem var síðast kynnt til sögunnar þegar setningin var smíðuð. Við köllum það \define{aðaltengi} setningarinnar. Til dæmis, þá er fyrsta „$\enot$“-táknið í setningunni $\enot\enot\enot D$ aðaltengi hennar, „$\eand$“ í $(P \eand \enot (\enot Q \eor R))$ og í setningunni $((\enot E \eor F) \eif \enot\enot G)$ er „$\eif$“ aðaltengi. Hér er skilgreiningin á aðaltengi, til minnis:
+
+\factoidbox {\define{Aðaltengi} er það setningatengi sem síðast var kynnt til sögunnar þegar setningin var smíðuð úr grunnsetningum.}
+
+Aðaltengi eru mjög mikilvæg í því sem á eftir kemur og því skiptir miklu máli að geta greint rétt hvaða tengi er aðaltengi. Eftir einhvern tíma fær maður góða tilfinningu fyrir því, en þangað til er hægt að beita eftirfarandi aðferð:
+
+\begin{ebullet}
+	\item Ef fremsta táknið í setningunni er „$\enot$“, þá er það aðaltengið.
+	\item Ef svo er ekki, má telja sviga. Fyrir hvernig sviga sem opnast, þ .e.\ „(“, bætum við við $1$ og fyrir hvern sviga sem lokast, þ.e.\ „)“, drögum við $1$ frá. Ef við finnum annað tengi en „$\enot$“ þegar summan stendur nákvæmlega á $1$, þá er það aðaltengið.
+	\end{ebullet}
+(Athugið: Við að nota þessa aðferð verður að passa að hafa \emph{alla} sviga með, líka þeim sem má sleppa samkvæmt venjum um sviganotkun sem fjallað er um hér að neðan í \S\ref{TFLconventions}.)
+
+Uppbygging setninganna sem þrepunarskilgreiningin tryggir verður mjög mikilvæg þegar við förum að skoða undir hvaða kringumstæðum einhver tiltekin setning í setningarökfræði er sönn eða ósönn. Setningin $\enot \enot \enot D$ er til dæmis sönn ef og aðeins ef setningin $\enot \enot D$ er ósönn, og svo framvegis þangað til við endum á grunnsetningunum. Við munum fjalla nánar um þetta í kafla \ref{ch.TruthTables}.
+
+Þessi uppbygging leyfir okkur líka að skilgreina \define{hlutasetningar} og \define{svið} setningatengjanna. \emph{Hlutasetning} er setning sem er hluti af myndunarsögu setningar samkvæmt myndunarreglunum hér að ofan, þar með talið hún sjálf. Til dæmis er $\enot \enot D$ hlutasetning í $\enot \enot \enot D$ og $(\enot (R \eand B) \eiff Q))$ er hlutasetning í $(P \eand (\enot (R \eand B) \eiff Q))$. Athugið að ef hlutasetning er ekki grunnsetning, þá samanstendur hún sjálf af öðrum hlutasetningum. Til dæmis er $\enot (R \eand B)$ hlutasetning í $(\enot (R \eand B) \eiff Q))$. 
+
+Með þetta í huga getum við skilgreint svið setningatengis:
+\factoidbox{\define{Svið} setningatengis er sú hlutasetning þar sem setningatengið er aðaltengi}
+Þessi skilgreining mun skipta meira og meira máli þegar fram líða stundir, svo það er ágætt að hafa hana í huga framvegis. Til dæmis er svið aðaltengisins „$\enot$“ í $\enot \enot \enot D$ öll setningin. Svið „$\enot$“ í setningunni $(P \eand (\enot (R \eand B) \eiff Q))$, þar sem það er \emph{ekki} aðaltengi, er svo hlutasetningin $\enot (R \eand B)$ þar sem hún \emph{er} aðaltengi.
+
+\section{Venjur við sviganotkun}
+\label{TFLconventions}
+
+Ef við skoðum myndunarreglurnar hér að ofan, þá sjáum við að í hvert sinn sem við myndum nýja setningu með öllum setningatengjunum nema „$\enot$“, þá setjum við sviga utan um nýju setninguna sem myndast úr fyrri setningum. Við gerum það til þess að tryggja að nýjar setningar séu aldrei \emph{tvíræðar}: $(\enot P \eand Q)$ er ekki sama setning og $\enot(P \eand Q)$. Í fyrri setningunni er „$\eand$“ aðaltengi en í þeirri seinni er það „$\enot$“. Ef við hefðum ekki svigana utan um $(P \eand Q)$ í myndunarsögu seinni setningarinnar, þá hefðum við ekki getað gert þennan greinarmun. Við hefðum endað með $\enot P \eand Q$ í báðum tilfellum. Svigarnir í $(P \eand Q)$ eru því óaðskiljanlegir hluti setningarinnar. 
+ 
+Strangt til tekið er „$P \eand Q$“ því \emph{ekki} setning í setningarökfræði, heldur bara \emph{táknruna}. Það getur hins vegar verið óttalegt vesen að fylgja þessum reglum út í ystu æsar þegar þessir svigar skipta minna máli. Þess vegna kynnum við til sögunnar eftirfarandi \emph{venjur} við sviganotkun.
+
+Í fyrsta lagi leyfum við okkur að sleppa \emph{ystu} svigunum í setningu þegar ekki er þörf á þeim. Við skrifum þess vegna $P \eand Q$ í stað $(P \eand Q)$. Við \emph{verðum} samt að muna að setja þá aftur inn ef við viljum mynda nýja setningu úr þessari eða nota aðferðina sem var gefin hér að ofan við að finna aðaltengi!
+ 
+Í annan stað getur verið óþægilegt að stara lengi á setningar með mörgum svigum hverja innan um aðra. Til þess að létta álagi á sjónina munum við líka leyfa okkur að nota hornklofa, „[“ og „]“, í stað venjulegra sviga ef við viljum. Það verður því til að mynda enginn munur á setningunum $(P\eor Q)$ og $[P\eor Q]$. 
+
+Við getum svo að sjálfsögðu blandað saman þessum tveimur venjum. Við getum þá umritað setninguna $$(((H \eif I) \eor (I \eif H)) \eand (J \eor K))$$ á einfaldari hátt sem $$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$ Sú síðari er auðveldari í lestri og mun hægara er að sjá hvert svið setningatengjanna er. Ég minni samt aftur á að þetta eru bara venjur og að einungis fyrri táknrunan er setning í setningarökfræði, \emph{strangt til tekið}. Takið sérstaklega vel eftir því að talningaraðferðin til að finna aðaltengi setningarinnar virkar \emph{ekki} á þá seinni. Til að nota aðferðina má ekki sleppa neinum svigum.
+
+\practiceproblems
+\problempart
+\label{pr.wiffTFL}
+Segið til um (a) hvort eftirfarandi táknrunur séu setningar í setningarökfræði, \emph{strangt til tekið} og (b) hvort þær séu setningar að teknu tilliti til svigavenjanna.
+
+\begin{earg}
+\item $(A)$
+\item $J_{374} \eor \enot J_{374}$
+\item $\enot \enot \enot \enot F$
+\item $\enot \eand S$
+\item $(G \eand \enot G)$
+\item $(A \eif (A \eand \enot F)) \eor (D \eiff E)$
+\item $[(Z \eiff S) \eif W] \eand [J \eor X]$
+\item $(F \eiff \enot D \eif J) \eor (C \eand D)$
+\end{earg}
+
+\problempart
+Eru til setningar í setningarökfræði sem hafa engar grunnsetningar? Útskýrið svarið.\\
+
+\problempart
+Segið til um hvert svið hvers setningatengis í setningunni hér að neðan er:
+
+$$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$
+
+\problempart
+Við sáum í hluta \S\ref{tfl:SentencesDefined} að til er aðferð til að finna aðaltengið í hvaða setningu sem er. Reynið að útskýra \emph{hvers vegna} aðferðin virkar alltaf.
+
+\chapter{Setningatré}
+
+Hér að ofan gáfum við rakta skilgreiningu á því hvað telst vera setning í setningarökfræði. Þessar reglur segja í grófum dráttum tvennt: að (a) til séu grunnsetningar sem eru setningar, og (b) ef við höfum tvær setningar, þá getum við tengt þær saman með setningatengi og búið til nýja setningu (nema ef um er að ræða neitunartengið, þá er ein setning nóg). Allar setningar í setningarökfræði eru búnar til svona.
+
+Við getum því alltaf athugað hvort einhver táknruna sé setning með því að finna aðaltengið í meintri setningu, skoða svo þær setningar sem þær tengja saman og svo áfram þangað til við komum að grunnsetningunum. Ef við endum á grunnsetningum og hvert skref er rétt, þá er táknrunan setning. En eins og við sáum að ofan, þá er þetta ekki endilega alltaf svo augljóst þegar um er að ræða flóknar setningar.
+
+Það er sem betur fer til aðferð sem sýnir þetta ferli myndrænt með svokölluðum \define{setningatrjám}. Skoðum einfalt dæmi, setninguna $P \eand \enot Q$. Setningatréð fyrir þessa setningu lítur svona út: 
+
+\begin{center}
+\Tree [.{\phantom{ii}P \eand \enot Q} P [.{\enot Q} [.Q ] ] ] %\phantom er til að láta setninguna vera lengri en hún virðist vera. Það færir undirtréð á réttan stað. Ég reyndi margar leiðir til að gera þetta og þessi virkaði best, þrátt fyrir að vera mjög inelegant.
+\end{center}
+Setningatréð sýnir það myndrænt sem annars þyrfti langt mál að útskýra. Það er búið til með því að taka aðaltengið í setningunni og skrifa setningarnar sem það tengir saman fyrir neðan með strikum á milli.\footnote{Hér fylgum við þeirri venju að byrja að draga strikin fyrir neðan aðaltengið, nema þegar um er að ræða neitun. Þá gerum við það beint fyrir neðan setninguna.} Þetta er svo endurtekið fyrir nýju setningarnar þangað til bara grunnsetningar eru eftir. Ef við lesum svo tréð að neðan og upp, þá getum við í hverju skrefi vísað í einhverja myndunarreglu um af hverju það er leyfilegt skref. Fyrst eru $P$ og $Q$ grunnsetningar, og því leyfilegar samkvæmt reglunum. Því næst er $\enot Q$ smíðuð úr $Q$, samkvæmt myndunarreglunni um $\enot$ og loks eru $P$ og $\enot Q$ settar saman samkvæmt myndunarreglunni um $\eand$ svo úr verði $P \eand \enot Q$.
+
+Hver einasta setning í setningrökfræði hefur eitt (og bara eitt!) rétt myndað setningatré og táknrunur sem eru ekki setningar hafa ekkert slíkt tré. Við þekkjum ógild tré á því að í að minnsta kosti einu „laufi“ er ekki setning samkvæmt myndunarreglunum. $P\enot$ er til dæmis ekki setning og er því tréið hér að neðan ógilt:
+
+\begin{center}
+\Tree [.{P\enot \eand Q\phantom{ii}} [.{P\enot} ? ] [.Q ] ]
+\end{center}
+Hér er spurningamerkið bara til að undirstrika það að engin leið er til að mynda $P¬$ samkvæmt myndunarreglunum). Hér eru nokkur önnur dæmi um setningatré:\vspace{3mm}
+
+\begin{center}
+	\begin{minipage}{0.25\textwidth}
+		\Tree [.{(P \eand \enot Q) \eif R\phantom{mmim}} [.{\phantom{ii}P \eand \enot Q} P [.{\enot Q} [.Q ] ] ] [.R ] ]
+    \end{minipage}%
+    \begin{minipage}{0.25\textwidth}
+		\Tree [.{\enot(\enot P \eor Q)} [.{\enot P \eor Q\phantom{m}} [.{\enot P} P ] [.Q ] ] ]
+    \end{minipage}%
+	\begin{minipage}{0.25\textwidth}
+		\Tree [.{(\enot P \eif Q) \eif P\phantom{mmmm}} [.{\enot P \eif Q\phantom{m}} [.{\enot P} P ] [.Q ] ] [.P ] ]
+	\end{minipage}
+\end{center}
+
+Einhver gæti bent á eftirfarandi tvö tré sem mótdæmi við þeirri fullyrðingu að hver setning hafi einungis eitt gilt tré: \vspace{3mm}
+\begin{center}
+	\begin{minipage}{0.25\textwidth}
+		\Tree [.{\enot P \eand Q\phantom{ii}} [.{\enot P} P ] [.Q ] ]
+    \end{minipage}%
+    \begin{minipage}{0.25\textwidth}
+		\Tree [.{\enot P \eand Q} [.{P \eand Q} [.P ] [.Q ] ] ]
+    \end{minipage}%
+\end{center}
+
+En einungis tréð vinstra megin er gilt tré fyrir þessa setningu. Setningin efst í trénu hægra megin er ekki rétt mynduð úr setningunum beint fyrir neðan, en ástæðan fyrir því sést best ef við höfum í huga að það er bara \emph{venja} að sleppa ystu svigunum í setningu. Í raun og veru erum við að búa til tré fyrir setninguna $(\enot P \eif Q)$ og þar er „$\eif$“ aðaltengið. Ef við myndum vilja búa til tréð til hægri, þá þyrftum við að byrja með setninguna $\enot(P \eif Q)$.
+
+\practiceproblems
+\problempart 
+
+Búið til setningatré fyrir eftirfarandi setningar:
+
+\begin{earg}
+	\item $P \eor (\enot Q \eif P)$
+	\item $\enot (P \eor (\enot Q \eand P))$
+	\item $\enot \enot \enot \enot F$
+	\item $(A \eif (A \eand \enot F)) \eor (D \eiff E)$
+	\item $[(Z \eiff S) \eif W] \eand [J \eor X]$
+	\item $F \eiff (\meta{A}\enot D \eif J) \eor (C \eand D)$
+\end{earg}
+
+\chapter{Notkun og umtal}\label{s:UseMention}
+
+Í þessum kafla höfum við mikið talað \emph{um} setningar. Í þessum hluta ætla ég að útskýra mikilvægan---og almennan---greinarmun sem gerður er þegar við tölum \emph{um} mál, bæði mælt mál, eins og íslensku, og formleg mál, eins og setningarökfræði. Það er greinarmunurinn á \emph{notkun} og \emph{umtali}.
+
+\section{Notkun gæsalappa}
+Skoðum eftirfarandi tvær setningar:
+	\begin{ebullet}
+		\item Guðni Th.\ Jóhannesson er forseti Íslands.
+		\item Stafarunan „Guðni Th.\ Jóhannesson“ er 18 bókstafir og inniheldur punkt.
+	\end{ebullet}
+Þegar við tölum um forseta Íslands þá \emph{notum} við nafnið „Guðni“. Þegar við tölum \emph{um} nafnið sjálft, ekki manneskjuna sem ber það, þá setjum við gæsalappir utan um það: „Guðni“ er fimm stafir.
+	
+Þessi greinarmunur er almennur. Þegar við tölum um hluti í heiminum, þá notum við til þess orð. En þegar við viljum tala um orðin sjálf, þá þurfa þau að koma fyrir í setningunum sem notaðar eru til að tala um þau. Við þurfum þess vegna að gefa til kynna með einhverjum hætti að við séum að tala um orðin, fremur en að nota þau. Algeng venja í þessu skyni er að nota gæsalappir: Við setjum gæsalappir utan um orð þegar við tölum \emph{um} þau, en engar þegar við \emph{notum} þau. Stundum eru orð sem verið er að tala um skáletruð: \emph{Guðni} er fimm stafir. 
+
+En þetta þýðir að þessi setning	hér fyrir neðan  
+	\begin{ebullet}
+		\item „Guðni“ er forseti.
+	\end{ebullet}
+segir að orðið „Guðni“ sé forseti. Það er ósatt, ef við notum gæsalappir á þennan hátt. \emph{Maðurinn} Guðni er forseti, ekki nafnið sem hann ber. Á sama hátt er
+	
+	\begin{ebullet}
+		\item Guðni samanstendur af einum hástaf og fjórum lágstöfum.
+	\end{ebullet}
+líka ósatt: Guðni samanstendur ekki af bókstöfum, enda er hann manneskja, og er því meginuppistaðan í honum kolefni og vatn. Eitt dæmi að lokum:
+	\begin{ebullet}
+		\item „\,`Guðni'\,“ er nafnið á „Guðni“.
+	\end{ebullet} 
+Þetta er dálítið skrýtin setning. En ef við lítum á gæsalappir eins og við höfum gert hér, þá er táknrunan til vinstri nafnið á nafni og hægra megin nafn (við notum öðruvísi gæsalappir til aðgreiningar þegar gæsalappir eru innan í öðrum). Setning af þessu tagi sést líklega hvergi nema í kennslubókum í rökfræði, en hún er engu að síður sönn.
+	
+Til að fyrirbyggja misskilning er vert að taka fram að þessar gæsalappir eru ekki notaðar til að gefa til kynna að það sem stendur innan þeirra sé bein tilvitnun í einhvern annan. Gæsalappir eru vissulega oftast notaðar þannig, en hér notum við þær til að gefa til kynna að við séum ekki að tala um einhvern hlut, til dæmis, heldur nafn hlutarins eða orðið yfir þann hlut.
+
+\section{Viðfangsmál og framsetningarmál}
+
+Þessar venjur um notkun gæsalappa munu skipta okkur miklu máli. Markmið okkar er að lýsa formlegu máli, setningarökfræði, og þess vegna verðum við oft að \emph{tala um} táknrunur sem koma fyrir í henni.
+
+Þegar við tölum um mál köllum við málið sem við erum að tala um \define{viðfangsmál}. Viðfangsmál okkar í þessari bók, enn sem komið er, er \emph{setningarökfræði}. Við köllum málið sem við notum til þess að tala \emph{um} viðfangsmálið \define{framsetningarmál}. Framsetningarmálið sem við notum í þessari bók er \emph{íslenska}---kannski ekki sú sem flestir tala, enda notum við sérstakan orðaforða til að tala um rökfræði, en íslenska samt. \label{def.metalanguage}
+
+Við höfum notað skáletraða hástafi úr latneska stafrófinu til að tákna grunnsetningar setningarökfræði: 
+$$A, B, C, Z, A_1, B_4, A_{25}, J_{375},\ldots$$
+Þær eru setningar í viðfangsmálinu. Þær eru ekki setningar á íslensku. Þess vegna er villandi, og strangt til tekið ekki rétt að skrifa, til dæmis:
+	\begin{ebullet}
+		\item $D$ er grunnsetning í setningarökfræði.
+	\end{ebullet}
+Markmiðið með þessari setningu er samt greinilega að segja eitthvað á íslensku um viðfangsmálið, setningarökfræði. En „$D$“ er setning á máli setningarökfræði, og ekki hluti af íslensku (nema sem bókstafur). Setningin hér að ofan er því álíka vitlaus og þessi:	
+	\begin{ebullet}
+		\item Snow is white er setning á ensku.
+	\end{ebullet}
+Hér væri rétt að skrifa: 	
+	\begin{ebullet}
+		\item „Snow is white“ er setning á ensku.
+	\end{ebullet}
+Af sömu ástæðu hefði ég átt að skrifa hér að ofan:	
+	\begin{ebullet}
+		\item „$D$“ er grunnsetning í setningarökfræði.
+	\end{ebullet}
+Boðskapurinn er að þegar við viljum tala um setningar eða táknrunur á máli setningarökfræði, á íslensku, þá þurfum við að gefa til kynna að við séum að tala \emph{um} þær, ekki að \emph{nota} þær. Til þess notum við gæsalappir (eða, eins og við gerum stundum, að hafa þær inndregnar á miðri blaðsíðu). En oft er hins vegar alveg ljóst hvort um er að ræða notkun eða umtal og þess vegna höfum við leyft okkur, eins og nefnt var hér að ofan, að sleppa gæsalöppum ef engin hætta er á misskilningi og textinn verður læsilegri.
+	
+\section{Feitletraðir stafir, gæsalappir, og samsetning}
+
+Við viljum hins vegar ekki bara tala um \emph{tilteknar} táknrunur í setningarökfræði. Við viljum tala um \emph{hvaða} setningu \emph{sem er} í setningarökfræði. Þetta höfum við þurft að gera nú þegar, þegar við skilgreindum myndunarreglurnar fyrir setningar í setningarökfræði (\S\ref{s:TFLSentences}). Ég notaði feitletraða stafi til þess:
+
+	$$\meta{A}, \meta{B}, \meta{C}, \ldots$$
+Þessir stafir eru ekki hluti af setningarökfræði, viðfangsmálinu. Þetta eru tákn sem við bætum við framsetningarmálið til þess að eiga hægara með að tala um hvaða setningu sem er í setningarökfræði. Við köllum þau \define{metabreytur}. Þörfin fyrir þær sést ágætlega þegar við skoðum klausu tvö í myndunarreglunum:
+
+	\begin{earg}
+		\item[2.] Ef $\meta{A}$ er setning, þá er $\enot\meta{A}$ líka setning.
+	\end{earg}
+Hér erum við að tala um hvaða setningu sem er í umsagnarökfræði. $\meta{A}$ stendur því fyrir óendanlega margar setningar í setningarökfræði, til dæmis $P$, $Q$, $P \eand Q$, $(P \eand Q) \eif R$ eða $\enot((P \eand Q) \eif R)$. Klausan segir okkur að við getum tekið hvaða setningu sem er og sett neitun fyrir framan hana. Ef við hefðum á hinn bóginn skrifað
+	\begin{ebullet}
+		\item Ef „$A$“ er setning, þá er „$\enot A$“ líka setning.
+	\end{ebullet}
+þá hefði klausan ekki sagt okkur neitt um hvort „$\enot B$“ væri setning, eða „$\enot \enot A$“ eða $\enot((P \eand Q) \eif R)$ enda er „$A$“ er bara ein tiltekin grunnsetning. Við setjum þetta hér til minnis:
+	\factoidbox{
+		„$\meta{A}$“ er tákn sem við bætum við framsetningarmálið, íslensku, og við notum það til að tala um táknrunur í setningarökfræði. „$A$“ er tiltekin grunnsetning í setningarökfræði.}
+En hér vaknar spurning varðandi gæsalappanotkun. Við notuðum engar gæsalappir í myndunarreglunum, hefði það verið nákvæmara?		
+		
+Vandkvæðin eru þessi: táknrunan í bakliðnum, þ.e.\ „$\enot \meta{A}$“, er ekki setning á framsetningarmálinu því „$\enot$“ kemur fyrir í henni. Við gætum þess vegna prófað að skrifa:
+	\begin{enumerate}
+		\item[2$'$.] Ef $\meta{A}$ er setning, þá er „$\enot\meta{A}$“ líka setning.
+	\end{enumerate}
+En hér erum við engu bættari. Táknrunan „$\enot\meta{A}$“ er ekki setning í setningarökfræði, því $\meta{A}$ tilheyrir framsetningarmálinu.
+
+Strangt til tekið erum við að reyna að segja eitthvað á borð við þetta:
+	\begin{enumerate}
+		\item[2$''$.] Ef $\meta{A}$ er setning, þá er táknrunan sem fæst við að setja táknið „$\enot$“ fyrir framan $\meta{A}$ líka setning.
+	\end{enumerate}
+Þetta væri hárrétt, en dálítið flókið og langt. 
+
+Við viljum forðast þetta og þess vegna tökum við einfaldlega upp þá venju að lesa samsettar táknrunur á borði við „$\enot \meta{A}$“ líkt og um samsetningu tákna væri að ræða. Strangt til tekið látum við táknrununa „$\enot \meta{A}$“ í framsetningarmálinu því standa fyrir eftirfarandi (í viðeigandi klausu í myndunarreglunum): 
+\begin{quote}
+	táknrunan sem fæst við að setja táknið „$\enot$“ fyrir framan $\meta{A}$
+\end{quote}Svipaðar breytingar þyrfti að gera á hinum táknrununum, „$(\meta{A} \eand \meta{B})$“, „$(\meta{A} \eor \meta{B})$“, o.s.frv.\footnote{Bandaríska heimspekingnum og rökfræðingnum W.\ V.\ O.\ Quine var mjög umhugað um að gera alltaf skýran greinarmun á notkun og umtali og hefði litið þessa venju sem við höfum tekið upp hér alvarlegum augum. Hann var þó sammála því að (2$''$) sé heldur flókin og þunglamalegur ritháttur og kynnti hann því til sögunnar nýjan rithátt sem einfaldar málin töluvert. Tillaga Quines var að skrifa: „Ef $\meta{A}$ er setning, þá er $\ulcorner \enot\meta{A}\urcorner$ líka setning“.
+
+Hér merkja þessir skrýtnu hornklofar ($\ulcorner$ $\urcorner$) að táknið $\enot$ eigi að vera skeytt saman við táknið sem  $\meta{A}$  stendur fyrir. Þetta kemur því á sama stað niður.} 
+
+\section{Gæsalappanotkun í rökfærslum}
+Eitt helsta markmið okkar með setningarökfræðinni er að greina rökfærslur og um það fjallar \ref{ch.TruthTables}.\ kafli. Í mæltu máli tjáum við forsendur rökfærslu með setningum. Það sama gildir um niðurstöðuna. Við getum þýtt slíkar setningar yfir á táknmál setningarökfræði. En í táknmáli setningarökfræði er ekkert tákn sem stendur fyrir „þar af leiðandi“ og önnur svipuð orðasamband, og því engin leið fyrir okkur að merkja hvaða setning er \emph{forsenda} og hvaða setning er \emph{niðurstaða}.
+
+Hvað getum við tekið til bragðs? Við kynnum til sögunnar nýtt tákn í \emph{framsetningarmálinu}. Segjum til dæmis að við viljum segja niðurstöðu ákveðinnar rökfærslu leiði af ákveðnum forsendum. Segjum líka að forsendurnar séu $\meta{A}_{1}, \ldots, \meta{A}_{n}$ og niðurstaðan sé $\meta{B}$. Þá munum við skrifa: 
+
+
+%So, if we want to symbolise an \emph{argument} in TFL, what are we to do? 
+
+%An obvious thought would be to add a new symbol to the \emph{object} language of TFL itself, which we could use to separate the premises from the conclusion of an argument. However, adding a new symbol to our object language would add significant complexity to that language, since that symbol would require an official syntax.\footnote{\emph{The following footnote should be read only after you have finished the entire book!} And it would require a semantics. Here, there are deep barriers concerning the semantics. First: an object-language symbol which adequately expressed `therefore' for TFL would not be truth-functional. (\emph{Exercise}: why?) Second: a paradox known as `validity Curry' shows that FOL itself \emph{cannot} be augmented with an adequate, object-language `therefore'.} 
+
+$$\meta{A}_{1}, \ldots, \meta{A}_{n} \therefore \meta{B}$$
+Það sem táknið „$\therefore$“ gerir er að gefa til kynna hvaða setningar eru forsendur og hvaða setningar eru niðurstaða. Feitletruðu bókstafirnir standa svo fyrir hvaða setningar í umsagnarökfræði sem er.  
+
+%Strictly, this extra notation is \emph{unnecessary}. After all, we could always just write things down long-hand, saying: the premises of the argument are well symbolised by $\meta{A}_1, \ldots \meta{A}_n$, and the conclusion of the argument is well symbolised by $\meta{C}$. But having some convention will save us some time. Equally, the particular convention we chose was fairly \emph{arbitrary}. After all, an equally good convention would have been to underline the conclusion of the argument. Still, this is the convention we will use. 
+
+Þetta tákn, „$\therefore$“ er \emph{ekki} tákn í umsagnarökfræði, heldur í viðfangsmálinu. Maður skyldi því halda að rétt væri að setja gæsalappir utan um setningarnar sitthvoru megin við það. Það væri skynsamlega hugsað, en það væri erfitt að lesa og enn meira vesen að skrifa. Við segjum því bara að þess sé ekki þörf, rétt eins og við gerðum með ystu svigana hér að ofan, og segjum að 
+
+$$A, A \eif B \therefore B$$
+\emph{án allra gæsalappa}, standi fyrir rökfærslu þar sem forsendurnar eru táknaðar með „$A$“, „$A\eif B$“ og niðurstaðan með „$B$“. Það er ólíklegt að valda misskilningi.

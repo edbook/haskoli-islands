@@ -1,0 +1,673 @@
+%!TEX root = forallxcam.tex
+\part{Náttúruleg afleiðsla fyrir umsagnarökfræði}
+\label{ch.NDFOL}
+
+
+\chapter{Grunnreglur náttúrulegrar afleiðslu fyrir umsagnarökfræði}\label{s:BasicFOL}
+
+Táknmál umsagnarökfræði notar öll sömu setningatengin og setningarökfræðin. Sannanir í umsagnarökfræði munu því líka nota sömu reglur sannanir í setningarökfræði, bæði grunnreglurnar og afleiddar reglur (sjá \S\ref{ch.NDTFL}). Við munum líka nota sömu sönnunarfræðilegu hugtök og setningarökfræðin studdist við, og voru kynnt til sögunnar í þeim kafla, einkum og sér í lagi táknið „$\proves$“. Við þurfum hins vegar nýjar reglur fyrir magnarana og samsemdarmerkið.
+
+Rétt eins og í tilfelli setningarökfræði, þá skilgreinum við innleiðingar- og eyðingarreglur fyrir hvert tákn. 
+
+\section{Almagnaraeyðing}
+
+Ef við vitum að allt sé $F$, þá getum við dregið þá ályktun að sérhver tiltekinn hlutur sé $F$---nefndu það, sá hlutur er $F$. Það er að segja ef allt er $F$, þá er $a$ líka $F$, og $b$, og $c\ldots$ Eftirfarandi ætti því að vera í lagi:
+
+\begin{proof}
+	\hypo{a}{\forall xRxxd}
+	\have{c}{Raad} \Ae{a}
+\end{proof}
+Hér höfum við $\forall xRxxd$ sem forsendu, og fáum línu 2 með því að fjarlægja almagnarann og setja nafnið „$a$“ í stað breytunnar $x$, allstaðar þar sem hún kemur fyrir. Eftirfarandi ætti líka að vera í lagi:
+\begin{proof}
+	\hypo{a}{\forall xRxxd}
+	\have{c}{Rddd} \Ae{a}
+\end{proof}
+Hér höfum við gert það sama, nema við höfum skipt út $x$ fyrir „$d$“ allstaðar þar sem $x$ kemur fyrir. Við hefðum getað gert slíkt hið sama fyrir hvaða nafn sem er annað, enda hlýtur það sem gildir um allt í yfirgripinu líka að gilda um allt sem við höfum nafn yfir, því það er jú hluti af yfirgripinu.
+
+Almennt form almagnaraeyðingar ($\forall$E) er því þetta:
+
+\factoidbox{
+\begin{proof}
+	\have[m]{a}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+	\have[\ ]{c}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)} \Ae{a}
+\end{proof}}Þessi ritháttur var kynntur til sögunnar í \S\ref{s:TruthFOL}. Í stuttu máli, þá merkir $\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$ formúlu þar sem breytan $\meta{x}$ kemur fyrir að minnsta kosti einu sinni fyrir í formúlunni $\meta{A}$ og $\meta{x}$ er óbundin, og $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$ merkir formúlu þar sem öllu $\meta{x}$-unum í $\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$ hefur verið skipt út fyrir $\meta{c}$. Þetta þýðir sem sagt bara að þegar við beitum reglunni, þá tökum við almagnarann framan af, og skiptum út öllum breytunum sem hann bindur út fyrir eitthvað nafn. 
+
+Við megum þó ekki gleyma að við getum \emph{bara} beitt þessari reglu, rétt eins og gildir um allar eyðingarreglur, þegar almagnarinn er aðalvirkinn í setningunni. Eftirfarandi er því \emph{ekki} leyfilegt: 
+
+\begin{proof}
+	\hypo{a}{\forall x Bx \eif Bt}
+	\have{c}{Bj \eif Bt}\by{óleyfileg tilraun til að nota $\forall$E}{a}
+\end{proof}
+Hér er „$\forall x$“ ekki aðalvirkinn í línu 1, heldur „$\eif$“. Þessi rökfærsla er ógild (forsendan er nauðsynlega sönn, en niðurstaðan ekki. Það sýnir að eitthvað hefur farið úrskeiðis). Þetta eru mjög algeng mistök byrjenda, svo það er vel þess virði að taka vel eftir þessu.
+
+\section{Innleiðing tilvistarmagnara}
+Ef við vitum að einhver tiltekinn hlutur er \emph{F}, þá getum við dregið þá ályktun að eitthvað sé \emph{F}---nefnilega það sem við vissum að væri \emph{F}. Eftirfarandi ætti því að vera í lagi:
+\begin{proof}
+	\hypo{a}{Raad}
+	\have{b}{\exists x Raax} \Ei{a}
+\end{proof}
+Hér höfum við skipt út nafninu „$d$“ fyrir breytuna „$x$“ og bundið hana svo við magnara. Við hefðum líka getað farið aðra leið:
+\begin{proof}
+	\hypo{a}{Raad}
+	\have{c}{\exists x Rxxd} \Ei{a}
+\end{proof}
+Hér höfum við skipt út nafninu „$a$“ út á tveimur stöðum fyrir breytuna $x$ og bundið hana við magnara. Hér hefðum við ekki þurft að skipta út nafninu „$a$“ á báðum stöðum: Ef Ólafur elskar sjálfan sig, þá er jú einhver sem elskar Ólaf. Eftirfarandi er því líka leyfilegt: 
+
+\begin{proof}
+	\hypo{a}{Raad}
+	\have{d}{\exists x Rxad} \Ei{a}
+\end{proof}
+Hér höfum við skipt út nafninu „$a$“ fyrir $„x“$ á öðrum af tveimur stöðum þar sem það kemur fyrir, og svo bundið hana með tilvistarmagnara. Þessi dæmi liggja að baki almennu formi reglunnar, en til að geta gefið slíkt form þurfum við fyrst að að kynna til sögunnar nýjan rithátt, líkan þeim sem við notuðum hér að ofan.
+
+Hann er svona: Ef $\meta{A}$ er formúla þar sem nafnið $\meta{c}$ kemur fyrir, þá getum við skrifað $$\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$$ til að gefa það til kynna. Við getum svo skrifað $$\meta{A}(\ldots \meta{x} \ldots \meta{c}\ldots)$$ til að tákna formúlu þar sem sumum (og hugsanlega öllum) $\meta{c}$-unum í
+$\meta{A}$ hefur verið skipt út fyrir breytuna $\meta{x}$.
+
+Með þennan rithátt að vopni, þá getum við loks gefið almennt form reglunnar:
+\factoidbox{
+\begin{proof}
+	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+	\have[\ ]{c}{\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{c}\ldots)} \Ei{a}
+\end{proof}
+þar sem \meta{x} má ekki koma fyrir í $\meta{A}$ (\ldots \meta{c} \ldots \meta{c}\ldots)}
+
+Þessi síðasta klausa er til að tryggja að táknrunan sem verður til við skiptinguna sé setning í umsagnarökfræði. Eftirfarandi er því leyfilegt:
+\begin{proof}
+	\hypo{a}{Raad}
+	\have{d}{\exists x Rxad} \Ei{a}
+	\have{e}{\exists y \exists x Rxyd} \Ei{d}
+\end{proof}
+En svona er bannað:
+\begin{proof}
+	\hypo{a}{Raad}
+	\have{d}{\exists x Rxad} \Ei{a}
+	\have{e}{\exists x \exists x Rxxd}\by{óleyfileg tilraun til að nota $\exists$I}{d}
+\end{proof}
+Táknrunan á línu 3 inniheldur breytu sem er innan sviðs tveggja magnara sem báðir reyna að stjórna henni, og því er hún ekki setning á táknmáli umsagnarökfræði. Klausan sem við bættum við regluna kemur í veg fyrir að þetta geti gerst.
+
+\section{Tóm yfirgrip}\label{tomtyfirgrip}
+Eftirfarandi sönnun notar báðar reglurnar sem við höfum kynnst fram að þessu:
+	\begin{proof}
+		\hypo{a}{\forall x Fx}
+		\have{in}{Fa}\Ae{a}
+		\have{e}{\exists x Fx}\Ei{in}
+	\end{proof}
+Erum við viss um að þessi sönnun sé í lagi? Ef eitthvað er til yfirleitt, þá getum við vissulega dregið þá ályktun að eitthvað sé $F$, ef allt er $F$. En hvað ef \emph{ekkert} væri til? Þá er það samt satt að allt sé $F$, þ.e.\ setningin $\forall x Fx$ er sönn. Af hverju?
+
+Ein ástæða sem oft er gefin er að þá getum við aldrei fundið mótdæmi: það er ekkert $x$ sem er \emph{ekki} $F$. Það er í raun alveg nógu góð ástæða, því eins og við höfum skilgreint magnarana, þá er setningin $\forall x Fx$ er jafngild setningunni $\enot \exists x \enot Fx$, en hún segir að það sé ekki til $x$ sem er ekki-$F$ (og raunar getum við sannað þetta jafngildi síðar í þessum kafla). En ef yfirgripið er tómt, þá hlýtur þessi setning að vera sönn, því ef $\enot \exists x \enot Fx$ væri ósönn, þá væri setningin $\exists x \enot Fx$ sönn, og það getur ekki verið ef yfirgripið er tómt. Í kaflanum um afleiddar reglur í umsagnarökfræði hér að neðan (\S\ref{s:DerivedFOL}) sjáum við svo af hverju við erum í raun nauðbeygð til að samþykkja þetta jafngildi.
+
+%En við getum líka hugsað um þetta aðeins öðruvísi. Tökum setninguna $\forall x (Ax \eif Tx)$. Samkvæmt þýðingarlykli sem við höfum áður notað, þá segir hún að allir apar kunni að tefla. Ef þessi setning er sönn um alla apa í yfirgripinu, þá ætti setningin $\forall x Tx$ að vera sönn, ef við minnkum yfirgripið þannig að það innihaldi einungis apana sem fyrri setningin átti við, enda segir hún í raun það sama. Þetta ætti líka að gilda \emph{ef engir apar eru í fyrra yfirgripinu}---og fyrri setninin er einmitt sönn ef engir apar eru í yfirgripinu (sjá \S \ref{tomarumsagnir} til upprifjunar). Segjum nú sem svo að yfirgripið sé tómt. Hver er þá munurinn á $\forall x (Ax \eif Tx)$ og $\forall x Tx$? Seinni setningin hlýtur að vera sönn þegar sú fyrri er sönn, \emph{sama hvaða umsögn er í forliðnum á þeirri fyrri}---enda eru engir apar í yfirgripinu, né nokkuð annað. 
+
+%Við sjáum þetta kannski betur ef við skilgreinum nýja umsögn, „Y: \blank\ er í yfirgripinu“ sem er sönn um \emph{x} ef og aðeins ef \emph{x} er í yfirgripinu. Við vitum að þessi setning er sönn, því það vill svo til að $Y$ er ekki satt um neitt, enda er yfirgripið tómt. Þar af leiðandi hlýtur öll setningin að vera sönn (En setningin „ef $x$ er í yfirgripinu, þá er $F$ $x$“ hlýtur að vera rökfræðilega jafngild setningunni $\forall xFx$---sem er einmitt sönn \emph{ef} allt í yfirgripinu er $F$. $\forall x Fx$ er því í raun falin skilyrðissetning, ef við skoðum hana frá þessu sjónarhorni.
+
+En leiðir þá af því að $\forall x Fx$ sé sönn ef yfirgripið er tómt að til sé $x$ sem er $F$? Einmitt ekki! Við verðum því að hafa eitthvað í yfirgripinu, ef við viljum að sönnunin sem við skoðuðum hér að ofan sé góð (og þar með að þessar augljósu reglur fyrir magnarana séu gildar). En það þýðir auðvitað líka að við þurfum að samþykkja að það sé rökfræðileg staðreynd að eitthvað sé til fremur en ekkert---ef við viljum segja að $\exists x Fx$ leiði af $\forall x Fx$ rökfræðilega. 
+
+Það gæti einhverjum fundist of langt gengið. En við erum í raun nú þegar búin að taka þessa ákvörðun. Í \S\ref{s:FOLBuildingBlocks} sögðum við að yfirgrip í umsagnarökfræði mættu ekki vera tóm. Setning í umsagnarökfræði er svo rökfræðilega sönn ef og aðeins ef hún er sönn fyrir allar túlkanir---það er að segja sönn sama hvað. $\exists x(x = x)$ er sönn sama hvað, og af því leiðir rökfræðilega að eitthvað sé til.
+
+En einhver gæti maldað í móinn og neitað því einfaldlega að það sé rökfræðileg staðreynd að eitthvað sé til.\footnote{Ludwig Wittgenstein er dæmi um heimspeking sem neitaði þessu.} Þetta er bara tómt svindl! En ef við neitum að svindla með þessum hætti, hverjar eru afleiðingarnar? Hér er þrennt sem við viljum halda í:
+ 	\begin{ebullet}
+		\item $\forall x Fx \proves Fa$: þetta er reglan $\forall$E.
+		\item $Fa \proves \exists x Fx$: þetta er reglan $\exists$I.
+		\item að geta klippt og límt saman sannanir: ef við getum sannað $\meta{A} \proves \meta{B}$ og $\meta{B} \proves \meta{C}$, þá viljum við geta sannað $\meta{A} \proves \meta{C}$ með því að taka fyrri sönnunina og setja hana fyrir framan seinni sönnunina.
+	\end{ebullet}
+Ef við viljum halda þessu þrennu, þá verðum við að samþykkja (með semingi eða ekki) að $\forall xFx \proves \exists x Fx$. Það leiðir af þessu að rökfræðin okkar hlýtur að segja að eitthvað sé til fremur en ekkert. Ef við viljum ekki viðurkenna það, þá þurfum við að hafna einhverju af þessu---augljósum reglum, eða getunni til að klippa og líma saman sannanir, sem sjálf virðist augljós.
+	
+En áður en við förum að velja eitthvað af þessu til að hafna, þá ættum við kannski frekar að spyrja okkur hversu \emph{mikið} svindl þetta er. Jú, það verður erfiðara að eiga í heimspekilegum eða guðfræðilegum rökræðum um það af hverju eitthvað er til frekar en ekkert, en að öðru leyti skiptir þetta okkur litlu---við gerum jú langoftast ráð fyrir því að eitthvað sé til þegar við beitum rökhugsuninni. Við ættum því kannski bara að bíta í þetta súra epli og taka þá reglu í sátt að yfirgripið megi ekki vera tómt. Ef við viljum svo eiga í slíkum rökræðum síðar, þá gætum við farið að leita okkur að flóknara sannanakerfi. Þangað til er óþarfi að rugga bátnum.
+
+\section{Almagnarainnleiðing}
+
+Segjum sem svo að við höfum sannað um hvern einasta hlut í yfirgripinu að hann sé $F$. Þá getum við hikstalaust sagt að allt sé $F$. Okkur gæti þá dottið í hug að það væri góð regla fyrir almagnarainnleiðingu að segja sem svo að ef við getum sannað að $F\meta{c}$ fyrir hvert og eitt $\meta{c}$, þá getum við dregið þá ályktun að $\forall x Fx$. 
+
+En því miður væri slík regla ónothæf. Það væri nefnilega ekki nóg að sanna $F\meta{c}$ fyrir þau nöfn sem til eru í einhverjum þýðingarlykli, því yfirgripið getur alltaf verið (og oftast er) stærra en fjöldi nafna sem við höfum tekið fram gefur til kynna, og það sem verra er, oft er það óendanlegt. Til að sanna $F\meta{c}$ fyrir öll $\meta{c}$, þyrfti því að gefa öllu í yfirgripinu nafn og sanna svo fyrir hvert og eitt nafn að $F\meta{c}$---til dæmis að $Fa$, $Fb$, $\ldots$, $Fj_1$, $Fj_2$, $\ldots$, $Fr_{79002}$, $\ldots$ og svona mætti lengi telja. Raunar eru óendanlega mörg möguleg nöfn í táknmáli umsagnarökfræði, og því myndi sönnun af þessu tagi aldrei taka enda. Við gætum því aldrei beitt slíkri reglu. Við þurfum að vera útsjónarsamari.
+
+Byrjum á að skoða eftirfarandi rökfærslu: $$\forall x Fx \therefore \forall y Fy$$ Þessi rökfærsla er greinilega gild: það skiptir engu máli hvaða breytunöfn við notum, svo forsendan og niðurstaðan segja það sama. En hvernig ættum við að sanna þetta? Við gætum byrjað á sönnun svona:
+\begin{proof}
+	\hypo{x}{\forall x Fx} 
+	\have{a}{Fa} \Ae{x}
+\end{proof}
+Nú höfum við sannað $Fa$. En við hefðum getað notað hvaða nafn sem! Við hefðum getað sannað $Fb$, $Fb$, $Fj_1$, $Fj_2$, $\ldots$, $Fr_{79002}$, $\ldots$ eða hvað sem er. Með þetta í huga, þá sjáum við að í vissum skilningi er hægt að sanna $F\meta{c}$, fyrir hvaða $\meta{c}$ sem er, því ef við \emph{gætum gert} þetta fyrir hvaða nafn sem er, þá er í raun engin ástæða til að \emph{gera} það fyrir hvaða nafn sem er. Við ættum að geta sagt að $F$ \emph{sé} satt um allt, bara af því að við vitum að við hefðum getað sagt það um hvað sem. Við ættum því að geta klárað sönnunina svona:
+\begin{proof}
+	\hypo{x}{\forall x Fx}
+	\have{a}{Fa} \Ae{x}
+	\have{y}{\forall y Fy} \Ai{a}
+\end{proof}
+Lykilhugsunin hér er að það er ekkert sérstakt við $a$---það er bara nafn sem við veljum \emph{af handahófi}. Við hefðum getað valið hvaða nafn sem er annað og sönnunin hefði ekkert breyst. Það er þessi hugsun sem liggur að baki almennu formi innleiðingarreglunnar fyrir almagnarann ($\forall$I):
+\factoidbox{
+\begin{proof}
+	\have[m]{a}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+	\have[\ ]{c}{\forall \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)} \Ai{a}
+\end{proof}
+	 þar sem \meta{c} kemur ekki fyrir í ólosaðri forsendu\\
+	og \meta{x} kemur ekki fyrir í $\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)$}
+Lykilhugsunin birtist í fyrri klausunni. Hún tryggir að nafnið sem við veljum sé af handahófi og hefði allt eins getað gilt um hvað sem er annað í yfirgripinu.\footnote{Munið að í \S\ref{s:BasicTFL} sögðum við að `$\ered$' stæði fyrir einhverja tiltekna mótsögn. Í umsagnarökfræði má þessi mótsögn ekki innihalda nein nöfn, því annars gæti það brotið í bága við þessa reglu.} 
+
+Þessi regla er oft erfið fyrir byrjendur, sem finnst eins og einhvers staðar liggi fiskur undir steini, að það hljóti bara að vera eitthvað svindl hérna á ferðinni. En svo er ekki: ef nafnið sem við notum gengur ekki í berhögg við þau skilyrði sem reglan setur, þá hefðum við í raun getað notað hvaða nafn sem er annað, og þá hlýtur umsögnin að gilda um allt. 
+
+Tökum tvö dæmi um óleyfilega notkun nafna með þessari reglu, sem hugsanlega gæti skýrt betur af hverju hún virkar í raun og veru. Notum eftirfarandi þýðingarlykil: 	
+	\begin{ekey}
+		\item[S] \gap{1} er skemmtilegur
+		\item[H] \gap{1} er hress
+		\item[j] Jón
+	\end{ekey}
+Gerum ráð fyrir að við vitum að Jón sé skemmtilegur. Þá gætum við kannski reynt eftirfarandi:
+\begin{proof}
+\hypo{1} {Sj}
+\open
+\hypo{2} {Hj}
+\have{3} {Sj} \r{1}
+\close
+\have{4} {Hj \eif Sj} \ci{2-3}
+\have{5} {\forall x (Hx \eif Sx)} \by{óleyfileg tilraun til að nota $\exists$I}{4}
+\end{proof}
+Forsendan segir að Jón sé skemmtilegur og niðurstaðan að ef allir eru hressir, þá eru þeir skemmtilegir. Hér hefur greinilega eitthvað farið úrskeiðis, því það sem er satt um Jón þarf alls ekkert að vera satt um alla. Sumir eru kannski þannig að ef þeir eru hressir, þá eru þeir frekar óþolandi!
+
+Vandinn hér er að nafnið $j$ hefur þegar verið notað um Jón og því getum við ekki notað innleiðingarregluna fyrir almagnarann. Nafnið kemur fyrir í ólosaðri forsendu og var því ekki valið af handahófi---við alhæfum um það sem við vitum bara að á við um Jón.
+
+Hér er annað dæmi:
+	\begin{quote}
+		Allir elska Gísla Martein; þar af leiðandi elska allir sjálfa sig.
+	\end{quote}
+Þetta er greinilega ógild rökfærsla, sem við gætum ef til vill táknað svona:	
+$$\forall x Lxg \therefore \forall x Lxx$$
+Segjum svo að við viljum reyna að sanna þessa afleitu rökfærslu með eftirfarandi tilraun til sönnunar:
+\begin{proof}
+	\hypo{x}{\forall x Lxg}
+	\have{a}{Lgg} \Ae{x}
+	\have{y}{\forall x Lxx} \by{óleyfileg tilraun til að nota $\forall$I}{a}
+\end{proof}\noindent
+Þetta er ekki leyfilegt, því $g$ kemur fyrir í ólosaðri forsendu, nefnilega í línu 1. Við verðum alltaf að hafa í huga að ef við höfum gefið okkur eitthvað um tiltekinn hlut, hvort sem að það er í forsendu eða aukaforsendu, þá getum við ekki notað $\forall$I í línu þar sem nafnið yfir þann hlut kemur fyrir.
+
+Athugið þó að reglan segir einungis að nafnið megi ekki koma fyrir í \emph{ólosaðri} forsendu. Það er í fínu lagi að það komi fyrir í \emph{losaðri} forsendu---það er að segja, í hlutasönnun sem við höfum þegar lokað. Þessi sönnun er til dæmis í lagi:
+\begin{proof}
+	\open
+		\hypo{f1}{Gd}
+		\have{f2}{Gd}\by{R}{f1}
+	\close
+	\have{ff}{Gd \eif Gd}\ci{f1-f2}
+	\have{zz}{\forall z(Gz \eif Gz)}\Ai{ff}
+\end{proof}
+Þetta segir okkur að $\forall z (Gz \eif Gz)$ sé \emph{sannanleg setning} og það ætti hún líka að vera.
+
+Það er eitt í viðbót sem við verðum að hafa í huga. Þegar við notum $\forall$I, þá verðum alltaf að skipta út öllum \meta{c}-um sem koma fyrir í $\meta{A}(\ldots \meta{x}\ldots\meta{x}\ldots)$ fyrir \meta{x}. Ef við skiptum bara út \emph{sumum} \meta{c}-um, þá gætum við „sannað“ ansi skrýtna hluti. Til dæmis:
+	\begin{quote}
+	Allir eru jafngamlir sjálfum sér; þar af leiðandi eru allir jafn gamlir og Ingimundur gamli.
+	\end{quote}
+Við gætum þýtt þessa rökfærslu svona:	
+$$\forall x Gxx \therefore \forall x Gxi$$
+Athugum þá eftirfarandi tilraun til sönnunar:
+\begin{proof}
+	\hypo{x}{\forall x Gxx}
+	\have{a}{Gii}\Ae{x}
+	\have{y}{\forall x Gxi}\by{óleyfileg tilraun til að nota $\forall$I}{a}	
+\end{proof}
+En reglurnar okkar leyfa þetta ekki, sem betur fer. Þessi sönnun er óleyfileg, því við skiptum ekki út nafninu $d$ út fyrir breytuna $x$ \emph{alls staðar} þar sem það kom fyrir í línu 2.
+
+\section{Summagnaraeyðing}
+
+Þá er eftir summagnaraeyðing. Segjum að við vitum að \emph{eitthvað} sé \emph{F}. Ef við vitum það, þá vitum við því miður ekki mjög margt. Til dæmis höfum við ekki hugmynd um hvað það er sem er $F$. Það virðist því sem við getum ekki sagt neitt um hvort tilteknar setningar á forminu $F\meta{c}$ séu sannar. Hvað getum við þá gert?
+
+Hvað ef við vitum að eitthvað sé $F$ og að allt sem er $F$, sé $G$? Þá gætum við kannski hugsað sem svo:
+ 	\begin{quote}
+		Fyrst eitthvað er $F$, þá er einhver tiltekinn hlutur sem er $F$. Við vitum ekkert um þennan hlut, annað en að hann sé $F$. Köllum þennan hlut, hver sem hann er, bara $a$ til hægðarauka. Þá er $a$ $F$. Fyrst við vitum að allt sem er $F$ er $G$, þá vitum við að $a$ er $G$. En þá leiðir af því að eitthvað er $G$, nefnilega $a$. Þar sem nafnið skiptir í raun engu máli, þá vitum við að eitthvað er $G$. 
+	\end{quote}
+Við gætum reynt að fanga þessa rökfærslu með eftirfarandi sönnun:
+\begin{proof}
+	\hypo{es}{\exists x Fx}
+	\hypo{ast}{\forall x(Fx \eif Gx)}
+	\open
+		\hypo{s}{Fa}
+		\have{st}{Fa \eif Ga}\Ae{ast}
+		\have{t}{Ga} \ce{st, s}
+		\have{et1}{\exists x Gx}\Ei{t}
+	\close
+	\have{et2}{\exists x Gx}\Ee{es,s-et1}
+\end{proof}\noindent
+Við byrjuðum á því að skrifa niður forsendurnar okkar. Í línu 3 gáfum við okkur svo aukaforsendu, $Fa$. Þetta er bara innsetningartilvik af $\exists x Fx$---þ.e.\ magnarinn tekinn af og nafn sett í stað breytunnar. Að því gefnu gátum við sýnt að $\exists x Gx$. En við gáfum okkur \emph{ekkert sérstakt} um hlutinn sem nafnið $a$ vísar til, nema að hann uppfylli $\exists x Fx$. Það skiptir því engu máli hvaða hlutur það er í raun og veru, því við vitum af línu 1 að \emph{eitthvað} uppfyllir $\exists x Fx$. Þessi rökfærsla er því fullkomlega almenn og ættum því að geta lokað hlutasönnuninni og losað forsenduna og dregið þá ályktun að $\exists x Gx$.
+
+Þetta er hugsunin sem liggur að baki almennu formi reglunnar fyrir summagnaraeyðingu ($\exists$E):
+\factoidbox{
+\begin{proof}
+	\have[m]{a}{\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)}
+	\open	
+		\hypo[i]{b}{\meta{A}(\ldots \meta{c} \ldots \meta{c}\ldots)}
+		\have[j]{c}{\meta{B}}
+	\close
+	\have[\ ]{d}{\meta{B}} \Ee{a,b-c}
+\end{proof}
+þar sem \meta{c} kemur ekki fyrir í forsendu sem er ólosuð fyrir \emph{i},\\
+\meta{c} kemur ekki fyrir í $\exists \meta{x}\meta{A}(\ldots \meta{x} \ldots \meta{x}\ldots)$\\
+og \meta{c} kemur ekki fyrir í $\meta{B}$}
+Rétt eins og í tilfelli almagnarainnleiðingar eru þessar aukaklausur mjög mikilvægar. Hér eru dæmi um afleita rökfærslu:
+	\begin{quote}
+		Júlía er rökfræðingur. Einhver er ekki rökfræðingur. Þar af leiðandi er Júlía bæði rökfræðingur og ekki rökfræðingur.
+	\end{quote}
+Við gætum þýtt þessa hræðilegu rökfærslu yfir á táknmál umsagnarökfræði svona:
+$$Rj, \exists x \enot Rx \therefore Rj \eand \enot Rj$$
+
+Hér er tilraun til sönnunar:
+\begin{proof}
+	\hypo{f}{Rj}
+	\hypo{nf}{\exists x \enot Rx}	
+	\open	
+		\hypo{na}{\enot Rj}
+		\have{con}{Rj \eand \enot Rj}\ae{f, na}
+	\close
+	\have{econ1}{Rj \eand \enot Rj}\by{óleyfileg tilraun til að nota $\exists$E }{nf, na-con}
+\end{proof}
+Síðasta línan í þessari sönnun er ekki leyfileg. Nafnið sem við setjum inn í stað fyrir $x$ í $\exists x \enot Lx$ á línu 3, nefnilega $j$, kemur fyrir í línu 4.
+Þetta væri ekki mikið betri tilraun:
+\begin{proof}
+	\hypo{f}{Rj}
+	\hypo{nf}{\exists x \enot Rx}	
+	\open	
+		\hypo{na}{\enot Rj}
+		\have{con}{Rj \eand \enot Rj}\ae{f, na}
+		\have{con1}{\exists x (Rx \eand \enot Rx)}\Ei{con}		
+	\close
+	\have{econ1}{\exists x (Rx \eand \enot Rx)}\by{óleyfileg tilraun til að nota $\exists$E }{nf, na-con1}
+\end{proof}
+Síðasta línan hér er heldur ekki leyfileg. Nafnið sem við setjum inn fyrir í x í stað $\exists x \enot Lx$, nefnilega $b$, kemur nefnilega fyrir í ólosaðri forsendu, í línu 1.
+
+Það er þó til einföld leið til að tryggja að maður haldi sig alltaf innan leyfilegra marka þegar þessi regla er notuð: Veljum bara \emph{splúnkunýtt} nafn í hlutasönnun summagnaraeyðingarinnar---nafn sem er hvergi annars staðar sjáanlegt í sönnuninni.
+
+ 
+
+\practiceproblems
+\problempart
+Útskýrið af hverju þessar tvær tilraunir til sannanir eru ekki réttar. Finnið upp á þýðingarlyklum sem sýna að rökfærslurnar sem reynt er að sýna að séu gildar séu það ekki.
+\begin{multicols}{2}
+	\begin{proof}
+		\hypo{Rxx}{\forall x Rxx}
+		\have{Raa}{Raa}\Ae{Rxx}
+		\have{Ray}{\forall y Ray}\Ai{Raa}
+		\have{Rxy}{\forall x \forall y Rxy}\Ai{Ray}
+	\end{proof}
+	\begin{proof}
+		\hypo{AE}{\forall x \exists y Rxy}
+		\have{E}{\exists y Ray}\Ae{AE}
+		\open
+			\hypo{ass}{Raa}
+			\have{Ex}{\exists x Rxx}\Ei{ass}
+		\close
+		\have{con}{\exists x Rxx}\Ee{E, ass-Ex}
+	\end{proof}
+\end{multicols}
+
+\problempart 
+\label{pr.justifyFOLproof}
+Í eftirfarandi tilraunum til sönnunar vantar réttar merkingar (þ.e.\ tilvísanir í reglur og línunúmer). Bætið þeim við til að klára sannanirnar.
+\begin{proof}
+\hypo{p1}{\forall x\exists y(Rxy \eor Ryx)}
+\hypo{p2}{\forall x\enot Rmx}
+\have{3}{\exists y(Rmy \eor Rym)}{}
+	\open
+		\hypo{a1}{Rma \eor Ram}
+		\have{a2}{\enot Rma}{}
+		\have{a3}{Ram}{}
+		\have{a4}{\exists x Rxm}{}
+	\close
+\have{n}{\exists x Rxm} {}
+\end{proof}
+\begin{multicols}{2}
+\begin{proof}
+\hypo{1}{\forall x(\exists yLxy \eif \forall zLzx)}
+\hypo{2}{Lab}
+\have{3}{\exists y Lay \eif \forall zLza}{}
+\have{4}{\exists y Lay} {}
+\have{5}{\forall z Lza} {}
+\have{6}{Lca}{}
+\have{7}{\exists y Lcy \eif \forall zLzc}{}
+\have{8}{\exists y Lcy}{}
+\have{9}{\forall z Lzc}{}
+\have{10}{Lcc}{}
+\have{11}{\forall x Lxx}{}
+\end{proof}
+\begin{proof}
+\hypo{a}{\forall x(Jx \eif Kx)}
+\hypo{b}{\exists x\forall y Lxy}
+\hypo{c}{\forall x Jx}
+\open
+	\hypo{2}{\forall y Lay}
+	\have{3}{Laa}{}
+	\have{d}{Ja}{}
+	\have{e}{Ja \eif Ka}{}
+	\have{f}{Ka}{}
+	\have{4}{Ka \eand Laa}{}
+	\have{5}{\exists x(Kx \eand Lxx)}{}
+\close
+\have{j}{\exists x(Kx \eand Lxx)}{}
+\end{proof}
+\end{multicols}
+
+
+\problempart
+\label{pr.BarbaraEtc.proof1}
+Í æfingunum í \S\ref{s:MoreMonadic}, hluta A, skoðuðum við fimmtán rökhendur sem koma fyrir í aristótelískri rökfræði. Finnið sannanir fyrir hverja rökhendu. Ráðlegging: Þetta er mun einfaldara ef „Engin $F$ eru $G$“ er þýtt sem $\forall x (Fx \eif \enot Gx)$.
+\
+
+\problempart
+\label{pr.someFOLproofs}
+Sannið eftirfarandi.
+\begin{earg}
+\item $\proves \forall x Fx \eor \enot \forall x Fx$
+\item $\proves\forall z (Pz \eor \enot Pz)$
+\item $\forall x(Ax\eif Bx), \exists x Ax \proves \exists x Bx$
+\item $\forall x(Mx \eiff Nx), Ma\eand\exists x Rxa\proves \exists x Nx$
+\item $\forall x \forall y Gxy\proves\exists x Gxx$
+\item $\proves\forall x Rxx\eif \exists x \exists y Rxy$
+\item $\proves\forall y \exists x (Qy \eif Qx)$
+\item $Na \eif \forall x(Mx \eiff Ma), Ma, \enot Mb\proves \enot Na$
+\item $\forall x \forall y (Gxy \eif Gyx) \proves \forall x\forall y (Gxy \eiff Gyx)$
+\item $\forall x(\enot Mx \eor Ljx), \forall x(Bx\eif Ljx), \forall x(Mx\eor Bx)\proves \forall xLjx$
+\end{earg}
+
+\problempart
+\label{pr.likes}
+Finnið þýðingarlykil fyrir eftirfarandi rökfærslu, þýðið hana yfir á táknmál umsagnarökfræði og sannið.
+\begin{quote}
+Það er einhver sem elskar alla sem elskar alla sem hún elskar.	Þar af leiðandi er einhver sem elskar sjálfan sig.
+\end{quote}
+
+\problempart
+\label{pr.FOLequivornot}
+Sýnið að setningarnar í eftirfarandi setningapörum séu sannanlega jafngildar, ef þær eru það, en finnið þýðingarlykil sem sýnir að þær eru það ekki, annars.
+\begin{earg}
+\item $\forall x Px \eif Qc, \forall x (Px \eif Qc)$
+\item $\forall x\forall y \forall z Bxyz, \forall x Bxxx$
+\item $\forall x\forall y Dxy, \forall y\forall x Dxy$
+\item $\exists x\forall y Dxy, \forall y\exists x Dxy$
+\item $\forall x (Rca \eiff Rxa), Rca \eiff \forall x Rxa$
+\end{earg}
+
+\problempart
+\label{pr.FOLvalidornot}
+Sannið eftirfarandi rökfærslur, ef þær eru gildar. Ef þær eru ógildar, finnið þýðingarlykil sem sýnir það.
+\begin{earg}
+\item $\exists y\forall x Rxy \therefore \forall x\exists y Rxy$
+\item $\exists x(Px \eand \enot Qx) \therefore \forall x(Px \eif \enot Qx)$
+\item $\forall x(Sx \eif Ta), Sd \therefore Ta$
+\item $\forall x(Ax\eif Bx), \forall x(Bx \eif Cx) \therefore \forall x(Ax \eif Cx)$
+\item $\exists x(Dx \eor Ex), \forall x(Dx \eif Fx) \therefore \exists x(Dx \eand Fx)$
+\item $\forall x\forall y(Rxy \eor Ryx) \therefore Rjj$
+\item $\exists x\exists y(Rxy \eor Ryx) \therefore Rjj$
+\item $\forall x Px \eif \forall x Qx, \exists x \enot Px \therefore \exists x \enot Qx$
+\end{earg}
+
+
+\chapter{Umbreytingarreglur fyrir magnara}\label{s:CQ}
+
+Við bætum núna við reglum sem gera okkur kleift að umbreyta mögnurunum hvora í aðra.
+
+Í \S\ref{s:FOLBuildingBlocks} sögðum við að $\enot\exists x\meta{A}$ væri rökfræðilega jafngilt $\forall x \enot\meta{A}$. Nú bætum við við reglum til að þetta verði endurspeglað í sannanakerfinu okkar. Fyrsta regluparið sem við bætum við er:
+	\factoidbox{
+	\begin{proof}
+		\have[m]{a}{\forall \meta{x} \enot\meta{A}}
+		\have[\ ]{con}{\enot \exists \meta{x} \meta{A}}\cq{a}
+	\end{proof}}
+og
+\factoidbox{
+	\begin{proof}
+		\have[m]{a}{ \enot \exists \meta{x} \meta{A}}
+		\have[\ ]{con}{\forall  \meta{x} \enot \meta{A}}\cq{a}
+	\end{proof}}
+Svo þurfum við líka að bæta við:
+\factoidbox{
+	\begin{proof}
+		\have[m]{a}{\exists \meta{x}\enot \meta{A}}
+		\have[\ ]{con}{\enot \forall \meta{x} \meta{A}}\cq{a}
+	\end{proof}}
+og
+\factoidbox{
+	\begin{proof}
+		\have[m]{a}{\enot \forall \meta{x} \meta{A}}
+		\have[\ ]{con}{\exists \meta{x} \enot \meta{A}}\cq{a}
+	\end{proof}}
+
+\practiceproblems
+
+\problempart
+Sýnið að eftirfarandi setningar séu sannanlega andstæðar.
+\begin{earg}
+\item $Sa\eif Tm, Tm \eif Sa, Tm \eand \enot Sa$
+\item $\enot\exists x Rxa, \forall x \forall y Ryx$
+\item $\enot\exists x \exists y Lxy, Laa$
+\item $\forall x(Px \eif Qx), \forall z(Pz \eif Rz), \forall y Py, \enot Qa \eand \enot Rb$
+\end{earg}
+
+\problempart
+Sýnið fyrir hvert setningapar hér að neðan að setningarnar tvær séu sannanlega jafngildar:
+
+\begin{earg}
+\item $\forall x (Ax\eif \enot Bx), \enot\exists x(Ax \eand Bx)$
+\item $\forall x (\enot Ax\eif Bd), \forall x Ax \eor Bd$
+\end{earg}
+
+\problempart
+Sýnið fyrir hvert setningapar hér að neðan að setningarnar tvær séu sannanlega jafngildar:
+\begin{earg}
+\item $\forall x (Fx \eand Ga), \forall x Fx \eand Ga$
+\item $\exists x (Fx \eor Ga), \exists x Fx \eor Ga$
+\item $\forall x(Ga \eif Fx), Ga \eif \forall x Fx$
+\item $\forall x(Fx \eif Ga), \exists x Fx \eif Ga$
+\item $\exists x(Ga \eif Fx), Ga \eif \exists x Fx$
+\item $\exists x(Fx \eif Ga), \forall x Fx \eif Ga$
+\end{earg}
+Takið eftir að breytan $x$ kemur ekki fyrir í $Ga$. Þegar allir magnarar í setningu eru fremst er sagt að hún sé \emph{á staðalformi}. Við getum litið á þessi jafngildi sem reglur sem gera okkur kleift að breyta hvaða setningu sem er í setningu á staðalformi.
+
+
+\chapter{Samsemdarreglur}
+
+Í \S\ref{s:Interpretations} minntumst við á hið svokallaða \emph{lögmál um samsemd óaðgreinanlegra hluta}. Það er sú fullyrðing að hlutir sem ekki er hægt að greina í sundur, það er hafa alla sömu eiginleika og hver annar, séu í raun sami hluturinn. Þetta lögmál er heimspekilega mjög umdeilt og við tókum líka fram að við myndum ekki aðhyllast þetta lögmál. Það leiðir af þessu, að það skiptir ekki máli hversu mikið við vitum um tvo hluti, við getum ekki sannað að þeir séu sami hluturinn, nema auðvitað að okkur sé sagt það sérstaklega---en þá er sönnunin varla neitt sérstaklega upplýsandi.
+
+Þetta þýðir auðvitað að \emph{engar setningar} sem ekki innihalda samsemdarmerkið þá þegar geta nokkru sinni leyft okkur að draga þá ályktun að $a = b$. Innleiðingarreglan fyrir samsemdarmerkið getur því ekki kynnt til sögunnar \emph{nýja} setningu sem inniheldur tvö \emph{ólík} nöfn. 
+
+Á hinn bóginn er sérhver hlutur sá sami og hann sjálfur. Við þurfum því engar sérstakar forsendur til að geta dregið á ályktun að eitthvað sé það sama og það sjálft. Þetta er grunnurinn að innleiðingarreglunni fyrir samsemdarmerkið: 
+\factoidbox{
+\begin{proof}
+	\have[\ \,\,\,]{x}{\meta{c}=\meta{c}} \by{=I}{}
+\end{proof}}
+Takið eftir því að þessi regla vísar ekki til neinna lína sem koma á undan henni sjálfri. Fyrir hvaða nafn sem er, \meta{c}, við getum hvenær sem er skrifað niður $\meta{c}=\meta{c}$ bara með því að vísa til reglunnar {=}I.
+
+Eyðingarreglan er áhugaverðari. Ef við höfum sýnt að $a = b$, þá er allt sem er satt um hlutinn sem nafnið $a$ vísar til, líka satt um hlutinn sem nafnið $b$ vísar til. Þeir eru jú sami hluturinn! Við ættum því að geta tekið hvaða setningu sem er, þar sem nafnið $a$ kemur fyrir, og skipt því út alls staðar fyrir nafnið $b$, og niðurstaðan hlýtur að vera rökfræðilega jafngild. Til dæmis, ef við vitum að $Raa$ og $a = b$, þá hljótum við að geta dregið þá ályktun að $Rab$, $Rba$ og $Rbb$.
+
+Eyðingarreglan byggir á þessari hugmynd. Almennt form hennar er því svona:
+\factoidbox{\begin{proof}
+	\have[m]{e}{\meta{a}=\meta{b}}
+	\have[n]{a}{\meta{A}(\ldots \meta{a} \ldots \meta{a}\ldots)}
+	\have[\ ]{ea1}{\meta{A}(\ldots \meta{b} \ldots \meta{a}\ldots)} \by{=E}{e,a}
+\end{proof}}
+Rithátturinn hér er sá sami og fyrir $\exists$I. $\meta{A}(\ldots \meta{a} \ldots \meta{a}\ldots)$ er því formúla sem inniheldur nafnið $\meta{a}$, og $\meta{A}(\ldots \meta{b} \ldots \meta{a}\ldots)$ er formúla sem fæst með að skipta út nafninu $\meta{a}$ fyrir nafnið $\meta{b}$ í einu eða fleiri tilvikum. Línurnar $m$ og $n$ mega koma fyrir í hvaða röð sem er og þurfa ekki að vera hlið við hlið. Við vitnum þó alltaf fyrst í setninguna sem tjáir samsemdina fyrst. Við leyfum líka:
+\factoidbox{\begin{proof}
+	\have[m]{e}{\meta{a}=\meta{b}}
+	\have[n]{a}{\meta{A}(\ldots \meta{b} \ldots \meta{b}\ldots)}
+	\have[\ ]{ea2}{\meta{A}(\ldots \meta{a} \ldots \meta{b}\ldots)} \by{=E}{e,a}
+\end{proof}}
+Þessi regla er oft kölluð \emph{lögmál Leibniz} í höfuðið á þýska heimspekingnum Gottfried Leibniz. 
+
+Skoðum dæmi. Sönnum fyrst að samsemd sé \emph{samhverf}:
+\begin{proof}
+	\open
+		\hypo{ab}{a = b}
+		\have{aa}{a = a}\by{=I}{}
+		\have{ba}{b = a}\by{=E}{ab, aa}
+	\close
+	\have{abba}{a = b \eif b =a}\ci{ab-ba}
+	\have{ayya}{\forall y (a = y \eif y = a)}\Ai{abba}
+	\have{xyyx}{\forall x \forall y (x = y \eif y = x)}\Ai{ayya}
+\end{proof}
+Við fáum línu 3 með því að skipta út einu tilviki af $a$ í línu 2 fyrir $b$. Þetta er leyfilegt vegna þess að við höfum $a = b$.
+
+Næst sýnum við að samsemd sé \emph{gegnvirk}:\footnote{En það merkir einfaldlega vensl sem eru þannig að ef $\meta{R}ab$ og $\meta{R}bc$, þá $\meta{R}ac$. Dæmi um slík vensl er til dæmis að vera „stærri en“: Ef Anna er stærri en Felix og Jón er stærri en Anna, þá er Jón stærri en Felix.}
+\begin{proof}
+	\open
+		\hypo{abc}{a = b \eand b = c}
+		\have{ab}{a = b}\ae{abc}
+		\have{bc}{b = c}\ae{abc}
+		\have{ac}{a = c}\by{=E}{ab, bc}
+	\close
+	\have{con}{(a = b \eand b =c) \eif a = c}\ci{abc-ac}
+	\have{conz}{\forall z((a = b \eand b = z) \eif a = z)}\Ai{con}
+	\have{cony}{\forall y\forall z((a = y \eand y = z) \eif a = z)}\Ai{conz}
+	\have{conx}{\forall x \forall y \forall z((x = y \eand y = z) \eif x = z)}\Ai{cony}
+\end{proof}
+Við fáum línu 4 með því að skipta út $b$ í línu 3 fyrir $a$---enda er $a =b$.
+
+\practiceproblems
+\problempart
+\label{pr.identity}
+Sannið eftirfarandi setningar.
+\begin{earg}
+\item $Pa \eor Qb, Qb \eif b=c, \enot Pa \proves Qc$
+\item $m=n \eor n=o, An \proves Am \eor Ao$
+\item $\forall x\ x=m, Rma\proves \exists x Rxx$
+\item $\forall x\forall y(Rxy \eif x=y)\proves Rab \eif Rba$
+\item $\enot \exists x\enot x = m \proves \forall x\forall y (Px \eif Py)$
+\item $\exists x Jx, \exists x \enot Jx\proves \exists x \exists y\ \enot x = y$
+\item $\forall x(x=n \eiff Mx), \forall x(Ox \eor \enot Mx)\proves On$
+\item $\exists x Dx, \forall x(x=p \eiff Dx)\proves Dp$
+\item $\exists x\bigl[(Kx \eand \forall y(Ky \eif x=y)) \eand Bx\bigr], Kd\proves Bd$
+\item $\proves Pa \eif \forall x(Px \eor \enot x = a)$
+\end{earg}
+
+\problempart
+Sýnið að eftirfarandi setningar séu sannanlega jafngildar.
+\begin{ebullet}
+\item $\exists x \bigl([Fx \eand \forall y (Fy \eif x = y)] \eand x = n\bigr)$
+\item $Fn \eand \forall y (Fy \eif n= y)$
+\end{ebullet}
+
+\
+
+\problempart
+Í \S\ref{sec.identity} héldum við fram að eftirfarandi setningar væru jafngóðar þýðingar á setningunni „Til er nákvæmlega eitt $F$“:
+\begin{ebullet}
+\item $\exists x Fx \eand \forall x \forall y \bigl[(Fx \eand Fy) \eif x = y\bigr]$
+\item $\exists x \bigl[Fx \eand \forall y (Fy \eif x = y)\bigr]$
+\item $\exists x \forall y (Fy \eiff x = y)$
+\end{ebullet}
+Sýnið að þær séu allar sannanlega jafngildar. (Ráðlegging: Til að sýna að þrjár setningar séu sannanlega jafngildar er nóg að sýna að önnur leiði af þeirri fyrstu, sú þriðja af annarri og sú þriðja sanni þá fyrstu. Í kaflanum hér að ofan var kynnt til sögunnar hugtak sem ætti að útskýra af hverju.)
+
+\
+\problempart
+Þýðið eftirfarandi rökfærslu yfir á táknmál umsagnarökfræði:
+	\begin{quote}
+		Til er nákvæmlega eitt $F$. Til er nákvæmlega eitt $G$. Ekkert er bæði $F$ og $G$. Þar af leiðandi eru nákvæmlega tveir hlutir sem eru annað hvort $F$ eða $G$.
+	\end{quote}
+Sannið þessa rökfærslu.
+%\begin{ebullet}
+%\item  $\exists x \bigl[Fx \eand \forall y (Fy \eif x = y)\bigr], \exists x \bigl[Gx \eand \forall y ( Gy \eif x = y)\bigr], \forall x (\enot Fx \eor \enot Gx) \proves \exists x \exists y \bigl[\enot x = y \eand \forall z ((Fz \eor Gz) \eif (x = y \eor x = z))\bigr]$
+%\end{ebullet}
+
+
+\chapter{Afleiddar reglur í umsagnarökfræði}\label{s:DerivedFOL}
+
+Í setningarökfræðinni kynntum við fyrst til sögunnar reglur sem við kölluðum \emph{grunnreglur}. Við bættum svo við fleiri reglum sem við gátum leitt af þessum grunnreglum. Þessar afleiddu reglur voru bara notaðar til hægðarauka, en í raun hefðum við getað sleppt þeim. 
+
+Það vill svo til að magnarareglurnar sem við kynntum til sögunnar hér að ofan eru afleiddar reglur þar sem við getum leitt þær af grunnreglunum sem við notuðumst við í \S\ref{s:BasicFOL}. Rétt eins og áður, þá sýnum við að regla sé afleidd regla með því að gefa nokkur konar uppskrift að því hvernig hægt væri að skipta reglunni út fyrir lengri sönnun í hvert sinn sem hún er notuð.
+
+Hér er slík uppskrift fyrir fyrstu umbreytingaregluna fyrir magnara:
+\begin{proof}
+	\hypo[m]{An}{\forall x \enot A x}
+	\open
+		\hypo[k]{E}{\exists x Ax}
+		\open
+			\hypo{c}{Ac}%\by{for $\exists$E}{}
+			\have{nc}{\enot Ac}\Ae{An}
+			\have{red}{\ered}\ri{c,nc}
+		\close
+		\have{red2}{\ered}\Ee{E,c-red}
+	\close
+	\have{dada}{\enot \exists x Ax}\ni{E-red2}
+\end{proof}
+%You will note that on line 3 I have written `for $\exists$E'. This is not technically a part of the proof. It is just a reminder---to me and to you---of why I have bothered to introduce `$\enot Ac$' out of the blue. You might find it helpful to add similar annotations to assumptions when performing proofs. But do not add annotations on lines other than assumptions: the proof requires its own citation, and your annotations will clutter it.
+Og hér er svo samskonar uppskrift fyrir aðra umbreytingarregluna:
+\begin{proof}
+	\hypo[m]{nEna}{\exists x  \enot Ax} 
+	\open
+		\hypo[k]{Aa}{\forall x Ax}
+		\open
+			\hypo{nac}{\enot Ac}%\by{for $\exists$E}{}
+			\have{a}{Ac}\Ae{Aa}
+			\have{con}{\ered}\ri{a,nac}
+		\close
+		\have{con1}{\ered}\Ee{nEna, nac-con}
+	\close
+	\have{dada}{\enot \forall x Ax}\ni{Aa-con1}
+\end{proof}
+Þetta útskýrir af hverju við getum litið á umbreytingarreglurnar fyrir magnara sem afleiddar reglur. Athugið þó að þessar uppskriftir nota tiltekna formúlu (nefnilega $Ax$) og eru því ekki fullkomlega almennar. Það væri þó lítið mál að breyta þeim þannig að þær verði það. Hægt væri að gefa svipaðar uppskriftir fyrir umbreytingarreglur 3 og 4.
+
+Það er vert að nefna hér að þetta sýnir enn betur af hverju við verðum að samþykkja að $\forall x Fx$ sé sönn setning ef yfirgripið er tómt. Af hverju? Jú, af því að við sýndum að ef $\forall x Fx$ væri ósönn, þá væri $\exists x \enot Fx$ sönn---og hún segir að yfirgripið sé ekki tómt. Það væri mótsögn. Ef þessar umbreytingarreglur eru afleiddar reglur, en ekki grunnreglur, þá þýðir það að ef við sættum okkur ekki við að $\forall x Fx$ sé sönn í tómu yfirgripi, þá yrðum við að breyta einhverri af grunnreglunum okkar til að forðast mótsögnina. Það hefur að sjálfsögðu verið reynt, en niðurstaðan er ekki endilega betri eða einfaldari, svo það borgar sig frekar (að minnsta kosti fyrir okkur) að fara bara þá leið að $\forall x Fx$ sé sönn, ef yfirgripið er tómt.\footnote{Þetta er svokölluð frjáls rökfræði (e.\ \emph{free logic}). Sjá til dæmis John Nolt, „Free Logic“, 2021, í \emph{Stanford Encyclopedia of Philosophy} (\url{https://plato.stanford.edu/archives/fall2021/entries/logic-free/}). }
+
+\practiceproblems
+
+\problempart
+Sýnið að þriðju og fjórðu umbreytingarreglurnar fyrir magnarana eru afleiddar reglur.
+
+
+\chapter{Munurinn á sannanafræðilegum hugtökum og merkingarfræðilegum}
+
+Fram að þessu höfum við notað tvö mismunandi tákn til að tákna sambandið milli forsenda og niðurstöðu. Við höfum notað 
+$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves \meta{B}$$
+til að tákna að til sé sönnun á $\meta{B}$ sem hefur $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sem ólosaðar forsendur. Þetta köllum við \emph{sannanafræðilegt hugtak} af því að það hefur að gera með sannanir.
+
+Við höfum svo á hinn bóginn notað $$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \entails \meta{B}$$
+til að tákna að ekki sé til nein sanngildadreifing (eða túlkun) þar sem $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ eru allar sannar, en $\meta{B}$ ósönn. Þetta hefur að gera með sannleika setninga. Við höfum kallað þetta \emph{merkingarfræðilegt} hugtak---þó að sú nafngift sé að mörgu leyti óheppileg.\footnote{Fyrir þá lesendur sem ekki hafa lesið kafla \S\ref{s}, þá samsvara \emph{túlkanir} í umsagnarökfræði sanngildadreifingunum úr setningarökfræði. Við köllum setningar sem eru sannar fyrir hvaða túlkun sem er \emph{röksannindi}. Þau samsvara klifunum úr setningarökfræði. }
+
+Það er mjög mikilvægt að hafa í huga að þetta eru \emph{ólík hugtök}. Annað snýr að tilvist tiltekinna sannanna og hitt hefur að gera með hvort til séu ákveðnar sanngildadreifingar. Þetta er greinilega ekki það sama.
+
+En þrátt fyrir þennan mikilvæga greinarmun---sem við erum hér viljandi að þrástagast á---eru djúp tengsl þarna á milli. Til að sjá það er gott að skoða sambandið milli röksanninda og sannanlegra setninga. 
+
+Ef við viljum sýna að setning sé sannanleg setning, þá þurfum við bara að finna sönnun. Það getur reyndar verið erfitt, sérstaklega ef sönnunin sem þarf er löng, en það er hins vegar lítið mál að athuga hvort tiltekin sönnun sé rétt: það er nóg að athuga hverja línu og athuga hvort hún sé rétt, og ef allar línurnar eru réttar, þá er sönnunin í heild rétt. En til að sýna að setning sé rökfræðileg sannindi þarf að segja eitthvað um \emph{allar mögulegar túlkanir}. Það getur verið mjög erfitt, ef ekki ómögulegt. Það er því mun auðveldara að sýna að setning sé sannanleg en að sýna að hún sé röksannindi.
+
+Á hinn bóginn er mjög erfitt að sýna að setning sé \emph{ekki} sannanleg. Til þess þyrfti að segja eitthvað um \emph{allar mögulegar sannanir}. Það er líka mjög erfitt, ef ekki ómögulegt. En til að sýna að setning sé ekki röksannindi er nóg að finna túlkun sem gerir setninguna ósanna. Það getur verið erfitt að finna slíka túlkun, en það er auðvelt að ganga úr skugga um hvort tiltekin túlkun sé geri setninguna í raun ósanna. Í þetta skiptið er því auðveldara að sýna að setning sé \emph{ekki} röksannindi en að sýna að hún sé \emph{ekki} sannanleg.
+
+Það vill hins vegar svo heppilega til að \emph{setning er sannanleg ef og aðeins ef hún er röksannindi}. Það þýðir að ef við getum fundið sönnun á $\meta{A}$ sem notar engar ólosaðar forsendur, það er er að segja, sýnt að $\proves \meta{A}$, þá getum við líka dregið þá ályktun að $\meta{A}$ séu röksannindi, eða með öðrum orðum, að $\entails \meta{A}$. Þetta gengur í hina áttina líka. Ef við getum fundið túlkun þar sem $\meta{A}$ er ósönn og þar með að $\meta{A}$ séu ekki röksannindi, þá getum við dregið þá ályktun að ekki sé til nein sönnun á $\meta{A}$ sem notar engar ólosaðar forsendur. Það er að segja, ef við getum sýnt að $\nentails \meta{A}$, þá vitum við þar með að $\nproves \meta{A}$.
+
+Almennt getum við því sagt að gildi:
+$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves\meta{B} \textbf{ ef og aðeins ef }\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \entails\meta{B}$$
+Þetta sýnir að þó að sannanleiki og rökfræðileg afleiðing séu mismunandi hugtök, þá eiga þau við nákvæmlega sömu setningarnar. Þess vegna gildir:
+	\begin{ebullet}
+		\item Rökfærsla er gild ef og aðeins ef \emph{hægt er að sanna niðurstöðuna að forsendunum gefnum}. 
+		\item Setningar eru rökfræðilega jafngildar ef og aðeins ef þær eru sannanlega jafngildar.
+		\item Setningar eru samrýmanlegar ef og aðeins ef þær eru ekki ósamrýmanlegar.
+	\end{ebullet}
+Við getum því alltaf valið þá aðferð sem okkur hentar best í það og það skiptið, allt eftir því hvað við erum að reyna að gera. Taflan á næstu síðu tekur saman hvað er (oftast) auðveldast.
+
+Það ætti kannski ekki að koma á óvart að sannanleiki og rökfræðileg afleiðing fari saman. En við megum þó ekki---og það er þess vert að taka þetta fram enn og aftur---gleyma því að þetta eru ólík hugtök. Það tók langan tíma fyrir rökfræðinga að sýna fram á jafngildi þessara tveggja mikilvægu hugtaka og sönnunin á því er síður en svo augljós.\footnote{Ágætlega aðgengilega sönnun má finna í Sider, T.\ \emph{Logic for Philosophy}. Oxford: Oxford University Press.}
+
+Raunar má segja að það að sýna fram á að sannanleiki og rökfræðileg afleiðing eigi við um nákvæmlega sömu setningarnar séu skilin milli þess sem kalla mætti inngang að rökfræði og rökfræði fyrir lengra komna. Í tilfelli umsagnarökfræði er þessi niðurstaða ein af fyrstu stóru niðurstöðum rökfræðinnar sem fræðigreinar.
+
+%Ein athugasemd að lokum: Í upphafi bókarinnar sögðum við að \emph{frá sjónarhóli heimspekinnar} væri það hlutverk rökfræðinnar að greina góðan rökstuðning frá vondum. En í því skyni að ná þessu markmiði höfum við smíðað \emph{formleg kerfi}, nefnilega það sem við kölluðum \emph{setningarökfræði} annars vegar, og svo \emph{umsagnarökfræði} hins vegar. Þessi formlegu kerfi hafa ákveðna eiginleika og þá má rannsaka og skoða án þess að röksemdafærslur í mæltu máli komi nokkuð við sögu,\footnote{Við höfum séð eitt dæmi um mikilvægan eiginleika hér að ofan, nefnilega að $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves\meta{B}$  eff $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \entails\meta{B}$. Annað dæmi væri að $\meta{A} \entails \meta{B}$ eff $\entails \meta{A} \eif \meta{B}$.} auk þess sem þekking á þessum eiginleikum getur að sama skapi verið gagnleg  án þess röksemdafærslur séu nokkuð skoðaðar. Fyrra sjónarmiðið ræður ríkjum í stærðfræði og rökfræði eins og hún er iðkuð sem sjálfstæð fræðigrein og tölvunarfræðin heldur hinu seinna á lofti. Færa fremst?
+
+
+\begin{sidewaystable}
+\begin{center}
+\begin{tabular*}{\textwidth}{p{.25\textheight}p{.325\textheight}p{.325\textheight}}
+ & \textbf{Já}  & \textbf{Nei}\\
+\\
+Er $\meta{A}$ \textbf{röksannindi}? 
+& finna sönnun sem sýnir að $\proves\meta{A}$ 
+& finna túlkun þar sem $\meta{A}$ er ósönn\\
+\\
+Er $\meta{A}$ \textbf{mótsögn}? &
+finna sönnun sem sýnir að $\proves\enot\meta{A}$ & 
+finna túlkun þar sem $\meta{A}$ er sönn\\
+\\
+%Is \meta{A} contingent? & 
+%give two interpretations, one in which \meta{A} is true and another in which \meta{A} is false & give a proof which either shows $\proves\meta{A}$ or $\proves\enot\meta{A}$\\
+%\\
+Eru $\meta{A}$ og $\meta{B}$ \textbf{jafngildar}? &
+finna tvær sannanir, eina fyrir $\meta{A}\proves\meta{B}$ og eina fyrir $\meta{B}\proves\meta{A}$
+& finna túlkun þar sem $\meta{A}$ og $\meta{B}$ hafa ólík sanngildi \\
+\\
+
+Eru $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ \textbf{samrýmanlegar}? 
+& finna túlkun þar sem $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ eru allar sannar
+& sanna að forsendurnar $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ leiði til mótsagnar\\
+\\
+Er $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{B}$ \textbf{gild}? 
+& finna sönnun með $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sem forsendum og $\meta{B}$ sem niðurstöðu
+& finna túlkun þar sem $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ eru allar sannar og $\meta{B}$ er ósönn\\
+\end{tabular*}
+\end{center}
+\end{sidewaystable}
+

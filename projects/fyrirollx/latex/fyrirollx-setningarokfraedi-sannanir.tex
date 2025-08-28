@@ -1,0 +1,1201 @@
+%!TEX root = fyrirollx.tex
+\part{Náttúruleg afleiðsla fyrir setningarökfræði}
+\label{ch.NDTFL}
+
+\chapter{Hugmyndin á bakvið náttúrulega afleiðslu}\label{s:NDVeryIdea}
+
+Í kafla \S\ref{s:Valid} sögðum við að rökfærsla væri gild eff það er ómögulegt fyrir allar forsendur hennar að vera sannar en niðurstöðuna ósanna. 
+
+Með því að nota sanntöflur höfðum við svo í höndunum aðferð til að meta hvort rökfærsla sé gild. Við getum þýtt rökfærsluna yfir á mál setningarökfræði og fyllum út sanntöflu: ef til er sanngildadreifing þar sem niðurstöðurnar eru allar sannar en niðurstaðan ósönn, þá er rökfærslan ekki gild.
+
+En oft veita sanntöflur litla innsýn í eðli rökfærslunnar sem um ræðir. Tökum tvö dæmi um rökfærslur á máli setningarökfræði:
+\begin{align*}
+P \eor Q, \enot P & \therefore Q\\
+P \eif Q, P & \therefore Q
+\end{align*}
+Þetta eru greinilega gildar rökfærslur. Við getum staðfest það með að fylla út sanntöflur. En það segir okkur lítið um það \emph{hvers vegna} þessar rökfærslur eru gildar---um \emph{form} þeirra.
+
+Markmið náttúrulegrar afleiðslu er að sýna að rökfærslur séu gildar án þess að glata þessari innsýn í það hvers vegna rökfærslurnar eru gildar. Grunnhugmyndin á bak við sannanir er þessi: við byrjum með einhverjar setningar sem við vitum að eru sannar (eða gefum okkur að séu sannar), nefnilega forsendurnar, notum svo reglur sem við vitum að eru góðar til að breyta setningunum sem við byrjuðum með í aðrar setningar, sem við vitum þá að eru líka sannar, og svo áfram þangað til við komum að niðurstöðunni. Af því að við vitum að reglurnar eru góðar, þá vitum við að niðurstaðan er líka sönn. 
+
+Við veljum svo þessar reglur þannig að þær endurspegli, að svo miklu leyti sem hægt er, hvernig við setjum rökfærslur fram í mæltu máli. 
+
+\emph{Þetta er allt önnur sýn á rökfærslur en við höfum séð hingað til}. Við notum sanntöflur til að skoða með beinum hætti hvernig setningar eru sannar eða ósannar. Við kölluðum þetta \emph{merkingarfræðilega} aðferð við að meta rökfærslur. Sannanir í setningarökfræði eiga hins vegar mun meira sameiginlegt með myndunarreglunum sem við notuðum til að ákvarða hvaða táknrunur eru leyfilegar sem setningar í setningarökfræði og hverjar ekki: sannanir eru \define{setningafræðileg} aðferð við að meta rökfærslur. Það þýðir að sannanir snúast bara um \emph{form} setninganna, en ekki merkingu þeirra eða sannleiksgildi grunnsetninganna sem koma fyrir í þeim. Við munum sjá hvað það merkir um leið og við kynnum reglurnar sjálfar til sögunnar. 
+
+Það eru þó fleiri ástæður en þær sem nefndar voru hér að ofan til að nota sannanir til að meta rökfærslur. Í raun er það oft \emph{nauðsynlegt}. Skoðum til dæmis eftirfarandi rökfærslu:
+$$A_1 \eif C_1 \therefore (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5) \eif (C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5)$$
+Til að athuga hvort þessi rökfærsla sé gild með fullri sanntöflu þarf töflu sem er 1024 línur. Ef hún er fyllt rétt út, sem er alls ekki sjálfgefið þegar um er að ræða svona stóra töflu, þá myndum við sjá að það eru engar línur þar sem forsendurnar eru allar sannar en niðurstaðan ósönn. Við myndum því vita að rökfærslan er gild.
+
+En skoðum nú þessa rökfærslu:
+\begin{align*}
+A_1 \eif C_1 \therefore {}& (A_1 \eand A_2 \eand A_3 \eand A_4 \eand A_5 \eand A_6 \eand A_7 \eand A_8 \eand A_9 \eand A_{10}) \eif \phantom{(}\\
+&(C_1 \eor C_2 \eor C_3 \eor C_4 \eor C_5 \eor C_6 \eor C_7 \eor C_8 \eor C_9 \eor C_{10})
+\end{align*}
+Þessi rökfærsla er líka gild---og það af svipuðum ástæðum og sú hér að ofan---en til að kanna það með sanntöflu þyrftum við $2^{20} = 1048576$ línur. 21 grunnsetning þyrfti svo $2^{21} = 2097152$ línur, o.s.frv. Það væri auðvitað alltaf hægt að forrita tölvu til að fylla út hverja línu og skila svo niðurstöðu að lokum, en jafnvel það verður fljótt óviðráðanlegt (ef það tekur tölvuna 0,01 sekúndu að fylla út hverja línu, þá tæki það 6 klukkutíma að fylla út sanntöfluna. Það þýðir að það tæki tölvuna meira en 12 milljarða ára að fylla út sanntöflu með 64 grunnsetningum!). Í praxís geta flóknar rökfærslur því fljótlega orðið illviðráðanlegar.
+
+Það eru svo frekari ástæður fyrir mikilvægi sannanna sem við munum fjalla um þegar við komum að umsagnarökfræði í næsta hluta bókarinnar.
+
+\chapter{Grunnreglur náttúrulegrar afleiðslu fyrir setningarökfræði}\label{s:BasicTFL}
+
+Nú munum við kynna \define{náttúrulega afleiðslu} til sögunnar. Fyrir hvert setningatengi munum við skilgreina \define{ályktunarreglur}, sem skiptast í \define{innleiðingarreglur} sem gera okkur kleift að \emph{innleiða} setningu í sönnunina okkar sem hefur það setningatengi sem aðaltengi og \define{eyðingarreglur} sem gerir það mögulegt að losna við setningu sem hefur það tengi sem aðaltengi.
+
+\section{Formlegar sannanir}
+
+Við segjum að \emph{formleg sönnun} sé runa af setningum, þar sem einhverjar þeirra (eða engin) eru forsendur. Síðasta setningin í sönnuninni er niðurstaðan. (Við munum einfaldlega tala um „sannanir“ héðan af, en það er ágætt að hafa í huga að það eru líka til \emph{óformlegar} sannanir).
+
+Segjum að við höfum eftirfarandi rökfærslu og viljum sanna að hún sé gild:
+	$$\enot (A \eor B) \therefore \enot A \eand \enot B$$
+Við byrjum sönnunina á því að skrifa forsenduna:
+\begin{proof}
+	\hypo{a1}{\enot (A \eor B)}
+\end{proof}
+Takið fyrst eftir því að við höfum númerað forsenduna vinstra megin í því skyni að geta vísað í hana seinna. Raunar er \emph{hver einasta} lína í sönnun númeruð.
+
+Takið líka eftir línunni sem dregin er undir forsenduna. Við notum þessa línu til að \emph{aðskilja} forsendurnar frá restinni af sönnuninni. Allt fyrir ofan þessa línu er forsenda (þær geta verið fleiri en ein, eins og við munum sjá) og allt fyrir neðan hana er annað hvort svokölluð \emph{aukaforsenda} (meira um þær innan skamms) eða leiðir af forsendunum samkvæmt einhverri reglu.
+
+Við viljum sanna að $\enot A \eand \enot B$, svo við viljum að síðasta línan í sönnuninni líti svona út:
+\begin{proof}
+	\have[n]{con}{\enot A \eand \enot B}
+\end{proof}
+þar sem $n$ stendur fyrir númer línunnar. Það skiptir okkur ekki máli hvaða tala kemur í stað $n$, þó að við kjósum auðvitað heldur stutta sönnun en langa.
+
+Hér er annað dæmi. Segjum að við viljum athuga hvort eftirfarandi rökfærsla sé gild:
+$$A\eor B, \enot (A\eand C), \enot (B \eand \enot D) \therefore \enot C\eor D$$
+Þessi rökfærsla hefur þrjár forsendur, svo við skrifum þær allar niður í röð, hverja á eftir annarri, númerum línurnar og drögum línu undir þær:
+\begin{proof}
+	\hypo{a1}{A \eor B}
+	\hypo{a2}{\enot (A\eand C)}
+	\hypo{a3}{\enot (B \eand \enot D)}
+\end{proof}
+Í þetta skiptið viljum við enda á línu sem lítur svona út:
+\begin{proof}
+	\have[n]{con}{\enot C \eor D}
+\end{proof}
+Við notum svo reglur til að leiða okkur frá forsendunum til niðurstöðunnar. Við flokkum þessar reglur að mestu eftir setningatengjum. Í því sem eftir er af þessum kafla munum við fara yfir þessar reglur og það mun gera okkur kleift að fylla út það sem kemur á milli forsendanna og niðurstöðunnar í svona sönnunum.
+
+%\section{Reiteration}
+%The very first rule is so breathtakingly obvious that it is surprising we bother with it at all. 
+%
+%If you already have shown something in the course of a proof, the \emph{reiteration rule} allows you to repeat it on a new line. For example:
+%\begin{proof}
+%	\have[4]{a1}{A \eand B}
+%	\have[$\vdots$]{}{\vdots}
+%	\have[10]{a2}{A \eand B} \by{R}{a1}
+%\end{proof}
+%This indicates that we have written `$A \eand B$' on line 4. Now, at some later line---line 10, for example---we have decided that we want to repeat this. So we write it down again. We also add a citation which justifies what we have written. In this case, we write `R', to indicate that we are using the reiteration rule, and we write `$4$', to indicate that we have applied it to line $4$.
+%
+%Here is a general expression of the rule:
+%\begin{proof}
+%	\have[m]{a}{\meta{A}}
+%	\have[\ ]{c}{\meta{A}} \by{R}{a}
+%\end{proof}
+%The point is that, if any sentence $\meta{A}$ occurs on some line, then we can repeat $\meta{A}$ on later lines. Each line of our proof must be justified by some rule, and here we have `R $m$'. This means: Reiteration, applied to line $m$. 
+%
+%Two things need emphasising. First `$\meta{A}$' is not a sentence of TFL. Rather, it a symbol in the metalanguage, which we use when we want to talk about any sentence of TFL (see \S\ref{s:UseMention}). Second, and similarly, `$m$' is not a numeral that will appear on a proof. Rather, it is a symbol in the metalanguage, which we use when we want to talk about any line number of a proof. In an actual proof, the lines are numbered `$1$', `$2$', `$3$', and so forth. But when we define the rule, we use variables to underscore the point that the rule may be applied at any point.
+
+\section{Og-tengi}
+Við byrjum á innleiðingarreglunni fyrir og-tengið. Segjum að ég vilji sýna að Jón sé hvort tveggja, sniðugur og snjall. Ein leið væri að sýna fyrst að Jón sé sniðugur og svo að sýna að Jón sé snjall. Það myndi sýna að Jón sé sniðugur og snjall.
+
+Náttúruleg afleiðsla reynir að herma eftir þessu. Segjum að ég hafi eftirfarandi þýðingarlykil:
+	\begin{ekey}
+		\item[S_1] Jón er sniðugur.
+		\item[S_2] Jón er snjall.
+	\end{ekey}	
+Hver lína í sönnun er, eins og áður sagði, annað hvort forsenda eða leiðir af einhverri forsendu samkvæmt reglum náttúrulegrar afleiðslu. Segjum að ég hafi þegar sannað $S_1$ á línu 8 og $S_2$ á línu 15. Með því að nota innleiðingarregluna fyrir og-tengið, þá get ég skrifað á nýja línu fyrir neðan: $S_1 \eand S_2$:
+
+\begin{proof}
+	\have[8]{a}{S_1}
+	\have[\vdots] {}{\vdots}
+	\have[15]{b}{S_2}
+	\have[\ ]{c}{S_1 \eand S_2} \ai{a, b}
+\end{proof}
+Við skrifum „$\eand$I 8, 15“ til að gefa til kynna að innleiðingarreglan fyrir og-tengið hafi verið notuð með línum 8 og 15. Við segjum að línan sé þar með \emph{réttlætt} með þeirri reglu. Hver einasta lína í sönnun er annað hvort forsenda eða réttlætt með einhverri reglu og sönnunin er \emph{ekki} rétt mynduð nema við merkjum línuna með þessum hætti. Þrípunktarnir sýna svo að einhverjar ótilgreindar línur eru á milli línu 8 og línu 15.
+
+Við hefðum líka getað skrifað „$\eand$I 15, 8“ til að gefa til kynna að lína 15 hafi verið notuð fyrst, og svo lína 8. Þá hefði röð setninganna í samtengingunni breyst:
+
+\begin{proof}
+	\have[8]{a}{S_1}
+	\have[\vdots] {}{\vdots}
+	\have[15]{b}{S_2}
+	\have[\ ]{c}{S_2 \eand S_1} \ai{b, a}
+\end{proof}
+
+En þetta eru bara dæmi. Almennt form innleiðingarreglunnar fyrir og-tengið lítur svona út:
+\factoidbox{
+\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[n]{b}{\meta{B}}
+	\have[\ ]{c}{\meta{A} \eand \meta{B}} \ai{a, b}
+\end{proof}}
+Hvað á ég við með \emph{almennt form}? Með því á ég við að reglan sjálf er \emph{ekki} sönnun. $\meta{A}$ og $\meta{B}$ eru ekki setningar í setningarökfræði, heldur tákn sem við notum í framsetningarmálinu til að tala \emph{um} hvaða setningu sem er á táknmáli setningarökfræði (sjá \S\ref{s:UseMention}). Form reglunnar nær því yfir hvaða setningar sem er og hvaða röð á þeim sem er. 
+
+$n$ og $m$ eru þess vegna líka tákn í framsetningarmálinu og standa fyrir tölurnar sem við notum til að númera línur í sönnun. Í raunverulegri sönnun myndu línurnar vera númeraðar með raunverulegum tölum, $1$, $2$, $3$, og svo framvegis, en þegar við skilgreinum regluna verðum við að nota tákn sem geta staðið fyrir hvaða tölu sem er, því við viljum að hægt sé að beita reglunni hvenær sem er í sönnun. 
+
+Við gerum \emph{ekki} ráð fyrir að línurnar tvær, \emph{m} og \emph{n}, þurfi að vera hlið við hlið og því geta komið eins margar línur og verða vill á milli $\meta{A}$, $\meta{B}$ og svo $\meta{A} \eand \meta{B}$.
+
+Nú getum við loksins séð fulla sönnun, þó einföld sé. Segjum að við höfum rökfærslu á þessu formi:
+
+$$A, B \therefore A \eand B$$ Full sönnun á henni lítur svona út:
+\begin{proof}
+	\hypo[1]{a}{A}
+	\hypo[2]{b}{B}
+	\close
+	\have[3]{c}{A \eand B} \ai{a, b}
+\end{proof} Fyrst skrifum við forsendurnar niður, eina í hverri línu, og strikum svo línu undir þær. Því næst notum við innleiðingarregluna fyrir og-tengið og fáum $A \eand B$. Við skrifum svo „$\eand$I 1, 2“ við línu 3 til að gefa til kynna að sú lína hafi verið fengin með því að nota innleiðingarregluna fyrir og-tengið á línur 1 og 2.
+
+Þessi regla er kölluð „innleiðingarregla fyrir og-tengið“ (eða „og-innleiðingarregla“) af því hún bætir við nýju og-tengi („$\eand$“) í sönnunina. Eftir að við höfum beitt reglunni eru fleiri og-tengi í sönnuninni en áður.
+
+En við höfum líka reglu sem \emph{fækkar} og-tengjum. Við köllum hana „eyðingarreglu fyrir og-tengið“ (eða „og-eyðingarreglu“). Segjum að við vitum að Jón sé sniðugur og snjall. Ef svo er, þá getum við dregið þá ályktun að Jón sé sniðugur. Við getum líka dregið þá ályktun að Jón sé snjall.
+
+Eyðingarreglan fyrir og-tengið er því í raun tvær reglur. Almennt form þeirra er:
+
+\factoidbox{
+\begin{proof}
+	\have[m]{ab}{\meta{A} \eand \meta{B}}
+	\have[\ ]{a}{\meta{A}} \ae{ab}
+\end{proof}}
+og:
+\factoidbox{
+\begin{proof}
+	\have[m]{ab}{\meta{A} \eand \meta{B}}
+	\have[\ ]{a}{\meta{B}} \ae{ab}
+\end{proof}}
+Þessar reglur segja að ef við höfum samtengingu á einhverri línu í sönnun, þá getum við notað {\eand}E til þess að fá annan hvorn liðinn sem samtengingin samanstendur úr. Við þurfum tvær reglur, því ef við hefðum bara aðra þeirra, þá gætum við bara fengið annan liðinn, en ekki hvorn þeirra sem er. Það er þó mikilvægt að hafa í huga að þessi regla gildir \emph{bara} um aðaltengið í setningunni. Við getum til dæmis \emph{ekki} dregið þá ályktun að $D$ ef við höfum $C \eor (D \eand E)$! Hér er „$\eor$“ aðaltengið og aðrar reglur gilda um það. Reglurnar horfa bara til \emph{forms} setninganna og setningin  $C \eor (D \eand E)$ hefur formið $\meta{A} \eor \meta{B}$. Til að beita eyðingarreglunni fyrir $\eand$ þarf setningin hins vegar að vera á forminu $\meta{A} \eand \meta{B}$.
+
+Þó að við höfum enn sem komið er bara kynnt til sögunnar tvær reglur, þá getum við strax séð hvaða kraftur býr í formlegum sönnunum. Tökum sem dæmi eftirfarandi rökfærslu:
+\begin{earg}
+\item[] $[(A\eor B)\eif(C\eor D)] \eand [(E \eor F) \eif (G\eor H)]$
+\item[$\therefore$] $[(E \eor F) \eif (G\eor H)] \eand [(A\eor B)\eif(C\eor D)]$
+\end{earg}
+Hér hafa bæði forsendan og niðurstaðan og-tengi sem aðaltengi. Takið líka eftir því að fyrri liðurinn í forsendunni er seinni liðurinn í niðurstöðunni, og öfugt.
+
+Til að sanna að þessi rökfærsla sé gild, þá byrjum á því að skrifa niður forsenduna og drögum línu undir hana. Allt sem kemur á eftir þessari línu verður að leiða af forsendunum í samræmi við ályktunarreglurnar sem við höfum kynnt til sögunnar. Fyrsta línan í sönnuninni lítur því svona út:
+
+\begin{proof}
+	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
+\end{proof}
+Við getum núna notað og-eyðingarregluna til að taka forsenduna í sundur og fengið hvorn lið samtengingarinnar í sitthvoru lagi:
+\begin{proof}
+	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
+	\have{a}{{[}(A\eor B)\eif(C\eor D){]}} \ae{ab}
+	\have{b}{{[}(E \eor F) \eif (G\eor H){]}} \ae{ab}
+\end{proof}
+
+Við getum svo notað innleiðingarregluna fyrir og-tengi á línur 3 og 2 (í þeirri röð) og fengið rétta niðurstöðu. Fullkláruð lítur sönnunin svona út:
+
+\begin{proof}
+	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
+
+	\have{a}{{[}(A\eor B)\eif(C\eor D){]}} \ae{ab}
+	\have{b}{{[}(E \eor F) \eif (G\eor H){]}} \ae{ab}
+	\have{ba}{{[}(E \eor F) \eif (G\eor H){]} \eand {[}(A\eor B)\eif(C\eor D){]}} \ai{b,a}
+\end{proof}
+Þetta er mjög einföld sönnun, en hún sýnir þó hvernig við getum ofið margar mismunandi ályktunarreglur saman til að mynda flóknar sannanir. Það er vert að taka eftir því að þessi sönnun er bara fjórar línur. Setningarnar innihalda hins vegar samtals átta grunnsetningar, og því yrði full sanntafla sem sýnir að þessi rökfærsla sé gild í heildina 256 línur. Það munar um minna.
+
+Skoðum annað dæmi. Í \S\ref{s:MoreBracketingConventions} sögðum við að þessi rökfærsla væri gild:
+$$A \eand (B \eand C) \therefore (A \eand B) \eand C$$
+Til að sanna hana, þá byrjum við á að skrifa forsenduna undirstrikaða í fyrstu línuna:
+
+\begin{proof}
+	\hypo{ab}{A \eand (B \eand C)}
+\end{proof}
+Forsendan er samtenging sem samanstendur af tveimur liðum, $A$ og $B \eand C$. Við getum fengið sitthvorn þeirra með að beita $\eand$E tvisvar. Við getum svo fengið hvorn lið í $B \eand C$ með því að gera það sama aftur. Þá höfum við:
+\begin{proof}
+	\hypo{ab}{A \eand (B \eand C)}
+	\have{a}{A} \ae{ab}
+	\have{bc}{B \eand C} \ae{ab}
+	\have{b}{B} \ae{bc}
+	\have{c}{C} \ae{bc}
+\end{proof}
+Nú getum við svo notað innleiðingarregluna til að setja grunnsetningarnar saman í þeirri röð sem við viljum. Sönnunin lítur því svona út:
+\begin{proof}
+	\hypo{abc}{A \eand (B \eand C)}
+	\have{a}{A} \ae{abc}
+	\have{bc}{B \eand C} \ae{abc}
+	\have{b}{B} \ae{bc}
+	\have{c}{C} \ae{bc}
+	\have{ab}{A \eand B}\ai{a, b}
+	\have{con}{(A \eand B) \eand C}\ai{ab, c}
+\end{proof}
+
+Munið að samkvæmt myndunarreglunum fyrir setningar í setningarökfræði eru strangt til tekið einungis samtengingar með tveimur liðum leyfðar. Þegar við fjölluðum um merkingarfræðileg hugtök, þá leyfðum við okkur þó að sleppa innri svigum í löngum samtengingum með þeim rökum að röð sviganna hefði engin áhrif á sanntöflu setninganna. Þessi sönnun bendir til þess að við gætum gert slíkt hið sama þegar kemur að sönnunum. En þetta er ekki venja og því munum við ekki gera það. Við munum fylgja ströngustu svigareglum þegar vinnum með sannanir. Undantekningin á því er að við munum leyfa okkur að sleppa \emph{ystu} svigum, en bara þeim.
+
+Skoðum eitt dæmi að lokum. Þegar við notum $\eand$I er ekkert sem kemur í veg fyrir að við notum hana tvisvar á sömu línu. Við getum því formlega sannað $A$ að því gefnu að $A$, ef við viljum. Sönnunin liti svona út:
+\begin{proof}
+	\hypo{a}{A}
+	\have{aa}{A \eand A}\ai{a, a}
+	\have{a2}{A}\ae{aa}
+\end{proof} Það mun koma í ljós síðar hvers vegna við viljum geta gert þetta. Þessi sönnun sýnir þó vel formlegt eðli sannanna. Ef við hefðum ekki getað beitt $\eand I$ hér, þá hefðum við einfaldlega ekki getað sannað $A \therefore A$, eins og augljóst og það annars er. Það hefði ekki verið nein leið til að nota forsenduna til að búa til niðurstöðu.
+
+\section{Skilyrðistengi}
+Skoðum eftirfarandi rökfærslu:
+	\begin{quote}
+		Ef Anna er snjöll, þá er hún sniðug. Anna er snjöll. Þar af leiðandi er Anna sniðug.
+	\end{quote}
+Þessi rökfærsla er sannarlega gild. Hún samsvarar eyðingarreglunni fyrir skilyrðistengið ($\eif$E). Almennt form hennar er svona:
+\factoidbox{
+\begin{proof}
+	\have[m]{ab}{\meta{A}\eif\meta{B}}
+	\have[n]{a}{\meta{A}}
+	\have[\ ]{b}{\meta{B}} \ce{ab,a}
+\end{proof}}
+Þessi regla er oft kölluð \emph{modus ponens} og við munum oft vísa til hennar með því nafni. Þetta er eyðingarregla þar sem hún byrjar með setningu þar sem $\eif$ er aðaltengi og fær úr henni setningu þar sem $\eif$ er ekki aðaltengi. Takið eftir því að form reglunnar krefst þess ekki að for- og bakliðirnir komi fyrir á línum hverri á eftir annarri, né að þeir verði að koma fyrir í einhverri sérstakri röð. Þegar við vísum í regluna, þá vísum við þó alltaf fyrst í skilyrðissetninguna og svo í forliðinn.
+
+Ef við látum $S_1$ standa fyrir „Anna er snjöll“ og $S_2$ standa fyrir „Anna er sniðug“, þá liti full sönnun fyrir rökfærsluna hér að ofan svona út:
+\begin{proof}
+	\hypo{a}{S_1 \eif S_2}
+	\hypo{b}{S_1}
+	\close
+	\have{c}{S_2} \ce{ab}
+\end{proof}
+Við þurfum líka innleiðingarreglu fyrir skilyrðistengið. Eftirfarandi rökfærsla ætti að vera gild:
+	\begin{quote}
+		Anna er sniðug. Því gildir: ef Anna er snjöll, þá er Anna sniðug og snjöll.
+	\end{quote}
+Ef einhver drægi gildi þessarar rökfærslu í efa, þá gætum við reynt að sannfæra viðkomandi svona:
+\begin{quote}
+	Gerum ráð fyrir að Anna sé sniðug. Gerum svo \emph{að auki} ráð fyrir að Anna sé snjöll. Með og-innleiðingarreglu getum við þá dregið þá ályktun að Anna sé bæði sniðug og snjöll. Að þeirri aukaforsendu gefinni, að Anna sé snjöll, þá er Anna því bæði sniðug og snjöll. En það er bara það sama og að segja að \emph{ef} Anna er snjöll, þá er Anna bæði sniðug og snjöll.
+\end{quote}
+Hér höfum við kynnt til sögunnar hugmyndina um \define{aukaforsendur}. Þær eru forsendur sem við gefum okkur tímabundið í því skyni að leiða út einhverja aðra setningu. Í réttlætingu okkar fyrir rökfærsluna hér að ofan notfærðum við okkur aukaforsendu---við gáfum okkur að Anna væri snjöll sem aukaforsendu og notuðum hana til að sýna að \emph{ef} Anna er snjöll, þá er hún bæði sniðug og snjöll. 
+
+Við þurfum því einhverja leið til að tjá þessa hugmynd um aukaforsendur í náttúrulegri afleiðslu. Við gerum það svona. Við byrjuðum með eina forsendu, að Anna sé sniðug. Við skrifum hana eins og venjulega, svona:
+	\begin{proof}
+		\hypo{r}{S_1}
+	\end{proof}
+Næst gáfum við okkur að Anna væri snjöll sem aukaforsendu. Til að gefa það til kynna höldum við svona áfram:	
+	\begin{proof}
+		\hypo{r}{S_1}
+		\open
+			\hypo{l}{S_2}
+	\end{proof}
+Við höfum þó \emph{alls ekki} sannað að lína 2 leiði af línu 1. Við þurfum því ekki að skrifa neina réttlætingu fyrir þessari línu til hliðar. Við þurfum hins vegar að sýna að um aukaforsendu sé að ræða og við gerum það með að draga línu til hliðar við og undir hana, auk þess að skrifa hana örlítið til hliðar. 
+
+Nú getum við notað aukaforsenduna, rétt eins og um venjulega forsendu væri að ræða (þó með skilyrðum sem við komum að síðar): 
+
+	\begin{proof}
+		\hypo{r}{S_1}
+		\open
+			\hypo{l}{S_2}
+			\have{rl}{S_1 \eand S_2}\ai{r, l}
+%			\close
+%		\have{con}{L \eif (R \eand L)}\ci{l-rl}
+	\end{proof}
+Við höfum því sýnt, að aukaforsendunni $S_2$ gefinni, að $S_1 \eand S_2$. Við getum þess vegna dregið þá ályktun að ef $S_2$ er satt, þá er $S_1 \eand S_2$ líka satt. Eða einfaldlega, að $S_2 \eif (S_1 \eand S_2)$ sé satt:
+	\begin{proof}
+		\hypo{r}{S_1}
+		\open
+			\hypo{l}{S_2}
+			\have{rl}{S_1 \eand S_2}\ai{r, l}
+			\close
+		\have{con}{S_2 \eif (S_2 \eand S_1)}\ci{l-rl}
+	\end{proof}
+Takið eftir því að við skrifum aftur bara eina lóðrétta línu í sönnunni. Við segjum að aukaforsendan $S_2$ hafi verið \emph{losuð}, þar eð skilyrðissetninguna leiðir bara af upprunalegu forsendunni, $S_1$.
+
+Þegar við sönnum skilyrðissetningu, þá gefum við okkur fyrst forliðinn sem aukaforsendu, $\meta{A}$, og notum hana til að sanna bakliðinn, $\meta{B}$. Ef það tekst, þá vitum við að ef $\meta{A}$, þá $\meta{B}$. Almennt form reglunnar er því svona: 
+\factoidbox{
+	\begin{proof}
+		\open
+			\hypo[i]{a}{\meta{A}} 
+			\have[j]{b}{\meta{B}}
+		\close
+		\have[\ ]{ab}{\meta{A}\eif\meta{B}}\ci{a-b}
+	\end{proof}}
+Það geta verið eins margar línur og verða vill milli $i$ og $j$.	
+
+Það er hjálplegt að skoða annað dæmi um það hvernig $\eif$I virkar. Sönnum að eftirfarandi rökfærsla sé gild:
+	$$P \eif Q, Q \eif R \therefore P \eif R$$	
+
+Við byrjum á að skrifa niður \emph{báðar} forsendurnar. Þar sem við viljum sanna skilyrðissetningu (nefnilega $P \eif R$), þá gefum við okkur því næst forliðinn sem aukaforsendu. Sönnunin byrjar því svona:
+\begin{proof}
+	\hypo{pq}{P \eif Q}
+	\hypo{qr}{Q \eif R}
+	\open
+		\hypo{p}{P}
+	\close
+\end{proof}
+Nú þegar við höfum gefið okkur $P$ sem aukaforsendu, þá getum við notað hana í sönnuninni. Við getum því notað {\eif}E á fyrstu forsenduna. Það gefur okkur $Q$, sem við getum svo notað með {\eif}E á aðra forsenduna. Með því að gefa okkur $P$ gátum við því leitt út $R$. Þá getum við beitt {\eif}I og losað aukaforsenduna $P$ og þar með klárað sönnunina. Sönnunin lítur því svona út:
+
+\label{HSproof}
+\begin{proof}
+	\hypo{pq}{P \eif Q}
+	\hypo{qr}{Q \eif R}
+	\open
+		\hypo{p}{P}
+		\have{q}{Q}\ce{pq,p}
+		\have{r}{R}\ce{qr,q}
+	\close
+	\have{pr}{P \eif R}\ci{p-r}
+\end{proof} Það er þess virði að skoða þessa sönnun mjög vel.
+
+\section{Aukaforsendur og hlutasannanir}
+
+Innleiðingarreglan fyrir skilyrðistengið byggðist á þeirri hugmynd að nota aukaforsendur. Þær þarf að meðhöndla af nokkurri gætni, auk þess sem skilningur á þeim er algjört grundvallaratriði þegar kemur að því að ná tökum á formlegum sönnunum í rökfræði. Þess vegna ætla ég að segja nokkur orð í viðbót um þær hér, auk þess að taka fleiri dæmi. 
+
+Skoðum eftirfarandi sönnun:
+\begin{proof}
+	\hypo{a}{A}
+	\open
+		\hypo{b1}{B}
+		\have{bb}{B \eand B}\ai{b1, b1}
+		\have{b2}{B} \ae{bb}
+	\close
+	\have{con}{B \eif B}\ci{b1-b2}
+\end{proof}
+Þetta er fullkomlega í samræmi við þær reglur sem við höfum nú þegar kynnst. Niðurstaðan ætti heldur ekki að koma neitt sérstaklega á óvart. „$B\eif B$“ er jú klifun og því ætti ekki að þurfa neinar forsendur til að sanna hana.
+
+En hvað ef við héldum áfram líkt og hér að neðan?
+\begin{proof}
+	\hypo{a}{A}
+	\open
+		\hypo{b1}{B}
+		\have{bb}{B \eand B}\ai{b1, b1}
+		\have{b2}{B} \ae{bb}
+	\close
+	\have{con}{B \eif B}\ci{b1-b2}
+	\have{b}{B}\by{ósvífin tilraun til að nota $\eif$E}{con, b2}
+\end{proof}
+Ef þetta væri leyfilegt, þá væri það stórslys: við gætum sannað hvaða setningu sem er, sama hvaða forsendu við gæfum okkur! Ef þú segðir mér að Anna sé snjall rökfræðingur („$A$“), þá ætti ég ekki að geta dregið þá ályktun að Bjössi sé 100 metra hár („$B$“). Eitthvað hlýtur að hafa farið úrskeiðis og því hlýtur að þurfa einhverja reglu sem bannar ályktanir á borð við þessa. 
+
+Í því skyni kynnum við til sögunnar \define{hlutasannanir}: þær eru sannanir sem eiga sér stað innan annarrar sönnunar. Hlutasönnun hefst á aukaforsendu og er afmörkuð frá aðalsönnuninni með lóðréttri línu, rétt eins og við sáum að ofan. Við getum hugsað okkur að hlutasönnun svari þeirri spurningu, \emph{hvað annað getum við sannað, ef við gefum okkur þetta sem aukaforsendu?}
+
+Þegar við höfum opnað hlutasönnun, þá getum við ekki bara notað aukaforsenduna sem við gáfum okkur, heldur líka allar þær forsendur sem voru hluti af aðalsönnuninni, auk alls sem við höfum leitt af þeim. Við segjum að þær línur sem eru fyrir ofan hlutasönnunina séu enn \emph{í gildi}. En það kemur að því að við viljum hætta að nota aukaforsenduna sem við gáfum okkur og snúa aftur til aðalsönnunarinnar. Til að gefa það til kynna, þá hættum við að draga lóðréttu línuna sem afmarkar hlutasönnunina. Þá segjum við að hlutasönnuninni hafi verið \define{lokað}. Þegar við lokum hlutasönnun, þá hættum við að nota aukaforsenduna sem við gáfum okkur þegar við hófum hlutasönnunina og getum því ekki lengur notað hana, né það sem leiddi af henni.
+
+Við segjum því að:
+
+\factoidbox{
+Þegar vísað er til einstakra lína í beitingu reglna má aðeins vísa til þeirra sem (i) koma á undan línunni þar sem reglunni er beitt en (ii) koma ekki fyrir innan lokaðrar hlutasönnunar.}
+
+Þessi regla útilokar sönnunina hér að ofan. Eyðingarreglan fyrir skilyrðistengi segir að við þurfum tvær línur sem koma fyrir fyrr í sönnuninni. Í þessari meintu sönnun hér að ofan, þá kom ein þessara lína fyrir innan hlutasönnunar (lína 4) sem hafði verið lokað þegar vísað var í hana (lína 6). Þetta er óleyfilegt.
+
+Þegar við lokum hlutasönnun, segjum við að aukaforsendan sem hún hófst á hafi verið \define{losuð}. Við getum því orðað ofangreint svona: \emph{það er ekki leyfilegt að vísa í línur sem reiða sig á losaðar aukaforsendur}. 
+
+Hlutasannanir leyfa okkur því að hugsa um hvað við gætum sannað, ef við myndum gefa okkur einhverja nýja forsendu. Ef við getum lokað þeim, með því að vísa í einhverja reglu sem þarfnast hlutasönnunnar, forms síns vegna, rétt eins og innleiðingarreglan fyrir skilyrðistengi gerir, þá hefur okkur tekist að leiða út eitthvað nýtt í aðalsönnuninni. En eins og ofangreint sýnir, þá þurfum við að fylgjast vel með því hvaða aukaforsendur við höfum gefið okkur á hverju stigi sönnunarinnar. Náttúruleg afleiðsla gerir þetta á \emph{myndrænan} hátt (og það er raunar ástæðan fyrir því að hún hentar okkur vel).
+
+Það er ekkert sem stoppar okkur í að opna nýja hlutasönnun innan annarrar hlutasönnunar, svo framarlega sem við fylgjum reglunni hér að ofan. Hér er dæmi:
+\begin{proof}
+\hypo{a}{A}
+\open
+	\hypo{b}{E}
+	\open
+		\hypo{c}{J}
+		\have{ab}{A \eand E}\ai{a,b}
+	\close
+	\have{cab}{J \eif (A \eand E)}\ci{c-ab}
+\close
+\have{bcab}{E \eif (J \eif (A \eand E))}\ci{b-cab}
+\end{proof}
+Takið eftir því að vísunin í línu 4 vísar í upprunalegu forsenduna (á línu 1) og aukaforsendu sem kemur fyrir í hlutasönnun (á línu 2). Þetta er í góðu lagi, því hvorug forsendanna hefur verið losuð þegar vísunin á sér stað (þ.e.\ í línu 4).
+
+En við þurfum samt að fara varlega. Við hefðum ekki getað haldið áfram svona:
+\begin{proof}
+\hypo{a}{A}
+\open
+	\hypo{b}{E}
+	\open
+		\hypo{c}{J}
+		\have{ab}{A \eand E}\ai{a,b}
+	\close
+	\have{cab}{J \eif (A \eand E)}\ci{c-ab}
+\close
+\have{bcab}{E \eif(J \eif (A \eand E))}\ci{b-cab}
+\have{bcab}{J \eif (A \eand E)}\by{ósvífin tilraun til að nota $\eif$I}{c-ab}
+\end{proof}
+Þetta væri stórslys. Ef ég segði við þig að Anna sé snjöll, þá ættirðu ekki að geta dregið þá ályktun að ef Jón sé líka snjall („$J$“), þá sé Anna snjöll \emph{og} að Esjan sé á tunglinu („$E$“). En ef þessi sönnun væri leyfileg, þá ættum við að geta hugsað svona.
+
+Vandinn hér er að hlutasönnunin sem hefst á $J$ veltur á því að við höfðum þegar gert ráð fyrir $E$ á línu 2. Í línu 6, höfum við \define{losað} aukaforsenduna $B$: við erum ekki lengur að velta fyrir okkur hvað við getum sannað ef við gerum líka ráð fyrir að $J$ sé satt. Það væri því tómt svindl að reyna að notfæra okkur (á línu 7) hlutasönnunina sem hófst á $J$. Þess vegna segjum við líka:
+
+\factoidbox{Þegar vísað er til hlutasönnunar í beitingu reglna má aðeins vísa til þeirra sem (i) koma á undan línunni þar sem reglunni er beitt en (ii) koma ekki fyrir innan annarrarlokaðrar hlutasönnunar.
+}
+Þessi sönnun brýtur í bága við þessa reglu. Hlutasönnunin í línum 3--4 kemur fyrir innan hlutasönnuninnar í línum 2--5, svo hlutasönnunin í línum 3--4 getur ekki verið notuð í línu 7.
+
+Það er alltaf leyfilegt að opna hlutasönnun með hvaða aukaforsendu sem er. Það kann að hljóma einkennilega, að við getum bara gefið okkur hvað sem er, en í raun er það ekki svo skrýtið: það er nefnilega ekki hægt að loka öllum hlutasönnunum þannig að nokkuð gagnlegt verði úr því. Það þarf því að velja aukaforsendur af kostgæfni. Það er til dæmis oft góð hugmynd, ef markmiðið er að sanna skilyrðissetningu, að gefa sér forliðinn. Ef hægt er að leiða út bakliðinn, að forliðnum gefnum, þá er hægt að loka hlutasönnuninni með innleiðingarreglunni fyrir skilyrðistengið.
+
+Það er líka alltaf leyfilegt að loka hlutasönnun og losa aukaforsendur hennar. En það þýðir samt ekki að það sé alltaf gagnlegt. Það þarf líka að sýna útsjónarsemi við að loka þeim.
+
+\section{Jafngildistengið}
+
+Innleiðingarreglan fyrir jafngildistengið er eins og tvöföld útgáfa af reglunni fyrir skilyrðistengið: til að sanna „$F \eiff G$“ þarf að sanna „$G$“ að því gefnu sem aukaforsendu að $F$ \emph{og} $F$ að því gefnu sem aukaforsendu að $G$. Þessi regla þarfnast því \emph{tveggja} hlutasannanna. Almennt form reglunnar er svona:
+
+\factoidbox{
+\begin{proof}
+	\open
+		\hypo[i]{a1}{\meta{A}}
+		\have[j]{b1}{\meta{B}}
+	\close
+	\open
+		\hypo[k]{b2}{\meta{B}}
+		\have[l]{a2}{\meta{A}}
+	\close
+	\have[\ ]{ab}{\meta{A}\eiff\meta{B}}\bi{a1-b1,b2-a2}
+\end{proof}}
+Það geta verið eins margar línur á milli $i$ og $j$ og verða vill (sem eins og við munum, standa fyrir hvaða línur í sönnun sem er) og hið sama gildir um $k$ og $l$. Hlutasannanirnar geta líka verið í hvaða röð sem er og sú seinni þarf ekki að koma fyrir beint á eftir þeirri fyrri.
+ 
+Eyðingarreglan ({\eiff}E) er mjög svipuð eyðingarreglunni fyrir skilyrðistengið, nema í þetta skiptið gengur hún í báðar áttir: ef við höfum vinstri liðinn gefinn, þá getum við ályktað að sá hægri sé sannur, og ef við höfum þann hægri, þá getum við ályktað að sá vinstri sé sannur. Almennt form reglunnar er því svona:
+
+\factoidbox{
+\begin{proof}
+	\have[m]{ab}{\meta{A}\eiff\meta{B}}
+	\have[n]{a}{\meta{A}}
+	\have[\ ]{b}{\meta{B}} \be{ab,a}
+\end{proof}
+}
+og á sama hátt:
+\factoidbox{
+\begin{proof}
+	\have[m]{ab}{\meta{A}\eiff\meta{B}}
+	\have[n]{a}{\meta{B}}
+	\have[\ ]{b}{\meta{A}} \be{ab,a}
+\end{proof}}
+Rétt eins og í tilfelli skilyrðistengisins, þá geta setningarnar birst í hvaða röð sem er, en þegar við vísum í ákveðnar línur þegar við réttlætum notkun reglunnar, þá vísum við alltaf fyrst í línuna þar sem jafngildistengið sjálft kemur fyrir.
+
+Hér er svo dæmi um notkun innleiðingarreglunnar. Við sönnum að $(A \eif B) \eand (B \eif A) \therefore A \eiff B$ sé gild rökfærsla:
+
+\begin{proof}
+\hypo{1}{(A \eif B) \eand (B \eif A)}
+\have{2}{A \eif B} \ae{1}
+\have{3}{B \eif A}\ae{1}
+\open
+\hypo{4}{A}
+\have{6}{B} \ce{2,4}
+\close
+\open
+\hypo{7}{B}
+\have{9}{A}\ce{3,7}
+\close
+\have{10}{A \eiff B} \bi{4-6, 7-9}
+\end{proof}
+
+\section{Eða-tengi}
+
+Gerum ráð fyrir að Anna sé snjöll. Þá er það víst að Anna er annað hvort snjöll eða sniðug. Af hverju? Jú, setningin „Anna er snjöll eða Anna er sniðug“ er sönn ef önnur setninganna sem mynda hana er sönn og við vitum að setningin „Anna er snjöll“ er sönn. Setningin hlýtur því öll að vera sönn.
+
+Þetta gildir um \emph{hvaða} setningar sem er. Segjum að Anna sé snjöll. Þá leiðir af því að Anna sé annað hvort snjöll eða banani. Það leiðir líka af að Anna sé snjöll að Anna sé snjöll eða að Akureyri sé á tunglinu, og að Anna sé snjöll eða að Jón sé 500 metra hár. Þetta eru auðvitað furðulegar ályktanir, sem við myndum líklega aldrei draga, en það er ekkert \emph{rökfræðilega} athugavert við þær og það getum við staðfest með að skoða skilgreiningarsanntöfluna fyrir eða-tengið.
+
+Með þetta í huga, þá setjum við fram almennt form innleiðslureglunnar fyrir eða-tengið svona:
+
+\factoidbox{\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[\ ]{ab}{\meta{A} \eor\meta{B}}\oi{a}
+\end{proof}}
+og
+\factoidbox{\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[\ ]{ab}{\meta{B} \eor\meta{A}}\oi{a}
+\end{proof}}
+Athugið að $\meta{B}$ getur verið \emph{hvaða} setning sem er. Eftirfarandi sönnun er því fullkomlega rétt:
+\begin{proof}
+	\hypo{m}{M}
+	\have{mmm}{M \eor ([(A\eiff B) \eif (C \eand D)] \eiff [E \eand F])}\oi{m}
+\end{proof}
+Til að sýna að þessi rökfærsla sé gild með fullri sanntöflu þyrfti 128 línur.
+
+Eyðingarreglan fyrir eða-tengi er öllu flóknari. Gerum ráð fyrir að Anna sé snjöll eða að Anna sé sniðug. Hvaða ályktun getum við þá dregið? Ekki að Anna sé snjöll, hún gæti jú bara verið sniðug. Eins getum við ekki sagt að hún sé sniðug, því hún gæti bara verið snjöll. Það er því óttalega lítið sem ályktað ef við höfum setningu með eða-tengi.
+
+En hvað ef við gætum sýnt hvort tveggja af eftirfarandi: fyrst, að það að Anna sé snjöll leiði af sér að hún sé góður vinur; og svo að það að Anna sé sniðug leiði af sér að hún sé góður vinur? Þá vitum við að sama hvort er, að Anna sé snjöll eða sniðug, þá er hún góður vinur. 
+
+Þetta er hugsunin á bak við eyðingarregluna fyrir eða-tengið $\eor$E. Almennt form hennar er svona:
+
+\factoidbox{
+	\begin{proof}
+		\have[m]{ab}{\meta{A}\eor\meta{B}}
+		\open
+			\hypo[i]{a}{\meta{A}} {}
+			\have[j]{c1}{\meta{C}}
+		\close
+		\open
+			\hypo[k]{b}{\meta{B}}{}
+			\have[l]{c2}{\meta{C}}
+		\close
+		\have[ ]{c}{\meta{C}}\oe{ab, a-c1,b-c2}
+	\end{proof}}
+	
+Þessi regla er öllu klunnalegri en fyrri reglur, en hugmyndin er tiltölulega einföld. Segjum að við höfum einhverja setningu á borð við $\meta{A} \eor \meta{B}$. Gerum svo ráð fyrir að við höfum tvær hlutasannanir sem sýna hver um sig að $\meta{C}$ leiði af aukaforsendunni $\meta{A}$ annars vegar og af aukaforsendunni $\meta{B}$ hins vegar. Þá getum við dregið þá ályktun að $\meta{C}$. Eins og áður, þá geta verið eins margar línur og þarf milli $i$ og $j$, og hið sama gildir um $k$ og $l$. Hlutasannanirnar og setningin með eða-tenginu geta komið í hvaða röð sem er, og þurfa ekki að vera hlið við hlið.	
+	
+Hér eru nokkur dæmi til skýringar. Skoðum eftirfarandi rökfærslu:
+$$(P \eand Q) \eor (P \eand R) \therefore P$$
+
+Hér er svo dæmi um sönnun. Takið eftir að við gefum okkur fyrst $P \eand Q$ sem aukaforsendu og svo $P \eand R$:
+	\begin{proof}
+		\hypo{prem}{(P \eand Q) \eor (P \eand R) }
+			\open
+				\hypo{pq}{P \eand Q}
+				\have{p1}{P}\ae{pq}
+			\close
+			\open
+				\hypo{pr}{P \eand R}
+				\have{p2}{P}\ae{pr}
+			\close
+		\have{con}{P}\oe{prem, pq-p1, pr-p2}
+	\end{proof}
+Hér er svo aðeins flóknara dæmi. Skoðum:
+	$$ A \eand (B \eor C) \therefore (A \eand B) \eor (A \eand C)$$
+Hér er svo sönnun:
+	\begin{proof}
+		\hypo{aboc}{A \eand (B \eor C)}
+		\have{a}{A}\ae{aboc}
+		\have{boc}{B \eor C}\ae{aboc}
+		\open
+			\hypo{b}{B}
+			\have{ab}{A \eand B}\ai{a,b}
+			\have{abo}{(A \eand B) \eor (A \eand C)}\oi{ab}
+		\close
+		\open
+			\hypo{c}{C}
+			\have{ac}{A \eand C}\ai{a,c}
+			\have{aco}{(A \eand B) \eor (A \eand C)}\oi{ac}
+		\close
+	\have{con}{(A \eand B) \eor (A \eand C)}\oe{boc, b-abo, c-aco}
+	\end{proof}
+Takið sérstaklega vel eftir því hvernig innleiðingarreglan fyrir $\eor$ er notuð.
+
+Ekki láta ykkur bregða ef þið sjáið ekki hvernig í ósköpunum þið hefðuð átt að láta ykkur detta þessi sönnun í hug. Það að finna upp á nýjum sönnunum er alls ekki einfalt mál og þarfnast æfingar. Á þessu stigi málsins ættuð þið að einbeita ykkur að því að lesa sannanirnar gaumgæfilega og aðgæta hvort þær séu ekki í samræmi við reglurnar sem við höfum skilgreint. Það þýðir að þið ættuð að skoða hverja línu og athuga hvort hún sé réttlætt á réttan hátt.
+
+Það er þess virði að fara sérstaklega vel yfir kaflann um það hvernig hlutasannanir virka, enda eru þær á margan hátt lykillinn að réttum skilningi á náttúrulegri afleiðslu.
+
+\section{Mótsögn og neitun}
+
+Nú er einungis eitt setningatengi eftir, neitun. Reglurnar fyrir neitun eru nátengdar \emph{mótsögnum}.
+
+Mótsögn er, eins og við sögðum hér að ofan, setning sem er ósönn fyrir hvaða sanngildadreifingu sem er. Einföld mótsögn, kannski sú einfaldasta, er setning á borð við $A \eand \enot A$. Segjum að einhver rökfærsla leiði okkur að niðurstöðu á þessu formi, til dæmis að slökkt sé á ljósinu og ekki slökkt á ljósinu. Það getur augljóslega ekki verið, svo eitthvað hefur greinilega farið úrskeiðis í rökfærslunni. Ef við gerum ráð fyrir að við höfum ekki dregið \emph{ranga} ályktun í neinu skrefi, þá hlýtur að vera að einhver af \emph{forsendunum} sem við gáfum okkur sé ósönn. Sannar forsendur, með réttum skrefum, geta jú ekki leitt okkur að ósannri niðurstöðu, en öðru máli gegnir um ósannar forsendur: þær geta hæglega leitt okkur að ósannri niðurstöðu.
+
+Reglurnar fyrir neitun byggja á þessari hugmynd. Við kynnum fyrst til sögunnar nýtt tákn, „$\ered$“. Við lesum það sem „mótsögn!“, „það er út í hött!“ eða „þetta getur ekki verið!“. Eyðingarreglan fyrir neitun segir að hvenær sem við höfum setningu og neitun hennar, þá megum við innleiða þetta tákn:
+
+\factoidbox{
+\begin{proof}
+\have[m]{a}{\meta{A}}
+\have[n]{na}{\enot\meta{A}}
+\have[ ]{bot}{\ered}\ri{a, na}
+\end{proof}}
+Það skiptir ekki máli í hvaða röð setningin $\meta{A}$ og neitun hennar koma fyrir, og það þarf ekki að vera á aðliggjandi línum. En við vísum alltaf fyrst í setninguna og svo neitunina þegar við réttlætum notkun þessarar reglu. 
+
+Við köllum þessa reglu eyðingarreglu fyrir neitun ($\enot$E) af því neitun kemur fyrir í einum af setningunum, en ekki í setningunni sem leiðir af reglunni. Neitun er því í vissum skilningi eytt úr sönnuninni. Við hefðum líka getað kallað þessa reglu „innleiðingarreglu fyrir $\ered$“, því hún innleiðir það tákn, en það þykir snyrtilegt að hafa innleiðingar- og eyðingarreglu fyrir hvert tákn, svo við fylgjum þeirri venju hér.
+
+Næst er það innleiðingarreglan fyrir neitun. Hún byggir á hugmyndinni hér að ofan: að ef einhver aukaforsenda leiði til mótsagnar, þá hlýtur hún að vera ósönn:
+\factoidbox{\begin{proof}
+		\open
+		\hypo[i]{a}{\meta{A}}
+		\have[j]{nb}{\ered}
+		\close
+		\have[\ ]{na}{\enot\meta{A}}\ni{a-nb}
+\end{proof}}
+Það er að segja: ef við gefum okkur $\meta{A}$ og getum leitt mótsögn af þeirri aukaforsendu, þá getum við leitt af því neitun $\meta{A}$, $\enot \meta{A}$. Það er vert að taka fram að það geta verið eins margar línur á milli $i$ og $j$ og þörf krefur. Þessi regla er oft kölluð \emph{reductio ad absurdum} og sannanir sem notfæra sér þessa reglu eru oft kallaðar \emph{óbeinar sannanir}.
+
+Hér er dæmi um samspil innleiðingar- og eyðingarreglunnar fyrir neitun:
+
+\begin{proof}
+	\hypo{d}{D}
+	\open
+	\hypo{nd}{\enot D}
+	\have{ndr}{\ered}\ri{d, nd}
+	\close
+	\have{con}{\enot\enot D}\ni{nd-ndr}
+\end{proof}
+
+Hér er annað dæmi, sem sýnir að rökfærslan $A \eif B, \enot B \therefore \enot A$ sé gild:
+
+\begin{proof}
+\hypo {1} {A \eif B}
+\hypo {2} {\enot B}
+\open
+\hypo {3} {A}
+\have {4} {B} \ce{1,3}
+\have {5} {\bot} \ri{2,4}
+\close
+\have {6} {\enot A} \ni{3-5}
+\end{proof}
+Hér höfum við tvær forsendur, $A \eif B$ og $\enot B$. Við gefum okkur svo $A$ sem aukaforsendu og leiðum af henni $B$ með modus ponens (\eif E), þar sem $A \eif B$ er jú ein af forsendunum. Þá höfum við mótsögn við eina af forsendunum okkar, nefnilega $\enot B$, og getum leitt af því $\bot$. Þá vitum við að aukaforsendan sem við gáfum okkur er röng, samkvæmt innleiðingarreglunni fyrir neitun, og lokum því hlutasönnunnin með $\enot A$.
+
+Eins og minnst var á að ofan, þá er hægt að líta á eyðingarregluna fyrir neitun sem innleiðingarreglu fyrir „$\ered$“. Það væri því ágætt að hafa samsvarandi eyðingarreglu. Reglan sem við notum kallast „sprengiregla“ eða \emph{ex falso quodlibet}. Þessi regla segir að \emph{hvað sem er} leiði af mótsögn. Það þýðir að ef við höfum mótsögn í sönnun, þá getum við leitt af henni hvaða setningu sem er. Nafnið „sprengiregla“ er dregið af þessu, því það er litið svo á að mótsögnin „sprengi“ ályktunina og geri \emph{allt} satt.
+
+Hér er almennt form sprengireglunnar: \factoidbox{\begin{proof}
+\have[m]{bot}{\ered}
+\have[ ]{}{\meta{A}}\re{bot}
+\end{proof}}
+Það er vert að leggja áherslu á að $\meta{A}$ má vera \emph{hvaða setning sem er}!
+
+Sprengireglan er óneitanlega furðuleg regla. Af hverju ætti það að vera satt að $\meta{A}$ leiði af mótsögn, \emph{sama} hvað $\meta{A}$ er? Er það ekki bara eitthvað bull? En það eru góðar ástæður fyrir því að þetta er í raun og veru góð regla. Fyrsta ástæðan, og sú mikilvægasta, hefur að gera með skilgreininguna okkar á rökfræðilegri afleiðingu. Við sögðum að $\meta{B}$ leiði rökfræðilega af $\meta{A}_1,...,\meta{A}_n$ ef og aðeins ef það er ekki til sanngildadreifing þar sem $\meta{A}_1,...,\meta{A}_n$ eru allar sannar en $\meta{B}$ ósönn.
+
+Fyllum nú út sanntöflu fyrir einhverja rökfærslu þar sem forsendan er mótsögn, t.d.\ $P \eand \enot P$ og niðurstaðan einhver grunnsetning, t.d.\ $Q$. Í samræmi við skilgreininguna á rökfræðilegri afleiðingu, þá þurfum við bara að skoða línurnar þar sem $Q$ er ósönn:
+
+\begin{center}
+\begin{tabular}{c c |d e e f | c}
+$Q$ & $P$ & $P$ & \eand & \enot & $P$ & $Q$ \\
+\hline
+Ó & S & S & \textbf{Ó} & Ó & S & Ó\\
+ Ó & Ó & Ó & \textbf{Ó} & S & Ó & Ó\\
+\end{tabular}
+\end{center}
+Munum að rökfærsla er gild eff ekki er til lína þar sem forsendurnar eru allar sannar og niðurstaðan ósönn. Við sjáum að svo er ekki---það er \emph{ekki} til lína þar sem $P \eand \enot P$ er sönn og $Q$ ósönn, enda er $P \eand \enot P$ alltaf ósönn. Rökfærslan $P \eand \enot P \therefore Q$ er því gild, sama hvað $P$ og $Q$ standa fyrir!
+
+Þetta er engin tilviljun. Skilgreiningin okkar á gildi (og rökfræðilegri afleiðingu) er hugsuð á þann hátt að gild rökfærsla sé þannig að það sé engin leið að fara frá sönnum forsendum yfir í ósanna niðurstöðu. \emph{Gildi varðveitir sannleika}. En mótsagnir eru alltaf ósannar, svo það er enginn sannleikur sem ályktunin þarf að varðveita: sprengireglan getur einfaldlega ekki leitt okkur frá sannri forsendu til ósannrar niðurstöðu, því forsendan er þegar ósönn.
+
+Önnur ástæða hefur að gera með tengslin milli rökfræðilegrar afleiðingar og skilyrðistengisins. Í setningarökfræði gildir almennt að $\meta{A} \entails \meta{B}$ ef og aðeins ef $\entails \meta{A} \eif \meta{B}$. Þar sem $\entails \meta{A} \eif \meta{B}$ er klifun ef $\meta{A}$ er mótsögn (skilyrðissetningar eru alltaf sannar ef forliðurinn er ósannur), þá myndu þessi tengsl rofna ef við neitum sprengjureglunni.
+
+Það er að lokum önnur ástæða, nefnilega sú að sprengireglan er í raun og veru \emph{afleidd regla}, en það þýðir að hægt er að leiða hana út með því að nota aðrar reglur náttúrulegrar afleiðslu. Við munum kynnast afleiddum reglum innan skamms í \S\ref{s:Derived} og þá munum við sjá hvað það merkir.
+
+Af framansögðu sjáum við þó að við komumst í raun ekki af án sprengireglunnar, nema gera miklar breytingar á setningarökfræðinni. Það vill svo til að það eru til rökfræðikerfi án sprengjureglunnar, t.d.\ svokölluð mótsagnarökfræði (en hún er utan efnis þessarar bókar).
+
+Hér er dæmi um notkun sprengireglunnar:
+\begin{proof}
+\hypo {1} {A \eor B}
+\hypo {2} {A \eif C}
+\hypo {3} {B \eif \bot}
+\open
+\hypo {4} {A}
+\have {5} {C} \ce{2,4}
+\close
+\open
+\hypo {6} {B}
+\have {7} {\bot} \ce{3,6}
+\have {8} {C} \re{7}
+\close
+\have {9} {C} \oe{1,4-5,6-8}
+\end{proof}
+
+Að ofan sögðum við að táknið „$\ered$“ ætti að lesa sem „mótsögn!“ eða eitthvað slíkt. En það er þó ekki nóg---hvernig eigum við að hugsa um þetta tákn? Við höfum þrjá möguleika:
+
+\begin{ebullet}
+	\item Við gætum litið á táknið „$\ered$“ sem sérstaka grunnsetningu á máli setningarökfræði en þó þannig að hún fái alltaf sanngildið „ósatt“.
+	\item Við gætum líka litið á „$\ered$“ sem skammstöfun á einhverri tiltekinni mótsögn á máli setningarökfræði, til dæmis „$A \eand \enot A$“. Það myndi hafa sömu afleiðingar og fyrsti möguleikinn, þar eð „$A \eand \enot A$“ er alltaf ósönn---en við myndum líka sleppa við að bæta við nýju tákni við mál setningarökfræðinnar.
+	\item Loks gætum við litið á „$\ered$“ sem nokkurs konar \emph{greinarmerki} sem kemur fyrir í sönnunum, rétt eins og línumerkingarnar og línurnar sem við drögum undir forsendur.
+\end{ebullet}Við munum velja annan möguleikann hér. Við munum líta á „$\ered$“ sem skammstöfun á einhverri mótsögn. Það þýðir að við getum beitt öðrum reglum þetta tákn, rétt eins og um venjulega setningu sé að ræða.
+
+
+\section{Tertium non datur}
+
+Við munum bæta við einni reglu í viðbót í þessum kafla. Hún er mjög lík eyðingarreglunni fyrir eða-tengið. 
+
+Gerum ráð fyrir að við höfum sýnt að ef það er sól úti, þá fari Jón í sund. Gerum líka ráð fyrir að við höfum sýnt að ef það er \emph{ekki} sól úti, þá fari Jón líka í sund. Það er annað hvort sól úti eða ekki, svo sama hvernig veðrið er, þá mun Jón fara í sund. Við getum því dregið þá ályktun að \emph{sama hvað}, þá fer Jón í sund. Þessi hugsun liggur að baki almennu formi reglunnar:
+\factoidbox{\begin{proof}
+		\open
+			\hypo[i]{a}{\meta{A}}
+			\have[j]{c1}{\meta{B}}
+		\close
+		\open
+			\hypo[k]{b}{\enot\meta{A}}
+			\have[l]{c2}{\meta{B}}
+		\close
+		\have[\ ]{ab}{\meta{B}}\tnd{a-c1,b-c2}
+	\end{proof}}
+Þessi regla er kölluð \emph{tertium non datur}, sem er latína og merkir „[hið] þriðja er ekki gefið“.\footnote{Við gerum hér greinarmun á \emph{ályktunarreglunni} „tertium non datur“ og svo því sem nefnt hefur verið „lögmálið um annað tveggja“. Lögmálið um annað tveggja er \emph{sannanleg setning} í setningarökfræði, sem hefur formið $\proves A \eand \enot A$. Við fjöllum um þennan rithátt að neðan í \S\ref{s:ProofTheoreticConcepts}.} Það geta verið eins margar línur og verða vill milli $i$ og $j$ annars vegar og $k$ og $l$ hins vegar. Hlutasannanirnar geta komið í hvaða röð sem er og sú seinni þarf ekki að koma strax á eftir þeirri fyrstu. 
+
+Notum þessa reglu til að sanna að rökfærslan $$P \therefore (P \eand D) \eor (P \eand \enot D)$$ sé gild:
+	\begin{proof}
+		\hypo{a}{P}
+		\open
+			\hypo{b}{D}
+			\have{ab}{P \eand D}\ai{a, b}
+			\have{abo}{(P \eand D) \eor (P \eand \enot D)}\oi{ab}
+		\close
+		\open
+			\hypo{nb}{\enot D}
+			\have{anb}{P \eand \enot D}\ai{a, nb}
+			\have{anbo}{(P \eand D) \eor (P \eand \enot D)}\oi{anb}
+		\close
+		\have{con}{(P \eand D) \eor (P \eand \enot D)}\tnd{b-abo, nb-anbo}
+	\end{proof}
+\emph{Þetta eru allar grunnreglurnar fyrir náttúrulega afleiðslu í setningarökfræði}.	
+	
+\practiceproblems
+
+\problempart
+Eftirfarandi tvær „sannanir“ eru \emph{ekki} réttar. Útskýrið mistökin sem hafa verið gerð.
+
+\begin{multicols}{2}
+\begin{proof}
+\hypo{abc}{\enot L \eif (A \eand L)}
+\open
+	\hypo{nl}{\enot L}
+	\have{a}{A}\ce{abc, nl}
+\close
+\open
+	\hypo{l}{L}
+	\have{red}{\ered}\ri{l, nl}
+	\have{a2}{A}\re{red}
+\close
+\have{con}{A}\tnd{nl-a, l-a2}
+\end{proof}
+
+\begin{proof}
+\hypo{abc}{A \eand (B \eand C)}
+\hypo{bcd}{(B \eor C) \eif D}
+\have{b}{B}\ae{abc}
+\have{bc}{B \eor C}\oi{b}
+\have{d}{D}\ce{bc, bcd}
+\end{proof}
+\end{multicols}
+
+\problempart
+Eftirfarandi þrjár sannanir vantar tilvísanir (í reglur og línur). Bætið þeim við til að klára sannanirnar. Skrifið líka niður rökfærsluna sem hver sönnun samsvarar (og munið eftir rithættinum sem notar $\therefore$).
+
+\begin{multicols}{2}
+\begin{proof}
+\hypo{ps}{P \eand S}
+\hypo{nsor}{S \eif R}
+\have{p}{P}%\ae{ps}
+\have{s}{S}%\ae{ps}
+\have{r}{R}%\ce{nsor, s}
+\have{re}{R \eor E}%\oi{r}
+\end{proof}
+
+\begin{proof}
+\hypo{ad}{A \eif D}
+\open
+	\hypo{ab}{A \eand B}
+	\have{a}{A}%\ae{ab}
+	\have{d}{D}%\ce{ad, a}
+	\have{de}{D \eor E}%\oi{d}
+\close
+\have{conc}{(A \eand B) \eif (D \eor E)}%\ci{ab-de}
+\end{proof}
+
+\begin{proof}
+\hypo{nlcjol}{\enot L \eif (J \eor L)}
+\hypo{nl}{\enot L}
+\have{jol}{J \eor L}%\ce{nlcjol, nl}
+\open
+	\hypo{j}{J}
+	\have{jj}{J \eand J}%\ai{j}
+	\have{j2}{J}%\ae{jj}
+\close
+\open
+	\hypo{l}{L}
+	\have{red}{\ered}%\ri{l, nl}
+	\have{j3}{J}%\re{red}
+\close
+\have{conc}{J}%\oe{jol, j-j2, l-j3}
+\end{proof}
+\end{multicols}
+
+\problempart
+\label{pr.solvedTFLproofs}
+Sannið að eftirfarandi rökfærslur séu gildar:
+\begin{earg}
+\item $J\eif\enot J \therefore \enot J$
+\item $Q\eif(Q\eand\enot Q) \therefore \enot Q$
+\item $A\eif (B\eif C) \therefore (A\eand B)\eif C$
+\item $K\eand L \therefore K\eiff L$
+\item $(C\eand D)\eor E \therefore E\eor D$
+\item $A\eiff B, B\eiff C \therefore A\eiff C$
+\item $\enot F\eif G, F\eif H \therefore G\eor H$
+\item $(Z\eand K) \eor (K\eand M), K \eif D \therefore D$
+\item $P \eand (Q\eor R), P\eif \enot R \therefore Q\eor E$
+\item $S\eiff T \therefore S\eiff (T\eor S)$
+\item $\enot (P \eif Q) \therefore \enot Q$
+\item $\enot (P \eif Q) \therefore P$
+\end{earg}
+
+
+\chapter{Fleiri reglur náttúrulegrar afleiðslu fyrir setningarökfræði}\label{s:Further}
+
+Í \S\ref{s:BasicTFL} kynntumst við grunnreglum náttúrulegrar afleiðslu fyrir setningarökfræði. Í þessum hluta bætum við fleiri reglum. Þessar reglur eiga það sameiginlegt að auðvelda alla sannanagerð (en í \S\ref{s:Derived} munum við sjá að þær eru strangt til tekið ekki nauðsynlegar).
+
+\section{Endurtekningaregla}
+
+Fyrsta aukareglan sem við skoðum er \emph{endurtekingarreglan} (R). Hún leyfir okkur að endurtaka línur sem við höfum þegar skrifað niður:
+\factoidbox{\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[\ ]{b}{\meta{A}} \by{R}{a}
+\end{proof}}
+Nú er þetta augljóslega gild regla: hún mun aldrei leiða okkur í neinar ógöngur. En hvers vegna í ósköpunum þurfum við hana? Skoðum dæmi:
+\begin{proof}
+	\hypo{fog}{F \eor G}
+	\hypo{feifg}{F \eif G}
+	\open
+		\hypo{f}{F}
+		\have{g}{G}\ce{feifg, f}
+	\close
+	\open
+		\hypo{g2}{G}
+		\have{g3}{G}\by{R}{g2}
+	\close
+	\have{g4}{G}\oe{fog, f-g, g2-g3}
+\end{proof}
+
+Þessi sönnun sýnir að rökfærslan $F \eor G, F \eif G \therefore G$ er gild. Til þess að geta notað $\eor E$ í línu 7, þurfum við að ljúka tveimur hlutasönnunum, einni sem hefst á aukaforsendunni $F$ og einni sem hefst á aukaforsendunni $G$. Báðar þurfa þær að enda á $G$. Þetta er einfaldlega það sem \emph{form} eyðingarreglunnar fyrir eða-tengið krefst.
+
+En þetta form krefst að minnsta kosti \emph{tveggja} lína---og við þurftum ekkert meira en aukaforsenduna sjálfa. Ef við hefðum enga leið til að endurtaka aukaforsenduna, þá værum við \emph{föst} og gætum ekki klárað sönnunina. 
+
+En þá vaknar spurningin: af hverju þurfum við regluna yfirleitt? Er þetta ekki svo augljóslega satt að sérstök regla er óþarfi? Svarið við því felst í \emph{setningarfræðilegu eðli} sannanna. Sannanir eru þannig hugsaðar að \emph{form} þeirra er það eina sem skiptir máli, ekki merking einstakra lína. Ef formið er í samræmi við þær reglur sem lagðar hafa verið niður, þá er sönnunin góð, annars ekki. Þess vegna þurfum við endurtekningarregluna, án hennar gætum við ekki gætt að því að form þessarar sönnunar sé rétt.
+
+
+\section{Eða-samleiðuregla}
+
+Þessi rökfærsla virðist fullkomlega eðlileg:
+	\begin{quote}
+		Guðni Th.\ er annað hvort á Bessastöðum eða Sóleyjargötu. Hann er ekki á Bessastöðum, svo hann hlýtur að vera á Sóleyjargötu.
+	\end{quote}
+Eftirfarandi regla reynir að fanga form þessarar rökfærslu:
+
+\factoidbox{\begin{proof}
+	\have[m]{ab}{\meta{A} \eor \meta{B}}
+	\have[n]{nb}{\enot \meta{A}}
+	\have[\ ]{con}{\meta{B}}\by{DS}{ab, nb}
+\end{proof}}
+og
+\factoidbox{\begin{proof}
+	\have[m]{ab}{\meta{A} \eor \meta{B}}
+	\have[n]{nb}{\enot \meta{B}}
+	\have[\ ]{con}{\meta{A}}\by{DS}{ab, nb}
+\end{proof}}
+Við köllum þessa reglu \emph{eða-samleiðureglu} (en enska heiti hennar er „disjunctive syllogism“, sem útskýrir skammstöfunina \emph{DS}). Eins og áður mega setningin með eða-tenginu og liðurinn sem neitað er koma fyrir í hvaða röð sem er. Setningarnar þurfa heldur ekki að vera samliggjandi. En við vísum alltaf fyrst í setninguna með eða-tenginu.
+
+\section{Modus tollens}
+
+Annað gagnlegt rökfærslumynstur sést hér:
+
+\begin{quote}
+	Ef Anna lærir heima, þá stendur hún sig vel í rökfræði. Anna stendur sig ekki vel í rökfræði. Þar af leiðandi lærir hún ekki heima.
+\end{quote}
+
+Þetta mynstur kallast \emph{modus tollens} og liggur að baki eftirfarandi reglu:
+\factoidbox{\begin{proof}
+	\have[m]{ab}{\meta{A}\eif\meta{B}}
+	\have[n]{a}{\enot\meta{B}}
+	\have[\ ]{b}{\enot\meta{A}}\mt{ab,a}
+\end{proof}}
+Hér mega setningarnar að sjálfsögðu koma fyrir í hvaða röð sem er og þurfa ekki að vera aðliggjandi. Við vísum þó alltaf fyrst í skilyrðissetninguna.
+
+\section{Tvöföld neitunareyðing}
+
+Önnur regla sem getur verið gagnleg er \emph{tvöföld neitunareyðing} (en á ensku er hún kölluð „double negation elimination“, en þaðan er skammstöfunin komin). Nafnið er heldur lýsandi:
+\factoidbox{\begin{proof}
+		\have[m]{dna}{\enot \enot \meta{A}}
+		\have[ ]{a}{\meta{A}}\dne{dna}
+	\end{proof}}
+Við getum auðveldlega kannað með sanntöflu að þessi regla hlýtur að vera í lagi. 
+
+En við þurfum samt að fara varlega, því oft er merking tvöfaldrar neitunar í mæltu máli ekki alveg svona einföld. Til dæmis getum við ekki sagt að ef Jón er ekki óánægður að hann sé ánægður. Kannski er hann hvorki ánægður né óánægður. Við þurfum alltaf að hafa í huga að setningarökfræðin getur ekki fangað öll blæbrigði.
+
+\section{De Morgan-reglur}
+
+Síðustu reglurnar sem við bætum við eru svokallaðar De Morgan-reglur, kenndar við rökfræðingin August De Morgan. Þær gera okkur kleift að færa neitun inn og út úr svigum sem innihalda eða-tengi og og-tengi. Takið eftir að eða-tengi breytist í og-tengi og öfugt þegar reglunum er beitt.
+
+Fyrsta De Morgan-reglan er:
+\factoidbox{\begin{proof}
+	\have[m]{ab}{\enot (\meta{A} \eand \meta{B})}
+	\have[\ ]{dm}{\enot \meta{A} \eor \enot \meta{B}}\dem{ab}
+\end{proof}}
+Önnur De Morgan-reglan er eins og sú fyrsta, nema að hún gengur í öfuga átt:
+\factoidbox{\begin{proof}
+	\have[m]{ab}{\enot \meta{A} \eor \enot \meta{B}}
+	\have[\ ]{dm}{\enot (\meta{A} \eand \meta{B})}\dem{ab}
+\end{proof}}
+Þriðja De Morgan-reglan samsvarar þeirri fyrstu, nema með eða-tengi í stað og-tengis sem aðaltengi.
+\factoidbox{\begin{proof}
+	\have[m]{ab}{\enot (\meta{A} \eor \meta{B})}
+	\have[\ ]{dm}{\enot \meta{A} \eand \enot \meta{B}}\dem{ab}
+\end{proof}}
+Fjórða og síðasta De Morgan-reglan er svo eins og sú þriðja, nema öfugt:
+\factoidbox{\begin{proof}
+	\have[m]{ab}{\enot \meta{A} \eand \enot \meta{B}}
+	\have[\ ]{dm}{\enot (\meta{A} \eor \meta{B})}\dem{ab}
+\end{proof}}De Morgan-reglurnar geta verið mjög gagnlegar, sérstaklega þegar þær eru notaðar í óbeinum sönnunum.
+
+\emph{Þetta eru allar aukareglurnar sem við bætum við náttúrulega afleiðslu í setningarökfræði}.	
+
+\practiceproblems
+\problempart
+\label{pr.justifyTFLproof}
+Eftirfarandi sannanir vantar tilvísanir (í reglur og línur). Bætið þeim við til að klára sannanirnar.
+\begin{multicols}{2}
+\begin{proof}
+\hypo{1}{W \eif \enot B}
+\hypo{2}{A \eand W}
+\hypo{2b}{B \eor (J \eand K)}
+\have{3}{W}{}
+\have{4}{\enot B} {}
+\have{5}{J \eand K} {}
+\have{6}{K}{}
+\end{proof}
+\vfill
+\begin{proof}
+\hypo{1}{L \eiff \enot O}
+\hypo{2}{L \eor \enot O}
+\open
+	\hypo{a1}{\enot L}
+	\have{a2}{\enot O}{}
+	\have{a3}{L}{}
+	\have{a4}{\ered}{}
+\close
+\have{3b}{\enot\enot L}{}
+\have{3}{L}{}
+\end{proof}
+\columnbreak
+\begin{proof}
+\hypo{1}{Z \eif (C \eand \enot N)}
+\hypo{2}{\enot Z \eif (N \eand \enot C)}
+\open
+	\hypo{a1}{\enot(N \eor  C)}
+	\have{a2}{\enot N \eand \enot C} {}
+	\have{a6}{\enot N}{}
+	\have{b4}{\enot C}{}
+		\open
+		\hypo{b1}{Z}
+		\have{b2}{C \eand \enot N}{}
+		\have{b3}{C}{}
+		\have{red}{\ered}{}
+	\close
+	\have{a3}{\enot Z}{}
+	\have{a4}{N \eand \enot C}{}
+	\have{a5}{N}{}
+	\have{a7}{\ered}{}
+\close
+\have{3b}{\enot\enot(N \eor C)}{}
+\have{3}{N \eor C}{}
+\end{proof}
+\end{multicols}
+
+\problempart 
+Sannið að eftirfarandi rökfærslur séu gildar:
+\begin{earg}
+\item $E\eor F$, $F\eor G$, $\enot F \therefore E \eand G$
+\item $M\eor(N\eif M) \therefore \enot M \eif \enot N$
+\item $(M \eor N) \eand (O \eor P)$, $N \eif P$, $\enot P \therefore M\eand O$
+\item $(X\eand Y)\eor(X\eand Z)$, $\enot(X\eand D)$, $D\eor M \therefore M$
+\end{earg}
+
+\chapter{Hugtök sem tengjast sönnunum}\label{s:ProofTheoreticConcepts}
+
+Rétt eins og við kynntum til sögunnar ákveðin merkingarfræðilega hugtök til að auðvelda okkur að tala um sannleika og merkingarfræðileg tengsl milli setninga, þá viljum við gera slíkt hið sama fyrir sannanir. Við köllum þessi hugtök \define{sönnunarfræðileg} hugtök. Við segjum að 
+$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves \meta{B}$$ þýði að til sé sönnun sem hefur $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ sem ólosaðar forsendur en $\meta{B}$ sem niðurstöðu. Ef við viljum segja að \emph{ekki} sé til slík sönnun, þá skrifum við:$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \nproves \meta{B}$$
+
+Það er mikilvægt að taka vel eftir því að táknið „$\proves$“ er \emph{ekki} það sama og táknið „$\entails$“ sem við notuðum til að tákna rökfræðilega afleiðingu í kafla \ref{ch.TruthTables} (og komum aftur að í kafla \ref{ch.semantics}). „$\proves$“ segir nefnilega að ákveðin sönnun sé til, en „$\entails$“ segir að ekki séu til ákveðnar sanngildadreifingar. \emph{Það er mikilvægt að halda þessu aðskildu.}
+
+Með þessum nýja rithætti getum við kynnt til sögunnar ýmis ný hugtök. Ef hægt er að sanna $\meta{A}$ án nokkurra ólosaðra forsenda, til dæmis, þá skrifum við: $${} \proves \meta{A}$$ Við segjum þá að $\meta{A}$ sé \define{sannanleg setning}. Þetta þýðir að sönnunin notast ekki við neinar forsendur aðrar en þær sem koma fyrir sem aukaforsendur innan hlutasannanna.
+
+Hér er dæmi. Segjum að við viljum sýna að ${}\proves \enot (A \eand \enot A)$. Það þýðir, eins og áður sagði, að til er sönnun á $\enot(A \eand \enot A)$ sem hefur \emph{engar} ólosaðar forsendur. Þar sem setningin hefur neitun sem aðaltengi er ágæt hugmynd að prófa \emph{neitunarinnleiðingu} og gefa okkur þá $A \eand \enot A$ sem aukaforsendu í hlutasönnun. Ef við getum sýnt að það leiði til mótsagnar, þá erum við búin. Sönnunin lítur því svona út:
+	\begin{proof}
+		\open
+			\hypo{con}{A \eand \enot A}
+			\have{a}{A}\ae{con}
+			\have{na}{\enot A}\ae{con}
+			\have{red}{\ered}\ri{a, na}
+		\close
+		\have{lnc}{\enot (A \eand \enot A)}\ni{con-red}
+	\end{proof}
+Þegar við lokum hlutasönnuninni, losum við aukaforsenduna eins og lög gera ráð fyrir. Við höfum því sannað $\enot (A \eand \enot A)$ án nokkura (ólosaðra) forsenda. Þá segjum við að $\enot (A \eand \enot A)$ sé \emph{sannanleg} setning, eða einfaldlega að ${}\proves \enot (A \eand \enot A)$.
+
+Til að sýna að einhver tiltekin setning sé sannanleg, þá þurfum við að finna rétta sönnun. En það er mun erfiðara að sýna að tiltekin setning sé \emph{ekki} sannanleg, því til þess þyrfti að sýna að \emph{engin} sönnun sé möguleg. Það skiptir engu máli hversu lengi við höfum reynt að finna slíka sönnun eða hversu margar mismunandi leiðir við höfum reynt, það er alltaf möguleiki að við höfum bara ekki reynt nógu lengi eða ekki prófað nógu margt. Hugsanlega er sönnunin bara of flókin fyrir okkur.
+
+Hér er önnur skilgreining:
+	\factoidbox{
+		Tvær setningar, $\meta{A}$ og $\meta{B}$, eru \define{sannanlega jafngildar} eff til er sönnun á $\meta{B}$ frá $\meta{A}$ og öfugt, þ.e.\ bæði gildir að $\meta{A} \proves \meta{B}$ og $\meta{B} \proves \meta{A}$.
+		}
+Rétt eins og fyrr er tiltölulega auðvelt að sýna að tvær setningar, $\meta{A}$ og $\meta{B}$, séu sannanlega jafngildar. Til þess þurfum við bara tvær sannanir, eina þar sem $\meta{A}$ er forsenda og $\meta{B}$ niðurstaða og eina þar sem $\meta{B}$ er forsenda og $\meta{A}$ niðurstaða. En að sýna að tvær setningar séu \emph{ekki} sannanlega jafngildar er mun erfiðara, en til þess þyrfti að sýna að ekki sé til að minnsta kosti ein sönnun.
+		
+Hér er þriðja skilgreiningin:		
+			\factoidbox{
+		Setningarnar $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ eru sagðar vera \define{sannanlega andstæðar} eff leiða má mótsögn af þeim í sameiningu, þ.e.\ $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves \ered$.
+	}
+
+Til að sýna að setningar séu sannanlega andstæðar er nóg að gefa sér þær allar sem forsendur og leiða af þeim mótsögn. En að sýna að þær séu \emph{ekki} sannanlega andstæðar er mun erfiðara. Þá þarf aftur að sýna að tiltekin sönnun sé \emph{ekki} til.
+
+\
+\\
+Þessi tafla dregur saman hvort ein eða tvær sannanir dugi, eða hvort við þurfum að taka allar mögulegar sannanir til greina.
+
+\begin{center}
+\begin{tabular}{l l l}
+%\cline{2-3}
+ & \textbf{Já} & \textbf{Nei}\\
+ \hline
+%\cline{2-3}
+sannanleg setning? & ein sönnun & allar mögulegar sannanir\\
+%contradiction? &  one proof  & all possible proofs\\
+sannanlega jafngildar? & tvær sannanir & allar mögulegar sannanir\\
+sannanlega andstæðar? & ein sönnun & allar mögulegar sannanir\\
+\end{tabular}
+\end{center}
+
+
+\practiceproblems
+\problempart
+Sýnið að eftirfarandi setningar séu sannanlegar:
+\begin{earg}
+\item $O \eif O$
+\item $N \eor \enot N$
+\item $J \eiff [J\eor (L\eand\enot L)]$
+\item $((A \eif B) \eif A) \eif A$ 
+\end{earg}
+
+\problempart
+Sannið eftirfarandi:
+\begin{earg}
+\item $C\eif(E\eand G), \enot C \eif G \proves G$
+\item $M \eand (\enot N \eif \enot M) \proves (N \eand M) \eor \enot M$
+\item $(Z\eand K)\eiff(Y\eand M), D\eand(D\eif M) \proves Y\eif Z$
+\item $(W \eor X) \eor (Y \eor Z), X\eif Y, \enot Z \proves W\eor Y$
+\end{earg}
+
+\problempart
+Sýnið að eftirfarandi setningapör séu sannanlega jafngild.
+\begin{earg}
+\item $R \eiff E$, $E \eiff R$
+\item $G$, $\enot\enot\enot\enot G$
+\item $T\eif S$, $\enot S \eif \enot T$
+\item $U \eif I$, $\enot(U \eand \enot I)$
+\item $\enot (C \eif D), C \eand \enot D$
+\item $\enot G \eiff H$, $\enot(G \eiff H)$ 
+\end{earg}
+
+\problempart
+Ef við vitum að $\meta{A} \proves \meta{B}$, hvað getum við þá sagt um $\meta{A} \eand \meta{C} \proves \meta{B}$? Hvað með $\meta{A} \eor \meta{C} \proves \meta{B}$?
+\\
+
+\problempart Í þessum hluta hélt ég því fram að það væri jafn erfitt að sýna að tvær setningar séu ekki sannanlega jafngildar og það er að sýna að setning sé ekki sannanleg. Af hverju? (\emph{Ábending}: veltið fyrir ykkur hvort til sé setning sem væri sannanleg ef og aðeins ef $\meta{A}$ og $\meta{B}$ eru sannanlega jafngildar).
+
+
+\chapter{Ráð við uppgötvun sannana}
+
+Sannanir í setningarökfræði hafa ýmsa kosti. Þær eru styttri og fljótlegri en sanntöflur og það er auðveldlega hægt að ganga úr skugga um að tiltekin sönnun sé rétt. En það er ekki til nein pottþétt aðferð við að \emph{uppgötva} sannanir, sérstaklega þegar við færum okkur yfir í umsagnarökfræði. Það kemur því ekkert í stað æfingar og reynslu við uppgötvun sannanna. En það er þó hægt að hafa nokkur ráð í huga. 
+
+\paragraph{Að skoða niðurstöðuna.}
+Markmið sönnunar er að sanna niðurstöðuna. Með því að athuga hvert aðaltengið í niðurstöðunni er, þá sjáum við í fljótu bragði hvaða innleiðingarreglu þarf að beita í síðasta skrefi sönnunarinnar. Ef við vitum hvaða innleiðingarreglu þarf að beita, þá vitum við líka hvaða setningar við þurfum til að geta beitt þeirri reglu. Þá getum við spurt okkur, hvað þarf að gerast í sönnunninni til að leiða út þær setningar? 
+
+Það er sérstaklega gott að hafa í huga að ef form niðurstöðunnar er skilyrðissetning, þá er oftast best að prófa að gefa sér forliðinn og sjá hvort ekki sé hægt að finna einhverja leið til að sanna bakliðinn. Þá er hægt að nota innleiðingarregluna fyrir $\eif$ og losa aukaforsenduna. Um þetta eru mörg dæmi í bókinni.
+
+\paragraph{Skoða forsendurnar.}
+Við getum líka byrjað á að skoða forsendurnar. Setningarnar sem mynda forsendurnar ákvarða hvaða eyðingarreglum við getum beitt fyrst. Það segir okkur hvaða möguleika við höfum í sönnuninni.
+
+Í stuttri sönnun er oft nóg að beita eyðingarreglum á forsendurnar og svo einhverri innleiðingarreglu til að fá niðurstöðuna. Löng sönnun er í raun bara margar stuttar sannanir, svo með því að skoða niðurstöðuna og forsendurnar til skiptis er oft hægt að finna einhverja leið frá forsendunum að niðurstöðunni.
+
+\paragraph{Prófa óbeina sönnun}
+
+Ef allt þrýtur er oft hægt að prófa óbeina sönnun. Til að sanna $\meta{A}$ myndum við þá byrja á því að gefa okkur $\enot \meta{A}$ og reyna að leiða af því mótsögn. Ef hún finnst, þá getum við dregið þá ályktun að $\enot \enot \meta{A}$ með $\enot$I. Þá er bara eftir að beita tvöfaldri neitunareyðingu og fá $\meta{A}$.
+
+Það er ágætt að hafa í huga að þessi aðferð virkar sérstaklega vel í samspili við De Morgan-reglurnar. Það er mjög oft hægt að finna mótsögn með því að gefa sér neitun þess sem á að sanna og beita svo einhverjum af De Morgan-reglunum til að finna mótsögnina.
+
+\paragraph{Ekki gefast upp.}
+Það er oft gott að prófa bara mismunandi aðferðir við sönnunina. Ef ein virkar ekki, þá má prófa aðra. Ef setningin er sannanleg af forsendunum, þá virkar eitthvað.
+
+\chapter{Afleiddar reglur}\label{s:Derived}
+
+Í þessum hluta verður loks útskýrt hvers vegna við kynntum reglurnar fyrir náttúrulega afleiðslu til sögunnar í tveimur hlutum. Við munum sýna að reglurnar sem við bættum við í \S\ref{s:Further} eru strangt til tekið ekki nauðsynlegar, heldur sé hægt að leiða þær af grunnreglunum sem við kynntumst í \S\ref{s:BasicTFL}.
+
+\section{Útleiðsla á endurtekingarreglunni}
+Segjum að við höfum sönnun þar sem eftirfarandi lína kemur fyrir:
+\begin{proof}
+	\have[m]{a}{\meta{A}}
+\end{proof}
+Ef við vildum svo seinna endurtaka þessa línu, segjum á línu $k$, þá gætum við bara notað endurtekingarregluna (R) sem kynnt var til sögunnar í \S\ref{s:Further}. En við gætum líka einskorðað okkur við grunnreglurnar úr \S\ref{s:BasicTFL} og gert eftirfarandi:
+
+\begin{proof}
+	\have[m]{a}{\meta{A}}
+	\have[k]{aa}{\meta{A} \eand \meta{A}}\ai{a}
+	\have{a2}{\meta{A}}\ae{aa}
+\end{proof}
+Það er þó mikilvægt að átta sig á því að þetta er í sjálfu sér ekki sönnun, heldur gróf lýsing á mögulegum sönnunum (enda er $\meta{A}$ ekki setning á máli setningarökfræði, heldur hluti af framsetningarmálinu). Þetta er frekar eins og uppskrift sem sýnir okkur hvernig við getum skipt út endurtekningarreglunni fyrir aðrar reglur. Við \emph{þurfum} því strangt til tekið ekki á henni að halda, heldur gætum alltaf bara fylgt þessari uppskrift þegar við viljum endurtaka okkur.
+
+Takið þó eftir því að þessi uppskrift byggir á því að beita innleiðingarreglunni fyrir og-tengið \emph{tvisvar} á sömu línu. Það er ekkert í kerfinu okkar sem bannar þetta, en ef svo væri, þá yrðum við að kynna endurtekningarregluna til sögunnar sem grunnreglu.
+
+\section{Útleiðsla á eða-samliðureglunni}
+
+Segjum að eftirfarandi tvær línur komi fyrir í sönnun:
+\begin{proof}
+	\have[m]{ab}{\meta{A}\eor\meta{B}}
+	\have[n]{na}{\enot \meta{A}}
+\end{proof}
+Ef við viljum nota þessar línur til að sanna $\meta{B}$, þá getum við notað eða-samliðuregluna (DS) úr \S\ref{s:Further}. En við getum líka notað eftirfarandi uppskrift sem eingöngu notar grunnreglurnar úr \S\ref{s:BasicTFL}:
+
+	\begin{proof}
+		\have[m]{ab}{\meta{A}\eor\meta{B}}
+		\have[n]{na}{\enot \meta{A}}
+		\open
+			\hypo[k]{a}{\meta{A}}
+			\have{red}{\ered}\ri{a, na}
+			\have{b1}{\meta{B}}\re{red}
+		\close
+		\open
+			\hypo{b}{\meta{B}}
+			\have{bb}{\meta{B} \eand \meta{B}}\ai{b, b}
+			\have{b2}{\meta{B}}\ae{bb}
+		\close
+	\have{con}{\meta{B}}\oe{ab, a-b1, b-b2}
+\end{proof}
+Við getum því greinilega leitt eða-samliðuregluna út með því að nota einungis grunnreglurnar. Við getum ekki sannað neitt fleira þegar við bætum henni við. Í hvert sinn sem við notum regluna gætum við einfaldlega notað aðeins fleiri línur í samræmi við þessa uppskrift. Eða-samliðureglan er því \emph{afleidd regla}.
+
+Hið sama gildir um aðrar afleiddar reglur: það er alltaf hægt að skipta þeim út fyrir fleiri línur sem fylgja einhverri uppskrift af þessu tagi. Nú eigum við bara eftir að fara í gegnum modus tollens, De Morgan-reglurnar og tvöfalda neitunareyðingu.
+
+\section{Útleiðsla á modus tollens}
+Segjum að eftirfarandi tvær línur komi fyrir í sönnun:
+\begin{proof}
+	\have[m]{ab}{\meta{A}\eif\meta{B}}
+	\have[n]{a}{\enot\meta{B}}
+\end{proof}
+Ef við viljum nota þessar línur til að sanna $\enot \meta{A}$, þá getum við notað \emph{modus tollens} sem kynnt var til sögunnar í \S\ref{s:Further}. En við gætum líka fylgt eftirfarandi uppskrift:
+\begin{proof}
+	\have[m]{ab}{\meta{A}\eif\meta{B}}
+	\have[n]{nb}{\enot\meta{B}}
+		\open
+		\hypo[k]{a}{\meta{A}}
+		\have{b}{\meta{B}}\ce{ab, a}
+		\have{nb1}{\ered}\ri{b, nb}
+		\close
+	\have{no}{\enot\meta{A}}\ni{a-nb1}
+\end{proof}
+Modus tollens er því afleidd regla og bætir engu við grunnreglurnar sem kynntar voru til sögunnar í \S\ref{s:BasicTFL}.
+
+\section{Útleiðsla á De Morgan-reglunum}
+Hér útleiðsla á fyrstu De Morgan-reglunni sem einungis notar grunnreglurnar:
+ 	\begin{proof}
+		\have[m]{nab}{\enot (\meta{A} \eand \meta{B})}
+		\open
+			\hypo[k]{a}{\meta{A}}
+			\open
+				\hypo{b}{\meta{B}}
+				\have{ab}{\meta{A} \eand \meta{B}}\ai{a,b}
+				\have{nab1}{\ered}\ri{ab, nab}
+			\close
+			\have{nb}{\enot \meta{B}}\ni{b-nab1}
+			\have{dis}{\enot\meta{A} \eor \enot \meta{B}}\oi{nb}
+		\close
+		\open
+			\hypo{na1}{\enot \meta{A}}
+			\have{dis1}{\enot\meta{A} \eor \enot \meta{B}}\oi{na1}
+		\close
+		\have{con}{\enot \meta{A} \eor \enot \meta{B}}\tnd{a-dis, na1-dis1}
+	\end{proof}
+Hér útleiðsla á annarri De Morgan-reglunni:
+ 	\begin{proof}
+		\have[m]{nab}{\enot \meta{A} \eor \enot \meta{B}}
+		\open
+			\hypo[k]{ab}{\meta{A} \eand \meta{B}}
+			\have{a}{\meta{A}}\ae{ab}
+			\have{b}{\meta{B}}\ae{ab}
+			\open
+				\hypo{na}{\enot \meta{A}}
+				\have{c1}{\ered}\ri{a, na}
+			\close
+			\open
+				\hypo{nb}{\enot \meta{B}}
+				\have{c2}{\ered}\ri{b, nb}
+			\close
+			\have{con2}{\ered}\oe{nab, na-c1, nb-c2}
+		\close
+		\have{nab}{\enot (\meta{A} \eand \meta{B})}\ni{ab-con2}
+	\end{proof}
+Hægt er að gefa svipaðar útleiðslur á þriðju og fjórðu De Morgan-reglunum, en ég læt þær lesendum eftir sem æfingar.	
+
+\section{Útleiðsla á tvöföldu neitunarreglunni}
+Hér útleiðsla á tvöföldu neitunarreglunni sem einungis notar grunnreglurnar:
+\begin{proof}
+	\have[m]{m}{\enot \enot \meta{A}}
+	\open
+	\hypo[k]{a}{\meta{A}}
+	\have{a1}{\meta{A}}\by{R}{a}
+	\close
+	\open
+	\hypo{na}{\enot \meta{A}}
+	\have{red}{\ered}\ri{na, m}
+	\have{a2}{\meta{A}}\re{red}
+	\close
+	\have{con}{\meta{A}}\tnd{a-a1, na-a2}
+\end{proof}
+
+\practiceproblems
+
+\problempart
+Leiðið út þriðju og fjórðu De Morgan-regluna.\\
+
+\problempart
+Við kynntum sprengiregluna til sögunnar sem \emph{grunnreglu} í \S\ref{s:BasicTFL}. En í raun er hægt að leiða hana út með því að nota einungis aðrar grunnreglur. Finnið slíka útleiðslu (\emph{ábending}: sprengireglan leyfir okkur að draga hvaða ályktun sem er af mótsögn. Er ekki til grunnregla sem leyfir okkur að kynna til sögunnar hvaða setningu sem er?).

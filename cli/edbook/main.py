@@ -6,6 +6,7 @@ from subprocess import call
 from typing import List, Optional
 from enum import Enum
 import typer
+from typing import List
 from rich import print
 from rich.console import Console
 from rich.table import Table
@@ -130,7 +131,7 @@ def cmd_build():
 def cmd_create(
     name: str = typer.Option(..., prompt="Course id"),
     description: str = typer.Option(..., prompt="Course name"),
-    num_authors: List[str] = typer.Option(None),
+    #num_authors: List[str] = typer.Option(..., prompt="Hjálp"),
     author: str = typer.Option(..., prompt="Author name"),
     email: str = typer.Option(..., prompt="Author email"),
     template: str = typer.Option(
