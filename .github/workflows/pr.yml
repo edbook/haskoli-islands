@@ -1,4 +1,4 @@
-name: Pull Request (Optimized)
+name: Pull Request
 
 permissions:
   contents: read
@@ -8,8 +8,8 @@ permissions:
   issues: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pr-${{ github.event.pull_request.number }}"
+  cancel-in-progress: true
 
 on:
   pull_request:
@@ -22,7 +22,7 @@ on:
 
 jobs:
   build-docs:
-    name: Build PR Documentation (Optimized)
+    name: Build PR Documentation
     uses: ./.github/workflows/build-docs-optimized.yml
     with:
       environment_name: ${{ github.head_ref }}
@@ -51,14 +51,14 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            ## 🚀 Optimized Documentation Deployed
+            ## 📚 PR Documentation Deployed
             
             Your PR documentation is available with enhanced build performance:
             
             **🔗 PR Documentation:** ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/
             **🔗 Individual Projects:** Available at ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/[project-name]/
             
-            **✨ Performance Improvements:**
+            **✨ Performance Features:**
             - ⚡ Parallel builds (4x faster)
             - 💾 Intelligent caching
             - 🏗️ Optimized Sphinx configuration
@@ -77,7 +77,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Notify open PR
         run: |
-          content_title="Nýtt PR opnað (Optimized Build)"
+          content_title="Nýtt PR opnað"
           title="${{ github.event.pull_request.title }}"
           color=2061822
           description="${{ github.event.pull_request.body }}"

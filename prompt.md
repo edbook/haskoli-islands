@@ -1,7 +1,8 @@
 # Goals
 
-- Review and improve the github workflows
-- Debug why the discord notify jobs never trigger
-- Publish a github release using Calver, i.e. YY.M.DD.[incremented number if
-  there are multiple releases each day]
-- Display the Calver release in the sphinx UI
+- Review the sphinx multi-course build setup
+- Review the github workflows and suggest improvements
+- Remove duplicate PR workflows, only the optimized workflow should run
+- Ensure no unnecessary workflows run or are in a pending state in PRs (i.e.
+  publishing github releases)
+- Ensure the push to main workflow is correctly setup

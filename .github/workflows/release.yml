@@ -1,26 +1,29 @@
 name: Release
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 on:
   workflow_dispatch:
     inputs:
-      bump_type:
-        description: 'Type of release'
+      version_type:
+        description: 'Version increment type'
         required: true
-        default: 'patch'
         type: choice
         options:
         - patch
+        - minor
         - major
+        default: patch
   push:
-    branches: [main]
-    tags: ['v*']
+    tags:
+      - 'v*'
 
-permissions:
-  contents: write
-  
 jobs:
-  create-release:
-    name: Create Calver Release
+  generate-version:
+    name: Generate Release Version
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.calver.outputs.version }}
@@ -30,105 +33,143 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          
-      - name: Generate Calver version
+
+      - name: Generate Calver release version
         id: calver
         run: |
-          # Generate Calver in YY.M.DD.increment format
-          today=$(date +'%y.%-m.%-d')
-          echo "Base date: $today"
-          
-          # Get existing tags for today
-          existing_tags=$(git tag -l "v${today}*" | sort -V)
-          echo "Existing tags for today: $existing_tags"
-          
-          if [ -z "$existing_tags" ]; then
-            # First release today
-            increment=1
+          if [ "${{ github.event_name }}" == "push" ] && [[ "${{ github.ref }}" == refs/tags/* ]]; then
+            # Extract version from tag
+            version="${{ github.ref_name }}"
+            tag="${{ github.ref_name }}"
           else
-            # Find the highest increment for today
-            last_tag=$(echo "$existing_tags" | tail -n 1)
-            if [[ "$last_tag" =~ v${today}\.([0-9]+)$ ]]; then
-              last_increment=${BASH_REMATCH[1]}
-              increment=$((last_increment + 1))
-            else
+            # Generate new Calver version for workflow_dispatch
+            today=$(date +'%y.%-m.%-d')
+            
+            # Get the latest tag for today to determine increment
+            latest_tag=$(git tag -l "v${today}.*" --sort=-version:refname | head -n1)
+            
+            if [ -z "$latest_tag" ]; then
+              # First release of the day
               increment=1
+            else
+              # Extract increment from latest tag and add 1
+              increment=$(echo "$latest_tag" | sed "s/v${today}\.//" | cut -d'+' -f1)
+              increment=$((increment + 1))
             fi
+            
+            short_sha=$(git rev-parse --short HEAD)
+            version="v${today}.${increment}+${short_sha}"
+            tag="v${today}.${increment}"
           fi
           
-          version="${today}.${increment}"
-          tag="v${version}"
-          
-          echo "Generated version: $version"
-          echo "Generated tag: $tag"
+          echo "Generated release version: $version"
+          echo "Generated release tag: $tag"
           echo "version=$version" >> $GITHUB_OUTPUT
           echo "tag=$tag" >> $GITHUB_OUTPUT
-          
-      - name: Update version in setup.py
+
+  build-docs:
+    name: Build Release Documentation
+    needs: generate-version
+    uses: ./.github/workflows/build-docs-optimized.yml
+    with:
+      environment_name: release
+      deployment_type: release
+      version_override: ${{ needs.generate-version.outputs.version }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: [generate-version, build-docs]
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update setup.py version
         run: |
-          sed -i 's/version="[^"]*"/version="${{ steps.calver.outputs.version }}"/' cli/setup.py
-          
+          sed -i.bak "s/version=\"[^\"]*\"/version=\"${{ needs.generate-version.outputs.version }}\"/" cli/setup.py
+          echo "Updated setup.py with version: ${{ needs.generate-version.outputs.version }}"
+
       - name: Commit version update
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add cli/setup.py
-          git commit -m "chore: bump version to ${{ steps.calver.outputs.version }}" || echo "No changes to commit"
-          
+          git commit -m "chore: bump version to ${{ needs.generate-version.outputs.version }}"
+          git push
+
       - name: Create and push tag
         run: |
-          git tag ${{ steps.calver.outputs.tag }}
-          git push origin ${{ steps.calver.outputs.tag }}
-          git push origin main
-          
+          git tag "${{ needs.generate-version.outputs.tag }}"
+          git push origin "${{ needs.generate-version.outputs.tag }}"
+
       - name: Generate release notes
-        id: release_notes
+        id: release-notes
         run: |
-          # Get the previous tag
-          prev_tag=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
-          
-          if [ -n "$prev_tag" ]; then
-            echo "## Changes since $prev_tag" >> release_notes.md
-            echo "" >> release_notes.md
-            git log ${prev_tag}..HEAD --pretty=format:"* %s (%h)" >> release_notes.md
+          # Get commits since last tag
+          last_tag=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
+          if [ -n "$last_tag" ]; then
+            commits=$(git log --pretty=format:"- %s" ${last_tag}..HEAD)
           else
-            echo "## Initial Release" >> release_notes.md
-            echo "" >> release_notes.md
-            echo "* First release of edbook" >> release_notes.md
+            commits=$(git log --pretty=format:"- %s" --max-count=10)
           fi
           
-          echo "" >> release_notes.md
-          echo "📅 **Release Date:** $(date +'%Y-%m-%d')" >> release_notes.md
-          echo "🏷️ **Version:** ${{ steps.calver.outputs.version }}" >> release_notes.md
-          
+          notes="## 📚 Documentation Release ${{ needs.generate-version.outputs.version }}
+
+### What's Changed
+$commits
+
+### 🔗 Links
+- **Documentation**: https://edbook.hi.is
+- **Version**: \`${{ needs.generate-version.outputs.version }}\`
+- **Build**: Generated with modern Sphinx build system
+
+---
+🤖 Generated with [Claude Code](https://claude.ai/code)"
+
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$notes" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
       - name: Create GitHub Release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.calver.outputs.tag }}
-          release_name: Release ${{ steps.calver.outputs.version }}
-          body_path: release_notes.md
+          tag_name: ${{ needs.generate-version.outputs.tag }}
+          release_name: Release ${{ needs.generate-version.outputs.version }}
+          body: ${{ steps.release-notes.outputs.notes }}
           draft: false
           prerelease: false
-          
+
   notify-discord-release:
-    needs: [create-release]
-    name: Notify Discord (new release)
+    needs: [generate-version, build-docs, create-release]
+    name: Notify Discord (release)
     runs-on: ubuntu-20.04
+    if: always() && needs.build-docs.result == 'success'
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Notify release
         run: |
-          content_title="🎉 Ný útgáfa! ${{ needs.create-release.outputs.version }}"
-          title="Release ${{ needs.create-release.outputs.version }}"
-          color=65280
-          description="Ný útgáfa af edbook er tilbúin"
-          url="https://github.com/${{ github.repository }}/releases/tag/${{ needs.create-release.outputs.tag }}"
-          author_name="GitHub Actions"
-          author_url="https://github.com/apps/github-actions"
-          author_avatar="https://github.com/apps/github-actions.png"
+          if [ "${{ needs.create-release.result }}" == "success" ]; then
+            content_title="🎉 Ný útgáfa í boði!"
+            color=65280
+            description="Ný útgáfa af Edbook hefur verið gefin út"
+          else
+            content_title="📚 Skjöl uppfærð"
+            color=2061822  
+            description="Skjöl hafa verið endurbyggð"
+          fi
+          
+          title="Release ${{ needs.generate-version.outputs.version }}"
+          url="https://github.com/${{ github.repository }}/releases/tag/${{ needs.generate-version.outputs.tag }}"
 
           payload=$(cat <<EOF
           {
@@ -142,15 +183,14 @@ jobs:
                 "color": $color,
                 "fields": [
                   {
-                    "name": "Download",
-                    "value": "[Sækja útgáfu](https://github.com/${{ github.repository }}/releases/latest)"
+                    "name": "Version",
+                    "value": "${{ needs.generate-version.outputs.version }}"
+                  },
+                  {
+                    "name": "Documentation",
+                    "value": "[Skoða á edbook](https://edbook.hi.is)"
                   }
-                ],
-                "author": {
-                  "name": "$author_name",
-                  "url": "$author_url",
-                  "icon_url": "$author_avatar"
-                }
+                ]
               }
             ]
           }
