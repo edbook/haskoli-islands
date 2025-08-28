@@ -43,7 +43,7 @@ jobs:
             tag="${{ github.ref_name }}"
           else
             # Generate new Calver version for workflow_dispatch
-            today=$(date +'%y.%-m.%-d')
+            today=$(date +'%y.%m.%d')
             
             # Get the latest tag for today to determine increment
             latest_tag=$(git tag -l "v${today}.*" --sort=-version:refname | head -n1)
@@ -85,6 +85,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [generate-version, build-docs]
     if: github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -120,30 +123,28 @@ jobs:
             commits=$(git log --pretty=format:"- %s" --max-count=10)
           fi
           
-          notes="## 📚 Documentation Release ${{ needs.generate-version.outputs.version }}
-
-### What's Changed
-$commits
-
-### 🔗 Links
-- **Documentation**: https://edbook.hi.is
-- **Version**: \`${{ needs.generate-version.outputs.version }}\`
-- **Build**: Generated with modern Sphinx build system
-
----
-🤖 Generated with [Claude Code](https://claude.ai/code)"
-
-          echo "notes<<EOF" >> $GITHUB_OUTPUT
-          echo "$notes" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          {
+            echo "notes<<EOF"
+            echo "## 📚 Documentation Release ${{ needs.generate-version.outputs.version }}"
+            echo ""
+            echo "### What's Changed"
+            echo "$commits"
+            echo ""
+            echo "### 🔗 Links"
+            echo "- **Documentation**: https://edbook.hi.is"
+            echo "- **Version**: \`${{ needs.generate-version.outputs.version }}\`"
+            echo "- **Build**: Generated with modern Sphinx build system"
+            echo ""
+            echo "---"
+            echo "🤖 Generated with [Claude Code](https://claude.ai/code)"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
 
       - name: Create GitHub Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ needs.generate-version.outputs.tag }}
-          release_name: Release ${{ needs.generate-version.outputs.version }}
+          name: Release ${{ needs.generate-version.outputs.version }}
           body: ${{ steps.release-notes.outputs.notes }}
           draft: false
           prerelease: false
