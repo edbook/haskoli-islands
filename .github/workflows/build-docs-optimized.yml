@@ -74,7 +74,7 @@ jobs:
             version="${{ inputs.version_override }}"
           else
             # Generate Calver in YY.M.DD.increment+[git short sha] format (PEP 440 compliant)
-            today=$(date +'%y.%-m.%-d')
+            today=$(date +'%y.%m.%d')
             short_sha=$(git rev-parse --short HEAD)
             
             if [ "${{ inputs.deployment_type }}" == "pr" ]; then
@@ -119,10 +119,11 @@ jobs:
           auto-update-conda: false
           python-version: 3.10.10
           channels: conda-forge,defaults
-          channel-priority: true
+          channel-priority: strict
           environment-file: environment.yml
           activate-environment: edbook
           use-mamba: true  # Use mamba for faster package resolution
+          condarc-file: .condarc
 
       - name: Cache Sphinx build directories
         uses: actions/cache@v4
