@@ -622,7 +622,7 @@ Sýnidæmi: Grunnur fyrir núllrúm
     sem gefur 
 
     .. math:: \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}
-        = \begin{bmatrix} x_3+2x_4+3x_5 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}
+        = \begin{bmatrix} x_3+2x_4+3x_5 \\ -2x_3-3x_4-4x_5 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}
         = x_3 \begin{bmatrix} 1 \\ -2 \\ 1 \\ 0 \\ 0 \end{bmatrix} 
         + x_4 \begin{bmatrix} 2 \\ -3 \\ 0 \\ 1 \\ 0 \end{bmatrix}
         + x_5 \begin{bmatrix} 3 \\ -4 \\ 0  \\ 0 \\ 1 \end{bmatrix}
@@ -723,110 +723,6 @@ Setning: Tveir eiginleikar grunna
     grunni fyrir :math:`V`.
 
     Þetta má orða sem svo: *Grunnur er eins lítið spannmengi og eins stórt línulega óháð mengi í vigurrúmi og mögulegt er*.
-
-Setning: Um tilvist hnita 
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning
-    :class: setning
-
-    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir :math:`V`.
-    Þá gildir fyrir sérhvern vigur :math:`\ve v\in V` að til eru *ótvírætt* ákvarðaðar tölur :math:`c_1, c_2, \ldots, c_n`
-    þannig að
-
-    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n.
-
-    Þetta má orða á þann hátt að jafnan :math:`x_1\ve b_1 + x_2\ve b_2 + \ldots + x_n\ve b_n=\ve v` hafi nákvæmlega eina lausn, þ.e. fyrir gefinn grunn þá er til nákvæmlega ein leið til að rita gefinn vigur sem línulega samantekt vigranna í grunninum.
-
-Skilgreining: :math:`\mathcal{B}`-hnit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-    :class: skilgreining
-
-    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir :math:`V`.
-    Tölurnar :math:`c_1, c_2, \ldots, c_n` þannig að 
-
-    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n,
-
-    kallast **hnit vigursins** :math:`\ve v` **með tilliti til grunsins** :math:`\mathcal{B}` (e. coordinates of :math:`\ve v` relative to the basis :math:`\mathcal{B}`). 
-    Við tölum líka um :math:`\mathcal{B}`-hnit vigursins :math:`\ve v` (e. :math:`\mathcal{B}`-coordinates of :math:`\ve v`).
-
-Skilgreining: Hnitavigur :math:`[\ve x]_{\mathcal{B}}`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-    :class: skilgreining
-
-    Ef tölurnar :math:`c_1, c_2, \ldots, c_n` eru hnit vigursins :math:`\ve x` með tilliti til grunsins :math:`\mathcal{B}`
-    þá segjum við að vigurinn
-
-    .. math:: [\ve x]_{\mathcal{B}}=\begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}
-
-    sé **hnitavigur** :math:`\ve x` **með tilliti til grunnsins** :math:`\mathcal{B}` 
-    (e. coordinate vector of :math:`x` relative to :math:`\mathcal{B}`, or :math:`\mathcal{B}`-coordinate vector). 
-
-
-Sýnidæmi: Að skipta um grunn
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. admonition:: Dæmi
-    :class: daemi
-
-    Gefinn er grunnurinn
-
-    .. math:: \mathcal{B} = \{\ve b_1, \ve b_2\}= \left\{\begin{bmatrix} -1 \\ 3 \end{bmatrix},
-        \begin{bmatrix} 2 \\ 2 \end{bmatrix}\right\}
-    
-    Vigurinn :math:`\ve x` með tillit til :math:`\mathcal{B}` hefur hnitin  :math:`[\ve x]_{\mathcal{B}}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}`. Finnið hnit :math:`\ve x` með tillit til venjulega grunnsins :math:`\mathcal{E}=\{\ve e_1, \ve e_2 \}`, þ.e. finnið :math:`[\ve x]_{\mathcal{E}}`.
-
-.. admonition:: Lausn
-    :class: daemi, dropdown
-
-    Fáum
-
-    .. math:: [\ve x]_{\mathcal{E}} = \ve x = 1\begin{bmatrix}
-        -1\\3
-        \end{bmatrix}+2\begin{bmatrix}
-        2\\2
-        \end{bmatrix}= \begin{bmatrix}
-        -1+4\\3+4
-        \end{bmatrix}=
-        \begin{bmatrix}
-        3\\7
-        \end{bmatrix}.
-
-Skilgreining: Hnitavörpun
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Skilgreining
-    :class: skilgreining
-
-    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúm :math:`V`. Vörpunin
-
-    .. math:: V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}
-
-    kallast **hnitavörpunin með tilliti til** :math:`\mathcal{B}` (e. coordiante mapping determined by :math:`\mathcal{B}`).
-
-
-Setning: hnitavörpun er línuleg
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. admonition:: Setning
-    :class: setning
-
-    Látum :math:`V` vera endanlega vítt vigurrúm með grunn :math:`\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}`. Hnitavörpunin
-
-    .. math:: V \rightarrow \R^n, \ \ve x \mapsto [\ve x]_{\mathcal{B}}
-
-    er línuleg vörpun. Hnitavörpunin er einnig gagntæk
-
-.. admonition:: Athugasemd
-    :class: athugasemd
-
-    - Hnitavörpun :math:`V \rightarrow W` er mikilvægt dæmi um svokallaða *einsmótun* (e. isomorphism), þ.e. gagntæk línuleg vörpun, á milli vigurrúma.
-
-    - Um endanlega víð vigurrúm :math:`V` með vídd :math:`n` gildir að :math:`V` er einsmóta :math:`\R^n`.
 
 
 Vídd og rankur
@@ -1090,10 +986,113 @@ Setning: Viðbót við löngu setninguna um andhverfur
     **18.** :math:`\dim{(\nul{A})}=0`.
 
 
-Hnitaskipti
+Hnit og hnitaskipti
 -----------
 
-Við höfum áður séð hnitaskiptafylkið :math:`\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}` í sýnidæmi :math:`4.3.7.1.`, þegar :math:`\mathcal{P}_\mathcal{E \leftarrow B}[\ve x]_\mathcal{B}=\ve x`. Nú ætlum við að skoða almennari skilgreiningu fyrir hnitaskipti.
+Setning: Um tilvist hnita 
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir :math:`V`.
+    Þá gildir fyrir sérhvern vigur :math:`\ve v\in V` að til eru *ótvírætt* ákvarðaðar tölur :math:`c_1, c_2, \ldots, c_n`
+    þannig að
+
+    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n.
+
+    Þetta má orða á þann hátt að jafnan :math:`x_1\ve b_1 + x_2\ve b_2 + \ldots + x_n\ve b_n=\ve v` hafi nákvæmlega eina lausn, þ.e. fyrir gefinn grunn þá er til nákvæmlega ein leið til að rita gefinn vigur sem línulega samantekt vigranna í grunninum.
+
+Skilgreining: :math:`\mathcal{B}`-hnit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir :math:`V`.
+    Tölurnar :math:`c_1, c_2, \ldots, c_n` þannig að 
+
+    .. math:: \ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n,
+
+    kallast **hnit vigursins** :math:`\ve v` **með tilliti til grunsins** :math:`\mathcal{B}` (e. coordinates of :math:`\ve v` relative to the basis :math:`\mathcal{B}`). 
+    Við tölum líka um :math:`\mathcal{B}`-hnit vigursins :math:`\ve v` (e. :math:`\mathcal{B}`-coordinates of :math:`\ve v`).
+
+Skilgreining: Hnitavigur :math:`[\ve x]_{\mathcal{B}}`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Ef tölurnar :math:`c_1, c_2, \ldots, c_n` eru hnit vigursins :math:`\ve x` með tilliti til grunsins :math:`\mathcal{B}`
+    þá segjum við að vigurinn
+
+    .. math:: [\ve x]_{\mathcal{B}}=\begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}
+
+    sé **hnitavigur** :math:`\ve x` **með tilliti til grunnsins** :math:`\mathcal{B}` 
+    (e. coordinate vector of :math:`x` relative to :math:`\mathcal{B}`, or :math:`\mathcal{B}`-coordinate vector). 
+
+
+Skilgreining: Hnitavörpun
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Skilgreining
+    :class: skilgreining
+
+    Gerum ráð fyrir að :math:`\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}` sé grunnur fyrir vigurrúm :math:`V`. Vörpunin
+
+    .. math:: V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}
+
+    kallast **hnitavörpunin með tilliti til** :math:`\mathcal{B}` (e. coordiante mapping determined by :math:`\mathcal{B}`).
+
+Sýnidæmi: Að skipta um grunn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. admonition:: Dæmi
+    :class: daemi
+
+    Gefinn er grunnurinn
+
+    .. math:: \mathcal{B} = \{\ve b_1, \ve b_2\}= \left\{\begin{bmatrix} -1 \\ 3 \end{bmatrix},
+        \begin{bmatrix} 2 \\ 2 \end{bmatrix}\right\}
+    
+    Vigurinn :math:`\ve x` með tillit til :math:`\mathcal{B}` hefur hnitin  :math:`[\ve x]_{\mathcal{B}}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}`. Finnið hnit :math:`\ve x` með tillit til venjulega grunnsins :math:`\mathcal{E}=\{\ve e_1, \ve e_2 \}`, þ.e. finnið :math:`[\ve x]_{\mathcal{E}}`.
+
+.. admonition:: Lausn
+    :class: daemi, dropdown
+
+    Fáum
+
+    .. math:: [\ve x]_{\mathcal{E}} = \ve x = 1\begin{bmatrix}
+        -1\\3
+        \end{bmatrix}+2\begin{bmatrix}
+        2\\2
+        \end{bmatrix}= \begin{bmatrix}
+        -1+4\\3+4
+        \end{bmatrix}=
+        \begin{bmatrix}
+        3\\7
+        \end{bmatrix}.
+
+
+Setning: hnitavörpun er línuleg
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Setning
+    :class: setning
+
+    Látum :math:`V` vera endanlega vítt vigurrúm með grunn :math:`\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}`. Hnitavörpunin
+
+    .. math:: V \rightarrow \R^n, \ \ve x \mapsto [\ve x]_{\mathcal{B}}
+
+    er línuleg vörpun. Hnitavörpunin er einnig gagntæk
+
+.. admonition:: Athugasemd
+    :class: athugasemd
+
+    - Hnitavörpun :math:`V \rightarrow W` er mikilvægt dæmi um svokallaða *einsmótun* (e. isomorphism), þ.e. gagntæk línuleg vörpun, á milli vigurrúma.
+
+    - Um endanlega víð vigurrúm :math:`V` með vídd :math:`n` gildir að :math:`V` er einsmóta :math:`\R^n`.
+
 
 
 Skilgreining: Hnitaskiptafylki
