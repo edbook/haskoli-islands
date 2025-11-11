@@ -80,7 +80,7 @@ jobs:
           echo "$project_list" | tr ' ' '\n' | xargs -n1 -P4 -I{} bash -c '
             project="{}"
             echo "Building $project for production..."
-            cd "projects/$project"
+            cd "$project"
             sphinx-build -b html -j auto -q --keep-going \
               -D html_show_sourcelink=false \
               -D html_copy_source=false \
