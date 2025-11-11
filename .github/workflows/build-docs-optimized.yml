@@ -4,20 +4,20 @@ on:
   workflow_call:
     inputs:
       environment_name:
-        description: 'Environment name for deployment'
+        description: "Environment name for deployment"
         required: true
         type: string
       deployment_type:
-        description: 'Type of deployment: pr, push, or release'
+        description: "Type of deployment: pr, push, or release"
         required: true
         type: string
       target_branch:
-        description: 'Target branch for deployment'
+        description: "Target branch for deployment"
         required: false
         type: string
-        default: 'main'
+        default: "main"
       version_override:
-        description: 'Override version (for releases)'
+        description: "Override version (for releases)"
         required: false
         type: string
     outputs:
@@ -30,7 +30,10 @@ on:
       artifact-name:
         description: "The name of the uploaded artifact"
         value: ${{ jobs.build.outputs.artifact-name }}
-
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build:
     name: Build Documentation (Optimized)
@@ -49,7 +52,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Full history for versioning
+          fetch-depth: 0 # Full history for versioning
 
       - name: Setup branch and paths
         id: branch-setup
@@ -88,10 +91,10 @@ jobs:
             # Use PEP 440 compliant format: YY.M.DD.increment+gitSHA
             version="${today}.${build_num}+${short_sha}"
           fi
-          
+
           echo "Generated version: $version"
           echo "version=$version" >> $GITHUB_OUTPUT
-          
+
           # Update setup.py with the version for Sphinx to use
           if [ -f "cli/setup.py" ]; then
             sed -i.bak "s/version=\"[^\"]*\"/version=\"$version\"/" cli/setup.py
@@ -122,7 +125,7 @@ jobs:
           channel-priority: strict
           environment-file: environment.yml
           activate-environment: edbook
-          use-mamba: true  # Use mamba for faster package resolution
+          use-mamba: true # Use mamba for faster package resolution
           condarc-file: .condarc
 
       - name: Cache Sphinx build directories
@@ -141,7 +144,7 @@ jobs:
         run: |
           # Build documentation with parallel processing
           mkdir -p versioned-docs/main versioned-docs/${{ env.BRANCH_SLUG }}
-          
+
           # Pre-create all LIST_OF_HOVER_TERMS.json files
           echo "⚡ Pre-creating hover terms files..."
           cd projects
@@ -156,16 +159,16 @@ jobs:
               fi
             fi
           done
-          
+
           # Create build script for parallel execution
           cat > ../build_project.sh << 'EOF'
           #!/bin/bash
           project="$1"
           branch_slug="$2"
-          
+
           echo "🔨 Building $project..."
           cd "projects/$project"
-          
+
           # Use optimized Sphinx build options
           sphinx-build -b html \
             -j auto \
@@ -174,7 +177,7 @@ jobs:
             -D html_show_sourcelink=false \
             -D html_copy_source=false \
             . "../../versioned-docs/$branch_slug/$project" 2>/dev/null
-          
+
           build_status=$?
           if [ $build_status -eq 0 ]; then
             echo "✅ $project built successfully"
@@ -182,9 +185,9 @@ jobs:
             echo "⚠️  $project build failed, continuing..."
           fi
           EOF
-          
+
           chmod +x ../build_project.sh
-          
+
           # Build projects in parallel (limit to 4 concurrent builds to avoid resource exhaustion)
           echo "🚀 Starting parallel builds..."
           project_list=""
@@ -194,9 +197,9 @@ jobs:
               project_list="$project_list $project_name"
             fi
           done
-          
+
           cd ..
-          
+
           # Use GNU parallel if available, otherwise use xargs with limited parallelism
           if command -v parallel >/dev/null 2>&1; then
             echo "Using GNU parallel for optimal performance..."
@@ -205,7 +208,7 @@ jobs:
             echo "Using xargs for parallel builds..."
             echo "$project_list" | tr ' ' '\n' | xargs -n1 -P4 -I{} ./build_project.sh {} ${{ env.BRANCH_SLUG }}
           fi
-          
+
           # Handle additional builds for different deployment types
           if [ "${{ inputs.deployment_type }}" == "push" ]; then
             echo "📁 Creating main archive copies..."
@@ -216,7 +219,7 @@ jobs:
             # For PRs, copy branch builds to main for version comparison
             cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/main/
           fi
-          
+
           echo "🎉 All builds completed!"
 
       - name: 📊 Build Statistics
@@ -292,3 +295,4 @@ jobs:
         run: |
           echo "deploy-url=https://edbook.hi.is" >> $GITHUB_OUTPUT
           echo "artifact-name=build-files" >> $GITHUB_OUTPUT
+
