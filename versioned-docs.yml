@@ -28,9 +28,8 @@ versions:
   # Show development version banner
   show_banner: true
   
-  # Use newest tag as latest
-  banner_newest_tag: true
-
+  # Use the most recent tag as latest
+  banner_recent_tag: true
 # Sphinx configuration
 sphinx:
   # Additional build arguments
