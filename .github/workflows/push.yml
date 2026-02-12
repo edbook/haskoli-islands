@@ -45,11 +45,16 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Upgrade conda
+        run: |
+          conda update -n base -c conda-forge conda -y -q
+          conda --version
+        shell: bash
+
       - name: Setup Conda (for deployment)
         uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: false
-          conda-version: "26.1.0"
           python-version: "3.13"
           channels: conda-forge,defaults
           channel-priority: true
