@@ -121,7 +121,8 @@ jobs:
       - name: Setup Conda (Optimized)
         uses: conda-incubator/setup-miniconda@v3
         with:
-          auto-update-conda: true
+          auto-update-conda: false
+          conda-version: "latest"
           python-version: "3.13"
           channels: conda-forge,defaults
           channel-priority: strict
