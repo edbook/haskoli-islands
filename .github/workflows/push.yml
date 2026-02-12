@@ -49,7 +49,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: false
-          conda-version: "latest"
+          conda-version: "26.1.0"
           python-version: "3.13"
           channels: conda-forge,defaults
           channel-priority: true
