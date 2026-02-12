@@ -191,9 +191,9 @@ jobs:
           CONTENT_TITLE: "Eitthvað fór úrskeiðis ☠️"
           REF_NAME: ${{ github.ref_name }}
           COLOR: "16711680"
-          AUTHOR_NAME: ${{ github.event.push.sender.login }}
-          AUTHOR_URL: ${{ github.event.push.sender.url }}
-          AUTHOR_AVATAR: ${{ github.event.push.sender.avatar_url }}
+          AUTHOR_NAME: ${{ github.event.sender.login }}
+          AUTHOR_URL: ${{ github.event.sender.html_url }}
+          AUTHOR_AVATAR: ${{ github.event.sender.avatar_url }}
         run: |
           workflow_url="https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           payload="$(jq -n \

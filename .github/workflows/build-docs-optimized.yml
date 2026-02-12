@@ -99,7 +99,7 @@ jobs:
 
           # Update setup.py with the version for Sphinx to use
           if [ -f "cli/setup.py" ]; then
-            sed -i.bak "s/version=\"[^\"]*\"/version=\"$version\"/" cli/setup.py
+            sed -E -i.bak "s/version\s*=\s*['\"][^'\"]*['\"]/version=\"$version\"/" cli/setup.py
             echo "Updated setup.py with version: $version"
           fi
 
@@ -205,10 +205,10 @@ jobs:
           # Use GNU parallel if available, otherwise use xargs with limited parallelism
           if command -v parallel >/dev/null 2>&1; then
             echo "Using GNU parallel for optimal performance..."
-            echo "$project_list" | tr ' ' '\n' | parallel -j4 ./build_project.sh {} ${{ env.BRANCH_SLUG }}
+            echo "$project_list" | tr ' ' '\n' | parallel -j4 ./build_project.sh {} "${{ env.BRANCH_SLUG }}"
           else
             echo "Using xargs for parallel builds..."
-            echo "$project_list" | tr ' ' '\n' | xargs -n1 -P4 -I{} ./build_project.sh {} ${{ env.BRANCH_SLUG }}
+            echo "$project_list" | tr ' ' '\n' | xargs -n1 -P4 -I{} ./build_project.sh {} "${{ env.BRANCH_SLUG }}"
           fi
 
           # Handle additional builds for different deployment types

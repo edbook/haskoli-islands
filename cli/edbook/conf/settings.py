@@ -172,7 +172,7 @@ html_context = {
     "display_github": True,
     "github_user": "edbook",
     "github_repo": "haskoli-islands",
-    "github_version": str("master/projects/" + os.path.split(os.getcwd())[1] + "/"),
+    "github_version": str("main/projects/" + os.path.split(os.getcwd())[1] + "/"),
     "conf_py_path": "/projects/" + os.path.split(os.getcwd())[1] + "/",
     "show_copyright": True,
 }
@@ -257,11 +257,9 @@ html_css_files = ["css/edbook.css"]
 # If true, links to the reST sources are added to the pages.
 # html_show_sourcelink = True
 
-# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-html_show_sphinx = False
-
-# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = False
+# html_show_sphinx and html_show_copyright are set earlier (lines 181-182)
+# html_show_sphinx = False
+# html_show_copyright = False
 # html_copy_source = False
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -573,7 +571,7 @@ def get_edbook_version():
                     if match:
                         return match.group(1)
                         
-    except Exception as e:
+    except (OSError, ValueError) as e:
         print(f"Warning: Could not read version from setup.py: {e}")
     return None  # fallback to None if version can't be read
 
