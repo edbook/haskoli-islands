@@ -176,8 +176,8 @@ jobs:
             -j auto \
             -q \
             --keep-going \
-            -D html_show_sourcelink=false \
-            -D html_copy_source=false \
+            -D html_show_sourcelink=0 \
+            -D html_copy_source=0 \
             . "../../versioned-docs/$branch_slug/$project"
 
           build_status=$?

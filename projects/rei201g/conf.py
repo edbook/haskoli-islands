@@ -48,7 +48,7 @@ extensions = [
 #    "ggbextension.ggb",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     "sphinx_togglebutton",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
