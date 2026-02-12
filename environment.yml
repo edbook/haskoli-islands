@@ -5,7 +5,7 @@ channels:
 dependencies:
   - pypandoc=1.*
   - sphinx=8.*
-  - python=3.12.*
+  - python=3.13.*
   - sphinx-rtd-theme=3.*
   - sphinxcontrib-youtube
   - sphinxcontrib-bibtex
