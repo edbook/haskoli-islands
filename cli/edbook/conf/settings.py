@@ -567,9 +567,9 @@ def get_edbook_version():
         
         for setup_path in possible_paths:
             if setup_path.exists():
-                with open(setup_path, 'r') as f:
+                with open(setup_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    match = re.search(r'version="([^"]*)"', content)
+                    match = re.search(r'version\s*=\s*["\']([^"\']+)["\']', content)
                     if match:
                         return match.group(1)
                         

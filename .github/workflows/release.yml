@@ -33,6 +33,7 @@ jobs:
       - name: Generate Calver release version
         id: calver
         run: |
+          set -euo pipefail
           if [ "${{ github.event_name }}" == "push" ] && [[ "${{ github.ref }}" == refs/tags/* ]]; then
             # Extract version from tag
             version="${{ github.ref_name }}"
@@ -40,10 +41,10 @@ jobs:
           else
             # Generate new Calver version for workflow_dispatch
             today=$(date +'%y.%m.%d')
-            
+
             # Get the latest tag for today to determine increment
             latest_tag=$(git tag -l "v${today}.*" --sort=-version:refname | head -n1)
-            
+
             if [ -z "$latest_tag" ]; then
               # First release of the day
               increment=1
@@ -52,12 +53,12 @@ jobs:
               increment=$(echo "$latest_tag" | sed "s/v${today}\.//" | cut -d'+' -f1)
               increment=$((increment + 1))
             fi
-            
+
             short_sha=$(git rev-parse --short HEAD)
             version="v${today}.${increment}+${short_sha}"
             tag="v${today}.${increment}"
           fi
-          
+
           echo "Generated release version: $version"
           echo "Generated release tag: $tag"
           echo "version=$version" >> $GITHUB_OUTPUT
@@ -111,6 +112,7 @@ jobs:
       - name: Generate release notes
         id: release-notes
         run: |
+          set -euo pipefail
           # Get commits since last tag
           last_tag=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
           if [ -n "$last_tag" ]; then
@@ -118,7 +120,7 @@ jobs:
           else
             commits=$(git log --pretty=format:"- %s" --max-count=10)
           fi
-          
+
           {
             echo "notes<<EOF"
             echo "## 📚 Documentation Release ${{ needs.generate-version.outputs.version }}"

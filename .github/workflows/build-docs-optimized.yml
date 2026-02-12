@@ -62,7 +62,7 @@ jobs:
             echo "BRANCH_SLUG=$branch_slug" >> $GITHUB_ENV
             echo "path-suffix=$branch_slug" >> $GITHUB_OUTPUT
           elif [ "${{ inputs.deployment_type }}" == "push" ]; then
-            echo "BRANCH_SLUG=main" >> $GITHUB_ENV  
+            echo "BRANCH_SLUG=main" >> $GITHUB_ENV
             echo "path-suffix=" >> $GITHUB_OUTPUT
           else
             # release
@@ -79,7 +79,7 @@ jobs:
             # Generate Calver in YY.M.DD.increment+[git short sha] format (PEP 440 compliant)
             today=$(date +'%y.%m.%d')
             short_sha=$(git rev-parse --short HEAD)
-            
+
             if [ "${{ inputs.deployment_type }}" == "pr" ]; then
               # For PRs, use hour/minute for uniqueness
               build_num=$(date +'%H%M')
@@ -87,7 +87,7 @@ jobs:
               # For push/release, use a counter based on commits today
               build_num=$(git rev-list --count --since="$(date +%Y-%m-%d)" HEAD)
             fi
-            
+
             # Use PEP 440 compliant format: YY.M.DD.increment+gitSHA
             version="${today}.${build_num}+${short_sha}"
           fi
@@ -133,7 +133,7 @@ jobs:
         with:
           path: |
             projects/*/build
-            projects/*/_build  
+            projects/*/_build
             projects/*/doctrees
           key: sphinx-cache-${{ runner.os }}-${{ hashFiles('projects/**/*.rst', 'projects/**/*.py', 'projects/**/*.md') }}
           restore-keys: |
@@ -238,7 +238,7 @@ jobs:
             if [ -d "versioned-docs/${{ env.BRANCH_SLUG }}/forsida" ] && [ -f "versioned-docs/${{ env.BRANCH_SLUG }}/forsida/index.html" ]; then
               echo "Using forsida project as branch landing page"
               cp -r versioned-docs/${{ env.BRANCH_SLUG }}/forsida/* versioned-docs/${{ env.BRANCH_SLUG }}/
-              
+
               # Create root redirect to branch (optimized with minimal HTML)
               echo '<!DOCTYPE html>' > versioned-docs/index.html
               echo '<html><head><meta charset="UTF-8"><title>Edbook PR Preview</title>' >> versioned-docs/index.html
@@ -250,7 +250,7 @@ jobs:
               echo '<html><head><meta charset="UTF-8"><title>Edbook PR Preview</title></head>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
               echo '<body><h1>📚 Edbook PR Preview</h1><p>This branch contains updated documentation projects.</p></body></html>' >> versioned-docs/${{ env.BRANCH_SLUG }}/index.html
             fi
-            
+
           elif [ "${{ inputs.deployment_type }}" == "push" ]; then
             # Push: Prepare for edbook.github.io deployment (forsida as root)
             if [ -d "versioned-docs/main/forsida" ] && [ -f "versioned-docs/main/forsida/index.html" ]; then
@@ -261,10 +261,10 @@ jobs:
               rm -rf _build/forsida  # Remove duplicate
             else
               echo "Forsida not found, copying all projects to build"
-              mkdir -p _build  
+              mkdir -p _build
               cp -r versioned-docs/main/* _build/
             fi
-            
+
           else
             # Release: Create versioned release structure
             echo "Preparing release deployment structure"

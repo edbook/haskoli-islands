@@ -52,18 +52,18 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             ## 📚 PR Documentation Deployed
-            
+
             Your PR documentation is available with enhanced build performance:
-            
+
             **🔗 PR Documentation:** ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/
             **🔗 Individual Projects:** Available at ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/[project-name]/
-            
+
             **✨ Performance Features:**
             - ⚡ Parallel builds (4x faster)
             - 💾 Intelligent caching
             - 🏗️ Optimized Sphinx configuration
             - 📊 Build statistics included
-            
+
             **Version:** `${{ needs.build-docs.outputs.version }}`
           reactions: rocket
 
