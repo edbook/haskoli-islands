@@ -3,5 +3,5 @@ channels:
   - conda-forge
   - defaults
 channel_priority: strict
-auto_activate: false
+auto_activate_base: false
 show_channel_urls: true

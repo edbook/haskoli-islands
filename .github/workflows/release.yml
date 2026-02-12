@@ -50,7 +50,7 @@ jobs:
           fi
 
           short_sha=$(git rev-parse --short HEAD)
-          version="v${today}.${increment}+${short_sha}"
+          version="${today}.${increment}+${short_sha}"
           tag="v${today}.${increment}"
 
           echo "Generated release version: $version"

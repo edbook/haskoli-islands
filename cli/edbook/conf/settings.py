@@ -588,11 +588,6 @@ if edbook_version:
     # Update copyright to include version info for better footer display
     copyright = f"{copyright} | Version {version}"
     
-    # Add version notice for development/PR builds (contains + indicating local version)
-    if '+' in version:
-        # Add development version notice to HTML templates
-        html_context["version_warning"] = f"You are viewing a development version ({version}). This may contain incomplete or experimental features."
-        html_context["is_development"] = True
 
 ######################################################################
 
