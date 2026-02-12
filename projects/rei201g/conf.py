@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 #
 # Valin efni í stærðfræði og reiknifræði documentation build configuration file, created by
 # sphinx-quickstart on Thu May 21 20:43:00 2015.
@@ -487,9 +486,9 @@ from docutils import nodes
 from docutils.nodes import Element
 
 # Hulda bætti mér við. Opna linka í öðrum gluggan.
-from sphinx.writers.html import HTMLTranslator
+from sphinx.writers.html5 import HTML5Translator
 
-class PatchedHTMLTranslator(HTMLTranslator):
+class PatchedHTMLTranslator(HTML5Translator):
     def visit_reference(self, node: Element) -> None:
         atts = {"class": "reference"}
         if node.get("internal") or "refuri" not in node:

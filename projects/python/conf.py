@@ -488,9 +488,9 @@ from docutils import nodes
 from docutils.nodes import Element
 
 # Hulda bætti mér við. Opna linka í öðrum gluggan.
-from sphinx.writers.html import HTMLTranslator
+from sphinx.writers.html5 import HTML5Translator
 
-class PatchedHTMLTranslator(HTMLTranslator):
+class PatchedHTMLTranslator(HTML5Translator):
     def visit_reference(self, node: Element) -> None:
         atts = {"class": "reference"}
         if node.get("internal") or "refuri" not in node:

@@ -17,7 +17,7 @@
 
 - **Repository root**: `environment.yml` (primary change target)
 - **Projects**: `projects/*/conf.py` (potential fixes)
-- **CI workflows**: `.github/workflows/` (no changes expected)
+- **CI workflows**: `.github/workflows/` (updated: Python version, conda upgrade step, Sphinx `-D` flags)
 
 ---
 
