@@ -1,0 +1,54 @@
+# sphinx-versioned-docs configuration for edbook
+# Configuration for building versioned documentation with version selector
+
+# Default settings - can be overridden by command line arguments
+default:
+  # Output directory for versioned docs
+  output_dir: "versioned-docs"
+  
+  # Source directory containing Sphinx projects
+  source_dir: "projects"
+  
+  # Git repository root
+  git_root: "."
+
+# Version management
+versions:
+  # Main stable branch
+  main_branch: "main"
+  
+  # Branches to include in version selector
+  branches:
+    - "main"
+    - "develop"
+  
+  # Tag pattern for releases (CalVer format: YY.M.DD.increment)
+  tag_regex: "^v?[0-9]{2}\\.[0-9]{1,2}\\.[0-9]{1,2}\\.[0-9]+.*"
+  
+  # Show development version banner
+  show_banner: true
+  
+  # Use the most recent tag as latest
+  banner_recent_tag: true
+# Sphinx configuration
+sphinx:
+  # Additional build arguments
+  build_args: [
+    "-D", "html_theme=sphinx_rtd_theme",
+    "-D", "html_show_sourcelink=true"
+  ]
+  
+  # Parallel builds for performance
+  parallel: true
+
+# UI customization
+ui:
+  # Version selector styling
+  version_selector:
+    position: "top-right"
+    style: "dropdown"
+  
+  # Banner for development versions
+  dev_banner:
+    enabled: true
+    message: "You are viewing documentation for a development version"
