@@ -211,15 +211,11 @@ jobs:
             echo "$project_list" | tr ' ' '\n' | xargs -n1 -P4 -I{} ./build_project.sh {} "${{ env.BRANCH_SLUG }}"
           fi
 
-          # Handle additional builds for different deployment types
-          if [ "${{ inputs.deployment_type }}" == "push" ]; then
-            echo "📁 Creating main archive copies..."
-            # For push, copy branch builds to main (faster than rebuilding)
-            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/main/
-          elif [ "${{ inputs.deployment_type }}" == "pr" ]; then
+          # For PRs, copy branch builds to main for version comparison
+          # (push builds already target versioned-docs/main/ directly via BRANCH_SLUG=main)
+          if [ "${{ inputs.deployment_type }}" = "pr" ]; then
             echo "📁 Creating main comparison copies..."
-            # For PRs, copy branch builds to main for version comparison
-            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/main/
+            cp -r "versioned-docs/${{ env.BRANCH_SLUG }}/"* versioned-docs/main/
           fi
 
           echo "🎉 All builds completed!"
