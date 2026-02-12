@@ -69,54 +69,53 @@ jobs:
 
   notify-discord-pr:
     name: Notify Discord (open PR)
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: [build-docs]
     if: github.event.action == 'opened'
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Notify open PR
+        env:
+          CONTENT_TITLE: "Nýtt PR opnað"
+          TITLE: ${{ github.event.pull_request.title }}
+          COLOR: "2061822"
+          DESCRIPTION: ${{ github.event.pull_request.body }}
+          URL: ${{ github.event.pull_request.html_url }}
+          AUTHOR_NAME: ${{ github.event.pull_request.user.login }}
+          AUTHOR_URL: ${{ github.event.pull_request.user.html_url }}
+          AUTHOR_AVATAR: ${{ github.event.pull_request.user.avatar_url }}
+          BRANCH: ${{ github.head_ref }}
+          DEPLOY_URL: ${{ needs.build-docs.outputs.deploy-url }}
         run: |
-          content_title="Nýtt PR opnað"
-          title="${{ github.event.pull_request.title }}"
-          color=2061822
-          description="${{ github.event.pull_request.body }}"
-          url=${{ github.event.pull_request.html_url }}
-          author_name=${{ github.event.pull_request.user.login}}
-          author_url=${{ github.event.pull_request.user.url}}
-          author_avatar=${{ github.event.pull_request.user.avatar_url}}
-          branch=${{ github.head_ref }}
-
-          payload=$(cat <<EOF
-          {
-            "content": "$content_title",
-            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
-            "embeds": [
-              {
-                "title": "$title",
-                "description": "$description",
-                "url": "$url",
-                "color": $color,
-                "fields": [
-                  {
-                    "name": "Build Performance",
-                    "value": "⚡ Parallel builds enabled"
-                  },
-                  {
-                    "name": "url",
-                    "value": "[Skoða á edbook](${{ needs.build-docs.outputs.deploy-url }}${branch})"
-                  }
-                ],
-                "author": {
-                  "name": "$author_name",
-                  "url": "$author_url",
-                  "icon_url": "$author_avatar"
+          payload="$(jq -n \
+            --arg ct "$CONTENT_TITLE" \
+            --arg title "$TITLE" \
+            --arg desc "$DESCRIPTION" \
+            --arg url "$URL" \
+            --arg author_name "$AUTHOR_NAME" \
+            --arg author_url "$AUTHOR_URL" \
+            --arg author_avatar "$AUTHOR_AVATAR" \
+            --arg branch "$BRANCH" \
+            --arg deploy_url "$DEPLOY_URL" \
+            --argjson color "$COLOR" \
+            '{
+              content: $ct,
+              avatar_url: "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+              embeds: [
+                {
+                  title: $title,
+                  description: $desc,
+                  url: $url,
+                  color: $color,
+                  fields: [
+                    { name: "Build Performance", value: "⚡ Parallel builds enabled" },
+                    { name: "url", value: ("[Skoða á edbook](" + $deploy_url + $branch + ")") }
+                  ],
+                  author: { name: $author_name, url: $author_url, icon_url: $author_avatar }
                 }
-              }
-            ]
-          }
-          EOF
-          )
-          ./.github/discord.sh  \
-            -w ${{ secrets.DISCORD_WEBHOOK }} \
+              ]
+            }')"
+          ./.github/discord.sh \
+            -w "${{ secrets.DISCORD_WEBHOOK }}" \
             -c "$payload"

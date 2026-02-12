@@ -1,16 +1,22 @@
 name: Release
 
+on:
+  workflow_dispatch:
+    inputs:
+      bump_type:
+        description: 'Type of release'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+        - patch
+        - major
+
 permissions:
   contents: write
   pages: write
   id-token: write
 
-  notify-discord-release:
-    needs: build-docs
-    if: github.event_name == 'workflow_dispatch' && needs.build-docs.result == 'success'
-    runs-on: ubuntu-latest
-    steps:
-      # existing notification steps…
 jobs:
   generate-version:
     name: Generate Release Version
@@ -142,51 +148,55 @@ jobs:
   notify-discord-release:
     needs: [generate-version, build-docs, create-release]
     name: Notify Discord (release)
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: always() && needs.build-docs.result == 'success'
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Notify release
+        env:
+          VERSION: ${{ needs.generate-version.outputs.version }}
+          TAG: ${{ needs.generate-version.outputs.tag }}
+          REPO: ${{ github.repository }}
+          RELEASE_RESULT: ${{ needs.create-release.result }}
         run: |
-          if [ "${{ needs.create-release.result }}" == "success" ]; then
+          if [ "$RELEASE_RESULT" == "success" ]; then
             content_title="🎉 Ný útgáfa í boði!"
             color=65280
             description="Ný útgáfa af Edbook hefur verið gefin út"
           else
             content_title="📚 Skjöl uppfærð"
-            color=2061822  
+            color=2061822
             description="Skjöl hafa verið endurbyggð"
           fi
-          
-          title="Release ${{ needs.generate-version.outputs.version }}"
-          url="https://github.com/${{ github.repository }}/releases/tag/${{ needs.generate-version.outputs.tag }}"
 
-          payload=$(cat <<EOF
-          {
-            "content": "$content_title",
-            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
-            "embeds": [
-              {
-                "title": "$title",
-                "description": "$description",
-                "url": "$url",
-                "color": $color,
-                "fields": [
-                  {
-                    "name": "Version",
-                    "value": "${{ needs.generate-version.outputs.version }}"
-                  },
-                  {
-                    "name": "Documentation",
-                    "value": "[Skoða á edbook](https://edbook.hi.is)"
-                  }
-                ]
-              }
-            ]
-          }
-          EOF
-          )
-          ./.github/discord.sh  \
-            -w ${{ secrets.DISCORD_WEBHOOK }} \
+          title="Release ${VERSION}"
+          url="https://github.com/${REPO}/releases/tag/${TAG}"
+
+          payload="$(jq -n \
+            --arg ct "$content_title" \
+            --arg title "$title" \
+            --arg desc "$description" \
+            --arg url "$url" \
+            --argjson color "$color" \
+            --arg version "$VERSION" \
+            --arg edbook_url "https://edbook.hi.is" \
+            '{
+              content: $ct,
+              avatar_url: "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+              embeds: [
+                {
+                  title: $title,
+                  description: $desc,
+                  url: $url,
+                  color: $color,
+                  fields: [
+                    { name: "Version", value: $version },
+                    { name: "Documentation", value: ("[Skoða á edbook](" + $edbook_url + ")") }
+                  ]
+                }
+              ]
+            }')"
+          ./.github/discord.sh \
+            -w "${{ secrets.DISCORD_WEBHOOK }}" \
             -c "$payload"
