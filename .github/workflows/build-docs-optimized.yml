@@ -39,9 +39,9 @@ jobs:
     name: Build Documentation (Optimized)
     runs-on: ubuntu-latest
     outputs:
-      deploy-url: ${{ steps.deployment.outputs.page_url }}
+      deploy-url: ${{ steps.finalize.outputs.deploy-url }}
       version: ${{ steps.calver.outputs.version }}
-      artifact-name: ${{ steps.upload.outputs.artifact-name }}
+      artifact-name: ${{ steps.finalize.outputs.artifact-name }}
     environment:
       name: ${{ inputs.environment_name }}
       url: ${{ steps.deployment.outputs.page_url }}${{ steps.branch-setup.outputs.path-suffix }}
@@ -291,10 +291,18 @@ jobs:
         with:
           preview: true
 
-      - name: Set outputs for push deployments
-        if: inputs.deployment_type == 'push'
-        id: push-outputs
+      - name: Finalize outputs
+        id: finalize
+        if: always()
         run: |
-          echo "deploy-url=https://edbook.hi.is" >> $GITHUB_OUTPUT
-          echo "artifact-name=build-files" >> $GITHUB_OUTPUT
+          if [ "${{ inputs.deployment_type }}" = "pr" ]; then
+            echo "deploy-url=${{ steps.deployment.outputs.page_url }}" >> $GITHUB_OUTPUT
+            echo "artifact-name=${{ steps.upload.outputs.artifact_id }}" >> $GITHUB_OUTPUT
+          elif [ "${{ inputs.deployment_type }}" = "push" ]; then
+            echo "deploy-url=https://edbook.hi.is" >> $GITHUB_OUTPUT
+            echo "artifact-name=build-files" >> $GITHUB_OUTPUT
+          else
+            echo "deploy-url=" >> $GITHUB_OUTPUT
+            echo "artifact-name=" >> $GITHUB_OUTPUT
+          fi
 
