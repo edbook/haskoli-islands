@@ -56,12 +56,14 @@ jobs:
 
       - name: Setup branch and paths
         id: branch-setup
+        env:
+          RAW_REF: ${{ github.head_ref || github.ref_name }}
         run: |
-          if [ "${{ inputs.deployment_type }}" == "pr" ]; then
-            branch_slug=$(./.github/slugify.sh ${{ github.head_ref || github.ref_name }})
+          if [ "${{ inputs.deployment_type }}" = "pr" ]; then
+            branch_slug=$(./.github/slugify.sh "$RAW_REF")
             echo "BRANCH_SLUG=$branch_slug" >> $GITHUB_ENV
             echo "path-suffix=$branch_slug" >> $GITHUB_OUTPUT
-          elif [ "${{ inputs.deployment_type }}" == "push" ]; then
+          elif [ "${{ inputs.deployment_type }}" = "push" ]; then
             echo "BRANCH_SLUG=main" >> $GITHUB_ENV
             echo "path-suffix=" >> $GITHUB_OUTPUT
           else

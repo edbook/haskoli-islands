@@ -104,6 +104,9 @@ jobs:
           ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
 
       - name: Push to edbook.github.io
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          VERSION: ${{ needs.build-docs.outputs.version }}
         run: |
           # Sync build to production repository
           rsync -avh --delete _build/ ./org-repo/
@@ -118,7 +121,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "${{ github.event.head_commit.message }}" -m "Version: ${{ needs.build-docs.outputs.version }}" -m "https://github.com/edbook/haskoli-islands/commit/$GITHUB_SHA"
+            git commit -m "$COMMIT_MSG" -m "Version: $VERSION" -m "https://github.com/${{ github.repository }}/commit/$GITHUB_SHA"
             git push
             echo "Successfully deployed to production"
           fi
