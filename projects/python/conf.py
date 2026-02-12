@@ -125,10 +125,10 @@ source_suffix = ".rst"
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
 
-# The master toctree document.
-master_doc = "index"
+# The root toctree document (renamed from master_doc in Sphinx 4+).
+root_doc = "index"
 
-# General information about the project.<<<<<<< HEAD:src/projects/python/conf.py
+# General information about the project.
 project = "Fyrirlestrarnótur um Python"
 copyright = "2021,Kristján Jónasson"
 
@@ -482,7 +482,7 @@ epub_exclude_files = ["search.html"]
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {"http://docs.python.org/": None}
+intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
 
 from docutils import nodes
 from docutils.nodes import Element
