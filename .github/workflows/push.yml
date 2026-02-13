@@ -88,9 +88,9 @@ jobs:
             echo "Building $project for production..."
             cd "$project"
             sphinx-build -b html -j auto -q --keep-going \
-              -D html_show_sourcelink=false \
-              -D html_copy_source=false \
-              . "../../_build/$project" 2>/dev/null || echo "Build failed for $project, continuing..."
+              -D html_show_sourcelink=0 \
+              -D html_copy_source=0 \
+              . "../../_build/$project" || echo "Build failed for $project, continuing..."
           '
 
           cd ..
