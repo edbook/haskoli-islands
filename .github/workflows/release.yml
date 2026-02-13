@@ -1,16 +1,6 @@
 name: Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      bump_type:
-        description: 'Type of release'
-        required: true
-        default: 'patch'
-        type: choice
-        options:
-        - patch
-        - major
   push:
     branches: [main]
     paths:
