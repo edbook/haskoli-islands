@@ -128,7 +128,7 @@ Mólmassi, massi og mól tengjast með formúlunni
 
  .. math::
 
-     \frac{100\cdot 1 \times 10^{18} \text{sameindir}}{6,022\times10^{23}\, \text{sameindir/mól}}=0,00166\text{ mól}
+     \frac{100\cdot 1 \times 10^{18} \text{sameindir}}{6,022\times10^{23}\, \text{sameindir/mól}}=0,000166\text{ mól}
 
  Til að finna massa sameindanna þarf að finna mólmassa efnanna. Fyrir það er hægt að nota t.d. `Ptable <https://ptable.com/?lang=is>`_. Fyrir járn og súrefni fæst í lotukerfinu:
 
