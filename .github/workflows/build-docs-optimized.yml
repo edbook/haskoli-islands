@@ -272,7 +272,7 @@ jobs:
           else
             # Release: Create versioned release structure
             echo "Preparing release deployment structure"
-            cp -r versioned-docs/main/* versioned-docs/
+            cp -r versioned-docs/${{ env.BRANCH_SLUG }}/* versioned-docs/
           fi
 
       - name: Setup Pages (for PR deployments)
