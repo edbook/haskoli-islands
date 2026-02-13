@@ -1,0 +1,198 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump_type:
+        description: 'Type of release'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+        - patch
+        - major
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-version:
+    name: Generate Release Version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.calver.outputs.version }}
+      tag: ${{ steps.calver.outputs.tag }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Calver release version
+        id: calver
+        run: |
+          set -euo pipefail
+          # Generate new Calver version
+          today=$(date +'%y.%m.%d')
+
+          # Get the latest tag for today to determine increment
+          latest_tag=$(git tag -l "v${today}.*" --sort=-version:refname | head -n1)
+
+          if [ -z "$latest_tag" ]; then
+            # First release of the day
+            increment=1
+          else
+            # Extract increment from latest tag and add 1
+            increment=$(echo "$latest_tag" | sed "s/v${today}\.//" | cut -d'+' -f1)
+            increment=$((increment + 1))
+          fi
+
+          short_sha=$(git rev-parse --short HEAD)
+          version="${today}.${increment}+${short_sha}"
+          tag="v${today}.${increment}"
+
+          echo "Generated release version: $version"
+          echo "Generated release tag: $tag"
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+
+  build-docs:
+    name: Build Release Documentation
+    needs: generate-version
+    uses: ./.github/workflows/build-docs-optimized.yml
+    with:
+      environment_name: release
+      deployment_type: release
+      version_override: ${{ needs.generate-version.outputs.version }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: [generate-version, build-docs]
+    if: github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update setup.py version
+        run: |
+          test -f cli/setup.py || { echo "cli/setup.py not found"; exit 1; }
+          sed -E -i.bak "s/version\s*=\s*['\"][^'\"]*['\"]/version=\"${{ needs.generate-version.outputs.version }}\"/" cli/setup.py
+          echo "Updated setup.py with version: ${{ needs.generate-version.outputs.version }}"
+
+      - name: Commit version update
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add cli/setup.py
+          git commit -m "chore: bump version to ${{ needs.generate-version.outputs.version }}"
+          git push
+      - name: Create and push tag
+        run: |
+          git tag "${{ needs.generate-version.outputs.tag }}"
+          git push origin "${{ needs.generate-version.outputs.tag }}"
+
+      - name: Generate release notes
+        id: release-notes
+        run: |
+          set -euo pipefail
+          # Get commits since last tag
+          last_tag=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
+          if [ -n "$last_tag" ]; then
+            commits=$(git log --pretty=format:"- %s" ${last_tag}..HEAD)
+          else
+            commits=$(git log --pretty=format:"- %s" --max-count=10)
+          fi
+
+          {
+            echo "notes<<EOF"
+            echo "## 📚 Documentation Release ${{ needs.generate-version.outputs.version }}"
+            echo ""
+            echo "### What's Changed"
+            echo "$commits"
+            echo ""
+            echo "### 🔗 Links"
+            echo "- **Documentation**: https://edbook.hi.is"
+            echo "- **Version**: \`${{ needs.generate-version.outputs.version }}\`"
+            echo "- **Build**: Generated with modern Sphinx build system"
+            echo ""
+            echo "---"
+            echo "🤖 Generated with [Claude Code](https://claude.ai/code)"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.generate-version.outputs.tag }}
+          name: Release ${{ needs.generate-version.outputs.version }}
+          body: ${{ steps.release-notes.outputs.notes }}
+          draft: false
+          prerelease: false
+
+  notify-discord-release:
+    needs: [generate-version, build-docs, create-release]
+    name: Notify Discord (release)
+    runs-on: ubuntu-latest
+    if: always() && needs.build-docs.result == 'success'
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Notify release
+        env:
+          VERSION: ${{ needs.generate-version.outputs.version }}
+          TAG: ${{ needs.generate-version.outputs.tag }}
+          REPO: ${{ github.repository }}
+          RELEASE_RESULT: ${{ needs.create-release.result }}
+        run: |
+          if [ "$RELEASE_RESULT" == "success" ]; then
+            content_title="🎉 Ný útgáfa í boði!"
+            color=65280
+            description="Ný útgáfa af Edbook hefur verið gefin út"
+          else
+            content_title="📚 Skjöl uppfærð"
+            color=2061822
+            description="Skjöl hafa verið endurbyggð"
+          fi
+
+          title="Release ${VERSION}"
+          url="https://github.com/${REPO}/releases/tag/${TAG}"
+
+          payload="$(jq -n \
+            --arg ct "$content_title" \
+            --arg title "$title" \
+            --arg desc "$description" \
+            --arg url "$url" \
+            --argjson color "$color" \
+            --arg version "$VERSION" \
+            --arg edbook_url "https://edbook.hi.is" \
+            '{
+              content: $ct,
+              avatar_url: "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+              embeds: [
+                {
+                  title: $title,
+                  description: $desc,
+                  url: $url,
+                  color: $color,
+                  fields: [
+                    { name: "Version", value: $version },
+                    { name: "Documentation", value: ("[Skoða á edbook](" + $edbook_url + ")") }
+                  ]
+                }
+              ]
+            }')"
+          ./.github/discord.sh \
+            -w "${{ secrets.DISCORD_WEBHOOK }}" \
+            -c "$payload"

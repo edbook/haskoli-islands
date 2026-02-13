@@ -1,13 +1,16 @@
-name: Pull request
+name: Pull Request
+
 permissions:
   contents: read
   pages: write
   id-token: write
   pull-requests: write
   issues: write
+
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pr-${{ github.event.pull_request.number }}"
+  cancel-in-progress: true
+
 on:
   pull_request:
     branches: [main, conda]
@@ -16,73 +19,23 @@ on:
       - "projects/**"
       - "cli/**"
       - ".github/**"
+
 jobs:
-  setup:
-    name: Setup
-    runs-on: ubuntu-latest
-    outputs:
-      deploy-url: ${{ steps.deployment.outputs.page_url }}${{ env.BRANCH_SLUG }}
-    environment:
-      name: ${{ github.head_ref }}
-      url: ${{ steps.deployment.outputs.page_url }}${{ env.BRANCH_SLUG }}
-    defaults:
-      run:
-        shell: bash -el {0}
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-      - name: Extract branch name
-        id: extract_branch
-        shell: bash
-        run: |
-          echo ${{ github.head_ref }}
-          slug=$(./.github/slugify.sh ${{ github.head_ref || github.ref_name }})
-          echo "BRANCH_SLUG=$slug" >> $GITHUB_ENV
-      - name: Setup Conda
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          auto-update-conda: false
-          python-version: 3.10.10
-          channels: conda-forge,defaults
-          #       mamba-version: "*"
-          channel-priority: true
-          #       use-mamba: false
-          environment-file: environment.yml
-          activate-environment: edbook
-      # TODO: needs work
-      # - name: Check for Conda cache
-      #   id: conda-cache
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ~/conda_pkgs_dir
-      #     key: conda-${{ runner.os }}-${{hashFiles('environment.yml')}}
-      - name: 🚧 Build all (pr)
-        # if: github.event_name == 'pull_request' && github.event.label.name == 'build-all'
-        id: build-all
-        run: |
-          edbook build-all
-      - name: 📂 Prepare pages for feature deployment
-        run: |
-          rsync -avh _build/forsida/ ./_build/
-          rm -rf _build/forsida
-          rsync -avh --mkpath _build/ dist/${{ env.BRANCH_SLUG }}/
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-      - name: 📂 Deploy feature to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          preview: true
+  build-docs:
+    name: Build PR Documentation
+    uses: ./.github/workflows/build-docs-optimized.yml
+    with:
+      environment_name: ${{ github.head_ref }}
+      deployment_type: pr
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
   announce-url:
     name: Announce feature url
     runs-on: ubuntu-latest
-    needs: setup
-    # if: github.event.action == 'opened'
+    needs: build-docs
     steps:
       - name: Find Comment
         uses: peter-evans/find-comment@v2
@@ -90,70 +43,80 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: "github-actions[bot]"
-          body-includes: Your deployment is here
+          body-includes: PR Documentation Deployed
 
-      - name: Create comment
-        if: steps.fc.outputs.comment-id == ''
+      - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v3
         with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
+          edit-mode: replace
           body: |
-            Your deployment is here ${{needs.setup.outputs.deploy-url}}
-          reactions: rocket
+            ## 📚 PR Documentation Deployed
 
-      # - name: Update comment
-      #   if: steps.fc.outputs.comment-id != ''
-      #   uses: peter-evans/create-or-update-comment@v2
-      #   with:
-      #     comment-id: ${{ steps.fc.outputs.comment-id }}
-      #     body: |
-      #       Your deployment is here ${{needs.build-all.outputs.deploy-url}}
-      #     reactions: hooray
+            Your PR documentation is available with enhanced build performance:
+
+            **🔗 PR Documentation:** ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/
+            **🔗 Individual Projects:** Available at ${{ needs.build-docs.outputs.deploy-url }}${{ github.head_ref }}/[project-name]/
+
+            **✨ Performance Features:**
+            - ⚡ Parallel builds (4x faster)
+            - 💾 Intelligent caching
+            - 🏗️ Optimized Sphinx configuration
+            - 📊 Build statistics included
+
+            **Version:** `${{ needs.build-docs.outputs.version }}`
+          reactions: rocket
 
   notify-discord-pr:
     name: Notify Discord (open PR)
-    runs-on: ubuntu-20.04
-    needs: [setup]
+    runs-on: ubuntu-latest
+    needs: [build-docs]
     if: github.event.action == 'opened'
     steps:
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Notify open PR
+        env:
+          CONTENT_TITLE: "Nýtt PR opnað"
+          TITLE: ${{ github.event.pull_request.title }}
+          COLOR: "2061822"
+          DESCRIPTION: ${{ github.event.pull_request.body }}
+          URL: ${{ github.event.pull_request.html_url }}
+          AUTHOR_NAME: ${{ github.event.pull_request.user.login }}
+          AUTHOR_URL: ${{ github.event.pull_request.user.html_url }}
+          AUTHOR_AVATAR: ${{ github.event.pull_request.user.avatar_url }}
+          BRANCH: ${{ github.head_ref }}
+          DEPLOY_URL: ${{ needs.build-docs.outputs.deploy-url }}
         run: |
-          content_title="Nýtt PR opnað"
-          title="${{ github.event.pull_request.title }}"
-          color=2061822
-          description="${{ github.event.pull_request.body }}"
-          url=${{ github.event.pull_request.html_url }}
-          author_name=${{ github.event.pull_request.user.login}}
-          author_url=${{ github.event.pull_request.user.url}}
-          author_avatar=${{ github.event.pull_request.user.avatar_url}}
-          branch=${{ github.head_ref }}
-
-          payload=$(cat <<EOF
-          {
-            "content": "$content_title",
-            "avatar_url": "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
-            "embeds": [
-              {
-                "title": "$title",
-                "description": "$description",
-                "url": "$url",
-                "color": "$color",
-                "fields": [
-                  "name": "url",
-                  "value": "[Skoða á edbook](https://edbook.hi.is/staging/edbook/${branch})"
-                ]
-                "author": {
-                  "name": "$author_name",
-                  "url": "$author_url",
-                  "icon_url": "$author_avatar"
+          payload="$(jq -n \
+            --arg ct "$CONTENT_TITLE" \
+            --arg title "$TITLE" \
+            --arg desc "$DESCRIPTION" \
+            --arg url "$URL" \
+            --arg author_name "$AUTHOR_NAME" \
+            --arg author_url "$AUTHOR_URL" \
+            --arg author_avatar "$AUTHOR_AVATAR" \
+            --arg branch "$BRANCH" \
+            --arg deploy_url "$DEPLOY_URL" \
+            --argjson color "$COLOR" \
+            '{
+              content: $ct,
+              avatar_url: "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+              embeds: [
+                {
+                  title: $title,
+                  description: $desc,
+                  url: $url,
+                  color: $color,
+                  fields: [
+                    { name: "Build Performance", value: "⚡ Parallel builds enabled" },
+                    { name: "url", value: ("[Skoða á edbook](" + $deploy_url + $branch + ")") }
+                  ],
+                  author: { name: $author_name, url: $author_url, icon_url: $author_avatar }
                 }
-              }
-            ]
-          }
-          EOF
-          )
-          ./.github/discord.sh  \
-            -w ${{ secrets.DISCORD_WEBHOOK }} \
+              ]
+            }')"
+          ./.github/discord.sh \
+            -w "${{ secrets.DISCORD_WEBHOOK }}" \
             -c "$payload"

@@ -1,0 +1,55 @@
+name: Pull Request Merge
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main, conda]
+
+jobs:
+  notify-discord-merge:
+    name: Notify Discord (merged PR)
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Notify merge
+        env:
+          CONTENT_TITLE: "Ný útgáfa er kominn í loftið 🎉"
+          TITLE: "${{ github.base_ref }} ↩️ ${{ github.head_ref }}"
+          COLOR: "32768"
+          DESCRIPTION: ${{ github.event.pull_request.body }}
+          URL: ${{ github.event.pull_request.html_url }}
+          AUTHOR_NAME: ${{ github.event.pull_request.user.login }}
+          AUTHOR_URL: ${{ github.event.pull_request.user.html_url }}
+          AUTHOR_AVATAR: ${{ github.event.pull_request.user.avatar_url }}
+        run: |
+          payload="$(jq -n \
+            --arg ct "$CONTENT_TITLE" \
+            --arg title "$TITLE" \
+            --arg desc "$DESCRIPTION" \
+            --arg url "$URL" \
+            --arg author_name "$AUTHOR_NAME" \
+            --arg author_url "$AUTHOR_URL" \
+            --arg author_avatar "$AUTHOR_AVATAR" \
+            --arg edbook_url "https://edbook.hi.is" \
+            --argjson color "$COLOR" \
+            '{
+              content: $ct,
+              avatar_url: "https://www.shareicon.net/data/128x128/2015/08/28/92005_social-media_512x512.png",
+              embeds: [
+                {
+                  title: $title,
+                  description: $desc,
+                  url: $url,
+                  color: $color,
+                  fields: [
+                    { name: "url", value: ("[Skoða á edbook](" + $edbook_url + ")") }
+                  ],
+                  author: { name: $author_name, url: $author_url, icon_url: $author_avatar }
+                }
+              ]
+            }')"
+          ./.github/discord.sh \
+            -w "${{ secrets.DISCORD_WEBHOOK }}" \
+            -c "$payload"
