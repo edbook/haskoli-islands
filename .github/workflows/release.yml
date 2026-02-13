@@ -11,6 +11,15 @@ on:
         options:
         - patch
         - major
+  push:
+    branches: [main]
+    paths:
+      - "projects/**"
+      - "cli/**"
+
+concurrency:
+  group: "release"
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -75,7 +84,6 @@ jobs:
     name: Create GitHub Release
     runs-on: ubuntu-latest
     needs: [generate-version, build-docs]
-    if: github.event_name == 'workflow_dispatch'
     permissions:
       contents: write
       pull-requests: write
