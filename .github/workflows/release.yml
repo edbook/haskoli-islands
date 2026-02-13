@@ -76,28 +76,16 @@ jobs:
     needs: [generate-version, build-docs]
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Update setup.py version
-        run: |
-          test -f cli/setup.py || { echo "cli/setup.py not found"; exit 1; }
-          sed -E -i.bak "s/version\s*=\s*['\"][^'\"]*['\"]/version=\"${{ needs.generate-version.outputs.version }}\"/" cli/setup.py
-          echo "Updated setup.py with version: ${{ needs.generate-version.outputs.version }}"
-
-      - name: Commit version update
+      - name: Create and push tag
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add cli/setup.py
-          git commit -m "chore: bump version to ${{ needs.generate-version.outputs.version }}"
-          git push
-      - name: Create and push tag
-        run: |
           git tag "${{ needs.generate-version.outputs.tag }}"
           git push origin "${{ needs.generate-version.outputs.tag }}"
 
