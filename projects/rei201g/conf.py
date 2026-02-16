@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 #
 # Valin efni í stærðfræði og reiknifræði documentation build configuration file, created by
 # sphinx-quickstart on Thu May 21 20:43:00 2015.
@@ -48,7 +47,7 @@ extensions = [
 #    "ggbextension.ggb",
     # Extension for toggleable blocks of text (click to show/hide).
     # See README.txt in toggleblock-extension folder.
-    "toggleblock.toggleBlock",
+    "sphinxcontrib.toggleblock",
     "sphinx_togglebutton",
     # Extension for embedding sage cells (https://sagecell.sagemath.org/).
     # See README.txt in sagecell-extension folder.
@@ -125,8 +124,8 @@ source_suffix = ".rst"
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
 
-# The master toctree document.
-master_doc = "index"
+# The root toctree document (renamed from master_doc in Sphinx 4+).
+root_doc = "index"
 
 # General information about the project.
 project = "Valin efni í stærðfræði og reiknifræði"
@@ -481,15 +480,15 @@ epub_exclude_files = ["search.html"]
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {"http://docs.python.org/": None}
+intersphinx_mapping = {"python": ("https://docs.python.org/3", None)}
 
 from docutils import nodes
 from docutils.nodes import Element
 
 # Hulda bætti mér við. Opna linka í öðrum gluggan.
-from sphinx.writers.html import HTMLTranslator
+from sphinx.writers.html5 import HTML5Translator
 
-class PatchedHTMLTranslator(HTMLTranslator):
+class PatchedHTMLTranslator(HTML5Translator):
     def visit_reference(self, node: Element) -> None:
         atts = {"class": "reference"}
         if node.get("internal") or "refuri" not in node:
