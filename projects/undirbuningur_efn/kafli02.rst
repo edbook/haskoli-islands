@@ -146,7 +146,7 @@ Mólmassi, massi og mól tengjast með formúlunni
 
  .. math::
 
-     m= \mathcal{M} \cdot n = 0,00166\text{ mól} \cdot 71,844 \text{ g/mól} = 0,119 \text{ g}
+     m= \mathcal{M} \cdot n = 0,000166\text{ mól} \cdot 71,844 \text{ g/mól} = 0,0119 \text{ g}
 
  Eins og sjá má nær massi 100 trilljón sameinda ekki einu sinni einu grammi!
 
