@@ -38,69 +38,12 @@ jobs:
     environment:
       name: ${{ github.ref_name }}
       url: ${{ needs.build-docs.outputs.deploy-url }}
-    defaults:
-      run:
-        shell: bash -el {0}
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Upgrade conda
-        run: |
-          conda update -n base -c conda-forge conda -y -q
-          conda --version
-        shell: bash
-
-      - name: Setup Conda (for deployment)
-        uses: conda-incubator/setup-miniconda@v3
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
         with:
-          auto-update-conda: false
-          python-version: "3.13"
-          channels: conda-forge,defaults
-          channel-priority: true
-          environment-file: environment.yml
-          activate-environment: edbook
-          use-mamba: true
-
-      - name: Build for production deployment
-        run: |
-          # Use the optimized build for production
-          mkdir -p _build
-          cd projects
-
-          # Build projects in parallel with optimizations
-          project_list=""
-          for project in */; do
-            if [ -d "$project" ] && [ -f "$project/conf.py" ]; then
-              project_name=${project%/}
-              project_list="$project_list $project_name"
-
-              # Pre-create hover terms file
-              if [ ! -f "$project/LIST_OF_HOVER_TERMS.json" ]; then
-                echo "[]" > "$project/LIST_OF_HOVER_TERMS.json"
-              fi
-            fi
-          done
-
-          # Use xargs for parallel builds (more reliable than GNU parallel)
-          echo "$project_list" | tr ' ' '\n' | xargs -n1 -P4 -I{} bash -c '
-            project="{}"
-            echo "Building $project for production..."
-            cd "$project"
-            sphinx-build -b html -j auto -q --keep-going \
-              -D html_show_sourcelink=0 \
-              -D html_copy_source=0 \
-              . "../../_build/$project" || echo "Build failed for $project, continuing..."
-          '
-
-          cd ..
-
-          # Move forsida to root for production
-          if [ -d "_build/forsida" ]; then
-            echo "Moving forsida to root for production"
-            cp -r _build/forsida/* _build/
-            rm -rf _build/forsida
-          fi
+          name: production-build
+          path: _build
 
       - name: Checkout edbook.github.io
         uses: actions/checkout@v4
