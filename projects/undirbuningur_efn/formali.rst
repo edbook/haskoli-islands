@@ -38,4 +38,4 @@ Mikið vatn hefur runnið til sjávar síðan þá en nútímaefnafræðin tekur
 
 .. warning::
 
-  Þetta efni var skrifað sumarið 2019 og er birt með fyrirvara um villur. Ef rekist er á villur, hvort sem stafsetnings eða efnislegar, má endilega láta vita með tölvupóst í *sef6@hi.is* eða *sgg23@hi.is*
+  Þetta efni var skrifað sumarið 2019 og er birt með fyrirvara um villur. Ef rekist er á villur, hvort sem stafsetnings eða efnislegar, má endilega láta vita með tölvupóst í *bsm@hi.is*.

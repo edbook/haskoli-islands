@@ -134,3 +134,7 @@ Háskóla Íslands og aðstoðar Stræðfræðistofu Raunvísindastofnunar.
 
 Ábyrgðarmaður: Benedikt Magnússon <bsm@hi.is>.
 
+.. raw:: html
+
+   <!-- deploy-verify: 002-fix-deploy-artifacts -->
+
