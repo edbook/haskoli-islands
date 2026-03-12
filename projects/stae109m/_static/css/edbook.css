@@ -1,0 +1,126 @@
+@media screen and (max-width: 1100px){
+	.wy-body-for-nav{background:#fcfcfc}
+ 	.wy-nav-top{display:block}
+	.wy-nav-side{left:-300px}
+	.wy-nav-side.shift{width:85%;left:0}
+	.wy-side-scroll{width:auto}
+	.wy-side-nav-search{width:auto}
+	.wy-menu.wy-menu-vertical{width:auto}
+	.wy-nav-content-wrap{margin-left:0}
+	.wy-nav-content-wrap
+	.wy-nav-content{padding:1.618em}
+	.wy-nav-content-wrap.shift{position:fixed;min-width:100%;left:85%;topn
+    :0;height:100%;overflow:hidden}
+}
+
+
+/* 
+Notað með 
+ .. rst-class:: midja 
+til að miðja texta 
+*/
+.rst-content .midja {
+        text-align: center !important;
+}
+
+
+/* Admonition: Dæmi */
+.rst-content .daemi .admonition-title {
+   background: #F8961E
+}
+.rst-content .daemi {
+    background: #faddb9;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+
+/* Admonition: Skilgreining */
+.rst-content .skilgreining .admonition-title {
+   background: #90BE6D
+}
+.rst-content .skilgreining {
+    background: #efffe3;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+/*    border-bottom: 6px;
+    border-style: solid ;
+    border-color: #555555 ; */
+}
+
+
+/* Admonition: Setning */
+.rst-content .setning .admonition-title {
+   background: #e6b43c
+}
+.rst-content .setning {
+    background: #ffefc7;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+/* Admonition: Fylgisetning */
+.rst-content .fylgisetning .admonition-title {
+   background: #e6ba53
+}
+.rst-content .fylgisetning {
+    background: #faecc8;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+/* Admonition: Athugasemd */
+.rst-content .athugasemd .admonition-title {
+   background: #577590
+}
+.rst-content .athugasemd {
+    background: #d4eaff;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}
+
+
+/* Admonition: Aðvörun */
+.rst-content .advorun .admonition-title {
+   background: #d11d1d
+}
+.rst-content .advorun {
+    background: #f7b9b5;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+/*    border-bottom: 6px;
+    border-style: solid ;
+    border-color: #555555 ; */
+}
+
+
+/* Admonition: Sjá einnig */
+.rst-content .sjaeinnig .admonition-title {
+   background: #F3722C
+}
+.rst-content .sjaeinnig {
+    background: #ffe1d1;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 0px 12px 12px ;
+}

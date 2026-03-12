@@ -1,0 +1,240 @@
+%!TEX root = forallxcam.tex
+\part*{Viðaukar}
+\addcontentsline{toc}{part}{Viðaukar}
+
+\chapter{Skilgreiningar og ýmis tákn}\label{app.notation} % Einhvern tíma finnst kannski tími til að bæta hér við orðasafni
+
+\section{Skilgreiningar}
+
+Hér er að finna allar skilgreiningar í bókinni sem kynntar eru til sögunnar með \define{hástöfum}, auk enskra þýðinga á þeim.
+
+\begin{enumerate}[leftmargin=35pt]
+	
+	\item[\textbf{aðaltengi}] (e.\ \emph{main connective}) er það \emph{setningatengi} sem síðast var kynnt til sögunnar þegar setningin var smíðuð úr \emph{grunnsetningum}.
+	
+	\item[\textbf{afleiðsla}] (e.\ \emph{deduction}) er rökfærsla sem er ætluð þannig að niðurstöðuna leiðir af forsendunum, þ.e.\ niðurstaðan hlýtur að vera sönn, svo fremi sem forsendurnar eru allar sannar.
+			
+	\item[\textbf{aukaforsenda}] (e.\ \emph{additional assumption}) er forsenda sem kynnt er til sögunnar tímabundið í sönnun í því skyni að leiða út einhverja aðra setningu. Sönnuninni telst ekki lokið fyrr en allar aukaforsendur hafa verið \emph{losaðar}.
+				
+	\item[\textbf{ályktunarregla}] (e.\ \emph{rule of deduction}) er regla í tilteknu sannanakerfi sem breytir setningu eða setningum í aðrar. Ályktunarreglur eru \emph{setningarfræðilegar} og taka því einungis tillit til forms setninganna.	
+			
+	\item[\textbf{bakliður}] (e.\ \emph{consequent}) er seinni liður í \emph{skilyrðissetningu}. Í skilyrðissetningunni $P \eif Q$ er $Q$ bakliður.
+	
+	\item[\textbf{eða-tengi}] er táknið $„\eor“$. Það er notað til að tákna \emph{mistengingu} tveggja setninga.
+			
+	\item[\textbf{eðun}] er annað orð yfir \emph{mistengingu}.
+	
+	\item[\textbf{eyðingarregla}] (e.\ \emph{elimination rule}) er \emph{ályktunarregla} sem tekur setningu eða setningar sem af ákveðnu formi og hafa tiltekið setningatengi og breytir þeim í setningu sem \emph{ekki} inniheldur setningatengið. Það eyðir með öðrum orðum setningatenginu úr sönnun þar sem reglunni er beitt.
+	
+	\item[\textbf{forliður}] (e.\ \emph{antecedent}) er fyrri liður í \emph{skilyrðissetningu}. Í skilyrðissetningunni $P \eif Q$ er $P$ forliður.
+	
+	\item[\textbf{framsetningarmál}] (e.\ \emph{metalanguage}) er það mál sem notað er til að fjalla um \emph{viðfangsmálið} sem er til skoðunar hverju sinni. Í þessari bók er framsetningarmálið íslenska, að viðbættum ýmsum sérstökum táknum sem auðvelda umfjöllun um rökfræði.
+	
+	\item[\textbf{full sanntafla}] (e.\ \emph{complete truth table}) er \emph{sanntafla} sem hefur eina línu fyrir hverja mögulega sanngildadreifingu grunnsetninganna, þ.e.\ eina línu fyrir hverja úthlutun á sanngildunum „satt“ og „ósatt“ á grunnsetningarnar. Hver lína stendur því fyrir eina mögulega sanngildadreifingu og full tafla hefur eina línu fyrir hverja mögulega dreifingu.
+		
+	\item[\textbf{gild}] Rökfærsla er \define{gild} (e.\ \emph{valid}) ef og aðeins ef það er ómögulegt fyrir allar forsendur hennar að vera sannar en niðurstöðuna ósanna.
+	
+	\item[\textbf{grunnsetningar}] (e.\ \emph{atomic sentences}) eru þær setningar í \emph{setningarökfræði} sem ekki eru smíðaðar úr öðrum setningum.
+	
+	\item[\textbf{hending}] Setning er hending (e.\ \emph{contingent}) ef og aðeins ef hún getur verið sönn eða ósönn---það er að segja, er hvorki \emph{nauðsynlega sönn} né \emph{nauðsynlega ósönn}.
+	
+	\item[\textbf{hlutasetning}] (e.\ \emph{subsentence}) er setning sem er hluti af myndunarsögu setningar samkvæmt myndunarreglum \emph{setningarökfræðinnar} eða \emph{umsagnarökfræðinnar}, þar með talið hún sjálf.
+	
+	\item[\textbf{hlutasönnun}] (e.\ \emph{subproof}) eru sannanir sem eiga sér stað innan annarrar sönnunar. Hlutasönnun hefst á \emph{aukaforsendu} og er afmörkuð frá aðalsönnuninni með lóðréttri línu. Hlutasönnun getur notað allar þær línur sem koma fyrir í aðalsönnuninni sem hún er hluti af, en aðalsönnunin getur ekki notað þær línur sem koma fyrir í hlutasönnuninni. 
+	
+	\item[\textbf{innleiðingarregla}] (e.\ \emph{introduction rule}) er \emph{ályktunarregla} sem tekur setningu eða setningar sem af ákveðnu formi og ekki hafa tiltekið setningatengi og breytir þeim í setningu sem hefur setningatengið. Það kynnir með öðrum orðum nýtt setningatengi til sögunnar í sönnun þar sem reglunni er beitt.
+	
+	\item[\textbf{innsetningarnafn}] (e.\ \emph{substitution name}) er nafn \meta{c} sem skipt er út fyrir breytu \meta{x} í \emph{innsetningartilviki}.
+	
+	\item[\textbf{innsetningartilvik}] (e.\ \emph{substitution instance}) er formúla sem fæst með að taka magnara framan af formúlu skipta út breytunni \meta{x} út fyrir nafnið \meta{c} alls það sem það kemur fyrir. $Fa$ er til dæmis innsetningartilvik af $\forall x Ax$.
+	
+	\item[\textbf{jafngildissetning}] (e.\ \emph{biconditional}) er setning, samsett úr tveimur liðum, sem er sönn ef og aðeins ef báðir liðir hennar hafa sama \emph{sanngildi}. Jafngildistenging sem er samsett úr grunnsetningunum $P$ og $Q$ er táknuð sem „$P \eiff Q$“.
+	
+	\item[\textbf{jafngildistengi}] er táknið „$\eiff$“. Það er notað til að tákna \emph{jafngildissetningar}.
+	
+	\item[\textbf{klifun}] (e.\ \emph{tautology}) er setning sem er sönn fyrir allar mögulegar \emph{sanngildadreifingar}.
+	
+	\item[\textbf{lokuð}] (e.\ \textbf{closed}) Hlutasönnun er \define{lokað} þegar hún telst ekki lengur í gildi og ekki er lengur hægt að nota þær setningar sem koma fyrir í henni. Til að sýna að hlutasönnun hafi verið lokað er hætt að draga lóðrétta strikið sem afmarkar hana frá aðalsönnuninni.
+	
+	\item[\textbf{losuð}] (e.\ \emph{discharged}) Aukaforsenda er sögð \define{losuð} þegar hún er ekki lengur í gildi, þ.e.\ kemur fyrir innan \emph{lokaðrar} hlutasönnunar.
+		
+	\item[\textbf{mótsögn}]	(e.\ \emph{contradiction}) er \emph{setning} sem er ósönn fyrir allar mögulegar sanngildadreifingar.
+		
+	\item[\textbf{mistenging}] (e.\ \emph{disjunction}) tveggja setninga \meta{A} og \meta{B} er sú setning sem er sönn ef og aðeins ef \meta{A} eða \meta{B} eru báðar sannar og ósönn ef báðar eru ósannar. Mistenging \meta{A} og \meta{B} er táknuð sem „$\meta{A} \eor \meta{B}$“.
+	
+	\item[\textbf{nauðsynlega sönn}] Setning er nauðsynlega sönn (e.\ \emph{necessarily true}) ef og aðeins ef hún getur ekki annað en verið sönn. \emph{Klifanir} eru dæmi um nauðsynlega sannar setningar, en þær eru sannar vegna \emph{rökforms} síns. Stærðfræðilegar setningar eins og t.d.\ 2+2=4 eru líka sagðar nauðsynlega sannar, sem og setningar sem eru sannar vegna merkingar orðanna sem koma fyrir í þeim. Frægasta dæmið úr heimspekisögunni um slíkar setningar er líklega „Allir piparsveinar eru ógiftir“.
+	
+	\item[\textbf{nauðsynlega ósönn}] Setning er nauðsynlega ósönn (e.\ \emph{necessarily false}) ef og aðeins ef hún getur ekki annað en verið ósönn. Mótsagnir eru dæmi um nauðsynlega ósannar setningar, en þær eru sannar vegna \emph{rökforms} síns.
+	
+	\item[\textbf{náttúruleg afleiðsla}] (e.\ \emph{natural deduction}) er sannanakerfi sem reynir að líkja eftir því hvernig rökleiðslur eru settar fram í mæltu máli. 
+	
+	\item[\textbf{metabreytur}] eru tákn sem bætt eru við framsetningarmálið í því skyni að auðvelda umfjöllun um margar setningar af sama formi í einu. Í þessari bók eru metabreytur táknaðar með feitletruðum hástöfum. Til dæmis stendur $\meta{A} \eor \meta{B}$ fyrir allar setningar sem hafa „$\eor$“ sem aðaltengi.
+	
+	\item[\textbf{neitun}] (e.\ \emph{negation}) einhverrar setningar \meta{A} er sú setning sem er sönn ef og aðeins ef \meta{A} er ósönn. Neitun \meta{A} er táknuð sem $\enot$\meta{A}.
+	
+	\item[\textbf{og-tengi}] er táknið „$\eand$“. Það er notað til að tákna \emph{samtengingu} tveggja setninga.
+	
+	\item[\textbf{ókláruð sanntafla}] (e.\ \emph{partial truth table}) er \emph{sanntafla} sem er ekki full sanntafla.
+	
+	\item[\textbf{óskarað eða}] (e.\ \emph{exclusive or}) er þegar orðið „eða“ er túlkað í mæltu máli þannig að setningarnar sem það tengir saman megi ekki vera báðar sannar. Ekkert sérstakt tákn er notað á máli setningarökfræði til að tákna óskarað eða, en hægt er að þýða slíkar setningar yfir á mál hennar sem $(P \eor Q) \eand \enot(P \eand Q)$---þar sem $P$ og $Q$ standa fyrir setningarnar tvær sem tengdar eru saman með ósköruðu eða.
+	
+	\item[\textbf{ósatt}] (e.\ \emph{false}) er annað af tveimur \emph{sanngildum} í klassískri rökfræði. Oft táknað „Ó“ eða „0“. 
+	
+	\item[\textbf{rétt}] Rökfærsla er \define{rétt} (e. \emph{sound}) ef og aðeins ef hún er bæði gild og allar forsendur hennar eru sannar. Stundum er líka sagt að slík rökfærsla sé \emph{traust}.
+	
+	%\item[\textbf{rökform}] er það form setningar (eða rökfærslu) sem hefur að gera með röklega uppbyggingu hennar.
+	
+	\item[\textbf{rökfræðileg afleiðing}] (e.\ \emph{entailment}) $\meta{B}$ \define{leiðir rökfræðilega af} $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ ef og aðeins ef ekki er til sanngildadreifing þar sem $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ eru allar sannar, en $\meta{B}$ ósönn. Ef \meta{B} leiðir rökfræðilega af \meta{A}, þá skrifum við $A \entails B$.
+	
+	Rökfræðileg afleiðing er nátengd gildi, enda segjum við að $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{B}$ sé gild rökfærsla ef $\meta{B}$ leiðir rökfræðilega af $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$. 
+
+	\item[\textbf{rökfræðilega jafnild}] Setningar (tvær eða fleiri) eru \define{rökfræðilega jafngildar} (e.\ \emph{tautologically equivalent}) ef og aðeins ef þær hafa sama sanngildi í öllum mögulegum sanngildadreifingum.
+	
+	\item[\textbf{rökfræðilega samkvæm}]Setningar (tvær eða fleiri) eru \define{rökfræðilega samkvæmar} (e.\ \emph{jointly consistent}) ef og aðeins ef til er sanngildadreifing þar sem þær eru báðar/allar sannar.
+	
+	\item[\textbf{samrýmanleg}] Setningar eru \define{samrýmanlegar} (e.\ \emph{jointly consistent}) ef og aðeins ef það er mögulegt fyrir þær að vera allar sannar samtímis. Það þýðir að til er að minnsta kosti ein \emph{sanngildadreifing} þar sem þær eru allar sannar. Setningar sem eru ekki samrýmanlegar eru sagðar ósamrýmanlegar (e.\ \emph{jointly inconsistent}).
+	
+	\item[\textbf{samtenging}] (e.\ \emph{conjunction}) tveggja setninga \meta{A} og \meta{B} er sú setning sem er sönn ef og aðeins ef \meta{A} og \meta{B} eru báðar sannar. Samtenging \meta{A} og \meta{B} er táknuð sem „$\meta{A} \eand \meta{B}$“.
+		
+	\item[\textbf{sannanleg setning}] (e.\ \emph{theorem}) er setning sem hægt er að leiða út í sönnunn án nokkurra ólosaðra forsenda. Ef \meta{A} er sannanleg setning, þá ritum við $\proves A$.
+		
+	\item[\textbf{sannanlega andstæðar}] Setningarnar $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ eru sagðar vera \define{sannanlega andstæðar} (e.\ \emph{jointly contrary}) ef og aðeins ef leiða má mótsögn af þeim í sameiningu, þ.e.\ $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \proves \ered$.
+			
+	\item[\textbf{sannanlega jafngild}] Tvær setningar, $\meta{A}$ og $\meta{B}$, eru \define{sannanlega jafngildar} (e.\ \emph{provably equivalent}) ef og aðeins ef til er sönnun á $\meta{B}$ frá $\meta{A}$ og öfugt, þ.e.\ bæði gildir að $\meta{A} \proves \meta{B}$ og $\meta{B} \proves \meta{A}$.
+		
+	\item[\textbf{sannfall}] \emph{Setningatengi} er \define{sannfall} (e.\ \emph{truth function}) ef og aðeins ef sanngildi setningarinnar þar sem tengið er \emph{aðaltengi} er fullkomlega ákvarðað af \emph{sanngildum} \emph{setninganna} sem það tengir.
+	
+	\item[\textbf{sanngildadreifing}] (e.\ \emph{valuation}) er tiltekin úthlutun \emph{sanngilda} (satt eða ósatt) á allar \emph{grunnsetningar} í setningu eða setningum.
+	
+	\item[\textbf{sanngildi}] (e.\ \emph{truth value}) setningar tilgreinir samband hennar við sannleikann. Í klassískri rökfræði, sem er umfjöllunarefni þessarar bókar, eru sanngildin tvö: \emph{satt} og \emph{ósatt}.
+	
+	\item[\textbf{sanntafla}] (e.\ \emph{truth table}) er myndræn framsetning á þeim sanngildum sem setningar hljóta að hafa, að því gefnu hvaða \emph{sanngildadreifingar} grunnsetningar þeirra hafa.
+	
+	\item[\textbf{satt}] (e.\ \emph{true}) er annað af tveimur \emph{sanngildum} í klassískri rökfræði. Oft táknað „S“ eða „1“
+	
+	\item[\textbf{setning}] (e.\ \emph{sentence}, stundum \emph{well-formed formula} eða \emph{wff}) er \emph{táknruna} sem er mynduð skv.\ myndunarreglum setninga í \emph{setningarökfræði} eða \emph{umsagnarökfræði}.
+	
+	\item[\textbf{setningafræðileg}] Aðferð eða hugtak er \define{setningafræðilegt} (e.\ \emph{syntactic}) ef það hefur að gera með \emph{form} setninga, en ekki merkingu þeirra eða sanngildi.
+	
+	\item[\textbf{setningarökfræði}] (e.\ \emph{propositional logic}) er eitt af tveimur formlegum kerfum sem skilgreind eru í þessari bók. Það samanstendur af óendanlega mörgum \emph{grunnsetningum} (t.d.\ \emph{P, Q, R, S},\ldots), með eða án lágvísa, svigum og setningatengjum („$\enot$“, „$\eand$“, „$\eor$“, „$\eand$“, „$\eiff$“). Setningar eru smíðaðar skv.\ ákveðnum myndunarreglum og merking þeirra ræðst af \emph{skilgreiningasanntöflum} fyrir hvert setningatengi.
+	
+	\item[\textbf{setningatengi}] (e.\ \emph{sentential connectives}) eru tákn sem standa fyrir rökfasta---það er að segja þau orð sem tengja saman setningar og mynda \emph{rökform} þeirra. Setningatengin í setningarökfræði eru „$\enot$“, „$\eand$“, „$\eor$“, „$\eand$“ og „$\eiff$“.
+	
+	\item[\textbf{setningatré}] (e.\ \emph{syntax tree}) er myndræn framsetning á myndunarsögu setningar skv.\ myndunarreglum \emph{setningarökfræði} eða \emph{umsagnarökfræði}.
+	
+	\item[\textbf{skarað eða}] (e.\ \emph{inclusive or}) er þegar orðið „eða“ er túlkað í mæltu máli þannig að setningarnar sem það tengir saman megi báðar vera sannar. Táknið „$\eor$“ stendur alltaf fyrir skarað eða á máli setningarökfræðinnar.
+		
+	\item[\textbf{skilgreiningarsanntafla}]	(e.\ \emph{characteristic truth table}) er myndræn framsetning á merkingu setningatengjanna í setningarökfræði---það er að segja, hvert sanngildi setninganna sem þau mynda hlýtur að vera, að því gefnu hvert sanngildi hlutasetninganna er, sem tengdar eru saman.
+	
+	\item[\textbf{skilyrðissetning}] (e.\ \emph{conditional}) er setning á forminu „ef $P$, þá $Q$“. Skilyrðissetning þar sem $P$ er \emph{forliður} og $Q$ \emph{bakliður} er táknuð sem $P \eif Q$. Skilyrðissetning er ósönn ef forliðurinn er sannur og bakliðurinn ósannur, annars sönn.
+		
+	\item[\textbf{skilyrðistengi}] er táknið „$\eif$“. Það er notað til að tákna \emph{skilyrðissetningar}.
+		
+	\item[\textbf{sterk}] \emph{Tilleiðsla} er sögð \define{sterk} (e.\ \emph{strong}) ef niðurstaðan er líkleg, að forsendunum gefnum.
+	
+	\item[\textbf{svið}] (e.\ \emph{scope}) setningatengis er sú hlutasetning þar sem setningatengið er aðaltengi.
+	
+	\item[\textbf{sönnunarfræðileg}] (e.\ \emph{proof-theoretic}) eru þau hugtök sem hafa að gera með sannanir. Til dæmis \emph{sannanleg setning} eða \emph{sannanlega jafngild}.
+	
+	\item[\textbf{táknruna}] (e.\ \emph{expression}) er hvaða strengur sem er af táknum \emph{setningarökfræði} eða \emph{umsagnarökfræði}. 
+	
+	Í setningarökfræði eru þau grunnsetningar (\emph{P, Q, R, S}...), með eða án lágvísa (t.d.\ $P_1$), „(“, „)“, $\enot$“, „$\eand$“, „$\eor$“, „$\eand$“ og „$\eiff$“. Umsagnarökfræðin hefur ekki grunnsetningar, en bætir við \emph{umsögnum}, sem eru táknaðar með hástöfum (\emph{F, G, H, $F_1$...}), nöfnum, sem eru táknuð með lágstöfum fremst úr stafrófinu (\emph{a, b, c, $a_1$}... ), \emph{breytum}, sem eru táknaðar með lágstöfum aftast úr stafrófinu (\emph{x, y, z, $x_1$...}), auk \emph{magnara}, $\forall$ og $\exists$.
+	
+	\item[\textbf{tilleiðsla}] (e.\ \emph{induction}) er rökfærsla sem alhæfir um öll tilfelli af einhverju tagi út frá athugunum um einstök tilfelli af því tagi.
+	
+	\item[\textbf{túlkun}] (e.\ \emph{interpretation}) er tilgreining á yfirgripi, tilvísun nafna og umtaki umsagna fyrir eitthvað safn setninga.
+	
+	\item[\textbf{umtaksmál}] (e.\ \emph{extensional language}) er mál þar sem sannleikur ræðst af umtaki umsagna, þ.e.\ þeim hlutum sem tiltekin umsögn á við.
+	
+	\item[\textbf{viðfangsmál}] (e.\ \emph{object language}) er það mál sem er til skoðunar eða umræðu hverju sinni. Í þessari bók eru viðfangsmálin \emph{setningarökfræði} og \emph{umsagnarökfræði}.
+	
+	\item[\textbf{þýðingarlykill}] (e.\ \emph{symbolisation key}) er listi af samsvörunum milli grunnsetninga og setninga á mæltu máli sem útskýrir hvernig útdeila á sanngildum á grunnsetningarnar sem koma fyrir í listanum.
+ 
+ 
+ 
+ 
+ 
+\end{enumerate}
+
+%\paragraph{Truth-functional logic.} TFL goes by other names. Sometimes it is called \emph{sentence logic}, because it deals fundamentally with sentences. Sometimes it is called \emph{propositional logic}, on the idea that it deals fundamentally with propositions. I have stuck with \emph{truth-functional logic}, to emphasise the fact that it deals only with assignments of truth and falsity to sentences, and that its connectives are all truth-functional.
+
+%\paragraph{First-order logic.} FOL goes by other names. Sometimes it is called \emph{predicate logic}, because it allows us to apply  predicates to objects. Sometimes it is called \emph{quantified logic}, because it makes use of quantifiers.
+
+%\paragraph{Formulas.} Some texts call formulas \emph{well-formed formulas}. Since `well-formed formula' is such a long and cumbersome phrase, they then abbreviate this as \emph{wff}. This is both barbarous and unnecessary (such texts do not countenance `ill-formed formulas'). I have stuck with `formula'. 
+
+%In \S\ref{s:TFLSentences}, I defined \emph{sentences} of TFL. These are also sometimes called `formulas' (or `well-formed formulas') since in TFL, unlike FOL, there is no distinction between a formula and a sentence.
+
+%\paragraph{Valuations.} Some texts call valuations \emph{truth-assignments}. 
+
+%\paragraph{Expressive adequacy.} Some texts describe TFL as \emph{truth-functionally complete}, rather than expressively adequate.
+
+%\paragraph{\emph{n}-place predicates.} I have called predicates `one-place', `two-place', `three-place', etc. Other texts respectively call them `monadic', `dyadic', `triadic', etc. Still other texts call them `unary', `binary', `trinary', etc.
+
+%\paragraph{Names.} In FOL, I have used `$a$', `$b$', `$c$', for names. Some texts call these `constants'. Other texts do not mark any difference between names and variables in the syntax. Those texts focus simply on  whether the symbol occurs \emph{bound} or \emph{unbound}. 
+
+%\paragraph{Domains.} Some texts describe a domain as a `domain of discourse', or a `universe of discourse'.
+
+\section{Önnur tákn}
+Í gegnum tíðina hafa margvísleg tákn verið notuð í formlegri rökfræði, allt eftir tíma og höfundum. Það tók tíma að koma á almennu samkomulagi um hvaða tákn skyldi nota (sem er ekki endilega enn í gildi) og oft voru rökfræðingar nauðbeygðir til að nota þau tákn sem hægt var að prenta auðveldlega. Hér er stutt yfirlit yfir sum af þeim táknum sem notuð hafa verið í stað þeirra tákna sem við notum í þessari bók, ef ske kynni að lesandi rækist á þau annars staðar.
+
+\paragraph{Neitun.} Langalgengustu táknin sem notuð eru fyrir neitun eru „$\neg$“ og „${\sim}$“. Seinna táknið finnst oftar í eldri textum, en stundum eru bæði notuð ef gera þarf greinarmun á tveimur tegundum neitunar. Oft er „${\sim}$“ frekar handskrifað.
+
+\paragraph{Mistenging.} Í þessari bók höfum við oftast kallað setningu sem hefur „$\vee$“ sem aðaltengi „mistengingu“. Það er einfaldlega til samræmis við orðið „samtenging“, en stundum er mistenging líka kölluð „eðun“. Táknið „$\vee$“ er nánast alltaf notað til að tákna óskarað eða. Ein skýring á þessu tákni er að það sé fyrsti stafurinn í latneska orðinu „vel“, sem merkir „eða“. 
+
+Það kemur fyrir að mistenging sé kölluð „rökfræðileg summa“ (e. \emph{logical sum}) og þá er táknið „$+$“ stundum notað. Skýringin á þessu sést á skilgreiningarsanntöflunni fyrir „$\vee$“: ef sanngildi eru táknuð með 1 og 0 (1 fyrir „S“ og 0 fyrir „Ó“), þá er sanngildi $\meta{A} \eor \meta{B}$ summa sanngilda $\meta{A}$ og $\meta{B}$ (nema við höfum $1+1 = 1$).
+
+\paragraph{Samtenging.}
+
+Í stað „$\wedge$“ er samtenging er oft táknuð með „{\&}“. Þetta tákn stendur oft fyrir „og“ í rituðu máli og er því ákveðinn galli á notkun þess, nefnilega að aðskilnaðurinn milli formlega táknsins sem er hluti af máli setninga- og umsagnarökfræðinnar og orðsins „og“ verður þá ekki nægilega skýr. Það er líka auðveldara að handskrifa „$\wedge$“---en hugsunin á bak við þetta tákn er einfaldlega táknið fyrir „eða“ snúið á hvolf.
+
+Stundum, einkum í eldri textum, er táknið {\scriptsize\textbullet} notað til að tákna samtengingu og stundum er ekkert tákn notað. Þá er samtenging $A$ og $B$ einfaldlega skrifuð sem $AB$. Þetta er af því að samtenging er stundum kölluð  „rökfræðilegt margfeldi“ (e.\ \emph{logical product}) og skýringuna á því er að finna í skilgreiningasanntöflunni fyrir „$\wedge$“: ef sanngildi eru táknuð með 1 og 0 (1 fyrir „S“ og 0 fyrir „Ó“), þá er sanngildi $\meta{A} \eand \meta{B}$ margfeldi sanngilda $\meta{A}$ og $\meta{B}$.
+
+\paragraph{Skilyrðissetningar.} Tvö algengustu táknin fyrir skilyrðissetningar eru „$\rightarrow$“ og „$\supset$“. Seinna táknið finnst oftar í eldri textum.
+
+\paragraph{Jafngildissetningar} Tvöföld ör, „$\leftrightarrow$“ er oftast notað af þeim sem nota ör til að tákna skilyrðistengið („$\rightarrow$“). Ef krókurinn („$\supset$“) er notaður, þá er táknið „$\equiv$“ oftast notað, en það er hugsað eins og jafngildistákn („=“) með einu striki til viðbótar.
+
+\paragraph{Magnarar} Almagnarinn er langoftast táknaður með „A“ sem hefur verið snúið á hvolf („$\forall$“) og tilvistarmagnarinn sem „E“ sem hefur verið speglað („$\exists$“). Í sumum eldri textum er ekkert tákn notað fyrir almagnarann, heldur er breytan sem bundin er af magnaranum einfaldlega skrifuð innan sviga. Til dæmis væri þá hægt að skrifa „$(x)Px$“ þar sem við myndum frekar skrifa „$\forall x Px$“.
+
+\
+\\Eftirfarandi tafla veitir yfirlit yfir þessi mismunandi tákn:
+
+\begin{center}
+\begin{tabular}{rl}
+neitun & $\neg$, ${\sim}$\\
+samtenging & $\wedge$, \&, {\scriptsize\textbullet}\\
+mistenging (eðun) & $\vee$, $+$\\
+skilyrðissetning & $\rightarrow$, $\supset$\\
+jafngildissetning & $\leftrightarrow$, $\equiv$\\
+almagnari & $\forall x$, $(x)$\\
+tilvistarmagnari & $\exists x$
+\end{tabular}
+\end{center}
+
+Loks má nefna að í sumum eldri textum, einkum og sér í lagi \emph{Principia Mathematica} eftir Bertrand Russell og Alfred North Whitehead, má finna flókið punktakerfi sem kemur í staðinn fyrir sviga.\footnote{Sjá t.d.\ Linsky, Bernard, „The Notation in Principia Mathematica“, \emph{The Stanford Encyclopedia of Philosophy}, <https://plato.stanford.edu/archives/win2021/entries/pm-notation/>.} 
+
+%
+%
+%
+%\section*{Polish notation}
+%
+%This section briefly discusses sentential logic in Polish notation, a system of notation introduced in the late 1920s by the Polish logician Jan {\L}ukasiewicz.
+%
+%Lower case letters are used as sentence letters. The capital letter $N$ is used for negation. $A$ is used for disjunction, $K$ for conjunction, $C$ for the conditional, $E$ for the biconditional. (`A' is for alternation, another name for logical disjunction. `E' is for equivalence.)
+%%\marginpar{
+%%\begin{tabular}{cc}
+%%notation & Polish\\
+%%of TFL & notation\\
+%%\enot & $N$\\
+%%\eand & $K$\\
+%%\eor & $A$\\
+%%\eif & $C$\\
+%%\eiff & $E$
+%%\end{tabular}
+%%}
+%
+%In Polish notation, a binary connective is written \emph{before} the two sentences that it connects. For example, the sentence $A\eand B$ of TFL would be written $Kab$ in Polish notation.
+%
+%The sentences $\enot A\eif B$ and $\enot (A\eif B)$ are very different; the main logical operator of the first is the conditional, but the main connective of the second is negation. In TFL, we show this by putting parentheses around the conditional in the second sentence. In Polish notation, parentheses are never required. The left-most connective is always the main connective. The first sentence would simply be written $CNab$ and the second $NCab$.
+%
+%This feature of Polish notation means that it is possible to evaluate sentences simply by working through the symbols from right to left. If you were constructing a truth table for $NKab$, for example, you would first consider the truth-values assigned to $b$ and $a$, then consider their conjunction, and then negate the result. The general rule for what to evaluate next in TFL is not nearly so simple. In TFL, the truth table for $\enot(A\eand B)$ requires looking at $A$ and $B$, then looking in the middle of the sentence at the conjunction, and then at the beginning of the sentence at the negation. Because the order of operations can be specified more mechanically in Polish notation, variants of Polish notation are used as the internal structure for many computer programming languages.
+%

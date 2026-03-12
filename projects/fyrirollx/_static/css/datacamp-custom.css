@@ -1,0 +1,9 @@
+.dcl-plot img {
+	height: 100% !important;
+}
+ul.dcl-content--tab li{
+	list-style: none !important;
+}
+.powered-by-datacamp{
+	visibility: hidden;
+}
