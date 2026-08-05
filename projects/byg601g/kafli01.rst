@@ -185,7 +185,6 @@ viðhaldi hvers og eins. Í töflu 1.1 eru sýnd dæmi um slík lágmarksgildi
    :align: center
    :width: 90%
 
-
 Algengt viðmiðunargildi fyrir nottíma íbúðarhúsa er 50 ár (í öðrum
 heimildum oft 60 ár) en iðulega er miðað við að vandaðar opinberar
 byggingar skuli standa minnst 100 ár. Útfrá töflunni má t.d. sjá að
