@@ -260,7 +260,7 @@ Einnig hefur v/s talan áhrif á holrýmd steypunnar, en það má sjá á myndu
 
 
 Íblendiefni og íaukar efni
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Íblendiefni** eru efni sem sett eru í steypuna í *litlum skömmtum*, algengast 1-3% af þunga sements, til að hafa áhrif á hegðun hennar.
 Yfirleitt í fljótandi formi en þó er það ekki einhlítt. Íblendiefni geta haft áhrif á steypu bæði í fersku ástandi og á storknunar- og hörðnunarskeiðinu. 
@@ -272,7 +272,7 @@ Dæmi um íblendiefni eru:
   * Vinsol resin (grunnefni: trjákvoða, harpix)
   * Tallolía (unnin úr fitusýrum sem eru aukaafurðir úr pappírsframleiðslu)
   * Tensider (unnið úr olíu)
-*Þess ber að geta að fyrir hvert 1% af loftblendi í steypu tapast 5% brotstyrkur steypunnar*
+  * Þess ber að geta að fyrir hvert 1% af loftblendi í steypu tapast 5% brotstyrkur steypunnar*
 
 .. list-table::
    :widths: 100 100
@@ -286,6 +286,7 @@ Dæmi um íblendiefni eru:
 
 
 * Vatnssparar/Flotefni, Vatnssparar eru notaðir í þrennum tilgangi, þ.e. auka styrk með því að minnka v/s-töluna en halda sama vinnanleika steypunnar, notuð til að minnka hitamyndun í massasteypum og til þess að auka vinnanleika til að auðvelda niðurlögn steypunnar. 
+
 Fyrsta kynslóð þessara efna voru vatnssparar, en hún kom upp úr 1930 og voru það efnasamsetningar eins oglLignosulfonatefni og hydroxycarboxylic sýrur.
 Önnur kynslóðin voru flotefni, en þau komu fyrst upp úr 1960 og var þá notað Melamin og naftalen efni.
 Í dag er notast við svokallað hágæðaflotefni sem er þriðja kynslóð. Hágæðaflotefni kom eftir 1980 og hefur mikil þróun átt sér stað síðustu 10 árin. Þetta eru efni sem eru mun virkari en flotefni.
@@ -350,6 +351,7 @@ Fyrsta kynslóð þessara efna voru vatnssparar, en hún kom upp úr 1930 og vor
   * Hydrophobic admixtures
   * Viscosity modifying agent
   * Shrinkage reducing admixtures
+  
 -------
 
 **Íaukar**
