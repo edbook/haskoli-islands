@@ -3,234 +3,374 @@ Kafli - Gerð og uppbygging efna
 
 Viðeigandi efnisnotkun er háð þekkingu á grunneiginleikum efnanna.  Allir eiginleikar efna byggja á gerð þeirra og uppbyggingu, sérstaklega gildir að styrkur, stífleiki, rafleiðni og ending eru beint háðir grunnuppbyggingu þeirra.  Við getum skoðað uppbyggingu efna á mismunandi skölum, frumeindaskala, kristaluppbyggingu á míkróskala og póruuppbyggingu á makróskala. Í þessum kafla verður fjallað um frumeindabyggingu, tengigerðir og kristalbyggingu en holrýmd og póruuppbyggingu er lýst nánar í 3. kafla.
 
-Aðeins skal líta á kaflann hér sem samantekt á nauðsynlegum hugtökum.
+Frumeindir
+----------
 
-Frumeindir (e. atom)
---------------------
+Öll efni eru byggð upp af **frumeindum** (e. *atoms*). Frumeind er minnsta eining frumefnis sem heldur efnafræðilegum eiginleikum þess.
 
-Frumeindir eru byggðar upp úr þremur tegundum einda; jákvætt hlaðin róteind (e. proton), óhlaðin nifteind (e. neutron) og neikvætt hlaðin rafeind (e. electron).
-Kjarninn (e. nucleus) er iðulega samsettur úr jafnmörgum róteindum (fjöldi; Z) og nifteindum (fjöldi; N) –
-vetni og mismunandi ísótópar eru undantekning frá þessu. Í frumeind sem er óhlaðin útávið þá er fjöldi rafeinda sá sami og róteinda (Z).
-Í módeli Bohr's er gert ráð fyrir að rafeindirnar raðist á sammiðja hvel (e. electron shell) um kjarnann.
-Hvert rafeindahvel getur innihaldið mest :math:`2\cdot n^2` rafeindir, þar sem :math:`n` er númer hvels innanfrá.
+Frumeindir eru byggðar upp úr þremur tegundum einda:
 
-.. list-table:: Heiti rafeindahvels talið innanfrá
-   :widths: 15 5 5 5 5 5 5 5
-   :header-rows: 1
+* **róteindum** (e. *protons*), sem hafa jákvæða rafhleðslu,
+* **nifteindum** (e. *neutrons*), sem eru óhlaðnar,
+* **rafeindum** (e. *electrons*), sem hafa neikvæða rafhleðslu.
 
-   * - Hver nr. (n)
-     - 1
-     - 2
-     - 3
-     - 4
-     - 5
-     - 6
-     - 7
-   * - Heiti
-     - K
-     - L
-     - M
-     - N
-     - O
-     - P
-     - Q
+Róteindir og nifteindir mynda **kjarna** (e. *nucleus*) frumeindarinnar en rafeindirnar eru umhverfis kjarnann. Rafeindir eru miklu léttari en róteindir og nifteindir og því er nánast allur massi frumeindarinnar í kjarnanum.
 
+Fjöldi róteinda í kjarna er kallaður **sætistala**, :math:`Z`, og ákvarðar um hvaða frumefni er að ræða. Í óhlaðinni frumeind er fjöldi rafeinda sá sami og fjöldi róteinda og heildarhleðsla frumeindarinnar því núll.
 
-Ysta hvelið hverju sinni (valenshvelið) getur þó mest haft 8 rafeindir, og er einungis stöðugt ef það er fullsetið. :math:`\require{\mhchem}`
+Ef frumeind tekur til sín eða gefur frá sér rafeindir myndast **jón**. Frumeind sem tekur til sín rafeindir verður neikvætt hlaðin en frumeind sem gefur frá sér rafeindir verður jákvætt hlaðin.
+
+Rafeindahvel
+~~~~~~~~~~~~
+
+Í einföldu Bohr-líkani frumeindarinnar er gert ráð fyrir að rafeindir raðist á mismunandi rafeindahvel (e. *electron shells*) umhverfis kjarnann.
+
+Rafeindir í ysta hveli frumeindarinnar kallast **gildisrafeindir** (e. *valence electrons*). Þær hafa mikil áhrif á efnafræðilega eiginleika frumefnisins og hvernig það myndar efnatengi við önnur atóm. Við komum aftur að þessu þegar fjallað verður um efnatengi síðar í kaflanum.
 
 .. figure:: ./myndir/kafli02/bohr-model-nitrogen-atom.png
-  :align: center
-  :width: 70%
+   :align: center
+   :width: 70%
 
-Frumeinda massi, mól og Avogadros-talan
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Einfalt Bohr-líkan af köfnunarefnisfrumeind.
 
-.. youtube:: wPGVQu3UXpw
-    :width: 100%
-    :height: 400
+Frumefni og lotukerfið
+~~~~~~~~~~~~~~~~~~~~~~
 
-Frumeind vegur mjög lítið, eða stærðargráðan :math:`10^{-27}` kg, því er til einföldunar iðulega
-notaður hlutfallslegur frumeindamassi, :math:`A_r`; :math:`\require{\mhchem}`
+**Frumefni** er efni sem eingöngu er gert úr frumeindum með sama fjölda róteinda. Frumefnunum er raðað í **lotukerfið** eftir sætistölu.
 
-.. math:: 
-    A_r = \frac{m}{m_u}
+Frumefni í sama dálki lotukerfisins hafa oft svipaða efnafræðilega eiginleika. Það tengist meðal annars fjölda gildisrafeinda þeirra.
 
-þar sem 
-
-.. list-table:: 
-  :widths: 5 5 5
-  :header-rows: 0
-
-  * - :math:`m`
-    - frumeindamassi
-    - kg
-  * - :math:`m_u`
-    - frumeinda-massa-einingin (atomic mass unit) 
-    
-      = 1/12 af massa :math:`\ce{C12}` frumeindar, eða :math:`m_u = 1,6605 \cdot 10^{-27} \textrm{kg}`
-    - 
-
-massi frumeinda er iðulega gefinn upp í fjölda frumeinda-massa-eininga, :math:`u`, :math:`1u = m_u`
-
-Mól er það efnismagn sem hefur jafnmargar grunneiningar eins og eru í 12 g af :math:`\ce{C12}`
-frumeindum, þessi tala er nefnd Avogadros-talan;
-:math:`N_A = 6,022 \cdot 10^{23} \textrm{einingar}`.
-
-.. admonition:: Vísbending
-  :class: hint
-  
-  Athuga skal að uppgefinn hlutfallslegur frumeindamassi efnis, :math:`A_r`, fyrir eitt mól af efninu
-  er jafngildir mólmassa í einingunni g/mól.
-
-Til að finna massa frumefnis í grömmum þegar massinn er gefinn í frumeinda-massaeiningum
-(u), þá gildir
-
-.. math::
-    m_{grömm} = \frac{m_{amu}}{N_A}
-
-Lotukerfið (skipting þess í svið og upplýsingar um eiginleika). Í góðri töflu má finna ýmis konar efnisupplýsingar.
+Í lotukerfinu má finna ýmsar upplýsingar um frumefnin, meðal annars sætistölu, frumeindamassa og efnafræðilegt tákn.
 
 .. button::
-  :text: Gagnvirkt lotukerfi á íslensku
-  :link: https://ptable.com/?lang=is#Eiginleikar
+   :text: Gagnvirkt lotukerfi á íslensku
+   :link: https://ptable.com/?lang=is#Eiginleikar
 
-.. admonition:: Dæmi (2.3 í bókinni)
-  :class: tip 
+Samsætur
+~~~~~~~~
 
-  Dæmi (2.3 í bókinni):
-  Ákvarðið sameindamassann (molekylmassen) fyrir gifs (“calciumsulfat, dihydrat”)
-  :math:`\ce{CaSO4, 2H2O}`
+Frumeindir sama frumefnis hafa alltaf sama fjölda róteinda en geta haft mismunandi fjölda nifteinda. Slíkar frumeindir kallast **samsætur** (e. *isotopes*).
 
-  Lausn: Ekki ljóst hvort beðið er um mólmassa eða massa á einni sameind (sbr. Dæmi 2.4!); reikna bæði:
+Kolefni er dæmi um frumefni sem hefur fleiri en eina samsætu. Kolefni-12, kolefni-13 og kolefni-14 hafa öll sex róteindir og eru því öll kolefni, en þau hafa mismunandi fjölda nifteinda og þar með mismunandi massa.
 
-  * Mólmassinn fæst þegar lagður er saman hlutfallslegur frumeindamassi (atomvægt)- tafla 15, fyrir allar einingarnar.
-  * Sameindamassinn = mólmassi/Avogadrostalan,
+Frumeindamassi, mól og Avogadros-talan
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  .. list-table:: Lausn á dæmi 2.3 í bókinni
-     :widths: 5 5 5 5
-     :header-rows: 1
+.. youtube:: wPGVQu3UXpw
+   :width: 100%
+   :height: 400
 
-     * - Frumefni
-       - Massi/mól [g/mól]
-       - Fjöldi móla
-       - Alls [g]
-     * - Ca
-       - 40,08
-       - 1
-       - 40,08
-     * - S
-       - 32,064
-       - 1
-       - 30,064
-     * - O
-       - 16
-       - 6
-       - 96
-     * - H
-       - 1,008
-       - 4
-       - 4,032
-     * - 
-       - 
-       - mólmassi =
-       - 172,176
+Massi einstakrar frumeindar er mjög lítill, af stærðargráðunni :math:`10^{-27}` kg. Því er hentugra að nota **frumeindamassaeininguna**, :math:`u`.
 
-  :math:`\text{sameindamassi} = \frac{\text{mólmassi}}{N_A} = \frac{172,176 \text{g/mól}}{6,02\cdot10^{23}\text{eindir}/\text{mól}} = 2,86\cdot10^{-22}\text{g}/\text{eind}`
+Ein frumeindamassaeining er skilgreind sem :math:`1/12` af massa kolefnis-12 frumeindar:
 
-Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. line-block::
-  :math:`1 \mu \textrm{m} = 10^{-6} \textrm{m}` (míkrómeter)
-  :math:`1 \textrm{nm} = 10^{-9} \textrm{m}` (nanómeter)
-  :math:`1 \textrm{Å} = 10^{-10} \textrm{m}` (Ångström)
-  :math:`1 \textrm{pm} = 10^{-12} \textrm{m}` (píkómeter)
+.. math::
 
-Stærðargráður „smárra“ eininga;
+   1u = 1,6605 \cdot 10^{-27}\,\textrm{kg}
 
-Algeng frumefni hafa frumefnaradía á bilinu 0,5-2 Å (1 Ångström = :math:`10^{-10}` m) eða 50-200 pm.
+Hlutfallslegur frumeindamassi, :math:`A_r`, er skilgreindur sem:
 
-Stærð vatnssameindar (sjá t.d. Wikipedia; water);
+.. math::
+
+   A_r = \frac{m}{m_u}
+
+þar sem :math:`m` er massi frumeindarinnar og :math:`m_u` er frumeindamassaeiningin.
+
+Frumeindamassi frumefnis sem gefinn er upp í lotukerfinu er yfirleitt vegið meðaltal massa þeirra samsæta frumefnisins sem finnast í náttúrunni. Þess vegna er gildið ekki endilega heil tala.
+
+Mól
+~~~
+
+Frumeindir og sameindir eru svo smáar að jafnvel í mjög litlu sýnilegu magni efnis er gríðarlegur fjöldi einda. Til þess að lýsa slíku efnismagni er einingin **mól** notuð.
+
+Eitt mól inniheldur
+
+.. math::
+
+   N_A = 6,022 \cdot 10^{23}
+
+eindir. Talan :math:`N_A` kallast **Avogadros-talan**.
+
+**Mólmassi**, :math:`M`, segir til um massa eins móls af efni og er yfirleitt gefinn upp í g/mól.
+
+.. admonition:: Vísbending
+   :class: hint
+
+   Tölugildi frumeindamassa frumefnis í :math:`u` er það sama og tölugildi mólmassa þess í g/mól.
+
+   Kolefni með frumeindamassann :math:`12u` hefur því mólmassann um 12 g/mól.
+
+.. admonition:: Gott að vita: Hversu smátt getum við séð?
+   :class: hint
+
+   Þegar fjallað er um uppbyggingu efna er gagnlegt að hafa tilfinningu fyrir
+   þeim stærðargráðum sem um ræðir.
+
+   .. line-block::
+
+      :math:`1\,\mu\textrm{m} = 10^{-6}\,\textrm{m}` (míkrómetri)
+      :math:`1\,\textrm{nm} = 10^{-9}\,\textrm{m}` (nanómetri)
+      :math:`1\,\textrm{Å} = 10^{-10}\,\textrm{m}` (ångström)
+      :math:`1\,\textrm{pm} = 10^{-12}\,\textrm{m}` (píkómetri)
+
+   Algengar frumeindir hafa radíus af stærðargráðunni 0,5–2 Å, eða um
+   50–200 pm. Sameindir eru einnig á þessum mjög smáa skala.
+
+
+   Vatnssameind er aðeins nokkrir ångström að stærð.
+
+   Til samanburðar er þvermál mannshárs af stærðargráðunni tugir míkrómetra.
+   Frumeindir og sameindir eru því mörgum stærðargráðum minni en það sem
+   hægt er að sjá með berum augum.
+
+   **Ljóssmásjá** getur stækkað sýni um það bil þúsundfalt og greint smáatriði
+   niður undir brot úr míkrómetra.
+
+   **Rafeindasmásjár** geta greint mun smærri byggingu og gera okkur kleift
+   að rannsaka efni niður á nanómetrakvarða.
+
+Sameindir
+---------
+
+Frumeindir geta tengst saman og myndað **sameindir** (e. *molecules*). Sameind er því samsett úr tveimur eða fleiri frumeindum sem tengjast saman. Frumeindirnar geta verið af sama frumefni eða mismunandi frumefnum.
+
+Til dæmis er súrefnissameind, :math:`O_2`, gerð úr tveimur súrefnisfrumeindum. Vatnssameind, :math:`H_2O`, er hins vegar gerð úr tveimur vetnisfrumeindum og einni súrefnisfrumeind.
+
+Efnaformúla sameindar segir þannig bæði til um **hvaða frumefni** mynda sameindina og **hversu margar frumeindir** eru af hverju frumefni.
 
 .. figure:: ./myndir/kafli02/vatn.png
-  :align: center
-  :width: 40%
+   :align: center
+   :width: 40%
 
-Mannshár er með þvermál á bilinu 17-181 :math:`\mu \textrm{m}` (1 :math:`\mu \textrm{m}` = :math:`10^{-6}` m), eða 0,017-0,181 mm.
-(http://hypertextbook.com/facts/1999/BrianLey.shtml).
+   Vatnssameind, :math:`H_2O`, er gerð úr tveimur vetnisfrumeindum og einni súrefnisfrumeind.
 
-Uppleysni; minnsta stærð sem greina má
+Sameindamassi
+~~~~~~~~~~~~~
 
-Með berum augum getur maður með venjulega sjón greint á milli grófgerðs hárs og
-fíngerðs hárs, uppleysni augans gæti því verið um 0,02 mm?
+**Sameindamassi** fæst með því að leggja saman frumeindamassa allra frumeindanna sem mynda sameindina.
 
-Ljóssmásjá (Holland 1590 – 1608);
+Vatn, :math:`H_2O`, inniheldur tvær vetnisfrumeindir og eina súrefnisfrumeind. Frumeindamassi vetnis er um :math:`1,008\,u` og frumeindamassi súrefnis um :math:`16,00\,u`.
 
-Stækkun allt að 1 000 X, og uppleysni þá allt að 0,2 :math:`\mu` m. Stafræn ljóssmásjá (sjá t.d. www.lsw.com), dæmigerð stækkun 400 X, uppleysni allt
-að 0,5 :math:`\mu` m.
+Sameindamassi vatns er því
 
-Rafeindasmásjá (e: scanning electron microscope, SEM);
-Stækkun 1 000 – 1 000 000 X, og uppleysni allt að 10 nm (100 Å)
+.. math::
+
+   2 \cdot 1,008 + 16,00 = 18,016\,u
+
+eða um :math:`18,02\,u`.
+
+Á sama hátt fæst **mólmassi** vatns:
+
+.. math::
+
+   M(H_2O) \approx 18,02\,\textrm{g/mól}
+
+Tölugildi sameindamassa í :math:`u` og mólmassa í g/mól eru því þau sömu.
+
+.. admonition:: Dæmi: Mólmassi gifs
+   :class: example
+
+   Reiknum mólmassa gifs, kalsíumsúlfat-tvíhýdrats,
+
+   .. math::
+
+      CaSO_4 \cdot 2H_2O
+
+   Mólmassinn fæst með því að leggja saman mólmassa allra
+   frumeindanna í efnasambandinu.
+
+   .. list-table::
+      :widths: 5 5 5 5
+      :header-rows: 1
+
+      * - Frumefni
+        - Mólmassi [g/mól]
+        - Fjöldi
+        - Alls [g/mól]
+      * - Ca
+        - 40,08
+        - 1
+        - 40,08
+      * - S
+        - 32,06
+        - 1
+        - 32,06
+      * - O
+        - 16,00
+        - 6
+        - 96,00
+      * - H
+        - 1,008
+        - 4
+        - 4,032
+      * -
+        -
+        -
+        - **172,17**
+
+   Mólmassi gifs er því um
+
+   .. math::
+
+      M = 172,17\,\textrm{g/mól}
+
+   Massi einnar sameindar fæst síðan með því að deila mólmassanum
+   með Avogadros-tölunni:
+
+   .. math::
+
+      m = \frac{172,17}{6,022\cdot10^{23}}
+        \approx 2,86\cdot10^{-22}\,\textrm{g}
 
 
 Orka í bindingum og kraftar milli frumeinda
 -------------------------------------------
+Kraftar milli frumeinda og sameinda
+-----------------------------------
+
+Frumeindir og sameindir hafa jákvæðar og neikvæðar hleðslur. Vegna dreifingar
+þessara hleðslna verka bæði **aðdráttarkraftar** og **fráhrindikraftar** milli einda.
+
+Þegar tvær eindir eru langt hvor frá annarri eru kraftarnir milli þeirra litlir.
+Þegar þær nálgast hvor aðra verður aðdráttur milli þeirra meiri. Ef þær koma
+hins vegar mjög nálægt hvor annarri verða fráhrindikraftar ráðandi.
+
+Því myndast ákveðin **jafnvægisfjarlægð**, :math:`r_0`, þar sem aðdráttar- og
+fráhrindikraftarnir vega hvor annan upp. Við þessa fjarlægð er kerfið í stöðugu
+jafnvægi og stöðuorka þess er í lágmarki.
+
+Lennard–Jones líkanið
+~~~~~~~~~~~~~~~~~~~~~
 
 .. panopto:: 24fb07ae-23e9-4068-9002-b04d00a47940
     :width: 100%
     :height: 400
 
-Lennard- Jones (Breti, setti tilgátuna fram 1931) ;
-
-Orkan er 
+Samband stöðuorku tveggja einda og fjarlægðarinnar milli þeirra má lýsa með
+svokölluðu **Lennard–Jones líkani**.
 
 .. math::
-    \Phi_r = \Phi_0\cdot\left[\left(\frac{r_0}{r}\right)^{12}-2\cdot\left(\frac{r_0}{r}\right)^{6}\right]
 
+   \Phi_r =
+   \Phi_0
+   \left[
+   \left(\frac{r_0}{r}\right)^{12}
+   -
+   2\left(\frac{r_0}{r}\right)^6
+   \right]
+
+þar sem :math:`r` er fjarlægðin milli eindanna, :math:`r_0` er
+jafnvægisfjarlægðin og :math:`\Phi_0` lýsir dýpt orkudalsins.
 
 .. figure:: ./myndir/kafli02/LennardJonesPotentialet.png
-  :align: center
-  :width: 70%
+   :align: center
+   :width: 70%
 
-Krafturinn
+   Stöðuorka sem fall af fjarlægð milli einda samkvæmt Lennard–Jones líkaninu.
+
+Lágmark ferilsins samsvarar jafnvægisfjarlægðinni :math:`r_0`. Til þess að
+færa eindirnar í sundur frá þessari stöðu þarf að leggja til orku. Dýpt
+orkudalsins gefur því vísbendingu um hversu sterk tengslin milli eindanna eru.
+
+Kraftar milli einda
+~~~~~~~~~~~~~~~~~~~
+
+Krafturinn milli eindanna tengist breytingu stöðuorkunnar með fjarlægð:
 
 .. math::
-    F_r = -\frac{\delta\Phi_r}{\delta r} = 12\cdot\frac{\Phi_r}{r_0} \cdot \left[\left(\frac{r_0}{r}\right)^{13}-\left(\frac{r_0}{r}\right)^{7}\right]
 
+   F_r = -\frac{d\Phi_r}{dr}
+
+Við jafnvægisfjarlægðina :math:`r_0` er krafturinn núll. Ef eindirnar færast
+aðeins lengra í sundur verður aðdráttarkraftur ráðandi og leitast við að færa
+þær aftur í jafnvægisstöðu. Ef þær færast nær hvor annarri verður
+fráhrindikraftur ráðandi.
 
 .. figure:: ./myndir/kafli02/LennardJonesKraften.png
-  :align: center
-  :width: 70%
+   :align: center
+   :width: 70%
+
+   Aðdráttar- og fráhrindikraftar milli einda sem fall af fjarlægð.
+
+.. admonition:: Tengingin við eiginleika efna
+   :class: important
+
+   Kraftar og bindingar milli einda hafa bein áhrif á eiginleika efna.
+
+   * **Sterkari bindingar** þýða að meiri orku þarf til að aðskilja eindirnar.
+     Efni með sterkar bindingar hafa því almennt hærra bræðsluhitastig.
+
+   * **Lögun orkudalsins** tengist stífleika efnisins. Því brattari sem
+     orkukúrfan er í kringum jafnvægisstöðuna, því meiri kraft þarf til að
+     breyta fjarlægðinni milli eindanna og því stífara er efnið.
+  
+
+Efnafræðilegir bindingar
+------------------------
+Gerð efnafræðilegra bindinga hefur mikil áhrif á eiginleika efna. Bindingarnar
+ráða meðal annars hvernig frumeindir raðast saman og hversu auðvelt er að færa
+þær úr jafnvægisstöðu.
+
+Efnafræðilegum bindingum má skipta í tvo meginflokka:
+
+* **fyrsta stigs efnafræðilegar bindingar**, sem eru sterkar bindingar milli frumeinda. Í þessum bindingum eru það rafeindirnar á ysta hvelinu (valenshvelinu) sem leika höfuðhlutverk. Bindingarnar verða til vegna viðleitni frumeindanna til þess að gera valenshvelið stöðugt, þ.e. fylla það rafeindum.
+* **annars stigs efnafræðilegar bindingar**, sem eru veikari og verka meðal annars milli sameinda. Annars stigs bindingar eru veikari en fyrsta stigs bindingar. Van der Waal bindingar og vetnisbindingar eru algengustu annars stigs bindingarnar.
 
 
-Jafnframt gildir (almennt);
+Fyrsta stigs efnafræðilegar bindingar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Efni með háa bindiorku (:math:`\Phi_0`) hafa hátt bræðsluhitastig, og mynda fast efni við stofuhita..
-* Fjaðurstuðull :math:`E_{mod}=\frac{\delta F_r}{\delta r}`, .. því dýpri og krappari sem “dældin” á :math:`\Phi-r` línuritinu
-  er, því stífara er efnið..
+Fyrsta stigs efnafræðilegar bindingar (e. *primary chemical bonds*) myndast
+með þátttöku rafeinda í ysta rafeindahveli frumeindanna, þ.e.
+gildisrafeindanna.
 
-Efnafræðilegir bindingar (myndun sameinda)
-------------------------------------------
-Frumeindir mynda sameindir og kristalla með fyrsta stigs efnafræðilegum bindingum (e. primary chemical bonds). Þrjár efnafræðilegar bindingar eru skilgreindar sem frumbindingar; 1) Jónabiningar (e. ionic bond), 2) Kóvalentbindingar (e. covalent bond) og 3) málmbindingar (e. metalic bond). Í öllum þessum bindingum eru það rafeindirnar á ysta hvelinu (valenshvelinu) sem leika höfuðhlutverk. Bindingarnar verða til vegna viðleitni frumeindanna til þess að gera valenshvelið stöðugt, þ.e. fylla það rafeindum.
+Þær skiptast í þrjár megingerðir:
 
-Auk þessara frysta stigs bindinga eru skilgreindar annars stigs bindingar. Annars stigs bindingar eru veikari en fyrsta stigs bindingar. Van der Waal bindingar og vetnisbindingar eru algengustu annars stigs bindingarnar. 
+* jónatengi,
+* samgild tengi,
+* málmtengi.
 
-Jónabindingar
-~~~~~~~~~~~~~
+
+Jónatengi
+^^^^^^^^^
+**Jónatengi** (e. *ionic bond*) myndast þegar ein eða fleiri rafeindir flytjast
+frá einni frumeind til annarrar. Við það myndast jákvætt og neikvætt hlaðnar
+jónir. Gagnstæðar rafhleðslur jónanna dragast að hvor annarri og mynda
+bindinguna.
+
+Matarsalt, :math:`NaCl`, er dæmi um efni þar sem jónatengi eru ráðandi.
+Natríumfrumeind, :math:`Na`, gefur frá sér eina gildisrafeind og verður að
+jákvæðri :math:`Na^+` jón. Klórfrumeind, :math:`Cl`, tekur við rafeindinni
+og verður að neikvæðri :math:`Cl^-` jón.
 
 .. figure:: ./myndir/kafli02/jonabinding.png
   :align: center
   :width: 70%
 
+  Myndun jónatengis.
+
 .. youtube:: 6DtrrWA5nkE
     :width: 100%
     :height: 400
 
-Kóvalentbindingar
-~~~~~~~~~~~~~~~~~
+Samgild tengi
+^^^^^^^^^^^^^
+
+**Samgilt tengi** (e. *covalent bond*) myndast þegar tvær frumeindir deila
+einum eða fleiri rafeindapörum. Þannig geta frumeindirnar náð stöðugri
+rafeindaskipan í ysta rafeindahveli (kallað valenshvel).
+
+Samgild tengi eru til dæmis milli frumeindanna í sameindum vetnis,
+súrefnis og köfnunarefnis.
+
+Efni þar sem sterk samgild tengi mynda samfellda byggingu geta haft mikinn
+styrk en eru oft stökk.
 
 .. figure:: ./myndir/kafli02/kovalentbinding.png
   :align: center
   :width: 70%
+
+  Samgild tengi myndast þegar frumeindir deila rafeindum.
 
 .. youtube:: 5I_1jRGSR9E
     :width: 100%
@@ -238,36 +378,96 @@ Kóvalentbindingar
 
 Málmbindingar
 ~~~~~~~~~~~~~
+Málmtengi
+^^^^^^^^^
+
+**Málmtengi** (e. *metallic bond*) eru einkennandi fyrir málma. Í málmi eru
+gildisrafeindirnar ekki bundnar við einstakar frumeindir heldur geta þær
+hreyfst tiltölulega frjálst milli jákvætt hlaðinna málmjóna.
+
+Oft er þessu lýst þannig að jákvæðar málmjónir séu umkringdar sameiginlegu
+**rafeindaskýi**. Aðdráttur milli jákvæðu jónanna og neikvæða
+rafeindaskýsins heldur efninu saman.
 
 .. figure:: ./myndir/kafli02/malmbinding.png
   :align: center
   :width: 70%
 
-  
+  Í málmtengi eru gildisrafeindir ekki bundnar við eina ákveðna frumeind.
+
+Þessi uppbygging skýrir ýmsa mikilvæga eiginleika málma. Frjáls hreyfing
+rafeindanna stuðlar að góðri **rafleiðni og varmaleiðni**. Jafnframt geta
+frumeindalög í málmgrindinni færst til án þess að bindingar rofni varanlega;
+ný tengsl myndast þegar frumeindirnar færast. Þetta á þátt í því að margir
+málmar geta **formbreyst plastískt** án þess að brotna.
+
 .. youtube:: b1y2Q6YX1bQ
     :width: 100%
     :height: 400
 
-van der Waal bindingar
-~~~~~~~~~~~~~~~~~~~~~~
+Annars stigs efnafræðilegar bindingar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Annars stigs efnafræðilegar bindingar** eru almennt mun veikari en fyrsta
+stigs bindingar. Þær byggjast á aðdráttarkröftum milli jákvæðra og neikvæðra
+hleðslusvæða í frumeindum eða sameindum.
+
+Tvær mikilvægar gerðir eru:
+
+* van der Waals-bindingar,
+* vetnistengi.
+
+van der Waals-bindingar
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Rafeindir eru á stöðugri hreyfingu og dreifing þeirra um frumeind eða
+sameind getur því tímabundið orðið ósamhverf. Þá getur myndast tímabundin
+hleðsluskipting, eða **tvískaut** (e. *dipole*).
+
+Slík hleðsluskipting getur haft áhrif á nærliggjandi eindir og valdið
+aðdráttarkröftum milli þeirra. Þessir kraftar kallast **van der
+Waals-kraftar**.
 
 .. figure:: ./myndir/kafli02/VanDerWaalbinding.png
-  :align: center
-  :width: 70%
+   :align: center
+   :width: 70%
 
-Vetnisbindingar
-~~~~~~~~~~~~~~~
+   van der Waals-binding vegna hleðsludreifingar milli nálægra einda.
+
+
+Vetnistengi
+^^^^^^^^^^^
+
+**Vetnistengi** (e. *hydrogen bond*) er annars stigs binding sem getur
+myndast milli sameinda þegar vetni er bundið við mjög rafneikvæða frumeind.
+
+Vatn er mikilvægt dæmi. Innan hverrar vatnssameindar eru vetnis- og
+súrefnisfrumeindir tengdar með samgildum tengjum. Hleðslan dreifist hins
+vegar ekki jafnt um sameindina. Súrefnishluti hennar verður lítillega
+neikvæður en vetnishlutinn lítillega jákvæður.
+
+Þessi hleðsluskipting veldur aðdrætti milli nálægra vatnssameinda og þar
+myndast vetnistengi.
 
 .. figure:: ./myndir/kafli02/vetnisbinding.png
-  :align: center
-  :width: 70%
+   :align: center
+   :width: 70%
 
-Yfirlit yfir efnabindingar
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Vetnistengi milli vatnssameinda.
+
+Yfirlit yfir efnafræðilegar bindingar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Efnafræðilegar bindingar hafa mismunandi styrk og eðli og hafa því
+mismunandi áhrif á eiginleika efna. Gerð bindinganna er einn af þeim
+grunnþáttum sem tengja saman innri byggingu efnis og eiginleika
+þess.
 
 .. figure:: ./myndir/kafli02/Efnabindingar.png
-  :align: center
-  :width: 70%
+   :align: center
+   :width: 70%
+
+   Yfirlit yfir helstu gerðir efnafræðilegra bindinga.
 
 Kristallar
 ----------
