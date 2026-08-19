@@ -1,5 +1,362 @@
-Kafli – Steypa
+Kafli – Steinsteypa
 ==============
+
+Steinsteypa er samsett efni úr sementsefju og fylliefnum. Auk þess eru
+oft notuð íblendiefni til þess að stjórna eiginleikum steypunnar.
+
+Í kaflanum um sement og bindiefni var fjallað um hvörfun sements,
+v/s-tölu og uppbyggingu harðnaðrar sementsefju. Þessir þættir hafa
+mikil áhrif á eiginleika steinsteypu.
+
+Í þessum kafla verður sjónum hins vegar beint að steinsteypunni sjálfri:
+hvernig hún hegðar sér í fersku ástandi, hvernig eiginleikar hennar
+þróast við hörðnun og hvaða eiginleikar skipta máli eftir að hún hefur
+harðnað.
+
+Fyrst verður fjallað um ferska steinsteypu og þær kröfur sem þarf að
+uppfylla svo hægt sé að flytja hana, leggja hana niður og þjappa henni
+án þess að hún aðskiljist.
+
+
+Fersk steinsteypa
+-----------------
+
+Frá því að steinsteypa er blönduð og þar til hún byrjar að storkna þarf
+að vera hægt að flytja hana, leggja hana niður í mót og þjappa henni.
+Eiginleikar steypunnar á þessu tímabili eru kallaðir eiginleikar
+**ferskrar steinsteypu**.
+
+Mikilvægur eiginleiki ferskrar steinsteypu er **vinnanleiki**
+(e. *workability*). Vinnanleiki lýsir því hversu auðvelt er að vinna
+með steypuna þannig að hún fylli mótið og umlyki bendistál án þess að
+aðskilnaður verði.
+
+Góður vinnanleiki þýðir þó ekki einfaldlega að steypan eigi að vera
+sem mest fljótandi. Steypan þarf að vera nægilega vinnanleg fyrir þá
+aðferð sem notuð er við flutning, niðurlögn og þjöppun, en jafnframt
+þarf hún að haldast einsleit.
+
+Vinnanleiki steypu ræðst meðal annars af:
+
+* vatnsmagni og v/s-tölu,
+* magni og eiginleikum sementsefju,
+* magni, kornastærðardreifingu, lögun og yfirborðsáferð fylliefna,
+* íaukum og íblendiefnum,
+* loftinnihaldi.
+
+Þessir þættir hafa ekki aðeins áhrif á eiginleika ferskrar steypu.
+Breyting á samsetningu til þess að bæta vinnanleika getur jafnframt
+haft áhrif á eiginleika steypunnar eftir að hún harðnar.
+
+Þjöppun steinsteypu
+~~~~~~~~~~~~~~~~~~~
+
+Þegar steinsteypa er lögð niður í mót lokast loft inni á milli
+hlutefna hennar. Þetta loft þarf að fjarlægja eins og kostur er með
+**þjöppun** (e. *compaction*) þannig að steypan fylli mótið og umlyki
+fylliefni og bendistál.
+
+Ef steypan er ekki nægilega vel þjöppuð verða eftir loftfyllt holrými
+í henni. Slík holrými draga meðal annars úr styrk og þéttleika
+steypunnar og geta aukið lekt hennar.
+
+.. centered:: **Ófullnægjandi þjöppun → aukin holrýmd → lakari eiginleikar**
+
+Vinnanleiki og þjöppun tengjast því náið. Steypa þarf að vera nægilega
+vinnanleg til þess að hægt sé að þjappa henni með þeirri aðferð sem
+notuð er við niðurlögn.
+
+Algengasta aðferðin við þjöppun hefðbundinnar steinsteypu er
+**víbrun**. Við víbrun minnkar innri mótstaða steypunnar tímabundið,
+fylliefniskornin geta færst til og loftbólur leita upp úr steypunni.
+Steypan getur þannig lagst þéttar saman og fyllt mótið betur.
+
+Víbrun má meðal annars framkvæma með stafvíbrator sem stungið er niður
+í steypuna eða með víbrun móta.
+
+Markmiðið er þó ekki að víbra steypuna sem mest. Ófullnægjandi víbrun
+getur skilið eftir loftfyllt holrými en óhófleg víbrun getur stuðlað að
+aðskilnaði í steypunni.
+
+.. figure:: ./myndir/kafli16/stafvibrator_og_vibrun.png
+    :align: center
+    :width: 35%
+
+    Þjöppun steinsteypu með stafvíbrator.
+
+.. figure:: ./myndir/kafli16/vibrandi_mot.png
+    :align: center
+    :width: 35%
+
+    Þjöppun steinsteypu með víbrandi mótum.
+
+Þjálni og sigmál
+~~~~~~~~~~~~~~~~
+
+**Þjálni** (e. *consistency*) lýsir því hversu auðveldlega fersk
+steinsteypa formbreytist og flæðir. Þjálni er einn þeirra þátta sem hafa
+áhrif á vinnanleika steypunnar en hugtökin vinnanleiki og þjálni hafa
+ekki nákvæmlega sömu merkingu.
+
+Til þess að lýsa eiginleikum ferskrar steinsteypu þarf að geta metið
+hversu auðveldlega hún flæðir og aflagast. Einn algengasti mælikvarðinn
+er **sigmál** (e. *slump*).
+
+Sigmál er mælt með sigmálsprófi. Stöðluð keila er fyllt af ferskri
+steypu og síðan lyft lóðrétt upp. Steypan sígur þegar keilan er
+fjarlægð og **sigmálið** er mælt sem lóðrétt lækkun steypunnar.
+
+.. figure:: ./myndir/kafli16/sigmalskeila.png
+    :align: center
+    :width: 50%
+
+    Sigmálskeila.
+
+.. figure:: ./myndir/kafli16/sigmalsprof.png
+    :align: center
+    :width: 90%
+
+    Mæling sigmáls ferskrar steinsteypu.
+
+.. youtube:: jDUQO-bn8pU
+    :width: 100%
+    :height: 400
+
+Hátt sigmál gefur almennt til kynna að steypan sé auðveldari í
+niðurlögn en lágt sigmál að hún sé stífari. Sigmál eitt og sér gefur
+þó ekki fullkomna lýsingu á vinnanleika steypu. Tvær steypublöndur
+geta til dæmis haft svipað sigmál en hegðað sér ólíkt við niðurlögn
+og þjöppun.
+
+Aukið vatnsmagn eykur almennt sigmál steypu. Það er þó ekki æskileg
+leið til þess að auka vinnanleika ef viðbótarvatnið hækkar v/s-töluna.
+Eins og fjallað var um í kaflanum um sement og bindiefni hefur
+v/s-talan áhrif á uppbyggingu harðnaðrar sementsefju og þar með
+eiginleika steinsteypunnar.
+
+Þegar þörf er á miklum vinnanleika án þess að auka v/s-töluna er
+hægt að nota viðeigandi íblendiefni, svo sem flot- eða þjálniefni.
+
+Þjálnitap
+~~~~~~~~~
+
+Eiginleikar ferskrar steinsteypu breytast með tíma. Eftir blöndun
+hefst hvörfun sementsins og steypan verður smám saman stífari. Þjálni
+minnkar því almennt eftir því sem lengri tími líður frá blöndun.
+
+Þessi breyting er kölluð **þjálnitap** (e. *slump loss*). Þjálnitap
+skiptir máli við framkvæmd þar sem nægur vinnanleiki þarf að haldast
+á meðan steypan er flutt, lögð niður og þjöppuð.
+
+.. figure:: ./myndir/kafli16/thjalnitap_m_tima.png
+    :align: center
+    :width: 70%
+
+    Þjálni steinsteypu minnkar með tíma frá blöndun.
+
+Hraði þjálnitaps getur meðal annars ráðist af samsetningu steypunnar,
+hitastigi og þeim íblendiefnum sem notuð eru. Því þarf að taka tillit
+til þess tíma sem líður frá blöndun þar til niðurlögn og þjöppun er
+lokið.
+
+
+Aðskilnaður
+~~~~~~~~~~~
+
+Steinsteypa er samsett úr efnum sem hafa ólíka kornastærð og
+eðlisþyngd. Til þess að steypan verði einsleit þurfa þessir efnisþættir
+að haldast jafnt dreifðir við flutning, niðurlögn og þjöppun.
+
+**Aðskilnaður** (e. *segregation*) verður þegar efnisþættir
+steypunnar skiljast að þannig að samsetning hennar verður ekki lengur
+einsleit.
+
+Aðskilnaður getur meðal annars orðið þegar gróf fylliefni skiljast frá
+sementsefjunni og safnast á ákveðin svæði. Hann getur einnig orðið þegar
+sementsefjan skilur sig frá grófari efnisþáttum steypunnar.
+
+.. figure:: ./myndir/kafli16/adskilnadur.png
+    :align: center
+    :width: 45%
+
+    Aðskilnaður í harðnaðri steinsteypu.
+
+Hætta á aðskilnaði eykst ef samloðun steypunnar er lítil. Mjög
+þunnfljótandi steypa getur til dæmis verið viðkvæm fyrir aðskilnaði.
+Óhófleg víbrun getur einnig stuðlað að aðskilnaði.
+
+Aðskilnaður er óæskilegur vegna þess að eiginleikar harðnaðrar
+steypu verða þá ekki einsleitir í byggingarhlutanum.
+
+
+Vatnsblæðing
+~~~~~~~~~~~~
+
+**Vatnsblæðing** (e. *bleeding*) er sérstök tegund aðskilnaðar þar
+sem vatn leitar upp á yfirborð ferskrar steinsteypu.
+
+Eftir niðurlögn hafa föstu efnisþættir steypunnar tilhneigingu til að
+setjast. Ef sementsefjan getur ekki haldið öllu blendivatninu dreifðu
+getur hluti vatnsins leitað upp í gegnum steypuna og safnast á
+yfirborðinu.
+
+.. figure:: ./myndir/kafli16/vatnsblaeding_2.png
+    :align: center
+    :width: 70%
+
+    Vatnsblæðing í ferskri steinsteypu.
+
+.. figure:: ./myndir/kafli16/vatnsblaeding_3.png
+    :align: center
+    :width: 70%
+
+    Vatnsblæðing í ferskri steinsteypu.
+
+Vatnsblæðing minnkar eftir því sem storknun steypunnar líður.
+Mikil vatnsblæðing getur hins vegar haft neikvæð áhrif á uppbyggingu
+steypunnar. Vatn getur til dæmis safnast undir stærri fylliefniskornum
+eða bendistáli og myndað veik svæði eftir að steypan harðnar.
+
+.. figure:: ./myndir/kafli16/vatnsblaeding.png
+    :align: center
+    :width: 70%
+
+    Vatn getur safnast undir fylliefniskornum og myndað veik svæði
+    í steinsteypunni.
+
+Samsetning steypunnar hefur áhrif á vatnsblæðingu. Almennt dregur
+aukið magn fínefna og góð samloðun sementsefjunnar úr tilhneigingu
+til vatnsblæðingar. Íblendiefni og íaukar geta einnig haft áhrif á
+vatnsblæðingu með því að breyta eiginleikum ferskrar steypu.
+
+Íblendiefni
+~~~~~~~~~~~
+
+**Íblendiefni** (e. *chemical admixtures*) eru efni sem bætt er í
+steypu í litlu magni til þess að breyta eiginleikum hennar. Þau geta
+haft áhrif á steypuna meðan hún er fersk, á storknun hennar og á
+eiginleika hennar eftir hörðnun.
+
+Með íblendiefnum er hægt að stjórna ákveðnum eiginleikum steypunnar án
+þess að þurfa að breyta grunnefnasamsetningu hennar að sama skapi.
+Þannig má til dæmis auka vinnanleika án þess að auka v/s-töluna eða
+breyta því hversu hratt steypan storknar og styrkur hennar þróast.
+
+Vatnsspararar og flotefni
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Aukið vatnsmagn eykur almennt þjálni steinsteypu. Ef vatni er bætt
+í steypublöndu án þess að sementsmagnið sé aukið hækkar hins vegar
+v/s-talan. Það getur haft neikvæð áhrif á eiginleika steypunnar eftir
+hörðnun.
+
+**Vatnsspararar** (e. *plasticizers* eða *water reducers*) eru
+íblendiefni sem dreifa sementskornum betur í sementsefjunni. Við það
+minnkar vatnsþörf steypunnar og hægt er að ná tilteknum vinnanleika
+með minna vatnsmagni.
+
+Vatnssparara má því meðal annars nota til þess að:
+
+* minnka vatnsmagn og lækka v/s-tölu við óbreyttan vinnanleika,
+* auka vinnanleika við óbreytta v/s-tölu,
+* auðvelda niðurlögn og þjöppun steypu.
+
+.. figure:: ./myndir/kafli16/vatnsspararar.png
+   :align: center
+   :width: 45%
+
+   Vatnssparar dreifa sementskornum og draga þannig úr vatnsþörf
+   steypunnar.
+
+**Flotefni** (e. *superplasticizers*) eru öflug vatnssparandi
+íblendiefni. Þau hafa sömu grundvallarvirkni og vatnsspararar en geta
+gefið mun meiri aukningu í vinnanleika eða meiri lækkun á vatnsmagni.
+
+Með flotefnum er því hægt að framleiða mjög þjála steinsteypu án þess
+að hækka v/s-töluna. Einnig er hægt að nota þau til þess að ná mjög
+lágri v/s-tölu án þess að steypan verði of stíf til niðurlagnar og
+þjöppunar.
+
+Flotefni eru meðal annars mikilvæg við gerð hástyrkleikasteypu og
+sjálfútleggjandi steypu.
+
+.. figure:: ./myndir/kafli16/flot.png
+   :align: center
+   :width: 70%
+
+   Áhrif flotefnis á þjálni steinsteypu.
+
+
+Loftblendi
+^^^^^^^^^^
+
+**Loftblendi** (e. *air-entraining admixtures*) eru yfirborðsvirk
+efni sem mynda mikinn fjölda smárra loftbóla í sementsefjunni.
+
+Loftblöndun getur bætt vinnanleika ferskrar steinsteypu. Mikilvægasta
+hlutverk hennar er þó að auka frostþol harðnaðrar steinsteypu. Smáu
+loftbólurnar veita rými sem dregur úr þrýstingi þegar vatn í
+holrýmakerfi steypunnar frýs.
+
+Loftinnihald hefur jafnframt áhrif á styrk steinsteypu. Aukið
+loftinnihald dregur almennt úr styrk og því þarf að stjórna
+loftinnihaldi með tilliti til þeirra eiginleika sem krafist er.
+
+.. figure:: ./myndir/kafli16/loftblendi.png
+    :align: center
+    :width: 70%
+
+    Virkni loftblendis.
+
+Storknunarseinkarar og hvörfunarhraðarar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Með íblendiefnum er einnig hægt að hafa áhrif á storknun og
+styrkþróun steinsteypu.
+
+**Storknunarseinkarar** (e. *retarders*) hægja á storknun og lengja
+þann tíma sem steypan helst vinnanleg. Þeir geta til dæmis verið
+gagnlegir þegar langur tími líður milli blöndunar og niðurlagnar eða
+þegar hátt hitastig flýtir fyrir storknun.
+
+**Hvörfunarhraðarar** (e. *accelerators*) eru notaðir til þess að flýta
+storknun eða styrkþróun. Þeir geta meðal annars verið gagnlegir þegar
+þörf er á hraðri styrkaukningu, til dæmis við ákveðnar
+viðgerðaraðgerðir.
+
+Önnur íblendiefni
+^^^^^^^^^^^^^^^^^
+
+Til eru fjölmargir aðrir flokkar íblendiefna sem eru notaðir til
+sérhæfðari verkefna. Þar má meðal annars nefna rýrnunarvara,
+seigjubreyta og efni sem draga úr tæringu bendistáls eða öðrum
+niðurbrotsferlum.
+
+Val á íblendiefnum fer eftir þeim eiginleikum sem óskað er eftir og
+þeim aðstæðum sem steypan verður fyrir. Íblendiefni geta jafnframt
+haft áhrif á fleiri eiginleika en þann sem fyrst og fremst er verið
+að stjórna og því þarf að taka tillit til heildaráhrifa þeirra.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Steinsteypa
 -----------
