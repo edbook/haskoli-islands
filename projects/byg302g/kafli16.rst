@@ -337,982 +337,703 @@ Val á íblendiefnum fer eftir þeim eiginleikum sem óskað er eftir og
 haft áhrif á fleiri eiginleika en þann sem fyrst og fremst er verið
 að stjórna og því þarf að taka tillit til heildaráhrifa þeirra.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Steinsteypa
------------
-
-Steinsteypa er eitt mikilvægasta byggingarefni nútímans og er notuð í fjölbreytt mannvirki, allt frá húsum og brúm til hafnarmannvirkja og stíflna. Eiginleikar steinsteypu ráðast meðal annars af samsetningu hennar, framleiðslu, niðurlögn og aðhlúun.
-
-Skilgreining á steinsteypu
---------------------------
-
-Steinsteypa er yfirleitt skilgreind með stuttri táknun sem lýsir helstu eiginleikum hennar. Dæmi um slíka skilgreiningu er:
-
-**C25/30 XF2 D22 S4 Ae**
-
-Þessi táknun hefur eftirfarandi merkingu:
-
-* **C25/30** – þrýstiþol steypunnar í MPa. Fyrri talan táknar þrýstiþol sívalnings en sú síðari þrýstiþol tenings.
-* **XF2** – áreitisflokkur samkvæmt staðli.
-* **D22** – hámarks kornastærð fylliefna.
-* **S4** – sigmál (þjálni) steypunnar.
-* **Ae** – loftblendin steinsteypa.
-
-.. figure:: ./myndir/kafli16/krofur_byggingarreglugerdar.png
-   :width: 70 %
-   :align: center
-
-   Kröfur Byggingarreglugerðar
-
-Við skilgreiningu steinsteypu eru jafnframt oft tilgreindir fleiri eiginleikar, svo sem:
-
-* sementsmagn,
-* vatns/sements-hlutfall (v/s-tala),
-* fjaðurstuðull,
-* loftmagn,
-* magn íauka,
-* þéttleiki,
-* og aðrir eiginleikar eftir því sem við á.
-
-Kröfur og staðlar
------------------
-
-Samsetning og eiginleikar steinsteypu þurfa að uppfylla kröfur gildandi reglna og staðla.
-
-Á Íslandi eru meðal annars stuðst við:
-
-* Byggingarreglugerð.
-* Kröfur Vegagerðarinnar fyrir steypumannvirki.
-
-.. figure:: ./myndir/kafli16/krofur_Vegagerdarinnar.png
-   :width: 70 %
-   :align: center
-
-   Kröfur Vegagerðarinnar.
-
-Þessar reglur skilgreina meðal annars kröfur um styrk, endingu, áreitisflokka og önnur gæðaviðmið sem steinsteypa þarf að uppfylla eftir notkunarsviði.
-
-Vinnanleiki steypu
+Hörnuð steinsteypa
 ------------------
 
-Steypa þarf að vera nægilega vinnanleg til að hægt sé að blanda hana, flytja, leggja í mót og þétta án þess að aðskilnaður verði í blöndunni.
-
-Vinnanleiki (e. *workability*) er skilgreindur sem sú innri vinna sem þarf til að steypan verði fullpökkuð á notkunarstað.
-
-Góð pökkun hefur veruleg áhrif á eiginleika harðnaðrar steypu. Með aukinni pökkun minnkar holrými í steypunni og þar með batna meðal annars:
-
-* styrkur,
-* þéttleiki,
-* lekt,
-* ending,
-* og fleiri eiginleikar.
-
-Því er mikilvægt að velja steypu með vinnanleika sem hentar bæði mannvirkinu og framkvæmdaraðferðinni.
-
-Þættir sem hafa áhrif á vinnanleika
------------------------------------
-
-Vinnanleiki steypu ræðst af samspili margra efnisþátta.
-
-**Vatn**
-
-* vatnsmagn í steypunni.
-
-**Fylliefni**
-
-* kornaform,
-* yfirborðsáferð,
-* holrýmd,
-* grófleiki,
-* kornakúrfa,
-* gerð fylliefna.
-
-**Sement**
-
-* grófleiki,
-* sementsgerð,
-* hlutfall fylliefna og sements.
-
-**Íaukar og íblendiefni**
-
-* kísilryk,
-* flugaska,
-* slagg,
-* kalkfiller,
-* loftblendiefni,
-* flot- og þjálniefni,
-* trefjar.
-
-Rétt samsetning þessara efnisþátta hefur afgerandi áhrif á hversu auðvelt er að leggja steypuna og ná góðri pökkun.
-
-Fullpökkun steypu
------------------
-
-Til þess að steinsteypa nái þeim styrk og endingu sem ætlast er til þarf hún að pakkast vel í mótið. Við fulla pökkun fyllir steypan öll holrými milli steypustyrktarjárna og móts og loftlokur verða sem fæstar.
-
-Ófullnægjandi pökkun getur leitt til:
-
-.. figure:: ./myndir/kafli16/leleg_pokkun.png
-   :width: 75 %
-   :align: center
-
-   Dæmi um lélega pökkun.
-
-
-* aukins holrýmis,
-* minni styrks,
-* aukinnar lektar,
-* lakari endingar,
-* óásjálegs yfirborðs.
-
-.. figure:: ./myndir/kafli16/leleg_pokkun_2.png
-   :width: 75 %
-   :align: center
-
-   Dæmi um lélega pökkun.
-
-Steypumót
----------
-
-Steypumót þurfa að vera nægilega sterk og stíf til að standast þrýsting ferskrar steypu án þess að aflagast. Mótin þurfa jafnframt að halda lögun sinni meðan steypan harðnar og tryggja að endanlegur byggingarhluti fái rétt mál og yfirborð.
-
-.. figure:: ./myndir/kafli16/steypumot.png
-   :width: 75 %
-   :align: center
-
-   Dæmi um steypumót.
-
-.. figure:: ./myndir/kafli16/steypumot_2.png
-   :width: 55 %
-   :align: center
-
-   Dæmi um steypumót.
-
-.. figure:: ./myndir/kafli16/steypumot_3.png
-   :width: 55 %
-   :align: center
-
-   Dæmi um steypumót.
-
-Víbrun steypu
--------------
-
-Algengasta aðferðin til að þétta steinsteypu er víbrun. Við víbrun minnkar innri núningur steypunnar tímabundið þannig að hún flæðir betur og fyllir holrými í mótinu.
-
-Algengar aðferðir eru:
-
-* stafvíbrator,
-* víbrun móta,
-* víbrunarborð fyrir forsteypta hluti.
-
-.. figure:: ./myndir/kafli16/stafvibrator_og_vibrun.png
-   :width: 55 %
-   :align: center
-
-   Víbrun steypu með stafvíbrator.
-
-Rétt framkvæmd víbrun fjarlægir loftlokur og tryggir góða pökkun. Of mikil víbrun getur hins vegar valdið aðskilnaði í steypunni.
-
-.. figure:: ./myndir/kafli16/vibrandi_mot.png
-   :width: 50 %
-   :align: center
-
-   Víbrun steypu með víbrandi mótum.
-
-Þjálni steypu
--------------
-
-Þjálni lýsir því hversu auðvelt er að vinna með ferska steypu. Hún þarf að vera nægileg til að hægt sé að leggja steypuna og þétta hana, en jafnframt má hún ekki vera svo mikil að hætta sé á aðskilnaði.
-
-Þjálni ræðst meðal annars af:
-
-* vatnsmagni,
-* v/s-tölu,
-* gerð og magni fylliefna,
-* sementsmagni,
-* notkun flotefna og annarra íblendiefna.
-
-.. figure:: ./myndir/kafli16/thjalni.png
-   :width: 75 %
-   :align: center
-
-   Dæmi um mismunandi þjálni steypu.
-
-Mæling á þjálni
----------------
-
-Þjálni steinsteypu er metin með stöðluðum prófunum sem gefa vísbendingu um hversu auðvelt er að leggja og þétta steypuna. Algengasta prófið er sigmálsprófið (*slump test*), sem er einfalt í framkvæmd og mikið notað við gæðaeftirlit á byggingarstað.
-
-Sigmálspróf
------------
-
-Algengasta aðferðin til að meta þjálni steinsteypu er sigmálspróf (*slump test*).
-
-Framkvæmd prófsins er í meginatriðum eftirfarandi:
-
-1. Sigmálskeilan er sett á sléttan og stífan flöt.
-2. Keilan er fyllt í þremur lögum.
-3. Hvert lag er stappað 25 sinnum með staðlaðri 16 mm stöng.
-4. Umframsteypa er fjarlægð þannig að keilan verði sléttfull.
-5. Keilunni er lyft lóðrétt upp.
-6. Sig steypunnar er mælt og gefur sigmálið til kynna þjálni hennar.
-
-.. figure:: ./myndir/kafli16/sigmalskeila.png
-   :width: 40 %
-   :align: center
-
-   Sigmálskeila.
-
-.. figure:: ./myndir/kafli16/sigmalsprof.png
-   :width: 70 %
-   :align: center
-
-   Framkvæmd sigmálsprófs.
-
-Túlkun sigmáls
---------------
-
-Sigmálið gefur vísbendingu um vinnanleika steypunnar.
-
-* Lítið sigmál bendir til stífrar steypu sem getur verið erfið í niðurlögn og pökkun.
-* Mikið sigmál bendir til fljótandi steypu sem auðveldara er að leggja, en of hátt sigmál getur aukið hættu á aðskilnaði og vatnsblæðingu.
-
-Sigmálið eitt og sér segir þó ekki allt um gæði steypunnar og verður ávallt að meta í samhengi við samsetningu hennar og fyrirhugaða notkun.
-
-.. figure:: ./myndir/kafli16/sigmal_flokkun.png
-   :width: 70 %
-   :align: center
-
-   Niðurstöður úr sigmálsprófi.
-
-.. figure:: ./myndir/kafli16/mismunandi_sigmal.png
-   :width: 70 %
-   :align: center
-
-   Dæmi um steypu með mismunandi sigmál.
-
-Áhrif vatnsinnihalds
---------------------
-
-Vatnsmagn hefur mjög mikil áhrif á sigmál steypunnar. Þegar vatnsmagn eykst verður steypan almennt vinnanlegri og sigmálið hækkar.
-
-Hins vegar hefur aukið vatnsmagn einnig áhrif á aðra eiginleika steypunnar, meðal annars:
-
-* hærri v/s-tölu,
-* minni styrk,
-* meiri lekt,
-* lakari endingu.
-
-Því þarf að velja vatnsmagn þannig að jafnvægi náist milli góðs vinnanleika og æskilegra eiginleika harðnaðrar steypu.
-
-.. figure:: ./myndir/kafli16/vatn_vs_sigmal.png
-   :width: 75 %
-   :align: center
-
-   Tengsl vatnsinnihalds og sigmáls.
-
-Þjálnitap með tíma
-------------------
-
-Þjálni steypu helst ekki óbreytt eftir blöndun. Með tímanum minnkar vinnanleikinn og sigmálið lækkar. Þetta er nefnt **þjálnitap** (*slump loss*).
-
-Helstu ástæður þjálnitaps eru:
-
-* hvörfun sements hefst,
-* vatn bindst í sementsefjunni,
-* uppgufun vatns,
-* áhrif hitastigs og umhverfisaðstæðna.
-
-Þegar flutningur eða niðurlögn tekur langan tíma þarf að taka tillit til þjálnitaps við hönnun steypublöndunnar.
-
-.. figure:: ./myndir/kafli16/thjalnitap_m_tima.png
-   :width: 75 %
-   :align: center
-
-   Þjálnitap steypu með tíma.
-
-Aðskilnaður steypu
-------------------
-
-Við flutning, niðurlögn og þéttingu steypu er mikilvægt að blandan haldist einsleit. Ef einstakir efnisþættir skiljast að verður samsetning steypunnar ójöfn, sem getur haft neikvæð áhrif á bæði vinnanleika og eiginleika harðnaðrar steypu.
-
-.. figure:: ./myndir/kafli16/adskilnadur.png
-   :width: 30 %
-   :align: center
-
-   Aðskilnaður í steypusýni.
-
-.. figure:: ./myndir/kafli16/adskilnadur_2.png
-   :width: 55 %
-   :align: center
-
-   Skissa af aðskilnaði.
-
-Aðskilnaður (*segregation*) getur orðið með tveimur meginhætti:
-
-* gróf fylliefni setjast til botns vegna þess að þau eru þyngri en sementsefjan,
-* sementsefjan og vatnið leita upp á yfirborðið.
-
-Fyrri gerðin verður helst í rýrum steypublöndum með litlu sementsmagni, en sú síðari getur komið fram þegar steypan er of þunnfljótandi.
-
-Afleiðingar aðskilnaðar geta meðal annars verið:
-
-* ójöfn dreifing fylliefna,
-* lakari styrkur,
-* aukin holrýmd,
-* verri ending,
-* ójafnt yfirborð steypunnar.
-
-Vatnsblæðing
-------------
-
-.. figure:: ./myndir/kafli16/vatnsblaeding_2.png
-   :width: 70 %
-   :align: center
-
-   Vatnsblæðing á yfirborði ferskrar steinsteypu.
-
-.. figure:: ./myndir/kafli16/vatnsblaeding_3.png
-   :width: 70 %
-   :align: center
-
-   Vatnsblæðing.
-
-.. figure:: ./myndir/kafli16/vatnsblaeding_4.png
-   :width: 70 %
-   :align: center
-
-   Vatnsblæðing.
-
-Vatnsblæðing (*bleeding*) er sérstök tegund aðskilnaðar þar sem vatn skilur sig frá steypublöndunni og safnast á yfirborði hennar.
-
-Þetta gerist þegar föstu efnin í steypunni geta ekki bundið allt blendivatnið. Vatnið leitar þá upp á yfirborðið þar til steypan hefur náð nægilegum storknun.
-
-Vatnsblæðing getur haft ýmsar óæskilegar afleiðingar, svo sem:
-
-* veikara yfirborð,
-* aukna hættu á sprungum,
-* lakari viðloðun milli steypulaga,
-* aukna lekt.
-
-.. figure:: ./myndir/kafli16/vatnsblaeding.png
-   :width: 75 %
-   :align: center
-
-   Vatnsblæðing undir járnum og fylliefnum.
-
-Þættir sem hafa áhrif á vatnsblæðingu
--------------------------------------
-
-Vatnsblæðing verður minni þegar steypan hefur meiri getu til að halda vatninu bundnu í sementsefjunni.
-
-Meðal þátta sem draga úr vatnsblæðingu eru:
-
-* fínmalað sement,
-* hátt alkalímagn í sementi,
-* hátt hlutfall C₃A í sementinu,
-* notkun hvörfunarflýtis, svo sem calcium chloride,
-* aukið sementsmagn,
-* notkun pozzolana, til dæmis flugösku,
-* loftblendi.
-
-Þessir þættir hafa þó einnig áhrif á aðra eiginleika bæði ferskrar og harðnaðrar steypu og þarf því að velja samsetningu steypunnar með hliðsjón af öllum kröfum til mannvirkisins.
-
-Kröfur um pökkun steypu við bendistál
-------------------------------------
-
-.. figure:: ./myndir/kafli16/bil_milli_jarna.png
-   :width: 75 %
-   :align: center
-
-   Bil milli bendistáls, úr leiðbeiningum Vegagerðarinnar.
-
-Við hönnun járnbentrar steinsteypu þarf að tryggja að ferska steypan geti flætt á milli bendistáls og fyllt mótið án þess að myndast holrými.
-
-Ef of lítið bil er milli stanga getur steypan átt erfitt með að komast á milli þeirra. Afleiðingin getur verið:
-
-* ófullnægjandi pökkun,
-* aukið holrými,
-* minni ending,
-* lakari viðloðun milli steypu og bendistáls.
-
-Bæði Eurocode og Vegagerðin setja því fram kröfur um lágmarksfjarlægðir milli bendistáls með hliðsjón af meðal annars:
-
-* þvermáli bendistáls,
-* hámarks kornastærð fylliefna,
-* möguleikum til fullnægjandi víbrunar.
-
-.. figure:: ./myndir/kafli16/bil_milli_jarna_2.png
-   :width: 50 %
-   :align: center
-
-   Kröfur um bil milli bendistáls samkvæmt Evrópustöðlum.
-
-Steypuhula
-----------
-
-.. figure:: ./myndir/kafli16/steypuhula.png
-   :width: 70 %
-   :align: center
-
-   Steypuhula.
-
-Steypuhula er minnsta fjarlægð frá yfirborði steypunnar að ysta bendistáli.
-
-Megintilgangur steypuhulu er að:
-
-* verja bendistálið gegn tæringu,
-* tryggja nægilegt brunavarnir,
-* stuðla að góðri viðloðun milli steypu og bendistáls,
-* tryggja endingu mannvirkisins.
-
-Samkvæmt Eurocode 2 ræðst lágmarks steypuhula meðal annars af:
-
-* áreitisflokki,
-* þvermáli bendistáls,
-* hámarks kornastærð fylliefna,
-* framkvæmdarvikmörkum.
-
-.. figure:: ./myndir/kafli16/skyring_a_steypuhulu.png
-   :width: 75 %
-   :align: center
-
-   Skýring á steypuhulu.
-
-.. figure:: ./myndir/kafli16/steypuhula_2.jpg
-   :width: 55 %
-   :align: center
-
-   Dæmi um steypuhulu í byggingarhluta.
-
-.. figure:: ./myndir/kafli16/steypuhula_3.jpg
-   :width: 55 %
-   :align: center
-
-   Dæmi um steypuhulu í byggingarhluta.
-
-.. figure:: ./myndir/kafli16/minnsta_steypuhula.png
-   :width: 55 %
-   :align: center
-
-   Minnsta steypuhula.
+Eftir niðurlögn og þjöppun tekur steinsteypan að storkna og harðna.
+Hvörfun sementsins heldur áfram og eiginleikar steypunnar þróast með
+tíma.
+
+Eins og fjallað var um í kaflanum um sement og bindiefni hefur
+uppbygging sementsefjunnar mikil áhrif á eiginleika harðnaðrar
+steinsteypu. Eiginleikar steinsteypunnar ráðast þó ekki eingöngu af
+sementsefjunni heldur einnig af fylliefnunum, hlutföllum efnisþáttanna
+og samspili þeirra.
+
+Meðal mikilvægustu eiginleika harðnaðrar steinsteypu eru styrkur,
+stífleiki, tímaháðar formbreytingar og ending.
 
 
 Styrkur steinsteypu
--------------------
+~~~~~~~~~~~~~~~~~~~
 
-Steinsteypa hefur mjög mismunandi eiginleika í þrýstingi og togi.
+Steinsteypa hefur mikið **þrýstiþol** en mun minna **togþol**.
+Þessi munur er grundvallareiginleiki steinsteypu og ein helsta ástæða
+þess að bendistál er notað með steinsteypu í burðarvirkjum.
+
+Styrk steinsteypu má meðal annars lýsa með:
+
+* **þrýstiþoli** (e. *compressive strength*),
+* **togþoli** (e. *tensile strength*),
+* **beygjutogþoli** (e. *flexural strength*).
 
 .. figure:: ./myndir/kafli16/thrysti_tog_beygjuthol.png
-   :width: 70 %
-   :align: center
+    :align: center
+    :width: 80%
 
-   Þrýsti-, tog- og beygjuþol steinsteypu.
+    Uppsetning á mælitækjum til þess að ákvarða þrýsti-, tog- og beygjutogþol steinsteypu.
 
-Helstu styrkleikaeiginleikar eru:
+Þrýstiþol er langalgengasti mælikvarðinn á styrk steinsteypu. Það er
+tiltölulega einfalt að mæla þrýstiþol og það hefur sterk tengsl við marga aðra
+eiginleika steypunnar. (Sjá töflu með þrýstiþoli, :math:`f_{ck}` og togþoli :math:`f_{ctm}`. 
+Taflan sýnir að meðaltogþolið er u.þ.b. 10% af þrýstiþolinu.)
 
-* þrýstiþol,
-* togþol,
-* beygjuþol.
+Þrýstiþol er ákvarðað með því að setja álag á steypusýni í þrýstingi þar til
+brot verður. Styrkurinn er reiknaður út frá mesta álagi sem sýnið ber
+og þverskurðarflatarmáli þess:
 
-Þrýstiþolið er langmikilvægasti hönnunarþátturinn og er það yfirleitt notað til flokkunar steinsteypu.
+.. math::
 
-Togþol steypu er hins vegar aðeins lítið brot af þrýstiþolinu og því er bendistál notað til að taka við togkröftum í járnbentri steinsteypu.
+    f_c = \frac{F}{A}
+
+þar sem :math:`F` er mesta álag fyrir brot og :math:`A` er
+þverskurðarflatarmál sýnisins.
+
+.. list-table:: Samband þrýstiþols og togþols steinsteypu skv. Evrópustaðli
+    :header-rows: 1
+    :widths: 25 25 25
+
+    * - :math:`f_{ck}` [MPa]
+      - :math:`f_{ctm}` [MPa]
+      - :math:`f_{ctm}/f_{ck}` [%]
+    * - 12
+      - 1,6
+      - 13
+    * - 16
+      - 1,9
+      - 12
+    * - 20
+      - 2,2
+      - 11
+    * - 25
+      - 2,6
+      - 10
+    * - 30
+      - 2,9
+      - 10
+    * - 35
+      - 3,2
+      - 9
+    * - 40
+      - 3,5
+      - 9
+    * - 45
+      - 3,8
+      - 8
+    * - 50
+      - 4,1
+      - 8
+
+Þrýstiþol steinsteypu er háð aldri hennar og því þarf alltaf að miða
+styrk við ákveðinn aldur. Algengt er að miða flokkun steinsteypu við
+þrýstiþol við 28 daga aldur.
+
+Þættir sem hafa áhrif á styrk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Styrkur steinsteypu ræðst af samsetningu hennar, uppbyggingu og
+aðstæðum við niðurlögn og hörðnun. Margir þessara þátta tengjast
+því hversu mikið holrými er í steypunni og hvernig sementsefjan
+þróast við hvörfun.
+
+
+V/s-tala
+""""""""
+
+V/s-talan er einn mikilvægasti þátturinn sem hefur áhrif á styrk
+steinsteypu. Eins og fjallað var um í kaflanum um sement og bindiefni
+hefur v/s-talan áhrif á holrýmd harðnaðrar sementsefju.
+
+Hærri v/s-tala leiðir almennt til meiri háræðaholrýmdar og þar með
+minni styrks. Lægri v/s-tala getur hins vegar leitt til þéttari
+sementsefju og meiri styrks, að því gefnu að steypan sé nægilega
+vinnanleg og aðstæður til hvörfunar séu góðar.
 
 .. figure:: ./myndir/kafli16/thrystithol_vs_vstala.png
-   :width: 75 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Þrýstiþol sem fall af vatnssementstölu.
+    Áhrif v/s-tölu á þrýstiþol steinsteypu.
 
-Samband þrýstiþols og togþols
------------------------------
 
-Þegar þrýstiþol steinsteypu eykst hækkar togþolið einnig, en hlutfallslega hægar.
+Þjöppun
+"""""""
 
-Því verður hlutfall togþols af þrýstiþoli lægra eftir því sem steypan verður sterkari.
+Við niðurlögn getur loft lokast inni í steypunni. Eins og fjallað var
+um í kaflanum um ferska steinsteypu er markmið þjöppunar að fjarlægja
+þetta loft og tryggja að steypan fylli mótið.
 
-.. table:: Dæmigert samband þrýstiþols og togþols.
-
-   +------------------+---------------+----------------+
-   | fck [MPa]        | fctm [MPa]    | fctm/fck [%]   |
-   +==================+===============+================+
-   | 12               | 1,6           | 13             |
-   +------------------+---------------+----------------+
-   | 16               | 1,9           | 12             |
-   +------------------+---------------+----------------+
-   | 20               | 2,2           | 11             |
-   +------------------+---------------+----------------+
-   | 25               | 2,6           | 10             |
-   +------------------+---------------+----------------+
-   | 30               | 2,9           | 10             |
-   +------------------+---------------+----------------+
-   | 35               | 3,2           | 9              |
-   +------------------+---------------+----------------+
-   | 40               | 3,5           | 9              |
-   +------------------+---------------+----------------+
-   | 45               | 3,8           | 8              |
-   +------------------+---------------+----------------+
-   | 50               | 4,1           | 8              |
-   +------------------+---------------+----------------+
-
-Þessar niðurstöður sýna að steinsteypa er mjög sterk í þrýstingi en tiltölulega veik í tog. Því er togstyrkurinn yfirleitt tryggður með bendistáli í burðarvirkjum.
-
-.. figure:: ./myndir/kafli16/tog_vs_thrysti.png
-   :width: 75 %
-   :align: center
-
-   Hlutfall togþols af þrýstiþoli sem fall af þrýstiþoli.
-
-.. Styrkur steinsteypu ræðst af fjölmörgum þáttum, meðal annars samsetningu steypunnar, þéttingu hennar, aðhlúun og aldri. Þótt þrýstiþol sé oft notað sem helsti mælikvarði á gæði steinsteypu hafa aðrir vélrænir eiginleikar einnig mikla þýðingu við hönnun mannvirkja.
-
-Áhrif víbrunar á þrýstiþol
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Rétt víbrun tryggir að steypan pakkist vel og loftlokur fjarlægist. Því meiri sem holrýmd steypunnar er, þeim mun lægra verður þrýstiþol hennar.
-
-Ófullnægjandi víbrun getur því leitt til:
-
-* minni styrks,
-* meiri lektar,
-* lakari endingar.
+Ef þjöppun er ófullnægjandi verða eftir loftfyllar holur (hreiður). Holurnar
+minnka þann hluta þversniðsins sem getur borið álag og draga því úr
+styrk steypunnar.
 
 .. figure:: ./myndir/kafli16/thrystithol_vs_vibrun.png
-   :width: 75 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Áhrif víbrunar á þrýstiþol steinsteypu.
+    Áhrif þjöppunar á þrýstiþol steinsteypu.
 
-Áhrif vatns/sements-hlutfalls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Vatns/sements-hlutfallið (v/s-talan) hefur afgerandi áhrif á styrk steinsteypu.
+Loftinnihald
+""""""""""""
 
-Lág v/s-tala leiðir almennt til:
+Loftblendi myndar smáar loftbólur (pórur) í sementsefjunni. Loftbólurnar hafa
+mikilvægu hlutverki að gegna varðandi frostþol steinsteypu en aukið
+loftinnihald dregur jafnframt úr styrk hennar.
 
-* meiri styrks,
-* minni gljúpleika,
-* betri endingu.
+.. figure:: ./myndir/kafli16/frostthol.png
+    :align: center
+    :width: 100%
 
-Of lág v/s-tala getur þó gert steypuna erfiða í vinnslu ef ekki eru notuð hentug íblendiefni.
+    Margar litlar pórur myndaðar með loftblendi auka frostþol steypunnar.
 
-.. figure:: ./myndir/kafli16/thrystithol_vs_vsogsementsgerd.png
-   :width: 75 %
-   :align: center
-
-   Samband v/s-tölu og þrýstiþols.
-
-Áhrif loftblendis
-~~~~~~~~~~~~~~~~~
-
-Loftblendi er einkum notað til að bæta frostþol steinsteypu. Loftbólurnar sem myndast auðvelda vatni að þenjast út við frost.
-
-Á móti kemur að aukið loftmagn leiðir almennt til lægra þrýstiþols.
-
-Við hönnun steypu þarf því að finna jafnvægi milli endingarkrafna og styrks.
+Þetta er dæmi um að breyting á samsetningu steinsteypu getur haft bæði
+jákvæð og neikvæð áhrif. Við loftblöndun þarf því að tryggja nægilegt
+loft til þess að ná tilætluðu frostþoli án þess að styrkur minnki meira
+en ásættanlegt er.
 
 .. figure:: ./myndir/kafli16/thrystithol_vs_loft.png
-   :width: 75 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Áhrif loftmagns á þrýstiþol.
+    Áhrif loftinnihalds á þrýstiþol steinsteypu.
 
-Áhrif hitastigs og aðhlúunar
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Þróun styrks steinsteypu ræðst af hvörfun sements við vatn.
+Aldur, hitastig og aðhlúun
+""""""""""""""""""""""""""
 
-Hitastig og rakaskilyrði við aðhlúun hafa mikil áhrif á hraða hvörfunarinnar og þar með styrkþróun steypunnar.
+Styrkur steinsteypu þróast með tíma eftir því sem hvörfun sementsins
+gengur lengra. Steinsteypa heldur því áfram að auka styrk sinn eftir að hún
+hefur harðnað.
 
-Rétt aðhlúun:
+Hitastig hefur áhrif á hraða hvörfunar og þar með á styrkþróun.
+Hærra hitastig getur hraðað styrkþróun á fyrstu stigum en samband
+hitastigs og langtímastyrks er flóknara.
 
-* stuðlar að meiri lokastyrk,
-* dregur úr hættu á sprungum,
-* bætir endingu mannvirkisins.
+Til þess að hvörfun geti haldið áfram þarf jafnframt nægilegt vatn.
+**Aðhlúun** (e. *curing*) felst í því að skapa aðstæður sem stuðla að
+áframhaldandi hvörfun og koma meðal annars í veg fyrir að steypan
+þorni of hratt.
+
+Góð aðhlúun er sérstaklega mikilvæg nálægt yfirborði steypunnar, þar
+sem vatnstap til umhverfisins getur annars stöðvað eða hægt á hvörfun.
 
 .. figure:: ./myndir/kafli16/thrystithol_vs_hitastigogadhluun.png
-   :width: 75 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Áhrif hitastigs og aðhlúunar á styrk.
+    Áhrif hitastigs og aðhlúunar á styrkþróun steinsteypu.
 
-Spennu–streituferill
-~~~~~~~~~~~~~~~~~~~~
 
-Steinsteypa hagar sér ekki eins og fullkomlega teygjanlegt efni.
+Spennu–streitu hegðun steinsteypu
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Við þrýstiálag verður fyrst nær línulegt samband milli spennu og streitu. Þegar álagið eykst fer efnið að sýna ólínulega hegðun þar til hámarksstyrk er náð og brot verður.
+.. admonition:: Gott að muna
+   :class: tip
+
+   **Spenna** lýsir álagi á flatarmál, **streita** hlutfallslegri
+   formbreytingu og **fjaðurstuðull** lýsir stífleika efnis.
+
+   Fyrir línulega fjaðrandi efni gildir:
+
+   .. math::
+
+       E = \frac{\sigma}{\varepsilon}
+
+   Fjallað var nánar um spennu, streitu og fjaðurstuðul í kafla um styrk og stífleika.
+
+Steinsteypa er ekki fullkomlega línulega fjaðrandi efni. Spennu–streitu
+ferill hennar verður ólínulegur eftir því sem álagið eykst.
 
 .. figure:: ./myndir/kafli16/spennu_streitu_ferill.png
-   :width: 70 %
-   :align: center
+    :align: center
+    :width: 100%
 
-   Dæmigerður spennu–streituferill steinsteypu.
+    Spennu–streitu ferill steinsteypu.
 
-.. figure:: ./myndir/kafli16/spennu_streitu_ferill_2.png
-   :width: 70 %
-   :align: center
+Ólínuleg hegðun steinsteypu tengist meðal annars sprungumyndun í
+efninu. Smásprungur eru til staðar í steinsteypu áður en
+hámarksstyrk er náð og þeim fjölgar og þær stækka eftir því sem
+álagið eykst.
 
-   Spennustreituferill mismunandi hlutefna í steinsteypu.
+Við þrýstiálag eykst streitan fyrst tiltölulega jafnt með spennunni.
+Með auknu álagi verður sprungumyndun meiri og ferillinn verður
+ólínulegri. Að lokum næst hámarksspenna og brot þróast í steypunni.
 
-Áhrif álagshraða
-~~~~~~~~~~~~~~~~
+Lögun spennu–streitu ferilsins er því bæði lýsing á stífleika
+steypunnar og því hvernig skemmdir þróast í henni fram að broti.
 
-Mældur styrkur steinsteypu ræðst einnig af því hversu hratt álag er aukið.
+Álagshraði
+""""""""""
 
-Við hraðara álag mælist styrkur yfirleitt hærri en við hæga álagsaukningu. Þetta þarf að hafa í huga við túlkun prófaniðurstaðna og samanburð á mismunandi rannsóknum.
+Mældur styrkur steinsteypu er einnig háður álagshraða. Við hraða
+álagsaukningu mælist almennt meiri styrkur en þegar sama álagi er
+beitt hægar.
+
+Þegar styrkgildi eru borin saman þarf því að hafa í huga að
+prófunaraðferð og álagshraði geta haft áhrif á niðurstöðuna.
 
 .. figure:: ./myndir/kafli16/alagshradi.png
-   :width: 75 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Áhrif álagshraða á styrk steinsteypu.
-
-Mismunandi styrkur steypu
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Styrkur steinsteypu getur verið mismunandi eftir:
-
-* gerð steypunnar,
-* aldri,
-* rakastigi,
-* prófunaraðferð,
-* stærð sýna,
-* og álagsstefnu.
-
-Því er mikilvægt að bera einungis saman niðurstöður sem fengnar eru með sambærilegum prófunaraðferðum.
+    Áhrif álagshraða á mældan styrk steinsteypu.
 
 
-.. figure:: ./myndir/kafli16/styrkur.png
-   :width: 75 %
-   :align: center
+Stífleiki steinsteypu
+~~~~~~~~~~~~~~~~~~~~~
 
-   Mismunandi styrkur steinsteypu.
-
-Fjaðurstuðull steinsteypu
--------------------------
+Þar sem spennu–streitu ferill steinsteypu er ekki línulegur er
+fjaðurstuðull hennar ekki eitt fast gildi sem fæst sem halli alls
+ferilsins. Hægt er að skilgreina fjaðurstuðul út frá mismunandi
+hlutum spennu–streitu ferilsins.
 
 .. figure:: ./myndir/kafli16/fjadurstudull_1.png
-   :width: 70 %
-   :align: center
-
-   Fjaðurstuðull steinsteypu.
+    :align: center
+    :width: 60%
 
 .. figure:: ./myndir/kafli16/fjadurstudull_2.jpg
-   :width: 70 %
-   :align: center
+    :align: center
+    :width: 60%
 
-   Fjaðurstuðull steinsteypu.
+    Mismunandi leiðir til þess að ákvarða fjaðurstuðul steinsteypu
+    út frá spennu–streitu ferli hennar.
 
-Fjaðurstuðull (*elastic modulus*) lýsir stífni steinsteypu og gefur til kynna hversu mikið efnið aflagast við tiltekið álag. Þar sem steinsteypa hegðar sér ekki sem fullkomlega fjaðrandi efni er ekki til einn ótvíræður fjaðurstuðull sem lýsir efninu við allar aðstæður.
+Í verkfræðilegum útreikningum er meðal annars notaður
+**sniðilsstuðull** (e. *secant modulus*), þar sem stífleikinn er
+ákvarðaður út frá halla línu milli tveggja punkta á
+spennu–streitu ferlinum.
 
-Mismunandi aðferðir eru notaðar til að ákvarða fjaðurstuðul steinsteypu, meðal annars:
+Samsett uppbygging og stífleiki
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* statískur fjaðurstuðull,
-* upphafssnertilína (*initial tangent modulus*),
-* snertilína (*tangent modulus*),
-* strenglína (*secant modulus*),
-* dýnamískur fjaðurstuðull.
+Steinsteypa er samsett efni. Við fyrstu sýn mætti því ætla að
+spennu–streitu hegðun hennar væri einfaldlega sambland af hegðun
+fylliefna og sementsefju. Raunin er þó flóknari.
 
-Statískur fjaðurstuðull er ákvarðaður út frá mældum aflögunum við stigvaxandi álag. Dýnamískur fjaðurstuðull er hins vegar metinn út frá útbreiðsluhraða hljóð- eða titringsbylgna í steypunni eða með mælingum á eigintíðni sýnis.
+Fylliefni hafa almennt háan fjaðurstuðul og sýna nær línulega
+spennu–streitu hegðun við það álag sem hér er til skoðunar.
+Sementsefjan hefur mun lægri fjaðurstuðul en getur einnig sýnt
+nokkurn veginn línulega hegðun.
 
-Dýnamískur fjaðurstuðull
-~~~~~~~~~~~~~~~~~~~~~~~~
+Steinsteypan sjálf hefur fjaðurstuðul sem liggur á milli
+fjaðurstuðuls fylliefnanna og sementsefjunnar. Spennu–streitu
+ferill hennar er hins vegar greinilega ólínulegur.
 
-Dýnamískur fjaðurstuðull er oft notaður við ástandsmat steinsteypu þar sem hægt er að framkvæma mælingar án þess að skemma mannvirkið.
+.. figure:: ./myndir/kafli16/spennu_streitu_ferill_2.png
+    :align: center
+    :width: 70%
 
-Breytingar á dýnamískum fjaðurstuðli geta gefið vísbendingar um:
+    Spennu–streitu hegðun fylliefna, sementsefju og steinsteypu.
 
-* þróun hörðnunar,
-* skemmdir,
-* sprungumyndun,
-* eða aðrar breytingar á innri byggingu steypunnar.
+Til þess að skýra þessa hegðun þarf að líta á steinsteypu sem efni
+sem samanstendur af **þremur fösum**:
 
-Þættir sem hafa áhrif á fjaðurstuðul
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* fylliefnum,
+* sementsefju,
+* fasaskil milli fylliefna og sementsefju.
 
-Fjaðurstuðull steinsteypu ræðst af samspili margra þátta.
+Svæðið við fasaskil fylliefna og sementsefju er oft kallað
+**þriðji fasinn** (e. *interfacial transition zone*, ITZ).
+Uppbygging sementsefjunnar á þessu svæði er frábrugðin uppbyggingu
+hennar fjær fylliefnunum og svæðið er almennt veikari hluti
+steypunnar.
 
-Helstu áhrifavaldar eru:
+Vegna mismunandi stífleika fylliefna og sementsefju myndast
+spennuþéttingar við fasaskilin þegar steinsteypa verður fyrir álagi.
+Smásprungur geta því myndast og þróast á fasaskilunum áður en
+hámarksstyrk steypunnar er náð.
 
-* rakastig steypunnar,
-* gerð og stífni fylliefna,
-* magn sementsefju,
-* aldur steypunnar,
-* hvörfunargráða sements.
+Eftir því sem álagið eykst fjölgar smásprungum og þær breiðast út.
+Þessi stigvaxandi sprungumyndun er ein helsta ástæða þess að
+spennu–streitu ferill steinsteypu verður ólínulegur þótt hegðun
+einstakra efnisþátta hennar sé mun nær línulegri.
 
-Almennt hafa fylliefni með háan fjaðurstuðul afgerandi áhrif á stífni steypunnar, þar sem fylliefnin mynda stærstan hluta rúmmáls hennar.
+Skrið
+~~~~~
 
-.. figure:: ./myndir/kafli16/fjadurstudull_thaettir.png
-   :width: 70 %
-   :align: center
+Þegar steinsteypa verður fyrir álagi verður strax formbreyting sem
+ræðst meðal annars af stífleika hennar. Ef álaginu er haldið föstu
+heldur formbreytingin hins vegar áfram að aukast með tíma.
 
-   Þættir sem hafa áhrif á fjaðurstuðull steinsteypu.
-
-Skrið steinsteypu
------------------
+Þessi tímaháða formbreyting undir viðvarandi álagi kallast **skrið**
+(e. *creep*).
 
 .. figure:: ./myndir/kafli16/skrid.png
-   :width: 70 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Skrið steinsteypu.
+    Formbreyting steinsteypu eykst með tíma þegar hún verður fyrir
+    viðvarandi álagi.
 
-Skrið (*creep*) er sú formbreyting sem verður í steinsteypu þegar stöðugu álagi er haldið á efninu yfir langan tíma.
+Þegar álag er sett á steinsteypu kemur því fyrst fram skyndileg upphafsformbreyting 
+og síðan viðbótarformbreyting vegna skriðs.
 
-Þótt álagið haldist óbreytt heldur steypan áfram að aflagast. Skrið er því tímaháður eiginleiki sem þarf að taka tillit til við hönnun mannvirkja.
+Ef álagið er fjarlægt gengur hluti formbreytingarinnar til baka.
+Formbreytingin gengur þó ekki endilega öll til baka og hluti hennar getur orðið
+varanlegur.
 
-Heildarformbreytingar
-~~~~~~~~~~~~~~~~~~~~~
+Hvað ræður skriði?
+^^^^^^^^^^^^^^^^^^
 
-Þegar steypa er undir stöðugu álagi verða formbreytingarnar ekki eingöngu vegna skriðs.
+Skrið á sér fyrst og fremst stað í **sementsefjunni**. Fylliefnin
+skríða mun minna og hamla því formbreytingum sementsefjunnar.
 
-Heildarformbreytinguna má skipta í:
+Steinsteypa með miklu hlutfalli stífra fylliefna hefur því almennt
+minna skrið en steinsteypa með miklu hlutfalli sementsefju. Stífleiki
+fylliefnanna skiptir einnig máli; því stífari sem fylliefnin eru, því
+meira halda þau aftur af skriði sementsefjunnar.
 
-* tafarlausa fjaðurteygju,
-* skrið,
-* þurrkrýrnun,
-* þrútnun vegna vatnsupptöku,
-* hitaformbreytingar.
-
-Við rannsóknir á skriði þarf því að mæla áhrif þessara þátta sérstaklega svo hægt sé að einangra raunverulegt skrið.
-
-Þættir sem hafa áhrif á skrið
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Skrið á sér stað í sementsefjunni en fylliefnin takmarka formbreytingarnar.
-
-Helstu þættir sem hafa áhrif á skrið eru:
-
-* magn og gerð fylliefna,
-* fjaðurstuðull fylliefna,
-* aldur steypunnar,
-* hvörfunargráða sements,
-* hlutfallsraki umhverfis,
-* aldur steypunnar þegar álag er sett á.
-
-Almennt gildir að:
-
-* stíf fylliefni draga úr skriði,
-* meira magn fylliefna dregur úr skriði,
-* eldri steypa skríður minna,
-* hærri loftraki dregur úr skriði.
-
-Áhrif einstakra þátta á skrið
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Í rannsóknum á skriði eru meðal annars skoðuð áhrif:
-
-* gerðar fylliefna,
-* loftraka,
-* þess hvenær álag er sett á steypuna,
-* vatns/sements-hlutfalls.
-
-Þessir þættir hafa allir áhrif á stærð og þróun skriðs með tíma.
-
-.. figure:: ./myndir/kafli16/skrid_fylliefni.png
-   :width: 75 %
-   :align: center
-
-   Áhrif fylliefna á skrið steinsteypu.
+Þetta sýnir aftur mikilvægi þess að líta á steinsteypu sem samsett
+efni. Sementsefjan hefur tilhneigingu til að formbreytast með tíma en
+fylliefnin takmarka þessar formbreytingar.
 
 .. figure:: ./myndir/kafli16/skrid_fylliefni_2.png
-   :width: 75 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Áhrif fylliefna á skrið steinsteypu.
+    Skriðþróun fyrir steypu með mismunandi fylliefnum. Því hærri sem fjaðurstuðullinn er þeim mun minna verður skriðið.
 
-.. figure:: ./myndir/kafli16/skrid_loftraki.png
-   :width: 75 %
-   :align: center
+.. figure:: ./myndir/kafli16/skrid_fylliefni.png
+    :align: center
+    :width: 70%
 
-   Áhrif loftraka á skrið steinsteypu.
+    Skriðþróun fyrir steypu með mismunandi fylliefnum. Basalt er algengasta íslenska fylliefnið.
 
-.. figure:: ./myndir/kafli16/skrid_loftraki_2.png
-   :width: 75 %
-   :align: center
+Aldur og hvörfun
+^^^^^^^^^^^^^^^^
 
-   Áhrif loftraka á skrið steinsteypu.
+Skrið steinsteypu er háð því hversu langt hörðnun hennar er komin.
+Eftir því sem hvörfun sementsins gengur lengra verður sementsefjan
+stífari og tilhneiging hennar til skriðs minnkar.
+
+Aldur steypunnar þegar álag er sett á skiptir því miklu máli.
+Ung steinsteypa skríður meira undir viðvarandi álagi en eldri
+steinsteypa sem hefur náð meiri hörðnun.
 
 .. figure:: ./myndir/kafli16/skrid_alagstimi.png
-   :width: 75 %
-   :align: center
+    :align: center
+    :width: 70%
 
-   Áhrif hvenær álag er sett á.
+    Áhrif aldurs steinsteypu við upphaf álags á skrið.
 
-.. figure:: ./myndir/kafli16/skrid_vstala.png
-   :width: 75 %
-   :align: center
 
-   Áhrif v/s tölu á skrid.
+Raki
+^^^^
 
-Þróun skriðs með tíma
-~~~~~~~~~~~~~~~~~~~~~
+Rakastig umhverfisins hefur mikil áhrif á skrið. Skrið verður almennt
+meira þegar steinsteypa er í þurru umhverfi en þegar hlutfallsraki
+umhverfisins er hár.
 
-Skrið heldur áfram í langan tíma eftir að steypan hefur náð meginhluta styrks síns. Hraði skriðsins er mestur fyrst eftir álagningu en minnkar smám saman með tímanum.
+Þurrkun og skrið eiga sér þá stað samtímis og samspil þeirra eykur
+tímaháðar formbreytingar steypunnar.
 
-Sem nálgun má gera ráð fyrir að:
+.. figure:: ./myndir/kafli16/skrid_loftraki.png
+    :align: center
+    :width: 70%
 
-* um 25 % af 20 ára skriði komi fram á fyrstu tveimur vikunum,
-* um 50 % komi fram á fyrstu þremur mánuðunum,
-* um 75 % komi fram á fyrsta árinu.
+    Áhrif hlutfallsraka umhverfis á skrið steinsteypu.
 
-Þótt skrið haldi áfram í áratugi verður aukning þess sífellt minni eftir því sem tíminn líður.
+.. admonition:: Gott að muna
+   :class: tip
 
-Rýrnun steinsteypu
-------------------
+   Skrið þróast yfir langan tíma en stór hluti þess kemur fram
+   tiltölulega snemma. Ef miðað er við skrið eftir 20 ár má gróflega
+   gera ráð fyrir að:
 
-Rýrnun (*shrinkage*) er formbreyting sem verður í steinsteypu án þess að utanaðkomandi álag sé lagt á hana. Rýrnun stafar einkum af breytingum á rakainnihaldi steypunnar og þeim efnahvörfum sem eiga sér stað við hörðnun sements.
+   * um 25% komi fram á fyrstu tveimur vikunum,
+   * um 50% komi fram á fyrstu þremur mánuðunum,
+   * um 75% komi fram á fyrsta árinu.
 
-Ef togspennur sem myndast vegna rýrnunar verða meiri en togþol steypunnar getur sprungumyndun átt sér stað.
+Rýrnun
+~~~~~~
 
-Rýrnun steinsteypu má almennt skipta í:
+**Rýrnun** (e. *shrinkage*) er rúmmálsminnkun sem verður í
+steinsteypu án utanaðkomandi álags.
 
-* plastíska rýrnun,
-* þurrkrýrnun,
-* sjálfútþornunarrýrnun.
+Rýrnun sementsefju getur stafað af því að vatn tapast úr steypunni
+til umhverfisins eða vegna breytinga sem verða inni í sementsefjunni
+við áframhaldandi hvörfun.
 
-.. figure:: ./myndir/kafli16/ryrnun.png
-   :width: 75 %
-   :align: center
+Fylliefnin rýrna hins vegar mun minna og hamla því rýrnun
+sementsefjunnar. Eins og við skrið hefur því bæði magn og stífleiki
+fylliefna áhrif á heildarformbreytingu steinsteypunnar.
 
-   Spurngur vegna rýrnunar.
+Rýrnun verður sérstaklega mikilvæg þegar steypan getur ekki dregist saman. 
+Þá myndast togspennur í henni. Þar sem togþol
+steinsteypu er lágt geta þessar spennur leitt til sprungumyndunar.
 
-.. figure:: ./myndir/kafli16/ryrnun_2.jpg
-   :width: 75 %
-   :align: center
+.. centered:: **Hindruð rýrnun → togspennur → hætta á sprungumyndun**
 
-   Samanburður, sprungur í steypu og bakstri.
+Rýrnun steinsteypu má meðal annars greina í:
+
+* **plastíska rýrnun**,
+* **þurrkrýrnun**,
+* **sjálfútþornunarrýrnun**.
+
+Þessar gerðir rýrnunar eiga sér stað við mismunandi aðstæður og
+orsakir þeirra eru ekki þær sömu.
 
 Plastísk rýrnun
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
-Plastísk rýrnun á sér stað meðan steypan er enn fersk og hefur ekki náð umtalsverðum styrk. Hún verður þegar vatn gufar hratt upp af yfirborði steypunnar áður en hún hefur storknað.
+**Plastísk rýrnun** (e. *plastic shrinkage*) verður mjög snemma,
+á meðan steypan er enn plastísk og hefur ekki öðlast umtalsverðan
+styrk.
 
-Afleiðingin getur verið stórar sprungur sem myndast bæði á yfirborði og innan steypunnar, sérstaklega í nágrenni fylliefna.
+Eftir niðurlögn getur vatn gufað upp af yfirborði steypunnar. Ef
+uppgufunin verður hraðari en vatn getur borist að yfirborðinu úr
+steypunni lækkar vatnsborðið í yfirborðslaginu og sementsefjan
+dregst saman.
 
-Helstu áhrifavaldar eru:
+Á þessu stigi hefur steypan mjög lítið togþol. Ef samdrátturinn er
+hindraður geta því myndast sprungur í yfirborði hennar.
 
-* hitastig umhverfis,
-* hitastig steypunnar,
-* vindhraði,
-* hlutfallsraki lofts.
+Hætta á plastískri rýrnun eykst þegar aðstæður stuðla að hraðri
+uppgufun, meðal annars við:
 
-Plastíska rýrnun má draga úr með:
+* mikinn vind,
+* lágan hlutfallsraka,
+* hátt hitastig steypu,
+* hátt hitastig umhverfis.
 
-* góðri vökvun,
-* plastyfirbreiðslu,
-* steypuþekjum.
+Mikilvægt er því að verja yfirborð nýlagðrar steypu gegn of hraðri
+uppgufun. Það má meðal annars gera með yfirbreiðslu og viðeigandi
+aðhlúun.
 
-.. figure:: ./myndir/kafli16/ryrnun_varnir.png
-   :width: 75 %
-   :align: center
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
 
-    Varnir gegn rýrnun.
+   * - .. image:: ./myndir/kafli16/ryrnun_varnir.png
+         :width: 100%
+     - .. image:: ./myndir/kafli16/vokva_steypu.png
+         :width: 100%
 
-.. figure:: ./myndir/kafli16/vokva_steypu.png
-   :width: 75 %
-   :align: center
-
-    Vökva steypu sem vörn gegn rýrnun.
+.. centered:: **Dæmi um aðhlúun steinsteypu með yfirbreiðslu og vökvun.**
 
 Þurrkrýrnun
-~~~~~~~~~~~
+^^^^^^^^^^^
 
-Þurrkrýrnun verður eftir að steypan hefur storknað og hörðnun hafist. Þegar vatn gufar úr háræðakerfi steypunnar myndast undirþrýstingur sem veldur samdrætti efnisins.
+**Þurrkrýrnun** (e. *drying shrinkage*) verður eftir að steypan
+hefur storknað og hörðnun er hafin.
 
-Þurrkrýrnun er mest fyrstu mánuðina eftir steypingu en heldur áfram að þróast með minnkandi hraða í langan tíma.
+Ef hlutfallsraki umhverfisins er lægri en rakinn í steypunni leitar
+vatn úr pórukerfi hennar til umhverfisins. Við þurrkun myndast
+kraftar í háræðakerfi sementsefjunnar sem valda því að hún dregst
+saman.
 
-Helstu áhrifavaldar eru:
+Þurrkun hefst við yfirborð steypunnar og færist smám saman inn í
+byggingarhlutann. Stærð og lögun byggingarhlutans hafa því áhrif á
+hraða þurrkunar og rýrnunar. Þunnir byggingarhlutar eða hlutir með
+stórt yfirborð miðað við rúmmál þorna almennt hraðar.
 
-* hitastig,
-* vindhraði,
-* hlutfallsraki lofts,
-* hitastig steypunnar.
-
-Hægt er að draga úr þurrkrýrnun með:
-
-* góðri aðhlúun,
-* vökvun,
-* plastyfirbreiðslu,
-* steypuþekjum,
-* rýrnunarvörum.
+Umhverfisaðstæður skipta einnig miklu máli. Þurrkrýrnun verður
+almennt meiri við lágan hlutfallsraka en minni þegar steypan er í
+röku umhverfi.
 
 Sjálfútþornunarrýrnun
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./myndir/kafli16/ryrnun_3.png
-   :width: 70 %
-   :align: center
+**Sjálfútþornunarrýrnun** (e. *autogenous shrinkage*) verður án þess
+að vatn þurfi að tapast úr steypunni til umhverfisins.
 
-   Spenna og streita vegna rýrnunar.
+Við hvörfun sementsins er vatn bundið í hvörfunarefni. Þegar
+hvörfunin gengur áfram minnkar því magn lauss vatns í pórukerfi
+sementsefjunnar. Þetta getur lækkað innri hlutfallsraka og valdið
+samdrætti sementsefjunnar.
 
-Sjálfútþornunarrýrnun verður vegna þess að sement bindur vatn við hvörfun sína. Þegar vatnið í pórum steypunnar minnkar myndast undirþrýstingur sem veldur samdrætti.
+Sjálfútþornunarrýrnun er yfirleitt lítil í hefðbundinni steinsteypu
+með tiltölulega háa v/s-tölu en verður mikilvægari þegar v/s-talan
+er mjög lág, svo sem í hástyrkleikasteypu.
 
-Þessi gerð rýrnunar á sér stað meðan enn er óhvarfað sement til staðar.
+Ólíkt þurrkrýrnun stafar sjálfútþornunarrýrnun ekki fyrst og fremst
+af uppgufun vatns af yfirborði. Hefðbundnar aðgerðir sem koma í veg
+fyrir þurrkun geta því ekki komið í veg fyrir hana á sama hátt.
 
-Sjálfútþornunarrýrnun er yfirleitt lítil í venjulegri steinsteypu en getur orðið veruleg í:
+.. admonition:: Gott að muna
+   :class: tip
 
-* hástyrkleikasteypu,
-* sjálfútleggjandi steypu,
-* steypum með miklu sementsmagni eða miklu magni íauka.
+   Rýrnun steinsteypu ræðst af samspili sementsefju, fylliefna,
+   rakaflutnings og umhverfisaðstæðna.
 
-Utanaðkomandi aðgerðir hafa almennt lítil áhrif á þessa gerð rýrnunar, þó að sérstakar rýrnunarvörur geti dregið úr henni.
+   * **Sementsefjan rýrnar mest.** Aukið hlutfall sementsefju leiðir
+     því almennt til meiri rýrnunar.
 
-Efnisþættir sem hafa áhrif á rýrnun
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   * **Fylliefnin hamla rýrnun.** Mikið magn fylliefna og stíf
+     fylliefni draga almennt úr rýrnun steinsteypu.
 
-Rýrnun steinsteypu ræðst af samspili samsetningar steypunnar og umhverfisaðstæðna.
+   * **Rakaástand og umhverfi ráða miklu um þurrkrýrnun.**
+     Lágur hlutfallsraki og aðstæður sem auka uppgufun stuðla að
+     meiri þurrkun og rýrnun.
 
-Helstu efnisþættir eru:
+   * **Stærð og lögun byggingarhlutans skipta máli.** Byggingarhlutar
+     með stórt yfirborð miðað við rúmmál þorna almennt hraðar.
 
-* magn sementsefju,
-* sementsmagn,
-* vatnsmagn,
-* vatns/sements-hlutfall,
-* gerð fylliefna,
-* fjaðurstuðull fylliefna,
-* hvörfunargráða sements.
+   * **V/s-talan hefur ekki sömu áhrif á allar gerðir rýrnunar.**
+     Við mjög lága v/s-tölu verður sjálfútþornunarrýrnun mikilvægari,
+     jafnvel þótt þurrkrýrnun sé ekki endilega mikil.
 
-Almennt gildir að:
+Ending steinsteypu
+------------------
 
-* minna vatn og lægra vatns/sements-hlutfall draga úr rýrnun,
-* stíf fylliefni draga úr rýrnun,
-* meiri hvörfun sements hægir á áframhaldandi rýrnun.
+Í kaflanum um niðurbrot efna og endingu var fjallað um mismunandi
+niðurbrotsferli og þær aðstæður sem þurfa að vera fyrir hendi til þess
+að þeir geti átt sér stað.
 
-Umhverfisþættir
-~~~~~~~~~~~~~~~
+Fyrir steinsteypu gegna **raki og flutningur efna** sérstaklega
+mikilvægu hlutverki. Vatn og uppleyst efni þurfa að geta komist inn í
+steypuna til þess að mörg niðurbrotsferli geti átt sér stað.
 
-Aðstæður í umhverfi hafa einnig mikil áhrif á rýrnun.
 
-Mikilvægir umhverfisþættir eru:
+Holrýmd, lekt og ending
+~~~~~~~~~~~~~~~~~~~~~~~
 
-* aðhlúun steypunnar,
-* hlutfallsraki lofts,
-* hitastig,
-* vindhraði,
-* stærð og lögun byggingarhluta.
+Hörnuð sementsefja inniheldur holrými af mismunandi stærðum. Fyrir
+endingu skiptir ekki aðeins máli hversu mikið holrými er í steypunni,
+heldur einnig hvort pórurnar tengjast saman þannig að vatn og uppleyst
+efni geti flust um þær.
 
-Hátt rakastig og góð aðhlúun draga úr rýrnun en þurrt, heitt og vindasamt umhverfi eykur hana.
+V/s-talan hefur þar mikil áhrif. Hærri v/s-tala leiðir almennt til
+opnara háræðakerfis og auðveldar þannig flutning vatns og efna um
+sementsefjuna.
 
-Byggingarhlutar með stórt yfirborð miðað við rúmmál eru einnig viðkvæmari fyrir rýrnun en massameiri steypuhlutar.
+.. centered:: **Hærri v/s-tala → opnara pórukerfi → meiri lekt → aukin hætta á niðurbroti**
+
+Góð þjöppun og aðhlúun skipta einnig máli. Ófullnægjandi þjöppun
+skilur eftir holrými í steypunni og ófullnægjandi aðhlúun getur leitt
+til þess að yfirborðslag hennar verði opnara og viðkvæmara fyrir
+áhrifum umhverfisins.
+
+Sprungur geta jafnframt myndað greiðar leiðir fyrir vatn og önnur efni
+inn í steypuna. Sprungumyndun vegna rýrnunar getur því haft bein áhrif
+á endingu hennar.
+
+Þétt og vel þjöppuð steinsteypa með lága lekt er almennt betur í stakk
+búin til þess að standast umhverfisáraun en steinsteypa með opið
+holukerfi eða sprungur.
+
+.. admonition:: Tenging við kafla 8
+   :class: tip
+
+   Í kafla 8 var meðal annars fjallað um frostskemmdir, kolsýringu,
+   alkalí-kísil efnahvörf og tæringu málma.
+
+   **Samsetning og uppbygging steinsteypunnar
+   ræður því hversu auðveldlega vatn og önnur efni komast inn í hana
+   og þar með hversu viðkvæm hún er fyrir mörgum þessara
+   niðurbrotsferla.**
+
+Kröfur til steinsteypu
+----------------------
+
+Þegar steinsteypa er valin fyrir byggingarhluta þarf að skilgreina
+þá eiginleika sem hún á að hafa. Kröfurnar ráðast meðal annars af
+hlutverki byggingarhlutans, aðstæðum við framkvæmd og þeirri
+umhverfisáraun sem mannvirkið verður fyrir.
+
+Kröfur til steinsteypu geta komið fram í stöðlum, reglugerðum og
+verklýsingum. Til dæmis eru gerðar kröfur til steinsteypu í
+byggingarreglugerð og verkkaupar geta sett frekari kröfur fyrir
+tiltekin mannvirki, svo sem í verklýsingum Vegagerðarinnar.
+
+Steinsteypa er því ekki skilgreind með einum eiginleika. 
+
+Dæmi um lýsingu á steinsteypu er:
+
+.. centered:: **C25/30 XF2 D22 S4 Ae**
+
+Táknin lýsa mismunandi eiginleikum og kröfum:
+
+**C25/30 — Styrkleikaflokkur**
+    Kennistyrkur steinsteypunnar við 28 daga aldur. Fyrri talan
+    vísar til þrýstiþols sívalnings og sú síðari til þrýstiþols
+    tenings, hér 25 MPa og 30 MPa.
+
+**XF2 — Áreitisflokkur**
+    Áreitisflokkurinn hefur áhrif á þær kröfur sem gerðar eru til 
+    steinsteypunnar með tilliti til endingar. Áreitisflokkur getur 
+    verið fyrir rygðmyndun vegna kolsýringar eða fyrir frost-þíðuáhrif. 
+    XF flokkarnir lýsa umhverfisáraun vegna frosts og þíðu. 
+
+**D22 — Hámarks kornastærð fylliefna**
+    Hámarks kornastærð fylliefna er 22 mm. Val á kornastærð þarf meðal
+    annars að taka mið af stærð byggingarhlutans og þéttleika
+    bendingar.
+
+**S4 — Sigmál**
+    Lýsir þjálni ferskrar steinsteypu og er hér ákvarðaður út frá
+    sigmáli. Þjálnin þarf að henta niðurlögn og þjöppun steypunnar.
+
+**Ae — Loftblöndun**
+    Loftblendin steinsteypa. Loftblöndun er meðal annars notuð
+    til þess að auka frostþol steinsteypu.
+
+Aðrir eiginleikar geta einnig verið tilgreindir eftir því sem við á,
+til dæmis sementsmagn, v/s-tala, loftinnihald, magn íauka, þéttleiki
+og fjaðurstuðull.
+
+Kröfur ráðast af notkun
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Sama steinsteypa hentar ekki við allar aðstæður. Kröfur til
+steypunnar ráðast af því hvar og hvernig hún verður notuð.
+
+Byggingarhluti innanhúss í þurru umhverfi verður til dæmis fyrir
+annarri áraun en brú sem verður fyrir vatni, frosti og söltum.
+Kröfur um samsetningu og eiginleika steypunnar geta því verið
+mismunandi þótt burðarþörfin sé sambærileg.
+
+Auk almennra krafa í stöðlum og reglugerðum geta verkkaupar sett
+sérstakar kröfur til steinsteypu fyrir tiltekin mannvirki. Vegagerðin
+setur til dæmis kröfur til steinsteypu sem notuð er í
+samgöngumannvirki.
+
+Tilgangurinn með slíkum kröfum er ekki aðeins að tryggja nægilegan
+styrk heldur einnig að steypan henti framkvæmdinni og hafi
+nægilega endingu við þær aðstæður sem mannvirkið verður fyrir.
+
+Samspil eiginleika
+~~~~~~~~~~~~~~~~~~
+
+Lýsing eins og
+
+.. centered:: **C25/30 XF2 D22 S4 Ae**
+
+er því ekki aðeins safn óháðra tákna. Hún lýsir mismunandi kröfum sem
+steypan þarf að uppfylla samtímis.
+
+Til þess að ná tilteknum eiginleikum þarf að velja samsetningu
+steypunnar og framleiðslu hennar með tilliti til þess hvernig
+efnisþættirnir hafa áhrif hver á annan.
+
+Til dæmis getur aukið vatnsmagn bætt þjálni en jafnframt hækkað
+v/s-töluna. Flotefni geta aukið þjálni án sömu aukningar á
+vatnsmagni. Loftblendi getur aukið frostþol en jafnframt dregið úr
+styrk. Ófullnægjandi þjöppun getur síðan aukið holrýmd jafnvel þótt
+samsetning steypunnar hafi verið rétt.
+
+Hönnun steinsteypu felst því í að finna samsetningu sem uppfyllir
+kröfur um bæði ferska og harðnaða steinsteypu og hentar þeirri
+umhverfisáraun sem mannvirkið verður fyrir.
+
+.. admonition:: Gott að muna
+   :class: tip
+
+   Eiginleikar steinsteypu ráðast ekki af einum þætti heldur af
+   samspili samsetningar, framleiðslu, niðurlagnar og aðhlúunar.
+
+   **Fersk steinsteypa**
+       þarf að hafa nægilegan vinnanleika til þess að hægt sé að
+       leggja hana niður og þjappa án aðskilnaðar.
+
+   **Hörnuð steinsteypa**
+       þarf að uppfylla kröfur um meðal annars styrk, stífleika,
+       formbreytingar og endingu.
+
+   **Samsetning og framkvæmd tengja þetta tvennt saman.**
+       V/s-tala, fylliefni, íblendiefni, loftinnihald, þjöppun og
+       aðhlúun hafa áhrif á þá eiginleika sem steypan fær eftir
+       hörðnun.
+
+
