@@ -1,37 +1,43 @@
-Kafli - Sement
-==============
+Kafli - Sement og bindiefni
+===========================
 
-Sement er fínmalað bindiefni sem hvarfast þegar það blandast vatni og harðnar. 
-Lýsa má sementi sem líminu í steinsteypu þar sem það límir saman fylliefnakornin. 
-En áður að við förum að fjalla meira um sement eru nokkur hugtök sem eru gott að þekkja.
+Sement er fínmalað bindiefni sem hvarfast við vatn og harðnar. Þegar sementi 
+og vatni er blandað saman myndast sementsefja. Við hvörfun sementsins breytist 
+sementsefjan smám saman úr mótanlegu efni í fast efni.
 
-.. figure:: ./myndir/kafli15/hugtök.png
-  :align: center
-  :width: 100% 
-
-----
+Sement er eitt af grunnefnum steinsteypu. Þar myndar sementið ásamt vatni 
+sementsefju sem umlykur steinefnin og bindur þau saman þegar hún harðnar. 
+Til þess að skilja eiginleika steinsteypu er því mikilvægt að þekkja hvað 
+sement er, hvernig það er framleitt og hvað gerist þegar sement hvarfast 
+við vatn.
 
 Portland sement og framleiðsla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Portland sement er langalgengasta tegundin af sementi í byggingariðnaðinum.**
+Portland sement er algengasta tegund sements sem notuð er í byggingariðnaði. 
+Það er framleitt úr hráefnum sem veita þau oxíð sem þarf til myndunar 
+klinkerfasa sementsins. Helstu hráefnin eru:
 
-Portland sement fellur undir visst skilgreint framleiðsluferli með ákveðnum hráefnum.
-Portland sement er framleitt úr:
+* kalksteinn, sem veitir CaO,
+* leir, sem veitir meðal annars SiO₂, Al₂O₃ og Fe₂O₃.
 
-* Kalkstein (CaO) og leir (SiO2, Al2O3, Fe2O3) venjulega
-* Skeljasandi (CaO) og líparíti (SiO2, Al2O3, Fe2O3) hér áður fyrr
+Á Íslandi voru áður notuð önnur hráefni við sementsframleiðslu. Þá var 
+skeljasandur uppspretta CaO og líparít uppspretta SiO₂, Al₂O₃ og Fe₂O₃.
 
-Svo er það brennt í ofni, allt að 1500°C (rotarofni), og malað:
+Við sementsframleiðslu eru hráefnin möluð og blönduð í réttum hlutföllum 
+áður en þau eru brennd í ofni. Hitastig í ofninum getur orðið um 
+1500 °C. Við brennsluna hvarfast hráefnin og mynda svokallaðan 
+**klinker** (sementsgjall).
 
-* Klinker 3-25 mm :math:`\rightarrow` malaður + gifs :math:`\rightarrow` sement
-* Kornastærð 1-100 μm, meðalstærð 10 :math:`\mu m`
+Klinkerinn kemur úr ofninum sem kornótt efni, gjarnan með kornastærð um 
+3–25 mm. Hann er síðan malaður mjög fínt og gifsi bætt við. Við það fæst 
+Portland sement. Kornastærð sements er á bilinu um 1–100 µm og meðalstærð 
+um 10 µm.
 
-Tvær aðferðir eru til við vinnslu sements. Þessar aðferðir nefnast **Þurr- og votaðferð**.
-En það hvernig efnið er meðhöndlað áður en það er sett inn í ofninn stýrir því hvaða aðferð er notuð, þ.e.
-
-* Þurraðferð þá er efnið sett **þurrt í ofninn**
-* Votaðferð þá er efnið í **leðjuformi** þegar það er sett í ofninn
+Tvær meginleiðir hafa verið notaðar við undirbúning hráefnanna fyrir 
+brennslu: **þurraðferð** og **votaðferð**. Munurinn felst fyrst og fremst 
+í því í hvaða formi hráefnin fara inn í ofninn. Við þurraðferð eru þau 
+þurr, en við votaðferð eru þau í leðjuformi.
 
 .. list-table::
    :widths: 100 100
@@ -42,126 +48,180 @@ En það hvernig efnið er meðhöndlað áður en það er sett inn í ofninn s
      - .. image:: ./myndir/kafli15/votaðferð.png
          :width: 100%
 
-**ATH fyrri myndin sýnir Þurraðferð en seinni Votaðferð.**
+   * - **Þurraðferð**
+     - **Votaðferð**
 
-Áður fyrr var sementsframleiðsla á Íslandi í sementsverksmiðjunni á Akranesi, en þar var notast við votaðferðina (Líparítið sem
-var notað í framleiðsluna mátti finna í súru gosbergi). Í dag er þó allt sement innflutt.
+Á Íslandi var sement áður framleitt í Sementsverksmiðjunni á Akranesi. 
+Þar var votaðferðin notuð og meðal hráefna voru skeljasandur og líparít. 
+Sementsframleiðslu á Íslandi hefur nú verið hætt og sement er flutt inn.
+
+Samsetning Portland sements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Við brennslu hráefnanna í ofninum myndast svokallaðir 
+**klinkerfasar** (gjallarfasar). Fjórir klinkerfasar eru meginuppistaðan í Portland 
+sementi:
+
+* :math:`C_3S` – tríkalsíumsilikat (alit)
+* :math:`C_2S` – díkalsíumsilikat (belit)
+* :math:`C_3A` – tríkalsíumálat
+* :math:`C_4AF` – tetrakalsíumálferrít
+
+Í sementsefnafræði er algengt að nota stytt tákn fyrir þau oxíð sem 
+mynda sementið. Til dæmis táknar :math:`C` CaO, :math:`S` SiO₂, 
+:math:`A` Al₂O₃ og :math:`F` Fe₂O₃. Þannig er til dæmis hægt að rita 
+tríkalsíumsilikat, :math:`3CaO \cdot SiO_2`, sem :math:`C_3S`.
+
+Taflan hér að neðan sýnir helstu oxíð í Portland sementi, tákn þeirra 
+og helstu klinkerfasa.
+
+.. figure:: ./myndir/kafli15/hugtök.png
+  :align: center
+  :width: 100%
 
 Hvörfun sements
 ~~~~~~~~~~~~~~~
 
-Sement samanstendur af fjórum meginþáttum sem nefndir eru klinkerfasar en þeir eru hluti af sementsgjallinu sem
-verður til við brennslu í sementsofninum.
+Þegar sementi er blandað við vatn hefjast efnahvörf milli vatnsins og 
+klinkerfasa sementsins. Þessi efnahvörf nefnast **hvörfun sements** 
+(e. *hydration*). Við hvörfunina myndast ný efnasambönd, svokallaðar 
+hvörfunarafurðir (e. *hydration products*).
 
-Klinkerfasarnir eru:
+Myndin hér að neðan sýnir hvernig sementsefjan breytist eftir því sem 
+hvörfuninni vindur fram. Ferlinu má lýsa í nokkrum skrefum:
 
-* :math:`C_3S` Tríkalsíumsilikat (Alit)
-* :math:`C_2S` Díkalsíumsilikata (Belit)
-* :math:`C_3A` Tríkalsíumálat
-* :math:`C_4AF` Tetrakalsíumálferrít
+1. Í upphafi er sementsefjan fljótandi og sementskornin eru aðskilin hvert 
+   frá öðru með vatni.
 
-Hvörfun sements á sér stað í þessar röð:
+2. Hvörfunarafurðir byrja að myndast við yfirborð sementskornanna og vaxa 
+   út í rýmið á milli þeirra.
 
-1. Sementsefjan er fljótandi svo lengi sem sementskornin snertast ekki. 
+3. Þegar næg tenging hefur myndast milli hvörfunarafurðanna missir 
+   sementsefjan floteiginleika sína og **storknun** (e. *setting*) hefst.
 
-2. Hvörfunarafurðirnar taka meira pláss en upprunalegu sementskornin og þess vegna fyllist upp í holrýmin.
+4. Eftir því sem hvörfuninni vindur fram tengjast hvörfunarafurðirnar 
+   betur saman og sementsefjan verður stífari. Við **lokastorknun** 
+   (e. *final set*) er sementsefjan orðin að föstu efni, en styrkur 
+   hennar er enn lítill.
 
-3. Á fyrstu stigum hvörfunarinnar, þegar næg snerting er á milli hvörfunarafurðanna missir efjan floteiginleikana og storknun hefst (e. setting).
-
-4. Eftir því sem á hvörfunina líður eftir fyrstu storknun hefst styrkaukningin sem kemur til af því að hvörfunarafurðirnar tengjast stekari böndum og holrýmd minnkar. Við lokastorknun (e. final set) er efjan orðin stíft, fast efni með lítinn styrk.
-
-5. Eftir lokastorkun hefst hörðnunartímabilið (e. hardening) þar sem hin raunverulega styrkauking á sér stað.
+5. Eftir lokastorknun heldur hvörfunin áfram. Þá tekur við **hörðnun** 
+   (e. *hardening*) og styrkur sementsefjunnar eykst eftir því sem 
+   hvörfuninni vindur fram.
 
 .. figure:: ./myndir/kafli15/hvörfun.png
   :align: center
-  :width: 100% 
+  :width: 100%
 
 Hvörfunarafurðir
 ~~~~~~~~~~~~~~~~
 
-Hvörfun sements og vatns er útvermið efnahvarf þar sem mesta hitamyndunin verður vegna hvörfunar :math:`C_3S` og :math:`C_3A`. Stærð sementskorna
-hefur áhrif á hitamyndunina þar sem fínara sement (minni korn) hefur meiri hitamyndun heldur en grófara vegna heildar yfirborðsflatarmál kornanna.
+Klinkerfasarnir hvarfast við vatn á mismunandi hátt og mynda mismunandi
+hvörfunarafurðir. Mikilvægustu hvörfunarafurðirnar eru C-S-H hlaup, 
+kalsíumhýdroxíð (CH), ettringít og monosulfoaluminat.
 
-.. figure:: ./myndir/kafli15/hitamyndum.png
-  :align: center
-  :width: 70% 
+C-S-H hlaup og kalsíumhýdroxíð
+------------------------------
 
-Þegar sement og vatn hvarfast verða til hvörfunarafurðirnar (e. hydration products):
+Kalsíumsilikötin :math:`C_3S` og :math:`C_2S` hvarfast við vatn og mynda
+aðallega **C-S-H hlaup** og **kalsíumhýdroxíð (CH)**.
 
-**C-S-H hlaup** 
+C-S-H hlaup er mikilvægasta hvörfunarafurðin með tilliti til styrks 
+sementsefjunnar. Það myndar þéttan massa sem tengir saman upphaflegu
+sementskornin eftir því sem hvörfuninni vindur fram. Í harðnaðri
+sementsefju er C-S-H hlaup um 65% af rúmmálinu.
 
-* Er sá þáttur sementsefjunnar sem er hvað þéttastur og stöðugastur
-* Gefur mestan styrk
-* Er u.þ.b. 65% af rúmmáli í harðnaðri sementsefju
+Kalsíumhýdroxíð, :math:`Ca(OH)_2`, er einnig nefnt **portlandit**. Það
+myndast sem stærri kristallar og er mun veikara en C-S-H. 
+Kalsíumhýdroxíð er um 20% af rúmmáli harðnaðrar sementsefju.
 
-**CH (Kalsíum hýdroxíð, portlandit)**
+Einfaldað má lýsa hvörfun kalsíumsilikatanna þannig:
 
-* Mun veikara og óþéttara en C-S-H
-* Stórir kristallar
-* Gengur í samband við :math:`CO_2` í andrúmsloftinu og þá lækkar pH gildi steypunnar
-* Hætta á að steypustyrktarjárn ryðgi ef kolsýringin nær inn að járnum
-* Er u.þ.b. 20% af rúmmáli í harðnaðri sementsefju
+.. math::
 
-Kalkkísilefnasambönd (:math:`C_3S` og :math:`C_2S`) + vatn (:math:`H_2O`) → C-S-H hlaup + kalsíumhýdroxíð (CH)
+   C_3S,\ C_2S + H_2O \rightarrow C\text{-}S\text{-}H + CH
 
-**Monosulfoaluminat**, :math:`C_4A \bar{S} H_{12}`
+Ettringít og monosulfoaluminat
+------------------------------
 
-* Svipað og CH hvað varðar styrk
-* Er u.þ.b. 10% af rúmmáli í harðnaðri sementsefju
+Tríkalsíumálat, :math:`C_3A`, hvarfast hratt við vatn. Gifs, sem bætt er
+við klinkerinn við mölun sementsins, tekur þátt í hvörfun :math:`C_3A`.
 
-Tríkalsíumálat (:math:`C_3A`) + gifs (:math:`C \bar{S} H_2`) + vatn (:math:`H_2O`) → ettringít (:math:`C_6 A \bar{S} H`)
+Við upphaf hvörfunarinnar myndast **ettringít**. Eftir því sem hvörfuninni
+vindur fram getur ettringít síðan hvarfast áfram við :math:`C_3A` og
+myndað **monosulfoaluminat**.
 
-Ettringít (:math:`C_6 A \bar{S} H`) + tríkalsíumálat (:math:`C_3A`) + vatn (:math:`H_2O`) → monosulfoaluminat (:math:`C_4 A \bar{S} H_{12}`)
+Í harðnaðri sementsefju er monosulfoaluminat um 10% af rúmmálinu.
 
-**Tetracalcium aluminat hydrate**, :math:`C_4(A,F)H_{13}` 
+Hvörfun :math:`C_4AF`
+---------------------
 
-* Skylt monosulfoaluminati að uppbyggingu
-* Veitir ekki styrk
+Ferrítfasinn, :math:`C_4AF`, tekur einnig þátt í hvörfun sementsins.
+Hvörfunarafurðir hans eru skyldar aluminathvörfunarafurðunum að
+uppbyggingu. Framlag þeirra til styrks lítið.
 
-Ferrít (:math:`C_4AF`) + kalísum hydroxíð (:math:`CH`) + vatn (:math:`H_2O`) → tetracalcium aluminat hydrate (:math:`C_4(A,F)H_{13}`) + ferric-aluminum hydroxíð :math:`(A,F)H_3`
-
-**Ettringít**, :math:`C_6A \bar{S} _3H`
-
-**Það er þó nær alltaf til staðar óhvarfað sement í sementsefjunni**
-
+Eftir því sem hvörfuninni vindur fram minnkar magn óhvarfaðs sements og
+magn hvörfunarafurða eykst. Þó er yfirleitt eitthvað óhvarfað sement eftir
+í harðnaðri sementsefju. Á myndinni hér að neðan má sjá magn hvörfunarafurða
+mismunandi stigum hvörfunar. Takið eftir hvernig ettringít myndast en hvarfast 
+síðan og hverfur þegar monosulfoaluminat fer að myndast.
 
 .. figure:: ./myndir/kafli15/hvörfunogtími.png
   :align: center
-  :width: 100% 
+  :width: 100%
 
-------
+Hraði hvörfunar og hitamyndun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Kalsíumsamböndin :math:`C_3S` og :math:`C_2S` standa aðallega fyrir þróun styrks steypunnar. Þó er þróun styrks frá þessum klinkerfösum mjög mismunandi.
+Hvörfun sements við vatn er útvermið efnahvarf, það er að segja að við
+hvörfunina losnar varmi. Klinkerfasarnir hvarfast misjafnlega hratt og
+framlag þeirra til hitamyndunar er því mismunandi.
 
-**Hátt hlutfall** :math:`C_3S`:  
+Myndin hér að neðan sýnir hitamyndun sements eftir að vatni hefur verið
+bætt við. Hitamyndunin breytist verulega með tíma og endurspeglar
+mismunandi stig hvörfunarinnar.
 
-* Lægri endanlegur styrkur
-* Hærri skammtíma styrkur og hitamyndun
+.. figure:: ./myndir/kafli15/hitamyndum.png
+  :align: center
+  :width: 70%
 
-**Hátt hlutfall**:math:`C_2S`:
+Áhrif :math:`C_3S` og :math:`C_2S`
+-----------------------------------
 
-* Langtímastyrkur
-* Lengur að hvarfast
+Kalsíumsilikötin :math:`C_3S` og :math:`C_2S` hafa mikil áhrif á
+styrkþróun sementsefjunnar, en þau hvarfast mishratt.
+
+:math:`C_3S` hvarfast hraðar og hefur því sérstaklega áhrif á
+styrkþróun fyrstu dagana. Hvörfun þess veldur jafnframt meiri
+hitamyndun.
+
+:math:`C_2S` hvarfast hægar og framlag þess til styrks kemur því fram
+á lengri tíma.
 
 .. figure:: ./myndir/kafli15/C3SogC2S.png
   :align: center
-  :width: 100% 
+  :width: 100%
 
-------
+Fínleiki sements hefur einnig áhrif á hraða hvörfunarinnar. Eftir því
+sem sementskornin eru fínni verður samanlagt yfirborðsflatarmál þeirra
+meira og hvörfunin getur því gengið hraðar. Fínna sement tengist því
+hraðari hitamyndun en grófara sement.
 
-Hvörfun C3S er mikilvægt við myndun klinkerfasa á brennslustigi klinkersins. Þó skal ekki gleyma að það er 
-nauðsynlegt að hafa gifs í blöndunni. Því ef ekkert gifs væri til staðar þá mundi C3S byrja að hvarfast strax (ekki æskilegt að steypan harðni í steypubílunum). 
+Áhrif :math:`C_3A`
+-------------------
 
-Munum:
+:math:`C_3A` hvarfast mjög hratt. Gifs er því mikilvægt í Portland
+sementi þar sem það hefur áhrif á hvörfun :math:`C_3A` og þar með
+storknunarferlið.
 
-* Tríkalsíum aluminat (C3A) + gifs (CS ̅H2) + vatn (H2O)      → ettringít (C6AS ̅H)
+Án gifs getur hvörfun :math:`C_3A` orðið mjög hröð og sementsefjan
+storknað á mjög skömmum tíma.
 
-* Ettringít (C6AS ̅H) + tríkalsíum aluminat (C3A) + vatn (H2O)    → monosulfoaluminat (C4AS ̅H12)
+Ferrítfasinn :math:`C_4AF` hvarfast hægar en :math:`C_3A`. Járninnihald
+hans tengist jafnframt gráum lit Portland sements.
 
-
-C4AF Hefur líkt og C3A þýðingu við myndun klinkersins. C4AF hvarfast þó mun hægar en C3A en C4AF gefur sementinu gráa litinn.
-
-Á myndunum hér að neðan má sjá á myndinni til vinstri sement eftir 7 daga og til hægri sement eftir 28 daga.
+Hvörfun sements heldur áfram eftir storknun og örbygging
+sementsefjunnar breytist því áfram með tíma. Á myndunum hér að neðan
+má bera saman sementsefju eftir 7 daga og 28 daga.
 
 .. list-table::
    :widths: 100 100
@@ -172,203 +232,212 @@ C4AF Hefur líkt og C3A þýðingu við myndun klinkersins. C4AF hvarfast þó m
      - .. image:: ./myndir/kafli15/28dagar.png
          :width: 100%
 
+   * - **7 dagar**
+     - **28 dagar**
+
+V/s-tala og holrýmd sementsefju
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Magn vatns í sementsefju hefur mikil áhrif á uppbyggingu hennar eftir
+hörðnun. Hlutfall vatns og sements er gefið upp með svokallaðri
+**v/s-tölu**, sem er hlutfall massa vatns og massa sements:
+
+.. math::
+
+   v/s = \frac{m_v}{m_s}
+
+þar sem :math:`m_v` er massi vatns og :math:`m_s` er massi sements.
+
+Vatnið í sementsefjunni gegnir mikilvægu hlutverki í hvörfun sementsins.
+Ekki verður þó allt upphaflegt rúmmál vatnsins að föstu efni við
+hvörfunina. Eftir því sem hvörfuninni vindur fram myndast
+hvörfunarafurðir, en jafnframt verða eftir holrými í sementsefjunni.
+
+Því hærri sem v/s-talan er, því meiri verður holrýmd harðnaðrar
+sementsefju. Á myndinni hér að neðan má sjá dreifingu holrýmis í
+sementsefju með v/s-tölu 0,4 og 0,6 eftir 3 og 14 daga. Bæði v/s-talan
+og tími hvörfunar hafa áhrif á magn og stærð póranna.
+
+.. figure:: ./myndir/kafli15/porur.png
+  :align: center
+  :width: 80%
+
+  Áhrif v/s-tölu og tíma hvörfunar á dreifingu holrýmis í sementsefju.
+
+Eftir því sem hvörfun sementsins heldur áfram eykst magn
+hvörfunarafurða og holrýmd sementsefjunnar minnkar. Sambandið milli
+v/s-tölu, hvörfunar og holrýmdar má sjá á myndinni hér að neðan.
+
+.. figure:: ./myndir/kafli15/holrymi.png
+  :align: center
+  :width: 80%
+
+  Áhrif v/s-tölu og hvörfunar á holrýmd sementsefju.
+
+Holrýmd og eiginleikar sementsefju
+----------------------------------
+
+Holrýmd sementsefjunnar hefur mikil áhrif á eiginleika hennar. Myndin
+hér að neðan sýnir samband holrýmdar annars vegar og þrýstistyrks og
+lektar hins vegar. Með aukinni holrýmd minnkar þrýstistyrkur, en lekt
+eykst.
+
+.. figure:: ./myndir/kafli15/holrymd2.png
+  :align: center
+  :width: 70%
+
+  Áhrif holrýmdar á þrýstistyrk og lekt harðnaðrar sementsefju.
+
+V/s-talan hefur því áhrif á eiginleika efnisins í gegnum þá holrýmd sem
+myndast í sementsefjunni. Lág v/s-tala tengist minni holrýmd, en há
+v/s-tala meiri holrýmd.
+
+Þegar sementsefjan er hluti af steinsteypu hefur þetta síðan áhrif á
+eiginleika steinsteypunnar. Fjallað verður nánar um þau áhrif í næsta
+kafla.
+
 Sementsgerðir
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
-Til eru mismunandi sementsgerðir og ráðast þær m.a. af:
+Eiginleikar sements ráðast meðal annars af samsetningu klinkerfasanna,
+fínleika sementsins og þeim efnum sem bætt er við það. Með því að breyta
+þessum þáttum er hægt að framleiða sement með mismunandi eiginleika og
+fyrir mismunandi notkun.
 
-* Mismunandi samsetningu klinkerfasa
+Hraðharðnandi Portland sement
+------------------------------
 
-* Mismunandi fínleika
+Hraðharðnandi Portland sement er ætlað til notkunar þar sem mikill
+byrjunarstyrkur er æskilegur. Það getur meðal annars verið hentugt við
+sprautusteypu í jarðgöngum.
 
-* Mismunandi íaukum
+Hraðharðnandi sement hefur gjarnan hátt hlutfall :math:`C_3S` og er
+fínmalað. Hvort tveggja tengist hraðari hvörfun og meiri hitamyndun.
+Af þeim sökum er slíkt sement síður hentugt í massasteypu þar sem mikil
+hitamyndun getur verið óæskileg.
 
-  * Með possolönum (e. Pozzolans)
+Lághita Portland sement
+-----------------------
 
-    * Kísilryk (e. Silica fume)
+Lághita Portland sement er ætlað til notkunar þar sem mikilvægt er að
+takmarka hitamyndun, til dæmis í massasteypu. Það hefur minna hlutfall
+:math:`C_3S` og :math:`C_3A` en meira hlutfall :math:`C_2S`.
+Sementskornin geta einnig verið grófari.
 
-    * Flugösku (e. Fly Ash)
+Hér á landi voru áður framleiddar tvær tegundir lághitasements:
 
-    * Malað líparít
-
-  * Með slaggi (e. Blast-furnace slag)
-
-  * Með möluðu kalki
-
-**Hraðharðnandi Portland sement**
-
-Er ætlað til nota þar sem hár byrjunarstyrkur er æskilegur. Svona sement getur verið sniðugt að nota í sprautusteypu í jarðgöngum.
-Ekki æskilegt að hafa hraðharðnandi sement þegar um massasteypur (mikið af rúmmetrum dælt í einu) er að ræða. 
-Oft með meira C3S (alit) og kornin eru fínmalaðri sem þýðir að meiri hitamyndun á sér stað.
-
-**Lághita Portland sement**
-
-Er ætlað til nota þar sem hitamyndun er mikil það er í massasteypum. Oft með lítið C3S og C3A, en meira af C2S (belit).
-Sementskornin eru oft grófari (há kornastærð).
-
-Hér á landi voru tvær tegundir lághitasements:
-
-* Blöndusement 
-
+* Blöndusement
 * Sigöldusement
 
-**Sulfatþolið sement**
+Súlfatþolið sement
+------------------
 
-Ætlað til nota þar sem sulfat (brennisteinn) er til staðar í umhverfinu. Sulfatþolið sement hefur lágt hlutfall C3A (3,5% eða minna).
-Sulfatþolið sement var framleitt hér á landi.
+Súlfatþolið sement er ætlað til notkunar þar sem súlföt eru til staðar
+í umhverfinu. Í slíku sementi er hlutfall :math:`C_3A` lágt.
 
-**Hvítt og litað Portland sement**
+Súlfatþolið sement var áður framleitt á Íslandi.
 
-Hvítt sement er gert úr sérstökum hráefnum með litlu járn- og  magnesíum oxíðum.
-Í lituðu sementi er bætt í litarefni, fínmöluðu dufti, getur haft áhrif á gæði steypunnar, styrk o.fl.
+Hvítt og litað Portland sement
+------------------------------
 
-Mikilvægi v/s tölunnar
-~~~~~~~~~~~~~~~~~~~~~~
+Hvítt Portland sement er framleitt úr hráefnum með litlu magni járn- og
+magnesíumoxíða.
 
-Þessi tala skiptir gríðarlegu máli þegar það kemur að steypu.
-v/s talan er skilgreint sem hlutfall milli vatns og sements í blöndu.
-v/s talan hefur áhrif á:
+Litað sement er framleitt með því að bæta fínmöluðum litarefnum við
+sementið. Litarefnin geta haft áhrif á eiginleika efnisins og þarf því
+að taka tillit til þeirra við notkun.
 
-* Vinnanleiki ferskrar steypu
+Íaukar og önnur bindiefni
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Styrkur
+Portland sement er ekki eina efnið sem getur tekið þátt í myndun
+bindiefnis í steinsteypu. Ýmis önnur efni má nota ásamt Portland sementi
+og draga þannig úr því magni Portland sements sem þarf í bindiefnið.
+Slík efni eru oft kölluð **íaukar** eða *supplementary cementitious
+materials* (SCM).
 
-* Þrýsti-, tog og beygjutogþol
+Dæmi um slík efni eru:
 
-* Rýrnun
+* **kísilryk** (e. *silica fume*),
+* **flugaska** (e. *fly ash*),
+* **slagg** (e. *blast-furnace slag*),
+* **malað líparít eða aðrir possolanar**,
+* **malað kalk**.
 
-* Skrið
+Íaukar hafa mismunandi uppruna og eiginleika. Sumir eru aukaafurðir frá
+öðrum iðnaði, til dæmis kísilryk, flugaska og slagg, en einnig er hægt
+að nýta náttúruleg efni með hentuga eiginleika. 
+Sumir þeirra hvarfast hægar en Portland sement. Slík efni geta því
+meðal annars hentað þegar æskilegt er að draga úr hitamyndun, til dæmis
+í massasteypu.
 
-* Fjaðurstuðull
+Kolefnisspor sements
+--------------------
 
-* Frostþol
+Framleiðsla Portland sements hefur töluvert kolefnisspor. Stór hluti
+losunarinnar tengist framleiðslu klinkers. Þar kemur losunin bæði frá
+orkunni sem þarf til þess að hita hráefnin upp í hátt hitastig og frá
+efnahvörfum hráefnanna við framleiðslu klinkers.
 
-* Þol gagnvart ýmsum efnum s.s. klór, brennisteinssamböndum, alkalí/kísil- efnahvörfum, oxun (carbonatisering)
+Ein leið til þess að draga úr kolefnisspori bindiefnis er því að minnka
+magn klinkers með því að nota önnur bindiefni eða íauka samhliða
+Portland sementi. Með því er hægt að minnka það magn Portland sements
+sem þarf án þess að hætta að nýta eiginleika þess sem bindiefnis.
 
-Einnig hefur v/s talan áhrif á holrýmd steypunnar, en það má sjá á myndunum hér að neðan.
+Hvaða efni henta sem íaukar ræðst meðal annars af eiginleikum þeirra og
+aðgengi. Hefðbundnir íaukar á borð við flugösku og slagg eru
+aukaafurðir tiltekinnar iðnaðarstarfsemi og framboð þeirra er því háð
+þeirri starfsemi. Af þeim sökum er einnig leitað að öðrum efnum sem
+geta að hluta komið í stað Portland sements.
 
-.. list-table::
-   :widths: 100 100 100
-   :header-rows: 0
+Breyttar áherslur í kröfum til steinsteypu
+-------------------------------------------
 
-   * - .. image:: ./myndir/kafli15/porur.png
-         :width: 100%
-     - .. image:: ./myndir/kafli15/holrymi.png
-         :width: 100%
-     - .. image:: ./myndir/kafli15/holrymd2.png
-         :width: 100%
+Aukin notkun íauka og annarra bindiefna endurspeglast einnig í breytingum
+á kröfum til steinsteypu. Áherslan færist í auknum mæli frá því að líta
+eingöngu á magn Portland sements yfir í að líta á bindiefnið í heild.
 
+Í íslenskri byggingarreglugerð eru til dæmis settar kröfur um
+**lágmarksbindiefnisinnihald** steinsteypu, gefið upp í kg/m³, fyrir
+mismunandi áreitisflokka. Með bindiefni er þannig hægt að taka tillit
+til fleiri efna en Portland sements eins og sér.
 
-Íblendiefni og íaukar efni
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Svipaða þróun má sjá í nýjustu útgáfu steypustaðalsins
+ÍST EN 206-1:2026. Þar er bindiefni (e. *binder*) skilgreint sem sement,
+samsetning sementstegunda eða samsetning sements og íauka. Hlutfall
+vatns og bindiefnis er þá gefið með **v/b-tölu** (e. *water/binder
+ratio*) í stað þess að horfa eingöngu til v/s-tölu.
 
-**Íblendiefni** eru efni sem sett eru í steypuna í *litlum skömmtum*, algengast 1-3% af þunga sements, til að hafa áhrif á hegðun hennar.
-Yfirleitt í fljótandi formi en þó er það ekki einhlítt. Íblendiefni geta haft áhrif á steypu bæði í fersku ástandi og á storknunar- og hörðnunarskeiðinu. 
-Oft er hægt að velja milli þess að nota misjafnar sementstegundir eða íblendiefni sem gera sama gagn.
-Dæmi um íblendiefni eru:
+Þessi breyting er mikilvæg þegar hluta Portland sements er skipt út fyrir
+önnur bindiefni. Þá lýsir v/s-talan ekki lengur ein og sér hlutfalli
+vatns og þeirra efna sem taka þátt í myndun bindiefnisins.
 
-* Loftblendi. Notað til að gera steypuna frostþolna. Loft í steypu bætir einnig þjálni ferskrar steypu. Loftblendin efni eru yfirborðsvirk efni sem valda því að það myndast örsmáar loftbólur í  steypunni (stærð frá 0,01-0,05 mm). Dæmi:
-  
-  * Vinsol resin (grunnefni: trjákvoða, harpix)
-  * Tallolía (unnin úr fitusýrum sem eru aukaafurðir úr pappírsframleiðslu)
-  * Tensider (unnið úr olíu)
-  * Þess ber að geta að fyrir hvert 1% af loftblendi í steypu tapast 5% brotstyrkur steypunnar*
+Íslenskir possolanar
+--------------------
 
-.. list-table::
-   :widths: 100 100
-   :header-rows: 0
+Náttúrulegir possolanar eru eitt dæmi um efni sem hægt er að nota sem íauka.
+Á Íslandi er sérstakur áhugi á þessum möguleika vegna þess að hér finnast
+eldfjallaefni sem geta haft possolanska eiginleika.
 
-   * - .. image:: ./myndir/kafli15/loftblendni1.png
-         :width: 100%
-     - .. image:: ./myndir/kafli15/loftblendni2.png
-         :width: 100%
-      
+Rannsóknir hafa verið gerðar á notkun íslenskra eldfjallapossolana
+(e. *Icelandic volcanic pozzolan*) sem íauka í bindiefni. Markmiðið er
+meðal annars að nýta staðbundið hráefni til að minnka hlutfall Portland
+sements og þar með kolefnisspor bindiefnisins.
 
+Frá sementi til steinsteypu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Vatnssparar/Flotefni, Vatnssparar eru notaðir í þrennum tilgangi, þ.e. auka styrk með því að minnka v/s-töluna en halda sama vinnanleika steypunnar, notuð til að minnka hitamyndun í massasteypum og til þess að auka vinnanleika til að auðvelda niðurlögn steypunnar. 
+Í þessum kafla hefur verið fjallað um hvernig Portland sement er
+framleitt, úr hvaða klinkerfösum það er samsett og hvernig það hvarfast
+við vatn. Við hvörfunina myndast hvörfunarafurðir sem byggja smám saman
+upp fasta sementsefju.
 
-Fyrsta kynslóð þessara efna voru vatnssparar, en hún kom upp úr 1930 og voru það efnasamsetningar eins oglLignosulfonatefni og hydroxycarboxylic sýrur.
-Önnur kynslóðin voru flotefni, en þau komu fyrst upp úr 1960 og var þá notað Melamin og naftalen efni.
-Í dag er notast við svokallað hágæðaflotefni sem er þriðja kynslóð. Hágæðaflotefni kom eftir 1980 og hefur mikil þróun átt sér stað síðustu 10 árin. Þetta eru efni sem eru mun virkari en flotefni.
+Samsetning sementsins, hraði hvörfunarinnar og v/s-talan hafa áhrif á
+uppbyggingu og holrýmd sementsefjunnar. Sementsefjan er síðan sá hluti
+steinsteypunnar sem bindur steinefnin saman.
 
+Í næsta kafla er byggt á þessum grunni og fjallað um ferska og harðnaða
+steinsteypu og eiginleika hennar.
 
-  * Vatnssparar eru yfirborðsvirk efni. Virkni þeirra er á eftirfarandi hátt:
-    
-    * Sementskornin hafa bæði plús og mínushlaðna hluta
-    * Vatnsspararnir hafa mínushleðslu
-    * Þeir dragast að plúshlöðnu yfirborði sementskornanna og gera það mínushlaðið
-    * Þannig að sementskornin hrinda hvort öðru frá sér í stað þess að dragast að hvort öðru
-    * Á þennan hátt losnar um innilokað vatn og það nýtist betur við myndun sementsefju
-
-  * Flotefni eru nýrri efni en vatnsspararnir. Þau eru einnig mun virkari en vatnssparar og því stundum kölluð „High Range Water Reducers“ (HRWR).
-    Vegna virkni sinnar er hægt að ná mun betra flæði í steypuna með flotefnum (flotsteypa, sjálfútleggjandi). Flotefni eru notuð í gólf og bita og þar sem erfitt er að koma venjulegri steypu. Hægt að gera steypu með mjög háan styrk, hástyrkleikasteypur með því að minnka v/s-töluna allt niður í 0,28 og nota flotefni til að gera steypuna vinnanlega.
-
-.. list-table::
-   :widths: 100 100
-   :header-rows: 0
-
-   * - .. image:: ./myndir/kafli15/vatnspararar.png
-         :width: 100%
-     - .. image:: ./myndir/kafli15/flot.png
-         :width: 100%
-
-
--------
-
-* Storknunar-seinkarar. 
-  Storknunarseinkarar eru mikið notaðir þar sem hiti er mikill. Þeir eru notaðir til að lengja þann tíma sem steypan er vinnanleg. Storknunarseinkarar eru t.d.: Sykur, afleiður kolvetnis, bórsýru salt og zink salt.
-
-  Storknunarseinkarar:
-
-  * Minnka skammtímastyrk
-  * Hafa ekki áhrif á langtímastyrk
-  * Auka plastíska rýrnun vegna lengingar plastíska tímabils steypunnar
-  * Hafa ekki áhrif á þurrkrýrnun
-
-------
-
-* Hvörfunar-hraðarar. 
-  Hraðarar flýta fyrir þróun skammtímastyrks. Þeir þurfa ekki að hafa áhrif á storknunartímann, en þó gera þeir það stundum.  Einnig eru til hraðarar sem aðallega flýta fyrir storknun steypunnar. Notað einkum í viðgerðarefni í steypu. Þetta er gert með því að flýta efnahvörfum fyrstu tímana eftir íblöndun vatns
-
-.. figure:: ./myndir/kafli15/hraðarar.png
-  :align: center
-  :width: 80% 
-
-------
-
-* Aðrir flokkar íblendiefna:
-
-  * Rýrnunarvarar
-  * Þykkingarefni
-  * Klóríðsperra
-  * Frostvari
-
-  Til eru ótal efni sem ætluð eru til að bæta múr og steinsteypu. Hafa ber í huga að ef nota á efni sem eru ekki vel þekkt, þarf alltaf að prófa þau í prufusteypu áður en þau eru notuð í mannvirki.
-  Dæmi:
-
-  * Corrosion inhibitors
-  * ASR inhibitors
-  * Hydrophobic admixtures
-  * Viscosity modifying agent
-  * Shrinkage reducing admixtures
-  
--------
-
-**Íaukar**
-
-Íaukar eru efni sem sett eru í steypu í *stærri skömmtum*, oft á bilinu 5% og allt upp í 95% af þunga sements. Yfirleitt í duftformi en þó er það ekki einhlítt, kornastærðir svipaðar og sements.
-
-Íaukar hafa áhrif á gæði og eiginleika sements. Hægt er að notast við íauka í sparnaðarskyni þar sem þetta efni er oft ódýrara en sement og einnig má nota þetta til að minnka kolefnisspor steypunnar.
-Oft eru þetta efni (aukaafurðir) sem verða til við vinnslu kísiljárns, stáls, brennslu kola, o.fl. Það vill svo til að þessi sement hvarfast oft hægar og hentar því vel til notkunar í massasteypum þar sem hitamyndun er lág.
-
-Algengustu íaukanir eru:
-
-* Kísilryk (e. Silica fume)
-* Flugaska (e. Pulverized fuel/fly ash, PFA) (aukaafurð við kolabrennslu)
-* Líparít, malað
-* Slagg (e. Blast-furnace slag) (aukaafurð við stálframleiðslu)
-* Kalk, malað
-
-Íaukar eru notaðir í mismiklu mæli í sementi.
 
 
