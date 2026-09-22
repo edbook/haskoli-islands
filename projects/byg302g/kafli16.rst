@@ -17,6 +17,13 @@ Fyrst verður fjallað um ferska steinsteypu og þær kröfur sem þarf að
 uppfylla svo hægt sé að flytja hana, leggja hana niður og þjappa henni
 án þess að hún aðskiljist.
 
+.. button::
+  :text: Steinsteypublað almennt - Rb blað
+  :link: https://hms-web.cdn.prismic.io/hms-web/aVJVLHNYClf9oq6H_99-251229-Steinsteypubla%C3%B0-Almennt.pdf
+
+.. button::
+  :text: Steinsteypa gerðir og eiginleikar - Rb blað
+  :link: https://hms-web.cdn.prismic.io/hms-web/f02202fd-9b3b-45c5-a26b-90bdd93b9f27_Eq.001+Steinsteypa_gerdirogeiginleikar_des2020.pdf 
 
 Fersk steinsteypa
 -----------------
@@ -89,6 +96,23 @@ aðskilnaði í steypunni.
     :width: 35%
 
     Þjöppun steinsteypu með víbrandi mótum.
+
+.. admonition:: Í framkvæmd
+   :class: tip
+
+   Góð niðurlögn og þjöppun hefur bein áhrif á styrk, þéttleika
+   og endingu steinsteypu.
+
+   Við niðurlögn þarf meðal annars að forðast of mikla fallhæð,
+   leggja steypuna í hæfilega þykk lög og tryggja að þjöppun nái
+   um allan byggingarhlutann.
+
+   Nánari leiðbeiningar um framkvæmd má finna í Rb-blaði HMS um
+   niðurlögn og aðhlúun steinsteypu. 
+
+.. button::
+  :text: Niðurlögn og aðhlúun steinsteypu – Rb-blað HMS
+  :link: https://hms-web.cdn.prismic.io/hms-web/aVJVt3NYClf9oq6b_99-251230-Ni%C3%B0url%C3%B6gnoga%C3%B0hl%C3%BAunsteypu.pdf
 
 Þjálni og sigmál
 ~~~~~~~~~~~~~~~~
@@ -309,7 +333,7 @@ loftinnihaldi með tilliti til þeirra eiginleika sem krafist er.
     Virkni loftblendis.
 
 Storknunarseinkarar og hvörfunarhraðarar
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Með íblendiefnum er einnig hægt að hafa áhrif á storknun og
 styrkþróun steinsteypu.
@@ -649,6 +673,23 @@ Eftir því sem álagið eykst fjölgar smásprungum og þær breiðast út.
 spennu–streitu ferill steinsteypu verður ólínulegur þótt hegðun
 einstakra efnisþátta hennar sé mun nær línulegri.
 
+.. admonition:: Íslenskt samhengi
+   :class: tip
+
+   Fjaðurstuðull steinsteypu ræðst meðal annars af stífleika
+   fylliefnanna. Þetta skiptir sérstaklega máli á Íslandi þar sem
+   algengt er að nota pórótt basaltfylliefni.
+
+   Rannsóknir á íslenskri steinsteypu hafa sýnt að fjaðurstuðull
+   hennar getur verið lægri en spáð er út frá þrýstistyrk einum.
+   Því þarf að taka eiginleika fylliefnanna sérstaklega með í
+   reikninginn þegar stífleiki steinsteypu er metinn.
+
+
+.. button::
+  :text: Fjaðurstuðull íslenskrar steinsteypu - Rb blað
+  :link: https://hms-web.cdn.prismic.io/hms-web/3be7d608-546f-443b-a166-1d86efe27e87_Eq4.017.2+Fjadurstudull_steinsteypu_1999.pdf
+
 Skrið
 ~~~~~
 
@@ -699,6 +740,26 @@ fylliefnin takmarka þessar formbreytingar.
     :width: 70%
 
     Skriðþróun fyrir steypu með mismunandi fylliefnum. Basalt er algengasta íslenska fylliefnið.
+
+.. admonition:: Íslenskt samhengi
+   :class: tip
+
+   Eiginleikar fylliefna geta haft veruleg áhrif á skrið
+   steinsteypu. Rannsóknir á íslenskri steinsteypu hafa meðal
+   annars sýnt meira skrið þegar notuð eru pórótt basaltfylliefni
+   en þegar notuð eru stífari og þéttari fylliefni.
+
+   Því er ekki alltaf nægilegt að áætla skrið út frá styrkleika
+   steinsteypunnar einum.
+
+.. button::
+  :text: Formbreyting steinsteypu - Rb blað
+  :link: https://hms-web.cdn.prismic.io/hms-web/47ded8c5-c165-4c85-9d54-9a8a671fcb44_Nr.+93+Formbreyting+Steinsteypu+-+2006.pdf
+
+.. button::
+  :text: Skrið í steinsteypu - Rb blað
+  :link: https://hms-web.cdn.prismic.io/hms-web/a70b2dd5-5dea-458a-8d9e-19ee5de8b772_Eq4.018+Skri%C3%B0+%C3%AD+steinsteypu.pdf
+
 
 Aldur og hvörfun
 ^^^^^^^^^^^^^^^^
