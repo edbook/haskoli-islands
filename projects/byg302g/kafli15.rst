@@ -63,7 +63,7 @@ Við brennslu hráefnanna í ofninum myndast svokallaðir
 sementi:
 
 * :math:`C_3S` – tríkalsíumsilikat (alit)
-* :math:`C_2S` – díkalsíumsilikat (belit)
+* :math:`C_2S` – tvíkalsíumsilikat (belit)
 * :math:`C_3A` – tríkalsíumálat
 * :math:`C_4AF` – tetrakalsíumálferrít
 
@@ -72,12 +72,53 @@ mynda sementið. Til dæmis táknar :math:`C` CaO, :math:`S` SiO₂,
 :math:`A` Al₂O₃ og :math:`F` Fe₂O₃. Þannig er til dæmis hægt að rita 
 tríkalsíumsilikat, :math:`3CaO \cdot SiO_2`, sem :math:`C_3S`.
 
-Taflan hér að neðan sýnir helstu oxíð í Portland sementi, tákn þeirra 
-og helstu klinkerfasa.
+Algeng tákn í sementsefnafræði
+------------------------------
 
-.. figure:: ./myndir/kafli15/hugtök.png
-  :align: center
-  :width: 100%
+.. list-table::
+   :header-rows: 1
+   :widths: 15 30 55
+
+   * - Tákn
+     - Efnaformúla
+     - Efni
+   * - :math:`C`
+     - :math:`CaO`
+     - Kalsíumoxíð
+   * - :math:`S`
+     - :math:`SiO_2`
+     - Kísildíoxíð
+   * - :math:`A`
+     - :math:`Al_2O_3`
+     - Áloxíð
+   * - :math:`F`
+     - :math:`Fe_2O_3`
+     - Járnoxíð
+   * - :math:`H`
+     - :math:`H_2O`
+     - Vatn
+
+Helstu klinkerfasar Portland sements eru:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 35 45
+
+   * - Tákn
+     - Efnaformúla
+     - Heiti
+   * - :math:`C_3S`
+     - :math:`3CaO \cdot SiO_2`
+     - Tríkalsíumsilikat (alit)
+   * - :math:`C_2S`
+     - :math:`2CaO \cdot SiO_2`
+     - Díkalsíumsilikat (belit)
+   * - :math:`C_3A`
+     - :math:`3CaO \cdot Al_2O_3`
+     - Tríkalsíumálat
+   * - :math:`C_4AF`
+     - :math:`4CaO \cdot Al_2O_3 \cdot Fe_2O_3`
+     - Tetrakalsíumálferrít
 
 Hvörfun sements
 ~~~~~~~~~~~~~~~
@@ -119,6 +160,14 @@ Klinkerfasarnir hvarfast við vatn á mismunandi hátt og mynda mismunandi
 hvörfunarafurðir. Mikilvægustu hvörfunarafurðirnar eru C-S-H hlaup, 
 kalsíumhýdroxíð (CH), ettringít og monosulfoaluminat.
 
+.. admonition:: Gott að hafa í huga
+   :class: tip
+
+   Hlutföll hvörfunarafurðanna eru ekki föst. Þau ráðast meðal annars
+   af samsetningu sementsins og hversu langt hvörfunin er gengin.
+   Tölurnar hér að neðan eru dæmigerð gildi sem sýna hlutfallslegt
+   vægi helstu hvörfunarafurðanna.
+
 C-S-H hlaup og kalsíumhýdroxíð
 ------------------------------
 
@@ -127,10 +176,10 @@ aðallega **C-S-H hlaup** og **kalsíumhýdroxíð (CH)**.
 
 C-S-H hlaup er mikilvægasta hvörfunarafurðin með tilliti til styrks 
 sementsefjunnar. Það myndar þéttan massa sem tengir saman upphaflegu
-sementskornin eftir því sem hvörfuninni vindur fram. Í harðnaðri
-sementsefju er C-S-H hlaup um 65% af rúmmálinu.
+sementskornin eftir því sem hvörfuninni vindur fram. Í harðnaðri sementsefju er C-S-H hlaup
+um 65% af rúmmálinu.
 
-Kalsíumhýdroxíð, :math:`Ca(OH)_2`, er einnig nefnt **portlandit**. Það
+Kalsíumhýdroxíð, (CH), er einnig nefnt **portlandit**. Það
 myndast sem stærri kristallar og er mun veikara en C-S-H. 
 Kalsíumhýdroxíð er um 20% af rúmmáli harðnaðrar sementsefju.
 
@@ -138,7 +187,20 @@ Einfaldað má lýsa hvörfun kalsíumsilikatanna þannig:
 
 .. math::
 
-   C_3S,\ C_2S + H_2O \rightarrow C\text{-}S\text{-}H + CH
+   C_3S + H \rightarrow C\text{-}S\text{-}H + CH
+
+.. math::
+
+   C_2S + H \rightarrow C\text{-}S\text{-}H + CH
+
+þar sem :math:`H` táknar vatn í styttu táknmáli sementsefnafræðinnar.
+
+.. admonition:: Athugið
+   :class: tip
+
+   Jöfnurnar eru einfölduð framsetning á hvörfuninni. Þær sýna hvaða
+   meginhvörfunarafurðir myndast en eru ekki stilltar efnajöfnur.
+   C-S-H hefur ekki eina fasta efnasamsetningu.
 
 Ettringít og monosulfoaluminat
 ------------------------------
@@ -157,12 +219,12 @@ Hvörfun :math:`C_4AF`
 
 Ferrítfasinn, :math:`C_4AF`, tekur einnig þátt í hvörfun sementsins.
 Hvörfunarafurðir hans eru skyldar aluminathvörfunarafurðunum að
-uppbyggingu. Framlag þeirra til styrks lítið.
+uppbyggingu. Framlag þeirra til styrks er lítið.
 
 Eftir því sem hvörfuninni vindur fram minnkar magn óhvarfaðs sements og
 magn hvörfunarafurða eykst. Þó er yfirleitt eitthvað óhvarfað sement eftir
 í harðnaðri sementsefju. Á myndinni hér að neðan má sjá magn hvörfunarafurða
-mismunandi stigum hvörfunar. Takið eftir hvernig ettringít myndast en hvarfast 
+á mismunandi stigum hvörfunar. Takið eftir hvernig ettringít myndast en hvarfast 
 síðan og hverfur þegar monosulfoaluminat fer að myndast.
 
 .. figure:: ./myndir/kafli15/hvörfunogtími.png
@@ -183,6 +245,10 @@ mismunandi stig hvörfunarinnar.
 .. figure:: ./myndir/kafli15/hitamyndum.png
   :align: center
   :width: 70%
+
+Eftir fyrstu hröðu hvörfunina tekur við tímabil þar sem hvörfunarhraðinn
+er lítill. Þetta tímabil er mikilvægt í framkvæmd þar sem sementsefjan
+helst þá enn mótanleg áður en storknun hefst.
 
 Áhrif :math:`C_3S` og :math:`C_2S`
 -----------------------------------
@@ -296,6 +362,14 @@ v/s-tala meiri holrýmd.
 eiginleika steinsteypunnar. Fjallað verður nánar um þau áhrif í næsta
 kafla.
 
+.. admonition:: Gott að muna
+   :class: tip
+
+   **Hærri v/s-tala → meiri háræðaholrýmd → minni styrkur og meiri lekt.**
+
+   V/s-talan hefur því áhrif á eiginleika steinsteypu í gegnum
+   örbyggingu sementsefjunnar.
+
 Sementsgerðir
 ~~~~~~~~~~~~~
 
@@ -371,6 +445,11 @@ Sumir þeirra hvarfast hægar en Portland sement. Slík efni geta því
 meðal annars hentað þegar æskilegt er að draga úr hitamyndun, til dæmis
 í massasteypu.
 
+Possolanar hafa ekki sömu bindieiginleika og Portland sement einir og sér.
+Þeir geta hins vegar hvarfast við kalsíumhýdroxíð (CH), sem myndast við
+hvörfun sementsins, og myndað frekari bindandi hvörfunarafurðir, meðal
+annars C-S-H.
+
 Kolefnisspor sements
 --------------------
 
@@ -397,8 +476,8 @@ Aukin notkun íauka og annarra bindiefna endurspeglast einnig í breytingum
 á kröfum til steinsteypu. Áherslan færist í auknum mæli frá því að líta
 eingöngu á magn Portland sements yfir í að líta á bindiefnið í heild.
 
-Í íslenskri byggingarreglugerð eru til dæmis settar kröfur um
-**lágmarksbindiefnisinnihald** steinsteypu, gefið upp í kg/m³, fyrir
+Í íslensku byggingarreglugerðinni eru til dæmis settar kröfur um
+**lágmarksbindiefnainnihald** steinsteypu, gefið upp í kg/m³, fyrir
 mismunandi áreitisflokka. Með bindiefni er þannig hægt að taka tillit
 til fleiri efna en Portland sements eins og sér.
 
@@ -412,12 +491,20 @@ ratio*) í stað þess að horfa eingöngu til v/s-tölu.
 önnur bindiefni. Þá lýsir v/s-talan ekki lengur ein og sér hlutfalli
 vatns og þeirra efna sem taka þátt í myndun bindiefnisins.
 
+.. admonition:: Gott að muna
+   :class: tip
+
+   **v/s-tala** miðar við vatn og sement.
+
+   **v/b-tala** miðar við vatn og bindiefnið í heild, þegar fleiri
+   efni en Portland sement eru hluti af bindiefninu.
+
 Íslenskir possolanar
 --------------------
 
 Náttúrulegir possolanar eru eitt dæmi um efni sem hægt er að nota sem íauka.
 Á Íslandi er sérstakur áhugi á þessum möguleika vegna þess að hér finnast
-eldfjallaefni sem geta haft possolanska eiginleika.
+gosafurðir sem geta haft possolanska eiginleika.
 
 Rannsóknir hafa verið gerðar á notkun íslenskra eldfjallapossolana
 (e. *Icelandic volcanic pozzolan*) sem íauka í bindiefni. Markmiðið er
