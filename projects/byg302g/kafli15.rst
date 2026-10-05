@@ -242,7 +242,7 @@ Myndin hér að neðan sýnir hitamyndun sements eftir að vatni hefur verið
 bætt við. Hitamyndunin breytist verulega með tíma og endurspeglar
 mismunandi stig hvörfunarinnar.
 
-.. figure:: ./myndir/kafli15/hitamyndum.png
+.. figure:: ./myndir/kafli15/hitamyndun.png
   :align: center
   :width: 70%
 
