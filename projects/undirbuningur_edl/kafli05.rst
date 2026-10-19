@@ -248,7 +248,7 @@ Stærð núningskrafts er háður stærð normalkraftsins með stuðli sem er ka
 
   .. math::
 
-  	f_n = F_{g,y} = F_g \cos{\theta} 49.0 \text{N} \cdot \cos(30°) = 42.4 \text{N}
+  	f_n = F_{g,y} = F_g \cos{\theta}i = 49.0 \text{N} \cdot \cos(30°) = 42.4 \text{N}
 
 .. note::
   Þyngdarkrafturinn bendir *alltaf* beint niður til jarðar. Normalkraftur milli hluta verkar alltaf hornrétt á snertiflöt hlutanna. Núningskraftur er alltaf hornréttur á normalkraftinn.
