@@ -1,1210 +1,1217 @@
 Timbur
 ======
 
-Timbur er eitt elsta og mikilvægasta byggingarefni mannkyns og hefur verið
-notað í burðarvirki, þök, gólf, klæðningar og brýr um aldir. Þrátt fyrir að
-ný byggingarefni hafi komið fram gegnir timbur enn mikilvægu hlutverki í
-mannvirkjagerð og áhugi á notkun þess hefur aukist á síðustu árum.
+Þessi kafli er í vinnslu. 
 
-Ólíkt efnum á borð við stál og steinsteypu er timbur lífrænt efni sem myndast
-við vöxt trjáa. Uppbygging þess ræður því hvernig það flytur álag, bregst við
-rakabreytingum og eldist með tímanum. Til að skilja hegðun timburs sem
-byggingarefnis þarf því fyrst að skilja hvernig tré vex og hvernig viðurinn er
-byggður upp.
+.. button::
+  :text: Tré - trjátegundir og efniseiginleikar viðarins - Rb blað
+  :link: https://hms-web.cdn.prismic.io/hms-web/3b11e148-d129-4d1f-bc80-9e957fb7a4a9_Hi.001+Tr%C3%A9-trj%C3%A1tegundir+og+efniseiginleikar+vi%C3%B0arins.pdf
 
-Í þessum kafla verður fjallað um uppbyggingu timburs frá trénu sjálfu niður í
-frumubyggingu viðarins. Jafnframt verður farið yfir hvernig raki, þéttleiki og
-bygging viðar hafa áhrif á eðlis- og vélræna eiginleika timburs og þar með á
-notkun þess í mannvirkjum.
 
+.. Timbur er eitt elsta og mikilvægasta byggingarefni mannkyns og hefur verið
+.. notað í burðarvirki, þök, gólf, klæðningar og brýr um aldir. Þrátt fyrir að
+.. ný byggingarefni hafi komið fram gegnir timbur enn mikilvægu hlutverki í
+.. mannvirkjagerð og áhugi á notkun þess hefur aukist á síðustu árum.
 
-.. admonition:: Markmið
+.. Ólíkt efnum á borð við stál og steinsteypu er timbur lífrænt efni sem myndast
+.. við vöxt trjáa. Uppbygging þess ræður því hvernig það flytur álag, bregst við
+.. rakabreytingum og eldist með tímanum. Til að skilja hegðun timburs sem
+.. byggingarefnis þarf því fyrst að skilja hvernig tré vex og hvernig viðurinn er
+.. byggður upp.
 
-   Að loknum þessum kafla ættir þú að geta:
+.. Í þessum kafla verður fjallað um uppbyggingu timburs frá trénu sjálfu niður í
+.. frumubyggingu viðarins. Jafnframt verður farið yfir hvernig raki, þéttleiki og
+.. bygging viðar hafa áhrif á eðlis- og vélræna eiginleika timburs og þar með á
+.. notkun þess í mannvirkjum.
 
-   * lýst helstu byggingu trés og viðar,
-   * útskýrt hvernig frumubygging viðar hefur áhrif á eiginleika timburs,
-   * skýrt áhrif raka á hegðun timburs,
-   * tengt byggingu viðar við styrk, stífleika og endingu byggingarefnisins.
 
+.. .. admonition:: Markmið
 
-Timbur sem byggingarefni
-------------------------
+..    Að loknum þessum kafla ættir þú að geta:
 
-.. admonition:: Markmið
-   :class: athugasemd
+..    * lýst helstu byggingu trés og viðar,
+..    * útskýrt hvernig frumubygging viðar hefur áhrif á eiginleika timburs,
+..    * skýrt áhrif raka á hegðun timburs,
+..    * tengt byggingu viðar við styrk, stífleika og endingu byggingarefnisins.
 
-   Að loknum þessum kafla ættir þú að geta:
 
-   * útskýrt helstu kosti og takmarkanir timburs sem byggingarefnis,
-   * borið timbur saman við önnur algeng byggingarefni,
-   * lýst helstu notkunarsviðum timburs í mannvirkjagerð.
+.. Timbur sem byggingarefni
+.. ------------------------
 
-Timbur hefur verið eitt mikilvægasta byggingarefni mannkyns í þúsundir ára
-og er enn í dag mikið notað í mannvirkjagerð. Það er meðal annars notað í
-burðarvirki, þök, gólf, klæðningar og brýr. Á síðustu árum hefur notkun
-timburs aukist víða um heim samhliða þróun nýrra timburvara og aukinni
-áherslu á sjálfbæra mannvirkjagerð.
+.. .. admonition:: Markmið
+..    :class: athugasemd
 
-Ólíkt byggingarefnum eins og stáli og steinsteypu er timbur lífrænt efni.
-Eiginleikar þess ráðast því af innri byggingu trésins og geta verið breytilegir
-eftir trjátegund, vaxtarskilyrðum og rakainnihaldi. Þessi breytileiki gerir
-timbur að áhugaverðu en jafnframt flóknu byggingarefni.
+..    Að loknum þessum kafla ættir þú að geta:
 
-.. figure:: ./myndir/kafli17/samanburdur_vid_onnur_byggingarefni.jpg
-   :width: 90 %
-   :align: center
+..    * útskýrt helstu kosti og takmarkanir timburs sem byggingarefnis,
+..    * borið timbur saman við önnur algeng byggingarefni,
+..    * lýst helstu notkunarsviðum timburs í mannvirkjagerð.
 
-   Samanburður timburs við önnur algeng byggingarefni.
+.. Timbur hefur verið eitt mikilvægasta byggingarefni mannkyns í þúsundir ára
+.. og er enn í dag mikið notað í mannvirkjagerð. Það er meðal annars notað í
+.. burðarvirki, þök, gólf, klæðningar og brýr. Á síðustu árum hefur notkun
+.. timburs aukist víða um heim samhliða þróun nýrra timburvara og aukinni
+.. áherslu á sjálfbæra mannvirkjagerð.
 
-Þegar byggingarefni eru borin saman er ekki nægilegt að skoða eingöngu
-styrk þeirra. Verkfræðingar þurfa einnig að meta eigin þyngd efnisins,
-stífleika, varmaeiginleika, endingu og hvernig efnið hagar sér í notkun.
-Slíkur samanburður sýnir að hvert byggingarefni hefur sína kosti og
-takmarkanir og að val byggingarefnis ræðst af því verkefni sem leysa á.
+.. Ólíkt byggingarefnum eins og stáli og steinsteypu er timbur lífrænt efni.
+.. Eiginleikar þess ráðast því af innri byggingu trésins og geta verið breytilegir
+.. eftir trjátegund, vaxtarskilyrðum og rakainnihaldi. Þessi breytileiki gerir
+.. timbur að áhugaverðu en jafnframt flóknu byggingarefni.
 
-.. admonition:: Verkfræðileg innsýn
-   :class: athugasemd
+.. .. figure:: ./myndir/kafli17/samanburdur_vid_onnur_byggingarefni.jpg
+..    :width: 90 %
+..    :align: center
 
-   Timbur er eitt fárra byggingarefna þar sem innri bygging efnisins ræður
-   nær öllum mikilvægum verkfræðilegum eiginleikum þess. Til að skilja
-   styrk, stífleika og rakahreyfingar timburs þarf því fyrst að skilja
-   hvernig viðurinn er byggður upp.
+..    Samanburður timburs við önnur algeng byggingarefni.
 
-.. admonition:: Algengur misskilningur
-   :class: advorun
+.. Þegar byggingarefni eru borin saman er ekki nægilegt að skoða eingöngu
+.. styrk þeirra. Verkfræðingar þurfa einnig að meta eigin þyngd efnisins,
+.. stífleika, varmaeiginleika, endingu og hvernig efnið hagar sér í notkun.
+.. Slíkur samanburður sýnir að hvert byggingarefni hefur sína kosti og
+.. takmarkanir og að val byggingarefnis ræðst af því verkefni sem leysa á.
 
-   Timbur er ekki einfaldlega „veikara“ en stál eða steinsteypa.
+.. .. admonition:: Verkfræðileg innsýn
+..    :class: athugasemd
 
-   Hvert byggingarefni hefur sína styrkleika og veikleika. Í mörgum
-   burðarvirkjum skiptir hlutfall styrks og eigin þyngdar meira máli en
-   hámarksstyrkur efnisins einn og sér.
+..    Timbur er eitt fárra byggingarefna þar sem innri bygging efnisins ræður
+..    nær öllum mikilvægum verkfræðilegum eiginleikum þess. Til að skilja
+..    styrk, stífleika og rakahreyfingar timburs þarf því fyrst að skilja
+..    hvernig viðurinn er byggður upp.
 
-.. admonition:: Meginatriði
-   :class: athugasemd
+.. .. admonition:: Algengur misskilningur
+..    :class: advorun
 
-   Timbur er náttúrulegt, stefnuháð byggingarefni þar sem uppbygging
-   viðarins stjórnar flestum eðlis- og vélrænum eiginleikum efnisins.
+..    Timbur er ekki einfaldlega „veikara“ en stál eða steinsteypa.
 
-Timbur á Íslandi
-----------------
+..    Hvert byggingarefni hefur sína styrkleika og veikleika. Í mörgum
+..    burðarvirkjum skiptir hlutfall styrks og eigin þyngdar meira máli en
+..    hámarksstyrkur efnisins einn og sér.
 
-.. admonition:: Markmið
-   :class: athugasemd
+.. .. admonition:: Meginatriði
+..    :class: athugasemd
 
-   Að loknum þessum kafla ættir þú að geta:
+..    Timbur er náttúrulegt, stefnuháð byggingarefni þar sem uppbygging
+..    viðarins stjórnar flestum eðlis- og vélrænum eiginleikum efnisins.
 
-   * lýst í grófum dráttum hvaðan byggingartimbur á Íslandi kemur,
-   * nefnt helstu trjátegundir sem notaðar eru sem burðarviður hér á landi.
+.. Timbur á Íslandi
+.. ----------------
 
-Íslensk skógrækt hefur aukist á síðustu áratugum, en framleiðsla
-byggingartimburs er enn takmörkuð. Því er stærstur hluti þess timburs sem
-notað er í íslenskri mannvirkjagerð fluttur inn.
+.. .. admonition:: Markmið
+..    :class: athugasemd
 
-Myndin sýnir að íslenskur byggingariðnaður byggir að mestu á innfluttu timbri.
-Því eru þær viðartegundir sem mest eru notaðar í mannvirkjagerð hér á landi
-einkum þær sömu og algengar eru á Norðurlöndum.
+..    Að loknum þessum kafla ættir þú að geta:
 
-Samkvæmt Rb-blaðinu *Tré – Trjátegundir og efniseiginleikar viðarins* eru
-rauðgreni (*Picea abies*) og skógarfura (*Pinus sylvestris*) algengustu
-trjátegundirnar sem notaðar eru við húsbyggingar á Íslandi. Þær eru meðal
-annars notaðar í burðarvirki, klæðningar, bita og súlur. Sitkagreni vex einnig
-víða hér á landi og timburafurðir þess hafa svipaða eiginleika og afurðir úr
-rauðgreni og furu. :contentReference[oaicite:0]{index=0}
+..    * lýst í grófum dráttum hvaðan byggingartimbur á Íslandi kemur,
+..    * nefnt helstu trjátegundir sem notaðar eru sem burðarviður hér á landi.
 
-.. admonition:: Í framkvæmd
-   :class: daemi
+.. Íslensk skógrækt hefur aukist á síðustu áratugum, en framleiðsla
+.. byggingartimburs er enn takmörkuð. Því er stærstur hluti þess timburs sem
+.. notað er í íslenskri mannvirkjagerð fluttur inn.
 
-   Í þessum kafla verður aðallega fjallað um barrvið, þar sem hann er
-   algengasta hráefnið í burðartimbri sem notað er í íslenskri
-   mannvirkjagerð. Nefnd dæmi og myndir vísa því oft til grenis og furu.
+.. Myndin sýnir að íslenskur byggingariðnaður byggir að mestu á innfluttu timbri.
+.. Því eru þær viðartegundir sem mest eru notaðar í mannvirkjagerð hér á landi
+.. einkum þær sömu og algengar eru á Norðurlöndum.
 
-.. admonition:: Meginatriði
-   :class: athugasemd
+.. Samkvæmt Rb-blaðinu *Tré – Trjátegundir og efniseiginleikar viðarins* eru
+.. rauðgreni (*Picea abies*) og skógarfura (*Pinus sylvestris*) algengustu
+.. trjátegundirnar sem notaðar eru við húsbyggingar á Íslandi. Þær eru meðal
+.. annars notaðar í burðarvirki, klæðningar, bita og súlur. Sitkagreni vex einnig
+.. víða hér á landi og timburafurðir þess hafa svipaða eiginleika og afurðir úr
+.. rauðgreni og furu. :contentReference[oaicite:0]{index=0}
 
-   Í íslenskri mannvirkjagerð er mest notast við innflutt barrtimbur,
-   einkum greni og furu, og því verður áhersla þessa kafla á eiginleika
-   þeirra viðartegunda.
+.. .. admonition:: Í framkvæmd
+..    :class: daemi
 
-Uppbygging trjástofns
----------------------
+..    Í þessum kafla verður aðallega fjallað um barrvið, þar sem hann er
+..    algengasta hráefnið í burðartimbri sem notað er í íslenskri
+..    mannvirkjagerð. Nefnd dæmi og myndir vísa því oft til grenis og furu.
 
-.. admonition:: Markmið
-   :class: athugasemd
+.. .. admonition:: Meginatriði
+..    :class: athugasemd
 
-   Að loknum þessum kafla ættir þú að geta:
+..    Í íslenskri mannvirkjagerð er mest notast við innflutt barrtimbur,
+..    einkum greni og furu, og því verður áhersla þessa kafla á eiginleika
+..    þeirra viðartegunda.
 
-   * nefnt helstu hluta trjástofns,
-   * útskýrt hlutverk barkar, basts, rysju og kjarnviðar,
-   * skýrt hvernig þessir hlutar tengjast eiginleikum timburs.
+.. Uppbygging trjástofns
+.. ---------------------
 
-Trjástofn er ekki einsleitt efni heldur samanstendur hann af nokkrum
-svæðum sem gegna ólíkum hlutverkum meðan tréð er lifandi. Þessi
-uppbygging ræður því hvernig vatn og næring berast um tréð, hvernig
-nýr viður myndast og hvernig timbrið hagar sér eftir að tréð hefur verið
-fellt.
+.. .. admonition:: Markmið
+..    :class: athugasemd
 
-Frá ysta lagi og inn að miðju má greina börk, bast, rysju, kjarnvið og
-merg.
+..    Að loknum þessum kafla ættir þú að geta:
 
-.. figure:: ./myndir/kafli17/borkur_bast_rysja_kjarnvidur.png
-   :width: 70 %
-   :align: center
+..    * nefnt helstu hluta trjástofns,
+..    * útskýrt hlutverk barkar, basts, rysju og kjarnviðar,
+..    * skýrt hvernig þessir hlutar tengjast eiginleikum timburs.
 
-   Helstu hlutar trjástofns.
+.. Trjástofn er ekki einsleitt efni heldur samanstendur hann af nokkrum
+.. svæðum sem gegna ólíkum hlutverkum meðan tréð er lifandi. Þessi
+.. uppbygging ræður því hvernig vatn og næring berast um tréð, hvernig
+.. nýr viður myndast og hvernig timbrið hagar sér eftir að tréð hefur verið
+.. fellt.
 
-Börkurinn ver tréð fyrir utanaðkomandi áhrifum. Innan við hann er bastið,
-sem flytur sykrur og önnur næringarefni frá laufblöðum til annarra hluta
-trésins. Innan bastsins er vaxtarlagið þar sem nýjar viðarfrumur myndast.
+.. Frá ysta lagi og inn að miðju má greina börk, bast, rysju, kjarnvið og
+.. merg.
 
-Rysjan er ysti hluti viðarins. Þar flyst vatn og uppleyst steinefni frá
-rótum upp í krónu trésins. Með aldrinum hætta innstu frumurnar í rysjunni
-að taka þátt í þessum flutningi og verða smám saman að kjarnviði.
+.. .. figure:: ./myndir/kafli17/borkur_bast_rysja_kjarnvidur.png
+..    :width: 70 %
+..    :align: center
 
-Kjarnviðurinn gegnir fyrst og fremst burðarhlutverki. Hjá sumum
-trjátegundum inniheldur hann einnig efni sem auka náttúrulega endingu
-viðarins og gefa honum dekkri lit.
+..    Helstu hlutar trjástofns.
 
-.. admonition:: Verkfræðileg innsýn
-   :class: athugasemd
+.. Börkurinn ver tréð fyrir utanaðkomandi áhrifum. Innan við hann er bastið,
+.. sem flytur sykrur og önnur næringarefni frá laufblöðum til annarra hluta
+.. trésins. Innan bastsins er vaxtarlagið þar sem nýjar viðarfrumur myndast.
 
-   Þegar tré er sagað í byggingatimbur fylgja þessir hlutar áfram með í
-   efninu. Þess vegna geta eiginleikar tveggja borða úr sama trénu verið
-   mismunandi eftir því hvaðan í stofninum þau eru söguð.
+.. Rysjan er ysti hluti viðarins. Þar flyst vatn og uppleyst steinefni frá
+.. rótum upp í krónu trésins. Með aldrinum hætta innstu frumurnar í rysjunni
+.. að taka þátt í þessum flutningi og verða smám saman að kjarnviði.
 
-.. admonition:: Algengur misskilningur
-   :class: advorun
+.. Kjarnviðurinn gegnir fyrst og fremst burðarhlutverki. Hjá sumum
+.. trjátegundum inniheldur hann einnig efni sem auka náttúrulega endingu
+.. viðarins og gefa honum dekkri lit.
 
-   Kjarnviður er ekki "betri viður" í öllum tilvikum.
+.. .. admonition:: Verkfræðileg innsýn
+..    :class: athugasemd
 
-   Hlutverk kjarnviðar og rysju eru ólík meðan tréð vex og eiginleikar
-   þeirra geta verið mismunandi eftir trjátegund. Hjá sumum tegundum er
-   munurinn greinilegur en hjá öðrum lítill.
+..    Þegar tré er sagað í byggingatimbur fylgja þessir hlutar áfram með í
+..    efninu. Þess vegna geta eiginleikar tveggja borða úr sama trénu verið
+..    mismunandi eftir því hvaðan í stofninum þau eru söguð.
 
-.. admonition:: Meginatriði
-   :class: athugasemd
+.. .. admonition:: Algengur misskilningur
+..    :class: advorun
 
-   Til að skilja eiginleika timburs þarf fyrst að skilja hvernig
-   trjástofninn er byggður upp.
+..    Kjarnviður er ekki "betri viður" í öllum tilvikum.
 
-Frumubygging viðar
-------------------
+..    Hlutverk kjarnviðar og rysju eru ólík meðan tréð vex og eiginleikar
+..    þeirra geta verið mismunandi eftir trjátegund. Hjá sumum tegundum er
+..    munurinn greinilegur en hjá öðrum lítill.
 
-.. admonition:: Markmið
-   :class: athugasemd
+.. .. admonition:: Meginatriði
+..    :class: athugasemd
 
-   Að loknum þessum kafla ættir þú að geta:
+..    Til að skilja eiginleika timburs þarf fyrst að skilja hvernig
+..    trjástofninn er byggður upp.
 
-   * lýst helstu frumugerðum í barrviði,
-   * útskýrt hlutverk langfrumna og stuttfrumna,
-   * skýrt hvernig frumurnar tengjast hver annarri.
+.. Frumubygging viðar
+.. ------------------
 
-Viður er byggður upp úr frumum. Í barrviði eru tvær megingerðir frumna:
-langfrumur (*tracheids*) og stuttfrumur (*parenchyma*). Langfrumurnar liggja
-í lengdarstefnu trésins og gefa því styrk. Frumubyggingunni má líkja við
-búnt af sogrörum þar sem langfrumurnar mynda rörin en stuttfrumurnar liggja
-þvert á þær og flytja og geyma næringu. :contentReference[oaicite:1]{index=1}
+.. .. admonition:: Markmið
+..    :class: athugasemd
 
-Í norrænum barrtrjám eru langfrumurnar 2–6 mm langar og hafa þvermál á
-bilinu 0,02–0,05 mm. Þær mynda um 90% af rúmmáli viðarins og eru því
-langmikilvægasta frumugerðin í barrviði. :contentReference[oaicite:2]{index=2}
+..    Að loknum þessum kafla ættir þú að geta:
 
-.. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
-   :width: 75 %
-   :align: center
+..    * lýst helstu frumugerðum í barrviði,
+..    * útskýrt hlutverk langfrumna og stuttfrumna,
+..    * skýrt hvernig frumurnar tengjast hver annarri.
 
-   Táknræn mynd af frumubyggingu barrviðar.
+.. Viður er byggður upp úr frumum. Í barrviði eru tvær megingerðir frumna:
+.. langfrumur (*tracheids*) og stuttfrumur (*parenchyma*). Langfrumurnar liggja
+.. í lengdarstefnu trésins og gefa því styrk. Frumubyggingunni má líkja við
+.. búnt af sogrörum þar sem langfrumurnar mynda rörin en stuttfrumurnar liggja
+.. þvert á þær og flytja og geyma næringu. :contentReference[oaicite:1]{index=1}
 
-Þvert á langfrumurnar liggja merggeislar sem samanstanda af stuttfrumum.
-Í sumum barrtrjám eru einnig trjákvoðugöng. Milli aðliggjandi frumna eru
-linsuop með filmu (*membran*) sem getur opnað og lokað fyrir vökvastreymi
-milli frumanna. 
+.. Í norrænum barrtrjám eru langfrumurnar 2–6 mm langar og hafa þvermál á
+.. bilinu 0,02–0,05 mm. Þær mynda um 90% af rúmmáli viðarins og eru því
+.. langmikilvægasta frumugerðin í barrviði. :contentReference[oaicite:2]{index=2}
 
-.. figure:: ./myndir/kafli17/frumuveggur_og_ortrefjur.png
+.. .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
+..    :width: 75 %
+..    :align: center
 
-.. admonition:: Verkfræðileg innsýn
-   :class: athugasemd
+..    Táknræn mynd af frumubyggingu barrviðar.
 
-   Langfrumurnar eru meginhluti viðarins. Því ráðast margir af mikilvægustu
-   eiginleikum timburs af gerð þeirra, legu og innbyrðis tengingum. Í næstu
-   köflum verður fjallað um hvernig þessi frumubygging hefur áhrif á
-   eiginleika timburs.
+.. Þvert á langfrumurnar liggja merggeislar sem samanstanda af stuttfrumum.
+.. Í sumum barrtrjám eru einnig trjákvoðugöng. Milli aðliggjandi frumna eru
+.. linsuop með filmu (*membran*) sem getur opnað og lokað fyrir vökvastreymi
+.. milli frumanna. 
 
-.. admonition:: Meginatriði
-   :class: athugasemd
+.. .. figure:: ./myndir/kafli17/frumuveggur_og_ortrefjur.png
 
-   Barrviður er að mestu byggður upp úr langfrumum sem liggja í
-   lengdarstefnu trésins. Stuttfrumur, merggeislar og linsuop tengja
-   frumurnar saman og taka þátt í flutningi og geymslu efna.
+.. .. admonition:: Verkfræðileg innsýn
+..    :class: athugasemd
 
-.. container:: teaching-step
+..    Langfrumurnar eru meginhluti viðarins. Því ráðast margir af mikilvægustu
+..    eiginleikum timburs af gerð þeirra, legu og innbyrðis tengingum. Í næstu
+..    köflum verður fjallað um hvernig þessi frumubygging hefur áhrif á
+..    eiginleika timburs.
 
-   .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
-      :width: 90 %
-      :align: center
+.. .. admonition:: Meginatriði
+..    :class: athugasemd
 
+..    Barrviður er að mestu byggður upp úr langfrumum sem liggja í
+..    lengdarstefnu trésins. Stuttfrumur, merggeislar og linsuop tengja
+..    frumurnar saman og taka þátt í flutningi og geymslu efna.
 
-.. container:: teaching-step
+.. .. container:: teaching-step
 
-   .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
-      :width: 90 %
-      :align: center
+..    .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
+..       :width: 90 %
+..       :align: center
 
 
-.. container:: teaching-step
+.. .. container:: teaching-step
 
-   .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
-      :width: 90 %
-      :align: center
+..    .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
+..       :width: 90 %
+..       :align: center
 
 
+.. .. container:: teaching-step
 
+..    .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
+..       :width: 90 %
+..       :align: center
 
 
 
-Timbur
--------
 
-Timbur er náttúrulegt byggingarefni sem hefur verið notað til mannvirkjagerðar í þúsundir ára. Það hefur marga góða eiginleika sem gera það að mikilvægu byggingarefni enn í dag.
 
-Helstu kostir timburs eru:
 
-* auðvelt í vinnslu,
-* þægilegt í viðhaldi,
-* náttúruafurð.
+.. Timbur
+.. -------
 
-Þekktar eru um 30.000 trjátegundir en aðeins um 1.000 þeirra eru nýttar til mannvirkjagerðar. Hérlendis er aðallega notaður barrviður (mjúkviður), einkum fura og greni, sem byggingatimbur.
+.. Timbur er náttúrulegt byggingarefni sem hefur verið notað til mannvirkjagerðar í þúsundir ára. Það hefur marga góða eiginleika sem gera það að mikilvægu byggingarefni enn í dag.
 
-Timbur á Íslandi
-----------------
+.. Helstu kostir timburs eru:
 
-Nánast allt byggingatimbur sem notað er á Íslandi er innflutt. Þó hefur rekaviður lengi verið nýttur hér á landi og á síðustu áratugum hefur innlend skógrækt aukist.
+.. * auðvelt í vinnslu,
+.. * þægilegt í viðhaldi,
+.. * náttúruafurð.
 
-Helstu trjátegundir sem ræktaðar eru hérlendis eru:
+.. Þekktar eru um 30.000 trjátegundir en aðeins um 1.000 þeirra eru nýttar til mannvirkjagerðar. Hérlendis er aðallega notaður barrviður (mjúkviður), einkum fura og greni, sem byggingatimbur.
 
-* rauðgreni,
-* sitkagreni,
-* skógarfura,
-* stafafura,
-* rauðagreni,
-* lerki,
-* alaskaösp.
+.. Timbur á Íslandi
+.. ----------------
 
-.. figure:: ./myndir/kafli17/trjategundir_1.jpg
-   :width: 30 %
-   :align: center
+.. Nánast allt byggingatimbur sem notað er á Íslandi er innflutt. Þó hefur rekaviður lengi verið nýttur hér á landi og á síðustu áratugum hefur innlend skógrækt aukist.
 
-   Fura.
+.. Helstu trjátegundir sem ræktaðar eru hérlendis eru:
 
-.. figure:: ./myndir/kafli17/trjategundir_2.jpg
-   :width: 30 %
-   :align: center
+.. * rauðgreni,
+.. * sitkagreni,
+.. * skógarfura,
+.. * stafafura,
+.. * rauðagreni,
+.. * lerki,
+.. * alaskaösp.
 
-   Eik.
+.. .. figure:: ./myndir/kafli17/trjategundir_1.jpg
+..    :width: 30 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/trjategundir_3.jpg
-   :width: 30 %
-   :align: center
+..    Fura.
 
-   Rauðgreni.
+.. .. figure:: ./myndir/kafli17/trjategundir_2.jpg
+..    :width: 30 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/trjategundir_4.png
-   :width: 30 %
-   :align: center
+..    Eik.
 
-   Timbur er náttúruafurð.
+.. .. figure:: ./myndir/kafli17/trjategundir_3.jpg
+..    :width: 30 %
+..    :align: center
 
-Innflutningur timburs
----------------------
+..    Rauðgreni.
 
-Á Íslandi eru flutt inn um 60–90 þúsund m³ af timbri á ári og hefur innflutningurinn mest farið yfir 110 þúsund m³.
+.. .. figure:: ./myndir/kafli17/trjategundir_4.png
+..    :width: 30 %
+..    :align: center
 
-Um 70% innflutningsins er fura og greni, tæplega 30% eru plötuklæðningar og afgangurinn er harðviður.
+..    Timbur er náttúruafurð.
 
-Byggingatimbur hefur meðal annars verið flutt inn frá Rússlandi, Kanada og Norðurlöndunum og á síðari árum einnig frá Eistlandi og Lettlandi.
+.. Innflutningur timburs
+.. ---------------------
 
-Samanburður við önnur byggingarefni
------------------------------------
+.. Á Íslandi eru flutt inn um 60–90 þúsund m³ af timbri á ári og hefur innflutningurinn mest farið yfir 110 þúsund m³.
 
-Timbur hefur marga eiginleika sem gera það að samkeppnishæfu byggingarefni.
+.. Um 70% innflutningsins er fura og greni, tæplega 30% eru plötuklæðningar og afgangurinn er harðviður.
 
-.. figure:: ./myndir/kafli17/samanburdur_vid_onnur_byggingarefni.jpg
-   :width: 85 %
-   :align: center
+.. Byggingatimbur hefur meðal annars verið flutt inn frá Rússlandi, Kanada og Norðurlöndunum og á síðari árum einnig frá Eistlandi og Lettlandi.
 
-   Samanburður timburs við önnur byggingarefni.
+.. Samanburður við önnur byggingarefni
+.. -----------------------------------
 
-Frumubygging viðar
------------------
+.. Timbur hefur marga eiginleika sem gera það að samkeppnishæfu byggingarefni.
 
-Viður er lífrænt efni sem er byggt upp úr frumum. Gerð og lögun frumanna ræður miklu um eiginleika timburs, svo sem styrk, stífleika, rakaflutning og eðlisþyngd.
+.. .. figure:: ./myndir/kafli17/samanburdur_vid_onnur_byggingarefni.jpg
+..    :width: 85 %
+..    :align: center
 
-Í viði eru tvær megingerðir frumna:
+..    Samanburður timburs við önnur byggingarefni.
 
-* langfrumur,
-* stuttfrumur.
+.. Frumubygging viðar
+.. -----------------
 
-Langfrumur mynda meginhluta burðarvirkis trésins og sjá jafnframt um flutning vatns og næringarefna. Stuttfrumur gegna meðal annars hlutverki við geymslu næringarefna og flutning þeirra þvert á trefjastefnu.
+.. Viður er lífrænt efni sem er byggt upp úr frumum. Gerð og lögun frumanna ræður miklu um eiginleika timburs, svo sem styrk, stífleika, rakaflutning og eðlisþyngd.
 
-.. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
-   :width: 75 %
-   :align: center
+.. Í viði eru tvær megingerðir frumna:
 
-   Langfrumur og stuttfrumur í viði.
+.. * langfrumur,
+.. * stuttfrumur.
 
-Efnasamsetning viðar
-~~~~~~~~~~~~~~~~~~~~
+.. Langfrumur mynda meginhluta burðarvirkis trésins og sjá jafnframt um flutning vatns og næringarefna. Stuttfrumur gegna meðal annars hlutverki við geymslu næringarefna og flutning þeirra þvert á trefjastefnu.
 
-Viður er að mestu leyti samsettur úr þremur efnum:
+.. .. figure:: ./myndir/kafli17/frumubygging_langfrumur_og_stuttfrumur.png
+..    :width: 75 %
+..    :align: center
 
-* sellulósa,
-* hemisellulósa,
-* ligníni.
+..    Langfrumur og stuttfrumur í viði.
 
-Sellulósi myndar sterkar trefjar sem veita viðnum togstyrk. Hemisellulósi tengir trefjarnar saman en lignín bindur frumurnar saman og gefur viðnum stífni og þrýstiþol.
+.. Efnasamsetning viðar
+.. ~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: ./myndir/kafli17/frumubygging_trefjar_bedmi_treni.png
-   :width: 70 %
-   :align: center
+.. Viður er að mestu leyti samsettur úr þremur efnum:
 
-   Helstu byggingarefni viðar.
+.. * sellulósa,
+.. * hemisellulósa,
+.. * ligníni.
 
-Frumuveggur
-~~~~~~~~~~~
+.. Sellulósi myndar sterkar trefjar sem veita viðnum togstyrk. Hemisellulósi tengir trefjarnar saman en lignín bindur frumurnar saman og gefur viðnum stífni og þrýstiþol.
 
-Frumuveggur viðar er ekki einsleitur heldur samanstendur af nokkrum lögum. Innan veggjarins liggja örtrefjar úr sellulósa sem hafa afgerandi áhrif á vélræna eiginleika viðarins.
+.. .. figure:: ./myndir/kafli17/frumubygging_trefjar_bedmi_treni.png
+..    :width: 70 %
+..    :align: center
 
-Stefna örtrefjanna hefur meðal annars áhrif á:
+..    Helstu byggingarefni viðar.
 
-* styrk,
-* stífleika,
-* formbreytingar,
-* rýrnun og þrútnun.
+.. Frumuveggur
+.. ~~~~~~~~~~~
 
-.. figure:: ./myndir/kafli17/frumuveggur_og_ortrefjur.png
-   :width: 70 %
-   :align: center
+.. Frumuveggur viðar er ekki einsleitur heldur samanstendur af nokkrum lögum. Innan veggjarins liggja örtrefjar úr sellulósa sem hafa afgerandi áhrif á vélræna eiginleika viðarins.
 
-   Uppbygging frumuveggjar og stefna örtrefja.
+.. Stefna örtrefjanna hefur meðal annars áhrif á:
 
-Uppbygging viðar
-----------------
+.. * styrk,
+.. * stífleika,
+.. * formbreytingar,
+.. * rýrnun og þrútnun.
 
-Viður er byggður upp úr mörgum frumum sem raðast saman í ákveðna stefnu. Flestar frumurnar liggja samsíða stofni trésins og því eru eiginleikar viðar mismunandi eftir því í hvaða stefnu hann er álagður.
+.. .. figure:: ./myndir/kafli17/frumuveggur_og_ortrefjur.png
+..    :width: 70 %
+..    :align: center
 
-Þessi stefnuvirkni er einn af mikilvægustu eiginleikum timburs sem byggingarefnis.
+..    Uppbygging frumuveggjar og stefna örtrefja.
 
-.. figure:: ./myndir/kafli17/uppbygging_vidar_1.jpg
-   :width: 80 %
-   :align: center
+.. Uppbygging viðar
+.. ----------------
 
-   Uppbygging viðar.
+.. Viður er byggður upp úr mörgum frumum sem raðast saman í ákveðna stefnu. Flestar frumurnar liggja samsíða stofni trésins og því eru eiginleikar viðar mismunandi eftir því í hvaða stefnu hann er álagður.
 
-.. figure:: ./myndir/kafli17/uppbygging_vidar_2.jpg
-   :width: 60 %
-   :align: center
+.. Þessi stefnuvirkni er einn af mikilvægustu eiginleikum timburs sem byggingarefnis.
 
-   Smásæ uppbygging viðar.
+.. .. figure:: ./myndir/kafli17/uppbygging_vidar_1.jpg
+..    :width: 80 %
+..    :align: center
 
-Uppbygging timburs
-------------------
+..    Uppbygging viðar.
 
-Þegar tré er unnið í byggingatimbur endurspeglast náttúruleg uppbygging þess í timburinu. Á skurðflötum má greina meðal annars trefjastefnu, árhringi og aðra byggingarþætti sem hafa áhrif á eiginleika efnisins.
+.. .. figure:: ./myndir/kafli17/uppbygging_vidar_2.jpg
+..    :width: 60 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/uppbygging_timburs.png
-   :width: 75 %
-   :align: center
+..    Smásæ uppbygging viðar.
 
-   Uppbygging timburs.
+.. Uppbygging timburs
+.. ------------------
 
-Árhringir
-----------
+.. Þegar tré er unnið í byggingatimbur endurspeglast náttúruleg uppbygging þess í timburinu. Á skurðflötum má greina meðal annars trefjastefnu, árhringi og aðra byggingarþætti sem hafa áhrif á eiginleika efnisins.
 
-Við þversnið trés má sjá árhringi sem myndast vegna árlegs vaxtar trésins. Hver árhringur samanstendur af vorviði og haustviði sem hafa mismunandi byggingu og eiginleika.
+.. .. figure:: ./myndir/kafli17/uppbygging_timburs.png
+..    :width: 75 %
+..    :align: center
 
-Breidd árhringja er breytileg og ræðst meðal annars af:
+..    Uppbygging timburs.
 
-* trjátegund,
-* vaxtarskilyrðum,
-* loftslagi,
-* aldri trésins.
+.. Árhringir
+.. ----------
 
-.. figure:: ./myndir/kafli17/vorvidur_haustvidur_arhringir.png
-   :width: 75 %
-   :align: center
+.. Við þversnið trés má sjá árhringi sem myndast vegna árlegs vaxtar trésins. Hver árhringur samanstendur af vorviði og haustviði sem hafa mismunandi byggingu og eiginleika.
 
-   Árhringir ásamt vorviði og haustviði.
+.. Breidd árhringja er breytileg og ræðst meðal annars af:
 
-Vorviður og haustviður
-~~~~~~~~~~~~~~~~~~~~~~
+.. * trjátegund,
+.. * vaxtarskilyrðum,
+.. * loftslagi,
+.. * aldri trésins.
 
-Á vaxtartíma trésins myndast tvær gerðir viðar.
+.. .. figure:: ./myndir/kafli17/vorvidur_haustvidur_arhringir.png
+..    :width: 75 %
+..    :align: center
 
-**Vorviður** myndast snemma sumars og einkennist af:
+..    Árhringir ásamt vorviði og haustviði.
 
-* stórum frumum,
-* þunnum frumuveggjum,
-* lágum eðlisþéttleika.
+.. Vorviður og haustviður
+.. ~~~~~~~~~~~~~~~~~~~~~~
 
-**Haustviður** myndast síðar á vaxtartímabilinu og einkennist af:
+.. Á vaxtartíma trésins myndast tvær gerðir viðar.
 
-* smærri frumum,
-* þykkum frumuveggjum,
-* meiri eðlisþéttleika og styrk.
+.. **Vorviður** myndast snemma sumars og einkennist af:
 
-Hlutfall vorviðar og haustviðar hefur áhrif á eiginleika timburs.
+.. * stórum frumum,
+.. * þunnum frumuveggjum,
+.. * lágum eðlisþéttleika.
 
-Uppbygging trés
----------------
+.. **Haustviður** myndast síðar á vaxtartímabilinu og einkennist af:
 
-Trjástofninn skiptist í nokkur svæði sem gegna mismunandi hlutverkum.
+.. * smærri frumum,
+.. * þykkum frumuveggjum,
+.. * meiri eðlisþéttleika og styrk.
 
-Frá ysta lagi og inn að miðju má greina:
+.. Hlutfall vorviðar og haustviðar hefur áhrif á eiginleika timburs.
 
-* börk,
-* bast,
-* rysju,
-* kjarnvið,
-* merg.
+.. Uppbygging trés
+.. ---------------
 
-Hvert þessara svæða hefur ákveðið hlutverk í vexti og starfsemi trésins.
+.. Trjástofninn skiptist í nokkur svæði sem gegna mismunandi hlutverkum.
 
-.. figure:: ./myndir/kafli17/borkur_bast_rysja_kjarnvidur.png
-   :width: 70 %
-   :align: center
+.. Frá ysta lagi og inn að miðju má greina:
 
-   Helstu hlutar trjástofns.
+.. * börk,
+.. * bast,
+.. * rysju,
+.. * kjarnvið,
+.. * merg.
 
-Bygging viðar
--------------
+.. Hvert þessara svæða hefur ákveðið hlutverk í vexti og starfsemi trésins.
 
-Rysjan er sá hluti trésins þar sem vatn og uppleyst næringarefni flytjast frá rótum til krónu trésins. Með aldrinum hættir innsti hluti rysjunnar að taka þátt í þessum flutningi og verður að kjarnviði.
+.. .. figure:: ./myndir/kafli17/borkur_bast_rysja_kjarnvidur.png
+..    :width: 70 %
+..    :align: center
 
-Kjarnviður inniheldur yfirleitt minna vatn en rysjan og hefur oft meiri náttúrulega mótstöðu gegn líffræðilegu niðurbroti.
+..    Helstu hlutar trjástofns.
 
-.. figure:: ./myndir/kafli17/uppbygging_vidar_daemi_1.jpg
-   :width: 75 %
-   :align: center
+.. Bygging viðar
+.. -------------
 
-   Dæmi um uppbyggingu trjástofns.
+.. Rysjan er sá hluti trésins þar sem vatn og uppleyst næringarefni flytjast frá rótum til krónu trésins. Með aldrinum hættir innsti hluti rysjunnar að taka þátt í þessum flutningi og verður að kjarnviði.
 
-.. figure:: ./myndir/kafli17/uppbygging_vidar_daemi_2.jpg
-   :width: 75 %
-   :align: center
+.. Kjarnviður inniheldur yfirleitt minna vatn en rysjan og hefur oft meiri náttúrulega mótstöðu gegn líffræðilegu niðurbroti.
 
-   Þversnið af trjástofni.
+.. .. figure:: ./myndir/kafli17/uppbygging_vidar_daemi_1.jpg
+..    :width: 75 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/uppbygging_vidar_daemi_3.png
-   :width: 75 %
-   :align: center
+..    Dæmi um uppbyggingu trjástofns.
 
-   Helstu byggingarhlutar viðar.
+.. .. figure:: ./myndir/kafli17/uppbygging_vidar_daemi_2.jpg
+..    :width: 75 %
+..    :align: center
 
-Barrtré og lauftré
-------------------
+..    Þversnið af trjástofni.
 
-Trjátegundum sem notaðar eru til timburframleiðslu er oft skipt í tvo meginflokka:
+.. .. figure:: ./myndir/kafli17/uppbygging_vidar_daemi_3.png
+..    :width: 75 %
+..    :align: center
 
-* barrtré (mjúkvið),
-* lauftré (harðvið).
+..    Helstu byggingarhlutar viðar.
 
-Barrtré eru mest notuð sem burðarviður í mannvirkjagerð, meðal annars vegna þess að þau eru:
+.. Barrtré og lauftré
+.. ------------------
 
-* létt,
-* auðveld í vinnslu,
-* hafa hátt styrk/þyngdarhlutfall.
+.. Trjátegundum sem notaðar eru til timburframleiðslu er oft skipt í tvo meginflokka:
 
-Lauftré eru yfirleitt eðlisþéttari og harðari og eru því oft notuð þar sem gerðar eru meiri kröfur um slitþol eða útlit.
+.. * barrtré (mjúkvið),
+.. * lauftré (harðvið).
 
-.. figure:: ./myndir/kafli17/barrtre_og_lauftre_1.png
-   :width: 48 %
-   :align: center
+.. Barrtré eru mest notuð sem burðarviður í mannvirkjagerð, meðal annars vegna þess að þau eru:
 
-   Barrtré.
+.. * létt,
+.. * auðveld í vinnslu,
+.. * hafa hátt styrk/þyngdarhlutfall.
 
-.. figure:: ./myndir/kafli17/barrtre_og_lauftre_2.png
-   :width: 48 %
-   :align: center
+.. Lauftré eru yfirleitt eðlisþéttari og harðari og eru því oft notuð þar sem gerðar eru meiri kröfur um slitþol eða útlit.
 
-   Lauftré.
+.. .. figure:: ./myndir/kafli17/barrtre_og_lauftre_1.png
+..    :width: 48 %
+..    :align: center
 
-Eðlisþéttleiki
---------------
+..    Barrtré.
 
-Eðlisþéttleiki timburs er einn mikilvægasti eiginleiki þess og hefur veruleg áhrif á styrk, stífleika og aðra efniseiginleika.
+.. .. figure:: ./myndir/kafli17/barrtre_og_lauftre_2.png
+..    :width: 48 %
+..    :align: center
 
-Eðlisþéttleikinn ræðst meðal annars af:
+..    Lauftré.
 
-* trjátegund,
-* vaxtarskilyrðum,
-* hlutfalli vorviðar og haustviðar,
-* rakainnihaldi timburs.
+.. Eðlisþéttleiki
+.. --------------
 
-Almennt má segja að timbur með meiri eðlisþéttleika hafi meiri styrk, en jafnframt meiri þyngd.
+.. Eðlisþéttleiki timburs er einn mikilvægasti eiginleiki þess og hefur veruleg áhrif á styrk, stífleika og aðra efniseiginleika.
 
-.. figure:: ./myndir/kafli17/efnisthettleiki.png
-   :width: 70 %
-   :align: center
+.. Eðlisþéttleikinn ræðst meðal annars af:
 
-   Eðlisþéttleiki mismunandi trjátegunda.
+.. * trjátegund,
+.. * vaxtarskilyrðum,
+.. * hlutfalli vorviðar og haustviðar,
+.. * rakainnihaldi timburs.
 
-Höfuðásar timburs
------------------
+.. Almennt má segja að timbur með meiri eðlisþéttleika hafi meiri styrk, en jafnframt meiri þyngd.
 
-Timbur er stefnubundið efni (*anisotropic*), sem þýðir að eiginleikar þess eru mismunandi eftir stefnu trefjanna.
+.. .. figure:: ./myndir/kafli17/efnisthettleiki.png
+..    :width: 70 %
+..    :align: center
 
-Greint er á milli þriggja höfuðása:
+..    Eðlisþéttleiki mismunandi trjátegunda.
 
-* langáss,
-* geislaáss,
-* snertiáss.
+.. Höfuðásar timburs
+.. -----------------
 
-Flestir vélrænir og eðlisfræðilegir eiginleikar timburs ráðast af því í hvaða stefnu álag eða rakabreyting verkar miðað við þessa ása.
+.. Timbur er stefnubundið efni (*anisotropic*), sem þýðir að eiginleikar þess eru mismunandi eftir stefnu trefjanna.
 
-.. figure:: ./myndir/kafli17/hofudasar_timburs_1.jpg
-   :width: 70 %
-   :align: center
+.. Greint er á milli þriggja höfuðása:
 
-   Höfuðásar timburs.
+.. * langáss,
+.. * geislaáss,
+.. * snertiáss.
 
-.. figure:: ./myndir/kafli17/hofudasar_timburs_2.jpg
-   :width: 60 %
-   :align: center
+.. Flestir vélrænir og eðlisfræðilegir eiginleikar timburs ráðast af því í hvaða stefnu álag eða rakabreyting verkar miðað við þessa ása.
 
-   Langás, geislaás og snertiás.
+.. .. figure:: ./myndir/kafli17/hofudasar_timburs_1.jpg
+..    :width: 70 %
+..    :align: center
 
-Viður og timbur
----------------
+..    Höfuðásar timburs.
 
-Viður í lifandi tré og timbur sem byggingarefni hafa ekki sama rakainnihald eða sömu eiginleika.
+.. .. figure:: ./myndir/kafli17/hofudasar_timburs_2.jpg
+..    :width: 60 %
+..    :align: center
 
-Við vinnslu timburs er mikilvægt að taka mið af breytingum sem verða á efninu þegar rakainnihald þess breytist.
+..    Langás, geislaás og snertiás.
 
-.. figure:: ./myndir/kafli17/vidur_vs_timbur.png
-   :width: 75 %
-   :align: center
+.. Viður og timbur
+.. ---------------
 
-   Viður og timbur.
+.. Viður í lifandi tré og timbur sem byggingarefni hafa ekki sama rakainnihald eða sömu eiginleika.
 
-Efnisraki
----------
+.. Við vinnslu timburs er mikilvægt að taka mið af breytingum sem verða á efninu þegar rakainnihald þess breytist.
 
-Efnisraki timburs er skilgreindur sem hlutfall vatnsmassa í timbrinu miðað við þurrmassa þess.
+.. .. figure:: ./myndir/kafli17/vidur_vs_timbur.png
+..    :width: 75 %
+..    :align: center
 
-Rakainnihaldið hefur áhrif á meðal annars:
+..    Viður og timbur.
 
-* styrk,
-* stífleika,
-* formbreytingar,
-* endingu.
+.. Efnisraki
+.. ---------
 
-Við þurrkun timburs minnkar rakainnihaldið og eiginleikar efnisins breytast.
+.. Efnisraki timburs er skilgreindur sem hlutfall vatnsmassa í timbrinu miðað við þurrmassa þess.
 
-.. figure:: ./myndir/kafli17/trefjamettunarmork.png
-   :width: 70 %
-   :align: center
+.. Rakainnihaldið hefur áhrif á meðal annars:
 
-   Trefjamettunarmörk timburs.
+.. * styrk,
+.. * stífleika,
+.. * formbreytingar,
+.. * endingu.
 
-Rakainnihald timburs
---------------------
+.. Við þurrkun timburs minnkar rakainnihaldið og eiginleikar efnisins breytast.
 
-Rakainnihald timburs er mismunandi eftir notkun og umhverfi.
+.. .. figure:: ./myndir/kafli17/trefjamettunarmork.png
+..    :width: 70 %
+..    :align: center
 
-Við venjulegar aðstæður leitast timbur við að ná jafnvægi við rakastig umhverfisins. Því er mikilvægt að velja timbur með rakainnihald sem hentar þeim aðstæðum sem það verður notað við.
+..    Trefjamettunarmörk timburs.
 
-.. figure:: ./myndir/kafli17/efnisraki_ibudarhusa.png
-   :width: 70 %
-   :align: center
+.. Rakainnihald timburs
+.. --------------------
 
-   Dæmigert rakainnihald timburs í íbúðarhúsum.
+.. Rakainnihald timburs er mismunandi eftir notkun og umhverfi.
 
-Rýrnun og þrútnun
------------------
+.. Við venjulegar aðstæður leitast timbur við að ná jafnvægi við rakastig umhverfisins. Því er mikilvægt að velja timbur með rakainnihald sem hentar þeim aðstæðum sem það verður notað við.
 
-Þegar rakainnihald timburs breytist breytast jafnframt stærðir þess. Timbur dregst saman við þornun og þenst út þegar það tekur upp raka.
+.. .. figure:: ./myndir/kafli17/efnisraki_ibudarhusa.png
+..    :width: 70 %
+..    :align: center
 
-Þessar stærðarbreytingar eru mismiklar eftir stefnu í timbrinu og ráðast af innri byggingu þess.
+..    Dæmigert rakainnihald timburs í íbúðarhúsum.
 
-.. figure:: ./myndir/kafli17/ryrnun_og_thrutnun_1.png
-   :width: 75 %
-   :align: center
+.. Rýrnun og þrútnun
+.. -----------------
 
-   Rýrnun og þrútnun timburs.
+.. Þegar rakainnihald timburs breytist breytast jafnframt stærðir þess. Timbur dregst saman við þornun og þenst út þegar það tekur upp raka.
 
-Stefnubundin formbreyting
-~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Þessar stærðarbreytingar eru mismiklar eftir stefnu í timbrinu og ráðast af innri byggingu þess.
 
-Rýrnun og þrútnun eru mismikil eftir höfuðásum timburs.
+.. .. figure:: ./myndir/kafli17/ryrnun_og_thrutnun_1.png
+..    :width: 75 %
+..    :align: center
 
-Almennt gildir að:
+..    Rýrnun og þrútnun timburs.
 
-* rýrnun er minnst í stefnu trefjanna,
-* meiri í geislaátt,
-* mest í snertiátt.
+.. Stefnubundin formbreyting
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Þessi stefnubundni munur getur valdið aflögunum og sprungum ef ekki er tekið tillit til hans við hönnun og framkvæmd.
+.. Rýrnun og þrútnun eru mismikil eftir höfuðásum timburs.
 
-.. figure:: ./myndir/kafli17/ryrnun_og_thrutnun_2.png
-   :width: 75 %
-   :align: center
+.. Almennt gildir að:
 
-   Rýrnun og þrútnun í mismunandi stefnum timburs.
+.. * rýrnun er minnst í stefnu trefjanna,
+.. * meiri í geislaátt,
+.. * mest í snertiátt.
 
-Rakabreytingar og aflögun
--------------------------
+.. Þessi stefnubundni munur getur valdið aflögunum og sprungum ef ekki er tekið tillit til hans við hönnun og framkvæmd.
 
-Þegar timbur þornar verður ekki aðeins breyting á stærðum þess heldur geta einnig orðið aflögun, sveigja eða snúningur.
+.. .. figure:: ./myndir/kafli17/ryrnun_og_thrutnun_2.png
+..    :width: 75 %
+..    :align: center
 
-Lögun byggingarhluta eftir þornun ræðst meðal annars af:
+..    Rýrnun og þrútnun í mismunandi stefnum timburs.
 
-* stefnu árhringja,
-* upphaflegu rakainnihaldi,
-* hvernig timbrið er sagað.
+.. Rakabreytingar og aflögun
+.. -------------------------
 
-.. figure:: ./myndir/kafli17/raka_thenslustudull.png
-   :width: 70 %
-   :align: center
+.. Þegar timbur þornar verður ekki aðeins breyting á stærðum þess heldur geta einnig orðið aflögun, sveigja eða snúningur.
 
-   Breyting á rakainnihaldi og áhrif hennar á timbur.
+.. Lögun byggingarhluta eftir þornun ræðst meðal annars af:
 
-Aflögun vegna þornunar
-----------------------
+.. * stefnu árhringja,
+.. * upphaflegu rakainnihaldi,
+.. * hvernig timbrið er sagað.
 
-Við þornun geta myndast mismunandi gerðir aflögunar eftir því hvernig timbrið er sagað og hvernig árhringirnir liggja.
+.. .. figure:: ./myndir/kafli17/raka_thenslustudull.png
+..    :width: 70 %
+..    :align: center
 
-Algengar aflögunargerðir eru:
+..    Breyting á rakainnihaldi og áhrif hennar á timbur.
 
-* sveigja,
-* kúptun,
-* skekking,
-* snúningur.
+.. Aflögun vegna þornunar
+.. ----------------------
 
-.. figure:: ./myndir/kafli17/aflogun_vid_thornun_1.jpg
-   :width: 75 %
-   :align: center
+.. Við þornun geta myndast mismunandi gerðir aflögunar eftir því hvernig timbrið er sagað og hvernig árhringirnir liggja.
 
-   Dæmi um aflögun við þornun.
+.. Algengar aflögunargerðir eru:
 
-.. figure:: ./myndir/kafli17/aflogun_vid_thornun_2.jpg
-   :width: 75 %
-   :align: center
+.. * sveigja,
+.. * kúptun,
+.. * skekking,
+.. * snúningur.
 
-   Mismunandi gerðir aflögunar.
+.. .. figure:: ./myndir/kafli17/aflogun_vid_thornun_1.jpg
+..    :width: 75 %
+..    :align: center
 
-Dæmi um rakabundnar formbreytingar
-----------------------------------
+..    Dæmi um aflögun við þornun.
 
-Við hönnun og notkun timburs þarf að gera ráð fyrir þeim formbreytingum sem verða þegar rakainnihald breytist.
+.. .. figure:: ./myndir/kafli17/aflogun_vid_thornun_2.jpg
+..    :width: 75 %
+..    :align: center
 
-Því er mikilvægt að:
+..    Mismunandi gerðir aflögunar.
 
-* velja timbur með hentugu rakainnihaldi,
-* tryggja góða rakavörn,
-* gera ráð fyrir mögulegum hreyfingum í smáatriðum byggingarhluta.
+.. Dæmi um rakabundnar formbreytingar
+.. ----------------------------------
 
-.. figure:: ./myndir/kafli17/aflogun_daemi.png
-   :width: 70 %
-   :align: center
+.. Við hönnun og notkun timburs þarf að gera ráð fyrir þeim formbreytingum sem verða þegar rakainnihald breytist.
 
-   Dæmi um formbreytingar vegna rakabreytinga.
+.. Því er mikilvægt að:
 
-Rakaflokkar
------------
+.. * velja timbur með hentugu rakainnihaldi,
+.. * tryggja góða rakavörn,
+.. * gera ráð fyrir mögulegum hreyfingum í smáatriðum byggingarhluta.
 
-Rakainnihald timburs ræðst af rakastigi umhverfisins. Við hönnun timburmannvirkja er því mikilvægt að gera ráð fyrir því við hvaða rakaaðstæður timbrið verður notað.
+.. .. figure:: ./myndir/kafli17/aflogun_daemi.png
+..    :width: 70 %
+..    :align: center
 
-Notkunarskilyrðum er skipt í rakaflokka sem lýsa því rakastigi sem timbrið verður fyrir í notkun. Flokkarnir eru meðal annars notaðir við ákvörðun á styrk- og aflögunareiginleikum timburs.
+..    Dæmi um formbreytingar vegna rakabreytinga.
 
-.. figure:: ./myndir/kafli17/rakahlutfallsflokkar.png
-   :width: 70 %
-   :align: center
+.. Rakaflokkar
+.. -----------
 
-   Rakaflokkar timburs.
+.. Rakainnihald timburs ræðst af rakastigi umhverfisins. Við hönnun timburmannvirkja er því mikilvægt að gera ráð fyrir því við hvaða rakaaðstæður timbrið verður notað.
 
-Gufumótstaða og varmaleiðni
----------------------------
+.. Notkunarskilyrðum er skipt í rakaflokka sem lýsa því rakastigi sem timbrið verður fyrir í notkun. Flokkarnir eru meðal annars notaðir við ákvörðun á styrk- og aflögunareiginleikum timburs.
 
-Timbur hefur tiltölulega góða hitaeinangrunareiginleika samanborið við mörg önnur byggingarefni.
+.. .. figure:: ./myndir/kafli17/rakahlutfallsflokkar.png
+..    :width: 70 %
+..    :align: center
 
-Varmaleiðni timburs ræðst meðal annars af:
+..    Rakaflokkar timburs.
 
-* eðlisþéttleika,
-* rakainnihaldi,
-* stefnu trefjanna.
+.. Gufumótstaða og varmaleiðni
+.. ---------------------------
 
-Timbur hefur jafnframt ákveðna gufumótstöðu sem þarf að taka tillit til við hönnun byggingarhluta þar sem rakaflutningur á sér stað.
+.. Timbur hefur tiltölulega góða hitaeinangrunareiginleika samanborið við mörg önnur byggingarefni.
 
-.. figure:: ./myndir/kafli17/gufumotstada_og_varmaleidni_1.png
-   :width: 70 %
-   :align: center
+.. Varmaleiðni timburs ræðst meðal annars af:
 
-   Gufumótstaða og varmaleiðni timburs.
+.. * eðlisþéttleika,
+.. * rakainnihaldi,
+.. * stefnu trefjanna.
 
-.. figure:: ./myndir/kafli17/gufumotstada_og_varmaleidni_2.png
-   :width: 70 %
-   :align: center
+.. Timbur hefur jafnframt ákveðna gufumótstöðu sem þarf að taka tillit til við hönnun byggingarhluta þar sem rakaflutningur á sér stað.
 
-   Varmaleiðni timburs.
+.. .. figure:: ./myndir/kafli17/gufumotstada_og_varmaleidni_1.png
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/gufumotstada_og_varmaleidni_3.jpg
-   :width: 70 %
-   :align: center
+..    Gufumótstaða og varmaleiðni timburs.
 
-   Áhrif rakaflutnings í timbri.
+.. .. figure:: ./myndir/kafli17/gufumotstada_og_varmaleidni_2.png
+..    :width: 70 %
+..    :align: center
 
-Styrkur og stífleiki
---------------------
+..    Varmaleiðni timburs.
 
-Vélrænir eiginleikar timburs ráðast af fjölmörgum þáttum, meðal annars:
+.. .. figure:: ./myndir/kafli17/gufumotstada_og_varmaleidni_3.jpg
+..    :width: 70 %
+..    :align: center
 
-* trjátegund,
-* eðlisþéttleika,
-* rakainnihaldi,
-* stefnu trefjanna,
-* göllum í timbrinu.
+..    Áhrif rakaflutnings í timbri.
 
-Þar sem timbur er náttúrulegt efni er breytileiki eiginleika þess meiri en hjá mörgum öðrum byggingarefnum.
+.. Styrkur og stífleiki
+.. --------------------
 
-.. figure:: ./myndir/kafli17/styrkur_og_stifleiki.png
-   :width: 70 %
-   :align: center
+.. Vélrænir eiginleikar timburs ráðast af fjölmörgum þáttum, meðal annars:
 
-   Helstu þættir sem hafa áhrif á styrk og stífleika timburs.
+.. * trjátegund,
+.. * eðlisþéttleika,
+.. * rakainnihaldi,
+.. * stefnu trefjanna,
+.. * göllum í timbrinu.
 
-Breytileiki styrkeiginleika
----------------------------
+.. Þar sem timbur er náttúrulegt efni er breytileiki eiginleika þess meiri en hjá mörgum öðrum byggingarefnum.
 
-Náttúrulegur breytileiki timburs veldur því að styrkur einstakra timburstykkja getur verið mismunandi, jafnvel innan sömu trjátegundar.
+.. .. figure:: ./myndir/kafli17/styrkur_og_stifleiki.png
+..    :width: 70 %
+..    :align: center
 
-Við hönnun burðarvirkja er því stuðst við einkennandi styrkgildi sem byggð eru á tölfræðilegri úrvinnslu mælinga.
+..    Helstu þættir sem hafa áhrif á styrk og stífleika timburs.
 
-.. figure:: ./myndir/kafli17/dreifing_maeligilda.png
-   :width: 70 %
-   :align: center
+.. Breytileiki styrkeiginleika
+.. ---------------------------
 
-   Dreifing mældra styrkgilda.
+.. Náttúrulegur breytileiki timburs veldur því að styrkur einstakra timburstykkja getur verið mismunandi, jafnvel innan sömu trjátegundar.
 
-Spennu–streituferill
---------------------
+.. Við hönnun burðarvirkja er því stuðst við einkennandi styrkgildi sem byggð eru á tölfræðilegri úrvinnslu mælinga.
 
-Við álag aflagast timbur. Samband spennu og streitu er háð álagsstefnu, rakainnihaldi og byggingu viðarins.
+.. .. figure:: ./myndir/kafli17/dreifing_maeligilda.png
+..    :width: 70 %
+..    :align: center
 
-Þekking á spennu–streituferli timburs er grundvöllur fyrir útreikningum á aflögunum og burðarþoli timburmannvirkja.
+..    Dreifing mældra styrkgilda.
 
-.. figure:: ./myndir/kafli17/spennu_streituferill_1.jpg
-   :width: 70 %
-   :align: center
+.. Spennu–streituferill
+.. --------------------
 
-   Dæmigerður spennu–streituferill timburs.
+.. Við álag aflagast timbur. Samband spennu og streitu er háð álagsstefnu, rakainnihaldi og byggingu viðarins.
 
-.. figure:: ./myndir/kafli17/spennu_streituferill_2.png
-   :width: 70 %
-   :align: center
+.. Þekking á spennu–streituferli timburs er grundvöllur fyrir útreikningum á aflögunum og burðarþoli timburmannvirkja.
 
-   Spennu–streitusamband timburs við mismunandi álag.
+.. .. figure:: ./myndir/kafli17/spennu_streituferill_1.jpg
+..    :width: 70 %
+..    :align: center
 
-   Þrýstistyrkur
--------------
+..    Dæmigerður spennu–streituferill timburs.
 
-Styrkur timburs er háður álagsstefnu miðað við trefjastefnu. Við þrýstiálag samsíða trefjum hefur timbur mun meiri burðargetu en þegar álagið verkar þvert á trefjarnar.
+.. .. figure:: ./myndir/kafli17/spennu_streituferill_2.png
+..    :width: 70 %
+..    :align: center
 
-Þegar timbur er hannað sem burðarefni þarf því ávallt að taka mið af stefnu trefjanna gagnvart álaginu.
+..    Spennu–streitusamband timburs við mismunandi álag.
 
-.. figure:: ./myndir/kafli17/thrystistyrkur.jpg
-   :width: 70 %
-   :align: center
+..    Þrýstistyrkur
+.. -------------
 
-   Þrýstistyrkur timburs.
+.. Styrkur timburs er háður álagsstefnu miðað við trefjastefnu. Við þrýstiálag samsíða trefjum hefur timbur mun meiri burðargetu en þegar álagið verkar þvert á trefjarnar.
 
-Áhrif raka á styrk
-------------------
+.. Þegar timbur er hannað sem burðarefni þarf því ávallt að taka mið af stefnu trefjanna gagnvart álaginu.
 
-Rakainnihald hefur veruleg áhrif á vélræna eiginleika timburs.
+.. .. figure:: ./myndir/kafli17/thrystistyrkur.jpg
+..    :width: 70 %
+..    :align: center
 
-Almennt gildir að styrkur og stífleiki timburs aukast eftir því sem rakainnihaldið lækkar, þar til trefjamettunarmörkum er náð. Fyrir ofan trefjamettunarmörkin hafa breytingar á rakainnihaldi lítil áhrif á styrk timburs.
+..    Þrýstistyrkur timburs.
 
-.. figure:: ./myndir/kafli17/styrkur_og_raki.png
-   :width: 70 %
-   :align: center
+.. Áhrif raka á styrk
+.. ------------------
 
-   Samband rakainnihalds og styrks timburs.
+.. Rakainnihald hefur veruleg áhrif á vélræna eiginleika timburs.
 
-Áhrif álagshraða
-----------------
+.. Almennt gildir að styrkur og stífleiki timburs aukast eftir því sem rakainnihaldið lækkar, þar til trefjamettunarmörkum er náð. Fyrir ofan trefjamettunarmörkin hafa breytingar á rakainnihaldi lítil áhrif á styrk timburs.
 
-Styrkur timburs er einnig háður því hversu hratt álag er aukið.
+.. .. figure:: ./myndir/kafli17/styrkur_og_raki.png
+..    :width: 70 %
+..    :align: center
 
-Við hraða álagsaukningu mælist styrkur timburs yfirleitt meiri en við hæga álagsaukningu. Þetta þarf að hafa í huga við túlkun prófaniðurstaðna og við mat á hegðun timburs undir mismunandi álagsaðstæðum.
+..    Samband rakainnihalds og styrks timburs.
 
-.. figure:: ./myndir/kafli17/alagshradi.jpg
-   :width: 70 %
-   :align: center
+.. Áhrif álagshraða
+.. ----------------
 
-   Áhrif álagshraða á styrk timburs.
+.. Styrkur timburs er einnig háður því hversu hratt álag er aukið.
 
-Kvistir
--------
+.. Við hraða álagsaukningu mælist styrkur timburs yfirleitt meiri en við hæga álagsaukningu. Þetta þarf að hafa í huga við túlkun prófaniðurstaðna og við mat á hegðun timburs undir mismunandi álagsaðstæðum.
 
-Kvistir eru einn algengasti náttúrulegi gallinn í timbri og hafa veruleg áhrif á styrk þess.
+.. .. figure:: ./myndir/kafli17/alagshradi.jpg
+..    :width: 70 %
+..    :align: center
 
-Kvistir verða til þar sem greinar trésins tengjast stofninum og rjúfa samfellda trefjastefnu viðarins.
+..    Áhrif álagshraða á styrk timburs.
 
-Stærð, staðsetning og gerð kvista hafa áhrif á burðargetu timburs.
+.. Kvistir
+.. -------
 
-.. figure:: ./myndir/kafli17/kvistir_1.jpg
-   :width: 75 %
-   :align: center
+.. Kvistir eru einn algengasti náttúrulegi gallinn í timbri og hafa veruleg áhrif á styrk þess.
 
-   Kvistir í timbri.
+.. Kvistir verða til þar sem greinar trésins tengjast stofninum og rjúfa samfellda trefjastefnu viðarins.
 
-.. figure:: ./myndir/kafli17/kvistir_2.png
-   :width: 70 %
-   :align: center
+.. Stærð, staðsetning og gerð kvista hafa áhrif á burðargetu timburs.
 
-   Dæmi um kvista.
+.. .. figure:: ./myndir/kafli17/kvistir_1.jpg
+..    :width: 75 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/kvistir_3.png
-   :width: 70 %
-   :align: center
+..    Kvistir í timbri.
 
-   Kvistir og trefjastefna.
+.. .. figure:: ./myndir/kafli17/kvistir_2.png
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/kvistir_4.png
-   :width: 70 %
-   :align: center
+..    Dæmi um kvista.
 
-   Mismunandi gerðir kvista.
+.. .. figure:: ./myndir/kafli17/kvistir_3.png
+..    :width: 70 %
+..    :align: center
 
-Áhrif kvista á styrk
---------------------
+..    Kvistir og trefjastefna.
 
-Kvistir valda staðbundnum breytingum á trefjastefnu og geta þannig dregið úr burðargetu timburs.
+.. .. figure:: ./myndir/kafli17/kvistir_4.png
+..    :width: 70 %
+..    :align: center
 
-Áhrif þeirra ráðast meðal annars af:
+..    Mismunandi gerðir kvista.
 
-* stærð kvists,
-* staðsetningu hans,
-* hvort kvisturinn er fastur eða laus,
-* stefnu álagsins miðað við trefjarnar.
+.. Áhrif kvista á styrk
+.. --------------------
 
-Þess vegna eru kvistir einn mikilvægasti þátturinn við styrkflokkun burðartimburs.
+.. Kvistir valda staðbundnum breytingum á trefjastefnu og geta þannig dregið úr burðargetu timburs.
 
-.. figure:: ./myndir/kafli17/ahrif_kvista_1.png
-   :width: 75 %
-   :align: center
+.. Áhrif þeirra ráðast meðal annars af:
 
-   Áhrif kvista á burðargetu timburs.
+.. * stærð kvists,
+.. * staðsetningu hans,
+.. * hvort kvisturinn er fastur eða laus,
+.. * stefnu álagsins miðað við trefjarnar.
 
-.. figure:: ./myndir/kafli17/ahrif_kvista_2.png
-   :width: 75 %
-   :align: center
+.. Þess vegna eru kvistir einn mikilvægasti þátturinn við styrkflokkun burðartimburs.
 
-   Dæmi um áhrif kvista á spennudreifingu.
+.. .. figure:: ./myndir/kafli17/ahrif_kvista_1.png
+..    :width: 75 %
+..    :align: center
 
-Styrkflokkun timburs
---------------------
+..    Áhrif kvista á burðargetu timburs.
 
-Vegna þess að timbur er náttúrulegt efni er styrkur þess breytilegur. Því er burðartimbur flokkað eftir styrk svo hægt sé að nota áreiðanleg hönnunargildi við útreikninga.
+.. .. figure:: ./myndir/kafli17/ahrif_kvista_2.png
+..    :width: 75 %
+..    :align: center
 
-Styrkflokkun getur farið fram með:
+..    Dæmi um áhrif kvista á spennudreifingu.
 
-* sjónflokkun,
-* vélrænni flokkun.
+.. Styrkflokkun timburs
+.. --------------------
 
-Við flokkun er meðal annars tekið tillit til:
+.. Vegna þess að timbur er náttúrulegt efni er styrkur þess breytilegur. Því er burðartimbur flokkað eftir styrk svo hægt sé að nota áreiðanleg hönnunargildi við útreikninga.
 
-* kvista,
-* trefjahalla,
-* sprungna,
-* annarra náttúrulegra galla.
+.. Styrkflokkun getur farið fram með:
 
-.. figure:: ./myndir/kafli17/flokkun_timburs_1.jpg
-   :width: 70 %
-   :align: center
+.. * sjónflokkun,
+.. * vélrænni flokkun.
 
-   Sjónflokkun timburs.
+.. Við flokkun er meðal annars tekið tillit til:
 
-.. figure:: ./myndir/kafli17/flokkun_timburs_2.jpg
-   :width: 70 %
-   :align: center
+.. * kvista,
+.. * trefjahalla,
+.. * sprungna,
+.. * annarra náttúrulegra galla.
 
-   Vélræn flokkun timburs.
+.. .. figure:: ./myndir/kafli17/flokkun_timburs_1.jpg
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/flokkun_timburs_3.png
-   :width: 70 %
-   :align: center
+..    Sjónflokkun timburs.
 
-   Styrkflokkun burðartimburs.
+.. .. figure:: ./myndir/kafli17/flokkun_timburs_2.jpg
+..    :width: 70 %
+..    :align: center
 
-Bruni timburs
--------------
+..    Vélræn flokkun timburs.
 
-Þrátt fyrir að timbur sé brennanlegt efni getur það haft góða brunamótstöðu þegar það er notað í burðarvirkjum.
+.. .. figure:: ./myndir/kafli17/flokkun_timburs_3.png
+..    :width: 70 %
+..    :align: center
 
-Við bruna myndast kolað yfirborð sem einangrar innri hluta timbursins og hægir á áframhaldandi niðurbroti.
+..    Styrkflokkun burðartimburs.
 
-Burðargeta timburs minnkar því smám saman eftir því sem kolalagið þykknar.
+.. Bruni timburs
+.. -------------
 
-.. figure:: ./myndir/kafli17/bruni_timburs.jpg
-   :width: 70 %
-   :align: center
+.. Þrátt fyrir að timbur sé brennanlegt efni getur það haft góða brunamótstöðu þegar það er notað í burðarvirkjum.
 
-   Bruni timburs.
+.. Við bruna myndast kolað yfirborð sem einangrar innri hluta timbursins og hægir á áframhaldandi niðurbroti.
 
-Brunavarnir
------------
+.. Burðargeta timburs minnkar því smám saman eftir því sem kolalagið þykknar.
 
-Við brunahönnun timburmannvirkja þarf að taka mið af:
+.. .. figure:: ./myndir/kafli17/bruni_timburs.jpg
+..    :width: 70 %
+..    :align: center
 
-* brunatíma,
-* kulnunarhraða,
-* stærð burðarhluta,
-* brunavörnum.
+..    Bruni timburs.
 
-Brunavarnir geta meðal annars falist í:
+.. Brunavarnir
+.. -----------
 
-* klæðningum,
-* brunavarnarmeðferð,
-* aukinni þversniðsstærð burðarhluta.
+.. Við brunahönnun timburmannvirkja þarf að taka mið af:
 
-.. figure:: ./myndir/kafli17/brunavarnir.jpg
-   :width: 70 %
-   :align: center
+.. * brunatíma,
+.. * kulnunarhraða,
+.. * stærð burðarhluta,
+.. * brunavörnum.
 
-   Brunavarnir timburmannvirkja.
+.. Brunavarnir geta meðal annars falist í:
 
-Fúi og mygla
-------------
+.. * klæðningum,
+.. * brunavarnarmeðferð,
+.. * aukinni þversniðsstærð burðarhluta.
 
-Timbur er lífrænt efni og getur orðið fyrir líffræðilegu niðurbroti ef aðstæður eru hagstæðar.
+.. .. figure:: ./myndir/kafli17/brunavarnir.jpg
+..    :width: 70 %
+..    :align: center
 
-Til þess að fúi eða mygla geti myndast þurfa nokkur skilyrði að vera uppfyllt, meðal annars:
+..    Brunavarnir timburmannvirkja.
 
-* nægur raki,
-* hentugt hitastig,
-* súrefni,
-* næring.
+.. Fúi og mygla
+.. ------------
 
-Ef eitt þessara skilyrða vantar verður líffræðilegur vöxtur ekki.
+.. Timbur er lífrænt efni og getur orðið fyrir líffræðilegu niðurbroti ef aðstæður eru hagstæðar.
 
-.. figure:: ./myndir/kafli17/forsendur_fua_og_myglu_1.jpg
-   :width: 70 %
-   :align: center
+.. Til þess að fúi eða mygla geti myndast þurfa nokkur skilyrði að vera uppfyllt, meðal annars:
 
-   Skilyrði fyrir myndun fúa og myglu.
+.. * nægur raki,
+.. * hentugt hitastig,
+.. * súrefni,
+.. * næring.
 
-.. figure:: ./myndir/kafli17/forsendur_fua_og_myglu_2.jpg
-   :width: 70 %
-   :align: center
+.. Ef eitt þessara skilyrða vantar verður líffræðilegur vöxtur ekki.
 
-   Samspil raka, hita og annarra þátta.
+.. .. figure:: ./myndir/kafli17/forsendur_fua_og_myglu_1.jpg
+..    :width: 70 %
+..    :align: center
 
-Fúi og mygla í timbri
----------------------
+..    Skilyrði fyrir myndun fúa og myglu.
 
-Fúi og mygla hafa mismunandi áhrif á timbur.
+.. .. figure:: ./myndir/kafli17/forsendur_fua_og_myglu_2.jpg
+..    :width: 70 %
+..    :align: center
 
-Mygla vex á yfirborði timburs og hefur fyrst og fremst áhrif á útlit þess, en getur jafnframt bent til of mikils raka.
+..    Samspil raka, hita og annarra þátta.
 
-Fúi veldur hins vegar niðurbroti viðarefnisins og getur dregið verulega úr styrk timburs ef ekki er brugðist við í tíma.
+.. Fúi og mygla í timbri
+.. ---------------------
 
-.. figure:: ./myndir/kafli17/fui_og_mygla_1.jpg
-   :width: 48 %
-   :align: center
+.. Fúi og mygla hafa mismunandi áhrif á timbur.
 
-   Dæmi um myglu.
+.. Mygla vex á yfirborði timburs og hefur fyrst og fremst áhrif á útlit þess, en getur jafnframt bent til of mikils raka.
 
-.. figure:: ./myndir/kafli17/fui_og_mygla_2.jpg
-   :width: 48 %
-   :align: center
+.. Fúi veldur hins vegar niðurbroti viðarefnisins og getur dregið verulega úr styrk timburs ef ekki er brugðist við í tíma.
 
-   Dæmi um fúa.
+.. .. figure:: ./myndir/kafli17/fui_og_mygla_1.jpg
+..    :width: 48 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/fui_og_mygla_3.jpg
-   :width: 48 %
-   :align: center
+..    Dæmi um myglu.
 
-   Skemmdir af völdum fúa.
+.. .. figure:: ./myndir/kafli17/fui_og_mygla_2.jpg
+..    :width: 48 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/fui_og_mygla_4.jpg
-   :width: 48 %
-   :align: center
+..    Dæmi um fúa.
 
-   Dæmi um líffræðilegt niðurbrot timburs.
+.. .. figure:: ./myndir/kafli17/fui_og_mygla_3.jpg
+..    :width: 48 %
+..    :align: center
 
-Veggjatítla
-------------
+..    Skemmdir af völdum fúa.
 
-Við framleiðslu timburplatna og samsettra timburvara eru notaðar mismunandi gerðir viðarlaga og samsetninga eftir því hvaða eiginleikum er óskað eftir.
+.. .. figure:: ./myndir/kafli17/fui_og_mygla_4.jpg
+..    :width: 48 %
+..    :align: center
 
-Val á uppbyggingu hefur meðal annars áhrif á:
+..    Dæmi um líffræðilegt niðurbrot timburs.
 
-* styrk,
-* stífleika,
-* formstöðugleika,
-* burðargetu.
+.. Veggjatítla
+.. ------------
 
-.. figure:: ./myndir/kafli17/veggjatitla_1.jpg
-   :width: 70 %
-   :align: center
+.. Við framleiðslu timburplatna og samsettra timburvara eru notaðar mismunandi gerðir viðarlaga og samsetninga eftir því hvaða eiginleikum er óskað eftir.
 
-   Dæmi um uppbyggingu timburplatna.
+.. Val á uppbyggingu hefur meðal annars áhrif á:
 
-.. figure:: ./myndir/kafli17/veggjatitla_2.jpg
-   :width: 70 %
-   :align: center
+.. * styrk,
+.. * stífleika,
+.. * formstöðugleika,
+.. * burðargetu.
 
-   Samsetning viðarlaga.
+.. .. figure:: ./myndir/kafli17/veggjatitla_1.jpg
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/veggjatitla_3.jpg
-   :width: 70 %
-   :align: center
+..    Dæmi um uppbyggingu timburplatna.
 
-   Dæmi um plötuuppbyggingu.
+.. .. figure:: ./myndir/kafli17/veggjatitla_2.jpg
+..    :width: 70 %
+..    :align: center
 
-Krossviður
-----------
+..    Samsetning viðarlaga.
 
-Krossviður er samsettur úr þunnum viðarlögum sem límd eru saman þannig að trefjastefna hvers lags er hornrétt á næsta lag.
+.. .. figure:: ./myndir/kafli17/veggjatitla_3.jpg
+..    :width: 70 %
+..    :align: center
 
-Þessi uppbygging:
+..    Dæmi um plötuuppbyggingu.
 
-* eykur formstöðugleika,
-* dregur úr rýrnun og þrútnun,
-* bætir burðareiginleika í fleiri en eina stefnu.
+.. Krossviður
+.. ----------
 
-.. figure:: ./myndir/kafli17/krossvidur_1.jpg
-   :width: 70 %
-   :align: center
+.. Krossviður er samsettur úr þunnum viðarlögum sem límd eru saman þannig að trefjastefna hvers lags er hornrétt á næsta lag.
 
-   Krossviður.
+.. Þessi uppbygging:
 
-.. figure:: ./myndir/kafli17/krossvidur_2.jpg
-   :width: 70 %
-   :align: center
+.. * eykur formstöðugleika,
+.. * dregur úr rýrnun og þrútnun,
+.. * bætir burðareiginleika í fleiri en eina stefnu.
 
-   Uppbygging krossviðar.
+.. .. figure:: ./myndir/kafli17/krossvidur_1.jpg
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/krossvidur_3.png
-   :width: 70 %
-   :align: center
+..    Krossviður.
 
-   Lög krossviðar.
+.. .. figure:: ./myndir/kafli17/krossvidur_2.jpg
+..    :width: 70 %
+..    :align: center
 
-Límtré
--------
+..    Uppbygging krossviðar.
 
-Límtré er framleitt með því að líma saman timburlög með samsíða trefjastefnu.
+.. .. figure:: ./myndir/kafli17/krossvidur_3.png
+..    :width: 70 %
+..    :align: center
 
-Með þessari framleiðsluaðferð er hægt að framleiða burðarhluta með:
+..    Lög krossviðar.
 
-* miklum styrk,
-* mikilli stífleika,
-* stórum spannlengdum,
-* fjölbreyttum lögunum og formum.
+.. Límtré
+.. -------
 
-.. figure:: ./myndir/kafli17/limtre_1.jpg
-   :width: 70 %
-   :align: center
+.. Límtré er framleitt með því að líma saman timburlög með samsíða trefjastefnu.
 
-   Límtré.
+.. Með þessari framleiðsluaðferð er hægt að framleiða burðarhluta með:
 
-.. figure:: ./myndir/kafli17/limtre_2.jpg
-   :width: 70 %
-   :align: center
+.. * miklum styrk,
+.. * mikilli stífleika,
+.. * stórum spannlengdum,
+.. * fjölbreyttum lögunum og formum.
 
-   Framleiðsla límtrés.
+.. .. figure:: ./myndir/kafli17/limtre_1.jpg
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/limtre_3.jpg
-   :width: 70 %
-   :align: center
+..    Límtré.
 
-   Burðarhlutar úr límtré.
+.. .. figure:: ./myndir/kafli17/limtre_2.jpg
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/limtre_4.jpg
-   :width: 70 %
-   :align: center
+..    Framleiðsla límtrés.
 
-   Dæmi um notkun límtrés.
+.. .. figure:: ./myndir/kafli17/limtre_3.jpg
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/limtre_5.jpg
-   :width: 70 %
-   :align: center
+..    Burðarhlutar úr límtré.
 
-   Límtré í mannvirkjum.
+.. .. figure:: ./myndir/kafli17/limtre_4.jpg
+..    :width: 70 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/limtre_6.jpg
-   :width: 70 %
-   :align: center
+..    Dæmi um notkun límtrés.
 
-   Bogadregnir burðarhlutar úr límtré.
+.. .. figure:: ./myndir/kafli17/limtre_5.jpg
+..    :width: 70 %
+..    :align: center
 
-Tengingar í timburmannvirkjum
------------------------------
+..    Límtré í mannvirkjum.
 
-Tengingar hafa afgerandi áhrif á burðarvirkni timburmannvirkja og eru oft ráðandi þáttur við hönnun þeirra.
+.. .. figure:: ./myndir/kafli17/limtre_6.jpg
+..    :width: 70 %
+..    :align: center
 
-Notaðar eru fjölbreyttar gerðir tenginga, meðal annars:
+..    Bogadregnir burðarhlutar úr límtré.
 
-* boltar,
-* skrúfur,
-* naglar,
-* stálplötur,
-* sérhæfð tengikerfi.
+.. Tengingar í timburmannvirkjum
+.. -----------------------------
 
-.. figure:: ./myndir/kafli17/limtre_tengingar.jpg
-   :width: 70 %
-   :align: center
+.. Tengingar hafa afgerandi áhrif á burðarvirkni timburmannvirkja og eru oft ráðandi þáttur við hönnun þeirra.
 
-   Tengingar í límtré.
+.. Notaðar eru fjölbreyttar gerðir tenginga, meðal annars:
 
-.. figure:: ./myndir/kafli17/timburtengingar.png
-   :width: 70 %
-   :align: center
+.. * boltar,
+.. * skrúfur,
+.. * naglar,
+.. * stálplötur,
+.. * sérhæfð tengikerfi.
 
-   Dæmi um tengingar í timburmannvirkjum.
+.. .. figure:: ./myndir/kafli17/limtre_tengingar.jpg
+..    :width: 70 %
+..    :align: center
 
-Krosslímt timbur og há timburhús
---------------------------------
+..    Tengingar í límtré.
 
-Krosslímt timbur (KLT eða CLT) er samsett úr nokkrum timburlögum sem límd eru saman með víxlstæðri trefjastefnu.
+.. .. figure:: ./myndir/kafli17/timburtengingar.png
+..    :width: 70 %
+..    :align: center
 
-Þessi uppbygging veitir:
+..    Dæmi um tengingar í timburmannvirkjum.
 
-* mikinn styrk,
-* mikla stífleika,
-* góða formstöðugleika,
-* möguleika á stórum burðarhlutum.
+.. Krosslímt timbur og há timburhús
+.. --------------------------------
 
-Krosslímt timbur hefur á síðustu árum orðið eitt mikilvægasta byggingarefni fyrir fjölhæða timburbyggingar.
+.. Krosslímt timbur (KLT eða CLT) er samsett úr nokkrum timburlögum sem límd eru saman með víxlstæðri trefjastefnu.
 
-.. figure:: ./myndir/kafli17/krosslimt_timbur.png
-   :width: 75 %
-   :align: center
+.. Þessi uppbygging veitir:
 
-   Krosslímt timbur.
+.. * mikinn styrk,
+.. * mikla stífleika,
+.. * góða formstöðugleika,
+.. * möguleika á stórum burðarhlutum.
 
-.. figure:: ./myndir/kafli17/haar_timburbyggingar_1.jpg
-   :width: 75 %
-   :align: center
+.. Krosslímt timbur hefur á síðustu árum orðið eitt mikilvægasta byggingarefni fyrir fjölhæða timburbyggingar.
 
-   Dæmi um há timburhús.
+.. .. figure:: ./myndir/kafli17/krosslimt_timbur.png
+..    :width: 75 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/haar_timburbyggingar_2.jpg
-   :width: 75 %
-   :align: center
+..    Krosslímt timbur.
 
-   Nútímaleg timburbygging.
+.. .. figure:: ./myndir/kafli17/haar_timburbyggingar_1.jpg
+..    :width: 75 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/haar_timburbyggingar_3.jpg
-   :width: 75 %
-   :align: center
+..    Dæmi um há timburhús.
 
-   Burðarkerfi úr timbri.
+.. .. figure:: ./myndir/kafli17/haar_timburbyggingar_2.jpg
+..    :width: 75 %
+..    :align: center
 
-.. figure:: ./myndir/kafli17/haar_timburbyggingar_4.png
-   :width: 75 %
-   :align: center
+..    Nútímaleg timburbygging.
 
-   Þróun timburmannvirkja á síðustu árum.
+.. .. figure:: ./myndir/kafli17/haar_timburbyggingar_3.jpg
+..    :width: 75 %
+..    :align: center
+
+..    Burðarkerfi úr timbri.
+
+.. .. figure:: ./myndir/kafli17/haar_timburbyggingar_4.png
+..    :width: 75 %
+..    :align: center
+
+..    Þróun timburmannvirkja á síðustu árum.
