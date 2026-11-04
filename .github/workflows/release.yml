@@ -19,7 +19,7 @@ permissions:
 jobs:
   generate-version:
     name: Generate Release Version
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       version: ${{ steps.calver.outputs.version }}
       tag: ${{ steps.calver.outputs.tag }}
@@ -72,7 +72,7 @@ jobs:
 
   create-release:
     name: Create GitHub Release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [generate-version, build-docs]
     permissions:
       contents: write
@@ -130,7 +130,7 @@ jobs:
   notify-discord-release:
     needs: [generate-version, build-docs, create-release]
     name: Notify Discord (release)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: always() && needs.build-docs.result == 'success'
     steps:
       - name: Check out repository
