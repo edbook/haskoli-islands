@@ -34,7 +34,7 @@ jobs:
 
   announce-url:
     name: Announce feature url
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build-docs
     steps:
       - name: Find Comment
@@ -70,7 +70,7 @@ jobs:
 
   notify-discord-pr:
     name: Notify Discord (open PR)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: [build-docs]
     if: github.event.action == 'opened'
     steps:
