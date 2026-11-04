@@ -301,18 +301,18 @@ jobs:
           retention-days: 1
 
       - name: Setup Pages (for PR deployments)
-        if: inputs.deployment_type == 'pr'
+        if: inputs.deployment_type == 'pr' && !github.event.pull_request.head.repo.fork
         uses: actions/configure-pages@v5
 
       - name: Upload artifact (for PR deployments)
-        if: inputs.deployment_type == 'pr'
+        if: inputs.deployment_type == 'pr' && !github.event.pull_request.head.repo.fork
         id: upload
         uses: actions/upload-pages-artifact@v3
         with:
           path: versioned-docs
 
       - name: Deploy to GitHub Pages (for PR deployments)
-        if: inputs.deployment_type == 'pr'
+        if: inputs.deployment_type == 'pr' && !github.event.pull_request.head.repo.fork
         id: deployment
         uses: actions/deploy-pages@v4
         with:

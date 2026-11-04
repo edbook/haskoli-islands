@@ -803,7 +803,7 @@ Dæmi 2 um stofnbrotaliðun
     sem hefur lausnina :math:`A=-2`, :math:`B=\frac{3}{2}` og :math:`C=\frac{1}{2}`.
     Af þessu sést að
 
-    .. math:: \frac{x^3+2}{x^3-x} = 1 - \frac{2}{x}+\frac{3}{2(x-1)}+\frac{1}{2(x-1)}.
+    .. math:: \frac{x^3+2}{x^3-x} = 1 - \frac{2}{x}+\frac{3}{2(x-1)}+\frac{1}{2(x+1)}.
 
 Dæmi 3 um stofnbrotaliðun
 ~~~~~~~~~~~~~~~~~~~~~~~~~
