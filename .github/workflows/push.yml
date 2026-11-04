@@ -33,7 +33,7 @@ jobs:
 
   deploy-production:
     name: Deploy to Production
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build-docs
     environment:
       name: ${{ github.ref_name }}
@@ -79,7 +79,7 @@ jobs:
   notify-discord-push:
     needs: [build-docs, deploy-production]
     name: Notify Discord (push to main)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Check out repository
@@ -131,7 +131,7 @@ jobs:
     needs: [build-docs, deploy-production]
     if: always() && (needs.build-docs.result == 'failure' || needs.deploy-production.result == 'failure') && github.event_name == 'push'
     name: Notify Discord (build failed)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
