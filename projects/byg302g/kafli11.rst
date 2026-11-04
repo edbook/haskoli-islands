@@ -23,7 +23,7 @@ undirkældur vökvi, seigja við venjulegt hitastig er hinsvegar mjög há og ef
 litlum tímaháðum formbreytingum (nema á mjög löngum tíma).
 
 
-.. figure:: ./myndir/gler/efniseiginleikar.png
+.. figure:: ./myndir/kafli11/efniseiginleikar.png
   :align: center
   :width: 70%
 
@@ -31,10 +31,19 @@ Gler getur tekið miklum formbreytingum undir álagi og þetta, ásamt því að
 efni er að ræða, gera útreikninga snúna. Útbeygjur geta verið af stærðargráðunni 5-10
 sinnum glerþykktin, en ákvörðun á styrk plötu með mikla útbeygju fer eftir aðferð sem
 Timoshenko setti fram (Timoshenko and Woinowsky-Krieger, 1959). Stökkir
-eiginleikarnir ger að verkum að hönnunin þarf að taka mið af líkindafræði og til
+eiginleikarnir gera að verkum að hönnunin þarf að taka mið af líkindafræði og til
 einföldunar er ákvörðun glerþykktar því almennt gerð útfrá línuriti þar sem tekið er tillit
 til leyfilegrar svignunar, sjá t.d. Rb-blað Rb(31).104.2 eða upplýsingar glerframleiðanda
 (línuritin eru byggð á “empírískum” grunni).
+
+.. figure:: ./myndir/kafli11/glerthykkt_rbblad.png
+  :align: center
+  :width: 70%
+
+.. button::
+  :text: Ísetning einangrunarglers - Rb blað
+  :link: https://hms-web.cdn.prismic.io/hms-web/62dcae53-84f8-4f0b-a7d6-29849fd529e6_31.104.2+%C3%8Dsetning_einangrunarglers2.pdf
+
 
 Rúðugler - framleiðsla   
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -56,12 +65,16 @@ byggður fyrsti ofninn sem var í stöðugri framleiðslu á flotgleri, þá er 
 yfir bráðið tin og þannig fást alveg sléttar rúður í mun meiri stærð heldur en áður var
 gerlegt að fá.
 
+.. figure:: ./myndir/kafli11/rudugler_framleidsla.png
+  :align: center
+  :width: 100%
+
 Í rúðugleri skipta ljóseiginleikar miklu máli (sjá skilgreiningu á ljóshleypni og endurkasti
 m.m. í kafla 4 í kennslubókinni), en með lit glersins og filmum má hafa mjög mikil áhrif
 á þessa eiginleika.
 
 
-.. figure:: ./myndir/gler/orkuhleypni.png
+.. figure:: ./myndir/kafli11/orkuhleypni.png
   :align: center
   :width: 70%
 
@@ -77,7 +90,7 @@ glerinu þar sem herslan bætir upp annars lélegt togþol glersins (áhrifunum 
 það sem gildir fyrir eftirspennta steypu). Áhrifin auka beygjutogþol glersins um 5 falt á
 við venjulegt gler, og rúðan þolir betur en áður snöggar hitabreytingar.
 
-.. figure:: ./myndir/gler/spennudreifing.png
+.. figure:: ./myndir/kafli11/spennudreifing.png
   :align: center
   :width: 70%
 
@@ -94,6 +107,15 @@ högga eða springur í hita) þá falla glerstykkin ekki niður.
 Samlímt gler dugir ágætlega sem öryggisgler, ef einungis er hugsað um höggáraun. Tvær
 glerrúður eru límdar saman með plasti sem myndar filmu á milli glerjanna (“laminerað”
 gler), en þær gefa sig í bruna miklu fyrr heldur en þráðglerið.
+
+
+.. figure:: ./myndir/kafli11/thradgler.png
+  :align: center
+  :width: 40%
+
+.. figure:: ./myndir/kafli11/samlimt.png
+  :align: center
+  :width: 40%
 
 Ending  
 ~~~~~~
