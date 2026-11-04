@@ -6,6 +6,10 @@ Efni sem hafa uppbyggingu sem byggist á fjölliðum eru stór og mikilvægur ef
 Efnin hafa það sameiginlegt að byggjast upp af lífrænum fjölliðum, sem á einhverju
 skeiði framleiðslunnar eru seig (“plastískt”) formanlegar í fast efni. 
 
+.. figure:: ./myndir/kafli12/fjollidur_daemi.png
+  :align: center
+  :width: 100%
+
 Fjölliður eru tiltölulega nýr efnisflokkur, aðalþróun þeirra hófst á tíma seinni
 heimsstyrjaldarinnar en saga þeirra hefst þó á nítjándu öldinni. Fyrsta fjölliðuefnið,
 celluloid, uppgötvaðist uppúr 1860 og fyrsta verksmiðjan hóf rekstur 1872. Á tímabilinu
@@ -24,7 +28,7 @@ polymer, thermosets) og gúmmí (e:rubber).
 Framleiðsla  
 ~~~~~~~~~~~
 
-Fjölliður (e::polymers) eru langar keðjur myndaðar af tengingu fjölda minni eininga
+Fjölliður (e:polymers) eru langar keðjur myndaðar af tengingu fjölda minni eininga
 einliða (e: monomer), gott dæmi um slíkt er t.d. ethýlen hópurinn og myndun
 pólýethýlen:
 
@@ -37,14 +41,14 @@ bindingur sagður mettaður, hann er stöðugur í samanburði við ómettaða b
 frumeinda). Etýlen er lofttegund við venjulegar hita- og þrýstingsaðstæður, en með hækkuðum
 hita og þrýstingi þá má mynda fjölliður úr þessum grunneiningum.
 
-.. figure:: ./myndir/fjollidur/polymer.png
+.. figure:: ./myndir/kafli12/polymer.png
   :align: center
   :width: 80%
 
 Mynd; Etýlen hópar (einliður, e: monomer) tengjast í fjölliðu (e: polymer); póýetýlen
 
 Ferlið er kallað fjölliðun (e: polymerization, sjá Örn og Örlyg) og er stærð hverrar
-fjölliðu sem myndast (þetta er háð tegund ) iðulega gefin með upp fjölliðunargráðunni (e:
+fjölliðu sem myndast (þetta er háð tegund ) iðulega gefin upp með fjölliðunargráðunni (e:
 degree of polimerization) sem gefur upp meðalfjölda “mer” eininga í fjölliðukeðju.
 Fjölliður eru ekki endilega byggðar upp úr einliðum sem allar eru sömu gerðar, þegar
 tengjast mismunandi einliður þá kallast slík keðja samfjölliða (e: co-polymer).
@@ -52,7 +56,7 @@ tengjast mismunandi einliður þá kallast slík keðja samfjölliða (e: co-pol
 Fjölliður tengjast innbyrðis á mismunandi vegu, og er tengingin háð tegund fjölliðanna,
 sjá mynd. 
 
-.. figure:: ./myndir/fjollidur/tengingfjollida.png
+.. figure:: ./myndir/kafli12/tengingfjollida.png
   :align: center
   :width: 80%
 
@@ -63,12 +67,20 @@ bræðsluhitastig. Þessi tegund plasts er almennt framleidd undir samverkandi h
 þrýstingi. Efnið getur verið ókristallað eða krystallað að hluta (e: semi-crystalline).
 Krosstengingar milli fjölliða eru óalgengar.
 
+.. figure:: ./myndir/kafli12/hitadeigt.png
+  :align: center
+  :width: 40%
+
 **Hitafast plast** verður hart við framleiðsluhitun, þegar krosstengingar myndast milli
 fjölliða. Krosstengingin er umfangsmikil, þannig að 10 – 50 % af grunneiningunum (e:
 mers) eru tengdar, og bindur þannig fjölliður saman og takmarkar hreyfigetu við hátt
 hitastig. Efnið brotnar niður við of mikla hitun, en er við nothitastig almennt með meiri
 hörku, styrk og formheldnara heldur en hitadeigt plast. Flest efni úr krosstengdum eða
 nettengdum fjölliðum, m.a. gúmmí, epoxý-, phenól- og pólýesterblöndur eru hitaföst.
+
+.. figure:: ./myndir/kafli12/hitafast.png
+  :align: center
+  :width: 30%
 
 Uppbygging   
 ~~~~~~~~~~
@@ -91,6 +103,10 @@ aflfræðilega eiginleika.
 - andoxunarefni; til að koma í veg fyrir að aðalefnið hvarfist við súrefni
 - ljósþolniefni; auka ljósþol (einkum UV þol)
 
+.. youtube:: EP0zfm_FVqc
+   :width: 100%
+   :height: 400
+
 Styrkeiginleikar fjölliðu efna    
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -98,7 +114,7 @@ Formbreytingarferlar fjölliða eru þrennskonar, háð tegund. Stökk efni, sei
 mjög seig (e: highly plastic, elastomeric), sjá mynd. Efnin sem sýna mesta
 seigjueiginleika nefnast “elastomerar” (e: elastomers).
 
-.. figure:: ./myndir/fjollidur/styrkeiginleikar.png
+.. figure:: ./myndir/kafli12/styrkeiginleikar.png
   :align: center
   :width: 80%
 
@@ -110,13 +126,13 @@ gildir um málma.
 
 Tafla: Aflfræðilegir eiginleikar fjölliða við stofuhita (Callister, 2001)
 
-.. figure:: ./myndir/fjollidur/aflfraedilegireiginleikar.png
+.. figure:: ./myndir/kafli12/aflfraedilegireiginleikar.png
   :align: center
   :width: 100%
 
 Aflfræðilegir eiginleikar eru jafnframt mjög háðir hitastigi, sjá línurit.
 
-.. figure:: ./myndir/fjollidur/vinnulinur.png
+.. figure:: ./myndir/kafli12/vinnulinur.png
   :align: center
   :width: 100%
 
@@ -124,6 +140,11 @@ Línurit: Aflfræðilegir eiginleikar fjölliða, háð hitastigi (Callister, 20
 
 Nokkrar mikilvægar tegundir plastefna   
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: ./myndir/kafli12/hitadeigtvshitafast.png
+  :align: center
+  :width: 100%
+
 Hitadeigt plast (e: thermoplastic polymer, s:termoplast)
 --------------------------------------------------------
 
