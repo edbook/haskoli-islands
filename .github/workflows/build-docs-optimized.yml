@@ -37,7 +37,7 @@ permissions:
 jobs:
   build:
     name: Build Documentation (Optimized)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.0
     outputs:
       deploy-url: ${{ steps.finalize.outputs.deploy-url }}
       version: ${{ steps.calver.outputs.version }}
