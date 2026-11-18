@@ -1,0 +1,64 @@
+/* Green definitions; soft blue theorems; retain distinct remark/example colors. */
+.admonition.box-definition {
+  border-left: 5px solid #6f9f62;
+  background-color: #f1f8ef;
+}
+.admonition.box-definition > .admonition-title {
+  color: #fff;
+  background-color: #6f9f62;
+}
+.admonition.box-theorem {
+  border-left: 5px solid #5b9bd5;
+  background-color: #eff6ff;
+}
+.admonition.box-theorem > .admonition-title {
+  color: #fff;
+  background-color: #5b9bd5;
+}
+.admonition.box-remark {
+  border-left: 5px solid #596579;
+  background-color: #f1f3f6;
+}
+.admonition.box-remark > .admonition-title {
+  color: #fff;
+  background-color: #596579;
+}
+.admonition.box-example {
+  border-left: 5px solid #b45309;
+  background-color: #fff7ed;
+}
+.admonition.box-example > .admonition-title {
+  color: #fff;
+  background-color: #b45309;
+}
+
+/* Boxes converted from the latest LaTeX source. */
+.lecturebox {
+  border: 1px solid #385b85;
+  border-left: 5px solid #385b85;
+  background: #f4f7fb;
+  border-radius: 4px;
+  padding: 0.75em 1em;
+  margin: 1em 0;
+}
+
+/* Keep unusually wide display equations inside the text column. */
+div.math {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+div.math mjx-container[display="true"] {
+  max-width: 100%;
+}
+
+
+
+/* Render every ordered list with parenthesized decimal labels: (1), (2), etc. */
+ol > li::marker {
+  content: '(' counter(list-item) ') ';
+}
+
+
+
+
