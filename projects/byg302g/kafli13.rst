@@ -15,20 +15,9 @@ Límstað má skipta upp í svæði, og þegar reynir á samlíminguna þá mun 
 hlekkurinn að lokum bresta- styrkur, og hegðun samlímingar upp að broti ræðst af
 eiginleikum hvers svæðis; 
 
-.. list-table:: 
-  :widths: 5 5
-  :header-rows: 0
-
-  * - Efni I
-    - eiginleikar efnis ráðandi (samloðun efnis og efnisstífleiki)
-  * - Efni I - lím 
-    - samsett svæði - viðloðun líms við efni
-  * - Lím 
-    - eiginleikar líms ráðandi (samloðun í lími og efnisstífleiki)
-  * - Efni II - lím 
-    - samsett svæði - viðloðun líms við efni
-  * - Efni II
-    - eiginleikar efnis ráðandi (samloðun efnis og efnisstífleiki)
+.. figure:: ./myndir/kafli13/limstadur.png
+  :align: center
+  :width: 100%
 
 Athuga þarf að samsettu svæðin hafa mjög litla þykkt (nm eða m) en efnissvæðin mun
 meiri (:math:`\mu \textrm{m}` eða mm). Jafnvel límfúgan hefur í mörgum tilvikum nægjanlega þykkt þannig
@@ -58,6 +47,10 @@ meira eða minna fljótandi. Í límum sem byggja á leysiefnum þá er bindiefn
 lausninni, en í þeytum (t.d. vatns-) þá er svífur bindiefnið sem agnir í lausninni (þegar
 hún hefur verið hrærð upp!). 
 
+.. figure:: ./myndir/kafli13/bindiefni_i_lausn.png
+  :align: center
+  :width: 30%
+
 Lím sem byggja á leysiefni væta yfirborð almennt vel, en gallinn er sá að leysiefnin eru
 óholl og iðulega eldfim. Í þeytulímum er bindiefnið fíndreift um vatnsfasann, og það má
 því ekki vera vatnsleysanlegt. Í framleiðslunni er þó oft nauðsynlegt að nota eitthvað af
@@ -81,13 +74,29 @@ orðið vel merkjanleg.
 Til eru lím þar sem hersluþátturinn er hluti af blöndunni, en hann verður því aðeins virkur
 að hann komist í snertingu við raka, eða við hitastigshækkun.
 
+.. list-table::
+   :widths: 60 40
+   :class: borderless
+   :align: center
+
+   * - .. image:: ./myndir/kafli13/tveggjathatta.png
+          :width: 90%
+          :align: center
+
+     - .. image:: ./myndir/kafli13/gorillaglue.png
+          :width: 90%
+          :align: center
+
 Hitaháð lím 
 -----------
 Límið er hart fyrir notkun, en verður mjúkt við hitun. Við kælingu herðist límið á ný. (t.d. límbyssa)
 
+.. figure:: ./myndir/kafli13/hitahad.png
+  :align: center
+  :width: 30%
 
 Heimildir og ítarefni:
-
+----------------------
 
 B. Adamsson og H. Backman, 1975, Glas i hus, Esselte Studium, Lund Sverige
 
