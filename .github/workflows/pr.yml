@@ -36,6 +36,8 @@ jobs:
     name: Announce feature url
     runs-on: ubuntu-latest
     needs: build-docs
+    # Fork PRs get a read-only token: no Pages preview is deployed and comments can't be posted
+    if: '!github.event.pull_request.head.repo.fork'
     steps:
       - name: Find Comment
         uses: peter-evans/find-comment@v2
